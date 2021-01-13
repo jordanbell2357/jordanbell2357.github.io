@@ -17,5 +17,7 @@ layout: home
 
 [mathquill](/mathquill "LaTeXML") / [mathquill](http://mathquill.com/ "Project website")
 
+[PHET simulations](/phetsims/example-sim/example-sim_en.html "PHET simulations")
+
 
 
