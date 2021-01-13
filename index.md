@@ -8,11 +8,10 @@
 layout: home
 ---
 
-
 [Pandoc: The Euclidean algorithm and finite continued fractions
-](/pandoc/euclideanalgorithm/euclideanalgorithm1.html "Made using Pandoc") / [Pandoc](https://pandoc.org/)
+](/pandoc/euclideanalgorithm/euclideanalgorithm.html "Made using Pandoc") / [Pandoc](https://pandoc.org/)
 
-[jvenn](/jvenn/docs/index.html "jvenn") / [jvenn](http://jvenn.toulouse.inra.fr/app/index.html "Project website")
+[testing out jvenn](/jvenn/docs/index.html "jvenn") / [jvenn](http://jvenn.toulouse.inra.fr/app/index.html "Project website")
 
-[LaTeXML](/latexML/euclideanalgorithm/euclideanalgorithm.html "LaTeXML") / [LaTeXML](https://dlmf.nist.gov/LaTeXML/ "Project website")
+[converting using LaTeXML](/latexML/euclideanalgorithm/euclideanalgorithm.html "LaTeXML") / [LaTeXML](https://dlmf.nist.gov/LaTeXML/ "Project website")
 
