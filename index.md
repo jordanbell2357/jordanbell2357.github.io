@@ -15,5 +15,7 @@ layout: home
 
 [converting using LaTeXML](/latexML/euclideanalgorithm/euclideanalgorithm.html "LaTeXML") / [LaTeXML](https://dlmf.nist.gov/LaTeXML/ "Project website")
 
-[mathquill](/mathquill "LaTeXML") / [mathquill](https://dlmf.nist.gov/LaTeXML/ "Project website")
+[mathquill](/mathquill "LaTeXML") / [mathquill](http://mathquill.com/ "Project website")
+
+
 
