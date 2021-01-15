@@ -29,5 +29,5 @@ layout: home
 
 [MathCell](/mathcell) / [MathCell page](https://github.com/paulmasson/mathcell)
 
-
+[Course-in-a-Box](/course-in-a-box) / [Course-in-a-Box page](https://course-in-a-box.p2pu.org/)
 
