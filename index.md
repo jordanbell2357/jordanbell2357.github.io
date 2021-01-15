@@ -25,7 +25,7 @@ layout: home
 
 [KaTeX](/KaTeX) / [KaTeX page](https://katex.org/)
 
-[Docusaurus test](/my-website) / [Docusaurus page](https://v2.docusaurus.io/)
+[Docusaurus test](/my-website/build) / [Docusaurus page](https://v2.docusaurus.io/)
 
 
 
