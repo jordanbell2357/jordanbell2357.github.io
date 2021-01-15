@@ -19,7 +19,11 @@ layout: home
 
 [mathjax](/mathjax) / [Mathjax page](https://www.mathjax.org/)
 
+[MathJax-demos-web](/MathJax-demos-web) / <https://github.com/mathjax/MathJax-demos-web>
+
 [LiaScript](/LiaScript) / [LiaScript page](https://github.com/LiaScript/LiaScript)
+
+[KaTeX](/KaTeX) / [KaTeX page]()
 
 
 
