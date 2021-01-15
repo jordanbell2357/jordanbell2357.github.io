@@ -27,5 +27,7 @@ layout: home
 
 [Docusaurus test](/my-website/build) / [Docusaurus page](https://v2.docusaurus.io/)
 
+[MathCell](/mathcell) / [MathCell page](https://github.com/paulmasson/mathcell)
+
 
 
