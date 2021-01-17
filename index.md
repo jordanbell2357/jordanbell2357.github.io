@@ -31,3 +31,5 @@ layout: home
 
 [Course-in-a-Box](/course-in-a-box) / [Course-in-a-Box page](https://course-in-a-box.p2pu.org/)
 
+[JavaScript Quiz Project examples](/interactive-quiz-project) / [JavaScript Quiz Project](https://jsbeginners.com/javascript-quiz-project/)
+
