@@ -33,3 +33,5 @@ layout: home
 
 [JavaScript Quiz Project examples](/interactive-quiz-project) / [JavaScript Quiz Project](https://jsbeginners.com/javascript-quiz-project/)
 
+[react-quizzes example](/react-quizzes/public) / [react-quizzes project](https://github.com/hugobarragon/react-quizzes)
+
