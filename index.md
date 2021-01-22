@@ -48,3 +48,5 @@ layout: home
 [Dragula testing](/dragula) / [bevacqua / dragula](https://bevacqua.github.io/dragula/)
 
 [testing quizzes-tutor](/quizzes-tutor) / [socialsoftware/quizzes-tutor](https://github.com/socialsoftware/quizzes-tutor)
+
+[testing Mathsteps](/mathsteps) / [Socratic.org Mathsteps](https://blog.socratic.org/stepping-into-math-open-sourcing-our-step-by-step-solver-9b5da066ae36)
