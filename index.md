@@ -50,3 +50,9 @@ layout: home
 [testing quizzes-tutor](/quizzes-tutor) / [socialsoftware/quizzes-tutor](https://github.com/socialsoftware/quizzes-tutor)
 
 [testing Mathsteps](/mathsteps) / [Socratic.org Mathsteps](https://blog.socratic.org/stepping-into-math-open-sourcing-our-step-by-step-solver-9b5da066ae36)
+
+[testing Linear-Algebra](/Linear-Algebra) / [MariusGarbea/Linear-Algebra](https://github.com/MariusGarbea/Linear-Algebra)
+
+[testing Tux4ME](/Tux4ME) / [tux4kids/Tux4ME](https://github.com/tux4kids/Tux4ME)
+
+[testing quizzes-tutor](/quizzes-tutor) / [Instituto Superior Técnico, Universidade de Lisboa Quizzes Tutor](https://quizzes-tutor.tecnico.ulisboa.pt/)
