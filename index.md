@@ -41,3 +41,10 @@ layout: home
 
 [testing set-fns](/set-fns) / [haydn / set-fns](https://github.com/haydn/set-fns)
 
+[testing MathJax Editor v3](/mathjax-editor) / [MathJax Editor v3](https://ianlucas.github.io/mathjax-editor/)
+
+[testing ShapeEquate](/ShapeEquate) / [bsiegal / ShapeEquate](https://github.com/bsiegal/ShapeEquate)
+
+[Dragula testing](/dragula) / [bevacqua / dragula](https://bevacqua.github.io/dragula/)
+
+[testing quizzes-tutor](/quizzes-tutor) / [socialsoftware/quizzes-tutor](https://github.com/socialsoftware/quizzes-tutor)
