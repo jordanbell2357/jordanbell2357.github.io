@@ -35,3 +35,5 @@ layout: home
 
 [react-quizzes example](/react-quizzes/public) / [react-quizzes project](https://github.com/hugobarragon/react-quizzes)
 
+[testing math-problem-generator](/math-problem-generator/index.html) / [hanumanum / math-problem-generator](https://github.com/hanumanum/math-problem-generator)
+
