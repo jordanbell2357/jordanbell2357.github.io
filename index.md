@@ -79,4 +79,4 @@ layout: home
 
 [myPhysicsLab testing](/myphysicslab) / [myphysicslab/myphysicslab](https://github.com/myphysicslab/myphysicslab)
 
-[]() / []()
+[ThePhysicsHub testing](/ThePhysicsHub) / [ThePhysHub/ThePhysicsHub](https://github.com/ThePhysHub/ThePhysicsHub)
