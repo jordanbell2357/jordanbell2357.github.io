@@ -11,50 +11,54 @@ layout: home
 [Pandoc: The Euclidean algorithm and finite continued fractions
 ](/pandoc/euclideanalgorithm/euclideanalgorithm.html "Made using Pandoc") / [Pandoc](https://pandoc.org/)
 
-[testing out jvenn](/jvenn/docs/index.html "jvenn") / [jvenn](http://jvenn.toulouse.inra.fr/app/index.html "Project website")
+[jvenn testing](/jvenn/docs/index.html "jvenn") / [jvenn](http://jvenn.toulouse.inra.fr/app/index.html "Project website")
 
-[converting using LaTeXML](/latexML/euclideanalgorithm/euclideanalgorithm.html "LaTeXML") / [LaTeXML](https://dlmf.nist.gov/LaTeXML/ "Project website")
+[LaTeXML testing](/latexML/euclideanalgorithm/euclideanalgorithm.html "LaTeXML") / [LaTeXML](https://dlmf.nist.gov/LaTeXML/ "Project website")
 
-[mathquill](/mathquill "LaTeXML") / [mathquill](http://mathquill.com/ "Project website")
+[mathquill testing](/mathquill "LaTeXML") / [mathquill](http://mathquill.com/ "Project website")
 
-[mathjax](/mathjax) / [Mathjax page](https://www.mathjax.org/)
+[mathjax testing](/mathjax) / [Mathjax page](https://www.mathjax.org/)
 
-[MathJax-demos-web](/MathJax-demos-web) / <https://github.com/mathjax/MathJax-demos-web>
+[MathJax-demos-web testing](/MathJax-demos-web) / <https://github.com/mathjax/MathJax-demos-web>
 
-[LiaScript](/LiaScript) / [LiaScript page](https://github.com/LiaScript/LiaScript)
+[LiaScript testing](/LiaScript) / [LiaScript page](https://github.com/LiaScript/LiaScript)
 
-[KaTeX](/KaTeX) / [KaTeX page](https://katex.org/)
+[KaTeX testing](/KaTeX) / [KaTeX page](https://katex.org/)
 
-[Docusaurus test](/my-website/build) / [Docusaurus page](https://v2.docusaurus.io/)
+[Docusaurus testing](/my-website/build) / [Docusaurus page](https://v2.docusaurus.io/)
 
-[MathCell](/mathcell) / [MathCell page](https://github.com/paulmasson/mathcell)
+[MathCell testing](/mathcell) / [MathCell page](https://github.com/paulmasson/mathcell)
 
-[Course-in-a-Box](/course-in-a-box) / [Course-in-a-Box page](https://course-in-a-box.p2pu.org/)
+[Course-in-a-Box testing](/course-in-a-box) / [Course-in-a-Box page](https://course-in-a-box.p2pu.org/)
 
-[JavaScript Quiz Project examples](/interactive-quiz-project) / [JavaScript Quiz Project](https://jsbeginners.com/javascript-quiz-project/)
+[JavaScript Quiz Project testing](/interactive-quiz-project) / [JavaScript Quiz Project](https://jsbeginners.com/javascript-quiz-project/)
 
-[react-quizzes example](/react-quizzes/public) / [react-quizzes project](https://github.com/hugobarragon/react-quizzes)
+[react-quizzes example testing](/react-quizzes/public) / [react-quizzes project](https://github.com/hugobarragon/react-quizzes)
 
-[testing GoJS](/GoJS) / [GoJS](https://gojs.net/latest/index.html)
+[GoJS testing](/GoJS) / [GoJS](https://gojs.net/latest/index.html)
 
-[testing UpSet.js](/upsetjs) / [UpSet.js](https://github.com/upsetjs/upsetjs)
+[UpSet.js testing](/upsetjs) / [UpSet.js](https://github.com/upsetjs/upsetjs)
 
-[testing set-fns](/set-fns) / [haydn / set-fns](https://github.com/haydn/set-fns)
+[set-fns testing](/set-fns) / [haydn / set-fns](https://github.com/haydn/set-fns)
 
-[testing MathJax Editor v3](/mathjax-editor) / [MathJax Editor v3](https://ianlucas.github.io/mathjax-editor/)
+[MathJax Editor v3 testing](/mathjax-editor) / [MathJax Editor v3](https://ianlucas.github.io/mathjax-editor/)
 
-[testing ShapeEquate](/ShapeEquate) / [bsiegal / ShapeEquate](https://github.com/bsiegal/ShapeEquate)
+[ShapeEquate testing](/ShapeEquate) / [bsiegal / ShapeEquate](https://github.com/bsiegal/ShapeEquate)
 
 [Dragula testing](/dragula) / [bevacqua / dragula](https://bevacqua.github.io/dragula/)
 
-[testing quizzes-tutor](/quizzes-tutor) / [socialsoftware/quizzes-tutor](https://github.com/socialsoftware/quizzes-tutor)
+[quizzes-tutor testing](/quizzes-tutor) / [socialsoftware/quizzes-tutor](https://github.com/socialsoftware/quizzes-tutor)
 
-[testing Mathsteps](/mathsteps) / [Socratic.org Mathsteps](https://blog.socratic.org/stepping-into-math-open-sourcing-our-step-by-step-solver-9b5da066ae36)
+[Mathsteps testing](/mathsteps) / [Socratic.org Mathsteps](https://blog.socratic.org/stepping-into-math-open-sourcing-our-step-by-step-solver-9b5da066ae36)
 
-[testing Linear-Algebra](/Linear-Algebra) / [MariusGarbea/Linear-Algebra](https://github.com/MariusGarbea/Linear-Algebra)
+[Linear-Algebra testing](/Linear-Algebra) / [MariusGarbea/Linear-Algebra](https://github.com/MariusGarbea/Linear-Algebra)
 
-[testing Tux4ME](/Tux4ME) / [tux4kids/Tux4ME](https://github.com/tux4kids/Tux4ME)
+[Tux4ME testing](/Tux4ME) / [tux4kids/Tux4ME](https://github.com/tux4kids/Tux4ME)
 
-[testing quizzes-tutor](/quizzes-tutor) / [Instituto Superior Técnico, Universidade de Lisboa Quizzes Tutor](https://quizzes-tutor.tecnico.ulisboa.pt/)
+[quizzes-tutor testing](/quizzes-tutor) / [Instituto Superior Técnico, Universidade de Lisboa Quizzes Tutor](https://quizzes-tutor.tecnico.ulisboa.pt/)
 
-[testing Publii 0.37.3](/publii) / [](https://getpublii.com/)
+[Publii 0.37.3 testing](/publii) / [](https://getpublii.com/)
+
+[TeX4TUM testing](/tex4tum) / [latex4ei/tex4tum](https://github.com/latex4ei/tex4tum)
+
+[perseus testing](/perseus) / [Khan/perseus](https://github.com/Khan/perseus)
