@@ -77,6 +77,6 @@ layout: home
 [MkDocs Documentation Jekyll testing](/mkdocs-jekyll
 ) / [vsoch/mkdocs-jekyll](https://github.com/vsoch/mkdocs-jekyll)
 
-[]() / []()
+[myPhysicsLab testing](/myphysicslab) / [myphysicslab/myphysicslab](https://github.com/myphysicslab/myphysicslab)
 
 []() / []()
