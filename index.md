@@ -71,11 +71,9 @@ layout: home
 
 [LEGUP testing](/Legup) / [Bram-Hub/Legup](https://github.com/Bram-Hub/Legup) [LEGUP](https://homepages.hass.rpi.edu/heuveb/Research/GL/index.html)
 
-[jemdoc+MathJax
- testing](/jemdoc_mathjax) / [wsshin/jemdoc_mathjax](https://github.com/wsshin/jemdoc_mathjax)
+[jemdoc+MathJax testing](/jemdoc_mathjax) / [wsshin/jemdoc_mathjax](https://github.com/wsshin/jemdoc_mathjax)
 
-[MkDocs Documentation Jekyll testing](/mkdocs-jekyll
-) / [vsoch/mkdocs-jekyll](https://github.com/vsoch/mkdocs-jekyll)
+[MkDocs Documentation Jekyll testing](/mkdocs-jekyll) / [vsoch/mkdocs-jekyll](https://github.com/vsoch/mkdocs-jekyll)
 
 [myPhysicsLab testing](/myphysicslab) / [myphysicslab/myphysicslab](https://github.com/myphysicslab/myphysicslab)
 
@@ -83,4 +81,6 @@ layout: home
 
 [Emathquiz testing](/emathquiz) / [e-math/emathquiz](https://github.com/e-math/emathquiz)
 
-[testing algebra.js](/algebra.js) / [nicolewhite/algebra.js](https://github.com/nicolewhite/algebra.js)
+[algebra.js testing](/algebra.js) / [nicolewhite/algebra.js](https://github.com/nicolewhite/algebra.js)
+
+[Tabulator v4.9 testing](/tabulator) / [Tabulator v4.9](http://tabulator.info/)
