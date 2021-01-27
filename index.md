@@ -70,3 +70,12 @@ layout: home
 [quizlib testing](quizlib) / [ALPSquid/quizlib](https://github.com/ALPSquid/quizlib)
 
 [LEGUP testing](/Legup) / [Bram-Hub/Legup](https://github.com/Bram-Hub/Legup) [LEGUP](https://homepages.hass.rpi.edu/heuveb/Research/GL/index.html)
+
+[jemdoc+MathJax
+ testing](/jemdoc_mathjax) / [wsshin/jemdoc_mathjax](https://github.com/wsshin/jemdoc_mathjax)
+
+[]() / []()
+
+[]() / []()
+
+[]() / []()
