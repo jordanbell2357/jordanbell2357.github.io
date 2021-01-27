@@ -74,7 +74,8 @@ layout: home
 [jemdoc+MathJax
  testing](/jemdoc_mathjax) / [wsshin/jemdoc_mathjax](https://github.com/wsshin/jemdoc_mathjax)
 
-[]() / []()
+[MkDocs Documentation Jekyll testing](/mkdocs-jekyll
+) / [vsoch/mkdocs-jekyll](https://github.com/vsoch/mkdocs-jekyll)
 
 []() / []()
 
