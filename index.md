@@ -62,3 +62,9 @@ layout: home
 [TeX4TUM testing](/tex4tum) / [latex4ei/tex4tum](https://github.com/latex4ei/tex4tum)
 
 [perseus testing](/perseus) / [Khan/perseus](https://github.com/Khan/perseus)
+
+[Skilledmatica testing](/Skilledmatica) / [meramos/Skilledmatica](https://github.com/meramos/Skilledmatica)
+
+[mathlive testing](/mathlive) / [arnog/mathlive](https://github.com/arnog/mathlive)
+
+[quizlib testing](quizlib) / [ALPSquid/quizlib](https://github.com/ALPSquid/quizlib)
