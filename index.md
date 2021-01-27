@@ -80,3 +80,7 @@ layout: home
 [myPhysicsLab testing](/myphysicslab) / [myphysicslab/myphysicslab](https://github.com/myphysicslab/myphysicslab)
 
 [ThePhysicsHub testing](/ThePhysicsHub) / [ThePhysHub/ThePhysicsHub](https://github.com/ThePhysHub/ThePhysicsHub)
+
+[Emathquiz testing](/emathquiz) / [e-math/emathquiz](https://github.com/e-math/emathquiz)
+
+[testing algebra.js](/algebra.js) / [nicolewhite/algebra.js](https://github.com/nicolewhite/algebra.js)
