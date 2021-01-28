@@ -86,3 +86,5 @@ layout: home
 [Tabulator v4.9 testing](/tabulator) / [Tabulator v4.9](http://tabulator.info/)
 
 [PhET testing](/phetsims) / [phetsims/phet-info](https://github.com/phetsims/phet-info) [phetsims/vector-addition-equations](https://github.com/phetsims/vector-addition-equations) [phetsims/area-model-multiplication](https://github.com/phetsims/area-model-multiplication)
+
+[Leaflet testing](/leaflet) / [Leaflet](https://leafletjs.com/download.html)
