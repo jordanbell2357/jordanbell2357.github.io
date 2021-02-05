@@ -88,3 +88,7 @@ layout: home
 [PhET testing](/phetsims) / [phetsims/phet-info](https://github.com/phetsims/phet-info) [phetsims/vector-addition-equations](https://github.com/phetsims/vector-addition-equations) [phetsims/area-model-multiplication](https://github.com/phetsims/area-model-multiplication)
 
 [Leaflet testing](/leaflet) / [Leaflet](https://leafletjs.com/download.html)
+
+[CanvasJS testing](/canvasjs) / [Chart v3.2.8 GA](https://canvasjs.com/)
+
+[JSXGraph testing](/jsxgraph) / [JSXGraph v1.2.1](https://jsxgraph.uni-bayreuth.de/wp/)
