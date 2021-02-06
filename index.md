@@ -92,3 +92,7 @@ layout: home
 [CanvasJS testing](/canvasjs) / [Chart v3.2.8 GA](https://canvasjs.com/)
 
 [JSXGraph testing](/jsxgraph) / [JSXGraph v1.2.1](https://jsxgraph.uni-bayreuth.de/wp/)
+
+[Konva.js testing](/konvajs) / [Konva.js Physics Simulator with Curve Detection](https://konvajs.org/docs/sandbox/Physics_Simulator.html)
+
+[D3.js testing](/d3) / [D3.js](https://d3js.org/)
