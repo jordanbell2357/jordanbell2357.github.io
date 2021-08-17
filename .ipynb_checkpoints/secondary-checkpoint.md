@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Ontario Secondary Curriculum
-permalink: /secondary/
+title: High school
+permalink: /highschool/
 ---
 
 [Pandoc: The Euclidean algorithm and finite continued fractions

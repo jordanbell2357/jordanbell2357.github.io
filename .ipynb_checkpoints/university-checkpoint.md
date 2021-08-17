@@ -1,7 +1,7 @@
 ---
 layout: page
-title: University of Toronto
-permalink: /UofT/
+title: University
+permalink: /university/
 ---
 
 [Pandoc: The Euclidean algorithm and finite continued fractions
