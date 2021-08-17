@@ -11,7 +11,4 @@ layout: home
 
 [KaTeX testing](/KaTeX) / [KaTeX page](https://katex.org/)
 
-<span id="mykatex1">...</span>
-<script>
-katex.render("f(a,b,c) = (a^2+b^2+c^2)^3", mykatex1);
-</script> 
+katex.render("% \\f is defined as #1f(#2) using the macro\n\\f\\relax{x} = \\int_{-\\infty}^\\infty\n    \\f\\hat\\xi\\,e^{2 \\pi i \\xi x}\n    \\,d\\xi", /* element */, {"displayMode":true,"leqno":false,"fleqn":false,"throwOnError":true,"errorColor":"#cc0000","strict":"warn","output":"htmlAndMathml","trust":false,"macros":{"\\f":"#1f(#2)"}})
