@@ -11,6 +11,7 @@ layout: home
 
 [KaTeX testing](/KaTeX) / [KaTeX page](https://katex.org/)
 
-katex.render("c = \\pm\\sqrt{a^2 + b^2}", element, {
-    throwOnError: false
-});
+<span id="mykatex1">...</span>
+<script>
+katex.render("f(a,b,c) = (a^2+b^2+c^2)^3", mykatex1);
+</script> 
