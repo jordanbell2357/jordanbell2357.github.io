@@ -13,4 +13,9 @@ c = \pm\sqrt{a^2 + b^2}
 {% endkatex %}
 
 
+
 $$ x = y^2 $$
+
+{% katex display %}
+c = \pm\sqrt{a^2 + b^2}
+{% endkatex %}
