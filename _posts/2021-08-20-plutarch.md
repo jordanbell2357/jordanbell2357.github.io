@@ -4,7 +4,7 @@ title: "\"On Listening to Lectures\""
 categories: quotations
 ---
 
-## Plutarch. *Moralia, Volume I: The Education of Children. How the Young Man Should Study Poetry. On Listening to Lectures. How to Tell a Flatterer from a Friend. How a Man May Become Aware of His Progress in Virtue*. Translated by Frank Cole Babbitt. Loeb Classical Library 197. Cambridge, MA: Harvard University Press, 1927.
+### Plutarch. *Moralia, Volume I: The Education of Children. How the Young Man Should Study Poetry. On Listening to Lectures. How to Tell a Flatterer from a Friend. How a Man May Become Aware of His Progress in Virtue*. Translated by Frank Cole Babbitt. Loeb Classical Library 197. Cambridge, MA: Harvard University Press, 1927.
 
 [*On Listening to Lectures (Περὶ τοῦ ἀκούειν)*](https://penelope.uchicago.edu/Thayer/E/Roman/Texts/Plutarch/Moralia/De_auditu*.html), **18**, *Moralia* 48C-D
 
