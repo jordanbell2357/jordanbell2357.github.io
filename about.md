@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Education passages
-permalink: /education/
+title: About
+permalink: /about/
 ---
 
 * Plutarch. *Moralia, Volume I: The Education of Children. How the Young Man Should Study Poetry. On Listening to Lectures. How to Tell a Flatterer from a Friend. How a Man May Become Aware of His Progress in Virtue*. Translated by Frank Cole Babbitt. Loeb Classical Library 197. Cambridge, MA: Harvard University Press, 1927.
