@@ -42,9 +42,7 @@ In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla e
 
 ### Ontario secondary mathematics courses
 
-[Ontario Curriculum and Resources website](https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics)
-
-[The Ontario Curriculum: Secondary Mathematics](http://www.edu.gov.on.ca/eng/curriculum/secondary/curriculum-update.html)
+[The Ontario Curriculum: Secondary Mathematics](http://www.edu.gov.on.ca/eng/curriculum/secondary/curriculum-update.html) and [Ontario Curriculum and Resources website](https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics)
 
 Grade | Course Code | Course Name
 --- | --- | --- | ---
