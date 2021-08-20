@@ -1,7 +1,7 @@
 ---
 layout: page
-title: High school
-permalink: /highschool/
+title: Secondary school
+permalink: /second/
 ---
 
 ### Ontario secondary mathematics courses
