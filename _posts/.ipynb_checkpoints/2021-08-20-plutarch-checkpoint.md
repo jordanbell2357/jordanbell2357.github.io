@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "*On Listening to Lectures*"
+title: "On Listening to Lectures"
 categories: quotations
 ---
 
