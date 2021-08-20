@@ -4,5 +4,20 @@ title: High school
 permalink: /highschool/
 ---
 
-[Pandoc: The Euclidean algorithm and finite continued fractions
-](/pandoc/euclideanalgorithm/euclideanalgorithm.html "Made using Pandoc") / [Pandoc](https://pandoc.org/)
+### Ontario secondary mathematics courses
+
+[The Ontario Curriculum: Secondary Mathematics](http://www.edu.gov.on.ca/eng/curriculum/secondary/curriculum-update.html) and [Ontario Curriculum and Resources website](https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics)
+
+Grade | Course Code | Course Name
+--- | --- | --- | ---
+9 | MTH1W | Grade 9 mathematics course
+10 | MPM2D | Principles of Mathematics, Grade 10
+10 | MFM2P | Foundations of Mathematics, Grade 10
+11 | MCR3U | Functions, Grade 11
+11 | MCF3M | Functions and Applications, Grade 11
+11 | MBF3C | Foundations for College Mathematics, Grade 11
+12 | MHF4U | Advanced Functions, Grade 12
+12 | MDM4U | Mathematics of Data Management, Grade 12
+12 | MAP4C | Foundations for College Mathematics, Grade 12
+12 | MCT4C | Mathematics for College Technology, Grade 12
+12 | MCV4U | Calculus and Vectors
