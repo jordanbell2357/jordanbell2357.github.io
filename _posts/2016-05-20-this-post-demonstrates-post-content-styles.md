@@ -67,20 +67,20 @@ Praesent nulla tortor, malesuada adipiscing adipiscing sollicitudin, adipiscing 
 
 Proin eget nibh a massa vestibulum pretium. Suspendisse eu nisl a ante aliquet bibendum quis a nunc.
 
-### Tables
+### Ontario secondary mathematics courses
 
 [Ontario Curriculum and Resources website](https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics)
 
-Grade | Course Code | Course Name | Classification
+Grade | Course Code | Course Name
 --- | --- | --- | ---
-9 | MTH1W | Grade 9 mathematics course | De-streamed
-10 | MPM2D | Principles of Mathematics, Grade 10 | Academic
-10 | MFM2P | Foundations of Mathematics, Grade 10 | Applied
-11 | MCR3U | Functions, Grade 11 | University Preparation
-11 | MCF3M | Functions and Applications, Grade 11 | University/College Preparation
-11 | MBF3C | Foundations for College Mathematics, Grade 11 | College Preparation
-12 | MHF4U | Advanced Functions, Grade 12 | University Preparation
-12 | MDM4U | Mathematics of Data Management, Grade 12 | University Preparation
-12 | MAP4C | Foundations for College Mathematics, Grade 12 | College Preparation
-12 | MCT4C | Mathematics for College Technology, Grade 12 | College Preparation
-12 | MCV4U |  Calculus and Vectors | University Preparation
+9 | MTH1W | Grade 9 mathematics course, De-streamed
+10 | MPM2D | Principles of Mathematics, Grade 10, Academic
+10 | MFM2P | Foundations of Mathematics, Grade 10, Applied
+11 | MCR3U | Functions, Grade 11, University Preparation
+11 | MCF3M | Functions and Applications, Grade 11, University/College Preparation
+11 | MBF3C | Foundations for College Mathematics, Grade 11, College Preparation
+12 | MHF4U | Advanced Functions, Grade 12, University Preparation
+12 | MDM4U | Mathematics of Data Management, Grade 12, University Preparation
+12 | MAP4C | Foundations for College Mathematics, Grade 12, College Preparation
+12 | MCT4C | Mathematics for College Technology, Grade 12, College Preparation
+12 | MCV4U | Calculus and Vectors, University Preparation
