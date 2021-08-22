@@ -8,4 +8,4 @@
 layout: home
 ---
 
-$$ x = y^2 $$
+$$ \begin{pmatrix} x&y\\ x&y \end{pmatrix}$$
