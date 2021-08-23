@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Ptolemy once asked Euclid if there was not a shorter road to geometry than through the Elements, and Euclid replied that there was no royal road to geometry\""
+title: Proclus: A Commentary on the First Book of Euclid's Elements
 categories: maxims
 ---
 
