@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Plutarch: \"For the mind does not require filling like a bottle, but rather, like wood, it only requires kindling to create in it an impulse to think independently and an ardent desire for the truth.\""
+title: "\"For the mind does not require filling like a bottle, but rather, like wood, it only requires kindling to create in it an impulse to think independently and an ardent desire for the truth.\""
 categories: quotations
 ---
 
