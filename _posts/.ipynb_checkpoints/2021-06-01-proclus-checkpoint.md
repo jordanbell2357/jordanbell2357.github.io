@@ -1,10 +1,10 @@
 ---
 layout: post
 title: "\"Ptolemy once asked Euclid if there was not a shorter road to geometry than through the Elements, and Euclid replied that there was no royal road to geometry\""
-categories: quotations
+categories: maxims
 ---
 
-##### *Proclus: A Commentary on the First Book of Euclid's Elements*, translated with introduction and notes by Glenn R. Morrow, Princeton University Press, 1970
+##### *Proclus: A Commentary on the First Book of Euclid's Elements*, translated with introduction and notes by Glenn R. Morrow, Princeton University Press, 1970.
 
 *A Commentary on the First Book of Euclid's Elements*, **68**, pp. 56-57
 

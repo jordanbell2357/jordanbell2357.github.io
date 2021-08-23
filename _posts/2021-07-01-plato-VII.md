@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Plato's Seventh Letter
-categories: quotations
+categories: maxims
 ---
 
 ##### *Plato. Timaeus. Critias. Cleitophon. Menexenus. Epistles.* Translated by R. G. Bury. Loeb Classical Library 234. Cambridge, MA: Harvard University Press, 1929.
