@@ -4,12 +4,9 @@ title: The Seventh Letter of Plato
 categories: maxims
 ---
 
-##### Plato, Epistle VII, 344a-c
+#### Plato, Epistle VII, 344a-c
 
-
-[*Plato. Timaeus. Critias. Cleitophon. Menexenus. Epistles.* Translated by R. G. Bury. Loeb Classical Library 234. Cambridge, MA: Harvard University Press, 1929](https://archive.org/search.php?query=external-identifier%3A%22urn%3Aoclc%3Arecord%3A1040669984%22)
-
-pp. 538-541
+##### [*Plato. Timaeus. Critias. Cleitophon. Menexenus. Epistles.* Translated by R. G. Bury. Loeb Classical Library 234. Cambridge, MA: Harvard University Press, 1929](https://archive.org/search.php?query=external-identifier%3A%22urn%3Aoclc%3Arecord%3A1040669984%22) pp. 538-541
 
 > In one word, neither receptivity nor memory will ever produce knowledge in him who has no affinity with the object, since it does not germinate to start within alien states of mind; consequently neither those who have no natural connexion or affinity with things just, and all else that is fair, although they are both receptive and retentive in various ways of other things, nor yet those who possess such affinity but are unreceptive and unretentive — none, I say, of these will ever learn to the utmost possible extent the truth of virtue nor yet of vice. **For in learning these objects it is necessary to learn at the same time both what is false and what is true of the whole of Existence, and that through the most diligent and prolonged investigation, as I said at the commencement; and it is by means of the examination of each of these objects, comparing one with another — names and definitions, visions and sense-perceptions, — proving them by kindly proofs and employing questionings and answerings that are void of envy — it is by such means, and hardly so, that there bursts out the light of intelligence and reason regarding each object in the mind of him who uses every effort of which mankind is capable.**
 

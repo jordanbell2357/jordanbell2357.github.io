@@ -4,11 +4,9 @@ title: Proclus, "A Commentary on the First Book of Euclid's Elements"
 categories: maxims
 ---
 
-##### Proclus, *A Commentary on the First Book of Euclid's Elements*, 68
+#### Proclus, *A Commentary on the First Book of Euclid's Elements*, 68
 
-Glenn R. Morrow (trans.), *Proclus: A Commentary on the First Book of Euclid's Elements*, Princeton University Press, 1970.
-
-pp. 56-57:
+##### Glenn R. Morrow (trans.), *Proclus: A Commentary on the First Book of Euclid's Elements*, Princeton University Press, 1970. pp. 56-57:
 
 > All those who have written histories bring to this point their
 > account of the development of this science. Not long after
