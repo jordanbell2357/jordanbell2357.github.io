@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Plato's Seventh Letter
+title: The Seventh Letter of Plato
 categories: maxims
 ---
 

@@ -6,9 +6,8 @@ categories: maxims
 
 ##### James Legge, *The Chinese Classics. Volume I. Confucian analects, the Great learning, and the Doctrine of the Mean*, revised second edition, Clarendon Press, 1893
 
-[Chinese Text Project](https://ctext.org/analects/wei-zheng)
 
-Confucius, 《論語 - The Analects》, Book II《為政 - Wei Zheng》, pp. 149-151
+Confucius, 《論語 - The Analects》, Book II《為政 - Wei Zheng》, pp. 149-151. [Chinese Text Project](https://ctext.org/analects/wei-zheng)
 
 ##### \# 11
 > The Master said, "If a man keeps cherishing his old knowledge, so as continually to be acquiring new, he may be a teacher of others."
