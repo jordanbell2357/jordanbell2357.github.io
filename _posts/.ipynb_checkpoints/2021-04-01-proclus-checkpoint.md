@@ -26,7 +26,7 @@ Proclus, *A Commentary on the First Book of Euclid's Elements*, 68, pp. 56-57
 
 [^1]: Alternate translation from [Elementary Ancient Greek I. GRK 101. A. Scholtz, Binghamton University](http://bingweb.binghamton.edu/~ascholtz/grk101/)
     
-    > For Archimedes as a side note recalls a conversation Euclid once had with Ptolemy [Egyptian king], who asked him if there's a shortcut to learning geometry, a way to avoid immersing oneslf in the basics. Euclid answered, "There is no royal road to geometry."
+    > **For Archimedes as a side note recalls a conversation Euclid once had with Ptolemy [Egyptian king], who asked him if there's a shortcut to learning geometry, a way to avoid immersing oneslf in the basics. Euclid answered, "There is no royal road to geometry."**
     
     [Friedlein, G. (ed.), *Procli Diadochi in primum Euclidis elementorum librum commentarii*, Bibliotheca scriptorum Graecorum et Romanorum Teubneriana, Teubner, 1873](https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11156410-9)
 
