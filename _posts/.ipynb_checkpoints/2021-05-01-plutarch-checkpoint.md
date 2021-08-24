@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Plutarch. "On Listening to Lectures"
+title: "Plutarch. \"On Listening to Lectures\""
 categories: maxims
 ---
 
