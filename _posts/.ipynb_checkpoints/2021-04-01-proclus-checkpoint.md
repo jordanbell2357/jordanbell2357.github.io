@@ -28,6 +28,6 @@ categories: maxims
     
     > **For Archimedes as a side note recalls a conversation Euclid once had with Ptolemy [Egyptian king], who asked him if there's a shortcut to learning geometry, a way to avoid immersing oneslf in the basics. Euclid answered, "There is no royal road to geometry."**
     
-    Greek text from the critical edition of Friedlein [Friedlein, G. (ed.), *Procli Diadochi in primum Euclidis elementorum librum commentarii*, Bibliotheca scriptorum Graecorum et Romanorum Teubneriana, Teubner, 1873](https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11156410-9)
+    [Friedlein, G. (ed.), *Procli Diadochi in primum Euclidis elementorum librum commentarii*, Bibliotheca scriptorum Graecorum et Romanorum Teubneriana, Teubner, 1873](https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb11156410-9)
 
     > *καὶ γὰρ ὁ Ἀρχιμήδης ἐπιβαλὼν καὶ τῷ πρώτῳ μνημονεύει τοῦ Εὐκλείδου, καὶ μέντοι καί φασιν ὅτι Πτολεμαῖος ἤρετό ποτε αὐτόν, εἴ τίς ἐστιν περὶ γεωμετρίαν ὁδὸς συντομωτέρα τῆς στοιχειώσεως· ὁ δὲ ἀπεκρίνατο, μὴ εἶναι βασιλικὴν ἀτραπὸν ἐπὶ γεωμετρίαν.*
