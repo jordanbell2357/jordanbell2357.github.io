@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Secondary school
+title: Secondary
 permalink: /second/
 ---
 
