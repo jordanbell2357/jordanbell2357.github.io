@@ -1,10 +1,10 @@
 ---
 layout: post
-title: I Ching (Book of Changes) 
+title: "Book of Changes" ("I Ching") 
 categories: maxims
 ---
 
-#### Book of Changes, 文言 -> 乾 -> 20
+#### Book of Changes -> 文言 -> 乾 -> 20
 
 ##### [Chinese Text Project](https://ctext.org/dictionary.pl?if=en&id=81907)
 
