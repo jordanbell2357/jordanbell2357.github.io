@@ -4,7 +4,7 @@ title: "\"Book of Changes\" (易經)"
 categories: maxims
 ---
 
-##### Book of Changes (易經), ䷀乾, 20 文言
+##### *Book of Changes* (易經) -> ䷀乾 -> 20 文言
 
 ##### [Chinese Text Project](https://ctext.org/dictionary.pl?if=en&id=81907)
 
