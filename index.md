@@ -7,3 +7,6 @@
 #
 layout: home
 ---
+
+tutoring remotely
+about me
