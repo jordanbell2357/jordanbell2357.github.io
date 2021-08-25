@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "\"Book of Changes\" (\"I Ching\")" 
+title: "\"Book of Changes\" - \"I Ching\"" 
 categories: maxims
 ---
 
-#### Book of Changes -> 文言 -> 乾 -> 20
+##### Book of Changes -> 文言 -> 乾 -> 20
 
 ##### *The Sacred Books of China. The Texts of Confucianism. Part II*, translated by James Legge, The Sacred Books of the East, Volume XVI, Clarendon Press, 1882. Appendix IV. Section I. Chapter VI. 31.
 
