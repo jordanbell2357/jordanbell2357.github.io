@@ -1,0 +1,13 @@
+---
+layout: post
+title: Plato, "Phaedrus"
+categories: maxims
+---
+
+#### Plato, *Phaedrus* 274c-275b
+
+##### Plato, *Phaedrus*, Translated with an Introduction and Notes by Robin Waterfield, Oxford World's Classics, Oxford University Press, 2002 
+
+pp. 68-69
+
+> Socrates: All right. The story I heard is set in Naucratis in Egypt, where there was one of the ancient gods of Egypt–– the one to whom the bird they call the 'ibis' is sacred, whose name is Theuth. This deity was the inventor of number, arithmetic, geometry, and astronomy, of games involving draughts and dice––and especially of writing. At the time, the king of the whole of Egypt around the capital city of the inland region (the city the Greeks call 'Egyptian Thebes'), was Thamous, or Amon, as the Greeks call him. Theuth came to Thamous and showed him the branches of expertise he had invented, and suggested that they should be spread throughout Egypt. Thamous asked him what good each one would do, and subjected Theuth’s explanations to criticism if he thought he was going wrong and praise if thought he was right. The story goes that Thamous expressed himself at length to Theuth about each of the branches of expertise, both for and against them. It would take a long time to go through all Thamous' views, but when it was the turn of writing, Theuth said, 'Your highness, this science will increase the intelligence of the people of Egypt and improve their memories. For this invention is a potion for memory and intelligence.' But Thamous replied, 'You are most ingenious, Theuth. But one person has the ability to bring branches of expertise into existence, another to assess the extent to which they will harm or benefit those who use them. The loyalty you feel to writing, as its originator, has just led you to tell me the opposite of its true effect. It will atrophy people's memories. Trust in writing will make them remember things by relying on marks made by others, from outside themselves, not on their own inner resources, and so writing will make the things they have learnt disappear from their minds. Your invention is a potion for jogging the memory, not for remembering. You provide your students with the appearance of intelligence, not real intelligence. Because your students will be widely read, though without any contact with a teacher, they will seem to be men of wide knowledge, when they will usually be ignorant. And this spurious appearance of intelligence will make them difficult company.'
