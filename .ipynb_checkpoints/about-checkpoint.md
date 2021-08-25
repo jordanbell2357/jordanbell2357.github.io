@@ -4,10 +4,15 @@ title: About
 permalink: /about/
 ---
 
-my cv and statement of teaching practices
+courses taught
 
-client attestations (First L.? Find best practices after finding praise sent by clients or clients who would write praise
 
-explain how an online session is organized with diagrams/drawings of interaction process
+attestations from clients
 
-mediums used, guidance from me
+explanation of online procedures
+
+#### [Carl B. Allendoerfer Award, Mathematical Association of America (MAA)](https://www.maa.org/programs-and-communities/member-communities/maa-awards/writing-awards/carl-b-allendoerfer-awards)
+
+Recipient of 2019 Carl B. Allendoerfer Award of the Mathematical Association of America (MAA) for 
+> Jordan Bell and Viktor Blåsjö, *Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges*, Mathematics Magazine, Vol. 91, no. 5, December 2018, pp. 341-347.
+
