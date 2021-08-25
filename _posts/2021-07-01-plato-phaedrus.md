@@ -4,7 +4,7 @@ title: Plato, "Phaedrus"
 categories: maxims
 ---
 
-#### Plato, *Phaedrus* 274c-275b
+#### [Plato, *Phaedrus* 274c-275b](http://data.perseus.org/citations/urn:cts:greekLit:tlg0059.tlg012.perseus-eng1:274)
 
 ##### Plato, *Phaedrus*, Translated with an Introduction and Notes by Robin Waterfield, Oxford World's Classics, Oxford University Press, 2002 
 
