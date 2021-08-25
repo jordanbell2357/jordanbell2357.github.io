@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"Book of Changes\" - \"I Ching\"" 
+title: "Book of Changes (\"I Ching\")" 
 categories: maxims
 ---
 
