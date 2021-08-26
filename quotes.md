@@ -12,6 +12,7 @@ permalink: /quotes/
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
+      {{ post.date }}
     {% endif %}
   {% endfor %}
 </ul>
