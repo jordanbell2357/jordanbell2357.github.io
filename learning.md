@@ -6,8 +6,9 @@ permalink: /quotes/
 
 ### Excerpts on learning
 
+{% assign posts = site.posts | filter_posts: "tags", "include 'maxims'" %}
+
 <ul>
-  {% assign posts = site.posts | where_exp: "item", "item.tags contains 'maxims'" %}
   {% for post in posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
