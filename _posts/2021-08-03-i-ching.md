@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I Ching, Commentary on the Words of the Text, the Seventh Wing"
+title: "I Ching, the Seventh Wing"
 categories: maxims
 ---
 
