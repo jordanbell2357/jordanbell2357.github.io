@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Plutarch, "On Listening to Lectures"
-categories: maxims
+category: quotes
 ---
 
 #### Plutarch, *On Listening to Lectures*, 18, *Moralia* 48C-D

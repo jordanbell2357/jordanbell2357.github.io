@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Plato, "The Seventh Letter"
-categories: maxims
+category: quotes
 ---
 
 #### Plato, Epistle VII, 344b-c

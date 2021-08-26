@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Confucius, "The Analects"
-categories: maxims
+category: quotes
 ---
 
 #### Confucius, 《論語 - The Analects》, Book II《為政 - Wei Zheng》

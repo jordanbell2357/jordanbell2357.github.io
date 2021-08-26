@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Quintilian, "Institutio Oratoria"
-categories: maxims
+category: quotes
 ---
 
 #### Quintilian, *Institutio Oratoria*, Book I, Chapter 1, 1-3

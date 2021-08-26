@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "I Ching, the Seventh Wing"
-categories: maxims
+category: quotes
 ---
 
 #### *I Ching* 易經 (Book of Changes). Wen Yan / Commentary on the Words of the Text, the Seventh Wing. Hexagram Qian, the Creative

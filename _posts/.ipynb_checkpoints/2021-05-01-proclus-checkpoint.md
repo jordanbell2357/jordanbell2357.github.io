@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Proclus, "A Commentary on the First Book of Euclid's Elements"
-categories: maxims
+category: quotes
 ---
 
 #### Proclus, *A Commentary on the First Book of Euclid's Elements*, 68

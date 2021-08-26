@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Plato, "Phaedrus"
-categories: maxims
+category: quotes
 ---
 
 #### [Plato, *Phaedrus* 274c-275b](http://data.perseus.org/citations/urn:cts:greekLit:tlg0059.tlg012.perseus-eng1:274)
