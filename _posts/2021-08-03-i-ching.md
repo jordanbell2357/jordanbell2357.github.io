@@ -14,6 +14,6 @@ Book III, Part I, 1. Ch'ien / The Creative, On nine in the second place, d.8. p.
 
 [^1]: [Online text from Yijing Foundation](https://yijing.website/Pages/deTienVleugels.php#Qian)
 
-[Chinese Text Project -> Book of Changes -> ䷀乾 -> 20 文言](https://ctext.org/dictionary.pl?if=en&id=81907)
+##### [Chinese Text Project -> Book of Changes -> ䷀乾 -> 20 文言](https://ctext.org/dictionary.pl?if=en&id=81907)
 
 > *君子學以聚之，問以辯之，寬以居之，仁以行之。《易》曰「見龍在田、利見大人」，君德也。*
