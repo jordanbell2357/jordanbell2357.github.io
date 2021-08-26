@@ -1,11 +1,14 @@
 ---
 layout: page
-title: Quotes on Learning
+title: Quotes
 permalink: /quotes/
 ---
 
+### Excerpts on learning
+
 <ul>
-  {% for post in site.posts %}
+  {% assign posts = site.posts | where_exp: "item", "item.tags contains 'maxims'" %}
+  {% for post in posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a>
     </li>
