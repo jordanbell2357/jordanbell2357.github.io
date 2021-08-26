@@ -8,13 +8,11 @@ categories: maxims
 
 ##### *The I Ching or Book of Changes*, the Richard Wilhelm Translation rendered into English by Cary F. Baynes, third ed., Bollingen Series XIX, Princeton University Press, 1967
 
-Book III, Part I, 1. Ch'ien / The Creative, On nine in the second place, d.8[^1]
+Book III, Part I, 1. Ch'ien / The Creative, On nine in the second place, d.8. p. 380
 
-[^1]: [Online text by Yijing Foundation](https://yijing.website/Pages/deTienVleugels.php#Qian)
+> The superior man learns in order to gather material; he questions in order to sift it. Thus he becomes generous in nature and kindly in his actions. In the Book of Changes it is said: "Dragon appearing in the field. It furthers one to see the great man." For he has the qualities of a ruler.[^1]
 
-p. 380
-
-> The superior man learns in order to gather material; he questions in order to sift it. Thus he becomes generous in nature and kindly in his actions. In the Book of Changes it is said: "Dragon appearing in the field. It furthers one to see the great man." For he has the qualities of a ruler.
+[^1]: [Online text from Yijing Foundation](https://yijing.website/Pages/deTienVleugels.php#Qian)
 
 [Chinese Text Project -> Book of Changes -> ䷀乾 -> 20 文言](https://ctext.org/dictionary.pl?if=en&id=81907)
 
