@@ -6,7 +6,7 @@ permalink: /quotes/
 
 ### Excerpts on learning
 
-{% assign posts = site.posts | filter_posts: "tags", "include 'maxims'" %}
+{% assign posts = site.posts | filter_posts: "categories", "include 'maxims'" %}
 
 <ul>
   {% for post in posts %}
