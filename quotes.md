@@ -13,7 +13,7 @@ permalink: /quotes/
     {% if post.category == 'quotes' %}
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
-        <span class="post-meta">{{ post.date | date: date_format }}</span>
+        {{ post.date | date: date_format }}
       </li>
     {% endif %}
   {% endfor %}
