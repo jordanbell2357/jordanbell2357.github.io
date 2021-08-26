@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "I Ching, Wen Yan Commentary"
+title: "I Ching, Commentary on the Words of the Text, the Seventh Wing"
 categories: maxims
 ---
 
@@ -8,7 +8,7 @@ categories: maxims
 
 ##### [*The I Ching or Book of Changes*, the Richard Wilhelm Translation rendered into English by Cary F. Baynes, third ed., Bollingen Series XIX, Princeton University Press, 1967
 
-[On nine in the second place, d.8. p. 380](https://yijing.website/Pages/deTienVleugels.php#Qian)
+[Book III, Part I, 1. Ch’ien / The Creative, On nine in the second place, d.8, p. 380](https://yijing.website/Pages/deTienVleugels.php#Qian)
 
 > The superior man learns in order to gather material; he questions in order to sift it. Thus he becomes generous in nature and kindly in his actions. In the Book of Changes it is said: "Dragon appearing in the field. It furthers one to see the great man." For he has the qualities of a ruler.
 
