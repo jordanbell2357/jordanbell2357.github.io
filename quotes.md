@@ -11,7 +11,7 @@ permalink: /quotes/
     {% if post.category == 'quotes' %}
       <li>
         <a href="{{ post.url }}">{{ post.title }}</a>
-      &emsp; {{ post.date | date: '%B %d, %Y'}}
+      &ensp; {{ post.date | date: '%B %d, %Y'}}
       </li>
     {% endif %}
   {% endfor %}
