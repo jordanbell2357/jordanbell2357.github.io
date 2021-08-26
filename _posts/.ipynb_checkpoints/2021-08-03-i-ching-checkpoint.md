@@ -1,10 +1,16 @@
 ---
 layout: post
-title: "I Ching 易經 (Book of Changes)"
+title: "I Ching, Wen Yan Commentary"
 categories: maxims
 ---
 
-#### *I Ching* 易經 (Book of Changes)
+#### *I Ching* 易經 (Book of Changes). Wen Yan / Commentary on the Words of the Text, the Seventh Wing. Hexagram Qian, the Creative
+
+##### [*The I Ching or Book of Changes*, the Richard Wilhelm Translation rendered into English by Cary F. Baynes, third ed., Bollingen Series XIX, Princeton University Press, 1967
+
+[On nine in the second place, d.8. p. 380](https://yijing.website/Pages/deTienVleugels.php#Qian)
+
+> The superior man learns in order to gather material; he questions in order to sift it. Thus he becomes generous in nature and kindly in his actions. In the Book of Changes it is said: "Dragon appearing in the field. It furthers one to see the great man." For he has the qualities of a ruler.
 
 ##### *The Sacred Books of China. The Texts of Confucianism. Part II. The Yî King*, translated by James Legge, The Sacred Books of the East, Volume XVI, Clarendon Press, 1882. Appendix IV. Section I. Chapter VI. 31. [p. 416](https://jainqq.org/explore/007676/443)
 
@@ -14,8 +20,3 @@ categories: maxims
 
 > *君子學以聚之，問以辯之，寬以居之，仁以行之。《易》曰「見龍在田、利見大人」，君德也。*
 
-##### *The I Ching or Book of Changes*, the Richard Wilhelm Translation rendered into English by Cary F. Baynes, third ed., Bollingen Series XIX, Princeton University Press, 1967
-
-p. 380
-
-> The superior man learns in order to gather material; he questions in order to sift it. Thus he becomes generous in nature and kindly in his actions. In the Book of Changes it is said: "Dragon appearing in the field. It furthers one to see the great man." For he has the qualities of a ruler.
