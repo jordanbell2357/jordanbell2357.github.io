@@ -8,37 +8,16 @@
 layout: home
 ---
 
-```
-import numpy as np
-from numpy.polynomial import Polynomial
-import matplotlib.pyplot as plt
-import matplotlib.animation as animation
-from matplotlib import rcParams
+I am an extraordinarily experienced tutor for mathematics courses and mathematical courses (physics, economics, and accounting), with a calling for education, learning, explanation and exposition.[^1] I intentionally try to tutor all levels of math from higher elementary up - and my goal is to alway find the student's level and to help them move forward from wherever that is, whether it is adding fractions, linear equations, multiplying polynomials, finding roots, determining asymptotes, taking a derivative, finding the basis for a vector space, doing Langrange multipliers, or working with Brownian motion and stochastic calculus. Knowledge is a ladder that goes up forever and what matters is the process of moving up rungs.
 
-# make sure the full paths for ImageMagick and ffmpeg are configured
-rcParams['animation.convert_path'] = '/usr/bin/convert'
-rcParams['animation.ffmpeg_path'] = '/home/jordan/anaconda3/bin/ffmpeg'
+My tutoring practice is done online in one hour sessions, scheduled with Google Calendar and using the client's preference of video chat. The one-on-one communication in tutoring avoid all the downfalls of online courses (disengagement, undirected, uncertain if you are doing it right), and adds new tools to use for one-on-one teaching. Most of math is done on paper, and my experience has shown that the simple method of holding paper up to the camera works perfectly.
 
-fig, ax = plt.subplots()
+First, I bring complete familiarity with the Ontario secondary mathematics curriculum, and at the university level with all first to third year mathematics courses at the University of Toronto (as a late dropout from the PhD program at the University of Toronto, I have taught and been teaching assistant for most courses multiple times).
 
-t = np.arange(-3, 7, 1)
-p = Polynomial([1, 1, 1])
-q = p(t)
-l = plt.plot(t, q)
+Second, my major value added is skill with designing study plans for courses, choosing specifically targetted extra exercise sets to strengthen areas, and guiding the client to where to focus their efforts to see the greatest gains, much like a personal trainer at a gym vs. hesitantly doing reps on a machine you are not sure if you are using correctly after a group class you didn't quite follow.
 
-ax = plt.axis([-5,5,-1,10])
+My rate per one hour session is \$ 55 per one hour session. I send an invoice the same day from [Xero](https://www.xero.com/ca/) to be paid the same day after the session by Interac E-Transfer to my email address jordan.bell@gmail.com; I have not so far needed to set up methods to ensure payment, and I believe that the service I offer is good enough that clients want further sessions and not to dine and dash, and invoicing after the session gives potential clients who have just found my practice certainty not having to pay before delivery of service.
 
-redDot, = plt.plot([-3], [p(-3)], 'ro')
+I have tutored university mathematics and economics courses for students at the University of Western Ontario and McGill University online, in addition to my deep
 
-def animate(i):
-    redDot.set_data(i, p(i))
-    return redDot,
-
-# create animation using the animate() function with no repeat
-myAnimation = animation.FuncAnimation(fig, animate, frames=np.arange(-5, 5, 1), \
-                                      interval=10, blit=True, repeat=False)
-
-# save animation at 30 frames per second 
-myAnimation.save('myAnimation.gif', writer='imagemagick', fps=30)
-```
-![Parabola](/assets/images/myAnimation.gif)
+[^1]: 2019 recipient of [Carl B. Allendoerfer Award for expository mathematical writing, Mathematical Association of America (MAA)](https://www.maa.org/programs-and-communities/member-communities/maa-awards/writing-awards/carl-b-allendoerfer-awards) for Jordan Bell and Viktor Blåsjö, *Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges*, Mathematics Magazine, Vol. 91, no. 5, December 2018, pp. 341-347. DOI: [10.1080/0025570X.2018.1506656](https://doi.org/10.1080/0025570X.2018.1506656)
