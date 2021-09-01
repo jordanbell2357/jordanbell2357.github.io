@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Animations
-permalink: /animations/
+title: Tutorials
+permalink: /tutorials/
 ---
 
 ```
