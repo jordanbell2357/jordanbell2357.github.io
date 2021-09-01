@@ -4,7 +4,7 @@ title: Hermann Hesse, "The Glass Bead Game"
 category: quotes
 ---
 
-#### Hermann Hesse, *The glass bead game (Magister Ludi)*, translated from the German by Richard and Clara Winston, published by Holt, Rinehart and Winston, New York, 1969
+#### Hermann Hesse, *The Glass Bead Game (Magister Ludi)*, translated from the German by Richard and Clara Winston, published by Holt, Rinehart and Winston, New York, 1969
 
 ##### Chapter 4
 
