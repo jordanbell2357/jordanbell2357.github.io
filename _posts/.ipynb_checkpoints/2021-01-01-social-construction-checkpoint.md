@@ -6,7 +6,7 @@ category: quotes
 
 #### [Peter L. Berger and Thomas Luckmann, *The Social Construction of Reality: A Treatise in the Sociology of Knowledge*, Anchor Books, New York, 1967](https://www.penguinrandomhouse.com/books/12390/the-social-construction-of-reality-by-peter-l-berger/)
 
-##### Part Three, Section 1, *Secondary Socialization*, p. 163:
+##### Part Three, Section 1, "Secondary Socialization", p. 163:
 
 > The reality accent of knowledge internalized in primary socialization is given quasi-automatically. In secondary socialization it must be reinforced by specific pedagogic techniques, ‘brought home’ to the individual. The phrase is suggestive. The original reality of childhood is ‘home’. It posits itself as such, inevitably and, as it were, ‘naturally’. By comparison with it, all later realities are ‘artificial’. Thus the school teacher tries to ‘bring home' the contents he is imparting by making them vivid (that is, making them seem as alive as the ‘home world’ of the child), relevant (that is, linking them to the relevance structures already present in the ‘home world’) and interesting (that is, inducing the attentiveness of the child to detach itself from its ‘natural’ objects to these more ‘artificial’ ones). These manoeuvres are necessary because an internalized reality is already there, persistently ‘in the way’ of new internalizations. The degree and precise character of these pedagogic techniques will vary with the motivations the individual has for the acquisition of the new knowledge.
 >
