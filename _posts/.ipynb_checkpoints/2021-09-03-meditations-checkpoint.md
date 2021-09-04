@@ -6,7 +6,7 @@ category: quotes
 
 #### [Marcus Aurelius, *Meditations with selected correspondence*, Translated by Robin Hard and Introduction and Notes by Christopher Gill, Oxford World's Classics, Oxford University Press, 2011](https://global.oup.com/academic/product/meditations-9780199573202?cc=ca&lang=en&)
 
-##### Book 1
+##### Book 1 [Internet Classics Archive](http://classics.mit.edu/Antoninus/meditations.1.one.html)
 
 pp. 3, 9:[^1] 
 
@@ -25,4 +25,3 @@ pp. 3, 9:[^1]
 > For all these things require the help of the gods and of fortune.
 
 [^1]: Introduction, p. ix: "But only the first book (which records Marcus’ ethical debts to those who have influenced him) has any clear overall structure, and it was presumably composed in that way by Marcus."
-
