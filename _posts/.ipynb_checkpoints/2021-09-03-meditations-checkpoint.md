@@ -4,9 +4,9 @@ title: Marcus Aurelius, "The Meditations"
 category: quotes
 ---
 
-#### [Marcus Aurelius, *Meditations with selected correspondence*, Translated by Robin Hard and Introduction and Notes by Christopher Gill, Oxford World's Classics, Oxford University Press, 2011](https://global.oup.com/academic/product/meditations-9780199573202?cc=ca&lang=en&)
+#### [Marcus Aurelius, *Meditations with selected correspondence*, Translated by Robin Hard and Introduction and Notes by Christopher Gill, Oxford World's Classics, Oxford University Press, 2011](https://global.oup.com/academic/product/meditations-9780199573202?cc=ca&lang=en&)[^1]
 
-##### [Internet Classics Archive](http://classics.mit.edu/Antoninus/meditations.1.one.html)
+[^1]: Alternate translation available at [Internet Classics Archive](http://classics.mit.edu/Antoninus/meditations.1.one.html)
 
 ##### Book 1 
 
