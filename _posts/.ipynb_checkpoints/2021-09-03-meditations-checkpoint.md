@@ -10,11 +10,7 @@ category: quotes
 
 ##### Book 1 
 
-Explanatory Notes, p. 144: 
-
-> This book, alone in the work, is systematically arranged, as a record of debts to other people (and to the gods, 1.17), which have helped to take forward the ethical development or journey that is the main theme of Med. (see Introduction, p. xv). With each comment (‘From . . .’), we need to supply the idea, ‘I have learned to value the following quality’ or ‘I have received the following benefit’.
-
-pp. 3, 9:[^1] 
+pp. 3, 9:
 
 > 1\. From my grandfather Verus, nobility of character and evenness of temper.
 >
@@ -29,3 +25,7 @@ pp. 3, 9:[^1]
 > 17\. ...
 >
 > For all these things require the help of the gods and of fortune.
+
+Explanatory Notes, p. 144: 
+
+> This book, alone in the work, is systematically arranged, as a record of debts to other people (and to the gods, 1.17), which have helped to take forward the ethical development or journey that is the main theme of Med. (see Introduction, p. xv). With each comment (‘From . . .’), we need to supply the idea, ‘I have learned to value the following quality’ or ‘I have received the following benefit’.
