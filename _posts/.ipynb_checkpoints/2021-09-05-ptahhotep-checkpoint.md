@@ -14,22 +14,22 @@ category: quotes
 
 ##### Part One: The Old Kingdom, Chapter V, Didactic Literature, The Instruction of Ptahhotep, Maxim 1, p. 63
 
-> Don't be proud of your knowledge,
-> Consult the ignorant and the wise;
-> The limits of art are not reached,
-> No artist's skills are perfect;
-> Good speech is more hidden than greenstone,
+> Don't be proud of your knowledge,  
+> Consult the ignorant and the wise;  
+> The limits of art are not reached,  
+> No artist's skills are perfect;  
+> Good speech is more hidden than greenstone,  
 > Yet may be found among maids at the grindstones.
 
 #### [University College London, Digital Egypt for Universities, Teaching of Ptahhotep, 2003](https://www.ucl.ac.uk/museums-static/digitalegypt/literature/ptahhotep.html)
 
-> Then he addressed his son:
-> Do not be proud on account of your knowledge,
-> but discuss with the ignorant as with the wise.
-> The limits of art cannot be delivered;
-> there is no artist whose talent is fulfilled.
-> Fine words are more sought after than greenstone,
-> but can be found with the women at the grindstone.
+> Then he addressed his son:  
+> Do not be proud on account of your knowledge,  
+> but discuss with the ignorant as with the wise.  
+> The limits of art cannot be delivered;  
+> there is no artist whose talent is fulfilled.  
+> Fine words are more sought after than greenstone,  
+> but can be found with the women at the grindstone.  
 
 #### [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
 
