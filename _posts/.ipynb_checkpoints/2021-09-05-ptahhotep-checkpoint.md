@@ -23,13 +23,15 @@ category: quotes
 
 #### [University College London, Digital Egypt for Universities, Teaching of Ptahhotep, 2003](https://www.ucl.ac.uk/museums-static/digitalegypt/literature/ptahhotep.html)
 
+##### Papyrus Prisse, column 5, lines 8-10
+
 > Then he addressed his son:  
 > Do not be proud on account of your knowledge,  
 > but discuss with the ignorant as with the wise.  
 > The limits of art cannot be delivered;  
 > there is no artist whose talent is fulfilled.  
 > Fine words are more sought after than greenstone,  
-> but can be found with the women at the grindstone.  
+> but can be found with the women at the grindstone.
 
 #### [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
 
