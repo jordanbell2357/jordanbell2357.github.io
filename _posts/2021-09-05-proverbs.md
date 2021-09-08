@@ -14,7 +14,7 @@ category: quotes
 > 6. for understanding proverbs and parables, the sayings and riddles of the wise.  
 > 7. The fear of the LORD is the beginning of knowledge, but fools despise wisdom and instruction.  [^1]
 
-[^1]: [Rashi's Commentary for Proverbs 1:7](https://www.chabad.org/library/bible_cdo/aid/16372/showrashi/true):
+[^1]: [Rashi's Commentary on Proverbs 1:7](https://www.sefaria.org/Rashi_on_Proverbs.1.7.2?lang=bi):
 
-    > **The fear of the Lord is the beginning of knowledge**: Until here, he explained for what purpose Solomon composed this book, and now the book commences.  
-    > **The fear of the Lord is the beginning of knowledge**: This is the separation of the fundamentals of knowledge, and what shall be for you first, preceding knowledge: Before your wisdom, first fear your Creator, and that will give your heart the desire to engage in wisdom and in knowledge, for the fools, who do not fear the Lord, despise wisdom and discipline.
+    > *The fear of the Lord is the beginning of knowledge*: Until here, he explained for what purpose Solomon composed this book, and now the book commences.  
+    > *The fear of the Lord is the beginning of knowledge*: This is the separation of the fundamentals of knowledge, and what shall be for you first, preceding knowledge: Before your wisdom, first fear your Creator, and that will give your heart the desire to engage in wisdom and in knowledge, for the fools, who do not fear the Lord, despise wisdom and discipline.
