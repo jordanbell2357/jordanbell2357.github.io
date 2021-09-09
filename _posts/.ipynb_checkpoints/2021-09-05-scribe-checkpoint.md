@@ -4,7 +4,7 @@ title: "The advice of a supervisor to a younger scribe (E-duba C)"
 category: quotes
 ---
 
-#### [The Electronic Text Corpus of Sumerian Literature (ETCSL), Faculty of Oriental Studies, University of Oxford](https://etcsl.orinst.ox.ac.uk/)
+#### [The Electronic Text Corpus of Sumerian Literature (ETCSL), University of Oxford](https://etcsl.orinst.ox.ac.uk/)
 
 #### [5.1.3 The advice of a supervisor to a younger scribe (E-dub-ba-a C)](https://etcsl.orinst.ox.ac.uk/section5/tr513.htm). ll. 1-20:[^1]
 
@@ -13,4 +13,10 @@ category: quotes
 > 9-15 "I just did whatever he outlined for me -- everything was always in its place. Only a fool would have deviated from his instructions. He guided my hand on the clay and kept me on the right path. He made me eloquent with words and gave me advice. He focused my eyes on the rules which guide a man with a task: zeal is proper for a task, time-wasting is taboo; anyone who wastes time on his task is neglecting his task.  
 > 16-20 "He did not vaunt his knowledge: his words were modest. If he had vaunted his knowledge, people would have frowned. Do not waste time, do not rest at night -- get on with that work! Do not reject the pleasurable company of a mentor or his assistant: once you have come into contact with such great brains, you will make your own words more worthy.
 
-[^1]: Cuneiform Digital Library Initiative (CDLI), UCLA: [CDLI Literary 000756 (Edubba C) composite](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P478952)
+[^1]: [Cuneiform Digital Library Initiative (CDLI), UCLA](https://cdli.ucla.edu/)
+    
+    [CDLI no. P478952, Edubba C](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P478952)
+    
+    [Oriental Institute, University of Chicago. Registration Number: A30216](https://oi-idb.uchicago.edu/id/8d6d27ae-0aac-4289-ade2-485eb9e7eec0)
+    
+    !["Description: FRAGMENT, EDUBBA C, INSCRIBED BOTH SIDES."](/assets/images/A030216.1920x1200.png)
