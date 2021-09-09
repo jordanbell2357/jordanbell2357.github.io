@@ -14,3 +14,7 @@ category: quotes
 > 16-20 "He did not vaunt his knowledge: his words were modest. If he had vaunted his knowledge, people would have frowned. Do not waste time, do not rest at night -- get on with that work! Do not reject the pleasurable company of a mentor or his assistant: once you have come into contact with such great brains, you will make your own words more worthy.
 
 [^1]: Cuneiform Digital Library Initiative (CDLI), UCLA. [P478952, Edubba C](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P478952)
+
+    [University of Pennsylvania Museum of Archaeology and Anthropology. Oracc CDLI pager](http://oracc.museum.upenn.edu/cdli/pager)
+    
+    ![P230446](/assets/images/P230446.png)(http://oracc.museum.upenn.edu/cdli/P230446/image)
