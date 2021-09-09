@@ -17,4 +17,4 @@ category: quotes
 
     [University of Pennsylvania Museum of Archaeology and Anthropology. Oracc CDLI pager](http://oracc.museum.upenn.edu/cdli/pager)
     
-    ![P230446](/assets/images/P230446.png)(http://oracc.museum.upenn.edu/cdli/P230446/image)
+    [![P230446](/assets/images/P230446.png)](http://oracc.museum.upenn.edu/cdli/P230446/image)
