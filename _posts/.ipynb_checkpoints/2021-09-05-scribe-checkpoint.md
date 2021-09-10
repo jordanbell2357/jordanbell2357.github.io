@@ -6,7 +6,7 @@ category: quotes
 
 #### [The Electronic Text Corpus of Sumerian Literature (ETCSL), University of Oxford](https://etcsl.orinst.ox.ac.uk/)
 
-#### [5.1.3 The advice of a supervisor to a younger scribe (E-dub-ba-a C)](https://etcsl.orinst.ox.ac.uk/section5/tr513.htm). ll. 1-20:[^1][^2]
+#### [5.1.3 The advice of a supervisor to a younger scribe (E-dub-ba-a C)](https://etcsl.orinst.ox.ac.uk/section5/tr513.htm). ll. 1-20:[^1] [^2]
 
 > 1-2 (The supervisor speaks:) "One-time member of the school, come here to me, and let me explain to you what my teacher revealed.  
 > 3-8 "Like you, I was once a youth and had a mentor. The teacher assigned a task to me -- it was man's work. Like a springing reed, I leapt up and put myself to work. I did not depart from my teacher's instructions, and I did not start doing things on my own initiative. My mentor was delighted with my work on the assignment. He rejoiced that I was humble before him and he spoke in my favour.  
