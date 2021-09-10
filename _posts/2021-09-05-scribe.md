@@ -18,3 +18,5 @@ category: quotes
     [University of Pennsylvania Museum of Archaeology and Anthropology. The Open Richly Annotated Cuneiform Corpus (Oracc)](http://oracc.museum.upenn.edu/cdli/pager)
     
     [![P230446](/assets/images/P230446.png)](http://oracc.museum.upenn.edu/cdli/P230446/image)
+    
+Vanstiphout, H. L. J., “The Dialogue Between A Supervisor and A Scribe (1.185)”, in: Context of Scripture Online, Editor in Chief: W. Hallo. Consulted online on 10 September 2021 <http://dx.doi.org/10.1163/2211-436X_cos_aCOSB_1_185>
