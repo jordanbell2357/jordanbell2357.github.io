@@ -15,6 +15,6 @@ category: quotes
 
 [^1]: Cuneiform Digital Library Initiative (CDLI), UCLA. [P478952, Edubba C](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P478952)
 
-    [University of Pennsylvania Museum of Archaeology and Anthropology. Oracc CDLI pager](http://oracc.museum.upenn.edu/cdli/pager)
+    [University of Pennsylvania Museum of Archaeology and Anthropology. The Open Richly Annotated Cuneiform Corpus (Oracc)](http://oracc.museum.upenn.edu/cdli/pager)
     
     [![P230446](/assets/images/P230446.png)](http://oracc.museum.upenn.edu/cdli/P230446/image)
