@@ -8,7 +8,7 @@ category: quotes
 
 ##### [p. 109, The Chandogya Upanishad, Prapathaka 7, Khanda 1, Verse 1](https://archive.org/details/upanishads01ml/page/108/mode/2up)
 
-> Narada approached Sanatkumara and said, 'Teach me, Sir!' Sanatkumara said to him: 'Please to tell me what you know; afterward I shall tell you what is beyond.'[^1]
+> Narada approach ed Sanatkumara and said, 'Teach me, Sir!' Sanatkumara said to him: 'Please to tell me what you know; afterward I shall tell you what is beyond.'[^1]
 
 [^1]: [Vande Mataram Library Trust (VMLT). छान्दोग्योपनिषद्‌सप्तमोऽध्यायःप्रथमः खण्डःVerse १](https://upanishads.org.in/upanishads/11/7/1/1)  
     > *ॐ॥ अधीहि भगव इति होपससाद सनत्कुमारं नारदस्त होवाच यद्वेत्थ तेन मोपसीद ततस्त ऊर्ध्वं वक्ष्यामीति स होवाच॥*
