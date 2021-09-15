@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The advice of a supervisor to a younger scribe (E-duba C)"
+title: "The advice of a supervisor to a younger scribe (Eduba C)"
 category: quotes
 ---
 
@@ -13,7 +13,7 @@ category: quotes
 > 9-15 "I just did whatever he outlined for me -- everything was always in its place. Only a fool would have deviated from his instructions. He guided my hand on the clay and kept me on the right path. He made me eloquent with words and gave me advice. He focused my eyes on the rules which guide a man with a task: zeal is proper for a task, time-wasting is taboo; anyone who wastes time on his task is neglecting his task.  
 > 16-20 "He did not vaunt his knowledge: his words were modest. If he had vaunted his knowledge, people would have frowned. Do not waste time, do not rest at night -- get on with that work! Do not reject the pleasurable company of a mentor or his assistant: once you have come into contact with such great brains, you will make your own words more worthy.
 
-[^1]: Cuneiform Digital Library Initiative (CDLI), UCLA. [P478952, Edubba C](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P478952)
+[^1]: [Cuneiform Digital Library Initiative (CDLI), UCLA. P478952, Edubba C](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P478952)
 
     [University of Pennsylvania Museum of Archaeology and Anthropology. The Open Richly Annotated Cuneiform Corpus (Oracc)](http://oracc.museum.upenn.edu/cdli/pager)
     
