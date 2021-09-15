@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Rashi on Proverbs 4:7
+title: Rashi's Commentary on the Book of Proverbs, Chapter 4, Verse 7
 category: quotes
 ---
 
-#### Rashi on Proverbs 4:7 (Ketuvim, Mishlei 4:7)
+#### Rashi's Commentary on the Book of Proverbs, Chapter 4, Verse 7 (Ketuvim, Mishlei 4:7)
 
 > **The beginning of wisdom \[is to\] acquire wisdom** At the beginning of your wisdom, learn from others and acquire for yourself the tradition from the mouth of the teacher, and afterwards with all your possession acquire understanding. Concentrate on it by yourself to understand the reasons, thereby deriving one thing from another.
 [^1] [^2]
