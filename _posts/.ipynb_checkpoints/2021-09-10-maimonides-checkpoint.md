@@ -17,3 +17,5 @@ category: quotes
 [^1]: [Sefaria.org. Translation by Moses Hyamson](https://www.sefaria.org/Mishneh_Torah%2C_Torah_Study.1?ven=The_Mishneh_Torah_by_Maimonides._trans._by_Moses_Hyamson,_1937-1949&lang=en)
 
 [^2]: [Chabad.org](https://www.chabad.org/library/article_cdo/aid/910977/jewish/Talmud-Torah-Chapter-Four.htm)
+
+<p>The title is <cite dir="rtl">مدخل إلى <span dir="ltr">C++</span></cite> in Arabic.</p>
