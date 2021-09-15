@@ -1,0 +1,14 @@
+---
+layout: post
+title: Rashi on Proverbs 4:7
+category: quotes
+---
+
+#### Rashi on Proverbs 4:7 (Ketuvim, Mishlei 4:7)
+
+> **The beginning of wisdom `[is to`] acquire wisdom** At the beginning of your wisdom, learn from others and acquire for yourself the tradition from the mouth of the teacher, and afterwards with all your possession acquire understanding. Concentrate on it by yourself to understand the reasons, thereby deriving one thing from another.
+[^1] [^2]
+
+[^1]: [Sefaria.org. Translation from Abraham Cohen (trans.), *Proverbs: Hebrew Text, English Translation and Commentary*, Soncino Books of the Bible, Soncino Press, 1945](https://www.sefaria.org/Rashi_on_Proverbs.4.7?lang=bi)
+
+[^2]: [Chabad.org. The Jewish Bible with a Modern English Translation and Rashi's Commentary](https://www.chabad.org/library/bible_cdo/aid/16375/showrashi/true/jewish/Chapter-4.htm)
