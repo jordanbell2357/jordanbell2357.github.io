@@ -4,7 +4,7 @@ title: Ibn-Khaldûn, "The Muqaddimah"
 category: quotes
 ---
 
-#### *The Muqaddimah: An Introduction to History*, translated from the Arabic by Franz Rosenthal, in three volumes, volume two, Bollingen Series XLIII, Pantheon Books, 1958
+#### Ibn-Khaldûn, *The Muqaddimah: An Introduction to History*, translated from the Arabic by Franz Rosenthal, in three volumes, volume two, Bollingen Series XLIII, Pantheon Books, 1958
 
 Chapter VI, Section 19: "The sciences concerned with numbers", "The craft of calculation", p. 122:[^1]
 

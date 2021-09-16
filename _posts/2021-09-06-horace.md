@@ -11,7 +11,7 @@ category: quotes
 > Aut prodesse volunt aut delectare poetae  
 > aut simul et iucunda et idonea dicere vitae.  
 > quidquid praecipies, esto brevis, ut cito dicta  
-? percipiant animi dociles teneantque fideles:  
+> percipiant animi dociles teneantque fideles:  
 > omne supervacuum pleno de pectore manat.  
 > ficta voluptatis causa sint proxima veris,  
 > ne quodcumque velit poscat sibi fabula credi,  
