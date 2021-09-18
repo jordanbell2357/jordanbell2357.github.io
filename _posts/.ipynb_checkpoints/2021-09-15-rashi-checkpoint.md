@@ -13,5 +13,4 @@ category: quotes
 
 [^2]: [Chabad.org. The Jewish Bible with a Modern English Translation and Rashi's Commentary](https://www.chabad.org/library/bible_cdo/aid/16375/showrashi/true/jewish/Chapter-4.htm)
 
-<p dir="rtl">ראשית חכמה קנה חכמה.** תחלת חכמתך למוד מאחרים קנה לך שמועה מפי הרב, ואח"כ בכל קנינך קנה בינה, תתבונן בה מעצמך להשכיל הטעמים דבר מתוך דבר**:
-</p>
+<p dir="rtl"><b>ראשית חכמה קנה חכמה.</b> תחלת חכמתך למוד מאחרים קנה לך שמועה מפי הרב, ואח"כ בכל קנינך קנה בינה, תתבונן בה מעצמך להשכיל הטעמים דבר מתוך דבר: </p>
