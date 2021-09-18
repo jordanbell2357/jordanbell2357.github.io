@@ -25,3 +25,5 @@ Chapter VI, Section 19: "The geometrical sciences", pp. 130-131:[^2]
 > Geometry enlightens the intellect and sets one’s mind right. All its proofs are very clear and orderly. It is hardly possible for errors to enter into geometrical reasoning, because it is well arranged and orderly. Thus, the mind that constantly applies itself to geometry is not likely to fall into error. In this convenient way, the person who knows geometry acquires intelligence. It has been assumed that the following statement was written upon Plato’s door: ‘No one who is not a geometrician may enter our house.’
 >
 > Our teachers used to say that one’s application to geometry does to the mind what soap does to a garment. It washes off stains and cleanses it of grease and dirt. The reason for this is that geometry is well arranged and orderly, as we have mentioned.
+
+[Available at Islamic Philosophy Online](http://www.muslimphilosophy.com/ik/Muqaddimah/)
