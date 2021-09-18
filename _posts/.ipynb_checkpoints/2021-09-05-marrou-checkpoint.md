@@ -4,7 +4,7 @@ title: Marrou, "A History Of Education in Antiquity"
 category: quotes
 ---
 
-#### H. I. Marrou, "A History Of Education in Antiquity", Translated by George Lamb, New American Library, 1964
+#### H. I. Marrou, *A History Of Education in Antiquity*, Translated by George Lamb, New American Library, 1964
 
 ##### Part One, Section 6, "The Masters of the Classical Tradition, I. Plato", pp. 111-112
 

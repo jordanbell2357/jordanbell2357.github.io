@@ -4,7 +4,7 @@ title: "\"The Social Construction of Reality\""
 category: quotes
 ---
 
-#### [Peter L. Berger and Thomas Luckmann, *The Social Construction of Reality: A Treatise in the Sociology of Knowledge*, Anchor Books, New York, 1967](https://www.penguinrandomhouse.com/books/12390/the-social-construction-of-reality-by-peter-l-berger/)
+#### Peter L. Berger and Thomas Luckmann, *The Social Construction of Reality: A Treatise in the Sociology of Knowledge*, Anchor Books, New York, 1967
 
 ##### Part Three, Section 1, "Secondary Socialization", p. 163:
 

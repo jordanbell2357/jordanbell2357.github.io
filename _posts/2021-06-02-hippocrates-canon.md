@@ -12,10 +12,16 @@ p. 68:
 >
 > The growth of plants forms an excellent parallel to the study of medicine. Our characters resemble the soil, our masters’ precepts the seed; education is the sowing of the seed in season and the circumstances of teaching resemble the climatic conditions that control the growth of plants. Industrious toil and the passage of time strengthen the plant and bring it to maturity.
 
-#### *Hippocrates. Prognostic. Regimen in Acute Diseases. The Sacred Disease. The Art. Breaths. Law. Decorum. Physician (Ch. 1). Dentition*. Translated by W. H. S. Jones. Loeb Classical Library 148. Cambridge, MA: Harvard University Press, 1923.
+#### *Hippocrates. Prognostic. Regimen in Acute Diseases. The Sacred Disease. The Art. Breaths. Law. Decorum. Physician (Ch. 1). Dentition*. Translated by W. H. S. Jones. Loeb Classical Library 148. Cambridge, MA: Harvard University Press, 1923
 
 pp. 262-265
 
 > II. He who is going truly to acquire an understanding of medicine must enjoy natural ability, teaching, a suitable place, instruction from childhood, diligence, and time. Now first of all natural ability is necessary, for if nature be in opposition everything is in vain. But when nature points the way to what is best, then comes the teaching of the art. This must be acquired intelligently by one who from a child has been instructed in a place naturally suitable for learning. Moreover he must apply diligence for a long period, in order that learning, becoming second nature, may reap a fine and abundant harvest.
 >
 > III. The learning of medicine may be likened to the growth of plants. Our natural ability is the soil. The views of our teachers are as it were the seeds. Learning from childhood is analogous to the seeds' falling betimes upon the prepared ground. The place of instruction is as it were the nutriment that comes from tlie surrounding air to the things sown. Diligence is the working of the soil. Time strengthens all these things, so that their nurture is perfected.
+
+#### [The Genuine Works of Hippocrates. Charles Darwin Adams. Perseus Digital Library Project: Lex \[Hp. Lex\]](http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus%3Atext%3A1999.01.0248%3Atext%3DLex%3Asection%3D2)
+
+> **Part 2.** Whoever is to acquire a competent knowledge of medicine, ought to be possessed of the following advantages: a natural disposition; instruction; a favorable position for the study; early tuition; love of labor; leisure. First of all, a natural talent is required; for, when Nature opposes, everything else is in vain; but when Nature leads the way to what is most excellent, instruction in the art takes place, which the student must try to appropriate to himself by reflection, becoming an early pupil in a place well adapted for instruction. He must also bring to the task a love of labor and perseverance, so that the instruction taking root may bring forth proper and abundant fruits.
+>
+> **Part 3.** Instruction in medicine is like the culture of the productions of the earth. For our natural disposition is, as it were, the soil; the tenets of our teacher are, as it were, the seed; instruction in youth is like the planting of the seed in the ground at the proper season; the place where the instruction is communicated is like the food imparted to vegetables by the atmosphere; diligent study is like the cultivation of the fields; and it is time which imparts strength to all things and brings them to maturity.

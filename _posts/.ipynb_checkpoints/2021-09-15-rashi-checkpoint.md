@@ -11,6 +11,6 @@ category: quotes
 
 [^1]: [Sefaria.org](https://www.sefaria.org/Rashi_on_Proverbs.4.7?lang=bi)
 
-[^2]: [Chabad.org. The Jewish Bible with a Modern English Translation and Rashi's Commentary](https://www.chabad.org/library/bible_cdo/aid/16375/showrashi/true/jewish/Chapter-4.htm)
+[^2]: [Chabad.org](https://www.chabad.org/library/bible_cdo/aid/16375/showrashi/true/jewish/Chapter-4.htm)
 
 <p dir="rtl"><b>ראשית חכמה קנה חכמה.</b> תחלת חכמתך למוד מאחרים קנה לך שמועה מפי הרב, ואח"כ בכל קנינך קנה בינה, תתבונן בה מעצמך להשכיל הטעמים דבר מתוך דבר: </p>
