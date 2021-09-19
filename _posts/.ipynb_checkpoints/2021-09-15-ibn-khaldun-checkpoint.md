@@ -27,3 +27,7 @@ Chapter VI, Section 19: "The geometrical sciences", pp. 130-131:[^2]
 > Our teachers used to say that one’s application to geometry does to the mind what soap does to a garment. It washes off stains and cleanses it of grease and dirt. The reason for this is that geometry is well arranged and orderly, as we have mentioned.
 
 [Available at Islamic Philosophy Online](http://www.muslimphilosophy.com/ik/Muqaddimah/)
+
+[Arabic Collections Online (ACO), NYU Abu Dhabi](http://hdl.handle.net/2333.1/f7m0ckj2)
+
+<p dir="ltr">[كتاب تاريخ ابن خلدون.المكتبة الشاملة](https://shamela.ws/book/12320)</p>
