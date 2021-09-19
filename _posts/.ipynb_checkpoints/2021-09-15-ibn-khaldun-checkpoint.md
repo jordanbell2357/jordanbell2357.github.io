@@ -8,13 +8,11 @@ category: quotes
 
 Chapter VI, Section 19: "The sciences concerned with numbers", "The craft of calculation", p. 122:[^1]
 
-[^1]: [Internet Archive](https://archive.org/details/dli.ernet.244933/page/122/mode/1up)
+[^1]: [Internet Archive](https://archive.org/details/dli.ernet.244933/page/122/mode/1up) and [Islamic Philosophy Online](http://www.muslimphilosophy.com/ik/Muqaddimah/)
 
 > This craft is something newly created. It is needed for business calculations. Scholars have written many works on it. They are used in the cities for the instruction of children. The best method of instruction is to begin with calculation, because it is concerned with lucid knowledge and systematic proofs. As a rule, it produces an enlightened intellect that is trained along correct lines. It has been said that whoever applies himself to the study of calculation early in his life will as a rule be truthful, because calculation has a sound basis and requires self-discipline. (Soundness and self-discipline) will thus become character qualities of such a person. He will get accustomed to truthfulness and adhere to it methodically.
 
-Chapter VI, Section 19: "The geometrical sciences", pp. 130-131:[^2]
-
-[^2]: [Internet Archive](https://archive.org/details/dli.ernet.244933/page/129/mode/1up)
+Chapter VI, Section 20: "The geometrical sciences", pp. 130-131:
 
 > The Greek work on this craft which has been translated into Arabic is the book of Euclid. It is entitled *Kitâb al-uṣûl wa-l-arkân*, ‘Book of Basic Principles and Pillars’. It is the simplest book on the subject for students. It was the first Greek work to be translated in Islam in the days of Abû Ja‘far al-Manṣûr. The existing recensions differ, depending on the respective translators, (of whom there are at least three).
 >
@@ -26,8 +24,7 @@ Chapter VI, Section 19: "The geometrical sciences", pp. 130-131:[^2]
 >
 > Our teachers used to say that one’s application to geometry does to the mind what soap does to a garment. It washes off stains and cleanses it of grease and dirt. The reason for this is that geometry is well arranged and orderly, as we have mentioned.
 
-[Available at Islamic Philosophy Online](http://www.muslimphilosophy.com/ik/Muqaddimah/)
+[Al-Maktaba Al-Shamela](https://shamela.ws/book/12320): <span dir="rtl">كتاب تاريخ ابن خلدون</span>
 
 [Arabic Collections Online (ACO), NYU Abu Dhabi](http://hdl.handle.net/2333.1/f7m0ckj2)
 
-[Al-Maktaba Al-Shamela](https://shamela.ws/book/12320): <span dir="rtl">كتاب تاريخ ابن خلدون</span>
