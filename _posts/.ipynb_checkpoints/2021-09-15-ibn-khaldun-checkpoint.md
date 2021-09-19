@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ibn-Khaldûn, "The Muqaddimah"
+title: Ibn-Khaldûn, "The Muqaddimah" 
 category: quotes
 ---
 
@@ -30,4 +30,4 @@ Chapter VI, Section 19: "The geometrical sciences", pp. 130-131:[^2]
 
 [Arabic Collections Online (ACO), NYU Abu Dhabi](http://hdl.handle.net/2333.1/f7m0ckj2)
 
-<p dir="ltr">[كتاب تاريخ ابن خلدون.المكتبة الشاملة](https://shamela.ws/book/12320)</p>
+[Al-Maktaba Al-Shamela](https://shamela.ws/book/12320): <span dir="rtl">كتاب تاريخ ابن خلدون</span>
