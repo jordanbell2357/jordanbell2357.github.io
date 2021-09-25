@@ -6,7 +6,7 @@ category: quotes
 
 #### Plato, Epistle VII, 344b-c
 
-##### [J. Harward (trans.), *Plato: The Seventh Letter*, The Internet Classics Archive](http://classics.mit.edu/Plato/seventh_letter.html)
+#### [J. Harward (trans.), *Plato: The Seventh Letter*, The Internet Classics Archive](http://classics.mit.edu/Plato/seventh_letter.html)
 
 > After much effort, as names, definitions, sights, and other data of sense, are brought into contact and friction one with another, in the course of scrutiny and kindly testing by men who proceed by question and answer without ill will, with a sudden flash there shines forth understanding about every problem, and an intelligence whose efforts reach the furthest limits of human powers.
 
