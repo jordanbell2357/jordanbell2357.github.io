@@ -14,7 +14,7 @@ p. 68:
 
 #### *Hippocrates. Prognostic. Regimen in Acute Diseases. The Sacred Disease. The Art. Breaths. Law. Decorum. Physician (Ch. 1). Dentition*. Translated by W. H. S. Jones. Loeb Classical Library 148. Cambridge, MA: Harvard University Press, 1923
 
-pp. 262-265
+pp. 262-265:
 
 > II. He who is going truly to acquire an understanding of medicine must enjoy natural ability, teaching, a suitable place, instruction from childhood, diligence, and time. Now first of all natural ability is necessary, for if nature be in opposition everything is in vain. But when nature points the way to what is best, then comes the teaching of the art. This must be acquired intelligently by one who from a child has been instructed in a place naturally suitable for learning. Moreover he must apply diligence for a long period, in order that learning, becoming second nature, may reap a fine and abundant harvest.
 >
@@ -30,10 +30,14 @@ pp. 283-285:
 
 [^3]: [Perseus Digital Library Project](http://www.perseus.tufts.edu/hopper/text.jsp?doc=Perseus%3Atext%3A1999.01.0248%3Atext%3DLex%3Asection%3D2)
 
-#### Émile Littré (ed.), *Oeuvres complètes d'Hippocrate*, Tome quatrième, J.-B. Baillière, Paris, 1844
+#### Émile Littré (ed.), *Oeuvres complètes d'Hippocrate, Tome quatrième*, J.-B. Baillière, Paris, 1844
+
+pp. 638-640:
 
 > 2. Χρὴ γὰρ, ὅστις μέλλει ἰητρικῆς ξύνεσιν ἀτρεκέως ἁρμόζεσθαι, τῶνδέ μιν ἐπήβολον γενέσθαι· φύσιος· διδασκαλίης· τόπου εὐφυέος· παιδομαθίης· φιλοπονίης· χρόνου. Πρῶτον μὲν οὖν πάντων δεῖ φύσιος· φύσιος γὰρ ἀντιπρησσούσης, κενεὰ πάντα· φύσιος δὲ ἐς τὸ ἄριστον ὁδηγεούσης, διδασκαλίη τέχνης γίνεται· ἣν μετὰ φρονήσιος δεῖ περιποιήσασθαι, παιδομαθέα γενόμενον ἐν τόπῳ, ὁκοῖος εὐφυὴς πρὸς μάθησιν ἔσται· ἔτι δὲ φιλοπονίην προσενέγκασθαι ἐς χρόνον πουλὺν, ὅκως ἡ μάθησις, ἐμφυσιωθεῖσα, δεξιῶς τε καὶ εὐαλδέως τοὺς καρποὺς ἐξενέγκηται.
 >
-> 3. Ὁκοίη γὰρ τῶν ἐν τῇ γῇ φυομένων \[ἡ\] θεωρίη, τοιήδε καὶ τῆς ἰητρικῆς ἡ μάθησις. Ἡ μὲν γὰρ φύσις ἡμέων, ὁκοῖον ἡ χώρη· τὰ δὲ δόγματα τῶν διδασκόντων, ὁκοῖον τὰ σπέρματα· ἡ δὲ παιδομαθίη, τὸ καθ᾿ ὥρην αὐτὰ πεσεῖν εἰς τὴν ἄρουραν· ὁ δὲ τόπος ἐν ᾧ ἡ μάθησις, ὁκοῖον ἡ ἐκ τοῦ περιέχοντος ἠέρος τροφὴ γιγνομένη τοῖσι φυομένοισιν· ἡ δὲ φιλοπονίη, ἐργασίη· ὁ δὲ χρόνος ταῦτα ἐνισχύει πάντα, ὡς τραφῆναι τελέως.[^4]
+> 3. Ὁκοίη γὰρ τῶν ἐν τῇ γῇ φυομένων \[ἡ\] θεωρίη, τοιήδε καὶ τῆς ἰητρικῆς ἡ μάθησις. Ἡ μὲν γὰρ φύσις ἡμέων, ὁκοῖον ἡ χώρη· τὰ δὲ δόγματα τῶν διδασκόντων, ὁκοῖον τὰ σπέρματα· ἡ δὲ παιδομαθίη, τὸ καθ᾿ ὥρην αὐτὰ πεσεῖν εἰς τὴν ἄρουραν· ὁ δὲ τόπος ἐν ᾧ ἡ μάθησις, ὁκοῖον ἡ ἐκ τοῦ περιέχοντος ἠέρος τροφὴ γιγνομένη τοῖσι φυομένοισιν· ἡ δὲ φιλοπονίη, ἐργασίη· ὁ δὲ χρόνος ταῦτα ἐνισχύει πάντα, ὡς τραφῆναι τελέως.[^4] [^5]
 
-[^4]: [Digital Corpus for Graeco-Arabic Studies. Supported by Andrew W. Mellon Foundation, Harvard University, Tufts University](https://www.graeco-arabic-studies.org/single-text/text/littre-146/page/638.html), [BnF Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k62706777)
+[^4]: [Digital Corpus for Graeco-Arabic Studies. Supported by Andrew W. Mellon Foundation, Harvard University, Tufts University](https://www.graeco-arabic-studies.org/single-text/text/littre-146/page/638.html)
+
+[^5]: [BnF Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k62706777)
