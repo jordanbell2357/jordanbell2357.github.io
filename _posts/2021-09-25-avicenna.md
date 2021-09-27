@@ -22,4 +22,3 @@ Treatise I, Chapter 3, Section 3. Advantages for those who master the discipline
 > A man’s convictions include very important things and some others of secondary importance. The master of the discipline of logic can work to double-check a result with regard to those important topics by methodically going back over his work. Sometimes by those means one reaches a \[measure of\] security against error, like one who adds up the elements of a single calculation many times out of precaution, until the doubt on the result of the addition disappears.[^2]
 
 [^2]: <p><img src="/assets/images/B.png" alt="Section 3, Arabic text" style="float:right"></p>
-
