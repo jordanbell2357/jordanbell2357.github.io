@@ -14,6 +14,7 @@ Treatise I, Chapter 3, Section 1. Knowledge is attained by acquisition, Q17, p. 
 
 [^1]: <p><img src="/assets/images/A.png" alt="Section 1, Arabic text" style="float:right"></p>
 
+
 Treatise I, Chapter 3, Section 3. Advantages for those who master the discipline of logic, Q20, pp. 37-39:
 
 > However, even if it is so, the oversights that crop up for whoever masters \[this\] science, if he masters the discipline and puts it to use, are not like \[the oversights\] that occur to one who has never learned it. Moreover, if \[the master of this science\] goes back over one of the actions pertaining to his discipline many times, he will be able to compensate for any inattention, should it occur to him. \[This is\] because if the master of the discipline spoils his work one or many times, he is \[however\] able to correct it, unless he is extremely stupid. This being the case, no oversight will affect him in the important topics of his discipline that he is obliged to repeat, even if oversights affect \[some\] secondary subjects.
