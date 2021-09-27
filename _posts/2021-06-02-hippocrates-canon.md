@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Hippocratic Corpus, "The Canon" (Νόμος)
+title: Hippocratic Corpus, "Lex" (Νόμος)
 category: quotes
 ---
 
-#### Hippocratic Corpus, *The Canon* (Νόμος)
+#### Hippocratic Corpus, *Lex* (Νόμος)
 
 #### *Hippocratic Writings*, Edited with an introduction by G. E. R. Lloyd, translated by J. Chadwick and W. N. Mann, I.M. Lonie, and E.T. Withington, Penguin Classics, Penguin Books, 1983
 
