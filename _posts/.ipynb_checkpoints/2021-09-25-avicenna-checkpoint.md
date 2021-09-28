@@ -16,7 +16,7 @@ Treatise I, Chapter 3, Section 1, "Knowledge is attained by acquisition", Q17, p
 [^1]: <div><img src="/assets/images/A.png" alt="Section 1, Arabic text" style="float:right"></div>
 -->
 
-[^A]: ![Section 1, Arabic text](/assets/images/A.png)
+[^A]: > ![Section 1, Arabic text](/assets/images/A.png)
 
 Treatise I, Chapter 3, Section 3, "Advantages for those who master the discipline of logic", Q20, pp. 37-39:
 
@@ -28,4 +28,4 @@ Treatise I, Chapter 3, Section 3, "Advantages for those who master the disciplin
 [^2]: <div><img src="/assets/images/B.png" alt="Section 3, Arabic text" style="float:right"></div>
 -->
 
-[^B]: ![Section 3, Arabic text](/assets/images/B.png)
+[^B]: > ![Section 3, Arabic text](/assets/images/B.png)
