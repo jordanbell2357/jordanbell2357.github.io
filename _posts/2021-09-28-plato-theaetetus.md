@@ -4,7 +4,7 @@ title: Plato, "Theaetetus"
 category: quotes
 ---
 
-#### Plato's Theory of Knowledge: the *Theaetetus* and the *Sophist* of Plato*, translated with a running commentary by Francis Macdonald Cornford, International Library of Psychology, Philosophy and Scientific Method, Routledge \& Kegan Paul, 1935[^1]
+#### *Plato's Theory of Knowledge: the *Theaetetus* and the *Sophist* of Plato*, translated with a running commentary by Francis Macdonald Cornford, International Library of Psychology, Philosophy and Scientific Method, Routledge & Kegan Paul, 1935[^1]
 
 [^1]: [Archive.org](https://archive.org/details/in.ernet.dli.2015.136245/page/n8/mode/1up)
 
@@ -82,3 +82,5 @@ c. SocR. And such a person may sometimes count either the numbers themselves in 
 in your hand what you have already possessed for some time. In the same way, if you have long possessed pieces of knowledge about things you have learnt and know, it is still possible to get to know the same things again, by the process of recovering the knowledge of some particular thing and getting hold of it. It is knowledge you have possessed for some time, but you had not got it handy in your mind.
 >
 > Theaet. True.
+
+[*Platonis Opera*. Theaetetus \[Plat. Theaet.\]. Perseus Digital Library Project](http://data.perseus.org/citations/urn:cts:greekLit:tlg0059.tlg006.perseus-grc1:142a)
