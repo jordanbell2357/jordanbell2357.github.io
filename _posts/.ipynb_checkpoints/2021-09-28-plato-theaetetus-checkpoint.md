@@ -10,17 +10,19 @@ category: quotes
 
 p. 121, 191B-E:
 
-> <TT>Socr.</TT> We must, in fact, put the case in a different way. Perhaps the barrier will }deld somewhere, though it may defy our efforts. Anyhow, we are in such straits that we must turn every argument over and put it to the test. Now, is there anything in this? Is it possible to become acquainted with something one did not know before?
+> <TT>*SOCR.*</TT> We must, in fact, put the case in a different way. Perhaps the barrier will }deld somewhere, though it may defy our efforts. Anyhow, we are in such straits that we must turn every argument over and put it to the test. Now, is there anything in this? Is it possible to become acquainted with something one did not know before?
 >
-> Theaet. Surely.
+> <TT>*THEAT.*</TT> Surely.
 >
 > Socr. And the process can be repeated with one thing after another?
 >
 > Theaet. Of course.
 >
-> Socr. Imagine, then, for the sake of argument, that our minds contain a block of wax, which in this or that individual may be larger or smaller, and composed of wax that is comparatively pure or muddy, and harder in some, softer in others, and sometimes of just the right consistency. Theaef. Very well.
-SocR. Let us call it the gift of the Muses* mother. Memory, and say that whenever we wish to remember something we see or hear or conceive in our own minds, we hold this wax rmder the perceptions or ideas and imprint them on it as we might stamp the impression of a seal-ring. Whatever is so imprinted we remember and know so long as the image remains ; whatever is rubbed out or has not succeeded in
-E. leaving an impression we have forgotten and do not know.
+> Socr. Imagine, then, for the sake of argument, that our minds contain a block of wax, which in this or that individual may be larger or smaller, and composed of wax that is comparatively pure or muddy, and harder in some, softer in others, and sometimes of just the right consistency.
+>
+> Theaef. Very well.
+>
+> SocR. Let us call it the gift of the Muses* mother. Memory, and say that whenever we wish to remember something we see or hear or conceive in our own minds, we hold this wax rmder the perceptions or ideas and imprint them on it as we might stamp the impression of a seal-ring. Whatever is so imprinted we remember and know so long as the image remains ; whatever is rubbed out or has not succeeded in leaving an impression we have forgotten and do not know.
 >
 > Theaet. So be it.
 
