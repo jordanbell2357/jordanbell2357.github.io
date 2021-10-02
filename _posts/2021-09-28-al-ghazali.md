@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Al-Ghazali, "Iḥyāʾ ʿulūm al-dīn"
+title: Al-Ghazali, "Iḥyā′ ‘Ulūm al-Dīn" (The Revival of the Religious Sciences)
 category: quotes
 ---
 
 #### *The Book of Knowledge: being a translation with notes of the Kitāb al-‘ilm of al-Ghazzālī's Iḥya’ ‘ulūm al-dīn*, translated by Nabih Amin Faris, Islamic Book Service, New Delhi, 1962[^1] [^2]
 
-#### Abu Hamid Al-Ghazali, *Iḥyāʾ ʿulūm al-dīn* (The Revival of the Religious Sciences)
+#### Al-Ghazali, *Iḥyāʾ ʿulūm al-dīn* (The Revival of the Religious Sciences), Book 1: The Book of Knowledge
 
 [^1]: [Ghazali.org: *Ihya' 'ulum al-din* (Revival of the Religious Sciences)](https://www.ghazali.org/rrs-ovr/)
 
