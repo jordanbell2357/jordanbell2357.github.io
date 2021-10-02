@@ -4,9 +4,9 @@ title: Al-Ghazali, "Iḥyāʾ ʿulūm al-dīn"
 category: quotes
 ---
 
-#### Al-Ghazali, *Iḥyāʾ ʿulūm al-dīn*
-
 #### *The Book of Knowledge: being a translation with notes of the Kitāb al-‘ilm of al-Ghazzālī's Iḥya’ ‘ulūm al-dīn*, translated by Nabih Amin Faris, Islamic Book Service, New Delhi, 1962[^1] [^2]
+
+#### Abu Hamid Al-Ghazali, *Iḥyāʾ ʿulūm al-dīn* (The Revival of the Religious Sciences)
 
 [^1]: [Ghazali.org: *Ihya' 'ulum al-din* (Revival of the Religious Sciences)](https://www.ghazali.org/rrs-ovr/)
 
@@ -14,7 +14,7 @@ category: quotes
 
 Section V, pp. 129-130:
 
-> The seventh duty is that no one should address himself to one branch of knowledge before he has already mastered the branch which precedes it because science is of necessity so arranged that one branch prepares for another and one branch leads to another. Only the person who would observe this order would succeed. God said, "Those to whom We have given the Book, they read it as it ought to be read."[^3] In other words they do not leave a single branch of knowledge until they have mastered it in theory and in practice. Furthermore, in every branch of knowledge which the student may pursue, his aim should be the one above. Nor should he ever declare a certain science useless because its protagonists disagree among themselves, or because of the error of one or more among them, or because with their actions they violate the ordinances of their own science. Thus you find some who have relinquished the philosophical and theological sciences excusing themselves on the grounds that if these sciences had any truth in them they would have been comprehended by their protagonists. (These fallacies have been exposed in the *Mi‘yar al-Ilm*). Others believe that the medical science is false because of an error they have seen committed by a physician. Another group believes in the authenticity of astrology because a single prediction involving a certain person turned out right while others disbelieve it because in another case the prediction was faulty. All are wrong, however. Each case should be determined separately, as not every branch of knowledge can be independently mastered by every person. For this reason ‘Ali said, "Accept no truth because of the men who hold it but first find the truth and thou shalt know who are its real protagonists."
+> The seventh duty is that no one should address himself to one branch of knowledge before he has already mastered the branch which precedes it because science is of necessity so arranged that one branch prepares for another and one branch leads to another. Only the person who would observe this order would succeed. God said, "Those to whom We have given the Book, they read it as it ought to be read."[^3] In other words they do not leave a single branch of knowledge until they have mastered it in theory and in practice. Furthermore, in every branch of knowledge which the student may pursue, his aim should be the one above. Nor should he ever declare a certain science useless because its protagonists disagree among themselves, or because of the error of one or more among them, or because with their actions they violate the ordinances of their own science. Thus you find some who have relinquished the philosophical and theological sciences excusing themselves on the grounds that if these sciences had any truth in them they would have been comprehended by their protagonists. (These fallacies have been exposed in the *Mi‘yar al-Ilm*). Others believe that the medical science is false because of an error they have seen committed by a physician. Another group believes in the authenticity of astrology because a single prediction involving a certain person turned out right while others disbelieve it because in another case the prediction was faulty. All are wrong, however. Each case should be determined separately, as not every branch of knowledge can be independently mastered by every person. For this reason ʿAlī said, "Accept no truth because of the men who hold it but first find the truth and thou shalt know who are its real protagonists."
 
 Section V, pp. 141-142:
 
