@@ -4,7 +4,7 @@ title: Plato, "Theaetetus"
 category: quotes
 ---
 
-#### *Plato's Theory of Knowledge: the *Theaetetus* and the *Sophist* of Plato*, translated with a running commentary by Francis Macdonald Cornford, International Library of Psychology, Philosophy and Scientific Method, Routledge & Kegan Paul, 1935[^1]
+#### *Plato's Theory of Knowledge: the _Theaetetus_ and the _Sophist_ of Plato*, translated with a running commentary by Francis Macdonald Cornford, International Library of Psychology, Philosophy and Scientific Method, Routledge & Kegan Paul, 1935[^1]
 
 [^1]: [Archive.org](https://archive.org/details/in.ernet.dli.2015.136245/page/n8/mode/1up)
 
