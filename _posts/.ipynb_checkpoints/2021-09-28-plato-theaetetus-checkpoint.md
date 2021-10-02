@@ -26,7 +26,9 @@ p. 121, 191B-E:
 >
 > <TT>*THEAT.*</TT> So be it.
 
-[^1]: "MNEMOSYNE was the Titan goddess of memory and remembrance and the inventress of language and words." [Theoi Project](https://www.theoi.com/Titan/TitanisMnemosyne.html)
+[^1]: "MNEMOSYNE was the Titan goddess of memory and remembrance and the inventress of language and words.
+
+    "As a Titan daughter of Ouranos (Uranus, Heaven), Mnemosyne was also a goddess of time. She represented the rote memorisation required to preserve the stories of history and the sagas of myth before the introduction of writing. In this role she was the mother of the Mousai (Muses) who were originally patron goddesses of poets of the oral tradition." [Theoi Project](https://www.theoi.com/Titan/TitanisMnemosyne.html)
 
 pp. 132-134, 197C-198D:
 
