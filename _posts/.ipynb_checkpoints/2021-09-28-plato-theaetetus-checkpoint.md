@@ -36,7 +36,7 @@ pp. 132-134, 197C-198D:
 >
 > <TT>*THEAT.*</TT> True.
 >
-> <TT>*SOCR.*</TT> Now consider whether knowledge is a thing you can possess in that way without having it about you, like a man who has caught some wild birds — pigeons or what not — and keeps them in an aviary he has made for them at home. In a sense, of course, we might say he 'has' them all the time inasmuch as he possesses them, mightn't we ?
+> <TT>*SOCR.*</TT> Now consider whether knowledge is a thing you can possess in that way without having it about you, like a man who has caught some wild birds — pigeons or what not — and keeps them in an aviary he has made for them at home. In a sense, of course, we might say he 'has' them all the time inasmuch as he possesses them, mightn't we?
 >
 > <TT>*THEAT.*</TT> Yes.
 >
@@ -48,7 +48,7 @@ pp. 132-134, 197C-198D:
 >
 > <TT>*THEAT.*</TT> Be it so. What follows?
 >
-> <TT>*SOCR.*</TT> When we are babies we must suppose this recep- tacle empty, and take the birds to stand for pieces of knowledge. Whenever a person acquires any piece of knowledge and shuts it up in his enclosure, we must say he has learnt or discovered the thing of which this is the knowledge, and that is what 'knowing' means.
+> <TT>*SOCR.*</TT> When we are babies we must suppose this receptacle empty, and take the birds to stand for pieces of knowledge. Whenever a person acquires any piece of knowledge and shuts it up in his enclosure, we must say he has learnt or discovered the thing of which this is the knowledge, and that is what 'knowing' means.
 >
 > <TT>*THEAT.*</TT> Be it so.
 >
