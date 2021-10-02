@@ -26,7 +26,7 @@ p. 121, 191B-E:
 >
 > <TT>*THEAT.*</TT> So be it.
 
-[^1]: 
+[^1]: "MNEMOSYNE was the Titan goddess of memory and remembrance and the inventress of language and words." [Theoi Project](https://www.theoi.com/Titan/TitanisMnemosyne.html)
 
 pp. 132-134, 197C-198D:
 
