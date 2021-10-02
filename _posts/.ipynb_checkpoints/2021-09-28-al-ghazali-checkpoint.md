@@ -8,7 +8,7 @@ category: quotes
 
 #### *The Book of Knowledge: being a translation with notes of the Kitāb al-‘ilm of al-Ghazzālī's Iḥya’ ‘ulūm al-dīn*, translated by Nabih Amin Faris, Islamic Book Service, New Delhi, 1962[^1] [^2]
 
-[^2]: [Ghazali.org: *Ihya' 'ulum al-din* (Revival of the Religious Sciences)](https://www.ghazali.org/rrs-ovr/)
+[^1]: [Ghazali.org: *Ihya' 'ulum al-din* (Revival of the Religious Sciences)](https://www.ghazali.org/rrs-ovr/)
 
 [^2]: [Archive.org](https://archive.org/details/TheBookOfKnowledgeByGhazali/mode/2up)
 
