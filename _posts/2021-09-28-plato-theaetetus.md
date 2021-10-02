@@ -8,6 +8,8 @@ category: quotes
 
 [^1]: [Archive.org](https://archive.org/details/in.ernet.dli.2015.136245/page/n8/mode/1up)
 
+[Theaetetus \[Plat. Theaet.\]. *Platonis Opera*. Perseus Digital Library Project](http://data.perseus.org/citations/urn:cts:greekLit:tlg0059.tlg006.perseus-grc1:142a)
+
 p. 121, 191B-E:
 
 > <TT>*SOCR.*</TT> We must, in fact, put the case in a different way. Perhaps the barrier will yield somewhere, though it may defy our efforts. Anyhow, we are in such straits that we must turn every argument over and put it to the test. Now, is there anything in this? Is it possible to become acquainted with something one did not know before?
@@ -87,5 +89,3 @@ pp. 132-134, 197C-198D:
 > <TT>*SOCR.*</TT> Well, our illustration from hunting pigeons and getting possession of them will enable us to explain that the hunting occurs in two ways : first, before you possess your pigeon in order to have possession of it; secondly, after getting possession of it, in order to catch and hold in your hand what you have already possessed for some time. In the same way, if you have long possessed pieces of knowledge about things you have learnt and know, it is still possible to get to know the same things again, by the process of recovering the knowledge of some particular thing and getting hold of it. It is knowledge you have possessed for some time, but you had not got it handy in your mind.
 >
 > <TT>*THEAT.*</TT> True.
-
-[Theaetetus \[Plat. Theaet.\]. *Platonis Opera*. Perseus Digital Library Project](http://data.perseus.org/citations/urn:cts:greekLit:tlg0059.tlg006.perseus-grc1:142a)
