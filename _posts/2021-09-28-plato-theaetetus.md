@@ -22,11 +22,11 @@ p. 121, 191B-E:
 >
 > <TT>*THEAT.*</TT> Very well.
 >
-> <TT>*SOCR.*</TT> Let us call it the gift of the Muses' mother, Memory,[^1] and say that whenever we wish to remember something we see or hear or conceive in our own minds, we hold this wax under the perceptions or ideas and imprint them on it as we might stamp the impression of a seal-ring. Whatever is so imprinted we remember and know so long as the image remains; whatever is rubbed out or has not succeeded in leaving an impression we have forgotten and do not know.
+> <TT>*SOCR.*</TT> Let us call it the gift of the Muses' mother, Memory,[^2] and say that whenever we wish to remember something we see or hear or conceive in our own minds, we hold this wax under the perceptions or ideas and imprint them on it as we might stamp the impression of a seal-ring. Whatever is so imprinted we remember and know so long as the image remains; whatever is rubbed out or has not succeeded in leaving an impression we have forgotten and do not know.
 >
 > <TT>*THEAT.*</TT> So be it.
 
-[^1]: "MNEMOSYNE was the Titan goddess of memory and remembrance and the inventress of language and words.
+[^2]: "MNEMOSYNE was the Titan goddess of memory and remembrance and the inventress of language and words.
 
     "As a Titan daughter of Ouranos (Uranus, Heaven), Mnemosyne was also a goddess of time. She represented the rote memorisation required to preserve the stories of history and the sagas of myth before the introduction of writing. In this role she was the mother of the Mousai (Muses) who were originally patron goddesses of poets of the oral tradition." [Theoi Project](https://www.theoi.com/Titan/TitanisMnemosyne.html)
 
