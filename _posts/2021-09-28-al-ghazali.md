@@ -4,13 +4,15 @@ title: Al-Ghazali, "Iḥyā′ ‘Ulūm al-Dīn" (The Revival of the Religious S
 category: quotes
 ---
 
-#### *The Book of Knowledge: being a translation with notes of the Kitāb al-‘ilm of al-Ghazzālī's Iḥya’ ‘ulūm al-dīn*, translated by Nabih Amin Faris, Islamic Book Service, New Delhi, 1962[^1] [^2]
+#### *The Book of Knowledge: being a translation with notes of the Kitāb al-‘ilm of al-Ghazzālī's Iḥya’ ‘ulūm al-dīn*, translated by Nabih Amin Faris, Islamic Book Service, New Delhi, 1962[^1] [^2] [^3]
 
 #### Al-Ghazali, *Iḥyā′ ‘Ulūm al-Dīn* (The Revival of the Religious Sciences), Book 1: The Book of Knowledge
 
 [^1]: [Ghazali.org: *Iḥyāʾ ʿulūm al-dīn* (Revival of the Religious Sciences)](https://www.ghazali.org/rrs-ovr/)
 
 [^2]: [Archive.org](https://archive.org/details/TheBookOfKnowledgeByGhazali/mode/2up)
+
+[^3]: [^3][Arabic text at Shamela.ws](https://shamela.ws/book/9472)
 
 Section V, pp. 129-130:
 
@@ -19,6 +21,10 @@ Section V, pp. 129-130:
 Section V, pp. 141-142:
 
 > The fourth duty which is one of the finer points of the profession of teaching is that the teacher, in dissuading the student from his evil ways, should do so by suggestion rather than openly, and with sympathy rather than with odious upbraiding. Open dissuasion destroys the veil of awe, invites defiance, and encourages stubbornness. The Prophet, who is the guide of every teacher, said in this connexion, "If men had been forbidden to make porridge of camels’ dung, they would have done it, saying that they would not have been forbidden to do it unless there had been some good in it." The same principle is brought out in the story of Adam and Eve and the prohibition imposed upon them. This story has not been related as a night entertainment but as an example and a reminder. Such allusions and suggestions invite men of noble souls and discerning minds to attempt to elicit their import, and the pleasure of grasping their meaning results in a greater desire on the part of man for learning in order to show that such things are not beyond the capacity of his intellect.
+
+[Shamela.ws](https://shamela.ws/book/9472/57):
+
+<p dir="rtl">الوظيفة الرابعة وهي من دقائق صناعة التعليم أن يزجر المتعلم عن سوء الأخلاق بطريق التعريض ما أمكن ولا يصرح وبطريق الرحمة لا بطريق التوبيخ فإن التصريح يهتك حجاب الهيئة ويورث الجرأة على الهجوم بالخلاف ويهيج الحرص على الإصرار إذ قال صلى الله عليه وسلم وهو مرشد كل معلم لو منع الناس عن فت البعر لفتوه وقالوا ما نهينا عنه إلا وفيه شيء وينبهك على هذا قصة آدم وحواء عليهما السلام وما نهيا عنه فما ذكرت القصة معك لتكون سمراً بل لتتنبه بها على سبيل العبرة ولأن التعريض أيضاً يميل النفوس الفاضلة والأذهان الذكية إلى استنباط معانيه فيفيد فرح التفطن لمعناه رغبة في العلم به ليعلم أن ذلك مما لا يعزب عن فطنته</p>
 
 Section VI, p. 157:
 
