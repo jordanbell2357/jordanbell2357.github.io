@@ -4,7 +4,7 @@ title: Thomas Aquinas, "Summa Theologica"
 category: quotes
 ---
 
-#### *The "Summa Theologica" of St. Thomas Aquinas, Part II (Second Part), Second Number (QQ. XLVII-LXXIX)*, Volume 10, Benziger Brothers, 1918
+#### *The "Summa Theologica" of St. Thomas Aquinas, Part II (Second Part), Second Number (QQ. XLVII-LXXIX)*, translated by Fathers of the English Dominican Province, Volume 10, Benziger Brothers, 1918
 
 #### Thomas Aquinas, *Summa Theologica*, Second Part of the Second Part, Question 49, Article 1, Reply to Objection 2
 
