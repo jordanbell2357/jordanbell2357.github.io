@@ -33,4 +33,4 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 
 [^1]: [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
 
-    ![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)
+    [![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
