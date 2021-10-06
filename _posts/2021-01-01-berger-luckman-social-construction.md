@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "\"The Social Construction of Reality\""
+title: Berger and Luckmann, "\"The Social Construction of Reality\""
 category: quotes
 ---
 
