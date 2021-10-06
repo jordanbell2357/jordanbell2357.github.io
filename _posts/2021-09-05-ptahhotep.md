@@ -12,7 +12,7 @@ p. 61:
 >
 > The work consists of thirty-seven maxims framed by a prologue and an epilogue. Each maxim is developed as a unit of at least four, and rarely more than twelve, sentences and clauses. In one case, maxims 2-4, a theme is developed over three consecutive maxims thus forming a larger whole. Some themes and topics recur several times, an indication of their importance in the scale of values.
 
-[^1]: [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
+[^1]: [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v); see also [British Museum EA10509,1](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
 
     [![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
     
