@@ -12,6 +12,10 @@ p. 61:
 >
 > The work consists of thirty-seven maxims framed by a prologue and an epilogue. Each maxim is developed as a unit of at least four, and rarely more than twelve, sentences and clauses. In one case, maxims 2-4, a theme is developed over three consecutive maxims thus forming a larger whole. Some themes and topics recur several times, an indication of their importance in the scale of values.
 
+[^1]: [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
+
+    [![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
+    
 Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of Ptahhotep*, Maxim 1, p. 63:
 
 > Don't be proud of your knowledge,  
@@ -21,7 +25,7 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 > Good speech is more hidden than greenstone,  
 > Yet may be found among maids at the grindstones.
 
-[University College London, Digital Egypt for Universities, Teaching of Ptahhotep, 2003](https://www.ucl.ac.uk/museums-static/digitalegypt/literature/ptahhotep.html). Papyrus Prisse, column 5, lines 8-10:
+University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*, 2003:
 
 > Then he addressed his son:  
 > Do not be proud on account of your knowledge,  
@@ -29,8 +33,6 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 > The limits of art cannot be delivered;  
 > there is no artist whose talent is fulfilled.  
 > Fine words are more sought after than greenstone,  
-> but can be found with the women at the grindstone.
+> but can be found with the women at the grindstone.[^2]
 
-[^1]: [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
-
-    [![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
+[^2]: [University College London, Digital Egypt for Universities, Teaching of Ptahhotep, 2003. Papyrus Prisse, column 5, lines 8-10](https://www.ucl.ac.uk/museums-static/digitalegypt/literature/ptahhotep.html)
