@@ -12,7 +12,7 @@ p. 61:
 >
 > The work consists of thirty-seven maxims framed by a prologue and an epilogue. Each maxim is developed as a unit of at least four, and rarely more than twelve, sentences and clauses. In one case, maxims 2-4, a theme is developed over three consecutive maxims thus forming a larger whole. Some themes and topics recur several times, an indication of their importance in the scale of values.
 
-[^1]: [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v); see also [British Museum EA10509,1](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
+[^1]: [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v); see also [BnF Archives et manuscrits](https://archivesetmanuscrits.bnf.fr/ark:/12148/cc12921q) and [British Museum EA10509,1](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
 
     [![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
     
@@ -25,7 +25,9 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 > Good speech is more hidden than greenstone,  
 > Yet may be found among maids at the grindstones.
 
-University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*, 2003:
+#### University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*, 2003[^2]
+
+Papyrus Prisse, column 5, lines 8-10:
 
 > Then he addressed his son:  
 > Do not be proud on account of your knowledge,  
@@ -35,4 +37,20 @@ University College London, Digital Egypt for Universities, *Teaching of Ptahhote
 > Fine words are more sought after than greenstone,  
 > but can be found with the women at the grindstone.[^2]
 
-[^2]: [University College London, Digital Egypt for Universities, Teaching of Ptahhotep, 2003. Papyrus Prisse, column 5, lines 8-10](https://www.ucl.ac.uk/museums-static/digitalegypt/literature/ptahhotep.html)
+[^2]: [University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*, 2003](https://www.ucl.ac.uk/museums-static/digitalegypt/literature/ptahhotep.html)
+
+#### Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Editions de l'Académie Tchécoslovaque des Sciences, Prague, 1956
+
+
+
+#### *Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*[^3]
+
+> § (D51) Dd.jn =f xr zA =f
+> § (D52) m aAi jb =k Hr rx =k
+> § (D54) nDnD r =k Hna xm mj rx
+> § (D55) n jni.tw Dr,w Hmw,t
+> § (D56) nn Hmw,w apr Ax,w =f
+> § (D58) dgw md,t nfr.t r wAD
+> § (D59) jw gmi.t(w) =s m-a Hm,t.(Pl.) Hr bnw,t.(Pl.)
+
+[^3]: [Berlin-Brandenburgische Akademie der Wissenschaften, *Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*](http://aaew2.bbaw.de/tla/servlet/GetTextDetails?u=guest&f=0&l=0&tc=1081&db=0)
