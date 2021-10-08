@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The Instruction of Ptahhotep"
+title: "The Maxims of Ptahhotep, Maxim 1"
 category: quotes
 ---
 
@@ -39,11 +39,7 @@ Papyrus Prisse, column 5, lines 8-10:
 
 [^2]: [University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*, 2003](https://www.ucl.ac.uk/museums-static/digitalegypt/literature/ptahhotep.html)
 
-#### Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Editions de l'Académie Tchécoslovaque des Sciences, Prague, 1956
-
-
-
-#### *Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*[^3]
+#### *Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*[^3] [^4] [^5]
 
 > § (D51) Dd.jn =f xr zA =f
 > § (D52) m aAi jb =k Hr rx =k
@@ -53,4 +49,8 @@ Papyrus Prisse, column 5, lines 8-10:
 > § (D58) dgw md,t nfr.t r wAD
 > § (D59) jw gmi.t(w) =s m-a Hm,t.(Pl.) Hr bnw,t.(Pl.)
 
-[^3]: [Berlin-Brandenburgische Akademie der Wissenschaften, *Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*](http://aaew2.bbaw.de/tla/servlet/GetTextDetails?u=guest&f=0&l=0&tc=1081&db=0)
+[^3]: [*Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*](http://aaew2.bbaw.de/tla/index.html)
+
+[^4]: [Projet Rosette](http://projetrosette.info/page.php?Id=799&TextId=174&langue=FR)
+
+[^5]: [Hieroglyphen.net, Papyrus Prisse, Kolumne 5](http://www.hieroglyphen.net/andere/Ptahhotep/html/papyrus_prisse.html)
