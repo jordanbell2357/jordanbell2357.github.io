@@ -18,7 +18,7 @@ p. 61:
     
     [British Museum EA10509,1](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
     
-    [![British Museum EA10509,1](/assets/images/537587001.png)](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
+    [![British Museum EA10509,1. © The Trustees of the British Museum](/assets/images/537587001.png)](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
     
 Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of Ptahhotep*, Maxim 1, p. 63:
 
