@@ -16,6 +16,10 @@ p. 61:
 
     [![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
     
+    [British Museum EA10509,1](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
+    
+    [![British Museum EA10509,1](/assets/images/537587001.png)](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
+    
 Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of Ptahhotep*, Maxim 1, p. 63:
 
 > Don't be proud of your knowledge,  
@@ -25,9 +29,9 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 > Good speech is more hidden than greenstone,  
 > Yet may be found among maids at the grindstones.
 
-#### University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*, 2003[^2]
+#### University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*[^2]
 
-Papyrus Prisse, column 5, lines 8-10:
+Maxim 1, Papyrus Prisse, column 5, lines 8-10:
 
 > Then he addressed his son:  
 > Do not be proud on account of your knowledge,  
@@ -35,11 +39,19 @@ Papyrus Prisse, column 5, lines 8-10:
 > The limits of art cannot be delivered;  
 > there is no artist whose talent is fulfilled.  
 > Fine words are more sought after than greenstone,  
-> but can be found with the women at the grindstone.[^2]
+> but can be found with the women at the grindstone.
+
+> Dd.in.f xr sA.f  
+> m aA ib.k Hr rx.k  
+> nDnD r.k Hna xm mi rx  
+> n in.tw Drw Hmwt  
+> nn Hmww apr Axw.f  
+> dgA mdt nfrt r wAD  
+> iw gm st m-a Hmwt Hr bnwt
 
 [^2]: [University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*, 2003](https://www.ucl.ac.uk/museums-static/digitalegypt/literature/ptahhotep.html)
 
-#### *Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*[^3] [^4] [^5]
+#### *Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*[^3]
 
 > § (D51) Dd.jn =f xr zA =f  
 > § (D52) m aAi jb =k Hr rx =k  
