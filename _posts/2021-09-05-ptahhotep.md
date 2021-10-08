@@ -41,12 +41,12 @@ Papyrus Prisse, column 5, lines 8-10:
 
 #### *Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*[^3] [^4] [^5]
 
-> § (D51) Dd.jn =f xr zA =f
-> § (D52) m aAi jb =k Hr rx =k
-> § (D54) nDnD r =k Hna xm mj rx
-> § (D55) n jni.tw Dr,w Hmw,t
-> § (D56) nn Hmw,w apr Ax,w =f
-> § (D58) dgw md,t nfr.t r wAD
+> § (D51) Dd.jn =f xr zA =f  
+> § (D52) m aAi jb =k Hr rx =k  
+> § (D54) nDnD r =k Hna xm mj rx  
+> § (D55) n jni.tw Dr,w Hmw,t  
+> § (D56) nn Hmw,w apr Ax,w =f  
+> § (D58) dgw md,t nfr.t r wAD  
 > § (D59) jw gmi.t(w) =s m-a Hm,t.(Pl.) Hr bnw,t.(Pl.)
 
 [^3]: [*Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*](http://aaew2.bbaw.de/tla/index.html)
