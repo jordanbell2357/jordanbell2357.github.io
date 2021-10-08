@@ -51,7 +51,7 @@ Maxim 1, Papyrus Prisse, column 5, lines 8-10:
 
 [^2]: [University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*, 2003](https://www.ucl.ac.uk/museums-static/digitalegypt/literature/ptahhotep.html)
 
-#### *Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*[^3]
+#### *Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*[^3] [^4] [^5]
 
 > § (D51) Dd.jn =f xr zA =f  
 > § (D52) m aAi jb =k Hr rx =k  
