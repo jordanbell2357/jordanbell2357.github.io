@@ -70,5 +70,4 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 
 #### Mark-Jan Nederhof, St Andrews Corpus[^4]
 
-[^4]: [Mark-Jan Nederhof, School of Computer Science, University of St Andrews](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/), [Instruction of Ptahhotep
-](https://mjn.host.cs.st-andrews.ac.uk/ptahhotep/text.pdf)
+[^4]: [Mark-Jan Nederhof, School of Computer Science, University of St Andrews](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/), [Instruction of Ptahhotep](https://mjn.host.cs.st-andrews.ac.uk/ptahhotep/text.pdf)
