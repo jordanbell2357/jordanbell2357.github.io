@@ -42,4 +42,3 @@ category: quotes
 [^1]: [CDLI P478952](https://cdli.ucla.edu/P478952)
 
 [^3]: [University of Pennsylvania Museum of Archaeology and Anthropology. The Open Richly Annotated Cuneiform Corpus (Oracc)](http://oracc.museum.upenn.edu/)
-    
