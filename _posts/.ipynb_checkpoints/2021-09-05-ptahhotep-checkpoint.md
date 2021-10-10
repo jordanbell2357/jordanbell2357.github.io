@@ -6,9 +6,9 @@ category: quotes
 
 #### Papyrus Prisse, Bibliothèque nationale de France[^A] [^B]
 
-[^A]: [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
+[^A]: [Bibliothèque nationale de France (BnF). Département des Manuscrits. Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
 
-[^B]: [BnF Archives et manuscrits](https://archivesetmanuscrits.bnf.fr/ark:/12148/cc12921q)
+[^B]: [BnF Archives et manuscrits. Egyptien 183-194. Papyrus Prisse](https://archivesetmanuscrits.bnf.fr/ark:/12148/cc12921q)
 
 [![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
     
@@ -46,6 +46,8 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 [^4]: [Mark-Jan Nederhof, St Andrews Corpus](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/)
 
 [^5]: [Mark-Jan Nederhof and Robert Myers, *Instruction of Ptahhotep*](https://mjn.host.cs.st-andrews.ac.uk/ptahhotep/text.pdf)
+
+[^6]: [Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21. "Hieroglyphic text of the *Maxims of Good Discourse* of Papyrus Prisse, Papyri BM & the Carnarvon Tablet by Zbynek Zába (1956)". Hieroglyphs scanned & edited by Wim van den Dungen](http://www.sofiatopia.org/maat/zaba06.htm)
 
 #### University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*[^2]
 
