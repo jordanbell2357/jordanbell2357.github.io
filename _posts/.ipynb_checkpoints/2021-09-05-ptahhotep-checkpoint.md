@@ -31,7 +31,7 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 
 [^5]: [Mark-Jan Nederhof and Robert Myers, *Instruction of Ptahhotep*](https://mjn.host.cs.st-andrews.ac.uk/ptahhotep/text.pdf)
 
-[^6]: [Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21. "Hieroglyphic text of the *Maxims of Good Discourse* of Papyrus Prisse, Papyri BM & the Carnarvon Tablet by Zbynek Zába (1956)". Hieroglyphs scanned & edited by Wim van den Dungen](http://www.sofiatopia.org/maat/zaba06.htm)
+[^6]: [Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21. Hieroglyphs scanned & edited by Wim van den Dungen: "Hieroglyphic text of the *Maxims of Good Discourse* of Papyrus Prisse, Papyri BM & the Carnarvon Tablet by Zbynek Zába (1956)"](http://www.sofiatopia.org/maat/zaba06.htm)
 
 #### Papyrus Prisse, Bibliothèque nationale de France[^A] [^B]
 
