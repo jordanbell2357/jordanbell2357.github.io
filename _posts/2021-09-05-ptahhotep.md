@@ -39,9 +39,9 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 
 #### Mark-Jan Nederhof, St Andrews Corpus[^4] [^5]
 
-![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/assets/images/transA.png)
+![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/assets/images/nederhof1.png)
 
-![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/assets/images/transB.png)
+![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/assets/images/nederhof2.png)
 
 [^4]: [Mark-Jan Nederhof, St Andrews Corpus](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/)
 
