@@ -37,7 +37,7 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 > Good speech is more hidden than greenstone,  
 > Yet may be found among maids at the grindstones.
 
-#### Mark-Jan Nederhof, St Andrews Corpus[^4] [^5]
+#### Mark-Jan Nederhof, St Andrews Corpus[^4] [^5] [^6]
 
 ![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/assets/images/nederhof1.png)
 
