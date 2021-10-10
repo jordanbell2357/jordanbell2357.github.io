@@ -24,7 +24,7 @@ category: quotes
 
 p. 61:
 
-> This long work has survived in four copies, three of which are written on papyrus rolls while the fourth, containing only the beginning, is on a wooden tablet. The only complete version is that of Papyrus Prisse of the Bibliothèque Nationale, which dates from the Middle Kingdom. The other two papyri, both in the British Museum, are from the Middle and New Kingdoms, respectively. The wooden tablet, Carnarvon Tablet I in the Cairo Museum, also dates from the New Kingdom. The version of P. Prisse differs considerably from that of the other three copies. The translation here given reproduces the text of P. Prisse only.[^1]
+> This long work has survived in four copies, three of which are written on papyrus rolls while the fourth, containing only the beginning, is on a wooden tablet. The only complete version is that of Papyrus Prisse of the Bibliothèque Nationale, which dates from the Middle Kingdom. The other two papyri, both in the British Museum, are from the Middle and New Kingdoms, respectively. The wooden tablet, Carnarvon Tablet I in the Cairo Museum, also dates from the New Kingdom. The version of P. Prisse differs considerably from that of the other three copies. The translation here given reproduces the text of P. Prisse only.
 >
 > The work consists of thirty-seven maxims framed by a prologue and an epilogue. Each maxim is developed as a unit of at least four, and rarely more than twelve, sentences and clauses. In one case, maxims 2-4, a theme is developed over three consecutive maxims thus forming a larger whole. Some themes and topics recur several times, an indication of their importance in the scale of values.
     
