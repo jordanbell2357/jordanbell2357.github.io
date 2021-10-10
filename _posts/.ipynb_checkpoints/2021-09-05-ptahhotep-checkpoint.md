@@ -4,9 +4,11 @@ title: "The Maxims of Ptahhotep, Maxim 1"
 category: quotes
 ---
 
-#### Papyrus Prisse, Bibliothèque nationale de France
+#### Papyrus Prisse, Bibliothèque nationale de France[^A] [^B]
 
-[Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v), [BnF Archives et manuscrits](https://archivesetmanuscrits.bnf.fr/ark:/12148/cc12921q)
+[^A]: [Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73). Bibliothèque nationale de France. Département des Manuscrits](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
+
+[^B]: [BnF Archives et manuscrits](https://archivesetmanuscrits.bnf.fr/ark:/12148/cc12921q)
 
 [![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
     
@@ -15,7 +17,6 @@ category: quotes
 > Late 18th Dynasty papyrus with hieratic literary text on recto: The Teaching of Ptahhotep column 1, with blank margin. This sheet contains the Title, Prologue and maxims 1-2 (verses \[ed. Zaba\] 1-66). Part of an archive of literary texts, mostly now in Moscow, apparently from Luxor. The manuscript is carefully written with rubrics marking the start of verses and some corrections.
     
 [![British Museum EA10509,1. © The Trustees of the British Museum](/assets/images/537587001.png)](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
-
 
 #### University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*[^2]
 
