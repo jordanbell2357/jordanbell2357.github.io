@@ -24,7 +24,7 @@ Section V, Fourth Duty of Teachers, pp. 141-142:
 
 > The fourth duty which is one of the finer points of the profession of teaching is that the teacher, in dissuading the student from his evil ways, should do so by suggestion rather than openly, and with sympathy rather than with odious upbraiding. Open dissuasion destroys the veil of awe, invites defiance, and encourages stubbornness. The Prophet, who is the guide of every teacher, said in this connexion, "If men had been forbidden to make porridge of camels’ dung, they would have done it, saying that they would not have been forbidden to do it unless there had been some good in it."[5] The same principle is brought out in the story of Adam and Eve and the prohibition imposed upon them. This story has not been related as a night entertainment but as an example and a reminder. Such allusions and suggestions invite men of noble souls and discerning minds to attempt to elicit their import, and the pleasure of grasping their meaning results in a greater desire on the part of man for learning in order to show that such things are not beyond the capacity of his intellect.
 
-[^5]: [Murtada al-Zabidi, *Itḥāf al-sadāh al-muttaqīn*, Shamela.ws](https://shamela.ws/book/38171/164)
+[^5]: [Shamela.ws, Murtada al-Zabidi, *Itḥāf al-sadāh al-muttaqīn*](https://shamela.ws/book/38171/164)
 
 [Section V, Fourth Duty of Teachers, Arabic text, Shamela.ws](https://shamela.ws/book/9472/57):
 
