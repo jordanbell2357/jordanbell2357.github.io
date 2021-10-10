@@ -26,4 +26,3 @@ category: quotes
 [^1]: [Horace. *Satires. Epistles. The Art of Poetry*. Translated by H. Rushton Fairclough. Loeb Classical Library 194. Cambridge, MA: Harvard University Press, 1926. pp. 478-479](https://ryanfb.github.io/loebolus-data/L194.pdf)
 
 [^2]: p. 479, footnote c: "For the Sosii, famous booksellers, cf. *Epist.* i. 20. 2."
-
