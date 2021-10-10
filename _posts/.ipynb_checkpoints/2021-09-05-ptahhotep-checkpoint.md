@@ -12,7 +12,9 @@ category: quotes
 
 [![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
     
-[British Museum EA10509,1](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
+#### British Museum EA10509,1[^C]
+    
+[^C]: [British Museum EA10509,1](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
 
 > Late 18th Dynasty papyrus with hieratic literary text on recto: The Teaching of Ptahhotep column 1, with blank margin. This sheet contains the Title, Prologue and maxims 1-2 (verses \[ed. Zaba\] 1-66). Part of an archive of literary texts, mostly now in Moscow, apparently from Luxor. The manuscript is carefully written with rubrics marking the start of verses and some corrections.
     
