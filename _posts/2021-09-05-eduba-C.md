@@ -41,7 +41,7 @@ CDLI Literary 000756 (Edubba C) composite. Composite no. Q000756. CDLI no. P4789
 > 19. szesz-gal szesz-ban3-da hi-li-a-bi na-an-na-ni-ib-gi4-gi4  
 > 20. sag-ki gal-gal-la um-ma-te inim-zu ba-dugud-de3-en
 
-[^2]: [CDLI P478952](https://cdli.ucla.edu/P478952)
+[^2]: [CDLI Literary 000756 (Edubba C) composite. Composite no. Q000756. CDLI no. P478952](https://cdli.ucla.edu/P478952)
 
 [^3]: [University of Pennsylvania Museum of Archaeology and Anthropology. The Open Richly Annotated Cuneiform Corpus (Oracc)](http://oracc.museum.upenn.edu/)
 
