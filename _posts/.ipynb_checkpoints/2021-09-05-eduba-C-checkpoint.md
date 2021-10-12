@@ -49,6 +49,6 @@ CDLI no. P276217. CDLI Literary 000756, ex. 015. ETCSL 5.01.03 Edubba C (witness
 
 [![CDLI no. P276217. CDLI Literary 000756, ex. 015](/assets/images/P276217.png)](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P276217)
 
-[^4]: [CDLI](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P276217)
+[^4]: [CDLI no. P276217. CDLI Literary 000756, ex. 015. ETCSL 5.01.03 Edubba C (witness)](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P276217)
 
 [^5]: [DSSt : Datenbank sumerischer Streitliteratur](http://oracc.museum.upenn.edu/dsst/pager)
