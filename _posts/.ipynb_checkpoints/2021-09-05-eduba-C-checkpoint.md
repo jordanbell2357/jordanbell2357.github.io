@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "The advice of a supervisor to a younger scribe (Eduba C)"
+title: Eduba C ("The advice of a supervisor to a younger scribe")
 category: quotes
 ---
 
