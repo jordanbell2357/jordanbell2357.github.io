@@ -15,9 +15,9 @@ category: quotes
 > 9-15 "I just did whatever he outlined for me -- everything was always in its place. Only a fool would have deviated from his instructions. He guided my hand on the clay and kept me on the right path. He made me eloquent with words and gave me advice. He focused my eyes on the rules which guide a man with a task: zeal is proper for a task, time-wasting is taboo; anyone who wastes time on his task is neglecting his task.  
 > 16-20 "He did not vaunt his knowledge: his words were modest. If he had vaunted his knowledge, people would have frowned. Do not waste time, do not rest at night -- get on with that work! Do not reject the pleasurable company of a mentor or his assistant: once you have come into contact with such great brains, you will make your own words more worthy.
 
-#### Cuneiform Digital Library Initiative (CDLI), UCLA[^2] [^3]
+#### [Cuneiform Digital Library Initiative (CDLI), UCLA](https://cdli.ucla.edu/)[^2] [^3]
 
-CDLI Literary 000756 (Edubba C) composite. Composite no. Q000756. CDLI no. P478952
+Composite no. Q000756. CDLI no. P478952, ll. 1-20:
 
 > surface a  
 > 1. dumu e2-dub-ba-a u4 ul-la ga2-nu ki-gu10-sze3  
@@ -41,7 +41,7 @@ CDLI Literary 000756 (Edubba C) composite. Composite no. Q000756. CDLI no. P4789
 > 19. szesz-gal szesz-ban3-da hi-li-a-bi na-an-na-ni-ib-gi4-gi4  
 > 20. sag-ki gal-gal-la um-ma-te inim-zu ba-dugud-de3-en
 
-[^2]: [CDLI Literary 000756 (Edubba C) composite. Composite no. Q000756. CDLI no. P478952](https://cdli.ucla.edu/P478952)
+[^2]: [Composite no. Q000756. CDLI no. P478952](https://cdli.ucla.edu/P478952)
 
 [^3]: [University of Pennsylvania Museum of Archaeology and Anthropology. The Open Richly Annotated Cuneiform Corpus (Oracc)](http://oracc.museum.upenn.edu/)
 

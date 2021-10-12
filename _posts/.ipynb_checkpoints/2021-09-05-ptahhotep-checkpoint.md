@@ -31,7 +31,7 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 
 [^5]: [Mark-Jan Nederhof and Robert Myers, *Instruction of Ptahhotep*](https://mjn.host.cs.st-andrews.ac.uk/ptahhotep/text.pdf)
 
-[^6]: [Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21. Available on the Electronic Publications of the Czech Institute of Egyptology](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+[^6]: [Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21. Available at the Electronic Publications of the Czech Institute of Egyptology](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
 
 [^7]: ["Hieroglyphic text of the *Maxims of Good Discourse* of Papyrus Prisse, Papyri BM & the Carnarvon Tablet by Zbynek Zába (1956)". Hieroglyphs scanned & edited by Wim van den Dungen](http://www.sofiatopia.org/maat/zaba06.htm)
 
@@ -83,4 +83,4 @@ Maxim 1, Papyrus Prisse, column 5, lines 8-10:
 > § (D58) dgw md,t nfr.t r wAD  
 > § (D59) jw gmi.t(w) =s m-a Hm,t.(Pl.) Hr bnw,t.(Pl.)
 
-[^3]: [*Thesaurus Linguae Aegyptiae*, pPrisse = pBN 186-194, *Die Lehre des Ptahhotep*](http://aaew2.bbaw.de/tla/index.html)
+[^3]: [*Thesaurus Linguae Aegyptiae*](http://aaew2.bbaw.de/tla/index.html)
