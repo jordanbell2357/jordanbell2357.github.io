@@ -21,7 +21,7 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 > Good speech is more hidden than greenstone,  
 > Yet may be found among maids at the grindstones.
 
-#### Mark-Jan Nederhof, St Andrews Corpus[^4] [^5] [^6]
+#### Mark-Jan Nederhof, St Andrews Corpus[^4] [^5] [^6] [^7]
 
 [![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/assets/images/nederhof1.png)](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/)
 
@@ -31,7 +31,9 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 
 [^5]: [Mark-Jan Nederhof and Robert Myers, *Instruction of Ptahhotep*](https://mjn.host.cs.st-andrews.ac.uk/ptahhotep/text.pdf)
 
-[^6]: [Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21. Hieroglyphs scanned & edited by Wim van den Dungen: "Hieroglyphic text of the *Maxims of Good Discourse* of Papyrus Prisse, Papyri BM & the Carnarvon Tablet by Zbynek Zába (1956)"](http://www.sofiatopia.org/maat/zaba06.htm)
+[^6]: [Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21. Available on the Electronic Publications of the Czech Institute of Egyptology](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+
+[^7]: ["Hieroglyphic text of the *Maxims of Good Discourse* of Papyrus Prisse, Papyri BM & the Carnarvon Tablet by Zbynek Zába (1956)". Hieroglyphs scanned & edited by Wim van den Dungen](http://www.sofiatopia.org/maat/zaba06.htm)
 
 #### Papyrus Prisse, Bibliothèque nationale de France[^A] [^B]
 
