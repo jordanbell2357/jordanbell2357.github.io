@@ -6,11 +6,13 @@ category: quotes
 
 #### Miriam Lichtheim, *Ancient Egyptian Literature: A Book of Readings. Volume I: The Old and Middle Kingdoms*, University of California Press, 1973
 
-p. 61:
+pp. 61-62:
 
 > This long work has survived in four copies, three of which are written on papyrus rolls while the fourth, containing only the beginning, is on a wooden tablet. The only complete version is that of Papyrus Prisse of the Bibliothèque Nationale, which dates from the Middle Kingdom. The other two papyri, both in the British Museum, are from the Middle and New Kingdoms, respectively. The wooden tablet, Carnarvon Tablet I in the Cairo Museum, also dates from the New Kingdom. The version of P. Prisse differs considerably from that of the other three copies. The translation here given reproduces the text of P. Prisse only.
 >
 > The work consists of thirty-seven maxims framed by a prologue and an epilogue. Each maxim is developed as a unit of at least four, and rarely more than twelve, sentences and clauses. In one case, maxims 2-4, a theme is developed over three consecutive maxims thus forming a larger whole. Some themes and topics recur several times, an indication of their importance in the scale of values.
+>
+> Taken together, the thirty-seven maxims do not amount to a comprehensive moral code, nor are they strung together in any logical order. But they touch upon the most important aspects of human relations and they focus on the basic virtues. The cardinal virtues are self-control, moderation, kindness, generosity, justice, and truthfulness tempered by discretion. These virtues are to be practiced alike toward all people. No martial virtues are mentioned. The ideal man is a man of peace.
     
 Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of Ptahhotep*, Maxim 1, p. 63:
 
@@ -31,7 +33,7 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 
 [^5]: [Mark-Jan Nederhof and Robert Myers, *Instruction of Ptahhotep*](https://mjn.host.cs.st-andrews.ac.uk/ptahhotep/text.pdf)
 
-[^6]: [Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21. Available at the Electronic Publications of the Czech Institute of Egyptology](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+[^6]: [Electronic Publications of the Czech Institute of Egyptology. Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
 
 [^7]: ["Hieroglyphic text of the *Maxims of Good Discourse* of Papyrus Prisse, Papyri BM & the Carnarvon Tablet by Zbynek Zába (1956)". Hieroglyphs scanned & edited by Wim van den Dungen](http://www.sofiatopia.org/maat/zaba06.htm)
 
