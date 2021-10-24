@@ -6,6 +6,7 @@ permalink: /quotes/
 
 ### Excerpts on learning
 
+<!--
 <ul>
   {% for post in site.posts %}
     {% if post.category == 'quotes' %}
@@ -16,3 +17,10 @@ permalink: /quotes/
     {% endif %}
   {% endfor %}
 </ul>
+-->
+
+{% for quote in site.quotes %}
+  <li>
+    <a href="{{ quote.url }}">{{ quote.title}}</a>
+  </li>
+{% endfor %}
