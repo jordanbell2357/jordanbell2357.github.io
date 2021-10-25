@@ -14,7 +14,7 @@ First, I bring complete familiarity with the Ontario secondary mathematics curri
 
 Second, my major value added is skill with designing study plans for courses, choosing specifically targetted extra exercise sets to strengthen areas, and guiding the client to where to focus their efforts to see the greatest gains, much like a personal trainer at a gym vs. hesitantly doing reps on a machine you are not sure if you are using correctly after a group class you didn't quite follow.
 
-My rate per one hour session is \$55 (CAD) per one hour session. I send an invoice the same day from [Xero](https://www.xero.com/ca/) to be paid the same day after the session by Interac E-Transfer to my email address jordan.bell@gmail.com[^1]
+My rate per one hour session is \$60 (CAD) per one hour session. I send an invoice the same day from [Xero](https://www.xero.com/ca/) to be paid the same day after the session by Interac E-Transfer to my email address jordan.bell@gmail.com[^1]
 
 [^1]: I have not so far needed to set up methods to ensure payment, and I believe that the service I offer is good enough that clients want further sessions and not to dine and dash, and invoicing after the session gives potential clients who have just found my practice certainty not having to pay before delivery of service.
 
