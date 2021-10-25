@@ -4,7 +4,7 @@ title: Jean Piaget, "The Psychology of Intelligence"
 category: quotes
 ---
 
-#### Jean Piaget, "The Psychology of Intelligence", Translated from the French by Malcolm Piercy and D. E. Berlyne, The International Library of Psychology, Philosophy and Scientific Method, Routledge and Kegan Paul, 1950
+#### Jean Piaget, *The Psychology of Intelligence*, Translated from the French by Malcolm Piercy and D. E. Berlyne, The International Library of Psychology, Philosophy and Scientific Method, Routledge and Kegan Paul, 1950
 
 ##### Chapter V, "The Growth of Thought - Intuitions and Operations", pp. 120-121:
 
