@@ -4,7 +4,7 @@ title: Quotes
 permalink: /quotes/
 ---
 
-### Excerpts on learning
+### Excerpts on learning, psychology, and epistemology 
 
 <!--
 <ul>
