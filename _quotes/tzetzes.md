@@ -14,10 +14,10 @@ p. 24, Chapter I:
 
 #### John Tzetzes, *Chiliades*, Book 8
 
-> 8.94 Concerning the inscription at the front door of Plato's house "Let no one ignorant of geometry enter" (Story 249) 
-> Plato had written at the front door of his house: 
-> “Let no one ignorant of geometry enter my house.” 
-> That is, let no one who is unjust come in here; 
+> **8.94 Concerning the inscription at the front door of Plato's house "Let no one ignorant of geometry enter" (Story 249)**  
+> Plato had written at the front door of his house:  
+> “Let no one ignorant of geometry enter my house.”  
+> That is, let no one who is unjust come in here;  
 > For geometry is fairness and justice.[^2]
 
 [^2]: [Chiliades Book 8, Translated by Vasiliki Dogani, Theoi Project](https://www.theoi.com/Text/TzetzesChiliades8.html)
