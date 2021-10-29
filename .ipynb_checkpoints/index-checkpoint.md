@@ -17,6 +17,3 @@ Second, my major value added is skill with designing study plans for courses, ch
 My rate per one hour session is \$60 (CAD) per one hour session. I send an invoice the same day from [Xero](https://www.xero.com/ca/) to be paid the same day after the session by Interac E-Transfer to my email address jordan.bell@gmail.com[^1]
 
 [^1]: I have not so far needed to set up methods to ensure payment, and I believe that the service I offer is good enough that clients want further sessions and not to dine and dash, and invoicing after the session gives potential clients who have just found my practice certainty not having to pay before delivery of service.
-
-
-
