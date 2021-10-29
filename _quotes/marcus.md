@@ -1,23 +1,34 @@
 ---
 layout: post
-title: John Tzetzes, "Chiliades"
+title: Marcus Aurelius, "The Meditations"
 category: quotes
 ---
 
-#### Thomas Heath, *A History of Greek Mathematics. Volume I: From Thales to Euclid*, Clarendon Press, Oxford, 1921[^1]
+#### [Marcus Aurelius, *Meditations with selected correspondence*, Translated by Robin Hard and Introduction and Notes by Christopher Gill, Oxford World's Classics, Oxford University Press, 2011](https://global.oup.com/academic/product/meditations-9780199573202?cc=ca&lang=en&)[^1]
 
-p. 24, Chapter I:
+[^1]: Alternate translation available at [Internet Classics Archive](http://classics.mit.edu/Antoninus/meditations.1.one.html)
 
-> Plato's attitude towards mathematics was, as we have seen, quite exceptional; and it was no doubt largely owing to his influence and his inspiration that mathematics and astronomy were so enormously advanced in his school, and especially by Eudoxus of Cnidos and Heraclides of Pontus. But the popular attitude towards Plato's style of lecturing was not encouraging. There is a story of a lecture of his on 'The Good' which Aristotle was fond of telling. (Aristoxenus, *Harmonica*, ii *ad init.*) The lecture was attended by a great crowd, and 'every one went there with the idea that he would be put in the way of getting one or other of the things in human life which are usually accounted good, such as Riches, Health, Strength, or, generally, any extraordinary gift of fortune. But when they found that Plato discoursed about mathematics, arithmetic, geometry, and astronomy, and finally declared the One to be the Good, no wonder they were altogether taken by surprise; insomuch that in the end some of the audience were inclined to scoff at the whole thing, while others objected to it altogether.' Plato, however, was able to pick and choose his pupils, and he could therefore insist on compliance with the notice which he is said to have put over his porch, 'Let no one unversed in geometry enter my doors' (Tzetzes, *Chiliad.* viii. 972); and similarly Xenocrates, who, after Speusippus, succeeded to the headship of the school, could turn away an applicant for admission who knew no geometry with the words, 'Go thy way, for thou hast not the means of getting a grip of philosophy'. (Diog. L., iv. 10)
+##### Book 1 
 
-[^1]: [Archive.org](https://archive.org/details/cu31924008704219)
+pp. 3, 9:
 
-#### John Tzetzes, *Chiliades*, Book 8
+> 1\. From my grandfather Verus, nobility of character and evenness of temper.
+>
+> 2\. From the reputation of my father and what I remember of him, modesty and manliness.
+>
+> 3\. From my mother, piety and generosity, and to abstain not only from doing wrong but even from contemplating such an act; and the simplicity, too, of her way of life, far removed from that of the rich.
+>
+> 4\. From my great-grandfather, that I never had to attend the public schools, but benefited from good teachers at home, and to have come to realize that this is a matter on which one should spare no expense.[^2]
+>
+> ...
+>
+> 17\. ...
+>
+> For all these things require the help of the gods and of fortune.
 
-> 8.94 Concerning the inscription at the front door of Plato's house "Let no one ignorant of geometry enter" (Story 249) 
-> Plato had written at the front door of his house: 
-> “Let no one ignorant of geometry enter my house.” 
-> That is, let no one who is unjust come in here; 
-> For geometry is fairness and justice.[^2]
+[^2]: [Perseus Digital Library, *M. Antonius Imperator Ad Se Ipsum* 1.4](http://data.perseus.org/citations/urn:cts:greekLit:tlg0562.tlg001.perseus-grc1:1.4.1):  
+    > *Παρὰ τοῦ προπάππου τὸ μὴ εἰς δημοσίας διατριβὰς φοιτῆσαι καὶ τὸ ἀγαθοῖς διδασκάλοις κατ̓ οἶκον χρήσασθαι καὶ τὸ γνῶναι ὅτι εἰς τὰ τοιαῦτα δεῖ ἐκτενῶς ἀναλίσκειν.*
 
-[^2]: [Chiliades Book 8, Translated by Vasiliki Dogani, Theoi Project](https://www.theoi.com/Text/TzetzesChiliades8.html)
+Explanatory Notes, p. 144: 
+
+> This book, alone in the work, is systematically arranged, as a record of debts to other people (and to the gods, 1.17), which have helped to take forward the ethical development or journey that is the main theme of Med. (see Introduction, p. xv). With each comment (‘From . . .’), we need to supply the idea, ‘I have learned to value the following quality’ or ‘I have received the following benefit’.
