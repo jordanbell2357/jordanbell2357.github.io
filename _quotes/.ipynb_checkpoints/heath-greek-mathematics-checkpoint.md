@@ -4,7 +4,7 @@ title: Thomas Heath, "A History of Greek Mathematics"
 category: quotes
 ---
 
-#### Thomas Heath, *A History of Greek Mathematics. Volume I: From Thales to Euclid*, Clarendon Press, Oxford, 1921[^1]
+### Thomas Heath, *A History of Greek Mathematics. Volume I: From Thales to Euclid*, Clarendon Press, Oxford, 1921[^1]
 
 p. 24, Chapter I:
 
