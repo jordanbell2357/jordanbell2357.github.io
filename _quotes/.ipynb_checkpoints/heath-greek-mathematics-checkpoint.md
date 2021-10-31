@@ -20,7 +20,7 @@ p. 187, Book II, Sections 30-31:
 
 [^2]: [Archive.org](https://archive.org/details/harmonicsofarist00aris/page/187/mode/1up)
 
-#### John Tzetzes, *Chiliades*, Book 8[^3]
+#### John Tzetzes, *Chiliades*, Book 8. Translated by Vasiliki Dogani, Theoi Project[^3]
 
 > **8.94 Concerning the inscription at the front door of Plato's house "Let no one ignorant of geometry enter" (Story 249)**  
 > Plato had written at the front door of his house:  
@@ -30,7 +30,7 @@ p. 187, Book II, Sections 30-31:
 
 [^3]: [Chiliades Book 8, Translated by Vasiliki Dogani, Theoi Project](https://www.theoi.com/Text/TzetzesChiliades8.html)
 
-#### Diogenes Laërtius, *Lives of the Eminent Philosophers*[^4] [^5]
+#### Diogenes Laërtius, *Lives of the Eminent Philosophers*. Translated by R. D. Hicks[^4] [^5]
 
 Book IV, Chapter 2 (Xenocrates, Head of the Academy 339-314 B.C.), Section 10:
 
