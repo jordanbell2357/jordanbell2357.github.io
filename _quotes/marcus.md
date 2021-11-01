@@ -8,9 +8,7 @@ category: quotes
 
 [^1]: Alternate translation available at [Internet Classics Archive](http://classics.mit.edu/Antoninus/meditations.1.one.html)
 
-##### Book 1 
-
-pp. 3, 9:
+pp. 3, 9, Book I:
 
 > 1\. From my grandfather Verus, nobility of character and evenness of temper.
 >
@@ -25,6 +23,20 @@ pp. 3, 9:
 > 17\. ...
 >
 > For all these things require the help of the gods and of fortune.
+
+#### 
+
+> From my grandfather Verus I learned good morals and the government of my temper.
+>
+> From the reputation and remembrance of my father, modesty and a manly character.
+>
+> From my mother, piety and beneficence, and abstinence, not only from evil deeds, but even from evil thoughts; and further, simplicity in my way of living, far removed from the habits of the rich.
+>
+> From my great-grandfather, not to have frequented public schools, and to have had good teachers at home, and to know that on such things a man should spend liberally.
+>
+> ...
+>
+> for all these things require the help of the gods and fortune.
 
 [^2]: [Perseus Digital Library, *M. Antonius Imperator Ad Se Ipsum* 1.4](http://data.perseus.org/citations/urn:cts:greekLit:tlg0562.tlg001.perseus-grc1:1.4.1):  
     > *Παρὰ τοῦ προπάππου τὸ μὴ εἰς δημοσίας διατριβὰς φοιτῆσαι καὶ τὸ ἀγαθοῖς διδασκάλοις κατ̓ οἶκον χρήσασθαι καὶ τὸ γνῶναι ὅτι εἰς τὰ τοιαῦτα δεῖ ἐκτενῶς ἀναλίσκειν.*
