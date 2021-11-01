@@ -34,7 +34,7 @@ Book One:
 
 [^1]: [Internet Classics Archive](http://classics.mit.edu/Antoninus/meditations.1.one.html)
 
-#### Jan Hendrik Leopold (ed.), *M. Antonius Imperator Ad Se Ipsum*, Scriptorum Classicorum Bibliotheca Oxoniensis, Clarendon Press, Oxford, 1908[^2][^3]
+#### *M. Antonius Imperator Ad Se Ipsum*, Jan Hendrik Leopold, Ed., Scriptorum Classicorum Bibliotheca Oxoniensis, Clarendon Press, Oxford, 1908[^2][^3]
 
 *M. Antonius Imperator Ad Se Ipsum* 1.4:
 
