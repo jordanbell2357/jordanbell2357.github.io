@@ -26,7 +26,7 @@ pp. 3, 9, Book 1:
 >
 > For all these things require the help of the gods and of fortune.
 
-#### Internet Classics Archive. Translated by George Long[^1]
+#### *The Thoughts of the Emperor M. Aurelius Antonius*, Translated by George Long, Bell and Daldy, London, 1862[^1]
 
 Book One:
 
