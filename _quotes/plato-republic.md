@@ -4,9 +4,9 @@ title: Plato, "The Republic", Book VI
 category: quotes
 ---
 
-#### *The Republic of Plato*, translated with introduction and notes by Francis Macdonald Cornford, Oxford University Press, 1945
+#### *The Republic of Plato*, translated with introduction and notes by Francis Macdonald Cornford, Oxford University Press, 1945[^1]
 
-p. 225 (Book VI, pages 510c-511a):[^1]
+p. 225 (Book VI, pages 510c-511a):
 
 > *Socrates*: You know, of course, how students of subjects like geometry and arithmetic begin by postulating odd and even numbers, or the various figures and the three kinds of angle, and other such data in each subject. These data they take as known; and, having adopted them as assumptions, they do not feel called upon to give any account of them to themselves or to anyone else, but treat them as self-evident. Then, starting from these assumptions, they go on until they arrive, by a series of consistent steps, at all the conclusions they set out to investigate.
 >
