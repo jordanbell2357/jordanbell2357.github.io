@@ -8,11 +8,11 @@ category: quotes
 
 p. 225 (Book VI, pages 510c-511a):
 
-> *Socrates*: You know, of course, how students of subjects like geometry and arithmetic begin by postulating odd and even numbers, or the various figures and the three kinds of angle, and other such data in each subject. These data they take as known; and, having adopted them as assumptions, they do not feel called upon to give any account of them to themselves or to anyone else, but treat them as self-evident. Then, starting from these assumptions, they go on until they arrive, by a series of consistent steps, at all the conclusions they set out to investigate.
+> <TT>*Socrates*</TT>: You know, of course, how students of subjects like geometry and arithmetic begin by postulating odd and even numbers, or the various figures and the three kinds of angle, and other such data in each subject. These data they take as known; and, having adopted them as assumptions, they do not feel called upon to give any account of them to themselves or to anyone else, but treat them as self-evident. Then, starting from these assumptions, they go on until they arrive, by a series of consistent steps, at all the conclusions they set out to investigate.
 >
-> *Glaucon*: Yes, I know that
+> <TT>*Glaucon*</TT>: Yes, I know that
 >
-> *Socrates*: You also know how they make use of visible figures and discourse about them, though what they really have in mind is the originals of which these figures are images: they are not reasoning, for instance, about this particular square and diagonal which they have drawn, but about *the* Square and *the* Diagonal; and so in all cases. The diagrams they draw and the models they make are actual things, which may have their shadows or images in water; but now they serve in their turn as images, while the student is seeking to behold those realities which only thought can apprehend.
+> <TT>*Socrates*</TT>: You also know how they make use of visible figures and discourse about them, though what they really have in mind is the originals of which these figures are images: they are not reasoning, for instance, about this particular square and diagonal which they have drawn, but about *the* Square and *the* Diagonal; and so in all cases. The diagrams they draw and the models they make are actual things, which may have their shadows or images in water; but now they serve in their turn as images, while the student is seeking to behold those realities which only thought can apprehend.
 
 [^1]: [Archive.org](https://archive.org/details/in.ernet.dli.2015.189938/page/n254/mode/1up)
 
