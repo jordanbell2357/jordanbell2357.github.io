@@ -4,7 +4,77 @@ title: Lucretius, "De rerum natura", Book IV
 category: quotes
 ---
 
-#### Lucretius, *De Rerum Natura*, Book IV
+#### Lucretius, *De Rerum Natura*, Book IV, lines 469-521
+
+#### *Lucretius: On the Nature of the Universe*, translated by Ronald Melville, Oxford World's Classics, Oxford University Press, 1997
+
+Book 4, lines 469-521: 
+
+> &emsp; Now here’s another thing: if someone thinks  
+> That nothing is known, he does not even know  
+> Whether that can be known, since he declares  
+> That he knows nothing.  
+> Therefore I will spare  
+> To argue a case against a man like this  
+> Who has put his head where his feet ought to be.  
+> And yet, if I were to grant that he does know, then  
+> I ask him this: since you could see no truth  
+> In anything before, how do you know  
+> What it is to know, and what again not to know?  
+> What gave you the idea of true and false,  
+> What proves to you that there’s a difference,  
+> That the doubtful and the certain are not the same?  
+> You will find that it is from the senses  
+> In the first place that the concept of truth has come,  
+> And that the senses cannot be refuted.  
+> For some standard must be found of greater credit  
+> Able of itself to refute false things with true.  
+> And what can be held to tell the truth more clearly  
+> Than the senses? or shall reasoning derived  
+> From false senses prevail against those senses  
+> Being itself wholly derived from them?  
+> Unless they are true, all reasoning is false.  
+> Will the ear be able to convict the eye?  
+> Or the touch the ear? Or taste refute the touch,  
+> Or nose confound it or eye discredit it?  
+> Not so, I think. For each has its own force  
+> And separate power, so it needs must be  
+> That softness and cold or heat and colour each  
+> Is separately perceived and separately  
+> We see whatever is involved in colour.  
+> The taste in our mouth has its separate power, and smells  
+> Have separate birth, and sounds. So it must be  
+> That one sense never can refute another  
+> Nor can they possibly convict themselves  
+> Since each must always equally be trusted.  
+> Accordingly whatever at any time  
+> Has seemed to the senses to be true, is true.  
+> And if reason cannot explain the cause  
+> Why objects seen as square close to at a distance  
+> Seem round, yet it is better that a man  
+> Lacking reason should give a faulty explanation  
+> Than to let slip from your hands in any way  
+> Your grip upon the obvious, and break  
+> The trust upon which all depends, and tear up  
+> All the foundations on which life is built.  
+> For not only would all reason come to ruin,  
+> Life itself also would at once collapse,  
+> Unless you dare to place trust in your senses,  
+> Avoiding precipices and such things  
+> As must be shunned, and follow the contrary.  
+> Believe me, all that array of words is vain  
+> That has been massed and deployed against the senses.  
+> Lastly, in a building, if the ruler is crooked  
+> And the square is faulty and misses the straight line  
+> And the level is even slightly unbalanced,  
+> The whole house then will of necessity  
+> Be wrongly constructed and be falling over,  
+> Warped, sloping, leaning forward, leaning back,  
+> All out of proportion, so that some parts seem  
+> Ready to collapse, and the whole destined to fall,  
+> A victim to the first false measurements.  
+> So your reasoning about things must be false and warped  
+> Whenever it is based upon false senses.
 
 #### A. A. Long and D. N. Sedley, *The Hellenistic Philosophers. Volume 1: Translations of the Principal Sources with Philosophical Commentary*, Cambridge University Press, 1987
 
@@ -18,4 +88,34 @@ Lucretius, *De Rerum Natura* 4.469-521:[^1]
 
 [^1]: [Titus Lucretius Carus, *De Rerum Natura \[DRN\]*. PHI Latin Texts](https://latin.packhum.org/loc/550/1/0#3)
 
-> Denique nil sciri siquis putat, id quoque nescit an sciri possit, quoniam nil scire fatetur. hunc igitur contra minuam contendere causam, qui capite ipse suo in statuit vestigia sese. et tamen hoc quoque uti concedam scire, at id ipsum quaeram, cum in rebus veri nil viderit ante, unde sciat quid sit scire et nescire vicissim, notitiam veri quae res falsique crearit et dubium certo quae res differre probarit. invenies primis ab sensibus esse creatam notitiem veri neque sensus posse refelli. nam maiore fide debet reperirier illud, sponte sua veris quod possit vincere falsa. quid maiore fide porro quam sensus haberi debet? an ab sensu falso ratio orta valebit dicere eos contra, quae tota ab sensibus orta est? qui nisi sunt veri, ratio quoque falsa fit omnis. An poterunt oculos aures reprehendere, an aures tactus? an hunc porro tactum sapor arguet oris, an confutabunt nares oculive revincent? non, ut opinor, ita est. nam seorsum cuique potestas divisast, sua vis cuiquest, ideoque necesse est et quod molle sit et gelidum fervensve videre et seorsum varios rerum sentire colores et quae cumque coloribus sint coniuncta necessest. seorsus item sapor oris habet vim, seorsus odores nascuntur, seorsum sonitus. ideoque necesse est non possint alios alii convincere sensus. nec porro poterunt ipsi reprehendere sese, aequa fides quoniam debebit semper haberi. proinde quod in quoquest his visum tempore, verumst.
+> &\emsp; Denique nil sciri siquis putat, id quoque nescit  
+> an sciri possit, quoniam nil scire fatetur.  
+> hunc igitur contra minuam contendere causam,  
+> qui capite ipse suo in statuit vestigia sese.  
+> et tamen hoc quoque uti concedam scire, at id ipsum quaeram,  
+> cum in rebus veri nil viderit ante,  
+> unde sciat quid sit scire et nescire vicissim,  
+> notitiam veri quae res falsique crearit  
+> et dubium certo quae res differre probarit.  
+> invenies primis ab sensibus esse creatam  
+> notitiem veri neque sensus posse refelli.  
+> nam maiore fide debet reperirier illud,  
+> sponte sua veris quod possit vincere falsa.  
+> quid maiore fide porro quam sensus haberi  
+> debet? an ab sensu falso ratio orta valebit  
+> dicere eos contra, quae tota ab sensibus orta est?  
+> qui nisi sunt veri, ratio quoque falsa fit omnis.  
+> &emsp; An poterunt oculos aures reprehendere, an aures  
+> tactus? an hunc porro tactum sapor arguet oris,  
+> an confutabunt nares oculive revincent?  
+> non, ut opinor, ita est. nam seorsum cuique potestas  
+> divisast, sua vis cuiquest, ideoque necesse est  
+> et quod molle sit et gelidum fervensve videre  
+> et seorsum varios rerum sentire colores  
+> et quae cumque coloribus sint coniuncta necessest.  
+> seorsus item sapor oris habet vim, seorsus odores  
+> nascuntur, seorsum sonitus. ideoque necesse est  
+> non possint alios alii convincere sensus.  
+> nec porro poterunt ipsi reprehendere sese,  
+> aequa fides quoniam debebit semper haberi.  
+proinde quod in quoquest his visum tempore, verumst.
