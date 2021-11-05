@@ -118,7 +118,7 @@ Lucretius, *De Rerum Natura* 4.469-521:[^1]
 > non possint alios alii convincere sensus.  
 > nec porro poterunt ipsi reprehendere sese,  
 > aequa fides quoniam debebit semper haberi.  
-> proinde quod in quoquest his visum tempore, verumst.
+> proinde quod in quoquest his visum tempore, verumst.  
 > &ensp; Et si non poterit ratio dissolvere causam,  
 > cur ea quae fuerint iuxtim quadrata, procul sint  
 > visa rutunda, tamen praestat rationis egentem  
