@@ -88,7 +88,7 @@ Lucretius, *De Rerum Natura* 4.469-521:[^1]
 
 [^1]: [Titus Lucretius Carus, *De Rerum Natura \[DRN\]*. PHI Latin Texts](https://latin.packhum.org/loc/550/1/0#3)
 
-> &\emsp; Denique nil sciri siquis putat, id quoque nescit  
+> &emsp; Denique nil sciri siquis putat, id quoque nescit  
 > an sciri possit, quoniam nil scire fatetur.  
 > hunc igitur contra minuam contendere causam,  
 > qui capite ipse suo in statuit vestigia sese.  
