@@ -80,7 +80,7 @@ Book 4, lines 469-521:
 
 pp. 78-79, Section 16 A:
 
-Lucretius, *De Rerum Natura*, Book IV, lines 469-521)
+Lucretius, *De Rerum Natura*, Book IV, lines 469-499
 
 > (1) Now, if someone thinks that nothing is known, one thing he doesn't know is whether that can be known, since he admits to knowing nothing. I shall therefore not bothet to argue my case against this man who has himself stood with his own head in his footprints, (2) And anyway, even allowing that he knows this, I'll still ask him: given that he has never before seen anything true in the world, from where does he get his knowledge of what knowing and not knowing are? What created his preconception of true and false? And what proved to him that doubtful differs from certain? (3) You will find that the preconception of true has its origin in the senses, and that the senses cannot be refuted. (4) For something of greater reliability must be found, something possessing the intrinsic power to convict falsehoods with truths. Well, what should be considered to have greater reliability than the senses? (5) Will reason have the power to contradict them, if it is itself the product of false sensation? For reason is in its entirety the product of the senses, so that if the senses are not true all reason becomes false as well. (6) Or will the ears have the power to confute the eyes, and touch to confute the ears? Or again, will this sense of touch be denounced by the mouth's taste, confuted by the nose, or convicted by the eyes? That is not, in my view, the way things are. For each has its own separate capacity and its own power, thus making it necessary that sensing what is soft, cold or hot be a separate operation from sensing the various colours of things and seeing whatever properties regularly accompany colours. Likewise the mouth's taste has a separate power, the recognition of smells is separate, and separate again that of sounds. It necessarily follows that the senses cannot convict each other. (7) Nor, again, will they be able to confute themselves, since all will always have to be considered of equal reliability. (8) Hence whatever impression the senses get at any time is true. (9) Even if reason fails to explain why things which proved square when close up seem round at a distance, it is nevertheless better, when one's reason proves inadequate, to give wrong explanations of the respective shapes, than to let the self-evident slip from one's grasp and thus to violate the primary guarantee and shake the entire foundations on which life and survival rest. (10) For not only would all reason cave in, but life itself would instantly collapse, if you lost the confidence to trust your senses, and to avoid precipices and other such hazards while aiming towards things of the opposite kind. (11) Hence you will find that the entire battalion of words which has been marshalled and armed against the senses is futile. (12) Lastly, just as in a building, if the yardstick is defective at the outset, if the set square is misleading for lack of straight edges, and if the level has the slightest wobble anywhere in it, the inevitable result is that the whole house is made wrongly — crooked, distorted, bulging backwards and forwards, misproportioned — so much so that some parts seem already determined to cave in, and do cave in, all betrayed by false initial criteria, so too you will find that any account of the world must be distorted and false if it is based upon the falsity of the senses.
 
@@ -92,8 +92,8 @@ Lucretius, *De Rerum Natura* 4.469-521:[^1]
 > an sciri possit, quoniam nil scire fatetur.  
 > hunc igitur contra minuam contendere causam,  
 > qui capite ipse suo in statuit vestigia sese.  
-> et tamen hoc quoque uti concedam scire, at id ipsum quaeram,  
-> cum in rebus veri nil viderit ante,  
+> et tamen hoc quoque uti concedam scire, at id ipsum  
+> quaeram, cum in rebus veri nil viderit ante,  
 > unde sciat quid sit scire et nescire vicissim,  
 > notitiam veri quae res falsique crearit  
 > et dubium certo quae res differre probarit.  
@@ -118,4 +118,26 @@ Lucretius, *De Rerum Natura* 4.469-521:[^1]
 > non possint alios alii convincere sensus.  
 > nec porro poterunt ipsi reprehendere sese,  
 > aequa fides quoniam debebit semper haberi.  
-proinde quod in quoquest his visum tempore, verumst.
+> proinde quod in quoquest his visum tempore, verumst.
+> &ensp; Et si non poterit ratio dissolvere causam,  
+> cur ea quae fuerint iuxtim quadrata, procul sint  
+> visa rutunda, tamen praestat rationis egentem  
+> reddere mendose causas utriusque figurae,  
+> quam manibus manifesta suis emittere quoquam  
+> et violare fidem primam et convellere tota  
+> fundamenta quibus nixatur vita salusque.  
+> non modo enim ratio ruat omnis, vita quoque ipsa  
+> concidat extemplo, nisi credere sensibus ausis  
+> praecipitisque locos vitare et cetera quae sint  
+> in genere hoc fugienda, sequi contraria quae sint.  
+> illa tibi est igitur verborum copia cassa  
+> omnis, quae contra sensus instructa paratast.  
+> &ensp; Denique ut in fabrica, si pravast regula prima,  
+> normaque si fallax rectis regionibus exit,  
+> et libella aliqua si ex parti claudicat hilum,  
+> omnia mendose fieri atque obstipa necessu est  
+> prava cubantia prona supina atque absona tecta,  
+> iam ruere ut quaedam videantur velle, ruantque  
+> prodita iudiciis fallacibus omnia primis,  
+> sic igitur ratio tibi rerum prava necessest  
+> falsaque sit, falsis quae cumque ab sensibus ortast.
