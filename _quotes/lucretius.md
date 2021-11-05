@@ -10,7 +10,7 @@ category: quotes
 
 Book 4, lines 469-521: 
 
-> &emsp; Now here’s another thing: if someone thinks  
+> &ensp; Now here’s another thing: if someone thinks  
 > That nothing is known, he does not even know  
 > Whether that can be known, since he declares  
 > That he knows nothing.  
@@ -88,7 +88,7 @@ Lucretius, *De Rerum Natura* 4.469-521:[^1]
 
 [^1]: [Titus Lucretius Carus, *De Rerum Natura \[DRN\]*. PHI Latin Texts](https://latin.packhum.org/loc/550/1/0#3)
 
-> &emsp; Denique nil sciri siquis putat, id quoque nescit  
+> &ensp; Denique nil sciri siquis putat, id quoque nescit  
 > an sciri possit, quoniam nil scire fatetur.  
 > hunc igitur contra minuam contendere causam,  
 > qui capite ipse suo in statuit vestigia sese.  
@@ -105,7 +105,7 @@ Lucretius, *De Rerum Natura* 4.469-521:[^1]
 > debet? an ab sensu falso ratio orta valebit  
 > dicere eos contra, quae tota ab sensibus orta est?  
 > qui nisi sunt veri, ratio quoque falsa fit omnis.  
-> &emsp; An poterunt oculos aures reprehendere, an aures  
+> &ensp; An poterunt oculos aures reprehendere, an aures  
 > tactus? an hunc porro tactum sapor arguet oris,  
 > an confutabunt nares oculive revincent?  
 > non, ut opinor, ita est. nam seorsum cuique potestas  
