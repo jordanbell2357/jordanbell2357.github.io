@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Lucretius, "De rerum natura"
+title: Lucretius, "De rerum natura", Book IV
 category: quotes
 ---
 
-#### Lucretius, *De Rerum Natura*
+#### Lucretius, *De Rerum Natura*, Book IV
 
 #### A. A. Long and D. N. Sedley, *The Hellenistic Philosophers. Volume 1: Translations of the Principal Sources with Philosophical Commentary*, Cambridge University Press, 1987
 
