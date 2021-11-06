@@ -1,10 +1,8 @@
 ---
 layout: post
-title: Lucretius, "De rerum natura", Book IV
+title: Lucretius, "De rerum natura", Book IV, lines 469-521
 category: quotes
 ---
-
-#### Lucretius, *De Rerum Natura*, Book IV, lines 469-521
 
 #### *Lucretius: On the Nature of the Universe*, translated by Ronald Melville, Oxford World's Classics, Oxford University Press, 1997
 

@@ -16,6 +16,4 @@ p. 48, Chapter 6:
 
 #### *Iamblichi De communi mathematica scientia liber*, edited by Nicola Festa and Ulrich Klein, Bibliotheca scriptorum Graecorum et Romanorum Teubneriana, B. G. Teubner, Stuttgart, 1975[^2]
 
-Iamblichus, *De communi mathematica scientia (DCMS)*
-
 [^2]: [Google Books](https://www.google.ca/books/edition/Iamblichi_De_communi_mathematica_scienti/2NkfAAAAMAAJ)
