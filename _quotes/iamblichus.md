@@ -16,4 +16,4 @@ p. 48, Chapter 6:
 
 #### *Iamblichi De communi mathematica scientia liber*, edited by Nicola Festa and Ulrich Klein, Bibliotheca scriptorum Graecorum et Romanorum Teubneriana, B. G. Teubner, Stuttgart, 1975[^2]
 
-[^2]: [Google Books](https://www.google.ca/books/edition/Iamblichi_De_communi_mathematica_scienti/2NkfAAAAMAAJ)
+[^2]: [Archive.org](https://archive.org/details/iamblichidecommu0000iamb/page/n2/mode/1up)
