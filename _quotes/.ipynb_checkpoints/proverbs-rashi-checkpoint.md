@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Book of Proverbs, Chapter 4, Verse 7
+title: Proverbs 4:8
 category: quotes
 ---
 
