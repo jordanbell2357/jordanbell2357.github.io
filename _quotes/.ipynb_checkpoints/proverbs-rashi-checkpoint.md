@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rashi's Commentary on the Book of Proverbs, Chapter 4, Verse 7
+title: The Book of Proverbs, Chapter 4, Verse 7
 category: quotes
 ---
 
