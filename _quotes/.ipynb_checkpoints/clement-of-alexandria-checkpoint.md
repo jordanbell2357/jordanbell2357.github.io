@@ -8,7 +8,7 @@ category: quotes
 
 #### *The Ante-Nicene Fathers. Volume II. Fathers of the Second Century: Hermas, Tatian, Athenagoras, Theophilus, and Clement of Alexandria (entire)*, edited by Alexander Roberts and James Donaldson, The Christian Literature Publishing Company, Buffalo, NY, 1885[^1] [^2] [^3]
 
-[^1]: [*The Ante-Nicene Fathers. Volume II*. Archive.org](https://archive.org/details/antenicenefather02robeuoft/page/209/mode/1up)
+[^1]: [The Ante-Nicene Fathers. Volume II. Archive.org](https://archive.org/details/antenicenefather02robeuoft/page/209/mode/1up)
 
 [^2]: [The Paedagogus (Book I). New Advent](https://www.newadvent.org/fathers/02091.htm)
 
@@ -26,7 +26,7 @@ Book I, Chapter 1. The Office of the Instructor:
 >
 > There is a wide difference between health and knowledge; for the latter is produced by learning, the former by healing. One, who is ill, will not therefore learn any branch of instruction till he is quite well. For neither to learners nor to the sick is each injunction invariably expressed similarly; but to the former in such a way as to lead to knowledge, and to the latter to health. As, then, for those of us who are diseased in body a physician is required, so also those who are diseased in soul require a pædagogue to cure our maladies; and then a teacher, to train and guide the soul to all requisite knowledge when it is made able to admit the revelation of the Word. Eagerly desiring, then, to perfect us by a gradation conducive to salvation, suited for efficacious discipline, a beautiful arrangement is observed by the all-benignant Word, who first exhorts, then trains, and finally teaches.
 
-#### *Clemens Alexandrinus. Erster Band, Protrepticus und Paedagogus*, herausgegeben von Otto Stählin, Die griechischen christlichen Schriftsteller der ersten drei Jahrhunderte, J. C. Hinrichs'sche Buchhandlung, Leipzig, 1905[^4] [^5] [^6]
+#### *Clemens Alexandrinus. Erster Band, Protrepticus und Paedagogus*, herausgegeben von Otto Stählin, Die griechischen christlichen Schriftsteller der ersten drei Jahrhunderte, J. C. Hinrichs'sche Buchhandlung, Leipzig, 1905[^4] [^5]
 
 [^4]: [Clemens Alexandrinus: Protrepticus und Paedagogus. Google Books](https://books.google.ca/books?id=DTYYAAAAYAAJ)
 
