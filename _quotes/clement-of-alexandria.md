@@ -4,6 +4,8 @@ title: Clement of Alexandria, "Paedagogus" (Παιδαγωγός)
 category: quotes
 ---
 
+#### Clement of Alexandria, *Paedagogus* (Παιδαγωγός)
+
 #### *The Ante-Nicene Fathers. Volume II. Fathers of the Second Century: Hermas, Tatian, Athenagoras, Theophilus, and Clement of Alexandria (entire)*, edited by Alexander Roberts and James Donaldson, The Christian Literature Publishing Company, Buffalo, NY, 1885[^1] [^2] [^3]
 
 [^1]: [*The Ante-Nicene Fathers. Volume II*. Archive.org](https://archive.org/details/antenicenefather02robeuoft/page/209/mode/1up)
