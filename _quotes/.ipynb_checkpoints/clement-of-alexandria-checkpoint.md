@@ -28,7 +28,7 @@ Book I, Chapter 1. The Office of the Instructor:
 
 #### *Clemens Alexandrinus. Erster Band, Protrepticus und Paedagogus*, herausgegeben von by Otto Stählin, Die griechischen christlichen Schriftsteller der ersten drei Jahrhunderte, J. C. Hinrichs'sche Buchhandlung, Leipzig, 1905[^4] [^5] [^6]
 
-[^4]: [*Clemens Alexandrinus: Protrepticus und Paedagogus*. Google Books](https://books.google.ca/books?id=DTYYAAAAYAAJ)
+[^4]: [Clemens Alexandrinus: Protrepticus und Paedagogus. Google Books](https://books.google.ca/books?id=DTYYAAAAYAAJ)
 
 [^5]: [Clement of Alexandria, Paedagogus. Perseus Digital Library Scaife Viewer](https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0555.tlg002.opp-grc1:1)
 
