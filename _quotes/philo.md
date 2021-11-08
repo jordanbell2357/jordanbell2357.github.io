@@ -6,7 +6,7 @@ category: quotes
 
 #### *Philo Volume III. On the Unchangeableness of God. On Husbandry. Concerning Noah's Work As a Planter. On Drunkenness. On Sobriety*, Translated by F. H. Colson and G. H. Whitaker, Loeb Classical Library 247, Harvard University Press, 1930[^1]
 
-[^1]: [Archive.org. *Philo Volume III. On the Unchangeableness of God. On Husbandry. Concerning Noah's Work As a Planter. On Drunkenness. On Sobriety*, Translated by F. H. Colson and G. H. Whitaker, Loeb Classical Library 247, Harvard University Press, 1930](https://archive.org/details/PhiloSupplement01Genesis/Philo%2003%20Unchangeable%2C%20Husbandry%2C%20Noah%2C%20Drunk%2C%20Sober/page/n119/mode/2up)
+[^1]: [*Philo Volume III. On the Unchangeableness of God. On Husbandry. Concerning Noah's Work As a Planter. On Drunkenness. On Sobriety*, Translated by F. H. Colson and G. H. Whitaker, Loeb Classical Library 247, Harvard University Press, 1930. Archive.org](https://archive.org/details/PhiloSupplement01Genesis/Philo%2003%20Unchangeable%2C%20Husbandry%2C%20Noah%2C%20Drunk%2C%20Sober/page/n119/mode/2up)
 
 Philo of Alexandria, *On Husbandry* (*De Agricultura*, Περί γεωργίας), Chapter III, Sections 12-16, pp. 113-117:
 
@@ -16,20 +16,20 @@ Philo of Alexandria, *On Husbandry* (*De Agricultura*, Περί γεωργίας
 
 Philo of Alexandria, *On Husbandry* (*De Agricultura*, Περί γεωργίας), Chapter III, Sections 12-16, pp. 380-381:
 
-[^5]: [Early Christian Writings](http://www.earlychristianwritings.com/yonge/book11.html)
+[^5]: [The Works of Philo. Early Christian Writings](http://www.earlychristianwritings.com/yonge/book11.html)
 
-[^6]: [Google Books](https://www.google.ca/books/edition/The_Works_of_Philo_Judaeus_the_Contempor/VZ5UAAAAcAAJ?hl=en&gbpv=0)
+[^6]: [The Works of Philo Judaeus, the Contemporary of Josephus. Volume 1. Google Books](https://www.google.ca/books/edition/The_Works_of_Philo_Judaeus_the_Contempor/VZ5UAAAAcAAJ?hl=en&gbpv=0)
 
 > III. (12) For Moses says, "Every tree which bringeth not forth fruit good to eat thou shalt cut down; and thou shalt make it into stakes against the city which shall make war upon them."{2} {#De 20:20.} And these trees are likened to those powers developed in words alone, which have nothing in them but mere speculation, (13) among which we must class medical science, when unconnected with practice, by which it is natural that such persons may be cured, and also the oratorical and hireling species of rhetoric, which is conversant not about the discovery of the truth, but solely about the means of deceiving the hearers by plausible persuasion; and in the same class we must place all those parts of dialectics and geometry which have no connection with a proper regulation of the character or morals, but which only sharpen the mind, not suffering it to exercise a dull apprehension towards each question which is raised and submitted to it, but always to dissect the question and divide it, so as to distinguish the peculiar character of each thing from the common qualities of the whole genus. (14) At all events, men say, that the ancients compared the principles of philosophy, as being threefold, to a field; likening natural philosophy to trees and plants, and moral philosophy to fruits, for the sake of which the plants are planted; and logical philosophy to the hedge or fence: (15) for as the wall, which is erected around, is the guardian of the plants and of the fruit which are in the field, keeping off all those who wish to do them injury and to destroy them, in the same manner, the logical part of philosophy is the strongest possible sort of protection to the other two parts, the moral and the natural philosophy; (16) for when it simplifies twofold and ambiguous expressions, and when it solves specious plausibilities entangled in sophisms, and utterly destroys seductive deceits, the greatest allurement and ruin to the soul, by means of its own expressive and clear language, and its unambiguous demonstrations, it makes the whole mind smooth like wax, and ready to receive all the innocent and very praiseworthy impressions of sound natural and moral philosophy.
 
-#### *Philonis Alexandrini opera quae supersunt. Vol. II*, edited by Paul Wendland, Verlag Georg Reimer, Berlin, 1897[^2] [^3]
+#### *Philonis Alexandrini opera quae supersunt. Vol. II*, edited by Paul Wendland, Verlag Georg Reimer, Berlin, 1897[^2] [^3] [^4]
 
 Philo of Alexandria, *On Husbandry* (*De Agricultura*, Περί γεωργίας), Chapter III, Sections 12-16, pp. 97-98:
 
 > λέγει γάρ· „πᾶν ὃ οὐ καρπόβρωτόν ἐστιν, ἐκκόψεις καὶ ποιήσεις χαράκωσιν ἐπὶ τὴν πόλιν, ἥτις ποιήσει πρὸς σὲ τὸν πόλεμον“ (Deut. 20,20). ταῦτα δ’ εἰκάζεται τὰ δένδρα ταῖς περὶ λόγους δυνάμεσι θεωρίαν ψιλὴν ἐχ’ οὔσαις· ἐν αἷς θετέον ἰατρολογίαν ἀπεζευγμένην ἔργων, δι’ ὧν τοὺς κάμνοντας εἰκός ἐστι σῴζεσθαι, καὶ ῥητορικῆς τὸ συνηγορικὸν καὶ ἔμμισθον εἶδος οὐ περὶ τὴν εὕρεσιν τοῦ δικαίου πραγματευόμενον, ἀλλὰ περὶ τὴν δι’ ἀπάτης πειθὼ τῶν ἀκουόντων, ἔτι μέντοι καὶ διαλεκτικῆς καὶ γεωμετρίας ὅσα εἰς μὲν ἐπανόρθωσιν ἤθους οὐδὲν συνεργεῖ, παραθήγει δὲ τὸν νοῦν οὐκ ἐῶντα ἀμβλείᾳ χρῆσθαι τῇ πρὸς ἕκαστα τῶν ἀπορουμένων προσβολῇ, τομαῖς δὲ ἀεὶ καὶ διαστολαῖς χρῆσθαι, ὡς τὴν ἑκάστου πράγματος ἰδιότητα κοινῶν διαζευγνύναι ποιοτήτων. τὸν γοῦν κατὰ φιλοσοφίαν λόγον τρίδυμον ὄντα τοὺς παλαιοὺς ἀγρῶ φασιν ἀπεικάσαι, τὸ μὲν φυσικὸν αὐτοῦ δένδροις καὶ φυτοῖς παραβάλλοντας, τὸ δ’ ἠθικὸν καρποῖς, ὧν ἕνεκα καὶ τὰ φυτά, τὸ δ’ αὖ λογικὸν φραγμῷ καὶ περιβόλῳ· καθάπερ γὰρ τὸ περικείμενον τεῖχος ὀπώρας καὶ φυτῶν τῶν κατὰ τὸν ἀγρόν ἐστι φυλακτήριον τοὺς ἐπὶ τῷ σίνεσθαι παρεισφθείρεσθαι βουλομένους ἀνεῖργον, τὸν αὐτὸν τρόπον τὸ λογικὸν μέρος φιλοσοφίας φρουρά τίς ἐστιν ὀχυρωτάτη τῶν δυεῖν ἐκείνων, ἠθικοῦ τε καὶ φυσικοῦ· τὰς γὰρ διπλᾶς καὶ ἀμφιβόλους ὅταν ἐξαπλοῖ λέξεις καὶ τὰς διὰ τῶν σοφισμάτων πιθανότητας ἐπιλύῃ καὶ τὴν εὐπαράγωγον ἀπάτην. μέγιστον ψυχῆς δέλεαρ καὶ ἐπιζήμιον, ἀναιρῇ διὰ λόγων ἐμφαντικωτάτων καὶ ἀποδείξεων ἀνενδοιάστων, ὥσπερ κηρὸν λελειασμένον τὸν νοῦν ἀπεργάζεται ἕτοιμον δέχεσθαι τούς τε φυσιολογίας καὶ τοὺς ἠθοποιίας ἀσινεῖς καὶ πάνυ δοκίμους χαρακτῆρας.
 
-[^2]: [Archive.org. *Philonis Alexandrini opera quae supersunt. Vol. II*, edited by Paul Wendland, Verlag Georg Reimer, Berlin, 1897](https://archive.org/details/bub_gb_sqKFQNgkSycC/page/n140/mode/2up)
+[^2]: [*Philonis Alexandrini opera quae supersunt. Vol. II*, edited by Paul Wendland, Verlag Georg Reimer, Berlin, 1897. Archive.org](https://archive.org/details/bub_gb_sqKFQNgkSycC/page/n140/mode/2up)
 
-[^3]: [Perseus Digital Library](https://cts.perseids.org/read/greekLit/tlg0018/tlg009/opp-grc1/1-20)
+[^3]: [De Agricultura. Philo Judaeus. Perseus Digital Library](https://cts.perseids.org/read/greekLit/tlg0018/tlg009/opp-grc1/1-20)
 
-[^4]: [Wikisource](https://el.wikisource.org/wiki/%CE%A0%CE%B5%CF%81%CE%AF_%CE%B3%CE%B5%CF%89%CF%81%CE%B3%CE%AF%CE%B1%CF%82)
+[^4]: [Περί γεωργίας. Wikisource](https://el.wikisource.org/wiki/%CE%A0%CE%B5%CF%81%CE%AF_%CE%B3%CE%B5%CF%89%CF%81%CE%B3%CE%AF%CE%B1%CF%82)
