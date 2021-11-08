@@ -30,8 +30,7 @@ Book I, Chapter 1. The Office of the Instructor:
 
 [^4]: [*Clemens Alexandrinus: Protrepticus und Paedagogus*. Google Books](https://books.google.ca/books?id=DTYYAAAAYAAJ)
 
-[^5]: [Clement of Alexandria, Paedagogus. Perseus Digital Library
-Scaife Viewer](https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0555.tlg002.opp-grc1:1)
+[^5]: [Clement of Alexandria, Paedagogus. Perseus Digital Library Scaife Viewer](https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0555.tlg002.opp-grc1:1)
 
 [^6]: [Clemens Alexandrinus - Paedagogus I. Voci dal mondo antico](http://www.poesialatina.it/_ns/Greek/testi/Clemens/Paedagogus01.html)
 
