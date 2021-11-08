@@ -1,12 +1,8 @@
 ---
 layout: post
-title: Iamblichus, "On the General Science of Mathematics"
+title: Iamblichus, "On the General Science of Mathematics" (De Communi Mathematica Scientia)
 category: quotes
 ---
-
-#### *Iamblichi De communi mathematica scientia liber*, edited by Nicola Festa and Ulrich Klein, Bibliotheca scriptorum Graecorum et Romanorum Teubneriana, B. G. Teubner, Stuttgart, 1975[^2]
-
-[^2]: [Archive.org](https://archive.org/details/iamblichidecommu0000iamb/page/n2/mode/1up)
 
 #### *Iamblichus: On the General Science of Mathematics*, translated by John Dillon and J. O. Urmson,  Ancient Commentators on Aristotle, Bloomsbury Academic, 2020
 
@@ -17,3 +13,7 @@ p. 44, Chapter 5:
 p. 48, Chapter 6:
 
 > One should study mathematics also for the sake of knowledge; for the soul is in this way strongly led upwards, and it compels us to discourse about realities themselves, in no way tolerating it if someone, in discussion of them, brings to the fore visible or tangible bodies. For it speaks about those things about which reasoning alone is possible, it being not possible to deal with them in any other way. So mathematics is, it would seem, indispensable, since it can be seen to compel the soul to make use of intellect itself on the road to truth. Also, indeed, it makes people excel themselves in acuity, and further it provides much labour for him who studies and practises it.
+
+#### *Iamblichi De communi mathematica scientia liber*, edited by Nicola Festa and Ulrich Klein, Bibliotheca scriptorum Graecorum et Romanorum Teubneriana, B. G. Teubner, Stuttgart, 1975[^2]
+
+[^2]: [Archive.org](https://archive.org/details/iamblichidecommu0000iamb/page/n2/mode/1up)
