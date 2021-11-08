@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Philo of Alexandria, "On Husbandry"
+title: Philo of Alexandria, "On Husbandry" (De Agricultura, Περί γεωργίας)
 category: quotes
 ---
 
@@ -8,13 +8,13 @@ category: quotes
 
 [^1]: [Archive.org. *Philo Volume III. On the Unchangeableness of God. On Husbandry. Concerning Noah's Work As a Planter. On Drunkenness. On Sobriety*, Translated by F. H. Colson and G. H. Whitaker, Loeb Classical Library 247, Harvard University Press, 1930](https://archive.org/details/PhiloSupplement01Genesis/Philo%2003%20Unchangeable%2C%20Husbandry%2C%20Noah%2C%20Drunk%2C%20Sober/page/n119/mode/2up)
 
-Philo of Alexandria, *On Husbandry* (*De Agricultura*, *Περί γεωργίας*), Chapter III, Sections 12-16, pp. 113-117:
+Philo of Alexandria, *On Husbandry* (*De Agricultura*, Περί γεωργίας), Chapter III, Sections 12-16, pp. 113-117:
 
 > For he says, "Every tree whose fruit is not edible thou shalt cut down and shalt make into a palisade to resist the city, which shall make war against thee" (Deut. xx. 20). The Scripture uses these trees to represent the purely intellectual activities which deal with theory alone. Among these we must place medical science dissociated from practical measures such as lead to the recovery of the sick ; the kind of oratory practised by the hired advocate, that is concerned not to find out the rights of the case, but to influence the hearers by falsehood ; and over and above these we must include all the modes of reaching conclusions by argumentative and rigidly deductive processes, that contribute nothing to the improvement of character, but whet the mind, compelling it to pay keen attention to each problem as it presents itself; and enabling it to draw clear distinctions, and to make the special character of the matter in hand stand out in bold relief against the background of the features which it has in common with others. Accordingly, they tell us that the men of old likened philosophic discussion with its threefold division to a field, comparing that part which deals with nature to trees and plants ; that Which deals with morality to fruits and crops, for the sake of which the plants exist; that part which has to do with logic to a fence enclosing it. For even as the wall built round it serves to protect the fruit and the plants that grow in the field, keeping off those who would like mischievously to make their way in with a view to plunder ; in the same way the logical part of philosophy is, so to speak, a strong barrier guarding those other two parts, the ethical and the physical. For when it disentangles ambiguous 16 expressions capable of two meanings, and exposes the fallacies created by tricks of argument, and using perfectly clear and unmistakable language and adducing proofs which admit of no doubt destroys plausible falsehood, that greatest snare and pest of the soul, it makes the mind like smoothed wax ready to receive the impressions made by the science that explores existence and that which aims at building character, impressions free from flaw and aught that is not genuine.
 
 #### *The Works of Philo Judaeus. Vol. I*, translated from the Greek by C. D. Yonge, Henry G. Bohn, London, 1854[^5] [^6]
 
-Philo of Alexandria, *On Husbandry* (*De Agricultura*, *Περί γεωργίας*), Chapter III, Sections 12-16, pp. 380-381:
+Philo of Alexandria, *On Husbandry* (*De Agricultura*, Περί γεωργίας), Chapter III, Sections 12-16, pp. 380-381:
 
 [^5]: [Early Christian Writings](http://www.earlychristianwritings.com/yonge/book11.html)
 
@@ -24,7 +24,7 @@ Philo of Alexandria, *On Husbandry* (*De Agricultura*, *Περί γεωργία�
 
 #### *Philonis Alexandrini opera quae supersunt. Vol. II*, edited by Paul Wendland, Verlag Georg Reimer, Berlin, 1897[^2] [^3]
 
-Philo of Alexandria, *On Husbandry* (*De Agricultura*, *Περί γεωργίας*), Chapter III, Sections 12-16, pp. 97-98:
+Philo of Alexandria, *On Husbandry* (*De Agricultura*, Περί γεωργίας), Chapter III, Sections 12-16, pp. 97-98:
 
 > λέγει γάρ· „πᾶν ὃ οὐ καρπόβρωτόν ἐστιν, ἐκκόψεις καὶ ποιήσεις χαράκωσιν ἐπὶ τὴν πόλιν, ἥτις ποιήσει πρὸς σὲ τὸν πόλεμον“ (Deut. 20,20). ταῦτα δ’ εἰκάζεται τὰ δένδρα ταῖς περὶ λόγους δυνάμεσι θεωρίαν ψιλὴν ἐχ’ οὔσαις· ἐν αἷς θετέον ἰατρολογίαν ἀπεζευγμένην ἔργων, δι’ ὧν τοὺς κάμνοντας εἰκός ἐστι σῴζεσθαι, καὶ ῥητορικῆς τὸ συνηγορικὸν καὶ ἔμμισθον εἶδος οὐ περὶ τὴν εὕρεσιν τοῦ δικαίου πραγματευόμενον, ἀλλὰ περὶ τὴν δι’ ἀπάτης πειθὼ τῶν ἀκουόντων, ἔτι μέντοι καὶ διαλεκτικῆς καὶ γεωμετρίας ὅσα εἰς μὲν ἐπανόρθωσιν ἤθους οὐδὲν συνεργεῖ, παραθήγει δὲ τὸν νοῦν οὐκ ἐῶντα ἀμβλείᾳ χρῆσθαι τῇ πρὸς ἕκαστα τῶν ἀπορουμένων προσβολῇ, τομαῖς δὲ ἀεὶ καὶ διαστολαῖς χρῆσθαι, ὡς τὴν ἑκάστου πράγματος ἰδιότητα κοινῶν διαζευγνύναι ποιοτήτων. τὸν γοῦν κατὰ φιλοσοφίαν λόγον τρίδυμον ὄντα τοὺς παλαιοὺς ἀγρῶ φασιν ἀπεικάσαι, τὸ μὲν φυσικὸν αὐτοῦ δένδροις καὶ φυτοῖς παραβάλλοντας, τὸ δ’ ἠθικὸν καρποῖς, ὧν ἕνεκα καὶ τὰ φυτά, τὸ δ’ αὖ λογικὸν φραγμῷ καὶ περιβόλῳ· καθάπερ γὰρ τὸ περικείμενον τεῖχος ὀπώρας καὶ φυτῶν τῶν κατὰ τὸν ἀγρόν ἐστι φυλακτήριον τοὺς ἐπὶ τῷ σίνεσθαι παρεισφθείρεσθαι βουλομένους ἀνεῖργον, τὸν αὐτὸν τρόπον τὸ λογικὸν μέρος φιλοσοφίας φρουρά τίς ἐστιν ὀχυρωτάτη τῶν δυεῖν ἐκείνων, ἠθικοῦ τε καὶ φυσικοῦ· τὰς γὰρ διπλᾶς καὶ ἀμφιβόλους ὅταν ἐξαπλοῖ λέξεις καὶ τὰς διὰ τῶν σοφισμάτων πιθανότητας ἐπιλύῃ καὶ τὴν εὐπαράγωγον ἀπάτην. μέγιστον ψυχῆς δέλεαρ καὶ ἐπιζήμιον, ἀναιρῇ διὰ λόγων ἐμφαντικωτάτων καὶ ἀποδείξεων ἀνενδοιάστων, ὥσπερ κηρὸν λελειασμένον τὸν νοῦν ἀπεργάζεται ἕτοιμον δέχεσθαι τούς τε φυσιολογίας καὶ τοὺς ἠθοποιίας ἀσινεῖς καὶ πάνυ δοκίμους χαρακτῆρας.
 
