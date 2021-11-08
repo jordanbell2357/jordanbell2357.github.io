@@ -10,9 +10,9 @@ category: quotes
 
 [^1]: [*The Ante-Nicene Fathers. Volume II*. Archive.org](https://archive.org/details/antenicenefather02robeuoft/page/209/mode/1up)
 
-[^2]: [New Advent. The Paedagogus (Book I)](https://www.newadvent.org/fathers/02091.htm)
+[^2]: [The Paedagogus (Book I). New Advent](https://www.newadvent.org/fathers/02091.htm)
 
-[^3]: [Christian Classics Ethereal Library (CCEL)](https://ccel.org/ccel/clement_alex/instructor/anf02.vi.iii.i.i.html)
+[^3]: [ANF02. Fathers of the Second Century. Christian Classics Ethereal Library (CCEL)](https://ccel.org/ccel/clement_alex/instructor/anf02.vi.iii.i.i.html)
 
 Book I, Chapter 1. The Office of the Instructor:
 
