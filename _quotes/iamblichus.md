@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Iamblichus, "On the General Science of Mathematics" (De Communi Mathematica Scientia, Περί της κοινής μαθηματικής επιστήμης)
+title: Iamblichus, "On the General Science of Mathematics"
 category: quotes
 ---
 
