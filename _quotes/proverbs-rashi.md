@@ -1,8 +1,14 @@
 ---
 layout: post
-title: Proverbs 4:8
+title: Proverbs, Chapter 4, Verse 7
 category: quotes
 ---
+
+Proverbs 4:7 (KJV):[^3]
+
+> Wisdom *is* the principal thing; *therefore* get wisdom: and with all thy getting get understanding.
+
+[^3]: [Proverbs 4 (KJV). Blue Letter Bible (BLB)](http://blb.sc/00Dkc6)
 
 #### Abraham Cohen (trans.), *Proverbs: Hebrew Text, English Translation and Commentary*, Soncino Books of the Bible, Soncino Press, 1945. Rashi's Commentary on the Book of Proverbs, Chapter 4, Verse 7
 
