@@ -1,0 +1,42 @@
+---
+layout: post
+title: Clement of Alexandria, "Paedagogus" (Παιδαγωγός)
+category: quotes
+---
+
+#### *The Ante-Nicene Fathers. Volume II. Fathers of the Second Century: Hermas, Tatian, Athenagoras, Theophilus, and Clement of Alexandria (entire)*, edited by Alexander Roberts and James Donaldson, The Christian Literature Publishing Company, Buffalo, NY, 1885[^1] [^2] [^3]
+
+[^1]: [*The Ante-Nicene Fathers. Volume II*. Archive.org](https://archive.org/details/antenicenefather02robeuoft/page/209/mode/1up)
+
+[^2]: [Christian Classics Ethereal Library (CCEL)](https://ccel.org/ccel/clement_alex/instructor/anf02.vi.iii.i.i.html)
+
+[^3]: [New Advent. The Paedagogus (Book I)](https://www.newadvent.org/fathers/02091.htm)
+
+Book I, Chapter 1. The Office of the Instructor:
+
+> As there are these three things in the case of man, habits, actions, and passions; habits are the department appropriated by hortatory discourse the guide to piety, which, like the ship's keel, is laid beneath for the building up of faith; in which, rejoicing exceedingly, and abjuring our old opinions, through salvation we renew our youth, singing with the hymning prophecy, "How good is God to Israel, to such as are upright in heart!" All actions, again, are the province of *preceptive* discourse; while *persuasive* discourse applies itself to heal the passions. It is, however, one and the self-same word which rescues man from the custom of this world in which he has been reared, and trains him up in the one salvation of faith in God.
+>
+> When, then, the heavenly guide, the Word, was inviting men to salvation, the appellation of *hortatory* was properly applied to Him: his same word was called rousing (the whole from a part). For the whole of piety is hortatory, engendering in the kindred faculty of reason a yearning after true life now and to come. But now, being at once curative and preceptive, following in His own steps, He makes what had been prescribed the subject of persuasion, promising the cure of the passions within us. Let us then designate this Word appropriately by the one name *Tutor* (or *Pædagogue*, or *Instructor*).
+>
+> The Instructor being practical, not theoretical, His aim is thus to improve the soul, not to teach, and to train it up to a virtuous, not to an intellectual life. Although this same word is didactic, but not in the present instance. For the word which, in matters of doctrine, explains and reveals, is that whose province it is to teach. But our Educator being practical, first exhorts to the attainment of right dispositions and character, and then persuades us to the energetic practice of our duties, enjoining on us pure commandments, and exhibiting to such as come after representations of those who formerly wandered in error. Both are of the highest utility — that which assumes the form of counselling to obedience, and that which is presented in the form of example; which latter is of two kinds, corresponding to the former duality — the one having for its purpose that we should choose and imitate the good, and the other that we should reject and turn away from the opposite.
+>
+> Hence accordingly ensues the healing of our passions, in consequence of the assuagements of those examples; the Pædagogue strengthening our souls, and by His benign commands, as by gentle medicines, guiding the sick to the perfect knowledge of the truth.
+>
+> There is a wide difference between health and knowledge; for the latter is produced by learning, the former by healing. One, who is ill, will not therefore learn any branch of instruction till he is quite well. For neither to learners nor to the sick is each injunction invariably expressed similarly; but to the former in such a way as to lead to knowledge, and to the latter to health. As, then, for those of us who are diseased in body a physician is required, so also those who are diseased in soul require a pædagogue to cure our maladies; and then a teacher, to train and guide the soul to all requisite knowledge when it is made able to admit the revelation of the Word. Eagerly desiring, then, to perfect us by a gradation conducive to salvation, suited for efficacious discipline, a beautiful arrangement is observed by the all-benignant Word, who first exhorts, then trains, and finally teaches.
+
+#### *Clemens Alexandrinus. Erster Band, Protrepticus und Paedagogus*, edited by Otto Stählin, Die griechischen christlichen Schriftsteller der ersten drei Jahrhunderte, J. C. Hinrichs'sche Buchhandlung, Leipzig, 1905[^4] [^5] [^6]
+
+[^4]: [*Clemens Alexandrinus: Protrepticus und Paedagogus*. Google Books](https://books.google.ca/books?id=DTYYAAAAYAAJ)
+
+[^5]: [Clement of Alexandria, Paedagogus. Perseus Digital Library
+Scaife Viewer](https://scaife.perseus.org/reader/urn:cts:greekLit:tlg0555.tlg002.opp-grc1:1)
+
+[^6]: [Clemens Alexandrinus - Paedagogus I. Voci dal mondo antico](http://www.poesialatina.it/_ns/Greek/testi/Clemens/Paedagogus01.html)
+
+> Συγκεκρότηται κρηπὶς ἀληθείας, ὦ παῖδες ὑμεῖς, ἡμῖν αὐτοῖς, ἁγίου νεὼ μεγάλου θεοῦ θεμέλιος γνώσεως ἀρραγής, προτροπὴ καλή, δι' ὑπακοῆς εὐλόγου ζωῆς ἀιδίου ὄρεξις, νοερῷ καταβληθεῖσα χωρίῳ.
+>
+> Τριῶν γέ τοι τούτων περὶ τὸν ἄνθρωπον ὄντων, ἠθῶν, πράξεων, παθῶν, ὁ προτρεπτικὸς εἴληχεν τὰ ἤθη αὐτοῦ, θεοσεβείας καθηγεμών, ὁ τροπιδίου δίκην ὑποκείμενος λόγος εἰς οἰκοδομὴν πίστεως, ἐφ' ᾧ μάλα γανύμενοι καὶ τὰς παλαιὰς ἀπομνύμενοι δόξας πρὸς σωτηρίαν νεάζομεν, ψαλλούσῃ συνᾴδοντες προφητείᾳ "ὡς ἀγαθὸς τῷ Ἰσραὴλ ὁ θεός, τοῖς εὐθέσιν τῇ καρδίᾳ", πράξεών τε ἁπασῶν λόγος ἐπιστατεῖ ὁ ὑποθετικός, τὰ δὲ πάθη ὁ παραμυθητικὸς ἰᾶται, εἷς ὢν πᾶς ὁ αὐτὸς οὗτος λόγος, τῆς συντρόφου καὶ κοσμικῆς συνηθείας ἐξαρπάζων τὸν ἄνθρωπον, εἰς δὲ τὴν μονότροπον τῆς εἰς τὸν θεὸν πίστεως σωτηρίαν παιδαγωγῶν. Ὁ γοῦν οὐράνιος ἡγεμών, ὁ λόγος, ὁπηνίκα μὲν ἐπὶ σωτηρίαν παρεκάλει, προτρεπτικὸς ὄνομα αὐτῷ ἦν ‑ ἰδίως οὗτος ὁ παρορμητικὸς ἐκ μέρους τὸ πᾶν προσαγορευόμενος λόγος· προτρεπτικὴ γὰρ ἡ πᾶσα θεοσέβεια, ζωῆς τῆς νῦν καὶ τῆς μελλούσης ὄρεξιν ἐγγεννῶσα τῷ συγγενεῖ λογισμῷ· ‑ νυνὶ δὲ θεραπευτικός τε ὢν καὶ ὑποθετικὸς ἅμα ἄμφω, ἑπόμενος αὐτὸς αὑτῷ, παραινεῖ τὸν προτετραμμένον, κεφάλαιον τῶν ἐν ἡμῖν παθῶν ὑπισχνούμενος τὴν ἴασιν. Κεκλήσθω δ' ἡμῖν ἑνὶ προσφυῶς οὗτος ὀνόματι παιδαγωγός, προακτικός, οὐ μεθοδικὸς ὢν ὁ παιδαγωγός, ᾗ καὶ τὸ τέλος αὐτοῦ βελτιῶσαι τὴν ψυχήν ἐστιν, οὐ διδάξαι, σώφρονός τε, οὐκ ἐπιστημονικοῦ καθηγήσασθαι βίου. Καίτοι καὶ διδασκαλικὸς ὁ αὐτός ἐστι λόγος, ἀλλ' οὐ νῦν· ὃ μὲν γὰρ ἐν τοῖς δογματικοῖς δηλωτικὸς καὶ ἀποκαλυπτικός, ὁ διδασκαλικός, πρακτικὸς δὲ ὢν ὁ παιδαγωγὸς πρότερον μὲν εἰς διάθεσιν ἠθοποιίας προὐτρέψατο, ἤδη δὲ καὶ εἰς τὴν τῶν δεόντων ἐνέργειαν παρακαλεῖ, τὰς ὑποθήκας τὰς ἀκηράτους παρεγγυῶν καὶ τῶν πεπλανημένων πρότερον τοῖς ὕστερον ἐπιδεικνὺς τὰς εἰκόνας.
+>
+> Ἄμφω δὲ ὠφελιμώτατα, τὸ μὲν εἰς ὑπακοήν, τὸ παραινετικὸν εἶδος, τὸ δὲ ἐν εἰκόνος μέρει παραλαμβανόμενον διττὸν καὶ αὐτὸ παραπλησίως τῇ προτέρᾳ συζυγίᾳ, τὸ μὲν αὐτοῦ ἵνα μιμώμεθα αἱρούμενοι τὸ ἀγαθόν, τὸ δὲ ὅπως ἐκτρεπώμεθα παραιτούμενοι τὸ φαῦλον τῆς εἰκόνος. Ἴασις οὖν τῶν παθῶν ἐνθένδε ἕπεται, κατὰ τὰς παραμυθίας τῶν εἰκόνων ἐπιρρωννύντος τοῦ παιδαγωγοῦ τὰς ψυχὰς καὶ ὥσπερ ἠπίοις φαρμάκοις ταῖς ὑποθήκαις ταῖς φιλανθρώποις εἰς τὴν παντελῆ τῆς ἀληθείας γνῶσιν τοὺς κάμνοντας διαιτωμένου. Ἴσον δ' οὐκ ἔστιν ὑγίεια καὶ γνῶσις, ἀλλ' ἣ μὲν μαθήσει, ἣ δὲ ἰάσει περιγίνεται.
+>
+> Οὐκ ἂν οὖν τις νοσῶν ἔτι πρότερόν τι τῶν διδασκαλικῶν ἐκμάθοι πρὶν ἢ τέλεον ὑγιᾶναι· οὐδὲ γὰρ ὡσαύτως πρὸς τοὺς μανθάνοντας ἢ κάμνοντας ἀεὶ τῶν παραγγελμάτων ἕκαστον λέγεται, ἀλλὰ πρὸς οὓς μὲν εἰς γνῶσιν, πρὸς οὓς δὲ εἰς ἴασιν. Καθάπερ οὖν τοῖς νοσοῦσι τὸ σῶμα ἰατροῦ χρῄζει, ταύτῃ καὶ τοῖς ἀσθενοῦσι τὴν ψυχὴν παιδαγωγοῦ δεῖ, ἵν' ἡμῶν ἰάσηται τὰ πάθη, εἶτα δὲ εἰς διδασκάλου ὃς καθηγήσηται, καθαρὰν πρὸς γνώσεως ἐπιτηδειότητα εὐτρεπίζων τὴν ψυχήν, δυναμένην χωρῆσαι τὴν ἀποκάλυψιν τοῦ λόγου. Σπεύδων δὲ ἄρα τελειῶσαι σωτηρίῳ ἡμᾶς βαθμῷ, καταλλήλῳ εἰς παίδευσιν ἐνεργῆ τῇ καλῇ συγχρῆται οἰκονομίᾳ ὁ πάντα φιλάνθρωπος λόγος, προτρέπων ἄνωθεν, ἔπειτα παιδαγωγῶν, ἐπὶ πᾶσιν ἐκδιδάσκων.
