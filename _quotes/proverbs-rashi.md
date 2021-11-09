@@ -4,7 +4,7 @@ title: Proverbs, Chapter 4, Verse 7
 category: quotes
 ---
 
-Proverbs 4:7 (KJV):[^3]
+#### Proverbs 4:7 (KJV):[^3]
 
 [^3]: [Proverbs (KJV). Blue Letter Bible (BLB)](http://blb.sc/00Dkc6)
 
