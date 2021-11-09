@@ -27,11 +27,13 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 
 [^6]: [Electronic Publications of the Czech Institute of Egyptology. Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
 
-pp. 20-21:
-
 [![Žába, *Les maximes de Ptaḥḥotep*](/assets/images/Zaba1.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
 
+p. 20:
+
 [![Žába, *Les maximes de Ptaḥḥotep*, p. 20](/assets/images/Zaba19.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+
+p. 21:
 
 [![Žába, *Les maximes de Ptaḥḥotep*, p. 21](/assets/images/Zaba20.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
 
@@ -96,4 +98,4 @@ Maxim 1, Papyrus Prisse, column 5, lines 8-10:
 > § (D58) dgw md,t nfr.t r wAD  
 > § (D59) jw gmi.t(w) =s m-a Hm,t.(Pl.) Hr bnw,t.(Pl.)
 
-[^3]: [*Thesaurus Linguae Aegyptiae*](http://aaew2.bbaw.de/tla/index.html)
+[^3]: [Thesaurus Linguae Aegyptiae](http://aaew2.bbaw.de/tla/index.html)
