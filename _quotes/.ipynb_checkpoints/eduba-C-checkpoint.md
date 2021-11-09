@@ -51,6 +51,6 @@ CLDI no. P276217. ETCSL 5.01.03 Edubba C (witness):[^3] [^4] [^5]
 
 [^3]: [CLDI no. P276217](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P276217)
 
-[^4]: [University of Pennsylvania Museum of Archaeology and Anthropology. The Open Richly Annotated Cuneiform Corpus (Oracc)](http://oracc.museum.upenn.edu/)
+[^4]: [The Open Richly Annotated Cuneiform Corpus (Oracc). University of Pennsylvania Museum of Archaeology and Anthropology](http://oracc.museum.upenn.edu/)
 
 [^5]: [DSSt : Datenbank sumerischer Streitliteratur](http://oracc.museum.upenn.edu/dsst/pager)
