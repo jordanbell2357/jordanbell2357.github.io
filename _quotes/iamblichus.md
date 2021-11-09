@@ -20,10 +20,10 @@ pp. 19-20, Chapter 5
 
 [^2]: [Archive.org](https://archive.org/details/iamblichidecommu0000iamb/page/n2/mode/1up)
 
-[![p. 19, Chapter 5](/assets/images/47_PDFsam_iamblichidecommu0000iamb.jpg)](https://archive.org/details/iamblichidecommu0000iamb/page/19/mode/1up)
+[![p. 19, Chapter 5](/assets/images/47_PDFsam_iamblichidecommu0000iamb.png)](https://archive.org/details/iamblichidecommu0000iamb/page/19/mode/1up)
 
-[![p. 20, Chapter 5](/assets/images/48_PDFsam_iamblichidecommu0000iamb.jpg)](https://archive.org/details/iamblichidecommu0000iamb/page/20/mode/1up)
+[![p. 20, Chapter 5](/assets/images/48_PDFsam_iamblichidecommu0000iamb.png)](https://archive.org/details/iamblichidecommu0000iamb/page/20/mode/1up)
 
 p. 26, Chapter 6
 
-[![p. 26, Chapter 6](/assets/images/54_PDFsam_iamblichidecommu0000iamb.jpg)](https://archive.org/details/iamblichidecommu0000iamb/page/26/mode/1up)
+[![p. 26, Chapter 6](/assets/images/54_PDFsam_iamblichidecommu0000iamb.png)](https://archive.org/details/iamblichidecommu0000iamb/page/26/mode/1up)

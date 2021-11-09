@@ -23,6 +23,19 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 > Good speech is more hidden than greenstone,  
 > Yet may be found among maids at the grindstones.
 
+#### Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956[^6]
+
+[^6]: [Electronic Publications of the Czech Institute of Egyptology. Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+
+pp. 20-21:
+
+[![Žába, *Les maximes de Ptaḥḥotep*](/assets/images/Zaba1.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+
+[![Žába, *Les maximes de Ptaḥḥotep*, p. 20](/assets/images/Zaba19.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+
+[![Žába, *Les maximes de Ptaḥḥotep*, p. 21](/assets/images/Zaba20.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+
+
 #### Mark-Jan Nederhof, St Andrews Corpus[^4] [^5] [^6] [^7]
 
 [![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/assets/images/nederhof1.png)](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/)
@@ -32,8 +45,6 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 [^4]: [Mark-Jan Nederhof, St Andrews Corpus](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/)
 
 [^5]: [Mark-Jan Nederhof and Robert Myers, *Instruction of Ptahhotep*](https://mjn.host.cs.st-andrews.ac.uk/ptahhotep/text.pdf)
-
-[^6]: [Electronic Publications of the Czech Institute of Egyptology. Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
 
 [^7]: ["Hieroglyphic text of the *Maxims of Good Discourse* of Papyrus Prisse, Papyri BM & the Carnarvon Tablet by Zbynek Zába (1956)". Hieroglyphs scanned & edited by Wim van den Dungen](http://www.sofiatopia.org/maat/zaba06.htm)
 
