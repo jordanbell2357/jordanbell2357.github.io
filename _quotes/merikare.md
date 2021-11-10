@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The Teaching for King Merikare
+title: Teaching for Merikare
 category: quotes
 ---
 
