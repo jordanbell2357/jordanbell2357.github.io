@@ -24,7 +24,7 @@ pp. 56-57:
 > Plato and was at home in this philosophy; and this is why he
 > thought the goal of the Elements as a whole to be the construction of the so-called Platonic figures.
 
-Translation from [Elementary Ancient Greek I. GRK 101. A. Scholtz, Binghamton University](http://bingweb.binghamton.edu/~ascholtz/grk101/)
+Translation from [Elementary Ancient Greek I. GRK 101. A. Scholtz, Binghamton University](http://bingweb.binghamton.edu/~ascholtz/grk101/):
 
 > For Archimedes as a side note recalls a conversation Euclid once had with Ptolemy [Egyptian king], who asked him if there's a shortcut to learning geometry, a way to avoid immersing oneslf in the basics. Euclid answered, "There is no royal road to geometry."
     

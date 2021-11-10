@@ -4,7 +4,9 @@ title: "The Maxims of Ptahhotep, Maxim 1"
 category: quotes
 ---
 
-#### Miriam Lichtheim, *Ancient Egyptian Literature: A Book of Readings. Volume I: The Old and Middle Kingdoms*, University of California Press, 1973
+#### Miriam Lichtheim, *Ancient Egyptian Literature: A Book of Readings. Volume I: The Old and Middle Kingdoms*, University of California Press, 1973[^1]
+
+[^1]: [Miriam Lichtheim Ancient Egyptian Literature Vol I. Archive.org](https://archive.org/details/MiriamLichtheimAncientEgyptianLiteratureVolI)
 
 pp. 61-62:
 
@@ -36,7 +38,6 @@ p. 20:
 p. 21:
 
 [![Žába, *Les maximes de Ptaḥḥotep*, p. 21](/assets/images/Zaba20.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
-
 
 #### Mark-Jan Nederhof, St Andrews Corpus[^4] [^5] [^6] [^7]
 
@@ -98,4 +99,4 @@ Maxim 1, Papyrus Prisse, column 5, lines 8-10:
 > § (D58) dgw md,t nfr.t r wAD  
 > § (D59) jw gmi.t(w) =s m-a Hm,t.(Pl.) Hr bnw,t.(Pl.)
 
-[^3]: [Thesaurus Linguae Aegyptiae](http://aaew2.bbaw.de/tla/index.html)
+[^3]: [Thesaurus Linguae Aegyptiae, BBAW](http://aaew2.bbaw.de/tla/index.html)
