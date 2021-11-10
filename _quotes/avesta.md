@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Avesta
+title: Avesta, "Hymn to Mithra"
 category: quotes
 ---
 
