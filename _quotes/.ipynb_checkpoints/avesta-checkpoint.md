@@ -4,7 +4,7 @@ title: Avesta, "Hymn to Mithra"
 category: quotes
 ---
 
-#### *An Introduction to Ancient Iranian Religion. Readings from the* Avesta *and the Achaemenid Inscriptions, translated and edited by William W. Malandra, Minnesota Publications in the Humanities, Volume Two, University of Minnesota Press, 1983[^1]
+#### *An Introduction to Ancient Iranian Religion. Readings from the* Avesta *and the Achaemenid Inscriptions*, translated and edited by William W. Malandra, Minnesota Publications in the Humanities, Volume Two, University of Minnesota Press, 1983[^1]
 
 Mithra (Mihr) Yasht (Yasht 10), Chapter VIII, Verse 32, p. 62:
 
