@@ -27,16 +27,18 @@ Section 8, Verse 33, p. 89:
 
 Karde 8, Paragraph 33:
 
-> | Verse    	| Text                                 	|
-> |----------	|--------------------------------------	|
-> | Verse: a 	| dazdi. ahmākəm. tat̰. āiiaptəm.       	|
-> | Verse: b 	| yasə. ϑβā. yāsāmahi.1 sūra.          	|
-> | Verse: c 	| uruuaiti.2 dātanąm. srauuaŋhąm.      	|
-> | Verse: d 	| īštīm. aməm. vərəϑraγnəmca.3         	|
-> | Verse: e 	| hauuaŋhum. aṣ̌auuastəmca.             	|
-> | Verse: f 	| haosrauuaŋhəm. hurunīmca.            	|
-> | Verse: g 	| mastīm. spānō. vaēiδīmca.4           	|
-> | Verse: h 	| vərəϑraγnəmca. ahuraδātəm.           	|
-> | Verse: i 	| vanaiṇtīmca. uparatātəm.             	|
-> | Verse: j 	| yąm. aṣ̌ahe. vahištahe.               	|
-> | Verse: k 	| paiti.parštīmca.5 mąϑrahe. spəṇtahe. 	|
+> | Verse   | Text                                |
+> |----------|--------------------------------------|
+> | Verse: a| dazdi. ahmākəm. tat̰. āiiaptəm.      |
+> | Verse: b| yasə. ϑβā. yāsāmahi.1 sūra.         |
+> | Verse: c| uruuaiti.2 dātanąm. srauuaŋhąm.     |
+> | Verse: d| īštīm. aməm. vərəϑraγnəmca.3        |
+> | Verse: e| hauuaŋhum. aṣ̌auuastəmca.            |
+> | Verse: f| haosrauuaŋhəm. hurunīmca.           |
+> | Verse: g| mastīm. spānō. vaēiδīmca.4          |
+> | Verse: h| vərəϑraγnəmca. ahuraδātəm.          |
+> | Verse: i| vanaiṇtīmca. uparatātəm.            |
+> | Verse: j| yąm. aṣ̌ahe. vahištahe.              |
+> | Verse: k| paiti.parštīmca.5 mąϑrahe. spəṇtahe.|
+
+[Wikisource](https://wikisource.org/wiki/Avesta/Ya%C5%A1t)

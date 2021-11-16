@@ -23,20 +23,22 @@ Section 8, Verse 33, p. 89:
 
 [Internet Sacred Text Archive](https://sacred-texts.com/zor/index.htm)
 
-[TITUS](https://titus.fkidg1.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avest.htm?avest083.htm#Avest._Yt_10_33_a)
+[Thesaurus Indogermanischer Text- und Sprachmaterialien TITUS, ](https://titus.fkidg1.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avest.htm?avest083.htm#Avest._Yt_10_33_a)
 
 Karde 8, Paragraph 33:
 
-> | Verse    	| Text                                 	|
-> |----------	|--------------------------------------	|
-> | Verse: a 	| dazdi. ahmākəm. tat̰. āiiaptəm.       	|
-> | Verse: b 	| yasə. ϑβā. yāsāmahi.1 sūra.          	|
-> | Verse: c 	| uruuaiti.2 dātanąm. srauuaŋhąm.      	|
-> | Verse: d 	| īštīm. aməm. vərəϑraγnəmca.3         	|
-> | Verse: e 	| hauuaŋhum. aṣ̌auuastəmca.             	|
-> | Verse: f 	| haosrauuaŋhəm. hurunīmca.            	|
-> | Verse: g 	| mastīm. spānō. vaēiδīmca.4           	|
-> | Verse: h 	| vərəϑraγnəmca. ahuraδātəm.           	|
-> | Verse: i 	| vanaiṇtīmca. uparatātəm.             	|
-> | Verse: j 	| yąm. aṣ̌ahe. vahištahe.               	|
-> | Verse: k 	| paiti.parštīmca.5 mąϑrahe. spəṇtahe. 	|
+> | Verse   | Text                                |
+> |----------|--------------------------------------|
+> | Verse: a| dazdi. ahmākəm. tat̰. āiiaptəm.      |
+> | Verse: b| yasə. ϑβā. yāsāmahi.1 sūra.         |
+> | Verse: c| uruuaiti.2 dātanąm. srauuaŋhąm.     |
+> | Verse: d| īštīm. aməm. vərəϑraγnəmca.3        |
+> | Verse: e| hauuaŋhum. aṣ̌auuastəmca.            |
+> | Verse: f| haosrauuaŋhəm. hurunīmca.           |
+> | Verse: g| mastīm. spānō. vaēiδīmca.4          |
+> | Verse: h| vərəϑraγnəmca. ahuraδātəm.          |
+> | Verse: i| vanaiṇtīmca. uparatātəm.            |
+> | Verse: j| yąm. aṣ̌ahe. vahištahe.              |
+> | Verse: k| paiti.parštīmca.5 mąϑrahe. spəṇtahe.|
+
+[Wikisource](https://wikisource.org/wiki/Avesta/Ya%C5%A1t)
