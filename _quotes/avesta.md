@@ -16,14 +16,13 @@ Section 8, Verse 33, p. 89:
 
 > Give us the following boon(s) for which we ask you, O strong one, by virtue of the stipulation of the given promises (*lit.* words): riches, strength, and victoriousness, comfortable existence and ownership of Truth, good reputation and peace of soul, learning, increment, and knowledge, Ahura-created victoriousness, the conquering superiority of (=deriving from) Truth which is what is best, and the interpretation of the incremental divine word,
 
-[^1]: M. Boyce, “AMƎŠA SPƎNTA,” *Encyclopædia Iranica*, I/9, pp. 933-936, available online at <https://iranicaonline.org/articles/amesa-spenta-beneficent-divinity> (30 December 2012).
-
+M. Boyce, “AMƎŠA SPƎNTA,” *Encyclopædia Iranica*, I/9, pp. 933-936, available online at <https://iranicaonline.org/articles/amesa-spenta-beneficent-divinity> (30 December 2012).
 
 [10. MIHR YASHT ("Hymn to Mithra")](http://www.avesta.org/ka/yt10sbe.htm)
 
 [Internet Sacred Text Archive](https://sacred-texts.com/zor/index.htm)
 
-[Thesaurus Indogermanischer Text- und Sprachmaterialien TITUS, ](https://titus.fkidg1.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avest.htm?avest083.htm#Avest._Yt_10_33_a)
+[TITUS (Thesaurus Indogermanischer Text- und Sprachmaterialien), Avestan Corpus](https://titus.fkidg1.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avest.htm?avest083.htm#Avest._Yt_10_33_a)
 
 Karde 8, Paragraph 33:
 
