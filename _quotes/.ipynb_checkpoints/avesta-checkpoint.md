@@ -24,19 +24,19 @@ Section 8, Verse 33, p. 89:
 
 Karde 8, Paragraph 33:[^4] [^5]
 
-> | Verse   | Text                                |
-> |----------|--------------------------------------|
-> | a| dazdi. ahmākəm. tat̰. āiiaptəm.      |
-> | b| yasə. ϑβā. yāsāmahi.1 sūra.         |
-> | c| uruuaiti.2 dātanąm. srauuaŋhąm.     |
-> | d| īštīm. aməm. vərəϑraγnəmca.3        |
-> | e| hauuaŋhum. aṣ̌auuastəmca.            |
-> | f| haosrauuaŋhəm. hurunīmca.           |
-> | g| mastīm. spānō. vaēiδīmca.4          |
-> | h| vərəϑraγnəmca. ahuraδātəm.          |
-> | i| vanaiṇtīmca. uparatātəm.            |
-> | j| yąm. aṣ̌ahe. vahištahe.              |
-> | k| paiti.parštīmca.5 mąϑrahe. spəṇtahe.|
+| Verse   | Text                                |
+|----------|--------------------------------------|
+| a| dazdi. ahmākəm. tat̰. āiiaptəm.      |
+| b| yasə. ϑβā. yāsāmahi.1 sūra.         |
+| c| uruuaiti.2 dātanąm. srauuaŋhąm.     |
+| d| īštīm. aməm. vərəϑraγnəmca.3        |
+| e| hauuaŋhum. aṣ̌auuastəmca.            |
+| f| haosrauuaŋhəm. hurunīmca.           |
+| g| mastīm. spānō. vaēiδīmca.4          |
+| h| vərəϑraγnəmca. ahuraδātəm.          |
+| i| vanaiṇtīmca. uparatātəm.            |
+| j| yąm. aṣ̌ahe. vahištahe.              |
+| k| paiti.parštīmca.5 mąϑrahe. spəṇtahe.|
 
 [^4]: [TITUS (Thesaurus Indogermanischer Text- und Sprachmaterialien), Avestan Corpus](https://titus.fkidg1.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avest.htm?avest083.htm#Avest._Yt_10_33_a)
 
