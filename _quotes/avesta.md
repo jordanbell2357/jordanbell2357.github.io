@@ -20,7 +20,7 @@ Section 8, Verse 33, p. 89:
 
 [^2]: [10. MIHR YASHT ("Hymn to Mithra")](http://www.avesta.org/ka/yt10sbe.htm)
 
-[^3] [Internet Sacred Text Archive](https://sacred-texts.com/zor/index.htm)
+[^3]: [Internet Sacred Text Archive](https://sacred-texts.com/zor/index.htm)
 
 Karde 8, Paragraph 33:[^4] [^5]
 
