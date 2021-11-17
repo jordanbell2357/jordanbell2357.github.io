@@ -24,7 +24,7 @@ Section 8, Verse 33, p. 89:
 
 Karde 8, Paragraph 33:[^4] [^5]
 
-| Verse   | Text                                |
+| Verse   |                                 |
 |----------|--------------------------------------|
 | a| dazdi. ahmākəm. tat̰. āiiaptəm.      |
 | b| yasə. ϑβā. yāsāmahi.1 sūra.         |
