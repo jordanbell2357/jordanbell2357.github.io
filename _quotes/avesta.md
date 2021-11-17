@@ -38,6 +38,6 @@ Karde 8, Paragraph 33:[^4] [^5]
 | j| yąm. aṣ̌ahe. vahištahe.              |
 | k| paiti.parštīmca.5 mąϑrahe. spəṇtahe.|
 
-[^4]: [TITUS (Thesaurus Indogermanischer Text- und Sprachmaterialien), Avestan Corpus](https://titus.fkidg1.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avest.htm?avest083.htm#Avest._Yt_10_33_a)
+[^4]: [TITUS (Thesaurus Indogermanischer Text- und Sprachmaterialien). Avestan Corpus](https://titus.fkidg1.uni-frankfurt.de/texte/etcs/iran/airan/avesta/avest.htm?avest083.htm#Avest._Yt_10_33_a)
 
-[^5]: [Wikisource](https://wikisource.org/wiki/Avesta/Ya%C5%A1t)
+[^5]: [Wikisource. Avesta/Yašt](https://wikisource.org/wiki/Avesta/Ya%C5%A1t)
