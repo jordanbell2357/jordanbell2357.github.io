@@ -18,7 +18,7 @@ Section 8, Verse 33, p. 89:
 
 [^1]: M. Boyce, “AMƎŠA SPƎNTA,” *Encyclopædia Iranica*, I/9, pp. 933-936, available online at <https://iranicaonline.org/articles/amesa-spenta-beneficent-divinity> (30 December 2012).
 
-[^2]: [10. MIHR YASHT ("Hymn to Mithra")](http://www.avesta.org/ka/yt10sbe.htm)
+[^2]: [Avesta.org. 10. MIHR YASHT ("Hymn to Mithra")](http://www.avesta.org/ka/yt10sbe.htm)
 
 [^3]: [Internet Sacred Text Archive](https://sacred-texts.com/zor/index.htm)
 
