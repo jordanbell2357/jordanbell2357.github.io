@@ -1,0 +1,1173 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <title> WebQuiz: Web Quizzes using LaTeX </title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta name="generator" content="WebQuiz 5.2 (http://www.maths.usyd.edu.au/u/mathas/WebQuiz/webquiz-online-manual.html)">
+  <meta name="description" content="A LaTeX package for writing online quizzes">
+  <meta name="authors" content="WebQuiz: Andrew Mathas">
+  <meta name="organization" content=", ">
+  <meta name="Copyright" content="WebQuiz: 2004-2019 Andrew Mathas and Donald Taylor, University of Sydney">
+  <meta name="keywords" content="WebQuiz, TeX4ht, make4ht, latex, python, quiz, mathematics">
+  <link href="/WebQuiz/css/webquiz-default.css" type="text/css" rel="stylesheet">
+  <link href="webquiz-online-manual/webquiz-online-manual.css" type="text/css" rel="stylesheet">
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/5.4.0/math.min.js"></script>  <script src="/WebQuiz/js/webquiz.js"></script>
+  <script defer src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=MML_CHTML"></script>
+</head>
+<body>
+  <noscript>
+    <div class="warning">
+      If you are reading this message either your browser does not support
+      JavaScript or because JavaScript is not enabled. You will need to enable
+      JavaScript and then reload this page in order to use this quiz.
+     </div>
+  </noscript>
+  <div class="quiz-page">
+    <div id="menu-icon">
+      <span id="sidelabelclosed" class="question-label" onclick="toggle_side_menu();">&#10070;</span>
+      <span id="sidelabelopen" class="question-label" onclick="toggle_side_menu();">&#10006;&nbsp;Questions
+      </span>
+    </div>
+    <div id="sidemenu" class="side-menu">
+       <ul>
+           <li id="button-1" class="discussion" onClick="gotoQuestion(-1)">Introduction</li>
+           <li id="button-2" class="discussion" onClick="gotoQuestion(-2)">Basic Usage</li>
+           <li id="button-3" class="discussion" onClick="gotoQuestion(-3)">WebQuiz files</li>
+           <li id="button-4" class="discussion" onClick="gotoQuestion(-4)">Question 1</li>
+           <li id="button-5" class="discussion" onClick="gotoQuestion(-5)">Question 2</li>
+           <li id="button-6" class="discussion" onClick="gotoQuestion(-6)">Question 3</li>
+           <li id="button-7" class="discussion" onClick="gotoQuestion(-7)">Question 4</li>
+           <li id="button-8" class="discussion" onClick="gotoQuestion(-8)">Index Files</li>
+           <li id="button-9" class="discussion" onClick="gotoQuestion(-9)">Credits</li>
+       </ul>
+      <div class="buttons">
+        <br>
+        <div id="button1" class="button blank" content=" " onClick="gotoQuestion(1)">1</div>
+        <div id="button2" class="button blank" content=" " onClick="gotoQuestion(2)">2</div>
+        <div id="button3" class="button blank" content=" " onClick="gotoQuestion(3)">3</div>
+        <div id="button4" class="button blank" content=" " onClick="gotoQuestion(4)">4</div>
+      </div>
+      <table class="marking-key">
+         <tr><td class="star">&starf;</td><td style="width: 14ex;">right first attempt</td></tr>
+         <tr><td class="tick">&check;</td><td>right</td></tr>
+         <tr><td class="cross">&cross;</td><td>wrong</td></tr>
+      </table>
+      <div class="school">
+        <a href="/"></a><p>
+        <a href="/"></a>
+      </div>
+      <div class="copyright">
+        <a href="http://www.maths.usyd.edu.au/u/mathas/WebQuiz/credits.html">
+           <span class="webquizlogo">WebQuiz</span><span class="TEX">T<span class="E">E</span>X</span>
+        </a>
+        <br>&copy; Copyright<br><span style="overflow: visible;">2004-2019</span>
+      </div>
+    </div>
+    <div class="quiz-questions">
+      <div class="quiz-header">
+       <div class="quiz-title">WebQuiz: Web Quizzes using LaTeX</div><div></div>
+       <span id="question-label" class="question-label">Question</span>
+       <span id="question-number" class="question-label">Introduction</span>
+       <span class="arrows">
+          <a onClick="nextQuestion(-1);" title="Previous unanswered question">&#x25c4;</a>
+          <span class="question-label">Questions</span>
+          <a onClick="nextQuestion(1);"  title="Next unanswered question">&#x25ba;</a>
+       </span>
+      </div>
+      <div id="question-1" class="question" style="display:none;">
+        WebQuiz is a LaTeX package for creating interactive web
+quizzes. The idea is that you write the quiz using LaTeX and that WebQuiz creates
+the web page from this file. Anything that you can write using LaTeX will be
+converted to &lt;a 
+href="https://www.w3schools.com/html/html_intro.asp" &gt;&lt;span style="color:Brown"&gt;HTML&lt;/span&gt;&lt;/a&gt; by WebQuiz. This includes, for example, mathematics and
+graphics written using &lt;a 
+href="https://www.ctan.org/pkg/pstricks" &gt;&lt;span style="color:Brown"&gt;pstricks&lt;/span&gt;&lt;/a&gt;. WebQuiz supports three different types of
+quiz questions:
+     &lt;dl class="enumerate-enumitem"&gt;&lt;dt class="enumerate-enumitem"&gt;
+  1. &lt;/dt&gt;&lt;dd 
+class="enumerate-enumitem"&gt;Multiple choice questions with a unique correct answer. (See  
+&lt;span class="button blank" onClick="gotoQuestion(1);"&gt;1&lt;/span&gt;)
+     &lt;/dd&gt;&lt;dt class="enumerate-enumitem"&gt;
+  2. &lt;/dt&gt;&lt;dd 
+class="enumerate-enumitem"&gt;Multiple choice questions with several (or no) correct answers. (See  
+&lt;span class="button blank" onClick="gotoQuestion(2);"&gt;2&lt;/span&gt;)
+     &lt;/dd&gt;&lt;dt class="enumerate-enumitem"&gt;
+  3. &lt;/dt&gt;&lt;dd 
+class="enumerate-enumitem"&gt;Questions that require the student to enter an answer, which can then be
+     compared with the correct answer in several different ways. (See  
+&lt;span class="button blank" onClick="gotoQuestion(3);"&gt;3&lt;/span&gt;)&lt;/dd&gt;&lt;/dl&gt;
+&lt;p&gt;The use of WebQuiz is described in the next section. Later sections describe how each
+of the WebQuiz environments are used.
+&lt;/p&gt; 
+&lt;p&gt;The &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;discussion&lt;/span&gt; environment in WebQuiz can also be used to write Web
+Pages like this one (The pages you are reading here were written using WebQuiz.)
+&lt;/p&gt;
+      </div>
+<div id="question-2" class="question" style="display:none;">
+        Once you have a WebQuiz file, you can run it through
+LaTeX, in the usual way, to produce a readable version of your quiz. When you are
+happy with the quiz, use WebQuiz to create the HTML version. Note that the
+printable version of the quiz does not look like the web page; rather, it contains all of
+the information in an easily readable layout.
+If, for example, your quiz file is called quiz1.tex then you can use the following
+commands:
+     &lt;!--l. 74--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-7r1"&gt;&lt;/a&gt;&lt;/span&gt;     &gt; latex &lt;span style="color:Blue"&gt;quiz&lt;/span&gt;1 &lt;span style="color:BurlyWood"&gt;          &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;latex&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;a&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;quiz&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;file&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-8r2"&gt;&lt;/a&gt;&lt;/span&gt;     &gt; pdflatex &lt;span style="color:Blue"&gt;quiz&lt;/span&gt;1 &lt;span style="color:BurlyWood"&gt;       &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;a&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;PDF&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;versio&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;of&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;the&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;quiz&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-9r3"&gt;&lt;/a&gt;&lt;/span&gt;     &gt; xdvi &lt;span style="color:Blue"&gt;quiz&lt;/span&gt;1 &lt;span style="color:BurlyWood"&gt;           &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;view&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;the&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;quiz&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;using&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;xdvi&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-10r4"&gt;&lt;/a&gt;&lt;/span&gt;     &gt; dvips &lt;span style="color:Blue"&gt;quiz&lt;/span&gt;1 &lt;span style="color:BurlyWood"&gt;          &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;print&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;the&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;quiz&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-11r5"&gt;&lt;/a&gt;&lt;/span&gt;     &gt; webquiz &lt;span style="color:Blue"&gt;quiz&lt;/span&gt;1 &lt;span style="color:BurlyWood"&gt;        &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;converts&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;the&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;quiz&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;to&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;html&lt;/span&gt;
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-12r6"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;Converting the quiz to html can take quite a long time, particularly if a large number
+of images need to be created.
+&lt;/p&gt;
+      </div>
+<div id="question-3" class="question" style="display:none;">
+        The basic structure of a WebQuiz file is as follows:
+     &lt;!--l. 88--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-14r1"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\documentclass&lt;/span&gt;{webquiz} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-15r2"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-16r3"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\title&lt;/span&gt;{Quiz 1: Complex numbers} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-17r4"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-18r5"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:Blue"&gt;\UnitCode&lt;/span&gt;{MATH1001} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-19r6"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:Blue"&gt;\UnitName&lt;/span&gt;{Differential Calculus} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-20r7"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:Blue"&gt;\UnitURL&lt;/span&gt;{/u/UG/JM/MATH1001/} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-21r8"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:Blue"&gt;\QuizzesURL&lt;/span&gt;{/u/UG/JM/MATH1001/Quizzes/} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-22r9"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-23r10"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{document} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-24r11"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-25r12"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;discussion&lt;/span&gt;}[short heading][optional heading] &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-26r13"&gt;&lt;/a&gt;&lt;/span&gt;        . . . &lt;span style="color:BurlyWood"&gt;%&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;optional&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;discussion&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-27r14"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;discussion&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-28r15"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-29r16"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;span style="color:BurlyWood"&gt;%&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;question&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;1&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-30r17"&gt;&lt;/a&gt;&lt;/span&gt;        . . . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-31r18"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-32r19"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-33r20"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;span style="color:BurlyWood"&gt;%&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;question&lt;/span&gt;&lt;span style="color:BurlyWood"&gt; &lt;/span&gt;&lt;span style="color:BurlyWood"&gt;2&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-34r21"&gt;&lt;/a&gt;&lt;/span&gt;        . . . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-35r22"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-36r23"&gt;&lt;/a&gt;&lt;/span&gt;     . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-37r24"&gt;&lt;/a&gt;&lt;/span&gt;     . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-38r25"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{document}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-39r26"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;In the preamble of the LaTeX file you can specify the unit code, the name of the unit
+of study, the location of the homepage for the unit and the index file for
+the quizzes for this unit; this is done using the commands &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\UnitCode&lt;/span&gt;,
+&lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\UnitName&lt;/span&gt;, &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\UnitURL&lt;/span&gt; and &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\QuizzesURL&lt;/span&gt; respectively. If the command
+&lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\QuizzesURL&lt;/span&gt; is omitted then the URL for the quiz index file is set to
+&lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\UnitURL&lt;/span&gt;/Quizzes.
+&lt;/p&gt; 
+&lt;p&gt;The title of the quiz can be set in the preamble using the &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:DodgerBlue"&gt;\title&lt;/span&gt;
+command. Note that the &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:DodgerBlue"&gt;\title&lt;/span&gt; command must appear before the
+&lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{document} command. As in any LaTeX document, the
+preamble can define macros and load other LaTeX packages the usual way
+.
+&lt;/p&gt; 
+&lt;p&gt;By using the &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;discussion&lt;/span&gt; environment you can summarise the
+material for the students or add introductory material for the quiz. For
+example, &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;discussion&lt;/span&gt; environments can be used to recall that main
+concepts being covered by the quiz or to give references to the lecture notes
+for the unit. The syntax for the &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;discussion&lt;/span&gt; environment is as
+follows:
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-40r1"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;!--l. 138--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-41r2"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;discussion&lt;/span&gt;}[optional short heading][optional heading] &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-42r3"&gt;&lt;/a&gt;&lt;/span&gt;      . . . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-43r4"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;discussion&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-44r5"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;Anything you like (text, mathematics, …) can go inside discussion environments. The
+optional heading, which defaults to Discussion”, is used both as the section heading
+on the web page and as the heading in the side-menu on left hand side of
+the page. If a short heading is also given then it is used in the side-menu.
+The quiz can contain zero or more discussion items ( and zero or more quiz
+questions).
+&lt;/p&gt; 
+&lt;p&gt;Questions are set inside a &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt; environment. The text is followed by
+the answers.
+&lt;/p&gt; 
+&lt;p&gt;WebQuiz supports three types of questions: &lt;/p&gt; 
+
+     &lt;ul class="itemize1"&gt;
+     &lt;li class="itemize"&gt;Multiple choice questions with precisely one correct answer;
+     &lt;/li&gt;
+     &lt;li class="itemize"&gt;Multiple choice questions with zero or more  correct answers;
+     &lt;/li&gt;
+     &lt;li class="itemize"&gt;Questions that require the students to enter an answer. Five difference
+     comparison methods are available.&lt;/li&gt;&lt;/ul&gt;
+                                                                  
+
+                                                                  
+&lt;p&gt;With each of these types of questions you can (and should) provide feedback to the
+students depending on whether their answer is correct or incorrect. Below we
+describe how to produce these different types of questions. &lt;/p&gt;
+      </div>
+<div id="question-4" class="question" style="display:none;">
+        The syntax for a multiple choice question having precisely one
+correct answer is as follows:
+     &lt;!--l. 171--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-46r1"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-47r2"&gt;&lt;/a&gt;&lt;/span&gt;     . . .&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt; text &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-48r3"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-49r4"&gt;&lt;/a&gt;&lt;/span&gt;      \(in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; . . . text for (in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; option &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-50r5"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;   . . . &lt;span style="color:Blue"&gt;feedback&lt;/span&gt; on response &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-51r6"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-52r7"&gt;&lt;/a&gt;&lt;/span&gt;      \(in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; . . . text for (in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; option &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-53r8"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;   . . . &lt;span style="color:Blue"&gt;feedback&lt;/span&gt; on response &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-54r9"&gt;&lt;/a&gt;&lt;/span&gt;      . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-55r10"&gt;&lt;/a&gt;&lt;/span&gt;      . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-56r11"&gt;&lt;/a&gt;&lt;/span&gt;      . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-57r12"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-58r13"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-59r14"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+The different choices in a multiple choice question must be inside a &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;
+environment. This environment behaves like a standard LaTeX list environment
+except that instead of using &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:DodgerBlue"&gt;\item&lt;/span&gt; for list item you use:
+     &lt;ul class="itemize1"&gt;
+     &lt;li class="itemize"&gt;&lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\correct&lt;/span&gt; for a correct choice
+     &lt;/li&gt;
+     &lt;li class="itemize"&gt;&lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; for an incorrect choice
+     &lt;/li&gt;
+     &lt;li class="itemize"&gt;&lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\feedback&lt;/span&gt; to give feedback to the student when they select this choice&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;At most one &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\feedback&lt;/span&gt; response should be given for each &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\correct&lt;/span&gt; and each
+&lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; response. The &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\feedback&lt;/span&gt; commands are optional; however, it is
+recommended that you use them because targeted feedback to the students based on
+their responses can be beneficial.
+&lt;/p&gt; 
+&lt;p&gt;For example, the code below, when run through WebQuiz, produces  
+&lt;span class="button blank" onClick="gotoQuestion(1);"&gt;1&lt;/span&gt; in the online
+manual quiz.
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-60r1"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;!--l. 204--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-61r2"&gt;&lt;/a&gt;&lt;/span&gt;  &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-62r3"&gt;&lt;/a&gt;&lt;/span&gt;    The shaded region in the graph &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-63r4"&gt;&lt;/a&gt;&lt;/span&gt;    &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{center} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-64r5"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:LimeGreen"&gt;pspicture&lt;/span&gt;}(-3,-1.5)(3,4) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-65r6"&gt;&lt;/a&gt;&lt;/span&gt;       \pscircle[linewidth=1pt,linestyle=dashed,&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-66r7"&gt;&lt;/a&gt;&lt;/span&gt;                fillcolor=SkyBlue,fillstyle=solid](1,1){2} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-67r8"&gt;&lt;/a&gt;&lt;/span&gt;       \psaxes[linecolor=red,linewidth=1pt,labels=none]&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-68r9"&gt;&lt;/a&gt;&lt;/span&gt;       {-&gt;}(0,0)(-1.5,-1.5)(3.5,3.5) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-69r10"&gt;&lt;/a&gt;&lt;/span&gt;       \rput(3.75,0){$x$} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-70r11"&gt;&lt;/a&gt;&lt;/span&gt;       \rput(0,3.85){$iy$} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-71r12"&gt;&lt;/a&gt;&lt;/span&gt;       \rput(3,-0.4){3} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-72r13"&gt;&lt;/a&gt;&lt;/span&gt;       \rput(-0.4,3){3$i$} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-73r14"&gt;&lt;/a&gt;&lt;/span&gt;       \psdots(1,1) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-74r15"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:LimeGreen"&gt;pspicture&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-75r16"&gt;&lt;/a&gt;&lt;/span&gt;    &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{center} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-76r17"&gt;&lt;/a&gt;&lt;/span&gt;    is equal to which of the following sets of &lt;span style="color:LimeGreen"&gt;complex&lt;/span&gt; numbers? &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-77r18"&gt;&lt;/a&gt;&lt;/span&gt;    &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-78r19"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; $\{z &lt;span style="color:DodgerBlue"&gt;\in&lt;/span&gt; \C : (z-1)^{2}+(z-(i+1))^{2}&lt;2\}$ &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-79r20"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;  The equation of a circle in the &lt;span style="color:LimeGreen"&gt;complex&lt;/span&gt; plane with &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-80r21"&gt;&lt;/a&gt;&lt;/span&gt;      centre $a+ib$ and radius $r$ is &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-81r22"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{displaymath} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-82r23"&gt;&lt;/a&gt;&lt;/span&gt;       \{z&lt;span style="color:DodgerBlue"&gt;\in&lt;/span&gt;\C : |z-(a+ib)|&lt;r \}. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-83r24"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{displaymath} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-84r25"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-85r26"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; $\{z &lt;span style="color:DodgerBlue"&gt;\in&lt;/span&gt; \C : z+(i+1)&lt;2\}$ &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-86r27"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;  You want the set of points whose &lt;span style="color:DodgerBlue"&gt;\textit&lt;/span&gt;{distance} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-87r28"&gt;&lt;/a&gt;&lt;/span&gt;      from $1+i$ is less than $2$. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-88r29"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-89r30"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\correct&lt;/span&gt;  $\{z &lt;span style="color:DodgerBlue"&gt;\in&lt;/span&gt; \C : |z-(i+1)|&lt;2\}$ &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-90r31"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;  The graph shows the set of &lt;span style="color:LimeGreen"&gt;complex&lt;/span&gt; numbers whose &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-91r32"&gt;&lt;/a&gt;&lt;/span&gt;      distance from $1+i$ is less than $2$. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-92r33"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-93r34"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; $\{z &lt;span style="color:DodgerBlue"&gt;\in&lt;/span&gt; \C : |z-2|&lt;|i+1-2|\}$ &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-94r35"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;  As $|i+1-2|=&lt;span style="color:DodgerBlue"&gt;\sqrt&lt;/span&gt; 2$, this is the set of &lt;span style="color:LimeGreen"&gt;complex&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-95r36"&gt;&lt;/a&gt;&lt;/span&gt;      numbers whose distance from $2$ is less than &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-96r37"&gt;&lt;/a&gt;&lt;/span&gt;      $&lt;span style="color:DodgerBlue"&gt;\sqrt&lt;/span&gt; 2$. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-97r38"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-98r39"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; None of the above. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-99r40"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt; The graph shows the set of &lt;span style="color:LimeGreen"&gt;complex&lt;/span&gt; numbers whose &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-100r41"&gt;&lt;/a&gt;&lt;/span&gt;      distance from the centre of the circle is less than $2$. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-101r42"&gt;&lt;/a&gt;&lt;/span&gt;    &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-102r43"&gt;&lt;/a&gt;&lt;/span&gt;  &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-103r44"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+      </div>
+<div id="question-5" class="question" style="display:none;">
+        To allow multiple (or no) correct answer we add
+&lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;multiple&lt;/span&gt; as an optional argument to the &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt; environment:
+     &lt;!--l. 252--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-105r1"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-106r2"&gt;&lt;/a&gt;&lt;/span&gt;     . . .&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt; text. . . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-107r3"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;}[&lt;span style="color:ForestGreen"&gt;multiple&lt;/span&gt;] &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-108r4"&gt;&lt;/a&gt;&lt;/span&gt;      \(in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; . . . text for (in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; option &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-109r5"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;   . . . &lt;span style="color:Blue"&gt;feedback&lt;/span&gt; on response &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-110r6"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-111r7"&gt;&lt;/a&gt;&lt;/span&gt;      \(in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; . . . text for (in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; option &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-112r8"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;   . . . &lt;span style="color:Blue"&gt;feedback&lt;/span&gt; on response &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-113r9"&gt;&lt;/a&gt;&lt;/span&gt;      . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-114r10"&gt;&lt;/a&gt;&lt;/span&gt;      . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-115r11"&gt;&lt;/a&gt;&lt;/span&gt;      . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-116r12"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-117r13"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-118r14"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+The only difference to the previous case is that zero or more &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\correct&lt;/span&gt; commands
+can appear.
+&lt;p&gt;For example,  
+&lt;span class="button blank" onClick="gotoQuestion(2);"&gt;2&lt;/span&gt; below was typed into WebQuiz using the following commands:
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-119r1"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;!--l. 272--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-120r2"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-121r3"&gt;&lt;/a&gt;&lt;/span&gt;     Which of the following numbers are prime? &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-122r4"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;}[&lt;span style="color:ForestGreen"&gt;multiple&lt;/span&gt;] &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-123r5"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; 1 &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-124r6"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;  By definition, a prime is a &lt;span style="color:LimeGreen"&gt;number&lt;/span&gt; greater than 1 &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-125r7"&gt;&lt;/a&gt;&lt;/span&gt;      whose only factors are 1 and itself. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-126r8"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-127r9"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\correct&lt;/span&gt;  19 &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-128r10"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;  The only factors of 19 are 1 and itself. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-129r11"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-130r12"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; 6 &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-131r13"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;  2 is a factor of 6 &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-132r14"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-133r15"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\correct&lt;/span&gt;  23 &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-134r16"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;  The only factors of 23 are 1 and itself. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-135r17"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-136r18"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\correct&lt;/span&gt;  191 &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-137r19"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;  The only factors of 191 are 1 and itself. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-138r20"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-139r21"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-140r22"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+      </div>
+<div id="question-6" class="question" style="display:none;">
+        By default, the &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt; environments puts the multiple choice
+options into one column format. Sometimes the options look better when
+listed in two or more columns, however, this should be used sparingly as
+multiple columns do not always display well if the quiz is viewed on a mobile
+device. By using the &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;columns&lt;/span&gt; key word in a &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;
+environment you can specify the number of columns in the HTML version of the
+quiz.
+     &lt;!--l. 305--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-142r1"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-143r2"&gt;&lt;/a&gt;&lt;/span&gt;     . . .&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt; text. . . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-144r3"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;}[&lt;span style="color:ForestGreen"&gt;multiple&lt;/span&gt;, &lt;span style="color:ForestGreen"&gt;columns&lt;/span&gt;=n]    . . . n &lt;span style="color:ForestGreen"&gt;columns&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-145r4"&gt;&lt;/a&gt;&lt;/span&gt;      \(in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; . . . text for (in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; option &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-146r5"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;   . . . &lt;span style="color:Blue"&gt;feedback&lt;/span&gt; on response &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-147r6"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-148r7"&gt;&lt;/a&gt;&lt;/span&gt;      \(in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; . . . text for (in)&lt;span style="color:Blue"&gt;correct&lt;/span&gt; option &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-149r8"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt;   . . . &lt;span style="color:Blue"&gt;feedback&lt;/span&gt; on response &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-150r9"&gt;&lt;/a&gt;&lt;/span&gt;      . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-151r10"&gt;&lt;/a&gt;&lt;/span&gt;      . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-152r11"&gt;&lt;/a&gt;&lt;/span&gt;      . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-153r12"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-154r13"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-155r14"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;If the optional argument &lt;span class="lstinline"&gt;&lt;/span&gt;[&lt;span style="color:ForestGreen"&gt;multiple&lt;/span&gt;] is not present, then the question
+admits precisely one correct answer.
+&lt;/p&gt; 
+&lt;p&gt;For example,  
+&lt;span class="button blank" onClick="gotoQuestion(3);"&gt;3&lt;/span&gt; below was typed into WebQuiz using the following commands:
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-156r1"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;!--l. 325--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-157r2"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-158r3"&gt;&lt;/a&gt;&lt;/span&gt;     What are suitable parametric equations for this plane curve? &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-159r4"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{center} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-160r5"&gt;&lt;/a&gt;&lt;/span&gt;      \psset{unit=.6cm} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-161r6"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:LimeGreen"&gt;pspicture&lt;/span&gt;}(-2.5,-0.5)(5,5.5) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-162r7"&gt;&lt;/a&gt;&lt;/span&gt;        \psaxes[linecolor=red,linewidth=1pt,labels=none]&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-163r8"&gt;&lt;/a&gt;&lt;/span&gt;        {-&gt;}(0,0)(-2.5,-1.5)(5,5) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-164r9"&gt;&lt;/a&gt;&lt;/span&gt;        \psellipse[linecolor=SkyBlue,linewidth=2pt](1,2)(3,2) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-165r10"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:LimeGreen"&gt;pspicture&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-166r11"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{center} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-167r12"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-168r13"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;}[&lt;span style="color:ForestGreen"&gt;columns&lt;/span&gt;=1] &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-169r14"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; $x=2&lt;span style="color:DodgerBlue"&gt;\cos&lt;/span&gt; t + 1$, $y=3&lt;span style="color:DodgerBlue"&gt;\sin&lt;/span&gt; t + 2$ &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-170r15"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt; This is an ellipse with centre $(1,2)$ and with axes of &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-171r16"&gt;&lt;/a&gt;&lt;/span&gt;      length $4$ in the $x$-direction and $6$ in the $y$-direction. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-172r17"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{center} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-173r18"&gt;&lt;/a&gt;&lt;/span&gt;        \psset{unit=.6cm} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-174r19"&gt;&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:LimeGreen"&gt;pspicture&lt;/span&gt;}(-2.5,-0.5)(5,5.5) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-175r20"&gt;&lt;/a&gt;&lt;/span&gt;          \psaxes[linecolor=red,linewidth=1pt,labels=none]&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-176r21"&gt;&lt;/a&gt;&lt;/span&gt;          {-&gt;}(0,0)(-2.5,-1.5)(5,5) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-177r22"&gt;&lt;/a&gt;&lt;/span&gt;          \parametricplot[linecolor=SkyBlue,linewidth=2pt]{0}{360}&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-178r23"&gt;&lt;/a&gt;&lt;/span&gt;          {t cos 2 mul 1 add t sin 3 mul 2 add} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-179r24"&gt;&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:LimeGreen"&gt;pspicture&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-180r25"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{center} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-181r26"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-182r27"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\correct&lt;/span&gt; $x=3&lt;span style="color:DodgerBlue"&gt;\cos&lt;/span&gt; t + 1$, $y=2&lt;span style="color:DodgerBlue"&gt;\sin&lt;/span&gt; t + 2$ &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-183r28"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt; The curve is an ellipse centre (1,2) with axes length 6 &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-184r29"&gt;&lt;/a&gt;&lt;/span&gt;      in the $x$ direction and 4 in the $y$ direction. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-185r30"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-186r31"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; $x=3&lt;span style="color:DodgerBlue"&gt;\cos&lt;/span&gt; t - 1$, $y=2&lt;span style="color:DodgerBlue"&gt;\sin&lt;/span&gt; t - 2$ &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-187r32"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt; This is an ellipse with centre $(-1,-2)$ and with axes &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-188r33"&gt;&lt;/a&gt;&lt;/span&gt;      of length $6$ in the $x$-direction and $4$ in the $y$-direction. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-189r34"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{center} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-190r35"&gt;&lt;/a&gt;&lt;/span&gt;        \psset{unit=.6cm} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-191r36"&gt;&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:LimeGreen"&gt;pspicture&lt;/span&gt;}(-5,-4)(1,2) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-192r37"&gt;&lt;/a&gt;&lt;/span&gt;          \psaxes[linecolor=red,linewidth=1pt,labels=none]&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-193r38"&gt;&lt;/a&gt;&lt;/span&gt;          {&lt;-}(0,0)(-4.5,-5.5)(1,2) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-194r39"&gt;&lt;/a&gt;&lt;/span&gt;          \parametricplot[linecolor=SkyBlue,linewidth=2pt]{0}{360}&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-195r40"&gt;&lt;/a&gt;&lt;/span&gt;          {t cos 3 mul 1 sub t sin 2 mul 2 sub} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-196r41"&gt;&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:LimeGreen"&gt;pspicture&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-197r42"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{center} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-198r43"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-199r44"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\incorrect&lt;/span&gt; $x=2&lt;span style="color:DodgerBlue"&gt;\cos&lt;/span&gt; t - 1$, $y=3&lt;span style="color:DodgerBlue"&gt;\sin&lt;/span&gt; t - 2$ &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-200r45"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:Blue"&gt;\feedback&lt;/span&gt; This is an ellipse with centre $(-1,-2)$ and with axes &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-201r46"&gt;&lt;/a&gt;&lt;/span&gt;      of length $4$ in the $x$-direction and $6$ in the $y$-direction. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-202r47"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{center} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-203r48"&gt;&lt;/a&gt;&lt;/span&gt;        \psset{unit=.6cm} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-204r49"&gt;&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:LimeGreen"&gt;pspicture&lt;/span&gt;}(-4,-5)(1,2) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-205r50"&gt;&lt;/a&gt;&lt;/span&gt;          \psaxes[linecolor=red,linewidth=1pt,labels=none]&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-206r51"&gt;&lt;/a&gt;&lt;/span&gt;          {&lt;-}(0,0)(-4.5,-5.5)(1,2) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-207r52"&gt;&lt;/a&gt;&lt;/span&gt;          \parametricplot[linecolor=SkyBlue,linewidth=2pt]{0}{360}&lt;span style="color:BurlyWood"&gt;%&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-208r53"&gt;&lt;/a&gt;&lt;/span&gt;          { t cos 2 mul 1 sub t sin 3 mul 2 sub} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-209r54"&gt;&lt;/a&gt;&lt;/span&gt;        &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:LimeGreen"&gt;pspicture&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-210r55"&gt;&lt;/a&gt;&lt;/span&gt;      &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{center} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-211r56"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;choice&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-212r57"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-213r58"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+      </div>
+<div id="question-7" class="question" style="display:none;">
+        The final type of question that WebQuiz supports is a question
+that requires an answer, which can be a number or a string. The answer is typeset
+using the &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\answer&lt;/span&gt; macro. The &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\answer&lt;/span&gt; macro takes two arguments: an
+optional comparison method, which defaults to &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:LimeGreen"&gt;string&lt;/span&gt;, and the correct
+answer for the question:
+     &lt;!--l. 391--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-215r1"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:Blue"&gt;\answer&lt;/span&gt;[comparison method]{&lt;span style="color:Blue"&gt;correct&lt;/span&gt; &lt;span style="color:Blue"&gt;answer&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-216r2"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+Feedback for correct and incorrect answers is given using the macros &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\whenRight&lt;/span&gt;
+and &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\whenWrong&lt;/span&gt;, respectively. The structure of questions with &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\answer&lt;/span&gt;’s is as
+follows:
+     &lt;!--l. 397--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-217r1"&gt;&lt;/a&gt;&lt;/span&gt;       &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-218r2"&gt;&lt;/a&gt;&lt;/span&gt;         . . .&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt; text. . . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-219r3"&gt;&lt;/a&gt;&lt;/span&gt;         &lt;span style="color:Blue"&gt;\answer&lt;/span&gt;[*][&lt;span style="color:LimeGreen"&gt;complex&lt;/span&gt;|&lt;span style="color:LimeGreen"&gt;integer&lt;/span&gt;|&lt;span style="color:LimeGreen"&gt;lowercase&lt;/span&gt;|&lt;span style="color:LimeGreen"&gt;number&lt;/span&gt;|&lt;span style="color:LimeGreen"&gt;string&lt;/span&gt;]{actual &lt;span style="color:Blue"&gt;answer&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-220r4"&gt;&lt;/a&gt;&lt;/span&gt;         &lt;span style="color:Blue"&gt;\whenRight&lt;/span&gt; . . . &lt;span style="color:Blue"&gt;feedback&lt;/span&gt; when right (optional) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-221r5"&gt;&lt;/a&gt;&lt;/span&gt;         &lt;span style="color:Blue"&gt;\whenWrong&lt;/span&gt; . . . &lt;span style="color:Blue"&gt;feedback&lt;/span&gt; when wrong (optional) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-222r6"&gt;&lt;/a&gt;&lt;/span&gt;       &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-223r7"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+&lt;p&gt;See the WebQuiz manual for details of the different comparison types. For example,
+ 
+&lt;span class="button blank" onClick="gotoQuestion(4);"&gt;4&lt;/span&gt; below was typed into WebQuiz using the following commands:
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-224r1"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/p&gt; 
+&lt;!--l. 408--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-225r2"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-226r3"&gt;&lt;/a&gt;&lt;/span&gt;     If the vectors $\vect{a}$ (of magnitude 8 units) and $\vect{b}$ &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-227r4"&gt;&lt;/a&gt;&lt;/span&gt;     (of magnitude 3 units) are perpendicular, what is the value &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-228r5"&gt;&lt;/a&gt;&lt;/span&gt;     of &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-229r6"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{displaymath} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-230r7"&gt;&lt;/a&gt;&lt;/span&gt;      |\vect{a} -2\vect{b}|~? &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-231r8"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{displaymath} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-232r9"&gt;&lt;/a&gt;&lt;/span&gt;     (Hint: Draw a diagram!) &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-233r10"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-234r11"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:Blue"&gt;\answer&lt;/span&gt;[&lt;span style="color:LimeGreen"&gt;number&lt;/span&gt;]{10} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-235r12"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:Blue"&gt;\whenRight&lt;/span&gt; The vectors $\vect{a}$, \(-2\vect{b}\), and &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-236r13"&gt;&lt;/a&gt;&lt;/span&gt;     $\vect{a} - 2\vect{b}$ form the sides of a right-angled &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-237r14"&gt;&lt;/a&gt;&lt;/span&gt;     triangle, with sides of length $8$ and $6$ and &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-238r15"&gt;&lt;/a&gt;&lt;/span&gt;     hypotenuse of length $|\vect{a} -2\vect{b}|$. Therefore &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-239r16"&gt;&lt;/a&gt;&lt;/span&gt;     by Pythagoras’ Theorem, &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-240r17"&gt;&lt;/a&gt;&lt;/span&gt;     \(|\vect{a} -2\vect{b}|=&lt;span style="color:DodgerBlue"&gt;\sqrt&lt;/span&gt;{8^2+6^2}=10\). &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-241r18"&gt;&lt;/a&gt;&lt;/span&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-242r19"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:Blue"&gt;\whenWrong&lt;/span&gt; Draw a diagram and then use Pythagoras’ theorem. &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-243r20"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;question&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-244r21"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+      </div>
+<div id="question-8" class="question" style="display:none;">
+        WebQuiz also provides a mechanism for creating a web page
+containing an index of all quizzes for a given Unit of Study. This is done with a
+WebQuiz file that contains a &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:ForestGreen"&gt;quizindex&lt;/span&gt; environment. The syntax for this
+environment is as follows:
+                                                                  
+
+                                                                  
+     &lt;!--l. 435--&gt;&lt;pre class="listings"&gt; &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-246r1"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\begin&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;quizindex&lt;/span&gt;} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-247r2"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:Blue"&gt;\quiz&lt;/span&gt;[url1]{title for &lt;span style="color:Blue"&gt;quiz&lt;/span&gt; 1} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-248r3"&gt;&lt;/a&gt;&lt;/span&gt;     &lt;span style="color:Blue"&gt;\quiz&lt;/span&gt;[url2]{title for &lt;span style="color:Blue"&gt;quiz&lt;/span&gt; 2} &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-249r4"&gt;&lt;/a&gt;&lt;/span&gt;     . . . &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-250r5"&gt;&lt;/a&gt;&lt;/span&gt;   &lt;span style="color:DodgerBlue"&gt;\end&lt;/span&gt;{&lt;span style="color:ForestGreen"&gt;quizindex&lt;/span&gt;}
+      &lt;br /&gt;&lt;span class="label"&gt;&lt;a 
+ id="x1-251r6"&gt;&lt;/a&gt;&lt;/span&gt;&lt;/pre&gt;
+If no URL is given as an optional argument to &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;\quiz&lt;/span&gt; then WebQuiz sets the
+url(s) to &lt;span class="lstinline"&gt;&lt;/span&gt;quiz1.html, &lt;span class="lstinline"&gt;&lt;/span&gt;quiz2.html and so on.
+      </div>
+<div id="question-9" class="question" style="display:none;">
+        WebQuiz was written and developed in the &lt;a 
+href="http://www.maths.usyd.edu.au/" &gt;&lt;span style="color:Brown"&gt;School of
+Mathematics and Statistics&lt;/span&gt;&lt;/a&gt; at the &lt;a 
+href="http://www.usyd.edu.au/" &gt;&lt;span style="color:Brown"&gt;University of Sydney&lt;/span&gt;&lt;/a&gt;. The system is built on
+LaTeX with the conversion from LaTeX to HTML using Eitan Gurari’s
+&lt;a 
+href="http://www.cis.ohio-state.edu/~gurari/TeX4ht/mn.html" &gt;&lt;span style="color:Brown"&gt;TeX4ht&lt;/span&gt;&lt;/a&gt;, and Michal Hoftich’s &lt;a 
+href="https://github.com/michal-h21/make4ht" &gt;&lt;span style="color:Brown"&gt;make4ht&lt;/span&gt;&lt;/a&gt;.
+&lt;p&gt;To write quizzes using WebQuiz it is only necessary to know LaTeX, however, the
+WebQuiz system has three components: &lt;/p&gt; 
+
+     &lt;ul class="itemize1"&gt;
+     &lt;li class="itemize"&gt;A  LaTeX  document  class  file,  &lt;span class="lstinline"&gt;&lt;/span&gt;webquiz.cls,  and  a  &lt;a 
+href="https://www.ctan.org/tex4ht" &gt;&lt;span style="color:Brown"&gt;&lt;span class="HoLogo-TeX"&gt;T&lt;span class="HoLogo-e"&gt;E&lt;/span&gt;X&lt;/span&gt;4ht&lt;/span&gt;&lt;/a&gt;
+     configuration file, &lt;span class="lstinline"&gt;&lt;/span&gt;webquitexz.cfg, that enable the quiz files to be processed
+     by LaTeX and &lt;a 
+href="https://www.ctan.org/tex4ht" &gt;&lt;span style="color:Brown"&gt;&lt;span class="HoLogo-TeX"&gt;T&lt;span class="HoLogo-e"&gt;E&lt;/span&gt;X&lt;/span&gt;4ht&lt;/span&gt;&lt;/a&gt;, respectively.
+     &lt;/li&gt;
+     &lt;li class="itemize"&gt;A python program, &lt;span class="lstinline"&gt;&lt;/span&gt;&lt;span style="color:Blue"&gt;webquiz&lt;/span&gt;, that translates the &lt;a 
+href="https://www.w3schools.com/xml/xml_whatis.asp" &gt;&lt;span style="color:Brown"&gt;XML&lt;/span&gt;&lt;/a&gt; file that
+     is produced by &lt;a 
+href="https://www.ctan.org/tex4ht" &gt;&lt;span style="color:Brown"&gt;&lt;span class="HoLogo-TeX"&gt;T&lt;span class="HoLogo-e"&gt;E&lt;/span&gt;X&lt;/span&gt;4ht&lt;/span&gt;&lt;/a&gt; into &lt;a 
+href="https://www.w3schools.com/html/html_intro.asp" &gt;&lt;span style="color:Brown"&gt;HTML&lt;/span&gt;&lt;/a&gt;.
+     &lt;/li&gt;
+     &lt;li class="itemize"&gt;Some &lt;a 
+href="https://www.w3schools.com/Js/" &gt;&lt;span style="color:Brown"&gt;Javascript&lt;/span&gt;&lt;/a&gt; and &lt;a 
+href="https://www.w3schools.com/css" &gt;&lt;span style="color:Brown"&gt;CSS&lt;/span&gt;&lt;/a&gt; that controls the quiz web page.&lt;/li&gt;&lt;/ul&gt;
+&lt;p&gt;The LaTeX component of WebQuiz was written by Andrew Mathas and
+the python, &lt;a 
+href="https://www.w3schools.com/css" &gt;&lt;span style="color:Brown"&gt;CSS&lt;/span&gt;&lt;/a&gt; and &lt;a 
+href="https://www.w3schools.com/Js/" &gt;&lt;span style="color:Brown"&gt;Javascript&lt;/span&gt;&lt;/a&gt; code was written by Andrew
+Mathas (and Don Taylor), based on an initial prototype of Don Taylor’s
+from 2001. Since 2004 the program has been maintained and developed by
+Andrew Mathas. Although the program has changed substantially since
+2004, Don’s idea of using &lt;a 
+href="https://www.ctan.org/tex4ht" &gt;&lt;span style="color:Brown"&gt;&lt;span class="HoLogo-TeX"&gt;T&lt;span class="HoLogo-e"&gt;E&lt;/span&gt;X&lt;/span&gt;4ht&lt;/span&gt;&lt;/a&gt;, and some of his code, is still in
+use.
+&lt;/p&gt; 
+&lt;p&gt;Thanks are due to Bob Howlett for general help with CSS and, for Version 5, to
+Michal Hoftich for technical advice. &lt;/p&gt;
+      </div>
+<div id="question1" class="question" style="display:none;">
+      <span class="question-label"></span>   
+
+
+ 
+ The shaded region in the graph
+&lt;div class="center" 
+&gt;
+                                                                  
+
+                                                                  
+&lt;!--width="170.71646pt" height="0.0pt"--&gt;&lt;img 
+src="webquiz-online-manual/webquiz-online-manual0x.svg" alt="PIC" class="pspicture" /&gt;&lt;/div&gt;
+is equal to which of the following sets of complex numbers?  
+
+      <form id="Q1Form" onSubmit="return false;">
+        <table class="question-choices"><tr><td><input type="radio" name="Q1option"/></td>
+<td class="brown" >(a)</td><td><div class="question-choices">&lt;!--l. 497--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;{&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;∈&lt;/mo&gt; &lt;mi 
+&gt;ℂ&lt;/mi&gt; &lt;mo 
+class="MathClass-punc"&gt;:&lt;/mo&gt; &lt;msup&gt;&lt;mrow 
+&gt;&lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;mrow 
+&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup 
+&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;msup&gt;&lt;mrow 
+&gt;&lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;i&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/mrow&gt;&lt;mrow 
+&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup 
+&gt; &lt;mo 
+class="MathClass-rel"&gt;&lt;&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;</div></td>
+   </tr><!-- part=0, cols=1, # answers = 5 -->
+
+<tr><td><input type="radio" name="Q1option"/></td>
+<td class="brown" >(b)</td><td><div class="question-choices">&lt;!--l. 504--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;{&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;∈&lt;/mo&gt; &lt;mi 
+&gt;ℂ&lt;/mi&gt; &lt;mo 
+class="MathClass-punc"&gt;:&lt;/mo&gt; &lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;i&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;)&lt;/mo&gt;&lt;/mrow&gt; &lt;mo 
+class="MathClass-rel"&gt;&lt;&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;</div></td>
+   </tr><!-- part=1, cols=1, # answers = 5 -->
+
+<tr><td><input type="radio" name="Q1option"/></td>
+<td class="brown" >(c)</td><td><div class="question-choices">&lt;!--l. 508--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;{&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;∈&lt;/mo&gt; &lt;mi 
+&gt;ℂ&lt;/mi&gt; &lt;mo 
+class="MathClass-punc"&gt;:&lt;/mo&gt; &lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;i&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt; &lt;mo 
+class="MathClass-rel"&gt;&lt;&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;</div></td>
+   </tr><!-- part=2, cols=1, # answers = 5 -->
+
+<tr><td><input type="radio" name="Q1option"/></td>
+<td class="brown" >(d)</td><td><div class="question-choices">&lt;!--l. 512--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;{&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;∈&lt;/mo&gt; &lt;mi 
+&gt;ℂ&lt;/mi&gt; &lt;mo 
+class="MathClass-punc"&gt;:&lt;/mo&gt; &lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt; &lt;mo 
+class="MathClass-rel"&gt;&lt;&lt;/mo&gt; &lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;mi 
+&gt;i&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt;</div></td>
+   </tr><!-- part=3, cols=1, # answers = 5 -->
+
+<tr><td><input type="radio" name="Q1option"/></td>
+<td class="brown" >(e)</td><td><div class="question-choices">None of the above.</div></td>
+   </tr><!-- part=4, cols=1, # answers = 5 -->
+</table>
+        <p>
+          <input type="button" value="Check answer" name="answer" class="input-button" onClick="checkAnswer(1);"/>
+          <input type="button" value="Next unanswered question" class="input-button" title="Next unanswered question" name="next" onClick="nextQuestion(1);"/>
+        </p>
+      </form>
+
+      <div class="answer">
+
+        <div id="q1feedback1" class="feedback">
+              <em>Choice (a) is <span class="dazzle">Incorrect.</span></em>
+              <div>The equation of a circle in the complex plane with centre
+&lt;!--l. 499--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;a&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mi 
+&gt;i&lt;/mi&gt;&lt;mi 
+&gt;b&lt;/mi&gt;&lt;/math&gt; and
+radius &lt;!--l. 499--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;r&lt;/mi&gt;&lt;/math&gt; is
+&lt;table class="equation-star"&gt;&lt;tr&gt;&lt;td&gt;
+&lt;!--l. 500--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="block" class="equation"&gt;
+                     &lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;{&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;∈&lt;/mo&gt; &lt;mi 
+&gt;ℂ&lt;/mi&gt; &lt;mo 
+class="MathClass-punc"&gt;:&lt;/mo&gt; &lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;mi 
+&gt;z&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mi 
+&gt;a&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mi 
+&gt;i&lt;/mi&gt;&lt;mi 
+&gt;b&lt;/mi&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt; &lt;mo 
+class="MathClass-rel"&gt;&lt;&lt;/mo&gt; &lt;mi 
+&gt;r&lt;/mi&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;}&lt;/mo&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-punc"&gt;.&lt;/mo&gt;
+&lt;/math&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
+&lt;a 
+ id="x1-255r2"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q1feedback2" class="feedback">
+              <em>Choice (b) is <span class="dazzle">Incorrect.</span></em>
+              <div>You want the set of points
+whose distance from &lt;!--l. 506--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;1&lt;/mn&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mi 
+&gt;i&lt;/mi&gt;&lt;/math&gt;
+is less than &lt;!--l. 506--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;.
+&lt;a 
+ id="x1-256r3"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q1feedback3" class="feedback">
+              <em>Choice (c) is <span class="dazzle">Correct!</span></em>
+              <div>The graph shows the set of complex numbers whose distance from
+&lt;!--l. 510--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;1&lt;/mn&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mi 
+&gt;i&lt;/mi&gt;&lt;/math&gt; is less
+than &lt;!--l. 510--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;.
+                                                                  
+
+                                                                  
+&lt;a 
+ id="x1-257r4"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q1feedback4" class="feedback">
+              <em>Choice (d) is <span class="dazzle">Incorrect.</span></em>
+              <div>As
+&lt;!--l. 513--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;mi 
+&gt;i&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;msqrt&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msqrt&gt;&lt;/math&gt;,
+this is the set of complex numbers whose distance from
+&lt;!--l. 514--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt; is less
+than &lt;!--l. 515--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;msqrt&gt;&lt;mrow&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msqrt&gt;&lt;/math&gt;.
+&lt;a 
+ id="x1-258r5"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q1feedback5" class="feedback">
+              <em>Choice (e) is <span class="dazzle">Incorrect.</span></em>
+              <div>The graph shows the set of complex
+numbers whose distance from the centre of the circle is less than
+&lt;!--l. 519--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;.</div>
+        </div></div>
+      </div>
+<div id="question2" class="question" style="display:none;">
+      <span class="question-label"></span>   
+
+
+ 
+ Which of the following numbers are prime?  
+
+      <form id="Q2Form" onSubmit="return false;">
+        <table class="question-choices"><tr><td><input type="checkbox" name="Q2option0"/></td>
+<td class="brown" >(a)</td><td><div class="question-choices">1</div></td>
+   </tr><!-- part=0, cols=1, # answers = 5 -->
+
+<tr><td><input type="checkbox" name="Q2option1"/></td>
+<td class="brown" >(b)</td><td><div class="question-choices">19</div></td>
+   </tr><!-- part=1, cols=1, # answers = 5 -->
+
+<tr><td><input type="checkbox" name="Q2option2"/></td>
+<td class="brown" >(c)</td><td><div class="question-choices">6</div></td>
+   </tr><!-- part=2, cols=1, # answers = 5 -->
+
+<tr><td><input type="checkbox" name="Q2option3"/></td>
+<td class="brown" >(d)</td><td><div class="question-choices">23</div></td>
+   </tr><!-- part=3, cols=1, # answers = 5 -->
+
+<tr><td><input type="checkbox" name="Q2option4"/></td>
+<td class="brown" >(e)</td><td><div class="question-choices">191</div></td>
+   </tr><!-- part=4, cols=1, # answers = 5 -->
+</table>
+        <p>
+          <input type="button" value="Check answer" name="answer" class="input-button" onClick="checkAnswer(2);"/>
+          <input type="button" value="Next unanswered question" class="input-button" title="Next unanswered question" name="next" onClick="nextQuestion(1);"/>
+        </p>
+      </form>
+
+      <div class="answer">
+
+        <div id="q2feedback1" class="feedback">
+            <em>There is at least one mistake.</em><br>For example, choice (a) should be <span class="dazzle">False</span>.
+            <div>By definition, a prime is a number
+greater than 1 whose only factors are 1 and itself.
+&lt;a 
+ id="x1-261r2"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q2feedback2" class="feedback">
+            <em>There is at least one mistake.</em><br>For example, choice (b) should be <span class="dazzle">True</span>.
+            <div>The only factors of 19 are 1 and itself.
+&lt;a 
+ id="x1-262r3"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q2feedback3" class="feedback">
+            <em>There is at least one mistake.</em><br>For example, choice (c) should be <span class="dazzle">False</span>.
+            <div>2 is a factor of 6
+&lt;a 
+ id="x1-263r4"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q2feedback4" class="feedback">
+            <em>There is at least one mistake.</em><br>For example, choice (d) should be <span class="dazzle">True</span>.
+            <div>The only factors of 23 are 1 and itself.
+&lt;a 
+ id="x1-264r5"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q2feedback5" class="feedback">
+            <em>There is at least one mistake.</em><br>For example, choice (e) should be <span class="dazzle">True</span>.
+            <div>The only factors of 191 are 1 and itself.</div>
+        </div>
+        <div id="q2feedback0" class="feedback"><em class="dazzle">Correct!</em>
+            <ol>
+              <li><em>False</em> By definition, a prime is a number
+greater than 1 whose only factors are 1 and itself.
+&lt;a 
+ id="x1-261r2"&gt;&lt;/a&gt;</li>
+              <li><em>True</em> The only factors of 19 are 1 and itself.
+&lt;a 
+ id="x1-262r3"&gt;&lt;/a&gt;</li>
+              <li><em>False</em> 2 is a factor of 6
+&lt;a 
+ id="x1-263r4"&gt;&lt;/a&gt;</li>
+              <li><em>True</em> The only factors of 23 are 1 and itself.
+&lt;a 
+ id="x1-264r5"&gt;&lt;/a&gt;</li>
+              <li><em>True</em> The only factors of 191 are 1 and itself.</li>
+            </ol>
+        </div></div>
+      </div>
+<div id="question3" class="question" style="display:none;">
+      <span class="question-label"></span>   
+
+
+ 
+ What are suitable parametric equations for this plane curve?
+&lt;div class="center" 
+&gt;
+                                                                  
+
+                                                                  
+&lt;!--width="128.03867pt" height="0.0pt"--&gt;&lt;img 
+src="webquiz-online-manual/webquiz-online-manual1x.svg" alt="PIC" class="pspicture" /&gt;&lt;/div&gt;
+ 
+
+      <form id="Q3Form" onSubmit="return false;">
+        <table class="question-choices"><tr><td><input type="radio" name="Q3option"/></td>
+<td class="brown" >(a)</td><td><div class="question-choices">&lt;!--l. 558--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;x&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mi class="qopname"&gt;cos&lt;/mi&gt;&lt;mo&gt; ⁡&lt;!--FUNCTION APPLICATION--&gt; &lt;/mo&gt;&lt;!--nolimits--&gt;&lt;mi 
+&gt;t&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;,
+&lt;!--l. 558--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;y&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;mn&gt;3&lt;/mn&gt;&lt;mi class="qopname"&gt;sin&lt;/mi&gt;&lt;mo&gt; ⁡&lt;!--FUNCTION APPLICATION--&gt; &lt;/mo&gt;&lt;!--nolimits--&gt;&lt;mi 
+&gt;t&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;</div></td>
+   </tr><!-- part=0, cols=1, # answers = 4 -->
+
+<tr><td><input type="radio" name="Q3option"/></td>
+<td class="brown" >(b)</td><td><div class="question-choices">&lt;!--l. 571--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;x&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;mn&gt;3&lt;/mn&gt;&lt;mi class="qopname"&gt;cos&lt;/mi&gt;&lt;mo&gt; ⁡&lt;!--FUNCTION APPLICATION--&gt; &lt;/mo&gt;&lt;!--nolimits--&gt;&lt;mi 
+&gt;t&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;,
+&lt;!--l. 571--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;y&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mi class="qopname"&gt;sin&lt;/mi&gt;&lt;mo&gt; ⁡&lt;!--FUNCTION APPLICATION--&gt; &lt;/mo&gt;&lt;!--nolimits--&gt;&lt;mi 
+&gt;t&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;</div></td>
+   </tr><!-- part=1, cols=1, # answers = 4 -->
+
+<tr><td><input type="radio" name="Q3option"/></td>
+<td class="brown" >(c)</td><td><div class="question-choices">&lt;!--l. 575--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;x&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;mn&gt;3&lt;/mn&gt;&lt;mi class="qopname"&gt;cos&lt;/mi&gt;&lt;mo&gt; ⁡&lt;!--FUNCTION APPLICATION--&gt; &lt;/mo&gt;&lt;!--nolimits--&gt;&lt;mi 
+&gt;t&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;,
+&lt;!--l. 575--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;y&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mi class="qopname"&gt;sin&lt;/mi&gt;&lt;mo&gt; ⁡&lt;!--FUNCTION APPLICATION--&gt; &lt;/mo&gt;&lt;!--nolimits--&gt;&lt;mi 
+&gt;t&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;</div></td>
+   </tr><!-- part=2, cols=1, # answers = 4 -->
+
+<tr><td><input type="radio" name="Q3option"/></td>
+<td class="brown" >(d)</td><td><div class="question-choices">&lt;!--l. 588--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;x&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mi class="qopname"&gt;cos&lt;/mi&gt;&lt;mo&gt; ⁡&lt;!--FUNCTION APPLICATION--&gt; &lt;/mo&gt;&lt;!--nolimits--&gt;&lt;mi 
+&gt;t&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt;&lt;/math&gt;,
+&lt;!--l. 588--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;y&lt;/mi&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;mn&gt;3&lt;/mn&gt;&lt;mi class="qopname"&gt;sin&lt;/mi&gt;&lt;mo&gt; ⁡&lt;!--FUNCTION APPLICATION--&gt; &lt;/mo&gt;&lt;!--nolimits--&gt;&lt;mi 
+&gt;t&lt;/mi&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;/math&gt;</div></td>
+   </tr><!-- part=3, cols=1, # answers = 4 -->
+</table>
+        <p>
+          <input type="button" value="Check answer" name="answer" class="input-button" onClick="checkAnswer(3);"/>
+          <input type="button" value="Next unanswered question" class="input-button" title="Next unanswered question" name="next" onClick="nextQuestion(1);"/>
+        </p>
+      </form>
+
+      <div class="answer">
+
+        <div id="q3feedback1" class="feedback">
+              <em>Choice (a) is <span class="dazzle">Incorrect.</span></em>
+              <div>This is an ellipse
+with centre &lt;!--l. 559--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo 
+class="MathClass-punc"&gt;,&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt; and
+with axes of length &lt;!--l. 560--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/math&gt;
+in the &lt;!--l. 560--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;x&lt;/mi&gt;&lt;/math&gt;-direction
+and &lt;!--l. 560--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/math&gt; in the
+&lt;!--l. 560--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;y&lt;/mi&gt;&lt;/math&gt;-direction.
+&lt;div class="center" 
+&gt;
+                                                                  
+
+                                                                  
+&lt;!--width="128.03867pt" height="0.0pt"--&gt;&lt;img 
+src="webquiz-online-manual/webquiz-online-manual2x.svg" alt="PIC" class="pspicture" /&gt;&lt;/div&gt;
+&lt;a 
+ id="x1-267r2"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q3feedback2" class="feedback">
+              <em>Choice (b) is <span class="dazzle">Correct!</span></em>
+              <div>The curve is an ellipse centre (1,2) with axes length 6 in the
+&lt;!--l. 573--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;x&lt;/mi&gt;&lt;/math&gt; direction
+and 4 in the &lt;!--l. 573--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;y&lt;/mi&gt;&lt;/math&gt;
+direction.
+&lt;a 
+ id="x1-268r3"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q3feedback3" class="feedback">
+              <em>Choice (c) is <span class="dazzle">Incorrect.</span></em>
+              <div>This is an ellipse
+with centre &lt;!--l. 576--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo 
+class="MathClass-punc"&gt;,&lt;/mo&gt;&lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt; and
+with axes of length &lt;!--l. 577--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/math&gt;
+in the &lt;!--l. 577--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;x&lt;/mi&gt;&lt;/math&gt;-direction
+and &lt;!--l. 577--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/math&gt; in the
+&lt;!--l. 577--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;y&lt;/mi&gt;&lt;/math&gt;-direction.
+&lt;div class="center" 
+&gt;
+                                                                  
+
+                                                                  
+&lt;!--width="102.43094pt" height="0.0pt"--&gt;&lt;img 
+src="webquiz-online-manual/webquiz-online-manual3x.svg" alt="PIC" class="pspicture" /&gt;&lt;/div&gt;
+&lt;a 
+ id="x1-269r4"&gt;&lt;/a&gt;</div>
+        </div>
+
+        <div id="q3feedback4" class="feedback">
+              <em>Choice (d) is <span class="dazzle">Incorrect.</span></em>
+              <div>This is an ellipse
+with centre &lt;!--l. 589--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mrow &gt;&lt;mo 
+class="MathClass-open"&gt;(&lt;/mo&gt;&lt;mrow&gt;&lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt;&lt;mn&gt;1&lt;/mn&gt;&lt;mo 
+class="MathClass-punc"&gt;,&lt;/mo&gt;&lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;mo 
+class="MathClass-close"&gt;)&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt; and
+with axes of length &lt;!--l. 590--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;4&lt;/mn&gt;&lt;/math&gt;
+in the &lt;!--l. 590--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;x&lt;/mi&gt;&lt;/math&gt;-direction
+and &lt;!--l. 590--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/math&gt; in the
+&lt;!--l. 590--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mi 
+&gt;y&lt;/mi&gt;&lt;/math&gt;-direction.
+&lt;div class="center" 
+&gt;
+                                                                  
+
+                                                                  
+&lt;!--width="85.35912pt" height="0.0pt"--&gt;&lt;img 
+src="webquiz-online-manual/webquiz-online-manual4x.svg" alt="PIC" class="pspicture" /&gt;&lt;/div&gt;</div>
+        </div></div>
+      </div>
+<div id="question4" class="question" style="display:none;">
+      <span class="question-label"></span>   
+
+
+ 
+ If the vectors &lt;!--l. 605--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;a&lt;/mi&gt;&lt;/mstyle&gt;&lt;/math&gt; (of
+magnitude 8 units) and &lt;!--l. 605--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;b&lt;/mi&gt;&lt;/mstyle&gt;&lt;/math&gt;
+(of magnitude 3 units) are perpendicular, what is the value of
+&lt;!--l. 608--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mrow 
+&gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;a&lt;/mi&gt;&lt;/mstyle&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;b&lt;/mi&gt;&lt;/mstyle&gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;/mrow&gt;&lt;/math&gt; ?
+(Hint: Draw a diagram!)
+ 
+
+      <form id="Q4Form" onSubmit="return false;">
+        Answer:&nbsp;<input type="text"  onChange="checkAnswer(4);" size="7"/> units
+        <p>
+          <input type="button" value="Check answer" name="answer" class="input-button" onClick="checkAnswer(4);"/>
+          <input type="button" value="Next unanswered question" class="input-button" title="Next unanswered question" name="next" onClick="nextQuestion(1);"/>
+        </p>
+      </form>
+
+      <div class="answer">
+        <div id="q4true" class="feedback"><em class="dazzle">Correct!</em> <em></em>
+           <div>The vectors &lt;!--l. 612--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;a&lt;/mi&gt;&lt;/mstyle&gt;&lt;/math&gt;,
+&lt;!--l. 612--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mrow 
+&gt;&lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;b&lt;/mi&gt;&lt;/mstyle&gt;&lt;/mrow&gt;&lt;/math&gt;, and
+&lt;!--l. 613--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;a&lt;/mi&gt;&lt;/mstyle&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;b&lt;/mi&gt;&lt;/mstyle&gt;&lt;/math&gt;
+form the sides of a right-angled triangle, with sides of length
+&lt;!--l. 614--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/math&gt; and
+&lt;!--l. 614--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/math&gt; and hypotenuse of
+length &lt;!--l. 615--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;a&lt;/mi&gt;&lt;/mstyle&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;b&lt;/mi&gt;&lt;/mstyle&gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;/math&gt;. Therefore by
+Pythagoras’ Theorem, &lt;!--l. 617--&gt;&lt;math 
+ xmlns="http://www.w3.org/1998/Math/MathML"  
+display="inline" &gt;&lt;mrow 
+&gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;a&lt;/mi&gt;&lt;/mstyle&gt; &lt;mo 
+class="MathClass-bin"&gt;−&lt;/mo&gt; &lt;mn&gt;2&lt;/mn&gt;&lt;mstyle mathvariant="bold"&gt;&lt;mi 
+&gt;b&lt;/mi&gt;&lt;/mstyle&gt;&lt;mo 
+class="MathClass-rel"&gt;|&lt;/mo&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;msqrt&gt;&lt;mrow&gt;&lt;msup&gt;&lt;mrow 
+&gt;&lt;mn&gt;8&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow 
+&gt;&lt;mn&gt;2&lt;/mn&gt; &lt;/mrow&gt; &lt;/msup 
+&gt; &lt;mo 
+class="MathClass-bin"&gt;+&lt;/mo&gt; &lt;msup&gt;&lt;mrow 
+&gt;&lt;mn&gt;6&lt;/mn&gt;&lt;/mrow&gt;&lt;mrow 
+&gt;&lt;mn&gt;2&lt;/mn&gt;&lt;/mrow&gt;&lt;/msup 
+&gt;&lt;/mrow&gt;&lt;/msqrt&gt; &lt;mo 
+class="MathClass-rel"&gt;=&lt;/mo&gt; &lt;mn&gt;1&lt;/mn&gt;&lt;mn&gt;0&lt;/mn&gt;&lt;/mrow&gt;&lt;/math&gt;.</div>
+        </div>
+        <div id="q4false" class="feedback"><em class="dazzle">Incorrect.</em> <em>Please try again</em>
+           <div>Draw a diagram and then use Pythagoras’ theorem.</div>
+        </div></div>
+      </div>
+
+    </div>
+  </div>
+  <div style="display: none;">
+    <script src="quizindex.js"></script>
+    <script>WebQuizInit(4, 9, 'webquiz-online-manual');</script>
+  </div>
+</body>
+</html>
