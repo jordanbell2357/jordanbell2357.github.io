@@ -11,12 +11,18 @@
 <div id="jxgbox" class="jxgbox" style="width:500px; height:500px"></div>
 
 <script type="text/javascript">
-  var s = board.create('slider',[[0,4],[3,4],[-2,4,5]]);
-  var graph = board.create('functiongraph',
-                       [function(x){ return 0.5*x*x-2*x;},
-                        -2,
-                        function(){return s.Value();}]
-                    );
+var board = JXG.JSXGraph.initBoard('box1', {boundingbox: [-5, 20, 5, -2], axis:true});
+
+var A = board.create('point', [1, Math.exp(1)]);
+var graph = board.create('functiongraph', [
+         function(x) {
+            var a = Math.log(A.Y()) / A.X();
+            return Math.exp(a * x);
+         }]);
+           
+var txt = board.create('text', [-3, 10, function () {
+           return "a = " + (Math.log(A.Y()) / A.X()).toFixed(2);
+          }], {fontSize: 16});
 </script>
 
 </body>
