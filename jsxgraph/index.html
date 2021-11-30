@@ -13,14 +13,35 @@
   <div id="box" class="jxgbox" style="width:500px; height:500px;"></div>
 
   <script language="JavaScript">
-  var brd = JXG.JSXGraph.initBoard('jxgbox', {boundingbox: [-10, 10, 10, -10], axis:true}),
-    a = brd.create('slider',[[2,-5],[7,-5],[-5,1,5]], {name:'a'}),
-    b = brd.create('slider',[[2,-6],[7,-6],[-5,0,5]], {name:'b'}),
-    c = brd.create('slider',[[2,-7],[7,-7],[-5,0,5]], {name:'c'}),
+  var brd = JXG.JSXGraph.initBoard('jxgbox', {
+    boundingbox: [-10, 10, 10, -10],
+    axis: true
+  }),
+  a = brd.create('slider', [
+    [2, -5],
+    [7, -5],
+    [-5, 1, 5]
+  ], {
+    name: 'a'
+  }),
+  h = brd.create('slider', [
+    [2, -6],
+    [7, -6],
+    [-5, 0, 5]
+  ], {
+    name: 'h'
+  }),
+  k = brd.create('slider', [
+    [2, -7],
+    [7, -7],
+    [-5, 0, 5]
+  ], {
+    name: 'k'
+  }),
 
-    f = brd.create('functiongraph',[function(x){
-            return a.Value()*x*x + b.Value()*x + c.Value();
-        }]);
+  f = brd.create('functiongraph', [function(x) {
+    return a.Value() * (x - h.Value()) ** 2 + k.Value();
+  }]);
   </script>
 
 </body>
