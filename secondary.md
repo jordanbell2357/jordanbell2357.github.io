@@ -6,7 +6,7 @@ permalink: /second/
 
 ### Ontario secondary mathematics courses
 
-[The Ontario Curriculum: Secondary Mathematics](http://www.edu.gov.on.ca/eng/curriculum/secondary/curriculum-update.html) and [Ontario Curriculum and Resources website](https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics)
+[The Ontario Curriculum: Secondary Mathematics](http://www.edu.gov.on.ca/eng/curriculum/secondary/index.html) and [Ontario Curriculum and Resources website](https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics)
 
 Grade | Course Code | Course Name
 --- | --- | --- | ---
@@ -21,3 +21,5 @@ Grade | Course Code | Course Name
 12 | MAP4C | Foundations for College Mathematics, Grade 12
 12 | MCT4C | Mathematics for College Technology, Grade 12
 12 | MCV4U | Calculus and Vectors
+--- | --- | --- | ---
+12 | CIA4U | Analysing Current Economic Issues, Grade 12, University Preparation
