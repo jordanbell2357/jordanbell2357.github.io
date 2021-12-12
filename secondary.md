@@ -4,9 +4,11 @@ title: Secondary
 permalink: /second/
 ---
 
-### Ontario secondary mathematics courses
+### Ontario secondary curriculum
 
-[The Ontario Curriculum: Secondary Mathematics](http://www.edu.gov.on.ca/eng/curriculum/secondary/index.html) and [Ontario Curriculum and Resources website](https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics)
+[The Ontario Curriculum](http://www.edu.gov.on.ca/eng/curriculum/secondary/index.html)
+
+[Ontario Curriculum and Resources website](https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics)
 
 Grade | Course Code | Course Name
 --- | --- | --- | ---
