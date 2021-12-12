@@ -21,5 +21,7 @@ Grade | Course Code | Course Name
 12 | MAP4C | Foundations for College Mathematics, Grade 12
 12 | MCT4C | Mathematics for College Technology, Grade 12
 12 | MCV4U | Calculus and Vectors
+
+Grade | Course Code | Course Name
 --- | --- | --- | ---
 12 | CIA4U | Analysing Current Economic Issues, Grade 12, University Preparation
