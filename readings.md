@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Readings on Education
+title: Readings
 permalink: /quotes/
 ---
 
-### Excerpts from authoritative writings on learning, pedagogy, psychology, and epistemology 
+### Excerpts from classical writings on learning, pedagogy, psychology, and epistemology 
 
 <!--
 <ul>
