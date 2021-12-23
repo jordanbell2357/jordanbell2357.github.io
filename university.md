@@ -1,6 +1,6 @@
 ---
 layout: page
-title: University
+title: University courses
 permalink: /university/
 ---
 

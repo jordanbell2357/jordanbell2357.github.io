@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Secondary
-permalink: /second/
+title: Secondary courses
+permalink: /secondary/
 ---
 
 ### Ontario secondary curriculum
