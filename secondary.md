@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Secondary courses
+title: Secondary
 permalink: /secondary/
 ---
 

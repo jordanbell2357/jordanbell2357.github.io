@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Testimonials and References
+title: Testimonials
 permalink: /testimonials/
 ---
