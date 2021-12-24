@@ -11,7 +11,9 @@ layout: home
 This website is the anchor of my videoconferencing (Zoom) mathematics tutoring practice.
 It presents my experience, credentials, and my original content.
 
-I bring complete familiarity with the Ontario secondary mathematics curriculum, and at the university level with all first to third year mathematics courses at the University of Toronto (for several years during my enrollment in the mathematics PhD program at the University of Toronto). In addition to long experience tutoring students at all three of the University of Toronto campuses, I have tutored mathematics, statistics, and economics courses for students at the University of Western Ontario and McGill University over online sessions.
+Complete familiarity with the Ontario secondary mathematics curriculum, and at the university level with all first to third year mathematics courses at the University of Toronto (for several years during my enrollment in the mathematics PhD program at the University of Toronto).
+
+In addition to long experience tutoring students at all three of the University of Toronto campuses, I have tutored mathematics, statistics, and economics courses for students at the University of Western Ontario and McGill University over online sessions.
 
 A major value added is skill with designing study plans for courses, choosing specifically targetted extra exercise sets to strengthen areas, and guiding the client to where to focus their efforts to see the greatest gains, much like a personal trainer at a gym vs. hesitantly doing reps on a machine you are not sure if you are using correctly after a group class you didn't quite follow.
 
