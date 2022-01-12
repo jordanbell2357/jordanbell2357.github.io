@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Expository writing
-permalink: /expository/
+title: Writings
+permalink: /writings/
 ---
 
