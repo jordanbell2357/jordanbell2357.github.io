@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Data visualizations
+title: Data Visualizations
 permalink: /visualizations/
 ---
 
