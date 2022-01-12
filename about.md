@@ -1,7 +1,16 @@
 ---
 layout: page
-title: About
-permalink: /about/
+title: CV
+permalink: /CV/
 ---
 
+# CV
+
 [CV](/assets/pdfs/Resume.pdf)
+
+# Publications
+
+
+
+# Awards
+
