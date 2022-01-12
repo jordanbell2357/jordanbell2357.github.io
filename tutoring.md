@@ -4,7 +4,7 @@ title: Tutoring
 permalink: /tutoring/
 ---
 
-# Tutoring overview
+## Tutoring overview
 
 My rate per one hour session is \$60 (CAD) per one hour session. I send an invoice the same day from [Xero](https://www.xero.com/ca/) to be paid the same day after the session by Interac E-Transfer to my email address jordan.bell@gmail.com
 
@@ -19,7 +19,7 @@ I have no special childhood education training and for certain patterns of behav
 
 My tutoring practice is done online in one hour sessions, scheduled with Google Calendar and using Zoom, writing on the screen and on paper. The one-on-one communication in tutoring avoid all the downfalls of online courses (disengagement, undirected, uncertain if you are doing it right), and adds new tools to use for one-on-one teaching.
 
-# Secondary
+## Secondary
 
 [The Ontario Curriculum](http://www.edu.gov.on.ca/eng/curriculum/secondary/index.html)
 
