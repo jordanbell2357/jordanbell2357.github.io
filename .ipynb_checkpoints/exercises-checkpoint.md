@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Resources
-permalink: /resources/
+title: Exercises
+permalink: /exercises/
 ---
 
 1. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)

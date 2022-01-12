@@ -1,10 +1,10 @@
 ---
 layout: page
-title: Readings
-permalink: /quotes/
+title: Philosophy of learning
+permalink: /philosophy/
 ---
 
-### Excerpts from classical writings on learning, pedagogy, psychology, and epistemology 
+# Excerpts from classic writings on learning, pedagogy, psychology, and epistemology 
 
 <!--
 <ul>
