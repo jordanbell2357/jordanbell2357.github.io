@@ -4,7 +4,9 @@ title: Philosophy
 permalink: /philosophy/
 ---
 
-# Excerpts from classic writings on learning, pedagogy, psychology, and epistemology 
+# Excerpts from classic writings on the philosophy of education
+
+Quotations on education with original text and selected English translations. For each quotation, multiple English translations are given. 
 
 <!--
 <ul>
