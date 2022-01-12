@@ -6,6 +6,8 @@ permalink: /tutoring/
 
 # Tutoring overview
 
+My rate per one hour session is \$60 (CAD) per one hour session. I send an invoice the same day from [Xero](https://www.xero.com/ca/) to be paid the same day after the session by Interac E-Transfer to my email address jordan.bell@gmail.com
+
 My work with primary mathematics has been working with gifted students doing enrichment - logic puzzles, geometry, problems from elementary school math contests. I have had successful online sessions with students as early as grade 3.
 
 I am an extraordinarily experienced tutor for mathematics courses and mathematical courses (physics, economics, and accounting), with a calling for education, learning, explanation and exposition.[^1] I intentionally try to tutor all levels of math from higher elementary up - and my goal is to alway find the student's level and to help them move forward from wherever that is, whether it is adding fractions, linear equations, multiplying polynomials, finding roots, determining asymptotes, taking a derivative, finding the basis for a vector space, doing Langrange multipliers, or working with Brownian motion and stochastic calculus. Knowledge is a ladder that goes up forever and what matters is the process of moving up rungs.
