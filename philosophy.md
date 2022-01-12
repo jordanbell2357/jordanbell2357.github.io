@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Philosophy of Learning
+title: Philosophy
 permalink: /philosophy/
 ---
 
