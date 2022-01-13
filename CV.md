@@ -6,6 +6,17 @@ permalink: /CV/
 
 [CV](/assets/pdfs/cv_bell.pdf)
 
+## Awards
+
+2019 recipient of [Carl B. Allendoerfer Award for expository mathematical writing, Mathematical Association of America (MAA)](https://www.maa.org/programs-and-communities/member-communities/maa-awards/writing-awards/carl-b-allendoerfer-awards) for
+> Jordan Bell and Viktor Blåsjö, [*Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges*](https://doi.org/10.1080/0025570X.2018.1506656), Mathematics Magazine, Vol. 91, no. 5, December 2018, pp. 341-347. DOI: [10.1080/0025570X.2018.1506656](https://doi.org/10.1080/0025570X.2018.1506656)
+
+University Medal in Mathematics, Carleton University
+
+Canada Graduate Scholarships – Master's (CGS M), University of Toronto, Department of Mathematics
+
+Canada Graduate Scholarships – Doctoral (CGS D), University of Toronto, Department of Mathematics
+
 ## Publications
 
 - Andrews, George E., and Jordan Bell. “Euler’s Pentagonal Number Theorem and the Rogers-Fine Identity.” *Annals of Combinatorics* 16, no. 3 (2012): 411–20. <https://doi.org/10.1007/s00026-012-0139-4>.
@@ -22,13 +33,13 @@ permalink: /CV/
 
 - ———. “Polynomial Modular *n*-Queens Solutions.” *Acta Arithmetica* 129, no. 4 (2007): 335–39. https://doi.org/10.4064/aa129-4-4.
 
-- Bell, Jordan, and Viktor Blåsjö. “Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges.” *Mathematics Magazine* 91, no. 5 (2018): 341–47. https://doi.org/10.1080/0025570X.2018.1506656.
+- Bell, Jordan, and Viktor Blåsjö. “Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges.” *Mathematics Magazine* 91, no. 5 (2018): 341–47. <https://doi.org/10.1080/0025570X.2018.1506656>.
 
 - Bell, Jordan, and Brett Stevens. “A Survey of Known Results and Research Areas for *n*-Queens.” *Discrete Mathematics* 309, no. 1 (2009): 1–31. <https://doi.org/10.1016/j.disc.2007.12.043>.
 
 - ———. “Constructing Orthogonal Pandiagonal Latin Squares and Panmagic Squares from Modular *n*-Queens Solutions.” *Journal of Combinatorial Designs* 15, no. 3 (2007): 221–34. <https://doi.org/10.1002/jcd.20143>.
 
-- ———. “Results for the $n$-Queens Problem on the Möbius Board.” *The Australasian Journal of Combinatorics* 42 (2008): 21–34. <https://ajc.maths.uq.edu.au>
+- ———. “Results for the *n*-Queens Problem on the Möbius Board.” *The Australasian Journal of Combinatorics* 42 (2008): 21–34. <https://ajc.maths.uq.edu.au>
 
 - Bell, Jordan, and Qiang Wang. “Results on Permutations with Distinct Difference Property.” *Contributions to Discrete Mathematics* 4, no. 1 (2009): 107–11. <https://cdm.ucalgary.ca/>
 
@@ -39,9 +50,3 @@ permalink: /CV/
 - Hawking, Stephen (ed.), *God Created the Integers: The Mathematical Breakthroughs That Changed History (New Edition)*. Leonhard Euler, “On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)”, pp. 393-399, translated from the Latin by Jordan Bell. Running Press, Philadelphia, 2007. <https://www.runningpress.com/titles/stephen-hawking/god-created-the-integers/9780762432721/>
 
 [On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)](/assets/pdfs/E41.pdf)
-
-
-## Awards
-
-2019 recipient of [Carl B. Allendoerfer Award for expository mathematical writing, Mathematical Association of America (MAA)](https://www.maa.org/programs-and-communities/member-communities/maa-awards/writing-awards/carl-b-allendoerfer-awards) for
-> Jordan Bell and Viktor Blåsjö, [*Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges*](https://doi.org/10.1080/0025570X.2018.1506656), Mathematics Magazine, Vol. 91, no. 5, December 2018, pp. 341-347. DOI: [10.1080/0025570X.2018.1506656](https://doi.org/10.1080/0025570X.2018.1506656)
