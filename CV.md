@@ -31,7 +31,7 @@ Canada Graduate Scholarships – Doctoral (CGS D), University of Toronto, Depart
 
 - ———. “Nonlinear Modular Latin Queen Squares.” *Utilitas Mathematica* 74 (2007): 71–75.
 
-- ———. “Polynomial Modular *n*-Queens Solutions.” *Acta Arithmetica* 129, no. 4 (2007): 335–39. https://doi.org/10.4064/aa129-4-4.
+- ———. “Polynomial Modular *n*-Queens Solutions.” *Acta Arithmetica* 129, no. 4 (2007): 335–39. <https://doi.org/10.4064/aa129-4-4>.
 
 - Bell, Jordan, and Viktor Blåsjö. “Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges.” *Mathematics Magazine* 91, no. 5 (2018): 341–47. <https://doi.org/10.1080/0025570X.2018.1506656>.
 
