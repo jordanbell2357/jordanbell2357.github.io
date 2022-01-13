@@ -4,7 +4,25 @@ title: CV
 permalink: /CV/
 ---
 
+## CV
+
 [CV](/assets/pdfs/cv_bell.pdf)
+
+## Areas of professional and scholarly interest
+
+- one-on-one help and guidance for learners,
+- creating learning tools for mathematics and other exact subjects,
+- statistical visualizations and information storytelling,
+- video/animation for learning,
+- frontend development,
+- app development,
+- explanatory/research reports,
+- curated reading lists,
+- time series analysis, harmonic analysis, number theory, Hamiltonian partial differential equations, Brownian motion and stochastic calculus,
+- history of mathematics,
+- financial time series,
+- global commodity flows and logistics,
+- ...
 
 ## Awards
 
