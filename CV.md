@@ -27,7 +27,7 @@ Canada Graduate Scholarships – Doctoral (CGS D), University of Toronto, Depart
 
 - Andrews, George E., and Jordan Bell. “Euler’s Pentagonal Number Theorem and the Rogers-Fine Identity.” *Annals of Combinatorics* 16, no. 3 (2012): 411–20. <https://doi.org/10.1007/s00026-012-0139-4>.
 
-- Bell, Jordan. “A New Method for Constructing Nonlinear Modular *n*-Queens Solutions.” *Ars Combinatoria* 78 (2006): 151–55. <http://www.combinatoire.ca/ArsCombinatoria/index.html>.
+- Bell, Jordan. “A New Method for Constructing Nonlinear Modular *n*-Queens Solutions.” *Ars Combinatoria* 78 (2006): 151–55. [Ars Combinatoria. A Canadian Journal of Combinatorics](http://www.combinatoire.ca/ArsCombinatoria/index.html).
 
 - ———. “A Summary of Euler’s Work on the Pentagonal Number Theorem.” *Archive for History of Exact Sciences* 64, no. 3 (2010): 301–73. <https://doi.org/10.1007/s00407-010-0057-y>.
 
@@ -45,6 +45,6 @@ Canada Graduate Scholarships – Doctoral (CGS D), University of Toronto, Depart
 
 - ———. “Constructing Orthogonal Pandiagonal Latin Squares and Panmagic Squares from Modular *n*-Queens Solutions.” *Journal of Combinatorial Designs* 15, no. 3 (2007): 221–34. <https://doi.org/10.1002/jcd.20143>.
 
-- ———. “Results for the *n*-Queens Problem on the Möbius Board.” *The Australasian Journal of Combinatorics* 42 (2008): 21–34. <https://ajc.maths.uq.edu.au>.
+- ———. “Results for the *n*-Queens Problem on the Möbius Board.” *The Australasian Journal of Combinatorics* 42 (2008): 21–34. [The Australasian Journal of Combinatorics](https://ajc.maths.uq.edu.au).
 
-- Bell, Jordan, and Qiang Wang. “Results on Permutations with Distinct Difference Property.” *Contributions to Discrete Mathematics* 4, no. 1 (2009): 107–11. <https://cdm.ucalgary.ca/>.
+- Bell, Jordan, and Qiang Wang. “Results on Permutations with Distinct Difference Property.” *Contributions to Discrete Mathematics* 4, no. 1 (2009): 107–11. [Contributions to Discrete Mathematics](https://cdm.ucalgary.ca/).
