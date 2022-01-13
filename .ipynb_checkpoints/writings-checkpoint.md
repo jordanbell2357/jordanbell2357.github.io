@@ -9,3 +9,5 @@ permalink: /writings/
     <a href="{{ writing.url }}">{{ writing.title}}</a>
   </li>
 {% endfor %}
+
+[The Pontryagin dual of Q](/latex/notes/QPontryaginDual/QPontryaginDual.html)
