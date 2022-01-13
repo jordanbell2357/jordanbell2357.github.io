@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Convolution semigroups, canonical processes, and Brownian motion
-category: writings
+category: notes
 ---
 
 # Convolution semigroups, projective families, and canonical processes
