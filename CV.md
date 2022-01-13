@@ -47,6 +47,4 @@ Canada Graduate Scholarships – Doctoral (CGS D), University of Toronto, Depart
 
 ## Translations
 
-- Hawking, Stephen (ed.), *God Created the Integers: The Mathematical Breakthroughs That Changed History (New Edition)*. Leonhard Euler, “On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)”, pp. 393-399, translated from the Latin by Jordan Bell. Running Press, Philadelphia, 2007. <https://www.runningpress.com/titles/stephen-hawking/god-created-the-integers/9780762432721/>
-
-[On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)](/assets/pdfs/E41.pdf)
+- Hawking, Stephen (ed.), *God Created the Integers: The Mathematical Breakthroughs That Changed History (New Edition)*. Leonhard Euler, “On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)”, pp. 393-399, translated from the Latin by Jordan Bell. Running Press, Philadelphia, 2007. <https://www.runningpress.com/titles/stephen-hawking/god-created-the-integers/9780762432721/> [PDF](/assets/pdfs/E41.pdf)
