@@ -4,8 +4,8 @@ title: Writings
 permalink: /writings/
 ---
 
-{% for note in site.notes %}
+{% for writing in site.writings %}
   <li>
-    <a href="{{ note.url }}">{{ note.title}}</a>
+    <a href="{{ writing.url }}">{{ writing.title}}</a>
   </li>
 {% endfor %}
