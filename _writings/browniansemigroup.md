@@ -5,7 +5,7 @@ title: Convolution semigroups, canonical processes, and Brownian motion
 
 # Convolution semigroups, projective families, and canonical processes
 
-Let $$E=\mathbb{R}^d$$ and let $\mathscr{E}=\mathscr{B}_{\mathbb{R}^d}$,
+Let $$E=\mathbb{R}^d$$ and let $$\mathscr{E}=\mathscr{B}_{\mathbb{R}^d}$$,
 the Borel $\sigma$-algebra of $\mathbb{R}^d$, and let $\mathscr{P}(E)$
 be the collection of Borel probability measures on $\mathbb{R}^d$. With
 the **narrow topology**, $\mathscr{P}(E)$ is a Polish space.[^1] For a
