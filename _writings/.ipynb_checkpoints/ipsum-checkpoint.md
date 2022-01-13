@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Ipsum
-category: notes
+category: writings
 ---
 
 # Ipsum
