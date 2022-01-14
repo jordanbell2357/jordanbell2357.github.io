@@ -10,4 +10,4 @@ permalink: /writings/
   </li>
 {% endfor %}
 
-[The Pontryagin dual of Q](/latex/notes/QPontryaginDual/QPontryaginDual.html)
+[The Pontryagin dual of Q](/latex/notes/QPontryaginDual/Q-Pontryagin/Q-Pontryagin.html)
