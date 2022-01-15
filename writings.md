@@ -11,3 +11,5 @@ permalink: /writings/
 {% endfor %}
 
 [The Pontryagin dual of Q](/latex/notes/QPontryaginDual/Q-Pontryagin/Q-Pontryagin.html)
+
+[p-adic](/latex/notes/padic/padic.html)
