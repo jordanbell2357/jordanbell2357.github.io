@@ -10,6 +10,10 @@ permalink: /writings/
   </li>
 {% endfor %}
 
-[The Pontryagin dual of Q](/latex/notes/QPontryaginDual/Q-Pontryagin/Q-Pontryagin.html)
+[Hensel’s lemma, valuations, and *p*-adic numbers](/latex/latexml/padic/padic.html) [PDF](/latex/latexml/padic/padic.pdf)
 
-[p-adic](/latex/notes/padic/padic.html)
+[The Pontryagin duals of ℚ/ℤ and ℚ](/latex/latexml/Qdual/Qdual.html) [PDF](/latex/latexml/Qdual/Qdual.pdf)
+
+[Hermite functions](/latex/latexml/hermitefunctions/hermitefunctions.html) [PDF](/latex/latexml/hermitefunctions/hermitefunctions.pdf)
+
+[Infinite product measure](/latex/latexml/productmeasure/productmeasure.html) [PDF](/latex/latexml/hermitefunctions/productmeasure.pdf)
