@@ -10,10 +10,10 @@ permalink: /writings/
   </li>
 {% endfor %}
 
-[Hensel’s lemma, valuations, and *p*-adic numbers](/latex/latexml/padic/padic.html) [PDF](/latex/latexml/padic/padic.pdf)
+[Hensel’s lemma, valuations, and *p*-adic numbers](/latex/notes/padic/latexml/padic.html) [PDF](/latex/notes/padic/padic.pdf)
 
-[The Pontryagin duals of ℚ/ℤ and ℚ](/latex/latexml/Qdual/Qdual.html) [PDF](/latex/latexml/Qdual/Qdual.pdf)
+[The Pontryagin duals of ℚ/ℤ and ℚ](/latex/notes/Qdual/latexml/Qdual.html) [PDF](/latex/notes/Qdual/Qdual.pdf)
 
-[Hermite functions](/latex/latexml/hermitefunctions/hermitefunctions.html) [PDF](/latex/latexml/hermitefunctions/hermitefunctions.pdf)
+[Hermite functions](/latex/notes/hermitefunctions/latexml/hermitefunctions.html) [PDF](/latex/notes/hermitefunctions/hermitefunctions.pdf)
 
-[Infinite product measure](/latex/latexml/productmeasure/productmeasure.html) [PDF](/latex/latexml/hermitefunctions/productmeasure.pdf)
+[Infinite product measure](/latex/notes/productmeasure/latexml/productmeasure.html) [PDF](/latex/notes/hermitefunctions/productmeasure.pdf)
