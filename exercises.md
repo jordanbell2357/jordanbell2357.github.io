@@ -15,3 +15,5 @@ permalink: /exercises/
 # Desmos
 
 1. <https://www.desmos.com/calculator/193fvqnocn>
+
+2. <https://www.desmos.com/calculator/wtkeqbzajd>
