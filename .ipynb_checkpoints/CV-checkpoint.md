@@ -6,7 +6,7 @@ permalink: /CV/
 
 ## CV
 
-[CV](/assets/pdfs/cv_bell.pdf)
+[CV](/LaTeXML/resume/cv_bell.pdf)
 
 ## Areas of professional and scholarly interest
 
