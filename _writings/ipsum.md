@@ -12,3 +12,8 @@ the **narrow topology**, $$\mathscr{P}(E)$$ is a Polish space. For a
 nonempty set $$J$$, we write
 $$\mathscr{E}^J = \bigotimes_{t \in J} \mathscr{E},$$ the product
 $$\sigma$$-algebra.
+
+\begin{equation} 
+  f\left(k\right) = \binom{n}{k} p^k\left(1-p\right)^{n-k}
+  (\#eq:binom)
+\end{equation} 
