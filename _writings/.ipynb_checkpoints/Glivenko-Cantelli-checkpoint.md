@@ -29,7 +29,7 @@ If $$X$$ is a separable metrizable space, then it is metrizable by a metric $$d$
 [^2]: Daniel W. Stroock, *Probability Theory: An Analytic View*, p.~371, Lemma 9.1.4.}
 
 <a name="theorem-Ud"></a>
-## Theorem
+## Theorem 1
 
 If $$X$$ is a separable metrizable space, then $$X$$ is metrizable by a metric $$d$$ for which there
 is a countable dense subset $$D$$ of $$U_d(X)$$ such that $$\mu_n$$ converges narrowly to $$\mu$$ if and only if
@@ -44,17 +44,17 @@ $$
 Let $$(\Omega,S,P)$$ be a probability space and let $$X$$ be a separable metric space, with the Borel $$\sigma$$-algebra $$\mathscr{B}_X$$.
 We say that a finite collection measurable functions $$\xi_i: \Omega \to X$$, $$1 \leq i \leq n$$, is **independent** if
 $$
-\begin{displaymath}
+\begin{aligned}
 P\left( \bigcap_{i=1}^n \xi_i^{-1}(A_i) \right) = \prod_{i=1}^n P(\xi_i^{-1}(A_i)),
 \qquad A_1,\ldots,A_n \in \mathscr{B}_X,
-\end{displaymath}
+\end{aligned}
 $$
 i.e.
 $$
-\begin{displaymath}
+\begin{aligned}
 P(\xi_1 \in A_1, \ldots, \xi_n \in A_n) = P(\xi_1 \in A_1) \cdots P(\xi_n \in A_n),
 \qquad A_1,\ldots,A_n \in \mathscr{B}_X.
-\end{displaymath}
+\end{aligned}
 $$
 We say that a family of measurable functions is independent if every finite subset of it is independent.
 
@@ -67,22 +67,22 @@ measurable functions is identically distributed if any two of them are identical
 If $$\zeta \in L^1(P)$$,  
 the **expectation of** $$\zeta$$ is
 $$
-\begin{displaymath}
+\begin{aligned}
 E(\zeta) = \int_\Omega \zeta dP,
-\end{displaymath}
+\end{aligned}
 $$
 and by the change of variables theorem,
 $$
-\begin{displaymath}
+\begin{aligned}
 \int_\Omega \zeta(\omega) dP(\omega) = \int_{\mathbb{R}} x d(\zeta_* P)(x).
-\end{displaymath}
+\end{aligned}
 $$
 The **strong law of large numbers**[^3] states that if $$\zeta_1,\zeta_2, \ldots \in L^1(P)$$ 
 are independent and identically distributed, with common expectation $$E_0$$, then
 $$
-\begin{displaymath}
+\begin{aligned}
 P\left( \left\{ \omega \in \Omega: \sum_{i=1}^n \frac{\zeta_i(\omega)}{n} \to E_0 \right\} \right) = 1.
-\end{displaymath}
+\end{aligned}
 $$
 
 [^3]: M. Loève, *Probability Theory I*, 4th ed., p. 251, 17.B.
@@ -97,9 +97,9 @@ Let $$X$$ be a separable metrizable space and let $$\xi_1,\xi_2,\ldots$$ be inde
 functions $$\Omega \to X$$.
 For $$\omega \in \Omega$$, define $$\mu_n^\omega$$ on $$\mathscr{B}_X$$ by
 $$
-\begin{displaymath}
+\begin{aligned}
 \mu_n^\omega = \sum_{i=1}^n \frac{1}{n} \delta_{\xi_i(\omega)},
-\end{displaymath}
+\end{aligned}
 $$
 which is a probability measure. We call the sequence $$\mu_n^\omega$$ the **sample distribution of** $$\omega$$.
 
@@ -116,9 +116,9 @@ let $$X$$ be a separable metrizable space and
 let  $$\xi_1,\xi_2,\ldots$$ be independent and identically distributed measurable functions
 $$\Omega \to X$$, with common pushforward measure $$\mu$$. Then
 $$
-\begin{displaymath}
+\begin{aligned}
 P\left( \left\{ \omega \in \Omega: \textnormal{$$\mu_n^\omega \to \mu$$ narrowly} \right\} \right) = 1.
-\end{displaymath}
+\end{aligned}
 $$
 
 ## Proof
@@ -128,60 +128,60 @@ $$(g \circ \xi_i)_* P = g_* \mu$$, so the sequence $$g \circ \xi_i$$ are identic
 Let $$A_1,\ldots,A_n \in \mathscr{B}_{\mathbb{R}}$$. Then $$g^{-1}(A_1),\ldots,g^{-1}(A_n) \in \mathscr{B}_X$$, and because
 $$\xi_1,\xi_2,\ldots$$ are independent,
 $$
-\begin{displaymath}
+\begin{aligned}
 P\left( \bigcap_{i=1}^n \xi_i^{-1}(g^{-1}(A_i)) \right) = \prod_{i=1}^n P(\xi_i^{-1}(g^{-1}(A_i))),
-\end{displaymath}
+\end{aligned}
 $$
 i.e.,
 $$
-\begin{displaymath}
+\begin{aligned}
 P\left( \bigcap_{i=1}^n (g \circ \xi_i)^{-1}(A_i) \right) = \prod_{i=1}^n P((g \circ \xi_i)^{-1}(A_i)),
-\end{displaymath}
+\end{aligned}
 $$
 showing that  $$(g \circ \xi_1),(g \circ \xi_2),\ldots$$ are independent. 
 For any $$i$$, by the change of variables theorem
 $$
-\begin{displaymath}
+\begin{aligned}
 E( g \circ \xi_i) = \int_\Omega g \circ \xi_i dP = \int_X g d((\xi_i)_* P) = 
 \int_X g d\mu,
-\end{displaymath}
+\end{aligned}
 $$
 so the strong law of large numbers tells us that there is a set $$N_g \in S$$ with $$P(N_g)=0$$ such that
 for all $$\omega \in \Omega \setminus N_g$$, 
 $$
-\begin{displaymath}
+\begin{aligned}
 \sum_{i=1}^n \frac{(g \circ \xi_i)(\omega)}{n} \to \int_X g d\mu.
-\end{displaymath}
+\end{aligned}
 $$
 But
 $$
-\begin{displaymath}
+\begin{aligned}
 \sum_{i=1}^n \frac{(g \circ \xi_i)(\omega)}{n} = 
 \sum_{i=1}^n \frac{1}{n} \int_X g d\delta_{\xi_i(\omega)}
 =\int_X g d\mu_n^\omega,
-\end{displaymath}
+\end{aligned}
 $$
 so for all $$\omega \in \Omega \setminus N_g$$,
 $$
-\begin{displaymath}
+\begin{aligned}
 \int_X g d\mu_n^\omega \to \int_X g d\mu.
-\end{displaymath}
+\end{aligned}
 $$
 
 Because $$X$$ is separable,
 [Theorem 1](#theorem-Ud) tells us that there is a metric $$d$$ that induces the topology of $$X$$ and some countable dense subset $$G$$
 of $$U_d(X)$$ such that a sequence $$\nu_n$$ in $$\mathscr{P}(X)$$ converges narrowly to $$\nu$$  if and only if 
 $$
-\begin{displaymath}
+\begin{aligned}
 \int_X g d\nu_n \to \int_X g d\nu, \qquad g \in G.
-\end{displaymath}
+\end{aligned}
 $$
 Now let $$N=\bigcup_{g \in G} N_g$$, which satisfies $$P(N)=0$$, and if $$\omega \in \Omega \setminus N$$ then
 for each $$g \in G$$,
 $$
-\begin{displaymath}
+\begin{aligned}
 \int_X g d\mu_n^\omega \to \int_X g d\mu.
-\end{displaymath}
+\end{aligned}
 $$
 This implies that for all $$\mu_n^\omega$$ converges narrowly to $$\mu$$. That is,
 there is a set $$N \in S$$ with $$P(N)=0$$ such that for all $$\omega \in \Omega \setminus N$$, 
