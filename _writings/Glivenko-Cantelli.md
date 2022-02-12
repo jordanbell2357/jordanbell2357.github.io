@@ -3,6 +3,7 @@ layout: post
 title: The Glivenko-Cantelli theorem
 author: Jordan Bell
 date: 2015-04-12
+katex: True
 ---
 
 # Narrow topology
@@ -30,9 +31,9 @@ If $$X$$ is a separable metrizable space, then it is metrizable by a metric $$d$
 If $$X$$ is a separable metrizable space, then $$X$$ is metrizable by a metric $$d$$ for which there
 is a countable dense subset $$D$$ of $$U_d(X)$$ such that $$\mu_n$$ converges narrowly to $$\mu$$ if and only if
 $$
-\begin{equation}
+\begin{gather*}
 \int_X f d\mu_n \to \int_X f d\mu, \qquad f \in D.
-\end{equation}
+\end{gather*}
 $$
 
 # Independent and identically distributed random variables
