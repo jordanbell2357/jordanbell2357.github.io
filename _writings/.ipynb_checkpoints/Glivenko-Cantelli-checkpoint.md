@@ -59,8 +59,10 @@ $$
 We say that a family of measurable functions is independent if every finite subset of it is independent.
 
 We say that two measurable functions $$f,g:\Omega \to X$$ are **identically distributed** if the pushforward $$f_* P$$ of $$P$$ by $$f$$
-is equal to the pushforward $$g_* P$$ of $$P$$ by $$g$$, i.e.  
-$$P(f^{-1}(A)) = P(g^{-1}(A))$$  
+is equal to the pushforward $$g_* P$$ of $$P$$ by $$g$$, i.e.
+
+$$P(f^{-1}(A)) = P(g^{-1}(A))$$
+
 for every $$A \in \mathscr{B}_X$$. We say that a family of
 measurable functions is identically distributed if any two of them are identically distributed.
 
