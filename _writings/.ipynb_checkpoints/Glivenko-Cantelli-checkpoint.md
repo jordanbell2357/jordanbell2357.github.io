@@ -7,7 +7,7 @@ date: 2015-04-12
 
 # Narrow topology
 
-Let $$X$$ be a metrizable space and let $$C_b(X)$$ be the Banach space of bounded continuous functions $$X \to \mathbb{R}$$, with the norm $$|f| = \sup_{x \in X} |f(x)|$$.  If $$X$$ is metrizable with the metric $$d$$, let $$U_d(X)$$ be the collection of bounded $$d$$-uniformly continuous functions $$X \to \mathbb{R}$$. This is a vector space and is a closed subset of $$C_b(X)$$, thus is itself a Banach space. 
+Let $$X$$ be a metrizable space and let $$C_b(X)$$ be the Banach space of bounded continuous functions $$X \to \mathbb{R}$$, with the norm $$|f| = \sup_{x \in X} |f(x)|$$.  If $$X$$ is metrizable with the metric $$d$$, let $$U_d(X)$$ be the collection of bounded $$d$$-uniformly continuous functions $$X \to \mathbb{R}$$. This is a vector space and is a closed subset of $$C_b(X)$$, thus is itself a Banach space.
 
 Let $$X$$ be a  metrizable space and
 denote by $$\mathscr{P}(X)$$ the collection of Borel probability measures on $$X$$.
