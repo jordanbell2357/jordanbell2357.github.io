@@ -49,7 +49,7 @@ P\left( \bigcap_{i=1}^n \xi_i^{-1}(A_i) \right) = \prod_{i=1}^n P(\xi_i^{-1}(A_i
 \qquad A_1,\ldots,A_n \in \mathscr{B}_X,
 \end{aligned}
 $$  
-i.e.
+i.e.  
 $$
 \begin{aligned}
 P(\xi_1 \in A_1, \ldots, \xi_n \in A_n) = P(\xi_1 \in A_1) \cdots P(\xi_n \in A_n),
