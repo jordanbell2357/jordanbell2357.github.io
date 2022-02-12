@@ -170,11 +170,11 @@ $$
 
 Because $$X$$ is separable,
 [Theorem 1](#theorem-Ud) tells us that there is a metric $$d$$ that induces the topology of $$X$$ and some countable dense subset $$G$$
-of $$U_d(X)$$ such that a sequence $$\nu_n$$ in $$\mathscr{P}(X)$$ converges narrowly to $$\nu$$  if and only if 
+of $$U_d(X)$$ such that a sequence $$\nu_n$$ in $$\mathscr{P}(X)$$ converges narrowly to $$\nu$$ if and only if  
 $$
 \begin{aligned}
 \int_X g d\nu_n \to \int_X g d\nu, \qquad g \in G.
-\end{aligned}
+\end{aligned}  
 $$  
 Now let $$N=\bigcup_{g \in G} N_g$$, which satisfies $$P(N)=0$$, and if $$\omega \in \Omega \setminus N$$ then
 for each $$g \in G$$,
