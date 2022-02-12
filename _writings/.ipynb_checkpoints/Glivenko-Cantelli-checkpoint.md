@@ -111,13 +111,14 @@ to the common pushforward measure.[^4]
 [^4]: K. R. Parthasarathy, *Probability Measures on Metric Spaces*, p.~53, Theorem 7.1.
 
 ## Glivenko-Cantelli theorem
+
 Let $$(\Omega,S,P)$$ be a probability space,
 let $$X$$ be a separable metrizable space and 
 let  $$\xi_1,\xi_2,\ldots$$ be independent and identically distributed measurable functions
 $$\Omega \to X$$, with common pushforward measure $$\mu$$. Then
 $$
 \begin{aligned}
-P\left( \left\{ \omega \in \Omega: \textnormal{$$\mu_n^\omega \to \mu$$ narrowly} \right\} \right) = 1.
+P\left( \left\{ \omega \in \Omega: \mu_n^\omega \to \mu \textnormal{narrowly} \right\} \right) = 1.
 \end{aligned}
 $$
 
