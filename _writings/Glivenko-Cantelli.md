@@ -159,7 +159,7 @@ $$
 =\int_X g d\mu_n^\omega,
 \end{aligned}
 $$  
-so for all $$\omega \in \Omega \setminus N_g$$,
+so for all $$\omega \in \Omega \setminus N_g$$,  
 $$
 \begin{aligned}
 \int_X g d\mu_n^\omega \to \int_X g d\mu.
