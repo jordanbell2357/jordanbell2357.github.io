@@ -118,13 +118,13 @@ let  $$\xi_1,\xi_2,\ldots$$ be independent and identically distributed measurabl
 $$\Omega \to X$$, with common pushforward measure $$\mu$$. Then
 $$
 \begin{aligned}
-P\left( \left\{ \omega \in \Omega: \mu_n^\omega \to \mu \textnormal{narrowly} \right\} \right) = 1.
+P\left( \left\{ \omega \in \Omega: \mu_n^\omega \to \mu \, \textnormal{narrowly} \right\} \right) = 1.
 \end{aligned}
 $$
 
 ## Proof
 
-For $$g \in C_b(X)$$, $$g \circ \xi_i:\Omega \to \mathbb{R}$$ is measurable bounded, hence belongs to $$L^1(P)$$. Also, 
+For $$g \in C_b(X)$$, $$g \circ \xi_i:\Omega \to \mathbb{R}$$ is measurable and bounded, hence belongs to $$L^1(P)$$. Also, 
 $$(g \circ \xi_i)_* P = g_* \mu$$, so the sequence $$g \circ \xi_i$$ are identically distributed. We now check that the sequence is independent.
 Let $$A_1,\ldots,A_n \in \mathscr{B}_{\mathbb{R}}$$. Then $$g^{-1}(A_1),\ldots,g^{-1}(A_n) \in \mathscr{B}_X$$, and because
 $$\xi_1,\xi_2,\ldots$$ are independent,
