@@ -126,20 +126,20 @@ $$
 For $$g \in C_b(X)$$, $$g \circ \xi_i:\Omega \to \mathbb{R}$$ is measurable and bounded, hence belongs to $$L^1(P)$$. Also, 
 $$(g \circ \xi_i)_* P = g_* \mu$$, so the sequence $$g \circ \xi_i$$ are identically distributed. We now check that the sequence is independent.
 Let $$A_1,\ldots,A_n \in \mathscr{B}_{\mathbb{R}}$$. Then $$g^{-1}(A_1),\ldots,g^{-1}(A_n) \in \mathscr{B}_X$$, and because
-$$\xi_1,\xi_2,\ldots$$ are independent,
+$$\xi_1,\xi_2,\ldots$$ are independent,  
 $$
 \begin{aligned}
 P\left( \bigcap_{i=1}^n \xi_i^{-1}(g^{-1}(A_i)) \right) = \prod_{i=1}^n P(\xi_i^{-1}(g^{-1}(A_i))),
 \end{aligned}
 $$
-i.e.,
+i.e.,  
 $$
 \begin{aligned}
 P\left( \bigcap_{i=1}^n (g \circ \xi_i)^{-1}(A_i) \right) = \prod_{i=1}^n P((g \circ \xi_i)^{-1}(A_i)),
 \end{aligned}
 $$
 showing that  $$(g \circ \xi_1),(g \circ \xi_2),\ldots$$ are independent. 
-For any $$i$$, by the change of variables theorem
+For any $$i$$, by the change of variables theorem  
 $$
 \begin{aligned}
 E( g \circ \xi_i) = \int_\Omega g \circ \xi_i dP = \int_X g d((\xi_i)_* P) = 
