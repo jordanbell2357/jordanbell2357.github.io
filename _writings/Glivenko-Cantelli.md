@@ -32,7 +32,7 @@ If $$X$$ is a separable metrizable space, then it is metrizable by a metric $$d$
 ## Theorem 1
 
 If $$X$$ is a separable metrizable space, then $$X$$ is metrizable by a metric $$d$$ for which there
-is a countable dense subset $$D$$ of $$U_d(X)$$ such that $$\mu_n \mathscr{P}(X)$$ converges narrowly to $$\mu \mathscr{P}(X)$$ if and only if
+is a countable dense subset $$D$$ of $$U_d(X)$$ such that $$\mu_n \in \mathscr{P}(X)$$ converges narrowly to $$\mu \in \mathscr{P}(X)$$ if and only if
 $$
 \begin{aligned}
 \int_X f d\mu_n \to \int_X f d\mu, \qquad f \in D.
@@ -59,7 +59,9 @@ $$
 We say that a family of measurable functions is independent if every finite subset of it is independent.
 
 We say that two measurable functions $$f,g:\Omega \to X$$ are **identically distributed** if the pushforward $$f_* P$$ of $$P$$ by $$f$$
-is equal to the pushforward $$g_* P$$ of $$P$$ by $$g$$, i.e. $$P(f^{-1}(A)) = P(g^{-1}(A))$$ for every $$A \in \mathscr{B}_X$$. We say that a family of
+is equal to the pushforward $$g_* P$$ of $$P$$ by $$g$$, i.e.  
+$$P(f^{-1}(A)) = P(g^{-1}(A))$$  
+for every $$A \in \mathscr{B}_X$$. We say that a family of
 measurable functions is identically distributed if any two of them are identically distributed.
 
 
