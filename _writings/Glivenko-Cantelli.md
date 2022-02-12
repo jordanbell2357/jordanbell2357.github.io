@@ -3,7 +3,6 @@ layout: post
 title: The Glivenko-Cantelli theorem
 author: Jordan Bell
 date: 2015-04-12
-katex: True
 ---
 
 # Narrow topology
