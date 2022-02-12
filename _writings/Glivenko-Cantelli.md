@@ -63,7 +63,7 @@ is equal to the pushforward $$g_* P$$ of $$P$$ by $$g$$, i.e. $$P(f^{-1}(A)) = P
 measurable functions is identically distributed if any two of them are identically distributed.
 
 
-# Strong law of large numbers}
+# Strong law of large numbers
 If $$\zeta \in L^1(P)$$, the **expectation of** $$\zeta$$ is  
 $$
 \begin{aligned}
