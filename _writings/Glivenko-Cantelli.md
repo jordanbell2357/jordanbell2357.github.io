@@ -26,7 +26,7 @@ $$\mu \mapsto \int_X fd\mu$$ is continuous $$\mathscr{P}(X) \to \mathbb{R}$$.[^1
 
 If $$X$$ is a separable metrizable space, then it is metrizable by a metric $$d$$ such that the metric space $$(X,d)$$ is totally bounded. It is a fact that if $$(X,d)$$ is a totally bounded metric space, then $$U_d(X)$$ is separable.[^2]
 
-[^2]: Daniel W. Stroock, *Probability Theory: An Analytic View*, p. 371, Lemma 9.1.4.}
+[^2]: Daniel W. Stroock, *Probability Theory: An Analytic View*, p. 371, Lemma 9.1.4.
 
 <a name="theorem-Ud"></a>
 ## Theorem 1
