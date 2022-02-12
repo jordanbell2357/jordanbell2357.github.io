@@ -137,7 +137,7 @@ $$
 \begin{aligned}
 P\left( \bigcap_{i=1}^n (g \circ \xi_i)^{-1}(A_i) \right) = \prod_{i=1}^n P((g \circ \xi_i)^{-1}(A_i)),
 \end{aligned}
-$$
+$$  
 showing that  $$(g \circ \xi_1),(g \circ \xi_2),\ldots$$ are independent. 
 For any $$i$$, by the change of variables theorem  
 $$
@@ -145,14 +145,14 @@ $$
 E( g \circ \xi_i) = \int_\Omega g \circ \xi_i dP = \int_X g d((\xi_i)_* P) = 
 \int_X g d\mu,
 \end{aligned}
-$$
+$$  
 so the strong law of large numbers tells us that there is a set $$N_g \in S$$ with $$P(N_g)=0$$ such that
 for all $$\omega \in \Omega \setminus N_g$$, 
 $$
 \begin{aligned}
 \sum_{i=1}^n \frac{(g \circ \xi_i)(\omega)}{n} \to \int_X g d\mu.
 \end{aligned}
-$$
+$$  
 But
 $$
 \begin{aligned}
@@ -160,7 +160,7 @@ $$
 \sum_{i=1}^n \frac{1}{n} \int_X g d\delta_{\xi_i(\omega)}
 =\int_X g d\mu_n^\omega,
 \end{aligned}
-$$
+$$  
 so for all $$\omega \in \Omega \setminus N_g$$,
 $$
 \begin{aligned}
@@ -175,14 +175,14 @@ $$
 \begin{aligned}
 \int_X g d\nu_n \to \int_X g d\nu, \qquad g \in G.
 \end{aligned}
-$$
+$$  
 Now let $$N=\bigcup_{g \in G} N_g$$, which satisfies $$P(N)=0$$, and if $$\omega \in \Omega \setminus N$$ then
 for each $$g \in G$$,
 $$
 \begin{aligned}
 \int_X g d\mu_n^\omega \to \int_X g d\mu.
 \end{aligned}
-$$
+$$  
 This implies that for all $$\mu_n^\omega$$ converges narrowly to $$\mu$$. That is,
 there is a set $$N \in S$$ with $$P(N)=0$$ such that for all $$\omega \in \Omega \setminus N$$, 
 the sample distribution $$\mu_n^\omega$$ converges narrowly to the common pushforward measure 
