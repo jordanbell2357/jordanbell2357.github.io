@@ -15,7 +15,7 @@ $$X \to \mathbb{R}$$. This is a vector space and is a closed subset of $$C_b(X)$
 
 Let $$X$$ be a  metrizable space and
 denote by $$\mathscr{P}(X)$$ the collection of Borel probability measures on $$X$$.
-The \textbf{narrow topology on $$\mathscr{P}(X)$$} is the
+The **narrow topology on** $$\mathscr{P}(X)$$ is the
 coarsest topology on $$\mathscr{P}(X)$$ such that for every $$f \in C_b(X)$$,  the mapping
 $$\mu \mapsto \int_X fd\mu$$ is continuous $$\mathscr{P}(X) \to \mathbb{R}$$.
 It can be proved that if $$X$$ is metrizable with a metric $$d$$ and $$D$$ is a dense subset of $$U_d(X)$$, then
@@ -24,9 +24,7 @@ $$\mu \mapsto \int_X fd\mu$$ is continuous $$\mathscr{P}(X) \to \mathbb{R}$$.[^1
 
 [^1]: Charalambos D. Aliprantis and Kim C. Border, *Infinite Dimensional Analysis: A Hitchhiker's Guide*, third ed., p.~507, Theorem 15.2.
 
-If $$X$$ is a separable metrizable space, then it is metrizable by a metric $$d$$ such that the metric space $$(X,d)$$
-is totally bounded. It is a fact that if $$(X,d)$$ is a totally bounded metric space, then
-$$U_d(X)$$ is separable.[^2]
+If $$X$$ is a separable metrizable space, then it is metrizable by a metric $$d$$ such that the metric space $$(X,d)$$ is totally bounded. It is a fact that if $$(X,d)$$ is a totally bounded metric space, then $$U_d(X)$$ is separable.[^2]
 
 [^2]: Daniel W. Stroock, *Probability Theory: An Analytic View*, p.~371, Lemma 9.1.4.}
 
@@ -36,9 +34,9 @@ $$U_d(X)$$ is separable.[^2]
 If $$X$$ is a separable metrizable space, then $$X$$ is metrizable by a metric $$d$$ for which there
 is a countable dense subset $$D$$ of $$U_d(X)$$ such that $$\mu_n$$ converges narrowly to $$\mu$$ if and only if
 $$
-\[
+\begin{displaymath}
 \int_X f d\mu_n \to \int_X f d\mu, \qquad f \in D.
-\]
+\end{displaymath}
 $$
 
 # Independent and identically distributed random variables
@@ -46,17 +44,17 @@ $$
 Let $$(\Omega,S,P)$$ be a probability space and let $$X$$ be a separable metric space, with the Borel $$\sigma$$-algebra $$\mathscr{B}_X$$.
 We say that a finite collection measurable functions $$\xi_i: \Omega \to X$$, $$1 \leq i \leq n$$, is **independent** if
 $$
-\[
+\begin{displaymath}
 P\left( \bigcap_{i=1}^n \xi_i^{-1}(A_i) \right) = \prod_{i=1}^n P(\xi_i^{-1}(A_i)),
 \qquad A_1,\ldots,A_n \in \mathscr{B}_X,
-\]
+\end{displaymath}
 $$
 i.e.
 $$
-\[
+\begin{displaymath}
 P(\xi_1 \in A_1, \ldots, \xi_n \in A_n) = P(\xi_1 \in A_1) \cdots P(\xi_n \in A_n),
 \qquad A_1,\ldots,A_n \in \mathscr{B}_X.
-\]
+\end{displaymath}
 $$
 We say that a family of measurable functions is independent if every finite subset of it is independent.
 
@@ -69,22 +67,22 @@ measurable functions is identically distributed if any two of them are identical
 If $$\zeta \in L^1(P)$$,  
 the **expectation of** $$\zeta$$ is
 $$
-\[ 
+\begin{displaymath}
 E(\zeta) = \int_\Omega \zeta dP,
-\]
+\end{displaymath}
 $$
 and by the change of variables theorem,
 $$
-\[
+\begin{displaymath}
 \int_\Omega \zeta(\omega) dP(\omega) = \int_{\mathbb{R}} x d(\zeta_* P)(x).
-\]
+\end{displaymath}
 $$
 The **strong law of large numbers**[^3] states that if $$\zeta_1,\zeta_2, \ldots \in L^1(P)$$ 
 are independent and identically distributed, with common expectation $$E_0$$, then
 $$
-\[
+\begin{displaymath}
 P\left( \left\{ \omega \in \Omega: \sum_{i=1}^n \frac{\zeta_i(\omega)}{n} \to E_0 \right\} \right) = 1.
-\]
+\end{displaymath}
 $$
 
 [^3]: M. Loève, *Probability Theory I*, 4th ed., p. 251, 17.B.
@@ -99,9 +97,9 @@ Let $$X$$ be a separable metrizable space and let $$\xi_1,\xi_2,\ldots$$ be inde
 functions $$\Omega \to X$$.
 For $$\omega \in \Omega$$, define $$\mu_n^\omega$$ on $$\mathscr{B}_X$$ by
 $$
-\[
+\begin{displaymath}
 \mu_n^\omega = \sum_{i=1}^n \frac{1}{n} \delta_{\xi_i(\omega)},
-\]
+\end{displaymath}
 $$
 which is a probability measure. We call the sequence $$\mu_n^\omega$$ the **sample distribution of** $$\omega$$.
 
@@ -118,9 +116,9 @@ let $$X$$ be a separable metrizable space and
 let  $$\xi_1,\xi_2,\ldots$$ be independent and identically distributed measurable functions
 $$\Omega \to X$$, with common pushforward measure $$\mu$$. Then
 $$
-\[
+\begin{displaymath}
 P\left( \left\{ \omega \in \Omega: \textnormal{$$\mu_n^\omega \to \mu$$ narrowly} \right\} \right) = 1.
-\]
+\end{displaymath}
 $$
 
 ## Proof
@@ -130,60 +128,60 @@ $$(g \circ \xi_i)_* P = g_* \mu$$, so the sequence $$g \circ \xi_i$$ are identic
 Let $$A_1,\ldots,A_n \in \mathscr{B}_{\mathbb{R}}$$. Then $$g^{-1}(A_1),\ldots,g^{-1}(A_n) \in \mathscr{B}_X$$, and because
 $$\xi_1,\xi_2,\ldots$$ are independent,
 $$
-\[
+\begin{displaymath}
 P\left( \bigcap_{i=1}^n \xi_i^{-1}(g^{-1}(A_i)) \right) = \prod_{i=1}^n P(\xi_i^{-1}(g^{-1}(A_i))),
-\]
+\end{displaymath}
 $$
 i.e.,
 $$
-\[
+\begin{displaymath}
 P\left( \bigcap_{i=1}^n (g \circ \xi_i)^{-1}(A_i) \right) = \prod_{i=1}^n P((g \circ \xi_i)^{-1}(A_i)),
-\]
+\end{displaymath}
 $$
 showing that  $$(g \circ \xi_1),(g \circ \xi_2),\ldots$$ are independent. 
 For any $$i$$, by the change of variables theorem
 $$
-\[
+\begin{displaymath}
 E( g \circ \xi_i) = \int_\Omega g \circ \xi_i dP = \int_X g d((\xi_i)_* P) = 
 \int_X g d\mu,
-\]
+\end{displaymath}
 $$
 so the strong law of large numbers tells us that there is a set $$N_g \in S$$ with $$P(N_g)=0$$ such that
 for all $$\omega \in \Omega \setminus N_g$$, 
 $$
-\[
+\begin{displaymath}
 \sum_{i=1}^n \frac{(g \circ \xi_i)(\omega)}{n} \to \int_X g d\mu.
-\]
+\end{displaymath}
 $$
 But
 $$
-\[
+\begin{displaymath}
 \sum_{i=1}^n \frac{(g \circ \xi_i)(\omega)}{n} = 
 \sum_{i=1}^n \frac{1}{n} \int_X g d\delta_{\xi_i(\omega)}
 =\int_X g d\mu_n^\omega,
-\]
+\end{displaymath}
 $$
 so for all $$\omega \in \Omega \setminus N_g$$,
 $$
-\[
+\begin{displaymath}
 \int_X g d\mu_n^\omega \to \int_X g d\mu.
-\]
+\end{displaymath}
 $$
 
 Because $$X$$ is separable,
 [Theorem 1](#theorem-Ud) tells us that there is a metric $$d$$ that induces the topology of $$X$$ and some countable dense subset $$G$$
 of $$U_d(X)$$ such that a sequence $$\nu_n$$ in $$\mathscr{P}(X)$$ converges narrowly to $$\nu$$  if and only if 
 $$
-\[
+\begin{displaymath}
 \int_X g d\nu_n \to \int_X g d\nu, \qquad g \in G.
-\]
+\end{displaymath}
 $$
 Now let $$N=\bigcup_{g \in G} N_g$$, which satisfies $$P(N)=0$$, and if $$\omega \in \Omega \setminus N$$ then
 for each $$g \in G$$,
 $$
-\[
+\begin{displaymath}
 \int_X g d\mu_n^\omega \to \int_X g d\mu.
-\]
+\end{displaymath}
 $$
 This implies that for all $$\mu_n^\omega$$ converges narrowly to $$\mu$$. That is,
 there is a set $$N \in S$$ with $$P(N)=0$$ such that for all $$\omega \in \Omega \setminus N$$, 
