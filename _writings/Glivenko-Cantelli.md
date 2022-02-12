@@ -66,12 +66,8 @@ measurable functions is identically distributed if any two of them are identical
 
 
 # Strong law of large numbers
-If $$\zeta \in L^1(P)$$, the **expectation of** $$\zeta$$ is  
-$$
-\begin{aligned}
-E(\zeta) = \int_\Omega \zeta dP,
-\end{aligned}
-$$
+
+If $$\zeta \in L^1(P)$$, the **expectation of** $$\zeta$$ is $$E(\zeta) = \int_\Omega \zeta dP$$,
 and by the change of variables theorem,
 $$
 \begin{aligned}
