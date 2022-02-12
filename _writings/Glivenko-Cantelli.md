@@ -33,9 +33,11 @@ If $$X$$ is a separable metrizable space, then it is metrizable by a metric $$d$
 
 If $$X$$ is a separable metrizable space, then $$X$$ is metrizable by a metric $$d$$ for which there
 is a countable dense subset $$D$$ of $$U_d(X)$$ such that $$\mu_n$$ converges narrowly to $$\mu$$ if and only if
-\[
+$$
+\begin{aligned}
 \int_X f d\mu_n \to \int_X f d\mu, \qquad f \in D.
-\]
+\end{aligned}
+$$
 
 # Independent and identically distributed random variables
 
