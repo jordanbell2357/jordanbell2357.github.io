@@ -22,11 +22,11 @@ It can be proved that if $$X$$ is metrizable with a metric $$d$$ and $$D$$ is a 
 the narrow topology is equal to the coarsest topology such that for each $$f \in U_d(X)$$, the mapping
 $$\mu \mapsto \int_X fd\mu$$ is continuous $$\mathscr{P}(X) \to \mathbb{R}$$.[^1]
 
-[^1]: Charalambos D. Aliprantis and Kim C. Border, *Infinite Dimensional Analysis: A Hitchhiker's Guide*, third ed., p.~507, Theorem 15.2.
+[^1]: Charalambos D. Aliprantis and Kim C. Border, *Infinite Dimensional Analysis: A Hitchhiker's Guide*, third ed., p. 507, Theorem 15.2.
 
 If $$X$$ is a separable metrizable space, then it is metrizable by a metric $$d$$ such that the metric space $$(X,d)$$ is totally bounded. It is a fact that if $$(X,d)$$ is a totally bounded metric space, then $$U_d(X)$$ is separable.[^2]
 
-[^2]: Daniel W. Stroock, *Probability Theory: An Analytic View*, p.~371, Lemma 9.1.4.}
+[^2]: Daniel W. Stroock, *Probability Theory: An Analytic View*, p. 371, Lemma 9.1.4.}
 
 <a name="theorem-Ud"></a>
 ## Theorem 1
@@ -107,7 +107,7 @@ the sample distributions of a sequence of independent and identically
 distributed measurable functions converge narrowly almost everywhere
 to the common pushforward measure.[^4]
 
-[^4]: K. R. Parthasarathy, *Probability Measures on Metric Spaces*, p.~53, Theorem 7.1.
+[^4]: K. R. Parthasarathy, *Probability Measures on Metric Spaces*, p. 53, Theorem 7.1.
 
 ## Glivenko-Cantelli theorem
 
