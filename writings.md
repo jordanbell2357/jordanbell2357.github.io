@@ -10,7 +10,7 @@ permalink: /writings/
   </li>
 {% endfor %}
 
-| HTML (LaTeX)                                                                                                                                                | PDF                                                                             |
+| HTML (LaTeXML)                                                                                                                                                | PDF                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
 | [$$L^0$$, convergence in measure, equi-integrability, the Vitali convergence theorem, and the de la Vallée-Poussin criterion](/LaTeX/mathematics/L0)        | [PDF](/LaTeX/mathematics/L0/L0.pdf)                                           |
 | [Alternating multilinear forms](/LaTeX/mathematics/alternating)                                                                                             | [PDF](/LaTeX/mathematics/alternating/alternating.pdf)                         |
