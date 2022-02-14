@@ -4,11 +4,13 @@ title: Writings
 permalink: /writings/
 ---
 
+<table>
 {% for writing in site.writings %}
-  <li>
-    <a href="{{ writing.url }}">{{ writing.title}}</a>
-  </li>
+  <tr>
+    <td><a href="{{ writing.url }}">{{ writing.title}}</a></td>
+  </tr>
 {% endfor %}
+</table>
 
 | HTML (LaTeXML)                                                                                                                                                | PDF                                                                             |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
