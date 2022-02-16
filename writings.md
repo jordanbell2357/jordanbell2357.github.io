@@ -4,7 +4,7 @@ title: Writings
 permalink: /writings/
 ---
 
-# Mathematical notes. Strong emphasis on function spaces and structures in analysis. Detailed proofs of theorems.
+## Mathematical notes. Strong emphasis on function spaces and structures in analysis. Detailed proofs of theorems.
 
 <table>
 <tr>
