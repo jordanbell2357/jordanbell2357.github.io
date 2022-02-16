@@ -143,7 +143,7 @@ permalink: /writings/
 <tr><td><a href="/LaTeX/LaTeXML/vitali-coverings">Vitali coverings on the real line</a></td><td><a href="/LaTeX/LaTeXML/vitali-coverings/vitali-coverings.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/LaTeXML/laplacemethod">Watson's lemma and Laplace's method</a></td><td><a href="/LaTeX/LaTeXML/laplacemethod/laplacemethod.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/LaTeXML/weaksymplectic">Weak symplectic forms and differential calculus in Banach spaces</a></td><td><a href="/LaTeX/LaTeXML/weaksymplectic/weaksymplectic.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/">What is a Costas array?costas</a></td><td><a href="/LaTeX/LaTeXML//.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/LaTeXML/costas">What is a Costas array?</a></td><td><a href="/LaTeX/LaTeXML/costas/costas.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/LaTeXML/domainODE">What is the domain of a solution of an ODE?</a></td><td><a href="/LaTeX/LaTeXML/domainODE/domainODE.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/LaTeXML/donsker">Wiener measure and Donsker's theorem</a></td><td><a href="/LaTeX/LaTeXML/donsker/donsker.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/LaTeXML/zygmund-restriction">Zygmund's Fourier restriction theorem and Bernstein's inequality</a></td><td><a href="/LaTeX/LaTeXML/zygmund-restriction/zygmund-restriction.pdf">PDF</a></td></tr>
