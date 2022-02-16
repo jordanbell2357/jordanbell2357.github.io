@@ -9,7 +9,7 @@ permalink: /writings/
   <th>HTML</th>
   <th>PDF</th>
 </tr>
-<tr><td><a href="/LaTeX/LaTeXML/CK">\(C[0,1]\): the Faber-Schauder basis, the Riesz representation theorem, and the Borel \(\sigma$-algebra</a></td><td><a href="/LaTeX/LaTeXML/CK/CK.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/LaTeXML/CK">\(C[0,1]\): the Faber-Schauder basis, the Riesz representation theorem, and the Borel \(\sigma\)-algebra</a></td><td><a href="/LaTeX/LaTeXML/CK/CK.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/LaTeXML/Ckspaces">\(C^k\) spaces and spaces of test functions</a></td><td><a href="/LaTeX/LaTeXML/Ckspaces/Ckspaces.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/LaTeXML/L0">\(L^0\), convergence in measure, equi-integrability, the Vitali convergence theorem, and the de la Vallée-Poussin criterion</a></td><td><a href="/LaTeX/LaTeXML/L0/L0.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/LaTeXML/L1sinenorms">\(L^1\) norms of products of sines</a></td><td><a href="/LaTeX/LaTeXML/L1sinenorms/L1sinenorms.pdf">PDF</a></td></tr>
