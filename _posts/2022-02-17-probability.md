@@ -6,7 +6,7 @@ usemathjax: true
 
 # Welcome
 
-\(\mathbb{R}\)
+\\(\mathbb{R}\\)
 
 $$\mathbb{R}$$
 
