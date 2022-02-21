@@ -11,143 +11,205 @@ permalink: /writings/
   <th>HTML</th>
   <th>PDF</th>
 </tr>
-<tr><td><a href="/LaTeX/LaTeXML/CK">\(C[0,1]\): the Faber-Schauder basis, the Riesz representation theorem, and the Borel \(\sigma\)-algebra</a></td><td><a href="/LaTeX/LaTeXML/CK/CK.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/Ckspaces">\(C^k\) spaces and spaces of test functions</a></td><td><a href="/LaTeX/LaTeXML/Ckspaces/Ckspaces.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/L0">\(L^0\), convergence in measure, equi-integrability, the Vitali convergence theorem, and the de la Vallée-Poussin criterion</a></td><td><a href="/LaTeX/LaTeXML/L0/L0.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/L1sinenorms">\(L^1\) norms of products of sines</a></td><td><a href="/LaTeX/LaTeXML/L1sinenorms/L1sinenorms.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/sinesum">\(L^p\) norms of a sine sum</a></td><td><a href="/LaTeX/LaTeXML/sinesum/sinesum.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/Lptrigpoly">\(L^p\) norms of trigonometric polynomials</a></td><td><a href="/LaTeX/LaTeXML/Lptrigpoly/Lptrigpoly.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/secantseries">A series of secants</a></td><td><a href="/LaTeX/LaTeXML/secantseries/secantseries.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/parseval">Abstract Fourier series and Parseval's identity</a></td><td><a href="/LaTeX/LaTeXML/parseval/parseval.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/alternating">Alternating multilinear forms</a></td><td><a href="/LaTeX/LaTeXML/alternating/alternating.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/banachalgebras">Banach algebras</a></td><td><a href="/LaTeX/LaTeXML/banachalgebras/banachalgebras.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/bernoullipolynomials">Bernoulli polynomials</a></td><td><a href="/LaTeX/LaTeXML/bernoullipolynomials/bernoullipolynomials.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/chebyshev">Chebyshev polynomials</a></td><td><a href="/LaTeX/LaTeXML/chebyshev/chebyshev.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/compactbanach">Compact operators on Banach spaces</a></td><td><a href="/LaTeX/LaTeXML/compactbanach/compactbanach.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/browniansemigroup">Convolution semigroups, canonical processes, and Brownian motion</a></td><td><a href="/LaTeX/LaTeXML/browniansemigroup/browniansemigroup.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/cyclotomic">Cyclotomic polynomials</a></td><td><a href="/LaTeX/LaTeXML/cyclotomic/cyclotomic.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/decomposition">Decomposition of the spectrum of a bounded linear operator</a></td><td><a href="/LaTeX/LaTeXML/decomposition/decomposition.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/denjoy">Denjoy's theorem on circle diffeomorphisms</a></td><td><a href="/LaTeX/LaTeXML/denjoy/denjoy.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/diophantinevectors">Diophantine vectors</a></td><td><a href="/LaTeX/LaTeXML/diophantinevectors/diophantinevectors.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/padicfield">Explicit construction of the \(p\)-adic numbers</a></td><td><a href="/LaTeX/LaTeXML/padicfield/padicfield.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/bergmanspaces">Fatou's theorem, Bergman spaces, and Hardy spaces on the circle</a></td><td><a href="/LaTeX/LaTeXML/bergmanspaces/bergmanspaces.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/frechetderivatives">Fréchet derivatives and Gâteaux derivatives</a></td><td><a href="/LaTeX/LaTeXML/frechetderivatives/frechetderivatives.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/khinchinBV">Functions of bounded variation and a theorem of Khinchin</a></td><td><a href="/LaTeX/LaTeXML/khinchinBV/khinchinBV.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/BVdifferentiable">Functions of bounded variation and differentiability</a></td><td><a href="/LaTeX/LaTeXML/BVdifferentiable/BVdifferentiable.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/gaussianintegrals">Gaussian integrals</a></td><td><a href="/LaTeX/LaTeXML/gaussianintegrals/gaussianintegrals.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/bochnertheorem">Gaussian measures and Bochner's theorem</a></td><td><a href="/LaTeX/LaTeXML/bochnertheorem/bochnertheorem.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/gaussian-measures">Gaussian measures, Hermite polynomials, and the Ornstein-Uhlenbeck semigroup</a></td><td><a href="/LaTeX/LaTeXML/gaussian-measures/gaussian-measures.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/smoothgerms">Germs of smooth functions</a></td><td><a href="/LaTeX/LaTeXML/smoothgerms/smoothgerms.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/ising">Gibbs measures and the Ising model</a></td><td><a href="/LaTeX/LaTeXML/ising/ising.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/gradienthilbert">Gradients and Hessians in Hilbert spaces</a></td><td><a href="/LaTeX/LaTeXML/gradienthilbert/gradienthilbert.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/waveletsMRA">Haar wavelets and multiresolution analysis</a></td><td><a href="/LaTeX/LaTeXML/waveletsMRA/waveletsMRA.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/lifts">Hamiltonian flows, cotangent lifts, and momentum maps</a></td><td><a href="/LaTeX/LaTeXML/lifts/lifts.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/padicharmonic">Harmonic analysis on the \(p\)-adic numbers</a></td><td><a href="/LaTeX/LaTeXML/padicharmonic/padicharmonic.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/harmonicpolynomials">Harmonic polynomials and the spherical Laplacian</a></td><td><a href="/LaTeX/LaTeXML/harmonicpolynomials/harmonicpolynomials.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/padic">Hensel's lemma, valuations, and \(p\)-adic numbers</a></td><td><a href="/LaTeX/LaTeXML/padic/padic.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/hermitefunctions">Hermite functions</a></td><td><a href="/LaTeX/LaTeXML/hermitefunctions/hermitefunctions.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/productmeasure">Infinite product measures</a></td><td><a href="/LaTeX/LaTeXML/productmeasure/productmeasure.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/integraloperators">Integral operators</a></td><td><a href="/LaTeX/LaTeXML/integraloperators/integraloperators.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/progressivelymeasurable">Jointly measurable and progressively measurable stochastic processes</a></td><td><a href="/LaTeX/LaTeXML/progressivelymeasurable/progressivelymeasurable.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/khinchininequality">Khinchin's inequality and Etemadi's inequality</a></td><td><a href="/LaTeX/LaTeXML/khinchininequality/khinchininequality.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/laguerrepolynomials">Laguerre polynomials and Perron-Frobenius operators</a></td><td><a href="/LaTeX/LaTeXML/laguerrepolynomials/laguerrepolynomials.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/LCA">Locally compact abelian groups</a></td><td><a href="/LaTeX/LaTeXML/LCA/LCA.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/levyinequality">Lévy's inequality, Rademacher sums, and Kahane's inequality</a></td><td><a href="/LaTeX/LaTeXML/levyinequality/levyinequality.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/markovkernels">Markov kernels, convolution semigroups, and projective families of probability measures</a></td><td><a href="/LaTeX/LaTeXML/markovkernels/markovkernels.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/martingaleCLT">Martingales, Lévy's continuity theorem, and the martingale central limit theorem</a></td><td><a href="/LaTeX/LaTeXML/martingaleCLT/martingaleCLT.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/meagerperiodic">Meager sets of periodic functions</a></td><td><a href="/LaTeX/LaTeXML/meagerperiodic/meagerperiodic.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/perron-frobenius">Measure theory and Perron-Frobenius operators for continued fractions</a></td><td><a href="/LaTeX/LaTeXML/perron-frobenius/perron-frobenius.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/newton-identities">Newton's identities and the pentagonal number theorem</a></td><td><a href="/LaTeX/LaTeXML/newton-identities/newton-identities.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/eisenstein">Nonholomorphic Eisenstein series, the Kronecker limit formula, and the hyperbolic Laplacian</a></td><td><a href="/LaTeX/LaTeXML/eisenstein/eisenstein.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/trigpoly">Norms of trigonometric polynomials</a></td><td><a href="/LaTeX/LaTeXML/trigpoly/trigpoly.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/kam">Notes on the KAM theorem</a></td><td><a href="/LaTeX/LaTeXML/kam/kam.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/orbital-NLS">Orbital stability for NLS</a></td><td><a href="/LaTeX/LaTeXML/orbital-NLS/orbital-NLS.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/productL2">Orthonormal bases for product measures</a></td><td><a href="/LaTeX/LaTeXML/productL2/productL2.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/oscillatory">Oscillatory integrals</a></td><td><a href="/LaTeX/LaTeXML/oscillatory/oscillatory.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/polish">Polish spaces and Baire spaces</a></td><td><a href="/LaTeX/LaTeXML/polish/polish.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/completelymonotone">Positive definite functions, completely monotone functions, the Bernstein-Widder theorem, and Schoenberg's theorem</a></td><td><a href="/LaTeX/LaTeXML/completelymonotone/completelymonotone.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/pvm">Projection-valued measures and spectral integrals</a></td><td><a href="/LaTeX/LaTeXML/pvm/pvm.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/pentproof">Proof of the pentagonal number theorem</a></td><td><a href="/LaTeX/LaTeXML/pentproof/pentproof.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/rademacher-functions">Rademacher functions</a></td><td><a href="/LaTeX/LaTeXML/rademacher-functions/rademacher-functions.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/ramanujansums">Ramanujan's sum</a></td><td><a href="/LaTeX/LaTeXML/ramanujansums/ramanujansums.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/randomtrig">Random trigonometric polynomials</a></td><td><a href="/LaTeX/LaTeXML/randomtrig/randomtrig.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/realRKHS">Real reproducing kernel Hilbert spaces</a></td><td><a href="/LaTeX/LaTeXML/realRKHS/realRKHS.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/regulatedfunctions">Regulated functions and the regulated integral</a></td><td><a href="/LaTeX/LaTeXML/regulatedfunctions/regulatedfunctions.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/hermiteoperator">Schwartz functions, Hermite functions, and the Hermite operator</a></td><td><a href="/LaTeX/LaTeXML/hermiteoperator/hermiteoperator.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/semicontinuous">Semicontinuous functions and convexity</a></td><td><a href="/LaTeX/LaTeXML/semicontinuous/semicontinuous.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/riesztransform">Singular integral operators and the Riesz transform</a></td><td><a href="/LaTeX/LaTeXML/riesztransform/riesztransform.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/sobolev1d">Sobolev spaces in one dimension and absolutely continuous functions</a></td><td><a href="/LaTeX/LaTeXML/sobolev1d/sobolev1d.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/modularforms">Some fundamental results on modular forms</a></td><td><a href="/LaTeX/LaTeXML/modularforms/modularforms.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/sturm-liouville">Spectral theory, Volterra integral operators and the Sturm-Liouville theorem</a></td><td><a href="/LaTeX/LaTeXML/sturm-liouville/sturm-liouville.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/stationaryphase">Stationary phase, Laplace's method, and the Fourier transform for Gaussian integrals</a></td><td><a href="/LaTeX/LaTeXML/stationaryphase/stationaryphase.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/subdifferentials">Subdifferentials of convex functions</a></td><td><a href="/LaTeX/LaTeXML/subdifferentials/subdifferentials.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/subgaussian">Subgaussian random variables, Hoeffding's inequality, and Cramér's large deviation theorem</a></td><td><a href="/LaTeX/LaTeXML/subgaussian/subgaussian.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/karamata">Tauber's theorem and Karamata's proof of the Hardy-Littlewood tauberian theorem</a></td><td><a href="/LaTeX/LaTeXML/karamata/karamata.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/testfunctions-sobolevlemma">Test functions, distributions, and Sobolev's lemma</a></td><td><a href="/LaTeX/LaTeXML/testfunctions-sobolevlemma/testfunctions-sobolevlemma.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/urysohn">The \(C^\infty\) Urysohn lemma</a></td><td><a href="/LaTeX/LaTeXML/urysohn/urysohn.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/helly">The Banach algebra of functions of bounded variation and the pointwise Helly selection theorem</a></td><td><a href="/LaTeX/LaTeXML/helly/helly.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/helly">The Banach algebra of functions of bounded variation and the pointwise Helly selection theorem</a></td><td><a href="/LaTeX/LaTeXML/helly/helly.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/bernstein-nikolsky">The Bernstein and Nikolsky inequalities for trigonometric polynomials</a></td><td><a href="/LaTeX/LaTeXML/bernstein-nikolsky/bernstein-nikolsky.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/berry-esseen">The Berry-Esseen theorem</a></td><td><a href="/LaTeX/LaTeXML/berry-esseen/berry-esseen.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/bochner-minlos">The Bochner-Minlos theorem</a></td><td><a href="/LaTeX/LaTeXML/bochner-minlos/bochner-minlos.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/dirac">The Dirac delta distribution and Green's functions</a></td><td><a href="/LaTeX/LaTeXML/dirac/dirac.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/dunford-pettis">The Dunford-Pettis theorem</a></td><td><a href="/LaTeX/LaTeXML/dunford-pettis/dunford-pettis.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/fluideuler">The Euler equations in fluid mechanics</a></td><td><a href="/LaTeX/LaTeXML/fluideuler/fluideuler.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/holomorphicfourier">The Fourier transform of holomorphic functions</a></td><td><a href="/LaTeX/LaTeXML/holomorphicfourier/holomorphicfourier.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/sphericalmeasure">The Fourier transform of spherical surface measure and radial functions</a></td><td><a href="/LaTeX/LaTeXML/sphericalmeasure/sphericalmeasure.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/gelfandtransform">The Gelfand transform, positive linear functionals, and positive-definite functions</a></td><td><a href="/LaTeX/LaTeXML/gelfandtransform/gelfandtransform.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/glivenko-cantelli">The Glivenko-Cantelli theorem</a></td><td><a href="/LaTeX/LaTeXML/glivenko-cantelli/glivenko-cantelli.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/smalldivisors">The Gottschalk-Hedlund theorem, cocycles, and small divisors</a></td><td><a href="/LaTeX/LaTeXML/smalldivisors/smalldivisors.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/hamiltonjacobi">The Hamilton-Jacobi equation</a></td><td><a href="/LaTeX/LaTeXML/hamiltonjacobi/hamiltonjacobi.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/heisenberg">The Heisenberg group and Hermite functions</a></td><td><a href="/LaTeX/LaTeXML/heisenberg/heisenberg.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/hilberttransform">The Hilbert transform on \(\mathbb{R}\)</a></td><td><a href="/LaTeX/LaTeXML/hilberttransform/hilberttransform.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/kolmogorov-continuity">The Kolmogorov continuity theorem, Hölder continuity, and the Kolmogorov-Chentsov theorem</a></td><td><a href="/LaTeX/LaTeXML/kolmogorov-continuity/kolmogorov-continuity.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/kolmogorovcontinuity">The Kolmogorov continuity theorem, Hölder continuity, and the Kolmogorov-Chentsov theorem</a></td><td><a href="/LaTeX/LaTeXML/kolmogorovcontinuity/kolmogorovcontinuity.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/kolmogorov-extension">The Kolmogorov extension theorem</a></td><td><a href="/LaTeX/LaTeXML/kolmogorov-extension/kolmogorov-extension.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/legendretransform">The Legendre transform</a></td><td><a href="/LaTeX/LaTeXML/legendretransform/legendretransform.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/lindeberg">The Lindeberg central limit theorem</a></td><td><a href="/LaTeX/LaTeXML/lindeberg/lindeberg.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/poincaredulac">The Poincaré-Dulac normal form theorem for formal vector fields</a></td><td><a href="/LaTeX/LaTeXML/poincaredulac/poincaredulac.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/polya-vinogradov">The Polya-Vinogradov inequality</a></td><td><a href="/LaTeX/LaTeXML/polya-vinogradov/polya-vinogradov.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/Qdual">The Pontryagin duals of \(\mathbb{Q}/\mathbb{Z}\) and \(\mathbb{Q}\), and the adeles</a></td><td><a href="/LaTeX/LaTeXML/Qdual/Qdual.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/schwartzspace">The Schwartz space and the Fourier transform</a></td><td><a href="/LaTeX/LaTeXML/schwartzspace/schwartzspace.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/segalbargmann">The Segal-Bargmann transform and the Segal-Bargmann space</a></td><td><a href="/LaTeX/LaTeXML/segalbargmann/segalbargmann.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/stonecech">The Stone-Čech compactification of Tychonoff spaces</a></td><td><a href="/LaTeX/LaTeXML/stonecech/stonecech.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/voronoi">The Voronoi summation formula</a></td><td><a href="/LaTeX/LaTeXML/voronoi/voronoi.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/wieneralgebra">The Wiener algebra and Wiener's lemma</a></td><td><a href="/LaTeX/LaTeXML/wieneralgebra/wieneralgebra.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/wiener-pitt">The Wiener-Pitt tauberian theorem</a></td><td><a href="/LaTeX/LaTeXML/wiener-pitt/wiener-pitt.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/cube">The cross-polytope, the ball, and the cube</a></td><td><a href="/LaTeX/LaTeXML/cube/cube.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/heatkernelRn">The heat kernel on \(\mathbb{R}^n\)</a></td><td><a href="/LaTeX/LaTeXML/heatkernelRn/heatkernelRn.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/heatkerneltorus">The heat kernel on the torus</a></td><td><a href="/LaTeX/LaTeXML/heatkerneltorus/heatkerneltorus.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/flooruniversal">The inclusion map from the integers to the reals and universal properties of the floor and ceiling functions</a></td><td><a href="/LaTeX/LaTeXML/flooruniversal/flooruniversal.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/inhomogeneousheatT">The inhomogeneous heat equation on \(\mathbb{T}\)</a></td><td><a href="/LaTeX/LaTeXML/inhomogeneousheatT/inhomogeneousheatT.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/LIL">The law of the iterated logarithm</a></td><td><a href="/LaTeX/LaTeXML/LIL/LIL.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/narrowtopology">The narrow topology on the set of Borel probability measures on a metrizable space</a></td><td><a href="/LaTeX/LaTeXML/narrowtopology/narrowtopology.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/NLS-hamiltonian">The nonlinear Schrödinger equation is Hamiltonian</a></td><td><a href="/LaTeX/LaTeXML/NLS-hamiltonian/NLS-hamiltonian.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/schrodinger1d">The one-dimensional periodic Schrödinger equation</a></td><td><a href="/LaTeX/LaTeXML/schrodinger1d/schrodinger1d.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/profinite">The profinite completion of the integers, the \(p\)-adic integers, and Prüfer \(p\)-groups</a></td><td><a href="/LaTeX/LaTeXML/profinite/profinite.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/SVD">The singular value decomposition of compact operators on Hilbert spaces</a></td><td><a href="/LaTeX/LaTeXML/SVD/SVD.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/unilateral-shift">The spectra of the unilateral shift and its adjoint</a></td><td><a href="/LaTeX/LaTeXML/unilateral-shift/unilateral-shift.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/selfadjoint">The spectrum of a self-adjoint operator is a compact subset of \(\mathbb{R}\)</a></td><td><a href="/LaTeX/LaTeXML/selfadjoint/selfadjoint.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/symmetric-difference">The symmetric difference metric</a></td><td><a href="/LaTeX/LaTeXML/symmetric-difference/symmetric-difference.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/fandmriesz">The theorem of F. and M. Riesz</a></td><td><a href="/LaTeX/LaTeXML/fandmriesz/fandmriesz.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/uniformmetric">The uniform metric on product spaces</a></td><td><a href="/LaTeX/LaTeXML/uniformmetric/uniformmetric.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/LLN">The weak and strong laws of large numbers</a></td><td><a href="/LaTeX/LaTeXML/LLN/LLN.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/weak-topology-locallyconvex">The weak topology of locally convex spaces and the weak-* topology of their duals</a></td><td><a href="/LaTeX/LaTeXML/weak-topology-locallyconvex/weak-topology-locallyconvex.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/nbdfilters">Topological spaces and neighborhood filters</a></td><td><a href="/LaTeX/LaTeXML/nbdfilters/nbdfilters.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/totalvariation">Total variation, absolute continuity, and the Borel \(\sigma\)-algebra of \(C(I)\)</a></td><td><a href="/LaTeX/LaTeXML/totalvariation/totalvariation.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/traceclass">Trace class operators and Hilbert-Schmidt operators</a></td><td><a href="/LaTeX/LaTeXML/traceclass/traceclass.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/trotter">Unbounded operators in a Hilbert space and the Trotter product formula</a></td><td><a href="/LaTeX/LaTeXML/trotter/trotter.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/uup-compressedsensing">Uncertainty principles and compressed sensing</a></td><td><a href="/LaTeX/LaTeXML/uup-compressedsensing/uup-compressedsensing.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/unordered-sums">Unordered sums in Hilbert spaces</a></td><td><a href="/LaTeX/LaTeXML/unordered-sums/unordered-sums.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/vinogradov-estimate">Vinogradov's estimate for exponential sums over primes</a></td><td><a href="/LaTeX/LaTeXML/vinogradov-estimate/vinogradov-estimate.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/vitali-coverings">Vitali coverings on the real line</a></td><td><a href="/LaTeX/LaTeXML/vitali-coverings/vitali-coverings.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/laplacemethod">Watson's lemma and Laplace's method</a></td><td><a href="/LaTeX/LaTeXML/laplacemethod/laplacemethod.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/weaksymplectic">Weak symplectic forms and differential calculus in Banach spaces</a></td><td><a href="/LaTeX/LaTeXML/weaksymplectic/weaksymplectic.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/costas">What is a Costas array?</a></td><td><a href="/LaTeX/LaTeXML/costas/costas.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/domainODE">What is the domain of a solution of an ODE?</a></td><td><a href="/LaTeX/LaTeXML/domainODE/domainODE.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/donsker">Wiener measure and Donsker's theorem</a></td><td><a href="/LaTeX/LaTeXML/donsker/donsker.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/LaTeXML/zygmund-restriction">Zygmund's Fourier restriction theorem and Bernstein's inequality</a></td><td><a href="/LaTeX/LaTeXML/zygmund-restriction/zygmund-restriction.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/CK">\(C[0,1]\): the Faber-Schauder basis, the Riesz representation theorem, and the Borel \(\sigma\)-algebra</a></td><td><a href="/LaTeX/mathematics/CK/CK.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/Ckspaces">\(C^k\) spaces and spaces of test functions</a></td><td><a href="/LaTeX/mathematics/Ckspaces/Ckspaces.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/L0">\(L^0\), convergence in measure, equi-integrability, the Vitali convergence theorem, and the de la Vallée-Poussin criterion</a></td><td><a href="/LaTeX/mathematics/L0/L0.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/L1sinenorms">\(L^1\) norms of products of sines</a></td><td><a href="/LaTeX/mathematics/L1sinenorms/L1sinenorms.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/sinesum">\(L^p\) norms of a sine sum</a></td><td><a href="/LaTeX/mathematics/sinesum/sinesum.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/Lptrigpoly">\(L^p\) norms of trigonometric polynomials</a></td><td><a href="/LaTeX/mathematics/Lptrigpoly/Lptrigpoly.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/secantseries">A series of secants</a></td><td><a href="/LaTeX/mathematics/secantseries/secantseries.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/parseval">Abstract Fourier series and Parseval's identity</a></td><td><a href="/LaTeX/mathematics/parseval/parseval.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/alternating">Alternating multilinear forms</a></td><td><a href="/LaTeX/mathematics/alternating/alternating.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/banachalgebras">Banach algebras</a></td><td><a href="/LaTeX/mathematics/banachalgebras/banachalgebras.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/bernoullipolynomials">Bernoulli polynomials</a></td><td><a href="/LaTeX/mathematics/bernoullipolynomials/bernoullipolynomials.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/chebyshev">Chebyshev polynomials</a></td><td><a href="/LaTeX/mathematics/chebyshev/chebyshev.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/compactbanach">Compact operators on Banach spaces</a></td><td><a href="/LaTeX/mathematics/compactbanach/compactbanach.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/browniansemigroup">Convolution semigroups, canonical processes, and Brownian motion</a></td><td><a href="/LaTeX/mathematics/browniansemigroup/browniansemigroup.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/cyclotomic">Cyclotomic polynomials</a></td><td><a href="/LaTeX/mathematics/cyclotomic/cyclotomic.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/decomposition">Decomposition of the spectrum of a bounded linear operator</a></td><td><a href="/LaTeX/mathematics/decomposition/decomposition.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/denjoy">Denjoy's theorem on circle diffeomorphisms</a></td><td><a href="/LaTeX/mathematics/denjoy/denjoy.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/diophantinevectors">Diophantine vectors</a></td><td><a href="/LaTeX/mathematics/diophantinevectors/diophantinevectors.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/padicfield">Explicit construction of the \(p\)-adic numbers</a></td><td><a href="/LaTeX/mathematics/padicfield/padicfield.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/bergmanspaces">Fatou's theorem, Bergman spaces, and Hardy spaces on the circle</a></td><td><a href="/LaTeX/mathematics/bergmanspaces/bergmanspaces.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/frechetderivatives">Fréchet derivatives and Gâteaux derivatives</a></td><td><a href="/LaTeX/mathematics/frechetderivatives/frechetderivatives.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/khinchinBV">Functions of bounded variation and a theorem of Khinchin</a></td><td><a href="/LaTeX/mathematics/khinchinBV/khinchinBV.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/BVdifferentiable">Functions of bounded variation and differentiability</a></td><td><a href="/LaTeX/mathematics/BVdifferentiable/BVdifferentiable.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/gaussianintegrals">Gaussian integrals</a></td><td><a href="/LaTeX/mathematics/gaussianintegrals/gaussianintegrals.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/bochnertheorem">Gaussian measures and Bochner's theorem</a></td><td><a href="/LaTeX/mathematics/bochnertheorem/bochnertheorem.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/gaussian-measures">Gaussian measures, Hermite polynomials, and the Ornstein-Uhlenbeck semigroup</a></td><td><a href="/LaTeX/mathematics/gaussian-measures/gaussian-measures.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/smoothgerms">Germs of smooth functions</a></td><td><a href="/LaTeX/mathematics/smoothgerms/smoothgerms.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/ising">Gibbs measures and the Ising model</a></td><td><a href="/LaTeX/mathematics/ising/ising.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/gradienthilbert">Gradients and Hessians in Hilbert spaces</a></td><td><a href="/LaTeX/mathematics/gradienthilbert/gradienthilbert.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/waveletsMRA">Haar wavelets and multiresolution analysis</a></td><td><a href="/LaTeX/mathematics/waveletsMRA/waveletsMRA.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/lifts">Hamiltonian flows, cotangent lifts, and momentum maps</a></td><td><a href="/LaTeX/mathematics/lifts/lifts.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/padicharmonic">Harmonic analysis on the \(p\)-adic numbers</a></td><td><a href="/LaTeX/mathematics/padicharmonic/padicharmonic.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/harmonicpolynomials">Harmonic polynomials and the spherical Laplacian</a></td><td><a href="/LaTeX/mathematics/harmonicpolynomials/harmonicpolynomials.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/padic">Hensel's lemma, valuations, and \(p\)-adic numbers</a></td><td><a href="/LaTeX/mathematics/padic/padic.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/hermitefunctions">Hermite functions</a></td><td><a href="/LaTeX/mathematics/hermitefunctions/hermitefunctions.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/productmeasure">Infinite product measures</a></td><td><a href="/LaTeX/mathematics/productmeasure/productmeasure.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/integraloperators">Integral operators</a></td><td><a href="/LaTeX/mathematics/integraloperators/integraloperators.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/progressivelymeasurable">Jointly measurable and progressively measurable stochastic processes</a></td><td><a href="/LaTeX/mathematics/progressivelymeasurable/progressivelymeasurable.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/khinchininequality">Khinchin's inequality and Etemadi's inequality</a></td><td><a href="/LaTeX/mathematics/khinchininequality/khinchininequality.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/laguerrepolynomials">Laguerre polynomials and Perron-Frobenius operators</a></td><td><a href="/LaTeX/mathematics/laguerrepolynomials/laguerrepolynomials.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/LCA">Locally compact abelian groups</a></td><td><a href="/LaTeX/mathematics/LCA/LCA.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/levyinequality">Lévy's inequality, Rademacher sums, and Kahane's inequality</a></td><td><a href="/LaTeX/mathematics/levyinequality/levyinequality.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/markovkernels">Markov kernels, convolution semigroups, and projective families of probability measures</a></td><td><a href="/LaTeX/mathematics/markovkernels/markovkernels.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/martingaleCLT">Martingales, Lévy's continuity theorem, and the martingale central limit theorem</a></td><td><a href="/LaTeX/mathematics/martingaleCLT/martingaleCLT.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/meagerperiodic">Meager sets of periodic functions</a></td><td><a href="/LaTeX/mathematics/meagerperiodic/meagerperiodic.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/perron-frobenius">Measure theory and Perron-Frobenius operators for continued fractions</a></td><td><a href="/LaTeX/mathematics/perron-frobenius/perron-frobenius.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/newton-identities">Newton's identities and the pentagonal number theorem</a></td><td><a href="/LaTeX/mathematics/newton-identities/newton-identities.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/eisenstein">Nonholomorphic Eisenstein series, the Kronecker limit formula, and the hyperbolic Laplacian</a></td><td><a href="/LaTeX/mathematics/eisenstein/eisenstein.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/trigpoly">Norms of trigonometric polynomials</a></td><td><a href="/LaTeX/mathematics/trigpoly/trigpoly.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/kam">Notes on the KAM theorem</a></td><td><a href="/LaTeX/mathematics/kam/kam.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/orbital-NLS">Orbital stability for NLS</a></td><td><a href="/LaTeX/mathematics/orbital-NLS/orbital-NLS.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/productL2">Orthonormal bases for product measures</a></td><td><a href="/LaTeX/mathematics/productL2/productL2.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/oscillatory">Oscillatory integrals</a></td><td><a href="/LaTeX/mathematics/oscillatory/oscillatory.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/polish">Polish spaces and Baire spaces</a></td><td><a href="/LaTeX/mathematics/polish/polish.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/completelymonotone">Positive definite functions, completely monotone functions, the Bernstein-Widder theorem, and Schoenberg's theorem</a></td><td><a href="/LaTeX/mathematics/completelymonotone/completelymonotone.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/pvm">Projection-valued measures and spectral integrals</a></td><td><a href="/LaTeX/mathematics/pvm/pvm.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/pentproof">Proof of the pentagonal number theorem</a></td><td><a href="/LaTeX/mathematics/pentproof/pentproof.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/rademacher-functions">Rademacher functions</a></td><td><a href="/LaTeX/mathematics/rademacher-functions/rademacher-functions.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/ramanujansums">Ramanujan's sum</a></td><td><a href="/LaTeX/mathematics/ramanujansums/ramanujansums.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/randomtrig">Random trigonometric polynomials</a></td><td><a href="/LaTeX/mathematics/randomtrig/randomtrig.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/realRKHS">Real reproducing kernel Hilbert spaces</a></td><td><a href="/LaTeX/mathematics/realRKHS/realRKHS.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/regulatedfunctions">Regulated functions and the regulated integral</a></td><td><a href="/LaTeX/mathematics/regulatedfunctions/regulatedfunctions.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/hermiteoperator">Schwartz functions, Hermite functions, and the Hermite operator</a></td><td><a href="/LaTeX/mathematics/hermiteoperator/hermiteoperator.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/semicontinuous">Semicontinuous functions and convexity</a></td><td><a href="/LaTeX/mathematics/semicontinuous/semicontinuous.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/riesztransform">Singular integral operators and the Riesz transform</a></td><td><a href="/LaTeX/mathematics/riesztransform/riesztransform.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/sobolev1d">Sobolev spaces in one dimension and absolutely continuous functions</a></td><td><a href="/LaTeX/mathematics/sobolev1d/sobolev1d.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/modularforms">Some fundamental results on modular forms</a></td><td><a href="/LaTeX/mathematics/modularforms/modularforms.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/sturm-liouville">Spectral theory, Volterra integral operators and the Sturm-Liouville theorem</a></td><td><a href="/LaTeX/mathematics/sturm-liouville/sturm-liouville.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/stationaryphase">Stationary phase, Laplace's method, and the Fourier transform for Gaussian integrals</a></td><td><a href="/LaTeX/mathematics/stationaryphase/stationaryphase.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/subdifferentials">Subdifferentials of convex functions</a></td><td><a href="/LaTeX/mathematics/subdifferentials/subdifferentials.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/subgaussian">Subgaussian random variables, Hoeffding's inequality, and Cramér's large deviation theorem</a></td><td><a href="/LaTeX/mathematics/subgaussian/subgaussian.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/karamata">Tauber's theorem and Karamata's proof of the Hardy-Littlewood tauberian theorem</a></td><td><a href="/LaTeX/mathematics/karamata/karamata.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/testfunctions-sobolevlemma">Test functions, distributions, and Sobolev's lemma</a></td><td><a href="/LaTeX/mathematics/testfunctions-sobolevlemma/testfunctions-sobolevlemma.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/urysohn">The \(C^\infty\) Urysohn lemma</a></td><td><a href="/LaTeX/mathematics/urysohn/urysohn.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/helly">The Banach algebra of functions of bounded variation and the pointwise Helly selection theorem</a></td><td><a href="/LaTeX/mathematics/helly/helly.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/helly">The Banach algebra of functions of bounded variation and the pointwise Helly selection theorem</a></td><td><a href="/LaTeX/mathematics/helly/helly.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/bernstein-nikolsky">The Bernstein and Nikolsky inequalities for trigonometric polynomials</a></td><td><a href="/LaTeX/mathematics/bernstein-nikolsky/bernstein-nikolsky.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/berry-esseen">The Berry-Esseen theorem</a></td><td><a href="/LaTeX/mathematics/berry-esseen/berry-esseen.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/bochner-minlos">The Bochner-Minlos theorem</a></td><td><a href="/LaTeX/mathematics/bochner-minlos/bochner-minlos.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/dirac">The Dirac delta distribution and Green's functions</a></td><td><a href="/LaTeX/mathematics/dirac/dirac.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/dunford-pettis">The Dunford-Pettis theorem</a></td><td><a href="/LaTeX/mathematics/dunford-pettis/dunford-pettis.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/fluideuler">The Euler equations in fluid mechanics</a></td><td><a href="/LaTeX/mathematics/fluideuler/fluideuler.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/holomorphicfourier">The Fourier transform of holomorphic functions</a></td><td><a href="/LaTeX/mathematics/holomorphicfourier/holomorphicfourier.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/sphericalmeasure">The Fourier transform of spherical surface measure and radial functions</a></td><td><a href="/LaTeX/mathematics/sphericalmeasure/sphericalmeasure.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/gelfandtransform">The Gelfand transform, positive linear functionals, and positive-definite functions</a></td><td><a href="/LaTeX/mathematics/gelfandtransform/gelfandtransform.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/glivenko-cantelli">The Glivenko-Cantelli theorem</a></td><td><a href="/LaTeX/mathematics/glivenko-cantelli/glivenko-cantelli.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/smalldivisors">The Gottschalk-Hedlund theorem, cocycles, and small divisors</a></td><td><a href="/LaTeX/mathematics/smalldivisors/smalldivisors.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/hamiltonjacobi">The Hamilton-Jacobi equation</a></td><td><a href="/LaTeX/mathematics/hamiltonjacobi/hamiltonjacobi.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/heisenberg">The Heisenberg group and Hermite functions</a></td><td><a href="/LaTeX/mathematics/heisenberg/heisenberg.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/hilberttransform">The Hilbert transform on \(\mathbb{R}\)</a></td><td><a href="/LaTeX/mathematics/hilberttransform/hilberttransform.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/kolmogorov-continuity">The Kolmogorov continuity theorem, Hölder continuity, and the Kolmogorov-Chentsov theorem</a></td><td><a href="/LaTeX/mathematics/kolmogorov-continuity/kolmogorov-continuity.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/kolmogorovcontinuity">The Kolmogorov continuity theorem, Hölder continuity, and the Kolmogorov-Chentsov theorem</a></td><td><a href="/LaTeX/mathematics/kolmogorovcontinuity/kolmogorovcontinuity.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/kolmogorov-extension">The Kolmogorov extension theorem</a></td><td><a href="/LaTeX/mathematics/kolmogorov-extension/kolmogorov-extension.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/legendretransform">The Legendre transform</a></td><td><a href="/LaTeX/mathematics/legendretransform/legendretransform.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/lindeberg">The Lindeberg central limit theorem</a></td><td><a href="/LaTeX/mathematics/lindeberg/lindeberg.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/poincaredulac">The Poincaré-Dulac normal form theorem for formal vector fields</a></td><td><a href="/LaTeX/mathematics/poincaredulac/poincaredulac.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/polya-vinogradov">The Polya-Vinogradov inequality</a></td><td><a href="/LaTeX/mathematics/polya-vinogradov/polya-vinogradov.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/Qdual">The Pontryagin duals of \(\mathbb{Q}/\mathbb{Z}\) and \(\mathbb{Q}\), and the adeles</a></td><td><a href="/LaTeX/mathematics/Qdual/Qdual.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/schwartzspace">The Schwartz space and the Fourier transform</a></td><td><a href="/LaTeX/mathematics/schwartzspace/schwartzspace.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/segalbargmann">The Segal-Bargmann transform and the Segal-Bargmann space</a></td><td><a href="/LaTeX/mathematics/segalbargmann/segalbargmann.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/stonecech">The Stone-Čech compactification of Tychonoff spaces</a></td><td><a href="/LaTeX/mathematics/stonecech/stonecech.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/voronoi">The Voronoi summation formula</a></td><td><a href="/LaTeX/mathematics/voronoi/voronoi.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/wieneralgebra">The Wiener algebra and Wiener's lemma</a></td><td><a href="/LaTeX/mathematics/wieneralgebra/wieneralgebra.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/wiener-pitt">The Wiener-Pitt tauberian theorem</a></td><td><a href="/LaTeX/mathematics/wiener-pitt/wiener-pitt.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/cube">The cross-polytope, the ball, and the cube</a></td><td><a href="/LaTeX/mathematics/cube/cube.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/heatkernelRn">The heat kernel on \(\mathbb{R}^n\)</a></td><td><a href="/LaTeX/mathematics/heatkernelRn/heatkernelRn.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/heatkerneltorus">The heat kernel on the torus</a></td><td><a href="/LaTeX/mathematics/heatkerneltorus/heatkerneltorus.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/flooruniversal">The inclusion map from the integers to the reals and universal properties of the floor and ceiling functions</a></td><td><a href="/LaTeX/mathematics/flooruniversal/flooruniversal.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/inhomogeneousheatT">The inhomogeneous heat equation on \(\mathbb{T}\)</a></td><td><a href="/LaTeX/mathematics/inhomogeneousheatT/inhomogeneousheatT.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/LIL">The law of the iterated logarithm</a></td><td><a href="/LaTeX/mathematics/LIL/LIL.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/narrowtopology">The narrow topology on the set of Borel probability measures on a metrizable space</a></td><td><a href="/LaTeX/mathematics/narrowtopology/narrowtopology.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/NLS-hamiltonian">The nonlinear Schrödinger equation is Hamiltonian</a></td><td><a href="/LaTeX/mathematics/NLS-hamiltonian/NLS-hamiltonian.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/schrodinger1d">The one-dimensional periodic Schrödinger equation</a></td><td><a href="/LaTeX/mathematics/schrodinger1d/schrodinger1d.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/profinite">The profinite completion of the integers, the \(p\)-adic integers, and Prüfer \(p\)-groups</a></td><td><a href="/LaTeX/mathematics/profinite/profinite.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/SVD">The singular value decomposition of compact operators on Hilbert spaces</a></td><td><a href="/LaTeX/mathematics/SVD/SVD.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/unilateral-shift">The spectra of the unilateral shift and its adjoint</a></td><td><a href="/LaTeX/mathematics/unilateral-shift/unilateral-shift.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/selfadjoint">The spectrum of a self-adjoint operator is a compact subset of \(\mathbb{R}\)</a></td><td><a href="/LaTeX/mathematics/selfadjoint/selfadjoint.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/symmetric-difference">The symmetric difference metric</a></td><td><a href="/LaTeX/mathematics/symmetric-difference/symmetric-difference.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/fandmriesz">The theorem of F. and M. Riesz</a></td><td><a href="/LaTeX/mathematics/fandmriesz/fandmriesz.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/uniformmetric">The uniform metric on product spaces</a></td><td><a href="/LaTeX/mathematics/uniformmetric/uniformmetric.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/LLN">The weak and strong laws of large numbers</a></td><td><a href="/LaTeX/mathematics/LLN/LLN.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/weak-topology-locallyconvex">The weak topology of locally convex spaces and the weak-* topology of their duals</a></td><td><a href="/LaTeX/mathematics/weak-topology-locallyconvex/weak-topology-locallyconvex.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/nbdfilters">Topological spaces and neighborhood filters</a></td><td><a href="/LaTeX/mathematics/nbdfilters/nbdfilters.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/totalvariation">Total variation, absolute continuity, and the Borel \(\sigma\)-algebra of \(C(I)\)</a></td><td><a href="/LaTeX/mathematics/totalvariation/totalvariation.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/traceclass">Trace class operators and Hilbert-Schmidt operators</a></td><td><a href="/LaTeX/mathematics/traceclass/traceclass.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/trotter">Unbounded operators in a Hilbert space and the Trotter product formula</a></td><td><a href="/LaTeX/mathematics/trotter/trotter.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/uup-compressedsensing">Uncertainty principles and compressed sensing</a></td><td><a href="/LaTeX/mathematics/uup-compressedsensing/uup-compressedsensing.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/unordered-sums">Unordered sums in Hilbert spaces</a></td><td><a href="/LaTeX/mathematics/unordered-sums/unordered-sums.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/vinogradov-estimate">Vinogradov's estimate for exponential sums over primes</a></td><td><a href="/LaTeX/mathematics/vinogradov-estimate/vinogradov-estimate.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/vitali-coverings">Vitali coverings on the real line</a></td><td><a href="/LaTeX/mathematics/vitali-coverings/vitali-coverings.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/laplacemethod">Watson's lemma and Laplace's method</a></td><td><a href="/LaTeX/mathematics/laplacemethod/laplacemethod.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/weaksymplectic">Weak symplectic forms and differential calculus in Banach spaces</a></td><td><a href="/LaTeX/mathematics/weaksymplectic/weaksymplectic.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/costas">What is a Costas array?</a></td><td><a href="/LaTeX/mathematics/costas/costas.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/domainODE">What is the domain of a solution of an ODE?</a></td><td><a href="/LaTeX/mathematics/domainODE/domainODE.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/donsker">Wiener measure and Donsker's theorem</a></td><td><a href="/LaTeX/mathematics/donsker/donsker.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/zygmund-restriction">Zygmund's Fourier restriction theorem and Bernstein's inequality</a></td><td><a href="/LaTeX/mathematics/zygmund-restriction/zygmund-restriction.pdf">PDF</a></td></tr>
 </table>
+
+## Historical and bibliographic notes
+
+<table>
+    <tr>
+        <th>HTML</th>
+        <th>PDF</th>
+    </tr>
+    <tr>
+        <th><a href="/LaTeX/historical/themartingale">Early instances of the martingale</a></th>
+        <th><a href="/LaTeX/historical/themartingale/themartingale.pdf">PDF</a></th>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/liouville">Notes on the history of Liouville's theorem</a></td>
+        <td><a href="/LaTeX/historical/liouville/liouville.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/euclidIV">Book IV of Euclid's *Elements* and ancient Greek mosaics</a></td>
+        <td><a href="/LaTeX/historical/euclidIV/euclidIV.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/eulermaclaurin">The Euler-Maclaurin summation formula</a></td>
+        <td><a href="/LaTeX/historical/eulermaclaurin/eulermaclaurin.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/greatyear">The great year, calendars, and the incommensurability of celestial rotations</a></td>
+        <td><a href="/LaTeX/historical/greatyear/greatyear.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/greeknumbers">Greek numbers</a></td>
+        <td><a href="/LaTeX/historical/greeknumbers/greeknumbers.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/greekweights">Ancient Greek weights and measures</a></td>
+        <td><a href="/LaTeX/historical/greekweights/greekweights.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/induction">Bibliography for the history of induction in mathematics</a></td>
+        <td><a href="/LaTeX/historical/induction/induction.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/jacobian">Bibliography for the history of the Jacobian</a></td>
+        <td><a href="/LaTeX/historical/jacobian/jacobian.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/li">The logarithmic integral</a></td>
+        <td><a href="/LaTeX/historical/li/li.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/liouville">Notes on the history of Liouville’s theorem</a></td>
+        <td><a href="/LaTeX/historical/liouville/liouville.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/waves">What is a wave?</a></td>
+        <td><a href="/LaTeX/historical/waves/waves.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/summable">Summable series and the Riemann rearrangement theorem</a></td>
+        <td><a href="/LaTeX/historical/summable/summable.pdf">PDF</a></td>
+    </tr>
+</table>
+
 
 
 <!--
@@ -158,62 +220,4 @@ permalink: /writings/
   </tr>
 {% endfor %}
 </table>
--->
-
-<!--
-| HTML (LaTeXML)                                                                                                                                                | PDF                                                                             |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------|
-| [$$$$L^0$$$$, convergence in measure, equi-integrability, the Vitali convergence theorem, and the de la Vallée-Poussin criterion](/LaTeX/mathematics/L0)        | [PDF](/LaTeX/mathematics/L0/L0.pdf)                                           |
-| [Alternating multilinear forms](/LaTeX/mathematics/alternating)                                                                                             | [PDF](/LaTeX/mathematics/alternating/alternating.pdf)                         |
-| [Banach algebras](/LaTeX/mathematics/banachalgebras)                                                                                                        | [PDF](/LaTeX/mathematics/banachalgebras/banachalgebras.pdf)                   |
-| [Bernoulli polynomials](/LaTeX/mathematics/bernoullipolynomials)                                                                                            | [PDF](/LaTeX/mathematics/bernoullipolynomials/bernoullipolynomials.pdf)       |
-| [Chebyshev polynomials](/LaTeX/mathematics/chebyshev)                                                                                                       | [PDF](/LaTeX/mathematics/chebyshev/chebyshev.pdf)                             |
-| [Compact operators on Banach spaces](/LaTeX/mathematics/compactbanach)                                                                                      | [PDF](/LaTeX/mathematics/compactbanach/compactbanach.pdf)                     |
-| [Convolution semigroups, canonical processes, and Brownian motion](/LaTeX/mathematics/browniansemigroup)                                                    | [PDF](/LaTeX/mathematics/browniansemigroup/browniansemigroup.pdf)             |
-| [Cyclotomic polynomials](/LaTeX/mathematics/cyclotomic)                                                                                                     | [PDF](/LaTeX/mathematics/cyclotomic/cyclotomic.pdf)                           |
-| [Decomposition of the spectrum of a bounded linear operator](/LaTeX/mathematics/decomposition)                                                              | [PDF](/LaTeX/mathematics/decomposition/decomposition.pdf)                     |
-| [Denjoy's theorem on circle diffeomorphisms](/LaTeX/mathematics/denjoy)                                                                                     | [PDF](/LaTeX/mathematics/denjoy/denjoy.pdf)                                   |
-| [Explicit construction of the $$$$p$$$$-adic numbers](/LaTeX/mathematics/padicfield)                                                                            | [PDF](/LaTeX/mathematics/padicfield/padicfield.pdf)                           |
-| [Fatou's theorem, Bergman spaces, and Hardy spaces on the circle](/LaTeX/mathematics/bergmanspaces)                                                         | [PDF](/LaTeX/mathematics/bergmanspaces/bergmanspaces.pdf)                     |
-| [Fréchet derivatives and Gâteaux derivatives](/LaTeX/mathematics/frechetderivatives)                                                                        | [PDF](/LaTeX/mathematics/frechetderivatives/frechetderivatives.pdf)           |
-| [Functions of bounded variation and differentiability](/LaTeX/mathematics/BVdifferentiable)                                                                 | [PDF](/LaTeX/mathematics/BVdifferentiable/BVdifferentiable.pdf)               |
-| [Gaussian integrals](/LaTeX/mathematics/gaussianintegrals)                                                                                                  | [PDF](/LaTeX/mathematics/gaussianintegrals/gaussianintegrals.pdf)             |
-| [Gaussian measures and Bochner's theorem](/LaTeX/mathematics/bochnertheorem)                                                                                | [PDF](/LaTeX/mathematics/bochnertheorem/bochnertheorem.pdf)                   |
-| [Gaussian measures, Hermite polynomials, and the Ornstein-Uhlenbeck semigroup](/LaTeX/mathematics/gaussian-measures)                                        | [PDF](/LaTeX/mathematics/gaussian-measures/gaussian-measures.pdf)             |
-| [Gradients and Hessians in Hilbert spaces](/LaTeX/mathematics/gradienthilbert)                                                                              | [PDF](/LaTeX/mathematics/gradienthilbert/gradienthilbert.pdf)                 |
-| [Haar wavelets and multiresolution analysis](/LaTeX/mathematics/waveletsMRA)                                                                                | [PDF](/LaTeX/mathematics/waveletsMRA/waveletsMRA.pdf)                         |
-| [Harmonic polynomials and the spherical Laplacian](/LaTeX/mathematics/harmonicpolynomials)                                                                  | [PDF](/LaTeX/mathematics/harmonicpolynomials/harmonicpolynomials.pdf)         |
-| [Hensel’s lemma, valuations, and $$$$p$$$$-adic numbers](/LaTeX/mathematics/padic)                                                                              | [PDF](/LaTeX/mathematics/padic/padic.pdf)                                     |
-| [Hermite functions](/LaTeX/mathematics/hermitefunctions)                                                                                                    | [PDF](/LaTeX/mathematics/hermitefunctions/hermitefunctions.pdf)               |
-| [Infinite product measures](/LaTeX/mathematics/productmeasure)                                                                                              | [PDF](/LaTeX/mathematics/productmeasure/productmeasure.pdf)                   |
-| [Jointly measurable and progressively measurable stochastic processes](/LaTeX/mathematics/progressivelymeasurable)                                          | [PDF](/LaTeX/mathematics/progressivelymeasurable/progressivelymeasurable.pdf) |
-| [Markov kernels, convolution semigroups, and projective families of probability measures](/LaTeX/mathematics/markovkernels)                                 | [PDF](/LaTeX/mathematics/markovkernels/markovkernels.pdf)                     |
-| [Measure theory and Perron-Frobenius operators for continued fractions](/LaTeX/mathematics/perron-frobenius)                                                | [PDF](/LaTeX/mathematics/perron-frobenius/perron-frobenius.pdf)               |
-| [Newton's identities and the pentagonal number theorem](/LaTeX/mathematics/newton-identities)                                                               | [PDF](/LaTeX/mathematics/newton-identities/newton-identities.pdf)             |
-| [Nonholomorphic Eisenstein series, the Kronecker limit formula, and the hyperbolic Laplacian](/LaTeX/mathematics/eisenstein)                                | [PDF](/LaTeX/mathematics/eisenstein/eisenstein.pdf)                           |
-| [Oscillatory integrals](/LaTeX/mathematics/oscillatory)                                                                                                     | [PDF](/LaTeX/mathematics/oscillatory/oscillatory.pdf)                         |
-| [Polish spaces and Baire spaces](/LaTeX/mathematics/polish)                                                                                                 | [PDF](/LaTeX/mathematics/polish/polish.pdf)                                   |
-| [Positive definite functions, completely monotone functions, the Bernstein-Widder theorem, and Schoenberg's theorem](/LaTeX/mathematics/completelymonotone) | [PDF](/LaTeX/mathematics/completelymonotone/completelymonotone.pdf)           |
-| [Schwartz functions, Hermite functions, and the Hermite operator](/LaTeX/mathematics/hermiteoperator)                                                       | [PDF](/LaTeX/mathematics/hermiteoperator/hermiteoperator.pdf)                 |
-| [Subgaussian random variables, Hoeffding's inequality, and Cramér's large deviation theorem](/LaTeX/mathematics/subgaussian)                                | [PDF](/LaTeX/mathematics/subgaussian/subgaussian.pdf)                         |
-| [Tauber's theorem and Karamata's proof of the Hardy-Littlewood tauberian theorem](/LaTeX/mathematics/karamata)                                              | [PDF](/LaTeX/mathematics/karamata/karamata.pdf)                               |
-| [The Banach algebra of functions of bounded variation and the pointwise Helly selection theorem](/LaTeX/mathematics/helly)                                  | [PDF](/LaTeX/mathematics/helly/helly.pdf)                                     |
-| [The Bernstein and Nikolsky inequalities for trigonometric polynomials](/LaTeX/mathematics/bernstein-nikolsky)                                              | [PDF](/LaTeX/mathematics/bernstein-nikolsky/bernstein-nikolsky.pdf)           |
-| [The Berry-Esseen theorem](/LaTeX/mathematics/berry-esseen)                                                                                                 | [PDF](/LaTeX/mathematics/berry-esseen/berry-esseen.pdf)                       |
-| [The Bochner-Minlos theorem](/LaTeX/mathematics/bochner-minlos)                                                                                             | [PDF](/LaTeX/mathematics/bochner-minlos/bochner-minlos.pdf)                   |
-| [The Dirac delta distribution and Green's functions](/LaTeX/mathematics/dirac)                                                                              | [PDF](/LaTeX/mathematics/dirac/dirac.pdf)                                     |
-| [The Dunford-Pettis theorem](/LaTeX/mathematics/dunford-pettis)                                                                                             | [PDF](/LaTeX/mathematics/dunford-pettis/dunford-pettis.pdf)                   |
-| [The Gelfand transform, positive linear functionals, and positive-definite functions](/LaTeX/mathematics/gelfandtransform)                                  | [PDF](/LaTeX/mathematics/gelfandtransform/gelfandtransform.pdf)               |
-| [The Heisenberg group and Hermite functions](/LaTeX/mathematics/heisenberg)                                                                                 | [PDF](/LaTeX/mathematics/heisenberg/heisenberg.pdf)                           |
-| [The Hilbert transform on $$$$\mathbb{R}$$$$](/LaTeX/mathematics/hilberttransform)                                                                              | [PDF](/LaTeX/mathematics/hilberttransform/hilberttransform.pdf)               |
-| [The Kolmogorov continuity theorem, Hölder continuity, and the Kolmogorov-Chentsov theorem](/LaTeX/mathematics/kolmogorovcontinuity)                        | [PDF](/LaTeX/mathematics/kolmogorovcontinuity/kolmogorovcontinuity.pdf)       |
-| [The Lindeberg central limit theorem](/LaTeX/mathematics/lindeberg)                                                                                         | [PDF](/LaTeX/mathematics/lindeberg/lindeberg.pdf)                             |
-| [The Poincaré-Dulac normal form theorem for formal vector fields](/LaTeX/mathematics/poincaredulac)                                                         | [PDF](/LaTeX/mathematics/poincaredulac/poincaredulac.pdf)                     |
-| [The Pontryagin duals of $$$$\mathbb{Q}/\mathbb{Z}$$$$ and $$$$\mathbb{Q}$$$$ and the adeles](/LaTeX/mathematics/Qdual)                                             | [PDF](/LaTeX/mathematics/Qdual/Qdual.pdf)                                     |
-| [The Voronoi summation formula](/LaTeX/mathematics/voronoi)                                                                                                 | [PDF](/LaTeX/mathematics/voronoi/voronoi.pdf)                                 |
-| [The Wiener algebra and Wiener's lemma](/LaTeX/mathematics/wieneralgebra)                                                                                   | [PDF](/LaTeX/mathematics/wieneralgebra/wieneralgebra.pdf)                     |
-| [The cross-polytope, the ball, and the cube](/LaTeX/mathematics/cube)                                                                                       | [PDF](/LaTeX/mathematics/cube/cube.pdf)                                       |
-| [Weak symplectic forms and differential calculus in Banach spaces](/LaTeX/mathematics/weaksymplectic)                                                       | [PDF](/LaTeX/mathematics/weaksymplectic/weaksymplectic.pdf)                   |
-| [What is the domain of a solution of an ODE?](/LaTeX/mathematics/domainODE)                                                                                 | [PDF](/LaTeX/mathematics/domainODE/domainODE.pdf)                             |
-| [Wiener measure and Donsker's theorem](/LaTeX/mathematics/donsker)                                                                                          | [PDF](/LaTeX/mathematics/donsker/donsker.pdf)                                 |
 -->
