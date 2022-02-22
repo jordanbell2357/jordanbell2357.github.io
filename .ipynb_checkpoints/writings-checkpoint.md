@@ -7,7 +7,9 @@ permalink: /writings/
 - [Mathematical notes](#mathematical)
 - [Historical and bibliographic notes](#historical)
 
-## Mathematical notes. Strong emphasis on function spaces and structures in analysis. Detailed proofs of theorems. {#mathematical}
+## Mathematical notes {#mathematical}
+
+Strong emphasis on function spaces and structures in analysis. Detailed proofs of theorems. 
 
 <table>
 <tr>
