@@ -4,7 +4,10 @@ title: Writings
 permalink: /writings/
 ---
 
-## Mathematical notes. Strong emphasis on function spaces and structures in analysis. Detailed proofs of theorems.
+- [Mathematical notes](#mathematical)
+- [Historical and bibliographic notes](#historical)
+
+## Mathematical notes. Strong emphasis on function spaces and structures in analysis. Detailed proofs of theorems. {#mathematical}
 
 <table>
 <tr>
@@ -148,8 +151,9 @@ permalink: /writings/
 <tr><td><a href="/LaTeX/mathematics/donsker">Wiener measure and Donsker's theorem</a></td><td><a href="/LaTeX/mathematics/donsker/donsker.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/zygmund-restriction">Zygmund's Fourier restriction theorem and Bernstein's inequality</a></td><td><a href="/LaTeX/mathematics/zygmund-restriction/zygmund-restriction.pdf">PDF</a></td></tr>
 </table>
+</section>
 
-## Historical and bibliographic notes
+## Historical and bibliographic notes {#historical}
 
 <table>
     <tr>
@@ -209,7 +213,6 @@ permalink: /writings/
         <td><a href="/LaTeX/historical/waves/waves.pdf">PDF</a></td>
     </tr>
 </table>
-
 
 
 <!--
