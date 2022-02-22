@@ -163,12 +163,24 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
         <th>PDF</th>
     </tr>
     <tr>
+        <td><a href="/LaTeX/historical/pell">Pell's equation and side and diagonal numbers</a></td>
+        <td><a href="/LaTeX/historical/pell/pell.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/papyri">Numbers and fractions in Greek papyri</a></td>
+        <td><a href="/LaTeX/historical/papyri/papyri.pdf">PDF</a></td>
+    </tr>
+    <tr>
         <td><a href="/LaTeX/historical/summable">Summable series and the Riemann rearrangement theorem</a></td>
         <td><a href="/LaTeX/historical/summable/summable.pdf">PDF</a></td>
     </tr>
     <tr>
         <td><a href="/LaTeX/historical/themartingale">Early instances of the martingale</a></td>
         <td><a href="/LaTeX/historical/themartingale/themartingale.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/platoforms">Plato's theory of forms and the axiom of foundation</a></td>
+        <td><a href="/LaTeX/historical/platoforms/platoforms.pdf">PDF</a></td>
     </tr>
     <tr>
         <td><a href="/LaTeX/historical/liouville">Notes on the history of Liouville's theorem</a></td>
@@ -195,6 +207,14 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
         <td><a href="/LaTeX/historical/greekweights/greekweights.pdf">PDF</a></td>
     </tr>
     <tr>
+        <td><a href="/LaTeX/historical/minoan">Minoan weights</a></td>
+        <td><a href="/LaTeX/historical/minoan/minoan.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/balance-scales">Ancient balance scales</a></td>
+        <td><a href="/LaTeX/historical/balance-scales/balance-scales.pdf">PDF</a></td>
+    </tr>
+    <tr>
         <td><a href="/LaTeX/historical/induction">Bibliography for the history of induction in mathematics</a></td>
         <td><a href="/LaTeX/historical/induction/induction.pdf">PDF</a></td>
     </tr>
@@ -213,6 +233,14 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
     <tr>
         <td><a href="/LaTeX/historical/waves">What is a wave?</a></td>
         <td><a href="/LaTeX/historical/waves/waves.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/resonance">Bibliography for the history of resonance</a></td>
+        <td><a href="/LaTeX/historical/resonance/resonance.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/zeno">Zeno of Elea, locomotion, infinity, and time</a></td>
+        <td><a href="/LaTeX/historical/zeno/zeno.pdf">PDF</a></td>
     </tr>
 </table>
 
