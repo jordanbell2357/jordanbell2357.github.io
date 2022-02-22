@@ -157,15 +157,19 @@ permalink: /writings/
         <th>PDF</th>
     </tr>
     <tr>
-        <th><a href="/LaTeX/historical/themartingale">Early instances of the martingale</a></th>
-        <th><a href="/LaTeX/historical/themartingale/themartingale.pdf">PDF</a></th>
+        <td><a href="/LaTeX/historical/summable">Summable series and the Riemann rearrangement theorem</a></td>
+        <td><a href="/LaTeX/historical/summable/summable.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/themartingale">Early instances of the martingale</a></td>
+        <td><a href="/LaTeX/historical/themartingale/themartingale.pdf">PDF</a></td>
     </tr>
     <tr>
         <td><a href="/LaTeX/historical/liouville">Notes on the history of Liouville's theorem</a></td>
         <td><a href="/LaTeX/historical/liouville/liouville.pdf">PDF</a></td>
     </tr>
     <tr>
-        <td><a href="/LaTeX/historical/euclidIV">Book IV of Euclid's *Elements* and ancient Greek mosaics</a></td>
+        <td><a href="/LaTeX/historical/euclidIV">Book IV of Euclid's <i>Elements</i> and ancient Greek mosaics</a></td>
         <td><a href="/LaTeX/historical/euclidIV/euclidIV.pdf">PDF</a></td>
     </tr>
     <tr>
@@ -203,10 +207,6 @@ permalink: /writings/
     <tr>
         <td><a href="/LaTeX/historical/waves">What is a wave?</a></td>
         <td><a href="/LaTeX/historical/waves/waves.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/summable">Summable series and the Riemann rearrangement theorem</a></td>
-        <td><a href="/LaTeX/historical/summable/summable.pdf">PDF</a></td>
     </tr>
 </table>
 
