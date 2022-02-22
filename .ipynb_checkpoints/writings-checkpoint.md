@@ -153,7 +153,7 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
 <tr><td><a href="/LaTeX/mathematics/donsker">Wiener measure and Donsker's theorem</a></td><td><a href="/LaTeX/mathematics/donsker/donsker.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/zygmund-restriction">Zygmund's Fourier restriction theorem and Bernstein's inequality</a></td><td><a href="/LaTeX/mathematics/zygmund-restriction/zygmund-restriction.pdf">PDF</a></td></tr>
 </table>
-</section>
+
 
 ## Historical and bibliographic notes {#historical}
 
