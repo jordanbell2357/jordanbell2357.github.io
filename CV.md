@@ -4,11 +4,17 @@ title: CV
 permalink: /CV/
 ---
 
-## CV
+- [CV PDF](#cv-pdf)
+- [Areas of professional and scholarly interest](#interests)
+- [Awards](#awards)
+- [Translations](#translations)
+- [Publications](#publications)
 
-[CV](/LaTeX/resume/cv_bell.pdf)
+## CV PDF {#cv-pdf}
 
-## Areas of professional and scholarly interest
+[CV](/LaTeX/CV/cv_bell.pdf)
+
+## Areas of professional and scholarly interest {#interests}
 
 - one-on-one help and guidance for learners,
 - creating learning tools for mathematics and other exact subjects,
@@ -24,7 +30,7 @@ permalink: /CV/
 - global commodity flows and logistics,
 - ...
 
-## Awards
+## Awards {#awards}
 
 2019 recipient of [Carl B. Allendoerfer Award for expository mathematical writing, Mathematical Association of America (MAA)](https://www.maa.org/programs-and-communities/member-communities/maa-awards/writing-awards/carl-b-allendoerfer-awards) for
 > Jordan Bell and Viktor Blåsjö, [*Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges*](https://doi.org/10.1080/0025570X.2018.1506656), Mathematics Magazine, Vol. 91, no. 5, December 2018, pp. 341-347. DOI: [10.1080/0025570X.2018.1506656](https://doi.org/10.1080/0025570X.2018.1506656)
@@ -36,12 +42,12 @@ Canada Graduate Scholarships – Master's (CGS M), University of Toronto, Depart
 Canada Graduate Scholarships – Doctoral (CGS D), University of Toronto, Department of Mathematics
 
 
-## Translations
+## Translations {#translations}
 
 - Hawking, Stephen (ed.), *God Created the Integers: The Mathematical Breakthroughs That Changed History (New Edition)*. Leonhard Euler, “On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)”, pp. 393-399, translated from the Latin by Jordan Bell. Running Press, Philadelphia, 2007. [PDF](/assets/pdfs/E41.pdf)
 
 
-## Publications
+## Publications {#publications}
 
 - Andrews, George E., and Jordan Bell. “Euler’s Pentagonal Number Theorem and the Rogers-Fine Identity.” *Annals of Combinatorics* 16, no. 3 (2012): 411–20. <https://doi.org/10.1007/s00026-012-0139-4>.
 
