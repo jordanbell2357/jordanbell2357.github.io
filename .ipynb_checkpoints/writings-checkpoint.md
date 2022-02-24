@@ -91,7 +91,6 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
 <tr><td><a href="/LaTeX/mathematics/testfunctions-sobolevlemma">Test functions, distributions, and Sobolev's lemma</a></td><td><a href="/LaTeX/mathematics/testfunctions-sobolevlemma/testfunctions-sobolevlemma.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/urysohn">The \(C^\infty\) Urysohn lemma</a></td><td><a href="/LaTeX/mathematics/urysohn/urysohn.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/helly">The Banach algebra of functions of bounded variation and the pointwise Helly selection theorem</a></td><td><a href="/LaTeX/mathematics/helly/helly.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/mathematics/helly">The Banach algebra of functions of bounded variation and the pointwise Helly selection theorem</a></td><td><a href="/LaTeX/mathematics/helly/helly.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/bernstein-nikolsky">The Bernstein and Nikolsky inequalities for trigonometric polynomials</a></td><td><a href="/LaTeX/mathematics/bernstein-nikolsky/bernstein-nikolsky.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/berry-esseen">The Berry-Esseen theorem</a></td><td><a href="/LaTeX/mathematics/berry-esseen/berry-esseen.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/bochner-minlos">The Bochner-Minlos theorem</a></td><td><a href="/LaTeX/mathematics/bochner-minlos/bochner-minlos.pdf">PDF</a></td></tr>
@@ -163,60 +162,20 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
         <th>PDF</th>
     </tr>
     <tr>
-        <td><a href="/LaTeX/historical/pell">Pell's equation and side and diagonal numbers</a></td>
-        <td><a href="/LaTeX/historical/pell/pell.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/papyri">Numbers and fractions in Greek papyri</a></td>
-        <td><a href="/LaTeX/historical/papyri/papyri.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/summable">Summable series and the Riemann rearrangement theorem</a></td>
-        <td><a href="/LaTeX/historical/summable/summable.pdf">PDF</a></td>
-    </tr>
-    <tr>
         <td><a href="/LaTeX/historical/themartingale">Early instances of the martingale</a></td>
         <td><a href="/LaTeX/historical/themartingale/themartingale.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/platoforms">Plato's theory of forms and the axiom of foundation</a></td>
-        <td><a href="/LaTeX/historical/platoforms/platoforms.pdf">PDF</a></td>
     </tr>
     <tr>
         <td><a href="/LaTeX/historical/liouville">Notes on the history of Liouville's theorem</a></td>
         <td><a href="/LaTeX/historical/liouville/liouville.pdf">PDF</a></td>
     </tr>
     <tr>
-        <td><a href="/LaTeX/historical/euclidIV">Book IV of Euclid's <i>Elements</i> and ancient Greek mosaics</a></td>
-        <td><a href="/LaTeX/historical/euclidIV/euclidIV.pdf">PDF</a></td>
+        <td><a href="/LaTeX/historical/summable">Summable series and the Riemann rearrangement theorem</a></td>
+        <td><a href="/LaTeX/historical/summable/summable.pdf">PDF</a></td>
     </tr>
     <tr>
         <td><a href="/LaTeX/historical/eulermaclaurin">The Euler-Maclaurin summation formula</a></td>
         <td><a href="/LaTeX/historical/eulermaclaurin/eulermaclaurin.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/greatyear">The great year, calendars, and the incommensurability of celestial rotations</a></td>
-        <td><a href="/LaTeX/historical/greatyear/greatyear.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/greeknumbers">Greek numbers</a></td>
-        <td><a href="/LaTeX/historical/greeknumbers/greeknumbers.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/greekweights">Ancient Greek weights and measures</a></td>
-        <td><a href="/LaTeX/historical/greekweights/greekweights.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/minoan">Minoan weights</a></td>
-        <td><a href="/LaTeX/historical/minoan/minoan.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/balance-scales">Ancient balance scales</a></td>
-        <td><a href="/LaTeX/historical/balance-scales/balance-scales.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/induction">Bibliography for the history of induction in mathematics</a></td>
-        <td><a href="/LaTeX/historical/induction/induction.pdf">PDF</a></td>
     </tr>
     <tr>
         <td><a href="/LaTeX/historical/jacobian">Bibliography for the history of the Jacobian</a></td>
@@ -227,8 +186,40 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
         <td><a href="/LaTeX/historical/li/li.pdf">PDF</a></td>
     </tr>
     <tr>
-        <td><a href="/LaTeX/historical/liouville">Notes on the history of Liouville’s theorem</a></td>
-        <td><a href="/LaTeX/historical/liouville/liouville.pdf">PDF</a></td>
+        <td><a href="/LaTeX/historical/induction">Bibliography for the history of induction in mathematics</a></td>
+        <td><a href="/LaTeX/historical/induction/induction.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/pell">Pell's equation and side and diagonal numbers</a></td>
+        <td><a href="/LaTeX/historical/pell/pell.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/greeknumbers">Greek numbers</a></td>
+        <td><a href="/LaTeX/historical/greeknumbers/greeknumbers.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/greekweights">Ancient Greek weights and measures</a></td>
+        <td><a href="/LaTeX/historical/greekweights/greekweights.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/balance-scales">Ancient balance scales</a></td>
+        <td><a href="/LaTeX/historical/balance-scales/balance-scales.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/greatyear">The great year, calendars, and the incommensurability of celestial rotations</a></td>
+        <td><a href="/LaTeX/historical/greatyear/greatyear.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/euclidIV">Book IV of Euclid's <i>Elements</i> and ancient Greek mosaics</a></td>
+        <td><a href="/LaTeX/historical/euclidIV/euclidIV.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/platoforms">Plato's theory of forms and the axiom of foundation</a></td>
+        <td><a href="/LaTeX/historical/platoforms/platoforms.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/zeno">Zeno of Elea, locomotion, infinity, and time</a></td>
+        <td><a href="/LaTeX/historical/zeno/zeno.pdf">PDF</a></td>
     </tr>
     <tr>
         <td><a href="/LaTeX/historical/waves">What is a wave?</a></td>
@@ -239,8 +230,12 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
         <td><a href="/LaTeX/historical/resonance/resonance.pdf">PDF</a></td>
     </tr>
     <tr>
-        <td><a href="/LaTeX/historical/zeno">Zeno of Elea, locomotion, infinity, and time</a></td>
-        <td><a href="/LaTeX/historical/zeno/zeno.pdf">PDF</a></td>
+        <td><a href="/LaTeX/historical/papyri">Numbers and fractions in Greek papyri</a></td>
+        <td><a href="/LaTeX/historical/papyri/papyri.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/minoan">Minoan weights</a></td>
+        <td><a href="/LaTeX/historical/minoan/minoan.pdf">PDF</a></td>
     </tr>
 </table>
 
