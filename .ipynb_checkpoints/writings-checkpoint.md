@@ -218,6 +218,14 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
         <td><a href="/LaTeX/historical/platoforms/platoforms.pdf">PDF</a></td>
     </tr>
     <tr>
+        <td><a href="/LaTeX/historical/predicates">Predicates</a></td>
+        <td><a href="/LaTeX/historical/predicates/predicates.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/amphibolia">Amphibolia</a></td>
+        <td><a href="/LaTeX/historical/amphibolia/amphibolia.pdf">PDF</a></td>
+    </tr>
+    <tr>
         <td><a href="/LaTeX/historical/zeno">Zeno of Elea, locomotion, infinity, and time</a></td>
         <td><a href="/LaTeX/historical/zeno/zeno.pdf">PDF</a></td>
     </tr>
