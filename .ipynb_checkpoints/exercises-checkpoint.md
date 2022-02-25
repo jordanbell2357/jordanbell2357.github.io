@@ -14,8 +14,8 @@ permalink: /exercises/
 
 # Desmos
 
-1. [Riemann sums example #1](https://www.desmos.com/calculator/77inva22z8)
+1. [Riemann sums example #1](https://www.desmos.com/calculator/cbhiymlls7)
 
-2. [Riemann sums example #2](https://www.desmos.com/calculator/8gjgeinoin)
+2. [Riemann sums example #2](https://www.desmos.com/calculator/abk5szfm0h)
 
-3. [Riemann sums example #3](https://www.desmos.com/calculator/kbwhvjtcnw)
+3. [Riemann sums example #3](https://www.desmos.com/calculator/ryrp6oip6q)
