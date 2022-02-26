@@ -106,7 +106,6 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
 <tr><td><a href="/LaTeX/mathematics/heisenberg">The Heisenberg group and Hermite functions</a></td><td><a href="/LaTeX/mathematics/heisenberg/heisenberg.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/hilberttransform">The Hilbert transform on \(\mathbb{R}\)</a></td><td><a href="/LaTeX/mathematics/hilberttransform/hilberttransform.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/kolmogorov-continuity">The Kolmogorov continuity theorem, Hölder continuity, and the Kolmogorov-Chentsov theorem</a></td><td><a href="/LaTeX/mathematics/kolmogorov-continuity/kolmogorov-continuity.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/mathematics/kolmogorovcontinuity">The Kolmogorov continuity theorem, Hölder continuity, and the Kolmogorov-Chentsov theorem</a></td><td><a href="/LaTeX/mathematics/kolmogorovcontinuity/kolmogorovcontinuity.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/kolmogorov-extension">The Kolmogorov extension theorem</a></td><td><a href="/LaTeX/mathematics/kolmogorov-extension/kolmogorov-extension.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/legendretransform">The Legendre transform</a></td><td><a href="/LaTeX/mathematics/legendretransform/legendretransform.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/lindeberg">The Lindeberg central limit theorem</a></td><td><a href="/LaTeX/mathematics/lindeberg/lindeberg.pdf">PDF</a></td></tr>
