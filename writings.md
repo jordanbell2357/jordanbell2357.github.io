@@ -112,7 +112,7 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
 <tr><td><a href="/LaTeX/mathematics/lindeberg">The Lindeberg central limit theorem</a></td><td><a href="/LaTeX/mathematics/lindeberg/lindeberg.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/poincaredulac">The Poincaré-Dulac normal form theorem for formal vector fields</a></td><td><a href="/LaTeX/mathematics/poincaredulac/poincaredulac.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/polya-vinogradov">The Polya-Vinogradov inequality</a></td><td><a href="/LaTeX/mathematics/polya-vinogradov/polya-vinogradov.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/mathematics/Qdual">The Pontryagin duals of \(\mathbb{Q}/\mathbb{Z}\) and \(\mathbb{Q}\), and the adeles</a></td><td><a href="/LaTeX/mathematics/Qdual/Qdual.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/Qdual">The Pontryagin duals of \(\mathbb{Q}/\mathbb{Z}\) and \(\mathbb{Q}\) and the adeles</a></td><td><a href="/LaTeX/mathematics/Qdual/Qdual.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/schwartzspace">The Schwartz space and the Fourier transform</a></td><td><a href="/LaTeX/mathematics/schwartzspace/schwartzspace.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/segalbargmann">The Segal-Bargmann transform and the Segal-Bargmann space</a></td><td><a href="/LaTeX/mathematics/segalbargmann/segalbargmann.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/stonecech">The Stone-Čech compactification of Tychonoff spaces</a></td><td><a href="/LaTeX/mathematics/stonecech/stonecech.pdf">PDF</a></td></tr>
