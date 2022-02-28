@@ -4,7 +4,7 @@ title: Links
 permalink: /links/
 ---
 
-there are authorities and there are resources. these overlap in places; resource links could balloon while authorities are shorter list, maybe separate into two pages
+Authorities, resources, exercises.
 
 Authorities
 
