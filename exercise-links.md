@@ -27,3 +27,7 @@ permalink: /exercise-links/
 <iframe height="750" width="540" frameborder="0" src="//www.ck12.org/assessment/ui/embed.html?test/detail/5985b0fb9616aa50e7621464&collectionHandle=algebra&collectionCreatorID=3&conceptCollectionHandle=algebra-::-evaluate-single-variable-expressions" ></iframe>
 
 <iframe height="750" width="540" frameborder="0" src="//www.ck12.org/assessment/ui/embed.html?test/detail/5985b2ab8e0e086d1126a8e5&collectionHandle=algebra&collectionCreatorID=3&conceptCollectionHandle=algebra-::-addition-and-subtraction-of-rational-expressions" ></iframe>
+
+<iframe height="750" width="540" frameborder="0" src="//www.ck12.org/assessment/ui/embed.html?test/detail/5985b2da9616aa50e990d3ad" ></iframe>
+
+<iframe height="750" width="540" frameborder="0" src="//www.ck12.org/assessment/ui/embed.html?test/detail/5985b2389616aa50e762146b" ></iframe>
