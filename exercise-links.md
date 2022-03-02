@@ -5,7 +5,7 @@ permalink: /exercise-links/
 ---
 
 <table>
-{% for exercise in site.exercises %}
+{% for exercise in site.ck12 %}
   <tr>
     <td><a href="{{ exercise.url }}">{{ exercise.title}}</a></td>
   </tr>
