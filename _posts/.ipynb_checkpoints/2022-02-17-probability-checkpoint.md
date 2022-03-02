@@ -7,6 +7,3 @@ title:  "Welcome to Jekyll!"
 
 \\(\mathbb{R}\\)
 
-$$\mathbb{R}$$
-
-$\mathbb{R}$
