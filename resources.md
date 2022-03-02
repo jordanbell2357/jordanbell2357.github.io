@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Exercise Resources
+title: Resources
 permalink: /exercise-resources/
 ---
 
