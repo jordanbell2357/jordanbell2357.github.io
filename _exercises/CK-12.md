@@ -1,4 +1,5 @@
 ---
+layout: post
 title:  "CK-12 exercises"
 ---
 
