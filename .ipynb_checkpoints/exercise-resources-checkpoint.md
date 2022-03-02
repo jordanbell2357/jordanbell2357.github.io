@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Exercise Links
-permalink: /exercise-links/
+title: Exercise Resources
+permalink: /exercise-resources/
 ---
 
 - [CK-12](#ck12)

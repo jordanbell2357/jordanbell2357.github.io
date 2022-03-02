@@ -1,12 +1,11 @@
 ---
 layout: page
-title: Exercises
-permalink: /exercises/
+title: Content
+permalink: /content/
 ---
 
 - [WebQuiz](#webquiz)
 - [Desmos](#desmos)
-- [CK-12](#ck12)
 
 # WebQuiz {#webquiz}
 
