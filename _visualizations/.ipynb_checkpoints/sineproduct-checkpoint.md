@@ -3,13 +3,10 @@ layout: post
 title: Integrals of Products of Sines and Cosines
 ---
 
-## Desmos plots
+- [Mathematica plots](#mathematica)
+- [Desmos](#desmos)
 
-[product of sin(kx)](https://www.desmos.com/calculator/ve6lbmxkhr)
-
-<iframe src="https://www.desmos.com/calculator/ve6lbmxkhr?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-
-## Mathematica plots
+## Mathematica plots {#mathematica}
 
 Bell, Jordan. “Estimates for the Norms of Products of Sines and Cosines.” *Journal of Mathematical Analysis and Applications* 405, no. 2 (2013): 530–45. <https://doi.org/10.1016/j.jmaa.2013.04.010>.
 
@@ -86,3 +83,9 @@ $$
         \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
     </figcaption>
 </figure>
+
+## Desmos plots {#desmos}
+
+[product of sin(kx)](https://www.desmos.com/calculator/ve6lbmxkhr)
+
+<iframe src="https://www.desmos.com/calculator/ve6lbmxkhr?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
