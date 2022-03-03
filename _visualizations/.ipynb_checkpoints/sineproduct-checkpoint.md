@@ -38,7 +38,7 @@ $$
 <figure>
     <img src="/Python/sineproduct/L1plot1to400.png" alt="Plot of sine product norms for n=400" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
-        \(\frac{|P_n|_{L^1}}{e^{nK n^{-1}}}\) for \(n=1,\ldots,400\)
+        \(\frac{|P_n|_{L^1}}{e^{nK} n^{-1}}\) for \(n=1,\ldots,400\)
     </figcaption>
 </figure>
 
