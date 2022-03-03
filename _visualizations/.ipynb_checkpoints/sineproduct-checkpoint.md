@@ -48,3 +48,38 @@ $$
         \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
     </figcaption>
 </figure>
+
+<figure>
+    <img src="/Python/sineproduct/cosine10plot.png" alt="Plot of sine product for n=10" style="display:block;margin-left:auto;margin-right:auto;">
+    <figcaption align="center">
+        \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
+    </figcaption>
+</figure>
+
+<figure>
+    <img src="/Python/sineproduct/ell1Pn1to500.png" alt="Plot of sine product for n=10" style="display:block;margin-left:auto;margin-right:auto;">
+    <figcaption align="center">
+        \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
+    </figcaption>
+</figure>
+
+<figure>
+    <img src="/Python/sineproduct/ell3Qn1to400.png" alt="Plot of sine product for n=10" style="display:block;margin-left:auto;margin-right:auto;">
+    <figcaption align="center">
+        \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
+    </figcaption>
+</figure>
+
+<figure>
+    <img src="/Python/sineproduct/L1plot1to400.png" alt="Plot of sine product for n=10" style="display:block;margin-left:auto;margin-right:auto;">
+    <figcaption align="center">
+        \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
+    </figcaption>
+</figure>
+
+<figure>
+    <img src="/Python/sineproduct/L2plot1to400.png" alt="Plot of sine product for n=10" style="display:block;margin-left:auto;margin-right:auto;">
+    <figcaption align="center">
+        \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
+    </figcaption>
+</figure>
