@@ -18,16 +18,14 @@ $$
 Q_n(\theta) = \prod_{k=1}^n (1+e^{ik\theta})
 $$
 
-Let \\( N=\frac{n(n+1)}{2} \\)
-
 $$
 \begin{gather*}
-P_n(\theta)=(-2i)^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \sin\big(\frac{k\theta}{2} \big)\\
-Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} \big)
+P_n(\theta)=(-2i)^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \sin\bigg(\frac{k\theta}{2} \bigg), N=\frac{n(n+1)}{2}\\
+Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} \big), N=\frac{n(n+1)}{2}
 \end{gather*}
 $$
 
-Define  
+
 $$
 \widehat{f}(n) = \int_0^{2\pi} f(\theta) e^{-in\theta} d\theta
 $$
@@ -36,21 +34,32 @@ $$
 $$
 |f|_{L^p} = \Big( \frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^p d\theta \Big)^{\frac{1}{p}}
 $$
-and
+
 $$
 |\widehat{f}|_{\ell^p} = \Big( \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|^p \Big)^{\frac{1}{p}}
 $$
 
+$$
+K = \log 2 + \max_{0 < w < 1} \Bigg( \frac{1}{w} \int_0^w \log \sin(\pi t) dt \Bigg)
+$$
+
 
 <figure>
-    <img src="/Python/sineproduct/sine10plot.png" alt="Plot of sine product for n=10" style="display:block;margin-left:auto;margin-right:auto;">
+    <img src="/Python/sineproduct/sine10plot.png" alt="Plot of sine product for n=1 to 10" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
         \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
     </figcaption>
 </figure>
 
 <figure>
-    <img src="/Python/sineproduct/cosine10plot.png" alt="Plot of sine product for n=10" style="display:block;margin-left:auto;margin-right:auto;">
+    <img src="/Python/sineproduct/L1plot1to400.png" alt="Plot of sine product norms for n=400" style="display:block;margin-left:auto;margin-right:auto;">
+    <figcaption align="center">
+        \(\frac{|P_n|_{L^1}}{e^{nK n^{-1}}\) for \(n=1,\ldots,400\)
+    </figcaption>
+</figure>
+
+<figure>
+    <img src="/Python/sineproduct/cosine10plot.png" alt="Plot of sine product norms for n=400" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
         \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
     </figcaption>
@@ -70,12 +79,7 @@ $$
     </figcaption>
 </figure>
 
-<figure>
-    <img src="/Python/sineproduct/L1plot1to400.png" alt="Plot of sine product for n=10" style="display:block;margin-left:auto;margin-right:auto;">
-    <figcaption align="center">
-        \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
-    </figcaption>
-</figure>
+
 
 <figure>
     <img src="/Python/sineproduct/L2plot1to400.png" alt="Plot of sine product for n=10" style="display:block;margin-left:auto;margin-right:auto;">
