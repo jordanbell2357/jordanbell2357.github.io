@@ -32,6 +32,10 @@ $$
 $$
 
 $$
+|f|_{L^2} = \left(\frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^p d\theta\right)^{\frac{1}{2}}
+$$
+
+$$
 K = \log 2 + \max_{0 < w < 1} \Bigg( \frac{1}{w} \int_0^w \log \sin(\pi t) dt \Bigg)
 $$
 
