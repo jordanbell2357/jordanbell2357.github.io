@@ -18,13 +18,13 @@ $$
 Q_n(\theta) = \prod_{k=1}^n (1+e^{ik\theta})
 $$
 
-Let \\( N=\frac{n(n+1)}{2} \\).
+Let \\( N=\frac{n(n+1)}{2} \\)
+
 $$
-P_n(\theta)=(-2i)^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \sin\big(\frac{k\theta}{2} \big)
-$$
-and
-$$
+\begin{aligned*}
+P_n(\theta)=(-2i)^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \sin\big(\frac{k\theta}{2} \big)\\
 Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} \big)
+\end{aligned*}
 $$
 
 Define  
