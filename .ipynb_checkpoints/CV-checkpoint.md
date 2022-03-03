@@ -6,9 +6,10 @@ permalink: /CV/
 
 - [CV PDF](#cv-pdf)
 - [Areas of professional and scholarly interest](#interests)
-- [Awards](#awards)
+- [Education](#education)
 - [Translations](#translations)
 - [Publications](#publications)
+- [Awards](#awards)
 
 ## CV PDF {#cv-pdf}
 
@@ -30,17 +31,23 @@ permalink: /CV/
 - global commodity flows and logistics,
 - ...
 
-## Awards {#awards}
+## Education {#education}
 
-2019 recipient of [Carl B. Allendoerfer Award for expository mathematical writing, Mathematical Association of America (MAA)](https://www.maa.org/programs-and-communities/member-communities/maa-awards/writing-awards/carl-b-allendoerfer-awards) for
-> Jordan Bell and Viktor Blåsjö, [*Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges*](https://doi.org/10.1080/0025570X.2018.1506656), Mathematics Magazine, Vol. 91, no. 5, December 2018, pp. 341-347. DOI: [10.1080/0025570X.2018.1506656](https://doi.org/10.1080/0025570X.2018.1506656)
+Graduate Certificate, Analytics for Business Decision Making  
+George Brown College, Toronto, May 2019
 
-University Medal in Mathematics, Carleton University
+Department of Mathematics  
+University of Toronto, Toronto  
+Canada Graduate Scholarships – Doctoral (CGS D)  
+2009/2010 and 2010/2011
 
-Canada Graduate Scholarships – Master's (CGS M), University of Toronto, Department of Mathematics
+Master of Science, Mathematics  
+University of Toronto, Toronto, June 2009  
+Canada Graduate Scholarships – Master’s (CGS M)
 
-Canada Graduate Scholarships – Doctoral (CGS D), University of Toronto, Department of Mathematics
-
+Bachelor of Mathematics, Mathematics  
+Carleton University, Ottawa, June 2007  
+University Medal in Mathematics
 
 ## Translations {#translations}
 
@@ -72,3 +79,8 @@ Canada Graduate Scholarships – Doctoral (CGS D), University of Toronto, Depart
 - ———. “Results for the *n*-Queens Problem on the Möbius Board.” *The Australasian Journal of Combinatorics* 42 (2008): 21–34. [The Australasian Journal of Combinatorics](https://ajc.maths.uq.edu.au).
 
 - Bell, Jordan, and Qiang Wang. “Results on Permutations with Distinct Difference Property.” *Contributions to Discrete Mathematics* 4, no. 1 (2009): 107–11. [Contributions to Discrete Mathematics](https://cdm.ucalgary.ca/).
+
+## Awards {#awards}
+
+2019 recipient of [Carl B. Allendoerfer Award for expository mathematical writing, Mathematical Association of America (MAA)](https://www.maa.org/programs-and-communities/member-communities/maa-awards/writing-awards/carl-b-allendoerfer-awards) for
+> Jordan Bell and Viktor Blåsjö, [*Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges*](https://doi.org/10.1080/0025570X.2018.1506656), Mathematics Magazine, Vol. 91, no. 5, December 2018, pp. 341-347. DOI: [10.1080/0025570X.2018.1506656](https://doi.org/10.1080/0025570X.2018.1506656)
