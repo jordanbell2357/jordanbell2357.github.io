@@ -35,7 +35,7 @@ $$
 \widehat{f}(n) = \int_0^{2\pi} f(\theta) e^{-in\theta} d\theta
 $$
 
-For \(1 \leq p < \infty\), define
+For \\(1 \leq p < \infty\\), define
 $$
 |f|_{L^p} = \Big( \frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^p d\theta \Big)^{\frac{1}{p}}
 $$
