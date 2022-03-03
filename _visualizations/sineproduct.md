@@ -3,9 +3,13 @@ layout: post
 title: Integrals of Products of Sines and Cosines
 ---
 
-[Desmos product of sin(kx)](https://www.desmos.com/calculator/hnhjn7hcbf)
+## Desmos plots
+
+[product of sin(kx)](https://www.desmos.com/calculator/hnhjn7hcbf)
 
 <iframe src="https://www.desmos.com/calculator/hnhjn7hcbf?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+## Mathematica plots
 
 $$
 P_n(\theta) = \prod_{k=1}^n (1-e^{ik\theta})
