@@ -11,23 +11,11 @@ title: Integrals of Products of Sines and Cosines
 Bell, Jordan. “Estimates for the Norms of Products of Sines and Cosines.” *Journal of Mathematical Analysis and Applications* 405, no. 2 (2013): 530–45. <https://doi.org/10.1016/j.jmaa.2013.04.010>.
 
 $$
-\widehat{f}(n) = \int_0^{2\pi} f(\theta) e^{-in\theta} d\theta
-$$
-
-$$
-|f|_{L^1} = \frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^p d\theta
-$$
-
-$$
-\widehat{f}|_{\ell^1} = \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|
-$$
-
-$$
 P_n(\theta) = \prod_{k=1}^n (1-e^{ik\theta})
 $$
 
 $$
-P_n(\theta)=(-2i)^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \sin\bigg(\frac{k\theta}{2} \bigg), N=\frac{n(n+1)}{2}
+P_n(\theta)=(-2i)^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \sin\bigg(\frac{k\theta}{2} \bigg), \qquad N=\frac{n(n+1)}{2}
 $$
 
 <figure>
@@ -37,6 +25,12 @@ $$
     </figcaption>
 </figure>
 
+
+
+$$
+|f|_{L^1} = \frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^p d\theta
+$$
+
 $$
 K = \log 2 + \max_{0 < w < 1} \Bigg( \frac{1}{w} \int_0^w \log \sin(\pi t) dt \Bigg)
 $$
@@ -44,9 +38,17 @@ $$
 <figure>
     <img src="/Python/sineproduct/L1plot1to400.png" alt="Plot of sine product norms for n=400" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
-        \(\frac{|P_n|_{L^1}}{e^{nK n^{-1}}\) for \(n=1,\ldots,400\)
+        \(\frac{|P_n|_{L^1}}{e^{nK n^{-1}}}\) for \(n=1,\ldots,400\)
     </figcaption>
 </figure>
+
+$$
+\widehat{f}(n) = \int_0^{2\pi} f(\theta) e^{-in\theta} d\theta
+$$
+
+$$
+\widehat{f}|_{\ell^1} = \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|
+$$
 
 <figure>
     <img src="/Python/sineproduct/cosine10plot.png" alt="Plot of sine product norms for n=400" style="display:block;margin-left:auto;margin-right:auto;">
