@@ -30,12 +30,12 @@ $$
 Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} \big)
 $$
 
-Define
+Define  
 $$
 \widehat{f}(n) = \int_0^{2\pi} f(\theta) e^{-in\theta} d\theta
 $$
 
-For \\(1 \leq p < \infty\\), define
+
 $$
 |f|_{L^p} = \Big( \frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^p d\theta \Big)^{\frac{1}{p}}
 $$
