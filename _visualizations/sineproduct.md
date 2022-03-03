@@ -21,10 +21,10 @@ $$
 Let \\( N=\frac{n(n+1)}{2} \\)
 
 $$
-\begin{aligned*}
+\begin{grouped*}
 P_n(\theta)=(-2i)^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \sin\big(\frac{k\theta}{2} \big)\\
 Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} \big)
-\end{aligned*}
+\end{grouped*}
 $$
 
 Define  
