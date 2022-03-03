@@ -3,7 +3,9 @@ layout: post
 title: Integrals of Products of Sines and Cosines
 ---
 
-[Desmos product of sin(kx)](https://www.desmos.com/calculator/ky5dkxxwr5)
+[Desmos product of sin(kx)](https://www.desmos.com/calculator/hnhjn7hcbf)
+
+<iframe src="https://www.desmos.com/calculator/hnhjn7hcbf?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
 
 $$
 P_n(\theta) = \prod_{k=1}^n (1-e^{ik\theta})
@@ -13,7 +15,7 @@ $$
 Q_n(\theta) = \prod_{k=1}^n (1+e^{ik\theta})
 $$
 
-Let \( N=\frac{n(n+1)}{2} \). Then
+Let \\( N=\frac{n(n+1)}{2} \\). Then
 $$
 P_n(\theta)=(-2i)^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \sin\big(\frac{k\theta}{2} \big)
 $$
