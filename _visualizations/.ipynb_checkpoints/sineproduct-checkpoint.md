@@ -46,7 +46,7 @@ $$
 </figure>
 
 $$
-|f|_{L^2} = \left(\frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^2 d\theta\right)^{\frac{1}{2}}
+‖f‖_{L^2} = \left(\frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^2 d\theta\right)^{\frac{1}{2}}
 $$
 
 <figure>
@@ -77,7 +77,7 @@ $$
 $$
 
 $$
-|\widehat{f}|_{\ell^1} = \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|
+‖\widehat{f}‖_{\ell^1} = \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|
 $$
 
 <figure>
@@ -88,13 +88,13 @@ $$
 </figure>
 
 $$
-|\widehat{f}|_{\ell^3} = \left( \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|^3 \right)^{\frac{1}{3}}
+‖\widehat{f}‖_{\ell^3} = \left( \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|^3 \right)^{\frac{1}{3}}
 $$
 
 <figure>
     <img src="/plots/sineproduct/ell3Qn1to400.png" alt="Plot of l3 norms of Fourier coefficients of Qn for n=1 to 400" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
-        \(\frac{|\widehat{Q}_n|_3}{2^n n^{-1}}\) for \(n=1,\ldots,400\)
+        \(\frac{‖\widehat{Q}_n‖_3}{2^n n^{-1}}\) for \(n=1,\ldots,400\)
     </figcaption>
 </figure>
 
