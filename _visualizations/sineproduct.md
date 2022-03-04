@@ -41,7 +41,7 @@ $$
 <figure>
     <img src="/plots/sineproduct/L1plot1to400.png" alt="Plot of sine product L1 norms for n=1 to 400" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
-        \(\frac{|P_n|_{L^1}}{e^{nK} n^{-1}}\) for \(n=1,\ldots,400\)
+        \(\frac{‖P_n‖_{L^1}}{e^{nK} n^{-1}}\) for \(n=1,\ldots,400\)
     </figcaption>
 </figure>
 
@@ -52,7 +52,7 @@ $$
 <figure>
     <img src="/plots/sineproduct/L2plot1to400.png" alt="Plot of sine product L2 norms for n=1 to 400" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
-        \(\frac{|P_n|_{L^2}}{e^{nK}n^{-1/4}}\) for \(n=1,\ldots,400\)
+        \(\frac{‖P_n‖_{L^2}}{e^{nK}n^{-1/4}}\) for \(n=1,\ldots,400\)
     </figcaption>
 </figure>
 
@@ -83,7 +83,7 @@ $$
 <figure>
     <img src="/plots/sineproduct/ell1Pn1to500.png" alt="Plot of l1 norms of Fourier coefficients of Pn for n=1 to 500" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
-        \(\frac{|\widehat{P}_n|_{\ell^1}}{e^{Kn}n^{1/2}}\) for \(n=1,\ldots,500\)
+        \(\frac{‖\widehat{P}_n‖_{\ell^1}}{e^{Kn}n^{1/2}}\) for \(n=1,\ldots,500\)
     </figcaption>
 </figure>
 
@@ -97,11 +97,6 @@ $$
         \(\frac{‖\widehat{Q}_n‖_3}{2^n n^{-1}}\) for \(n=1,\ldots,400\)
     </figcaption>
 </figure>
-
-
-
-
-
 
 
 ## Desmos plots {#desmos}
