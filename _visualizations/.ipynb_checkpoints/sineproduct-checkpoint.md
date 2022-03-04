@@ -30,7 +30,7 @@ $$
 
 
 $$
-|f|_{L^1} = \frac{1}{2\pi} \int_0^{2\pi} |f(\theta)| d\theta
+‖f‖_{L^1} = \frac{1}{2\pi} \int_0^{2\pi} |f(\theta)| d\theta
 $$
 
 
