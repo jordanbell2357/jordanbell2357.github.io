@@ -55,11 +55,11 @@ $$
 </figure>
 
 $$
-\widehat{f}(n) = \int_0^{2\pi} f(\theta) e^{-in\theta} d\theta
+Q_n(\theta) = \prod_{k=1}^n (1+e^{ik\theta})
 $$
 
 $$
-\widehat{f}|_{\ell^1} = \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|
+Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} \big), N=\frac{n(n+1)}{2}
 $$
 
 <figure>
@@ -68,6 +68,14 @@ $$
         \(\prod_{k=1}^{10} 2|\cos(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
     </figcaption>
 </figure>
+
+$$
+\widehat{f}(n) = \int_0^{2\pi} f(\theta) e^{-in\theta} d\theta
+$$
+
+$$
+\widehat{f}|_{\ell^1} = \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|
+$$
 
 <figure>
     <img src="/Python/sineproduct/ell1Pn1to500.png" alt="Plot of l1 norms of Fourier coefficients of Pn for n=1 to 500" style="display:block;margin-left:auto;margin-right:auto;">
@@ -91,13 +99,7 @@ $$
 
 
 
-$$
-Q_n(\theta) = \prod_{k=1}^n (1+e^{ik\theta})
-$$
 
-$$
-Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} \big), N=\frac{n(n+1)}{2}
-$$
 
 ## Desmos plots {#desmos}
 
