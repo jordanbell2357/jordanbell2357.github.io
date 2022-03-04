@@ -10,6 +10,8 @@ title: Integrals of Products of Sines and Cosines
 
 Bell, Jordan. “Estimates for the Norms of Products of Sines and Cosines.” *Journal of Mathematical Analysis and Applications* 405, no. 2 (2013): 530–45. <https://doi.org/10.1016/j.jmaa.2013.04.010>.
 
+[PDF](/plots/sineproduct/1-s2.0-S0022247X13003193-main.pdf)
+
 $$
 P_n(\theta) = \prod_{k=1}^n (1-e^{ik\theta})
 $$
