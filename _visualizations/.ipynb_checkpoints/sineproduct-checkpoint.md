@@ -94,7 +94,7 @@ $$
 <figure>
     <img src="/plots/sineproduct/ell3Qn1to400.png" alt="Plot of l3 norms of Fourier coefficients of Qn for n=1 to 400" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
-        \(\frac{‖\widehat{Q}_n‖_3}{2^n n^{-1}}\) for \(n=1,\ldots,400\)
+        \(\frac{‖\widehat{Q}_n‖_{\ell^3}}{2^n n^{-1}}\) for \(n=1,\ldots,400\)
     </figcaption>
 </figure>
 
