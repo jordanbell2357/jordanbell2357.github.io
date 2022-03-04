@@ -21,7 +21,7 @@ P_n(\theta)=(-2i)^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \sin\bigg(\frac{k\theta
 $$
 
 <figure>
-    <img src="/Python/sineproduct/sine10plot.png" alt="Plot of sine product for n=1 to 10" style="display:block;margin-left:auto;margin-right:auto;">
+    <img src="/plots/sineproduct/sine10plot.png" alt="Plot of sine product for n=1 to 10" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
         \(\prod_{k=1}^{10} 2|\sin(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
     </figcaption>
@@ -39,7 +39,7 @@ K = \log 2 + \max_{0 < w < 1} \Bigg( \frac{1}{w} \int_0^w \log \sin(\pi t) dt \B
 $$
 
 <figure>
-    <img src="/Python/sineproduct/L1plot1to400.png" alt="Plot of sine product L1 norms for n=1 to 400" style="display:block;margin-left:auto;margin-right:auto;">
+    <img src="/plots/sineproduct/L1plot1to400.png" alt="Plot of sine product L1 norms for n=1 to 400" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
         \(\frac{|P_n|_{L^1}}{e^{nK} n^{-1}}\) for \(n=1,\ldots,400\)
     </figcaption>
@@ -50,7 +50,7 @@ $$
 $$
 
 <figure>
-    <img src="/Python/sineproduct/L2plot1to400.png" alt="Plot of sine product L2 norms for n=1 to 400" style="display:block;margin-left:auto;margin-right:auto;">
+    <img src="/plots/sineproduct/L2plot1to400.png" alt="Plot of sine product L2 norms for n=1 to 400" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
         \(\frac{|P_n|_{L^2}}{e^{nK}n^{-1/4}}\) for \(n=1,\ldots,400\)
     </figcaption>
@@ -65,7 +65,7 @@ Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} 
 $$
 
 <figure>
-    <img src="/Python/sineproduct/cosine10plot.png" alt="Plot of cosine product for n=1 to 10" style="display:block;margin-left:auto;margin-right:auto;">
+    <img src="/plots/sineproduct/cosine10plot.png" alt="Plot of cosine product for n=1 to 10" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
         \(\prod_{k=1}^{10} 2|\cos(k \theta)|\) for \(0 \leq \theta \leq \frac{\pi}{2}\)
     </figcaption>
@@ -80,7 +80,7 @@ $$
 $$
 
 <figure>
-    <img src="/Python/sineproduct/ell1Pn1to500.png" alt="Plot of l1 norms of Fourier coefficients of Pn for n=1 to 500" style="display:block;margin-left:auto;margin-right:auto;">
+    <img src="/plots/sineproduct/ell1Pn1to500.png" alt="Plot of l1 norms of Fourier coefficients of Pn for n=1 to 500" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
         \(\frac{|\widehat{P}_n|_{\ell^1}}{e^{Kn}n^{1/2}}\) for \(n=1,\ldots,500\)
     </figcaption>
@@ -91,7 +91,7 @@ $$
 $$
 
 <figure>
-    <img src="/Python/sineproduct/ell3Qn1to400.png" alt="Plot of l3 norms of Fourier coefficients of Qn for n=1 to 400" style="display:block;margin-left:auto;margin-right:auto;">
+    <img src="/plots/sineproduct/ell3Qn1to400.png" alt="Plot of l3 norms of Fourier coefficients of Qn for n=1 to 400" style="display:block;margin-left:auto;margin-right:auto;">
     <figcaption align="center">
         \(\frac{|\widehat{Q}_n|_3}{2^n n^{-1}}\) for \(n=1,\ldots,400\)
     </figcaption>
