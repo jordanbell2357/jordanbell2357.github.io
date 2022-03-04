@@ -30,7 +30,7 @@ $$
 
 
 $$
-|f|_{L^1} = \frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^p d\theta
+|f|_{L^1} = \frac{1}{2\pi} \int_0^{2\pi} |f(\theta)| d\theta
 $$
 
 
@@ -46,7 +46,7 @@ $$
 </figure>
 
 $$
-|f|_{L^2} = \left(\frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^p d\theta\right)^{\frac{1}{2}}
+|f|_{L^2} = \left(\frac{1}{2\pi} \int_0^{2\pi} |f(\theta)|^2 d\theta\right)^{\frac{1}{2}}
 $$
 
 <figure>
@@ -61,7 +61,8 @@ Q_n(\theta) = \prod_{k=1}^n (1+e^{ik\theta})
 $$
 
 $$
-Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} \big), N=\frac{n(n+1)}{2}
+Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} \big),
+\quod N=\frac{n(n+1)}{2}
 $$
 
 <figure>
@@ -72,11 +73,11 @@ $$
 </figure>
 
 $$
-\widehat{f}(n) = \int_0^{2\pi} f(\theta) e^{-in\theta} d\theta
+\widehat{f}(k) = \int_0^{2\pi} f(\theta) e^{-ik\theta} d\theta,\quod k \in \mathbb{Z}
 $$
 
 $$
-\widehat{f}|_{\ell^1} = \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|
+|\widehat{f}|_{\ell^1} = \sum_{k \in \mathbb{Z}} |\widehat{f}(k)|
 $$
 
 <figure>
