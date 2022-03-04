@@ -62,7 +62,7 @@ $$
 
 $$
 Q_n(\theta)=2^n e^{\frac{iN\theta}{2}} \prod_{k=1}^n \cos\big(\frac{k\theta}{2} \big),
-\quod N=\frac{n(n+1)}{2}
+\quad N=\frac{n(n+1)}{2}
 $$
 
 <figure>
