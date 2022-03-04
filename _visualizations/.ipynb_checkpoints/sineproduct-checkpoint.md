@@ -73,7 +73,7 @@ $$
 </figure>
 
 $$
-\widehat{f}(k) = \int_0^{2\pi} f(\theta) e^{-ik\theta} d\theta,\quod k \in \mathbb{Z}
+\widehat{f}(k) = \int_0^{2\pi} f(\theta) e^{-ik\theta} d\theta,\quad k \in \mathbb{Z}
 $$
 
 $$
