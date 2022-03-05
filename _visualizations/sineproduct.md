@@ -104,3 +104,7 @@ $$
 [product of sin(kx)](https://www.desmos.com/calculator/q3l1aqdwb5)
 
 <iframe src="https://www.desmos.com/calculator/q3l1aqdwb5?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+[product of cos(kx)](https://www.desmos.com/calculator/rjyyiy0ibs)
+
+<iframe src="https://www.desmos.com/calculator/rjyyiy0ibs?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
