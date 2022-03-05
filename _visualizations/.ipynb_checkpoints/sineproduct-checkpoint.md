@@ -101,6 +101,6 @@ $$
 
 ## Desmos plots {#desmos}
 
-[product of sin(kx)](https://www.desmos.com/calculator/ve6lbmxkhr)
+[product of sin(kx)](https://www.desmos.com/calculator/q3l1aqdwb5)
 
-<iframe src="https://www.desmos.com/calculator/ve6lbmxkhr?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/q3l1aqdwb5?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
