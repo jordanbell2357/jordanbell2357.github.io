@@ -22,3 +22,5 @@ permalink: /content/
 2. [Riemann sums example #2](https://www.desmos.com/calculator/abk5szfm0h)
 
 3. [Riemann sums example #3](https://www.desmos.com/calculator/ryrp6oip6q)
+
+4. [Riemann sums example #4](https://www.desmos.com/calculator/gntgmzpxwm)
