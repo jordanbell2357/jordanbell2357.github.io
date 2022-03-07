@@ -6,6 +6,7 @@ permalink: /content/
 
 - [WebQuiz](#webquiz)
 - [Desmos](#desmos)
+- [GeoGebra](#geogebra)
 
 # WebQuiz {#webquiz}
 
@@ -24,3 +25,9 @@ permalink: /content/
 3. [Riemann sums example #3](https://www.desmos.com/calculator/ryrp6oip6q)
 
 4. [Riemann sums example #4](https://www.desmos.com/calculator/gntgmzpxwm)
+
+# GeoGebra {#geogebra}
+
+1. [Quadratic functions](https://www.geogebra.org/suite/vqbqvxfm)
+
+<iframe src="https://www.geogebra.org/suite/vqbqvxfm?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
