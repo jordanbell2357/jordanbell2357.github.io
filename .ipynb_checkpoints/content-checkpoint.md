@@ -18,7 +18,7 @@ permalink: /content/
 
 # Desmos {#desmos}
 
-1. [Standard form, factored form, and vertex form](https://www.desmos.com/calculator/ht85rycqqg)
+1. [Standard form, factored form, and vertex form](https://www.desmos.com/calculator/zrpmztunq0)
 
 1. [Riemann sums example #1](https://www.desmos.com/calculator/cbhiymlls7)
 
@@ -31,5 +31,7 @@ permalink: /content/
 # GeoGebra {#geogebra}
 
 1. [Quadratic functions](https://www.geogebra.org/calculator/hpr7kzxn)
+
+2. [Standard form, factored form, vertex form](https://www.geogebra.org/m/hpr7kzxn)
 
 <iframe src="https://www.geogebra.org/calculator/hpr7kzxn?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
