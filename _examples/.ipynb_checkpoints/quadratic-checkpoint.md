@@ -3,7 +3,7 @@ layout: post
 title: Quadratic functions
 ---
 
-\(2x^2+x-1\)
+\\(2x^2+x-1\\)
 
 \(a=2, b=1, c=-1\)
 
