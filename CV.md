@@ -93,3 +93,5 @@ University Medal in Mathematics
 ## Profiles
 
 - [Amazon Public Profile](https://www.amazon.com/gp/profile/amzn1.account.AHBGB7NGF3DGOUKGRF67J2GIKZXQ)
+
+- [GeoGebra Profile](https://www.geogebra.org/u/jordanbell2357)
