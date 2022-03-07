@@ -4,9 +4,20 @@ title: Content
 permalink: /content/
 ---
 
+- [Examples](#examples)
 - [WebQuiz](#webquiz)
 - [Desmos](#desmos)
 - [GeoGebra](#geogebra)
+
+# Examples {#examples}
+
+<table>
+{% for example in site.examples %}
+  <tr>
+    <td><a href="{{ example.url }}">{{ example.title}}</a></td>
+  </tr>
+{% endfor %}
+</table>
 
 # WebQuiz {#webquiz}
 
