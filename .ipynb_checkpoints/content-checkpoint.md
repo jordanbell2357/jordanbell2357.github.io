@@ -18,6 +18,8 @@ permalink: /content/
 
 # Desmos {#desmos}
 
+1. [Standard form, factored form, and vertex form](https://www.desmos.com/calculator/ht85rycqqg)
+
 1. [Riemann sums example #1](https://www.desmos.com/calculator/cbhiymlls7)
 
 2. [Riemann sums example #2](https://www.desmos.com/calculator/abk5szfm0h)
