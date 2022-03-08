@@ -60,7 +60,7 @@ $$
 The vertex is the point
 
 $$
-\left(-\frac{1}{4},-\frac{9}{8}\right).
+\bigg(-\frac{1}{4},-\frac{9}{8}\bigg).
 $$
 
 #### (ii) Vertex form
