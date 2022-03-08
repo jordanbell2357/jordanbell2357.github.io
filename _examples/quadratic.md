@@ -55,7 +55,10 @@ k &= -\frac{9}{8}
 \end{align*}
 $$
 
-The vertex is \\(\left(-\frac{1}{4},-\frac{9}{8}\right)\\)
+The vertex is the point
+$$
+\left(-\frac{1}{4},-\frac{9}{8}\right).
+$$
 
 #### (ii) Vertex form
 
