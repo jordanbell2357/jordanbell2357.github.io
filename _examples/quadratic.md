@@ -81,7 +81,6 @@ $$
 h = -\frac{1}{4}, \quad k = -\frac{9}{8}
 $$
 
-The vertex form is
 
 $$
 \begin{align*}
@@ -90,4 +89,12 @@ a(x-h)^2+k&=2\big((x-\big(-\frac{1}{4}\big)\big)^2+\big(-\frac{9}{8}\big)\\
 \end{align*}
 $$
 
+The vertex form is
+
+$$
+2\big(x+\frac{1}{4}\big)^2-\frac{9}{8}.
+$$
+
 ### (iii) Graph of quadratic polynomial
+
+<iframe src="https://www.desmos.com/calculator/nxouuzgn8f?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
