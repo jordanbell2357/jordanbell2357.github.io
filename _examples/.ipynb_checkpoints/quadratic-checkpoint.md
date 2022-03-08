@@ -72,7 +72,7 @@ $$
 
 Using 
 $$
-h = -\frac{1}{4}, \qquad k = -\frac{9}{8},
+h = -\frac{1}{4}, \quad k = -\frac{9}{8},
 $$
 
 $$
