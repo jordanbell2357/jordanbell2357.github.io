@@ -31,9 +31,9 @@ The discriminant is
 $$
 \begin{align*}
 D&=b^2-4ac\\
-D&=(1)^2-4(2)(-1)\\
-D&= 1+8\\
-D&=9
+&=(1)^2-4(2)(-1)\\
+&= 1+8\\
+&=9
 \end{align*}
 $$
 
@@ -42,8 +42,8 @@ The *x*-coordinate of the vertex is
 $$
 \begin{align*}
 h &= -\frac{b}{2a}\\
-h&= -\frac{1}{2(2)}\\
-h&= -\frac{1}{4}
+&= -\frac{1}{2(2)}\\
+&= -\frac{1}{4}
 \end{align*}
 $$
 
@@ -52,12 +52,12 @@ The *y*-coordinate of the vertex is
 $$
 \begin{align*}
 k &= -\frac{D}{4a}\\
-k &= - \frac{9}{4(2)}\\
-k &= -\frac{9}{8}
+&= - \frac{9}{4(2)}\\
+&= -\frac{9}{8}
 \end{align*}
 $$
 
-The vertex is the point
+The vertex is
 
 $$
 \bigg(-\frac{1}{4},-\frac{9}{8}\bigg).
@@ -76,10 +76,10 @@ $$
 The vertex form is
 
 $$
-\begin{gather*}
-2\bigg(x-\bigg(-\frac{1}{4}\bigg)\bigg)^2+\left(-\frac{9}{8}\right)\\
-=2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}
-\end{gather*}
+\begin{align*}
+a(x-h)^2+k&=2\bigg(x-\bigg(-\frac{1}{4}\bigg)\bigg)^2+\left(-\frac{9}{8}\right)\\
+&=2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}
+\end{align*}
 $$
 
 #### (iii) Graph of quadratic polynomial
