@@ -126,6 +126,14 @@ $$
 \end{gather*}
 $$
 
+Therefore the three points are 
+
+$$
+\big(-\frac{1}{4},-\frac{9}{8}\big),
+\quad \big(-\frac{5}{4},\frac{7}{8}\big),
+\quad  \big(\frac{3}{4},\frac{7}{8}\big).
+$$
+
 To draw the parabola, connect the three points.
 
 <iframe src="https://www.desmos.com/calculator/frpdi53xd6?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
