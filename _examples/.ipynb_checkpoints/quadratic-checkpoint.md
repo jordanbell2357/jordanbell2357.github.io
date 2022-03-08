@@ -97,4 +97,29 @@ $$
 
 ### (iii) Graph of quadratic polynomial
 
-<iframe src="https://www.desmos.com/calculator/nxouuzgn8f?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+Call the vertex \\(V\\).
+$$
+V = \big(-\frac{1}{4},-\frac{9}{8}\big).
+$$
+
+From the vertex, draw a point one unit left and two units up (two units up because \\(a=2\\)). Call the point \\(A\\).
+
+$$
+\begin{align*}
+A &= \big(-\frac{1}{4}-1,-\frac{9}{8}+2\big)\\
+&= \big(-\frac{5}{4},\frac{7}{8}\big)
+\end{align*}
+$$
+
+From the vertex, draw a point one unit right and two units up.
+
+$$
+\begin{align*}
+B &= \big(-\frac{1}{4}+1,-\frac{9}{8}+2\big)\\
+&= \big(\frac{3}{4},\frac{7}{8}\big)
+\end{align*}
+$$
+
+To draw the parabola, connect the three points.
+
+<iframe src="https://www.desmos.com/calculator/4zuiru6kl2?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
