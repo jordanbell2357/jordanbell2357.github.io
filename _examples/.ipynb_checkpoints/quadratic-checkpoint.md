@@ -38,6 +38,7 @@ D&=9
 $$
 
 The *x*-coordinate of the vertex is
+
 $$
 \begin{align*}
 h &= -\frac{b}{2a}\\
@@ -47,6 +48,7 @@ h&= -\frac{1}{4}
 $$
 
 The *y*-coordinate of the vertex is
+
 $$
 \begin{align*}
 k &= -\frac{D}{4a}\\
@@ -56,6 +58,7 @@ k &= -\frac{9}{8}
 $$
 
 The vertex is the point
+
 $$
 \left(-\frac{1}{4},-\frac{9}{8}\right).
 $$
