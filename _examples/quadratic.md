@@ -82,16 +82,10 @@ a(x-h)^2+k&=2\left(x+\frac{1}{4}\right)^2-\frac{9}{8}
 \end{align*}
 $$
 
-The vertex form of the quadratic polynomial
+The vertex form is
 
 $$
-2x^2+x-1
-$$
-
-is
-
-$$
-2\left(x+\frac{1}{4}\right)^2-\frac{9}{8}.
+2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}.
 $$
 
 #### (iii) Graph of quadratic polynomial
