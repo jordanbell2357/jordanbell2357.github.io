@@ -57,7 +57,7 @@ k &= -\frac{D}{4a}\\
 \end{align*}
 $$
 
-The vertex is
+Thefore the vertex is
 
 $$
 \Big(-\frac{1}{4},-\frac{9}{8}\Big).
@@ -77,8 +77,8 @@ The vertex form is
 
 $$
 \begin{align*}
-a(x-h)^2+k&=2\bigg(x-\big(-\frac{1}{4}\big)\bigg)^2+\left(-\frac{9}{8}\right)\\
-&=2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}
+a(x-h)^2+k&=2\Big(x-\big(-\frac{1}{4}\big)\Big)^2+\left(-\frac{9}{8}\right)\\
+&=2\Big(x+\frac{1}{4}\Big)^2-\frac{9}{8}
 \end{align*}
 $$
 
