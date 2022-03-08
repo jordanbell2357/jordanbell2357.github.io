@@ -52,7 +52,7 @@ The *y*-coordinate of the vertex is
 $$
 \begin{align*}
 k &= -\frac{D}{4a}\\
-&= - \frac{9}{4(2)}\\
+&= - \frac{(9)}{4(2)}\\
 &= -\frac{9}{8}
 \end{align*}
 $$
@@ -60,7 +60,7 @@ $$
 The vertex is
 
 $$
-\bigg(-\frac{1}{4},-\frac{9}{8}\bigg).
+\Big(-\frac{1}{4},-\frac{9}{8}\Big).
 $$
 
 #### (ii) Vertex form
@@ -78,7 +78,7 @@ The vertex form is
 $$
 \begin{gather*}
 a(x-h)^2+k
-=2\bigg(x-\bigg(-\frac{1}{4}\bigg)\bigg)^2+\left(-\frac{9}{8}\right)\\
+=2\bigg(x-\big(-\frac{1}{4}\big)\bigg)^2+\left(-\frac{9}{8}\right)\\
 =2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}
 \end{gather*}
 $$
