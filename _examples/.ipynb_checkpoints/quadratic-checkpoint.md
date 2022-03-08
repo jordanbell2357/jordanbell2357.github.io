@@ -66,23 +66,20 @@ $$
 #### (ii) Vertex form
 
 Vertex form is
+
 $$
 a(x-h)^2+k
 $$
-
-Using 
 
 $$
 h = -\frac{1}{4}, \quad k = -\frac{9}{8}
 $$
 
-gives
-
 $$
-\begin{align*}
-a(x-h)^2+k &= 2\bigg(x-\bigg(-\frac{1}{4}\bigg)\bigg)^2+\left(-\frac{9}{8}\right)\\
-a(x-h)^2+k&=2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}
-\end{align*}
+\begin{gather*}
+2\bigg(x-\bigg(-\frac{1}{4}\bigg)\bigg)^2+\left(-\frac{9}{8}\right)\\
+2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}
+\end{gather*}
 $$
 
 The vertex form is
