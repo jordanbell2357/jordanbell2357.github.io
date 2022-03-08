@@ -20,11 +20,15 @@ $$
 
 #### (i) Vertex
 
+##### Step 1: Write coefficients
+
 The coefficients are
 
 $$
 a=2, \quad b=1,\quad c=-1
 $$
+
+##### Step 2: Calculate discriminant
 
 The discriminant is
 
@@ -36,6 +40,8 @@ D&=b^2-4ac\\
 &=9
 \end{align*}
 $$
+
+##### Step 3: Calculate *x*-coordinate and *y*-coordinate of vertex
 
 The *x*-coordinate of the vertex is
 
@@ -56,6 +62,8 @@ k &= -\frac{D}{4a}\\
 &= -\frac{9}{8}
 \end{align*}
 $$
+
+##### Step 4: Conclusion
 
 Thefore the vertex is
 
