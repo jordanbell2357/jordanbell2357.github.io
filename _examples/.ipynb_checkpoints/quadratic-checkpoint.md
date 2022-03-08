@@ -68,7 +68,7 @@ $$
 Thefore the vertex is
 
 $$
-\Big(-\frac{1}{4},-\frac{9}{8}\Big).
+\big(-\frac{1}{4},-\frac{9}{8}\big).
 $$
 
 ### (ii) Vertex form
@@ -85,8 +85,8 @@ The vertex form is
 
 $$
 \begin{align*}
-a(x-h)^2+k&=2\Big(x-\big(-\frac{1}{4}\big)\Big)^2+\Big(-\frac{9}{8}\Big)\\
-&=2\Big(x+\frac{1}{4}\Big)^2-\frac{9}{8}
+a(x-h)^2+k&=2\big((x-\big(-\frac{1}{4}\big)\big)^2+\big(-\frac{9}{8}\big)\\
+&=2\big(x+\frac{1}{4}\big)^2-\frac{9}{8}
 \end{align*}
 $$
 
