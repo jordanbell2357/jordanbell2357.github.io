@@ -77,7 +77,7 @@ The vertex form is
 
 $$
 \begin{align*}
-a(x-h)^2+k&=2\Big(x-\big(-\frac{1}{4}\big)\Big)^2+\left(-\frac{9}{8}\right)\\
+a(x-h)^2+k&=2\Big(x-\big(-\frac{1}{4}\big)\Big)^2+\Big(-\frac{9}{8}\Big)\\
 &=2\Big(x+\frac{1}{4}\Big)^2-\frac{9}{8}
 \end{align*}
 $$
