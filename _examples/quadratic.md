@@ -65,8 +65,6 @@ $$
 
 #### (ii) Vertex form
 
-Vertex form is
-
 $$
 a(x-h)^2+k
 $$
@@ -75,17 +73,13 @@ $$
 h = -\frac{1}{4}, \quad k = -\frac{9}{8}
 $$
 
-$$
-\begin{gather*}
-2\bigg(x-\bigg(-\frac{1}{4}\bigg)\bigg)^2+\left(-\frac{9}{8}\right)\\
-2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}
-\end{gather*}
-$$
-
 The vertex form is
 
 $$
-2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}.
+\begin{gather*}
+2\bigg(x-\bigg(-\frac{1}{4}\bigg)\bigg)^2+\left(-\frac{9}{8}\right)\\
+=2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}
+\end{gather*}
 $$
 
 #### (iii) Graph of quadratic polynomial
