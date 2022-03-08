@@ -3,7 +3,7 @@ layout: post
 title: Quadratic polynomials
 ---
 
-### Exercise
+## Exercise
 
 Given the quadratic polynomial in standard form
 $$
@@ -16,11 +16,11 @@ $$
 
 (iii) Use the vertex form to graph this quadratic polynomial.
 
-### Solution
+## Solution
 
-#### (i) Vertex
+### (i) Vertex
 
-##### Step 1: Write coefficients
+#### Step 1: Write coefficients
 
 The coefficients are
 
@@ -28,7 +28,7 @@ $$
 a=2, \quad b=1,\quad c=-1
 $$
 
-##### Step 2: Calculate discriminant
+#### Step 2: Calculate discriminant
 
 The discriminant is
 
@@ -41,7 +41,7 @@ D&=b^2-4ac\\
 \end{align*}
 $$
 
-##### Step 3: Calculate *x*-coordinate and *y*-coordinate of vertex
+#### Step 3: Calculate *x*-coordinate and *y*-coordinate of vertex
 
 The *x*-coordinate of the vertex is
 
@@ -63,7 +63,7 @@ k &= -\frac{D}{4a}\\
 \end{align*}
 $$
 
-##### Step 4: Conclusion
+#### Step 4: Conclusion
 
 Thefore the vertex is
 
@@ -71,7 +71,7 @@ $$
 \Big(-\frac{1}{4},-\frac{9}{8}\Big).
 $$
 
-#### (ii) Vertex form
+### (ii) Vertex form
 
 $$
 a(x-h)^2+k
@@ -90,5 +90,4 @@ a(x-h)^2+k&=2\Big(x-\big(-\frac{1}{4}\big)\Big)^2+\Big(-\frac{9}{8}\Big)\\
 \end{align*}
 $$
 
-#### (iii) Graph of quadratic polynomial
-
+### (iii) Graph of quadratic polynomial
