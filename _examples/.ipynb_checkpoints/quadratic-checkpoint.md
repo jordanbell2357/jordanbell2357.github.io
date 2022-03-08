@@ -37,8 +37,7 @@ D&=9
 \end{align*}
 $$
 
-Vertex \\((h,k)\\)
-
+The *x*-coordinate of the vertex is
 $$
 \begin{align*}
 h &= -\frac{b}{2a}\\
@@ -47,6 +46,7 @@ h&= -\frac{1}{4}
 \end{align*}
 $$
 
+The *y*-coordinate of the vertex is
 $$
 \begin{align*}
 k &= -\frac{D}{4a}\\
