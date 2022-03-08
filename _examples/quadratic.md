@@ -122,4 +122,4 @@ $$
 
 To draw the parabola, connect the three points.
 
-<iframe src="https://www.desmos.com/calculator/urrludrbpm?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/frlucbobov?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
