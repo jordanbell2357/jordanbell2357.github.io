@@ -77,7 +77,7 @@ $$
 
 $$
 \begin{align*}
-a(x-h)^2+k &= 2\left(x-\big(-\frac{1}{4}\big)\right)^2+\left(-\frac{9}{8}\right)\\
+a(x-h)^2+k &= 2\left(x-\bigg(-\frac{1}{4}\bigg)\right)^2+\left(-\frac{9}{8}\right)\\
 a(x-h)^2+k&=2\left(x+\frac{1}{4}\right)^2-\frac{9}{8}
 \end{align*}
 $$
