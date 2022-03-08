@@ -3,21 +3,22 @@ layout: post
 title: Quadratic polynomials
 ---
 
-#### Exercise
+### Exercise
 
-##### (i) Find the vertex of the quadratic polynomial
+Given the quadratic polynomial in standard form
 $$
 2x^2+2x-1.
 $$
 
-### (ii) Find the vertex form of this quadratic polynomial.
+(i) Find the vertex of the quadratic polynomial.
 
+(ii) Find the vertex form of this quadratic polynomial.
 
-### (iii) Use the vertex form to graph this quadratic polynomial.
+(iii) Use the vertex form to graph this quadratic polynomial.
 
-## Solution
+### Solution
 
-### (i) Vertex
+#### (i) Vertex
 
 The coefficients are
 
@@ -48,7 +49,7 @@ $$
 
 The vertex is \\(\left(-\frac{1}{4},-\frac{9}{8}\right)\\)
 
-### (ii) Vertex form
+#### (ii) Vertex form
 
 Vertex form is
 $$
@@ -75,3 +76,6 @@ is
 $$
 2\left(x+\frac{1}{4}\right)^2-\frac{9}{8}.
 $$
+
+#### (iii) Graph of quadratic polynomial
+
