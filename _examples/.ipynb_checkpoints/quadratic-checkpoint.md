@@ -3,9 +3,9 @@ layout: post
 title: Quadratic polynomials
 ---
 
-## Question
+#### Exercise
 
-### (i) Find the vertex of the quadratic polynomial
+##### (i) Find the vertex of the quadratic polynomial
 $$
 2x^2+2x-1.
 $$
