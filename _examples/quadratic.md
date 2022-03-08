@@ -22,12 +22,19 @@ $$
 The coefficients are
 
 $$
-a=2, b=1, c=-1
+a=2, \quad b=1,\quad c=-1
 $$
 
 The discriminant is
 
-\\(D=b^2-4ac=(1)^2-4(2)(-1) = 1+8=9\\)
+$$
+\begin{align*}
+D&=b^2-4ac\\
+&=(1)^2-4(2)(-1)\\
+&= 1+8\\
+&=9
+\end{align*}
+$$
 
 Vertex \\((h,k)\\)
 
@@ -55,7 +62,16 @@ $$
 
 $$
 \begin{align*}
-a(x-h)^2+k &= 2\left(x-\left(-\frac{1}{4}\right)\right)^2+\left(-\frac{9}{8}\right)\\
+a(x-h)^2+k &= 2\left[x-\left(-\frac{1}{4}\right)\right]^2+\left(-\frac{9}{8}\right)\\
 &=2\left(x+\frac{1}{4}\right)^2-\frac{9}{8}
 \end{align*}
+$$
+
+The vertex form of the quadratic polynomial
+$$
+2x^2+x-1
+$$
+is
+$$
+2\left(x+\frac{1}{4}\right)^2-\frac{9}{8}.
 $$
