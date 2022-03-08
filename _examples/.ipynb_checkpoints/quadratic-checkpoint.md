@@ -71,9 +71,12 @@ a(x-h)^2+k
 $$
 
 Using 
+
 $$
-h = -\frac{1}{4}, \quad k = -\frac{9}{8},
+h = -\frac{1}{4}, \quad k = -\frac{9}{8}
 $$
+
+gives
 
 $$
 \begin{align*}
