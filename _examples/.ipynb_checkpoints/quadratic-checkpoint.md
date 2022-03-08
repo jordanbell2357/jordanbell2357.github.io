@@ -76,11 +76,10 @@ $$
 The vertex form is
 
 $$
-\begin{gather*}
-a(x-h)^2+k
-=2\bigg(x-\big(-\frac{1}{4}\big)\bigg)^2+\left(-\frac{9}{8}\right)\\
-=2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}
-\end{gather*}
+\begin{align*}
+a(x-h)^2+k&=2\bigg(x-\big(-\frac{1}{4}\big)\bigg)^2+\left(-\frac{9}{8}\right)\\
+&=2\bigg(x+\frac{1}{4}\bigg)^2-\frac{9}{8}
+\end{align*}
 $$
 
 #### (iii) Graph of quadratic polynomial
