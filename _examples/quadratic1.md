@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quadratic polynomials
+title: Quadratic polynomial
 ---
 
 ## Exercise
@@ -48,7 +48,7 @@ The *x*-coordinate of the vertex is
 $$
 \begin{align*}
 h &= -\frac{b}{2a}\\
-&= -\frac{1}{2(2)}\\
+&= -\frac{(1)}{2(2)}\\
 &= -\frac{1}{4}
 \end{align*}
 $$
@@ -97,10 +97,14 @@ $$
 
 ### (iii) Graph of quadratic polynomial
 
+#### Step 1: Draw the vertex
+
 Draw the vertex
 $$
 \big(-\frac{1}{4},-\frac{9}{8}\big).
 $$
+
+#### Step 2: Draw point one unit left from vertex
 
 From the vertex, draw a point one unit left and two units up (two units up because \\(a=2\\)).
 
@@ -110,6 +114,8 @@ $$
 =\big(-\frac{5}{4},\frac{7}{8}\big)
 \end{gather*}
 $$
+
+#### Step 3: Draw point one unit right from vertex
 
 From the vertex, draw a point one unit right and two units up.
 
