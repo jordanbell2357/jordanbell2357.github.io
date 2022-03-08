@@ -31,20 +31,28 @@ The discriminant is
 $$
 \begin{align*}
 D&=b^2-4ac\\
-&=(1)^2-4(2)(-1)\\
-&= 1+8\\
-&=9
+D&=(1)^2-4(2)(-1)\\
+D&= 1+8\\
+D&=9
 \end{align*}
 $$
 
 Vertex \\((h,k)\\)
 
 $$
-h = -\frac{b}{2a} = -\frac{1}{2(2)} = -\frac{1}{4}
+\begin{align*}
+h &= -\frac{b}{2a}\\
+h&= -\frac{1}{2(2)}\\
+h&= -\frac{1}{4}
+\end{align*}
 $$
 
 $$
-k = -\frac{D}{4a} = - \frac{9}{4(2)} = -\frac{9}{8}
+\begin{align*}
+k &= -\frac{D}{4a}\\
+k &= - \frac{9}{4(2)}\\
+k &= -\frac{9}{8}
+\end{align*}
 $$
 
 The vertex is \\(\left(-\frac{1}{4},-\frac{9}{8}\right)\\)
