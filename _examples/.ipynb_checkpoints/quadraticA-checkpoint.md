@@ -115,4 +115,4 @@ $$
 
 #### Step 4: Draw the parabola by connecting the five points
 
-<iframe src="https://www.desmos.com/calculator/grwacin3sp?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/jdt8at5qf1?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
