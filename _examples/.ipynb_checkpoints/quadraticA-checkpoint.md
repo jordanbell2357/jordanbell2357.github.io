@@ -105,14 +105,14 @@ $$
 \big(-\frac{1}{4},-\frac{9}{8}\big).
 $$
 
-#### Step 2: Draw point 1 unit left and \\(a \cdot (-1)^2 = (2) \cdot 1 = 2\\) units up from vertex
+#### Step 2: Draw point 1 unit left
 
-#### Step 3: Draw point 1 unit right and \\(a \cdot (1)^2 = (2) \cdot 1 = 2\\) units up from vertex
+\\(a \cdot (-1)^2 = (2) \cdot 1 = 2\\) units up from vertex
 
-#### Step 4: Draw point 1 unit left and \\(a \cdot (-2)^2 = (2) \cdot 4 = 8\\) from vertex
+#### Step 3: Draw point 1 unit right
 
-#### Step 5: Draw point 1 unit left and \\(a \cdot (2)^2 = (2) \cdot 4 = 8\\) up from vertex
+\\(a \cdot (1)^2 = (2) \cdot 1 = 2\\) units up from vertex
 
-To draw the parabola, connect the five points.
+#### Step 4: Draw the parabola by connecting the five points
 
-<iframe src="https://www.desmos.com/calculator/frpdi53xd6?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/grwacin3sp?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
