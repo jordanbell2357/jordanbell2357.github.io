@@ -14,18 +14,20 @@ permalink: /content/
 <table>
 {% for example in site.examples %}
   <tr>
-    <td><a href="{{ example.url }}">{{ example.title}}{{ example.math}}</a></td>
+    <td><a href="{{ example.url }}">{{ example.title}}</a></td><td>{{ example.math}}</td>
   </tr>
 {% endfor %}
 </table>
 
-# WebQuiz {#webquiz}
+# GeoGebra {#geogebra}
 
-1. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
-
-2. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq2.html)
-
-3. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq3.html)
+<table>
+{% for exercise in site.geogebra %}
+  <tr>
+    <td><a href="{{ exercise.url }}">{{ exercise.title}}</a></td>
+  </tr>
+{% endfor %}
+</table>
 
 # Desmos {#desmos}
 
@@ -39,14 +41,10 @@ permalink: /content/
 
 4. [Riemann sums example #4](https://www.desmos.com/calculator/gntgmzpxwm)
 
-# GeoGebra {#geogebra}
+# WebQuiz {#webquiz}
 
-<table>
-{% for exercise in site.geogebra %}
-  <tr>
-    <td><a href="{{ exercise.url }}">{{ exercise.title}}</a></td>
-  </tr>
-{% endfor %}
-</table>
+1. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
 
+2. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq2.html)
 
+3. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq3.html)

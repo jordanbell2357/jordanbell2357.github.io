@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Quadratic polynomial vertex form B
+math: \(6x^2+7x-3\)
 ---
 
 ## Exercise
