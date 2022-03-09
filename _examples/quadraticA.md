@@ -107,11 +107,11 @@ $$
 
 #### Step 2: Draw point 1 unit left
 
-\\(a \cdot (-1)^2 = (2) \cdot 1 = 2\\) units up from vertex
+\\(a = 2\\) units up from vertex
 
 #### Step 3: Draw point 1 unit right
 
-\\(a \cdot (1)^2 = (2) \cdot 1 = 2\\) units up from vertex
+\\(a =2\\) units up from vertex
 
 #### Step 4: Draw the parabola by connecting the three points
 
