@@ -113,6 +113,6 @@ $$
 
 \\(a \cdot (1)^2 = (2) \cdot 1 = 2\\) units up from vertex
 
-#### Step 4: Draw the parabola by connecting the five points
+#### Step 4: Draw the parabola by connecting the three points
 
 <iframe src="https://www.desmos.com/calculator/pzcaa32nby?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
