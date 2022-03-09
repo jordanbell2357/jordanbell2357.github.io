@@ -13,7 +13,7 @@ permalink: /examples/
 
 <ul>
 {% for example in site.examples %}
-  <li><a href="{{ example.url }}">{{ example.title}}</a> &nbsp; {{ example.math}}</li>
+  <li><a href="{{ example.url }}">{{ example.title}} {{ example.math}}</a></li>
 {% endfor %}
 </ul>
 
