@@ -96,7 +96,7 @@ $$
 6\big(x+\frac{7}{12}\big)^2-\frac{121}{24}
 $$
 
-### (iii) Graph of quadratic polynomial
+### (iii) Graph of parabola
 
 #### Step 1: Draw the vertex
 
@@ -105,28 +105,14 @@ $$
 \big(-\frac{7}{12},-\frac{121}{24}\big).
 $$
 
-#### Step 2: Draw point one unit left from vertex
+#### Step 2: Draw point 1 unit left
 
-From the vertex, draw a point one unit left and six units up (six units up because \\(a=6\\)).
+\\(a = 2\\) units up from vertex
 
-$$
-\begin{gather*}
-\big(-\frac{7}{12}-1,-\frac{121}{24}+6\big)\\
-=\big(-\frac{19}{12},\frac{23}{24}\big)
-\end{gather*}
-$$
+#### Step 3: Draw point 1 unit right
 
-#### Step 3: Draw point one unit right from vertex
+\\(a =2\\) units up from vertex
 
-From the vertex, draw a point one unit right and six units up.
+#### Step 4: Draw the parabola by connecting the three points
 
-$$
-\begin{gather*}
-\big(-\frac{7}{12}+1,-\frac{121}{24}+6\big)\\
-=\big(\frac{5}{12},\frac{23}{24}\big)
-\end{gather*}
-$$
-
-To draw the parabola, connect the three points.
-
-<iframe src="https://www.desmos.com/calculator/hc84ucjlix?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/xuvey13ibe?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
