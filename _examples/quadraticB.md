@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Quadratic polynomial
+title: Quadratic polynomial vertex form B
 ---
 
 ## Exercise
 
 Given the quadratic polynomial in standard form
 $$
-2x^2+2x-1.
+6x^2+7x-3.
 $$
 
 (i) Find the vertex of the quadratic polynomial.
@@ -25,7 +25,7 @@ $$
 The coefficients are
 
 $$
-a=2, \quad b=1,\quad c=-1
+a=6, \quad b=7,\quad c=-3
 $$
 
 #### Step 2: Calculate discriminant
@@ -35,9 +35,9 @@ The discriminant is
 $$
 \begin{align*}
 D&=b^2-4ac\\
-&=(1)^2-4(2)(-1)\\
-&= 1+8\\
-&=9
+&=(7)^2-4(6)(-3)\\
+&= 49+72\\
+&=121
 \end{align*}
 $$
 
@@ -48,8 +48,8 @@ The *x*-coordinate of the vertex is
 $$
 \begin{align*}
 h &= -\frac{b}{2a}\\
-&= -\frac{(1)}{2(2)}\\
-&= -\frac{1}{4}
+&= -\frac{(7)}{2(6)}\\
+&= -\frac{7}{12}
 \end{align*}
 $$
 
@@ -58,8 +58,8 @@ The *y*-coordinate of the vertex is
 $$
 \begin{align*}
 k &= -\frac{D}{4a}\\
-&= - \frac{(9)}{4(2)}\\
-&= -\frac{9}{8}
+&= - \frac{(121)}{4(6)}\\
+&= -\frac{121}{24}
 \end{align*}
 $$
 
@@ -68,7 +68,7 @@ $$
 Thefore the vertex is
 
 $$
-\big(-\frac{1}{4},-\frac{9}{8}\big).
+\big(-\frac{1}{4},-\frac{121}{24}\big).
 $$
 
 ### (ii) Vertex form
@@ -78,21 +78,21 @@ a(x-h)^2+k
 $$
 
 $$
-h = -\frac{1}{4}, \quad k = -\frac{9}{8}
+h =  -\frac{7}{12}, \quad k = -\frac{121}{24}
 $$
 
 
 $$
 \begin{align*}
-a(x-h)^2+k&=2\big((x-\big(-\frac{1}{4}\big)\big)^2+\big(-\frac{9}{8}\big)\\
-&=2\big(x+\frac{1}{4}\big)^2-\frac{9}{8}
+a(x-h)^2+k&=6\big((x-\big(-\frac{7}{12}\big)\big)^2+\big(-\frac{121}{24}\big)\\
+&=6\big(x+\frac{7}{12}\big)^2-\frac{121}{24}
 \end{align*}
 $$
 
 The vertex form is
 
 $$
-2\big(x+\frac{1}{4}\big)^2-\frac{9}{8}.
+6\big(x+\frac{7}{12}\big)^2-\frac{121}{24}.
 $$
 
 ### (iii) Graph of quadratic polynomial
@@ -101,39 +101,31 @@ $$
 
 Draw the vertex
 $$
-\big(-\frac{1}{4},-\frac{9}{8}\big).
+\big(-\frac{7}{12},-\frac{121}{24}\big).
 $$
 
 #### Step 2: Draw point one unit left from vertex
 
-From the vertex, draw a point one unit left and two units up (two units up because \\(a=2\\)).
+From the vertex, draw a point one unit left and six units up (six units up because \\(a=6\\)).
 
 $$
 \begin{gather*}
-\big(-\frac{1}{4}-1,-\frac{9}{8}+2\big)\\
-=\big(-\frac{5}{4},\frac{7}{8}\big)
+\big(-\frac{7}{12}-1,-\frac{121}{24}+6\big)\\
+=\big(-\frac{19}{12},\frac{23}{24}\big)
 \end{gather*}
 $$
 
 #### Step 3: Draw point one unit right from vertex
 
-From the vertex, draw a point one unit right and two units up.
+From the vertex, draw a point one unit right and six units up.
 
 $$
 \begin{gather*}
-\big(-\frac{1}{4}+1,-\frac{9}{8}+2\big)\\
-= \big(\frac{3}{4},\frac{7}{8}\big)
+\big(-\frac{7}{12}+1,-\frac{121}{24}+6\big)\\
+=\big(\frac{5}{12},\frac{23}{24}\big)
 \end{gather*}
-$$
-
-Therefore the three points are 
-
-$$
-\big(-\frac{1}{4},-\frac{9}{8}\big),
-\quad \big(-\frac{5}{4},\frac{7}{8}\big),
-\quad  \big(\frac{3}{4},\frac{7}{8}\big).
 $$
 
 To draw the parabola, connect the three points.
 
-<iframe src="https://www.desmos.com/calculator/frpdi53xd6?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/hc84ucjlix?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>

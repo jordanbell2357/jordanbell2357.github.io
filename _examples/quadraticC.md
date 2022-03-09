@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quadratic polynomial
+title: Quadratic polynomial vertex form C
 ---
 
 ## Exercise
