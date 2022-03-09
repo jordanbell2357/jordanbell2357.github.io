@@ -14,7 +14,7 @@ permalink: /content/
 <table>
 {% for example in site.examples %}
   <tr>
-    <td><a href="{{ example.url }}">{{ example.title}}</a></td>
+    <td><a href="{{ example.url }}">{{ example.title}}{{ example.math}}</a></td>
   </tr>
 {% endfor %}
 </table>

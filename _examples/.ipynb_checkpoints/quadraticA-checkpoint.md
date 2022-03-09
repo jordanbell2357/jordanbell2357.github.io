@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Quadratic polynomial vertex form A
+math: \(2x^2+2x-1\)
 ---
 
 ## Exercise
