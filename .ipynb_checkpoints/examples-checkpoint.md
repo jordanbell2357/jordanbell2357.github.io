@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Content
-permalink: /content/
+title: Examples
+permalink: /examples/
 ---
 
 - [Examples](#examples)
