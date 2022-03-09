@@ -96,7 +96,7 @@ $$
 3\big(x-\frac{5}{6}\big)^2-\frac{169}{12}
 $$
 
-### (iii) Graph of quadratic polynomial
+### (iii) Graph the parabola
 
 #### Step 1: Draw the vertex
 
@@ -105,28 +105,22 @@ $$
 \big(\frac{5}{6},-\frac{169}{12}\big).
 $$
 
-#### Step 2: Draw point one unit left from vertex
+#### Step 2: Draw point 1 unit left
 
-From the vertex, draw a point one unit left and three units up (three units up because \\(a=3\\)).
+\\(a = 3\\) units up from vertex
 
-$$
-\begin{gather*}
-\big(\frac{5}{6}-1,-\frac{169}{12}+3\big)\\
-=\big(-\frac{1}{6},-\frac{133}{12}\big)
-\end{gather*}
-$$
+#### Step 3: Draw point 1 unit right
 
-#### Step 3: Draw point one unit right from vertex
+\\(a =3\\) units up from vertex
 
-From the vertex, draw a point one unit right and six units up.
+#### Step 4: Draw point 2 units left
 
-$$
-\begin{gather*}
-\big(\frac{5}{6}+1,-\frac{169}{12}+3\big)\\
-=\big(\frac{11}{6},-\frac{133}{12}\big)
-\end{gather*}
-$$
+\\(4a =4(3)=12\\) units up from vertex
 
-To draw the parabola, connect the three points.
+#### Step 5: Draw point 2 units right
 
-<iframe src="https://www.desmos.com/calculator/tqjocrcuic?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+\\(4a = 4(3) =12\\) units up from vertex
+
+#### Step 6: Draw the parabola by connecting the five points
+
+<iframe src="https://www.desmos.com/calculator/ifxk7gysdh?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>

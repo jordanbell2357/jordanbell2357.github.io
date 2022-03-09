@@ -105,28 +105,22 @@ $$
 \big(-\frac{5}{12},-\frac{169}{24}\big).
 $$
 
-#### Step 2: Draw point one unit left from vertex
+#### Step 2: Draw point 1 unit left
 
-From the vertex, draw a point one unit left and six units up (six units up because \\(a=6\\)).
+\\(a = 6\\) units up from vertex
 
-$$
-\begin{gather*}
-\big(-\frac{5}{12}-1,-\frac{169}{24}+6\big)\\
-=\big(-\frac{17}{12},-\frac{25}{24}\big)
-\end{gather*}
-$$
+#### Step 3: Draw point 1 unit right
 
-#### Step 3: Draw point one unit right from vertex
+\\(a =6\\) units up from vertex
 
-From the vertex, draw a point one unit right and six units up.
+#### Step 4: Draw point 2 units left
 
-$$
-\begin{gather*}
-\big(-\frac{5}{12}+1,-\frac{169}{24}+6\big)\\
-=\big(\frac{7}{12},-\frac{25}{24}\big)
-\end{gather*}
-$$
+\\(4a =4(6)=24\\) units up from vertex
 
-To draw the parabola, connect the three points.
+#### Step 5: Draw point 2 units right
 
-<iframe src="https://www.desmos.com/calculator/9jrdo2sdnu?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+\\(4a = 4(6) =24\\) units up from vertex
+
+#### Step 6: Draw the parabola by connecting the five points
+
+<iframe src="https://www.desmos.com/calculator/cxzp9y17yw?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>

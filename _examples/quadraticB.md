@@ -107,11 +107,11 @@ $$
 
 #### Step 2: Draw point 1 unit left
 
-\\(a = 2\\) units up from vertex
+\\(a = 6\\) units up from vertex
 
 #### Step 3: Draw point 1 unit right
 
-\\(a =2\\) units up from vertex
+\\(a =6\\) units up from vertex
 
 #### Step 4: Draw the parabola by connecting the three points
 
