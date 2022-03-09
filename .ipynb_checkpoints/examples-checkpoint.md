@@ -5,9 +5,9 @@ permalink: /content/
 ---
 
 - [Examples](#examples)
-- [WebQuiz](#webquiz)
-- [Desmos](#desmos)
 - [GeoGebra](#geogebra)
+- [Desmos](#desmos)
+- [WebQuiz](#webquiz)
 
 # Examples {#examples}
 
