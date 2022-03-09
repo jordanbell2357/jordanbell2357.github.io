@@ -1,13 +1,14 @@
 ---
 layout: post
-title: Quadratic polynomial vertex form C
+title: Vertex form of quadratic polynomial
+math: \(3x^2-5x-12\)
 ---
 
 ## Exercise
 
 Given the quadratic polynomial in standard form
 $$
-6x^2+7x-3.
+3x^2-5x-12.
 $$
 
 (i) Find the vertex of the quadratic polynomial.
@@ -25,7 +26,7 @@ $$
 The coefficients are
 
 $$
-a=6, \quad b=7,\quad c=-3
+a=3, \quad b=-5,\quad c=-12
 $$
 
 #### Step 2: Calculate discriminant
@@ -35,9 +36,9 @@ The discriminant is
 $$
 \begin{align*}
 D&=b^2-4ac\\
-&=(7)^2-4(6)(-3)\\
-&= 49+72\\
-&=121
+&=(-5)^2-4(3)(-12)\\
+&= 25+144\\
+&=169
 \end{align*}
 $$
 
@@ -48,8 +49,8 @@ The *x*-coordinate of the vertex is
 $$
 \begin{align*}
 h &= -\frac{b}{2a}\\
-&= -\frac{(7)}{2(6)}\\
-&= -\frac{7}{12}
+&= -\frac{(-5)}{2(3)}\\
+&= \frac{5}{6}
 \end{align*}
 $$
 
@@ -58,8 +59,8 @@ The *y*-coordinate of the vertex is
 $$
 \begin{align*}
 k &= -\frac{D}{4a}\\
-&= - \frac{(121)}{4(6)}\\
-&= -\frac{121}{24}
+&= - \frac{(169)}{4(3)}\\
+&= -\frac{169}{12}
 \end{align*}
 $$
 
@@ -68,7 +69,7 @@ $$
 Thefore the vertex is
 
 $$
-\big(-\frac{1}{4},-\frac{121}{24}\big).
+\big(\frac{5}{6},-\frac{169}{12}\big).
 $$
 
 ### (ii) Vertex form
@@ -78,21 +79,21 @@ a(x-h)^2+k
 $$
 
 $$
-h =  -\frac{7}{12}, \quad k = -\frac{121}{24}
+h =  \frac{5}{6}, \quad k = -\frac{169}{12}
 $$
 
 
 $$
 \begin{align*}
-a(x-h)^2+k&=6\big((x-\big(-\frac{7}{12}\big)\big)^2+\big(-\frac{121}{24}\big)\\
-&=6\big(x+\frac{7}{12}\big)^2-\frac{121}{24}
+a(x-h)^2+k&=3\big(x-\big(\frac{5}{6}\big)\big)^2+\big(-\frac{169}{12}\big)\\
+&=3\big(x-\frac{5}{6}\big)^2-\frac{169}{12}
 \end{align*}
 $$
 
 The vertex form is
 
 $$
-6\big(x+\frac{7}{12}\big)^2-\frac{121}{24}.
+3\big(x-\frac{5}{6}\big)^2-\frac{169}{12}
 $$
 
 ### (iii) Graph of quadratic polynomial
@@ -101,17 +102,17 @@ $$
 
 Draw the vertex
 $$
-\big(-\frac{7}{12},-\frac{121}{24}\big).
+\big(\frac{5}{6},-\frac{169}{12}\big).
 $$
 
 #### Step 2: Draw point one unit left from vertex
 
-From the vertex, draw a point one unit left and six units up (six units up because \\(a=6\\)).
+From the vertex, draw a point one unit left and three units up (three units up because \\(a=3\\)).
 
 $$
 \begin{gather*}
-\big(-\frac{7}{12}-1,-\frac{121}{24}+6\big)\\
-=\big(-\frac{19}{12},\frac{23}{24}\big)
+\big(\frac{5}{6}-1,-\frac{169}{12}+3\big)\\
+=\big(-\frac{1}{6},-\frac{133}{12}\big)
 \end{gather*}
 $$
 
@@ -121,11 +122,11 @@ From the vertex, draw a point one unit right and six units up.
 
 $$
 \begin{gather*}
-\big(-\frac{7}{12}+1,-\frac{121}{24}+6\big)\\
-=\big(\frac{5}{12},\frac{23}{24}\big)
+\big(\frac{5}{6}+1,-\frac{169}{12}+3\big)\\
+=\big(\frac{11}{6},-\frac{133}{12}\big)
 \end{gather*}
 $$
 
 To draw the parabola, connect the three points.
 
-<iframe src="https://www.desmos.com/calculator/hc84ucjlix?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/02xec7atkc?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>

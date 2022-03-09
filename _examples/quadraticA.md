@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quadratic polynomial vertex form A
+title: Vertex form of quadratic polynomial
 math: \(2x^2+2x-1\)
 ---
 
@@ -85,7 +85,7 @@ $$
 
 $$
 \begin{align*}
-a(x-h)^2+k&=2\big((x-\big(-\frac{1}{4}\big)\big)^2+\big(-\frac{9}{8}\big)\\
+a(x-h)^2+k&=2\big(x-\big(-\frac{1}{4}\big)\big)^2+\big(-\frac{9}{8}\big)\\
 &=2\big(x+\frac{1}{4}\big)^2-\frac{9}{8}
 \end{align*}
 $$
@@ -93,7 +93,7 @@ $$
 The vertex form is
 
 $$
-2\big(x+\frac{1}{4}\big)^2-\frac{9}{8}.
+2\big(x+\frac{1}{4}\big)^2-\frac{9}{8}
 $$
 
 ### (iii) Graph of quadratic polynomial

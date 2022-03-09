@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quadratic polynomial vertex form B
+title: Vertex form of quadratic polynomial
 math: \(6x^2+7x-3\)
 ---
 
@@ -85,7 +85,7 @@ $$
 
 $$
 \begin{align*}
-a(x-h)^2+k&=6\big((x-\big(-\frac{7}{12}\big)\big)^2+\big(-\frac{121}{24}\big)\\
+a(x-h)^2+k&=6\big(x-\big(-\frac{7}{12}\big)\big)^2+\big(-\frac{121}{24}\big)\\
 &=6\big(x+\frac{7}{12}\big)^2-\frac{121}{24}
 \end{align*}
 $$
@@ -93,7 +93,7 @@ $$
 The vertex form is
 
 $$
-6\big(x+\frac{7}{12}\big)^2-\frac{121}{24}.
+6\big(x+\frac{7}{12}\big)^2-\frac{121}{24}
 $$
 
 ### (iii) Graph of quadratic polynomial
