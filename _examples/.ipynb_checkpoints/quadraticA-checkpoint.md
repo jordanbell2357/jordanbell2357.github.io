@@ -105,36 +105,14 @@ $$
 \big(-\frac{1}{4},-\frac{9}{8}\big).
 $$
 
-#### Step 2: Draw point one unit left from vertex
+#### Step 2: Draw point 1 unit left and \\(a \cdot (-1)^2 = (2) \cdot 1 = 2\\) units up from vertex
 
-From the vertex, draw a point one unit left and two units up (two units up because \\(a=2\\)).
+#### Step 3: Draw point 1 unit right and \\(a \cdot (1)^2 = (2) \cdot 1 = 2\\) units up from vertex
 
-$$
-\begin{gather*}
-\big(-\frac{1}{4}-1,-\frac{9}{8}+2\big)\\
-=\big(-\frac{5}{4},\frac{7}{8}\big)
-\end{gather*}
-$$
+#### Step 4: Draw point 1 unit left and \\(a \cdot (-2)^2 = (2) \cdot 4 = 8\\) from vertex
 
-#### Step 3: Draw point one unit right from vertex
+#### Step 5: Draw point 1 unit left and \\(a \cdot (2)^2 = (2) \cdot 4 = 8\\) up from vertex
 
-From the vertex, draw a point one unit right and two units up.
-
-$$
-\begin{gather*}
-\big(-\frac{1}{4}+1,-\frac{9}{8}+2\big)\\
-= \big(\frac{3}{4},\frac{7}{8}\big)
-\end{gather*}
-$$
-
-Therefore the three points are 
-
-$$
-\big(-\frac{1}{4},-\frac{9}{8}\big),
-\quad \big(-\frac{5}{4},\frac{7}{8}\big),
-\quad  \big(\frac{3}{4},\frac{7}{8}\big).
-$$
-
-To draw the parabola, connect the three points.
+To draw the parabola, connect the five points.
 
 <iframe src="https://www.desmos.com/calculator/frpdi53xd6?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
