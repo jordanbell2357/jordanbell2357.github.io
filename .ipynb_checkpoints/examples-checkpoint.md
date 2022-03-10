@@ -35,7 +35,7 @@ permalink: /examples/
 
 \(\prod_{k=1}^{K}|\sin(kx)|\)
 
-\\( \prod |\sin(kx)| \\)
+\\( \Pi |\sin(kx)| \\)
 
 # WebQuiz {#webquiz}
 
