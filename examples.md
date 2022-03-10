@@ -33,6 +33,8 @@ permalink: /examples/
 
 1. [Riemann sums for \\(\prod_{k=1}^K|\sin(kx)|\\)](https://www.desmos.com/calculator/gntgmzpxwm)
 
+\\(\prod_{k=1}^K|\sin(kx)|\\)
+
 # WebQuiz {#webquiz}
 
 1. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
