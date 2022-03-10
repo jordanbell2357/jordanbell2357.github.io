@@ -54,14 +54,15 @@ $$
 = \frac{-4\pm\sqrt{128}}{2(4)}\\
 = \frac{-4\pm\sqrt{64}\sqrt{2}}{8}\\
 =\frac{-4\pm 8\sqrt{2}}{8}\\
-=\frac{-1\pm 2\sqrt{2}}{2}.
+=\frac{-1\pm 2\sqrt{2}}{2}\\
+=-\frac{1}{2} \pm \sqrt{2}.
 \end{gather*}
 $$
 
 Roots
 $$
-x_1 =\frac{-1- 2\sqrt{2}}{2}, \quad
-x_2 = \frac{-1+ 2\sqrt{2}}{2}.
+x_1 =-\frac{1}{2}-\sqrt{2}, \quad
+x_2 =-\frac{1}{2}-\sqrt{2}.
 $$
 
 
@@ -78,8 +79,8 @@ $$
 which is
 
 $$
-\big(\frac{-1- 2\sqrt{2}}{2},0\big),\quad
-\big(\frac{-1+ 2\sqrt{2}}{2},0\big).
+\Big(-\frac{1}{2}-\sqrt{2},0\Big),\quad
+\Big(-\frac{1}{2}-\sqrt{2},0\Big).
 $$
 
 #### Step 2: Axis of symmetry
@@ -91,7 +92,7 @@ $$
 h &= -\frac{b}{2a}\\
 &= -\frac{(4)}{2(4)}\\
 &=-\frac{4}{8}\\
-&==\frac{1}{2}.
+&=\frac{1}{2}.
 \end{align*}
 $$
 
@@ -101,7 +102,7 @@ $$
 x=-\frac{1}{2}.
 $$
 
-### (iii) *y*value of vertex
+### (iii) *y*-value of vertex
 
 $$
 \begin{align*}
