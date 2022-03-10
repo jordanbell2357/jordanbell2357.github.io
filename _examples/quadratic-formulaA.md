@@ -124,4 +124,4 @@ $$
 
 ### (iv) Graph of parabola using three points
 
-<iframe src="https://www.desmos.com/calculator/ao11hurqvo?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/xzcsshvga2?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
