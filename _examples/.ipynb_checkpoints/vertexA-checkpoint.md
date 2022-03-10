@@ -69,7 +69,7 @@ $$
 Thefore the vertex is
 
 $$
-\big(-\frac{5}{12},-\frac{169}{24}\big).
+\Big(-\frac{5}{12},-\frac{169}{24}\Big).
 $$
 
 ### (ii) Vertex form
@@ -85,15 +85,15 @@ $$
 
 $$
 \begin{align*}
-a(x-h)^2+k&=6\big(x-\big(-\frac{5}{12}\big)\big)^2+\big(-\frac{169}{24}\big)\\
-&=6\big(x+\frac{5}{12}\big)^2-\frac{169}{24}
+a(x-h)^2+k&=6\Big(x-\Big(-\frac{5}{12}\Big)\Big)^2+\Big(-\frac{169}{24}\Big)\\
+&=6\Big(x+\frac{5}{12}\Big)^2-\frac{169}{24}
 \end{align*}
 $$
 
 The vertex form is
 
 $$
-6\big(x+\frac{5}{12}\big)^2-\frac{169}{24}
+6\Big(x+\frac{5}{12}\Big)^2-\frac{169}{24}
 $$
 
 ### (iii) Graph of quadratic polynomial
