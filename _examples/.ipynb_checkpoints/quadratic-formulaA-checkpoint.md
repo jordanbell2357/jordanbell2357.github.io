@@ -105,7 +105,7 @@ $$
 
 $$
 \begin{align*}
-k&4\big(-\frac{1}{2}\big)^2+4\big(-\frac{1}{2}\big)-7\\
+k&=4\big(-\frac{1}{2}\big)^2+4\big(-\frac{1}{2}\big)-7\\
 &=4\big(\frac{1}{4}\big) - \frac{4}{2} -7\\
 &=\frac{4}{4}-2-7\\
 &=1-2-7\\
