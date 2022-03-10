@@ -11,23 +11,15 @@ permalink: /examples/
 
 # Examples {#examples}
 
-<ol>
-{% for example in site.examples %}
-  <li><a href="{{ example.url }}">{{ example.title}} {{ example.math}}</a></li>
-{% endfor %}
-</ol>
-
 {% for example in site.examples %}
 1. [{{ example.title}} {{ example.math}}]({{ example.url }})
 {% endfor %}
 
 # GeoGebra {#geogebra}
 
-<ol>
 {% for exercise in site.geogebra %}
-    <li><a href="{{ exercise.url }}">{{ exercise.title}}</a></li>
+1. [{{ exercise.title}}]({{ exercise.url }})
 {% endfor %}
-</ol>
 
 # Desmos {#desmos}
 
