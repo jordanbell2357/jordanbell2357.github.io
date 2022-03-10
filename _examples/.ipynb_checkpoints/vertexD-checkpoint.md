@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Vertex form of quadratic polynomial
-math: \(2x^2+2x-1\)
+math: \\(2x^2+2x-1\\)
 ---
 
 ## Exercise
