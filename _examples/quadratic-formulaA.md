@@ -62,7 +62,7 @@ $$
 Roots
 $$
 x_1 =-\frac{1}{2}-\sqrt{2}, \quad
-x_2 =-\frac{1}{2}-\sqrt{2}.
+x_2 =-\frac{1}{2}+\sqrt{2}.
 $$
 
 
@@ -80,7 +80,7 @@ which is
 
 $$
 \Big(-\frac{1}{2}-\sqrt{2},0\Big),\quad
-\Big(-\frac{1}{2}-\sqrt{2},0\Big).
+\Big(-\frac{1}{2}+\sqrt{2},0\Big).
 $$
 
 #### Step 2: Axis of symmetry
