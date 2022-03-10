@@ -133,7 +133,7 @@ $$
 \big(-\frac{1}{2}+\sqrt{2},0\big)
 $$
 
-and the vertex \\(h,k\\) is
+and the vertex \\((h,k)\\) is
 
 $$
 \big(-\frac{1}{2},-10\big).
