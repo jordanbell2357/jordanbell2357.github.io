@@ -25,13 +25,13 @@ permalink: /examples/
 
 1. [Standard form, factored form, and vertex form](https://www.desmos.com/calculator/zrpmztunq0)
 
-1. [Riemann sums example #1](https://www.desmos.com/calculator/cbhiymlls7)
+1. [Riemann sums for \\(x^2\cdot\sin(x)\\)](https://www.desmos.com/calculator/cbhiymlls7)
 
-1. [Riemann sums example #2](https://www.desmos.com/calculator/abk5szfm0h)
+1. [Riemann sums for \\(\sin\left(\frac{x^{2}}{4}\right)\\)](https://www.desmos.com/calculator/abk5szfm0h)
 
-1. [Riemann sums example #3](https://www.desmos.com/calculator/ryrp6oip6q)
+1. [Riemann sums for \\(2^x\\)](https://www.desmos.com/calculator/ryrp6oip6q)
 
-1. [Riemann sums example #4](https://www.desmos.com/calculator/gntgmzpxwm)
+1. [Riemann sums for \\(\prod_{k=1}^{K}\left|\sin\left(kx\right)\right|\\)](https://www.desmos.com/calculator/gntgmzpxwm)
 
 # WebQuiz {#webquiz}
 
