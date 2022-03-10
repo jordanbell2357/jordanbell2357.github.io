@@ -15,7 +15,7 @@ $$
 
 (ii) Find the vertex form of this quadratic polynomial.
 
-(iii) Use the vertex form to graph this quadratic polynomial.
+(iii) Use the vertex form to graph this quadratic polynomial, using five points.
 
 ## Solution
 

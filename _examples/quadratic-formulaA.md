@@ -26,7 +26,7 @@ $$
 The coefficients are
 
 $$
-a=4, \quad b=4,\quad c=-6
+a=4, \quad b=4,\quad c=-7
 $$
 
 #### Step 2: Calculate discriminant
@@ -36,9 +36,9 @@ The discriminant is
 $$
 \begin{align*}
 D&=b^2-4ac\\
-&=(4)^2-4(4)(-6)\\
-&= 16+96\\
-&=112
+&=(4)^2-4(4)(-7)\\
+&= 16+112\\
+&=128
 \end{align*}
 $$
 
@@ -47,16 +47,19 @@ $$
 Quadratic formula
 
 $$
-\begin{align*}
-x&=\frac{-b \pm \sqrt{D}}{2}\\
-&= \frac{-4\pm\sqrt{112}}{2}\\
-&= \frac{-4\pm\sqrt{16}\sqrt{7}}{2}\\
-&=\frac{-4\pm4\sqrt{7}}{2}\\
-&=-2\pm 2\sqrt{7}.
+\begin{gather*}
+\frac{-b \pm \sqrt{D}}{2a}\\
+= \frac{-4\pm\sqrt{128}}{2(4)}\\
+= \frac{-4\pm\sqrt{64}\sqrt{2}}{8}\\
+=\frac{-4\pm 8\sqrt{2}}{8}\\
+=\frac{-1\pm 2\sqrt{2}}{2}.
+\end{gather*}
 $$
 
+Roots
 $$
-x_1 = -2-2\sqrt{7},\quad x_2 = -2+2\sqrt{7}.
+x_1 =\frac{-1- 2\sqrt{2}}{2}, \quad
+x_2 = \frac{-1+ 2\sqrt{2}}{2}.
 $$
 
 #### Step 4: Axis of symmetry
@@ -66,8 +69,9 @@ The axis of symmetry is the line \\(x=h\\) where
 $$
 \begin{align*}
 h &= \frac{x_1+x_2}{2}\\
-&= \frac{-2-2\sqrt{7} -2 + 2\sqrt{7}}{2}\\
-&= \frac{-4}{2}
+&= \frac{\frac{-1- 2\sqrt{2}}{2} + \frac{-1+ 2\sqrt{2}}{2}}{2}\\
+&= \frac{\frac{-1-2\sqrt{2}-1+2\sqrt{2}}{2}}{2}\\
+&=
 &=-2.
 \end{align*}
 $$
