@@ -35,6 +35,8 @@ permalink: /examples/
 
 \(\prod_{k=1}^{K}|\sin(kx)|\)
 
+\\( \prod |\sin(kx)| \\)
+
 # WebQuiz {#webquiz}
 
 1. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
