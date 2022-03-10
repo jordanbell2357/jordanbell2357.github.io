@@ -17,6 +17,10 @@ permalink: /examples/
 {% endfor %}
 </ol>
 
+{% for example in site.examples %}
+1. [{{ example.title}} {{ example.math}}]({{ example.url }})
+{% endfor %}
+
 # GeoGebra {#geogebra}
 
 <ol>
