@@ -121,7 +121,7 @@ The *y*-value of the vertex is \\(k=-10\\).
 Thus the vertex is at
 
 $$
-\big(-\frac{1}{2},-10\big).
+\big(-\frac{1}{2},-8\big).
 $$
 
 ### (iv) Graph of parabola using three points
@@ -136,7 +136,7 @@ $$
 and the vertex \\((h,k)\\) is
 
 $$
-\big(-\frac{1}{2},-10\big).
+\big(-\frac{1}{2},-8\big).
 $$
 
 <iframe src="https://www.desmos.com/calculator/2hsbn0asn6?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
