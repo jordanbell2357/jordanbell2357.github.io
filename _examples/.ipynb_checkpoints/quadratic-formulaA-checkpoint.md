@@ -15,7 +15,9 @@ $$
 
 (ii) Draw the *x*-intercepts and the axis of symmetry.
 
-(iii) Draw the parabola with the correct direction but do not calculate *y*-value of vertex.
+(iii) Find the *y*-value of the vertex by evaluating the polynomial.
+
+(iv) Graph the parabola using three points.
 
 ## Solution
 
@@ -62,24 +64,63 @@ x_1 =\frac{-1- 2\sqrt{2}}{2}, \quad
 x_2 = \frac{-1+ 2\sqrt{2}}{2}.
 $$
 
-#### Step 4: Axis of symmetry
 
-The axis of symmetry is the line \\(x=h\\) where
+### (ii) *x*-intercepts and axis of symmetry
+
+#### Step 1: *x*-intercepts
+
+The *x*-intercepts are
+
+$$
+(x_1,0),\quad (x_2,0) 
+$$
+
+which is
+
+$$
+\big(\frac{-1- 2\sqrt{2}}{2},0\big),\quad
+\big(\frac{-1+ 2\sqrt{2}}{2},0\big).
+$$
+
+#### Step 2: Axis of symmetry
+
+The axis of symmetry is the vertical line \\(x=h\\) where
 
 $$
 \begin{align*}
-h &= \frac{x_1+x_2}{2}\\
-&= \frac{\frac{-1- 2\sqrt{2}}{2} + \frac{-1+ 2\sqrt{2}}{2}}{2}\\
-&= \frac{\frac{-1-2\sqrt{2}-1+2\sqrt{2}}{2}}{2}\\
-&=
-&=-2.
+h &= -\frac{b}{2a}\\
+&= -\frac{(4)}{2(4)}\\
+&=-\frac{4}{8}\\
+&==\frac{1}{2}.
 \end{align*}
 $$
 
 Axis of symmetry
 
 $$
-x=-2
+x=-\frac{1}{2}.
 $$
 
+### (iii) *y*value of vertex
 
+$$
+\begin{align*}
+k&4\big(-\frac{1}{2}\big)^2+4\big(-\frac{1}{2}\big)-7\\
+&=4\big(\frac{1}{4}\big) - \frac{4}{2} -7\\
+&=\frac{4}{4}-2-7\\
+&=1-2-7\\
+&=-8.
+\end{align*}
+$$
+
+The *y*-value of the vertex is \\(k=-10\\).
+
+Thus the vertex is at
+
+$$
+\big(-\frac{1}{2},-10\big).
+$$
+
+### (iv) Graph of parabola using three points
+
+<iframe src="https://www.desmos.com/calculator/ao11hurqvo?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
