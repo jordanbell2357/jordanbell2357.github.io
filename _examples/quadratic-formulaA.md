@@ -126,7 +126,7 @@ $$
 
 ### (iv) Graph of parabola using three points
 
-The *x*-intercepts \\((x_1,0\\) and \\(x_2,0\\) are
+The *x*-intercepts \\((x_1,0)\\) and \\((x_2,0)\\) are
 
 $$
 \big(-\frac{1}{2}-\sqrt{2},0\big),\quad
