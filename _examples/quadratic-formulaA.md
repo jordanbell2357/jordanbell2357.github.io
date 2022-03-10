@@ -50,12 +50,12 @@ Quadratic formula
 
 $$
 \begin{gather*}
-\frac{-b \pm \sqrt{D}}{2a}\\
-= \frac{-4\pm\sqrt{128}}{2(4)}\\
-= \frac{-4\pm\sqrt{64}\sqrt{2}}{8}\\
-=\frac{-4\pm 8\sqrt{2}}{8}\\
-=\frac{-1\pm 2\sqrt{2}}{2}\\
-=-\frac{1}{2} \pm \sqrt{2}.
+-\frac{b}{2a} \pm \frac{\sqrt{D}}{2a}\\
+= -\frac{(4)}{2(4)} \pm \frac{\sqrt{128}}{2(4)}\\
+= - \frac{4}{8} \pm \frac{\sqrt{128}}{8}\\
+=-\frac{1}{2} \pm \frac{\sqrt{64}\sqrt{2}}{8}\\
+=-\frac{1}{2} \pm \frac{8\sqrt{2}}{8}\\
+=-\frac{1}{2} \pm \sqrt{2}
 \end{gather*}
 $$
 
@@ -124,4 +124,17 @@ $$
 
 ### (iv) Graph of parabola using three points
 
-<iframe src="https://www.desmos.com/calculator/xzcsshvga2?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+The *x*-intercepts \\((x_1,0\\) and \\(x_2,0\\) are
+
+$$
+\Big(-\frac{1}{2}-\sqrt{2},0\Big),\quad
+\Big(-\frac{1}{2}+\sqrt{2},0\Big)
+$$
+
+and the vertex \\(h,k\\) is
+
+$$
+\big(-\frac{1}{2},-10\big).
+$$
+
+<iframe src="https://www.desmos.com/calculator/2hsbn0asn6?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
