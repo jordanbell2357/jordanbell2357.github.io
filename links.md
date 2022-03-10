@@ -4,7 +4,10 @@ title: Links
 permalink: /links/
 ---
 
-Authorities, resources, exercises.
+- [Sites](#sites)
+- [CK-12 exercises](#ck12)
+
+## Sites {#sites}
 
 Authorities
 
@@ -47,3 +50,15 @@ Intermediate
 Advanced
 
 * [Canadian Mathematical Society (CMS) Competitions](https://cms.math.ca/competitions/)
+
+- [CK-12](#ck12)
+
+## CK-12 exercises {#ck12}
+
+<table>
+{% for exercise in site.ck12 %}
+  <tr>
+    <td><a href="{{ exercise.url }}">{{ exercise.title}}</a></td>
+  </tr>
+{% endfor %}
+</table>
