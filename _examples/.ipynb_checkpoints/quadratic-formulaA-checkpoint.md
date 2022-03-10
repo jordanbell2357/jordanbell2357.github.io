@@ -92,7 +92,7 @@ $$
 h &= -\frac{b}{2a}\\
 &= -\frac{(4)}{2(4)}\\
 &=-\frac{4}{8}\\
-&=\frac{1}{2}.
+&=-\frac{1}{2}.
 \end{align*}
 $$
 
@@ -103,6 +103,8 @@ x=-\frac{1}{2}.
 $$
 
 ### (iii) *y*-value of vertex
+
+Use \\(4x^2+4x-7\\) with \\(x=-\frac{1}{2}\\):
 
 $$
 \begin{align*}
@@ -127,8 +129,8 @@ $$
 The *x*-intercepts \\((x_1,0\\) and \\(x_2,0\\) are
 
 $$
-\Big(-\frac{1}{2}-\sqrt{2},0\Big),\quad
-\Big(-\frac{1}{2}+\sqrt{2},0\Big)
+\big(-\frac{1}{2}-\sqrt{2},0\big),\quad
+\big(-\frac{1}{2}+\sqrt{2},0\big)
 $$
 
 and the vertex \\(h,k\\) is

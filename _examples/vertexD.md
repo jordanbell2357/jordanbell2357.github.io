@@ -42,7 +42,7 @@ D&=b^2-4ac\\
 \end{align*}
 $$
 
-#### Step 3: Calculate *x*-coordinate and *y*-coordinate of vertex
+#### Step 3: Calculate *x*-coordinate of the vertex
 
 The *x*-coordinate of the vertex is
 
@@ -54,6 +54,8 @@ h &= -\frac{b}{2a}\\
 \end{align*}
 $$
 
+#### Step 4: Calculate *y*-coordinate of the vertex
+
 The *y*-coordinate of the vertex is
 
 $$
@@ -64,7 +66,7 @@ k &= -\frac{D}{4a}\\
 \end{align*}
 $$
 
-#### Step 4: Conclusion
+#### Step 5: Conclusion
 
 Thefore the vertex is
 
