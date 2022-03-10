@@ -116,7 +116,7 @@ k&=4\big(-\frac{1}{2}\big)^2+4\big(-\frac{1}{2}\big)-7\\
 \end{align*}
 $$
 
-The *y*-value of the vertex is \\(k=-10\\).
+The *y*-value of the vertex is \\(k=-8\\).
 
 Thus the vertex is at
 
