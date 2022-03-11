@@ -71,7 +71,7 @@ $$
 Thefore the vertex is
 
 $$
-\big(-\frac{1}{4},-\frac{9}{8}\big).
+\Big(-\frac{1}{4},-\frac{9}{8}\Big).
 $$
 
 ### (ii) Vertex form
@@ -87,15 +87,15 @@ $$
 
 $$
 \begin{align*}
-a(x-h)^2+k&=2\big(x-\big(-\frac{1}{4}\big)\big)^2+\big(-\frac{9}{8}\big)\\
-&=2\big(x+\frac{1}{4}\big)^2-\frac{9}{8}
+a(x-h)^2+k&=2\Big(x-\Big(-\frac{1}{4}\Big)\Big)^2+\Big(-\frac{9}{8}\Big)\\
+&=2\Big(x+\frac{1}{4}\Big)^2-\frac{9}{8}
 \end{align*}
 $$
 
 The vertex form is
 
 $$
-2\big(x+\frac{1}{4}\big)^2-\frac{9}{8}
+2\Big(x+\frac{1}{4}\Big)^2-\frac{9}{8}
 $$
 
 ### (iii) Graph of quadratic polynomial
@@ -104,7 +104,7 @@ $$
 
 Draw the vertex
 $$
-\big(-\frac{1}{4},-\frac{9}{8}\big).
+\Big(-\frac{1}{4},-\frac{9}{8}\Big).
 $$
 
 #### Step 2: Draw point 1 unit left

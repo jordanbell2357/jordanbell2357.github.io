@@ -71,7 +71,7 @@ $$
 Thefore the vertex is
 
 $$
-\big(-\frac{1}{4},-\frac{121}{24}\big).
+\Big(-\frac{1}{4},-\frac{121}{24}\Big).
 $$
 
 ### (ii) Vertex form
@@ -87,15 +87,15 @@ $$
 
 $$
 \begin{align*}
-a(x-h)^2+k&=6\big(x-\big(-\frac{7}{12}\big)\big)^2+\big(-\frac{121}{24}\big)\\
-&=6\big(x+\frac{7}{12}\big)^2-\frac{121}{24}
+a(x-h)^2+k&=6\Big(x-\Big(-\frac{7}{12}\Big)\Big)^2+\Big(-\frac{121}{24}\Big)\\
+&=6\Big(x+\frac{7}{12}\Big)^2-\frac{121}{24}
 \end{align*}
 $$
 
 The vertex form is
 
 $$
-6\big(x+\frac{7}{12}\big)^2-\frac{121}{24}
+6\Big(x+\frac{7}{12}\Big)^2-\frac{121}{24}
 $$
 
 ### (iii) Graph of parabola
@@ -104,7 +104,7 @@ $$
 
 Draw the vertex
 $$
-\big(-\frac{7}{12},-\frac{121}{24}\big).
+\Big(-\frac{7}{12},-\frac{121}{24}\Big).
 $$
 
 #### Step 2: Draw point 1 unit left
