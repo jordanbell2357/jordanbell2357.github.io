@@ -31,11 +31,7 @@ permalink: /examples/
 
 1. [Riemann sums for \\(2^x\\)](https://www.desmos.com/calculator/ryrp6oip6q)
 
-1. [Riemann sums for \\(\prod_{k=1}^K|\sin(kx)|\\)](https://www.desmos.com/calculator/gntgmzpxwm)
-
-\(\prod_{k=1}^{K}|\sin(kx)|\)
-
-\\( \Pi |\sin(kx)| \\)
+1. [Riemann sums for \\(|\sin(x)|\\)](https://www.desmos.com/calculator/gntgmzpxwm)
 
 # WebQuiz {#webquiz}
 
