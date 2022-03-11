@@ -125,4 +125,4 @@ $$
 
 #### Step 6: Draw the parabola by connecting the five points
 
-<iframe src="https://www.desmos.com/calculator/ifxk7gysdh?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/kbdigjgixe?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
