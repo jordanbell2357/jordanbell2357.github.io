@@ -1,21 +1,21 @@
 ---
 layout: post
 title: Vertex form of quadratic polynomial
-math: \\(2x^2+2x-1\\)
+math: \\(2x^2+x-1\\)
 ---
 
 ## Exercise
 
 Given the quadratic polynomial in standard form
 $$
-2x^2+2x-1.
+2x^2+x-1.
 $$
 
 (i) Find the vertex of the quadratic polynomial.
 
 (ii) Find the vertex form of this quadratic polynomial.
 
-(iii) Use the vertex form to graph this quadratic polynomial, using three points.
+(iii) Use the vertex form to graph this quadratic polynomial, using five points.
 
 ## Solution
 
@@ -115,6 +115,14 @@ $$
 
 \\(a =2\\) units up from vertex
 
-#### Step 4: Draw the parabola by connecting the three points
+#### Step 4: Draw point 1 unit right
 
-<iframe src="https://www.desmos.com/calculator/pzcaa32nby?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+\\(4a =4(2)=8\\) units up from vertex
+
+#### Step 5: Draw point 1 unit right
+
+\\(4a =4(2)=8\\) units up from vertex
+
+#### Step 6: Draw the parabola by connecting the three points
+
+<iframe src="https://www.desmos.com/calculator/a3hydlapfq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>

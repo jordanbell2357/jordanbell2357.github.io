@@ -117,4 +117,4 @@ $$
 
 #### Step 4: Draw the parabola by connecting the three points
 
-<iframe src="https://www.desmos.com/calculator/3jsejkjfdi?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/gyzu4rtvbv?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
