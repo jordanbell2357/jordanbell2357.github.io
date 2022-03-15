@@ -4,19 +4,40 @@ title: Tutoring
 permalink: /tutoring/
 ---
 
-## Tutoring overview
+- [Tutoring overview](#overview)
+- [Rate](#rate)
+- [Experience](#experience)
+- [Secondary {#secondary}](#secondary)
+- [Post-secondary {#postsecondary}](#postsecondary)
+- [Testimonials from clients {#testimonials}](#testimonials)
+
+## Tutoring overview {#overview}
+
+This page is the anchor of my videoconferencing (Zoom) mathematics tutoring practice
+
+Complete familiarity with the Ontario secondary mathematics curriculum, and at the university level with all first to third year mathematics courses at the University of Toronto (for several years during my enrollment in the mathematics PhD program at the University of Toronto).
+
+In addition to long experience tutoring students at all three of the University of Toronto campuses, I have tutored mathematics, statistics, and economics courses for students at the University of Western Ontario and McGill University over online sessions.
+
+A major value added is skill with designing study plans for courses, choosing specifically targetted extra exercise sets to strengthen areas, and guiding the client to where to focus their efforts to see the greatest gains, much like a personal trainer at a gym vs. hesitantly doing reps on a machine you are not sure if you are using correctly after a group class you didn't quite follow.
+
+My tutoring practice is done online in one hour sessions, scheduled with Google Calendar and using Zoom, writing on the screen and on paper. The one-on-one communication in tutoring avoid all the downfalls of online courses (disengagement, undirected, uncertain if you are doing it right), and adds new tools to use for one-on-one teaching.
+
+I have no special childhood education training and for certain patterns of behavior like needing calming in order to focus, their are better places to go than me. On the other hand, I have worked very successfully with several students diagnosed with ADHD and autism spectrum disorder, and because I take each student as they come to me, I find what works with each student and being told a diagnosis is not particularly important for one on one teaching. For some students, there is a particular difficulty moving concentration back and forth from screen to paper and here I have everything printed for both of us - it is not my domain to classify this problem in any way, only to identify students I see it in and change practices to address it as it occurs in our math work.
+
+
+## Rate {#rate}
 
 My rate per one hour session is \$60 (CAD) per one hour session. I send an invoice the same day from [Xero](https://www.xero.com/ca/) to be paid the same day after the session by Interac E-Transfer to my email address jordan.bell@gmail.com
+
+## Experience {#experience}
 
 My work with primary mathematics has been working with gifted students doing enrichment - logic puzzles, geometry, problems from elementary school math contests. I have had successful online sessions with students as early as grade 3.
 
 I am an extraordinarily experienced tutor for mathematics courses and mathematical courses (physics, economics, and accounting), with a calling for education, learning, explanation and exposition. I intentionally try to tutor all levels of math from higher elementary up - and my goal is to alway find the student's level and to help them move forward from wherever that is, whether it is adding fractions, linear equations, multiplying polynomials, finding roots, determining asymptotes, taking a derivative, finding the basis for a vector space, doing Langrange multipliers, or working with Brownian motion and stochastic calculus. Knowledge is a ladder that goes up forever and what matters is the process of moving up rungs.
 
-I have no special childhood education training and for certain patterns of behavior like needing calming in order to focus, their are better places to go than me. On the other hand, I have worked very successfully with several students diagnosed with ADHD and autism spectrum disorder, and because I take each student as they come to me, I find what works with each student and being told a diagnosis is not particularly important for one on one teaching. For some students, there is a particular difficulty moving concentration back and forth from screen to paper and here I have everything printed for both of us - it is not my domain to classify this problem in any way, only to identify students I see it in and change practices to address it as it occurs in our math work.
 
-My tutoring practice is done online in one hour sessions, scheduled with Google Calendar and using Zoom, writing on the screen and on paper. The one-on-one communication in tutoring avoid all the downfalls of online courses (disengagement, undirected, uncertain if you are doing it right), and adds new tools to use for one-on-one teaching.
-
-## Secondary
+## Secondary {#secondary}
 
 [The Ontario Curriculum](http://www.edu.gov.on.ca/eng/curriculum/secondary/index.html)
 
@@ -40,7 +61,7 @@ Grade | Course Code | Course Name
 --- | --- | --- | ---
 12 | CIA4U | Analysing Current Economic Issues, Grade 12, University Preparation
 
-# Post-secondary
+## Post-secondary {#postsecondary}
 
 * [Faculty of Arts & Science, University of Toronto](https://artsci.calendar.utoronto.ca/)
 
@@ -101,7 +122,7 @@ MAT337H1 | Introduction to Real Analysis
 MAT357H1 | Foundations of Real Analysis
 MAT389H1 | Complex Analysis
 
-# Testimonials from clients
+## Testimonials from clients {#testimonials}
 
 Contact me to arrange contact to check any of these references.
 
