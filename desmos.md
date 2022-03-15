@@ -13,3 +13,7 @@ permalink: /desmos/
 1. [Riemann sums for \\(2^{x}\\)](https://www.desmos.com/calculator/ryrp6oip6q)
 
 1. [Riemann sums for \\(\prod_{k=1}^K\vert \sin(kx)\vert \\)](https://www.desmos.com/calculator/gntgmzpxwm)
+
+{% for post in site.desmos %}
+1. [{{ post.title}} {{ post.math}}]({{ post.url }})
+{% endfor %}
