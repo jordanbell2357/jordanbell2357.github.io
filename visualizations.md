@@ -5,5 +5,5 @@ permalink: /visualizations/
 ---
 
 {% for visualization in site.visualizations %}
-1. [{{ visualization.title}}]({{ visualization.url }})
+- [{{ visualization.title}}]({{ visualization.url }})
 {% endfor %}
