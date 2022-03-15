@@ -7,9 +7,9 @@ permalink: /tutoring/
 - [Tutoring overview](#overview)
 - [Rate](#rate)
 - [Experience](#experience)
-- [Secondary {#secondary}](#secondary)
-- [Post-secondary {#postsecondary}](#postsecondary)
-- [Testimonials from clients {#testimonials}](#testimonials)
+- [Secondary](#secondary)
+- [Post-secondary](#postsecondary)
+- [Testimonials from clients](#testimonials)
 
 ## Tutoring overview {#overview}
 
