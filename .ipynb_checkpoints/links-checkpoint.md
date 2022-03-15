@@ -4,11 +4,6 @@ title: Links
 permalink: /links/
 ---
 
-- [Sites](#sites)
-- [CK-12 exercises](#ck12)
-
-## Sites {#sites}
-
 Authorities
 
 * [The Ontario Curriculum: Secondary Mathematics](http://www.edu.gov.on.ca/eng/curriculum/secondary/curriculum-update.html)
@@ -53,6 +48,7 @@ Advanced
 
 - [CK-12](#ck12)
 
+<!--
 ## CK-12 exercises {#ck12}
 
 <table>
@@ -62,3 +58,4 @@ Advanced
   </tr>
 {% endfor %}
 </table>
+-->
