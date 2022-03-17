@@ -4,12 +4,18 @@ title: Examples
 permalink: /examples/
 ---
 
+- [Examples](#solutions)
 - [GeoGebra](#geogebra)
 - [Desmos](#desmos)
 - [Graspable Math](#graspable-math)
-- [Step by step solutions](#solutions)
 - [WebQuiz](#webquiz)
 - [PhET](#phet)
+
+# Examples {#examples}
+
+{% for example in site.examples %}
+1. [{{ example.title}} {{ example.math}}]({{ example.url }})
+{% endfor %}
 
 # GeoGebra {#geogebra}
 
@@ -27,12 +33,6 @@ permalink: /examples/
 
 {% for exercise in site.graspable-math %}
 1. [{{ exercise.title}}]({{ exercise.url }})
-{% endfor %}
-
-# Step by step solution {#solutions}
-
-{% for example in site.examples %}
-1. [{{ example.title}} {{ example.math}}]({{ example.url }})
 {% endfor %}
 
 # WebQuiz {#webquiz}
