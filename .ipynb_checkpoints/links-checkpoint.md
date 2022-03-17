@@ -4,9 +4,6 @@ title: Links
 permalink: /links/
 ---
 
-- [Tools](#tools)
-- [Exercises](#exercises)
-
 ## Tools {#tools}
 
 * [Desmos](https://www.desmos.com/)
