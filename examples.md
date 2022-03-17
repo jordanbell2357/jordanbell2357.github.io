@@ -6,7 +6,7 @@ permalink: /examples/
 
 - [GeoGebra](#geogebra)
 - [Desmos](#desmos)
-- [Graspable Math](#gm)
+- [Graspable Math](#graspable-math)
 - [Step by step solutions](#solutions)
 - [WebQuiz](#webquiz)
 - [PhET](#phet)
@@ -25,7 +25,7 @@ permalink: /examples/
 
 # Graspable Math {#gm}
 
-{% for exercise in site.gm %}
+{% for exercise in site.graspable-math %}
 1. [{{ exercise.title}}]({{ exercise.url }})
 {% endfor %}
 
