@@ -30,22 +30,18 @@ permalink: /links/
 * [Singapore Math®](https://www.singaporemath.com/)
 * [Association Montessori Internationale (AMI)](https://montessori-ami.org/) / [Montessori Primary Guide](https://www.infomontessori.com/mathematics/introduction.htm)
 
-
-
-
-
-Videos and games
-
-* [PBS LearningMedia K-8 Mathematics](https://www.pbslearningmedia.org/subjects/mathematics/k-8-mathematics/) / [PreK-12 Resources for New School Routines
-](https://www.pbslearningmedia.org/collection/new-school-routines/)
-
-Other organizations
+## Others
 
 * [University of Waterloo CEMC](https://www.cemc.uwaterloo.ca/)
 * [Canadian Math Kangaroo Contest](https://mathkangaroo.ca/)
 * [National Council of Teachers of Mathematics Classroom Resources](https://www.nctm.org/classroomresources/)
 
-Enrichment
+## Videos and games
+
+* [PBS LearningMedia K-8 Mathematics](https://www.pbslearningmedia.org/subjects/mathematics/k-8-mathematics/) / [PreK-12 Resources for New School Routines
+](https://www.pbslearningmedia.org/collection/new-school-routines/)
+
+## Enrichment
 
 * [Art of Problem Solving (AoPS)](https://artofproblemsolving.com/company)
 * [Canadian Mathematical Society (CMS) Competitions](https://cms.math.ca/competitions/)
