@@ -4,7 +4,23 @@ title: Links
 permalink: /links/
 ---
 
-Authorities
+- [Tools](#tools)
+- [Exercises](#exercises)
+
+## Tools {#tools}
+
+* [Desmos](https://www.desmos.com/)
+* [GeoGebra](https://www.geogebra.org/geometry)
+* [Wolfram Alpha](https://www.wolframalpha.com/)
+
+## Exercises
+
+* [Khan Academy](https://www.khanacademy.org/)
+* [CK-12 Foundation](https://www.ck12.org/student/)
+* [MathsIsFun.com](https://www.mathsisfun.com/)
+* [Transum](https://www.transum.org/)
+
+## Curriculum {#curriculum}
 
 * [The Ontario Curriculum: Secondary Mathematics](http://www.edu.gov.on.ca/eng/curriculum/secondary/curriculum-update.html)
 * [Ontario Curriculum and Resources website](https://www.dcp.edu.gov.on.ca/en/math)
@@ -14,18 +30,9 @@ Authorities
 * [Singapore Math®](https://www.singaporemath.com/)
 * [Association Montessori Internationale (AMI)](https://montessori-ami.org/) / [Montessori Primary Guide](https://www.infomontessori.com/mathematics/introduction.htm)
 
-Digital exercises
 
-* [Khan Academy](https://www.khanacademy.org/)
-* [CK-12 Foundation](https://www.ck12.org/student/)
-* [MathsIsFun.com](https://www.mathsisfun.com/)
-* [Transum](https://www.transum.org/)
 
-Programs
 
-* [Desmos](https://www.desmos.com/)
-* [GeoGebra](https://www.geogebra.org/geometry)
-* [Wolfram Alpha](https://www.wolframalpha.com/)
 
 Videos and games
 
@@ -38,15 +45,12 @@ Other organizations
 * [Canadian Math Kangaroo Contest](https://mathkangaroo.ca/)
 * [National Council of Teachers of Mathematics Classroom Resources](https://www.nctm.org/classroomresources/)
 
-Intermediate
+Enrichment
 
 * [Art of Problem Solving (AoPS)](https://artofproblemsolving.com/company)
-
-Advanced
-
 * [Canadian Mathematical Society (CMS) Competitions](https://cms.math.ca/competitions/)
 
-- [CK-12](#ck12)
+
 
 <!--
 ## CK-12 exercises {#ck12}
