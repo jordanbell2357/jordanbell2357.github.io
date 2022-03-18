@@ -10,7 +10,7 @@ permalink: /links/
 * [GeoGebra](https://www.geogebra.org/geometry)
 * [Wolfram Alpha](https://www.wolframalpha.com/)
 
-## Exercises
+## Exercises {#exercises}
 
 * [Khan Academy](https://www.khanacademy.org/)
 * [CK-12](https://www.ck12.org/student/)
@@ -27,26 +27,30 @@ permalink: /links/
 * [Singapore Math®](https://www.singaporemath.com/)
 * [Association Montessori Internationale (AMI)](https://montessori-ami.org/) / [Montessori Primary Guide](https://www.infomontessori.com/mathematics/introduction.htm)
 
-## Contests
+## Contests {#contests}
 
 * [University of Waterloo CEMC](https://www.cemc.uwaterloo.ca/)
 * [Canadian Math Kangaroo Contest](https://mathkangaroo.ca/)
 * [Canadian Mathematical Society (CMS) Competitions](https://cms.math.ca/competitions/)
 
-## Enrichment
+## Enrichment {#enrichment}
 
 * [Art of Problem Solving (AoPS)](https://artofproblemsolving.com/company)
 
-## Resources
+## Resources {#resources}
 
 * [National Council of Teachers of Mathematics Classroom Resources](https://www.nctm.org/classroomresources/)
 
-## Videos and games
+## Games {#games}
 
 * [PBS LearningMedia K-8 Mathematics](https://www.pbslearningmedia.org/subjects/mathematics/k-8-mathematics/)
 * [PBS PreK-12 Resources for New School Routines](https://www.pbslearningmedia.org/collection/new-school-routines/)
 
+## PhET {#phet}
 
+{% for exercise in site.phet %}
+1. [{{ exercise.title}}]({{ exercise.url }})
+{% endfor %}
 
 
 
