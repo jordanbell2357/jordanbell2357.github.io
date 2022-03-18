@@ -13,7 +13,7 @@ $$
 $$
 
 $$
-\frac{(x+2)\cdot 1}{(x+2)(x-2)} + \frac{(x-2)(x-1)}{(x-2)(x+2)}-1
+\frac{(x+2)\cdot 1}{(x+2) \cdot (x-2)} + \frac{(x-2) \cdot (x-1)}{(x-2) \cdot (x+2)}-1
 $$
 
 $$
