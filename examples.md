@@ -9,7 +9,6 @@ permalink: /examples/
 - [Desmos](#desmos)
 - [Graspable Math](#gm)
 - [WebQuiz](#webquiz)
-- [PhET](#phet)
 
 # Examples {#examples}
 
