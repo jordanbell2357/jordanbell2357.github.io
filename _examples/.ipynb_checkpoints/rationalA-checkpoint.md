@@ -5,8 +5,8 @@ math: \\(\frac{1}{x-2}+\frac{x-1}{x+2}-1\\)
 ---
 
 \\(
-\newcommand{\Acolor}[1]{\colorbox{CornflowerBlue}{$\displaystyle #1$}}
-\newcommand{\Bcolor}[1]{\colorbox{CornflowerBlue}{$\displaystyle #1$}}
+\newcommand{\A}[1]{\colorbox{CornflowerBlue}{$\displaystyle #1$}}
+\newcommand{\B}[1]{\colorbox{CornflowerBlue}{$\displaystyle #1$}}
 \\)
 
 $$
@@ -14,8 +14,8 @@ $$
 $$
 
 $$
-\Acolor{\dfrac{x+2}{x+2}} \cdot \dfrac{1}{x-2}+
-\dfrac{x-2}{x-2}\cdot \dfrac{x-1}{\Acolor{x+2}}-1
+\A{\dfrac{x+2}{x+2}} \cdot \dfrac{1}{x-2}+
+\dfrac{x-2}{x-2}\cdot \dfrac{x-1}{\A{x+2}}-1
 $$
 
 $$
