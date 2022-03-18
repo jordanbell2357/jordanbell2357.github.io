@@ -7,6 +7,7 @@ math: \\(\frac{1}{x-2}+\frac{x-1}{x+2}-1\\)
 \\(
 \newcommand{\A}[1]{\colorbox{CornflowerBlue}{$\displaystyle #1$}}
 \newcommand{\B}[1]{\colorbox{BurntOrange}{$\displaystyle #1$}}
+\newcommand{\C}[1]{\colorbox{lightgray}{$\displaystyle #1$}}
 \\)
 
 $$
@@ -23,7 +24,7 @@ $$
 $$
 
 $$
-\frac{x+2}{(x+2)(x-2)}+\frac{x^2-x-2x+2}{(x+2)(x-2)}-1
+\frac{\A{x+2}}{\A{(x+2)}\B{(x-2)}}+\frac{\C{x^2-x-2x+2}}{\A{(x+2)}\B{(x-2)}}-1
 $$
 
 $$
