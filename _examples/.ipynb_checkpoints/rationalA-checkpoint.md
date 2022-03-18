@@ -9,7 +9,7 @@ $$
 $$
 
 $$
-\frac{x+2}{x+2} \frac{1}{x-2}+\frac{x-2}{x-2} \frac{x-1}{x+2}-1
+{\color{NavyBlue} \frac{x+2}{x+2}} \cdot \frac{1}{{\color{BurntOrange} x-2}}+{\color{BurntOrange}\frac{x-2}{x-2}} \frac{x-1}{{\color{NavyBlue} x+2}}-1
 $$
 
 $$
