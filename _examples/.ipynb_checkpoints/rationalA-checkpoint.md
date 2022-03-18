@@ -14,8 +14,8 @@ $$
 $$
 
 $$
-\dfrac{x+2}{x+2} \cdot \dfrac{1}{x-2}+
-\dfrac{x-2}{x-2}\cdot \dfrac{x-1}{x+2}-1
+\Acolor{\dfrac{x+2}{x+2}} \cdot \dfrac{1}{x-2}+
+\dfrac{x-2}{x-2}\cdot \dfrac{x-1}{\Acolor{x+2}}-1
 $$
 
 $$
