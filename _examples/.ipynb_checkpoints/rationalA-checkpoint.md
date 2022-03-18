@@ -4,9 +4,9 @@ title: Rational expression
 math: \\(\frac{1}{x-2}+\frac{x-1}{x+2}-1\\)
 ---
 
-\(
+\\(
 \newcommand{\highlightA}[1]{\colorbox{NavyBlue}{$\displaystyle #1$}}
-\)
+\\)
 
 $$
 \highlightA{\frac{1}{x-2}}+\frac{x-1}{x+2}-1
