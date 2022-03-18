@@ -9,7 +9,6 @@ permalink: /examples/
 - [Desmos](#desmos)
 - [Graspable Math](#gm)
 - [WebQuiz](#webquiz)
-- [PhET](#phet)
 
 # Examples {#examples}
 
@@ -42,9 +41,3 @@ permalink: /examples/
 1. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq2.html)
 
 1. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq3.html)
-
-# PhET {#phet}
-
-{% for exercise in site.phet %}
-1. [{{ exercise.title}}]({{ exercise.url }})
-{% endfor %}
