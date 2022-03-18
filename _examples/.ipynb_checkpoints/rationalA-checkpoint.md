@@ -6,7 +6,7 @@ math: \\(\frac{1}{x-2}+\frac{x-1}{x+2}-1\\)
 
 \\(
 \newcommand{\A}[1]{\colorbox{CornflowerBlue}{$\displaystyle #1$}}
-\newcommand{\B}[1]{\colorbox{CornflowerBlue}{$\displaystyle #1$}}
+\newcommand{\B}[1]{\colorbox{BurntOrange}{$\displaystyle #1$}}
 \\)
 
 $$
