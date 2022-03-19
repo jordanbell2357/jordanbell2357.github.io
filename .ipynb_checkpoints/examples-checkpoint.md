@@ -4,7 +4,7 @@ title: Examples
 permalink: /examples/
 ---
 
-- [Examples](#solutions)
+- [Examples](#examples)
 - [GeoGebra](#geogebra)
 - [Desmos](#desmos)
 - [Graspable Math](#gm)
