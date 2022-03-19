@@ -11,12 +11,12 @@ math: \\(\frac{1}{x-2}+\frac{x-1}{x+2}-1\\)
 \\)
 
 $$
-\dfrac{1}{\B{x-2}}+\dfrac{x-1}{\A{x+2}}-1
+\dfrac{1}{x-2}+\dfrac{x-1}{x+2}-1
 $$
 
 $$
-\dfrac{\A{x+2}}{\A{x+2}} \cdot \dfrac{1}{x-2}+
-\dfrac{\B{x-2}}{\B{x-2}}\cdot \dfrac{x-1}{x+2}-1
+\dfrac{\A{x+2}}{\A{x+2}} \cdot \dfrac{1}{\B{x-2}}+
+\dfrac{\B{x-2}}{\B{x-2}}\cdot \dfrac{x-1}{\A{x+2}}-1
 $$
 
 $$
@@ -32,11 +32,11 @@ $$
 $$
 
 $$
-\dfrac{x^2-2x+4}{\B{(x+2)(x-2)}}-1
+\dfrac{x^2-2x+4}{(x+2)(x-2)}-1
 $$
 
 $$
-\dfrac{x^2-2x+4}{(x+2)(x-2)}-\dfrac{\B{(x+2)(x-2)}}{\B{(x+2)(x-2)}}\cdot 1
+\dfrac{x^2-2x+4}{\B{(x+2)(x-2)}}-\dfrac{\B{(x+2)(x-2)}}{\B{(x+2)(x-2)}}\cdot 1
 $$
 
 $$
