@@ -15,8 +15,8 @@ $$
 $$
 
 $$
-\A{\dfrac{x+2}{x+2}} \cdot \dfrac{1}{\B{x-2}}+
-\B{\dfrac{x-2}{x-2}}\cdot \dfrac{x-1}{\A{x+2}}-1
+\dfrac{\A{x+2}}{\A{x+2}} \cdot \dfrac{1}{\B{x-2}}+
+\dfrac{\B{x-2}}{\B{x-2}}\cdot \dfrac{x-1}{\A{x+2}}-1
 $$
 
 $$
