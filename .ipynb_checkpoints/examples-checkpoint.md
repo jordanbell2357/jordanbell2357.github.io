@@ -18,8 +18,8 @@ permalink: /examples/
 
 # GeoGebra {#geogebra}
 
-{% for post in site.desmos %}
-1. [{{ post.title}} {{ post.math}}]({{ post.url }})
+{% for post in site.geogebra %}
+1. [{{ post.title}}]({{ post.url }})
 {% endfor %}
 
 # Desmos {#desmos}
