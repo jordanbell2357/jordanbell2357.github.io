@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rational expression
-math: \\(\dfrac{1}{3x+2}+\dfrac{2}{3}+\dfrac{2}{3x+1}\\)
+math: \\(\dfrac{1}{4x+1}-\dfrac{2}{3}+\dfrac{3}{5x-1}\\)
 ---
 
 \\(
