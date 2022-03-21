@@ -11,13 +11,13 @@ math: \\(\dfrac{1}{4x+1}-\dfrac{2}{3}+\dfrac{3}{5x-1}\\)
 \\)
 
 $$
-\dfrac{1}{3x+2}+\dfrac{2}{3}+\dfrac{2}{3x+1}
+\dfrac{1}{4x+1}-\dfrac{1}{3}+\dfrac{1}{2x-3}
 $$
 
 $$
-\dfrac{\B{3}}{\B{3}}\dfrac{\C{3x+1}}{\C{3x+1}}  \cdot \dfrac{1}{\A{3x+2}}
-+\dfrac{\A{3x+2}}{\A{3x+2}}\dfrac{\C{3x+1}}{\C{3x+1}} \cdot \dfrac{2}{\B{3}}
-+\dfrac{\A{3x+2}}{\A{3x+2}}\dfrac{\B{3}}{\B{3}} \cdot \dfrac{2}{\C{3x+1}}
+\dfrac{\B{3}}{\B{3}} \dfrac{\C{2x-3}}{\C{2x-3}} \cdot \dfrac{1}{\A{4x+1}}
+-\dfrac{\A{4x+1}}{\A{4x+1}} \dfrac{\C{2x-3}}{\C{2x-3}} \cdot \dfrac{1}{\B{3}}
++\dfrac{\A{4x+1}}{\A{4x+1}} \dfrac{\B{3}}{\B{3}} \cdot \dfrac{1}{\C{2x-3}}
 $$
 
 
