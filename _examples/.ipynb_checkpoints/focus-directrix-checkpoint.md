@@ -67,5 +67,19 @@ y^2 - 2ky + 2fy + k^2 -2fk + f^2&=(x-h)^2+y^2-2ky-2fy + k^2 + 2fk + f^2\\
 $$
 
 
+<https://www.golabz.eu/lab/parabolic-mirror>
+
+<https://www.edmundoptics.com/f/precision-parabolic-mirrors/11895/>
+
+<https://www.edmundoptics.com/f/precision-parabolic-reflectors/13727/>
+
+<https://isaacphysics.org/questions/parabolic_mirror>
+
+<https://www.edmundoptics.com/f/large-parabolic-reflectors/11483/>
+
+<https://ricktu288.github.io/ray-optics/simulator/?en>
+
+![Ray optics](/assets/images/Ray-Optics-Simulation/parabolic-mirror.svg)
+
 
 <iframe src="https://www.geogebra.org/calculator/phhw4fmu?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
