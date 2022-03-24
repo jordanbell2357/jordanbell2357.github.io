@@ -66,6 +66,7 @@ y^2 - 2ky + 2fy + k^2 -2fk + f^2&=(x-h)^2+y^2-2ky-2fy + k^2 + 2fk + f^2\\
 \end{align}
 $$
 
+<https://www.animations.physics.unsw.edu.au/jw/light/mirrors-and-images.htm>
 
 <https://www.golabz.eu/lab/parabolic-mirror>
 
