@@ -7,6 +7,8 @@ $$
 ax^2+bx+c
 $$
 
+Discriminant
+
 $$
 D=b^2-4ac
 $$
@@ -18,6 +20,8 @@ $$
 $$
 k=-\frac{D}{4a}
 $$
+
+
 
 $$
 f=\frac{1}{4a}
@@ -35,27 +39,33 @@ $$
 y=k-f
 $$
 
-Distance between $$(x,y)$$ and focus is
-
-$$
-\sqrt{(x-h)^2+(y-(k+f))^2}
-$$
-
 Distance between $$(x,y)$$ and directrix is
 
 $$
 |y-(k-f)|
 $$
 
+Distance between $$(x,y)$$ and focus is
+
+$$
+\sqrt{(x-h)^2+(y-(k+f))^2}
+$$
+
+
+
 Therefore
 
 $$
-\begin{gather}
-(x-h)^2+(y-(k+f))^2 = (y-(k-f))^2\\
-(x-h)^2+y^2-2(k+f)y+(k+f)^2 = y^2 - 2(k-f)y + (k-f)^2\\
-(x-h)^2+y^2-2ky-2fy + k^2 + 2fk + k^2 = y^2 - 2(k-f)y + (k-f)^2\\
-(x-h)^2 -2ky - 2fy + k^2 +2fk + k^2 = y^2 -2ky + 2fy + k^2 - 2fk + f^2
-\end{gather}
+\begin{align}
+(y-(k-f))^2&=(x-h)^2+(y-(k+f))^2\\
+y^2 - 2(k-f)y + (k-f)^2&=(x-h)^2+y^2-2(k+f)y+(k+f)^2\\
+y^2 - 2ky + 2fy + k^2 -2fk + f^2&=(x-h)^2+y^2-2ky-2fy + k^2 + 2fk + f^2\\
+2fy -2fk&=(x-h)^2 -2fy + 2fk\\
+4fy - 4fk&=(x-h)^2\\
+4f(y-k)&=(x-h)^2
+\end{align}
 $$
 
 
+
+<iframe src="https://www.geogebra.org/calculator/phhw4fmu?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
