@@ -113,7 +113,7 @@ $$
 <table>
 <tr>
     <th>Diameter (latus rectum) (mm)</th>
-    <th>Effective Focal Length (EFL) (focal length f) (mm)</th>
+    <th>Effective Focal Length (EFL) (focal length <em>f</em>) (mm)</th>
 </tr>
 <tr>
     <td>304.80</td>
