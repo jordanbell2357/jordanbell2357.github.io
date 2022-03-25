@@ -3,6 +3,8 @@ layout: post
 title: Focus and directrix for parabolas
 ---
 
+## Focus and directrix
+
 $$
 ax^2+bx+c
 $$
@@ -72,21 +74,25 @@ y^2 - 2ky + 2fy + k^2 -2fk + f^2&=(x-h)^2+y^2-2ky-2fy + k^2 + 2fk + f^2\\
 \end{align}
 $$
 
+<iframe src="https://www.geogebra.org/calculator/phhw4fmu?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 
-[Physclips, School of Physics, UNSW: Parabolic reflectors](https://www.animations.physics.unsw.edu.au/jw/light/mirrors-and-images.htm#4)
 
-[Go-Lab, Sitsanlis Ilias: Parabolic Mirror](https://www.golabz.eu/lab/parabolic-mirror)
 
-[Edmund Optics: Large Parabolic Reflectors](https://www.edmundoptics.com/f/large-parabolic-reflectors/11483/)
-
-![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/1099.jpg)
-
-[Isaac Physics: Parabolic mirror](https://isaacphysics.org/questions/parabolic_mirror)
+## Optics
 
 [Ray Optics Simulation](https://ricktu288.github.io/ray-optics/)
 
 ![Ray optics](/assets/images/Ray-Optics-Simulation/parabolic-mirror.svg)
 
-<https://abel.math.harvard.edu/archive/hist_206r_2009/Too_1976.pdf>
+[Edmund Optics: Large Parabolic Reflectors](https://www.edmundoptics.com/f/large-parabolic-reflectors/11483/)
 
-<iframe src="https://www.geogebra.org/calculator/phhw4fmu?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/1099.jpg)
+
+
+## Further resources
+
+[Go-Lab, Sitsanlis Ilias: Parabolic Mirror](https://www.golabz.eu/lab/parabolic-mirror)
+
+[Isaac Physics: Parabolic mirror](https://isaacphysics.org/questions/parabolic_mirror)
+
+[Physclips, School of Physics, UNSW: Parabolic reflectors](https://www.animations.physics.unsw.edu.au/jw/light/mirrors-and-images.htm#4)
