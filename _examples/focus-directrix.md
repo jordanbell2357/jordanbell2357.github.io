@@ -114,8 +114,9 @@ $$
 </tr>
 </table>
 
+<!--
 ![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/1099.jpg)
-
+-->
 
 ## Further resources {#further}
 
