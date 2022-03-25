@@ -89,7 +89,9 @@ $$
 
 [Ray Optics Simulation](https://ricktu288.github.io/ray-optics/)
 
-![Ray optics](/assets/images/Ray-Optics-Simulation/parabolic-mirror.svg)
+![Ray optics](/assets/RayOpticsSimulation/parabolic-mirror.svg)
+
+![Ray optics](/assets/RayOpticsSimulation/point-source.svg)
 
 ## Parabolic mirrors {#mirrors}
 
