@@ -5,6 +5,7 @@ title: Focus and directrix for parabolas
 
 - [Focus and directrix](#focus)
 - [Optics](#optics)
+- [Parabolic mirrors](#mirrors)
 - [Further resources](#further)
 
 ## Focus and directrix {#focus}
@@ -90,14 +91,7 @@ $$
 
 ![Ray optics](/assets/images/Ray-Optics-Simulation/parabolic-mirror.svg)
 
-
-## Further resources {#further}
-
-[Go-Lab, Sitsanlis Ilias: Parabolic Mirror](https://www.golabz.eu/lab/parabolic-mirror)
-
-[Isaac Physics: Parabolic mirror](https://isaacphysics.org/questions/parabolic_mirror)
-
-[Physclips, School of Physics, UNSW: Parabolic reflectors](https://www.animations.physics.unsw.edu.au/jw/light/mirrors-and-images.htm#4)
+## Parabolic mirrors {#mirrors}
 
 [Edmund Optics: Large Parabolic Reflectors](https://www.edmundoptics.com/f/large-parabolic-reflectors/11483/)
 
@@ -121,6 +115,17 @@ $$
 </table>
 
 ![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/1099.jpg)
+
+
+## Further resources {#further}
+
+[Go-Lab, Sitsanlis Ilias: Parabolic Mirror](https://www.golabz.eu/lab/parabolic-mirror)
+
+[Isaac Physics: Parabolic mirror](https://isaacphysics.org/questions/parabolic_mirror)
+
+[Physclips, School of Physics, UNSW: Parabolic reflectors](https://www.animations.physics.unsw.edu.au/jw/light/mirrors-and-images.htm#4)
+
+
 
 
 
