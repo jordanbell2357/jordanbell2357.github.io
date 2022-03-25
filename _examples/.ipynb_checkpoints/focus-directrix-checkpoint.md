@@ -4,10 +4,8 @@ title: Focus and directrix for parabolas
 ---
 
 - [Focus and directrix](#focus)
-- [GeoGebra](#geogebra)
 - [Optics](#optics)
 - [Further resources](#further)
-- [Parabolic mirrors](#mirrors)
 
 ## Focus and directrix {#focus}
 
@@ -80,7 +78,6 @@ y^2 - 2ky + 2fy + k^2 -2fk + f^2&=(x-h)^2+y^2-2ky-2fy + k^2 + 2fk + f^2\\
 \end{align}
 $$
 
-## GeoGebra {#geogebra}
 
 [Parabola focus and directrix](https://www.geogebra.org/calculator/phhw4fmu)
 
@@ -93,10 +90,6 @@ $$
 
 ![Ray optics](/assets/images/Ray-Optics-Simulation/parabolic-mirror.svg)
 
-<!--
-![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/1099.jpg)
--->
-
 
 ## Further resources {#further}
 
@@ -105,8 +98,6 @@ $$
 [Isaac Physics: Parabolic mirror](https://isaacphysics.org/questions/parabolic_mirror)
 
 [Physclips, School of Physics, UNSW: Parabolic reflectors](https://www.animations.physics.unsw.edu.au/jw/light/mirrors-and-images.htm#4)
-
-## Parabolic mirrors {#mirrors}
 
 [Edmund Optics: Large Parabolic Reflectors](https://www.edmundoptics.com/f/large-parabolic-reflectors/11483/)
 
@@ -130,3 +121,6 @@ $$
 </table>
 
 ![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/1099.jpg)
+
+
+
