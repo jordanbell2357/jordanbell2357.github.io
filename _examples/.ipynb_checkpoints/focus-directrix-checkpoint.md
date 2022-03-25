@@ -21,6 +21,12 @@ $$
 k=-\frac{D}{4a}
 $$
 
+Vertex
+
+$$
+V=(h,k)
+$$
+
 
 
 $$
@@ -66,26 +72,20 @@ y^2 - 2ky + 2fy + k^2 -2fk + f^2&=(x-h)^2+y^2-2ky-2fy + k^2 + 2fk + f^2\\
 \end{align}
 $$
 
-<https://www.animations.physics.unsw.edu.au/jw/light/mirrors-and-images.htm>
 
-<https://www.golabz.eu/lab/parabolic-mirror>
+[Physclips, School of Physics, UNSW: Parabolic reflectors](https://www.animations.physics.unsw.edu.au/jw/light/mirrors-and-images.htm#4)
 
-<https://www.edmundoptics.com/f/precision-parabolic-mirrors/11895/>
+[Go-Lab, Sitsanlis Ilias: Parabolic Mirror](https://www.golabz.eu/lab/parabolic-mirror)
 
-<https://www.edmundoptics.com/f/precision-parabolic-reflectors/13727/>
+[Edmund Optics: Large Parabolic Reflectors](https://www.edmundoptics.com/f/large-parabolic-reflectors/11483/)
 
-<https://isaacphysics.org/questions/parabolic_mirror>
+![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/1099.jpg)
 
-<https://www.edmundoptics.com/f/large-parabolic-reflectors/11483/>
-
-
-
-<https://ricktu288.github.io/ray-optics/simulator/?en>
+[Isaac Physics: Parabolic mirror](https://isaacphysics.org/questions/parabolic_mirror)
 
 [Ray Optics Simulation](https://ricktu288.github.io/ray-optics/)
 
 ![Ray optics](/assets/images/Ray-Optics-Simulation/parabolic-mirror.svg)
-
 
 <https://abel.math.harvard.edu/archive/hist_206r_2009/Too_1976.pdf>
 
