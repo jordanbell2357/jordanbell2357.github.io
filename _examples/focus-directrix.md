@@ -33,7 +33,7 @@ $$
 f=\frac{1}{4a}
 $$
 
-Focal length $$|f|$$
+Focal length $$\vert f \vert$$
 
 Focus
 
