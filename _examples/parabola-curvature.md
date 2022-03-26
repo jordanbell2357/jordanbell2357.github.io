@@ -3,10 +3,10 @@ layout: post
 title: Parabola curvature
 ---
 
-Radius of curvature of curve $$(x,y(x))$$
+The radius of curvature of the curve $$(x,y(x))$$
 
 $$
-R=\frac{(1+(y'(x))^2)^{\frac{3}{2}}}{\vert y''(x) \vert}
+R=\dfrac{(1+[y'(x)]^2)^{\dfrac{3}{2}}}{\vert y''(x) \vert}
 $$
 
 $$
@@ -23,33 +23,31 @@ $$
 
 
 $$
-R = \frac{(1+(2a(x-h))^2)^{\frac{3}{2}}}{\vert 2a \vert}
+R = \dfrac{(1+[2a(x-h)]^2)^{\dfrac{3}{2}}}{\vert 2a \vert}
 $$
 
-At $$(h,k)$$ the radius of curvature is
+At the vertex $$(h,k)$$ the radius of curvature is
 
 $$
-R = \frac{1}{\vert 2a\vert}
+R = \dfrac{1}{\vert 2a\vert}
 $$
 
-Focal length
+
+Focal length is $$\vert f \vert$$ where
 
 $$
-f=\frac{1}{4a}
-$$
-
-$$
-2f = \frac{1}{2a}
+f=\dfrac{1}{4a}
 $$
 
 $$
-\vert 2f\vert = \frac{1}{\vert 2a \vert}
+\vert 2f\vert = \dfrac{1}{\vert 2a \vert} = R
 $$
 
-$$
-R = 2 \vert f \vert
-$$
+Thus
 
 $$
-\vert f \vert = \frac{R}{2}
+R = 2 \vert f \vert, \quad \vert f \vert = \dfrac{R}{2}
 $$
+
+
+[HyperPhysics: Mirror Equation](http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/mireq.html)
