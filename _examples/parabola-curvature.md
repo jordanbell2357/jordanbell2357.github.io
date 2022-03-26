@@ -48,3 +48,5 @@ $$\vert f \vert$$ is **focal length**
 
 
 [HyperPhysics: Mirror Equation](http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/mireq.html)
+
+[The Physics Classroom: The Anatomy of a Curved Mirror](https://www.physicsclassroom.com/class/refln/Lesson-3/The-Anatomy-of-a-Curved-Mirror)
