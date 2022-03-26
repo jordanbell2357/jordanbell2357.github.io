@@ -40,7 +40,7 @@ $$
 Thus
 
 $$
-R = 2 \vert f \vert, \quad \vert f \vert = \dfrac{R}{2}
+R = 2 \vert f \vert, \qquad \vert f \vert = \dfrac{R}{2}
 $$
 
 $$\vert f \vert$$ is **focal length**
