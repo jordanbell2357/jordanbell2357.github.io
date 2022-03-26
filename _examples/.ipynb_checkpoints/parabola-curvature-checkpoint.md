@@ -49,3 +49,7 @@ $$
 $$
 R = 2 \vert f \vert
 $$
+
+$$
+\vert f \vert = \frac{R}{2}
+$$
