@@ -32,6 +32,7 @@ $$
 R = \dfrac{1}{\vert 2a\vert}
 $$
 
+Let 
 
 $$
 f=\dfrac{1}{4a}
@@ -40,7 +41,7 @@ $$
 Thus
 
 $$
-R = 2 \vert f \vert, \qquad \vert f \vert = \dfrac{R}{2}
+R = 2 \vert f \vert
 $$
 
 $$\vert f \vert$$ is **focal length**
