@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Parabolic reflectors A
+title: Ray Optics Simulation
 topic: focus
 ---
 
