@@ -12,7 +12,7 @@ topic: focus
 
 ## Further resources {#further}
 
-[Go-Lab, Sitsanlis Ilias: Parabolic Mirror](https://www.golabz.eu/lab/parabolic-mirror)
+[Sitsanlis Ilias: Parabolic Mirror](http://seilias.gr/go-lab/html5/parabolicMirror.plain.html)
 
 [Isaac Physics: Parabolic mirror](https://isaacphysics.org/questions/parabolic_mirror)
 
