@@ -50,11 +50,13 @@ permalink: /examples/
 - [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
+<!--
 ## GM
 
 {% for exercise in site.gm %}
 - [{{ exercise.title}}]({{ exercise.url }})
 {% endfor %}
+-->
 
 
 ## WebQuiz exercises
