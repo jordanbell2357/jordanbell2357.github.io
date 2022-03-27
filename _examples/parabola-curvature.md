@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Parabola curvature
+topic: focus
 ---
 
 The **radius of curvature** of the curve $$(x,y(x))$$

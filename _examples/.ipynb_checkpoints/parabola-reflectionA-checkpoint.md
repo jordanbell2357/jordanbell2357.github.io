@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Parabolas and optics
+topic: focus
 ---
 
 ## Optics {#optics}

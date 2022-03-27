@@ -2,6 +2,7 @@
 layout: post
 title: Vertex form of quadratic polynomial
 math: \\(3x^2-5x-12\\)
+topic: vertex
 ---
 
 ## Exercise

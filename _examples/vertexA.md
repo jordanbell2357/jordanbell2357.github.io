@@ -2,6 +2,7 @@
 layout: post
 title: Vertex form of quadratic polynomial
 math: \\(6x^2+5x-6\\)
+topic: vertex
 ---
 
 ## Exercise

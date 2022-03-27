@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Parabolic reflectors
+topic: focus
 ---
 
 ## Parabolic mirrors {#mirrors}
