@@ -16,12 +16,6 @@ permalink: /examples/
 
 {% assign rational = site.examples | where: "topic", "rational" %}
 
-## Rational expressions
-
-{% for example in rational %}
-- [{{example.title}} {{example.math}}]({{ example.url }})
-{% endfor %}
-
 ## WebQuiz
 
 - [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
@@ -29,6 +23,14 @@ permalink: /examples/
 - [Systems of linear equations](https://jordanbell.info/WebQuiz/wq2.html)
 
 - [Systems of linear equations](https://jordanbell.info/WebQuiz/wq3.html)
+
+
+## Rational expressions
+
+{% for example in rational %}
+- [{{example.title}} {{example.math}}]({{ example.url }})
+{% endfor %}
+
 
 ## Roots
 
