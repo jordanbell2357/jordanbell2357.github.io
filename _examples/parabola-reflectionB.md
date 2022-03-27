@@ -27,4 +27,8 @@ topic: focus
 </tr>
 </table>
 
-![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/1099.jpg)
+![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/LargeParabolicReflectors.png)
+
+[Parabolic reflectors](https://www.geogebra.org/calculator/n9xkdheb)
+
+<iframe src="https://www.geogebra.org/calculator/n9xkdheb?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
