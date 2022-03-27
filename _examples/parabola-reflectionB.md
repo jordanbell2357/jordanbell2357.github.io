@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Parabolic reflectors
+title: Parabolic reflectors B
 topic: focus
 ---
 
