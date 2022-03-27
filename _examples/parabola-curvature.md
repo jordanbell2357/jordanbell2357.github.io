@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Parabola curvature
+title: Radius of curvature of a parabola at its vertex
 topic: focus
 ---
 
