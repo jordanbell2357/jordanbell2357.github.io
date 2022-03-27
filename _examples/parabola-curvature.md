@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Radius of curvature of a parabola at its vertex
-topic: focus
+topic: curvature
 ---
 
 The **radius of curvature** of the curve $$(x,y(x))$$

@@ -12,19 +12,29 @@ permalink: /examples/
 
 {% assign focus = site.examples | where: "topic", "focus" %}
 
+{% assign curvature = site.examples | where: "topic", "curvature" %}
+
 {% assign rational = site.examples | where: "topic", "rational" %}
+
+## Rational expressions
+
+{% for example in rational %}
+- [{{example.title}} {{example.math}}]({{ example.url }})
+{% endfor %}
+
+## WebQuiz
+
+- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
+
+- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq2.html)
+
+- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq3.html)
 
 ## Roots
 
 {% for example in roots %}
 - [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
-
-<!--
-{% for example in site.examples %}
-- [{{ example.title}} {{ example.math}}]({{ example.url }})
-{% endfor %}
--->
 
 ## Vertex form
 
@@ -38,16 +48,17 @@ permalink: /examples/
 - [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
-## Focus and center of curvature
+## Focus and reflection
 
 {% for example in focus %}
 - [{{example.title}}]({{ example.url }})
 {% endfor %}
 
-## Rational expressions
 
-{% for example in rational %}
-- [{{example.title}} {{example.math}}]({{ example.url }})
+## Focus and radius of curvature
+
+{% for example in curvature %}
+- [{{example.title}}]({{ example.url }})
 {% endfor %}
 
 <!--
@@ -57,12 +68,3 @@ permalink: /examples/
 - [{{ exercise.title}}]({{ exercise.url }})
 {% endfor %}
 -->
-
-
-## WebQuiz exercises
-
-- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
-
-- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq2.html)
-
-- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq3.html)
