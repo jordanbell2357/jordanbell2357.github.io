@@ -8,6 +8,10 @@ topic: focus
 
 [Edmund Optics: Large Parabolic Reflectors](https://www.edmundoptics.com/f/large-parabolic-reflectors/11483/)
 
+![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/LargeParabolicReflectors.png)
+
+![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/StockNumber.png)
+
 <table>
 <tr>
     <th>Diameter (latus rectum) (mm)</th>
@@ -26,8 +30,6 @@ topic: focus
     <td>152.40</td>
 </tr>
 </table>
-
-![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/LargeParabolicReflectors.png)
 
 [Parabolic reflectors](https://www.geogebra.org/calculator/n9xkdheb)
 
