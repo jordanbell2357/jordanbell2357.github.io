@@ -55,7 +55,7 @@ permalink: /examples/
 {% endfor %}
 
 
-## Focus and radius of curvature
+## Focal length and radius of curvature
 
 {% for example in curvature %}
 - [{{example.title}}]({{ example.url }})
