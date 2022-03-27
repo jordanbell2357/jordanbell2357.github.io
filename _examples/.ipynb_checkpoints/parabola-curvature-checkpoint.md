@@ -46,6 +46,10 @@ $$
 
 $$\vert f \vert$$ is **focal length**
 
+[Radius of curvature of parabola at vertex](https://www.geogebra.org/calculator/askqwnth)
+
+<iframe src="https://www.geogebra.org/calculator/askqwnth?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
+
 
 [HyperPhysics: Mirror Equation](http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/mireq.html)
 
