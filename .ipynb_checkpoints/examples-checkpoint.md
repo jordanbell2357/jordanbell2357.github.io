@@ -31,33 +31,31 @@ permalink: /examples/
 - [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
-
-## Roots
+## Roots of quadratic polynomials
 
 {% for example in roots %}
 - [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
-## Vertex form
+## Vertex form for quadratic polynomials
 
 {% for example in vertex %}
 - [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
-## Focus and directrix
+## Focus and directrix of parabolas
 
 {% for example in directrix %}
 - [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
-## Focus and reflection
+## Parabolas and reflection
 
 {% for example in focus %}
 - [{{example.title}}]({{ example.url }})
 {% endfor %}
 
-
-## Focal length and radius of curvature
+## Focal length and radius of curvature of parabolas
 
 {% for example in curvature %}
 - [{{example.title}}]({{ example.url }})
