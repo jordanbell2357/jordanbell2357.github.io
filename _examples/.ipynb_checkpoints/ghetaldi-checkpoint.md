@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Marino Ghetaldi's Burning mirror
+title: Marino Ghetaldi's burning mirror
 topic: focus
 ---
 

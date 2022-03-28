@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Parabolic reflectors
+title: Edmund Optics Large Parabolic Reflectors
 topic: focus
 ---
 
