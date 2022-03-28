@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Parabolic reflectors
+title: Marino Ghetaldi's Burning mirror
 topic: focus
 ---
 
