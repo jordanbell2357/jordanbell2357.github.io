@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Translating standard form quadratics to focus-directrix form
+title: "Translating standard form quadratics to focus-directrix form"
 topic: directrix
 ---
 
