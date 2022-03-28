@@ -46,7 +46,7 @@ permalink: /examples/
 ## Focus and directrix of parabolas
 
 {% for example in directrix %}
-- [{{example.title}} {{example.math}}]({{ example.url }})
+- [{{example.title}}]({{ example.url }})
 {% endfor %}
 
 ## Parabolas and reflection
