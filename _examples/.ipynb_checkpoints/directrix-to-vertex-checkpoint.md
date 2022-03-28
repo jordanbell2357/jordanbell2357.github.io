@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Translating focus-directrix form quadratics to vertex form"
+title: Translating focus directrix form quadratics to vertex form
 topic: directrix
 ---
 
