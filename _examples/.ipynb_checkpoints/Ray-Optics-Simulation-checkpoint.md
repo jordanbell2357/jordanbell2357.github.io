@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Ray Optics Simulation
+title: Ray optics simulation
 topic: focus
 ---
 
