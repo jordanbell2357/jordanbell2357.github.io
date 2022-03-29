@@ -4,22 +4,40 @@ title: Translating focus-directrix form quadratics to vertex form
 topic: directrix
 ---
 
-Let $$F=(A,B)$$ be the focus and $$y=d$$ be the directrix.
+Let $$F=(h,t)$$ be the focus and $$y=d$$ be the directrix of the parabola. Let $$V=(h,k)$$ be the vertex with the parabola defined by $$y=\dfrac{1}{4f}(x-h)^2+k$$.
 
-$$A=h$$ and $$B=k+f$$
+$$t=k+f$$ and $$d=k-f$$.
 
-$$2k=d+B$$ so $$k=\dfrac{B+d}{2}$$
+On the one hand, adding $$k=t-f$$ and $$k=d+f$$ gives $$2k=t+d$$, so
 
 $$
-d=k-f
+k = \dfrac{t+d}{2}.
 $$
 
+On the other hand, adding $$f=t-k$$ and $$f=k-d$$ gives $$2f=t-d$$, so
 
+$$
+f=\dfrac{t-d}{2}.
+$$
 
-$$f=k-d$$ and $$f=B-k$$ so $$2f=B-d$$. Thus $$f=\dfrac{B-d}{2}$$.
+Therefore, given the focus $$F=(h,t)$$ and the directrix $$y=d$$, we have found that
 
-Therefore, given the focus $$F=(A,B)$$ and the directrix $$y=d$$, the vertex of the parabola is
-$$(h,k)=\left(A, \dfrac{B+d}{2}\right)$$ and the focal length is $$\vert f \vert$$, $$f = \dfrac{B-d}{2}$$.
+$$
+V=(h,k) = \left(h,\dfrac{t+d}{2} \right),
+$$
+
+$$
+f = \dfrac{t-d}{2},
+$$
+
+and the vertex form of the parabola is
+
+$$
+\begin{align*}
+y&=\dfrac{1}{4f}(x-h)^2+k\\
+&=\dfrac{1}{2(t-d)}(x-h)^2+\dfrac{t+d}{2}
+\end{align*}
+$$
 
 [Focus and directrix to vertex form](https://www.geogebra.org/calculator/znfcubaz)
 
