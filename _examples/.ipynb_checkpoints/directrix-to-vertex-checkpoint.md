@@ -43,7 +43,7 @@ and the vertex form of the parabola is
 $$
 \begin{align*}
 y&=\dfrac{1}{4f}(x-h)^2+k\\
-&=\dfrac{1}{2(c-d)}(x-h)^2+\dfrac{c+d}{2}
+y&=\dfrac{1}{2(c-d)}(x-h)^2+\dfrac{c+d}{2}
 \end{align*}
 $$
 
