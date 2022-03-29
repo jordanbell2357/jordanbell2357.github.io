@@ -51,6 +51,10 @@ $$\vert f \vert$$ is **focal length**
 
 <iframe src="https://www.geogebra.org/calculator/yhby6bjj?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 
+[Osculating circles of a parabola](https://www.desmos.com/calculator/3166m3rdjq)
+
+<iframe src="https://www.desmos.com/calculator/3166m3rdjq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
 
 [HyperPhysics: Mirror Equation](http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/mireq.html)
 
