@@ -6,7 +6,9 @@ topic: directrix
 
 Let $$F=(h,c)$$ be the focus and $$y=d$$ be the directrix of the parabola. Let $$V=(h,k)$$ be the vertex with the parabola defined by $$y=\dfrac{1}{4f}(x-h)^2+k$$.
 
-$$c=k+f$$ and $$d=k-f$$.
+$$c=k+f$$
+
+$$d=k-f$$
 
 On the one hand, adding $$k=c-f$$ and $$k=d+f$$ gives $$2k=c+d$$, so
 
