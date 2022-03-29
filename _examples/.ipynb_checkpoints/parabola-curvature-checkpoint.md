@@ -10,51 +10,38 @@ $$
 R=\dfrac{(1+[y'(x)]^2)^{\frac{3}{2}}}{\vert y''(x) \vert}
 $$
 
-$$
-y(x)=a(x-h)^2+k
-$$
-
-$$
-y'(x)=2a(x-h)
-$$
-
-$$
-y''(x)=2a
-$$
 
 
 $$
-R = \dfrac{(1+[2a(x-h)]^2)^{\frac{3}{2}}}{\vert 2a \vert}
+y(x)=\dfrac{1}{4f}(x-h)^2+k
+$$
+
+$$
+y'(x)=\dfrac{x-h}{2f}
+$$
+
+$$
+y''(x)=\dfrac{1}{2f}
+$$
+
+
+$$
+R = \dfrac{(1+[\dfrac{x-h}{2f}]^2)^{\frac{3}{2}}}{\vert \dfrac{1}{2f} \vert}
 $$
 
 At the vertex $$(h,k)$$ the radius of curvature is
 
 $$
-R = \dfrac{1}{\vert 2a\vert}
+R = \vert 2f \vert
 $$
 
-Let 
-
-$$
-f=\dfrac{1}{4a}
-$$
-
-Thus
-
-$$
-R = 2 \vert f \vert
-$$
-
-$$\vert f \vert$$ is **focal length**
+$$\vert f \vert=\dfrac{R}{2}$$ is **focal length**
 
 [Focal length and center of curvature of parabola at vertex](https://www.geogebra.org/calculator/yhby6bjj)
 
 <iframe src="https://www.geogebra.org/calculator/yhby6bjj?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
 
-[Osculating circles of a parabola](https://www.desmos.com/calculator/3166m3rdjq)
-
-<iframe src="https://www.desmos.com/calculator/3166m3rdjq?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
-
+## Further resources
 
 [HyperPhysics: Mirror Equation](http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/mireq.html)
 
