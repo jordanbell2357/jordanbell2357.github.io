@@ -43,8 +43,10 @@ $$
 and the vertex form of the parabola is
 
 $$
-y=\dfrac{1}{4f}(x-h)^2+k.
+y=a(x-h)^2+k,
 $$
+
+for $$a=\dfrac{1}{4f}$$.
 
 [Focus and directrix to vertex form](https://www.geogebra.org/calculator/znfcubaz)
 
