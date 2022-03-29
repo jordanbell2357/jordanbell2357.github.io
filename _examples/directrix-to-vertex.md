@@ -41,10 +41,7 @@ $$
 and the vertex form of the parabola is
 
 $$
-\begin{align*}
-y&=\dfrac{1}{4f}(x-h)^2+k\\
-y&=\dfrac{1}{2(c-d)}(x-h)^2+\dfrac{c+d}{2}
-\end{align*}
+y=\dfrac{1}{4f}(x-h)^2+k.
 $$
 
 [Focus and directrix to vertex form](https://www.geogebra.org/calculator/znfcubaz)
