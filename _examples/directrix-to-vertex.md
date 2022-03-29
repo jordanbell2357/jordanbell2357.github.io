@@ -4,30 +4,38 @@ title: Translating focus-directrix form quadratics to vertex form
 topic: directrix
 ---
 
-Let $$F=(h,t)$$ be the focus and $$y=d$$ be the directrix of the parabola. Let $$V=(h,k)$$ be the vertex with the parabola defined by $$y=\dfrac{1}{4f}(x-h)^2+k$$.
+Let $$F=(h,c)$$ be the focus and $$y=d$$ be the directrix of the parabola. Let $$V=(h,k)$$ be the vertex with the parabola defined by $$y=\dfrac{1}{4f}(x-h)^2+k$$.
 
-$$t=k+f$$ and $$d=k-f$$.
+$$c=k+f$$ and $$d=k-f$$.
 
-On the one hand, adding $$k=t-f$$ and $$k=d+f$$ gives $$2k=t+d$$, so
-
-$$
-k = \dfrac{t+d}{2}.
-$$
-
-On the other hand, adding $$f=t-k$$ and $$f=k-d$$ gives $$2f=t-d$$, so
+On the one hand, adding $$k=c-f$$ and $$k=d+f$$ gives $$2k=c+d$$, so
 
 $$
-f=\dfrac{t-d}{2}.
+k = \dfrac{c+d}{2}.
 $$
 
-Therefore, given the focus $$F=(h,t)$$ and the directrix $$y=d$$, we have found that
+On the other hand, adding $$f=c-k$$ and $$f=k-d$$ gives $$2f=c-d$$, so
 
 $$
-V=(h,k) = \left(h,\dfrac{t+d}{2} \right),
+f=\dfrac{c-d}{2}.
+$$
+
+Therefore, given the focus
+
+$$F=(h,c)$$
+
+and the directrix
+
+$$y=d$$,
+
+we have found that
+
+$$
+V=(h,k) = \left(h,\dfrac{c+d}{2} \right),
 $$
 
 $$
-f = \dfrac{t-d}{2},
+f = \dfrac{c-d}{2},
 $$
 
 and the vertex form of the parabola is
@@ -35,7 +43,7 @@ and the vertex form of the parabola is
 $$
 \begin{align*}
 y&=\dfrac{1}{4f}(x-h)^2+k\\
-&=\dfrac{1}{2(t-d)}(x-h)^2+\dfrac{t+d}{2}
+&=\dfrac{1}{2(c-d)}(x-h)^2+\dfrac{c+d}{2}
 \end{align*}
 $$
 
