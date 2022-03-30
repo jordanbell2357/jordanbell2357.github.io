@@ -4,17 +4,20 @@ title: Radius of curvature of a parabola at its vertex
 topic: curvature
 ---
 
-The **radius of curvature** of the curve $$(x,y(x))$$
+The **radius of curvature** of the curve $$(x,y(x))$$ is
 
 $$
 R=\dfrac{(1+[y'(x)]^2)^{\frac{3}{2}}}{\vert y''(x) \vert}
 $$
 
 
+Let
 
 $$
-y(x)=\dfrac{1}{4f}(x-h)^2+k
+y(x)=\dfrac{1}{4f}(x-h)^2+k.
 $$
+
+Then
 
 $$
 y'(x)=\dfrac{x-h}{2f}
