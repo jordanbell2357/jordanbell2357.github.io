@@ -14,8 +14,10 @@ $$
 Let
 
 $$
-y(x)=\dfrac{1}{4f}(x-h)^2+k.
+y(x)=\dfrac{1}{4f}(x-h)^2+k,
 $$
+
+the parabola with **vertex** $$(h,k)$$ and **focal length** $$\vert f\vert$$.
 
 Then
 
@@ -23,13 +25,17 @@ $$
 y'(x)=\dfrac{x-h}{2f}
 $$
 
+and
+
 $$
-y''(x)=\dfrac{1}{2f}
+y''(x)=\dfrac{1}{2f}.
 $$
+
+Then
 
 
 $$
-R = \dfrac{(1+[\dfrac{x-h}{2f}]^2)^{\frac{3}{2}}}{\vert \dfrac{1}{2f} \vert}
+R = \dfrac{\left(1+\left(\dfrac{x-h}{2f}\right)^2\right)^{\frac{3}{2}}}{\left\vert \dfrac{1}{2f} \right\vert}.
 $$
 
 At the vertex $$(h,k)$$ the radius of curvature is
@@ -43,9 +49,3 @@ $$\vert f \vert=\dfrac{R}{2}$$ is **focal length**
 [Focal length and center of curvature of parabola at vertex](https://www.geogebra.org/calculator/yhby6bjj)
 
 <iframe src="https://www.geogebra.org/calculator/yhby6bjj?embed" width="800" height="600" allowfullscreen style="border: 1px solid #e4e4e4;border-radius: 4px;" frameborder="0"></iframe>
-
-## Further resources
-
-[HyperPhysics: Mirror Equation](http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/mireq.html)
-
-[The Physics Classroom: The Anatomy of a Curved Mirror](https://www.physicsclassroom.com/class/refln/Lesson-3/The-Anatomy-of-a-Curved-Mirror)

@@ -4,7 +4,8 @@ title: Translating focus-directrix form quadratics to vertex form
 topic: directrix
 ---
 
-Let $$F=(h,c)$$ be the focus and $$y=d$$ be the directrix of the parabola. Let $$V=(h,k)$$ be the vertex with the parabola defined by $$y=\dfrac{1}{4f}(x-h)^2+k$$.
+Let $$F=(h,c)$$ be the focus and $$y=d$$ be the directrix of the parabola. Let $$V=(h,k)$$ be the vertex with the parabola defined by $$y=\dfrac{1}{4f}(x-h)^2+k$$, with focal length
+$$\vert f \vert$$.
 
 $$c=k+f$$
 

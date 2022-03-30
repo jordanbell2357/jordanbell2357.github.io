@@ -21,3 +21,7 @@ topic: focus
 [Physclips, School of Physics, UNSW: Parabolic reflectors](https://www.animations.physics.unsw.edu.au/jw/light/mirrors-and-images.htm#4)
 
 [Physique et simulations numériques: Miroir parabolique](http://ressources.univ-lemans.fr/AccesLibre/UM/Pedago/physique/02/optigeo/parabole.html)
+
+[HyperPhysics: Mirror Equation](http://hyperphysics.phy-astr.gsu.edu/hbase/geoopt/mireq.html)
+
+[The Physics Classroom: The Anatomy of a Curved Mirror](https://www.physicsclassroom.com/class/refln/Lesson-3/The-Anatomy-of-a-Curved-Mirror)
