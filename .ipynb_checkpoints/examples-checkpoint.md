@@ -68,4 +68,3 @@ permalink: /examples/
 {% for exercise in gm %}
 - [{{ exercise.title}}]({{ exercise.url }})
 {% endfor %}
--->
