@@ -16,6 +16,8 @@ permalink: /examples/
 
 {% assign rational = site.examples | where: "topic", "rational" %}
 
+{% assign gm = site.examples | where: "topic", "gm" %}
+
 ## WebQuiz
 
 - [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
@@ -61,10 +63,9 @@ permalink: /examples/
 - [{{example.title}}]({{ example.url }})
 {% endfor %}
 
-<!--
-## GM
+## Graspable Math
 
-{% for exercise in site.gm %}
+{% for exercise in gm %}
 - [{{ exercise.title}}]({{ exercise.url }})
 {% endfor %}
 -->
