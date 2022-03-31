@@ -7,7 +7,7 @@ topic: curvature
 The **radius of curvature** of the curve $$(x,y(x))$$ is
 
 $$
-R=\dfrac{(1+[y'(x)]^2)^{\frac{3}{2}}}{\vert y''(x) \vert}
+R=\dfrac{\left(1+(y'(x)\right)^2)^{\frac{3}{2}}}{\vert y''(x) \vert}
 $$
 
 
@@ -44,7 +44,9 @@ $$
 R = \vert 2f \vert
 $$
 
-$$\vert f \vert=\dfrac{R}{2}$$ is **focal length**
+and
+
+$$\vert f \vert=\dfrac{R}{2}$$ is the focal length.
 
 [Focal length and center of curvature of parabola at vertex](https://www.geogebra.org/calculator/yhby6bjj)
 

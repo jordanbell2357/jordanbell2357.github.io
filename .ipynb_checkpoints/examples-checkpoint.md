@@ -57,7 +57,7 @@ permalink: /examples/
 - [{{example.title}}]({{ example.url }})
 {% endfor %}
 
-## Focal length and radius of curvature of parabolas
+## Radius of curvature of parabolas
 
 {% for example in curvature %}
 - [{{example.title}}]({{ example.url }})
