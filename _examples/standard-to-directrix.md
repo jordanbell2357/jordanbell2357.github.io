@@ -4,11 +4,13 @@ title: Translating standard form quadratics to focus-directrix form
 topic: directrix
 ---
 
+**Standard form**
+
 $$
 ax^2+bx+c
 $$
 
-Discriminant
+**Discriminant**
 
 $$
 D=b^2-4ac
@@ -22,7 +24,7 @@ $$
 k=-\frac{D}{4a}
 $$
 
-Vertex
+**Vertex**
 
 $$
 V=(h,k)
@@ -34,18 +36,18 @@ $$
 f=\frac{1}{4a}
 $$
 
-Focal length $$\vert f \vert$$
+**Focal length** $$\vert f \vert$$
 
-Focus
+**Focus**
 
 $$
 F=(h,k+f)
 $$
 
-Directrix
+**Directrix**
 
 $$
-y=k-f
+y=d, \qquad d=k-f
 $$
 
 Distance between $$(x,y)$$ and directrix is

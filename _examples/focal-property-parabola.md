@@ -4,17 +4,23 @@ title: Intersections of parabolas and lines
 topic: directrix
 ---
 
-$$p(x)=a(x-h)^2+k$$ and $$q(x)=mx+b$$.
+$$g(x)=\dfrac{1}{4f}x^2$$.
 
-Let $$r(x)=p(x)-q(x)$$.
+Let $$A=(x_A,y_A)$$ be a point on the parabola. Then $$y_A=\dfrac{1}{4f}x_A^2$$.
+
+$$y-y_A=m(x-x_A)$$
+
+$$y=mx+-mx_A+y_A$$
 
 $$
-\begin{align*}
-r(x)&=a(x-h)^2+k-(mx+b)\\
-&=a(x^2-2hx+h^2)+k-mx-b\\
-&=ax^2-2ahx+ah^2+k-mx-b\\
-&=Ax^2+Bx+C
-\end{align*}
+\begin{gather*}
+g(x)-(mx+y_A-mx_A)=\dfrac{1}{4f}x^2-mx+mx_A-y_A\\
+D=(-m)^2-4\left(\dfrac{1}{4f}\right)\left(mx_A-y_A\right)\\
+D=m^2-\dfrac{1}{f}(mx_A-y_A)\\
+D=0\\
+\dfrac{1}{f}(mx_A-y_A)=m^2\\
+mx_A-y_A=m^2f
+\end{gather*}
 
 for $$A=a$$, $$B=-2ah-m$$, and $$C=ah^2+k-b$$.
 
