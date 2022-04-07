@@ -21,8 +21,8 @@ D=0\\
 \dfrac{1}{f}(mx_A-y_A)=m^2\\
 mx_A-y_A=m^2f
 \end{gather*}
+$$
 
-for $$A=a$$, $$B=-2ah-m$$, and $$C=ah^2+k-b$$.
 
 
 [Cut The Knot: Focal Properties of Parabola](https://www.cut-the-knot.org/Curriculum/Geometry/ParabolaFocal.shtml)
