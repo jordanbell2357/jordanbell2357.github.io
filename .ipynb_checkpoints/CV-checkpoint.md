@@ -90,7 +90,7 @@ University Medal in Mathematics
 
 ## Service
 
-- Ask Dr. Math® "Math Doctor", 2003-2008. [Ask Dr. Math®](https://www.nctm.org/archives/dr.math/index.htm) [The Math Doctors](https://www.themathdoctors.org/)
+- Ask Dr. Math® "Math Doctor", 2003-2008. [Ask Dr. Math®](https://www.nctm.org/archives/dr.math/index.htm)
 
 ## Profiles
 
