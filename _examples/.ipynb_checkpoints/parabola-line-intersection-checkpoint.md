@@ -21,6 +21,6 @@ b_m=-m, \qquad c_m=mx_A-y_A
 \end{gather*}
 $$
 
-[Desmos](https://www.desmos.com/calculator/dlfs9gsp8o)
+[Intersection of parabola and line](https://www.desmos.com/calculator/rhbzxqn8lx)
 
-<iframe src="https://www.desmos.com/calculator/dlfs9gsp8o?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+<iframe src="https://www.desmos.com/calculator/rhbzxqn8lx?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
