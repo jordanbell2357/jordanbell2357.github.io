@@ -21,3 +21,6 @@ b_m=-m, \qquad c_m=mx_A-y_A
 \end{gather*}
 $$
 
+[Desmos](https://www.desmos.com/calculator/dlfs9gsp8o)
+
+<iframe src="https://www.desmos.com/calculator/dlfs9gsp8o?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
