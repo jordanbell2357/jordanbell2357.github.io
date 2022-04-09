@@ -14,13 +14,14 @@ Let
 
 $$f(x)=ax^2$$
 
-Let $$A=(x_A,y_A)$$ be a point on the parabola $$f$$. Then
+Let
+
+$$A=(x_A,y_A)$$
+
+be a point on the parabola $$f$$. Then
 
 $$
-\begin{align*}
-y_A&=f(x_A)\\
-y_A&=ax_A^2
-\end{align*}
+\A{y_A=f(x_A)=ax_A^2}.
 $$
 
 Let
