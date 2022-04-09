@@ -10,9 +10,7 @@ topic: directrix
 \newcommand{\C}[1]{\colorbox{BurntOrange}{$\displaystyle #1$}}
 \\)
 
-[CoLab](https://colab.research.google.com/drive/12KAUd4rL0mLyzKHDn2ud-nl_gTqq2Pdr?usp=sharing)
-
-[Cell](https://colab.research.google.com/drive/12KAUd4rL0mLyzKHDn2ud-nl_gTqq2Pdr#scrollTo=Kvch1uRFoYIn&line=1&uniqifier=1)
+[Google Colab](https://colab.research.google.com/drive/12KAUd4rL0mLyzKHDn2ud-nl_gTqq2Pdr?usp=sharing)
 
 Let 
 
