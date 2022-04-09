@@ -21,7 +21,7 @@ $$A=(x_A,y_A)$$
 be a point on the parabola $$f$$. Then
 
 $$
-\A{y_A=f(x_A)=ax_A^2}.
+y_A=f(x_A)=ax_A^2.
 $$
 
 Let
@@ -74,7 +74,7 @@ $$
 \A{f_A(x)=2ax_A(x-x_A)+y_A}.
 $$
 
-Then the line $$f_A(x)$$ is tangent to the parabola $$f(x)=ax^2$$ at the point $$A=(x_A,y_A)$$.
+The line $$f_A(x)$$ is tangent to the parabola $$f(x)=ax^2$$ at the point $$A=(x_A,y_A)$$.
 
 [Intersection of parabola and line](https://www.desmos.com/calculator/m9ioqdzi2e)
 
