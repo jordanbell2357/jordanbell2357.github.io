@@ -61,11 +61,16 @@ $$\B{m_A=2ax_A}$$
 the line
 
 $$
-\B{\begin{align*}
+\begin{gather*}
 f_A(x)=f_{m_A}(x)\\
-f_A(x)&=m_A(x-x_A)+ax_A^2\\
-f_A(x)&=2ax_A(x-x_A)+y_A
-\end{align*}}
+f_A(x)=m_A(x-x_A)+y_A
+\end{gather*}
+$$
+
+in other words
+
+$$
+\A{f_A(x)=2ax_A(x-x_A)+y_A}
 $$
 
 is tangent to the parabola $$f(x)=ax^2$$ at the point $$A=(x_A,y_A)$$.
