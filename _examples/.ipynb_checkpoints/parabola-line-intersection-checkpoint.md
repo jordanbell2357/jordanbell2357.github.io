@@ -36,7 +36,7 @@ $$
 f_m(x)=m(x-x_A)+y_A
 $$
 
-Let
+and let
 
 $$
 \begin{align*}
