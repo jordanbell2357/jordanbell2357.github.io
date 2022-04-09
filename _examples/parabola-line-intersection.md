@@ -71,7 +71,7 @@ $$
 \begin{align*}
 f_A(x)&=f_{m_A}(x)\\
 f_A(x)&=m_A(x-x_A)+y_A\\
-f_A(x)&=2ax_A(x-x_A)+y_A}.
+f_A(x)&=2ax_A(x-x_A)+y_A.
 \end{align*}
 $$
 
