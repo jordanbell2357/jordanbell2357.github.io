@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Focus-directrix property of parabolas
+title: The focus and directrix of a parabola
 topic: directrix
 ---
 
