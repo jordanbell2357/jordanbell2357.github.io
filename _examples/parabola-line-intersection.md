@@ -63,24 +63,31 @@ On the other hand, $$D_m=0$$ is equivalent to the line $$f_m$$ and the parabola 
 
 Let
 
-$$\A{m_A=2ax_A}$$
+$$m_A=2ax_A$$
 
 and let
 
 $$
 \begin{align*}
 f_A(x)&=f_{m_A}(x)\\
-f_A(x)&=m_A(x-x_A)+y_A,
+f_A(x)&=m_A(x-x_A)+y_A\\
+f_A(x)&=2ax_A(x-x_A)+y_A}.
 \end{align*}
 $$
 
-i.e.,
+Thus, for 
 
 $$
-\A{f_A(x)=2ax_A(x-x_A)+y_A}.
+\A{m_A=2ax_A}
 $$
 
-The line $$f_A(x)$$ is tangent to the parabola $$f(x)=ax^2$$ at the point $$A=(x_A,y_A)$$.
+the line
+
+$$
+\A{f_A(x)m_A(x-x_A)+y_A}
+$$
+
+is tangent to the parabola $$\A{f(x)=ax^2}$$ at the point $$\A{A=(x_A,y_A)}$$.
 
 [Intersection of parabola and line](https://www.desmos.com/calculator/m9ioqdzi2e)
 
