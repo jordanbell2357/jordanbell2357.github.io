@@ -59,7 +59,7 @@ $$
 
 On the one hand, $$D_m=0$$ is equivalent to $$m=2ax_A$$.
 
-On the other hand, $$D_m=0$$ is equivalent to the line $$f_m$$ and parabola $$f$$ having intersection multiplicity 2 at point $$A=(x_A,y_A)$$.
+On the other hand, $$D_m=0$$ is equivalent to the line $$f_m$$ and the parabola $$f$$ having intersection multiplicity 2 at the point $$A=(x_A,y_A)$$.
 
 Let
 
