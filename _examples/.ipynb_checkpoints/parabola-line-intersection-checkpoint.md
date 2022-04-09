@@ -55,26 +55,26 @@ On the one hand, $$D_m=0$$ is equivalent to $$m=2ax_A$$.
 
 On the other hand, $$D_m=0$$ is equivalent to the line $$f_m$$ and parabola $$f$$ having intersection multiplicity 2 at point $$A=(x_A,y_A)$$.
 
-Thus for
+For
 
-$$\B{m_A=2ax_A}$$
+$$\B{m_A=2ax_A}$$,
 
-the line
-
-$$
-\begin{gather*}
-f_A(x)=f_{m_A}(x)\\
-f_A(x)=m_A(x-x_A)+y_A
-\end{gather*}
-$$
-
-in other words
+let
 
 $$
-\A{f_A(x)=2ax_A(x-x_A)+y_A}
+\begin{align*}
+f_A(x)&=f_{m_A}(x)\\
+f_A(x)&=m_A(x-x_A)+y_A,
+\end{align*}
 $$
 
-is tangent to the parabola $$f(x)=ax^2$$ at the point $$A=(x_A,y_A)$$.
+i.e.,
+
+$$
+\A{f_A(x)=2ax_A(x-x_A)+y_A}.
+$$
+
+Then the line $$f_A(x)$$ is tangent to the parabola $$f(x)=ax^2$$ at the point $$A=(x_A,y_A)$$.
 
 [Intersection of parabola and line](https://www.desmos.com/calculator/m9ioqdzi2e)
 
