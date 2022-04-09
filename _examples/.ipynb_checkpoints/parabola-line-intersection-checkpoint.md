@@ -21,7 +21,13 @@ $$A=(x_A,y_A)$$
 be a point on the parabola $$f$$. Then
 
 $$
-y_A=f(x_A)=ax_A^2.
+y_A=f(x_A),
+$$
+
+i.e.
+
+$$
+y_A=ax_A^2.
 $$
 
 Let
