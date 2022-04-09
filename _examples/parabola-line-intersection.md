@@ -84,7 +84,7 @@ $$
 the line
 
 $$
-\A{f_A(x)m_A(x-x_A)+y_A}
+\A{f_A(x)=m_A(x-x_A)+y_A}
 $$
 
 is tangent to the parabola $$\A{f(x)=ax^2}$$ at the point $$\A{A=(x_A,y_A)}$$.
