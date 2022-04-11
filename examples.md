@@ -6,6 +6,8 @@ permalink: /examples/
 
 {% assign roots = site.examples | where: "topic", "roots" %}
 
+{% assign factors = site.examples | where: "topic", "factors" %}
+
 {% assign intersections = site.examples | where: "topic", "intersections" %}
 
 {% assign vertex = site.examples | where: "topic", "vertex" %}
