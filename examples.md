@@ -6,6 +6,8 @@ permalink: /examples/
 
 {% assign roots = site.examples | where: "topic", "roots" %}
 
+{% assign intersections = site.examples | where: "topic", "intersections" %}
+
 {% assign vertex = site.examples | where: "topic", "vertex" %}
 
 {% assign directrix = site.examples | where: "topic", "directrix" %}
@@ -31,6 +33,12 @@ permalink: /examples/
 
 {% for example in rational %}
 - [{{example.title}} {{example.math}}]({{ example.url }})
+{% endfor %}
+
+## Intersections
+
+{% for example in intersections %}
+- [{{example.title}}]({{ example.url }})
 {% endfor %}
 
 ## Roots of quadratic polynomials

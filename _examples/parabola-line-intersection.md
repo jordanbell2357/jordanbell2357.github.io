@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Intersections of parabolas and lines
-topic: directrix
+topic: intersections
 ---
 
 \\(
