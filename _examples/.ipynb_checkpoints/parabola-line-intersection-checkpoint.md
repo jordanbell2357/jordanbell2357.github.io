@@ -89,8 +89,8 @@ $$
 
 is tangent to the parabola $$f(x)=ax^2$$ at the point $$A=(x_A,y_A)$$.
 
-[Google Colab](https://colab.research.google.com/drive/12KAUd4rL0mLyzKHDn2ud-nl_gTqq2Pdr?usp=sharing)
-
 [Intersection of parabola and line](https://www.desmos.com/calculator/m9ioqdzi2e)
 
 <iframe src="https://www.desmos.com/calculator/m9ioqdzi2e?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+
+[Google Colab](https://colab.research.google.com/drive/12KAUd4rL0mLyzKHDn2ud-nl_gTqq2Pdr?usp=sharing)
