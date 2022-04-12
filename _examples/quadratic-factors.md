@@ -11,7 +11,7 @@ $$
 &=qsx^2+qtx+rsx+rt\\
 &=(qs)x^2+(qt+sr)x+rt
 \end{align*}
-&&
+$$
 
 $$ax^2+bx+c=(qs)x^2+(qt+sr)x+rt=$$ is equivalent to 
 
