@@ -38,10 +38,12 @@ $$
 Therefore, if 
 
 $$
-ax^2+bx+c = ax^2+mx+nx+c
+\begin{align*}
+ax^2+mx+nx+c&=
+\end{align*}
 $$
 
-then
+then 
 
 
 

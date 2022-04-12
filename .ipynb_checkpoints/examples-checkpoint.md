@@ -45,6 +45,9 @@ permalink: /examples/
 
 ## Factors quadratic polynomials
 
+{% for example in factors %}
+- [{{example.title}} {{example.math}}]({{ example.url }})
+{% endfor %}
 
 ## Vertex form for quadratic polynomials
 
@@ -62,10 +65,6 @@ permalink: /examples/
 
 {% for example in intersections %}
 - [{{example.title}}]({{ example.url }})
-{% endfor %}
-
-{% for example in factors %}
-- [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
 ## Parabolas and reflection
