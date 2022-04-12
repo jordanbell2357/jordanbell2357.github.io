@@ -17,8 +17,32 @@ $$ax^2+bx+c=(qs)x^2+(qt+sr)x+rt=$$ is equivalent to
 
 $$
 \begin{align*}
-a&=
+a&=qs\\
+b&=qt+sr\\
+c&=rt
 \end{align*}
 $$
+
+Let 
+
+$$
+m = qt
+$$
+
+and
+
+$$
+n = sr
+$$
+
+Therefore, if 
+
+$$
+ax^2+bx+c = ax^2+mx+nx+c
+$$
+
+then
+
+
 
 

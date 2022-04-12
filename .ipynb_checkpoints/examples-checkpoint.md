@@ -37,12 +37,6 @@ permalink: /examples/
 - [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
-## Intersections
-
-{% for example in intersections %}
-- [{{example.title}}]({{ example.url }})
-{% endfor %}
-
 ## Roots of quadratic polynomials
 
 {% for example in roots %}
@@ -51,9 +45,6 @@ permalink: /examples/
 
 ## Factors quadratic polynomials
 
-{% for example in factors %}
-- [{{example.title}} {{example.math}}]({{ example.url }})
-{% endfor %}
 
 ## Vertex form for quadratic polynomials
 
@@ -65,6 +56,16 @@ permalink: /examples/
 
 {% for example in directrix %}
 - [{{example.title}}]({{ example.url }})
+{% endfor %}
+
+## Intersections
+
+{% for example in intersections %}
+- [{{example.title}}]({{ example.url }})
+{% endfor %}
+
+{% for example in factors %}
+- [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
 ## Parabolas and reflection
