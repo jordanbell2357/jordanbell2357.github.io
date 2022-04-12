@@ -16,6 +16,7 @@ $$
 $$ax^2+bx+c=(qx+r)(sx+t)$$
 
 if and only if
+
 $$
 \begin{align*}
 a&=qs\\
