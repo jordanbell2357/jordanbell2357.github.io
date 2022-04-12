@@ -13,4 +13,12 @@ $$
 \end{align*}
 &&
 
+$$(qx+r)(sx+t)=ax^2+bx+c$$ is equivalent to 
+
+$$
+\begin{align*}
+
+\end{align*}
+$$
+
 

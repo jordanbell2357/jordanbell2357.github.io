@@ -13,11 +13,12 @@ $$
 \end{align*}
 &&
 
-$$(qx+r)(sx+t)=ax^2+bx+c$$ is equivalent to 
+$$ax^2+bx+c=(qs)x^2+(qt+sr)x+rt=$$ is equivalent to 
 
 $$
 \begin{align*}
 
-
+\end{align*}
+$$
 
 
