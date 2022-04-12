@@ -17,7 +17,7 @@ $$ax^2+bx+c=(qs)x^2+(qt+sr)x+rt=$$ is equivalent to
 
 $$
 \begin{align*}
-
+a&=
 \end{align*}
 $$
 

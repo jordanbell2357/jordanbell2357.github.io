@@ -49,6 +49,12 @@ permalink: /examples/
 - [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
+## Factors quadratic polynomials
+
+{% for example in factors %}
+- [{{example.title}} {{example.math}}]({{ example.url }})
+{% endfor %}
+
 ## Vertex form for quadratic polynomials
 
 {% for example in vertex %}
