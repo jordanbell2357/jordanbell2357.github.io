@@ -13,8 +13,9 @@ $$
 \end{align*}
 $$
 
-$$ax^2+bx+c=(qs)x^2+(qt+sr)x+rt=$$ is equivalent to 
+$$ax^2+bx+c=(qx+r)(sx+t)$$
 
+if and only if
 $$
 \begin{align*}
 a&=qs\\
