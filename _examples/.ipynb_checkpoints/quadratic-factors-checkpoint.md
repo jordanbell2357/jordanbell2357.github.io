@@ -37,15 +37,18 @@ $$
 n = sr
 $$
 
-Therefore, if 
+Then
 
 $$
 \begin{align*}
-ax^2+mx+nx+c&=
+ax^2+bx+c&=ax^2+mx+nx+b\\
+&=
 \end{align*}
 $$
 
-then 
+
+
+<https://www.chilimath.com/lessons/intermediate-algebra/factoring-trinomial-box-method/>
 
 
 
