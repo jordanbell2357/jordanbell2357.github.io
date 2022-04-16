@@ -34,7 +34,7 @@ $$
 and
 
 $$
-n = sr
+n = sr.
 $$
 
 Then
