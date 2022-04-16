@@ -41,8 +41,10 @@ Then
 
 $$
 \begin{align*}
-ax^2+bx+c&=ax^2+mx+nx+b\\
-&=
+ax^2+bx+c&=ax^2+mx+nx+c\\
+&=(qs)x^2+qtx+srx+rt\\
+&=qx(sx+t)+r(sx+t)\\
+&=(qx+r)(sx+t).
 \end{align*}
 $$
 
