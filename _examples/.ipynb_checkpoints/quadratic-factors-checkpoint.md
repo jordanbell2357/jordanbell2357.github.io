@@ -34,21 +34,29 @@ $$
 and
 
 $$
-n = sr
+n = sr.
 $$
 
 Then
 
 $$
 \begin{align*}
-ax^2+bx+c&=ax^2+mx+nx+b\\
-&=
+ax^2+bx+c&=ax^2+mx+nx+c\\
+&=(qs)x^2+qtx+srx+rt\\
+&=qx(sx+t)+r(sx+t)\\
+&=(qx+r)(sx+t).
 \end{align*}
 $$
 
+[SoftSchools.com](https://www.softschools.com/math/algebra/topics/factoring_quadratic_equations_when_a_notequal_1/)
 
+[Khan Academy](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratics-multiplying-factoring/x2f8bb11595b61c86:factor-quadratics-strategy/a/factoring-quadratics-in-any-forma)
 
 <https://www.chilimath.com/lessons/intermediate-algebra/factoring-trinomial-box-method/>
+
+<https://mathonweb.com/help_ebook/chapter08.htm>
+
+[Open Middle](https://www.openmiddle.com/factoring-quadratics/)
 
 
 
