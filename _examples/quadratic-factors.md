@@ -48,6 +48,11 @@ $$
 
 
 
+$$
+15x^2+61x+34
+$$
+
+
 <https://www.chilimath.com/lessons/intermediate-algebra/factoring-trinomial-box-method/>
 
 
