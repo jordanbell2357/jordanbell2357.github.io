@@ -4,9 +4,11 @@ title: Euler, "The Elements of Algebra"
 topic: algebra
 ---
 
-Leonhard Euler, *Elements of Algebra*. Translated by Rev. John Hewlett. With an Introduction by C. Truesdell. Springer-Verlag. 1972. (Translation of *Vollständige Anleitung zur Algebra*, 1771.)
+Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*, 1771)
 
-> 563. The principal object of Algebra, as well as of all
+[^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co. London. 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
+
+> `563. The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
 > value of quantities that were before unknown; and this is
 > obtained by consideJ'ing attentively the conditions given,
@@ -148,3 +150,5 @@ $$
 $$
 
 Therefore $x=60$ or $x=8$, and because the total number of men and women is 20, $$x=8$$.
+
+[Chris Sangwin: A tale of two curricula: Euler's algebra text book](https://plus.maths.org/content/tale-two-curricula-eulers-algebra-text-book)
