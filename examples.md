@@ -22,6 +22,14 @@ permalink: /examples/
 
 {% assign gm = site.examples | where: "topic", "gm" %}
 
+{% assign exercises = site.exercises %}
+
+## Exercises
+
+{% for example in exercises %}
+- [{{example.title}}]({{ example.url }})
+{% endfor %}
+
 ## WebQuiz
 
 - [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
