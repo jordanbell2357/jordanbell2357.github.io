@@ -8,7 +8,7 @@ Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*, 17
 
 [^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co. London. 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
 
-> `563. The principal object of Algebra, as well as of all
+> `. 563. The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
 > value of quantities that were before unknown; and this is
 > obtained by consideJ'ing attentively the conditions given,
