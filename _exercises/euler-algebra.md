@@ -46,9 +46,7 @@ Section IV, Chapter I
 > woman 7 shillings, and the whole reckoning amounts to
 > 7*l.* 5*s.*[^3] Required the number of men and women
 > separately?
-
-[^3]: 1 pound (*l.*) = 20 shillings (*s.*); thus 7l. 5s. = 145s.
-
+>
 > In order to resolve this question, let us suppose that the
 > number of men is $$=x$$; and, considering this number as
 > known, we shall proceed in the same manner as if we
@@ -117,6 +115,8 @@ of men and women separately?
 > power, or extract their roots of the same degree; or lastly, 
 > whether we take the logarithms of those quantities, as we
 > have already done in the preceding section.
+
+[^3]: 1 pound (*l.*) = 20 shillings (*s.*); thus 7l. 5s. = 145s.
 
 
 $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
