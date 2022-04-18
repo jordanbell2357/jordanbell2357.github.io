@@ -4,11 +4,13 @@ title: Euler, "The Elements of Algebra"
 topic: algebra
 ---
 
-Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*, 1771)
+Leonhard Euler, *Elements of Algebra*
+
+[^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](http://www.nbn-resolving.org/urn/resolver.pl?urn=urn:nbn:de:kobv:b4-200905197591)
 
 [^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co. London. 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
 
-> 563\.. The principal object of Algebra, as well as of all
+> 563\. The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
 > value of quantities that were before unknown; and this is
 > obtained by consideJ'ing attentively the conditions given,
@@ -17,7 +19,7 @@ Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*, 17
 > teaches how to determine unknown quantities by means of
 > those that are known.*
 
-> 566\.. In Algebra, when we have a question to resolve,
+> 566\. In Algebra, when we have a question to resolve,
 > we represent the number sought by one of the last letters
 > of the alphabet, and then consider in what manner the
 > given conditions can form an equality between two
@@ -27,7 +29,7 @@ Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*, 17
 > numbers are sought; but they are found in the same
 > manner by *equations*.
 >
-> 567\.. Let us endeavour to explain this farther by an
+> 567\. Let us endeavour to explain this farther by an
 > example. Suppose the following question, or problem,
 > was proposed:
 >
@@ -60,7 +62,7 @@ Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*, 17
 > $$x=5$$, and consequently $$20-x=20-5=15$$; so that the
 > company consisted of 5 men and 15 women.
 >
-> 568\.. Again, Suppose twenty persons, men and women,
+> 568\. Again, Suppose twenty persons, men and women,
 go to a tavern; the men spend 24 shillings, and the women
 as much: but it is found that the men have spent 1 shilling each more than the women. Required the number
 of men and women separately?
@@ -82,13 +84,13 @@ of men and women separately?
 > question; but we shall afterwards see that $$x=8$$, which
 > value answers to the equation; for $$\dfrac{24}{8}-1$$, or $$\dfrac{16}{8}=\dfrac{24}{12}$$ includes the equality $$2=2$$.
 >
-> 569. It is evident, therefore, how essential it is, in all
+> 569\. It is evident, therefore, how essential it is, in all
 > problems, to consider the circumstances of the question attentively, in order to deduce from it an equation that shall
 > express by letters the numbers sought, or unknown. After
 > that, the whole art consists in resolving those equations,
 > or deriving from them the values of the unknown numbers; and this shall be the subject of the present section. 
 >
-> 570. We must remark, in the first place, the diversity
+> 570\. We must remark, in the first place, the diversity
 > which subsists among the questions themselves. In some,
 > we seek only for one unknown quantity; in others, we
 > have to find two, or more; and, it is to be observed, with
@@ -96,7 +98,7 @@ of men and women separately?
 > all, we must deduce from the circumstances, or the conditions of the problem, as many equations as there are
 > unknown quantities.
 >
-> 571. It must have already been perceived, that an equation consists of two parts separated by the sign of equality,
+> 571\. It must have already been perceived, that an equation consists of two parts separated by the sign of equality,
 > $$=$$, to shew that those two quantities are equal to one another; and we are often obliged to perform a great number
 > of transformations on those two parts, in order to deduce
 > from them the value of the unknown quantity: but these
