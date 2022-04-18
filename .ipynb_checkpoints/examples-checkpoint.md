@@ -24,6 +24,18 @@ permalink: /examples/
 
 {% assign euler = site.examples | where: "topic", "euler" %}
 
+## Desmos
+
+{% for post in site.desmos %}
+1. [{{ post.title}} {{ post.math}}]({{ post.url }})
+{% endfor %}
+
+## GeoGebra
+
+{% for post in site.geogebra %}
+1. [{{ post.title}}]({{ post.url }})
+{% endfor %}
+
 ## Euler, *The Elements of Algebra*
 
 {% for example in euler %}
