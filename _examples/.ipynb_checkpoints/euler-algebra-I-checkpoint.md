@@ -125,11 +125,11 @@ Given
 
 $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$,
 
-multiply each part by $(20-x)$,
+multiply each part by $$(20-x)$$,
 
 $$\dfrac{24(20-x)}{x} - (20-x) = 24$$,
 
-then multiply each part by $x$,
+then multiply each part by $$x$$,
 
 $$
 24(20-x)-(20-x)x=24x,
@@ -185,7 +185,7 @@ $$
 (x-60)(x-8)=0.
 $$
 
-Therefore $x=60$ or $x=8$.
+Therefore $$x=60$$ or $$x=8$$.
 
 Because the total number of persons is 20, $$x=8$$.
 
