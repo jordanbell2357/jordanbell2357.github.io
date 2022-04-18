@@ -118,7 +118,7 @@ of men and women separately?
 >
 > 572\. The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  *simple  equations*,  or *equations  of  the  first  degree*.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  *equation  of  the second  degree*,  which  is  more  difficult  to  resolve.  *Equations of  the  third  degree*  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
-## Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
+#### Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
 
 Given
 
