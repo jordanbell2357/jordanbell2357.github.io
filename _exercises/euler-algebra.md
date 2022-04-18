@@ -116,9 +116,44 @@ of men and women separately?
 > whether we take the logarithms of those quantities, as we
 > have already done in the preceding section.
 >
-> 572\. The  equations  which  arc  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  *simple  equations*,  or *equations  of  the  first  degree*.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  *equation  of  the second  degree*,  which  is  more  difficult  to  resolve.  *Equations of  the  third  degree*  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
+> 572\. The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  *simple  equations*,  or *equations  of  the  first  degree*.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  *equation  of  the second  degree*,  which  is  more  difficult  to  resolve.  *Equations of  the  third  degree*  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
+
+> 625.  We  have  already  seen,  how  two  or  more  terms  of the  same  kind  may  be  united  together,  and  considered  as  a single  term.
+For  example,  we  may  consider  the  formula ax^  —  bx"^  +  cx^'  as  a  single  term,  representing  it  thus, {a  —  b  -\-  c)x^ ;  since,  in   fact,   {a  —  b  +  c)  is  a  known quantity.
+And  also,  when  such  terms  are  found  on  both  sides  of  the eign  = ,  we  have  seen  how  they  may  be  brought  to  one  side.
+>
+> and  then  reduced  to  a  single  term.     Let  us  take,  for  ex- ample, the  equation,
+2x-  -  3x  +  4)  =  5x"  —8^+11 ;, we  first  subtract  Qx",  and  there  remains
+.     -  3^  -i-  4  =  3x"  —  8:c  +  11 ;  ^
+then  adding  Sx,  we  obtain,
+5x  +  4!  =  Sx^  +  11 ; lastly,  subtracting  11,  there  remains  3^^  =  5x  —  7-
+626.  We  may  also  bring  all  the  terms  to  one  side  of  the sign  = ,  so  as  to  leave  zero,  or  0,  on  the  other ;  but  it  must be  remembered,  that  when  terms  are  transposed  from  one side  to  the  other,  their  signs  must  be  changed.
+Thus,  the  above  equation  will  assume  this  form,  Sx^  — 5^  -f  7  =  0 ;  and,  for  this  reason  also,  the  following  general formula  represents  all  equations  of  the  second  degree ;
+ax°'  ±bx  ±  c  =  0; in  which  the  sign  +  is  read  plus  or  minus,  and  indicates, that   such    terms   as   it   stands  before   may   be   sometimes positive,  and  sometimes  negative.
 
 [^3]: 1 pound (*l.*) = 20 shillings (*s.*); thus 7l. 5s. = 145s.
+
+Chapter IX
+
+> 689.  What  we  have  already  said  sufficiently  shews,  that equations  of  the  second  degree  admit  of  two  solutions ;  and this  property  ought  to  he  examined  in  every  point  of  view, because  the  nature  of  equations  of  a  higher  degree  will  be very  much  illustrated  by  such  an  examination.  We  shall therefore  retrace,  with  more  attention,  the  reasons  which render  an  equation  of  the  second  degree  capable  of  a  double solution;  since  they  undoubtedly  will  exhibit  an  essential property  of  those  equations.
+690.  We  have  already  seen,  indeed,  that  this  double  solu- tion arises  from  the  circumstance  that  the  square  root  of  any number  may  be  taken  either  positively,  or  negatively  ;  but, as  this  principle  will  not  easily  apply  to  equations  of  higher degrees,  it  may  be  proper  to  illustrate  it  by  a  distinct analysis.  Taking,  therefore,  for  an  example,  the  quadratic equation,  x'^  =  12.r  —  ^5,  we  shall  give  a  new  reason  for this  equation  being  resolvible  in  two  ways,  by  admitting  for X  the  values  5  and  7,  both  of  which  will  satisfy  the  terms  of the  equation,
+691.  For  this  purpose  it  is  most  convenient  to  begin  with transposing  the  terms  of  the  equation,  so  that  one  of  the sides  may  become  0  ;  the  above  equation  consequently  takes the  form
+X'  -\2x  -{-^5  =  0; and  it  is  now  required   to  find  a  number  such,  that,  if  wc substitute  it  for  ^',  the  quantity  x'^  —  12^'  -(-  35  may  be  really equal  to  nothing;   after  which,  we  shall  have  to  shew  how this  may  be  done  in  two  different  ways.
+>
+> 692.  Now,  the  whole  of  this  consists  in  clearly  shewing, that  a  quantity  of  the  form  x-  —  12x  -j-  35  may  be  con- sidered as  the  product  of  two  factors.  Thus,  in  reality,  the quantity  of  which  we  spealc  is  composed  of  the  two  factors (x  —  5)  X  {x  —  7) :  and  since  the  above  quantity  must become  0,  wc  must  also  have  the  product  {x  —  5)  x  [x  —  7) —  0 ;  but  a  product,  of  whatever  number  of  factors  it  is composed,  becomes  equal  to  0,  only  when  one  of  those  fac- tors is  reduced  to  0.  This  is  a  fundamental  principle,  to which  we  must  pay  particular  attention,  especially  when equations  of  higher  degrees  are  treated  of.
+>
+> 693.  It  is  therefore  easily  understood,  that  ihe  product
+>
+> (jr  —  5)  X  ('*■  —  7)  may  become  0  in  two  ways :  first,  wlicn the  first  factor  x  —5  =  0;  and  also,  when  the  second  factor X  —  7  =  0.  In  the  first  case,  x  =■  5,  in  the  second  .r  =  7. The  reason  is  therefore  very  evident,  why  such  an  equation x"  —  12a.-  +  35  =  0,  admits  of  two  solutions  ;  that  is  to  say, why  we  can  assign  two  values  of  jt,  both  of  which  equally satisfy  the  terms  of  the  equation  ;  for  it  depends  upon  this fundiamental  principle,  that  the  quantity  .r^  —  l^o:  +  35 may  be  represented  by  the  product  of  two  factors.
+694.  The  same  circumstances  are  found  in  all  equa- tions of  the  second  degree :  for,  after  having  brought  the terms  to  one  side,  we  find  an  equation  of  the  following- form  x"  —  a.v  -j-  6  =  0,  and  this  formula  may  be  always considered  as  the  product  of  two  factors,  which  we  shall  re- present by  {x  —  p)  y.  {x  —  q),  without  concerning  ourselves what  numbers  the  letters  p  and  q  represent,  or  whether  they be  negative  or  positive.  Now,  as  this  product  must  be  =  0, from  the  nature  of  our  equation,  it  is  evident  that  this  may happen  in  two  cases  ;  in  the  first  place,  when  x  =  p;  and  in the  second  place,  when  x  =i  q;  and  these  are  the  two  values of  X  which  satisfy  the  terms  of  the  equation.
+695.  Let  us  here  consider  the  nature  of  these  two  factors, in  order  that  the  multiplication  of  the  one  by  the  other  may exactly  produce  x"  —  ax  +  b.  By  actually  multiplying them,  we  obtain  x-  —  {p  -\-  q)  x  -{-  pq  ;  which  quantity  must be  the  same  as  x'^  —  ax  -\-  b,  therefore  we  have  evidently p  -\-  q  =  a,  and  pq  =  b.  Hence  is  deduced  this  very  re- markable property;  that  in  ever}'^  equation  of  the  form x'^  —  ax  -{-  b  =  0,  the  two  values  of  x  are  such,  that  their sum  is  equal  to  a,  and  their  product  equal  to  b ;  it  there- fore necessarily  follows,  that,  if  we  know  one  of  the  values, the  other  also  is  easily  found.
+>
+> 696.  We  have  at  present  considered  the  case,  in  which  the two  values  of  x  are  positive,  and  which  requires  the  second term  of  the  equation  to  have  the  sign  — ,  and  the  third  term to  have  the  sign  -{-. '  Let  us  also  consider  the  cases,  in  which either  one  or  both  values  of  cZ-  become  negative.  The  first takes  place,  when  the  two  factors  of  the  equation  give  a  pro- duct of  this  form,  {x  —  p)  x  [x  +  q)  ;  for  then  the  two values  of  x  are  x  =  p,  and  x  =  —  q;  and  the  equation itself  becomes
+a-'  -r  iq  —  J>)  '^'  —  T^g  =  0  ; the  second  term  having  the  sign  + ,  when  q  is  greater  than  />, and  the  sign  — ,  when  q  is  less  than  /; ;  lastly,  the  tliird  term 
+>
+> The  second  case,  in  which  both  values  of  x  are  negative, occurs,  when  the  two  factors  are
+{x-\-'p)x  Cr  +  g); for  we  shall  then  have  x  ==  --  p,  and  x  ■=.  —  q;  the  equa- tion itself  therefore  becomes
+i-  +  {p  ■{■  q)  X -{- pq  =  0, in  which  both  the  second  and  third  terms  are  affected  by  the sign  +.
 
 Given
 
