@@ -21,9 +21,9 @@ Section IV, Chapter I
 > teaches how to determine unknown quantities by means of
 > those that are known.*
 >
-> 564\. The  above  definition  agrees  with all  that  has  been hitherto  laid  down : for  we  have  always  seen  that  the  know- ledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
+> 564\. The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  know- ledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
 >
-> Of this, Addition  will  readily  furnish  an  example ;  for,  in order  to  find  the  sum  of  two  or  more  given  numbers,  we  had to  seek  for  an  unknown  number,  which  should  be  equal  to those  known  numbers  taken  together.  In  Subtraction, we sought for a number which should be equal  to  the  difference of  two  known  numbers.  A  multitude  of  other  examples are  presented  by  Multiplication,  Division,  the  Involution of  powers,  and  the  Extraction  of  roots ;  the  question being  always  reduced  to  finding,  by  means  of  known quantities,  other  quantities  which  are  unknown.
+> Of this, Addition  will  readily  furnish  an  example;  for,  in order  to  find  the  sum  of  two  or  more  given  numbers,  we  had to  seek  for  an  unknown  number,  which  should  be  equal  to those  known  numbers  taken  together.  In  Subtraction, we sought for a number which should be equal  to  the  difference of  two  known  numbers.  A  multitude  of  other  examples are  presented  by  Multiplication,  Division,  the  Involution of  powers,  and  the  Extraction  of  roots;  the  question being  always  reduced  to  finding,  by  means  of  known quantities,  other  quantities  which  are  unknown.
 >
 > 565\. ...
 >
