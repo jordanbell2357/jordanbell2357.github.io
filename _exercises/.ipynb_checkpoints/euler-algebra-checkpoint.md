@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Euler, "The Elements of Algebra"
-topic: algebra
+topic: euler
 ---
 
 Leonhard Euler, *Elements of Algebra*[^1] [^2]

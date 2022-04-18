@@ -22,9 +22,9 @@ permalink: /examples/
 
 {% assign gm = site.examples | where: "topic", "gm" %}
 
-{% assign exercises = site.exercises %}
+{% assign euler = site.examples | where: "topic", "euler" %}
 
-## Exercises
+## Euler, *The Elements of Algebra*
 
 {% for example in exercises %}
 - [{{example.title}}]({{ example.url }})
