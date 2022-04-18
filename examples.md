@@ -26,7 +26,7 @@ permalink: /examples/
 
 ## Euler, *The Elements of Algebra*
 
-{% for example in exercises %}
+{% for example in euler %}
 - [{{example.title}}]({{ example.url }})
 {% endfor %}
 
