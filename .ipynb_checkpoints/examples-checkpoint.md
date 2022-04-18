@@ -4,6 +4,8 @@ title: Examples
 permalink: /examples/
 ---
 
+{:toc}
+
 {% assign roots = site.examples | where: "topic", "roots" %}
 
 {% assign factors = site.examples | where: "topic", "factors" %}
@@ -29,15 +31,6 @@ permalink: /examples/
 {% for example in euler %}
 - [{{example.title}}]({{ example.url }})
 {% endfor %}
-
-## WebQuiz
-
-- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
-
-- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq2.html)
-
-- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq3.html)
-
 
 ## Rational expressions
 
@@ -86,6 +79,26 @@ permalink: /examples/
 {% for example in curvature %}
 - [{{example.title}}]({{ example.url }})
 {% endfor %}
+
+## Desmos
+
+{% for post in site.desmos %}
+1. [{{ post.title}} {{ post.math}}]({{ post.url }})
+{% endfor %}
+
+## GeoGebra
+
+{% for post in site.geogebra %}
+1. [{{ post.title}}]({{ post.url }})
+{% endfor %}
+
+## WebQuiz
+
+- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
+
+- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq2.html)
+
+- [Systems of linear equations](https://jordanbell.info/WebQuiz/wq3.html)
 
 ## Graspable Math
 

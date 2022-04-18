@@ -39,6 +39,10 @@ $$
 
 Then
 
+$$mn=ac,\qquad m+n=b$$
+
+and
+
 $$
 \begin{align*}
 ax^2+bx+c&=ax^2+mx+nx+c\\
@@ -48,9 +52,22 @@ ax^2+bx+c&=ax^2+mx+nx+c\\
 \end{align*}
 $$
 
+If $$mn=ac$$ and $$m+n=b$$ then $$n=b-m$$ and so 
+
+$$m(b-m)=ac$$
+
+i.e.
+
+$$m^2-bm+ac=0$$
+
 [SoftSchools.com](https://www.softschools.com/math/algebra/topics/factoring_quadratic_equations_when_a_notequal_1/)
 
 [Khan Academy](https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:quadratics-multiplying-factoring/x2f8bb11595b61c86:factor-quadratics-strategy/a/factoring-quadratics-in-any-forma)
+
+$$
+15x^2+61x+34
+$$
+
 
 <https://www.chilimath.com/lessons/intermediate-algebra/factoring-trinomial-box-method/>
 
