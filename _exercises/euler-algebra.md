@@ -8,7 +8,7 @@ Leonhard Euler, *Elements of Algebra*[^1] [^2]
 
 [^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](http://www.nbn-resolving.org/urn/resolver.pl?urn=urn:nbn:de:kobv:b4-200905197591)
 
-[^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
+[^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co.,  London, 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
 
 Section IV, Chapter I
 
@@ -115,37 +115,49 @@ of men and women separately?
 > power, or extract their roots of the same degree; or lastly, 
 > whether we take the logarithms of those quantities, as we
 > have already done in the preceding section.
+>
+> 572\. The  equations  which  arc  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  *simple  equations*,  or *equations  of  the  first  degree*.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  *equation  of  the second  degree*,  which  is  more  difficult  to  resolve.  *Equations of  the  third  degree*  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
 [^3]: 1 pound (*l.*) = 20 shillings (*s.*); thus 7l. 5s. = 145s.
 
+Given
 
-$$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
 
-$$\dfrac{24(20-x)}{x} - (20-x) = 24$$
+$$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$,
 
-$$
-24(20-x)-(20-x)x=24x
-$$
+multiply each part by $(20-x)$,
 
-$$
-480-24x-(20x-x^2)=24x
-$$
+$$\dfrac{24(20-x)}{x} - (20-x) = 24$$,
+
+then multiply each part by $x$,
 
 $$
-480-24x-20x+x^2=24x
+24(20-x)-(20-x)x=24x,
 $$
 
+then distribute,
+
 $$
-x^2-68x+480=0
+480-24x-20x+20x^2=24x,
 $$
+
+then collect terms of the same degree,
+
+$$
+x^2-68x+480=0.
+$$ 
 
 $$a=1, b=-68, c=480$$
 
-$$ac = 480$$
+Suppose
+
+$$mn=ac, \qquad m+n=b$$,
+
+that is,
+
+$$mn=480,\qquad m+n=-68$$.
 
 $$m=-8, n=-60$$
-
-$$mn = ac,  m+n=b$$
 
 $$
 x^2-8x-60x+480=0
@@ -159,6 +171,8 @@ $$
 (x-60)(x-8)=0
 $$
 
-Therefore $x=60$ or $x=8$, and because the total number of men and women is 20, $$x=8$$.
+Therefore $x=60$ or $x=8$.
+
+Because the total number of persons is 20, $$x=8$$.
 
 [Chris Sangwin: A tale of two curricula: Euler's algebra text book](https://plus.maths.org/content/tale-two-curricula-eulers-algebra-text-book)
