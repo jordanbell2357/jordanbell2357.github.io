@@ -4,11 +4,13 @@ title: Euler, "The Elements of Algebra"
 topic: algebra
 ---
 
-Leonhard Euler, *Elements of Algebra*
+Leonhard Euler, *Elements of Algebra*[^1] [^2]
 
 [^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](http://www.nbn-resolving.org/urn/resolver.pl?urn=urn:nbn:de:kobv:b4-200905197591)
 
 [^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co. London. 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
+
+Section IV, Chapter I
 
 > 563\. The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
@@ -18,7 +20,13 @@ Leonhard Euler, *Elements of Algebra*
 > reason, Algebra has been defined, *The science which
 > teaches how to determine unknown quantities by means of
 > those that are known.*
-
+>
+> 564\. The  above  definition  agrees  with all  that  has  been hitherto  laid  down : for  we  have  always  seen  that  the  know- ledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
+>
+> Of this, Addition  will  readily  furnish  an  example ;  for,  in order  to  find  the  sum  of  two  or  more  given  numbers,  we  had to  seek  for  an  unknown  number,  which  should  be  equal  to those  known  numbers  taken  together.  In  Subtraction, we sought for a number which should be equal  to  the  difference of  two  known  numbers.  A  multitude  of  other  examples are  presented  by  Multiplication,  Division,  the  Involution of  powers,  and  the  Extraction  of  roots ;  the  question being  always  reduced  to  finding,  by  means  of  known quantities,  other  quantities  which  are  unknown.
+>
+> 565\. ...
+>
 > 566\. In Algebra, when we have a question to resolve,
 > we represent the number sought by one of the last letters
 > of the alphabet, and then consider in what manner the
@@ -30,16 +38,16 @@ Leonhard Euler, *Elements of Algebra*
 > manner by *equations*.
 >
 > 567\. Let us endeavour to explain this farther by an
-> example. Suppose the following question, or problem,
+> example. Suppose the following question, or *problem*,
 > was proposed:
 >
 > Twenty persons, men and women, dine at a tavern; the
 > share of the reckoning for one man is 8 shillings, for one
 > woman 7 shillings, and the whole reckoning amounts to
-> 7*l.* 5*s.*[^1] Required the number of men and women
+> 7*l.* 5*s.*[^3] Required the number of men and women
 > separately?
 
-[^1]: 1 pound (*l.*) = 20 shillings (*s.*); thus 7l. 5s. = 145s.
+[^3]: 1 pound (*l.*) = 20 shillings (*s.*); thus 7l. 5s. = 145s.
 
 > In order to resolve this question, let us suppose that the
 > number of men is $$=x$$; and, considering this number as
@@ -57,7 +65,7 @@ Leonhard Euler, *Elements of Algebra*
 > shillings. So that adding together $$8x$$ and $$140-7x$$, we see
 > that the whole 20 persons must spend $$140 +x$$ shillings.
 > Now, we know already how much they have spent;
-> namely, 7*l.* 5*s.* or 145*s.*;[^1] there must be an equality, therefore, between $140+x$ and 145; that is to say, we have
+> namely, 7*l.* 5*s.* or 145*s.*;[^3] there must be an equality, therefore, between $$140+x$$ and 145; that is to say, we have
 > the equation $$140 +x= 145$$, and thence we easily deduce
 > $$x=5$$, and consequently $$20-x=20-5=15$$; so that the
 > company consisted of 5 men and 15 women.
