@@ -10,9 +10,7 @@ Leonhard Euler, *Elements of Algebra*[^1] [^2]
 
 [^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co.,  London, 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
 
-Section IV, Chapter I, "Of  the  *Solution*  of *Problems* in General".
-
-[PDF](/assets/euler/chapI.pdf)
+Section IV, Chapter I, "Of  the  *Solution*  of *Problems* in General" [PDF](/assets/euler/chapI.pdf)
 
 > 563\. The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
@@ -120,6 +118,8 @@ of men and women separately?
 >
 > 572\. The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  *simple  equations*,  or *equations  of  the  first  degree*.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  *equation  of  the second  degree*,  which  is  more  difficult  to  resolve.  *Equations of  the  third  degree*  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
+## Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
+
 Given
 
 
@@ -163,20 +163,26 @@ $$
 1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 16, 20, 24, 30, 32, 40, 48, 60, 80, 96, 120, 160, 240, 480
 $$
 
+Eventually we find
 
+$$m=-8, n=-60$$.
 
-$$m=-8, n=-60$$
-
-$$
-x^2-8x-60x+480=0
-$$
+Then
 
 $$
-x(x-8)-60(x-8)=0
+x^2-8x-60x+480=0,
 $$
 
+and as $$x^2-8x=x(x-8)$$ and $$-60x+480=-60(x-8)$$,
+
 $$
-(x-60)(x-8)=0
+x(x-8)-60(x-8)=0,
+$$
+
+so
+
+$$
+(x-60)(x-8)=0.
 $$
 
 Therefore $x=60$ or $x=8$.
