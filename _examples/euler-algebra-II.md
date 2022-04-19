@@ -32,28 +32,28 @@ is to say, in which there are the fewest terms so involved.
 > $$2x+2= 10$$; wherefore $$2x=8$$, and $$x=4$$. 
 >
 > Let $$x + 4 = 20 - x$$; here it is evident that
-$$2x + 4 = 20$$; and consequently $$2x= 16$$, and $$x=8$$.
-
+> $$2x + 4 = 20$$; and consequently $$2x= 16$$, and $$x=8$$.
+>
 > Let $$x+8=32-3x$$, this gives us $$4x+8=32$$; or $$4x=24$$,
 > whence $$x=6$$.
-
+>
 > Let $$15-x=20-2x$$, here we shall have
 > $$15 +x=20$$, and $$x=5$$.
-
+>
 > Let 1 +x=5-tx; this becomes I +ix=5, or ix=4 ;
 > therefore 3x=8; and lastly, x=t=2%.
-
+>
 > If t-tx=~-tx,
 > we must add tx, which gives t=
 > -t +T\X; subtracting t, and transposing the terms, there
 > remains T'ix=t; then multiplying by 12, we obtain x=2.
-
+>
 > If It-%x=t+tx, we add %x, which gives 1t=t+
 > ix; then subtracting t, and transposing, we have ix= It,
 > whence, by multiplying by 6 and dividing by 7, we de-
 > duce x=I-h=H.
-
-> 582. If we have an equation in which the unknown
+>
+> 582\. If we have an equation in which the unknown
 > number x is a denominator, we must make the fraction vanish
 > by multiplying the whole equation by that denominator.
 > Suppose that we have found 100 -8= 12, then, adding
