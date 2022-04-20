@@ -4,6 +4,7 @@ title: Examples
 permalink: /examples/
 ---
 
+Table of Contents
 {:toc}
 
 {% assign roots = site.examples | where: "topic", "roots" %}
