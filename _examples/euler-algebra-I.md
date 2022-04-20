@@ -100,7 +100,7 @@ Section IV, Chapter I, "Of  the  *Solution*  of *Problems* in General" [PDF](/as
 > which subsists among the questions themselves. In some,
 > we seek only for one unknown quantity; in others, we
 > have to find two, or more; and, it is to be observed, with
-> regard to this last caEle, that, in order to determine them
+> regard to this last case, that, in order to determine them
 > all, we must deduce from the circumstances, or the conditions of the problem, as many equations as there are
 > unknown quantities.
 >
