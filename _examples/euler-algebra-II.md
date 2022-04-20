@@ -22,6 +22,104 @@ Section IV, Chapter II, "Of the *Resolution* of *Simple Equations*, or *Equation
 > course of this section, the rules shall be given, and
 > explained, which serve to facilitate these reductions.
 >
+> 574. Let us begin with the simplest cases, and suppose,
+> first, that we have arrived at the equation $$x + 9 = 16$$.
+> Here we see immediately that $$x=7$$: and, in general, if
+> we have found $$x + a = b$$, where $$a$$ and $$b$$ express any
+> known numbers, we have only to subtract $$a$$ from both
+> sides, to obtain the equation $$x=b-a$$, which indicates the
+> value of $$x$$. 
+>
+> 575. If we have the equation $$x-a=b$$, we must add
+> $$a$$ to both sides, and shall obtain the value of $$x=b +a$$.
+> We must proceed in the same manner, if the equation
+> have this form, $$x-a=a^2+1$$: for we shall immediately
+> find $$x=a^2 +a+ 1$$.
+>
+> In the equation $$x-8a=20-6a$$, we find
+> $$x=20-6a+8a$$, or $$x=20+2a$$. 
+> And in this, $$x+6a=20+3a$$, we have
+> $$x=20+3a-6a$$, or $$x=20-3a$$. 
+>
+> 576. If the original equation have this form, $$x - a +b=c$$,
+> we may begin by adding $$a$$ to both sides, which will
+> give $$x + b =c + a$$; and then subtracting $$b$$ from both
+> sides, we shall find $$x = c +a - b$$. But we might also
+> add $$+ a - b$$ at once to both sides; and thus obtain
+> immediately $$x=c+a-b$$.
+>
+> So likewise in the following examples:
+> If $$x-2a+3b=0$$, we have $$x=2a-3b$$.
+> If $$x-3a+2b=25+a+2b$$, we have $$x=25+4a$$.
+> If $$x-9 +6a=25+2a$$, we have $$x=34-4a$$. 
+>
+> 577. When the given equation has the form $$ax=b$$, we
+> only divide the two sides by $$a$$, to obtain $$x = \dfrac{b}{a}$$. But if the
+> equation have the form $$ax+b-c=d$$, we must first make
+> the terms that accompany $$ax$$ vanish, by adding to both
+> sides $$- b + c$$; and then, dividing the new equation $$ax=d-b+c$$
+> by $$a$$, we shall have $$x = \dfrac{d-b+c}{a}$$.
+>
+> The same value of x would have been found by
+> subtracting $$+ b -c$$ from the given equation: that is, we
+> should have had, in the same form,
+> $$ax = d - b + c$$, and $$x = \dfrac{d-b+c}{a}$$. Hence,
+> If $$2x+5=17$$, we have $$2x=12$$, and $$x=6$$.
+> If $$3x-8=7$$, we have $$3x= 15$$, and $$x=5$$.
+> If $$4x - 5 - 3a = 15 + 9a$$, we have $$4x = 20 + 12a$$,
+> and consequently $$x=5 + 3a$$.
+>
+> 578. When the first equation has the form $$\dfrac{x}{a}=b$$, we
+multiply both sides by $$a$$, in order to have $$x = ab$$.
+>
+> But if it is $$\dfrac{x}{a} + b - c = d$$, we must first make
+$$\dfrac{x}{a} =  d- b + c$$; after which we find
+$$x=(d -b + c)a=ad-ab + ac$$.
+> Let $$\frac{1}{2}x-3=4$$, then $$\frac{1}{2}x=7$$, and $$x= 14$$.
+> Let $$\frac{1}{3}x - 1 + 2a = 3 + a$$, then $$\frac{1}{3}x = 4 - a$$, and
+> $$x=12-3a$$.
+> Let $$\dfrac{x}{a-1}-1=a$$, then $$\dfrac{x}{a-1} =a + 1$$, and $$x = a^2 - 1$$.
+>
+> 579. When we have arrived· at such an equation as 
+> $$\dfrac{ax}{b} = c$$, we first multiply by $$b$$, in order to have $$ax =bc$$,
+> and then dividing by $$a$$, we find $$x = \dfrac{bc}{a}$$.
+>
+> If $$\dfrac{ax}{b}- c =d$$, we begin by giving the equation this
+> form, $$\dfrac{ax}{b} = d + c$$; after which, we obtain the value of
+> $$ax = bd + bc$$, and then that of $$x = \dfrac{bd+bc}{a}$$.
+>
+> Let $$\frac{2}{3}x - 4 = 1$$, then $$\frac{2}{3}x = 5$$, and $$2x = 15$$; whence
+> $$x=\frac{15}{2}=7\frac{1}{2}$$.
+>
+> If $$\frac{3}{4}x+\frac{1}{2}=5$$, we have $$\frac{3}{4}x =5 -\frac{1}{2} =\frac{9}{2}$$; whence
+> $$3x=18$$, and $$x=6$$.
+>
+> 580. Let us now consider a case, which may frequently
+> occur; that is, when two or more terms contain the letter
+> x, either on one side of the equation, or on both.
+>
+
+<!--
+> If those terms are all on the same side, as in the equation x+\frac{1}{2}x+5=11,
+we have x+tx=6; or 3x=12; and
+lastly, x=4.
+Let x + tx + tx = 44, be an equation, in which the
+value of x is reqUIred. If we first multiply by 3, we have
+4x + tx = 132; then multiplying by 2, we have Ilx =
+264; wherefore x=24. We might have proceeded iu a
+more concise manner, by beginning 'with the reduction of
+the three terms which contain x to the single term l."tX;
+and then dividing the equation Vx=44 by II. This
+would have given tx=4, and x=24, as before.
+Let %x - ix + {x =] . We shall have, by reduction,
+'!\x=I, or 5x=12, and x=2f.
+And, generally, let ax - bx + cx = d; which is the
+same as (a-b+c)x=d, and, by division, we derive x=
+d
+a-b+c· 
+-->
+
+
 > 581\. When there are terms containing $$x$$ on both sides
 of the equation, we begin by making such terms vanish
 from that side from which it is most easily expunged; that
