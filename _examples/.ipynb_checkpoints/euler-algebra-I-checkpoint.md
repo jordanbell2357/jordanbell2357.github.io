@@ -4,11 +4,13 @@ title: Euler, "The Elements of Algebra", Section IV, Chapter I
 topic: euler
 ---
 
-Leonhard Euler, *Elements of Algebra*[^1] [^2]
+Leonhard Euler, *Elements of Algebra*[^1] [^2] [^4]
 
 [^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](http://www.nbn-resolving.org/urn/resolver.pl?urn=urn:nbn:de:kobv:b4-200905197591)
 
 [^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
+
+[^4]: [Chris Sangwin: A tale of two curricula: Euler's algebra text book](https://plus.maths.org/content/tale-two-curricula-eulers-algebra-text-book)
 
 Section IV, Chapter I, "Of  the  *Solution*  of *Problems* in General" [PDF](/assets/euler/chapI.pdf)
 
@@ -127,23 +129,23 @@ Given
 
 $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$,
 
-multiply each part by $$(20-x)$$,
+multiply each part by $$(20-x)$$:
 
 $$\dfrac{24(20-x)}{x} - (20-x) = 24$$,
 
-then multiply each part by $$x$$,
+then multiply each part by $$x$$:
 
 $$
 24(20-x)-(20-x)x=24x,
 $$
 
-then distribute,
+then distribute:
 
 $$
 480-24x-20x+20x^2=24x,
 $$
 
-then collect terms of the same degree,
+then collect terms of the same degree:
 
 $$
 x^2-68x+480=0.
@@ -191,4 +193,3 @@ Therefore $$x=60$$ or $$x=8$$.
 
 Because the total number of persons is 20, $$x=8$$.
 
-[Chris Sangwin: A tale of two curricula: Euler's algebra text book](https://plus.maths.org/content/tale-two-curricula-eulers-algebra-text-book)
