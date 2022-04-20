@@ -4,9 +4,6 @@ title: Examples
 permalink: /examples/
 ---
 
-Table of Contents
-{:toc}
-
 {% assign roots = site.examples | where: "topic", "roots" %}
 
 {% assign factors = site.examples | where: "topic", "factors" %}
@@ -27,13 +24,16 @@ Table of Contents
 
 {% assign euler = site.examples | where: "topic", "euler" %}
 
-## Euler, *The Elements of Algebra*
+* this unordered seed list will be replaced by toc as unordered list
+{:toc}
+
+## Euler, *The Elements of Algebra* {#elements}
 
 {% for example in euler %}
 - [{{example.title}}]({{ example.url }})
 {% endfor %}
 
-## Rational expressions
+## Rational expressions {#rational-expressions}
 
 {% for example in rational %}
 - [{{example.title}} {{example.math}}]({{ example.url }})
