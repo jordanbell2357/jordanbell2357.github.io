@@ -10,4 +10,4 @@ Leonhard Euler, *Elements of Algebra*[^1] [^2]
 
 [^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
 
-Section IV, Chapter II, "Of the *Resolution* of *Simple Equations*, or *Equations* of the *First Degree*" [PDF](/assets/euler/chapIX.pdf)
+Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*." [PDF](/assets/euler/chapIX.pdf)
