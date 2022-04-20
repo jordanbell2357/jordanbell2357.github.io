@@ -12,6 +12,8 @@ Leonhard Euler, *Elements of Algebra*[^1] [^2]
 
 Section IV, Chapter II, "Of the *Resolution* of *Simple Equations*, or *Equations* of the *First Degree*" [PDF](/assets/euler/chapII.pdf)
 
+Section IV, Chapter III, "Of the *Solution* of *Questions* relating to the preceding *Chapter*." [PDF](/assets/euler/chapIII.pdf)
+
 > **573\.** When the number sought, or the unknown quantity,
 > is represented by the letter $$x$$, and the equation we have
 > obtained is such, that one side contains only that $$x$$, and the
@@ -172,5 +174,3 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > **21\.** If $$\dfrac{128}{3x-4}=\dfrac{216}{5x-6}$$, then will $$x=12$$.
 
 > **22\.** If $$\dfrac{45}{2x+3}=\dfrac{57}{4x-5}$$, then will $$x=6$$.
-
-Section IV, Chapter III, "Of the *Solution* of *Questions* relating to the preceding *Chapter*." [PDF](/assets/euler/chapIII.pdf)
