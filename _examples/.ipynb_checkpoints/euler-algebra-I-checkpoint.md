@@ -57,7 +57,7 @@ Section IV, Chapter I, "Of  the  *Solution*  of *Problems* in General" [PDF](/as
 > only to subtract that of the men from 20, that is to say,
 > the number of women must be $$20-x$$.
 >
-> But each man spends 8 shillings; therefore $x$ number
+> But each man spends 8 shillings; therefore $$x$$ number
 > of men must spend $$8x$$ shillings. And since each woman
 > spends 7 shillings, $$20-x$$ women must spend $$140-7x$$
 > shillings. So that adding together $$8x$$ and $$140-7x$$, we see
