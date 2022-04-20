@@ -12,7 +12,7 @@ Leonhard Euler, *Elements of Algebra*[^1] [^2]
 
 Section IV, Chapter II, "Of the *Resolution* of *Simple Equations*, or *Equations* of the *First Degree*" [PDF](/assets/euler/chapII.pdf)
 
-> 573\. When the number sought, or the unknown quantity,
+> **573\.** When the number sought, or the unknown quantity,
 > is represented by the letter $$x$$, and the equation we have
 > obtained is such, that one side contains only that $$x$$, and the
 > other simply a known number, as, for example, $$x=25$$, the
@@ -22,7 +22,7 @@ Section IV, Chapter II, "Of the *Resolution* of *Simple Equations*, or *Equation
 > course of this section, the rules shall be given, and
 > explained, which serve to facilitate these reductions.
 >
-> 574\. Let us begin with the simplest cases, and suppose,
+> **574\.** Let us begin with the simplest cases, and suppose,
 > first, that we have arrived at the equation $$x + 9 = 16$$.
 > Here we see immediately that $$x=7$$: and, in general, if
 > we have found $$x + a = b$$, where $$a$$ and $$b$$ express any
@@ -30,7 +30,7 @@ Section IV, Chapter II, "Of the *Resolution* of *Simple Equations*, or *Equation
 > sides, to obtain the equation $$x=b-a$$, which indicates the
 > value of $$x$$. 
 >
-> 575\. If we have the equation $$x-a=b$$, we must add
+> **575\.** If we have the equation $$x-a=b$$, we must add
 > $$a$$ to both sides, and shall obtain the value of $$x=b +a$$.
 > We must proceed in the same manner, if the equation
 > have this form, $$x-a=a^2+1$$: for we shall immediately
@@ -41,7 +41,7 @@ Section IV, Chapter II, "Of the *Resolution* of *Simple Equations*, or *Equation
 > And in this, $$x+6a=20+3a$$, we have
 > $$x=20+3a-6a$$, or $$x=20-3a$$. 
 >
-> 576\. If the original equation have this form, $$x - a +b=c$$,
+> **576\.** If the original equation have this form, $$x - a +b=c$$,
 > we may begin by adding $$a$$ to both sides, which will
 > give $$x + b =c + a$$; and then subtracting $$b$$ from both
 > sides, we shall find $$x = c +a - b$$. But we might also
@@ -53,7 +53,7 @@ Section IV, Chapter II, "Of the *Resolution* of *Simple Equations*, or *Equation
 > If $$x-3a+2b=25+a+2b$$, we have $$x=25+4a$$.
 > If $$x-9 +6a=25+2a$$, we have $$x=34-4a$$. 
 >
-> 577\. When the given equation has the form $$ax=b$$, we
+> **577\.** When the given equation has the form $$ax=b$$, we
 > only divide the two sides by $$a$$, to obtain $$x = \dfrac{b}{a}$$. But if the
 > equation have the form $$ax+b-c=d$$, we must first make
 > the terms that accompany $$ax$$ vanish, by adding to both
@@ -69,7 +69,7 @@ Section IV, Chapter II, "Of the *Resolution* of *Simple Equations*, or *Equation
 > If $$4x - 5 - 3a = 15 + 9a$$, we have $$4x = 20 + 12a$$,
 > and consequently $$x=5 + 3a$$.
 >
-> 578\. When the first equation has the form $$\dfrac{x}{a}=b$$, we
+> **578\.** When the first equation has the form $$\dfrac{x}{a}=b$$, we
 multiply both sides by $$a$$, in order to have $$x = ab$$.
 >
 > But if it is $$\dfrac{x}{a} + b - c = d$$, we must first make
@@ -80,7 +80,7 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > $$x=12-3a$$.
 > Let $$\dfrac{x}{a-1}-1=a$$, then $$\dfrac{x}{a-1} =a + 1$$, and $$x = a^2 - 1$$.
 >
-> 579\. When we have arrived· at such an equation as 
+> **579\.** When we have arrived· at such an equation as 
 > $$\dfrac{ax}{b} = c$$, we first multiply by $$b$$, in order to have $$ax =bc$$,
 > and then dividing by $$a$$, we find $$x = \dfrac{bc}{a}$$.
 >
@@ -94,9 +94,9 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > If $$\frac{3}{4}x+\frac{1}{2}=5$$, we have $$\frac{3}{4}x =5 -\frac{1}{2} =\frac{9}{2}$$; whence
 > $$3x=18$$, and $$x=6$$.
 >
-> 580\. Let us now consider a case, which may frequently
+> **580\.** Let us now consider a case, which may frequently
 > occur; that is, when two or more terms contain the letter
-> $$3x$$3, either on one side of the equation, or on both.
+> $$x$$, either on one side of the equation, or on both.
 >
 > If those terms are all on the same side, as in the equation $$x+\frac{1}{2}x+5=11$$,
 > we have $$x+\frac{1}{2}x=6$$; or $$3x=12$$; and
@@ -117,7 +117,7 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > And, generally, let $$ax - bx + cx = d$$; which is the
 > same as $$(a-b+c)x=d$$, and, by division, we derive $$x=\dfrac{d}{a-b+c}$$.
 >
-> 581\. When there are terms containing $$x$$ on both sides
+> **581\.** When there are terms containing $$x$$ on both sides
 > of the equation, we begin by making such terms vanish
 > from that side from which it is most easily expunged; that
 > is to say, in which there are the fewest terms so involved.
@@ -148,7 +148,7 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > then subtracting $$\frac{1}{4}$$, and transposing, we have $$\frac{7}{6}x= 1\frac{1}{4}$$,
 > whence, by multiplying by 6 and dividing by 7, we deduce $$x=1\frac{1}{14}=\frac{15}{14}$$.
 >
-> 582\. If we have an equation in which the unknown
+> **582\.** If we have an equation in which the unknown
 > number $$x$$ is a denominator, we must make the fraction vanish
 > by multiplying the whole equation by that denominator.
 >
@@ -163,13 +163,12 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 
 > Questions for Practice
 
-> 8\. If $$a-\dfrac{b}{x}=c$$, then will $$x=\dfrac{b}{a-c}$$.
+> **8\.** If $$a-\dfrac{b}{x}=c$$, then will $$x=\dfrac{b}{a-c}$$.
 
-> 15\. If $$3ax+\frac{a}{2}-3=bx-a$$, then will $$x = \dfrac{6-3a}{6a-2b}$$.
+> **15\.** If $$3ax+\frac{a}{2}-3=bx-a$$, then will $$x = \dfrac{6-3a}{6a-2b}$$.
 
-> 17\. If $$\dfrac{y+1}{2}+\dfrac{y+2}{3}=16-\dfrac{y+3}{4}$$, then will $$y=13$$.
+> **17\.** If $$\dfrac{y+1}{2}+\dfrac{y+2}{3}=16-\dfrac{y+3}{4}$$, then will $$y=13$$.
 
-> 21\. If $$\dfrac{128}{3x-4}=\dfrac{216}{5x-6}$$, then will $$x=12$$.
+> **21\.** If $$\dfrac{128}{3x-4}=\dfrac{216}{5x-6}$$, then will $$x=12$$.
 
-> 22\. If $$\dfrac{45}{2x+3}=\dfrac{57}{4x-5}$$, then will $$x=6$$.
-
+> **22\.** If $$\dfrac{45}{2x+3}=\dfrac{57}{4x-5}$$, then will $$x=6$$.
