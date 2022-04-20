@@ -45,7 +45,7 @@ permalink: /examples/
 - [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
-## Factors quadratic polynomials
+## Factors of quadratic polynomials
 
 {% for example in factors %}
 - [{{example.title}} {{example.math}}]({{ example.url }})
