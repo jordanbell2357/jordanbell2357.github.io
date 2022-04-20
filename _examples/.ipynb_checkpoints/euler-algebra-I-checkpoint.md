@@ -15,13 +15,13 @@ Section IV, Chapter I, "Of  the  *Solution*  of *Problems* in General" [PDF](/as
 > 563\. The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
 > value of quantities that were before unknown; and this is
-> obtained by consideJ'ing attentively the conditions given,
+> obtained by considering attentively the conditions given,
 > which are always expressed in known numbers. For this
 > reason, Algebra has been defined, *The science which
 > teaches how to determine unknown quantities by means of
 > those that are known.*
 >
-> 564\. The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  know- ledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
+> 564\. The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
 >
 > Of this, Addition  will  readily  furnish  an  example;  for,  in order  to  find  the  sum  of  two  or  more  given  numbers,  we  had to  seek  for  an  unknown  number,  which  should  be  equal  to those  known  numbers  taken  together.  In  Subtraction, we sought for a number which should be equal  to  the  difference of  two  known  numbers.  A  multitude  of  other  examples are  presented  by  Multiplication,  Division,  the  Involution of  powers,  and  the  Extraction  of  roots;  the  question being  always  reduced  to  finding,  by  means  of  known quantities,  other  quantities  which  are  unknown.
 >
@@ -69,9 +69,9 @@ Section IV, Chapter I, "Of  the  *Solution*  of *Problems* in General" [PDF](/as
 > company consisted of 5 men and 15 women.
 >
 > 568\. Again, Suppose twenty persons, men and women,
-go to a tavern; the men spend 24 shillings, and the women
-as much: but it is found that the men have spent 1 shilling each more than the women. Required the number
-of men and women separately?
+> go to a tavern; the men spend 24 shillings, and the women
+> as much: but it is found that the men have spent 1 shilling each more than the women. Required the number
+> of men and women separately?
 >
 > Let the number of men be represented by $$x$$.
 >
@@ -117,6 +117,8 @@ of men and women separately?
 > have already done in the preceding section.
 >
 > 572\. The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  *simple  equations*,  or *equations  of  the  first  degree*.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  *equation  of  the second  degree*,  which  is  more  difficult  to  resolve.  *Equations of  the  third  degree*  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
+
+[^3]: 1 pound (*l.*) = 20 shillings (*s.*).
 
 #### Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
 
