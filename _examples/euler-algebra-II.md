@@ -61,12 +61,14 @@ Section IV, Chapter II, "Of the *Resolution* of *Simple Equations*, or *Equation
 > sides $$- b + c$$; and then, dividing the new equation $$ax=d-b+c$$
 > by $$a$$, we shall have $$x = \dfrac{d-b+c}{a}$$.
 >
-> The same value of x would have been found by
+> The same value of $$x$$ would have been found by
 > subtracting $$+ b -c$$ from the given equation: that is, we
 > should have had, in the same form,
-> $$ax = d - b + c$$, and $$x = \dfrac{d-b+c}{a}$$. Hence,
-> If $$2x+5=17$$, we have $$2x=12$$, and $$x=6$$.
-> If $$3x-8=7$$, we have $$3x= 15$$, and $$x=5$$.
+> $$ax = d - b + c$$, and $$x = \dfrac{d-b+c}{a}$$.
+>
+> Hence,  
+> If $$2x+5=17$$, we have $$2x=12$$, and $$x=6$$.  
+> If $$3x-8=7$$, we have $$3x= 15$$, and $$x=5$$.  
 > If $$4x - 5 - 3a = 15 + 9a$$, we have $$4x = 20 + 12a$$,
 > and consequently $$x=5 + 3a$$.
 >
