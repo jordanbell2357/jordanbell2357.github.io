@@ -78,9 +78,10 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > But if it is $$\dfrac{x}{a} + b - c = d$$, we must first make
 > $$\dfrac{x}{a} =  d- b + c$$; after which we find
 > $$x=(d -b + c)a=ad-ab + ac$$.
-> Let $$\frac{1}{2}x-3=4$$, then $$\frac{1}{2}x=7$$, and $$x= 14$$.
+>
+> Let $$\frac{1}{2}x-3=4$$, then $$\frac{1}{2}x=7$$, and $$x= 14$$.  
 > Let $$\frac{1}{3}x - 1 + 2a = 3 + a$$, then $$\frac{1}{3}x = 4 - a$$, and
-> $$x=12-3a$$.
+> $$x=12-3a$$.  
 > Let $$\dfrac{x}{a-1}-1=a$$, then $$\dfrac{x}{a-1} =a + 1$$, and $$x = a^2 - 1$$.
 >
 > **579\.** When we have arrived· at such an equation as 
@@ -138,7 +139,7 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > Let $$15-x=20-2x$$, here we shall have
 > $$15 +x=20$$, and $$x=5$$.
 >
-> Let $$1 +x=5-\frac{1}{2}x$$; this $$becomes 1 +\frac{3}{2}x=5$$, or $$\frac{3}{2}x=4$$;
+> Let $$1 +x=5-\frac{1}{2}x$$; this becomes $$1 +\frac{3}{2}x=5$$, or $$\frac{3}{2}x=4$$;
 > therefore $$3x=8$$; and lastly, $$x=\dfrac{8}{3}=2\frac{2}{3}$$.
 >
 > If $$\frac{1}{2}-\frac{1}{3}x=\frac{1}{3}-\frac{1}{4}x$$,
