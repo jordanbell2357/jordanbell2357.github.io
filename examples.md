@@ -27,13 +27,13 @@ permalink: /examples/
 * this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-## Euler, *The Elements of Algebra* {#elements}
+## Euler, *The Elements of Algebra*
 
 {% for example in euler %}
 - [{{example.title}}]({{ example.url }})
 {% endfor %}
 
-## Rational expressions {#rational-expressions}
+## Rational expressions
 
 {% for example in rational %}
 - [{{example.title}} {{example.math}}]({{ example.url }})
