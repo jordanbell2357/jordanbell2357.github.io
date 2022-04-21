@@ -14,8 +14,8 @@ Leonhard Euler, *Elements of Algebra*[^1] [^2] [^4]
 
 Section IV, Chapter I, "Of  the  *Solution*  of *Problems* in General" [PDF](/assets/euler/chapI.pdf)
 
-<div style="background-color:DodgerBlue;">
-**563\.** The principal object of Algebra, as well as of all
+<div style="border-style:dotted;border-color:DodgerBlue;">
+**563.** The principal object of Algebra, as well as of all
 the other branches of Mathematics, is to determine the
 value of quantities that were before unknown; and this is
 obtained by considering attentively the conditions given,
