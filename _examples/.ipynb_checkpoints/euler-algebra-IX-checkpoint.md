@@ -30,7 +30,7 @@ Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*."
 > two ways, by admitting for $$x$$ the values 5 and 7, both of
 > which will satisfy the terms of the equation.
 >
-> 69l. For this purpose it is most convenient to begin
+> **69l.** For this purpose it is most convenient to begin
 > with transposing the terms of the equation, so that one of
 > the sides may become 0; the above equation consequently
 > takes the form
@@ -76,81 +76,81 @@ Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*."
 > in two cases; in the first place, when $$x= p$$; and in the
 > second place, when $$x=q$$; and these are the two values of
 > $$x$$ which satisfy the terms of the equation,
-
-695. Let us here consider the nature of these two
-factors, in order that the multiplication of the one by
-the other may exactly produce $$x^2 -ax+ b$$. By actually
-multiplying them, we obtain $$x^2 -( p + q)x + pq$$; which
-quantity must be the same as $$x^2 -ax+ b$$, therefore we have
-evidently $$p+q=a$$, and $$pq=b$$. Hence is deduced this
-very remarkable property; that in every equation of the
-form $$x^2 -ax + b=0$$, the two values of $$x$$ are such, that
-their sum is equal to $$a$$, and their product equal to $$b$$: it
-therefore necessarilv follows, that, if we know one of the
-values, the other is easily found. 
-
-696. We have at present considered the case, in which
-the two values of $$x$$ are positive, and which requires the
-second term of the equation to have the sign $$-$$, and the
-third term to have the sign $$+$$. Let us also consider
-the cases, in which either one or both values of $$x$$ become
-negative. The first takes place, when the two factors of
-the equation give a product of this form, $$(x-p) \times (x+q)$$;
-for then the two values of $$x$$ are $$x = p$$, and $$x = - q$$; and
-the equation itself becomes
-$$x^2 +(q-p)x-pq=0$$;
-the second term having the sign $$+$$ when $$q$$ is greater
-than $$p$$, and the sign $$-$$ when $$q$$ is less than $$p$$; lastly, the
-third term is always negative.
-
-The second case, in which both values of $$x$$ are negative,
-occurs when the two factors are
-$$(x+p) \times (x+q)$$;
-for we shall then have $$x= -p$$, and $$x= -q$$; the equation
-itself therefore becomes
-$$x^2+(p +q)x+pq=0$$.
-in which both the second and third terms are affected by
-the sign $$+$$.
-
-697. The signs of the second and the third terms consequently show us the nature of the roots of any equation
-of the second degree. For let the equation be
-$$x^2 \dots ax \dots b=0$$. If the second and third terms have the sign $$+$$,
-the two values of $$x$$ are both negative; if the second term
-have the sign $$-$$, and the third term $$+$$, both values are
-positive: lastly, if the third term also have the sign $$-$$,
-one of the values in question is positive. But, in all cases
-whatever, the second term contains the *sum* of the two
-values, and the third term contains their *product*. 
-
-698. After what has been said, it will be easy to form
-equations of the second degree containing any two given
-values. Let there be required, for example, an equation
-such, that one of the values of $$x$$ may be 7, and the other
--3. We first form the simple equations $$x=7$$, and
-$$x= -3$$; whence, $$x-7=0$$, and $$x+3=0$$; these give us
-the factors of the equation required, which consequently
-becomes $$x^2 -4x-21 =0$$. Applying here, also, the above
-rule, we find the two given values of $$x$$; for if $$x^2=4x+21$$,
-we have, by completing the square, etc. $$x=2 \pm \sqrt{25} =2  \pm 5$$;
-that is to say, $$x=7$$, or $$x= -3$$. 
-
-699. The values of $$x$$ may also happen to be equal. Suppose, for example, that an equation is required, in which
-both values may be 5. Here the two factors will be $$(x-5) \times (x-5)$$,
-and the equation sought will be $$x^2 - 10x + 25=0$$.
-In this equation, $$x$$ appears to have only one value; but it
-is because $$x$$ is twice found $$= 5$$, as the common method of
-resolution shows; for we have $$x^2= 10x-25$$; wherefore
-$$x=5\pm \sqrt{0} = 5 \pm 0$$, that is to say, $$x$$ is in two ways $$= 5$$. 
-
-700. A very remarkable case sometimes occurs, in which
-both values of $$x$$ become imaginary, or impossible; and it is
-then wholly impossible to assign any value for $$x$$, that would
-satisfy the terms of the equation. Let it be proposed, for
-example, to divide the number 10 into two parts, such
-that their product may be 30. If we call one of those
-parts $$x$$, the other will be $$10-x$$, and their product will be
-$$10x-x^2=30$$; wherefore $$x^2= 10x-30$$, and $$x=5 \pm sqrt{-5}$$,
-which, being an imaginary number, shows that the question is impossible. 
+>
+> **695.** Let us here consider the nature of these two
+> factors, in order that the multiplication of the one by
+> the other may exactly produce $$x^2 -ax+ b$$. By actually
+> multiplying them, we obtain $$x^2 -( p + q)x + pq$$; which
+> quantity must be the same as $$x^2 -ax+ b$$, therefore we have
+> evidently $$p+q=a$$, and $$pq=b$$. Hence is deduced this
+> very remarkable property; that in every equation of the
+> form $$x^2 -ax + b=0$$, the two values of $$x$$ are such, that
+> their sum is equal to $$a$$, and their product equal to $$b$$: it
+> therefore necessarilv follows, that, if we know one of the
+> values, the other is easily found. 
+>
+> **696.** We have at present considered the case, in which
+> the two values of $$x$$ are positive, and which requires the
+> second term of the equation to have the sign $$-$$, and the
+> third term to have the sign $$+$$. Let us also consider
+> the cases, in which either one or both values of $$x$$ become
+> negative. The first takes place, when the two factors of
+> the equation give a product of this form, $$(x-p) \times (x+q)$$;
+> for then the two values of $$x$$ are $$x = p$$, and $$x = - q$$; and
+> the equation itself becomes
+> $$x^2 +(q-p)x-pq=0$$;
+> the second term having the sign $$+$$ when $$q$$ is greater
+> than $$p$$, and the sign $$-$$ when $$q$$ is less than $$p$$; lastly, the
+> third term is always negative.
+>
+> The second case, in which both values of $$x$$ are negative,
+> occurs when the two factors are
+> $$(x+p) \times (x+q)$$;
+> for we shall then have $$x= -p$$, and $$x= -q$$; the equation
+> itself therefore becomes
+> $$x^2+(p +q)x+pq=0$$.
+> in which both the second and third terms are affected by
+> the sign $$+$$.
+>
+> **697.** The signs of the second and the third terms consequently show us the nature of the roots of any equation
+> of the second degree. For let the equation be
+> $$x^2 \dots ax \dots b=0$$. If the second and third terms have the sign $$+$$,
+> the two values of $$x$$ are both negative; if the second term
+> have the sign $$-$$, and the third term $$+$$, both values are
+> positive: lastly, if the third term also have the sign $$-$$,
+> one of the values in question is positive. But, in all cases
+> whatever, the second term contains the *sum* of the two
+> values, and the third term contains their *product*. 
+>
+> **698.** After what has been said, it will be easy to form
+> equations of the second degree containing any two given
+> values. Let there be required, for example, an equation
+> such, that one of the values of $$x$$ may be 7, and the other
+> -3. We first form the simple equations $$x=7$$, and
+> $$x= -3$$; whence, $$x-7=0$$, and $$x+3=0$$; these give us
+> the factors of the equation required, which consequently
+> becomes $$x^2 -4x-21 =0$$. Applying here, also, the above
+> rule, we find the two given values of $$x$$; for if $$x^2=4x+21$$,
+> we have, by completing the square, etc. $$x=2 \pm \sqrt{25} =2  \pm 5$$;
+> that is to say, $$x=7$$, or $$x= -3$$. 
+>
+> **699.** The values of $$x$$ may also happen to be equal. Suppose, for example, that an equation is required, in which
+> both values may be 5. Here the two factors will be $$(x-5) \times (x-5)$$,
+> and the equation sought will be $$x^2 - 10x + 25=0$$.
+> In this equation, $$x$$ appears to have only one value; but it
+> is because $$x$$ is twice found $$= 5$$, as the common method of
+> resolution shows; for we have $$x^2= 10x-25$$; wherefore
+> $$x=5\pm \sqrt{0} = 5 \pm 0$$, that is to say, $$x$$ is in two ways $$= 5$$. 
+>
+> **700.** A very remarkable case sometimes occurs, in which
+> both values of $$x$$ become imaginary, or impossible; and it is
+> then wholly impossible to assign any value for $$x$$, that would
+> satisfy the terms of the equation. Let it be proposed, for
+> example, to divide the number 10 into two parts, such
+> that their product may be 30. If we call one of those
+> parts $$x$$, the other will be $$10-x$$, and their product will be
+> $$10x-x^2=30$$; wherefore $$x^2= 10x-30$$, and $$x=5 \pm sqrt{-5}$$,
+> which, being an imaginary number, shows that the question is impossible. 
 
 701. It is very important, therefore, to discover some
 sign, by means of which we may immediately know whether
