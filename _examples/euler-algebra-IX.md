@@ -12,70 +12,70 @@ Leonhard Euler, *Elements of Algebra*[^1] [^2]
 
 Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*." [PDF](/assets/euler/chapIX.pdf)
 
-689. What we have already said sufficiently shows,
-that equations of the second degree admit of two solutions; and this property ought to be examined in every
-point of view, because the nature of equations of a higher
-degree will be very much illustrated by such an examination. We shall therefore retrace, with more attention,
-the reasons which render an equation of the second degree
-capable of a double solution; since they undoubtedly will
-exhibit an essential property of those equations. 
-
-690. We have already seen, indeed, that this double
-solution arises from the circumstance that the square root
-of any number may be taken either positively, or negatively; but, as this principle will not easily apply to
-equations of higher degrees, it may be proper to illustrate
-it by a distinct analysis. Taking, therefore, for an
-example, the quadratic equation, $$x^2= 12x-35$$, we shall
-give a new reason for this equation being resolvible in
-two ways, by admitting for $$x$$ the values 5 and 7, both of
-which will satisfy the terms of the equation.
-
-69l. For this purpose it is most convenient to begin
-with transposing the terms of the equation, so that one of
-the sides may become 0; the above equation consequently
-takes the form
-$$x^2-12x+35=0$$;
-and it is now required to find a number such, that, if we
-substitute it for $$x$$, the quantity $$x^2 -12x + 3$$5 may be really
-equal to nothing; after which, we shall have to show how
-this may be done in two different ways. 
-
-692. Now, the whole of this consists in clearly showing,
-that a quantity of the form $$x^2 -12x + 35$$ may be considered
-as the product of two factors. Thus, in reality, the
-quantity of which we speak is composed of the two factors
-$$(x - 5) \times (x - 7)$$; and since the above quantity must
-become 0, we must also have the product $$(x-5) \times (x-7) = 0$$;
-but a product, of whatever number of factors it is
-composed, becomes equal to 0, only when one of those
-factors is reduced to 0. This is a fundamental principle,
-to which we must pay particular attention, especially
-when equations of higher degrees are treated of.
-
-693. It is therefore easily understood, that the product
-$$(x - 5) \times (x - 7)$$ may become 0 in two ways: first, when
-the first factor $$x-5 = 0$$; and also, when the second factor
-$$x-7=0$$. In the first case, $$x=5$$, in the second $$x=7$$.
-The reason is therefore very evident, why such an equation
-$$x^2-12x+35=0$$, admits of two solutions; that is to
-say, why we can assign two values of $$x$$, both of which
-equally satisfy the terms of the equation; for it depends
-upon this fundamental principle, that the quantity $$x^2 -12x + 35$$
-may be represented by the product of two
-factors.
-
-694. The same circumstances are found in all equations
-of the second degree: for, after having brought the terms
-to one side, we find an equation of the following form
-$$x^2 -ax+ b=0$$, and this formula may be always considered
-as the product of two factors, which we shall represent by
-$$(x-p) \times (x-q)$$, without considering what numbers the
-letters $$p$$ and $$q$$ represent, or whether they be negative or
-positive. Now, this product must be $$= 0$$, from the
-nature of our equation, it is evident that this may happen
-in two cases; in the first place, when $$x= p$$; and in the
-second place, when $$x=q$$; and these are the two values of
-$$x$$ which satisfy the terms of the equation,
+> **689.** What we have already said sufficiently shows,
+> that equations of the second degree admit of two solutions; and this property ought to be examined in every
+> point of view, because the nature of equations of a higher
+> degree will be very much illustrated by such an examination. We shall therefore retrace, with more attention,
+> the reasons which render an equation of the second degree
+> capable of a double solution; since they undoubtedly will
+> exhibit an essential property of those equations. 
+>
+> **690.** We have already seen, indeed, that this double
+> solution arises from the circumstance that the square root
+> of any number may be taken either positively, or negatively; but, as this principle will not easily apply to
+> equations of higher degrees, it may be proper to illustrate
+> it by a distinct analysis. Taking, therefore, for an
+> example, the quadratic equation, $$x^2= 12x-35$$, we shall
+> give a new reason for this equation being resolvible in
+> two ways, by admitting for $$x$$ the values 5 and 7, both of
+> which will satisfy the terms of the equation.
+>
+> 69l. For this purpose it is most convenient to begin
+> with transposing the terms of the equation, so that one of
+> the sides may become 0; the above equation consequently
+> takes the form
+> $$x^2-12x+35=0$$;
+> and it is now required to find a number such, that, if we
+> substitute it for $$x$$, the quantity $$x^2 -12x + 35$$ may be really
+> equal to nothing; after which, we shall have to show how
+> this may be done in two different ways. 
+>
+> **692.** Now, the whole of this consists in clearly showing,
+> that a quantity of the form $$x^2 -12x + 35$$ may be considered
+> as the product of two factors. Thus, in reality, the
+> quantity of which we speak is composed of the two factors
+> $$(x - 5) \times (x - 7)$$; and since the above quantity must
+> become 0, we must also have the product $$(x-5) \times (x-7) = 0$$;
+> but a product, of whatever number of factors it is
+> composed, becomes equal to 0, only when one of those
+> factors is reduced to 0. This is a fundamental principle,
+> to which we must pay particular attention, especially
+> when equations of higher degrees are treated of.
+>
+> **693.** It is therefore easily understood, that the product
+> $$(x - 5) \times (x - 7)$$ may become 0 in two ways: first, when
+> the first factor $$x-5 = 0$$; and also, when the second factor
+> $$x-7=0$$. In the first case, $$x=5$$, in the second $$x=7$$.
+> The reason is therefore very evident, why such an equation
+> $$x^2-12x+35=0$$, admits of two solutions; that is to
+> say, why we can assign two values of $$x$$, both of which
+> equally satisfy the terms of the equation; for it depends
+> upon this fundamental principle, that the quantity $$x^2 -12x + 35$$
+> may be represented by the product of two
+> factors.
+>
+> **694.** The same circumstances are found in all equations
+> of the second degree: for, after having brought the terms
+> to one side, we find an equation of the following form
+> $$x^2 -ax+ b=0$$, and this formula may be always considered
+> as the product of two factors, which we shall represent by
+> $$(x-p) \times (x-q)$$, without considering what numbers the
+> letters $$p$$ and $$q$$ represent, or whether they be negative or
+> positive. Now, this product must be $$= 0$$, from the
+> nature of our equation, it is evident that this may happen
+> in two cases; in the first place, when $$x= p$$; and in the
+> second place, when $$x=q$$; and these are the two values of
+> $$x$$ which satisfy the terms of the equation,
 
 695. Let us here consider the nature of these two
 factors, in order that the multiplication of the one by
