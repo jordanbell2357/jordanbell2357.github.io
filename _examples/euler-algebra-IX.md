@@ -89,7 +89,7 @@ their sum is equal to $$a$$, and their product equal to $$b$$: it
 therefore necessarilv follows, that, if we know one of the
 values, the other is easily found. 
 
-696. We have at present COllsidered the case, in which
+696. We have at present considered the case, in which
 the two values of $$x$$ are positive, and which requires the
 second term of the equation to have the sign $$-$$, and the
 third term to have the sign $$+$$. Let us also consider
