@@ -108,126 +108,121 @@ occurs when the two factors are
 $$(x+p) \times (x+q)$$;
 for we shall then have $$x= -p$$, and $$x= -q$$; the equation
 itself therefore becomes
-$$x^2+(p +q) x+pq=0$$.
+$$x^2+(p +q)x+pq=0$$.
 in which both the second and third terms are affected by
 the sign $$+$$.
 
 697. The signs of the second and the third terms consequently show us the nature of the roots of any equation
 of the second degree. For let the equation be
-$$x^2 \pm ax \pm b=0$$. If the second and third terms have the sign $$+$$,
+$$x^2 \dots ax \dots b=0$$. If the second and third terms have the sign $$+$$,
 the two values of $$x$$ are both negative; if the second term
 have the sign $$-$$, and the third term $$+$$, both values are
 positive: lastly, if the third term also have the sign $$-$$,
 one of the values in question is positive. But, in all cases
-whatever, the second term contains the sum of the two
-values, and the third term contains their product. 
+whatever, the second term contains the *sum* of the two
+values, and the third term contains their *product*. 
 
 698. After what has been said, it will be easy to form
 equations of the second degree containing any two given
 values. Let there be required, for example, an equation
 such, that one of the values of $$x$$ may be 7, and the other
 -3. We first form the simple equations $$x=7$$, and
-$$x= -3$$; whence, x-7=0, and x+3=0; these give us
+$$x= -3$$; whence, $$x-7=0$$, and $$x+3=0$$; these give us
 the factors of the equation required, which consequently
-becomes $$x^2 -4x-2l =0$$. Applying here, also, the above
+becomes $$x^2 -4x-21 =0$$. Applying here, also, the above
 rule, we find the two given values of $$x$$; for if $$x^2=4x+21$$,
-we have, by completing the square, etc. x=2± .25=2
-±5; that is to say, x=7, or x= -3. 
+we have, by completing the square, etc. $$x=2 \pm \sqrt{25} =2  \pm 5$$;
+that is to say, $$x=7$$, or $$x= -3$$. 
 
-699. The values of x may also happen to be equal. Suppose, for example, that an equation is required, in which
-both values may be 5. Here the two factors will be (x-5)
-x (x-5), and the equation sought will be x 2 -lOx + 25=0.
-In this equation, x appears to have only one value; but it
-is because x is twice found = 5, as the common method of
-resolution shews; for we have x 2= lOx-25; wherefore
-x=5± .;0=5±0, that is to say, x is in two ways = 5. 
+699. The values of $$x$$ may also happen to be equal. Suppose, for example, that an equation is required, in which
+both values may be 5. Here the two factors will be $$(x-5) \times (x-5)$$,
+and the equation sought will be $$x^2 - 10x + 25=0$$.
+In this equation, $$x$$ appears to have only one value; but it
+is because $$x$$ is twice found $$= 5$$, as the common method of
+resolution shows; for we have $$x^2= 10x-25$$; wherefore
+$$x=5\pm \sqrt{0} = 5 \pm 0$$, that is to say, $$x$$ is in two ways $$= 5$$. 
 
 700. A very remarkable case sometimes occurs, in which
-both values of x become imaginary, or impossible; and it is
-then wholly impossible to assign any value for x, that would
+both values of $$x$$ become imaginary, or impossible; and it is
+then wholly impossible to assign any value for $$x$$, that would
 satisfy the terms of the equation. Let it be proposed, for
 example, to divide the number 10 into two parts, such
 that their product may be 30. If we call one of those
-parts x, the other will be lO-x, and their product will be
-lOx-x2=30; wherefore x2= lOx-30, and x=5± v -5,
-which, being an imaginary number, shews that the question is impossible. 
+parts $$x$$, the other will be $$10-x$$, and their product will be
+$$10x-x^2=30$$; wherefore $$x^2= 10x-30$$, and $$x=5 \pm sqrt{-5}$$,
+which, being an imaginary number, shows that the question is impossible. 
 
-701. It is vel'Y important, therefore, to discover some
-sign, by mean" of which we may immediately know whether
+701. It is very important, therefore, to discover some
+sign, by means of which we may immediately know whether
 an equation of the second degree be possible or not.
 
-Let us resume the general equation x 2 -ax+b=0. We
-shall have x2=ax - b, and x =ta± v (-i-a2 - b). This
-shews, that if b be greater than ta2 , or 4b greater than a2 ,
-the two values of x al'e always imaginary, since it would be
-required to extract the square root of a negative quanttty ;
-on the contrary, if b be less than ta2 , or even less than 0,
+Let us resume the general equation $$x^2 -ax+b=0$$. We
+shall have $$x^2=ax - b$$, and $$x =\frac{1}{2}a \pm \surd(\frac{1}{4}a^2-b)$$. This
+shows, that if $$b$$ be greater than $$\frac{1}{4}a^2$$, or $$4b$$ greater than $$a^2$$,
+the two values of $$x$$ are always imaginary, since it would be
+required to extract the square root of a negative quantity;
+on the contrary, if $$b$$ be less than $$\frac{1}{4}a^2$$, or even less than 0,
 that is to say, if it be a negative number, both values will
 be possible or real. But, whether they be real or imaginary,
-it is no less true, that they are still expressible, and al ways
-have this pl'Operty, that their sum is equal to a, and their
-product equal to b. Thus, in the equation x 2 -6x+ 10=0,
-the sum of the two values of x must be 6, and the product
-of these two values must be 10; now, we find, l. x=
-3 + v 1, and 2. x=3- v -1, quantities whose sum is
+it is no less true, that they are still expressible, and always
+have this property, that their sum is equal to $$a$$, and their
+product equal to $$b$$. Thus, in the equation $$x^2 -6x+ 10=0$$,
+the sum of the two values of $$x$$ must be 6, and the product
+of these two values must be 10; now, we find, ① $$x= 3 + \sqrt{-1}$$, and ② $$x=3-\sqrt{-1}$$, quantities whose sum is
 6, and the product 10. 
 
-, and the product 10.
 702. The expression which we have just found may likewise be represented in a manner more general, and so as
-to be applied to equations of this form, jx2±gx+h=0;
-for this eq nation gives
-2 __ gx h __ 9 ( g2 h)
-x - + 7 - J' and x - + 2j ± v 4f2 - J ,or ......
-+g+ vCq2-4flt)
-x = - 2j . ; whence we conclude, that the two
-values are imaginary, and consequently, the equation impossible, when 4fh is greater than g2; that is to say, when,
+to be applied to equations of this form, fx^2 \pm gx + h=0;
+for this equation gives
+$$x^2=\mp \dfrac{gx}{f} - \dfrac{h}{f}$$,
+and 
+
+
+whence we conclude, that the two
+values are imaginary, and consequently, the equation impossible, when $$4fh$$ is greater than $$g^2$$; that is to say, when,
 in the four times the product of
 the first and the last term exceeds the square of the second
 term: for the product of the first and the last term, taken
-four times, is 4fltx2, and the square of the middle term is
-g2x2; now, if 4fhx2 be greatel' than g2x2, 4fh is also greater
-than g2, and, in that case, the equation is evidently impossible; but in all other cases, the equation is possible,
-and two real values of x may be assigned. It is true, they
+four times, is $$4fhx^2$$, and the square of the middle term is
+$$g^2x^2$$; now, if $$4fhx^2$$ be greater than $$g^2x^2$$, $$4fh$$ is also greater
+than $$g^2$$, and, in that case, the equation is evidently impossible; but in all other cases, the equation is possible,
+and two real values of $$x$$ may be assigned. It is true, they
 are often irrational; but we have already seen, that, in
 such cases, we may always find them by approximation:
 whereas no approximations can take place with regard to
-imaginary expressions, sLlch as v -5; for 100 is as far
+imaginary expressions, such as $$\sqrt{-5}$$; for 100 is as far
 from being the value of that root, as 1, or any other number.
 
 703. We have farther to observe, that any quantity of
-248 ELEMENTS SECT. IV.
-the second degree, x2±ax±b, must always be resolvible
-into two factors, such as (x±p) x (x±q). For, if we
+the second degree, $$x^2 \pm ax \pm b$$, must always be resolvible
+into two factors, such as $$(x \pm p) \times (x \pm q)$$. For, if we
 took three factors, such as these, we should come to a
 quantity of the third degree; and taking only one such
 factor, we should not exceed the first degree. It is therefore certain, that every equation of the second degree
-necessarily contains two values of x, and that it can neither
+necessarily contains two values of $$x$$, and that it can neither
 have more nor less
 
-704. We have already seen, that when the two factor!:!
-are found, the two values of x are also known, since each
-facttlr gives one of those values, by making it equal to O.
+704. We have already seen, that when the two factors
+are found, the two values of $$x$$ are also known, since each
+factor gives one of those values, by making it equal to 0.
 The converse also is true, viz. that when we have found
-one value of x, we know also one of the factors of the
-equation; for if x=p represents one of the values of x,
-in any equation of the second degree, x-p is one of the
+one value of $$x$$, we know also one of the factors of the
+equation; for if $$x=p$$ represents one of the values of $$x$$,
+in any equation of the second degree, $$x-p$$ is one of the
 factors of that equation; that is to say, all the terms having heen brought to one side, the equation is divisible by
-x - p; and farther, the quotien t expresses the other factor. 
+$$x - p$$; and farther, the quotient expresses the other factor. 
 
 705. In order to illustrate what we have now said, let
-there be given the equation x2+4x-21=0, in which
-we know that x=3 is one of the values of x, because
-(3x3)+(4x3)-21=0; this shews, thatx-3is one of
-the factors of the equation, or that x 2 +4x-21 is divisible
-by x-3, which the actual division proves. Thus,
-x-3) x 2 +4x-21 (x+7
-x 2 _3x
-7x-21
-7x-21
-O.
-So that the other factor is x + 7, and our equation is represented by the product (x-3) x (x+7)=0; whence
-two values of x immediately follow, the first factor givmg
-x=3, and the other x= -7. 
+there be given the equation $$x^2+4x-21=0$$, in which
+we know that $$x=3$$ is one of the values of $$x$$, because
+$$(3 \times 3)+(4 \times 3)-21=0$$; this shows, that $$x-3$$ is one of
+the factors of the equation, or that $$x^2+4x-21$$ is divisible
+by $$x-3$$, which the actual division proves. Thus,
+
+
+So that the other factor is $$x + 7$$, and our equation is represented by the product $$(x-3) \times (x+7)=0$$; whence
+two values of $$x$$ immediately follow, the first factor giving
+$$x=3$$, and the other $$x= -7$$. 
 
 
 
