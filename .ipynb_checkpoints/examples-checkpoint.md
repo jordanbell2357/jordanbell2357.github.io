@@ -33,21 +33,15 @@ permalink: /examples/
 1. [{{example.title}}]({{ example.url }})
 {% endfor %}
 
-## Rational expressions
+## Factors of quadratic polynomials
 
-{% for example in rational %}
+{% for example in factors %}
 1. [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
 ## Roots of quadratic polynomials
 
 {% for example in roots %}
-1. [{{example.title}} {{example.math}}]({{ example.url }})
-{% endfor %}
-
-## Factors of quadratic polynomials
-
-{% for example in factors %}
 1. [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
@@ -79,6 +73,12 @@ permalink: /examples/
 
 {% for example in curvature %}
 1. [{{example.title}}]({{ example.url }})
+{% endfor %}
+
+## Rational expressions
+
+{% for example in rational %}
+1. [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
 ## Desmos
