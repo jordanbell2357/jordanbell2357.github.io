@@ -12,7 +12,7 @@ Leonhard Euler, *Elements of Algebra*[^1] [^2]
 
 Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*." [PDF](/assets/euler/chapIX.pdf)
 
-689. What we have already said sufficiently shews,
+689. What we have already said sufficiently shows,
 that equations of the second degree admit of two solutions; and this property ought to be examined in every
 point of view, because the nature of equations of a higher
 degree will be very much illustrated by such an examination. We shall therefore retrace, with more attention,
@@ -25,114 +25,113 @@ solution arises from the circumstance that the square root
 of any number may be taken either positively, or negatively; but, as this principle will not easily apply to
 equations of higher degrees, it may be proper to illustrate
 it by a distinct analysis. Taking, therefore, for an
-example, the quadratic equation, x 2= 12.7:-35, we shall
+example, the quadratic equation, $$x^2= 12x-35$$, we shall
 give a new reason for this equation being resolvible in
-two ways, by admitting for x the values 5 and 7, both of
+two ways, by admitting for $$x$$ the values 5 and 7, both of
 which will satisfy the terms of the equation.
 
 69l. For this purpose it is most convenient to begin
 with transposing the terms of the equation, so that one of
 the sides may become 0; the above equation consequently
 takes the form
-x 2 -12x+35=0;
+$$x^2-12x+35=0$$;
 and it is now required to find a number such, that, if we
-substitute it for x, the quantity x 2 -12x + 35 may be really
-equal to nothing; after which, we shall have to shew how
-this may be done in t.wo different ways. 
+substitute it for $$x$$, the quantity $$x^2 -12x + 3$$5 may be really
+equal to nothing; after which, we shall have to show how
+this may be done in two different ways. 
 
-692. Now, the whole of this consists in clearly shewing,
-that a quantity of the form x2 -12x + 35 may be considered
+692. Now, the whole of this consists in clearly showing,
+that a quantity of the form $$x^2 -12x + 35$$ may be considered
 as the product of two factors. Thus, in reality, the
 quantity of which we speak is composed of the two factors
-(x - 5) x (x - 7); and since the above quantity must
-become 0, we must also have the product (x-5) x (x-7)
-= 0; bu.t a product, of whatever number of fa<;tors it is
+$$(x - 5) \times (x - 7)$$; and since the above quantity must
+become 0, we must also have the product $$(x-5) \times (x-7) = 0$$;
+but a product, of whatever number of factors it is
 composed, becomes equal to 0, only when one of those
-factors is reduced to o. This is a fundamental principle,
+factors is reduced to 0. This is a fundamental principle,
 to which we must pay particular attention, especially
 when equations of higher degrees are treated of.
 
 693. It is therefore easily understood, that the product
-CHAP. IX. 01<' ALUEBRA. 245
-(x - 5) x (x-7) may become 0 in two ways: first, when
-the first factor x-5 = 0; and also, when the second factor
-x-7=O. In the first case, x=5, in the second x=7.
-The reason is therefore very evident, why such an equation xZ-12x+35=O, admits of two solutions; that is to
-say, why we can assign two values of x, both of which
-eq ually satisfy the terms of the equation; for it depends
-upon this fundamental principle, that the quantity x 2 _
-12x + 35 may be represented Ly the product of two
+$$(x - 5) \times (x - 7)$$ may become 0 in two ways: first, when
+the first factor $$x-5 = 0$$; and also, when the second factor
+$$x-7=0$$. In the first case, $$x=5$$, in the second $$x=7$$.
+The reason is therefore very evident, why such an equation
+$$x^2-12x+35=0$$, admits of two solutions; that is to
+say, why we can assign two values of $$x$$, both of which
+equally satisfy the terms of the equation; for it depends
+upon this fundamental principle, that the quantity $$x^2 -12x + 35$$
+may be represented by the product of two
 factors.
 
-ctors.
 694. The same circumstances are found in all equations
 of the second degree: for, after having brought the terms
-to one side, we find an equation of the following fOl'm
-x 2 -ax+ b=O, and this formula may be always considered
+to one side, we find an equation of the following form
+$$x^2 -ax+ b=0$$, and this formula may be always considered
 as the product of two factors, which we shall represent by
-(x-p) x (x-q), without considering what nnmbers the
-letters p and q represent, or whether they be negative or
-positi ve. Now, a" this product must be = 0, from the
+$$(x-p) \times (x-q)$$, without considering what numbers the
+letters $$p$$ and $$q$$ represent, or whether they be negative or
+positive. Now, this product must be $$= 0$$, from the
 nature of our equation, it is evident that this may happen
-in two cases; in the first place, when x= p; and in the
-second place, when x=q ; and these are the two values of
-x which satisfy the terms of the equation,
+in two cases; in the first place, when $$x= p$$; and in the
+second place, when $$x=q$$; and these are the two values of
+$$x$$ which satisfy the terms of the equation,
 
 695. Let us here consider the nature of these two
-factors, in order that the ttlultiplication of the one by
-the other may exactly produce x2-ax+b. By actually
-multiplying them, we obtain x 2 _( p + q)x + pq; which
-quantity must be the same asxz-ax+b, therefore we have
-evidently p+q=a, and pq=b. Hence is deduced this
-vel'y remarkable property; that in every equation of the
-form x 2 -ax + b=O, the two values of x are such, that
-their sum is equal to a, and their product equal to b: it
+factors, in order that the multiplication of the one by
+the other may exactly produce $$x^2 -ax+ b$$. By actually
+multiplying them, we obtain $$x^2 -( p + q)x + pq$$; which
+quantity must be the same as $$x^2 -ax+ b$$, therefore we have
+evidently $$p+q=a$$, and $$pq=b$$. Hence is deduced this
+very remarkable property; that in every equation of the
+form $$x^2 -ax + b=0$$, the two values of $$x$$ are such, that
+their sum is equal to $$a$$, and their product equal to $$b$$: it
 therefore necessarilv follows, that, if we know one of the
 values, the other is easily found. 
 
 696. We have at present COllsidered the case, in which
-the two values of x are positive, and which requires the
-second term of the equation to have the sign -, and the
-third term to have the sign +. Let us also consider
-the cases, in which either one or both values of x become
+the two values of $$x$$ are positive, and which requires the
+second term of the equation to have the sign $$-$$, and the
+third term to have the sign $$+$$. Let us also consider
+the cases, in which either one or both values of $$x$$ become
 negative. The first takes place, when the two factors of
-the equation give a product of this form, (x-p) x (x+q);
-for then the two values of x are x = p, and x = - q; and
+the equation give a product of this form, $$(x-p) \times (x+q)$$;
+for then the two values of $$x$$ are $$x = p$$, and $$x = - q$$; and
 the equation itself becomes
-x 2 +(q-p)x-pq=0 ;
-the second term having the sign + whell q is greater
-than ", and the sign - when q is less than p; lastly, the
-third term is always negative, ..
-246 ELEMENTS SECT. IV.
-The second case, in which both values of x are negative,
-occurs when the two factors are
-(x+p) x (x+q);
-for we shall then have x= -p, and x= -q; the equation
-itself therefore becomes
-x 2+(p +q) x+pq=O.
-in which both the second and third terms are affected by
-the sign +.
+$$x^2 +(q-p)x-pq=0$$;
+the second term having the sign $$+$$ when $$q$$ is greater
+than $$p$$, and the sign $$-$$ when $$q$$ is less than $$p$$; lastly, the
+third term is always negative.
 
-697. The signs of the second and the third terms consequently shew us the nature of the roots of any equation
-of the second degree. For let the equation be x 2 • ••• ax
-.... b=O. If the second and third terms have the sign +,
-the two values of x are both negative; if the second term
-have the sign -, and the thil'd term +, both values are
-positive: lastly, if the third term also have the sign -,
+The second case, in which both values of $$x$$ are negative,
+occurs when the two factors are
+$$(x+p) \times (x+q)$$;
+for we shall then have $$x= -p$$, and $$x= -q$$; the equation
+itself therefore becomes
+$$x^2+(p +q) x+pq=0$$.
+in which both the second and third terms are affected by
+the sign $$+$$.
+
+697. The signs of the second and the third terms consequently show us the nature of the roots of any equation
+of the second degree. For let the equation be
+$$x^2 \pm ax \pm b=0$$. If the second and third terms have the sign $$+$$,
+the two values of $$x$$ are both negative; if the second term
+have the sign $$-$$, and the third term $$+$$, both values are
+positive: lastly, if the third term also have the sign $$-$$,
 one of the values in question is positive. But, in all cases
 whatever, the second term contains the sum of the two
 values, and the third term contains their product. 
 
 698. After what has been said, it will be easy to form
-equations'ofthe second degree containing any two given
+equations of the second degree containing any two given
 values. Let there be required, for example, an equation
-such, that one of the values of x may be 7, and the other
--3. We first form the simple equations x=7, and
-x= -3; whence, x-7=O, and x+3=0; these give us
+such, that one of the values of $$x$$ may be 7, and the other
+-3. We first form the simple equations $$x=7$$, and
+$$x= -3$$; whence, x-7=0, and x+3=0; these give us
 the factors of the equation required, which consequently
-becomes x 2 -4x-2l =0. Applying here, also, the above
-rule, we find the two given values of x ; forifx2=4x+2l,
-we have, by completing the square, &c. x=2± .;25=2
+becomes $$x^2 -4x-2l =0$$. Applying here, also, the above
+rule, we find the two given values of $$x$$; for if $$x^2=4x+21$$,
+we have, by completing the square, etc. x=2± .25=2
 ±5; that is to say, x=7, or x= -3. 
 
 699. The values of x may also happen to be equal. Suppose, for example, that an equation is required, in which
