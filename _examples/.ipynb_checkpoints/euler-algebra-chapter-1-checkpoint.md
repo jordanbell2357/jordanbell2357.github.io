@@ -1,18 +1,18 @@
 ---
 layout: post
-title: Euler, "The Elements of Algebra", Section IV, Chapter I
+title: Euler, "The Elements of Algebra", Chapter 1
 topic: euler
 ---
 
 Leonhard Euler, *Elements of Algebra*[^1] [^2] [^4]
 
-[^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770)
+[^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770/5)
 
 [^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
 
 [^4]: [Chris Sangwin: A tale of two curricula: Euler's algebra text book](https://plus.maths.org/content/tale-two-curricula-eulers-algebra-text-book)
 
-Section IV, Chapter I, "Of  the  *Solution*  of *Problems* in General" [PDF](/assets/euler/chapI.pdf)
+Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/assets/euler/chapI.pdf)
 
 > **563\.** The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the

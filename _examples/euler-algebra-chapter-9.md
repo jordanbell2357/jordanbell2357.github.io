@@ -1,16 +1,16 @@
 ---
 layout: post
-title: Euler, "The Elements of Algebra", Section IV, Chapter IX
+title: Euler, "The Elements of Algebra", Chapter 9
 topic: euler
 ---
 
 Leonhard Euler, *Elements of Algebra*[^1] [^2]
 
-[^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770)
+[^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770/112)
 
 [^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
 
-Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*." [PDF](/assets/euler/chapIX.pdf)
+Section IV, Chapter 9, "Of the *Nature* of *Equations* of the *Second Degree*." [PDF](/assets/euler/chapIX.pdf)
 
 > **689.** What we have already said sufficiently shows,
 > that equations of the second degree admit of two solutions; and this property ought to be examined in every
