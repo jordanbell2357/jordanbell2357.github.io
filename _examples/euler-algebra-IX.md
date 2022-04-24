@@ -152,7 +152,7 @@ Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*."
 > $$10x-x^2=30$$; wherefore $$x^2= 10x-30$$, and $$x=5 \pm \sqrt{-5}$$,
 > which, being an imaginary number, shows that the question is impossible. 
 >
-> 701. It is very important, therefore, to discover some
+> **701.** It is very important, therefore, to discover some
 > sign, by means of which we may immediately know whether
 > an equation of the second degree be possible or not.
 >
@@ -175,8 +175,8 @@ Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*."
 > and
 > 
 > ② $$x=3-\sqrt{-1}$$,
-> quantities whose sum is
-> 6, and the product 10. 
+>
+> quantities whose sum is 6, and the product 10. 
 >
 > **702.** The expression which we have just found may likewise be represented in a manner more general, and so as
 > to be applied to equations of this form, $$fx^2 \pm gx + h=0$$;
@@ -237,11 +237,11 @@ Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*."
 > $$
 \begin{align*}
 &\text{ }\text{ }\text{ }x+7\\
-x-3 &{\big| x^2+4x-21}\\
+x-3 &{\overline \big| x^2+4x-21}\\
 &\underline{\text{ }x^2-3x}\\
 &\text{ }\text{ }\text{ }7x-21\\
 &\text{ }\text{ }\underline{\text{ }7x-21}\\
-&\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }0
+&\qquad 0
 \end{align*}
 $$
 >
