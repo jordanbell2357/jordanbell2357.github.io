@@ -201,49 +201,48 @@ Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*."
 > whereas no approximations can take place with regard to
 > imaginary expressions, such as $$\sqrt{-5}$$; for 100 is as far
 > from being the value of that root, as 1, or any other number.
+>
+> 703. We have farther to observe, that any quantity of
+> the second degree, $$x^2 \pm ax \pm b$$, must always be resolvible
+> into two factors, such as $$(x \pm p) \times (x \pm q)$$. For, if we
+> took three factors, such as these, we should come to a
+> quantity of the third degree; and taking only one such
+> factor, we should not exceed the first degree. It is therefore certain, that every equation of the second degree
+> necessarily contains two values of $$x$$, and that it can neither
+> have more nor less
+>
+> **704.** We have already seen, that when the two factors
+> are found, the two values of $$x$$ are also known, since each
+> factor gives one of those values, by making it equal to 0.
+> The converse also is true, viz. that when we have found
+> one value of $$x$$, we know also one of the factors of the
+> equation; for if $$x=p$$ represents one of the values of $$x$$,
+> in any equation of the second degree, $$x-p$$ is one of the
+> factors of that equation; that is to say, all the terms having heen brought to one side, the equation is divisible by
+> $$x - p$$; and farther, the quotient expresses the other factor. 
+>
+> **705.** In order to illustrate what we have now said, let
+> there be given the equation $$x^2+4x-21=0$$, in which
+> we know that $$x=3$$ is one of the values of $$x$$, because
+> $$(3 \times 3)+(4 \times 3)-21=0$$; this shows, that $$x-3$$ is one of
+> the factors of the equation, or that $$x^2+4x-21$$ is divisible
+> by $$x-3$$, which the actual division proves. Thus,
+>
+> $$
+\begin{align*}
+&\text{ }\text{ }\text{ }x+7\\
+x-3 &\overline{\big)x^2+4x-21}\\
+&\underline{\text{ }x^2-3x}\\
+&\text{ }\text{ }\text{ }7x-21\\
+&\text{ }\text{ }\underline{\text{ }7x-21}\\
+&\text{ }\text{ }\text{ }\text{ }\text{ }\text{ }0
+\end{align*}
+$$
+>
+> hi
 
-703. We have farther to observe, that any quantity of
-the second degree, $$x^2 \pm ax \pm b$$, must always be resolvible
-into two factors, such as $$(x \pm p) \times (x \pm q)$$. For, if we
-took three factors, such as these, we should come to a
-quantity of the third degree; and taking only one such
-factor, we should not exceed the first degree. It is therefore certain, that every equation of the second degree
-necessarily contains two values of $$x$$, and that it can neither
-have more nor less
 
-704. We have already seen, that when the two factors
-are found, the two values of $$x$$ are also known, since each
-factor gives one of those values, by making it equal to 0.
-The converse also is true, viz. that when we have found
-one value of $$x$$, we know also one of the factors of the
-equation; for if $$x=p$$ represents one of the values of $$x$$,
-in any equation of the second degree, $$x-p$$ is one of the
-factors of that equation; that is to say, all the terms having heen brought to one side, the equation is divisible by
-$$x - p$$; and farther, the quotient expresses the other factor. 
-
-705. In order to illustrate what we have now said, let
-there be given the equation $$x^2+4x-21=0$$, in which
-we know that $$x=3$$ is one of the values of $$x$$, because
-$$(3 \times 3)+(4 \times 3)-21=0$$; this shows, that $$x-3$$ is one of
-the factors of the equation, or that $$x^2+4x-21$$ is divisible
-by $$x-3$$, which the actual division proves. Thus,
-
-
-So that the other factor is $$x + 7$$, and our equation is represented by the product $$(x-3) \times (x+7)=0$$; whence
+So that the other factor is $$x + 7$$, and our equation is represented by the product
+$$(x-3) \times (x+7)=0$$; whence
 two values of $$x$$ immediately follow, the first factor giving
-$$x=3$$, and the other $$x= -7$$. 
-
-
-$$
-\begin{array}{r}
-x+4\phantom{)}   \\
-x-2{\overline{\smash{\big)}\,x^2+2x+3\phantom{)}}}\\
-\underline{-~\phantom{(}(x^2-2x)\phantom{-b)}}\\
-0+4x+3\phantom{)}\\ 
-\underline{-~\phantom{()}(4x-8)}\\ 
-0+11\phantom{)}
-
-\end{array}
-$$
-
-
+$$x=3$$, and the other $$x= -7$$.
