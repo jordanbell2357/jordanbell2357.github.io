@@ -178,6 +178,31 @@ $$x^2=\mp \dfrac{gx}{f} - \dfrac{h}{f}$$,
 and 
 
 
+$$
+\begin{align*}
+  \renewcommand\arraystretch{.75}\renewcommand\arraycolsep{3pt}
+  \begin{array}{r@{\hskip\arraycolsep}c@{\hskip\arraycolsep}l*5r} % n=8=3+5
+    &&0.&6&6&6&6&\cdots\\
+    \cline{2-8} %n=8
+   3&\Bigg)&2.&0&0&0&0&\cdots \\
+    &&1.&8&&&& \\
+    \cline{3-8}\\
+    &&&2&0&&&\\
+    &&&1&8&&&\\
+    \cline{4-8}\\
+    &&&&2&0&&\\
+    &&&&1&8&&\\
+    \cline{5-8}\\
+    &&&&&2&0&\\
+    &&&&&1&8&\\
+    \cline{6-8}\\
+    &&&&&&2& \\
+    &&&&&&&\ddots \\
+  \end{array}
+\end{align*}
+$$
+
+
 whence we conclude, that the two
 values are imaginary, and consequently, the equation impossible, when $$4fh$$ is greater than $$g^2$$; that is to say, when,
 in the four times the product of
