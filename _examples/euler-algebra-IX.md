@@ -168,10 +168,16 @@ Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*."
 > have this property, that their sum is equal to $$a$$, and their
 > product equal to $$b$$. Thus, in the equation $$x^2 -6x+ 10=0$$,
 > the sum of the two values of $$x$$ must be 6, and the product
-> of these two values must be 10; now, we find, ① $$x= 3 + \sqrt{-1}$$, and ② $$x=3-\sqrt{-1}$$,
+> of these two values must be 10; now, we find,
+>
+> ① $$x= 3 + \sqrt{-1}$$,
+>
+> and
+> 
+> ② $$x=3-\sqrt{-1}$$,
 > quantities whose sum is
 > 6, and the product 10. 
-
+>
 > **702.** The expression which we have just found may likewise be represented in a manner more general, and so as
 > to be applied to equations of this form, $$fx^2 \pm gx + h=0$$;
 > for this equation gives
