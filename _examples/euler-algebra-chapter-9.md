@@ -208,7 +208,7 @@ Section IV, Chapter 9, "Of the *Nature* of *Equations* of the *Second Degree*." 
 > imaginary expressions, such as $$\sqrt{-5}$$; for 100 is as far
 > from being the value of that root, as 1, or any other number.
 >
-> 703. We have farther to observe, that any quantity of
+> **703.** We have farther to observe, that any quantity of
 > the second degree, $$x^2 \pm ax \pm b$$, must always be resolvible
 > into two factors, such as $$(x \pm p) \times (x \pm q)$$. For, if we
 > took three factors, such as these, we should come to a
