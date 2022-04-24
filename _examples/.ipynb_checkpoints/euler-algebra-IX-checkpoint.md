@@ -214,6 +214,10 @@ x-2{\overline{\smash{\big)}\,x^2+2x+3\phantom{)}}}\\
 \end{array}
 $$
 
+$$
+\polylongdiv{x^3-7x+6}{x-1}
+$$
+
 
 whence we conclude, that the two
 values are imaginary, and consequently, the equation impossible, when $$4fh$$ is greater than $$g^2$$; that is to say, when,
