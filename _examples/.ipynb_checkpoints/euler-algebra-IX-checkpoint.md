@@ -149,7 +149,7 @@ Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*."
 > example, to divide the number 10 into two parts, such
 > that their product may be 30. If we call one of those
 > parts $$x$$, the other will be $$10-x$$, and their product will be
-> $$10x-x^2=30$$; wherefore $$x^2= 10x-30$$, and $$x=5 \pm sqrt{-5}$$,
+> $$10x-x^2=30$$; wherefore $$x^2= 10x-30$$, and $$x=5 \pm \sqrt{-5}$$,
 > which, being an imaginary number, shows that the question is impossible. 
 
 701. It is very important, therefore, to discover some
@@ -200,6 +200,18 @@ $$
     &&&&&&&\ddots \\
   \end{array}
 \end{align*}
+$$
+
+$$
+\begin{array}{r}
+x+4\phantom{)}   \\
+x-2{\overline{\smash{\big)}\,x^2+2x+3\phantom{)}}}\\
+\underline{-~\phantom{(}(x^2-2x)\phantom{-b)}}\\
+0+4x+3\phantom{)}\\ 
+\underline{-~\phantom{()}(4x-8)}\\ 
+0+11\phantom{)}
+
+\end{array}
 $$
 
 
