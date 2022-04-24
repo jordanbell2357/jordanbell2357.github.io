@@ -151,88 +151,56 @@ Section IV, Chapter IX, "Of the *Nature* of *Equations* of the *Second Degree*."
 > parts $$x$$, the other will be $$10-x$$, and their product will be
 > $$10x-x^2=30$$; wherefore $$x^2= 10x-30$$, and $$x=5 \pm \sqrt{-5}$$,
 > which, being an imaginary number, shows that the question is impossible. 
+>
+> 701. It is very important, therefore, to discover some
+> sign, by means of which we may immediately know whether
+> an equation of the second degree be possible or not.
+>
+> Let us resume the general equation $$x^2 -ax+b=0$$. We
+> shall have $$x^2=ax - b$$, and $$x =\frac{1}{2}a \pm \sqrt{\frac{1}{4}a^2-b}$$. This
+> shows, that if $$b$$ be greater than $$\frac{1}{4}a^2$$, or $$4b$$ greater than $$a^2$$,
+> the two values of $$x$$ are always imaginary, since it would be
+> required to extract the square root of a negative quantity;
+> on the contrary, if $$b$$ be less than $$\frac{1}{4}a^2$$, or even less than 0,
+> that is to say, if it be a negative number, both values will
+> be possible or real. But, whether they be real or imaginary,
+> it is no less true, that they are still expressible, and always
+> have this property, that their sum is equal to $$a$$, and their
+> product equal to $$b$$. Thus, in the equation $$x^2 -6x+ 10=0$$,
+> the sum of the two values of $$x$$ must be 6, and the product
+> of these two values must be 10; now, we find, ① $$x= 3 + \sqrt{-1}$$, and ② $$x=3-\sqrt{-1}$$,
+> quantities whose sum is
+> 6, and the product 10. 
 
-701. It is very important, therefore, to discover some
-sign, by means of which we may immediately know whether
-an equation of the second degree be possible or not.
-
-Let us resume the general equation $$x^2 -ax+b=0$$. We
-shall have $$x^2=ax - b$$, and $$x =\frac{1}{2}a \pm \surd(\frac{1}{4}a^2-b)$$. This
-shows, that if $$b$$ be greater than $$\frac{1}{4}a^2$$, or $$4b$$ greater than $$a^2$$,
-the two values of $$x$$ are always imaginary, since it would be
-required to extract the square root of a negative quantity;
-on the contrary, if $$b$$ be less than $$\frac{1}{4}a^2$$, or even less than 0,
-that is to say, if it be a negative number, both values will
-be possible or real. But, whether they be real or imaginary,
-it is no less true, that they are still expressible, and always
-have this property, that their sum is equal to $$a$$, and their
-product equal to $$b$$. Thus, in the equation $$x^2 -6x+ 10=0$$,
-the sum of the two values of $$x$$ must be 6, and the product
-of these two values must be 10; now, we find, ① $$x= 3 + \sqrt{-1}$$, and ② $$x=3-\sqrt{-1}$$, quantities whose sum is
-6, and the product 10. 
-
-702. The expression which we have just found may likewise be represented in a manner more general, and so as
-to be applied to equations of this form, fx^2 \pm gx + h=0;
-for this equation gives
-$$x^2=\mp \dfrac{gx}{f} - \dfrac{h}{f}$$,
-and 
-
-
-$$
-\begin{align*}
-  \renewcommand\arraystretch{.75}\renewcommand\arraycolsep{3pt}
-  \begin{array}{r@{\hskip\arraycolsep}c@{\hskip\arraycolsep}l*5r} % n=8=3+5
-    &&0.&6&6&6&6&\cdots\\
-    \cline{2-8} %n=8
-   3&\Bigg)&2.&0&0&0&0&\cdots \\
-    &&1.&8&&&& \\
-    \cline{3-8}\\
-    &&&2&0&&&\\
-    &&&1&8&&&\\
-    \cline{4-8}\\
-    &&&&2&0&&\\
-    &&&&1&8&&\\
-    \cline{5-8}\\
-    &&&&&2&0&\\
-    &&&&&1&8&\\
-    \cline{6-8}\\
-    &&&&&&2& \\
-    &&&&&&&\ddots \\
-  \end{array}
-\end{align*}
-$$
-
-$$
-\begin{array}{r}
-x+4\phantom{)}   \\
-x-2{\overline{\smash{\big)}\,x^2+2x+3\phantom{)}}}\\
-\underline{-~\phantom{(}(x^2-2x)\phantom{-b)}}\\
-0+4x+3\phantom{)}\\ 
-\underline{-~\phantom{()}(4x-8)}\\ 
-0+11\phantom{)}
-
-\end{array}
-$$
-
-$$
-\polylongdiv{x^3-7x+6}{x-1}
-$$
-
-
-whence we conclude, that the two
-values are imaginary, and consequently, the equation impossible, when $$4fh$$ is greater than $$g^2$$; that is to say, when,
-in the four times the product of
-the first and the last term exceeds the square of the second
-term: for the product of the first and the last term, taken
-four times, is $$4fhx^2$$, and the square of the middle term is
-$$g^2x^2$$; now, if $$4fhx^2$$ be greater than $$g^2x^2$$, $$4fh$$ is also greater
-than $$g^2$$, and, in that case, the equation is evidently impossible; but in all other cases, the equation is possible,
-and two real values of $$x$$ may be assigned. It is true, they
-are often irrational; but we have already seen, that, in
-such cases, we may always find them by approximation:
-whereas no approximations can take place with regard to
-imaginary expressions, such as $$\sqrt{-5}$$; for 100 is as far
-from being the value of that root, as 1, or any other number.
+> **702.** The expression which we have just found may likewise be represented in a manner more general, and so as
+> to be applied to equations of this form, $$fx^2 \pm gx + h=0$$;
+> for this equation gives
+>
+> $$x^2=\mp \dfrac{gx}{f} - \dfrac{h}{f}$$,
+>
+> and
+>
+> $$x= \mp \dfrac{g}{2f} \pm \sqrt{\frac{g^2}{4f^2}-\frac{h}{f}}$$,
+>
+> or
+>
+> $$x = \dfrac{\mp g \pm \sqrt{g^2-4fh}}{2f}$$;
+>
+> whence we conclude, that the two
+> values are imaginary, and consequently, the equation impossible, when $$4fh$$ is greater than > $$g^2$$; that is to say, when,
+> in the equation $$fx^2 - gx + h=0$$,
+> four times the product of
+> the first and the last term exceeds the square of the second
+> term: for the product of the first and the last term, taken
+> four times, is $$4fhx^2$$, and the square of the middle term is
+> $$g^2x^2$$; now, if $$4fhx^2$$ be greater than $$g^2x^2$$, $$4fh$$ is also greater
+> than $$g^2$$, and, in that case, the equation is evidently impossible; but in all other cases, the equation is possible,
+> and two real values of $$x$$ may be assigned. It is true, they
+> are often irrational; but we have already seen, that, in
+> such cases, we may always find them by approximation:
+> whereas no approximations can take place with regard to
+> imaginary expressions, such as $$\sqrt{-5}$$; for 100 is as far
+> from being the value of that root, as 1, or any other number.
 
 703. We have farther to observe, that any quantity of
 the second degree, $$x^2 \pm ax \pm b$$, must always be resolvible
@@ -265,5 +233,17 @@ So that the other factor is $$x + 7$$, and our equation is represented by the pr
 two values of $$x$$ immediately follow, the first factor giving
 $$x=3$$, and the other $$x= -7$$. 
 
+
+$$
+\begin{array}{r}
+x+4\phantom{)}   \\
+x-2{\overline{\smash{\big)}\,x^2+2x+3\phantom{)}}}\\
+\underline{-~\phantom{(}(x^2-2x)\phantom{-b)}}\\
+0+4x+3\phantom{)}\\ 
+\underline{-~\phantom{()}(4x-8)}\\ 
+0+11\phantom{)}
+
+\end{array}
+$$
 
 
