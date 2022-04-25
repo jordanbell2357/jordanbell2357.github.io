@@ -166,3 +166,44 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > we $$5x+3=7x-7$$; and subtracting $$5x$$, there remains
 > $$3 =2x-7$$; then adding 7, we have $$2x= 10$$; whence
 > $$x=5$$.
+>
+> **21.** Sometimes, also, radical signs are found in equations
+> of the first degree. For example: A number $$x$$, below 100,
+> is required, such, that the square root of $$100-x$$ may be
+> equal to 8; or $$\sqrt{100-x}=8$$. The square of both sides
+> will give $$100-x=64$$, and adding $$x$$, we have $$100=64+x$$:
+> whence we obtain $$x=100-64=36$$.
+>
+> Or, since $$100-x=64$$, we might have subtracted 100
+> from both sides: which would have given $$-x= -36$$; or,
+> multiplying by $$-1$$, $$x=36$$.
+>
+> **22.** Lastly, the unknown number $$x$$ is sometimes found
+> as an exponent, of which we have already seen some
+> examples; and, in this case, we must have recourse to
+> logarithms. 
+>
+> Thus, when we have $$2^x=512$$, we take the logarithms of
+> both sides; whence we obtain $$x \log 2 = \log 512$$; and
+> dividing by $$\log 2$$, we find $$x = \dfrac{\log 512}{\log 2}$$. The Tables then give,
+>
+> $$x = \dfrac{2.7092700}{0.3010300} = \dfrac{27092700}{3010300}$$,
+>
+> or $$x=9$$.
+>
+> Let $$5 \cdot 3^{2x} - 100 = 305$$;  we add 100, which gives
+> $$5 \cdot 3^{2x} = 405$$; dividing by 5, we have $$3^{2x}= 81$$; and taking
+> the logarithms,
+> $$2x \log 3=\log 81$$,
+> and dividing by $$2 \log 3$$,
+> we have
+>
+> $$x = \dfrac{\log 81}{2 \log 3}$$,
+>
+> or,
+>
+> $$x = \dfrac{\log 81}{\log 9}$$;
+>
+> whence
+>
+> $$x = \dfrac{1.9084850}{0.9542425}=\dfrac{19084850}{09542425}=2$$.
