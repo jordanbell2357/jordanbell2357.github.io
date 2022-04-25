@@ -4,15 +4,15 @@ title: Euler, "The Elements of Algebra", Chapter 1
 topic: euler
 ---
 
-[Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.](https://archive.org/details/elementsofalgebr00euleuoft/)
+Leonhard Euler. *Elements of Algebra*. Part Two. First Section. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the *Solution* of *Problems* in General" [PDF](/assets/euler/chapI.pdf) [^1] [^2] [^3] [^4]
 
-[Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770/5)
+[^1]: *Vollständige Anleitung zur Algebra*. Zweyter Theil. Erster Abschnitt. "Von den Algebraischen Gleichungen und derselben Auflösung." Capitel 1. "Von der Auflösung der Aufgaben überhaupt."
 
-Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
+[^2]: Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
 
-*Vollständige Anleitung zur Algebra*. Zweyter Theil. Erster Abschnitt. "Von den Algebraischen Gleichungen und derselben Auflösung." Capitel 1. "Von der Auflösung der Aufgaben überhaupt."
+[^3]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770/5)
 
-*Elements of Algebra*. Part Two. First Section. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the *Solution* of *Problems* in General" [PDF](/assets/euler/chapI.pdf)
+[^4]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.](https://archive.org/details/elementsofalgebr00euleuoft/)
 
 > **1.** The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
@@ -46,7 +46,7 @@ Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Jose
 > Twenty persons, men and women, dine at a tavern; the
 > share of the reckoning for one man is 8 shillings, for one
 > woman 7 shillings, and the whole reckoning amounts to
-> 7*l.* 5*s.*[^4] Required the number of men and women
+> 7*l.* 5*s.*[^5] Required the number of men and women
 > separately?
 >
 > In order to resolve this question, let us suppose that the
@@ -120,7 +120,7 @@ Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Jose
 >
 > **10.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  *simple  equations*,  or *equations  of  the  first  degree*.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  *equation  of  the second  degree*,  which  is  more  difficult  to  resolve.  *Equations of  the  third  degree*  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
-[^4]: 1 pound (*l.*) = 20 shillings (*s.*).
+[^5]: 1 pound (*l.*) = 20 shillings (*s.*).
 
 #### Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
 
