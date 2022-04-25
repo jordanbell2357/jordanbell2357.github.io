@@ -240,7 +240,7 @@ Section IV, Chapter 9, "Of the *Nature* of *Equations* of the *Second Degree*." 
 x-3 &{\big| x^2+4x-21}\\
 &\underline{\text{ }x^2-3x}\\
 &\text{ }\text{ }\text{ }7x-21\\
-&\qquad \text{ }\underline{\text{ }7x-21}\\
+&\qquad \underline{\text{ }7x-21}\\
 &\qquad \qquad 0
 \end{align*}
 $$
