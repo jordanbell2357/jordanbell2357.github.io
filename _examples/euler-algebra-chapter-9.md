@@ -236,11 +236,12 @@ Section IV, Chapter 9, "Of the *Nature* of *Equations* of the *Second Degree*." 
 >
 > ![Polynomial long division](/assets/euler/polynom2.png "Polynomial long division")
 >
+> ![Polynomial long division](/assets/euler/adaptive.png "Polynomial long division")
+>
 > So that the other factor is $$x + 7$$, and our equation is represented by the product $$(x-3) \times (x+7)=0$$; whence two values of $$x$$ immediately follow, the first factor giving $$x=3$$, and the other $$x= -7$$.
 
 <!--
 
-![Polynomial long division](/assets/euler/polynom.png "Polynomial long division")
 
 ![Polynomial long division](/assets/euler/polynom2.png "Polynomial long division")
 
