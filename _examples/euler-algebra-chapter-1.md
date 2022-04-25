@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Euler, "The Elements of Algebra", Chapter 1
+title: Euler, "Elements of Algebra", Chapter 1
 topic: euler
 ---
 
-Leonhard Euler. *Elements of Algebra*. Part Two. First Section. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General" [PDF](/assets/euler/chapI.pdf) [^1] [^2] [^3] [^4]
+Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)[^1] [^2] [^3]
 
-[^1]: *Vollständige Anleitung zur Algebra*. Zweyter Theil. Erster Abschnitt. "Von den Algebraischen Gleichungen und derselben Auflösung." Capitel 1. "Von der Auflösung der Aufgaben überhaupt."
+[^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770)
 
 [^2]: Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
 
-[^3]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770/5)
+[^3]: [Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.](https://archive.org/details/elementsofalgebr00euleuoft/)
 
-[^4]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.](https://archive.org/details/elementsofalgebr00euleuoft/)
+Part Two. First Section. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General" [PDF](/assets/euler/chapI.pdf)
+
+(Zweyter Theil. Erster Abschnitt. "Von den Algebraischen Gleichungen und derselben Auflösung." Capitel 1. "Von der Auflösung der Aufgaben überhaupt.")
 
 > **1.** The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
