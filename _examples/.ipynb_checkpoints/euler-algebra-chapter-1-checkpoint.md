@@ -4,17 +4,17 @@ title: Euler, "The Elements of Algebra", Chapter 1
 topic: euler
 ---
 
-Leonhard Euler, *Elements of Algebra*[^1] [^2] [^4]
+Leonhard Euler, *Elements of Algebra*[^1] [^2] [^3] 
 
-[^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770/5)
+[^1]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
 
-[^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
+[^2]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770/5)
 
-[^4]: [Chris Sangwin: A tale of two curricula: Euler's algebra text book](https://plus.maths.org/content/tale-two-curricula-eulers-algebra-text-book)
+[^3]: Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima, Opera mathematica. Volumen primum.
 
 Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/assets/euler/chapI.pdf)
 
-> **563\.** The principal object of Algebra, as well as of all
+> **563.** The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
 > value of quantities that were before unknown; and this is
 > obtained by considering attentively the conditions given,
@@ -23,7 +23,7 @@ Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/asse
 > teaches how to determine unknown quantities by means of
 > those that are known.*
 >
-> **564\.** The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
+> **564.** The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
 >
 > Of this, Addition  will  readily  furnish  an  example;  for,  in order  to  find  the  sum  of  two  or  more  given  numbers,  we  had to  seek  for  an  unknown  number,  which  should  be  equal  to those  known  numbers  taken  together.  In  Subtraction, we sought for a number which should be equal  to  the  difference of  two  known  numbers.  A  multitude  of  other  examples are  presented  by  Multiplication,  Division,  the  Involution of  powers,  and  the  Extraction  of  roots;  the  question being  always  reduced  to  finding,  by  means  of  known quantities,  other  quantities  which  are  unknown.
 >
@@ -46,7 +46,7 @@ Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/asse
 > Twenty persons, men and women, dine at a tavern; the
 > share of the reckoning for one man is 8 shillings, for one
 > woman 7 shillings, and the whole reckoning amounts to
-> 7*l.* 5*s.*[^3] Required the number of men and women
+> 7*l.* 5*s.*[^4] Required the number of men and women
 > separately?
 >
 > In order to resolve this question, let us suppose that the
@@ -65,7 +65,7 @@ Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/asse
 > shillings. So that adding together $$8x$$ and $$140-7x$$, we see
 > that the whole 20 persons must spend $$140 +x$$ shillings.
 > Now, we know already how much they have spent;
-> namely, 7*l.* 5*s.* or 145*s.*;[^3] there must be an equality, therefore, between $$140+x$$ and 145; that is to say, we have
+> namely, 7*l.* 5*s.* or 145*s.*;[^4] there must be an equality, therefore, between $$140+x$$ and 145; that is to say, we have
 > the equation $$140 +x= 145$$, and thence we easily deduce
 > $$x=5$$, and consequently $$20-x=20-5=15$$; so that the
 > company consisted of 5 men and 15 women.
@@ -120,7 +120,7 @@ Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/asse
 >
 > **572\.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  *simple  equations*,  or *equations  of  the  first  degree*.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  *equation  of  the second  degree*,  which  is  more  difficult  to  resolve.  *Equations of  the  third  degree*  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
-[^3]: 1 pound (*l.*) = 20 shillings (*s.*).
+[^4]: 1 pound (*l.*) = 20 shillings (*s.*).
 
 #### Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
 
@@ -193,3 +193,6 @@ Therefore $$x=60$$ or $$x=8$$.
 
 Because the total number of persons is 20, $$x=8$$.
 
+#### Further reading
+
+[Chris Sangwin: A tale of two curricula: Euler's algebra text book](https://plus.maths.org/content/tale-two-curricula-eulers-algebra-text-book)
