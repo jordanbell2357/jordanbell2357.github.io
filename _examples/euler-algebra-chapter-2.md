@@ -6,6 +6,8 @@ topic: euler
 
 Leonhard Euler, *Elements of Algebra*[^1] [^2]
 
+Capitel 2. Von den Gleichungen des ersten Grades und ihrer Auflösung
+
 [^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770/12)
 
 [^2]: [Leonhard Euler, *Elements of algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822](https://archive.org/details/elementsofalgebr00euleuoft/)
