@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "The Elements of Algebra", Chapter 4
+title: Euler, "Elements of Algebra", Chapter 4
 topic: euler
 ---
 
