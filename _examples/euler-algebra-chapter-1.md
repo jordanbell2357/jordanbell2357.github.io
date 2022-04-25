@@ -12,9 +12,7 @@ topic: euler
 
 [^3]: [Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.](https://archive.org/details/elementsofalgebr00euleuoft/)
 
-#### Part Two. First Section. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General" [PDF](/assets/euler/chapI.pdf)
-
-#### (Zweyter Theil. Erster Abschnitt. "Von den Algebraischen Gleichungen und derselben Auflösung." Capitel 1. "Von der Auflösung der Aufgaben überhaupt.")
+#### Part Two. First Section. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General" [PDF](/assets/euler/chapI.pdf) (Zweyter Theil. Erster Abschnitt. "Von den Algebraischen Gleichungen und derselben Auflösung." Capitel 1. "Von der Auflösung der Aufgaben überhaupt.")
 
 > **1.** The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
@@ -27,7 +25,7 @@ topic: euler
 >
 > **2.** The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
 >
-> Of this, Addition  will  readily  furnish  an  example;  for,  in order  to  find  the  sum  of  two  or  more  given  numbers,  we  had to  seek  for  an  unknown  number,  which  should  be  equal  to those  known  numbers  taken  together.  In  Subtraction, we sought for a number which should be equal  to  the  difference of  two  known  numbers.  A  multitude  of  other  examples are  presented  by  Multiplication,  Division,  the  Involution of  powers,  and  the  Extraction  of  roots;  the  question being  always  reduced  to  finding,  by  means  of  known quantities,  other  quantities  which  are  unknown.
+> Of this, Addition will readily furnish an example; for, in order to  find  the  sum  of  two  or  more  given  numbers,  we  had to  seek  for  an  unknown  number,  which  should  be  equal  to those  known  numbers  taken  together.  In  Subtraction, we sought for a number which should be equal  to  the  difference of  two  known  numbers.  A  multitude  of  other  examples are  presented  by  Multiplication,  Division,  the  Involution of  powers,  and  the  Extraction  of  roots;  the  question being  always  reduced  to  finding,  by  means  of  known quantities,  other  quantities  which  are  unknown.
 >
 > **3.** In the last section, also, different questions were
 > resolved, in which it was required to determine a number
