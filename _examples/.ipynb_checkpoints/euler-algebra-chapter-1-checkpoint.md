@@ -4,7 +4,7 @@ title: Euler, "The Elements of Algebra", Chapter 1
 topic: euler
 ---
 
-Leonhard Euler. *Elements of Algebra*. Part Two. First Section. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the *Solution* of *Problems* in General" [PDF](/assets/euler/chapI.pdf) [^1] [^2] [^3] [^4]
+Leonhard Euler. *Elements of Algebra*. Part Two. First Section. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General" [PDF](/assets/euler/chapI.pdf) [^1] [^2] [^3] [^4]
 
 [^1]: *Vollständige Anleitung zur Algebra*. Zweyter Theil. Erster Abschnitt. "Von den Algebraischen Gleichungen und derselben Auflösung." Capitel 1. "Von der Auflösung der Aufgaben überhaupt."
 
