@@ -12,20 +12,6 @@ Leonhard Euler, *Elements of Algebra*[^1] [^2] [^3]
 
 [^3]: Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
 
-$$
-\require{enclose}
-\begin{array}{rll}
-    125 && \hbox{(Explanations)} \\[-3pt]
-   4 \enclose{longdiv}{500}\kern-.2ex \\[-3pt]
-      \underline{4\phantom{00}} && \hbox{($4 \times 1 = 4$)} \\[-3pt]
-      10\phantom{0} && \hbox{($5 - 4 = 1$)} \\[-3pt]
-      \underline{\phantom{0}8\phantom{0}} && \hbox{($4 \times 2 = 8$)} \\[-3pt]
-      \phantom{0}20 && \hbox{($10 - 8 = 2$)} \\[-3pt]
-      \underline{\phantom{0}20} && \hbox{($4 \times 5 = 20$)} \\[-3pt]
-      \phantom{00}0
-  \end{array}
-$$
-
 Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/assets/euler/chapI.pdf)
 
 > **563.** The principal object of Algebra, as well as of all
@@ -41,9 +27,9 @@ Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/asse
 >
 > Of this, Addition  will  readily  furnish  an  example;  for,  in order  to  find  the  sum  of  two  or  more  given  numbers,  we  had to  seek  for  an  unknown  number,  which  should  be  equal  to those  known  numbers  taken  together.  In  Subtraction, we sought for a number which should be equal  to  the  difference of  two  known  numbers.  A  multitude  of  other  examples are  presented  by  Multiplication,  Division,  the  Involution of  powers,  and  the  Extraction  of  roots;  the  question being  always  reduced  to  finding,  by  means  of  known quantities,  other  quantities  which  are  unknown.
 >
-> **565\.** ...
+> **565.** ...
 >
-> **566\.** In Algebra, when we have a question to resolve,
+> **566.** In Algebra, when we have a question to resolve,
 > we represent the number sought by one of the last letters
 > of the alphabet, and then consider in what manner the
 > given conditions can form an equality between two
@@ -53,7 +39,7 @@ Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/asse
 > numbers are sought; but they are found in the same
 > manner by *equations*.
 >
-> **567\.** Let us endeavour to explain this farther by an
+> **567.** Let us endeavour to explain this farther by an
 > example. Suppose the following question, or *problem*,
 > was proposed:
 >
@@ -84,7 +70,7 @@ Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/asse
 > $$x=5$$, and consequently $$20-x=20-5=15$$; so that the
 > company consisted of 5 men and 15 women.
 >
-> **568\.** Again, Suppose twenty persons, men and women,
+> **568.** Again, Suppose twenty persons, men and women,
 > go to a tavern; the men spend 24 shillings, and the women
 > as much: but it is found that the men have spent 1 shilling each more than the women. Required the number
 > of men and women separately?
@@ -106,7 +92,7 @@ Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/asse
 > question; but we shall afterwards see that $$x=8$$, which
 > value answers to the equation; for $$\dfrac{24}{8}-1$$, or $$\dfrac{16}{8}=\dfrac{24}{12}$$ includes the equality $$2=2$$.
 >
-> **569\.** It is evident, therefore, how essential it is, in all
+> **569.** It is evident, therefore, how essential it is, in all
 > problems, to consider the circumstances of the question attentively, in order to deduce from it an equation that shall
 > express by letters the numbers sought, or unknown. After
 > that, the whole art consists in resolving those equations,
@@ -120,7 +106,7 @@ Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/asse
 > all, we must deduce from the circumstances, or the conditions of the problem, as many equations as there are
 > unknown quantities.
 >
-> **571\.** It must have already been perceived, that an equation consists of two parts separated by the sign of equality,
+> **571.** It must have already been perceived, that an equation consists of two parts separated by the sign of equality,
 > $$=$$, to shew that those two quantities are equal to one another; and we are often obliged to perform a great number
 > of transformations on those two parts, in order to deduce
 > from them the value of the unknown quantity: but these
@@ -132,7 +118,7 @@ Section IV, Chapter I, "Of  the *Solution* of *Problems* in General" [PDF](/asse
 > whether we take the logarithms of those quantities, as we
 > have already done in the preceding section.
 >
-> **572\.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  *simple  equations*,  or *equations  of  the  first  degree*.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  *equation  of  the second  degree*,  which  is  more  difficult  to  resolve.  *Equations of  the  third  degree*  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
+> **572.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  *simple  equations*,  or *equations  of  the  first  degree*.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  *equation  of  the second  degree*,  which  is  more  difficult  to  resolve.  *Equations of  the  third  degree*  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
 [^4]: 1 pound (*l.*) = 20 shillings (*s.*).
 
