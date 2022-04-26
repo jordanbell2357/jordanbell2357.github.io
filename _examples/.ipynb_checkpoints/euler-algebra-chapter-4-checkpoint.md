@@ -11,3 +11,7 @@ topic: euler
 [^2]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770)
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 4. "Of the Resolution of two or more Equations of the First Degree." [PDF](/assets/euler/chapIV.pdf)
+
+#### Resources
+
+Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.

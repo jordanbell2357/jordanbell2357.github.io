@@ -205,3 +205,7 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > whence
 >
 > $$x = \dfrac{1.9084850}{0.9542425}=\dfrac{19084850}{09542425}=2$$.
+
+#### Resources
+
+Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
