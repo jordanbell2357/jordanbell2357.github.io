@@ -1,20 +1,18 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Chapter 1
+title: Euler, "Elements of Algebra", Section IV, Chapter 1
 topic: euler
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)[^1] [^2] [^3]
+### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)[^1] [^2]
 
-[^1]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770)
+[^1]: [Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.](https://archive.org/details/elementsofalgebr00euleuoft/)
 
-[^2]: Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
+[^2]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770)
 
-[^3]: [Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.](https://archive.org/details/elementsofalgebr00euleuoft/)
+#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General." [PDF](/assets/euler/chapI.pdf)
 
-#### Part Two. First Section. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General" [PDF](/assets/euler/chapI.pdf) (Zweyter Theil. Erster Abschnitt. "Von den Algebraischen Gleichungen und derselben Auflösung." Capitel 1. "Von der Auflösung der Aufgaben überhaupt.")
-
-> **1.** The principal object of Algebra, as well as of all
+> **563.** The principal object of Algebra, as well as of all
 > the other branches of Mathematics, is to determine the
 > value of quantities that were before unknown; and this is
 > obtained by considering attentively the conditions given,
@@ -23,11 +21,11 @@ topic: euler
 > teaches how to determine unknown quantities by means of
 > those that are known.
 >
-> **2.** The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
+> **564.** The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
 >
 > Of this, Addition will readily furnish an example; for, in order to  find  the  sum  of  two  or  more  given  numbers,  we  had to  seek  for  an  unknown  number,  which  should  be  equal  to those  known  numbers  taken  together.  In  Subtraction, we sought for a number which should be equal  to  the  difference of  two  known  numbers.  A  multitude  of  other  examples are  presented  by  Multiplication,  Division,  the  Involution of  powers,  and  the  Extraction  of  roots;  the  question being  always  reduced  to  finding,  by  means  of  known quantities,  other  quantities  which  are  unknown.
 >
-> **3.** In the last section, also, different questions were
+> **565.** In the last section, also, different questions were
 > resolved, in which it was required to determine a number
 > that could not be deduced from the knowledge of other
 > given numbers, except under certain conditions. All
@@ -37,7 +35,7 @@ topic: euler
 > determined by certain conditions, or properties, which
 > were to agree with the quantity sought
 >
-> **4.** In Algebra, when we have a question to resolve,
+> **566.** In Algebra, when we have a question to resolve,
 > we represent the number sought by one of the last letters
 > of the alphabet, and then consider in what manner the
 > given conditions can form an equality between two
@@ -47,7 +45,7 @@ topic: euler
 > numbers are sought; but they are found in the same
 > manner by equations.
 >
-> **5.** Let us endeavour to explain this farther by an
+> **567.** Let us endeavour to explain this farther by an
 > example. Suppose the following question, or problem,
 > was proposed:
 >
@@ -78,7 +76,7 @@ topic: euler
 > $$x=5$$, and consequently $$20-x=20-5=15$$; so that the
 > company consisted of 5 men and 15 women.
 >
-> **6.** Again, Suppose twenty persons, men and women,
+> **568.** Again, Suppose twenty persons, men and women,
 > go to a tavern; the men spend 24 shillings, and the women
 > as much: but it is found that the men have spent 1 shilling each more than the women. Required the number
 > of men and women separately?
@@ -100,13 +98,13 @@ topic: euler
 > question; but we shall afterwards see that $$x=8$$, which
 > value answers to the equation; for $$\dfrac{24}{8}-1$$, or $$\dfrac{16}{8}=\dfrac{24}{12}$$ includes the equality $$2=2$$.
 >
-> **7.** It is evident, therefore, how essential it is, in all
+> **569.** It is evident, therefore, how essential it is, in all
 > problems, to consider the circumstances of the question attentively, in order to deduce from it an equation that shall
 > express by letters the numbers sought, or unknown. After
 > that, the whole art consists in resolving those equations,
 > or deriving from them the values of the unknown numbers; and this shall be the subject of the present section. 
 >
-> **8.** We must remark, in the first place, the diversity
+> **570.** We must remark, in the first place, the diversity
 > which subsists among the questions themselves. In some,
 > we seek only for one unknown quantity; in others, we
 > have to find two, or more; and, it is to be observed, with
@@ -114,7 +112,7 @@ topic: euler
 > all, we must deduce from the circumstances, or the conditions of the problem, as many equations as there are
 > unknown quantities.
 >
-> **9.** It must have already been perceived, that an equation consists of two parts separated by the sign of equality,
+> **571.** It must have already been perceived, that an equation consists of two parts separated by the sign of equality,
 > $$=$$, to shew that those two quantities are equal to one another; and we are often obliged to perform a great number
 > of transformations on those two parts, in order to deduce
 > from them the value of the unknown quantity: but these
@@ -126,14 +124,13 @@ topic: euler
 > whether we take the logarithms of those quantities, as we
 > have already done in the preceding section.
 >
-> **10.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  simple  equations,  or equations  of  the  first  degree.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  equation  of  the second  degree,  which  is  more  difficult  to  resolve.  Equations of  the  third  degree  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
+> **572.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  simple  equations,  or equations  of  the  first  degree.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  equation  of  the second  degree,  which  is  more  difficult  to  resolve.  Equations of  the  third  degree  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
 [^5]: 1 pound (*l.*) = 20 shillings (*s.*).
 
 #### Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
 
 Given
-
 
 $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$,
 
@@ -200,3 +197,7 @@ $$
 Therefore $$x=60$$ or $$x=8$$.
 
 Because the total number of persons is 20, $$x=8$$.
+
+#### Resources
+
+Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
