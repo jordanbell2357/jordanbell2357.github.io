@@ -4,13 +4,9 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 2
 topic: euler
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)[^1] [^2]
+### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
 
-[^1]: [Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.](https://archive.org/details/elementsofalgebr00euleuoft/)
-
-[^2]: [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770)
-
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 2. "Of the Resolution of Simple Equations, or Equations of the First Degree." [PDF](/assets/euler/chapII.pdf)
+#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 2. "Of the Resolution of Simple Equations, or Equations of the First Degree."
 
 > **573.** When the number sought, or the unknown quantity,
 > is represented by the letter $$x$$, and the equation we have
@@ -208,4 +204,8 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 
 #### Resources
 
-Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum. [PDF](/assets/euler/cap2.pdf)
+1. [Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.](https://archive.org/details/elementsofalgebr00euleuoft/) [PDF](/assets/euler/chap2.pdf)
+
+2. [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.deutschestextarchiv.de/euler_algebra02_1770)
+
+3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum. [PDF](/assets/euler/cap2.pdf)
