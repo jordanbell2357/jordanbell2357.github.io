@@ -142,6 +142,8 @@ topic: euler
 
 - [PDF](/assets/euler/cap1.pdf)
 
+5. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)
+
 #### Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
 
 Given
