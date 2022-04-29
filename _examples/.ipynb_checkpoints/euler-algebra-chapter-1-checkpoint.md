@@ -48,7 +48,7 @@ topic: euler
 > Twenty persons, men and women, dine at a tavern; the
 > share of the reckoning for one man is 8 shillings, for one
 > woman 7 shillings, and the whole reckoning amounts to
-> 7*l.* 5*s.*[^5] Required the number of men and women
+> 7*l.* 5*s. `[1 pound (*l.*) = 20 shillings (*s.*).`] Required the number of men and women
 > separately?
 >
 > In order to resolve this question, let us suppose that the
@@ -121,8 +121,6 @@ topic: euler
 > have already done in the preceding section.
 >
 > **572.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  simple  equations,  or equations  of  the  first  degree.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  equation  of  the second  degree,  which  is  more  difficult  to  resolve.  Equations of  the  third  degree  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
-
-[^5]: 1 pound (*l.*) = 20 shillings (*s.*).
 
 #### References
 
