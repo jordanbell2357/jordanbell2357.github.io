@@ -126,13 +126,21 @@ topic: euler
 
 #### References
 
-1. [Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.](https://archive.org/details/elementsofalgebr00euleuoft/) [PDF](/assets/euler/chap1.pdf)
+1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
 
-2. [Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.](https://www.e-rara.ch/zut/content/structure/2654154)
+- [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
 
-3. [DTA](https://www.deutschestextarchiv.de/euler_algebra02_1770)
+- [PDF](/assets/euler/chap1.pdf)
 
-4. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum. [PDF](/assets/euler/cap1.pdf)
+2. Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.
+
+- [ETH-Bibliothek: e-rara](https://www.e-rara.ch/zut/content/structure/2654154)
+
+- [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
+
+4. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
+
+- [PDF](/assets/euler/cap1.pdf)
 
 #### Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
 
