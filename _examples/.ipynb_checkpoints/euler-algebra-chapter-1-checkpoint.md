@@ -130,9 +130,9 @@ topic: euler
     - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
     - [Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General."](/assets/euler/chap1.pdf)
 2. Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.
-    - [ETH-Bibliothek: e-rara](https://www.e-rara.ch/zut/content/structure/2654154)
     - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
-3. [Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.](https://link.springer.com/book/9783764314002)
+3. [Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum. ISBN
+3-7643-](https://link.springer.com/book/9783764314002)
     - [Des zweyten Theils erster Abschnitt. Von den algebraischen Gleichungen und derselben Auflösung. Capitel 1. Von der Auflösung der Aufgaben überhaupt](/assets/euler/cap1.pdf)
 5. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)
 
