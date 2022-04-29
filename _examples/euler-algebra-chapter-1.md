@@ -48,7 +48,7 @@ topic: euler
 > Twenty persons, men and women, dine at a tavern; the
 > share of the reckoning for one man is 8 shillings, for one
 > woman 7 shillings, and the whole reckoning amounts to
-> 7*l.* 5*s. `[1 pound (*l.*) = 20 shillings (*s.*).`] Required the number of men and women
+> 7*l.* 5*s.* \[1 pound (*l.*) = 20 shillings (*s.*).\] Required the number of men and women
 > separately?
 >
 > In order to resolve this question, let us suppose that the
@@ -109,7 +109,7 @@ topic: euler
 > unknown quantities.
 >
 > **571.** It must have already been perceived, that an equation consists of two parts separated by the sign of equality,
-> $$=$$, to shew that those two quantities are equal to one another; and we are often obliged to perform a great number
+> $$=$$, to show that those two quantities are equal to one another; and we are often obliged to perform a great number
 > of transformations on those two parts, in order to deduce
 > from them the value of the unknown quantity: but these
 > transformations must be all founded on the following principles; namely, That two equal quantities remain equal,
@@ -120,7 +120,7 @@ topic: euler
 > whether we take the logarithms of those quantities, as we
 > have already done in the preceding section.
 >
-> **572.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged ;  and  these  are  called  simple  equations,  or equations  of  the  first  degree.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  equation  of  the second  degree,  which  is  more  difficult  to  resolve.  Equations of  the  third  degree  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
+> **572.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged;  and  these  are  called  simple  equations,  or equations  of  the  first  degree.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  equation  of  the second  degree,  which  is  more  difficult  to  resolve.  Equations of  the  third  degree  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
 #### References
 
