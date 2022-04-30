@@ -107,22 +107,22 @@ topic: euler
 >
 > **611.** We may resolve the same question in the following manner: Since the two equations are,
 >
-> $$x+y=a$$, and $$x-y=b$$;
+$$x+y=a, \quad \textrm{and} \quad x-y=b,$$
 >
 > if we add the one to the other, we have
 >
-> $$2x=a+b$$.
+$$2x=a+b$$.
 >
 > Therefore $$x=\dfrac{a+b}{2}$$.
 >
 > Lastly, subtracting the same equations from each other,
 > we have
 >
-> $$2y=a-b$$;
+$$2y=a-b$$;
 >
 > and therefore
 >
-> $$y=\dfrac{a-b}{2}$$.
+$$y=\dfrac{a-b}{2}$$.
 >
 > **612.** *Question 3.* A mule and an ass were carrying
 > burdens amounting to several hundred weight. The ass
@@ -146,7 +146,7 @@ topic: euler
 >
 > Consequently our two equations will be,
 >
-> $$y + 1 = 2x-2$$, and $$x+1=3y-3$$.
+$$y + 1 = 2x-2$$, and $$x+1=3y-3$$.
 >
 > From the first, $$x=\dfrac{y+3}{2}$$, and the second gives
 > $$x = 3y-4$$; whence we have the new equation $$\dfrac{y+3}{2}=3y-4$$,
@@ -199,6 +199,29 @@ $$
 > equation, and that the value of $$y$$ is found immediately;
 > but if this had not been the case, we should have had
 > two equations between $$z$$ and $$y$$, to be resolved by the preceding rule.
+>
+> **614.** Suppose we had found the three following equations:
+>
+$$
+\begin{gather}
+3x+5y-4z=25,\\
+5x-2y+3z=46,\\
+3y+5z-x=62.
+\end{gather}
+$$
+>
+> If we deduce from each the value of $$x$$ we shall have
+>
+$$
+\begin{gather}
+x=\dfrac{25-5y+4z}{3},\\
+x=\dfrac{46+2y-3z}{5},\\
+x=3y+5z-62.
+\end{gather}
+$$
+>
+> Comparing these three values together, and first the third
+> with the first, we have
 
 
 
