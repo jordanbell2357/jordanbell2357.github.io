@@ -67,7 +67,7 @@ topic: euler
 >
 > Let us call the greater number $$x$$, and the less $$y$$: then we shall have
 >
-I) $$x + y = 15$$, and II) $$x - y =7$$.
+$$\textrm{I)} x + y = 15, \quad \textrm{and} \quad \textrm{II)} x - y =7.$$
 >
 > The first equation gives $$x = 15 - y$$ and the second, $$x = 7 + y$$;
 > whence results this equation, $$15-y = 7 + y$$. So that
@@ -232,6 +232,33 @@ $$
 > $$14y+11z=211$$.
 > 
 > Comparing also the third with the second, we have
+3y+5z-62=\dfrac{46+2y-3z}{5},
+
+or 46+2y-3z=15y+25z-310,
+
+which, when reduced, becomes 356=13y+28z.
+
+We shall now deduce, from these two new equations, the value of y:
+
+14y+11z=211; or 14y=211-11z,
+
+and y = \dfrac{211-11z}{14}.
+
+13y+28z=356; or 13y=356-28z,
+
+and y = \dfrac{356-28z}{13}.
+
+These two values form the new equation
+
+\dfrac{211-11z}{14}=\dfrac{356-28z}{13},
+
+whence
+
+2743-143z=4984-392z, or 249z=2241, and z=9.
+
+This value being substituted in one of the two equations
+of y and z, we find y=8; and, lastly, a similar substitution
+in one of the three values of x, will give x=7.
 
 
 
