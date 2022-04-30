@@ -222,6 +222,17 @@ $$
 >
 > Comparing these three values together, and first the third
 > with the first, we have
+> 
+$$
+3y+5z-62=\dfrac{25-5y+4z}{3};
+$$
+>
+> multiplying bv 3, gives $$9y+15z-186=25-5y+4z$$;
+> so that $$9y + 15z = 211 - 5y - 4z$$, and
+> $$14y+11z=211$$.
+> 
+> Comparing also the third with the second, we have
+
 
 
 
