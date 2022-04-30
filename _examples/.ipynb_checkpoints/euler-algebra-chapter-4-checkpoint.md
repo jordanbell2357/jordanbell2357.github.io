@@ -72,6 +72,88 @@ $$
 > **609.** *Question 1.* To illustrate this method by examples,
 > let it be proposed to find two numbers, whose sum may be
 > 15, and difference 7.
+>
+> Let us call the greater number $$x$$, and the less $$y$$: then we shall have
+>
+> $$x + y = 15$$, and $$x - y =7$$.
+>
+> The first equation gives
+>
+> $$x = 15 - y$$
+>
+> and the second,
+>
+> $$x = 7 + y$$;
+>
+> whence results this equation,
+>
+> $$15-y = 7 + y$$.
+>
+> So that $$15 = 7 + 2y$$; $$2y = 8$$, and $$y=4$$; by which means we find $$x = 11$$.
+>
+> So that the less number is 4, and the greater is 11.
+>
+> **610.** *Question 2.* We may also generalise the preceding
+> question, by requiring two numbers, whose sum may be $$a$$,
+> and the difference $$b$$.
+>
+> Let the greater of the two numbers be expressed by $$x$$, and
+> the less by $$y$$; we shall then have
+>
+> $$x+y=a$$, and $$x-y=b$$.
+>
+> Here the first equation gives $$x = a — y$$, and the second $$x = b + y$$.
+>
+> Therefore, $$a-y=b+y$$; $$a=b+2y$$; $$2y=a-b$$; lastly,
+>
+> $$y=\dfrac{a-b}{2}$$,
+>
+> and, consequently,
+>
+> $$x=a-y = a-\dfrac{a-b}{2}=\dfrac{a+b}{2}$$.
+>
+> Thus, we find the greater number, or $$x$$, is $$\dfrac{a+b}{2}$$,
+> and the less, or $$y$$, is $$\dfrac{a-b}{2}$$; or, which comes to the same,
+>
+> $$x= \frac{1}{2}a+\frac{1}{2}b$$, and $$y=\frac{1}{2}a-\frac{1}{2}b$$.
+>
+> Hence we derive the following
+> theorem: When the sum of any two numbers is $$a$$, and their
+> difference is $$b$$, the greater of the two numbers will be equal
+> to half the sum plus half the difference; and the less of the
+> two numbers will be equal to half the sum minus half the
+> difference.
+>
+> **611.** We may resolve the same question in the following manner:
+>
+> Since the two equations are,
+>
+> $$x+y=a$$, and $$x-y=b$$;
+>
+> if we add the one to the other, we have
+>
+> $$2x=a+b$$.
+>
+> Therefore $$x=\dfrac{a+b}{2}$$.
+>
+> Lastly, subtracting the same equations from each other,
+> we have
+>
+> $$2y=a-b$$;
+>
+> and therefore
+>
+> $$y=\dfrac{a-b}{2}$$.
+>
+> **612.** *Question 3.* A mule and an ass were carrying
+> burdens amounting to several hundred weight. The ass
+> complained of his, and said to the mule, I need only one
+> hundred weight of your load, to make mine twice as heavy
+> as yours; to which the mule answered, But if you give
+> me a hundred weight of yours, I shall be loaded three times
+> as much you will be. How many hundred weight did each
+> carry?
+
 
 
 #### References
