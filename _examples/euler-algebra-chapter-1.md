@@ -4,6 +4,12 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 1
 topic: euler
 ---
 
+\\(
+\newcommand{\A}[1]{\colorbox{CornflowerBlue}{$\displaystyle #1$}}
+\newcommand{\B}[1]{\colorbox{lightgray}{$\displaystyle #1$}}
+\newcommand{\C}[1]{\colorbox{BurntOrange}{$\displaystyle #1$}}
+\\)
+
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General."
@@ -54,7 +60,7 @@ topic: euler
 > Twenty persons, men and women, dine at a tavern; the
 > share of the reckoning for one man is 8 shillings, for one
 > woman 7 shillings, and the whole reckoning amounts to
-> 7*l.* 5*s.* \[1 pound (*l.*) = 20 shillings (*s.*).\] Required the number of men and women
+> 7*l.* 5*s.* \B{\[1 pound (*l.*) = 20 shillings (*s.*).\]} Required the number of men and women
 > separately?
 >
 > In order to resolve this question, let us suppose that the
