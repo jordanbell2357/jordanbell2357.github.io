@@ -13,20 +13,19 @@ topic: euler
 > is determinate, we are brought to the same number of equations as there are unknown quantities;
 > from which it is then required to deduce those quantities. As we consider, at present, those
 > equations only, which contain no powers of an unknown quantity higher than the first, and no
-> products of two or more unknown quantities, it is evident that all those equations have the form
->
-> $$\begin{aligned}az+by+cx=d\end{aligned}$$.
+> products of two or more unknown quantities, it is evident that all those equations have the
+> form $$az+by+cx=d$$.
 >
 > **606.** Beginning therefore with two equations, we shall
-> endeavour to find from them the value of $$x$$ and $$y$$: and, in
+> endeavour to find from them the value of *x* and *y*: and, in
 > order that we may consider this case in a general manner, let
 > the two equations be,
 >
 > $$ax + by = c$$; and $$fx + gy = h$$;
 >
-> in which, *a*, *b*, *c*, and $$f$$, $$g$$, $$h$$, are known numbers. It is
+> in which, *a*, *b*, *c*, and *f*, *g*, *h*, are known numbers. It is
 > required, therefore, to obtain, from these two equations, the
-> two unknown quantities $$x$$ and $$y$$.
+> two unknown quantities *x* and *y*.
 >
 > **607.** The most natural method of proceeding will readily
 > present itself to the mind; which is, to determine, from both
