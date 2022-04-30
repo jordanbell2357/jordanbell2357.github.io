@@ -163,12 +163,42 @@ $$
 \begin{gather}
 x+y-z=8\\
 x+z-y=9\\
-y+z-x=10
-\end{gather};
+y+z-x=10;
+\end{gather}
 $$
 >
 > we begin, as before, by deducing a value of $$x$$ from each,
-> and have, from the
+> and have,
+>
+$$
+\begin{gather}
+x=8+z-y\\
+x=9+y-z\\
+x=y+z-10.
+\end{gather}
+$$
+>
+> Comparing the first of these values with the second,
+> and after that with the third, we have the following
+> equations:
+>
+$$
+\begin{gather}
+8+z-y=9+y-z,\\
+8+z-y=y+z-10.
+\end{gather}
+$$
+>
+> Now, the first gives $$2z-2y = 1$$, and, by the second,
+> $$2y=18$$, or $$y = 9$$; if therefore we substitute this value of
+> $$y$$ in $$2z-2y = 1$$, we have $$2z- 18 = 1$$, or $$9z = 19$$, so
+> that $$z=9\frac{1}{2}$$; it remains, therefore, only to determine $$x$$,
+> which is easily found $$= 8\frac{1}{2}$$.
+>
+> Here it happens, that the letter $$z$$ vanishes in the last
+> equation, and that the value of $$y$$ is found immediately;
+> but if this had not been the case, we should have had
+> two equations between $$z$$ and $$y$$, to be resolved by the preceding rule.
 
 
 
