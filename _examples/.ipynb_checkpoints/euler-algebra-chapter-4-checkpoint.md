@@ -15,7 +15,7 @@ topic: euler
 > equations only, which contain no powers of an unknown quantity higher than the first, and no
 > products of two or more unknown quantities, it is evident that all those equations have the form
 >
-> $$\begin{equation}az+by+cx=d\end{equation}$$.
+> $$\begin{aligned}az+by+cx=d\end{aligned}$$.
 >
 > **606.** Beginning therefore with two equations, we shall
 > endeavour to find from them the value of $$x$$ and $$y$$: and, in
