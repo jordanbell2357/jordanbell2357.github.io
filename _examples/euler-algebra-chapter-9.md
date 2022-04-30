@@ -9,16 +9,19 @@ topic: euler
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 9, "Of the Nature of Equations of the Second Degree."
 
 > **689.** What we have already said sufficiently shows,
-> that equations of the second degree admit of two solutions; and this property ought to be examined in every
+> that equations of the second degree admit of two solutions; and this property ought
+> to be examined in every
 > point of view, because the nature of equations of a higher
-> degree will be very much illustrated by such an examination. We shall therefore retrace, with more attention,
+> degree will be very much illustrated by such an examination. We shall therefore retrace,
+> with more attention,
 > the reasons which render an equation of the second degree
 > capable of a double solution; since they undoubtedly will
 > exhibit an essential property of those equations. 
 >
 > **690.** We have already seen, indeed, that this double
 > solution arises from the circumstance that the square root
-> of any number may be taken either positively, or negatively; but, as this principle will not easily apply to
+> of any number may be taken either positively, or negatively; but, as this principle will
+> not easily apply to
 > equations of higher degrees, it may be proper to illustrate
 > it by a distinct analysis. Taking, therefore, for an
 > example, the quadratic equation, $$x^2= 12x-35$$, we shall
@@ -108,7 +111,8 @@ topic: euler
 > in which both the second and third terms are affected by
 > the sign $$+$$.
 >
-> **697.** The signs of the second and the third terms consequently show us the nature of the roots of any equation
+> **697.** The signs of the second and the third terms consequently show us the nature of the
+> roots of any equation
 > of the second degree. For let the equation be
 > $$x^2 \dots ax \dots b=0$$. If the second and third terms have the sign $$+$$,
 > the two values of $$x$$ are both negative; if the second term
@@ -130,7 +134,8 @@ topic: euler
 > we have, by completing the square, etc. $$x=2 \pm \sqrt{25} =2  \pm 5$$;
 > that is to say, $$x=7$$, or $$x= -3$$. 
 >
-> **699.** The values of $$x$$ may also happen to be equal. Suppose, for example, that an equation is required, in which
+> **699.** The values of $$x$$ may also happen to be equal. Suppose, for example, that an
+> equation is required, in which
 > both values may be 5. Here the two factors will be $$(x-5) \times (x-5)$$,
 > and the equation sought will be $$x^2 - 10x + 25=0$$.
 > In this equation, $$x$$ appears to have only one value; but it
@@ -174,7 +179,8 @@ topic: euler
 >
 > quantities whose sum is 6, and the product 10. 
 >
-> **702.** The expression which we have just found may likewise be represented in a manner more general, and so as
+> **702.** The expression which we have just found may likewise be represented in a manner
+> more general, and so as
 > to be applied to equations of this form, $$fx^2 \pm gx + h=0$$;
 > for this equation gives
 >
@@ -189,14 +195,16 @@ topic: euler
 > $$x = \dfrac{\mp g \pm \sqrt{g^2-4fh}}{2f}$$;
 >
 > whence we conclude, that the two
-> values are imaginary, and consequently, the equation impossible, when $$4fh$$ is greater than > $$g^2$$; that is to say, when,
+> values are imaginary, and consequently, the equation impossible, when $$4fh$$ is
+> greater than > $$g^2$$; that is to say, when,
 > in the equation $$fx^2 - gx + h=0$$,
 > four times the product of
 > the first and the last term exceeds the square of the second
 > term: for the product of the first and the last term, taken
 > four times, is $$4fhx^2$$, and the square of the middle term is
 > $$g^2x^2$$; now, if $$4fhx^2$$ be greater than $$g^2x^2$$, $$4fh$$ is also greater
-> than $$g^2$$, and, in that case, the equation is evidently impossible; but in all other cases, the equation is possible,
+> than $$g^2$$, and, in that case, the equation is evidently impossible; but
+> in all other cases, the equation is possible,
 > and two real values of $$x$$ may be assigned. It is true, they
 > are often irrational; but we have already seen, that, in
 > such cases, we may always find them by approximation:
@@ -209,7 +217,8 @@ topic: euler
 > into two factors, such as $$(x \pm p) \times (x \pm q)$$. For, if we
 > took three factors, such as these, we should come to a
 > quantity of the third degree; and taking only one such
-> factor, we should not exceed the first degree. It is therefore certain, that every equation of the second degree
+> factor, we should not exceed the first degree. It is therefore certain, that every equation
+> of the second degree
 > necessarily contains two values of $$x$$, and that it can neither
 > have more nor less
 >
@@ -232,7 +241,21 @@ topic: euler
 >
 > ![polynomial long division](/assets/euler/adaptive.png "polynomial long division")
 >
-> So that the other factor is $$x + 7$$, and our equation is represented by the product $$(x-3) \times (x+7)=0$$; whence two values of $$x$$ immediately follow, the first factor giving $$x=3$$, and the other $$x= -7$$.
+> So that the other factor is $$x + 7$$, and our equation is represented by the
+> product $$(x-3) \times (x+7)=0$$; whence two values of $$x$$ immediately follow, the
+> first factor giving $$x=3$$, and the other $$x= -7$$.
+
+#### References
+
+1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
+    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
+    - [Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 9, "Of the Nature of Equations of the Second Degree."](/assets/euler/chap9.pdf)
+2. Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.
+    - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
+3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
+    - [Springer](https://link.springer.com/book/9783764314002)
+    - [Des zweyten Theils erster Abschnitt. Von den algebraischen Gleichungen und derselben Auflösung. Capitel 9. Von der Natur der Quadratischen Gleichungen.](/assets/euler/cap9.pdf)
+5. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)
 
 #### Resources
 

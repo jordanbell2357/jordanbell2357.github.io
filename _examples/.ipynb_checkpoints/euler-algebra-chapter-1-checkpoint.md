@@ -4,12 +4,6 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 1
 topic: euler
 ---
 
-\\(
-\newcommand{\A}[1]{\colorbox{CornflowerBlue}{$\displaystyle #1$}}
-\newcommand{\B}[1]{\colorbox{lightgray}{$\displaystyle #1$}}
-\newcommand{\C}[1]{\colorbox{BurntOrange}{$\displaystyle #1$}}
-\\)
-
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General."
@@ -150,7 +144,7 @@ topic: euler
     - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
 3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Springer](https://link.springer.com/book/9783764314002)
-    - [Des zweyten Theils erster Abschnitt. Von den algebraischen Gleichungen und derselben Auflösung. Capitel 1. Von der Auflösung der Aufgaben überhaupt](/assets/euler/cap1.pdf)
+    - [Des zweyten Theils erster Abschnitt. Von den algebraischen Gleichungen und derselben Auflösung. Capitel 1. Von der Auflösung der Aufgaben überhaupt.](/assets/euler/cap1.pdf)
 5. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)
 
 #### Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
