@@ -38,12 +38,9 @@ topic: euler
 > express $$x$$.
 >
 > **608.** According to this rule, wo obtain from the first
-equation, $$x=\dfrac{c-by}{a}$$, and from the second, $$x=\dfrac{h-gy}{f}$$:
-then putting these vaues equal to each other, we have this
-new equation:
->
-> $$\dfrac{c-by}{a}=\dfrac{h-gy}{f}$$;
->
+> equation, $$x=\dfrac{c-by}{a}$$, and from the second, $$x=\dfrac{h-gy}{f}$$:
+> then putting these vaues equal to each other, we have this
+> new equation: $$\dfrac{c-by}{a}=\dfrac{h-gy}{f}$$;
 > multiplying by $$a$$, the product is $$c-by=\dfrac{ah-agy}{f}$$; and then by $$f$$,
 > the product is $$fc-fby = ah-agy$$; adding $$agy$$, we have $$fc-fby+agy = ah$$; subtracting $$fc$$,
 > gives $$-fby+agy = ah-fc$$; or $$(ag-bf)y = ah-fc$$; lastly, dividing by $$ag-bf$$, we have
@@ -57,12 +54,8 @@ new equation:
 > $$-by = - \dfrac{abh-bcf}{ag-bf}$$;
 >
 > whence
-> $$\begin{align*}
-c-by &= c- \dfrac{abh-bcf}{ag-bf}\\
-&=\dfrac{acg-bcf-abh+bcf}{ag-bf}\\
-&=\dfrac{acg-abh}{ag-bf};
-\end{align*}
-$$
+>
+> $$c-by= c- \dfrac{abh-bcf}{ag-bf}=\dfrac{acg-bcf-abh+bcf}{ag-bf}=\dfrac{acg-abh}{ag-bf}$$;
 > 
 > and dividing by $$a$$,
 >
