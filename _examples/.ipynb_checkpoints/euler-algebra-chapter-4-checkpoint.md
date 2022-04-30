@@ -111,18 +111,18 @@ $$x+y=a, \quad \textrm{and} \quad x-y=b,$$
 >
 > if we add the one to the other, we have
 >
-$$2x=a+b$$.
+$$2x=a+b.$$
 >
 > Therefore $$x=\dfrac{a+b}{2}$$.
 >
 > Lastly, subtracting the same equations from each other,
 > we have
 >
-$$2y=a-b$$;
+$$2y=a-b;$$
 >
 > and therefore
 >
-$$y=\dfrac{a-b}{2}$$.
+$$y=\dfrac{a-b}{2}.$$
 >
 > **612.** *Question 3.* A mule and an ass were carrying
 > burdens amounting to several hundred weight. The ass
@@ -232,33 +232,30 @@ $$
 > $$14y+11z=211$$.
 > 
 > Comparing also the third with the second, we have
-3y+5z-62=\dfrac{46+2y-3z}{5},
-
-or 46+2y-3z=15y+25z-310,
-
-which, when reduced, becomes 356=13y+28z.
-
-We shall now deduce, from these two new equations, the value of y:
-
-14y+11z=211; or 14y=211-11z,
-
-and y = \dfrac{211-11z}{14}.
-
-13y+28z=356; or 13y=356-28z,
-
-and y = \dfrac{356-28z}{13}.
-
-These two values form the new equation
-
-\dfrac{211-11z}{14}=\dfrac{356-28z}{13},
-
-whence
-
-2743-143z=4984-392z, or 249z=2241, and z=9.
-
-This value being substituted in one of the two equations
-of y and z, we find y=8; and, lastly, a similar substitution
-in one of the three values of x, will give x=7.
+> $$3y+5z-62=\dfrac{46+2y-3z}{5}$$, or $$46+2y-3z=15y+25z-310$$,
+> which, when reduced, becomes $$356=13y+28z$$.
+>
+> We shall now deduce, from these two new equations, the value of $$y$$:
+>
+$$14y+11z=211; \quad \textrm{or} \quad 14y=211-11z,$$
+>
+> and $$y = \dfrac{211-11z}{14}$$.
+>
+$$13y+28z=356; \quad \textrm{or} \quad 13y=356-28z,$$
+>
+> and $$y = \dfrac{356-28z}{13}$$.
+>
+> These two values form the new equation
+>
+$$\dfrac{211-11z}{14}=\dfrac{356-28z}{13},$$
+>
+> whence
+>
+$$2743-143z=4984-392z, \: \textrm{or} \: 249z=2241, \: \textrm{and} \: z=9.$$
+>
+> This value being substituted in one of the two equations
+> of $$y$$ and $$z$$, we find $$y=8$$; and, lastly, a similar substitution
+> in one of the three values of $$x$$, will give $$x=7$$.
 
 
 
