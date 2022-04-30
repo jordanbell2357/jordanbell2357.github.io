@@ -17,7 +17,8 @@ topic: euler
 > teaches how to determine unknown quantities by means of
 > those that are known.
 >
-> **564.** The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
+> **564.** The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of
+> certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
 >
 > Of this, Addition will readily furnish an example; for, in order to  find  the  sum  of  two  or
 > more given  numbers, we  had to  seek  for  an  unknown  number,  which  should  be  equal  to

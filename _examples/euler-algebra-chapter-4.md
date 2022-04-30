@@ -21,7 +21,7 @@ topic: euler
 > order that we may consider this case in a general manner, let
 > the two equations be,
 >
-> $$ax + by = c$$; and $$fx + gy = h$$;
+> I) $$ax + by = c$$; and II) $$fx + gy = h$$;
 >
 > in which, $$a$$, $$b$$, $$c$$, and $$f$$, $$g$$, $$h$$, are known numbers. It is
 > required, therefore, to obtain, from these two equations, the
