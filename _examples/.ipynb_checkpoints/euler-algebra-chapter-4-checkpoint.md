@@ -67,21 +67,11 @@ topic: euler
 >
 > Let us call the greater number $$x$$, and the less $$y$$: then we shall have
 >
-> $$x + y = 15$$, and $$x - y =7$$.
+> I) $$x + y = 15$$, and II) $$x - y =7$$.
 >
-> The first equation gives
->
-> $$x = 15 - y$$
->
-> and the second,
->
-> $$x = 7 + y$$;
->
-> whence results this equation,
->
-> $$15-y = 7 + y$$.
->
-> So that $$15 = 7 + 2y$$; $$2y = 8$$, and $$y=4$$; by which means we find $$x = 11$$.
+> The first equation gives $$x = 15 - y$$ and the second, $$x = 7 + y$$;
+> whence results this equation, $$15-y = 7 + y$$. So that
+> $$15 = 7 + 2y$$; $$2y = 8$$, and $$y=4$$; by which means we find $$x = 11$$.
 >
 > So that the less number is 4, and the greater is 11.
 >
@@ -92,11 +82,10 @@ topic: euler
 > Let the greater of the two numbers be expressed by $$x$$, and
 > the less by $$y$$; we shall then have
 >
-> $$x+y=a$$, and $$x-y=b$$.
+> I) $$x+y=a$$, and II) $$x-y=b$$.
 >
-> Here the first equation gives $$x = a — y$$, and the second $$x = b + y$$.
->
-> Therefore, $$a-y=b+y$$; $$a=b+2y$$; $$2y=a-b$$; lastly,
+> Here the first equation gives $$x = a - y$$, and the second $$x = b + y$$. Therefore,
+> $$a-y=b+y$$; $$a=b+2y$$; $$2y=a-b$$; lastly,
 >
 > $$y=\dfrac{a-b}{2}$$,
 >
@@ -112,13 +101,11 @@ topic: euler
 > Hence we derive the following
 > theorem: When the sum of any two numbers is $$a$$, and their
 > difference is $$b$$, the greater of the two numbers will be equal
-> to half the sum plus half the difference; and the less of the
-> two numbers will be equal to half the sum minus half the
+> to half the sum *plus* half the difference; and the less of the
+> two numbers will be equal to half the sum *minus* half the
 > difference.
 >
-> **611.** We may resolve the same question in the following manner:
->
-> Since the two equations are,
+> **611.** We may resolve the same question in the following manner: Since the two equations are,
 >
 > $$x+y=a$$, and $$x-y=b$$;
 >
@@ -153,7 +140,7 @@ topic: euler
 > the ass is loaded twice as much as the mule, we have $$y + 1 = 2x - 2$$.
 >
 > Farther, if the ass gives a hundred weight to the mule,
-> the latter has $$x + 1$$, and the ass retains $$y — 1$$; but the
+> the latter has $$x + 1$$, and the ass retains $$y - 1$$; but the
 > burden of the former being now three times that of the
 > latter, we have $$x + 1 = 3y - 3$$.
 >
@@ -167,7 +154,7 @@ topic: euler
 > of $$x$$, which becomes $$2\dfrac{3}{5}$$.
 >
 > The mule therefore carried $$2\frac{3}{5}$$ hundred weight,
-and the ass $$2 \frac{1}{5}$$ hundred weight.
+> and the ass $$2 \frac{1}{5}$$ hundred weight.
 >
 > **613.** When there are three unknown numbers, and as
 > many equations; as, for example,
