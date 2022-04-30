@@ -153,6 +153,32 @@ $$
 > me a hundred weight of yours, I shall be loaded three times
 > as much you will be. How many hundred weight did each
 > carry?
+>
+> Suppose the mule's load to be $$x$$ hundred weight, and that
+> of the ass to be $$y$$ hundred weight. If the mule gives one
+> hundred weight to the ass, the one will have $$y + 1$$, and there
+> will remain for the other $$x - 1$$; and since, in this case,
+> the ass is loaded twice as much as the mule, we have $$y + 1 = 2x - 2$$.
+>
+> Farther, if the ass gives a hundred weight to the mule,
+> the latter has $$x + 1$$, and the ass retains $$y — 1$$; but the
+> burden of the former being now three times that of the
+> latter, we have $$x + 1 = 3y - 3$$.
+>
+> Consequently our two equations will be,
+>
+> $$y + 1 = 2x-2$$, and $$x+1=3y-3$$.
+>
+> From the first, $$x=\dfrac{y+3}{2}$$, and the second gives
+> $$x = 3y-4$$; whence we have the new equation $$\dfrac{y+3}{2}=3y-4$$,
+> which gives $$y=\dfrac{11}{5}$$; this also determines the value
+> of $$x$$, which becomes $$2\dfrac{3}{5}$$.
+>
+> The mule therefore carried $$2\frac{3}{5}$$ hundred weight,
+and the ass $$2 \frac{1}{5}$$ hundred weight.
+>
+> **613.** When there are three unknown numbers, and as
+> many equations; as, for example,
 
 
 
