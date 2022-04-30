@@ -24,7 +24,7 @@ topic: euler
 >
 > $$ax + by = c$$; and $$fx + gy = h$$;
 >
-> in which, $$a$$, $$b$$, $$c$$, and $$f$$, $$g$$, $$h$$, are known numbers. It is
+> in which, *a*, *b*, *c*, and $$f$$, $$g$$, $$h$$, are known numbers. It is
 > required, therefore, to obtain, from these two equations, the
 > two unknown quantities $$x$$ and $$y$$.
 >
