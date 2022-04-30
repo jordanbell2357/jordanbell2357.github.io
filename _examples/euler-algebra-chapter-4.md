@@ -158,7 +158,7 @@ topic: euler
 >
 > **613.** When there are three unknown numbers, and as
 > many equations; as, for example,
-
+>
 $$
 \begin{gather}
 x+y-z=8\\
@@ -166,7 +166,7 @@ x+z-y=9\\
 y+z-x=10
 \end{gather};
 $$
-
+>
 > we begin, as before, by deducing a value of $$x$$ from each,
 > and have, from the
 
