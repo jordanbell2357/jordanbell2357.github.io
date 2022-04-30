@@ -67,7 +67,7 @@ topic: euler
 >
 > Let us call the greater number $$x$$, and the less $$y$$: then we shall have
 >
-> I) $$x + y = 15$$, and II) $$x - y =7$$.
+I) $$x + y = 15$$, and II) $$x - y =7$$.
 >
 > The first equation gives $$x = 15 - y$$ and the second, $$x = 7 + y$$;
 > whence results this equation, $$15-y = 7 + y$$. So that
