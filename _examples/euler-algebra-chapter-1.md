@@ -19,7 +19,13 @@ topic: euler
 >
 > **564.** The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of  certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
 >
-> Of this, Addition will readily furnish an example; for, in order to  find  the  sum  of  two  or  more  given  numbers,  we  had to  seek  for  an  unknown  number,  which  should  be  equal  to those  known  numbers  taken  together.  In  Subtraction, we sought for a number which should be equal  to  the  difference of  two  known  numbers.  A  multitude  of  other  examples are  presented  by  Multiplication,  Division,  the  Involution of  powers,  and  the  Extraction  of  roots;  the  question being  always  reduced  to  finding,  by  means  of  known quantities,  other  quantities  which  are  unknown.
+> Of this, Addition will readily furnish an example; for, in order to  find  the  sum  of  two  or
+> more given  numbers, we  had to  seek  for  an  unknown  number,  which  should  be  equal  to
+> those  known numbers taken  together.  In  Subtraction, we sought for a number which should be
+> equal to  the difference of two known numbers. A  multitude  of other examples are
+> presented by Multiplication, Division, the Involution of powers, and  the  Extraction  of  roots;
+> the  question being  always  reduced  to  finding,  by  means  of  known quantities,
+> other  quantities  which  are  unknown.
 >
 > **565.** In the last section, also, different questions were
 > resolved, in which it was required to determine a number
@@ -67,19 +73,18 @@ topic: euler
 > shillings. So that adding together $$8x$$ and $$140-7x$$, we see
 > that the whole 20 persons must spend $$140 +x$$ shillings.
 > Now, we know already how much they have spent;
-> namely, 7*l.* 5*s.* or 145*s.*; there must be an equality, therefore, between $$140+x$$ and 145; that is to say, we have
+> namely, 7*l.* 5*s.* or 145*s.*; there must be an equality, therefore, between $$140+x$$ and 145;
+> that is to say, we have
 > the equation $$140 +x= 145$$, and thence we easily deduce
 > $$x=5$$, and consequently $$20-x=20-5=15$$; so that the
 > company consisted of 5 men and 15 women.
 >
 > **568.** Again, Suppose twenty persons, men and women,
 > go to a tavern; the men spend 24 shillings, and the women
-> as much: but it is found that the men have spent 1 shilling each more than the women. Required the number
-> of men and women separately?
+> as much: but it is found that the men have spent 1 shilling each more than the women.
+> Required the number of men and women separately?
 >
-> Let the number of men be represented by $$x$$.
->
-> Then the women will be $$20-x$$.
+> Let the number of men be represented by $$x$$. Then the women will be $$20-x$$.
 >
 > Now, the $$x$$ men having spent 24 shillings, the share of
 > each man is $$\dfrac{24}{x}$$. The $$20-x$$ women having also spent 24
@@ -92,35 +97,43 @@ topic: euler
 > equation, from which we are to deduce the value of $$x$$. This
 > value is not found with the same ease as in the preceding
 > question; but we shall afterwards see that $$x=8$$, which
-> value answers to the equation; for $$\dfrac{24}{8}-1$$, or $$\dfrac{16}{8}=\dfrac{24}{12}$$ includes the equality $$2=2$$.
+> value answers to the equation; for $$\dfrac{24}{8}-1$$, or $$\dfrac{16}{8}=\dfrac{24}{12}$$
+> includes the equality $$2=2$$.
 >
 > **569.** It is evident, therefore, how essential it is, in all
-> problems, to consider the circumstances of the question attentively, in order to deduce from it an equation that shall
-> express by letters the numbers sought, or unknown. After
+> problems, to consider the circumstances of the question attentively, in order to deduce from it
+> an equation that shall express by letters the numbers sought, or unknown. After
 > that, the whole art consists in resolving those equations,
-> or deriving from them the values of the unknown numbers; and this shall be the subject of the present section. 
+> or deriving from them the values of the unknown numbers; and this shall be the subject of the
+> present section. 
 >
 > **570.** We must remark, in the first place, the diversity
 > which subsists among the questions themselves. In some,
 > we seek only for one unknown quantity; in others, we
 > have to find two, or more; and, it is to be observed, with
 > regard to this last case, that, in order to determine them
-> all, we must deduce from the circumstances, or the conditions of the problem, as many equations as there are
-> unknown quantities.
+> all, we must deduce from the circumstances, or the conditions of the problem, as many equations
+> as there are unknown quantities.
 >
-> **571.** It must have already been perceived, that an equation consists of two parts separated by the sign of equality,
-> $$=$$, to show that those two quantities are equal to one another; and we are often obliged to perform a great number
-> of transformations on those two parts, in order to deduce
-> from them the value of the unknown quantity: but these
-> transformations must be all founded on the following principles; namely, That two equal quantities remain equal,
-> whether we add to them, or subtract from them, equal
+> **571.** It must have already been perceived, that an equation consists of two parts separated
+> by the sign of equality, $$=$$, to show that those two quantities are equal to one another; and
+> we are often obliged to perform a great number of transformations on those two parts, in order
+> to deduce from them the value of the unknown quantity: but these
+> transformations must be all founded on the following principles; namely, That two equal quantities
+> remain equal, whether we add to them, or subtract from them, equal
 > quantities; whether we multiply them, or divide them, by
 > the same number; whether we raise them both to the same
 > power, or extract their roots of the same degree; or lastly, 
 > whether we take the logarithms of those quantities, as we
 > have already done in the preceding section.
 >
-> **572.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown  quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been  properly arranged;  and  these  are  called  simple  equations,  or equations  of  the  first  degree.  But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power, of  the  unknown  quantity,  it  is  called  an  equation  of  the second  degree,  which  is  more  difficult  to  resolve.  Equations of  the  third  degree  are  those  which  contain  the  cube  of  the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
+> **572.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown
+> quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been
+> properly arranged;  and  these  are  called  simple  equations,  or equations  of  the  first  degree.
+> But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power,
+> of  the  unknown  quantity,  it  is  called  an  equation  of  the second  degree,  which  is  more
+> difficult  to  resolve.  Equations of  the  third  degree  are  those  which  contain  the  cube  of
+> the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
 #### References
 
