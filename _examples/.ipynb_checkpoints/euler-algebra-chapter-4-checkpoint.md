@@ -30,12 +30,12 @@ topic: euler
 > **607.** The most natural method of proceeding will readily
 > present itself to the mind; which is, to determine, from both
 > equations, the value of one of the unknown quantities, as for
-> example $$x$$, and to consider the equality of those two values;
+> example *x*, and to consider the equality of those two values;
 > for then we shall have an equation, in which the unknown
-> quantity $$y$$ will be found by itself, and may be determined
-> by the rules already given. Then, knowing $$y$$, we shall have
+> quantity *y* will be found by itself, and may be determined
+> by the rules already given. Then, knowing *y*, we shall have
 > only to substitute its value in one of the quantities that
-> express $$x$$.
+> express *x*.
 >
 > **608.** According to this rule, wo obtain from the first
 equation, $$x=\dfrac{c-by}{a}$$, and from the second, $$x=\dfrac{h-gy}{f}$$:
