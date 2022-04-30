@@ -151,13 +151,22 @@ topic: euler
 > From the first, $$x=\dfrac{y+3}{2}$$, and the second gives
 > $$x = 3y-4$$; whence we have the new equation $$\dfrac{y+3}{2}=3y-4$$,
 > which gives $$y=\dfrac{11}{5}$$; this also determines the value
-> of $$x$$, which becomes $$2\dfrac{3}{5}$$.
+> of $$x$$, which becomes $$2\frac{3}{5}$$.
 >
 > The mule therefore carried $$2\frac{3}{5}$$ hundred weight,
 > and the ass $$2 \frac{1}{5}$$ hundred weight.
 >
 > **613.** When there are three unknown numbers, and as
 > many equations; as, for example,
+$$
+\begin{gather}
+x+y-z=8\\
+x+z-y=9\\
+y+z-x=10
+\end{gather};
+$$
+> we begin, as before, by deducing a value of $$x$$ from each,
+> and have, from the
 
 
 
