@@ -17,25 +17,25 @@ topic: euler
 > form $$az+by+cx=d$$.
 >
 > **606.** Beginning therefore with two equations, we shall
-> endeavour to find from them the value of *x* and *y*: and, in
+> endeavour to find from them the value of $$x$$ and $$y$$: and, in
 > order that we may consider this case in a general manner, let
 > the two equations be,
 >
 > $$ax + by = c$$; and $$fx + gy = h$$;
 >
-> in which, *a*, *b*, *c*, and *f*, *g*, *h*, are known numbers. It is
+> in which, $$a$$, $$b$$, $$c$$, and $$f$$, $$g$$, $$h$$, are known numbers. It is
 > required, therefore, to obtain, from these two equations, the
-> two unknown quantities *x* and *y*.
+> two unknown quantities $$x$$ and $$y$$.
 >
 > **607.** The most natural method of proceeding will readily
 > present itself to the mind; which is, to determine, from both
 > equations, the value of one of the unknown quantities, as for
-> example *x*, and to consider the equality of those two values;
+> example $$x$$, and to consider the equality of those two values;
 > for then we shall have an equation, in which the unknown
-> quantity *y* will be found by itself, and may be determined
-> by the rules already given. Then, knowing *y*, we shall have
+> quantity $$y$$ will be found by itself, and may be determined
+> by the rules already given. Then, knowing $$y$$, we shall have
 > only to substitute its value in one of the quantities that
-> express *x*.
+> express $$x$$.
 >
 > **608.** According to this rule, wo obtain from the first
 equation, $$x=\dfrac{c-by}{a}$$, and from the second, $$x=\dfrac{h-gy}{f}$$:
