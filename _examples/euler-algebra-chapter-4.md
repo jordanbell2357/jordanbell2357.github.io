@@ -21,7 +21,7 @@ topic: euler
 > order that we may consider this case in a general manner, let
 > the two equations be,
 >
-> I) $$ax + by = c$$; and II) $$fx + gy = h$$;
+$$\textrm{I) } ax + by = c; \quad \textrm{and} \quad \textrm{II) } fx + gy = h;$$
 >
 > in which, $$a$$, $$b$$, $$c$$, and $$f$$, $$g$$, $$h$$, are known numbers. It is
 > required, therefore, to obtain, from these two equations, the
@@ -45,21 +45,21 @@ topic: euler
 > the product is $$fc-fby = ah-agy$$; adding $$agy$$, we have $$fc-fby+agy = ah$$; subtracting $$fc$$,
 > gives $$-fby+agy = ah-fc$$; or $$(ag-bf)y = ah-fc$$; lastly, dividing by $$ag-bf$$, we have
 >
-> $$y = \dfrac{ah-fc}{ag-bf}$$.
+$$y = \dfrac{ah-fc}{ag-bf}.$$
 >
 > In order now to substitute this value of $$y$$ in one of the
 > two values which we have found of $$x$$, as in the first, where
 > $$x=\dfrac{c-by}{a}$$, we shall first have
 >
-> $$-by = - \dfrac{abh-bcf}{ag-bf}$$;
+$$-by = - \dfrac{abh-bcf}{ag-bf};$$
 >
 > whence
 >
-> $$c-by= c- \dfrac{abh-bcf}{ag-bf}=\dfrac{acg-bcf-abh+bcf}{ag-bf}=\dfrac{acg-abh}{ag-bf}$$;
+$$c-by= c- \dfrac{abh-bcf}{ag-bf}=\dfrac{acg-bcf-abh+bcf}{ag-bf}=\dfrac{acg-abh}{ag-bf};$$
 > 
 > and dividing by $$a$$,
 >
-> $$x = \dfrac{c-by}{a} = \dfrac{cg-bh}{ag-bf}$$.
+$$x = \dfrac{c-by}{a} = \dfrac{cg-bh}{ag-bf}.$$
 >
 > **609.** *Question 1.* To illustrate this method by examples,
 > let it be proposed to find two numbers, whose sum may be
@@ -67,7 +67,7 @@ topic: euler
 >
 > Let us call the greater number $$x$$, and the less $$y$$: then we shall have
 >
-$$\textrm{I)} x + y = 15, \quad \textrm{and} \quad \textrm{II)} x - y =7.$$
+$$\textrm{I) } x + y = 15, \quad \textrm{and} \quad \textrm{II) } x - y =7.$$
 >
 > The first equation gives $$x = 15 - y$$ and the second, $$x = 7 + y$$;
 > whence results this equation, $$15-y = 7 + y$$. So that
@@ -82,21 +82,21 @@ $$\textrm{I)} x + y = 15, \quad \textrm{and} \quad \textrm{II)} x - y =7.$$
 > Let the greater of the two numbers be expressed by $$x$$, and
 > the less by $$y$$; we shall then have
 >
-> I) $$x+y=a$$, and II) $$x-y=b$$.
+$$\textrm{I) } x+y=a,\quad \textrm{and} \quad \textrm{II) } x-y=b.$$
 >
 > Here the first equation gives $$x = a - y$$, and the second $$x = b + y$$. Therefore,
 > $$a-y=b+y$$; $$a=b+2y$$; $$2y=a-b$$; lastly,
 >
-> $$y=\dfrac{a-b}{2}$$,
+$$y=\dfrac{a-b}{2},$$
 >
 > and, consequently,
 >
-> $$x=a-y = a-\dfrac{a-b}{2}=\dfrac{a+b}{2}$$.
+$$x=a-y = a-\dfrac{a-b}{2}=\dfrac{a+b}{2}.$$
 >
 > Thus, we find the greater number, or $$x$$, is $$\dfrac{a+b}{2}$$,
 > and the less, or $$y$$, is $$\dfrac{a-b}{2}$$; or, which comes to the same,
 >
-> $$x= \frac{1}{2}a+\frac{1}{2}b$$, and $$y=\frac{1}{2}a-\frac{1}{2}b$$.
+$$x= \frac{1}{2}a+\frac{1}{2}b, \quad \textrm{and} \quad y=\frac{1}{2}a-\frac{1}{2}b.$$
 >
 > Hence we derive the following
 > theorem: When the sum of any two numbers is $$a$$, and their
@@ -146,7 +146,7 @@ $$y=\dfrac{a-b}{2}.$$
 >
 > Consequently our two equations will be,
 >
-$$y + 1 = 2x-2$$, and $$x+1=3y-3$$.
+$$y + 1 = 2x-2, \quad \textrm{and} \quad x+1=3y-3.$$
 >
 > From the first, $$x=\dfrac{y+3}{2}$$, and the second gives
 > $$x = 3y-4$$; whence we have the new equation $$\dfrac{y+3}{2}=3y-4$$,
@@ -193,7 +193,7 @@ $$
 > $$2y=18$$, or $$y = 9$$; if therefore we substitute this value of
 > $$y$$ in $$2z-2y = 1$$, we have $$2z- 18 = 1$$, or $$9z = 19$$, so
 > that $$z=9\frac{1}{2}$$; it remains, therefore, only to determine $$x$$,
-> which is easily found $$= 8\frac{1}{2}$$.
+> which is easily found $$=8\frac{1}{2}$$.
 >
 > Here it happens, that the letter $$z$$ vanishes in the last
 > equation, and that the value of $$y$$ is found immediately;
@@ -223,9 +223,7 @@ $$
 > Comparing these three values together, and first the third
 > with the first, we have
 > 
-$$
-3y+5z-62=\dfrac{25-5y+4z}{3};
-$$
+$$3y+5z-62=\dfrac{25-5y+4z}{3};$$
 >
 > multiplying bv 3, gives $$9y+15z-186=25-5y+4z$$;
 > so that $$9y + 15z = 211 - 5y - 4z$$, and
