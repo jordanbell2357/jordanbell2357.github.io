@@ -254,7 +254,27 @@ $$2743-143z=4984-392z, \: \textrm{or} \: 249z=2241, \: \textrm{and} \: z=9.$$
 > This value being substituted in one of the two equations
 > of $$y$$ and $$z$$, we find $$y=8$$; and, lastly, a similar substitution
 > in one of the three values of $$x$$, will give $$x=7$$.
-
+>
+> **615.** If there were more llian tliree unknown quantities to
+> determine, and as many equations to resolve, we should proceed in the same manner; but the calculations would often
+> prove very tedious.
+>
+> It is proper, therefore, to remark, that, in each particular
+> case, means may always be discovered of greatly facilitating
+> the solution; which consist in introducing into the calculation, beside the principal unknown quantities, a new
+> unknown quantity arbitrarily assumed, such as, for example,
+> the sum of all the rest; and when a person is a little accustomed to such calculations, he easily perceives what is
+> most proper to be done. The following examples may
+> serve to facilitate the application of these artifices.
+>
+> **616.** *Question 4.* Three persons, <span style="font-variant: small-caps;">A</span>, B, and C, play together; and, in the first game,
+> a loses to each of the other two, as much money as each of them has. In the next
+> game, Ⓑ loses to each of the other two, as much money as
+> they then had. Lastly, in the third game, Ⓐ and Ⓑ gain
+> each, from Ⓒ, as much money as they had before. On
+> leaving off, they find that each has an equal sum, namely,
+> 24 guineas. Required, with how much money each sat
+> down to play?
 
 
 
