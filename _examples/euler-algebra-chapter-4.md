@@ -267,15 +267,19 @@ $$2743-143z=4984-392z, \: \textrm{or} \: 249z=2241, \: \textrm{and} \: z=9.$$
 > most proper to be done. The following examples may
 > serve to facilitate the application of these artifices.
 >
-> **616.** *Question 4.* Three persons, <span style="font-variant: small-caps;">A</span>, B, and C, play together; and, in the first game,
+> **616.** *Question 4.* Three persons, A, B, and C, play together; and, in the first game,
 > a loses to each of the other two, as much money as each of them has. In the next
-> game, Ⓑ loses to each of the other two, as much money as
-> they then had. Lastly, in the third game, Ⓐ and Ⓑ gain
-> each, from Ⓒ, as much money as they had before. On
+> game, B loses to each of the other two, as much money as
+> they then had. Lastly, in the third game, A and B gain
+> each, from C, as much money as they had before. On
 > leaving off, they find that each has an equal sum, namely,
 > 24 guineas. Required, with how much money each sat
 > down to play?
 
+
+<!--
+<span style="font-variant: small-caps;">A</span>
+-->
 
 
 #### References
