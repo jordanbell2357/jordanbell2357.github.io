@@ -498,7 +498,7 @@ u=\dfrac{abcdn-bcdn+cdn-dn}{abcd-1} = \dfrac{n\cdot (abcd-bcd+cd-d)}{abcd-1}.
 \end{gather}
 $$
 >
-> **622.** *Question 7.* A captain lias three companies, one of
+> **622.** *Question 7.* A captain has three companies, one of
 > Swiss, another of Swabians, and a third of Saxons. He
 > wishes to storm with part of these troops, and he promises a
 > reward of 901 crowns, on the following condition; namely,
