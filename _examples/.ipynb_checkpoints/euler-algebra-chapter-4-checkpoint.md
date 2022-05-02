@@ -41,7 +41,9 @@ $$\textrm{I) } ax + by = c; \quad \textrm{and} \quad \textrm{II) } fx + gy = h;$
 > equation, $$x=\dfrac{c-by}{a}$$, and from the second, $$x=\dfrac{h-gy}{f}$$:
 > then putting these vaues equal to each other, we have this
 > new equation:
+>
 $$\dfrac{c-by}{a}=\dfrac{h-gy}{f};$$
+>
 > multiplying by $$a$$, the product is
 $$c-by=\dfrac{ah-agy}{f};$$
 > and then by $$f$$,
