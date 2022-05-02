@@ -341,7 +341,9 @@ $$x+y+z=9+\frac{7}{8}s.$$
 > each 24 guineas, and, in the third game, A and B doubled
 > their money, they must have had before that last game, as
 > follows:
+>
 $$A = 12, \quad B = 12, \; \textrm{and} \; C = 48.$$
+>
 > In the second game, A and C doubled their money; so
 > that before that game they had;
 $$A = 6, \quad B = 42, \; \textrm{and} \; C=24.$$
@@ -388,18 +390,30 @@ $$A=39, \quad B=21, \quad C=12.$$
 $$
 \begin{gather}
 x+\frac{1}{2}y=100;\\
-y+\frac{1}{3}z=100;
+y+\frac{1}{3}z=100;\\
 z+\frac{1}{4}x=100;
 \end{gather}
 $$
 > two of which only give the value of $$x$$, namely,
 $$
 \begin{gather}
-x=100-\frac{1}{2}y,
+x=100-\frac{1}{2}y,\\
 x=400-4z.
 \end{gather}
 $$
 > So that we have the equation,
+> $$100-\frac{1}{2}y=400-4z$$, or $$4z-\frac{1}{2}y=300$$, which must
+> be combined with the second, in order to determine $$y$$ and $$z$$.
+> Now, the second equation was, $$y+\frac{1}{3}z=100$$: we
+> therefore deduce from it $$y=100-\frac{1}{3}z$$; and the equation
+> found last being $$4z-\frac{1}{2}y=300$$, we have $$y=8z-600$$.
+> The final equation, therefore, becomes
+> $$100-\frac{1}{3}z=8z-600$$; so that $$8\frac{1}{3}z=700$$, or $$\frac{25}{3}z=700$$, and
+> $$z=84$$. Consequently,
+> $$y=100-28=72$$, and $$x=64$$.
+>
+> The youngest therefore had 64 guineas, the second had 72
+> guineas, and the eldest had 84 guineas.
 
 <!--
 <span style="font-variant: small-caps;">A</span>
