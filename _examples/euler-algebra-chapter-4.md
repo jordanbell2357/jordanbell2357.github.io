@@ -325,7 +325,42 @@ $$
 $$x+y+z=9+\frac{7}{8}s.$$
 > So that, since $$x+y+z=s$$, we have $$s=9+\frac{7}{8}s$$;
 > and, consequently, $$\frac{1}{8}s=9$$, and $$s=72$$.
-
+>
+> If we now substitute this value of $$s$$ in the expressions
+> which we have found for $$x$$, $$y$$, and $$z$$, we shall find that,
+> before they began to play, A had 39 guineas, B 21, and
+> C 12.
+>
+> This solution shows, that, by means of an expression for
+> the sum of the three unknown quantities, we may overcome
+> the difficulties which occur in the ordinary method.
+>
+> **617.** Although the preceding question appears difficult at
+> first, it may be resolved even without algebra, by proceeding
+> inversely. For since the players, when they left off, had
+> each 24 guineas, and, in the third game, A and B doubled
+> their money, they must have had before that last game, as
+> follows:
+$$A = 12, \quad B = 12, \; \textrm{and} \; C = 48.$$
+> In the second game, A and C doubled their money; so
+> that before that game they had;
+$$A = 6, \quad B = 42, \; \textrm{and} \; C=24.$$
+> Lastly, in the first game, A and C gained each as much
+> money as they began with; so that at first the three persons
+> had:
+$$A=39, \quad B=21, \quad C=12.$$
+> The same result as we obtained by the former solution.
+>
+> **618.** *Question 5.* Two persons owe conjointly 29 pistoles; they have both money,
+> but neither of them enough to enable him, singly, to discharge this common debt: the
+> first debtor says therefore to the second, If you give me $$\frac{2}{3}$$ of
+> your money, I can immediately pay the debt; and the
+> second answers, that he also could discharge the debt, if the
+> other would give him $$\frac{3}{4}$$ of his money. Required, how many
+> pistoles each had?
+>
+> Suppose that the first has $$x$$ pistoles, and that the second
+> has $$y$$ pistoles.
 
 
 
