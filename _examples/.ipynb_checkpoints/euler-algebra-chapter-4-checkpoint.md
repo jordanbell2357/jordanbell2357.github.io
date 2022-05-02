@@ -559,8 +559,8 @@ $$
 $$
 \begin{gather}
 x=1802-1537=265;\\
-2y=2703-1537=1166, \textrm{or } y=583;\\
-3x=3604-1537=2067, \textrm{or } z=689.
+2y=2703-1537=1166, \quad \textrm{or } y=583;\\
+3x=3604-1537=2067, \quad \textrm{or } z=689.
 \end{gather}
 $$
 >
