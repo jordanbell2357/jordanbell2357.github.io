@@ -361,8 +361,45 @@ $$A=39, \quad B=21, \quad C=12.$$
 >
 > Suppose that the first has $$x$$ pistoles, and that the second
 > has $$y$$ pistoles.
-
-
+>
+> Then we shall first have, $$x+\frac{2}{3}y=29$$;
+> and also, $$y+\frac{3}{4}x=29$$.
+> The first equation gives $$x=29-\frac{2}{3}y$$,
+> and the second $$x=\frac{116-4y}{3}$$;
+> so that $$29-\frac{2}{3}y=\frac{116-4y}{3}$$.
+> From which equation, we obtain $$y=14\frac{1}{2}$$;
+> Therefore $$x=19\frac{1}{3}$$.
+>
+> Hence the first person had $$19\frac{1}{3}$$ pistoles, and the second
+> had $$14\frac{1}{2}$$ pistoles.
+>
+> **619.** *Question 6.* Three brothers bought a vineyard for
+> a hundred guineas. The youngest says, that he could pay
+> for it alone, if the second gave him half the money which he
+> had; the second says, that if the eldest would give him only
+> the third of his money, he could pay for the vineyard singly;
+> lastly, the eldest asks only a fourth part of the money of
+> the youngest, to pay for the vineyard himself. How much
+> money had each?
+>
+> Suppose the first had $$x$$ guineas; the second, $$y$$ guineas;
+> the third, $$z$$ guineas; we shall then have the three following
+> equations:
+$$
+\begin{gather}
+x+\frac{1}{2}y=100;\\
+y+\frac{1}{3}z=100;
+z+\frac{1}{4}x=100;
+\end{gather}
+$$
+> two of which only give the value of $$x$$, namely,
+$$
+\begin{gather}
+x=100-\frac{1}{2}y,
+x=400-4z.
+\end{gather}
+$$
+> So that we have the equation,
 
 <!--
 <span style="font-variant: small-caps;">A</span>
