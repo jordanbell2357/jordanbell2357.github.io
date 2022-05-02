@@ -314,6 +314,17 @@ $$A=8x-4s,\quad B=8y-2s,\; \textrm{and} \; c=8z-s.$$
 > since the three persons have in all 72 guineas at the end of
 > the last game; but it is not necessary to attend to this at
 > first; since we have,
+$$
+\begin{gather}
+8x-4s=24, \textrm{or} 8x=24+4s, \textrm{or} x=3+\frac{1}{2}s;
+8y-2s=24, \textrm{or} 8y=24+2s, \textrm{or} y=3+\frac{1}{4}s;
+8z-s=24, \textrm{or} 8z=24+s, \textrm{or} z=3+\frac{1}{8}s;
+\end{gather}
+$$
+> and adding these three values, we have
+$$x+y+z=9+\frac{7}{8}s.$$
+> So that, since $$x+y+z=s$$, we have $$s=9+\frac{7}{8}s$$;
+> and, consequently, $$\frac{1}{8}s=9$$, and $$s=72$$.
 
 
 
