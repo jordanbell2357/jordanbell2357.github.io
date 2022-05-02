@@ -285,6 +285,31 @@ $$2743-143z=4984-392z, \: \textrm{or} \: 249z=2241, \: \textrm{and} \: z=9.$$
 > leaving off, they find that each has an equal sum, namely,
 > 24 guineas. Required, with how much money each sat
 > down to play?
+>
+> Suppose that the stake of the first person was x, that of
+the second y, and that of the third z: also, let us make the
+sum of all the stakes, or x + y + z, = s. Now, A losing in
+the first game as much money as the other two have, he
+loses s — x (for he himself having had x, the two others
+must have had s - x); therefore there will remain to him
+2x-s; also B will have 2y, and C will have 2z.
+>
+> So that, after the first game, each will have as follows:
+A = 2x — s, B = 2y, and c = 2z.
+>
+> In the second game, B, who has now 2y, loses as much
+money as the other two have, that is to say, s - 2y; so that
+he has left 4y — s. With regard to the other two, they
+will each have double what they had ; so that after the
+second game, the three persons have as follows: A = 4x - 2s,
+B = 4y-s, and C = 4z.
+>
+> In the third game, C, who has now 4z, is the loser; he
+loses to A, 4x - 2s, and to B, 4y-s; consequently, after
+this game, they will have :
+A=8x-4s,\quad B=8y-2s,\; \textrm{and} \; c=8z-s.
+> 
+
 
 
 <!--
