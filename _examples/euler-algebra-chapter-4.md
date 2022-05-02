@@ -471,10 +471,45 @@ $$
 $$z=cn-bcn+abcn-abcu.$$
 >
 > Substituting this in the fourth equation, we have
-
-<!--
-<span style="font-variant: small-caps;">A</span>
--->
+>
+$$cdn-bcdn+abcdn-abcdu+u=dn.$$
+>
+> So that
+>
+$$dn-cdn+bcdn-abcdn=abcdu-u,$$
+>
+> or
+>
+$$(abcd-1)\cdot u = abcdn-bcdn+cdn-dn;$$
+>
+> whence we have
+>
+$$u = \dfrac{abcdn-bcdn+cdn-dn}{abcd-1}=\dfrac{n\cdot (abcd-bcd+cd-d)}{abcd-1}.$$
+>
+> And, consequently, by substituting this value of $$u$$ in the
+> equation, $$x = an - au$$, we have
+>
+$$
+\begin{gather}
+x=\dfrac{abcdn-acdn+adn-an}{abcd-1} = \dfrac{n\cdot (abcd-acd+ad-a)}{abcd-1},\\
+y=\dfrac{abcdn-abdn+abn-bn}{abcd-1} = \dfrac{n\cdot (abcd-abd+ab-b)}{abcd-1},\\
+z=\dfrac{abcdn-abcn+bcn-cn}{abcd-1} = \dfrac{n\cdot (abcd-abc+bc-c)}{abcd-1},\\
+u=\dfrac{abcdn-bcdn+cdn-dn}{abcd-1} = \dfrac{n\cdot (abcd-bcd+cd-d)}{abcd-1}.
+\end{gather}
+$$
+>
+> **622.** *Question 7.* A captain lias three companies, one of
+> Swiss, another of Swabians, and a third of Saxons. He
+> wishes to storm with part of these troops, and he promises a
+> reward of 901 crowns, on the following condition; namely,
+> that each soldier of the company, which assaults, shall receive 1 crown, and that the rest of > the money shall be equally
+> distributed among the two other companies. Now, it is
+> found, that if the Swiss make the assault, each soldier of the
+> other companies will receive half-a-crown; that, if the Swabians assault,
+> each of the others will receive ⅓ of a crown;
+> and, lastly, if the Saxons make the assault, each of the others
+> will receive ¼ of a crown. Required the number of men in
+> each company?
 
 
 #### References
