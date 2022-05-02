@@ -502,7 +502,8 @@ $$
 > Swiss, another of Swabians, and a third of Saxons. He
 > wishes to storm with part of these troops, and he promises a
 > reward of 901 crowns, on the following condition; namely,
-> that each soldier of the company, which assaults, shall receive 1 crown, and that the rest of > the money shall be equally
+> that each soldier of the company, which assaults, shall receive 1 crown,
+> and that the rest of the money shall be equally
 > distributed among the two other companies. Now, it is
 > found, that if the Swiss make the assault, each soldier of the
 > other companies will receive half-a-crown; that, if the Swabians assault,
@@ -510,6 +511,14 @@ $$
 > and, lastly, if the Saxons make the assault, each of the others
 > will receive ¼ of a crown. Required the number of men in
 > each company?
+>
+> Let us suppose the number of Swiss to be $$x$$, that of
+> Swabians $$y$$, and that of Saxons $$z$$. And let us also make
+> $$x+y+z= s$$, because it is easy to see, that, by this, we
+> abridge the calculation considerably. If, therefore, the Swiss
+> make the assault, their number being $$x$$, that of the other
+> will be $$s - x$$: now, the former receive 1 crown, and the
+> latter half-a-crown; so that we shall have,
 
 
 #### References
