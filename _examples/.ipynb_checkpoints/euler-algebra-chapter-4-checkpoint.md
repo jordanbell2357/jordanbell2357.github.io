@@ -316,6 +316,7 @@ $$A=8x-4s,\quad B=8y-2s,\; \textrm{and} \; c=8z-s.$$
 > since the three persons have in all 72 guineas at the end of
 > the last game; but it is not necessary to attend to this at
 > first; since we have,
+>
 $$
 \begin{gather}
 8x-4s=24, \textrm{or} 8x=24+4s, \textrm{or} x=3+\frac{1}{2}s;\\
@@ -323,6 +324,7 @@ $$
 8z-s=24, \textrm{or} 8z=24+s, \textrm{or} z=3+\frac{1}{8}s;
 \end{gather}
 $$
+>
 > and adding these three values, we have $$x+y+z=9+\frac{7}{8}s$$.
 > So that, since $$x+y+z=s$$, we have $$s=9+\frac{7}{8}s$$;
 > and, consequently, $$\frac{1}{8}s=9$$, and $$s=72$$.
@@ -392,6 +394,7 @@ $$A=39, \quad B=21, \quad C=12.$$
 > Suppose the first had $$x$$ guineas; the second, $$y$$ guineas;
 > the third, $$z$$ guineas; we shall then have the three following
 > equations:
+>
 $$
 \begin{gather}
 x+\frac{1}{2}y=100;\\
@@ -399,13 +402,16 @@ y+\frac{1}{3}z=100;\\
 z+\frac{1}{4}x=100;
 \end{gather}
 $$
+>
 > two of which only give the value of $$x$$, namely,
+>
 $$
 \begin{gather}
 x=100-\frac{1}{2}y,\\
 x=400-4z.
 \end{gather}
 $$
+>
 > So that we have the equation,
 > $$100-\frac{1}{2}y=400-4z$$, or $$4z-\frac{1}{2}y=300$$, which must
 > be combined with the second, in order to determine $$y$$ and $$z$$.
