@@ -414,6 +414,23 @@ $$
 >
 > The youngest therefore had 64 guineas, the second had 72
 > guineas, and the eldest had 84 guineas.
+>
+> **620.** As, in this example, each equation contains only two
+> unknown quantities, we may obtain the solution required in
+> an easier way.
+>
+> The first equation gives $$y = 200 - 2x$$, so that $$y$$ is determined by $$x$$; and if we 
+> substitute this value in the second equation, we have
+> $$200-2x+\frac{1}{3}z=100$$; therefore $$\frac{1}{3}z=2x-100$$, and $$z=6x-300$$.
+>
+> So that $$z$$ is also determined by $$x$$; and if we introduce this value into
+> the third equation, we obtain $$6x-300+\frac{1}{4}x=100$$, in which $$x$$ stands alone,
+> and which, when reduced to $$25x-1600=0$$, gives $$x=64$$. Consequently,
+> $$y=200-128=72$$, and $$z=384-300=84$$.
+>
+> **621.** We may follow the same method, when we have a
+> greater number of equations. Suppose, for example, that
+> we have in general;
 
 <!--
 <span style="font-variant: small-caps;">A</span>
