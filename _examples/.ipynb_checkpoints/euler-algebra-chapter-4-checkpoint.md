@@ -201,7 +201,7 @@ $$
 >
 > Now, the first gives $$2z-2y = 1$$, and, by the second,
 > $$2y=18$$, or $$y = 9$$; if therefore we substitute this value of
-> $$y$$ in $$2z-2y = 1$$, we have $$2z- 18 = 1$$, or $$9z = 19$$, so
+> $$y$$ in $$2z-2y = 1$$, we have $$2z- 18 = 1$$, or $$2z = 19$$, so
 > that $$z=9\frac{1}{2}$$; it remains, therefore, only to determine $$x$$,
 > which is easily found $$=8\frac{1}{2}$$.
 >
@@ -235,21 +235,30 @@ $$
 > 
 $$3y+5z-62=\dfrac{25-5y+4z}{3};$$
 >
-> multiplying bv 3, gives $$9y+15z-186=25-5y+4z$$;
+> multiplying bv 3, gives
+>
+$$9y+15z-186=25-5y+4z;$$
+>
 > so that $$9y + 15z = 211 - 5y - 4z$$, and
-> $$14y+11z=211$$.
+>
+$$14y+11z=211.$$
 > 
 > Comparing also the third with the second, we have
-> $$3y+5z-62=\dfrac{46+2y-3z}{5}$$, or $$46+2y-3z=15y+25z-310$$,
-> which, when reduced, becomes $$356=13y+28z$$.
+>
+$$3y+5z-62=\dfrac{46+2y-3z}{5},$$
+>
+> or $$46+2y-3z=15y+25z-310$$,
+> which, when reduced, becomes
+>
+$$356=13y+28z.$$
 >
 > We shall now deduce, from these two new equations, the value of $$y$$:
 >
-$$14y+11z=211; \quad \textrm{or} \quad 14y=211-11z,$$
+$$\textrm{I) } 14y+11z=211; \quad \textrm{or} \quad 14y=211-11z,$$
 >
 > and $$y = \dfrac{211-11z}{14}$$.
 >
-$$13y+28z=356; \quad \textrm{or} \quad 13y=356-28z,$$
+$$\textrm{II) } 13y+28z=356; \quad \textrm{or} \quad 13y=356-28z,$$
 >
 > and $$y = \dfrac{356-28z}{13}$$.
 >
@@ -257,16 +266,15 @@ $$13y+28z=356; \quad \textrm{or} \quad 13y=356-28z,$$
 >
 $$\dfrac{211-11z}{14}=\dfrac{356-28z}{13},$$
 >
-> whence
->
-$$2743-143z=4984-392z, \: \textrm{or} \: 249z=2241, \: \textrm{and} \: z=9.$$
+> whence $$2743-143z=4984-392z$$, or $$249z=2241$$, and $$z=9$$.
 >
 > This value being substituted in one of the two equations
 > of $$y$$ and $$z$$, we find $$y=8$$; and, lastly, a similar substitution
 > in one of the three values of $$x$$, will give $$x=7$$.
 >
 > **615.** If there were more llian tliree unknown quantities to
-> determine, and as many equations to resolve, we should proceed in the same manner; but the calculations would often
+> determine, and as many equations to resolve, we should proceed in the same manner;
+> but the calculations would often
 > prove very tedious.
 >
 > It is proper, therefore, to remark, that, in each particular
@@ -319,9 +327,9 @@ $$A=8x-4s,\quad B=8y-2s,\; \textrm{and} \; c=8z-s.$$
 >
 $$
 \begin{gather}
-8x-4s=24, \textrm{or} 8x=24+4s, \textrm{or} x=3+\frac{1}{2}s;\\
-8y-2s=24, \textrm{or} 8y=24+2s, \textrm{or} y=3+\frac{1}{4}s;\\
-8z-s=24, \textrm{or} 8z=24+s, \textrm{or} z=3+\frac{1}{8}s;
+8x-4s=24, \; \textrm{or} \; 8x=24+4s, \; \textrm{or} \; x=3+\frac{1}{2}s;\\
+8y-2s=24, \; \textrm{or} \; 8y=24+2s, \; \textrm{or} \; y=3+\frac{1}{4}s;\\
+8z-s=24, \; \textrm{or} \; 8z=24+s, \; \textrm{or} \; z=3+\frac{1}{8}s;
 \end{gather}
 $$
 >
@@ -362,10 +370,10 @@ $$A=39, \quad B=21, \quad C=12.$$
 >
 > **618.** *Question 5.* Two persons owe conjointly 29 pistoles; they have both money,
 > but neither of them enough to enable him, singly, to discharge this common debt: the
-> first debtor says therefore to the second, If you give me $$\frac{2}{3}$$ of
+> first debtor says therefore to the second, If you give me ⅔ of
 > your money, I can immediately pay the debt; and the
 > second answers, that he also could discharge the debt, if the
-> other would give him $$\frac{3}{4}$$ of his money. Required, how many
+> other would give him ¾ of his money. Required, how many
 > pistoles each had?
 >
 > Suppose that the first has $$x$$ pistoles, and that the second
@@ -373,9 +381,11 @@ $$A=39, \quad B=21, \quad C=12.$$
 >
 > Then we shall first have, $$x+\frac{2}{3}y=29$$;
 > and also, $$y+\frac{3}{4}x=29$$.
+>
 > The first equation gives $$x=29-\frac{2}{3}y$$,
 > and the second $$x=\frac{116-4y}{3}$$;
 > so that $$29-\frac{2}{3}y=\frac{116-4y}{3}$$.
+>
 > From which equation, we obtain $$y=14\frac{1}{2}$$;
 > Therefore $$x=19\frac{1}{3}$$.
 >
@@ -397,9 +407,9 @@ $$A=39, \quad B=21, \quad C=12.$$
 >
 $$
 \begin{gather}
-x+\frac{1}{2}y=100;\\
-y+\frac{1}{3}z=100;\\
-z+\frac{1}{4}x=100;
+\textrm{I) } x+\frac{1}{2}y=100;\\
+\textrm{II) } y+\frac{1}{3}z=100;\\
+\textrm{III) } z+\frac{1}{4}x=100;
 \end{gather}
 $$
 >
@@ -407,8 +417,8 @@ $$
 >
 $$
 \begin{gather}
-x=100-\frac{1}{2}y,\\
-x=400-4z.
+\textrm{I) } x=100-\frac{1}{2}y,\\
+\textrm{III) } x=400-4z.
 \end{gather}
 $$
 >
@@ -445,10 +455,10 @@ $$
 >
 $$
 \begin{gather}
-u+\dfrac{x}{a}=n,\\
-x+\dfrac{y}{b}=n,\\
-y+\dfrac{z}{c}=n,\\
-z+\dfrac{u}{d}=n;
+\textrm{I) } u+\dfrac{x}{a}=n,\\
+\textrm{II) } x+\dfrac{y}{b}=n,\\
+\textrm{III) } y+\dfrac{z}{c}=n,\\
+\textrm{IV) } z+\dfrac{u}{d}=n;
 \end{gather}
 $$
 >
@@ -456,10 +466,10 @@ $$
 >
 $$
 \begin{gather}
-au+x=an,\\
-bx+y=nb,\\
-cy+z=nc,\\
-dz+u=nd;
+\textrm{I) } au+x=an,\\
+\textrm{II) } bx+y=nb,\\
+\textrm{III) } cy+z=nc,\\
+\textrm{IV) } dz+u=nd;
 \end{gather}
 $$
 >
@@ -559,8 +569,8 @@ $$
 $$
 \begin{gather}
 x=1802-1537=265;\\
-2y=2703-1537=1166, \quad \textrm{or } y=583;\\
-3x=3604-1537=2067, \quad \textrm{or } z=689.
+2y=2703-1537=1166, \quad \textrm{or } \quad y=583;\\
+3x=3604-1537=2067, \quad \textrm{or } \quad z=689.
 \end{gather}
 $$
 >
