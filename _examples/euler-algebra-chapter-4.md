@@ -555,6 +555,18 @@ $$
 > and, by addition, $$6s=26129-11s$$; or $$17s=26129$$; so that
 > $$s=1537$$; which is the whole number of soldiers.
 > By this means we find,
+>
+$$
+\begin{gather}
+x=1802-1537=265;\\
+2y=2703-1537=1166, \textrm{or } y=583;\\
+3x=3604-1537=2067, \textrm{or } z=689.
+\end{gather}
+$$
+>
+> The company of Swiss therefore has 265 men; that of
+> Swabians 583; and that of Saxons 689.
+
 
 
 #### References
