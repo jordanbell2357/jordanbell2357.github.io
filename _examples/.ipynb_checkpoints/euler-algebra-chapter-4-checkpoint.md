@@ -442,6 +442,35 @@ $$
 > **621.** We may follow the same method, when we have a
 > greater number of equations. Suppose, for example, that
 > we have in general;
+>
+$$
+\begin{gather}
+u+\dfrac{x}{a}=n,\\
+x+\dfrac{y}{b}=n,\\
+y+\dfrac{z}{c}=n,\\
+z+\dfrac{u}{d}=n;
+\end{gather}
+$$
+>
+> or, destroying the fractions, these equations become,
+>
+$$
+\begin{gather}
+au+x=an,\\
+bx+y=nb,\\
+cy+z=nc,\\
+dz+u=nd;
+\end{gather}
+$$
+>
+> Here, the first gives immediately $$x = an-au$$, and, this
+> value being substituted in the second, we have $$abn-abu+y=bn$$;
+> so that $$y =bn-abn+abu$$; and the substitution of this value, in the third equation, gives
+> $$bcn-abcn+abcu+z=cn$$; therefore
+>
+$$z=cn-bcn+abcn-abcu.$$
+>
+> Substituting this in the fourth equation, we have
 
 <!--
 <span style="font-variant: small-caps;">A</span>
