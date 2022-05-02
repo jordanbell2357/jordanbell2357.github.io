@@ -519,6 +519,42 @@ $$
 > make the assault, their number being $$x$$, that of the other
 > will be $$s - x$$: now, the former receive 1 crown, and the
 > latter half-a-crown; so that we shall have,
+>
+$$x+\frac{1}{2}s-\frac{1}{2}x=901.$$
+>
+> In the same manner, if the Swabians make the assault, we have
+>
+$$y+\frac{1}{3}s-\frac{1}{3}y=901.$$
+>
+> And lastly, if the Saxons make the assault, we have,
+>
+$$z+\frac{1}{4}s-\frac{1}{4}z=901.$$
+>
+> Each of these three equations will enable us to determine
+> one of the unknown quantities, $$x$$, $$y$$, and $$z$$;
+>
+$$
+\begin{gather}
+x=1802-s,\\
+2y=2703-s,\\
+3z=3604-s.
+\end{gather}
+$$
+>
+> And if we now take the values of $$6x$$, $$6y$$, and $$6z$$, and
+> write those values one above the other, we shall have
+>
+$$
+\begin{gather}
+6x=10812-6s,\\
+6y=8109-3s,\\
+6z=7208-2s,
+\end{gather}
+$$
+>
+> and, by addition, $$6s=26129-11s$$; or $$17s=26129$$; so that
+> $$s=1537$$; which is the whole number of soldiers.
+> By this means we find,
 
 
 #### References
