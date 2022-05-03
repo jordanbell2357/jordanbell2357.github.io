@@ -158,7 +158,7 @@ $$y=\dfrac{a-b}{2}.$$
 >
 > Consequently our two equations will be,
 >
-$$y + 1 = 2x-2, \quad \textrm{and} \quad x+1=3y-3.$$
+$$\textrm{I) } y + 1 = 2x-2, \quad \textrm{and} \quad \textrm{II) } x+1=3y-3.$$
 >
 > From the first, $$x=\dfrac{y+3}{2}$$, and the second gives
 > $$x = 3y-4$$; whence we have the new equation $$\dfrac{y+3}{2}=3y-4$$,
@@ -173,9 +173,9 @@ $$y + 1 = 2x-2, \quad \textrm{and} \quad x+1=3y-3.$$
 >
 $$
 \begin{gather}
-x+y-z=8\\
-x+z-y=9\\
-y+z-x=10;
+\textrm{I) } x+y-z=8\\
+\textrm{II) } x+z-y=9\\
+\textrm{III) } y+z-x=10;
 \end{gather}
 $$
 >
@@ -184,9 +184,9 @@ $$
 >
 $$
 \begin{gather}
-x=8+z-y\\
-x=9+y-z\\
-x=y+z-10.
+\textrm{I) } x=8+z-y\\
+\textrm{II) } x=9+y-z\\
+\textrm{III) } x=y+z-10.
 \end{gather}
 $$
 >
@@ -196,8 +196,8 @@ $$
 >
 $$
 \begin{gather}
-8+z-y=9+y-z,\\
-8+z-y=y+z-10.
+\textrm{I) } 8+z-y=9+y-z,\\
+\textrm{II) } 8+z-y=y+z-10.
 \end{gather}
 $$
 >
@@ -216,9 +216,9 @@ $$
 >
 $$
 \begin{gather}
-3x+5y-4z=25,\\
-5x-2y+3z=46,\\
-3y+5z-x=62.
+\textrm{I) } 3x+5y-4z=25,\\
+\textrm{II) } 5x-2y+3z=46,\\
+\textrm{III) } 3y+5z-x=62.
 \end{gather}
 $$
 >
@@ -226,9 +226,9 @@ $$
 >
 $$
 \begin{gather}
-x=\dfrac{25-5y+4z}{3},\\
-x=\dfrac{46+2y-3z}{5},\\
-x=3y+5z-62.
+\textrm{I) } x=\dfrac{25-5y+4z}{3},\\
+\textrm{II) } x=\dfrac{46+2y-3z}{5},\\
+\textrm{III) } x=3y+5z-62.
 \end{gather}
 $$
 >
@@ -329,9 +329,9 @@ $$A=8x-4s,\quad B=8y-2s,\; \textrm{and} \; c=8z-s.$$
 >
 $$
 \begin{gather}
-8x-4s=24, \; \textrm{or} \; 8x=24+4s, \; \textrm{or} \; x=3+\frac{1}{2}s;\\
-8y-2s=24, \; \textrm{or} \; 8y=24+2s, \; \textrm{or} \; y=3+\frac{1}{4}s;\\
-8z-s=24, \; \textrm{or} \; 8z=24+s, \; \textrm{or} \; z=3+\frac{1}{8}s;
+\textrm{I) } 8x-4s=24, \; \textrm{or} \; 8x=24+4s, \; \textrm{or} \; x=3+\frac{1}{2}s;\\
+\textrm{II) } 8y-2s=24, \; \textrm{or} \; 8y=24+2s, \; \textrm{or} \; y=3+\frac{1}{4}s;\\
+\textrm{III) } 8z-s=24, \; \textrm{or} \; 8z=24+s, \; \textrm{or} \; z=3+\frac{1}{8}s;
 \end{gather}
 $$
 >
