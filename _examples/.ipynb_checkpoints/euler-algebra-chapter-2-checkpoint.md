@@ -60,7 +60,8 @@ topic: euler
 > The same value of $$x$$ would have been found by
 > subtracting $$+ b -c$$ from the given equation: that is, we
 > should have had, in the same form,
-> $$ax = d - b + c$$, and $$x = \dfrac{d-b+c}{a}$$.
+>
+$$ax = d - b + c, \quad \textrm{and} \quad x = \dfrac{d-b+c}{a}.$$
 >
 > Hence,  
 > If $$2x+5=17$$, we have $$2x=12$$, and $$x=6$$.  
@@ -73,7 +74,8 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 >
 > But if it is $$\dfrac{x}{a} + b - c = d$$, we must first make
 > $$\dfrac{x}{a} =  d- b + c$$; after which we find
-> $$x=(d -b + c)a=ad-ab + ac$$.
+>
+$$x=(d -b + c)a=ad-ab + ac.$$
 >
 > Let $$\frac{1}{2}x-3=4$$, then $$\frac{1}{2}x=7$$, and $$x= 14$$.  
 > Let $$\frac{1}{3}x - 1 + 2a = 3 + a$$, then $$\frac{1}{3}x = 4 - a$$, and
@@ -181,7 +183,7 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > both sides; whence we obtain $$x \log 2 = \log 512$$; and
 > dividing by $$\log 2$$, we find $$x = \dfrac{\log 512}{\log 2}$$. The Tables then give,
 >
-> $$x = \dfrac{2.7092700}{0.3010300} = \dfrac{27092700}{3010300}$$,
+$$x = \dfrac{2.7092700}{0.3010300} = \dfrac{27092700}{3010300},$$
 >
 > or $$x=9$$.
 >
@@ -192,15 +194,15 @@ multiply both sides by $$a$$, in order to have $$x = ab$$.
 > and dividing by $$2 \log 3$$,
 > we have
 >
-> $$x = \dfrac{\log 81}{2 \log 3}$$,
+$$x = \dfrac{\log 81}{2 \log 3},$$
 >
 > or,
 >
-> $$x = \dfrac{\log 81}{\log 9}$$;
+$$x = \dfrac{\log 81}{\log 9};$$
 >
 > whence
 >
-> $$x = \dfrac{1.9084850}{0.9542425}=\dfrac{19084850}{09542425}=2$$.
+$$x = \dfrac{1.9084850}{0.9542425}=\dfrac{19084850}{09542425}=2.$$
 
 #### References
 
