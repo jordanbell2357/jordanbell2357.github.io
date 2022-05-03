@@ -21,7 +21,7 @@ topic: euler
 > order that we may consider this case in a general manner, let
 > the two equations be,
 >
-$$\textrm{I) } ax + by = c; \quad \textrm{and} \quad \textrm{II) } fx + gy = h;$$
+$$\textrm{I) } \; ax + by = c; \quad \textrm{and} \quad \textrm{II) } \; fx + gy = h;$$
 >
 > in which, $$a$$, $$b$$, $$c$$, and $$f$$, $$g$$, $$h$$, are known numbers. It is
 > required, therefore, to obtain, from these two equations, the
@@ -88,7 +88,7 @@ $$x = \dfrac{c-by}{a} = \dfrac{cg-bh}{ag-bf}.$$
 >
 > Let us call the greater number $$x$$, and the less $$y$$: then we shall have
 >
-$$\textrm{I) } x + y = 15, \quad \textrm{and} \quad \textrm{II) } x - y =7.$$
+$$\textrm{I) } \; x + y = 15, \quad \textrm{and} \quad \textrm{II) } \; x - y =7.$$
 >
 > The first equation gives $$x = 15 - y$$ and the second, $$x = 7 + y$$;
 > whence results this equation, $$15-y = 7 + y$$. So that
@@ -103,7 +103,7 @@ $$\textrm{I) } x + y = 15, \quad \textrm{and} \quad \textrm{II) } x - y =7.$$
 > Let the greater of the two numbers be expressed by $$x$$, and
 > the less by $$y$$; we shall then have
 >
-$$\textrm{I) } x+y=a,\quad \textrm{and} \quad \textrm{II) } x-y=b.$$
+$$\textrm{I) } \; x+y=a,\quad \textrm{and} \quad \textrm{II) } \; x-y=b.$$
 >
 > Here the first equation gives $$x = a - y$$, and the second $$x = b + y$$. Therefore,
 > $$a-y=b+y$$; $$a=b+2y$$; $$2y=a-b$$; lastly,
@@ -167,7 +167,7 @@ $$y=\dfrac{a-b}{2}.$$
 >
 > Consequently our two equations will be,
 >
-$$\textrm{I) } y + 1 = 2x-2, \quad \textrm{and} \quad \textrm{II) } x+1=3y-3.$$
+$$\textrm{I) } \; y + 1 = 2x-2, \quad \textrm{and} \quad \textrm{II) } \; x+1=3y-3.$$
 >
 > From the first, $$x=\dfrac{y+3}{2}$$, and the second gives
 > $$x = 3y-4$$; whence we have the new equation $$\dfrac{y+3}{2}=3y-4$$,
@@ -182,9 +182,9 @@ $$\textrm{I) } y + 1 = 2x-2, \quad \textrm{and} \quad \textrm{II) } x+1=3y-3.$$
 >
 $$
 \begin{gather}
-\textrm{I) } x+y-z=8\\
-\textrm{II) } x+z-y=9\\
-\textrm{III) } y+z-x=10;
+\textrm{I)} \; x+y-z=8\\
+\textrm{II)} \; x+z-y=9\\
+\textrm{III)} \; y+z-x=10;
 \end{gather}
 $$
 >
@@ -193,9 +193,9 @@ $$
 >
 $$
 \begin{gather}
-\textrm{I) } x=8+z-y\\
-\textrm{II) } x=9+y-z\\
-\textrm{III) } x=y+z-10.
+\textrm{I)} \; x=8+z-y\\
+\textrm{II)} \; x=9+y-z\\
+\textrm{III)} \; x=y+z-10.
 \end{gather}
 $$
 >
@@ -205,8 +205,8 @@ $$
 >
 $$
 \begin{gather}
-\textrm{I) } 8+z-y=9+y-z,\\
-\textrm{II) } 8+z-y=y+z-10.
+\textrm{I)} \; 8+z-y=9+y-z,\\
+\textrm{II)} \; 8+z-y=y+z-10.
 \end{gather}
 $$
 >
@@ -225,9 +225,9 @@ $$
 >
 $$
 \begin{gather}
-\textrm{I) } 3x+5y-4z=25,\\
-\textrm{II) } 5x-2y+3z=46,\\
-\textrm{III) } 3y+5z-x=62.
+\textrm{I)} \; 3x+5y-4z=25,\\
+\textrm{II)} \; 5x-2y+3z=46,\\
+\textrm{III)} \; 3y+5z-x=62.
 \end{gather}
 $$
 >
@@ -235,9 +235,9 @@ $$
 >
 $$
 \begin{gather}
-\textrm{I) } x=\dfrac{25-5y+4z}{3},\\
-\textrm{II) } x=\dfrac{46+2y-3z}{5},\\
-\textrm{III) } x=3y+5z-62.
+\textrm{I)} \; x=\dfrac{25-5y+4z}{3},\\
+\textrm{II)} \; x=\dfrac{46+2y-3z}{5},\\
+\textrm{III)} \; x=3y+5z-62.
 \end{gather}
 $$
 >
@@ -265,11 +265,11 @@ $$356=13y+28z.$$
 >
 > We shall now deduce, from these two new equations, the value of $$y$$:
 >
-$$\textrm{I) } 14y+11z=211; \quad \textrm{or} \quad 14y=211-11z,$$
+$$\textrm{I)} \; 14y+11z=211; \quad \textrm{or} \quad 14y=211-11z,$$
 >
 > and $$y = \dfrac{211-11z}{14}$$.
 >
-$$\textrm{II) } 13y+28z=356; \quad \textrm{or} \quad 13y=356-28z,$$
+$$\textrm{II)} \; 13y+28z=356; \quad \textrm{or} \quad 13y=356-28z,$$
 >
 > and $$y = \dfrac{356-28z}{13}$$.
 >
@@ -290,9 +290,11 @@ $$\dfrac{211-11z}{14}=\dfrac{356-28z}{13},$$
 >
 > It is proper, therefore, to remark, that, in each particular
 > case, means may always be discovered of greatly facilitating
-> the solution; which consist in introducing into the calculation, beside the principal unknown quantities, a new
+> the solution; which consist in introducing into the calculation, beside
+> the principal unknown quantities, a new
 > unknown quantity arbitrarily assumed, such as, for example,
-> the sum of all the rest; and when a person is a little accustomed to such calculations, he easily perceives what is
+> the sum of all the rest; and when a person is a little accustomed to such
+> calculations, he easily perceives what is
 > most proper to be done. The following examples may
 > serve to facilitate the application of these artifices.
 >
@@ -314,7 +316,7 @@ $$\dfrac{211-11z}{14}=\dfrac{356-28z}{13},$$
 > $$2x-s$$; also B will have $$2y$$, and C will have $$2z$$.
 >
 > So that, after the first game, each will have as follows:
-> $$A = 2x — s$$, $$B = 2y$$, and $$C = 2z$$.
+> $$A = 2x - s$$, $$B = 2y$$, and $$C = 2z$$.
 >
 > In the second game, B, who has now $$2y$$, loses as much
 > money as the other two have, that is to say, $$s - 2y$$; so that
@@ -338,9 +340,9 @@ $$A=8x-4s,\quad B=8y-2s,\; \textrm{and} \; c=8z-s.$$
 >
 $$
 \begin{gather}
-\textrm{I) } 8x-4s=24, \; \textrm{or} \; 8x=24+4s, \; \textrm{or} \; x=3+\frac{1}{2}s;\\
-\textrm{II) } 8y-2s=24, \; \textrm{or} \; 8y=24+2s, \; \textrm{or} \; y=3+\frac{1}{4}s;\\
-\textrm{III) } 8z-s=24, \; \textrm{or} \; 8z=24+s, \; \textrm{or} \; z=3+\frac{1}{8}s;
+\textrm{I)} \; 8x-4s=24, \; \textrm{or} \; 8x=24+4s, \; \textrm{or} \; x=3+\frac{1}{2}s;\\
+\textrm{II)} \; 8y-2s=24, \; \textrm{or} \; 8y=24+2s, \; \textrm{or} \; y=3+\frac{1}{4}s;\\
+\textrm{III)} \; 8z-s=24, \; \textrm{or} \; 8z=24+s, \; \textrm{or} \; z=3+\frac{1}{8}s;
 \end{gather}
 $$
 >
@@ -418,9 +420,9 @@ $$A=39, \quad B=21, \quad C=12.$$
 >
 $$
 \begin{gather}
-\textrm{I) } x+\frac{1}{2}y=100;\\
-\textrm{II) } y+\frac{1}{3}z=100;\\
-\textrm{III) } z+\frac{1}{4}x=100;
+\textrm{I)} \; x+\frac{1}{2}y=100;\\
+\textrm{II)} \; y+\frac{1}{3}z=100;\\
+\textrm{III)} \; z+\frac{1}{4}x=100;
 \end{gather}
 $$
 >
@@ -428,8 +430,8 @@ $$
 >
 $$
 \begin{gather}
-\textrm{I) } x=100-\frac{1}{2}y,\\
-\textrm{III) } x=400-4z.
+\textrm{I)} \; x=100-\frac{1}{2}y,\\
+\textrm{III)} \; x=400-4z.
 \end{gather}
 $$
 >
@@ -466,10 +468,10 @@ $$
 >
 $$
 \begin{gather}
-\textrm{I) } u+\dfrac{x}{a}=n,\\
-\textrm{II) } x+\dfrac{y}{b}=n,\\
-\textrm{III) } y+\dfrac{z}{c}=n,\\
-\textrm{IV) } z+\dfrac{u}{d}=n;
+\textrm{I)} \; u+\dfrac{x}{a}=n,\\
+\textrm{II)} \; x+\dfrac{y}{b}=n,\\
+\textrm{III)} \; y+\dfrac{z}{c}=n,\\
+\textrm{IV)} \; z+\dfrac{u}{d}=n;
 \end{gather}
 $$
 >
@@ -477,10 +479,10 @@ $$
 >
 $$
 \begin{gather}
-\textrm{I) } au+x=an,\\
-\textrm{II) } bx+y=nb,\\
-\textrm{III) } cy+z=nc,\\
-\textrm{IV) } dz+u=nd;
+\textrm{I)} \; au+x=an,\\
+\textrm{II)} \; bx+y=nb,\\
+\textrm{III)} \; cy+z=nc,\\
+\textrm{IV)} \; dz+u=nd;
 \end{gather}
 $$
 >
