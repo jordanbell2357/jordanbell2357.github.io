@@ -45,16 +45,25 @@ $$\textrm{I) } ax + by = c; \quad \textrm{and} \quad \textrm{II) } fx + gy = h;$
 $$\dfrac{c-by}{a}=\dfrac{h-gy}{f};$$
 >
 > multiplying by $$a$$, the product is
+>
 $$c-by=\dfrac{ah-agy}{f};$$
-> and then by $$f$$,
-> the product is
+>
+> and then by $$f$$, the product is
+>
 $$fc-fby = ah-agy;$$
+>
 > adding $$agy$$, we have
+>
 $$fc-fby+agy = ah;$$
+>
 > subtracting $$fc$$, gives
+>
 $$-fby+agy = ah-fc;$$
+>
 > or
+>
 $$(ag-bf)y = ah-fc;$$
+>
 > lastly, dividing by $$ag-bf$$, we have
 >
 $$y = \dfrac{ah-fc}{ag-bf}.$$
