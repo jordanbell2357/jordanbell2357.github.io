@@ -283,7 +283,7 @@ $$\dfrac{211-11z}{14}=\dfrac{356-28z}{13},$$
 > of $$y$$ and $$z$$, we find $$y=8$$; and, lastly, a similar substitution
 > in one of the three values of $$x$$, will give $$x=7$$.
 >
-> **615.** If there were more llian tliree unknown quantities to
+> **615.** If there were more than three unknown quantities to
 > determine, and as many equations to resolve, we should proceed in the same manner;
 > but the calculations would often
 > prove very tedious.
