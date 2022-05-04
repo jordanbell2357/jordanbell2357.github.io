@@ -128,6 +128,48 @@ $$(ag-ce)x^2+(bg+ah-cf-ed)x+bh-fd=0.$$
 > would have this form, $$ax^2 \pm bx = 0$$, which being divisible
 > by $$x$$, may be reduced to $$ax \pm b = 0$$, which is likewise a
 > simple equation, and belongs not to the present class.
+>
+> **629.** But when the middle term, which contains the first
+> power of $$x$$, is wanting, the equation assumes this form,
+> $$ax^2 \pm c = 0$$, or $$ax^2 = c$$; as the sign of $$c$$ may be either
+> positive, or negative
+>
+> We shall call such an equation a pure equation of the second
+> degree, and the resolution of it is attended with no difficulty;
+> for we have only to divide by $$a$$, which gives $$x^2 = \dfrac{c}{a}$$; and
+>
+$$x=\sqrt{\dfrac{c}{a}};$$
+>
+> which means the equation is resolved.
+>
+> **630.** But there are three cases to be considered here. In
+> the first, when $$\frac{c}{a}$$ is a square number (of which we can therefore really
+> assign the root) we obtain for the value of $$x$$ a
+> rational number, which maybe either integral, or fractional.
+> For example, the equation $$x^2=144$$, gives $$x = 12$$. And
+> $$x^2=\frac{9}{16}$$, gives $$x=\frac{3}{4}$$.
+>
+> The second case is, when $$\frac{c}{a}$$ is not a square, in which case
+> we must therefore be contented with the sign $$\surd$$. If, for
+> example, $$x^2 = 12$$, we have $$x =\sqrt{12}$$, the value of which
+> may be determined by approximation, as we have already
+> shown.
+>
+> The third case is that, in which $$\frac{c}{a}$$ becomes a negative
+> number: the value of $$x$$ is then altogether impossible and
+> imaginary \["gar unmöglich oder Imaginär"\]; and this result proves that the question, which
+> leads to such an equation, is in itself impossible.
+>
+> **631.** We shall also observe, before proceeding farther,
+> that whenever it is required to extract the square root of a
+> number, that root, as we have already remarked, has always
+> two values, the one positive and the other negative. Suppose,
+> for example, we have the equation $$x^2 = 49$$, the value
+> of $$x$$ will be not only +7, but also -7, which is expressed
+> by $$x= \pm 7$$. So that all those questions admit of a double
+> answer; but it will be easily perceived that in several cases,
+> as those which relate to a certain number of men, the negative value cannot exist.
+
 
 
 #### References
