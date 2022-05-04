@@ -9,12 +9,13 @@ topic: euler
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 5. "Of the Resolution of Pure Quadratic Equations."
 
 > **623.** An equation is said to be of the second degree, when
-it contains the square, or the second power, of the unknown
-quantity, without any of its higher powers; and an equation, containing likewise the third power of the unknown
-quantity, belongs to cubic equations, and its resolution requires particular rules.
+> it contains the square, or the second power, of the unknown
+> quantity, without any of its higher powers; and an equation,
+> containing likewise the third power of the unknown
+> quantity, belongs to cubic equations, and its resolution requires particular rules.
 >
-> 624. There are, therefore, only three kinds of terms in
-an equation of the second degree:
+> **624.** There are, therefore, only three kinds of terms in
+> an equation of the second degree:
 >
 > 1. The terms in which the unknown quantity is not
 > found at all, or which is composed only of known numbers.
@@ -23,11 +24,100 @@ an equation of the second degree:
 > 3. The terms which contain the square, or the second
 > power, of the unknown quantity.
 >
-> So that x representing an unknown quantity, and the
-letters a, b, c, d, &c. the known quantities, the terms of
-the first kind will have the form a, the terms of the second
-kind will have the form bcc, and the terms of the third kind
-will have the form ex".
+> So that $$x$$ representing an unknown quantity, and the
+> letters $$a$$, $$b$$, $$c$$, $$d$$, etc. the known quantities, the terms of
+> the first kind will have the form $$a$$, the terms of the second
+> kind will have the form $$bx$$, and the terms of the third kind
+> will have the form $$cx^2$$.
+>
+> **625.** We have already seen, how two or more terms of
+> the same kind may be united together, and considered as a
+> single term.
+>
+> For example, we may consider the formula
+> $$ax^2 - bx^2 + cx^2$$ as a single term, representing it thus,
+> $$(a - b + c)x^2$$; since, in fact, $$(a - b + c)$$ is a known
+> quantity.
+>
+> And also, when such terms are found on both sides of the
+> sign =, we have seen how they may be brought to one side,
+> and then reduced to a single term. Let us take, for example, the equation,
+>
+$$2x^2-3x+4=5x^2-8x+11;$$
+>
+> we first subtract $$2x^2$$, and there remains
+>
+$$-3x+4=3x^2-8x+11;$$
+>
+> then adding $$8x$$, we obtain,
+>
+$$5x+4=3x^2+11;$$
+>
+> lastly, subtracting 11, there remains $$3x^2 = 5x - 7$$.
+>
+> **626.** We may also bring all the terms to one side of the
+> sign =, so as to leave zero, or 0, on the other; but it must
+> be remembered, that when terms are transposed from one
+> side to the other, their signs must be changed.
+>
+> Thus, the above equation will assume this form,
+> $$3x^2-5x+7 = 0$$; and, for this reason also, the following general
+> formula represents all equations of the second degree;
+>
+$$ax^2 \pm bx \pm c = 0;$$
+>
+> in which the sign ± is read plus or minus, and indicates,
+> that such terms as it stands before may be sometimes
+> positive, and sometimes negative.
+>
+> 627. Whatever therefore be the original form of a quadratic equation, it may always be reduced > to this formula of
+> three terms. If we have, for example, the equation
+>
+\dfrac{ax+b}{cx+d} = \dfrac{ex+f}{gx+h}
+>
+> we may, first, destroy the fractions; multiplying, for this
+> purpose, by $$cx+d$$, which gives
+>
+$$ax+b=\dfrac{cex^2+cfx+edx+fd}{gx+h},$$
+>
+then by $$gx+h$$, we have
+>
+$$agx^2+bgx+ahx+bh=cex^2+cfx+edx+fd,$$
+>
+which is an equation of the second degree, reducible to
+the three following terms, which we shall transpose by arranging them in the usual manner
+>
+$$
+\begin{Bmatrix}
+ag\\
+-ce
+\end{Bmatrix}
+x^2
++
+\begin{Bmatrix}
++bg\\
++ah\\
+-cf\\
+-ed
+\end{Bmatrix}
+x
++
+\begin{Bmatrix}
++bh\\
+-fd
+\end{Bmatrix}
+=
+0.
+$$
+>
+> We may exhibit this equation also in the following form,
+> which is still more clear
+>
+$$(ag-ce)x^2+(bg+ah-cf-ed)x+bh-fd=0.$$
+>
+> **628.** Equations of the second degree, in which all the
+> three kinds of terms are found, are called complete, and the
+> resolution of them is attended with greater difficulties; for
 
 #### References
 
