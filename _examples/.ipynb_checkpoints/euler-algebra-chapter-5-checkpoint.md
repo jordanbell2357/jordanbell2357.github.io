@@ -197,6 +197,18 @@ $$x=\sqrt{\dfrac{c}{a}};$$
 > we have $$\frac{1}{2}x = 6$$, and $$\frac{1}{3}x = 4$$: now, the product of these
 > two numbers is 24; and if $$x = - 12$$, we have $$\frac{1}{2}x = -6$$,
 > and $$\frac{1}{3}x = -4$$, the product of which is likewise 24.
+>
+> **634.** *Question 2.* Required a number such, that being increased by 5,
+and diminished by 5, the product of the sum by the difference may be 96.
+>
+> Let this number be $$x$$, then $$x+5$$, multiplied by $$x-5$$,
+> must give 96; whence results the equation,
+>
+$$x^2-25=96.$$
+>
+> Adding 25, we have $$x^2= 121$$; and extracting the root,
+> we have $$x=11$$. Thus $$x + 5 = 16$$, also $$x - 5 = 6$$; and,
+> lastly, 6 ⋅ 16 = 98.
 
 
 
