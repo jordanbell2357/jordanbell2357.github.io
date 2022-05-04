@@ -118,6 +118,17 @@ $$(ag-ce)x^2+(bg+ah-cf-ed)x+bh-fd=0.$$
 > **628.** Equations of the second degree, in which all the
 > three kinds of terms are found, are called complete, and the
 > resolution of them is attended with greater difficulties; for
+> which reason we shall first consider those, in which one of
+> the terms is wanting.
+>
+> Now, if the term $$x^2$$ were not found in the equation, it
+> would not be a quadratic, but would belong to those of
+> which we have already treated; and if the term, which
+> contains only known numbers, were wanting, the equation
+> would have this form, $$ax^2 \pm bx = 0$$, which being divisible
+> by $$x$$, may be reduced to $$ax \pm b = 0$$, which is likewise a
+> simple equation, and belongs not to the present class.
+
 
 #### References
 
