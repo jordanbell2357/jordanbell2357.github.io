@@ -73,7 +73,7 @@ $$ax^2 \pm bx \pm c = 0;$$
 > 627. Whatever therefore be the original form of a quadratic equation, it may always be reduced > to this formula of
 > three terms. If we have, for example, the equation
 >
-\dfrac{ax+b}{cx+d} = \dfrac{ex+f}{gx+h}
+$$\dfrac{ax+b}{cx+d} = \dfrac{ex+f}{gx+h}$$
 >
 > we may, first, destroy the fractions; multiplying, for this
 > purpose, by $$cx+d$$, which gives
