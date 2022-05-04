@@ -27,12 +27,6 @@ permalink: /examples/
 * this unordered seed list will be replaced by toc as unordered list
 {:toc}
 
-## Euler, *The Elements of Algebra*
-
-{% for example in euler %}
-1. [{{example.title}}]({{ example.url }})
-{% endfor %}
-
 ## Factors of quadratic polynomials
 
 {% for example in factors %}
@@ -105,4 +99,10 @@ permalink: /examples/
 
 {% for exercise in gm %}
 1. [{{ exercise.title}}]({{ exercise.url }})
+{% endfor %}
+
+## Euler, *The Elements of Algebra*
+
+{% for example in euler %}
+1. [{{example.title}}]({{ example.url }})
 {% endfor %}
