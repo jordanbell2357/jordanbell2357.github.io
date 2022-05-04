@@ -187,6 +187,18 @@ $$x=\sqrt{\dfrac{c}{a}};$$
 >
 > **633.** *Question 1.* Required a number, the half of which
 > multiplied by the third, may produce 24.
+>
+> Let this number be $$x$$; then by the question $$\frac{1}{2}x$$,
+> multiplied by $$\frac{1}{3}x$$, must give 24; we shall therefore have the
+> equation $$\frac{1}{6}x^2 = 24$$.
+>
+> Multiplying by 6, we have $$x^2 = 144$$; and the extraction
+> of the root gives $$x = \pm 12$$. We put ±; for if $$x=+12$$,
+> we have $$\frac{1}{2}x = 6$$, and $$\frac{1}{3}x = 4$$: now, the product of these
+> two numbers is 24; and if $$x = - 12$$, we have $$\frac{1}{2}x = -6$$,
+> and $$\frac{1}{3}x = -4$$, the product of which is likewise 24.
+
+
 
 
 #### References
