@@ -169,7 +169,24 @@ $$x=\sqrt{\dfrac{c}{a}};$$
 > by $$x= \pm 7$$. So that all those questions admit of a double
 > answer; but it will be easily perceived that in several cases,
 > as those which relate to a certain number of men, the negative value cannot exist.
-
+>
+> **632.** In such equations, also, as $$ax^2= bx$$, where the
+> known quantity $$c$$ is wanting, there may be two values of $$x$$,
+> though we find only one if we divide by $$x$$. In the equation
+> $$x^2=3x$$, for example, in which it is required to assign such
+> a value of $$x$$, that $$x^2$$ may become equal to $$3x$$, this is done by
+> supposing $$x = 3$$, a value which is found by dividing the
+> equation by $$x$$; but, beside this value, there is also another,
+> which is equally satisfactory, namely, $$x=0$$; for then
+> $$x^2=0$$, and $$3x= 0$$. Equations therefore of the second
+> degree, in general, admit of two solutions, whilst simple
+> equations admit only of one.
+>
+> We shall now illustrate what we have said with regard to
+> pure equations of the second degree by some examples.
+>
+> **633.** *Question 1.* Required a number, the half of which
+> multiplied by the third, may produce 24.
 
 
 #### References
