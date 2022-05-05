@@ -206,6 +206,44 @@ $$x=-\frac{1}{2} \pm \sqrt{\frac{1}{4}+132} = -\frac{1}{2} \pm \sqrt{\frac{529}{
 > **648.** *Question 3.* To find a number such, that if we
 > multiply its half by its third, and to the product add half
 > the number required, the result will be 30.
+>
+> Supposing the number to be $$x$$, its half, multiplied by its third, will
+> give $$\frac{1}{6}x^2$$; so that $$\frac{1}{6}x^2+\frac{1}{2}x=30$$; and multiplying
+> by 6, we have $$x^2+3x=180$$, or $$x^2=-3x+180$$, which gives
+>
+$$x=-\frac{3}{2} \pm \sqrt{\frac{9}{4}+180} = -\frac{3}{2} \pm \frac{27}{2}.$$
+>
+> Consequently, either $$x=12$$, or $$x=-15$$.
+>
+> **649.** *Question 4.* To find two numbers, the one being
+> double the other, and such, that if we add their sum to their
+> product, we may obtain 90.
+>
+> Let one of the numbers be $$x$$, then the other will be $$2x$$;
+> their product also will be $$2x^2$$ and if we add to this $$3x$$,
+> or their sum, the new sum ought to make 90. So that
+> $$2x^2 + 3x = 90$$; or $$2x^2 = 90 - 3x$$; whence $$x^2 = -\frac{3}{2}x+45$$;
+> and thus we obtain
+>
+$$x=-\frac{3}{4} \pm \sqrt{\frac{9}{16}+45}=-\frac{3}{4} \pm \frac{27}{4}.$$
+>
+> Consequently, $$x=6$$ or $$x=-7\frac{1}{2}$$.
+>
+> **650.** *Question 5.* A horse-dealer bought a horse for a
+> certain number of crowns, and sold it again for 119 crowns,
+> by which means his profit was as much per cent as the horse
+> cost him; what was his first purchase?
+>
+> Suppose the horse cost $$x$$ crowns; then, as the dealer gains
+> $$x$$ per cent, we have this proportion
+>
+$$100:x::x:\frac{x^2}{100};$$
+>
+
+
+
+
+
 
 
 
