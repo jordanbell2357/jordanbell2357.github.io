@@ -70,15 +70,16 @@ $$ax^2 \pm bx \pm c = 0;$$
 > that such terms as it stands before may be sometimes
 > positive, and sometimes negative.
 >
-> **627.** Whatever therefore be the original form of a quadratic equation, it may always be reduced > to this formula of
+> **627.** Whatever therefore be the original form of a quadratic equation,
+> it may always be reduced to this formula of
 > three terms. If we have, for example, the equation
 >
-$$\dfrac{ax+b}{cx+d} = \dfrac{ex+f}{gx+h}$$
+$$\frac{ax+b}{cx+d} = \frac{ex+f}{gx+h}$$
 >
 > we may, first, destroy the fractions; multiplying, for this
 > purpose, by $$cx+d$$, which gives
 >
-$$ax+b=\dfrac{cex^2+cfx+edx+fd}{gx+h},$$
+$$ax+b=\frac{cex^2+cfx+edx+fd}{gx+h},$$
 >
 then by $$gx+h$$, we have
 >
@@ -232,14 +233,14 @@ $$x^2-25=96.$$
 > Suppose that the first player has $$x$$ crowns; and since
 > he has as many times 7 crowns, as the second has 3 crowns,
 > we know that his money is to that of the second, in the ratio
-> of 7:3.
+> of 7 : 3.
 >
 > We shall therefore have 7 : 3 ∷ $$x$$ : $$\frac{3}{7}x$$, the money of the
 > second player.
 >
 > Also, as the money of the second player is to that of the
-> third in the ratio of 17:5, we shall have
-> 17:5 ∷ $$\frac{3}{7}x$$ : $$\frac{15}{119}x$$,
+> third in the ratio of 17 : 5, we shall have
+> 17 : 5 ∷ $$\frac{3}{7}x$$ : $$\frac{15}{119}x$$,
 > the money of the third player.
 >
 > Multiplying $$x$$, or the money of the first player, by $$\frac{3}{7}x$$, the
