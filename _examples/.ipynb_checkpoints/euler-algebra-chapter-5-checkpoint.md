@@ -307,7 +307,7 @@ $$x = \frac{2 \cdot 17\cdot 7}{3}=\frac{238}{3}=79\frac{1}{3},$$
 > trade, which they have in view, ten times as many crowns
 > as there are partners; and the profit of the factor is fixed at
 > twice as many crowns, per cent, as there are partners. Also,
-> if ¹⁄₁₀₀ part of his total gain be multiplied by 2 ²⁄₉, it will give
+> if ¹⁄₁₀₀ part of his total gain be multiplied by 2²⁄₉, it will give
 > the number of partners. That number is required.
 >
 > Let it be $$x$$; and since, each partner has contributed $$10x$$,
@@ -315,7 +315,7 @@ $$x = \frac{2 \cdot 17\cdot 7}{3}=\frac{238}{3}=79\frac{1}{3},$$
 > the factor gains $$2x$$, so that with the capital of $$10x^2$$ his profit
 > will be $$\frac{1}{5}x^3$$. The ¹⁄₁₀₀ part of his gain is
 > $$\frac{1}{500}x^3$$; multiplying
-> by 2 ²⁄₉, or by ²⁰⁄₉, we have $$\frac{20}{4500}x^3$$, or $$\frac{1}{225}x^3$$,
+> by 2²⁄₉, or by ²⁰⁄₉, we have $$\frac{20}{4500}x^3$$, or $$\frac{1}{225}x^3$$,
 > and this must be equal to the number of partners, or $$x$$.
 >
 > We have, therefore, the equation $$\frac{1}{225}x^3 = x$$, or
