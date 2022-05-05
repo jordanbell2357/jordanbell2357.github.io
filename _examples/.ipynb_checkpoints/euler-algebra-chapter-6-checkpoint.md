@@ -359,6 +359,13 @@ $$x=-\frac{395}{2}+\sqrt{\frac{156025}{4}+\frac{79200}{4}}=-\frac{395}{2}+\frac{
 > month: now these profits agree; for if, with 45*l.*, 18*l.* are
 > gained in one month, 22*l.* will be gained in the same time
 > with 55*l.*
+>
+> **655.** *Question 10.* Two merchants sell each a certain
+> quantity of silk; the second sells 3 ells more than the first,
+> and they received together 35 crowns. Now, the first says
+> to the second, I should have got 24 crowns for your silk;
+> the other answers, And I should have got for yours 12
+> crowns and a half. How many ells had each?
 
 
 
