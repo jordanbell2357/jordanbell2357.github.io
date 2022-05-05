@@ -260,20 +260,28 @@ $$x=-50 \pm \sqrt{2500+11900}=-50 \pm \sqrt{14400} = -50 \pm 120 = 70.$$
 >
 > Let the number sought be $$x$$; then, by the question, the
 > purchaser paid for the different pieces of cloth in the following manner:
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+>
+$$
+\begin{array}{lllllllll}
+\textrm{for the}&1&2&3&4&5&\ldots&x&\textrm{pieces}\\
+\textrm{he pays}&2&4&6&8&10&\ldots&2x&\textrm{crowns.}
+\end{array}
+$$
+>
+> It is therefore required to find the sum of the arithmetical
+> progression $$2 + 4 + 6 + 8 + \cdots + 2x$$ which consists of
+> $$x$$ terms, that we may deduce from it the price of all the
+> pieces of cloth taken together. The rule which we have
+> already given for this operation requires us to add the last
+> term to the first; and the sum is $$2x + 2$$; which must be
+> multiplied by the number of terms $$x$$, and the product will
+> be $$2x^2+2x$$; lastly, if we divide by the difference 2, the
+> quotient will be $$x^2+x$$, which is the sum of the progression;
+> so that we have $$x^2+x = 110$$; therefore $$x^2=-x+110$$, and
+>
+$$x=-\frac{1}{2} + \sqrt{\frac{1}{4}+100} = -\frac{1}{2}+\frac{21}{2} = 10.$$
+>
+> And hence the number of pieces of cloth is 10.
 
 
 
