@@ -309,6 +309,21 @@ $$x = \frac{2 \cdot 17\cdot 7}{3}=\frac{238}{3}=79\frac{1}{3},$$
 > twice as many crowns, per cent, as there are partners. Also,
 > if ¹⁄₁₀₀ part of his total gain be multiplied by 2 ²⁄₉, it will give
 > the number of partners. That number is required.
+>
+> Let it be $$x$$; and since, each partner has contributed $$10x$$,
+> the whole capital is $$10x^2$$. Now, for every hundred crowns,
+> the factor gains $$2x$$, so that with the capital of $$10x^2$$ his profit
+> will be $$\frac{1}{5}x^3$$. The ¹⁄₁₀₀ part of his gain is
+> $$\frac{1}{500}x^3$$; multiplying
+> by 2 ²⁄₉, or by ²⁰⁄₉, we have $$\frac{20}{4500}x^3$$, or $$\frac{1}{225}x^3$$,
+> and this must be equal to the number of partners, or $$x$$.
+>
+> We have, therefore, the equation $$\frac{1}{225}x^3 = x$$, or
+> $$x^3=225x$$; which appears, at first, to be of the third degree;
+> but as we may divide by $$x$$, it is reduced to the quadratic
+> $$x^2=225$$; whence $$x = 15$$.
+>
+> So that there are fifteen partners, and each contributed 150 crowns.
 
 
 
