@@ -70,7 +70,7 @@ $$ax^2 \pm bx \pm c = 0;$$
 > that such terms as it stands before may be sometimes
 > positive, and sometimes negative.
 >
-> 627. Whatever therefore be the original form of a quadratic equation, it may always be reduced > to this formula of
+> **627.** Whatever therefore be the original form of a quadratic equation, it may always be reduced > to this formula of
 > three terms. If we have, for example, the equation
 >
 $$\dfrac{ax+b}{cx+d} = \dfrac{ex+f}{gx+h}$$
@@ -199,7 +199,7 @@ $$x=\sqrt{\dfrac{c}{a}};$$
 > and $$\frac{1}{3}x = -4$$, the product of which is likewise 24.
 >
 > **634.** *Question 2.* Required a number such, that being increased by 5,
-and diminished by 5, the product of the sum by the difference may be 96.
+> and diminished by 5, the product of the sum by the difference may be 96.
 >
 > Let this number be $$x$$, then $$x+5$$, multiplied by $$x-5$$,
 > must give 96; whence results the equation,
@@ -209,7 +209,98 @@ $$x^2-25=96.$$
 > Adding 25, we have $$x^2= 121$$; and extracting the root,
 > we have $$x=11$$. Thus $$x + 5 = 16$$, also $$x - 5 = 6$$; and,
 > lastly, 6 ⋅ 16 = 98.
-
+>
+> **635.** *Question 3.* Required a number such, that by
+> adding it to 10, and subtracting it from 10, the sum, multiplied by the difference,
+> will give 51.
+>
+> Let $$x$$ be this number; then $$10+x$$, multiplied by $$10-x$$,
+> must make 51, so that $$100 - x^2 = 51$$. Adding $$x^2$$, and
+> subtracting 51, we have $$x^2 = 49$$, the square root of which
+> gives $$x = 7$$.
+>
+> **636.** *Question 4.* Three persons, who had been playing,
+> leave off; the first, with as many times 1 crowns, as the
+> second has three crowns; and the second, with as many
+> times 17 crowns, as the third has 5 crowns. Farther, if we
+> multiply the money of the first by the money of the second,
+> and the money of the second by the money of the third,
+> and, lastly, the money of the third by that of the first, the
+> sum of these three products will be 3830⅔. How much
+> money has each?
+>
+> Suppose that the first player has $$x$$ crowns; and since
+> he has as many times 7 crowns, as the second has 3 crowns,
+> we know that his money is to that of the second, in the ratio
+> of 7:3.
+>
+> We shall therefore have 7 : 3 ∷ $$x$$ : $$\frac{3}{7}x$$, the money of the
+> second player.
+>
+> Also, as the money of the second player is to that of the
+> third in the ratio of 17:5, we shall have
+> 17:5 ∷ $$\frac{3}{7}x$$ : $$\frac{15}{119}x$$,
+> the money of the third player.
+>
+> Multiplying $$x$$, or the money of the first player, by $$\frac{3}{7}x$$, the
+> money of the second, we have the product $$\frac{3}{7}x^2$$: then, $$\frac{3}{7}x$$, the
+> money of the second, multiplied by the money of the third,
+> or by $$\frac{15}{119}x$$, gives $$\frac{45}{833}x^2$$; and, lastly, the money of the third,
+> or $$\frac{15}{119}x$$, multiplied by $$x$$, or the money of the first, gives
+> $$\frac{15}{119}x^2$$. Now, the sum of these three products is
+>
+$$\frac{3}{7}x^2+\frac{45}{833}x^2+\frac{15}{119}x^2;$$
+>
+> and reducing these fractions to the same
+> denominator, we find their sum $$\frac{507}{833}x^2$$, which must be equal
+> to the number 3830⅔.
+>
+> We have therefore, $$\frac{507}{833}x^2 = 3830\frac{2}{3}$$.
+>
+> So that $$\frac{1521}{833}x^2 = 11492$$, and $$1521x^2$$ being equal to
+> 9572836, dividing by 1521, we have $$x^2 = \frac{9572836}{1521}$$;
+> and taking its root, we find $$x = \frac{3094}{39}$$. This fraction is reducible
+> to lower terms, if we divide by 13; so that $$x = \frac{283}{3} = 79 \frac{2}{3}$$;
+> and hence we conclude, that $$\frac{3}{7}x = 34$$, and $$\frac{15}{119}x=10$$.
+>
+> The first player therefore has 79⅓ crowns, the second has
+> 34 crowns, and the third 10 crowns.
+>
+> *Remark.* This calculation may be performed in an easier
+> manner; namely, by taking the factors of the numbers which
+> present themselves, and attending chiefly to the squares of
+> those factors.
+>
+> It is evident, that 507 = 3 ⋅ 169, and that 169 is the
+> square of 13; then, that 833 = 7 ⋅ 119, and 119 = 7 ⋅ 17: therefore
+>
+$$\dfrac{3 \cdot 169}{17 \cdot 49}x^2=3830\frac{2}{3},$$
+>
+> and if we multiply by 3,
+> we have $$\dfrac{9 \cdot 169}{17 \cdot 49}x^2=11492$$.
+> Let us resolve this number also into its factors; and we readily perceive, that
+> the first is 4, that is to say, that 11492 = 4 ⋅ 2873;
+> farther, 2873 is divisible bv 17, so that 2873 = 17 ⋅ 169.
+> Consequently, our equation will assume the following form,
+>
+$$\dfrac{9 \cdot 169}{17 \cdot 49}x^2=4\cdot 17\cdot 169,$$
+>
+> which, divided by 169, is reduced to
+>
+$$\dfrac{9}{17 \cdot 49}x^2=4\cdot 17;$$
+>
+> multiplying also by 17 ⋅ 49,
+> and dividing by 9, we have
+>
+$$x^2=\dfrac{4 \cdot 289 \cdot 49}{9},$$
+>
+> in which all
+> the factors are squares; whence we have, without any
+> further calculation, the root
+>
+$$x = \frac{2 \cdot 17\cdot 7}{3}=\frac{238}{3}=79\frac{1}{3},$$
+>
+> as before.
 
 
 
