@@ -239,6 +239,18 @@ $$x=-\frac{3}{4} \pm \sqrt{\frac{9}{16}+45}=-\frac{3}{4} \pm \frac{27}{4}.$$
 >
 $$100:x::x:\frac{x^2}{100};$$
 >
+> since therefore he has gained $$\frac{x^2}{100}$$, and the horse
+> originally cost him $$x$$ crowns, he must have sold it for $$x+\frac{x^2}{100}$$;
+> therefore $$x+\frac{x^2}{100}=119$$; and subtracting $$x$$, we have
+> $$\frac{x^2}{100}=-x+119$$; then multiplying by 100, we obtain
+> $$x^2=-100x+11900$$. Whence, by the rule, we find
+>
+$$x=-50 \pm \sqrt{2500+11900}=-50 \pm \sqrt{14400} = -50 \pm 120 = 70.$$
+>
+> The horse therefore cost 70 crowns, and since the horsedealer gained 70 per cent when he sold it again, the profit
+> must have been 49 crowns. So that the horse must have
+> been sold again for 70+49, that is to say, for 119 crowns.
+
 
 
 
