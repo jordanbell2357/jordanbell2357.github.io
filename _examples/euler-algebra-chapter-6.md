@@ -164,6 +164,54 @@ $$x=\frac{1}{2}p \pm \sqrt{\frac{1}{4}p^2+q},$$
 >
 > as we found it before. It only remains, therefore, to illustrate
 > this rule by some examples.
+>
+> **646.** *Question 1.* There are two numbers; the one exceeds
+the other by 6, and their product is 91: what are those
+numbers?
+>
+> If the less be $$x$$, the other will be $$x+6$$, and their product
+> $$x^2+6x=91$$. Subtracting $$6x$$, there remains $$x^2=91-6x$$, and the rule gives
+>
+$$x=-3 \pm \sqrt{9+91} = -3 \pm 10;$$
+>
+> so that $$x=7$$, or $$x=-13$$.
+>
+> The question therefore admits of two solutions;
+>
+> By the one, the less number $$x=7$$, and the greater $$x+6=13$$.
+>
+> By the other, the less number $$x=-13$$, and the greater $$x+6=-7$$.
+>
+> **647.** *Question 2.* To find a number such, that if 9 be
+> taken from its square, the remainder may be a number,
+> as much greater than 100, as the number itself is less
+> than 23.
+>
+> Let the number sought be $$x$$. We know that $$x^2 - 9$$ exceeds 100 by $$x^2-109$$:
+> and since $$x$$ is less than 23 by $$23 - x$$, we have this equation
+>
+$$x^2-109=23-x.$$
+>
+> Therefore $$x^2=-x+132$$, and, by the rule,
+>
+$$x=-\frac{1}{2} \pm \sqrt{\frac{1}{4}+132} = -\frac{1}{2} \pm \sqrt{\frac{529}{4}} = -\frac{1}{2} \pm \frac{23}{2}.$$
+>
+> So that $$x=11$$, or $$x=-12$$.
+>
+> Hence, when only a positive number is required, that
+> number will be 11, the square of which minus 9 is 112, and
+> consequently greater than 100 by 12, in the same manner
+> as 11 is less than 23 by 12.
+>
+> **648.** *Question 3.* To find a number such, that if we
+> multiply its half by its third, and to the product add half
+> the number required, the result will be 30.
+
+
+
+
+
+
 
 
 
