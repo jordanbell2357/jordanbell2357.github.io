@@ -310,7 +310,55 @@ $$x=-\frac{3}{2} + \sqrt{\frac{9}{4}+180}=-\frac{3}{2}+\frac{27}{2}=12.$$
 > at 15 crowns the piece; and if he had got 3 pieces more,
 > namely, 15 pieces for 180 crowns, each piece would have
 > cost only 12 crowns, that is to say, 3 crowns less.
-
+>
+> **653.** *Question 8.* Two merchants enter into partnership
+> with a stock of 100 pounds; one leaves his money in the
+> partnership for three months, the other leaves his for two
+> months, and each takes out 99 pounds of capital and profit.
+> What proportion of the stock did they separately furnish?
+>
+> Suppose the first partner contributed $$x$$ pounds, the other
+> will have contributed $$100 - x$$. Now, the former receiving
+> 99*l.*, his profit is $$99 - x$$, which he has gained in three
+> months with the principal $$x$$; and since the second receives
+> also 99*l.*, his profit is $$x - 1$$, which he has gained in two
+> months with the principal $$100 -x$$; it is evident also,
+> that the profit of this second partner would have been
+> $$\frac{3x-3}{2}$$, if he had remained three months in the partnership:
+> and as the profits gained in the same time are in proportion
+> to the principals, we have the following proportion,
+>
+$$x:99-x ∷ 100-x:\frac{3x-3}{2}.$$
+>
+> And the equality of the product of the extremes to that of
+> the means, gives the equation,
+>
+$$\frac{3x^2-3x}{2}=9900-199x+x^2;$$
+>
+> then multiplying this by 2, we have
+>
+$$3x^2-3x=19800-398x+2x^2;$$
+>
+> and subtracting $$2x^2,$$ we obtain
+>
+$$x^2-3x=19800-398x.$$
+>
+> Adding $$3x$$, gives
+>
+$$x^2=19800-395x;$$
+>
+> then by the rule,
+>
+$$x=-\frac{395}{2}+\sqrt{\frac{156025}{4}+\frac{79200}{4}}=-\frac{395}{2}+\frac{458}{2}
+=\frac{90}{2}=45.$$
+>
+> The first partner therefore contributed 45*l.* and the other
+> 55*l.* The first having gained 54*l.* in three months, would
+> have gained in one month 18*l.*; and the second having
+> gained 44*l.* in two months, would have gained 22*l.* in one
+> month: now these profits agree; for if, with 45*l.*, 18*l.* are
+> gained in one month, 22*l.* will be gained in the same time
+> with 55*l.*
 
 
 
