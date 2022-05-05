@@ -282,6 +282,34 @@ $$
 $$x=-\frac{1}{2} + \sqrt{\frac{1}{4}+100} = -\frac{1}{2}+\frac{21}{2} = 10.$$
 >
 > And hence the number of pieces of cloth is 10.
+>
+> **652.** *Question 7.* A person bought several pieces of
+> cloth for 180 crowns; and if he had received for the same
+> sum 3 pieces more, he would have paid 3 crowns less for
+> each piece. How many pieces did he buy?
+>
+> Let us represent the number sought by $$x$$; then each piece
+> will have cost him $$\frac{180}{x}$$ crowns. Now, if the purchaser
+> had had $$x+3$$ pieces for 180 crowns, each piece would have cost
+> $$\frac{180}{x+3}$$ crowns; and, since this price is less than
+> the real price by three crowns, we have this equation,
+>
+$$\frac{180}{x+3}=\frac{180}{x}-3.$$
+>
+> Multiplying by $$x$$, we obtain $$\frac{180x}{x+3}=180-3x$$;
+> dividing by 3, we have $$\frac{60x}{x+3}=60-x$$; and again,
+> multiplying by $$x+3$$, gives $$60x=180+57x-x^2$$; therefore
+> adding $$x^2$$, we shall have $$x^2+60x=180+57x$$; and subtracting
+> $$60x$$, we shall have $$x^2=-3x+180$$.
+>
+> The rule consequently gives
+>
+$$x=-\frac{3}{2} + \sqrt{\frac{9}{4}+180}=-\frac{3}{2}+\frac{27}{2}=12.$$
+>
+> He therefore bought for 180 crowns 12 pieces of cloth
+> at 15 crowns the piece; and if he had got 3 pieces more,
+> namely, 15 pieces for 180 crowns, each piece would have
+> cost only 12 crowns, that is to say, 3 crowns less.
 
 
 
