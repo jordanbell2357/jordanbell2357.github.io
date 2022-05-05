@@ -157,7 +157,7 @@ $$x=\sqrt{\dfrac{c}{a}};$$
 >
 > The third case is that, in which $$\frac{c}{a}$$ becomes a negative
 > number: the value of $$x$$ is then altogether impossible and
-> imaginary (*gar unmöglich oder Imaginär*); and this result proves that the question, which
+> imaginary \["gar unmöglich oder Imaginär"\]; and this result proves that the question, which
 > leads to such an equation, is in itself impossible.
 >
 > **631.** We shall also observe, before proceeding farther,
@@ -274,25 +274,25 @@ $$\frac{3}{7}x^2+\frac{45}{833}x^2+\frac{15}{119}x^2;$$
 > It is evident, that 507 = 3 ⋅ 169, and that 169 is the
 > square of 13; then, that 833 = 7 ⋅ 119, and 119 = 7 ⋅ 17: therefore
 >
-$$\dfrac{3 \cdot 169}{17 \cdot 49}x^2=3830\frac{2}{3},$$
+$$\frac{3 \cdot 169}{17 \cdot 49}x^2=3830\frac{2}{3},$$
 >
 > and if we multiply by 3,
-> we have $$\dfrac{9 \cdot 169}{17 \cdot 49}x^2=11492$$.
+> we have $$\frac{9 \cdot 169}{17 \cdot 49}x^2=11492$$.
 > Let us resolve this number also into its factors; and we readily perceive, that
 > the first is 4, that is to say, that 11492 = 4 ⋅ 2873;
 > farther, 2873 is divisible bv 17, so that 2873 = 17 ⋅ 169.
 > Consequently, our equation will assume the following form,
 >
-$$\dfrac{9 \cdot 169}{17 \cdot 49}x^2=4\cdot 17\cdot 169,$$
+$$\frac{9 \cdot 169}{17 \cdot 49}x^2=4\cdot 17\cdot 169,$$
 >
 > which, divided by 169, is reduced to
 >
-$$\dfrac{9}{17 \cdot 49}x^2=4\cdot 17;$$
+$$\frac{9}{17 \cdot 49}x^2=4\cdot 17;$$
 >
 > multiplying also by 17 ⋅ 49,
 > and dividing by 9, we have
 >
-$$x^2=\dfrac{4 \cdot 289 \cdot 49}{9},$$
+$$x^2=\frac{4 \cdot 289 \cdot 49}{9},$$
 >
 > in which all
 > the factors are squares; whence we have, without any
@@ -301,6 +301,14 @@ $$x^2=\dfrac{4 \cdot 289 \cdot 49}{9},$$
 $$x = \frac{2 \cdot 17\cdot 7}{3}=\frac{238}{3}=79\frac{1}{3},$$
 >
 > as before.
+>
+> **637.** *Question 5.* A company of merchants appoint a
+> factor at Archangel. Each of them contributes for the
+> trade, which they have in view, ten times as many crowns
+> as there are partners; and the profit of the factor is fixed at
+> twice as many crowns, per cent, as there are partners. Also,
+> if ¹⁄₁₀₀ part of his total gain be multiplied by 2 ²⁄₉, it will give
+> the number of partners. That number is required.
 
 
 
