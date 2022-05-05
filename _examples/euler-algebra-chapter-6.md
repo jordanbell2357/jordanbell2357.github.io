@@ -250,6 +250,17 @@ $$x=-50 \pm \sqrt{2500+11900}=-50 \pm \sqrt{14400} = -50 \pm 120 = 70.$$
 > The horse therefore cost 70 crowns, and since the horsedealer gained 70 per cent when he sold it again, the profit
 > must have been 49 crowns. So that the horse must have
 > been sold again for 70+49, that is to say, for 119 crowns.
+>
+> **651.** *Question 6.* A person buys a certain number of
+> pieces of cloth: he pays for the first 2 crowns, for the
+> second 4 crowns, for the third 6 crowns, and in the same
+> manner always 2 crowns more for each following piece.
+> Now, all the pieces together cost him 110: how many pieces
+> had he?
+>
+> Let the number sought be $$x$$; then, by the question, the
+> purchaser paid for the different pieces of cloth in the following manner:
+
 
 
 
