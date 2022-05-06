@@ -29,7 +29,7 @@ topic: euler
 > two ways, by admitting for $$x$$ the values 5 and 7, both of
 > which will satisfy the terms of the equation.
 >
-> **69l.** For this purpose it is most convenient to begin
+> **691.** For this purpose it is most convenient to begin
 > with transposing the terms of the equation, so that one of
 > the sides may become 0; the above equation consequently
 > takes the form
@@ -43,8 +43,8 @@ topic: euler
 > that a quantity of the form $$x^2 -12x + 35$$ may be considered
 > as the product of two factors. Thus, in reality, the
 > quantity of which we speak is composed of the two factors
-> $$(x - 5) \times (x - 7)$$; and since the above quantity must
-> become 0, we must also have the product $$(x-5) \times (x-7) = 0$$;
+> $$(x - 5) \cdot (x - 7)$$; and since the above quantity must
+> become 0, we must also have the product $$(x-5) \cdot (x-7) = 0$$;
 > but a product, of whatever number of factors it is
 > composed, becomes equal to 0, only when one of those
 > factors is reduced to 0. This is a fundamental principle,
@@ -52,7 +52,7 @@ topic: euler
 > when equations of higher degrees are treated of.
 >
 > **693.** It is therefore easily understood, that the product
-> $$(x - 5) \times (x - 7)$$ may become 0 in two ways: first, when
+> $$(x - 5) \cdot (x - 7)$$ may become 0 in two ways: first, when
 > the first factor $$x-5 = 0$$; and also, when the second factor
 > $$x-7=0$$. In the first case, $$x=5$$, in the second $$x=7$$.
 > The reason is therefore very evident, why such an equation
@@ -68,7 +68,7 @@ topic: euler
 > to one side, we find an equation of the following form
 > $$x^2 -ax+ b=0$$, and this formula may be always considered
 > as the product of two factors, which we shall represent by
-> $$(x-p) \times (x-q)$$, without considering what numbers the
+> $$(x-p) \cdot (x-q)$$, without considering what numbers the
 > letters $$p$$ and $$q$$ represent, or whether they be negative or
 > positive. Now, this product must be $$= 0$$, from the
 > nature of our equation, it is evident that this may happen
@@ -94,7 +94,7 @@ topic: euler
 > third term to have the sign $$+$$. Let us also consider
 > the cases, in which either one or both values of $$x$$ become
 > negative. The first takes place, when the two factors of
-> the equation give a product of this form, $$(x-p) \times (x+q)$$;
+> the equation give a product of this form, $$(x-p) \cdot (x+q)$$;
 > for then the two values of $$x$$ are $$x = p$$, and $$x = - q$$; and
 > the equation itself becomes
 > $$x^2 +(q-p)x-pq=0$$;
@@ -104,7 +104,7 @@ topic: euler
 >
 > The second case, in which both values of $$x$$ are negative,
 > occurs when the two factors are
-> $$(x+p) \times (x+q)$$;
+> $$(x+p) \cdot (x+q)$$;
 > for we shall then have $$x= -p$$, and $$x= -q$$; the equation
 > itself therefore becomes
 > $$x^2+(p +q)x+pq=0$$.
@@ -136,7 +136,7 @@ topic: euler
 >
 > **699.** The values of $$x$$ may also happen to be equal. Suppose, for example, that an
 > equation is required, in which
-> both values may be 5. Here the two factors will be $$(x-5) \times (x-5)$$,
+> both values may be 5. Here the two factors will be $$(x-5) \cdot (x-5)$$,
 > and the equation sought will be $$x^2 - 10x + 25=0$$.
 > In this equation, $$x$$ appears to have only one value; but it
 > is because $$x$$ is twice found $$= 5$$, as the common method of
@@ -171,11 +171,11 @@ topic: euler
 > the sum of the two values of $$x$$ must be 6, and the product
 > of these two values must be 10; now, we find,
 >
-> ① $$x= 3 + \sqrt{-1}$$,
+$$\textrm{I)} \; x= 3 + \sqrt{-1},$$
 >
 > and
 > 
-> ② $$x=3-\sqrt{-1}$$,
+$$\textrm{II)} \; x=3-\sqrt{-1},$$
 >
 > quantities whose sum is 6, and the product 10. 
 >
@@ -184,19 +184,19 @@ topic: euler
 > to be applied to equations of this form, $$fx^2 \pm gx + h=0$$;
 > for this equation gives
 >
-> $$x^2=\mp \dfrac{gx}{f} - \dfrac{h}{f}$$,
+$$x^2=\mp \dfrac{gx}{f} - \dfrac{h}{f},$$
 >
 > and
 >
-> $$x= \mp \dfrac{g}{2f} \pm \sqrt{\frac{g^2}{4f^2}-\frac{h}{f}}$$,
+$$x= \mp \dfrac{g}{2f} \pm \sqrt{\frac{g^2}{4f^2}-\frac{h}{f}},$$
 >
 > or
 >
-> $$x = \dfrac{\mp g \pm \sqrt{g^2-4fh}}{2f}$$;
+$$x = \dfrac{\mp g \pm \sqrt{g^2-4fh}}{2f};$$
 >
 > whence we conclude, that the two
 > values are imaginary, and consequently, the equation impossible, when $$4fh$$ is
-> greater than > $$g^2$$; that is to say, when,
+> greater than $$g^2$$; that is to say, when,
 > in the equation $$fx^2 - gx + h=0$$,
 > four times the product of
 > the first and the last term exceeds the square of the second
@@ -214,7 +214,7 @@ topic: euler
 >
 > **703.** We have farther to observe, that any quantity of
 > the second degree, $$x^2 \pm ax \pm b$$, must always be resolvible
-> into two factors, such as $$(x \pm p) \times (x \pm q)$$. For, if we
+> into two factors, such as $$(x \pm p) \cdot (x \pm q)$$. For, if we
 > took three factors, such as these, we should come to a
 > quantity of the third degree; and taking only one such
 > factor, we should not exceed the first degree. It is therefore certain, that every equation
@@ -229,20 +229,21 @@ topic: euler
 > one value of $$x$$, we know also one of the factors of the
 > equation; for if $$x=p$$ represents one of the values of $$x$$,
 > in any equation of the second degree, $$x-p$$ is one of the
-> factors of that equation; that is to say, all the terms having heen brought to one side, the equation is divisible by
+> factors of that equation; that is to say, all the terms having
+> heen brought to one side, the equation is divisible by
 > $$x - p$$; and farther, the quotient expresses the other factor. 
 >
 > **705.** In order to illustrate what we have now said, let
 > there be given the equation $$x^2+4x-21=0$$, in which
 > we know that $$x=3$$ is one of the values of $$x$$, because
-> $$(3 \times 3)+(4 \times 3)-21=0$$; this shows, that $$x-3$$ is one of
+> $$(3 \cdot 3)+(4 \cdot 3)-21=0$$; this shows, that $$x-3$$ is one of
 > the factors of the equation, or that $$x^2+4x-21$$ is divisible
 > by $$x-3$$, which the actual division proves. Thus,
 >
 > ![polynomial long division](/assets/euler/adaptive.png "polynomial long division")
 >
 > So that the other factor is $$x + 7$$, and our equation is represented by the
-> product $$(x-3) \times (x+7)=0$$; whence two values of $$x$$ immediately follow, the
+> product $$(x-3) \cdot (x+7)=0$$; whence two values of $$x$$ immediately follow, the
 > first factor giving $$x=3$$, and the other $$x= -7$$.
 
 #### References
