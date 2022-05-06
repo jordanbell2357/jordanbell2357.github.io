@@ -374,12 +374,12 @@ $$x=-\frac{395}{2}+\sqrt{\frac{156025}{4}+\frac{79200}{4}}=-\frac{395}{2}+\frac{
 > Since, therefore, the former would have sold $$100-x$$ eggs for 15 pence,
 > we have the following proportion:
 >
-$$(100-x):15 :: x:\frac{15}{100-x}.$$
+$$(100-x):15 ∷ x:\frac{15}{100-x}.$$
 >
 > Also, since the second would have sold $$x$$ eggs for 6⅔ pence,
 > we readily find how much she got for $$100-x$$ eggs, thus:
 >
-$$x:(100-x) :: \frac{20}{3} : \frac{2000-20x}{3x}.$$
+$$x:(100-x) ∷ \frac{20}{3} : \frac{2000-20x}{3x}.$$
 >
 > Now, both the girls received the same money; we have
 > consequently the equation, $$\frac{15x}{100-x}{2000-2x}{3x}$$,
