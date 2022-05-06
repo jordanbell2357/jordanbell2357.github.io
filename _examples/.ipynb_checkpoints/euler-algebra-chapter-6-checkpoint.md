@@ -360,6 +360,40 @@ $$x=-\frac{395}{2}+\sqrt{\frac{156025}{4}+\frac{79200}{4}}=-\frac{395}{2}+\frac{
 > gained in one month, 22*l.* will be gained in the same time
 > with 55*l.*
 >
+> **654.** *Question 9.* Two girls carry 100 eggs to market;
+> the one had more than the other, and yet the sum which they
+> both received for them was the same. The first says to the
+> second. If I had had your eggs, I should have received 15
+> pence. The other answers, If I had had yours, I should
+> have received 6⅔ pence. How many eggs did each carry to
+> market?
+>
+> Suppose the first had $$x$$ eggs; then the second must have
+> had $$100-x$$.
+>
+> Since, therefore, the former would have sold $$100-x$$ eggs for 15 pence,
+> we have the following proportion:
+>
+$$(100-x):15 :: x:\frac{15}{100-x}.$$
+>
+> Also, since the second would have sold $$x$$ eggs for 6⅔ pence,
+> we readily find how much she got for $$100-x$$ eggs, thus:
+>
+$$x:(100-x) :: \frac{20}{3} : \frac{2000-20x}{3x}.$$
+>
+> Now, both the girls received the same money; we have
+> consequently the equation, $$\frac{15x}{100-x}{2000-2x}{3x}$$,
+> which becomes $$25x^2=200000-4000x$$; and lastely,
+>
+$$x^2=-160x+8000;$$
+>
+> whence we obtain
+>
+$$x=-80 + \sqrt{6400+8000} = -80+120=40.$$
+>
+> So that the first girl had 40 eggs, the second had 60, and
+> each received 10 pence.
+>
 > **655.** *Question 10.* Two merchants sell each a certain
 > quantity of silk; the second sells 3 ells more than the first,
 > and they received together 35 crowns. Now, the first says
