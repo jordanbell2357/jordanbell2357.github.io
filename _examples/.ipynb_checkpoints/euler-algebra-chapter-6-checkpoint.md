@@ -399,7 +399,7 @@ $$x=-80 + \sqrt{6400+8000} = -80+120=40.$$
 > and they received together 35 crowns. Now, the first says
 > to the second, I should have got 24 crowns for your silk;
 > the other answers, And I should have got for yours 12
-> crowns and a half. How many ells had each?
+> crowns and a half. How many ells had each? [*ell*](#ell)
 >
 > Suppose the first had $$x$$ ells; then the second must have had
 > $$x+3$$ ells; also, since the first would have sold $$x+3$$ ells
@@ -435,7 +435,7 @@ actually received 35 crowns for their commodity.
 > him 20 crowns; the sum being, as before, 35 crowns.
 
 
-#### The *ell*
+#### The *ell* {#ell}
 
 [Russ Rowlett: A Dictionary of Units of Measurement](https://www.ibiblio.org/units/dictE.html)
 
