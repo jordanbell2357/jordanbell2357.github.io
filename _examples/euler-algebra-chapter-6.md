@@ -368,6 +368,16 @@ $$x=-\frac{395}{2}+\sqrt{\frac{156025}{4}+\frac{79200}{4}}=-\frac{395}{2}+\frac{
 > crowns and a half. How many ells had each?
 
 
+#### *Ells*
+
+[Lexis of Cloth and Clothing Project, The University of Manchester](http://lexisproject.arts.manchester.ac.uk/index.html)
+
+[*ell*](http://lexissearch.arts.manchester.ac.uk/entry.aspx?id=1653)
+
+[ibiblio](https://www.ibiblio.org/units/dictE.html)
+
+
+
 
 
 #### References
