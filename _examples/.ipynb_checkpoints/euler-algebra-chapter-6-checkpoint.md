@@ -376,7 +376,7 @@ $$x=-\frac{395}{2}+\sqrt{\frac{156025}{4}+\frac{79200}{4}}=-\frac{395}{2}+\frac{
 
 Nancy Cox and Karin Dannehl, 'Elastic - Elm board', in *Dictionary of Traded Goods and Commodities 1550-1820* (Wolverhampton, 2007), *British History Online* <http://www.british-history.ac.uk/no-series/traded-goods-dictionary/1550-1820/elastic-elm-board>
 
-> A linear unit of measure varying in length in different countries and regions. The ENGLISH ELL equalled 45 INCH, but 54 INCH in Shropshire, the Scottish Ell was 37 INCH and the FLEMISH 27 INCH. It was commonly used for measuring LINEN, particularly that which was imported, throughout the period. For other fabrics it virtually died out during the seventeenth century. The term was usually singular when preceded by numerals, in other words '9 ell'.
+> *Ell* A linear unit of measure varying in length in different countries and regions. The ENGLISH ELL equalled 45 INCH, but 54 INCH in Shropshire, the Scottish Ell was 37 INCH and the FLEMISH 27 INCH. It was commonly used for measuring LINEN, particularly that which was imported, throughout the period. For other fabrics it virtually died out during the seventeenth century. The term was usually singular when preceded by numerals, in other words '9 ell'.
 
 
 #### References
