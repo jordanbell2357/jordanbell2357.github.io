@@ -366,6 +366,39 @@ $$x=-\frac{395}{2}+\sqrt{\frac{156025}{4}+\frac{79200}{4}}=-\frac{395}{2}+\frac{
 > to the second, I should have got 24 crowns for your silk;
 > the other answers, And I should have got for yours 12
 > crowns and a half. How many ells had each?
+>
+> Suppose the first had $$x$$ ells; then the second must have had
+> $$x+3$$ ells; also, since the first would have sold $$x+3$$ ells
+> for 24 crowns, he must have received $$\frac{24x}{x+3}$$ crowns
+> for his $$x$$ ells. And, with regard to the second, since he would
+> have sold $$x$$ ells for 12½ crowns, he must have sold his
+> $$x+3$$ ells for $$\frac{25x+75}{2x}$$; so that the whole sum they
+> received was
+>
+$$\frac{24x}{x+3} + \frac{25x+75}{2x}=35 \; \textrm{crowns}.$$
+>
+> This equation becomes
+>
+$$x^2=20x-75;$$
+>
+> whence we have
+>
+$$x=10 \pm \sqrt{100-75}=10 \pm 5.$$
+>
+> So that the question admits of two solutions: according
+to the first, the first merchant had 15 ells, and the second
+had 18; and since the former would have sold 18 ells for
+24 crowns, he must have sold his 15 ells for 20 crowns.
+The second, who would have sold 15 ells for 12 crowns and
+a half, must have sold his 18 ells for 15 crowns; so that they
+actually received 35 crowns for their commodity.
+>
+> According to the second solution, the first merchant had
+> 5 ells, and the other 8 ells; and since the first would have
+> sold 8 ells for 24 crowns, he must have received 15 crowns
+> for his 5 ells; also, since the second would have sold 5 ells
+> for 12 crowns and a half, his 8 ells must have produced
+> him 20 crowns; the sum being, as before, 35 crowns.
 
 
 #### The *ell*
