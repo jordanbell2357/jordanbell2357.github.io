@@ -368,16 +368,15 @@ $$x=-\frac{395}{2}+\sqrt{\frac{156025}{4}+\frac{79200}{4}}=-\frac{395}{2}+\frac{
 > crowns and a half. How many ells had each?
 
 
-#### *Ells*
+#### The *ell*
 
-[Lexis of Cloth and Clothing Project, The University of Manchester](http://lexisproject.arts.manchester.ac.uk/index.html)
+[Russ Rowlett: A Dictionary of Units of Measurement](https://www.ibiblio.org/units/dictE.html)
 
-[*ell*](http://lexissearch.arts.manchester.ac.uk/entry.aspx?id=1653)
+> **elle** a traditional unit of distance in German speaking countries. The elle varied considerably, but it was always shorter than the English ell or French aune. A typical value in northern Germany was exactly 2 fuss (German feet), which would be close to 24 inches or 60 centimeters. In the south, the elle was usually longer, about 2.5 fuss. In Vienna, the elle was eventually standardized at 30.68 inches (77.93 centimeters). Although the German word *Elle* is often translated "yard" in English, this is not a very good equivalent.
 
-[ibiblio](https://www.ibiblio.org/units/dictE.html)
+Nancy Cox and Karin Dannehl, 'Elastic - Elm board', in *Dictionary of Traded Goods and Commodities 1550-1820* (Wolverhampton, 2007), *British History Online* <http://www.british-history.ac.uk/no-series/traded-goods-dictionary/1550-1820/elastic-elm-board>
 
-
-
+> A linear unit of measure varying in length in different countries and regions. The ENGLISH ELL equalled 45 INCH, but 54 INCH in Shropshire, the Scottish Ell was 37 INCH and the FLEMISH 27 INCH. It was commonly used for measuring LINEN, particularly that which was imported, throughout the period. For other fabrics it virtually died out during the seventeenth century. The term was usually singular when preceded by numerals, in other words '9 ell'.
 
 
 #### References
