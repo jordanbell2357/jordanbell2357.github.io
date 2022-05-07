@@ -100,9 +100,3 @@ permalink: /examples/
 {% for exercise in gm %}
 1. [{{ exercise.title}}]({{ exercise.url }})
 {% endfor %}
-
-## Euler, *The Elements of Algebra*
-
-{% for example in euler %}
-1. [{{example.title}}]({{ example.url }})
-{% endfor %}

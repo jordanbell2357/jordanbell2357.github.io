@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Euler, "Elements of Algebra", Section IV, Chapter 1
-topic: euler
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
