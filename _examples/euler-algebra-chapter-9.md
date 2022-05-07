@@ -68,7 +68,7 @@ topic: euler
 > to one side, we find an equation of the following form
 > $$x^2 -ax+ b=0$$, and this formula may be always considered
 > as the product of two factors, which we shall represent by
-> $$(x-p) \cdot (x-q)$$, without considering what numbers the
+> $$(x-p)(x-q)$$, without considering what numbers the
 > letters $$p$$ and $$q$$ represent, or whether they be negative or
 > positive. Now, this product must be $$= 0$$, from the
 > nature of our equation, it is evident that this may happen
@@ -94,20 +94,17 @@ topic: euler
 > third term to have the sign $$+$$. Let us also consider
 > the cases, in which either one or both values of $$x$$ become
 > negative. The first takes place, when the two factors of
-> the equation give a product of this form, $$(x-p) \cdot (x+q)$$;
+> the equation give a product of this form, $$(x-p) (x+q)$$;
 > for then the two values of $$x$$ are $$x = p$$, and $$x = - q$$; and
-> the equation itself becomes
-> $$x^2 +(q-p)x-pq=0$$;
+> the equation itself becomes $$x^2 +(q-p)x-pq=0$$;
 > the second term having the sign $$+$$ when $$q$$ is greater
 > than $$p$$, and the sign $$-$$ when $$q$$ is less than $$p$$; lastly, the
 > third term is always negative.
 >
 > The second case, in which both values of $$x$$ are negative,
-> occurs when the two factors are
-> $$(x+p) \cdot (x+q)$$;
+> occurs when the two factors are $$(x+p) (x+q)$$;
 > for we shall then have $$x= -p$$, and $$x= -q$$; the equation
-> itself therefore becomes
-> $$x^2+(p +q)x+pq=0$$.
+> itself therefore becomes $$x^2+(p +q)x+pq=0$$.
 > in which both the second and third terms are affected by
 > the sign $$+$$.
 >
@@ -136,7 +133,7 @@ topic: euler
 >
 > **699.** The values of $$x$$ may also happen to be equal. Suppose, for example, that an
 > equation is required, in which
-> both values may be 5. Here the two factors will be $$(x-5) \cdot (x-5)$$,
+> both values may be 5. Here the two factors will be $$(x-5) (x-5)$$,
 > and the equation sought will be $$x^2 - 10x + 25=0$$.
 > In this equation, $$x$$ appears to have only one value; but it
 > is because $$x$$ is twice found $$= 5$$, as the common method of
@@ -214,7 +211,11 @@ $$x = \dfrac{\mp g \pm \sqrt{g^2-4fh}}{2f};$$
 >
 > **703.** We have farther to observe, that any quantity of
 > the second degree, $$x^2 \pm ax \pm b$$, must always be resolvible
-> into two factors, such as $$(x \pm p) \cdot (x \pm q)$$. For, if we
+> into two factors, such as
+>
+$$(x \pm p) (x \pm q).$$
+>
+> For, if we
 > took three factors, such as these, we should come to a
 > quantity of the third degree; and taking only one such
 > factor, we should not exceed the first degree. It is therefore certain, that every equation
@@ -243,7 +244,7 @@ $$x = \dfrac{\mp g \pm \sqrt{g^2-4fh}}{2f};$$
 > ![polynomial long division](/assets/euler/adaptive.png "polynomial long division")
 >
 > So that the other factor is $$x + 7$$, and our equation is represented by the
-> product $$(x-3) \cdot (x+7)=0$$; whence two values of $$x$$ immediately follow, the
+> product $$(x-3) (x+7)=0$$; whence two values of $$x$$ immediately follow, the
 > first factor giving $$x=3$$, and the other $$x= -7$$.
 
 #### References
