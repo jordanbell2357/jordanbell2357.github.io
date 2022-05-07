@@ -453,6 +453,6 @@ Nancy Cox and Karin Dannehl, 'Elastic - Elm board', in *Dictionary of Traded Goo
 2. Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.
     - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
 3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Des Zweyten Theils Erster Abschnitt. Capitel 6. Von der Auflösung der vermischten Quadratischen Gleichungen.](/assets/euler/II-I-6.pdf)
+    - [Zweyter Theil. Erster Abschnitt. Capitel 6. Von der Auflösung der vermischten Quadratischen Gleichungen.](/assets/euler/II-I-6.pdf)
     - [Springer](https://link.springer.com/book/9783764314002)
 5. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)
