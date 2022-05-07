@@ -43,7 +43,7 @@ is called magnitude, or quantity.
 > any length or extension, we should make use of some known
 > length, such as a foot.
 >
-> 4. So that the determination,
+> **4.** So that the determination,
 > or the measure of magnitude of all kinds, is reduced to this:
 > fix at pleasure upon any one known magnitude of the same
 > species with that which is to be determined, and consider
@@ -63,7 +63,7 @@ is called magnitude, or quantity.
 > This fundamental part of mathematics is called Analysis,
 > or Algebra.
 >
-> 6. In Algebra
+> **6.** In Algebra
 > then we consider
 > only numbers, which represent quantities, without regarding the
 > different kinds of quantity.
