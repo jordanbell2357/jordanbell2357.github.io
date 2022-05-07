@@ -142,7 +142,7 @@ topic: euler
 >
 > **700.** A very remarkable case sometimes occurs, in which
 > both values of $$x$$ become
-> imaginary, or impossible \[p. 271: "imaginär oder unmöglich"\]; and it is
+> imaginary, or impossible \["imaginär oder unmöglich"\]; and it is
 > then wholly impossible to assign any value for $$x$$, that would
 > satisfy the terms of the equation. Let it be proposed, for
 > example, to divide the number 10 into two parts, such
