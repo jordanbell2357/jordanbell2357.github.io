@@ -8,12 +8,9 @@ topic: euler
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 3. "Of the Multiplication of Simple Quantities."
 
-> 23. When
-there
-are two or more equal numbers
-to be
-added together, the expression of their sum may be abridged:
-lor example,
+> **23.** When there are two or more equal numbers
+> to be added together, the expression of their sum may be abridged:
+> for example,
 
 
 #### References
