@@ -335,6 +335,6 @@ $$x = \frac{2 \cdot 17\cdot 7}{3}=\frac{238}{3}=79\frac{1}{3},$$
 2. Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.
     - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
 3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Erster Abschnitt. Capitel 5. Von der Auflösung der reinen Quadratischen Gleichungen.](/assets/euler/II-I-5.pdf)
+    - [Zweyter Theil. Erster Abschnitt. Capitel 5. Von der Auflösung der reinen Quadratischen Gleichungen](/assets/euler/II-I-5.pdf)
     - [Springer](https://link.springer.com/book/9783764314002)
 5. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)

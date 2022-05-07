@@ -92,6 +92,6 @@ is called magnitude, or quantity.
     - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)
 3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 2. Erklärung der Zeichen + plus und
-- minus.](/assets/euler/I-I-1.pdf)
+- minus](/assets/euler/I-I-2.pdf)
     - [Springer](https://link.springer.com/book/9783764314002)
 5. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)
