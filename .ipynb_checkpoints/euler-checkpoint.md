@@ -6,6 +6,6 @@ permalink: /euler/
 
 ## Euler, *The Elements of Algebra*
 
-{% for example in euler %}
-1. [{{example.title}}]({{ example.url }})
+{% for chapter in site.euler %}
+1. [{{chapter.title}}]({{ chapter.url }})
 {% endfor %}
