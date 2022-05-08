@@ -55,103 +55,113 @@ title: Euler, "Elements of Algebra", Section I, Chapter 2
 > 12 - 3 - 5 + 2 - 1 is the same as 5. 
 > We have only to collect separately the sum of the numbers
 > that have the sign + before them, and subtract from it the
-> sum of those tliat have the sign -. Thus, the sum of 12
-> and 2 is 14; and that of y, 5, and 1, is 9; hence 9 being
-taken from 14, there remain 5
-
-14. [t will be perceived, from these examples, that the
-order in which we write the numbers is perfectly indifferent
-and arbitrary, provided the proper sign of each be preserved.
-We might with equal propriety have arranged the expression
-in the preceding article thus; 12 + 2 - 5 - 3-1, or
-2 - 1 - 3 - 5 + 12, or 2 + 12 - 3 - 1 - 5, or in still
-different orders ; where it must be observed, that in the arrangement first proposed, the sign -j- is supposed to be placed
-before the number 12.
-
-15. It will not be attended with any more difficulty if, in
-order to generalise these operations, we make use of letters
-instead of real numbers. It is evident, for example, that
-
-a - h - c -^ d - e,
-
-signifies that we have numbers expressed by a and d, and
-that from these numbers, or from their sum, we must subtract the numbers expressed by the letters b, c, e, which
-have before them the sifjn -.
-
-16. Hence it is absolutely necessary to consider what sign
-is prefixed to each number : for in Algebra, simple quantities are numbers considered with re<jard to the sio-ns Avhicb
-precede, or affect them. Farther, we call those positive
-gtiaiititics, before which the sign 4- is found ; and those
-are called negative quantities, which are affected by the
-sio-n -
-
-17. The manner in which we generally calculate a person's property, is an apt illustration of what has just been
-said. For v/e denote what a man really possesses by positive
-numbers, using, or understanding the sign -j- ; whereas his
-debts are represented by negative numbers, or by using the
-sign - . Thus, when it is said of any one that he has 100
-crowns, but owes 50, this means that his real possession
-amounts to 100 - 50 ; or, which is the same thing, + 100
-- 50, that is to say, 50    
-    
-18. Since negative numbers may be considered as debts,
-because positive numbers represent real possessions, we
-may say that negative numbers are less than nothing. Thus,
-when a man has nothing of his own, and owes 50 crowns, it
-is certain that he has 50 crowns less than nothing ; for if
-any one were to make him a present of 50 crowns to pay his
-debts, he would still be only at the point nothing, though
-really richer than before.
-    
-19. In the same manner, therefore, as positive numbers
-are incontestably greater than nothing, negative numbers
-are less than nothing. Now, we obtain positive numbers by
-adding 1 to 0, that is to say, 1 to nothing ; and by continuing always to increase thus from unity. This is the
-origin of the scries of ninnbcrs called natural numhcrs ; the
-following being the leading terms of this series:
-0, +1, +2, +3, +4, +5, +6, +7, +8, +9, +10,
-and so on to infinity.
-But if, instead of continuing this series by successive additions, we continued it in the opposite direction, by perpetually subtracting unity, wc should have the following
-series of negative numbers
-:
-0, -I, -2, -3, -4, -5, -6, -7, -8, -9,-10,
-and so on to infinity.
-20. All these numbers, whether positive or negative,
-have the known appellation of whole numbers, or integers,
-which consequently are either greater or less than nothing.
-We call them integers, to distinguish them from fractions,
-and from several other kinds of numbers, of which wc shall
-hereafter speak. For instance, 50 being greater by an entire
-unit than 49, it is easy to comprehend that there may be,
-between 49 and 50, an infinity of intermediate numbers, all
-greater than 49, and yet all less than 50. We need only
-imagine two lines, one 50 feet, the other 49 feet long, and it
-is evident that an infinite number of lines may be drawn, all
-longer than 49 feet, and yet shorter than 50.
-21. It is of the utmost importance through the whole of
-Algebra, that a precise idea should be formed of those negative quantities, about which we have been speaking. I
-shall, however, content myself with remarking here, that all
-such expressions as
-^. 1 _ 1, + 2 _ 2, + 3 - 3, + 4 - 4, &c.
-are equal to 0, or nothing. And that
--}- 2 - 5 is equal to - 3
-:
-for if a person has 2 crowns, and owes 5, he has not only
-nothing, but still owes 3 crowns. In the same manner,
-7 - 12 is equal to - 5, and 25 - 40 is cc|ual to - 15.
-22. The same observations hold true, when, to make the
-expression more general, letters are used instead of numbers;
-thus 0, or nothing, will always be the value of + « - a;
-but if Ave wish to know the value of •\- a - 0, two cases are
-to be considered.
-The first is when a is greater than b ; b must then be
-subtracted from a, and the remainder (before which is
-placed, or understood to be placed, the sign +) shews the
-value sought.
-The second case is that in which a is less than b : here a
-is to be subtracted from b, and the remainder being made
-negative, by placing before it the sign - , will be the value
-sousrht.
+> sum of those that have the sign -. Thus, the sum of 12
+> and 2 is 14; and that of 3, 5, and 1, is 9; hence 9 being
+> taken from 14, there remain 5.
+>
+> **14.** It will be perceived, from these examples, that the
+> order in which we write the numbers is perfectly indifferent
+> and arbitrary, provided the proper sign of each be preserved.
+> We might with equal propriety have arranged the expression
+> in the preceding article thus; 12 + 2 - 5 - 3- 1, or
+> 2 - 1 - 3 - 5 + 12, or 2 + 12 - 3 - 1 - 5, or in still
+> different orders; where it must be observed,
+> that in the arrangement first proposed, the sign + is supposed to be placed
+> before the number 12.
+>
+> **15.** It will not be attended with any more difficulty if, in
+> order to generalise these operations, we make use of letters
+> instead of real numbers. It is evident, for example, that
+>
+$$a - b - c - d - e,$$
+>
+> signifies that we have numbers expressed by $$a$$ and $$d$$, and
+> that from these numbers, or from their sum, we must subtract
+> the numbers expressed by the letters $$b$$, $$c$$, $$e$$, which
+> have before them the sign -.
+>
+> **16.** Hence it is absolutely necessary to consider what sign
+> is prefixed to each number: for in Algebra, simple quantities are numbers considered
+> with regard to the signs which
+> precede, or affect them. Farther, we call those *positive
+> quantities*, before which the sign + is found; and those
+> are called *negative quantities*, which are affected by the
+> sign -.
+>
+> **17.** The manner in which we generally calculate a person's property,
+> is an apt illustration of what has just been
+> said. For we denote what a man really possesses by positive
+> numbers, using, or understanding the sign +; whereas his
+> debts are represented by negative numbers, or by using the
+> sign -. Thus, when it is said of any one that he has 100
+> crowns, but owes 50, this means that his real possession
+> amounts to 100 - 50; or, which is the same thing,
+> +100 - 50, that is to say, 50.
+>
+> **18.** Since negative numbers may be considered as debts,
+> because positive numbers represent real possessions, we
+> may say that negative numbers are less than nothing. Thus,
+> when a man has nothing of his own, and owes 50 crowns, it
+> is certain that he has 50 crowns less than nothing ; for if
+> any one were to make him a present of 50 crowns to pay his
+> debts, he would still be only at the point nothing, though
+> really richer than before.
+>
+> **19.** In the same manner, therefore, as positive numbers
+> are incontestably greater than nothing, negative numbers
+> are less than nothing. Now, we obtain positive numbers by
+> adding 1 to 0, that is to say, 1 to nothing; and by continuing always to increase thus from unity.
+> This is the origin of the series of numbers called natural numhers; the
+> following being the leading terms of this series: 
+> 0, +1, +2, +3, +4, +5, +6, +7, +8, +9, +10, 
+> and so on to infinity.
+>
+> But if, instead of continuing this series by successive additions,
+> we continued it in the opposite direction, by perpetually subtracting unity,
+> we should have the following series of negative numbers: 
+> 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10, 
+> and so on to infinity.
+>
+> **20.** All these numbers, whether positive or negative,
+> have the known appellation of whole numbers, or integers,
+> which consequently are either greater or less than nothing.
+> We call them integers, to distinguish them from fractions,
+> and from several other kinds of numbers, of which we shall
+> hereafter speak. For instance, 50 being greater by an entire
+> unit than 49, it is easy to comprehend that there may be,
+> between 49 and 50, an infinity of intermediate numbers, all
+> greater than 49, and yet all less than 50. We need only
+> imagine two lines, one 50 feet, the other 49 feet long, and it
+> is evident that an infinite number of lines may be drawn, all
+> longer than 49 feet, and yet shorter than 50.
+>
+> **21.** It is of the utmost importance through the whole of
+> Algebra, that a precise idea should be formed of those negative quantities,
+> about which we have been speaking. I
+> shall, however, content myself with remarking here, that all
+> such expressions as 
+> +1 - 1, +2 - 2, +3 - 3, + 4 - 4, etc. 
+> are equal to 0, or nothing. And that
+> +2 - 5 is equal to - 3:
+> for if a person has 2 crowns, and owes 5, he has not only
+> nothing, but still owes 3 crowns. In the same manner,
+> 7 - 12 is equal to -5, and 25 - 40 is equal to -15.
+>
+> **22.** The same observations hold true, when, to make the
+> expression more general, letters are used instead of numbers;
+> thus 0, or nothing, will always be the value of $$+a - a$$;
+> but if we wish to know the value of $$+a - b$$, two cases are
+> to be considered.
+>
+> The first is when $$a$$ is greater than $$b$$; $$b$$ must then be
+> subtracted from $$a$$, and the remainder (before which is
+> placed, or understood to be placed, the sign +) shows the
+> value sought.
+>
+> The second case is that in which $$a$$ is less than $$b$$: here $$a$$
+> is to be subtracted from $$b$$, and the remainder being made
+> negative, by placing before it the sign -, will be the value
+> sought.
 
 
 
