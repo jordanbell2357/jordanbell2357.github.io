@@ -18,7 +18,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 2
 > for example, 7 + 5 + 9 signifies that to the number 7 we must add 5, and also 9,
 > which make 21. The reader will therefore understand what is meant by 
 > 8 + 5 + 13 + 11 + 1 + 3 + 10, 
-> namely, the sum of all these nimibers, which is 51.
+> namely, the sum of all these numbers, which is 51.
 >
 > **10.** All this is evident; and we have only to mention,
 > that in Algebra, in order to generalise numbers, we represent them by
@@ -63,7 +63,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 2
 > order in which we write the numbers is perfectly indifferent
 > and arbitrary, provided the proper sign of each be preserved.
 > We might with equal propriety have arranged the expression
-> in the preceding article thus; 12 + 2 - 5 - 3- 1, or
+> in the preceding article thus; 12 + 2 - 5 - 3 - 1, or
 > 2 - 1 - 3 - 5 + 12, or 2 + 12 - 3 - 1 - 5, or in still
 > different orders; where it must be observed,
 > that in the arrangement first proposed, the sign + is supposed to be placed
@@ -102,7 +102,7 @@ $$a - b - c - d - e,$$
 > because positive numbers represent real possessions, we
 > may say that negative numbers are less than nothing. Thus,
 > when a man has nothing of his own, and owes 50 crowns, it
-> is certain that he has 50 crowns less than nothing ; for if
+> is certain that he has 50 crowns less than nothing; for if
 > any one were to make him a present of 50 crowns to pay his
 > debts, he would still be only at the point nothing, though
 > really richer than before.
@@ -111,15 +111,15 @@ $$a - b - c - d - e,$$
 > are incontestably greater than nothing, negative numbers
 > are less than nothing. Now, we obtain positive numbers by
 > adding 1 to 0, that is to say, 1 to nothing; and by continuing always to increase thus from unity.
-> This is the origin of the series of numbers called natural numhers; the
-> following being the leading terms of this series: 
-> 0, +1, +2, +3, +4, +5, +6, +7, +8, +9, +10, 
+> This is the origin of the series of numbers called natural numbers; the
+> following being the leading terms of this series:  
+> 0, +1, +2, +3, +4, +5, +6, +7, +8, +9, +10,  
 > and so on to infinity.
 >
 > But if, instead of continuing this series by successive additions,
 > we continued it in the opposite direction, by perpetually subtracting unity,
-> we should have the following series of negative numbers: 
-> 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10, 
+> we should have the following series of negative numbers:  
+> 0, -1, -2, -3, -4, -5, -6, -7, -8, -9, -10,  
 > and so on to infinity.
 >
 > **20.** All these numbers, whether positive or negative,
