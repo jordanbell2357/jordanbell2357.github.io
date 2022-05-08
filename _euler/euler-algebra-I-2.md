@@ -7,68 +7,64 @@ title: Euler, "Elements of Algebra", Section I, Chapter 2
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 2. "Explanation of the Signs + Plus and - Minus."
 
-> 8. When we have to add one given number to another,
-this is indicated by the sign +, which is placed before the
-second number, and is read phis. Thus 5 ->(- Q signifies
-that we must add 3 to the number 5, in which case, evcr}^
-one knows that the result is 8; in the same manner 12 + 7
-make 19 ; 25 + 10 make 41 ; the sum of 25 + 41 is QQ, &c.
-
-9. We also make use of the same sign + plus, to connect several numbers together; for example, 7+5 + 9
-signifies that to the number 7 we must add 5, and also 9,
-which make 21. The reader will therefore understand what
-is meant bv
-
-8 + 5 + 13 + 1 1 + 1 + 3 + 10,
-
-viz. the sum of all these nimibers, which is 51.
-
-10. All this is evident; and we have only to mention,
-that in Algebra, in order to generalise numbers, we represent them by letters, as a, b, c, d, &c. Thus, the expression a + 6, signifies the sum of two numbers, which we
-express by a and b, and these numbers may be either very
-great, or very small. In the same manner, /'-f ??i + 6 + a:,
-.signifies the sum of the numbers represented by these four
-letters.
-
-If we know therefore the numbers that are represented by
-letters, we shall at all times be able to find, by arithmetic,
-the sum or value of such expressions.
-
-11. When it is required, on the contrary, to subtract one
-given number from another, this operation is denoted by the
-sign — , which signifies minus, and is placed before the
-number to be subtracted : thus, 8 — 5 signifies that the
-number 5 is to be taken from the number 8 ; which beingdone, there remain 3. In like manner 12 — 7 is the same
-as 5 ; and 20 — 14 is the same as 6, See.
-
-12. Sometimes also we may have several numbers to
-subtract from a single one ; as, for instance, 50—1 — 3 —
-5 — 7 — 9. This signifies, first, take I from 50, and there
-remain 49 ; take 3 from that remainder, and there will remain 46; take away 5, and 41 remain; take away 7, and
-34 remain ; lastly, from that take 9, and there remain 25
-:
-this last remainder is the value of the expression. But as
-the numbers 1, 3, 5, 7, 9, are all to be subtracted, it is the
-same thing if we subtract their sum, which is 25, at once
-from 50, and the remainder will be 25 as before.
-
-lo. It is also easy to determine the value of similar expressions, in which both the signs + plus and — minus are
-ibund. For example
-
-12 — 3 — 5 + 2 — 1 is the same as 5.
-
-We have only to collect separately the sum of the numbers
-that have the sign + before them, and subtract from it the
-sum of those tliat have the sign —. Thus, the sum of 12
-and 2 is 14; and that of y, 5, and 1, is 9; hence 9 being
+> **8.** When we have to add one given number to another,
+> this is indicated by the sign +, which is placed before the
+> second number, and is read *plus*. Thus 5 + 3 signifies
+> that we must add 3 to the number 5, in which case, every
+> one knows that the result is 8; in the same manner 12 + 7
+> make 19; 25 + 10 make 41; the sum of 25 + 41 is 66, etc.
+>
+> **9.** We also make use of the same sign + *plus*, to connect several numbers together
+> for example, 7 + 5 + 9 signifies that to the number 7 we must add 5, and also 9,
+> which make 21. The reader will therefore understand what is meant by 
+> 8 + 5 + 13 + 11 + 1 + 3 + 10, 
+> namely, the sum of all these nimibers, which is 51.
+>
+> **10.** All this is evident; and we have only to mention,
+> that in Algebra, in order to generalise numbers, we represent them by
+> letters, as $$a$$, $$b$$, $$c$$, $$d$$, etc. Thus, the expression $$a + b$$, signifies
+> the sum of two numbers, which we express by $$a$$ and $$b$$, and these numbers may be either very
+> great, or very small. In the same manner, $$f+m+b+x$$,
+> signifies the sum of the numbers represented by these four
+> letters.
+>
+> If we know therefore the numbers that are represented by
+> letters, we shall at all times be able to find, by arithmetic,
+> the sum or value of such expressions.
+>
+> **11.** When it is required, on the contrary, to subtract one
+> given number from another, this operation is denoted by the
+> sign -, which signifies *minus*, and is placed before the
+> number to be subtracted: thus, 8 - 5 signifies that the
+> number 5 is to be taken from the number 8; which being done, there remain 3.
+> In like manner 12 - 7 is the same as 5; and 20 - 14 is the same as 6, etc.
+>
+> **12.** Sometimes also we may have several numbers to
+> subtract from a single one ; as, for instance,
+> 50 - 1 - 3 - 5 - 7 - 9. This signifies, first, take 1 from 50, and there
+> remain 49; take 3 from that remainder, and there will remain 46;
+> take away 5, and 41 remain; take away 7, and 34 remain; lastly,
+> from that take 9, and there remain 25:
+> this last remainder is the value of the expression. But as
+> the numbers 1, 3, 5, 7, 9, are all to be subtracted, it is the
+> same thing if we subtract their sum, which is 25, at once
+> from 50, and the remainder will be 25 as before.
+>
+> **13.** It is also easy to determine the value of similar expressions,
+> in which both the signs + plus and - minus are found. For example; 
+> 12 - 3 - 5 + 2 - 1 is the same as 5. 
+> We have only to collect separately the sum of the numbers
+> that have the sign + before them, and subtract from it the
+> sum of those tliat have the sign -. Thus, the sum of 12
+> and 2 is 14; and that of y, 5, and 1, is 9; hence 9 being
 taken from 14, there remain 5
 
 14. [t will be perceived, from these examples, that the
 order in which we write the numbers is perfectly indifferent
 and arbitrary, provided the proper sign of each be preserved.
 We might with equal propriety have arranged the expression
-in the preceding article thus; 12 + 2 — 5 — 3—1, or
-2 - 1 - 3 - 5 + 12, or 2 + 12 - 3 — 1 - 5, or in still
+in the preceding article thus; 12 + 2 - 5 - 3-1, or
+2 - 1 - 3 - 5 + 12, or 2 + 12 - 3 - 1 - 5, or in still
 different orders ; where it must be observed, that in the arrangement first proposed, the sign -j- is supposed to be placed
 before the number 12.
 
@@ -76,27 +72,27 @@ before the number 12.
 order to generalise these operations, we make use of letters
 instead of real numbers. It is evident, for example, that
 
-a — h — c -^ d — e,
+a - h - c -^ d - e,
 
 signifies that we have numbers expressed by a and d, and
 that from these numbers, or from their sum, we must subtract the numbers expressed by the letters b, c, e, which
-have before them the sifjn —.
+have before them the sifjn -.
 
 16. Hence it is absolutely necessary to consider what sign
 is prefixed to each number : for in Algebra, simple quantities are numbers considered with re<jard to the sio-ns Avhicb
 precede, or affect them. Farther, we call those positive
 gtiaiititics, before which the sign 4- is found ; and those
 are called negative quantities, which are affected by the
-sio-n —
+sio-n -
 
 17. The manner in which we generally calculate a person's property, is an apt illustration of what has just been
 said. For v/e denote what a man really possesses by positive
 numbers, using, or understanding the sign -j- ; whereas his
 debts are represented by negative numbers, or by using the
-sign — . Thus, when it is said of any one that he has 100
+sign - . Thus, when it is said of any one that he has 100
 crowns, but owes 50, this means that his real possession
-amounts to 100 — 50 ; or, which is the same thing, + 100
-— 50, that is to say, 50    
+amounts to 100 - 50 ; or, which is the same thing, + 100
+- 50, that is to say, 50    
     
 18. Since negative numbers may be considered as debts,
 because positive numbers represent real possessions, we
@@ -138,15 +134,15 @@ shall, however, content myself with remarking here, that all
 such expressions as
 ^. 1 _ 1, + 2 _ 2, + 3 - 3, + 4 - 4, &c.
 are equal to 0, or nothing. And that
--}- 2 — 5 is equal to — 3
+-}- 2 - 5 is equal to - 3
 :
 for if a person has 2 crowns, and owes 5, he has not only
 nothing, but still owes 3 crowns. In the same manner,
-7 — 12 is equal to — 5, and 25 — 40 is cc|ual to - 15.
+7 - 12 is equal to - 5, and 25 - 40 is cc|ual to - 15.
 22. The same observations hold true, when, to make the
 expression more general, letters are used instead of numbers;
-thus 0, or nothing, will always be the value of + « — a;
-but if Ave wish to know the value of •\- a — 0, two cases are
+thus 0, or nothing, will always be the value of + « - a;
+but if Ave wish to know the value of •\- a - 0, two cases are
 to be considered.
 The first is when a is greater than b ; b must then be
 subtracted from a, and the remainder (before which is
@@ -154,7 +150,7 @@ placed, or understood to be placed, the sign +) shews the
 value sought.
 The second case is that in which a is less than b : here a
 is to be subtracted from b, and the remainder being made
-negative, by placing before it the sign — , will be the value
+negative, by placing before it the sign - , will be the value
 sousrht.
 
 
