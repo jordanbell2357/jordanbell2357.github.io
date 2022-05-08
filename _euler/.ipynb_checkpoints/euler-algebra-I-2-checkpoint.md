@@ -16,8 +16,10 @@ title: Euler, "Elements of Algebra", Section I, Chapter 2
 >
 > **9.** We also make use of the same sign + *plus*, to connect several numbers together
 > for example, 7 + 5 + 9 signifies that to the number 7 we must add 5, and also 9,
-> which make 21. The reader will therefore understand what is meant by  
-> 8 + 5 + 13 + 11 + 1 + 3 + 10,  
+> which make 21. The reader will therefore understand what is meant by
+>
+> 8 + 5 + 13 + 11 + 1 + 3 + 10,
+>
 > namely, the sum of all these numbers, which is 51.
 >
 > **10.** All this is evident; and we have only to mention,
