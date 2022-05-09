@@ -48,7 +48,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 7
 > unity, and that consequently the fraction $$\frac{a}{a}$$ is of the same
 > value as 1, or one integer; for the same reason, all the following fractions,
 >
-$$\frac{2}{2}, \frac{3}{3}, \frac{4}{4}, \frac{5}{5}, \frac{6}{6}, \frac{7}{7}, \frac{8}{8} \; \textrm{etc.}$$
+$$\frac{2}{2}, \frac{3}{3}, \frac{4}{4}, \frac{5}{5}, \frac{6}{6}, \frac{7}{7}, \frac{8}{8}, \textrm{etc.}$$
 >
 > are equal to one another, each being equal to 1, or one integer.
 
