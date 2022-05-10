@@ -157,8 +157,8 @@ $$\frac{2}{2}, \frac{3}{3}, \frac{4}{4}, \frac{5}{5}, \frac{6}{6}, \frac{7}{7}, 
 > **81.** We can never therefore arrive completely at 0, or
 > nothing, however great the denominator may be; and, consequently,
 > as those fractions must always preserve a certain quantity,
-> we may continue the series of fractions in the
-> 78th article without interruption. This circumstance has introduced
+> we may continue the series of fractions in
+> **Article 78** without interruption. This circumstance has introduced
 > the expression, that the denominator must be infinite, or infinitely great,
 > in order that the fraction may be
 > reduced to 0, or to nothing; hence the word infinite in
