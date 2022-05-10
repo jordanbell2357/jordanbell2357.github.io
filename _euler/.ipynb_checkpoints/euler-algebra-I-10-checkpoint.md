@@ -133,7 +133,11 @@ title: Euler, "Elements of Algebra", Section I, Chapter 10
 > the dividend by the numerator of the divisor;
 > then the first product will be the numerator of the quotient,
 > and the second will be its denominator.
-
+>
+> **109.** Applying this rule to the division of
+> ⅝ by ⅔, we shall have the quotient ¹⁵⁄₁₆;
+> also the division of ¾ by ½ will give ⁶⁄₄, or ³⁄₂, or 1½;
+> and ²⁵⁄₄₈ by ⅚ will give ¹⁵⁰⁄₂₄₀, or ⅝.
 
 
 #### References
