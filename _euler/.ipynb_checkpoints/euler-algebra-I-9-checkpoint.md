@@ -83,6 +83,21 @@ title: Euler, "Elements of Algebra", Section I, Chapter 9
 > Again, if the fractions ⅗ and ⅝ be proposed, we shall have
 > to substitute for them ²⁴⁄₄₀ and ³⁵⁄₄₀; whence we may conclude
 > that ⅝ exceeds ⅗, but only by ¹⁄₄₀.
+>
+> **99.** When it is required to subtract a fraction from an
+> integer, it is sufficient to change one of the units of that
+> integer into a fraction, which has the same denominator as
+> that which is to be subtracted ; then in the rest of the operation
+> there is no difficulty. If it be > required, for example, to
+> subtract ⅔ from 1, we write ³⁄₃ instead of 1, and say that ⅔
+> taken from ³⁄₃ leaves the remainder ⅓. So ⁵⁄₁₂, subtracted
+> from 1, leaves ⁷⁄₁₂.
+>
+> If it were required to subtract ¾ from 2 we should write
+> 1 and ⁴⁄₄ instead of 2, and should then immediately see that
+> after the subtraction there must remain 1¼.
+>
+> 
 
 #### References
 
