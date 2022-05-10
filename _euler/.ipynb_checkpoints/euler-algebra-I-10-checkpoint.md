@@ -118,7 +118,21 @@ title: Euler, "Elements of Algebra", Section I, Chapter 10
 > the same manner, in order to divide ⁸⁄₁₂ by ⁹⁄₁₂, we have only
 > to divide 8 by 9, which gives ⁸⁄₉. We shall also have ⁶⁄₂₀
 > in ¹⁸⁄₂₀, 3 times; ⁷⁄₁₀₀ in ⁴⁹⁄₁₀₀, 7 times; ⁷⁄₂₅ in ⁶⁄₂₅, ⁶⁄₇ times; etc.
-
+>
+> **108.** But when the fractions have not equal denominators,
+> we must have recourse to the method already mentioned for
+> reducing them to a common denominator. Let there be,
+> for example, the fraction $$\frac{a}{b}$$ to be divided by the fraction
+> $$\frac{c}{d}$$. We first reduce them to the same denominator, and
+> there results $$\frac{ad}{bd}$$ to be divided by $$\frac{cb}{bd}$$; it is now evident
+> that the quotient must be represented simply by the division
+> of $$ad$$ by $$bc$$; which gives $$\frac{ad}{bc}$$.
+>
+> Hence the following rule: Multiply the numerator of the
+> dividend by the denominator of the divisor, and the denominator of
+> the dividend by the numerator of the divisor;
+> then the first product will be the numerator of the quotient,
+> and the second will be its denominator.
 
 
 
