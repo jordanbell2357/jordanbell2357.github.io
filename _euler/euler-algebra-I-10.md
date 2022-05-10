@@ -8,7 +8,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 10
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 10. "Of the Multiplication and Division of Fractions."
 
 
-> 101. The rule for the multiplication of a fraction by an
+> **101.** The rule for the multiplication of a fraction by an
 > integer, or whole number, is to multiply the numerator
 > only by the given number, and not to change the denominator: thus,
 >
@@ -50,6 +50,75 @@ title: Euler, "Elements of Algebra", Section I, Chapter 10
 > been demonstrated that the quotient multiplied by the divisor
 > will give the dividend, it is evident that $$\frac{a}{b}$$ multiplied by $$b$$
 > must produce $$a$$.
+>
+> **103.** Having thus shewn how a fraction is to be multiplied by an integer;
+> let us now consider also how a fraction
+> is to be divided by an integer. This inquiry is necessary,
+> before we proceed to the multiplication of fractions by fractions. It is evident,
+> if we have to divide the fraction ⅔ by
+> 2, that the result must be ⅓; and that the quotient of ⁶⁄₇
+> divided by 3 is ²⁄₇. The rule therefore is, to divide the
+> numerator by the integer without changing the denominator.
+> Thus
+>
+> ¹²⁄₂₅ divided by 2 gives ⁶⁄₂₅;
+>
+> ¹²⁄₂₅ divided by 3 gives ⁴⁄₂₅;
+>
+> ¹²⁄₂₅ divided by 4 gives ³⁄₂₅; etc.
+>
+> **104.** This rule may be easily practised, provided the
+> numerator be divisible by the number proposed; but very
+> often it is not: it must therefore be observed, that a fraction
+> may be transformed into an infinite number of other expressions,
+> and in that number there must be some, by which
+> the numerator might be divided by the given integer. If
+> it were required, for example, to divide ¾ by 2, we should
+> change the fraction into ⁶⁄₈, and then dividing the numerator
+> by 2, we should immediately have ⅜ for the quotient
+> sought.
+>
+> In general, if it be proposed to divide the fraction $$\frac{a}{b}$$
+> by $$c$$, we change it into $$\frac{ac}{bc}$$, and then dividing the numerator
+> $$ac$$ by $$c$$, write $$\frac{a}{bc}$$ for the quotient sought.
+>
+> **105.** When therefore a fraction $$\frac{a}{b}$$ is to be divided by an
+> integer $$c$$, we have only to multiply the denominator by that
+> number, and leave the numerator as it is. Thus ⅝ divided
+> by 3 gives ⁵⁄₂₄, and ⁹⁄₁₆ divided by 5 gives ⁹⁄₈₀.
+>
+> This operation becomes easier, when the numerator itself
+> is divisible by the integer, as we have supposed in **Article 103**.
+> For example, ⁹⁄₁₆ divided by 3 would give, according
+> to our last rule, ⁹⁄₄₈; but by the first rule, which is applicable here,
+> we obtain ³⁄₁₆, an expression equivalent to ⁹⁄₄₈, but
+> more simple.
+>
+> **106.** We shall now be able to understand how one fraction $$\frac{a}{b}$$
+> may be multiplied by another fraction $$\frac{c}{d}$$. For this purpose,
+> we have only to consider that $$\frac{c}{d}$$ means that $$c$$ is divided by $$d$$;
+> and on this principle we shall first multiply the
+> fraction $$\frac{a}{b}$$ by $$c$$, which produces the result $$\frac{ac}{b}$$; after which
+> we shall divide by $$d$$, which gives $$\frac{ac}{bd}$$.
+>
+> Hence the following rule for multiplying fractions. Multiply the numerators together for a numerator, > and the denominators together for a denominator. Thus,
+>
+> ½ by ⅔ gives the product ²⁄₆, or ⅓;
+>
+> ⅔ by ⅘ gives ⁸⁄₁₅;
+>
+> ¾ by ⁵⁄₁₂ produces ¹⁵⁄₄₈, or ⁵⁄₁₆; etc.
+>
+> **107.** It now remains to shew how one fraction may be
+> divided by another. Here we remark first, that if the two
+> fractions have the same number for a denominator, the
+> division takes place only with respect to the numerators;
+> for it is evident, that ³⁄₁₂ are contained as many times in ⁹⁄₁₂
+> as 3 is contained in 9, that is to say, three times; and, in
+> the same manner, in order to divide ⁸⁄₁₂ by ⁹⁄₁₂, we have only
+> to divide 8 by 9, which gives ⁸⁄₉. We shall also have ⁶⁄₂₀
+> in ¹⁸⁄₂₀, 3 times; ⁷⁄₁₀₀ in ⁴⁹⁄₁₀₀, 7 times; ⁷⁄₂₅ in ⁶⁄₂₅, ⁶⁄₇ times; etc.
+
 
 
 
