@@ -97,7 +97,27 @@ title: Euler, "Elements of Algebra", Section I, Chapter 9
 > 1 and ⁴⁄₄ instead of 2, and should then immediately see that
 > after the subtraction there must remain 1¼.
 >
-> 
+> **100.** It happens also sometimes, that having added two
+> or more fractions together, we obtain more than an integer;
+> that is to say, a numerator greater than the denominator:
+> this is a case which has already occurred, and deserves
+> attention.
+>
+> We found, for example (**Article 96**), that the sum of the
+> five fractions ½, ⅔, ¾, ⅘, and ⅚ was ²¹³⁄₆₀, and remarked that
+> the value of this sum was 3³³⁄₆₀ or 3¹¹⁄₂₀. Likewise, ⅔ + ¾, or
+> ⁸⁄₁₂ + ⁹⁄₁₂, makes ¹⁷⁄₁₂, or 1⁵⁄₁₂. We have therefore only to
+> perform the actual division of the numerator by the denominator, to see how many integers
+> there are for the quotient, and to set down the remainder.
+>
+> Nearly the same must be done to add together numbers
+> compounded of integers and fractions; we first add the
+> fractions, and if the sum produces one or more integers, these
+> are added to the other integers. If it be proposed, for example,
+> to add 3½ and 2⅔; we first take the sum of ½ and ⅔,
+> or of ³⁄₆ and ⁴⁄₆, which is ⁷⁄₆, or 1⅙; and thus we find the total
+> sum to be 6⅙.
+
 
 #### References
 
