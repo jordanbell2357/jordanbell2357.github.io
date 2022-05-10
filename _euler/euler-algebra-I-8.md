@@ -36,6 +36,19 @@ $$\frac{1}{2},\frac{2}{4},\frac{3}{6},\frac{4}{8},\frac{5}{10},\frac{6}{12},\tex
 > are equal, the value of each being ½. Also, 
 
 
+
+> **89.** It will be easy to resolve this problem, if we consider
+> that a fraction still preserves its value, when we multiply
+> both its terms, or its numerator and denominator, by the
+> same number. For from this it also follows, that if we
+> divide the numerator and denominator of a fraction by the
+> same number, the fraction will still preserve the same value.
+> This is made more evident by means of the general expression $$\frac{ma}{mb}$$;
+> for if we divide both the numerator $$ma$$ and
+> the denominator $$mb$$ by the number $$m$$, we obtain the fraction
+> $$\frac{a}{b}$$, which, as was before proved, is equal to $$\frac{ma}{mb}$$.
+
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
