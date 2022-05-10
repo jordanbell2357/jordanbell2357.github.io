@@ -9,16 +9,22 @@ title: Euler, "Elements of Algebra", Section I, Chapter 8
 
 > **85.** We have already seen, that each of the fractions,
 >
+> ²⁄₂, ³⁄₃, ⁴⁄₄, ⁵⁄₅, ⁶⁄₆, ⁷⁄₇, ⁸⁄₈, etc.
+>
 $$\frac{2}{2}, \frac{3}{3}, \frac{4}{4}, \frac{5}{5}, \frac{6}{6}, \frac{7}{7}, \frac{8}{8}, \textrm{etc.}$$
 >
 > makes an integer, and that consequently they are all equal
 > to one another. The same equality prevails in the following
 > fractions,
 >
+> ²⁄₁, ⁴⁄₂, ⁶⁄₃, ⁸⁄₄, ¹⁰⁄₅, ¹²⁄₆, etc.
+>
 $$\frac{2}{1},\frac{4}{2},\frac{6}{3},\frac{8}{4},\frac{10}{5},\frac{12}{6},\textrm{etc.}$$
 >
 each of them making two integers; for the numerator of
 each, divided by its denominator, gives 2. So all the fractions
+>
+> ³⁄₁, ⁶⁄₂, ⁹⁄₃, ¹²⁄₄, ¹⁵⁄₅, ¹⁸⁄₆, etc.
 >
 $$\frac{3}{1},\frac{6}{2},\frac{9}{3},\frac{12}{4},\frac{15}{5},\frac{18}{6},\textrm{etc.}$$
 >

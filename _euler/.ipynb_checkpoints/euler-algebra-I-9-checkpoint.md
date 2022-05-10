@@ -55,6 +55,34 @@ title: Euler, "Elements of Algebra", Section I, Chapter 9
 > and under the sum place the common denominator 60; that
 > is to say, we shall have ²¹³⁄₆₀, or 3 wholes, and the fractional
 > remainder ¹¹⁄₂₀.
+>
+> **97.** The whole of this operation consists,
+> as we before stated, in changing fractions, whose denominators are unequal,
+> into others whose denominators are equal. In order, therefore, to perform it generally,
+> let $$\frac{a}{b}$$ and $$\frac{c}{d}$$ be the fractions proposed. First,
+> multiply the two terms of the
+> first fraction by $$d$$, and we shall have the fraction $$\frac{ad}{bd}$$ equal to
+> $$\frac{a}{b}$$; next multiply the two terms of the second fraction
+> by $$b$$, and we shall have an equivalent value of it expressed
+> by $$\frac{bc}{bd}$$; thus the two denominators are become equal. Now,
+> if the sum of the two proposed fractions be required, we
+> may immediately answer that it is $$\frac{ad+bc}{bd}$$; and if their
+> difference be asked, we say that it is $$\frac{ad-bc}{bd}$$. If the fractions
+> ⅝ and ⁷⁄₉, for example, were proposed, we should obtain, in
+> their stead, ⁴⁵⁄₇₂ and ⁵⁶⁄₇₂; of which the sum is ¹⁰¹⁄₇₂ and the
+> difference ¹¹⁄₇₂.
+>
+> **98.** To this part of the subject belongs also the question,
+> Of two proposed fractions which is the greater or the less ?
+> for, to resolve this, we have only to reduce the two fractions
+> to the same denominator. Let us take, for example, the two
+> fractions ⅔ and ⁵⁄₇; when reduced to the same denominator,
+> the first becomes ¹⁴⁄₂₁, and the second ¹⁵⁄₂₁, where it is evident
+> that the second, or ⁵⁄₇, is the greater, and exceeds the former by ¹⁄₂₁.
+>
+> Again, if the fractions ⅗ and ⅝ be proposed, we shall have
+> to substitute for them ²⁴⁄₄₀ and ³⁵⁄₄₀; whence we may conclude
+> that ⅝ exceeds ⅗, but only by ¹⁄₄₀.
 
 #### References
 
