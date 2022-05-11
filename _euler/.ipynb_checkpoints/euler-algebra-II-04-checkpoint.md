@@ -7,6 +7,19 @@ title: Euler, "Elements of Algebra", Section II, Chapter 4
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 4. "Of the Division of Compound Quantities."
 
+282. When we wish simply to represent division, we
+make use of the usual mark of fractions ; which is, to write
+the denominator under the numerator, separating them by a
+line ; or to enclose each quantity between parentheses, placing
+two points between the divisor and dividend, and a line between them. Thus, if it were required, for example, to
+divide a -|- 6 by 6 + d, we should represent the quotient
+thus ; —r-,, according to tlie former method ; and thus,
+c-\-a
+(a + b) ^(c + d)
+according to the latter, where each expression is read a + b
+divided by c -\- d.
+
+
 
 #### References
 
