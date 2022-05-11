@@ -52,6 +52,20 @@ be an integer, nor a fraction; yet there must be such an exponent $$b$$, that
 the power $$a^b$$ may become equal to the number proposed; we have therefore $$b \log c$$;
 and generally, $$a^{\textrm{L}c} = c$$.
 
+**225.** Let us now consider another number d, whose logarithm has been represented in a similar
+manner by $$\log d$$; so that $$a^{\textrm{L}d} = d$$. Here if we multiply this expression by the
+preceding one $$a^{\textrm{L}c} = c$$, we shall have
+$$a^{\textrm{L}c+\textrm{L}d} =cd$$; hence, the exponent is always the logarithm of the power;
+consequently,
+
+$$\log c + \log d = \log cd.$$
+
+But if, instead of multiplying, we divide the former expression by the latter,
+we shall obtain a^{\textrm{L}c-\textrm{L}d}=\frac{c}{d};
+and, consequently,
+
+$$\log c — \log d = \log \frac{c}{d}.$$
+
 
 #### References
 
