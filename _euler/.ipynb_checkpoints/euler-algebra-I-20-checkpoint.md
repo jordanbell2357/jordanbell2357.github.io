@@ -7,23 +7,25 @@ title: Euler, "Elements of Algebra", Section I, Chapter 20
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."
 
-> **206.** Hitherto we have only explained the different methods of calculation: namely,
-> addition, subtraction, multiplication, and division; the involution of powers,
-> and the extraction of roots. It will not be improper, therefore, in this place, to trace back
-> the origin of these different methods, and to explain the connection which subsists among them;
-> in order that we may satisfy ourselves whether it be possible or not for other operations
-> of the same kind to exist. This inquiry will throw new light on the subjects which we have considered.
->
-> In prosecuting this design, we shall make use of a new character, which may be
-> employed instead of the expression that has been so often repeated, is equal to;
-> this sign is =, which is read *is equal to*: thus, when I write $$a = b$$,
-> this means that $$a$$ is equal to $$b$$: so, for example, 3 · 5 = 15.
->
-> **207.** The first mode of calculation that presents itself to the mind, is undoubtedly addition, by
-> which we add two numbers together and find their sum: let therefore $$a$$ and $$b$$
-> be the two given numbers, and let their sum be expressed by the letter $$c$$, then we shall
-> have $$a + b = c$$; so that when we know
-> the two numbers $$a$$ and $$b$$, addition teaches us to find the number $$c$$.
+##### 206.
+
+Hitherto we have only explained the different methods of calculation: namely,
+addition, subtraction, multiplication, and division; the involution of powers,
+and the extraction of roots. It will not be improper, therefore, in this place, to trace back
+the origin of these different methods, and to explain the connection which subsists among them;
+in order that we may satisfy ourselves whether it be possible or not for other operations
+of the same kind to exist. This inquiry will throw new light on the subjects which we have considered.
+
+In prosecuting this design, we shall make use of a new character, which may be
+employed instead of the expression that has been so often repeated, is equal to;
+this sign is =, which is read *is equal to*: thus, when I write $$a = b$$,
+this means that $$a$$ is equal to $$b$$: so, for example, 3 · 5 = 15.
+
+**207.** The first mode of calculation that presents itself to the mind, is undoubtedly addition, by
+which we add two numbers together and find their sum: let therefore $$a$$ and $$b$$
+be the two given numbers, and let their sum be expressed by the letter $$c$$, then we shall
+have $$a + b = c$$; so that when we know
+the two numbers $$a$$ and $$b$$, addition teaches us to find the number $$c$$.
 
 **208.** Preserving this comparison $$a + b = c$$, let us reverse the question by asking, how we are to
 find the number $$b$$, when we know the numbers $$a$$ and $$c$$.
