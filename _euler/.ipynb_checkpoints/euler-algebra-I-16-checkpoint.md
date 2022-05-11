@@ -264,6 +264,34 @@ $$a, a^2, a^3, a^4, a^5, a^6, a^7, a^8, a^9, a^{10}, \textrm{etc.}$$
 > and are enabled to assign the precise value of those powers. Thus, from what has been said,
 > it appears that
 
+<table>
+    <tr>
+        <td>\(a^0\)</td>
+        <td>is equal to</td>
+        <td>1</td>
+    </tr>
+    <tr>
+        <td>\(a^{-1}\)</td>
+        <td>is equal to</td>
+        <td>\(\frac{1}{a}\)</td>
+    </tr>
+    <tr>
+        <td>\(a^{-2}</td>
+        <td>is equal to</td>
+        <td>\(\frac{1}{aa}\) or \(\frac{1}{a^2}\)</td>
+    </tr>
+    <tr>
+        <td>\(a^{-3}\)</td>
+        <td>is equal to</td>
+        <td>\(\frac{1}{a^3}\)</td>
+    </tr>
+    <tr>
+        <td>\(a^{-4}\)</td>
+        <td>is equal to</td>
+        <td>\(\frac{1}{a^4}\), etc.</td>
+    </tr>
+</table>
+
 
 #### References
 
