@@ -277,7 +277,7 @@ $$a, a^2, a^3, a^4, a^5, a^6, a^7, a^8, a^9, a^{10}, \textrm{etc.}$$
         <td>\(\frac{1}{a}\)</td>
     </tr>
     <tr>
-        <td>\(a^{-2}</td>
+        <td>\(a^{-2}\)</td>
         <td>is equal to</td>
         <td>\(\frac{1}{aa}\) or \(\frac{1}{a^2}\)</td>
     </tr>
