@@ -66,6 +66,20 @@ and, consequently,
 
 $$\log c — \log d = \log \frac{c}{d}.$$
 
+**226.** This leads us to the two principal properties of logarithms, which are contained in the
+equations
+
+$$\log c + \log d = \log cd,$$
+
+and
+
+$$\log c — \log d = \log \frac{c}{d}.$$
+
+The former of these equations teaches us, that the logarithm of a product, as $$cd$$, is found by
+adding together the logarithms of the factors; and the latter shows us this property, namely,
+that the logarithm of a fraction may be determined by subtracting the logarithm of the
+denominator from that of the numerator.
+
 
 #### References
 
