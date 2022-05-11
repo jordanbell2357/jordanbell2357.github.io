@@ -24,15 +24,14 @@ title: Euler, "Elements of Algebra", Section I, Chapter 20
 > be the two given numbers, and let their sum be expressed by the letter $$c$$, then we shall
 > have $$a + b = c$$; so that when we know
 > the two numbers $$a$$ and $$b$$, addition teaches us to find the number $$c$$.
->
-> **208.**
 
 **208.** Preserving this comparison $$a + b = c$$, let us reverse the question by asking, how we are to
-find the number $$b$$, when we know the numbers $$a$$ and $$c$$. It is here required therefore to know what
+find the number $$b$$, when we know the numbers $$a$$ and $$c$$.
+It is here required therefore to know what
 number must be added to $$a$$, in order that the sum may be the number $$c$$: suppose, for example,
 $$a = 3$$ and $$c = 8$$; so that we must have $$3 + b = 8$$; then $$b$$ will evidently be found by
 subtractlng 3 from 8: and, in general, to find $$b$$, we must subtract $$a$$ from $$c$$, whence arises
-$$b = c — a$$; for by adding $$a$$ to both sides again,
+$$b = c - a$$; for by adding $$a$$ to both sides again,
 we have $$b+a=c - a + a$$, that is to say, $$=c$$, as we supposed.
 
 **209.** Subtraction therefore takes place, when we invert
@@ -117,8 +116,8 @@ different results.
 
 **216.** It is evident then, that we may propose two questions more:
 one, to find the root $$a$$ by means of the given
-power $$c$$, and the exponent $$b$$; the other, to find the exponent $$b$$, supposing the power $$c$$
-and the root $$a$$ to be known.
+power $$c$$, and the exponent $$b$$; the other, to find the exponent $$b$$,
+supposing the power $$c$$ and the root $$a$$ to be known.
 
 **217.** It may be said, indeed, that the former of these
 questions has been resolved in the chapter on the extraction
