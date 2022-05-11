@@ -7,8 +7,17 @@ title: Euler, "Elements of Algebra", Section I, Chapter 21
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 21. "Of Logarithms in general."
 
-
-
+220. Resuming the equation $$a^b=c$$, we shall begin by
+remarking that, in the doctrine of Logarithms, we assume
+for the root $$a$$, a certain number taken at pleasure, and suppose this
+root to preserve invariably its assumed value.
+This being laid down, we take the exponent $$b$$ such, that
+the power $$a^b$$ becomes equal to a given number $$c$$; in
+which case this exponent $$b$$ is said to be the *logarithm* of the
+number $$c$$. To express this, we shall use the letter 𝔩 or
+the initial letters $$\log$$. Thus, by $$b = \mathfrak{l}c$$, or $$b =\log c$$,
+we mean that $$b$$ is equal to the logarithm of the number $$c$$,
+or that the logarithm of $$c$$ is $$b$$.
 
 #### References
 
