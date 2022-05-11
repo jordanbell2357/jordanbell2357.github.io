@@ -127,6 +127,10 @@ called a *power*. Thus, a square which arises from the multiplication of a numbe
 </tr>
 </table>
 
+> But the powers of the number 10 are the most remarkable: for on these powers the system of
+> our arithmetic is founded. A few of them ranged in order,
+> and beginning with the first power, are as follow:
+
 
 #### References
 
