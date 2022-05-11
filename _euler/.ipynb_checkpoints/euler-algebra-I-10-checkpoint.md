@@ -138,6 +138,54 @@ title: Euler, "Elements of Algebra", Section I, Chapter 10
 > ⅝ by ⅔, we shall have the quotient ¹⁵⁄₁₆;
 > also the division of ¾ by ½ will give ⁶⁄₄, or ³⁄₂, or 1½;
 > and ²⁵⁄₄₈ by ⅚ will give ¹⁵⁰⁄₂₄₀, or ⅝.
+>
+> **110.** This rule for division is often expressed in a manner
+> that is more easily remembered, as follows: Invert the
+> terms of the divisor, so that the denominator may be in the
+> place of the numerator, and the latter be written under the
+> line; then multiply the fraction, which is the dividend by
+> this inverted fraction, and the product will be the quotient sought.
+> Thus, ¾ divided by ½ is the same as ¾ multiplied by ²⁄₁, which makes ⁶⁄₄,
+> or 1½. Also ⅝ divided by ⅔ is
+> the same as ⅝ multiplied by ³⁄₂, which is ¹⁵⁄₁₆;
+> or ²⁵⁄₄₈ divided by ⅚ gives the same as ²⁵⁄₄₈ multiplied by ⁶⁄₅, the product of
+> which is ¹⁵⁰⁄₂₄₀, or ⅝.
+>
+> We see then, in general, that to divide by the fraction ½ is
+> the same as to multiply by ²⁄₁, or 2; and that dividing by ⅓
+> amounts to multiplying by ³⁄₁, or by 3, etc.
+>
+> **111.**  The number 100 divided by ½ will give 200; and
+> 1000 divided by ⅓ will give 3000. Farther, if it were required to divide 1 by
+> ¹⁄₁₀₀₀, the quotient would be 1000;
+> and dividing 1 by ¹⁄₁₀₀₀₀₀, the quotient is 100000. This
+> enables us to conceive that, when any number is divided by
+> 0, the result must be a number indefinitely great; for even
+> the division of 1 by the small fraction ¹⁄₁₀₀₀₀₀₀₀₀₀ gives for
+> the quotient the very great number 1000000000.
+>
+> **112.** Every number, when divided by itself, producing
+> unity, it is evident that a fraction divided by itself must also
+> give 1 for the quotient; and the same follows from our rule:
+> for, in order to divide ¾ by ¾, we must multiply ¾ by ⁴⁄₃, in
+> which case we obtain ¹²⁄₁₂, or 1; and if it be required to
+> divide $$\frac{a}{b}$$ by $$\frac{a}{b}$$, we multiply $$\frac{a}{b}$$
+> by $$\frac{b}{a}$$;
+> where the product $$\frac{ab}{ab}$$ is also equal to 1.
+>
+> **113.** We have still to explain an expression which is
+> frequently used. It may be asked, for example, what is the
+> half of ¾? This means, that we must multiply ¾ by ½. So
+> likewise, if the value of ⅔ of ⅝ were required, we should
+> multiply ⅝ by ⅔, which produces ¹⁰⁄₂₄; and ¾ of ⁹⁄₁₆ is the
+> same as ⁹⁄₁₆ multiplied by ¾, which produces ²⁷⁄₆₄.
+>
+> **114.** Lastly, we must here observe, with respect to the
+> signs + and -, the same rules that we before laid down for
+> integers. Thus +½ multiplied by -⅓, makes -⅙; and
+> -⅔ multiplied by -⅘, gives +⁸⁄₁₅. Farther -⅝ divided
+> by ⅔, gives -¹⁵⁄₁₆; and -¾ divided by -¾, gives +¹²⁄₁₂,
+> or +1.
 
 
 #### References
