@@ -80,6 +80,29 @@ adding together the logarithms of the factors; and the latter shows us this prop
 that the logarithm of a fraction may be determined by subtracting the logarithm of the
 denominator from that of the numerator.
 
+**227.** It also follows from this, that when it is required to
+multiply, or divide, two numbers by one another, we have
+only to add, or subtract, their logarithms; and this is what
+constitutes the singular utility of logarithms in calculation:
+for it is evidently much easier to add, or subtract, than to
+multiply, or divide, particularly when the question involves
+large numbers.
+
+**228.** Logarithms are attended with still greater advantages,
+in the involution of powers, and in the extraction of roots;
+for if $$d=c$$, we have, by the first property,
+$$\log c + \log c = \log cc$$ or $$c^2$$; consequently, $$\log cc = 2 \log c$$;
+and in the same manner, we obtain $$\log c^3 = 3 \log c$$;
+$$\log c^4=4\log c$$; and, generally, $$\log c^n=n\log c$$.
+If we now substitute fractional numbers for $$n$$, we shall have,
+for exmaple, $$\log c^{\frac{1}{2}}$$, that is to say, $$\log \sqrt{c}$$, $$=\frac{1}{2}\log c$$;
+and lastly, if we suppose $$n$$ to represent negative numbers, we shall
+have $$\log c^{-1}$$, or $$\log \frac{1}{c}$$, $$=-\log c$$;
+$$\log c^{-2}$$, or $$\log \frac{1}{c^2}$$, $$=-2\log c$$,
+and so on; which follows not only from the equation
+$$\log c^n = n \log n$$, but also from $$\log 1=0$$, as we have
+already seen.
+
 
 #### References
 
