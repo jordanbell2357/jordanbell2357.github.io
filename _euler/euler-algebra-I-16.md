@@ -292,6 +292,18 @@ $$a, a^2, a^3, a^4, a^5, a^6, a^7, a^8, a^9, a^{10}, \textrm{etc.}$$
     </tr>
 </table>
 
+> **178.** It will also be easy, from the foregoing notation, to
+> find the powers of a product, $$ab$$; for they must evidently be
+>
+> $$ab$$, or $$a^1b^1$$, $$a^2b^2$$, $$a^3b^3$$, $$a^4b^4$$, $$a^5b^5$$, etc.
+>
+> and the powers of fractions will be found in the same manner; for example,
+> those of $$\frac{a}{b}$$ are
+>
+> $$\frac{a^1}{b^1}$$, $$\frac{a^2}{b^2}$$, $$\frac{a^3}{b^3}$$, $$\frac{a^4}{b^4}$$, $$\frac{a^5}{b^5}$$, $$\frac{a^6}{b^6}$$, $$\frac{a^7}{b^7}$$, etc.
+>
+>
+
 
 #### References
 
