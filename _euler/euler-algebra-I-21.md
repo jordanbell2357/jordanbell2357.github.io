@@ -103,6 +103,36 @@ and so on; which follows not only from the equation
 $$\log c^n = n \log n$$, but also from $$\log 1=0$$, as we have
 already seen.
 
+**229.** If therefore we had Tables, in which logarithms were calculated for all numbers, we might
+certainly derive from them very great assistance in performing the most prolix calculations;
+such, for instance, as require frequent multiplications, divisions, involutions, and extractions
+of roots: for, in such Tables, we should have not only the logarithms of all numbers, but also
+the numbers answering to all logarithms. If it were required, for example, to find the square root
+of the number $$c$$, we must first find the logarithm of $$c$$, that is, $$\log c$$,
+and next taking the half of that logarithm, or $$\frac{1}{2}\log c$$, we should have the
+logarithm of the square root required:
+we have therefore only to look in the Tables for the number answering to that logarithm,
+in order to obtain the root required.
+
+**230.** We have already seen, that the numbers, 1, 2, 3, 4, 5, 6, etc. that is to say,
+all positive numbers, are logarithms of the root a, and of its positive powers; consequently,
+logarithms of numbers greater than unity: and, on the contrary, that the negative numbers,
+as -1, -2, etc. are logarithms of the fractions $$\frac{1}{a}$$, $$\frac{1}{a^2}$$, etc. which are
+less than unity, but yet greater than nothing.
+
+Hence, it follows, that, if the logarithm be positive, the number is always greater than unity:
+but if the logarithm be negative, the number is always less than unity, and yet greater than 0;
+consequently, we cannot express the logarithms of negative numbers: we must therefore conclude,
+that the logarithms of negative numbers are impossible, and that they belong to the class of
+imaginary quantities.
+
+**231.** In order to illustrate this more fully, it will be proper to fix on a determinate number
+for the root $$a$$. Let us make choice of that, on which the common Logarithmic Tables are formed,
+that is, the number 10, which has been preferred, because it is the foundation of our Arithmetic.
+But it is evident that any other number, provided it were greater than unity, would answer the
+same purpose: and the reason why we cannot suppose $$a=$$ unity, or 1, is manifest;
+because all the powers $$a^b$$ would then be constantly equal to unity, and could never
+become equal to another given number, $$c$$.
 
 #### References
 
