@@ -14,10 +14,44 @@ root to preserve invariably its assumed value.
 This being laid down, we take the exponent $$b$$ such, that
 the power $$a^b$$ becomes equal to a given number $$c$$; in
 which case this exponent $$b$$ is said to be the *logarithm* of the
-number $$c$$. To express this, we shall use the letter 𝔩 or
-the initial letters $$\log$$. Thus, by $$b = \mathfrak{l}c$$, or $$b =\log c$$,
+number $$c$$. To express this, we shall use the letter L or
+the initial letters $$\log$$. Thus, by $$b = L c$$, or $$b =\log c$$,
 we mean that $$b$$ is equal to the logarithm of the number $$c$$,
 or that the logarithm of $$c$$ is $$b$$.
+
+221. We see then, that the value of the root $$a$$ being
+once established, the logarithm of any number, $$c$$, is nothing more than the
+exponent of that power of $$a$$, which is equal
+to $$c$$: so that $$c$$ being $$=a^b$$, $$b$$ is the logarithm of the power $$a^b$$.
+If, for the present, we suppose $$b= 1$$, we have 1 for
+the logarithm of $$a^1$$, and consequently $$\log a = 1$$; but if we
+suppose $$b = 2$$, we have 2 for the logarithm of $$a^2$$; that is to
+say, $$\log a^2 =2$$, and we may, in the same manner, obtain
+$$\log a^3=3$$; $$\log a^4=4$$; $$\log a^5=5$$, and so on.
+
+222. If we make $$b=0$$, it is evident that 0 will be the logarithm of $$a^0$$;
+but $$a^0=1$$; consequently $$\log 1=0$$, whatever be the value of the root $$a$$.
+
+Suppose $$b=-1$$, then -1 will be the logarithm of $$a^{-1}$$; but $$a^{-1} = \frac{1}{a}$$;
+so that we have $$\log \frac{1}{a}=-1$$, and in the same manner,
+we shall have $$\log \frac{1}{a^2} = -2$$; $$\log \frac{1}{a^3} = -3$$;
+$$\log \frac{1}{a^4}=-4$$, etc.
+
+223. It is evident, then, how we may represent the logarithms of all the powers of $$a$$, and
+even those of fractions, which have unity for the numerator, and for the
+denominator a power of $$a$$. We see also, that in all those cases the logarithms are integers;
+but it must be observed, that if $$b$$ were a fraction, it would be the logarithm of an
+irrational number: if we suppose, for example, $$b=\frac{1}{2}$$, it follows,
+that $$\frac{1}{2}$$ is the logarithm of $$a^{1/2}$$,
+or of $$\sqrt{a}$$; consequently we have also $$\log \sqrt{a}= \frac{1}{2}$$; and we shall find,
+in the same manner, that $$\log \sqrt[3]{a} = \frac{1}{3}$$, $$\log \sqrt[4]{a} = \frac{1}{4}$$, etc.
+
+224. But if it be required to find the logarithm of another
+number $$c$$, it will be readily perceived, that it can neither
+be an integer, nor a fraction; yet there must be such an exponent $$b$$, that
+the power $$a^b$$ may become equal to the number proposed; we have therefore $$b \log c$$;
+and generally, $$a^{Lc} = c$$.
+
 
 #### References
 

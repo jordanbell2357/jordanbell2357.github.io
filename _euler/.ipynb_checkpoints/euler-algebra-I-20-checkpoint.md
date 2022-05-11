@@ -7,9 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 20
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."
 
-##### 206.
-
-Hitherto we have only explained the different methods of calculation: namely,
+**206.** Hitherto we have only explained the different methods of calculation: namely,
 addition, subtraction, multiplication, and division; the involution of powers,
 and the extraction of roots. It will not be improper, therefore, in this place, to trace back
 the origin of these different methods, and to explain the connection which subsists among them;
