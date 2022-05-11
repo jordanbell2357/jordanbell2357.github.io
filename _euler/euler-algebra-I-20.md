@@ -27,6 +27,135 @@ title: Euler, "Elements of Algebra", Section I, Chapter 20
 >
 > **208.**
 
+**208.** Preserving this comparison $$a + b = c$$, let us reverse the question by asking, how we are to
+find the number $$b$$, when we know the numbers $$a$$ and $$c$$. It is here required therefore to know what
+number must be added to $$a$$, in order that the sum may be the number $$c$$: suppose, for example,
+$$a = 3$$ and $$c = 8$$; so that we must have $$3 + b = 8$$; then $$b$$ will evidently be found by
+subtractlng 3 from 8: and, in general, to find $$b$$, we must subtract $$a$$ from $$c$$, whence arises
+$$b = c — a$$; for by adding $$a$$ to both sides again,
+we have $$b+a=c - a + a$$, that is to say, $$=c$$, as we supposed.
+
+**209.** Subtraction therefore takes place, when we invert
+the question which gives rise to addition. But the number
+which it is required to subtract may happen to be greater
+than that from which it is to be subtracted; as, for example,
+if it were required to subtract 9 from 5: this instance therefore furnishes
+us with the idea of a new kind of numbers,
+which we call negative numbers, because 5 - 9 = -4.
+
+**210.** When several numbers are to be added together,
+which are all equal, their sum is found by multiplication, and
+is called a product. Thus, $$ab$$ means the product arising
+from the multiplication of $$a$$ by $$b$$;, or from the addition of the
+number $$a$$, $$b$$ number of times; and if we represent this product by the letter $$c$$,
+we shall have $$ab = c$$; thus multiplication teaches us how to determine
+the number $$c$$, when the numbers $$a$$ and $$b$$ are known.
+
+**211.** Let us now propose the following question: the
+numbers $$a$$ and $$c$$ being known, to find the number $$b$$. Suppose, for example,
+$$a = 3$$, and $$c = 15$$; so that $$3b = 15$$,
+and let us inquire by what number 3 must be multiplied, in
+order that the product may be 15; for the question proposed is reduced to this.
+This is a case of division; and the number required is found by dividing 15 by 3;
+and, in general, the number $$b$$ is found by dividing $$c$$ by $$a$$; from
+which results the equation $$b=\frac{c}{a}$$.
+
+**212.** Now, as it frequently happens that the number $$c$$
+cannot be really divided by the number $$a$$, while the letter $$b$$
+must however have a determinate value, another new kind
+of numbers present themselves, which are called *fractions*.
+For example, suppose $$a = 4$$, and $$c =3$$, so that $$4b = 3$$;
+then it is evident that $$b$$ cannot be an integer, but a fraction,
+and that we shall have $$b = \frac{3}{4}$$.
+
+**213.** We have seen that multiplication arises from addition; that is to say,
+from the addition of several equal
+quantities: and if we now proceed farther, we shall perceive
+that, from the multiplication of several equal quantities together, powers are derived;
+which powers are represented in
+a general manner by the expression $$a^b$$. This signifies that
+the number $$a$$ must be multiplied as many times by itself,
+minus 1, as is indicated by the number $$b$$. And we know
+from what has been already said, that, in the present instance,
+$$a$$ is called the root, $$b$$ the exponent, and $$a^b$$ the power.
+
+**214.** Farther, if we represent this power also by the letter
+$$c$$, we have $$a^b = c$$, an equation in which three letters $$a$$, $$b$$, $$c$$,
+are found; and we have shown in treating of powers, how
+to find the power itself, that is, the letter $$c$$, when a root $$a$$
+and its exponent $$b$$ are given. Suppose, for example, $$a = 5$$,
+and $$b= 3$$, so that $$c=5^3$$: then it is evident that we must
+take the third power of 5, which is 125, so that in this case
+$$c = 125$$.
+
+**215.** We have now seen how to determine the power $$c$$, by
+means of the root $$a$$ and the exponent $$b$$; but if we wish to
+reverse the question, we shall find that this may be done in
+two ways, and that there are two different cases to be considered:
+for if two of these three numbers $$a$$, $$b$$, $$c$$, were given,
+and it were required to find the third, we should immediately
+perceive that this question would admit of three different
+suppositions, and consequently of three solutions. We have
+considered the case in which $$a$$ and $$b$$ were the given numbers,
+we may therefore suppose farther that $$c$$ and $$a$$, or $$c$$
+and $$b$$, are known, and that it is required to determine the
+third letter. But, before we proceed any farther, let us point
+out a very essential distinction between involution and the
+two operations which lead to it. When, in addition, we reversed the question,
+it could be done only in one way; it
+was a matter of indifference whether we took $$c$$ and $$a$$, or $$c$$
+and $$b$$, for the given numbers, because we might indifferently
+write $$a + b$$, or $$b + a$$; and it was also the same with multiplication;
+we could at pleasure take the letters $$a$$ and $$b$$ for
+each other, the equation $$ab = c$$ being exactly the same as
+$$ba = c$$: but in the calculation of powers, the same thing
+does not take place, and we can by no means write $$b^a$$ instead of $$a^b$$;
+as a single example will be sufficient to illustrate:
+for let $$a = 5$$, and $$b = 3$$; then we shall have
+$$a^b = 5^3 = 125$$; but $$b^a = 3^5 = 243$$: which are two very
+different results.
+
+**216.** It is evident then, that we may propose two questions more:
+one, to find the root $$a$$ by means of the given
+power $$c$$, and the exponent $$b$$; the other, to find the exponent $$b$$, supposing the power $$c$$
+and the root $$a$$ to be known.
+
+**217.** It may be said, indeed, that the former of these
+questions has been resolved in the chapter on the extraction
+of roots; since if $$b= 2$$, for example, and $$a^2 =c$$, we know
+by this means, that $$a$$ is a number whose square is equal to
+$$c$$, and consequently that $$a = \sqrt{c}$$. In the same manner, if
+$$b = 3$$ and $$a^3 = c$$, wc know that the cube of $$a$$ must be equal
+to the given number $$c$$, and consequently that $$a = \sqrt[3]{c}$$. It
+is therefore easy to conclude, generally, from this, how to
+determine the letter $$a$$ by means of the letters $$c$$ and $$b$$; for
+we must necessarily have $$a = \sqrt[b]{c}$$.
+
+**218.** We have already remarked also the consequence
+which follows, when the given number is not a real power;
+a case which very frequently occurs; namely, that then the
+required root, $$a$$, can neither be expressed by integers, nor
+by fractions; yet since this root must necessarily have a determinate value,
+the same consideration led us to a new kind
+of numbers, which, as we observed, are called *surds*, or *irrational numbers*;
+and which we have seen are divisible into
+an infinite number of different sorts, on account of the great
+variety of roots. Lastly, by the same inquiry, we were led
+to the knowledge of another particular kind of numbers,
+which have been called *imaginary numbers*.
+
+**219.** It remains now to consider the second question,
+which was to determine the exponent; the power $$c$$, and the
+root $$a$$, both being known. On this question, which has not
+yet occurred, is founded the important theory of Logarithms,
+the use of which is so extensive through the whole compass
+of mathematics, that scarcely any long calculation can be
+carried on vathout their assistance; and we shall find, in
+the following chapter, for which we reserve this theory, that
+it will lead us to another kind of numbers entirely new, as
+they cannot be ranked among the irrational numbers before
+mentioned.
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
