@@ -131,6 +131,51 @@ called a *power*. Thus, a square which arises from the multiplication of a numbe
 > our arithmetic is founded. A few of them ranged in order,
 > and beginning with the first power, are as follow:
 
+<table>
+    <tr>
+        <td>1st</td>
+        <td>2nd</td>
+        <td>3rd</td>
+        <td>4th</td>
+        <td>5th</td>
+        <td>6th</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>10</td>
+        <td>100</td>
+        <td>1000</td>
+        <td>10000</td>
+        <td>100000</td>
+        <td>1000000</td>
+        <td>etc.</td>
+    </tr>
+</table>
+
+> **71.** In order to illustrate this subject, and to consider it in a more general manner,
+> we may observe, that the powers of any number, $$a$$, succeed each other in the following order
+
+<table>
+    <tr>
+        <td>1st</td>
+        <td>2nd</td>
+        <td>3rd</td>
+        <td>4th</td>
+        <td>5th</td>
+        <td>6th</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>\(a\)</td>
+        <td>aa</td>
+        <td>aaa</td>
+        <td>aaaa</td>
+        <td>aaaaa</td>
+        <td>aaaaaa</td>
+        <td>etc.</td>
+    </tr>
+</table>
+
 
 #### References
 
