@@ -302,7 +302,16 @@ $$a, a^2, a^3, a^4, a^5, a^6, a^7, a^8, a^9, a^{10}, \textrm{etc.}$$
 >
 > $$\frac{a^1}{b^1}$$, $$\frac{a^2}{b^2}$$, $$\frac{a^3}{b^3}$$, $$\frac{a^4}{b^4}$$, $$\frac{a^5}{b^5}$$, $$\frac{a^6}{b^6}$$, $$\frac{a^7}{b^7}$$, etc.
 >
+> **179.** Lastly, we have to consider the powers of negative numbers.
+> Suppose the given number to be $$-a$$; then its powers will form the
+> following series:
 >
+> $$-a$$, $$+a^2$$, $$-a^3$$, $$+a^4$$, $$-a^5$$, $$+a^6$$, etc.
+>
+> Where we may observe, that those powers only become negative, whose exponents are odd numbers,
+> and that, on the contrary, all the powers, which have an even number for the exponent,
+> are positive. So that the third, fifth, seventh, ninth, etc. powers have all the sign -;
+> and the second, fourth, sixth, eighth, etc. powers are affected by the sign +.
 
 
 #### References
