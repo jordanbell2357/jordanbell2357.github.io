@@ -152,7 +152,7 @@ called a *power*. Thus, a square which arises from the multiplication of a numbe
     </tr>
 </table>
 
-> **71.** In order to illustrate this subject, and to consider it in a more general manner,
+> **171.** In order to illustrate this subject, and to consider it in a more general manner,
 > we may observe, that the powers of any number, $$a$$, succeed each other in the following order
 
 <table>
@@ -167,14 +167,58 @@ called a *power*. Thus, a square which arises from the multiplication of a numbe
     </tr>
     <tr>
         <td>\(a\)</td>
-        <td>aa</td>
-        <td>aaa</td>
-        <td>aaaa</td>
-        <td>aaaaa</td>
-        <td>aaaaaa</td>
+        <td>\(aa\)</td>
+        <td>\(aaa\)</td>
+        <td>\(aaaa\)</td>
+        <td>\(aaaaa\)</td>
+        <td>\(aaaaaa\)</td>
         <td>etc.</td>
     </tr>
 </table>
+
+> But we soon feel the inconvenience attending this manner of writing the powers, which consists in
+> the necessity of repeating the same letter very often, to express high powers; and the reader
+> also would have no less trouble, if he were obliged to count all the letters, to know what power
+> is intended to be represented. The hundredth power, for example, could not be conveniently written
+> in this manner; and it would be equally difficult to read it.
+>
+> **172.** To avoid this inconvenience, a much more commodious method of expressing such powers has
+> been devised, which, from its extensive use, deserves to be carefully explained. Thus, for example,
+> to express the hundredth power, we simply write the number 100 above the quantity, whose hundredth
+> power we would express, and a little towards the right-hand;
+> thus $$a^{100}$$ represents $$a$$ raised to
+> the 100th power, or the hundredth power of $$a$$. It must be observed, also, that the
+> name *exponent* is given to the number written above that whose power, or degree, it represents,
+> which, in the present instance, is 100.
+>
+> **173.** In the same manner, $$a^2$$ signifies $$a$$ raised to the 2nd power,
+> or the second power of $$a$$, which we represent sometimes also by $$aa$$,
+> because both these expressions are written and understood with equal facility;
+> but to express the cube, or the third power $$aaa$$, we write $$a^3$$, according to the
+> rule, that we may occupy less room; so $$a^4$$ signifies the fourth, $$a^5$$ the fifth,
+> and $$a^6$$ the sixth power of $$a$$.
+>
+> **174.** In a word, the different powers of a will be represented by
+>
+$$a, a^2, a^3, a^4, a^5, a^6, a^7, a^8, a^9, a^{10}, \textrm{etc.}$$
+>
+> Hence we see that in this manner we might very properly have written $$a^1$$ instead of $$a$$ for the
+> first term, to show the order of the series more clearly. In fact, $$a^1$$ is no more than $$a$$,
+> as this unit shows that the letter $$a$$ is to be written only once. Such a series of powers is
+> called also a geometrical progression, because each term is by one-time, or term,
+> greater than the preceding.
+>
+> **175.** As in this series of powers each term is found by multiplying the preceding term by
+> $$a$$, which increases the exponent by 1; so when any term is given, we may also find the
+> preceding term, if we divide by $$a$$, because this diminishes the exponent by 1. This
+> shows that the term which precedes the first term $$a^1$$ must necessarily be $$\frac{a}{a}$$, or 1;
+> and, if we proceed according to the exponents, we immediately conclude, that the term which precedes
+> the first must be $$a^0$$; and hence we deduce this remarkable property,
+> that $$a^0$$ is always equal to 1,
+> however great or small the value of the number $$a$$ may be, and even when a is nothing;
+> that is to say, $$a^0$$ is equal to 1.
+
+176. We may also continue our series of powers in a retrograde order, and that in two different ways; first, by dividing always by «; and secondly, by diminishing the exponent by unity: and it is evident that, whether we follow the one or the other, the terms are still perfectly equal. This decreasing series is represented in both forms in the following Table, which must be read backwards, or from right to left.
 
 
 #### References
