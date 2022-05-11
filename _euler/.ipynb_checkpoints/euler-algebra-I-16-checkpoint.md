@@ -217,8 +217,52 @@ $$a, a^2, a^3, a^4, a^5, a^6, a^7, a^8, a^9, a^{10}, \textrm{etc.}$$
 > that $$a^0$$ is always equal to 1,
 > however great or small the value of the number $$a$$ may be, and even when a is nothing;
 > that is to say, $$a^0$$ is equal to 1.
+>
+> **176.** We may also continue our series of powers in a retrograde order,
+> and that in two different ways; first, by dividing always by a; and secondly,
+> by diminishing the exponent by unity: and it is evident that, whether we follow
+> the one or the other, the terms are still perfectly equal.
+> This decreasing series is represented in both forms in the following Table,
+> which must be read backwards, or from right to left.
 
-176. We may also continue our series of powers in a retrograde order, and that in two different ways; first, by dividing always by «; and secondly, by diminishing the exponent by unity: and it is evident that, whether we follow the one or the other, the terms are still perfectly equal. This decreasing series is represented in both forms in the following Table, which must be read backwards, or from right to left.
+<table>
+    <tr>
+        <td></td>
+        <td>\(\frac{1}{aaaaa}\)</td>
+        <td>\(\frac{1}{aaaa}\)</td>
+        <td>\(\frac{1}{aaa}\)</td>
+        <td>\(\frac{1}{aa}\)</td>
+        <td>\(\frac{1}{a}\)</td>
+        <td>\(1\)</td>
+        <td>\(a\)</td>
+    </tr>
+    <tr>
+        <td>1st</td>
+        <td>\(\frac{1}{a^6}\)</td>
+        <td>\(\frac{1}{a^5}\)</td>
+        <td>\(\frac{1}{a^4}\)</td>
+        <td>\(\frac{1}{a^3}\)</td>
+        <td>\(\frac{1}{a^2}\)</td>
+        <td>\(\frac{1}{a^1}\)</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>2nd</td>
+        <td>\(a^{-6}\)</td>
+        <td>\(a^{-5}\)</td>
+        <td>\(a^{-4}\)</td>
+        <td>\(a^{-3}\)</td>
+        <td>\(a^{-2}\)</td>
+        <td>\(a^{-1}\)</td>
+        <td>\(a^0\)</td>
+        <td>\(a^1\)</td>
+    </tr>
+</table>
+
+> **177.** We are now come to the knowledge of powers whose exponents are negative,
+> and are enabled to assign the precise value of those powers. Thus, from what has been said,
+> it appears that
 
 
 #### References
