@@ -18,7 +18,14 @@ title: Euler, "Elements of Algebra", Section I, Chapter 20
 > employed instead of the expression that has been so often repeated, is equal to;
 > this sign is =, which is read *is equal to*: thus, when I write $$a = b$$,
 > this means that $$a$$ is equal to $$b$$: so, for example, 3 · 5 = 15.
-
+>
+> **207.** The first mode of calculation that presents itself to the mind, is undoubtedly addition, by
+> which we add two numbers together and find their sum: let therefore $$a$$ and $$b$$
+> be the two given numbers, and let their sum be expressed by the letter $$c$$, then we shall
+> have $$a + b = c$$; so that when we know
+> the two numbers $$a$$ and $$b$$, addition teaches us to find the number $$c$$.
+>
+> **208.**
 
 #### References
 
