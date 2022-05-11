@@ -94,7 +94,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 17
 > Lastly, the cube of $$a^3$$ being $$a^9$$, we call the ninth power
 > the cubo-cube: after this, no other denominations of this
 > kind have been introduced for powers; and, indeed, the two
-> last are very little used
+> last are very little used.
 
 #### References
 
