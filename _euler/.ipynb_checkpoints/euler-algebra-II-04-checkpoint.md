@@ -32,6 +32,21 @@ $$
 \end{gather}
 $$
 
+If it should happen that a term of the dividend is
+not divisible by the divisor, the quotient is represented
+by a fraction, as in the division of $$a+b$$ by $$a$$, which
+gives $$1+\frac{b}{a}$$.
+Likewise,
+
+$$(aa-ab+bb):(aa) = 1-\frac{b}{a}+\frac{bb}{aa}.$$
+
+In the same manner, if we divide $$2a+b$$ by 2, we obtain
+$$a+\frac{b}{2}$$: and here it may be remarked, that we may
+write $$\frac{1}{2}b$$, instead of $$\frac{b}{2}$$, because $$\frac{1}{2}$$
+times $$b$$ is equal to $$\frac{b}{2}$$; and, in the same manner,
+$$\frac{b}{3}$$ is the same as $$\frac{1}{3}b$$, and $$\frac{2b}{3}$$
+the same as $$\frac{2}{3}b$$, etc.
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
