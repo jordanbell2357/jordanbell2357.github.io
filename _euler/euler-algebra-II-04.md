@@ -85,7 +85,7 @@ ought to produce the dividend $$aa+3ab+2bb$$. See the operation.[^1]
 
 [^1]: [Tables Generator](https://www.tablesgenerator.com/) and [TeXeR](https://artofproblemsolving.com/texer/ntjqbsro)
 
-![long division](/assets/euler/ntjqbsro.png)
+![polynomial long division](/assets/euler/ntjqbsro.png)
 
 **288.** This operation will be considerably facilitated by
 choosing one of the terms of the divisor, which contains the
@@ -95,6 +95,8 @@ first term of the divisor, continuing it according to the
 powers of that letter. This term in the preceding example
 was $$a$$. The following examples will render the process
 more perspicuous.
+
+![polynomial long division](/assets/euler/rcgwurze.png)
 
 
 
