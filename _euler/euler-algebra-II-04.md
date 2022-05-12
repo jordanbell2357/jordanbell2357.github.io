@@ -74,16 +74,17 @@ quotient; if, therefore, what we have found, when multiplied by the divisor, doe
 have only to divide the remainder again by the divisor, in
 order to obtain a second part of the quotient; and to continue the same method, until we have found the whole.
 
-Let us, as an example, divide $$aa+3ab+2bb$$ by $$a+b$$.
+Let us, as an example, divide $$a^2+3ab+2b^2$$ by $$a+b$$.
 It is evident, in the first place, that the quotient will include the term a, since otherwise we
-should not obtain aa. Now, from the multiplication of the divisor a+b by a, arises aa+ab;
-which quantity being subtracted from the dividend, leaves the remainder, 2ab+2bb;
-and this remainder must also be divided by a+b, where it is evident that the quotient of this
-division must contain the term 2b. Now, 2b, multiplied by a + b, produces 2ab+2bb;
-consequently, a + 2b is the quotient required; which multiplied by the divisor a + b,
-ought to produce the dividend $$aa+3ab+2bb$$. See the operation.
+should not obtain aa. Now, from the multiplication of the divisor $$a+b$$ by $$a$$, arises
+$$aa+ab$$;
+which quantity being subtracted from the dividend, leaves the remainder, $$2ab+2b^2$$;
+and this remainder must also be divided by $$a+b$$, where it is evident that the quotient of this
+division must contain the term $$2b$$. Now, $$2b$$, multiplied by $$a + b$$, produces $$2ab+2b^2$$;
+consequently, $$a + 2b$$ is the quotient required; which multiplied by the divisor a + b,
+ought to produce the dividend $$a^2+3ab+2b^2$$. See the operation.
 
-
+[![polynomial long division](/assets/euler/jptasmxh.png)](https://artofproblemsolving.com/texer/jptasmxh)
 
 **288.** This operation will be considerably facilitated by
 choosing one of the terms of the divisor, which contains the
@@ -103,6 +104,12 @@ more perspicuous.
 ![polynomial long division](/assets/euler/rcgwurze.png)
 
 ![polynomial long division](/assets/euler/edpbsfug.png)
+
+![polynomial long division](/assets/euler/nttoyunx.png)
+
+![polynomial long division](/assets/euler/cmrlbojt.png)
+
+
 
 
 
