@@ -81,21 +81,11 @@ which quantity being subtracted from the dividend, leaves the remainder, 2ab+2bb
 and this remainder must also be divided by a+b, where it is evident that the quotient of this
 division must contain the term 2b. Now, 2b, multiplied by a + b, produces 2ab+2bb;
 consequently, a + 2b is the quotient required; which multiplied by the divisor a + b,
-ought to produce the dividend $$aa+3ab+2bb$$. See the operation.
+ought to produce the dividend $$aa+3ab+2bb$$. See the operation.[^1]
 
-$$
-\begin{array}{lllllll}
-                           &       & a^2    & -2ab   & +b^2 &  &  \\ \cline{2-5}
-\multicolumn{1}{l|}{a-b} & a^3 & -3a^2b & +3ab^2 & -b^3 &  &  \\
-                           & a^3 & -a^2b  &          &        &  &  \\ \cline{2-5}
-                           &       & -2a^2b & +3ab^2 &        &  &  \\
-                           &       & -2a^2b & +2ab^2 &        &  &  \\ \cline{3-5}
-                           &       &          & ab^2   & -b^3 &  &  \\
-                           &       &          & ab^2   & -b^3 &  &  \\ \cline{4-5}
-                           &       &          &          & 0      &  & 
-\end{array}
-$$
+[^1]: [Tables Generator](https://www.tablesgenerator.com/) and [TeXeR](https://artofproblemsolving.com/texer/ntjqbsro)
 
+![long division](/assets/euler/lonngdiv1.png)
 
 **288.** This operation will be considerably facilitated by
 choosing one of the terms of the divisor, which contains the
