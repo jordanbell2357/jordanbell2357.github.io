@@ -81,11 +81,9 @@ which quantity being subtracted from the dividend, leaves the remainder, 2ab+2bb
 and this remainder must also be divided by a+b, where it is evident that the quotient of this
 division must contain the term 2b. Now, 2b, multiplied by a + b, produces 2ab+2bb;
 consequently, a + 2b is the quotient required; which multiplied by the divisor a + b,
-ought to produce the dividend $$aa+3ab+2bb$$. See the operation.[^1]
+ought to produce the dividend $$aa+3ab+2bb$$. See the operation.
 
-[^1]: [Tables Generator](https://www.tablesgenerator.com/) and [TeXeR](https://artofproblemsolving.com/texer/ntjqbsro)
 
-![polynomial long division](/assets/euler/ntjqbsro.png)
 
 **288.** This operation will be considerably facilitated by
 choosing one of the terms of the divisor, which contains the
@@ -96,7 +94,15 @@ powers of that letter. This term in the preceding example
 was $$a$$. The following examples will render the process
 more perspicuous.
 
+[Tables Generator](https://www.tablesgenerator.com/)
+
+[TeXeR](https://artofproblemsolving.com/texer/ntjqbsro)
+
+![polynomial long division](/assets/euler/ntjqbsro.png)
+
 ![polynomial long division](/assets/euler/rcgwurze.png)
+
+![polynomial long division](/assets/euler/edpbsfug.png)
 
 
 
