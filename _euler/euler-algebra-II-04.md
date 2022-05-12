@@ -85,7 +85,7 @@ ought to produce the dividend $$aa+3ab+2bb$$. See the operation.[^1]
 
 [^1]: [Tables Generator](https://www.tablesgenerator.com/) and [TeXeR](https://artofproblemsolving.com/texer/ntjqbsro)
 
-![long division](/assets/euler/lonngdiv1.png)
+![long division](/assets/euler/ntjqbsro.png)
 
 **288.** This operation will be considerably facilitated by
 choosing one of the terms of the divisor, which contains the
