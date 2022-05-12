@@ -83,8 +83,9 @@ division must contain the term 2b. Now, 2b, multiplied by a + b, produces 2ab+2b
 consequently, a + 2b is the quotient required; which multiplied by the divisor a + b,
 ought to produce the dividend $$aa+3ab+2bb$$. See the operation.
 
+$$
 \begin{array}{r}x+1\\x+1\enclose{longdiv}{x^2+2x+1}\\-\underline{\left(x^2+x\right)}\hspace{1.5em}\\x+1\hspace{.33em}\\-\underline{(x+1)}\\0\hspace{.33em}\\\end{array}
-
+$$
 
 **288.** This operation will be considerably facilitated by
 choosing one of the terms of the divisor, which contains the
