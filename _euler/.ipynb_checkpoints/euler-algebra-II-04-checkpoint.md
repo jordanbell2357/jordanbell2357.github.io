@@ -47,6 +47,60 @@ times $$b$$ is equal to $$\frac{b}{2}$$; and, in the same manner,
 $$\frac{b}{3}$$ is the same as $$\frac{1}{3}b$$, and $$\frac{2b}{3}$$
 the same as $$\frac{2}{3}b$$, etc.
 
+**285.** But when the divisor is itself a compound quantity, division becomes more difficult.
+This frequently occurs where we least expect it; and when it cannot be performed, we must
+content ourselves with representing the quotient by a fraction, in the manner that we have
+already described. At present, we will begin by considering some cases in which actual division takes place.
+
+**286.** Suppose, for example, it were required to divide $$ac-bc$$ by $$a-b$$,
+the quotient must here be such as, when multiplied by the divisor $$a - b$$,
+will produce the dividend $$ac - bc$$. Now, it is evident, that this quotient must include $$c$$,
+since without it we could not obtain $$ac$$; in order therefore to
+try whether $$c$$ is the whole quotient, we have only to multiply it by the divisor, and see if
+that multiplication produces the whole dividend, or only a part of it. In the present case,
+if we multiply $$a - b$$ by $$c$$, we have $$ac - bc$$, which is exactly the dividend;
+so that $$c$$ is the whole quotient. It is no less evident, that
+
+$$
+\begin{gather}
+(aa+ab):(a+b)=a\\
+(3aa-2ab):(3a-2b)=a\\
+(6aa-9ab):(2a-3b)=3a, \textrm{etc.}
+\end{gather}
+$$
+
+**287.** We cannot fail, in this way, to find a part of the
+quotient; if, therefore, what we have found, when multiplied by the divisor, does not exhaust the dividend, we
+have only to divide the remainder again by the divisor, in
+order to obtain a second part of the quotient; and to continue the same method, until we have found the whole.
+
+Let us, as an example, divide $$aa+3ab+2bb$$ by $$a+b$$.
+It is evident, in the first place, that the quotient will include the term a, since otherwise we
+should not obtain aa. Now, from the multiplication of the divisor a+b by a, arises aa+ab;
+which quantity being subtracted from the dividend, leaves the remainder, 2ab+2bb;
+and this remainder must also be divided by a+b, where it is evident that the quotient of this
+division must contain the term 2b. Now, 2b, multiplied by a + b, produces 2ab+2bb;
+consequently, a + 2b is the quotient required; which multiplied by the divisor a + b,
+ought to produce the dividend $$aa+3ab+2bb$$. See the operation.
+
+
+
+
+
+
+
+
+**288.** This operation will be considerably facilitated by
+choosing one of the terms of the divisor, which contains the
+highest power, to be written first, and then, in arranging the
+terms of the dividend, begin with the highest powers of that
+first term of the divisor, continuing it according to the
+powers of that letter. This term in the preceding example
+was $$a$$. The following examples will render the process
+more perspicuous.
+
+
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
