@@ -84,16 +84,16 @@ consequently, a + 2b is the quotient required; which multiplied by the divisor a
 ought to produce the dividend $$aa+3ab+2bb$$. See the operation.
 
 $$
-\begin{tabular}{lllllll}
-                           &       & $a^2$    & $-2ab$   & $+b^2$ &  &  \\ \cline{2-5}
-\multicolumn{1}{l|}{$a-b$} & $a^3$ & $-3a^2b$ & $+3ab^2$ & $-b^3$ &  &  \\
-                           & $a^3$ & $-a^2b$  &          &        &  &  \\ \cline{2-5}
-                           &       & $-2a^2b$ & $+3ab^2$ &        &  &  \\
-                           &       & $-2a^2b$ & $+2ab^2$ &        &  &  \\ \cline{3-5}
-                           &       &          & $ab^2$   & $-b^3$ &  &  \\
-                           &       &          & $ab^2$   & $-b^3$ &  &  \\ \cline{4-5}
+\begin{array}{lllllll}
+                           &       & a^2    & -2ab   & +b^2 &  &  \\ \cline{2-5}
+\multicolumn{1}{l|}{a-b} & a^3 & -3a^2b & +3ab^2 & -b^3 &  &  \\
+                           & a^3 & -a^2b  &          &        &  &  \\ \cline{2-5}
+                           &       & -2a^2b & +3ab^2 &        &  &  \\
+                           &       & -2a^2b & +2ab^2 &        &  &  \\ \cline{3-5}
+                           &       &          & ab^2   & -b^3 &  &  \\
+                           &       &          & ab^2   & -b^3 &  &  \\ \cline{4-5}
                            &       &          &          & 0      &  & 
-\end{tabular}
+\end{array}
 $$
 
 
