@@ -7,19 +7,30 @@ title: Euler, "Elements of Algebra", Section II, Chapter 4
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 4. "Of the Division of Compound Quantities."
 
-282. When we wish simply to represent division, we
-make use of the usual mark of fractions ; which is, to write
+**282.** When we wish simply to represent division, we
+make use of the usual mark of fractions; which is, to write
 the denominator under the numerator, separating them by a
-line ; or to enclose each quantity between parentheses, placing
-two points between the divisor and dividend, and a line between them. Thus, if it were required, for example, to
-divide a + b by c + d, we should represent the quotient
-thus; \frac{a+b}{c+d}, according to the former method ; and thus,
-c-\-a
-(a + b) ^(c + d)
-according to the latter, where each expression is read a + b
-divided by c -\- d.
+line; or to enclose each quantity between parentheses, placing
+two points between the divisor and dividend, and a line between them.
+Thus, if it were required, for example, to
+divide $$a + b$$ by $$c + d$$, we should represent the quotient
+thus; $$\frac{a+b}{c+d}$$, according to the former method; and thus,
+$$(a + b):(c + d)$$
+according to the latter, where each expression is read $$a + b$$
+divided by $$c + d$$.
 
+**283.** When it is required to divide a compound quantity by a simple one,
+we divide each term separately, as in the following examples:
 
+$$
+\begin{gather}
+(6a-8b+4c):(2) = 3a-4b+2c\\
+(a^2-2ab):(a) = a-2b\\
+(a^3-2aab+3abb):(a) = aa-2ab+3bb\\
+(4aa-6aac+8abc):(2a) = 2ab-3ac+4bc\\
+(9aabc-12abbc+15abcc):(3abc) = 3a-4b+5c, \textrm{etc.}
+\end{gather}
+$$
 
 #### References
 
