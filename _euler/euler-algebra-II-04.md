@@ -84,8 +84,18 @@ consequently, a + 2b is the quotient required; which multiplied by the divisor a
 ought to produce the dividend $$aa+3ab+2bb$$. See the operation.
 
 $$
-\begin{array}{r}x+1\\x+1\enclose{longdiv}{x^2+2x+1}\\-\underline{\left(x^2+x\right)}\hspace{1.5em}\\x+1\hspace{.33em}\\-\underline{(x+1)}\\0\hspace{.33em}\\\end{array}
+\begin{tabular}{lllllll}
+                           &       & $a^2$    & $-2ab$   & $+b^2$ &  &  \\ \cline{2-5}
+\multicolumn{1}{l|}{$a-b$} & $a^3$ & $-3a^2b$ & $+3ab^2$ & $-b^3$ &  &  \\
+                           & $a^3$ & $-a^2b$  &          &        &  &  \\ \cline{2-5}
+                           &       & $-2a^2b$ & $+3ab^2$ &        &  &  \\
+                           &       & $-2a^2b$ & $+2ab^2$ &        &  &  \\ \cline{3-5}
+                           &       &          & $ab^2$   & $-b^3$ &  &  \\
+                           &       &          & $ab^2$   & $-b^3$ &  &  \\ \cline{4-5}
+                           &       &          &          & 0      &  & 
+\end{tabular}
 $$
+
 
 **288.** This operation will be considerably facilitated by
 choosing one of the terms of the divisor, which contains the
@@ -101,10 +111,10 @@ more perspicuous.
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
-    - [Section II. Chapter 4. "Of the Division of Compound Quantities."](/assets/euler/II-4.pdf)
+    - [Section II. Chapter 4. "Of the Division of Compound Quantities."](/assets/euler/en/II-4.pdf)
     - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Erster Theil. Zweyter Abschnitt. Capitel 4. Von der Division mit zusammengesetzten Größen](/assets/euler/I-II-4.pdf)
+    - [Erster Theil. Zweyter Abschnitt. Capitel 4. Von der Division mit zusammengesetzten Größen](/assets/euler/de/I-II-4.pdf)
     - [Springer](https://link.springer.com/book/9783764314002)
 3. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
     - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)
