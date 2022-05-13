@@ -129,7 +129,7 @@ more perspicuous.
 
 ---
 
-![polynomial long division](/assets/euler/zldggvdq.png)
+<img src="/assets/euler/zldggvdq.png" alt="Polynomial long division" width="580" height="366" style="border:5px solid black">
 
 
 #### References
