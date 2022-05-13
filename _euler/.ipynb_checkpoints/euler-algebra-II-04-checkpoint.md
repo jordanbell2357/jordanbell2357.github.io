@@ -82,7 +82,9 @@ which quantity being subtracted from the dividend, leaves the remainder, $$2ab+2
 and this remainder must also be divided by $$a+b$$, where it is evident that the quotient of this
 division must contain the term $$2b$$. Now, $$2b$$, multiplied by $$a + b$$, produces $$2ab+2b^2$$;
 consequently, $$a + 2b$$ is the quotient required; which multiplied by the divisor a + b,
-ought to produce the dividend $$a^2+3ab+2b^2$$. See the operation.
+ought to produce the dividend $$a^2+3ab+2b^2$$. See the operation.[^1]
+
+[^1]: Made using [Tables Generator](https://www.tablesgenerator.com/) and [TeXeR](https://artofproblemsolving.com/texer/)
 
 [![polynomial long division](/assets/euler/jptasmxh.png)](https://artofproblemsolving.com/texer/jptasmxh)
 
@@ -95,22 +97,39 @@ powers of that letter. This term in the preceding example
 was $$a$$. The following examples will render the process
 more perspicuous.
 
-[Tables Generator](https://www.tablesgenerator.com/)
-
-[TeXeR](https://artofproblemsolving.com/texer/ntjqbsro)
-
 ![polynomial long division](/assets/euler/ntjqbsro.png)
+
+---
 
 ![polynomial long division](/assets/euler/rcgwurze.png)
 
+---
+
 ![polynomial long division](/assets/euler/edpbsfug.png)
+
+---
 
 ![polynomial long division](/assets/euler/nttoyunx.png)
 
+---
+
 ![polynomial long division](/assets/euler/cmrlbojt.png)
 
+---
 
+![polynomial long division](/assets/euler/gpphlavj.png)
 
+---
+
+![polynomial long division](/assets/euler/iytxpnib.png)
+
+---
+
+![polynomial long division](/assets/euler/wdjlpmdc.png)
+
+---
+
+![polynomial long division](/assets/euler/zldggvdq.png)
 
 
 #### References
