@@ -117,7 +117,9 @@ two squares can never be a prime number.
 
 **277.** Let us now calculate some other examples:
 
-I) $$
+I)
+
+$$
 \begin{array}{rrr}
 2a&-3&\\
 a&+2&\\
@@ -131,7 +133,9 @@ $$
 
 ---
 
-II) $$
+II)
+
+$$
 \begin{array}{rrrr}
 4a^2&-6a&+9&\\
 2a&+3&&\\
@@ -145,7 +149,9 @@ $$
 
 ---
 
-III) $$
+III)
+
+$$
 \begin{array}{rrrr}
 3a^2&-2ab&-b^2&\\
 2a&-4b&&\\
@@ -159,7 +165,9 @@ $$
 
 ---
 
-IV) $$
+IV)
+
+$$
 \begin{array}{rrrrr}
 a^2&+2ab&+2b^2&&\\
 a^2&-2ab&+2b^2&&\\
@@ -174,7 +182,9 @@ $$
 
 ---
 
-V) $$
+V)
+
+$$
 \begin{array}{rrrrr}
 2a^2&-3ab&-4b^2&&\\
 3a^2&-2ab&+b^2&&\\
@@ -189,7 +199,9 @@ $$
 
 ---
 
-VI) $$
+VI)
+
+$$
 \begin{array}{rrrrrrrrrr}
 a^2&+b^2&+c^2&-ab&-ac&-bc&&&&\\
 a&+b&+c&&&&&&&\\
