@@ -87,7 +87,7 @@ ought to produce the dividend $$a^2+3ab+2b^2$$. See the operation.[^1]
 [^1]: Made using [Tables Generator](https://www.tablesgenerator.com/) and [TeXeR](https://artofproblemsolving.com/texer/)
 
 <a href="https://artofproblemsolving.com/texer/jptasmxh">
-<img src="/assets/euler/jptasmxh.png" alt="Polynomial long division" width="272" height="172" style="border:2px solid black;padding:10px;">
+<img src="/assets/euler/jptasmxh.png" alt="Polynomial long division" width="272" height="172" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 **288.** This operation will be considerably facilitated by
@@ -100,19 +100,19 @@ was $$a$$. The following examples will render the process
 more perspicuous.
 
 <a href="https://artofproblemsolving.com/texer/ntjqbsro">
-<img src="/assets/euler/ntjqbsro.png" alt="Polynomial long division" width="360" height="235">
+<img src="/assets/euler/ntjqbsro.png" alt="Polynomial long division" width="360" height="235" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/rcgwurze">
-<img src="/assets/euler/rcgwurze.png" alt="Polynomial long division" width="246" height="171">
+<img src="/assets/euler/rcgwurze.png" alt="Polynomial long division" width="246" height="171" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/edpbsfug">
-<img src="/assets/euler/edpbsfug.png" alt="Polynomial long division" width="335" height="171">
+<img src="/assets/euler/edpbsfug.png" alt="Polynomial long division" width="335" height="171" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 ---
