@@ -75,6 +75,8 @@ b^2&-ab&+a^2\\
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{rrr}
 3a&-4b&+5c\\
@@ -84,6 +86,8 @@ $$
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{rrrr}
 a^3&+3a^2b&+3ab^2&+b^3\\
@@ -92,6 +96,8 @@ a^3&-3a^2b&+3ab^2&-b^3\\
 &6a^2b&&+2b^3
 \end{array}
 $$
+
+---
 
 $$
 \begin{array}{rr}
