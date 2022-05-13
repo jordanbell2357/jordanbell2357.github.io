@@ -121,7 +121,9 @@ more perspicuous.
 
 ---
 
-![polynomial long division](/assets/euler/iytxpnib.png)
+<img src="/assets/euler/iytxpnib.png" alt="Polynomial long division" width="580" height="237" style="border:2px solid black;padding:2px;display: block; margin-left: auto; margin-right: auto; width: 60%;">
+
+display: block; margin-left: auto; margin-right: auto; width: 60%;
 
 <img src="/assets/euler/wdjlpmdc.png" alt="Polynomial long division" width="580" height="237" style="border:2px solid black;padding:2px;">
 
