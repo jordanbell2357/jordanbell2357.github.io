@@ -65,9 +65,9 @@ $$2a^3+6\sqrt{b}-4\log c+5 \sqrt[5]{a}-7c,$$
 either in this or in any other order of the terms; for if the
 signs are not changed, the sum will always be the same.
 
-**261.** But it frequently happens that tlie sums represented in this manner may be
+**261.** But it frequently happens that the sums represented in this manner may be
 considerably abridged, as is the case when two or more terms destroy each other;
-for example, if we find in the same sum the terms +a-a, or 3a-4a+a: or when
+for example, if we find in the same sum the terms $$+a-a$$, or $$3a-4a+a$$: or when
 two or more terms may be reduced to one, etc. Thus, in the following examples
 
 $$
@@ -92,6 +92,26 @@ if we add together the sum of two numbers $$(a + b)$$ and their difference
 $$(a — b)$$, we obtain the double of the greater of those two numbers.
 
 This will be better understood perhaps from the following examples:
+
+$$
+\begin{array}{rrr}
+3a&-2b&-c\\
+5b&-6c&+a\\
+\hline
+\\[\dimexpr-\normalbaselineskip+2pt]
+4a&+3b&-7c
+\end{array}
+$$
+
+$$
+\begin{array}{rrrr}
+a^3&-2a^2b&+2ab^2&\\
+&-a^2b&+2ab^2&-b^3\\
+\hline
+\\[\dimexpr-\normalbaselineskip+2pt]
+a^3&-3a^2b&+4ab^2&-b^3.
+\end{array}
+$$
 
 
 #### References
