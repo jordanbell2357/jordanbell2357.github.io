@@ -98,7 +98,6 @@ $$
 3a&-2b&-c\\
 5b&-6c&+a\\
 \hline
-\\[\dimexpr-\normalbaselineskip+2pt]
 4a&+3b&-7c
 \end{array}
 $$
@@ -108,7 +107,6 @@ $$
 a^3&-2a^2b&+2ab^2&\\
 &-a^2b&+2ab^2&-b^3\\
 \hline
-\\[\dimexpr-\normalbaselineskip+2pt]
 a^3&-3a^2b&+4ab^2&-b^3.
 \end{array}
 $$
