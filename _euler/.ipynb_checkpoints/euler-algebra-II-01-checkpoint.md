@@ -7,6 +7,65 @@ title: Euler, "Elements of Algebra", Section II, Chapter 1
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 1. "Of the Addition of Compound Quantities."
 
+**256.** When two or more expressions, consisting of several
+terms, are to be added together, the operation is frequently
+represented merely by signs, placing each expression between two parentheses
+\[German: "Klammern"\], and connecting it with the rest by
+means of the sign +. Thus, for example, if it be required,
+to add the expressions $$a+b+c$$ and $$d+e+f$$, we represent the sum by
+
+$$(a+b+c)+(d+e+f).$$
+
+**257.** It is evident that this is not to perform addition,
+but only to represent it. We see, however, at the same
+time, that in order to perform it actually, we have onlv to
+leave out the parentheses; for as the number $$d+e+f$$ is
+to be added to $$a+b+c$$, we know that this is done by
+joining to it first $$+d$$, then $$+e$$, and then $$+f$$; which therefore
+gives the sum
+
+$$a+b+c+d+e+f;$$
+
+and the same method
+is to be observed, if any of the terms are affected by the
+sign -; as they must be connected in the same way, by means of their proper sign.
+
+**258.** To make this more evident, we shall consider an
+example in pure numbers, proposing to add the expression
+15 - 6 to 12 - 8. Here, if we begin by adding 15, we
+shall have 12 - 8 + 15; but this is adding too much, since
+we had only to add 15 - 6, and it is evident that 6 is the
+number which we have added too much; let us therefore
+take this 6 away by writing it with the negative sign, and
+we shall have the true sum,
+
+12 - 8 + 15 - 6;
+
+which shows that the sums are found by writing all the
+terms, each with its proper sign.
+
+**259.** If it were required therefore to add the expression
+$$d-e+f$$ to $$a-b+c$$, we should express the sum thus,
+
+$$a-b+c+d-e-f;$$
+
+remarking, however, that it is of no consequence in what
+order we write these terms; for their places may be changed
+at pleasure, provided their signs be preserved; so that this
+sum might have been written thus,
+
+$$c-e+a-f+d-b.$$
+
+**260.** It is evident, therefore, that addition is attended with no difficulty,
+whatever be the form of the terms to be added: thus, if it were necessary to add
+together the expressions
+$$2a^3+6\sqrt{b}-4\log c$$ and $$5 \sqrt[5]{a}-7c$$, we should write them
+
+$$2a^3+6\sqrt{b}-4\log c+5 \sqrt[5]{a}-7c,$$
+
+either in this or in any other order of the terms; for if the
+signs are not changed, the sum will always be the same.
+
 
 
 #### References
