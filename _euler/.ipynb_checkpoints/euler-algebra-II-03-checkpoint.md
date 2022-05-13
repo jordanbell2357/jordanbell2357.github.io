@@ -176,17 +176,31 @@ $$
 
 V) $$
 \begin{array}{rrrrr}
-a^2&+2ab&+2b^2&&\\
-a^2&-2ab&+2b^2&&\\
+2a^2&-3ab&-4b^2&&\\
+3a^2&-2ab&+b^2&&\\
 \hline
-a^4&+2a^3b&+2a^2b^2&&\\
-&-2a^3b&-4a^2b^2&-4ab^3&\\
-&&+2a^2b^2&+4ab^3&+4b^4\\
+6a^4&-9a^3b&-12a^2b^2&&\\
+&-4a^3b&+6a^2b^2&+8ab^3&\\
+&&+2a^2b^2&-3ab^3&-4b^4\\
 \hline
-a^4&+4b^4&&
+6a^4&-13a^3b&-4a^2b^2&+5ab^3&-4b^4\\
 \end{array}
 $$
 
+---
+
+VI) $$
+\begin{array}{rrrrrrrrrr}
+a^2&+b^2&+c^2&-ab&-ac&-bc&&&&\\
+a&+b&+c&&&&&&&\\
+\hline
+a^3&+ab^2&+ac^2&-a^2b&-abc&-a^2c&-abc&&&\\
+&-ab^2&&+a^2b&&-abc&+b^3&+bc^2&-b^2c&\\
+&&-ac^2&&+a^2c&-abc&&-bc^2&+b^2c&+c^3\\
+\hline
+a^3&-3abc&+b^3&+c^3&&&&&&
+\end{array}
+$$
 
 
 #### References
