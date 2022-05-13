@@ -121,7 +121,7 @@ more perspicuous.
 
 ---
 
-<img src="/assets/euler/iytxpnib.png" alt="Polynomial long division" width="580" height="237" style="border:2px solid black;padding:2px;display: block; margin-left: auto; margin-right: auto; width: 60%;">
+<img src="/assets/euler/iytxpnib.png" alt="Polynomial long division" width="580" height="237" style="border:2px solid CornflowerBlue;padding:2px;display: block; margin-left: auto; margin-right: auto; width: 60%;">
 
 display: block; margin-left: auto; margin-right: auto; width: 60%;
 
