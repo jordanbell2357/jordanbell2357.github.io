@@ -66,6 +66,22 @@ $$2a^3+6\sqrt{b}-4\log c+5 \sqrt[5]{a}-7c,$$
 either in this or in any other order of the terms; for if the
 signs are not changed, the sum will always be the same.
 
+261. But it frequently happens that tlie sums represented in this manner may be
+considerably abridged, as is the case when two or more terms destroy each other;
+for example, if we find in the same sum the terms +a-a, or 3a-4a+a: or when
+two or more terms may be reduced to one, etc. Thus, in the following examples
+
+$$
+\begin{array}{lll}
+3a+2a=5a,&7b-3b=+4b,&-6c+10c=+4c,
+\end{array}
+$$
+
+
+Whenever two or more terms, therefore, are entirely the
+same with regard to letters, their sum may be abridged;
+but those cases must not be confounded with such as these,
+$$2a^2 + 3a$$, or $$2b^3 - b^4$$. which admit of no abridgment.
 
 
 #### References
