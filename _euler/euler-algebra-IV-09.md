@@ -241,8 +241,6 @@ $$(3 \cdot 3)+(4 \cdot 3)-21=0$$; this shows, that $$x-3$$ is one of
 the factors of the equation, or that $$x^2+4x-21$$ is divisible
 by $$x-3$$, which the actual division proves. Thus,
 
-![polynomial long division](/assets/euler/adaptive.png "polynomial long division")
-
 <a href="https://artofproblemsolving.com/texer/qznvljcs">
 <img src="/assets/euler/qznvljcs.png" alt="Polynomial long division" width="241" height="181" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
