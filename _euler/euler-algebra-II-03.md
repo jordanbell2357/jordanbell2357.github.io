@@ -129,6 +129,24 @@ a&+2&\\
 \end{array}
 $$
 
+---
+
+II) $$
+\begin{array}{rrrr}
+4a^2&-6a&+9&\\
+2a&+3&&\\
+\hline
+8a^3&-12a^2&+18a&\\
+&+12a^2&-18a&+27\\
+\hline
+8a^3&+27&&
+\end{array}
+$$
+
+---
+
+
+
 
 #### References
 
