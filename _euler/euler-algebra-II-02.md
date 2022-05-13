@@ -71,7 +71,6 @@ $$
 a^2&+ab&+b^2\\
 b^2&-ab&+a^2\\
 \hline
-\\[\dimexpr-\normalbaselineskip+2pt]
 &+2ab&
 \end{array}
 $$
@@ -81,7 +80,6 @@ $$
 3a&-4b&+5c\\
 2b&+4c&-6a\\
 \hline
-\\[\dimexpr-\normalbaselineskip+2pt]
 9a&-6b&+c
 \end{array}
 $$
@@ -91,7 +89,6 @@ $$
 a^3&+3a^2b&+3ab^2&+b^3\\
 a^3&-3a^2b&+3ab^2&-b^3\\
 \hline
-\\[\dimexpr-\normalbaselineskip+2pt]
 &6a^2b&&+2b^3
 \end{array}
 $$
@@ -101,7 +98,6 @@ $$
 \sqrt{a}&+2\sqrt{b}\\
 \sqrt{a}&-3\sqrt{b}\\
 \hline
-\\[\dimexpr-\normalbaselineskip+2pt]
 &+5\sqrt{b}
 \end{array}
 $$
