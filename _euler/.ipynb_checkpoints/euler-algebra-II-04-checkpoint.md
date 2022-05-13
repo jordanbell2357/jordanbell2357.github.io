@@ -86,7 +86,9 @@ ought to produce the dividend $$a^2+3ab+2b^2$$. See the operation.[^1]
 
 [^1]: Made using [Tables Generator](https://www.tablesgenerator.com/) and [TeXeR](https://artofproblemsolving.com/texer/)
 
-[![polynomial long division](/assets/euler/jptasmxh.png)](https://artofproblemsolving.com/texer/jptasmxh)
+<a href="https://artofproblemsolving.com/texer/jptasmxh">
+<img src="/assets/euler/jptasmxh.png" alt="Polynomial long division" width="272" height="172" style="border:2px solid black;padding:10px;">
+</a>
 
 **288.** This operation will be considerably facilitated by
 choosing one of the terms of the divisor, which contains the
@@ -97,28 +99,41 @@ powers of that letter. This term in the preceding example
 was $$a$$. The following examples will render the process
 more perspicuous.
 
-![polynomial long division](/assets/euler/ntjqbsro.png)
+<a href="https://artofproblemsolving.com/texer/ntjqbsro">
+<img src="/assets/euler/ntjqbsro.png" alt="Polynomial long division" width="360" height="235" style="border:2px solid black;padding:10px;">
+</a>
 
----
+<a href="https://artofproblemsolving.com/texer/rcgwurze">
+<img src="/assets/euler/rcgwurze.png" alt="Polynomial long division" width="246" height="171" style="border:2px solid black;padding:10px;">
+</a>
 
-![polynomial long division](/assets/euler/rcgwurze.png)
-
-
-
+<a href="https://artofproblemsolving.com/texer/edpbsfug">
 <img src="/assets/euler/edpbsfug.png" alt="Polynomial long division" width="335" height="171" style="border:2px solid black;padding:10px;">
+</a>
 
+<a href="https://artofproblemsolving.com/texer/nttoyunx">
 <img src="/assets/euler/nttoyunx.png" alt="Polynomial long division" width="334" height="235" style="border:2px solid black;padding:10px;">
+</a>
 
+<a href="https://artofproblemsolving.com/texer/cmrlbojt">
 <img src="/assets/euler/cmrlbojt.png" alt="Polynomial long division" width="386" height="235" style="border:2px solid black;padding:10px;">
+</a>
 
+<a href="https://artofproblemsolving.com/texer/gpphlavj">
 <img src="/assets/euler/gpphlavj.png" alt="Polynomial long division" width="552" height="237" style="border:2px solid black;padding:10px;">
-
+</a>
+    
+<a href="https://artofproblemsolving.com/texer/iytxpnib">
 <img src="/assets/euler/iytxpnib.png" alt="Polynomial long division" width="589" height="235" style="border:2px solid black;padding:10px;">
+</a>
 
+<a href="https://artofproblemsolving.com/texer/wdjlpmdc">
 <img src="/assets/euler/wdjlpmdc.png" alt="Polynomial long division" width="575" height="236" style="border:2px solid black;padding:2px;">
+</a>
 
+<a href="https://artofproblemsolving.com/texer/zldggvdq">
 <img src="/assets/euler/zldggvdq.png" alt="Polynomial long division" width="580" height="296" style="border:2px solid black;padding:5px;">
-
+</a>
 
 #### References
 
