@@ -9,8 +9,7 @@ title: Euler, "Elements of Algebra", Section II, Chapter 1
 
 **256.** When two or more expressions, consisting of several
 terms, are to be added together, the operation is frequently
-represented merely by signs, placing each expression between two parentheses
-\[German: "Klammern"\], and connecting it with the rest by
+represented merely by signs, placing each expression between two parentheses, and connecting it with the rest by
 means of the sign +. Thus, for example, if it be required,
 to add the expressions $$a+b+c$$ and $$d+e+f$$, we represent the sum by
 
@@ -66,7 +65,7 @@ $$2a^3+6\sqrt{b}-4\log c+5 \sqrt[5]{a}-7c,$$
 either in this or in any other order of the terms; for if the
 signs are not changed, the sum will always be the same.
 
-261. But it frequently happens that tlie sums represented in this manner may be
+**261.** But it frequently happens that tlie sums represented in this manner may be
 considerably abridged, as is the case when two or more terms destroy each other;
 for example, if we find in the same sum the terms +a-a, or 3a-4a+a: or when
 two or more terms may be reduced to one, etc. Thus, in the following examples
@@ -84,6 +83,15 @@ Whenever two or more terms, therefore, are entirely the
 same with regard to letters, their sum may be abridged;
 but those cases must not be confounded with such as these,
 $$2a^2 + 3a$$, or $$2b^3 - b^4$$. which admit of no abridgment.
+
+**282.** Let us consider now some other examples of reduction, as the following,
+which will lead us immediately to an important truth. Suppose it were required to
+add together the expressions $$a+b$$ and $$a-b$$; our rule gives $$a+b+a-b$$;
+now $$a + a = 2a$$, and $$b-b=0$$; the sum therefore is $$2a$$: consequently,
+if we add together the sum of two numbers $$(a + b)$$ and their difference
+$$(a — b)$$, we obtain the double of the greater of those two numbers.
+
+This will be better understood perhaps from the following examples:
 
 
 #### References
