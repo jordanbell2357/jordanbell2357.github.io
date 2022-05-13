@@ -145,6 +145,47 @@ $$
 
 ---
 
+III) $$
+\begin{array}{rrrr}
+3a^2&-2ab&-b^2&\\
+2a&-4b&&\\
+\hline
+6a^3&-4a^2b&-2ab^2&\\
+&-12a^2b&+8ab^2&+4b^3\\
+\hline
+6a^3&-16a^2b&+6ab^2&+4b^3
+\end{array}
+$$
+
+---
+
+IV) $$
+\begin{array}{rrrrr}
+a^2&+2ab&+2b^2&&\\
+a^2&-2ab&+2b^2&&\\
+\hline
+a^4&+2a^3b&+2a^2b^2&&\\
+&-2a^3b&-4a^2b^2&-4ab^3&\\
+&&+2a^2b^2&+4ab^3&+4b^4\\
+\hline
+a^4&+4b^4&&
+\end{array}
+$$
+
+---
+
+V) $$
+\begin{array}{rrrrr}
+a^2&+2ab&+2b^2&&\\
+a^2&-2ab&+2b^2&&\\
+\hline
+a^4&+2a^3b&+2a^2b^2&&\\
+&-2a^3b&-4a^2b^2&-4ab^3&\\
+&&+2a^2b^2&+4ab^3&+4b^4\\
+\hline
+a^4&+4b^4&&
+\end{array}
+$$
 
 
 
