@@ -103,27 +103,19 @@ more perspicuous.
 
 ![polynomial long division](/assets/euler/rcgwurze.png)
 
----
 
-![polynomial long division](/assets/euler/edpbsfug.png)
 
----
+<img src="/assets/euler/edpbsfug.png" alt="Polynomial long division" width="335" height="171" style="border:2px solid black;padding:10px;">
 
-![polynomial long division](/assets/euler/nttoyunx.png)
+<img src="/assets/euler/nttoyunx.png" alt="Polynomial long division" width="334" height="235" style="border:2px solid black;padding:10px;">
 
----
+<img src="/assets/euler/cmrlbojt.png" alt="Polynomial long division" width="386" height="235" style="border:2px solid black;padding:10px;">
 
-![polynomial long division](/assets/euler/cmrlbojt.png)
+<img src="/assets/euler/gpphlavj.png" alt="Polynomial long division" width="552" height="237" style="border:2px solid black;padding:10px;">
 
----
+<img src="/assets/euler/iytxpnib.png" alt="Polynomial long division" width="589" height="235" style="border:2px solid black;padding:10px;">
 
-![polynomial long division](/assets/euler/gpphlavj.png)
-
----
-
-<img src="/assets/euler/iytxpnib.png" alt="Polynomial long division" width="580" height="231" style="border:2px solid black;padding:10px;">
-
-<img src="/assets/euler/wdjlpmdc.png" alt="Polynomial long division" width="580" height="237" style="border:2px solid black;padding:2px;">
+<img src="/assets/euler/wdjlpmdc.png" alt="Polynomial long division" width="575" height="236" style="border:2px solid black;padding:2px;">
 
 <img src="/assets/euler/zldggvdq.png" alt="Polynomial long division" width="580" height="296" style="border:2px solid black;padding:5px;">
 
