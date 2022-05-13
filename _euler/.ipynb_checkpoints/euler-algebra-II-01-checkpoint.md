@@ -73,7 +73,9 @@ two or more terms may be reduced to one, etc. Thus, in the following examples
 
 $$
 \begin{array}{lll}
-3a+2a=5a,&7b-3b=+4b,&-6c+10c=+4c,
+3a+2a=5a,&7b-3b=+4b,&-6c+10c=+4c,\\
+5a-8a=-3a,&-7b+b=-6b,&-3c-4c=-7c,\\
+2a-5a+a=-2a,&-3b-5b+2b=-6b.&
 \end{array}
 $$
 
