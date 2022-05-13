@@ -82,9 +82,9 @@ $$
 Whenever two or more terms, therefore, are entirely the
 same with regard to letters, their sum may be abridged;
 but those cases must not be confounded with such as these,
-$$2a^2 + 3a$$, or $$2b^3 - b^4$$. which admit of no abridgment.
+$$2a^2 + 3a$$, or $$2b^3 - b^4$$, which admit of no abridgment.
 
-**282.** Let us consider now some other examples of reduction, as the following,
+**262.** Let us consider now some other examples of reduction, as the following,
 which will lead us immediately to an important truth. Suppose it were required to
 add together the expressions $$a+b$$ and $$a-b$$; our rule gives $$a+b+a-b$$;
 now $$a + a = 2a$$, and $$b-b=0$$; the sum therefore is $$2a$$: consequently,
