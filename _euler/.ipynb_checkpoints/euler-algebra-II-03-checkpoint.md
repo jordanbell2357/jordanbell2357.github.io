@@ -49,6 +49,42 @@ to take the quadruple of $$A$$: for if we first take $$A$$ seven
 times, it will then be necessary to subtract $$3A$$ from that
 product.
 
+In general, therefore, if it be required to multiply $$A$$
+by $$d-e$$, we multiply the quantity $$A$$ first by $$d$$,
+and then by $$e$$, and subtract this last product from the
+first: whence results $$dA-eA$$.
+
+If we now suppose that $$A=a-b$$, and that this is the quantity
+to be multiplied by $$d-e$$; we shall have
+
+$$
+\begin{gather}
+dA=ad-bd\\
+eA=ae-be
+\end{gather}
+$$
+
+whence $$dA-cA=ad-bd-ae+be$$ is the product required.
+
+**274.** Since therefore we know accurately the product
+$$(a-b)\cdot (d-e)$$, we shall now exhibit the same example
+of multiplication under the following form:
+
+$$
+\begin{array}{rrrr}
+a&-b&&\\
+d&-e&&\\
+\hline
+ad&-bd&-ae&+be.
+\end{array}
+$$
+
+Which shows, that we must multiply each term of the upper
+expression by each term of the lower, and that, with regard
+to the signs, we must strictly observe the rule before given;
+a rule which this circumstance would completely confirm, if
+it admitted of the least doubt.
+
 
 #### References
 
