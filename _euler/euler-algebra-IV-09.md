@@ -243,6 +243,10 @@ by $$x-3$$, which the actual division proves. Thus,
 
 ![polynomial long division](/assets/euler/adaptive.png "polynomial long division")
 
+<a href="https://artofproblemsolving.com/texer/qznvljcs">
+<img src="/assets/euler/qznvljcs.png" alt="Polynomial long division" width="241" height="181" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
 So that the other factor is $$x + 7$$, and our equation is represented by the
 product $$(x-3) (x+7)=0$$; whence two values of $$x$$ immediately follow, the
 first factor giving $$x=3$$, and the other $$x= -7$$.
