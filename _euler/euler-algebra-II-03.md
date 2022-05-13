@@ -85,6 +85,50 @@ to the signs, we must strictly observe the rule before given;
 a rule which this circumstance would completely confirm, if
 it admitted of the least doubt.
 
+**275.** It will be easy, therefore, according to this method,
+to calculate the following example, which is, to multiply
+$$a+b$$ by $$a-b$$;
+
+$$
+\begin{array}{rrr}
+a&+b&\\
+a&-b&\\
+\hline
+a^2&+ab&\\
+&-ab&-b^2\\
+\hline
+\textrm{Product}&a^2&-b^2.
+\end{array}
+$$
+
+**276.** Now, we may substitute for $$a$$ and $$b$$ any numbers
+whatever; so that the above example will furnish the following theorem; namely,
+The sum of two numbers, multiplied
+by their difference, is equal to the difference of the squares
+of those numbers: which theorem may be expressed thus:
+
+$$(a+b)(a-b)=a^2-b^2.$$
+
+And from this another theorem may be derived; namely,
+The difference of two square numbers is always a product,
+and divisible both by the sum and by the difference of the
+roots of those two squares; consequently, the difference of
+two squares can never be a prime number.
+
+**277.** Let us now calculate some other examples:
+
+I) $$
+\begin{array}{rrr}
+2a&-3&\\
+a&+2&\\
+\hline
+2a^2&-3a&\\
+&4a&-6\\
+\hline
+2a^2&+a&+6
+\end{array}
+$$
+
 
 #### References
 
