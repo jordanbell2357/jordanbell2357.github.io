@@ -223,7 +223,7 @@ Let it be proposed, for example, to find the value, or
 product, of the four following factors, namely
 
 | I. | II. | III. | IV. |
-|---:|---:|---:|---:|
+|---|---|---|---|
 | $$(a+b)$$ | $$(a^2+ab+b^2)$$ | $$(c-d)$$ | $$(a^2-ab+b^2)$$ |
 
 First, multiply factors I. and II.:
