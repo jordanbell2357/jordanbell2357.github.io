@@ -214,6 +214,18 @@ a^3&-3abc&+b^3&+c^3&&&&&&
 \end{array}
 $$
 
+**278.** When we have more than two quantities to multiply together, it will easily
+be understood that, after having multiplied two of them together, we must then
+multiply that product by one of those which remain, and so on:
+but it is indifferent what order is observed in those multiplications.
+
+Let it be proposed, for example, to find the value, or
+product, of the four following factors, namely
+
+| I. | II. | III. | IV. |
+|---:|---:|---:|---:|
+| a | b | c | d |
+
 
 #### References
 
