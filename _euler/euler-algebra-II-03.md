@@ -326,14 +326,31 @@ $$
 
 It remains to multiply the product I. IV. by that of II. and III.
 
-
 $$
-
+\begin{array}{rrrr}
+\textrm{I. IV.}&a^3&+b^3&\\
+\textrm{II. III.}&a^3&-b^3&\\
+\hline
+&a^6&+a^3b^3&\\
+&&-a^3b^3&-b^6\\
+\hline
+&a^6&-b^6&
+\end{array}
 $$
 
 the same result as before.
 
+**281.** It will be proper to illustrate this example by a
+numerical application. For this purpose, let us make $$a=3$$
+and $$b=2$$, we shall then have $$a+b=5$$, and $$a-b=1$$;
+farther, $$a^2=9$$, $$ab=6$$, and $$b^2=4$$: therefore
+$$a^2+ab+b^2=19$$, and $$a^2-ab+b^2=7$$: so that the
+product required is that of
 
+5 ⋅ 19 ⋅ 1 ⋅ 7, which is 665.
+
+Now, $$a^6=729$$, and $$b^6=64$$; consequently, the product
+required is $$a^6-b^6=665$$, as we have already seen.
 
 
 
