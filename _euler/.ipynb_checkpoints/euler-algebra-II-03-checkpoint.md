@@ -258,16 +258,16 @@ It remains now to multiply the first product I. II. by this
 second product III. IV.
 
 $$
-\begin{array}{rrrrrrrrrr}
-a^3&+2a^2b&+2ab^2&+b^3&&&&&&\\
-a^3&-2a^2b&+2ab^2&-b^3&&&&&&\\
+\begin{array}{rrrrrrr}
+a^3&+2a^2b&+2ab^2&+b^3&&&\\
+a^3&-2a^2b&+2ab^2&-b^3&&&\\
 \hline
-a^6&+2a^5b&+2a^4b^2&+a^3b^3&&&&&&\\
-&-2a^5b&-4a^4b^2&-4a^3b^3&-2a^2b^4&&&&&\\
-&&2a^4b^2&+4a^3b^3&+4a^2b^4&2ab^5&&&&\\
-&&&-a^3b^3&-2a^2b^4&-2ab^5&-b^6&&&\\
+a^6&+2a^5b&+2a^4b^2&+a^3b^3&&&\\
+&-2a^5b&-4a^4b^2&-4a^3b^3&-2a^2b^4&&\\
+&&2a^4b^2&+4a^3b^3&+4a^2b^4&2ab^5&\\
+&&&-a^3b^3&-2a^2b^4&-2ab^5&-b^6\\
 \hline
-a^6&-b^6&&&&&&&&
+a^6&-b^6&&&&&
 \end{array}
 $$
 
