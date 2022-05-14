@@ -275,7 +275,66 @@ which is the product required.
 
 **279.** Now let us resume the same example, but change
 the order of it, first multiplying the factors I. and III. and
-then II. and IV. together.
+then II. and IV. together:
+
+$$
+\begin{array}{rrrrrrrr}
+\textrm{I. II.}&a^3&+2a^2b&+2ab^2&+b^3&&&\\
+\textrm{III. IV.}&a^3&-2a^2b&+2ab^2&-b^3&&&\\
+\hline
+&a^6&+2a^5b&+2a^4b^2&+a^3b^3&&&\\
+&-2a^5b&-4a^4b^2&-4a^3b^3&-2a^2b^4&&\\
+&&+2a^4b^2&+4a^3b^3&+4a^2b^4&+2ab^5&\\
+&&&-a^3b^3&-2a^2b^4&-2ab^5&-b^6\\
+\hline
+&a^6&-b^6&&&&
+\end{array}
+$$
+
+which is the product required.
+
+**280.** We may perform this calculation in a manner still
+more concise, by first multiplying the factor I. by factor IV.
+and then factor II. by factor III.
+
+$$
+\begin{array}{rrrr}
+\textrm{I.}&a&+b&\\
+\textrm{III.}&a&-b&\\
+\hline
+&a^2&+ab&\\
+&&-ab&-ab^2\\
+\hline
+\textrm{I. III.}&a^2&-b^2&
+\end{array}
+$$
+
+---
+
+$$
+\begin{array}{rrrrrr}
+\textrm{II.}&a^2&+ab&b^2&&\\
+\textrm{IV.}&a^2&-ab&+b^2&&\\
+\hline
+&a^4&+a^3b&+a^2b^2&&\\
+&&-a^3b&-a^2b^2&-ab^3&\\
+&&&+a^2b^2&+ab^3&+b^4\\
+\hline
+\textrm{II. IV.}&a^4&+a^2b^2&+b^4&&\\
+\end{array}
+$$
+
+It remains to multiply the product I. IV. by that of II. and III.
+
+
+$$
+
+$$
+
+the same result as before.
+
+
+
 
 
 #### References
