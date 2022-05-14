@@ -222,11 +222,11 @@ but it is indifferent what order is observed in those multiplications.
 Let it be proposed, for example, to find the value, or
 product, of the four following factors, namely
 
-| I | II | III | IV |
+| I. | II. | III. | IV. |
 |---:|---:|---:|---:|
 | $$(a+b)$$ | $$(a^2+ab+b^2)$$ | $$(c-d)$$ | $$(a^2-ab+b^2)$$ |
 
-First, multiply factors I and II:
+First, multiply factors I. and II.:
 
 $$
 \begin{array}{lrrrr}
@@ -240,7 +240,42 @@ $$
 \end{array}
 $$
 
-Then multiply factors III and IV:
+Then multiply factors III. and IV.:
+
+$$
+\begin{array}{lrrrr}
+\textrm{IV.}&a^2&-ab&+b^2&\\
+\textrm{III.}&a&-b&&\\
+\hline
+&a^3&-a^2&+ab^2&\\
+&-a^2b&+ab^2&-b^3\\
+\hline
+\textrm{III. IV.}&a^3&-2a^2b&+2ab^2&-b^3
+\end{array}
+$$
+
+It remains now to multiply the first product I. II. by this
+second product III. IV.
+
+$$
+\begin{array}{rrrrrrrrrr}
+a^3&+2a^2b&+2ab^2&+b^3&&&&&&\\
+a^3&-2a^2b&+2ab^2&-b^3&&&&&&\\
+\hline
+a^6&+2a^5b&+2a^4b^2&+a^3b^3&&&&&&\\
+&-2a^5b&-4a^4b^2&-4a^3b^3&-2a^2b^4&&&&&\\
+&&2a^4b^2&+4a^3b^3&+4a^2b^4&2ab^5&&&&\\
+&&&-a^3b^3&-2a^2b^4&-2ab^5&-b^6&&&\\
+\hline
+a^6&-b^6&&&&&&&&
+\end{array}
+$$
+
+which is the product required.
+
+**279.** Now let us resume the same example, but change
+the order of it, first multiplying the factors I. and III. and
+then II. and IV. together.
 
 
 #### References
