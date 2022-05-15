@@ -206,4 +206,3 @@ infinitely great, may still become twice, thrice, or any number of times greater
     - [Springer](https://link.springer.com/book/9783764314002)
 2. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
     - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)
-5. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)

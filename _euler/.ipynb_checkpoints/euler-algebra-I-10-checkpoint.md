@@ -198,4 +198,3 @@ or +1.
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 10. Von der Multiplication und Division der Brüche](/assets/euler/de/I-I-10.pdf)
     - [Springer](https://link.springer.com/book/9783764314002)
-4. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)

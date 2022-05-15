@@ -213,4 +213,3 @@ $$x = \dfrac{1.9084850}{0.9542425}=\dfrac{19084850}{09542425}=2.$$
     - [Springer](https://link.springer.com/book/9783764314002)
 2. Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.
     - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
-5. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)

@@ -144,4 +144,3 @@ become equal to another given number, $$c$$.
     - [Springer](https://link.springer.com/book/9783764314002)
 3. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
     - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)
-4. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)
