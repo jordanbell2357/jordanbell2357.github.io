@@ -32,7 +32,7 @@ $$
 \end{gather}
 $$
 
-If it should happen that a term of the dividend is
+**284.** If it should happen that a term of the dividend is
 not divisible by the divisor, the quotient is represented
 by a fraction, as in the division of $$a+b$$ by $$a$$, which
 gives $$1+\frac{b}{a}$$.
