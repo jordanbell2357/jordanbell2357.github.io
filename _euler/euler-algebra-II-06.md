@@ -115,6 +115,7 @@ multiplied two by two.
 number 256 into three parts, 200 + 50 + 6; its square
 will then be composed of the following parts:
 
+$$
 \begin{gather}
 200^2=40000\\
 50^2=2500\\
@@ -124,7 +125,7 @@ will then be composed of the following parts:
 2(6 \cdot 50) = 600\\
 65536=256\cdot 256
 \end{gather}
-
+$$
 
 
 #### References
