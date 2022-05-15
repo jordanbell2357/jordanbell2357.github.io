@@ -136,7 +136,40 @@ $$(a-b-c)^2 = a^2 + b^2 + c^2 - 2ab - 2ac + 2bc;$$
 
 and if
 we represent the number 256 by 300 - 40 - 4, we shall
-have.
+have,
+
+$$
+\begin{array}{r}
+\textrm{Positive Parts.}\\
+300^2=90000\\
+400^2=16000\\
+2(40\cdot 4)=320\\
+4^2=16\\
+\hline
+91936
+\end{array}
+$$
+
+$$
+\begin{array}{r}
+\textrm{Negative Parts.}\\
+2(40 \cdot 300)=24000\\
+2(4 \cdot 300) = 2400\\
+\hline
+-26400
+\end{array}
+$$
+
+$$
+\begin{array}{r}
+91936\\
+-26400\\
+\hline
+65536
+\end{array}
+$$
+
+the square of 256 as before.
 
 
 
