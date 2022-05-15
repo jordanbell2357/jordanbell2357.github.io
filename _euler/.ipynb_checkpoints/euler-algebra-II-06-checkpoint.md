@@ -116,16 +116,28 @@ number 256 into three parts, 200 + 50 + 6; its square
 will then be composed of the following parts:
 
 $$
-\begin{gather}
-200^2=40000\\
-50^2=2500\\
-6^2=36\\
-2(50 \cdot 200) = 20000\\
-2(6 \cdot 200) = 2400\\
-2(6 \cdot 50) = 600\\
-65536=256\cdot 256
-\end{gather}
+\begin{array}{rcl}
+200^2&=&40000\\
+50^2&=&2500\\
+6^2&=&36\\
+2(50 \cdot 200) &=& 20000\\
+2(6 \cdot 200) &=& 2400\\
+2(6 \cdot 50) &=& 600\\
+\hline
+65536&=&256\cdot 256
+\end{array}
 $$
+
+**316.** When some terms of the root are negative, the
+square is still found by the same rule; only we must be
+careful what signs we prefix to the double products. Thus,
+
+$$(a-b-c)^2 = a^2 + b^2 + c^2 - 2ab - 2ac + 2bc;$$
+
+and if
+we represent the number 256 by 300 - 40 - 4, we shall
+have.
+
 
 
 #### References
