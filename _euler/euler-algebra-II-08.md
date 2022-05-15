@@ -91,6 +91,48 @@ $$
 \end{array}
 $$
 
+**330.** In the division of surds, we have only to express the
+proposed quantities in the form of a fraction; which may be
+then changed into another expression having a rational denominator;
+for if the denominator be $$a+\sqrt{b}$$, for example,
+and we multiply both this and the numerator by $$a-\sqrt{b}$$, the
+new denominator will be $$a^2 - b$$, in which there is no radical
+sign. Let it be proposed, for example, to divide $$3 + 2\sqrt{2}$$
+by $$1+\sqrt{2}$$: we shall first have $$\frac{3+2\sqrt{2}}{1+\sqrt{2}}$$; then multiplying
+the two terms of the fraction by $$1-\sqrt{2}$$, we shall have for
+the numerator:
+
+$$
+\begin{array}{rrrr}
+3&+2\sqrt{2}&&\\
+1&-\sqrt{2}&&\\
+\hline
+3&+2\sqrt{2}&&\\
+&-3\sqrt{2}&-4&\\
+\hline
+3&-\sqrt{2}&-4&=-\sqrt{2}-1;
+\end{array}
+$$
+
+and for the denominator:
+
+$$
+\begin{array}{rrrr}
+1&+\sqrt{2}&&\\
+1&-\sqrt{2}&&\\
+\hline
+1&+\sqrt{2}&&\\
+&-\sqrt{2}&-2&\\
+\hline
+1&&-2&=-1.
+\end{array}
+$$
+
+Our new fraction therefore is $$\frac{-\sqrt{2}-1}{-1}$$; and if we again
+multiply the two terms by -1, we shall have for the numerator
+$$\sqrt{2}+1$$, and for the denominator +1. Now, it is easy to show that $$\sqrt{2}+1$$
+is equal to the proposed fraction $$\frac{3+2\sqrt{2}}{1+\sqrt{2}}$$; for $$\sqrt{2}+1$$
+being multiplied by the divisor $$1+\sqrt{2}$$, thus,
 
 
 #### References
