@@ -227,6 +227,20 @@ $$
 \end{array}
 $$
 
+We see then that the tenth power of $$a+b$$ will be
+
+$$a^{10}+10a^9b+45a^8b^2+120a^7b^3+210a^6b^4+252a^5b^5+210a^4b^6+120a^3b^7+
+45a^2b^8+10ab^9+b^{10}.$$
+
+**346.** Now, with regard to the coefficients, it must be observed, that
+for each power their sum must be equal to the
+number 2 raised to the same power; for let $$a = 1$$ and
+$$b = 1$$, then each term, without the coefficients, will be 1; consequently,
+the value of the power will be simply the sum of
+the coefficients. This sum, in the preceding example, is 1024,
+and accordingly $$(1+1)^{10}=2^{10}=1024$$. It is the same
+with respect to all other powers; thus, we have for the
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
