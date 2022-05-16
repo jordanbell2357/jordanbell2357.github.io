@@ -241,6 +241,22 @@ the coefficients. This sum, in the preceding example, is 1024,
 and accordingly $$(1+1)^{10}=2^{10}=1024$$. It is the same
 with respect to all other powers; thus, we have for the
 
+
+
+**347.** Another necessary remark, with regard to the coefficients, is,
+that they increase from the beginning to the middle, and then decrease
+in the same order. In the even powers, the greatest coefficient is
+exactly in the middle; but in the odd powers, two coefficients, equal
+and greater than the others, are found in the middle, belonging to the
+mean terms.
+
+The order of the coefficients likewise deserves particular
+attention; for it is in this order that we discover the means
+of determining them for any power whatever, without calculating
+all the preceding powers. We shall here explain this method,
+reserving the demonstration however for the next chapter.
+
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
