@@ -211,10 +211,6 @@ law by which they are formed; as will appear from the
 following Table.
 
 <a href="https://artofproblemsolving.com/texer/qlwaqoyn">
-<img src="/assets/euler/qlwaqoyn.png" alt="Binomial coefficients for 1st power to 10th power" width="600" height="215" style="display:block;margin-left:auto;margin-right:auto;">
-</a>
-
-<a href="https://artofproblemsolving.com/texer/qlwaqoyn">
 <img src="/assets/euler/qlwaqoyn.png" alt="Binomial coefficients for 1st power to 10th power" width="700" height="252" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
@@ -258,6 +254,23 @@ attention; for it is in this order that we discover the means
 of determining them for any power whatever, without calculating
 all the preceding powers. We shall here explain this method,
 reserving the demonstration however for the next chapter.
+
+**348.** In order to find the coefficients of any power proposed, the seventh for example, let us write the following
+fractions one after the other:
+
+$$
+\frac{7}{1},\frac{6}{2},\frac{5}{3},\frac{4}{4},\frac{3}{5},\frac{2}{6},\frac{1}{7}.
+$$
+
+In this arrangement, we perceive that the numerators begin
+by the exponent of the power required, and that they
+diminish successively by unity; while the denominators
+follow in the natural order of the numbers, 1, 2, 3, 4, etc..
+Now, the first coefficient being always 1, the first fraction
+gives the second coefficient; the product of the first two
+fractions, multiplied together, represents the third coefficient;
+the product of the three first fractions represents the fourth
+coefficient, and so on. Thus, the
 
 
 #### References
