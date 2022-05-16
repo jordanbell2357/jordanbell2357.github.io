@@ -208,30 +208,12 @@ the power. With regard to the other terms, it is not so
 easy to observe any order in their coefficients; but, if we
 continue those coefficients, we shall not fail to discover the
 law by which they are formed; as will appear from the
-following Table.[^2]
+following Table.
 
-[^2]: <https://tex.stackexchange.com/questions/17522/pascals-triangle-in-tikz> and <https://texample.net/tikz/examples/pascal-triangle/>
+<a href="https://artofproblemsolving.com/texer/qlwaqoyn">
+<img src="/assets/euler/qlwaqoyn.png" alt="Binomial coefficients for 1st power to 10th power" width="800" height="288" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
-![Binomial coefficients for 1st power to 10th power](/assets/euler/qlwaqoyn.png)
-
-![Binomial coefficients for 1st power to 10th power](/assets/euler/triangle.png)
-
-![Binomial coefficients for 1st power to 10th power](/assets/euler/hexagon.png)
-
-$$
-\begin{array}{rccccccccccccccccccccc}
-\textrm{1st}:&    &    &    &    &    &    &    &    &    &  1 &    &  1\\
-\textrm{2st}:&    &    &    &    &    &    &    &    &  1 &    &  2 &    &  1\\
-\textrm{3rd}:&    &    &    &    &    &    &    &  1 &    &  3 &    &  3 &    &  1\\
-\textrm{4th}:&    &    &    &    &    &    &  1 &    &  4 &    &  6 &    &  4 &    &  1\\
-\textrm{5th}:&    &    &    &    &    &  1 &    &  5 &    & 10 &    & 10 &    &  5 &    &  1\\
-\textrm{6th}:&    &    &    &    &  1 &    &  6 &    & 15 &    & 20 &    & 15 &    &  6 &    &  1\\
-\textrm{7th}:&    &    &    &  1 &    &  7 &    & 21 &    & 35 &    & 35 &    & 21 &    &  7 &    &  1\\
-\textrm{8th}:&    &    &  1 &    &  8 &    & 28 &    & 56 &    & 70 &    & 56 &    & 28 &    &  8 &    &  1\\
-\textrm{9th}:&    &  1 &    &  9 &    & 36 &    & 84 &    & 126 &    & 126 &    & 84 &    & 36 &    &  9 &    &  1\\
-\textrm{10th}:&  1 &    & 10 &    & 45 &    & 120 &    & 210 &    & 252 &    & 210 &    & 120 &    & 45 &    & 10 &    &  1\\
-\end{array}
-$$
 
 We see then that the tenth power of $$a+b$$ will be
 
