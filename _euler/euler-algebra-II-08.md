@@ -134,6 +134,86 @@ $$\sqrt{2}+1$$, and for the denominator +1. Now, it is easy to show that $$\sqrt
 is equal to the proposed fraction $$\frac{3+2\sqrt{2}}{1+\sqrt{2}}$$; for $$\sqrt{2}+1$$
 being multiplied by the divisor $$1+\sqrt{2}$$, thus,
 
+$$
+\begin{array}{rrrr}
+1&+\sqrt{2}&&\\
+1&+\sqrt{2}&&\\
+\hline
+1&+\sqrt{2}&&\\
+&+\sqrt{2}&+2&\\
+\hline
+1&+2\sqrt{2}&+2&=3+2\sqrt{2}.
+\end{array}
+$$
+
+Another example. Let $$8-5\surd 2$$ be divided by $$3-2\surd 2$$.
+This, in the first instance, is $$\frac{8-5\surd 2}{3-2\surd 2}$$;
+and multiplying the two terms of this fraction by $$3+2\sqrt{2}$$,
+we have for the numerator,
+
+$$
+\begin{array}{rrrr}
+8&-5\sqrt{2}&&\\
+3&+2\sqrt{2}&&\\
+\hline
+24&-15\sqrt{2}&&\\
+&+16\sqrt{2}&-20&\\
+\hline
+24&+\sqrt{2}&-20&=4+\sqrt{2};
+\end{array}
+$$
+
+and for the denominator,
+
+$$
+\begin{array}{rrrr}
+3&-2\sqrt{2}&&\\
+3&+2\sqrt{2}&&\\
+\hline
+9&-6\sqrt{2}&&\\
+&+6\sqrt{2}&-8&\\
+\hline
+9&&-8&=1.
+\end{array}
+$$
+
+Consequently, the quotient will be $$4+\surd 2$$.
+The truth of
+this may be proved, as before, by multiplication; thus,
+
+$$
+\begin{array}{rrrr}
+4&+\sqrt{2}&&\\
+3&-2\sqrt{2}&&\\
+\hline
+12&+3\sqrt{2}&&\\
+&-8\sqrt{2}&-4&\\
+\hline
+12&-5\sqrt{2}&-48&=8-5\sqrt{2}.
+\end{array}
+$$
+
+**331.** In the same manner, we may transform irrational
+fractions into others, that have rational denominators. If
+we have, for example, the fraction $$\frac{1}{5-2\surd 6}$$,
+and multiply its numerator and denominator by $$5+2\surd 6$$,
+we transform it into this, $$\frac{5+2\sqrt{6}}{1}=5+2\sqrt{6}$$;
+in like manner, the fraction $$\frac{2}{-1+\surd -3}$$ assumes this
+form, $$\frac{2+2\surd -3}{-4}=\frac{1+\surd -3}{-2}$$;
+also
+
+$$\frac{\surd 6 + \surd 5}{\surd 6 - \surd 5}=\frac{11+2\surd 30}{1}
+=11+2\surd 30.$$
+
+**332.** When the denominator contains several terms, we
+may, in the same manner, make the radical signs in it vanish
+one by one. Thus, if the fraction $$\frac{1}{\surd 10 - \surd 2 - \surd 3}$$
+be proposed, we first multiply these two terms by
+√10 + √2 + √3, and obtain the fraction
+$$\frac{\surd 10 + \surd 2 + \surd 3}{5-2\surd 6}$$; then
+multiplying its numerator and denominator by 5 + 2√6,
+we have 5√10 + 11√2 + 9√3 + 2√60.
+
 
 #### References
 
