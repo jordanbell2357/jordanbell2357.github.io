@@ -295,7 +295,7 @@ wherefore the
 
 $$
 \begin{array}{lll}
-\textrm{1st coefficient}&=1;&\\
+\textrm{1st coefficient}&&=1;\\
 \textrm{2nd coefficient}&\dfrac{3}{1}&=3;\\
 \textrm{3rd coefficient}&3 \cdot \dfrac{2}{2}&=3;\\
 \textrm{4th coefficient}&\dfrac{3}{1} \cdot \dfrac{2}{2} \cdot \dfrac{1}{3}&=1.\\
@@ -308,7 +308,7 @@ consequently, the
 
 $$
 \begin{array}{lll}
-\textrm{1st coefficient}&=1;&\\
+\textrm{1st coefficient}&=&1;\\
 \textrm{2nd coefficient}&\dfrac{4}{1}&=4;\\
 \textrm{3rd coefficient}&\dfrac{4}{1} \cdot \dfrac{3}{2}&=6;\\
 \textrm{4th coefficient}&\dfrac{4}{1} \cdot \dfrac{3}{2} \cdot \dfrac{2}{3}&=4;\\
@@ -329,17 +329,17 @@ find the
 
 $$
 \begin{array}{lll}
-\textrm{1st coefficient}&=1;&\\
+\textrm{1st coefficient}&&=1;\\
 \textrm{2nd coefficient}&\dfrac{10}{1}&=10;\\
 \textrm{3rd coefficient}&10 \cdot \dfrac{9}{2}&=45;\\
 \textrm{4th coefficient}&45 \cdot \dfrac{8}{3}&=120;\\
-\textrm{5th coefficient}&120 \dfrac{7}{4}&=210;\\
-\textrm{6th coefficient}&210 \dfrac{6}{5}&=252;\\
-\textrm{7th coefficient}&252 \dfrac{5}{6}&=210;\\
-\textrm{8th coefficient}&210 \dfrac{4}{7}&=120;\\
-\textrm{9th coefficient}&120 \dfrac{3}{8}&=45;\\
-\textrm{10th coefficient}&45 \dfrac{2}{9}&=10;\\
-\textrm{11th coefficient}&10 \dfrac{1}{10}&=1.
+\textrm{5th coefficient}&120 \cdot \dfrac{7}{4}&=210;\\
+\textrm{6th coefficient}&210 \cdot \dfrac{6}{5}&=252;\\
+\textrm{7th coefficient}&252 \cdot \dfrac{5}{6}&=210;\\
+\textrm{8th coefficient}&210 \cdot \dfrac{4}{7}&=120;\\
+\textrm{9th coefficient}&120 \cdot \dfrac{3}{8}&=45;\\
+\textrm{10th coefficient}&45 \cdot \dfrac{2}{9}&=10;\\
+\textrm{11th coefficient}&10 \cdot \dfrac{1}{10}&=1.
 \end{array}
 $$
 
