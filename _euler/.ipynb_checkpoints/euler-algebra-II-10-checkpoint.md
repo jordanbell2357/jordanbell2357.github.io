@@ -281,7 +281,7 @@ $$
 \textrm{5th coefficient}&\dfrac{7 \cdot 6 \cdot 5 \cdot 4}{1\cdot 2 \cdot 3 \cdot 4}&=35\\
 \textrm{6th coefficient}&\dfrac{7 \cdot 6 \cdot 5 \cdot 4 \cdot 3}{1\cdot 2 \cdot 3 \cdot 4 \cdot 5}&=21\\
 \textrm{7th coefficient}&\dfrac{7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2}{1\cdot 2 \cdot 3 \cdot 4 \cdot 5 \cdot 6}&=7\\
-\textrm{8th coefficient}&=\dfrac{7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{1\cdot 2 \cdot 3 \cdot 4 \cdot 5 \cdot 6 \cdot 7}&=1.
+\textrm{8th coefficient}&\dfrac{7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{1\cdot 2 \cdot 3 \cdot 4 \cdot 5 \cdot 6 \cdot 7}&=1.
 \end{array}
 $$
 
@@ -308,7 +308,7 @@ consequently, the
 
 $$
 \begin{array}{lll}
-\textrm{1st coefficient}&=&1;\\
+\textrm{1st coefficient}&&=1;\\
 \textrm{2nd coefficient}&\dfrac{4}{1}&=4;\\
 \textrm{3rd coefficient}&\dfrac{4}{1} \cdot \dfrac{3}{2}&=6;\\
 \textrm{4th coefficient}&\dfrac{4}{1} \cdot \dfrac{3}{2} \cdot \dfrac{2}{3}&=4;\\

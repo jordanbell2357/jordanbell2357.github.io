@@ -51,7 +51,7 @@ been demonstrated that the quotient multiplied by the divisor
 will give the dividend, it is evident that $$\frac{a}{b}$$ multiplied by $$b$$
 must produce $$a$$.
 
-**103.** Having thus shewn how a fraction is to be multiplied by an integer;
+**103.** Having thus shown how a fraction is to be multiplied by an integer;
 let us now consider also how a fraction
 is to be divided by an integer. This inquiry is necessary,
 before we proceed to the multiplication of fractions by fractions. It is evident,
@@ -109,7 +109,7 @@ Hence the following rule for multiplying fractions. Multiply the numerators toge
 
 ¾ by ⁵⁄₁₂ produces ¹⁵⁄₄₈, or ⁵⁄₁₆; etc.
 
-**107.** It now remains to shew how one fraction may be
+**107.** It now remains to show how one fraction may be
 divided by another. Here we remark first, that if the two
 fractions have the same number for a denominator, the
 division takes place only with respect to the numerators;
