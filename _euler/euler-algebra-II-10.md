@@ -211,7 +211,7 @@ law by which they are formed; as will appear from the
 following Table.
 
 <a href="https://artofproblemsolving.com/texer/qlwaqoyn">
-<img src="/assets/euler/qlwaqoyn.png" alt="Binomial coefficients for 1st power to 10th power" width="800" height="288" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/qlwaqoyn.png" alt="Binomial coefficients for 1st power to 10th power" width="600" height="215" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 
