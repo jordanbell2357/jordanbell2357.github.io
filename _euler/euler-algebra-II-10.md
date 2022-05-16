@@ -232,6 +232,18 @@ the coefficients. This sum, in the preceding example, is 1024,
 and accordingly $$(1+1)^{10}=2^{10}=1024$$. It is the same
 with respect to all other powers; thus, we have for the
 
+$$
+\begin{array}{rl}
+\textrm{1st}&1+1=2=2^1,\\
+\textrm{2nd}&1+2+1=4=2^2,\\
+\textrm{3rd}&=1+3+3+1=8=2^3,\\
+\textrm{4th}&=1+4+6+4+1=16=2^4,\\
+\textrm{5th}&=1+5+10+10+5+1=32=2^5,\\
+\textrm{6th}&=1+6+15+20+15+6+1=64=2^6,\\
+\textrm{7th}&=1+7+21+35+35+21+7+1=128=2^7,\\
+&\textrm{etc.}
+\end{array}
+$$
 
 
 **347.** Another necessary remark, with regard to the coefficients, is,
