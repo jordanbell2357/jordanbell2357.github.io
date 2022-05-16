@@ -212,7 +212,7 @@ following Table.[^2]
 
 [^2]: <https://tex.stackexchange.com/questions/17522/pascals-triangle-in-tikz>
 
-![
+![Binomial coefficients for 1st power to 10th power](/assets/euler/pascal.png)
 
 $$
 \begin{array}{rccccccccccccccccccccc}
