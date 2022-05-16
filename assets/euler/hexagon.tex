@@ -45,12 +45,19 @@
 \begin{document}
 \newdimen\R
 \R=.4cm
+\newcommand\mycolor{gray}
 \begin{tikzpicture}[line width=.8pt]
-  \foreach \k in {1,...,10}{
+  \foreach \k in {0,...,10}{
     \begin{scope}[shift={(-60:{sqrt(3)*\R*\k})}]
       \pgfmathtruncatemacro\ystart{10-\k}
       \foreach \n in {0,...,\ystart}{
         \pgfmathtruncatemacro\newn{\n+\k}
+        \ifthenelse{\k=0}{\def\mycolor{pink}}{}
+        \ifthenelse{\k=1}{\def\mycolor{yellow}}{}
+        \ifthenelse{\k=2}{\def\mycolor{blue}}{}
+        \ifthenelse{\k=3}{\def\mycolor{green}}{}
+        \ifthenelse{\k=8 \AND \n < 4}{\def\mycolor{purple}}{}
+        \ifthenelse{\k=9 \AND \n = 3}{\def\mycolor{purple}}{}
         \begin{scope}[shift={(-120:{sqrt(3)*\R*\n})}]
            \draw 
              (30:\R) \foreach \x in {90,150,...,330} {
