@@ -265,12 +265,97 @@ $$
 In this arrangement, we perceive that the numerators begin
 by the exponent of the power required, and that they
 diminish successively by unity; while the denominators
-follow in the natural order of the numbers, 1, 2, 3, 4, etc..
+follow in the natural order of the numbers, 1, 2, 3, 4, etc.
 Now, the first coefficient being always 1, the first fraction
 gives the second coefficient; the product of the first two
 fractions, multiplied together, represents the third coefficient;
 the product of the three first fractions represents the fourth
 coefficient, and so on. Thus, the
+
+$$
+\begin{array}{lll}
+\textrm{1st coefficient}&1&=1\\
+\textrm{2nd coefficient}&\dfrac{7}{1}&=7\\
+\textrm{3rd coefficient}&\dfrac{7 \cdot 6}{1\cdot 2}&=21\\
+\textrm{4th coefficient}&\dfrac{7 \cdot 6 \cdot 5}{1\cdot 2 \cdot 3}&=35\\
+\textrm{5th coefficient}&\dfrac{7 \cdot 6 \cdot 5 \cdot 4}{1\cdot 2 \cdot 3 \cdot 4}&=35\\
+\textrm{6th coefficient}&\dfrac{7 \cdot 6 \cdot 5 \cdot 4 \cdot 3}{1\cdot 2 \cdot 3 \cdot 4 \cdot 5}&=21\\
+\textrm{7th coefficient}&\dfrac{7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2}{1\cdot 2 \cdot 3 \cdot 4 \cdot 5 \cdot 6}&=7\\
+\textrm{8th coefficient}&=\dfrac{7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1}{1\cdot 2 \cdot 3 \cdot 4 \cdot 5 \cdot 6 \cdot 7}&=1.
+\end{array}
+$$
+
+**349.** So that we have, for the second power, the fractions
+$$\frac{2}{1},\frac{1}{2}$$; whence the first coefficient is 1,
+the second $$\frac{2}{1}=2$$, and
+the third $$2 \cdot \frac{1}{2}=1$$.
+
+The third power furnishes the fractions $$\frac{3}{1},\frac{2}{2},\frac{1}{3}$$;
+wherefore the
+
+$$
+\begin{array}{lll}
+\textrm{1st coefficient}&=1;&\\
+\textrm{2nd coefficient}&\dfrac{3}{1}&=3;\\
+\textrm{3rd coefficient}&3 \cdot \dfrac{2}{2}&=3;\\
+\textrm{4th coefficient}&\dfrac{3}{1} \cdot \dfrac{2}{2} \cdot \dfrac{1}{3}&=1.\\
+\end{array}
+$$
+
+We have, for the fourth power, the fractions
+$$\frac{4}{1},\frac{3}{2},\frac{2}{3},\frac{1}{4}$$,
+consequently, the
+
+$$
+\begin{array}{lll}
+\textrm{1st coefficient}&=1;&\\
+\textrm{2nd coefficient}&\dfrac{4}{1}&=4;\\
+\textrm{3rd coefficient}&\dfrac{4}{1} \cdot \dfrac{3}{2}&=6;\\
+\textrm{4th coefficient}&\dfrac{4}{1} \cdot \dfrac{3}{2} \cdot \dfrac{2}{3}&=4;\\
+\textrm{5th coefficient}&\dfrac{4}{1} \cdot \dfrac{3}{2} \cdot \dfrac{2}{3} \cdot \dfrac{1}{4}&=1.
+\end{array}
+$$
+
+**350.** This rule evidently renders it unnecessary to find
+the coefficients of the preceding powers, as it enables us to
+discover immediately the coefficients which belong to any
+one proposed. Thus, for the tenth power, we write the
+fractions
+
+$$\frac{10}{1},\frac{9}{2},\frac{8}{3},\frac{7}{4},\frac{6}{5},\frac{5}{6},\frac{4}{7},\frac{3}{8},\frac{2}{9},\frac{1}{10},$$
+
+by means of which we
+find the
+
+$$
+\begin{array}{lll}
+\textrm{1st coefficient}&=1;&\\
+\textrm{2nd coefficient}&\dfrac{10}{1}&=10;\\
+\textrm{3rd coefficient}&10 \cdot \dfrac{9}{2}&=45;\\
+\textrm{4th coefficient}&45 \cdot \dfrac{8}{3}&=120;\\
+\textrm{5th coefficient}&120 \dfrac{7}{4}&=210;\\
+\textrm{6th coefficient}&210 \dfrac{6}{5}&=252;\\
+\textrm{7th coefficient}&252 \dfrac{5}{6}&=210;\\
+\textrm{8th coefficient}&210 \dfrac{4}{7}&=120;\\
+\textrm{9th coefficient}&120 \dfrac{3}{8}&=45;\\
+\textrm{10th coefficient}&45 \dfrac{2}{9}&=10;\\
+\textrm{11th coefficient}&10 \dfrac{1}{10}&=1.
+\end{array}
+$$
+
+**351.** We may also write these fractions as they are,
+without computing their value; and in this manner it is
+easy to express any power of $$a+b$$. Thus,
+
+$$
+(a+b)^{100}=a^{100}+\frac{100}{1}a^{99}b+\frac{100\cdot 99}{1\cdot 2}a^{98}b^2
++\frac{100\cdot 99\cdot 98}{1\cdot 2\cdot 3}a^{97}b^3
++\frac{100\cdot 99\cdot 98 \cdot 97}{1\cdot 2\cdot 3 \cdot 4}a^{96}b^4
++\textrm{etc.}
+$$
+
+Whence the law of the
+succeeding terms may be easily deduced.
 
 
 #### References
