@@ -212,6 +212,8 @@ following Table.[^2]
 
 [^2]: <https://tex.stackexchange.com/questions/17522/pascals-triangle-in-tikz> and <https://texample.net/tikz/examples/pascal-triangle/>
 
+![Binomial coefficients for 1st power to 10th power](/assets/euler/qlwaqoyn.png)
+
 ![Binomial coefficients for 1st power to 10th power](/assets/euler/triangle.png)
 
 ![Binomial coefficients for 1st power to 10th power](/assets/euler/hexagon.png)
