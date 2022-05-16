@@ -214,6 +214,9 @@ following Table.
 <img src="/assets/euler/qlwaqoyn.png" alt="Binomial coefficients for 1st power to 10th power" width="600" height="215" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
+<a href="https://artofproblemsolving.com/texer/qlwaqoyn">
+<img src="/assets/euler/qlwaqoyn.png" alt="Binomial coefficients for 1st power to 10th power" width="700" height="252" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
 We see then that the tenth power of $$a+b$$ will be
 
