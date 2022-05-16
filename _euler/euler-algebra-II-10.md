@@ -210,7 +210,9 @@ continue those coefficients, we shall not fail to discover the
 law by which they are formed; as will appear from the
 following Table.[^2]
 
-[^2]: <https://www.bedroomlan.org/coding/pascals-triangle-latex/>
+[^2]: <https://tex.stackexchange.com/questions/17522/pascals-triangle-in-tikz>
+
+![
 
 $$
 \begin{array}{rccccccccccccccccccccc}
