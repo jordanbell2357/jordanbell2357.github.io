@@ -8,7 +8,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 5
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 5. "Of the Division of Simple Quantities."
 
 **45.** When a number is to be separated into two, three, or
-more equal parts, it is done by means of *division*, which
+more equal parts, it is done by means of division, which
 enables us to determine the magnitude of one of those parts.
 Wlien we wish, for example, to separate the number 12 into
 three equal parts, we find by division that each of those
@@ -21,7 +21,7 @@ called the **divisor**; the magnitude of one of those parts,
 determined by the division, is called the **quotient**: thus, in
 the above example,
 
-12 is the dividend,  
+12 is the dividend, or the number to be divided,    
 3 is the divisor, and  
 4 is the quotient.
 
@@ -89,16 +89,16 @@ small; and 7 · 4 makes 28, which is greater than 24. We
 discover, however, from this, that the quotient must be
 greater than 3, and less than 4. In order therefore to
 determine it exactly, we employ another species of numbers,
-which are called *fractions*, and which we shall consider in
+which are called fractions, and which we shall consider in
 one of the following chapters.
 
-**50.** Before we proceed to the use of fractions, it is usual
+**53.** Before we proceed to the use of fractions, it is usual
 to be satisfied with the whole number which approaches
 nearest to the true quotient, but at the same time paying
 attention to the remamder which is left; thus we say, 7 in
 24 goes 3 times, and the remainder is 3, because 3 times 7
 produces only 21, which is 3 less than 24. We may also
-consider the following examples in the same manner
+consider the following examples in the same manner:
 
 <a href="https://artofproblemsolving.com/texer/abfbqtug">
 <img src="/assets/euler/abfbqtug.png" alt="Long division" width="60" height="114">
@@ -142,8 +142,8 @@ product of $$-a$$ by $$+b$$.
 the same rules to be observed that we have
 seen take place in multiplication; namely
 
-+ by + makes + ; + by - makes - ;  
-- by + makes - ; -by - makes + :
+`+ by + makes + ; + by - makes - ;  
+`- by + makes - ; -by - makes + :
 
 or, in few words, like signs give plus, and unlike signs give
 minus.
