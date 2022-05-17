@@ -16,13 +16,13 @@ $$a$$, $$b$$, $$c$$, $$d$$, are the factors of the product $$abcd$$.
 multiplied together, we shall soon find that some of them cannot result from such a
 multiplication, and consequently have not any factors; while others may be the
 products of two or more numbers multiplied together, and may consequently have two or more
-factors. Thus 4 is produced by 2 · 2; 6 by 2 · 3; 8 by
-2 · 2 · 2; 27 by 3 · 3 · 3; and 10 by 2 · 5, etc.
+factors. Thus 4 is produced by 2·2; 6 by 2·3; 8 by
+2·2·2; 27 by 3·3·3; and 10 by 2·5, etc.
 
 **39.** But on the other hand, the numbers 2, 3, 5, 7, 11,
 13, 17, etc. cannot be represented in the same manner by
 factors, unless for that purpose we make use of unity, and
-represent 2, for instance, by 1 · 2. But the numbers
+represent 2, for instance, by 1·2. But the numbers
 which are multiplied by 1 remaining the same, it is not
 proper to reckon unity as a factor.
 
@@ -46,9 +46,9 @@ by factors, result from the prime numbers above mentioned;
 that is to say, all their factors are prime numbers. For, if
 we find a factor which is not a prime number, it may always
 be decomposed and represented by two or more prime numbers. When we have represented, for instance, the number
-30 by 5 · 6, it is evident that 6 not being a prime number,
-but being produced by 2 · 3, we might have represented
-30 by 5 · 2 · 3, or by 2 · 3 · 5; that is to say, by factors which are all prime numbers.
+30 by 5·6, it is evident that 6 not being a prime number,
+but being produced by 2·3, we might have represented
+30 by 5·2·3, or by 2·3·5; that is to say, by factors which are all prime numbers.
 
 **42.** If we now consider those composite numbers which may
 be resolved into prime factors, we shall observe a great difference among them; thus we shall
@@ -57,29 +57,29 @@ only two factors, that others have three, and others a still
 greater number. We have already seen, for example,
 that
 
-4 is the same as 2 · 2,  
-6 is the same as 2 · 3,  
-8 is the same as 2 · 2 · 2,  
-9 is the same as 3 · 3,  
-10 is the same as 2 · 5,  
-12 is the same as 2 · 2 · 3,  
-14 is the same as 2 · 7,  
-15 is the same as 3 · 5,  
+4 is the same as 2·2,  
+6 is the same as 2·3,  
+8 is the same as 2·2·2,  
+9 is the same as 3·3,  
+10 is the same as 2·5,  
+12 is the same as 2·2·3,  
+14 is the same as 2·7,  
+15 is the same as 3·5,  
 etc.
 
 **43.** Hence, it is easy to find a method for analysing any
 number, or resolving it into its simple factors. Let there be
 proposed, for instance, the number 360; we shall represent
-it first by 2 · 180. Now 180 is equal to 2 · 90, and
+it first by 2·180. Now 180 is equal to 2·90, and
 
-90 is the same as 2 · 45,  
-45 is the same as 3 · 15,  
-15 is the same as 3 · 5.
+90 is the same as 2·45,  
+45 is the same as 3·15,  
+15 is the same as 3·5.
 
 So that the number 360 may be represented by these
 simple factors,
 
-2 · 2 · 2 · 3 · 3 · 5;
+2·2·2·3·3·5;
 
 since all these
 numbers multiplied together produce 360.

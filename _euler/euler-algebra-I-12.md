@@ -183,8 +183,8 @@ or $$\surd 24$$, or $$\surd 6\cdot 4$$, or $$2\surd 6$$.
 **137.** There is nothing in particular to be observed in addition and subtraction,
 because we only connect the numbers
 by the signs + and -: for example, √2 added to √3 is written
-√2 + √3; and √3 subtracted from √5 is written
-√5 - √3.
+√2+√3; and √3 subtracted from √5 is written
+√5-√3.
 
 **138.** Wo may observe lastly, that in order to distinguish
 the irrational numbers, we call all other numbers, both integral and fractional,

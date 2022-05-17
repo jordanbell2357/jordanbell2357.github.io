@@ -125,7 +125,7 @@ In order to illustrate what we have said by an example,
 suppose it were proposed to divide the number 12 into two
 such parts, that the product of those parts may be 40. If
 we resolve this question by the ordinary rules, we find for
-the parts sought 6+√-4 and 6-√-4; $$6+\surd -4$$ and $$6 - \surd - 4$$;
+the parts sought 6+√-4 and 6-√-4;
 but these numbers being imaginary, we conclude, that it is impossible to
 resolve the question.
 
