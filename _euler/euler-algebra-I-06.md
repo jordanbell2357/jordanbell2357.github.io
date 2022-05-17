@@ -85,14 +85,14 @@ and may then be represented by the expression $$4a+3$$.
 All possible integer numbers are contained therefore in
 one or other of these four expressions;
 
-$$4a, 4a + 1, 4a+ 2, 4a + 3.$$
+$$4a, \; 4a + 1, \; 4a+ 2, \; 4a + 3.$$
 
 **62.** It is also nearly the same when the divisor is 5;
 for all numbers which can be divided by it are comprehended in the expression
 $$5a$$, and those which cannot be
 divided by 5, are reducible to one of the following expressions:
 
-$$5a+1, 5a+2, 5a + 3, 5a + 4;$$
+$$5a+1, \; 5a+2, \; 5a + 3, \; 5a + 4;$$
 
 and in the same manner ve may continue, and consider any
 greater divisor.
@@ -150,12 +150,196 @@ number all its divisors.
 |   |   |   |   |   |   |   |   |   |    |    | 12 |    |    |    |    |    | 18 |    | 20 |
 | 1 | 2 | 2 | 3 | 2 | 4 | 2 | 4 | 3 | 4  | 2  | 6  | 2  | 4  | 4  | 5  | 2  | 6  | 2  | 6  |
 
-**67.** Lastly, it ought to be observed that 0, or *nothing*;
+<table>
+<thead>
+  <tr>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+    <th>14</th>
+    <th>15</th>
+    <th>16</th>
+    <th>17</th>
+    <th>18</th>
+    <th>19</th>
+    <th>20</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>2</td>
+    <td>3</td>
+    <td>2</td>
+    <td>5</td>
+    <td>2</td>
+    <td>7</td>
+    <td>2</td>
+    <td>3</td>
+    <td>2</td>
+    <td>11</td>
+    <td>2</td>
+    <td>13</td>
+    <td>2</td>
+    <td>3</td>
+    <td>2</td>
+    <td>17</td>
+    <td>2</td>
+    <td>19</td>
+    <td>2</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>3</td>
+    <td></td>
+    <td>4</td>
+    <td>9</td>
+    <td>5</td>
+    <td></td>
+    <td>3</td>
+    <td></td>
+    <td>7</td>
+    <td>5</td>
+    <td>4</td>
+    <td></td>
+    <td>3</td>
+    <td></td>
+    <td>4</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td>8</td>
+    <td></td>
+    <td>10</td>
+    <td></td>
+    <td>4</td>
+    <td></td>
+    <td>14</td>
+    <td>15</td>
+    <td>8</td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td>5</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>6</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>16</td>
+    <td></td>
+    <td>9</td>
+    <td></td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>12</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>18</td>
+    <td></td>
+    <td>20</td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>2</td>
+    <td>2</td>
+    <td>3</td>
+    <td>2</td>
+    <td>4</td>
+    <td>2</td>
+    <td>4</td>
+    <td>3</td>
+    <td>4</td>
+    <td>2</td>
+    <td>6</td>
+    <td>2</td>
+    <td>4</td>
+    <td>4</td>
+    <td>5</td>
+    <td>2</td>
+    <td>6</td>
+    <td>2</td>
+    <td>6</td>
+  </tr>
+</tbody>
+</table>
+
+
+**67.** Lastly, it ought to be observed that 0, or nothing;
 may be considered as a number which has the property of
 being divisible by all possible numbers; because by whatever number
 $$a$$ we divide 0, the quotient is always 0; for it
 must be remarked, that the multiplication of any number
-by *nothing* produces nothing, and therefore 0 times $$a$$, or
+by nothing produces nothing, and therefore 0 times $$a$$, or
 $$0a$$, is 0.
 
 
