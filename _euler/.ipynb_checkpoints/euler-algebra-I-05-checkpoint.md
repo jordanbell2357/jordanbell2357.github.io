@@ -143,7 +143,7 @@ the same rules to be observed that we have
 seen take place in multiplication; namely
 
 \+ by + makes + ; + by - makes - ;  
-\- by + makes - ; -by - makes + :
+\- by + makes - ; -by - makes + ;
 
 or, in few words, like signs give *plus*, and unlike signs give
 *minus*.
