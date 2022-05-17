@@ -67,32 +67,14 @@ that
 15 is the same as 3 · 5,  
 etc.
 
-$$
-\begin{array}{ll}
-\textrm{4 is the same as}&2\cdot 2,\\
-\textrm{6 is the same as}&2\cdot 3,\\
-\textrm{8 is the same as}&2\cdot 2\cdot 2,\\
-\textrm{9 is the same as}&3 \cdot 3,\\
-\textrm{10 is the same as}&2\cdot 5,\\
-\textrm{12 is the same as}&2\cdot 2\cdot 3,\\
-\textrm{14 is the same as}&2\cdot 7,\\
-\textrm{15 is the same as}&3\cdot 5,\\
-\textrm{etc.}&
-\end{array}
-$$
-
 **43.** Hence, it is easy to find a method for analysing any
 number, or resolving it into its simple factors. Let there be
 proposed, for instance, the number 360; we shall represent
 it first by 2 · 180. Now 180 is equal to 2 · 90, and
 
-$$
-\begin{array}{ll}
-\textrm{90 is the same as}&2\cdot 45,\\
-\textrm{45 is the same as}&3\cdot 15,\\
-\textrm{15 is the same as}&3\cdot 5,
-\end{array}
-$$
+90 is the same as 2 · 45,  
+45 is the same as 3 · 15,  
+15 is the same as 3 · 5.
 
 So that the number 360 may be represented by these
 simple factors,
