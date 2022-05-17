@@ -119,13 +119,13 @@ by √⅔ makes ⅔; and, in general, that $$\surd a$$ multiplied by $$\surd a$$
 produces $$a$$.
 
 **132.** But when it is required to multiply $$\surd a$$ by $$\surd b$$,
-the product is $$\surd(ab)$$; for we have already shown, that if a square
+the product is $$\surd ab$$; for we have already shown, that if a square
 has two or more factors, its root must be composed of the
 roots of those factors; we therefore find the square root of
-the product $$ab$$, which is $$\surd(ab)$$, by multiplying the square
+the product $$ab$$, which is $$\surd ab$$, by multiplying the square
 root of $$a$$, or $$\surd a$$, by the square root of $$b$$, or $$\surd b$$; etc.
 It is evident from this, that if $$b$$ were equal to $$a$$, we should
-have $$\surd(aa)$$ for the product of $$\surd a$$ by $$\surd b$$. But $$\surd(aa)$$ is
+have $$\surd aa$$ for the product of $$\surd a$$ by $$\surd b$$. But $$\surd aa$$ is
 evidently $$a$$, since $$aa$$ is the square of $$a$$.
 
 **133.** In division, if it were required, for example, to
@@ -148,16 +148,37 @@ thus, for example, 2 multiplied by √5
 makes 2√5; and 3 times √2 makes 3√2. In the second
 example, however, as 3 is equal to √9, we may also express
 3 times √2 by √9 multiplied by √2, or by √18; also $$2\surd a$$
-is the same as $$\surd(4a)$$, and $$3 \surd a$$ the same as $$\surd(9a)$$;
+is the same as $$\surd 4a$$, and $$3 \surd a$$ the same as $$\surd 9a$$;
 and, in general, $$b\surd a$$ has the same value as the square root of $$bba$$,
-or $$\surd(bba)$$: whence we infer reciprocally, that when the number which
+or $$\surd bba$$: whence we infer reciprocally, that when the number which
 is preceded by the radical sign contains a square,
 we may take the root of that square, and put it before the
-sign, as we should do in writing $$b \surd a$$ instead of $$\surd(bba)$$.
+sign, as we should do in writing $$b \surd a$$ instead of $$\surd bba$$.
 After this, the following reductions will be easily understood:
-and so on
+
+√8, or √2·4, is equal to 2√2.  
+√12, or √3·4, is equal to 2√3.  
+√18, or √2·9, is equal to 3√2.  
+√24, or √6·4, is equal to 2√6.  
+√32, or √2·16, is equal to 4√2.  
+√75, or √3·25, is equal to 5√3, and so on.
 
 **136.** Division is founded on the same principles; as
+$$\surd a$$ divided by $$\surd b$$ gives $$\frac{\surd a}{\surd b}$$, or
+$$\surd \frac{a}{b}$$. In the same manner,
+
+$$\frac{\surd 8}{\surd 12}$$ is equal to $$\surd \frac{8}{2}$$, or $$\surd 4$$, or 2  
+$$\frac{\surd 18}{\surd 2}$$ is equal to $$\surd \frac{18}{2}$$, or $$\surd 9$$, or 3  
+$$\frac{\surd 12}{\surd 3}$$ is equal to $$\surd \frac{12}{3}$$, or $$\surd 4$$, or 2.
+
+Farther,
+
+$$\frac{2}{\surd 2}$$ is equal to $$\frac{\surd 4}{\surd 2}$$, or $$\surd \frac{4}{2}$$,
+or $$\surd 2$$,  
+$$\frac{3}{\surd 3}$$ is equal to $$\frac{\surd 9}{\surd 3}$$, or $$\surd \frac{9}{3}$$,
+or $$\surd 3$$,  
+$$\frac{12}{\surd 6}$$ is equal to $$\frac{\surd 144}{\surd 6}$$, or $$\surd \frac{144}{6}$$,
+or $$\surd 24$$, or $$\surd 6\cdot 4$$, or $$2\surd 6$$.
 
 **137.** There is nothing in particular to be observed in addition and subtraction,
 because we only connect the numbers
