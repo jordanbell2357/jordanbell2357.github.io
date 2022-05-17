@@ -77,26 +77,27 @@ is ²⁷⁄₈ or 3⅜; also the cube of 1¼, or of the single fraction
 ⁵⁄₄, is ¹²⁵⁄₆₄, or 1⁶¹⁄₆₄; and the cube of 3¼, or of ¹³⁄₄,
 is ²¹⁹⁷⁄₆₄, or 34²¹⁄₆₄.
 
-**156.** Since aaa is the cube of a, that of ah will be aaahhh ;
+**156.** Since $$aaa$$ is the cube of $$a$$, that of
+$$ab$$ will be $$aaabbb$$;
 whence we see, that if a number has two or more factors, we
 may find its cube by multiplying together the cubes of those
-factors. For example, as 12 is equal to 3 x 4, Ave multiply
+factors. For example, as 12 is equal to 3 · 4, we multiply
 the cube of 3, which is 27, by the cube of 4, which is 64,
 and we obtain 1728, the cube of 12 ; and farther, the cube
-of %a is Sflofl, and consequently 8 times greater than the
-cube of a : likewise, the cube of 3a is 9!laaa ; that is to say,
-27 times greater than the cube of a.
+of $$2a$$ is $$8aaa$$, and consequently 8 times greater than the
+cube of $$a$$: likewise, the cube of $$3a$$ is $$27aaa$$; that is to say,
+27 times greater than the cube of $$a$$.
 
-157. Let us attend here also to the signs -|- and —. It
-is evident that the cube of a positive number -}-« must also
-be positive, that is -\-aaa\ but if it be required to cube a
-negative number —-a, it is found by first taking the square,
-which is -{-aa, and then multiplying, according to the rule,
-this square by —o, which gives for the cube required —aaa.
-In this respect, therefore, it is not the same -with cubic numbers as with squares, since the latter are always positive
-:
-whereas the cube of —1 is —1, that of —2 is —8, that of
-—3 is —27, and so on.
+**157.** Let us attend here also to the signs + and -. It
+is evident that the cube of a positive number $$+a$$ must also
+be positive, that is $$+aaa$$; but if it be required to cube a
+negative number $$-a$$, it is found by first taking the square,
+which is $$+aa$$, and then multiplying, according to the rule,
+this square by $$-a$$, which gives for the cube required $$-aaa$$.
+In this respect, therefore, it is not the same with cubic numbers
+as with squares, since the latter are always positive:
+whereas the cube of -1 is -1, that of -2 is -8, that of
+-3 is -27, and so on.
 
 
 
