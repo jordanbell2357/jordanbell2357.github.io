@@ -142,11 +142,11 @@ product of $$-a$$ by $$+b$$.
 the same rules to be observed that we have
 seen take place in multiplication; namely
 
-`+ by + makes + ; + by - makes - ;  
-`- by + makes - ; -by - makes + :
+\+ by + makes + ; + by - makes - ;  
+\- by + makes - ; -by - makes + :
 
-or, in few words, like signs give plus, and unlike signs give
-minus.
+or, in few words, like signs give *plus*, and unlike signs give
+*minus*.
 
 **57.** Thus, when we divide $$18pq$$ by $$-3p$$, the quotient is
 $$-6q$$. Farther;
