@@ -5,7 +5,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 7
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
 
-With emendations by me to Hewlett's English translation, using the German text from the
+With changes by me to Hewlett's English translation, using the German text from the
 *Leonhardi Euleri Opera omnia*. In particular, "one integer" in the English text
 corresponds to "ein Gantzes" in the German text, which is properly translated
 "one whole". (The English translation is through the French translation, and the
