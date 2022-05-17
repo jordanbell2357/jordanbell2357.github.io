@@ -16,7 +16,7 @@ multiplying $$a$$ by itself, or by $$a$$, and that square $$aa$$ again
 by $$a$$.
 
 The cubes of the natural numbers, therefore, succeed
-each other. in the followinsf order
+each other in the followinsf order:
 
 <table>
   <tr>
@@ -54,7 +54,7 @@ numbers:
 
 7, 19, 37, 61, 91, 127, 169, 217, 271.
 
-Where we do not at first observe any regularity in them ;
+Where we do not at first observe any regularity in them;
 but if we take the respective differences of these numbers, we
 find the following series:
 
@@ -69,9 +69,34 @@ cube of ⅔. In the same manner, we have only to take the
 cube of the numerator and that of the denominator separately,
 and we shall have ²⁷⁄₆₄ for the cube of ¾.
 
-**155.** If it be required to find the cube of a mixed number, we must first reduce it to a single fraction, and then
+**155.** If it be required to find the cube of a mixed number, we must first reduce
+it to a single fraction, and then
 proceed in the manner that has been described. To find,
-for example, the cube of li, we must take that of \, which
+for example, the cube of 1½, we must take that of  ³⁄₂, which
+is ²⁷⁄₈ or 3⅜; also the cube of 1¼, or of the single fraction
+⁵⁄₄, is ¹²⁵⁄₆₄, or 1⁶¹⁄₆₄; and the cube of 3¼, or of ¹³⁄₄,
+is ²¹⁹⁷⁄₆₄, or 34²¹⁄₆₄.
+
+**156.** Since aaa is the cube of a, that of ah will be aaahhh ;
+whence we see, that if a number has two or more factors, we
+may find its cube by multiplying together the cubes of those
+factors. For example, as 12 is equal to 3 x 4, Ave multiply
+the cube of 3, which is 27, by the cube of 4, which is 64,
+and we obtain 1728, the cube of 12 ; and farther, the cube
+of %a is Sflofl, and consequently 8 times greater than the
+cube of a : likewise, the cube of 3a is 9!laaa ; that is to say,
+27 times greater than the cube of a.
+
+157. Let us attend here also to the signs -|- and —. It
+is evident that the cube of a positive number -}-« must also
+be positive, that is -\-aaa\ but if it be required to cube a
+negative number —-a, it is found by first taking the square,
+which is -{-aa, and then multiplying, according to the rule,
+this square by —o, which gives for the cube required —aaa.
+In this respect, therefore, it is not the same -with cubic numbers as with squares, since the latter are always positive
+:
+whereas the cube of —1 is —1, that of —2 is —8, that of
+—3 is —27, and so on.
 
 
 
