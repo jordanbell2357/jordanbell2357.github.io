@@ -24,11 +24,67 @@ to a given number, etc.
 **190.** As the square, or second root, is marked by the sign
 √, and the cubic, or third root, by the sign ∛, so the fourth
 root is represented by the sign ∜; the fifth root by the sign
-^ ; and so on. It is evident that, according to this method
-of expression, the sign of the square root ought to be*/:
+$$\sqrt[5]{\vphantom{1}}$$; and so on. It is evident that, according to this method
+of expression, the sign of the square root ought to be $$\sqrt[2]{\vphantom{1}}$$:
 but as of all roots this occurs most frequently, it has been
-aj^reed, for the sake of brevity, to omit the number 2 as the
-sign of this root. So that when the radical sign has no num
+agreed, for the sake of brevity, to omit the number 2 as the
+sign of this root. So that when the radical sign has no number prefixed to it,
+this always shows that the square root is
+meant.
+
+**191.** To explain this matter still better, we shall here
+exhibit the different roots of the number a, with their respective values
+
+$$\surd a$$ is the 2nd root of $$a$$,  
+$$\sqrt[3]{\vphantom{1}} a$$ is the 3rd root of $$a$$,  
+$$\sqrt[4]{\vphantom{1}} a$$ is the 4th root of $$a$$,  
+$$\sqrt[5]{\vphantom{1}} a$$ is the 5th root of $$a$$,  
+$$\sqrt[6]{\vphantom{1}} a$$ is the 6th root of $$a$$,
+
+and so on.
+
+So that, conversely,
+
+The 2nd power of $$\surd a$$ is $$a$$,  
+The 3rd power of $$\sqrt[3]{\vphantom{1}} a$$ is $$a$$,  
+The 4th power of $$\sqrt[4]{\vphantom{1}} a$$ is $$a$$,  
+The 5rd power of $$\sqrt[5]{\vphantom{1}} a$$ is $$a$$,  
+The 6rd power of $$\sqrt[6]{\vphantom{1}} a$$ is $$a$$,
+
+and so on.
+
+**192.** Whether the number $$a$$ therefore be great or small,
+we know what value to affix to all these roots of different
+degrees.
+
+It must be remarked also, that if we substitute unity for $$a$$,
+all those roots remain constantly 1; because all the powers
+of 1 have unity for their value. If the number a be greater
+than 1, all its roots will also exceed unity. Lastly, if that
+number be less than 1, all its roots will also be less than
+unity.
+
+**193.** When the number $$a$$ is positive, we know from what
+was before said of the square and cube roots, that all the
+other roots may also be determined, and will be real and
+possible numbers.
+
+But if the number $$a$$ be negative, its second, fourth, sixth,
+and all its even roots, become impossible, or imaginary numbers;
+because all the powers of an even order, whether of
+positive or of negative numbers, are affected by the sign +:
+whereas the third, fifth, seventh, and all its odd roots, become
+negative, but rational; because the odd powers of negative
+numbers are also negative.
+
+**194.** We have here also an inexhaustible source of new
+kinds of surds, or irrational quantities; for whenever the
+number $$a$$ is not really such a power, as some one of the
+foregoing indices represents, or seems to require, it is impossible
+to express that root either in whole numbers or in
+fractions; and, consequently, it must be classed among the
+numbers which are called irrational.
+
 
 
 #### References
