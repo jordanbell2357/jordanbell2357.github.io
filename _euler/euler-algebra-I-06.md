@@ -140,6 +140,16 @@ beside unity and themselves, other divisors, as may be seen
 from the following Table, in which are placed under each
 number all its divisors.
 
+| 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
+|---|---|---|---|---|---|---|---|---|----|----|----|----|----|----|----|----|----|----|----|
+| 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |
+|   | 2 | 3 | 2 | 5 | 2 | 7 | 2 | 3 | 2  | 11 | 2  | 13 | 2  | 3  | 2  | 17 | 2  | 19 | 2  |
+|   |   |   | 4 |   | 3 |   | 4 | 9 | 5  |    | 3  |    | 7  | 5  | 4  |    | 3  |    | 4  |
+|   |   |   |   |   | 6 |   | 8 |   | 10 |    | 4  |    | 14 | 15 | 8  |    | 6  |    | 5  |
+|   |   |   |   |   |   |   |   |   |    |    | 6  |    |    |    | 16 |    | 9  |    | 10 |
+|   |   |   |   |   |   |   |   |   |    |    | 12 |    |    |    |    |    | 18 |    | 20 |
+| 1 | 2 | 2 | 3 | 2 | 4 | 2 | 4 | 3 | 4  | 2  | 6  | 2  | 4  | 4  | 5  | 2  | 6  | 2  | 6  |
+
 **67.** Lastly, it ought to be observed that 0, or *nothing*;
 may be considered as a number which has the property of
 being divisible by all possible numbers; because by whatever number
