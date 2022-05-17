@@ -104,17 +104,14 @@ to ¹⁶⁹⁄₁₆, or to 10⁹⁄₁₆. The squares of the numbers between
 follow:
 
 <table>
-<thead>
   <tr>
-    <th>Numbers.</th>
-    <th>3</th>
-    <th>3¼</th>
-    <th>3½</th>
-    <th>3¾</th>
-    <th>4</th>
+    <td>Numbers.</td>
+    <td>3</td>
+    <td>3¼</td>
+    <td>3½</td>
+    <td>3¾</td>
+    <td>4</td>
   </tr>
-</thead>
-<tbody>
   <tr>
     <td>Squares.</td>
     <td>9</td>
@@ -123,7 +120,6 @@ follow:
     <td>14¹⁄₁₆</td>
     <td>16</td>
   </tr>
-</tbody>
 </table>
 
 From this small Table we may infer, that if a root contain
