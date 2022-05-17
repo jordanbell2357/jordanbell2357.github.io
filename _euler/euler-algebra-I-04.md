@@ -28,11 +28,11 @@ proper to reckon unity as a factor.
 
 All numbers, therefore, such as 2, 3, 5, 7, 11, 13, 17,
 etc. which cannot be represented by factors, are called
-*simple*, or *prime numbers*; whereas others, as 4, 6, 8, 9, 10,
+**simple**, or **prime numbers**; whereas others, as 4, 6, 8, 9, 10,
 12, 14, 15, 16, 18, etc. which may be represented by
-factors, are called *composite numbers*.
+factors, are called **composite numbers**.
 
-**40.** *Simple* or *prime numbers* deserve therefore particular attention, since they do not result
+**40.** Simple or prime numbers deserve therefore particular attention, since they do not result
 from the multiplication of two or more numbers. It is also particularly
 worthy of observation, that if we write these numbers in succession as they follow each other, thus,
 
@@ -41,7 +41,7 @@ worthy of observation, that if we write these numbers in succession as they foll
 we can trace no regular order; their increments being sometimes greater, sometimes less; and
 hitherto no one has been able to discover whether they follow any certain law or not.
 
-**41.** All *composite numbers*, which may be represented
+**41.** All composite numbers, which may be represented
 by factors, result from the prime numbers above mentioned;
 that is to say, all their factors are prime numbers. For, if
 we find a factor which is not a prime number, it may always
@@ -56,6 +56,16 @@ find that some have
 only two factors, that others have three, and others a still
 greater number. We have already seen, for example,
 that
+
+4 is the same as 2 · 2,  
+6 is the same as 2 · 3,  
+8 is the same as 2 · 2 · 2,  
+9 is the same as 3 · 3,  
+10 is the same as 2 · 5,  
+12 is the same as 2 · 2 · 3,  
+14 is the same as 2 · 7,  
+15 is the same as 3 · 5,  
+etc.
 
 $$
 \begin{array}{ll}
