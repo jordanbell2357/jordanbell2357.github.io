@@ -119,13 +119,13 @@ by √⅔ makes ⅔; and, in general, that $$\surd a$$ multiplied by $$\surd a$$
 produces $$a$$.
 
 **132.** But when it is required to multiply $$\surd a$$ by $$\surd b$$,
-the product is $$\sqrt{ab}$$; for we have already shown, that if a square
+the product is $$\surd(ab)$$; for we have already shown, that if a square
 has two or more factors, its root must be composed of the
 roots of those factors; we therefore find the square root of
-the product $$ab$$, which is $$\sqrt{ab}$$, by multiplying the square
+the product $$ab$$, which is $$\surd(ab)$$, by multiplying the square
 root of $$a$$, or $$\surd a$$, by the square root of $$b$$, or $$\surd b$$; etc.
 It is evident from this, that if $$b$$ were equal to $$a$$, we should
-have $$\sqrt{aa}$$ for the product of $$\surd a$$ by $$\surd b$$. But $$\sqrt{aa}$$ is
+have $$\surd(aa)$$ for the product of $$\surd a$$ by $$\surd b$$. But $$\surd(aa)$$ is
 evidently $$a$$, since $$aa$$ is the square of $$a$$.
 
 **133.** In division, if it were required, for example, to
@@ -148,12 +148,12 @@ thus, for example, 2 multiplied by √5
 makes 2√5; and 3 times √2 makes 3√2. In the second
 example, however, as 3 is equal to √9, we may also express
 3 times √2 by √9 multiplied by √2, or by √18; also $$2\surd a$$
-is the same as $$\sqrt{4a}$$, and $$3 \surd a$$ the same as $$\sqrt{9a}$$;
+is the same as $$\surd(4a)$$, and $$3 \surd a$$ the same as $$\surd(9a)$$;
 and, in general, $$b\surd a$$ has the same value as the square root of $$bba$$,
-or $$\sqrt{bba}$$: whence we infer reciprocally, that when the number which
+or $$\surd(bba)$$: whence we infer reciprocally, that when the number which
 is preceded by the radical sign contains a square,
 we may take the root of that square, and put it before the
-sign, as we should do in writing $$b \surd a$$ instead of $$\sqrt{bba}$$.
+sign, as we should do in writing $$b \surd a$$ instead of $$\surd(bba)$$.
 After this, the following reductions will be easily understood:
 and so on
 
