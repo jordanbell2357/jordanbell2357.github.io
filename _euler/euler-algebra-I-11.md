@@ -27,6 +27,57 @@ numbers; and for this purpose shall give the following small
 Table, on the first line of which several numbers, or roots,
 are ranged, and on the second their squares.
 
+<table>
+<thead>
+  <tr>
+    <th>Numbers</th>
+    <th>1</th>
+    <th>2</th>
+    <th>3</th>
+    <th>4</th>
+    <th>5</th>
+    <th>6</th>
+    <th>7</th>
+    <th>8</th>
+    <th>9</th>
+    <th>10</th>
+    <th>11</th>
+    <th>12</th>
+    <th>13</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Squares</td>
+    <td>1</td>
+    <td>4</td>
+    <td>9</td>
+    <td>16</td>
+    <td>25</td>
+    <td>36</td>
+    <td>49</td>
+    <td>64</td>
+    <td>81</td>
+    <td>100</td>
+    <td>121</td>
+    <td>144</td>
+    <td>169</td>
+  </tr>
+</tbody>
+</table>
+
+╔═════════╦═══╦═══╦═══╦════╦════╦════╦════╦════╦════╦═════╦═════╦═════╦═════╗
+║ Numbers ║ 1 ║ 2 ║ 3 ║ 4  ║ 5  ║ 6  ║ 7  ║ 8  ║ 9  ║ 10  ║ 11  ║ 12  ║ 13  ║
+╠═════════╬═══╬═══╬═══╬════╬════╬════╬════╬════╬════╬═════╬═════╬═════╬═════╣
+║ Squares ║ 1 ║ 4 ║ 9 ║ 16 ║ 25 ║ 36 ║ 49 ║ 64 ║ 81 ║ 100 ║ 121 ║ 144 ║ 169 ║
+╚═════════╩═══╩═══╩═══╩════╩════╩════╩════╩════╩════╩═════╩═════╩═════╩═════╝
+
++---------+---+---+---+----+----+----+----+----+----+-----+-----+-----+-----+
+| Numbers | 1 | 2 | 3 | 4  | 5  | 6  | 7  | 8  | 9  | 10  | 11  | 12  | 13  |
++---------+---+---+---+----+----+----+----+----+----+-----+-----+-----+-----+
+| Squares | 1 | 4 | 9 | 16 | 25 | 36 | 49 | 64 | 81 | 100 | 121 | 144 | 169 |
++---------+---+---+---+----+----+----+----+----+----+-----+-----+-----+-----+
+
 **117.** Here it will be readily perceived that the series of
 square numbers thus arranged has a singular property;
 namely, that if each of them be subtracted from that which
