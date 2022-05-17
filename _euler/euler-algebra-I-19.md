@@ -113,27 +113,30 @@ may be represented in a variety of ways; for $$\surd a$$ being the
 same as $$a^{\frac{1}{2}}$$, and ½ being transformable into the fractions, ²⁄₄,
 ³⁄₆, ⁴⁄₈, ⁵⁄₁₀, ⁶⁄₁₂, etc.
 it is evident that $$\surd a$$ is equal to $$\sqrt[4]{\vphantom{1}}a^2$$ or to
-$$\sqrt[6]{\vphantom{1}}a^2$$, or to "/a*, and so on. In the same manner, ^a, which
-is equal to a'^, will be equal to v/a-, or to ^a^, or to V^^-
-Hence also we see that the number a, or a^, might be represented by the following radical expressions
-:
-Va", ^a\ ^a\ ^a^ &c.
-205. This property is of great use in multiplication and
-division ; for if we have, for example, to multiply ^u by \/o,
-we write v^a' for l/i(^ and ^«^ instead of ^a ; so that in this
-manner we obtain the same radical sign for both, and the
-multiplication being now performed, gives the product ^a^.
-The same result is also deduced from a^~^, which is the
-I _i^
-product of a^ multiplied by a ^
-; for 4- ~l~ t ^^ T' ^^^^ conse-
--L
-quently the product required is a'',or^a^.
-On the contrary, if it were required to divide ^Uf or
-j^ j_ _ j^ 1^
-o^, by \/«, or a% we should have for the quotient a^ ^,
-3 2 I_
-or aJ % that is to say, «^, or ^a.
+$$\sqrt[6]{\vphantom{1}}a^3$$, or to $$\sqrt[8]{\vphantom{1}}a^4$$, and so on.
+In the same manner, $$\sqrt[3]{\vphantom{1}}a$$, which
+is equal to $$a^{\frac{1}{3}}$$, will be equal to $$\sqrt[6]{\vphantom{1}}a^2$$,
+or to $$\sqrt[9]{\vphantom{1}}a^3$$, or to $$\sqrt[12]{\vphantom{1}}a^4$$.
+Hence also we see that the number $$a$$, or $$a^1$$, might be represented
+by the following radical expressions:
+
+$$\sqrt[2]{\vphantom{1}}a^2, \; \sqrt[3]{\vphantom{1}}a^3, \; \sqrt[4]{\vphantom{1}}a^4, \; \sqrt[5]{\vphantom{1}}a^5, \; \textrm{etc.}$$
+
+**205.** This property is of great use in multiplication and
+division; for if we have, for example, to multiply $$\sqrt[2]{\vphantom{1}}a$$ by $$\sqrt[3]{\vphantom{1}}a$$,
+we write $$\sqrt[6]{\vphantom{1}}a^3$$ for $$\sqrt[2]{\vphantom{1}}a$$
+and $$\sqrt[6]{\vphantom{1}}a^2$$ instead of $$\sqrt[3]{\vphantom{1}}a$$;
+so that in this manner we obtain the same radical sign for both, and the
+multiplication being now performed, gives the product $$\sqrt[6]{\vphantom{1}}a^5$$.
+The same result is also deduced from $$a^{\frac{1}{2}+\frac{1}{3}}$$, which is the
+product of $$a^{\frac{1}{2}}$$ multiplied by $$a^{\frac{1}{3}}$$;
+for $$\frac{1}{2}+\frac{1}{3}=\frac{5}{6}$$, and consequently the product required is $$a^{\frac{5}{6}}$$,
+or $$\sqrt[6]{\vphantom{1}}a^5$$.
+
+On the contrary, if it were required to divide $$\sqrt[2]{\vphantom{1}}a$$, or
+$$a^{\frac{1}{2}}$$, 
+by $$\sqrt[3]{\vphantom{1}}a$$, or $$a^{\frac{1}{3}}$$, we should have for the quotient $$a^{\frac{1}{2}-\frac{1}{3}}$$,
+or $$a^{\frac{3}{6}-\frac{2}{6}}$$, that is to say, $$a^{\frac{1}{6}}$$, or $$\sqrt[6]{\vphantom{1}}a$$.
 
 
 
