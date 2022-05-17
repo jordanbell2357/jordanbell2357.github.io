@@ -66,18 +66,6 @@ are ranged, and on the second their squares.
 </tbody>
 </table>
 
-╔═════════╦═══╦═══╦═══╦════╦════╦════╦════╦════╦════╦═════╦═════╦═════╦═════╗
-║ Numbers ║ 1 ║ 2 ║ 3 ║ 4  ║ 5  ║ 6  ║ 7  ║ 8  ║ 9  ║ 10  ║ 11  ║ 12  ║ 13  ║
-╠═════════╬═══╬═══╬═══╬════╬════╬════╬════╬════╬════╬═════╬═════╬═════╬═════╣
-║ Squares ║ 1 ║ 4 ║ 9 ║ 16 ║ 25 ║ 36 ║ 49 ║ 64 ║ 81 ║ 100 ║ 121 ║ 144 ║ 169 ║
-╚═════════╩═══╩═══╩═══╩════╩════╩════╩════╩════╩════╩═════╩═════╩═════╩═════╝
-
-+---------+---+---+---+----+----+----+----+----+----+-----+-----+-----+-----+
-| Numbers | 1 | 2 | 3 | 4  | 5  | 6  | 7  | 8  | 9  | 10  | 11  | 12  | 13  |
-+---------+---+---+---+----+----+----+----+----+----+-----+-----+-----+-----+
-| Squares | 1 | 4 | 9 | 16 | 25 | 36 | 49 | 64 | 81 | 100 | 121 | 144 | 169 |
-+---------+---+---+---+----+----+----+----+----+----+-----+-----+-----+-----+
-
 **117.** Here it will be readily perceived that the series of
 square numbers thus arranged has a singular property;
 namely, that if each of them be subtracted from that which
@@ -115,7 +103,28 @@ to ¹⁶⁹⁄₁₆, or to 10⁹⁄₁₆. The squares of the numbers between
 3 and 4, supposing them to increase by one fourth, are as
 follow:
 
-
+<table>
+<thead>
+  <tr>
+    <th>Numbers.</th>
+    <th>3</th>
+    <th>3¼</th>
+    <th>3½</th>
+    <th>3¾</th>
+    <th>4</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Squares.</td>
+    <td>9</td>
+    <td>10⁹⁄₁₆</td>
+    <td>12¼</td>
+    <td>14¹⁄₁₆</td>
+    <td>16</td>
+  </tr>
+</tbody>
+</table>
 
 From this small Table we may infer, that if a root contain
 a fraction, its square also contains one. Let the root, for
@@ -140,7 +149,7 @@ the square root of which is 2 · 4 · 6, or 48; and 48 is
 found to be the true square root of 2304, because 48 · 48
 gives 2304.
 
-**122.** Let us now consider what must be observed on this
+**132.** Let us now consider what must be observed on this
 subject with regard to the signs + and -. First, it is
 evident that if the root have the sign +, tliat is to say, if it
 be a positive number, its square must necessarily be a positive
