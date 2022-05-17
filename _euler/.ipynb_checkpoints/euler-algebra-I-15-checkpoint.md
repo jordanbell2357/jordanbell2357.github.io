@@ -18,7 +18,7 @@ whose cube is equal to that given number.
 **159.** It is easy therefore to determine the cube root, when
 the number proposed is a real cube, such as in the examples
 in the last chapter; for we easily perceive that the cube root
-of 1 is 1 ; that of 8 is 2; that of 27 is 3; that of 64 is 4,
+of 1 is 1; that of 8 is 2; that of 27 is 3; that of 64 is 4,
 and so on. And, in the same manner, the cube root of -27
 is -3; and that of -125 is -5.
 
@@ -87,7 +87,7 @@ may make it disappear by placing its cube root before the
 sign; for example, instead of $$\sqrt[3]{\vphantom{1}}64a$$ we may write
 $$4\sqrt[3]{\vphantom{1}}a$$; and
 $$5\sqrt[3]{\vphantom{1}}a$$ instead of $$\sqrt[3]{\vphantom{1}}a$$:
-hence ∛16 is equal to 2∛2, because 16 is equal to 8 · 2.
+hence ∛16 is equal to 2∛2, because 16 is equal to 8·2.
 
 **167.** When a number proposed is negative, its cube root
 is not subject to the same difficulties that occurred in treating
