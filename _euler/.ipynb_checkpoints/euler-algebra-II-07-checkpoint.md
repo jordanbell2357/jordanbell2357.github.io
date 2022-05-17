@@ -46,19 +46,85 @@ place, and thus render the division complete.
 **321.** The calculation, therefore, by which we find the
 root of the square $$a^2+2ab+b^2$$, may be represented thus
 
+$$
+\begin{array}{rrrrrrr}
+&&a^2&+2ab&+b^2&\vert&a+b\\
+&&a^2&&&&\\
+\hline
+2a+b&\vert&&2ab&+b^2&\\
+&&&2ab&+b^2&\\
+\hline
+&&&&0.&&
+\end{array}
+$$
 
+**322.** We may, also, in the same manner, find the square
+root of other compound quantities, provided they are squares,
+as will appear from the following examples:
 
+$$
+\begin{array}{rrrrrrr}
+&&a^2&+6ab&+9b^2&\vert&a+3b\\
+&&a^2&&&&\\
+\hline
+2a+3b&\vert&&6ab&+9b^2&\\
+&&&6ab&+9b^2&\\
+\hline
+&&&&0.&&
+\end{array}
+$$
 
+---
 
+$$
+\begin{array}{rrrrrrr}
+&&4a^2&-4ab&+b^2&\vert&2a-b\\
+&&4a^2&&&&\\
+\hline
+4a-b&\vert&&-4ab&+b^2&\\
+&&&-4ab&+b^2&\\
+\hline
+&&&&0.&&
+\end{array}
+$$
 
+---
 
+$$
+\begin{array}{rrrrrrr}
+&&9p^2&+24pq&+16q^2&\vert&3p+4q\\
+&&9p^2&&&&\\
+\hline
+6p+4q&\vert&&24pq&+16q^2&\\
+&&&24pq&+16q^2&\\
+\hline
+&&&&0.&&
+\end{array}
+$$
+
+---
+
+$$
+\begin{array}{rrrrrrr}
+&&25x^2&-60x&+36&\vert&5x-6\\
+&&25x^2&&&&\\
+\hline
+10x-6&\vert&&-60x&+36&\\
+&&&-60x&+36&\\
+\hline
+&&&&0.&&
+\end{array}
+$$
 
 **323.** When there is a remainder after the division, it is a
 proof that the root is composed of more than two terms.
 We must in that case consider the two terms already found
 as forming the first part, and endeavour to derive the other
 from the remainder, in the same manner as we found the
-second term of the root from the first. The following examples will render this operation more clear.
+second term of the root from the first. The following examples
+will render this operation more clear.
+
+
 
 
 
