@@ -22,7 +22,7 @@ and, as this is general,
 the square root of $$a^3$$ must necessarily be $$a^{\frac{3}{2}}$$
 and that of $$a^5$$ must be $$a^{\frac{5}{2}}$$;
 consequently, we shall in the same manner
-have $$a^{\frac{1}{2}$$ for the square root of $$a$$.
+have $$a^{\frac{1}{2}}$$ for the square root of $$a$$.
 Whence we see that $$a^{\frac{1}{2}}$$
 is equal to $$\surd a$$; which new method of representing the
 square root demands particular attention.
@@ -93,10 +93,9 @@ great utility of fractional exponents.
 
 **203.** Their use extends also to fractional numbers: for if
 there be given $$\frac{1}{\surd a}$$, we know that this quantity is equal to
-$$\frac{1}{a^{\frac{1}{2}}$$; and we have seen already that a fraction of the form
+$$\frac{1}{a^{\frac{1}{2}}}$$; and we have seen already that a fraction of the form
 $$\frac{1}{a^n}$$ may be expressed by $$a^{-n}$$; so that instead of $$\frac{1}{\surd a}$$
-we
-may use the expresssion $$a^{-\frac{1}{2}}$$; and, in the same manner,
+we may use the expresssion $$a^{-\frac{1}{2}}$$; and, in the same manner,
 $$\frac{1}{\sqrt[3]{\vphantom{1}} a}$$
 is equal to $$a^{-\frac{1}{3}}$$. Again, if the quantity
 $$\frac{a^2}{\sqrt[4]{\vphantom{1}} a^3}$$
