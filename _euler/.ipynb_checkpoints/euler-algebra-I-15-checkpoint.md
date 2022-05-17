@@ -7,24 +7,26 @@ title: Euler, "Elements of Algebra", Section I, Chapter 15
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 15. "Of Cube Roots, and of Irrational Numbers resulting from them."
 
-158. As we can, in the manner already explained, find
+**158.** As we can, in the manner already explained, find
 the cube of a given number, so, when a number is proposed,
 we may also reciprocally find a number, which, multiplied
 twice by itself, will produce that number. The number
-here sought is called, with relation to the other, the cube
-root ; so that the cube root of a given number is the number
+here sought is called, with relation to the other, the **cube
+root**; so that the cube root of a given number is the number
 whose cube is equal to that given number.
 
-159. It is easy therefore to determine the cube root, when
+**159.** It is easy therefore to determine the cube root, when
 the number proposed is a real cube, such as in the examples
-in the last chapter ; for we easily perceive that the cube root
-of 1 is 1 ; that of 8 is 2 ; that of 27 is 3 ; that of 64 is 4^
-and so on. And, in the same manner, the cube root of —27
-is -3 ; and that ol' - 125 is - 5.
+in the last chapter; for we easily perceive that the cube root
+of 1 is 1 ; that of 8 is 2; that of 27 is 3; that of 64 is 4,
+and so on. And, in the same manner, the cube root of -27
+is -3; and that of -125 is -5.
+
 Farther, if the proposed number be a fraction, as ^Vj *'^^
 cube root of it must be |; and that of //^ is |. Lastly,
 the cube root of a mixed number, such as ^l^ must be i,
 or 1|; because 2;4 is equal to f j.
+
 160. But if the proposed number be not a cube, its cube
 root cannot be expressed either in integers, or in fractional
 numbers. For example, 43 is not a cubic number; therel()re it is impossible to assign any number, either integer or
@@ -33,6 +35,7 @@ than 3, since the cube of 3 is only 27; and less than 4,
 because the cube of 4 is 64 : we know, therefore, that the
 cube root required is necessarily contained between the
 numbers 3 and 4.
+
 161. Since the cube root of 43 is greater than 3, if we
 add a fraction to 3, it is certain that we may approximate
 still nearer and nearer to the true value of this root : but we
@@ -49,39 +52,53 @@ root, which is often called simply the root ; thus V43 means
 the cube root of 43 ; that is to say, the number whose cube
 is 43, or which, multiplied by itself, and then by itself again,
 produces 43.
-163. Now, it is evident that such expressions cannot
+
+**163.** Now, it is evident that such expressions cannot
 belong to rational quantities, but that they rather form a
 particular species of irrational quantities. They have nothing in common with square roots, and it is not possible
-to express such a cube root by a square root ; as, for example, by v/12; foJ" the square of v^lS being 12, its cube
-will be 12^12, consequently still irrational, and therefore it
+to express such a cube root by a square root; as, for example, by √12; for the square of
+√12 being 12, its cube
+will be 12√12, consequently still irrational, and therefore it
 cannot be equal to 43.
-164. If the proposed number be a real cube, our expressions become rational. Thus, \/l is equal to 1 ; v/8 is
-equal to 2 ; y27 is equal to 3 ; and, generally, </aaa is equal
-to a.
-165. If it were proposed to multiply one cube root, ^/a,
-by another, l/b, the product must be \/ah ; for we know that
-the cube root of a product ab is found by multiplying together the cube roots of the factors. Hence, also, if we
-divide \/a by \/b, the quotient will be^Z-^-.
-166. We fai'ther perceive, that 2(/« is equal to ySa,
-because 2 is equivalent to ^/S ; that S\/a is equal to v/27a,
-b^a is equal to ^abbh; and, reciprocally, if the number
+
+**164.** If the proposed number be a real cube, our expressions become rational.
+Thus, ∛l is equal to 1 ; ∛8 is
+equal to 2; ∛27 is equal to 3; and, generally, $$\sqrt[3]{\vphantom{1}}aaa$$ is equal
+to $$a$$.
+
+**165.** If it were proposed to multiply one cube root, $$\sqrt[3]{\vphantom{1}}a$$,
+by another, $$\sqrt[3]{\vphantom{1}}b$$, the product must be
+$$\sqrt[3]{\vphantom{1}}ab$$; for we know that
+the cube root of a product $$ab$$ is found by multiplying together the cube roots of the
+factors. Hence, also, if we
+divide $$\sqrt[3]{\vphantom{1}}a$$ by $$\sqrt[3]{\vphantom{1}}b$$,
+the quotient will be $$\sqrt[3]{\vphantom{1}} \frac{a}{b}$$.
+
+**166.** We farther perceive, that $$2\sqrt[3]{\vphantom{1}}a$$
+is equal to $$\sqrt[3]{\vphantom{1}}8a$$,
+because 2 is equivalent to ∛8; that $$3\sqrt[3]{\vphantom{1}}a$$
+is equal to $$\sqrt[3]{\vphantom{1}}27a$$,
+$$b\sqrt[3]{\vphantom{1}}a$$ is equal to $$\sqrt[3]{\vphantom{1}}abbb$$;
+and, reciprocally, if the number
 under the radical sign has a factor which is a cube, we
 may make it disappear by placing its cube root before the
-sign; for example, instead of\/(;4a we may write 4iya; and
-5v/fl instead of^125a : hence yi6 is equal to 9,^/% because
-16 is equal to 8 X 2.
-167. When a number proposed is negative, its cube root
+sign; for example, instead of $$\sqrt[3]{\vphantom{1}}64a$$ we may write
+$$4\sqrt[3]{\vphantom{1}}a$$; and
+$$5\sqrt[3]{\vphantom{1}}a$$ instead of $$\sqrt[3]{\vphantom{1}}a$$:
+hence ∛16 is equal to 2∛2, because 16 is equal to 8 · 2.
+
+**167.** When a number proposed is negative, its cube root
 is not subject to the same difficulties that occurred in treating
-of square roots ; for, since the cubes of negative numbers
-are negative, it follows that the cube roots of negative numbers are also negative; thus \/— 8 is equal to —2, and
-^/-27 to —3. It follows also, that ^-12 is the same as
-—\/12, and that\/— « may be expressed by —I, a. Whence
-we see that the sign —, when it is found after the sign of
+of square roots; for, since the cubes of negative numbers
+are negative, it follows that the cube roots of negative numbers are also negative
+thus ∛-8 is equal to -2, and
+∛-27 to -3. It follows also, that ∛-12 is the same as
+-∛12, and that $$\sqrt[3]{\vphantom{1}}-a$$ may be expressed by $$-\sqrt[3]{\vphantom{1}}a$$.
+Whence
+we see that the sign -, when it is found after the sign of
 the cube root, might also have been placed before it. We
 are not therefore led here to impossible, or imaginary numbers, which happened in considering the square roots of
 negative numbers.
-
-
 
 #### References
 
