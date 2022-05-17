@@ -150,7 +150,7 @@ number all its divisors.
 |   |   |   |   |   |   |   |   |   |    |    | 12 |    |    |    |    |    | 18 |    | 20 |
 | 1 | 2 | 2 | 3 | 2 | 4 | 2 | 4 | 3 | 4  | 2  | 6  | 2  | 4  | 4  | 5  | 2  | 6  | 2  | 6  |
 
-<table>
+<table style="width:100%;">
 <thead>
   <tr>
     <th>1</th>
