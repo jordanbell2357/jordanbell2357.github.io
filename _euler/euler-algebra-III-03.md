@@ -112,14 +112,14 @@ ones, by means only of the first term $$a$$ and the difference $$d$$;
 thus, for example, the tenth term will be $$a + 9d$$, the hundredth term $$a+9d$$, and, generally,
 the $n$th term will be
 
-$$a + (n - l)d.$$
+$$a + (n  -1)d.$$
 
 **406.** When we stop at any point of the progression, it is
 of importance to attend to the first and the last term, since
 the index of the last term will represent the number of
 terms. If, therefore, the first term be $$a$$, the difference $$d$$,
 and the number of terms $$n$$, we shall have for the last term
-$$a + (n - l)d$$, which is consequently found by multiplying the
+$$a + (n  -1)d$$, which is consequently found by multiplying the
 difference by the number of terms minus one, and adding
 that product to the first term. Suppose,
 for example, in an arithmetical progression of a
@@ -130,7 +130,7 @@ the last term will be 99·3+4=301.
 the number of terms $$n$$, we can find the difference $$d$$; for,
 since the last term
 
-z = a + (n - l)d,
+z = a + (n  -1)d,
 
 if we subtract a from
 both sides, we obtain $$z - a = (n-1)d$$. So that by taking
