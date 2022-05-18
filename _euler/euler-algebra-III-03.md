@@ -7,6 +7,8 @@ title: Euler, "Elements of Algebra", Section III, Chapter 3
 
 #### Section III. "Of Ratios and Proportions." Chapter 3. "Of Arithmetical Progressions."
 
+
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
