@@ -7,13 +7,13 @@ title: Euler, "Elements of Algebra", Section III, Chapter 6
 
 #### Section III. "Of Ratios and Proportions." Chapter 6. "Of Geometrical Ratio."
 
-440. The *Geometrical ratio* of two numbers is found by
+**440.** The *Geometrical ratio* of two numbers is found by
 resolving the question, *How many times* is one of those
 numbers greater than the other? This is done by dividing
 one by the other; and the quotient will express the ratio
 required.
 
-441. We have here three things to consider; 
+**441.** We have here three things to consider; 
 
 1. the first of the two given numbers, which is called the antecedent;
 2. the other number, which is called the consequent;
@@ -24,7 +24,7 @@ For example, if the relation of the numbers 18 and 12 be required, 18 is the ant
 ratio will be ¹⁸⁄₁₂=1½; whence we see that the antecedent
 contains the consequent once and a half.
 
-442. It is usual to represent geometrical relation by two
+**442.** It is usual to represent geometrical relation by two
 points, placed one above the other, between the antecedent
 and the consequent. Thus, $$a:b$$ means the geometrical
 relation of these two numbers, or the ratio of $$a$$ to $$b$$.
@@ -35,7 +35,7 @@ here; because, in order to know the ratio, we must divide
 $$a$$ by $$b$$; the relation expressed by this sign being read
 simply, $$a$$ is to $$b$$.
 
-443. Relation therefore is expressed by a fraction, whose
+**443.** Relation therefore is expressed by a fraction, whose
 numerator is the antecedent, and whose denominator is the
 consequent; but perspicuity requires that this fraction
 should be always reduced to its lowest terms: which is
@@ -44,7 +44,7 @@ numerator and denominator by their greatest common divisor.
 Thus, the fraction ¹⁸⁄₁₂ becomes ³⁄₂, by dividing both
 terms by 6.
 
-444. So that relations only differ according as their ratios
+**444.** So that relations only differ according as their ratios
 are different; and there are as many different kinds of geometrical relations
 as we can conceive different ratios.
 
@@ -72,7 +72,7 @@ as 11:7, 8:15, etc. and we call that an **irrational** or **surd**
 ratio, which can neither be exactly expressed by integers, nor
 by fractions, such as √5:8, or 4:√3.
 
-445. Let $$a$$ be the antecedent, $$b$$ the consequent, and $$d$$
+**445.** Let $$a$$ be the antecedent, $$b$$ the consequent, and $$d$$
 the ratio, we know already that $$a$$ and $$b$$ being given, we
 find $$d=\frac{a}{b}$$;
 if the consequent $$b$$ were given with the ratio,
@@ -82,7 +82,7 @@ the ratio $$d$$, we find the consequent $$b = \frac{b}{d}$$; for, dividing
 the antecedent $$a$$ by the consequent $$\frac{a}{d}$$, we obtain the quotient $$d$$,
 that is to say, the ratio.
 
-446. Every relation $$a:b$$ remains the same, if we multiply or divide
+**446.** Every relation $$a:b$$ remains the same, if we multiply or divide
 the antecedent and consequent by the same
 number, because the ratio is the same: thus, for example,
 let $$d$$ be the ratio of $$a:b$$, we have $$d = \frac{a}{b}$$; now the ratio
@@ -90,7 +90,7 @@ of the relation $$na : nb$$ is also $$\frac{na}{nb}=d$$, and that of the relatio
 $$\frac{a}{n}:\frac{b}{n}$$ is $$\frac{na}{nb}=d$$.
 
 
-447. When a ratio has been reduced to its lowest terms,
+**447.** When a ratio has been reduced to its lowest terms,
 it is easy to perceive and enunciate the relation. For example, when the ratio
 $$\frac{a}{b}$$ has been reduced to the fraction $$\frac{p}{q}$$,
 we say
@@ -103,30 +103,29 @@ $$a : b :: p : q,$$
 
 which is read, $$a$$ is
 to $$b$$ as $$p$$ is to $$q$$. Thus, the ratio of 6:3 being ²⁄₁, or 2, we
-say 6:3 : : 2 : 1. We have likewise 18 : 12 : : 3 : 2, and
-24 : 18 : : 4 : 3, and 30 : 45 : : 2 : 3, &c. But if the ratio
-cannot be abridged, the relation will not become more evident ; for we do not simplify it by saying 9 : 7 : : 9 . 7.
+say 6:3∷2:1. We have likewise 18:12∷3:2, and
+24:18∷4:3, and 30:45∷2:3, etc. But if the ratio
+cannot be abridged, the relation will not become more evident;
+for we do not simplify it by saying 9:7∷9:7.
 
-448. On the other hand, we may sometimes change the
+**448.** On the other hand, we may sometimes change the
 relation of two very great numbers into one that shall be
 more simple and evident, by reducing both to their lowest
-terms. Thus, for example, we can say, 28844 : 14422 : :
-2 : 1 ; or, 10566 : 7044 : : 3 : 2; or, 57600 : 25200 : :
-16 : 7.
+terms. Thus, for example, we can say, 28844:14422∷2:1;
+or, 10566:7044∷3:2; or, 57600:25200∷16:7.
 
-449. In order, therefore, to express any relation in the
+**449.** In order, therefore, to express any relation in the
 clearest manner, it is necessary to reduce it to the smallest
 possible numbers; which is easily done, by dividing the two
-terms of it by their greatest common divisor. Thus, to reduce the relation 57600 : 25200 to that of 16 : 7, we have
-only to perform the single operation of dividing the numbers 57600 and 25200 by 3600, which is their greatest
-common divisor.
+terms of it by their greatest common divisor. Thus, to reduce the
+relation 57600:25200 to that of 16:7, we have
+only to perform the single operation of dividing the numbers
+57600 and 25200 by 3600, which is their greatest common divisor.
 
-450. It is important, therefore, to know how to find the
+**450.** It is important, therefore, to know how to find the
 greatest common divisor of two given numbers; but this
 requires a Rule, which we shall explain in the following
 chapter.
-
-
 
 
 #### References
