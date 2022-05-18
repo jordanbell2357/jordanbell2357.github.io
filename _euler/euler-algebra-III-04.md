@@ -209,6 +209,76 @@ progression we add together, the sum will be always a square,
 namely, the square of the number of terms; which we shall
 exemplify as follows
 
+<table>
+<tbody>
+  <tr>
+    <td>Indices</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>10</td>
+    <td>etc.</td>
+  </tr>
+  <tr>
+    <td>Progression</td>
+    <td>1,</td>
+    <td>3,</td>
+    <td>5,</td>
+    <td>7,</td>
+    <td>9,</td>
+    <td>11,</td>
+    <td>13,</td>
+    <td>15,</td>
+    <td>17,</td>
+    <td>19,</td>
+    <td>etc.</td>
+  </tr>
+  <tr>
+    <td>Sum</td>
+    <td>1,</td>
+    <td>4,</td>
+    <td>9,</td>
+    <td>16,</td>
+    <td>25,</td>
+    <td>36,</td>
+    <td>49,</td>
+    <td>64,</td>
+    <td>81,</td>
+    <td>100,</td>
+    <td>etc.</td>
+  </tr>
+</tbody>
+</table>
+
+**423.** Let the first term be 1, the difference 3, and the
+number of terms $$n$$; we shall have the progression 1, 4, 7,
+10, etc. the last term of which will be $$1+(n-3)3=3n-2$$;
+wherefore the sum of the first and the last term is $$3n-1$$,
+and consequently the sum of this progression is equal to
+$$\frac{n(3n-1)}{2}=\frac{3n^2-n}{2}$$;
+and if we suppose $$n = 20$$, the sum
+will be 10·59=590.
+
+**424.** Again, let the first term be 1, the difference $$d$$, and
+the number of terms $$n$$; then the last term will be
+$$1 + (n - 1)d$$; to which adding the first, we have
+$$2 + (n - 1)d$$,
+and multiplying by the number of terms, we have
+$$2n+n(n-1)d$$;
+whence we deduce the sum of the progression
+$$n+\frac{n(n-1)d}{2}$$.
+
+And by making $$d$$ successively equal to 1, 2, 3, 4, etc.,
+we obtain the following particular values, as shown in the
+subjoined Table.
+
+
 
 #### References
 
