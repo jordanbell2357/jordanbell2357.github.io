@@ -125,11 +125,9 @@ second term of the root from the first. The following examples
 will render this operation more clear.
 
 
-
-
-
-
-
+<a href="https://artofproblemsolving.com/texer/youjickd">
+<img src="/assets/euler/youjickd.png" alt="Polynomial square root" width="500" height="143">
+</a>
 
 
 **324.** We easily deduce from the rule which we have explained, the method which is taught in books of arithmetic
