@@ -70,7 +70,8 @@ Suppose, for example, that 19, 28, 13, are the three first
 given terms, the sum of the second and third is 41; and
 taking from it the first, which is 19, there remains 22 for the
 fourth term sought, and the arithmetical proportion will be
-represented by 19-28=13-22, or by 28-19=22-13, or, lastly, by 28-22=19-13.
+represented by 19-28=13-22, or by 28-19=22-13, or, lastly,
+by 28-22=19-13.
 
 **397.** When in arithmetical proportion the second term is
 equal to the third, we have only three numbers; the property of which is this, that the first, minus the second, is
