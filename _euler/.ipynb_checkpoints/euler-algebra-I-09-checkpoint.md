@@ -103,7 +103,7 @@ that is to say, a numerator greater than the denominator:
 this is a case which has already occurred, and deserves
 attention.
 
-We found, for example (**Article 96**), that the sum of the
+We found, for example (*Article 96*), that the sum of the
 five fractions ½, ⅔, ¾, ⅘, and ⅚ was ²¹³⁄₆₀, and remarked that
 the value of this sum was 3³³⁄₆₀ or 3¹¹⁄₂₀. Likewise, ⅔ + ¾, or
 ⁸⁄₁₂ + ⁹⁄₁₂, makes ¹⁷⁄₁₂, or 1⁵⁄₁₂. We have therefore only to
