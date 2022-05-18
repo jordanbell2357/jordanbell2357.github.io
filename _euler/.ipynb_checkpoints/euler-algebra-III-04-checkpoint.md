@@ -279,6 +279,19 @@ we obtain the following particular values, as shown in the
 subjoined Table.
 
 
+| Difference | Sum      |   |
+|------------|----------|---|
+| $$d=1$$        | $$n+\frac{n(n-1)}{2}$$   | $$\frac{n^2+n}{2}$$ |
+| $$d=2$$        | $$n+\frac{2n(n-1)}{2}$$  | $$n^2$$ |
+| $$d=3$$        | $$n+\frac{3n(n-1)}{2}$$  | $$\frac{3n^2-n}{2}$$ |
+| $$d=4$$        | $$n+\frac{4n(n-1)}{2}$$  | $$2n^2-n$$ |
+| $$d=5$$        | $$n+\frac{5n(n-1)}{2}$$  | $$\frac{5n^2-3n}{2}$$ |
+| $$d=6$$        | $$n+\frac{6n(n-1)}{2}$$  | $$3n^2-2n$$ |
+| $$d=7$$        | $$n+\frac{7n(n-1)}{2}$$  | $$\frac{7n^2-5n}{2}$$ |
+| $$d=8$$        | $$n+\frac{8n(n-1)}{2}$$  | $$4n^2-3n$$ |
+| $$d=9$$        | $$n+\frac{9n(n-1)}{2}$$  | $$\frac{9n^2-7n}{2}$$ |
+| $$d=10$$       | $$n+\frac{10n(n-1)}{2}$$ | $$5n^2-4n$$ |
+
 
 #### References
 
