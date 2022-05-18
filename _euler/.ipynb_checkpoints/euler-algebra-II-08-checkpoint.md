@@ -209,10 +209,10 @@ $$\frac{\surd 6 + \surd 5}{\surd 6 - \surd 5}=\frac{11+2\surd 30}{1}
 may, in the same manner, make the radical signs in it vanish
 one by one. Thus, if the fraction $$\frac{1}{\surd 10 - \surd 2 - \surd 3}$$
 be proposed, we first multiply these two terms by
-√10 + √2 + √3, and obtain the fraction
+√10+√2+√3, and obtain the fraction
 $$\frac{\surd 10 + \surd 2 + \surd 3}{5-2\surd 6}$$; then
-multiplying its numerator and denominator by 5 + 2√6,
-we have 5√10 + 11√2 + 9√3 + 2√60.
+multiplying its numerator and denominator by 5+2√6,
+we have 5√10+11√2+9√3+2√60.
 
 
 #### References
