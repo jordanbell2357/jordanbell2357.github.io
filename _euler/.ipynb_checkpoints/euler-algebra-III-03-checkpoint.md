@@ -37,27 +37,58 @@ and we shall have the following increasing progression:
 in which each term is found by adding the difference to the preceding one.
 
 **404.** It is usual to write the natural numbers, 1, 2, 3, 4,
-5, &c. above the terms of such an arithmetical progression,
+5, etc. above the terms of such an arithmetical progression,
 in order that we may immediately perceive the rank, which
 anv term holds in the progression, which numbers, when
 written above the terms, are called indices; thus, the above
 example will be written as follows:
 
-Indices. 1234.5 6 7 8 91
-Jrith.Prog. 2, 5, 8, 11, 14, 17, 20, 23, 26, 29, &c.
+<table>
+  <tr>
+    <td>Indices</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>10</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Arithmetic Progression</td>
+    <td>2,</td>
+    <td>5,</td>
+    <td>8,</td>
+    <td>11,</td>
+    <td>14,</td>
+    <td>17,</td>
+    <td>20,</td>
+    <td>23,</td>
+    <td>26,</td>
+    <td>29,</td>
+    <td>etc.</td>
+  </tr>
+</table>
 
 where we see that 29 is the tenth term.
-405. Let a be the first term, and d the difference, the
-arithmetical progression will go on in the following order
-:
+
+**405.** Let $$a$$ be the first term, and $$d$$ the difference, the
+arithmetical progression will go on in the following order:
+
 12 3 4 5 6 7
 a, a±d, a±2d, a — Sd, 6!±4fZ, a±5d, a + 6d, &c.
+
 according as the series is increasing, or decreasing, whence
 it appears that any term of the progression might be easily
 found, without the necessity of finding all the preceding
 ones, by means only of the first term a and the difference d ;
 thus, for example, the tenth term will be a ± 9d, the hundredth term a ± 9dd, and, generally, the 7ith term will be
 a ±: (n — l)d.
+
 406. When we stop at any point of the progression, it is
 of importance to attend to the first and the last term, since
 the index of the last term will represent the number of
@@ -69,6 +100,7 @@ or subtracting, that product from the first term. Suppose,
 for example, in an ascending arithmetical progression of a
 hundred terms, the first term is 4, and the difference 3 ; then
 the last term will be 99 X 3 -1- 4 = 301.
+
 407. When we know the first term a, and the last ;::, with
 the number of terms ?«, we can find the difference fZ; for,
 since the last term z — a ±. {n — l)ri, if we subtract a from
@@ -81,6 +113,7 @@ which will be . This result furnishes the following n—\
 rule: Subtract the first term from the last, divide the remainder by the number of terms minus 1, and the quotient
 will be the common difference : by means of which we may
 write the whole progression.
+
 408. Suppose, for example, that we have an increasing
 arithmetical progression of nine terms, whose first is % and
 last 26, and that it is required to find the difference. We must
@@ -106,6 +139,7 @@ Another example. Let the first term be 2|., the last term
 —;-—~ = -~- =: 1^ = 1|-|., and consequently the progression :
 12 3 4 5 6 7
 Oi 4, I Kl 3 7 5 Qi ^C\^9 lOi
+
 . 409. If now the first term «, the last term z, and the difference d, are given, we may from them find the number of
 terms n; for since z — a = {n — [)d, by dividing both
 sides by d, we have —-=— z=. 7i — 1 ; also n being greater by
@@ -133,6 +167,7 @@ Again, let the first term be 3^, the last 1^, and the difference \±, the number
 which are,
 Qi 4,7 fii 71
 "T> ^9"' "9"5 'T*
+
 410. It must be observed, however, that as the number
 of terms is necessarily an integer, if we had not obtained
 such a number for w, in the examples of the preceding
@@ -143,6 +178,7 @@ value of —r—, it will be impossible to resolve the question
 ;
 and consequently, in order that questions of this kind may
 be possible, z — a must be divisible by d.
+
 411. From what has been said, it may be concluded, that
 we have always four quantities, or things, to consider in an
 arithmetical progression
