@@ -56,7 +56,7 @@ example will be written as follows:
     <td>8</td>
     <td>9</td>
     <td>10</td>
-    <td></td>
+    <td>etc.</td>
   </tr>
   <tr>
     <td>Arithmetic Progression</td>
@@ -90,7 +90,7 @@ arithmetical progression will go on in the following order:
     <td>6</td>
     <td>7</td>
     <td>8</td>
-    <td></td>
+    <td>etc.</td>
   </tr>
   <tr>
     <td>\(a\),</td>
@@ -130,7 +130,7 @@ the last term will be 99·3+4=301.
 the number of terms $$n$$, we can find the difference $$d$$; for,
 since the last term
 
-z = a + (n  -1)d,
+$$z = a + (n  -1)d,$$
 
 if we subtract a from
 both sides, we obtain $$z - a = (n-1)d$$. So that by taking
@@ -138,7 +138,7 @@ the difference between the first and last term, we have the
 product of the difference multiplied by the number of terms
 minus 1; we have therefore only to divide $$z - a$$ by $$n - 1$$
 in order to obtain the required value of the difference $$d$$,
-which will be $$\frac{z-a}{n-1}$$. This result furnishes the following
+which will be $$\dfrac{z-a}{n-1}$$. This result furnishes the following
 rule: Subtract the first term from the last, divide the remainder by the number of terms minus 1, and the quotient
 will be the common difference: by means of which we may
 write the whole progression.
