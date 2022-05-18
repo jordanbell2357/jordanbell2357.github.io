@@ -11,12 +11,12 @@ title: Euler, "Elements of Algebra", Section II, Chapter 8
 irrational quantities, this is to be done, according to the
 method before laid down, by writing all the terms in succession,
 each with its proper sign: and, with regard to abbreviations,
-we must remark that, instead of $$\sqrt{a}+\sqrt{a}$$, for
-example, we may write $$2\sqrt{a}$$; and that $$\sqrt{a}-\sqrt{a}= 0$$,
+we must remark that, instead of $$\surd a+\surd a$$, for
+example, we may write $$2\surd a$$; and that $$\surd a-\surd a= 0$$,
 because these two terms destroy one another. Thus, the
-quantities $$3+\sqrt{2}$$ and $$1+\sqrt{2}$$, added together, make
-$$4 + 2\sqrt{2}$$, or $$4+\sqrt{8}$$; the sum of $$5 + \sqrt{3}$$ and $$4 - \sqrt{3}$$,
-is 9; and that of $$2\sqrt{3} + 3\sqrt{2}$$ and $$\sqrt{3}-\sqrt{2}$$, is $$3\sqrt{3} + 2\sqrt{2}$$.
+quantities 3+√2 and 1+√2, added together, make
+4+2√2, or 4+√8; the sum of 5+√3 and 4-√3,
+is 9; and that of 2√3+3√2 and √3-√2, is 3√3+2√2.
 
 **327.** Subtraction also is very easy, since we have only to
 add the proposed numbers, after having changed their signs;
@@ -24,68 +24,68 @@ as will be readily seen in the following example, by subtracting the lower line 
 
 $$
 \begin{array}{rrrrr}
-4&-\sqrt{2}&+2\sqrt{3}&-3\sqrt{5}&+4\sqrt{6}\\
-1&+2\sqrt{2}&-2\sqrt{3}&-5\sqrt{5}&+6\sqrt{6}\\
+4&-\surd 2&+2\surd 3&-3\surd 5&+4\surd 6\\
+1&+2\surd 2&-2\surd 3&-5\surd 5&+6\surd 6\\
 \hline
-3&-3\sqrt{2}&-4\sqrt{3}&+2\sqrt{5}&-2\sqrt{6}
+3&-3\surd 2&-4\surd 3&+2\surd 5&-2\surd 6
 \end{array}
 $$
 
-**328.** In multiplication, we must recollect that $$\sqrt{a}$$ multiplied by $$\sqrt{a}$$ produces $$a$$;
-and that if the numbers which follow the sign $$\surd$$ are different, as $$a$$ and $$b$$, we have $$\sqrt{ab}$$ for
-the product of $$\sqrt{a}$$ multiplied by $$\sqrt{b}$$. After this, it will be
+**328.** In multiplication, we must recollect that $$\surd a$$ multiplied by $$\surd a$$ produces $$a$$;
+and that if the numbers which follow the sign $$\surd$$ are different, as $$a$$ and $$b$$, we have $$\surd ab$$ for
+the product of $$\surd a$$ multiplied by $$\surd b$$. After this, it will be
 easy to calculate the following examples:
 
 $$
 \begin{array}{rrrr}
-1&+\sqrt{2}&&\\
-1&+\sqrt{2}&&\\
+1&+\surd 2&&\\
+1&+\surd 2&&\\
 \hline
-1&+\sqrt{2}&&\\
-&+\sqrt{2}&+2&\\
+1&+\surd 2&&\\
+&+\surd 2&+2&\\
 \hline
-1&+2\sqrt{2}&+2&=3+2\sqrt{2}.
+1&+2\surd 2&+2&=3+2\surd 2.
 \end{array}
 $$
 
 $$
 \begin{array}{rrr}
-4&+2\sqrt{2}&\\
-2&-\sqrt{2}&\\
+4&+2\surd 2&\\
+2&-\surd 2&\\
 \hline
-8&+4\sqrt{2}&\\
-&-4\sqrt{2}&-4\\
+8&+4\surd 2&\\
+&-4\surd 2&-4\\
 \hline
 8&-4&=4.
 \end{array}
 $$
 
 **329.** What we have said applies also to imaginary quantities; we shall only observe farther,
-that $$\sqrt{-a}$$ multiplied
-by $$\sqrt{-a}$$ produces $$-a$$. If it were required to find the
-cube of $$- 1 + \sqrt{-3}$$, we should take the square of that
+that $$\surd -a$$ multiplied
+by $$\surd -a$$ produces $$-a$$. If it were required to find the
+cube of -1+√-3, we should take the square of that
 number, and then multiply that square by the same number;
 as in the following operation:
 
 $$
 \begin{array}{rrrr}
--1&+\sqrt{-3}&&\\
--1&+\sqrt{-3}&&\\
+-1&+\surd -3&&\\
+-1&+\surd -3&&\\
 \hline
-1&-\sqrt{-3}&&\\
-&-\sqrt{-3}&-3&\\
+1&-\surd -3&&\\
+&-\surd -3&-3&\\
 \hline
-1&-2\sqrt{-3}&-3&=-2-2\sqrt{-3}
+1&-2\surd -3&-3&=-2-2\surd -3
 \end{array}
 $$
 
 $$
 \begin{array}{rrrr}
--2&-2\sqrt{-3}&&\\
--1&+\sqrt{-3}&&\\
+-2&-2\surd -3&&\\
+-1&+\surd -3&&\\
 \hline
-2&+2\sqrt{-3}&&\\
-&-2\sqrt{-3}&+6&\\
+2&+2\surd -3&&\\
+&-2\surd -3&+6&\\
 \hline
 2&+6&&=8
 \end{array}
@@ -94,23 +94,23 @@ $$
 **330.** In the division of surds, we have only to express the
 proposed quantities in the form of a fraction; which may be
 then changed into another expression having a rational denominator;
-for if the denominator be $$a+\sqrt{b}$$, for example,
-and we multiply both this and the numerator by $$a-\sqrt{b}$$, the
+for if the denominator be $$a+\surd b$$, for example,
+and we multiply both this and the numerator by $$a-\surd b$$, the
 new denominator will be $$a^2 - b$$, in which there is no radical
-sign. Let it be proposed, for example, to divide $$3 + 2\sqrt{2}$$
-by $$1+\sqrt{2}$$: we shall first have $$\frac{3+2\sqrt{2}}{1+\sqrt{2}}$$; then multiplying
-the two terms of the fraction by $$1-\sqrt{2}$$, we shall have for
+sign. Let it be proposed, for example, to divide 3+2√2
+by 1+√2: we shall first have $$\frac{3+2\surd 2}{1+\surd 2}$$; then multiplying
+the two terms of the fraction by 1-√2, we shall have for
 the numerator:
 
 $$
 \begin{array}{rrrr}
-3&+2\sqrt{2}&&\\
-1&-\sqrt{2}&&\\
+3&+2\surd 2&&\\
+1&-\surd 2&&\\
 \hline
-3&+2\sqrt{2}&&\\
-&-3\sqrt{2}&-4&\\
+3&+2\surd 2&&\\
+&-3\surd 2&-4&\\
 \hline
-3&-\sqrt{2}&-4&=-\sqrt{2}-1;
+3&-\surd 2&-4&=-\surd 2-1;
 \end{array}
 $$
 
@@ -118,48 +118,48 @@ and for the denominator:
 
 $$
 \begin{array}{rrrr}
-1&+\sqrt{2}&&\\
-1&-\sqrt{2}&&\\
+1&+\surd 2&&\\
+1&-\surd 2&&\\
 \hline
-1&+\sqrt{2}&&\\
-&-\sqrt{2}&-2&\\
+1&+\surd 2&&\\
+&-\surd 2&-2&\\
 \hline
 1&&-2&=-1.
 \end{array}
 $$
 
-Our new fraction therefore is $$\frac{-\sqrt{2}-1}{-1}$$; and if we again
+Our new fraction therefore is $$\frac{-\surd 2-1}{-1}$$; and if we again
 multiply the two terms by -1, we shall have for the numerator
-$$\sqrt{2}+1$$, and for the denominator +1. Now, it is easy to show that $$\sqrt{2}+1$$
-is equal to the proposed fraction $$\frac{3+2\sqrt{2}}{1+\sqrt{2}}$$; for $$\sqrt{2}+1$$
-being multiplied by the divisor $$1+\sqrt{2}$$, thus,
+√2+1, and for the denominator +1. Now, it is easy to show that √2+1
+is equal to the proposed fraction $$\frac{3+2\surd 2}{1+\surd 2}$$; for √2+1
+being multiplied by the divisor 1+√2, thus,
 
 $$
 \begin{array}{rrrr}
-1&+\sqrt{2}&&\\
-1&+\sqrt{2}&&\\
+1&+\surd 2&&\\
+1&+\surd 2&&\\
 \hline
-1&+\sqrt{2}&&\\
-&+\sqrt{2}&+2&\\
+1&+\surd 2&&\\
+&+\surd 2&+2&\\
 \hline
-1&+2\sqrt{2}&+2&=3+2\sqrt{2}.
+1&+2\surd 2&+2&=3+2\surd 2.
 \end{array}
 $$
 
-Another example. Let $$8-5\surd 2$$ be divided by $$3-2\surd 2$$.
+Another example. Let 8-5√2 be divided by 3-2√2.
 This, in the first instance, is $$\frac{8-5\surd 2}{3-2\surd 2}$$;
-and multiplying the two terms of this fraction by $$3+2\sqrt{2}$$,
+and multiplying the two terms of this fraction by 3+2√2,
 we have for the numerator,
 
 $$
 \begin{array}{rrrr}
-8&-5\sqrt{2}&&\\
-3&+2\sqrt{2}&&\\
+8&-5\surd 2&&\\
+3&+2\surd 2&&\\
 \hline
-24&-15\sqrt{2}&&\\
-&+16\sqrt{2}&-20&\\
+24&-15\surd 2&&\\
+&+16\surd 2&-20&\\
 \hline
-24&+\sqrt{2}&-20&=4+\sqrt{2};
+24&+\surd 2&-20&=4+\surd 2;
 \end{array}
 $$
 
@@ -167,37 +167,36 @@ and for the denominator,
 
 $$
 \begin{array}{rrrr}
-3&-2\sqrt{2}&&\\
-3&+2\sqrt{2}&&\\
+3&-2\surd 2&&\\
+3&+2\surd 2&&\\
 \hline
-9&-6\sqrt{2}&&\\
-&+6\sqrt{2}&-8&\\
+9&-6\surd 2&&\\
+&+6\surd 2&-8&\\
 \hline
 9&&-8&=1.
 \end{array}
 $$
 
-Consequently, the quotient will be $$4+\surd 2$$.
-The truth of
-this may be proved, as before, by multiplication; thus,
+Consequently, the quotient will be 4+√2.
+The truth of this may be proved, as before, by multiplication; thus,
 
 $$
 \begin{array}{rrrr}
-4&+\sqrt{2}&&\\
-3&-2\sqrt{2}&&\\
+4&+\surd 2&&\\
+3&-2\surd 2&&\\
 \hline
-12&+3\sqrt{2}&&\\
-&-8\sqrt{2}&-4&\\
+12&+3\surd 2&&\\
+&-8\surd 2&-4&\\
 \hline
-12&-5\sqrt{2}&-48&=8-5\sqrt{2}.
+12&-5\surd 2&-48&=8-5\surd 2.
 \end{array}
 $$
 
 **331.** In the same manner, we may transform irrational
 fractions into others, that have rational denominators. If
 we have, for example, the fraction $$\frac{1}{5-2\surd 6}$$,
-and multiply its numerator and denominator by $$5+2\surd 6$$,
-we transform it into this, $$\frac{5+2\sqrt{6}}{1}=5+2\sqrt{6}$$;
+and multiply its numerator and denominator by 5+2√6,
+we transform it into this, $$\frac{5+2\surd 6}{1}=5+2\surd 6$$;
 in like manner, the fraction $$\frac{2}{-1+\surd -3}$$ assumes this
 form, $$\frac{2+2\surd -3}{-4}=\frac{1+\surd -3}{-2}$$;
 also
