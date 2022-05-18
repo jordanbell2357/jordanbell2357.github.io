@@ -129,12 +129,14 @@ will render this operation more clear.
 <img src="/assets/euler/youjickd.png" alt="Polynomial square root" width="500" height="143">
 </a>
 
+INCOMPLETE
+
 
 **324.** We easily deduce from the rule which we have explained, the method which is taught in books of arithmetic
 for the extraction of the square root, as will appear from the
 following examples in numbers:
 
-
+INCOMPLETE
 
 
 

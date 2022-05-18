@@ -140,6 +140,8 @@ beside unity and themselves, other divisors, as may be seen
 from the following Table, in which are placed under each
 number all its divisors.
 
+<!--
+
 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9 | 10 | 11 | 12 | 13 | 14 | 15 | 16 | 17 | 18 | 19 | 20 |
 |---|---|---|---|---|---|---|---|---|----|----|----|----|----|----|----|----|----|----|----|
 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1 | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  | 1  |
@@ -150,7 +152,9 @@ number all its divisors.
 |   |   |   |   |   |   |   |   |   |    |    | 12 |    |    |    |    |    | 18 |    | 20 |
 | 1 | 2 | 2 | 3 | 2 | 4 | 2 | 4 | 3 | 4  | 2  | 6  | 2  | 4  | 4  | 5  | 2  | 6  | 2  | 6  |
 
-<table style="width:75%;">
+-->
+
+<table>
 <thead>
   <tr>
     <th>1</th>
