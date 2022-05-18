@@ -96,7 +96,7 @@ divided by $$\surd b$$ making $$\frac{\surd a}{\surd b}$$, it is evident that
 by √-3 will give √-1; and that 1 divided by √-1
 gives $$\frac{1}{\surd -1}$$, or √-1; because 1 is equal to √+1.[^1]
 
-[^1]: 1 divided by √-1 is in fact -√-1; but indeed both √-1 and -√-1 are square roots of -1.
+[^1]: 1 divided by √-1 is in fact -√-1; but indeed √-1 and -√-1 are both square roots of -1.
 
 **150.** We have before observed, that the square root of
 any number has always two values, one positive and the
