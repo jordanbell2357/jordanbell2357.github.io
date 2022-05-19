@@ -44,10 +44,10 @@ divisor of the numbers 504 and 312 be required.
 <img src="/assets/euler/gjyncrpl.png" alt="Finding greatest common divisor with long division" width="500" height="83" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
-So that S-i is the greatest common divisor, and consequently the relation 504 : 312 is reduced to the form
-L>1 : 13.
+So that 24 is the greatest common divisor, and consequently the relation 504:312
+is reduced to the form 21:13.
 
-**454.** Let the relation 625 : 529 be given, and the greatest
+**454.** Let the relation 625:529 be given, and the greatest
 common divisor of these two numbers be required.
 
 Wherefore 1 is, in this case, the greatest common divisor,
