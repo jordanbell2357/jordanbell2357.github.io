@@ -37,7 +37,7 @@ Thus, for the two numbers 576 and 252.
 So that, in this instance, the greatest common divisor is 36.
 
 **453.** It will be proper to illustrate this rule by some other
-examples ; and, for this purpose, let the greatest common
+examples; and, for this purpose, let the greatest common
 divisor of the numbers 504 and 312 be required.
 
 <a href="https://artofproblemsolving.com/texer/gjyncrpl">
@@ -65,12 +65,12 @@ be one of their common divisors; it is evident that $$a$$ and $$b$$
 being divisible by $$d$$, we may also divide the quantities,
 $$a - b$$, $$a - 2b$$, $$a - 3b$$, and, in general, $$a - nb$$ by $$d$$.
 
-**456.** Tlie converse is no less true: that is, if the numbers
+**456.** The converse is no less true: that is, if the numbers
 $$b$$ and $$a - nb$$ are divisible by $$d$$, the number $$a$$ will also be
 divisible by $$d$$; for $$nb$$ being divisible by $$n$$, we could not
 divide $$a - nb$$ by $$d$$, if $$a$$ were not also divisible by $$d$$.
 
-**457. We observe farther, that if d be the greatest common
+**457.** We observe farther, that if $$d$$ be the greatest common
 divisor of two numbers, $$b$$ and $$a - nb$$, it will also be the
 greatest common divisor of the two numbers $$a$$ and $$b$$; for if
 a greater common divisor than $$d$$ could be found for these
