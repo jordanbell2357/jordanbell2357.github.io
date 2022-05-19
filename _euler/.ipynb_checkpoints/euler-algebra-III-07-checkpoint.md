@@ -108,7 +108,7 @@ requiring the greatest common divisor of the numbers 1728
 and 2304. The operation is as follows:
 
 <a href="https://artofproblemsolving.com/texer/cawdsrdc">
-<img src="/assets/euler/cawdsrdc.png" alt="Finding greatest common divisor with long division" width="290" height="191" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/cawdsrdc.png" alt="Finding greatest common divisor with long division" width="290" height="109" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Hence it follows that 576 is the greatest common divisor,
