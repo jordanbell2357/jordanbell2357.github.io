@@ -119,6 +119,68 @@ progression; we shall therefore explain the method of doing
 this. Let there be given, first, the following progression,
 consisting of ten terms:
 
+1, 2, 4, 8, 16, 32, 64, 128, 256, 512,
+
+the sum of which we shall represent by $$s$$, so that
+
+$$s=1+2+4+8+16+32+64+128+256+512;$$
+
+doubling both sides, we shall have
+
+$$2s=2+4+8+16+32+64+128+256+512+1024;$$
+
+and subtracting from this the progression represented by $$s$$,
+there remains $$s=1024-1=1023$$; wherefore the sum
+required is 1023.
+
+**509.** Suppose now, in the same progression, that the
+number of terms is undetermined, that is, let them be generally represented by $$n$$,
+so that the sum in question, or
+
+$$s=1+2+2^2+2^3+2^4+\cdots+2^{n-1}.$$
+
+If we multiply by 2, we have
+
+$$2s=2+2^2+2^3+2^4+\cdots+2^n,$$
+
+then subtracting from this equation the preceding one, we
+have $$s=2^n-1-1$$. It is evident, therefore, that the sum required is found,
+by multiplying the last term, $$2^{n-1}$$, by the
+exponent 2, in order to have $$2^n$$, and subtracting unity from
+that product.
+
+**510.** This is made still more evident by the following
+examples, in which we substitute successively for $$n$$, the
+numbers 1, 2, 3, 4, etc.
+
+1=1;  
+1+2=3;  
+1+2+4=7;  
+1+2+4+8=15;  
+1+2+4+8+16=31;  
+1+2+4+8+16+32=63,
+etc.
+
+**511.** On this subject, the following question is generally
+proposed. A man offers to sell his horse on the following
+condition ; that is, he demands 1 penny for the first nail, 2
+for the second, 4 for the third, 8 for the fourth, and so on,
+doubling the price of each succeeding nail. It is required
+to find the price of the horse, the nails being 32 in number?
+
+This question is evidently reduced to finding the sum of
+all the terms of the geometrical progression 1, 2, 4, 8, 16,
+&c. continued to the 32d term. Now, that last term is 2^^
+;
+and, as we have already found 9r'^ — 1048576, and 2^° =
+1024, we shall have 2-" x 2'« = 9?"" = 1073741824; and
+multiplying again by 2, the last term S"*^ — 2147483648;
+doubling therefore this number, and subtracting unity from
+the product, the sum required becomes 4294967295 pence
+;
+which being reduced, we have 17895697/. 1,?. 3if. for the
+price of the horse.
+
 
 #### References
 
