@@ -50,59 +50,69 @@ is reduced to the form 21:13.
 **454.** Let the relation 625:529 be given, and the greatest
 common divisor of these two numbers be required.
 
+<a href="https://artofproblemsolving.com/texer/kreecolj">
+<img src="/assets/euler/kreecolj.png" alt="Finding greatest common divisor with long division" width="500" height="152" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
 Wherefore 1 is, in this case, the greatest common divisor,
-and consequently v\e cannot express the relation 625 : 529
-b}' less numbers, nor reduce it to simpler terms.
+and consequently we cannot express the relation 625:529
+by less numbers, nor reduce it to simpler terms.
 
-**455.** It may be necessary, in this place, to give a demonstration of the foregoing Rule. In order to this, let a be
-the greater, and b the less of the given numbers; and let d
-he one of their common divisors ; it is evident that a and b
-being divisible b}^ (!, we may also divide the quantities,
-a — b, a — 26, a — 36, and, in general, a — nb by d.
+**455.** It may be necessary, in this place, to give a demonstration
+of the foregoing Rule. In order to this, let $$a$$ be
+the greater, and $$b$$ the less of the given numbers; and let $$d$$
+be one of their common divisors; it is evident that $$a$$ and $$b$$
+being divisible by $$d$$, we may also divide the quantities,
+$$a - b$$, $$a - 2b$$, $$a - 3b$$, and, in general, $$a - nb$$ by $$d$$.
 
-**456.** Tlie converse is no less true : that is, if the numbers
-b and a — nb are divisible by d, the number a Avill also be
-divisible by d; foy nb being divisible by f7, we could not
-divide a — nb hy d, if a were not also divisible by d.
+**456.** Tlie converse is no less true: that is, if the numbers
+$$b$$ and $$a - nb$$ are divisible by $$d$$, the number $$a$$ will also be
+divisible by $$d$$; for $$nb$$ being divisible by $$n$$, we could not
+divide $$a - nb$$ by $$d$$, if $$a$$ were not also divisible by $$d$$.
 
 **457. We observe farther, that if d be the greatest common
-divisor of two numbers, b and a — nb, it will also be the
-greatest common divisor of the two numbers a and b ; for if
-a greater common divisor than d could be found for these
-numbers a and 6, that number would also be a common
-divisor of b and a — nb; and consequently d would not be
-the greatest common divisor of these two numbers : but we
-nAVQ supposed d the greatest divisor common to b and
+divisor of two numbers, $$b$$ and $$a - nb$$, it will also be the
+greatest common divisor of the two numbers $$a$$ and $$b$$; for if
+a greater common divisor than $$d$$ could be found for these
+numbers $$a$$ and $$b$$, that number would also be a common
+divisor of $$b$$ and $$a - nb$$; and consequently $$d$$ would not be
+the greatest common divisor of these two numbers: but we
+have supposed $$d$$ the greatest divisor common to $$b$$ and
+$$a - nb$$; therefore $$d$$ must also be the greatest common
+divisor of $$a$$ and $$b$$.
 
-a — nh ; therefore d imist also be tlie greatest common
-divisor of a and b.
-
-**458.** These things being laid down, let us divide, according to the rule, the greater number a by the less b ;
-and let us suppose the quotient to be 7i ; tlien the remainder
-will he a — nb, which must necessarily be less than b ; and
-this remainder a — nb having the same greatest common
-divisor with b, as the given numbers a and b, we have only
-to repeat the division, dividing the preceding divisor b by
-the remainder a — nb ; and the new remainder which we
+**458.** These things being laid down, let us divide, according to the rule,
+the greater number $$a$$ by the less $$b$$;
+and let us suppose the quotient to be $$n$$; then the remainder
+will be $$a - nb$$, which must necessarily be less than $$b$$; and
+this remainder $$a - nb$$ having the same greatest common
+divisor with $$b$$, as the given numbers $$a$$ and $$b$$, we have only
+to repeat the division, dividing the preceding divisor $$b$$ by
+the remainder $$a - nb$$; and the new remainder which we
 obtain will still have, with the preceding divisor, the same
-greatest common divisor, and soon.
+greatest common divisor, and so on.
 
 **459.** We proceed, in the same manner, till we arrive at a
-is nothing. Let therefore p be the last divisor, contained
-exactly a certain number of times in its dividend ; this
-dividend will evidently be divisible by p, and will have the
-form mp ; so that the numbers p and mp are both divisible
-by p : and it is also evident that they have no greater
-common divisor, because no number can actually be divided by a number greater than itself; consequently, tiiis
+is nothing. Let therefore $$p$$ be the last divisor, contained
+exactly a certain number of times in its dividend; this
+dividend will evidently be divisible by $$p$$, and will have the
+form $$mp$$; so that the numbers $$p$$ and $$mp$$ are both divisible
+by $$p$$: and it is also evident that they have no greater
+common divisor, because no number can actually be divided by a
+number greater than itself; consequently, this
 last divisor is also the greatest common divisor of the given
-numbers a and b.
+numbers $$a$$ and $$b$$.
 
 **460.** We will now give another example of the same rule,
 requiring the greatest common divisor of the numbers 1728
-and 2304. The operation is as follows
+and 2304. The operation is as follows:
 
-Hence it follows that 57o is the greatest common divisor,
-and that the relation 1728 : 2304 is reduced to 3 : 4; that
+<a href="https://artofproblemsolving.com/texer/cawdsrdc">
+<img src="/assets/euler/cawdsrdc.png" alt="Finding greatest common divisor with long division" width="290" height="191" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+Hence it follows that 576 is the greatest common divisor,
+and that the relation 1728:2304 is reduced to 3:4; that
 is to say, 1728 is to 2304 in the same relation as 3 is to 4.
 
 
