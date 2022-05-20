@@ -31,6 +31,9 @@ decimals will assume this form
 
 <img src="/assets/euler/longdivisionA.png" alt="Integer long division" width="150" height="111" style="display:block;margin-left:auto;margin-right:auto;">
 
+<a href="https://artofproblemsolving.com/texer/pvnjgnaf">
+<img src="/assets/euler/pvnjgnaf.png" alt="Integer long division" width="150" height="496" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
 #### References
 
