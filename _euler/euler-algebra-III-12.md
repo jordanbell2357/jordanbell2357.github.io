@@ -26,7 +26,11 @@ in the proper place, which separates the decimal and the integers, we shall obta
 whole of the operation, which we shall illustrate by some
 examples.
 Let there be given first the fraction i, and the division in
-decimals will assume this form
+decimals will assume this form:
+
+<a href="https://artofproblemsolving.com/texer/leoxxyvd">
+<img src="/assets/euler/leoxxyvd.png" alt="Integer long division" width="150" height="112" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
 
 <img src="/assets/euler/longdivisionA.png" alt="Integer long division" width="575" height="236" style="display:block;margin-left:auto;margin-right:auto;">
