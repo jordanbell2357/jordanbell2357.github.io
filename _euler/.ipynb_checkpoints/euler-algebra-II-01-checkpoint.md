@@ -89,7 +89,7 @@ which will lead us immediately to an important truth. Suppose it were required t
 add together the expressions $$a+b$$ and $$a-b$$; our rule gives $$a+b+a-b$$;
 now $$a + a = 2a$$, and $$b-b=0$$; the sum therefore is $$2a$$: consequently,
 if we add together the sum of two numbers $$(a + b)$$ and their difference
-$$(a — b)$$, we obtain the double of the greater of those two numbers.
+$$(a - b)$$, we obtain the double of the greater of those two numbers.
 
 This will be better understood perhaps from the following examples:
 

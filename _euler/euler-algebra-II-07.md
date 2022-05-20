@@ -126,7 +126,7 @@ will render this operation more clear.
 
 
 <a href="https://artofproblemsolving.com/texer/youjickd">
-<img src="/assets/euler/youjickd.png" alt="Polynomial square root" width="500" height="143">
+<img src="/assets/euler/youjickd.png" alt="Polynomial square root" width="500" height="143" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 INCOMPLETE

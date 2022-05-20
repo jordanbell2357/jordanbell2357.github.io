@@ -29,6 +29,8 @@ Let there be given first the fraction i, and the division in
 decimals will assume this form
 
 
+<img src="/assets/euler/longdivisionA.png" alt="Integer long division" width="575" height="236" style="display:block;margin-left:auto;margin-right:auto;">
+
 
 #### References
 

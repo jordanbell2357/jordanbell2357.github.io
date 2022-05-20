@@ -130,25 +130,25 @@ more perspicuous.
 ---
 
 <a href="https://artofproblemsolving.com/texer/gpphlavj">
-<img src="/assets/euler/gpphlavj.png" alt="Polynomial long division" width="552" height="237">
+<img src="/assets/euler/gpphlavj.png" alt="Polynomial long division" width="552" height="237" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 ---
     
 <a href="https://artofproblemsolving.com/texer/iytxpnib">
-<img src="/assets/euler/iytxpnib.png" alt="Polynomial long division" width="589" height="235">
+<img src="/assets/euler/iytxpnib.png" alt="Polynomial long division" width="589" height="235" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/wdjlpmdc">
-<img src="/assets/euler/wdjlpmdc.png" alt="Polynomial long division" width="575" height="236">
+<img src="/assets/euler/wdjlpmdc.png" alt="Polynomial long division" width="575" height="236" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/zldggvdq">
-<img src="/assets/euler/zldggvdq.png" alt="Polynomial long division" width="580" height="296">
+<img src="/assets/euler/zldggvdq.png" alt="Polynomial long division" width="580" height="296" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 #### References

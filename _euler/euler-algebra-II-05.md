@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section II, Chapter 5
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 5. "Of the Resolution of Fractions into Infinite Series."
 
-INCOMPLETE
+
 
 #### References
 
