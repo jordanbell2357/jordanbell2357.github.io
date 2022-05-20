@@ -35,6 +35,14 @@ decimals will assume this form
 <img src="/assets/euler/pvnjgnaf.png" alt="Integer long division" width="150" height="496" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
+<a href="https://artofproblemsolving.com/texer/jkxijqxi">
+<img src="/assets/euler/jkxijqxi.png" alt="Integer long division" width="150" height="496" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+<a href="https://artofproblemsolving.com/texer/xsxbzhmm">
+<img src="/assets/euler/xsxbzhmm.png" alt="Integer long division" width="250" height="202" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
