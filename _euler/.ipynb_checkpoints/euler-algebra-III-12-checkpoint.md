@@ -7,6 +7,8 @@ title: Euler, "Elements of Algebra", Section III, Chapter 12
 
 #### Section III. "Of Ratios and Proportions." Chapter 12. "Of Infinite Decimal Fractions."
 
+·
+
 525. We have already seen, in logarithmic calculations,
 that Decimal Fractions are employed instead of Vulgar
 Fractions: the same are also advantageously employed in
@@ -41,6 +43,18 @@ decimals will assume this form
 
 <a href="https://artofproblemsolving.com/texer/xsxbzhmm">
 <img src="/assets/euler/xsxbzhmm.png" alt="Integer long division" width="250" height="202" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+<a href="https://artofproblemsolving.com/texer/djkddmyz">
+<img src="/assets/euler/djkddmyz.png" alt="Integer long division" width="250" height="202" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+<a href="https://artofproblemsolving.com/texer/bksuqzrk">
+<img src="/assets/euler/bksuqzrk.png" alt="Integer long division" width="250" height="274" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+<a href="https://artofproblemsolving.com/texer/cgdosexm">
+<img src="/assets/euler/cgdosexm.png" alt="Integer long division" width="250" height="131" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 #### References
