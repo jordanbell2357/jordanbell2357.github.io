@@ -106,11 +106,14 @@ by the first term $$a$$.
 
 If, therefore, the 50th term of the geometrical progression
 1, 2, 4, 8, etc. were required, we should have $$a=1$$, $$b = 2$$,
-and $$n=50$$; consequently the 50th term would be $$2^{49}$$; and
-as $$2^9$$=512, we shall have $$2^{10}$$=1024; wherefore the square
-of $$2^{10}$$, or $$2^{20}$$, =1048576, and the square of this number,
-which is 1099511627776=$$2^{40}$$. Multiplying therefore this
-value of $$2^{40}$$ by $$2^9$$, or 512, we have $$2^{49}$$ = 562949953421312
+and $$n=50$$; consequently the 50th term would be 2⁴⁹; and
+as 2⁹=512, we shall have 2¹⁰=1024; wherefore the square
+of 2¹⁰, or 2²⁰, =1048576, and the square of this number,
+which is 1099511627776=2⁴⁰. Multiplying therefore this
+value of 2⁴⁰ by 2⁹, or 512, we have
+
+2⁴⁹=562949953421312
+
 for the 50th term.
 
 **508.** One of the principal questions which occurs on this
@@ -163,23 +166,213 @@ etc.
 
 **511.** On this subject, the following question is generally
 proposed. A man offers to sell his horse on the following
-condition ; that is, he demands 1 penny for the first nail, 2
+condition; that is, he demands 1 penny for the first nail, 2
 for the second, 4 for the third, 8 for the fourth, and so on,
 doubling the price of each succeeding nail. It is required
 to find the price of the horse, the nails being 32 in number?
 
 This question is evidently reduced to finding the sum of
 all the terms of the geometrical progression 1, 2, 4, 8, 16,
-&c. continued to the 32d term. Now, that last term is 2^^
-;
-and, as we have already found 9r'^ — 1048576, and 2^° =
-1024, we shall have 2-" x 2'« = 9?"" = 1073741824; and
-multiplying again by 2, the last term S"*^ — 2147483648;
+etc. continued to the 32d term. Now, that last term is 2³¹;
+and, as we have already found 2²⁰=1048576, and 2¹⁰=1024,
+we shall have 2²⁰·2¹⁰=2³⁰=1073741824;
+and multiplying again by 2, the last term 2³¹=2147483648;
 doubling therefore this number, and subtracting unity from
-the product, the sum required becomes 4294967295 pence
-;
-which being reduced, we have 17895697/. 1,?. 3if. for the
-price of the horse.
+the product, the sum required becomes 4294967295 pence;
+which being reduced, we have 17895697*l.* 1*s.* 3*d.* for the
+price of the horse. \[**1 pound (*l.*) = 20 shillings (*s.*).**\]
+
+**512.** Let the ratio now be 3, and let it be required to find
+the sum of the geometrical progression 1, 3, 9, 27, 81, 243, 729, consisting of 7 terms.
+
+Calling the sum $$s$$ as before, we have
+
+$$s=1+3+9+27+81+243+729.$$
+
+And multiplying by 3,
+
+$$3=3+9+27+81+243+729+2187.$$
+
+Then subtracting the former series from the latter, we have
+$$2s=2187-1=2186$$: so that the double of the sum is
+2186, and consequently the sum required is 1093.
+
+**513.** In the same progression, let the number of terms be
+$$n$$, and the sum $$s$$; so that
+
+$$s=1+3+3^2+3^3+3^4+\cdots+3^{n-1}.$$
+
+If now we multiply by 3, we have
+
+$$3s=3+3^2+3^3+3^4+\cdots+3^n.$$
+
+Then subtracting from this expression the value of $$s$$, as
+before, we shall have $$2s=3^n-1$$; therefore $$s =\frac{3^n-1}{2}$$. So
+that the sum required is found by multiplying the last term
+by 3, subtracting 1 from the product, and dividing the remainder by 2; as will appear,
+also, from the following particular cases:
+
+<table>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>\(\dfrac{(1\cdot 3)-1}{2}\)</td>
+    <td>=1</td>
+  </tr>
+  <tr>
+    <td>1+3</td>
+    <td>\(\dfrac{(3\cdot 3)-1}{2}\)</td>
+    <td>=4</td>
+  </tr>
+  <tr>
+    <td>1+3+9</td>
+    <td>\(\dfrac{(3\cdot 9)-1}{2}\)</td>
+    <td>=13</td>
+  </tr>
+  <tr>
+    <td>1+3+9+27</td>
+    <td>\(\dfrac{(3\cdot 27)-1}{2}\)</td>
+    <td>=40</td>
+  </tr>
+  <tr>
+    <td>1+3+9+27+81</td>
+    <td>\(\dfrac{(3\cdot 81)-1}{2}\)</td>
+    <td>=121.</td>
+  </tr>
+</tbody>
+</table>
+
+**514.** Let us now suppose, generally, the first term to be
+$$a$$, the ratio $$b$$, the number of terms $$n$$, and their sum $$s$$,
+so that
+
+$$s=a+ab+ab^2+ab^3+ab^4+\cdots+ab^{n-1}.$$
+
+If we multiply by $$b$$, we have
+
+$$bs = ab+ab^2+ab^3+ab^4+ab^5+\cdots+ab^n,$$
+
+and taking the difference between this and the above equation, there remains
+$$(b-1)s=ab^n-a$$; whence we easily
+deduce the sum required
+
+$$s=\dfrac{ab^n-a)}{b-1}.$$
+
+Consequently, the
+sum of any geometrical progression is found, by multiplying
+the last term by the ratio, or exponent of the progression,
+and dividing the difference between this product and the
+first term, by the difference between 1 and the ratio.
+
+**515.** Let there be a geometrical progression of seven
+terms, of which the first is 3; and let the ratio be 2: we
+shall then have $$a = 3$$, $$b = 2$$, and $$n = 7$$; therefore the last
+term is 3·2⁶, or 3·64, =192; and the whole progression will be
+
+3, 6, 12, 24, 48, 96, 192.
+
+Farther, if we multiply the last term 192 by the ratio 2,
+we have 384; subtracting the first term, there remains 381;
+and dividing this by $$b - 1$$, or by 1, we have 381 for the
+sum of the whole progression.
+
+**516.** Again, let there be a geometrical progression of six
+terms, of which the first is 4; and let the ratio be ³⁄₂: then
+the progression is
+
+4, 6, 9, ²⁷⁄₂, ⁸¹⁄₄, ²⁴³⁄₈.
+
+If we multiply the last term by the ratio, we shall have
+⁷²⁹⁄₁₆; and subtracting the first term =⁶⁴⁄₁₆,
+the remainder is ⁶⁶⁵⁄₁₆; which, divided by $$b-1=\frac{1}{2}$$, gives
+⁶⁶⁵⁄₈=83⅛ for the sum of the series.
+
+**517.** When the exponent is less than 1, and, conscquently,
+when the terms of the progression continually diminish, the
+sum of such a decreasing progression, carried on to infinity,
+may be accurately expressed.
+
+For example, let the first term be 1, the ratio ½, and the
+sum $$s$$, so that
+
+$$s=1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\frac{1}{64}+\textrm{etc.}$$
+
+to infinity.
+
+If we multiply by 2, we have 
+
+$$s=2+1+\frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\textrm{etc.}$$
+
+to infinity:
+and, subtracting the preceding progression,
+there remains $$s = 2$$ for the sum of the proposed infinite
+progression.
+
+**518.** If the first term be 1, the ratio ⅓, and the sum $$s$$;
+so that
+
+$$s=1+\frac{1}{3}+\frac{1}{9}+\frac{1}{27}+\frac{1}{81}+\textrm{etc.}$$
+
+to infinity. Then multiplying the whole by 3, we have
+
+$$3s=3+1+\frac{1}{3}+\frac{1}{9}+\frac{1}{27}+\textrm{etc.}$$
+
+and subtracting the value of $$s$$, there remains $$2s=3$$; wherefore the sum
+$$s=1\frac{1}{2}$$.
+
+**519.** Let there be a progression whose sum is $$s$$, the first
+term 2, and the ratio ¾; so that
+
+$$s=2+\frac{3}{2}+\frac{9}[8}+\frac{27}{32}+\frac{81}{128}+\textrm{etc.}$$
+
+to infinity. Multiplying by ⁴⁄₃, we have
+
+$$\frac{4}{3}s=\frac{8}{3}+2+\frac{3}{2}+\frac{9}[8}+\frac{27}{32}+\frac{81}{128}+\textrm{etc.};$$
+
+and subtracting from this progression $$s$$, there remains
+$$\frac{1}{3}s=\frac{8}{3}$$: wherefore the sum required is 8.
+
+**520.** If we suppose, in general, the first term to be $$a$$, and
+the ratio of the progression to be $$\frac{b}{c}$$, so that this fraction
+may be less than 1, and consequently $$c$$ greater than $$b$$; the
+sum of the progression, carried on to infinity, will be
+found thus:
+
+Make 
+
+$$s=a+\frac{ab}{c}+\frac{ab^2}{c^2}+\frac{ab^3}{c^3}+\frac{ab^4}{c^4}+\textrm{etc.}$$
+
+to infinity; and subtracting this equation from the preceding, there remains
+$$\left(1-\frac{b}{c}\right)s=a$$. Consequently,
+
+$$s=\dfrac{a}{1-\frac{b}{c}}=\frac{ac}{c-b},$$
+
+by multiplynig both the
+numerator and denominator by $$c$$.
+
+The sum of the infinite geometrical progression proposed
+is, therefore, found by dividing the first term a by 1 minus
+the ratio, or by multiplying the first term $$a$$ by the denominator of the ratio,
+and dividing the product by the
+same denominator diminished by the numerator of the
+ratio.
+
+**521.** In the same manner we find the sums of progressions,
+the terms of which are alternately affected by the signs +
+and -. Suppose, for example,
+
+$$s=a-\frac{ab}{c}+\frac{ab^2}{c}-\frac{ab^3}{c}+\frac{ab^4}{c}-\textrm{etc.}$$
+
+And, adding this equation to the preceding, we obtain
+$$\left(1+\frac{b}{c}\right)s=a$$: whence we deduce the sum required,
+$$s=\dfrac{a}{1+\frac{b}{c}}$$, or $$s=\frac{ac}{c+b}$$.
+
+**522.** It is evident, therefore, that if the first term
+
+
+
+
+
 
 
 #### References
