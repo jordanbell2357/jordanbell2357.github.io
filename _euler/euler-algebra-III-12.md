@@ -29,7 +29,7 @@ Let there be given first the fraction i, and the division in
 decimals will assume this form
 
 
-<img src="/assets/euler/longdivisionA.png" alt="Integer long division" width="201" height="149" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/longdivisionA.png" alt="Integer long division" width="150" height="111" style="display:block;margin-left:auto;margin-right:auto;">
 
 
 #### References
