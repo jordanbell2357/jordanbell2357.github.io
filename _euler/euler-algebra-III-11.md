@@ -378,10 +378,38 @@ since, by subtracting the ratio from 1, there remains ⅗,
 and by dividing the first term by that remainder,
 the quotient is 1.
 
+It is also evident, if the terms be alternately positive and
+negative, and the progression assume this form:
 
+$$\frac{3}{5}-\frac{6}{25}+\frac{12}{125}-\frac{24}{625}+\textrm{etc.}$$
 
+that the sum will be
 
+$$\dfrac{a}{1+\frac{b}{c}} = \dfrac{\frac{3}{5}}{\frac{7}{5}} = \frac{3}{7}.$$
 
+**523.** Again: let there be proposed the infinite progression,
+
+$$\frac{3}{10}+\frac{3}{100}+\frac{3}{1000}+\frac{3}{10000}+\frac{3}{10000}+\frac{3}{100000}+\textrm{etc.}$$
+
+The first term is here ³⁄₁₀, and the ratio is ⅒; therefore
+subtracting this last from 1, there remains ⁹⁄₁₀, and, if we
+divide the first term by this fraction, we have ⅓
+for the sum of the given progression. So that taking only one term of
+the progression, namely ³⁄₁₀, the error would be ⅒.
+
+And taking two terms, ³⁄₁₀+³⁄₁₀₀=³³⁄₁₀₀, there would
+still be wanting ¹⁄₁₀₀ to make the sura, which we have seen
+is ⁴⁄₃.
+
+**524.** Let there now be given the infinite progression,
+
+$$9+\frac{9}{10}+\frac{9}{100}+\frac{9}{1000}+\frac{9}{10000}+\textrm{etc.}$$
+
+The first term is 9, and the ratio is ⅒. So that 1 minus
+the ratio is ⁹⁄₁₀; and $$\dfrac{9}{\frac{9}{10}}=10$$,
+the sum required: which
+series is expressed by a decimal fraction, thus,
+9.9999999 etc.
 
 #### References
 
