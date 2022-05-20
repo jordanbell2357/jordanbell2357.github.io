@@ -159,7 +159,7 @@ being equal, the proportion is true.
 **475.** Let the two proportions be 6:4∷15:10 and
 9:12∷15:20, their combination will give the proportion
 
-6·9:4·12∷15·15:10·20,  
+(6·9):(4·12)∷(15·15):(10·20),  
 or 54:48∷225:200,  
 or 9:8∷9:8.
 
@@ -173,7 +173,7 @@ that is, in the present case, $$a:c::b:d$$, or
 $$a:b::c:d$$. Let 3·8=4·6, and we may form from it this
 proportion, 8:4∷6:3, or this, 3:4∷6:8. Likewise,
 if 3·5=1·15, we shall have 3:15∷1:5,
-or 5.1∷15:3, or 3:1∷15:5.
+or 5:1∷15:3, or 3:1∷15:5.
 
 
 
