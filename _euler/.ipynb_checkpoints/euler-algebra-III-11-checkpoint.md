@@ -69,16 +69,16 @@ and the ratio $$b$$, we have the following geometrical progression
   </tr>
   <tr>
     <td>Progression</td>
-    <td>\(a\)</td>
-    <td>\(ab\)</td>
-    <td>\(ab2\)</td>
-    <td>\(ab3\)</td>
-    <td>\(ab4\)</td>
-    <td>\(ab5\)</td>
-    <td>\(ab6\)</td>
-    <td>\(ab7\)</td>
+    <td>\(a\),</td>
+    <td>\(ab\),</td>
+    <td>\(ab^2\),</td>
+    <td>\(ab^3\),</td>
+    <td>\(ab^4\),</td>
+    <td>\(ab^5\),</td>
+    <td>\(ab^6\),</td>
+    <td>\(ab^7\),</td>
     <td>⋯</td>
-    <td>\(ab^{n-1}\)</td>
+    <td>\(ab^{n-1}\).</td>
   </tr>
 </tbody>
 </table>
