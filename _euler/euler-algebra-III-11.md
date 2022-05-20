@@ -368,7 +368,15 @@ $$\left(1+\frac{b}{c}\right)s=a$$: whence we deduce the sum required,
 $$s=\dfrac{a}{1+\frac{b}{c}}$$, or $$s=\frac{ac}{c+b}$$.
 
 **522.** It is evident, therefore, that if the first term
+$$a=\frac{3}{5}$$, and the ratio be ⅖, that is to say,
+$$b=2$$, and $$c=5$$, we shall
+find the sum of the progression
 
+$$\frac{3}{5}+\frac{6}{25}+\frac{12}{125}+\frac{24}{625}+\textrm{etc.}=1$$;
+
+since, by subtracting the ratio from 1, there remains ⅗,
+and by dividing the first term by that remainder,
+the quotient is 1.
 
 
 
