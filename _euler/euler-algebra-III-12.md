@@ -40,7 +40,7 @@ decimals will assume this form
 </a>
 
 <a href="https://artofproblemsolving.com/texer/jkxijqxi">
-<img src="/assets/euler/jkxijqxi.png" alt="Integer long division" width="246" height="579" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/jkxijqxi.png" alt="Integer long division ⅔" width="246" height="579" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/xsxbzhmm">
@@ -48,7 +48,7 @@ decimals will assume this form
 </a>
 
 <a href="https://artofproblemsolving.com/texer/djkddmyz">
-<img src="/assets/euler/djkddmyz.png" alt="Integer long division" width="250" height="202" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/djkddmyz.png" alt="Integer long division ¾" width="232" height="184" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/bksuqzrk">
