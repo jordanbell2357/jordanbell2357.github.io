@@ -36,7 +36,7 @@ decimals will assume this form
 </a>
 
 <a href="https://artofproblemsolving.com/texer/pvnjgnaf">
-<img src="/assets/euler/pvnjgnaf.png" alt="Integer long division" width="175" height="579" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/pvnjgnaf.png" alt="Integer long division ⅓" width="246" height="579" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/jkxijqxi">
@@ -52,7 +52,7 @@ decimals will assume this form
 </a>
 
 <a href="https://artofproblemsolving.com/texer/bksuqzrk">
-<img src="/assets/euler/bksuqzrk.png" alt="Integer long division" width="250" height="274" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/bksuqzrk.png" alt="Integer long division ⁵⁄₄" width="232" height="250" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/cgdosexm">
