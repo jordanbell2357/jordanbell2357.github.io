@@ -56,7 +56,7 @@ decimals will assume this form
 </a>
 
 <a href="https://artofproblemsolving.com/texer/cgdosexm">
-<img src="/assets/euler/cgdosexm.png" alt="Integer long division" width="250" height="131" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/cgdosexm.png" alt="Integer long division ½" width="232" height="119" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 #### References
