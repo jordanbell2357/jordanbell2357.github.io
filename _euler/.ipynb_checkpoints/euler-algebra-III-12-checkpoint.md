@@ -36,15 +36,15 @@ decimals will assume this form
 </a>
 
 <a href="https://artofproblemsolving.com/texer/pvnjgnaf">
-<img src="/assets/euler/pvnjgnaf.png" alt="Integer long division" width="150" height="496" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/pvnjgnaf.png" alt="Integer long division" width="175" height="579" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/jkxijqxi">
-<img src="/assets/euler/jkxijqxi.png" alt="Integer long division" width="150" height="496" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/jkxijqxi.png" alt="Integer long division" width="246" height="579" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/xsxbzhmm">
-<img src="/assets/euler/xsxbzhmm.png" alt="Integer long division" width="228" height="184" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/xsxbzhmm.png" alt="Integer long division ¼" width="232" height="184" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/djkddmyz">
