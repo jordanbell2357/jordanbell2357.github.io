@@ -55,10 +55,6 @@ decimals will assume this form
 <img src="/assets/euler/bksuqzrk.png" alt="Integer long division ⁵⁄₄" width="232" height="250" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
-<a href="https://artofproblemsolving.com/texer/cgdosexm">
-<img src="/assets/euler/cgdosexm.png" alt="Integer long division ½" width="232" height="119" style="display:block;margin-left:auto;margin-right:auto;">
-</a>
-
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
