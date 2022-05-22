@@ -250,6 +250,18 @@ because 27=3·9: thus, we have
 <img src="/assets/euler/gqamudfn.png" alt="Decimals for ⁸⁄₂₇" width="337" height="449" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
+which is the decimal fraction that was proposed.
+
+**539.** Suppose it were required to reduce the fraction
+
+$$\dfrac{1}{1\cdot 2\cdot 3\cdot 4\cdot 5\cdot 6\cdot 7\cdot 8\cdot 9\cdot 10},$$
+
+to a decimal. The operation would be as follows:
+
+<a href="https://artofproblemsolving.com/texer/eqzaigab">
+<img src="/assets/euler/eqzaigab.png" alt="Decimals for reciprocal of factorial of 10" width="731" height="648" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
 
  ⁴⁄₉ ⁵⁄₉ ⁶⁄₉ ⁷⁄₉ ⁸⁄₉ ⁹⁄₉
 
