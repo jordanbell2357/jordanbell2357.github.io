@@ -7,6 +7,11 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 10
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 10. "Of Pure Equations of the Third Degree."
 
+**706.** An equation of the third degree is said to be pure,
+when the cube of the unknown quantity is equal to a known
+quantity, and when neither the square of the unknown
+quantity, nor the unknown quantity itself, is found in the
+equation; so that
 
 
 
