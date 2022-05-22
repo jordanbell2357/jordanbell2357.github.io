@@ -271,11 +271,11 @@ to a decimal. The operation would be as follows:
 </a>
 
 <a href="https://artofproblemsolving.com/texer/rclecfes">
-<img src="/assets/euler/rclecfes.png" alt="Dividing by 8 then by 9" width="533" height="678" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/rclecfes.png" alt="Dividing by 8 then by 9" width="500" height="581" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/qyqxpeiu">
-<img src="/assets/euler/qyqxpeiu.png" alt="Dividing by 10" width="254" height="561" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/qyqxpeiu.png" alt="Dividing by 10" width="238" height="481" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 
