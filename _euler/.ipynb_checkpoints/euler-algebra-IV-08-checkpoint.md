@@ -61,7 +61,7 @@ Now, since $$x+y=5$$,  we have $$y=5-x$$, and
 this value substituted in the equation $$xy=6$$, produces
 $$5x-x^2=6$$, or $$x^2=5x-6$$; therefore
 
-$$x=\dfrac{5}{2}+\surd \left( \dfrac{25}{4}-\dfrac{24}{4}\right)=\dfrac{5}{2}+\dfrac{1}{2}=3.$$
+$$x=\dfrac{5}{2}+\sqrt{\vphantom{2}}\left( \dfrac{25}{4}-\dfrac{24}{4}\right)=\dfrac{5}{2}+\dfrac{1}{2}=3.$$
 
 So that $$x=3$$ and $$y=2$$; whence we
 conclude, that the square root of 5+2√6 is √3+√2.
@@ -89,7 +89,7 @@ subtracting
 this square from the square of the equation $$x+y=a$$, that
 is, from $$x^2+2xy+y^2=a^2$$, there remains
 $$x^2-2xy+y^2=a^2-b$$, the square root of which is
-$$x-y=\surd(a^2-b)$$.
+$$x-y=\surd(a^2-b)$$. Now, $$x+y=a$$; we have therefore
 
 
 #### References
