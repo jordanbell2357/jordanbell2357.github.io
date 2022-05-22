@@ -61,7 +61,7 @@ Now, since $$x+y=5$$,  we have $$y=5-x$$, and
 this value substituted in the equation $$xy=6$$, produces
 $$5x-x^2=6$$, or $$x^2=5x-6$$; therefore
 
-$$x=\dfrac{5}{2}+\sqrt{\vphantom{\left( \dfrac{25}{4}-\dfrac{24}{4}\right)}}\left( \dfrac{25}{4}-\dfrac{24}{4}\right)=\dfrac{5}{2}+\dfrac{1}{2}=3.$$
+$$x=\frac{5}{2}+\sqrt{\vphantom{\left( \frac{25}{4}-\frac{24}{4}\right)}}\left( \frac{25}{4}-\frac{24}{4}\right)=\frac{5}{2}+\frac{1}{2}=3.$$
 
 So that $$x=3$$ and $$y=2$$; whence we
 conclude, that the square root of 5+2√6 is √3+√2.
@@ -126,7 +126,41 @@ that we may express the square root of a binomial $$a+\surd b$$
 in a more convenient form, is, that $$a^2-b$$ be a square;
 and
 if we represent that square by $$c^2$$, we shall have for the
-square root in question
+square root in question $$\sqrt{\vphantom{\left(\frac{a+c}{2}\right)}} \left(\frac{a+c}{2}\right) +
+\sqrt{\vphantom{\surd\left(\frac{a-c}{2}\right)}}\left(\frac{a-c}{2}\right)$$;
+for,  by squaring this quantity, we get
+
+$$a-2\sqrt{\vphantom{\left(\frac{a^2-c^2}{4}\right)}}\left(\frac{a^2-c^2}{4}\right);$$
+
+now, since $$c^2=a^2-b$$, and consequently $$a^2-c^2=b$$, the same square is found
+equal to
+
+$$a-2\sqrt{\vphantom{\frac{b}{4}}} \frac{b}{4} = a-\dfrac{2\surd b}{2} = a-\surd b.$$
+
+**677.** When it is required, therefore, to extract the square
+root of a binomial, as $$a \pm \surd b$$,
+the rule is, to subtract from the square $$a^2$$
+of the rational part the square $$b$$
+of the irrational part, to take the square root of the remainder, and
+calling that root $$c$$, to write for the root required
+
+$$
+\sqrt{\vphantom{\left(\frac{a+c}{2}\right)}} \left(\frac{a+c}{2}\right) \pm
+\sqrt{\vphantom{\surd\left(\frac{a-c}{2}\right)}}\left(\frac{a-c}{2}\right):
+$$
+
+**678.** If the square root of 2+√3 were required, we
+should have $$a=2$$ and $$\surd b=\surd 3$$; wherefore
+$$a^2-b=c=1$$; so that by the formula just given, the root sought
+equals √³⁄₂+√½.
+
+Let it be required to find the square root of the binomial
+11+6√2. Here we shall have $$a=11$$, and $$\surd b=6\surd 2$$;
+consequently, $$b=36\cdot 2=72$$, and $$a^2-b=49$$, which
+gives $$c=7$$; and hence we conclude, that the square root
+of 11+6√2 is √9+√2, or 3+√2.
+
+Required the square root of
 
 
 #### References
