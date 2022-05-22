@@ -259,7 +259,11 @@ $$\dfrac{1}{1\cdot 2\cdot 3\cdot 4\cdot 5\cdot 6\cdot 7\cdot 8\cdot 9\cdot 10},$
 to a decimal. The operation would be as follows:
 
 <a href="https://artofproblemsolving.com/texer/eqzaigab">
-<img src="/assets/euler/eqzaigab.png" alt="Decimals for reciprocal of factorial of 10" width="731" height="648" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/eqzaigab.png" alt="Decimals for reciprocal of factorial of 10" width="494" height="907" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+<a href="https://artofproblemsolving.com/texer/bctsglel">
+<img src="/assets/euler/bctsglel.png" alt="Decimals for reciprocal of factorial of 10" width="507" height="846" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/hjfwyspf">
