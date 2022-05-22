@@ -363,8 +363,88 @@ $$x+y=\dfrac{y}{y-1}+y=\dfrac{y^2}{y-1},$$
 
 and $$xy=\frac{y^2}{y-1}$$, that is to say, the sum is equal to the product; and to this
 also the difference of the squares ought to be equal. Now,
+we have
+
+$$x^2-y^2=\dfrac{y^2}{y^2-2y+1} - y^2 = \dfrac{-y^4+2y^3}{y^2-2y+1};$$
+
+so that making this equal to the quantity found $$\dfrac{y^2}{y-1}$$, we have
+
+$$\dfrac{y^2}{y-1}=\dfrac{-y^4+2y^3}{y^2-2y+1};$$
+
+dividing by $$y^2$$, we have
+
+$$\dfrac{1}{y-1}=\dfrac{-y^2+2y}{y^2-2y+1};$$
+
+and multiplying by $$y^2-2y+1$$, or $$(y-1)^2$$, we have $$y-1=-y^2+2y$$; consequently,
+$$y^2=y+1$$; which gives
+
+$$y=\frac{1}{2} \pm \sqrt{\vphantom{\frac{1}{4}+1}} \left(\frac{1}{4}+1\right)
+=\frac{1}{2} \pm \sqrt{\vphantom{\frac{5}{4}}} \frac{5}{4};$$
+
+or $$y=\dfrac{1 \pm \surd 5}{2}$$, and since $$x=\dfrac{y}{y-1}$$,
+we shall have, by substitution, and using the sign +,
+$$x=\dfrac{\surd 5+1}{\surd 5-1}$$.
+
+In order to remove the surd quantity from the denominator, multiply both terms by √5+1,
+and we obtain
+
+$$x=\dfrac{6+2\surd 5}{4} = \dfrac{3+\surd 5}{2}.$$
+
+Therefore the greater of the numbers sought, or $$x$$,
+equals $$\dfrac{3+\surd 5}{2}$$; and the less, or $$y$$,
+equals $$\dfrac{1 + \surd 5}{2}$$.
+
+Hence their sum $$x+y=2+\surd 5$$; their product $$xy=2+\surd 5$$; and since $$x^2=\dfrac{7+3\surd 5}{2}$$,
+and $$y^2=\dfrac{3+\surd 5}{2}$$, we
+have also the difference of the squares
+$$x^2-y^2=2+\surd 5$$, being all the same quantity.
+
+**686.** As this solution is very long, it is proper to remark
+that it may be abridged. In order to which, let us begin
+with making the sum $$x+y$$ equal to the difference of the
+squares $$x^2-y^2$$; we shall then have $$x+y=x^2-y^2$$; and dividing by $$x+y$$,
+because $$x^2-y^2=(x+y)(x-y)$$, we find $$1=x-y$$ and $$x=y+1$$. Consequently,
+$$x+y=2y+1$$, and $$x^2-y^2=2y+1$$; farther, as the product $$xy$$, or $$y^2+y$$,
+must be equal to the same quantity, we have $$y^2+y=2y+1$$, or $$y^2=y+1$$,
+which gives, as before, $$y=\dfrac{1+\surd 5}{2}$$.
+
+**687.** The preceding question leads also to the solution of
+the following.
+
+***Example 5.*** To find two numbers, such, that their sum, their product, and the sum of their squares, may be all equal.
+
+Let the numbers sought be represented by $$x$$ and $$y$$;
+then there must be an equality between $$x+y$$, $$xy$$, and $$x^2+y^2$$.
+
+Comparing the first and second quantities, we have
+$$x+y=xy$$, whence $$x=\dfrac{y}{y-1}$$; consequently, $$xy$$ and $$x+y$$ equal $$\dfrac{y}{y-1}$$. Now, the same quantity is equal to
+$$x^2+y^2$$; so that we have
+
+$$\dfrac{y^2}{y^2-2y+1} + y^2 = \dfrac{y^2}{y-1}.$$
+
+Multiplying by $$y^2-2y+1$$, the product is $$y^4-2y^3+2y^2=y^3-y^2$$, or $$y^4=3y^3-3y^2$$;
+and dividing by $$y^2$$, we have $$y^2=3y-3$$; which gives
+
+$$y=\frac{3}{2}\sqrt{\vphantom{\frac{9}{4}-3}} \frac{9}{4}-3=\dfrac{3+\surd -3}{2};$$
+
+consequently, $$y-1=\dfrac{1+\surd -3}{2}$$, whence results $$x=\dfrac{3+\surd -3}{1+\surd -3}$$;
+and multiplying both terms by 1-√-3, the result is
+$$x=\dfrac{6-2\surd -3}{4}$$, or $$x=\dfrac{3-\surd -3}{2}$$.
+
+Therefore the numbers sought are $$x=\dfrac{3-\surd -3}{2}$$, and $$\dfrac{3+\surd -3}{2}$$,
+the sum of which is $$x+y=3$$, their product $$xy=3$$; and lastly, since $$x^2=\dfrac{3-3\surd -3}{2}$$,
+and $$y^2=\dfrac{3+3\surd -3}{2}$$, the sum of the squares $$x^2+y^2=3$$, all
+the same quantity as required.
+
+**688.** We may greatly abridge this calculation by a particular artifice, Avhich is applicable likewise to other cases;
+and which consists in expressing the numbers sought by the
+sum and the difference of two letters, instead of representing
+them by distinct letters.
 
 
+
+
+ 
 
 #### References
 
