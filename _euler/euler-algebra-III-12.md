@@ -117,7 +117,7 @@ of ⅐, we may transform it into a geometrical progression,
 whose first term is ¹⁴²⁸⁵⁷⁄₁₀₀₀₀₀₀, the ratio being ¹⁄₁₀₀₀₀₀₀;
 and consequently, the sum equals
 
-$$\dfrac{\frac{142857}{1000000}}{1-\frac{1}{1000000}}=\frac{142857}{1000000}=\frac{1}{7}.$$
+$$\dfrac{\dfrac{142857}{1000000}}{1-\dfrac{1}{1000000}}=\dfrac{142857}{1000000}=\dfrac{1}{7}.$$
 
 **531.** We may prove, in a manner still more easy, that
 the decimal fraction, which we have foiuid, is exactly equal to ⅐'
