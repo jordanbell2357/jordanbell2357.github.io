@@ -262,6 +262,10 @@ to a decimal. The operation would be as follows:
 <img src="/assets/euler/eqzaigab.png" alt="Decimals for reciprocal of factorial of 10" width="731" height="648" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
+<a href="https://artofproblemsolving.com/texer/hjfwyspf">
+<img src="/assets/euler/hjfwyspf.png" alt="Decimals for reciprocal of factorial of 10" width="584" height="1021" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
 
  ⁴⁄₉ ⁵⁄₉ ⁶⁄₉ ⁷⁄₉ ⁸⁄₉ ⁹⁄₉
 
