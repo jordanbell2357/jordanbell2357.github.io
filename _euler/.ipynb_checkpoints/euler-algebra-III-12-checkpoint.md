@@ -259,11 +259,11 @@ $$\dfrac{1}{1\cdot 2\cdot 3\cdot 4\cdot 5\cdot 6\cdot 7\cdot 8\cdot 9\cdot 10},$
 to a decimal. The operation would be as follows:
 
 <a href="https://artofproblemsolving.com/texer/eqzaigab">
-<img src="/assets/euler/eqzaigab.png" alt="Dividing by 2 then by 3" width="547" height="907" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/eqzaigab.png" alt="Dividing by 2 then by 3" width="469" height="777" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/bctsglel">
-<img src="/assets/euler/bctsglel.png" alt="Dividing by 4 then by 5" width="553" height="846" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/bctsglel.png" alt="Dividing by 4 then by 5" width="474" height="725" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/hjfwyspf">
