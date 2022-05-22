@@ -89,7 +89,7 @@ subtracting
 this square from the square of the equation $$x+y=a$$, that
 is, from $$x^2+2xy+y^2=a^2$$, there remains
 $$x^2-2xy+y^2=a^2-b$$, the square root of which is
-$$x-y=\surd(a^2-b)$$.
+$$x-y=\surd(a^2-b)$$. Now, $$x+y=a$$; we have therefore
 
 
 #### References
