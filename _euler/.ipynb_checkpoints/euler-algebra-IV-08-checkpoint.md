@@ -61,7 +61,7 @@ Now, since $$x+y=5$$,  we have $$y=5-x$$, and
 this value substituted in the equation $$xy=6$$, produces
 $$5x-x^2=6$$, or $$x^2=5x-6$$; therefore
 
-$$x=\dfrac{5}{2}+\sqrt{\vphantom{2}}\left( \dfrac{25}{4}-\dfrac{24}{4}\right)=\dfrac{5}{2}+\dfrac{1}{2}=3.$$
+$$x=\dfrac{5}{2}+\sqrt{\vphantom{5}}\left( \dfrac{25}{4}-\dfrac{24}{4}\right)=\dfrac{5}{2}+\dfrac{1}{2}=3.$$
 
 So that $$x=3$$ and $$y=2$$; whence we
 conclude, that the square root of 5+2√6 is √3+√2.
