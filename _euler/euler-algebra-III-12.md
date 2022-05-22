@@ -182,17 +182,37 @@ fractions:
 
 **535.** If the denominator be 9, we have
 
+⅑=0.111,etc.; ²⁄₉=0.222,etc.; ³⁄₉=0.333,etc.
+
+And if the denominator be 10, we have ⅒=0.1, ²⁄₁₀=0.2, ³⁄₁₀=0.3.
+This is evident from the nature of decimals,
+as also that ¹⁄₁₀₀=0.01; ³⁷⁄₁₀₀=0.37; ²⁵⁶⁄₁₀₀₀=0.256; ²⁴⁄₁₀₀₀₀=0.0024, etc.
+
+**536.** If 11 be the denominator of the given fraction, we
+shall have ¹⁄₁₁=0.0909090,etc. Now, suppose it were required to find the value of this decimal fraction: let us call
+it $$s$$, and we shall have
+
+$$
+\begin{array}{rrr}
+s    & = & 0.090909, \\
+10s  & = & 0.909090, \\
+100s & = & 9.09090. 
+\end{array}
+$$
+
+If, therefore, we subtract from the last the value of $$s$$, we
+shall have $$99s=9$$, and consequently $$s=\frac{9}{99}=\frac{1}{11}$$;
+thus also,
+
+²⁄₁₁=0.181818,etc.  
+³⁄₁₁=0.272727,etc.  
+⁶⁄₁₁=0.545454,etc.
 
 
 
+ ⁴⁄₉ ⁵⁄₉ ⁶⁄₉ ⁷⁄₉ ⁸⁄₉ ⁹⁄₉
 
-⅐ ²⁄₇  ³⁄₇  ⁴⁄₇ ⁵⁄₇ ⁶⁄₇ ⁷⁄₇
-
-⅛       
-
-⅑ ²⁄₉ ³⁄₉ ⁴⁄₉ ⁵⁄₉ ⁶⁄₉ ⁷⁄₉ ⁸⁄₉ ⁹⁄₉
-
-¹⁄₁₁ ²⁄₁₁ ³⁄₁₁ ⁴⁄₁₁ ⁵⁄₁₁ ⁶⁄₁₁ ⁷⁄₁₁ ⁸⁄₁₁ ⁹⁄₁₁ ¹⁰⁄₁₁ ¹¹⁄₁₁
+ ²⁄₁₁ ³⁄₁₁ ⁴⁄₁₁ ⁵⁄₁₁ ⁶⁄₁₁ ⁷⁄₁₁ ⁸⁄₁₁ ⁹⁄₁₁ ¹⁰⁄₁₁ ¹¹⁄₁₁
 
 
 #### References
