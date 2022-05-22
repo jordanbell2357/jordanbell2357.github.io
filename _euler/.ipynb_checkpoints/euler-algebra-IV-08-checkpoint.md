@@ -436,7 +436,7 @@ the sum of which is $$x+y=3$$, their product $$xy=3$$; and lastly, since $$x^2=\
 and $$y^2=\dfrac{3+3\surd -3}{2}$$, the sum of the squares $$x^2+y^2=3$$, all
 the same quantity as required.
 
-**688.** We may greatly abridge this calculation by a particular artifice, Avhich is applicable likewise to other cases;
+**688.** We may greatly abridge this calculation by a particular artifice, which is applicable likewise to other cases;
 and which consists in expressing the numbers sought by the
 sum and the difference of two letters, instead of representing
 them by distinct letters.
