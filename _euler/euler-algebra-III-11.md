@@ -323,11 +323,11 @@ $$s=1\frac{1}{2}$$.
 **519.** Let there be a progression whose sum is $$s$$, the first
 term 2, and the ratio ¾; so that
 
-$$s=2+\frac{3}{2}+\frac{9}[8}+\frac{27}{32}+\frac{81}{128}+\textrm{etc.}$$
+$$s=2+\frac{3}{2}+\frac{9}{8}+\frac{27}{32}+\frac{81}{128}+\textrm{etc.}$$
 
 to infinity. Multiplying by ⁴⁄₃, we have
 
-$$\frac{4}{3}s=\frac{8}{3}+2+\frac{3}{2}+\frac{9}[8}+\frac{27}{32}+\frac{81}{128}+\textrm{etc.};$$
+$$\frac{4}{3}s=\frac{8}{3}+2+\frac{3}{2}+\frac{9}{8}+\frac{27}{32}+\frac{81}{128}+\textrm{etc.};$$
 
 and subtracting from this progression $$s$$, there remains
 $$\frac{1}{3}s=\frac{8}{3}$$: wherefore the sum required is 8.
