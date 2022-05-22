@@ -7,8 +7,6 @@ title: Euler, "Elements of Algebra", Section III, Chapter 12
 
 #### Section III. "Of Ratios and Proportions." Chapter 12. "Of Infinite Decimal Fractions."
 
-·
-
 **525.** We have already seen, in logarithmic calculations,
 that Decimal Fractions are employed instead of Vulgar
 Fractions: the same are also advantageously employed in
@@ -208,6 +206,49 @@ thus also,
 ³⁄₁₁=0.272727,etc.  
 ⁶⁄₁₁=0.545454,etc.
 
+**537.** There are a great number of decimal fractions,
+therefore, in which one, two, or more figures constantly
+recur, and which continue thus to infinity. Such fractions
+are curious, and we shall shew how their values may be
+easily found.
+
+Let US first suppose, that a single figure is constantly repeated, and let us represent it by $$a$$,
+so that $$s=0.aaaaaaa$$. We have
+
+$$10s=a.aaaaaaa$$
+
+and subtracting
+
+$$s=0.aaaaaaa$$
+
+we have
+
+$$9s=a;$$
+
+wherefore $$s=\dfrac{a}{9}$$.
+
+**538.** When two figures are repeated, as $$ab$$, we have
+$$s=0.ababab$$. Therefore $$100s=ab.ababab$$;
+and if we subtract $$s$$ from it, there remains $$99s=ab$$: consequently,
+$$s=\dfrac{ab}{99}$$.
+
+When three figures, as $$abc$$, are found repeated, we have
+$$s=0.abcabcabc$$; consequently, $$1000s=abc.abcabc$$; and
+subtracting $$s$$ from it, there remains $$999s=abc$$;
+wherefore, $$s=\dfrac{abc}{999}$$, and so on.
+
+Whenever, therefore, a decimal fraction of this kind occurs, it is easy to find its value. Let there be given, for
+example, 0.296296: its value will be ²⁹⁶⁄₉₉₉=⁸⁄₂₇, by dividing
+both its terms by 37.
+
+This fraction ought to give again the decimal fraction
+proposed; and we may easily be convinced that this is the
+real result, by dividing 8 by 9, and then that quotient by 3,
+because 27=3·9: thus, we have
+
+<a href="https://artofproblemsolving.com/texer/gqamudfn">
+<img src="/assets/euler/gqamudfn.png" alt="Decimals for ⁸⁄₂₇" width="337" height="449" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
 
  ⁴⁄₉ ⁵⁄₉ ⁶⁄₉ ⁷⁄₉ ⁸⁄₉ ⁹⁄₉
