@@ -441,10 +441,25 @@ and which consists in expressing the numbers sought by the
 sum and the difference of two letters, instead of representing
 them by distinct letters.
 
+In our last question, let us suppose one of the numbers
+sought to be $$p+q$$, and the other $$p-q$$, then their sum
+will be $$2p$$, their product will be $$p^2-q^2$$,
+and the sum of
+their squares will be $$2p^2+2q^2$$;
+which three quantities must
+be equal to each other; therefore making the first equal to
+the second, we have $$2p=p^2-q^2$$, which gives
+$$q^2=p^2-2p$$.
 
+Substituting this value of $$q^2$$ in the tliird quantity
+$$(2p^2+2q^2)$$, and comparing the result $$4p^2-4p$$ with the
+first, we have $$2p=4p^2-4p$$, whence $$p=\frac{3}{2}$$.
 
-
- 
+Consequently, $$q^2=p^2-2p=-\frac{3}{4}$$,
+and $$q=\dfrac{\surd -3}{2}$$;
+so that the numbers sought are
+$$p+q=\dfrac{3+\surd -3}{2}$$, and
+$$p-q=\dfrac{3-\surd -3}{2}$$, as before.
 
 #### References
 
