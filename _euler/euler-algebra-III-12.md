@@ -30,7 +30,7 @@ Let there be given first the fraction ½, and the division in
 decimals will assume this form:
 
 <a href="https://artofproblemsolving.com/texer/njyeuwza">
-<img src="/assets/euler/njyeuwza.png" alt="Integer long division ½" width="228" height="119" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/njyeuwza.png" alt="Integer long division ½" width="174" height="89" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Hence it appears, that ½ is equal to 0.5000000 or 0.5;
@@ -41,7 +41,7 @@ which is equivalent to ½.
 **527.** Let now ⅓ be the given fraction, and we shall have,
 
 <a href="https://artofproblemsolving.com/texer/pvnjgnaf">
-<img src="/assets/euler/pvnjgnaf.png" alt="Integer long division ⅓" width="246" height="579" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/pvnjgnaf.png" alt="Integer long division ⅓" width="185" height="434" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 This shows, that the decimal fraction, whose value is ⅓,
@@ -56,7 +56,7 @@ The decimal fraction which expresses the value of ⅔, is
 also continued to infinity; for we have,
 
 <a href="https://artofproblemsolving.com/texer/jkxijqxi">
-<img src="/assets/euler/jkxijqxi.png" alt="Integer long division ⅔" width="246" height="579" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/jkxijqxi.png" alt="Integer long division ⅔" width="185" height="434" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Which is also evident from what we have just said, because
@@ -65,7 +65,7 @@ Which is also evident from what we have just said, because
 **528.** If ¼ be the fraction proposed, we have
 
 <a href="https://artofproblemsolving.com/texer/xsxbzhmm">
-<img src="/assets/euler/xsxbzhmm.png" alt="Integer long division ¼" width="232" height="184" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/xsxbzhmm.png" alt="Integer long division ¼" width="174" height="138" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 So that ¼ is equal to 0.2500000, or to 0.25: which is
@@ -76,7 +76,7 @@ evidently true, since
 In like manner, we should have for the fraction ¾,
 
 <a href="https://artofproblemsolving.com/texer/djkddmyz">
-<img src="/assets/euler/djkddmyz.png" alt="Integer long division ¾" width="232" height="184" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/djkddmyz.png" alt="Integer long division ¾" width="174" height="138" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 So that ¾=0.75: and in fact
@@ -87,7 +87,7 @@ The fraction ⁵⁄₄ is changed into a decimal fraction, by
 making
 
 <a href="https://artofproblemsolving.com/texer/bksuqzrk">
-<img src="/assets/euler/bksuqzrk.png" alt="Integer long division ⁵⁄₄" width="232" height="250" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/bksuqzrk.png" alt="Integer long division ⁵⁄₄" width="174" height="187" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Now,
@@ -122,7 +122,7 @@ the decimal fraction, which we have foiuid, is exactly equal to ⅐'
 for, by substituting for its value the letter $$s$$, we have
 
 <a href="https://artofproblemsolving.com/texer/tvrzyttr">
-<img src="/assets/euler/tvrzyttr.png" alt="Decimals for ⅐" width="583" height="250" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/tvrzyttr.png" alt="Decimals for ⅐" width="436" height="209" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 And, dividing by 999999, we have $$s$$=¹⁴²⁸⁵⁷⁄₉₉₉₉₉₉=⅐.
@@ -247,7 +247,7 @@ real result, by dividing 8 by 9, and then that quotient by 3,
 because 27=3·9: thus, we have
 
 <a href="https://artofproblemsolving.com/texer/gqamudfn">
-<img src="/assets/euler/gqamudfn.png" alt="Decimals for ⁸⁄₂₇" width="337" height="449" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/gqamudfn.png" alt="Decimals for ⁸⁄₂₇" width="289" height="385" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 which is the decimal fraction that was proposed.
