@@ -259,28 +259,24 @@ $$\dfrac{1}{1\cdot 2\cdot 3\cdot 4\cdot 5\cdot 6\cdot 7\cdot 8\cdot 9\cdot 10},$
 to a decimal. The operation would be as follows:
 
 <a href="https://artofproblemsolving.com/texer/eqzaigab">
-<img src="/assets/euler/eqzaigab.png" alt="Decimals for reciprocal of factorial of 10" width="494" height="907" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/eqzaigab.png" alt="Dividing by 2 then by 3" width="494" height="907" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/bctsglel">
-<img src="/assets/euler/bctsglel.png" alt="Decimals for reciprocal of factorial of 10" width="507" height="846" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/bctsglel.png" alt="Dividing by 4 then by 5" width="507" height="846" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/hjfwyspf">
-<img src="/assets/euler/hjfwyspf.png" alt="Decimals for reciprocal of factorial of 10" width="584" height="1021" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/hjfwyspf.png" alt="Dividing by 6 then by 7" width="584" height="1021" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/rclecfes">
-<img src="/assets/euler/rclecfes.png" alt="Decimals for reciprocal of factorial of 10" width="533" height="678" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/rclecfes.png" alt="Dividing by 8 then by 9" width="533" height="678" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/qyqxpeiu">
-<img src="/assets/euler/qyqxpeiu.png" alt="Decimals for reciprocal of factorial of 10" width="254" height="561" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/qyqxpeiu.png" alt="Dividing by 10" width="254" height="561" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
-
- ⁴⁄₉ ⁵⁄₉ ⁶⁄₉ ⁷⁄₉ ⁸⁄₉ ⁹⁄₉
-
- ²⁄₁₁ ³⁄₁₁ ⁴⁄₁₁ ⁵⁄₁₁ ⁶⁄₁₁ ⁷⁄₁₁ ⁸⁄₁₁ ⁹⁄₁₁ ¹⁰⁄₁₁ ¹¹⁄₁₁
 
 
 #### References
