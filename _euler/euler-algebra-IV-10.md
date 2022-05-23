@@ -52,8 +52,81 @@ $$(x-2)(x^2+2x+4)=0.$$
 
 **710.** Now, the question is, to know what number we arc
 to substitute instead of $$x$$, in order that $$x^3=8$$,
-or that $$x^3-8=0$$.
+or that $$x^3-8=0$$;
+and it is evident that this condition is answered, by supposing the product which we
+have just now found equal to 0; but this happens, not only when the first factor
+$$x-2=0$$, which gives us $$x=2$$, but also when the
+second factor $$x^2+2x+4=0$$. Let us, therefore, make
+$$x^2+2x+4=0$$; then we shall have $$x^2=-2x-4$$, and thence
+$$x=-1 \pm \surd -3$$.
 
+**711.** So that beside the case, in which $$x=2$$,
+which corresponds to the equation $$x^3=8$$,
+we have two other values of $$x$$,
+the cubes of which are also 8; and these are,
+
+$$\textrm{I} \: x= -1+\surd -3,\qquad
+\textrm{II} \: x= -1-\surd -3,$$
+
+as will be
+evident, by actually cubing these expressions
+
+$$
+\begin{array}{rrr}
+-1&+\surd -3&\\
+-1&+\surd -3&\\ \hline
+1&-\surd -3&\\
+&-\surd -3&-3\\ \hline
+-2&-2\surd -3
+\end{array}
+$$
+
+$$
+\begin{array}{rrr}
+-2&-2\surd -3&\\
+-1&+\surd -3&\\ \hline
+2&+2\surd -3&\\
+&-2\surd -3&+6\\ \hline
+8&&
+\end{array}
+$$
+
+$$
+\begin{array}{rrr}
+-1&-\surd -3&\\
+-1&-\surd -3&\\ \hline
+1&+\surd -3&\\
+&+\surd -3&-3\\ \hline
+-2&+2\surd -3&
+\end{array}
+$$
+
+$$
+\begin{array}{rrr}
+-2&+2\surd -3&\\
+-1&-\surd -3&\\ \hline
+2&-2\surd -3&\\
+&+2\surd -3&+6\\ \hline
+8&&
+\end{array}
+$$
+
+It is true, that these values are imaginary, or impossible;
+but yet they deserve attention.
+
+712. What we have said applies in general to every cubic
+equation, such as $$x^3=a$$; namely, that beside the value
+$$x=\sqrt[3]{\vphantom{a}}a$$, we shall always find two other values.
+To abridge the calculation, let us suppose $$\sqrt[3]{\vphantom{a}}a=c$$,
+so that $$a=c^3$$, our
+equation will then assume this form,
+$$x^3-c^3=0$$, hich
+will be divisible by $$x-c$$,
+as the actual division shows
+
+<a href="https://artofproblemsolving.com/texer/chcvtqld">
+<img src="/assets/euler/chcvtqld.png" alt="Polynomial long division" width="258" height="205" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
 #### References
 
