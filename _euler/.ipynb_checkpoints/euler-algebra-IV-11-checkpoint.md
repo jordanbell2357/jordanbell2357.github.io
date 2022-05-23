@@ -7,7 +7,22 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 11
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 11. "Of the Resolution of Complete Equations of the Third Degree."
 
+**719.** An equation of the third degree is called complete,
+when, beside the cube of the unknown quantity, it contains
+that unknown quantity itself, and its square: so that the
+general formula for these equations, bringing all the terms
+to one side, is
 
+$$ax^3 \pm bx^2 \pm cx \pm d = 0.$$
+
+And the purpose of this chapter is to show how we are to
+derive from such equations the values of $$x$$, which are also
+called the roots of the equation. We suppose, in the first
+place, that every such an equation has three roots; since it
+has been seen, in the last chapter, that this is true even with
+regard to pure equations of the same degree.
+
+**720.** We shall first consider the equation
 
 
 #### References
