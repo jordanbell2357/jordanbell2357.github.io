@@ -13,8 +13,8 @@ square root, or of which one, at least, contains that sign.
 
 For this reason 3+√5 is a binomial, and likewise
 √8+√3; and it is indifferent whether the two terms be
-joined by the sign + or by the sign - . So that 3 - √5
-and 3 + √5 are both binomials.
+joined by the sign + or by the sign - . So that 3-√5
+and 3+√5 are both binomials.
 
 **670.** The reason that these binomials deserve particular
 attention is, that in the resolution of quadratic equations we
