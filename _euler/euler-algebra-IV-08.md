@@ -235,7 +235,7 @@ $$
 **682.** We shall illustrate what we have just said by some
 examples.
 
-***Example 1.*** Required two numbers, whose product may be 105,
+*Example 1.* Required two numbers, whose product may be 105,
 and whose squares may together make 274.
 
 Let us represent those two numbers by $$x$$ and $$y$$; we shall
@@ -285,7 +285,7 @@ and $$y=7$$.
 The following general question is resolved by the same
 method.
 
-***Example 2.*** Required two numbers, whose product may be $$m$$, and
+*Example 2.* Required two numbers, whose product may be $$m$$, and
 the sum of the squares $$n$$.
 
 If those numbers are represented by $$x$$ and $$y$$, we have the
@@ -309,7 +309,7 @@ and
 
 $$y=\frac{1}{2}\surd(n+2m)+\frac{1}{2}\surd(n-2m).$$
 
-**684.** ***Example 3.*** Required two numbers, such, that their product
+**684.** *Example 3.* Required two numbers, such, that their product
 may be 35, and the difference of their squares 24.
 
 Let the greater of the two numbers be $$x$$, and the less $$y$$:
@@ -345,7 +345,7 @@ $$y=\frac{35}{\surd -25} =
 **685.** We shall conclude this chapter with the following
 question.
 
-***Example 4.*** Required two numbers, such, that their sum, their
+*Example 4.* Required two numbers, such, that their sum, their
 product, and the difference of their squares, may be all
 equal.
 
@@ -411,7 +411,7 @@ which gives, as before, $$y=\dfrac{1+\surd 5}{2}$$.
 **687.** The preceding question leads also to the solution of
 the following.
 
-***Example 5.*** To find two numbers, such, that their sum, their product, and the sum of their squares, may be all equal.
+*Example 5.* To find two numbers, such, that their sum, their product, and the sum of their squares, may be all equal.
 
 Let the numbers sought be represented by $$x$$ and $$y$$;
 then there must be an equality between $$x+y$$, $$xy$$, and $$x^2+y^2$$.
