@@ -65,7 +65,7 @@ which corresponds to the equation $$x^3=8$$,
 we have two other values of $$x$$,
 the cubes of which are also 8; and these are,
 
-$$\textrm{I} \quad x= -1+\surd -3,\qquad \textrm{II} \quad x= -1-\surd -3,$$
+$$\textrm{I)} \quad x= -1+\surd -3,\qquad \textrm{II)} \quad x= -1-\surd -3,$$
 
 as will be
 evident, by actually cubing these expressions
@@ -143,7 +143,7 @@ $$x^2=-cx-c^2$$, and
 $$x=-\frac{c}{2} \pm \surd \left(\frac{c^2}{4}-c^2\right)$$,
 or $$x=\dfrac{-c \pm \surd -3c^2}{2}$$; that is to say,
 
-$$x=\dfrac{-c \pm c \surd -3}{2} = \dfrac{-1 \pm \surd -3}{2} \cdot c.$$
+$$x=\dfrac{-c \pm c \surd -3}{2} = \dfrac{-1 \pm \surd -3}{2} \cdot c$$
 
 **713.** Now, as $$c$$ was substituted for $$\sqrt[3]{\vphantom{a}}a$$,
 we conclude, that
@@ -174,7 +174,7 @@ and $$x^3=1728$$: whence, by extracting the cube root,
 we have $$x = 12$$.
 
 The number sought therefore is 12; for its square 144,
-multiplied by its fourtii part, or by 3, gives 432.
+multiplied by its fourth part, or by 3, gives 432.
 
 **715.** *Question 2.* Required a number such, that if we
 divide its fourth power by its half, and add 14¼ to the product, the sum may be 100.
@@ -200,7 +200,7 @@ him $$3x$$ horsemen and $$20x$$ foot-soldiers. So that the whole
 number of horsemen is $$3x^2$$, and that of foot-soldiers is
 $$20x^2$$.
 
-Now, each horseman receiving .t florins per month, and
+Now, each horseman receiving $$x$$ florins per month, and
 each foot-soldier receiving $$\frac{1}{2}x$$,
 florins, the pay of the horsemen, each month, amounts to $$3x^3$$,
 and that of the footsoldiers to $$10x^3$$;
