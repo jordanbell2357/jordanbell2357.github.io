@@ -80,6 +80,8 @@ $$
 \end{array}
 $$
 
+---
+
 $$
 \begin{array}{rrr}
 -2&-2\surd -3&\\
@@ -101,6 +103,8 @@ $$
 -2&+2\surd -3&
 \end{array}
 $$
+
+---
 
 $$
 \begin{array}{rrr}
