@@ -118,9 +118,180 @@ make the trial that has been already mentioned.
 
 Let there be given, for example, the equation
 
+$$x^3-3x^2+\frac{11}{4}x-\frac{3}{4}=0;$$
+
+as it contains fourth parts, let us make $$x=\dfrac{y}{2}$$,
+which will give
+
+$$\dfrac{y^3}{8}-\dfrac{3y^2}{4}+\dfrac{11y}{8}-\dfrac{3}{4}=0,$$
+
+and, multiplying by 8, we shall obtain the equation
+
+$$y^3-6y^2+11y-6=0,$$
+
+the roots of which are, as we have already seen, $$y=1$$, $$y=2$$, $$y=3$$;
+whence it follows, that in the given equation, we have 
+$$x=\frac{1}{2}$$, $$x=1$$, $$x=\frac{3}{2}$$.
+
+**724.** Let there be an equation, where the coefficient of
+the first term is a whole number but not 1, and whose last
+term is 1; for example,
+
+$$6x^3-11x^2+6x-1=0.$$
+
+Here, if we divide by 6, we shall have
+$$x^3-\frac{11}{6}x^2+x-\frac{1}{6}=0$$;
+which equation we may clear of fractions, by the method
+just explained.
+
+First, by making $$x=\dfrac{y}{6}$$, we shall have
+
+$$\dfrac{y^3}{216}-\dfrac{11y^2}{216}+\dfrac{y}{6}-\dfrac{1}{6}=0;$$
+
+and multiplying by 216, the equation will become
+
+$$y^3-11y^2+36y-36=0.$$
+
+But as it would be tedious
+to make trial of all the divisors of the number 36, and
+as the last term of the original equation is 1, it is better
+to suppose, in this equation, $$x=\dfrac{1}{z}$$;
+for we shall then have
+$$\dfrac{6}{z^3}-\dfrac{11}{z^2}+\dfrac{6}{z}-1=0$$,
+which, multiplied by $$z^2$$, gives $$6-11z+6z^2-z^3=0$$,
+and transposing all the terms,
+
+$$z^3-6z^2+11z-6=0;$$
+
+where the roots are $$z=1$$, $$z=2$$, $$z=3$$;
+whence it follows that in our equation
+$$x=1$$, $$x=\frac{1}{2}$$, $$x=\frac{1}{3}$$.
+
+**725.** It has been observed in the preceding articles, that
+in order to have all the roots in positive numbers, the signs
+plus and minus must succeed each other alternately; by
+means of which the equation takes this form,
+$$x^3-ax^2+bx-c=0$$,
+the signs changing as many times
+as there are positive roots. If all the three roots had been
+negative, and we had multiplied together the three factors
+$$x+p$$, $$x+q$$, $$x+r$$,
+all the terms would have had the
+sign plus, and the form of the equation would have been
+$$x^3+ax^2+bx+c=0$$,
+in which the same signs follow
+each other three times; that is, the number of negative
+roots.
+
+We may conclude, therefore, that as often as the signs
+change, the equation has positive roots; and that as often as
+the same signs follow each other, the equation has negative
+roots. This remark is very important, because it teaches us
+whether the divisors of the last term are to be taken affirmatively
+or negatively, when we wish to make the trial which
+has been mentioned.
+
+726. In order to illustrate what has been said by an example, let us consider the equation
+$$x^3+x^2-34x+56=0$$,
+in which the signs are changed twice, and in which the same
+sign returns but once. Here we conclude that the equation
+has two positive roots, and one negative root; and as these
+roots must be divisors of the last terra 56, they must be included
+in the numbers ±1, 2, 4, 7, 8, 14, 28, 56.
+
+Let us, therefore, make $$x=2$$, and we shall have
+$$8+4-68+56=0$$; whence we conclude that $$x=2$$
+is a
+positive root, and that therefore $$x-2$$
+is a divisor of the
+equation, by means of which we easily find the two other
+roots; for, actually dividing by $$x-2$$, we have
+
 <a href="https://artofproblemsolving.com/texer/geyfrhwy">
 <img src="/assets/euler/geyfrhwy.png" alt="Polynomial long division" width="277" height="212" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
+
+And making the quotient $$x^2-3x-28=0$$,
+we find the two other roots; which will be
+
+$$x=-\frac{3}{2} \pm \surd\left(\frac{9}{4}+24\right)=-\frac{3}{2} \pm \frac{11}{2};$$
+
+that is, $$x=4$$; or $$x=-7$$;
+and taking into account the root found before,
+namely, $$x=2$$, we clearly perceive that the equation has
+two positive, and one negative root. We shall give some
+examples to render this still more evident.
+
+
+**727.** *Question 1.* There are two numbers, whose difference is 12, and whose product multiplied by their sum
+makes 14560. What are those numbers?
+
+Let $$x$$ be the less of the two numbers, then the greater
+will be $$x+12$$, and their product will be $$x^2+12x$$,
+which multiplied by the sum $$2x+12$$, gives
+
+$$2x^3+36x^2+144x=14560;$$
+
+and dividing by 2, we have
+
+$$x^3+18x^2+72x=7280.$$
+
+Now, the last term 7280 is too great for us to make trial
+of all its divisors; but as it is divisible by 8, we shall make
+$$x=2y$$, because the new equation,
+$$8y^3+72y^2+144y=7280$$, 
+after the substitution, being divided by 8, will become
+$$y^3+9y^2+18y=910$$; 
+
+to solve which, we need only
+try the divisors 1, 2, 5, 7, 10, 13, etc. of the number 910:
+where it is evident, that the three first, 1, 2, 5, are too
+small; beginning therefore with supposing $$y=7$$,
+we immediately find that number to be one of the roots; for the
+substitution gives
+343+144+126=910.
+It follows, therefore, that $$x=14$$;
+and the two other roots will be
+found by dividing
+$$y^3+9y^2+18y-910$$ by $$y-7$$, thus:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+$$2x^3+36x^2+144x=14560;$$
+
+$$x^3+18x^2+144x=7280.$$
+
+$$8y^3+72y^2+144y=8270$$
+
+$$y^3+9y^3+18y=910$$
+
+$$y=7$$
+
+$$x=14$$
+
+$$y^3+9y^2+18y-910$$
+
+$$y-7$$
+
+
 
 <a href="https://artofproblemsolving.com/texer/ncijelkw">
 <img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="304" height="211" style="display:block;margin-left:auto;margin-right:auto;">
@@ -129,60 +300,6 @@ Let there be given, for example, the equation
 <a href="https://artofproblemsolving.com/texer/wlbnirku">
 <img src="/assets/euler/wlbnirku.png" alt="Polynomial long division" width="309" height="212" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
-
-$$x^3-3x^2+\frac{11}{4}x-\frac{3}{4}=0;$$
-
-$$x=\dfrac{y}{2}$$
-
-$$\dfrac{y^3}{8}-\dfrac{3y^2}{4}+\dfrac{11y}{8}-\dfrac{3}{4}=0,$$
-
-$$y^3-6y^2+11y-6=0,$$
-
-$$y=1$$, $$y=2$$, $$y=3$$
-
-$$x=\frac{1}{2}$$, $$x=1$$, $$x=\frac{3}{2}$$.
-
-$$6x^3-11x^2+6x-1=0.$$
-
-$$x^3-\frac{11}{6}x^2+x-\frac{1}{6}=0$$;
-
-$$x=\dfrac{y}{6}$$
-
-$$\dfrac{y^3}{216}-\dfrac{11y^2}{216}+\dfrac{y}{6}-\dfrac{1}{6}=0;$$
-
-$$y^3-11y^2+36y-36=0$$
-
-$$x=\dfrac{1}{z}$$
-
-$$\dfrac{6}{z^3}-\dfrac{11}{z^2}+\dfrac{6}{z}-1=0$$
-
-$$z^2$$
-
-$$6-11z+6z^2-z^3=0$$
-
-$$z^3-6z^2+11z-6=0$$
-
-$$z=1$$, $$z=2$$, $$z=3$$
-
-$$x=1$$, $$x=\frac{1}{2}$$, $$x=\frac{1}{3}$$
-
-$$x^3-ax^2+bx-c=0$$
-
-$$x+p$$, $$x+q$$, $$x+r$$
-
-$$x^3+ax^2+bx+c=0$$
-
-$$x^3+x^2-34x+56=0$$
-
-$$x=2$$
-
-8+4-68+56=0
-
-$$x-2$$
-
-$$x-2$$
-
-
 
 
 #### References
