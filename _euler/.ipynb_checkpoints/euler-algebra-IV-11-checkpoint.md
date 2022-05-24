@@ -71,7 +71,7 @@ three roots may be $$x=p$$, $$x=q$$, $$x=r$$, that we must have,
 
 We perceive, from this, that the second term of the equation contains the sum of the three roots; that the third term
 contains the sum of the products of the roots taken two by
-two ; and lastly, that the fourth term consists of the product
+two; and lastly, that the fourth term consists of the product
 of all the three roots multiplied together.
 
 From this last property we may deduce an important
@@ -102,8 +102,21 @@ adn as we have only to see the other factor by means of division as follows:
 <img src="/assets/euler/uptzquhb.png" alt="Polynomial long division" width="255" height="212" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
+Since, therefore, the formula is represented by the product
+$$(x-2)(x^2+2x+3)$$, it will become =0, not only when $$x-2=0$$,
+or $$x=2$$, but also when $$x^2+2x+3=0$$;
+and, this last
+factor gives $$x^2+2x=-3$$; consequently,
+$$x=-1 \pm \surd -2$$; and these are the other two roots of our equation, which are
+evidently impossible, or imaginary.
 
+**723.** The method which we have explained, is applicable
+only when the first term $$x^3$$ is multiplied by 1, and the other
+terms of the equation have integer coefficients; therefore, when this is not the case, we must begin by a preparation, which consists in transforming the equation into
+another form having the condition required; after which, we
+make the trial that has been already mentioned.
 
+Let there be given, for example, the equation
 
 
 #### References
