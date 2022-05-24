@@ -165,7 +165,7 @@ In ordinary calculations, indeed, we employ only the first
 of those values, because the other two are imaginary; as we
 shall show by some examples.
 
-**714.** *Question 1.* To find a number, whosse square, multiplied by its fourth part,
+**714.** *Question 1.* To find a number, whose square, multiplied by its fourth part,
 may produce 432.
 
 Let $$x$$ be that number; the product of $$x^2$$ by $$\frac{1}{4}x$$
