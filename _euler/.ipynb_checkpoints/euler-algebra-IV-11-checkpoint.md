@@ -118,6 +118,72 @@ make the trial that has been already mentioned.
 
 Let there be given, for example, the equation
 
+<a href="https://artofproblemsolving.com/texer/geyfrhwy">
+<img src="/assets/euler/geyfrhwy.png" alt="Polynomial long division" width="277" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+<a href="https://artofproblemsolving.com/texer/ncijelkw">
+<img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="304" height="211" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+<a href="https://artofproblemsolving.com/texer/wlbnirku">
+<img src="/assets/euler/wlbnirku.png" alt="Polynomial long division" width="309" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+$$x^3-3x^2+\frac{11}{4}x-\frac{3}{4}=0;$$
+
+$$x=\dfrac{y}{2}$$
+
+$$\dfrac{y^3}{8}-\dfrac{3y^2}{4}+\dfrac{11y}{8}-\dfrac{3}{4}=0,$$
+
+$$y^3-6y^2+11y-6=0,$$
+
+$$y=1$$, $$y=2$$, $$y=3$$
+
+$$x=\frac{1}{2}$$, $$x=1$$, $$x=\frac{3}{2}$$.
+
+$$6x^3-11x^2+6x-1=0.$$
+
+$$x^3-\frac{11}{6}x^2+x-\frac{1}{6}=0$$;
+
+$$x=\dfrac{y}{6}$$
+
+$$\dfrac{y^3}{216}-\dfrac{11y^2}{216}+\dfrac{y}{6}-\dfrac{1}{6}=0;$$
+
+$$y^3-11y^2+36y-36=0$$
+
+$$x=\dfrac{1}{z}$$
+
+$$\dfrac{6}{z^3}-\dfrac{11}{z^2}+\dfrac{6}{z}-1=0$$
+
+$$z^2$$
+
+$$6-11z+6z^2-z^3=0$$
+
+$$z^3-6z^2+11z-6=0$$
+
+$$z=1$$, $$z=2$$, $$z=3$$
+
+$$x=1$$, $$x=\frac{1}{2}$$, $$x=\frac{1}{3}$$
+
+$$x^3-ax^2+bx-c=0$$
+
+$$x+p$$, $$x+q$$, $$x+r$$
+
+$$x^3+ax^2+bx+c=0$$
+
+$$x^3+x^2-34x+56=0$$
+
+$$x=2$$
+
+8+4-68+56=0
+
+$$x-2$$
+
+$$x-2$$
+
+
+
 
 #### References
 
