@@ -21,7 +21,7 @@ $$x=5$$, the equations $$x^3=a$$ gives
 $$x=\sqrt[3]{\vphantom{a}}a$$, and the equation
 $$x^3=\dfrac{a}{b}$$ gives
 $$x=\sqrt[3]{\vphantom{\dfrac{a}{b}}}\dfrac{a}{b}$$,
-or $$x=\dfrac{\sqrt[3]{\vphantom{a}}a}{\vphantom{b}}b}$$.
+or $$x=\dfrac{\sqrt[3]{\vphantom{a}}a}{\sqrt[3]{\vphantom{b}}b}$$.
 To be able,
 therefore, to resolve such equations, it is sufficient that we
 know how to extract the cube root of a given number.
@@ -65,8 +65,7 @@ which corresponds to the equation $$x^3=8$$,
 we have two other values of $$x$$,
 the cubes of which are also 8; and these are,
 
-$$\textrm{I} \: x= -1+\surd -3,\qquad
-\textrm{II} \: x= -1-\surd -3,$$
+$$\textrm{I} \quad x= -1+\surd -3,\qquad \textrm{II} \quad x= -1-\surd -3,$$
 
 as will be
 evident, by actually cubing these expressions
@@ -90,6 +89,8 @@ $$
 8&&
 \end{array}
 $$
+
+---
 
 $$
 \begin{array}{rrr}
