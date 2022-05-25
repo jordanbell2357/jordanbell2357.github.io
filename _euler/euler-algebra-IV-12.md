@@ -387,7 +387,12 @@ and
 
 $$\surd \left(g^2-\frac{4}{27}f^3\right)= \surd \frac{112}{27} = \dfrac{4\surd 21}{9};$$
 
-consequently.
+consequently,
+
+$$y=\sqrt[3]{\vphantom{\dfrac{2+\frac{4\surd 21}{9}}{2}}} \left \dfrac{2+\frac{4\surd 21}{9}}{2} \right)
++\sqrt[3]{\vphantom{\dfrac{2-\frac{4\surd 21}{9}}{2}}} \left \dfrac{2-\frac{4\surd 21}{9}}{2} \right)$$
+
+or
 
 
 #### References
