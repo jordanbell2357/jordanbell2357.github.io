@@ -357,7 +357,7 @@ have $$x=y+2$$, $$x^2=y^2+4y+4$$, and $$x^3=y^3+6y^2+12y+8$$; therefore
     <td></td>
     <td>\(-6y^2\)</td>
     <td>\(-24y\)</td>
-    <td>\(-24\)</td>
+    <td>-24</td>
   </tr>
   <tr>
     <td>\(13x\)</td>
