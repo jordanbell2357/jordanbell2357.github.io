@@ -390,9 +390,60 @@ $$\surd \left(g^2-\frac{4}{27}f^3\right)= \surd \frac{112}{27} = \dfrac{4\surd 2
 consequently,
 
 $$y=\sqrt[3]{\vphantom{\dfrac{2+\frac{4\surd 21}{9}}{2}}} \left \dfrac{2+\frac{4\surd 21}{9}}{2} \right)
-+\sqrt[3]{\vphantom{\dfrac{2-\frac{4\surd 21}{9}}{2}}} \left \dfrac{2-\frac{4\surd 21}{9}}{2} \right)$$
++\sqrt[3]{\vphantom{\dfrac{2-\frac{4\surd 21}{9}}{2}}} \left \dfrac{2-\frac{4\surd 21}{9}}{2} \right),$$
 
 or
+
+$$
+y=
+\sqrt[3]{\vphantom{1+\dfrac{2\surd 21}{9}}} \left(1+\dfrac{2\surd 21}{9} \right)
++
+\sqrt[3]{\vphantom{1-\dfrac{2\surd 21}{9}}} \left(1-\dfrac{2\surd 21}{9} \right),
+$$
+
+or
+
+$$
+y=\sqrt[3]{\vphantom{\dfrac{9+2\surd 21}{9}}} \left( \dfrac{9+2\surd 21}{9} \right)
++
+\sqrt[3]{\vphantom{\dfrac{9-2\surd 21}{9}}} \left( \dfrac{9-2\surd 21}{9} \right),
+$$
+
+or
+
+$$
+y=\sqrt[3]{\vphantom{\dfrac{27+7\surd 21}{27}}} \left( \dfrac{27+7\surd 21}{27} \right)
++
+\sqrt[3]{\vphantom{\dfrac{27-7\surd 21}{27}}} \left( \dfrac{27-7\surd 21}{27} \right),
+$$
+
+or
+
+$$
+y=\frac{1}{3}\sqrt[3]{1}(27+6\surd 21) + \frac{1}{3}\sqrt[3]{1}(27-6\surd 21);
+$$
+
+and it remains to substitute this value in $$x=y+2$$.
+
+**748.** In the solution of this example, we have been
+brought to a quantity doubly irrational; but we must not
+immediately conclude that the root is irrational: because the
+binomials $$27 \pm 6\surd 21$$ might happen to be real cubes; and
+this is the case here; for the cube of
+$$\dfrac{3+\surd 21}{2}$$ being $$\dfrac{216+48\surd 21}{8}=27+6\surd 21$$,
+it follows that the cube root of $$27-6\surd 21$$ is $$\dfrac{3-\surd 21}{2}$$.
+Hence the value which we
+found for $$y$$ becomes
+
+$$y=\frac{1}{3}\left( \dfrac{3+\surd 21}{2}\right)+\frac{1}{3}\left( \dfrac{3-\surd 21}{2}\right)=\frac{1}{2}+\frac{1}{2}=1.$$
+
+Now, since $$y=1$$, we have $$x=3$$ for one of the roots of the
+equation proposed, and the other two will be found by
+dividing the equation by $$x-3$$.
+
+<a href="https://artofproblemsolving.com/texer/oqfowwuq">
+<img src="/assets/euler/oqfowwuq.png" alt="Polynomial long division" width="277" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
 
 #### References
