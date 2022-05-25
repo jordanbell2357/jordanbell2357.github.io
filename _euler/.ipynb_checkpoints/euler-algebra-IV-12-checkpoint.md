@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 12
+title: Euler, "Elements of Algebra", Section IV, Chapter 12. "Of the Rule of Cardano, or of Scipione del Ferro."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
