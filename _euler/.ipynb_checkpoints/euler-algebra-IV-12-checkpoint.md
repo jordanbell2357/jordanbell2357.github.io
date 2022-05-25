@@ -133,6 +133,14 @@ $$f$$ and $$g$$,
 we have always
 for one of the roots
 
+$$x=\sqrt[3]{\vphantom{\dfrac{g+\surd\left(g^2-\frac{4}{27}f^3\right)}{2}}}\dfrac{g+\surd\left(g^2-\frac{4}{27}f^3\right)}{2} + \sqrt[3]{\vphantom{\dfrac{g-\surd\left(g^2-\frac{4}{27}f^3\right)}{2}}} \dfrac{g-\surd\left(g^2-\frac{4}{27}f^3\right)}{2};$$
+
+that is, an irrational quantity, containing not only the sign
+of the square root, but also the sign of the cube root ; and
+this is the formula which is called the *Rule of Cardano*.
+
+**742.** Let us apply it to some examples, in order that its
+use may be better understood.
 
 #### References
 
