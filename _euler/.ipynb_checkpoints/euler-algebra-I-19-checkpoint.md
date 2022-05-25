@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 19
+title: Euler, "Elements of Algebra", Section I, Chapter 19. "Of the Method of representing Irrational Numbers by Fractional Exponents."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

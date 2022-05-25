@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 4
+title: Euler, "Elements of Algebra", Section IV, Chapter 4. "Of the Resolution of two or more Equations of the First Degree."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

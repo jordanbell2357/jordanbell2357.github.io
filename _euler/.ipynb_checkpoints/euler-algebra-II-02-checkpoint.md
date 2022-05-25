@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 2
+title: Euler, "Elements of Algebra", Section II, Chapter 2. "Of the Subtraction of Compound Quantities."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

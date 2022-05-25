@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 13
+title: Euler, "Elements of Algebra", Section I, Chapter 13. "Of Impossible, or Imaginary Quantities, which arise from the same source."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

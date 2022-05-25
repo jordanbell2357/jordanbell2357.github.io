@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 5
+title: Euler, "Elements of Algebra", Section I, Chapter 5. "Of the Division of Simple Quantities."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

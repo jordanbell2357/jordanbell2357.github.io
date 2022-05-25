@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 20
+title: Euler, "Elements of Algebra", Section I, Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

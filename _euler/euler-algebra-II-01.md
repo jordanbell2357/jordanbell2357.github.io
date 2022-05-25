@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 1
+title: Euler, "Elements of Algebra", Section II, Chapter 1. "Of the Addition of Compound Quantities."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

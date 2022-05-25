@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 9
+title: Euler, "Elements of Algebra", Section IV, Chapter 9, "Of the Nature of Equations of the Second Degree."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

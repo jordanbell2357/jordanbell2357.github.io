@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 6
+title: Euler, "Elements of Algebra", Section I, Chapter 6. "Of the Properties of Integers, with respect to their Divisors."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

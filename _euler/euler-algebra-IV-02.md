@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 2
+title: Euler, "Elements of Algebra", Section IV, Chapter 2. "Of the Resolution of Simple Equations, or Equations of the First Degree."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

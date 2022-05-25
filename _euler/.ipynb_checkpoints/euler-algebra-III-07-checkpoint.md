@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 7
+title: Euler, "Elements of Algebra", Section III, Chapter 7. "Of the Greatest Common Divisor of two given Numbers."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

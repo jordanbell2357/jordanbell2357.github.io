@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 11
+title: Euler, "Elements of Algebra", Section III, Chapter 11. "Of Geometrical Progressions."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

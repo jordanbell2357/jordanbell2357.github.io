@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 10
+title: Euler, "Elements of Algebra", Section II, Chapter 10. "Of the higher Powers of Compound Quantities."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

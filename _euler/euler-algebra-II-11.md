@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 11
+title: Euler, "Elements of Algebra", Section II, Chapter 11. "Of the Transposition of the Letters, on which the demonstration of the preceding Rule is founded."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

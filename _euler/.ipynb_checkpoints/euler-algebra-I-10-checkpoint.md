@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 10
+title: Euler, "Elements of Algebra", Section I, Chapter 10. "Of the Multiplication and Division of Fractions."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

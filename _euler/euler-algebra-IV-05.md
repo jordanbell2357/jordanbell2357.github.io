@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 5
+title: Euler, "Elements of Algebra", Section IV, Chapter 5. "Of the Resolution of Pure Quadratic Equations."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

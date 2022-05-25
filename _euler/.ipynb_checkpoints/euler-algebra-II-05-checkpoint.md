@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 5
+title: Euler, "Elements of Algebra", Section II, Chapter 5. "Of the Resolution of Fractions into Infinite Series."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

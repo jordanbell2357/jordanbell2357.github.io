@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 8
+title: Euler, "Elements of Algebra", Section IV, Chapter 8. "Of the Extraction of the Square Roots of Binomials."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 2
+title: Euler, "Elements of Algebra", Section I, Chapter 2. "Explanation of the Signs + Plus and - Minus."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

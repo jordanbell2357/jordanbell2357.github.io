@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 9
+title: Euler, "Elements of Algebra", Section I, Chapter 9. "Of the Addition and Subtraction of Fractions."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

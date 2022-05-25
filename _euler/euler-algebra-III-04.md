@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 4
+title: Euler, "Elements of Algebra", Section III, Chapter 4. "Of the Summation of Arithmetical Progressions."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 3
+title: Euler, "Elements of Algebra", Section II, Chapter 3. "Of the Multiplication of Simple Quantities."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

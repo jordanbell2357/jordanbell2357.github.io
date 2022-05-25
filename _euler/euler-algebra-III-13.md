@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 13
+title: Euler, "Elements of Algebra", Section III, "Of the Calculation of Interest."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

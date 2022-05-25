@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 2
+title: Euler, "Elements of Algebra", Section III, Chapter 2. "Of Arithmetical Proportion."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 7
+title: Euler, "Elements of Algebra", Section IV, Chapter 7. "Of the Extraction of the Roots of Polygon Numbers."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

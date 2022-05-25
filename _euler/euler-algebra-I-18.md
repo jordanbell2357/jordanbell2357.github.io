@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 18
+title: Euler, "Elements of Algebra", Section I, Chapter 18. "Of Roots, with relation to Powers in general."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

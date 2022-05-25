@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 4
+title: Euler, "Elements of Algebra", Section I, Chapter 4. "Of the Nature of whole Numbers, or Integers, with respect to their Factors."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

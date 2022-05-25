@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 15
+title: Euler, "Elements of Algebra", Section I, Chapter 15. "Of Cube Roots, and of Irrational Numbers resulting from them."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

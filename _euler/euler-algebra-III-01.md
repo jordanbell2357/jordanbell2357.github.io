@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 1
+title: Euler, "Elements of Algebra", Section III, Chapter 1. "Of Arithmetical Ratio, or of the Difference between two Numbers."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

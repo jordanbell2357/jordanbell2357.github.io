@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 5
+title: Euler, "Elements of Algebra", Section III, Chapter 5. "Of Figurate, or Polygonal Numbers."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

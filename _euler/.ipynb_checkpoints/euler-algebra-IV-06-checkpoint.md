@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 6
+title: Euler, "Elements of Algebra", Section IV, Chapter 6. "Of the Resolution of Mixed Equations of the Second Degree."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

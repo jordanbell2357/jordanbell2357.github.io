@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 9
+title: Euler, "Elements of Algebra", Section III, Chapter 9. "Observations on the Rules Proportion and their Utility."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)

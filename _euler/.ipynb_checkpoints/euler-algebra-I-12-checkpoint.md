@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 12
+title: Euler, "Elements of Algebra", Section I, Chapter 12. "Of Square Roots, and of Irrational Numbers resulting from them."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
