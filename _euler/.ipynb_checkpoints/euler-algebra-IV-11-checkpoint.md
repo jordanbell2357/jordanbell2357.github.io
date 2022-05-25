@@ -347,7 +347,7 @@ impossible.
 The two numbers sought are therefore 14, and (14+12)=26; the product of which, 364, multiplied by their
 sum, 40, gives 14560.
 
-** .** Question 2. To find two numbers whose difference
+**730.** *Question 2.* To find two numbers whose difference
 is 18, and such, that their sum multiplied by the difference
 of their cubes, may produce 275184.
 
@@ -358,6 +358,221 @@ the second
 $$x^3+54x^2+972x+5832;$$
 
 the difference of the cubes
+
+$$54x^2+972x+5832=54(x^2+18x+108),$$
+
+which multiplied by the sum $$2x+18$$, or $$2(x+9)$$, gives
+the product
+
+$$108(x^3+27x^2+270x+972)=275184.$$
+
+And, dividing by 108, we have
+
+$$x^3+27x^2+270x+972=2548,$$
+
+or
+
+$$x^3+27x^2+270x=1576.$$
+
+Now, the divisors of 1576 are 1, 2, 4, 8, etc. the two first of
+which are too small; but if we try $$x=4$$, that number is
+found to satisfy the terms of the equation.
+
+It remains, therefore, to divide by $$x-4$$, in order to find
+the two other roots; which division gives the quotient
+$$x^2+31x+394$$;
+making therefore
+
+$$x^2+31x=-394,$$
+
+we shall find
+
+$$x=-\frac{31}{2} \pm \surd \left(\frac{961}{4}-\frac{1376}{4}\right);$$
+
+that is, two imaginary roots.
+
+Hence the numbers sought are 4, and (4+18)=22.
+
+**729.** *Question 3.* Required two numbers whose difference is 720, and such,
+that if the less be multiplied by the
+square root of the greater, the product may be 20736.
+
+If the less be represented by $$x$$, the greater will evidently
+be $$x+720$$; and, by the question,
+
+$$x \surd(x+720) = 20736 = 8\cdot 8\cdot 4\cdot 81.$$
+
+Squaring both sides, we have
+
+$$x^2(x+720) = x^3+720x^2 = 8^2 \cdot 8^2\cdot 4^2\cdot 81^2.$$
+
+Let us now make $$x=8y$$; this supposition gives
+
+$$8^3 y^3 + 720 \cdot 8^2 y^2 = 8^2 \cdot 8^2\cdot 4^2\cdot 81^2;$$
+
+and dividing by $$8^3$$, we have $$y^3+90y^2=8\cdot 4^2\cdot 81^2$$.
+Farther, let us suppose $$y=2z$$, and we shall have
+$$8z^3+4\cdot 90z^2 = 8\cdot 4^2\cdot 81^2$$; or, dividing by 8,
+
+$$z^3+45z^2=4^2\cdot 81^2.$$
+
+Again, make $$z=9u$$, in order to have, in this last equation,
+
+$$9^3u^3+45\cdot 9^2u^2=4^2\cdot 9^4,$$
+
+because dividing now by $$9^3$$, the equation becomes
+
+$$u^3+5u^2=4^2\cdot 9,$$
+
+or
+
+$$u^2(u+5)=16\cdot 9 = 144;$$
+
+where it is obvious, that $$u=4$$; for in this case $$u^2=16$$, and $$u+5=9$$:
+since, therefore, $$u=4$$, we have
+
+$$z=36, \qquad y=72, \quad \textrm{and} \quad x=576,$$
+
+which is the
+less of the two numbers sought; so that the greater is 1296,
+and the square root of this last, or 36, multiplied by the
+other number 576, gives 20736.
+
+**730.** *Remark.* This question admits of a simpler solution; for since the square
+root of the greater number, multiplied by the less, must give a product equal to a given
+number, the greater of the two numbers must be a square.
+If, therefore, from this consideration, we suppose it to be $$x^2$$,
+the other number will be $$x^2-720$$, which being multiplied by
+the square root of the greater, or by $$x$$, we have
+
+$$x^3-720x=20736=64\cdot 27\cdot 12$$
+
+If we make $$x=4y$$, we shall have
+
+$$64y^3-720\cdot 4y=64\cdot 27\cdot 12,$$
+
+or
+
+$$y^3-45y^2=27\cdot 12$$
+
+Supposing, farther, $$y=3z$$, we find
+$$27z^3-135z=27\cdot 12$$; or, dividing by 27,
+$$z^3-5z=12$$, or
+
+$$z^3-5z-12=0.$$
+
+The divisors of 12 are 1, 2, 3, 4, 6, 12: the first two are too small;
+but the supposition of $$z=3$$ gives exactly 27-15-12=0. Consequently,
+
+$$z=3, \qquad y=9, \quad \textrm{and} \quad x=36;$$
+
+whence we conclude, that the
+greater of the two numbers sought, or $$x^2$$, =1296,
+and that
+the less, or $$x^2-720$$, =576, as before.
+
+**731.** *Question 4.* There are two numbers, whose difference is 12;
+the product of this difference by the sum of
+their cubes is 102144; what are the numbers?
+
+Calling the less of the two numbers $$x$$, the greater will be $$x+12$$;
+also the cube of the first is $$x^3$$, and of the second
+$$x^3+36x^2+432x+1728$$; the product also of the sum of
+these cubes by the difference 12, is
+
+$$12(2x^3+36x^2+423x+1728)=102144;$$
+
+and, dividing successively by 12 and by 2, we have
+
+$$x^3+18x^2+216x+864=4256,$$
+
+or
+
+$$x^3+18x^2+216x=3392=8\cdot 8\cdot 53.$$
+
+If now we substitute $$x=2y$$, and divide by 8, we shall
+have 
+
+$$y^3+9y^2+54y=8\cdot 53=424.$$
+
+Now, the divisors of 424 are 1, 2, 4, 8, 53, etc. 1 and 2
+are evidently too small; but if we make $$y=4$$,
+we find 64+144+216=424. So that $$y=4$$, and $$x=8$$;
+whence we conclude that the two numbers sought are 8 and
+(8+12)=20.
+
+**732.** *Question 5.* Several persons form a partnership,
+and establish a certain capital, to which each contributes ten
+times as many pounds as there are persons in company:
+they gain 6 plus the number of partners per cent; and the
+whole profit is 392 pounds: required how many partners
+there are?
+
+Let $$x$$ be the number required ; then each partner will
+have furnished $$10x$$ pounds, and conjointly $$10x^2$$
+pounds;
+and since they gain $$x+6$$ per cent, they will have gained
+with the whole capital, $$\dfrac{x^3+6x^2}{10}$$, which is to be made equal
+to 392.
+
+We have, therefore, $$x^3+6x^2=3920$$, consequently,
+making $$x=2y$$, and dividing by 8, we have
+
+$$y^3+3y^2=490.$$
+
+Now, the divisors of 490 are 1, 2, 5, 7, 10, etc. the first
+three of which are too small; but if we suppose $$y=7$$,
+we have 343+147=490; so that $$y=7$$, and $$x=14$$.
+
+There are therefore fourteen partners, and each of them
+put 140 pounds into the common stock.
+
+**733.** *Question 6.* A company of merchants have a common stock of 8240 pounds;
+and each contributes to it forty
+times as many pounds as there are partners; with which
+they gain as much per cent as there are partners: now, on
+dividing the profit, it is found, after each has received ten
+times as many pounds as there are persons in the company,
+that there still remains 224*l.*. Required the number of merchants?
+
+If $$x$$ be made to represent the n^umber, each will have contributed $$40x$$
+to the stock; consequently, all together will
+have contributed $$40x^2$$, which makes the stock
+$$=40x^2+8240$$. Now, with this sum they gain $$x$$ per cent;
+so that the whole gain is
+
+$$\dfrac{40x^3}{100}+\dfrac{8240x^2}{100} = \frac{4}{10}x^3+\frac{824}{10}x^2 = \frac{2}{5}x^3+\frac{412}{5}x^2.$$
+
+From which sum each receives $$10x$$, and consequently they
+all together receive $$10x^2$$, leaving a remainder of 224; the
+profit must therefore have been $$10x^2+224$$, and we have
+the equation
+
+$$\frac{2}{5}x^3+\frac{412}{5}x^2=10x^2+224.$$
+
+Multiplying by 5 and dividing by 2, we have
+$$x^3+206x=25x^2+560$$, or $$x^3-25x^2+206x-560=0$$:
+the first,
+however, will be more convenient for trial. Here the divisors
+of the last term are 1, 2, 4, 5, 7, 8, 10, 14, 16, etc. and they
+must be taken positively; because in the second form of the
+equation the signs vary three times, which shows that all the
+three roots are positive.
+
+Here, if we first try $$x=1$$, and $$x=2$$, it is evident that
+the first side will become less than the second. We shall
+therefore make trial of other divisors.
+
+When $$x=4$$, we have 64+824=400+560, which
+does not satisfy the terms of the equation.
+
+If $$x=5$$, we have 125+1030=625+560, which likewise does not succeed.
+
+But if $$x = 7$$, we we have 343+1442=1225+560,
+which answers to the equation; so that $$x=7$$
+is a root of
+it. Let us now seek for the other two, by dividing the
+second form of our equation by $$x-7$$.
 
 #### References
 
