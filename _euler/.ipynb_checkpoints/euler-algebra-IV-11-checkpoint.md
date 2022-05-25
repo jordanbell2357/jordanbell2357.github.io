@@ -309,7 +309,8 @@ that is, two imaginary roots.
 
 Hence the numbers sought are 4, and (4+18)=22.
 
-729. Question 3. Required two numbers whose difference is 720, and such, that if the less be multiplied by the
+**729.** *Question 3.* Required two numbers whose difference is 720,
+and such, that if the less be multiplied by the
 square root of the greater, the product may be 20736.
 
 
