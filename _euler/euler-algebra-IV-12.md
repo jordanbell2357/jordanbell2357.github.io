@@ -142,6 +142,110 @@ this is the formula which is called the *Rule of Cardano*.
 **742.** Let us apply it to some examples, in order that its
 use may be better understood.
 
+Let $$x^3=6x+9$$. First, we shall have $$f=6$$, and $$g=9$$;
+so that $$g^2=81$$, $$f^2=216$$, $$\frac{4}{27}f^3=32$$; then
+$$g^2-\frac{4}{27}f^3=49$$, and $$\surd\left(g-\frac{4}{27}f^3\right)=7$$.
+Therefore, one
+of the roots of the given equation is
+
+$$x=\sqrt[3]{\vphantom{\frac{9+7}{2}}} \frac{9+7}{2} + \sqrt[3]{\vphantom{\frac{9-7}{2}}} \frac{9-7}{2} = \sqrt[3]{\vphantom{\frac{16}{2}}} \frac{16}{2} + \sqrt[3]{\vphantom{\frac{2}{2}}} \frac{2}{2} = \sqrt[3]{\vphantom{8}} 8 + \sqrt[3]{\vphantom{1}} 1 = 2+1=3.$$
+
+**743.** Let there be proposed the equation $$x^2=3x+2$$.
+Here, we shall have
+$$f=3$$ and $$g=2$$;
+and consequently,
+$$g^2=4$$, $$f^3=27$$, and $$\frac{4}{27}f^3=4$$; which gives
+$$\surd \left(g^2-\frac{4}{27}f^3\right)=0$$;
+whence it follows, that one of the
+roots is
+
+$$x=\sqrt[3]{\vphantom{\frac{2+0}{2}}} \frac{2+0}{2}+\sqrt[3]{\vphantom{\frac{2-0}{2}}} \frac{2-0}{2}=1+1=2.$$
+
+**744.** It often happens, however, that, though such an
+equation has a rational root, that root cannot be found by
+the rule which we are now considering.
+
+
+$$x^3=6x+40$$
+
+$$x=4$$
+
+$$f=6$$ and $$g=40$$; farther, $$g^2=1600$$, and $$\frac{4}{27}f^3=32$$; so that
+$$g^2-\frac{4}{27}f^3=1568$$, and
+
+$$\surd\left(g-\frac{4}{27}f^3\right)=\surd 1568=\surd (4\cdot 4\cdot 49\cdot 2)=28\surd 2;$$
+
+consequently one of the roots
+will be
+
+$$x=\sqrt[3]{\vphantom{}} \frac{40+28\surd 2}{2}\right) + \sqrt[3]{\vphantom{}} \frac{40-28\surd 2}{2}\right)$$
+
+or
+
+$$x=\sqrt[3]{\vphantom{1}} (20+14\surd 2) + \sqrt[3]{\vphantom{1}} (20-14\surd 2);$$
+
+which quantity is really =4, although, upon inspection, we
+should not suppose it. In fact, the cube root of 2+√2 being 20+14√2,
+we have, reciprocally, the cube root of 20+14√2 equal to 2+√2; in the same manner,
+∛(20-14√2)=2-2√2; wherefore our root
+$$x=2+\surd 2+2-\surd 2=4$$.
+
+**745.** To this rule it might be objected, that it does not
+extend to all eqviations of the third degree, because the
+square of $$x$$ does not occur in it ; that is to say, the second
+term of the equation is wanting. But we may remark, that
+every complete equation may be transformed into another,
+in which the second term is wanting, which will therefore
+enable us to apply the rule.
+
+To prove this, let us take the complete equation
+$$x^3-6x^2+11x-6=0$$: where, if Ave take the third of the
+coefficient 6 of the second term, and make $$x-2=y$$, we shall have
+
+$$x=y+2,\qquad x^2=y^2+4y+4,\quad \textrm{and} \quad x^3=y^3+6y^2+12y+8;$$
+
+Consequently,
+
+<table>
+<tbody>
+  <tr>
+    <td>\(x^3\)</td>
+    <td>\(y^3\)</td>
+    <td>\(+6y^2\)</td>
+    <td>\(+12y\)</td>
+    <td>\(+8\)</td>
+  </tr>
+  <tr>
+    <td>\(-6x^2\)</td>
+    <td></td>
+    <td>\(-6y^2\)</td>
+    <td>\(-24y\)</td>
+    <td>\(-24\)</td>
+  </tr>
+  <tr>
+    <td>\(11x\)</td>
+    <td></td>
+    <td></td>
+    <td>\(11y\)</td>
+    <td>\(+22\)</td>
+  </tr>
+  <tr>
+    <td>\(-6\)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>-6</td>
+  </tr>
+  <tr>
+    <td>\(x^3-6x^2+11x-6\)</td>
+    <td>\(y^3\)</td>
+    <td></td>
+    <td>\(-y\)</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
