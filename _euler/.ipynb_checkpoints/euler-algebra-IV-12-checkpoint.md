@@ -127,6 +127,11 @@ consequently,
 $$p=\dfrac{g+\surd\left(g^2-\frac{4}{27}f^3\right)}{2},\quad \textrm{and} \quad q=\dfrac{g-\surd\left(g^2-\frac{4}{27}f^3\right)}{2}.$$
 
 **741.** In a cubic equation, therefore, of the form
+$$x^3=fx+g$$,
+whatever be the numbers
+$$f$$ and $$g$$,
+we have always
+for one of the roots
 
 
 #### References
