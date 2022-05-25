@@ -578,6 +578,19 @@ second form of our equation by $$x-7$$.
 <img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="304" height="211" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
+Now, making this quotient equal to nothing, we have
+$$x^2-18x+80=0$$, or $$x^2-18x=-80$$; which gives
+$$x=9 \pm 1$$, so that the two other roots are $$x=8$$;
+or $$x=10$$.
+
+This question therefore admits of three answers. According to the first,
+the number of merchants is 7; according to
+the second, it is 8; and, according to
+following statement shows, that all
+these will answer the
+conditions of the question:
+
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
