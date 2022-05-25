@@ -165,11 +165,8 @@ $$x=\sqrt[3]{\vphantom{\frac{2+0}{2}}} \frac{2+0}{2}+\sqrt[3]{\vphantom{\frac{2-
 equation has a rational root, that root cannot be found by
 the rule which we are now considering.
 
-
-$$x^3=6x+40$$
-
-$$x=4$$
-
+Let there be given the equation $$x^3=6x+40$$, in which
+$$x=4$$ is one of the roots. We have here
 $$f=6$$ and $$g=40$$; farther, $$g^2=1600$$, and $$\frac{4}{27}f^3=32$$; so that
 $$g^2-\frac{4}{27}f^3=1568$$, and
 
@@ -178,7 +175,7 @@ $$\surd\left(g-\frac{4}{27}f^3\right)=\surd 1568=\surd (4\cdot 4\cdot 49\cdot 2)
 consequently one of the roots
 will be
 
-$$x=\sqrt[3]{\vphantom{}} \frac{40+28\surd 2}{2}\right) + \sqrt[3]{\vphantom{}} \frac{40-28\surd 2}{2}\right)$$
+$$x=\sqrt[3]{\vphantom{\frac{40+28\surd 2}{2}}} \frac{40+28\surd 2}{2} + \sqrt[3]{\vphantom{\frac{40-28\surd 2}{2}}} \frac{40-28\surd 2}{2}$$
 
 or
 
@@ -187,7 +184,8 @@ $$x=\sqrt[3]{\vphantom{1}} (20+14\surd 2) + \sqrt[3]{\vphantom{1}} (20-14\surd 2
 which quantity is really =4, although, upon inspection, we
 should not suppose it. In fact, the cube root of 2+√2 being 20+14√2,
 we have, reciprocally, the cube root of 20+14√2 equal to 2+√2; in the same manner,
-∛(20-14√2)=2-2√2; wherefore our root
+$$\sqrt[3]{1}(20-14\surd 2)=2-\surd 2$$;
+wherefore our root
 $$x=2+\surd 2+2-\surd 2=4$$.
 
 **745.** To this rule it might be objected, that it does not
@@ -237,7 +235,7 @@ Consequently,
     <td>-6</td>
   </tr>
   <tr>
-    <td>\(x^3-6x^2+11x-6\)</td>
+    <td>or, \(x^3-6x^2+11x-6\)</td>
     <td>\(y^3\)</td>
     <td></td>
     <td>\(-y\)</td>
@@ -253,10 +251,29 @@ $$y(y^2-1)=y(y+1)(y-1)=0.$$
 
 If we now make each of these factors =0, we have
 
-$$\textrm{I)} \quad y=0, x=2, \qquad \textrm{II)} \quad y=-1, x=1,\qquad
-\textrm{III)} \quad y=1, x=3,$$
+<table>
+<thead>
+  <tr>
+    <th>I</th>
+    <th>II</th>
+    <th>III</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>$$y=0$$,</td>
+    <td>$$y=-1$$,</td>
+    <td>$$y=1$$,</td>
+  </tr>
+  <tr>
+    <td>$$x=2$$,</td>
+    <td>$$x=1$$,</td>
+    <td>$$x=3$$,</td>
+  </tr>
+</tbody>
+</table>
 
-that is to say, the three roots whicli we have already found.
+that is to say, the three roots which we have already found.
 
 **746.** Let there now be given the general equation of the
 third degree,  $$x^3+ax^2+bx+c=0$$, of which it is required to destroy the second term.
@@ -307,30 +324,70 @@ Consequently,
 </tbody>
 </table>
 
-which gives $$y^3+y-2=0$$; or $$y^3-y+2$$.
+or,
+
+$$y^2 - \left(\frac{1}{3}a-b\right)y + \frac{2}{27}a \sqrt[3]{\vphantom{-\frac{1}{3}ab}} -\frac{1}{3}ab + c =0,$$
+
+an equation in which the second term is wanting.
+
+**747.** We are enabled, by means of this transformation, to
+find the roots of all equations of the third degree, as the following example will show.
+
+Let it be proposed to resolve the equation
+
+$$x^3-6x^2+13x-12=0.$$
+
+Here it is first necessary to destroy the second term; for
+which purpose, let us make $$x-2=y$$, and then we shall
+have $$x=y+2$$, $$x^2=y^2+4y+4$$, and $$x^3=y^3+6y^2+12y+8$$; therefore
+
+<table>
+<tbody>
+  <tr>
+    <td>$$x^3$$</td>
+    <td>=</td>
+    <td>$$y^3$$</td>
+    <td>$$+6y^2$$</td>
+    <td>$$+12y$$</td>
+    <td>$$+8$$</td>
+  </tr>
+  <tr>
+    <td>$$-6x^2$$</td>
+    <td>=</td>
+    <td></td>
+    <td>$$-6y^2$$</td>
+    <td>$$-24y$$</td>
+    <td>$$-24$$</td>
+  </tr>
+  <tr>
+    <td>$$13x$$</td>
+    <td>=</td>
+    <td></td>
+    <td></td>
+    <td>$$13y$$</td>
+    <td>$$+26$$</td>
+  </tr>
+  <tr>
+    <td>$$-12$$</td>
+    <td>=</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>$$-12$$</td>
+  </tr>
+</tbody>
+</table>
+
+which gives $$y^3+y-2=0$$; or $$y^3=-y+2$$.
 
 And if we compare this equation with the formula, (*Article 741*)
-$$x^3=fx+g$$, we have $$f=-1$$, and $$g=2$$; wherefore, $$g^2=4$$,
-and $$\frac{4}{27}f^3=-\frac{4}{27}$$; also,
-
-$$g^2-\frac{4}{27}f^3=4+\frac{4}{27}=\frac{112}{27},$$
-
+$$x^3=fx+g$$, we have $$f=-1$$, and $$g=2$$; wherefore, $$g^2=4$$, and
+$$\frac{4}{27}f^3=-\frac{4}{27}$$; also, $$g^2-\frac{4}{27}f^3=4+\frac{4}{27}=\frac{112}{27}$$,
 and
 
-$$\surd\left(g^2-\frac{4}{27}f^3\right) = \surd \frac{112}{27} = \dfrac{4\surd 21}{9};$$
+$$\surd \left(g^2-\frac{4}{27}f^3\right)= \surd \frac{112}{27} = \dfrac{4\surd 21}{9};$$
 
-consequently
-
-...
-
-and it remains to substitute this value in $$x=y+2$$.
-
-**748.** In the solution of this example, we have been
-brought to a quantity doubly irrational ; but we must not
-immediately conclude that the root is irrational : because the
-binomials
-
-
+consequently.
 
 
 #### References
