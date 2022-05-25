@@ -307,28 +307,7 @@ Consequently,
 </tbody>
 </table>
 
-which gives $$y^3+y-2=0$$; or $$y^3-y+2$$.
 
-And if we compare this equation with the formula, (*Article 741*)
-$$x^3=fx+g$$, we have $$f=-1$$, and $$g=2$$; wherefore, $$g^2=4$$,
-and $$\frac{4}{27}f^3=-\frac{4}{27}$$; also,
-
-$$g^2-\frac{4}{27}f^3=4+\frac{4}{27}=\frac{112}{27},$$
-
-and
-
-$$\surd\left(g^2-\frac{4}{27}f^3\right) = \surd \frac{112}{27} = \dfrac{4\surd 21}{9};$$
-
-consequently
-
-...
-
-and it remains to substitute this value in $$x=y+2$$.
-
-**748.** In the solution of this example, we have been
-brought to a quantity doubly irrational ; but we must not
-immediately conclude that the root is irrational : because the
-binomials
 
 
 
