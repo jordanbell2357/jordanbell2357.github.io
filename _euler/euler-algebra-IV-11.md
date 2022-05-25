@@ -623,7 +623,7 @@ conditions of the question:
     <td>12240</td>
   </tr>
   <tr>
-    <td>With this capital they gain as much per cent as there are partners</td>
+    <td>With this capital they gain as much per cent<br> as there are partners</td>
     <td>714</td>
     <td>864</td>
     <td>1224</td>
