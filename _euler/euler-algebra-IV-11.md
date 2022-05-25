@@ -611,13 +611,13 @@ conditions of the question:
     <td>4000</td>
   </tr>
   <tr>
-    <td>The original stock was \(40x^2+8240\)</td>
+    <td>The original stock was</td>
     <td>8240</td>
     <td>8240</td>
     <td>8240</td>
   </tr>
   <tr>
-    <td>The whole stock is</td>
+    <td>The whole stock is \(40x^2+8240\)</td>
     <td>10200</td>
     <td>10800</td>
     <td>12240</td>
