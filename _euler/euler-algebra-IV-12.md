@@ -211,24 +211,24 @@ Consequently,
     <td>\(y^3\)</td>
     <td>\(+6y^2\)</td>
     <td>\(+12y\)</td>
-    <td>\(+8\)</td>
+    <td>+8</td>
   </tr>
   <tr>
     <td>\(-6x^2\)</td>
     <td></td>
     <td>\(-6y^2\)</td>
     <td>\(-24y\)</td>
-    <td>\(-24\)</td>
+    <td>-24</td>
   </tr>
   <tr>
     <td>\(11x\)</td>
     <td></td>
     <td></td>
     <td>\(11y\)</td>
-    <td>\(+22\)</td>
+    <td>+22</td>
   </tr>
   <tr>
-    <td>\(-6\)</td>
+    <td>-6</td>
     <td></td>
     <td></td>
     <td></td>
@@ -315,7 +315,7 @@ Consequently,
     <td>\(-\frac{1}{3}ab\)</td>
   </tr>
   <tr>
-    <td>c</td>
+    <td>\(c\)</td>
     <td></td>
     <td></td>
     <td></td>
@@ -344,36 +344,36 @@ have $$x=y+2$$, $$x^2=y^2+4y+4$$, and $$x^3=y^3+6y^2+12y+8$$; therefore
 <table>
 <tbody>
   <tr>
-    <td>$$x^3$$</td>
+    <td>\(x^3\)</td>
     <td>=</td>
-    <td>$$y^3$$</td>
-    <td>$$+6y^2$$</td>
-    <td>$$+12y$$</td>
-    <td>$$+8$$</td>
+    <td>\(y^3\)</td>
+    <td>\(+6y^2\)</td>
+    <td>\(+12y\)</td>
+    <td>+8</td>
   </tr>
   <tr>
-    <td>$$-6x^2$$</td>
+    <td>\(-6x^2\)</td>
     <td>=</td>
     <td></td>
-    <td>$$-6y^2$$</td>
-    <td>$$-24y$$</td>
-    <td>$$-24$$</td>
+    <td>\(-6y^2\)</td>
+    <td>\(-24y\)</td>
+    <td>\(-24\)</td>
   </tr>
   <tr>
-    <td>$$13x$$</td>
+    <td>\(13x\)</td>
     <td>=</td>
     <td></td>
     <td></td>
-    <td>$$13y$$</td>
-    <td>$$+26$$</td>
+    <td>\(13y\)</td>
+    <td>+26</td>
   </tr>
   <tr>
-    <td>$$-12$$</td>
+    <td>-12</td>
     <td>=</td>
     <td></td>
     <td></td>
     <td></td>
-    <td>$$-12$$</td>
+    <td>-12</td>
   </tr>
 </tbody>
 </table>
