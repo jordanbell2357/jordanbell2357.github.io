@@ -590,6 +590,65 @@ following statement shows, that all
 these will answer the
 conditions of the question:
 
+<table>
+<tbody>
+  <tr>
+    <td>Number of merchants</td>
+    <td>7</td>
+    <td>8</td>
+    <td>10</td>
+  </tr>
+  <tr>
+    <td>Each contributes \(40x\)</td>
+    <td>280</td>
+    <td>320</td>
+    <td>400</td>
+  </tr>
+  <tr>
+    <td>In all they contribute \(40x^2\)</td>
+    <td>1960</td>
+    <td>2560</td>
+    <td>4000</td>
+  </tr>
+  <tr>
+    <td>The original stock was \(40x^2+8240\)</td>
+    <td>8240</td>
+    <td>8240</td>
+    <td>8240</td>
+  </tr>
+  <tr>
+    <td>The whole stock is</td>
+    <td>10200</td>
+    <td>10800</td>
+    <td>12240</td>
+  </tr>
+  <tr>
+    <td>With this capital they gain as much per cent as there are partners</td>
+    <td>714</td>
+    <td>864</td>
+    <td>1224</td>
+  </tr>
+  <tr>
+    <td>Each takes from it</td>
+    <td>70</td>
+    <td>80</td>
+    <td>100</td>
+  </tr>
+  <tr>
+    <td>So that they all together take \(10x^2\)</td>
+    <td>490</td>
+    <td>640</td>
+    <td>1000</td>
+  </tr>
+  <tr>
+    <td>Therefore there remains</td>
+    <td>224</td>
+    <td>224</td>
+    <td>224</td>
+  </tr>
+</tbody>
+</table>
+
 
 #### References
 
