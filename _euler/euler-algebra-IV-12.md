@@ -199,7 +199,7 @@ in which the second term is wanting, which will therefore
 enable us to apply the rule.
 
 To prove this, let us take the complete equation
-$$x^3-6x^2+11x-6=0$$: where, if Ave take the third of the
+$$x^3-6x^2+11x-6=0$$: where, if we take the third of the
 coefficient 6 of the second term, and make $$x-2=y$$, we shall have
 
 $$x=y+2,\qquad x^2=y^2+4y+4,\quad \textrm{and} \quad x^3=y^3+6y^2+12y+8;$$
@@ -245,6 +245,93 @@ Consequently,
   </tr>
 </tbody>
 </table>
+
+We have, therefore, the equation $$y^3-y=0$$, the resolution of which it is evident, since we immediately perceive
+that it is the product of the factors
+
+$$y(y^2-1)=y(y+1)(y-1)=0.$$
+
+If we now make each of these factors =0, we have
+
+$$\textrm{I)} \quad y=0, x=2, \qquad \textrm{II)} \quad y=-1, x=1,\qquad
+\textrm{III)} \quad y=1, x=3,$$
+
+that is to say, the three roots whicli we have already found.
+
+**746.** Let there now be given the general equation of the
+third degree,  $$x^3+ax^2+bx+c=0$$, of which it is required to destroy the second term.
+
+For this purpose, we must add to $$x$$ the third of the coefficient of the second term, preserving the same sign, and
+then write for this sum a new letter, as for example $$y$$, so
+that we shall have $$x+\frac{1}{3}a=y$$, and $$x=y-\frac{1}{3}a$$; whence
+results the following calculation:
+
+$$x=y-\frac{1}{3}a, \qquad x^2=y^2-\frac{2}{3}ay+\frac{1}{9}a^2,$$
+
+and
+
+$$x^3=y^3-ay^2+\frac{1}{3}a^2y+\frac{1}{27}a^3$$
+
+Consequently,
+
+<table>
+<tbody>
+  <tr>
+    <td>\(x^3\)</td>
+    <td>\(y^3\)</td>
+    <td>\(-ay^2\)</td>
+    <td>\(+\frac{1}{3}a^2y\)</td>
+    <td>\(-\frac{1}{27}a^3\)</td>
+  </tr>
+  <tr>
+    <td>\(ax^2\)</td>
+    <td></td>
+    <td>\(ay^2\)</td>
+    <td>\(-2/3a^2y\)</td>
+    <td>\(+\frac{1}{9}a^3\)</td>
+  </tr>
+  <tr>
+    <td>bx</td>
+    <td></td>
+    <td></td>
+    <td>by</td>
+    <td>\(-\frac{1}{3}ab\)</td>
+  </tr>
+  <tr>
+    <td>c</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>c</td>
+  </tr>
+</tbody>
+</table>
+
+which gives $$y^3+y-2=0$$; or $$y^3-y+2$$.
+
+And if we compare this equation with the formula, (*Article 741*)
+$$x^3=fx+g$$, we have $$f=-1$$, and $$g=2$$; wherefore, $$g^2=4$$,
+and $$\frac{4}{27}f^3=-\frac{4}{27}$$; also,
+
+$$g^2-\frac{4}{27}f^3=4+\frac{4}{27}=\frac{112}{27},$$
+
+and
+
+$$\surd\left(g^2-\frac{4}{27}f^3\right) = \surd \frac{112}{27} = \dfrac{4\surd 21}{9};$$
+
+consequently
+
+...
+
+and it remains to substitute this value in $$x=y+2$$.
+
+**748.** In the solution of this example, we have been
+brought to a quantity doubly irrational ; but we must not
+immediately conclude that the root is irrational : because the
+binomials
+
+
+
 
 #### References
 
