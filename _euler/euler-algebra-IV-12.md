@@ -190,7 +190,7 @@ $$x=2+\surd 2+2-\surd 2=4$$.
 
 **745.** To this rule it might be objected, that it does not
 extend to all eqviations of the third degree, because the
-square of $$x$$ does not occur in it ; that is to say, the second
+square of $$x$$ does not occur in it; that is to say, the second
 term of the equation is wanting. But we may remark, that
 every complete equation may be transformed into another,
 in which the second term is wanting, which will therefore
@@ -261,14 +261,14 @@ If we now make each of these factors =0, we have
 </thead>
 <tbody>
   <tr>
-    <td>$$y=0$$,</td>
-    <td>$$y=-1$$,</td>
-    <td>$$y=1$$,</td>
+    <td>\(y=0\),</td>
+    <td>\(y=-1\),</td>
+    <td>\(y=1\),</td>
   </tr>
   <tr>
-    <td>$$x=2$$,</td>
-    <td>$$x=1$$,</td>
-    <td>$$x=3$$,</td>
+    <td>\(x=2\),</td>
+    <td>\(x=1\),</td>
+    <td>\(x=3\),</td>
   </tr>
 </tbody>
 </table>
@@ -308,10 +308,10 @@ Consequently,
     <td>\(+\frac{1}{9}a^3\)</td>
   </tr>
   <tr>
-    <td>bx</td>
+    <td>\(bx\)</td>
     <td></td>
     <td></td>
-    <td>by</td>
+    <td>\(by\)</td>
     <td>\(-\frac{1}{3}ab\)</td>
   </tr>
   <tr>
@@ -319,7 +319,7 @@ Consequently,
     <td></td>
     <td></td>
     <td></td>
-    <td>c</td>
+    <td>\(c\)</td>
   </tr>
 </tbody>
 </table>
