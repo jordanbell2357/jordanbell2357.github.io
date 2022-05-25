@@ -336,8 +336,8 @@ substitution gives 343+441+126=910. It follows,
 therefore, that $$x=14$$; and the two other roots will be
 found by dividing $$y^3+9y^2+18y-910$$ by $$y-7$$, thus:
 
-<a href="https://artofproblemsolving.com/texer/wlbnirku">
-<img src="/assets/euler/wlbnirku.png" alt="Polynomial long division" width="309" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+<a href="https://artofproblemsolving.com/texer/mxscnflp">
+<img src="/assets/euler/mxscnflp.png" alt="Polynomial long division" width="309" height="212" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Supposing now this quotient $$y^2+16y+130=0$$, we shall have
@@ -573,6 +573,10 @@ which answers to the equation; so that $$x=7$$
 is a root of
 it. Let us now seek for the other two, by dividing the
 second form of our equation by $$x-7$$.
+
+<a href="https://artofproblemsolving.com/texer/ncijelkw">
+<img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="304" height="211" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
 #### References
 
