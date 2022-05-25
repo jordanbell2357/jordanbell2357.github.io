@@ -420,7 +420,7 @@ $$
 or
 
 $$
-y=\frac{1}{3}\sqrt[3]{1}(27+6\surd 21) + \frac{1}{3}\sqrt[3]{1}(27-6\surd 21);
+y=\frac{1}{3}\sqrt[3]{\vphantom{1}}(27+6\surd 21) + \frac{1}{3}\sqrt[3]{\vphantom{1}}(27-6\surd 21);
 $$
 
 and it remains to substitute this value in $$x=y+2$$.
@@ -444,6 +444,27 @@ dividing the equation by $$x-3$$.
 <a href="https://artofproblemsolving.com/texer/oqfowwuq">
 <img src="/assets/euler/oqfowwuq.png" alt="Polynomial long division" width="277" height="212" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
+
+Also making the quotient $$x^2-3x+4=0$$, we have $$x^2=3x-4$$; and
+
+$$x=\frac{3}{2} \pm \surd \left(\frac{9}{4}-\frac{16}{4}\right)=\frac{3}{2} \pm \surd -\frac{7}{4} = \dfrac{3 \pm \surd -7}{2};$$
+
+which are the other two roots, but they are imaginary.
+
+**749.** It was, however, by chance, as we have remarked,
+that we were able, in the preceding example, to extract the
+cube root of the binomials that we obtained, which is the
+case only when the equation has a rational root; consequently, the rules of the preceding chapter are more easily
+employed for finding that root. But when there is no
+rational root, it is, on the other hand, impossible to express
+the root which we obtain in any other way, than according
+to the rule of Cardano; so that it is then impossible to apply
+reductions. For example, in the equation
+$$x^3=6x+4$$, we have $$f=6$$ and $$g=4$$; so that
+
+$$x=\sqrt[3]{\vphantom{1}}(2+2\surd -1)+\sqrt[3]{\vphantom{1}}(2-2\surd -1),$$
+
+which cannot be otherwise expressed.
 
 
 #### References
