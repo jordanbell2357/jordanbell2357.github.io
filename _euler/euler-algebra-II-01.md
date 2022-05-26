@@ -31,14 +31,14 @@ sign -; as they must be connected in the same way, by means of their proper sign
 
 **258.** To make this more evident, we shall consider an
 example in pure numbers, proposing to add the expression
-15 - 6 to 12 - 8. Here, if we begin by adding 15, we
-shall have 12 - 8 + 15; but this is adding too much, since
-we had only to add 15 - 6, and it is evident that 6 is the
+15-6 to 12-8. Here, if we begin by adding 15, we
+shall have 12-8+15; but this is adding too much, since
+we had only to add 15-6, and it is evident that 6 is the
 number which we have added too much; let us therefore
 take this 6 away by writing it with the negative sign, and
 we shall have the true sum,
 
-12 - 8 + 15 - 6;
+12-8+15-6;
 
 which shows that the sums are found by writing all the
 terms, each with its proper sign.

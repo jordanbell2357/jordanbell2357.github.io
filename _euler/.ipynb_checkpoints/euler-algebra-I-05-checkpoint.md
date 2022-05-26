@@ -84,8 +84,8 @@ performed in the manner we have described.
 
 When we have, for example, 24 to divide by 7, it is at
 first sight obvious, that the number 7 is not a factor of 24;
-for the product of 7 · 3 is only 21, and consequently too
-small; and 7 · 4 makes 28, which is greater than 24. We
+for the product of 7·3 is only 21, and consequently too
+small; and 7·4 makes 28, which is greater than 24. We
 discover, however, from this, that the quotient must be
 greater than 3, and less than 4. In order therefore to
 determine it exactly, we employ another species of numbers,

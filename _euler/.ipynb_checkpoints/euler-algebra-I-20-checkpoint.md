@@ -17,10 +17,10 @@ of the same kind to exist. This inquiry will throw new light on the subjects whi
 In prosecuting this design, we shall make use of a new character, which may be
 employed instead of the expression that has been so often repeated, is equal to;
 this sign is =, which is read *is equal to*: thus, when I write $$a = b$$,
-this means that $$a$$ is equal to $$b$$: so, for example, 3 · 5 = 15.
+this means that $$a$$ is equal to $$b$$: so, for example, 3·5=15.
 
-**207.** The first mode of calculation that presents itself to the mind, is undoubtedly addition, by
-which we add two numbers together and find their sum: let therefore $$a$$ and $$b$$
+**207.** The first mode of calculation that presents itself to the mind, is undoubtedly
+addition, by which we add two numbers together and find their sum: let therefore $$a$$ and $$b$$
 be the two given numbers, and let their sum be expressed by the letter $$c$$, then we shall
 have $$a + b = c$$; so that when we know
 the two numbers $$a$$ and $$b$$, addition teaches us to find the number $$c$$.
@@ -40,7 +40,7 @@ which it is required to subtract may happen to be greater
 than that from which it is to be subtracted; as, for example,
 if it were required to subtract 9 from 5: this instance therefore furnishes
 us with the idea of a new kind of numbers,
-which we call negative numbers, because 5 - 9 = -4.
+which we call negative numbers, because 5-9=-4.
 
 **210.** When several numbers are to be added together,
 which are all equal, their sum is found by multiplication, and
@@ -62,7 +62,7 @@ which results the equation $$b=\frac{c}{a}$$.
 **212.** Now, as it frequently happens that the number $$c$$
 cannot be really divided by the number $$a$$, while the letter $$b$$
 must however have a determinate value, another new kind
-of numbers present themselves, which are called *fractions*.
+of numbers present themselves, which are called **fractions**.
 For example, suppose $$a = 4$$, and $$c =3$$, so that $$4b = 3$$;
 then it is evident that $$b$$ cannot be an integer, but a fraction,
 and that we shall have $$b = \frac{3}{4}$$.
@@ -123,12 +123,12 @@ supposing the power $$c$$ and the root $$a$$ to be known.
 questions has been resolved in the chapter on the extraction
 of roots; since if $$b= 2$$, for example, and $$a^2 =c$$, we know
 by this means, that $$a$$ is a number whose square is equal to
-$$c$$, and consequently that $$a = \sqrt{c}$$. In the same manner, if
+$$c$$, and consequently that $$a = \surd c$$. In the same manner, if
 $$b = 3$$ and $$a^3 = c$$, wc know that the cube of $$a$$ must be equal
-to the given number $$c$$, and consequently that $$a = \sqrt[3]{c}$$. It
+to the given number $$c$$, and consequently that $$a = \sqrt[3]{\vphantom{c}}{c}$$. It
 is therefore easy to conclude, generally, from this, how to
 determine the letter $$a$$ by means of the letters $$c$$ and $$b$$; for
-we must necessarily have $$a = \sqrt[b]{c}$$.
+we must necessarily have $$a = \sqrt[b]{\vphantom{c}}{c}$$.
 
 **218.** We have already remarked also the consequence
 which follows, when the given number is not a real power;
@@ -136,12 +136,12 @@ a case which very frequently occurs; namely, that then the
 required root, $$a$$, can neither be expressed by integers, nor
 by fractions; yet since this root must necessarily have a determinate value,
 the same consideration led us to a new kind
-of numbers, which, as we observed, are called *surds*, or *irrational numbers*;
+of numbers, which, as we observed, are called **surds**, or **irrational numbers**;
 and which we have seen are divisible into
 an infinite number of different sorts, on account of the great
 variety of roots. Lastly, by the same inquiry, we were led
 to the knowledge of another particular kind of numbers,
-which have been called *imaginary numbers*.
+which have been called **imaginary numbers**.
 
 **219.** It remains now to consider the second question,
 which was to determine the exponent; the power $$c$$, and the

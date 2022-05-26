@@ -99,8 +99,6 @@ as with squares, since the latter are always positive:
 whereas the cube of -1 is -1, that of -2 is -8, that of
 -3 is -27, and so on.
 
-
-
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.

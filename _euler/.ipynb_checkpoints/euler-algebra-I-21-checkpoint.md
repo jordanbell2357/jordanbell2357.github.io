@@ -61,7 +61,7 @@ consequently,
 $$\log c + \log d = \log cd.$$
 
 But if, instead of multiplying, we divide the former expression by the latter,
-we shall obtain a^{\textrm{L}c-\textrm{L}d}=\frac{c}{d};
+we shall obtain $$a^{\textrm{L}c-\textrm{L}d}=\frac{c}{d}$$;
 and, consequently,
 
 $$\log c - \log d = \log \frac{c}{d}.$$

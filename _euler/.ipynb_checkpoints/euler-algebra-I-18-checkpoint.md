@@ -85,8 +85,6 @@ to express that root either in whole numbers or in
 fractions; and, consequently, it must be classed among the
 numbers which are called irrational.
 
-
-
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.

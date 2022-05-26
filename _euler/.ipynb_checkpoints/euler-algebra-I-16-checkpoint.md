@@ -8,7 +8,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 16. "Of Powers in genera
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 16. "Of Powers in general."
 
 **168.** The product which we obtain by multiplying a number once, or several times by itself, is
-called a *power*. Thus, a square which arises from the multiplication of a number by itself,
+called a **power**. Thus, a square which arises from the multiplication of a number by itself,
 and a cube which we obtain by multiplying a number twice by itself, are powers. We say also in
 the former case, that the number is raised to the second degree, or to the second power;
 and in the latter, that the number is raised to the third degree, or to the third power.
