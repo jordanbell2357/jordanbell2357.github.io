@@ -37,14 +37,14 @@ $$ad-bd+cd.$$
 
 **272.** In the last article, we have supposed $$d$$ to be a
 positive number; but if the multiplier were a negative number,
-as -e, the rule formerly given must be applied; namely,
+as $$-e$$, the rule formerly given must be applied; namely,
 that unlike signs multiplied together produce -, and like
 signs +. Thus we should have
 
 $$-ae+be-ce.$$
 
 **273.** Now, in order to show how a quantity, $$A$$, is to be
-multiplied by a compound quantity, d-e; let us first consider an example in numbers, supposing that $$A$$ is to be multiplied by 7 - 3. Here it is evident, that we are required
+multiplied by a compound quantity, $$d-e$$; let us first consider an example in numbers, supposing that $$A$$ is to be multiplied by 7-3. Here it is evident, that we are required
 to take the quadruple of $$A$$: for if we first take $$A$$ seven
 times, it will then be necessary to subtract $$3A$$ from that
 product.
@@ -347,7 +347,7 @@ farther, $$a^2=9$$, $$ab=6$$, and $$b^2=4$$: therefore
 $$a^2+ab+b^2=19$$, and $$a^2-ab+b^2=7$$: so that the
 product required is that of
 
-5 ⋅ 19 ⋅ 1 ⋅ 7, which is 665.
+5⋅19⋅1⋅7, which is 665.
 
 Now, $$a^6=729$$, and $$b^6=64$$; consequently, the product
 required is $$a^6-b^6=665$$, as we have already seen.

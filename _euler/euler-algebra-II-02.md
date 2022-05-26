@@ -42,12 +42,12 @@ to subtract the expression $$d - e + f$$ from $$a - b + c$$, we obtain
 $$a - b + c - d + e - f.$$
 
 An example in numbers will render this still more clear;
-for if wc subtract 6 - 2 + 4 from 9 - 3 + 2, we evidently
+for if wc subtract 6-2+4 from 9-3+2, we evidently
 obtain
 
-9 - 3 + 2 - 6 + 2 - 4 = 0;
+9-3+2-6+2-4=0;
 
-for 9 - 3 + 2 = 8; also, 6 - 2 + 4 = 8; and 8 - 8 = 0.
+for 9-3+2=8; also, 6-2+4=8; and 8-8=0.
 
 **267.** Subtraction being therefore subject to no difficulty,
 we have only to remark, that if there are found in the remainder two or more terms,

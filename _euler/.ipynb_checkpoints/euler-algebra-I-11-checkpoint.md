@@ -136,8 +136,8 @@ factors, we multiply their squares together; and reciprocally,
 if a square be composed of two, or more factors, of which
 each is a square, we have only to multiply together the
 roots of those squares, to obtain the complete root of the
-square proposed. Thus, 2304 is equal to 4 · 16 · 36,
-the square root of which is 2 · 4 · 6, or 48; and 48 is
+square proposed. Thus, 2304 is equal to 4·16·36,
+the square root of which is 2·4·6, or 48; and 48 is
 found to be the true square root of 2304, because 48 · 48
 gives 2304.
 
