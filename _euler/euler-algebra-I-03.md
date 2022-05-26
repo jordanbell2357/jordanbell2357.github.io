@@ -85,8 +85,8 @@ may write its value, 280; for we obtain this number when
 we multiply the product of 5 by 7, or 35, by 8.
 
 **30.** The results which arise from the multiplication of
-two or more numbers are called *products*; and the numbers,
-or individual letters, are call *factors*.
+two or more numbers are called **products**; and the numbers,
+or individual letters, are call **factors**.
 
 **31.** Hitherto we have considered only positive numbers,
 and there can be no doubt, but that the products which we
