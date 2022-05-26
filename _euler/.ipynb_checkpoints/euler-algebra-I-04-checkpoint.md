@@ -28,9 +28,11 @@ proper to reckon unity as a factor.
 
 All numbers, therefore, such as 2, 3, 5, 7, 11, 13, 17,
 etc. which cannot be represented by factors, are called
-**simple**, or **prime numbers**; whereas others, as 4, 6, 8, 9, 10,
+simple, or **prime numbers**; whereas others, as 4, 6, 8, 9, 10,
 12, 14, 15, 16, 18, etc. which may be represented by
-factors, are called **composite numbers**.
+factors, are called **composite numbers**.[^1]
+
+[^1]: According to Euler, 1 is called *unity* and is not considered either prime or composite: thus a positive integer is either unity, prime, or composite. Further back in time, according to Greek mathematical terminology, 1 (unity) is not called a number and was not called not a prime number, since it was not called a number at all. Hewlett's translation - unlike the German original -  adds material treating 1 as a prime number, which I have removed.
 
 **40.** Simple or prime numbers deserve therefore particular attention, since they do not result
 from the multiplication of two or more numbers. It is also particularly
