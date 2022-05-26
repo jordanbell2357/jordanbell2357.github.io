@@ -69,10 +69,10 @@ putting them one after the other. For if we were to write
 34 for 3 times 4, we should have 34 and not 12. When
 therefore it is required to multiply common numbers, we
 must separate them by a point: thus,
-3 ⋅ 4, signifies 3 times 4; that is, 12.
-So, 1 ⋅ 2 is equal to 2; and 1 ⋅ 2 ⋅ 3 makes 6. In like manner,
-1 ⋅ 2 ⋅ 3 ⋅ 4 ⋅ 5⋅ 6 makes 1344;
-and 1 ⋅ 2 ⋅ 3 ⋅ 4 ⋅ 5 ⋅ 6 ⋅ 7 ⋅ 8 ⋅ 9 ⋅ 10 is equal to 3628800, etc.
+3⋅4, signifies 3 times 4; that is, 12.
+So, 1⋅2 is equal to 2; and 1⋅2⋅3 makes 6. In like manner,
+1⋅2⋅3⋅4⋅5⋅6 makes 1344;
+and 1⋅2⋅3⋅4⋅5⋅6⋅7⋅8⋅9⋅10 is equal to 3628800, etc.
 
 **29.** In the same manner we may discover the value of an
 expression of this form, $$5 \cdot 7 \cdot 8 \cdot abcd$$.
@@ -85,8 +85,8 @@ may write its value, 280; for we obtain this number when
 we multiply the product of 5 by 7, or 35, by 8.
 
 **30.** The results which arise from the multiplication of
-two or more numbers are called *products*; and the numbers,
-or individual letters, are call *factors*.
+two or more numbers are called **products**; and the numbers,
+or individual letters, are call **factors**.
 
 **31.** Hitherto we have considered only positive numbers,
 and there can be no doubt, but that the products which we
