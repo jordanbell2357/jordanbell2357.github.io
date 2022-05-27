@@ -104,7 +104,7 @@ number of others may be deduced from it. We shall, however, give only a few:
 the extremes is equal to the product of the means, we may,
 when the three first terms are known, find the fourth from
 them. Thus, let the three first terms be 24:15∷40 to
-the fourth term : here, as the product of the means is 600,
+the fourth term: here, as the product of the means is 600,
 the fourth term multiplied by the first, that is by 24, must
 also make 600; consequently, by dividing 600 by 24 the
 quotient 25 will be the fourth term required, and the whole
@@ -170,9 +170,9 @@ of the factors of the first product in the same proportion to
 one of the factors of the second product, as the other factor
 of the second product is to the other factor of the first product:
 that is, in the present case, $$a:c::b:d$$, or
-$$a:b::c:d$$. Let 3·8=4·6, and we may form from it this
+$$a:b::c:d$$. Let 3 · 8 = 4 · 6, and we may form from it this
 proportion, 8:4∷6:3, or this, 3:4∷6:8. Likewise,
-if 3·5=1·15, we shall have 3:15∷1:5,
+if 3 · 5 = 1 · 15, we shall have 3:15∷1:5,
 or 5:1∷15:3, or 3:1∷15:5.
 
 
