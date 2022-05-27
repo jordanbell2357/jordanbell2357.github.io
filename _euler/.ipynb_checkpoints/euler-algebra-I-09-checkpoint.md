@@ -8,20 +8,20 @@ title: Euler, "Elements of Algebra", Section I, Chapter 9. "Of the Addition and 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 9. "Of the Addition and Subtraction of Fractions."
 
 **94.** When fractions have equal denominators, there is no difficulty
-in adding and subtracting them; for ²⁄₇+³⁄₇ is equal
-to ⁵⁄₇, and ⁴⁄₇-²⁄₇ is equal to ²⁄₇. In this case,
+in adding and subtracting them; for ²⁄₇ + ³⁄₇ is equal
+to ⁵⁄₇, and ⁴⁄₇ - ²⁄₇ is equal to ²⁄₇. In this case,
 therefore, either for addition or subtraction, we alter
 only the numerators, and place the common denominator
 under the line, thus;
 
-⁷⁄₁₀₀+⁹⁄₁₀₀-¹²⁄₁₀₀-¹⁵⁄₁₀₀+²⁰⁄₁₀₀ is equal to ⁹⁄₁₀₀;
+⁷⁄₁₀₀ + ⁹⁄₁₀₀ - ¹²⁄₁₀₀ - ¹⁵⁄₁₀₀ + ²⁰⁄₁₀₀ is equal to ⁹⁄₁₀₀;
 
-²⁴⁄₅₀-⁷⁄₅₀-¹²⁄₅₀+³¹⁄₅₀ is equal to ³⁶⁄₅₀, or ¹⁸⁄₂₅;
+²⁴⁄₅₀ - ⁷⁄₅₀ - ¹²⁄₅₀ + ³¹⁄₅₀ is equal to ³⁶⁄₅₀, or ¹⁸⁄₂₅;
 
-¹⁶⁄₂₀-³⁄₂₀-¹¹⁄₂₀+¹⁴⁄₂₀ is equal to ¹⁶⁄₂₀, or ⅘;
+¹⁶⁄₂₀ - ³⁄₂₀ - ¹¹⁄₂₀ + ¹⁴⁄₂₀ is equal to ¹⁶⁄₂₀, or ⅘;
 
-also ⅓+⅔ is equal to ³⁄₃, or 1, that is to say, a whole;
-and ²⁄₄-¾+¼ is equal to ⁰⁄₄, that is to say, nothing, or 0.
+also ⅓ + ⅔ is equal to ³⁄₃, or 1, that is to say, a whole;
+and ²⁄₄ - ¾ + ¼ is equal to ⁰⁄₄, that is to say, nothing, or 0.
 
 **95.** But when fractions have not equal denominators, we
 can always change them into other fractions that have the
@@ -29,17 +29,17 @@ same denominator. For example, when it is proposed to
 add together the fractions ½ and ⅓, we must consider that ½
 is the same as ³⁄₆, and that ⅓
 is equivalent to ²⁄₆; we have
-therefore, instead of the two fractions proposed, ³⁄₆+²⁄₆, the
+therefore, instead of the two fractions proposed, ³⁄₆ + ²⁄₆, the
 sum of which is ⅚. And if the two fractions were united by
-the sign minus as ½-⅓, we should have ³⁄₆-²⁄₆, or ⅙.
+the sign minus as ½ - ⅓, we should have ³⁄₆ - ²⁄₆, or ⅙.
 
 As another example, let the fractions proposed be ¾+⅝.
 Here, since ¾ is the same as ⁶⁄₈, this value may be substituted
-for ¾, and we may then say ⁶⁄₈+⅝ makes ¹¹⁄₈, or 1⅜.
+for ¾, and we may then say ⁶⁄₈ + ⅝ makes ¹¹⁄₈, or 1⅜.
 
 Suppose farther, that the sum of ⅓ and ⅓ were required, I
 say that it is ⁷⁄₁₂; for ⅓=⁴⁄₁₂, and ¼=³⁄₁₂: therefore
-⁴⁄₁₂+³⁄₁₂=⁷⁄₁₂.
+⁴⁄₁₂ + ³⁄₁₂=⁷⁄₁₂.
 
 **96.** We may have a greater number of fractions to reduce
 to a common denominator; for example, ½, ⅔, ¾, ⅘, ⅚. In
