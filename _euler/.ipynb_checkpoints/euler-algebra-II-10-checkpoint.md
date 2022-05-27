@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section II, Chapter 10. "Of the higher Powe
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 10. "Of the higher Powers of Compound Quantities."
 
-**340.** After squares and cubes, we must consider higher
+<span class="art">340</span> After squares and cubes, we must consider higher
 powers, or powers of a greater number of degrees; which
 are generally represented by exponents in the manner which
 we before explained: we have only to remember, when the
@@ -16,7 +16,7 @@ $$(a + b)^5$$ means that $$a + b$$ is raised to the fifth power, and
 $$(a - b)^6$$ represents the sixth power of $$a - b$$, and so on.
 We shall in this chapter explain the nature of these powers.
 
-**341.** Let $$a + b$$ be the root, or the first power, and the
+<span class="art">341</span> Let $$a + b$$ be the root, or the first power, and the
 higher powers will be found, by multiplication, in the following manner:
 
 $$
@@ -89,7 +89,7 @@ $$
 
 etc.
 
-**342.** The powers of the root $$a - b$$ are found in the same
+<span class="art">342</span> The powers of the root $$a - b$$ are found in the same
 manner; and we shall immediately perceive that they do
 not differ from the preceding, excepting that the 2nd, 4th,
 6th, etc. terms are affected by the sign minus.
@@ -172,7 +172,7 @@ $$+b^2$$, $$-b^3$$, $$+b^4$$, $$-b^5$$, $$+b^6$$, etc. which clearly
 shows that the even powers must be affected by the sign +, and the
 odd ones by the contrary sign -.
 
-**343.** An important question occurs in this place ; namely,
+<span class="art">343</span> An important question occurs in this place ; namely,
 how we may find, without being obliged to perform the same
 calculation, all the powers either of $$a+b$$ or $$a-b$$.
 
@@ -184,7 +184,7 @@ business then is to establish a rule, by which any power of
 $$a+b$$, however high, may be determined without the necessity
 of calculating all the preceding powers.
 
-**344.** Now, if from the powers which we have already determined
+<span class="art">344</span> Now, if from the powers which we have already determined
 we take away the numbers that precede each term,
 which are called the *coefficients*, we observe in all the terms
 a singular order: first, we see the first term $$a$$ of the root
@@ -199,7 +199,7 @@ certain that the terms, without their coefficients, would succeed each other in 
 
 $$a^{10}, a^9 b, a^8b^2, a^7b^3, a^6b^4, a^5b^5, a^4b^6, a^3b^7, a^2b^8, ab^9, b^{10}.$$
 
-**345.** It remains therefore to shew how we are to determine the coefficients,
+<span class="art">345</span> It remains therefore to shew how we are to determine the coefficients,
 which belong to those terms, or the
 numbers by which they are to be multiplied. Now, with
 respect to the first term, its coefficient is always unity; and,
@@ -219,7 +219,7 @@ We see then that the tenth power of $$a+b$$ will be
 $$a^{10}+10a^9b+45a^8b^2+120a^7b^3+210a^6b^4+252a^5b^5+210a^4b^6+120a^3b^7+
 45a^2b^8+10ab^9+b^{10}.$$
 
-**346.** Now, with regard to the coefficients, it must be observed, that
+<span class="art">346</span> Now, with regard to the coefficients, it must be observed, that
 for each power their sum must be equal to the
 number 2 raised to the same power; for let $$a = 1$$ and
 $$b = 1$$, then each term, without the coefficients, will be 1; consequently,
@@ -241,8 +241,7 @@ $$
 \end{array}
 $$
 
-
-**347.** Another necessary remark, with regard to the coefficients, is,
+<span class="art">347</span> Another necessary remark, with regard to the coefficients, is,
 that they increase from the beginning to the middle, and then decrease
 in the same order. In the even powers, the greatest coefficient is
 exactly in the middle; but in the odd powers, two coefficients, equal
@@ -255,7 +254,7 @@ of determining them for any power whatever, without calculating
 all the preceding powers. We shall here explain this method,
 reserving the demonstration however for the next chapter.
 
-**348.** In order to find the coefficients of any power proposed, the seventh for example, let us write the following
+<span class="art">348</span> In order to find the coefficients of any power proposed, the seventh for example, let us write the following
 fractions one after the other:
 
 $$
@@ -285,7 +284,7 @@ $$
 \end{array}
 $$
 
-**349.** So that we have, for the second power, the fractions
+<span class="art">349</span> So that we have, for the second power, the fractions
 $$\frac{2}{1},\frac{1}{2}$$; whence the first coefficient is 1,
 the second $$\frac{2}{1}=2$$, and
 the third $$2 \cdot \frac{1}{2}=1$$.
@@ -316,7 +315,7 @@ $$
 \end{array}
 $$
 
-**350.** This rule evidently renders it unnecessary to find
+<span class="art">350</span> This rule evidently renders it unnecessary to find
 the coefficients of the preceding powers, as it enables us to
 discover immediately the coefficients which belong to any
 one proposed. Thus, for the tenth power, we write the
@@ -324,8 +323,7 @@ fractions
 
 $$\frac{10}{1},\frac{9}{2},\frac{8}{3},\frac{7}{4},\frac{6}{5},\frac{5}{6},\frac{4}{7},\frac{3}{8},\frac{2}{9},\frac{1}{10},$$
 
-by means of which we
-find the
+by means of which we find the
 
 $$
 \begin{array}{lll}
@@ -343,7 +341,7 @@ $$
 \end{array}
 $$
 
-**351.** We may also write these fractions as they are,
+<span class="art">351</span> We may also write these fractions as they are,
 without computing their value; and in this manner it is
 easy to express any power of $$a+b$$. Thus,
 
@@ -354,9 +352,7 @@ $$
 +\textrm{etc.}
 $$
 
-Whence the law of the
-succeeding terms may be easily deduced.
-
+Whence the law of the succeeding terms may be easily deduced.
 
 #### References
 

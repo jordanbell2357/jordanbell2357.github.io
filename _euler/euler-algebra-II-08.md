@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section II, Chapter 8. "Of the Calculation 
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 8. "Of the Calculation of Irrational Quantities."
 
-**326.** When it is required to add together two or more
+<span class="art">326</span> When it is required to add together two or more
 irrational quantities, this is to be done, according to the
 method before laid down, by writing all the terms in succession,
 each with its proper sign: and, with regard to abbreviations,
@@ -18,7 +18,7 @@ quantities 3 + √2 and 1 + √2, added together, make
 4 + 2√2, or 4 + √8; the sum of 5 + √3 and 4 - √3,
 is 9; and that of 2√3 + 3√2 and √3 - √2, is 3√3 + 2√2.
 
-**327.** Subtraction also is very easy, since we have only to
+<span class="art">327</span> Subtraction also is very easy, since we have only to
 add the proposed numbers, after having changed their signs;
 as will be readily seen in the following example, by subtracting the lower line from the upper.
 
@@ -31,7 +31,7 @@ $$
 \end{array}
 $$
 
-**328.** In multiplication, we must recollect that $$\surd a$$
+<span class="art">328</span> In multiplication, we must recollect that $$\surd a$$
 multiplied by $$\surd a$$ produces $$a$$;
 and that if the numbers which follow the sign $$\surd$$ are different, as $$a$$ and $$b$$, we have $$\surd ab$$ for the product of $$\surd a$$ multiplied by $$\surd b$$.
 After this, it will be easy to calculate the following examples:
@@ -60,7 +60,7 @@ $$
 \end{array}
 $$
 
-**329.** What we have said applies also to imaginary quantities; we shall only observe farther,
+<span class="art">329</span> What we have said applies also to imaginary quantities; we shall only observe farther,
 that $$\surd -a$$ multiplied by $$\surd -a$$ produces $$-a$$. If it were required to find the
 cube of -1 + √-3, we should take the square of that
 number, and then multiply that square by the same number;
@@ -90,7 +90,7 @@ $$
 \end{array}
 $$
 
-**330.** In the division of surds, we have only to express the
+<span class="art">330</span> In the division of surds, we have only to express the
 proposed quantities in the form of a fraction; which may be
 then changed into another expression having a rational denominator;
 for if the denominator be $$a+\surd b$$, for example,
@@ -191,7 +191,7 @@ $$
 \end{array}
 $$
 
-**331.** In the same manner, we may transform irrational
+<span class="art">331</span> In the same manner, we may transform irrational
 fractions into others, that have rational denominators. If
 we have, for example, the fraction $$\frac{1}{5-2\surd 6}$$,
 and multiply its numerator and denominator by 5 + 2√6,
@@ -203,7 +203,7 @@ also
 $$\frac{\surd 6 + \surd 5}{\surd 6 - \surd 5}=\frac{11+2\surd 30}{1}
 =11+2\surd 30.$$
 
-**332.** When the denominator contains several terms, we
+<span class="art">332</span> When the denominator contains several terms, we
 may, in the same manner, make the radical signs in it vanish
 one by one. Thus, if the fraction $$\frac{1}{\surd 10 - \surd 2 - \surd 3}$$
 be proposed, we first multiply these two terms by
@@ -211,7 +211,6 @@ be proposed, we first multiply these two terms by
 $$\frac{\surd 10 + \surd 2 + \surd 3}{5-2\surd 6}$$; then
 multiplying its numerator and denominator by 5 + 2√6,
 we have 5√10 + 11√2 + 9√3 + 2√60.
-
 
 #### References
 

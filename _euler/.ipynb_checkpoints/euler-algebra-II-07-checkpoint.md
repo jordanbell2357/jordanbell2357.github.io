@@ -7,12 +7,12 @@ title: Euler, "Elements of Algebra", Section II, Chapter 7. "Of the Extraction o
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 7. "Of the Extraction of Roots applied to Compound Quantities."
 
-**317.** In order to give a certain rule for this operation, we
+<span class="art">317</span> In order to give a certain rule for this operation, we
 must consider attentively the square of the root $$a+b$$, which
 is $$a^2+2ab+b^2$$, in order that we may reciprocally find the
 root of a given square.
 
-**318.** We must consider therefore, first, that as the square,
+<span class="art">318</span> We must consider therefore, first, that as the square,
 $$a^2+2ab+b^2$$, is composed of several terms, it is certain
 that the root also will comprise more than one term; and
 that if we write the terms of the square in such a manner,
@@ -22,7 +22,7 @@ first term of the root; and since, in the present case, the
 first term of the square is $$a^2$$, it is certain that the first term
 of the root is $$a$$.
 
-**319.** Having therefore found the first term of the root,
+<span class="art">319</span> Having therefore found the first term of the root,
 that is to say, $$a$$, we must consider the rest of the square,
 namely, $$2ab+b^2$$, to see if we can derive from it the second
 part of the root, which is $$b$$. Now, this remainder, $$2ab+b^2$$,
@@ -32,7 +32,7 @@ evident that we shall find the latter, $$b$$, which is the second
 part of the root, by dividing the remainder, $$2ab+b^2$$, by
 $$2a+b$$.
 
-**320.** So that the quotient, arising from the division of the
+<span class="art">320</span> So that the quotient, arising from the division of the
 above remainder by $$2a+b$$, is the second term of the root
 required; and in this division we observe, that $$2a$$ is the
 double of the first term $$a$$, which is already determined: so
@@ -43,7 +43,7 @@ to the first term $$2a$$; but as soon as the quotient is found,
 which in tlic present case is $$b$$, we must put it in the vacant
 place, and thus render the division complete.
 
-**321.** The calculation, therefore, by which we find the
+<span class="art">321</span> The calculation, therefore, by which we find the
 root of the square $$a^2+2ab+b^2$$, may be represented thus
 
 $$
@@ -58,7 +58,7 @@ $$
 \end{array}
 $$
 
-**322.** We may, also, in the same manner, find the square
+<span class="art">322</span> We may, also, in the same manner, find the square
 root of other compound quantities, provided they are squares,
 as will appear from the following examples:
 
@@ -118,7 +118,7 @@ $$
 
 ---
 
-**323.** When there is a remainder after the division, it is a
+<span class="art">323</span> When there is a remainder after the division, it is a
 proof that the root is composed of more than two terms.
 We must in that case consider the two terms already found
 as forming the first part, and endeavour to derive the other
@@ -134,7 +134,7 @@ will render this operation more clear.
 INCOMPLETE
 
 
-**324.** We easily deduce from the rule which we have explained, the method which is taught in books of arithmetic
+<span class="art">324</span> We easily deduce from the rule which we have explained, the method which is taught in books of arithmetic
 for the extraction of the square root, as will appear from the
 following examples in numbers:
 
@@ -144,7 +144,7 @@ INCOMPLETE
 
 
 
-**325.** But when there is a remainder after all the figures
+<span class="art">325</span> But when there is a remainder after all the figures
 have been used, it is a proof that the number proposed is
 not a square; and, consequently, that its root cannot be
 assigned. , In such cases, the radical sign, which we before
