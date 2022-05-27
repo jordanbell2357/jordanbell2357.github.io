@@ -154,7 +154,7 @@ number all its divisors.
 
 -->
 
-<table>
+<table style="font-size: 8px;">
 <thead>
   <tr>
     <th>1</th>
