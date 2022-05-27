@@ -154,7 +154,9 @@ number all its divisors.
 
 -->
 
-<table style="font-size: 6px;">
+<div style="overflow-x:auto;">
+
+<table>
 <thead>
   <tr>
     <th>1</th>
@@ -336,6 +338,8 @@ number all its divisors.
   </tr>
 </tbody>
 </table>
+    
+</div>
 
 
 **67.** Lastly, it ought to be observed that 0, or nothing;
