@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 13. "Of Impossible, or I
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 13. "Of Impossible, or Imaginary Quantities, which arise from the same source."
 
-**139.** We have already seen that the squares of numbers,
+<span class="art">139</span> We have already seen that the squares of numbers,
 negative as well as positive, are always positive, or affected
 by the sign +; having shown that $$-a$$ multiplied by $$-a$$
 gives $$+aa$$, the same as the product of $$+a$$ by $$+a$$:
@@ -15,7 +15,7 @@ wherefore, in the preceding chapter, we supposed that all the
 numbers, of which it was required to extract the square
 roots, were positive.
 
-**140.** When it is required, therefore, to extract the root of
+<span class="art">140</span> When it is required, therefore, to extract the root of
 a negative number, a great difficulty arises; since there is
 no assignable number, the square of which would be a negative quantity.
 Suppose, for example, that we wished to
@@ -24,7 +24,7 @@ when multiplied by itself, would produce -4: now, this
 number is neither +2 nor -2, because the square both of
 +2 and of -2, is +4, and not -4.
 
-**141.** We must therefore conclude, that the square root of
+<span class="art">141</span> We must therefore conclude, that the square root of
 a negative number cannot be either a positive number or a
 negative number, since the squares of negative numbers also
 take the sign plus: consequently, the root in question must
@@ -32,7 +32,7 @@ belong to an entirely distinct species of numbers; since it
 cannot be ranked either among positive or among negative
 numbers.
 
-**142.** Now, we before remarked, that positive numbers
+<span class="art">142</span> Now, we before remarked, that positive numbers
 are all greater than nothing, or 0, and that negative numbers
 are all less than nothing, or 0; so that whatever exceeds 0
 is expressed by positive numbers, and whatever is less than 0
@@ -42,7 +42,7 @@ than nothing; yet we cannot say, that they are 0; for 0
 multiplied by produces 0, and consequently does not give
 a negative number.
 
-**143.** And, since all numbers which it is possible to conceive,
+<span class="art">143</span> And, since all numbers which it is possible to conceive,
 are either greater or less than 0, or are itself, it is
 evident that we cannot rank the square root of a negative
 number amongst possible numbers, and we must therefore
@@ -51,28 +51,28 @@ led to the idea of numbers, which from their nature are impossible;
 and therefore they are usually called **imaginary
 quantities**, because they exist merely in the imagination.
 
-**144.** All such expressions, as √-1, √-2, √-3, √-4,
+<span class="art">144</span> All such expressions, as √-1, √-2, √-3, √-4,
 etc. are consequently impossible, or imaginary numbers,
 since they represent roots of negative quantities; and of
 such numbers we may truly assert that they are neither
 nothing, nor greater than nothing, nor less than nothing;
 which necessarily constitutes them imaginary, or impossible.
 
-**145.** But notwithstanding this, these numbers present
+<span class="art">145</span> But notwithstanding this, these numbers present
 themselves to the mind; they exist in our imagination, and
 we still have a sufficient idea of them; since we know that
 by √-4 is meant a number which, multiplied by itself,
 produces -4; for this reason also, nothing prevents us
 from making use of these imaginary numbers, and employing them in calculation.
 
-**146.** The first idea that occurs on the present subject is,
+<span class="art">146</span> The first idea that occurs on the present subject is,
 that the square of √-3, for example, or the product of
 √-3 by √-3, must be -3; that the product of
 √-1 by √-1 is -1;
 and, in general, that by multiplying
 $$\surd -a$$ by $$\surd -a$$, or by taking the square of $$\surd -a$$ we obtain $$-a$$.
 
-**147.** Now, as $$-a$$ is equal to $$+1$$ multiplied by -1, and
+<span class="art">147</span> Now, as $$-a$$ is equal to $$+1$$ multiplied by -1, and
 as the square root of a product is found by multiplying together the roots of its factors,
 it follows that the root of $$a$$
 times -1, or $$\surd -a$$, is equal to $$\surd a$$ multiplied by $$\surd -1$$;
@@ -82,14 +82,14 @@ impossibility of an imaginary quantity may be always reduced to √-1; for this 
 2; likewise √-9 is reduced to √9 · √-1, or 3√-1;
 and √-16 is equal to 4√-1.
 
-**148.** Moreover, as $$\surd a$$ multiplied by $$\surd b$$ makes $$\surd ab$$, we
+<span class="art">148</span> Moreover, as $$\surd a$$ multiplied by $$\surd b$$ makes $$\surd ab$$, we
 shall have √6 for the value of √-2 multiplied by √-;
 and √4, or 2, for the value of the product of √-1 by
 √-4. Thus we see that two imaginary numbers, multiplied together, produce a real, or possible one. But, on the contrary, a possible number, multiplied by an
 impossible number, gives always an imaginary product:
 thus, √-3 by √+5, gives √-15.
 
-**149.** It is the same with regard to division; for $$\surd a$$
+<span class="art">149</span> It is the same with regard to division; for $$\surd a$$
 divided by $$\surd b$$ making $$\frac{\surd a}{\surd b}$$, it is evident that
 √-4 divided by √-1 will make √+4, or 2; that √+3 divided
 by √-3 will give √-1; and that 1 divided by √-1
@@ -97,7 +97,7 @@ gives $$\frac{1}{\surd -1}$$, or √-1; because 1 is equal to √+1.[^1]
 
 [^1]: 1 divided by √-1 is in fact -√-1; but indeed both √-1 and -√-1 are square roots of -1.
 
-**150.** We have before observed, that the square root of
+<span class="art">150</span> We have before observed, that the square root of
 any number has always two values, one positive and the
 other negative; that √4, for example, is both +2 and -2,
 and that, in general, we may take $$-\surd a$$ as well as $$+\surd a$$
@@ -107,7 +107,7 @@ and $$-\surd -a$$; but we must not confound the signs + and
 -, which are before the radical sign √, with the sign which
 comes after it.
 
-**151.** It remains for us to remove any doubt, which may
+<span class="art">151</span> It remains for us to remove any doubt, which may
 be entertained concerning the utility of the numbers of
 which we have been speaking; for those numbers being impossible, it would not
 be surprising if they were thought

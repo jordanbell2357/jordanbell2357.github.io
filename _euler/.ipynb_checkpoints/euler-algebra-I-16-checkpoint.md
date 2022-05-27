@@ -7,13 +7,13 @@ title: Euler, "Elements of Algebra", Section I, Chapter 16. "Of Powers in genera
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 16. "Of Powers in general."
 
-**168.** The product which we obtain by multiplying a number once, or several times by itself, is
+<span class="art">168</span> The product which we obtain by multiplying a number once, or several times by itself, is
 called a **power**. Thus, a square which arises from the multiplication of a number by itself,
 and a cube which we obtain by multiplying a number twice by itself, are powers. We say also in
 the former case, that the number is raised to the second degree, or to the second power;
 and in the latter, that the number is raised to the third degree, or to the third power.
 
-**169.** We distinguish those powers from one another by the number of times that the given
+<span class="art">169</span> We distinguish those powers from one another by the number of times that the given
 number has been multiplied by itself. For example, a square is called the second
 power, because a certain given number has been multiplied by itself; and if a number has
 been multiplied twice by itself we call the product the third power, which
@@ -23,7 +23,7 @@ to understand what is meant by the fifth, sixth, seventh, etc. power of a number
 I shall only add, that powers, after the fourth degree, cease to have any other but
 these numeral distinctions.
 
-**170.** To illustrate this still better, we may observe, in the first place,
+<span class="art">170</span> To illustrate this still better, we may observe, in the first place,
 that the powers of 1 remain always the same; because,
 whatever number of times we multiply 1 by itself, the product is found to be always 1.
 We shall therefore begin by representing the powers of 2 and of 3, which succeed
@@ -152,7 +152,7 @@ and beginning with the first power, are as follow:
     </tr>
 </table>
 
-**171.** In order to illustrate this subject, and to consider it in a more general manner,
+<span class="art">171</span> In order to illustrate this subject, and to consider it in a more general manner,
 we may observe, that the powers of any number, $$a$$, succeed each other in the following order
 
 <table>
@@ -182,7 +182,7 @@ also would have no less trouble, if he were obliged to count all the letters, to
 is intended to be represented. The hundredth power, for example, could not be conveniently written
 in this manner; and it would be equally difficult to read it.
 
-**172.** To avoid this inconvenience, a much more commodious method of expressing such powers has
+<span class="art">172</span> To avoid this inconvenience, a much more commodious method of expressing such powers has
 been devised, which, from its extensive use, deserves to be carefully explained. Thus, for example,
 to express the hundredth power, we simply write the number 100 above the quantity, whose hundredth
 power we would express, and a little towards the right-hand;
@@ -191,14 +191,14 @@ the 100th power, or the hundredth power of $$a$$. It must be observed, also, tha
 name *exponent* is given to the number written above that whose power, or degree, it represents,
 which, in the present instance, is 100.
 
-**173.** In the same manner, $$a^2$$ signifies $$a$$ raised to the 2nd power,
+<span class="art">173</span> In the same manner, $$a^2$$ signifies $$a$$ raised to the 2nd power,
 or the second power of $$a$$, which we represent sometimes also by $$aa$$,
 because both these expressions are written and understood with equal facility;
 but to express the cube, or the third power $$aaa$$, we write $$a^3$$, according to the
 rule, that we may occupy less room; so $$a^4$$ signifies the fourth, $$a^5$$ the fifth,
 and $$a^6$$ the sixth power of $$a$$.
 
-**174.** In a word, the different powers of a will be represented by
+<span class="art">174</span> In a word, the different powers of a will be represented by
 
 $$a, a^2, a^3, a^4, a^5, a^6, a^7, a^8, a^9, a^{10}, \textrm{etc.}$$
 
@@ -208,17 +208,18 @@ as this unit shows that the letter $$a$$ is to be written only once. Such a seri
 called also a geometrical progression, because each term is by one-time, or term,
 greater than the preceding.
 
-**175.** As in this series of powers each term is found by multiplying the preceding term by
+<span class="art">175</span> As in this series of powers each term is found by multiplying the preceding term by
 $$a$$, which increases the exponent by 1; so when any term is given, we may also find the
 preceding term, if we divide by $$a$$, because this diminishes the exponent by 1. This
-shows that the term which precedes the first term $$a^1$$ must necessarily be $$\frac{a}{a}$$, or 1;
-and, if we proceed according to the exponents, we immediately conclude, that the term which precedes
+shows that the term which precedes the first term $$a^1$$ must necessarily be $$\frac{a}{a}$$,
+or 1; and, if we proceed according to the exponents, we immediately conclude,
+that the term which precedes
 the first must be $$a^0$$; and hence we deduce this remarkable property,
 that $$a^0$$ is always equal to 1,
 however great or small the value of the number $$a$$ may be, and even when a is nothing;
 that is to say, $$a^0$$ is equal to 1.
 
-**176.** We may also continue our series of powers in a retrograde order,
+<span class="art">176</span> We may also continue our series of powers in a retrograde order,
 and that in two different ways; first, by dividing always by a; and secondly,
 by diminishing the exponent by unity: and it is evident that, whether we follow
 the one or the other, the terms are still perfectly equal.
@@ -261,7 +262,7 @@ which must be read backwards, or from right to left.
     </tr>
 </table>
 
-**177.** We are now come to the knowledge of powers whose exponents are negative,
+<span class="art">177</span> We are now come to the knowledge of powers whose exponents are negative,
 and are enabled to assign the precise value of those powers. Thus, from what has been said,
 it appears that
 
@@ -293,7 +294,7 @@ it appears that
     </tr>
 </table>
 
-**178.** It will also be easy, from the foregoing notation, to
+<span class="art">178</span> It will also be easy, from the foregoing notation, to
 find the powers of a product, $$ab$$; for they must evidently be
 
 $$ab$$, or $$a^1b^1$$, $$a^2b^2$$, $$a^3b^3$$, $$a^4b^4$$, $$a^5b^5$$, etc.
@@ -303,7 +304,7 @@ those of $$\frac{a}{b}$$ are
 
 $$\frac{a^1}{b^1}$$, $$\frac{a^2}{b^2}$$, $$\frac{a^3}{b^3}$$, $$\frac{a^4}{b^4}$$, $$\frac{a^5}{b^5}$$, $$\frac{a^6}{b^6}$$, $$\frac{a^7}{b^7}$$, etc.
 
-**179.** Lastly, we have to consider the powers of negative numbers.
+<span class="art">179</span> Lastly, we have to consider the powers of negative numbers.
 Suppose the given number to be $$-a$$; then its powers will form the
 following series:
 

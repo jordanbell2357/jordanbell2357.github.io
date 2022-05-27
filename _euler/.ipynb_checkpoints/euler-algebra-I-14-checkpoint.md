@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 14. "Of Cubic Numbers."
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 14. "Of Cubic Numbers."
 
-**152.** When a number has been multiplied twice by itself,
+<span class="art">152</span> When a number has been multiplied twice by itself,
 or, which is the same thing, when the square of a number
 has been multiplied once more by that number, we obtain
 a product which is called a cube, or a cubic number. Thus,
@@ -47,7 +47,7 @@ each other in the followinsf order:
   </tr>
 </table>
 
-**153.** If we consider the differences of those cubes, as we
+<span class="art">153</span> If we consider the differences of those cubes, as we
 did of the squares, by subtracting each cube from that
 which comes after it, we obtain the following series of
 numbers:
@@ -62,14 +62,14 @@ find the following series:
 
 in which the terms, it is evident, increase always by 6.
 
-**154.** After the definition we have given of a cube, it will
+<span class="art">154</span> After the definition we have given of a cube, it will
 not be difficult to find the cubes of fractional numbers;
 thus, ⅛ the cube of ½; ¹⁄₂₇ is the cube of ⅓; and ⁸⁄₂₇ is the
 cube of ⅔. In the same manner, we have only to take the
 cube of the numerator and that of the denominator separately,
 and we shall have ²⁷⁄₆₄ for the cube of ¾.
 
-**155.** If it be required to find the cube of a mixed number, we must first reduce
+<span class="art">155</span> If it be required to find the cube of a mixed number, we must first reduce
 it to a single fraction, and then
 proceed in the manner that has been described. To find,
 for example, the cube of 1½, we must take that of  ³⁄₂, which
@@ -77,7 +77,7 @@ is ²⁷⁄₈ or 3⅜; also the cube of 1¼, or of the single fraction
 ⁵⁄₄, is ¹²⁵⁄₆₄, or 1⁶¹⁄₆₄; and the cube of 3¼, or of ¹³⁄₄,
 is ²¹⁹⁷⁄₆₄, or 34²¹⁄₆₄.
 
-**156.** Since $$aaa$$ is the cube of $$a$$, that of
+<span class="art">156</span> Since $$aaa$$ is the cube of $$a$$, that of
 $$ab$$ will be $$aaabbb$$;
 whence we see, that if a number has two or more factors, we
 may find its cube by multiplying together the cubes of those
@@ -88,7 +88,7 @@ of $$2a$$ is $$8aaa$$, and consequently 8 times greater than the
 cube of $$a$$: likewise, the cube of $$3a$$ is $$27aaa$$; that is to say,
 27 times greater than the cube of $$a$$.
 
-**157.** Let us attend here also to the signs + and -. It
+<span class="art">157</span> Let us attend here also to the signs + and -. It
 is evident that the cube of a positive number $$+a$$ must also
 be positive, that is $$+aaa$$; but if it be required to cube a
 negative number $$-a$$, it is found by first taking the square,
