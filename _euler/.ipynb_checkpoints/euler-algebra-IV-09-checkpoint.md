@@ -127,7 +127,7 @@ $$x= -3$$; whence, $$x-7=0$$, and $$x+3=0$$; these give us
 the factors of the equation required, which consequently
 becomes $$x^2 -4x-21 =0$$. Applying here, also, the above
 rule, we find the two given values of $$x$$; for if $$x^2=4x+21$$,
-we have, by completing the square, etc. $$x=2 \pm \sqrt{25} =2  \pm 5$$;
+we have, by completing the square, etc. $$x=2 \pm \surd 25 =2  \pm 5$$;
 that is to say, $$x=7$$, or $$x= -3$$. 
 
 <span class="art">699</span> The values of $$x$$ may also happen to be equal. Suppose, for example, that an
@@ -137,7 +137,7 @@ and the equation sought will be $$x^2 - 10x + 25=0$$.
 In this equation, $$x$$ appears to have only one value; but it
 is because $$x$$ is twice found $$= 5$$, as the common method of
 resolution shows; for we have $$x^2= 10x-25$$; wherefore
-$$x=5\pm \sqrt{0} = 5 \pm 0$$, that is to say, $$x$$ is in two ways $$= 5$$. 
+$$x=5\pm \surd 0 = 5 \pm 0$$, that is to say, $$x$$ is in two ways $$= 5$$. 
 
 <span class="art">700</span> A very remarkable case sometimes occurs, in which
 both values of $$x$$ become
@@ -147,7 +147,7 @@ satisfy the terms of the equation. Let it be proposed, for
 example, to divide the number 10 into two parts, such
 that their product may be 30. If we call one of those
 parts $$x$$, the other will be $$10-x$$, and their product will be
-$$10x-x^2=30$$; wherefore $$x^2= 10x-30$$, and $$x=5 \pm \sqrt{-5}$$,
+$$10x-x^2=30$$; wherefore $$x^2= 10x-30$$, and $$x=5 \pm \surd -5$$,
 which, being an imaginary number, shows that the question is impossible. 
 
 <span class="art">701</span> It is very important, therefore, to discover some
@@ -155,7 +155,7 @@ sign, by means of which we may immediately know whether
 an equation of the second degree be possible or not.
 
 Let us resume the general equation $$x^2 -ax+b=0$$. We
-shall have $$x^2=ax - b$$, and $$x =\frac{1}{2}a \pm \sqrt{\frac{1}{4}a^2-b}$$. This
+shall have $$x^2=ax - b$$, and $$x =\frac{1}{2}a \pm \surd\left(\frac{1}{4}a^2-b\right)$$. This
 shows, that if $$b$$ be greater than $$\frac{1}{4}a^2$$, or $$4b$$ greater than $$a^2$$,
 the two values of $$x$$ are always imaginary, since it would be
 required to extract the square root of a negative quantity;
@@ -168,11 +168,11 @@ product equal to $$b$$. Thus, in the equation $$x^2 -6x+ 10=0$$,
 the sum of the two values of $$x$$ must be 6, and the product
 of these two values must be 10; now, we find,
 
-$$\textrm{I)} \; x= 3 + \sqrt{-1},$$
+$$\textrm{I)} \; x= 3 + \surd -1,$$
 
 and
 
-$$\textrm{II)} \; x=3-\sqrt{-1},$$
+$$\textrm{II)} \; x=3-\surd -1,$$
 
 quantities whose sum is 6, and the product 10. 
 
@@ -185,11 +185,11 @@ $$x^2=\mp \dfrac{gx}{f} - \dfrac{h}{f},$$
 
 and
 
-$$x= \mp \dfrac{g}{2f} \pm \sqrt{\frac{g^2}{4f^2}-\frac{h}{f}},$$
+$$x= \mp \dfrac{g}{2f} \pm \surd \left(\frac{g^2}{4f^2}-\frac{h}{f}\right),$$
 
 or
 
-$$x = \dfrac{\mp g \pm \sqrt{g^2-4fh}}{2f};$$
+$$x = \dfrac{\mp g \pm \surd(g^2-4fh)}{2f};$$
 
 whence we conclude, that the two
 values are imaginary, and consequently, the equation impossible, when $$4fh$$ is
@@ -206,7 +206,7 @@ and two real values of $$x$$ may be assigned. It is true, they
 are often irrational; but we have already seen, that, in
 such cases, we may always find them by approximation:
 whereas no approximations can take place with regard to
-imaginary expressions, such as $$\sqrt{-5}$$; for 100 is as far
+imaginary expressions, such as $$\surd -5$$; for 100 is as far
 from being the value of that root, as 1, or any other number.
 
 <span class="art">703</span> We have farther to observe, that any quantity of
