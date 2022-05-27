@@ -39,12 +39,12 @@ it would only be required to take the square root of both
 sides.
 
 **640.** But it is evident that $$x^2+px$$ cannot be a square;
-since we have already seen, (**Art. 307.**) that if a root consists of two terms,
+since we have already seen, (**Article 307.**) that if a root consists of two terms,
 for example, $$x+n$$, its square always
 contains three terms, namely, twice the product of the two
 parts, beside the square of each part; that is to say, the
 square of $$x+n$$ is $$x^2+2nx+n^2$$. Now, we have already
-on one side $$x^2+px$$;, we may, therefore, consider $$x^2$$ as the
+on one side $$x^2+px$$; we may, therefore, consider $$x^2$$ as the
 square of the first part of the root, and in this case $$p$$x must
 represent twice the product of $$x$$, the first part of the root,
 by the second part: consequently, this second part must be
@@ -61,15 +61,15 @@ $$x^2+px+\frac{1}{4}p^2=q+\frac{1}{4}p^2,$$
 the first side being actually a square,
 and the other containing only known quantities.
 If, therefore, we take the square root of both sides, we
-find $$x+\frac{1}{2}p=\sqrt{\frac{1}{4}p^2+q}$$; subtracting
+find $$x+\frac{1}{2}p=\surd \left(\frac{1}{4}p^2+q\right)$$; subtracting
 $$\frac{1}{2}p$$, we obtain
 
-$$x=-\frac{1}{2}p+\sqrt{\frac{1}{4}p^2+q};$$
+$$x=-\frac{1}{2}p+\surd \left(\frac{1}{4}p^2+q\right);$$
 
 and, as every square root may be taken either affirmatively or negatively,
 we shall have for $$x$$ two values expressed thus;
 
-$$x=-\frac{1}{2}p \pm \sqrt{\frac{1}{4}p^2+q}.$$
+$$x=-\frac{1}{2}p \pm \surd \left(\frac{1}{4}p^2+q\right).$$
 
 **642.** This formula contains the rule by which all quadratic equations may be resolved;
 and it will be proper to commit it to memory, that it may not be necessary, every
@@ -77,7 +77,7 @@ time, to repeat the whole operation which we have gone
 through. We may always arrange the equation in such a
 manner, that the pure square $$x^2$$ may be found on one side,
 and the above equation have the form $$x^2 = -px+q$$, where
-we see immediately that $$x=-\frac{1}{2}p \pm \sqrt{\frac{1}{4}p^2+q}$$.
+we see immediately that $$x=-\frac{1}{2}p \pm \surd \left(\frac{1}{4}p^2+q\right)$$.
 
 **643.** The general rule, therefore, which we deduce from
 that, in order to resolve the equation $$x^2 = -px+q$$, is
@@ -92,13 +92,13 @@ equation.
 Thus, if we had the equation $$x^2=6x+7$$, we should
 immediately say, that
 
-$$x=3\pm \sqrt{9+7}=3 \pm 4,$$
+$$x=3\pm \surd(9+7)=3 \pm 4,$$
 
 whence we have these two values of $$x$$, namely, $$x=7$$, and
 $$x=-1$$. In the same manner, the equation $$x^2=10x-9$$,
 would give
 
-$$x=5 \pm \sqrt{25-9}=5 \pm 4,$$
+$$x=5 \pm \surd(25-9)=5 \pm 4,$$
 
 that is to say, the two values of $$x$$ are 9 and 1.
 
@@ -109,23 +109,23 @@ and III), When $$p$$ is a fractional number.
 I) Let $$p$$ be an even number, and the equation such,
 that $$x^2=2px+q$$; we shall, in this case, have
 
-$$x=p \pm \sqrt{p^2+q}.$$
+$$x=p \pm \surd(p^2+q).$$
 
 II) Let $$p$$ be an odd number, and the equation
 $$x^2=px+q$$; we shall here have
 
-$$x=\frac{1}{2}p \pm \sqrt{\frac{1}{4}p^2+q};$$
+$$x=\frac{1}{2}p \pm \surd \left(\frac{1}{4}p^2+q\right);$$
 
 and since $$\frac{1}{4}p^2+q=\frac{p^2+4q}{4}$$, we may extract the square root
 of the denominator, and write
 
-$$x=\frac{1}{2}p \pm \frac{\sqrt{p^2+4q}}{2} = \frac{p \pm \sqrt{p^2+4q}}{2}.$$
+$$x=\frac{1}{2}p \pm \frac{\surd(p^2+4q)}{2} = \frac{p \pm \surd(p^2+4q)}{2}.$$
 
 III) Lastly, if $$p$$ be a fraction, the equation may be resolved in the
 following manner. Let the equation be $$ax^2=bx+c$$, or
 $$x^2=\frac{bx}{a}+\frac{c}{a}$$, and we shall have, by the rule,
 
-$$x=\frac{b}{2a} \pm \sqrt{\frac{b^2}{4a^2}+\frac{c}{a}}.$$
+$$x=\frac{b}{2a} \pm \surd \left(\frac{b^2}{4a^2}+\frac{c}{a}\right).$$
 
 Now,
 
@@ -133,7 +133,7 @@ $$\frac{b^2}{4a^2}+\frac{c}{a}=\frac{b^2+4ac}{4a^2},$$
 
 the denominator of which is a square; so that
 
-$$x = \frac{b \pm \sqrt{b^2+4ac}}{2a}.$$
+$$x = \frac{b \pm \surd(b^2+4ac)}{2a}.$$
 
 **645.** The other method of resolving mixt quadratic equations is,
 to transform them into pure equations; which is
@@ -155,11 +155,11 @@ $$y^2+\frac{1}{4}p^2=\frac{1}{2}p^2+q;$$
 and then, by subtracting $$\frac{1}{4}p^2$$, to $$y^2=\frac{1}{4}p^2+q$$. This is
 a pure quadratic equation, which immediately gives
 
-$$y=\pm \sqrt{\frac{1}{4}p^2+q}.$$
+$$y=\pm \surd \left(\frac{1}{4}p^2+q\right).$$
 
 Now, since $$x=y+\frac{1}{2}p$$, we have
 
-$$x=\frac{1}{2}p \pm \sqrt{\frac{1}{4}p^2+q},$$
+$$x=\frac{1}{2}p \pm \surd \left(\frac{1}{4}p^2+q\right),$$
 
 as we found it before. It only remains, therefore, to illustrate
 this rule by some examples.
@@ -171,7 +171,7 @@ numbers?
 If the less be $$x$$, the other will be $$x+6$$, and their product
 $$x^2+6x=91$$. Subtracting $$6x$$, there remains $$x^2=91-6x$$, and the rule gives
 
-$$x=-3 \pm \sqrt{9+91} = -3 \pm 10;$$
+$$x=-3 \pm \surd(9+91) = -3 \pm 10;$$
 
 so that $$x=7$$, or $$x=-13$$.
 
@@ -193,7 +193,7 @@ $$x^2-109=23-x.$$
 
 Therefore $$x^2=-x+132$$, and, by the rule,
 
-$$x=-\frac{1}{2} \pm \sqrt{\frac{1}{4}+132} = -\frac{1}{2} \pm \sqrt{\frac{529}{4}} = -\frac{1}{2} \pm \frac{23}{2}.$$
+$$x=-\frac{1}{2} \pm \surd \left(\frac{1}{4}+132\right) = -\frac{1}{2} \pm \surd \left(\frac{529}{4}\right) = -\frac{1}{2} \pm \frac{23}{2}.$$
 
 So that $$x=11$$, or $$x=-12$$.
 
@@ -210,7 +210,7 @@ Supposing the number to be $$x$$, its half, multiplied by its third, will
 give $$\frac{1}{6}x^2$$; so that $$\frac{1}{6}x^2+\frac{1}{2}x=30$$; and multiplying
 by 6, we have $$x^2+3x=180$$, or $$x^2=-3x+180$$, which gives
 
-$$x=-\frac{3}{2} \pm \sqrt{\frac{9}{4}+180} = -\frac{3}{2} \pm \frac{27}{2}.$$
+$$x=-\frac{3}{2} \pm \surd \left(\frac{9}{4}+180\right) = -\frac{3}{2} \pm \frac{27}{2}.$$
 
 Consequently, either $$x=12$$, or $$x=-15$$.
 
@@ -224,7 +224,7 @@ or their sum, the new sum ought to make 90. So that
 $$2x^2 + 3x = 90$$; or $$2x^2 = 90 - 3x$$; whence $$x^2 = -\frac{3}{2}x+45$$;
 and thus we obtain
 
-$$x=-\frac{3}{4} \pm \sqrt{\frac{9}{16}+45}=-\frac{3}{4} \pm \frac{27}{4}.$$
+$$x=-\frac{3}{4} \pm \surd \left(\frac{9}{16}+45\right)=-\frac{3}{4} \pm \frac{27}{4}.$$
 
 Consequently, $$x=6$$ or $$x=-7\frac{1}{2}$$.
 
@@ -244,7 +244,7 @@ therefore $$x+\frac{x^2}{100}=119$$; and subtracting $$x$$, we have
 $$\frac{x^2}{100}=-x+119$$; then multiplying by 100, we obtain
 $$x^2=-100x+11900$$. Whence, by the rule, we find
 
-$$x=-50 \pm \sqrt{2500+11900}=-50 \pm \sqrt{14400} = -50 \pm 120 = 70.$$
+$$x=-50 \pm \surd(2500+11900)=-50 \pm \surd 14400 = -50 \pm 120 = 70.$$
 
 The horse therefore cost 70 crowns, and since the horsedealer gained 70 per cent when he sold it again, the profit
 must have been 49 crowns. So that the horse must have
@@ -278,7 +278,7 @@ be $$2x^2+2x$$; lastly, if we divide by the difference 2, the
 quotient will be $$x^2+x$$, which is the sum of the progression;
 so that we have $$x^2+x = 110$$; therefore $$x^2=-x+110$$, and
 
-$$x=-\frac{1}{2} + \sqrt{\frac{1}{4}+100} = -\frac{1}{2}+\frac{21}{2} = 10.$$
+$$x=-\frac{1}{2} + \surd \left(\frac{1}{4}+100\right) = -\frac{1}{2}+\frac{21}{2} = 10.$$
 
 And hence the number of pieces of cloth is 10.
 
@@ -303,7 +303,7 @@ $$60x$$, we shall have $$x^2=-3x+180$$.
 
 The rule consequently gives
 
-$$x=-\frac{3}{2} + \sqrt{\frac{9}{4}+180}=-\frac{3}{2}+\frac{27}{2}=12.$$
+$$x=-\frac{3}{2} + \surd \left(\frac{9}{4}+180\right)=-\frac{3}{2}+\frac{27}{2}=12.$$
 
 He therefore bought for 180 crowns 12 pieces of cloth
 at 15 crowns the piece; and if he had got 3 pieces more,
@@ -348,7 +348,7 @@ $$x^2=19800-395x;$$
 
 then by the rule,
 
-$$x=-\frac{395}{2}+\sqrt{\frac{156025}{4}+\frac{79200}{4}}=-\frac{395}{2}+\frac{458}{2}
+$$x=-\frac{395}{2}+\surd \left(\frac{156025}{4}+\frac{79200}{4}\right)=-\frac{395}{2}+\frac{458}{2}
 =\frac{90}{2}=45.$$
 
 The first partner therefore contributed 45*l.* and the other
@@ -388,7 +388,7 @@ $$x^2=-160x+8000;$$
 
 whence we obtain
 
-$$x=-80 + \sqrt{6400+8000} = -80+120=40.$$
+$$x=-80 + \surd(6400+8000) = -80+120=40.$$
 
 So that the first girl had 40 eggs, the second had 60, and
 each received 10 pence.
@@ -416,7 +416,7 @@ $$x^2=20x-75;$$
 
 whence we have
 
-$$x=10 \pm \sqrt{100-75}=10 \pm 5.$$
+$$x=10 \pm \surd(100-75)=10 \pm 5.$$
 
 So that the question admits of two solutions: according
 to the first, the first merchant had 15 ells, and the second

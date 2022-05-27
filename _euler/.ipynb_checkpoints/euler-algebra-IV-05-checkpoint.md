@@ -138,7 +138,7 @@ We shall call such an equation a pure equation of the second
 degree, and the resolution of it is attended with no difficulty;
 for we have only to divide by $$a$$, which gives $$x^2 = \dfrac{c}{a}$$; and
 
-$$x=\sqrt{\dfrac{c}{a}};$$
+$$x=\surd \frac{c}{a};$$
 
 which means the equation is resolved.
 
@@ -151,7 +151,7 @@ $$x^2=\frac{9}{16}$$, gives $$x=\frac{3}{4}$$.
 
 The second case is, when $$\frac{c}{a}$$ is not a square, in which case
 we must therefore be contented with the sign $$\surd$$. If, for
-example, $$x^2 = 12$$, we have $$x =\sqrt{12}$$, the value of which
+example, $$x^2 = 12$$, we have $$x =\surd 12$$, the value of which
 may be determined by approximation, as we have already
 shown.
 

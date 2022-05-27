@@ -47,7 +47,7 @@ which is equivalent to ½.
 This shows, that the decimal fraction, whose value is ⅓,
 cannot, strictly, ever be discontinued, but that it goes on, to
 infinity, repeating always the number 3; which agrees
-with what has been already shown, *Article 523*; namely, that
+with what has been already shown, **Article 523**; namely, that
 the fractions
 
 $$\frac{3}{10}+\frac{3}{100}+\frac{3}{1000}+\frac{3}{10000}+\textrm{etc., to infinity} = \frac{1}{3}.$$
@@ -118,7 +118,7 @@ and consequently, the sum equals
 $$\dfrac{\dfrac{142857}{1000000}}{1-\dfrac{1}{1000000}}=\dfrac{142857}{1000000}=\dfrac{1}{7}.$$
 
 **531.** We may prove, in a manner still more easy, that
-the decimal fraction, which we have foiuid, is exactly equal to ⅐'
+the decimal fraction, which we have found, is exactly equal to ⅐;
 for, by substituting for its value the letter $$s$$, we have
 
 <a href="https://artofproblemsolving.com/texer/tvrzyttr">
@@ -129,7 +129,7 @@ And, dividing by 999999, we have $$s$$=¹⁴²⁸⁵⁷⁄₉₉₉₉₉₉=⅐
 Wherefore the decimal fraction, which was represented by
 $$s$$, is equal to ⅐.
 
-**532.** In tlie same manner, ²⁄₇
+**532.** In the same manner, ²⁄₇
 may be transformed into a
 decimal fraction, which will be 0.28571428,etc. and this
 enables us to find more easily the value of the decimal
