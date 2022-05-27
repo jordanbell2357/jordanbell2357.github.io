@@ -123,7 +123,7 @@ for, by substituting for its value the letter $$s$$, we have
 <img src="/assets/euler/tvrzyttr.png" alt="Decimals for ⅐" width="436" height="209" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
-And, dividing by 999999, we have $$s$$=¹⁴²⁸⁵⁷⁄₉₉₉₉₉₉=⅐.
+And, dividing by 999999, we have $$s$$ = ¹⁴²⁸⁵⁷⁄₉₉₉₉₉₉ = ⅐.
 Wherefore the decimal fraction, which was represented by
 $$s$$, is equal to ⅐.
 

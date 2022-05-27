@@ -21,7 +21,7 @@ required.
 
 For example, if the relation of the numbers 18 and 12 be required, 18 is the antecedent,
 12 is the consequent, and the
-ratio will be ¹⁸⁄₁₂=1½; whence we see that the antecedent
+ratio will be ¹⁸⁄₁₂ = 1½; whence we see that the antecedent
 contains the consequent once and a half.
 
 <span class="art">442</span> It is usual to represent geometrical relation by two

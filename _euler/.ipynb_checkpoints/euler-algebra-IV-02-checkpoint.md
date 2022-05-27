@@ -165,7 +165,7 @@ $$x=5$$.
 <span class="art">583</span> Sometimes, also, radical signs are found in equations
 of the first degree. For example: A number $$x$$, below 100,
 is required, such, that the square root of $$100-x$$ may be
-equal to 8; or $$\sqrt{100-x}=8$$. The square of both sides
+equal to 8; or $$\surd(100-x)=8$$. The square of both sides
 will give $$100-x=64$$, and adding $$x$$, we have $$100=64+x$$:
 whence we obtain $$x=100-64=36$$.
 

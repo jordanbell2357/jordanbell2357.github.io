@@ -308,7 +308,7 @@ $$
 
 which is the product required.
 
-<span class="art">280.** We may perform this calculation in a manner still
+<span class="art">280</span> We may perform this calculation in a manner still
 more concise, by first multiplying the factor I. by factor IV.
 and then factor II. by factor III.
 

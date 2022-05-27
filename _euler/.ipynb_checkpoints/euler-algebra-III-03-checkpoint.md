@@ -314,7 +314,7 @@ which are,
 
 3⅓, 4⁷⁄₉, 6²⁄₉, 7⅔.
 
-<span class="art">410.** It must be observed, however, that as the number
+<span class="art">410</span> It must be observed, however, that as the number
 of terms is necessarily an integer, if we had not obtained
 such a number for $$n$$, in the examples of the preceding
 article, the questions would have been absurd.

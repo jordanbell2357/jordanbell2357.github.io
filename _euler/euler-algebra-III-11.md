@@ -156,12 +156,12 @@ that product.
 examples, in which we substitute successively for $$n$$, the
 numbers 1, 2, 3, 4, etc.
 
-1=1;  
-1+2=3;  
-1+2+4=7;  
-1+2+4+8=15;  
-1+2+4+8+16=31;  
-1+2+4+8+16+32=63,
+1 = 1;  
+1 + 2 = 3;  
+1 + 2 + 4 = 7;  
+1 + 2 + 4 + 8 = 15;  
+1 + 2 + 4 + 8 + 16 = 31;  
+1 + 2 + 4 + 8 + 16 + 32 = 63,
 etc.
 
 <span class="art">511</span> On this subject, the following question is generally
@@ -180,9 +180,9 @@ and multiplying again by 2, the last term 2³¹=2147483648;
 doubling therefore this number, and subtracting unity from
 the product, the sum required becomes 4294967295 pence;
 which being reduced, we have 17895697*l.* 1*s.* 3*d.* for the
-price of the horse.
-    
-\[**1 pound (*l.*) = 20 shillings (*s.*).**\]
+price of the horse.[^1]
+
+[^1]: 1 pound (*l.*) = 20 shillings (*s.*).
 
 <span class="art">512</span> Let the ratio now be 3, and let it be required to find
 the sum of the geometrical progression 1, 3, 9, 27, 81, 243, 729, consisting of 7 terms.
@@ -269,7 +269,7 @@ first term, by the difference between 1 and the ratio.
 <span class="art">515</span> Let there be a geometrical progression of seven
 terms, of which the first is 3; and let the ratio be 2: we
 shall then have $$a = 3$$, $$b = 2$$, and $$n = 7$$; therefore the last
-term is 3·2⁶, or 3·64, =192; and the whole progression will be
+term is 3 · 2⁶, or 3 · 64, = 192; and the whole progression will be
 
 3, 6, 12, 24, 48, 96, 192.
 
@@ -285,9 +285,9 @@ the progression is
 4, 6, 9, ²⁷⁄₂, ⁸¹⁄₄, ²⁴³⁄₈.
 
 If we multiply the last term by the ratio, we shall have
-⁷²⁹⁄₁₆; and subtracting the first term =⁶⁴⁄₁₆,
+⁷²⁹⁄₁₆; and subtracting the first term = ⁶⁴⁄₁₆,
 the remainder is ⁶⁶⁵⁄₁₆; which, divided by $$b-1=\frac{1}{2}$$, gives
-⁶⁶⁵⁄₈=83⅛ for the sum of the series.
+⁶⁶⁵⁄₈ = 83⅛ for the sum of the series.
 
 <span class="art">517</span> When the exponent is less than 1, and, conscquently,
 when the terms of the progression continually diminish, the

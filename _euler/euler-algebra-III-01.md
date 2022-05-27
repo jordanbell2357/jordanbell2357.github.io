@@ -42,8 +42,8 @@ than resolving the question how much one is greater than
 the other: so that when the numbers are equal, the difference being nothing,
 if it be required how much one of the
 numbers is greater than the other, we answer, by nothing;
-for example, 6 being equal to 2·3, the difference between
-6 and 2·3 is 0.
+for example, 6 being equal to 2 · 3, the difference between
+6 and 2 · 3 is 0.
 
 <span class="art">382</span> But when the two numbers are not equal, as 5 and
 3, and it is required how much 5 is greater than 3, the

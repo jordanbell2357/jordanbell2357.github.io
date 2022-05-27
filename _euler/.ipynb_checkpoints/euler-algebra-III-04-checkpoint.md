@@ -155,7 +155,7 @@ the same progression continued to 1000, we should find it to
 be 500500; and the sum of this progression, continued to
 10000, would be 50005000.
 
-<span class="art">419.** Suppose a person buys a horse, on condition that for
+<span class="art">419</span> Suppose a person buys a horse, on condition that for
 the first nail he shall pay 5 pence, for the second 8 pence, for
 the third 11 pence, and so on, always increasing 3 pence more
 for each nail, the whole number of which is 32; required
@@ -255,7 +255,7 @@ exemplify as follows
 </tbody>
 </table>
 
-**423</span> Let the first term be 1, the difference 3, and the
+<span class="art">423</span> Let the first term be 1, the difference 3, and the
 number of terms $$n$$; we shall have the progression 1, 4, 7,
 10, etc. the last term of which will be $$1+(n-3)3=3n-2$$;
 wherefore the sum of the first and the last term is $$3n-1$$,

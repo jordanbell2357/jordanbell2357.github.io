@@ -44,7 +44,7 @@ square of $$a+1$$ by adding to that square $$2a+1$$; and it
 must be observed, that this $$2a+1$$ is the sum of the two
 roots $$a$$ and $$a+1$$.
 
-Thus, as the square of 10 is 100, that of 11 will be 100+21:
+Thus, as the square of 10 is 100, that of 11 will be 100 + 21:
 the square of 57 being 3249, that of 58 is 3249 + 115 = 3364; the square of
 59 = 3364 + 117 = 3481; the square of 60 = 3481 + 119 = 3600, etc.
 

@@ -53,7 +53,7 @@ which is
 consequently equivalent to $$\sqrt[5]{\vphantom{1}}a$$; and the same observation
 may be extended to all roots of a higher degree.
 
-<span class="art">200.** We may therefore entirely reject the radical signs at
+<span class="art">200</span> We may therefore entirely reject the radical signs at
 present made use of, and employ in their stead the fractional
 exponents which we have just explained: but as we have
 been long accustomed to those signs, and meet with them in

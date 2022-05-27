@@ -55,9 +55,9 @@ Twenty persons, men and women, dine at a tavern; the
 share of the reckoning for one man is 8 shillings, for one
 woman 7 shillings, and the whole reckoning amounts to
 7*l.* 5*s.* Required the number of men and women
-separately?
+separately?[^1]
 
-\[1 pound (*l.*) = 20 shillings (*s.*).\]
+[^1]: 1 pound (*l.*) = 20 shillings (*s.*).
 
 In order to resolve this question, let us suppose that the
 number of men is $$=x$$; and, considering this number as
