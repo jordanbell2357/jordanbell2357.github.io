@@ -263,7 +263,7 @@ wherefore the sum of the first and the last term is $$3n-1$$,
 and consequently the sum of this progression is equal to
 $$\frac{n(3n-1)}{2}=\frac{3n^2-n}{2}$$;
 and if we suppose $$n = 20$$, the sum
-will be 10·59=590.
+will be 10 · 59=590.
 
 **424.** Again, let the first term be 1, the difference $$d$$, and
 the number of terms $$n$$; then the last term will be
