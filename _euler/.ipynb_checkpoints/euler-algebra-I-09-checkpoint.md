@@ -73,7 +73,7 @@ their stead, ⁴⁵⁄₇₂ and ⁵⁶⁄₇₂; of which the sum is ¹⁰¹⁄
 difference ¹¹⁄₇₂.
 
 **98.** To this part of the subject belongs also the question,
-Of two proposed fractions which is the greater or the less ?
+Of two proposed fractions which is the greater or the less?
 for, to resolve this, we have only to reduce the two fractions
 to the same denominator. Let us take, for example, the two
 fractions ⅔ and ⁵⁄₇; when reduced to the same denominator,

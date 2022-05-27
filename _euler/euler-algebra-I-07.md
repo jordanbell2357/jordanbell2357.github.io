@@ -33,7 +33,7 @@ numbers by a stroke, or line.
 
 **70.** So, in general, when the number $$a$$ is to be divided by
 the number $$b$$, we represent the quotient by $$\frac{a}{b}$$, and call
-this form of expression a *fraction*. We cannot therefore
+this form of expression a **fraction**. We cannot therefore
 give a better idea of a fraction $$\frac{a}{b}$$, than by saying that it expresses
 the quotient resulting from the division of the upper
 number by the lower. We must remember also, that in all
