@@ -16,7 +16,7 @@ multiplying $$a$$ by itself, or by $$a$$, and that square $$aa$$ again
 by $$a$$.
 
 The cubes of the natural numbers, therefore, succeed
-each other in the followinsf order:
+each other in the following order:
 
 <table>
   <tr>

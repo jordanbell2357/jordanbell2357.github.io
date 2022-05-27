@@ -15,10 +15,10 @@ one knows that the result is 8; in the same manner 12+7
 make 19; 25+10 make 41; the sum of 25+41 is 66, etc.
 
 <span class="art">9</span> We also make use of the same sign + plus, to connect several numbers together
-for example, 7+5+9 signifies that to the number 7 we must add 5, and also 9,
+for example, 7 + 5 + 9 signifies that to the number 7 we must add 5, and also 9,
 which make 21. The reader will therefore understand what is meant by
 
-8+5+13+11+1+3+10,
+8 + 5 + 13 + 11 + 1 + 3 + 10,
 
 namely, the sum of all these numbers, which is 51.
 
@@ -37,14 +37,14 @@ the sum or value of such expressions.
 <span class="art">11</span> When it is required, on the contrary, to subtract one
 given number from another, this operation is denoted by the
 sign -, which signifies **minus**, and is placed before the
-number to be subtracted: thus, 8-5 signifies that the
+number to be subtracted: thus, 8 - 5 signifies that the
 number 5 is to be taken from the number 8; which being done, there remain 3.
-In like manner 12-7 is the same as 5; and 20-14 is the same as 6, etc.
+In like manner 12 - 7 is the same as 5; and 20 - 14 is the same as 6, etc.
 
 <span class="art">12</span> Sometimes also we may have several numbers to
 subtract from a single one ; as, for instance,
 
-50-1-3-5-7-9.
+50 - 1 - 3 - 5 - 7 - 9.
 
 This signifies, first, take 1 from 50, and there
 remain 49; take 3 from that remainder, and there will remain 46;
@@ -70,15 +70,15 @@ and arbitrary, provided the proper sign of each be preserved.
 We might with equal propriety have arranged the expression
 in the preceding article thus;
 
-12+2-5-3-1,
+12 + 2 - 5 - 3 - 1,
 
 or
 
-2-1-3-5+12,
+2 - 1 - 3 - 5 + 12,
 
 or
 
-2+12-3-1-5,
+2 + 12 -3 -1 -5,
 
 or in still different orders; where it must be observed,
 that in the arrangement first proposed, the sign + is supposed to be placed
@@ -110,7 +110,7 @@ numbers, using, or understanding the sign +; whereas his
 debts are represented by negative numbers, or by using the
 sign -. Thus, when it is said of any one that he has 100
 crowns, but owes 50, this means that his real possession
-amounts to 100-50; or, which is the same thing,
+amounts to 100 - 50; or, which is the same thing,
 +100-50, that is to say, 50.
 
 <span class="art">18</span> Since negative numbers may be considered as debts,
@@ -162,10 +162,10 @@ such expressions as
 
 +1-1, +2-2, +3-3, +4-4, etc.
 
-are equal to 0, or nothing. And that +2-5 is equal to -3:
+are equal to 0, or nothing. And that +2 - 5 is equal to -3:
 for if a person has 2 crowns, and owes 5, he has not only
 nothing, but still owes 3 crowns. In the same manner,
-7-12 is equal to -5, and 25-40 is equal to -15.
+7 - 12 is equal to -5, and 25-40 is equal to -15.
 
 <span class="art">22</span> The same observations hold true, when, to make the
 expression more general, letters are used instead of numbers;

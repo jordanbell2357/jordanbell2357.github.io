@@ -64,7 +64,7 @@ as, for example, by √12; for the square of √12 being 12, its cube
 will be 12√12, consequently still irrational, and therefore it cannot be equal to 43.
 
 <span class="art">164</span> If the proposed number be a real cube, our expressions become rational.
-Thus, ∛l is equal to 1 ; ∛8 is
+Thus, ∛l is equal to 1; ∛8 is
 equal to 2; ∛27 is equal to 3; and, generally, $$\sqrt[3]{\vphantom{1}}aaa$$ is equal
 to $$a$$.
 
