@@ -7,12 +7,12 @@ title: Euler, "Elements of Algebra", Section I, Chapter 12. "Of Square Roots, an
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 12. "Of Square Roots, and of Irrational Numbers resulting from them."
 
-**123.** What we have said in the preceding chapter amounts
+<span class="art">123</span> What we have said in the preceding chapter amounts
 to this ; that the square root of a given number is that number whose square is equal to the given number; and that
 we may put before those roots either the positive, or the
 negative sign.
 
-**124.** So that when a square number is given, provided
+<span class="art">124</span> So that when a square number is given, provided
 we retain in our memory a sufficient number of square numbers, it is easy to find its root.
 If 196, for example, be the
 given number, we know that its square root is 14.
@@ -28,7 +28,7 @@ reduce it to a single fraction, which, in this case, will be ⁴⁹⁄₄;
 and from this we immediately perceive that ⁷⁄₂, or 3½, must
 be the square root of 12¼.
 
-**125.** But when the given number is not a square, as 12,
+<span class="art">125</span> But when the given number is not a square, as 12,
 for example, it is not possible to extract its square root ; or
 to find a number, which, multiplied by itself, will give the
 product 12. We know, however, that the square root of 12
@@ -41,7 +41,7 @@ for the square of 3⁷⁄₁₅, or of ⁵²⁄₁₅, is ²⁷⁰⁴⁄₂₂�
 fraction is still greater than the root required, though but very
 little so, as the difference of the two squarcs is only ⁴⁄₂₂₅.
 
-**126.** We may suppose that as 3½ and 3⁷⁄₁₅
+<span class="art">126</span> We may suppose that as 3½ and 3⁷⁄₁₅
 are numbers greater than the root of 12, it might be possible to add to 3
 a fraction a little less than ⁷⁄₁₅, and precisely such, that the
 square of the sum would be equal to 12.
@@ -62,7 +62,7 @@ Here the square of 3⁶⁄₁₃ is ²⁰²⁵⁄₁₆₉; and 12 reduced to
 the same denominator is ²⁰²⁸⁄₁₆₉; so that 3⁶⁄₁₃ is still too small,
 though only by ³⁄₁₆₉, whilst 3⁷⁄₁₅ has been found too great.
 
-**127.** It is evident, therefore, that whatever fraction is
+<span class="art">127</span> It is evident, therefore, that whatever fraction is
 joined to 3, the square of that sum must always contain a
 fraction, and can never be exactly equal to the integer 12.
 Thus, although we know that the square root of 12 is greater
@@ -74,7 +74,7 @@ square root of 12 is absolutely and in itself indeterminate:
 it only follows from what has been said, that this root, though
 it necessarily has a determinate magnitude, cannot be expressed by fractions.
 
-**128.** There is therefore a sort of numbers, which cannot be
+<span class="art">128</span> There is therefore a sort of numbers, which cannot be
 assigned by fractions, but which are nevertheless determinate
 quantities; as, for instance, the square root of 12: and we
 call this new species of numbers, **irrational numbers**. They
@@ -84,7 +84,7 @@ square, the square root of 2, or the number which, multiplied
 by itself, would produce 2, is an irrational quantity. These
 numbers are also called surd quantities, or incommensurables.
 
-**129.** These irrational quantities, though they cannot be
+<span class="art">129</span> These irrational quantities, though they cannot be
 expressed by fractions, are nevertheless magnitudes of which
 we may form an accurate idea; since, however concealed
 the square root of 12, for example, may appear, we are not
@@ -93,7 +93,7 @@ by itself, would exactly produce 12; and this property is
 sufficient to give us an idea of the number, because it is in
 our power to approximate towards its value continually.
 
-**130.** As we are therefore sufficiently acquainted with
+<span class="art">130</span> As we are therefore sufficiently acquainted with
 the nature of irrational numbers, under our present consideration,
 a particular sign has been agreed on to express
 the square roots of all numbers that are not perfect squares;
@@ -107,7 +107,7 @@ square root of a number, which is not a square, we need
 only make use of the mark √ by placing it before the
 number.
 
-**131.** The explanation which we have given of irrational
+<span class="art">131</span> The explanation which we have given of irrational
 numbers will readily enable us to apply to them the known
 methods of calculation. For knowing that the square root
 of 2, multiplied by itself, must produce 2; we know also,
@@ -117,7 +117,7 @@ that, in the same manner, the multiplication of
 by √⅔ makes ⅔; and, in general, that $$\surd a$$ multiplied by $$\surd a$$
 produces $$a$$.
 
-**132.** But when it is required to multiply $$\surd a$$ by $$\surd b$$,
+<span class="art">132</span> But when it is required to multiply $$\surd a$$ by $$\surd b$$,
 the product is $$\surd ab$$; for we have already shown, that if a square
 has two or more factors, its root must be composed of the
 roots of those factors; we therefore find the square root of
@@ -127,7 +127,7 @@ It is evident from this, that if $$b$$ were equal to $$a$$, we should
 have $$\surd aa$$ for the product of $$\surd a$$ by $$\surd b$$. But $$\surd aa$$ is
 evidently $$a$$, since $$aa$$ is the square of $$a$$.
 
-**133.** In division, if it were required, for example, to
+<span class="art">133</span> In division, if it were required, for example, to
 divide $$\surd a$$, by $$\surd b$$, we obtain $$\surd \frac{a}{b}$$;
 and, in this instance,
 the irrationality may vanish in the quotient. Thus, having
@@ -135,14 +135,14 @@ to divide √18 by √8, the quotient is √¹⁸⁄₈,
 which is reduced to √⁹⁄₄, and consequently to ³⁄₂, because ⁹⁄₄
 is the square of ³⁄₂.
 
-**134.** When the number before which we have placed the
+<span class="art">134</span> When the number before which we have placed the
 radical sign √ is itself a square, its root is expressed in the
 usual way; thus, √4 is the same as 2; √9 is the same as
 3; √36 the same as 6; and √12¼, the same as ⁷⁄₂, or 3½.
 In these instances, the irrationality is only apparent, and
 vanishes of course.
 
-**135.** It is easy also to multiply irrational numbers by ordinary numbers;
+<span class="art">135</span> It is easy also to multiply irrational numbers by ordinary numbers;
 thus, for example, 2 multiplied by √5
 makes 2√5; and 3 times √2 makes 3√2. In the second
 example, however, as 3 is equal to √9, we may also express
@@ -162,7 +162,7 @@ After this, the following reductions will be easily understood:
 √32, or √2 · 16, is equal to 4√2.  
 √75, or √3 · 25, is equal to 5√3, and so on.
 
-**136.** Division is founded on the same principles; as
+<span class="art">136</span> Division is founded on the same principles; as
 $$\surd a$$ divided by $$\surd b$$ gives $$\frac{\surd a}{\surd b}$$, or
 $$\surd \frac{a}{b}$$. In the same manner,
 
@@ -179,13 +179,13 @@ or $$\surd 3$$,
 $$\frac{12}{\surd 6}$$ is equal to $$\frac{\surd 144}{\surd 6}$$, or $$\surd \frac{144}{6}$$,
 or $$\surd 24$$, or $$\surd 6\cdot 4$$, or $$2\surd 6$$.
 
-**137.** There is nothing in particular to be observed in addition and subtraction,
+<span class="art">137</span> There is nothing in particular to be observed in addition and subtraction,
 because we only connect the numbers
 by the signs + and -: for example, √2 added to √3 is written
 √2 + √3; and √3 subtracted from √5 is written
 √5 - √3.
 
-**138.** Wo may observe lastly, that in order to distinguish
+<span class="art">138</span> Wo may observe lastly, that in order to distinguish
 the irrational numbers, we call all other numbers, both integral and fractional,
 **rational numbers**; so that, whenever
 we speak of rational numbers, we understand integers, or,

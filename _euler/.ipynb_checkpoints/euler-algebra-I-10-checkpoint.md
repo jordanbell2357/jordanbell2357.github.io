@@ -7,8 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 10. "Of the Multiplicati
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 10. "Of the Multiplication and Division of Fractions."
 
-
-**101.** The rule for the multiplication of a fraction by an
+<span class="art">101</span> The rule for the multiplication of a fraction by an
 integer, or whole number, is to multiply the numerator
 only by the given number, and not to change the denominator: thus,
 
@@ -30,7 +29,7 @@ the numerator, and divide the denominator by the integer,
 we find immediately ⁸⁄₃, or 2⅔, for the given product; and,
 in the same manner, ¹³⁄₂₄ multiphed by 6 gives ¹³⁄₄, or 3¼.
 
-**102.** In general, therefore, the product of the multiplication of a fraction
+<span class="art">102</span> In general, therefore, the product of the multiplication of a fraction
 $$\frac{a}{b}$$ by $$c$$ is $$\frac{ac}{b}$$;
 and here it may be remarked, when the integer is exactly equal to the denominator,
 that the product must be equal to the numerator.
@@ -51,7 +50,7 @@ been demonstrated that the quotient multiplied by the divisor
 will give the dividend, it is evident that $$\frac{a}{b}$$ multiplied by $$b$$
 must produce $$a$$.
 
-**103.** Having thus shown how a fraction is to be multiplied by an integer;
+<span class="art">103</span> Having thus shown how a fraction is to be multiplied by an integer;
 let us now consider also how a fraction
 is to be divided by an integer. This inquiry is necessary,
 before we proceed to the multiplication of fractions by fractions. It is evident,
@@ -67,7 +66,7 @@ Thus
 
 ¹²⁄₂₅ divided by 4 gives ³⁄₂₅; etc.
 
-**104.** This rule may be easily practised, provided the
+<span class="art">104</span> This rule may be easily practised, provided the
 numerator be divisible by the number proposed; but very
 often it is not: it must therefore be observed, that a fraction
 may be transformed into an infinite number of other expressions,
@@ -82,7 +81,7 @@ In general, if it be proposed to divide the fraction $$\frac{a}{b}$$
 by $$c$$, we change it into $$\frac{ac}{bc}$$, and then dividing the numerator
 $$ac$$ by $$c$$, write $$\frac{a}{bc}$$ for the quotient sought.
 
-**105.** When therefore a fraction $$\frac{a}{b}$$ is to be divided by an
+<span class="art">105</span> When therefore a fraction $$\frac{a}{b}$$ is to be divided by an
 integer $$c$$, we have only to multiply the denominator by that
 number, and leave the numerator as it is. Thus ⅝ divided
 by 3 gives ⁵⁄₂₄, and ⁹⁄₁₆ divided by 5 gives ⁹⁄₈₀.
@@ -94,7 +93,7 @@ to our last rule, ⁹⁄₄₈; but by the first rule, which is applicable here,
 we obtain ³⁄₁₆, an expression equivalent to ⁹⁄₄₈, but
 more simple.
 
-**106.** We shall now be able to understand how one fraction $$\frac{a}{b}$$
+<span class="art">106</span> We shall now be able to understand how one fraction $$\frac{a}{b}$$
 may be multiplied by another fraction $$\frac{c}{d}$$. For this purpose,
 we have only to consider that $$\frac{c}{d}$$ means that $$c$$ is divided by $$d$$;
 and on this principle we shall first multiply the
@@ -109,7 +108,7 @@ Hence the following rule for multiplying fractions. Multiply the numerators toge
 
 ¾ by ⁵⁄₁₂ produces ¹⁵⁄₄₈, or ⁵⁄₁₆; etc.
 
-**107.** It now remains to show how one fraction may be
+<span class="art">107</span> It now remains to show how one fraction may be
 divided by another. Here we remark first, that if the two
 fractions have the same number for a denominator, the
 division takes place only with respect to the numerators;
@@ -119,7 +118,7 @@ the same manner, in order to divide ⁸⁄₁₂ by ⁹⁄₁₂, we have only
 to divide 8 by 9, which gives ⁸⁄₉. We shall also have ⁶⁄₂₀
 in ¹⁸⁄₂₀, 3 times; ⁷⁄₁₀₀ in ⁴⁹⁄₁₀₀, 7 times; ⁷⁄₂₅ in ⁶⁄₂₅, ⁶⁄₇ times; etc.
 
-**108.** But when the fractions have not equal denominators,
+<span class="art">108</span> But when the fractions have not equal denominators,
 we must have recourse to the method already mentioned for
 reducing them to a common denominator. Let there be,
 for example, the fraction $$\frac{a}{b}$$ to be divided by the fraction
@@ -134,12 +133,12 @@ the dividend by the numerator of the divisor;
 then the first product will be the numerator of the quotient,
 and the second will be its denominator.
 
-**109.** Applying this rule to the division of
+<span class="art">109</span> Applying this rule to the division of
 ⅝ by ⅔, we shall have the quotient ¹⁵⁄₁₆;
 also the division of ¾ by ½ will give ⁶⁄₄, or ³⁄₂, or 1½;
 and ²⁵⁄₄₈ by ⅚ will give ¹⁵⁰⁄₂₄₀, or ⅝.
 
-**110.** This rule for division is often expressed in a manner
+<span class="art">110</span> This rule for division is often expressed in a manner
 that is more easily remembered, as follows: Invert the
 terms of the divisor, so that the denominator may be in the
 place of the numerator, and the latter be written under the
@@ -155,7 +154,7 @@ We see then, in general, that to divide by the fraction ½ is
 the same as to multiply by ²⁄₁, or 2; and that dividing by ⅓
 amounts to multiplying by ³⁄₁, or by 3, etc.
 
-**111.**  The number 100 divided by ½ will give 200; and
+<span class="art">111</span>  The number 100 divided by ½ will give 200; and
 1000 divided by ⅓ will give 3000. Farther, if it were required to divide 1 by
 ¹⁄₁₀₀₀, the quotient would be 1000;
 and dividing 1 by ¹⁄₁₀₀₀₀₀, the quotient is 100000. This
@@ -164,7 +163,7 @@ enables us to conceive that, when any number is divided by
 the division of 1 by the small fraction ¹⁄₁₀₀₀₀₀₀₀₀₀ gives for
 the quotient the very great number 1000000000.
 
-**112.** Every number, when divided by itself, producing
+<span class="art">112</span> Every number, when divided by itself, producing
 unity, it is evident that a fraction divided by itself must also
 give 1 for the quotient; and the same follows from our rule:
 for, in order to divide ¾ by ¾, we must multiply ¾ by ⁴⁄₃, in
@@ -173,14 +172,14 @@ divide $$\frac{a}{b}$$ by $$\frac{a}{b}$$, we multiply $$\frac{a}{b}$$
 by $$\frac{b}{a}$$;
 where the product $$\frac{ab}{ab}$$ is also equal to 1.
 
-**113.** We have still to explain an expression which is
+<span class="art">113</span> We have still to explain an expression which is
 frequently used. It may be asked, for example, what is the
 half of ¾? This means, that we must multiply ¾ by ½. So
 likewise, if the value of ⅔ of ⅝ were required, we should
 multiply ⅝ by ⅔, which produces ¹⁰⁄₂₄; and ¾ of ⁹⁄₁₆ is the
 same as ⁹⁄₁₆ multiplied by ¾, which produces ²⁷⁄₆₄.
 
-**114.** Lastly, we must here observe, with respect to the
+<span class="art">114</span> Lastly, we must here observe, with respect to the
 signs + and -, the same rules that we before laid down for
 integers. Thus +½ multiplied by -⅓, makes -⅙; and
 -⅔ multiplied by -⅘, gives +⁸⁄₁₅. Farther -⅝ divided

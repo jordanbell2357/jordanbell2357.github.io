@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 8. "Of the Properties of
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 8. "Of the Properties of Fractions."
 
-**85.** We have already seen, that each of the fractions,
+<span class="art">85</span> We have already seen, that each of the fractions,
 
 ²⁄₂, ³⁄₃, ⁴⁄₄, ⁵⁄₅, ⁶⁄₆, ⁷⁄₇, ⁸⁄₈, etc.
 
@@ -24,7 +24,7 @@ each, divided by its denominator, gives 2. So all the fractions
 
 are equal to one another, since 3 is their common value.
 
-**86.** We may likewise represent the value of any fraction
+<span class="art">86</span> We may likewise represent the value of any fraction
 in an infinite variety of ways. For if we multiply both the
 numerator and the denominator of a fraction by the same
 number, which may be assumed at pleasure, this fraction will
@@ -50,7 +50,7 @@ $$
 \frac{7a}{7b},\textrm{etc.}
 $$
 
-**87.** To be convinced of this, we have only to write for the
+<span class="art">87</span> To be convinced of this, we have only to write for the
 value of the fraction $$\frac{a}{b}$$ a certain letter $$c$$, representing by
 this letter $$c$$ the quotient of the division of $$a$$ by $$b$$; and to
 recollect that the multiplication of the quotient $$c$$ by the
@@ -66,7 +66,7 @@ be proved; for $$c$$ having been assumed as the value of the
 fraction $$\frac{a}{b}$$, it is evident that this fraction is equal to the
 fraction $$\frac{ma}{mb}$$, whatever be the value of $$m$$.
 
-**88.** We have seen that every fraction may be represented
+<span class="art">88</span> We have seen that every fraction may be represented
 in an infinite number of forms, each of which contains the
 same value; and it is evident that of all these forms, that
 which is composed of the least numbers, will be most easily
@@ -81,7 +81,7 @@ fraction, such as ⁸⁄₁₂, which is not expressed by the least
 possible numbers, may be reduced to its simplest form, or to
 *its least terms*; that is to say, in our present example, to ⅔.
 
-**89.** It will be easy to resolve this problem, if we consider
+<span class="art">89</span> It will be easy to resolve this problem, if we consider
 that a fraction still preserves its value, when we multiply
 both its terms, or its numerator and denominator, by the
 same number. For from this it also follows, that if we
@@ -92,7 +92,7 @@ for if we divide both the numerator $$ma$$ and
 the denominator $$mb$$ by the number $$m$$, we obtain the fraction
 $$\frac{a}{b}$$, which, as was before proved, is equal to $$\frac{ma}{mb}$$.
 
-**90.** In order therefore to reduce a given fraction to its
+<span class="art">90</span> In order therefore to reduce a given fraction to its
 least terms, it is required to find a number, by which both
 the numerator and denominator may be divided. Such a
 number is called a *common divisor*; and as long as we can
@@ -102,7 +102,7 @@ form; but, on the contrary, when we see that, except unity,
 no other common divisor can be found, this shows that the
 fraction is already in its simplest form.
 
-**91.** To make this more clear, let us consider the fraction
+<span class="art">91</span> To make this more clear, let us consider the fraction
 ⁴⁸⁄₁₂₀. We see immediately that both the terms are divisible
 by 2, and that there results the fraction ²⁴⁄₆₀; which may also
 be divided by 2, and reduced to ¹²⁄₃₀; and as this likewise
@@ -113,7 +113,7 @@ equal to the fraction proposed, and gives the simplest expression to which it ca
 for 2 and 5 have no common divisor but 1, which cannot diminish these numbers
 any farther.
 
-**92.** This property of fractions preserving an invariable
+<span class="art">92</span> This property of fractions preserving an invariable
 value, whether we divide or multiply the numerator and
 denominator by the same number, is of the greatest importance,
 and is the principal foundation of the doctrine of
@@ -123,7 +123,7 @@ by means of this property, reduced them to other forms;
 that is to say, to expressions whose denominators are equal.
 Of this we shall treat in the following chapter.
 
-**93.** We will conclude the present, however, by remarking,
+<span class="art">93</span> We will conclude the present, however, by remarking,
 that all whole numbers may also be represented by fractions.
 For example, 6 is the same as ⁶⁄₁, because 6 divided by 1
 makes 6; we may also, in the same manner, express the

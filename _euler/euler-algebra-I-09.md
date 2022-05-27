@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 9. "Of the Addition and 
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 9. "Of the Addition and Subtraction of Fractions."
 
-**94.** When fractions have equal denominators, there is no difficulty
+<span class="art">94</span> When fractions have equal denominators, there is no difficulty
 in adding and subtracting them; for ²⁄₇ + ³⁄₇ is equal
 to ⁵⁄₇, and ⁴⁄₇ - ²⁄₇ is equal to ²⁄₇. In this case,
 therefore, either for addition or subtraction, we alter
@@ -23,7 +23,7 @@ under the line, thus;
 also ⅓ + ⅔ is equal to ³⁄₃, or 1, that is to say, a whole;
 and ²⁄₄ - ¾ + ¼ is equal to ⁰⁄₄, that is to say, nothing, or 0.
 
-**95.** But when fractions have not equal denominators, we
+<span class="art">95</span> But when fractions have not equal denominators, we
 can always change them into other fractions that have the
 same denominator. For example, when it is proposed to
 add together the fractions ½ and ⅓, we must consider that ½
@@ -38,10 +38,10 @@ Here, since ¾ is the same as ⁶⁄₈, this value may be substituted
 for ¾, and we may then say ⁶⁄₈ + ⅝ makes ¹¹⁄₈, or 1⅜.
 
 Suppose farther, that the sum of ⅓ and ⅓ were required, I
-say that it is ⁷⁄₁₂; for ⅓=⁴⁄₁₂, and ¼=³⁄₁₂: therefore
-⁴⁄₁₂ + ³⁄₁₂=⁷⁄₁₂.
+say that it is ⁷⁄₁₂; for ⅓ = ⁴⁄₁₂, and ¼ = ³⁄₁₂: therefore
+⁴⁄₁₂ + ³⁄₁₂ = ⁷⁄₁₂.
 
-**96.** We may have a greater number of fractions to reduce
+<span class="art">96</span> We may have a greater number of fractions to reduce
 to a common denominator; for example, ½, ⅔, ¾, ⅘, ⅚. In
 this case, the whole depends on finding a number that shall
 be divisible by all the denominators of those fractions. In
@@ -56,7 +56,7 @@ and under the sum place the common denominator 60; that
 is to say, we shall have ²¹³⁄₆₀, or 3 wholes, and the fractional
 remainder ¹¹⁄₂₀.
 
-**97.** The whole of this operation consists,
+<span class="art">97</span> The whole of this operation consists,
 as we before stated, in changing fractions, whose denominators are unequal,
 into others whose denominators are equal. In order, therefore, to perform it generally,
 let $$\frac{a}{b}$$ and $$\frac{c}{d}$$ be the fractions proposed. First,
@@ -72,7 +72,7 @@ difference be asked, we say that it is $$\frac{ad-bc}{bd}$$. If the fractions
 their stead, ⁴⁵⁄₇₂ and ⁵⁶⁄₇₂; of which the sum is ¹⁰¹⁄₇₂ and the
 difference ¹¹⁄₇₂.
 
-**98.** To this part of the subject belongs also the question,
+<span class="art">98</span> To this part of the subject belongs also the question,
 Of two proposed fractions which is the greater or the less?
 for, to resolve this, we have only to reduce the two fractions
 to the same denominator. Let us take, for example, the two
@@ -84,7 +84,7 @@ Again, if the fractions ⅗ and ⅝ be proposed, we shall have
 to substitute for them ²⁴⁄₄₀ and ³⁵⁄₄₀; whence we may conclude
 that ⅝ exceeds ⅗, but only by ¹⁄₄₀.
 
-**99.** When it is required to subtract a fraction from an
+<span class="art">99</span> When it is required to subtract a fraction from an
 integer, it is sufficient to change one of the units of that
 integer into a fraction, which has the same denominator as
 that which is to be subtracted ; then in the rest of the operation
@@ -97,7 +97,7 @@ If it were required to subtract ¾ from 2 we should write
 1 and ⁴⁄₄ instead of 2, and should then immediately see that
 after the subtraction there must remain 1¼.
 
-**100.** It happens also sometimes, that having added two
+<span class="art">100</span> It happens also sometimes, that having added two
 or more fractions together, we obtain more than an integer;
 that is to say, a numerator greater than the denominator:
 this is a case which has already occurred, and deserves
