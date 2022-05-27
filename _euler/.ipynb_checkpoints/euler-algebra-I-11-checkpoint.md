@@ -27,6 +27,8 @@ numbers; and for this purpose shall give the following small
 Table, on the first line of which several numbers, or roots,
 are ranged, and on the second their squares.
 
+<div style="overflow-x:auto;">
+
 <table>
   <tr>
     <td>Numbers</td>
@@ -61,6 +63,8 @@ are ranged, and on the second their squares.
     <td>169</td>
   </tr>
 </table>
+    
+</div>
 
 **117.** Here it will be readily perceived that the series of
 square numbers thus arranged has a singular property;

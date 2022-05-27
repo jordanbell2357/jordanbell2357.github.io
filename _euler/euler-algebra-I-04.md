@@ -72,7 +72,7 @@ etc.
 **43.** Hence, it is easy to find a method for analysing any
 number, or resolving it into its simple factors. Let there be
 proposed, for instance, the number 360; we shall represent
-it first by 2 · 180. Now 180 is equal to 2·90, and
+it first by 2 · 180. Now 180 is equal to 2 · 90, and
 
 90 is the same as 2 · 45,  
 45 is the same as 3 · 15,  
