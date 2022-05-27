@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 3. "Of the Multiplicatio
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 3. "Of the Multiplication of Simple Quantities."
 
-**23.** When there are two or more equal numbers to be
+<span class="art">23.</span> When there are two or more equal numbers to be
 added together, the expression of their sum may be abridged:
 for example,
 
@@ -26,7 +26,7 @@ $$3 \cdot a$$ signifies 3 times $$a$$
 
 $$4 \cdot a$$ signifies 4 times $$a$$, etc.
 
-**24.** If therefore a number expressed by a letter is to be
+<span class="art">24.</span> If therefore a number expressed by a letter is to be
 multiplied by any other number, we simply put that number
 before the letter, thus;
 
@@ -36,7 +36,7 @@ $$b$$ multiplied by 30 is expressed by $$30b$$, etc.
 
 It is evident, also, that $$c$$ taken once, or $$1c$$, is the same as $$c$$.
 
-**25.** Farther, it is extremely easy to multiply such products again by other numbers; for example:
+<span class="art">25.</span> Farther, it is extremely easy to multiply such products again by other numbers; for example:
 
 2 times $$3a$$, makes $$6a$$
 
@@ -47,14 +47,14 @@ It is evident, also, that $$c$$ taken once, or $$1c$$, is the same as $$c$$.
 and these products may be still multiplied by other numbers
 at pleasure.
 
-**26.** When the number by which we are to multiply is
+<span class="art">26.</span> When the number by which we are to multiply is
 also represented by a letter, we place it immediately before
 the other letter; thus, in multiplying $$b$$ by $$a$$, the product is
 written $$ab$$; and $$pq$$ will be the product of the multiplication
 of the number $$q$$ by $$p$$. Also, if we multiply this $$pq$$ again
 by $$a$$, we shall obtain $$apq$$.
 
-**27.** It may be farther remarked here, that the order in
+<span class="art">27.</span> It may be farther remarked here, that the order in
 which the letters are joined together is indifferent; thus $$ab$$
 is the same thing as $$ba$$; for $$b$$ multiplied by $$a$$ is the same
 as $$a$$ multiplied by $$b$$. To understand this, we have only to
@@ -62,7 +62,7 @@ substitute, for $$a$$ and $$b$$, known numbers, as 3 and 4; and
 the truth will be self-evident; for 3 times 4 is the same as
 4 times 3.
 
-**28.** It will not be difficult to perceive, that when we substitute numbers
+<span class="art">28.</span> It will not be difficult to perceive, that when we substitute numbers
 for letters joined together, in the manner we
 have described, they cannot be written in the same way by
 putting them one after the other. For if we were to write
@@ -74,7 +74,7 @@ So, 1 ⋅ 2 is equal to 2; and 1 ⋅ 2 ⋅ 3 makes 6. In like manner,
 1 ⋅ 2 ⋅ 3 ⋅ 4 ⋅ 5 ⋅ 6 makes 1344;
 and 1 ⋅ 2 ⋅ 3 ⋅ 4 ⋅ 5 ⋅ 6 ⋅ 7 ⋅ 8 ⋅ 9 ⋅ 10 is equal to 3628800, etc.
 
-**29.** In the same manner we may discover the value of an
+<span class="art">29.</span> In the same manner we may discover the value of an
 expression of this form, $$5 \cdot 7 \cdot 8 \cdot abcd$$.
 It shows that 5 must
 be multiplied by 7, and that this product is to be again
@@ -84,18 +84,18 @@ by $$d$$. It may be observed, also, that instead of 5 ⋅ 7 ⋅8, we
 may write its value, 280; for we obtain this number when
 we multiply the product of 5 by 7, or 35, by 8.
 
-**30.** The results which arise from the multiplication of
+<span class="art">30.</span> The results which arise from the multiplication of
 two or more numbers are called **products**; and the numbers,
 or individual letters, are call **factors**.
 
-**31.** Hitherto we have considered only positive numbers,
+<span class="art">31.</span> Hitherto we have considered only positive numbers,
 and there can be no doubt, but that the products which we
 have seen arise are positive also: namely $$+a$$ by $$+b$$ must
 necessarily give $$+ab$$. But we must separately examine
 what the multiplication of $$+a$$ by $$-b$$, and of $$-a$$ by $$-b$$,
 will produce.
 
-**32.** Let us begin by multiplying $$-a$$ by 3 or +3. Now,
+<span class="art">32.</span> Let us begin by multiplying $$-a$$ by 3 or +3. Now,
 since $$-a$$ may be considered as a debt, it is evident that if
 we take that debt three times, it must thus become three
 times greater, and consequently the required product is
@@ -106,7 +106,7 @@ the product will be negative; and it may be laid down
 as a rule, that + by + makes + or plus; and that, on the
 contrary, + by - , or - by +, gives -, or minus.
 
-**33.** It remams to resolve the case in which - is multiplied by -;
+<span class="art">33.</span> It remams to resolve the case in which - is multiplied by -;
 or, for example, $$-a$$ by $$-b$$. It is evident,
 at first sight, with regard to the letters, that the product will
 be $$ab$$; but it is doubtful whether the sign +, or the sign -,
@@ -117,7 +117,7 @@ cannot produce the same result as $$-a$$ by $$+b$$ but must produce a contrary r
 that is to say, $$+ab$$; consequently, we have the following rule: - multiplied by - produces
 +, that is, the same as + multiplied by +.
 
-**34.** The rules which we have explained are expressed
+<span class="art">34.</span> The rules which we have explained are expressed
 more briefly as follows:
 
 Like signs, multiplied together, give +; unlike or contrary signs give -.
@@ -126,7 +126,7 @@ the following numbers; $$+a$$, $$-b$$, $$-c$$, $$+d$$; we have first
 $$+a$$ multiplied by $$-b$$, which makes $$-ab$$; this by $$-c$$,
 gives $$+abc$$; and this by $$+d$$, gives $$+abcd$$.
 
-**35.** The difficulties with respect to the signs being removed,
+<span class="art">35.</span> The difficulties with respect to the signs being removed,
 we have only to show how to multiply numbers that
 are themselves products. If we were, for instance,
 to multiply the number $$ab$$ by the number $$cd$$,
@@ -137,7 +137,7 @@ should only multiply 36 first by 3, and then the product
 108 by 4, in order to have the whole product of the multiplication of 12 by 36,
 which is consequently 432.
 
-**36.** But if we wished to multiply $$5ab$$ by $$3cd$$, we might
+<span class="art">36.</span> But if we wished to multiply $$5ab$$ by $$3cd$$, we might
 write $$3cd 5ab$$. However, as in the present instance the
 order of the numbers to be multiplied is indifferent, it will
 be better, as is also the custom, to place the common numbers before the letters,
