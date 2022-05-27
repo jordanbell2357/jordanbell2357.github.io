@@ -15,7 +15,7 @@ one knows that the result is 8; in the same manner 12+7
 make 19; 25+10 make 41; the sum of 25+41 is 66, etc.
 
 **9.** We also make use of the same sign + plus, to connect several numbers together
-for example, 7 + 5 + 9 signifies that to the number 7 we must add 5, and also 9,
+for example, 7+5+9 signifies that to the number 7 we must add 5, and also 9,
 which make 21. The reader will therefore understand what is meant by
 
 8+5+13+11+1+3+10,
@@ -43,7 +43,10 @@ In like manner 12-7 is the same as 5; and 20-14 is the same as 6, etc.
 
 **12.** Sometimes also we may have several numbers to
 subtract from a single one ; as, for instance,
-50-1-3-5-7-9. This signifies, first, take 1 from 50, and there
+
+50-1-3-5-7-9.
+
+This signifies, first, take 1 from 50, and there
 remain 49; take 3 from that remainder, and there will remain 46;
 take away 5, and 41 remain; take away 7, and 34 remain; lastly,
 from that take 9, and there remain 25:
@@ -108,7 +111,7 @@ debts are represented by negative numbers, or by using the
 sign -. Thus, when it is said of any one that he has 100
 crowns, but owes 50, this means that his real possession
 amounts to 100-50; or, which is the same thing,
-+100 - 50, that is to say, 50.
++100-50, that is to say, 50.
 
 **18.** Since negative numbers may be considered as debts,
 because positive numbers represent real possessions, we
@@ -157,7 +160,7 @@ about which we have been speaking. I
 shall, however, content myself with remarking here, that all
 such expressions as
 
-+1-1, +2-2, +3-3, + 4-4, etc.
++1-1, +2-2, +3-3, +4-4, etc.
 
 are equal to 0, or nothing. And that +2-5 is equal to -3:
 for if a person has 2 crowns, and owes 5, he has not only

@@ -27,6 +27,8 @@ numbers; and for this purpose shall give the following small
 Table, on the first line of which several numbers, or roots,
 are ranged, and on the second their squares.
 
+<div style="overflow-x:auto;">
+
 <table>
   <tr>
     <td>Numbers</td>
@@ -61,6 +63,8 @@ are ranged, and on the second their squares.
     <td>169</td>
   </tr>
 </table>
+    
+</div>
 
 **117.** Here it will be readily perceived that the series of
 square numbers thus arranged has a singular property;
@@ -136,14 +140,14 @@ factors, we multiply their squares together; and reciprocally,
 if a square be composed of two, or more factors, of which
 each is a square, we have only to multiply together the
 roots of those squares, to obtain the complete root of the
-square proposed. Thus, 2304 is equal to 4·16·36,
-the square root of which is 2·4·6, or 48; and 48 is
+square proposed. Thus, 2304 is equal to 4 · 16 · 36,
+the square root of which is 2 · 4 · 6, or 48; and 48 is
 found to be the true square root of 2304, because 48 · 48
 gives 2304.
 
 **132.** Let us now consider what must be observed on this
 subject with regard to the signs + and -. First, it is
-evident that if the root have the sign +, tliat is to say, if it
+evident that if the root have the sign +, that is to say, if it
 be a positive number, its square must necessarily be a positive
 number also, because + multiplied by + makes +: hence
 the square of $$+a$$ will be $$+aa$$: but if the root be a negative

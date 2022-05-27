@@ -98,7 +98,7 @@ our power to approximate towards its value continually.
 the nature of irrational numbers, under our present consideration,
 a particular sign has been agreed on to express
 the square roots of all numbers that are not perfect squares;
-which sign is written thus √, and is read *square root*.
+which sign is written thus √, and is read **square root**.
 Thus, √12 represents the square root of 12, or the number
 which, multiplied by itself, produces 12; and √2 represents
 the square root of 2; √3 the square root of 3; √⅔ that of
@@ -156,12 +156,12 @@ we may take the root of that square, and put it before the
 sign, as we should do in writing $$b \surd a$$ instead of $$\surd bba$$.
 After this, the following reductions will be easily understood:
 
-√8, or √2·4, is equal to 2√2.  
-√12, or √3·4, is equal to 2√3.  
-√18, or √2·9, is equal to 3√2.  
-√24, or √6·4, is equal to 2√6.  
-√32, or √2·16, is equal to 4√2.  
-√75, or √3·25, is equal to 5√3, and so on.
+√8, or √2 · 4, is equal to 2√2.  
+√12, or √3 · 4, is equal to 2√3.  
+√18, or √2 · 9, is equal to 3√2.  
+√24, or √6 · 4, is equal to 2√6.  
+√32, or √2 · 16, is equal to 4√2.  
+√75, or √3 · 25, is equal to 5√3, and so on.
 
 **136.** Division is founded on the same principles; as
 $$\surd a$$ divided by $$\surd b$$ gives $$\frac{\surd a}{\surd b}$$, or

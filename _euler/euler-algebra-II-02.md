@@ -101,10 +101,10 @@ $$
 
 $$
 \begin{array}{rr}
-\sqrt{a}&+2\sqrt{b}\\
-\sqrt{a}&-3\sqrt{b}\\
+\surd a&+2\surd b\\
+\surd a&-3\surd b\\
 \hline
-&+5\sqrt{b}
+&+5\surd b
 \end{array}
 $$
 

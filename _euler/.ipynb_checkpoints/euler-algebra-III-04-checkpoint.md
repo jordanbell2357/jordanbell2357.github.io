@@ -165,7 +165,7 @@ In this question it is required to find the sum of an
 arithmetical progression, the first term of which is 5, the
 difference 3, and the number of terms 32; we must therefore begin
 by determining the last term; which is found by
-the rule, in *Articles 406* and *411*, to be 5+(31·3)=98;
+the rule, in **Articles 406** and **411**, to be 5 + (31·3) = 98;
 after which the sum required is easily found to be ^
 $$\frac{103\cdot 32}{2}=103\cdot 16$$; whence we conclude that the horse costs 1648
 pence, or 6*l.* 17*s.* 4*d.*
@@ -263,7 +263,7 @@ wherefore the sum of the first and the last term is $$3n-1$$,
 and consequently the sum of this progression is equal to
 $$\frac{n(3n-1)}{2}=\frac{3n^2-n}{2}$$;
 and if we suppose $$n = 20$$, the sum
-will be 10·59=590.
+will be 10 · 59=590.
 
 **424.** Again, let the first term be 1, the difference $$d$$, and
 the number of terms $$n$$; then the last term will be

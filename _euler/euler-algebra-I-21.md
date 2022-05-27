@@ -43,8 +43,8 @@ denominator a power of $$a$$. We see also, that in all those cases the logarithm
 but it must be observed, that if $$b$$ were a fraction, it would be the logarithm of an
 irrational number: if we suppose, for example, $$b=\frac{1}{2}$$, it follows,
 that $$\frac{1}{2}$$ is the logarithm of $$a^{1/2}$$,
-or of $$\sqrt{a}$$; consequently we have also $$\log \sqrt{a}= \frac{1}{2}$$; and we shall find,
-in the same manner, that $$\log \sqrt[3]{a} = \frac{1}{3}$$, $$\log \sqrt[4]{a} = \frac{1}{4}$$, etc.
+or of $$\surd a$$; consequently we have also $$\log \surd a= \frac{1}{2}$$; and we shall find,
+in the same manner, that $$\log \sqrt[3]{\vphantom{a}} a = \frac{1}{3}$$, $$\log \sqrt[4]{\vphantom{a}} a = \frac{1}{4}$$, etc.
 
 **224.** But if it be required to find the logarithm of another
 number $$c$$, it will be readily perceived, that it can neither

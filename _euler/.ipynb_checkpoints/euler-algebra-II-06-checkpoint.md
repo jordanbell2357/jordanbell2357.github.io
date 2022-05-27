@@ -28,25 +28,25 @@ $$
 **307.** So that when the root consists of two terms added
 together, as $$a + b$$, the square comprehends, 1st, the squares
 of each term, namely, $$a^2$$ and $$b^2$$; and 2nd, twice the product of the
-two terms, namely, 2ab: so that the sum $$a^2+2ab+b^2$$
+two terms, namely, $$2ab$$: so that the sum $$a^2+2ab+b^2$$
 is the square of $$a+b$$. Let, for example, $$a=10$$,
 and $$b=3$$; that is to say, let it be required to find the square
-of 10 + 3, or 13, and we shall have 100 + 60 + 9, or 169.
+of 10+3, or 13, and we shall have 100+60+9, or 169.
 
 **308.** We may easily find, by means of this formula, the
 squares of numbers, however great, if we divide them into
 two parts. Thus, for example, the square of 57, if we consider that this number
-is the same as 50 + 7, will be found = 2500 + 700 + 49 = 3249.
+is the same as 50+7, will be found =2500+700+49=3249.
 
 **309.** Hence it is evident, that the square of $$a + 1$$ will be
-$$a^2+2a+1$$: and since the square of a is a^2, we find the
+$$a^2+2a+1$$: and since the square of $$a$$ is $$a^2$$, we find the
 square of $$a+1$$ by adding to that square $$2a+1$$; and it
 must be observed, that this $$2a+1$$ is the sum of the two
 roots $$a$$ and $$a+1$$.
 
-Thus, as the square of 10 is 100, that of 11 will be 100 + 21:
-the square of 57 being 3249, that of 58 is 3249 + 115 = 3364; the square of
-59 = 3364 + 117 = 3481; the square of 60 = 3481 + 119 = 3600, etc.
+Thus, as the square of 10 is 100, that of 11 will be 100+21:
+the square of 57 being 3249, that of 58 is 3249+115=3364; the square of
+59=3364+117=3481; the square of 60=3481+119=3600, etc.
 
 **310.** The square of a compound quantity, as $$a + b$$, is
 represented in this manner $$(a+b)^2$$. We have therefore
@@ -70,7 +70,7 @@ $$a^2 - 2ab + b^2$$, which contains also the squares of the two terms, but in
 such a manner, that we must take from their sum twice the
 product of those two terms. Let, for example, $$a = 10$$, and
 $$b = - 1$$, then the square of 9 will be found equal to
-100 - 20 + 1 = 81.
+100-20+1=81.
 
 **312.** Since we have the equation
 
@@ -112,7 +112,7 @@ multiplied two by two.
 
 
 **315.** To illustrate this by an example, let us divide the
-number 256 into three parts, 200 + 50 + 6; its square
+number 256 into three parts, 200+50+6; its square
 will then be composed of the following parts:
 
 $$
@@ -135,7 +135,7 @@ careful what signs we prefix to the double products. Thus,
 $$(a-b-c)^2 = a^2 + b^2 + c^2 - 2ab - 2ac + 2bc;$$
 
 and if
-we represent the number 256 by 300 - 40 - 4, we shall
+we represent the number 256 by 300-40-4, we shall
 have,
 
 $$
@@ -170,8 +170,6 @@ $$
 $$
 
 the square of 256 as before.
-
-
 
 #### References
 

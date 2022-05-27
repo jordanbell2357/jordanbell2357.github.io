@@ -84,8 +84,8 @@ performed in the manner we have described.
 
 When we have, for example, 24 to divide by 7, it is at
 first sight obvious, that the number 7 is not a factor of 24;
-for the product of 7·3 is only 21, and consequently too
-small; and 7·4 makes 28, which is greater than 24. We
+for the product of 7 · 3 is only 21, and consequently too
+small; and 7 · 4 makes 28, which is greater than 24. We
 discover, however, from this, that the quotient must be
 greater than 3, and less than 4. In order therefore to
 determine it exactly, we employ another species of numbers,
@@ -101,14 +101,14 @@ produces only 21, which is 3 less than 24. We may also
 consider the following examples in the same manner:
 
 <a href="https://artofproblemsolving.com/texer/abfbqtug">
-<img src="/assets/euler/abfbqtug.png" alt="Long division" width="60" height="114" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/abfbqtug.png" alt="Long division" width="46" height="88" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 that is to say, the divisor is 6, the dividend 84, the quotient 5, and the
 remainder 4.
 
 <a href="https://artofproblemsolving.com/texer/rhppibyu">
-<img src="/assets/euler/rhppibyu.png" alt="Long division" width="60" height="114" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/rhppibyu.png" alt="Long division" width="46" height="87" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 here the divisor is 9, the dividend
@@ -128,10 +128,10 @@ the divisor 9 by the quotient 4, and to the product 36 add
 the remainder 5, we obtain the dividend 41.
 
 **55.** Lastly, it is necessary to remark here, with regard to
-the signs + plus and - minus, that if we divide $$+ab$$ by
+the signs + *plus* and - *minus*, that if we divide $$+ab$$ by
 $$+a$$, the quotient will be $$+b$$, which is evident. But if we
 divide $$+ab$$ by $$-a$$, the quotient will be $$-b$$; because
-$$-a \cdot -b$$ gives $$+ab$$. If the dividend is $$-ab$$, and is to be
+$$-a$$ multiplied with $$-b$$ gives $$+ab$$. If the dividend is $$-ab$$, and is to be
 divided by the divisor $$+a$$, the quotient will be $$-b$$; because
 it is $$-b$$ which, multiplied by $$+a$$, makes $$-ab$$. Lastly,
 if we have to divide the dividend $$-ab$$ by the divisor $$-a$$,
