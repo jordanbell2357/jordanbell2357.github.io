@@ -42,15 +42,14 @@ fraction is still greater than the root required, though but very
 little so, as the difference of the two squarcs is only ⁴⁄₂₂₅.
 
 **126.** We may suppose that as 3½ and 3⁷⁄₁₅
-are numbers
-greater than the root of 12, it might be possible to add to 3
+are numbers greater than the root of 12, it might be possible to add to 3
 a fraction a little less than ⁷⁄₁₅, and precisely such, that the
 square of the sum would be equal to 12.
 
 Let us therefore try with 3³⁄₇, since ³⁄₇ is a little less than ⁷⁄₁₅.
 Now 3³⁄₇ is equal to ²⁴⁄₇, the square of which is ⁵⁷⁶⁄₄₉, and consequently less
-by ¹²⁄₄₉ than 12, which may be expressed by
-⁵⁸⁸⁄₄₉. It is, therefore, proved that 3³⁄₇ is less, and that 3⁷⁄₁₅
+by ¹²⁄₄₉ than 12, which may be expressed by ⁵⁸⁸⁄₄₉. It is, therefore,
+proved that 3³⁄₇ is less, and that 3⁷⁄₁₅
 is greater than the root required. Let us then try a number a little greater than
 3³⁄₇, but yet less than 3⁷⁄₁₅; for example, 3⁵⁄₁₁; this number, which is equal to
 ³⁸⁄₁₁, has for its
@@ -183,16 +182,14 @@ or $$\surd 24$$, or $$\surd 6\cdot 4$$, or $$2\surd 6$$.
 **137.** There is nothing in particular to be observed in addition and subtraction,
 because we only connect the numbers
 by the signs + and -: for example, √2 added to √3 is written
-√2+√3; and √3 subtracted from √5 is written
-√5-√3.
+√2 + √3; and √3 subtracted from √5 is written
+√5 - √3.
 
 **138.** Wo may observe lastly, that in order to distinguish
 the irrational numbers, we call all other numbers, both integral and fractional,
 **rational numbers**; so that, whenever
 we speak of rational numbers, we understand integers, or,
 fractions.
-
-
 
 #### References
 

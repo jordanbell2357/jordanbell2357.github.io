@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 5. "Of the Division of S
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 5. "Of the Division of Simple Quantities."
 
-**45.** When a number is to be separated into two, three, or
+<span class="art">45</span> When a number is to be separated into two, three, or
 more equal parts, it is done by means of division, which
 enables us to determine the magnitude of one of those parts.
 Wlien we wish, for example, to separate the number 12 into
@@ -25,7 +25,7 @@ the above example,
 3 is the divisor, and  
 4 is the quotient.
 
-**46.** It follows from this, that if we divide a number by 2,
+<span class="art">46</span> It follows from this, that if we divide a number by 2,
 or into two equal parts, one of those parts, or the quotient,
 taken twice, makes exactly the number proposed; and, in
 the same manner, if we have a number to divide by 3, the
@@ -33,7 +33,7 @@ quotient taken thrice must give the same number again. In
 general, the multiplication of the quotient by the divisor
 must always reproduce the dividend.
 
-**47.** It is for this reason that division is said to be a rule,
+<span class="art">47</span> It is for this reason that division is said to be a rule,
 which teaches us to find a number or quotient, which, being multiplied by
 the divisor, will exactly produce the dividend.
 For example, if 35 is to be divided by 5, we seek for a
@@ -42,7 +42,7 @@ this number is 7, since 5 times 7 is 35. The manner of
 expression employed in this reasoning, is; 5 in 35 goes 7
 times; and 5 times 7 makes 35.
 
-**48.** The dividend therefore may be considered as a product,
+<span class="art">48</span> The dividend therefore may be considered as a product,
 of which one of the factors is the divisor, and the other the
 quotient. Thus, supposing we have 63 to divide by 7, we
 endeavour to find such a product, that, taking 7 for one of
@@ -50,7 +50,7 @@ its factors, the other factor multiplied by this may exactly
 give 63. Now 7 · 9 is such a product, and consequently
 it is the quotient obtained when we divide 63 by 7.
 
-**49.** In general, if we have to divide a number $$ab$$ by $$a$$, it
+<span class="art">49</span> In general, if we have to divide a number $$ab$$ by $$a$$, it
 is evident that the quotient will be $$b$$; for $$a$$ multiplied by $$b$$
 gives the dividend $$ab$$. It is clear also, that if we had to
 divide ab by b, the quotient would be a. And in all examples of division
@@ -59,7 +59,7 @@ dividend by the quotient, we shall again obtain the divisor;
 for as 24 divided by 4 gives 6, so 24 divided by 6 will
 give 4.
 
-**50.** As the whole operation consists in representing the
+<span class="art">50</span> As the whole operation consists in representing the
 dividend by two factors, of which one may be equal to the
 divisor, and the other to the quotient, the following examples
 will be easily understood. I say first that the dividend $$abc$$,
@@ -71,13 +71,13 @@ multiplied by $$4n$$, makes $$12mn$$. But if this same number
 $$12mn$$ had been divided by 12, we should have obtained the
 quotient $$mn$$.
 
-**51.** Since every number a may be expressed by $$1a$$, or $$a$$,
+<span class="art">51</span> Since every number a may be expressed by $$1a$$, or $$a$$,
 it is evident that if we had to divide $$a$$, or $$1a$$, by 1, the
 quotient would be the same number $$a$$. And, on the contrary, if the
 same number $$a$$, or $$1a$$, is to be divided by $$a$$,
 the quotient will be 1.
 
-**52.** It often happens that we cannot represent the dividend as the product
+<span class="art">52</span> It often happens that we cannot represent the dividend as the product
 of two factors, of which one is equal
 to the divisor; hence, in this case, the division cannot be
 performed in the manner we have described.
@@ -92,7 +92,7 @@ determine it exactly, we employ another species of numbers,
 which are called fractions, and which we shall consider in
 one of the following chapters.
 
-**53.** Before we proceed to the use of fractions, it is usual
+<span class="art">53</span> Before we proceed to the use of fractions, it is usual
 to be satisfied with the whole number which approaches
 nearest to the true quotient, but at the same time paying
 attention to the remamder which is left; thus we say, 7 in
@@ -117,7 +117,7 @@ here the divisor is 9, the dividend
 The following rule is to be observed in examples where
 there is a remainder.
 
-**54.** Multiply the divisor by the quotient, and to the product add the remainder,
+<span class="art">54</span> Multiply the divisor by the quotient, and to the product add the remainder,
 and the result will be the dividend.
 This is the method of proving the division, and of discovering whether the calculation
 is right or not. Thus, in
@@ -127,7 +127,7 @@ or the dividend. And in the last example, if we multiply
 the divisor 9 by the quotient 4, and to the product 36 add
 the remainder 5, we obtain the dividend 41.
 
-**55.** Lastly, it is necessary to remark here, with regard to
+<span class="art">55</span> Lastly, it is necessary to remark here, with regard to
 the signs + *plus* and - *minus*, that if we divide $$+ab$$ by
 $$+a$$, the quotient will be $$+b$$, which is evident. But if we
 divide $$+ab$$ by $$-a$$, the quotient will be $$-b$$; because
@@ -138,7 +138,7 @@ if we have to divide the dividend $$-ab$$ by the divisor $$-a$$,
 the quotient will be $$+b$$; for the dividend $$-ab$$ is the
 product of $$-a$$ by $$+b$$.
 
-**56.** With regard, therefore, to the signs + and -, division requires
+<span class="art">56</span> With regard, therefore, to the signs + and -, division requires
 the same rules to be observed that we have
 seen take place in multiplication; namely
 
@@ -148,7 +148,7 @@ seen take place in multiplication; namely
 or, in few words, like signs give *plus*, and unlike signs give
 *minus*.
 
-**57.** Thus, when we divide $$18pq$$ by $$-3p$$, the quotient is
+<span class="art">57</span> Thus, when we divide $$18pq$$ by $$-3p$$, the quotient is
 $$-6q$$. Farther;
 
 $$-30xy$$ divided by $$+6y$$ gives $$-5x$$, and  

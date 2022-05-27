@@ -18,7 +18,7 @@ number has been multiplied by itself. For example, a square is called the second
 power, because a certain given number has been multiplied by itself; and if a number has
 been multiplied twice by itself we call the product the third power, which
 therefore means the same as the cube; also if we multiply a number three times by itself we
-obtain its fourth power, or what is commonly called the *biquadrate*: and thus it will be easy
+obtain its fourth power, or what is commonly called the **biquadrate**: and thus it will be easy
 to understand what is meant by the fifth, sixth, seventh, etc. power of a number.
 I shall only add, that powers, after the fourth degree, cease to have any other but
 these numeral distinctions.

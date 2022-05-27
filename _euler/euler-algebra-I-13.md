@@ -85,8 +85,7 @@ and √-16 is equal to 4√-1.
 **148.** Moreover, as $$\surd a$$ multiplied by $$\surd b$$ makes $$\surd ab$$, we
 shall have √6 for the value of √-2 multiplied by √-;
 and √4, or 2, for the value of the product of √-1 by
-√-4. Thus we see that two imaginary numbers, multiplied together, produce a real, or possible one.
-But, on the contrary, a possible number, multiplied by an
+√-4. Thus we see that two imaginary numbers, multiplied together, produce a real, or possible one. But, on the contrary, a possible number, multiplied by an
 impossible number, gives always an imaginary product:
 thus, √-3 by √+5, gives √-15.
 
@@ -125,7 +124,7 @@ In order to illustrate what we have said by an example,
 suppose it were proposed to divide the number 12 into two
 such parts, that the product of those parts may be 40. If
 we resolve this question by the ordinary rules, we find for
-the parts sought 6+√-4 and 6-√-4;
+the parts sought 6 + √-4 and 6 - √-4;
 but these numbers being imaginary, we conclude, that it is impossible to
 resolve the question.
 
@@ -133,7 +132,6 @@ The difference will be easily perceived, if we suppose the
 question had been to divide 12 into two parts which multiplied together
 would produce 35; for it is evident that
 those parts must be 7 and 5.
-
 
 #### References
 

@@ -222,9 +222,24 @@ but it is indifferent what order is observed in those multiplications.
 Let it be proposed, for example, to find the value, or
 product, of the four following factors, namely
 
-| I. | II. | III. | IV. |
-|---|---|---|---|
-| $$(a+b)$$ | $$(a^2+ab+b^2)$$ | $$(c-d)$$ | $$(a^2-ab+b^2)$$ |
+<table>
+<thead>
+  <tr>
+    <th>I.</th>
+    <th>II.</th>
+    <th>III.</th>
+    <th>IV.</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>\((a+b)\)</td>
+    <td>\((a^2+ab+b^2)\)</td>
+    <td>\((c-d)\)</td>
+    <td>\((a^2-ab+b^2)\)</td>
+  </tr>
+</tbody>
+</table>
 
 First, multiply factors I. and II.:
 

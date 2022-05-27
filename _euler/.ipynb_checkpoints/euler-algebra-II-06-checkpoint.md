@@ -76,7 +76,7 @@ $$b = - 1$$, then the square of 9 will be found equal to
 
 $$(a-b)^2=a^2-2ab+b^2,$$
 
-we shall have $$(a - 1)^2 =. a^2 - 2a + 1$$. The square of
+we shall have $$(a - 1)^2 = a^2 - 2a + 1$$. The square of
 $$a - 1$$ is found, therefore, by subtracting from $$a^2$$ the sum of
 the two roots $$a$$ and $$a - 1$$, namely, $$2a - 1$$. Thus, for
 example, if $$a = 50$$, we have $$a^2 = 2500$$, and $$2a - 1 = 99$$;

@@ -14,9 +14,9 @@ each with its proper sign: and, with regard to abbreviations,
 we must remark that, instead of $$\surd a+\surd a$$, for
 example, we may write $$2\surd a$$; and that $$\surd a-\surd a= 0$$,
 because these two terms destroy one another. Thus, the
-quantities 3+√2 and 1+√2, added together, make
-4+2√2, or 4+√8; the sum of 5+√3 and 4-√3,
-is 9; and that of 2√3+3√2 and √3-√2, is 3√3+2√2.
+quantities 3 + √2 and 1 + √2, added together, make
+4 + 2√2, or 4 + √8; the sum of 5 + √3 and 4 - √3,
+is 9; and that of 2√3 + 3√2 and √3 - √2, is 3√3 + 2√2.
 
 **327.** Subtraction also is very easy, since we have only to
 add the proposed numbers, after having changed their signs;
@@ -31,10 +31,10 @@ $$
 \end{array}
 $$
 
-**328.** In multiplication, we must recollect that $$\surd a$$ multiplied by $$\surd a$$ produces $$a$$;
-and that if the numbers which follow the sign $$\surd$$ are different, as $$a$$ and $$b$$, we have $$\surd ab$$ for
-the product of $$\surd a$$ multiplied by $$\surd b$$. After this, it will be
-easy to calculate the following examples:
+**328.** In multiplication, we must recollect that $$\surd a$$
+multiplied by $$\surd a$$ produces $$a$$;
+and that if the numbers which follow the sign $$\surd$$ are different, as $$a$$ and $$b$$, we have $$\surd ab$$ for the product of $$\surd a$$ multiplied by $$\surd b$$.
+After this, it will be easy to calculate the following examples:
 
 $$
 \begin{array}{rrrr}
@@ -61,9 +61,8 @@ $$
 $$
 
 **329.** What we have said applies also to imaginary quantities; we shall only observe farther,
-that $$\surd -a$$ multiplied
-by $$\surd -a$$ produces $$-a$$. If it were required to find the
-cube of -1+√-3, we should take the square of that
+that $$\surd -a$$ multiplied by $$\surd -a$$ produces $$-a$$. If it were required to find the
+cube of -1 + √-3, we should take the square of that
 number, and then multiply that square by the same number;
 as in the following operation:
 
@@ -97,9 +96,9 @@ then changed into another expression having a rational denominator;
 for if the denominator be $$a+\surd b$$, for example,
 and we multiply both this and the numerator by $$a-\surd b$$, the
 new denominator will be $$a^2 - b$$, in which there is no radical
-sign. Let it be proposed, for example, to divide 3+2√2
-by 1+√2: we shall first have $$\frac{3+2\surd 2}{1+\surd 2}$$; then multiplying
-the two terms of the fraction by 1-√2, we shall have for
+sign. Let it be proposed, for example, to divide 3 + 2√2
+by 1 + √2: we shall first have $$\frac{3+2\surd 2}{1+\surd 2}$$; then multiplying
+the two terms of the fraction by 1 - √2, we shall have for
 the numerator:
 
 $$
@@ -130,9 +129,9 @@ $$
 
 Our new fraction therefore is $$\frac{-\surd 2-1}{-1}$$; and if we again
 multiply the two terms by -1, we shall have for the numerator
-√2+1, and for the denominator +1. Now, it is easy to show that √2+1
-is equal to the proposed fraction $$\frac{3+2\surd 2}{1+\surd 2}$$; for √2+1
-being multiplied by the divisor 1+√2, thus,
+√2 + 1, and for the denominator +1. Now, it is easy to show that √2 + 1
+is equal to the proposed fraction $$\frac{3+2\surd 2}{1+\surd 2}$$; for √2 + 1
+being multiplied by the divisor 1 + √2, thus,
 
 $$
 \begin{array}{rrrr}
@@ -146,9 +145,9 @@ $$
 \end{array}
 $$
 
-Another example. Let 8-5√2 be divided by 3-2√2.
+Another example. Let 8 - 5√2 be divided by 3 - 2√2.
 This, in the first instance, is $$\frac{8-5\surd 2}{3-2\surd 2}$$;
-and multiplying the two terms of this fraction by 3+2√2,
+and multiplying the two terms of this fraction by 3 + 2√2,
 we have for the numerator,
 
 $$
@@ -177,7 +176,7 @@ $$
 \end{array}
 $$
 
-Consequently, the quotient will be 4+√2.
+Consequently, the quotient will be 4 + √2.
 The truth of this may be proved, as before, by multiplication; thus,
 
 $$
@@ -195,7 +194,7 @@ $$
 **331.** In the same manner, we may transform irrational
 fractions into others, that have rational denominators. If
 we have, for example, the fraction $$\frac{1}{5-2\surd 6}$$,
-and multiply its numerator and denominator by 5+2√6,
+and multiply its numerator and denominator by 5 + 2√6,
 we transform it into this, $$\frac{5+2\surd 6}{1}=5+2\surd 6$$;
 in like manner, the fraction $$\frac{2}{-1+\surd -3}$$ assumes this
 form, $$\frac{2+2\surd -3}{-4}=\frac{1+\surd -3}{-2}$$;
@@ -208,10 +207,10 @@ $$\frac{\surd 6 + \surd 5}{\surd 6 - \surd 5}=\frac{11+2\surd 30}{1}
 may, in the same manner, make the radical signs in it vanish
 one by one. Thus, if the fraction $$\frac{1}{\surd 10 - \surd 2 - \surd 3}$$
 be proposed, we first multiply these two terms by
-√10+√2+√3, and obtain the fraction
+√10 + √2 + √3, and obtain the fraction
 $$\frac{\surd 10 + \surd 2 + \surd 3}{5-2\surd 6}$$; then
-multiplying its numerator and denominator by 5+2√6,
-we have 5√10+11√2+9√3+2√60.
+multiplying its numerator and denominator by 5 + 2√6,
+we have 5√10 + 11√2 + 9√3 + 2√60.
 
 
 #### References
