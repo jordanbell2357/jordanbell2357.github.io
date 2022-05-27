@@ -98,7 +98,7 @@ our power to approximate towards its value continually.
 the nature of irrational numbers, under our present consideration,
 a particular sign has been agreed on to express
 the square roots of all numbers that are not perfect squares;
-which sign is written thus √, and is read *square root*.
+which sign is written thus √, and is read **square root**.
 Thus, √12 represents the square root of 12, or the number
 which, multiplied by itself, produces 12; and √2 represents
 the square root of 2; √3 the square root of 3; √⅔ that of
