@@ -79,7 +79,7 @@ times -1, or $$\surd -a$$, is equal to $$\surd a$$ multiplied by $$\surd -1$$;
 but $$\surd a$$ is a possible or real number, consequently the whole
 impossibility of an imaginary quantity may be always reduced to √-1; for this reason,
 √-4 is equal to √4 multiplied by √-1, or equal to 2√-1, because √4 is equal to
-2; likewise √-9 is reduced to √9 · \/ √-1, or 3√-1;
+2; likewise √-9 is reduced to √9 · √-1, or 3√-1;
 and √-16 is equal to 4√-1.
 
 **148.** Moreover, as $$\surd a$$ multiplied by $$\surd b$$ makes $$\surd ab$$, we
