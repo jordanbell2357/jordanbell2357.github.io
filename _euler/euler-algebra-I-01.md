@@ -7,14 +7,14 @@ title: Euler, "Elements of Algebra", Section I, Chapter 1. "Mathematics in gener
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 1. "Mathematics in general."
 
-<span class="art">1.</span> Whatever is capable of increase or diminution,
+<span class="art">1</span> Whatever is capable of increase or diminution,
 is called magnitude, or quantity.
 
 A sum of money therefore
 is a quantity, since we may increase it or diminish it.
 It is the same with a weight, and other things of this nature.
 
-<span class="art">2.</span> From this definition, it is evident, that the
+<span class="art">2</span> From this definition, it is evident, that the
 different kinds of magnitude must be so various, as to render it
 difficult to enumerate them: and
 this is the origin of the different branches
@@ -22,7 +22,7 @@ of the Mathematics, each being employed on a particular kind of magnitude.
 Mathematics, in general, is the science of quantity;
 or, the science which investigates the means of measuring quantity.
 
-<span class="art">3.</span> Now, we cannot measure or determine any quantity,
+<span class="art">3</span> Now, we cannot measure or determine any quantity,
 except by considering some other quantity of the same kind
 as known, and pointing
 out their mutual
@@ -43,7 +43,7 @@ If we wished to measure
 any length or extension, we should make use of some known
 length, such as a foot.
 
-<span class="art">4.</span> So that the determination,
+<span class="art">4</span> So that the determination,
 or the measure of magnitude of all kinds, is reduced to this:
 fix at pleasure upon any one known magnitude of the same
 species with that which is to be determined, and consider
@@ -63,14 +63,14 @@ of the different possible methods of calculation.
 This fundamental part of mathematics is called Analysis,
 or Algebra.
 
-<span class="art">6.</span> In Algebra
+<span class="art">6</span> In Algebra
 then we consider
 only numbers, which represent quantities, without regarding the
 different kinds of quantity.
 These are the subjects of other branches of
 the mathematics.
 
-<span class="art">7.</span> Arithmetic
+<span class="art">7</span> Arithmetic
 treats of numbers in particular, and is the
 science of numbers properly so called; but
 this science extends only to certain methods of calculation which occur in
