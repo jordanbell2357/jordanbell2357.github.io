@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section II, Chapter 4. "Of the Division of 
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 4. "Of the Division of Compound Quantities."
 
-**282.** When we wish simply to represent division, we
+<span class="art">282</span> When we wish simply to represent division, we
 make use of the usual mark of fractions; which is, to write
 the denominator under the numerator, separating them by a
 line; or to enclose each quantity between parentheses, placing
@@ -19,7 +19,7 @@ $$(a + b):(c + d)$$
 according to the latter, where each expression is read $$a + b$$
 divided by $$c + d$$.
 
-**283.** When it is required to divide a compound quantity by a simple one,
+<span class="art">283</span> When it is required to divide a compound quantity by a simple one,
 we divide each term separately, as in the following examples:
 
 $$
@@ -32,7 +32,7 @@ $$
 \end{gather}
 $$
 
-**284.** If it should happen that a term of the dividend is
+<span class="art">284</span> If it should happen that a term of the dividend is
 not divisible by the divisor, the quotient is represented
 by a fraction, as in the division of $$a+b$$ by $$a$$, which
 gives $$1+\frac{b}{a}$$.
@@ -47,12 +47,12 @@ times $$b$$ is equal to $$\frac{b}{2}$$; and, in the same manner,
 $$\frac{b}{3}$$ is the same as $$\frac{1}{3}b$$, and $$\frac{2b}{3}$$
 the same as $$\frac{2}{3}b$$, etc.
 
-**285.** But when the divisor is itself a compound quantity, division becomes more difficult.
+<span class="art">285</span> But when the divisor is itself a compound quantity, division becomes more difficult.
 This frequently occurs where we least expect it; and when it cannot be performed, we must
 content ourselves with representing the quotient by a fraction, in the manner that we have
 already described. At present, we will begin by considering some cases in which actual division takes place.
 
-**286.** Suppose, for example, it were required to divide $$ac-bc$$ by $$a-b$$,
+<span class="art">286</span> Suppose, for example, it were required to divide $$ac-bc$$ by $$a-b$$,
 the quotient must here be such as, when multiplied by the divisor $$a - b$$,
 will produce the dividend $$ac - bc$$. Now, it is evident, that this quotient must include $$c$$,
 since without it we could not obtain $$ac$$; in order therefore to
@@ -69,7 +69,7 @@ $$
 \end{gather}
 $$
 
-**287.** We cannot fail, in this way, to find a part of the
+<span class="art">287</span> We cannot fail, in this way, to find a part of the
 quotient; if, therefore, what we have found, when multiplied by the divisor, does not exhaust the dividend, we
 have only to divide the remainder again by the divisor, in
 order to obtain a second part of the quotient; and to continue the same method, until we have found the whole.
@@ -90,7 +90,7 @@ ought to produce the dividend $$a^2+3ab+2b^2$$. See the operation.[^1]
 <img src="/assets/euler/jptasmxh.png" alt="Polynomial long division" width="272" height="172" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
-**288.** This operation will be considerably facilitated by
+<span class="art">288</span> This operation will be considerably facilitated by
 choosing one of the terms of the divisor, which contains the
 highest power, to be written first, and then, in arranging the
 terms of the dividend, begin with the highest powers of that

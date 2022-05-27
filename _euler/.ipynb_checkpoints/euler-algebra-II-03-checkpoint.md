@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section II, Chapter 3. "Of the Multiplicati
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 3. "Of the Multiplication of Simple Quantities."
 
-**270.** When it is only required to represent multiplication, we put each of the
+<span class="art">270</span> When it is only required to represent multiplication, we put each of the
 expressions, that are to be multiplied together, within two parentheses, and join them to each other, sometimes without any sign, and sometimes placing a point ⋅ between them.
 
 Thus, for example, to represent the product of the two expressions $$a-b+c$$
@@ -22,7 +22,7 @@ $$(a - b + c) (d-e+f)$$
 which method of expressing products is much used, because it immediately exhibits
 the factors of which they are composed.
 
-**271.** But in order to show how multiplication is actually performed, we may remark,
+<span class="art">271</span> But in order to show how multiplication is actually performed, we may remark,
 in the first place, that to multiply, for example, a quantity, such
 as $$a-b+c$$, by 2, each term of it is separately multiplied by that number;
 so that the product is
@@ -35,7 +35,7 @@ to multiply the same expression, we should obtain
 
 $$ad-bd+cd.$$
 
-**272.** In the last article, we have supposed $$d$$ to be a
+<span class="art">272</span> In the last article, we have supposed $$d$$ to be a
 positive number; but if the multiplier were a negative number,
 as $$-e$$, the rule formerly given must be applied; namely,
 that unlike signs multiplied together produce -, and like
@@ -43,7 +43,7 @@ signs +. Thus we should have
 
 $$-ae+be-ce.$$
 
-**273.** Now, in order to show how a quantity, $$A$$, is to be
+<span class="art">273</span> Now, in order to show how a quantity, $$A$$, is to be
 multiplied by a compound quantity, $$d-e$$; let us first consider an example in numbers, supposing that $$A$$ is to be multiplied by 7-3. Here it is evident, that we are required
 to take the quadruple of $$A$$: for if we first take $$A$$ seven
 times, it will then be necessary to subtract $$3A$$ from that
@@ -66,7 +66,7 @@ $$
 
 whence $$dA-cA=ad-bd-ae+be$$ is the product required.
 
-**274.** Since therefore we know accurately the product
+<span class="art">274</span> Since therefore we know accurately the product
 $$(a-b)\cdot (d-e)$$, we shall now exhibit the same example
 of multiplication under the following form:
 
@@ -85,7 +85,7 @@ to the signs, we must strictly observe the rule before given;
 a rule which this circumstance would completely confirm, if
 it admitted of the least doubt.
 
-**275.** It will be easy, therefore, according to this method,
+<span class="art">275</span> It will be easy, therefore, according to this method,
 to calculate the following example, which is, to multiply
 $$a+b$$ by $$a-b$$;
 
@@ -101,7 +101,7 @@ a^2&+ab&\\
 \end{array}
 $$
 
-**276.** Now, we may substitute for $$a$$ and $$b$$ any numbers
+<span class="art">276</span> Now, we may substitute for $$a$$ and $$b$$ any numbers
 whatever; so that the above example will furnish the following theorem; namely,
 The sum of two numbers, multiplied
 by their difference, is equal to the difference of the squares
@@ -115,7 +115,7 @@ and divisible both by the sum and by the difference of the
 roots of those two squares; consequently, the difference of
 two squares can never be a prime number.
 
-**277.** Let us now calculate some other examples:
+<span class="art">277</span> Let us now calculate some other examples:
 
 I)
 
@@ -214,7 +214,7 @@ a^3&-3abc&+b^3&+c^3&&&&&&
 \end{array}
 $$
 
-**278.** When we have more than two quantities to multiply together, it will easily
+<span class="art">278</span> When we have more than two quantities to multiply together, it will easily
 be understood that, after having multiplied two of them together, we must then
 multiply that product by one of those which remain, and so on:
 but it is indifferent what order is observed in those multiplications.
@@ -288,7 +288,7 @@ $$
 
 which is the product required.
 
-**279.** Now let us resume the same example, but change
+<span class="art">279</span> Now let us resume the same example, but change
 the order of it, first multiplying the factors I. and III. and
 then II. and IV. together:
 
@@ -308,7 +308,7 @@ $$
 
 which is the product required.
 
-**280.** We may perform this calculation in a manner still
+<span class="art">280.** We may perform this calculation in a manner still
 more concise, by first multiplying the factor I. by factor IV.
 and then factor II. by factor III.
 
@@ -355,7 +355,7 @@ $$
 
 the same result as before.
 
-**281.** It will be proper to illustrate this example by a
+<span class="art">281</span> It will be proper to illustrate this example by a
 numerical application. For this purpose, let us make $$a=3$$
 and $$b=2$$, we shall then have $$a+b=5$$, and $$a-b=1$$;
 farther, $$a^2=9$$, $$ab=6$$, and $$b^2=4$$: therefore

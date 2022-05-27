@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 18. "Of Roots, with rela
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 18. "Of Roots, with relation to Powers in general."
 
-**189.** Since the square root of a given number is a number,
+<span class="art">189</span> Since the square root of a given number is a number,
 whose square is equal to that given number; and since
 the cube root of a given number is a number, whose cube is
 equal to that given number; it follows that any number
@@ -21,7 +21,7 @@ the fourth root, that whose biquadrate is equal to a given
 number; and the fifth root, that whose fifth power is equal
 to a given number, etc.
 
-**190.** As the square, or second root, is marked by the sign
+<span class="art">190</span> As the square, or second root, is marked by the sign
 √, and the cubic, or third root, by the sign ∛, so the fourth
 root is represented by the sign ∜; the fifth root by the sign
 $$\sqrt[5]{\vphantom{1}}$$; and so on. It is evident that, according to this method
@@ -32,7 +32,7 @@ sign of this root. So that when the radical sign has no number prefixed to it,
 this always shows that the square root is
 meant.
 
-**191.** To explain this matter still better, we shall here
+<span class="art">191</span> To explain this matter still better, we shall here
 exhibit the different roots of the number a, with their respective values
 
 $$\surd a$$ is the 2nd root of $$a$$,  
@@ -53,7 +53,7 @@ The 6rd power of $$\sqrt[6]{\vphantom{1}} a$$ is $$a$$,
 
 and so on.
 
-**192.** Whether the number $$a$$ therefore be great or small,
+<span class="art">192</span> Whether the number $$a$$ therefore be great or small,
 we know what value to affix to all these roots of different
 degrees.
 
@@ -64,7 +64,7 @@ than 1, all its roots will also exceed unity. Lastly, if that
 number be less than 1, all its roots will also be less than
 unity.
 
-**193.** When the number $$a$$ is positive, we know from what
+<span class="art">193</span> When the number $$a$$ is positive, we know from what
 was before said of the square and cube roots, that all the
 other roots may also be determined, and will be real and
 possible numbers.
@@ -77,7 +77,7 @@ whereas the third, fifth, seventh, and all its odd roots, become
 negative, but rational; because the odd powers of negative
 numbers are also negative.
 
-**194.** We have here also an inexhaustible source of new
+<span class="art">194</span> We have here also an inexhaustible source of new
 kinds of surds, or irrational quantities; for whenever the
 number $$a$$ is not really such a power, as some one of the
 foregoing indices represents, or seems to require, it is impossible

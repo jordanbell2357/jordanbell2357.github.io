@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 19. "Of the Method of re
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 19. "Of the Method of representing Irrational Numbers by Fractional Exponents."
 
-**195.** We have shown in the preceding chapter, that the
+<span class="art">195</span> We have shown in the preceding chapter, that the
 square of any power is found by doubling the exponent of
 that power; or that, in general, the square, or the second
 power, of $$a^n$$, is $$a^{2n}$$; and the converse also follows,
@@ -16,7 +16,7 @@ the square root of the power $$a^{2n}$$ is $$a^n$$, which is found by
 taking half the exponent of that power, or dividing it
 by 2.
 
-**196.** Thus, the square root of $$a^2$$ is $$a^1$$, or $$a$$;
+<span class="art">196</span> Thus, the square root of $$a^2$$ is $$a^1$$, or $$a$$;
 that of $$a^4$$ is $$a^2$$; that of $$a^6$$ is $$a^3$$; and so on:
 and, as this is general,
 the square root of $$a^3$$ must necessarily be $$a^{\frac{3}{2}}$$
@@ -27,7 +27,7 @@ Whence we see that $$a^{\frac{1}{2}}$$
 is equal to $$\surd a$$; which new method of representing the
 square root demands particular attention.
 
-**197.** We have also shown, that, to find the cube of a
+<span class="art">197</span> We have also shown, that, to find the cube of a
 power, as $$a^n$$, we must multiply its exponent by 3,
 and consequently that cube is $$a^{3n}$$.
 
@@ -38,7 +38,7 @@ that the root required is $$a^n$$: consequently $$a^1$$ or $$a$$,
 is the cube root of $$a^3$$; $$a^2$$ is the cube root of $$a^6$$;
 $$a^3$$ of $$a^9$$; and so on.
 
-**198.** There is nothing to prevent us from applying the
+<span class="art">198</span> There is nothing to prevent us from applying the
 same reasoning to those cases, in which the exponent is not
 divisible by 3, or from concluding that the cube root of $$a^2$$
 is $$a^{\frac{2}{3}}$$, and that the cube root of $$a^4$$ is $$a^{\frac{4}{3}}$$,
@@ -46,14 +46,14 @@ or $$a^{1\frac{1}{3}}$$; consequently, the third, or cube root of $$a$$, or $$a^
 must be $$a^{\frac{1}{3}}$$:
 whence also, it appears, that $$a^{\frac{1}{3}}$$ is the same as $$\sqrt[3]{\vphantom{1}}a$$.
 
-**199.** It is the same with roots of a higher degree: thus,
+<span class="art">199</span> It is the same with roots of a higher degree: thus,
 the fourth root of $$a$$ will be $$a^{\frac{1}{4}}$$, which expression has the
 same value as $$\sqrt[4]{\vphantom{1}}a$$; the fifth root of $$a$$ will be $$a^{\frac{1}{5}}$$,
 which is
 consequently equivalent to $$\sqrt[5]{\vphantom{1}}a$$; and the same observation
 may be extended to all roots of a higher degree.
 
-**200.** We may therefore entirely reject the radical signs at
+<span class="art">200.** We may therefore entirely reject the radical signs at
 present made use of, and employ in their stead the fractional
 exponents which we have just explained: but as we have
 been long accustomed to those signs, and meet with them in
@@ -66,7 +66,7 @@ square root of $$a$$, because we know that the square of $$a^{\frac{1}{2}}$$,
 that is to say, $$a^{\frac{1}{2}}$$ multiplied by $$a^{\frac{1}{2}}$$,
 is equal to $$a^1$$, or $$a$$.
 
-**201.** What has been now said is sufficient to show how
+<span class="art">201</span> What has been now said is sufficient to show how
 we are to understand all other fractional exponents that may
 occur. If we have, for example, $$a^{\frac{4}{3}}$$, this means, that we
 must first take the fourth power of $$a$$, and then extract its
@@ -78,7 +78,7 @@ then extract the fourth root of that power; so that $$a^{\frac{3}{4}}$$ is the
 same as $$\sqrt[4]{\vphantom{1}}a^3$$, and $$a^{\frac{4}{5}}$$ is equal to
 $$\sqrt[5]{\vphantom{1}}a^4$$, etc.
 
-**202.** When the fraction which represents the exponent
+<span class="art">202</span> When the fraction which represents the exponent
 exceeds unity, we may express the value of the given quantity in another way:
 for instance, suppose it to be $$a^{\frac{5}{2}}$$; this
 quantity is equivalent to $$a^{2\frac{1}{2}}$$,
@@ -91,7 +91,7 @@ $$a^{\frac{15}{4}}$$, that is, $$a^{3\frac{3}{4}}$$, expresses
 $$a^3 \sqrt[4]{\vphantom{1}} a^3$$. These examples are sufficient to illustrate the
 great utility of fractional exponents.
 
-**203.** Their use extends also to fractional numbers: for if
+<span class="art">203</span> Their use extends also to fractional numbers: for if
 there be given $$\frac{1}{\surd a}$$, we know that this quantity is equal to
 $$\frac{1}{a^{\frac{1}{2}}}$$; and we have seen already that a fraction of the form
 $$\frac{1}{a^n}$$ may be expressed by $$a^{-n}$$; so that instead of $$\frac{1}{\surd a}$$
@@ -107,7 +107,7 @@ $$a^{\frac{5}{4}}$$, or to $$a^{1\frac{1}{4}}$$, or lastly, to $$a\sqrt[4]{\vpha
 Practice will render similar
 reductions easy.
 
-**204.** We shall observe, in the last place, that each root
+<span class="art">204</span> We shall observe, in the last place, that each root
 may be represented in a variety of ways; for $$\surd a$$ being the
 same as $$a^{\frac{1}{2}}$$, and ½ being transformable into the fractions, ²⁄₄,
 ³⁄₆, ⁴⁄₈, ⁵⁄₁₀, ⁶⁄₁₂, etc.
@@ -121,7 +121,7 @@ by the following radical expressions:
 
 $$\sqrt[2]{\vphantom{1}}a^2, \; \sqrt[3]{\vphantom{1}}a^3, \; \sqrt[4]{\vphantom{1}}a^4, \; \sqrt[5]{\vphantom{1}}a^5, \; \textrm{etc.}$$
 
-**205.** This property is of great use in multiplication and
+<span class="art">205</span> This property is of great use in multiplication and
 division; for if we have, for example, to multiply $$\sqrt[2]{\vphantom{1}}a$$ by $$\sqrt[3]{\vphantom{1}}a$$,
 we write $$\sqrt[6]{\vphantom{1}}a^3$$ for $$\sqrt[2]{\vphantom{1}}a$$
 and $$\sqrt[6]{\vphantom{1}}a^2$$ instead of $$\sqrt[3]{\vphantom{1}}a$$;
@@ -136,8 +136,6 @@ On the contrary, if it were required to divide $$\sqrt[2]{\vphantom{1}}a$$, or
 $$a^{\frac{1}{2}}$$, 
 by $$\sqrt[3]{\vphantom{1}}a$$, or $$a^{\frac{1}{3}}$$, we should have for the quotient $$a^{\frac{1}{2}-\frac{1}{3}}$$,
 or $$a^{\frac{3}{6}-\frac{2}{6}}$$, that is to say, $$a^{\frac{1}{6}}$$, or $$\sqrt[6]{\vphantom{1}}a$$.
-
-
 
 #### References
 
