@@ -7,11 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 7. "Of Fractions in gene
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 7. "Of Fractions in general."[^1]
 
-[^1]: With changes by me to Hewlett's English translation, using the German text from the
-*Leonhardi Euleri Opera omnia*. In particular, "one integer" in the English text
-corresponds to "ein Gantzes" in the German text, which is properly translated
-"one whole". (The English translation is through the French translation, and the
-French "entier" means both "integer" and "whole".)
+[^1]: With changes by me to Hewlett's English translation, using the German text from the *Leonhardi Euleri Opera omnia*. In particular, "one integer" in the English text corresponds to "ein Gantzes" in the German text, which is properly translated "one whole". (The English translation is through the French translation, and the French "entier" means both "integer" and "whole".)
 
 **68.** When a number, as 7, for instance, is said not to be
 divisible by another number, let us suppose by 3, this only
@@ -72,7 +68,7 @@ undoubtedly be shorter than a foot: it is evident then, that
 **74.** If the numerator, on the contrary, be greater than the
 denominator, the value of the fraction is greater than unity.
 Thus ³⁄₂ is greater than 1, for ³⁄₂ is equal to ²⁄₂ together with ½.
-Now ²⁄₂ is exactly 1; consequently ³⁄₂ is equal to 1 + ½, that
+Now ²⁄₂ is exactly 1; consequently ³⁄₂ is equal to 1+½, that
 is, to an integer and a half. In the same manner, ⁴⁄₃ is equal
 to 1⅓, ⁵⁄₃ to 1⅔, and ⁷⁄₃ to 2⅓. And, in general, it is sufficient
 in such cases to divide the upper number by the lower, and
