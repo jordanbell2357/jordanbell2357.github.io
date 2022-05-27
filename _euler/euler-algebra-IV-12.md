@@ -451,7 +451,7 @@ $$x=\frac{3}{2} \pm \surd \left(\frac{9}{4}-\frac{16}{4}\right)=\frac{3}{2} \pm 
 
 which are the other two roots, but they are imaginary.
 
-<span class="art">749.** It was, however, by chance, as we have remarked,
+<span class="art">749</span> It was, however, by chance, as we have remarked,
 that we were able, in the preceding example, to extract the
 cube root of the binomials that we obtained, which is the
 case only when the equation has a rational root; consequently, the rules of the preceding chapter are more easily

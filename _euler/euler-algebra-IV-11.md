@@ -88,10 +88,10 @@ other rational roots than numbers which are factors of the
 last term 6, we have only 1, 2, 3, 6, to try with, and the
 result of these trials will be as follows:
 
-If $$x=1$$, we have 1-1-6=-6.  
-If $$x=2$$, we have 8-2-6=0.  
-If $$x=3$$, we have 26-3-6=18.  
-If $$x=6$$, we have 216-6-6=204.
+If $$x=1$$, we have 1 - 1 - 6 = -6.  
+If $$x=2$$, we have 8 - 2 -6 = 0.  
+If $$x=3$$, we have 26 - 3 - 6 = 18.  
+If $$x=6$$, we have 216 - 6 - 6 = 204.
 
 Hence we see, that $$x=2$$ is one of the roots of the given equation;
 and, showing this, it is easy to find the other two;
@@ -311,90 +311,6 @@ that is, two imaginary roots.
 
 Hence the numbers sought are 4, and (4+18)=22.
 
-<span class="art">729</span> *Question 3.* Required two numbers whose difference is 720, and such, that if the less be multiplied by the
-square root of the greater, the product may be 20736. What are those numbers?
-
-Let $$x$$ be the less of the two numbers, then the greater
-will be $$x+12$$, and their product will be $$x^2+12x$$,
-which
-multiplied by the sum $$2x+12$$, gives
-
-$$2x^3+36x^2+144x=14560;$$
-
-and dividing by 2, we have
-
-$$x^3+18x^2+72x=7280.$$
-
-Now, the last term 7280 is too great for us to make trial
-of all its divisors; but as it is divisible by 8, we shall make
-$$x=2y$$, because the new equation, $$8y^3+72y^2+144y=7280$$,
-after the substitution, being divided by 8, will become
-$$y^3+9y^2+18y=910$$; to solve which, we need only
-try the divisors 1, 2, 5, 7, 10, 13, etc. of the number 910:
-where it is evident, that the three first, 1, 2, 5, are too
-small; beginning therefore with supposing $$y=7$$,
-we immediately find that number to be one of the roots; for the
-substitution gives 343+441+126=910. It follows,
-therefore, that $$x=14$$; and the two other roots will be
-found by dividing $$y^3+9y^2+18y-910$$ by $$y-7$$, thus:
-
-<a href="https://artofproblemsolving.com/texer/mxscnflp">
-<img src="/assets/euler/mxscnflp.png" alt="Polynomial long division" width="309" height="212" style="display:block;margin-left:auto;margin-right:auto;">
-</a>
-
-Supposing now this quotient $$y^2+16y+130=0$$, we shall have
-$$y^2+16y=-130$$, and thence $$y=-8 \pm \surd -66$$; a proof that the other two roots are
-impossible.
-
-The two numbers sought are therefore 14, and (14+12)=26; the product of which, 364, multiplied by their
-sum, 40, gives 14560.
-
-<span class="art">730</span> *Question 2.* To find two numbers whose difference
-is 18, and such, that their sum multiplied by the difference
-of their cubes, may produce 275184.
-
-Let $$x$$ be the less of the two numbers, then $$x+18$$ will be
-the greater; the cube of the first will be $$x^3$$, and the cube of
-the second
-
-$$x^3+54x^2+972x+5832;$$
-
-the difference of the cubes
-
-$$54x^2+972x+5832=54(x^2+18x+108),$$
-
-which multiplied by the sum $$2x+18$$, or $$2(x+9)$$, gives
-the product
-
-$$108(x^3+27x^2+270x+972)=275184.$$
-
-And, dividing by 108, we have
-
-$$x^3+27x^2+270x+972=2548,$$
-
-or
-
-$$x^3+27x^2+270x=1576.$$
-
-Now, the divisors of 1576 are 1, 2, 4, 8, etc. the two first of
-which are too small; but if we try $$x=4$$, that number is
-found to satisfy the terms of the equation.
-
-It remains, therefore, to divide by $$x-4$$, in order to find
-the two other roots; which division gives the quotient
-$$x^2+31x+394$$;
-making therefore
-
-$$x^2+31x=-394,$$
-
-we shall find
-
-$$x=-\frac{31}{2} \pm \surd \left(\frac{961}{4}-\frac{1376}{4}\right);$$
-
-that is, two imaginary roots.
-
-Hence the numbers sought are 4, and (4+18)=22.
-
 <span class="art">729</span> *Question 3.* Required two numbers whose difference is 720, and such,
 that if the less be multiplied by the
 square root of the greater, the product may be 20736.
@@ -464,7 +380,7 @@ $$z^3-5z=12$$, or
 $$z^3-5z-12=0.$$
 
 The divisors of 12 are 1, 2, 3, 4, 6, 12: the first two are too small;
-but the supposition of $$z=3$$ gives exactly 27-15-12=0. Consequently,
+but the supposition of $$z=3$$ gives exactly 27 - 15 - 12 = 0. Consequently,
 
 $$z=3, \qquad y=9, \quad \textrm{and} \quad x=36;$$
 
@@ -524,7 +440,7 @@ $$y^3+3y^2=490.$$
 
 Now, the divisors of 490 are 1, 2, 5, 7, 10, etc. the first
 three of which are too small; but if we suppose $$y=7$$,
-we have 343+147=490; so that $$y=7$$, and $$x=14$$.
+we have 343 + 147 = 490; so that $$y=7$$, and $$x=14$$.
 
 There are therefore fourteen partners, and each of them
 put 140 pounds into the common stock.
