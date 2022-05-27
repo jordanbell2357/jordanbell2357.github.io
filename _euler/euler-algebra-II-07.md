@@ -116,6 +116,8 @@ $$
 \end{array}
 $$
 
+---
+
 **323.** When there is a remainder after the division, it is a
 proof that the root is composed of more than two terms.
 We must in that case consider the two terms already found
