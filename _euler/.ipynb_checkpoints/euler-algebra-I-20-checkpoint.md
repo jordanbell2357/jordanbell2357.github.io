@@ -17,7 +17,7 @@ of the same kind to exist. This inquiry will throw new light on the subjects whi
 In prosecuting this design, we shall make use of a new character, which may be
 employed instead of the expression that has been so often repeated, is equal to;
 this sign is =, which is read *is equal to*: thus, when I write $$a = b$$,
-this means that $$a$$ is equal to $$b$$: so, for example, 3·5=15.
+this means that $$a$$ is equal to $$b$$: so, for example, 3 · 5=15.
 
 **207.** The first mode of calculation that presents itself to the mind, is undoubtedly
 addition, by which we add two numbers together and find their sum: let therefore $$a$$ and $$b$$

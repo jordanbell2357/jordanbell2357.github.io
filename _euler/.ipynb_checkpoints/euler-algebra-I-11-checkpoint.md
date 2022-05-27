@@ -147,7 +147,7 @@ gives 2304.
 
 **132.** Let us now consider what must be observed on this
 subject with regard to the signs + and -. First, it is
-evident that if the root have the sign +, tliat is to say, if it
+evident that if the root have the sign +, that is to say, if it
 be a positive number, its square must necessarily be a positive
 number also, because + multiplied by + makes +: hence
 the square of $$+a$$ will be $$+aa$$: but if the root be a negative

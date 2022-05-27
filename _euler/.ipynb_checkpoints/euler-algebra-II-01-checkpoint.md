@@ -58,9 +58,9 @@ $$c-e+a-f+d-b.$$
 **260.** It is evident, therefore, that addition is attended with no difficulty,
 whatever be the form of the terms to be added: thus, if it were necessary to add
 together the expressions
-$$2a^3+6\sqrt{b}-4\log c$$ and $$5 \sqrt[5]{a}-7c$$, we should write them
+$$2a^3+6\surd b-4\log c$$ and $$5 \sqrt[5]{\vphantom{a}} a-7c$$, we should write them
 
-$$2a^3+6\sqrt{b}-4\log c+5 \sqrt[5]{a}-7c,$$
+$$2a^3+6\surd b-4\log c+5 \sqrt[5]{\vphantom{a}} a-7c,$$
 
 either in this or in any other order of the terms; for if the
 signs are not changed, the sum will always be the same.
