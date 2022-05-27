@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 1. "Of the Solution of 
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General."
 
-**563.** The principal object of Algebra, as well as of all
+<span class="art">563</span> The principal object of Algebra, as well as of all
 the other branches of Mathematics, is to determine the
 value of quantities that were before unknown; and this is
 obtained by considering attentively the conditions given,
@@ -16,7 +16,7 @@ reason, Algebra has been defined, The science which
 teaches how to determine unknown quantities by means of
 those that are known.
 
-**564.** The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of
+<span class="art">564</span> The  above  definition  agrees  with all  that  has  been hitherto  laid  down: for  we  have  always  seen  that  the  knowledge of
 certain  quantities  leads  to  that  of  other  quantities, which  before  might  have  been  considered  as  unknown.
 
 Of this, Addition will readily furnish an example; for, in order to  find  the  sum  of  two  or
@@ -27,7 +27,7 @@ presented by Multiplication, Division, the Involution of powers, and  the  Extra
 the  question being  always  reduced  to  finding,  by  means  of  known quantities,
 other  quantities  which  are  unknown.
 
-**565.** In the last section, also, different questions were
+<span class="art">565</span> In the last section, also, different questions were
 resolved, in which it was required to determine a number
 that could not be deduced from the knowledge of other
 given numbers, except under certain conditions. All
@@ -37,7 +37,7 @@ a certain connection with them; and this connection was
 determined by certain conditions, or properties, which
 were to agree with the quantity sought
 
-**566.** In Algebra, when we have a question to resolve,
+<span class="art">566</span> In Algebra, when we have a question to resolve,
 we represent the number sought by one of the last letters
 of the alphabet, and then consider in what manner the
 given conditions can form an equality between two
@@ -47,7 +47,7 @@ determine the value of the number sought, and consequently to resolve the questi
 numbers are sought; but they are found in the same
 manner by equations.
 
-**567.** Let us endeavour to explain this farther by an
+<span class="art">567</span> Let us endeavour to explain this farther by an
 example. Suppose the following question, or problem,
 was proposed:
 
@@ -81,7 +81,7 @@ the equation $$140 +x= 145$$, and thence we easily deduce
 $$x=5$$, and consequently $$20-x=20-5=15$$; so that the
 company consisted of 5 men and 15 women.
 
-**568.** Again, Suppose twenty persons, men and women,
+<span class="art">568</span> Again, Suppose twenty persons, men and women,
 go to a tavern; the men spend 24 shillings, and the women
 as much: but it is found that the men have spent 1 shilling each more than the women.
 Required the number of men and women separately?
@@ -102,14 +102,14 @@ question; but we shall afterwards see that $$x=8$$, which
 value answers to the equation; for $$\dfrac{24}{8}-1$$, or $$\dfrac{16}{8}=\dfrac{24}{12}$$
 includes the equality $$2=2$$.
 
-**569.** It is evident, therefore, how essential it is, in all
+<span class="art">569</span> It is evident, therefore, how essential it is, in all
 problems, to consider the circumstances of the question attentively, in order to deduce from it
 an equation that shall express by letters the numbers sought, or unknown. After
 that, the whole art consists in resolving those equations,
 or deriving from them the values of the unknown numbers; and this shall be the subject of the
 present section. 
 
-**570.** We must remark, in the first place, the diversity
+<span class="art">570</span> We must remark, in the first place, the diversity
 which subsists among the questions themselves. In some,
 we seek only for one unknown quantity; in others, we
 have to find two, or more; and, it is to be observed, with
@@ -117,7 +117,7 @@ regard to this last case, that, in order to determine them
 all, we must deduce from the circumstances, or the conditions of the problem, as many equations
 as there are unknown quantities.
 
-**571.** It must have already been perceived, that an equation consists of two parts separated
+<span class="art">571</span> It must have already been perceived, that an equation consists of two parts separated
 by the sign of equality, $$=$$, to show that those two quantities are equal to one another; and
 we are often obliged to perform a great number of transformations on those two parts, in order
 to deduce from them the value of the unknown quantity: but these
@@ -129,13 +129,14 @@ power, or extract their roots of the same degree; or lastly,
 whether we take the logarithms of those quantities, as we
 have already done in the preceding section.
 
-**572.** The  equations  which  are  most  easily  resolved,  are those  in  which  the  unknown
-quantity  does  not  exceed  the first  power,  after  the  terms  of  the  equation  have  been
-properly arranged;  and  these  are  called  simple  equations,  or equations  of  the  first  degree.
-But  if,  after  having  reduced an  equation,  we  find  in it  the  square,  or  the  second  power,
-of  the  unknown  quantity,  it  is  called  an  equation  of  the second  degree,  which  is  more
-difficult  to  resolve.  Equations of  the  third  degree  are  those  which  contain  the  cube  of
-the unknown  quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
+<span class="art">572</span> The  equations which are most easily resolved, are those
+in  which  the  unknown quantity does not  exceed the first  power, after the terms of the
+equation  have  been properly arranged; and these  are  called  simple  equations,
+or equations  of  the  first  degree. But if,  after  having  reduced an  equation,
+we  find  in it  the  square,  or the second  power, of the unknown  quantity,  it  is
+called  an  equation  of  the second degree,  which  is  more difficult  to  resolve.
+Equations of  the  third  degree  are  those  which  contain  the  cube  of the unknown
+quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
 #### References
 
