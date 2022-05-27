@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section III, Chapter 3. "Of Arithmetical Pr
 
 #### Section III. "Of Ratios and Proportions." Chapter 3. "Of Arithmetical Progressions."
 
-**402.** We have already remarked, that a series of numbers
+<span class="art">402</span> We have already remarked, that a series of numbers
 composed of any number of terms, which always increase, or
 decrease, by the same quantity, is called an arithmetical
 progression.
@@ -23,7 +23,7 @@ the series
 
 is also such a progression, since the numbers constantly decrease by 3.
 
-**403.** The number, or quantity, by which the terms of an
+<span class="art">403</span> The number, or quantity, by which the terms of an
 arithmetical progression become greater or less, is called the
 difference; so that when the first term and the difference
 are given, we may continue the arithmetical progression to
@@ -36,7 +36,7 @@ and we shall have the following increasing progression:
 
 in which each term is found by adding the difference to the preceding one.
 
-**404.** It is usual to write the natural numbers, 1, 2, 3, 4,
+<span class="art">404</span> It is usual to write the natural numbers, 1, 2, 3, 4,
 5, etc. above the terms of such an arithmetical progression,
 in order that we may immediately perceive the rank, which
 anv term holds in the progression, which numbers, when
@@ -76,7 +76,7 @@ example will be written as follows:
 
 where we see that 29 is the tenth term.
 
-**405.** Let $$a$$ be the first term, and $$d$$ the difference, the
+<span class="art">405</span> Let $$a$$ be the first term, and $$d$$ the difference, the
 arithmetical progression will go on in the following order:
 
 <table>
@@ -114,7 +114,7 @@ the $n$th term will be
 
 $$a + (n  -1)d.$$
 
-**406.** When we stop at any point of the progression, it is
+<span class="art">406</span> When we stop at any point of the progression, it is
 of importance to attend to the first and the last term, since
 the index of the last term will represent the number of
 terms. If, therefore, the first term be $$a$$, the difference $$d$$,
@@ -124,9 +124,9 @@ difference by the number of terms minus one, and adding
 that product to the first term. Suppose,
 for example, in an arithmetical progression of a
 hundred terms, the first term is 4, and the difference 3; then
-the last term will be 99·3+4=301.
+the last term will be 99·3 + 4 = 301.
 
-**407.** When we know the first term $$a$$, and the last $$z$$, with
+<span class="art">407</span> When we know the first term $$a$$, and the last $$z$$, with
 the number of terms $$n$$, we can find the difference $$d$$; for,
 since the last term
 
@@ -143,11 +143,11 @@ rule: Subtract the first term from the last, divide the remainder by the number 
 will be the common difference: by means of which we may
 write the whole progression.
 
-**408.** Suppose, for example, that we have an increasing
+<span class="art">408</span> Suppose, for example, that we have an increasing
 arithmetical progression of nine terms, whose first is 2 and
 last 26, and that it is required to find the difference. We must
 subtract the first term 2 from the last 26, and divide the remainder, which is 24, by
-9-1, that is, by 8; the quotient 3 will be equal to the difference required, and the whole
+9 - 1, that is, by 8; the quotient 3 will be equal to the difference required, and the whole
 progression will be:
 
 <table>
@@ -243,7 +243,7 @@ and consequently the progression:
 </tbody>
 </table>
 
-**409.** If now the first term $$a$$, the last term $$z$$, and the difference $$d$$, are given, we may from them find the number of
+<span class="art">409</span> If now the first term $$a$$, the last term $$z$$, and the difference $$d$$, are given, we may from them find the number of
 terms $$n$$; for since $$z - a = (n - 1)d$$, by dividing both
 sides by $$d$$, we have $$n-1 = \frac{z-a}{d}$$;
 also $$n$$ being greater by
@@ -314,7 +314,7 @@ which are,
 
 3⅓, 4⁷⁄₉, 6²⁄₉, 7⅔.
 
-**410.** It must be observed, however, that as the number
+<span class="art">410.** It must be observed, however, that as the number
 of terms is necessarily an integer, if we had not obtained
 such a number for $$n$$, in the examples of the preceding
 article, the questions would have been absurd.
@@ -324,7 +324,7 @@ value of $$\frac{z-a}{d}$$, it will be impossible to resolve the question;
 and consequently, in order that questions of this kind may
 be possible, $$z - a$$ must be divisible by $$d$$.
 
-**411.** From what has been said, it may be concluded, that
+<span class="art">411</span> From what has been said, it may be concluded, that
 we have always four quantities, or things, to consider in an
 arithmetical progression:
 

@@ -7,12 +7,12 @@ title: Euler, "Elements of Algebra", Section III, Chapter 11. "Of Geometrical Pr
 
 #### Section III. "Of Ratios and Proportions." Chapter 11. "Of Geometrical Progressions."
 
-**505.** A series of numbers, which are always becoming a
+<span class="art">505</span> A series of numbers, which are always becoming a
 certain number of times greater, or less, is called a **geometrical progression**,
 because each term is constantly to the
 following one in the same geometrical ratio: and the number
 which expresses how many times each term is greater than
-the preceding, is called the *exponent*, or *ratio*. Thus, when
+the preceding, is called the *exponent*, or **ratio**. Thus, when
 the first term is 1 and the exponent, or ratio, is 2, the geometrical progression becomes,
 
 <table>
@@ -49,7 +49,7 @@ the first term is 1 and the exponent, or ratio, is 2, the geometrical progressio
 The numbers 1, 2, 3, etc. always marking the place which
 each term holds in the progression.
 
-**506.** If we suppose, in general, the first term to be $$a$$,
+<span class="art">506</span> If we suppose, in general, the first term to be $$a$$,
 and the ratio $$b$$, we have the following geometrical progression
 
 <table>
@@ -93,7 +93,7 @@ progression:
 
 1, ½, ¼, ⅛, ¹⁄₁₆, ¹⁄₃₂, ¹⁄₆₄, ¹⁄₁₂₈, etc.
 
-**507.** Here therefore we have to consider:
+<span class="art">507</span> Here therefore we have to consider:
 
 1. The first term, which we have called $$a$$.
 2. The exponent, which we call $$b$$.
@@ -116,7 +116,7 @@ value of 2⁴⁰ by 2⁹, or 512, we have
 
 for the 50th term.
 
-**508.** One of the principal questions which occurs on this
+<span class="art">508</span> One of the principal questions which occurs on this
 subject, is to find the sum of all the terms of a geometrical
 progression; we shall therefore explain the method of doing
 this. Let there be given, first, the following progression,
@@ -136,7 +136,7 @@ and subtracting from this the progression represented by $$s$$,
 there remains $$s=1024-1=1023$$; wherefore the sum
 required is 1023.
 
-**509.** Suppose now, in the same progression, that the
+<span class="art">509</span> Suppose now, in the same progression, that the
 number of terms is undetermined, that is, let them be generally represented by $$n$$,
 so that the sum in question, or
 
@@ -152,7 +152,7 @@ by multiplying the last term, $$2^{n-1}$$, by the
 exponent 2, in order to have $$2^n$$, and subtracting unity from
 that product.
 
-**510.** This is made still more evident by the following
+<span class="art">510</span> This is made still more evident by the following
 examples, in which we substitute successively for $$n$$, the
 numbers 1, 2, 3, 4, etc.
 
@@ -164,7 +164,7 @@ numbers 1, 2, 3, 4, etc.
 1+2+4+8+16+32=63,
 etc.
 
-**511.** On this subject, the following question is generally
+<span class="art">511</span> On this subject, the following question is generally
 proposed. A man offers to sell his horse on the following
 condition; that is, he demands 1 penny for the first nail, 2
 for the second, 4 for the third, 8 for the fourth, and so on,
@@ -180,9 +180,11 @@ and multiplying again by 2, the last term 2³¹=2147483648;
 doubling therefore this number, and subtracting unity from
 the product, the sum required becomes 4294967295 pence;
 which being reduced, we have 17895697*l.* 1*s.* 3*d.* for the
-price of the horse. \[**1 pound (*l.*) = 20 shillings (*s.*).**\]
+price of the horse.
+    
+\[**1 pound (*l.*) = 20 shillings (*s.*).**\]
 
-**512.** Let the ratio now be 3, and let it be required to find
+<span class="art">512</span> Let the ratio now be 3, and let it be required to find
 the sum of the geometrical progression 1, 3, 9, 27, 81, 243, 729, consisting of 7 terms.
 
 Calling the sum $$s$$ as before, we have
@@ -197,7 +199,7 @@ Then subtracting the former series from the latter, we have
 $$2s=2187-1=2186$$: so that the double of the sum is
 2186, and consequently the sum required is 1093.
 
-**513.** In the same progression, let the number of terms be
+<span class="art">513</span> In the same progression, let the number of terms be
 $$n$$, and the sum $$s$$; so that
 
 $$s=1+3+3^2+3^3+3^4+\cdots+3^{n-1}.$$
@@ -242,7 +244,7 @@ also, from the following particular cases:
 </tbody>
 </table>
 
-**514.** Let us now suppose, generally, the first term to be
+<span class="art">514</span> Let us now suppose, generally, the first term to be
 $$a$$, the ratio $$b$$, the number of terms $$n$$, and their sum $$s$$,
 so that
 
@@ -264,7 +266,7 @@ the last term by the ratio, or exponent of the progression,
 and dividing the difference between this product and the
 first term, by the difference between 1 and the ratio.
 
-**515.** Let there be a geometrical progression of seven
+<span class="art">515</span> Let there be a geometrical progression of seven
 terms, of which the first is 3; and let the ratio be 2: we
 shall then have $$a = 3$$, $$b = 2$$, and $$n = 7$$; therefore the last
 term is 3·2⁶, or 3·64, =192; and the whole progression will be
@@ -276,7 +278,7 @@ we have 384; subtracting the first term, there remains 381;
 and dividing this by $$b - 1$$, or by 1, we have 381 for the
 sum of the whole progression.
 
-**516.** Again, let there be a geometrical progression of six
+<span class="art">516</span> Again, let there be a geometrical progression of six
 terms, of which the first is 4; and let the ratio be ³⁄₂: then
 the progression is
 
@@ -287,7 +289,7 @@ If we multiply the last term by the ratio, we shall have
 the remainder is ⁶⁶⁵⁄₁₆; which, divided by $$b-1=\frac{1}{2}$$, gives
 ⁶⁶⁵⁄₈=83⅛ for the sum of the series.
 
-**517.** When the exponent is less than 1, and, conscquently,
+<span class="art">517</span> When the exponent is less than 1, and, conscquently,
 when the terms of the progression continually diminish, the
 sum of such a decreasing progression, carried on to infinity,
 may be accurately expressed.
@@ -308,7 +310,7 @@ and, subtracting the preceding progression,
 there remains $$s = 2$$ for the sum of the proposed infinite
 progression.
 
-**518.** If the first term be 1, the ratio ⅓, and the sum $$s$$;
+<span class="art">518</span> If the first term be 1, the ratio ⅓, and the sum $$s$$;
 so that
 
 $$s=1+\frac{1}{3}+\frac{1}{9}+\frac{1}{27}+\frac{1}{81}+\textrm{etc.}$$
@@ -320,7 +322,7 @@ $$3s=3+1+\frac{1}{3}+\frac{1}{9}+\frac{1}{27}+\textrm{etc.}$$
 and subtracting the value of $$s$$, there remains $$2s=3$$; wherefore the sum
 $$s=1\frac{1}{2}$$.
 
-**519.** Let there be a progression whose sum is $$s$$, the first
+<span class="art">519</span> Let there be a progression whose sum is $$s$$, the first
 term 2, and the ratio ¾; so that
 
 $$s=2+\frac{3}{2}+\frac{9}{8}+\frac{27}{32}+\frac{81}{128}+\textrm{etc.}$$
@@ -332,7 +334,7 @@ $$\frac{4}{3}s=\frac{8}{3}+2+\frac{3}{2}+\frac{9}{8}+\frac{27}{32}+\frac{81}{128
 and subtracting from this progression $$s$$, there remains
 $$\frac{1}{3}s=\frac{8}{3}$$: wherefore the sum required is 8.
 
-**520.** If we suppose, in general, the first term to be $$a$$, and
+<span class="art">520</span> If we suppose, in general, the first term to be $$a$$, and
 the ratio of the progression to be $$\frac{b}{c}$$, so that this fraction
 may be less than 1, and consequently $$c$$ greater than $$b$$; the
 sum of the progression, carried on to infinity, will be
@@ -357,7 +359,7 @@ and dividing the product by the
 same denominator diminished by the numerator of the
 ratio.
 
-**521.** In the same manner we find the sums of progressions,
+<span class="art">521</span> In the same manner we find the sums of progressions,
 the terms of which are alternately affected by the signs +
 and -. Suppose, for example,
 
@@ -367,7 +369,7 @@ And, adding this equation to the preceding, we obtain
 $$\left(1+\frac{b}{c}\right)s=a$$: whence we deduce the sum required,
 $$s=\dfrac{a}{1+\frac{b}{c}}$$, or $$s=\frac{ac}{c+b}$$.
 
-**522.** It is evident, therefore, that if the first term
+<span class="art">522</span> It is evident, therefore, that if the first term
 $$a=\frac{3}{5}$$, and the ratio be ⅖, that is to say,
 $$b=2$$, and $$c=5$$, we shall
 find the sum of the progression
@@ -387,7 +389,7 @@ that the sum will be
 
 $$\dfrac{a}{1+\frac{b}{c}} = \dfrac{\frac{3}{5}}{\frac{7}{5}} = \frac{3}{7}.$$
 
-**523.** Again: let there be proposed the infinite progression,
+<span class="art">523</span> Again: let there be proposed the infinite progression,
 
 $$\frac{3}{10}+\frac{3}{100}+\frac{3}{1000}+\frac{3}{10000}+\frac{3}{10000}+\frac{3}{100000}+\textrm{etc.}$$
 
@@ -397,11 +399,11 @@ divide the first term by this fraction, we have ⅓
 for the sum of the given progression. So that taking only one term of
 the progression, namely ³⁄₁₀, the error would be ⅒.
 
-And taking two terms, ³⁄₁₀+³⁄₁₀₀=³³⁄₁₀₀, there would
+And taking two terms, ³⁄₁₀ + ³⁄₁₀₀ = ³³⁄₁₀₀, there would
 still be wanting ¹⁄₁₀₀ to make the sura, which we have seen
 is ⁴⁄₃.
 
-**524.** Let there now be given the infinite progression,
+<span class="art">524</span> Let there now be given the infinite progression,
 
 $$9+\frac{9}{10}+\frac{9}{100}+\frac{9}{1000}+\frac{9}{10000}+\textrm{etc.}$$
 
