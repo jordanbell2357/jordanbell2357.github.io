@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 6. "Of the Resolution o
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 6. "Of the Resolution of Mixed Equations of the Second Degree."
 
-**638.** An equation of the second degree is said to be mixt,
+<span class="art">638</span> An equation of the second degree is said to be mixt,
 or complete, when three terms are found in it, namely, that
 which contains the square of the unknown quantity, as $$ax^2$$;
 that, in which the unknown quantity is found only in the
@@ -23,7 +23,7 @@ In this chapter, we shall show how the value of $$x$$ may be
 derived from such equations: and it will be seen, that there
 are two methods of obtaining it.
 
-**639.** An equation of the kind that we are now considering
+<span class="art">639</span> An equation of the kind that we are now considering
 may be reduced, by division, to such a form, that the first
 term may contain only the square, $$x^2$$, of the unknown quantity $$x$$.
 We shall leave the second term on the same side
@@ -38,7 +38,7 @@ resolution would be attended with no difficulty, because
 it would only be required to take the square root of both
 sides.
 
-**640.** But it is evident that $$x^2+px$$ cannot be a square;
+<span class="art">640</span> But it is evident that $$x^2+px$$ cannot be a square;
 since we have already seen, (**Article 307.**) that if a root consists of two terms,
 for example, $$x+n$$, its square always
 contains three terms, namely, twice the product of the two
@@ -52,7 +52,7 @@ $$\frac{1}{2}p$$, and in fact the square of $$x+\frac{1}{2}p$$, is found to be
 
 $$x^2+px+\frac{1}{4}p^2.$$
 
-**641.** Now, $$x^2+px+\frac{1}{4}p^2$$ being a real square, which has for its root
+<span class="art">641</span> Now, $$x^2+px+\frac{1}{4}p^2$$ being a real square, which has for its root
 $$x+\frac{1}{2}p$$, if we resume our equation $$x^2+px=q$$, we have only to add
 $$\frac{1}{2}p^2$$ to both sides, which gives us
 
@@ -71,7 +71,7 @@ we shall have for $$x$$ two values expressed thus;
 
 $$x=-\frac{1}{2}p \pm \surd \left(\frac{1}{4}p^2+q\right).$$
 
-**642.** This formula contains the rule by which all quadratic equations may be resolved;
+<span class="art">642</span> This formula contains the rule by which all quadratic equations may be resolved;
 and it will be proper to commit it to memory, that it may not be necessary, every
 time, to repeat the whole operation which we have gone
 through. We may always arrange the equation in such a
@@ -79,7 +79,7 @@ manner, that the pure square $$x^2$$ may be found on one side,
 and the above equation have the form $$x^2 = -px+q$$, where
 we see immediately that $$x=-\frac{1}{2}p \pm \surd \left(\frac{1}{4}p^2+q\right)$$.
 
-**643.** The general rule, therefore, which we deduce from
+<span class="art">643</span> The general rule, therefore, which we deduce from
 that, in order to resolve the equation $$x^2 = -px+q$$, is
 founded on this consideration;
 
@@ -102,7 +102,7 @@ $$x=5 \pm \surd(25-9)=5 \pm 4,$$
 
 that is to say, the two values of $$x$$ are 9 and 1.
 
-**644.** This rule will be still better understood, by distinguishing
+<span class="art">644</span> This rule will be still better understood, by distinguishing
 the following cases: I), When $$p$$ is an even number; II), When $$p$$ is an odd number;
 and III), When $$p$$ is a fractional number.
 
@@ -135,7 +135,7 @@ the denominator of which is a square; so that
 
 $$x = \frac{b \pm \surd(b^2+4ac)}{2a}.$$
 
-**645.** The other method of resolving mixt quadratic equations is,
+<span class="art">645</span> The other method of resolving mixt quadratic equations is,
 to transform them into pure equations; which is
 done by substitution: for example, in the equation
 $$x^2 = px + q$$, instead of the unknown quantity $$x$$, we may write
@@ -164,7 +164,7 @@ $$x=\frac{1}{2}p \pm \surd \left(\frac{1}{4}p^2+q\right),$$
 as we found it before. It only remains, therefore, to illustrate
 this rule by some examples.
 
-**646.** *Question 1.* There are two numbers; the one exceeds
+<span class="art">646</span> *Question 1.* There are two numbers; the one exceeds
 the other by 6, and their product is 91: what are those
 numbers?
 
@@ -181,7 +181,7 @@ By the one, the less number $$x=7$$, and the greater $$x+6=13$$.
 
 By the other, the less number $$x=-13$$, and the greater $$x+6=-7$$.
 
-**647.** *Question 2.* To find a number such, that if 9 be
+<span class="art">647</span> *Question 2.* To find a number such, that if 9 be
 taken from its square, the remainder may be a number,
 as much greater than 100, as the number itself is less
 than 23.
@@ -202,7 +202,7 @@ number will be 11, the square of which minus 9 is 112, and
 consequently greater than 100 by 12, in the same manner
 as 11 is less than 23 by 12.
 
-**648.** *Question 3.* To find a number such, that if we
+<span class="art">648</span> *Question 3.* To find a number such, that if we
 multiply its half by its third, and to the product add half
 the number required, the result will be 30.
 
@@ -214,7 +214,7 @@ $$x=-\frac{3}{2} \pm \surd \left(\frac{9}{4}+180\right) = -\frac{3}{2} \pm \frac
 
 Consequently, either $$x=12$$, or $$x=-15$$.
 
-**649.** *Question 4.* To find two numbers, the one being
+<span class="art">649</span> *Question 4.* To find two numbers, the one being
 double the other, and such, that if we add their sum to their
 product, we may obtain 90.
 
@@ -228,7 +228,7 @@ $$x=-\frac{3}{4} \pm \surd \left(\frac{9}{16}+45\right)=-\frac{3}{4} \pm \frac{2
 
 Consequently, $$x=6$$ or $$x=-7\frac{1}{2}$$.
 
-**650.** *Question 5.* A horse-dealer bought a horse for a
+<span class="art">650</span> *Question 5.* A horse-dealer bought a horse for a
 certain number of crowns, and sold it again for 119 crowns,
 by which means his profit was as much per cent as the horse
 cost him; what was his first purchase?
@@ -250,7 +250,7 @@ The horse therefore cost 70 crowns, and since the horsedealer gained 70 per cent
 must have been 49 crowns. So that the horse must have
 been sold again for 70+49, that is to say, for 119 crowns.
 
-**651.** *Question 6.* A person buys a certain number of
+<span class="art">651</span> *Question 6.* A person buys a certain number of
 pieces of cloth: he pays for the first 2 crowns, for the
 second 4 crowns, for the third 6 crowns, and in the same
 manner always 2 crowns more for each following piece.
@@ -282,7 +282,7 @@ $$x=-\frac{1}{2} + \surd \left(\frac{1}{4}+100\right) = -\frac{1}{2}+\frac{21}{2
 
 And hence the number of pieces of cloth is 10.
 
-**652.** *Question 7.* A person bought several pieces of
+<span class="art">652</span> *Question 7.* A person bought several pieces of
 cloth for 180 crowns; and if he had received for the same
 sum 3 pieces more, he would have paid 3 crowns less for
 each piece. How many pieces did he buy?
@@ -310,7 +310,7 @@ at 15 crowns the piece; and if he had got 3 pieces more,
 namely, 15 pieces for 180 crowns, each piece would have
 cost only 12 crowns, that is to say, 3 crowns less.
 
-**653.** *Question 8.* Two merchants enter into partnership
+<span class="art">653</span> *Question 8.* Two merchants enter into partnership
 with a stock of 100 pounds; one leaves his money in the
 partnership for three months, the other leaves his for two
 months, and each takes out 99 pounds of capital and profit.
@@ -359,7 +359,7 @@ month: now these profits agree; for if, with 45*l.*, 18*l.* are
 gained in one month, 22*l.* will be gained in the same time
 with 55*l.*
 
-**654.** *Question 9.* Two girls carry 100 eggs to market;
+<span class="art">654</span> *Question 9.* Two girls carry 100 eggs to market;
 the one had more than the other, and yet the sum which they
 both received for them was the same. The first says to the
 second. If I had had your eggs, I should have received 15
@@ -393,7 +393,7 @@ $$x=-80 + \surd(6400+8000) = -80+120=40.$$
 So that the first girl had 40 eggs, the second had 60, and
 each received 10 pence.
 
-**655.** *Question 10.* Two merchants sell each a certain
+<span class="art">655</span> *Question 10.* Two merchants sell each a certain
 quantity of silk; the second sells 3 ells more than the first,
 and they received together 35 crowns. Now, the first says
 to the second, I should have got 24 crowns for your silk;
@@ -432,7 +432,6 @@ sold 8 ells for 24 crowns, he must have received 15 crowns
 for his 5 ells; also, since the second would have sold 5 ells
 for 12 crowns and a half, his 8 ells must have produced
 him 20 crowns; the sum being, as before, 35 crowns.
-
 
 #### The *ell* {#ell}
 

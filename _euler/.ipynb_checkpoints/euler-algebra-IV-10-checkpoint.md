@@ -7,14 +7,14 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 10. "Of Pure Equations 
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 10. "Of Pure Equations of the Third Degree."
 
-**706.** An equation of the third degree is said to be pure,
+<span class="art">706</span> An equation of the third degree is said to be pure,
 when the cube of the unknown quantity is equal to a known
 quantity, and when neither the square of the unknown
 quantity, nor the unknown quantity itself, is found in the
 equation; so that $$x^3=125$$, or, more generally, $$x^3=a$$,
 $$x^3=\dfrac{a}{b}$$, etc. are equations of this kind.
 
-**707.** It is evident how we are to deduce the value of
+<span class="art">707</span> It is evident how we are to deduce the value of
 $$x$$ from such an equation, since we have only to extract the
 cube root of both sides. Thus, the equation $$x^3=125$$ gives
 $$x=5$$, the equations $$x^3=a$$ gives 
@@ -26,14 +26,14 @@ To be able,
 therefore, to resolve such equations, it is sufficient that we
 know how to extract the cube root of a given number.
 
-**708.** But in this manner, we obtain only one value for $$x$$:
+<span class="art">708</span> But in this manner, we obtain only one value for $$x$$:
 but since every equation of the second degree has two
 values, there is reason to suppose that an equation of the
 third degree has also more than one value.
 It will be deserving our attention to investigate this; and, if we find that
 in such equations $$x$$ must have several values, it will be necessary to determine those values.
 
-**709.** Let us consider, for example, the equation $$x^3=8$$,
+<span class="art">709</span> Let us consider, for example, the equation $$x^3=8$$,
 with a view of deducing from it all the numbers, whose cubes
 are, respectively, 8. As $$x=2$$ is undoubtedly such a number, what has
 been said in the last chapter shows that the quantity $$x^3-8=0$$,
@@ -50,7 +50,7 @@ may be represented by these factors;
 
 $$(x-2)(x^2+2x+4)=0.$$
 
-**710.** Now, the question is, to know what number we arc
+<span class="art">710</span> Now, the question is, to know what number we arc
 to substitute instead of $$x$$, in order that $$x^3=8$$,
 or that $$x^3-8=0$$;
 and it is evident that this condition is answered, by supposing the product which we
@@ -60,7 +60,7 @@ second factor $$x^2+2x+4=0$$. Let us, therefore, make
 $$x^2+2x+4=0$$; then we shall have $$x^2=-2x-4$$, and thence
 $$x=-1 \pm \surd -3$$.
 
-**711.** So that beside the case, in which $$x=2$$,
+<span class="art">711</span> So that beside the case, in which $$x=2$$,
 which corresponds to the equation $$x^3=8$$,
 we have two other values of $$x$$,
 the cubes of which are also 8; and these are,
@@ -119,7 +119,7 @@ $$
 It is true, that these values are imaginary, or impossible;
 but yet they deserve attention.
 
-**712.** What we have said applies in general to every cubic
+<span class="art">712</span> What we have said applies in general to every cubic
 equation, such as $$x^3=a$$; namely, that beside the value
 $$x=\sqrt[3]{\vphantom{a}}a$$, we shall always find two other values.
 To abridge the calculation, let us suppose $$\sqrt[3]{\vphantom{a}}a=c$$,
@@ -145,7 +145,7 @@ or $$x=\dfrac{-c \pm \surd -3c^2}{2}$$; that is to say,
 
 $$x=\dfrac{-c \pm c \surd -3}{2} = \dfrac{-1 \pm \surd -3}{2} \cdot c$$
 
-**713.** Now, as $$c$$ was substituted for $$\sqrt[3]{\vphantom{a}}a$$,
+<span class="art">713</span> Now, as $$c$$ was substituted for $$\sqrt[3]{\vphantom{a}}a$$,
 we conclude, that
 every equation of the third degree, of the form $$x^3=a$$,
 furnishes three values of $$x$$ expressed in the following manner:
@@ -165,7 +165,7 @@ In ordinary calculations, indeed, we employ only the first
 of those values, because the other two are imaginary; as we
 shall show by some examples.
 
-**714.** *Question 1.* To find a number, whose square, multiplied by its fourth part,
+<span class="art">714</span> *Question 1.* To find a number, whose square, multiplied by its fourth part,
 may produce 432.
 
 Let $$x$$ be that number; the product of $$x^2$$ by $$\frac{1}{4}x$$
@@ -176,7 +176,7 @@ we have $$x = 12$$.
 The number sought therefore is 12; for its square 144,
 multiplied by its fourth part, or by 3, gives 432.
 
-**715.** *Question 2.* Required a number such, that if we
+<span class="art">715</span> *Question 2.* Required a number such, that if we
 divide its fourth power by its half, and add 14¼ to the product, the sum may be 100.
 
 Calling that number $$x$$, its fourth power will be $$x^4$$;
@@ -187,7 +187,7 @@ $$2x^3=\frac{343}{4}$$; dividing by 2, gives $$x^3=\frac{343}{8}$$,
 and extracting the cube root,
 we find $$x=\frac{7}{2}$$.
 
-**716.** *Question 3.* Some officers being quartered in a
+<span class="art">716</span> *Question 3.* Some officers being quartered in a
 country, each commands three times as many horsemen, and
 twenty times as many foot-soldiers, as there are officers.
 Also a horseman's monthly pay amounts to as many
@@ -209,7 +209,7 @@ and this sum must be equal to 13000 florins:
 we have therefore $$13x^3=13000$$, or $$x^3=1000$$, and $$x=10$$,
 the number of officers required.
 
-**717.** *Question 4.* Several merchants enter into partnership, and each
+<span class="art">717</span> *Question 4.* Several merchants enter into partnership, and each
 contributes a hundred times as many sequins
 as there are partners; they send a factor to Venice, to
 manage their capital, who gains, for every hundred sequins,
@@ -223,7 +223,7 @@ the capital must have produced $$2x^3$$; so that $$2x^3=2662$$,
 or $$x^3 = 1331$$; this gives $$x=11$$, which is the number of
 partners.
 
-**718.** *Question 5.* A country girl exchanges cheeses for
+<span class="art">718</span> *Question 5.* A country girl exchanges cheeses for
 hens, at the rate of two cheeses for three hens; which hens
 lay each ½ as many eggs as there are cheeses. Farther, the
 girl sells at market nine eggs for as many sous as each hen

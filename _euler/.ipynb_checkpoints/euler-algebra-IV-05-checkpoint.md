@@ -7,13 +7,13 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 5. "Of the Resolution o
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 5. "Of the Resolution of Pure Quadratic Equations."
 
-**623.** An equation is said to be of the second degree, when
+<span class="art">623</span> An equation is said to be of the second degree, when
 it contains the square, or the second power, of the unknown
 quantity, without any of its higher powers; and an equation,
 containing likewise the third power of the unknown
 quantity, belongs to cubic equations, and its resolution requires particular rules.
 
-**624.** There are, therefore, only three kinds of terms in
+<span class="art">624</span> There are, therefore, only three kinds of terms in
 an equation of the second degree:
 
 1. The terms in which the unknown quantity is not
@@ -29,7 +29,7 @@ the first kind will have the form $$a$$, the terms of the second
 kind will have the form $$bx$$, and the terms of the third kind
 will have the form $$cx^2$$.
 
-**625.** We have already seen, how two or more terms of
+<span class="art">625</span> We have already seen, how two or more terms of
 the same kind may be united together, and considered as a
 single term.
 
@@ -54,7 +54,7 @@ $$5x+4=3x^2+11;$$
 
 lastly, subtracting 11, there remains $$3x^2 = 5x - 7$$.
 
-**626.** We may also bring all the terms to one side of the
+<span class="art">626</span> We may also bring all the terms to one side of the
 sign =, so as to leave zero, or 0, on the other; but it must
 be remembered, that when terms are transposed from one
 side to the other, their signs must be changed.
@@ -69,7 +69,7 @@ in which the sign ± is read plus or minus, and indicates,
 that such terms as it stands before may be sometimes
 positive, and sometimes negative.
 
-**627.** Whatever therefore be the original form of a quadratic equation,
+<span class="art">627</span> Whatever therefore be the original form of a quadratic equation,
 it may always be reduced to this formula of
 three terms. If we have, for example, the equation
 
@@ -115,7 +115,7 @@ which is still more clear
 
 $$(ag-ce)x^2+(bg+ah-cf-ed)x+bh-fd=0.$$
 
-**628.** Equations of the second degree, in which all the
+<span class="art">628</span> Equations of the second degree, in which all the
 three kinds of terms are found, are called complete, and the
 resolution of them is attended with greater difficulties; for
 which reason we shall first consider those, in which one of
@@ -129,7 +129,7 @@ would have this form, $$ax^2 \pm bx = 0$$, which being divisible
 by $$x$$, may be reduced to $$ax \pm b = 0$$, which is likewise a
 simple equation, and belongs not to the present class.
 
-**629.** But when the middle term, which contains the first
+<span class="art">629</span> But when the middle term, which contains the first
 power of $$x$$, is wanting, the equation assumes this form,
 $$ax^2 \pm c = 0$$, or $$ax^2 = c$$; as the sign of $$c$$ may be either
 positive, or negative
@@ -142,7 +142,7 @@ $$x=\surd \frac{c}{a};$$
 
 which means the equation is resolved.
 
-**630.** But there are three cases to be considered here. In
+<span class="art">630</span> But there are three cases to be considered here. In
 the first, when $$\frac{c}{a}$$ is a square number (of which we can therefore really
 assign the root) we obtain for the value of $$x$$ a
 rational number, which maybe either integral, or fractional.
@@ -160,7 +160,7 @@ number: the value of $$x$$ is then altogether impossible and
 imaginary \["gar unmöglich oder Imaginär"\]; and this result proves that the question, which
 leads to such an equation, is in itself impossible.
 
-**631.** We shall also observe, before proceeding farther,
+<span class="art">631</span> We shall also observe, before proceeding farther,
 that whenever it is required to extract the square root of a
 number, that root, as we have already remarked, has always
 two values, the one positive and the other negative. Suppose,
@@ -170,7 +170,7 @@ by $$x= \pm 7$$. So that all those questions admit of a double
 answer; but it will be easily perceived that in several cases,
 as those which relate to a certain number of men, the negative value cannot exist.
 
-**632.** In such equations, also, as $$ax^2= bx$$, where the
+<span class="art">632</span> In such equations, also, as $$ax^2= bx$$, where the
 known quantity $$c$$ is wanting, there may be two values of $$x$$,
 though we find only one if we divide by $$x$$. In the equation
 $$x^2=3x$$, for example, in which it is required to assign such
@@ -185,7 +185,7 @@ equations admit only of one.
 We shall now illustrate what we have said with regard to
 pure equations of the second degree by some examples.
 
-**633.** *Question 1.* Required a number, the half of which
+<span class="art">633</span> *Question 1.* Required a number, the half of which
 multiplied by the third, may produce 24.
 
 Let this number be $$x$$; then by the question $$\frac{1}{2}x$$,
@@ -198,7 +198,7 @@ we have $$\frac{1}{2}x = 6$$, and $$\frac{1}{3}x = 4$$: now, the product of thes
 two numbers is 24; and if $$x = - 12$$, we have $$\frac{1}{2}x = -6$$,
 and $$\frac{1}{3}x = -4$$, the product of which is likewise 24.
 
-**634.** *Question 2.* Required a number such, that being increased by 5,
+<span class="art">634</span> *Question 2.* Required a number such, that being increased by 5,
 and diminished by 5, the product of the sum by the difference may be 96.
 
 Let this number be $$x$$, then $$x+5$$, multiplied by $$x-5$$,
@@ -210,7 +210,7 @@ Adding 25, we have $$x^2= 121$$; and extracting the root,
 we have $$x=11$$. Thus $$x + 5 = 16$$, also $$x - 5 = 6$$; and,
 lastly, 6 ⋅ 16 = 98.
 
-**635.** *Question 3.* Required a number such, that by
+<span class="art">635</span> *Question 3.* Required a number such, that by
 adding it to 10, and subtracting it from 10, the sum, multiplied by the difference,
 will give 51.
 
@@ -219,7 +219,7 @@ must make 51, so that $$100 - x^2 = 51$$. Adding $$x^2$$, and
 subtracting 51, we have $$x^2 = 49$$, the square root of which
 gives $$x = 7$$.
 
-**636.** *Question 4.* Three persons, who had been playing,
+<span class="art">636</span> *Question 4.* Three persons, who had been playing,
 leave off; the first, with as many times 1 crowns, as the
 second has three crowns; and the second, with as many
 times 17 crowns, as the third has 5 crowns. Farther, if we
@@ -302,7 +302,7 @@ $$x = \frac{2 \cdot 17\cdot 7}{3}=\frac{238}{3}=79\frac{1}{3},$$
 
 as before.
 
-**637.** *Question 5.* A company of merchants appoint a
+<span class="art">637</span> *Question 5.* A company of merchants appoint a
 factor at Archangel. Each of them contributes for the
 trade, which they have in view, ten times as many crowns
 as there are partners; and the profit of the factor is fixed at
@@ -324,8 +324,6 @@ but as we may divide by $$x$$, it is reduced to the quadratic
 $$x^2=225$$; whence $$x = 15$$.
 
 So that there are fifteen partners, and each contributed 150 crowns.
-
-
 
 #### References
 

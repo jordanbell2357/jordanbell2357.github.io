@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 11. "Of the Resolution 
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 11. "Of the Resolution of Complete Equations of the Third Degree."
 
-**719.** An equation of the third degree is called complete,
+<span class="art">719</span> An equation of the third degree is called complete,
 when, beside the cube of the unknown quantity, it contains
 that unknown quantity itself, and its square: so that the
 general formula for these equations, bringing all the terms
@@ -22,7 +22,7 @@ place, that every such an equation has three roots; since it
 has been seen, in the last chapter, that this is true even with
 regard to pure equations of the same degree.
 
-**720.** We shall first consider the equation
+<span class="art">720</span> We shall first consider the equation
 $$x^3-6x^2+11x-6=0$$; and, since an equation of the second degree
 may be considered as the product of two factors, we may
 also represent an equation of tlie third degree by the product
@@ -46,7 +46,7 @@ consequently, the product would no longer be 0: which
 proves that our equation can have no other root than these
 three.
 
-**721.** If it were possible, in every other case, to assign
+<span class="art">721</span> If it were possible, in every other case, to assign
 the three factors of such an equation in the same manner,
 we should immediately have its three roots. Let us, therefore, consider,
 in a more general manner, these three factors, $$x-p$$, $$x-q$$, $$x-r$$.
@@ -61,7 +61,7 @@ the first is that in, in which $$x-p=0$$, or $$x=p$$;
 and second is, when $$x-q=0$$, or $$x=q$$; the third is, when $$x-r=0$$,
 or $$x=r$$.
 
-**722.** Let us now represent the quantity found, by the
+<span class="art">722</span> Let us now represent the quantity found, by the
 equation $$x^3-ax^2+bx-c=0$$. It is evident, in order that its
 three roots may be $$x=p$$, $$x=q$$, $$x=r$$, that we must have,
 
@@ -110,7 +110,7 @@ factor gives $$x^2+2x=-3$$; consequently,
 $$x=-1 \pm \surd -2$$; and these are the other two roots of our equation, which are
 evidently impossible, or imaginary.
 
-**723.** The method which we have explained, is applicable
+<span class="art">723</span> The method which we have explained, is applicable
 only when the first term $$x^3$$ is multiplied by 1, and the other
 terms of the equation have integer coefficients; therefore, when this is not the case, we must begin by a preparation, which consists in transforming the equation into
 another form having the condition required; after which, we
@@ -133,7 +133,7 @@ the roots of which are, as we have already seen, $$y=1$$, $$y=2$$, $$y=3$$;
 whence it follows, that in the given equation, we have 
 $$x=\frac{1}{2}$$, $$x=1$$, $$x=\frac{3}{2}$$.
 
-**724.** Let there be an equation, where the coefficient of
+<span class="art">724</span> Let there be an equation, where the coefficient of
 the first term is a whole number but not 1, and whose last
 term is 1; for example,
 
@@ -167,7 +167,7 @@ where the roots are $$z=1$$, $$z=2$$, $$z=3$$;
 whence it follows that in our equation
 $$x=1$$, $$x=\frac{1}{2}$$, $$x=\frac{1}{3}$$.
 
-**725.** It has been observed in the preceding articles, that
+<span class="art">725</span> It has been observed in the preceding articles, that
 in order to have all the roots in positive numbers, the signs
 plus and minus must succeed each other alternately; by
 means of which the equation takes this form,
@@ -191,7 +191,7 @@ whether the divisors of the last term are to be taken affirmatively
 or negatively, when we wish to make the trial which
 has been mentioned.
 
-726. In order to illustrate what has been said by an example, let us consider the equation
+<span class="art">726</span> In order to illustrate what has been said by an example, let us consider the equation
 $$x^3+x^2-34x+56=0$$,
 in which the signs are changed twice, and in which the same
 sign returns but once. Here we conclude that the equation
@@ -222,8 +222,7 @@ namely, $$x=2$$, we clearly perceive that the equation has
 two positive, and one negative root. We shall give some
 examples to render this still more evident.
 
-
-**727.** *Question 1.* There are two numbers, whose difference is 12, and whose product multiplied by their sum
+<span class="art">727</span> *Question 1.* There are two numbers, whose difference is 12, and whose product multiplied by their sum
 makes 14560. What are those numbers?
 
 Let $$x$$ be the less of the two numbers, then the greater
@@ -241,7 +240,8 @@ of all its divisors; but as it is divisible by 8, we shall make
 $$x=2y$$, because the new equation,
 $$8y^3+72y^2+144y=7280$$, 
 after the substitution, being divided by 8, will become
-$$y^3+9y^2+18y=910$$; 
+    
+$$y^3+9y^2+18y=910;$$
 
 to solve which, we need only
 try the divisors 1, 2, 5, 7, 10, 13, etc. of the number 910:
@@ -249,7 +249,9 @@ where it is evident, that the three first, 1, 2, 5, are too
 small; beginning therefore with supposing $$y=7$$,
 we immediately find that number to be one of the roots; for the
 substitution gives
-343+144+126=910.
+
+343 + 144 + 126 = 910.
+
 It follows, therefore, that $$x=14$$;
 and the two other roots will be
 found by dividing
@@ -267,7 +269,7 @@ The two numbers sought are therefore 14, and (14+12)=26;
 the product of which, 364, multiplied by their
 sum, 40, gives 14560.
 
-**728.** *Questlon 2.* To find two numbers whose difference
+<span class="art">728</span> *Questlon 2.* To find two numbers whose difference
 is 18, and such, that their sum multiplied by the difference
 of their cubes, may produce 275184.
 
@@ -309,7 +311,7 @@ that is, two imaginary roots.
 
 Hence the numbers sought are 4, and (4+18)=22.
 
-**729.** *Question 3.* Required two numbers whose difference is 720, and such, that if the less be multiplied by the
+<span class="art">729</span> *Question 3.* Required two numbers whose difference is 720, and such, that if the less be multiplied by the
 square root of the greater, the product may be 20736. What are those numbers?
 
 Let $$x$$ be the less of the two numbers, then the greater
@@ -347,7 +349,7 @@ impossible.
 The two numbers sought are therefore 14, and (14+12)=26; the product of which, 364, multiplied by their
 sum, 40, gives 14560.
 
-**730.** *Question 2.* To find two numbers whose difference
+<span class="art">730</span> *Question 2.* To find two numbers whose difference
 is 18, and such, that their sum multiplied by the difference
 of their cubes, may produce 275184.
 
@@ -393,7 +395,7 @@ that is, two imaginary roots.
 
 Hence the numbers sought are 4, and (4+18)=22.
 
-**729.** *Question 3.* Required two numbers whose difference is 720, and such,
+<span class="art">729</span> *Question 3.* Required two numbers whose difference is 720, and such,
 that if the less be multiplied by the
 square root of the greater, the product may be 20736.
 
@@ -438,7 +440,7 @@ less of the two numbers sought; so that the greater is 1296,
 and the square root of this last, or 36, multiplied by the
 other number 576, gives 20736.
 
-**730.** *Remark.* This question admits of a simpler solution; for since the square
+<span class="art">730</span> *Remark.* This question admits of a simpler solution; for since the square
 root of the greater number, multiplied by the less, must give a product equal to a given
 number, the greater of the two numbers must be a square.
 If, therefore, from this consideration, we suppose it to be $$x^2$$,
@@ -471,7 +473,7 @@ greater of the two numbers sought, or $$x^2$$, =1296,
 and that
 the less, or $$x^2-720$$, =576, as before.
 
-**731.** *Question 4.* There are two numbers, whose difference is 12;
+<span class="art">731</span> *Question 4.* There are two numbers, whose difference is 12;
 the product of this difference by the sum of
 their cubes is 102144; what are the numbers?
 
@@ -501,7 +503,7 @@ we find 64+144+216=424. So that $$y=4$$, and $$x=8$$;
 whence we conclude that the two numbers sought are 8 and
 (8+12)=20.
 
-**732.** *Question 5.* Several persons form a partnership,
+<span class="art">732</span> *Question 5.* Several persons form a partnership,
 and establish a certain capital, to which each contributes ten
 times as many pounds as there are persons in company:
 they gain 6 plus the number of partners per cent; and the
@@ -527,7 +529,7 @@ we have 343+147=490; so that $$y=7$$, and $$x=14$$.
 There are therefore fourteen partners, and each of them
 put 140 pounds into the common stock.
 
-**733.** *Question 6.* A company of merchants have a common stock of 8240 pounds;
+<span class="art">733</span> *Question 6.* A company of merchants have a common stock of 8240 pounds;
 and each contributes to it forty
 times as many pounds as there are partners; with which
 they gain as much per cent as there are partners: now, on

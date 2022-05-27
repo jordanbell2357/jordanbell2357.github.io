@@ -7,16 +7,16 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 8. "Of the Extraction o
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 8. "Of the Extraction of the Square Roots of Binomials."
 
-**669.** By a *binomials* we mean a quantity composed of
+<span class="art">669</span> By a *binomials* we mean a quantity composed of
 two parts, which are either both affected by the sign of the
 square root, or of which one, at least, contains that sign.
 
 For this reason 3+√5 is a binomial, and likewise
-√8+√3; and it is indifferent whether the two terms be
-joined by the sign + or by the sign - . So that 3-√5
-and 3+√5 are both binomials.
+√8 + √3; and it is indifferent whether the two terms be
+joined by the sign + or by the sign - . So that 3 - √5
+and 3 + √5 are both binomials.
 
-**670.** The reason that these binomials deserve particular
+<span class="art">670</span> The reason that these binomials deserve particular
 attention is, that in the resolution of quadratic equations we
 are always brought to quantities of this form, when the resolution cannot be performed. For example, the equation
 
@@ -32,10 +32,10 @@ and division, but we have not been able till now to show
 how their square roots are to be extracted; that is, so far as
 that extraction is possible; for when it is not, we must be
 satisfied with affixing to the quantity another radical sign.
-Thus, the square root of 3+√2 is written $$\sqrt{3 + \surd 2}$$;
+Thus, the square root of 3 + √2 is written $$\sqrt{3 + \surd 2}$$;
 $$\surd(3+\surd 2)$$.
 
-**671.** It must here be observed, in the first place, that the
+<span class="art">671</span> It must here be observed, in the first place, that the
 squares of such binomials are also binomials of the same
 kind; in which also one of the terms is always rational.
 
@@ -46,16 +46,16 @@ we should find it to be $$a+\surd b$$, and it is undoubtedly much easier to
 form an idea of it in this manner, than if we had only put
 the sign √ before the quantity.
 
-**672.** It is chiefly required, therefore, to assign a character,
+<span class="art">672</span> It is chiefly required, therefore, to assign a character,
 which may, in all cases, point out whether such a square
 root exists or not; for which purpose we shall begin with an
 easy quantity, requiring whether we can assign, in the sense
 that we have explained, the square root of the binomial
-5+2√6.
+5 + 2√6.
 
 Suppose, therefore, that this root is $$\surd x+\surd y$$; the square of it
 is $$(x+y)+2\surd xy$$, which must be equal to
-the quantity 5+2√6. Consequently, the rational part $$x+y$$ must be equal to 5, and the irrational part
+the quantity 5 + 2√6. Consequently, the rational part $$x+y$$ must be equal to 5, and the irrational part
 $$2\surd xy$$ must be equal to 2√6; which last equality gives $$\surd xy=\surd 6$$.
 Now, since $$x+y=5$$,  we have $$y=5-x$$, and
 this value substituted in the equation $$xy=6$$, produces
@@ -64,9 +64,9 @@ $$5x-x^2=6$$, or $$x^2=5x-6$$; therefore
 $$x=\frac{5}{2}+\sqrt{\vphantom{\left( \frac{25}{4}-\frac{24}{4}\right)}}\left( \frac{25}{4}-\frac{24}{4}\right)=\frac{5}{2}+\frac{1}{2}=3.$$
 
 So that $$x=3$$ and $$y=2$$; whence we
-conclude, that the square root of 5+2√6 is √3+√2.
+conclude, that the square root of 5 + 2√6 is √3 + √2.
 
-**673.** As we have here found the two equations, $$x + y = 5$$,
+<span class="art">673</span> As we have here found the two equations, $$x + y = 5$$,
 and $$xy = 6$$, we shall give a particular method for obtaining
 the values of $$x$$ and $$y$$.
 
@@ -76,9 +76,9 @@ us subtract from $$x^2+2xy+y^2= 25$$, the equation $$xy=6$$,
 taken four times, or $$4xy=24$$, in order to have
 $$x^2-2xy+y^2=1$$; whence by extraction we have $$x-y=1$$; and as
 $$x+y=5$$, we shall easily find $$x=2$$ and $$y=3$$:
-wherefore, the square root of 5+2√6 is √3+√2.
+wherefore, the square root of 5 + 2√6 is √3 + √2.
 
-**674.** Let us now consider the general binomial $$a+\surd b$$,
+<span class="art">674</span> Let us now consider the general binomial $$a+\surd b$$,
 and supposing its square root to be $$\surd x+\surd y$$, we shall
 have the equation
 
@@ -98,7 +98,7 @@ $$a+\surd b$$ is
 
 $$\dfrac{a+\surd(a^2-b)}{2}+\dfrac{a-\surd(a^2-b)}{2}.$$
 
-**675.** We admit that this expression is more complicated
+<span class="art">675</span> We admit that this expression is more complicated
 than if we had simply put the radical sign √ before the
 given binomial $$a+\surd b$$, and written it
 $$\surd(a+\surd b)$$:
@@ -121,7 +121,7 @@ but if $$a^2-b$$
 is not a perfect square, we cannot express the square root of $$a+\surd b$$
 more simply, than by putting the radical sign √ before it.
 
-**676.** The condition, therefore, which is requisite, in order
+<span class="art">676</span> The condition, therefore, which is requisite, in order
 that we may express the square root of a binomial $$a+\surd b$$
 in a more convenient form, is, that $$a^2-b$$ be a square;
 and
@@ -137,7 +137,7 @@ equal to
 
 $$a-2\sqrt{\vphantom{\frac{b}{4}}} \frac{b}{4} = a-\dfrac{2\surd b}{2} = a-\surd b.$$
 
-**677.** When it is required, therefore, to extract the square
+<span class="art">677</span> When it is required, therefore, to extract the square
 root of a binomial, as $$a \pm \surd b$$,
 the rule is, to subtract from the square $$a^2$$
 of the rational part the square $$b$$
@@ -149,28 +149,28 @@ $$
 \sqrt{\vphantom{\surd\left(\frac{a-c}{2}\right)}}\left(\frac{a-c}{2}\right):
 $$
 
-**678.** If the square root of 2+√3 were required, we
+<span class="art">678</span> If the square root of 2+√3 were required, we
 should have $$a=2$$ and $$\surd b=\surd 3$$; wherefore
 $$a^2-b=c=1$$; so that by the formula just given, the root sought
-equals √³⁄₂+√½.
+equals √³⁄₂ + √½.
 
 Let it be required to find the square root of the binomial
-11+6√2. Here we shall have $$a=11$$, and $$\surd b=6\surd 2$$;
+11 + 6√2. Here we shall have $$a=11$$, and $$\surd b=6\surd 2$$;
 consequently, $$b=36\cdot 2=72$$, and $$a^2-b=49$$, which
 gives $$c=7$$; and hence we conclude, that the square root
-of 11+6√2 is √9+√2, or 3+√2.
+of 11 + 6√2 is √9 + √2, or 3 + √2.
 
 Required the square root of 11+2√30. Here $$a=11$$, $$\surd b = 2\surd 30$$;
 consequently, $$b=4\cdot 30=120$$, $$a^2-b=1$$, and $$c=1$$;
-therefore the root required is √6+√5.
+therefore the root required is √6 + √5.
 
-**679.** This rule also applies, even when the binomial contains imaginary, or impossible quantities.
+<span class="art">679</span> This rule also applies, even when the binomial contains imaginary, or impossible quantities.
 
-Let there be proposed, for example, the binomial 1+4√-3. First, we shall have
+Let there be proposed, for example, the binomial 1 + 4√-3. First, we shall have
 $$a=1$$ and $$\surd b = 4\surd -3$$, that is to say,
 $$b=-48$$, and $$a^2-b=49$$; therefore
 $$c=7$$, and consequently the square root required is
-√4+√-3=2+√-3.
+√4 + √-3 = 2 + √-3.
 
 Again, let there be given -½+½√-3. First, we have $$a=-\frac{1}{2}$$;
 $$\surd b = \frac{1}{2}\surd -3$$,
@@ -186,10 +186,10 @@ to find the square root of 2√-1. As there is here no
 rational part, we shall have $$a=0$$. Now, $$\surd b=2\surd -1$$,
 and $$b=-4$$; wherefore $$a^2-b=4$$ and $$c=2$$;
 consequently, the square root required is
-√1+√-1=1+√-1, and the square of this quantity is found to be
-1+2√-1-1=2√-1.
+√1 + √-1 = 1 + √-1, and the square of this quantity is found to be
+1 + 2√-1 - 1 = 2√-1.
 
-**680.** Suppose now we have such an equation as
+<span class="art">680</span> Suppose now we have such an equation as
 $$x^2=a^2 \pm b$$, and that $$a^2-b=c^2$$;
 we conclude from this, that
 the value of
@@ -205,7 +205,7 @@ in many cases.
 For example, if $$x^2=17+12\surd 2$$, and we shall have
 $$x=3+\surd 8=3+2\surd 2$$.
 
-**681.** This case occurs most frequently in the resolution of
+<span class="art">681</span> This case occurs most frequently in the resolution of
 equations of the fourth degree, such as
 $$x^4=2ax^2+d$$. For,
 if we suppose $$x^2=y$$, we have $$x^4=y^2$$,
@@ -232,7 +232,7 @@ x=\sqrt{\vphantom{\left(\frac{a+c}{2}\right)}} \left(\frac{a+c}{2}\right) \pm
 \sqrt{\vphantom{\surd\left(\frac{a-c}{2}\right)}}\left(\frac{a-c}{2}\right).
 $$
 
-**682.** We shall illustrate what we have just said by some
+<span class="art">682</span> We shall illustrate what we have just said by some
 examples.
 
 *Example 1.* Required two numbers, whose product may be 105,
@@ -266,7 +266,7 @@ Whence $$x = 15$$, or $$x - 7$$. In the first case, $$y=7$$, and in
 the second case, $$y=15$$; whence the two numbers sought are
 15 and 7.
 
-**683.** It is proper, however, to observe, that this calculation may be performed
+<span class="art">683</span> It is proper, however, to observe, that this calculation may be performed
 much more easily in another way. For, since
 $$x^2+2xy+y^2$$ and $$x^2-2xy+y^2$$ are squares,
 and since the values of $$x^2+y^2$$ and $$xy$$ are given,
@@ -309,7 +309,7 @@ and
 
 $$y=\frac{1}{2}\surd(n+2m)+\frac{1}{2}\surd(n-2m).$$
 
-**684.** *Example 3.* Required two numbers, such, that their product
+<span class="art">684</span> *Example 3.* Required two numbers, such, that their product
 may be 35, and the difference of their squares 24.
 
 Let the greater of the two numbers be $$x$$, and the less $$y$$:
@@ -342,7 +342,7 @@ we have
 $$y=\frac{35}{\surd -25} =
 \sqrt{\vphantom{\frac{1225}{-25}}} \frac{1225}{-25}=\surd -49.$$
 
-**685.** We shall conclude this chapter with the following
+<span class="art">685</span> We shall conclude this chapter with the following
 question.
 
 *Example 4.* Required two numbers, such, that their sum, their
@@ -399,7 +399,7 @@ and $$y^2=\dfrac{3+\surd 5}{2}$$, we
 have also the difference of the squares
 $$x^2-y^2=2+\surd 5$$, being all the same quantity.
 
-**686.** As this solution is very long, it is proper to remark
+<span class="art">686</span> As this solution is very long, it is proper to remark
 that it may be abridged. In order to which, let us begin
 with making the sum $$x+y$$ equal to the difference of the
 squares $$x^2-y^2$$; we shall then have $$x+y=x^2-y^2$$; and dividing by $$x+y$$,
@@ -408,7 +408,7 @@ $$x+y=2y+1$$, and $$x^2-y^2=2y+1$$; farther, as the product $$xy$$, or $$y^2+y$$
 must be equal to the same quantity, we have $$y^2+y=2y+1$$, or $$y^2=y+1$$,
 which gives, as before, $$y=\dfrac{1+\surd 5}{2}$$.
 
-**687.** The preceding question leads also to the solution of
+<span class="art">687</span> The preceding question leads also to the solution of
 the following.
 
 *Example 5.* To find two numbers, such, that their sum, their product, and the sum of their squares, may be all equal.
@@ -436,7 +436,7 @@ the sum of which is $$x+y=3$$, their product $$xy=3$$; and lastly, since $$x^2=\
 and $$y^2=\dfrac{3+3\surd -3}{2}$$, the sum of the squares $$x^2+y^2=3$$, all
 the same quantity as required.
 
-**688.** We may greatly abridge this calculation by a particular artifice, which is applicable likewise to other cases;
+<span class="art">688</span> We may greatly abridge this calculation by a particular artifice, which is applicable likewise to other cases;
 and which consists in expressing the numbers sought by the
 sum and the difference of two letters, instead of representing
 them by distinct letters.

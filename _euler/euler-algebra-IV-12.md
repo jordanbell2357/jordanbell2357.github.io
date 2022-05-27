@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 12. "Of the Rule of Car
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 12. "Of the Rule of Cardano, or of Scipione del Ferro."
 
-**734.** When we have removed fractions from an equation
+<span class="art">734</span> When we have removed fractions from an equation
 of the third degree, according to the manner which has been
 explained, and none of the divisors of the last term are
 found to be a root of the equation, it is a certain proof, not
@@ -27,7 +27,7 @@ only by 4 or by 2, and therefore cannot make 0 with the
 first term. The same thing happens with every other
 fraction.
 
-**735.** As in those fractions the roots of the equation are
+<span class="art">735</span> As in those fractions the roots of the equation are
 neither integer numbers, nor fractions, they are irrational,
 and, as it often happens, imaginary. The manner, therefore, of expressing them,
 and of determining the radical
@@ -36,7 +36,7 @@ deserves to be carefully explained. This method, called *Cardano's Rule*,
 is ascribed to Cardano, or more properly to Scipione del Ferro,
 both of whom lived some centuries since.
 
-**736.** In order to understand this rule, we must first attentively consider
+<span class="art">736</span> In order to understand this rule, we must first attentively consider
 the nature of a cube, whose root is a binomial.
 
 Let $$a+b$$ be
@@ -51,7 +51,7 @@ that is
 to say, the two terms contain thrice the product of the two
 terms of the binomial, multiplied by the sum of those terms.
 
-**737.** Let us now suppose $$x=a+b$$;
+<span class="art">737</span> Let us now suppose $$x=a+b$$;
 taking the cube of
 each side, we have
 $$x^3=a^3+b^3+3ab(a+b)$$:
@@ -69,7 +69,7 @@ the equation $$x^3=18x+35$$,
 which we know with certainty
 to have $$x=5$$ for one of its roots.
 
-**738.** Farther, let us now suppose $$a^3=p$$ and $$b^3=q$$;
+<span class="art">738</span> Farther, let us now suppose $$a^3=p$$ and $$b^3=q$$;
 we
 shall then have $$a=\sqrt[3]{\vphantom{p}}p$$ and $$b=\sqrt[3]{\vphantom{q}}q$$,
 consequently, $$ab=\sqrt[3]{\vphantom{pq}}pq$$;
@@ -84,7 +84,7 @@ both $$3\sqrt[3]{\vphantom{pq}}pq$$ and $$p+q$$
 may be quantities equal to determinate numbers; so that we can always resolve an equation
 of the third degree, of the kind which we speak of.
 
-**739.** Let, in general, the equation $$x^3=fx+g$$
+<span class="art">739</span> Let, in general, the equation $$x^3=fx+g$$
 be proposed. Here, it will be necessary to compare
 $$f$$ with $$3\sqrt[3]{\vphantom{pq}}pq$$
 and $$g$$ with $$p+q$$;
@@ -96,7 +96,7 @@ for we then know that one of the roots of our
 equation will be
 $$x=\sqrt[3]{\vphantom{p}}p+\sqrt[3]{\vphantom{q}}q$$.
 
-**740.** We have therefore to resolve these two equations,
+<span class="art">740</span> We have therefore to resolve these two equations,
 
 $$
 \begin{gather}
@@ -126,7 +126,7 @@ consequently,
 
 $$p=\dfrac{g+\surd\left(g^2-\frac{4}{27}f^3\right)}{2},\quad \textrm{and} \quad q=\dfrac{g-\surd\left(g^2-\frac{4}{27}f^3\right)}{2}.$$
 
-**741.** In a cubic equation, therefore, of the form
+<span class="art">741</span> In a cubic equation, therefore, of the form
 $$x^3=fx+g$$,
 whatever be the numbers
 $$f$$ and $$g$$,
@@ -139,7 +139,7 @@ that is, an irrational quantity, containing not only the sign
 of the square root, but also the sign of the cube root; and
 this is the formula which is called the *Rule of Cardano*.
 
-**742.** Let us apply it to some examples, in order that its
+<span class="art">742</span> Let us apply it to some examples, in order that its
 use may be better understood.
 
 Let $$x^3=6x+9$$. First, we shall have $$f=6$$, and $$g=9$$;
@@ -150,7 +150,7 @@ of the roots of the given equation is
 
 $$x=\sqrt[3]{\vphantom{\frac{9+7}{2}}} \frac{9+7}{2} + \sqrt[3]{\vphantom{\frac{9-7}{2}}} \frac{9-7}{2} = \sqrt[3]{\vphantom{\frac{16}{2}}} \frac{16}{2} + \sqrt[3]{\vphantom{\frac{2}{2}}} \frac{2}{2} = \sqrt[3]{\vphantom{8}} 8 + \sqrt[3]{\vphantom{1}} 1 = 2+1=3.$$
 
-**743.** Let there be proposed the equation $$x^2=3x+2$$.
+<span class="art">743</span> Let there be proposed the equation $$x^2=3x+2$$.
 Here, we shall have
 $$f=3$$ and $$g=2$$;
 and consequently,
@@ -161,7 +161,7 @@ roots is
 
 $$x=\sqrt[3]{\vphantom{\frac{2+0}{2}}} \frac{2+0}{2}+\sqrt[3]{\vphantom{\frac{2-0}{2}}} \frac{2-0}{2}=1+1=2.$$
 
-**744.** It often happens, however, that, though such an
+<span class="art">744</span> It often happens, however, that, though such an
 equation has a rational root, that root cannot be found by
 the rule which we are now considering.
 
@@ -188,7 +188,7 @@ $$\sqrt[3]{1}(20-14\surd 2)=2-\surd 2$$;
 wherefore our root
 $$x=2+\surd 2+2-\surd 2=4$$.
 
-**745.** To this rule it might be objected, that it does not
+<span class="art">745</span> To this rule it might be objected, that it does not
 extend to all eqviations of the third degree, because the
 square of $$x$$ does not occur in it; that is to say, the second
 term of the equation is wanting. But we may remark, that
@@ -275,7 +275,7 @@ If we now make each of these factors =0, we have
 
 that is to say, the three roots which we have already found.
 
-**746.** Let there now be given the general equation of the
+<span class="art">746</span> Let there now be given the general equation of the
 third degree,  $$x^3+ax^2+bx+c=0$$, of which it is required to destroy the second term.
 
 For this purpose, we must add to $$x$$ the third of the coefficient of the second term, preserving the same sign, and
@@ -330,7 +330,7 @@ $$y^2 - \left(\frac{1}{3}a-b\right)y + \frac{2}{27}a \sqrt[3]{\vphantom{-\frac{1
 
 an equation in which the second term is wanting.
 
-**747.** We are enabled, by means of this transformation, to
+<span class="art">747</span> We are enabled, by means of this transformation, to
 find the roots of all equations of the third degree, as the following example will show.
 
 Let it be proposed to resolve the equation
@@ -425,7 +425,7 @@ $$
 
 and it remains to substitute this value in $$x=y+2$$.
 
-**748.** In the solution of this example, we have been
+<span class="art">748</span> In the solution of this example, we have been
 brought to a quantity doubly irrational; but we must not
 immediately conclude that the root is irrational: because the
 binomials $$27 \pm 6\surd 21$$ might happen to be real cubes; and
@@ -451,7 +451,7 @@ $$x=\frac{3}{2} \pm \surd \left(\frac{9}{4}-\frac{16}{4}\right)=\frac{3}{2} \pm 
 
 which are the other two roots, but they are imaginary.
 
-**749.** It was, however, by chance, as we have remarked,
+<span class="art">749.** It was, however, by chance, as we have remarked,
 that we were able, in the preceding example, to extract the
 cube root of the binomials that we obtained, which is the
 case only when the equation has a rational root; consequently, the rules of the preceding chapter are more easily
