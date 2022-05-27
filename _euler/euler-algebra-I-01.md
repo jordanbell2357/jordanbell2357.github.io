@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section I, Chapter 1. "Mathematics in gener
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 1. "Mathematics in general."
 
-**1.** Whatever is capable of increase or diminution,
+<span class="art">1.</span> Whatever is capable of increase or diminution,
 is called magnitude, or quantity.
 
 A sum of money therefore
