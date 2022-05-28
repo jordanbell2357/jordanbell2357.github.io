@@ -14,13 +14,11 @@ root by $$x$$, we shall find the following expressions for all
 polygonal numbers
 
 <table>
-<thead>
-  <tr>
-    <th>3-gon</th>
-    <th>\( \dfrac{x^2+x}{2} \)</th>
-  </tr>
-</thead>
 <tbody>
+  <tr>
+    <td>3-gon</td>
+    <td>\( \dfrac{x^2+x}{2} \)</td>
+  </tr>
   <tr>
     <td>4-gon</td>
     <td>\( x^2 \)</td>
