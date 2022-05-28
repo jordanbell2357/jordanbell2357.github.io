@@ -213,7 +213,7 @@ terms give ²⁰⁄₂₇, which is too small by ¹⁄₁₀₈, and so on.
 1 by $$a+1$$, as follows:
 
 <a href="https://artofproblemsolving.com/texer/nrbopszm">
-<img src="/assets/euler/nrbopszm.png" alt="Long division" width="349" height="191" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/nrbopszm.png" alt="Long division" width="266" height="200" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 $$\dfrac{1}{a+1} = \frac{1}{a} - \frac{1}{a^2} + \frac{1}{a^3} + \dfrac{-\frac{1}{a^3}}{a+1}$$
