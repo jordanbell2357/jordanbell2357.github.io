@@ -9,10 +9,10 @@ title: Euler, "Elements of Algebra", Section I, Chapter 2. "Explanation of the S
 
 <span class="art">8</span> When we have to add one given number to another,
 this is indicated by the sign +, which is placed before the
-second number, and is read **plus**. Thus 5+3 signifies
+second number, and is read **plus**. Thus 5 + 3 signifies
 that we must add 3 to the number 5, in which case, every
-one knows that the result is 8; in the same manner 12+7
-make 19; 25+10 make 41; the sum of 25+41 is 66, etc.
+one knows that the result is 8; in the same manner 12 + 7
+make 19; 25 + 10 make 41; the sum of 25 + 41 is 66, etc.
 
 <span class="art">9</span> We also make use of the same sign + plus, to connect several numbers together
 for example, 7 + 5 + 9 signifies that to the number 7 we must add 5, and also 9,
@@ -57,7 +57,8 @@ from 50, and the remainder will be 25 as before.
 
 <span class="art">13</span> It is also easy to determine the value of similar expressions,
 in which both the signs + plus and - minus are found. For example; 
-12-3-5+2-1 is the same as 5. 
+12 - 3 - 5 + 2 - 1 is the same as 5.
+
 We have only to collect separately the sum of the numbers
 that have the sign + before them, and subtract from it the
 sum of those that have the sign -. Thus, the sum of 12
@@ -97,11 +98,9 @@ have before them the sign -.
 
 <span class="art">16</span> Hence it is absolutely necessary to consider what sign
 is prefixed to each number: for in Algebra, simple quantities are numbers considered
-with regard to the signs which
-precede, or affect them. Farther, we call those **positive
+with regard to the signs which precede, or affect them. Farther, we call those **positive
 quantities**, before which the sign + is found; and those
-are called **negative quantities**, which are affected by the
-sign -.
+are called **negative quantities**, which are affected by the sign -.
 
 <span class="art">17</span> The manner in which we generally calculate a person's property,
 is an apt illustration of what has just been
@@ -160,12 +159,12 @@ about which we have been speaking. I
 shall, however, content myself with remarking here, that all
 such expressions as
 
-+1-1, +2-2, +3-3, +4-4, etc.
++1 - 1, +2 - 2, +3 - 3, +4 - 4, etc.
 
 are equal to 0, or nothing. And that +2 - 5 is equal to -3:
 for if a person has 2 crowns, and owes 5, he has not only
 nothing, but still owes 3 crowns. In the same manner,
-7 - 12 is equal to -5, and 25-40 is equal to -15.
+7 - 12 is equal to -5, and 25 - 40 is equal to -15.
 
 <span class="art">22</span> The same observations hold true, when, to make the
 expression more general, letters are used instead of numbers;
