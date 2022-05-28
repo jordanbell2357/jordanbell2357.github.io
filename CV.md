@@ -6,6 +6,7 @@ permalink: /CV/
 
 - [Areas of professional and scholarly interest](#interests)
 - [CV PDF](#cv-pdf)
+- [Continuing](#continuing)
 - [Education](#education)
 - [Translations](#translations)
 - [Publications](#publications)
@@ -31,6 +32,11 @@ permalink: /CV/
 ## CV PDF {#cv-pdf}
 
 [CV](/LaTeX/CV/cv_bell.pdf)
+
+## Continuing Education {#continuing}
+
+Practical Time Series Analysis
+
 
 ## Education {#education}
 
