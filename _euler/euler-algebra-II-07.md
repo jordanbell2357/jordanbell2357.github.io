@@ -147,7 +147,13 @@ will render this operation more clear.
 for the extraction of the square root, as will appear from the
 following examples in numbers:
 
-INCOMPLETE
+<a href="https://artofproblemsolving.com/texer/vpnfjpvf">
+<img src="/assets/euler/vpnfjpvf.png" alt="Square root" width="256" height="427" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+<a href="https://artofproblemsolving.com/texer/jmwdlaqw">
+<img src="/assets/euler/jmwdlaqw.png" alt="Square root" width="379" height="522" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
 
 
