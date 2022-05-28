@@ -29,10 +29,10 @@ by the divisor $$1-a$$, thus
 
 <span class="art">291</span> This shews that the fraction $$\dfrac{1}{1-a}$$ may be exhibited under all the following forms:
 
-1. $$1+\dfrac{a}{1-a}$$
-2. $$1+a+\dfrac{a^2}{1-a}$$
-3. $$1+a+a^2+\dfrac{a^3}{1-a}$$
-4. $$1+a+a^2+a^3+\dfrac{a^4}{1-a}$$
+1. $$1+\dfrac{a}{1-a}$$,
+2. $$1+a+\dfrac{a^2}{1-a}$$,
+3. $$1+a+a^2+\dfrac{a^3}{1-a}$$,
+4. $$1+a+a^2+a^3+\dfrac{a^4}{1-a}$$,
 5. $$1+a+a^2+a^3+a^4+\dfrac{a^5}{1-a}$$, etc.
 
 Now, by considering the first of these expressions, which
@@ -109,6 +109,109 @@ that is in fact -1.
 Were we to continue the series without intermission, the
 fraction would be no longer considered; but, in that case,
 the series would still go on.
+
+294 These are the considerations which are necessary,
+when we assume for a numbers greater than unity; but if
+we suppose a less than 1, the whole becomes more intelligible : for example, let
+$$a=\frac{1}{2}$$; and we shall then have $$\dfrac{1}{1-a}=\dfrac{1}{1-\frac{1}{2}}=\dfrac{1}{\frac{1}{2}}=2$$,
+which will be equal to the following
+series
+
+1 + ½ + ¼ + ⅛ + ¹⁄₁₆ + ¹⁄₃₂ + ¹⁄₆₄ + ¹⁄₁₂₈ + etc.,
+
+to infinity. Now, if we take only two terms of this series, we
+shall have 1 + ½, and it wants ½ of being equal to $$\dfrac{1}{1-a}=2$$.
+If we take three terms, it wants ¼; for the sum is 1¾.
+If we take four terms, we have 1⅞, and the deficiency is only ⅛.
+Therefore, the more terms we take, the less the diiference
+becomes; and, consequently, if we continue the series to
+infinity, there will be no difference at all between its sum
+and the value of the fraction $$\dfrac{1}{1-a}$$, or 2.
+
+295 Let $$a=\frac{1}{3}$$; and our fraction $$\dfrac{1}{1-a}$$ will then be
+$$=\dfrac{1}{1-\frac{1}{3}}=\frac{3}{2}=1\frac{1}{2}$$,
+which, reduced to an infinite series, becomes
+
+1 + ⅓ + ⅑ + ¹⁄₂₇ + ¹⁄₈₁ + ¹⁄₂₄₃ + etc.,
+
+which is consequently equal to $$\dfrac{1}{1-a}$$.
+
+Here, if we take two terms, we have 1⅓, and there wants ⅙.
+If we take three terms, we have 1⁴⁄₉, and there will still
+be wanting ¹⁄₁₈. If we take four terms, we shall have 1¹³⁄₂₇,
+and the difference will be ¹⁄₅₄; since, therefore, the error
+always becomes three times less, it must evidently vanish
+at last.
+
+296 Suppose $$a=\frac{2}{3}$$; we shall have $$\dfrac{1}{1-a}=\dfrac{1}{1-\frac{2}{3}}=3$$,
+
+= 1 + ⅔ + ⁴⁄₉ + ⁸⁄₂₇ + ¹⁶⁄₈₁ + ³²⁄₂₄₃ + etc.,
+
+to infinity; and here,
+by taking first 1⅔, the error is 1⅓; taking three terms,
+which make 2⅑, the error is ⁸⁄₉; taking four terms, we have
+2¹¹⁄₂₇, and the error is ¹⁶⁄₂₇.
+
+297 If $$a=\frac{1}{4}$$, the fraction is $$\dfrac{1}{1-\frac{1}{4}}=\dfrac{1}{\frac{3}{4}}=1\frac{1}{3}$$;
+and the
+series becomes
+
+1 + ¼ + ¹⁄₁₆ + ¹⁄₆₄ + ¹⁄₂₅₆ + etc.
+
+The first two terms are equal to 1¼, which gives ¹⁄₁₂ for the error; and
+taking one term more, we have 1¹⁄₁₅, that is to say, only an
+error of ¹⁄₄₈.
+
+298 In the same manner we may resolve the fraction
+$$\dfrac{1}{1+a}$$, into an infinite series by actually dividing the numerator 1 by the denominator $$1+a$$, as follows.
+
+<a href="https://artofproblemsolving.com/texer/elevmfjl">
+<img src="/assets/euler/elevmfjl.png" alt="Long division" width="366" height="282" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+$$\dfrac{1}{1+a}=1-a+a^2-a^3+a^4-\dfrac{a^5}{1-a}$$
+
+Whence it follows, that the fraction $$\dfrac{1}{1+a}$$ is equal to the
+series,
+
+$$1-a+a^2-a^3+a^4-a^5+a^6-a^7, \textrm{etc.}$$
+
+299 If we make $$a=1$$, we have this remarkable comparison:
+
+$$\dfrac{1}{1+a}=\frac{1}{2}=1-1+1-1+1-1+1-1, \textrm{etc.}$$
+
+to infinity; which appears rather contradictory; for if we stop
+at -1, the series gives 0; and if we finish at +1, it gives 1;
+but this is precisely what solves the difficulty; for since we
+must go on to infinity, without stopping either at -1 or +1,
+it is evident, that the sum can neither be 0 nor 1, but
+that this result must lie between these two, and therefore
+be ½.
+
+300 Let us now make $$a=\frac{1}{2}$$, and our fraction will be
+$$\dfrac{1}{1+\frac{1}{2}}=\frac{2}{3}$$, which must therefore express the value of the
+series
+
+1 - ½ + ¼ - ⅛ + ¹⁄₁₆ - ¹⁄₃₂ + ¹⁄₆₄, etc., to infinity;
+here if we take only the two leading terms of this series, we have
+½, which is too small by ⅙; if we take three terms, we have
+¾, which is too much by ¹⁄₁₂; if we take four terms, we have ⅝,
+which is too small by ¹⁄₂₄, etc.
+
+301 Suppose again $$a=\frac{1}{3}$$, our fraction will then be $$=\dfrac{1}{1+\frac{1}{3}}=\frac{3}{4}$$,
+which must be equal to this series
+
+1 - ⅓ + ⅑ - ¹⁄₂₇ + ¹⁄₈₁ - ¹⁄₂₄₃ + ¹⁄₇₂₉, etc., continued to infinity.
+
+Now,
+by considering only two terms, we have ⅔, which is too small
+by ¹⁄₁₂; three terms make ⁷⁄₉, which is too much by ¹⁄₃₆;
+four
+terms give ²⁰⁄₂₇, which is too small by ¹⁄₁₀₈, and so on.
+
+302 The fraction $$\dfrac{1}{1+a}$$ may also be resolved into an infinite series another way; namely, by dividing
+1 by $$a+1$$, as follows:
+
 
 
 #### References
