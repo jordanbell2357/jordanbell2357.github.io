@@ -262,9 +262,19 @@ manner. Thus, if the fraction $$\dfrac{1}{1-a+a^2}$$
 were proposed, the
 infinite scries, to which it is equal, will be found as follows:
 
-<a href="https://artofproblemsolving.com/texer/qegmojmo">
-<img src="/assets/euler/qegmojmo.png" alt="Long division" width="276" height="218" style="display:block;margin-left:auto;margin-right:auto;">
+<a href="https://artofproblemsolving.com/texer/hxbggdvw">
+<img src="/assets/euler/hxbggdvw.png" alt="Long division" width="536" height="276" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
+
+We have therefore the equation
+
+$$\dfrac{1}{1-a+a^2} = 1 + a -a^3 -a^4 + a^6 + a^7, \textrm{etc.};$$
+
+where, if we make $$a=1$$, we have
+
+1 = 1 + 1 - 1 - 1 + 1 + 1 - 1 - 1, etc.
+
+which series contains twice the series found above 1 - 1 + 1 - 1, etc.
 
 
 #### References
