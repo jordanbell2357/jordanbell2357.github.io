@@ -469,9 +469,14 @@ the equation
 $$\frac{2}{5}x^3+\frac{412}{5}x^2=10x^2+224.$$
 
 Multiplying by 5 and dividing by 2, we have
-$$x^3+206x=25x^2+560$$, or $$x^3-25x^2+206x-560=0$$:
-the first,
-however, will be more convenient for trial. Here the divisors
+
+$$x^3+206x=25x^2+560,$$
+
+or
+
+$$x^3-25x^2+206x-560=0:$$
+
+the first, however, will be more convenient for trial. Here the divisors
 of the last term are 1, 2, 4, 5, 7, 8, 10, 14, 16, etc. and they
 must be taken positively; because in the second form of the
 equation the signs vary three times, which shows that all the
@@ -481,12 +486,12 @@ Here, if we first try $$x=1$$, and $$x=2$$, it is evident that
 the first side will become less than the second. We shall
 therefore make trial of other divisors.
 
-When $$x=4$$, we have 64+824=400+560, which
+When $$x=4$$, we have 64 + 824 = 400 + 560, which
 does not satisfy the terms of the equation.
 
-If $$x=5$$, we have 125+1030=625+560, which likewise does not succeed.
+If $$x=5$$, we have 125 + 1030 = 625 + 560, which likewise does not succeed.
 
-But if $$x = 7$$, we we have 343+1442=1225+560,
+But if $$x = 7$$, we we have 343 + 1442 = 1225 + 560,
 which answers to the equation; so that $$x=7$$
 is a root of
 it. Let us now seek for the other two, by dividing the
