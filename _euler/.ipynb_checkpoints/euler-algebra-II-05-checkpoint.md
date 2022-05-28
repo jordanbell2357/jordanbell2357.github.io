@@ -212,7 +212,9 @@ terms give ²⁰⁄₂₇, which is too small by ¹⁄₁₀₈, and so on.
 302 The fraction $$\dfrac{1}{1+a}$$ may also be resolved into an infinite series another way; namely, by dividing
 1 by $$a+1$$, as follows:
 
-
+<a href="https://artofproblemsolving.com/texer/nrbopszm">
+<img src="/assets/euler/nrbopszm.png" alt="Long division" width="349" height="191" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
 #### References
 
