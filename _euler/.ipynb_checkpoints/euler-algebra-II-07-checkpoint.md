@@ -139,6 +139,10 @@ will render this operation more clear.
 <img src="/assets/euler/gqwjcjed.png" alt="Polynomial square root" width="539" height="135" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
+<a href="https://artofproblemsolving.com/texer/wclmufmg">
+<img src="/assets/euler/wclmufmg.png" alt="Polynomial square root" width="810" height="175" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
 INCOMPLETE
 
 
