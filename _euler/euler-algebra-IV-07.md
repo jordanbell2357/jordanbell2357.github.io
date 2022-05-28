@@ -56,6 +56,21 @@ polygonal numbers
 </tbody>
 </table>
 
+657. We have already shewn, that it is easy, by means of
+these formulae, to find, for any given root, any polygon
+number required: but when it is required reciprocally to
+find the side, or the root of a polygon, the number of whose
+sides is known, the operation is more difficult, and always
+requires the solution of a quadratic equation; on which account the subject deserves, in this place, to be separately
+considered. In doing this we shall proceed regularly, beginning with the triangular numbers, and passing from them
+to those of a greater number of angles.
+
+658. Let therefore 91 be the given triangular number,
+the side or root of which is required.
+
+If we make this root =$$x$$, we must have
+
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
