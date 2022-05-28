@@ -169,7 +169,7 @@ $$\dfrac{1}{1+a}$$, into an infinite series by actually dividing the numerator 1
 <img src="/assets/euler/elevmfjl.png" alt="Long division" width="366" height="282" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
-$$\dfrac{1}{1+a}=1-a+a^2-a^3+a^4-\dfrac{a^5}{1-a}$$
+$$\dfrac{1}{1+a}=1-a+a^2-a^3+a^4+\dfrac{-a^5}{1-a}$$
 
 Whence it follows, that the fraction $$\dfrac{1}{1+a}$$ is equal to the
 series,
@@ -215,6 +215,57 @@ terms give ²⁰⁄₂₇, which is too small by ¹⁄₁₀₈, and so on.
 <a href="https://artofproblemsolving.com/texer/nrbopszm">
 <img src="/assets/euler/nrbopszm.png" alt="Long division" width="349" height="191" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
+
+$$\dfrac{1}{a+1} = \frac{1}{a} - \frac{1}{a^2} + \frac{1}{a^3} + \dfrac{-\frac{1}{a^3}}{a+1}$$
+
+Consequently, our fraction $$\dfrac{1}{1+a}$$, is equal to the infinite
+series
+
+$$\dfrac{1}{a+1} = \frac{1}{a} + \frac{1}{a^2} + \frac{1}{a^3} -\frac{1}{a^4} + \frac{1}{a^5} - \frac{1}{a^6}, \textrm{etc.}$$
+
+Let us make $$a=1$$, and we shall have the series
+
+1 - 1 + 1 - 1 + 1 - 1, etc. = ½,
+
+as before: and if we suppose $$a=2$$, we shall
+have the series
+
+½ - ¼ + ⅛ - ¹⁄₁₆ + ¹⁄₃₂ - ¹⁄₆₄, etc. = ⅓.
+
+303 In the same manner, by resolving the general fraction
+$$\dfrac{c}{a+b}$$ into an infinite series, we shall have,
+
+<a href="https://artofproblemsolving.com/texer/qegmojmo">
+<img src="/assets/euler/qegmojmo.png" alt="Long division" width="276" height="218" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+$$\dfrac{c}{a+b} = \frac{c}{a} - \frac{bc}{a^2} + \frac{bc^2}{a^3} - \frac{bc^3}{a^4} + \dfrac{-\frac{b^3c}{a^3}}{a+b}$$
+
+Whence it appears, that we may compare $$\dfrac{c}{a+b}$$ with the series
+$$\frac{c}{a} - \frac{bc}{a^2} + \frac{bc^2}{a^3} - \frac{bc^3}{a^4}$$, etc. continued to infinity.
+
+Let $$a=2$$, $$b=4$$, and $$c=3$$, and we shall have
+
+$$\dfrac{c}{a+b} = \dfrac{3}{2+4} = \frac{3}{6} = \frac{1}{2} = \frac{3}{2} - 3 + 6 - 12, \textrm{etc.}$$
+
+If $$a=10$$, $$b=1$$, and $$c=11$$, we shall have
+
+$$\dfrac{c}{a+b} = \dfrac{11}{10+1} = 1 = \frac{11}{10} - \frac{11}{100} + \frac{11}{1000} - \frac{11}{10000}, \textrm{etc.}$$
+
+Here if we consider only one term of the series, we have ¹¹⁄₁₀, which is too much by ⅒; if we take two terms, we
+have ⁹⁹⁄₁₀₀, which is too small by ¹⁄₁₀₀; ; if we take three terms,
+we have ¹⁰⁰¹⁄₁₀₀₀, which is too much by ¹⁄₁₀₀₀, etc.
+
+304 When there are more than two terms in the divisor,
+we may also continue the division to infinity in the same
+manner. Thus, if the fraction $$\dfrac{1}{1-a+a^2}$$
+were proposed, the
+infinite scries, to which it is equal, will be found as follows:
+
+<a href="https://artofproblemsolving.com/texer/qegmojmo">
+<img src="/assets/euler/qegmojmo.png" alt="Long division" width="276" height="218" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
 
 #### References
 
