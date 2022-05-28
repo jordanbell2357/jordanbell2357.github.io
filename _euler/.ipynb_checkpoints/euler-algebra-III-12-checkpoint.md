@@ -96,10 +96,10 @@ Now,
 
 When the denominator is 6, we find ⅙ = 0.1666666,etc.
 which is equal to 0.666666 - 0.5: but 0.666666 = ⅔, and
-0.5 = ½, wherefore 0.1666666 = ⅔ - ½; or ⁴⁄₆ - ³⁄₆=⅙.
+0.5 = ½, wherefore 0.1666666 = ⅔ - ½; or ⁴⁄₆ - ³⁄₆ = ⅙.
 
 We find, also, ²⁄₆ = 0.333333,etc. = ⅓; but ³⁄₆ becomes
-0.5000000 = ½; also ⅚ = 0.833333=0.333333+0.5, that is to say,
+0.5000000 = ½; also ⅚ = 0.833333 = 0.333333 + 0.5, that is to say,
 ⅓ + ½; or ²⁄₆ + ³⁄₆ = ⅚.
 
 <span class="art">530</span> When the denominator is 7, the decimal fractions
