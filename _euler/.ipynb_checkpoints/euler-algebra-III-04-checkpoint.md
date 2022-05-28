@@ -166,14 +166,14 @@ arithmetical progression, the first term of which is 5, the
 difference 3, and the number of terms 32; we must therefore begin
 by determining the last term; which is found by
 the rule, in **Articles 406** and **411**, to be 5 + (31·3) = 98;
-after which the sum required is easily found to be ^
+after which the sum required is easily found to be
 $$\frac{103\cdot 32}{2}=103\cdot 16$$; whence we conclude that the horse costs 1648
 pence, or 6*l.* 17*s.* 4*d.*
 
 <span class="art">420</span> Generally, let the first term be $$a$$, the difference $$d$$,
 and the number of terms $$n$$ ; and let it be required to find,
 by means of these data, the sum of the whole progression.
-As the last term must be $$a + {n - 1)d$$, the sum of the first
+As the last term must be $$a + (n - 1)d$$, the sum of the first
 and the last will be $$2a + (n-1)d$$; and multiplying this
 sum by the number of terms $$n$$, we have $$2na + n(n - l)d$$;
 the sum required therefore will be

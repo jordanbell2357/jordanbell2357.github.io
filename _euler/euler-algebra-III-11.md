@@ -85,7 +85,7 @@ and the ratio $$b$$, we have the following geometrical progression
 
 So that, when this progression consists of $$n$$ terms, the
 last term is $$ab^{n-1}$$. We must, however, remark here, that if
-the ratio $$b$$$ be greater than unity, the terms increase continually;
+the ratio $$b$$ be greater than unity, the terms increase continually;
 if $$b=1$$, the terms are all equal; lastly, if $$b$$ be
 less than 1, or a fraction, the terms continually decrease.
 Thus, when $$a=1$$, and $$b=\frac{1}{2}$$, we have this geometrical
@@ -175,14 +175,14 @@ This question is evidently reduced to finding the sum of
 all the terms of the geometrical progression 1, 2, 4, 8, 16,
 etc. continued to the 32d term. Now, that last term is 2³¹;
 and, as we have already found 2²⁰=1048576, and 2¹⁰=1024,
-we shall have 2²⁰·2¹⁰=2³⁰=1073741824;
+we shall have 2²⁰ · 2¹⁰ = 2³⁰ = 1073741824;
 and multiplying again by 2, the last term 2³¹=2147483648;
 doubling therefore this number, and subtracting unity from
 the product, the sum required becomes 4294967295 pence;
 which being reduced, we have 17895697*l.* 1*s.* 3*d.* for the
 price of the horse.[^1]
 
-[^1]: 1 pound (*l.*) = 20 shillings (*s.*).
+[^1]: 1 pound (*l.*) = 20 shillings (*s.*), 1 shilling (*s.*) = 12 pence (*d.*), 1 pound (*l.*) = 240 pence (*d.*).
 
 <span class="art">512</span> Let the ratio now be 3, and let it be required to find
 the sum of the geometrical progression 1, 3, 9, 27, 81, 243, 729, consisting of 7 terms.

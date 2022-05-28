@@ -33,7 +33,7 @@ therefore, instead of the two fractions proposed, ³⁄₆ + ²⁄₆, the
 sum of which is ⅚. And if the two fractions were united by
 the sign minus as ½ - ⅓, we should have ³⁄₆ - ²⁄₆, or ⅙.
 
-As another example, let the fractions proposed be ¾+⅝.
+As another example, let the fractions proposed be ¾ + ⅝.
 Here, since ¾ is the same as ⁶⁄₈, this value may be substituted
 for ¾, and we may then say ⁶⁄₈ + ⅝ makes ¹¹⁄₈, or 1⅜.
 

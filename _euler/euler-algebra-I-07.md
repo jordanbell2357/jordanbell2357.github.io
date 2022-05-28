@@ -68,7 +68,7 @@ undoubtedly be shorter than a foot: it is evident then, that
 <span class="art">74</span> If the numerator, on the contrary, be greater than the
 denominator, the value of the fraction is greater than unity.
 Thus ³⁄₂ is greater than 1, for ³⁄₂ is equal to ²⁄₂ together with ½.
-Now ²⁄₂ is exactly 1; consequently ³⁄₂ is equal to 1+½, that
+Now ²⁄₂ is exactly 1; consequently ³⁄₂ is equal to 1 + ½, that
 is, to an integer and a half. In the same manner, ⁴⁄₃ is equal
 to 1⅓, ⁵⁄₃ to 1⅔, and ⁷⁄₃ to 2⅓. And, in general, it is sufficient
 in such cases to divide the upper number by the lower, and

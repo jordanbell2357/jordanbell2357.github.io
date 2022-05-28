@@ -79,7 +79,7 @@ but of all these expressions ⅔ is that of which it is easiest to
 form an idea. Here therefore a problem arises, how a
 fraction, such as ⁸⁄₁₂, which is not expressed by the least
 possible numbers, may be reduced to its simplest form, or to
-*its least terms*; that is to say, in our present example, to ⅔.
+**its least terms**; that is to say, in our present example, to ⅔.
 
 <span class="art">89</span> It will be easy to resolve this problem, if we consider
 that a fraction still preserves its value, when we multiply
@@ -95,7 +95,7 @@ $$\frac{a}{b}$$, which, as was before proved, is equal to $$\frac{ma}{mb}$$.
 <span class="art">90</span> In order therefore to reduce a given fraction to its
 least terms, it is required to find a number, by which both
 the numerator and denominator may be divided. Such a
-number is called a *common divisor*; and as long as we can
+number is called a **common divisor**; and as long as we can
 find a common divisor to the numerator and the denominator,
 it is certain that the fraction may be reduced to a lower
 form; but, on the contrary, when we see that, except unity,
