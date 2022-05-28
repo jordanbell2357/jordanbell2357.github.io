@@ -7,7 +7,25 @@ title: Euler, "Elements of Algebra", Section II, Chapter 5. "Of the Resolution o
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 5. "Of the Resolution of Fractions into Infinite Series."
 
+289. When the dividend is not divisible by the divisor,
+the quotient is expressed, as we have already observed, by a
+fraction: thus, if we have to divide 1 by $$1-a$$, we obtain
+the fraction $$\dfrac{1}{1-a}$$. This, however, does not prevent us from
+attempting the division according to the rules that have been
+given, nor from continuing it as far as we please ; and we
+shall not fail thus to find the true quotient, though under
+different forms.
 
+290. To prove this, let us actually divide the dividend 1
+by the divisor $$1-a$$, thus
+
+<a href="https://artofproblemsolving.com/texer/fpedyycq">
+<img src="/assets/euler/fpedyycq.png" alt="Long division" width="182" height="282" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+<a href="https://artofproblemsolving.com/texer/zrwgmxoi">
+<img src="/assets/euler/zrwgmxoi.png" alt="Long division" width="192" height="454" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
 
 #### References
 
