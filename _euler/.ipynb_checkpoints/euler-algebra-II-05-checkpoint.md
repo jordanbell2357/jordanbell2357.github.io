@@ -110,7 +110,7 @@ Were we to continue the series without intermission, the
 fraction would be no longer considered; but, in that case,
 the series would still go on.
 
-294 These are the considerations which are necessary,
+<span class="art">294</span> These are the considerations which are necessary,
 when we assume for a numbers greater than unity; but if
 we suppose a less than 1, the whole becomes more intelligible : for example, let
 $$a=\frac{1}{2}$$; and we shall then have $$\dfrac{1}{1-a}=\dfrac{1}{1-\frac{1}{2}}=\dfrac{1}{\frac{1}{2}}=2$$,
@@ -128,7 +128,7 @@ becomes; and, consequently, if we continue the series to
 infinity, there will be no difference at all between its sum
 and the value of the fraction $$\dfrac{1}{1-a}$$, or 2.
 
-295 Let $$a=\frac{1}{3}$$; and our fraction $$\dfrac{1}{1-a}$$ will then be
+<span class="art">295</span> Let $$a=\frac{1}{3}$$; and our fraction $$\dfrac{1}{1-a}$$ will then be
 $$=\dfrac{1}{1-\frac{1}{3}}=\frac{3}{2}=1\frac{1}{2}$$,
 which, reduced to an infinite series, becomes
 
@@ -143,7 +143,7 @@ and the difference will be ¹⁄₅₄; since, therefore, the error
 always becomes three times less, it must evidently vanish
 at last.
 
-296 Suppose $$a=\frac{2}{3}$$; we shall have $$\dfrac{1}{1-a}=\dfrac{1}{1-\frac{2}{3}}=3$$,
+<span class="art">296</span> Suppose $$a=\frac{2}{3}$$; we shall have $$\dfrac{1}{1-a}=\dfrac{1}{1-\frac{2}{3}}=3$$,
 
 = 1 + ⅔ + ⁴⁄₉ + ⁸⁄₂₇ + ¹⁶⁄₈₁ + ³²⁄₂₄₃ + etc.,
 
@@ -152,7 +152,7 @@ by taking first 1⅔, the error is 1⅓; taking three terms,
 which make 2⅑, the error is ⁸⁄₉; taking four terms, we have
 2¹¹⁄₂₇, and the error is ¹⁶⁄₂₇.
 
-297 If $$a=\frac{1}{4}$$, the fraction is $$\dfrac{1}{1-\frac{1}{4}}=\dfrac{1}{\frac{3}{4}}=1\frac{1}{3}$$;
+<span class="art">297</span> If $$a=\frac{1}{4}$$, the fraction is $$\dfrac{1}{1-\frac{1}{4}}=\dfrac{1}{\frac{3}{4}}=1\frac{1}{3}$$;
 and the
 series becomes
 
@@ -162,7 +162,7 @@ The first two terms are equal to 1¼, which gives ¹⁄₁₂ for the error; and
 taking one term more, we have 1¹⁄₁₅, that is to say, only an
 error of ¹⁄₄₈.
 
-298 In the same manner we may resolve the fraction
+<span class="art">298</span> In the same manner we may resolve the fraction
 $$\dfrac{1}{1+a}$$, into an infinite series by actually dividing the numerator 1 by the denominator $$1+a$$, as follows.
 
 <a href="https://artofproblemsolving.com/texer/elevmfjl">
@@ -176,7 +176,7 @@ series,
 
 $$1-a+a^2-a^3+a^4-a^5+a^6-a^7, \textrm{etc.}$$
 
-299 If we make $$a=1$$, we have this remarkable comparison:
+<span class="art">299</span> If we make $$a=1$$, we have this remarkable comparison:
 
 $$\dfrac{1}{1+a}=\frac{1}{2}=1-1+1-1+1-1+1-1, \textrm{etc.}$$
 
@@ -188,7 +188,7 @@ it is evident, that the sum can neither be 0 nor 1, but
 that this result must lie between these two, and therefore
 be ½.
 
-300 Let us now make $$a=\frac{1}{2}$$, and our fraction will be
+<span class="art">300</span> Let us now make $$a=\frac{1}{2}$$, and our fraction will be
 $$\dfrac{1}{1+\frac{1}{2}}=\frac{2}{3}$$, which must therefore express the value of the
 series
 
@@ -198,7 +198,7 @@ here if we take only the two leading terms of this series, we have
 ¾, which is too much by ¹⁄₁₂; if we take four terms, we have ⅝,
 which is too small by ¹⁄₂₄, etc.
 
-301 Suppose again $$a=\frac{1}{3}$$, our fraction will then be $$=\dfrac{1}{1+\frac{1}{3}}=\frac{3}{4}$$,
+<span class="art">301</span> Suppose again $$a=\frac{1}{3}$$, our fraction will then be $$=\dfrac{1}{1+\frac{1}{3}}=\frac{3}{4}$$,
 which must be equal to this series
 
 1 - ⅓ + ⅑ - ¹⁄₂₇ + ¹⁄₈₁ - ¹⁄₂₄₃ + ¹⁄₇₂₉, etc., continued to infinity.
@@ -209,7 +209,7 @@ by ¹⁄₁₂; three terms make ⁷⁄₉, which is too much by ¹⁄₃₆;
 four
 terms give ²⁰⁄₂₇, which is too small by ¹⁄₁₀₈, and so on.
 
-302 The fraction $$\dfrac{1}{1+a}$$ may also be resolved into an infinite series another way; namely, by dividing
+<span class="art">302</span> The fraction $$\dfrac{1}{1+a}$$ may also be resolved into an infinite series another way; namely, by dividing
 1 by $$a+1$$, as follows:
 
 <a href="https://artofproblemsolving.com/texer/nrbopszm">
@@ -232,7 +232,7 @@ have the series
 
 ½ - ¼ + ⅛ - ¹⁄₁₆ + ¹⁄₃₂ - ¹⁄₆₄, etc. = ⅓.
 
-303 In the same manner, by resolving the general fraction
+<span class="art">303</span> In the same manner, by resolving the general fraction
 $$\dfrac{c}{a+b}$$ into an infinite series, we shall have,
 
 <a href="https://artofproblemsolving.com/texer/qegmojmo">
@@ -256,7 +256,7 @@ Here if we consider only one term of the series, we have ¹¹⁄₁₀, which is
 have ⁹⁹⁄₁₀₀, which is too small by ¹⁄₁₀₀; ; if we take three terms,
 we have ¹⁰⁰¹⁄₁₀₀₀, which is too much by ¹⁄₁₀₀₀, etc.
 
-304 When there are more than two terms in the divisor,
+<span class="art">304</span> When there are more than two terms in the divisor,
 we may also continue the division to infinity in the same
 manner. Thus, if the fraction $$\dfrac{1}{1-a+a^2}$$
 were proposed, the
@@ -275,7 +275,37 @@ where, if we make $$a=1$$, we have
 1 = 1 + 1 - 1 - 1 + 1 + 1 - 1 - 1, etc.
 
 which series contains twice the series found above 1 - 1 + 1 - 1, etc.
+Now, as we have found this to
+be ½, it is not extraordinary that we should find ²⁄₂, or 1,
+for the value of that which we have just determined.
 
+By making $$a=\frac{1}{2}$$, we shall have the equation
+
+$$\dfrac{1}{\frac{3}{4}} = \frac{4}{3} = 1 + \frac{1}{2} - \frac{1}{8} - \frac{1}{16} + \frac{1}{64} + \frac{1}{128} - \frac{1}{512}, \textrm{etc.}$$
+
+If $$a=\frac{1}{3}$$, we shall have the equation
+
+$$\dfrac{1}{\frac{7}{9}} = \frac{9}{7} = 1 + \frac{1}{3} - \frac{1}{27} - \frac{1}{81} + \frac{1}{729}, \textrm{etc.}$$
+
+and if we take the four leading terms
+of this series, we have ¹⁰⁴⁄₈₁, which is only ¹⁄₅₆₇ less than ⁹⁄₇.
+
+Suppose again $$a=\frac{2}{3}$$, we shall have
+
+$$\dfrac{1}{\frac{7}{9}} = \frac{9}{7} = 1 + \frac{2}{3} - \frac{8}{27} - \frac{16}{81} + \frac{64}{729}, \textrm{etc.}$$
+
+This series is therefore equal to the
+preceding one; and, by subtracting one from the other, we
+obtain ⅓ - ⁷⁄₂₇ - ¹⁵⁄₈₁ + ⁶³⁄₈₁, etc. which is necessarily = 0.
+
+<span class="art">305</span> The method, which we have here explained, serves
+to resolve, generally, all fractions into infinite series; which
+is often found to be of the greatest utility. It is also remarkable,
+that an infinite series, though it never ceases, may
+have a determinate value. It should likewise be observed,
+that, from this branch of mathematics, inventions of the
+utmost importance have been derived; on which account the
+subject deserves to be studied with the greatest attention.
 
 #### References
 
