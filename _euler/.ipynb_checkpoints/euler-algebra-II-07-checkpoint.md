@@ -155,10 +155,6 @@ following examples in numbers:
 <img src="/assets/euler/jmwdlaqw.png" alt="Square root" width="379" height="522" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
-
-
-
-
 <span class="art">325</span> But when there is a remainder after all the figures
 have been used, it is a proof that the number proposed is
 not a square; and, consequently, that its root cannot be
@@ -170,8 +166,6 @@ $$\sqrt{1-x^2}$$, expresses the square root of $$1-x^2$$. Instead of
 this radical sign, we may use the fractional exponent $$\frac{1}{2}$$,
 and represent the square root of $$a^2+b^2$$, for instance, by
 $$(a^2+b^2)^{\frac{1}{2}}$$.
-
-
 
 #### References
 
