@@ -185,7 +185,54 @@ that the coefficient is
 
 $$\dfrac{7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}{6\cdot 5\cdot 4 \cdot 3\cdot 2\cdot 1}=\frac{7}{1}.$$
 
-In the third term,
+In the third term, $$a^5b^2$$,
+we find the same letter $$a$$ five
+times, and the same letter $$b$$ twice; we must therefore
+divide that number first by 5 · 4 · 3 · 2 · 1, and then by
+2 · 1, whence results the coefficient
+
+$$\dfrac{7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}{5\cdot 4 \cdot 3\cdot 2\cdot 1 \cdot 2\cdot 1}=\dfrac{7 \cdot 6}{1 \cdot 2}.$$
+
+The fourth term $$a^4b^3$$ contains the letter $$a$$ four times, and
+the letter $$b$$ thrice; consequently, the whole number of the
+transpositions of the seven letters, must be divided, in the
+first place, by 4 · 3 · 2 · 1, and, secondly, by 3 · 2 · 1, and
+the coefficient becomes
+
+$$=\dfrac{7\cdot 6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}{4 \cdot 3\cdot 2\cdot 1 \cdot 2\cdot 1}=\dfrac{7 \cdot 6\cdot 5}{1 \cdot 2 \cdot 3}.$$
+
+In the same manner, we find
+$$\dfrac{7\cdot 6\cdot 5\cdot 4}{1 \cdot 2\cdot 3\cdot 4}$$
+for the coefficient
+of the fifth term, and so of the rest; by which the rule before
+given is demonstrated.
+
+360 These considerations carry us farther, and show us
+also how to find all the powers of roots composed of more
+than two terms. We shall apply them to the third power
+of $$a + b + c$$; the terms of which must be formed by all
+the possible combinations of three letters, each term having
+for its coefficient the number of its transpositions, as shown,
+**Article 352**.
+
+Here, without performing the multiplication, the third
+power of $$(a + b+ c)$$ will be,
+
+$$a^3+3a^2b+3a^2c+3ab^2+6abc+3ac^2+b^3+3b^2c+3bc^2+c^3.$$
+
+Suppose $$a=1$$, $$b=1$$, $$c=1$$, the cube of 1 + 1 + 1, or 3,
+will be
+
+1 + 3 + 3 + 3 + 6 + 3 + 1 + 3 + 3 + 1 = 27;
+
+which result is accurate, and confirms the rule. But if we
+had supposed $$a=1$$, $$b=1$$, and $$c=-1$$,
+we should have
+found for the cube of 1 + 1 - 1, that is of 1,
+
+1 + 3 - 3 + 3 - 6 + 3 + 1 - 3 + 3 - 1,
+
+which is a still farther confirmation of the rule.
 
 #### References
 
