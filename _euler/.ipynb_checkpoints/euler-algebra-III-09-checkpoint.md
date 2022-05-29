@@ -266,6 +266,22 @@ Therefore,
 
 
 
+
+487. We will propose another example, which may still
+farther illustrate this method.
+
+Ducats of Amsterdam are brought to Leipsic, having in
+the former city the value of 5 flor. 4 stivers current ; that is
+to say, 1 ducat is worth 104 stivers, and 5 ducats are worth
+26 Dutch florins. If, therefore, the *agio* of the bank at
+Amsterdam is 5 per cent. ; that is, if 105 currency are equal
+to 100 banco; and if the exchange from Leipsic to Amsterdam, in bank money, is
+
+
+[^5]: [Wiktionary: agio](https://en.wiktionary.org/wiki/agio): "The premium or percentage on a better sort of money when it is given in exchange for an inferior sort."
+
+
+
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
