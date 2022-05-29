@@ -207,6 +207,41 @@ destroy those terms, and substitute the quotient arising from
 the division by that common divisor. The preceding example will,
 in this manner, assume the following form.
 
+$$(2\cdot 20\cdot 5\cdot 100\cdot 3\cdot 105) : 1000 :: (95\cdot 2\cdot 142\cdot 100) : \dfrac{1000\cdot 95\cdot 2\cdot 142\cdot 100}{2\cdot 20\cdot 5\cdot 100\cdot 3\cdot 105};$$
+
+and after cancelling the common divisors in the numerator and denominator, this will become
+
+$$\dfrac{10\cdot 19\cdot 142}{3\cdot 21} = \frac{26980}{63} = 428\frac{16}{63} \, \textrm{ducats},$$
+
+as before.
+
+485. The method which must be observed in using the
+Rule of Reduction is this: we begin with the kind of money
+in question, and compare it with another which is to begin
+the next relation, in which we compare this second kind
+with a third, and so on. Each relation, therefore, begins
+with the same kind as the preceding relation ended with;
+and the operation is continued till we arrive at the kind of
+money which the answer requires; at the end of which we
+must reckon the fractional remainders.
+
+486. Let us give some other examples, in order to facilitate
+the practice of this calculation.
+
+If ducats gain at Hamburgh 1 per cent, on 2 Reichsthaler Banco
+(that is to say, if 50 ducats are worth, not 100, but
+101 Reichsthaler Banco), and if the exchange between Hamburg
+and Konigsberg is 119 Groschen of Poland (that is, if 1
+Reichsthaler Banco is equal to 119 Polish grosz), how many
+Polish złoty are equivalent to 1000 ducats?[^4]
+
+[^4]: 1 Polish złoty = 30 Polish grosz.
+
+It being understood that 30 Polish grosz make 1
+Polish złoty,
+
+
+
 
 #### References
 
