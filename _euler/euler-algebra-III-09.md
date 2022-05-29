@@ -215,7 +215,7 @@ $$\dfrac{10\cdot 19\cdot 142}{3\cdot 21} = \frac{26980}{63} = 428\frac{16}{63} \
 
 as before.
 
-485. The method which must be observed in using the
+<span class="art">485</span> The method which must be observed in using the
 Rule of Reduction is this: we begin with the kind of money
 in question, and compare it with another which is to begin
 the next relation, in which we compare this second kind
@@ -225,7 +225,7 @@ and the operation is continued till we arrive at the kind of
 money which the answer requires; at the end of which we
 must reckon the fractional remainders.
 
-486. Let us give some other examples, in order to facilitate
+<span class="art">486</span> Let us give some other examples, in order to facilitate
 the practice of this calculation.
 
 If ducats gain at Hamburg 1 per cent, on 2 Reichsthaler Banco
@@ -267,16 +267,20 @@ Therefore,
 
 
 
-487. We will propose another example, which may still
+<span class="art">487</span> We will propose another example, which may still
 farther illustrate this method.
 
-Ducats of Amsterdam are brought to Leipsic, having in
-the former city the value of 5 flor. 4 stivers current ; that is
-to say, 1 ducat is worth 104 stivers, and 5 ducats are worth
-26 Dutch florins. If, therefore, the *agio* of the bank at
-Amsterdam is 5 per cent. ; that is, if 105 currency are equal
-to 100 banco; and if the exchange from Leipsic to Amsterdam, in bank money, is
-
+Ducats of Amsterdam are brought to Leipzig, having in
+the former city the value of 5 guilders 4 stuivers current; that is
+to say, 1 ducat is worth 104 Dutch stuivers, and 5 ducats are worth
+26 Dutch guilders. If, therefore, the agio of the bank at
+Amsterdam is 5 per cent.;[^5] that is, if 105 currency are equal
+to 100 banco; and if the exchange from Leipzig to Amsterdam, in bank money, is
+133¼ per cent.; that is, if for
+100 dollars we pay at Leipzig 133¼ Reichsthaler;
+and lastly, 2 Dutch rijksdaalder making 5 Dutch guilder; it is required to
+determine how many Reichsthaler we must pay at Leipzig, according to these exchanges,
+for 1000 ducats?
 
 [^5]: [Wiktionary: agio](https://en.wiktionary.org/wiki/agio): "The premium or percentage on a better sort of money when it is given in exchange for an inferior sort."
 
