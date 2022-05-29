@@ -267,9 +267,11 @@ for 1000 ducats?[^5]
 [^5]: [Wiktionary: "agio"](https://en.wiktionary.org/wiki/agio): "The premium or percentage on a better sort of money when it is given in exchange for an inferior sort."
 
 1. 5 ducats = 26 guilders current
-2. 105 guilders current = 100 guilders banco, so 21 guilders current = 20 guilders banco
+2. 105 guilders current = 100 guilders banco;  
+so 21 guilders current = 20 guilders banco
 3. 5 guilder banco = 2 rijksdaalder banco
-4. 100 rijksdaalder banco =  133¼ Thaler current in Leipzig, so 400 rijksdaalder banco = 533 Thaler current in Leipzig
+4. 100 rijksdaalder banco =  133¼ Thaler current in Leipzig;  
+so 400 rijksdaalder banco = 533 Thaler current in Leipzig
 
 Therefore 210000 ducats = 554320 Thaler in Leipzig.
 
