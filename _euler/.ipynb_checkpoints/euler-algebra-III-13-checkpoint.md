@@ -7,7 +7,31 @@ title: Euler, "Elements of Algebra", Section III, Chapter 13. "Of the Calculatio
 
 #### Section III. "Of Ratios and Proportions." Chapter 13. "Of the Calculation of Interest."
 
+540. We are accustomed to express the interest of any
+principal by i^er cents, signifying how much interest is annually paid lor the sum of 100 pounds. And it is very
+usual to put out the principal sum at 5 per cent, that is, on
+such terms, that we receive 5 pounds interest for every 100
+pounds principal. Nothing therefore is more easy than to
+calculate the interest for any sum ; for we have only to say,
+according to the Rule of Three
 
+As 100 is to the principal proposed, so is the rate per
+cent to the interest required. Let the principal, for example, be 860/., its annual interest is found by this proportion ;
+
+
+Therefore 43/. is the annual interest.
+
+541. We shall not dwell any longer on examples of
+Simple Interest, but pass on immediately to the calculation
+of Compound Interest; where the chief subject of inquiry
+is, to what sum does a given principal amount, after a
+certain number of years, the interest being annually added
+to the principal. In order to resolve this question, we begin
+with the consideration, that 100/. placed out at 5 per cent,
+becomes, at the end of a year, a principal of 105/. : therefore
+let the principal be a ; its amount, at the end of the year,
+will be found, by saying ; As 100 is to «, so is 105 to the
+answer ; which gives
 
 
 #### References
