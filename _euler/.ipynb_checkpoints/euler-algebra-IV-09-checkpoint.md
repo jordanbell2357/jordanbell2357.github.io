@@ -141,7 +141,7 @@ $$x=5\pm \surd 0 = 5 \pm 0$$, that is to say, $$x$$ is in two ways $$= 5$$.
 
 <span class="art">700</span> A very remarkable case sometimes occurs, in which
 both values of $$x$$ become
-imaginary, or impossible \["imaginär oder unmöglich"\]; and it is
+imaginary, or impossible; and it is
 then wholly impossible to assign any value for $$x$$, that would
 satisfy the terms of the equation. Let it be proposed, for
 example, to divide the number 10 into two parts, such
