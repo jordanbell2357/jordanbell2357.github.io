@@ -236,32 +236,19 @@ Reichsthaler Banco is equal to 119 Polish grosz), how many
 Polish złoty are equivalent to
 1000 ducats (it being understood that 30 Polish grosz make 1 Polish złoty)?
 
-<table>
-<tbody>
-  <tr>
-    <td>1 ducat</td>
-    <td>:</td>
-    <td>2 Reichsthaler Banco</td>
-  </tr>
-  <tr>
-    <td>50 ducats</td>
-    <td>:</td>
-    <td>101 Reichsthaler Banco</td>
-  </tr>
-  <tr>
-    <td>1 ducat</td>
-    <td>:</td>
-    <td>119 Polish złoty</td>
-  </tr>
-  <tr>
-    <td>30 Polish grosz</td>
-    <td>:</td>
-    <td>1 Polish złoty</td>
-  </tr>
-</tbody>
-</table>
+1. 50 ducats = 101 Reichsthaler Banco
+2. 1 Reichsthaler Banco = 119 grosz
+3. 30 grosz = 1 złoty
 
-Therefore,
+Therefore 1500 ducats = 12019 złoty.
+
+<a href="https://artofproblemsolving.com/texer/mtqkgrbj">
+<img src="/assets/euler/mtqkgrbj.png" alt="Long division" width="62" height="110" style="display:block;margin-left:auto;margin-right:auto;">
+</a>
+
+hence 500 ducats = 4006⅓ złoty.
+Therefore, 1000 ducats = 8012⅔ złoty
+
 
 
 
