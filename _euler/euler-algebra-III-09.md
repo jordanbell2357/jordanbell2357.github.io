@@ -7,18 +7,16 @@ title: Euler, "Elements of Algebra", Section III, Chapter 9. "Observations on th
 
 #### Section III. "Of Ratios and Proportions." Chapter 9. "Observations on the Rules Proportion and their Utility."
 
-477. This theory is so useful in the common occurrences
+477 This theory is so useful in the common occurrences
 of life, that scarcely any person can do without it. There
-is always a proportion between ])rices and commodities ; and
-when difl'erent kinds of money are the subject of exchange,
+is always a proportion between prices and commodities; and
+when different kinds of money are the subject of exchange,
 the whole consists in determining their mutual relations.
 The examples furnished by these reflections will be very
 proper for illustrating the principles of proportion, and
-shewing their utility by the application of them.
+showing their utility by the application of them.
 
-
-
-478. If we wished to know, for example, the relation
+478 If we wished to know, for example, the relation
 between two kinds of money; suppose a *Louis d'or* and
 a *ducat*: we must first know the value of those pieces when
 compared with others of the same kind. Thus, a Louis d'or being,
@@ -54,7 +52,7 @@ proportion:
 
 the answer.
 
-479. At Petersburg the value of the ducat varies, and
+479 At Petersburg the value of the ducat varies, and
 depends on the course of exchange; which course determines
 the value of the ruble in Dutch stuivers, 105 of
 which make a ducat. So that when the exchange is at 45
@@ -80,7 +78,64 @@ which would give 21 rubles = 10 ducats; whence
 1 ducat = 2⅒ rubles. Lastly, when the exchange is at 44 stuivers,
 we have
 
-44:105 ∷ 1 : 2¹⁷⁄₄₄
+1 *Rbl.* : 1 *D.* ∷ 44:105,
+
+and thus[^2]
+
+[^2]: 1 ruble (*Rbl.*) = 100 kopek (*kop.*).
+
+1 *D.* = 2¹⁷⁄₄₄ *Rbl.* = 2 *Rbl.* 38⁷⁄₁₁ *kop.*
+
+480 It follows also from this, that we may compare different kinds of money,
+which we have frequently occasion to do in bills of exchange.
+
+Suppose, for example, that a person of Petersburg has
+1000 rubles to be paid to him at Berlin, and that he wishes
+to know the value of this sum in ducats at Berlin.
+
+The exchange is at 47½; that is to say, one ruble makes
+47½ stuivers; and in Holland, 20 stivers make a florin; 2½
+Dutch florins make a Dutch Reichsthaler: also, the exchange of
+Holland with Berlin is at 142; that is to say, for 100 Dutch
+Reichsthaler, 142 Reichsthaler are paid at Berlin; and lastly, the ducat
+is worth 3 Reichsthaler at Berlin.
+
+481 To resolve the question proposed, let us proceed
+step by step. Beginning therefore with the stivers, since
+1 ruble = 47½ stuivers, or 2 rubles = 95 stuivers, we shall
+have
+
+2 Rbl. : 1000 Rbl. ∷ 95 *ST.* : 47500 *ST.*;
+
+then again,
+
+20 *ST.* : 47500 *ST.* ∷ 1 *Fl.* : 2375 *Fl.*
+
+Also, since 2½ florins = 1 Dutch Reichsthaler, or 5 florins = 2 Dutch Reichsthaler;
+we shall have
+
+5 Fl. : 2375 Fl. ∷ 2 Dutch Reichsthaler : 950 Dutch Reichsthaler.
+
+Then, taking the Reichsthaler of Berlin, according to the exchange, at 142, we shall have
+
+100 Dutch Reichsthaler : 950 Dutch Reichsthaler ∷ 142 Reichsthaler : 1349 Reichsthaler.
+
+And lastly,
+
+3 Rthl. : 1349 Rthl. ∷ 1 ducat : 449⅔ ducats,
+
+which is the number sought.
+
+482 Now, in order to render these calculations still more
+complete, let us suppose that the Berlin banker refuses,
+under some pretext or other, to pay this sum, and to accept
+the bill of exchange without five per cent. discount; that is,
+paying only 100 instead of 105. In that case, we must
+make use of the following proportion:
+
+105 : 100 ∷ 449⅔ : 428¹⁶⁄₆₃ ducats;
+
+which is the answer under those conditions.
 
 
 #### References
