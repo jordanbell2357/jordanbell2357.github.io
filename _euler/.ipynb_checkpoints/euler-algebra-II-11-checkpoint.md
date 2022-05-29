@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section II, Chapter 11. "Of the Transpositi
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 11. "Of the Transposition of the Letters, on which the demonstration of the preceding Rule is founded."
 
-352 If we trace back the origin of the coefficients which
+<span class="art">352</span> If we trace back the origin of the coefficients which
 we have been considering, we shall find, that each term is
 presented, as many times as it is possible to transpose the
 letters, of which that term is composed; or, to express the
@@ -28,7 +28,7 @@ $$aabb$$ admits of six transpositions, $$aabb$$, $$abba$$, $$baba$$, $$abab$$,
 $$bbaa$$, $$baab$$, and its coefficient is 6. It is the same in all
 other cases.
 
-353 In fact, if we consider that the fourth power, for
+<span class="art">353</span> In fact, if we consider that the fourth power, for
 example, of any root consisting of more than two terms, as
 $$(a+b+c+d)^4$$, is found by the multiplication of the four
 factors,
@@ -43,7 +43,7 @@ letters, but it also presents itself, or enters into the sum, as
 many times as those letters can be differently arranged with
 respect to each other; and hence arises its coefficient.
 
-354. It is therefore of great importance to know, in how
+<span class="art">354</span> It is therefore of great importance to know, in how
 many different ways a given number of letters may be arranged;
 but, in this inquiry, we must particularly consider,
 whether the letters in question are the same, or different:
@@ -51,31 +51,31 @@ for when they are the same, there can be no transposition of
 them; and for this reason the simple powers, as
 $$a^2$$, $$a^3$$, $$a^4$$, etc. have all unity for their coefficients.
 
-355 Let us first suppose all the letters different; and,
-beginning with the simplest case of two letters, or ab,
+<span class="art">355</span> Let us first suppose all the letters different; and,
+beginning with the simplest case of two letters, or $$ab$$,
 we immediately discover that two transpositions may take place,
-namely, ab and ba.
+namely, $$ab$$ and $$ba$$.
 
-If we have three letters, abc, to consider, we observe that
+If we have three letters, $$abc$$, to consider, we observe that
 each of the three may take the first place, while the two
-others will admit of two transpositions; thus, if a be the first
-letter, we have two arrangements abc, acb; if b be in the first
-place, we have the arrangements bac, bca; lastly, if c occupy the first place,
+others will admit of two transpositions; thus, if $$a$$ be the first
+letter, we have two arrangements $$abc$$, $$acb$$; if $$b$$ be in the first
+place, we have the arrangements $$bac$$, $$bca$$; lastly, if $$c$$ occupy the first place,
 we have also two arrangements, namely,
-cab, cba; consequently the whole number of arrangements
+$$cab$$, $$cba$$; consequently the whole number of arrangements
 is 3 · 2 = 6.
 
-If there be four letters abcd, each may occupy the first
+If there be four letters $$abcd$$, each may occupy the first
 place; and in every case the three others may form six
 different arrangements, as we have just seen; therefore the
 whole number of transpositions is 4 · 6 = 24 = 4 · 3 · 2 · 1.
 
-If we have five letters, abcde, each of the five may be the
+If we have five letters, $$abcde$$, each of the five may be the
 first, and the four others will admit of twenty-four transpositions;
 so that the whole number of transpositions will
 be 5 · 24 = 120 = 5 · 4 · 3 · 2 · 1.
 
-356 Consequently, however great the number of letters
+<span class="art">356</span> Consequently, however great the number of letters
 may be, it is evident, provided they are all different, that we
 may easily determine the number of transpositions, and that
 we may for this purpose make use of the following Table:
@@ -142,18 +142,21 @@ we may for this purpose make use of the following Table:
 </tbody>
 </table>
 
-357. But, as we have intimated, the numbers in this
-Table can be made use of only when all the letters are different; for if two or more of them are alike, the number of
+<span class="art">357</span> But, as we have intimated, the numbers in this
+Table can be made use of only when all the letters are different;
+for if two or more of them are alike, the number of
 transpositions becomes much less; and if all the letters are
-the same, we have only one arrangement: we have therefore now sheAv how the numbers in the Table are to be
+the same, we have only one arrangement: we have therefore now shown
+how the numbers in the Table are to be
 diminished, according to the number of letters that are
 alike.
 
-358. When two letters are given, and those letters are
+<span class="art">358</span> When two letters are given, and those letters are
 the same, the two arrangements are reduced to one, and
 consequently the number, which we have found above, is
 reduced to the half; that is to say, it must be divided by 2.
-If we have three letters alike, the six transpositions are reduced to one; whence it follows that the numbers in the
+If we have three letters alike, the six transpositions are reduced to one;
+whence it follows that the numbers in the
 Table must be divided by 6 = 3 · 2 · 1; and, for the same
 reason, if four letters are alike, we must divide the numbers
 found by 24, or 4 · 3 · 2 · 1, etc.
@@ -168,7 +171,7 @@ we must again divide it by 2 · 1: the number of transpositions required will th
 
 $$\dfrac{6\cdot 5\cdot 4\cdot 3\cdot 2\cdot 1}{3\cdot 2\cdot 1 \cdot 2 \cdot 1} = 5 \cdot 4 \cdot 3 = 60.$$
 
-359 We may now readily determine the coefficients of
+<span class="art">359</span> We may now readily determine the coefficients of
 all the terms of any power; as for example of the seventh
 power $$(a + b)^7$$.
 
@@ -207,7 +210,7 @@ for the coefficient
 of the fifth term, and so of the rest; by which the rule before
 given is demonstrated.
 
-360 These considerations carry us farther, and show us
+<span class="art">360</span> These considerations carry us farther, and show us
 also how to find all the powers of roots composed of more
 than two terms. We shall apply them to the third power
 of $$a + b + c$$; the terms of which must be formed by all
