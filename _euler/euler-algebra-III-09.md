@@ -277,8 +277,6 @@ Therefore 210000 ducats = 554320 Thaler in Leipzig.
 <img src="/assets/euler/smvsljqk.png" alt="Long division" width="147" height="236" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
-
-
 #### References
 
 1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
