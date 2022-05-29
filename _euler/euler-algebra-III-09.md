@@ -231,7 +231,7 @@ the practice of this calculation.
 If ducats gain at Hamburg 1 per cent, on 2 Reichsthaler Banco
 (that is to say, if 50 ducats are worth, not 100, but
 101 Reichsthaler Banco), and if the exchange between Hamburg
-and Konigsberg is 119 Groschen of Poland (that is, if 1
+and Konigsberg is 119 Polish grosz (that is, if 1
 Reichsthaler Banco is equal to 119 Polish grosz), how many
 Polish złoty are equivalent to
 1000 ducats (it being understood that 30 Polish grosz make 1 Polish złoty)?
