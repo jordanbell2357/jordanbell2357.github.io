@@ -161,54 +161,6 @@ always form a square with the number of points which those
 terms indicate, thus:
 
 $$
-\begin{align}
-1&\begin{array}{c}
-\bullet
-\end{array}\\ \hline
-4&\begin{array}{cc}
-\bullet&\bullet\\
-\bullet&\bullet
-\end{array}\\ \hline
-9&\begin{array}{ccc}
-\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet
-\end{array}\\ \hline
-16&\begin{array}{cccc}
-\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet
-\end{array}\\ \hline
-25&\begin{array}{ccccc}
-\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet
-\end{array}\\ \hline
-36&\begin{array}{cccccc}
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet
-\end{array}\\ \hline
-49&\begin{array}{ccccccc}
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet
-\end{array}
-\end{align}
-$$
-
-
-$$
 1\qquad
 \begin{array}{c}
 \bullet
