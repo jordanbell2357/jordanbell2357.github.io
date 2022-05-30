@@ -59,13 +59,32 @@ consequently the value of the triangle is $$\dfrac{n^2+n}{2}$$.
 
 Thus
 
-n=1
-n=2
-n=3
-n=4
+<table>
+<tbody>
+  <tr>
+    <td>\(n=1\)</td>
+    <td>triangle is</td>
+    <td>1,</td>
+  </tr>
+  <tr>
+    <td>\(n=2\)</td>
+    <td>triangle is</td>
+    <td>3,</td>
+  </tr>
+  <tr>
+    <td>\(n=3\)</td>
+    <td>triangle is</td>
+    <td>6,</td>
+  </tr>
+  <tr>
+    <td>\(n=4\)</td>
+    <td>triangle is</td>
+    <td>10,</td>
+  </tr>
+</tbody>
+</table>
 
-and so on : and when n = 100, the triangle will be 5050.
-
+and so on: and when $$n = 100$$, the triangle will be 5050.
 
 <span class="art">429</span> This formula $$\dfrac{n^2+n}{2}$$
 is called the general formula of
@@ -124,7 +143,9 @@ in the same manner as before, we obtain numbers which are
 called pentagons, or **pentagonal numbers**, though they cannot be so well represented by points
 
 Indices
+
 Arithmetic Progression
+
 Pentagonal Numbers
 
 the indices showing the side of each pentagon.
@@ -140,7 +161,9 @@ $$n = 100$$, and obtain 14950 for the number sought.
 **hexagonal numbers**, as we see by the following progressions:
 
 Indices
+
 Arithmetic Progression
+
 Hexagonal Numbers
 
 where the indices still show the side of each hexagon.
