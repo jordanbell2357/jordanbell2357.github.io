@@ -33,17 +33,28 @@ $$
 \bullet&&\bullet\\
 &\bullet&
 \end{array}
-$$
 
-$$
 \begin{array}{ccccc}
 \bullet&&\bullet&&\bullet\\
 &\bullet&&\bullet&\\
 &&\bullet&&
 \end{array}
+
+\begin{array}{ccccccc}
+\bullet&&\bullet&&\bullet&&\bullet\\
+&\bullet&&\bullet&&\bullet&\\
+&&\bullet&&\bullet&&\\
+&&&\bullet&&&
+\end{array}
+
+\begin{array}{ccccccccc}
+\bullet&&\bullet&&\bullet&&\bullet&&\bullet\\
+&\bullet&&\bullet&&\bullet&&\bullet&\\
+&&\bullet&&\bullet&&\bullet&&\\
+&&&\bullet&&\bullet&&&\\
+&&&&\bullet&&&&
+\end{array}
 $$
-
-
 
 <span class="art">427</span> In all these triangles, we see how many points
 each side contains. In the first triangle there is only one
