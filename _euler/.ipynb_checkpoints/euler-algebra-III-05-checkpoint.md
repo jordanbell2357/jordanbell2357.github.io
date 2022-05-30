@@ -263,55 +263,55 @@ Supposing the side to be represented by $$n$$, we have
 <tbody>
   <tr>
     <td>Triangle</td>
-    <td></td>
+    <td>\(\dfrac{n^2+n}{2}=\dfrac{n(n+1)}{2}\)</td>
   </tr>
   <tr>
     <td>Square</td>
-    <td></td>
+    <td>\(\dfrac{2n^2+0n}{2}=n^2\)</td>
   </tr>
   <tr>
     <td>Pentagon</td>
-    <td></td>
+    <td>\(\dfrac{3n^2-n}{2}=\dfrac{n(3n-1)}{2}\)</td>
   </tr>
   <tr>
     <td>Hexagon</td>
-    <td></td>
+    <td>\(\dfrac{4n^2-2n}{2}=2n^2-n=n(2n-1)\)</td>
   </tr>
   <tr>
     <td>Heptagon</td>
-    <td></td>
+    <td>\(\dfrac{5n^2-3n}{2}=\dfrac{n(5n-3)}{2}\)</td>
   </tr>
   <tr>
     <td>Octagon</td>
-    <td></td>
+    <td>\(\dfrac{6n^2-4n}{2}=3n^2-2n=n(3n-2)\)</td>
   </tr>
   <tr>
     <td>Nonagon</td>
-    <td></td>
+    <td>\(\dfrac{7n^2-5n}{2}=\dfrac{n(7n-5)}{2}\)</td>
   </tr>
   <tr>
     <td>Decagon</td>
-    <td></td>
+    <td>\(\dfrac{8n^2-6n}{2}=4n^2-3n=n(4n-3)\)</td>
   </tr>
   <tr>
     <td>11-gon</td>
-    <td></td>
+    <td>\(\dfrac{9n^2-7n}{2}=\dfrac{n(9n-7)}{2}\)</td>
   </tr>
   <tr>
     <td>12-gon</td>
-    <td></td>
+    <td>\(\dfrac{10n^2-8n}{2}=5n^2-4n=n(5n-4)\)</td>
   </tr>
   <tr>
     <td>20-gon</td>
-    <td></td>
+    <td>\(\dfrac{18n^2-16n}{2}=9n^2-8n=n(9n-8)\)</td>
   </tr>
   <tr>
     <td>25-gon</td>
-    <td></td>
+    <td>\(\dfrac{23n^2-21n}{2}=\dfrac{n(23n-21)}{2}\)</td>
   </tr>
   <tr>
-    <td>m-gon</td>
-    <td></td>
+    <td>\(m\)-gon</td>
+    <td>\(\dfrac{(m-2)n^2-(m-4)n}{2}\)</td>
   </tr>
 </tbody>
 </table>
