@@ -73,6 +73,31 @@ $$
 \end{array}
 $$
 
+$$
+21\qquad
+\begin{array}{ccccccccccc}
+\bullet&&\bullet&&\bullet&&\bullet&&\bullet&&\bullet\\
+&\bullet&&\bullet&&\bullet&&\bullet&&\bullet&\\
+&&\bullet&&\bullet&&\bullet&&\bullet&&\\
+&&&\bullet&&\bullet&&\bullet&&&\\
+&&&&\bullet&&\bullet&&&&\\
+&&&&&\bullet&&&&&
+\end{array}
+$$
+
+$$
+28\qquad
+\begin{array}{ccccccccccccc}
+\bullet&&\bullet&&\bullet&&\bullet&&\bullet&&\bullet&&\bullet\\
+&\bullet&&\bullet&&\bullet&&\bullet&&\bullet&&\bullet&\\
+&&\bullet&&\bullet&&\bullet&&\bullet&&\bullet&&\\
+&&&\bullet&&\bullet&&\bullet&&\bullet&&&\\
+&&&&\bullet&&\bullet&&\bullet&&&&\\
+&&&&&\bullet&&\bullet&&&&&\\
+&&&&&&\bullet&&&&&&
+\end{array}
+$$
+
 <span class="art">427</span> In all these triangles, we see how many points
 each side contains. In the first triangle there is only one
 point; in the second there are two; in the third there are
@@ -86,8 +111,94 @@ that whose side has four; and so on; which may be represented thus:
 
 Side
 
+$$
+\begin{array}{c}
+\bullet
+\end{array}
+$$
+
+$$
+\begin{array}{ccc}
+\bullet&&\bullet\\
+\end{array}
+$$
+
+$$
+\begin{array}{ccccc}
+\bullet&&\bullet&&\bullet
+\end{array}
+$$
+
+$$
+\begin{array}{ccccccc}
+\bullet&&\bullet&&\bullet&&\bullet
+\end{array}
+$$
+
+$$
+\begin{array}{ccccccccc}
+\bullet&&\bullet&&\bullet&&\bullet&&\bullet
+\end{array}
+$$
+
+$$
+\begin{array}{ccccccccccc}
+\bullet&&\bullet&&\bullet&&\bullet&&\bullet&&\bullet
+\end{array}
+$$
+
 Triangle
 
+$$
+\begin{array}{c}
+\bullet
+\end{array}
+$$
+
+$$
+\begin{array}{ccc}
+\bullet&&\bullet\\
+&\bullet&
+\end{array}
+$$
+
+$$
+\begin{array}{ccccc}
+\bullet&&\bullet&&\bullet\\
+&\bullet&&\bullet&\\
+&&\bullet&&
+\end{array}
+$$
+
+$$
+\begin{array}{ccccccc}
+\bullet&&\bullet&&\bullet&&\bullet\\
+&\bullet&&\bullet&&\bullet&\\
+&&\bullet&&\bullet&&\\
+&&&\bullet&&&
+\end{array}
+$$
+
+$$
+\begin{array}{ccccccccc}
+\bullet&&\bullet&&\bullet&&\bullet&&\bullet\\
+&\bullet&&\bullet&&\bullet&&\bullet&\\
+&&\bullet&&\bullet&&\bullet&&\\
+&&&\bullet&&\bullet&&&\\
+&&&&\bullet&&&&
+\end{array}
+$$
+
+$$
+\begin{array}{ccccccccccc}
+\bullet&&\bullet&&\bullet&&\bullet&&\bullet&&\bullet\\
+&\bullet&&\bullet&&\bullet&&\bullet&&\bullet&\\
+&&\bullet&&\bullet&&\bullet&&\bullet&&\\
+&&&\bullet&&\bullet&&\bullet&&&\\
+&&&&\bullet&&\bullet&&&&\\
+&&&&&\bullet&&&&&
+\end{array}
+$$
 
 <span class="art">428</span> A question therefore presents itself here, whicli is,
 how to determine the triangle when the side is given? and,
