@@ -242,7 +242,7 @@ Polish złoty are equivalent to
 Therefore 1500 ducats = 12019 złoty.
 
 <a href="https://artofproblemsolving.com/texer/mtqkgrbj">
-<img src="/assets/euler/mtqkgrbj.png" alt="Long division" width="76" height="136" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/mtqkgrbj.png" alt="Long division" width="88" height="158" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 hence 500 ducats = 4006⅓ złoty.
@@ -273,7 +273,7 @@ for 1000 ducats?
 Therefore 210000 ducats = 554320 Thaler in Leipzig; so 21000 ducats = 55432 Thaler in Leipzig.
 
 <a href="https://artofproblemsolving.com/texer/smvsljqk">
-<img src="/assets/euler/smvsljqk.png" alt="Long division" width="177" height="262" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/smvsljqk.png" alt="Long division" width="206" height="331" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Thus dividing by 3,
