@@ -256,28 +256,32 @@ Ducats of Amsterdam are brought to Leipzig, having in
 the former city the value of 5 guilders 4 stuivers current (that is
 to say, 1 ducat is worth 104 Dutch stuivers, and 5 ducats are worth
 26 Dutch guilders). If, therefore, the agio of the bank at
-Amsterdam is 5 per cent. (that is, if 105 currency are equal
+Amsterdam is 5 per cent. (that is, if 105 current are equal
 to 100 banco), and if the exchange from Leipzig to Amsterdam, in bank money, is
 133¼ per cent. (that is, if for
 100 Dutch rijksdaalder banco we pay at Leipzig 133¼ Thaler current);
 and lastly, 2 Dutch rijksdaalder making 5 Dutch guilder; it is required to
 determine how many Thaler we must pay at Leipzig, according to these exchanges,
-for 1000 ducats?[^5]
+for 1000 ducats?[^5] [^6]
 
 [^5]: [Wiktionary: "agio"](https://en.wiktionary.org/wiki/agio): "The premium or percentage on a better sort of money when it is given in exchange for an inferior sort."
 
 1. 5 ducats = 26 guilders current
-2. 105 guilders current = 100 guilders banco;  
-so 21 guilders current = 20 guilders banco
+2. 105 guilders current = 100 guilders banco; so 21 guilders current = 20 guilders banco
 3. 5 guilder banco = 2 rijksdaalder banco
-4. 100 rijksdaalder banco =  133¼ Thaler current in Leipzig;  
-so 400 rijksdaalder banco = 533 Thaler current in Leipzig
+4. 100 rijksdaalder banco =  133¼ Thaler current in Leipzig; so 400 rijksdaalder banco = 533 Thaler current in Leipzig
 
-Therefore 210000 ducats = 554320 Thaler in Leipzig.
+Therefore 210000 ducats = 554320 Thaler in Leipzig; so 21000 ducats = 55432 Thaler in Leipzig.
+Dividing by 3 and then by 7,
 
 <a href="https://artofproblemsolving.com/texer/smvsljqk">
 <img src="/assets/euler/smvsljqk.png" alt="Long division" width="147" height="236" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
+
+so, dividing by 3, 7000 ducats = 18477⅓ Thaler in Leipzig;
+and then dividing by 7,
+
+1000 ducats = 2639⁴⁄₇ + ¹⁄₂₁ Thaler in Leipzig = 2639¹³⁄₂₁ Thaler in Leipzig.
 
 #### References
 
