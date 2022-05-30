@@ -100,7 +100,7 @@ Holland with Berlin is at 142; that is to say, for 100 Dutch
 rijksdaalder, 142 Reichsthaler are paid at Berlin; and lastly, the ducat
 is worth 3 Reichsthaler at Berlin.[^3]
 
-[^3]: 1 rijksdaalder = 2½ guilder (fl.)
+[^3]: 1 Dutch rijksdaalder = 2½ Dutch guilder (fl.)
 
 <span class="art">481</span> To resolve the question proposed, let us proceed
 step by step. Beginning therefore with the stuivers, since
