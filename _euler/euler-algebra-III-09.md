@@ -27,28 +27,30 @@ gives the proportion
 
 [^1]: 1 Reichsthaler (Rthl.) = 24 Groschen (Gr.).
 
-1 L. : 1 D. = 5⅓ Rthl. : 3 Rthl. = 16:9;
+1 Louis : 1 ducat = 5⅓ Reichsthaler : 3 Reichsthaler = 16:9;
 
 or to Groschen, in which case we have
 
-1 L. : 1 D. = 128:72 = 16:9,
+1 Louis : 1 ducat = 128:72 = 16:9,
 
 which proportions evidently give the true relation of
 the Louis d'or to the ducat; for the equality of the products
 of the extremes and the means gives, in both cases,
+
 9 Louis d'or = 16 ducats;
+
 and, by means of this comparison, we may
 change any sum of Louis d'or into ducats, and vice-versa.
 Thus, suppose it were required to find how many ducats
 there are in 1000 Louis d'or, we have this proportion:
 
-9 L. : 1000 L. ∷ 16 D. : 1777⁷⁄₉ D.,
+9 Louis : 1000 Louis ∷ 16 ducats : 1777⁷⁄₉ ducats,
 
 the number sought. If, on the contrary, it were required to find how many
 Louis d'or there are in 1000 ducats, we have the following
 proportion:
 
-16 D. : 1000 D. ∷ 9 L. : 562½ L.,
+16 ducats : 1000 ducats ∷ 9 Louis : 562½ Louis,
 
 the answer.
 
@@ -58,33 +60,31 @@ the value of the ruble in Dutch stuivers, 105 of
 which make a ducat. So that when the exchange is at 45
 stuivers per ruble, we have this proportion
 
-1 Rbl. : 1 D. = 45:105 = 3:7;
+1 ruble : 1 ducat = 45:105 = 3:7;
 
 and hence this equality, 7 rubles = 3 ducats.
 
-Hence again we shall find the value of a ducat in rubles;
-for
+Hence again we shall find the value of a ducat in rubles; for
 
-3 D. : 7 Rbl. = 1 D. : 2⅓ Rbl.;
+3 ducats : 7 rubles = 1 ducat : 2⅓ rubles;
 
 that is, 1 ducat is equal to 2⅓ rubles.
 
 But if the exchange were at 50 stuivers, the proportion
 would be,
 
-1 Rbl. : 1 D. = 50:105 = 10:21;
+1 ruble : 1 ducat = 50:105 = 10:21;
 
 which would give 21 rubles = 10 ducats; whence
-1 ducat = 2⅒ rubles. Lastly, when the exchange is at 44 stuivers,
-we have
+1 ducat = 2⅒ rubles. Lastly, when the exchange is at 44 stuivers, we have
 
-1 Rbl. : 1 D. = 44:105,
+1 ruble : 1 ducat = 44:105,
 
 and thus[^2]
 
 [^2]: 1 ruble = 100 kopeks.
 
-1 D. = 2¹⁷⁄₄₄ Rbl. = 2 Rbl. 38⁷⁄₁₁ kopeks.
+1 ducat = 2¹⁷⁄₄₄ rubles = 2 rubles 38⁷⁄₁₁ kopeks.
 
 <span class="art">480</span> It follows also from this, that we may compare different kinds of money,
 which we have frequently occasion to do in bills of exchange.
@@ -95,8 +95,7 @@ to know the value of this sum in ducats at Berlin.
 
 The exchange is at 47½; that is to say, one ruble makes
 47½ stuivers; and in Holland, 20 stuivers make a Dutch guilder; 2½
-guilder
-make a Dutch rijksdaalder: also, the exchange of
+guilder make a Dutch rijksdaalder: also, the exchange of
 Holland with Berlin is at 142; that is to say, for 100 Dutch
 rijksdaalder, 142 Reichsthaler are paid at Berlin; and lastly, the ducat
 is worth 3 Reichsthaler at Berlin.[^3]
@@ -108,24 +107,24 @@ step by step. Beginning therefore with the stuivers, since
 1 ruble = 47½ stuivers, or 2 rubles = 95 stuivers, we shall
 have
 
-2 Rbl. : 1000 Rbl. ∷ 95 st. : 47500 st.;
+2 rubles : 1000 rubles ∷ 95 stuivers : 47500 stuivers;
 
 then again,
 
-20 st. : 47500 st. ∷ 1 fl. : 2375 fl.
+20 stuivers : 47500 stuivers ∷ 1 guilder : 2375 guilder
 
 Also, since 2½ Dutch guilder = 1 Dutch rijksdaalder, or 5 Dutch guilder = 2 Dutch rijksdaalder;
 we shall have
 
-5 fl. : 2375 fl. ∷ 2 Dutch rijksdaalder : 950 Dutch rijksdaalder.
+5 guilder : 2375 guilder ∷ 2 rijksdaalder : 950 rijksdaalder.
 
 Then, taking the Reichsthaler of Berlin, according to the exchange, at 142, we shall have
 
-100 Dutch rijksdaalder : 950 Dutch rijksdaalder ∷ 142 Rthl. : 1349 Rthl.
+100 rijksdaalder : 950 rijksdaalder ∷ 142 Reichsthaler : 1349 Reichsthaler
 
 And lastly,
 
-3 Rthl. : 1349 Rthl. ∷ 1 ducat : 449⅔ ducats,
+3 Reichsthaler : 1349 Reichsthaler ∷ 1 ducat : 449⅔ ducats,
 
 which is the number sought.
 
@@ -228,7 +227,7 @@ must reckon the fractional remainders.
 <span class="art">486</span> Let us give some other examples, in order to facilitate
 the practice of this calculation.
 
-If ducats gain at Hamburg 1 per cent, on 2 Reichsthaler Banco
+If ducats gain at Hamburg 1 per cent., on 2 Reichsthaler Banco
 (that is to say, if 50 ducats are worth, not 100, but
 101 Reichsthaler Banco), and if the exchange between Hamburg
 and Konigsberg is 119 Polish grosz (that is, if 1
@@ -257,12 +256,12 @@ the former city the value of 5 guilders 4 stuivers current (that is
 to say, 1 ducat is worth 104 Dutch stuivers, and 5 ducats are worth
 26 Dutch guilders). If, therefore, the agio of the bank at
 Amsterdam is 5 per cent. (that is, if 105 current are equal
-to 100 banco), and if the exchange from Leipzig to Amsterdam, in bank money, is
+to 100 banco),[^5] and if the exchange from Leipzig to Amsterdam, in bank money, is
 133¼ per cent. (that is, if for
 100 Dutch rijksdaalder banco we pay at Leipzig 133¼ Thaler current);
 and lastly, 2 Dutch rijksdaalder making 5 Dutch guilder; it is required to
 determine how many Thaler we must pay at Leipzig, according to these exchanges,
-for 1000 ducats?[^5] [^6]
+for 1000 ducats?
 
 [^5]: [Wiktionary: "agio"](https://en.wiktionary.org/wiki/agio): "The premium or percentage on a better sort of money when it is given in exchange for an inferior sort."
 
@@ -280,8 +279,9 @@ Dividing by 3 and then by 7,
 
 so, dividing by 3, 7000 ducats = 18477⅓ Thaler in Leipzig;
 and then dividing by 7,
+1000 ducats = 2639⁴⁄₇ + ¹⁄₂₁ Thaler in Leipzig. Therefore,
 
-1000 ducats = 2639⁴⁄₇ + ¹⁄₂₁ Thaler in Leipzig = 2639¹³⁄₂₁ Thaler in Leipzig.
+1000 ducats = 2639¹³⁄₂₁ Thaler in Leipzig.
 
 #### References
 
