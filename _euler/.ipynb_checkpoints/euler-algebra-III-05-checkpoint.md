@@ -218,15 +218,16 @@ $$
 $$
 
 $$
+49
 \begin{array}{ccccccc}
 49&&&&&\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
-\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet
 \end{array}
 $$
 
