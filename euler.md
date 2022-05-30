@@ -4,7 +4,7 @@ title: Euler
 permalink: /euler/
 ---
 
-## Euler, *The Elements of Algebra*
+## Euler, *The Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
 
 {% for chapter in site.euler %}
 - [{{chapter.title}}]({{ chapter.url }})
