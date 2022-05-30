@@ -95,12 +95,12 @@ to know the value of this sum in ducats at Berlin.
 
 The exchange is at 47½; that is to say, one ruble makes
 47½ stuivers; and in Holland, 20 stuivers make a Dutch guilder; 2½
-guilder make a Dutch rijksdaalder: also, the exchange of
+guilders make a Dutch rijksdaalder: also, the exchange of
 Holland with Berlin is at 142; that is to say, for 100 Dutch
 rijksdaalder, 142 Reichsthaler are paid at Berlin; and lastly, the ducat
 is worth 3 Reichsthaler at Berlin.[^3]
 
-[^3]: 1 Dutch rijksdaalder = 2½ Dutch guilder (fl.)
+[^3]: 1 Dutch rijksdaalder = 2½ Dutch guilders (fl.)
 
 <span class="art">481</span> To resolve the question proposed, let us proceed
 step by step. Beginning therefore with the stuivers, since
@@ -111,12 +111,12 @@ have
 
 then again,
 
-20 stuivers : 47500 stuivers ∷ 1 guilder : 2375 guilder
+20 stuivers : 47500 stuivers ∷ 1 guilder : 2375 guilders
 
-Also, since 2½ Dutch guilder = 1 Dutch rijksdaalder, or 5 Dutch guilder = 2 Dutch rijksdaalder;
+Also, since 2½ Dutch guilders = 1 Dutch rijksdaalder, or 5 Dutch guilders = 2 Dutch rijksdaalder;
 we shall have
 
-5 guilder : 2375 guilder ∷ 2 rijksdaalder : 950 rijksdaalder.
+5 guilders : 2375 guilders ∷ 2 rijksdaalder : 950 rijksdaalder.
 
 Then, taking the Reichsthaler of Berlin, according to the exchange, at 142, we shall have
 
@@ -158,11 +158,11 @@ preceding operations:
     <td>2nd</td>
     <td>20 stuivers</td>
     <td>:</td>
-    <td>Dutch guilder</td>
+    <td>1 Dutch guilder</td>
   </tr>
   <tr>
     <td>3rd</td>
-    <td>5 Dutch guilder</td>
+    <td>5 Dutch guilders</td>
     <td>:</td>
     <td>2 Dutch rijksdaalder</td>
   </tr>
