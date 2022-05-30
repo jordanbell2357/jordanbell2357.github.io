@@ -17,8 +17,8 @@ proper for illustrating the principles of proportion, and
 showing their utility by the application of them.
 
 <span class="art">478</span> If we wished to know, for example, the relation
-between two kinds of money; suppose a *Louis d'or* (L.) and
-a *ducat* (D.): we must first know the value of those pieces when
+between two kinds of money; suppose a Louis d'or and
+a ducat: we must first know the value of those pieces when
 compared with others of the same kind. Thus, a Louis d'or being,
 at Berlin, worth 5 Reichsthaler and 8 Groschen,[^1] and
 a ducat being worth 3 Reichsthaler, we may reduce these two
