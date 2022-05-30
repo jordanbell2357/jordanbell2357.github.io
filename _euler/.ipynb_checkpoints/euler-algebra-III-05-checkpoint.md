@@ -28,7 +28,20 @@ for 1 = 1, 1 + 2 = 3, 1 + 2 + 3 = 6, 1 + 2 + 3 + 4 = 10, etc.
 Which numbers are called **triangular**, or trigonal numbers, because we may always
 arrange as many points in the form of a triangle as they contain units, thus:
 
-1 3 6 10 15
+$$
+\begin{array}{ccc}
+\bullet&&\bullet\\
+&\bullet&
+\end{array}
+$$
+
+$$
+\begin{array}{ccccc}
+\bullet&&\bullet&&\bullet\\
+&\bullet&&\bullet&\\
+&&\bullet&&
+\end{array}
+$$
 
 
 
