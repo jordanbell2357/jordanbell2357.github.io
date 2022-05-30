@@ -219,27 +219,27 @@ also, from the following particular cases:
   <tr>
     <td>1</td>
     <td>\(\dfrac{(1\cdot 3)-1}{2}\)</td>
-    <td>=1</td>
+    <td>= 1</td>
   </tr>
   <tr>
-    <td>1+3</td>
+    <td>1 + 3</td>
     <td>\(\dfrac{(3\cdot 3)-1}{2}\)</td>
-    <td>=4</td>
+    <td>= 4</td>
   </tr>
   <tr>
-    <td>1+3+9</td>
+    <td>1 + 3 + 9</td>
     <td>\(\dfrac{(3\cdot 9)-1}{2}\)</td>
-    <td>=13</td>
+    <td>= 13</td>
   </tr>
   <tr>
-    <td>1+3+9+27</td>
+    <td>1 + 3 + 9 + 27</td>
     <td>\(\dfrac{(3\cdot 27)-1}{2}\)</td>
-    <td>=40</td>
+    <td>= 40</td>
   </tr>
   <tr>
-    <td>1+3+9+27+81</td>
+    <td>1 + 3 + 9 + 27 + 81</td>
     <td>\(\dfrac{(3\cdot 81)-1}{2}\)</td>
-    <td>=121.</td>
+    <td>= 121.</td>
   </tr>
 </tbody>
 </table>
