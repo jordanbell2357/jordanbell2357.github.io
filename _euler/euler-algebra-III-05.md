@@ -142,11 +142,49 @@ farther, having already treated of them at length.
 in the same manner as before, we obtain numbers which are
 called pentagons, or **pentagonal numbers**, though they cannot be so well represented by points
 
-Indices
-
-Arithmetic Progression
-
-Pentagonal Numbers
+<table>
+<tbody>
+  <tr>
+    <td>Indices</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>etc.</td>
+  </tr>
+  <tr>
+    <td>Arithmetic Progression</td>
+    <td>1,</td>
+    <td>4,</td>
+    <td>7,</td>
+    <td>10,</td>
+    <td>13,</td>
+    <td>16,</td>
+    <td>19,</td>
+    <td>22,</td>
+    <td>25,</td>
+    <td>etc.</td>
+  </tr>
+  <tr>
+    <td>Pentagonal Numbers</td>
+    <td>1,</td>
+    <td>5,</td>
+    <td>12,</td>
+    <td>22,</td>
+    <td>35,</td>
+    <td>51,</td>
+    <td>70,</td>
+    <td>92,</td>
+    <td>117,</td>
+    <td>etc.</td>
+  </tr>
+</tbody>
+</table>
 
 the indices showing the side of each pentagon.
 
@@ -160,11 +198,49 @@ $$n = 100$$, and obtain 14950 for the number sought.
 <span class="art">434</span> If we suppose the difference to be 4, we arrive at
 **hexagonal numbers**, as we see by the following progressions:
 
-Indices
-
-Arithmetic Progression
-
-Hexagonal Numbers
+<table>
+<tbody>
+  <tr>
+    <td>Indices</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>etc.</td>
+  </tr>
+  <tr>
+    <td>Arithmetic Progression</td>
+    <td>1,</td>
+    <td>5,</td>
+    <td>9,</td>
+    <td>13,</td>
+    <td>17,</td>
+    <td>21,</td>
+    <td>25,</td>
+    <td>29,</td>
+    <td>33,</td>
+    <td>etc.</td>
+  </tr>
+  <tr>
+    <td>Hexagonal Numbers</td>
+    <td>1,</td>
+    <td>6,</td>
+    <td>15,</td>
+    <td>28,</td>
+    <td>45,</td>
+    <td>66,</td>
+    <td>91,</td>
+    <td>120,</td>
+    <td>153,</td>
+    <td>etc.</td>
+  </tr>
+</tbody>
+</table>
 
 where the indices still show the side of each hexagon.
 
@@ -183,9 +259,49 @@ polygonal numbers.
 
 Supposing the side to be represented by $$n$$, we have
 
-
-
-$$m$$-gon
+<table>
+<tbody>
+  <tr>
+    <td>Indices</td>
+    <td>1</td>
+    <td>2</td>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+    <td>6</td>
+    <td>7</td>
+    <td>8</td>
+    <td>9</td>
+    <td>etc.</td>
+  </tr>
+  <tr>
+    <td>Arithmetic Progression</td>
+    <td>1,</td>
+    <td>5,</td>
+    <td>9,</td>
+    <td>13,</td>
+    <td>17,</td>
+    <td>21,</td>
+    <td>25,</td>
+    <td>29,</td>
+    <td>33,</td>
+    <td>etc.</td>
+  </tr>
+  <tr>
+    <td>Hexagonal Numbers</td>
+    <td>1,</td>
+    <td>6,</td>
+    <td>15,</td>
+    <td>28,</td>
+    <td>45,</td>
+    <td>66,</td>
+    <td>91,</td>
+    <td>120,</td>
+    <td>153,</td>
+    <td>etc.</td>
+  </tr>
+</tbody>
+</table>
 
 <span class="art">437</span> So that the side being $$n$$, the $$m$$-gonal number will
 be represented by $$\dfrac{(m-2)n^2-(m-4)n}{2}$$;
