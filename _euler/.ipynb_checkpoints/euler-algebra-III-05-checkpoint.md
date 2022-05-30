@@ -117,36 +117,6 @@ $$
 \end{array}
 $$
 
-$$
-\begin{array}{ccc}
-\bullet&&\bullet\\
-\end{array}
-$$
-
-$$
-\begin{array}{ccccc}
-\bullet&&\bullet&&\bullet
-\end{array}
-$$
-
-$$
-\begin{array}{ccccccc}
-\bullet&&\bullet&&\bullet&&\bullet
-\end{array}
-$$
-
-$$
-\begin{array}{ccccccccc}
-\bullet&&\bullet&&\bullet&&\bullet&&\bullet
-\end{array}
-$$
-
-$$
-\begin{array}{ccccccccccc}
-\bullet&&\bullet&&\bullet&&\bullet&&\bullet&&\bullet
-\end{array}
-$$
-
 Triangle
 
 $$
@@ -155,12 +125,32 @@ $$
 \end{array}
 $$
 
+Side
+
+$$
+\begin{array}{ccc}
+\bullet&&\bullet\\
+\end{array}
+$$
+
+Triangle
+
 $$
 \begin{array}{ccc}
 \bullet&&\bullet\\
 &\bullet&
 \end{array}
 $$
+
+Side
+
+$$
+\begin{array}{ccccc}
+\bullet&&\bullet&&\bullet
+\end{array}
+$$
+
+Triangle
 
 $$
 \begin{array}{ccccc}
@@ -169,6 +159,16 @@ $$
 &&\bullet&&
 \end{array}
 $$
+
+Side
+
+$$
+\begin{array}{ccccccc}
+\bullet&&\bullet&&\bullet&&\bullet
+\end{array}
+$$
+
+Triangle
 
 $$
 \begin{array}{ccccccc}
@@ -179,6 +179,16 @@ $$
 \end{array}
 $$
 
+Side
+
+$$
+\begin{array}{ccccccccc}
+\bullet&&\bullet&&\bullet&&\bullet&&\bullet
+\end{array}
+$$
+
+Triangle
+
 $$
 \begin{array}{ccccccccc}
 \bullet&&\bullet&&\bullet&&\bullet&&\bullet\\
@@ -188,6 +198,16 @@ $$
 &&&&\bullet&&&&
 \end{array}
 $$
+
+Side
+
+$$
+\begin{array}{ccccccccccc}
+\bullet&&\bullet&&\bullet&&\bullet&&\bullet&&\bullet
+\end{array}
+$$
+
+Triangle
 
 $$
 \begin{array}{ccccccccccc}
