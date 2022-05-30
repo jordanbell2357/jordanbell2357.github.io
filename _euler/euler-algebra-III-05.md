@@ -169,12 +169,12 @@ $$
 \bullet&\bullet\\
 \bullet&\bullet
 \end{array}\\
-9\begin{array}{ccc}
+9&\begin{array}{ccc}
 \bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet
 \end{array}\\
-16\begin{array}{cccc}
+16&\begin{array}{cccc}
 \bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet\\
