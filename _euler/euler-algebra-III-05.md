@@ -29,14 +29,14 @@ Which numbers are called **triangular**, or trigonal numbers, because we may alw
 arrange as many points in the form of a triangle as they contain units, thus:
 
 $$
-1
+1\qquad
 \begin{array}{c}
 \bullet
 \end{array}
 $$
 
 $$
-3
+3\qquad
 \begin{array}{ccc}
 \bullet&&\bullet\\
 &\bullet&
@@ -44,7 +44,7 @@ $$
 $$
 
 $$
-6
+6\qquad
 \begin{array}{ccccc}
 \bullet&&\bullet&&\bullet\\
 &\bullet&&\bullet&\\
@@ -53,7 +53,7 @@ $$
 $$
 
 $$
-10
+10\qquad
 \begin{array}{ccccccc}
 \bullet&&\bullet&&\bullet&&\bullet\\
 &\bullet&&\bullet&&\bullet&\\
@@ -63,7 +63,7 @@ $$
 $$
 
 $$
-15
+15\qquad
 \begin{array}{ccccccccc}
 \bullet&&\bullet&&\bullet&&\bullet&&\bullet\\
 &\bullet&&\bullet&&\bullet&&\bullet&\\
@@ -161,14 +161,14 @@ always form a square with the number of points which those
 terms indicate, thus:
 
 $$
-1
+1\qquad
 \begin{array}{c}
 \bullet
 \end{array}
 $$
 
 $$
-4
+4\qquad
 \begin{array}{cc}
 \bullet&\bullet\\
 \bullet&\bullet
@@ -176,7 +176,7 @@ $$
 $$
 
 $$
-9
+9\qquad
 \begin{array}{ccc}
 \bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet\\
@@ -185,7 +185,7 @@ $$
 $$
 
 $$
-16
+16\qquad
 \begin{array}{cccc}
 \bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet\\
@@ -195,7 +195,7 @@ $$
 $$
 
 $$
-25
+25\qquad
 \begin{array}{ccccc}
 \bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet\\
@@ -206,7 +206,7 @@ $$
 $$
 
 $$
-36
+36\qquad
 \begin{array}{cccccc}
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
@@ -218,7 +218,7 @@ $$
 $$
 
 $$
-49
+49\qquad
 \begin{array}{ccccccc}
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
