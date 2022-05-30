@@ -29,23 +29,23 @@ Which numbers are called **triangular**, or trigonal numbers, because we may alw
 arrange as many points in the form of a triangle as they contain units, thus:
 
 $$
+1
 \begin{array}{c}
-1&\\
 \bullet
 \end{array}
 $$
 
 $$
+3
 \begin{array}{ccc}
-3&&\\
 \bullet&&\bullet\\
 &\bullet&
 \end{array}
 $$
 
 $$
+6
 \begin{array}{ccccc}
-6&&&&\\
 \bullet&&\bullet&&\bullet\\
 &\bullet&&\bullet&\\
 &&\bullet&&
@@ -53,8 +53,8 @@ $$
 $$
 
 $$
+10
 \begin{array}{ccccccc}
-10&&&&&&
 \bullet&&\bullet&&\bullet&&\bullet\\
 &\bullet&&\bullet&&\bullet&\\
 &&\bullet&&\bullet&&\\
@@ -63,8 +63,8 @@ $$
 $$
 
 $$
+15
 \begin{array}{ccccccccc}
-15&&&&&&&&
 \bullet&&\bullet&&\bullet&&\bullet&&\bullet\\
 &\bullet&&\bullet&&\bullet&&\bullet&\\
 &&\bullet&&\bullet&&\bullet&&\\
@@ -161,23 +161,23 @@ always form a square with the number of points which those
 terms indicate, thus:
 
 $$
+1
 \begin{array}{c}
-1&\\
 \bullet
 \end{array}
 $$
 
 $$
+4
 \begin{array}{cc}
-4&\\
 \bullet&\bullet\\
 \bullet&\bullet
 \end{array}
 $$
 
 $$
+9
 \begin{array}{ccc}
-9&&\\
 \bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet
@@ -185,8 +185,8 @@ $$
 $$
 
 $$
+16
 \begin{array}{cccc}
-16&&&\\
 \bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet\\
@@ -195,8 +195,8 @@ $$
 $$
 
 $$
+25
 \begin{array}{ccccc}
-25&&&&\\
 \bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet\\
@@ -206,8 +206,8 @@ $$
 $$
 
 $$
+36
 \begin{array}{cccccc}
-36&&&&&\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
@@ -220,7 +220,6 @@ $$
 $$
 49
 \begin{array}{ccccccc}
-49&&&&&\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
