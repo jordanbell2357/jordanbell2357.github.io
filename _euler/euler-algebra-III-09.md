@@ -139,7 +139,7 @@ make use of the following proportion:
 
 which is the answer under those conditions.
 
-<span class="art">483</span> We have shewn that six operations are necessary in
+<span class="art">483</span> We have shown that six operations are necessary in
 making use of the *Rule of Three*; but we can greatly
 abridge those calculations by a rule which is called the *Rule of Reduction*,
 or *Double Rule of Three*. To explain which,
