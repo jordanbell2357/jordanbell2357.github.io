@@ -144,39 +144,72 @@ always form a square with the number of points which those
 terms indicate, thus:
 
 $$
+\begin{array}{c}
+1&\\
+\bullet
+\end{array}
+$$
+
+$$
 \begin{array}{cc}
+4&\\
 \bullet&\bullet\\
 \bullet&\bullet
 \end{array}
+$$
 
+$$
 \begin{array}{ccc}
+9&&\\
 \bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet
 \end{array}
+$$
 
+$$
 \begin{array}{cccc}
+16&&&\\
 \bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet
 \end{array}
+$$
 
+$$
 \begin{array}{ccccc}
+25&&&&\\
 \bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet
 \end{array}
+$$
 
+$$
 \begin{array}{cccccc}
+36&&&&&\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
 \bullet&\bullet&\bullet&\bullet&\bullet&\bullet
+\end{array}
+$$
+
+$$
+\begin{array}{ccccccc}
+49&&&&&\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\bullet
 \end{array}
 $$
 
