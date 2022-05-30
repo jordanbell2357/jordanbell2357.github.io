@@ -7,182 +7,188 @@ title: Euler, "Elements of Algebra", Section III, Chapter 5. "Of Figurate, or Po
 
 #### Section III. "Of Ratios and Proportions." Chapter 5. "Of Figurate, or Polygonal Numbers."
 
-425 The summation of arithmetical progressions, which
+<span class="art">425</span> The summation of arithmetical progressions, which
 begin by 1, and the difference of which is 1, 2, 3, or any
-Other integer, leads to the theory of polygonal numbers,
+other integer, leads to the theory of *polygonal numbers*,
 which are formed by adding together the terms of any such
 progression.
 
+<span class="art">426</span> Suppose the difference to be 1; then, since the first
+term is 1 also, we shall have the arithmetical progression,
 
-426. Suppose the difference to be 1 ; then, since the first
-term is 1 also, we shall have the arithmetical progression, 1,
-2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, &c. and if in this progression we take the sum of one, of two, of three, Sec. terms,
-the following series of numbers will arise :
+1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, etc.
+
+and if in this progression we take the sum of one, of two, of three, etc. terms,
+the following series of numbers will arise:
 
 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, &c.
 
 for 1 = 1, 1 + 2 = 3, 1 + 2 + 3 = 6, 1 + 2 + 3 + 4 = 10, etc.
 
-Which nuiribers are called triangidar, or trigonal numbers, because we may always arrange as many points in the
-form of a triangle as they contain units, thus
+Which numbers are called **triangular**, or trigonal numbers, because we may always
+arrange as many points in the form of a triangle as they contain units, thus:
 
-13 6 10 15
+1 3 6 10 15
 
-427. In all these triangles, we see how many points
+
+
+<span class="art">427</span> In all these triangles, we see how many points
 each side contains. In the first triangle there is only one
-point ; in the second there are two ; in the third there are
-three ; in the fourth there are four, &c. : so that the triangular numbers, or the number of points, which is simply
+point; in the second there are two; in the third there are
+three; in the fourth there are four, etc.: so that the triangular numbers,
+or the number of points, which is simply
 called the triangle, are arranged according to the number of
 points which the side contains, which number is called the
-side; that is, the third triangular number, or the third
+**side**; that is, the third triangular number, or the third
 triangle, is that whose side has three points; the fourth,
-that whose side has four ; and so on ; which may be represented thus:
+that whose side has four; and so on; which may be represented thus:
+
+Side
+
+Triangle
 
 
 
-
-428. A question therefore presents itself here, whicli is,
-how to determine the triangle when the side is given .? and,
+<span class="art">428</span> A question therefore presents itself here, whicli is,
+how to determine the triangle when the side is given? and,
 after what has been said, this may be easily resolved.
 
 For if the side be $$n$$, the triangle will be 1 + 2 + 3 + ⋯ + $$n$$.
-Now, the sum ol this progression is $$\dfrac{n^2+n}{2}$$;
-consequently
-the value of the triangle is $$\dfrac{n^2+n}{2}$$.
+Now, the sum of this progression is $$\dfrac{n^2+n}{2}$$;
+consequently the value of the triangle is $$\dfrac{n^2+n}{2}$$.
 
 Thus
 
-
+n=1
+n=2
+n=3
+n=4
 
 and so on : and when n = 100, the triangle will be 5050.
 
 
-429. This formula
-
-
+<span class="art">429</span> This formula $$\dfrac{n^2+n}{2}$$
 is called the general formula of
 triangular numbers; because by it we find the triangular
 number, or the triangle, which answers to any side indicated
-by n.
+by $$n$$.
 
 
-This may be transformed into
-
-
-
+This may be transformed into $$\dfrac{n(n+1)}{2}$$;
 which serves also
-to facilitate the calculation ; since one of the two numbers n,
-or w-{- 1, must always be an even number, and consequently
+to facilitate the calculation; since one of the two numbers $$n$$,
+or $$n+1$$, must always be an even number, and consequently
 divisible by 2.
 
 
-So, if w = 12, the triangle is
+So, if $$n = 12$$, the triangle is $$\dfrac{12\cdot 13}{2}=6\cdot 13=78$$;
+and if $$n=15$$, the triangle is $$\dfrac{15\cdot 16}{2}=15\cdot 8=120$$, etc.
 
+<span class="art">430</span> Let us now suppose the difference to be 2, and we
+sliall have the following arithmetical progression:
 
-
-
-430. Let us now suppose the difference to be 2, and we
-sliall have the following arithmetical progression
-
-1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21
+1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, etc.
 
 the sums of which, taking successively one, two, three, four
-terms, &c. form the tbllowing series
+terms, etc. form the tbllowing series:
 
-1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, &c.
+1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, etc.
 
-the terms of which are called quadrangnlar numbers, or
-squares; since they represent the squares of the natural
-numbers, as we have already seen ; and this denomination
+the terms of which are called quadrangular numbers, or
+**squares**; since they represent the squares of the natural
+numbers, as we have already seen; and this denomination
 is the more suitable from this circumstance, that we can
 always form a square with the number of points which those
-terms indicate, thus
+terms indicate, thus:
+
+1
+4
+9
+16
+25
 
 
-
-431. We see here, that the side of any square contains
-precisely the number of points which the square root indicates. 'Ihus, for example, the side of the square 16 consists of 4 points ; that of the square 25 consists of 5 points
-;
-and, in general, if the side be n, that is, if the number of the
-terms of the progression, 1, 3, 5, 7, &c. which we have
-taken, be expressed by w, the square, or the quadrangular
-number, will be equal to the sum of those terms ; that is to
-n^i as we have already seen. Article 422; but it is unnecessary to extend our consideration of square numbers any
+<span class="art">431</span> We see here, that the side of any square contains
+precisely the number of points which the square root indicates. Thus, for example,
+the side of the square 16 consists of 4 points; that of the square 25 consists of 5 points;
+and, in general, if the side be $$n$$, that is, if the number of the
+terms of the progression, 1, 3, 5, 7, etc. which we have
+taken, be expressed by $$n$$, the square, or the quadrangular
+number, will be equal to the sum of those terms; that is to
+$$n^2$$, as we have already seen, **Article 422**; but it is unnecessary
+to extend our consideration of square numbers any
 farther, having already treated of them at length.
 
-
-432. If now we call the difference 3, and take the sums
+<span class="art">432</span> If now we call the difference 3, and take the sums
 in the same manner as before, we obtain numbers which are
-called pentagons, or pentagonal numbers, though they cannot be so well represented by points
+called pentagons, or **pentagonal numbers**, though they cannot be so well represented by points
 
+Indices
+Arithmetic Progression
+Pentagonal Numbers
 
-the indices shewino- the side of each pentat^^on.
+the indices showing the side of each pentagon.
 
+<span class="art">433</span> It follows from this, that if we make the side $$n$$, the
+pentagonal number will be $$\dfrac{3n^2-n}{2}=\dfrac{n(3n-1)}{2}$$.
 
-433. It follows from this, that if we make the side w, the
+Let, for example, $$n = 7$$, the pentagon will be 70; and if
+the pentagon, whose side is 100, be required, we make
+$$n = 100$$, and obtain 14950 for the number sought.
 
+<span class="art">434</span> If we suppose the difference to be 4, we arrive at
+**hexagonal numbers**, as we see by the following progressions:
 
-Let, for example, n = 7, the pentagon will be 70 ; and if
-the pentagon, whose side is 100, be required, we make n =
-100, and obtain 14950 for the number sought.
+Indices
+Arithmetic Progression
+Hexagonal Numbers
 
+where the indices still show the side of each hexagon.
 
-434. If Ave suppose the difference to be 4, we arrive at
-hexagonal numbers, as we see by the following progressions
-
-where the indices still shew the side of each hexagon.
-
-435. So that when the side is 7i, the hexagonal number is
-2;r — n = n{^ti — 1) ; and we have farther to remark, that
-all the hexagonal numbers are also triangular ; since, if we
-take of these last the first, the third, the fifth, &c. we have
+<span class="art">435</span> So that when the side is $$n$$, the hexagonal number is
+$$2n^2 - n = n(2n-1)$$; and we have farther to remark, that
+all the hexagonal numbers are also triangular; since, if we
+take of these last the first, the third, the fifth, etc. we have
 precisely the series of hexagons.
 
-
-436. In the same manner, we may find the numbers
-which are hcptagonal, octagonal, &c. It will be sufficient
-therefore to exhibit the following Table of formula? for all
+<span class="art">436</span> In the same manner, we may find the numbers
+which are heptagonal, octagonal, etc. It will be sufficient
+therefore to exhibit the following Table of formulae for all
 numbers that are comprehended under the general name of
 polygonal numbers.
 
 
-Supposing the side to be represented by w, we have
-for the
+Supposing the side to be represented by $$n$$, we have
 
 
 
+$$m$$-gon
 
-437. So that the side being ti, the w-gonal number Avi]l
-, , ,
-(»^-2)/^*— (m-4)n ,
-be represented by ^ ; whence we may deduce all the possible polygonal numbers which have the side
-n. Thus, for example, if the bigonal numbers were required, we should have w = 2, and consequently the number
-sought = n ; that is to say, the bigonal numbers are the
-natural numbers, 1, 2, 3, &c.*
+<span class="art">437</span> So that the side being $$n$$, the $$m$$-gonal number will
+be represented by $$\dfrac{(m-2)n^2-(m-4)n}{2}$$;
+whence we may deduce all the possible polygonal numbers which have the side
+$$n$$. Thus, for example, if the bigonal numbers were required, we should have $$m = 2$$,
+and consequently the number
+sought $$= n$$; that is to say, the bigonal numbers are the
+natural numbers, 1, 2, 3, etc.
 
+If we make $$m = 3$$, we have $$\dfrac{n^2+n}{2}$$ for the triangular number required.
 
-If we make 771 = 3, we have —^— for the triangular number required.
+If we make $$m = 4$$, we have the square number $$n^2$$, etc.
 
-If we make m = 4, we have the square number ;/*, &c.
+<span class="art">438</span> To illustrate this rule by examples, suppose that
+the 25-gonal number, whose side is 36, were required; we
+look first in the Table for the 25-gonal number, whose
+side is $$n$$, and it is round to be $$\dfrac{23n^2-21n}{2}$$.
+Then making $$n = 36$$, we find 14526 for the number sought.
 
+<span class="art">439</span> *Question.* A person bought a house, and he is
+asked how much he paid for it. He answers, that the 365-gonal number of
+side 12 is the number of crowns which it cost him.
 
-438. To illustrate this rule by examples, suppose that
-the xxv-gonal number, whose side is 36, were required ; we
-look first in the Table for the xxv-gonal number, wliose
-side IS w, and it is round to be . Ihen makinsr n
-= 36, we find 14526 for the number sought.
-
-
-439. Question. A person bought a house, and he is
-asked how much he paid for it. He answers, that the 365""
-gonal number of 12 is the number of crowns which it cost
-him.
-
-In order to find this number, we make in — 365, and
-n = 12 ; and substituting these values in the general formula,
-we find for the price of the house 23970 crowns *
-
-
+In order to find this number, we make $$m=365$$, and
+$$n = 12$$; and substituting these values in the general formula,
+we find for the price of the house 23970 crowns.
 
 
 #### References
