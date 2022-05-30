@@ -21,7 +21,7 @@ term is 1 also, we shall have the arithmetical progression,
 and if in this progression we take the sum of one, of two, of three, etc. terms,
 the following series of numbers will arise:
 
-1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, &c.
+1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66, etc.
 
 for 1 = 1, 1 + 2 = 3, 1 + 2 + 3 = 6, 1 + 2 + 3 + 4 = 10, etc.
 
