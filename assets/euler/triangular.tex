@@ -1,0 +1,23 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\newlength\radius
+\pgfmathsetlength{\radius}{0.5cm}
+%
+\newcommand\drawballs[2][]{%
+  \foreach \y [evaluate=\y as \yy using #2+1-\y]
+    in {1,...,#2} {%
+    \foreach \x in {1,...,\yy} {%
+      \shade[shading=ball,ball color=white,#1] 
+        ({(2*\x-2+\y)*\radius},{sqrt(3)*\y*\radius})
+          circle (\radius); 
+    };
+  }%
+}
+%
+\begin{document}
+\begin{tikzpicture}
+%    \drawballs{1}
+    \drawballs{1}
+\end{tikzpicture}
+\end{document}
+

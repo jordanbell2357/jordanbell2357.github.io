@@ -47,7 +47,13 @@ Side
 
 Triangle
 
+<img src="/assets/euler/triangular1.png" alt="Triangular number" style="display:block;margin-left:auto;margin-right:auto;">
 
+<img src="/assets/euler/triangular2.png" alt="Triangular number" style="display:block;margin-left:auto;margin-right:auto;">
+
+<img src="/assets/euler/triangular3.png" alt="Triangular number" style="display:block;margin-left:auto;margin-right:auto;">
+
+<img src="/assets/euler/triangular4.png" alt="Triangular number" style="display:block;margin-left:auto;margin-right:auto;">
 
 <span class="art">428</span> A question therefore presents itself here, whicli is,
 how to determine the triangle when the side is given? and,
