@@ -34,7 +34,7 @@ will be found, by saying ; As 100 is to «, so is 105 to the
 answer ; which gives
 
 
-<span class="art">542. So that, when we add to the original principal its
+<span class="art">542</span> So that, when we add to the original principal its
 twentieth part, we obtain the amount of the principal
 at the end of the first year : and adding to this its twentieth
 part, we know the amount of the given principal at the end
@@ -43,7 +43,7 @@ successive and annual increases of the principal, and to continue this calculati
 
 
 
-<span class="art">543. Suppose, for example, that a principal, which is at
+<span class="art">543</span> Suppose, for example, that a principal, which is at
 present 1000^., is put out at five per cent ; that the interest
 is added every year to the principal ; and that it were required to find its amount at any time. As this calculation
 must lead to fractions, we shall employ decimals, but without carrying them farther than the thousandth parts of a
@@ -52,7 +52,7 @@ pound, since smaller parts do not at present enter into consideration.
 
 
 
-<span class="art">544. We may continue the same method, for any number
+<span class="art">544</span> We may continue the same method, for any number
 of years; but when this number is very great, the calculation becomes long and tedious; but it may always be
 abridged, in the followinfj manner
 Let the present principal be a, and since a prmcipal of
@@ -70,7 +70,7 @@ formula will serve to determine the amount of the principal,
 after any number of years,
 
     
-545. The fraction 14, which is used in this calculation,
+<span class="art">545</span> The fraction 14, which is used in this calculation,
 depends on the interest liaving been reckoned at 5 per cent.,
 and on ^\- being equal to 4-?-|, But if the interest were
 estimated at 6 per cent, the principal a would amount to
@@ -80,7 +80,7 @@ two years ; and to 4|4" • ^'> ^^ the end of n years.
 If the interest is only at 4 per cent, the principal a will
 amount only to (4o~*)" . «, after n years.
     
-546. When the principal a, as well as the numlier of
+<span class="art">546</span> When the principal a, as well as the numlier of
 years, is given, it is easy to resolve these formula? by logarithms. For if the question be according to our first supposition, we shall take the logarithm of (|4)" . a, which is
 = log. (^)" + log. a ; because the given formula is the
 product of (34)" and a. Also, as {\^^Y is a power, we shall
@@ -88,7 +88,7 @@ have log. (|i)" = 11 log. |4 : so that the logarithm of the
 amount required is oi log. li -|- log. a ; and farther, the
 logarithm of the fraction |4 — ^og. 21 — log. 20.
     
-547. Let now the principal be lOOOZ. and let it be required
+<span class="art">547</span> Let now the principal be lOOOZ. and let it be required
 to find how much this principal will amount to at the end of
 100 years, reckoning the interest at 5 per cent
     
@@ -104,7 +104,7 @@ We perceive, from the characteristic of this logarithm,
 that the principal required will be a number consisting of
 six figures, and it is found to be 131501Z.
     
-548. Again, suppose a principal of 3452Z. were put out at
+<span class="art">548</span> Again, suppose a principal of 3452Z. were put out at
 6 per cent, what would it amount to at the end of 64
 years ?
     
@@ -116,7 +116,7 @@ And taking the number of this logarithm, we find the
 amount required equal to 143763/.
 
     
-549. When the number of years is very great, as it is required to multiply this number by the logarithm of a fraction, a considerable error might arise from the logarithms in
+<span class="art">549</span> When the number of years is very great, as it is required to multiply this number by the logarithm of a fraction, a considerable error might arise from the logarithms in
 the Tables not being calculated beyond 7 figures of decimals
 ;
 for which reason it will be necessary to employ logarithms
@@ -131,7 +131,7 @@ principal will amount, at the end of that period.
 We have here a = 1 and n = 500; consequently, the
 logarithm of the principal sought is equal to 500 log. ^ -flog: 1, which produces this calculation :
     
-550. If we not only add the interest annually to the principal, but also increase it every year by a new sum b, the
+<span class="art">550</span> If we not only add the interest annually to the principal, but also increase it every year by a new sum b, the
 original principal, which we call a, would increase each year
 in the following; manner
     
@@ -140,13 +140,13 @@ in the following; manner
     
     
     
-551. The resolution of this formula requires us to calculate, separately, its first term (|-^)" x (a -f- ^06), which is
+<span class="art">551</span> The resolution of this formula requires us to calculate, separately, its first term (|-^)" x (a -f- ^06), which is
 n log. -Q- + /o"\ {a -j- 206) ; for the number which answers
 to this logarithm in the Tables, will be the first term ; and
 if from this we subtract 206, we shall have the amount
 sought.
     
-552. A person has a principal of 1000/. placed out at
+<span class="art">552</span> A person has a principal of 1000/. placed out at
 five per cent, compound interest, to which he adds annually
 100/. beside the interest : what will be the amount of this
 principal at the end of twenty-five years ?
