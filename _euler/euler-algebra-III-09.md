@@ -25,7 +25,7 @@ a ducat being worth 3 Reichsthaler, we may reduce these two
 values to one denomination; either to Reichsthaler, which
 gives the proportion
 
-[^1]: 1 Reichsthaler (Rthl.) = 24 Groschen (Gr.).
+[^1]: 1 Reichsthaler = 24 Groschen.
 
 1 Louis : 1 ducat = 5⅓ Reichsthaler : 3 Reichsthaler = 16:9;
 
@@ -100,7 +100,7 @@ Holland with Berlin is at 142; that is to say, for 100 Dutch
 rijksdaalder, 142 Reichsthaler are paid at Berlin; and lastly, the ducat
 is worth 3 Reichsthaler at Berlin.[^3]
 
-[^3]: 1 Dutch rijksdaalder = 2½ Dutch guilders (fl.)
+[^3]: 1 Dutch rijksdaalder = 2½ Dutch guilders.
 
 <span class="art">481</span> To resolve the question proposed, let us proceed
 step by step. Beginning therefore with the stuivers, since
