@@ -29,25 +29,42 @@ Which numbers are called **triangular**, or trigonal numbers, because we may alw
 arrange as many points in the form of a triangle as they contain units, thus:
 
 $$
+\begin{array}{c}
+1&\\
+\bullet
+\end{array}
+$$
+
+$$
 \begin{array}{ccc}
+3&&\\
 \bullet&&\bullet\\
 &\bullet&
 \end{array}
+$$
 
+$$
 \begin{array}{ccccc}
+6&&&&\\
 \bullet&&\bullet&&\bullet\\
 &\bullet&&\bullet&\\
 &&\bullet&&
 \end{array}
+$$
 
+$$
 \begin{array}{ccccccc}
+10&&&&&&
 \bullet&&\bullet&&\bullet&&\bullet\\
 &\bullet&&\bullet&&\bullet&\\
 &&\bullet&&\bullet&&\\
 &&&\bullet&&&
 \end{array}
+$$
 
+$$
 \begin{array}{ccccccccc}
+15&&&&&&&&
 \bullet&&\bullet&&\bullet&&\bullet&&\bullet\\
 &\bullet&&\bullet&&\bullet&&\bullet&\\
 &&\bullet&&\bullet&&\bullet&&\\
