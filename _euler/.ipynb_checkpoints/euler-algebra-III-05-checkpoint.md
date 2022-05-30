@@ -109,7 +109,7 @@ sliall have the following arithmetical progression:
 1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, etc.
 
 the sums of which, taking successively one, two, three, four
-terms, etc. form the tbllowing series:
+terms, etc. form the following series:
 
 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, etc.
 
@@ -262,43 +262,56 @@ Supposing the side to be represented by $$n$$, we have
 <table>
 <tbody>
   <tr>
-    <td>Indices</td>
-    <td>1</td>
-    <td>2</td>
-    <td>3</td>
-    <td>4</td>
-    <td>5</td>
-    <td>6</td>
-    <td>7</td>
-    <td>8</td>
-    <td>9</td>
-    <td>etc.</td>
+    <td>Triangle</td>
+    <td></td>
   </tr>
   <tr>
-    <td>Arithmetic Progression</td>
-    <td>1,</td>
-    <td>5,</td>
-    <td>9,</td>
-    <td>13,</td>
-    <td>17,</td>
-    <td>21,</td>
-    <td>25,</td>
-    <td>29,</td>
-    <td>33,</td>
-    <td>etc.</td>
+    <td>Square</td>
+    <td></td>
   </tr>
   <tr>
-    <td>Hexagonal Numbers</td>
-    <td>1,</td>
-    <td>6,</td>
-    <td>15,</td>
-    <td>28,</td>
-    <td>45,</td>
-    <td>66,</td>
-    <td>91,</td>
-    <td>120,</td>
-    <td>153,</td>
-    <td>etc.</td>
+    <td>Pentagon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Hexagon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Heptagon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Octagon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Nonagon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>Decagon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>11-gon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>12-gon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>20-gon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>25-gon</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>m-gon</td>
+    <td></td>
   </tr>
 </tbody>
 </table>
