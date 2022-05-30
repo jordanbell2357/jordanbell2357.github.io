@@ -141,8 +141,8 @@ which is the answer under those conditions.
 
 <span class="art">483</span> We have shewn that six operations are necessary in
 making use of the *Rule of Three*; but we can greatly
-abridge those calculations by a rule which is called the *Rule
-of Reduction*, or *Double Rule of Three*. To explain which,
+abridge those calculations by a rule which is called the *Rule of Reduction*,
+or *Double Rule of Three*. To explain which,
 we shall first consider the two antecedents of each of the six
 preceding operations:
 
@@ -273,18 +273,16 @@ for 1000 ducats?
 Therefore 210000 ducats = 554320 Thaler in Leipzig; so 21000 ducats = 55432 Thaler in Leipzig.
 
 <a href="https://artofproblemsolving.com/texer/smvsljqk">
-<img src="/assets/euler/smvsljqk.png" alt="Long division" width="147" height="236" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/smvsljqk.png" alt="Long division" width="177" height="262" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
-So, dividing by 3,
+Thus dividing by 3,
 
 7000 ducats = 18477⅓ Thaler in Leipzig;
 
-and then dividing by 7,
+and dividing by 7,
 
-1000 ducats = 2639⁴⁄₇ + ¹⁄₂₁ Thaler in Leipzig.
-
-Therefore, 1000 ducats = 2639¹³⁄₂₁ Thaler in Leipzig.
+1000 ducats = 2639⁴⁄₇ + ¹⁄₂₁ Thaler in Leipzig = 2639¹³⁄₂₁ Thaler in Leipzig.
 
 #### References
 
