@@ -271,17 +271,20 @@ for 1000 ducats?
 4. 100 rijksdaalder banco =  133¼ Thaler current in Leipzig; so 400 rijksdaalder banco = 533 Thaler current in Leipzig
 
 Therefore 210000 ducats = 554320 Thaler in Leipzig; so 21000 ducats = 55432 Thaler in Leipzig.
-Dividing by 3 and then by 7,
 
 <a href="https://artofproblemsolving.com/texer/smvsljqk">
 <img src="/assets/euler/smvsljqk.png" alt="Long division" width="147" height="236" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
-so, dividing by 3, 7000 ducats = 18477⅓ Thaler in Leipzig;
-and then dividing by 7,
-1000 ducats = 2639⁴⁄₇ + ¹⁄₂₁ Thaler in Leipzig. Therefore,
+So, dividing by 3,
 
-1000 ducats = 2639¹³⁄₂₁ Thaler in Leipzig.
+7000 ducats = 18477⅓ Thaler in Leipzig;
+
+and then dividing by 7,
+
+1000 ducats = 2639⁴⁄₇ + ¹⁄₂₁ Thaler in Leipzig.
+
+Therefore, 1000 ducats = 2639¹³⁄₂₁ Thaler in Leipzig.
 
 #### References
 
