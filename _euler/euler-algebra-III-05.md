@@ -143,11 +143,42 @@ is the more suitable from this circumstance, that we can
 always form a square with the number of points which those
 terms indicate, thus:
 
-1
-4
-9
-16
-25
+$$
+\begin{array}{cc}
+\bullet&\bullet\\
+\bullet&\bullet
+\end{array}
+
+\begin{array}{ccc}
+\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet
+\end{array}
+
+\begin{array}{cccc}
+\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet
+\end{array}
+
+\begin{array}{ccccc}
+\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet
+\end{array}
+
+\begin{array}{cccccc}
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet\\
+\bullet&\bullet&\bullet&\bullet&\bullet&\bullet
+\end{array}
+$$
 
 
 <span class="art">431</span> We see here, that the side of any square contains
