@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 4. "Of the Resolution o
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 4. "Of the Resolution of two or more Equations of the First Degree."
 
-**605.** It frequently happens that we are obliged to introduce into algebraic calculations
+<span class="art">605</span> It frequently happens that we are obliged to introduce into algebraic calculations
 two or more unknown quantities, represented by the letters $$x$$, $$y$$, $$z$$: and if the question
 is determinate, we are brought to the same number of equations as there are unknown quantities;
 from which it is then required to deduce those quantities. As we consider, at present, those
@@ -15,7 +15,7 @@ equations only, which contain no powers of an unknown quantity higher than the f
 products of two or more unknown quantities, it is evident that all those equations have the
 form $$az+by+cx=d$$.
 
-**606.** Beginning therefore with two equations, we shall
+<span class="art">606</span> Beginning therefore with two equations, we shall
 endeavour to find from them the value of $$x$$ and $$y$$: and, in
 order that we may consider this case in a general manner, let
 the two equations be,
@@ -26,7 +26,7 @@ in which, $$a$$, $$b$$, $$c$$, and $$f$$, $$g$$, $$h$$, are known numbers. It is
 required, therefore, to obtain, from these two equations, the
 two unknown quantities $$x$$ and $$y$$.
 
-**607.** The most natural method of proceeding will readily
+<span class="art">607</span> The most natural method of proceeding will readily
 present itself to the mind; which is, to determine, from both
 equations, the value of one of the unknown quantities, as for
 example $$x$$, and to consider the equality of those two values;
@@ -36,7 +36,7 @@ by the rules already given. Then, knowing $$y$$, we shall have
 only to substitute its value in one of the quantities that
 express $$x$$.
 
-**608.** According to this rule, wo obtain from the first
+<span class="art">608</span> According to this rule, wo obtain from the first
 equation, $$x=\dfrac{c-by}{a}$$, and from the second, $$x=\dfrac{h-gy}{f}$$:
 then putting these vaues equal to each other, we have this
 new equation:
@@ -81,7 +81,7 @@ and dividing by $$a$$,
 
 $$x = \dfrac{c-by}{a} = \dfrac{cg-bh}{ag-bf}.$$
 
-**609.** *Question 1.* To illustrate this method by examples,
+<span class="art">609</span> *Question 1.* To illustrate this method by examples,
 let it be proposed to find two numbers, whose sum may be
 15, and difference 7.
 
@@ -95,7 +95,7 @@ $$15 = 7 + 2y$$; $$2y = 8$$, and $$y=4$$; by which means we find $$x = 11$$.
 
 So that the less number is 4, and the greater is 11.
 
-**610.** *Question 2.* We may also generalise the preceding
+<span class="art">610</span> *Question 2.* We may also generalise the preceding
 question, by requiring two numbers, whose sum may be $$a$$,
 and the difference $$b$$.
 
@@ -125,7 +125,7 @@ to half the sum *plus* half the difference; and the less of the
 two numbers will be equal to half the sum *minus* half the
 difference.
 
-**611.** We may resolve the same question in the following manner: Since the two equations are,
+<span class="art">611</span> We may resolve the same question in the following manner: Since the two equations are,
 
 $$x+y=a, \quad \textrm{and} \quad x-y=b,$$
 
@@ -144,7 +144,7 @@ and therefore
 
 $$y=\dfrac{a-b}{2}.$$
 
-**612.** *Question 3.* A mule and an ass were carrying
+<span class="art">612</span> *Question 3.* A mule and an ass were carrying
 burdens amounting to several hundred weight. The ass
 complained of his, and said to the mule, I need only one
 hundred weight of your load, to make mine twice as heavy
@@ -176,7 +176,7 @@ of $$x$$, which becomes $$2\frac{3}{5}$$.
 The mule therefore carried $$2\frac{3}{5}$$ hundred weight,
 and the ass $$2 \frac{1}{5}$$ hundred weight.
 
-**613.** When there are three unknown numbers, and as
+<span class="art">613</span> When there are three unknown numbers, and as
 many equations; as, for example,
 
 $$
@@ -220,7 +220,7 @@ equation, and that the value of $$y$$ is found immediately;
 but if this had not been the case, we should have had
 two equations between $$z$$ and $$y$$, to be resolved by the preceding rule.
 
-**614.** Suppose we had found the three following equations:
+<span class="art">614</span> Suppose we had found the three following equations:
 
 $$
 \begin{gather}
@@ -282,7 +282,7 @@ This value being substituted in one of the two equations
 of $$y$$ and $$z$$, we find $$y=8$$; and, lastly, a similar substitution
 in one of the three values of $$x$$, will give $$x=7$$.
 
-**615.** If there were more than three unknown quantities to
+<span class="art">615</span> If there were more than three unknown quantities to
 determine, and as many equations to resolve, we should proceed in the same manner;
 but the calculations would often
 prove very tedious.
@@ -297,7 +297,7 @@ calculations, he easily perceives what is
 most proper to be done. The following examples may
 serve to facilitate the application of these artifices.
 
-**616.** *Question 4.* Three persons, A, B, and C, play together; and, in the first game,
+<span class="art">616</span> *Question 4.* Three persons, A, B, and C, play together; and, in the first game,
 a loses to each of the other two, as much money as each of them has. In the next
 game, B loses to each of the other two, as much money as
 they then had. Lastly, in the third game, A and B gain
@@ -358,19 +358,19 @@ This solution shows, that, by means of an expression for
 the sum of the three unknown quantities, we may overcome
 the difficulties which occur in the ordinary method.
 
-**617.** Although the preceding question appears difficult at
+<span class="art">617</span> Although the preceding question appears difficult at
 first, it may be resolved even without algebra, by proceeding
 inversely. For since the players, when they left off, had
 each 24 guineas, and, in the third game, A and B doubled
 their money, they must have had before that last game, as
 follows:
 
-$$A = 12, \quad B = 12, \; \textrm{and} \; C = 48.$$
+$$A = 12, \quad B = 12, \quad \textrm{and} \quad C = 48.$$
 
 In the second game, A and C doubled their money; so
 that before that game they had;
 
-$$A = 6, \quad B = 42, \; \textrm{and} \; C=24.$$
+$$A = 6, \quad B = 42, \quad \textrm{and} \quad C=24.$$
 
 Lastly, in the first game, A and C gained each as much
 money as they began with; so that at first the three persons
@@ -380,7 +380,7 @@ $$A=39, \quad B=21, \quad C=12.$$
 
 The same result as we obtained by the former solution.
 
-**618.** *Question 5.* Two persons owe conjointly 29 pistoles; they have both money,
+<span class="art">618</span> *Question 5.* Two persons owe conjointly 29 pistoles; they have both money,
 but neither of them enough to enable him, singly, to discharge this common debt: the
 first debtor says therefore to the second, If you give me ⅔ of
 your money, I can immediately pay the debt; and the
@@ -404,7 +404,7 @@ Therefore $$x=19\frac{1}{3}$$.
 Hence the first person had $$19\frac{1}{3}$$ pistoles, and the second
 had $$14\frac{1}{2}$$ pistoles.
 
-**619.** *Question 6.* Three brothers bought a vineyard for
+<span class="art">619</span> *Question 6.* Three brothers bought a vineyard for
 a hundred guineas. The youngest says, that he could pay
 for it alone, if the second gave him half the money which he
 had; the second says, that if the eldest would give him only
@@ -448,7 +448,7 @@ $$y=100-28=72$$, and $$x=64$$.
 The youngest therefore had 64 guineas, the second had 72
 guineas, and the eldest had 84 guineas.
 
-**620.** As, in this example, each equation contains only two
+<span class="art">620</span> As, in this example, each equation contains only two
 unknown quantities, we may obtain the solution required in
 an easier way.
 
@@ -461,7 +461,7 @@ the third equation, we obtain $$6x-300+\frac{1}{4}x=100$$, in which $$x$$ stands
 and which, when reduced to $$25x-1600=0$$, gives $$x=64$$. Consequently,
 $$y=200-128=72$$, and $$z=384-300=84$$.
 
-**621.** We may follow the same method, when we have a
+<span class="art">621</span> We may follow the same method, when we have a
 greater number of equations. Suppose, for example, that
 we have in general;
 
@@ -520,7 +520,7 @@ u=\dfrac{abcdn-bcdn+cdn-dn}{abcd-1} = \dfrac{n\cdot (abcd-bcd+cd-d)}{abcd-1}.
 \end{gather}
 $$
 
-**622.** *Question 7.* A captain has three companies, one of
+<span class="art">622</span> *Question 7.* A captain has three companies, one of
 Swiss, another of Swabians, and a third of Saxons. He
 wishes to storm with part of these troops, and he promises a
 reward of 901 crowns, on the following condition; namely,
@@ -588,8 +588,7 @@ $$
 
 The company of Swiss therefore has 265 men; that of
 Swabians 583; and that of Saxons 689.
-
-
+    
 
 #### References
 

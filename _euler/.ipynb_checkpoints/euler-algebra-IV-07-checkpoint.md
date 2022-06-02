@@ -7,7 +7,7 @@ title: Euler, "Elements of Algebra", Section IV, Chapter 7. "Of the Extraction o
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 7. "Of the Extraction of the Roots of Polygon Numbers."
 
-656. We have shewn, in a preceding chapter (Section III, Chapter 5. "Of Figurate, or Polygonal Numbers."), how
+<span class="art">656</span> We have shown, in a preceding chapter (Section III, Chapter 5. "Of Figurate, or Polygonal Numbers."), how
 polygonal numbers are to be found; and what we then called
 a **side**, is also called a **root**. If, therefore, we represent the
 root by $$x$$, we shall find the following expressions for all
@@ -54,7 +54,7 @@ polygonal numbers
 </tbody>
 </table>
 
-657. We have already shewn, that it is easy, by means of
+<span class="art">657</span> We have already shewn, that it is easy, by means of
 these formulae, to find, for any given root, any polygon
 number required: but when it is required reciprocally to
 find the side, or the root of a polygon, the number of whose
@@ -63,7 +63,7 @@ requires the solution of a quadratic equation; on which account the subject dese
 considered. In doing this we shall proceed regularly, beginning with the triangular numbers, and passing from them
 to those of a greater number of angles.
 
-658. Let therefore 91 be the given triangular number,
+<span class="art">658</span> Let therefore 91 be the given triangular number,
 the side or root of which is required.
 
 If we make this root =$$x$$, we must have
