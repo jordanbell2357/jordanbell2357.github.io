@@ -49,27 +49,68 @@ is added every year to the principal; and that it were required to find its amou
 must lead to fractions, we shall employ decimals, but without carrying them farther than the thousandth parts of a
 pound, since smaller parts do not at present enter into consideration.
 
+<table>
+<thead>
+  <tr>
+    <th>Years</th>
+    <th>Value (*l.*)</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>after 1 year</td>
+    <td>1050</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>52.5</td>
+  </tr>
+  <tr>
+    <td>after 2 years</td>
+    <td>1102.5</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>55.125</td>
+  </tr>
+  <tr>
+    <td>after 3 years</td>
+    <td>1157.625</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>57.881</td>
+  </tr>
+  <tr>
+    <td>after 4 years</td>
+    <td>1215.506</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>60.775</td>
+  </tr>
+</tbody>
+</table>
 
-
-
+which sums are formed by always adding ¹⁄₂₀ of the preceding principal.
 
 <span class="art">544</span> We may continue the same method, for any number
 of years; but when this number is very great, the calculation becomes long and tedious; but it may always be
-abridged, in the followinfj manner
-Let the present principal be a, and since a prmcipal of
-20Z. amounts to 21/. at the end of a year, the principal a will
-amount to |-i • ^ ^^ the end of a year : and the same prin212
-cipal will amount, the following year, to ^ . a = (|4)' • a.
-Also, this principal of two years will amount to (|^)' . fl5, the
-year after : which will therefore be the principal of three
+abridged, in the following manner:
+
+Let the present principal be $$a$$, and since a principal of
+20*l.* amounts to 21*l.* at the end of a year, the principal $$a$$ will
+amount to $$\frac{21}{20}\cdot a$$ at the end of a year: and the same principal
+will amount, the following year, to $$\frac{21^2}{20^2}\cdot a=\left(\frac{21}{20}\right)^2 \cdot a$$.
+Also, this principal of two years will amount to $$\left(\frac{21}{20}\right)^3 \cdot a$$, the
+year after: which will therefore be the principal of three
 years; and still increasing in the same manner, the given
-principal will amount to (|^)* . a at the end of four years;
-to (14)5 . a, at the end of five years; and after a century,
-it will amount to (|^i)^"" . a; so that, in general, (^"r)" . a
-will be the amount of this principal, after n years ; and this
+principal will amount to $$\left(\frac{21}{20}\right)^4 \cdot a$$ at the end of four years;
+to $$\left(\frac{21}{20}\right)^5 \cdot a$$, at the end of five years; and after a century,
+it will amount to $$\left(\frac{21}{20}\right)^{100} \cdot a$$; so that, in general, $$\left(\frac{21}{20}\right)^n \cdot a$$
+will be the amount of this principal, after $$n$$ years; and this
 formula will serve to determine the amount of the principal,
 after any number of years,
-
     
 <span class="art">545</span> The fraction 14, which is used in this calculation,
 depends on the interest liaving been reckoned at 5 per cent.,
