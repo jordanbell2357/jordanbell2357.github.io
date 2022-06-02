@@ -244,18 +244,15 @@ original principal, which we call $$a$$, would increase each year
 in the following manner:
     
 <table>
-<thead>
   <tr>
-    <th>after 1 year</th>
-    <th>\(\frac{21}{20}a\)</th>
-    <th>\(+b\)</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <td>after 1 year</td>
+    <td>\(\frac{21}{20}a\)</td>
+    <td>\(+b\)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
-</thead>
-<tbody>
   <tr>
     <td>after 2 years</td>
     <td>\(\left(\frac{21}{20}\right)^2a\)</td>
@@ -292,7 +289,6 @@ in the following manner:
     <td>\(+\frac{21}{20}b\)</td>
     <td>\(+b\)</td>
   </tr>
-</tbody>
 </table>
 
 This amount evidently consists of two parts, of which the
@@ -383,18 +379,15 @@ the sum which is annually
 taken from it by $$b$$:
 
 <table>
-<thead>
   <tr>
-    <th>after 1 year</th>
-    <th>\(\frac{21}{20}a\)</th>
-    <th>\(-b\)</th>
-    <th></th>
-    <th></th>
-    <th></th>
-    <th></th>
+    <td>after 1 year</td>
+    <td>\(\frac{21}{20}a\)</td>
+    <td>\(-b\)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
   </tr>
-</thead>
-<tbody>
   <tr>
     <td>after 2 years</td>
     <td>\(\left(\frac{21}{20}\right)^2a\)</td>
@@ -422,7 +415,6 @@ taken from it by $$b$$:
     <td>\(-\frac{21}{20}b\)</td>
     <td>\(-b\)</td>
   </tr>
-</tbody>
 </table>
 
 <span class="art">555</span> This principal consists of two parts, one of which is
