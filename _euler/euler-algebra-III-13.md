@@ -53,7 +53,7 @@ pound, since smaller parts do not at present enter into consideration.
 <thead>
   <tr>
     <th>Years</th>
-    <th>Value (*l.*)</th>
+    <th>Value (<em>l.</em>)</th>
   </tr>
 </thead>
 <tbody>
