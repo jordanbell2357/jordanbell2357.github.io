@@ -512,7 +512,18 @@ The natural number of this logarithm is found to be
 100107. So that, subtracting the principal, 100000 from
 this amount, the interest, for eight days, is 107*l.*
 
-
+<span class="art">560</span> To this subject belong also the calculation of the
+present value of a sum of money, which is payable only after
+a tei-m of years. For as 20/., in ready money, amounts to
+21/. in a year; so, reciprocally, a sum of 21/., which cannot
+be received till the end ofone year, is really worth only 20/.
+If, therefore, we express, by «, a sum whose payment is due
+at the end of a year, the present value of this sum is ~a ;
+and therefore to find the present worth of a principal a,
+payable a year hence, we must multiply it by i^; to find its
+value two years before the time of payment, we multiply it
+^y (tt) « ; and in general, its value, n years before the time
+of payment, will be expressed by (|-^)"a.
 
 
 #### References
