@@ -8,18 +8,19 @@ title: Euler, "Elements of Algebra", Section III, Chapter 13. "Of the Calculatio
 #### Section III. "Of Ratios and Proportions." Chapter 13. "Of the Calculation of Interest."
 
 <span class="art">540</span> We are accustomed to express the interest of any
-principal by i^er cents, signifying how much interest is annually paid lor the sum of 100 pounds. And it is very
-usual to put out the principal sum at 5 per cent, that is, on
+principal by *per cents*, signifying how much interest is annually paid for the sum of 100 pounds.
+And it is very usual to put out the principal sum at 5 per cent, that is, on
 such terms, that we receive 5 pounds interest for every 100
 pounds principal. Nothing therefore is more easy than to
-calculate the interest for any sum ; for we have only to say,
-according to the Rule of Three
+calculate the interest for any sum; for we have only to say,
+according to the Rule of Three:
 
-As 100 is to the principal proposed, so is the rate per
-cent to the interest required. Let the principal, for example, be 860/., its annual interest is found by this proportion ;
+As 100 is to the principal proposed, so is the rate *per cent* to the interest required. Let the principal,
+for example, be 860*l.*, its annual interest is found by this proportion;
 
+100:5::860:43.
 
-Therefore 43/. is the annual interest.
+Therefore 43*l.* is the annual interest.
 
 <span class="art">541</span> We shall not dwell any longer on examples of
 Simple Interest, but pass on immediately to the calculation
@@ -27,27 +28,27 @@ of Compound Interest; where the chief subject of inquiry
 is, to what sum does a given principal amount, after a
 certain number of years, the interest being annually added
 to the principal. In order to resolve this question, we begin
-with the consideration, that 100/. placed out at 5 per cent,
-becomes, at the end of a year, a principal of 105/. : therefore
-let the principal be a ; its amount, at the end of the year,
-will be found, by saying ; As 100 is to «, so is 105 to the
-answer ; which gives
+with the consideration, that 100*l.* placed out at 5 per cent,
+becomes, at the end of a year, a principal of 105*l.*: therefore
+let the principal be $$a$$; its amount, at the end of the year,
+will be found, by saying; As 100 is to $$a$$, so is 105 to the
+answer; which gives
 
+$$\dfrac{105a}{100} = \dfrac{21a}{20} = \frac{21}{20} \cdot a = a + \frac{1}{20}a.$$
 
 <span class="art">542</span> So that, when we add to the original principal its
 twentieth part, we obtain the amount of the principal
-at the end of the first year : and adding to this its twentieth
+at the end of the first year: and adding to this its twentieth
 part, we know the amount of the given principal at the end
 of two years, and so on. It is easy, therefore, to compute the
 successive and annual increases of the principal, and to continue this calculation to any length.
 
-
-
 <span class="art">543</span> Suppose, for example, that a principal, which is at
-present 1000^., is put out at five per cent ; that the interest
-is added every year to the principal ; and that it were required to find its amount at any time. As this calculation
+present 1000*l.*, is put out at five per cent; that the interest
+is added every year to the principal; and that it were required to find its amount at any time. As this calculation
 must lead to fractions, we shall employ decimals, but without carrying them farther than the thousandth parts of a
 pound, since smaller parts do not at present enter into consideration.
+
 
 
 
