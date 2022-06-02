@@ -337,17 +337,15 @@ $$\log(a+20b)=3.4771213135$$
 
 And the sum is
 
-$$25 \log \frac{21}{20}+\log(a+20b) = 4.00G8537885.$$
+$$25 \log \frac{21}{20}+\log(a+20b) = 4.0068537885.$$
 
 So that the first part, or the number which answers to this
 logarithm, is 10159.1, and if we subtract $$20b = 2000$$, we
 find that the principal in question, after twenty-five years,
 will amount to 8159.1*l.*
 
-<span class="art">553</span> Since then this principal of 1000l. is always increasing, and after twenty-five years amounts to
-8159⅒*l.*
-we may require, in how many years it will amount to
-1000000*l.*
+<span class="art">553</span> Since then this principal of 1000*l.* is always increasing, and after twenty-five years amounts to
+8159⅒*l.* we may require, in how many years it will amount to 1000000*l.*
 
 Let $$n$$ be the number of years required: and, since
 $$a=1000$$, $$b=100$$, the principal will be, at the end of $$n$$ years,
