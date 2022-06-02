@@ -380,7 +380,7 @@ have $$x=y+2$$, $$x^2=y^2+4y+4$$, and $$x^3=y^3+6y^2+12y+8$$; therefore
 
 which gives $$y^3+y-2=0$$; or $$y^3=-y+2$$.
 
-And if we compare this equation with the formula, (*Article 741*)
+And if we compare this equation with the formula, (**Article 741**)
 $$x^3=fx+g$$, we have $$f=-1$$, and $$g=2$$; wherefore, $$g^2=4$$, and
 $$\frac{4}{27}f^3=-\frac{4}{27}$$; also, $$g^2-\frac{4}{27}f^3=4+\frac{4}{27}=\frac{112}{27}$$,
 and
