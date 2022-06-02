@@ -112,52 +112,77 @@ will be the amount of this principal, after $$n$$ years; and this
 formula will serve to determine the amount of the principal,
 after any number of years,
     
-<span class="art">545</span> The fraction 14, which is used in this calculation,
-depends on the interest liaving been reckoned at 5 per cent.,
-and on ^\- being equal to 4-?-|, But if the interest were
-estimated at 6 per cent, the principal a would amount to
-4-J-l- . a, at the end of a year ; to {~%y . «, at the end of
-two years ; and to 4|4" • ^'> ^^ the end of n years.
+<span class="art">545</span> The fraction ²¹⁄₂₀, which is used in this calculation,
+depends on the interest having been reckoned at 5 per cent.,
+and on ²¹⁄₂₀ being equal to ¹⁰⁵⁄₁₀₀. But if the interest were
+estimated at 6 per cent, the principal $$a$$ would amount to
+$$\frac{106}{100}\cdot a$$, at the end of a year; to $$\left(\frac{106}{100}\right)^2\cdot a$$, at the end of
+two years; and to $$\left(\frac{106}{100}\right)^n \cdot a$$, at the end of $$n$$ years.
     
-If the interest is only at 4 per cent, the principal a will
-amount only to (4o~*)" . «, after n years.
+If the interest is only at 4 per cent, the principal $$a$$ will
+amount only to $$\left(\frac{104}{100}\right)^n \cdot a$$, after $$n$$ years.
     
-<span class="art">546</span> When the principal a, as well as the numlier of
-years, is given, it is easy to resolve these formula? by logarithms. For if the question be according to our first supposition, we shall take the logarithm of (|4)" . a, which is
-= log. (^)" + log. a ; because the given formula is the
-product of (34)" and a. Also, as {\^^Y is a power, we shall
-have log. (|i)" = 11 log. |4 : so that the logarithm of the
-amount required is oi log. li -|- log. a ; and farther, the
-logarithm of the fraction |4 — ^og. 21 — log. 20.
+<span class="art">546</span> When the principal $$a$$, as well as the number of
+years, is given, it is easy to resolve these formulae by logarithms. For if the question be according to our first supposition,
+we shall take the logarithm of $$\left(\frac{21}{20}\right)^n \cdot a$$, which is
+
+$$=\log \left(\frac{21}{20}\right)^n + \log a;$$
+
+because the given formula is the
+product of $$\left(\frac{21}{20}\right)^n$$ and $$a$$. Also, as $$\left(\frac{21}{20}\right)^n$$ is a power, we shall
+have $$\log \left(\frac{21}{20}\right)^n=n \log \frac{21}{20}$$: so that the logarithm of the
+amount required is $$n \log \frac{21}{20} + \log a$$; and farther, the
+logarithm of the fraction $$\frac{21}{20}$$ equals $$\log 21 - \log 20$$.
     
-<span class="art">547</span> Let now the principal be lOOOZ. and let it be required
+<span class="art">547</span> Let now the principal be lOOO*l.* and let it be required
 to find how much this principal will amount to at the end of
-100 years, reckoning the interest at 5 per cent
+100 years, reckoning the interest at 5 per cent.
     
-Here we have 7i = 100 ; and, consequently, the logarithm
-of the amount required will be 100 log. \~ + log- 1000,
-which is calculated thus
-    
-    
-    
-    
-    
+Here we have $$n = 100$$; and, consequently, the logarithm
+of the amount required will be $$100\log \frac{21}{20} + \log 1000$$,
+which is calculated thus:
+
+Subtracting
+
+$$
+\begin{array}{rr}
+\log 21&=1.3222193\\
+\log 20&=1.3010300\\ \hline
+\log \frac{21}{20}&=0.0211893.
+\end{array}
+$$
+
+Multiplying by 100
+
+$$100\log \frac{21}{20} = 0.021189300.$$
+
+Adding $$\log 1000$$,
+
+$$
+\begin{array}{rr}
+100\log \frac{21}{20}&=0.021189300\\
+\log 1000&=3.0000000\\ \hline
+100\log \frac{21}{20}+\log 1000&=5.1189300
+\end{array}
+$$
+
+which is the logarithm of the principal required.
+
 We perceive, from the characteristic of this logarithm,
 that the principal required will be a number consisting of
-six figures, and it is found to be 131501Z.
+six figures, and it is found to be 131501*l.*
     
-<span class="art">548</span> Again, suppose a principal of 3452Z. were put out at
-6 per cent, what would it amount to at the end of 64
-years ?
+<span class="art">548</span> Again, suppose a principal of 3452*l.* were put out at
+6 per cent, what would it amount to at the end of 64 years?
     
-We have here a — 3452, and n
+We have here $$a=3452$$, and $$n=64$$. Wherefore the
+logarithm of the amount sought is
     
     
     
 And taking the number of this logarithm, we find the
-amount required equal to 143763/.
+amount required equal to 143763*l.*
 
-    
 <span class="art">549</span> When the number of years is very great, as it is required to multiply this number by the logarithm of a fraction, a considerable error might arise from the logarithms in
 the Tables not being calculated beyond 7 figures of decimals
 ;
