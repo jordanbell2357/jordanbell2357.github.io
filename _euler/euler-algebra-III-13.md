@@ -382,7 +382,135 @@ year after year, supposing it put out at 5 per cent, compound interest, and repr
 the sum which is annually
 taken from it by $$b$$:
 
+<table>
+<thead>
+  <tr>
+    <th>after 1 year</th>
+    <th>\(\frac{21}{20}a\)</th>
+    <th>\(-b\)</th>
+    <th></th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>after 2 years</td>
+    <td>\(\left(\frac{21}{20}\right)^2a\)</td>
+    <td>\(-\frac{21}{20}b\)</td>
+    <td>\(-b\)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>after 3 years</td>
+    <td>\(\left(\frac{21}{20}\right)^3a\)</td>
+    <td>\(-\left(\frac{21}{20}\right)^2b\)</td>
+    <td>\(-\frac{21}{20}b\)</td>
+    <td>\(-b\)</td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>after \(n\) years</td>
+    <td>\(\left(\frac{21}{20}\right)^na\)</td>
+    <td>\(-\left(\frac{21}{20}\right)^{n-1}b\)</td>
+    <td>\(-\left(\frac{21}{20}\right)^{n-2}b\)</td>
+    <td>\(-\cdots\)</td>
+    <td>\(-\frac{21}{20}b\)</td>
+    <td>\(-b\)</td>
+  </tr>
+</tbody>
+</table>
 
+<span class="art">555</span> This principal consists of two parts, one of which is
+$$\left(\frac{21}{20}\right)^n \cdot a$$, and the other, which must be subtracted from it,
+taking the terms inversely, forms the following geometrical
+progression:
+
+$$b+\frac{21}{20}b+\left(\frac{21}{20}\right)^2b+\left(\frac{21}{20}\right)^3b+\cdots+
+\left(\frac{21}{20}\right)^{n-1}b;$$
+
+Now we have already found (**Article 550**) that the sum of this
+progression is
+$$20\left(\frac{21}{20}\right)^nb-20b$$; if, therefore, we subtract this
+quantity from $$\left(\frac{21}{20}\right)^n \cdot a$$, we shall have for
+the principal required, after $$n$$ years,
+
+$$\left(\frac{21}{20}\right)^n \cdot (a-2b)+20b.$$
+
+<span class="art">556</span> We might have deduced this formula immediately
+from that of **Article 550**. For, in the same manner as we annually added the sum $$b$$,
+in the former supposition; so, in
+the present, we subtract the same sum $$b$$ every year. We
+have therefore only to put in the former formula, $$-b$$ everywhere,
+instead of $$+b$$. But it must here be particularly remarked, that if $$20b$$ is greater than $$a$$,
+the first part becomes
+negative, and, consequently, the principal will continually
+diminish. This will be easily perceived; for if we annually
+take away from the principal more than is added to it by the
+interest, it is evident that this principal must continually become less,
+and at last it will be absolutely reduced to
+nothing; as will appear from the following example:
+
+<span class="art">557</span> A person puts out a principal of 100000*l.* at 5 per
+cent interest; but he spends annually 6000*l.*; which is
+more than the interest of his principal, the latter being only
+5000*l.*; consequently, the principal will continually diminish;
+and it is required to determine, in what time it will be all
+spent.
+
+Let us suppose the number of years to be $$n$$,
+and since $$a=100000$$, and $$b=6000$$, we know that after $$n$$ years
+the amount of the principal will be $$-20000\left(\frac{21}{20}\right)^n + 120000$$,
+or $$120000-20000\left(\frac{21}{20}\right)^n$$, where the factor,
+-20000, is the result of $$a-20b$$; or 100000 - 120000.
+
+So that the principal will become nothing, when $$20000\left(\frac{21}{20}\right)^n$$
+amounts to 120000; or when $$20000\left(\frac{21}{20}\right)^n = 120000$$. Now,
+dividing both sides by 20000, we have $$\left(\frac{21}{20}\right)^n=6$$;
+and taking the logarithm, we have $$n \log \frac{21}{20} = \log 6$$; then
+dividing by $$\log \frac{21}{20}$$, we have
+$$n=\dfrac{\log 6}{\log \frac{21}{20}}$$, or
+$$n=\dfrac{0.7781513}{0.0211893}$$; and, consequently, $$n$$ = 36 years, 8 months, 22 days;
+at the end of which time, no part of the principal
+will remain.
+
+<span class="art">558</span> It will here be proper also to show how,
+from the
+same principles, we may calculate interest for times shorter
+than whole years. For this purpose, we make use of the
+formula $$\left(\frac{21}{20}\right)^n\cdot a$$ already found, which expresses the amount
+of a principal, at 5 per cent, compound interest, at the end
+of $$n$$ years; for if the time be less than a year, the exponent
+$$n$$ becomes a fraction, and the calculation is performed by
+logarithms as before. If, for example, the amount of a
+principal at the end of one day were required, we should
+make $$n=\frac{1}{365}$$; if after two days, $$n=\frac{2}{365}$$, and so on.
+
+<span class="art">559</span> Suppose the amount of 100000*l.* for 8 days were
+required, the interest being at 5 per cent.
+
+Here $$a=100000$$, and $$n=\frac{8}{365}$$, consequently, the amount
+sought is $$\left(\frac{21}{20}\right)^{\frac{8}{365}} \cdot 100000$$;
+the logarithm of which quantity is
+
+$$\log \left(\frac{21}{20}\right)^{\frac{8}{365}}+\log 10000=\frac{8}{365} \log \frac{21}{20} + \log 100000.$$
+
+Now, $$\log \frac{21}{20} = 0.0211893$$, which, multiplied by
+$$\frac{8}{365}$$, gives 0.0004644, to which adding
+
+$$\log 100000=5.0000000$$
+
+the sum is
+
+$$\frac{8}{365}\log \frac{21}{20}+\log 100000=5.0004644$$
+
+The natural number of this logarithm is found to be
+100107. So that, subtracting the principal, 100000 from
+this amount, the interest, for eight days, is 107*l.*
 
 
 
