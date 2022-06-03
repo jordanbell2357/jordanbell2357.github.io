@@ -498,7 +498,7 @@ it. Let us now seek for the other two, by dividing the
 second form of our equation by $$x-7$$.
 
 <a href="https://artofproblemsolving.com/texer/nxoigbhu">
-<img src="/assets/euler/nxoigbhu.png" alt="Polynomial long division" width="304" height="211" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/nxoigbhu.png" alt="Polynomial long division" width="309" height="212" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Now, making this quotient equal to nothing, we have
