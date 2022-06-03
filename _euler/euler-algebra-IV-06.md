@@ -402,10 +402,10 @@ crowns and a half. How many ells had each? [^ell]
 
 [^ell]: [Russ Rowlett: A Dictionary of Units of Measurement](https://www.ibiblio.org/units/dictE.html)
     
-    **elle** a traditional unit of distance in German speaking countries. The elle varied considerably, but it was always shorter than the English ell or French aune.
-    A typical value in northern Germany was exactly 2 fuss (German feet), which would be close to 24 inches or 60 centimeters. In the south, the elle was usually longer,
-    about 2.5 fuss. In Vienna, the elle was eventually standardized at 30.68 inches (77.93 centimeters). Although the German word *Elle* is often translated "yard"
-    in English, this is not a very good equivalent.
+    > **elle** a traditional unit of distance in German speaking countries. The elle varied considerably, but it was always shorter than the English ell or French aune.
+    > A typical value in northern Germany was exactly 2 fuss (German feet), which would be close to 24 inches or 60 centimeters. In the south, the elle was usually longer,
+    > about 2.5 fuss. In Vienna, the elle was eventually standardized at 30.68 inches (77.93 centimeters). Although the German word *Elle* is often translated "yard"
+    > in English, this is not a very good equivalent.
 
 Suppose the first had $$x$$ ells; then the second must have had
 $$x+3$$ ells; also, since the first would have sold $$x+3$$ ells
