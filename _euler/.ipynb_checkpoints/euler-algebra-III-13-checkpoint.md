@@ -498,23 +498,88 @@ the sum is
 
 $$\frac{8}{365}\log \frac{21}{20}+\log 100000=5.0004644$$
 
-The natural number of this logarithm is found to be
-100107. So that, subtracting the principal, 100000 from
+The natural number of this logarithm is found to be 100107. So that, subtracting the principal, 100000 from
 this amount, the interest, for eight days, is 107*l.*
 
 <span class="art">560</span> To this subject belong also the calculation of the
 present value of a sum of money, which is payable only after
-a tei-m of years. For as 20/., in ready money, amounts to
-21/. in a year; so, reciprocally, a sum of 21/., which cannot
-be received till the end ofone year, is really worth only 20/.
-If, therefore, we express, by «, a sum whose payment is due
-at the end of a year, the present value of this sum is ~a ;
-and therefore to find the present worth of a principal a,
-payable a year hence, we must multiply it by i^; to find its
+a term of years. For as 20*l.*, in ready money, amounts to
+21*l.* in a year; so, reciprocally, a sum of 21*l.*, which cannot
+be received till the end of one year, is really worth only 20*l.*
+If, therefore, we express, by $$a$$, a sum whose payment is due
+at the end of a year, the present value of this sum is $$\frac{20}{21}a$$;
+and therefore to find the present worth of a principal $$a$$,
+payable a year hence, we must multiply it by ²⁰⁄₂₁; to find its
 value two years before the time of payment, we multiply it
-^y (tt) « ; and in general, its value, n years before the time
-of payment, will be expressed by (|-^)"a.
+$$\left\frac{20}{21}\right)^2a$$; and in general, its value, $$n$$ years before the time
+of payment, will be expressed by $$\left\frac{20}{21}\right)^na$$.
 
+<span class="art">561</span> Suppose, for example, a man has to receive for
+five successive years, an annual rent of 100*l.* and that he
+wishes to give it up for ready money, the interest being at
+5 per cent; it is required to find how much he is to receive. Here the calculations may be made in the following
+manner:
+
+For 100*l.* due
+
+<table>
+<tbody>
+  <tr>
+    <td>after 1 year, he receives</td>
+    <td>95.239</td>
+  </tr>
+  <tr>
+    <td>after 2 years, he receives</td>
+    <td>90.704</td>
+  </tr>
+  <tr>
+    <td>after 3 years, he receives</td>
+    <td>86.385</td>
+  </tr>
+  <tr>
+    <td>after 4 years, he receives</td>
+    <td>82.272</td>
+  </tr>
+  <tr>
+    <td>after 5 years, he receives</td>
+    <td>78.355</td>
+  </tr>
+  <tr>
+    <td>Sum of the 5 terms =</td>
+    <td>432.955</td>
+  </tr>
+</tbody>
+</table>
+
+So that the possessor of the rent can claim, in ready money,
+only 432.955*l.*
+
+<span class="art">562</span> If such a rent were to last a greater number of
+years, the calculation, in the manner we have performed it,
+would become very tedious; but in that case it may be
+facilitated as follows:
+
+Let the annual rent be $$a$$, commencing at present and
+lasting $$n$$ years, it will be actually worth
+
+$$a+\left(\frac{20}{21}\right)a+\left(\frac{20}{21}\right)^2a+\left(\frac{20}{21}\right)^3a+\left(\frac{20}{21}\right)^4a+\cdots+\left(\frac{20}{21}\right)^na.$$
+
+Which is a geometrical progression, and the whole is reduced to finding its sum. We therefore multiply the last
+term by the exponent, the product of which is $$\left(\frac{20}{21}\right)^{n+1}a$$;
+then, subtracting the first term, there remains
+$$\left(\frac{20}{21}\right)^{n+1}a-a$$;
+and, lastly, dividing by the exponent minus 1, that is, by -¹⁄₂₁,
+or, which amounts to the same, multiplying by -21,
+we shall have the sum required,
+
+$$-21\cdot \left(\frac{20}{21}\right)^{n+1}\cdot a + 21a,$$
+
+or,
+
+$$21a-21\cdot \left(\frac{20}{21}\right)^{n+1}\cdot a;$$
+
+and the value of the second term, which it is required to
+subtract, is easily calculated by logarithms.
 
 #### References
 
