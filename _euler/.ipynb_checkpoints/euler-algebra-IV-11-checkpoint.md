@@ -31,7 +31,7 @@ of three tactors, which are in the present instance,
 $$(x-1)(x-2)(x-3)=0;$$
 
 since, by actually multiplying them, we obtain the given
-equation; for $$(x-1)(x-2)$$ gives $$x^2-3x+2$$< and multiplying
+equation; for $$(x-1)(x-2)$$ gives $$x^2-3x+2$$, and multiplying
 this by $$x-3$$, we obtain $$x^3-6x^2+11x-6$$, which are the given
 quantities, and which must be =0. Now, this happens, when the product
 $$(x-1)(x-2)(x-3)=0$$; and, as it is sufficient for this purpose, that
