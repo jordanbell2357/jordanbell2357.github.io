@@ -42,7 +42,7 @@ let us
 therefore perform this division.
 
 <a href="https://artofproblemsolving.com/texer/nqyxzgxd">
-<img src="/assets/euler/nqyxzgxd.png" alt="Polynomial long division" width="247" height="205" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/nqyxzgxd.png" alt="Polynomial long division" width="255" height="212" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Hence it follows, that our equation, $$x^3=8$$,
