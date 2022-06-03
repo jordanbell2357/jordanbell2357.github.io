@@ -452,7 +452,7 @@ dividing the profit, it is found, after each has received ten
 times as many pounds as there are persons in the company,
 that there still remains 224*l.*. Required the number of merchants?
 
-If $$x$$ be made to represent the n^umber, each will have contributed $$40x$$
+If $$x$$ be made to represent the number, each will have contributed $$40x$$
 to the stock; consequently, all together will
 have contributed $$40x^2$$, which makes the stock
 $$=40x^2+8240$$. Now, with this sum they gain $$x$$ per cent;
