@@ -89,15 +89,15 @@ values, the other is easily found.
 
 <span class="art">696</span> We have at present considered the case, in which
 the two values of $$x$$ are positive, and which requires the
-second term of the equation to have the sign $$-$$, and the
-third term to have the sign $$+$$. Let us also consider
+second term of the equation to have the sign -, and the
+third term to have the sign +. Let us also consider
 the cases, in which either one or both values of $$x$$ become
 negative. The first takes place, when the two factors of
 the equation give a product of this form, $$(x-p) (x+q)$$;
 for then the two values of $$x$$ are $$x = p$$, and $$x = - q$$; and
 the equation itself becomes $$x^2 +(q-p)x-pq=0$$;
-the second term having the sign $$+$$ when $$q$$ is greater
-than $$p$$, and the sign $$-$$ when $$q$$ is less than $$p$$; lastly, the
+the second term having the sign + when $$q$$ is greater
+than $$p$$, and the sign - when $$q$$ is less than $$p$$; lastly, the
 third term is always negative.
 
 The second case, in which both values of $$x$$ are negative,
@@ -105,15 +105,15 @@ occurs when the two factors are $$(x+p) (x+q)$$;
 for we shall then have $$x= -p$$, and $$x= -q$$; the equation
 itself therefore becomes $$x^2+(p +q)x+pq=0$$.
 in which both the second and third terms are affected by
-the sign $$+$$.
+the sign +.
 
 <span class="art">697</span> The signs of the second and the third terms consequently show us the nature of the
 roots of any equation
 of the second degree. For let the equation be
-$$x^2 \dots ax \dots b=0$$. If the second and third terms have the sign $$+$$,
+$$x^2 \dots ax \dots b=0$$. If the second and third terms have the sign +,
 the two values of $$x$$ are both negative; if the second term
-have the sign $$-$$, and the third term $$+$$, both values are
-positive: lastly, if the third term also have the sign $$-$$,
+have the sign -, and the third term +, both values are
+positive: lastly, if the third term also have the sign -,
 one of the values in question is positive. But, in all cases
 whatever, the second term contains the *sum* of the two
 values, and the third term contains their *product*. 
