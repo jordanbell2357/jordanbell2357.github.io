@@ -398,7 +398,14 @@ quantity of silk; the second sells 3 ells more than the first,
 and they received together 35 crowns. Now, the first says
 to the second, I should have got 24 crowns for your silk;
 the other answers, And I should have got for yours 12
-crowns and a half. How many ells had each? [*ell*](#ell)
+crowns and a half. How many ells had each?[^ell]
+
+[^ell]: [Russ Rowlett: A Dictionary of Units of Measurement](https://www.ibiblio.org/units/dictE.html)
+ 
+ **elle** a traditional unit of distance in German speaking countries. The elle varied considerably, but it was always shorter than the English ell or French aune.
+ A typical value in northern Germany was exactly 2 fuss (German feet), which would be close to 24 inches or 60 centimeters. In the south, the elle was usually longer,
+ about 2.5 fuss. In Vienna, the elle was eventually standardized at 30.68 inches (77.93 centimeters). Although the German word *Elle* is often translated "yard" in English,
+ this is not a very good equivalent.
 
 Suppose the first had $$x$$ ells; then the second must have had
 $$x+3$$ ells; also, since the first would have sold $$x+3$$ ells
@@ -432,17 +439,6 @@ sold 8 ells for 24 crowns, he must have received 15 crowns
 for his 5 ells; also, since the second would have sold 5 ells
 for 12 crowns and a half, his 8 ells must have produced
 him 20 crowns; the sum being, as before, 35 crowns.
-
-#### The *ell* {#ell}
-
-[Russ Rowlett: A Dictionary of Units of Measurement](https://www.ibiblio.org/units/dictE.html)
-
-**elle** a traditional unit of distance in German speaking countries. The elle varied considerably, but it was always shorter than the English ell or French aune. A typical value in northern Germany was exactly 2 fuss (German feet), which would be close to 24 inches or 60 centimeters. In the south, the elle was usually longer, about 2.5 fuss. In Vienna, the elle was eventually standardized at 30.68 inches (77.93 centimeters). Although the German word *Elle* is often translated "yard" in English, this is not a very good equivalent.
-
-Nancy Cox and Karin Dannehl, 'Elastic - Elm board', in *Dictionary of Traded Goods and Commodities 1550-1820* (Wolverhampton, 2007), *British History Online* <http://www.british-history.ac.uk/no-series/traded-goods-dictionary/1550-1820/elastic-elm-board>
-
-**Ell** A linear unit of measure varying in length in different countries and regions. The ENGLISH ELL equalled 45 INCH, but 54 INCH in Shropshire, the Scottish Ell was 37 INCH and the FLEMISH 27 INCH. It was commonly used for measuring LINEN, particularly that which was imported, throughout the period. For other fabrics it virtually died out during the seventeenth century. The term was usually singular when preceded by numerals, in other words '9 ell'.
-
 
 #### References
 
