@@ -157,7 +157,7 @@ shown.
 
 The third case is that, in which $$\frac{c}{a}$$ becomes a negative
 number: the value of $$x$$ is then altogether impossible and
-imaginary \["gar unmöglich oder Imaginär"\]; and this result proves that the question, which
+imaginary; and this result proves that the question, which
 leads to such an equation, is in itself impossible.
 
 <span class="art">631</span> We shall also observe, before proceeding farther,
