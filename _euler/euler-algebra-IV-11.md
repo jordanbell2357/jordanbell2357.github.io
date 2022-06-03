@@ -258,14 +258,14 @@ found by dividing
 $$y^3+9y^2+18y-910$$ by $$y-7$$, thus:
 
 <a href="https://artofproblemsolving.com/texer/ncijelkw">
-<img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="304" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="305" height="212" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Supposing now this quotient $$y^2+16y+130=0$$, we shall have $$y^2 + 16y = -130$$, and thence
 $$y=-8 \pm \surd -66$$; a proof that the other two roots are
 impossible.
 
-The two numbers sought are therefore 14, and (14+12)=26;
+The two numbers sought are therefore 14, and (14 + 12) = 26;
 the product of which, 364, multiplied by their
 sum, 40, gives 14560.
 
