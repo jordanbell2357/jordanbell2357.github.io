@@ -309,11 +309,10 @@ $$x=-\frac{31}{2}  \pm  \surd\left(\frac{961}{4}-\frac{1376}{4} \right);$$
 
 that is, two imaginary roots.
 
-Hence the numbers sought are 4, and (4+18)=22.
+Hence the numbers sought are 4, and (4 + 18) = 22.
 
 <span class="art">729</span> *Question 3.* Required two numbers whose difference is 720, and such,
-that if the less be multiplied by the
-square root of the greater, the product may be 20736.
+that if the less be multiplied by the square root of the greater, the product may be 20736.
 
 If the less be represented by $$x$$, the greater will evidently
 be $$x+720$$; and, by the question,
