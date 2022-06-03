@@ -25,7 +25,7 @@ regard to pure equations of the same degree.
 <span class="art">720</span> We shall first consider the equation
 $$x^3-6x^2+11x-6=0$$; and, since an equation of the second degree
 may be considered as the product of two factors, we may
-also represent an equation of tlie third degree by the product
+also represent an equation of the third degree by the product
 of three tactors, which are in the present instance,
 
 $$(x-1)(x-2)(x-3)=0;$$
