@@ -54,7 +54,7 @@ polygonal numbers
 </tbody>
 </table>
 
-<span class="art">657</span> We have already shewn, that it is easy, by means of
+<span class="art">657</span> We have already shown, that it is easy, by means of
 these formulae, to find, for any given root, any polygon
 number required: but when it is required reciprocally to
 find the side, or the root of a polygon, the number of whose
