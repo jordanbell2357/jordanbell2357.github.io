@@ -512,7 +512,7 @@ and therefore to find the present worth of a principal $$a$$,
 payable a year hence, we must multiply it by ²⁰⁄₂₁; to find its
 value two years before the time of payment, we multiply it by
 $$\left(\frac{20}{21}\right)^2a$$; and in general, its value, $$n$$ years before the time
-of payment, will be expressed by $$\left\frac{20}{21}\right)^na$$.
+of payment, will be expressed by $$\left(\frac{20}{21}\right)^na$$.
 
 <span class="art">561</span> Suppose, for example, a man has to receive for
 five successive years, an annual rent of 100*l.* and that he
