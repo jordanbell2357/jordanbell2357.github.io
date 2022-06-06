@@ -97,30 +97,30 @@ Table furnishes some examples:
 <tbody>
   <tr>
     <td>Triangles</td>
-    <td>1,</td>
-    <td>3,</td>
-    <td>6,</td>
-    <td>10,</td>
-    <td>15,</td>
-    <td>21,</td>
-    <td>28,</td>
-    <td>36,</td>
-    <td>45,</td>
-    <td>55,</td>
+    <td>1</td>
+    <td>3</td>
+    <td>6</td>
+    <td>10</td>
+    <td>15</td>
+    <td>21</td>
+    <td>28</td>
+    <td>36</td>
+    <td>45</td>
+    <td>55</td>
     <td>etc.</td>
   </tr>
   <tr>
     <td>8 times + 1 =</td>
-    <td>9,</td>
-    <td>25,</td>
-    <td>49,</td>
-    <td>81,</td>
-    <td>121,</td>
-    <td>169,</td>
-    <td>225,</td>
-    <td>289,</td>
-    <td>361,</td>
-    <td>441,</td>
+    <td>9</td>
+    <td>25</td>
+    <td>49</td>
+    <td>81</td>
+    <td>121</td>
+    <td>169</td>
+    <td>225</td>
+    <td>289</td>
+    <td>361</td>
+    <td>441</td>
     <td>etc.</td>
   </tr>
 </tbody>
