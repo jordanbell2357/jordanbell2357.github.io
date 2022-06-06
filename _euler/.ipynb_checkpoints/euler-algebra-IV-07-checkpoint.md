@@ -59,14 +59,38 @@ these formulae, to find, for any given root, any polygon
 number required: but when it is required reciprocally to
 find the side, or the root of a polygon, the number of whose
 sides is known, the operation is more difficult, and always
-requires the solution of a quadratic equation; on which account the subject deserves, in this place, to be separately
-considered. In doing this we shall proceed regularly, beginning with the triangular numbers, and passing from them
+requires the solution of a quadratic equation; on which account the subject deserves,
+in this place, to be separately considered. In doing this we shall proceed regularly,
+beginning with the triangular numbers, and passing from them
 to those of a greater number of angles.
 
 <span class="art">658</span> Let therefore 91 be the given triangular number,
 the side or root of which is required.
 
 If we make this root =$$x$$, we must have
+$$\dfrac{x^2+x}{2}=91$$; or $$x^2+x=182$$, and $$x^2=-x+182$$; consequently,
+
+$$x=-\frac{1}{2}+\surd\left(\frac{1}{4}+182\right) = -\frac{1}{2} + \surd\left(\frac{729}{4}\right)
+=-\frac{1}{2} + \frac{27}{2}=13;$$
+
+from which we conclude, that the triangular root required is
+13; for the triangle of 13 is 91.
+
+<span class="art">659</span> But, in general, let $$a$$ be the given triangular number,
+and let its root be required.
+
+Here if we make it $$=x$$, we have $$\dfrac{x^2+x}{2}=a$$, or $$x^2+x=2a$$; therefore, $$x^2=-x+2a$$, and by
+the rule $$x=-\frac{1}{2} +\surd\left(\frac{1}{4}+2a\right)$$, or $$x=\dfrac{-1 + \surd(8a+1)}{2}$$.
+
+This result gives the following rule: To find a triangular root, we must multiply the given triangular number
+by 8, add 1 to the product, extract the root of the sum,
+subtract 1 from that root, and lastly, divide the remainder
+by 2.
+
+<span class="art">660</span> So that all triangular numbers have this property;
+that if we multiply them by 8, and add unity to the product,
+the sum is always a square; of which the following small
+Table furnishes some examples:
 
 
 #### References
