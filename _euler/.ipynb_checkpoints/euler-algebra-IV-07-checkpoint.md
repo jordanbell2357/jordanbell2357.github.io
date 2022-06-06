@@ -92,6 +92,7 @@ that if we multiply them by 8, and add unity to the product,
 the sum is always a square; of which the following small
 Table furnishes some examples:
 
+<div style="overflow-x:auto;">
 <table>
 <tbody>
   <tr>
@@ -124,6 +125,7 @@ Table furnishes some examples:
   </tr>
 </tbody>
 </table>
+</div>
 
 If the given number a does not answer this condition, we
 conclude, that it is not a real triangular number, or that no
