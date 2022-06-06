@@ -141,6 +141,17 @@ $$=\dfrac{\surd 33}{2}-\dfrac{1}{2}$$, and consequently irrational.
 However, the triangle of this root, $$\dfrac{\surd 33}{2}-\dfrac{1}{2}$$,
 may be found in the following manner:
 
+Since $$x=\dfrac{\surd 33-1}{2}$$, we have $$x^2=\dfrac{17-\surd 33}{2}$$, and adding
+$$x=\dfrac{\surd 33-1}{2}$$ to it, the sum is $$x^2+x=\frac{16}{2}=8$$. Consequently, the
+triangle, or the triangular number, is $$\dfrac{x^2+x}{2}=4$$.
+
+<span class="art">662</span> The quadrangular numbers being the same as
+squares, they occasion no difficulty. For, supposing the
+given quadrangular number to be $$a$$, and its required
+root $$a$$;, we shall have $$x^2=a$$, and consequently, $$x=\surd a$$;
+so that the square root and the quadrangular root are the
+same thing.
+
 
 #### References
 
