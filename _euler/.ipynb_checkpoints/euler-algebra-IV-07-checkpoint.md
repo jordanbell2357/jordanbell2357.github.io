@@ -92,6 +92,53 @@ that if we multiply them by 8, and add unity to the product,
 the sum is always a square; of which the following small
 Table furnishes some examples:
 
+<table>
+<tbody>
+  <tr>
+    <td>Triangles</td>
+    <td>1,</td>
+    <td>3,</td>
+    <td>6,</td>
+    <td>10,</td>
+    <td>15,</td>
+    <td>21,</td>
+    <td>28,</td>
+    <td>36,</td>
+    <td>45,</td>
+    <td>55,</td>
+    <td>etc.</td>
+  </tr>
+  <tr>
+    <td>8 times + 1 =</td>
+    <td>9,</td>
+    <td>25,</td>
+    <td>49,</td>
+    <td>81,</td>
+    <td>121,</td>
+    <td>169,</td>
+    <td>225,</td>
+    <td>289,</td>
+    <td>361,</td>
+    <td>441,</td>
+    <td>etc.</td>
+  </tr>
+</tbody>
+</table>
+
+If the given number a does not answer this condition, we
+conclude, that it is not a real triangular number, or that no
+rational root of it can be assigned.
+
+<span class="art">661</span> According to this rule, let the triangular root of 210
+be required; we shall have $$a = 210$$, and $$8a + 1 = 1681$$,
+the square root of which is 41; whence we see, that
+the number 210 is really triangular, and that its root is
+$$\dfrac{41-1}{2}=20$$. But if 4 were given as the triangular number,
+and its root were required, we should find it
+$$=\dfrac{\surd 33}{2}-\dfrac{1}{2}$$, and consequently irrational.
+However, the triangle of this root, $$\dfrac{\surd 33}{2}-\dfrac{1}{2}$$,
+may be found in the following manner:
+
 
 #### References
 
