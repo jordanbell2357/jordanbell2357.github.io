@@ -189,8 +189,7 @@ sought.
     - [Section I. Chapter 2. "Explanation of the Signs + Plus and - Minus."](/assets/euler/en/I-2.pdf)
     - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
 3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Erster Theil. Erster Abschnitt. Capitel 2. Erklärung der Zeichen + plus und
-- minus](/assets/euler/de/I-I-2.pdf)
+    - [Erster Theil. Erster Abschnitt. Capitel 2. Erklärung der Zeichen + plus und - minus](/assets/euler/de/I-I-2.pdf)
     - [Springer](https://link.springer.com/book/9783764314002)
 2. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
     - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)
