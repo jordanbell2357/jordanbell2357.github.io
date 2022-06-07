@@ -239,7 +239,7 @@ $$\dfrac{(n-2)x^2-(n-4)x}{2} = a,$$
 
 or $$(n-2)x^2-(n-4)x=2a$$; consequently,
 
-$$x^2=\dfrac{(n-4)x}{n-2)+\dfrac{2a}{n-2};$$
+$$x^2=\dfrac{(n-4)x}{n-2}+\dfrac{2a}{n-2};$$
 
 whence,
 
