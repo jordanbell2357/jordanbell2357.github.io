@@ -242,7 +242,7 @@ the factors of the equation, or that $$x^2+4x-21$$ is divisible
 by $$x-3$$, which the actual division proves. Thus,
 
 <a href="https://artofproblemsolving.com/texer/qznvljcs">
-<img src="/assets/euler/qznvljcs.png" alt="Polynomial long division" width="206" height="155" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/qznvljcs.png" alt="Polynomial long division" width="172" height="130" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 So that the other factor is $$x + 7$$, and our equation is represented by the

@@ -42,7 +42,7 @@ let us
 therefore perform this division.
 
 <a href="https://artofproblemsolving.com/texer/nqyxzgxd">
-<img src="/assets/euler/nqyxzgxd.png" alt="Polynomial long division" width="255" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/nqyxzgxd.png" alt="Polynomial long division" width="213" height="177">
 </a>
 
 Hence it follows, that our equation, $$x^3=8$$,
@@ -130,7 +130,7 @@ will be divisible by $$x-c$$,
 as the actual division shows
 
 <a href="https://artofproblemsolving.com/texer/chcvtqld">
-<img src="/assets/euler/chcvtqld.png" alt="Polynomial long division" width="266" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/chcvtqld.png" alt="Polynomial long division" width="218" height="173">
 </a>
 
 Consequently, the equation in question may be represented by the product
