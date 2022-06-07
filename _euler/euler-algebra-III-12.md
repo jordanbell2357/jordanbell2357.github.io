@@ -14,7 +14,7 @@ other calculations. It will therefore be very necessary to
 show how a vulgar fraction may be transformed into a decimal fraction; and, conversely, how we may express the
 value of a decimal, by a vulgar fraction.
 
-<span class="art">526</span> Let it be required, in general, to cliange the fraction
+<span class="art">526</span> Let it be required, in general, to change the fraction
 $$\frac{a}{b}$$, into a decimal. As this fraction expresses the quotient
 of the division of the numerator $$a$$ by the denominator $$b$$, let
 us write, instead of $$a$$, the quantity $$a.0000000$$, whose value
