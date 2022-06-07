@@ -258,7 +258,7 @@ found by dividing
 $$y^3+9y^2+18y-910$$ by $$y-7$$, thus:
 
 <a href="https://artofproblemsolving.com/texer/ncijelkw">
-<img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="305" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="255" height="177" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Supposing now this quotient $$y^2+16y+130=0$$, we shall have $$y^2 + 16y = -130$$, and thence
