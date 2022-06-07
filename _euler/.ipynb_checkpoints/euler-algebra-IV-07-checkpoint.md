@@ -197,7 +197,7 @@ For example, let the hexagonal number be 1225, its root will be
 
 $$x=\dfrac{1+\surd 9801}{4} = \dfrac{1+99}{4}=25.$$
 
-666 Suppose $$a$$ an heptagonal number, of which the root is required.
+<span class="art">666</span> Suppose $$a$$ an heptagonal number, of which the root is required.
 
 Let this root be $$x$$, then we shall have $$\dfrac{5x^2-3x}{2}=a$$, or
 $$x^2=\frac{3}{5}x+\frac{2}{5}a$$, which gives
