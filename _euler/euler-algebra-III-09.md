@@ -242,7 +242,7 @@ Polish złoty are equivalent to
 Therefore 1500 ducats = 12019 złoty.
 
 <a href="https://artofproblemsolving.com/texer/mtqkgrbj">
-<img src="/assets/euler/mtqkgrbj.png" alt="Long division" width="88" height="158" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/mtqkgrbj.png" alt="Long division" width="88" height="158">
 </a>
 
 hence 500 ducats = 4006⅓ złoty.
