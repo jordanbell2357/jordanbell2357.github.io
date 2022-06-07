@@ -442,7 +442,7 @@ equation proposed, and the other two will be found by
 dividing the equation by $$x-3$$.
 
 <a href="https://artofproblemsolving.com/texer/oqfowwuq">
-<img src="/assets/euler/oqfowwuq.png" alt="Polynomial long division" width="230" height="176" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/oqfowwuq.png" alt="Polynomial long division" width="230" height="176">
 </a>
 
 Also making the quotient $$x^2-3x+4=0$$, we have $$x^2=3x-4$$; and

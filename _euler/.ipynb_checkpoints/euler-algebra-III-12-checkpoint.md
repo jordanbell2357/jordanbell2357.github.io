@@ -30,7 +30,7 @@ Let there be given first the fraction ½, and the division in
 decimals will assume this form:
 
 <a href="https://artofproblemsolving.com/texer/njyeuwza">
-<img src="/assets/euler/njyeuwza.png" alt="Integer long division ½" width="174" height="89" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/njyeuwza.png" alt="Integer long division ½" width="174" height="89">
 </a>
 
 Hence it appears, that ½ is equal to 0.5000000 or 0.5;
@@ -40,7 +40,7 @@ which is equivalent to ½.
 <span class="art">527</span> Let now ⅓ be the given fraction, and we shall have,
 
 <a href="https://artofproblemsolving.com/texer/pvnjgnaf">
-<img src="/assets/euler/pvnjgnaf.png" alt="Integer long division ⅓" width="185" height="434" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/pvnjgnaf.png" alt="Integer long division ⅓" width="185" height="434">
 </a>
 
 This shows, that the decimal fraction, whose value is ⅓,
@@ -55,7 +55,7 @@ The decimal fraction which expresses the value of ⅔, is
 also continued to infinity; for we have,
 
 <a href="https://artofproblemsolving.com/texer/jkxijqxi">
-<img src="/assets/euler/jkxijqxi.png" alt="Integer long division ⅔" width="185" height="434" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/jkxijqxi.png" alt="Integer long division ⅔" width="185" height="434">
 </a>
 
 Which is also evident from what we have just said, because
@@ -64,7 +64,7 @@ Which is also evident from what we have just said, because
 <span class="art">528</span> If ¼ be the fraction proposed, we have
 
 <a href="https://artofproblemsolving.com/texer/xsxbzhmm">
-<img src="/assets/euler/xsxbzhmm.png" alt="Integer long division ¼" width="174" height="138" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/xsxbzhmm.png" alt="Integer long division ¼" width="174" height="138">
 </a>
 
 So that ¼ is equal to 0.2500000, or to 0.25: which is
@@ -75,7 +75,7 @@ evidently true, since
 In like manner, we should have for the fraction ¾,
 
 <a href="https://artofproblemsolving.com/texer/djkddmyz">
-<img src="/assets/euler/djkddmyz.png" alt="Integer long division ¾" width="174" height="138" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/djkddmyz.png" alt="Integer long division ¾" width="174" height="138">
 </a>
 
 So that ¾ = 0.75: and in fact
@@ -85,7 +85,7 @@ So that ¾ = 0.75: and in fact
 The fraction ⁵⁄₄ is changed into a decimal fraction, by making
 
 <a href="https://artofproblemsolving.com/texer/bksuqzrk">
-<img src="/assets/euler/bksuqzrk.png" alt="Integer long division ⁵⁄₄" width="174" height="187" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/bksuqzrk.png" alt="Integer long division ⁵⁄₄" width="174" height="187">
 </a>
 
 Now,
@@ -120,7 +120,7 @@ the decimal fraction, which we have found, is exactly equal to ⅐;
 for, by substituting for its value the letter $$s$$, we have
 
 <a href="https://artofproblemsolving.com/texer/tvrzyttr">
-<img src="/assets/euler/tvrzyttr.png" alt="Decimals for ⅐" width="436" height="209" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/tvrzyttr.png" alt="Decimals for ⅐" width="436" height="209">
 </a>
 
 And, dividing by 999999, we have $$s$$ = ¹⁴²⁸⁵⁷⁄₉₉₉₉₉₉ = ⅐.
@@ -248,7 +248,7 @@ real result, by dividing 8 by 9, and then that quotient by 3,
 because 27 = 3 · 9: thus, we have
 
 <a href="https://artofproblemsolving.com/texer/gqamudfn">
-<img src="/assets/euler/gqamudfn.png" alt="Decimals for ⁸⁄₂₇" width="289" height="385" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/gqamudfn.png" alt="Decimals for ⁸⁄₂₇" width="289" height="385">
 </a>
 
 which is the decimal fraction that was proposed.
@@ -260,23 +260,23 @@ $$\dfrac{1}{1\cdot 2\cdot 3\cdot 4\cdot 5\cdot 6\cdot 7\cdot 8\cdot 9\cdot 10},$
 to a decimal. The operation would be as follows:
 
 <a href="https://artofproblemsolving.com/texer/eqzaigab">
-<img src="/assets/euler/eqzaigab.png" alt="Dividing by 2 then by 3" width="469" height="777" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/eqzaigab.png" alt="Dividing by 2 then by 3" width="469" height="777">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/bctsglel">
-<img src="/assets/euler/bctsglel.png" alt="Dividing by 4 then by 5" width="474" height="725" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/bctsglel.png" alt="Dividing by 4 then by 5" width="474" height="725">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/hjfwyspf">
-<img src="/assets/euler/hjfwyspf.png" alt="Dividing by 6 then by 7" width="554" height="875" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/hjfwyspf.png" alt="Dividing by 6 then by 7" width="554" height="875">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/rclecfes">
-<img src="/assets/euler/rclecfes.png" alt="Dividing by 8 then by 9" width="500" height="581" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/rclecfes.png" alt="Dividing by 8 then by 9" width="500" height="581">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/qyqxpeiu">
-<img src="/assets/euler/qyqxpeiu.png" alt="Dividing by 10" width="238" height="481" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/qyqxpeiu.png" alt="Dividing by 10" width="238" height="481">
 </a>
 
 

@@ -20,11 +20,11 @@ different forms.
 by the divisor $$1-a$$, thus
 
 <a href="https://artofproblemsolving.com/texer/fpedyycq">
-<img src="/assets/euler/fpedyycq.png" alt="Long division" width="182" height="282" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/fpedyycq.png" alt="Long division" width="182" height="282">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/zrwgmxoi">
-<img src="/assets/euler/zrwgmxoi.png" alt="Long division" width="192" height="454" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/zrwgmxoi.png" alt="Long division" width="192" height="454">
 </a>
 
 <span class="art">291</span> This shews that the fraction $$\dfrac{1}{1-a}$$ may be exhibited under all the following forms:
@@ -166,7 +166,7 @@ error of ¹⁄₄₈.
 $$\dfrac{1}{1+a}$$, into an infinite series by actually dividing the numerator 1 by the denominator $$1+a$$, as follows.
 
 <a href="https://artofproblemsolving.com/texer/elevmfjl">
-<img src="/assets/euler/elevmfjl.png" alt="Long division" width="366" height="282" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/elevmfjl.png" alt="Long division" width="366" height="282">
 </a>
 
 $$\dfrac{1}{1+a}=1-a+a^2-a^3+a^4+\dfrac{-a^5}{1-a}$$
@@ -213,7 +213,7 @@ terms give ²⁰⁄₂₇, which is too small by ¹⁄₁₀₈, and so on.
 1 by $$a+1$$, as follows:
 
 <a href="https://artofproblemsolving.com/texer/nrbopszm">
-<img src="/assets/euler/nrbopszm.png" alt="Long division" width="266" height="200" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/nrbopszm.png" alt="Long division" width="266" height="200">
 </a>
 
 $$\dfrac{1}{a+1} = \frac{1}{a} - \frac{1}{a^2} + \frac{1}{a^3} + \dfrac{-\frac{1}{a^3}}{a+1}$$
@@ -236,7 +236,7 @@ have the series
 $$\dfrac{c}{a+b}$$ into an infinite series, we shall have,
 
 <a href="https://artofproblemsolving.com/texer/qegmojmo">
-<img src="/assets/euler/qegmojmo.png" alt="Long division" width="276" height="218" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/qegmojmo.png" alt="Long division" width="276" height="218">
 </a>
 
 $$\dfrac{c}{a+b} = \frac{c}{a} - \frac{bc}{a^2} + \frac{bc^2}{a^3} - \frac{bc^3}{a^4} + \dfrac{-\frac{b^3c}{a^3}}{a+b}$$
@@ -263,7 +263,7 @@ were proposed, the
 infinite scries, to which it is equal, will be found as follows:
 
 <a href="https://artofproblemsolving.com/texer/hxbggdvw">
-<img src="/assets/euler/hxbggdvw.png" alt="Long division" width="536" height="276" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/hxbggdvw.png" alt="Long division" width="536" height="276">
 </a>
 
 We have therefore the equation

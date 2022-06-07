@@ -99,7 +99,7 @@ for $$x=2$$ being one of the roots $$x-2$$ is a factor of the equation,
 adn as we have only to see the other factor by means of division as follows:
 
 <a href="https://artofproblemsolving.com/texer/uptzquhb">
-<img src="/assets/euler/uptzquhb.png" alt="Polynomial long division" width="213" height="177" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/uptzquhb.png" alt="Polynomial long division" width="213" height="177">
 </a>
 
 Since, therefore, the formula is represented by the product
@@ -208,7 +208,7 @@ equation, by means of which we easily find the two other
 roots; for, actually dividing by $$x-2$$, we have
 
 <a href="https://artofproblemsolving.com/texer/geyfrhwy">
-<img src="/assets/euler/geyfrhwy.png" alt="Polynomial long division" width="277" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/geyfrhwy.png" alt="Polynomial long division" width="277" height="212">
 </a>
 
 And making the quotient $$x^2-3x-28=0$$,
@@ -258,7 +258,7 @@ found by dividing
 $$y^3+9y^2+18y-910$$ by $$y-7$$, thus:
 
 <a href="https://artofproblemsolving.com/texer/ncijelkw">
-<img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="255" height="177" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="255" height="177">
 </a>
 
 Supposing now this quotient $$y^2+16y+130=0$$, we shall have $$y^2 + 16y = -130$$, and thence
@@ -497,7 +497,7 @@ it. Let us now seek for the other two, by dividing the
 second form of our equation by $$x-7$$.
 
 <a href="https://artofproblemsolving.com/texer/nxoigbhu">
-<img src="/assets/euler/nxoigbhu.png" alt="Polynomial long division" width="309" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/nxoigbhu.png" alt="Polynomial long division" width="309" height="212">
 </a>
 
 Now, making this quotient equal to nothing, we have

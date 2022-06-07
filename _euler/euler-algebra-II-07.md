@@ -40,7 +40,7 @@ that although the second term is yet unknown, and it is
 necessary, for the present, to leave its place empty, we may
 nevertheless attempt the division, since in it we attend only
 to the first term $$2a$$; but as soon as the quotient is found,
-which in tlic present case is $$b$$, we must put it in the vacant
+which in the present case is $$b$$, we must put it in the vacant
 place, and thus render the division complete.
 
 <span class="art">321</span> The calculation, therefore, by which we find the
@@ -128,19 +128,19 @@ will render this operation more clear.
 
 
 <a href="https://artofproblemsolving.com/texer/youjickd">
-<img src="/assets/euler/youjickd.png" alt="Polynomial square root" width="500" height="143" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/youjickd.png" alt="Polynomial square root" width="500" height="143">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/gqwjcjed">
-<img src="/assets/euler/gqwjcjed.png" alt="Polynomial square root" width="447" height="135" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/gqwjcjed.png" alt="Polynomial square root" width="447" height="135">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/krbauhty">
-<img src="/assets/euler/krbauhty.png" alt="Polynomial square root" width="539" height="135" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/krbauhty.png" alt="Polynomial square root" width="539" height="135">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/wclmufmg">
-<img src="/assets/euler/wclmufmg.png" alt="Polynomial square root" width="810" height="175" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/wclmufmg.png" alt="Polynomial square root" width="810" height="175">
 </a>
 
 <span class="art">324</span> We easily deduce from the rule which we have explained, the method which is taught in books of arithmetic
@@ -148,18 +148,19 @@ for the extraction of the square root, as will appear from the
 following examples in numbers:
 
 <a href="https://artofproblemsolving.com/texer/vpnfjpvf">
-<img src="/assets/euler/vpnfjpvf.png" alt="Square root" width="256" height="427" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/vpnfjpvf.png" alt="Square root" width="256" height="427">
 </a>
 
 <a href="https://artofproblemsolving.com/texer/jmwdlaqw">
-<img src="/assets/euler/jmwdlaqw.png" alt="Square root" width="379" height="522" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/jmwdlaqw.png" alt="Square root" width="379" height="522">
 </a>
 
 <span class="art">325</span> But when there is a remainder after all the figures
 have been used, it is a proof that the number proposed is
 not a square; and, consequently, that its root cannot be
-assigned. , In such cases, the radical sign, which we before
-employed, is made use of. This is written before the quantity, and the quantity itself is placed between parentheses,
+assigned. In such cases, the radical sign, which we before
+employed, is made use of. This is written before the quantity,
+and the quantity itself is placed between parentheses,
 or under a line: thus, the square root of $$a^2+b^2$$ is represented by $$\surd(a^2+b^2)$$,
 or by $$\sqrt{a^2+b^2}$$; and $$\surd(1-x^2)$$, or
 $$\sqrt{1-x^2}$$, expresses the square root of $$1-x^2$$. Instead of

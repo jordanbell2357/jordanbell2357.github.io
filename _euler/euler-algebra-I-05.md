@@ -101,14 +101,14 @@ produces only 21, which is 3 less than 24. We may also
 consider the following examples in the same manner:
 
 <a href="https://artofproblemsolving.com/texer/abfbqtug">
-<img src="/assets/euler/abfbqtug.png" alt="Long division" width="46" height="88" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/abfbqtug.png" alt="Long division" width="46" height="88">
 </a>
 
 that is to say, the divisor is 6, the dividend 84, the quotient 5, and the
 remainder 4.
 
 <a href="https://artofproblemsolving.com/texer/rhppibyu">
-<img src="/assets/euler/rhppibyu.png" alt="Long division" width="46" height="87" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/rhppibyu.png" alt="Long division" width="46" height="87">
 </a>
 
 here the divisor is 9, the dividend

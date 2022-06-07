@@ -273,7 +273,7 @@ for 1000 ducats?
 Therefore 210000 ducats = 554320 Thaler in Leipzig; so 21000 ducats = 55432 Thaler in Leipzig.
 
 <a href="https://artofproblemsolving.com/texer/smvsljqk">
-<img src="/assets/euler/smvsljqk.png" alt="Long division" width="206" height="331" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/smvsljqk.png" alt="Long division" width="206" height="331">
 </a>
 
 Thus dividing by 3,

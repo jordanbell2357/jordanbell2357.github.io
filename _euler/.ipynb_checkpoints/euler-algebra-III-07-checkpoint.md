@@ -29,7 +29,7 @@ and this last divisor will be the greatest common divisor of
 the two given numbers.
 
 <a href="https://artofproblemsolving.com/texer/pfotexig">
-<img src="/assets/euler/pfotexig.png" alt="Finding greatest common divisor with long division" width="400" height="121" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/pfotexig.png" alt="Finding greatest common divisor with long division" width="400" height="121">
 </a>
 
 Thus, for the two numbers 576 and 252.
@@ -41,7 +41,7 @@ examples; and, for this purpose, let the greatest common
 divisor of the numbers 504 and 312 be required.
 
 <a href="https://artofproblemsolving.com/texer/gjyncrpl">
-<img src="/assets/euler/gjyncrpl.png" alt="Finding greatest common divisor with long division" width="500" height="83" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/gjyncrpl.png" alt="Finding greatest common divisor with long division" width="500" height="83">
 </a>
 
 So that 24 is the greatest common divisor, and consequently the relation 504:312
@@ -51,7 +51,7 @@ is reduced to the form 21:13.
 common divisor of these two numbers be required.
 
 <a href="https://artofproblemsolving.com/texer/kreecolj">
-<img src="/assets/euler/kreecolj.png" alt="Finding greatest common divisor with long division" width="500" height="152" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/kreecolj.png" alt="Finding greatest common divisor with long division" width="500" height="152">
 </a>
 
 Wherefore 1 is, in this case, the greatest common divisor,
@@ -108,7 +108,7 @@ requiring the greatest common divisor of the numbers 1728
 and 2304. The operation is as follows:
 
 <a href="https://artofproblemsolving.com/texer/cawdsrdc">
-<img src="/assets/euler/cawdsrdc.png" alt="Finding greatest common divisor with long division" width="290" height="109" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/cawdsrdc.png" alt="Finding greatest common divisor with long division" width="290" height="109">
 </a>
 
 Hence it follows that 576 is the greatest common divisor,
