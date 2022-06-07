@@ -99,7 +99,7 @@ for $$x=2$$ being one of the roots $$x-2$$ is a factor of the equation,
 adn as we have only to see the other factor by means of division as follows:
 
 <a href="https://artofproblemsolving.com/texer/uptzquhb">
-<img src="/assets/euler/uptzquhb.png" alt="Polynomial long division" width="255" height="212" style="display:block;margin-left:auto;margin-right:auto;">
+<img src="/assets/euler/uptzquhb.png" alt="Polynomial long division" width="213" height="177" style="display:block;margin-left:auto;margin-right:auto;">
 </a>
 
 Since, therefore, the formula is represented by the product
