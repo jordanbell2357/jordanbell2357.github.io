@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Part II, Chapter 1. "Of the Resolution of Equations of the First Degree, which contain more than one unknown Quantity."
+title: Euler, "Elements of Algebra", Part II, Chapter 2.
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
 
-#### Part II. "Containing the Analysis of Indeterminate Quantities." Chapter 13. "Of the Resolution of Negative Powers."
+#### Part II. "Containing the Analysis of Indeterminate Quantities." Chapter 2.
 
 
 #### References

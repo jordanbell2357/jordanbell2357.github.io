@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Part II, Chapter 1. "Of the Resolution of Equations of the First Degree, which contain more than one unknown Quantity."
+title: Euler, "Elements of Algebra", Part II, Chapter 3. "Of Compound Indeterminate Equations, in which one of the Unknown Quantities does not exceed the First Degree."
 ---
 
 ### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
