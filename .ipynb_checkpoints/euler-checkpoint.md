@@ -10,6 +10,10 @@ permalink: /euler/
 - [{{chapter.title}}]({{ chapter.url }})
 {% endfor %}
 
+[English Table of Contents](/assets/euler/en/TOCen.pdf)
+
+[German Table of Contents](/assets/euler/de/TOCde.pdf)
+
 #### References
 
 1. [Ian Bruce: Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)
