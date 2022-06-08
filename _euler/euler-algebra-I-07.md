@@ -191,13 +191,9 @@ signifying a number infinitely great, and $$\frac{2}{0}$$ being incontestably
 the double of $$\frac{1}{0}$$, it is evident that a number, though
 infinitely great, may still become twice, thrice, or any number of times greater
 
-#### References
+#### Editions
 
-1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
+1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Section I. Chapter 7. "Of Fractions in general."](/assets/euler/en/I-7.pdf)
-    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
-3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
+2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 7. Von den Brüchen überhaupt](/assets/euler/de/I-I-7.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)
-2. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
-    - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)

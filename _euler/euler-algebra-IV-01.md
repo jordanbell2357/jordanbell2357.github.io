@@ -138,17 +138,6 @@ called  an  equation  of  the second degree,  which  is  more difficult  to  res
 Equations of  the  third  degree  are  those  which  contain  the  cube  of the unknown
 quantity,  and  so  on.  We  shall  treat  of  all  these in  the  present  section.
 
-#### References
-
-1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
-    - [Section IV. Chapter 1. "Of the Solution of Problems in General."](/assets/euler/en/IV-1.pdf)
-    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
-3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Erster Abschnitt. Capitel 1. Von der Auflösung der Aufgaben überhaupt](/assets/euler/de/II-I-1.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)
-2. Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.
-    - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
-
 #### Solution of $$\dfrac{24}{x}-1=\dfrac{24}{20-x}$$
 
 Given
@@ -218,3 +207,10 @@ $$
 Therefore $$x=60$$ or $$x=8$$.
 
 Because the total number of persons is 20, $$x=8$$.
+
+#### Editions
+
+1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
+    - [Section IV. Chapter 1. "Of the Solution of Problems in General."](/assets/euler/en/IV-1.pdf)
+2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
+    - [Zweyter Theil. Erster Abschnitt. Capitel 1. Von der Auflösung der Aufgaben überhaupt](/assets/euler/de/II-I-1.pdf)

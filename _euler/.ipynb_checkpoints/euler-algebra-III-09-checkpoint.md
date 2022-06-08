@@ -284,13 +284,9 @@ and dividing by 7,
 
 1000 ducats = 2639⁴⁄₇ + ¹⁄₂₁ Thaler in Leipzig = 2639¹³⁄₂₁ Thaler in Leipzig.
 
-#### References
+#### Editions
 
-1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
+1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Section III. Chapter 9. "Observations on the Rules Proportion and their Utility."](/assets/euler/en/III-9.pdf)
-    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Dritter Abschnitt. Capitel 9. Anmerckungen über die Proportionen und ihren Nutzen](/assets/euler/de/I-III-9.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)
-3. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
-    - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)

@@ -590,13 +590,9 @@ The company of Swiss therefore has 265 men; that of
 Swabians 583; and that of Saxons 689.
     
 
-#### References
+#### Editions
 
-1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
+1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Section IV. Chapter 4. "Of the Resolution of two or more Equations of the First Degree."](/assets/euler/en/IV-4.pdf)
-    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
-3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
+2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 4. Von Auflösung zweyer oder mehr Gleichungen vom ersten Grad](/assets/euler/de/II-I-4.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)
-2. Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.
-    - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)

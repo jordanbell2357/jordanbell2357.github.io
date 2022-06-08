@@ -325,13 +325,9 @@ $$x^2=225$$; whence $$x = 15$$.
 
 So that there are fifteen partners, and each contributed 150 crowns.
 
-#### References
+#### Editions
 
-1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
+1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Section IV. Chapter 5. "Of the Resolution of Pure Quadratic Equations."](/assets/euler/en/IV-5.pdf)
-    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
-3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
+2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 5. Von der Auflösung der reinen Quadratischen Gleichungen](/assets/euler/de/II-I-5.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)
-2. Leonhard Euler, *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*, Kays. Acad. der Wissenschaften, St. Petersburg, 1770.
-    - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)

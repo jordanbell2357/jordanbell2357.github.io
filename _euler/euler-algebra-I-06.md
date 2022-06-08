@@ -337,13 +337,9 @@ by nothing produces nothing, and therefore 0 times $$a$$, or
 $$0a$$, is 0.
 
 
-#### References
+#### Editions
 
-1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
+1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Section I. Chapter 6. "Of the Properties of Integers, with respect to their Divisors."](/assets/euler/en/I-6.pdf)
-    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
-3. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
+2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 6. Von den Eigenschaften der gantzen Zahlen in Ansehung ihrer Theiler](/assets/euler/de/I-I-6.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)
-2. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
-    - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)

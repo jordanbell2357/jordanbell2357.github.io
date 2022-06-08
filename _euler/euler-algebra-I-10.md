@@ -187,13 +187,9 @@ by ⅔, gives -¹⁵⁄₁₆; and -¾ divided by -¾, gives +¹²⁄₁₂,
 or +1.
 
 
-#### References
+#### Editions
 
-1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
+1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Section I. Chapter 10. "Of the Multiplication and Division of Fractions."](/assets/euler/en/I-10.pdf)
-    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
-3. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
-    - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 10. Von der Multiplication und Division der Brüche](/assets/euler/de/I-I-10.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)

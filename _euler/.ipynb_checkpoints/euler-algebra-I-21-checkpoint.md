@@ -135,13 +135,9 @@ same purpose: and the reason why we cannot suppose $$a=$$ unity, or 1, is manife
 because all the powers $$a^b$$ would then be constantly equal to unity, and could never
 become equal to another given number, $$c$$.
 
-#### References
+#### Editions
 
-1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
+1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Section I. Chapter 21. "Of Logarithms in general."](/assets/euler/en/I-21.pdf)
-    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 21. Von den Logarithmen überhaupt](/assets/euler/de/I-I-21.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)
-3. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
-    - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)

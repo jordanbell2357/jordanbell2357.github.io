@@ -175,13 +175,9 @@ proportion, 8:4∷6:3, or this, 3:4∷6:8. Likewise,
 if 3 · 5 = 1 · 15, we shall have 3:15∷1:5,
 or 5:1∷15:3, or 3:1∷15:5.
 
-#### References
+#### Editions
 
-1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
+1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Section III. Chapter 8. "Of Geometrical Proportions."](/assets/euler/en/III-8.pdf)
-    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Dritter Abschnitt. Capitel 8. Von den geometrischen Proportionen](/assets/euler/de/I-III-8.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)
-3. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
-    - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)

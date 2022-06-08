@@ -96,13 +96,9 @@ the cubo-cube: after this, no other denominations of this
 kind have been introduced for powers; and, indeed, the two
 last are very little used.
 
-#### References
+#### Editions
 
-1. Leonhard Euler, *Elements of Algebra*, Translated by Rev. John Hewlett. Longmans, Hurst, Rees, Orme, and Co., London, 1822.
+1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Section I. Chapter 17. "Of the Calculation of Powers."](/assets/euler/en/I-17.pdf)
-    - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 17. Von den Rechnungs-Arten mit den Potestäten](/assets/euler/de/I-I-17.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)
-3. Leonhard Euler, *Vollständige Anleitung zur Algebra*, Kayserlichen Akademie der Wissenschaften, St. Petersburg, 1771.
-    - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)
