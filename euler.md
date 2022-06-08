@@ -19,12 +19,12 @@ permalink: /euler/
     - [Springer](https://doi.org/10.1007/978-1-4613-8511-0)
 3. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Cambridge Library Collection - Mathematics. Cambridge University Press. 2009.
     - [Cambridge University Press](https://doi.org/10.1017/CBO9780511693519)
+6. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
+    - [Table of Contents](/assets/euler/de/TOCde.pdf)
+    - [Springer](https://link.springer.com/book/9783764314002)
 4. Leonhard Euler. *Vollständige Anleitung zur Algebra*. Kayserlichen Akademie der Wissenschaften. St. Petersburg. 1771.
     - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)
 5. Leonhard Euler. *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*. Kays. Acad. der Wissenschaften. St. Petersburg. 1770.
     - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
-6. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Table of Contents](/assets/euler/de/TOCde.pdf)
-    - [Springer](https://link.springer.com/book/9783764314002)
-7. [Ian Bruce. Translation of Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)
-8. [Scott L. Hecht. Digitization of John Hewlett's translation of Leonhard Euler, *Elements of Algebra*](https://archive.org/details/ElementsOfAlgebraLeonhardEuler2015/)
+7. [Ian Bruce. New Translation of Euler's Algebra](https://www.17centurymaths.com/contents/euleralgebra.htm)
+8. [Scott L. Hecht. Transcription of John Hewlett's translation of Leonhard Euler, *Elements of Algebra*](https://archive.org/details/ElementsOfAlgebraLeonhardEuler2015/)
