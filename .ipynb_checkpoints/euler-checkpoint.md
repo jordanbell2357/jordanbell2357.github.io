@@ -10,7 +10,7 @@ permalink: /euler/
 - [{{chapter.title}}]({{ chapter.url }})
 {% endfor %}
 
-#### References
+#### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Table of Contents](/assets/euler/en/TOCen.pdf)
