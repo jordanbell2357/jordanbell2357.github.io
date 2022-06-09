@@ -7,6 +7,18 @@ title: Euler, "Elements of Algebra", Section II, Chapter 9. "Of Cubes, and of th
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 9. "Of Cubes, and of the Extraction of Cube Roots."
 
+<span class="art">333</span>
+
+
+
+
+<span class="art">334</span>
+
+
+
+
+
+<span class="art">335</span>
 
 #### Editions
 
