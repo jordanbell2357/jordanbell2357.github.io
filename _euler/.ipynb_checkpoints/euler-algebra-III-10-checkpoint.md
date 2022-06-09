@@ -205,11 +205,71 @@ Which being reduced is found equal to 39272 miles; and
 consequently nearly five times greater than the diameter of
 the earth.
 
-<span class="art">502</span>
+<span class="art">502</span> It is the same with regard to the price of precious
+stones, which are not sold in the proportion of their weight;
+every body knows that their prices follow a much greater
+ratio. The rule for diamonds is, that the price is in the
+duplicate ratio of the weight; that is to say, the ratio of
+the prices is equal to the square of the ratio of the weights.
+The weight of diamonds is expressed in carats, and a carat
+is equivalent to 4 grains; if, therefore, a diamond of one
+carat is worth 10 livres, a diamond of 100 carats will be
+worth as many times 10 livres as the square of 100 contains
+1; so that we shall have, according to the Rule of Three,
 
+1 : 10000 ∷ 10 : 100000 liv.
 
-<span class="art">503</span>
+There is a diamond in Portugal which weighs 1680 carats;
+its price will be found, therefore, by making
 
+$$1^2 : 1680^2 :: 10 : 28224000 \quad \textrm{livres}.$$
+
+<span class="art">503</span> The posts, or mode of travelling, in France, furnish
+sufficient examples of compound ratios; because the price is
+regulated by the compound ratio of the number of horses,
+and the number of leagues, or posts. Thus, for example,
+if one horse cost 20 sous per post, it is required to find how
+much must be paid for 28 horses for 4½ posts.
+
+We write first the ratio of the horses 1 : 28
+
+Under this ratio we put that of the stages 2 : 9
+
+And, compounding the two ratios, we have 2 : 252
+
+Or, by abridging the two terms, 1 : 126 ∷ 1 liv. to 126 fr.
+or 42 crowns.
+
+Again, If I pay a ducat for eight horses for 3 miles, how
+much must I pay for thirty horses for four miles? The
+calculation is as follows:
+
+8 : 30 and 3 : 4
+
+By compounding these two ratios, and abridging,
+
+1 : 5 ∷ 1 duc. : 5 ducats; the sum required.
+
+<span class="art">504</span> The same composition occurs when workmen are to
+be paid, since those payments generally follow the ratio
+compounded of the number of workmen and that of the days
+which they have been employed.
+
+If, for example, 25 sous per day be given to one mason,
+and it is required what must be paid to 24 masons who have
+worked for 50 days, we state the calculation thus
+
+1 : 24
+
+1 : 50
+
+Compounding these relations,
+
+1 : 1200 ∷ 25 : 30000 sous, or 1500 francs.
+
+In these examples, five things being given, the rule which
+serves to resolve them is called, in books of arithmetic, The
+Rule of Five, or Double Rule of Three.
 
 #### Editions
 
