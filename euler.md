@@ -30,8 +30,12 @@ permalink: /euler/
     - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)
 6. Leonhard Euler. *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*. Kays. Acad. der Wissenschaften. St. Petersburg. 1770.
     - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
-7. Ian Bruce. *Euler's Algebra*. Translated from the German. 2016.
+7. Leonhard Euler. *Élémens d'algèbre par M. Léonard Euler, traduits de l'allemand, avec des notes et des additions. Tome Premier. De l'analyse déterminée.* Translated from the German by Jean Bernoulli. Jean-Marie Bruyset, Pere & Fils. Lyon. 1774.
+    - [BnF Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k110159v)
+8. Leonhard Euler. *Élémens d'algèbre par M. Léonard Euler, traduits de l'allemand, avec des notes et des additions. Tome Second. De l'analyse indéterminée.* Translated from the German by Jean Bernoulli. Jean-Marie Bruyset, Pere & Fils. Lyon. 1774.
+    - [BnF Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k123306p)
+9. Ian Bruce. *Euler's Algebra*. Translated from the German. 2016.
     - [Ian Bruce. 17centurymaths.com](https://www.17centurymaths.com/contents/euleralgebra.htm)
-8. Scott L. Hecht. Transcription in Microsoft Word of John Hewlett's translation of Leonhard Euler, *Elements of Algebra*. 2015.
+10. Scott L. Hecht. Transcription in Microsoft Word of John Hewlett's translation of Leonhard Euler, *Elements of Algebra*. 2015.
     - [Archive.org](https://archive.org/details/ElementsOfAlgebraLeonhardEuler2015/)
     - [Amazon.com](https://www.amazon.com/Elements-Algebra-Leonhard-Euler/dp/150890118X)
