@@ -24,6 +24,7 @@ permalink: /euler/
     - [Springer](https://link.springer.com/book/9783764314002)
 5. Leonhard Euler. *Vollständige Anleitung zur Algebra*. Kayserlichen Akademie der Wissenschaften. St. Petersburg. 1771.
     - [ETH-Bibliothek Zürich](https://doi.org/10.3931/e-rara-9093)
+    - [Bayerische Staatsbibliothek. Münchener DigitalisierungsZentrum (MDZ)](https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10081749-3)
 6. Leonhard Euler. *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*. Kays. Acad. der Wissenschaften. St. Petersburg. 1770.
     - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
 7. Leonhard Euler. *Élémens d'algèbre par M. Léonard Euler, traduits de l'allemand, avec des notes et des additions. Tome Premier. De l'analyse déterminée.* Translated by Jean Bernoulli. Jean-Marie Bruyset, Pere & Fils. Lyon. 1774.
