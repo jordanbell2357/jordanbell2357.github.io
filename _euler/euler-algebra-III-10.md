@@ -16,7 +16,7 @@ compounded of the relations given.
 Thus the relations $$a : b$$, $$c : d$$, $$e : f$$ give the compound
 relation $$ace : bdf$$.
 
-489. A relation continuing always the same, when we
+<span class="art">489</span> A relation continuing always the same, when we
 divide both its terms by the same number, in order to
 abridge it, we may greatly facilitate the above composition
 by comparing the antecedents and the consequents, for the
@@ -35,7 +35,7 @@ by cancelling the common divisors.
 
 So that 2 : 5 is the compound relation required.
 
-490. The same operation is to be performed, when it is
+<span class="art">490</span> The same operation is to be performed, when it is
 required to calculate generally by letters; and the most remarkable case is that in which each antecedent is equal to
 the consequent of the preceding relation. If the given relations are
 
