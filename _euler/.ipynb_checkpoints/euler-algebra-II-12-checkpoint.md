@@ -110,13 +110,43 @@ thus $$c^2=\frac{25}{4}$$; $$c=\frac{5}{2}$$; $$b=\frac{1}{4}$$;
 and calculating only the two leading terms,
 we find
 
+$$\surd 6 = \frac{5}{2}+\frac{1}{2}\cdot \dfrac{-\frac{1}{4}}{\frac{5}{2}} = \frac{5}{2} - \frac{1}{2} \cdot
+\dfrac{\frac{1}{4}}{\frac{5}{2}} = \frac{5}{2} - \frac{1}{20} = \frac{49}{20},$$
 
+the square of which fraction being ²⁴⁰¹⁄₄₀₀, it exceeds the square of
+√6 only by ¹⁄₄₀₀.
 
+Now, making 6 = ²⁴⁰¹⁄₄₀₀ - ¹⁄₄₀₀, so that $$c=\frac{49}{20}$$ and $$b=-\frac{1}{400}$$;
+and still taking only the two leading terms, we have
 
+$$\surd 6 = \frac{49}{20} + \frac{1}{2} \cdot \dfrac{-\frac{1}{400}}{\frac{49}{20}}
+=\frac{49}{20} - \frac{1}{2} \cdot \dfrac{\frac{1}{400}}{\frac{49}{20}} = \frac{49}{20}
+-\frac{1}{1960} = \frac{4801}{1960},$$
 
-<span class="art">367</span>
+the square of which is ²³⁰⁴⁹⁶⁰¹⁄₃₈₄₁₆₀₀; and 6,
+when reduced to the same denominator, is = ²³⁰⁴⁹⁶⁰⁰⁄₃₈₄₁₆₀₀;
+the error therefore is only ¹⁄₃₈₄₁₆₀₀.
 
+<span class="art">367</span> In the same manner, we may express the cube root of
+$$a+b$$ by an infinite series; for since $$\surd[3]{\vphantom{(a+b)}}(a+b) = (a+b)^{\frac{1}{3}$$,
+we shall have in the general formula, $$n=\frac{1}{2}$$, and for the coefficients,
 
+$$\frac{n}{1}=\frac{1}{3}; \; \frac{n-1}{2}=-\frac{1}{3}; \; \frac{n-2}{3}=-\frac{5}{9}; \;
+\frac{n-3}{4} = -\frac{2}{3}; \; \frac{n-4}{5}= - \frac{11}{15}; \quad \textrm{etc.}$$
+
+and, with regard to the powers of $$a$$, we shall have
+
+$$a^n = \sqrt[3]{\vphantom{a}}a; \; a^{n-1} = \dfrac{\sqrt[3]{\vphantom{a}}a}{a}; \;
+a^{n-2} = \dfrac{\sqrt[3]{\vphantom{a}}a}{a^2}; \;
+a^{n-3} = \dfrac{\sqrt[3]{\vphantom{a}}a}{a^3}; \quad \textrm{etc.}$$
+
+then
+
+$$\sqrt[3]{\vphantom{(a+b)}} = \sqrt[3]{\vphantom{a}} + \frac{1}{3} \cdot b \dfrac{\sqrt[3]{\vphantom{a}}a}{a}
+-\frac{1}{9} \cdot b^2 \dfrac{\sqrt[3]{\vphantom{a}}a}{a^2}
++\frac{5}{81} \cdot b^3 \dfrac{\sqrt[3]{\vphantom{a}}a}{a^3}
+-\frac{10}{243} \cdot b^4 \dfrac{\sqrt[3]{\vphantom{a}}a}{a^4},
+\quad \textrm{etc.}$$
 
 <span class="art">368</span>
 
