@@ -7,6 +7,28 @@ title: Euler, "Elements of Algebra", Section II, Chapter 13. "Of the Resolution 
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 13. "Of the Resolution of Negative Powers."
 
+<span class="art">370</span>
+
+
+<span class="art">371</span>
+
+
+<span class="art">372</span>
+
+
+<span class="art">373</span>
+
+
+<span class="art">374</span>
+
+
+<span class="art">375</span>
+
+
+<span class="art">376</span>
+
+
+<span class="art">377</span>
 
 #### Editions
 
