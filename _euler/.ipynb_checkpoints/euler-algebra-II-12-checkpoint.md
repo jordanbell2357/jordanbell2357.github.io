@@ -67,8 +67,13 @@ $$a^n=\surd a$$; $$a^{n-1}=\dfrac{\surd a}{a}$$; $$a^{n-2}=\dfrac{a^n}{a^2}=\dfr
 $$a^{n-3}=\dfrac{a^n}{a^3} = \dfrac{\surd a}{a^3}$$;
 $$a^{n-4}=\dfrac{a^n}{a^4} = \dfrac{\surd a}{a^4}$$, etc.
 
-<span class="art">364</span>
+<span class="art">364</span> This being laid down, the square root of $$a + b$$ may
+be expressed in the following manner:
 
+$$\surd(a+b) = \surd a - \frac{1}{2}b \dfrac{\surd a}{a}-\frac{1}{2} \cdot \frac{1}{4} b^2 \dfrac{\surd a}{aa}
++\frac{1}{2}\cdot \frac{1}{4}\cdot \frac{3}{6}b^3 \dfrac{\surd a}{a^3}
+-\frac{1}{2}\cdot \frac{1}{4}\cdot \frac{3}{6}\cdot \frac{5}{8} b^4 \dfrac{\surd a}{a^4},
+\; \textrm{etc.}$$
 
 <span class="art">365</span>
 
