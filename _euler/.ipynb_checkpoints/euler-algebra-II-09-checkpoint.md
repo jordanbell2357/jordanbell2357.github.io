@@ -30,10 +30,10 @@ title: Euler, "Elements of Algebra", Section II, Chapter 9. "Of Cubes, and of th
     <td></td>
   </tr>
   <tr>
-    <td></td>
-    <td>\(a^2b\)</td>
-    <td>\(+2ab^2\)</td>
-    <td>\(+b^3\)</td>
+    <td class="underline"></td>
+    <td class="underline">\(a^2b\)</td>
+    <td class="underline">\(+2ab^2\)</td>
+    <td class="underline">\(+b^3\)</td>
   </tr>
   <tr>
     <td>\(a^3\)</td>
@@ -52,6 +52,17 @@ title: Euler, "Elements of Algebra", Section II, Chapter 9. "Of Cubes, and of th
 
 
 <span class="art">335</span>
+
+
+<span class="art">336</span>
+
+<span class="art">337</span>
+
+
+<span class="art">338</span>
+
+
+<span class="art">339</span>
 
 #### Editions
 
