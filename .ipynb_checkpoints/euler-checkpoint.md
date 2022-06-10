@@ -37,7 +37,7 @@ permalink: /euler/
     - [Springer](https://doi.org/10.1007/978-1-4613-8511-0)
 3. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Cambridge Library Collection - Mathematics. Cambridge University Press. 2009.
     - [Cambridge University Press](https://doi.org/10.1017/CBO9780511693519)
-10. Scott L. Hecht. Transcription in Microsoft Word of John Hewlett's translation of Leonhard Euler, *Elements of Algebra*. 2015.
+10. Scott L. Hecht. Transcription in Microsoft Word of Hewlett's translation. 2015.
     - [Archive.org](https://archive.org/details/ElementsOfAlgebraLeonhardEuler2015/)
     - [Amazon.com](https://www.amazon.com/Elements-Algebra-Leonhard-Euler/dp/150890118X)
 9. Ian Bruce. *Euler's Algebra*. Translated from the German. 2016.
