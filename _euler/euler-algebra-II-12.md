@@ -54,9 +54,18 @@ $$\sqrt[2]{\vphantom{(a+b)}}(a+b)=(a+b)^{\frac{1}{2}};
 Consequently, if we wish to find the square root of $$a+b$$,
 we have only to substitute for the exponent $$n$$ the fraction
 ½ in the general formula, **Art. 361**, and we shall have first, for
-the coefficients.
+the coefficients,
 
+$$\frac{n}{1}=\frac{1}{2}; \; \frac{n-1}{2}=-\frac{1}{4}; \;
+\frac{n-2}{3}=-\frac{3}{6}; \; \frac{n-3}{4}=-\frac{5}{8}; \;
+\frac{n-4}{5}=-\frac{7}{10}; \; \frac{n-5}{6}=-\frac{9}{12}.$$
 
+Then $$a^n=a^{\frac{1}{2}}=\surd a$$ and $$a^{n-1}=\dfrac{1}{\surd a}$$;
+$$a^{n-2}=\dfrac{1}{a\surd a}$$; $$a^{n-3}=\dfrac{1}{a^2 \surd a}$$, etc.
+or we might express those powers of $$n$$ in the following manner:
+$$a^n=\surd a$$; $$a^{n-1}=\dfrac{\surd a}{a}$$; $$a^{n-2}=\dfrac{a^n}{a^2}=\dfrac{\surd a}{a^2}$$;
+$$a^{n-3}=\dfrac{a^n}{a^3} = \dfrac{\surd a}{a^3}$$;
+$$a^{n-4}=\dfrac{a^n}{a^4} = \dfrac{\surd a}{a^4}$$, etc.
 
 <span class="art">364</span>
 
