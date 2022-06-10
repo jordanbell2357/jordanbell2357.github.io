@@ -18,10 +18,10 @@ title: Euler, "Elements of Algebra", Section II, Chapter 9. "Of Cubes, and of th
     <td></td>
   </tr>
   <tr>
-    <td>\(a\)</td>
-    <td>\(+b\)</td>
-    <td></td>
-    <td></td>
+    <td class="underline">\(a\)</td>
+    <td class="underline">\(+b\)</td>
+    <td class="underline"></td>
+    <td class="underline"></td>
   </tr>
   <tr>
     <td>\(a^3\)<br></td>
