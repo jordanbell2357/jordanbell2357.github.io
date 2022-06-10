@@ -4,8 +4,47 @@ title: Writings
 permalink: /writings/
 ---
 
+- [Works in progress](#works)
+- [Publications](#publications)
+- [Translations](#translations)
 - [Mathematical notes](#mathematical)
 - [Historical and bibliographic notes](#historical)
+
+## Works in progress {#works}
+
+{% for work in site.works %}
+- [{{ work.title}}]({{ work.url }})
+{% endfor %}
+
+## Publications {#publications}
+
+- Andrews, George E., and Jordan Bell. “Euler’s Pentagonal Number Theorem and the Rogers-Fine Identity.” *Annals of Combinatorics* 16, no. 3 (2012): 411–20. <https://doi.org/10.1007/s00026-012-0139-4>.
+
+- Bell, Jordan. “A New Method for Constructing Nonlinear Modular *n*-Queens Solutions.” *Ars Combinatoria* 78 (2006): 151–55. [Ars Combinatoria. A Canadian Journal of Combinatorics](http://www.combinatoire.ca/ArsCombinatoria/index.html).
+
+- Bell, Jordan. “A Summary of Euler’s Work on the Pentagonal Number Theorem.” *Archive for History of Exact Sciences* 64, no. 3 (2010): 301–73. <https://doi.org/10.1007/s00407-010-0057-y>.
+
+- Bell, Jordan. “Cyclotomic Orthomorphisms of Finite Fields.” *Discrete Applied Mathematics* 161, no. 1–2 (2013): 294–300. <https://doi.org/10.1016/j.dam.2012.08.013>.
+
+- Bell, Jordan. “Estimates for the Norms of Products of Sines and Cosines.” *Journal of Mathematical Analysis and Applications* 405, no. 2 (2013): 530–45. <https://doi.org/10.1016/j.jmaa.2013.04.010>.
+
+- Bell, Jordan. “Nonlinear Modular Latin Queen Squares.” *Utilitas Mathematica* 74 (2007): 71–75.
+
+- Bell, Jordan. “Polynomial Modular *n*-Queens Solutions.” *Acta Arithmetica* 129, no. 4 (2007): 335–39. <https://doi.org/10.4064/aa129-4-4>.
+
+- Bell, Jordan, and Viktor Blåsjö. “Pietro Mengoli’s 1650 Proof that the Harmonic Series Diverges.” *Mathematics Magazine* 91, no. 5 (2018): 341–47. <https://doi.org/10.1080/0025570X.2018.1506656>.
+
+- Bell, Jordan, and Brett Stevens. “A Survey of Known Results and Research Areas for *n*-Queens.” *Discrete Mathematics* 309, no. 1 (2009): 1–31. <https://doi.org/10.1016/j.disc.2007.12.043>.
+
+- Bell, Jordan, and Brett Stevens. “Constructing Orthogonal Pandiagonal Latin Squares and Panmagic Squares from Modular *n*-Queens Solutions.” *Journal of Combinatorial Designs* 15, no. 3 (2007): 221–34. <https://doi.org/10.1002/jcd.20143>.
+
+- Bell, Jordan, and Brett Stevens. “Results for the *n*-Queens Problem on the Möbius Board.” *The Australasian Journal of Combinatorics* 42 (2008): 21–34. [The Australasian Journal of Combinatorics](https://ajc.maths.uq.edu.au).
+
+- Bell, Jordan, and Qiang Wang. “Results on Permutations with Distinct Difference Property.” *Contributions to Discrete Mathematics* 4, no. 1 (2009): 107–11. [Contributions to Discrete Mathematics](https://cdm.ucalgary.ca/).
+
+## Translations {#translations}
+
+- Hawking, Stephen (ed.), *God Created the Integers: The Mathematical Breakthroughs That Changed History (New Edition)*. Leonhard Euler, “On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)”, pp. 393-399, translated from the Latin by Jordan Bell. Running Press, Philadelphia, 2007. [PDF](/assets/pdfs/E41.pdf)
 
 ## Mathematical notes {#mathematical}
 
@@ -106,13 +145,12 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
 <tr><td><a href="/LaTeX/mathematics/heisenberg">The Heisenberg group and Hermite functions</a></td><td><a href="/LaTeX/mathematics/heisenberg/heisenberg.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/hilberttransform">The Hilbert transform on \(\mathbb{R}\)</a></td><td><a href="/LaTeX/mathematics/hilberttransform/hilberttransform.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/kolmogorov-continuity">The Kolmogorov continuity theorem, Hölder continuity, and the Kolmogorov-Chentsov theorem</a></td><td><a href="/LaTeX/mathematics/kolmogorov-continuity/kolmogorov-continuity.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/mathematics/kolmogorovcontinuity">The Kolmogorov continuity theorem, Hölder continuity, and the Kolmogorov-Chentsov theorem</a></td><td><a href="/LaTeX/mathematics/kolmogorovcontinuity/kolmogorovcontinuity.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/kolmogorov-extension">The Kolmogorov extension theorem</a></td><td><a href="/LaTeX/mathematics/kolmogorov-extension/kolmogorov-extension.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/legendretransform">The Legendre transform</a></td><td><a href="/LaTeX/mathematics/legendretransform/legendretransform.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/lindeberg">The Lindeberg central limit theorem</a></td><td><a href="/LaTeX/mathematics/lindeberg/lindeberg.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/poincaredulac">The Poincaré-Dulac normal form theorem for formal vector fields</a></td><td><a href="/LaTeX/mathematics/poincaredulac/poincaredulac.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/polya-vinogradov">The Polya-Vinogradov inequality</a></td><td><a href="/LaTeX/mathematics/polya-vinogradov/polya-vinogradov.pdf">PDF</a></td></tr>
-<tr><td><a href="/LaTeX/mathematics/Qdual">The Pontryagin duals of \(\mathbb{Q}/\mathbb{Z}\) and \(\mathbb{Q}\), and the adeles</a></td><td><a href="/LaTeX/mathematics/Qdual/Qdual.pdf">PDF</a></td></tr>
+<tr><td><a href="/LaTeX/mathematics/Qdual">The Pontryagin duals of \(\mathbb{Q}/\mathbb{Z}\) and \(\mathbb{Q}\) and the adeles</a></td><td><a href="/LaTeX/mathematics/Qdual/Qdual.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/schwartzspace">The Schwartz space and the Fourier transform</a></td><td><a href="/LaTeX/mathematics/schwartzspace/schwartzspace.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/segalbargmann">The Segal-Bargmann transform and the Segal-Bargmann space</a></td><td><a href="/LaTeX/mathematics/segalbargmann/segalbargmann.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/stonecech">The Stone-Čech compactification of Tychonoff spaces</a></td><td><a href="/LaTeX/mathematics/stonecech/stonecech.pdf">PDF</a></td></tr>
