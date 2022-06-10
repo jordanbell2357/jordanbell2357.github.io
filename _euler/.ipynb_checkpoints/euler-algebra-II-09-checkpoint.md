@@ -103,7 +103,16 @@ of $$a^3+12a^2+48a+64$$.
 
 
 
-<span class="art">339</span>
+<span class="art">339</span> The analysis which we have given is the foundation
+of the common rule for the extraction of the cube root in
+numbers. See the following example of the operation in the
+number 2197:
+
+
+
+Let us also extract the cube root of 34965783:
+
+
 
 #### Editions
 

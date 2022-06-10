@@ -7,6 +7,78 @@ title: Euler, "Elements of Algebra", Section II, Chapter 12. "Of the Expression 
 
 #### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 12. "Of the Expression of Irrational Powers by Infinite Series"
 
+<span class="art">361</span> As we have shewn the method of finding any power
+of the root $$a + b$$, however great the exponent may be, we
+are able to express, generally, the power of $$a + b$$ whose
+exponent is undetermined; for it is evident that if we
+represent that exponent by $$n$$, we shall have by the rule already
+given (**Art. 348** and the following):
+
+$$
+\begin{align}
+(a+b)^n &= a^n + \frac{n}{1}a^{n-1}b+\frac{n}{1}\cdot \frac{n-1}{2} a^{n-2}b^2\\
+&+\frac{n}{1}\cdot \frac{n-1}{2} \cdot \frac{n-2}{3} a^{n-3}b^3\\
+&+\frac{n}{1}\cdot \frac{n-1}{2} \cdot \frac{n-2}{3} \cdot \frac{n-3}{4} a^{n-4}b^4
++\textrm{etc.}
+\end{align}
+$$
+
+
+<span class="art">362</span> If the same power of the root $$a-b$$ were required,
+we need only change the signs of the second, fourth,
+sixth, etc. terms, and should have
+
+$$
+\begin{align}
+(a-b)^n &= a^n - \frac{n}{1}a^{n-1}b+\frac{n}{1}\cdot \frac{n-1}{2} a^{n-2}b^2\\
+&-\frac{n}{1}\cdot \frac{n-1}{2} \cdot \frac{n-2}{3} a^{n-3}b^3\\
+&+\frac{n}{1}\cdot \frac{n-1}{2} \cdot \frac{n-2}{3} \cdot \frac{n-3}{4} a^{n-4}b^4
+-\textrm{etc.}
+\end{align}
+$$
+
+<span class="art">363</span> These formulas are remarkably useful, since they
+serve also to express all kinds of radicals; for we have shown
+that all irrational quantities may assume the form of powers
+whose exponents are fractional, and that
+$$\sqrt[2]{\vphantom{a}}a=a^{\frac{1}{2}}$$,
+$$\sqrt[3]{\vphantom{a}}a=a^{\frac{1}{3}}$$,
+$$\sqrt[4]{\vphantom{a}}a=a^{\frac{1}{4}}$$,
+etc.: we have, therefore,
+
+$$\sqrt[2]{\vphantom{(a+b)}}(a+b)=(a+b)^{\frac{1}{2}};
+\; \sqrt[3]{\vphantom{(a+b)}}(a+b)=(a+b)^{\frac{1}{3}};
+\; \sqrt[4]{\vphantom{(a+b)}}(a+b)=(a+b)^{\frac{1}{4}},
+\; \textrm{etc.}$$
+
+Consequently, if we wish to find the square root of $$a+b$$,
+we have only to substitute for the exponent $$n$$ the fraction
+½ in the general formula, **Art. 361**, and we shall have first, for
+the coefficients.
+
+
+
+<span class="art">364</span>
+
+
+<span class="art">365</span>
+
+
+
+
+<span class="art">366</span>
+
+
+
+<span class="art">367</span>
+
+
+
+<span class="art">368</span>
+
+
+<span class="art">369</span>
+
 
 #### Editions
 
