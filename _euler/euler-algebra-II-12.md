@@ -148,11 +148,35 @@ $$\sqrt[3]{\vphantom{(a+b)}} = \sqrt[3]{\vphantom{a}} + \frac{1}{3} \cdot b \dfr
 -\frac{10}{243} \cdot b^4 \dfrac{\sqrt[3]{\vphantom{a}}a}{a^4},
 \quad \textrm{etc.}$$
 
-<span class="art">368</span>
+<span class="art">368</span> If $$a$$ therefore be a cube, or $$a=c^3$$,
+we have $$\sqrt[3]{\vphantom{a}}=c$$,
+and the radical signs will vanish; for we shall have
 
+$$\sqrt[3]{\vphantom(c^3+b)}} (c^3+b) = c + \frac{1}{3} \cdot \frac{b}{c^2}-\frac{1}{9} \cdot \frac{b^2}{c^5}
++\frac{5}{81} \codt \frac{b^3}{c^8} - \frac{10}{243} \cdot \frac{b^4}{c^11}
++\textrm{etc.}$$
 
-<span class="art">369</span>
+<span class="art">369</span> We have therefore arrived at a formula, which will
+enable us to find, by approximation, the cube root of any
+number; since every number may be resolved into two parts,
+as $$c^3+b$$, the first of which is a cube.
 
+If we wish, for example, to determine the cube root of 2,
+we represent 2 by 1 + 1, so that $$c=1$$ and $$b=1$$;
+consequently,
+
+$$\sqrt[3]{\vphantom{2}} 2 = 1 + \frac{1}{3} - \frac{1}{9} + \frac{5}{81}, \textrm{etc.}$$
+
+The two leading terms of this series make 1⅓ = ⁴⁄₃, the cube of which ⁶⁴⁄₂₇
+is too great by ¹⁰⁄₂₇: let us therefore make 2 = ⁶⁴⁄₂₇ - ¹⁰⁄₂₇, we have
+$$c=\frac{4}{3}$$ and $$b=-\frac{10}{27}$$, and consequently,
+
+$$\sqrt[3]{\vphantom{2}} 2 = \frac{4}{3} + \frac{1}{3} \cdot \dfrac{-\frac{10}{27}}{\frac{16}{9}}:$$
+
+two two terms give ⁴⁄₃ - ⁵⁄₇₂ = ⁹¹⁄₇₂, the cube of which is ⁷⁵³⁵⁷¹⁄₃₇₃₂₄₈:
+but, 2 = ⁷⁴⁶⁴⁹⁶⁄₃₇₃₂₄₈, so that the error is
+⁷⁰⁷⁵⁄₃₇₃₂₄₈; and in this way we might still approximate, the faster
+in proportion as we take a greater number of terms.
 
 #### Editions
 
