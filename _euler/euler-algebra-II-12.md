@@ -103,7 +103,14 @@ than 6; but if we consider three terms, we have
 2⁷⁄₁₆ = ³⁹⁄₁₆, the square of which, ¹⁵²¹⁄₂₅₆, is still
 ¹⁵⁄₂₅₆ too small.
 
-<span class="art">366</span>
+<span class="art">366</span> Since, in this example, ⁵⁄₂
+approaches very nearly to the true value of √6, we shall
+take for 6 the equivalent quantity ²⁵⁄₄ - ¼;
+thus $$c^2=\frac{25}{4}$$; $$c=\frac{5}{2}$$; $$b=\frac{1}{4}$$;
+and calculating only the two leading terms,
+we find
+
+
 
 
 
