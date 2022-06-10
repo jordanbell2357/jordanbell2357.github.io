@@ -75,10 +75,33 @@ $$\surd(a+b) = \surd a - \frac{1}{2}b \dfrac{\surd a}{a}-\frac{1}{2} \cdot \frac
 -\frac{1}{2}\cdot \frac{1}{4}\cdot \frac{3}{6}\cdot \frac{5}{8} b^4 \dfrac{\surd a}{a^4},
 \; \textrm{etc.}$$
 
-<span class="art">365</span>
+<span class="art">365</span> If $$a$$ therefore be a square number, we may assign
+the value of $$\surd a$$, and, consequently, the square
+root of $$a+b$$ may be expressed by an infinite series, without
+any radical sign.
 
+Let, for example, $$a=c^2$$, we shall have $$\surd a=c$$;
+then
 
+$$\surd(c^2+b) = c + \frac{1}{2} \cdot \dfrac{b}{c} - \frac{1}{8} \cdot \dfrac{b^2}{c^3}
++\frac{1}{16} \cdot \dfrac{b^3}{c^5} - \frac{5}{128} \cdot \dfrac{b^4}{c^7},
+\; \textrm{etc.}$$
 
+We see, therefore, that there is no number, whose square
+root we may not extract in this manner; since every number
+may be resolved into two parts, one of which is a square represented
+by $$c^2$$. If, for example, the square root of 6 be
+required, we make 6 = 4 + 2, consequently, $$c^2=4$$, $$c = 2$$,
+$$b = 2$$, whence results
+
+√6 = 2 + ½ - ¹⁄₁₆ + ¹⁄₆₄ - ⁵⁄₁₀₂₄ + etc.
+
+If we take only the two leading terms of this series, we
+shall have 2½ = ⁵⁄₂, the square of which, ²⁵⁄₄,
+is ¼ greater
+than 6; but if we consider three terms, we have
+2⁷⁄₁₆ = ³⁹⁄₁₆, the square of which, ¹⁵²¹⁄₂₅₆, is still
+¹⁵⁄₂₅₆ too small.
 
 <span class="art">366</span>
 
