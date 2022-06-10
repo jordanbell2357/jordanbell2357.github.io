@@ -40,5 +40,5 @@ permalink: /euler/
 10. Scott L. Hecht. Transcription in Microsoft Word of Hewlett's translation. 2015.
     - [Archive.org](https://archive.org/details/ElementsOfAlgebraLeonhardEuler2015/)
     - [Amazon.com](https://www.amazon.com/Elements-Algebra-Leonhard-Euler/dp/150890118X)
-9. Ian Bruce. *Euler's Algebra*. Translated from the German. 2016.
+9. Ian Bruce. *Euler's Algebra*. New translation from the German. 2016.
     - [Ian Bruce. 17centurymaths.com](https://www.17centurymaths.com/contents/euleralgebra.htm)
