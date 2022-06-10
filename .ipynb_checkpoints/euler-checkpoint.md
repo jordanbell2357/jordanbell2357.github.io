@@ -27,9 +27,9 @@ permalink: /euler/
     - [Bayerische Staatsbibliothek. Münchener DigitalisierungsZentrum (MDZ)](https://mdz-nbn-resolving.de/urn:nbn:de:bvb:12-bsb10081749-3)
 6. Leonhard Euler. *Vollständige Anleitung zur Algebra. Zweyter Theil. Von Auflösung algebraischer Gleichungen und der unbestimmten Analytic*. Kays. Acad. der Wissenschaften. St. Petersburg. 1770.
     - [Deutsches Textarchiv](https://www.deutschestextarchiv.de/euler_algebra02_1770)
-7. Leonhard Euler. *Élémens d'algèbre par M. Léonard Euler, traduits de l'allemand, avec des notes et des additions. Tome Premier. De l'analyse déterminée.* Translated by Jean Bernoulli. Jean-Marie Bruyset, Pere & Fils. Lyon. 1774.
+7. Leonhard Euler. *Élémens d'algèbre par M. Léonard Euler, traduits de l'allemand, avec des notes et des additions. Tome Premier. De l'analyse déterminée.* Translated by Jean Bernoulli. Chez Jean-Marie Bruyset, Pere & Fils. Lyon. 1774.
     - [BnF Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k110159v)
-8. Leonhard Euler. *Élémens d'algèbre par M. Léonard Euler, traduits de l'allemand, avec des notes et des additions. Tome Second. De l'analyse indéterminée.* Translated by Jean Bernoulli. Jean-Marie Bruyset, Pere & Fils. Lyon. 1774.
+8. Leonhard Euler. *Élémens d'algèbre par M. Léonard Euler, traduits de l'allemand, avec des notes et des additions. Tome Second. De l'analyse indéterminée.* Translated by Jean Bernoulli. Chez Jean-Marie Bruyset, Pere & Fils. Lyon. 1774.
     - [BnF Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k123306p)
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
     - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
