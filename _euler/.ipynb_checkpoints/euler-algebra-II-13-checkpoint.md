@@ -112,8 +112,9 @@ $$
 \dfrac{1}{(a+b)^4} &= \dfrac{1}{a^4} - \dfrac{4b}{1\cdot a^5} - \dfrac{4\cdot 5\cdot b^2}{1\cdot 2\cdot a^6}\\
 &- \dfrac{4\cdot 5\cdot 6\cdot b^3}{1\cdot 2\cdot 3\cdot a^7}, \; \textrm{etc.}\\
 &= \dfrac{1}{a^4} - 4\dfrac{b}{a^5} + 10\dfrac{b^2}{a^6}\\
-&- 20\dfrac{b^3}{a^7} + 35\dfrac{b^4}{a^8}
--56\dfrac{b^5}{a^9}+, \; \textrm{etc.}$$
+&- 20\dfrac{b^3}{a^7} + 35\dfrac{b^4}{a^8} -56\dfrac{b^5}{a^9}+, \; \textrm{etc.}
+\end{align}
+$$
 
 <span class="art">374</span> The different cases that have been considered
 enable us to conclude with certainty, that we shall have,
