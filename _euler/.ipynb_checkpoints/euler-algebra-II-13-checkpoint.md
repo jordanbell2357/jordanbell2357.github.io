@@ -54,8 +54,8 @@ $$(a+b)^{-2} = \dfrac{1}{(a+b)^2} = \dfrac{1}{a^2} - \dfrac{2\cdot b}{1\cdot a^3
 
 Now,
 
-$$\frac{2}{1}=2; \; \dfrac{2\cdot 3}{1\cdot 2}=3; \;
-\dfrac{2\cdot 3\cdot 4}{1\cdot 2\cdot 3}=4; \;
+$$\frac{2}{1}=2; \quad \dfrac{2\cdot 3}{1\cdot 2}=3; \quad
+\dfrac{2\cdot 3\cdot 4}{1\cdot 2\cdot 3}=4; \quad
 \dfrac{2\cdot 3\cdot 4\cdot 5}{1\cdot 2\cdot 3\cdot 4}=5,
 \quad \textrm{etc.}$$
 
@@ -80,8 +80,7 @@ which gives
 $$
 \begin{align}
 \dfrac{1}{(a+b)^3}&=
-\dfrac{1}{a^3} - \dfrac{3\cdot b}{1\cdot a^4} + \dfrac{3\cdot 4\cdot b^2}{1\cdot 2\cdot a^5} - \dfrac{3\cdot 4\cdot 5\cdot b^3}{1\cdot 2\cdot 3\cdot a^6}\\
-&+\dfrac{3\cdot 4\cdot 5\cdot 6\cdot b^4}{1\cdot 2\cdot 3\cdot 4\cdot a^7}\\
+\dfrac{1}{a^3} - \dfrac{3\cdot b}{1\cdot a^4} + \dfrac{3\cdot 4\cdot b^2}{1\cdot 2\cdot a^5} - \dfrac{3\cdot 4\cdot 5\cdot b^3}{1\cdot 2\cdot 3\cdot a^6}+\dfrac{3\cdot 4\cdot 5\cdot 6\cdot b^4}{1\cdot 2\cdot 3\cdot 4\cdot a^7}\\
 &=\dfrac{1}{a^3}-3\cdot \dfrac{b}{a^4}+6\cdot \dfrac{b^2}{a^5}
 -10\cdot \dfrac{b^3}{a^6} 
 +15\cdot\dfrac{b^4}{a^7}
