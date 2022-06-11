@@ -237,8 +237,63 @@ Now, $$(a+b)^2 = a^2+2ab+b^2$$, and
 </tbody>
 </table>
 
+which gives 1 for the product, as the nature of the thing
+required.
 
-<span class="art">377</span>
+<span class="art">377</span> If we multiply the series which we found for the value of $$\dfrac{1}{(a+b)^2}$$, by $$a+b$$ only,
+the product ought to answer to the fraction $$\dfrac{1}{a+b}$$, or be equal to the series
+already found, namely,
+
+$$\dfrac{1}{a}-\dfrac{b}{a^2}-\dfrac{b^2}{a^3}-\dfrac{b^3}{a^4}+\dfrac{b^4}{a^5}, \; \textrm{etc.}$$
+
+and this is the actual multiplication will confirm.
+
+<table>
+<tbody>
+  <tr>
+    <td>\(\dfrac{1}{a^2}\)</td>
+    <td>\(-\dfrac{2b}{a^3}\)</td>
+    <td>\(+\dfrac{3b^2}{a^4}\)</td>
+    <td>\(-\dfrac{4b^3}{a^5}\)</td>
+    <td>\(+\dfrac{5b^4}{a^6}\)</td>
+    <td>+ etc.</td>
+  </tr>
+  <tr>
+    <td class="underline">\(a\)</td>
+    <td class="underline">\(+b\)</td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+  </tr>
+  <tr>
+    <td>\(\dfrac{1}{a}\)</td>
+    <td>\(-\dfrac{2b}{a^2}\)</td>
+    <td>\(+\dfrac{3b^2}{a^3}\)</td>
+    <td>\(-\dfrac{4b^3}{a^4}\)</td>
+    <td>\(+\dfrac{5b^4}{a^5}\)</td>
+    <td>+ etc.</td>
+  </tr>
+  <tr>
+    <td class="underline"></td>
+    <td class="underline">\(+\dfrac{b}{a^2}\)</td>
+    <td class="underline">\(-\dfrac{2b^2}{a^3}\)</td>
+    <td class="underline">\(+\dfrac{3b^3}{a^4}\)</td>
+    <td class="underline">\(-\dfrac{4b^4}{a^5}\)</td>
+    <td class="underline">+ etc.</td>
+  </tr>
+  <tr>
+    <td>\(\dfrac{1}{a}\)</td>
+    <td>\(-\dfrac{b}{a^2}\)</td>
+    <td>\(+\dfrac{b^2}{a^3}\)</td>
+    <td>\(-\dfrac{b^3}{a^4}\)</td>
+    <td>\(+\dfrac{b^4}{a^5}\)</td>
+    <td>+ etc.</td>
+  </tr>
+</tbody>
+</table>
+
+as required.
 
 #### Editions
 
