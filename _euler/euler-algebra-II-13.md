@@ -146,16 +146,10 @@ If, therefore, we multiply this series by $$a+b$$, the product ought to be
     <td>\(+\dfrac{b^4}{a^5}\)</td>
     <td>\(-\dfrac{b^5}{a^6}\),</td>
     <td>+ etc.</td>
-    <td></td>
-    <td></td>
-    <td></td>
   </tr>
   <tr>
     <td class="underline">\(a\)</td>
     <td class="underline">\(+b\)</td>
-    <td class="underline"></td>
-    <td class="underline"></td>
-    <td class="underline"></td>
     <td class="underline"></td>
     <td class="underline"></td>
     <td class="underline"></td>
@@ -170,9 +164,6 @@ If, therefore, we multiply this series by $$a+b$$, the product ought to be
     <td>\(+\dfrac{b^4}{a^4}\)</td>
     <td>\(-\dfrac{b^5}{a^5}\),</td>
     <td>+ etc.</td>
-    <td></td>
-    <td></td>
-    <td></td>
   </tr>
   <tr>
     <td></td>
@@ -182,9 +173,6 @@ If, therefore, we multiply this series by $$a+b$$, the product ought to be
     <td>\(-\dfrac{b^4}{a^4}\)</td>
     <td>\(+\dfrac{b^5}{a^5}\),</td>
     <td>+ etc.</td>
-    <td></td>
-    <td></td>
-    <td></td>
   </tr>
 </tbody>
 </table>
@@ -192,6 +180,62 @@ If, therefore, we multiply this series by $$a+b$$, the product ought to be
 where all the terms but the first cancel each other.
 
 <span class="art">376</span> We have also found, that
+
+$$\dfrac{1}{(a+b)^2} = \dfrac{1}{a^2} - \dfrac{2b}{a^3} + \dfrac{3b^2}{a^4} - \dfrac{4b^3}{a^5}
++\dfrac{5b^4}{a^6} - \dfrac{6b^5}{a^7}, \quad \textrm{etc.}$$
+
+And if we multiply this series by $$(a+b)^2$$, the product ought to be equal to 1.
+Now, $$(a+b)^2 = a^2+2ab+b^2$$, and
+
+<table>
+<tbody>
+  <tr>
+    <td>\(\dfrac{1}{a^2}\)</td>
+    <td>\(-\dfrac{2b}{a^3}\)</td>
+    <td>\(+\dfrac{3b^2}{a^4}\)</td>
+    <td>\(-\dfrac{4b^3}{a^5}\)</td>
+    <td>\(+\dfrac{5b^4}{a^6}\)</td>
+    <td>\(-\dfrac{6b^5}{a^7}\),</td>
+    <td>+ etc.</td>
+  </tr>
+  <tr>
+    <td class="underline">\(a^2\)</td>
+    <td class="underline">\(+2ab\)</td>
+    <td class="underline">\(+b^2\)</td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>\(-\dfrac{2b}{a}\)</td>
+    <td>\(+\dfrac{3b^2}{a^2}\)</td>
+    <td>\(-\dfrac{4b^3}{a^3}\)</td>
+    <td>\(+\dfrac{5b^4}{a^4}\)</td>
+    <td>\(-\dfrac{6b^5}{a^5}\),</td>
+    <td>+ etc.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>\(+\dfrac{2b}{a}\)</td>
+    <td>\(-\dfrac{4b^2}{a^2}\)</td>
+    <td>\(+\dfrac{6b^3}{a^3}\)</td>
+    <td>\(-\dfrac{8b^4}{a^4}\)</td>
+    <td>\(+\dfrac{10b^5}{a^5}\),</td>
+    <td>+ etc.</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>\(+\dfrac{b^2}{a^2}\)</td>
+    <td>\(-\dfrac{2b^3}{a^3}\)</td>
+    <td>\(+\dfrac{3b^4}{a^4}\)</td>
+    <td>\(-\dfrac{4b^5}{a^5}\),</td>
+    <td>+ etc.</td>
+  </tr>
+</tbody>
+</table>
 
 
 <span class="art">377</span>
