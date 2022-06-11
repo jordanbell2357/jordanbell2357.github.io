@@ -115,10 +115,27 @@ $$
 &- 20\dfrac{b^3}{a^7} + 35\dfrac{b^4}{a^8}
 -56\dfrac{b^5}{a^9}+, \; \textrm{etc.}$$
 
-<span class="art">374</span>
+<span class="art">374</span> The different cases that have been considered
+enable us to conclude with certainty, that we shall have,
+generally, for any negative power of $$a+b$$;
 
+$$\dfrac{1}{(a+b)^m} = \dfrac{1}{a^m} - \dfrac{m\cdot b}{a^{m+1}}
++\dfrac{m\cdot (m-1)\cdot b^2}{2\cdot a^{m+2}}
+-\dfrac{m\cdot (m-1)\cdot (m-2)\cdot b^3}{2\cdot 3\cdot a^{m+3}},
+\; \textrm{etc.}$$
 
-<span class="art">375</span>
+And, by means of this formula, we may transform all
+such fractions into infinite series, substituting fractions also,
+or fractional exponents, for $$m$$, in order to express irrational
+quantities.
+
+<span class="art">375</span> The following considerations will illustrate the subject still farther: for we have seen that
+
+$$\dfrac{1}{a+b} = \dfrac{1}{a} - \dfrac{b}{a^2} + \dfrac{b^2}{a^3}
+- \dfrac{b^3}{a^4} + \dfrac{b^4}{a^5} - \dfrac{b^5}{a^6}+, \; \textrm{etc.}$$
+
+If, therefore, we multiply this series by $$a+b$$, the product ought to be
+= 1; and this is found to be true, as will be seen by performing the multiplication:
 
 
 <span class="art">376</span>
