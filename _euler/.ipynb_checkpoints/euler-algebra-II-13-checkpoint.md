@@ -136,8 +136,62 @@ $$\dfrac{1}{a+b} = \dfrac{1}{a} - \dfrac{b}{a^2} + \dfrac{b^2}{a^3}
 If, therefore, we multiply this series by $$a+b$$, the product ought to be
 = 1; and this is found to be true, as will be seen by performing the multiplication:
 
+<table>
+<tbody>
+  <tr>
+    <td>\(\dfrac{1}{a}\)</td>
+    <td>\(-\dfrac{b}{a^2}\)</td>
+    <td>\(+\dfrac{b^2}{a^3}\)</td>
+    <td>\(-\dfrac{b^3}{a^4}\)</td>
+    <td>\(+\dfrac{b^4}{a^5}\)</td>
+    <td>\(-\dfrac{b^5}{a^6}\),</td>
+    <td>+ etc.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="underline">\(a\)</td>
+    <td class="underline">\(+b\)</td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+  </tr>
+  <tr>
+    <td>1</td>
+    <td>\(-\dfrac{b}{a}\)</td>
+    <td>\(+\dfrac{b^2}{a^2}\)</td>
+    <td>\(-\dfrac{b^3}{a^3}\)</td>
+    <td>\(+\dfrac{b^4}{a^4}\)</td>
+    <td>\(-\dfrac{b^5}{a^5}\),</td>
+    <td>+ etc.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>\(+\dfrac{b}{a}\)</td>
+    <td>\(-\dfrac{b^2}{a^2}\)</td>
+    <td>\(+\dfrac{b^3}{a^3}\)</td>
+    <td>\(-\dfrac{b^4}{a^4}\)</td>
+    <td>\(+\dfrac{b^5}{a^5}\),</td>
+    <td>+ etc.</td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
 
-<span class="art">376</span>
+where all the terms but the first cancel each other.
+
+<span class="art">376</span> We have also found, that
 
 
 <span class="art">377</span>
