@@ -39,7 +39,8 @@ it would only be required to take the square root of both
 sides.
 
 <span class="art">640</span> But it is evident that $$x^2+px$$ cannot be a square;
-since we have already seen, (**Article 307**) that if a root consists of two terms,
+since we have already seen, (<span class="artref">Art. 307</span>)
+that if a root consists of two terms,
 for example, $$x+n$$, its square always
 contains three terms, namely, twice the product of the two
 parts, beside the square of each part; that is to say, the

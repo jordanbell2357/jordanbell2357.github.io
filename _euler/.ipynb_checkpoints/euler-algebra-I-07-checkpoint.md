@@ -153,7 +153,7 @@ fraction will never entirely vanish, or become equal to 0.
 nothing, however great the denominator may be; and, consequently,
 as those fractions must always preserve a certain quantity,
 we may continue the series of fractions in
-**Article 78** without interruption. This circumstance has introduced
+<span class="artref">Art. 78</span> without interruption. This circumstance has introduced
 the expression, that the denominator must be infinite, or infinitely great,
 in order that the fraction may be
 reduced to 0, or to nothing; hence the word infinite in

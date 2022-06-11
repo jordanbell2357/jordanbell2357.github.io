@@ -369,7 +369,7 @@ and, in general, if the side be $$n$$, that is, if the number of the
 terms of the progression, 1, 3, 5, 7, etc. which we have
 taken, be expressed by $$n$$, the square, or the quadrangular
 number, will be equal to the sum of those terms; that is to
-$$n^2$$, as we have already seen, **Article 422**; but it is unnecessary
+$$n^2$$, as we have already seen, <span class="artref">Art. 422</span>; but it is unnecessary
 to extend our consideration of square numbers any
 farther, having already treated of them at length.
 

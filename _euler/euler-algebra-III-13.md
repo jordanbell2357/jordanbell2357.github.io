@@ -423,7 +423,7 @@ progression:
 $$b+\frac{21}{20}b+\left(\frac{21}{20}\right)^2b+\left(\frac{21}{20}\right)^3b+\cdots+
 \left(\frac{21}{20}\right)^{n-1}b;$$
 
-Now we have already found (**Article 550**) that the sum of this
+Now we have already found (<span class="artref">Art. 550</span>) that the sum of this
 progression is
 $$20\left(\frac{21}{20}\right)^nb-20b$$; if, therefore, we subtract this
 quantity from $$\left(\frac{21}{20}\right)^n \cdot a$$, we shall have for
@@ -432,7 +432,8 @@ the principal required, after $$n$$ years,
 $$\left(\frac{21}{20}\right)^n \cdot (a-2b)+20b.$$
 
 <span class="art">556</span> We might have deduced this formula immediately
-from that of **Article 550**. For, in the same manner as we annually added the sum $$b$$,
+from that of <span class="artref">Art. 550</span>.
+For, in the same manner as we annually added the sum $$b$$,
 in the former supposition; so, in
 the present, we subtract the same sum $$b$$ every year. We
 have therefore only to put in the former formula, $$-b$$ everywhere,

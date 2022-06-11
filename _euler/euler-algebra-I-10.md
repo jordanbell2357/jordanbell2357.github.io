@@ -87,7 +87,7 @@ number, and leave the numerator as it is. Thus ⅝ divided
 by 3 gives ⁵⁄₂₄, and ⁹⁄₁₆ divided by 5 gives ⁹⁄₈₀.
 
 This operation becomes easier, when the numerator itself
-is divisible by the integer, as we have supposed in **Article 103**.
+is divisible by the integer, as we have supposed in <span class="artref">Art. 103</span>.
 For example, ⁹⁄₁₆ divided by 3 would give, according
 to our last rule, ⁹⁄₄₈; but by the first rule, which is applicable here,
 we obtain ³⁄₁₆, an expression equivalent to ⁹⁄₄₈, but

@@ -46,7 +46,7 @@ which is equivalent to ½.
 This shows, that the decimal fraction, whose value is ⅓,
 cannot, strictly, ever be discontinued, but that it goes on, to
 infinity, repeating always the number 3; which agrees
-with what has been already shown, **Article 523**; namely, that
+with what has been already shown, <span class="artref">Art. 523</span>; namely, that
 the fractions
 
 $$\frac{3}{10}+\frac{3}{100}+\frac{3}{1000}+\frac{3}{10000}+\textrm{etc., to infinity} = \frac{1}{3}.$$

@@ -216,7 +216,7 @@ than two terms. We shall apply them to the third power
 of $$a + b + c$$; the terms of which must be formed by all
 the possible combinations of three letters, each term having
 for its coefficient the number of its transpositions, as shown,
-**Article 352**.
+<span class="artref">Art. 352</span>.
 
 Here, without performing the multiplication, the third
 power of $$(a + b+ c)$$ will be,

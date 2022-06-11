@@ -12,7 +12,7 @@ of the root $$a + b$$, however great the exponent may be, we
 are able to express, generally, the power of $$a + b$$ whose
 exponent is undetermined; for it is evident that if we
 represent that exponent by $$n$$, we shall have by the rule already
-given (**Art. 348** and the following):
+given (<span class="artref">Art. 348</span> and the following):
 
 $$
 \begin{align}
@@ -53,7 +53,7 @@ $$\sqrt[2]{\vphantom{(a+b)}}(a+b)=(a+b)^{\frac{1}{2}};
 
 Consequently, if we wish to find the square root of $$a+b$$,
 we have only to substitute for the exponent $$n$$ the fraction
-½ in the general formula, **Art. 361**, and we shall have first, for
+½ in the general formula, <span class="artref">Art. 361</span>, and we shall have first, for
 the coefficients,
 
 $$\frac{n}{1}=\frac{1}{2}; \; \frac{n-1}{2}=-\frac{1}{4}; \;

@@ -85,7 +85,7 @@ and the fraction $$\dfrac{1}{1-a}$$, to which it must be equal, becomes $$\frac{
 Now, we have before remarked, that $$\frac{1}{0}$$
 is a number infinitely
 great; which is therefore here confirmed in a satisfactory
-manner. See **Articles 83** and **84**.
+manner. See <span class="artref">Art. 83</span> and <span class="artref">84</span>.
 
 Again, if we suppose $$a=2$$, our series becomes
 

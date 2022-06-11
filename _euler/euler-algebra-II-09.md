@@ -74,7 +74,7 @@ if, therefore, we subtract that cube from the cube proposed,
 we obtain the remainder, $$3a^2b + 3ab^2 + b^3$$, which must furnish
 the second term of the root.
 
-<span class="art">336</span> But as we already know, from **Article 333**, that the
+<span class="art">336</span> But as we already know, from <span class="artref">Art. 333</span>, that the
 second term is $$+b$$, we have principally to discover how it
 may be derived from the above remainder.
 Now, that remainder may be expressed by two factors,
