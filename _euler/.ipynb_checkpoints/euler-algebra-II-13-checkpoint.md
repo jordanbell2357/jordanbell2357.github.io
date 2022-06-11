@@ -103,7 +103,8 @@ $$
 
 And for the powers,
 
-$$a^n=\dfrac{1}{a^4}; \quad a^{n-1}=\dfrac{1}{a^5}; \quad a^{n-2} = \dfrac{1}{a^6}; \quad a^{n-3} =  \dfrac{1}{a^7}; \quad a^{n-4} = \dfrac{1}{a^8},$$
+$$a^n=\dfrac{1}{a^4}; \quad a^{n-1}=\dfrac{1}{a^5}; \quad a^{n-2} = \dfrac{1}{a^6};
+\quad a^{n-3} =  \dfrac{1}{a^7}; \quad a^{n-4} = \dfrac{1}{a^8},$$
 
 whence we obtain,
 
