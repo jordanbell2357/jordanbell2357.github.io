@@ -14,7 +14,7 @@ namely, that power whose exponent is -1; from which it follows, that the series 
 as the value of $$(a+b)^n$$ extends also to this case.
 
 <span class="art">371</span> Since, therefore $$\dfrac{1}{a+b}$$ is the same as $$(a+b)^{-1}$$,
-let us suppose, in the general formula, **Art. 361**, $$n=-1$$;
+let us suppose, in the general formula, <span class="art">Art. 361</span>, $$n=-1$$;
 and we shall first have, for the coefficients,
 
 $$\frac{n}{1}=-1; \; \frac{n-1}{2}=-1; \; \frac{n-2}{3}=-1; \; \frac{n-3}{4}=-1, \quad \textrm{etc.}$$
