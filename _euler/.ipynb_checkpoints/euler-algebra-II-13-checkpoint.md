@@ -33,8 +33,38 @@ $$(a+b)^{-1} = \dfrac{1}{a+b} = \dfrac{1}{a} - \dfrac{b}{a^2} + \dfrac{b^2}{a^3}
 
 which is the same series that we found before by division.
 
-<span class="art">372</span>
+<span class="art">372</span> Farther, $$\dfrac{1}{(a+b)^2}$$ being the same with $$(a+b)^{-2}$$, let
+us reduce this quantity also to an infinite series. For this purpose,
+we must suppose $$n=-2$$, and we shall first have, for the coefficients,
 
+$$\frac{n}{1}=-\frac{2}{1}; \; \frac{n-1}{2}=-\frac{3}{2}; \; \frac{n-2}{3}=-\frac{4}{3}; \;
+\frac{n-3}{4} = -\frac{5}{4}; \quad \textrm{etc.};$$
+
+and, for the powers of $$a$$, we obtain
+
+$$a^n=\dfrac{1}{a^2}; \; a^{n-1}=\dfrac{1}{a^3}; \; a^{n-2} = \dfrac{1}{a^4}; \; a^{n-3} =  \dfrac{1}{a^5},
+\quad \textrm{etc.}$$
+
+We have therefore
+
+$$(a+b)^{-2} = \dfrac{1}{(a+b)^2} = \dfrac{1}{a^2} - \dfrac{2\cdot b}{1\cdot a^3} + \dfrac{2\cdot 3\cdot b^2}{1\cdot 2\cdot a^4}
+-\dfrac{2\cdot 3\cdot 4\cdot b^3}{1\cdot 2\cdot 3\cdot a^5}
++\dfrac{2\cdot 3\cdot 4\cdot 5\cdot b^4}{1\cdot 2\cdot 3\cdot 4\cdot a^6},
+\; \textrm{etc.}$$
+
+Now,
+
+$$\frac{2}{1}=2; \; \dfrac{2\cdot 3}{1\cdot 2}=3; \;
+\dfrac{2\cdot 3\cdot 4}{1\cdot 2\cdot 3}=4; \;
+\dfrac{2\cdot 3\cdot 4\cdot 5}{1\cdot 2\cdot 3\cdot 4}=5,
+\quad \textrm{etc.}$$
+
+and consequently,
+
+$$\dfrac{1}{(a+b)^2} = \dfrac{1}{a^2} - 2\cdot \dfrac{b}{a^3}
++3 \cdot \dfrac{b^2}{a^4} - 4\cdot \dfrac{b^3}{a^5} + 5\cdot \dfrac{b^4}{a^6}
+-6\cdot \dfrac{b^5}{a^7} +7\cdot \dfrac{b^6}{a^8},
+\quad \textrm{etc.}$$
 
 <span class="art">373</span>
 
