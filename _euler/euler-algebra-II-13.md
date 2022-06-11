@@ -17,19 +17,19 @@ as the value of $$(a+b)^n$$ extends also to this case.
 let us suppose, in the general formula, <span class="art">Art. 361</span>, $$n=-1$$;
 and we shall first have, for the coefficients,
 
-$$\frac{n}{1}=-1; \; \frac{n-1}{2}=-1; \; \frac{n-2}{3}=-1; \; \frac{n-3}{4}=-1, \quad \textrm{etc.}$$
+$$\frac{n}{1}=-1; \quad \frac{n-1}{2}=-1; \quad \frac{n-2}{3}=-1; \quad \frac{n-3}{4}=-1, \quad \textrm{etc.}$$
 
 And, for the powers of $$a$$, we have
 
-$$a^n = a^{-1}=\dfrac{1}{a}; \;
-a^{n-1} = a^{-2} = \dfrac{1}{a^2}; \;
-a^{n-2} = \frac{1}{a^3}; \;
+$$a^n = a^{-1}=\dfrac{1}{a}; \quad
+a^{n-1} = a^{-2} = \dfrac{1}{a^2}; \quad
+a^{n-2} = \frac{1}{a^3}; \quad
 a^{n-3} = \frac{1}{a^4}, \quad \textrm{etc.}:$$
 
 so that
 
 $$(a+b)^{-1} = \dfrac{1}{a+b} = \dfrac{1}{a} - \dfrac{b}{a^2} + \dfrac{b^2}{a^3} - \dfrac{b^3}{a^4}
-+\dfrac{b^4}{a^5} - \dfrac{b^5}{a^6}, \quad \textrm{etc.}$$
++\dfrac{b^4}{a^5} - \dfrac{b^5}{a^6}, \; \textrm{etc.}$$
 
 which is the same series that we found before by division.
 
@@ -37,12 +37,12 @@ which is the same series that we found before by division.
 us reduce this quantity also to an infinite series. For this purpose,
 we must suppose $$n=-2$$, and we shall first have, for the coefficients,
 
-$$\frac{n}{1}=-\frac{2}{1}; \; \frac{n-1}{2}=-\frac{3}{2}; \; \frac{n-2}{3}=-\frac{4}{3}; \;
+$$\frac{n}{1}=-\frac{2}{1}; \quad \frac{n-1}{2}=-\frac{3}{2}; \quad \frac{n-2}{3}=-\frac{4}{3}; \quad
 \frac{n-3}{4} = -\frac{5}{4}; \quad \textrm{etc.};$$
 
 and, for the powers of $$a$$, we obtain
 
-$$a^n=\dfrac{1}{a^2}; \; a^{n-1}=\dfrac{1}{a^3}; \; a^{n-2} = \dfrac{1}{a^4}; \; a^{n-3} =  \dfrac{1}{a^5},
+$$a^n=\dfrac{1}{a^2}; \quad a^{n-1}=\dfrac{1}{a^3}; \quad a^{n-2} = \dfrac{1}{a^4}; \quad a^{n-3} =  \dfrac{1}{a^5},
 \quad \textrm{etc.}$$
 
 We have therefore
@@ -64,32 +64,31 @@ and consequently,
 $$\dfrac{1}{(a+b)^2} = \dfrac{1}{a^2} - 2\cdot \dfrac{b}{a^3}
 +3 \cdot \dfrac{b^2}{a^4} - 4\cdot \dfrac{b^3}{a^5} + 5\cdot \dfrac{b^4}{a^6}
 -6\cdot \dfrac{b^5}{a^7} +7\cdot \dfrac{b^6}{a^8},
-\quad \textrm{etc.}$$
+\; \textrm{etc.}$$
 
 <span class="art">373</span> Let us proceed, and suppose $$n=-3$$, and we shall
 have a series expressing the value of $$\dfrac{1}{(a+b)^3}$$,
 or of $$(a+b)^{-3}$$.
 Here the coefficients will be
 
-$$\frac{n}{1} = -\frac{3}{1}; \;
-\frac{n-1}{2}=-\frac{4}{2}; \;
+$$\frac{n}{1} = -\frac{3}{1}; \quad
+\frac{n-1}{2}=-\frac{4}{2}; \quad
 \frac{n-2}{3} = -\frac{5}{3}, \quad \textrm{etc.}$$
 
 which gives
 
 $$
-\begin{gather}
-\dfrac{1}{(a+b)^3}\\
-= \dfrac{1}{a^3} - \dfrac{3\cdot b}{1\cdot a^4}
-+ \dfrac{3\cdot 4\cdot b^2}{1\cdot 2\cdot a^5} - \dfrac{3\cdot 4\cdot 5\cdot b^3}{1\cdot 2\cdot 3\cdot a^6}
-+\dfrac{3\cdot 4\cdot 5\cdot 6\cdot b^4}{1\cdot 2\cdot 3\cdot 4\cdot a^7}\\
-=\dfrac{1}{a^3}-3\cdot \dfrac{b}{a^4}+6\cdot \dfrac{b^2}{a^5}
+\begin{align}
+\dfrac{1}{(a+b)^3}&=
+\dfrac{1}{a^3} - \dfrac{3\cdot b}{1\cdot a^4} + \dfrac{3\cdot 4\cdot b^2}{1\cdot 2\cdot a^5} - \dfrac{3\cdot 4\cdot 5\cdot b^3}{1\cdot 2\cdot 3\cdot a^6}\\
+&+\dfrac{3\cdot 4\cdot 5\cdot 6\cdot b^4}{1\cdot 2\cdot 3\cdot 4\cdot a^7}\\
+&=\dfrac{1}{a^3}-3\cdot \dfrac{b}{a^4}+6\cdot \dfrac{b^2}{a^5}
 -10\cdot \dfrac{b^3}{a^6} 
 +15\cdot\dfrac{b^4}{a^7}
 -21\cdot \dfrac{b^5}{a^8}
 +28\cdot \dfrac{b^6}{a^9},
-\quad \textrm{etc.}
-\end{gather}
+\; \textrm{etc.}
+\end{align}
 $$
 
 
