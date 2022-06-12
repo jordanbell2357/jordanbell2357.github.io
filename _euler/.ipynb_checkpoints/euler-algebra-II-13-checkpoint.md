@@ -143,7 +143,7 @@ If, therefore, we multiply this series by $$a+b$$, the product ought to be
     <td>\(+\dfrac{b^2}{a^3}\)</td>
     <td>\(-\dfrac{b^3}{a^4}\)</td>
     <td>\(+\dfrac{b^4}{a^5}\)</td>
-    <td>\(-\dfrac{b^5}{a^6}\),</td>
+    <td>\(-\dfrac{b^5}{a^6}\)</td>
     <td>+ etc.</td>
   </tr>
   <tr>
@@ -161,7 +161,7 @@ If, therefore, we multiply this series by $$a+b$$, the product ought to be
     <td>\(+\dfrac{b^2}{a^2}\)</td>
     <td>\(-\dfrac{b^3}{a^3}\)</td>
     <td>\(+\dfrac{b^4}{a^4}\)</td>
-    <td>\(-\dfrac{b^5}{a^5}\),</td>
+    <td>\(-\dfrac{b^5}{a^5}\)</td>
     <td>+ etc.</td>
   </tr>
   <tr>
@@ -170,7 +170,7 @@ If, therefore, we multiply this series by $$a+b$$, the product ought to be
     <td>\(-\dfrac{b^2}{a^2}\)</td>
     <td>\(+\dfrac{b^3}{a^3}\)</td>
     <td>\(-\dfrac{b^4}{a^4}\)</td>
-    <td>\(+\dfrac{b^5}{a^5}\),</td>
+    <td>\(+\dfrac{b^5}{a^5}\)</td>
     <td>+ etc.</td>
   </tr>
 </tbody>
@@ -194,7 +194,7 @@ Now, $$(a+b)^2 = a^2+2ab+b^2$$, and
     <td>\(+\dfrac{3b^2}{a^4}\)</td>
     <td>\(-\dfrac{4b^3}{a^5}\)</td>
     <td>\(+\dfrac{5b^4}{a^6}\)</td>
-    <td>\(-\dfrac{6b^5}{a^7}\),</td>
+    <td>\(-\dfrac{6b^5}{a^7}\)</td>
     <td>+ etc.</td>
   </tr>
   <tr>
@@ -212,7 +212,7 @@ Now, $$(a+b)^2 = a^2+2ab+b^2$$, and
     <td>\(+\dfrac{3b^2}{a^2}\)</td>
     <td>\(-\dfrac{4b^3}{a^3}\)</td>
     <td>\(+\dfrac{5b^4}{a^4}\)</td>
-    <td>\(-\dfrac{6b^5}{a^5}\),</td>
+    <td>\(-\dfrac{6b^5}{a^5}\)</td>
     <td>+ etc.</td>
   </tr>
   <tr>
@@ -221,7 +221,7 @@ Now, $$(a+b)^2 = a^2+2ab+b^2$$, and
     <td>\(-\dfrac{4b^2}{a^2}\)</td>
     <td>\(+\dfrac{6b^3}{a^3}\)</td>
     <td>\(-\dfrac{8b^4}{a^4}\)</td>
-    <td>\(+\dfrac{10b^5}{a^5}\),</td>
+    <td>\(+\dfrac{10b^5}{a^5}\)</td>
     <td>+ etc.</td>
   </tr>
   <tr>
@@ -230,7 +230,7 @@ Now, $$(a+b)^2 = a^2+2ab+b^2$$, and
     <td>\(+\dfrac{b^2}{a^2}\)</td>
     <td>\(-\dfrac{2b^3}{a^3}\)</td>
     <td>\(+\dfrac{3b^4}{a^4}\)</td>
-    <td>\(-\dfrac{4b^5}{a^5}\),</td>
+    <td>\(-\dfrac{4b^5}{a^5}\)</td>
     <td>+ etc.</td>
   </tr>
 </tbody>
