@@ -109,11 +109,15 @@ numbers. See the following example of the operation in the
 number 2197:
 
 
+<a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
+<img src="/assets/euler/atozmath2197.png" alt="AtoZmath.com. Cube root of 2197 using long division">
+</a>
+
 
 Let us also extract the cube root of 34965783:
 
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
-<img src="/assets/euler/atozmath34965783.png" alt="AtoZmath.com. Cube root of a number using long division method">
+<img src="/assets/euler/atozmath34965783.png" alt="AtoZmath.com. Cube root 34965783 using long division">
 </a>
 
 
