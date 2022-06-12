@@ -113,6 +113,7 @@ number 2197:
 Let us also extract the cube root of 34965783:
 
 
+#### References
 
 Paul E. Black, "cube root", in *Dictionary of Algorithms and Data Structures* \[online\], Paul E. Black, ed. 6 May 2019. (accessed June 11, 2022) Available from: <https://www.nist.gov/dads/HTML/cubeRoot.html>
 
