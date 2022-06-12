@@ -112,10 +112,17 @@ number 2197:
 
 Let us also extract the cube root of 34965783:
 
+<a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
+<img src="/assets/euler/atozmath34965783.png" alt="AtoZmath.com. Cube root of a number using long division method">
+</a>
+
+
 
 #### References
 
 Paul E. Black, "cube root", in *Dictionary of Algorithms and Data Structures* \[online\], Paul E. Black, ed. 6 May 2019. (accessed June 11, 2022) Available from: <https://www.nist.gov/dads/HTML/cubeRoot.html>
+
+AtoZmath.com. Pre-Algebra Calculators. <https://atozmath.com/Menu/PreAlgebra.aspx> **12.2** Radicals. **8.** Cube root of a number using long division method. <https://atozmath.com/Pow_Root_DivMethod.aspx?q=8>
 
 #### Editions
 
