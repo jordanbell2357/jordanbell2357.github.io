@@ -114,6 +114,8 @@ Let us also extract the cube root of 34965783:
 
 
 
+Paul E. Black, "cube root", in *Dictionary of Algorithms and Data Structures* \[online\], Paul E. Black, ed. 6 May 2019. (accessed June 11, 2022) Available from: <https://www.nist.gov/dads/HTML/cubeRoot.html>
+
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
