@@ -114,7 +114,7 @@ follows:
 This series of equal terms is evidently equal to twice the
 sum of the given progression: now, the number of those
 equal terms is 10, as in the progression, and their sum consequently is equal to
-10·31=310. Hence, as this sum
+10 · 31 = 310. Hence, as this sum
 is twice the sum of the arithmetical progression, the sum required must be 155.
 
 <span class="art">416</span> If we proceed in the same manner with respect to
@@ -165,7 +165,7 @@ In this question it is required to find the sum of an
 arithmetical progression, the first term of which is 5, the
 difference 3, and the number of terms 32; we must therefore begin
 by determining the last term; which is found by
-the rule, in <span class="artref">Art. 406</span> and <span class="artref">411</span>, to be 5 + (31·3) = 98;
+the rule, in <span class="artref">Art. 406</span> and <span class="artref">Art. 411</span>, to be 5 + (31·3) = 98;
 after which the sum required is easily found to be
 $$\frac{103\cdot 32}{2}=103\cdot 16$$; whence we conclude that the horse costs 1648
 pence, or 6*l.* 17*s.* 4*d.*
