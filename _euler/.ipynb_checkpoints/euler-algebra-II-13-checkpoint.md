@@ -38,7 +38,7 @@ us reduce this quantity also to an infinite series. For this purpose,
 we must suppose $$n=-2$$, and we shall first have, for the coefficients,
 
 $$\frac{n}{1}=-\frac{2}{1}; \quad \frac{n-1}{2}=-\frac{3}{2}; \quad \frac{n-2}{3}=-\frac{4}{3}; \quad
-\frac{n-3}{4} = -\frac{5}{4}; \quad \textrm{etc.};$$
+\frac{n-3}{4} = -\frac{5}{4}; \; \textrm{etc.};$$
 
 and, for the powers of $$a$$, we obtain
 
@@ -80,13 +80,12 @@ which gives
 $$
 \begin{align}
 \dfrac{1}{(a+b)^3}&=
-\dfrac{1}{a^3} - \dfrac{3\cdot b}{1\cdot a^4} + \dfrac{3\cdot 4\cdot b^2}{1\cdot 2\cdot a^5} - \dfrac{3\cdot 4\cdot 5\cdot b^3}{1\cdot 2\cdot 3\cdot a^6}+\dfrac{3\cdot 4\cdot 5\cdot 6\cdot b^4}{1\cdot 2\cdot 3\cdot 4\cdot a^7}\\
+\dfrac{1}{a^3} - \dfrac{3\cdot b}{1\cdot a^4} + \dfrac{3\cdot 4\cdot b^2}{1\cdot 2\cdot a^5} - \dfrac{3\cdot 4\cdot 5\cdot b^3}{1\cdot 2\cdot 3\cdot a^6}+\dfrac{3\cdot 4\cdot 5\cdot 6\cdot b^4}{1\cdot 2\cdot 3\cdot 4\cdot a^7}+\textrm{etc.}\\
 &=\dfrac{1}{a^3}-3\cdot \dfrac{b}{a^4}+6\cdot \dfrac{b^2}{a^5}
 -10\cdot \dfrac{b^3}{a^6} 
 +15\cdot\dfrac{b^4}{a^7}
 -21\cdot \dfrac{b^5}{a^8}
-+28\cdot \dfrac{b^6}{a^9},
-\; \textrm{etc.}
++28\cdot \dfrac{b^6}{a^9}+\textrm{etc.}
 \end{align}
 $$
 
@@ -109,8 +108,8 @@ whence we obtain,
 
 $$
 \begin{align}
-\dfrac{1}{(a+b)^4} &= \dfrac{1}{a^4} - \dfrac{4b}{1\cdot a^5} - \dfrac{4\cdot 5\cdot b^2}{1\cdot 2\cdot a^6}- \dfrac{4\cdot 5\cdot 6\cdot b^3}{1\cdot 2\cdot 3\cdot a^7}, \; \textrm{etc.}\\
-&= \dfrac{1}{a^4} - 4\dfrac{b}{a^5} + 10\dfrac{b^2}{a^6}- 20\dfrac{b^3}{a^7} + 35\dfrac{b^4}{a^8} -56\dfrac{b^5}{a^9}+, \; \textrm{etc.}
+\dfrac{1}{(a+b)^4} &= \dfrac{1}{a^4} - \dfrac{4b}{1\cdot a^5} - \dfrac{4\cdot 5\cdot b^2}{1\cdot 2\cdot a^6}- \dfrac{4\cdot 5\cdot 6\cdot b^3}{1\cdot 2\cdot 3\cdot a^7}+\textrm{etc.}\\
+&= \dfrac{1}{a^4} - 4\dfrac{b}{a^5} + 10\dfrac{b^2}{a^6}- 20\dfrac{b^3}{a^7} + 35\dfrac{b^4}{a^8} -56\dfrac{b^5}{a^9}+\textrm{etc.}
 \end{align}
 $$
 
@@ -121,7 +120,7 @@ generally, for any negative power of $$a+b$$;
 $$\dfrac{1}{(a+b)^m} = \dfrac{1}{a^m} - \dfrac{m\cdot b}{a^{m+1}}
 +\dfrac{m\cdot (m-1)\cdot b^2}{2\cdot a^{m+2}}
 -\dfrac{m\cdot (m-1)\cdot (m-2)\cdot b^3}{2\cdot 3\cdot a^{m+3}},
-\; \textrm{etc.}$$
++ \textrm{etc.}$$
 
 And, by means of this formula, we may transform all
 such fractions into infinite series, substituting fractions also,
@@ -131,7 +130,7 @@ quantities.
 <span class="art">375</span> The following considerations will illustrate the subject still farther: for we have seen that
 
 $$\dfrac{1}{a+b} = \dfrac{1}{a} - \dfrac{b}{a^2} + \dfrac{b^2}{a^3}
-- \dfrac{b^3}{a^4} + \dfrac{b^4}{a^5} - \dfrac{b^5}{a^6}+, \; \textrm{etc.}$$
+- \dfrac{b^3}{a^4} + \dfrac{b^4}{a^5} - \dfrac{b^5}{a^6}+ \textrm{etc.}$$
 
 If, therefore, we multiply this series by $$a+b$$, the product ought to be
 = 1; and this is found to be true, as will be seen by performing the multiplication:
@@ -182,7 +181,7 @@ where all the terms but the first cancel each other.
 <span class="art">376</span> We have also found, that
 
 $$\dfrac{1}{(a+b)^2} = \dfrac{1}{a^2} - \dfrac{2b}{a^3} + \dfrac{3b^2}{a^4} - \dfrac{4b^3}{a^5}
-+\dfrac{5b^4}{a^6} - \dfrac{6b^5}{a^7}, \quad \textrm{etc.}$$
++\dfrac{5b^4}{a^6} - \dfrac{6b^5}{a^7} + \textrm{etc.}$$
 
 And if we multiply this series by $$(a+b)^2$$, the product ought to be equal to 1.
 Now, $$(a+b)^2 = a^2+2ab+b^2$$, and
@@ -244,7 +243,7 @@ required.
 the product ought to answer to the fraction $$\dfrac{1}{a+b}$$, or be equal to the series
 already found, namely,
 
-$$\dfrac{1}{a}-\dfrac{b}{a^2}-\dfrac{b^2}{a^3}-\dfrac{b^3}{a^4}+\dfrac{b^4}{a^5}, \; \textrm{etc.}$$
+$$\dfrac{1}{a}-\dfrac{b}{a^2}-\dfrac{b^2}{a^3}-\dfrac{b^3}{a^4}+\dfrac{b^4}{a^5}+ \textrm{etc.}$$
 
 and this is the actual multiplication will confirm.
 
