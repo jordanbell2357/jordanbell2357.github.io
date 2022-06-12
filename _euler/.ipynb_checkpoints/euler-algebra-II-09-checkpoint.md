@@ -116,7 +116,7 @@ number 2197:[^1] [^2]
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
 <img src="/assets/euler/atozmath2197.png" title="AtoZmath.com" alt="AtoZmath.com. Cube root of 2197 using long division" width="500" height="367">
 </a>
-<figcaption>AtoZmath.com. Cube root of 2197 using long division</figcaption>
+<figcaption>AtoZmath.com © 2022. Cube root of 2197 using long division</figcaption>
 </figure>
 
 Let us also extract the cube root of 34965783:
@@ -125,7 +125,7 @@ Let us also extract the cube root of 34965783:
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
 <img src="/assets/euler/atozmath34965783.png" title="AtoZmath.com" alt="AtoZmath.com. Cube root 34965783 using long division" width="600" height="378">
 </a>
-<figcaption>AtoZmath.com. Cube root of 2197 using long division</figcaption>
+<figcaption>AtoZmath.com © 2022. Cube root of 2197 using long division</figcaption>
 </figure>
 
 #### References
