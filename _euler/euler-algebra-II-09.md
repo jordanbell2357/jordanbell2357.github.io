@@ -106,7 +106,9 @@ of $$a^3+12a^2+48a+64$$.
 <span class="art">339</span> The analysis which we have given is the foundation
 of the common rule for the extraction of the cube root in
 numbers. See the following example of the operation in the
-number 2197:
+number 2197:[^1]
+
+[^1]: AtoZmath.com. [Pre-Algebra Calculators](https://atozmath.com/Menu/PreAlgebra.aspx). 12.2 Radicals. [8. Cube root of a number using long division method.](https://atozmath.com/Pow_Root_DivMethod.aspx?q=8)
 
 
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
@@ -124,9 +126,11 @@ Let us also extract the cube root of 34965783:
 
 #### References
 
+AtoZmath.com. [Pre-Algebra Calculators](https://atozmath.com/Menu/PreAlgebra.aspx). 12.2 Radicals. [8. Cube root of a number using long division method.](https://atozmath.com/Pow_Root_DivMethod.aspx?q=8)
+
 Paul E. Black, "cube root", in *Dictionary of Algorithms and Data Structures* \[online\], Paul E. Black, ed. 6 May 2019. (accessed June 11, 2022) Available from: <https://www.nist.gov/dads/HTML/cubeRoot.html>
 
-AtoZmath.com. Pre-Algebra Calculators. <https://atozmath.com/Menu/PreAlgebra.aspx> **12.2** Radicals. **8.** Cube root of a number using long division method. <https://atozmath.com/Pow_Root_DivMethod.aspx?q=8>
+
 
 #### Editions
 
