@@ -155,6 +155,13 @@ following examples in numbers:
 <img src="/assets/euler/jmwdlaqw.png" alt="Square root" width="379" height="522">
 </a>
 
+<figure>
+<a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
+<img src="/assets/euler/atozmath2197.png" title="© 2022 AtoZmath.com. Square root of 998001" alt="© 2022 AtoZmath.com. Square root of 998001 using long division" width="500" height="367">
+</a>
+<figcaption>© 2022 AtoZmath.com. Cube root of 2197 using long division</figcaption>
+</figure>
+
 <span class="art">325</span> But when there is a remainder after all the figures
 have been used, it is a proof that the number proposed is
 not a square; and, consequently, that its root cannot be
