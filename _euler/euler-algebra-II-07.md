@@ -151,9 +151,9 @@ following examples in numbers:[^1] [^2] [^3] [^4]
 
 [^2]: Paul E. Black, "square root", in *Dictionary of Algorithms and Data Structures* \[online\], Paul E. Black, ed. 6 May 2019. Available from: <https://www.nist.gov/dads/HTML/squareRoot.html>
 
-[^3]: CK-12. CK-12 CBSE Maths Class 8. Last Modified: Apr 28, 2021. [6.2  Square Roots - Definition, Properties, Methods and Examples](https://flexbooks.ck12.org/cbook/ck-12-cbse-maths-class-8/section/6.2/primary/lesson/square-roots/)
+[^3]: CK-12: CK-12 CBSE Maths Class 8. Last Modified: Apr 28, 2021. [6.2  Square Roots - Definition, Properties, Methods and Examples](https://flexbooks.ck12.org/cbook/ck-12-cbse-maths-class-8/section/6.2/primary/lesson/square-roots/)
 
-[^4]: <https://www.algebraden.com/square-root-by-long-division-method.htm>
+[^4]: AlgebraDen.com: [Square Root by Long Division Method](https://www.algebraden.com/square-root-by-long-division-method.htm)
 
 <a href="https://artofproblemsolving.com/texer/vpnfjpvf">
 <img src="/assets/euler/vpnfjpvf.png" alt="Square root" width="256" height="427">
