@@ -145,7 +145,15 @@ will render this operation more clear.
 
 <span class="art">324</span> We easily deduce from the rule which we have explained, the method which is taught in books of arithmetic
 for the extraction of the square root, as will appear from the
-following examples in numbers:
+following examples in numbers:[^1] [^2] [^3] [^4]
+
+[^1]: AtoZmath.com: Pre-Algebra Calculators. 12.2 Radicals. [7. Square root by long division method.](https://atozmath.com/Pow_Root_DivMethod.aspx?q=7)
+
+[^2]: Paul E. Black, "square root", in *Dictionary of Algorithms and Data Structures* \[online\], Paul E. Black, ed. 6 May 2019. Available from: <https://www.nist.gov/dads/HTML/squareRoot.html>
+
+[^3]: CK-12. CK-12 CBSE Maths Class 8. Last Modified: Apr 28, 2021. [6.2  Square Roots - Definition, Properties, Methods and Examples](https://flexbooks.ck12.org/cbook/ck-12-cbse-maths-class-8/section/6.2/primary/lesson/square-roots/)
+
+[^4]: <https://www.algebraden.com/square-root-by-long-division-method.htm>
 
 <a href="https://artofproblemsolving.com/texer/vpnfjpvf">
 <img src="/assets/euler/vpnfjpvf.png" alt="Square root" width="256" height="427">
