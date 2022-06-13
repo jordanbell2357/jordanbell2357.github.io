@@ -170,12 +170,16 @@ following examples in numbers:[^1] [^2] [^3] [^4]
 <figcaption>© 2022 AtoZmath.com. Square root of 529 using long division</figcaption>
 </figure>
 
+<hr>
+
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
 <img src="/assets/euler/atozmath2304.png" title="© 2022 AtoZmath.com. Square root of 2304 using long division" alt="© 2022 AtoZmath.com. Square root of 2304 using long division" width="500" height="365">
 </a>
 <figcaption>© 2022 AtoZmath.com. Square root of 2304 using long division</figcaption>
 </figure>
+
+<hr>
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
@@ -184,12 +188,16 @@ following examples in numbers:[^1] [^2] [^3] [^4]
 <figcaption>© 2022 AtoZmath.com. Square root of 4096 using long division</figcaption>
 </figure>
 
+<hr>
+
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
 <img src="/assets/euler/atozmath15625.png" title="© 2022 AtoZmath.com. Square root of 15625 using long division" alt="© 2022 AtoZmath.com. Square root of 15625 using long division" width="500" height="370">
 </a>
 <figcaption>© 2022 AtoZmath.com. Square root of 15625 using long division</figcaption>
 </figure>
+
+<hr>
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
