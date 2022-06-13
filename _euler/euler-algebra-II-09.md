@@ -95,13 +95,50 @@ the square of the second term of the root.
 <span class="art">338</span> Let us apply what we have said to two examples of
 other given cubes.
 
-Given $$a^3+12a^2+48a+64$$. The first term of the root will be $$a$$.
-Then $$3a^2b=12a^2$$, so the second term of the root is $$b=4$$.
-Then $$3a^2+3ab+b^2=3a^2+12a+16$$, which is equal to
-$$(a^3+12a^2+48a+64)-(a^3)$$, hence $$a+4$$ is the cube root
-of $$a^3+12a^2+48a+64$$.
-
-
+<table>
+<tbody>
+  <tr>
+    <td></td>
+    <td>\(a^3\)</td>
+    <td>\(+12a^2\)</td>
+    <td>\(+48a\)</td>
+    <td>\(+64\)</td>
+    <td class="leftline">\(a+4\)</td>
+  </tr>
+  <tr>
+    <td class="rightline">\(3a^2+12a+16\)</td>
+    <td class="underline">\(a^3\)</td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td>\(12a^2\)</td>
+    <td>\(+48a\)</td>
+    <td>\(+64\)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="underline"></td>
+    <td class="underline">\(12a^2\)</td>
+    <td class="underline">\(+48a\)</td>
+    <td class="underline">\(+64\)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>0</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
 
 <span class="art">339</span> The analysis which we have given is the foundation
 of the common rule for the extraction of the cube root in
@@ -114,25 +151,19 @@ number 2197:[^1] [^2]
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
-<img src="/assets/euler/atozmath2197.png" title="AtoZmath.com" alt="AtoZmath.com. Cube root of 2197 using long division" width="500" height="367">
+<img src="/assets/euler/atozmath2197.png" title="© 2022 AtoZmath.com. Cube root of 2197" alt="© 2022 AtoZmath.com. Cube root of 2197 using long division" width="500" height="367">
 </a>
-<figcaption>AtoZmath.com © 2022. Cube root of 2197 using long division</figcaption>
+<figcaption>© 2022 AtoZmath.com. Cube root of 2197 using long division</figcaption>
 </figure>
 
 Let us also extract the cube root of 34965783:
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
-<img src="/assets/euler/atozmath34965783.png" title="AtoZmath.com" alt="AtoZmath.com. Cube root 34965783 using long division" width="600" height="378">
+<img src="/assets/euler/atozmath34965783.png" title="© 2022 AtoZmath.com. Cube root 34965783" alt="© 2022 AtoZmath.com. Cube root 34965783 using long division" width="600" height="378">
 </a>
-<figcaption>AtoZmath.com © 2022. Cube root of 2197 using long division</figcaption>
+<figcaption>© 2022 AtoZmath.com. Cube root of 2197 using long division</figcaption>
 </figure>
-
-#### References
-
-AtoZmath.com. [Pre-Algebra Calculators](https://atozmath.com/Menu/PreAlgebra.aspx). 12.2 Radicals. [8. Cube root of a number using long division method.](https://atozmath.com/Pow_Root_DivMethod.aspx?q=8)
-
-Paul E. Black, "cube root", in *Dictionary of Algorithms and Data Structures* \[online\], Paul E. Black, ed. 6 May 2019. Available from: <https://www.nist.gov/dads/HTML/cubeRoot.html>
 
 #### Editions
 
