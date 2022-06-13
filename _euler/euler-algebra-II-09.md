@@ -229,7 +229,7 @@ of the common rule for the extraction of the cube root in
 numbers. See the following example of the operation in the
 number 2197:[^1] [^2]
 
-[^1]: AtoZmath.com. [Pre-Algebra Calculators](https://atozmath.com/Menu/PreAlgebra.aspx). 12.2 Radicals. [8. Cube root of a number using long division method.](https://atozmath.com/Pow_Root_DivMethod.aspx?q=8)
+[^1]: AtoZmath.com: Pre-Algebra Calculators. 12.2 Radicals. [8. Cube root of a number using long division method.](https://atozmath.com/Pow_Root_DivMethod.aspx?q=8)
 
 [^2]: Paul E. Black, "cube root", in *Dictionary of Algorithms and Data Structures* \[online\], Paul E. Black, ed. 6 May 2019. Available from: <https://www.nist.gov/dads/HTML/cubeRoot.html>
 
