@@ -157,9 +157,16 @@ following examples in numbers:
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
-<img src="/assets/euler/atozmath2197.png" title="© 2022 AtoZmath.com. Square root of 998001" alt="© 2022 AtoZmath.com. Square root of 998001 using long division" width="500" height="367">
+<img src="/assets/euler/atozmath2197.png" title="© 2022 AtoZmath.com. Square root of 15625 using long division" alt="© 2022 AtoZmath.com. Square root of 15625 using long division" width="500" height="367">
 </a>
-<figcaption>© 2022 AtoZmath.com. Cube root of 2197 using long division</figcaption>
+<figcaption>© 2022 AtoZmath.com. Square root of 15625 using long division</figcaption>
+</figure>
+
+<figure>
+<a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
+<img src="/assets/euler/atozmath2197.png" title="© 2022 AtoZmath.com. Square root of 998001 using long division" alt="© 2022 AtoZmath.com. Square root of 998001 using long division" width="500" height="367">
+</a>
+<figcaption>© 2022 AtoZmath.com. Square root of 998001 using long division</figcaption>
 </figure>
 
 <span class="art">325</span> But when there is a remainder after all the figures

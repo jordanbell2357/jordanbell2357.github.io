@@ -140,7 +140,7 @@ other given cubes.
 </tbody>
 </table>
 
-<div style="overflow-x:auto;">
+<div style="font-size:x-small;overflow-x:auto;">
 <table>
 <tbody>
   <tr>
@@ -235,7 +235,7 @@ number 2197:[^1] [^2]
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
-<img src="/assets/euler/atozmath2197.png" title="© 2022 AtoZmath.com. Cube root of 2197" alt="© 2022 AtoZmath.com. Cube root of 2197 using long division" width="500" height="367">
+<img src="/assets/euler/atozmath2197.png" title="© 2022 AtoZmath.com. Cube root of 2197 using long division" alt="© 2022 AtoZmath.com. Cube root of 2197 using long division" width="500" height="367">
 </a>
 <figcaption>© 2022 AtoZmath.com. Cube root of 2197 using long division</figcaption>
 </figure>
@@ -244,7 +244,7 @@ Let us also extract the cube root of 34965783:
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
-<img src="/assets/euler/atozmath34965783.png" title="© 2022 AtoZmath.com. Cube root 34965783" alt="© 2022 AtoZmath.com. Cube root 34965783 using long division" width="600" height="378">
+<img src="/assets/euler/atozmath34965783.png" title="© 2022 AtoZmath.com. Cube root 34965783 using long division" alt="© 2022 AtoZmath.com. Cube root 34965783 using long division" width="600" height="378">
 </a>
 <figcaption>© 2022 AtoZmath.com. Cube root of 2197 using long division</figcaption>
 </figure>
