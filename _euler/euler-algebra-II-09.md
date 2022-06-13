@@ -140,6 +140,88 @@ other given cubes.
 </tbody>
 </table>
 
+<table>
+<tbody>
+  <tr>
+    <td></td>
+    <td>\(a^6\)</td>
+    <td>\(-6a^5\)</td>
+    <td>\(+15a^4\)</td>
+    <td>\(-20a^3\)</td>
+    <td>\(+15a^2\)</td>
+    <td>\(-6a\)</td>
+    <td>\(+1\)</td>
+    <td class="leftline">\(a^2-2a+1\)</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="underline">\(a^6\)</td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="rightline">\(3a^4-6a^3-4a^2\)</td>
+    <td></td>
+    <td>\(-6a^5\)</td>
+    <td>\(+15a^4\)</td>
+    <td>\(-20a^3\)</td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="underline"></td>
+    <td class="underline">\(-6a^5\)</td>
+    <td class="underline">\(+12a^4\)</td>
+    <td class="underline">\(-8a^3\)</td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td class="rightline">\(3a^4-12a^3+12a^2+3a^2-6a+1\)</td>
+    <td></td>
+    <td></td>
+    <td>\(3a^4\)</td>
+    <td>\(-12a^3\)</td>
+    <td>\(+15a^2\)</td>
+    <td>\(-6a\)</td>
+    <td>\(+1\)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td class="underline"></td>
+    <td class="underline"></td>
+    <td class="underline">\(3a^4\)</td>
+    <td class="underline">\(-12a^3\)</td>
+    <td class="underline">\(+15a^2\)</td>
+    <td class="underline">\(-6a\)</td>
+    <td class="underline">\(+1\)</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>\(0\)</td>
+    <td></td>
+  </tr>
+</tbody>
+</table>
+
 <span class="art">339</span> The analysis which we have given is the foundation
 of the common rule for the extraction of the cube root in
 numbers. See the following example of the operation in the
