@@ -140,6 +140,7 @@ other given cubes.
 </tbody>
 </table>
 
+<div style="overflow-x:auto;">
 <table>
 <tbody>
   <tr>
@@ -221,6 +222,7 @@ other given cubes.
   </tr>
 </tbody>
 </table>
+</div>
 
 <span class="art">339</span> The analysis which we have given is the foundation
 of the common rule for the extraction of the cube root in
