@@ -131,13 +131,19 @@ will render this operation more clear.
 <img src="/assets/euler/youjickd.png" alt="Polynomial square root" width="500" height="143">
 </a>
 
+---
+
 <a href="https://artofproblemsolving.com/texer/gqwjcjed">
 <img src="/assets/euler/gqwjcjed.png" alt="Polynomial square root" width="447" height="135">
 </a>
 
+---
+
 <a href="https://artofproblemsolving.com/texer/krbauhty">
 <img src="/assets/euler/krbauhty.png" alt="Polynomial square root" width="539" height="135">
 </a>
+
+---
 
 <a href="https://artofproblemsolving.com/texer/wclmufmg">
 <img src="/assets/euler/wclmufmg.png" alt="Polynomial square root" width="810" height="175">
@@ -159,9 +165,13 @@ following examples in numbers:[^1] [^2] [^3] [^4]
 <img src="/assets/euler/vpnfjpvf.png" alt="Square root" width="256" height="427">
 </a>
 
+---
+
 <a href="https://artofproblemsolving.com/texer/jmwdlaqw">
 <img src="/assets/euler/jmwdlaqw.png" alt="Square root" width="379" height="522">
 </a>
+
+---
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
@@ -192,7 +202,7 @@ following examples in numbers:[^1] [^2] [^3] [^4]
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
-<img src="/assets/euler/atozmath15625.png" title="© 2022 AtoZmath.com. Square root of 15625 using long division" alt="© 2022 AtoZmath.com. Square root of 15625 using long division" width="500" height="370">
+<img src="/assets/euler/atozmath15625.png" title="© 2022 AtoZmath.com. Square root of 15625 using long division" alt="© 2022 AtoZmath.com. Square root of 15625 using long division" width="500" height="428">
 </a>
 <figcaption>© 2022 AtoZmath.com. Square root of 15625 using long division</figcaption>
 </figure>
