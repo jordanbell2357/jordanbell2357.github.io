@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Part I. Section I. Chapter 23. "Of the Method ofexpressing Logarithms."
+title: Part I. Section I. Chapter 23. "Of the Method of expressing Logarithms."
 ---
 
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 23. "Of the Method ofexpressing Logarithms."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 23. "Of the Method of expressing Logarithms."
 
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 23. "Of the Method ofexpressing Logarithms."](/assets/euler/en/I-23.pdf)
+    - [Section I. Chapter 23. "Of the Method of expressing Logarithms."](/assets/euler/en/I-23.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 23. Von der Art die Logarithmen vorzustellen](/assets/euler/de/I-I-23.pdf)

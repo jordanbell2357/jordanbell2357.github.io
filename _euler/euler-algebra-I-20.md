@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."
+title: Part I. Section I. Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."
 
 <span class="art">206</span> Hitherto we have only explained the different methods of calculation: namely,
 addition, subtraction, multiplication, and division; the involution of powers,

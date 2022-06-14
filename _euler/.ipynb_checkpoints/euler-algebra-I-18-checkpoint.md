@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 18. "Of Roots, with relation to Powers in general."
+title: Part I. Section I. Chapter 18. "Of Roots, with relation to Powers in general."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 18. "Of Roots, with relation to Powers in general."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 18. "Of Roots, with relation to Powers in general."
 
 <span class="art">189</span> Since the square root of a given number is a number,
 whose square is equal to that given number; and since

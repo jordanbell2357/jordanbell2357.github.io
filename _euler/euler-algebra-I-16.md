@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 16. "Of Powers in general."
+title: Part I. Section I. Chapter 16. "Of Powers in general."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 16. "Of Powers in general."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 16. "Of Powers in general."
 
 <span class="art">168</span> The product which we obtain by multiplying a number once, or several times by itself, is
 called a **power**. Thus, a square which arises from the multiplication of a number by itself,

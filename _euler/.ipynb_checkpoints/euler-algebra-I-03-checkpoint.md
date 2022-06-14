@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 3. "Of the Multiplication of Simple Quantities."
+title: Part I. Section I. Chapter 3. "Of the Multiplication of Simple Quantities."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 3. "Of the Multiplication of Simple Quantities."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 3. "Of the Multiplication of Simple Quantities."
 
 <span class="art">23</span> When there are two or more equal numbers to be
 added together, the expression of their sum may be abridged:

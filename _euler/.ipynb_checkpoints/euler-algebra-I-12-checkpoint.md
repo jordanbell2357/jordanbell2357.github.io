@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 12. "Of Square Roots, and of Irrational Numbers resulting from them."
+title: Part I. Section I. Chapter 12. "Of Square Roots, and of Irrational Numbers resulting from them."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 12. "Of Square Roots, and of Irrational Numbers resulting from them."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 12. "Of Square Roots, and of Irrational Numbers resulting from them."
 
 <span class="art">123</span> What we have said in the preceding chapter amounts
 to this ; that the square root of a given number is that number whose square is equal to the given number; and that

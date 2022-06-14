@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 22. "Of the Logarithmic Tables now in use."
+title: Part I. Section I. Chapter 22. "Of the Logarithmic Tables now in use."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 22. "Of the Logarithmic Tables now in use."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 22. "Of the Logarithmic Tables now in use."
 
 
 

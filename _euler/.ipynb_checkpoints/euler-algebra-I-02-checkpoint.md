@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 2. "Explanation of the Signs + Plus and - Minus."
+title: Part I. Section I. Chapter 2. "Explanation of the Signs + Plus and - Minus."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 2. "Explanation of the Signs + Plus and - Minus."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 2. "Explanation of the Signs + Plus and - Minus."
 
 <span class="art">8</span> When we have to add one given number to another,
 this is indicated by the sign +, which is placed before the

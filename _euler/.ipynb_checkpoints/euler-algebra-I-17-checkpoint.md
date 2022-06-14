@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 17. "Of the Calculation of Powers."
+title: Part I. Section I. Chapter 17. "Of the Calculation of Powers."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 17. "Of the Calculation of Powers."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 17. "Of the Calculation of Powers."
 
 <span class="art">180</span> We have nothing particular to observe with regard
 to the Addition and Subtraction of powers; for we only

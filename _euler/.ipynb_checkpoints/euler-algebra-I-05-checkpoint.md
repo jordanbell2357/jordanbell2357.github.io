@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 5. "Of the Division of Simple Quantities."
+title: Part I. Section I. Chapter 5. "Of the Division of Simple Quantities."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 5. "Of the Division of Simple Quantities."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 5. "Of the Division of Simple Quantities."
 
 <span class="art">45</span> When a number is to be separated into two, three, or
 more equal parts, it is done by means of division, which

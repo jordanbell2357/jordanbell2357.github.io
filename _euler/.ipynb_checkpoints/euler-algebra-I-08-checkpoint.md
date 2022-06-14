@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 8. "Of the Properties of Fractions."
+title: Part I. Section I. Chapter 8. "Of the Properties of Fractions."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 8. "Of the Properties of Fractions."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 8. "Of the Properties of Fractions."
 
 <span class="art">85</span> We have already seen, that each of the fractions,
 

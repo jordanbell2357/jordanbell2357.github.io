@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 11. "Of Square Numbers."
+title: Part I. Section I. Chapter 11. "Of Square Numbers."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 11. "Of Square Numbers."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 11. "Of Square Numbers."
 
 <span class="art">115</span> The product of a number, when multiplied by
 itself, is called a **square**; and, for this reason, the number,

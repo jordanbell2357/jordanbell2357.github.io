@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 15. "Of Cube Roots, and of Irrational Numbers resulting from them."
+title: Part I. Section I. Chapter 15. "Of Cube Roots, and of Irrational Numbers resulting from them."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 15. "Of Cube Roots, and of Irrational Numbers resulting from them."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 15. "Of Cube Roots, and of Irrational Numbers resulting from them."
 
 <span class="art">158</span> As we can, in the manner already explained, find
 the cube of a given number, so, when a number is proposed,

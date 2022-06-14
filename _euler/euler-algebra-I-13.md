@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 13. "Of Impossible, or Imaginary Quantities, which arise from the same source."
+title: Part I. Section I. Chapter 13. "Of Impossible, or Imaginary Quantities, which arise from the same source."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 13. "Of Impossible, or Imaginary Quantities, which arise from the same source."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 13. "Of Impossible, or Imaginary Quantities, which arise from the same source."
 
 <span class="art">139</span> We have already seen that the squares of numbers,
 negative as well as positive, are always positive, or affected

@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 7. "Of Fractions in general."
+title: Part I. Section I. Chapter 7. "Of Fractions in general."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 7. "Of Fractions in general."[^1]
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 7. "Of Fractions in general."[^1]
 
 [^1]: With changes by me to Hewlett's English translation, using the German text from the *Leonhardi Euleri Opera omnia*. In particular, "one integer" in the English text corresponds to "ein Gantzes" in the German text, which is properly translated "one whole". (The English translation is through the French translation, and the French "entier" means both "integer" and "whole".)
 

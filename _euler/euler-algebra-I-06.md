@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 6. "Of the Properties of Integers, with respect to their Divisors."
+title: Part I. Section I. Chapter 6. "Of the Properties of Integers, with respect to their Divisors."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 6. "Of the Properties of Integers, with respect to their Divisors."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 6. "Of the Properties of Integers, with respect to their Divisors."
 
 <span class="art">58</span> As we have seen that some numbers are divisible by
 certain divisors, while others are not so; it will be proper,

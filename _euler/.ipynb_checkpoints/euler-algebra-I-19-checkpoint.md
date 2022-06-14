@@ -1,11 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 19. "Of the Method of representing Irrational Numbers by Fractional Exponents."
+title: Part I. Section I. Chapter 19. "Of the Method of representing Irrational Numbers by Fractional Exponents."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 19. "Of the Method of representing Irrational Numbers by Fractional Exponents."
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 19. "Of the Method of representing Irrational Numbers by Fractional Exponents."
 
 <span class="art">195</span> We have shown in the preceding chapter, that the
 square of any power is found by doubling the exponent of
