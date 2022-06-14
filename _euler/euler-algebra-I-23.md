@@ -1,13 +1,9 @@
 ---
 layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 23. "Of the Method ofexpressing Logarithms."
+title: Part I. Section I. Chapter 23. "Of the Method ofexpressing Logarithms."
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 23. "Of the Method ofexpressing Logarithms."
-
-
+#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 23. "Of the Method ofexpressing Logarithms."
 
 #### Editions
 
