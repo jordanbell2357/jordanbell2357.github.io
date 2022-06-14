@@ -1,9 +1,10 @@
 ---
 layout: post
-title: Part I. Section I. Chapter 1. "Mathematics in general."
+title: Euler. "Elements of Algebra". Part I. Section I. Chapter 1. "Mathematics in general."
+part: Part I. "Containing the Analysis of Determinate Quantities."
+section: Section I. "Of the different Methods of calculating Simple Quantities."
+chapter: Chapter 1. "Mathematics in general."
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 1. "Mathematics in general."
 
 <span class="art">1</span> Whatever is capable of increase or diminution,
 is called magnitude, or quantity.

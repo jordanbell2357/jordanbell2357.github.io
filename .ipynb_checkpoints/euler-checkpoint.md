@@ -14,9 +14,15 @@ permalink: /euler/
 
 #### Chapters
 
+{% for item in site.euler %}
+- [{{item.part}} {{item.section}} {{item.chapter}}]({{ item.url }})
+{% endfor %}
+
+<!--
 {% for chapter in site.euler %}
 - [{{chapter.title}}]({{ chapter.url }})
 {% endfor %}
+-->
 
 #### Editions
 
