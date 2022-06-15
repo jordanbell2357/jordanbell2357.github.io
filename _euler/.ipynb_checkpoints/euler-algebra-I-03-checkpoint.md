@@ -6,6 +6,8 @@ section: I
 chapter: 3
 ---
 
+Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">23</span> When there are two or more equal numbers to be
 added together, the expression of their sum may be abridged:
 for example,
