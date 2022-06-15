@@ -6,6 +6,8 @@ section: I
 chapter: 1
 ---
 
+Part {{ page.part }}. Section {{ page.section }}. Chapter {{ page.chapter }}.
+
 <span class="art">1</span> Whatever is capable of increase or diminution,
 is called magnitude, or quantity.
 
