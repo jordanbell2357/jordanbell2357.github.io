@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 10. "Of the Multiplication and Division of Fractions."
+title: Leonhard Euler. Elements of Algebra
 part: I
 section: I
 chapter: 10

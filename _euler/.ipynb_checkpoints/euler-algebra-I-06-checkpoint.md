@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 6. "Of the Properties of Integers, with respect to their Divisors."
+title: Leonhard Euler. Elements of Algebra
 part: I
 section: I
 chapter: 6

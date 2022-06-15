@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 16. "Of Powers in general."
+title: Leonhard Euler. Elements of Algebra
 part: I
 section: I
 chapter: 16

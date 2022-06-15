@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 8. "Of the Properties of Fractions."
+title: Leonhard Euler. Elements of Algebra
 part: I
 section: I
 chapter: 8

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 9. "Of the Addition and Subtraction of Fractions."
+title: Leonhard Euler. Elements of Algebra
 part: I
 section: I
 chapter: 9

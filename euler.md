@@ -19,7 +19,7 @@ permalink: /euler/
 {% assign PartISectionI = site.euler | where: "part", "I" | where: "section", "I" %}
 
 {% for item in PartISectionI %}
-##### [Chapter {{item.chapter}}]({{ item.url }})
+##### [{{item.title}}]({{ item.url }})
 {% endfor %}
 
 #### Section II. "Of the different Methods of calculating Compound Quantities."
@@ -27,7 +27,7 @@ permalink: /euler/
 {% assign PartISectionII = site.euler | where: "part", "I" | where: "section", "II" %}
 
 {% for item in PartISectionII %}
-##### [Chapter {{item.chapter}}]({{ item.url }})
+##### [{{item.title}}]({{ item.url }})
 {% endfor %}
 
 

@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 5. "Of the Division of Simple Quantities."
+title: Leonhard Euler. Elements of Algebra
 part: I
 section: I
 chapter: 5

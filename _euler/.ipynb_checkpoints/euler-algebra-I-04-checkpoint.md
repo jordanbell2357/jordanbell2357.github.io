@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 4. "Of the Nature of whole Numbers, or Integers, with respect to their Factors."
+title: Leonhard Euler. Elements of Algebra
 part: I
 section: I
 chapter: 4

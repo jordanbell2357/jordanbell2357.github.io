@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 15. "Of Cube Roots, and of Irrational Numbers resulting from them."
+title: Leonhard Euler. Elements of Algebra
 part: I
 section: I
 chapter: 15
