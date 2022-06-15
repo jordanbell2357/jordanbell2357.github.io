@@ -6,21 +6,35 @@ permalink: /euler/
 
 ## Leonhard Euler, *The Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
 
-#### Table of Contents
+### Table of Contents
 
-- [English table of contents](/assets/euler/en/TOCen.pdf)
+#### [English table of contents](/assets/euler/en/TOCen.pdf)
 
-- [German table of contents](/assets/euler/de/TOCde.pdf)
+#### [German table of contents](/assets/euler/de/TOCde.pdf)
 
-#### Part I. "Containing the Analysis of Determinate Quantities."
+### Part I. "Containing the Analysis of Determinate Quantities."
 
-##### Section I. "Of the different Methods of calculating Simple Quantities."
+#### Section I. "Of the different Methods of calculating Simple Quantities."
 
 {% assign PartISectionI = site.euler | where: "part", "I" | where: "section", "I" %}
 
 {% for item in PartISectionI %}
-###### [{{item.title}}]({{ item.url }})
+##### [Chapter {{item.chapter}}]({{ item.url }})
 {% endfor %}
+
+#### Section II. "Of the different Methods of calculating Compound Quantities."
+
+{% assign PartISectionII = site.euler | where: "part", "I" | where: "section", "II" %}
+
+{% for item in PartISectionII %}
+##### [Chapter {{item.chapter}}]({{ item.url }})
+{% endfor %}
+
+
+
+
+
+
 
 <!--
 {% for chapter in site.euler %}

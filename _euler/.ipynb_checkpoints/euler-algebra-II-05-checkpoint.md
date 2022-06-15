@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 5. "Of the Resolution of Fractions into Infinite Series."
+layout: page
+title: Chapter 5. "Of the Resolution of Fractions into Infinite Series."
+part: I
+section: II
+chapter: 5
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 5. "Of the Resolution of Fractions into Infinite Series."
 
 <span class="art">289</span> When the dividend is not divisible by the divisor,
 the quotient is expressed, as we have already observed, by a

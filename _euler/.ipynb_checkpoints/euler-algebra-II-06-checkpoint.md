@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 6. "Of the Squares of Compound Quantities."
+layout: page
+title: Chapter 6. "Of the Squares of Compound Quantities."
+part: I
+section: II
+chapter: 6
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 6. "Of the Squares of Compound Quantities."
 
 <span class="art">306</span> When it is required to find the square of a compound quantity, we have only
 to multiply it by itself, and the product will be the square required.

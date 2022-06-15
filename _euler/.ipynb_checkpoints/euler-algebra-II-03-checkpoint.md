@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 3. "Of the Multiplication of Simple Quantities."
+layout: page
+title: Chapter 3. "Of the Multiplication of Simple Quantities."
+part: I
+section: II
+chapter: 3
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 3. "Of the Multiplication of Simple Quantities."
 
 <span class="art">270</span> When it is only required to represent multiplication, we put each of the
 expressions, that are to be multiplied together, within two parentheses, and join them to each other, sometimes without any sign, and sometimes placing a point ⋅ between them.

@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 9. "Of Cubes, and of the Extraction of Cube Roots."
+layout: page
+title: Chapter 9. "Of Cubes, and of the Extraction of Cube Roots."
+part: I
+section: II
+chapter: 9
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 9. "Of Cubes, and of the Extraction of Cube Roots."
 
 <span class="art">333</span> To find the cube of $$a+b$$, we have only to multiply its square,
 $$a^2+2ab+b^2$$, again by $$a+b$$, thus;

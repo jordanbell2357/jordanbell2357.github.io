@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 3. "Of the Multiplication of Simple Quantities."
+title: Leonhard Euler. Elements of Algebra
 part: I
 section: I
 chapter: 3

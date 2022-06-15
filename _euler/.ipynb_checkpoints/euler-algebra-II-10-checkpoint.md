@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 10. "Of the higher Powers of Compound Quantities."
+layout: page
+title: Chapter 10. "Of the higher Powers of Compound Quantities."
+part: I
+section: II
+chapter: 10
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 10. "Of the higher Powers of Compound Quantities."
 
 <span class="art">340</span> After squares and cubes, we must consider higher
 powers, or powers of a greater number of degrees; which

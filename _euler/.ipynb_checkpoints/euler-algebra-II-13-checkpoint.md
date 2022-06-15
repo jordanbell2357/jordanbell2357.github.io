@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 13. "Of the Resolution of Negative Powers."
+layout: page
+title: Chapter 13. "Of the Resolution of Negative Powers."
+part: I
+section: II
+chapter: 13
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 13. "Of the Resolution of Negative Powers."
 
 <span class="art">370</span> We have already shown, that $$\frac{1}{a}$$ may be expressed 
 by $$a^{-1}$$; we may therefore express $$\dfrac{1}{a+b}$$ also by $$(a+b)^{-1}$$;

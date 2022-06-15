@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 11. "Of the Transposition of the Letters, on which the demonstration of the preceding Rule is founded."
+layout: page
+title: Chapter 11. "Of the Transposition of the Letters, on which the demonstration of the preceding Rule is founded."
+part: I
+section: II
+chapter: 11
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 11. "Of the Transposition of the Letters, on which the demonstration of the preceding Rule is founded."
 
 <span class="art">352</span> If we trace back the origin of the coefficients which
 we have been considering, we shall find, that each term is

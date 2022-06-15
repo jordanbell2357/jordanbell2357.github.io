@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 4. "Of the Division of Compound Quantities."
+layout: page
+title: Chapter 4. "Of the Division of Compound Quantities."
+part: I
+section: II
+chapter: 4
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 4. "Of the Division of Compound Quantities."
 
 <span class="art">282</span> When we wish simply to represent division, we
 make use of the usual mark of fractions; which is, to write

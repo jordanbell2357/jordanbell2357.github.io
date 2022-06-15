@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 2. "Of the Subtraction of Compound Quantities."
+layout: page
+title: Chapter 2. "Of the Subtraction of Compound Quantities."
+part: I
+section: II
+chapter: 2
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 2. "Of the Subtraction of Compound Quantities."
 
 <span class="art">263</span> If we wish merely to represent subtraction, we enclose each expression within
 two parentheses, joining, by the sign -, the expression which is to be subtracted,

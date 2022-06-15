@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 2. "Explanation of the Signs + Plus and - Minus."
+title: Leonhard Euler. Elements of Algebra
 part: I 
 section: I
 chapter: 2

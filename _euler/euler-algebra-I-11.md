@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Part I. Section I. Chapter 11. "Of Square Numbers."
+title: Chapter 11. "Of Square Numbers."
 part: I
 section: I
 chapter: 11

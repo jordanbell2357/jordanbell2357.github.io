@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Part I. Section I. Chapter 8. "Of the Properties of Fractions."
+title: Chapter 8. "Of the Properties of Fractions."
 part: I
 section: I
 chapter: 8

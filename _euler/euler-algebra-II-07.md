@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 7. "Of the Extraction of Roots applied to Compound Quantities."
+layout: page
+title: Chapter 7. "Of the Extraction of Roots applied to Compound Quantities."
+part: I
+section: II
+chapter: 7
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 7. "Of the Extraction of Roots applied to Compound Quantities."
 
 <span class="art">317</span> In order to give a certain rule for this operation, we
 must consider attentively the square of the root $$a+b$$, which

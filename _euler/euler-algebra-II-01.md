@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 1. "Of the Addition of Compound Quantities."
+layout: page
+title: Chapter 1. "Of the Addition of Compound Quantities."
+part: I
+section: II
+chapter: 1
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 1. "Of the Addition of Compound Quantities."
 
 <span class="art">256</span> When two or more expressions, consisting of several
 terms, are to be added together, the operation is frequently

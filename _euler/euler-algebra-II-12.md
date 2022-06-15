@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 12. "Of the Expression of Irrational Powers by Infinite Series."
+layout: page
+title: Chapter 12. "Of the Expression of Irrational Powers by Infinite Series."
+part: I
+section: II
+chapter: 12
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 12. "Of the Expression of Irrational Powers by Infinite Series"
 
 <span class="art">361</span> As we have shewn the method of finding any power
 of the root $$a + b$$, however great the exponent may be, we

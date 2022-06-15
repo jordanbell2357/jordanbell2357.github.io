@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section II, Chapter 8. "Of the Calculation of Irrational Quantities."
+layout: page
+title: Chapter 8. "Of the Calculation of Irrational Quantities."
+part: I
+section: II
+chapter: 8
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section II. "Of the different Methods of calculating Compound Quantities." Chapter 8. "Of the Calculation of Irrational Quantities."
 
 <span class="art">326</span> When it is required to add together two or more
 irrational quantities, this is to be done, according to the
