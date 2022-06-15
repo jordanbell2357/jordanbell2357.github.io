@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 9, "Of the Nature of Equations of the Second Degree."
+layout: page
+title: Chapter 9, "Of the Nature of Equations of the Second Degree."
+part: I
+section: IV
+chapter: 9
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 9, "Of the Nature of Equations of the Second Degree."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">689</span> What we have already said sufficiently shows,
 that equations of the second degree admit of two solutions; and this property ought
@@ -252,6 +253,6 @@ first factor giving $$x=3$$, and the other $$x= -7$$.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section IV. Chapter 9. "Of the Nature of Equations of the Second Degree."](/assets/euler/en/IV-9.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-9.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 9. Von der Natur der Quadratischen Gleichungen](/assets/euler/de/II-I-9.pdf)

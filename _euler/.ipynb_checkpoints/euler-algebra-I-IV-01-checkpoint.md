@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 1. "Of the Solution of Problems in General."
+layout: page
+title: Chapter 1. "Of the Solution of Problems in General."
+part: I
+section: IV
+chapter: 1
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 1. "Of the Solution of Problems in General."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">563</span> The principal object of Algebra, as well as of all
 the other branches of Mathematics, is to determine the
@@ -211,6 +212,6 @@ Because the total number of persons is 20, $$x=8$$.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section IV. Chapter 1. "Of the Solution of Problems in General."](/assets/euler/en/IV-1.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-1.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 1. Von der Auflösung der Aufgaben überhaupt](/assets/euler/de/II-I-1.pdf)

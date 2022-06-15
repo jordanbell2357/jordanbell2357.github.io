@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 2. "Of the Resolution of Simple Equations, or Equations of the First Degree."
+layout: page
+title: Chapter 2. "Of the Resolution of Simple Equations, or Equations of the First Degree."
+part: I
+section: IV
+chapter: 1
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 2. "Of the Resolution of Simple Equations, or Equations of the First Degree."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">573</span> When the number sought, or the unknown quantity,
 is represented by the letter $$x$$, and the equation we have
@@ -206,6 +207,6 @@ $$x = \dfrac{1.9084850}{0.9542425}=\dfrac{19084850}{09542425}=2.$$
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section IV. Chapter 2. "Of the Resolution of Simple Equations, or Equations of the First Degree."](/assets/euler/en/IV-2.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-2.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 2. Von den Gleichungen des ersten Grads und ihrer Auflösung](/assets/euler/de/II-I-2.pdf)

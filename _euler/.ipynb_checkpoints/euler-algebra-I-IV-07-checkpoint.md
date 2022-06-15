@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 7. "Of the Extraction of the Roots of Polygon Numbers."
+layout: page
+title: Chapter 7. "Of the Extraction of the Roots of Polygon Numbers."
+part: I
+section: IV
+chapter: 7
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 7. "Of the Extraction of the Roots of Polygon Numbers."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">656</span> We have shown, in a preceding chapter (Section III, Chapter 5. "Of Figurate, or Polygonal Numbers."), how
 polygonal numbers are to be found; and what we then called
@@ -265,6 +266,6 @@ $$x=\dfrac{20+\surd(529584+400)}{44} = \dfrac{20+728}{44} = 17.$$
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section IV. Chapter 7. "Of the Extraction of the Roots of Polygon Numbers."](/assets/euler/en/IV-7.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-7.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 7. Von der Ausziehung der Wurzeln aus den vieleckigten Zahlen](/assets/euler/de/II-I-7.pdf)

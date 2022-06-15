@@ -38,6 +38,22 @@ permalink: /euler/
 ##### [{{item.title}}]({{ item.url }})
 {% endfor %}
 
+#### Section IV. "Of Algebraic Equations, and the Resolution of Them."
+
+{% assign PartISectionIV = site.euler | where: "part", "I" | where: "section", "IV" %}
+
+{% for item in PartISectionIV %}
+##### [{{item.title}}]({{ item.url }})
+{% endfor %}
+
+### Part II. "Containing the Analysis of Indeterminate Quantities."
+
+{% assign PartII = site.euler | where: "part", "II" %}
+
+{% for item in PartII %}
+##### [{{item.title}}]({{ item.url }})
+{% endfor %} 
+
 
 
 

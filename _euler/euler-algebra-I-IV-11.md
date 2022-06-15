@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 11. "Of the Resolution of Complete Equations of the Third Degree."
+layout: page
+title: Chapter 11. "Of the Resolution of Complete Equations of the Third Degree."
+part: I
+section: IV
+chapter: 11
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 11. "Of the Resolution of Complete Equations of the Third Degree."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">719</span> An equation of the third degree is called complete,
 when, beside the cube of the unknown quantity, it contains
@@ -575,6 +576,6 @@ conditions of the question:
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section IV. Chapter 11. "Of the Resolution of Complete Equations of the Third Degree."](/assets/euler/en/IV-11.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-11.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 11. Von der Auflösung der vollständigen cubischen Gleichungen](/assets/euler/de/II-I-11.pdf)

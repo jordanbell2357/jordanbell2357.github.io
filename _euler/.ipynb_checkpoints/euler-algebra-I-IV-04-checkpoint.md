@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 4. "Of the Resolution of two or more Equations of the First Degree."
+layout: page
+title: Chapter 4. "Of the Resolution of two or more Equations of the First Degree."
+part: I
+section: IV
+chapter: 4
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 4. "Of the Resolution of two or more Equations of the First Degree."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">605</span> It frequently happens that we are obliged to introduce into algebraic calculations
 two or more unknown quantities, represented by the letters $$x$$, $$y$$, $$z$$: and if the question
@@ -593,6 +594,6 @@ Swabians 583; and that of Saxons 689.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section IV. Chapter 4. "Of the Resolution of two or more Equations of the First Degree."](/assets/euler/en/IV-4.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-4.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 4. Von Auflösung zweyer oder mehr Gleichungen vom ersten Grad](/assets/euler/de/II-I-4.pdf)

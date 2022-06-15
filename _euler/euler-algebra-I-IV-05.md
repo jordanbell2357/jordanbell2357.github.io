@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 5. "Of the Resolution of Pure Quadratic Equations."
+layout: page
+title: Chapter 5. "Of the Resolution of Pure Quadratic Equations."
+part: I
+section: IV
+chapter: 5
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 5. "Of the Resolution of Pure Quadratic Equations."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">623</span> An equation is said to be of the second degree, when
 it contains the square, or the second power, of the unknown
@@ -328,6 +329,6 @@ So that there are fifteen partners, and each contributed 150 crowns.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section IV. Chapter 5. "Of the Resolution of Pure Quadratic Equations."](/assets/euler/en/IV-5.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-5.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 5. Von der Auflösung der reinen Quadratischen Gleichungen](/assets/euler/de/II-I-5.pdf)

@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 12. "Of the Rule of Cardano, or of Scipione del Ferro."
+layout: page
+title: Chapter 12. "Of the Rule of Cardano, or of Scipione del Ferro."
+part: I
+section: IV
+chapter: 12
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 12. "Of the Rule of Cardano, or of Scipione del Ferro."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">734</span> When we have removed fractions from an equation
 of the third degree, according to the manner which has been
@@ -470,6 +471,6 @@ which cannot be otherwise expressed.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section IV. Chapter 12. "Of the Rule of Cardano, or of Scipione del Ferro."](/assets/euler/en/IV-12.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-12.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 12. Von der Regel des Cardani oder des Scipionis Ferrei](/assets/euler/de/II-I-12.pdf)

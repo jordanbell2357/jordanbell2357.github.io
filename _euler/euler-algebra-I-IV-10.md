@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section IV, Chapter 10. "Of Pure Equations of the Third Degree."
+layout: page
+title: Chapter 10. "Of Pure Equations of the Third Degree."
+part: I
+section: IV
+chapter: 10
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them." Chapter 10. "Of Pure Equations of the Third Degree."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">706</span> An equation of the third degree is said to be pure,
 when the cube of the unknown quantity is equal to a known
@@ -247,6 +248,6 @@ for eighteen hens.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section IV. Chapter 10. "Of Pure Equations of the Third Degree."](/assets/euler/en/IV-10.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-10.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Erster Abschnitt. Capitel 10. Von der Auflösung der reinen cubischen Gleichungen](/assets/euler/de/II-I-10.pdf)
