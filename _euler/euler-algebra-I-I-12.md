@@ -6,6 +6,8 @@ section: I
 chapter: 12
 ---
 
+##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">123</span> What we have said in the preceding chapter amounts
 to this ; that the square root of a given number is that number whose square is equal to the given number; and that
 we may put before those roots either the positive, or the
@@ -193,6 +195,6 @@ fractions.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 12. "Of Square Roots, and of Irrational Numbers resulting from them."](/assets/euler/en/I-12.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-12.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 12. Von den Quadrat-Wurzeln und den daher entspringenden Irrational-Zahlen](/assets/euler/de/I-I-12.pdf)

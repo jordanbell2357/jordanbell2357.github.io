@@ -6,6 +6,8 @@ section: I
 chapter: 18
 ---
 
+##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">189</span> Since the square root of a given number is a number,
 whose square is equal to that given number; and since
 the cube root of a given number is a number, whose cube is
@@ -87,7 +89,7 @@ numbers which are called irrational.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 18. "Of Roots, with relation to Powers in general."](/assets/euler/en/I-18.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-18.pdf)
     - [Archive.org](https://archive.org/details/elementsofalgebr00euleuoft/)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 18. Von den Wurzeln in Absicht auf alle Potestäten](/assets/euler/de/I-I-18.pdf)

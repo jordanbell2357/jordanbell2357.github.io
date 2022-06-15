@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Leonhard Euler. Elements of Algebra
+title: Chapter 8. "Of the Properties of Fractions."
 part: I
 section: I
 chapter: 8
 ---
+
+##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">85</span> We have already seen, that each of the fractions,
 
@@ -133,6 +135,6 @@ number of others, which have the same value.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 8. "Of the Properties of Fractions."](/assets/euler/en/I-8.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-8.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 8. Von den Eigenschafften der Brüche](/assets/euler/de/I-I-8.pdf)

@@ -6,6 +6,8 @@ section: I
 chapter: 7
 ---
 
+##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">68</span> When a number, as 7, for instance, is said not to be
 divisible by another number, let us suppose by 3, this only
 means, that the quotient cannot be expressed by an integer
@@ -193,6 +195,6 @@ infinitely great, may still become twice, thrice, or any number of times greater
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 7. "Of Fractions in general."](/assets/euler/en/I-7.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-7.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 7. Von den Brüchen überhaupt](/assets/euler/de/I-I-7.pdf)

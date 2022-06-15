@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Leonhard Euler. Elements of Algebra
+title: Chapter 10. "Of the Multiplication and Division of Fractions."
 part: I
 section: I
 chapter: 10
 ---
+
+##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">101</span> The rule for the multiplication of a fraction by an
 integer, or whole number, is to multiply the numerator
@@ -189,6 +191,6 @@ or +1.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 10. "Of the Multiplication and Division of Fractions."](/assets/euler/en/I-10.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-10.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 10. Von der Multiplication und Division der Brüche](/assets/euler/de/I-I-10.pdf)

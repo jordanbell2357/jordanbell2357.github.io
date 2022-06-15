@@ -6,6 +6,8 @@ section: I
 chapter: 14
 ---
 
+##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">152</span> When a number has been multiplied twice by itself,
 or, which is the same thing, when the square of a number
 has been multiplied once more by that number, we obtain
@@ -101,6 +103,6 @@ whereas the cube of -1 is -1, that of -2 is -8, that of
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 14. "Of Cubic Numbers."](/assets/euler/en/I-14.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-14.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 14. Von den Cubic-Zahlen](/assets/euler/de/I-I-14.pdf)

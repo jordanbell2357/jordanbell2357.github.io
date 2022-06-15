@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Leonhard Euler. Elements of Algebra
+title: Chapter 5. "Of the Division of Simple Quantities."
 part: I
 section: I
 chapter: 5
 ---
+
+##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">45</span> When a number is to be separated into two, three, or
 more equal parts, it is done by means of division, which
@@ -163,6 +165,6 @@ divisors.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 5. "Of the Division of Simple Quantities."](/assets/euler/en/I-5.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-5.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 5. Von der Division mit einfachen Größen](/assets/euler/de/I-I-5.pdf)

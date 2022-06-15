@@ -6,7 +6,7 @@ section: I
 chapter: 3
 ---
 
-Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">23</span> When there are two or more equal numbers to be
 added together, the expression of their sum may be abridged:
@@ -151,6 +151,6 @@ $$12\cdot 7pqrxy$$, or $$84pqrxy$$.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part I. Section I. Chapter 3. "Of the Multiplication of Simple Quantities."](/assets/euler/en/I-3.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-3.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 3. Von der Multiplication mit einfachen Größen](/assets/euler/de/I-I-3.pdf)

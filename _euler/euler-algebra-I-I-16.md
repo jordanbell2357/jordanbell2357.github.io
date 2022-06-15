@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Leonhard Euler. Elements of Algebra
+title: Chapter 16. "Of Powers in general."
 part: I
 section: I
 chapter: 16
 ---
+
+##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">168</span> The product which we obtain by multiplying a number once, or several times by itself, is
 called a **power**. Thus, a square which arises from the multiplication of a number by itself,
@@ -318,6 +320,6 @@ and the second, fourth, sixth, eighth, etc. powers are affected by the sign +.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 16. "Of Powers in general."](/assets/euler/en/I-16.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-16.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 16. Von den Potestäten oder Potenzen überhaupt](/assets/euler/de/I-I-16.pdf)

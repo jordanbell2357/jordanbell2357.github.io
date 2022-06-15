@@ -6,6 +6,8 @@ section: I
 chapter: 13
 ---
 
+##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">139</span> We have already seen that the squares of numbers,
 negative as well as positive, are always positive, or affected
 by the sign +; having shown that $$-a$$ multiplied by $$-a$$
@@ -135,6 +137,6 @@ those parts must be 7 and 5.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 13. "Of Impossible, or Imaginary Quantities, which arise from the same source."](/assets/euler/en/I-13.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-13.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 13. Von den aus eben dieser Quelle entspringenden ohnmöglichen oder imaginären Zahlen](/assets/euler/de/I-I-13.pdf)
