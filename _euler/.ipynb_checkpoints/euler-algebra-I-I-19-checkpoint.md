@@ -6,6 +6,8 @@ section: I
 chapter: 19
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">195</span> We have shown in the preceding chapter, that the
 square of any power is found by doubling the exponent of
 that power; or that, in general, the square, or the second
@@ -139,6 +141,6 @@ or $$a^{\frac{3}{6}-\frac{2}{6}}$$, that is to say, $$a^{\frac{1}{6}}$$, or $$\s
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 19. "Of the Method of representing Irrational Numbers by Fractional Exponents."](/assets/euler/en/I-19.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-19.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 19. Von der Vorstellung der Irrational-Zahlen durch gebrochene Exponenten](/assets/euler/de/I-I-19.pdf)

@@ -6,6 +6,8 @@ section: II
 chapter: 11
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">352</span> If we trace back the origin of the coefficients which
 we have been considering, we shall find, that each term is
 presented, as many times as it is possible to transpose the
@@ -239,6 +241,6 @@ which is a still farther confirmation of the rule.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section II. Chapter 11. "Of the Transposition of the Letters, on which the demonstration of the preceding Rule is founded."](/assets/euler/en/II-11.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-11.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Zweyter Abschnitt. Capitel 11. Von der Versetzung der Buchstaben, als worauf der Beweiß der vorigen Regul, wie eine jegliche Potestät von einer zusammengesetzten Größe leicht gefunden werden soll, beruhet](/assets/euler/de/I-II-11.pdf)

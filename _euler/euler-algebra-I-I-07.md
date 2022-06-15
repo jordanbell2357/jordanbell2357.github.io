@@ -6,7 +6,7 @@ section: I
 chapter: 7
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">68</span> When a number, as 7, for instance, is said not to be
 divisible by another number, let us suppose by 3, this only

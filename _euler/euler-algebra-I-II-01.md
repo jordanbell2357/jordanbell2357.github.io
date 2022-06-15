@@ -6,6 +6,8 @@ section: II
 chapter: 1
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">256</span> When two or more expressions, consisting of several
 terms, are to be added together, the operation is frequently
 represented merely by signs, placing each expression between two parentheses, and connecting it with the rest by
@@ -113,6 +115,6 @@ $$
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section II. Chapter 1. "Of the Addition of Compound Quantities."](/assets/euler/en/II-1.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-1.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Zweyter Abschnitt. Capitel 1. Von der Addition mit zusammengesetzten Größen](/assets/euler/de/I-II-1.pdf)

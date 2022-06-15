@@ -6,7 +6,7 @@ section: I
 chapter: 18
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">189</span> Since the square root of a given number is a number,
 whose square is equal to that given number; and since

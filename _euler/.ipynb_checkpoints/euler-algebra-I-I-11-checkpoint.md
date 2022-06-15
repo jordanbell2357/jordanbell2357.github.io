@@ -6,7 +6,7 @@ section: I
 chapter: 11
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">115</span> The product of a number, when multiplied by
 itself, is called a **square**; and, for this reason, the number,

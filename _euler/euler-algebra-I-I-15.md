@@ -6,7 +6,7 @@ section: I
 chapter: 15
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">158</span> As we can, in the manner already explained, find
 the cube of a given number, so, when a number is proposed,

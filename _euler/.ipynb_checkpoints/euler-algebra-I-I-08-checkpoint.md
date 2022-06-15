@@ -6,7 +6,7 @@ section: I
 chapter: 8
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">85</span> We have already seen, that each of the fractions,
 

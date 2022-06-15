@@ -6,6 +6,8 @@ section: I
 chapter: 23
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.

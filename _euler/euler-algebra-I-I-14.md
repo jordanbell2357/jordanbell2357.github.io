@@ -6,7 +6,7 @@ section: I
 chapter: 14
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">152</span> When a number has been multiplied twice by itself,
 or, which is the same thing, when the square of a number

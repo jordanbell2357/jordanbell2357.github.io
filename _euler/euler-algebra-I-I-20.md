@@ -6,7 +6,7 @@ section: I
 chapter: 20
 ---
 
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">206</span> Hitherto we have only explained the different methods of calculation: namely,
 addition, subtraction, multiplication, and division; the involution of powers,

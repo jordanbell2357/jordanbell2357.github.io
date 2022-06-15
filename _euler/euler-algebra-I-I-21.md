@@ -6,6 +6,8 @@ section: I
 chapter: 21
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">220</span> Resuming the equation $$a^b=c$$, we shall begin by
 remarking that, in the doctrine of Logarithms, we assume
 for the root $$a$$, a certain number taken at pleasure, and suppose this

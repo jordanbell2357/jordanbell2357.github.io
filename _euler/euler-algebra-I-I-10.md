@@ -6,7 +6,7 @@ section: I
 chapter: 10
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">101</span> The rule for the multiplication of a fraction by an
 integer, or whole number, is to multiply the numerator

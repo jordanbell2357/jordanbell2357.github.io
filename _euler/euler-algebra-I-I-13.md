@@ -6,7 +6,7 @@ section: I
 chapter: 13
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">139</span> We have already seen that the squares of numbers,
 negative as well as positive, are always positive, or affected

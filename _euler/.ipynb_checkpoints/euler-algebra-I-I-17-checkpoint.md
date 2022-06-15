@@ -6,7 +6,7 @@ section: I
 chapter: 17
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">180</span> We have nothing particular to observe with regard
 to the Addition and Subtraction of powers; for we only

@@ -6,7 +6,7 @@ section: I
 chapter: 16
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">168</span> The product which we obtain by multiplying a number once, or several times by itself, is
 called a **power**. Thus, a square which arises from the multiplication of a number by itself,

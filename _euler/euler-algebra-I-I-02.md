@@ -6,7 +6,7 @@ section: I
 chapter: 2
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">8</span> When we have to add one given number to another,
 this is indicated by the sign +, which is placed before the

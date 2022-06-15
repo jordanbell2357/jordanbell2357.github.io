@@ -6,6 +6,7 @@ section: I
 chapter: 22
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 
 #### Editions

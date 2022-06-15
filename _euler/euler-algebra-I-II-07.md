@@ -6,6 +6,8 @@ section: II
 chapter: 7
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">317</span> In order to give a certain rule for this operation, we
 must consider attentively the square of the root $$a+b$$, which
 is $$a^2+2ab+b^2$$, in order that we may reciprocally find the
@@ -231,6 +233,6 @@ $$(a^2+b^2)^{\frac{1}{2}}$$.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section II. Chapter 7. "Of the Extraction of Roots applied to Compound Quantities."](/assets/euler/en/II-7.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-7.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Zweyter Abschnitt. Capitel 7. Von der Ausziehung der Quadrat-Wurzel in zusammengesetzten Größen](/assets/euler/de/I-II-7.pdf)

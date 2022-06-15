@@ -6,6 +6,8 @@ section: II
 chapter: 8
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">326</span> When it is required to add together two or more
 irrational quantities, this is to be done, according to the
 method before laid down, by writing all the terms in succession,
@@ -214,6 +216,6 @@ we have 5√10 + 11√2 + 9√3 + 2√60.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section II. Chapter 8. "Of the Calculation of Irrational Quantities."](/assets/euler/en/II-8.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-8.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Zweyter Abschnitt. Capitel 8. Von der Rechnung mit Irrational-Zahlen](/assets/euler/de/I-II-8.pdf)

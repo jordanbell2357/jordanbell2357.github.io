@@ -6,6 +6,8 @@ section: II
 chapter: 4
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">282</span> When we wish simply to represent division, we
 make use of the usual mark of fractions; which is, to write
 the denominator under the numerator, separating them by a
@@ -153,6 +155,6 @@ more perspicuous.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section II. Chapter 4. "Of the Division of Compound Quantities."](/assets/euler/en/II-4.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-4.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Zweyter Abschnitt. Capitel 4. Von der Division mit zusammengesetzten Größen](/assets/euler/de/I-II-4.pdf)

@@ -6,6 +6,8 @@ section: II
 chapter: 3
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">270</span> When it is only required to represent multiplication, we put each of the
 expressions, that are to be multiplied together, within two parentheses, and join them to each other, sometimes without any sign, and sometimes placing a point ⋅ between them.
 
@@ -371,6 +373,6 @@ required is $$a^6-b^6=665$$, as we have already seen.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section II. Chapter 3. "Of the Multiplication of Simple Quantities."](/assets/euler/en/II-3.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-3.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Zweyter Abschnitt. Capitel 3. Von der Multiplication mit zusammengesetzten Größen](/assets/euler/de/I-II-3.pdf)

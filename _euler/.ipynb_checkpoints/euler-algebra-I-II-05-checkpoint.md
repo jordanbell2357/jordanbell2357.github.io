@@ -6,6 +6,8 @@ section: II
 chapter: 5
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">289</span> When the dividend is not divisible by the divisor,
 the quotient is expressed, as we have already observed, by a
 fraction: thus, if we have to divide 1 by $$1-a$$, we obtain
@@ -309,6 +311,6 @@ subject deserves to be studied with the greatest attention.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section II. Chapter 5. "Of the Resolution of Fractions into Infinite Series."](/assets/euler/en/II-5.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-5.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Zweyter Abschnitt. Capitel 5. Von der Auflösung der Brüche in unendlichen Reihen](/assets/euler/de/I-II-5.pdf)

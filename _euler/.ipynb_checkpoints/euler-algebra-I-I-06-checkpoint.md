@@ -6,7 +6,7 @@ section: I
 chapter: 6
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">58</span> As we have seen that some numbers are divisible by
 certain divisors, while others are not so; it will be proper,

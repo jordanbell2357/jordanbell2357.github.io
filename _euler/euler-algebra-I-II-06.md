@@ -6,6 +6,8 @@ section: II
 chapter: 6
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">306</span> When it is required to find the square of a compound quantity, we have only
 to multiply it by itself, and the product will be the square required.
 
@@ -172,6 +174,6 @@ the square of 256 as before.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section II. Chapter 6. "Of the Squares of Compound Quantities."](/assets/euler/en/II-6.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-6.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Zweyter Abschnitt. Capitel 6. Von den Quadraten der zusammengesetzten Größen](/assets/euler/de/I-II-6.pdf)

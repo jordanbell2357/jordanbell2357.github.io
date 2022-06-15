@@ -6,7 +6,7 @@ section: I
 chapter: 9
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">94</span> When fractions have equal denominators, there is no difficulty
 in adding and subtracting them; for ²⁄₇ + ³⁄₇ is equal

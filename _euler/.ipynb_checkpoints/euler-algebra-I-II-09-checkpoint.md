@@ -6,6 +6,8 @@ section: II
 chapter: 9
 ---
 
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+
 <span class="art">333</span> To find the cube of $$a+b$$, we have only to multiply its square,
 $$a^2+2ab+b^2$$, again by $$a+b$$, thus;
 
@@ -251,6 +253,6 @@ Let us also extract the cube root of 34965783:
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section II. Chapter 9. "Of Cubes, and of the Extraction of Cube Roots."](/assets/euler/en/II-9.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-9.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Zweyter Abschnitt. Capitel 9. Von den Cubis und von der Ausziehung der Cubic-Wurzel](/assets/euler/de/I-II-9.pdf)

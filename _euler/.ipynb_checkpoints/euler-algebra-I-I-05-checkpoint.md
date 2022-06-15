@@ -6,7 +6,7 @@ section: I
 chapter: 5
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">45</span> When a number is to be separated into two, three, or
 more equal parts, it is done by means of division, which

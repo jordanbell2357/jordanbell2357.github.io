@@ -6,7 +6,7 @@ section: I
 chapter: 12
 ---
 
-##### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">123</span> What we have said in the preceding chapter amounts
 to this ; that the square root of a given number is that number whose square is equal to the given number; and that
