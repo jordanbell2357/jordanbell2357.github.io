@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 9. "Observations on the Rules Proportion and their Utility."
+layout: page
+title: Chapter 9. "Observations on the Rules Proportion and their Utility."
+part: I
+section: III
+chapter: 9
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section III. "Of Ratios and Proportions." Chapter 9. "Observations on the Rules Proportion and their Utility."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">477</span> This theory is so useful in the common occurrences
 of life, that scarcely any person can do without it. There
@@ -287,6 +288,6 @@ and dividing by 7,
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section III. Chapter 9. "Observations on the Rules Proportion and their Utility."](/assets/euler/en/III-9.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/III-9.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Dritter Abschnitt. Capitel 9. Anmerckungen über die Proportionen und ihren Nutzen](/assets/euler/de/I-III-9.pdf)

@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 7. "Of the Greatest Common Divisor of two given Numbers."
+layout: page
+title: Chapter 7. "Of the Greatest Common Divisor of two given Numbers."
+part: I
+section: III
+chapter: 7
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section III. "Of Ratios and Proportions." Chapter 7. "Of the Greatest Common Divisor of two given Numbers."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">451</span> There are some numbers which have no other common divisor than unity;
 and when the numerator and denominator of a fraction are of this nature,
@@ -118,6 +119,6 @@ is to say, 1728 is to 2304 in the same relation as 3 is to 4.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section III. Chapter 7. "Of the Greatest Common Divisor of two given Numbers."](/assets/euler/en/III-7.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/III-7.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Dritter Abschnitt. Capitel 7. Von dem größten gemeinen Theiler zweyer gegebenen Zahlen](/assets/euler/de/I-III-7.pdf)

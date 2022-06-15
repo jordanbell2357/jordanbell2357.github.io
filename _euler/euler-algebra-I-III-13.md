@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 13. "Of the Calculation of Interest."
+layout: page
+title: Chapter 13. "Of the Calculation of Interest."
+part: I
+section: III
+chapter: 13
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section III. "Of Ratios and Proportions." Chapter 13. "Of the Calculation of Interest."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">540</span> We are accustomed to express the interest of any
 principal by *per cents*, signifying how much interest is annually paid for the sum of 100 pounds.
@@ -585,6 +586,6 @@ subtract, is easily calculated by logarithms.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section III. Chapter 13. "Of the Calculation of Interest."](/assets/euler/en/III-13.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/III-13.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Dritter Abschnitt. Capitel 13. Von den Interessen-Rechnungen](/assets/euler/de/I-III-13.pdf)

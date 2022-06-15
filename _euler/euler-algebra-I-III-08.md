@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 8. "Of Geometrical Proportions."
+layout: page
+title: Chapter 8. "Of Geometrical Proportions."
+part: I
+section: III
+chapter: 8
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section III. "Of Ratios and Proportions." Chapter 8. "Of Geometrical Proportions."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">461</span> Two geometrical relations are equal when their
 ratios are equal; and this equality of two relations is called
@@ -178,6 +179,6 @@ or 5:1∷15:3, or 3:1∷15:5.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section III. Chapter 8. "Of Geometrical Proportions."](/assets/euler/en/III-8.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/III-8.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Dritter Abschnitt. Capitel 8. Von den geometrischen Proportionen](/assets/euler/de/I-III-8.pdf)

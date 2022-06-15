@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 5. "Of Figurate, or Polygonal Numbers."
+layout: page
+title: Chapter 5. "Of Figurate, or Polygonal Numbers."
+part: I
+section: III
+chapter: 5
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section III. "Of Ratios and Proportions." Chapter 5. "Of Figurate, or Polygonal Numbers."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">425</span> The summation of arithmetical progressions, which
 begin by 1, and the difference of which is 1, 2, 3, or any
@@ -581,6 +582,6 @@ we find for the price of the house 23970 crowns.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section III. Chapter 5. "Of Figurate, or Polygonal Numbers."](/assets/euler/en/III-5.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/III-5.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Dritter Abschnitt. Capitel 5. Von den figurirten oder vieleckigten Zahlen](/assets/euler/de/I-III-5.pdf)

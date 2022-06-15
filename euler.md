@@ -30,6 +30,13 @@ permalink: /euler/
 ##### [{{item.title}}]({{ item.url }})
 {% endfor %}
 
+#### Section III. "Of Ratios and Proportions."
+
+{% assign PartISectionIII = site.euler | where: "part", "I" | where: "section", "III" %}
+
+{% for item in PartISectionIII %}
+##### [{{item.title}}]({{ item.url }})
+{% endfor %}
 
 
 

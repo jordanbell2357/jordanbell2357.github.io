@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 6. "Of Geometrical Ratio."
+layout: page
+title: Chapter 6. "Of Geometrical Ratio."
+part: I
+section: III
+chapter: 6
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section III. "Of Ratios and Proportions." Chapter 6. "Of Geometrical Ratio."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">440</span> The *Geometrical ratio* of two numbers is found by
 resolving the question, *How many times* is one of those
@@ -131,6 +132,6 @@ chapter.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section III. Chapter 6. "Of Geometrical Ratio."](/assets/euler/en/III-6.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/III-6.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Dritter Abschnitt. Capitel 6. Von dem geometrischen Verhältniß](/assets/euler/de/I-III-6.pdf)

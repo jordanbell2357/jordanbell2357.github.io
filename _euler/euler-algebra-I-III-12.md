@@ -1,11 +1,12 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section III, Chapter 12. "Of Infinite Decimal Fractions."
+layout: page
+title: Chapter 12. "Of Infinite Decimal Fractions."
+part: I
+section: III
+chapter: 12
 ---
 
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section III. "Of Ratios and Proportions." Chapter 12. "Of Infinite Decimal Fractions."
+### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">525</span> We have already seen, in logarithmic calculations,
 that Decimal Fractions are employed instead of Vulgar
@@ -283,6 +284,6 @@ to a decimal. The operation would be as follows:
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section III. Chapter 12. "Of Infinite Decimal Fractions."](/assets/euler/en/III-12.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/III-12.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Dritter Abschnitt. Capitel 12. Von den unendlichen Decimal-Brüchen](/assets/euler/de/I-III-12.pdf)
