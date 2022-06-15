@@ -1,12 +1,12 @@
 ---
 layout: page
-title: Leonhard Euler. Elements of Algebra
+title: Chapter 1. "Mathematics in general."
 part: I
 section: I
 chapter: 1
 ---
 
-Part {{ page.part }}. Section {{ page.section }}. Chapter {{ page.chapter }}.
+Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">1</span> Whatever is capable of increase or diminution,
 is called magnitude, or quantity.
@@ -85,6 +85,6 @@ calculation of numbers.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Section I. Chapter 1. "Mathematics in general."](/assets/euler/en/I-1.pdf)
+    - [Part I. Section I. Chapter 1. "Mathematics in general."](/assets/euler/en/I-1.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Erster Theil. Erster Abschnitt. Capitel 1. Von den mathematischen Wissenschaften überhaupt](/assets/euler/de/I-I-1.pdf)

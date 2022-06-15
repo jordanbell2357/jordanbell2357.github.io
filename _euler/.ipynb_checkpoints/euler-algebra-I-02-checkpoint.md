@@ -1,10 +1,12 @@
 ---
 layout: page
-title: Leonhard Euler. Elements of Algebra
+title: Chapter 2. "Explanation of the Signs + Plus and - Minus."
 part: I 
 section: I
 chapter: 2
 ---
+
+Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
 <span class="art">8</span> When we have to add one given number to another,
 this is indicated by the sign +, which is placed before the
