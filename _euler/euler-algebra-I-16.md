@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 16. "Of Powers in general."
+layout: page
+title: Chapter 16. "Of Powers in general."
+part: I
+section: I
+chapter: 16
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 16. "Of Powers in general."
 
 <span class="art">168</span> The product which we obtain by multiplying a number once, or several times by itself, is
 called a **power**. Thus, a square which arises from the multiplication of a number by itself,

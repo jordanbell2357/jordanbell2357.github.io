@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 23. "Of the Method of expressing Logarithms."
+layout: page
+title: Chapter 23. "Of the Method of expressing Logarithms."
+part: I
+section: I
+chapter: 23
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 23. "Of the Method of expressing Logarithms."
 
 #### Editions
 

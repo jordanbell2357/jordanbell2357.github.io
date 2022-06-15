@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 22. "Of the Logarithmic Tables now in use."
+layout: page
+title: Chapter 22. "Of the Logarithmic Tables now in use."
+part: I
+section: I
+chapter: 22
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 22. "Of the Logarithmic Tables now in use."
 
 
 

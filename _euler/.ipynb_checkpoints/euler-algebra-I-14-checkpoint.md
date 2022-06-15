@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 14. "Of Cubic Numbers."
+layout: page
+title: Chapter 14. "Of Cubic Numbers."
+part: I
+section: I
+chapter: 14
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 14. "Of Cubic Numbers."
 
 <span class="art">152</span> When a number has been multiplied twice by itself,
 or, which is the same thing, when the square of a number

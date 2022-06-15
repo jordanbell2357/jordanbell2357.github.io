@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 13. "Of Impossible, or Imaginary Quantities, which arise from the same source."
+layout: page
+title: Chapter 13. "Of Impossible, or Imaginary Quantities, which arise from the same source."
+part: I
+section: I
+chapter: 13
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 13. "Of Impossible, or Imaginary Quantities, which arise from the same source."
 
 <span class="art">139</span> We have already seen that the squares of numbers,
 negative as well as positive, are always positive, or affected

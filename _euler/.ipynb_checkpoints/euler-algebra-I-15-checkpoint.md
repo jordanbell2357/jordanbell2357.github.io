@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 15. "Of Cube Roots, and of Irrational Numbers resulting from them."
+layout: page
+title: Chapter 15. "Of Cube Roots, and of Irrational Numbers resulting from them."
+part: I
+section: I
+chapter: 15
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 15. "Of Cube Roots, and of Irrational Numbers resulting from them."
 
 <span class="art">158</span> As we can, in the manner already explained, find
 the cube of a given number, so, when a number is proposed,

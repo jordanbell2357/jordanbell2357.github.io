@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 10. "Of the Multiplication and Division of Fractions."
+layout: page
+title: Chapter 10. "Of the Multiplication and Division of Fractions."
+part: I
+section: I
+chapter: 10
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 10. "Of the Multiplication and Division of Fractions."
 
 <span class="art">101</span> The rule for the multiplication of a fraction by an
 integer, or whole number, is to multiply the numerator

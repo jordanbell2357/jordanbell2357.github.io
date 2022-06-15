@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 5. "Of the Division of Simple Quantities."
+layout: page
+title: Chapter 5. "Of the Division of Simple Quantities."
+part: I
+section: I
+chapter: 5
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 5. "Of the Division of Simple Quantities."
 
 <span class="art">45</span> When a number is to be separated into two, three, or
 more equal parts, it is done by means of division, which

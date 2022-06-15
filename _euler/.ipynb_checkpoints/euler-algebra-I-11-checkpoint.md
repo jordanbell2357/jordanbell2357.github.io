@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: page
 title: Part I. Section I. Chapter 11. "Of Square Numbers."
+part: I
+section: I
+chapter: 11
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 11. "Of Square Numbers."
 
 <span class="art">115</span> The product of a number, when multiplied by
 itself, is called a **square**; and, for this reason, the number,

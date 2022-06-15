@@ -1,9 +1,10 @@
 ---
-layout: post
+layout: page
 title: Part I. Section I. Chapter 8. "Of the Properties of Fractions."
+part: I
+section: I
+chapter: 8
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 8. "Of the Properties of Fractions."
 
 <span class="art">85</span> We have already seen, that each of the fractions,
 

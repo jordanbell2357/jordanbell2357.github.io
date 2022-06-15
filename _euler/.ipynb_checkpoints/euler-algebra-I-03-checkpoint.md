@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 3. "Of the Multiplication of Simple Quantities."
+layout: page
+title: Chapter 3. "Of the Multiplication of Simple Quantities."
+part: I
+section: I
+chapter: 3
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 3. "Of the Multiplication of Simple Quantities."
 
 <span class="art">23</span> When there are two or more equal numbers to be
 added together, the expression of their sum may be abridged:

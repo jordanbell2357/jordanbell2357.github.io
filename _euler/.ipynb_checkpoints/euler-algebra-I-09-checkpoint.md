@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 9. "Of the Addition and Subtraction of Fractions."
+layout: page
+title: Chapter 9. "Of the Addition and Subtraction of Fractions."
+part: I
+section: I
+chapter: 9
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 9. "Of the Addition and Subtraction of Fractions."
 
 <span class="art">94</span> When fractions have equal denominators, there is no difficulty
 in adding and subtracting them; for ²⁄₇ + ³⁄₇ is equal

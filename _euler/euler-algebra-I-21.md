@@ -1,11 +1,10 @@
 ---
-layout: post
-title: Euler, "Elements of Algebra", Section I, Chapter 21. "Of Logarithms in general."
+layout: page
+title: Chapter 21. "Of Logarithms in general."
+part: I
+section: I
+chapter: 21
 ---
-
-### Leonhard Euler, *Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
-
-#### Section I. "Of the different Methods of calculating Simple Quantities." Chapter 21. "Of Logarithms in general."
 
 <span class="art">220</span> Resuming the equation $$a^b=c$$, we shall begin by
 remarking that, in the doctrine of Logarithms, we assume

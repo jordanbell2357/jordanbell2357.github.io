@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 17. "Of the Calculation of Powers."
+layout: page
+title: Chapter 17. "Of the Calculation of Powers."
+part: I
+section: I
+chapter: 17
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 17. "Of the Calculation of Powers."
 
 <span class="art">180</span> We have nothing particular to observe with regard
 to the Addition and Subtraction of powers; for we only

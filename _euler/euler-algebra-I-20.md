@@ -1,6 +1,9 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."
+layout: page
+title: Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."
+part: I
+section: I
+chapter: 20
 ---
 
 #### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 20. "Of the different Methods of Calculation, and of their mutual Connection."

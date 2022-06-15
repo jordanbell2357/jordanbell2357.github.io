@@ -1,9 +1,9 @@
 ---
-layout: post
-title: Part I. Section I. 
-chapter: Chapter 2. "Explanation of the Signs + Plus and - Minus."
-part: Part I. "Containing the Analysis of Determinate Quantities." 
-section: Section I. "Of the different Methods of calculating Simple Quantities." 
+layout: page
+title: Chapter 2. "Explanation of the Signs + Plus and - Minus."
+part: I 
+section: I
+chapter: 2
 ---
 
 <span class="art">8</span> When we have to add one given number to another,

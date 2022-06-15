@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 6. "Of the Properties of Integers, with respect to their Divisors."
+layout: page
+title: Chapter 6. "Of the Properties of Integers, with respect to their Divisors."
+part: I
+section: I
+chapter: 6
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 6. "Of the Properties of Integers, with respect to their Divisors."
 
 <span class="art">58</span> As we have seen that some numbers are divisible by
 certain divisors, while others are not so; it will be proper,

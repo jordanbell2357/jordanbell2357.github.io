@@ -1,9 +1,10 @@
 ---
-layout: post
-title: Part I. Section I. Chapter 12. "Of Square Roots, and of Irrational Numbers resulting from them."
+layout: page
+title: Chapter 12. "Of Square Roots, and of Irrational Numbers resulting from them."
+part: I
+section: I
+chapter: 12
 ---
-
-#### Part I. "Containing the Analysis of Determinate Quantities." Section I. "Of the different Methods of calculating Simple Quantities." Chapter 12. "Of Square Roots, and of Irrational Numbers resulting from them."
 
 <span class="art">123</span> What we have said in the preceding chapter amounts
 to this ; that the square root of a given number is that number whose square is equal to the given number; and that
