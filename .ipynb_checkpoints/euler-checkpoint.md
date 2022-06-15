@@ -12,10 +12,14 @@ permalink: /euler/
 
 - [German table of contents](/assets/euler/de/TOCde.pdf)
 
-#### Chapters
+#### Part I. "Containing the Analysis of Determinate Quantities."
 
-{% for item in site.euler %}
-- [{{item.part}} {{item.section}} {{item.chapter}}]({{ item.url }})
+##### Section I. "Of the different Methods of calculating Simple Quantities."
+
+{% assign PartISectionI = site.euler | where: "part", "I" | where: "section", "I" %}
+
+{% for item in PartISectionI %}
+###### [{{item.title}}]({{ item.url }})
 {% endfor %}
 
 <!--

@@ -1,9 +1,9 @@
 ---
 layout: post
-title: Euler. "Elements of Algebra". Part I. Section I. Chapter 1. "Mathematics in general."
-part: Part I. "Containing the Analysis of Determinate Quantities."
-section: Section I. "Of the different Methods of calculating Simple Quantities."
-chapter: Chapter 1. "Mathematics in general."
+title: Chapter 1. "Mathematics in general."
+part: I
+section: I
+chapter: 1
 ---
 
 <span class="art">1</span> Whatever is capable of increase or diminution,
