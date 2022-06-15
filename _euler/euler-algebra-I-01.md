@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Chapter 1. "Mathematics in general."
 part: I
 section: I
