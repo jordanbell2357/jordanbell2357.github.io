@@ -95,7 +95,8 @@ may very well be neglected in most calculations.
 
 <span class="art">247</span> According to this method of expressing logarithms,
 that of 1 must be represented by 0.0000000, since it is
-really = 0: the logarithm of 10 is 1.0000000, where it evidently
+really = 0: the logarithm of 10 is 1.0000
+000, where it evidently
 is exactly = 1: the logarithm of 100 is 2.0000000,
 or 2. And hence we may conclude, that the logarithms of
 all numbers, which are included between 10 and 100, and
@@ -121,11 +122,11 @@ point: so that we have two parts to consider in a logarithm.
 First, that which precedes the point, or the integral part;
 and the other, the decimal fractions that are to be added to
 the former. The integral part of a logarithm, which is
-usually called the *characteristic*, is easily determined from
+usually called the **characteristic**, is easily determined from
 what we have said in the preceding article. Thus, it is
-0, for all the numbers which have but *one figure*; it is 1,
-for those which have *two*; it is 2, for those which have
-*three*; and, in general, it is always one less than the number
+0, for all the numbers which have but one figure; it is 1,
+for those which have two; it is 2, for those which have
+three; and, in general, it is always one less than the number
 of figures. If therefore the logarithm of 1766 be required,
 we already know that the first part, or tliat of the integers,
 is necessarily 3.
@@ -217,7 +218,7 @@ $$
 \begin{array}{rrr}
 \log 343&=&=2.5352941\\
 \log 2401&=3.3803922\\ \hline
-\textrm{their sum}&=&5.9156863
+\textrm{their sum}&=&5.9156863\\
 \textrm{nearest tabular log} \quad \log 823540&=&5.9156847\\
 \hline
 \textrm{difference}&=&0.0000016

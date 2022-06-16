@@ -122,11 +122,11 @@ point: so that we have two parts to consider in a logarithm.
 First, that which precedes the point, or the integral part;
 and the other, the decimal fractions that are to be added to
 the former. The integral part of a logarithm, which is
-usually called the *characteristic*, is easily determined from
+usually called the **characteristic**, is easily determined from
 what we have said in the preceding article. Thus, it is
-0, for all the numbers which have but *one figure*; it is 1,
-for those which have *two*; it is 2, for those which have
-*three*; and, in general, it is always one less than the number
+0, for all the numbers which have but one figure; it is 1,
+for those which have two; it is 2, for those which have
+three; and, in general, it is always one less than the number
 of figures. If therefore the logarithm of 1766 be required,
 we already know that the first part, or tliat of the integers,
 is necessarily 3.
@@ -218,9 +218,8 @@ $$
 \begin{array}{rrr}
 \log 343&=&=2.5352941\\
 \log 2401&=3.3803922\\ \hline
-\textrm{their sum}&=&5.9156863
-\textrm{nearest tabular log} \quad \log 823540&=&5.9156847\\
-\hline
+\textrm{their sum}&=&5.9156863\\
+\textrm{nearest tabular log} \quad \log 823540&=&5.9156847\\ \hline
 \textrm{difference}&=&0.0000016
 \end{array}
 $$
