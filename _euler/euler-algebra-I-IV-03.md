@@ -405,10 +405,59 @@ succeed in the following order:
 
 which together make 48.
 
-<span class="art">596</span>
+<span class="art">596</span> *Question 13.* To find an arithmetical progression,
+whose first term is 5, the last term 10, and the entire
+sum 60.
 
+Here we know neither the difference nor the number of
+terms; but we know that the first and the last term would
+enable us to express the sum of the progression, provided
+only the number of terms were given. We shall therefore
+suppose this number to be $$x$$, and express the sum of the
+progression $$\dfrac{15x}{2}$$. We know also, that this sum is 60;
+so that $$\dfrac{15x}{2}=60$$; or $$\frac{1}{2}x=4$$, and $$x=8$$.
 
+Now, since the number of terms is 8, if we suppose the
+difference to be $$z$$, we have only to seek for the eighth term
+upon this supposition, and to make it equal to 10. The
+second term is $$5 + z$$, the third is $$5 + 2z$$, and the eighth is
+$$5 + 7z$$; so that
 
+$$
+\begin{gather}
+5+7z=10\\
+7z=5\\
+z=\frac{5}{7}
+\end{gather}
+$$
+
+The difference of the progression, therefore, is ⁵⁄₇, and the
+number of terms is 8; consequently, the progression is 
+
+<table>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>5</td>
+<td>+ 5⁵⁄₇</td>
+<td>+ 6³⁄₇</td>
+<td>+ 7⅐</td>
+<td>+ 7⁶⁄₇</td>
+<td>+ 8⁴⁄₇</td>
+<td>+ 9²⁄₇</td>
+<td>+ 10</td>
+</tr>
+</table>
+
+the sum of which is 60.
 
 <span class="art">597</span>
 
