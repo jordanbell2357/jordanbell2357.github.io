@@ -461,6 +461,27 @@ the sum of which is 60.
 
 <span class="art">597</span>
 
+
+<span class="art">598</span>
+
+
+
+<span class="art">599</span>
+
+
+<span class="art">600</span>
+
+
+<span class="art">601</span>
+
+
+<span class="art">602</span>
+
+
+<span class="art">603</span>
+
+<span class="art">604</span>
+
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
