@@ -654,6 +654,52 @@ each be $$x$$, by which means the number of children will be expressed by
 $$\dfrac{z}{x}$$. Now, this being laid down, we may proceed
 to the solution of the question, as follows:
 
+<table>
+<tr>
+<th>Sum, or property to be divided.</th>
+<th>Order of the children.</th>
+<th>Portion of each.</th>
+<th>Differences.</th>
+</tr>
+<tr>
+<td>\(z\)</td>
+<td>1st</td>
+<td>\(x=100+\dfrac{z-100}{10}\)</td>
+<td></td>
+</tr>
+<tr>
+<td>\(z-x\)</td>
+<td>2nd</td>
+<td>\(x=200+\dfrac{z-x-200}{10}\)</td>
+<td>\(100-\dfrac{x-100}{10}=0\)</td>
+</tr>
+<tr>
+<td>\(z-2x\)</td>
+<td>3rd</td>
+<td>\(x=300+\dfrac{z-2x-300}{10}\)</td>
+<td>\(100-\dfrac{x-100}{10}=0\)</td>
+</tr>
+<tr>
+<td>\(z-3x\)</td>
+<td>4th</td>
+<td>\(x=400+\dfrac{z-3x-400}{10}\)</td>
+<td>\(100-\dfrac{x-100}{10}=0\)</td>
+</tr>
+<tr>
+<td>\(z-4x\)</td>
+<td>5th</td>
+<td>\(x=500+\dfrac{z-4x-500}{10}\)</td>
+<td>\(100-\dfrac{x-100}{10}=0\)</td>
+</tr>
+<tr>
+<td>\(z-5x\)</td>
+<td>6th</td>
+<td>\(x=600+\dfrac{z-5x-600}{10}\)</td>
+<td>\(100-\dfrac{x-100}{10}=0\)</td>
+</tr>
+</table>
+
+
 
 
 <span class="art">605</span>
