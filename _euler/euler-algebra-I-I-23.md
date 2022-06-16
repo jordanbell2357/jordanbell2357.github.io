@@ -121,7 +121,7 @@ and for this reason we find before the
 point: so that we have two parts to consider in a logarithm.
 First, that which precedes the point, or the integral part;
 and the other, the decimal fractions that are to be added to
-the former. The integral part of a logarithm, which is
+the former. The first part of a logarithm, which is
 usually called the **integer part**, is easily determined from
 what we have said in the preceding article. Thus, it is
 0, for all the numbers which have but one figure; it is 1,
