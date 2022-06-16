@@ -699,13 +699,25 @@ to the solution of the question, as follows:
 </tr>
 </table>
 
+We have inserted, in the last column, the differences
+which we obtain by subtracting each portion from that which
+follows; but all the portions being equal,
+each of the differences must be = 0. As it happens also, that all these
+differences are expressed exactly alike, it will be sufficient to
+make one of them equal to nothing, and we shall have the
+equation $$100-\dfrac{x-100}{10}=0$$. Here, multiplying by 10, we have
+$$1000-x-100=0$$, or $$900-x=0$$; and, consequently, $$x=900$$.
 
+We know now, therefore, that the share of each child was
+900; so that taking any one of the equations of the third
+column, the first, for example, it becomes, by substituting
+the value of $$x$$, $$900=100+\dfrac{z-100}{10}$$, whence we immediately
+obtain the value of $$z$$; for we have $$9000=1000+z-100$$, or $$9000=900+z$$;
+therefore $$z=8100$$; and consequently $$\dfrac{z}{x}=9$$.
 
-
-<span class="art">605</span>
-
-
-<span class="art">606</span>
+So that the number of children was 9; the fortune left
+by the father was 8100 pounds; and the share of each child
+was 900 pounds.
 
 #### Editions
 
