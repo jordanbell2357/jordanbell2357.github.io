@@ -459,24 +459,167 @@ number of terms is 8; consequently, the progression is
 
 the sum of which is 60.
 
-<span class="art">597</span>
+<span class="art">597</span> *Question 14.* To find such a number, that if 1 be
+subtracted from its double, and the remainder be doubled,
+from which if 2 be subtracted, and the remainder divided by
+4, the number resulting from these operations shall be 1 less
+than the number sought.
 
+Suppose this number to be $$x$$; the double is $$2x$$; subtracting
+1, there remains $$2x-1$$; doubling this, we have $$4x-2$$;
+subtracting 2, there remains $$4x-4$$; dividing by 4,
+we have $$x-1$$; and this must be 1 less than $$x$$; so that
 
-<span class="art">598</span>
+$$x-1=x-1.$$
 
+But this is what is called an **identical equation**; and shows that
+$$x$$ is indeterminate; or that any number whatever may be substituted
+for it.
 
+<span class="art">598</span> *Question 15.* I bought some ells of cloth at the
+rate of 7 crowns for 5 ells, which I sold again at the rate of
+11 crowns for 7 ells, and I gained 100 crowns by the transaction. How much cloth was there?
 
-<span class="art">599</span>
+Supposing the number of ells to be $$x$$:, we must first see
+how much the cloth cost; which is found by the following
+proportion:
 
+$$5:x::7:\dfrac{7x}{5}$$
 
-<span class="art">600</span>
+This being the expenditure; let us now see the receipt:
+in order to which, we must make the following proportion
 
+$$7 \; \textrm{ells} : 11 \; \textrm{crowns} :: x \; \textrm{ells} : \frac{11}{7}x \; \textrm{crowns};$$
 
-<span class="art">601</span>
+and this receipt ought to exceed the expenditure by 100
+crowns. We have, therefore, this equation:
 
+$$\frac{11}{7}x=\frac{7}{5}x+100.$$
 
-<span class="art">602</span>
+Subtracting $$\frac{7}{5}x$$, there remains $$\frac{6}{35}x=100$$; therefore
+$$6x=3500$$, and $$x=583\frac{1}{3}$$.
 
+There were, therefore, 583⅓ ells bought for 816⅔ crowns,
+and sold again for 916⅔ crowns; by which means the profit
+was 100 crowns.
+
+<span class="art">599</span> *Question 16.* A person buys 12 pieces of cloth for
+140 pounds; of which two are white, three are black, and seven
+are blue: also, a piece of the black cloth costs two pounds
+more than a piece of the white, and a piece of the blue cloth
+costs three pounds more than a piece of the black. Required
+the price of each kind.
+
+Let the price of a white piece be $$x$$ pounds; then the two
+pieces of this kind will cost $$2x$$; also, a black piece costing
+$$x + 2$$, the three pieces of this color will cost $$3x + 6$$; and
+lastly, as a blue piece costs $$x + 5$$, the seven blue pieces will
+cost $$7x+35$$: so that the twelve pieces amount in all to
+$$12x + 41$$.
+
+Now, the known price of these twelve pieces is 140
+pounds; we have, therefore, $$12x+41=140$$, and $$12x=99$$;
+wherefore $$x=8\frac{1}{4}$$. So that
+
+<table>
+<tr>
+<td>A piece of white cloth costs</td>
+<td>8¼ pounds</td>
+</tr>
+<tr>
+<td>A piece of black cloth costs</td>
+<td>10¼ pounds</td>
+</tr>
+<tr>
+<td>A piece of blue cloth costs</td>
+<td>13¼ pounds</td>
+</tr>
+</table>
+
+<span class="art">600</span> *Question 17.* A man having bought some nutmegs,
+says that three of them cost as much more than one penny, as
+four cost him more than two pence halfpenny. Required
+the price of the nutmegs?
+
+Let $$x$$ be the excess of the price of three nuts above one
+penny, or four farthings. Now, if three nutmegs cost $$x + 4$$
+farthings, four will cost, by the condition of the question,
+$$x + 10$$ farthings; but the price of three nutmegs gives that
+of four in another way, namely, by the Rule of Three,
+Thus,
+
+$$3:x+4 :: 4:\dfrac{4x+16}{3}.$$
+
+So that $$\dfrac{4x+16}{3}=x+10$$; or, $$4x+16=3x+30$$;
+therefore $$x+16=30$$, and $$x=14$$.
+
+Three nutmegs, therefore, cost 4½ pence, and four cost 6 pence:
+wherefore each cost 1½ pence.
+
+<span class="art">601</span> *Question 18.* A certain person has two silver cups,
+and only one cover for both. The first cup weighs 12
+ounces; and if the cover be put on it, it weighs twice as
+much as the other cup: but when the other cup has the
+cover, it weighs three times as much as the first. Required
+the weight of the second cup, and that of the cover.
+
+Suppose the weight of the cover to be $$x$$ ounces; then the
+first cup being covered it will weigh $$x + 12$$; and this weight
+being double that of the second, the second cup must weigh
+$$\frac{1}{2}x + 6$$; and, with the cover, it will weigh
+$$x + \frac{1}{2}x + 6=\frac{3}{2}x+6$$; which weight ought to be the triple of 12;
+that is,
+three times the weight of the first cup. We shall therefore
+have the equation $$\frac{3}{2}x + 6 = 36$$, or $$\frac{3}{2}x= 30$$; so that
+$$\frac{1}{x}x=10$$ and $$x=20$$.
+
+The cover, therefore, weighs 20 ounces, and the second
+cup weighs 16 ounces.
+
+<span class="art">602</span> *Question 19.* A banker has two kinds of change:
+there must be a pieces of the first to make a crown; and $$b$$
+pieces of the second to make the same. Now, a person
+wishes to have $$c$$ pieces for a crown. How many pieces of
+each kind must the banker give him?
+
+Suppose the banker gives $$x$$ pieces of the first kind; it is
+evident that he will give $$c - x$$ pieces of the other kind;
+but the $$x$$ pieces of the first are worth $$\dfrac{x}{a}$$ crown,
+by the proportion $$a:x :: 1 : \dfrac{x}{a}$$; and the $$c-x$$ pieces
+of the second kind are worth $$\dfrac{c-x}{b}$$ crown, because we have
+$$b:-x :: 1: \dfrac{c-x}{b}$$. So that
+
+$$
+\begin{gather}
+\dfrac{x}{a}+\dfrac{c-x}{b}=1;\\
+\dfrac{bx}{a}+c-x=b;\\
+bx+ac-ax=ab;\\
+bx-ax=ab-ac;\\
+x=\dfrac{ab-ac}{b-a};\\
+x=\dfrac{a(b-c)}{b-a};
+\end{gather}
+$$
+
+consequently, $$c-x$$, the pieces of the second kind, must be equal
+
+$$\dfrac{bc-ab}{b-a} = \dfrac{b(c-a)}{b-a}.$$
+
+The banker must therefore give $$\dfrac{a(b-c)}{b-a}$$ pieces of the first
+kind, and $$\dfrac{b(c-a)}{b-a}$$ pieces of the second kind.
+
+*Remark.* These two numbers are easily found by the
+Rule of Three, when it is required to apply the results
+which we have obtained. Thus, to find the first we say,
+
+$$b-a:a :: b-c : \dfrac{a(b-c)}{b-a};$$
+
+and the second number is found thus;
+
+$$b-a:b :: c-a : \dfrac{b(c-a)}{b-a}.$$
+
+It ought to be observed also, that $$a$$ is less than $$b$$, and that
+$$c$$ is less than $$b$$; but at the same time greater than $$a$$, as the
+nature of the thing requires.
 
 <span class="art">603</span>
 
