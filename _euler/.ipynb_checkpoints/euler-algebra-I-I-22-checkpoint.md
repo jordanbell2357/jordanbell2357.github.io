@@ -91,10 +91,49 @@ therefore the $$\log 2$$, though less than ⅓,
 is yet greater
 than ³⁄₁₀.
 
-<span class="art">236</span>
+<span class="art">236</span> This discussion serves to prove, that $$\log 2$$ has a
+determinate value, since we know that it is certainly greater
+than ³⁄₁₀, but less than ⅓; we shall not however proceed any
+farther in this investigation at present. Being therefore still
+ignorant of its true value, we shall represent it by $$x$$, so that
+$$\log 2=x$$; and endeavour to show how, if it were known,
+we could deduce from it the logarithms of an infinity of
+other numbers. For this purpose, we shall make use of
+the equation already mentioned, namely,
+
+$$\log cd = \log c + \log d,$$
+
+which comprehends the property, that the logarithm
+of a product is found by adding together the logarithms of
+the factors.
+
+<span class="art">237</span> First, as $$\log 2=x$$, and $$\log 10=1$$, we shall have
+
+<table>
+<tr>
+<td>\(\log 20=x+1\)</td>
+<td>\(\log 200=x+2\)</td>
+</tr>
+<tr>
+<td>\(\log 2000=x+3\)</td>
+<td>\(\log 20000=x+4\)</td>
+</tr>
+<tr>
+<td>\(\log 200000=x+2\)</td>
+<td>\(\log 2000000=x+6\), etc.</td>
+</tr>
+</table>
 
 
-<span class="art">237</span>
+<span class="art">238</span>
+
+
+
+<span class="art">239</span>
+
+
+
+<span class="art">240</span>
 
 #### Editions
 
