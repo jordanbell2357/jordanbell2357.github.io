@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 9. "Observations on the Rules Proportion and their Utility."
+title: Chapter 9. "Observations on the Rules of Proportion and their Utility."
 part: I
 section: III
 chapter: 9
