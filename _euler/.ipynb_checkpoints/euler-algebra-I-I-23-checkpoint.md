@@ -192,7 +192,9 @@ still greater exactness; and then we employ the large Tables
 of *Vlacq*, where the logarithms are calculated to ten decimal
 places.[^1] [^2]
 
-[^1]: Frank J. Swetz (The Pennsylvania State University), "Mathematical Treasures - Adriaan Vlacq's Logarithms ," Convergence (December 2019) <https://www.maa.org/press/periodicals/convergence/mathematical-treasures-adriaan-vlacqs-logarithms>
+[^1]: Frank J. Swetz (The Pennsylvania State University), "Mathematical Treasures - Adriaan Vlacq's Logarithms," *Convergence* (December 2019)
+
+    <https://www.maa.org/press/periodicals/convergence/mathematical-treasures-adriaan-vlacqs-logarithms>
 
 [^2]: [Denis Roegel. LOCOMAT: The Loria Collection of Mathematical Tables](https://locomat.loria.fr/)
 
@@ -219,8 +221,7 @@ $$
 \log 343&=&=2.5352941\\
 \log 2401&=3.3803922\\ \hline
 \textrm{their sum}&=&5.9156863\\
-\textrm{nearest tabular log} \quad \log 823540&=&5.9156847\\
-\hline
+\textrm{nearest tabular log} \quad \log 823540&=&5.9156847\\ \hline
 \textrm{difference}&=&0.0000016
 \end{array}
 $$

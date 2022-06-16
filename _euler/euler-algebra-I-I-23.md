@@ -192,7 +192,9 @@ still greater exactness; and then we employ the large Tables
 of *Vlacq*, where the logarithms are calculated to ten decimal
 places.[^1] [^2]
 
-[^1]: Frank J. Swetz (The Pennsylvania State University), "Mathematical Treasures - Adriaan Vlacq's Logarithms ," Convergence (December 2019) <https://www.maa.org/press/periodicals/convergence/mathematical-treasures-adriaan-vlacqs-logarithms>
+[^1]: Frank J. Swetz (The Pennsylvania State University), "Mathematical Treasures - Adriaan Vlacq's Logarithms," *Convergence* (December 2019)
+
+    <https://www.maa.org/press/periodicals/convergence/mathematical-treasures-adriaan-vlacqs-logarithms>
 
 [^2]: [Denis Roegel. LOCOMAT: The Loria Collection of Mathematical Tables](https://locomat.loria.fr/)
 
