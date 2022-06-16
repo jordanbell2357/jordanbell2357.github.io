@@ -53,7 +53,7 @@ permalink: /euler/
 <table>
 {% for item in PartISectionIII %}
 <tr>
-<td>[Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})</td>
+    <td><a href="{{ item.url }}">Part {{item.part}}. Section {{item.section}}. {{item.title}}</a></td>
 </tr>
 {% endfor %}
 </table>
@@ -65,7 +65,7 @@ permalink: /euler/
 <table>
 {% for item in PartISectionIV %}
 <tr>
-<td>[Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})</td>
+    <td><a href="{{ item.url }}">Part {{item.part}}. Section {{item.section}}. {{item.title}}</a></td>
 </tr>
 {% endfor %}
 </table>
@@ -77,7 +77,7 @@ permalink: /euler/
 <table>
 {% for item in PartII %}
 <tr>
-<td>[Part {{item.part}}. {{item.title}}]({{ item.url }})</td>
+    <td><a href="{{ item.url }}">Part {{item.part}}. {{item.title}}</a></td>
 </tr>
 {% endfor %} 
 </table>
