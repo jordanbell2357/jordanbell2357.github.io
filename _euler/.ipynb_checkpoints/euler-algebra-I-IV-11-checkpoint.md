@@ -209,7 +209,7 @@ equation, by means of which we easily find the two other
 roots; for, actually dividing by $$x-2$$, we have
 
 <a href="https://artofproblemsolving.com/texer/geyfrhwy">
-<img src="/assets/euler/geyfrhwy.png" alt="Polynomial long division" width="277" height="212">
+<img src="/assets/euler/geyfrhwy.png" alt="Polynomial long division" width="231" height="177">
 </a>
 
 And making the quotient $$x^2-3x-28=0$$,
