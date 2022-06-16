@@ -19,7 +19,7 @@ permalink: /euler/
 {% assign PartISectionI = site.euler | where: "part", "I" | where: "section", "I" %}
 
 {% for item in PartISectionI %}
-##### [{{item.title}}]({{ item.url }})
+##### [Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})
 {% endfor %}
 
 #### Section II. "Of the different Methods of calculating Compound Quantities."
@@ -27,7 +27,7 @@ permalink: /euler/
 {% assign PartISectionII = site.euler | where: "part", "I" | where: "section", "II" %}
 
 {% for item in PartISectionII %}
-##### [{{item.title}}]({{ item.url }})
+##### [Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})
 {% endfor %}
 
 #### Section III. "Of Ratios and Proportions."
@@ -35,7 +35,7 @@ permalink: /euler/
 {% assign PartISectionIII = site.euler | where: "part", "I" | where: "section", "III" %}
 
 {% for item in PartISectionIII %}
-##### [{{item.title}}]({{ item.url }})
+##### [Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})
 {% endfor %}
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them."
@@ -43,7 +43,7 @@ permalink: /euler/
 {% assign PartISectionIV = site.euler | where: "part", "I" | where: "section", "IV" %}
 
 {% for item in PartISectionIV %}
-##### [{{item.title}}]({{ item.url }})
+##### [Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})
 {% endfor %}
 
 ### Part II. "Containing the Analysis of Indeterminate Quantities."
@@ -51,7 +51,7 @@ permalink: /euler/
 {% assign PartII = site.euler | where: "part", "II" %}
 
 {% for item in PartII %}
-##### [{{item.title}}]({{ item.url }})
+##### [Part {{item.part}}. {{item.title}}]({{ item.url }})
 {% endfor %} 
 
 
