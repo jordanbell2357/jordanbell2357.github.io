@@ -51,7 +51,7 @@ permalink: /euler/
 {% assign PartII = site.euler | where: "part", "II" %}
 
 {% for item in PartII %}
-##### [Part {{item.part}}. {{item.title}}]({{ item.url }})
+###### [Part {{item.part}}. {{item.title}}]({{ item.url }})
 {% endfor %} 
 
 
