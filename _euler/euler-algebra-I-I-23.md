@@ -189,13 +189,58 @@ part, and that therefore the error cannot be of any importance.
 There are, however, calculations in which we require
 still greater exactness; and then we employ the large Tables
 of **Vlacq**, where the logarithms are calculated to ten decimal
-places.[^1]
+places.[^1] [^2]
 
 [^1]: Frank J. Swetz (The Pennsylvania State University), "Mathematical Treasures - Adriaan Vlacq's Logarithms ," Convergence (December 2019) <https://www.maa.org/press/periodicals/convergence/mathematical-treasures-adriaan-vlacqs-logarithms>
 
+[^2]: [Denis Roegel. LOCOMAT: The Loria Collection of Mathematical Tables](https://locomat.loria.fr/)
 
+<span class="art">253</span> As the first part, or characteristic of a logarithm, is
+subject to no difficulty, it is seldom expressed in the Tables;
+the second part only is written, or the seven figures of the
+decimal fraction. There is a set of English Tables in which
+we find the logarithms of all numbers from 1 to 100000,
+and even those of greater numbers; for small additional
+Tables show what is to be added to the logarithms, in proportion to the figures,
+which the proposed numbers have
+more than those in the Tables. We easily find, for example,
+the logarithm of 379456, by means of that of 37945
+and the small Tables of which we speak.
 
-<span class="art">253</span>
+<span class="art">254</span> From what has been said, it will easily be perceived,
+how we are to obtain from the Tables the number corresponding to any logarithm which may occur.
+Thus, in multiplying the numbers 343 and 2401; since we must add
+together the logarithms of those numbers, the calculation
+we be as follows:
+
+$$
+\begin{array}{rrr}
+\log 343&=&=2.5352941\\
+\log 2401&=3.3803922\\ \hline
+\textrm{their sum}&=&5.9156863
+\textrm{nearest tabular log} \quad \log 823540&=&5.9156847\\
+\hline
+\textrm{difference}&=&0.0000016
+\end{array}
+$$
+
+which in the Table of Differences answers to 3;
+this therefore being used instead of the cipher, gives 823543 for the
+product sought: for the sum is the logarithm of the product
+required; and its characteristic 5 shows that the product is
+composed of 6 figures; which are found as above.
+
+<span class="art">255</span> But it is in the extraction of roots that logarithms
+are of the greatest service; we shall therefore give an example of the
+manner in which they are used in calculations
+of this kind. Suppose, for example, it were required to
+extract the square root of 10. Here we have only to divide
+the logarithm of 10, which is 1.0000000 by 2; and the
+quotient 0.5000000 is the logarithm of the root required.
+Now, the number in the Tables which answers to that
+logarithm is 3.16228, the square of which is very nearly
+equal to 10, being only one hundred thousandth part too
+great.
 
 #### Editions
 
