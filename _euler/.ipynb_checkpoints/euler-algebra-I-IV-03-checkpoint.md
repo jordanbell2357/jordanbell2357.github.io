@@ -621,9 +621,45 @@ It ought to be observed also, that $$a$$ is less than $$b$$, and that
 $$c$$ is less than $$b$$; but at the same time greater than $$a$$, as the
 nature of the thing requires.
 
-<span class="art">603</span>
+<span class="art">603</span> *Question 20.* A banker has two kinds of change;
+10 pieces of one make a crown, and 20 pieces of the other
+make a crown; and a person wishes to change a crown into
+17 pieces of money: how many of each sort must he have?
 
-<span class="art">604</span>
+We have here $$a=10$$, $$b=20$$, and $$c=17$$, which
+furnishes the following proportions:
+
+First, 10 : 10 ∷ 3 : 3, so that the number of pieces of the first
+kind is 3.
+
+Second, 10 : 20 ∷ 7 : 14, and the number of the second kind is 14.
+
+<span class="art">604</span> *Question 21.* A father leaves at his death several
+children, who share his property in the following manner:
+namely, the first receives a hundred pounds, and the tenth
+part of the remainder; the second receives two hundred
+pounds, and the tenth part of the remainder; the third
+takes three hundred pounds, and the tenth part of what
+remains; and the fourth takes four hundred pounds, and
+the tenth part of what then remains; and so on. And it is
+found that the property has thus been divided equally
+among all the children. Required how much it was, how
+many children there were, and how much each received?
+
+This question is rather of a singular nature, and therefore
+deserves particular attention. In order to resolve it more
+easily, we shall suppose the whole fortune to be $$z$$ pounds;
+and since all the children receive the same sum, let the share of
+each be $$x$$, by which means the number of children will be expressed by
+$$\dfrac{z}{x}$$. Now, this being laid down, we may proceed
+to the solution of the question, as follows:
+
+
+
+<span class="art">605</span>
+
+
+<span class="art">606</span>
 
 #### Editions
 
