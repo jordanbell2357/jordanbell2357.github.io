@@ -18,9 +18,13 @@ permalink: /euler/
 
 {% assign PartISectionI = site.euler | where: "part", "I" | where: "section", "I" %}
 
+<!--
+class="rowhover"
+-->
+
 <table>
 {% for item in PartISectionI %}
-<tr class="rowhover">
+<tr>
     <td><a href="{{ item.url }}">Part {{item.part}}. Section {{item.section}}. {{item.title}}</a></td>
 </tr>
 {% endfor %}
