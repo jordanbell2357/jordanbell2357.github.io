@@ -122,7 +122,7 @@ point: so that we have two parts to consider in a logarithm.
 First, that which precedes the point, or the integral part;
 and the other, the decimal fractions that are to be added to
 the former. The integral part of a logarithm, which is
-usually called the **characteristic**, is easily determined from
+usually called the **integer part**, is easily determined from
 what we have said in the preceding article. Thus, it is
 0, for all the numbers which have but one figure; it is 1,
 for those which have two; it is 2, for those which have
@@ -169,13 +169,13 @@ numbers, it is usual, in those cases, to increase the integers
 of the logarithm by 10, that is, to write 10 instead of 0
 before the point; so that instead of -1 we have 9; instead
 of -2 we have 8; instead of -3 we have 7, etc.; but then
-we must remember, that the characteristic has been taken
+we must remember, that the integer part has been taken
 ten units too great, and by no means suppose that the number consists of
 10, 9, or 8 figures. It is likewise easy to
-conceive, that, if in the case we speak of, this characteristic be
+conceive, that, if in the case we speak of, this integer part be
 less than 10, we must write the figures of the number after
 a point, to show that they are decimals: for example, if the
-characteristic be 9, we must begin at the first place after a
+integer part be 9, we must begin at the first place after a
 point; if it be 8, we must also place a cipher in the first
 row, and not begin to write the figures till the second: thus
 9.5622929 would be the logarithm of 0.365, and 8.5622929
@@ -198,7 +198,7 @@ places.[^1] [^2]
 
 [^2]: [Denis Roegel. *LOCOMAT: The Loria Collection of Mathematical Tables*](https://locomat.loria.fr/)
 
-<span class="art">253</span> As the first part, or characteristic of a logarithm, is
+<span class="art">253</span> As the first part, or integer part, of a logarithm, is
 subject to no difficulty, it is seldom expressed in the Tables;
 the second part only is written, or the seven figures of the
 decimal fraction. There is a set of English Tables in which
@@ -229,7 +229,7 @@ $$
 which in the Table of Differences answers to 3;
 this therefore being used instead of the cipher, gives 823543 for the
 product sought: for the sum is the logarithm of the product
-required; and its characteristic 5 shows that the product is
+required; and its integer part 5 shows that the product is
 composed of 6 figures; which are found as above.
 
 <span class="art">255</span> But it is in the extraction of roots that logarithms
