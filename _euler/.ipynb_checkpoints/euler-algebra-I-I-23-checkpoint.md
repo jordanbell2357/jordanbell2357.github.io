@@ -219,9 +219,9 @@ we be as follows:
 $$
 \begin{array}{rrr}
 \log 343&=&=2.5352941\\
-\log 2401&=3.3803922\\ \hline
+\log 2401&=&3.3803922\\ \hline
 \textrm{their sum}&=&5.9156863\\
-\textrm{nearest tabular log} \quad \log 823540&=&5.9156847\\ \hline
+\textrm{nearest tabular log} \qquad \log 823540&=&5.9156847\\ \hline
 \textrm{difference}&=&0.0000016
 \end{array}
 $$
