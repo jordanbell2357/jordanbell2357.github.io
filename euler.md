@@ -20,7 +20,7 @@ permalink: /euler/
 
 <table>
 {% for item in PartISectionI %}
-<tr>
+<tr class="rowhover">
     <td><a href="{{ item.url }}">Part {{item.part}}. Section {{item.section}}. {{item.title}}</a></td>
 </tr>
 {% endfor %}
