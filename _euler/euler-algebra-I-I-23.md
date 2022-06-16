@@ -196,7 +196,7 @@ places.[^1] [^2]
 
     <https://www.maa.org/press/periodicals/convergence/mathematical-treasures-adriaan-vlacqs-logarithms>
 
-[^2]: [Denis Roegel. LOCOMAT: The Loria Collection of Mathematical Tables](https://locomat.loria.fr/)
+[^2]: [Denis Roegel. *LOCOMAT: The Loria Collection of Mathematical Tables*](https://locomat.loria.fr/)
 
 <span class="art">253</span> As the first part, or characteristic of a logarithm, is
 subject to no difficulty, it is seldom expressed in the Tables;
