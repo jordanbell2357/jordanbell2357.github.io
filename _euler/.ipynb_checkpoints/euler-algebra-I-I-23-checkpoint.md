@@ -43,7 +43,7 @@ is in the third place, and represents 100 · 7, or 700; and
 lastly, the 1, which is in the fourth row, becomes 1000; so
 that we read the given number thus;
 
-"One thousand, seven hundred, and sixty-five."
+> One thousand, seven hundred, and sixty-five.
 
 <span class="art">244</span> As the value of figures becomes always ten times
 greater, as we go from the right towards the left, and as it
@@ -95,7 +95,7 @@ may very well be neglected in most calculations.
 
 <span class="art">247</span> According to this method of expressing logarithms,
 that of 1 must be represented by 0.0000000, since it is
-really = 0: the logarithm of 10 is 1.OOOOOOO, where it evidently
+really = 0: the logarithm of 10 is 1.0000000, where it evidently
 is exactly = 1: the logarithm of 100 is 2.0000000,
 or 2. And hence we may conclude, that the logarithms of
 all numbers, which are included between 10 and 100, and
