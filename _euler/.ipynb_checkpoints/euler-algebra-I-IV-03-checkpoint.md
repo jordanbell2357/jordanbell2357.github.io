@@ -54,7 +54,7 @@ the share of each.
     </tr>
 </table>
 
-Now, these three sums make up together 1600*l.*; we have,
+Now, these three sums make up together 1600 pounds; we have,
 therefore,
 
 $$
@@ -68,24 +68,24 @@ $$
 <table>
     <tr>
         <td>The share of the youngest is</td>
-        <td>400*l.*</td>
+        <td>400 pounds</td>
     </tr>
     <tr>
         <td>That of the second is</td>
-        <td>500*l.*</td>
+        <td>500 pounds</td>
     </tr>
     <tr>
         <td>That of the eldest is</td>
-        <td>700*l.*</td>
+        <td>700 pounds</td>
     </tr>
 </table>
 
-<span class="art">587</span> *Question 4.* A father leaves to his four sons 8600*l.*
+<span class="art">587</span> *Question 4.* A father leaves to his four sons 8600 pounds
 and, according to the will, the share of the eldest is to be
-double that of the second, minus 100*l.*; the second is to
-receive three times as much as the third, minus 200*l.*; and
+double that of the second, minus 100 pounds; the second is to
+receive three times as much as the third, minus 200 pounds; and
 the third is to receive four times as much as the fourth, minus
-300*l.*. What are the respective portions of these four sons?
+300 pounds. What are the respective portions of these four sons?
 
 <table>
     <tr>
@@ -106,26 +106,26 @@ the third is to receive four times as much as the fourth, minus
     </tr>
 </table>
 
-Now, the sum of these four shares must make 8600*l.* We
+Now, the sum of these four shares must make 8600 pounds We
 have, therefore, $$41x - 3700 = 8600$$, or
 $$41x=12300$$, and $$x=300$$.
 
 <table>
     <tr>
         <td>Therefore the youngest's share is</td>
-        <td>300*l.*</td>
+        <td>300 pounds</td>
     </tr>
     <tr>
         <td>The third son's</td>
-        <td>900*l.*</td>
+        <td>900 pounds</td>
     </tr>
     <tr>
         <td>The second's</td>
-        <td>2500*l.*</td>
+        <td>2500 pounds</td>
     </tr>
     <tr>
         <td>The eldest's</td>
-        <td>4900*l.*</td>
+        <td>4900 pounds</td>
     </tr>
 </table>
 
@@ -241,9 +241,9 @@ $$x=28800$$.
 
 <span class="art">590</span> *Question 7.* A father leaves four sons, who share
 his property in the following manner: the first takes the
-half of the fortune, minus 3000*l.*; the second takes the
-third, minus 1000*l.*; the third takes exactly the fourth of
-the property; and the fourth takes 600*l.* and the fifth part
+half of the fortune, minus 3000 pounds; the second takes the
+third, minus 1000 pounds; the third takes exactly the fourth of
+the property; and the fourth takes 600 pounds and the fifth part
 of the property. What was the whole fortune, and how
 much did each son receive?
 
