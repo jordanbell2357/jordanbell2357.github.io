@@ -128,10 +128,10 @@ what we have said in the preceding article. Thus, it is
 for those which have two; it is 2, for those which have
 three; and, in general, it is always one less than the number
 of figures. If therefore the logarithm of 1766 be required,
-we already know that the first part, or tliat of the integers,
+we already know that the first part, or that of the integers,
 is necessarily 3.
 
-<span class="art">249</span> So reciprocally, we know at die first sight of the
+<span class="art">249</span> So reciprocally, we know at the first sight of the
 integral part of a logarithm, how many figures compose the
 number answering to that logarithm; since the number of
 those figures always exceed the integral part of the logarithm
