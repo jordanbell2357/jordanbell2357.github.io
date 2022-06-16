@@ -18,42 +18,69 @@ permalink: /euler/
 
 {% assign PartISectionI = site.euler | where: "part", "I" | where: "section", "I" %}
 
+<table>
+{% for item in PartISectionI %}
+<tr>
+<td>[Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})</td>
+</tr>
+{% endfor %}
+</table>
+
+<!--
+
 {% for item in PartISectionI %}
 ###### [Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})
 {% endfor %}
+
+-->
 
 #### Section II. "Of the different Methods of calculating Compound Quantities."
 
 {% assign PartISectionII = site.euler | where: "part", "I" | where: "section", "II" %}
 
+<table>
 {% for item in PartISectionII %}
-###### [Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})
+<tr>
+<td>[Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})</td>
+</tr>
 {% endfor %}
+</table>
 
 #### Section III. "Of Ratios and Proportions."
 
 {% assign PartISectionIII = site.euler | where: "part", "I" | where: "section", "III" %}
 
+<table>
 {% for item in PartISectionIII %}
-###### [Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})
+<tr>
+<td>[Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})</td>
+</tr>
 {% endfor %}
+</table>
 
 #### Section IV. "Of Algebraic Equations, and the Resolution of Them."
 
 {% assign PartISectionIV = site.euler | where: "part", "I" | where: "section", "IV" %}
 
+<table>
 {% for item in PartISectionIV %}
-###### [Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})
+<tr>
+<td>[Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})</td>
+</tr>
 {% endfor %}
+</table>
 
 ### Part II. "Containing the Analysis of Indeterminate Quantities."
 
 {% assign PartII = site.euler | where: "part", "II" %}
 
+<table>
 {% for item in PartII %}
-###### [Part {{item.part}}. {{item.title}}]({{ item.url }})
+<tr>
+<td>[Part {{item.part}}. {{item.title}}]({{ item.url }})</td>
+</tr>
 {% endfor %} 
-
+</table>
 
 
 
