@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 9, "Of the Nature of Equations of the Second Degree."
+title: Chapter 9. "Of the Nature of Equations of the Second Degree."
 part: I
 section: IV
 chapter: 9

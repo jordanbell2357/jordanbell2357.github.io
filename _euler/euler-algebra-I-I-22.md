@@ -22,7 +22,7 @@ $$10^0=1$$; consequently, $$\log 1=0$$; $$\log 10=1$$;
 $$\log 100=2$$; $$\log 1000=3$$; $$\log 10000=4$$;
 $$\log 100000=5$$; $$\log 1000000=6$$.
 Farther, $$\log \frac{1}{10}=-1$$; $$\log \frac{1}{100}=-2$$;
-$\log \frac{1}{1000}=-3$$; $$\log \frac{1}{10000}=-4$$;
+$$\log \frac{1}{1000}=-3$$; $$\log \frac{1}{10000}=-4$$;
 $$\log \frac{1}{100000}=-5$$; $$\log \frac{1}{1000000}=-6$$.
 
 <span class="art">234</span> The logarithms of the principal numbers, therefore,
