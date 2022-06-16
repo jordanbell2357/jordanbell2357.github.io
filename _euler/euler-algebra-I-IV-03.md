@@ -181,9 +181,63 @@ or $$1x=11000$$, and, consequently, $$x=1000$$.
     </tr>
 </table>
 
-<span class="art">589</span> 
+<span class="art">589</span> *Question 6.* A father intends by his will, that his
+three sons should share his property in the following manner:
+the eldest is to receive 1000 crowns less than half the
+whole fortune; the second is to receive 800 crowns less
+than the third of the whole; and the third is to have
+600 crowns less than the fourth of the whole. Required
+the sum of the whole fortune, and the portion of each
+son.
 
+<table>
+    <tr>
+        <td>Let the fortune be expressed by</td>
+        <td>\(x\)</td>
+    </tr>
+    <tr>
+        <td>The share of tlie first son is</td>
+        <td>\(\frac{1}{2}x-1000\)</td>
+    </tr>
+    <tr>
+        <td>That of the second</td>
+        <td>\(\frac{1}{3}x-800\)</td>
+    </tr>
+    <tr>
+        <td>That of the third</td>
+        <td>\(\frac{1}{4}x-600\)</td>
+    </tr>
+</table>
 
+So that the three sons receive in all
+$$\frac{1}{2}x+\frac{1}{3}x+\frac{1}{4}x-2400$$,
+and this sum must be equal to $$x$$. We have, therefore, the equation
+$$\frac{13}{12}x-2400=0$$; then adding 2400, we have
+$$\frac{1}{12}x=2400$$; and, lastly, multiplying by 12, we obtain
+$$x=28800$$.
+
+<table>
+    <tr>
+        <td>The fortune, therefore, consists of</td>
+        <td>28800 crowns</td>
+    </tr>
+    <tr>
+        <td>The eldest son receives</td>
+        <td>13400 crowns</td>
+    </tr>
+    <tr>
+        <td>The second</td>
+        <td>8800 crowns</td>
+    </tr>
+    <tr>
+        <td>The youngest</td>
+        <td>6600 crowns</td>
+    </tr>
+    <tr>
+        <td>Sum</td>
+        <td>28800 crowns</td>
+    </tr>
+</table>
 
 <span class="art">590</span> 
 
