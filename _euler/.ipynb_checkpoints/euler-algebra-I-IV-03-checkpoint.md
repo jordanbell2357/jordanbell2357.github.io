@@ -247,11 +247,170 @@ the property; and the fourth takes 600 pounds and the fifth part
 of the property. What was the whole fortune, and how
 much did each son receive?
 
+<table>
+    <tr>
+        <td>Let the whole fortune be represented by</td>
+        <td>\(x\)</td>
+    </tr>
+    <tr>
+        <td>Then the eldest son will have</td>
+        <td>\(\frac{1}{2}x-3000\)</td>
+    </tr>
+    <tr>
+        <td>The second</td>
+        <td>\(\frac{1}{3}x-1000\)</td>
+    </tr>
+    <tr>
+        <td>The third</td>
+        <td>\(\frac{1}{4}x\)</td>
+    </tr>
+    <tr>
+        <td>The youngest</td>
+        <td>\(\frac{1}{5}x+600\)</td>
+    </tr>
+</table>
 
-<span class="art">591</span> 
+And the four will have received in all
+
+$$\frac{1}{2}x+\frac{1}{3}x+\frac{1}{4}x+\frac{1}{5}x-3400,$$
+
+which must be equal to $$x$$.
+
+Whence results the equation $$\frac{77}{60}x-3400=x$$; then
+subtracting $$x$$, we have $$\frac{17}{60}x-3400=0$$; adding
+3400, we obtain $$\frac{17}{60}x=3400$$; then dividing by 17,
+we have $$\frac{1}{60}x=200$$; and multiplying by 60, gives
+$$x=12000$$.
+
+<table>
+    <tr>
+        <td>The fortune therefore consisted of</td>
+        <td>12000*l.*</td>
+    </tr>
+    <tr>
+        <td>The first son received</td>
+        <td>3000*l.*</td>
+    </tr>
+    <tr>
+        <td>The second</td>
+        <td>3000*l.*</td>
+    </tr>
+    <tr>
+        <td>The third</td>
+        <td>3000*l.*</td>
+    </tr>
+    <tr>
+        <td>The fourth</td>
+        <td>3000*l.*</td>
+    </tr>
+</table>
+
+<span class="art">591</span> *Question 8.* To find a number such, that if we
+add to it its half, the sum exceeds 60 by as much as the
+number itself is less than 65.
+
+Let the number be represented by $$x$$:
+
+Then $$x+\frac{1}{2}x-60=65-x$$, or $$\frac{3}{2}x-60=65-x$$.
+Now, by adding $$x$$, we have $$\frac{5}{2}x-60=65$$; adding 60,
+we have $$\frac{5}{2}x=125$$; dividing by 5, gives $$\frac{1}{2}x=25$$;
+and multiplying by 2, we have $$x=50$$.
+
+Consequently, the number sought is 50.
+
+<span class="art">592</span> *Question 9.* To divide 32 into two such parts, that
+if the less be divided by 6, and the greater by 5, the two
+quotients taken together may make 6.
+
+Let the less of the two parts sought be $$x$$; then the
+greater will be $$32-x$$. The first, divided by 6, gives
+$$\frac{x}{6}$$; and the second, divided by 5, gives $$\frac{32-x}{5}$$.
+Now $$\frac{x}{6}+\frac{32-x}{5}=6$$: so that multiplying by 5, we have
+$$\frac{5}{6}x+32-x=30$$, or $$-\frac{1}{6}x+32=30$$; adding $$\frac{1}{6}x$$,
+we have $$32=30+\frac{1}{6}x$$; subtracting 30, there remains $$2=\frac{1}{6}x$$;
+and lastly, multiplying by 6, we have $$x=12$$.
+
+So that the less part is 12, and the greater part is 20.
+
+<span class="art">593</span> *Question 10.* To find such a number, that if multiplied by 5, the product shall be as much less than 40 as
+the number itself is less than 12.
+
+Let the number be $$x$$; which is less than 12 by $$12-x$$;
+then taking the number $$x$$ five times, we have $$5x$$, which is
+less than 40 by $$40-5x$$, and this quantity must be equal to
+$$12-x$$.
+
+We have, therefore, $$40-5x=12-x$$. Adding $$5x$$,
+we have $$40=12+4x$$; and subtracting 12, we obtain
+$$28=4x$$; lastly, dividing by 4, we have $$x=7$$,
+the number sought.
+
+<span class="art">594</span> *Question 11.* To divide 25 into two such parts,
+that the greater may be equal to 49 times the less.
+
+Let the less part be $$x$$, than the greater will be $$25-x$$;
+and the latter divided by the former ought to give the
+quotient 49: we have therefore $$\frac{25-x}{x}=49$$. Multiplying
+by $$x$$, we have $$25-x=49x$$; adding $$x$$, we have
+$$25=50x$$; and dividing by 50, gives $$x=\frac{1}{2}$$.
+
+The less of the two numbers is ½, and the greater is 24½;
+dividing therefore the latter by ½, or multiplying by 2,
+we obtain 49.
+
+<span class="art">595</span> *Question 12.* To divide 48 into nine parts, so that
+every part may be always ½ greater than the part which
+precedes it.
+
+Let the first, or least part, be $$x$$, then the second will be $$x+\frac{1}{2}$$,
+the third $$x+1$$, etc.
+
+Now, these parts form an arithmetical progression, whose
+first term is $$x$$; therefore the ninth and last term will be
+$$x + 4$$. Adding those two terms together, we have $$2x + 4$$;
+multiplying this quantity by the number of terms, or by 9,
+we have $$18x + 36$$; and dividing this product by 2, Ave
+obtain the sum of all the nine parts $$= 9x + 18$$; which
+ought to be equal to 48. We have, therefore, $$9x + 18 = 48$$;
+subtracting 18, there remains $$9x=30$$; and dividing
+by 9, we have $$x=3\frac{1}{3}$$.
+
+The first part, therefore, is 3⅓, and the nine parts will
+succeed in the following order:
+
+<table>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td>3⅓</td>
+<td>+ 3⅚</td>
+<td>+ 4⅓</td>
+<td>+ 4⅚</td>
+<td>+ 5⅓</td>
+<td>+ 5⅚</td>
+<td>+ 6⅓</td>
+<td>+ 6⅚</td>
+<td>+ 7⅓</td>
+</tr>
+</table>
+
+which together make 48.
+
+<span class="art">596</span>
 
 
-<span class="art">592</span> 
+
+
+<span class="art">597</span>
 
 #### Editions
 
