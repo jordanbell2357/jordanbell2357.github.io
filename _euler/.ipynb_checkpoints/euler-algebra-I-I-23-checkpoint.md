@@ -188,7 +188,7 @@ are sure that they are never erroneous by the whole of this
 part, and that therefore the error cannot be of any importance.
 There are, however, calculations in which we require
 still greater exactness; and then we employ the large Tables
-of **Vlacq**, where the logarithms are calculated to ten decimal
+of *Vlacq*, where the logarithms are calculated to ten decimal
 places.[^1] [^2]
 
 [^1]: Frank J. Swetz (The Pennsylvania State University), "Mathematical Treasures - Adriaan Vlacq's Logarithms ," Convergence (December 2019) <https://www.maa.org/press/periodicals/convergence/mathematical-treasures-adriaan-vlacqs-logarithms>
