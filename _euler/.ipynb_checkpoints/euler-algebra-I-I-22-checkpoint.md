@@ -181,53 +181,107 @@ and shall deduce from hence the following equations:
 </tr>
 <tr>
 <td>\(\log 5000=4-x\)</td>
-<td>\(\log 50000=5-x\)</td>
+<td>\(\log 50000=5-x\), etc.</td>
 </tr>
+</table>
+
+<table>
 <tr>
 <td>\(\log 25=2-2x\)</td>
 <td>\(\log 125=3-3x\)</td>
 </tr>
 <tr>
 <td>\(\log 625=4-4x\)</td>
-<td>\(\log 3125=5-5x\)</td>
+<td>\(\log 3125=5-5x\), etc.</td>
 </tr>
+</table>
+
+<table>
 <tr>
 <td>\(\log 25=2-2x\)</td>
 <td>\(\log 125=3-3x\)</td>
 </tr>
 <tr>
 <td>\(\log 625=4-4x\)</td>
-<td>\(\log 3125=5-5x\)</td>
+<td>\(\log 3125=5-5x\), etc.</td>
 </tr>
+</table>
+
+<table>
 <tr>
 <td>\(\log 250=3-2x\)</td>
 <td>\(\log 2500=4-2x\)</td>
 </tr>
 <tr>
 <td>\(\log 25000=5-2x\)</td>
-<td>\(\log 250000=6-2x\)</td>
+<td>\(\log 250000=6-2x\), etc.</td>
 </tr>
+</table>
+
+<table>
 <tr>
 <td>\(\log 1250=4-3x\)</td>
 <td>\(\log 12500=5-3x\)</td>
 </tr>
 <tr>
 <td>\(\log 125000=6-3x\)</td>
-<td>\(\log 1250000=7-3x\)</td>
+<td>\(\log 1250000=7-3x\), etc.</td>
 </tr>
+</table>
+
+<table>
 <tr>
 <td>\(\log 6250=5-4x\)</td>
 <td>\(\log 62500=6-4x\)</td>
 </tr>
 <tr>
 <td>\(\log 62500=7-4x\)</td>
-<td>\(\log 625000=8-4x\)</td>
+<td>\(\log 625000=8-4x\), etc.</td>
 </tr>
 </table>
 
 and so on.
 
-<span class="art">240</span>
+<span class="art">240</span> If we knew the logarithm of 3, this would be the
+means also of determining a number of other logarithms; as
+appears from the following examples. Let $$\log 3$$ be
+represented by the letter $$y$$: then,
+
+<table>
+<tr>
+<td>\(\log 30=y+1\)</td>
+<td>\(\log 300=y+2\)</td>
+</tr>
+<tr>
+<td>\(\log 3000=y+3\)</td>
+<td>\(\log 30000=y+4\), etc.</td>
+</tr>
+</table>
+
+$$\log 9 =2y, \quad \log 27 = 3y, \quad \log 81= 4y, \quad \textrm{etc.}$$
+
+we shall have also,
+
+$$\log 6 = x+y, \quad \log 12 = 2x+y, \quad \log 18 = x+2y,
+\quad \log 15 = \log 3 + \log 5 = y + 1 - x.$$
+
+<span class="art">241</span> We have already seen that all numbers arise from
+the multiplication of prime numbers. If therefore we only
+knew the logarithms of all the prime numbers, we could find
+the logarithms of all the other numbers by simple additions.
+The number 210, for example, being formed by the factors
+2, 3, 5, 7, its logarithm will be $$\log 2 + \log 3 + \log 5 + \log 7$$.
+In the same manner, since
+
+360 = 2 · 2 · 2 · 3 · 3 · 5 = $$2^3 \cdot 3^2 \cdot 5$$,
+
+we have
+
+$$\log 360 = 3 \log 2 + 2 \log 3 + \log 5$$. It is evident, therefore, that by means
+of the logarithms of the prime numbers, we may determine
+those of all others; and that we must first apply to the
+determination of the former, if we would construct Tables
+of Logarithms.
 
 #### Editions
 
