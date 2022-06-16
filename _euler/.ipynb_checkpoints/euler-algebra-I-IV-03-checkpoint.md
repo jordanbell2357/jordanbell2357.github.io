@@ -239,7 +239,19 @@ $$x=28800$$.
     </tr>
 </table>
 
-<span class="art">590</span> 
+<span class="art">590</span> *Question 7.* A father leaves four sons, who share
+his property in the following manner: the first takes the
+half of the fortune, minus 3000*l.*; the second takes the
+third, minus 1000*l.*; the third takes exactly the fourth of
+the property; and the fourth takes 600*l.* and the fifth part
+of the property. What was the whole fortune, and how
+much did each son receive?
+
+
+<span class="art">591</span> 
+
+
+<span class="art">592</span> 
 
 #### Editions
 
