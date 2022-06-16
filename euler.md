@@ -41,7 +41,7 @@ permalink: /euler/
 <table>
 {% for item in PartISectionII %}
 <tr>
-<td>[Part {{item.part}}. Section {{item.section}}. {{item.title}}]({{ item.url }})</td>
+    <td><a href="{{ item.url }}">Part {{item.part}}. Section {{item.section}}. {{item.title}}</a></td>
 </tr>
 {% endfor %}
 </table>
