@@ -124,14 +124,108 @@ the factors.
 </tr>
 </table>
 
+<span class="art">238</span> Farther, as $$\log c^2 = 2 \log c$$, and
+$$\log c^3=3\log c$$, and $$\log c^4=4\log c$$, etc.
+we have
 
-<span class="art">238</span>
+$$\log 4=2x; \quad \log 8 =3x; \quad \log 16=4x;
+\quad \log 32=5x; \quad \log 64=6x, \quad \textrm{etc.}$$
 
+Hence we find also, that
 
+<table>
+<tr>
+<td>\(\log 40=2x+1\)</td>
+<td>\(\log 400=2x+2\)</td>
+</tr>
+<tr>
+<td>\(\log 4000=2x+3\)</td>
+<td>\(\log 40000=2x+4\), etc.</td>
+</tr>
+</table>
 
-<span class="art">239</span>
+<table>
+<tr>
+<td>\(\log 80=3x+1\)</td>
+<td>\(\log 800=3x+2\)</td>
+</tr>
+<tr>
+<td>\(\log 8000=3x+3\)</td>
+<td>\(\log 80000=3x+4\), etc.</td>
+</tr>
+</table>
 
+<table>
+<tr>
+<td>\(\log 160=4x+1\)</td>
+<td>\(\log 1600=4x+2\)</td>
+</tr>
+<tr>
+<td>\(\log 16000=4x+3\)</td>
+<td>\(\log 160000=4x+4\), etc.</td>
+</tr>
+</table>
 
+<span class="art">239</span> Let us resume also the other fundamental equation,
+
+$$\log \frac{c}{d} = \log c - \log d,$$
+
+and let us suppose $$c=10$$, and $$d=2$$; since $$\log 10=1$$,
+and $$\log 2=x$$, we shall have $$\log \frac{10}{2}$$, or $$\log 5=1-x$$,
+and shall deduce from hence the following equations:
+
+<table>
+<tr>
+<td>\(\log 50=2-x\)</td>
+<td>\(\log 500=3-x\)</td>
+</tr>
+<tr>
+<td>\(\log 5000=4-x\)</td>
+<td>\(\log 50000=5-x\)</td>
+</tr>
+<tr>
+<td>\(\log 25=2-2x\)</td>
+<td>\(\log 125=3-3x\)</td>
+</tr>
+<tr>
+<td>\(\log 625=4-4x\)</td>
+<td>\(\log 3125=5-5x\)</td>
+</tr>
+<tr>
+<td>\(\log 25=2-2x\)</td>
+<td>\(\log 125=3-3x\)</td>
+</tr>
+<tr>
+<td>\(\log 625=4-4x\)</td>
+<td>\(\log 3125=5-5x\)</td>
+</tr>
+<tr>
+<td>\(\log 250=3-2x\)</td>
+<td>\(\log 2500=4-2x\)</td>
+</tr>
+<tr>
+<td>\(\log 25000=5-2x\)</td>
+<td>\(\log 250000=6-2x\)</td>
+</tr>
+<tr>
+<td>\(\log 1250=4-3x\)</td>
+<td>\(\log 12500=5-3x\)</td>
+</tr>
+<tr>
+<td>\(\log 125000=6-3x\)</td>
+<td>\(\log 1250000=7-3x\)</td>
+</tr>
+<tr>
+<td>\(\log 6250=5-4x\)</td>
+<td>\(\log 62500=6-4x\)</td>
+</tr>
+<tr>
+<td>\(\log 62500=7-4x\)</td>
+<td>\(\log 625000=8-4x\)</td>
+</tr>
+</table>
+
+and so on.
 
 <span class="art">240</span>
 
