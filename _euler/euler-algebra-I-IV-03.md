@@ -87,10 +87,105 @@ receive three times as much as the third, minus 200£; and
 the third is to receive four times as much as the fourth, minus
 300£. What are the respective portions of these four sons?
 
+<table>
+    <tr>
+        <td>Call the youngest son's share</td>
+        <td>\(x\)</td>
+    </tr>
+    <tr>
+        <td>Then the third son's is</td>
+        <td>\(4x-300\)</td>
+    </tr>
+    <tr>
+        <td>The second son's is</td>
+        <td>\(12x-1100\)</td>
+    </tr>
+    <tr>
+        <td>And the eldest's</td>
+        <td>\(24x-2300\)</td>
+    </tr>
+</table>
+
+Now, the sum of these four shares must make 8600l. We
+have, therefore, $$41x - 3700 = 8600$$, or
+$$41x=12300$$, and $$x=300$$.
+
+<table>
+    <tr>
+        <td>Therefore the youngest's share is</td>
+        <td>300£</td>
+    </tr>
+    <tr>
+        <td>The third son's</td>
+        <td>900£</td>
+    </tr>
+    <tr>
+        <td>The second's</td>
+        <td>2500£</td>
+    </tr>
+    <tr>
+        <td>The eldest's</td>
+        <td>4900£</td>
+    </tr>
+</table>
+
+<span class="art">588</span> *Question 5.* A man leaves 11000 crowns to be
+divided between his widow, two sons, and three daughters.
+He intends that the mother should receive twice the share
+of a son, and that each son should receive twice as much
+as a daughter. Required how much each of them is to
+receive.
+
+<table>
+    <tr>
+        <td>Suppose the share of each daughter to be</td>
+        <td>\(x\)</td>
+    </tr>
+    <tr>
+        <td>Then each son's is consequently</td>
+        <td>\(2x\)</td>
+    </tr>
+    <tr>
+        <td>And the widow's</td>
+        <td>\(4x\)</td>
+    </tr>
+</table>
+
+The whole inheritance, therefore, is $$3x+4x+4x$$;
+or $$1x=11000$$, and, consequently, $$x=1000$$.
+
+<table>
+    <tr>
+        <td>Each daughter, therefore, is to receive</td>
+        <td>1000 crowns</td>
+    </tr>
+    <tr>
+        <td>So that the three receive in all</td>
+        <td>3000 crowns</td>
+    </tr>
+    <tr>
+        <td>Each son receives</td>
+        <td>2000 crowns</td>
+    </tr>
+    <tr>
+        <td>So that the two sons receive</td>
+        <td>4000 crowns</td>
+    </tr>
+    <tr>
+        <td>And the mother receives</td>
+        <td>4000 crowns</td>
+    </tr>
+    <tr>
+        <td>Sum</td>
+        <td>11000 crowns</td>
+    </tr>
+</table>
+
+<span class="art">589</span> 
 
 
-<span class="art">588</span>
 
+<span class="art">590</span> 
 
 #### Editions
 
