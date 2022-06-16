@@ -54,7 +54,7 @@ the share of each.
     </tr>
 </table>
 
-Now, these three sums make up together 1600£; we have,
+Now, these three sums make up together 1600*l.*; we have,
 therefore,
 
 $$
@@ -68,24 +68,24 @@ $$
 <table>
     <tr>
         <td>The share of the youngest is</td>
-        <td>400£</td>
+        <td>400*l.*</td>
     </tr>
     <tr>
         <td>That of the second is</td>
-        <td>500£</td>
+        <td>500*l.*</td>
     </tr>
     <tr>
         <td>That of the eldest is</td>
-        <td>700£</td>
+        <td>700*l.*</td>
     </tr>
 </table>
 
-<span class="art">587</span> *Question 4.* A father leaves to his four sons 8600£
+<span class="art">587</span> *Question 4.* A father leaves to his four sons 8600*l.*
 and, according to the will, the share of the eldest is to be
-double that of the second, minus 100£; the second is to
-receive three times as much as the third, minus 200£; and
+double that of the second, minus 100*l.*; the second is to
+receive three times as much as the third, minus 200*l.*; and
 the third is to receive four times as much as the fourth, minus
-300£. What are the respective portions of these four sons?
+300*l.*. What are the respective portions of these four sons?
 
 <table>
     <tr>
@@ -106,26 +106,26 @@ the third is to receive four times as much as the fourth, minus
     </tr>
 </table>
 
-Now, the sum of these four shares must make 8600l. We
+Now, the sum of these four shares must make 8600*l.* We
 have, therefore, $$41x - 3700 = 8600$$, or
 $$41x=12300$$, and $$x=300$$.
 
 <table>
     <tr>
         <td>Therefore the youngest's share is</td>
-        <td>300£</td>
+        <td>300*l.*</td>
     </tr>
     <tr>
         <td>The third son's</td>
-        <td>900£</td>
+        <td>900*l.*</td>
     </tr>
     <tr>
         <td>The second's</td>
-        <td>2500£</td>
+        <td>2500*l.*</td>
     </tr>
     <tr>
         <td>The eldest's</td>
-        <td>4900£</td>
+        <td>4900*l.*</td>
     </tr>
 </table>
 
