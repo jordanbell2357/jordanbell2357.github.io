@@ -196,7 +196,7 @@ son.
         <td>\(x\)</td>
     </tr>
     <tr>
-        <td>The share of tlie first son is</td>
+        <td>The share of the first son is</td>
         <td>\(\frac{1}{2}x-1000\)</td>
     </tr>
     <tr>
@@ -285,23 +285,23 @@ $$x=12000$$.
 <table>
     <tr>
         <td>The fortune therefore consisted of</td>
-        <td>12000*l.*</td>
+        <td>12000 pounds</td>
     </tr>
     <tr>
         <td>The first son received</td>
-        <td>3000*l.*</td>
+        <td>3000 pounds</td>
     </tr>
     <tr>
         <td>The second</td>
-        <td>3000*l.*</td>
+        <td>3000 pounds</td>
     </tr>
     <tr>
         <td>The third</td>
-        <td>3000*l.*</td>
+        <td>3000 pounds</td>
     </tr>
     <tr>
         <td>The fourth</td>
-        <td>3000*l.*</td>
+        <td>3000 pounds</td>
     </tr>
 </table>
 
