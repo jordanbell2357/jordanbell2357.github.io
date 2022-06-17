@@ -77,7 +77,112 @@ place
 </tr>
 </table>
 
+But, the last four of these nine solutions being the same as
+the first four, it is evident, that the question really admits
+only of five different solutions.
 
+If three numbers were required, the sum of which might
+make 10, we should have only to divide one of the numbers
+already found into two parts, by which means we should
+obtain a greater number of solutions.
+
+<span class="art">4</span> As we have found no difficulty in this question, we
+will proceed to others, which require different considerations.
+
+*Question 1.* Let it be required to divide 25 into two parts,
+the one of which may be divisible by 2, and the other by 3.
+
+Let one of the parts sought be $$2x$$, and the other $$3y$$; we shall
+then have $$2x+3y=25$$; consequently $$2x=25-3y$$; and dividing by 2,
+we obtain $$x=\dfrac{25-3y}{2}$$; whence we conclude, in the first place,
+that $$3y$$ must be less than 25, and, consequently, $$y$$ is less than 8.
+Also, if, from this value of $$x$$, we take out as many integers as we possibly
+can, that is to say, if we divide by the denominator 2, we shall have
+$$x=12-y+\dfrac{1-y}{2}$$; whence it follows, that $$1-y$$, or rather $$y-1$$,
+must be divisible by 2. Let us, therefore, make $$y-1=2z$$; and we shall
+have $$y=2z+1$$, so that
+
+$$x=12-2z-1-z=11-3z.$$
+
+And, since $$y$$ cannot be greater than 8, we must not substitute any numbers
+for $$z$$ which would render $$2z+1$$ greater
+than 8; conseuently, $$z$$ must be less than 4, that is to say,
+$$z$$ cannot be taken greater than 3, for which reasons we have
+the following answers:
+
+<table>
+<tr>
+<td>If we make</td>
+<td>\(z=0\)</td>
+<td>\(z=1\)</td>
+<td>\(z=2\)</td>
+<td>\(z=3\)</td>
+</tr>
+<tr>
+<td>we have</td>
+<td>\(y=1\)</td>
+<td>\(y=3\)</td>
+<td>\(y=7\)</td>
+</tr>
+<tr>
+<td>and</td>
+<td>\(x=11\)</td>
+<td>\(x=8\)</td>
+<td>\(x=5\)</td>
+<td>\(x=2\)</td>
+</tr>
+</table>
+
+Hence, the two parts of 25 sought, are
+
+22 + 3; 16 + 9; 10 + 15; or 4 + 21.
+
+<span class="art">5</span> *Question 2.* To divide 100 into two such parts, that
+the one may be divisible by 7, and the other by 11.
+
+Let $$7x$$ be the first part, and $$11y$$ the second.
+Then we must have $$7x+11y=100$$; and, consequently,
+
+$$
+\begin{gather}
+x=\dfrac{100-11y}{7}=\dfrac{98+2-7y-4y}{7}\\
+x=14-y+\dfrac{2-4y}{7};
+\end{gather}
+$$
+
+wherefore $$2-4y$$, or $$4y-2$$, must be divisible by 7.
+
+Now, if we can divide $$4y-2$$ by 7, we may also divide
+its half, $$2y-1$$, by 7. Let us therefore make $$2y-1=7z$$,
+or $$2y=7z+1$$, and we shall have $$x=14-y-2z$$;
+but, since $$2y=7z+1=6z+z+1$$, we shall have $$y=3z+\dfrac{z+1}{2}$$.
+Let us therefore make $$z+1=2u$$, or $$z=2u-1$$; which supposition
+gives $$y=3z+u$$; and, consequently, we may substitute for $$u$$ every
+integer number that does not make $$x$$ or $$y$$ negative. Now, as
+$$y$$ becomes $$=7u-3$$, and $$x=19-11u$$, the first of these
+expressions shows that $$7u$$ must exceed 3; and according to the second,
+$$11u$$ must be less than 19, or $$u$$ less than ¹⁹⁄₁₁:
+so that $$u$$ cannot be 2; and since it is impossible for this number to be
+0, we must have $$u=1$$: which is the only value that this letter can have.
+Hence, we obtain $$x=8$$, and $$y=4$$; and the two parts of 100 which were
+required, are 56 and 44.
+
+<span class="art">6</span>
+
+
+<span class="art">7</span>
+
+
+<span class="art">8</span>
+
+
+
+<span class="art">9</span>
+
+
+
+
+<span class="art">10</span>
 
 #### Editions
 
