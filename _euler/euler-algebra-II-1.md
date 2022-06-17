@@ -52,8 +52,7 @@ place
 
 <table>
 <tr>
-<td>If \(y\)</td>
-<td>=</td>
+<td>If \(y\) =</td>
 <td>1</td>
 <td>2</td>
 <td>3</td>
@@ -65,8 +64,7 @@ place
 <td>9</td>
 </tr>
 <tr>
-<td>then \(x\)</td>
-<td>=</td>
+<td>then \(x\) =</td>
 <td>9</td>
 <td>8</td>
 <td>7</td>
@@ -219,9 +217,31 @@ than 2; that is to say, we shall only have the two following answers:
 1. $$z=0$$ gives $$x=7$$, and $$y=3$$; so that the first woman has 63 eggs, and the second 37.
 2. $$z=1$$ gives $$x=2$$, and $$y=7$$; therefore the first woman 23 eggs, and the second had 77.
 
-<span class="art">8</span>
+<span class="art">8</span> *Question 5.* A company of men and women spent
+1000 sous at a tavern. The men paid each 19 sous, and each
+woman 13. How many men and women were there?
 
+Let the number of men be $$x$$, and that of the women $$y$$,
+we shall then have the equation
 
+$$
+\begin{gather}
+19x+13y=1000\\
+13y=1000-19x\\
+13y=988+12-13x-6x\\
+y=76 - x + \dfrac{12-6x}{13};
+\end{gather}
+$$
+
+whence it follows, that $$12-6x$$, or $$6x-12$$, or $$x-2$$, the sixth part of
+that number, must be divisible by 13. If, therefore, we make $$x-2=13z$$, we shall have
+$$x=13z+2$$, and $$y=76-13z-2-6z$$, or $$y=74-19z$$; which shows that $$z$$ must be less than
+⁷⁴⁄₁₉ and, consequently, less than 4; so that the four following answers are possible:
+
+1. $$z=0$$ gives $$x=2$$ and $$y=74$$: in which case there were 2 men and 74 women; the former paid 38 sous, and the latter 962 sous.
+2. $$z=1$$ gives the number of men $$x=15$$, and that of women $$y=55$$; so that the former spent 285 sous, and the latter 715 sous.
+3. $$z=2$$ gives the number of men $$x=28$$, and that of women $$y=36$$; therefore the former spent 532 sous, and the latter 468 sous.
+4. $$z=3$$ gives $$x=41$$, and $$y=17$$; so that the men spent 779 sous, and the women 221 sous.
 
 <span class="art">9</span>
 
