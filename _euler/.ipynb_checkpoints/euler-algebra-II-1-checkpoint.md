@@ -52,7 +52,8 @@ place
 
 <table>
 <tr>
-<td>If \(y=\)</td>
+<td>If \(y\)</td>
+<td>=</td>
 <td>1</td>
 <td>2</td>
 <td>3</td>
@@ -64,7 +65,8 @@ place
 <td>9</td>
 </tr>
 <tr>
-<td>then \(x=\)</td>
+<td>then \(x\)</td>
+<td>=</td>
 <td>9</td>
 <td>8</td>
 <td>7</td>
@@ -122,6 +124,7 @@ the following answers:
 <td>we have</td>
 <td>\(y=1\)</td>
 <td>\(y=3\)</td>
+<td>\(y=5\)</td>
 <td>\(y=7\)</td>
 </tr>
 <tr>
