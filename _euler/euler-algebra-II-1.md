@@ -280,9 +280,25 @@ than 4, which furnishes the following answers:
 2. $$u = 2$$ gives $$x = 30$$, and $$y = 40$$; so that the horses cost 930 crowns, and the oxen 840 crowns, which together make 1770 crowns.
 3. $$u = 3$$ gives the number of the horses $$x = 51$$, and that of the oxen $$y=9$$; the former cost 1581 crowns, and the latter 189 crowns; which together make 1770 crowns.
 
-<span class="art">10</span>
+<span class="art">10</span> The questions which we have hitherto considered
+lead all to an equation of the form $$ax + by = c$$, in which
+$$a$$, $$b$$, and $$c$$, represent integer and positive numbers, and
+in which the values of $$x$$ and $$y$$ must likewise be integer
+and positive. Now, if $$b$$ is negative, and the equation
+has the form $$ax - by = c$$, we have questions of quite
+a different kind, admitting of an infinite number of answers,
+which we shall treat of before we conclude the present
+chapter.
 
-
+The simplest questions of this sort are such as the following.
+Required two numbers, whose difference may be
+6. If, in this case, we make the less number $$x$$, and the
+greater $$y$$, we must have $$y - x = 6$$, and $$y = 6 + x$$. Now,
+nothing prevents us from substituting, instead of $$x$$, all the
+integer numbers possible, and whatever number we assume,
+$$y$$ will always be greater by 6. Let us, for example, make
+$$x = 100$$, we have $$y = l06$$; it is evident, therefore, that an
+infinite number of answers are possible.
 
 <span class="art">11</span>
 
