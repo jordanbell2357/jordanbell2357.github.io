@@ -190,8 +190,31 @@ therefore, admits of three answers:
 2. $$z=1$$ gives $$x=9$$, and $$y=7$$; and the two parts are 47 + 53.
 3. $$z=2$$ gives $$x=2$$, and $$y=12$$; and the two parts are 12 + 88.
 
-<span class="art">7</span>
+<span class="art">7</span> *Question 4.* Two women have together 100 eggs: one
+says to the other; "When I count my eggs by eights,
+there is an overplus of 7." The second replies:
+"If I count mine by tens, I find the same overplus of 7." How many
+eggs had each?
 
+As the number of eggs belonging to the first woman,
+divided by 8, leaves the remainder 7; and the number of
+eggs belonging to the second, divided by 10, gives the same
+remainder 7; we may express the first number by
+$$8x+7$$, and the second by $$10y+7$$; so that $$8x+10y+14=100$$,
+or $$8x=86-10y$$, or
+
+$$4x=43-5y=40+3-4y-y.$$
+
+Consequently, if we make $$y-3=4z$$, so that $$y=4z+3$$,
+we shall have
+
+$$x=10-4z-3-z=7-5z;$$
+
+whence it follows, that $$5z$$ must be less than 7, or $$z$$ less
+than 2; that is to say, we shall only have the two following answers:
+
+1. $$z=0$$ gives $$x=7$$, and $$y=3$$; so that the first woman has 63 eggs, and the second 37.
+2. $$z=1$$ gives $$x=2$$, and $$y=7$$; therefore the first woman 23 eggs, and the second had 77.
 
 <span class="art">8</span>
 
