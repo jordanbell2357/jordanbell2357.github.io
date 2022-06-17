@@ -291,8 +291,9 @@ which we shall treat of before we conclude the present
 chapter.
 
 The simplest questions of this sort are such as the following.
-Required two numbers, whose difference may be
-6. If, in this case, we make the less number $$x$$, and the
+Required two numbers, whose difference may be 6.
+
+If, in this case, we make the less number $$x$$, and the
 greater $$y$$, we must have $$y - x = 6$$, and $$y = 6 + x$$. Now,
 nothing prevents us from substituting, instead of $$x$$, all the
 integer numbers possible, and whatever number we assume,
