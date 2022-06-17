@@ -167,8 +167,28 @@ so that $$u$$ cannot be 2; and since it is impossible for this number to be
 Hence, we obtain $$x=8$$, and $$y=4$$; and the two parts of 100 which were
 required, are 56 and 44.
 
-<span class="art">6</span>
+<span class="art">6</span> *Question 3.* To divide 100 into two such parts, that
+dividing the first by 5, there may remain 2; and dividing
+the second by 7, the remainder may be 4.
 
+Since the first part, divided by 5, leaves the remainder
+2, let us suppose it to be $$5x+2$$; and, for a similar reason,
+we may represent the second part by $$7y + 4$$: we shall thus
+have $$5x+7y+6=100$$, or
+
+$$5x=94-7y=90+4-5y-2y;$$
+
+whence we obtain $$x=18-y+\dfrac{4-2y}{5}$$. Hence it follows,
+that $$4-2y$$, or $$2y-4$$, or the half $$y-2$$, must be divisible
+by 5. For this reason, let us make $$y-2=5z$$, or
+$$y=5z+2$$, and we shall have $$x=16-7z$$; whence we conclude,
+that $$7z$$ must be less than 16, and $$z$$ less than ¹⁶⁄₇,
+that is to say, $$z$$ cannot exceed 2. The question proposed,
+therefore, admits of three answers:
+
+1. $$z=0$$ gives $$x=16$$, and $$y=2$$; whence the two parts are 82 + 18.
+2. $$z=1$$ gives $$x=9$$, and $$y=7$$; and the two parts are 47 + 53.
+3. $$z=2$$ gives $$x=2$$, and $$y=12$$; and the two parts are 12 + 88.
 
 <span class="art">7</span>
 
