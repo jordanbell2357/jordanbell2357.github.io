@@ -339,6 +339,7 @@ $$
 y=\dfrac{5z-3}{2},\\
 y=2z+\dfrac{z-3}{2}.
 \end{gather}
+$$
 
 If, therefore, we farther suppose $$z-3=2u$$, we have $$z=2u+3$$, and
 $$y=5u+6$$, and
@@ -353,7 +354,63 @@ that is to say, the numbers sought are
 
 10, 45, 80, 115, 150, 185, 220, etc.
 
-<span class="art">13</span>
+<span class="art">13</span> The solution of questions of tins sort depends on the
+relation of the two numbers by which we are to divide ; that
+is, they become more or less tedious, according to the nature
+of those divisors. The following question, for example,
+admits of a very short solution :
+
+Required a number which, divided by 6, leaves the remainder 2;
+and divided by 13, leaves the remainder 3.
+
+Let this number be $$N$$; first $$N=6x+2$$, and then
+$$N=13y+3$$; consequently, $$6x+2=13y+3$$, and
+$$6x=13y+1$$; hence
+
+$$x=\dfrac{13y+1}{6} = 2y + \dfrac{y+1}{6},$$
+
+and if we make $$y+1=6z$$, we obtain $$y=6z-1$$, and
+
+$$x=2y+z=13z-2;$$
+
+whence we have for the number sought $$N=78z-10$$; therefore,
+the question admits of the following values of $$N$$; namely,
+
+$$N$$ = 68, 146, 224, 302, 380, etc.
+
+which numbers form an arithmetic progression, whose difference
+is 78 = 6 · 13. So that if we know one of the values, we may
+easily find all the rest; for we have only to add 78 continually,
+or to subtract that number, as long as it is possible, when we seek
+for smaller numbers.
+
+<span class="art">14</span>
+
+
+<span class="art">15</span>
+
+
+<span class="art">16</span>
+
+
+<span class="art">17</span>
+
+
+<span class="art">18</span>
+
+
+<span class="art">19</span>
+
+
+<span class="art">20</span>
+
+
+<span class="art">21</span>
+
+
+<span class="art">22</span>
+
+<span class="art">23</span>
 
 #### Editions
 
