@@ -243,12 +243,57 @@ $$x=13z+2$$, and $$y=76-13z-2-6z$$, or $$y=74-19z$$; which shows that $$z$$ must
 3. $$z=2$$ gives the number of men $$x=28$$, and that of women $$y=36$$; therefore the former spent 532 sous, and the latter 468 sous.
 4. $$z=3$$ gives $$x=41$$, and $$y=17$$; so that the men spent 779 sous, and the women 221 sous.
 
-<span class="art">9</span>
+<span class="art">9</span> *Question 6.* A farmer lays out the sum of 1770
+crowns in purchasing horses and oxen; he pays 31 crowns
+for each horse, and 21 crowns for each ox. How many
+horses and oxen did he buy?
 
+Let the number of horses be $$x$$, and that of oxen $$y$$;
+we shall then have $$31x+21y=1770$$, or
 
+$$21y=1770-31x=1764 + 6 - 21x - 10x;$$
 
+that is to say,
+
+$$y=84-x+\dfrac{6-10x}{21}.$$
+
+Therefore $$10x-6$$, and likewise its half $$5x-3$$, must be divisible by 21.
+If we now suppose $$5x=21z$$, we shall have $$5x=21z+3$$, and hence
+$$y=84-x-2z$$. But, since
+
+$$x=  \dfrac{21z+3}{5} = 4z + \dfrac{z+3}{5},$$
+
+we must also make $$z+3=5u$$; which supposition gives
+
+$$
+\begin{gather}
+z=5u-3\\
+x=21u-12\\
+y=84-21u+12-10u+6=102-31u;
+\end{gather}
+$$
+
+hence it follows, that ic must be greater than 0, and yet less
+than 4, which furnishes the following answers:
+
+1. $$u = 1$$ gives the number of horses $$x = 9$$, and that of oxen $$y = 71$$; wherefore the former cost 279 crowns, and the latter 1491; in all 1770 crowns.
+2. $$u = 2$$ gives $$x = 30$$, and $$y = 40$$; so that the horses cost 930 crowns, and the oxen 840 crowns, which together make 1770 crowns.
+3. $$u = 3$$ gives the number of the horses $$x = 51$$, and that of the oxen $$y=9$$; the former cost 1581 crowns, and the latter 189 crowns; which together make 1770 crowns.
 
 <span class="art">10</span>
+
+
+
+<span class="art">11</span>
+
+
+
+
+<span class="art">12</span>
+
+
+
+<span class="art">13</span>
 
 #### Editions
 
