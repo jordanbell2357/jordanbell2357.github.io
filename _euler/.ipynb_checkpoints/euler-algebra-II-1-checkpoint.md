@@ -300,14 +300,58 @@ $$y$$ will always be greater by 6. Let us, for example, make
 $$x = 100$$, we have $$y = l06$$; it is evident, therefore, that an
 infinite number of answers are possible.
 
-<span class="art">11</span>
+<span class="art">11</span> Next follow questions, in which $$c = 0$$, that is to say,
+in which $$ax$$ must simply be equal to $$by$$. Let there be required,
+for example, a number divisible both by 5 and by 7.
+If we write $$N$$ for that number, we shall first have $$N = 5x$$,
+since $$N$$ must be divisible by 5; farther, we shall have
+$$N = 7y$$, because the number must also be divisible by 7; we
+shall therefore have $$5x=7y$$, and $$x=\dfrac{7y}{5}$$. Now,
+since 7 cannot be divided by 5, $$y$$ must be divisible by 5: let us
+therefore make $$y=5z$$, and we have $$x=7z$$; so that the number sought
+$$N=35z$$; and as we may take for $$z$$, any integer number whatsoever, it is evident
+that we can assign for $$N$$ an infinite number of values; such as
 
+35, 70, 105, 140, 175, 210, etc.
 
+If, beside the above condition, it were also required that the
+number $$N$$ be divisible by 9, we should first have $$N=35z$$,
+as before, and should farther make $$N = 9u$$. In this manner,
+$$36z=9u$$, and $$u=\dfrac{35z}{9}$$; where it is evident that
+$$z$$ must be divisible by 9; therefore let $$z=9s$$; and we shall
+then have $$u=35s$$, and the number sought $$N=315s$$.
 
+<span class="art">12</span> We find more difficulty, when $$c$$ is not = 0. For
+ejcample, when $$5x= 7y + 3$$, the equation to which we are
+led, and which requires us to seek a number $$x$$ such, that
+it may be divisible by 5, and if divided by 7, may leave the
+remainder 3: for we must then have $$N = 5x$$, and also
+$$N=7y+3$$, whence results the equation $$5x=7y+3$$;
+and, consequently,
 
-<span class="art">12</span>
+$$x=\dfrac{7y+3}{5} = \dfrac{5y+2y+3}{5} = y + \dfrac{2y+3}{5}.$$
 
+If we make $$2y+3=5z$$, or $$z=\dfrac{2y+3}{5}$$, we have $$x=y+z$$;
+now, because $$2y+3=5z$$, or $$2y=5z-3$$, we have
 
+$$
+\begin{gather}
+y=\dfrac{5z-3}{2},\\
+y=2z+\dfrac{z-3}{2}.
+\end{gather}
+
+If, therefore, we farther suppose $$z-3=2u$$, we have $$z=2u+3$$, and
+$$y=5u+6$$, and
+
+$$x=y+z = (5u+6) + (2u+3) = 7u + 9.$$
+
+Hence, the number sought $$N=35u+45$$, in which equation we may substitute
+for $$u$$ not only all positive integer numbers, but also negative numbers;
+for, as it is sufficient that $$N$$ be positive, we may make $$u=-1$$, which
+gives $$N=10$$; the other values are obtained by continually adding 35;
+that is to say, the numbers sought are
+
+10, 45, 80, 115, 150, 185, 220, etc.
 
 <span class="art">13</span>
 
