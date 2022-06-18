@@ -465,8 +465,63 @@ that $$16p = 25q + 1$$, and
 <td>\(= r+s\),</td>
 <td>or \(9s=7r-1\),</td>
 </tr>
+<tr>
+<td>\(r\)</td>
+<td>\(=\dfrac{9s+1}{7}\)</td>
+<td>\(=s+\dfrac{2s+1}{7}\)</td>
+<td>\(= s+t\),</td>
+<td>or \(7t=2s+1\),</td>
+</tr>
+<tr>
+<td>\(s\)</td>
+<td>\(=\dfrac{7t-1}{2}\)</td>
+<td>\(=3s+\dfrac{t-1}{2}\)</td>
+<td>\(= 3s+u\),</td>
+<td>or \(2u=t-1\),</td>
+</tr>
 </table>
 
+We shall therefore obtain, by tracing back our substitutions,
+
+$$
+\begin{gather}
+t=2u+1,\\
+s=3t+u=7u+3,\\
+r=s+t=9u+4,\\
+q=r+s=16u+7,\\
+p=q+r=25u+11.
+\end{gather}
+$$
+
+So that the number of women was $$25u + 11$$, and that of
+men was $$16u + 7$$; and in these formulae we may substitute
+for $$u$$ any integer numbers whatever. The least results,
+therefore, will be as follow:
+
+<table>
+<tr>
+<td>Number of women</td>
+<td>11</td>
+<td>36</td>
+<td>61</td>
+<td>81</td>
+<td>111</td>
+<td>etc.</td>
+</tr>
+<tr>
+<td>Number of men</td>
+<td>7</td>
+<td>23</td>
+<td>39</td>
+<td>55</td>
+<td>71</td>
+<td>etc.</td>
+</tr>
+</table>
+
+According to the first answer, or that which contains the
+least numbers, the women expended l76 livres, and the men
+175 livres; that is, one livre less than the women.
 
 <span class="art">16</span>
 
