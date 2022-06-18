@@ -651,7 +651,9 @@ of the letters $$p$$, $$q$$, $$r$$, etc.
 </tr>
 </table>
 
-<span class="art">18</span>
+<span class="art">18</span> In the same manner, we may represent the example
+in <span class="artref">Art. 14</span>
+
 
 
 <span class="art">19</span>
