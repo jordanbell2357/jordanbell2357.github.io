@@ -812,7 +812,23 @@ $$
 So that $$N=6061t-153458$$: and the least number is
 found by making $$t=26$$, which supposition gives $$N=4128$$.
 
-<span class="art">22</span>
+<span class="art">22</span> It is necessary, however, to observe, in order that an
+equation of the form $$bp = aq + n$$ may be resolvible, that
+the two numbers $$a$$ and $$b$$ must have no common divisor;
+for, otherwise, the question would be impossible, unless the
+number $$n$$ had the same common divisor.
+
+If it were required, for example, to have $$9p = 15q + 2$$;
+since 9 and 15 have a common divisor 3, and which is not a
+divisor of 2, it is impossible to resolve the question, because
+$$9p - 15q$$ being always divisible by 3, can never become
+= 2. But if in this example $$n = 3$$, or $$n = 6$$, etc. the
+question would be posssible: for it would be sufficient first
+to divide by 3; since we should obtain $$3p = 5q+1$$, an
+equation easily resolvible by the rule already given. It is
+evident, therefore, that the numbers $$a$$, $$b$$, ought to have no
+common divisor, and that our rule cannot apply in any other
+case.
 
 <span class="art">23</span>
 
