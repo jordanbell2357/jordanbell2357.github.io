@@ -830,7 +830,23 @@ evident, therefore, that the numbers $$a$$, $$b$$, ought to have no
 common divisor, and that our rule cannot apply in any other
 case.
 
-<span class="art">23</span>
+<span class="art">23</span> To prove this still more satisfactorily, we shall consider the equation
+$$9p = 5q + 2$$ according to the usual
+method. Here we find
+
+$$p=\dfrac{15q+2}{9} = q + \dfrac{6q+2}{9} = q+r;$$
+
+so that $$9r=6q+2$$, or $$6q=9r-2$$; or
+
+$$q=\dfrac{}{} = r + \dfrac{}{} = r+s;$$
+
+so that $$3r-2=6s$$, or $$3r=6s+2$$: consequently,
+
+$$r=\dfrac{6s+2}{3}=2s+\frac{2}{3}.$$
+
+Now, it is evident, that this can never become an integer
+number, because $$s$$ is necessarily an integer; which shows
+the impossibility of such questions.
 
 #### Editions
 
