@@ -654,7 +654,28 @@ of the letters $$p$$, $$q$$, $$r$$, etc.
 <span class="art">18</span> In the same manner, we may represent the example
 in <span class="artref">Art. 14</span>
 
-
+<table>
+<tr>
+<td>56 = 1 · 39 + 17</td>
+<td>\(p=1 \cdot q+r\)</td>
+</tr>
+<tr>
+<td>39 = 2 · 17 + 5</td>
+<td>\(q=2\cdot r+s\)</td>
+</tr>
+<tr>
+<td>7 = 3 · 5 + 2</td>
+<td>\(r= 3 \cdot s + t\)</td>
+</tr>
+<tr>
+<td>5 = 2 · 2 + 1</td>
+<td>\(s=2\cdot t+u\)</td>
+</tr>
+<tr>
+<td>2 = 2 · 1 + 0</td>
+<td>\(t = 2 \cdot u + 11\).</td>
+</tr>
+</table>
 
 <span class="art">19</span>
 
