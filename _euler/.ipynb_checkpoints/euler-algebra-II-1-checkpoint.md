@@ -677,8 +677,46 @@ in <span class="artref">Art. 14</span>
 </tr>
 </table>
 
-<span class="art">19</span>
+<span class="art">19</span> And, in the same manner, we may analyse all questions of this kind.
+For, let there be given the equation
+$$bp = aq + n$$, in which $$a$$, $$b$$, and $$n$$, are known numbers;
+then, we have only to proceed as we should do to find the
+greatest common divisor of the numbers $$a$$ and $$b$$, and we
+may immediately determine $$p$$ and $$q$$ by the succeeding letters, as follows:
 
+<table>
+<tr>
+<td>\(a=Ab+c\)</td>
+<td>\(p=Aq+r\)</td>
+</tr>
+<tr>
+<td>\(b=Bc+d\)</td>
+<td>\(q=Br+s\)</td>
+</tr>
+<tr>
+<td>\(c=Cd+e\)</td>
+<td>\(r=Cs+t\)</td>
+</tr>
+<tr>
+<td>\(d=De+f\)</td>
+<td>\(s=Dt+u\)</td>
+</tr>
+<tr>
+<td>\(e=Ef+g\)</td>
+<td>\(t=Eu+v\)</td>
+</tr>
+<tr>
+<td>\(f=Fg+o\)</td>
+<td>\(u=Eu+v\)</td>
+</tr>
+</table>
+
+We have only to observe farther, that in the last equation
+the sign + must be prefixed to $$n$$, when the number of
+equations is odd; and that, on the contrary, we must take
+$$-n$$, when the number is even: by these means, the questions
+which form the subject of the present chapter may be
+readily answered, of which we shall give some examples.
 
 <span class="art">20</span>
 
