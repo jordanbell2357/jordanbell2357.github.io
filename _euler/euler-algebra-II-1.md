@@ -523,8 +523,89 @@ According to the first answer, or that which contains the
 least numbers, the women expended l76 livres, and the men
 175 livres; that is, one livre less than the women.
 
-<span class="art">16</span>
+<span class="art">16</span> *Question 10.* A person buys some horses and oxen:
+he pays 31 crowns per horse, and 20 crowns for each ox;
+and he finds that the oxen cost him 7 crowns more than the
+horses. How many oxen and horses did he buy?
 
+If we suppose $$p$$ to be the number of the oxen, and $$q$$ the
+number of the horses, we shall have the following equation:
+
+<table>
+<tr>
+<td>\(p\)</td>
+<td>\(=\dfrac{31q+7}{20}\)</td>
+<td>\(=q+\dfrac{11q+7}{20}\)</td>
+<td>\(= q+r\),</td>
+<td>or \(20r=11q+7\),</td>
+</tr>
+<tr>
+<td>\(q\)</td>
+<td>\(=\dfrac{20r-7}{11}\)</td>
+<td>\(=r+\dfrac{9r-7}{11}\)</td>
+<td>\(= r+s\),</td>
+<td>or \(11s=9r-7\),</td>
+</tr>
+<tr>
+<td>\(r\)</td>
+<td>\(=\dfrac{11s+7}{9}\)</td>
+<td>\(=s+\dfrac{2s+7}{9}\)</td>
+<td>\(= s+t\),</td>
+<td>or \(9t=2s+7\),</td>
+</tr>
+<tr>
+<td>\(s\)</td>
+<td>\(=\dfrac{9t-7}{2}\)</td>
+<td>\(=4t+\dfrac{t-7}{2}\)</td>
+<td>\(= 4t+u\),</td>
+<td>or \(2u=t-7\),</td>
+</tr>
+</table>
+
+whence
+
+$$
+\begin{gather}
+t=2u+7,\\
+s=4t+u=9u+28,\\
+r=s+t=11u+35,\\
+q=r+s=20u+63, \quad \textrm{number of horses},\\
+p=q+r=31u+98, \quad \textrm{number of oxen}.
+\end{gather}
+$$
+
+Whence, the least positive values of $$p$$ and $$q$$ are
+found by making $$u=-3$$; those which are greater succeed
+in the following arithmetical progressions:
+
+<table>
+<tr>
+<td>Number of oxen, \(p\) =</td>
+<td>5</td>
+<td>36</td>
+<td>67</td>
+<td>98</td>
+<td>129</td>
+<td>160</td>
+<td>191</td>
+<td>222</td>
+<td>253</td>
+<td>etc.</td>
+</tr>
+<tr>
+<td>Number of horses, \(q\) =</td>
+<td>3</td>
+<td>23</td>
+<td>43</td>
+<td>63</td>
+<td>83</td>
+<td>103</td>
+<td>123</td>
+<td>143</td>
+<td>163</td>
+<td>etc.</td>
+</tr>
+</table>
 
 <span class="art">17</span>
 
