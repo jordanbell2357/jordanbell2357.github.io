@@ -610,6 +610,9 @@ in the following arithmetical progressions:
 <span class="art">17</span>
 
 
+<img src="/assets/euler/rhyzvfrp.png" alt="Greatest common divisor by long division" title="Greatest common divisor by long division" width="268" height="74">
+
+
 <span class="art">18</span>
 
 
