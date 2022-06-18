@@ -718,8 +718,36 @@ $$-n$$, when the number is even: by these means, the questions
 which form the subject of the present chapter may be
 readily answered, of which we shall give some examples.
 
-<span class="art">20</span>
+<span class="art">20</span> *Question 11.* Required a number, which, being divided by 11, leaves the remainder 3; but being divided by
+19, leaves the remainder 5.
 
+Call this number $$N$$; then, in the first place, we have
+$$N=11p+3$$, and in the second, $$N=19q+5$$; therefore,
+we have the equation $$11p=19q+2$$, which furnishes the
+following Table:
+
+<table>
+<tr>
+<td>19 = 1 · 11 + 8</td>
+<td>\(p=q+r\)</td>
+</tr>
+<tr>
+<td>11 = 1 · 8 + 3</td>
+<td>\(q=r+s\)</td>
+</tr>
+<tr>
+<td>8 = 2 · 3 + 2</td>
+<td>\(r= 2s + t\)</td>
+</tr>
+<tr>
+<td>3 = 1 · 2 + 1</td>
+<td>\(s=t+u\)</td>
+</tr>
+<tr>
+<td>2 = 2 · 1 + 0</td>
+<td>\(t = 2 \cdot u + 2\).</td>
+</tr>
+</table>
 
 <span class="art">21</span>
 
