@@ -749,6 +749,23 @@ following Table:
 </tr>
 </table>
 
+where we may assign any value to $$u$$, and determine by it
+the preceding letters successively. We find,
+
+$$
+\begin{gather}
+t=2u+2\\
+s=t+u=3u+2\\
+r=2s+t=8u+6\\
+q=r+s=11u+8\\
+p=q+r=19u+14;
+\end{gather}
+$$
+
+whence we obtain the number sought $$N=209u+157$$;
+therefore 157 is the least number that can express $$N$$, or satisfy
+the terms of the question.
+
 <span class="art">21</span>
 
 
