@@ -607,11 +607,49 @@ in the following arithmetical progressions:
 </tr>
 </table>
 
-<span class="art">17</span>
-
+<span class="art">17</span> If now we consider how the letters $$p$$ and $$y$$, in this
+example, are determined by the succeeding letters, we shall
+perceive that this determination depends on the ratio of the
+numbers 31 and 20, and particularly on the ratio which we
+discover by seeking the greatest common divisor of these two
+numbers. In fact, if we perform this operation,
 
 <img src="/assets/euler/rhyzvfrp.png" alt="Greatest common divisor by long division" title="Greatest common divisor by long division" width="268" height="74">
 
+it is evident tliat the quotients are found also in the successive
+values of the letters $$p$$, $$q$$, $$r$$, $$s$$, etc. and that they are
+connected with the first letter to the right, while the last
+always remains alone. We see, farther, that the number 7
+occurs only in the fifth and last equation, and is affected by
+the sign +, because the number of this equation is odd;
+for if that number had been even, we should have obtained
+-7. This will be made more evident by the following Table,
+in which we may observe the decomposition of the
+numbers 31 and 20, and then the determination of the values
+of the letters $$p$$, $$q$$, $$r$$, etc.
+
+<table>
+<tr>
+<td>31 = 1 · 20 + 11</td>
+<td>\(p=1 \cdot q+r\)</td>
+</tr>
+<tr>
+<td>20 = 1 · 11 + 9</td>
+<td>\(q=1\cdot r+s\)</td>
+</tr>
+<tr>
+<td>11 = 1 · 9 + 2</td>
+<td>\(r= 1 \cdot s + t\)</td>
+</tr>
+<tr>
+<td>9 = 4 · 2 + 1</td>
+<td>\(s=4\cdot t+u\)</td>
+</tr>
+<tr>
+<td>2 = 2 · 1 + 0</td>
+<td>\(t = 2 \cdot u + 7\)</td>
+</tr>
+</table>
 
 <span class="art">18</span>
 
