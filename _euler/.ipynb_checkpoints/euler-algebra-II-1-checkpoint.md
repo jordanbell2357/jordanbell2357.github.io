@@ -385,8 +385,58 @@ easily find all the rest; for we have only to add 78 continually,
 or to subtract that number, as long as it is possible, when we seek
 for smaller numbers.
 
-<span class="art">14</span>
+<span class="art">14</span> The following question furnishes an example of a
+longer and more tedious solution.
 
+*Question 8.* To find a number $$N$$, which, when divided
+by 39, leaves the remainder 16; and such also, that if it be
+divided by 56, the remainder may be 27.
+
+In the first place, we have $$N=39p+16$$; and in the second,
+$$N=56q+27$$; so that
+$$39p+16=56q+27$$, or
+$$39p=56q+11$$, and
+
+$$p=\dfrac{56q+11}{39}=q+\dfrac{17q+11}{39}=q+r,$$
+
+by making $$r=\dfrac{17q+11}{39}$$. So that $$39r=17q+11$$, an
+
+$$q=\dfrac{39r-11}{17}=2r+\dfrac{5r-11}{17}=2r+s,$$
+
+by making $$s=\dfrac{5r-11}{17}$$, or $$17s=5r-11$$; whence get
+
+$$r=\dfrac{17s+11}{5}+3s+\dfrac{2s+11}{5}=3s+t,$$
+
+by making $$t=\dfrac{2s+11}{5}$$, or $$5t=2s+11$$; whence we find
+
+$$s=\dfrac{5t-11}{2}=2t+\dfrac{t-11}{2}=2t+u,$$
+
+by making $$u=\dfrac{t-11}{2}$$; whence $$t=2u+11$$.
+
+Having now no longer any fractions, we may take $$u$$
+at pleasure, and then we have only to trace back the following values:
+
+$$
+\begin{gather}
+t=2u+11,\\
+s=2t+u=5u+22,\\
+r=3s+t=17u+77,\\
+q=2r+s=39u+176,\\
+p=q+r=56u+253,
+\end{gather}
+$$
+
+and, lastly, $$N=39 \cdot 56u + 9883$$. And the least possible
+value of $$N$$ by making $$u=-4$$; for by this
+supposition, we have $$N=1147$$: and if we make $$u=x-4$$, we find
+
+$$N=2184x-8736+9883; \quad \textrm{or} \quad N=2184x+1147;$$
+
+which numbers form an arithmetical progression, whose
+first term is 1147, and whose common difference is 2184;
+the following being some of its leading terms:
+
+1147, 3331, 5515, 7699, 9883, etc.
 
 <span class="art">15</span>
 
