@@ -745,7 +745,7 @@ following Table:
 </tr>
 <tr>
 <td>2 = 2 · 1 + 0</td>
-<td>\(t = 2 \cdot u + 2\).</td>
+<td>\(t = 2u + 2\).</td>
 </tr>
 </table>
 
