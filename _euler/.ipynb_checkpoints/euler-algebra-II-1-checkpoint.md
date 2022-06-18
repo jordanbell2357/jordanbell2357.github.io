@@ -438,7 +438,34 @@ the following being some of its leading terms:
 
 1147, 3331, 5515, 7699, 9883, etc.
 
-<span class="art">15</span>
+<span class="art">15</span> We shall subjoin some other questions by way of
+practice.
+
+*Question 9.* A company of men and women club together for the payment of a reckoning:
+each man pays 25 livres, and each woman 16 livres; and it is found that all
+the women together have paid 1 livre more than the men.
+How many men and women were there?
+
+Let the number of women be $$p$$, and that of men $$q$$; then
+the women will have expended $$16p$$, and the men $$25q$$; so
+that $$16p = 25q + 1$$, and
+
+<table>
+<tr>
+<td>\(p\)</td>
+<td>\(=\dfrac{25q+1}{16}\)</td>
+<td>\(=q+\dfrac{9q+1}{16}\)</td>
+<td>\(= q+r\),</td>
+<td>or \(16r=9q+1\),</td>
+</tr>
+<tr>
+<td>\(q\)</td>
+<td>\(=\dfrac{16r-1}{9}\)</td>
+<td>\(=r+\dfrac{7r-1}{9}\)</td>
+<td>\(= r+s\),</td>
+<td>or \(9s=7r-1\),</td>
+</tr>
+</table>
 
 
 <span class="art">16</span>
