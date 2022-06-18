@@ -706,8 +706,8 @@ may immediately determine $$p$$ and $$q$$ by the succeeding letters, as follows:
 <td>\(t=Eu+v\)</td>
 </tr>
 <tr>
-<td>\(f=Fg+o\)</td>
-<td>\(u=Eu+v\)</td>
+<td>\(f=Fg+0\)</td>
+<td>\(u=Fv \pm n\)</td>
 </tr>
 </table>
 
