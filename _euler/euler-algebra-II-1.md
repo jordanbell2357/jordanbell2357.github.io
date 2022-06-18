@@ -766,7 +766,18 @@ whence we obtain the number sought $$N=209u+157$$;
 therefore 157 is the least number that can express $$N$$, or satisfy
 the terms of the question.
 
-<span class="art">21</span>
+<span class="art">21</span> *Question 12.* To find a number $$N$$ such, that if
+we divide it by 11, there remains 3, and if we divide it by
+19, there remains 5; and farther, if we divide it by 29,
+there remains 10.
+
+The last condition requires that $$N = 29p + 10$$; and as
+we have already performed the calculation (in the last question)
+for the two others, we must, in consequence of that result,
+have $$N=209u+157$$, instead of which we shall write $$N=209q+157$$;
+so that
+$$29p+10=209q+157$$, or $$29p=209q+147$$;
+whence we have the following Table;
 
 
 <span class="art">22</span>
