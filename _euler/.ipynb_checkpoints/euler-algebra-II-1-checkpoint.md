@@ -779,6 +779,38 @@ so that
 $$29p+10=209q+157$$, or $$29p=209q+147$$;
 whence we have the following Table;
 
+<table>
+<tr>
+<td>209 = 7 · 29 + 6</td>
+<td>\(p=7q+r\)</td>
+</tr>
+<tr>
+<td>29 = 4 · 6 + 5</td>
+<td>\(q=4r+s\)</td>
+</tr>
+<tr>
+<td>6 = 1 · 5 + 1</td>
+<td>\(r= s + t\)</td>
+</tr>
+<tr>
+<td>5 = 5 · 1 + 0</td>
+<td>\(s=5t-147\).</td>
+</tr>
+</table>
+
+And, if we now retrace these steps, we have
+
+$$
+\begin{gather}
+s=5t-147,\\
+r=s+t=6t-147,\\
+q=4r+s=29t-735,\\
+p=7q+r=209t-5292.
+\end{gather}
+$$
+
+So that $$N=6061t-153458$$: and the least number is
+found by making $$t=26$$, which supposition gives $$N=4128$$.
 
 <span class="art">22</span>
 
