@@ -157,18 +157,23 @@ limits $$fa$$ and $$ha$$; and care must also be taken that it may
 not approach either limit too nearly, as that would render it
 impossible to determine the other letters.
 
-[^1]
+<span class="art">28</span> Goldsmiths and coiners make great use of this rule,
+when they propose to make, from three or more kinds of
+metal, a mixture of a given value, as the following example
+will show.
 
-[^2]
+*Question 3.* A coiner has three kinds of silver, the first
+of 14 lots fine, the second of 11 lots fine, the third of 9 lots fine.
+Now he wishes to form a mixture of the
+weighing 30 marks, at 12 lots fine: how many marks of each
+sort must he take?[^1] [^2] [^3]
 
-[^3]
-
-[^3]: Association of Small Collectors of Antique Silver (ASCAS). Article # 234 by Giorgio Busetto. SILVER FINENESS MARKS.  
+[^1]: Association of Small Collectors of Antique Silver (ASCAS). Article # 234 by Giorgio Busetto. SILVER FINENESS MARKS.  
     <https://www.ascasonline.org/articoloOTTOB234.html>
 
-[^1]: „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
+[^2]: „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
 
-[^2]: „MARK“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=M01409>, abgerufen am 19.06.2022.
+[^3]: „MARK“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=M01409>, abgerufen am 19.06.2022.
 
 
 
