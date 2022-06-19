@@ -103,9 +103,48 @@ in which we may assume for the value of $$s$$ any integer number
 whatever, provided it be such, that $$q$$ does not become negative: but this condition
 limits the value of $$s$$ to 3; so that
 if we also exclude 0, there can only be three answers to the
-question; which are as follow :
+question; which are as follow:
+
+<table>
+<tr>
+<td class="underline">When \(s\) =</td>
+<td class="underline">1</td>
+<td class="underline">2</td>
+<td class="underline">3</td>
+</tr>
+<tr>
+<td>We have \(p\) =</td>
+<td>5</td>
+<td>10</td>
+<td>15</td>
+</tr>
+<tr>
+<td>\(q\) =</td>
+<td>42</td>
+<td>24</td>
+<td>6</td>
+</tr>
+<tr>
+<td>\(r\) =</td>
+<td>53</td>
+<td>66</td>
+<td>79</td>
+</tr>
+</table>
+
+<span class="art">27</span>
 
 
+
+<span class="art">28</span>
+
+
+
+<span class="art">29</span>
+
+
+
+<span class="art">30</span>
 
 
     
