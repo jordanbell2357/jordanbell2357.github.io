@@ -89,12 +89,11 @@ the hogs cost him 3½ crowns apiece; the goats, 1⅓ crown; and the sheep, ½ a 
 Let the number of hogs be $$p$$, that of the goats $$q$$, and of
 the sheep $$r$$, then we shall have the two following equations:
 
-1. $$p+q+r=100$$,
-2. $$3½ 金p + 1⅓ q + ½ r = 100$$;
+1. $$p$$ + $$q$$ + $$r$$ = 100,
+2. 3½$$p$$ + 1⅓$$q$$ + ½$$r$$ = 100;
 
 the latter of which being multiplied by 6, in order to remove
-the fractions, becomes,
-$$21p+8q+3r=600$$.
+the fractions, becomes $$21p+8q+3r=600$$.
 Now, the first gives $$r=100-p-q$$; and if we substitute this value of $$r$$ in the second,
 we have $$18p+5q=300$$, or $$5q=300-18p$$, and $$q=60-\dfrac{18p}{5}$$: consequently,
 $$18p$$ must be divisible by 5, and therefore, as 18 is not divisible by 5, $$p$$ must contain
