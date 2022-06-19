@@ -163,17 +163,14 @@ metal, a mixture of a given value, as the following example
 will show.
 
 *Question 3.* A coiner has three kinds of silver, the first
-of 14 lots fine, the second of 11 lots fine, the third of 9 lots fine.
-Now he wishes to form a mixture of the
-weighing 30 marks, at 12 lots fine: how many marks of each
-sort must he take?[^1] [^2] [^3]
+of 14 lots fineness, the second of 11 lots fineness, the third of 9 lots fineness.
+Now he wishes to form a mixture of them
+weighing 30 Marks, of 12 lots fineness: how many Marks of each
+sort must he take?[^1] [^2]
 
-[^1]: Association of Small Collectors of Antique Silver (ASCAS). Article # 234 by Giorgio Busetto. SILVER FINENESS MARKS.  
-    <https://www.ascasonline.org/articoloOTTOB234.html>
+[^1]: 1 Mark = 8 ounces. 1 Mark = 16 lots. 
 
 [^2]: „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
-
-[^3]: „MARK“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=M01409>, abgerufen am 19.06.2022.
 
 
 
