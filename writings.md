@@ -6,8 +6,8 @@ permalink: /writings/
 
 - [Publications](#publications)
 - [Translations](#translations)
-- [Mathematical notes](#mathematical)
 - [Historical and bibliographic notes](#historical)
+- [Mathematical notes](#mathematical)
 
 ## Publications {#publications}
 
@@ -38,6 +38,99 @@ permalink: /writings/
 ## Translations {#translations}
 
 - Hawking, Stephen (ed.), *God Created the Integers: The Mathematical Breakthroughs That Changed History (New Edition)*. Leonhard Euler, “On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)”, pp. 393-399, translated from the Latin by Jordan Bell. Running Press, Philadelphia, 2007. [PDF](/assets/pdfs/E41.pdf)
+
+## Historical and bibliographic notes {#historical}
+
+<table>
+    <tr>
+        <th>HTML</th>
+        <th>PDF</th>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/themartingale">Early instances of the martingale</a></td>
+        <td><a href="/LaTeX/historical/themartingale/themartingale.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/liouville">Notes on the history of Liouville's theorem</a></td>
+        <td><a href="/LaTeX/historical/liouville/liouville.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/summable">Summable series and the Riemann rearrangement theorem</a></td>
+        <td><a href="/LaTeX/historical/summable/summable.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/eulermaclaurin">The Euler-Maclaurin summation formula</a></td>
+        <td><a href="/LaTeX/historical/eulermaclaurin/eulermaclaurin.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/jacobian">Bibliography for the history of the Jacobian</a></td>
+        <td><a href="/LaTeX/historical/jacobian/jacobian.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/li">The logarithmic integral</a></td>
+        <td><a href="/LaTeX/historical/li/li.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/induction">Bibliography for the history of induction in mathematics</a></td>
+        <td><a href="/LaTeX/historical/induction/induction.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/pell">Pell's equation and side and diagonal numbers</a></td>
+        <td><a href="/LaTeX/historical/pell/pell.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/greeknumbers">Greek numbers</a></td>
+        <td><a href="/LaTeX/historical/greeknumbers/greeknumbers.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/greekweights">Ancient Greek weights and measures</a></td>
+        <td><a href="/LaTeX/historical/greekweights/greekweights.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/balance-scales">Ancient balance scales</a></td>
+        <td><a href="/LaTeX/historical/balance-scales/balance-scales.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/greatyear">The great year, calendars, and the incommensurability of celestial rotations</a></td>
+        <td><a href="/LaTeX/historical/greatyear/greatyear.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/euclidIV">Book IV of Euclid's <i>Elements</i> and ancient Greek mosaics</a></td>
+        <td><a href="/LaTeX/historical/euclidIV/euclidIV.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/platoforms">Plato's theory of forms and the axiom of foundation</a></td>
+        <td><a href="/LaTeX/historical/platoforms/platoforms.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/predicates">Predicates</a></td>
+        <td><a href="/LaTeX/historical/predicates/predicates.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/amphibolia">Amphibolia</a></td>
+        <td><a href="/LaTeX/historical/amphibolia/amphibolia.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/zeno">Zeno of Elea, locomotion, infinity, and time</a></td>
+        <td><a href="/LaTeX/historical/zeno/zeno.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/waves">What is a wave?</a></td>
+        <td><a href="/LaTeX/historical/waves/waves.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/resonance">Bibliography for the history of resonance</a></td>
+        <td><a href="/LaTeX/historical/resonance/resonance.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/papyri">Numbers and fractions in Greek papyri</a></td>
+        <td><a href="/LaTeX/historical/papyri/papyri.pdf">PDF</a></td>
+    </tr>
+    <tr>
+        <td><a href="/LaTeX/historical/minoan">Minoan weights</a></td>
+        <td><a href="/LaTeX/historical/minoan/minoan.pdf">PDF</a></td>
+    </tr>
+</table>
 
 ## Mathematical notes {#mathematical}
 
@@ -183,108 +276,3 @@ Strong emphasis on function spaces and structures in analysis. Detailed proofs o
 <tr><td><a href="/LaTeX/mathematics/donsker">Wiener measure and Donsker's theorem</a></td><td><a href="/LaTeX/mathematics/donsker/donsker.pdf">PDF</a></td></tr>
 <tr><td><a href="/LaTeX/mathematics/zygmund-restriction">Zygmund's Fourier restriction theorem and Bernstein's inequality</a></td><td><a href="/LaTeX/mathematics/zygmund-restriction/zygmund-restriction.pdf">PDF</a></td></tr>
 </table>
-
-
-## Historical and bibliographic notes {#historical}
-
-<table>
-    <tr>
-        <th>HTML</th>
-        <th>PDF</th>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/themartingale">Early instances of the martingale</a></td>
-        <td><a href="/LaTeX/historical/themartingale/themartingale.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/liouville">Notes on the history of Liouville's theorem</a></td>
-        <td><a href="/LaTeX/historical/liouville/liouville.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/summable">Summable series and the Riemann rearrangement theorem</a></td>
-        <td><a href="/LaTeX/historical/summable/summable.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/eulermaclaurin">The Euler-Maclaurin summation formula</a></td>
-        <td><a href="/LaTeX/historical/eulermaclaurin/eulermaclaurin.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/jacobian">Bibliography for the history of the Jacobian</a></td>
-        <td><a href="/LaTeX/historical/jacobian/jacobian.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/li">The logarithmic integral</a></td>
-        <td><a href="/LaTeX/historical/li/li.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/induction">Bibliography for the history of induction in mathematics</a></td>
-        <td><a href="/LaTeX/historical/induction/induction.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/pell">Pell's equation and side and diagonal numbers</a></td>
-        <td><a href="/LaTeX/historical/pell/pell.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/greeknumbers">Greek numbers</a></td>
-        <td><a href="/LaTeX/historical/greeknumbers/greeknumbers.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/greekweights">Ancient Greek weights and measures</a></td>
-        <td><a href="/LaTeX/historical/greekweights/greekweights.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/balance-scales">Ancient balance scales</a></td>
-        <td><a href="/LaTeX/historical/balance-scales/balance-scales.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/greatyear">The great year, calendars, and the incommensurability of celestial rotations</a></td>
-        <td><a href="/LaTeX/historical/greatyear/greatyear.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/euclidIV">Book IV of Euclid's <i>Elements</i> and ancient Greek mosaics</a></td>
-        <td><a href="/LaTeX/historical/euclidIV/euclidIV.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/platoforms">Plato's theory of forms and the axiom of foundation</a></td>
-        <td><a href="/LaTeX/historical/platoforms/platoforms.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/predicates">Predicates</a></td>
-        <td><a href="/LaTeX/historical/predicates/predicates.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/amphibolia">Amphibolia</a></td>
-        <td><a href="/LaTeX/historical/amphibolia/amphibolia.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/zeno">Zeno of Elea, locomotion, infinity, and time</a></td>
-        <td><a href="/LaTeX/historical/zeno/zeno.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/waves">What is a wave?</a></td>
-        <td><a href="/LaTeX/historical/waves/waves.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/resonance">Bibliography for the history of resonance</a></td>
-        <td><a href="/LaTeX/historical/resonance/resonance.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/papyri">Numbers and fractions in Greek papyri</a></td>
-        <td><a href="/LaTeX/historical/papyri/papyri.pdf">PDF</a></td>
-    </tr>
-    <tr>
-        <td><a href="/LaTeX/historical/minoan">Minoan weights</a></td>
-        <td><a href="/LaTeX/historical/minoan/minoan.pdf">PDF</a></td>
-    </tr>
-</table>
-
-
-<!--
-<table>
-{% for writing in site.writings %}
-  <tr>
-    <td><a href="{{ writing.url }}">{{ writing.title}}</a></td>
-  </tr>
-{% endfor %}
-</table>
--->
