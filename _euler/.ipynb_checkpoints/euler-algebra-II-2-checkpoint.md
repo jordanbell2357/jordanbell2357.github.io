@@ -118,13 +118,13 @@ question; which are as follow:
 <td>15</td>
 </tr>
 <tr>
-<td>\(q\) =</td>
+<td>and \(q\) =</td>
 <td>42</td>
 <td>24</td>
 <td>6</td>
 </tr>
 <tr>
-<td>\(r\) =</td>
+<td>and \(r\) =</td>
 <td>53</td>
 <td>66</td>
 <td>79</td>
@@ -156,6 +156,19 @@ expressed, by saying that $$h$$ must be contained between the
 limits $$fa$$ and $$ha$$; and care must also be taken that it may
 not approach either limit too nearly, as that would render it
 impossible to determine the other letters.
+
+[^1]
+
+[^2]
+
+[^3]
+
+[^3]: Association of Small Collectors of Antique Silver (ASCAS). Article # 234 by Giorgio Busetto. SILVER FINENESS MARKS.  
+    <https://www.ascasonline.org/articoloOTTOB234.html>
+
+[^1]: „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
+
+[^2]: „MARK“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=M01409>, abgerufen am 19.06.2022.
 
 
 
