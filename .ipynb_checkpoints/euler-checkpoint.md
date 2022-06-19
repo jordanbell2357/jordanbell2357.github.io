@@ -120,3 +120,4 @@ class="rowhover"
     - [Amazon.com](https://www.amazon.com/Elements-Algebra-Leonhard-Euler/dp/150890118X)
 10. Ian Bruce. *Euler's Algebra*. New translation from the German. 2016.
     - [Ian Bruce. 17centurymaths.com](https://www.17centurymaths.com/contents/euleralgebra.htm)
+11. Christian Siebeneicher. *Leonhard Euler. Einleitung zur Rechen-Kunst.* <https://www.math.uni-bielefeld.de/~sieben/Rechnen.html>
