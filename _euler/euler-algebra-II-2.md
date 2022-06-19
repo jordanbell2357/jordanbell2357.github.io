@@ -168,7 +168,7 @@ Now he wishes to form a mixture of them
 weighing 30 Marks, of 12 lots fineness: how many Marks of each
 sort must he take?[^1] [^2]
 
-[^1]: 1 Mark = 8 ounces. 1 Mark = 16 lots. 
+[^1]: 1 Mark = 8 ounces. 1 Mark = 16 lots. ¹⁶⁄₁₆ lots fineness = pure silver.
 
 [^2]: „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
 
