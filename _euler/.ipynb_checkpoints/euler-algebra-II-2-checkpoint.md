@@ -79,6 +79,7 @@ the number of men $$p$$, of women $$q$$, and of children $$r$$, being as follows
 <td>19</td>
 <td>20</td>
 </tr>
+</table>
 
 and, if we omit the first and the last, there will remain 9.
 
