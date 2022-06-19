@@ -83,7 +83,31 @@ the number of men $$p$$, of women $$q$$, and of children $$r$$, being as follows
 
 and, if we omit the first and the last, there will remain 9.
 
-<span class="art">26</span>
+<span class="art">26</span> *Question 2.* A certain person buys hogs, goats, and sheep, to the number of 100, for 100 crowns;
+the hogs cost him 3½ crowns apiece; the goats, 1⅓ crown; and the sheep, ½ a crown. How many had he of each?
+
+Let the number of hogs be $$p$$, that of the goats $$q$$, and of
+the sheep $$r$$, then we shall have the two following equations:
+
+1. $$p+q+r=100$$,
+2. $$3½ p + 1⅓ q + ½ r-100$$;
+
+the latter of which being multiplied by 6, in order to remove
+the fractions, becomes,
+$$21p+8q+3r=600$$.
+Now, the first gives $$r=100-p-q$$; and if we substitute this value of $$r$$ in the second,
+we have $$18p+5q=300$$, or $$5q=300-18p$$, and $$q=60-\dfrac{18p}{5}$$: consequently,
+$$18p$$ must be divisible by 5, and therefore, as 18 is not divisible by 5, $$p$$ must contain
+5 as a factor. If we therefore make $$p=5s$$, we obtain $$q=60-18s$$, and $$r=13s+40$$;
+in which we may assume for the value of $$s$$ any integer number
+whatever, provided it be such, that $$q$$ does not become negative: but this condition
+limits the value of $$s$$ to 3; so that
+if we also exclude 0, there can only be three answers to the
+question; which are as follow :
+
+
+
+
     
 #### Editions
 
