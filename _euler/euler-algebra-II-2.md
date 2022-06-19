@@ -90,7 +90,7 @@ Let the number of hogs be $$p$$, that of the goats $$q$$, and of
 the sheep $$r$$, then we shall have the two following equations:
 
 1. $$p+q+r=100$$,
-2. $$3½ p + 1⅓ q + ½ r-100$$;
+2. $$3½ 金p + 1⅓ q + ½ r = 100$$;
 
 the latter of which being multiplied by 6, in order to remove
 the fractions, becomes,
