@@ -132,7 +132,32 @@ question; which are as follow:
 </tr>
 </table>
 
-<span class="art">27</span>
+<span class="art">27</span> In forming such examples for practice, we must take
+particular care that they may be possible; in order to which,
+we must observe the following particulars:
+
+Let us represent the two equations, to which we were just
+now brought, by
+
+1. $$x+y+z=a$$, and
+2. $$fx+gy+hz=b$$,
+
+in which $$f$$, $$g$$, and $$h$$, as well as $$a$$ and $$b$$, are given numbers.
+Now, if we suppose that among the numbers $$f$$, $$g$$, and $$h$$,
+the first, $$f$$, is the greatest, and $$h$$ the least, since we have
+$$fx+fy+fz=fa$$, or $$(x+y+z)f=fa$$ (because $$x+y+z=a$$),
+it is evident that $$fx+fy+fz$$ is greater than $$fx+gy+hz$$;
+consequently, $$fa$$ must be greater than $$b$$, or $$b$$ must be less
+than $$fa$$. Farther, since $$hx+hy+hz=ha$$, or $$(x+y+z)h=ha$$,
+and $$hx+hy+hz$$ is undoubtedly less than $$fx+gy+hz$$, $$ha$$ must be
+less than $$b$$, or $$b$$ must be greater than $$ha$$. Hence
+it follows, that if $$h$$ be not less than $$fa$$, and also greater than
+$$ha$$, the question will be impossible: which condition is also
+expressed, by saying that $$h$$ must be contained between the
+limits $$fa$$ and $$ha$$; and care must also be taken that it may
+not approach either limit too nearly, as that would render it
+impossible to determine the other letters.
+
 
 
 
