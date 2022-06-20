@@ -163,9 +163,9 @@ metal, a mixture of a given value, as the following example
 will show.
 
 *Question 3.* A coiner has three kinds of silver, the first
-of 14 lots fineness, the second of 11 lots fineness, the third of 9 lots fineness.
+of 14 lot fineness, the second of 11 lot fineness, the third of 9 lot fineness.
 Now he wishes to form a mixture of them
-weighing 30 Marks, of 12 lots fineness: how many Marks of each
+weighing 30 Marks, of 12 lot fineness: how many Marks of each
 sort must he take?
 
 > das erste ist 14löthig, das andere 11löthig, das dritte 9löthig.
@@ -174,13 +174,11 @@ sort must he take?
 
 - 1 Mark = 8 ounces. e.g. [Münzkabinett der Staatlichen Museen zu Berlin. Object number 18201786. "KBA / 65536 / 1 / MARCK"](https://ikmk.smb.museum/object?id=18201786)
 
-- 14löthig (adj.)
-
-- A mixture containing silver has 14 lot fineness if the mass of silver is to the mass of the mixture as 14 is to 16; and, e.g., pure or fine silver has 16 lot fineness.
-
-- 14 Loth (*n.*): 1 Mark = 16 Lots.
+- "14löthig" (*adj.*). A mixture containing silver has 14 lot fineness if the mass of silver is to the mass of the mixture as 14 is to 16; and, e.g., pure or fine silver has 16 lot fineness.
 
 - „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
+
+- "14 Loth" (*n.*). 1 Mark = 16 Lots. 14 Loth = ¹⁴⁄₁₆ Mark = ⅞ Mark.
 
 - „LOTH, n.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06903>, abgerufen am 19.06.2022.
 
