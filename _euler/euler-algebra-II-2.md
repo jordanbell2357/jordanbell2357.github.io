@@ -166,21 +166,23 @@ will show.
 of 14 lots fineness, the second of 11 lots fineness, the third of 9 lots fineness.
 Now he wishes to form a mixture of them
 weighing 30 Marks, of 12 lots fineness: how many Marks of each
-sort must he take?[^1] [^2] [^3]
+sort must he take?
 
-1 Mark of 
+> das erste ist 14löthig, das andere 11löthig, das dritte 9löthig.
 
-<div class="bubblebox">
-- 1 Mark = 8 ounces.
+> Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die x Marck enthalten 14x Loth Silber;
 
-- 14löthig (adj.)*: A mixture containing silver has 14 lot fineness if the mass of silver is to the mass of the mixture as 14 is to 16; and, e.g., pure or fine silver has 16 lot fineness.
+-1 Mark = 8 ounces.
 
-- 14 Loth (n.)*: 1 Mark = 16 Lots.
-</div>
+- 14löthig (adj.)
 
-[^2]: „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
+- A mixture containing silver has 14 lot fineness if the mass of silver is to the mass of the mixture as 14 is to 16; and, e.g., pure or fine silver has 16 lot fineness.
 
-[^3]: „LOTH, n.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06903>, abgerufen am 19.06.2022.
+- 14 Loth (*n.*): 1 Mark = 16 Lots.
+
+- „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
+
+„LOTH, n.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06903>, abgerufen am 19.06.2022.
 
 
 
