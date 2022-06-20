@@ -170,10 +170,13 @@ sort must he take?[^1] [^2] [^3]
 
 1 Mark of 
 
+<div style="border:5px solid black;">
+- 1 Mark = 8 ounces.
 
-[^1]: 1 Mark = 8 ounces. *14löthig (adj.)*: A mixture containing silver has 14 lot fineness if the mass of silver is to the mass of the mixture as 14 is to 16; and, e.g., pure or fine silver has 16 lot fineness.
+- 14löthig (adj.)*: A mixture containing silver has 14 lot fineness if the mass of silver is to the mass of the mixture as 14 is to 16; and, e.g., pure or fine silver has 16 lot fineness.
 
-    *14 Loth (n.)*: 1 Mark = 16 Lots.
+- 14 Loth (n.)*: 1 Mark = 16 Lots.
+</div>
 
 [^2]: „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
 
