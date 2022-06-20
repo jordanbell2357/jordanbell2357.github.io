@@ -172,7 +172,7 @@ sort must he take?
 
 > Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die x Marck enthalten 14x Loth Silber;
 
-- 1 Mark = 8 ounces.
+- 1 Mark = 8 ounces. e.g. [Münzkabinett der Staatlichen Museen zu Berlin. Object number 18201786. "KBA / 65536 / 1 / MARCK"](https://ikmk.smb.museum/object?id=18201786)
 
 - 14löthig (adj.)
 
