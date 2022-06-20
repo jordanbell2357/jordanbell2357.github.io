@@ -170,15 +170,17 @@ sort must he take?
 
 > das erste ist 14löthig, das andere 11löthig, das dritte 9löthig.
 
-> Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die x Marck enthalten 14x Loth Silber;
-
-- 1 Mark = 8 ounces. e.g. [Münzkabinett der Staatlichen Museen zu Berlin. Object number 18201786. "KBA / 65536 / 1 / MARCK"](https://ikmk.smb.museum/object?id=18201786)
-
-- "14löthig" (*adj.*). A mixture containing silver has 14 lot fineness if the mass of silver is to the mass of the mixture as 14 is to 16; and, e.g., pure or fine silver has 16 lot fineness.
+- A mixture containing silver has 14 lot fineness if ¹⁴⁄₁₆ of its mass is silver (875 millesimal fineness), 11 lot fineness if ¹¹⁄₁₆ of its mass is silver (782.5 millesimal fineness), and 9 lot fineness if ⁹⁄₁₆ of its mass is silver (562.5 millesimal fineness); and pure or fine silver has 16 lot fineness.
 
 - „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
 
-- "14 Loth" (*n.*). 1 Mark = 16 Lots. 14 Loth = ¹⁴⁄₁₆ Mark = ⅞ Mark.
+> Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die x Marck enthalten 14x Loth Silber;
+
+- 1 Mark = 8 ounces.
+
+- 1 Mark weight, e.g. [Münzkabinett der Staatlichen Museen zu Berlin. Object number 18201786. "KBA / 65536 / 1 / MARCK"](https://ikmk.smb.museum/object?id=18201786)
+
+- 1 Mark = 16 Lots; 1 Lot = ¹⁄₁₆ Mark. 1 ounce = 2 Lots; 1 Lot = ½ ounce.
 
 - „LOTH, n.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06903>, abgerufen am 19.06.2022.
 
