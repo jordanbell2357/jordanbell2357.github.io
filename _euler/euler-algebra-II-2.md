@@ -172,7 +172,7 @@ sort must he take?
 
 > Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die x Marck enthalten 14x Loth Silber;
 
--1 Mark = 8 ounces.
+- 1 Mark = 8 ounces.
 
 - 14löthig (adj.)
 
@@ -182,7 +182,7 @@ sort must he take?
 
 - „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
 
-„LOTH, n.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06903>, abgerufen am 19.06.2022.
+- „LOTH, n.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06903>, abgerufen am 19.06.2022.
 
 
 
