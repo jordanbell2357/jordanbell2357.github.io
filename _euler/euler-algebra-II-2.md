@@ -170,7 +170,7 @@ sort must he take?[^1] [^2] [^3]
 
 1 Mark of 
 
-<div style="border:5px solid black;">
+<div class="bubblebox">
 - 1 Mark = 8 ounces.
 
 - 14löthig (adj.)*: A mixture containing silver has 14 lot fineness if the mass of silver is to the mass of the mixture as 14 is to 16; and, e.g., pure or fine silver has 16 lot fineness.
