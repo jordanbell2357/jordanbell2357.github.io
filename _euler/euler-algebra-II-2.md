@@ -182,7 +182,7 @@ Sorte nehmen?
 - [Giorgio Busetto. "Silver Fineness Marks". Article \# 234. Association of Small Collectors of Antique Silver - ASCAS. 2018](https://www.ascasonline.org/articoloOTTOB234.html)
 
 <blockquote>
-Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die \(x\) Marck enthalten \(14x\) Loth Silber; eben so werden die \(y\) Marck von der zweyten Sorte enthalten 11\(y\) Loth; und die \(z\) Marck von der dritten Sorte werden enthalten 9\(z\) Loth Silber; dahero die gantze Maße an Silber enthalten wird \(14x +11y+9z\)$ Loth. 
+Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die \(x\) Marck enthalten \(14x\) Loth Silber; eben so werden die \(y\) Marck von der zweyten Sorte enthalten 11\(y\) Loth; und die \(z\) Marck von der dritten Sorte werden enthalten 9\(z\) Loth Silber; dahero die gantze Maße an Silber enthalten wird \(14x +11y+9z\) Loth. 
 </blockquote>
     
 - 1 Mark = 8 ounces; 1 ounce = ⅛ Mark.
