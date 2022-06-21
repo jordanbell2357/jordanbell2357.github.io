@@ -168,17 +168,17 @@ Now he wishes to form a mixture of them
 weighing 30 Marks, of 12 lot fineness: how many Marks of each
 sort must he take?
 
-> das erste ist 14löthig, das andere 11löthig, das dritte 9löthig.
+> Ein Müntz-Meister hat dreyerley Silber, das erste ist 14löthig, das andere 11löthig, das dritte 9löthig.
 
-- A mixture containing silver has 14 lot fineness if ¹⁴⁄₁₆ of its mass is silver (875 millesimal fineness), 11 lot fineness if ¹¹⁄₁₆ of its mass is silver (782.5 millesimal fineness), and 9 lot fineness if ⁹⁄₁₆ of its mass is silver (562.5 millesimal fineness); and pure or fine silver has 16 lot fineness.
+- A mixture containing silver has 14 lot fineness if ¹⁴⁄₁₆ of its mass is silver (= 875 millesimal fineness), 11 lot fineness if ¹¹⁄₁₆ of its mass is silver (= 782.5 millesimal fineness), and 9 lot fineness if ⁹⁄₁₆ of its mass is silver (= 562.5 millesimal fineness). Fine or pure silver has 16 lot fineness (= 999 millesimal fineness).
 
 - „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
 
-> Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die x Marck enthalten 14x Loth Silber;
+> Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die $$x$$ Marck enthalten $$14x$$ Loth Silber;
 
-- 1 Mark = 8 ounces.
+- 1 Mark = 8 ounces; 1 ounce = ⅛ Mark.
 
-- 1 Mark weight, e.g. [Münzkabinett der Staatlichen Museen zu Berlin. Object number 18201786. "KBA / 65536 / 1 / MARCK"](https://ikmk.smb.museum/object?id=18201786)
+- [Münzkabinett der Staatlichen Museen zu Berlin. Object number 18201786. "KBA / 65536 / 1 / MARCK"](https://ikmk.smb.museum/object?id=18201786)
 
 - 1 Mark = 16 Lots; 1 Lot = ¹⁄₁₆ Mark. 1 ounce = 2 Lots; 1 Lot = ½ ounce.
 
