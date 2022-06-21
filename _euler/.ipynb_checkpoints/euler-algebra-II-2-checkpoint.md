@@ -175,13 +175,13 @@ schwer machen, welche 12löthig seyn soll, wie viel Marck muß er von jeder
 Sorte nehmen?
 </blockquote>
 
-<p class="bubblebox">
+<div class="bubblebox">
 A mixture containing silver has 14 lot fineness if ¹⁴⁄₁₆ of its mass is silver (= 875 millesimal fineness), 11 lot fineness if ¹¹⁄₁₆ of its mass is silver (= 782.5 millesimal fineness), and 9 lot fineness if ⁹⁄₁₆ of its mass is silver (= 562.5 millesimal fineness). Fine or pure silver has 16 lot fineness (= 999 millesimal fineness).
 
 „LÖTHIG, adj.“, <em>Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm</em>, digitalisierte Fassung im <em>Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21</em>, <a href="https://www.woerterbuchnetz.de/DWB?lemid=L06923">https://www.woerterbuchnetz.de/DWB?lemid=L06923</a>, abgerufen am 19.06.2022.
 
 <a href="https://www.ascasonline.org/articoloOTTOB234.html">Giorgio Busetto. "Silver Fineness Marks". Article &#35; 234. Association of Small Collectors of Antique Silver - ASCAS. 2018</a>
-</p>
+</div>
 
 <blockquote>
 Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die \(x\) Marck enthalten \(14x\) Loth Silber; eben so werden die \(y\) Marck von der zweyten Sorte enthalten 11\(y\) Loth; und die \(z\) Marck von der dritten Sorte werden enthalten 9\(z\) Loth Silber; dahero die gantze Maße an Silber enthalten wird 14\(x\) + 11\(y\) + 9\(z\) Loth. 
