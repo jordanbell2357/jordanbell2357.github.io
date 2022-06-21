@@ -168,12 +168,12 @@ Now he wishes to form a mixture of them
 weighing 30 Marks, of 12 lot fineness: how many Marks of each
 sort must he take?
 
-<quote>
+<blockquote>
 Ein Müntz-Meister hat dreyerley Silber, das erste ist 14löthig,
 das andere 11löthig, das dritte 9löthig. Nun soll er eine Maße 30 Marck
 schwer machen, welche 12löthig seyn soll, wie viel Marck muß er von jeder
 Sorte nehmen?
-</quote>
+</blockquote>
 
 - A mixture containing silver has 14 lot fineness if ¹⁴⁄₁₆ of its mass is silver (= 875 millesimal fineness), 11 lot fineness if ¹¹⁄₁₆ of its mass is silver (= 782.5 millesimal fineness), and 9 lot fineness if ⁹⁄₁₆ of its mass is silver (= 562.5 millesimal fineness). Fine or pure silver has 16 lot fineness (= 999 millesimal fineness).
 
@@ -181,9 +181,9 @@ Sorte nehmen?
 
 - [Giorgio Busetto. "Silver Fineness Marks". Article \# 234. Association of Small Collectors of Antique Silver - ASCAS. 2018](https://www.ascasonline.org/articoloOTTOB234.html)
 
-<quote>
+<blockquote>
 Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die \(x\) Marck enthalten \(14x\) Loth Silber; eben so werden die \(y\) Marck von der zweyten Sorte enthalten 11\(y\) Loth; und die \(z\) Marck von der dritten Sorte werden enthalten 9\(z\) Loth Silber; dahero die gantze Maße an Silber enthalten wird \(14x +11y+9z\)$ Loth. 
-</quote>
+</blockquote>
     
 - 1 Mark = 8 ounces; 1 ounce = ⅛ Mark.
 
