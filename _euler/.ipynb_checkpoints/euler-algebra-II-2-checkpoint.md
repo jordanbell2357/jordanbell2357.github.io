@@ -174,7 +174,7 @@ sort must he take?
 
 - „LÖTHIG, adj.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06923>, abgerufen am 19.06.2022.
 
-> Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die $$x$$ Marck enthalten $$14x$$ Loth Silber;
+> Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die $$x$$ Marck enthalten $$14x$$ Loth Silber; eben so werden die $$y$$ Marck von der zweyten Sorte enthalten 11$$y$$ Loth; und die $$z$$ Marck von der dritten Sorte werden enthalten $$9z$$ Loth Silber; dahero die gantze Maße an Silber enthalten wird $$14x +11y+9z$$ Loth. 
 
 - 1 Mark = 8 ounces; 1 ounce = ⅛ Mark.
 
