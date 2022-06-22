@@ -207,13 +207,13 @@ Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden di
 </tr>
 </table>
 
-<p>
+<cite>
 „LOTH, n.“, <em>Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm</em>, digitalisierte Fassung im <em>Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21</em>, <a href="https://www.woerterbuchnetz.de/DWB?lemid=L06903" title="„LOTH, n.“ Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm">https://www.woerterbuchnetz.de/DWB?lemid=L06903</a>, abgerufen am 19.06.2022.
-</p>
+</cite>
 
-<p>
+<cite>
 <a href="https://ikmk.smb.museum/object?id=18201786" title="1 Mark weight. Staatlichen Museen zu Berlin">Münzkabinett der Staatlichen Museen zu Berlin. Object number 18201786. "KBA / 65536 / 1 / MARCK"</a>
-</p>
+</cite>
 </div>
 
 <span class="art">28</span>
