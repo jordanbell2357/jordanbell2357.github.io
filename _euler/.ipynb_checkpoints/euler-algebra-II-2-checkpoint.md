@@ -202,7 +202,7 @@ Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden di
     <td>1 Loth = ¹⁄₁₆ Mark</td>
 </tr>
 <tr>
-    <td>1 ounce = 2 Loths
+    <td>1 ounce = 2 Loths</td>
     <td>1 Loth = ½ ounce</td>
 </tr>
 </table>
