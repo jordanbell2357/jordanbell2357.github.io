@@ -220,15 +220,40 @@ If he take $$x$$ Marks of the first kind, $$y$$ Marks of the second,
 and $$z$$ Marks of the third, he will have $$x + y + z = 30$$,
 which is the first equation.
 
+Then, since a Mark of the first sort contains 14 Loths of
+fine silver, the $$x$$ Marks of this sort will contain 14$x$$ Loths of
+such silver. Also, the $$y$$ Marks of the second sort will contain 11$$y$$ Loths,
+and the $$z$$ Marks of the third sort will contain 9$$z$$ Loths of fine silver; so that the whole mass will
+contain $$14x+11y+9z$$ Loths of fine silver.
 
+As this
+mixture is to weigh 30 Marks, and each of these Marks must
+contain 12 Loths of fine silver, it follows that the whole mass
+will contain 360 Loths of fine silver; and thence results the
+second equation, 
 
+$$14x+11y+9z=360.$$
 
+If we now subtract from this equation nine
+times the first, or $$9x+9y+9z=270$$, there remains $$5x+2y=90$$,
+an equation which must give the values of $$x$$ and $$y$$ in integer numbers;
+and with regard to the value of $$z$$, we may derive it from the first
+equation $$z=30-x-y$$. Now, the former equation gives $$2y=90-5x$$, and
+$$y=45-\dfrac{5x}{2}$$; therefore, if $$x=2u$$, we shall have
 
+$$y=45-5u,\quad \textrm{and} \quad z=3u-15;$$
 
+which shows that $$u$$ must be greater than 4, and yet less than 10. Consequently,
+the question admits of the following solutions:
 
-<span class="art">28</span>
-
-
+$$
+\begin{array}{lllllll}
+\textrm{If}&u=&5&6&7&8&9\\ \hline
+\textrm{Then}&x=&10&12&14&16&18\\
+&y=&20&15&10&5&0\\
+&z=&0&3&6&9&12
+\end{array}
+$$
 
 <span class="art">29</span>
 
