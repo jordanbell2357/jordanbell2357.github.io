@@ -176,11 +176,15 @@ Sorte nehmen?
 </blockquote>
 
 <div class="bubblebox">
+<p>
 A mixture containing silver has 14 lot fineness if ¹⁴⁄₁₆ of its mass is silver (= 875 millesimal fineness), 11 lot fineness if ¹¹⁄₁₆ of its mass is silver (= 782.5 millesimal fineness), and 9 lot fineness if ⁹⁄₁₆ of its mass is silver (= 562.5 millesimal fineness). Fine or pure silver has 16 lot fineness (= 999 millesimal fineness).
-<br>
+</p>
+<p>
 „LÖTHIG, adj.“, <em>Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm</em>, digitalisierte Fassung im <em>Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21</em>, <a href="https://www.woerterbuchnetz.de/DWB?lemid=L06923">https://www.woerterbuchnetz.de/DWB?lemid=L06923</a>, abgerufen am 19.06.2022.
-<br>
+</p>
+<p>
 <a href="https://www.ascasonline.org/articoloOTTOB234.html">Giorgio Busetto. "Silver Fineness Marks". Article &#35; 234. Association of Small Collectors of Antique Silver - ASCAS. 2018</a>
+</p>
 </div>
 
 <blockquote>
