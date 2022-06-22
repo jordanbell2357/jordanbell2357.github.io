@@ -163,9 +163,9 @@ metal, a mixture of a given value, as the following example
 will show.
 
 *Question 3.* A coiner has three kinds of silver, the first
-of 14 lot fineness, the second of 11 lot fineness, the third of 9 lot fineness.
+of 14 loth fineness, the second of 11 loth fineness, the third of 9 loth fineness.
 Now he wishes to form a mixture of them
-weighing 30 Marks, of 12 lot fineness: how many Marks of each
+weighing 30 Marks, of 12 loth fineness: how many Marks of each
 sort must he take?
 
 <blockquote>
@@ -177,30 +177,41 @@ Sorte nehmen?
 
 <div class="bubblebox">
 <p>
-A mixture containing silver has 14 lot fineness if ¹⁴⁄₁₆ of its mass is silver (= 875 millesimal fineness), 11 lot fineness if ¹¹⁄₁₆ of its mass is silver (= 782.5 millesimal fineness), and 9 lot fineness if ⁹⁄₁₆ of its mass is silver (= 562.5 millesimal fineness). Fine or pure silver has 16 lot fineness (= 999 millesimal fineness).
+A mixture containing silver has 14 loth fineness if ¹⁴⁄₁₆ of its mass is silver (= 875 millesimal fineness), 11 loth fineness if ¹¹⁄₁₆ of its mass is silver (= 782.5 millesimal fineness), and 9 loth fineness if ⁹⁄₁₆ of its mass is silver (= 562.5 millesimal fineness). Fine or pure silver has 16 loth fineness (= 999 millesimal fineness).
 </p>
 <p>
 „LÖTHIG, adj.“, <em>Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm</em>, digitalisierte Fassung im <em>Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21</em>, <a href="https://www.woerterbuchnetz.de/DWB?lemid=L06923">https://www.woerterbuchnetz.de/DWB?lemid=L06923</a>, abgerufen am 19.06.2022.
 </p>
 <p>
-<a href="https://www.ascasonline.org/articoloOTTOB234.html">Giorgio Busetto. "Silver Fineness Marks". Article &#35; 234. Association of Small Collectors of Antique Silver - ASCAS. 2018</a>
+<a href="https://www.ascasonline.org/articoloOTTOB234.html">Giorgio Busetto. "Silver Fineness Marks". Article &#35;234. Association of Small Collectors of Antique Silver - ASCAS. 2018</a>
 </p>
 </div>
 
 <blockquote>
 Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die \(x\) Marck enthalten \(14x\) Loth Silber; eben so werden die \(y\) Marck von der zweyten Sorte enthalten 11\(y\) Loth; und die \(z\) Marck von der dritten Sorte werden enthalten 9\(z\) Loth Silber; dahero die gantze Maße an Silber enthalten wird 14\(x\) + 11\(y\) + 9\(z\) Loth. 
 </blockquote>
+
+<div class="bubblebox">
+<p>
+1 Mark = 8 ounces; 1 ounce = ⅛ Mark.
+</p>
     
-- 1 Mark = 8 ounces; 1 ounce = ⅛ Mark.1
+<p>
+1 Mark = 16 Loths; 1 Loth = ¹⁄₁₆ Mark.
+</p>
+    
+<p>
+1 ounce = 2 Loths; 1 Loth = ½ ounce.
+</p>
 
-- [Münzkabinett der Staatlichen Museen zu Berlin. Object number 18201786. "KBA / 65536 / 1 / MARCK"](https://ikmk.smb.museum/object?id=18201786)
+<p>
+„LOTH, n.“, <em>Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm</em>, digitalisierte Fassung im <em>Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21</em>, <a href="https://www.woerterbuchnetz.de/DWB?lemid=L06903" title="„LOTH, n.“ Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm">https://www.woerterbuchnetz.de/DWB?lemid=L06903</a>, abgerufen am 19.06.2022.
+</p>
 
-- 1 Mark = 16 Lots; 1 Lot = ¹⁄₁₆ Mark. 1 ounce = 2 Lots; 1 Lot = ½ ounce.
-
-- „LOTH, n.“, *Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm*, digitalisierte Fassung im *Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21*, <https://www.woerterbuchnetz.de/DWB?lemid=L06903>, abgerufen am 19.06.2022.
-
-
-
+<p>
+<a href="https://ikmk.smb.museum/object?id=18201786" title="1 Mark weight. Staatlichen Museen zu Berlin">Münzkabinett der Staatlichen Museen zu Berlin. Object number 18201786. "KBA / 65536 / 1 / MARCK"</a>
+</p>
+</div>
 
 <span class="art">28</span>
 
