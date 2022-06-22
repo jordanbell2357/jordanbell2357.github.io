@@ -216,6 +216,16 @@ Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden di
 </cite>
 </div>
 
+If he take $$x$$ Marks of the first kind, $$y$$ Marks of the second,
+and $$z$$ Marks of the third, he will have $$x + y + z = 30$$,
+which is the first equation.
+
+
+
+
+
+
+
 <span class="art">28</span>
 
 
