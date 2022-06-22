@@ -192,17 +192,20 @@ Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden di
 </blockquote>
 
 <div class="bubblebox">
-<p>
-1 Mark = 8 ounces; 1 ounce = ⅛ Mark.
-</p>
-    
-<p>
-1 Mark = 16 Loths; 1 Loth = ¹⁄₁₆ Mark.
-</p>
-    
-<p>
-1 ounce = 2 Loths; 1 Loth = ½ ounce.
-</p>
+<table>
+<tr>
+    <td>1 Mark = 8 ounces</td>
+    <td>1 ounce = ⅛ Mark</td>
+</tr>
+<tr>
+    <td>1 Mark = 16 Loths</td>
+    <td>1 Loth = ¹⁄₁₆ Mark</td>
+</tr>
+<tr>
+    <td>1 ounce = 2 Loths
+    <td>1 Loth = ½ ounce</td>
+</tr>
+</table>
 
 <p>
 „LOTH, n.“, <em>Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm</em>, digitalisierte Fassung im <em>Wörterbuchnetz des Trier Center for Digital Humanities, Version 01/21</em>, <a href="https://www.woerterbuchnetz.de/DWB?lemid=L06903" title="„LOTH, n.“ Deutsches Wörterbuch von Jacob Grimm und Wilhelm Grimm">https://www.woerterbuchnetz.de/DWB?lemid=L06903</a>, abgerufen am 19.06.2022.
