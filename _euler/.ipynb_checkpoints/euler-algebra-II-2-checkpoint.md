@@ -221,7 +221,7 @@ and $$z$$ Marks of the third, he will have $$x + y + z = 30$$,
 which is the first equation.
 
 Then, since a Mark of the first sort contains 14 Loths of
-fine silver, the $$x$$ Marks of this sort will contain 14$x$$ Loths of
+fine silver, the $$x$$ Marks of this sort will contain 14$$x$$ Loths of
 such silver. Also, the $$y$$ Marks of the second sort will contain 11$$y$$ Loths,
 and the $$z$$ Marks of the third sort will contain 9$$z$$ Loths of fine silver; so that the whole mass will
 contain $$14x+11y+9z$$ Loths of fine silver.
