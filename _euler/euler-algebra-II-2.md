@@ -255,7 +255,78 @@ $$
 \end{array}
 $$
 
-<span class="art">29</span>
+<span class="art">29</span> Questions sometimes occur, containing more than three
+unknown quantities; but they are also resolved in the same
+manner, as the following example will show.
+
+*Question 4.* A person buys 100 head of livestock for 100
+Reichsthalers, oxen at 10 Reichsthalers each, cows at 5 Reichsthalers,
+calves at 2 Reichsthalers, and sheep at ½ Reichsthaler each. How
+many oxen, cows, calves, and sheep, did he buy?
+
+Let the number of oxen he $$p$$, that of the cows $$q$$, of calves
+$$r$$, and of sheep $$s$$. Then we have the following equations:
+
+1. $$p+q+r+s=100$$
+2. $$10p+5q+2r+\frac{1}{2}s=100$$,
+
+or, removing the fractions, 20$$p$$ + 10$$q$$ + 4$$r$$ = 200:
+then subtracting the first equation from this, there remains
+19$$p$$ + 9$$q$$ + 3$$r$$ = 100; whence
+
+$$
+\begin{gather}
+3r=100-19p-9q\\
+r=33+\frac{1}{3}-6p-\frac{1}{3}p-3q\\
+r=33-6p-3q+\dfrac{1-p}{3};
+\end{gather}
+$$
+
+whence $$1-p$$, or $$p-1$$, must be divisible by 3; therefore if we make
+$$p-1=3t$$, we have
+
+$$
+\begin{gather}
+p=3t+1\\
+q=q\\
+r=27-19t-3q\\
+s=72+2q+16t;
+\end{gather}
+$$
+
+whence it follows, that 19$$t$$ + 3$$q$$ must be less than 27, and
+that, provided this condition be observed, we may give any
+value to $$q$$ and $$t$$. We have therefore to consider the following cases:
+
+<table>
+<tr>
+<th>1. If \(t\) = 0</th>
+<th>2. If \(t\) = 1</th>
+</tr>
+<tr>
+<td>\(p=1\)</td>
+<td>\(p=4\)</td>
+</tr>
+<tr>
+<td>\(q=q\)</td>
+<td>\(q=q\)</td>
+</tr>
+<tr>
+<td>\(r=27-3q\)</td>
+<td>\(r=8-3q\)</td>
+</tr>
+<tr>
+<td>\(s=72+2q\)</td>
+<td>\(s=88+2q\)</td>
+</tr>
+</table>
+
+We cannot make $$t=2$$, because $$r$$ would then become negative.
+
+Now, in the first case, $$q$$ cannot exceed 9; and, in the
+second, it cannot exceed 2; so that these two cases give
+the following solutions, the first giving the following ten
+answers:
 
 
 
