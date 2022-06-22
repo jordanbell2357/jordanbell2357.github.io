@@ -268,7 +268,7 @@ Let the number of oxen he $$p$$, that of the cows $$q$$, of calves
 $$r$$, and of sheep $$s$$. Then we have the following equations:
 
 1. $$p+q+r+s=100$$
-2. $$10p+5q+2r+\frac{1}{2}s=100$$,
+2. $$10p+5q+2r+\frac{1}{2}s=100,$$
 
 or, removing the fractions, 20$$p$$ + 10$$q$$ + 4$$r$$ = 200:
 then subtracting the first equation from this, there remains
