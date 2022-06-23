@@ -23,8 +23,80 @@ both of $$x$$ and of $$y$$ must be assigned in integer numbers.
 We shall consider some of those cases, beginning with the
 easiest.
 
-<span class="art">32</span>
+<span class="art">32</span> *Question 1.* To find two such numbers, that their
+product added to their sum may be 79.
 
+Call the numbers sought $$x$$ and $$y$$: then we must have
+$$xy+x+y=79$$; so that $$xy+y=79-x$$, and
+
+$$y=\dfrac{79-x}{x+1} = -1 + \dfrac{80}{x+1},$$
+
+from which we see that $$x+1$$ must be a divisor of 80. Now, 80 having
+several divisors, we shall also have several values of $$x$$, as the
+following Table will show:
+
+<table>
+<tr>
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>4</th>
+<th>5</th>
+<th>8</th>
+<th>10</th>
+<th>16</th>
+<th>20</th>
+<th>40</th>
+<th>80</th>
+</tr>
+<tr>
+<td>therefore \(x\) =</th>
+<td>0</td>
+<td>1</td>
+<td>3</td>
+<td>4</td>
+<td>7</td>
+<td>9</td>
+<td>15</td>
+<td>19</td>
+<td>39</td>
+<td>79</td>
+</tr>
+<tr>
+<td>and \(y\) =</td>
+<td>79</td>
+<td>39</td>
+<td>19</td>
+<td>15</td>
+<td>9</td>
+<td>7</td>
+<td>4</td>
+<td>3</td>
+<td>1</td>
+<td>0</td>
+</tr>
+</table>
+
+But as the answers in the bottom line are the same as
+those in the first, inverted, we have, in reality, only the five
+following; namely,
+
+<table>
+<tr>
+<td>\(x\) =</td>
+<td>0,</td>
+<td>1,</td>
+<td>3,</td>
+<td>4,</td>
+<td>7, and</td>
+</tr>
+<tr>
+<td>\(y\) =</td>
+<td>79,</td>
+<td>39,</td>
+<td>19,</td>
+<td>15,</td>
+<td>9.</td>
 
 <span class="art">33</span>
 
