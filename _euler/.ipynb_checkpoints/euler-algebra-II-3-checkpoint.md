@@ -131,52 +131,52 @@ or else $$x=g-3$$, and $$y=f-2$$. The analysis of this example is as follows:
 <tr>
 <th>Factors</th>
 <th>1</th>
-<th class="rightline">· 48</th>
+<th class="rightline">48</th>
 <th>2</th>
-<th>· 24</th>
+<th class="rightline">24</th>
 <th>3</th>
-<th>· 16</th>
+<th class="rightline">16</th>
 <th>4</th>
-<th>· 12</th>
+<th class="rightline">12</th>
 <th>6</th>
-<th>· 8</th>
+<th>8</th>
 </tr>
 <tr>
 <td></td>
 <td>\(x\)</td>
 <td class="rightline">\(y\)</td>
 <td>\(x\)</td>
-<td>\(y\)</td>
+<td class="rightline">\(y\)</td>
 <td>\(x\)</td>
-<td>\(y\)</td>
+<td class="rightline">\(y\)</td>
 <td>\(x\)</td>
-<td>\(y\)</td>
+<td class="rightline">\(y\)</td>
 <td>\(x\)</td>
 <td>\(y\)</td>
 </tr>
 <tr>
 <td>Numbers</td>
 <td>-2</td>
-<td>46</td>
+<td class="rightline">46</td>
 <td>-1</td>
-<td>22</td>
+<td class="rightline">22</td>
 <td>0</td>
-<td>14</td>
+<td class="rightline">14</td>
 <td>1</td>
-<td>10</td>
+<td class="rightline">10</td>
 <td>3</td>
 <td>6</td>
 </tr>
 <tr>
 <td>or</td>
 <td>45</td>
-<td>-1</td>
+<td class="rightline">-1</td>
 <td>21</td>
-<td>0</td>
+<td class="rightline">0</td>
 <td>13</td>
-<td>1</td>
+<td class="rightline">1</td>
 <td>9</td>
-<td>2</td>
+<td class="rightline">2</td>
 <td>5</td>
 <td>4</td>
 </tr>
