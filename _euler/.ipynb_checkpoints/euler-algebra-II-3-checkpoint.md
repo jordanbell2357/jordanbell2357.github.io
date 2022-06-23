@@ -268,13 +268,18 @@ we obtain the following three answers:
 This last value, being negative, must be omitted; and, for the same reason,
 we cannot include the last case, $$x-3=26$$.
 
-<span class="art">37</span>
-
-
-<span class="art">38</span>
-
-
-<span class="art">39</span>
+<span class="art">37</span> It would be unnecessary to analyse any more of these
+formulae, in which we find only the first power of $$y$$, and
+higher powers of $$x$$; for these cases occur but seldom, and,
+besides, they may always be resolved by the method which
+we have explained. But when $$y$$ also is raised to the second
+power, or to a degree still higher, and we wish to determine
+its value by the above rules, we obtain radical signs, which
+contain the second, or higher powers of $$x$$; and it is then
+necessary to find such values of $$x$$, as will destroy the radical
+signs, or tlie irrationality. Now, the great art of *Indeterminate Analysis*
+consists in rendering those surd, or incommensurable formulae rational:
+the methods of performing which will be explained in the following chapters.
 
 #### Editions
 
