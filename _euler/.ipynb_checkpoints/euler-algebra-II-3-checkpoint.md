@@ -215,10 +215,32 @@ Therefore,
 2. If $$5x-3=12$$, we obtain $$5y=10$$, and consequently, $$x=3$$, and $$y=2$$.
 3. If $$5x-3=32$$, we obtain $$5y=5$$, and consequently, $$x=7$$, and $$y=1$$.
 
-<span class="art">35</span> 
+<span class="art">35</span> As in this general solution we have
 
+$$my-a=\dfrac{mc+ab}{mx-b},$$
+
+it will be proper to observe, that if a number, contained in the formula
+$$mc+ab$$, have a divisor of the form $$mx-b$$, the quotient in that
+case must necessarily be contained in the formula $$my-a$$: we may
+therefore express the number $$mc+ab$$ by a product, such as
+$$(mx-b)\cdot (my-a)$$. For example, let $$m=12$$, $$a=5$$, $$b=7$$, and $$c=15$$,
+and we have
+
+$$12y-5=\dfrac{215}{12x-7}.$$
+
+Now, the divisors of 215 are 1, 5, 43, 215; and we must select from these such as are
+contained in the formula $$12x-7$$; or such as, by adding 7 to them, the sum may be
+divisible by 12: but 5 is the only divisor that satisfies this condition; so that
+$$12x-7=5$$, and $$12y-5=43$$. In the same manner, as the first of these
+equations gives $$x=1$$, we also find $$y$$, in integer numbers, from
+the other, namely, $$y=4$$. This property is of the greatest importance
+with regard to the theory of numbers, and therefore deserves particular
+attention.
 
 <span class="art">36</span> 
+
+
+<span class="art">37</span>
 
 #### Editions
 
