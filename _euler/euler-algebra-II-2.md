@@ -343,7 +343,7 @@ answers:
 <th>10</th>
 </tr>
 <tr>
-<td>\(p\) =</td>
+<td>\(p =\)</td>
 <td>1</td>
 <td>1</td>
 <td>1</td>
@@ -356,7 +356,7 @@ answers:
 <td>1</td>
 </tr>
 <tr>
-<td>\(q\) =</td>
+<td>\(q =\)</td>
 <td>0</td>
 <td>1</td>
 <td>2</td>
@@ -369,7 +369,7 @@ answers:
 <td>9</td>
 </tr>
 <tr>
-<td>\(r\) =</td>
+<td>\(r =\)</td>
 <td>27</td>
 <td>24</td>
 <td>21</td>
@@ -382,7 +382,7 @@ answers:
 <td>0</td>
 </tr>
 <tr>
-<td>\(r\) =</td>
+<td>\(s =\)</td>
 <td>72</td>
 <td>74</td>
 <td>76</td>
