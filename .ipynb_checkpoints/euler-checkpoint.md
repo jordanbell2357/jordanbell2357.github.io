@@ -24,6 +24,8 @@ permalink: /euler/
 
 ### [Part II. "Containing the Analysis of Indeterminate Quantities."](#partII)
 
+---
+
 ### Part I. "Containing the Analysis of Determinate Quantities." {#partI}
 
 #### Section I. "Of the different Methods of calculating Simple Quantities." {#partIsectionI}

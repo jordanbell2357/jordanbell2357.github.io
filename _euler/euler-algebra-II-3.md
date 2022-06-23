@@ -246,10 +246,35 @@ the other, namely, $$y=4$$. This property is of the greatest importance
 with regard to the theory of numbers, and therefore deserves particular
 attention.
 
-<span class="art">36</span> 
+<span class="art">36</span> Let us now consider also an equation of this kind,
 
+$$xy+x^2=2x+3y=29.$$
+
+First, it gives us
+
+$$y=\dfrac{2x-x^2+29}{x-3},\quad \textrm{or} \quad y= -x-1+\dfrac{26}{x-3};
+\quad \textrm{and} \quad y+x+1=\dfrac{26}{x-3}:$$
+
+so that $$x-3$$ must be a divisor of 26; and, in this case, the divisors of 26 being
+
+1, 2, 13, 26,
+
+we obtain the following three answers:
+
+1. $$x-3=1$$, or $$x=4$$; so that $$y+x+1=y+5=26$$, and $$y=21$$;
+2. $$x-3=2$$, or $$x=5$$; so that $$y+x+1=y+6=13$$, and $$y=7$$;
+3. $$x-3=13$$, or $$x=16$$; so that $$y+x+1=y+17=2$$, and $$y=-15$$.
+
+This last value, being negative, must be omitted; and, for the same reason,
+we cannot include the last case, $$x-3=26$$.
 
 <span class="art">37</span>
+
+
+<span class="art">38</span>
+
+
+<span class="art">39</span>
 
 #### Editions
 
