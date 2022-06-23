@@ -151,6 +151,8 @@ or else $$x=g-3$$, and $$y=f-2$$. The analysis of this example is as follows:
 <td>\(y\)</td>
 <td>\(x\)</td>
 <td>\(y\)</td>
+<td>\(x\)</td>
+<td>\(y\)</td>
 </tr>
 <tr>
 <td>Numbers</td>
