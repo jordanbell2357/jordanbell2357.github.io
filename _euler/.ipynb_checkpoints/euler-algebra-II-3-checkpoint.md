@@ -277,7 +277,7 @@ power, or to a degree still higher, and we wish to determine
 its value by the above rules, we obtain radical signs, which
 contain the second, or higher powers of $$x$$; and it is then
 necessary to find such values of $$x$$, as will destroy the radical
-signs, or tlie irrationality. Now, the great art of *Indeterminate Analysis*
+signs, or tlie irrationality. Now, the great art of Indeterminate Analysis
 consists in rendering those surd, or incommensurable formulae rational:
 the methods of performing which will be explained in the following chapters.
 
