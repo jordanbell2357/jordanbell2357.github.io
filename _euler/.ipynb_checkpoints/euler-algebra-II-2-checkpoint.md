@@ -428,9 +428,10 @@ And the second furnishes the three following answers:
 <td>88</td>
 <td>90</td>
 <td>92</td>
+</tr>
 </table>
 
-There are, therefore, in all, thirteen answers, which arc reduced to ten if we exclude those that
+There are, therefore, in all, thirteen answers, which are reduced to ten if we exclude those that
 contain zero, or 0.
 
 <span class="art">30</span> The method would still be the same, even if the letters
