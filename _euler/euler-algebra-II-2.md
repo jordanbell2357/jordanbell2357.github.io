@@ -304,19 +304,19 @@ value to $$q$$ and $$t$$. We have therefore to consider the following cases:
 <th>2. If \(t\) = 1</th>
 </tr>
 <tr>
-<td>\(p=1\)</td>
-<td>\(p=4\)</td>
+<td>we have \(p=1\),</td>
+<td>we have \(p=4\),</td>
 </tr>
 <tr>
-<td>\(q=q\)</td>
-<td>\(q=q\)</td>
+<td>\(q=q\),</td>
+<td>\(q=q\),</td>
 </tr>
 <tr>
-<td>\(r=27-3q\)</td>
-<td>\(r=8-3q\)</td>
+<td>\(r=27-3q\),</td>
+<td>\(r=8-3q\),</td>
 </tr>
 <tr>
-<td>\(s=72+2q\)</td>
+<td>\(s=72+2q\).</td>
 <td>\(s=88+2q\)</td>
 </tr>
 </table>
