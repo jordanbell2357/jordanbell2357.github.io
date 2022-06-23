@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 14. "Of the Resolution of Equations by Approximation."
+title: Chapter 16. "Of the Resolution of Equations by Approximation."
 part: I
 section: IV
 chapter: 16
