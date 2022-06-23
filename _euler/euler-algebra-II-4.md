@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 4. "Of the Method of rendering Surd Quantities of the form √(a+bx+cxx) rational"
+title: Chapter 4. "Of the Method of rendering Surd Quantities of the form √(a+bx+cxx) rational."
 part: II
 chapter: 4
 ---
