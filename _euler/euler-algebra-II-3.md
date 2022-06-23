@@ -98,8 +98,34 @@ following; namely,
 <td>15,</td>
 <td>9.</td>
 
-<span class="art">33</span>
+<span class="art">33</span> In the same manner, we may also resolve the general
+equation $$xy+ax+by=c$$; for we shall have $$xy+by=c-ax$$,
+and $$y=\dfrac{c-ax}{x+b}$$, or $$y=\dfrac{ab+c}{x+b}-a$$; that is to say,
+$$x+b$$ must be a divisor of the known number $$ab+c$$;
+so that each divisor of this number gives a value of $$x$$. If
+we therefore make $$ab+c=fg$$, we have
 
+$$y=\dfrac{fg}{x+b}-a;$$
+
+and supposing $$x+b=f$$, or $$x=f-b$$, it is evident, that $$y=g-a$$;
+and, consequently, that we have also two answers for every method of
+representing the number $$ab+c$$ by a product, such as $$fg$$.
+Of these two answers, one is $$x=f-b$$ and $$y=g-a$$, and the other
+is obtained by making $$x+b=g$$, in which case $$x=g-b$$,
+and $$y=f-a$$.
+
+If, therefore, the equation $$xy+2x+3y=42$$ were proposed, we should have
+$$a=2$$, $$b=3$$, and $$c=42$$;
+consequently, $$y=\dfrac{48}{x+3}-2$$. Now, the number 48 may be
+represented in several ways by two factors, as $$fg$$: and in each
+of those cases we shall always have either $$x=f-3$$, and $$y=g-2$$;
+or else $$x=g-3$$, and $$y=f-2$$. The analysis of this example is as follows:
+
+
+<span class="art">34</span> 
+
+
+<span class="art">35</span> 
 
 #### Editions
 
