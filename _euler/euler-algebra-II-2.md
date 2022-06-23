@@ -270,9 +270,9 @@ $$r$$, and of sheep $$s$$. Then we have the following equations:
 1. $$p+q+r+s=100$$
 2. $$10p+5q+2r+\frac{1}{2}s=100,$$
 
-or, removing the fractions, 20$$p$$ + 10$$q$$ + 4$$r$$ = 200:
+or, removing the fractions, $$20p + 10q + 4r = 200$$:
 then subtracting the first equation from this, there remains
-19$$p$$ + 9$$q$$ + 3$$r$$ = 100; whence
+$$19p + 9q + 3r = 100$$; whence
 
 $$
 \begin{gather}
@@ -294,18 +294,18 @@ s=72+2q+16t;
 \end{gather}
 $$
 
-whence it follows, that 19$$t$$ + 3$$q$$ must be less than 27, and
+whence it follows, that $$19t+3q$$ must be less than 27, and
 that, provided this condition be observed, we may give any
 value to $$q$$ and $$t$$. We have therefore to consider the following cases:
 
 <table>
 <tr>
-<th>1. If \(t\) = 0</th>
-<th>2. If \(t\) = 1</th>
+<th>1. \(t\) = 0</th>
+<th>2. \(t\) = 1</th>
 </tr>
 <tr>
-<td>we have \(p=1\),</td>
-<td>we have \(p=4\),</td>
+<td>\(p=1\),</td>
+<td>\(p=4\),</td>
 </tr>
 <tr>
 <td>\(q=q\),</td>
