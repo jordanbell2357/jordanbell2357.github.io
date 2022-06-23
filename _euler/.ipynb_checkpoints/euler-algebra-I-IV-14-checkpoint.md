@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 14. "Of the Rule of Bomhelli, for reducing the Resolution of Equations of the Fourth Degree to that of Equations of the Third Degree."
+title: Chapter 14. "Of the Rule of Bombelli, for reducing the Resolution of Equations of the Fourth Degree to that of Equations of the Third Degree."
 part: I
 section: IV
 chapter: 14
