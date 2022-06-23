@@ -131,7 +131,7 @@ or else $$x=g-3$$, and $$y=f-2$$. The analysis of this example is as follows:
 <tr>
 <th>Factors</th>
 <th>1</th>
-<th>· 48</th>
+<th class="rightline">· 48</th>
 <th>2</th>
 <th>· 24</th>
 <th>3</th>
@@ -144,7 +144,7 @@ or else $$x=g-3$$, and $$y=f-2$$. The analysis of this example is as follows:
 <tr>
 <td></td>
 <td>\(x\)</td>
-<td>\(y\)</td>
+<td class="rightline">\(y\)</td>
 <td>\(x\)</td>
 <td>\(y\)</td>
 <td>\(x\)</td>
