@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 5. "Of the Cases in which the Formula a+bx+cxx can never become a Square."
+title: Chapter 5. "Of the Cases in which the Formula 𝑎+𝑏𝑥+𝑐𝑥𝑥 can never become a Square."
 part: II
 chapter: 5
 ---

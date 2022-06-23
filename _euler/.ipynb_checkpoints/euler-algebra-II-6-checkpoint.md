@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 6. "Of the Cases in Integer Numbers, in which the Formula axx+b becomes a Square."
+title: Chapter 6. "Of the Cases in Integer Numbers, in which the Formula 𝑎𝑥𝑥+𝑏 becomes a Square."
 part: II
 chapter: 6
 ---

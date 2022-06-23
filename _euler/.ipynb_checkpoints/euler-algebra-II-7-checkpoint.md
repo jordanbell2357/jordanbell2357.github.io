@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Chapter 7. "Of a particular Method, by which the Formula ann+1 becomes a Square in Integers."
+title: Chapter 7. "Of a particular Method, by which the Formula 𝑎𝑛𝑛+1 becomes a Square in Integers."
 part: II
 chapter: 7
 ---
