@@ -130,14 +130,21 @@ or else $$x=g-3$$, and $$y=f-2$$. The analysis of this example is as follows:
 <table>
 <tr>
 <th>Factors</th>
-<th>1 · 48</th>
-<th>2 · 24</th>
-<th>3 · 16</th>
-<th>4 · 12</th>
-<th>6 · 8</th>
+<th>1</th>
+<th>· 48</th>
+<th>2</th>
+<th>· 24</th>
+<th>3</th>
+<th>· 16</th>
+<th>4</th>
+<th>· 12</th>
+<th>6</th>
+<th>· 8</th>
 </tr>
 <tr>
 <td></td>
+<td>\(x\)</td>
+<td>\(y\)</td>
 <td>\(x\)</td>
 <td>\(y\)</td>
 <td>\(x\)</td>
