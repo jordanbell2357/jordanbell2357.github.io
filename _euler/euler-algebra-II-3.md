@@ -173,10 +173,52 @@ or else $$x=g-3$$, and $$y=f-2$$. The analysis of this example is as follows:
 </tr>
 </table>
 
-<span class="art">34</span> 
+<span class="art">34</span> The equation may be expressed still more generally,
+by writing $$mxy=ax+by+c$$; where $$a$$, $$b$$, $$c$$, amd $$m$$, are
+given numbers, and it is required to find integers for $$x$$ and $$y$$
+that are not known.
 
+If we first separate $$y$$, we shall have $$y=\dfrac{ax+c}{mx-b}$$;
+and removing $$x$$ from the numerator, by multiplying both sides by
+$$m$$, we have
+
+$$my = \dfrac{max+mc}{mx-b} = a + \dfrac{mc+ab}{mx-b}.$$
+
+We have here a fraction whose numerator is a known number,
+and whose denominator must be a divisor of that number;
+let us therefore represent the numerator by a product
+of two factors, as $$fg$$ (which may often be done in several
+ways), and see if one of these factors may be compared with
+$$mx-b$$, so that $$mx-b=f$$. Now, for this purpose, since
+$$x=\dfrac{f+b}{m}$$, $$f+b$$ must be divisible by $$m$$; and hence
+it follows, that out of the factors of $$mc+ab$$, we can employ
+only those which are of such a nature, by adding $$b$$ to them,
+the sums will be divisible by $$m$$. We shall illustrate this by
+an example.
+
+Let the equation be $$5xy=2x+3y+18$$. Here, we have
+
+$$y = \dfrac{2x+18}{5x-3},\quad \textrm{and} \quad 5y = \dfrac{10x+90}{5x-3} = 2 + \dfrac{96}{5x-3};$$
+
+it is therefore required to find those divisors of 26 which,
+added to 3, will give sums divisible by 5. Now, if we consider all the divisors of 96,
+which are
+
+1, 2, 3, 4, 6, 8, 12, 17, 24, 32, 48, 96,
+
+it is evident that only these three of them,
+namely 2, 12, 32, will answer this condition.
+
+Therefore,
+
+1. If $$5x-3=2$$, we obtain $$5y=50$$, and consequently, $$x=1$$, and $$y=10$$.
+2. If $$5x-3=12$$, we obtain $$5y=10$$, and consequently, $$x=3$$, and $$y=2$$.
+3. If $$5x-3=32$$, we obtain $$5y=5$$, and consequently, $$x=7$$, and $$y=1$$.
 
 <span class="art">35</span> 
+
+
+<span class="art">36</span> 
 
 #### Editions
 
