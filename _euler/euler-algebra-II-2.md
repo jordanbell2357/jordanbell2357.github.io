@@ -433,16 +433,35 @@ And the second furnishes the three following answers:
 There are, therefore, in all, thirteen answers, which arc reduced to ten if we exclude those that
 contain zero, or 0.
 
-<span class="art">30</span>
+<span class="art">30</span> The method would still be the same, even if the letters
+in the first equation were multiplied by given numbers, as
+will be seen from the following example.
 
+*Question 5.* To find three such integer numbers, that if
+the first be multiplied by 3, the second by 5, and the third
+by 7, the sum of the products may be 560;
+and if we multiply the first by 9, the second by 25, and the third by 49,
+the sum of the products may be 2920.
 
-<span class="art">31</span>
+If the first number be $$x$$, the second $$y$$, and the third $$z$$, we shall have the two equations,
 
+1. $$3x+5y+7z=560$$
+2. $$9x+25y+49z=2920.$$
 
+And here, if we subtract three times the first, or
+$$9x+15y+21z=1680$$, from the second, there remains
+$$10y+28z=1240$$; dividing by 2, we have $$5y+14z=620$$; whence
+we obtain $$y=124-\dfrac{14z}{5}$$: so that $$z$$ must be divisible
+by 5. If therefore we make $$z=5u$$, we shall have $$y=124-14u$$; which values
+of $$y$$ and $$z$$ being substituted in the first equation, we have
+$$3x-35u+620=560$$; or $$3x-35u-60$$, and $$x=\dfrac{35u}{3}-20$$; therefore we
+shall make $$u=3t$$, from which we obtain the following answer,
+$$x=35t-20$$, $$y=124-42t$$, and $$z=15t$$, in which we must substitute
+for $$t$$ an integer number greater than 0 and less than 3: so that
+we are limited to the two following answers:
 
-<span class="art">32</span>
-
-
+1. If $$t=1$$, we have $$x=15$$, $$y=82$$, $$z=15$$.
+2. If $$t=2$$, we have $$x=50$$, $$y=40$$, $$z=30$$.
     
 #### Editions
 
