@@ -217,14 +217,14 @@ Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden di
 </div>
 
 If he take $$x$$ Marks of the first kind, $$y$$ Marks of the second,
-and $$z$$ Marks of the third, he will have $$x + y + z = 30$$,
+and $$z$$ Marks of the third, he will have $$x$$ + $$y$$ + $$z$$ = 30,
 which is the first equation.
 
 Then, since a Mark of the first sort contains 14 Loths of
 fine silver, the $$x$$ Marks of this sort will contain 14$$x$$ Loths of
 such silver. Also, the $$y$$ Marks of the second sort will contain 11$$y$$ Loths,
 and the $$z$$ Marks of the third sort will contain 9$$z$$ Loths of fine silver; so that the whole mass will
-contain $$14x+11y+9z$$ Loths of fine silver.
+contain 14$$x$$+11$$y$$+9$$z$$ Loths of fine silver.
 
 As this
 mixture is to weigh 30 Marks, and each of these Marks must
@@ -235,7 +235,7 @@ second equation,
 $$14x+11y+9z=360.$$
 
 If we now subtract from this equation nine
-times the first, or $$9x+9y+9z=270$$, there remains $$5x+2y=90$$,
+times the first, or 9$$x$$ + 9$$y$$ + 9$$z$$ = 270, there remains 5$$x$$ + 2$$y$$ = 90,
 an equation which must give the values of $$x$$ and $$y$$ in integer numbers;
 and with regard to the value of $$z$$, we may derive it from the first
 equation $$z=30-x-y$$. Now, the former equation gives $$2y=90-5x$$, and
@@ -270,9 +270,9 @@ $$r$$, and of sheep $$s$$. Then we have the following equations:
 1. $$p+q+r+s=100$$
 2. $$10p+5q+2r+\frac{1}{2}s=100,$$
 
-or, removing the fractions, $$20p + 10q + 4r = 200$$:
+or, removing the fractions, 20$$p$$ + 10$$q$$ + 4$$r$$ = 200:
 then subtracting the first equation from this, there remains
-$$19p + 9q + 3r = 100$$; whence
+19$$p$$ + 9$$q$$ + 3$$r$$ = 100; whence
 
 $$
 \begin{gather}
@@ -343,7 +343,7 @@ answers:
 <th>10</th>
 </tr>
 <tr>
-<td>\(p =\)</td>
+<td>\(p\) =</td>
 <td>1</td>
 <td>1</td>
 <td>1</td>
@@ -356,7 +356,7 @@ answers:
 <td>1</td>
 </tr>
 <tr>
-<td>\(q =\)</td>
+<td>\(q\) =</td>
 <td>0</td>
 <td>1</td>
 <td>2</td>
@@ -369,7 +369,7 @@ answers:
 <td>9</td>
 </tr>
 <tr>
-<td>\(r =\)</td>
+<td>\(r\) =</td>
 <td>27</td>
 <td>24</td>
 <td>21</td>
@@ -382,7 +382,7 @@ answers:
 <td>0</td>
 </tr>
 <tr>
-<td>\(s =\)</td>
+<td>\(s\) =</td>
 <td>72</td>
 <td>74</td>
 <td>76</td>
