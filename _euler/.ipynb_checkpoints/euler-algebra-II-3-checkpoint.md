@@ -97,6 +97,8 @@ following; namely,
 <td>19,</td>
 <td>15,</td>
 <td>9.</td>
+</tr>
+</table>
 
 <span class="art">33</span> In the same manner, we may also resolve the general
 equation $$xy+ax+by=c$$; for we shall have $$xy+by=c-ax$$,
