@@ -88,7 +88,7 @@ following; namely,
 <td>1,</td>
 <td>3,</td>
 <td>4,</td>
-<td>7, and</td>
+<td>7,</td>
 </tr>
 <tr>
 <td>\(y\) =</td>
@@ -118,7 +118,11 @@ and $$y=f-a$$.
 
 If, therefore, the equation $$xy+2x+3y=42$$ were proposed, we should have
 $$a=2$$, $$b=3$$, and $$c=42$$;
-consequently, $$y=\dfrac{48}{x+3}-2$$. Now, the number 48 may be
+consequently,
+
+$$y=\dfrac{48}{x+3}-2.$$
+
+Now, the number 48 may be
 represented in several ways by two factors, as $$fg$$: and in each
 of those cases we shall always have either $$x=f-3$$, and $$y=g-2$$;
 or else $$x=g-3$$, and $$y=f-2$$. The analysis of this example is as follows:
