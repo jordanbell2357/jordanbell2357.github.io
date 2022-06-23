@@ -50,7 +50,7 @@ following Table will show:
 <th>80</th>
 </tr>
 <tr>
-<td>therefore \(x\) =</th>
+<td>therefore \(x\) =</td>
 <td>0</td>
 <td>1</td>
 <td>3</td>
