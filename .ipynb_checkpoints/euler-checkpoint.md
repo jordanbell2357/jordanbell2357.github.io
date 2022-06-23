@@ -12,9 +12,21 @@ permalink: /euler/
 
 #### [German table of contents](/assets/euler/de/TOCde.pdf)
 
-### Part I. "Containing the Analysis of Determinate Quantities."
+### [Part I. "Containing the Analysis of Determinate Quantities."](#partI)
 
-#### Section I. "Of the different Methods of calculating Simple Quantities."
+#### [Section I. "Of the different Methods of calculating Simple Quantities."](#partIsectionI)
+
+#### [Section II. "Of the different Methods of calculating Compound Quantities."](#partIsectionII)
+
+#### [Section III. "Of Ratios and Proportions."](#partIsectionIII)
+
+#### [Section IV. "Of Algebraic Equations, and the Resolution of Them."](#partIsectionIV)
+
+### [Part II. "Containing the Analysis of Indeterminate Quantities."](#partII)
+
+### Part I. "Containing the Analysis of Determinate Quantities." {#partI}
+
+#### Section I. "Of the different Methods of calculating Simple Quantities." {#partIsectionI}
 
 {% assign PartISectionI = site.euler | where: "part", "I" | where: "section", "I" %}
 
@@ -38,7 +50,7 @@ class="rowhover"
 
 -->
 
-#### Section II. "Of the different Methods of calculating Compound Quantities."
+#### Section II. "Of the different Methods of calculating Compound Quantities." {#partIsectionII}
 
 {% assign PartISectionII = site.euler | where: "part", "I" | where: "section", "II" %}
 
@@ -50,7 +62,7 @@ class="rowhover"
 {% endfor %}
 </table>
 
-#### Section III. "Of Ratios and Proportions."
+#### Section III. "Of Ratios and Proportions." {#partIsectionIII}
 
 {% assign PartISectionIII = site.euler | where: "part", "I" | where: "section", "III" %}
 
@@ -62,7 +74,7 @@ class="rowhover"
 {% endfor %}
 </table>
 
-#### Section IV. "Of Algebraic Equations, and the Resolution of Them."
+#### Section IV. "Of Algebraic Equations, and the Resolution of Them." {#partIsectionIV}
 
 {% assign PartISectionIV = site.euler | where: "part", "I" | where: "section", "IV" %}
 
@@ -74,7 +86,7 @@ class="rowhover"
 {% endfor %}
 </table>
 
-### Part II. "Containing the Analysis of Indeterminate Quantities."
+### Part II. "Containing the Analysis of Indeterminate Quantities." {#partII}
 
 {% assign PartII = site.euler | where: "part", "II" %}
 
