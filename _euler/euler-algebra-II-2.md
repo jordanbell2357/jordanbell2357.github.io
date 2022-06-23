@@ -328,9 +328,119 @@ second, it cannot exceed 2; so that these two cases give
 the following solutions, the first giving the following ten
 answers:
 
+<table>
+<tr>
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+<th>4</th>
+<th>5</th>
+<th>6</th>
+<th>7</th>
+<th>8</th>
+<th>9</th>
+<th>10</th>
+</tr>
+<tr>
+<td>\(p\) =</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>\(q\) =</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+<td>9</td>
+</tr>
+<tr>
+<td>\(r\) =</td>
+<td>27</td>
+<td>24</td>
+<td>21</td>
+<td>18</td>
+<td>15</td>
+<td>12</td>
+<td>9</td>
+<td>6</td>
+<td>3</td>
+<td>0</td>
+</tr>
+<tr>
+<td>\(r\) =</td>
+<td>72</td>
+<td>74</td>
+<td>76</td>
+<td>78</td>
+<td>80</td>
+<td>82</td>
+<td>84</td>
+<td>86</td>
+<td>89</td>
+<td>92</td>
+</tr>
+</table>
 
+And the second furnishes the three following answers:
+
+<table>
+<tr>
+<th></th>
+<th>1</th>
+<th>2</th>
+<th>3</th>
+</tr>
+<tr>
+<td>\(p\) =</td>
+<td>4</td>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>\(q\) =</td>
+<td>0</td>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>\(r\) =</td>
+<td>8</td>
+<td>5</td>
+<td>2</td>
+</tr>
+<tr>
+<td>\(s\) =</td>
+<td>88</td>
+<td>90</td>
+<td>92</td>
+</table>
+
+There are, therefore, in all, thirteen answers, which arc reduced to ten if we exclude those that
+contain zero, or 0.
 
 <span class="art">30</span>
+
+
+<span class="art">31</span>
+
+
+
+<span class="art">32</span>
 
 
     
