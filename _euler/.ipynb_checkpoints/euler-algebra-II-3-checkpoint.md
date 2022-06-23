@@ -7,9 +7,7 @@ chapter: 3
 
 ### Part {{ page.part}}. {{ page.title }}
 
-<span class="art">31</span>
-
-We shall now proceed to Indeterminate equations, in
+<span class="art">31</span> We shall now proceed to indeterminate equations, in
 which it is required to find two unknown quantities, one of
 them being multiplied by the other, or raised to a power
 higher than the first, whilst the other is found only in the
