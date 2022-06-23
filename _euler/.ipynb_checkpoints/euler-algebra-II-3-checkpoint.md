@@ -123,6 +123,51 @@ represented in several ways by two factors, as $$fg$$: and in each
 of those cases we shall always have either $$x=f-3$$, and $$y=g-2$$;
 or else $$x=g-3$$, and $$y=f-2$$. The analysis of this example is as follows:
 
+<table>
+<tr>
+<th>Factors</th>
+<th>1 · 48</th>
+<th>2 · 24</th>
+<th>3 · 16</th>
+<th>4 · 12</th>
+<th>6 · 8</th>
+</tr>
+<tr>
+<td></td>
+<td>\(x\)</td>
+<td>\(y\)</td>
+<td>\(x\)</td>
+<td>\(y\)</td>
+<td>\(x\)</td>
+<td>\(y\)</td>
+</tr>
+<tr>
+<td>Numbers</td>
+<td>-2</td>
+<td>46</td>
+<td>-1</td>
+<td>22</td>
+<td>0</td>
+<td>14</td>
+<td>1</td>
+<td>10</td>
+<td>3</td>
+<td>6</td>
+</tr>
+<tr>
+<td>or</td>
+<td>45</td>
+<td>-1</td>
+<td>21</td>
+<td>0</td>
+<td>13</td>
+<td>1</td>
+<td>9</td>
+<td>2</td>
+<td>5</td>
+<td>4</td>
+</tr>
+</table>
 
 <span class="art">34</span> 
 
