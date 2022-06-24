@@ -103,9 +103,29 @@ This last value approaches so near √2, that its square ³³²⁹²⁹⁄₁₆
 differs from the number 2 only by the small quantity
 ¹⁄₁₆₆₄₆₄, by which it exceeds it.
 
-<span class="art">788</span> 
+<span class="art">788</span> We may proceed in the same manner, when it is
+required to find by approximation cube roots, biquadrate
+roots, etc.
 
+Let there be given the equation of the third degree,
+$$x^3=a$$; or let it be proposed to find the value of $$\sqrt[3]{\vphantom{a}}a$$.
 
+Knowing that it is nearly $$n$$, we shall suppose $$x=n+p$$;
+neglecting $$p^2$$ and $$p^3$$, we shall have $$x^3=n^3+3n^2p=a$$;
+so that $$3n^2p=a-n^3$$, and $$p=\dfrac{a-n^3}{3n^2}$$; whence
+$$x=\dfrac{2n^3+a}{3n^2}$$. If, therefore, $$n$$ is nearly equal $$\sqrt[3]{\vphantom{a}}a$$,
+the quantity which we have
+now found will be much nearer it. But for still greater
+exactness, we may agani substitute this new value for $$n$$, and
+so on.
+
+For example, let $$x^3=2$$; and let it be required to determine $$\sqrt[3]{\vphantom{2}}2$$.
+Here, if $$n$$ is nearly the vaue of the number sought, the formula $$\dfrac{2n^3+2}{3n^2}$$ will
+express that number still more nearly; let us therefore make
+
+1. $$n=1$$, and we shall have $$x=\frac{4}{3}$$,
+2. $$n=\frac{4}{3}$$, and we shall have $$x=\frac{91}{72}$$,
+3. $$n=\frac{91}{72}$$, and we shall have $$x=\frac{162130896}{128634294}$$.
 
 <span class="art">789</span> 
 
