@@ -296,10 +296,29 @@ y^4=&x^4&+8x^3&+24x^2&+32x&+16\\
 \end{array}
 $$
 
+This equation being compared with our general formula,
+gives
 
+$$a=10, \quad b=4, \quad c=-8;$$
 
+whence we conclude, that
+
+$$f=5,\quad g=\frac{17}{4},\quad h=\frac{1}{4},\quad \textrm{and}\quad \surd h =\frac{1}{2};$$
+
+that the product $$\surd(pqr)$$ will be positive; and that it is from the equation of
+the third degree, $$z^3-5z^2+\frac{17}{4}z-\frac{1}{4}=0$$, that we are to
+seek for the three roots $$p$$, $$q$$, $$r$$ (<span class="artref">Art. 774</span>).
 
 <span class="art">782</span> 
+
+
+<span class="art">783</span>
+
+
+<span class="art">784</span>
+
+
+<span class="art">785</span> 
 
 #### Editions
 
