@@ -118,9 +118,66 @@ we have only the four following values of $$x$$:
 This circumstance enables us to determine the four roots
 in all cases; as may be seen in the following example.
 
-<span class="art">778</span>
+<span class="art">778</span> Let there be proposed the cc{ nation of the fourth
+degree, $$x^4-25x^2+60x-36=0$$, in which the second
+term is wanting. Now, if we compare this with the general
+formula, we have $$a=25$$, $$b=-60$$, and $$c=36$$; and
+after that,
 
+$$f=\frac{25}{2}, \quad g = \frac{625}{16} + 9 = \frac{769}{16}, \quad
+\textrm{and} \quad h= \frac{225}{4};$$
 
+by which means our equation of the third degree becomes,
+
+$$z^3-\frac{25}{2}z^2+\frac{769}{16}z-\frac{225}{4}=0.$$
+
+First, to remove the fractions, let us make $$z=\dfrac{u}{4}$$;
+and we shall have
+
+$$\dfrac{u^3}{64} - \dfrac{25u^2}{32} + \dfrac{769u}{64} - \dfrac{225}{4} = 0,$$
+
+and multiplying by the greatest denominator, we obtain
+
+$$u^3 - 50u^2 + 769u - 3600 = 0.$$
+
+We have now to determine the three roots of this equation;
+which are all three found to be positive; one of them being
+$$u=9$$: then dividing the equation by $$u-9$$, we find the
+new equation $$u^2-41u+400=0$$, or $$u^2=41u-400$$,
+which gives
+
+$$u=\frac{41}{2} \pm \surd \left( \frac{1681}{4} - \frac{1600}{4}\right) = \dfrac{41 \pm 9}{2};$$
+
+so that the three roots are $$u=9$$, $$u=16$$, and $$u=25$$.
+
+Consequently, as $$z=\dfrac{u}{4}$$ the roots are
+
+1. $$z=\frac{9}{4}$$,
+2. $$z=4$$,
+3. $$z=\frac{25}{4}$$.
+
+These, therefore, are the values of the letters $$p$$, $$q$$, and $$r$$;
+that is to say, $$p=\frac{9}{4}$$, $$q=4$$, and $$r=\frac{25}{4}$$. Now, if we
+consider that $$\surd(pqr)=\surd h = -\frac{15}{2}$$, and that therefore
+this value $$=\frac{1}{8}b$$ is negative, we must, agreeably to what has been
+said with regard to the signs of these roots $$\surd p$$, $$\surd q$$, and $$\surd r$$,
+take all those three roots negatively, or take only one of them negatively;
+and consequently, as $$\surd p = \frac{3}{2}$$, $$\surd q=2$$, and
+$$\surd r=\frac{5}{2}$$, the four roots of the given equation are found to be:
+
+1. $$x=\frac{3}{2}+2-\frac{5}{2} = 1$$,
+2. $$x=\frac{3}{2}-2+\frac{5}{2}=2$$,
+3. $$x=-\frac{3}{2}+2+\frac{5}{2}=3$$,
+4. $$x=-\frac{3}{2}-2-\frac{5}{2}=-6$$.
+
+From these roots are formed the four factors,
+
+$$(x-1)\cdot (x-2)\cdot (x-3)\cdot (x+6)=0.$$
+
+The first two, multiplied together, give $$x^2-3x+2$$;
+the product of the last two together is $$x^2+3x-18$$;
+again multiplying these two products together, we obtain
+exactly the equation proposed.
 
 <span class="art">779</span>
 
