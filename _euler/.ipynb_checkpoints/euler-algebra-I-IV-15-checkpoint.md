@@ -179,7 +179,22 @@ the product of the last two together is $$x^2+3x-18$$;
 again multiplying these two products together, we obtain
 exactly the equation proposed.
 
-<span class="art">779</span>
+<span class="art">779</span> It remains now to show how an equation of the
+fourth degree, in which the second term is found, may be
+transformed into another, in which that term is wanting: for
+which we shall give the following rule.
+
+Let there be proposed the general equation
+
+$$y^4+ay^3+by^2+cy+d=0.$$
+
+If we add to $$y$$ the fourth part of the coefficient of the second term, or
+$$\frac{1}{4}a$$, and write, instead of the sum, a new letter $$x$$, so that
+$$y+\frac{1}{4}a=x$$, and consequently $$y=x-\frac{1}{4}a$$: we shall have
+
+$$y^2=x^2-\frac{1}{2}ax+\frac{1}{16}a^2, \quad y^3=x^3-\frac{3}{4}ax^2+\frac{3}{16}a^2x-\frac{1}{64}a^3,$$
+
+and, lastly, as follows
 
 
 <span class="art">780</span> 
