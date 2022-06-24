@@ -265,7 +265,26 @@ more and more exactly by the succeeding fractions:
 For example, ⁹⁹⁄₇₀ has for its square ⁹⁸⁰¹⁄₄₉₀₀, which differs
 only by ¹⁄₄₉₀₀ from the number 2.
 
-<span class="art">795</span> 
+<span class="art">795</span> This method is no less applicable to equations, which
+have a greater number of dimensions. If, for example, we
+have the equation of the third degree $$x^3=x^2+2x+1$$,
+we must make $$x=\dfrac{q}{p}$$, $$x^2=\dfrac{r}{p}$$, and $$x^3=\dfrac{s}{p}$$;
+we shall then have $$s=r+2q+p$$; which shows how, by means of the three terms
+$$p$$, $$q$$, and $$r$$, we are to determine the succeeding one, $$s$$;
+and, as the beginning is always arbitrary, we may form the following series:
+
+0, 0, 1, 1, 3, 6, 13, 28, 60, 129, etc.
+
+from which result the following fractions for the approximate values of $$x$$:
+
+$$x=\frac{0}{0},\frac{1}{0},\frac{1}{1},\frac{3}{1},\frac{6}{3},\frac{13}{6},\frac{28}{13},\frac{60}{28},\frac{129}{60},\;\textrm{etc.}$$
+
+The first of these values would be very far from the truth;
+but if we substitute in the equation ⁶⁰⁄₂₈, or ¹⁵⁄₇, instead of $$x$$, we obtain
+
+³³⁷⁵⁄₃₄₃ = ²²⁵⁄₄₉ + ³⁰⁄₇ + 1 = ³³⁸⁸⁄₃₄₃,
+
+in which the error is only ¹³⁄₃₄₃.
 
 
 
