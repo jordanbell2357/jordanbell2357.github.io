@@ -8,9 +8,40 @@ chapter: 16
 
 ### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
-<span class="art">784</span> 
+<span class="art">784</span> When the roots of an equation are not rational,
+whether they may be expressed by radical quantities, or
+even if we have not that resource, as is the case with equations which exceed the fourth degree,
+we must be satisfied
+with determining their values by approximation; that is to
+say, by methods which are continually bringing us nearer to
+the true value, till at last the error being very small, it may
+be neglected. Different niethods of this kind have been proposed, the chief of which we shall explain.
+
+<span class="art">785</span> 
 
 
+
+
+<span class="art">786</span> 
+
+
+
+
+<span class="art">787</span> 
+
+
+
+
+<span class="art">788</span> 
+
+
+
+<span class="art">789</span> 
+
+
+
+
+<span class="art">790</span> 
 
 #### Editions
 
