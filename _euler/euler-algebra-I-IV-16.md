@@ -303,8 +303,23 @@ for by these means we have $$y^2-2y+1=2$$; and if we
 now make $y=\dfrac{q}{p}$$, and $$y^2=\dfrac{r}{p}$$, we shall obtain
 the same approximation that has been already given.
 
-<span class="art">797</span>
+<span class="art">797</span> It would be the same with the equation $$x^3=2$$. This method would
+not furnish such a series of numbers as would express the value of
+$$\sqrt[3]{\vphantom{2}}2$$. But we have only to suppose $$x=y-1$$, in order
+to have the equation
+$$y^3-3y^2+3y-1=2$$, or $$y^3=3y^2-3y+3$$; and then making $$y=\dfrac{q}{p}$$,
+$$y^2=\dfrac{r}{p}$$,
+and $$y^3=\dfrac{s}{p}$$, we have $$s=3r-3q+3p$$, by means of
+which we see how three given terms determine the succeeding one.
 
+Assuming then any three terms for the first, for example
+0, 0, 1, we have the following series:
+
+0, 0, 1, 3, 6, 12, 27, 63, 144, 324, etc.
+
+The last two terms of this series give $$y=\frac{324}{144}$$ and $$x=\frac{5}{4}$$.
+This fraction approaches sufficiently near the cube root of 2;
+for the cube of ⁵⁄₄ is ¹²⁵⁄₆₄, and 2 = ¹²⁸⁄₆₄.
 
 <span class="art">798</span>
 
