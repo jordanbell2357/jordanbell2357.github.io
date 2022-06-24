@@ -26,7 +26,16 @@ is nothing but the square root of the square root of $$f$$.
 
 For example, if we had the equation $$x^4=2401$$, we should immediately have $$x^2=49$$, and then $$x=7$$.
 
-<span class="art">752</span>
+<span class="art">752</span> It is true this is only one root; and since there are
+always three roots in an equation of the third degree, so also
+there are four roots in an equation of the fourth degree:
+but the method which we have explained will actually give
+those four roots. For, in the above example, we have not
+only $$x^2=49$$, but also $$x^2=-49$$; now, the first value gives
+the two roots $$x=7$$ and $$x=-7$$, and the second value gives
+$$x = \surd -49 = 7\surd -1$$,
+and $$x=-\surd -49=-7\surd -1$$; whcih are the four biquadrate roots of 2401.
+The same is also true with respect to other numbers.
 
 <span class="art">753</span>
 
