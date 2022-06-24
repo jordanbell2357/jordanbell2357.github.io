@@ -37,9 +37,31 @@ $$x = \surd -49 = 7\surd -1$$,
 and $$x=-\surd -49=-7\surd -1$$; whcih are the four biquadrate roots of 2401.
 The same is also true with respect to other numbers.
 
-<span class="art">753</span>
+<span class="art">753</span> Next to these pure equations, we shall consider
+others, in which the second and fourth terms are wanting,
+and which have the form $$x^4+fx^2+g=0$$. These may be
+resolved by the rule for equations of the second degree;
+for if we make $$x^2=y$$, we have $$y^2+fy+g=0$$, or
+$$y^2=-fy-g$$, whence we deduce
+
+$$y=-\frac{1}{2}f \pm \surd \left(\frac{1}{4}f^2-g\right) = \left( \dfrac{-f \pm \surd(f^2-4g)}{2}\right).$$
+
+Now, $$x^2=y$$; so that
+
+$$x = \pm \surd \left( \dfrac{-f \pm \surd(f^2-4g)}{2}\right),$$
+
+in which the double signs ± indicate all the four roots.
 
 <span class="art">754</span>
+
+
+<span class="art">755</span>
+
+
+<span class="art">756</span>
+
+
+<span class="art">757</span>
 
 #### Editions
 
