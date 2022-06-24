@@ -199,11 +199,31 @@ so that the two equations of the second degree become,
 Whence we obtain from the first, $$x=3 \pm \surd 1$$, that is to say,
 $$x=4$$, and $$x=2$$; and from the second, $$x=2 \pm \surd 1$$,
 that is to say, $$x=3$$, and $$x=1$$, which are the roots that we originally
-found.
+obtained.
 
-<span class="art">771</span>
+<span class="art">771</span> Let there now be proposed the equation
 
+$$x^4-16x-12=0,$$
 
+in which $$a=0$$, $$b=0$$, $$c=-16$$, $$d=-12$$; and our equation
+of the third degree will be
+
+$$8p^3+96p-256=0, \quad \textrm{or} \quad p^3+12p-32=0,$$
+
+and we may make this equation still more simple, by writing
+$$p = 2t$$; for we have then
+
+$$8t^3+24t-32=0,\quad \textrm{or} \quad t^3+3t-4=0.$$
+
+The divisors of the last term are 1, 2, 4; whence one of the roots is found to
+be $$t=1$$; therefore $$p=2$$, $$q=\surd 4=2$$, and $$r=\frac{16}{4}=4$$.
+Consequently, the two equations of the second degree are
+
+$$x^2=2x+2,\quad \textrm{and} \quad x^2=-2x-6;$$
+
+which give the roots
+
+$$x=1 \pm \surd 3,\quad \textrm{and} \quad x=-1 \pm \surd -5.$$
 
 <span class="art">772</span>
 
