@@ -69,9 +69,23 @@ and $$h$$; and we shall have,
 
 or $$\frac{1}{4}a^2+c=4g$$; consequently, $$g=\frac{1}{16}a^2+\frac{1}{4}c$$.
 
-<span class="art">776</span>
+<span class="art">776</span> Since, therefore, the equation
 
+$$x^4-ax^2-bx-c=0,$$
 
+gives the values of the letters $$f$$, $$g$$, and $$h$$, so that
+
+$$f=\frac{1}{2}a, \quad g = \frac{1}{16}a^2+\frac{1}{4}c,\quad
+\textrm{and} \quad h=\frac{1}{64}b^2,\quad
+\textrm{or} \quad \surd h=\frac{1}{8}b,$$
+
+we form from these values the equation of the third degree
+$$z^3-fz^2+gz-h=0$$, in order to obtain its roots by
+the known rule. And if we suppose those roots, first, $$z=p$$,
+second, $$z=q$$, third, $$z=r$$, one of the roots of our equation
+of the fourth degree must be, by the supposition, <span class="artref">Art. 774</span>,
+
+$$x=\surd p+\surd q+\surd r.$$
 
 <span class="art">777</span>
 
