@@ -64,8 +64,28 @@ and, lastly, we have for the last term $$p^2-r^2=d$$, or
 $$r^2=p^2-d$$. We have therefore three equations which will give
 the values of $$p$$, $$q$$, and $$r$$.
 
-<span class="art">767</span> 
+<span class="art">767</span> The easiest method of deriving those values from
+them is the following: if we take the first equation four
+times, we shall have $$4q^2=a^2+8p-4b$$;
+which equation, multiplied by the last, $$r^2=p^2-d$$, gives
 
+$$4q^2r^2=8p^3+(a^2-4b)p^2-8dp-d(a^2-4b).$$
+
+Farther, if we square the second equation, we have
+
+$$4q^2r^2=a^2p^2-2acp+c^2.$$
+
+So that we have two values of $$4q^2r^2$$, which, being made equal,
+will furnish the equation
+
+$$8p^3+(a^2-4b)p^2-8dp-d(a^2-4b) = a^2p^2-2acp+c^2,$$
+
+or, bringing all the terms to one side, and arranging,
+
+$$8p^3-4bp^2+(2ac-8d)p-a^2d+4bd-c^2=0,$$
+
+an equation of the third degree, which will always give
+the value of $$p$$ by the rules already explained.
 
 <span class="art">768</span> 
 
