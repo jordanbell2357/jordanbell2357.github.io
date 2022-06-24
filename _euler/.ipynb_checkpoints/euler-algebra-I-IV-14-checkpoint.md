@@ -111,10 +111,105 @@ find two roots; and the second equation, to which we may
 give the form $$x^2=-\left(q+\frac{1}{2}a\right)x-p-r$$,
 will furnish the two other roots.
 
-<span class="art">769</span> 
+<span class="art">769</span> Let us illustrate this rule by an example, and suppose that the equation
+
+$$x^4-10x^3+35x^2-50x+24=0$$
+
+was given. If we compare it with our general formula (at the end of <span class="artref">Art. 767</span>),
+we have $$a=-10$$, $$b=35$$, $$c=-50$$, $$d=24$$; and, consequently, the equation which must give
+the value of $$p$$ is
+
+$$8p^3-140p^2+808p-1540=0,$$
+
+or
+
+$$2p^3-35p^2+202p-385=0.$$
+
+The divisors of the last term are 1, 5, 7, 11, etc.; the
+first of which does not answer; but making $$p=5$$, we get
+250-875+1010-385=0, so that $$p=5$$; and if we farther suppose
+686-1715+1414-385=0, a proof that $$p=7$$ is the second root.
+It remains now to find the third root; let us therefore divide
+the equation by 2, in order to have
+
+$$p^3-\frac{35}{2}p^2+101p-\frac{385}{2}=0,$$
+
+and let us consider that the coefficients of the second term, or
+³⁵⁄₂, being the sum of all the three roots, and the first two
+making together 12, the third must necessarily be ¹¹⁄₂.
+
+We consequently know the three roots required. But it
+may be observed that one would have been sufficient,
+because each gives the same four roots for our equation of the
+fourth degree.
+
+<span class="art">770</span> To prove this, let $$p=5$$; we shall then have, by the formula, $$\surd\left(\frac{1}{4}a^2+2p-b\right)$$,
+
+$$q=\surd(25+10-35)=0, \quad \textrm{and} \quad r=\dfrac{-50+50}{0} = \frac{0}{0}.$$
+
+Now, nothing being determined
+by this, let us take the third equation,
+
+$$r^2=p^2-d=25-24=1,$$
+
+so that $$r=1$$; our two equations of the second degree will then be:
+
+1. $$x^2=5x-4$$,
+2. $$x^2=5x-6$$.
+
+The first gives the roots
+
+$$x=\frac{5}{2}\pm\surd \frac{9}{4},\quad \textrm{or} \quad x=\dfrac{5 \pm 3}{2},$$
+
+that is to say, $$x=4$$ and $$x=1$$.
+
+The second equation gives
+
+$$x=\frac{5}{2} \pm \surd \frac{1}{4} = \dfrac{5 \pm 1}{2},$$
+
+that is to say, $$x=3$$, and $$x=2$$.
+
+But suppose now $$p=7$$, we shall have
+
+$$q=\surd(25+14-35)=2,\quad \textrm{and} \quad r=\dfrac{-70+50}{4}=-5,$$
+
+whence results the two equations of the second degree,
+
+1. $$x^2=7x-12$$,
+2. $$x^2=3x-2$$;
+
+the first gives $$x=\frac{7}{2} \pm \surd \frac{1}{4}$$, or $$x=\dfrac{7 \pm 1}{2}$$,
+so that $$x=4$$, and $$x=3$$; the second furnishes the root
+
+$$x=\frac{3}{2} \pm \surd \frac{1}{4} = \dfrac{3 \pm 1}{2},$$
+
+and, consequently, $$x=2$$, and $$x=1$$; therefore by this second supposition
+the same four roots are found as by the first.
+
+Lastly, the same roots are found, by the third value of $$p$$,
+= ¹¹⁄₂: for, in this case, we have
+
+$$q=\surd(25+11-35)=1,\quad \textrm{and} \quad r=\dfrac{-55+50}{2}= -\frac{5}{2};$$
+
+so that the two equations of the second degree become,
+
+1. $$x^2=6x$$,
+2. $$x^2=4x-3$$.
+
+Whence we obtain from the first, $$x=3 \pm \surd 1$$, that is to say,
+$$x=4$$, and $$x=2$$; and from the second, $$x=2 \pm \surd 1$$,
+that is to say, $$x=3$$, and $$x=1$$, which are the roots that we originally
+found.
+
+<span class="art">771</span>
 
 
-<span class="art">770</span> 
+
+<span class="art">772</span>
+
+
+
+<span class="art">773/span> 
 
 
 #### Editions
