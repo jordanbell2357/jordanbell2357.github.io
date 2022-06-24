@@ -73,10 +73,35 @@ $$x=4\frac{17}{36} - \frac{1}{11592} = 4\frac{4473}{11592},$$
 a value which is so near the truth, that we may consider the error
 as of no importance.
 
-<span class="art">787</span> 
+<span class="art">787</span> Now, in order to generalise what we have here laid
+down, let us suppose the given equation to be $$x^2=a$$,
+and that we previously know $$x$$ to be greater than $$n$$, but less
+than $$n+1$$. If we now make $$x=n+p$$, $$p$$ must be a fraction,
+and $$p^2$$ may be neglected as a very small quantity,
+so that we shall have $$x^2=n^2+2np=a$$; or $$2np=a-n^2$$,
+and $$p=\dfrac{a-n^2}{2n}$$; consequently,
 
+$$x=n+\dfrac{a-n^2}{2n} = \dfrac{n^2+a}{2n}.$$
 
+Now, if $$n$$ approximated towards the true value, this new value
+$$\dfrac{n^2+a}{2n}$$ will approximate much nearer; and, by
+substituting it for $$n$$, we shall find the result much nearer the
+truth; that is, we shall obtain a new value, which may again
+be substituted, in order to approach still nearer; and the
+same operation may be continued as long as we please.
 
+For example, let $$x^2=2$$; that is to say, let the square
+root of 2 be required; as as we already know a value sufficiently
+near, which is expressed by $$n$$, we shall have a still
+nearer value of the root expressed by $$\dfrac{n^2+2}{2n}$$. Let therefore,
+
+1. $$n=1$$, and we shall have $$x=\frac{3}{2}$$,
+2. $$n=\frac{3}{2}$$, and we shall have $$x=\frac{17}{12}$$,
+3. $$n=\frac{17}{12}$$, and we shall have $$x=\frac{577}{408}$$.
+
+This last value approaches so near √2, that its square ³³²⁹²⁹⁄₁₆₆₄₆₄
+differs from the number 2 only by the small quantity
+¹⁄₁₆₆₄₆₄, by which it exceeds it.
 
 <span class="art">788</span> 
 
