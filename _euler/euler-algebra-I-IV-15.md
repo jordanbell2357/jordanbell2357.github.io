@@ -52,9 +52,22 @@ degree,
 
 $$z^3-fz^2+gz-h=0.$$
 
-<span class="art">775</span>
+<span class="art">775</span> The equation of the fourth degree, at which we
+have arrived, may be considered as general, although the
+second term $$x^2y$$ is wanting; for we shall afterwards show,
+that every complete equation may be transformed into another,
+from which the second term has been taken away.
 
+Let there be proposed the equation $$x^4-ax^2-bx-c=0$$,
+in order to determine its root. This we must first compare
+with the formula, in order to obtain the values of $$f$$, $$g$$,
+and $$h$$; and we shall have,
 
+1. $$2f=a$$, and, consequently, $$f=\dfrac{a}{2}$$;
+2. $$8\surd h=b$$, so that $$h=\dfrac{b^2}{64}$$;
+3. $$f^2-4g=-c$$, or $$\dfrac{a^2}{4}-4g+c=0$$,
+
+or $$\frac{1}{4}a^2+c=4g$$; consequently, $$g=\frac{1}{16}a^2+\frac{1}{4}c$$.
 
 <span class="art">776</span>
 
