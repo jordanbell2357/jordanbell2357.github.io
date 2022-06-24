@@ -215,7 +215,47 @@ $$x=-\dfrac{qa}{2} \pm \frac{1}{2}a\surd(q^2-4);$$
 
 and these are the four roots of the given equation.
 
-<span class="art">762</span>
+<span class="art">762</span> To render this more clear, let there be given the
+equation
+
+$$x^4-4x^3-3x^2-4x+1=0.$$
+
+We have here $$a=1$$, $$m=-4$$, $$n=-3$$; consequently, $$m^2-4n+8=36$$, and the
+square root of this quantity is = 6; therefore
+
+$$p=\dfrac{-4+6}{2}=1,\quad \textrm{and} \quad q=\dfrac{-4-6}{2} = -5;$$
+
+whence result the four roots, the first and second
+
+$$x=-\frac{1}{2} \pm \frac{1}{2} \surd -3 = \dfrac{-1 \pm \surd (-3)}{2};$$
+
+and the third and fourth
+
+$$x = \frac{5}{2} \pm \frac{1}{2}\surd 21 = \dfrac{5 \pm \surd 21}{2};$$
+
+that is, the four roots of the given equation are:
+
+1. $$x=\dfrac{-1+\surd -3}{2}$$,
+2. $$x=\dfrac{-1-\surd -3}{2}$$,
+3. $$x=\dfrac{5+\surd 21}{2}$$,
+4. $$x=\dfrac{5-\surd 21}{2}$$.
+
+The first two of these roots are imaginary, or impossible;
+but the last two are possible; since we may express √21
+to any degree of exactness, by means of decimal fractions.
+In fact, 21 being the same with 21.00000000, we have only to
+extract the square root, which gives √21 = 4.5825.
+
+Since, therefore, √21 = 4.5825, the third root is very nearly $$x=4.7912$$,
+and the fourth $$x=0.2087$$.
+It would have been easy to have determined these roots with still
+more precision; for we observe that the fourth root is very nearly
+²⁄₁₀, or ⅕, which value will answer the equation with
+sufficient exactness. In fact, if we make $$x=\frac{1}{5}$$, we find
+
+¹⁄₆₂₅ - ⁴⁄₁₂₅ - ³⁄₂₅ - ⅘ + 1 = ³¹⁄₆₂₅.
+
+We ought however to have obtained 0, but the difference is evidently not great.
 
 <span class="art">763</span>
 
