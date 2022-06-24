@@ -17,10 +17,20 @@ say, by methods which are continually bringing us nearer to
 the true value, till at last the error being very small, it may
 be neglected. Different niethods of this kind have been proposed, the chief of which we shall explain.
 
-<span class="art">785</span> 
-
-
-
+<span class="art">785</span> The first method which we shall mention, supposes
+that we have already determined, with tolerable exactness,
+the value of one root; that we know, for example, that
+such a value exceeds 4, and that it is less than 5. In this
+case, if we suppose this value = $$4+p$$, we are certain that
+$$p$$ expresses a fraction. Now, as $$p$$ is a fraction, and consequently less than unity,
+the square of $$p$$, its cube, and, in
+general, all the higher powers of $$p$$, will be much less with respect to unity;
+and, for this reason, since we require only an
+approximation, they may be neglected in the calculation.
+When we have, therefore, nearly determined the fraction $$p$$,
+we shall know more exactly the root $$4+p$$; from that we
+proceed to determine a new value still more exact, and continue the same process till we come as near the truth as we
+desire.
 
 <span class="art">786</span> 
 
