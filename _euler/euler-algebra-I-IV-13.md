@@ -52,16 +52,109 @@ $$x = \pm \surd \left( \dfrac{-f \pm \surd(f^2-4g)}{2}\right),$$
 
 in which the double signs ± indicate all the four roots.
 
-<span class="art">754</span>
+<span class="art">754</span> But whenever the equation contains all the terms, it
+may be considered as the product of four factors. In fact,
+if we multiply these four factors together, 
+
+$$(x-p) \cdot (x-q) \cdot (x-r) \cdot (x-s),$$
+
+we get the product
+
+$$x^4 - (p+q+r+s)x^3 + (pq+pr+ps+qr+qs+rs)x^2
+-(pqr+pqs+prs+qrs)x+pqrs;$$
+
+and this quantity cannot be equal to 0, except when one of the four
+factors is = 0. Now, that may happen in four ways;
+
+1. when $$x=p$$;
+2. when $$x=q$$;
+3. when $$x=r$$;
+4. when $$x=s$$;
+
+and consequently these are the four roots of the equation.
+
+<span class="art">755</span> If we consider this formula with attention, we observe, in the second term, the sum of the four roots multiplied by
+$$-x^3$$; in the third term, the sum of all the possible products of two roots, multiplied by $$x^2$$;
+in the fourth term, the sum of the products of the roots combined three by three, multiplied by $$-x$$; lastly,
+in the fifth term, the product of all the four roots multiplied together.
+
+<span class="art">756</span> As the last term contains the product of all the roots,
+it is evident that such an equation of the fourth degree can
+have no rational root, which is not a divisor of the last term.
+This principle, therefore, furnishes an easy method of determining all the rational roots, when there are any; since
+we have onlv to substitute successively for $$x$$ all the divisors
+of the last term, till we find one which satisfies the terms of
+the equation: for having found such a root, for example,
+$$x=p$$, we have only to divide the equation by $$x-p$$, after
+having brought all thr terms to one side, and then suppose the quotient = 0. We thus obtian an equation
+of the third degree, which may be resolved by the rules already given.
+
+<span class="art">757</span> Now, for this purpose, it is absolutely necessary
+that all the terms should consist of integers, and that the
+first should have only unity for the coefficient; whenever,
+therefore, any terms contain fractions, we must begin by destroying those fractions, and this may always be done by
+substituting, instead $$x$$, the quantity $$y$$, divided by a number which contains all the denominators of those fractions.
+
+For example, if we have the equation
+
+$$x^4-\frac{1}{2}x^3+\frac{1}{3}x^2-\frac{3}{4}x+\frac{1}{18}=0,$$
+
+as we find here fractions which have for denominators 2, 3,
+and multiples of these numbers, let us suppose $$x=\dfrac{y}{6}$$,
+and we shall then have
+
+$$\dfrac{y^4}{6^4} - \dfrac{\frac{1}{2}y^3}{6^3} + \dfrac{\frac{1}{3}y^2}{6^2} - \dfrac{\frac{3}{4}y}{6} + \dfrac{1}{18} = 0,$$
+
+an equation, which, multiplied by $$6^4$$, becomes
+
+$$y^4-3y^3+12y^2-162y+72=0.$$
+
+If we now wish to know whether this equation has rational
+roots, we must write, instead of $$y$$, the divisors of 72 successively,
+in order to see in what cases the formula would
+really be reduced to 0.
+
+<span class="art">758</span> But as the roots may as well be positive as negative,
+we must make two trials with each divisor ; one, supposing
+that divisor positive, the other, considering it as negative.
+However, the following rule will frequently enable us to
+dispense with this. Whenever the signs + and - succeed each other regularly,
+the equation has as many positive
+roots as there are changes in the signs; and as many times
+as the same sign recurs without the other intervening, so
+many negative roots belong to the equation. Now, our
+example contains four changes of the signs, and no succession; so that all the roots are positive: and we have no
+need to take any of the divisors of the last term negatively.
+
+<span class="art">759</span> Let there be given the equation
+
+$$x^4+2x^3-7x^2-8x+12=0.$$
+
+We see here two changes of signs, and also two successions;
+whence we conclude, with certainty, that this equation contains two positive,
+and as many negative roots, which must
+all be divisors of the number 12. Now, its divisors being
+1, 2, 3, 4, 6, 12, let us first try $$x=+1$$, which actually produces
+0; therefore one of the roots is $$x=1$$.
+
+If we next make $$x=-1$$, we find +1-2-7+8+12=21-9=12: so that $$x=-1$$ is not one of the
+roots of the equation. Let us now make $$x=2$$, and we again find the quantity = 0;
+consequently, another of the roots is $$x=2$$; but $$x=-2$$, on the contrary, is found
+not to be a root. If we suppose $$x=3$$, we have 81+54-63-24+12=60, so that the supposition
+does not answer; but $$x=-3$$, giving 81-54-63+24+12=0, this is evidently one of the roots
+sought. Lastly, when we try $$x=-4$$, we likewise see the equation reduced to nothing;
+so that all the four roots are rational, and have the following values: $$x=1$$, $$x=2$$, $$x=-3$$,
+and $$x=-4$$;
+and, according to the rule given above, two of these roots are positive, and the other two
+are negative. 
+
+<span class="art">760</span>
 
 
-<span class="art">755</span>
+<span class="art">761</span>
 
 
-<span class="art">756</span>
-
-
-<span class="art">757</span>
+<span class="art">762</span>
 
 #### Editions
 
