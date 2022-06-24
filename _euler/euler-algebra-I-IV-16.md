@@ -155,8 +155,18 @@ $$x=n-\left(\dfrac{n^3+an^2+bn+c}{3n^2+2an+b}\right)
 This value, which is more exact than the first, being substituted for $$n$$,
 will furnish a new value still more accurate.
 
-<span class="art">790</span> 
+<span class="art">790</span> In order to apply this operation to an example, let
 
+$$x^3+2x^2+3x-50=0,$$
+
+in which $$a=2$$, $$b=3$$, and $$c=-50$$. If $$n$$ is supposed to be nearly
+the value of one of the roots, $$x=\dfrac{2n^3+2n^2+50}{3n^2+4n+3}$$, will be a value
+still nearer the truth.
+
+Now, the assumed value of $$x=3$$ not being far from the true one,
+we shall suppose $$n=3$$, which gives us $$x=\frac{62}{21}$$;
+and if we were to substitute this new value instead of $$n$$,
+we should find another still more exact.
 
 <span class="art">791</span> 
 
