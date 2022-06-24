@@ -321,12 +321,36 @@ The last two terms of this series give $$y=\frac{324}{144}$$ and $$x=\frac{5}{4}
 This fraction approaches sufficiently near the cube root of 2;
 for the cube of ⁵⁄₄ is ¹²⁵⁄₆₄, and 2 = ¹²⁸⁄₆₄.
 
-<span class="art">798</span>
+<span class="art">798</span> We must farther observe, with regard to this
+method, that when the equation has a rational root, and the
+beginning of the period is chosen such, that this root may
+result from it, each term of the series, divided by the preceding term,
+will give the root with equal accuracy.
 
+To show this, let there be given the equation $$x^2=x+2$$,
+one of the roots of which is $$x = 2$$; as we have here, for
+the series, the formula $$r = q + 2p$$, if we take 1, 2, for the
+first two terms, we have the series
 
+1, 2, 4, 8, 16, 32, 64, etc.,
 
+a geometrical progression, whose exponent = 2. The same
+property is proved by the equation of the third degree
+$$x^3 = x^2 + 3x + 9$$, which has $$x = 3$$ for one of the roots.
+If we suppose the first terms to be 1, 3, 9, we shall find, by
+the formula, $$s = r + 3q + 9p$$, and the series
+
+1, 3, 9, 27, 81, 243, etc.,
+
+which is likewise a geometrical progression.
 
 <span class="art">799</span>
+
+
+<span class="art">800</span>
+
+
+<span class="art">801</span>
 
 #### Editions
 
