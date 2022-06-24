@@ -225,12 +225,54 @@ which give the roots
 
 $$x=1 \pm \surd 3,\quad \textrm{and} \quad x=-1 \pm \surd -5.$$
 
-<span class="art">772</span>
+<span class="art">772</span> We shall endeavour to render this resolution still
+more familiar, by a repetition of it in the following example.
+Suppose there were given the equation
 
+$$x^4-6x^3+12x^2-12x+4=0,$$
 
+which must be contained in the formula
 
-<span class="art">773</span> 
+$$(x^2-3x+p)^2 - (qx+r)^2 = 0,$$
 
+in the former part of which we have put $$-3x$$,
+because -3 is half the coefficient -6, of the given equation.
+This formula being expanded, gives
+
+$$x^4-6x^3+(2p+9-q^2)x^2-(6p+2qr)x+p^2-r^2=0;$$
+
+which, compared with our equation, there will result from
+that comparison the following equations:
+
+1. $$2p+9-q^2=12$$,
+2. $$6p+2qr=12$$,
+3. $$p^2-r^2=4$$.
+
+The first gives $$q^2=2p-3$$;  
+the second, $$2qr=12-6p$$, or $$qr=6-3p$$;  
+the third, $$r^2=p^2-4$$.
+
+Multiplying $$r^2$$ by $$q^2$$, and $$p^2-4$$ by $$2p-3$$, we have
+
+$$q^2r^2 = 36 - 36p + 9p^2;$$
+
+so that we have the equation
+
+$$
+\begin{gather}
+2p^3-3p^2-8p+12=9p^2-36p+36,\\
+2p^3-12p^2+28p-24=0,\\
+p^3-6p^2+14p-12=0.
+\end{gather}
+$$
+
+one of the roots of which is $$p=2$$; and it follows that
+$$q^2=1$$, $$q=1$$, and $$qr-r=0$$. Therefore our equation
+will be $$(x^2-3x+2)^2 = x^2$$, and its square root will be
+$$x^2-3x+2 = \pm x$$. If we take the upper sign, we have
+$$x^2=4x-2$$; and taking the lower sign, we obtain
+$$x^2=2x-2$$, whence we derive the four roots $$x=2 \pm \surd 2$$$,
+and $$x=1 \pm \surd -1$$.
 
 #### Editions
 
