@@ -329,13 +329,44 @@ the three roots of the equation of the third degree are,
 2. $$z=q=\dfrac{4+\surd 15}{2}$$,
 3. $$z=r=\dfrac{4-\surd 15}{2}$$.
 
-<span class="art">783</span>
+<span class="art">783</span> Having therefore determined $$p$$, $$q$$, $$r$$, we have also
+their square roots; namely, $$\surd p=1$$,
 
+$$\surd q = \dfrac{\surd(8+2\surd 15)}{2},
+\quad \textrm{and} \quad
+\surd r = \dfrac{\surd(8-2\surd 15)}{2}.$$
 
-<span class="art">784</span>
+But we have already seen, (<span class="artref">Art. 675</span>, and <span class="artref">Art. 676</span>),
+that the square root of $$a \pm \surd b$$, when $$\surd(a^2-b)=c$$, is expressed by
 
+$$\surd(a \pm \surd b) = \surd\left(\dfrac{a+c}{2}\right) \pm \surd \left(\dfrac{a-c}{2}\right):$$
 
-<span class="art">785</span> 
+so that, as in the present case, $$a=8$$, and $$\surd b=2\surd 15$$; and consequently,
+$$b=60$$, and $$c=\surd(a^2-b)=2$$, we have
+
+$$\surd(8+2\surd 15) = \surd 5 + \surd 3,
+\quad \textrm{and} \quad
+\surd(8-2\surd 15) = \surd 5 - \surd 3.$$
+
+Hence, we have
+
+$$\surd p=1,\quad \surd q = \dfrac{\surd 5+\surd 3}{2},
+\quad \textrm{and} \quad \surd r = \dfrac{\surd 5 - \surd 3}{2};$$
+
+wherefore, since we also know that the product of these quantities
+is positive, the four values of $$x$$ will be:
+
+1. $$x=\surd p + \surd q + \surd r = 1 + \dfrac{\surd 5+\surd 3+\surd 5-\surd 3}{2}=1+\surd 5$$,
+2. $$x=\surd p - \surd q - \surd r = 1 + \dfrac{-\surd 5-\surd 3-\surd 5+\surd 3}{2}=1+\surd 5$$,
+3. $$x=-\surd p+\surd q-\surd r=-1+\dfrac{\surd 5+\surd 3-\surd 5+\surd 3}{2}=-1+\surd 3$$,
+4. $$x=-\surd p-\surd q+\surd r =  -1 + \dfrac{-\surd 5-\surd 3+\surd 5-\surd 3}{2}=-1-\surd 3$$.
+
+Lastly, as we have $$y=x+2$$, the four roots of the given equation are:
+
+1. $$y=3+\surd 5$$,
+2. $$y=3-\surd 5$$,
+3. $$y=1+\surd 3$$,
+4. $$y=1-\surd 3$$. 
 
 #### Editions
 
