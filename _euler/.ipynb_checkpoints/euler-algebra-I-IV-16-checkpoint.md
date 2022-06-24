@@ -382,10 +382,36 @@ in which the quotients of the division of the last terms by
 the preceding always approximate towards the greater root
 3, and never towards the less.
 
-<span class="art">800</span>
+<span class="art">800</span> We may even apply this method to equations
+which go on to infinity. The following will furnish an
+example:
 
+$$x^{\infty} = x^{\infty-1} + x^{\infty-2}+x^{\infty-3}+x^{\infty-4}+\textrm{etc.}$$
+
+The series for this equation must be such, that each term
+may be equal to the sum of all the preceding; that is, we
+must have
+
+1, 1, 2, 4, 8, 16, 32, 64, 128, etc.
+
+whence we see that the greater root of the given equation is
+exactly $$x = 2$$; and this may be shown in the following
+manner. If we divide the equation by $$x^{\infty}$$, we shall have
+
+$$1=\dfrac{1}{x}+\dfrac{1}{x^2}+\dfrac{1}{x^3}+\dfrac{1}{x^4}+\textrm{etc.},$$
+
+a geometrical progression, whose sum is found $$=\dfrac{1}{x-1}$$; so
+$$1=\dfrac{1}{x-1}$$; multiplying therefore by $$x=1$$, we have
+$$x-1=1$$, and $$x=2$$.
 
 <span class="art">801</span>
+
+
+<span class="art">802</span>
+
+
+
+<span class="art">803</span>
 
 #### Editions
 
