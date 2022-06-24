@@ -148,13 +148,78 @@ and $$x=-4$$;
 and, according to the rule given above, two of these roots are positive, and the other two
 are negative. 
 
-<span class="art">760</span>
+<span class="art">760</span> But as no root could be determined by this method,
+when the roots are all irrational, it was necessary to devise
+other expedients for expressing the roots whenever this case
+occurs; and two different methods have been discovered for
+finding such roots, whatever be the nature of the equation of
+the fourth degree.
 
+But before we explain those general methods, it will be
+proper to give the solution of some particular cases, which
+may frequently be applied with great advantage.
 
-<span class="art">761</span>
+<span class="art">761</span> When the equation is such, that the coefficients of
+the terms succeed in the same manner, both in the direct
+and in the inverse order of the terms, as happens in the following equation;
 
+$$x^4+mx^3+nx^2+mx+1=0;$$
+
+or in this other equation, which is more general:
+
+$$x^4+max^3+na^2x^2+ma^3x+a^4=0;$$
+
+we may always consider such a formula as the product of
+two factors, which are of the second degree, and are easily
+resolved. In fact, if we represent this last equation by the
+product
+
+$$(x^2+pax+a^2)\cdot(x^2+qax+a^2)=0,$$
+
+in which it is required to determine $$p$$ and $$q$$ in such a manner,
+that the above equation may be obtained, we shall find,
+by performing the multiplication,
+
+$$x^4+(p+q)ax^3+(pq+2)a^2x^2+(p+q)a^3x+a^4=0;$$
+
+and, in order that this equation may be the same as the
+former, we must have,
+
+1. $$p+q=m$$,
+2. $$pq+2=n$$,
+
+and, consequently, $$pq=n-2$$.
+
+Now, squaring the first of those equations, we have
+
+$$p^2+2pq+q^2=m^2$$; and if from this we subtract the second,
+taken four times, or $$4pq=4n-8$$, there remains
+$$p^2-2pq+q^2=m^2-4n+8$$; and taking the square root,
+we find $$p-q=\surd(m^2-4n+8)$$; also, $$p+q=m$$; we
+shall therefore have, by addition, $$2p=m+\surd(m^2-4n+8)$$,
+or $$p=\dfrac{m+\surd(m^2-4n+8)}{2}$$; and, by subtraction,
+$$2q=m-\surd(m^2-4n+8)$$, or $$q=\dfrac{m-\surd(m^2-4n+8)}{2}$$. Having
+therefore found $$p$$ and $$q$$, we have only to suppose each
+factor = 0, in order to determine the value of $$x$$. The first
+gives $$x^2+pax+a^2=0$$, or $$x^2=-pax-a^2$$, whence we obtain
+
+$$x=-\dfrac{pa}{2} \pm \surd \left(\dfrac{p^2a^2}{4} - a^2\right),$$
+
+or
+
+$$x = -\dfrac{pa}{2} \pm \frac{1}{2} a \surd(p^2-4).$$
+
+The second factor gives
+
+$$x=-\dfrac{qa}{2} \pm \frac{1}{2}a\surd(q^2-4);$$
+
+and these are the four roots of the given equation.
 
 <span class="art">762</span>
+
+<span class="art">763</span>
+
+<span class="art">764</span>
 
 #### Editions
 
