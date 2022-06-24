@@ -194,10 +194,76 @@ $$y+\frac{1}{4}a=x$$, and consequently $$y=x-\frac{1}{4}a$$: we shall have
 
 $$y^2=x^2-\frac{1}{2}ax+\frac{1}{16}a^2, \quad y^3=x^3-\frac{3}{4}ax^2+\frac{3}{16}a^2x-\frac{1}{64}a^3,$$
 
-and, lastly, as follows
+and, lastly, as follows:
 
+<table>
+<tr>
+<td>\(y^4) =</td>
+<td>\(x^4\)</td>
+<td>\(-ax^3\)</td>
+<td>\(+\frac{3}{8}a^2x^2\)</td>
+<td>\(-\frac{1}{16}a^3x\)</td>
+<td>\(+\frac{1}{256}a^4\)</td>
+</tr>
+<tr>
+<td>\(ay^3\) =</td>
+<td></td>
+<td>\(ay^3\)</td>
+<td>\(-\frac{3}{4}a^2x^2\)</td>
+<td>\(+\frac{3}{16}a^3x\)</td>
+<td>\(-\frac{1}{64}a^4\)</td>
+</tr>
+<tr>
+<td>\(by^2\) =</td>
+<td></td>
+<td></td>
+<td>\(bx^2\)</td>
+<td>\(-\frac{1}{2}abx\)</td>
+<td>\(+\frac{1}{16}a^2b\)</td>
+</tr>
+<tr>
+<td>\(cy\) =</td>
+<td></td>
+<td></td>
+<td></td>
+<td>\(cx\)</td>
+<td>\(-\frac{1}{4}ac\)</td>
+</tr>
+<tr>
+<td>\(d\) =</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td>\(d\)</td>
+</tr>
+</table>
+
+And hence, by addition,
+
+$$\left\{
+\begin{array}
+x^4&+0&-\frac{3}{8}a^2x^2&+\frac{1}{8}a^3x&-\frac{3}{256}a^4\\
+&&bx^2&-\frac{1}{2}abx&+\frac{1}{16}a^2b\\
+&&&cx&-\frac{1}{4}ac\\
+&&&&d
+\end{array}
+\right\}=0.$$
+
+We have now an equation from which the second term is
+taken away, and to which nothing prevents us from applying
+the rule before given for determining its four roots. After
+the values of $$x$$ are found, those of $$y$$ will easily be determined, since
+$$y=x-\frac{1}{4}a$$.
 
 <span class="art">780</span> 
+
+
+<span class="art">781</span> 
+
+
+
+<span class="art">782</span> 
 
 #### Editions
 
