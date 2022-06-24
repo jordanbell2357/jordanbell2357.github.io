@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Quadratic Fields
+title: Coins
 ---
 
 #### References
