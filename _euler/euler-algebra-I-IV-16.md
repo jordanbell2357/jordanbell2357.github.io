@@ -210,11 +210,43 @@ give $$\dfrac{r}{p}=x^2$$. Farther as $$\dfrac{s}{r}=x$$, we shall also have
 $$\dfrac{s}{p}=x^3$$; then, since $$\dfrac{t}{s}=x$$, we shall have $$\dfrac{t}{p}=x^4$$,
 and so on.
 
-<span class="art">793</span> 
+<span class="art">793</span> For the better explanation of this method, we shall
+begin with an equation of the second degree,
+$$x^2=x+1$$, and shall suppose that in the above series we
+have found the terms $$p$$, $$q$$, $$r$$, $$s$$, $$t$$, etc.
+Now, as $$\dfrac{q}{p}=x$$, and
+$$\dfrac{r}{p}=x^2$$, we shall have the equation
+$$\dfrac{r}{p}=\dfrac{q}{p}+1$$, or $$q+p=r$$.
+And as we find, in the same manner, that $$s=r+q$$ and $$t=s+r$$;
+we conclude that each term of our series is the sum of the two preceding terms;
+so that having the first two terms, we can easily continue the series to any
+length. With regard to the first two terms, they may be taken at pleasure:
+if we therefore suppose them to be 0, 1, our series will be
+
+0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, etc.
+
+and such, that if we divide any term by that which immediately precedes it,
+we shall have a value of $$x$$ so much nearer the true one, according as we
+have chosen a term more distant.
+The error, indeed, is very great at first, but it diminishes as we advance.
+The series of those values of $$x$$, in the order in which they are always approximating
+towards the true one, is as follows:
+
+$$x=\frac{1}{0},\frac{1}{1},\frac{2}{1},\frac{3}{2},\frac{5}{3},\frac{8}{5},\frac{13}{8},\frac{21}{13},\frac{34}{21},
+\frac{55}{34},\frac{89}{55},\frac{144}{89},\; \textrm{etc.}$$
+
+If, for example, we make $$x=\frac{21}{13}$$, we have
+
+⁴⁴¹⁄₁₆₉ = ²¹⁄₁₃ + 1 = ⁴⁴²⁄₁₆₉,
+
+in which the error is only ¹⁄₁₆₉. Any of the succeeding terms will render it still less.
+
+<span class="art">794</span> 
 
 
 
-span class="art">794</span> 
+
+<span class="art">795</span> 
 
 #### Editions
 
