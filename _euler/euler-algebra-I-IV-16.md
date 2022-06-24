@@ -168,10 +168,32 @@ we shall suppose $$n=3$$, which gives us $$x=\frac{62}{21}$$;
 and if we were to substitute this new value instead of $$n$$,
 we should find another still more exact.
 
-<span class="art">791</span> 
+<span class="art">791</span> We shall give only the following example, for equations of higher dimensions than the third.
 
+Let $$x^5=6x+10$$, or $$x^5-6x-10=0$$, where we readily perceive that 1 is too small, and that
+2 is too great. Now, if $$x=n$$ is a value not far from the true one, and we make
+$$x=n+p$$, we shall have $$x^5=n^5+5n^4p$$; and, consequently,
+
+$$n^5+5n^4p=6n+6p+10;$$
+
+or
+
+$$p(5n^4-6) = 6n+10-n^5.$$
+
+Wherefore $$p=\dfrac{6n+10-n^5}{5n^4-6}$$, and $$x=\dfrac{4n^5+10}{5n^4-6}$$.
+If we suppose $$n=1$$, we shall hae $$x=\dfrac{14}{-1} = -14$$;
+this value is altogether inapplicable, a circumstance which arises
+from the approximated value of $$n$$ having been taken by much too
+small. We shall therefore make $$n=2$$, and shall thus obtain
+$$x=\dfrac{138}{74} = \frac{69}{37}$$, a value which is much nearer
+the truth. And if we were now to substitute for $$n$$, the fraction
+⁶⁹⁄₃₇, we should obtain a still more exact value for the root $$x$$.
 
 <span class="art">792</span> 
+
+
+
+span class="art">793</span> 
 
 #### Editions
 
