@@ -209,7 +209,7 @@ found.
 
 
 
-<span class="art">773/span> 
+<span class="art">773</span> 
 
 
 #### Editions
