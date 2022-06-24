@@ -127,12 +127,41 @@ express that number still more nearly; let us therefore make
 2. $$n=\frac{4}{3}$$, and we shall have $$x=\frac{91}{72}$$,
 3. $$n=\frac{91}{72}$$, and we shall have $$x=\frac{162130896}{128634294}$$.
 
-<span class="art">789</span> 
+<span class="art">789</span> This method of approximation may be employed,
+with the same success, in finding the roots of all equations.
 
+To show this, suppose we have the general equation of
+the third degree,
 
+$$x^3+ax^2+bx+c=0,$$
 
+in which $$n$$ is very nearly the value of one of the roots. Let us make
+$$x=n-p$$; and, since $$p$$ will be a fraction, neglecting the
+powers of this letter, which are higher than the first degree,
+we shall have $$x^2=n^2-2np$$, and $$x^3=n^3-3n^2p$$; whence
+we have the equation
+
+$$n^3-3n^2p+an^2-2anp+bn-bp+c=0,$$
+
+or
+
+$$n^3+an^2+bn+c=3n^2p+2anp+bp=(3n^2+2an+b)p;$$
+
+so that $$p=\dfrac{n^3+an^2b+n-c}{3n^2+2an+b}$$, and
+
+$$x=n-\left(\dfrac{n^3+an^2+bn+c}{3n^2+2an+b}\right)
+=\dfrac{2n^3+an^2-c}{3n^2+2an+b}.$$
+
+This value, which is more exact than the first, being substituted for $$n$$,
+will furnish a new value still more accurate.
 
 <span class="art">790</span> 
+
+
+<span class="art">791</span> 
+
+
+<span class="art">792</span> 
 
 #### Editions
 
