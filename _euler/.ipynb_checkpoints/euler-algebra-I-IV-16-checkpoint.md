@@ -189,11 +189,32 @@ $$x=\dfrac{138}{74} = \frac{69}{37}$$, a value which is much nearer
 the truth. And if we were now to substitute for $$n$$, the fraction
 ⁶⁹⁄₃₇, we should obtain a still more exact value for the root $$x$$.
 
-<span class="art">792</span> 
+<span class="art">792</span> Such is the most usual method of finding the roots
+of an equation by approxmiation, and it applies successfully
+to all cases.
+
+We shall however explain another method, which deserves attention,
+on account of the facility of the calculation.
+The foundation of this method consists in determining for
+each equation a series of numbers, as $$a$$, $$b$$, $$c$$, etc. such, that
+each term of the series, divided by the preceding one, may
+express the value of the root with so much the more exactness,
+according as this series of numbers is carried to a
+greater length.
+
+Suppose we have already got the terms $$p$$, $$q$$, $$r$$, $$s$$, $$t$$, etc.,
+$$\dfrac{q}{p}$$ must express the root $$x$$ with tolerable exactness;
+that is to say, we have $$\dfrac{q}{p}=x$$ nearly. We shall have also
+$$\dfrac{r}{q}=x$$, and the multiplication of the two values will
+give $$\dfrac{r}{p}=x^2$$. Farther as $$\dfrac{s}{r}=x$$, we shall also have
+$$\dfrac{s}{p}=x^3$$; then, since $$\dfrac{t}{s}=x$$, we shall have $$\dfrac{t}{p}=x^4$$,
+and so on.
+
+<span class="art">793</span> 
 
 
 
-span class="art">793</span> 
+span class="art">794</span> 
 
 #### Editions
 
