@@ -87,8 +87,36 @@ of the fourth degree must be, by the supposition, <span class="artref">Art. 774<
 
 $$x=\surd p+\surd q+\surd r.$$
 
-<span class="art">777</span>
+<span class="art">777</span> This method appears at first to furnish only one
+root of the given equation; but if we consider that every
+sign √ may be taken negatively, as well as positively, we
+shall immediately perceive that this formula contains all the
+four roots.
 
+Farther, if we chose to admit all the possible changes
+of the signs, we should have eight different values of $$x$$,
+and yet four only can exist. But it is to be observed, that
+the product of those three terms, or $$\surd (pqr)$$, must be equal
+to $$\surd h = \frac{1}{8}b$$, and that if $$\frac{1}{8}b$$ be positive,
+the product of the terms, $$\surd p$$, $$\surd q$$, $$\surd r$$, must likewise
+be positive; so that all the variations that can be admitted are reduced
+to the four following:
+
+1. $$x=\surd p+\surd q+\surd r$$,
+2. $$x=\surd p-\surd q-\surd r$$,
+3. $$x=-\surd p+\surd q-\surd r$$,
+4. $$x=-\surd p-\surd q+\surd r$$.
+
+In the same manner, when $$\frac{1}{8}b$$ is negative,
+we have only the four following values of $$x$$:
+
+1. $$x=\surd p+\surd q-\surd r$$,
+2. $$x=\surd p-\surd q+\surd r$$,
+3. $$x=-\surd p+\surd q+\surd r$$,
+4. $$x=\surd p-\surd q-\surd r$$.
+
+This circumstance enables us to determine the four roots
+in all cases; as may be seen in the following example.
 
 <span class="art">778</span>
 
