@@ -198,7 +198,7 @@ and, lastly, as follows:
 
 <table>
 <tr>
-<td>\(y^4) =</td>
+<td>\(y^4\) =</td>
 <td>\(x^4\)</td>
 <td>\(-ax^3\)</td>
 <td>\(+\frac{3}{8}a^2x^2\)</td>
