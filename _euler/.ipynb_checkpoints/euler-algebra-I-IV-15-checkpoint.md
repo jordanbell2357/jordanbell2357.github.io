@@ -242,7 +242,7 @@ and, lastly, as follows:
 And hence, by addition,
 
 $$\left\{
-\begin{array}{lllll}
+\begin{array}{rrrrr}
 x^4&+0&-\frac{3}{8}a^2x^2&+\frac{1}{8}a^3x&-\frac{3}{256}a^4\\
 &&bx^2&-\frac{1}{2}abx&+\frac{1}{16}a^2b\\
 &&&cx&-\frac{1}{4}ac\\
@@ -286,7 +286,7 @@ value $$x+2$$, instead of $$y^2$$, its value $$x^2+4x+4$$;
 and doing the same with regard to $$y^3$$ and $$y^4$$, we shall have,
 
 $$
-\begin{array}{llllll}
+\begin{array}{rrrrrr}
 y^4=&x^4&+8x^3&+24x^2&+32x&+16\\
 -8y^3=&&-8x^3&-48x^2&-96x&-64\\
 14y^2=&&&14x^2&+56x&+56\\
