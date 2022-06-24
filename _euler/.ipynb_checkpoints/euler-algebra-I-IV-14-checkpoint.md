@@ -87,8 +87,29 @@ $$8p^3-4bp^2+(2ac-8d)p-a^2d+4bd-c^2=0,$$
 an equation of the third degree, which will always give
 the value of $$p$$ by the rules already explained.
 
-<span class="art">768</span> 
+<span class="art">768</span> Having therefore determined three values of $$p$$ by
+the given quantities $$a$$, $$b$$, $$c$$, $$d$$, when it was required to find
+only one of those values, we shall also have the values of
+the two other letters $$q$$ and $$r$$; for the first equation will
+give $$q=\surd\left(\frac{1}{4}a^2+2p-b\right)$$, and the second gives
+$$r=\dfrac{ap-c}{2q}$$.
+Now, these three values being determined for each given case, the four
+roots of the proposed equation may be found in the following manner:
 
+This equation having been reduced to the form
+
+$$\left(x^2+\frac{1}{2}ax+p\right)^2 - (qx+r)^2=0,$$
+
+we shall have
+
+$$\left(x^2+\frac{1}{2}ax+p\right)^2 = (qx+r)^2,$$
+
+and, extracting the root, $$x^2+\frac{1}{2}ax+p=qx+r$$,
+or $$x^2+\frac{1}{2}ax+p=-qx-r$$. The first equation gives
+$$x^2=\left(q-\frac{1}{2}a\right)x-p+r$$, from which we may
+find two roots; and the second equation, to which we may
+give the form $$x^2=-\left(q+\frac{1}{2}a\right)x-p-r$$,
+will furnish the two other roots.
 
 <span class="art">769</span> 
 
