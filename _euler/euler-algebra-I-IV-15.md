@@ -242,7 +242,7 @@ and, lastly, as follows:
 And hence, by addition,
 
 $$\left\{
-\begin{array}
+\begin{array}{lllll}
 x^4&+0&-\frac{3}{8}a^2x^2&+\frac{1}{8}a^3x&-\frac{3}{256}a^4\\
 &&bx^2&-\frac{1}{2}abx&+\frac{1}{16}a^2b\\
 &&&cx&-\frac{1}{4}ac\\
@@ -256,10 +256,46 @@ the rule before given for determining its four roots. After
 the values of $$x$$ are found, those of $$y$$ will easily be determined, since
 $$y=x-\frac{1}{4}a$$.
 
-<span class="art">780</span> 
+<span class="art">780</span> This is the greatest length to which we have yet
+arrived in the resolution of algebraic equations. All the
+pains that have been taken in order to resolve equations of
+the fifth degree, and those of higher dimensions, in the same
+manner, or, at least, to reduce them to inferior degrees,
+have been unsuccessful: so that we cannot give any general
+rules for finding the roots of equations, which exceed the
+fourth degree.
 
+The only success that has attended these attempts has
+been the resolution of some particular cases; the chief of
+which is that, in which a rational root takes place; for this is
+easily found by the method of divisors, because we know
+that such a root must be always a factor of the last term.
+The operation, in other respects, is the same as that we have
+explained for equations of the third and fourth degree.
 
-<span class="art">781</span> 
+<span class="art">781</span> It will be necessary, however, to apply the rule of
+Bombelli to an equation which has no rational roots.
+
+Let there be given the equation
+
+$$y^4-8y^3+14y^2+4y-8=0.$$
+
+Here we must begin with destroying the second term, by adding the fourth of its coefficient
+to $$y$$, supposing $$y-2=x$$, and substituting in the equation, instead of $$y$$, its new
+value $$x+2$$, instead of $$y^2$$, its value $$x^2+4x+4$$;
+and doing the same with regard to $$y^3$$ and $$y^4$$, we shall have,
+
+$$
+\begin{array}{llllll}
+y^4=&x^4&+8x^3&+24x^2&+32x&+16\\
+-8y^3=&&-8x^3&-48x^2&-96x&-64\\
+14y^2=&&&14x^2&+56x&+56\\
+4y=&&&&4x&+8\\
+-8=&&&&&-8\\ \hline
+0=&x^4&+0&-10x^2&-4x&+8
+\end{array}
+$$
+
 
 
 
