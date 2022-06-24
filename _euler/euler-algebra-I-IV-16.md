@@ -286,13 +286,32 @@ but if we substitute in the equation ⁶⁰⁄₂₈, or ¹⁵⁄₇, instead of
 
 in which the error is only ¹³⁄₃₄₃.
 
+<span class="art">796</span> It must be observed, however, that all equations are
+not of such a nature as to admit the application of this
+method; and, particularly, when the second term is wanting,
+it cannot be made use of. For example, let $$x^2=2$$; if we
+wished to make $$x=\dfrac{q}{p}$$, and $$x^2=\dfrac{r}{p}$$, we should have
+$$\dfrac{r}{p}=2$$, or $$r=2p$$, that is to say, $$r=0q+2p$$, whence
+would result the series
 
+1, 1, 2, 2, 4, 4, 8, 8, 16, 16, 32, 32, etc.
 
-<span class="art">796</span>
-
-
+from which Ave can draw no conclusion, because each term,
+divided by the preceding, gives always $$x=1$$, or $$x=2$$.
+But we may obviate this inconvenience, by making $$x=y-1$$;
+for by these means we have $$y^2-2y+1=2$$; and if we
+now make $y=\dfrac{q}{p}$$, and $$y^2=\dfrac{r}{p}$$, we shall obtain
+the same approximation that has been already given.
 
 <span class="art">797</span>
+
+
+<span class="art">798</span>
+
+
+
+
+<span class="art">799</span>
 
 #### Editions
 
