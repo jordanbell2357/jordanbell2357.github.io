@@ -241,12 +241,39 @@ If, for example, we make $$x=\frac{21}{13}$$, we have
 
 in which the error is only ¹⁄₁₆₉. Any of the succeeding terms will render it still less.
 
-<span class="art">794</span> 
+<span class="art">794</span> Let us also consider the equation $$x^2=2x+1$$;
+and since, in all cases, $$x=\dfrac{p}{q}$$, and $$x^2=\dfrac{r}{p}$$, we shall have
+$$\dfrac{r}{p}=\dfrac{2q}{p}+1$$, or $$r=2q+p$$; whence we infer
+that the double of each term, added to the preceding term, will
+give the succeeding one. If, therefore, we begin again with 0, 1, we shall have
+the series
 
+0, 1, 2, 5, 12, 29, 70, 169, 408, etc.
 
+Whence it follows, that the value of $$x$$ will be expressed
+still more accurately by the following fractions:
 
+$$x=\frac{1}{0},\frac{2}{1},\frac{5}{2},\frac{12}{5},\frac{29}{12},\frac{70}{29},\frac{169}{70},\frac{408}{169},\; \textrm{etc.}$$
+
+wliich, consequently, will always approximate nearer and
+nearer the true value of $$x = 1 +\surd 2$$; so that if we take
+unity from these fractions, the value of √2 will be expressed
+more and more exactly by the succeeding fractions:
+
+¹⁄₀, ¹⁄₀, ³⁄₂, ⁷⁄₅, ¹⁷⁄₁₂, ⁴¹⁄₂₉, ⁹⁹⁄₇₀, ²³⁹⁄₁₆₉, etc.
+
+For example, ⁹⁹⁄₇₀ has for its square ⁹⁸⁰¹⁄₄₉₀₀, which differs
+only by ¹⁄₄₉₀₀ from the number 2.
 
 <span class="art">795</span> 
+
+
+
+<span class="art">796</span>
+
+
+
+<span class="art">797</span>
 
 #### Editions
 
