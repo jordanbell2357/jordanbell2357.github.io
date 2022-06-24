@@ -32,10 +32,46 @@ we shall know more exactly the root $$4+p$$; from that we
 proceed to determine a new value still more exact, and continue the same process till we come as near the truth as we
 desire.
 
-<span class="art">786</span> 
+<span class="art">786</span> We shall illustrate this method first by an easy example, requiring by approximation the root of the equation
+$$x^2=20$$.
 
+Here we perceive, that $$x$$ is greater than 4 and less than 5;
+making, therefore, $$x=4+p$$, we shall have
 
+$$x^2=16+8p+p^2=20;$$
 
+but as $$p^2$$ must be very small, we shall neglect it,
+in order that we may only the equation $$16+8p=20$$, or $$8p=4$$.
+This gives $$p=\frac{1}{2}$$, and $$x=4\frac{1}{2}$$,
+which already approaches nearer the true root. If, therefore,
+we now suppose $$x=4\frac{1}{2}+p'$$; we are sure that $$p'$$
+expresses a fraction much smaller than before, and that we
+may neglect $${p'}^2$$ with greater propriety. We have,
+therefore, $$x^2=20\frac{1}{4}+9p'=20$$, or $$9p'=-\frac{1}{4}$$;
+and consequently, $$p'=-\frac{1}{36}$$; therefore
+
+$$x=4\frac{1}{2}-\frac{1}{36}=4\frac{17}{36}.$$
+
+And if we wished to approximate still nearer to the true
+value, we must make $$x=4\frac{17}{36}+p''$$, and should
+thus have
+
+$$x^2 = 20\frac{1}{1296} + 8\frac{34}{36}p''=20;$$
+
+so that $$8\frac{34}{36}p''=-\frac{1}{1296}$$,
+
+$$322p'=-\frac{36}{1296}=-\frac{1}{36},$$
+
+and
+
+$$p=-\dfrac{1}{36\cdot 322} = -\frac{1}{11592}:$$
+
+therefore
+
+$$x=4\frac{17}{36} - \frac{1}{11592} = 4\frac{4473}{11592},$$
+
+a value which is so near the truth, that we may consider the error
+as of no importance.
 
 <span class="art">787</span> 
 
