@@ -257,7 +257,50 @@ sufficient exactness. In fact, if we make $$x=\frac{1}{5}$$, we find
 
 We ought however to have obtained 0, but the difference is evidently not great.
 
-<span class="art">763</span>
+<span class="art">763</span> The second case in which such a resolution takes
+place, is the same as the first with regard to the coefficients,
+but differs from it in the signs, for we shall suppose that the
+second and the fourth terms have different signs; such, for
+example, as the equation
+
+$$x^4+max^3+na^2x^2-ma^3x+a^4=0,$$
+
+which may be represented by the product
+
+$$(x^2+pax-a^2) \cdot (x^2+qax-a^2)=0.$$
+
+For the actual multiplication of these factors gives
+
+$$x^4+(p+q)ax^3+(pq-2)a^2x^2 - (p+q)a^3x + a^4,$$
+
+a quantity equal to that which was given, if we suppose,
+in the first place, $$p+q=m$$, and in the second place,
+$$pq-2=n$$, or $$pq=n+2$$; because in this manner the fourth terms
+become equal of themselves. If we now square
+the first equation, as before (<span class="artref">Art. 761</span>)
+we shall have
+$$p^2+2pq+q^2=m^2$$; and if from this we subtract the second, taken four
+times, or $$4pq=4n+8$$, there will remain $$p^2-2pq+q^2=m^2-4n-8$$; the square
+root of which is $$p-q=\surd(m^2-4n-8)$$, and thence, by adding
+$$pn+q=m$$, we obtain
+
+$$p=\dfrac{m+\surd(m^2-4n-8)}{2};$$
+
+and by subtracting $$p+q$$,
+
+$$q = \dfrac{m-\surd(m^2-4n-8)}{2}.$$
+
+Having therefore found $$p$$ and $$q$$,
+we shall obtain from the first factor (as in <span class="artref">Art. 761</span>)
+the two roots
+
+$$x=-\frac{1}{2}pa \pm \frac{1}{2}a \surd(p^2+4),$$
+
+and from the second factor, the two roots
+
+$$x=-\dfrac{1}{2}qa \pm \frac{1}{2}a\surd(q^2+4),$$
+
+that is, we have the four roots of the equation proposed.
 
 <span class="art">764</span>
 
