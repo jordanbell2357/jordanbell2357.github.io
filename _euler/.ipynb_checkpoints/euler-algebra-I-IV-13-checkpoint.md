@@ -302,7 +302,32 @@ $$x=-\dfrac{1}{2}qa \pm \frac{1}{2}a\surd(q^2+4),$$
 
 that is, we have the four roots of the equation proposed.
 
-<span class="art">764</span>
+<span class="art">764</span> Let there be given the equation
+
+$$x^4-3\cdot 2x^3 + 3\cdot 8x + 16=0.$$
+
+Here, we have $$a=2$$, $$m=-3$$, and $$n=0$$; so that
+$$\surd(m^2-4n-8)=1$$, which is equal to $$p-q$$; and, consequently,
+
+$$p=\dfrac{-3+1}{2}=-1,\quad \textrm{and}\quad q=\dfrac{-3-1}{2}=-2.$$
+
+Therefore the first two roots are $$x=1 \pm \surd 5$$, and the
+last two are $$x=2 \pm \surd 8$$; so that the four roots sought
+will be,
+
+1. $$x=1+\surd 5$$,
+2. $$x=1-\surd 5$$,
+3. $$x=2+\surd 8$$,
+4. $$x=2-\surd 8$$.
+
+Consequently, the four factors of our equation will be
+
+$$(x-1-\surd 5)\cdot (x-1+\surd 5)\cdot (x-2-\surd 8)\cdot (x-2+\surd 8),$$
+
+and their actual multiplication produces the given equation;
+for the first two being multiplied together, give $$x^2-2x-4$$, and the other
+two give $$x^2-4x-4$$: now, these product multiplied together, make
+$$x^4-6x^3+24x+16$$, which is the same equation that was proposed.
 
 #### Editions
 
