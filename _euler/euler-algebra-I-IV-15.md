@@ -172,7 +172,7 @@ $$\surd r=\frac{5}{2}$$, the four roots of the given equation are found to be:
 
 From these roots are formed the four factors,
 
-$$(x-1)\cdot (x-2)\cdot (x-3)\cdot (x+6)=0.$$
+$$(x-1)(x-2)(x-3)(x+6)=0.$$
 
 The first two, multiplied together, give $$x^2-3x+2$$;
 the product of the last two together is $$x^2+3x-18$$;
