@@ -8,7 +8,9 @@ chapter: 13
 
 ### Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}
 
-<span class="art">749</span> 
+<span class="art">750</span> When the highest power of the quantity $$x$$ rises to
+the fourth degree, we have equations of the fourth degree,
+the general form of which is
 
 
 
