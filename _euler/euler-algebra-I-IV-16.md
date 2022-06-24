@@ -344,8 +344,43 @@ the formula, $$s = r + 3q + 9p$$, and the series
 
 which is likewise a geometrical progression.
 
-<span class="art">799</span>
+<span class="art">799</span> But if the beginning of the series exceed the root,
+we shall not approximate towards that root at all; for
+when the equation has more than one root, the series gives
+by approximation only the greatest: and we do not find one
+of the less roots, unless the first terms have been properly
+chosen for that purpose. This will be illustrated by the
+following example.
 
+Let there be given the equation $$x^2 = 4x-3$$, whose two
+roots are $$x = 1$$, and $$x = 3$$. The formula for the series is
+$$r = 4q-3p$$, and if we take 1, 1, for the first two terms of
+the series, which consequently expresses the least root, we
+have for the whole series,
+
+1, 1, 1, 1, 1, 1, 1, 1, etc.,
+
+but assuming for the leading terms the numbers 1, 3, which contain the greatest root,
+we have the series,
+
+1, 3, 9, 27, 81, 243, 729, etc.,
+
+in which all the terms express precisely the root 3. Lastly,
+if we assume any other beginning, provided
+it be such that the least term is not comprised in it, the
+series will continually approximate towards the greatest
+root 3; which may be seen by the following series:
+
+Beginning,
+
+0, 1, 4, 13, 40, 121, 364, etc.  
+1, 2, 5, 14, 41, 122, 365, etc.  
+2, 3, 6, 15, 42, 123, 366, 1095, etc.  
+2, 1, -2, -11, -38, -118, -362, -1091, -3278, etc.
+
+in which the quotients of the division of the last terms by
+the preceding always approximate towards the greater root
+3, and never towards the less.
 
 <span class="art">800</span>
 
