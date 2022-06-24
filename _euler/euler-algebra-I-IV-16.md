@@ -404,14 +404,15 @@ a geometrical progression, whose sum is found $$=\dfrac{1}{x-1}$$; so
 $$1=\dfrac{1}{x-1}$$; multiplying therefore by $$x=1$$, we have
 $$x-1=1$$, and $$x=2$$.
 
-<span class="art">801</span>
-
-
-<span class="art">802</span>
-
-
-
-<span class="art">803</span>
+<span class="art">801</span> Beside these methods of determining the roots of an
+equation by approximation, some others have been invented,
+but they are all either too tedious, or not sufficiently general.
+The method which deserves the preference to all others, is
+that which we explained first; for it applies successfully to
+to all kinds of equations: whereas the other often requires
+the equation to be prepared in a certain manner, without
+which it cannot be employed; and of this we have seen a
+proof in different examples.
 
 #### Editions
 
