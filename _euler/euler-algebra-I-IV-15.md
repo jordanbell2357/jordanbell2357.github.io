@@ -309,8 +309,25 @@ that the product $$\surd(pqr)$$ will be positive; and that it is from the equati
 the third degree, $$z^3-5z^2+\frac{17}{4}z-\frac{1}{4}=0$$, that we are to
 seek for the three roots $$p$$, $$q$$, $$r$$ (<span class="artref">Art. 774</span>).
 
-<span class="art">782</span> 
+<span class="art">782</span> Let us first remove the fractions from this equation,
+by making $$z=\dfrac{u}{2}$$, and we shall thus have, after
+multiplying by 8, the equation
 
+$$u^3-10u^2+17u-2=0,$$
+
+in which all the roots are positive. Now, the divisors of the last
+term are 1 and 2; if we try $$u=1$$, we find 1-10+17-2=6;
+so that the equation is not reduced to nothing:
+but trying $$u=2$$, we find 8-40+34-2=0, which
+answers to the equation, and shows that $$u=2$$ is one of the
+roots. The two others will be found by dividing by $$u-2$$,
+as usual; then the quotient $$u^2-8u+1=0$$ will give
+$$u^2=8u-1$$, and $$u=4 \pm \surd 15$$. And since $$z=\frac{1}{2}u$$,
+the three roots of the equation of the third degree are,
+
+1. $$z=p=1$$,
+2. $$z=q=\dfrac{4+\surd 15}{2}$$,
+3. $$z=r=\dfrac{4-\surd 15}{2}$$.
 
 <span class="art">783</span>
 
