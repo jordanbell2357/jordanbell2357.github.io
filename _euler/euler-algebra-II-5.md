@@ -7,9 +7,31 @@ chapter: 5
 
 ### Part {{ page.part}}. {{ page.title }}
 
-<span class="art">38</span> 
+<span class="art">63</span> As our general formula is composed of three terms,
+we shall observe, in the first place, that it may always be
+transformed into another, in which the middle term is wanting.
+This is done by supposing $$x=\dfrac{y-b}{2c}$$;
+which substitution changes the formula into
 
-<span class="art">39</span>
+$$a+\dfrac{by-b^2}{2c} + \dfrac{y^2-2by+b^2}{4c};
+\quad \textrm{or} \quad \dfrac{4ac-b^2+y^2}{4c};$$
+
+and since this must be a square, let us make it equal to $$\dfrac{z^2}{4}$$, we shall
+then have
+
+$$4ac-b^2+y^2=\dfrac{4cz^2}{4}=cz^2,$$
+
+and, consequently, $$y^2 = cz^2 + b^2 - 4ac$$. Whenever, therefore, our formula
+is a square, this last $$cz^2+b^2-4ac$$ will be so likewise;
+and reciprocally, if this be a square, the proposed formula will be a square also.
+If therefore we write $$t$$, instead of $$b^2-4ac$$, the whole will be reduced
+to determining whether a quantity of the form $$cz^2+t$$ can become a square or not.
+And as this formula consists only of two terms, it is certainly much
+easier to judge from that whether it be possible or not; but in
+any further inquiry we must be guided by the nature of the given numbers
+$$c$$ and $$t$$.
+
+<span class="art">64</span>
 
 #### Editions
 
