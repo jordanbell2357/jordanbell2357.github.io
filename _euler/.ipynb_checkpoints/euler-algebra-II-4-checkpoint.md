@@ -434,9 +434,28 @@ For example, let $$m=6$$, and $$n=5$$; we shall then have
 $$\dfrac{m^2}{n^2} = \frac{36}{25}$$, which is less than ³⁄₂, and evidently
 greater than ⅔, whence $$x=\frac{3}{58}$$.
 
-<span class="art">54</span>
+<span class="art">54</span> This third case leads us to consider also a fourth,
+which occurs whenever the formula $$a+bx+cx^2$$ may be
+resolved into two such parts, that the first is a square, and
+the second the product of two factors: that is to say, in this
+case, the formula must be represented by a quantity of the
+form $$p^2 + qr$$, in which the letters $$p$$, $$q$$, and $$r$$ express
+quantities of the form $$f + gx$$. It is evidcut that the rule for this
+case will be to make $$\surd(p^2+qr)=p+\dfrac{mq}{n}$$;
+for we shall thus obtain
 
+$$p^2+qr=p^2+\dfrac{2mpq}{n} + \dfrac{m^2q^2}{n^2},$$
 
+in which the terms $$p^2$$ vanish; after which we may divide by $$q$$,
+so that we find
+
+$$r=\dfrac{2mp}{n} + \dfrac{m^2q}{n^2},$$
+
+or $$n^2r=2nmp+m^2q$$, and equation from which $$x$$ is easily determined.
+This, therefore, is the fourth
+case in which our formula may be transformed into a square;
+the application of which is easy, and we shall illustrate it by
+a few examples.
 
 <span class="art">55</span>
 
