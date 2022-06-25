@@ -330,7 +330,7 @@ $$x=-\dfrac{b}{2c} \pm \surd\left(\dfrac{b^2}{4c^2}-\dfrac{a}{c}\right),$$
 
 or
 
-$$x=-\dfrac{b}[2c} \pm \dfrac{\surd(b^2-4ac)}{2c},$$
+$$x=-\dfrac{b}{2c} \pm \dfrac{\surd(b^2-4ac)}{2c},$$
 
 and, it is evident, that if $$b^2-4ac$$ be a square, this quantity
 becomes rational.
