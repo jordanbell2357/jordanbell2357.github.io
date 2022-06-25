@@ -76,12 +76,52 @@ shall have
 
 $$y=\dfrac{g(ap^2+q^2)-2afpq}{ap^2-q^2}.$$
 
-<span class="art">82</span>
+<span class="art">82</span> This operation seems not, at first, to answer our purpose;
+since having to find integer values of $$x$$ and $$y$$, we are
+brought to fractional results; and it would be required to
+solve this new question, - What numbers are we to substitute
+for $$p$$ and $$q$$, in order that the fraction may disappear? A
+question apparently still more difficult than our original one:
+but here we may employ a particular artifice, that will
+readily bring us to our object, which is as follows:
 
+As every thing must be expressed in integer numbers, let
+us make $$\dfrac{ap^2+q^2}{ap^2-q^2}=m$$, and $$\dfrac{2pq}{ap^2-q^2}=n$$,
+in order that we may have $$x=ng-mf$$, and $$y=mg-naf$$.
 
+Now, we cannot here assume $$m$$ and $$n$$ at pleasure, since
+these letters must be such as will answer to what has been
+already determined: therefore, for this purpose, let us consider their squares, and we shall find
 
+$$m^2=\dfrac{a^2p^4+2ap^2q^2+q^4}{a^2p^4-2ap^2q^2+q^4},$$
+
+and
+
+$$n^2=\dfrac{4p^2q^2}{a^2p^4-2ap^2q^2+q^4};$$
+
+and hence
+
+$$
+\begin{align}
+m^2-an^2&=\dfrac{a^2p^4+2ap^2q^2+q^4-4ap^2q^2}{a^2p^4-2ap^2q^2+q^4}\\
+&=\dfrac{a^2p^4-2ap^2q^2+q^4}{a^2p^4-2ap^2q^2+q^4}\\
+&=1.
+\end{align}
+$$
 
 <span class="art">83</span>
+
+
+
+<span class="art">84</span>
+
+
+
+<span class="art">85</span>
+
+
+
+<span class="art">86</span>
 
 #### Editions
 
