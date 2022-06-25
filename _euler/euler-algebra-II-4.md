@@ -193,10 +193,48 @@ $$(n^2-m^2)^2 + (2mn)^2 = (n^2+m^2)^2;$$
 
 that is, the same two squares, whose sum is also a square.
 
-<span class="art">46</span>
+<span class="art">46</span> Tlie case which we have just analysed furnishes two
+methods of transforming the general formula $$a + bx + cx^2$$
+into a square. The first of these methods applies to all
+the cases in which $$c$$ is a square; and the second to those in
+which $$a$$ is a square. We shall consider both these suppositions.
 
+First, let us suppose that $$c$$ is a square, or that the given
+formula is $$a+bx+f^2x^2$$. Since this must be a square,
+we shall make
+
+$$\surd(a+bx+f^2x^2) = fx+\dfrac{m}{n},$$
+
+and shall thus have
+
+$$a+bx+f^2x^2 = f^2x^2 + \dfrac{2mfx}{n} + \dfrac{m^2}{n^2},$$
+
+in which the terms containing $$x^2$$ destroy each other, so that
+
+$$a+bx = \dfrac{2mfx}{n} + \dfrac{m^2}{n^2}.$$
+
+If we multiply by $$n^2$$, we obtain
+
+$$n^2a+n^2bx = 2mnfx + m^2;$$
+
+hence we find $$x=\dfrac{m^2-n^2a}{n^2b-2mnf}$$; and,
+substituting this value for $$x$$, we shall have
+
+$$\surd(a+bx+f^2x^2) = \dfrac{m^2f-n^2af}{n^2b-2mnf} + \dfrac{m}{n} = \dfrac{mnb-m^2f-n^2a}{n^2b-2mnf}f.$$
 
 <span class="art">47</span>
+
+
+
+<span class="art">48</span>
+
+
+
+<span class="art">49</span>
+
+
+
+<span class="art">50</span>
 
 #### Editions
 
