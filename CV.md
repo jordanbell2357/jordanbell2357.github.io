@@ -15,19 +15,12 @@ permalink: /CV/
 
 ## Areas of professional and scholarly interest {#interests}
 
-- one-on-one help and guidance for learners,
-- creating learning tools for mathematics and other exact subjects,
-- statistical visualizations and information storytelling,
-- video/animation for learning,
-- frontend development,
-- app development,
-- explanatory/research reports,
-- curated reading lists,
-- time series analysis, harmonic analysis, number theory, Hamiltonian partial differential equations, Brownian motion and stochastic calculus,
-- history of mathematics,
-- financial time series,
-- global commodity flows and logistics,
-- ...
+- time series analysis
+- dynamical systems
+- statistical visualizations and information storytelling
+- dashboards and frontend development
+- history of mathematics
+- expository writing
 
 ## CV PDF {#cv-pdf}
 
@@ -58,8 +51,8 @@ University Medal in Mathematics
 
 ## Translations {#translations}
 
-- Hawking, Stephen (ed.), *God Created the Integers: The Mathematical Breakthroughs That Changed History (New Edition)*. Leonhard Euler, “On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)”, pp. 393-399, translated from the Latin by Jordan Bell. Running Press, Philadelphia, 2007. [PDF](/assets/pdfs/E41.pdf)
-
+- Hawking, Stephen (ed.), *God Created the Integers: The Mathematical Breakthroughs That Changed History (New Edition)*. Leonhard Euler, “On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)”, pp. 393-399, translated from the Latin by Jordan Bell. Running Press, Philadelphia, 2007.
+    - [PDF](/assets/pdfs/E41.pdf)
 
 ## Publications {#publications}
 

@@ -40,7 +40,7 @@ the formula $$cz^2$$ can by no means become a square; and on the
 contrary, if $$c$$ be itself a square, $$cz^2$$ will also be a square,
 whatever number be assumed for $$z$$.
 
-<span class="art">65</span>
+<span class="art">65</span> 
 
 
 
