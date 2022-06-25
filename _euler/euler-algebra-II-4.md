@@ -457,9 +457,45 @@ case in which our formula may be transformed into a square;
 the application of which is easy, and we shall illustrate it by
 a few examples.
 
-<span class="art">55</span>
+<span class="art">55</span> *Question 3.* Required a number, $$x$$, such, that double
+its square, shall exceed some other square by unity; that is,
+if we subtract unity from this double square, the remainder
+may be a square.
 
+For instance, the case applies to the number 5, whose
+square 25, taken twice, gives the number 50, which is
+greater by 1 than the square 49.
 
+According to this enunciation, $$2x^2-1$$ must be a square;
+and as we have, by the formula, $$a=-1$$, $$b=0$$, and $$c=2$$,
+it is evident that neither $$a$$ nor $$c$$ is a square; and farther,
+that the given quantity cannot be resolved into two factors,
+since $$b^2-4ac = 8$$ which is not a square; so that none of
+the first three cases will apply. But, according to the fourth,
+this formula may be represented by
+
+$$x^2+(x^2-1)=x^2+(x-1)\cdot (x+1).$$
+
+If, therelore, we suppose its root $$=x+\dfrac{m(x+1)}{n}$$,
+we shall have
+
+$$x^2+(x+1)\cdot(x-1) = x^2 + \dfrac{2mx(x+1)}{n} + \dfrac{m^2(x+1)^2}{n^2}.$$
+
+This equation, after having expunged, the terms $$x^2$$, and
+divided the other terms by $$x + 1$$, gives
+
+$$n^2x-n^2 = 2mnx + m^2x + m^2;$$
+
+whence we find $$x=\dfrac{m^2+n^2}{n^2-2mn-m^2}$$; and, since in our
+formula, $$2x^2-1$$, the square $$x^2$$ alone is found, it is indifferent
+whether we take positive or negative values for $$x$$. We may at first
+even write $$-m$$, instead of $$+m$$, in order to have
+
+$$x=\dfrac{m^2+n^2}{n^2+2mn-m^2}.$$
+
+If we make $$m=1$$, and $$n=1$$, we find $$x=1$$, and $$2x^2-1=1$$; or if
+we make $$m=1$$, and $$n=2$$, we find $$x=\frac{5}{7}$$, and $$2x^2-1=\frac{1}{49}$$;
+lastly, if we suppose $$m=1$$, and $$n=-2$$, we find $$x=-5$$, or $$x=+5$$, and $$2x^2-1=49$$.
 
 <span class="art">56</span>
 
