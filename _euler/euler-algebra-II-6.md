@@ -178,9 +178,30 @@ Now, this formula is evidently a
 square, and gives $$x=fm+gn$$. Hence we have obtained
 the same formulae for $$x$$ and $$y$$ as before.
 
-<span class="art">87</span>
+<span class="art">87</span> It will be necessary to render this solution more
+evident, by applying it to some examples.
+
+*Question 1.* To find all the integer values of $$x$$, that
+will make $$2x^2-1$$, a square, or give $$2x^2-1=y^2$$.
+
+Here, we have $$a=2$$ and $$b=-1$$; and a satisfactory
 
 
+case immediately presents itself, namely, that in which $$x=1$$
+and $$y=1$$: which gives $$f=1$$ and $$g=1$$. Now, it is
+farther required to determine such a value of $$n$$, as will give
+$$2n^2+1=m^2$$; and we see immediately, that this obtains
+when $$n=2$$, and consequently $$m=3$$; so that every case,
+which is known for $$f$$ and $$g$$, giving us these new cases
+$$x=3f+2g$$, and $$y=3g+4f$$, we derive from the first
+solution, $$f=1$$ and $$g=1$$, the following new solutions:
+
+$$
+\begin{array}{r|r|r|r}
+x=f=1&5&29&169\\
+y=g=1&7&41&239, \; \textrm{etc.}
+\end{array}
+$$
 
 <span class="art">88</span>
 
