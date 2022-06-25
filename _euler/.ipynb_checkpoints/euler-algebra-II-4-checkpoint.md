@@ -59,8 +59,19 @@ which we may be satisfied from the following cases:
 But it is requii-ed to shew how to find these values of $$x$$,
 and even all possible numbers of this kind.
 
-<span class="art">42</span>
+<span class="art">42</span> There are two methods of doing this. The first requires us to make
+$$\surd(1+x^2)=x+p$$;
+from which supposition we have $$1+x^2=x^2+2px+p^2$$, where the square
+$$x^2$$ destroys itself; so that we may express $$x$$ without a radical sign.
+For, cancelling $$x^2$$ on both sides of the equation, we obtain $$2px+p^2=1$$; whence we find
+$$x=\dfrac{1-p^2}{2p}$$; a quantity in which we may substitute for $$p$$ any number
+whatever less than unity.
 
+Let us therefore suppose $$p=\dfrac{m}{n}$$, and we have
+
+$$x=\dfrac{1-\frac{m^2}{n^2}}{\frac{2m}{n}},$$
+
+and if we multiply both terms of this fraction by $$n^2$$, we shall find $$x=\dfrac{n^2-m^2}{2mn}$$.
 
 <span class="art">43</span>
 
