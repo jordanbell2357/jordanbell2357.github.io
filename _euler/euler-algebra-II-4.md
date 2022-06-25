@@ -222,9 +222,15 @@ substituting this value for $$x$$, we shall have
 
 $$\surd(a+bx+f^2x^2) = \dfrac{m^2f-n^2af}{n^2b-2mnf} + \dfrac{m}{n} = \dfrac{mnb-m^2f-n^2a}{n^2b-2mnf}f.$$
 
-<span class="art">47</span>
-
-
+<span class="art">47</span> As we have got a fraction for $$x$$, namely,
+$$\dfrac{m^2-n^2a}{n^2b-2mnf}$$, let us make $$x=\dfrac{p}{q}$$, then
+$$p=m^2-n^2a$$, and $$q=n^2b-2mnf$$; so that the formula $$a+\dfrac{bp}{q}+\dfrac{f^2p^2}{q^2}$$
+is a square; and as it contains a square, though it be multiplied by the square $$q^2$$, it follows,
+that the formula $$aq^2+bpq+f^2p^2$$ is also a square, if we suppose $$p=m^2-n^2a$$,
+and $$q=n^2b-2mnf$$. Hence it is evident, that an infinite
+number of answers, in integer numbers, may result from
+this expression, because the values of the letters $$m$$ and $$n$$ are
+arbitrary.
 
 <span class="art">48</span>
 
