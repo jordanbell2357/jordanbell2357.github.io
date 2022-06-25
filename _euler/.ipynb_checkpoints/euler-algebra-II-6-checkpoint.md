@@ -203,11 +203,47 @@ y=g=1&7&41&239, \; \textrm{etc.}
 \end{array}
 $$
 
-<span class="art">88</span>
+<span class="art">88</span> *Question 2.* To find all the triangular numbers,
+that are at the same time squares.
 
+Let $$z$$ be the triangular root; then
+$$\dfrac{z^2+z}{2}$$ is the triangle, which is to be also a square;
+and if we call $$x$$ the root  of this square, we have
+$$\dfrac{z^2+z}{2}=x^2$$: multiplying by 8, we have
+$$4z^2+4z=8x^2$$; and also adding 1 to each side, we have
 
+$$4z^2+4z+1=(2z+1)^2=8x^2-1.$$
+
+Hence the question is to make $$8x^2+1$$ become a square;
+for, if we find $$8x^2+1=y^2$$, we shall have $$y=2z+1$$,
+and, consequently, the triangular root will be
+
+$$z=\dfrac{y-1}{2}.$$
+
+Now, we have $$a=8$$, and $$b=1$$, and a satisfactory case immediately
+occurs, namely, $$f=0$$ and $$g=1$$. It is farther evident, that
+$$8n^2+1=m^2$$, and if we make $$n=1$$, and $$m=3$$;
+therefore $$x=3f+g$$, and $$y=3g+8f$$; and since
+$$z=\dfrac{y-1}{2}$$, we shall have the following solutions:
+
+$$
+\begin{array}
+x=f=0&1&6&35&204&1189\\
+y=g=1&3&17&99&577&3363\\
+z=\frac{y-1}{2}=0&1&8&49&288&1681,\;\textrm{etc.}
+\end{array}
+$$
 
 <span class="art">89</span>
+
+
+
+<span class="art">90</span>
+
+
+
+
+<span class="art">91</span>
 
 #### Editions
 
