@@ -93,9 +93,44 @@ $$\surd(1+x^2) = \dfrac{n^2+m^2}{2mn}.$$
 We shall exhibit, according to this solution, some of the
 least values of $$x$$.
 
-
-
-
+<table>
+<tr>
+<td>If \(n\) =</td>
+<td>2,</td>
+<td>3,</td>
+<td>3,</td>
+<td>4,</td>
+<td>4,</td>
+<td>5,</td>
+<td>5,</td>
+<td>5,</td>
+<td>5,</td>
+</tr>
+<tr>
+<td>and \(m\) =</td>
+<td>1,</td>
+<td>1,</td>
+<td>2,</td>
+<td>1,</td>
+<td>3,</td>
+<td>1,</td>
+<td>2,</td>
+<td>3,</td>
+<td>4,</td>
+</tr>
+<tr>
+<td>We have \(x\) =</td>
+<td>¾,</td>
+<td>⁴⁄₃,</td>
+<td>⁵⁄₁₂,</td>
+<td>¹⁵⁄₈,</td>
+<td>⁷⁄₂₄,</td>
+<td>¹²⁄₅,</td>
+<td>²¹⁄₂₀,</td>
+<td>⁸⁄₁₅,</td>
+<td>⁹⁄₄₀.</td>
+</tr>
+</table>
 
 <span class="art">44</span>
 
