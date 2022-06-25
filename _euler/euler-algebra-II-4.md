@@ -352,12 +352,19 @@ $$\left(cx+\dfrac{b}{2}-\dfrac{d}{2}\right)\left(x+\dfrac{b}{2c}+\dfrac{d}{2c}\r
 
 and it is evident that this solution must be applicable whenever $$b^2-4ac$$ is a square.
 
-<span class="art">51</span>
-
-
-
+<span class="art">51</span> From this results the third case, in which the formula
+$$a+bx+cx^2$$ may be transformed into a square; which we
+shall add to the other two.
 
 <span class="art">52</span>
+
+
+
+<span class="art">53</span>
+
+
+
+<span class="art">54</span>
 
 #### Editions
 
