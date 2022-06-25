@@ -193,11 +193,47 @@ $$(8m+3)t^2+(8n+2)u^2;$$
 in which we may substitute for
 $$m$$ and $$n$$ all integer numbers, whether positive or negative.
 
-<span class="art">72</span>
+<span class="art">72</span> But let us proceed farther, and consider the divisor 5,
+with respect to which all numbers may be ranged under the
+five following classes:
 
+$$5n, \quad 5n+1,\quad 5n+2,\quad 5n+3,\quad 5n+4.$$
 
+We remark, in the first place, that if a number be of the
+first class, its square will have the form $$25n^2$$;
+and will consequently be divisible not only by 5, but also by 25.
+
+Every number of the second class will have a square of
+the form $$25n^2+10n+1$$; and as dividing by 5 gives the
+remainder 1, this square will be contained in the formula
+$$5n+1$$.
+
+The numbers of the third class will have for their square
+$$25n^2+20n+4$$; which, divided by 5, gives 4 for the remainder.
+
+The square of a number of the fourth class is $$25n^2+30n+9$$; and if it
+be divided by 5, there remains 4.
+
+Lastly, the square of a number of the fifth class is $$25n^2+40n+16$$;
+and if we divide this square by 5, there will remain 1.
+
+When a square number therefore cannot be divided by 5,
+the remainder after division will always be 1, or 4, and never
+2, or 3: hence it follows, that no square number can be contained
+in the formula $$5n+2$$, or $$5n+3$$.
 
 <span class="art">73</span>
+
+
+
+
+<span class="art">74</span>
+
+
+
+
+
+<span class="art">75</span>
 
 #### Editions
 
