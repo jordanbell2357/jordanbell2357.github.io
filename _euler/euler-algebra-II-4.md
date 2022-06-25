@@ -601,8 +601,25 @@ $$9+14y+7y^2 = 9 + \dfrac{6my}{n} + \dfrac{m^2y^2}{n^2},$$
 in which we may expunge 9 from both sides, and divide by $$y$$:
 which being done, we shall have $$14n^2+7n^2y=6mn+m^2y$$; whence
 
+$$y=\dfrac{6mn-14n^2}{7n^2-m^2}$$; and consequently
 
+$$x=\dfrac{6mn-7n^2-m^2}{7n^2-m^2}$$, in which we may substitute any values we please
+for $$m$$ and $$n$$.
 
+If we make $$m=1$$, and $$n=1$$, we have $$x=-\frac{1}{3}$$; or,
+since the second power of $$x$$ stands alone, $$x=+\frac{1}{3}$$, wherefore
+$$2+7x^2=\frac{25}{9}$$.
+
+If $$m=3$$, and $$n=1$$, we have $$x=-1$$, or $$x=+1$$.
+
+But if $$m=3$$, and $$n=-1$$, we have $$x=17$$; which gives
+$$2+7x^2=2025$$, the square of 45.
+
+If $$m=8$$, and $$n=3$$, we shall then have, in the same
+manner, $$x=-17$$, or $$x=+17$$.
+
+But, by making $$m=8$$, and $$n=-3$$, we find $$x=271$$;
+so that $$2+7x^2=514089=717^2$$.
 
 <span class="art">60</span>
 
