@@ -321,15 +321,29 @@ $$7n + 4$$, it is evident, that the three other formulae, $$7n + 3$$,
 $$7n + 5$$, and $$7n + 6$$, do not agree with the nature of
 squares.
 
-<span class="art">76</span>
-
-
+<span class="art">76</span> To make this conclusion still more apparent, we shall
+remark, that the last kind, $$7n + 6$$, may be also expressed
+by $$7n-1$$; that, in the same manner, the formula $$7n+5$$
+is the same as $$7n-2$$, and $$7n+4$$ the same as $$7n-3$$.
+This being the case, it is evident, that the squares of the two
+classes of numbers, $$7n+1$$, and $$7n-1$$, if divided by
+7, will give the same remainder 1; and that the squares of
+the two classes, $$7n+2$$, and $$7n-2$$, ought to resemble
+each other in the same respect, each having the remainder 4.
 
 <span class="art">77</span>
 
 
 
 <span class="art">78</span>
+
+
+
+<span class="art">79</span>
+
+
+
+<span class="art">80</span>
 
 #### Editions
 
