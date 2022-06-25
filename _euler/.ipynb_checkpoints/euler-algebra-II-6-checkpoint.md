@@ -143,11 +143,50 @@ we may find as many other new values as we please: so
 that, by means of a single case known at first,
 we mav afterwards determine an infinite number of others.
 
-<span class="art">85</span>
+<span class="art">85</span> The manner in which we have arrived at this solution
+has been very embarrassed, and seemed at first to lead us
+from our object, since it brought us to complicated fractions,
+which an accidental circumstance only enabled us to reduce:
+it will be proper, therefore, to explain a shorter method,
+which leads to the same solution.
+
+<span class="art">86</span> Since we must have $$ax^2+b=y^2$$, and have already found
+$$af^2+b=g^2$$, the first equation gives us
+$$b=y^2-ax^2$$, and the second gives $$b=g^2-af^2$$;
+consequently, also, $$y^2-ax^2=g^2-af^2$$, and the whole is reduced
+to determining the unknown quantities $$x$$ and $$y$$, by means
+of the known quantities $$f$$ and $$g$$. It is evident, that for this purpose,
+we need only make $$x=f$$ and $$y=g$$;
+but it is also
+evident, that this supposition would not furnish a new case
+in addition to that already known. We shall, therefore,
+suppose that we have already found such a number for $$n$$,
+that $$an^2+1$$ is a square, or that $$an^2+1=m^2$$; which being
+laid down, we have $$m^2-an^2=1$$; and multiplying by this equation
+the one we had last, we find also
+
+$$y^2-ax^2=(g^2-af^2)\cdot(m^2-an^2) = g^2m^2-af^2m^2-ag^2n^2+a^2f^2n^2.$$
+
+Let us now suppose $$y=gm+afn$$, and we shall have
+
+$$g^2m^2+2afgmn+a^2f^2n^2-ax^2=g^2m^2-af^2m^2-ag^2n^2+a^2f^2n^2,$$
+
+in which the terms $$g^2m^2$$ and $$a^2f^2m^2$$ are destroyed; so that
+there remains $$ax^2=af^2m^2+ag^2n^2+2afgmn$$, or
+$$x^2=f^2m^2+2fgmn+g^2n^2$$.
+Now, this formula is evidently a
+square, and gives $$x=fm+gn$$. Hence we have obtained
+the same formulae for $$x$$ and $$y$$ as before.
+
+<span class="art">87</span>
 
 
 
-<span class="art">86</span>
+<span class="art">88</span>
+
+
+
+<span class="art">89</span>
 
 #### Editions
 
