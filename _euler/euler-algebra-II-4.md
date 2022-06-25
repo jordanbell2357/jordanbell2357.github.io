@@ -560,12 +560,42 @@ other hand, it is sufficient to know a single case, in which a
 formula is possible, to enable us to find all its answers; and
 this we shall explain at some length.
 
-<span class="art">58</span>
+<span class="art">58</span> From what has been said, it may be observed, that all
+the advantage that can be expected on these occasions, is
+to determine, or suppose, any case in which such a formula
+as $$a + bx + cx^2$$, may be transformed into a square ; and
+the method which naturally occurs for this, is to substitute
+small numbers successively for $$x$$, until we meet with a case
+which gives a square.
 
+Now, as $$x$$ may be a fraction, let us begin with substituting
+for $$x$$ the general fraction $$\dfrac{t}{u}$$; and, if the formula
+$$a+\dfrac{bt}{u}+\dfrac{ct^2}{u^2}$$ which results from it, be a square, it
+will be so also after having been multiplied by $$u^2$$; so that
+it only remains to try to find such integer values for $$t$$ and $$u$$, as will
+make the formula $$au^2+btu+ct^2$$ a square; and it is evident, that after this,
+the supposition of $$x=\dfrac{t}{u}$$ cannot fail to give the formula
+$$a+bx+cx^2$$ equal to a square.
 
-
+But if, whatever we do, we cannot arrive at any satisfactory case,
+we have every reason to suppose that it is altogether
+impossible to transform the formula into a square; which, as
+we have already said, very frequently happens.
 
 <span class="art">59</span>
+
+
+
+<span class="art">60</span>
+
+
+
+
+<span class="art">61</span>
+
+
+
+<span class="art">62</span>
 
 #### Editions
 
