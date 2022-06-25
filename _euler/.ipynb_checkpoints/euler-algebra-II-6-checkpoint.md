@@ -32,10 +32,49 @@ cases; and this inquiry is so much the more important,
 as it is subject to considerable difficulties; which,
 however, we shall be able to surmount by particular artifices.
 
-<span class="art">81</span>
+<span class="art">81</span> Since we have already found $$af^2+b=g^2$$,
+and likewise, by hypothesis, $$ax^2+b=y^2$$,
+let us subtract the first
+equation from the second, and we shall obtain a new one,
+$$ax^2-af^2=y^2-g^2$$, which may be represented by factors
+in the following manner;
 
+$$a(x+f)\cdot(x-f) = (y+g)\cdot (y-g),$$
 
+and which, by multiplying both sides by $$pq$$, becomes
 
+$$apq(x+f)\cdot(x-f)=pq(y+g)\cdot(y-g).$$
+
+If we now decompound this equation, by making $$ap(x+f)=q(y+g)$$,
+and $$q(x-f) = p(y-g)$$, we may derive, from
+these two equations, values of the two letters $$x$$ and $$y$$. The
+first, divided by $$q$$, gives $$y+g = \dfrac{apx+apf}{q}$$;
+and the second, divided by $$p$$, gives $$y-g = \dfrac{qx-qf}{p}$$.
+Subtracting this
+latter equation from the former, we have
+
+$$2g = \dfrac{(ap^2-q^2)x+(ap^2+q^2)f}{pq},$$
+
+or
+
+$$2gpq = (ap^2-q^2)x+(ap^2+q^2)f;$$
+
+therefore
+
+$$x=\dfrac{2gpq}{ap^2-q^2} - \dfrac{(ap^2+q^2)f}{ap^2-q^2},$$
+
+from which we obtain
+
+$$y=g+\dfrac{2gq^2}{ap^2-q^2} - \dfrac{(ap^2+q^2)fq}{(ap^2-q^2)p} - \dfrac{qf}{p}.$$
+
+And as, in this latter value, the first two terms, both containing the letter $$g$$,
+may be put into the form $$\dfrac{g(ap^2+q^2)}{ap^2-q^2}$$, and as the other two,
+containing the letter $$f$$, may be expressed by $$\dfrac{2afpq}{ap^2-q^2}$$,
+all the
+terms will be reduced to the same denomination, and we
+shall have
+
+$$y=\dfrac{g(ap^2+q^2)-2afpq}{ap^2-q^2}.$$
 
 <span class="art">82</span>
 
