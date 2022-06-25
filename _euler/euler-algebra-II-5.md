@@ -165,9 +165,33 @@ they leave a remainder of 1. And hence it follows, that all
 the other odd numbers, which have the form either of
 $$8n+3$$, or of $$8n+5$$, or of $$8n+7$$, can never be squares.
 
-<span class="art">71</span>
+<span class="art">71</span> These principles furnish a new proof, that the formula
+$$3t^2+2u^2$$ cannot be a square. For, either the two numbers
+$$t$$, and $$u$$ are both odd, or the one is even and the other odd.
+They cannot be both even, because in that case they
+would, at least, have the common divisor 2. In the first
+case, therefore, in which both $$t^2$$ and $$u^2$$ are contained in the
+formula $$8n+1$$, the first term $$3t^2$$, being divided by 8,
+would leave the remainder 3, and the other term $$2u^2$$ would
+leave the remainder 2; so that the whole remainder would
+be 5: consequently, the formula in question cannot be a
+square. But, if the second case be supposed, and $$t$$ be even,
+and $$u$$ odd, the first term $$3t^2$$ will be divisible by 4, and the
+second term $$2u^2$$, if divided by 4, will leave the remainder 2;
+so that the two terms together, when divided by 4, leave a
+remainder of 2, and therefore cannot form a square. Lastly,
+if we were to suppose $$u$$ an even number, as $$2s$$, and $$t$$ odd,
+so that $$t^2$$ is of the form $$8n+1$$, our formula would be changed
+into this, $$24n + 3 + 8s^2$$; which, divided by 8, leaves 3,
+and therefore cannot be a square.
 
+This demonstration extends to the formula $$3t^2+(8n+2)u^2$$;
+also to this, $$(8m+3)t^2+2u^2$$, and even to this,
 
+$$(8m+3)t^2+(8n+2)u^2;$$
+
+in which we may substitute for
+$$m$$ and $$n$$ all integer numbers, whether positive or negative.
 
 <span class="art">72</span>
 
