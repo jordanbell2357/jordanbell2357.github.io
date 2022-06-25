@@ -122,9 +122,26 @@ $$x=ng-mf,\qquad y =mg-naf;$$
 
 and thence, lastly, $$ax^2+b=y^2$$.
 
-<span class="art">84</span>
+<span class="art">84</span> It is evident, that having once determined $$m$$ and $$n$$,
+we may write instead of them $$-m$$ and $$-n$$, because the
+square $$n^2$$ still remains the same.
 
+But we have already shewn that, in order to find $$x$$ and $$y$$
+in integer numbers, so that $$ax^2+b=y^2$$, we must first
+know a case, such that $$af^2+b$$ may be equal to $$g^2$$; when
+we have therefore found such a case, we must also endeavour
+to know, beside the number $$a$$, the values of $$m$$ and $$n$$, which
+will give $$an^2+1=m^2$$: the method for which shall be described in the sequel,
+and when this is done, we shall have a
+new case, namely, $$x=ng+mf$$, and $$y=mg+naf$$, also $$ax^2+b=y^2$$.
 
+Putting this new case instead of the preceding one, which
+was considered as known; that is to say, writing $$ng + mf$$
+for $$f$$, and $$mg + naf$$ for $$g$$, we shall have new values of $$x$$
+and $$y$$, from which, if they be again substituted for $$x$$ and $$y$$,
+we may find as many other new values as we please: so
+that, by means of a single case known at first,
+we mav afterwards determine an infinite number of others.
 
 <span class="art">85</span>
 
