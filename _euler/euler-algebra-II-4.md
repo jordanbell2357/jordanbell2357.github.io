@@ -621,10 +621,31 @@ manner, $$x=-17$$, or $$x=+17$$.
 But, by making $$m=8$$, and $$n=-3$$, we find $$x=271$$;
 so that $$2+7x^2=514089=717^2$$.
 
-<span class="art">60</span>
+<span class="art">60</span> Let us now examine the formula $$5x^2+3x+7$$,
+which becomes a square by the supposition of $$x=-1$$.
+Here, if we make $$x=y-1$$, our formula will be changed into
+this:
 
+$$
+\begin{array}{rrr}
+5y^2&-10y&+5\\
+&+3y&-3\\
+&&+7\\ \hline
+5y^2&-7y&+9,
+\end{array}
+$$
 
+the square root of which we shall suppose to be $$3-\dfrac{my}{n}$$;
+by which means we shall have
 
+$$5y^2-7y+9=9-\dfrac{6my}{n} + \dfrac{m^2y^2}{n^2},$$
+
+or $$5n^2y-7n^2 = -6mn + m^2y$$; whence we deduce
+$$y=\dfrac{7n^2-6mn}{5n^2-m^2}$$; and, lastly, $$x=\dfrac{2n^2-6mn+m^2}{5n^2-m^2}$$.
+
+If $$m=2$$, and $$n=1$$, we have $$x=-6$$, and consequently $$5x^2+3x+7=169=13^2$$.
+
+But if $$m=-2$$ and $$n=1$$, we find $$x=18$$, and $$5x^2+3x+7=1681=41^2$$.
 
 <span class="art">61</span>
 
