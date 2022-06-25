@@ -655,9 +655,51 @@ $$7t^2+15tu+13u^2$$, which must be a square.
 Let us therefore try to adopt some small numbers as the values
 of $$t$$ and $$u$$.
 
+If $$t=1$$, and $$u=1$$, the formula will become = 35  
+If $$t=2$$ and $$u=1$$, the formula will become = 71  
+If $$t=2$$, and $$u=-1$$, the formula will become = 11  
+If $$t=3$$, and $$u=1$$, the formula will become = 121.
 
+Now, 121 being a square, it is proof that the value of $$x=3$$ answers
+the required condition; let us therefore suppose
+$$x=y+3$$, and we shall have, by substituting this value
+in the formula,
 
-<span class="art">62</span>
+$$7y^2+42y+63+15y+45+13,$$
+
+or $$7y^2+57y+121$$.
+
+Therefore let the root be represented by $$11+\dfrac{my}{n}$$, and we
+shall have $$7y^2+57y+121=121+\dfrac{22my}{n} + \dfrac{m^2y^2}{n^2}$$, or
+
+$$7n^2y+57n^2 = 22mn+m^2y;$$
+
+whence
+
+$$y=\dfrac{57n^2-22mn}{m^2-7n^2},\quad \textrm{and} \quad
+x=\dfrac{36n^2-22mn+3m^2}{m^2-7n^2}.$$
+
+Suppose, for example, $$m=3$$, and $$n=1$$; we shall then
+find $$x=-\frac{3}{2}$$, and the formula becomes
+
+$$7x^2+15x+13=\frac{25}{4} = \left(\frac{5}{2}\right)^2.$$
+
+If $$m=1$$, and $$n=1$$, we find $$x=-\frac{17}{6}$$; if
+$$m=3$$, and $$n=-1$$, we have $$x=\frac{129}{2}$$, and the formula
+
+$$7x^2+15x+13 = \frac{120409}{4} = \left( \frac{347}{2} \right)^2.$$
+
+<span class="art">62</span> But frequently it is only lost labor to endeavour to
+find a case, in which the proposed formula may become a
+square. We have already said that $$3x^2+2$$ is one of those
+unmanageable formulae; and, by giving it, according to this
+rule, the form $$3t^2+2u^2$$, we shall perceive that, whatever
+values we give to $$t$$ and $$u$$, this quantity never becomes a
+square number. As the formulae of this kind are very
+numerous, it will be worth while to fix on some characters,
+by which their impossibility may be perceived, in order that
+we may be often saved the trouble of useless trials; which
+shall form the subject of the following chapter.
 
 #### Editions
 
