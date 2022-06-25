@@ -34,14 +34,43 @@ whatever number we substitute here for $$y$$, the value of $$x$$ would always
 be such, that $$a+bx$$ would be a square, and consequently,
 $$\surd(a+bx)$$ would be a rational quantity.
 
-<span class="art">40</span>
+<span class="art">40</span> We shall therefore begin with the formula $$\surd(1+x^2)$$;
+that is to say, we are to find such values of $$x$$, that,
+by adding unity to their squares, the sums may likewise be squares;
+and as it is evident that those values of $$x$$ cannot be integers,
+we must be satisfied with finding the fractions which express
+them.
 
+<span class="art">41</span> If we supposed $$1+x^2=y^2$$, since $$1+x^2$$ must be a square, we should have
+$$x^2=y^2-1$$, and $$x=\surd(y^2-1)$$;
+so that in order to find $$x$$ we should have to seek numbers
+for $$y$$, whose squares, diminished by unity, would also leave
+squares; and, consequently, we should be led to a question as
+difficult as the former, without advancing a single step.
 
+It is certain, however, that there are real fractions, which,
+being substituted for $$x$$, will make $$1+x^2$$ a square; of
+which we may be satisfied from the following cases:
 
-<span class="art">41</span>
+1. If $$x=\frac{3}{4}$$, we have $$1+x^2=\frac{25}{16}$$; and consequently $$\surd(1+x^2)=\frac{5}{4}$$.
+2. $$1+x^2$$ becomes a square likewise, if $$x=\frac{4}{3}$$, which gives $$\surd(1+x^2)=\frac{5}{3}$$.
+3. If we make $$x=\frac{5}{12}$$, we obtain $$1+x^2=\frac{169}{144}$$, the square root of which is $$\frac{13}{12}$$.
 
+But it is requii-ed to shew how to find these values of $$x$$,
+and even all possible numbers of this kind.
 
 <span class="art">42</span>
+
+
+<span class="art">43</span>
+
+
+
+<span class="art">44</span>
+
+
+
+<span class="art">45</span>
 
 #### Editions
 
