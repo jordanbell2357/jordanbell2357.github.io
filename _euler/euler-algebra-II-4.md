@@ -356,9 +356,52 @@ and it is evident that this solution must be applicable whenever $$b^2-4ac$$ is 
 $$a+bx+cx^2$$ may be transformed into a square; which we
 shall add to the other two.
 
-<span class="art">52</span>
+<span class="art">52</span> This case, as we have already observed, takes place,
+when the formula may be represented by a product, such
+as $$(f+gx)(h+kx)$$. Now, in order to make a square of this
+quantity, let us suppose its root, or
 
+$$\surd((f+gx)(h+kx)) =  \dfrac{m(f+gx)}{n};$$
 
+and we shall then have
+
+$$(f+gx)(h+kx) = \dfrac{m^2(f+gx)^2}{n^2};$$
+
+and, dividing this equation by $$f+gx$$, we have
+
+$$h+kx=\dfrac{m^2(f+gx)}{n^2};$$
+
+or
+
+$$hn^2+kn^2x = fm^2 + gm^2x;$$
+
+and, consequently, $$x=\dfrac{fm^2-hn^2}{kn^2-gm^2}$$.
+
+To illustrate this, let the following questions be proposed.
+
+*Question 1*. To find all the numbers, $$x$$, such, that if 2
+be subtracted from twice their square, the remainder may be
+a square.
+
+Since $$2x^2-2$$ is the quantity which is to be a square, we must observe,
+that this quantity is expressed by the factors, $$2 \cdot (x+1) \cdot (x-1)$$.
+If, therefore, we suppose its root $$=\dfrac{m(x+1)}{n}$$, we have
+
+$$2(x+1)(x-1) = \dfrac{m^2(x+1)^2}{n^2};$$
+
+dividing by $$x+1$$, and multiplying by $$n^2$$, we obtain
+
+$$2n^2x-2n^2 = m^2x+m^2,$$
+
+and $$x=\dfrac{m^2+2n^2}{2n^2-m^2}$$.
+
+If, therefore, we make $$m=1$$, and $$n=1$$, we find $$x=3$$,
+and $$2x^2-2=16=4^2$$.
+
+If $$m=3$$ and $$n=2$$, we have $$x=-17$$. Now, as $$x$$ is
+only found in the second power, it is indifferent whether we
+take $$x=-17$$, or $$x=+17$$; either supposition equally
+gives $$2x^2-2=576=24^2$$.
 
 <span class="art">53</span>
 
