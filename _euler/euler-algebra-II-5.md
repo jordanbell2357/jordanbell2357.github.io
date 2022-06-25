@@ -77,13 +77,49 @@ by 9; or they are not divisible by 3, in which case the remainder is always 1,
 and never 2; for which reason, no
 number contained in the formula $$3n+2$$ can be a square.
 
-<span class="art">66</span>
+<span class="art">66</span> It is easy, from what has just been said, to shew, that
+the formula $$3x^2+2$$ can never become a square, whatever
+integer, or fractional number, we choose to substitute for $$x$$.
+For, if $$x$$ be an integer number, and we divide the formula
+$$3x^2 + 2$$ by 3, there remains 2; therefore it cannot be a
+square. Next, if $$x$$ be a fraction, let us express it by
+$$\dfrac{t}{u}$$, supposing it already reduced to its lowest terms, and that
+$$t$$ and $$u$$ have no common divisor. In order, therefore,
+that $$\dfrac{3t^2}{u^2}+2$$ may be a square, we must obtain,
+after multiplying by $$u^2$$, $$3t^2+2u^2$$ also a square. Now, this
+is impossible; for the number $$u$$ is either divisible by 3, or it is not:
+if it be, $$t$$ will not be so, for $$t$$ and $$u$$ have no common divisor,
+since the fraction $$\dfrac{t}{u}$$ is in its lowest terms. Therefore,
+if we make $$u=3f$$, as the formula becomes $$3t^2+18f^2$$m it is evident
+that it can be divided by 3 only once, and not twice, as it must
+necessarily be if it were a square; in fact, if we divide by 3,
+we obtain $$t^2+6f^2$$. Now, through one part, $$6f^2$$, is divisible 
+by 3, yet the other, $$t^2$$, being divided by 3, leaves 1 for a remainder.
 
-
-
-
+Let us now suppose that $$u$$ is not divisible by 3, and see
+what results from that supposition. Since the first term is
+divisible by 3, we have only to learn what remainder the
+second term, $$2u^2$$, gives. Now, $$u^2$$ being divided by 3,
+leaves the remainder 1, that is to say, it is a number of the
+class $$3n + 1$$; so that $$2u^2$$ is a number of the class $$6n + 2$$;
+and dividing it by 3, the remainder is 2; consequently, the
+formula $$3t^2+2u^2$$, if divided by 3, leaves the remainder 2,
+and is certainly not a square number.
 
 <span class="art">67</span>
+
+
+
+<span class="art">68</span>
+
+
+
+
+<span class="art">69</span>
+
+
+
+<span class="art">70</span>
 
 #### Editions
 
