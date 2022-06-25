@@ -533,9 +533,32 @@ If, in this value, we make $$m=1$$, and $$n=1$$, we find
 $$x=7$$, and $$2x^2+2=100$$. But if $$m=0$$, and $$n=1$$, we
 have $$x=1$$, and $$2x^2+2=4$$.
 
-<span class="art">57</span>
+<span class="art">57</span> It frequently happens, also, when none of the first
+three rules applies, that we are still able to resolve the
+formula into such parts as the fourth rule requires, though
+not so readily as in the foregoing examples.
 
+Thus, if the question comprises the formula
+$$7+15x+13x^2$$, the resolution we speak of is possible, but the
+method of performing it does not readily occur to the mind.
+It requires us to suppose the first part to be $$(1-x)^2$$
+or $$1-2x+x^2$$, so that the other may be $$6+17x+12x^2$$:
+and we perceive that this part has two factors, because
+$$17^2-(4\cdot 6\cdot 12)$$, = 1, is a square. The two factors
+therefore are $$(2+3x)\cdot (3+4x)$$; so that the formula
+becomes $$(1-x)^2+(2+3x)\cdot (3+4x)$$, which we may
+now resolve by the fourth rule.
 
+But, as we have observed, it cannot be said that this
+analysis is easily found; and, on this account,
+we shall explain a general method for discovering, beforehand, whether
+the resolution of any such formula be possible or not; for
+there is an infinite number of them which cannot be resolved at all:
+such, for instance, as the formula $$3x^2+2$$,
+which can in no case whatever become a square. On the
+other hand, it is sufficient to know a single case, in which a
+formula is possible, to enable us to find all its answers; and
+this we shall explain at some length.
 
 <span class="art">58</span>
 
