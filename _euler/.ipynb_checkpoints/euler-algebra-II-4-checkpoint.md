@@ -647,7 +647,13 @@ If $$m=2$$, and $$n=1$$, we have $$x=-6$$, and consequently $$5x^2+3x+7=169=13^2
 
 But if $$m=-2$$ and $$n=1$$, we find $$x=18$$, and $$5x^2+3x+7=1681=41^2$$.
 
-<span class="art">61</span>
+<span class="art">61</span> Let us now consider the formula,
+$$7x^2+15x+13$$, in which we must begin
+with the supposition of $$x=\dfrac{t}{u}$$.
+Having substituted and multiplied $$u^2$$, we obtain
+$$7t^2+15tu+13u^2$$, which must be a square.
+Let us therefore try to adopt some small numbers as the values
+of $$t$$ and $$u$$.
 
 
 
