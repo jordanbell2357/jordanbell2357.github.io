@@ -266,10 +266,10 @@ divisors.
 
 <table>
 <tr>
+<th></th>
 <th>Kinds of numbers.</th>
 <th></th>
 <th>Their squares are of the kind.</th>
-<th></th>
 </tr>
 <tr>
 <td>1.</td>
