@@ -7,9 +7,30 @@ chapter: 6
 
 ### Part {{ page.part}}. {{ page.title }}
 
-<span class="art">38</span> 
+<span class="art">79</span> We have already shwn, <span class="artref">Art. 63</span>, how such formulae
+as $$a+bx+cx^2$$ are to be transformed, in order that the
+second term may be destroyed  we shall therefore confine
+our present inquiries to the formula $$ax^2 + b$$, in which it is
+required to find for $$x$$ only integer numbers, which may
+transform that formula into a square. Now, first of all,
+such a formula must be possible; for, if it be not, we shall
+not even obtain fractional values of $$x$$, far less integer ones.
 
-<span class="art">39</span>
+<span class="art">80</span>
+
+
+
+<span class="art">81</span>
+
+
+
+
+<span class="art">82</span>
+
+
+
+
+<span class="art">83</span>
 
 #### Editions
 
