@@ -331,9 +331,22 @@ classes of numbers, $$7n+1$$, and $$7n-1$$, if divided by
 the two classes, $$7n+2$$, and $$7n-2$$, ought to resemble
 each other in the same respect, each having the remainder 4.
 
-<span class="art">77</span>
+<span class="art">77</span> In general, therefore, let the divisor be any number
+whatever, which we shall represent by the letter $$d$$,
+the different classes of numbers which result from it will be
 
+$$dn$$;  
+$$dn+1$$, $$dn+2$$, $$dn+3$$, etc.  
+$$dn-1$$, $$dn-2$$, $$dn-3$$, etc.
 
+in which the squares of $$dn+1$$, and $$dn-1$$, have this in
+common, that, when divided by $$d$$, they leave the remainder
+1, so that they belong to the same formula, $$dn+1$$;
+in the same manner, the squares of the two classes $$dn+2$$, and
+$$dn-2$$, belong to the same formula, $$dn+4$$. So that we
+may conclude, generally, that the squares of the two kinds,
+$$dn+a$$, and $$dn-a$$, when divided by $$d$$, give a common
+remainder $$a^2$$, or that which remains in dividing $$a^2$$ by $$d$$.
 
 <span class="art">78</span>
 
