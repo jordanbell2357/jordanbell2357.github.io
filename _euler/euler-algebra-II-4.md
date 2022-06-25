@@ -305,9 +305,52 @@ $$\dfrac{x(x+1)}{2} = \dfrac{288\cdot 289}{2} = 144\cdot 289,$$
 
 which is a square, whose root is 12 · 7 = 204.
 
-<span class="art">50</span>
+<span class="art">50</span> We may remark, with regard to this last case, that
+we have been able to transform the formula $$bx+cx^2$$ into a
+square from its having a known factor, $$x$$; this observation
+leads to other cases, in which the formula $$a+bx+cx^2$$
+may likewise become a square, even when neither $$a$$ nor $$c$$
+are squares.
 
+These cases occur when $$a+bx+cx^2$$ may be resolved
+into two factors; and this happens when
 
+$$b^2-4ac$$
+
+is a square: to prove which, we may remark, that the factors depend
+always on the roots of an equation; and that, therefore, we must
+suppose $$a+bx+cx^2=0$$. This being laid down, we have
+$$cx^2=-bx-a$$, or
+
+$$x^2 = -\dfrac{bx}{c}-\dfrac{a}{c},$$
+
+whence we find
+
+$$x=-\dfrac{b}{2c} \pm \surd\left(\dfrac{b^2}{4c^2}-\dfrac{a}{c}\right),$$
+
+or
+
+$$x=-\dfrac{b}[2c} \pm \dfrac{\surd(b^2-4ac)}{2c},$$
+
+and, it is evident, that if $$b^2-4ac$$ be a square, this quantity
+becomes rational.
+
+Therefore let $$b^2-4ac=d^2$$; then the roots will be
+$$\dfrac{-b \pm d}{2c}$$, that is to say, $$x=\dfrac{-b \pm d}{2c}$$;
+and, consequently, the divisors of the formula $$a+bx+cx^2$$ are
+$$x+\dfrac{b-d}{2c}$$, and $$x+\dfrac{b+d}{2c}$$. If we multiply these factors together, we are
+brought to the same formula again, except that it is divided
+by $$c$$; for the product $$x^2+\dfrac{bx}{c}+\dfrac{b^2}{4c^2}-\dfrac{d^2}{4c^2}$$;
+and since $$d^2=b^2-4ac$$, we have
+
+$$x^2+\dfrac{bx}{c} + \dfrac{b^2}{4c^2} - \dfrac{b^2}{4c^2} + \dfrac{4ac}{4c^2} = x^2 + \dfrac{bx}{c} + \dfrac{a}{c};$$
+
+which being multiplied by $$c$$, gives $$cx^2+bx+a$$. We have, therefore, only to multiply
+one of the factors by $$c$$, and we obtain the formula in question expressed by the product
+
+$$\left(cx+\dfrac{b}{2}-\dfrac{d}{2}\right)\left(x+\dfrac{b}{2c}+\dfrac{d}{2c}\right);$$
+
+and it is evident that this solution must be applicable whenever $$b^2-4ac$$ is a square.
 
 <span class="art">51</span>
 
