@@ -162,8 +162,36 @@ $$p=n^2+m^2$$, and $$q=2mn$$, and we obtain $$r=n^2-m^2$$.
 We might also make $$p=n^2+m^2$$, and $$q=n^2-m^2$$,
 from which we should find $$r=2mn$$.
 
-<span class="art">45</span>
+<span class="art">45</span> We spoke of two methods of giving the form of a
+square to the formula $$1+x^2$$. The other is as follows:
 
+If we suppose $$\surd(1+x^2)=1+\dfrac{mx}{n}$$, we shall have 
+
+$$1+x^2 = 1+\dfrac{2mx}{n}+\dfrac{m^2x^2}{n^2};$$
+
+subtracting 1 from both sides, we have
+
+$$x^2 = \dfrac{2mx}{n} + \dfrac{m^2x^2}{n^2}.$$
+
+This equation may be divided by $$x$$, so that we have
+
+$$x=\dfrac{2m}{n}+\dfrac{m^2x}{n^2},$$
+
+or $$n^2x=2mn+m^2x$$, whence we find $$x=\dfrac{2mn}{n^2-m^2}$$. Having found
+this value of $$x$$, we have
+
+$$1+x^2 = 1 + \dfrac{4m^2n^2}{n^4-2m^2n^2+m^4} = \dfrac{n^4+2m^2n^2+m^4}{n^4-2m^2n^2+m^4},$$
+
+which is the square of $$\dfrac{n^2+m^2}{n^2-m^2}$$. Now, as we obtain from that, the
+equation
+
+$$1+\dfrac{(2mn)^2}{(n^2-m^2)^2} = \dfrac{(n^2+m^2)^2}{(n^2-m^2)^2},$$
+
+we shall have, as before,
+
+$$(n^2-m^2)^2 + (2mn)^2 = (n^2+m^2)^2;$$
+
+that is, the same two squares, whose sum is also a square.
 
 <span class="art">46</span>
 
