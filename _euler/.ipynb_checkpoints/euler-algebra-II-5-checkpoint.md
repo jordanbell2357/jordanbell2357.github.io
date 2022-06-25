@@ -123,16 +123,47 @@ terms, $$5u^2$$, $$8u^2$$, $$11u^2$$, etc. would have the forms $$15n + 5$$,
 $$24n + 8$$, $$33n + 11$$, etc. and, when divided by 3, would
 constantly leave the remainder 2.
 
-<span class="art">68</span>
+<span class="art">68</span> It is evident that this remark extends also to the general formula, $$3t^2+(3n+2)\cdot u^2$$,
+which can never become a square, even by taking negative numbers for $$n$$.
+If, for example, we should make $$n=-1$$, I say, it is impossible for the formula
+$$3t^2-n^2$$ to become a square. This is evident, if $$u$$ be divisible by 3: and if it be not,
+then $$u^2$$ is a number of the kind $$3n+1$$, and our formula becomes $$3t^2-3n-1$$, which, being
+divided by 3, gives the remainder -1, or +2; and in general, if $$n$$ be $$=-m$$, we obtain
+the formula $$3t^2-(3m-2)u^2$$, which can never become a square.
 
+<span class="art">69</span> So far, therefore, are we led by considering the divisor 3; if we now consider 4 also as a divisor, we see that
+every number may be comprised in one of the four following
+formulae;
 
+$$4n,\quad 4n+1,\quad 4n+2,\quad 4n+3.$$
 
+The square of the first of these classes of numbers is $$16n^2$$;
+and, consequently, it is divisible by 16.
 
-<span class="art">69</span>
+That of the second class, $$4n+1$$, is $$16n^2+8n+1$$;
+which if divided by 8, the remainder is 1; so that it belongs
+to the formula $$8n+1$$.
 
+The square of the third class, $$4n+2$$, is $$16n^2+8n+1$$;
+which if divided by 8, the remainder is 1; so that it belongs
+to the formula $$8n+1$$.
 
+Lastly, the square of the fourth class, $$4n+3$$, being
+$$16n^2+24n+9$$, it is evident that dividing by 8 there remains 1.
 
 <span class="art">70</span>
+
+
+
+<span class="art">71</span>
+
+
+
+<span class="art">72</span>
+
+
+
+<span class="art">73</span>
 
 #### Editions
 
