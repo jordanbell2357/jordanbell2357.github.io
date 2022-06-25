@@ -197,7 +197,7 @@ $$x=3f+2g$$, and $$y=3g+4f$$, we derive from the first
 solution, $$f=1$$ and $$g=1$$, the following new solutions:
 
 $$
-\begin{array}{r|r|r|r}
+\begin{array}{l|l|l|l}
 x=f=1&5&29&169\\
 y=g=1&7&41&239, \; \textrm{etc.}
 \end{array}
@@ -227,7 +227,7 @@ therefore $$x=3f+g$$, and $$y=3g+8f$$; and since
 $$z=\dfrac{y-1}{2}$$, we shall have the following solutions:
 
 $$
-\begin{array}
+\begin{array}{r|r|r|r|r|r}
 x=f=0&1&6&35&204&1189\\
 y=g=1&3&17&99&577&3363\\
 z=\frac{y-1}{2}=0&1&8&49&288&1681,\;\textrm{etc.}
