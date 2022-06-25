@@ -7,7 +7,7 @@ chapter: 6
 
 ### Part {{ page.part}}. {{ page.title }}
 
-<span class="art">79</span> We have already shwn, <span class="artref">Art. 63</span>, how such formulae
+<span class="art">79</span> We have already shown, <span class="artref">Art. 63</span>, how such formulae
 as $$a+bx+cx^2$$ are to be transformed, in order that the
 second term may be destroyed  we shall therefore confine
 our present inquiries to the formula $$ax^2 + b$$, in which it is
@@ -234,9 +234,32 @@ z=\frac{y-1}{2}=0&1&8&49&288&1681,\;\textrm{etc.}
 \end{array}
 $$
 
-<span class="art">89</span>
+<span class="art">89</span> *Question 3.* To find all the pentagonal numbers,
+which are at the same time squares.
 
+If the root be $$z$$, the pentagon will be $$=\dfrac{3z^2-z}{2}$$, which
+we shall make equal to $$x^2$$, so that $$3z^2-z=2x^2$$;
+then multiplying by 12, and adding unity, we have
 
+$$36z^2-12z+1 = (6z-1)^2 = 24x^2+1;$$
+
+also, making $$24x^2+1=y^2$$, we have $$y=6z-1$$, and $$z=\dfrac{y+1}{6}$$.
+
+Since $$a=24$$, and $$b=1$$, we know the case $$f=0$$, and $$g=1$$;
+and as we must have $$24n^2+1=m^2$$, we shall make
+$$n=1$$, which gives $$m=5$$; so that we shall have $$x=5f+g$$
+and $$y=5g+24f$$; and not only $$z=\dfrac{y+1}{y}$$, but also
+$$z=\dfrac{1-y}{6}$$, because we may write $$y=1-6z$$: whence we
+find the following results:
+
+$$
+\begin{array}{r|r|r|r|r}
+x=f=0&1&10&99&980\\
+y=g=1&5&49&485&4801\\
+z=\dfrac{y+1}{6}=\frac{1}{3}&1&\frac{25}{3}&81&\frac{2401}{3}\\
+\textrm{or} \quad z=\dfrac{1-y}{6}=0&-\frac{2}{3}&-8&-\frac{242}{8}&-800, \; \textrm{etc.}
+\end{array}
+$$
 
 <span class="art">90</span>
 
