@@ -259,9 +259,67 @@ We shall remark, also, that both $$m$$ and $$n$$ may be taken
 negatively, or = 0, and still the formulae $$3t^2+3u^2$$, and
 $$3t^2-n^2$$, cannot be transformed into squares.
 
-<span class="art">75</span>
+<span class="art">75</span> In the same manner as we have found for a few divisors,
+that some kinds of numbers can never become squares,
+we might determine similar kinds of numbers for all other
+divisors.
 
+<table>
+<tr>
+<th>Kinds of numbers.</th>
+<th></th>
+<th>Their squares are of the kind.</th>
+<th></th>
+</tr>
+<tr>
+<td>1.</td>
+<td>\(7n\)</td>
+<td>\(49n^2\)</td>
+<td>\(7n\)</td>
+</tr>
+<tr>
+<td>2.</td>
+<td>\(7n+1\)</td>
+<td>\(49n^2+14n+1\)</td>
+<td>\(7n\)</td>
+</tr>
+<tr>
+<td>3.</td>
+<td>\(7n+2\)</td>
+<td>\(49n^2+28n+4\)</td>
+<td>\(7n+4\)</td>
+</tr>
+<tr>
+<td>4.</td>
+<td>\(7n+3\)</td>
+<td>\(49n^2+42n+9\)</td>
+<td>\(7n+2\)</td>
+</tr>
+<tr>
+<td>5.</td>
+<td>\(7n+4\)</td>
+<td>\(49n^2+56n+16\)</td>
+<td>\(7n+2\)</td>
+</tr>
+<tr>
+<td>6.</td>
+<td>\(7n+5\)</td>
+<td>\(49n^2+70n+25\)</td>
+<td>\(7n+4\)</td>
+</tr>
+<tr>
+<td>7.</td>
+<td>\(7n+6\)</td>
+<td>\(49n^2+84n+36\)</td>
+<td>\(7n+1\)</td>
+</tr>
+</table>
 
+Therefore, since the squares which are not divisible by 7,
+are all contained in the three formulae $$7n+2$$, $$7n+2$$,
+$$7n + 4$$, it is evident, that the three other formulae, $$7n + 3$$,
+$$7n + 5$$, and $$7n + 6$$, do not agree with the nature of
+squares.
 
 <span class="art">76</span>
 
