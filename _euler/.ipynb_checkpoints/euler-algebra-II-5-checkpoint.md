@@ -40,10 +40,42 @@ the formula $$cz^2$$ can by no means become a square; and on the
 contrary, if $$c$$ be itself a square, $$cz^2$$ will also be a square,
 whatever number be assumed for $$z$$.
 
-<span class="art">65</span>
+<span class="art">65</span> If we wish to consider other cases, we must have recourse to what has been already said on the subject of different kinds of numbers, considered with relation to theirdivision by other numbers.
 
+We have seen, for example, that the divisor 3 produces
+three different kinds of numbers. The first comprehends
+the numbers which are divisible by 3, and may be expressed
+by the formula $$3n$$.
 
+The second kind comprehends the numbers which, being
+divided by 3, leave the remainder 1, and are contained in
+the formula $$3n+1$$.
 
+To the third class belong numbers which, being divided
+by 3, leave 2 for the remainder, and which may be represented
+by the general expression $$3n+2$$.
+
+Now, since all numbers are comprehended in these three
+formulae, let us therefore consider their squares. First, if
+the question relate to a number included in the formula $$3u$$,
+we see that the square of this quantity being $$9n^2$$, it is divisible
+not only by 3, but also by 9.
+
+If the given number be included in the formula $$3n+1$$,
+we have the square $$9n^2+6n+1$$, which, divided by 3, gives
+$$3n^2+2n$$, with the remainder 1; and which, consequently, belongs to
+the second class, $$3n+1$$. Lastly, if the number in question be included
+in the formula $$3n+2$$,
+we have to consider the square $$9n^2+12n+4$$; and if we divide it by 3,
+we obtain $$3n^2+4n+1$$, and the remainder 1; so that this square belongs,
+as well as the former, to the class $$3n+1$$.
+
+Hence it is obvious, that square numbers are only of two
+kinds with relation to the number 3; for they are either
+divisible by 3, and in this case are necessarily divisible also
+by 9; or they are not divisible by 3, in which case the remainder is always 1,
+and never 2; for which reason, no
+number contained in the formula $$3n+2$$ can be a square.
 
 <span class="art">66</span>
 
