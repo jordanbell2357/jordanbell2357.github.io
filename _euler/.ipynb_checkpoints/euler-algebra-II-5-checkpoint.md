@@ -243,13 +243,35 @@ become a square, since they leave the same remainders that we have
 just found. We might even in the first term write $$5mt^2$$, instead
 of $$5t^2$$, provided $$m$$ be not divisible by 5.
 
-<span class="art">74</span>
+<span class="art">74</span> Since all the even squares are contained in the formula
+$$4n$$, and all the odd squares in the formula $$4n + 1$$; and,
+consequently, since neither $$4n + 2$$, nor $$4n + 3$$, can become
+a square, it follows that the general formula $$(4m + 3)t^2 + (4n+3)n^2$$
+can never be a square. For if $$t$$ be even, $$t^2$$ will
+be divisible by 4, and the other term, being divided by 4,
+will give 3 for a remainder; and, if we suppose the two
+numbers $$t$$ and $$u$$ odd, the remainders of $$t^2$$ and of $$u^2$$ will be
+1; consequently, the remainder of the whole formula will be
+2: now, there is no square number, which, when divided by
+4, leaves a remainder of 2.
 
-
-
-
+We shall remark, also, that both $$m$$ and $$n$$ may be taken
+negatively, or = 0, and still the formulae $$3t^2+3u^2$$, and
+$$3t^2-n^2$$, cannot be transformed into squares.
 
 <span class="art">75</span>
+
+
+
+<span class="art">76</span>
+
+
+
+<span class="art">77</span>
+
+
+
+<span class="art">78</span>
 
 #### Editions
 
