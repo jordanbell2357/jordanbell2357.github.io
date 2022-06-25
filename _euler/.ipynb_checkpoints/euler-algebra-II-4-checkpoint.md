@@ -403,11 +403,51 @@ only found in the second power, it is indifferent whether we
 take $$x=-17$$, or $$x=+17$$; either supposition equally
 gives $$2x^2-2=576=24^2$$.
 
-<span class="art">53</span>
+<span class="art">53</span> *Question 2.* Let the formula $$6+13x+6x^2$$
+be proposed to be transformed into a square. Here, we have
+$$a=6$$, $$b=13$$, and $$c=6$$, in which neither $$a$$ nor
+$$c$$ is a square. If, therefore, we try whether $$b^2-4ac$$ becomes
+a square, we obtian 25; so that we are sure the formula
+may be represented by two factors; and those factors are
 
+$$(2+3x)\cdot (3+2x).$$
 
+If $$\dfrac{m(2+3x)}{n}$$ is their root, we have
+
+$$(2+3x)\cdot (3+2x) = \dfrac{m^2(2+3x)^2}{n^2},$$
+
+which becomes $$3n^2+2n^2x=2m^2+3m^2x$$, whence we find
+
+$$x=\dfrac{2m^2-3n^2}{2n^2-3m^2} = \dfrac{3n^2-2m^2}{3m^2-2n^2}.$$
+
+Now, m order that the numerator of this fraction may become positive,
+$$3n^2$$ must be greater than $$2m^2$$; and, consequently, $$2m^2$$ less than
+$$3n^2$$:
+that is to say, $$\dfrac{m^2}{n^2}$$ must be less than ³⁄₂. With regard
+to the denominator, if it must be positive, it is evident that $$3m^2$$
+must exceed $$2n^2$$; and, consequently, $$\dfrac{m^2}{n^2}$$ must be greater
+than ⅔. If, therefore, we would have the positive values of $$x$$, we must
+assume such numbers for $$m$$ and $$n$$, that $$\dfrac{m^2}{n^2}$$ may be less
+than ³⁄₂, and yet greater than ⅔.
+
+For example, let $$m=6$$, and $$n=5$$; we shall then have
+$$\dfrac{m^2}{n^2} = \frac{36}{25}$$, which is less than ³⁄₂, and evidently
+greater than ⅔, whence $$x=\frac{3}{58}$$.
 
 <span class="art">54</span>
+
+
+
+<span class="art">55</span>
+
+
+
+<span class="art">56</span>
+
+
+
+
+<span class="art">57</span>
 
 #### Editions
 
