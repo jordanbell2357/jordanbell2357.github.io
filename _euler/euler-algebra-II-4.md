@@ -232,9 +232,41 @@ number of answers, in integer numbers, may result from
 this expression, because the values of the letters $$m$$ and $$n$$ are
 arbitrary.
 
-<span class="art">48</span>
+<span class="art">48</span> The second case which we have to consider, is that in
+which $$a$$, or the first term, is a square. Let there be proposed, for example,
+the formula $$f^2+bx+cx^2$$, which it
+is required to make a square. Here, let us suppose
 
+$$\surd(f^2+bx+cx^2) = f +\dfrac{mx}{n},$$
 
+and we shall have
+
+$$f^2+bx+cx^2 = f^2 + \dfrac{2fmx}{n} + \dfrac{m^2x^2}{n^2},$$
+
+in which equation the terms $$f^2$$ destroying each other, we may
+divide the remaining terms by $$x$$, so that we obtain
+
+$$b+cx = \dfrac{2mf}{n} + \dfrac{m^2x}{n^2},$$
+
+or
+
+$$n^2b+n^2cx = 2mnf + m^2x,$$
+
+or
+
+$$x(n^2c-m^2)=2mnf-n^2b;$$
+
+or, lastly,
+
+$$x=\dfrac{2mnf-n^2b}{n^2c-m^2}.$$
+
+If we now substitute this value instead of $$x$$, we have
+
+$$\surd(f^2+bx+cx^2) = f + \dfrac{2m^2f-mnb}{n^2c-m^2} = \dfrac{n^2cf+m^2f-mnb}{n^2c-m^2};$$
+
+and making $$x=\dfrac{p}{q}$$, we may, in the same manner as before,
+transform the expression $$f^2q^2+bpq+cp^2$$, into a square,
+by making $$p=2mnf-n^2b$$, and $$q=n^2c-m^2$$.
 
 <span class="art">49</span>
 
