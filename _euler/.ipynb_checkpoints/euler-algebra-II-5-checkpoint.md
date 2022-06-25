@@ -106,9 +106,22 @@ and dividing it by 3, the remainder is 2; consequently, the
 formula $$3t^2+2u^2$$, if divided by 3, leaves the remainder 2,
 and is certainly not a square number.
 
-<span class="art">67</span>
+<span class="art">67</span> We mav, in the same manner, demonstrate, that the
+formula $$3t^2+5u^2$$, likewise can never become a square, nor
+any one of the following:
 
+$$3t^2+8u^2,\quad 3t^2+11u^2,\quad 3t^2+14u^2,\quad \textrm{etc.}$$
 
+in which the numbers 5, 8, 11, 14, etc. divided by 3, leave
+2 for a remainder. For, if we suppose that $$u$$ is divisible by
+3, and, consequently, that $$t$$ is not so, and if we make $$u = 3n$$,
+we shall always be brought to formulae divisible by 3, but
+not divisible by 9: and if $$u$$ were not divisible by 3, and
+consequently $$u^2$$ a number of the kind $$3n+1$$ we should
+have the first term, $$3t^2$$, divisible by 3, while the second
+terms, $$5u^2$$, $$8u^2$$, $$11u^2$$, etc. would have the forms $$15n + 5$$,
+$$24n + 8$$, $$33n + 11$$, etc. and, when divided by 3, would
+constantly leave the remainder 2.
 
 <span class="art">68</span>
 
