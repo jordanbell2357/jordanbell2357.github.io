@@ -132,11 +132,43 @@ least values of $$x$$.
 </tr>
 </table>
 
-<span class="art">44</span>
+<span class="art">44</span> We have, therefore, in general,
 
+$$1+\dfrac{(n^2-m^2)^2}{(2mn)^2} = \dfrac{(n^2+m^2)^2}{(2mn)^2};$$
 
+and, if we multiply this equation by $$(2mn)^2$$, we find
+
+$$(2mn)^2+(n^2-m^2)^2 = (n^2+m^2)^2;$$
+
+so that we know, in a general manner, two squares, whose
+sum gives a new square. This remark will lead to the
+solution of the following question:
+
+To find two square numbers, whose sum is likewise a
+square number.
+
+We must have $$p^2+q^2=r^2$$; we have therefore only to make
+$$p=2mn$$, and $$q=n^2-m^2$$, then we shall have
+$$r=n^2+m^2$$.
+
+Farther, as $$(n^2+m^2)^2 - (2mn)^2 = (n^2-m^2)^2$$, we may
+also resolve the following question:
+
+To find two squares, whose difference may also be a square
+number.
+
+Here, since $$p^2-q^2=r^2$$, we have only to suppose
+$$p=n^2+m^2$$, and $$q=2mn$$, and we obtain $$r=n^2-m^2$$.
+We might also make $$p=n^2+m^2$$, and $$q=n^2-m^2$$,
+from which we should find $$r=2mn$$.
 
 <span class="art">45</span>
+
+
+<span class="art">46</span>
+
+
+<span class="art">47</span>
 
 #### Editions
 
