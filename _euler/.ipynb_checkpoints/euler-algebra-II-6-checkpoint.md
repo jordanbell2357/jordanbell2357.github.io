@@ -109,9 +109,18 @@ m^2-an^2&=\dfrac{a^2p^4+2ap^2q^2+q^4-4ap^2q^2}{a^2p^4-2ap^2q^2+q^4}\\
 \end{align}
 $$
 
-<span class="art">83</span>
+<span class="art">83</span> We see, therefore, that tlie two numbers $$m$$ and $$n$$
+must be such, that $$m^2=an^2+1$$. So that, as $$a$$ is a known
+number, we must begin by considering the means of determining such an integer number for $$n$$,
+as will make
+$$an^2+1$$ a square; for then $$m$$ will be the root of that square;
+and when we have likewise determined the number $$f$$ so,
+that $$af^2+b$$ may become a square, namely $$g^2$$ we shall obtain for $$x$$ and $$y$$
+the following values in integer numbers;
 
+$$x=ng-mf,\qquad y =mg-naf;$$
 
+and thence, lastly, $$ax^2+b=y^2$$.
 
 <span class="art">84</span>
 
