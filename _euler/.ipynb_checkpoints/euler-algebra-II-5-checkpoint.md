@@ -222,10 +222,26 @@ the remainder after division will always be 1, or 4, and never
 2, or 3: hence it follows, that no square number can be contained
 in the formula $$5n+2$$, or $$5n+3$$.
 
-<span class="art">73</span>
+<span class="art">73</span> From this it may be proved, that neither the formula
+$$5t^2+2u^2$$, nor $$5t^2+3u^2$$, can be a square. For,
+either $$u$$ is divisible by 5, or it is not: in the first
+case, these formulae will be divisible by 5, but not by 25;
+therefore they cannot be squares. On the other hand, if
+$$u$$ be not divisible by 5, $$u^2$$ will either be of the form
+$$5n+1$$, or $$5n+4$$. In the first of these cases,
+the formula $$5t^2+2u^2$$ becomes $$5t^2+10n+2$$;
+which, being divided by 5, gives a remainder of 3;
+so that neither the one nor the other can be a square.
+With regard to the case $$u^2=5n+4$$, the first formula becomes
+$$5t^2+10n+8$$; which, divided by 5, leaves 3; and the other becomes
+$$5t^2+15n+12$$, which, divided by 5, leaves 2; so that in
+this case also, neither of the two formulae can be a square.
 
-
-
+For a similar reason, we may remark, that neither the
+fornnda $$5t^2+(5n+2)u^2$$, nor $$5t^2+(5n+3)u^2$$, can
+become a square, since they leave the same remainders that we have
+just found. We might even in the first term write $$5mt^2$$, instead
+of $$5t^2$$, provided $$m$$ be not divisible by 5.
 
 <span class="art">74</span>
 
