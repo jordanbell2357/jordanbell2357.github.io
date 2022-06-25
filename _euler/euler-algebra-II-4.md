@@ -73,7 +73,27 @@ $$x=\dfrac{1-\frac{m^2}{n^2}}{\frac{2m}{n}},$$
 
 and if we multiply both terms of this fraction by $$n^2$$, we shall find $$x=\dfrac{n^2-m^2}{2mn}$$.
 
-<span class="art">43</span>
+<span class="art">43</span> In order, therefore, that $$1 + x^2$$ may become a square,
+we may take for $$m$$ and $$n$$ all possible integer numbers, and
+in this manner find an infinite number of values for $$x$$.
+
+Also, if we make, in general, $$x=\dfrac{n^2-m^2}{2mn}$$, we find,
+by squaring,
+
+$$1+x^2 = 1+\dfrac{n^4-2m^2n^2+m^4}{4m^2n^2},$$
+
+or, by putting $$1=\dfrac{4m^2}{4m^2}$$ in the numerator,
+
+$$1+x^2 = \dfrac{n^4+2m^2n^2+m^4}{4m^2n^2};$$
+
+a fraction which is really a square, and gives
+
+$$\surd(1+x^2) = \dfrac{n^2+m^2}{2mn}.$$
+
+We shall exhibit, according to this solution, some of the
+least values of $$x$$.
+
+
 
 
 
