@@ -31,7 +31,27 @@ easier to judge from that whether it be possible or not; but in
 any further inquiry we must be guided by the nature of the given numbers
 $$c$$ and $$t$$.
 
-<span class="art">64</span>
+<span class="art">64</span> It is evident that if $$t = 0$$, the formula $$cz^2$$ can become
+a square only when $$c$$ is a square; for the quotient arising
+from the division of a square by another square being likewise a square,
+the quantity $$cz^2$$ cannot be a square, unless $$\dfrac{cz^2}{z^2}$$, that is to say,
+$$c$$, be one. So that when $$c$$ is not a square,
+the formula $$cz^2$$ can by no means become a square; and on the
+contrary, if $$c$$ be itself a square, $$cz^2$$ will also be a square,
+whatever number be assumed for $$z$$.
+
+<span class="art">65</span>
+
+
+
+
+<span class="art">66</span>
+
+
+
+
+
+<span class="art">67</span>
 
 #### Editions
 
