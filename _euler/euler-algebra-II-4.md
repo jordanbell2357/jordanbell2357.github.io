@@ -582,7 +582,25 @@ we have every reason to suppose that it is altogether
 impossible to transform the formula into a square; which, as
 we have already said, very frequently happens.
 
-<span class="art">59</span>
+<span class="art">59</span> We shall now shew, on the other hand, that when one
+satisfactory case is determined, it will be easy to find all the
+other cases which likewise give a square; and it will be perceived, at the same time, that the number of those solutions
+is always infinitely great.
+
+Let us first consider the formula $$2+7x^2$$, in which $$a = 2$$,
+$$b = 0$$, and $$c = 7$$. This evidently becomes a square, if we
+suppose $$x = 1$$; let us therefore make $$x = 1+y$$, and, by
+substitution, we shall havc $$x^2 = 1 + 2y + y^2$$, and our
+formula becomes $$9+14y+7y^2$$, in which the first term is
+a square; so that we shall suppose, conformably to the second
+rule, the square root of the new formula to be
+$$3+\dfrac{my}{n}$$, and we shall thus obtain the equation
+
+$$9+14y+7y^2 = 9 + \dfrac{6my}{n} + \dfrac{m^2y^2}{n^2},$$
+
+in which we may expunge 9 from both sides, and divide by $$y$$:
+which being done, we shall have $$14n^2+7n^2y=6mn+m^2y$$; whence
+
 
 
 
