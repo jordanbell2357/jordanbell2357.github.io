@@ -497,12 +497,52 @@ If we make $$m=1$$, and $$n=1$$, we find $$x=1$$, and $$2x^2-1=1$$; or if
 we make $$m=1$$, and $$n=2$$, we find $$x=\frac{5}{7}$$, and $$2x^2-1=\frac{1}{49}$$;
 lastly, if we suppose $$m=1$$, and $$n=-2$$, we find $$x=-5$$, or $$x=+5$$, and $$2x^2-1=49$$.
 
-<span class="art">56</span>
+<span class="art">56</span> *Question 4.* To find numbers whose squares doubled
+and increased by 2, may likewise be squares.
 
+Such a number, for instance, is 7, since the double of
+its square is 98, and if we add 2 to it, we have the square
+100.
 
+We must, therefore, have $$2x^2+2$$ a square; and as
+$$a=2$$, $$b=0$$, and $$c=2$$, so that neither $$a$$ nor $$c$$,
+nor $$b^2-4ac$$, the last being = -16, are squares, we must, therefore,
+have recourse to the fourth rule.
 
+Let us suppose the first part to be 4, then the second will be
+$$2x^2-2=2(x+1)\cdot(x-1)$$, which presents
+the quantity proposed in the form
+
+$$4+(x+1)\cdot(x-1).$$
+
+Now, let $$2+\dfrac{m(x+1)}{n}$$ be its root, and we shall have
+the equation
+
+$$4+2(x+1)\cdot(x-1) = 4 + \dfrac{4m(x+1)}{n}+\dfrac{m^2(x+1)^2}{n^2},$$
+
+in which the squares 4, are destroyed; so that after having
+divided the other terms by $$x+1$$, we have
+
+$$2n^2x-2n^2 = 4mn+m^2x+m^2;$$
+
+and consequently,
+
+$$x=\dfrac{4mn+m^2+2n^2}{2n^2-m^2}.$$
+
+If, in this value, we make $$m=1$$, and $$n=1$$, we find
+$$x=7$$, and $$2x^2+2=100$$. But if $$m=0$$, and $$n=1$$, we
+have $$x=1$$, and $$2x^2+2=4$$.
 
 <span class="art">57</span>
+
+
+
+<span class="art">58</span>
+
+
+
+
+<span class="art">59</span>
 
 #### Editions
 
