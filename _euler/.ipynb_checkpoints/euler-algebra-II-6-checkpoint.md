@@ -16,9 +16,21 @@ transform that formula into a square. Now, first of all,
 such a formula must be possible; for, if it be not, we shall
 not even obtain fractional values of $$x$$, far less integer ones.
 
-<span class="art">80</span>
+<span class="art">80</span> Let us suppose then $$ax^2+b=y^2$$; $$a$$ and $$b$$ being
+integer numbers, as well as $$x$$ and $$y$$.
 
+Now, here it is absolutely necessary for us to know, or to
+have already found a case in integer numbers; otherwise it
+would be lost labor to seek for other similar cases, as the
+formula might happen to be impossible.
 
+We shall, therefore, suppose that this formula becomes a
+square, by making $$x-f$$, and we shall represent that square
+by $$g^2$$, so that $$af^2+b=g^2$$, where $$f$$ and $$g$$ are known
+numbers. Then we have only to deduce from this case other similar
+cases; and this inquiry is so much the more important,
+as it is subject to considerable difficulties; which,
+however, we shall be able to surmount by particular artifices.
 
 <span class="art">81</span>
 
