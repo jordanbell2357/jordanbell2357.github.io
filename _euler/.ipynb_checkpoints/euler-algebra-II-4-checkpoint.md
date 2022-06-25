@@ -268,11 +268,53 @@ and making $$x=\dfrac{p}{q}$$, we may, in the same manner as before,
 transform the expression $$f^2q^2+bpq+cp^2$$, into a square,
 by making $$p=2mnf-n^2b$$, and $$q=n^2c-m^2$$.
 
-<span class="art">49</span>
+<span class="art">49</span> Here we have chiefly to distinguish the case in which
+$$a = 0$$, that is to say, in which it is required to make a
+square of the formula $$bx+cx^2$$, for we have only to
+suppose $$\surd(bx+cx^2)=\dfrac{mx}{n}$$, from which we have
+the equation $$bx+cx^2 = \dfrac{m^2x^2}{n^2}$$; which, divided
+by $$x$$, and multiplied by $$n^2$$, gives $$bn^2+cn^2x=m^2x$$;
+and, consequently,
 
+$$x=\dfrac{bn^2}{m^2-cn^2}.$$
 
+If we seek, for example, all the triangular numbers
+that are at the same time squares, it will be necessary that
+$$\dfrac{x^2+x}{2}$$, which is the form of triangular numbers, must be
+a square; and, consequently, $$2x^2+2x$$ must also be a
+square. Let us, therefore, suppose $$\dfrac{m^2x^2}{n^2}$$
+to be that square, and we shall have $$2n^2x+2n^2=m^2x$$, and
+$$x=\dfrac{2n^2}{m^2-2n^2}$$; in
+which value we may substitute, instead of $$m$$ and $$n$$, all possible
+numbers;
+but we shall generally find a fraction for $$x$$,
+though sometimes we may obtain an integer number. For
+example, if $$m = 3$$, and $$n = 2$$, we find $$x = 8$$, the triangular
+number of which, or 36, is also a square.
+
+We may also make $$m = 7$$, and $$n = 5$$; in this case,
+$$x = - 50$$, the triangle of which, 1225, is at the same time
+the triangle of +49, and the square of 35. We should
+have obtained the same result by making $$n=7$$ and $$m=10$$;
+for, in that case, we should also have found $$x=49$$.
+
+In the same manner, if $$m=17$$ and $$n=12$$, we obtain
+$$x=288$$, its triangular number is
+
+$$\dfrac{x(x+1)}{2} = \dfrac{288\cdot 289}{2} = 144\cdot 289,$$
+
+which is a square, whose root is 12 · 7 = 204.
 
 <span class="art">50</span>
+
+
+
+<span class="art">51</span>
+
+
+
+
+<span class="art">52</span>
 
 #### Editions
 
