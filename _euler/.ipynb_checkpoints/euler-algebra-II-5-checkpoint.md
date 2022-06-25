@@ -151,9 +151,19 @@ to the formula $$8n+1$$.
 Lastly, the square of the fourth class, $$4n+3$$, being
 $$16n^2+24n+9$$, it is evident that dividing by 8 there remains 1.
 
-<span class="art">70</span>
+<span class="art">70</span> This teaches us, in the first place, that all the even
+square numbers are either of the form $$16n$$, or $$16n+4$$;
+and, consequently, that all the other even formulae, namely,
 
+$$16+2,\quad 16+6,\quad 16+8,\quad 16+10,\quad 16+12,\quad 16+14,$$
 
+can never become square numbers.
+
+Secondly, that all the odd squares are contained in the formula $$8n+1$$;
+that is to say, if we divide them by 8,
+they leave a remainder of 1. And hence it follows, that all
+the other odd numbers, which have the form either of
+$$8n+3$$, or of $$8n+5$$, or of $$8n+7$$, can never be squares.
 
 <span class="art">71</span>
 
