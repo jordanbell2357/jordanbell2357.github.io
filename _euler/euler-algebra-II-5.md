@@ -348,15 +348,35 @@ may conclude, generally, that the squares of the two kinds,
 $$dn+a$$, and $$dn-a$$, when divided by $$d$$, give a common
 remainder $$a^2$$, or that which remains in dividing $$a^2$$ by $$d$$.
 
-<span class="art">78</span>
+<span class="art">78</span> These observations are sufficient to point out an infinite number of formulae,
+such as $$at^2+bu^2$$, which cannot
+by any means become squares. Thus, by considering the
+divisor 7, it is easy to perceive, that none of these three
+formulae, $$7t^2+3u^2$$, $$7t^2+5u^2$$, $$7t^2+6u^2$$, can ever become
+a square; because the division of $$u^2$$ by 7 only gives the remainders 1, 2, or 4;
+and, in the first of these formulae,
+there remains either 3, or 6, or 5; in the second, 5, 3, or 6;
+and in the third, 6, 5, or 3; which cannot take place in
+square numbers. Whenever, therefore, we meet with such
+formuUe, we are certain that it is useless to attempt discovering any case,
+in which they can become squares: and, for
+this reason, the considerations, into which we have just
+entered, are of some importance.
 
+If, on the other hand, the formula proposed is not of this
+nature, we have seen in the last chapter, that it is sufficient
+to find a single case, in which it becomes a square, to enable
+us to deduce from it an infinite number of similar cases.
 
+The given formula. <span class="artref">Art. 63</span>, was properly $$ax^2+b$$;
+and, as we usually obtain fractions for $$x$$, we supposed
+$$x=\dfrac{t}{u}$$, so that the problem, in reality, is to transform
+$$at^2 + bu^2$$ into a square.
 
-<span class="art">79</span>
-
-
-
-<span class="art">80</span>
+But there is frequently an infinite number of cases, in
+which $$x$$ may be assigned even in integer numbers; and the
+determination of those cases shall form the subject of the
+following chapter.
 
 #### Editions
 
