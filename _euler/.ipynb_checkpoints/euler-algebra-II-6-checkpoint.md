@@ -261,12 +261,40 @@ z=\dfrac{y+1}{6}=\frac{1}{3}&1&\frac{25}{3}&81&\frac{2401}{3}\\
 \end{array}
 $$
 
-<span class="art">90</span>
+<span class="art">90</span> *Question 4.* To find all the integer square numbers, which, if multiplied by 7 and increased by 2, become
+squares.
 
+It is here required to have $$7x^2+2=y^2$$, or $$a = 7$$, and
+$$b = 2$$; and the known case innnediately occurs, that is to
+say, $$x=1$$; so that $$x =f= 1$$, and $$y = g = 3$$. If we
+next consider the equation $$7n^2+1=m^2$$, we easily find
+also that $$n = 3$$ and $$m = 8$$; whence $$x = 8f + 3g$$, and
+$$y = 8g + 21f$$. We shall therefore have the following
+results:
 
-
+$$
+\begin{array}{l|l|l}
+x=f=1&17&271\\
+y=g=3&45&717, \; \textrm{etc.}
+\end{array}
+$$
 
 <span class="art">91</span>
+
+
+
+
+<span class="art">92</span>
+
+
+
+
+<span class="art">93</span>
+
+
+
+
+<span class="art">94</span>
 
 #### Editions
 
