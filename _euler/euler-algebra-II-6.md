@@ -315,7 +315,7 @@ and for $$p$$ and $$q$$.
 First, $$x=2f+g$$, and $$y=2g+3f$$; then,
 
 $$
-\begin{array}{l|l|l|l}
+\begin{array}{r|r|r|r}
 x=f=1&3&11&41\\
 y=g=1&5&19&71\\
 p=0&1&5&20\\
