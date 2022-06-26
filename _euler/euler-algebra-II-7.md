@@ -154,7 +154,26 @@ $$p=2q+\surd(6q^2+1)$$. Now, this formula resembling the
 first, we have $$q=0$$; wherefore $$p=1$$, $$n=2$$, and
 $$\surd(6n^2+1)=5$$.
 
-<span class="art">102</span>
+<span class="art">102</span> Let us proceed farther, and take $$a = 7$$, and
+$$7n^2+1=m^2$$; here we see that $$m>2n$$; let us therefore make 
+$$m=2n+p$$, and we shall have
+
+$$7n^2+1=4n^2+4np+p^2,\quad \textrm{or} \quad 3n^2 = 4np+p^2-1;$$
+
+which gives $$n=\dfrac{2p+\surd(7p^2-3)}{3}$$. At present, since $$n>\frac{4}{3}p$$,
+and, consequently, greater than $$p$$, let us make $$n=p+q$$,
+and we shall have $$p+3q=\surd(7p^2-3)$$; then, squaring
+both sides, $$p^2+6pq+9q^2=7p^2-3$$, so that
+
+$$6p^2=6pq+9q^2+3,\quad \textrm{or} \quad 2p^2 = 2pq+3q^2+1;$$
+
+whence we get $$p=\dfrac{q+\surd(7q^2+2)}{2}$$. Now, we have here $$p>\dfrac{3q}{2}$$;
+and, consequently, $$p>q$$; so that making $$p=q+r$$, we shall have $$q+2r=\surd(7q^2+2)$$;
+the squares of which are $$q^2+4qr+4r^2=7q^2+2$$; then
+$$6q^2=4qr+4r^2-2$$, or $$3q^2=2qr+2r^2-1$$; and, lastly,
+$$q=\dfrac{r+\surd(7r^2-3)}{3}$$.
+Since now $$q>r$$, let us suppose $$q=r+s$$, and we shall have
+
 
 
 
