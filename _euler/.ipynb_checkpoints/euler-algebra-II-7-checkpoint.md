@@ -81,10 +81,33 @@ and $$n = 2$$, as before. This example is sufficient to give an
 idea of the method; but it will be rendered more clear and
 distinct from what follows.
 
-<span class="art">99</span>
+<span class="art">99</span> Let $$a = 3$$, that is to say, let it be required to transform the formula
+$$3n^2+1$$ into a square. Here we shall make $$\surd(3n^2+1)=n+p$$, which gives
 
+$$3n^2+1=n^2+2np+p^2,\quad 2n^2=2np+p^2-1;$$
 
+whence we obtain $$n=\dfrac{p+\surd(3p^2-2)}{2}$$. Now, since
+$$\surd(3p^2-2)$$ exceeds $$p$$, and, consequently, $$n$$ is greater
+than $$\dfrac{2p}{2}$$, or than $$p$$, let us suppose $$n=p+q$$, and we shall have
 
+$$
+\begin{align}
+2p+2q&=p+\surd(3p^2-2), \; \textrm{or}\\
+p+2q&=\surd(3p^2-2);
+\end{align}
+$$
+
+then, by squaring, $$p^2+4pq+4q^2=3p^2-2$$; so that
+
+$$2p^2=4pq+4q^2+2,\quad \textrm{or} \quad p^2=2pq+2q^2+1,$$
+
+and
+
+$$p=q+\surd(3q^2+1).$$
+
+Now, this formula being similar to the one proposed, we may make
+$$q=0$$, and shall thus obtain $$p=1$$, and $$n=1$$; whence
+$$\surd(3n^2+1)=2$$.
 
 <span class="art">100</span>
 
