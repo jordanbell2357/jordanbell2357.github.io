@@ -207,10 +207,14 @@ $$2p^2=12pq-4q^2+2,\quad \textrm{and} \quad p^2=6pq-2q^2+1,$$
 whence results $$p=3q+\surd(7q^2+1)$$. Here, we can at once make
 $$q=0$$, which gives $$p=1$$, $$n=3$$, and $$m=8$$, as before.
 
-<span class="art">103</span>
+<span class="art">103</span> Let $$a=8$$, so that $$8n^2+1=m^2$$, and $$m<3n$$.
+Here, we must make $$m = 3n - p$$, and shall have
 
+$$8n^2+1=9n^2-6np+p^2,\quad \textrm{or} \quad n^2=6np-p^2+1;$$
 
-
+whence $$n=3p+\surd(8p^2+1)$$, and this formula being already
+similar to the one proposed, we may make $$p = 0$$,
+which gives $$n = 1$$, and $$m = 3$$.
 
 <span class="art">104</span>
 
