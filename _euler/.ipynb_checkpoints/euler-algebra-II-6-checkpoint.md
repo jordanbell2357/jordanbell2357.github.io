@@ -326,10 +326,59 @@ $$
 
 because we have also $$q=\dfrac{1-y}{6}$$.
 
-<span class="art">92</span>
+<span class="art">92</span> Hitherto, when the given formula contained a second
+term, we were obliged to expunge it, but the method we
+have now given may be applied, without taking away that
+second term, in the following manner.
 
+Let $$ax^2+bx+c$$ be the given formula, which must be a
+square,  $$y^2$$, and let us suppose that we already know the case
+$$af^2+bf+c=g^2$$.
 
+Now, if we subtract this equation from the first, we shall
+have $$a(x^2-f^2)+b(x-f)=y^2-g^2$$, which may be expressed by
+factors in this manner:
 
+$$(x-f)\cdot(ax+af+b)=(y-g)\cdot(y+g);$$
+
+and if we multiply both sides by $$pq$$, we shall have
+
+$$pq(x-f)(ax+af+b)=pq(y-g)\cdot(y+g),$$
+
+which equation may be resolved into these two,
+
+1. $$p(x-f)=q(y-g)$$,
+2. $$q(ax+af+b)=p(y+g)$$.
+
+Now, multiplying the first by $$p$$, and the second by $$q$$, and
+subtracting the first product from the second, we obtain
+
+$$(aq^2-p^2)x+(aq^2+p^2)f+bq^2=2gpq,$$
+
+which gives
+
+$$x=\dfrac{2gpq}{aq^2-p^2} - \dfrac{(aq^2+p^2)f}{aq^2-p^2} - \dfrac{bq^2}{aq^2-p^2}.$$
+
+But the first equation is
+
+$$q(y-g) = p(x-f) = p\left(\dfrac{2gpq}{aq^2-p^2}-\dfrac{2afq^2}{aq^2-p^2}-\dfrac{bq^2}{aq^2-p^2}\right);$$
+
+so that
+
+$$y-g = \dfrac{2gp^2}{aq^2-p^2}-\dfrac{2afpq}{aq^2-p^2}-\dfrac{bpq}{aq^2-p^2};$$
+
+and, consequently,
+
+$$y=g\left(\dfrac{aq^2+p^2}{aq^2-p^2}-\dfrac{2afpq}{aq^2-p^2}-\dfrac{bpq}{aq^2-p^2}\right).$$
+
+Now, in order to remove the fractions, let us make, as
+before, $$\dfrac{aq^2+p^2}{aq^2-p^2}=m$$, and $$\dfrac{2pq}{aq^2-p^2}=n$$; and we shall have
+$$m+1=\dfrac{2aq^2}{aq^2-p^2}$$, and $$\dfrac{q^2}{aq^2-p^2}=\dfrac{m+1}{2a}$$; therefore
+
+$$x=ng-mf-\dfrac{b(m+1)}{2a},\quad \textrm{and} \quad y=mg-naf-\frac{1}{2}bn;$$
+
+in which the letters $$m$$ and $$n$$ must be such, that, as before,
+$$m^2=an^2+1$$.
 
 <span class="art">93</span>
 
