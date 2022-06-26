@@ -253,7 +253,7 @@ $$z=\dfrac{1-y}{6}$$, because we may write $$y=1-6z$$: whence we
 find the following results:
 
 $$
-\begin{array}{r|r|r|r|r}
+\begin{array}{l|l|l|l|l}
 x=f=0&1&10&99&980\\
 y=g=1&5&49&485&4801\\
 z=\dfrac{y+1}{6}=\frac{1}{3}&1&\frac{25}{3}&81&\frac{2401}{3}\\
