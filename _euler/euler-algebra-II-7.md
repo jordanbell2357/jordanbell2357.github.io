@@ -7,9 +7,24 @@ chapter: 7
 
 ### Part {{ page.part}}. {{ page.title }}
 
-<span class="art">38</span> 
+<span class="art">96</span> 
 
-<span class="art">39</span>
+<span class="art">97</span>
+
+
+
+
+<span class="art">98</span>
+
+
+
+
+<span class="art">99</span>
+
+
+
+
+<span class="art">100</span>
 
 #### Editions
 
