@@ -216,10 +216,24 @@ whence $$n=3p+\surd(8p^2+1)$$, and this formula being already
 similar to the one proposed, we may make $$p = 0$$,
 which gives $$n = 1$$, and $$m = 3$$.
 
-<span class="art">104</span>
+<span class="art">104</span> We may proceed, in the same manner, for every
+otlier number, $$a$$, provided it be positive and not a square,
+and we shall always be led, at last, to a radical quantity,
+such as $$\surd(at^2+1)$$; similar to the first, or given formula,
+and then we have only to suppose $$t = 0$$; for the irrationality will disappear,
+and by tracing back the steps, we
+shall necessarily find such a value of $$n$$, as will make $$an^2+1$$
+a square.
 
-
-
+Sometimes we quickly obtain our end; but, frequently
+also, we are obliged to go through a great number of
+operations. This depends on the nature of the number
+$$a$$; but we have no principles, by which we can foresee
+the number of operations that it will be necessary to perform.
+The process is not very long for numbers below 13,
+but when $$a = 13$$, the calculation becomes much more
+prolix; and, for this reason, it will be proper here to resolve
+that case.
 
 <span class="art">105</span>
 
