@@ -380,7 +380,30 @@ $$x=ng-mf-\dfrac{b(m+1)}{2a},\quad \textrm{and} \quad y=mg-naf-\frac{1}{2}bn;$$
 in which the letters $$m$$ and $$n$$ must be such, that, as before,
 $$m^2=an^2+1$$.
 
-<span class="art">93</span>
+<span class="art">93</span> The formulae which we have obtained for $$x$$ and $$y$$,
+are still mixed with fractions, since some of their terms contain the letter $$b$$;
+for which reason they do not answer our
+purpose. Buut if from those values we pass to the succceeding
+ones, we constantly obtain integer numbers; which, indeed,
+we should have obtained much more easily by means of the
+numbers $$p$$ and $$q$$ that were introduced at the beginning.
+In fact, if we take $$p$$ and $$q$$, so that $$p^2=aq^2+1$$, we shall have
+$$aq^2-p^2=-1$$, and the fractions will disappear. For
+then $$x=-2gpq+f(aq^2+p^2)+bq^2$$, and $$y=-g(aq^2+p^2)+2afpq+bpq$$; but as in
+the known case,$$af^2+bf+c=g^2$$, 
+
+we find only the second power of $$g$$, it is of no consequence what sign we give that letter;
+if, therefore, we
+write $$-g$$ instead of $$+g$$, we shall have the formulae
+
+$$x=2gpq+f(aq^2+p^2)+bq^2$$, and  
+$$y=g(aq^2+p^2)+2afpq+bpq$$,
+
+and we shall thus be certain, at the same time,
+that $$ax^2+bx+c=y^2$$.
+
+Let it be required, as an example, to find the hexagonal
+numbers that are also squares.
 
 
 
