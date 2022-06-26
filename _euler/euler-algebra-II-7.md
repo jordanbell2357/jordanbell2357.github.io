@@ -7,7 +7,23 @@ chapter: 7
 
 ### Part {{ page.part}}. {{ page.title }}
 
-<span class="art">96</span> 
+<span class="art">96</span> That which has been taught in the last chapter, cannot be completely performed, unless we are able to assign for
+any number $$a$$, a number $$n$$, such that $$an^2+1$$ may become a square; or that we may have
+$$m^2=an^2+1$$.
+
+This equation would be easy to resolve, if we were satisfied with fractional numbers, since we should have only to
+make $$m=1+\dfrac{np}{q}$$; for, by this supposition, we have
+
+$$m^2=1+\dfrac{2np}{q}+\dfrac{n^2p^2}{q^2} = an^2+1;$$
+
+in which equation, we
+may expunge 1 from both sides, and divide the other terms
+by $$n$$: then multiplying by $$q^2$$, we obtain $$2pq+np^2=anq^2$$;
+and this equation, giving $$n=\dfrac{2pq}{aq^2-p^2}$$, would furnish an
+infinite number of values for $$n$$: but as $$n$$ must be an integer
+number, this method will be of no use, and therefore very
+different means must be employed in order to accomplish
+our object.
 
 <span class="art">97</span>
 
