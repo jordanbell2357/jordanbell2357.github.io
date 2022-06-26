@@ -109,11 +109,22 @@ Now, this formula being similar to the one proposed, we may make
 $$q=0$$, and shall thus obtain $$p=1$$, and $$n=1$$; whence
 $$\surd(3n^2+1)=2$$.
 
-<span class="art">100</span>
+<span class="art">100</span> Let $$a = 5$$, that we may have to make a square of
+the formula $$5n^2+1$$, the root of which is greater than $$2n$$.
+We shall therefore suppose
 
+$$\surd(5n^2+1)=2n+p,\quad \textrm{or} \quad 5n^2+1=4n^2+4np+p^2;$$
 
+whence we obtain
 
+$$n^2=4np+p^2-1,\quad \textrm{and} \quad n=2p+\surd(5p^2-1).$$
 
+Now, $$\surd(5p^2-1)>2p$$; whence it follows that $$n>4p$$; for which reason,
+we shall make $$n=4p+q$$, which gives
+$$2p+q=\surd(5p^2-1)$$, or $$4p^2+4pq+q^2=5p^2-1$$, and
+$$p^2=4pq+q^2+1$$; so that $$p=2q+\surd(5q^2+1)$$; and as
+$$q=0$$ satisfies the terms of this equation, we shall have
+$$p=1$$, and $$n=4$$; therefore $$\surd(5n^2+1)=9$$.
 
 <span class="art">101</span>
 
