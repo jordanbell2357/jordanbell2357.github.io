@@ -174,9 +174,38 @@ $$6q^2=4qr+4r^2-2$$, or $$3q^2=2qr+2r^2-1$$; and, lastly,
 $$q=\dfrac{r+\surd(7r^2-3)}{3}$$.
 Since now $$q>r$$, let us suppose $$q=r+s$$, and we shall have
 
+$$
+\begin{align}
+2r+3s&=\surd(7r^2-3); \; \textrm{then}\\
+4r^2+12rs+9s^2&=7r^2-3, \; \textrm{or}\\
+3r^2&=12rs+9s^2+3, \; \textrm{or}\\
+r^2&=4rs+3s^2+1, \; \textrm{and}\\
+r&=2s+\surd(7s^2+1).
+\end{align}
+$$
 
+Now, this formula is like the first; so that making $$s = 0$$,
+we shall obtain $$r = 1$$, $$g = 1$$, $$p = 2$$, and $$n = 3$$, or
+$$m = 8$$.
 
+But this calculation may be considerably abridged in
+the following manner, which may be adopted also in other
+cases.
 
+Since $$7n^2+1=m^2$$, it follows that $$m<3n$$.
+
+If, therefore, we suppose $$m=3n-p$$, we shall have
+
+$$7n^2+1=9n^2-6np+p^2,\quad \textrm{or} \quad 2n^2 = 6np-p^2+1;$$
+
+whence we obtain $$n=\dfrac{3p+\surd(7p^2+2)}{2}$$; so that $$n<3p$$;
+for this reason we shall write $$n=3p-2q$$; and, squaring, we shall have
+$$9p^2-12pq+4q^2=7p^2+2$$; or
+
+$$2p^2=12pq-4q^2+2,\quad \textrm{and} \quad p^2=6pq-2q^2+1,$$
+
+whence results $$p=3q+\surd(7q^2+1)$$. Here, we can at once make
+$$q=0$$, which gives $$p=1$$, $$n=3$$, and $$m=8$$, as before.
 
 <span class="art">103</span>
 
