@@ -405,10 +405,74 @@ that $$ax^2+bx+c=y^2$$.
 Let it be required, as an example, to find the hexagonal
 numbers that are also squares.
 
+We must have $$2x^2-x=y^2$$, or $$a=2$$, $$b=-1$$, and $$c=0$$,
+and the known case will evidently be $$x=f=1$$, and $$y=g=1$$.
+
+Farther, in order that we may have $$p^2=2q^2+1$$, we must have
+$$q=2$$, and $$p=3$$; so that we shall have $$x=12g+17g-4$$,
+and $$y=17g+24f-6$$; whence result the following values:
+
+$$
+\begin{array}{l|l|l}
+x=f=1&25&841\\
+y=g=1&35&1189,\; \textrm{etc.}
+\end{array}
+$$
+
+<span class="art">94</span> Let us also consider our first formula, in which the
+second term was wanting, and examine the cases which make
+the formula $$ax^2+b$$ a square in integer numbers.
+
+Let $$ax^2+b=y^2$$, and it will be required to fulfil two conditions:
+
+1. We must know a case in which this equation exists; and we shall suppose that case to be expressed by the equation $$af^2+b=g^2$$.
+2. We must know such values of $$m$$ and $$n$$, that $$m^2=an^2+1$$; the method of finding which will be taught
+in the next chapter.
+
+From that results a new case, namely, $$x=ng+mf$$, and $$y=mg+anf$$;
+this, also, will lead us to other similar cases, which we shall represent
+in the following manner:
+
+$$
+\begin{array}{l|l|l|l|l|l}
+x=f&A&B&C&D&E\\
+y=g&P&Q&R&S&T, \; \textrm{etc.}
+\end{array}
+$$
+
+<table>
+<tr>
+<td>in which</td>
+<td>\(A=ng+mf\)</td>
+<td>\(B=nP+mA\)</td>
+<td>\(C=nQ+mB\)</td>
+<td>\(D=nR+mC\)</td>
+</tr>
+<tr>
+<td>and</td>
+<td>\(P=mg+anf\)</td>
+<td>\(Q=mP+anA\)</td>
+<td>\(R=mQ+anB\)</td>
+<td>\(S=mR+anC\), etc.</td>
+</tr>
+</table>
+
+and these two series of numbers may be easily continued to
+any length.
+
+<span class="art">95</span>
 
 
 
-<span class="art">94</span>
+
+
+<span class="art">95</span>
+
+
+
+
+
+<span class="art">96</span>
 
 #### Editions
 
