@@ -77,7 +77,7 @@ by 9; or they are not divisible by 3, in which case the remainder is always 1,
 and never 2; for which reason, no
 number contained in the formula $$3n+2$$ can be a square.
 
-<span class="art">66</span> It is easy, from what has just been said, to shew, that
+<span class="art">66</span> It is easy, from what has just been said, to show, that
 the formula $$3x^2+2$$ can never become a square, whatever
 integer, or fractional number, we choose to substitute for $$x$$.
 For, if $$x$$ be an integer number, and we divide the formula

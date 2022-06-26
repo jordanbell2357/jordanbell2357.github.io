@@ -28,7 +28,7 @@ by the divisor $$1-a$$, thus
 <img src="/assets/euler/zrwgmxoi.png" alt="Long division" width="192" height="454">
 </a>
 
-<span class="art">291</span> This shews that the fraction $$\dfrac{1}{1-a}$$ may be exhibited under all the following forms:
+<span class="art">291</span> This shows that the fraction $$\dfrac{1}{1-a}$$ may be exhibited under all the following forms:
 
 1. $$1+\dfrac{a}{1-a}$$,
 2. $$1+a+\dfrac{a^2}{1-a}$$,
@@ -80,7 +80,7 @@ but the consideration of some particular cases will make it
 easily understood. Let us suppose, in the first place, $$a=1$$;
 our series will become
 
-1 + 1 + 1 + 1 + 1 + 1 + 1 + etc.;
+1+1+1+1+1+1+1+etc.;
 
 and the fraction $$\dfrac{1}{1-a}$$, to which it must be equal, becomes $$\frac{1}{0}$$.
 Now, we have before remarked, that $$\frac{1}{0}$$
