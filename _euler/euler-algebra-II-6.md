@@ -286,7 +286,7 @@ Let the root of the triangle be $$p$$, and that of the pentagon
 $$q$$: then we must have $$\dfrac{p^2+p}{2}=\dfrac{3q^2-q}{2}$$, or $$3q^2-q=p^2+p$$;
 and, in endeavouring to find $$q$$, we shall first have
 
-$$q^2=\frac{1}{3}q+\dfac{p^2+p}{3},$$
+$$q^2=\frac{1}{3}q+\dfrac{p^2+p}{3},$$
 
 and
 
