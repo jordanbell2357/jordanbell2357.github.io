@@ -460,19 +460,58 @@ $$
 and these two series of numbers may be easily continued to
 any length.
 
-<span class="art">95</span>
+<span class="art">95</span> It will be observed, however, that here we cannot continue the upper series for $$x$$,
+without having the under one in view; but it is easy to remove this inconvenience,
+and to give a rule, not only for finding the upper
+series, without knowing the other, but also for determining
+the latter without the former.
 
+The numbers which may be substituted for $$x$$ succeed
+each other in a certain progression, such that each term (as, for example, $$E$$),
+may be determined by the two preceding
+terms $$C$$ and $$D$$, without having recourse to the terms of the
+second series $$R$$ and $$S$$. In fact, since
 
+$$
+\begin{align}
+E&=nS+mD\\
+&=n(mR+anC)+m(nR+mC)\\
+&=2mnR+an^2C+m^2C
+\end{array}
+$$
 
+and $$nR=D-mC$$, we therefore find
 
+$$E=2mD-m^2C+an^2C$$, or  
+$$E=2mD-(m^2-an^2)C$$; or lastly,  
+$$E=2mD-C$$, because $$m^2=an^2+1$$,
 
-<span class="art">95</span>
+and $$m^2-an^2=1$$; from which it is evident, how each term
+is determined by the two which precede it.
 
+It is the same with respect to the second series; for, since
+$$T=mS+anD$$, and $$D=nR+mC$$, we have
+$$T=mS+an^2R+amnC$$. Farther, $$S=mR+anC$$, so that $$anC=s-mR$$; and if
+we substitute this value of $$anC$$, we have $$T=2mS-R$$, which proves that
+the second progression follows the same law, or the same rule, as the first.
 
+Let it be required, as an example, to find all the integer numbers, $$x$$,
+such, that $$2x^2-1=y^2$$.
 
+We shall first have $$f=1$$, and $$g=1$$. Then $$m^2=2n^2+1$$,
+if $$n=2$$, and $$m=3$$; therefore, since $$A=ng+mf=5$$,
+the first two terms will be 1 and 5; and all the succeeding
+ones will be found by the formula $$E=6D-C$$: that is to say,
+each term taken six times and diminished by the preceding term, gives
+the next. So that the numbers $$x$$ which we require, will form the
+following series:
 
+1, 5, 29, 169, 985, 5751, etc.
 
-<span class="art">96</span>
+This progression we may continue to any length; and if
+we choose to admit fractional terms also, we might find an
+infinite number of them by the method which has been
+already explained.
 
 #### Editions
 
