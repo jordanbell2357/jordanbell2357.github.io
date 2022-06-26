@@ -279,10 +279,52 @@ y=g=3&45&717, \; \textrm{etc.}
 \end{array}
 $$
 
-<span class="art">91</span>
+<span class="art">91</span> *Question 5.* To find all the triangular numbers, that
+are at the same time pentagons.
 
+Let the root of the triangle be $$p$$, and that of the pentagon
+$$q$$: then we must have $$\dfrac{p^2+p}{2}=\dfrac{3q^2-q}{2}$$, or $$3q^2-q=p^2+p$$;
+and, in endeavouring to find $$q$$, we shall first have
 
+$$q^2=\frac{1}{3}q+\dfac{p^2+p}{3},$$
 
+and
+
+$$q=\frac{1}{6} \pm \surd\left(\frac{1}{36}+\dfrac{p^2+p}{3}\right),$$
+
+or
+
+$$q=\dfrac{1 \pm \surd(12p^2+12p+1)}{6}.$$
+
+Consequently, it is required to make $$12p^2+12p+1$$ become a square,
+and that in integer numbers. Now, as
+there is here a middle term $$12p$$, we shall begin with making
+$$p=\dfrac{x-1}{2}$$, by which means we shall have
+$$12p^2=3x^2-6x+3$$, and $$12p=6x-6$$; consequently, $$12p^2+12p+1=3x^2-2$$;
+and it is this last quantity, which at present we are required
+to transform into a square.
+
+If, therefore, we make $$3x^2-2=y^2$$, we shall have
+$$p=\dfrac{x-1}{2}$$, and $$q=\dfrac{1+y}{6}$$; so that all depends on the formula
+$$3x^2-2=y^2$$; and here we have $$a=3$$, and $$b=-2$$. Farther,
+we have a known case, $$x=f=1$$, and $$y=g=1$$; lastly,
+in the equation $$m^2=3n^2+1$$, we have $$n=1$$, and $$m=2$$;
+therefore we find the following values both for $$x$$ and $$y$$,
+and for $$p$$ and $$q$$.
+
+First, $$x=2f+g$$, and $$y=2g+3f$$; then,
+
+$$
+\begin{array}{l|l|l|l}
+x=f=1&3&11&41\\
+y=g=1&5&19&71\\
+p=0&1&5&20\\
+q=\frac{1}{3}&1&\frac{10}{3}&12\\
+\textrm{or} \quad q=0&-\frac{2}{3}&-3&-\frac{35}{3}
+\end{array}
+$$
+
+because we have also $$q=\dfrac{1-y}{6}$$.
 
 <span class="art">92</span>
 
