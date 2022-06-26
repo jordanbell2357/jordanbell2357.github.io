@@ -227,7 +227,7 @@ therefore $$x=3f+g$$, and $$y=3g+8f$$; and since
 $$z=\dfrac{y-1}{2}$$, we shall have the following solutions:
 
 $$
-\begin{array}{r|r|r|r|r|r}
+\begin{array}{l|l|l|l|l|l}
 x=f=0&1&6&35&204&1189\\
 y=g=1&3&17&99&577&3363\\
 z=\frac{y-1}{2}=0&1&8&49&288&1681,\;\textrm{etc.}
