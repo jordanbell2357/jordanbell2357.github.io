@@ -126,10 +126,33 @@ $$p^2=4pq+q^2+1$$; so that $$p=2q+\surd(5q^2+1)$$; and as
 $$q=0$$ satisfies the terms of this equation, we shall have
 $$p=1$$, and $$n=4$$; therefore $$\surd(5n^2+1)=9$$.
 
-<span class="art">101</span>
+<span class="art">101</span> Let us now suppose $$a = 6$$, that we may have to
+consider the formula $$6n^2+1$$, whose root is likewise
+contained between $$2n$$ and $$3n$$. We shall, therefore, make
+$$\surd(6n^2+1)=2n+p$$, and shall have
 
+$$6n^2+1 = 4n^2 + 4np + p^2, \quad \textrm{or} \quad 2n^2=4np+p^2-1;$$
 
+and, thence,
 
+$$n=p+\dfrac{\surd(6p^2-2)}{2},\quad \textrm{or} \quad n=\dfrac{2p+\surd(6p^2-2)}{2};$$
+
+so that $$n>2p$$.
+
+If, therefore, we make $$n=2p+q$$, we shall have
+
+$$
+\begin{align}
+4p+2q&=2p+\surd(6p^2-2),\; \textrm{or}\\
+2p+2q&=\surd(6p^2-2);
+\end{align}
+$$
+
+the squares of which are $$4p^2+8pq+4q^2=6p^2-2$$; so that
+$$2p^2=8pq+4q^2+2$$, and $$p^2=4pq+2q^2+1$$. Lastly,
+$$p=2q+\surd(6q^2+1)$$. Now, this formula resembling the
+first, we have $$q=0$$; wherefore $$p=1$$, $$n=2$$, and
+$$\surd(6n^2+1)=5$$.
 
 <span class="art">102</span>
 
