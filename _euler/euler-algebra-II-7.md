@@ -45,10 +45,41 @@ purpose it is sufficient to know a single one, even the least;
 and this, Pell, an English writer, has tauglit us to find bv
 an ingenious method, which we shall here explain.
 
-<span class="art">98</span>
+<span class="art">98</span> This method is not such as may be employed generally, for any number $$a$$ whatever; it is apphcable only to
+each particular case.
 
+We shall therefore begin with the easiest cases, and shall
+first seek such a value of $$n$$, that $$2n^2+1$$ may be a square,
+or that $$\surd(2n^2+1)$$ may become rational.
 
+We immediately see that this square root becomes greater
+than $$n$$, and less than $$2n$$. If, therefore, we express this root
+by $$n+p$$, it is obvious that $$p$$ must be less than $$n$$; and we
+shall have $$\surd(2n^2+1)=n+p$$; then, by squaring,
+$$2n^2+1=n^2+2np+p^2$$; therefore
 
+$$n^2=2np+p^2-1,\quad \textrm{and} \quad n=p+\surd(2p^2-1).$$
+
+The whole is reduced, therefore, to the condition of $$2p^2-1$$
+being a square; now, this is the case if $$p=1$$, which gives
+$$n=2$$, and $$\surd(2n+1)=3$$.
+
+If this case had not been immediately obvious, we should
+have gone farther; and since $$\surd(2p^2-1)>p$$, and consequently,
+$$n>2p$$, we should have made $$n=2p+q$$; and should thus have had
+
+$$2p+q=p+\surd(2p^2-1),\quad \textrm{or} \quad p+q=\surd(2p^2-1),$$
+
+and, squaring, $$p^2+2pq+q^2=2p^2-1$$, whence
+
+$$p^2=2pq+q^2+1,$$
+
+which would have given $$p=q+\surd(2q^2+1)$$; so that it
+would have been necessary to have $$2q^2+1$$ a square;
+and as this is the case, if we make $$q = 0$$, we shall have $$p = 1$$,
+and $$n = 2$$, as before. This example is sufficient to give an
+idea of the method; but it will be rendered more clear and
+distinct from what follows.
 
 <span class="art">99</span>
 
