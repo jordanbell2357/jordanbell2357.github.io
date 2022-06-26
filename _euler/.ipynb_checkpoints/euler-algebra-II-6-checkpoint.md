@@ -477,7 +477,7 @@ $$
 E&=nS+mD\\
 &=n(mR+anC)+m(nR+mC)\\
 &=2mnR+an^2C+m^2C
-\end{array}
+\end{align}
 $$
 
 and $$nR=D-mC$$, we therefore find
