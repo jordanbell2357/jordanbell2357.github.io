@@ -397,10 +397,24 @@ or $$e=5$$, we shall have $$n=10$$, and
 
 $$24n^2+1=2401=49^2.$$
 
-<span class="art">110</span>
+<span class="art">110</span> Let us now suppose $$a=e^2+1$$,
+or $$a$$ greater than
+a square by unity. Here we must have
 
+$$(e^2+1)n^2+1=m^2,$$
 
+and $$m$$ will evidently be greater than $$en$$. Let us, therefore,
+write $$m = en + p$$, and we shall have
 
+$$(e^2+1)n^2+1=e^2n^2+2enp+p^2,\quad \textrm{or} \quad n^2=2enp+p^2-1;$$
+
+whence $$n=ep+\surd(e^2p^2+p^2-1)$$. Now, we may make $$p=1$$, and shall then have
+$$n=2e$$; therefore, $$m^2=2e^2+1$$;
+which is what ought to be the result from the consideration,
+that $$a=e^2+1$$, and $$n=2e$$, which gives
+$$an^2+1=4e^4+4e^2+1$$, the square of $$2e^2+1$$. For example,
+let $$a=17$$, so that $$e=4$$, and we shall have
+$$17n^2+1=m^2$$; by making $$n=8$$, and $$m=33$$.
 
 <span class="art">111</span>
 
