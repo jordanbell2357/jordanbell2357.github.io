@@ -378,10 +378,24 @@ is evident from another consideration; for if, in
 the case of $$a=e^2-2$$, we make $$n=e$$, we shall have
 $$an^2+1=e^4-2e^2+1$$; which is the square of $$e^2-1$$.
 
-<span class="art">109</span>
+<span class="art">109</span> Let $$a=e^2-1$$, or less than a square by unity.
+First, we must have $$(e^2-1)n^2+1=m^2$$; then, because,
+as before, $$m<en$$, we shall make $$m=en-p$$; and this
+being done, we have
 
+$$(e^2-1)n^2+1=e^2n^2-2enp+p^2,\quad \textrm{or} \quad n^2=2enp-p^2+1;$$
 
+wherefore $$n=ep+\surd(e^2p^2-p^2+1)$$. Now, the irrationality
+disappeared by supposing $$p=1$$; so that $$n=2e$$, and
+$$m=2e^2-1$$. This also is evident; for, since $$a=e^2-1$$,
+and $$n=2e$$, we find
 
+$an^2+1=4e^4-4e^2+1,$$
+
+or equal to the square of $$2e^2-1$$. For example, let $$a=24$$,
+or $$e=5$$, we shall have $$n=10$$, and
+
+$$24n^2+1=2401=49^2.$$
 
 <span class="art">110</span>
 
