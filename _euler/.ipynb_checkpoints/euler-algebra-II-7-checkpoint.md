@@ -416,8 +416,8 @@ $$an^2+1=4e^4+4e^2+1$$, the square of $$2e^2+1$$. For example,
 let $$a=17$$, so that $$e=4$$, and we shall have
 $$17n^2+1=m^2$$; by making $$n=8$$, and $$m=33$$.
 
-<span class="art">111</span> Lastly, let $$a=e^2+2$$, or greater than a square by
-2. Here, we have $$(e^2+2)n^2+1=m^2$$, and, as before,
+<span class="art">111</span> Lastly, let $$a=e^2+2$$, or greater than a square by 2.
+Here, we have $$(e^2+2)n^2+1=m^2$$, and, as before,
 $$m>en$$; therefore we shall suppose $$m=en+p$$, and shall
 thus have
 
