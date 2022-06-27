@@ -342,10 +342,18 @@ $$
 So that 180 is the least number, after 0, which we can
 substitute for $$n$$, in order that $$13n^2+1$$ may become a square.
 
-<span class="art">106</span>
+<span class="art">106</span> This example sufficiently shews how prolix these
+calculations may be in particular cases;
+and when the numbers in question are greater, we are often obliged to go
+through ten times as many operations as we had to perform
+for the number 13.
 
-
-
+As we cannot foresee the numbers that will require such
+tedious calculations, we may with propriety avail ourselves
+of the trouble which others have taken; and, for this purpose, a Table is subjoined to the present chapter, in which
+the values of $$m$$ and $$n$$ are calculated for all numbers, $$a$$, between 2 and 100;
+so that in the cases which present themselves, we may take from it the values of $$m$$ and $$n$$, which
+answer to the given number $$a$$.
 
 <span class="art">107</span>
 
