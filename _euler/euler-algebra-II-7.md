@@ -438,6 +438,43 @@ $$11n^2+1=m^2$$, by making $$n=3$$, and $$m=10$$. If we
 supposed $$a=83$$, we should have $$e=9$$, and
 $$83n^2+1=m^2$$, where $$n=9$$, and $$m=82$$.
 
+<table>
+<tr>
+<th>\(a\)</th>
+<th>\(n\)</th>
+<th>\(m\)</th>
+<th>\(a\)</th>
+<th>\(n\)</th>
+<th>\(m\)</th>
+<th>\(a\)</th>
+<th>\(n\)</th>
+<th>\(m\)</th>
+</tr>
+<tr>
+<td>2</td>
+<td>2</td>
+<td>3</td>
+<td>37</td>
+<td>12</td>
+<td>73</td>
+<td>69</td>
+<td>936</td>
+<td>7775</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1</td>
+<td>2</td>
+<td>38</td>
+<td>6</td>
+<td>37</td>
+<td>70</td>
+<td>30</td>
+<td>251</td>
+</tr>
+</table>
+
+
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
