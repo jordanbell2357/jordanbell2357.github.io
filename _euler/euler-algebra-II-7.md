@@ -361,10 +361,22 @@ this is the case when $$a$$ is greater, or less than a square, by
 1 or 2; it will be proper, therefore, to enter into a particular
 analysis of these cases.
 
-<span class="art">108</span>
+<span class="art">108</span> In order to this, let $$a=e^2-2$$;
+and since we must have $$(e^2-2)n^2+1=m^2$$,
+it is clear that $$m<en$$;
+therefore we shall make $$m = en - p$$, from which we have
 
+$$(e^2-2)n^2+1=e^2n^2-2enp+p^2,$$
 
+or $$2n^2=2enp-p^2+1$$; therefore $$n=\dfrac{ep+\surd(e^2p^2-2p^2+2)}{2}$$;
+and it is evident that if we make $$p=1$$, this quantity becomes rational, and
+we have $$n=e$$, and $$m=e^2-1$$.
 
+For example, let $$a=23$$, so that $$e=5$$; we shall then have
+$$23n^2+1=m^2$$, if $$n=5$$, and $$m=24$$. The reason of which
+is evident from another consideration; for if, in
+the case of $$a=e^2-2$$, we make $$n=e$$, we shall have
+$$an^2+1=e^4-2e^2+1$$; which is the square of $$e^2-1$$.
 
 <span class="art">109</span>
 
