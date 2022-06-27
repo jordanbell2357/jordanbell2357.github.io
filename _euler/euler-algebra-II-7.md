@@ -235,7 +235,59 @@ but when $$a = 13$$, the calculation becomes much more
 prolix; and, for this reason, it will be proper here to resolve
 that case.
 
-<span class="art">105</span>
+<span class="art">105</span> Let therefore $$a = 13$$, and let it be required to
+find $$13n^2+1=m^2$$. Here, as $$m^2>9n^2$$, and, consequently,
+$$m>3n$$, let us suppose $$m=3n+p$$; we shall then have
+
+$$13n^2+1=9n^2+6np+p^2,\quad \textrm{or} \quad 4n^2=6np+p^2-1,$$
+
+and $$n=\dfrac{3p+\surd(13p^2-4)}{4}$$, which shows that $$n>\frac{6}{4}p$$,
+and therefore much greater than $$p$$. If, therefore, we make $$n=p+q$$, we shall
+have $$p+4q=\surd(13p^2-4)$$; and, taking the squares,
+
+$$13p^2-4=p^2+8pq+16q^2;$$
+
+so that
+
+$$12p^2=8pq+16q^2+4,\quad \textrm{or} \quad 3p^2=2pq+4q^2+1,$$
+
+and $$p=\dfrac{q+\surd(13q^2+3)}{3}$$. Here, $$p>\dfrac{q+3p}{3}$$, or $$p>q$$;
+we shall proceed, therefore, by making $$p=q+r$$, and shall thus obtain
+$$2q+3r=\surd(13q^2+3)$$; then
+
+$$
+\begin{align}
+13q^2+3&=4q^2+12qr+9r^2, \; \textrm{or}\\
+9q^2&=12qr+9r^2-3, \; \textrm{or}\\
+3q^2&=4qr+3r^2-1;
+\end{align}
+$$
+
+which gives $$p=\dfrac{2r+\surd(13r^2-3)}{3}$$.
+
+Again, since $$q>\dfrac{2r+3r}{3}$$, and thus $$q>r$$, we shall make
+$$q=r+s$$, and we shall thus have $$r+3s=\surd(13r^2-3)$$;
+or $$13r^2-3=r^2+6rs+9s^2$$, or $$12r^2=6rs+9s^2+s$$, or
+$$4r^2=2rs+3s^2+1$$; whence we obtain $$r=\dfrac{s+\surd(13s^2+4)}{4}$$. But here
+$$r>\dfrac{3+3s}{4}$$, or $$r>s$$; wherefore let $$r=s+t$$, and we shall have
+$$3s+4t=\surd(13s^2+4)$$, and 
+
+$$13s^2+4=9s^2+24st+16t^2;$$
+
+so that $$4s^2=24st+16t^2-4$$, and $$s^2=6ts+4t^2-1$$;
+therefore $$s=3t+\surd(13t^2-1)$$. Here we have
+
+$$s>3t+3t,\quad \textrm{or} \quad s>6t;$$
+
+we must therefore make $$s=6t+u$$; whence
+
+$$3t+u=\surd(13t^2-1),\quad \textrm{and} \quad 13t^2-1=9t^2+6tu+u^2;$$
+
+then $$4t^2=6tu+u^2+1$$; and, lastly,
+
+$$t=\dfrac{3u+\surd(13u^2+4)}{4},\quad \textrm{or} \quad t>\dfrac{6u}{4}>u.$$
+
+If, therefore, we make $$t = u + v$$, we shall have
 
 
 
