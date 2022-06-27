@@ -289,8 +289,58 @@ $$t=\dfrac{3u+\surd(13u^2+4)}{4},\quad \textrm{or} \quad t>\dfrac{6u}{4}>u.$$
 
 If, therefore, we make $$t = u + v$$, we shall have
 
+$$u+4v=\surd(13u^2+4),\quad \textrm{and} \quad 13u^2+4=u^2+8uv+16v^2;$$
 
+therefore
 
+$$12u^2=8uv+16v^2-4,\quad \textrm{or} \quad 3u^2=2uv+4v^2-1;$$
+
+lastly, $$u=\dfrac{v+\surd(13v^2-3)}{3}$$, thus $$u>\dfrac{4v}{3}$$, and thus $$u>v$$.
+
+Let us, therefore, make $$u=v+x$$, and we shall have $$2v+3x=\surd(13v^2-3)$$, and $$13v^2-3=4v^2+12vx+9x^2$$; or
+
+$$9v^2=12vx+9x^2+3,\quad \textrm{or} \quad 3v^2 = 4vx+3x^2+1,$$
+
+and $$v=\dfrac{2x+\surd(13x^2+3)}{3}$$; so that $$v>\frac{5}{3}x$$, and thus $$>x$$.
+
+Let us now suppose $$v=x+y$$, and we shall have
+
+$$
+\begin{align}
+x+3y&=\surd(13x^2+3),\; \textrm{and}\\
+13x^2+3&=x^2+6xy+9y^2,\; \textrm{or}\\
+12x^2&=6xy+9y^2-3,\; \textrm{and}\\
+4x^2&=2xy+3y^2-1; \; \textrm{whence}\\
+x&=\dfrac{y+\surd(13y^2-4)}{4},
+\end{align}
+$$
+
+and, consequently, $$x>y$$. We shall, therefore, make $$x=y+z$$, which gives
+
+$$
+\begin{align}
+3y+4z&=\surd(13y^2-4),\; \textrm{and}\\
+13y^2-4&=9y^2+24zy+16z^2, \; \textrm{or}\\
+4y^2&=24zy+16z^2+4; \; \textrm{therefore}\\
+y^2&=6yz+4z^2+1, \; \textrm{and}\\
+y&=3z+\surd(13z^2+1).
+\end{align}
+$$
+
+This formula being at length similar to the first, we may
+take $$z=0$$, and go back as follows:
+
+$$
+\begin{array}{l|l|l}
+z=0,&u=v+x=3,&q=r+s=71,\\
+y=1,&t=u+v=5,&p=q+r=109,\\
+x=y+z=1,&s=6t+u=33,&n=p+q=180,\\
+v=x+y=2,&r=s+t=38,&m=3n+p=649.
+\end{array}
+$$
+
+So that 180 is the least number, after 0, which we can
+substitute for $$n$$, in order that $$13n^2+1$$ may become a square.
 
 <span class="art">106</span>
 
