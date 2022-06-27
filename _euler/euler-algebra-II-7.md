@@ -440,15 +440,15 @@ $$83n^2+1=m^2$$, where $$n=9$$, and $$m=82$$.
 
 <table>
 <tr>
-<th>\(a\)</th>
-<th>\(n\)</th>
-<th>\(m\)</th>
-<th>\(a\)</th>
-<th>\(n\)</th>
-<th>\(m\)</th>
-<th>\(a\)</th>
-<th>\(n\)</th>
-<th>\(m\)</th>
+<th>𝑎</th>
+<th>𝑛</th>
+<th>𝑚</th>
+<th>𝑎</th>
+<th>𝑛</th>
+<th>𝑚</th>
+<th>𝑎</th>
+<th>𝑛</th>
+<th>𝑚</th>
 </tr>
 <tr>
 <td>2</td>
