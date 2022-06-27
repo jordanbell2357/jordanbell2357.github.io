@@ -416,7 +416,27 @@ $$an^2+1=4e^4+4e^2+1$$, the square of $$2e^2+1$$. For example,
 let $$a=17$$, so that $$e=4$$, and we shall have
 $$17n^2+1=m^2$$; by making $$n=8$$, and $$m=33$$.
 
-<span class="art">111</span>
+<span class="art">111</span> Lastly, let $$a=e^2+2$$, or greater than a square by
+2. Here, we have $$(e^2+2)n^2+1=m^2$$, and, as before,
+$$m>en$$; therefore we shall suppose $$m=en+p$$, and shall
+thus have
+
+$$
+\begin{align}
+c^2n^2+2n^2+1&=e^2n^2+2enp+p^2, \; \textrm{or}\\
+2n^2&=2epn+p^2-1, \; \textrm{which gives}\\
+n&=\dfrac{ep+\surd(e^2p^2+2p^2-2)}{2}.
+\end{align}
+$$
+
+Let $$p=1$$, we shall find $$n=e$$, and $$m=e^2+1$$; and, in
+fact, since $$a=e^2+2$$, and $$n=e$$, we have $$an^2+1=e^4+2e^2+1$$,
+which is the square of $$e^2+1$$.
+
+For example, let $$a=11$$, so that $$e=3$$; we shall find
+$$11n^2+1=m^2$$, by making $$n=3$$, and $$m=10$$. If we
+supposed $$a=83$$, we should have $$e=9$$, and
+$$83n^2+1=m^2$$, where $$n=9$$, and $$m=82$$.
 
 #### Editions
 
