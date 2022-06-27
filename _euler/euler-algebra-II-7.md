@@ -440,15 +440,15 @@ $$83n^2+1=m^2$$, where $$n=9$$, and $$m=82$$.
 
 <table>
 <tr>
-<th>𝑎</th>
-<th>𝑛</th>
-<th>𝑚</th>
-<th>𝑎</th>
-<th>𝑛</th>
-<th>𝑚</th>
-<th>𝑎</th>
-<th>𝑛</th>
-<th>𝑚</th>
+<th class="underline">𝑎</th>
+<th class="underline">𝑛</th>
+<th class="underline">𝑚</th>
+<th class="underline">𝑎</th>
+<th class="underline">𝑛</th>
+<th class="underline">𝑚</th>
+<th class="underline">𝑎</th>
+<th class="underline">𝑛</th>
+<th class="underline">𝑚</th>
 </tr>
 <tr>
 <td>2</td>
@@ -462,9 +462,9 @@ $$83n^2+1=m^2$$, where $$n=9$$, and $$m=82$$.
 <td>7775</td>
 </tr>
 <tr>
-<td>3</td>
-<td>1</td>
-<td>2</td>
+<td class="underline">3</td>
+<td class="underline">1</td>
+<td class="underline">2</td>
 <td>38</td>
 <td>6</td>
 <td>37</td>
