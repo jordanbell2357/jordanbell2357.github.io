@@ -355,10 +355,11 @@ the values of $$m$$ and $$n$$ are calculated for all numbers, $$a$$, between 2 a
 so that in the cases which present themselves, we may take from it the values of $$m$$ and $$n$$, which
 answer to the given number $$a$$.
 
-<span class="art">107</span>
-
-
-
+<span class="art">107</span> It is proper, however, to remark, that, for certain
+numbers, the letters $$m$$ and $$n$$ may be determined generally;
+this is the case when $$a$$ is greater, or less than a square, by
+1 or 2; it will be proper, therefore, to enter into a particular
+analysis of these cases.
 
 <span class="art">108</span>
 
