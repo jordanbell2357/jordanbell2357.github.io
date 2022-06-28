@@ -8,7 +8,7 @@ chapter: 4
 ### Part {{ page.part}}. {{ page.title }}
 
 <span class="art">38</span> It is required in the present case to determine the
-values which are to be adopted for x, in order that the
+values which are to be adopted for $$x$$, in order that the
 formula $$a + bx + cx^2$$ may become a real square; and,
 consequently, that a rational root of it may be assigned.
 Now, the letters $$a$$, $$b$$, and $$c$$, represent given numbers; and
@@ -56,7 +56,7 @@ which we may be satisfied from the following cases:
 2. $$1+x^2$$ becomes a square likewise, if $$x=\frac{4}{3}$$, which gives $$\surd(1+x^2)=\frac{5}{3}$$.
 3. If we make $$x=\frac{5}{12}$$, we obtain $$1+x^2=\frac{169}{144}$$, the square root of which is $$\frac{13}{12}$$.
 
-But it is requii-ed to shew how to find these values of $$x$$,
+But it is required to show how to find these values of $$x$$,
 and even all possible numbers of this kind.
 
 <span class="art">42</span> There are two methods of doing this. The first requires us to make
@@ -582,7 +582,7 @@ we have every reason to suppose that it is altogether
 impossible to transform the formula into a square; which, as
 we have already said, very frequently happens.
 
-<span class="art">59</span> We shall now shew, on the other hand, that when one
+<span class="art">59</span> We shall now show, on the other hand, that when one
 satisfactory case is determined, it will be easy to find all the
 other cases which likewise give a square; and it will be perceived, at the same time, that the number of those solutions
 is always infinitely great.
