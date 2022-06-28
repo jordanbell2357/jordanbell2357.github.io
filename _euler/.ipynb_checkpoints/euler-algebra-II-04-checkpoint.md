@@ -7,12 +7,12 @@ chapter: 4
 
 ### Part {{ page.part}}. {{ page.title }}
 
-<span class="art">38</span> It is required in the present case to determine tlie
+<span class="art">38</span> It is required in the present case to determine the
 values which are to be adopted for x, in order that the
-formula a -\- bx -\- ex" may become a real square; and,
+formula $$a + bx + cx^2$$ may become a real square; and,
 consequently, that a rational root of it may be assigned.
-Now, the letters r/, b, and c, represent given numbers ; and
-The determination of the unknown quantity depends chiefly
+Now, the letters $$a$$, $$b$$, and $$c$$, represent given numbers; and
+the determination of the unknown quantity depends chiefly
 on the nature of these numbers; there being many cases in
 which the solution becomes impossible. But even when it is
 possible, we must content ourselves at first with being able to
