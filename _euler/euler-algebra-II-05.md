@@ -332,7 +332,7 @@ the two classes, $$7n+2$$, and $$7n-2$$, ought to resemble
 each other in the same respect, each having the remainder 4.
 
 <span class="art">77</span> In general, therefore, let the divisor be any number
-whatever, which we shall represent by the letter $$d$$,
+whatever, which we shall represent by the letter 𝑑,
 the different classes of numbers which result from it will be
 
 $$dn$$;  
