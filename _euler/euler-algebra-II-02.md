@@ -275,23 +275,23 @@ then subtracting the first equation from this, there remains
 19$$p$$ + 9$$q$$ + 3$$r$$ = 100; whence
 
 $$
-\begin{gather}
-3r=100-19p-9q\\
-r=33+\frac{1}{3}-6p-\frac{1}{3}p-3q\\
-r=33-6p-3q+\dfrac{1-p}{3};
-\end{gather}
+\begin{align}
+3r&=100-19p-9q\\
+r&=33+\frac{1}{3}-6p-\frac{1}{3}p-3q\\
+r&=33-6p-3q+\dfrac{1-p}{3};
+\end{align}
 $$
 
 whence $$1-p$$, or $$p-1$$, must be divisible by 3; therefore if we make
 $$p-1=3t$$, we have
 
 $$
-\begin{gather}
-p=3t+1\\
-q=q\\
-r=27-19t-3q\\
-s=72+2q+16t;
-\end{gather}
+\begin{align}
+p&=3t+1\\
+q&=q\\
+r&=27-19t-3q\\
+s&=72+2q+16t;
+\end{align}
 $$
 
 whence it follows, that $$19t+3q$$ must be less than 27, and

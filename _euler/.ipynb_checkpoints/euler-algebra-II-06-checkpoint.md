@@ -172,8 +172,11 @@ Let us now suppose $$y=gm+afn$$, and we shall have
 $$g^2m^2+2afgmn+a^2f^2n^2-ax^2=g^2m^2-af^2m^2-ag^2n^2+a^2f^2n^2,$$
 
 in which the terms $$g^2m^2$$ and $$a^2f^2m^2$$ are destroyed; so that
-there remains $$ax^2=af^2m^2+ag^2n^2+2afgmn$$, or
-$$x^2=f^2m^2+2fgmn+g^2n^2$$.
+there remains
+
+$$ax^2=af^2m^2+ag^2n^2+2afgmn,$$
+
+or $$x^2=f^2m^2+2fgmn+g^2n^2$$.
 Now, this formula is evidently a
 square, and gives $$x=fm+gn$$. Hence we have obtained
 the same formulae for $$x$$ and $$y$$ as before.
@@ -272,7 +275,7 @@ $$y = 8g + 21f$$. We shall therefore have the following
 results:
 
 $$
-\begin{array}{l|l|l}
+\begin{array}{r|l|l}
 x=f=1&17&271\\
 y=g=3&45&717, \; \textrm{etc.}
 \end{array}
@@ -314,7 +317,7 @@ and for $$p$$ and $$q$$.
 First, $$x=2f+g$$, and $$y=2g+3f$$; then,
 
 $$
-\begin{array}{r|r|r|r}
+\begin{array}{r|l|l|l}
 x=f=1&3&11&41\\
 y=g=1&5&19&71\\
 p=0&1&5&20\\
@@ -412,7 +415,7 @@ $$q=2$$, and $$p=3$$; so that we shall have $$x=12g+17g-4$$,
 and $$y=17g+24f-6$$; whence result the following values:
 
 $$
-\begin{array}{l|l|l}
+\begin{array}{r|l|l}
 x=f=1&25&841\\
 y=g=1&35&1189,\; \textrm{etc.}
 \end{array}
@@ -433,7 +436,7 @@ this, also, will lead us to other similar cases, which we shall represent
 in the following manner:
 
 $$
-\begin{array}{l|l|l|l|l|l}
+\begin{array}{r|l|l|l|l|l}
 x=f&A&B&C&D&E\\
 y=g&P&Q&R&S&T, \; \textrm{etc.}
 \end{array}

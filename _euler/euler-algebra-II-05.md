@@ -358,7 +358,7 @@ and, in the first of these formulae,
 there remains either 3, or 6, or 5; in the second, 5, 3, or 6;
 and in the third, 6, 5, or 3; which cannot take place in
 square numbers. Whenever, therefore, we meet with such
-formuUe, we are certain that it is useless to attempt discovering any case,
+formulae, we are certain that it is useless to attempt discovering any case,
 in which they can become squares: and, for
 this reason, the considerations, into which we have just
 entered, are of some importance.
