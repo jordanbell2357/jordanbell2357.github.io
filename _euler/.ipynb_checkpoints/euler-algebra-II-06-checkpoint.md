@@ -253,7 +253,7 @@ $$z=\dfrac{1-y}{6}$$, because we may write $$y=1-6z$$: whence we
 find the following results:
 
 $$
-\begin{array}{l|l|l|l|l}
+\begin{array}{r|l|l|l|l}
 x=f=0&1&10&99&980\\
 y=g=1&5&49&485&4801\\
 z=\dfrac{y+1}{6}=\frac{1}{3}&1&\frac{25}{3}&81&\frac{2401}{3}\\
@@ -261,8 +261,7 @@ z=\dfrac{y+1}{6}=\frac{1}{3}&1&\frac{25}{3}&81&\frac{2401}{3}\\
 \end{array}
 $$
 
-<span class="art">90</span> *Question 4.* To find all the integer square numbers, which, if multiplied by 7 and increased by 2, become
-squares.
+<span class="art">90</span> *Question 4.* To find all the integer square numbers, which, if multiplied by 7 and increased by 2, become squares.
 
 It is here required to have $$7x^2+2=y^2$$, or $$a = 7$$, and
 $$b = 2$$; and the known case innnediately occurs, that is to
