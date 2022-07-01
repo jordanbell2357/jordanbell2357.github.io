@@ -452,7 +452,11 @@ If the first number be $$x$$, the second $$y$$, and the third $$z$$, we shall ha
 And here, if we subtract three times the first, or
 $$9x+15y+21z=1680$$, from the second, there remains
 $$10y+28z=1240$$; dividing by 2, we have $$5y+14z=620$$; whence
-we obtain $$y=124-\dfrac{14z}{5}$$: so that $$z$$ must be divisible
+we obtain
+
+$$y=124-\dfrac{14z}{5}:$$
+
+so that $$z$$ must be divisible
 by 5. If therefore we make $$z=5u$$, we shall have $$y=124-14u$$; which values
 of $$y$$ and $$z$$ being substituted in the first equation, we have
 $$3x-35u+620=560$$; or $$3x-35u-60$$, and $$x=\dfrac{35u}{3}-20$$; therefore we
