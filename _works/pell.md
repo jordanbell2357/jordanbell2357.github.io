@@ -3,6 +3,12 @@ layout: page
 title: Pell's Equation
 ---
 
+<https://crypto.stanford.edu/pbc/notes/contfrac/pell.html>
+
+<https://proofwiki.org/wiki/Pell%27s_Equation>
+
+<https://artofproblemsolving.com/wiki/index.php/Pell_equation>
+
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
