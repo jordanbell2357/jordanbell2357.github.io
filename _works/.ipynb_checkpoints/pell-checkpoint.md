@@ -13,8 +13,8 @@ Let $$k=\mathbb{Q}(\sqrt{D})$$. Let $$\mathfrak{o}_k$$ be the elements of $$k$$ 
 over $$\mathbb{Z}$$.
 
 $$
-\mathcal{O}_{\mathbb{Q}(\sqrt{d}} = \mathbb{Z}[\omega],
-\quad \omega = \begin{cases}
+\mathcal{O}_{\mathbb{Q}(\sqrt{d}} = \mathbb{Z}[\omega_D],
+\quad \omega_D = \begin{cases}
 \dfrac{1+\sqrt{D}}{2}&D \equiv 1 \pmod{3}
 \sqrt{D}&D \equiv 2 \pmod{4}\\
 \sqrt{D}&D \equiv 3 \pmod{4}
