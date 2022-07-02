@@ -162,11 +162,9 @@ when they propose to make, from three or more kinds of
 metal, a mixture of a given value, as the following example
 will show.
 
-*Question 3.* A coiner has three kinds of silver, the first
-of 14 loth fineness, the second of 11 loth fineness, the third of 9 loth fineness.
-Now he wishes to form a mixture of them
-weighing 30 Marks, of 12 loth fineness: how many Marks of each
-sort must he take?
+*Question 3.* A coiner has three kinds of silver, the first of 14 loth fineness, the second of 11 loth fineness,
+the third of 9 loth fineness. Now he wishes to form a mixture of them
+weighing 30 Marks, of 12 loth fineness: how many Marks of each sort must he take?
 
 <blockquote>
 Ein Müntz-Meister hat dreyerley Silber, das erste ist 14löthig,
@@ -188,7 +186,7 @@ A mixture containing silver has 14 loth fineness if ¹⁴⁄₁₆ of its mass i
 </div>
 
 <blockquote>
-Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die \(x\) Marck enthalten \(14x\) Loth Silber; eben so werden die \(y\) Marck von der zweyten Sorte enthalten 11\(y\) Loth; und die \(z\) Marck von der dritten Sorte werden enthalten 9\(z\) Loth Silber; dahero die gantze Maße an Silber enthalten wird 14\(x\) + 11\(y\) + 9\(z\) Loth. 
+Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden die 𝑥 Marck enthalten 14𝑥 Loth Silber; eben so werden die 𝑦 Marck von der zweyten Sorte enthalten 11𝑦 Loth; und die 𝑧 Marck von der dritten Sorte werden enthalten 9𝑧 Loth Silber; dahero die gantze Maße an Silber enthalten wird 14𝑥+11𝑦+9𝑧 Loth. 
 </blockquote>
 
 <div class="bubblebox">
@@ -216,34 +214,33 @@ Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden di
 </p>
 </div>
 
-If he take $$x$$ Marks of the first kind, $$y$$ Marks of the second,
-and $$z$$ Marks of the third, he will have $$x$$ + $$y$$ + $$z$$ = 30,
+If he take 𝑥 Marks of the first kind, 𝑦 Marks of the second,
+and 𝑧 Marks of the third, he will have 𝑥+𝑦+𝑧=30,
 which is the first equation.
 
 Then, since a Mark of the first sort contains 14 Loths of
-fine silver, the $$x$$ Marks of this sort will contain 14$$x$$ Loths of
-such silver. Also, the $$y$$ Marks of the second sort will contain 11$$y$$ Loths,
-and the $$z$$ Marks of the third sort will contain 9$$z$$ Loths of fine silver; so that the whole mass will
-contain 14$$x$$+11$$y$$+9$$z$$ Loths of fine silver.
+fine silver, the 𝑥 Marks of this sort will contain 14𝑥 Loths of
+such silver. Also, the 𝑦 Marks of the second sort will contain 11𝑦 Loths,
+and the 𝑧 Marks of the third sort will contain 9𝑧 Loths of fine silver; so that the whole mass will
+contain 14𝑥+11𝑦+9𝑧 Loths of fine silver.
 
-As this
-mixture is to weigh 30 Marks, and each of these Marks must
+As this mixture is to weigh 30 Marks, and each of these Marks must
 contain 12 Loths of fine silver, it follows that the whole mass
 will contain 360 Loths of fine silver; and thence results the
 second equation, 
 
-$$14x+11y+9z=360.$$
+14x+11𝑦+9𝑧=360.
 
 If we now subtract from this equation nine
-times the first, or 9$$x$$ + 9$$y$$ + 9$$z$$ = 270, there remains 5$$x$$ + 2$$y$$ = 90,
-an equation which must give the values of $$x$$ and $$y$$ in integer numbers;
-and with regard to the value of $$z$$, we may derive it from the first
-equation $$z=30-x-y$$. Now, the former equation gives $$2y=90-5x$$, and
-$$y=45-\dfrac{5x}{2}$$; therefore, if $$x=2u$$, we shall have
+times the first, or 9𝑥+9𝑦+9𝑧=270, there remains 5𝑥+2𝑦=90,
+an equation which must give the values of 𝑥 and 𝑦 in integer numbers;
+and with regard to the value of 𝑧, we may derive it from the first
+equation 𝑧=30-𝑥-𝑦. Now, the former equation gives 2y=90-5𝑥, and
+$$y=45-\dfrac{5x}{2}$$; therefore, if 𝑥=2𝑢, we shall have
 
-$$y=45-5u,\quad \textrm{and} \quad z=3u-15;$$
+𝑦=45-5𝑢, and 𝑧=3𝑢-15;
 
-which shows that $$u$$ must be greater than 4, and yet less than 10. Consequently,
+which shows that 𝑢 must be greater than 4, and yet less than 10. Consequently,
 the question admits of the following solutions:
 
 $$
@@ -264,15 +261,15 @@ Reichsthalers, oxen at 10 Reichsthalers each, cows at 5 Reichsthalers,
 calves at 2 Reichsthalers, and sheep at ½ Reichsthaler each. How
 many oxen, cows, calves, and sheep, did he buy?
 
-Let the number of oxen he $$p$$, that of the cows $$q$$, of calves
-$$r$$, and of sheep $$s$$. Then we have the following equations:
+Let the number of oxen he 𝑝, that of the cows 𝑞, of calves
+𝑟, and of sheep 𝑠. Then we have the following equations:
 
-1. $$p+q+r+s=100$$
-2. $$10p+5q+2r+\frac{1}{2}s=100,$$
+1. 𝑝+𝑞+𝑟+𝑠=100
+2. 10𝑝+5𝑞+2𝑟+½𝑠=100,
 
-or, removing the fractions, 20$$p$$ + 10$$q$$ + 4$$r$$ = 200:
+or, removing the fractions, 20𝑝+10𝑞+4𝑟=200:
 then subtracting the first equation from this, there remains
-19$$p$$ + 9$$q$$ + 3$$r$$ = 100; whence
+19𝑝+9𝑞+3𝑟=100; whence
 
 $$
 \begin{align}
@@ -282,8 +279,8 @@ r&=33-6p-3q+\dfrac{1-p}{3};
 \end{align}
 $$
 
-whence $$1-p$$, or $$p-1$$, must be divisible by 3; therefore if we make
-$$p-1=3t$$, we have
+whence 1-𝑝, or 𝑝-1, must be divisible by 3; therefore if we make
+𝑝-1=3𝑡, we have
 
 $$
 \begin{align}
@@ -294,36 +291,36 @@ s&=72+2q+16t;
 \end{align}
 $$
 
-whence it follows, that $$19t+3q$$ must be less than 27, and
+whence it follows, that 19𝑡+3𝑞 must be less than 27, and
 that, provided this condition be observed, we may give any
-value to $$q$$ and $$t$$. We have therefore to consider the following cases:
+value to 𝑞 and 𝑡. We have therefore to consider the following cases:
 
 <table>
 <tr>
-<th>1. \(t\) = 0</th>
-<th>2. \(t\) = 1</th>
+<th>1. 𝑡=0</th>
+<th>2. 𝑡=1</th>
 </tr>
 <tr>
-<td>\(p=1\),</td>
-<td>\(p=4\),</td>
+<td>𝑝=1,</td>
+<td>𝑝=4,</td>
 </tr>
 <tr>
-<td>\(q=q\),</td>
-<td>\(q=q\),</td>
+<td>𝑞=𝑞,</td>
+<td>𝑞=𝑞,</td>
 </tr>
 <tr>
-<td>\(r=27-3q\),</td>
-<td>\(r=8-3q\),</td>
+<td>𝑟=27-3𝑞,</td>
+<td>𝑟=8-3𝑞,</td>
 </tr>
 <tr>
-<td>\(s=72+2q\).</td>
-<td>\(s=88+2q\)</td>
+<td>𝑠=72+2𝑞.</td>
+<td>𝑠=88+2𝑞.</td>
 </tr>
 </table>
 
-We cannot make $$t=2$$, because $$r$$ would then become negative.
+We cannot make 𝑡=2, because 𝑟 would then become negative.
 
-Now, in the first case, $$q$$ cannot exceed 9; and, in the
+Now, in the first case, 𝑞 cannot exceed 9; and, in the
 second, it cannot exceed 2; so that these two cases give
 the following solutions, the first giving the following ten
 answers:
@@ -343,7 +340,7 @@ answers:
 <th>10</th>
 </tr>
 <tr>
-<td>\(p\) =</td>
+<td>𝑝=</td>
 <td>1</td>
 <td>1</td>
 <td>1</td>
@@ -356,7 +353,7 @@ answers:
 <td>1</td>
 </tr>
 <tr>
-<td>\(q\) =</td>
+<td>𝑞=</td>
 <td>0</td>
 <td>1</td>
 <td>2</td>
@@ -369,7 +366,7 @@ answers:
 <td>9</td>
 </tr>
 <tr>
-<td>\(r\) =</td>
+<td>𝑟=</td>
 <td>27</td>
 <td>24</td>
 <td>21</td>
@@ -382,7 +379,7 @@ answers:
 <td>0</td>
 </tr>
 <tr>
-<td>\(s\) =</td>
+<td>𝑠=</td>
 <td>72</td>
 <td>74</td>
 <td>76</td>
@@ -406,25 +403,25 @@ And the second furnishes the three following answers:
 <th>3</th>
 </tr>
 <tr>
-<td>\(p\) =</td>
+<td>𝑝=</td>
 <td>4</td>
 <td>4</td>
 <td>4</td>
 </tr>
 <tr>
-<td>\(q\) =</td>
+<td>𝑞=</td>
 <td>0</td>
 <td>1</td>
 <td>2</td>
 </tr>
 <tr>
-<td>\(r\) =</td>
+<td>𝑟=</td>
 <td>8</td>
 <td>5</td>
 <td>2</td>
 </tr>
 <tr>
-<td>\(s\) =</td>
+<td>𝑠=</td>
 <td>88</td>
 <td>90</td>
 <td>92</td>
