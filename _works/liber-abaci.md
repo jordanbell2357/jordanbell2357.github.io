@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Cube roots in the Liber Abaci
 ---
 
