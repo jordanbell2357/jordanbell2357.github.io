@@ -88,11 +88,13 @@ permalink: /euler/
 
 ---
 
-### Joseph Louis Lagrange. *Les Additions ä l'analyse indeterminee*.
+### Joseph Louis de Lagrange. *Additions aux éléments d'algèbre d'Euler. Analyse indéterminée*.
 
 [English translation PDF](/assets/euler/en/Lagrange.pdf)
 
 [French text PDF](/assets/euler/de/Lagrange.pdf)
+
+[Gallica-Math: Œuvres complètes](http://sites.mathdoc.fr/cgi-bin/oeitem?id=OE_LAGRANGE__7_5_0)
 
 #### Editions
 
