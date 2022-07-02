@@ -17,28 +17,25 @@ this kind occur in the common books of arithmetic; and are
 resolved by the rule called **Regula Coeci**, or **The Rule of False Position**;
 the foundation of which we shall now explain, beginning with the following example:
 
-<span class="art">25</span> *Question 1.* Thirty persons, men, wbmen, and children, spend 50 crowns in a tavern;
+<span class="art">25</span> *Question 1.* Thirty persons, men, women, and children, spend 50 crowns in a tavern;
 the share of a man is 3 crowns, that of a woman 2 crowns, and that of a child is 1
 crown; how many persons were there of each class?
 
-If the number of men be $$p$$, of women $$q$$, and of children $$r$$,
-we shall have the two following equations;
+If the number of men be 𝑝, of women 𝑞, and of children 𝑟, we shall have the two following equations;
 
-1. $$p+q+r=30$$, and
-2. $$3p+2q+r=50$$,
+1. 𝑝+𝑞+𝑟=30, and
+2. 3𝑝+2𝑞+𝑟=50,
 
-from which it is required to find the value of the three letters $$p$$, $$q$$,
-$$r$$, in integer and positive numbers. The first equation gives
-$$r=30-p-q$$; whence we immediately conclude that $$p+q$$ must be less than 30;
-and, substituting this value of $$r$$ in the second equation, we have
-$$2p+q+30=50$$; so that $$q=20-2p$$, and $$p+q=20-p$$, which evidently is
-also less than 30. Now, as we may, in this equation, assume all numbers for $$p$$
-which do not exceed 10, we shall have the following eleven answers:
-the number of men $$p$$, of women $$q$$, and of children $$r$$, being as follows:
+from which it is required to find the value of the three letters 𝑝, 𝑞, 𝑟, in integer and positive numbers.
+The first equation gives 𝑟=30-𝑝-𝑞; whence we immediately conclude that 𝑝+𝑞 must be less than 30;
+and, substituting this value of 𝑟 in the second equation, we have 2𝑝+𝑞+30=50;
+so that 𝑞=20-2𝑝, and 𝑝+𝑞=20-𝑝, which evidently is also less than 30.
+Now, as we may, in this equation, assume all numbers for 𝑝 which do not exceed 10,
+we shall have the following eleven answers: the number of men 𝑝, of women 𝑞, and of children 𝑟, being as follows:
 
 <table>
 <tr>
-<td>\(p\) = </td>
+<td>𝑝=</td>
 <td>0</td>
 <td>1</td>
 <td>2</td>
@@ -52,7 +49,7 @@ the number of men $$p$$, of women $$q$$, and of children $$r$$, being as follows
 <td>10</td>
 </tr>
 <tr>
-<td>\(q\) =</td>
+<td>𝑞=</td>
 <td>20</td>
 <td>18</td>
 <td>16</td>
@@ -66,7 +63,7 @@ the number of men $$p$$, of women $$q$$, and of children $$r$$, being as follows
 <td>0</td>
 </tr>
 <tr>
-<td>\(r\) =</td>
+<td>𝑟=</td>
 <td>10</td>
 <td>11</td>
 <td>12</td>
@@ -86,45 +83,44 @@ and, if we omit the first and the last, there will remain 9.
 <span class="art">26</span> *Question 2.* A certain person buys hogs, goats, and sheep, to the number of 100, for 100 crowns;
 the hogs cost him 3½ crowns apiece; the goats, 1⅓ crown; and the sheep, ½ a crown. How many had he of each?
 
-Let the number of hogs be $$p$$, that of the goats $$q$$, and of
+Let the number of hogs be 𝑝, that of the goats 𝑞, and of
 the sheep $$r$$, then we shall have the two following equations:
 
-1. $$p$$ + $$q$$ + $$r$$ = 100,
-2. 3½$$p$$ + 1⅓$$q$$ + ½$$r$$ = 100;
+1. 𝑝+𝑞+𝑟=100,
+2. 3½𝑝+1⅓𝑞+½𝑟=100;
 
-the latter of which being multiplied by 6, in order to remove
-the fractions, becomes 21$$p$$ + 8$$q$$ + 3$$r$$ = 600.
-Now, the first gives $$r=100-p-q$$; and if we substitute this value of $$r$$ in the second,
-we have $$18p+5q=300$$, or $$5q=300-18p$$, and $$q=60-\dfrac{18p}{5}$$: consequently,
-$$18p$$ must be divisible by 5, and therefore, as 18 is not divisible by 5, $$p$$ must contain
-5 as a factor. If we therefore make $$p=5s$$, we obtain $$q=60-18s$$, and $$r=13s+40$$;
-in which we may assume for the value of $$s$$ any integer number
-whatever, provided it be such, that $$q$$ does not become negative: but this condition
-limits the value of $$s$$ to 3; so that
+the latter of which being multiplied by 6, in order to remove the fractions, becomes 21𝑝+8𝑞+3𝑟=600.
+Now, the first gives 𝑟=100-𝑝-𝑞; and if we substitute this value of 𝑟 in the second,
+we have 18𝑝+5𝑞=300, or 5𝑞=300-18𝑝, and $$q=60-\dfrac{18p}{5}$$: consequently,
+18𝑝 must be divisible by 5, and therefore, as 18 is not divisible by 5, 𝑝 must contain
+5 as a factor. If we therefore make 𝑝=5𝑠, we obtain 𝑞=60-18𝑠, and 𝑟=13𝑠+40;
+in which we may assume for the value of 𝑠 any integer number
+whatever, provided it be such, that 𝑞 does not become negative: but this condition
+limits the value of 𝑠 to 3; so that
 if we also exclude 0, there can only be three answers to the
 question; which are as follow:
 
 <table>
 <tr>
-<td class="underline">When \(s\) =</td>
+<td class="underline">When 𝑠=</td>
 <td class="underline">1</td>
 <td class="underline">2</td>
 <td class="underline">3</td>
 </tr>
 <tr>
-<td>We have \(p\) =</td>
+<td>We have 𝑝=</td>
 <td>5</td>
 <td>10</td>
 <td>15</td>
 </tr>
 <tr>
-<td>and \(q\) =</td>
+<td>and 𝑞=</td>
 <td>42</td>
 <td>24</td>
 <td>6</td>
 </tr>
 <tr>
-<td>and \(r\) =</td>
+<td>and 𝑟=</td>
 <td>53</td>
 <td>66</td>
 <td>79</td>
