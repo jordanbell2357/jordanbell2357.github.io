@@ -13,7 +13,7 @@ Let $$k=\mathbb{Q}(\sqrt{D})$$. Let $$\mathfrak{o}_k$$ be the elements of $$k$$ 
 over $$\mathbb{Z}$$.
 
 $$
-\mathfrak{o}(\mathbb{Q}(\sqrt{D} = \begin{cases}
+\mathfrak{o}_{\mathbb{Q}(\sqrt{D})} = \begin{cases}
 \mathbb{Z}[\sqrt{D}]&D \equiv 2,3 \pmod{4}\\
 \mathbb{Z}\left[\dfrac{1+\sqrt{D}}{2}\right]&D \equiv 1 \pmod{3}
 \end{cases}
