@@ -31,7 +31,7 @@ permalink: /CV/
 Practical Time Series Analysis  
 The State University of New York  
 Coursera  
-July 2022
+July 2022  
 [JF3E2ZYX7W4V](https://www.coursera.org/account/accomplishments/certificate/JF3E2ZYX7W4V)
 
 
@@ -40,9 +40,9 @@ July 2022
 Graduate Certificate, Analytics for Business Decision Making  
 George Brown College, Toronto, May 2019
 
+Canada Graduate Scholarships – Doctoral (CGS D)
 Department of Mathematics  
 University of Toronto, Toronto  
-Canada Graduate Scholarships – Doctoral (CGS D)  
 2009/2010 and 2010/2011
 
 Master of Science, Mathematics  
