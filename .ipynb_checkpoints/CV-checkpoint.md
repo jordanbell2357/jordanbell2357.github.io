@@ -28,7 +28,11 @@ permalink: /CV/
 
 ## Continuing Education {#continuing}
 
-Practical Time Series Analysis
+Practical Time Series Analysis  
+The State University of New York  
+Coursera  
+July 2022
+[JF3E2ZYX7W4V](https://www.coursera.org/account/accomplishments/certificate/JF3E2ZYX7W4V)
 
 
 ## Education {#education}
