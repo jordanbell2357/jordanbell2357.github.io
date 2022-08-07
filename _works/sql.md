@@ -14,3 +14,15 @@ title: SQL
 <https://www.w3schools.com/sql/default.asp>
 
 <https://www.datacamp.com/tracks/sql-fundamentals>
+
+⋈
+
+⋉
+
+⋊
+
+$$\bowtie$$
+
+$$\rtimes$$
+
+$$\ltimes$$
