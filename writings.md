@@ -5,9 +5,9 @@ permalink: /writings/
 ---
 
 - [Publications](#publications)
-- [Translations](#translations)
-- [Historical and bibliographic notes](#historical)
 - [Mathematical notes](#mathematical)
+- [Historical and bibliographic notes](#historical)
+- [Translations](#translations)
 
 ## Publications {#publications}
 
