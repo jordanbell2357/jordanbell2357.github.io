@@ -19,6 +19,7 @@ permalink: /links/
 
 * [Project Euler](https://projecteuler.net/archives)
 * [DataCamp](https://www.datacamp.com/)
+* [OpenEDG Python Institute Certifications](https://pythoninstitute.org/certification-tracks)
 * [W3Schools](https://www.w3schools.com/python/default.asp)
 * [CodinGame](https://www.codingame.com/home)
 
