@@ -4,7 +4,7 @@ title: Links
 permalink: /links/
 ---
 
-- [Programming sites](#programming)
+- [Coding and programming sites](#programming)
 - [Mathematics learning](#mathematics)
   - [Ontario curriculum](#ontario)
   - [Other curriculum](#curriculum)
