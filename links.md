@@ -4,14 +4,25 @@ title: Links
 permalink: /links/
 ---
 
-- [Ontario curriculum](#ontario)
-- [Other curriculum](#curriculum)
-- [Tools](#tools)
-- [Exercises](#exercises)
-- [Games](#games)
-- [Contests](#contests)
-- [Enrichment](#enrichment)
-- [Teaching](#teaching)
+- [Programming sites](#programming)
+- [Mathematics learning](#mathematics)
+-- [Ontario curriculum](#ontario)
+-- [Other curriculum](#curriculum)
+-- [Tools](#tools)
+-- [Exercises](#exercises)
+-- [Games](#games)
+-- [Contests](#contests)
+-- [Enrichment](#enrichment)
+-- [Teaching](#teaching)
+
+# Coding and programming sites {#programming}
+
+* [Project Euler](https://projecteuler.net/archives)
+* [DataCamp](https://www.datacamp.com/)
+* [CodinGame](https://www.codingame.com/home)
+* [W3Schools](https://www.w3schools.com/python/default.asp)
+
+# Mathematics learning {#mathematics}
 
 ## Ontario curriculum {#ontario}
 
