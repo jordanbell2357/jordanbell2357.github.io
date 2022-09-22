@@ -1,13 +1,11 @@
 ---
 layout: page
-title: Writings
-permalink: /writings/
+title: Publications
+permalink: /publications/
 ---
 
 - [Publications](#publications)
 - [Translations](#translations)
-- [Mathematical notes](#mathematical)
-- [Historical and bibliographic notes](#historical)
 
 ## Publications {#publications}
 
