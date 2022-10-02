@@ -4,6 +4,7 @@ title: CV
 permalink: /CV/
 ---
 
+- [Employment](#employment)
 - [Areas of professional and scholarly interest](#interests)
 - [CV PDF](#cv-pdf)
 - [Continuing](#continuing)
@@ -12,6 +13,10 @@ permalink: /CV/
 - [Publications](#publications)
 - [Awards](#awards)
 - [Profiles](#profiles)
+
+# Employment {#employment}
+
+![Data Science Associate, Network Performance, Canadian Tire Corp](/assets/images/J_Bell.png) 
 
 ## Areas of professional and scholarly interest {#interests}
 
