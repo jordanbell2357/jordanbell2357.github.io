@@ -4,10 +4,10 @@ title: CV
 permalink: /CV/
 ---
 
-- [Employment](#employment)
+- [Work](#employment)
 - [Areas of professional and scholarly interest](#interests)
 - [CV PDF](#cv-pdf)
-- [Continuing](#continuing)
+- [Continuing training](#continuing)
 - [Education](#education)
 - [Translations](#translations)
 - [Publications](#publications)
@@ -31,7 +31,7 @@ permalink: /CV/
 
 [CV](/LaTeX/CV/cv_bell.pdf)
 
-## Continuing Education {#continuing}
+## Continuing training {#continuing}
 
 Practical Time Series Analysis  
 The State University of New York  
