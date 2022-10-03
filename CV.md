@@ -4,7 +4,7 @@ title: CV
 permalink: /CV/
 ---
 
-- [Work](#employment)
+- [Workplace](#workplace)
 - [Areas of professional and scholarly interest](#interests)
 - [CV PDF](#cv-pdf)
 - [Continuing training](#continuing)
@@ -14,7 +14,9 @@ permalink: /CV/
 - [Awards](#awards)
 - [Profiles](#profiles)
 
-# Employment {#employment}
+# Workplace {#workplace}
+
+June 2022 - Present
 
 ![Data Science Associate, Network Performance, Canadian Tire Corp](/assets/images/J_Bell.png) 
 
