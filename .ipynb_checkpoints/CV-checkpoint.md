@@ -5,6 +5,7 @@ permalink: /CV/
 ---
 
 - [Workplace](#workplace)
+- [Tutoring](#tutoring)
 - [Areas of professional and scholarly interest](#interests)
 - [CV PDF](#cv-pdf)
 - [Continuing training](#continuing)
@@ -14,11 +15,15 @@ permalink: /CV/
 - [Awards](#awards)
 - [Profiles](#profiles)
 
-# Workplace {#workplace}
+## Workplace {#workplace}
 
 June 2022 - Present
 
-![Data Science Associate, Network Performance, Canadian Tire Corp](/assets/images/J_Bell.png) 
+![Data Science Associate, Network Performance, Canadian Tire Corp](/assets/images/J_Bell.png)
+
+## Tutoring {#tutoring}
+
+![Jordan Bell Tutoring Toronto](/assets/images/logo.png)
 
 ## Areas of professional and scholarly interest {#interests}
 
