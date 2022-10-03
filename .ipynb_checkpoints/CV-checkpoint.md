@@ -6,7 +6,6 @@ permalink: /CV/
 
 - [Workplace](#workplace)
 - [Tutoring](#tutoring)
-- [Areas of professional and scholarly interest](#interests)
 - [CV PDF](#cv-pdf)
 - [Continuing training](#continuing)
 - [Education](#education)
@@ -14,6 +13,7 @@ permalink: /CV/
 - [Publications](#publications)
 - [Awards](#awards)
 - [Profiles](#profiles)
+- [Areas of professional and scholarly interest](#interests)
 
 ## Workplace {#workplace}
 
@@ -24,15 +24,6 @@ June 2022 - Present
 ## Tutoring {#tutoring}
 
 ![Jordan Bell Tutoring Toronto](/assets/images/logo.png)
-
-## Areas of professional and scholarly interest {#interests}
-
-- time series analysis
-- dynamical systems
-- statistical visualizations and information storytelling
-- dashboards and frontend development
-- history of mathematics
-- expository writing
 
 ## CV PDF {#cv-pdf}
 
@@ -112,3 +103,12 @@ University Medal in Mathematics
 - [Amazon Public Profile](https://www.amazon.com/gp/profile/amzn1.account.AHBGB7NGF3DGOUKGRF67J2GIKZXQ)
 
 - [GeoGebra Profile](https://www.geogebra.org/u/jordanbell2357)
+
+## Areas of professional and scholarly interest {#interests}
+
+- time series analysis
+- dynamical systems
+- statistical visualizations and information storytelling
+- dashboards and frontend development
+- history of mathematics
+- expository writing
