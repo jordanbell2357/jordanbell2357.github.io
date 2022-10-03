@@ -23,6 +23,8 @@ June 2022 - Present
 
 ## Online Tutoring {#tutoring}
 
+[Jordan Bell Tutoring Toronto](/tutoring)
+
 Statistics, computer science, and financial economics tutoring
 
 ![Jordan Bell Tutoring Toronto](/assets/images/logo.png)
