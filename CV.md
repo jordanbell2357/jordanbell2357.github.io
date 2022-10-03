@@ -5,7 +5,7 @@ permalink: /CV/
 ---
 
 - [Workplace](#workplace)
-- [Tutoring](#tutoring)
+- [Online Tutoring](#tutoring)
 - [CV PDF](#cv-pdf)
 - [Continuing training](#continuing)
 - [Education](#education)
@@ -21,7 +21,9 @@ June 2022 - Present
 
 ![Data Science Associate, Network Performance, Canadian Tire Corp](/assets/images/J_Bell.png)
 
-## Tutoring {#tutoring}
+## Online Tutoring {#tutoring}
+
+Statistics, computer science, and financial economics tutoring
 
 ![Jordan Bell Tutoring Toronto](/assets/images/logo.png)
 
