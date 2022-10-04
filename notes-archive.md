@@ -1,7 +1,7 @@
 ---
 layout: page
-title: Notes
-permalink: /notes/
+title: Notes archive
+permalink: /notes-archive/
 ---
 
 - [Mathematical notes](#mathematical)
