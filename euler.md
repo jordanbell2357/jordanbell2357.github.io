@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Euler's Algebra
+title: Euler's&nbsp;Algebra
 permalink: /euler/
 ---
 
