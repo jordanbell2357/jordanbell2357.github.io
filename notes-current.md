@@ -1,5 +1,5 @@
 ---
 layout: page
-title: Notes
+title: Current notes
 permalink: /notes-current/
 ---
