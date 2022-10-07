@@ -4,7 +4,7 @@ title: Links
 permalink: /links/
 ---
 
-- [Coding and programming sites](#programming)
+- [Programming learning](#programming)
 - [Mathematics learning](#mathematics)
   - [Ontario curriculum](#ontario)
   - [Other curriculum](#curriculum)
@@ -15,7 +15,7 @@ permalink: /links/
   - [Enrichment](#enrichment)
   - [Teaching](#teaching)
 
-# Coding and programming sites {#programming}
+# Programming learning {#programming}
 
 * [Project Euler](https://projecteuler.net/archives)
 * [DataCamp](https://www.datacamp.com/)
