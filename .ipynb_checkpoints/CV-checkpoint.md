@@ -108,6 +108,8 @@ University Medal in Mathematics
 
 - [GeoGebra Profile](https://www.geogebra.org/u/jordanbell2357)
 
+- [Salesforce Trailhead](https://trailblazer.me/id/jordanbell2357)
+
 ## Areas of professional and scholarly interest {#interests}
 
 - time series analysis
