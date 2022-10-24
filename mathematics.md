@@ -1,11 +1,16 @@
 ---
 layout: page
-title: Notes archive
-permalink: /notes-archive/
+title: Mathematics
+permalink: /mathematics/
 ---
 
+- [Euler's Algebra](#euler)
 - [Mathematical notes](#mathematical)
 - [Historical and bibliographic notes](#historical)
+
+## Euler's Algebra {#euler}
+
+- [Euler's Algebra](/euler)
 
 ## Mathematical notes {#mathematical}
 
