@@ -4,7 +4,8 @@ title: Links
 permalink: /links/
 ---
 
-- [Programming learning](#programming)
+- [Platforms](#platforms)
+- [Programming](#programming)
 - [Mathematics learning](#mathematics)
   - [Ontario curriculum](#ontario)
   - [Other curriculum](#curriculum)
@@ -15,7 +16,13 @@ permalink: /links/
   - [Enrichment](#enrichment)
   - [Teaching](#teaching)
 
-# Programming learning {#programming}
+# Platforms {#platforms}
+
+- [AWS Skill Builder](https://explore.skillbuilder.aws/)
+- [Cisco Learning Network])(https://learningnetwork.cisco.com/s/profile/0056e00000D6KiS)
+- [Cloudflare](https://www.cloudflare.com/learning/)
+
+# Programming {#programming}
 
 * [Project Euler](https://projecteuler.net/archives)
 * [DataCamp](https://www.datacamp.com/)
