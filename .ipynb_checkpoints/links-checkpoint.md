@@ -5,6 +5,7 @@ permalink: /links/
 ---
 
 - [Platforms](#platforms)
+- [Organizations](#organizations)
 - [Programming](#programming)
 - [Mathematics learning](#mathematics)
   - [Ontario curriculum](#ontario)
@@ -18,9 +19,21 @@ permalink: /links/
 
 # Platforms {#platforms}
 
+- [Adobe Digital Learning Services](https://learning.adobe.com/)
+- [Autodesk Learning Pathways](https://www.autodesk.com/certification/learning-pathways)
+- [AWS Training and Certification](https://www.aws.training/)
 - [AWS Skill Builder](https://explore.skillbuilder.aws/)
 - [Cisco Learning Network])(https://learningnetwork.cisco.com/s/profile/0056e00000D6KiS)
-- [Cloudflare](https://www.cloudflare.com/learning/)
+- [Cloudflare Learning Center](https://www.cloudflare.com/learning/)
+- [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
+- [HubSpot Academy](https://academy.hubspot.com/)
+- [Microsoft Azure](https://learn.microsoft.com/en-us/training/azure/)
+- [NVIDIA Deep Learning Institute]()
+- [Salesforce Trailhead](https://trailhead.salesforce.com/)
+
+# Organizations {#organizations}
+
+- [ASCM Supply Chain Learning Link](https://ascm.force.com/community/s/learning-link)
 
 # Programming {#programming}
 
