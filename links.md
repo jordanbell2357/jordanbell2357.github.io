@@ -23,7 +23,7 @@ permalink: /links/
 - [Autodesk Learning Pathways](https://www.autodesk.com/certification/learning-pathways)
 - [AWS Training and Certification](https://www.aws.training/)
 - [AWS Skill Builder](https://explore.skillbuilder.aws/)
-- [Cisco Learning Network])(https://learningnetwork.cisco.com/s/profile/0056e00000D6KiS)
+- [Cisco Learning Network](https://learningnetwork.cisco.com/s/profile/0056e00000D6KiS)
 - [Cloudflare Learning Center](https://www.cloudflare.com/learning/)
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
 - [HubSpot Academy](https://academy.hubspot.com/)
