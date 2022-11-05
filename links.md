@@ -16,6 +16,8 @@ permalink: /links/
   - [Contests](#contests)
   - [Enrichment](#enrichment)
   - [Teaching](#teaching)
+  
+[TOC]
 
 # Platforms {#platforms}
 
