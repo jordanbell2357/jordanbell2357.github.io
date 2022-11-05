@@ -20,16 +20,22 @@ permalink: /links/
 # Platforms {#platforms}
 
 - [Adobe Digital Learning Services](https://learning.adobe.com/)
+- [Alibaba Cloud Acadmey](https://edu.alibabacloud.com/)
+- [Atlassian University](https://university.atlassian.com/student/catalog)
 - [Autodesk Learning Pathways](https://www.autodesk.com/certification/learning-pathways)
 - [AWS Training and Certification](https://www.aws.training/)
 - [AWS Skill Builder](https://explore.skillbuilder.aws/)
 - [Cisco Learning Network](https://learningnetwork.cisco.com/s/profile/0056e00000D6KiS)
 - [Cloudflare Learning Center](https://www.cloudflare.com/learning/)
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
+- [Huawei Learning](https://e.huawei.com/en/talent/learning/#/home)
 - [HubSpot Academy](https://academy.hubspot.com/)
 - [Microsoft Azure](https://learn.microsoft.com/en-us/training/azure/)
-- [NVIDIA Deep Learning Institute]()
+- [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/online/)
+- [Oracle University](https://education.oracle.com/)
+- [Oracle University MyLearn](https://mylearn.oracle.com/home)
 - [Salesforce Trailhead](https://trailhead.salesforce.com/)
+- [Snowflake University](https://learn.snowflake.com/)
 
 # Organizations {#organizations}
 
