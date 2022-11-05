@@ -6,7 +6,7 @@ permalink: /links/
 
 - [Platforms](#platforms)
 - [Organizations](#organizations)
-- [Programming](#programming)
+- [Learning](#learning)
 - [Mathematics learning](#mathematics)
   - [Ontario curriculum](#ontario)
   - [Other curriculum](#curriculum)
@@ -41,7 +41,7 @@ permalink: /links/
 
 - [ASCM Supply Chain Learning Link](https://ascm.force.com/community/s/learning-link)
 
-# Business {#other}
+# Learning {#learning}
 
 - [CFI](https://corporatefinanceinstitute.com/)
 - [CMKG](https://www.cmkg.org/)
