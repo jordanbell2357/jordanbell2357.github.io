@@ -41,6 +41,11 @@ permalink: /links/
 
 - [ASCM Supply Chain Learning Link](https://ascm.force.com/community/s/learning-link)
 
+# Business {#other}
+
+- [CFI](https://corporatefinanceinstitute.com/)
+- [CMKG](https://www.cmkg.org/)
+
 # Programming {#programming}
 
 * [Project Euler](https://projecteuler.net/archives)
