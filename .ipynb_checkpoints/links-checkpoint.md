@@ -45,6 +45,7 @@ permalink: /links/
 
 - [CFI](https://corporatefinanceinstitute.com/)
 - [CMKG](https://www.cmkg.org/)
+- [openHPI](https://open.hpi.de/)
 
 # Programming {#programming}
 
