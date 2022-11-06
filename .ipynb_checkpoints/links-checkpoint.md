@@ -7,15 +7,8 @@ permalink: /links/
 - [Platforms](#platforms)
 - [Organizations](#organizations)
 - [Learning](#learning)
+- [Programming](#programming)
 - [Mathematics learning](#mathematics)
-  - [Ontario curriculum](#ontario)
-  - [Other curriculum](#curriculum)
-  - [Tools](#tools)
-  - [Exercises](#exercises)
-  - [Games](#games)
-  - [Contests](#contests)
-  - [Enrichment](#enrichment)
-  - [Teaching](#teaching)
 
 # Platforms {#platforms}
 
@@ -41,7 +34,7 @@ permalink: /links/
 
 - [ASCM Supply Chain Learning Link](https://ascm.force.com/community/s/learning-link)
 
-# Learning {#learning}
+# Business {#business}
 
 - [CFI](https://corporatefinanceinstitute.com/)
 - [CMKG](https://www.cmkg.org/)
@@ -49,11 +42,17 @@ permalink: /links/
 
 # Programming {#programming}
 
-* [Project Euler](https://projecteuler.net/archives)
+* [Brilliant](https://brilliant.org/home/)
 * [DataCamp](https://www.datacamp.com/)
+* [GeeksforGeeks](https://www.geeksforgeeks.org/)
+* [LeetCode](https://leetcode.com/)
+* [Open Data Structures](https://opendatastructures.org/)
 * [OpenEDG Python Institute Certifications](https://pythoninstitute.org/certification-tracks)
+* [Project Euler](https://projecteuler.net/archives)
+* [Real Python](https://realpython.com/sorting-algorithms-python/)
+* [Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
+* [The Algorithms](https://the-algorithms.com/)
 * [W3Schools](https://www.w3schools.com/python/default.asp)
-* [CodinGame](https://www.codingame.com/home)
 
 # Mathematics learning {#mathematics}
 
