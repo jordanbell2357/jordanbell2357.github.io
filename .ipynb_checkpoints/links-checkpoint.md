@@ -45,6 +45,7 @@ permalink: /links/
 * [Brilliant](https://brilliant.org/home/)
 * [DataCamp](https://www.datacamp.com/)
 * [GeeksforGeeks](https://www.geeksforgeeks.org/)
+* [Intel Developer Training](https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/training/courses.html)
 * [LeetCode](https://leetcode.com/)
 * [Open Data Structures](https://opendatastructures.org/)
 * [OpenEDG Python Institute Certifications](https://pythoninstitute.org/certification-tracks)
