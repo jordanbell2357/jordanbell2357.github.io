@@ -4,10 +4,6 @@ title: Links
 permalink: /links/
 ---
 
-[[_TOC_]]
-
-
-
 - [Platforms](#platforms)
 - [Organizations](#organizations)
 - [Learning](#learning)
