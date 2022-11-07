@@ -25,6 +25,7 @@ permalink: /links/
 - [HubSpot Academy](https://academy.hubspot.com/)
 - [Microsoft Azure](https://learn.microsoft.com/en-us/training/azure/)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/online/)
+- [Okta Training](https://www.okta.com/services/training/)
 - [Oracle University](https://education.oracle.com/)
 - [Oracle University MyLearn](https://mylearn.oracle.com/home)
 - [Salesforce Trailhead](https://trailhead.salesforce.com/)
@@ -36,7 +37,7 @@ permalink: /links/
 
 # Business {#business}
 
-- [CFI](https://corporatefinanceinstitute.com/)
+- [CFI](https://learn.corporatefinanceinstitute.com/)
 - [CMKG](https://www.cmkg.org/)
 - [openHPI](https://open.hpi.de/)
 - [PwC Viewpoint](https://viewpoint.pwc.com/us/en.html)
