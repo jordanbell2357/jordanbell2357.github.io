@@ -39,20 +39,23 @@ permalink: /links/
 - [CFI](https://corporatefinanceinstitute.com/)
 - [CMKG](https://www.cmkg.org/)
 - [openHPI](https://open.hpi.de/)
+- [PwC Viewpoint](https://viewpoint.pwc.com/us/en.html)
 
 # Programming {#programming}
 
+* [Algorithm Wiki](https://thimbleby.gitlab.io/algorithm-wiki-site/)
 * [Brilliant](https://brilliant.org/home/)
 * [DataCamp](https://www.datacamp.com/)
 * [GeeksforGeeks](https://www.geeksforgeeks.org/)
 * [Intel Developer Training](https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/training/courses.html)
 * [LeetCode](https://leetcode.com/)
 * [Open Data Structures](https://opendatastructures.org/)
+* [OpenDSA](https://opendsa-server.cs.vt.edu/)
 * [OpenEDG Python Institute Certifications](https://pythoninstitute.org/certification-tracks)
 * [Project Euler](https://projecteuler.net/archives)
 * [Real Python](https://realpython.com/sorting-algorithms-python/)
+* [RegexOne](https://regexone.com/)
 * [Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
-* [The Algorithms](https://the-algorithms.com/)
 * [W3Schools](https://www.w3schools.com/python/default.asp)
 
 # Mathematics learning {#mathematics}
