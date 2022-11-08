@@ -23,6 +23,7 @@ permalink: /links/
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
 - [Huawei Learning](https://e.huawei.com/en/talent/learning/#/home)
 - [HubSpot Academy](https://academy.hubspot.com/)
+- [IBM Training](https://www.ibm.com/training/free)
 - [Microsoft Azure](https://learn.microsoft.com/en-us/training/azure/)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/online/)
 - [Okta Training](https://www.okta.com/services/training/)
