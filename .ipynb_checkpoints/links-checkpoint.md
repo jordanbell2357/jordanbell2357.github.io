@@ -18,13 +18,13 @@ permalink: /links/
 - [Autodesk Learning Pathways](https://www.autodesk.com/certification/learning-pathways)
 - [AWS Training and Certification](https://www.aws.training/)
 - [AWS Skill Builder](https://explore.skillbuilder.aws/)
+- [Azure on Microsoft Learn](https://learn.microsoft.com/en-us/training/azure/)
 - [Cisco Learning Network](https://learningnetwork.cisco.com/s/profile/0056e00000D6KiS)
 - [Cloudflare Learning Center](https://www.cloudflare.com/learning/)
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
 - [Huawei Learning](https://e.huawei.com/en/talent/learning/#/home)
 - [HubSpot Academy](https://academy.hubspot.com/)
 - [IBM Training](https://www.ibm.com/training/free)
-- [Microsoft Azure](https://learn.microsoft.com/en-us/training/azure/)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/online/)
 - [Okta Training](https://www.okta.com/services/training/)
 - [Oracle University](https://education.oracle.com/)
@@ -59,6 +59,8 @@ permalink: /links/
 * [RegexOne](https://regexone.com/)
 * [Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
 * [W3Schools](https://www.w3schools.com/python/default.asp)
+* [W3Schools Courses](https://courses.w3schools.com/)
+* [W3Schools My Learning](https://my-learning.w3schools.com/)
 
 # Mathematics learning {#mathematics}
 
