@@ -47,6 +47,7 @@ permalink: /links/
 
 * [Algorithm Wiki](https://thimbleby.gitlab.io/algorithm-wiki-site/)
 * [Brilliant](https://brilliant.org/home/)
+* [Cognitive Class](https://cognitiveclass.ai/)
 * [DataCamp](https://www.datacamp.com/)
 * [GeeksforGeeks](https://www.geeksforgeeks.org/)
 * [Intel Developer Training](https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/training/courses.html)
