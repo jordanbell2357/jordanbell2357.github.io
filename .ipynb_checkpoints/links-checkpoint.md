@@ -25,7 +25,6 @@ permalink: /links/
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
 - [Google Skillshop](https://skillshop.exceedlms.com/student/catalog)
 - [Huawei Learning](https://e.huawei.com/en/talent/learning/#/home)
-- [HubSpot Academy](https://academy.hubspot.com/)
 - [IBM Training](https://www.ibm.com/training/free)
 - [The Linux Foundation](https://trainingportal.linuxfoundation.org/)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/online/)
