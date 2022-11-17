@@ -22,6 +22,7 @@ permalink: /links/
 - [Cisco Learning Network](https://learningnetwork.cisco.com/s/profile/0056e00000D6KiS)
 - [Cloudflare Learning Center](https://www.cloudflare.com/learning/)
 - [Confluent Training and Certification](https://training.confluent.io/packagedetail/confluent-education-free-self-paced)
+- [Databricks Academy](https://customer-academy.databricks.com/learn/home)
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
 - [Google Skillshop](https://skillshop.exceedlms.com/student/catalog)
 - [Huawei Learning](https://e.huawei.com/en/talent/learning/#/home)
@@ -34,7 +35,9 @@ permalink: /links/
 - [Qualcomm Wireless Academy](https://qwa.qualcomm.com/)
 - [Salesforce Trailhead](https://trailhead.salesforce.com/)
 - [Snowflake University](https://learn.snowflake.com/)
+- [Talend Academy](https://academy.talend.com/learn/home)
 - [Teradata University](https://www.teradata.com/University)
+- [VMware Customer Connect](https://learning.customerconnect.vmware.com/oltpublish/site/cms.do?view=home)
 
 # Organizations {#organizations}
 
