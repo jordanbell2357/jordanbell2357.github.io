@@ -21,16 +21,21 @@ permalink: /links/
 - [Azure on Microsoft Learn](https://learn.microsoft.com/en-us/training/azure/)
 - [Cisco Learning Network](https://learningnetwork.cisco.com/s/profile/0056e00000D6KiS)
 - [Cloudflare Learning Center](https://www.cloudflare.com/learning/)
+- [Confluent Training and Certification](https://training.confluent.io/packagedetail/confluent-education-free-self-paced)
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/)
+- [Google Skillshop](https://skillshop.exceedlms.com/student/catalog)
 - [Huawei Learning](https://e.huawei.com/en/talent/learning/#/home)
 - [HubSpot Academy](https://academy.hubspot.com/)
 - [IBM Training](https://www.ibm.com/training/free)
+- [The Linux Foundation](https://trainingportal.linuxfoundation.org/)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/online/)
 - [Okta Training](https://www.okta.com/services/training/)
 - [Oracle University](https://education.oracle.com/)
 - [Oracle University MyLearn](https://mylearn.oracle.com/home)
+- [Qualcomm Wireless Academy](https://qwa.qualcomm.com/)
 - [Salesforce Trailhead](https://trailhead.salesforce.com/)
 - [Snowflake University](https://learn.snowflake.com/)
+- [Teradata University](https://www.teradata.com/University)
 
 # Organizations {#organizations}
 
