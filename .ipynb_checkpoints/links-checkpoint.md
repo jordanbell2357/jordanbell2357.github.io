@@ -13,6 +13,7 @@ permalink: /links/
 # Platforms {#platforms}
 
 - [Adobe Digital Learning Services](https://learning.adobe.com/)
+- [Akamai](https://training.akamai.com/learn/home)
 - [Alibaba Cloud Academy](https://edu.alibabacloud.com/)
 - [Atlassian University](https://university.atlassian.com/student/catalog)
 - [Autodesk Learning Pathways](https://www.autodesk.com/certification/learning-pathways)
