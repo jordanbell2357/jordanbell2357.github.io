@@ -35,6 +35,7 @@ permalink: /links/
 - [Oracle University MyLearn](https://mylearn.oracle.com/home)
 - [Qualcomm Wireless Academy](https://qwa.qualcomm.com/)
 - [Salesforce Trailhead](https://trailhead.salesforce.com/)
+- [ServiceNow Now Learning](https://nowlearning.servicenow.com/)
 - [Snowflake University](https://learn.snowflake.com/)
 - [Talend Academy](https://academy.talend.com/learn/home)
 - [Teradata University](https://www.teradata.com/University)
@@ -49,6 +50,8 @@ permalink: /links/
 - [CFI](https://learn.corporatefinanceinstitute.com/)
 - [CME Group](https://www.cmegroup.com/education.html)
 - [CMKG](https://www.cmkg.org/)
+- [Flexport FlexU](https://www.flexport.com/flexu/)
+- [Moody's Analytics](https://www.moodysanalytics.com/course-catalog-learning-solutions)
 - [openHPI](https://open.hpi.de/)
 - [PwC Viewpoint](https://viewpoint.pwc.com/us/en.html)
 
