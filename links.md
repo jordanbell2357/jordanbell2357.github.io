@@ -20,6 +20,7 @@ permalink: /links/
 - [AWS Skill Builder](https://explore.skillbuilder.aws/learn)
 - [Azure on Microsoft Learn](https://learn.microsoft.com/en-us/training/azure/)
 - [Cisco Learning Network](https://learningnetwork.cisco.com/s/profile/0056e00000D6KiS)
+- [Cloudera Educational Services](https://www.cloudera.com/about/training.html)
 - [Cloudflare Learning Center](https://www.cloudflare.com/learning/)
 - [Confluent Training and Certification](https://training.confluent.io/packagedetail/confluent-education-free-self-paced)
 - [Databricks Academy](https://customer-academy.databricks.com/learn/home)
