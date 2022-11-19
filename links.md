@@ -5,8 +5,7 @@ permalink: /links/
 ---
 
 - [Platforms](#platforms)
-- [Organizations](#organizations)
-- [Learning](#learning)
+- [Business](#business)
 - [Programming](#programming)
 - [Mathematics learning](#mathematics)
 
@@ -28,6 +27,7 @@ permalink: /links/
 - [Google Skillshop](https://skillshop.exceedlms.com/student/catalog)
 - [Huawei Learning](https://e.huawei.com/en/talent/learning/#/home)
 - [IBM Training](https://www.ibm.com/training/free)
+- [Intel Developer Training](https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/training/courses.html)
 - [The Linux Foundation](https://trainingportal.linuxfoundation.org/)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/online/)
 - [Okta Training](https://www.okta.com/services/training/)
@@ -41,12 +41,9 @@ permalink: /links/
 - [Teradata University](https://www.teradata.com/University)
 - [VMware Customer Connect](https://learning.customerconnect.vmware.com/oltpublish/site/cms.do?view=home)
 
-# Organizations {#organizations}
-
-- [ASCM Supply Chain Learning Link](https://ascm.force.com/community/s/learning-link)
-
 # Business {#business}
 
+- [ASCM Supply Chain Learning Link](https://ascm.force.com/community/s/learning-link)
 - [CFI](https://learn.corporatefinanceinstitute.com/)
 - [CME Group](https://www.cmegroup.com/education.html)
 - [CMKG](https://www.cmkg.org/)
@@ -62,7 +59,6 @@ permalink: /links/
 * [Cognitive Class](https://cognitiveclass.ai/)
 * [DataCamp](https://www.datacamp.com/)
 * [GeeksforGeeks](https://www.geeksforgeeks.org/)
-* [Intel Developer Training](https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/training/courses.html)
 * [LeetCode](https://leetcode.com/)
 * [Open Data Structures](https://opendatastructures.org/)
 * [OpenDSA](https://opendsa-server.cs.vt.edu/)
