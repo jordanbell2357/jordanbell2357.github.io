@@ -60,12 +60,13 @@ permalink: /links/
 * [Cognitive Class](https://cognitiveclass.ai/)
 * [DataCamp](https://www.datacamp.com/)
 * [GeeksforGeeks](https://www.geeksforgeeks.org/)
+* [JetBrains Academy](https://hyperskill.org/tracks)
+* [JetBrains Learn PyCharm](https://www.jetbrains.com/pycharm/learn/)
 * [LeetCode](https://leetcode.com/)
 * [Open Data Structures](https://opendatastructures.org/)
 * [OpenDSA](https://opendsa-server.cs.vt.edu/)
 * [OpenEDG Python Institute Certifications](https://pythoninstitute.org/certification-tracks)
 * [Project Euler](https://projecteuler.net/archives)
-* [PyCharm](https://www.jetbrains.com/pycharm/learn/)
 * [Real Python](https://realpython.com/sorting-algorithms-python/)
 * [RegexOne](https://regexone.com/)
 * [Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
@@ -83,7 +84,7 @@ permalink: /links/
 ## Other curriculum {#curriculum}
 
 * [Common Core State Standards Initiative](http://www.corestandards.org/read-the-standards/)
- * [Standards for Mathematical Practice](http://www.corestandards.org/Math/Practice/)
+* [Standards for Mathematical Practice](http://www.corestandards.org/Math/Practice/)
 * [International Baccalaureate® (IB) Diploma Programme (DP)](https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/)
 * [College Board Advanced Placement Program (AP)](https://apstudents.collegeboard.org/course-index-page)
 * [Singapore Math®](https://www.singaporemath.com/)
