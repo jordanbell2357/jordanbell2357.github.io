@@ -65,6 +65,7 @@ permalink: /links/
 * [OpenDSA](https://opendsa-server.cs.vt.edu/)
 * [OpenEDG Python Institute Certifications](https://pythoninstitute.org/certification-tracks)
 * [Project Euler](https://projecteuler.net/archives)
+* [PyCharm](https://www.jetbrains.com/pycharm/learn/)
 * [Real Python](https://realpython.com/sorting-algorithms-python/)
 * [RegexOne](https://regexone.com/)
 * [Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
