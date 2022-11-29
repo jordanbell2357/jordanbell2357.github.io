@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Hoare logic
+title: Loop invariants
 ---
 
 $$\{P\}C\{Q\}$$
