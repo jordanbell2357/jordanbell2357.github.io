@@ -6,9 +6,11 @@ title: Loop invariants
 ```python
 def sort(L):
     '''
-    Precondition: L is a list of 0s and 1s
-    Postcondition: L is sorted
-    Returns True if L contains a 0 and False otherwise
+    Precondition:
+      L is a list of 0s and 1s
+    Postcondition:
+      L is sorted
+      Returns True if L contains a 0 and False otherwise
     ''' 
     i = 0
     j = -1
