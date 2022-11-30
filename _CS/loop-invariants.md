@@ -35,12 +35,26 @@ $$i_0 < \mathrm{len}(L)$$, and so
 
 Either $$L[i_0]=0$$ or $$L[i_0]=1$$.
 
-### $$L[i_0]=0$$
+#### $$L[i_0]=0$$
 
 1. $$j_1=j_0+1$$,
 2. $$L[i_0]$$ and $$L[j_1]$$ are swapped, and
 3. $$i_1=i_0+1$$.
 
+We want to show that $$P(i_1,j_1)$$ is true, namely
 
-### $$L[i_0]=1$$
+- $$-1 \leq j_1 < i_1 \leq \mathrm{len}(L)$$,
+- if $$0 \leq k \leq j_1$$ then $$L[k]=0$$, and
+- if $$j_1+1 \leq k < i_1$$ then $$L[k]=1$$,
+
+and here this means
+
+- $$-1 \leq j_1 < i_1 \leq \mathrm{len}(L)$$,
+- if $$0 \leq k \leq j_1$$ then $$L[k]=0$$, and
+- if $$j_1+1 \leq k < i_1$$ then $$L[k]=1$$.
+
+
+
+
+#### $$L[i_0]=1$$
 
