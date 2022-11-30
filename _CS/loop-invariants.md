@@ -24,7 +24,7 @@ def sort(L):
 
 Define the predicate $$P(i,j)$$ by
 
-1. $$-1 \leq j < i \leq \mathrm{len}(L)$$
+1. $-1 \leq j < i \leq \mathrm{len}(L)$
 2. if $$0 \leq k \leq j$$ then $$L[k]=0$$
 3. if $$j+1 \leq k < i$$ then $$L[k]=1$$
 
@@ -38,3 +38,4 @@ $$i_0 < \mathrm{len}(L)$$, and so
 Either $$L[i_0]=0$$ or $$L[i_0]=1$$.
 
 # $$L[i_0]=0$$
+
