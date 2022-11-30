@@ -37,8 +37,8 @@ Either $$L[i_0]=0$$ or $$L[i_0]=1$$.
 
 #### $$L[i_0]=0$$
 
-- $$j_1=j_0+1$$,
-- $$L[i_0]$$ and $$L[j_1]$$ are swapped, and
+- $$j_1=j_0+1$$.
+- $$L[i_0]$$ and $$L[j_1]$$ are swapped.
 - $$i_1=i_0+1$$.
 
 We want to show that $$P(i_1,j_1)$$ is true, namely
@@ -52,8 +52,12 @@ Using $$i_0< \mathrm{len}(L)$$ and $$i_1=i_0+1$$ we get $$i_1 \leq \mathrm{len}(
 
 $$-1 \leq j_1 < i_1 \leq \mathrm{len}(L)$$
 
+If $$0 \leq k \leq j_0$$, then $$L[k]=0$$. And $$L[j_1]=0$$. Hence if $$0 \leq k \leq j_1$$ then
+$$L[k]=0$$.
 
+If $$j_1 \leq k < i_0$$ then $$L[k]=1$$. And $$L[i_0]=1$$. So if $$j_1 \leq k < i_1$$ then $$L[k]=0$$.
 
+We have established in this case that $$P(i_1,j_1)$$ is true.
 
 #### $$L[i_0]=1$$
 
