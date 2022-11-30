@@ -45,13 +45,9 @@ We want to show that $$P(i_1,j_1)$$ is true, namely
 
 - $$-1 \leq j_1 < i_1 \leq \mathrm{len}(L)$$,
 - if $$0 \leq k \leq j_1$$ then $$L[k]=0$$, and
-- if $$j_1+1 \leq k < i_1$$ then $$L[k]=1$$,
-
-and here this means
-
-- $$-1 \leq j_1 < i_1 \leq \mathrm{len}(L)$$,
-- if $$0 \leq k \leq j_1$$ then $$L[k]=0$$, and
 - if $$j_1+1 \leq k < i_1$$ then $$L[k]=1$$.
+
+
 
 
 
