@@ -29,9 +29,14 @@ Define the predicate $$P(i,j)$$ by
 Suppose that $$P(i_0,j_0)$$ is true for some $$i_0$$ for which the loop executes. This means
 $$i_0 < \mathrm{len}(L)$$, and thus
 
-- A $$-1 \leq j_0 < i_0 < \mathrm{len}(L)$$,
-- B if $$0 \leq k \leq j_0$$ then $$L[k]=0$$, and
-- C if $$j_0+1 \leq k < i_0$$ then $$L[k]=1$$.
+A
+: $$-1 \leq j_0 < i_0 < \mathrm{len}(L)$$
+
+B
+: If $$0 \leq k \leq j_0$$ then $$L[k]=0$$.
+
+C
+: If $$j_0+1 \leq k < i_0$$ then $$L[k]=1$$.
 
 Either $$L[i_0]=0$$ or $$L[i_0]=1$$.
 
