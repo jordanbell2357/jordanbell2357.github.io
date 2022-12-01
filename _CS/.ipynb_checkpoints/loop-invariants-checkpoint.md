@@ -47,7 +47,10 @@ We want to show that $$P(i_1,j_1)$$ is true, namely
 2. If $$0 \leq k \leq j_1$$ then $$L[k]=0$$.
 3. If $$j_1+1 \leq k < i_1$$ then $$L[k]=1$$.
 
-Using $$-1 \leq j_0$$ and $$j_1=j_0+1$$, we get $$-1 \leq j_1$$. Using $$j_0<i_0$$ we get $$j_0+1<i_0+1$$ and so $$j_1<i_1$$.
+Using $$-1 \leq j_0$$ and $$j_1=j_0+1$$, we get $$-1 \leq j_1$$.
+
+Using $$j_0<i_0$$ we get $$j_0+1<i_0+1$$ and so $$j_1<i_1$$.
+
 Using $$i_0< \mathrm{len}(L)$$ and $$i_1=i_0+1$$ we get $$i_1 \leq \mathrm{len}(L)$$. Hence 
 
 $$-1 \leq j_1 < i_1 \leq \mathrm{len}(L)$$
