@@ -55,11 +55,11 @@ $$P(i_0,j_0)$$ being true gives
 
 Either $$L[i_0]=0$$ or $$L[i_0]=1$$.
 
-### $$L[i_0]=0$$
+### Case $$L[i_0]=0$$
 
 Either $$j_0+1<i_0$$ or $$j_0+1=i_0$$.
 
-#### $$j_0+1 < i_0$$
+#### Subcase $$j_0+1 < i_0$$
 
 Here, $$L[j_0+1]=1$$.
 
@@ -89,7 +89,7 @@ $$L[i_0]=1$$, thus if $$x \in \mathtt{range}(j_1+1,i_1)$$, then $$L[x]=1$$.
 
 We have established in this case that $$P(i_1,j_1)$$ is true.
 
-#### $$j_0+1 = i_0$$
+#### Subcase $$j_0+1 = i_0$$
 
 Here, $$L[j_0+1]=0$$.
 
@@ -113,7 +113,7 @@ true that if $$x \in \mathtt{range}(j_1+1,i_1)$$, then $$L[x]=1$$.
 
 We have established in this case that $$P(i_1,j_1)$$ is true.
 
-### $$L[i_0]=1$$
+### Case $$L[i_0]=1$$
 
 - $$j_1=j_0$$.
 - $$L[i_0]=1$$ and $$L[j_1]=0$$ are swapped: now $$L[i_0]=0$$ and $$L[j_1]=1$$.
@@ -152,4 +152,4 @@ $$j \geq 0$$ if and only if then there is at least one $$x$$ such that $$L[x]=0$
 
 Thus when the loop exits, the postcondition is true.
 
-This completes the proof that $$P(i,j)$$ is a correct loop invariant for the given code.
+This completes the proof that $$P(i,j)$$ is a correct loop invariant for the given code. ∎
