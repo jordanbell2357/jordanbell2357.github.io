@@ -23,9 +23,9 @@ def sort(L):
 
 Let $$\mathbb{N}$$ be the set of nonnegative integers. For $$a,b \in \mathbb{N}$$, define 
 
-$$\mathrm{range}(a,b) = \{x \in \mathbb{N} : a \leq x < b\}$$
+$$\mathtt{range}(a,b) = \{x \in \mathbb{N} : a \leq x < b\}$$
 
-If $$a \geq b$$, then $$\mathrm{range}(a,b)=\emptyset$$.
+If $$a \geq b$$, then $$\mathtt{range}(a,b)=\emptyset$$.
 
 If $$a < b$$, then $$\mathrm{range}(a,b)=\{a,\ldots,b-1\}$$, e.g. $$\mathrm{range}(0,4)=\{0,1,2,3\}$$. 
 
