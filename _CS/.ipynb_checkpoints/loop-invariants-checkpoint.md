@@ -35,7 +35,17 @@ Define the predicate $$P(i,j)$$ by
 2. If $$x \in \mathtt{range}(0,j+1)$$, then $$L[x]=0$$.
 3. If $$x \in \mathtt{range}(j+1,i)$$, then $$L[x]=1$$.
 
-Suppose that $$P(i_0,j_0)$$ is true for some $$i_0$$ and $$j_0$$ at the start of a loop iteration that executes.
+# Theorem: $$P(i,j)$$ is a correct loop invariant
+
+# Proof
+
+## Entering loop
+
+$$P(0,-1)$$ is true because $$\mathtt{range}(0,0)=\emptyset$$.
+
+## Executing loop
+
+Suppose that $$P(i_0,j_0)$$ is true for some $$i_0$$ and $$j_0$$ at the start of a loop execution.
 The loop executing means that $$i_0 < \mathtt{len}(L)$$, and combining this with
 $$P(i_0,j_0)$$ being true gives
 
@@ -103,7 +113,6 @@ true that if $$x \in \mathtt{range}(j_1+1,i_1)$$, then $$L[x]=1$$.
 
 We have established in this case that $$P(i_1,j_1)$$ is true.
 
-
 ### $$L[i_0]=1$$
 
 - $$j_1=j_0$$.
@@ -126,3 +135,21 @@ We have established in this case that $$P(i_1,j_1)$$ is true.
 
 Therefore we have shown that if $$P(i_0,j_0)$$ is true for $$i_0,j_0$$ at the beginning of the loop execution,
 then $$P(i_1,j_1)$$ is true for $$i_1,j_1$$ at the end of the loop execution.
+
+## Exiting loop
+
+Suppose that $$P(i,j)$$ is true when the loop exits. Because $$i \leq \mathtt{len}(L)$$, when the loop exits it is the case
+that $$i = \mathtt{len}(L)$$.
+Thus $$P(i,j)$$ being true means
+
+1. $$-1 \leq j < \mathtt{len}(L)$$.
+2. If $$x \in \mathtt{range}(0,j+1)$$, then $$L[x]=0$$.
+3. If $$x \in \mathtt{range}(j+1,\mathtt{len}(L))$$, then $$L[x]=1$$.
+
+It follows from this that $$L$$ is sorted in non-descending order.
+
+$$j \geq 0$$ if and only if then there is at least one $$x$$ such that $$L[x]=0$$.
+
+Thus when the loop exits, the postcondition is true.
+
+This completes the proof that $$P(i,j)$$ is a correct loop invariant for the given code.
