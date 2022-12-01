@@ -9,7 +9,8 @@ def sort(L):
     Precondition:
       L is a list of 0s and 1s
     Postcondition:
-      L is sorted (ascending)
+      L is sorted (non-descending)
+      Returns True if 0 in L and False otherwise
     ''' 
     i = 0
     j = -1
@@ -26,8 +27,8 @@ Define the predicate $$P(i,j)$$ by
 2. If $$0 \leq k \leq j$$ then $$L[k]=0$$.
 3. If $$j+1 \leq k < i$$ then $$L[k]=1$$.
 
-Suppose that $$P(i_0,j_0)$$ is true for some $$i_0$$ for which the loop executes. This means
-$$i_0 < \mathrm{len}(L)$$, and thus
+Suppose that $$P(i_0,j_0)$$ for some $$i_0$$ at the start of the loop
+for which the loop executes. The loop executing means that $$i_0 < \mathrm{len}(L)$$, and thus
 
 1. $$-1 \leq j_0 < i_0 < \mathrm{len}(L)$$.
 2. If $$0 \leq k \leq j_0$$ then $$L[k]=0$$.
