@@ -21,18 +21,27 @@ def sort(L):
         i += 1
 ```
 
+Let $$\mathbb{N}$$ be the set of nonnegative integers. For $$a,b \in \mathbb{N}$$, define 
+
+$$\mathrm{range}(a,b) = \{x \in \mathbb{N} : a \leq x < b\}$$
+
+If $$a \geq b$$, then $$\mathrm{range}(a,b)=\emptyset$$.
+
+If $$a < b$$, then $$\mathrm{range}(a,b)=\{a,\ldots,b-1\}$$, e.g. $$\mathrm{range}(0,4)=\{0,1,2,3\}$$. 
+
 Define the predicate $$P(i,j)$$ by
 
 1. $$-1 \leq j < i \leq \mathrm{len}(L)$$.
-2. If $$0 \leq k \leq j$$ then $$L[k]=0$$.
-3. If $$j+1 \leq k < i$$ then $$L[k]=1$$.
+2. If $$x \in \mathrm{range}(0,j+1)$$, then $$L[x]=0$$.
+3. If $$x \in \mathrm{range}(j+1,i)$$, then $$L[x]=1$$.
 
-Suppose that $$P(i_0,j_0)$$ for some $$i_0$$ at the start of the loop
-for which the loop executes. The loop executing means that $$i_0 < \mathrm{len}(L)$$, and thus
+Suppose that $$P(i_0,j_0)$$ is true for some $$i_0$$ and $$j_0$$ at the start of a loop iteration that executes.
+The loop executing means that $$i_0 < \mathrm{len}(L)$$, and combining this with
+$$P(i_0,j_0)$$ being true gives
 
 1. $$-1 \leq j_0 < i_0 < \mathrm{len}(L)$$.
-2. If $$0 \leq k \leq j_0$$ then $$L[k]=0$$.
-3. If $$j_0+1 \leq k < i_0$$ then $$L[k]=1$$.
+2. If $$x \in \mathrm{range}(0,j_0+1)$$, then $$L[x]=0$$.
+3. If $$x \in \mathrm{range}(j_0+1,i_0)$$, then $$L[x]=0$$.
 
 Either $$L[i_0]=0$$ or $$L[i_0]=1$$.
 
