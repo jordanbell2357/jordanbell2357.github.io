@@ -152,6 +152,6 @@ $$j \geq 0$$ if and only if then there is at least one $$x$$ such that $$L[x]=0$
 
 Thus when the loop exits, the postcondition is true.
 
-This completes the proof that $$P(i,j)$$ is a correct loop invariant for the given code. ∎
+This completes the proof that $$P(i,j)$$ is a correct loop invariant for the given code. 
 
-# ∎
+## ∎
