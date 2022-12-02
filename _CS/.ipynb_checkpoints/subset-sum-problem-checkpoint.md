@@ -84,9 +84,17 @@ Therefore $$T(n)=\Theta(n\log n)$$, that is, the sorting of the list dominates t
 
 Let $$X$$ and $$Y$$ be sets of integers and let $$k$$ be an integer.
 
-Define the predicate $$R(X,Y,k)$$ to be true if there
+Define the predicate $$R(X,Y,k)$$ to be true if there is some $$x \in X$$, $$y \in Y$$ such that
+$$x+y=k$$, and false otherwise.
+
+Let $$n=\max\{|X|,|Y|\}$$; to be specific, say $$X$$ has $$n$$ elements and $$Y$$ has at most $$n$$ elements.
+Then sorting $$X$$ takes $$\Theta(n)$$ operations, while sorting $$Y$$ can only be concluded to take
+$$O(n)$$ operations, because we do not have a lower bound on its size. But
+$$\Theta(n) + O(n) = \Theta(n)$$, so sorting both $$X$$ and $$Y$$ takes $$\Theta(n)$$ operations.
+
+The argument then works in the same pattern as the previous part; I'll write out the details when I'm more awake.
 
 
 # Divide-and-conquer solution of subset sum problem
 
-
+...
