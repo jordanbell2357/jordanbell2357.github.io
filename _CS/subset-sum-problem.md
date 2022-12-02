@@ -92,7 +92,7 @@ Then sorting $$X$$ takes $$\Theta(n)$$ operations, while sorting $$Y$$ can only 
 $$O(n)$$ operations, because we do not have a lower bound on its size. But
 $$\Theta(n) + O(n) = \Theta(n)$$, so sorting both $$X$$ and $$Y$$ takes $$\Theta(n)$$ operations.
 
-The argument then works in the same pattern as the previous part; I'll write out the details when I'm more awake.
+The argument then works in the same pattern as the previous part...
 
 
 # Divide-and-conquer solution of subset sum problem
@@ -112,4 +112,10 @@ $$Y_m=[s_{m+1},\ldots,s_n]$$
 If $$m=0$$, then $$X_0=\emptyset$$ and $$Y_0=[s_1,\ldots,s_n]=S$$.
 
 If $$m=n$$, then $$X_n=[s_1,\ldots,s_n]$$ and $$Y_n=\emptyset$$.
+
+In particular, for $$m=\frac{n}{2}$$ we get
+
+$$
+P(S,k) = R(X_m,Y_m,k)
+$$
 
