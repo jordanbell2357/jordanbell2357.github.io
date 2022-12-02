@@ -122,7 +122,6 @@ We have established in this case that $$P(i_1,j_1)$$ is true.
 ### Case $$L[i_0]=1$$
 
 - $$j_1=j_0$$.
-- $$L[i_0]=1$$ and $$L[j_1]=0$$ are swapped: now $$L[i_0]=0$$ and $$L[j_1]=1$$.
 - $$i_1=i_0+1$$.
 
 Using $$-1 \leq j_0$$ and $$j_1=j_0$$, we get $$-1 \leq j_1$$. Using $$j_0<i_0$$, we get
