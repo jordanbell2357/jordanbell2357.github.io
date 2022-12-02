@@ -68,12 +68,17 @@ Entering the loop, $$i=1$$ and $$j=n$$.
 
 $$t=s_i+s_j$$
 
-While $$t \neq k$$ and $$i < j$$,
+While $$t \neq k$$ and $$i < j$$, for $$i_0,j_0,t_0$$ at the start of a loop execution:
 
-- 
+- If $$t_0>k$$, then $$i_1=i_0$$ and $$j_1 = j_0 - 1$$.
+- If $$t_0<k$$, then $$i_1 = i_0 + 1$$ and $$j_1=j_0$$.
+- $$t_1 = s_{i_1} + s_{j_1}$$.
 
+This loop executes at most $$n$$ times. Each execution of the loop has worst case time complexity $$d$$, so
 
+$$T(n)=\Theta(n \log n) + dn + c$$
 
+Therefore $$T(n)=\Theta(n\log n)$$, that is, the sorting of the list dominates the time taken by all the other steps.
 
 # Tuple sum problem
 
@@ -82,5 +87,6 @@ Let $$X$$ and $$Y$$ be sets of integers and let $$k$$ be an integer.
 Define the predicate $$R(X,Y,k)$$ to be true if there
 
 
+# Divide-and-conquer solution of subset sum problem
 
 
