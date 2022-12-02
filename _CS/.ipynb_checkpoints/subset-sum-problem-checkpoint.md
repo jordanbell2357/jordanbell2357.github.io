@@ -47,10 +47,23 @@ Let $$S$$ be a set of integers, with $$n \geq 1$$ elements, and let $$k$$ be an 
 Define the predicate $$Q(S,k)$$ to be true if there are $$x,y \in S$$, $$x \neq y$$, such that $$x+y=k$$, and false
 otherwise.
 
-We loop $$$$ over $$S$$, and for each of these $$x$$ loops, we loop $$y$$ over $$S \setminus \{x\}$$.
+We loop $$x$$ over $$S$$, and for each of these $$x$$ loops, we loop $$y$$ over $$S \setminus \{x\}$$.
 The worst case time complexity is $$\Theta(n^2)$$.
 
 # Worst case analysis of solution of pair sum problem
+
+Sort $$S$$ in ascending order, as $$S=[s_1,\ldots,s_n]$$, where 
+
+$$s_1<\cdots<s_n$$
+
+For $$1 \leq i,j \leq n$$, define
+
+$$
+S_{i,j} = [s_i,\ldots,s_j]
+$$
+
+So, $$S_{1,n} = S$$. And if $$j>i$$ then $$S_{i,j}=\emptyset$$.
+
 
 
 
