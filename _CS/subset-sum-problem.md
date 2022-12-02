@@ -97,4 +97,19 @@ The argument then works in the same pattern as the previous part; I'll write out
 
 # Divide-and-conquer solution of subset sum problem
 
-...
+Let $$S$$ be a set of integers, with $$n \geq 1$$ elements, and let $$k$$ be an integer.
+
+Let $$S=[s_1,\ldots,s_n]$$, with $$s_1<\cdots<s_n$$.
+
+For $$0 \leq m \leq n$$, let
+
+$$X_m=[s_1,\ldots,s_m]$$
+
+and
+
+$$Y_m=[s_{m+1},\ldots,s_n]$$
+
+If $$m=0$$, then $$X_0=\emptyset$$ and $$Y_0=[s_1,\ldots,s_n]=S$$.
+
+If $$m=n$$, then $$X_n=[s_1,\ldots,s_n]$$ and $$Y_n=\emptyset$$.
+
