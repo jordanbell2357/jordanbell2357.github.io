@@ -39,6 +39,12 @@ Define the predicate $$P(i,j)$$ by
 
 # Proof
 
+# If list $$L$$ is empty
+
+...
+
+# If list $$L$$ is nonempty
+
 ## Entering loop
 
 $$P(0,-1)$$ is true because $$\mathtt{range}(0,0)=\emptyset$$.

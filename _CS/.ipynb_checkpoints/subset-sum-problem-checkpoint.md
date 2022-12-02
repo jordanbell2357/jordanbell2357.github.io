@@ -64,6 +64,11 @@ $$
 
 So, $$S_{1,n} = S$$. And if $$j>i$$ then $$S_{i,j}=\emptyset$$.
 
+While $$t \neq k$$,
+
+- $$t=s_i+s_j$$.
+- 
+
 
 
 
