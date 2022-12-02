@@ -66,9 +66,10 @@ So, $$S_{1,n} = S$$. And if $$j>i$$ then $$S_{i,j}=\emptyset$$.
 
 Entering the loop, $$i=1$$ and $$j=n$$.
 
-While $$t \neq k$$,
+$$t=s_i+s_j$$
 
-- $$t=s_i+s_j$$.
+While $$t \neq k$$ and $$i < j$$,
+
 - 
 
 
