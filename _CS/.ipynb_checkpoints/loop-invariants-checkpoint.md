@@ -19,6 +19,7 @@ def sort(L):
             j += 1
             L[i], L[j] = L[j], L[i]
         i += 1
+    return j >= 0
 ```
 
 Let $$\mathbb{N}$$ be the set of nonnegative integers. For $$a,b \in \mathbb{N}$$, define 
@@ -41,7 +42,26 @@ Define the predicate $$P(i,j)$$ by
 
 # If list $$L$$ is empty
 
-...
+## Entering loop
+
+$$P(0,-1)$$ is true because $$\mathtt{range}(0,0)=\emptyset$$.
+
+## Executing loop
+
+The loop does not execute.
+
+## Exiting loop
+
+Suppose that $$P(i,j)$$ is true when the loop exits. Since $$L$$ is empty, this means
+$$-1 \leq j < i \leq 0$$, i.e. $$j=-1$$ and $$i=0$$. We wish to show that the postcondition is true, namely, that $$L$$ is sorted
+and that True is returned if 0 is an element of $$L$$ and False otherwise.
+
+Because $$L$$ is empty, it is sorted.
+
+Because $$L$$ is empty, 0 is not an element of $$L$$, so it is vacuously true that True is returned if 0 is an element of $$L$$.
+
+Because the loop does not execute, $$j=-1$$. Therefore False is returned. So it is indeed the case that
+the postcondition is true.
 
 # If list $$L$$ is nonempty
 
