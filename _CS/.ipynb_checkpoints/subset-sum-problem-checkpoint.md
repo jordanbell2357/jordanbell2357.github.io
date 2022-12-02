@@ -56,7 +56,7 @@ Sort $$S$$ in ascending order, as $$S=[s_1,\ldots,s_n]$$, where
 
 $$s_1<\cdots<s_n$$
 
-For $$1 \leq i,j \leq n$$, define
+For $$0 \leq i,j < n$$, define
 
 $$
 S_{i,j} = [s_i,\ldots,s_j]
