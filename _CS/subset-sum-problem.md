@@ -8,9 +8,7 @@ title: Subset sum problems
 Let $$S$$ be a set of integers, with $$n \geq 1$$ elements, and let $$k$$ be an integer.
 
 Define the predicate
-$$P(S,k)$$ to be true if there is a subset $$T$$ of $$S$$ such that
-$$\sum_{t \in T} = k$$ (i.e., if $$T=\{t_1,\ldots,t_n\}$$, then
-$$t_1+\cdots+t_n = k$$), and false otherwise.
+$$P(S,k)$$: There is a subset $$T$$ of $$S$$ such that $$\sum_{t \in T} t = k$$.
 
 Let $$S=\{s_1,\ldots,s_n\}$$, and for $$1 \leq m \leq n$$ define
 
