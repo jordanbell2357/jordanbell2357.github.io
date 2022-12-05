@@ -4,13 +4,13 @@ title: Links
 permalink: /links/
 ---
 
-- [Platforms](#platforms)
-- [Organizations](#organizations)
-- [Learning](#learning)
+- [Companies](#companies)
+- [Business](#business)
 - [Programming](#programming)
+- [Course platforms](#platforms)
 - [Mathematics learning](#mathematics)
 
-# Platforms {#platforms}
+# Companies {#companies}
 
 - [Adobe Digital Learning Services](https://learning.adobe.com/)
 - [Akamai](https://training.akamai.com/learn/home)
@@ -18,9 +18,10 @@ permalink: /links/
 - [Atlassian University](https://university.atlassian.com/student/catalog)
 - [Autodesk Learning Pathways](https://www.autodesk.com/certification/learning-pathways)
 - [AWS Training and Certification](https://www.aws.training/)
-- [AWS Skill Builder](https://explore.skillbuilder.aws/)
+- [AWS Skill Builder](https://explore.skillbuilder.aws/learn)
 - [Azure on Microsoft Learn](https://learn.microsoft.com/en-us/training/azure/)
 - [Cisco Learning Network](https://learningnetwork.cisco.com/s/profile/0056e00000D6KiS)
+- [Cloudera Educational Services](https://www.cloudera.com/about/training.html)
 - [Cloudflare Learning Center](https://www.cloudflare.com/learning/)
 - [Confluent Training and Certification](https://training.confluent.io/packagedetail/confluent-education-free-self-paced)
 - [Databricks Academy](https://customer-academy.databricks.com/learn/home)
@@ -28,6 +29,7 @@ permalink: /links/
 - [Google Skillshop](https://skillshop.exceedlms.com/student/catalog)
 - [Huawei Learning](https://e.huawei.com/en/talent/learning/#/home)
 - [IBM Training](https://www.ibm.com/training/free)
+- [Intel Developer Training](https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/training/courses.html)
 - [The Linux Foundation](https://trainingportal.linuxfoundation.org/)
 - [NVIDIA Deep Learning Institute](https://www.nvidia.com/en-us/training/online/)
 - [Okta Training](https://www.okta.com/services/training/)
@@ -35,22 +37,23 @@ permalink: /links/
 - [Oracle University MyLearn](https://mylearn.oracle.com/home)
 - [Qualcomm Wireless Academy](https://qwa.qualcomm.com/)
 - [Salesforce Trailhead](https://trailhead.salesforce.com/)
+- [ServiceNow Now Learning](https://nowlearning.servicenow.com/)
 - [Snowflake University](https://learn.snowflake.com/)
 - [Talend Academy](https://academy.talend.com/learn/home)
 - [Teradata University](https://www.teradata.com/University)
 - [VMware Customer Connect](https://learning.customerconnect.vmware.com/oltpublish/site/cms.do?view=home)
 
-# Organizations {#organizations}
-
-- [ASCM Supply Chain Learning Link](https://ascm.force.com/community/s/learning-link)
-
 # Business {#business}
 
+- [ASCM Supply Chain Learning Link](https://ascm.force.com/community/s/learning-link)
 - [CFI](https://learn.corporatefinanceinstitute.com/)
 - [CME Group](https://www.cmegroup.com/education.html)
 - [CMKG](https://www.cmkg.org/)
+- [Flexport FlexU](https://www.flexport.com/flexu/)
+- [Moody's Analytics](https://www.moodysanalytics.com/course-catalog-learning-solutions)
 - [openHPI](https://open.hpi.de/)
 - [PwC Viewpoint](https://viewpoint.pwc.com/us/en.html)
+- [World Bank Group Open Learning Campus (OLC)](https://olc.worldbank.org/)
 
 # Programming {#programming}
 
@@ -59,7 +62,8 @@ permalink: /links/
 * [Cognitive Class](https://cognitiveclass.ai/)
 * [DataCamp](https://www.datacamp.com/)
 * [GeeksforGeeks](https://www.geeksforgeeks.org/)
-* [Intel Developer Training](https://www.intel.com/content/www/us/en/developer/topic-technology/artificial-intelligence/training/courses.html)
+* [JetBrains Academy](https://hyperskill.org/tracks)
+* [JetBrains Learn PyCharm](https://www.jetbrains.com/pycharm/learn/)
 * [LeetCode](https://leetcode.com/)
 * [Open Data Structures](https://opendatastructures.org/)
 * [OpenDSA](https://opendsa-server.cs.vt.edu/)
@@ -72,6 +76,13 @@ permalink: /links/
 * [W3Schools Courses](https://courses.w3schools.com/)
 * [W3Schools My Learning](https://my-learning.w3schools.com/)
 
+# Course platforms {#platforms}
+
+- [Coursera](https://www.coursera.org/)
+- [edX](https://www.edx.org/)
+- [Khan Academy](https://www.khanacademy.org/)
+- [OpenLearn](https://www.open.edu/openlearn)
+
 # Mathematics learning {#mathematics}
 
 ## Ontario curriculum {#ontario}
@@ -82,7 +93,7 @@ permalink: /links/
 ## Other curriculum {#curriculum}
 
 * [Common Core State Standards Initiative](http://www.corestandards.org/read-the-standards/)
- * [Standards for Mathematical Practice](http://www.corestandards.org/Math/Practice/)
+* [Standards for Mathematical Practice](http://www.corestandards.org/Math/Practice/)
 * [International Baccalaureate® (IB) Diploma Programme (DP)](https://www.ibo.org/programmes/diploma-programme/curriculum/mathematics/)
 * [College Board Advanced Placement Program (AP)](https://apstudents.collegeboard.org/course-index-page)
 * [Singapore Math®](https://www.singaporemath.com/)

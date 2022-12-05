@@ -4,12 +4,13 @@ title: Links
 permalink: /links/
 ---
 
-- [Platforms](#platforms)
+- [Companies](#companies)
 - [Business](#business)
 - [Programming](#programming)
+- [Course platforms](#platforms)
 - [Mathematics learning](#mathematics)
 
-# Platforms {#platforms}
+# Companies {#companies}
 
 - [Adobe Digital Learning Services](https://learning.adobe.com/)
 - [Akamai](https://training.akamai.com/learn/home)
@@ -52,6 +53,7 @@ permalink: /links/
 - [Moody's Analytics](https://www.moodysanalytics.com/course-catalog-learning-solutions)
 - [openHPI](https://open.hpi.de/)
 - [PwC Viewpoint](https://viewpoint.pwc.com/us/en.html)
+- [World Bank Group Open Learning Campus (OLC)](https://olc.worldbank.org/)
 
 # Programming {#programming}
 
@@ -73,6 +75,13 @@ permalink: /links/
 * [W3Schools](https://www.w3schools.com/python/default.asp)
 * [W3Schools Courses](https://courses.w3schools.com/)
 * [W3Schools My Learning](https://my-learning.w3schools.com/)
+
+# Course platforms {#platforms}
+
+- [Coursera](https://www.coursera.org/)
+- [edX](https://www.edx.org/)
+- [Khan Academy](https://www.khanacademy.org/)
+- [OpenLearn](https://www.open.edu/openlearn)
 
 # Mathematics learning {#mathematics}
 
