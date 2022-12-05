@@ -76,6 +76,10 @@ permalink: /links/
 * [W3Schools Courses](https://courses.w3schools.com/)
 * [W3Schools My Learning](https://my-learning.w3schools.com/)
 
+# Electronics {#electronics}
+
+- [CircuitBread](https://www.circuitbread.com/)
+
 # Course platforms {#platforms}
 
 - [Coursera](https://www.coursera.org/)
