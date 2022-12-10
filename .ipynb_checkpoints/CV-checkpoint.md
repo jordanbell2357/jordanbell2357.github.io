@@ -28,7 +28,7 @@ June 2022 - Present
 Graduate Certificate, Analytics for Business Decision Making  
 George Brown College, Toronto, May 2019
 
-Canada Graduate Scholarships – Doctoral (CGS D)
+Canada Graduate Scholarships – Doctoral (CGS D)  
 Department of Mathematics  
 University of Toronto, Toronto  
 2009/2010 and 2010/2011
