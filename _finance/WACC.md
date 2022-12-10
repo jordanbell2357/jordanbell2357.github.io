@@ -33,3 +33,7 @@ title: Weighted Average Cost of Capital (WACC)
 <td>market value of assets</td>
 </tr>
 </table>
+
+$$
+\mathrm{WACC} = k_d(1-t_c) \cdot \dfrac{D}{V} + k_e \cdot \dfrac{E}{V}
+$$
