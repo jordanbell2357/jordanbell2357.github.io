@@ -86,4 +86,5 @@ July 2022
 [Source and Application of Funds Analysis](https://learn.baselgovernance.org/course/view.php?id=17)  
 International Centre for Asset Recovery  
 Basel Institute on Governance  
-December, 2022
+December, 2022  
+[Certificate of Completion](/assets/pdfs/aJImmI2u8i.pdf)
