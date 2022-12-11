@@ -38,4 +38,5 @@ $$
 \mathrm{WACC} = k_d(1-t_c) \cdot \dfrac{D}{V} + k_e \cdot \dfrac{E}{V}
 $$
 
-<iframe src="https://www.desmos.com/calculator/cizvkc0gfo?embed" width="500" height="500" style="border: 1px solid #ccc" frameborder=0></iframe>
+- <https://www.desmos.com/calculator/ra3btxi07u>
+- <https://www.desmos.com/calculator/1s1f8eawlt>
