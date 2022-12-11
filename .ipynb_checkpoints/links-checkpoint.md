@@ -53,6 +53,12 @@ permalink: /links/
 - [Moody's Analytics](https://www.moodysanalytics.com/course-catalog-learning-solutions)
 - [openHPI](https://open.hpi.de/)
 - [PwC Viewpoint](https://viewpoint.pwc.com/us/en.html)
+
+
+# Organizations {#organizations}
+
+- [Basel Institute on Governance](https://learn.baselgovernance.org/)
+- [OCW IHE DELFT](https://ocw.un-ihe.org/)
 - [World Bank Group Open Learning Campus (OLC)](https://olc.worldbank.org/)
 
 # Programming {#programming}

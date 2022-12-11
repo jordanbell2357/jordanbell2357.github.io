@@ -92,5 +92,11 @@ December, 2022
 5G for Everyone  
 Qualcomm Wireless Academy  
 Coursera  
-December 9, 2022  
+December, 2022  
 [9NSU94K96MX8](https://coursera.org/share/3b05463ac1389f8b05f3ed576508ae37)
+
+Introduction to Blockchain Specialization  
+Association of International Certified Professional Accountants (AICPA)  
+Coursera  
+December, 2022  
+[CVBRWN3G6DER](https://coursera.org/verify/specialization/CVBRWN3G6DER)
