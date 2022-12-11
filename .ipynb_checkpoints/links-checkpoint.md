@@ -6,7 +6,9 @@ permalink: /links/
 
 - [Companies](#companies)
 - [Business](#business)
+- [Organizations](#organizations)
 - [Programming](#programming)
+- [Electronics](#electronics)
 - [Course platforms](#platforms)
 - [Mathematics learning](#mathematics)
 
@@ -78,7 +80,6 @@ permalink: /links/
 * [Real Python](https://realpython.com/sorting-algorithms-python/)
 * [RegexOne](https://regexone.com/)
 * [Rosetta Code](https://rosettacode.org/wiki/Rosetta_Code)
-* [W3Schools](https://www.w3schools.com/python/default.asp)
 * [W3Schools Courses](https://courses.w3schools.com/)
 * [W3Schools My Learning](https://my-learning.w3schools.com/)
 
