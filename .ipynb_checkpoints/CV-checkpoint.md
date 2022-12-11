@@ -10,8 +10,8 @@ permalink: /CV/
 - [Awards](#awards)
 - [Service](#service)
 - [Profiles](#profiles)
-- [Continuing training](#continuing)
 - [Online Tutoring](#tutoring)
+- [Continuing training](#continuing)
 
 ## Employment {#employment}
 
@@ -67,6 +67,14 @@ University Medal in Mathematics
 
 - [Datacamp](https://app.datacamp.com/profile/jordanbell2357)
 
+## Online Tutoring {#tutoring}
+
+[Jordan Bell Tutoring Toronto](/tutoring)
+
+Statistics, computer science, and financial economics tutoring
+
+![Jordan Bell Tutoring Toronto](/assets/images/logo.png)
+
 ## Continuing training {#continuing}
 
 Practical Time Series Analysis  
@@ -75,10 +83,7 @@ Coursera
 July 2022  
 [JF3E2ZYX7W4V](https://www.coursera.org/account/accomplishments/certificate/JF3E2ZYX7W4V)
 
-## Online Tutoring {#tutoring}
-
-[Jordan Bell Tutoring Toronto](/tutoring)
-
-Statistics, computer science, and financial economics tutoring
-
-![Jordan Bell Tutoring Toronto](/assets/images/logo.png)
+[Source and Application of Funds Analysis](https://learn.baselgovernance.org/course/view.php?id=17)  
+International Centre for Asset Recovery  
+Basel Institute on Governance  
+December, 2022
