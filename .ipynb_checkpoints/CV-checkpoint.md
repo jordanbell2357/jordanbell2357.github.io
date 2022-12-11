@@ -88,3 +88,9 @@ International Centre for Asset Recovery
 Basel Institute on Governance  
 December, 2022  
 [Certificate of Completion](/assets/pdfs/aJImmI2u8i.pdf)
+
+5G for Everyone  
+Qualcomm Wireless Academy  
+Coursera  
+December 9, 2022  
+[Course Certificate](https://coursera.org/share/3b05463ac1389f8b05f3ed576508ae37)
