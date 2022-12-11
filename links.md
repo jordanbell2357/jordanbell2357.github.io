@@ -59,7 +59,7 @@ permalink: /links/
 
 * [Algorithm Wiki](https://thimbleby.gitlab.io/algorithm-wiki-site/)
 * [Brilliant](https://brilliant.org/home/)
-* [Cognitive Class](https://cognitiveclass.ai/)
+* [Codeacademy](https://www.codecademy.com/)
 * [DataCamp](https://www.datacamp.com/)
 * [GeeksforGeeks](https://www.geeksforgeeks.org/)
 * [JetBrains Academy](https://hyperskill.org/tracks)

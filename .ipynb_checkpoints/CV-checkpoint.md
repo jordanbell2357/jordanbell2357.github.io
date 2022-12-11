@@ -93,4 +93,4 @@ December, 2022
 Qualcomm Wireless Academy  
 Coursera  
 December 9, 2022  
-[Course Certificate](https://coursera.org/share/3b05463ac1389f8b05f3ed576508ae37)
+[9NSU94K96MX8](https://coursera.org/share/3b05463ac1389f8b05f3ed576508ae37)
