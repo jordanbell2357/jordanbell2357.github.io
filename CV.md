@@ -9,9 +9,8 @@ permalink: /CV/
 - [Education](#education)
 - [Awards](#awards)
 - [Service](#service)
-- [Profiles](#profiles)
 - [Online tutoring](#tutoring)
-- [Continuing learning](#continuing)
+- [Profiles](#profiles)
 
 ## Employment {#employment}
 
@@ -53,20 +52,6 @@ University Medal in Mathematics
 
 - Ask Dr. Math® "Math Doctor", 2003-2008. [Ask Dr. Math®](https://www.nctm.org/archives/dr.math/index.htm)
 
-## Profiles {#profiles}
-
-- [Amazon Public Profile](https://www.amazon.com/gp/profile/amzn1.account.AHBGB7NGF3DGOUKGRF67J2GIKZXQ)
-
-- [Goodreads Profile](https://www.goodreads.com/jordanbell2357)
-
-- [GeoGebra Profile](https://www.geogebra.org/u/jordanbell2357)
-
-- [Salesforce Trailhead](https://trailblazer.me/id/jordanbell2357)
-
-- [Google Cloud Skills Boost](https://www.cloudskillsboost.google/public_profiles/c4354b0e-6e16-46ec-be5b-64b7b49e9611)
-
-- [Datacamp](https://app.datacamp.com/profile/jordanbell2357)
-
 ## Online tutoring {#tutoring}
 
 [Jordan Bell Tutoring Toronto](/tutoring)
@@ -74,3 +59,23 @@ University Medal in Mathematics
 Statistics, computer science, and financial economics tutoring
 
 ![Jordan Bell Tutoring Toronto](/assets/images/logo.png)
+
+## Profiles {#profiles}
+
+- [Amazon Public Profile](https://www.amazon.com/gp/profile/amzn1.account.AHBGB7NGF3DGOUKGRF67J2GIKZXQ)
+
+- [Goodreads](https://www.goodreads.com/jordanbell2357)
+
+- [Codeacademy](https://www.codecademy.com/profiles/jordanbell2357)
+
+- [Coursera](https://www.coursera.org/user/a7586c089cd57b49ac8851febd502156)
+
+- [DEV Community](https://dev.to/jordanbell2357)
+
+- [GeoGebra](https://www.geogebra.org/u/jordanbell2357)
+
+- [Salesforce Trailhead](https://trailblazer.me/id/jordanbell2357)
+
+- [Google Cloud Skills Boost](https://www.cloudskillsboost.google/public_profiles/c4354b0e-6e16-46ec-be5b-64b7b49e9611)
+
+- [Datacamp](https://app.datacamp.com/profile/jordanbell2357)
