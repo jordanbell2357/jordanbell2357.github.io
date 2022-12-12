@@ -66,6 +66,8 @@ permalink: /links/
 - [ITU Academy](https://academy.itu.int/)
 - [OCW IHE DELFT](https://ocw.un-ihe.org/)
 - [UNIDO Knowledge Hub](https://hub.unido.org/)
+- [UNITAR](https://event.unitar.org/)
+- [WCO Academy](https://academy.wcoomd.org/)
 - [World Bank Group Open Learning Campus (OLC)](https://olc.worldbank.org/)
 
 # Programming {#programming}
