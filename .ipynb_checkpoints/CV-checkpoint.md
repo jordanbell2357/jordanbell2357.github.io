@@ -57,6 +57,8 @@ University Medal in Mathematics
 
 - [Amazon Public Profile](https://www.amazon.com/gp/profile/amzn1.account.AHBGB7NGF3DGOUKGRF67J2GIKZXQ)
 
+- [Goodreads Profile](https://www.goodreads.com/jordanbell2357)
+
 - [GeoGebra Profile](https://www.geogebra.org/u/jordanbell2357)
 
 - [Salesforce Trailhead](https://trailblazer.me/id/jordanbell2357)
@@ -64,8 +66,6 @@ University Medal in Mathematics
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/public_profiles/c4354b0e-6e16-46ec-be5b-64b7b49e9611)
 
 - [Datacamp](https://app.datacamp.com/profile/jordanbell2357)
-
-<span style="color: #382110">my read shelf:</span><br/><a href="https://www.goodreads.com/review/list/58745355?shelf=read" title="Jordan Bell's book recommendations, liked quotes, book clubs, book lists (read shelf)", rel="nofollow"><img border="0" alt="Jordan Bell's book recommendations, liked quotes, book clubs, book lists (read shelf)" src="https://s.gr-assets.com/images/badge/badge1.jpg"></a>
 
 ## Online Tutoring {#tutoring}
 
