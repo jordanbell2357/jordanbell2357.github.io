@@ -10,8 +10,8 @@ permalink: /CV/
 - [Awards](#awards)
 - [Service](#service)
 - [Profiles](#profiles)
-- [Online Tutoring](#tutoring)
-- [Continuing training](#continuing)
+- [Online tutoring](#tutoring)
+- [Continuing learning](#continuing)
 
 ## Employment {#employment}
 
@@ -67,7 +67,7 @@ University Medal in Mathematics
 
 - [Datacamp](https://app.datacamp.com/profile/jordanbell2357)
 
-## Online Tutoring {#tutoring}
+## Online tutoring {#tutoring}
 
 [Jordan Bell Tutoring Toronto](/tutoring)
 
@@ -75,7 +75,7 @@ Statistics, computer science, and financial economics tutoring
 
 ![Jordan Bell Tutoring Toronto](/assets/images/logo.png)
 
-## Continuing training {#continuing}
+## Continuing learning {#continuing}
 
 Data Science in Action - Building a Predictive Churn Model  
 openSAP  
