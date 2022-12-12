@@ -56,15 +56,16 @@ permalink: /links/
 - [openHPI](https://open.hpi.de/)
 - [PwC Viewpoint](https://viewpoint.pwc.com/us/en.html)
 
-
 # Organizations {#organizations}
 
 - [Basel Institute on Governance](https://learn.baselgovernance.org/)
+- [FAO elearning Academy](https://elearning.fao.org/)
 - [IATA](https://www.iata.org/en/training/courses/air-transportation-system/tcvg92/en/)
 - [IATA Training](https://training.iata.org/)
 - [IEA](https://elearning.iea.org/)
 - [ITU Academy](https://academy.itu.int/)
 - [OCW IHE DELFT](https://ocw.un-ihe.org/)
+- [UNIDO Knowledge Hub](https://hub.unido.org/)
 - [World Bank Group Open Learning Campus (OLC)](https://olc.worldbank.org/)
 
 # Programming {#programming}
