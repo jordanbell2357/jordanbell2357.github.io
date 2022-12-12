@@ -79,6 +79,11 @@ Statistics, computer science, and financial economics tutoring
 
 ## Continuing training {#continuing}
 
+Data Science in Action - Building a Predictive Churn Model  
+openSAP  
+April, 2019  
+[xenak-hesyv-katal-nebok-hityg](https://open.sap.com/verify/xenak-hesyv-katal-nebok-hityg)
+
 Practical Time Series Analysis  
 The State University of New York  
 Coursera  
