@@ -43,7 +43,7 @@ permalink: /links/
 - [Snowflake University](https://learn.snowflake.com/)
 - [Talend Academy](https://academy.talend.com/learn/home)
 - [Teradata University](https://www.teradata.com/University)
-- [VMware Customer Connect](https://learning.customerconnect.vmware.com/oltpublish/site/cms.do?view=home)
+- [VMware Customer Connect Learning](https://learning.customerconnect.vmware.com/oltpublish/site/cms.do?view=home)
 
 # Business {#business}
 
