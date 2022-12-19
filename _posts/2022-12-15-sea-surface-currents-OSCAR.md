@@ -47,3 +47,5 @@ with xr.open_dataset('oscar_vel2020.nc.gz') as ds:
 ![Sea surface currents derived from OSCAR](/assets/images/posts/currents18x9.png)
 
 <https://twitter.com/jordanbell2357/status/1603454962406768669?s=20&t=2vW_4J7IErkAXKIRJz89jQ>
+
+<https://www.instagram.com/p/CmMtXWevyaF/?utm_source=ig_web_copy_link>
