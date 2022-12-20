@@ -58,7 +58,7 @@ with xr.open_dataset('oscar_vel2020.nc.gz') as ds:
 
 ---
 
-<iframe src="https://graphics.social/@jordanbell2357/109543045952386096/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://graphics.social/embed.js" async="async"></script>
+<iframe src="https://graphics.social/@jordanbell2357/109543722858705582/embed" class="mastodon-embed" style="max-width: 100%; border: 0" width="400" allowfullscreen="allowfullscreen"></iframe><script src="https://graphics.social/embed.js" async="async"></script>
 
 ---
 
