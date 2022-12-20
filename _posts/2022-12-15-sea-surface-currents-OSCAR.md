@@ -50,6 +50,10 @@ with xr.open_dataset('oscar_vel2020.nc.gz') as ds:
 
 ---
 
+<https://dev.to/jordanbell2357/sea-surface-currents-derived-from-oscar-2ln1>
+
+---
+
 <blockquote class="twitter-tweet"><p lang="en" dir="ltr">Plot of sea surface currents derived from OSCAR<a href="https://t.co/5Iu2lKWMEK">https://t.co/5Iu2lKWMEK</a><br><br>Lightly modified from <a href="https://t.co/YhpAEexiNr">https://t.co/YhpAEexiNr</a><br><br>libraries used: numpy, xarray, cartopy, matplotlib <a href="https://t.co/g9PmEdpATC">pic.twitter.com/g9PmEdpATC</a></p>&mdash; Jordan Bell (@jordanbell2357) <a href="https://twitter.com/jordanbell2357/status/1603454962406768669?ref_src=twsrc%5Etfw">December 15, 2022</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ---
