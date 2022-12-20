@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sea surface currents derived from OSCAR
+date: 2022-12-15
 ---
 
 - [Twitter](#twitter)
