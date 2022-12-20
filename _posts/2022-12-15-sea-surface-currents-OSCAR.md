@@ -7,6 +7,8 @@ title: Sea surface currents derived from OSCAR
 
 [Ocean Surface Current Analyses Real-time (OSCAR)](https://www.esr.org/research/oscar/overview/)
 
+[NASA Earth Science Data Systems (ESDS)](https://www.earthdata.nasa.gov/)
+
 ```python
 import xarray as xr
 import numpy as np
