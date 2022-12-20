@@ -11,6 +11,7 @@ permalink: /CV/
 - [Service](#service)
 - [Online tutoring](#tutoring)
 - [Profiles](#profiles)
+- [Learning](#learning)
 
 ## Employment {#employment}
 
@@ -66,16 +67,51 @@ Statistics, computer science, and financial economics tutoring
 
 - [Goodreads](https://www.goodreads.com/jordanbell2357)
 
-- [Codeacademy](https://www.codecademy.com/profiles/jordanbell2357)
-
-- [Coursera](https://www.coursera.org/user/a7586c089cd57b49ac8851febd502156)
-
 - [DEV Community](https://dev.to/jordanbell2357)
 
 - [GeoGebra](https://www.geogebra.org/u/jordanbell2357)
 
-- [Salesforce Trailhead](https://trailblazer.me/id/jordanbell2357)
+- [Instagram](https://www.instagram.com/jordanbell2357/)
+
+- [Mastodon](https://graphics.social/@jordanbell2357)
+
+- [Twitter](https://twitter.com/jordanbell2357)
+
+## Learning {#learning}
+
+- [Codeacademy](https://www.codecademy.com/profiles/jordanbell2357)
+
+- [Coursera](https://www.coursera.org/user/a7586c089cd57b49ac8851febd502156)
+
+- [Datacamp](https://app.datacamp.com/profile/jordanbell2357)
 
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/public_profiles/c4354b0e-6e16-46ec-be5b-64b7b49e9611)
 
-- [Datacamp](https://app.datacamp.com/profile/jordanbell2357)
+- [Salesforce Trailhead](https://trailblazer.me/id/jordanbell2357)
+
+### Other online courses
+
+<table>
+<thead>
+  <tr>
+    <th>Course</th>
+    <th>Organization</th>
+    <th>Platform</th>
+    <th>Date Completed</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td><a href="https://open.sap.com/verify/xenak-hesyv-katal-nebok-hityg">Data Science in Action - Building a Predictive Churn Model</a></td>
+    <td>openSAP</td>
+    <td>openSAP</td>
+    <td>April, 2019</td>
+  </tr>
+  <tr>
+    <td><a href="https://learn.baselgovernance.org/course/view.php?id=17">Source and Application of Funds Analysis</a> (<a href="https://jordanbell.info/assets/pdfs/aJImmI2u8i.pdf">Certificate of Completion</a>)</td>
+    <td>International Centre for Asset Recovery (ICAR), Basel Institute on Governance</td>
+    <td>Basel LEARN</td>
+    <td>December, 2022</td>
+  </tr>
+</tbody>
+</table>
