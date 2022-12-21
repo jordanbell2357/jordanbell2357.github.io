@@ -15,7 +15,7 @@ This website is the anchor for my internet presence and a platform for my writin
 <ul>
   {% for post in site.posts %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}. {{ post.date | date_to_long_string }}</a>
+      <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date_to_long_string }}
     </li>
   {% endfor %}
 </ul>
