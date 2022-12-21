@@ -38,8 +38,6 @@ $$
 \mathrm{WACC} = k_d(1-t_c) \cdot \dfrac{D}{V} + k_e \cdot \dfrac{E}{V}
 $$
 
-<iframe style="border: none" allow="fullscreen" src='https://graspablemath.com/canvas/embed.html?load=_39725d50befd67f5&options={"auto_resize_on_scroll": false, "use_toolbar": true, "undo_btn": true, "redo_btn": true, "new_sheet_btn": false, "font_size_btns": true, "formula_btn": false, "formula_panel": true, "help_btn": false, "help_logo_btn": true, "transform_btn": false, "keypad_btn": false, "scrub_btn": false, "draw_btn": false, "erase_btn": false, "arrange_btn": false, "reset_btn": true, "save_btn": false, "load_btn": false, "settings_btn": false, "share_btn": false, "insert_btn": false, "use_hold_menu": false, "display_labels": false, "btn_size": "xs", "ask_confirmation_on_closing": false, "vertical_scroll": true}' width="100%" height="500px"></iframe>
-
 # WACC
 
 > The cost of debt is 7% and the current outstanding debt is $1.4 million. The cost of equity is 14% and the D/E ratio is 1. The tax rate for businesses is 30%. What is the weighted average cost of capital?
@@ -96,4 +94,3 @@ Annual coupon payment $$C=50000000\cdot0.05 = 2500000$$.
 $$Y=0.07$$
 
 $$\mathrm{PV} = \frac{C}{1+Y}+\frac{C}{\left(1+Y\right)^{2}}+\frac{50000000}{\left(1+Y\right)^{2}} = 48191981.83$$
-
