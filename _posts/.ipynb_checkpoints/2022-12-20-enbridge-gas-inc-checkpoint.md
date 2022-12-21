@@ -1,11 +1,13 @@
 ---
 layout: post
-title: Enbridge Gas
+title: Enbridge Gas Inc.
 ---
 
 ![Enbridge Gas Inc. Deliveries (GJ) vs. Gas Day 2022](/assets/images/posts/Enbridge_Gas_Inc_Deliveries_(GJ)_vs_Gas_Day.png)
 
 [Gas Day Summary Report](https://www.enbridgegas.com/storage-transportation/operational-information/gas-day-summary)
+
+![Gas Day Summary Report](/assets/images/posts/Gas_Day_Summary_Report_December_2022.png)
 
 [CER Pipeline Profiles: Enbridge Mainline](https://www.cer-rec.gc.ca/en/data-analysis/facilities-we-regulate/pipeline-profiles/oil-and-liquids/pipeline-profiles-enbridge-mainline.html)
 
