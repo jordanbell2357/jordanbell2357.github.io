@@ -10,6 +10,16 @@ layout: home
 
 This website is the anchor for my internet presence and a platform for my writings, projects, and notebooks.
 
+<ul>
+  {% for post in site.posts %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+---
+
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
   <h1><a href="{{ post.url }}">{{ post.title }}</a></h1>
