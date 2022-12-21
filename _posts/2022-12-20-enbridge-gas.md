@@ -13,8 +13,8 @@ title: Enbridge Gas
 
 [Ontario Energy Board (OEB). Natural gas distributor yearbooks](https://www.oeb.ca/ontarios-energy-sector/performance-assessment/natural-gas-and-electricity-utility-yearbooks#gas)
 
-![Ontario_Natural_Gas_Distributors_Sector](/assets/images/posts/Ontario_Natural_Gas_Distributors_Sector_December_2022.png)
+![Natural gas distributor yearbooks. Sep 29-22](/assets/images/posts/Ontario_Natural_Gas_Distributors_Sector_December_2022.png)
 
-[Monthly Natural Gas Distribution Survey (MNGD)](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2510005901)
+[Statistics Canada Monthly Natural Gas Distribution Survey (MNGD)](https://www150.statcan.gc.ca/t1/tbl1/en/tv.action?pid=2510005901)
 
-![Monthly Natural Gas Distribution Survey (MNGD](/assets/images/posts/MNGD_December_2022.png)
+![Statistics Canada Monthly Natural Gas Distribution Survey (MNGD](/assets/images/posts/MNGD_December_2022.png)
