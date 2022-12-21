@@ -75,6 +75,8 @@ Statistics, computer science, and financial economics tutoring
 
 - [Mastodon](https://graphics.social/@jordanbell2357)
 
+- [Social Psychology Network](https://www.socialpsychology.org/member/jordan-bell)
+
 - [Twitter](https://twitter.com/jordanbell2357)
 
 ## Learning {#learning}
