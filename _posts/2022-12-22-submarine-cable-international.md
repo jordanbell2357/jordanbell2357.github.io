@@ -27,4 +27,4 @@ title: Submarine cable legal and military resources
 
 [Repairing Submarine Cables Is a Wartime Necessity](https://www.usni.org/magazines/proceedings/2022/october/repairing-submarine-cables-wartime-necessity)
 
-Burnett, D. R., Beckman, R., & Davenport, T. M. (Eds.). (24 Oct. 2013). Submarine Cables. Leiden, The Netherlands: Brill | Nijhoff. doi: <https://doi.org/10.1163/9789004260337>
+Burnett, D. R., Beckman, R., and Davenport, T. M. (Eds.). (24 Oct. 2013). Submarine Cables. Brill. doi: <https://doi.org/10.1163/9789004260337>
