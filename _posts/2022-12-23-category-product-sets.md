@@ -7,10 +7,10 @@ Let $$A$$ and $$B$$ be sets.
 If $$P$$ is a set and there are functions $$p_A:P \to A$$ and $$p_B:P \to B$$,
 define the predicate
 
-$$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$: if 
-$$Q$$ is a set and there are functions
-$$q_A:Q \to A$$ and $$q_B:Q \to B$$, then there exists a unique
-function $$f:Q \to P$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.[^1]
+> $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$: if 
+> $$Q$$ is a set and there are functions
+> $$q_A:Q \to A$$ and $$q_B:Q \to B$$, then there exists a unique
+> function $$f:Q \to P$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.[^1]
 
 [^1]: [Site copy of quiver diagram](/LaTeX/quiver/product.png)
 
