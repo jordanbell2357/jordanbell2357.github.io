@@ -49,7 +49,9 @@ Like above with $$\phi$$, we have
 $$
 \begin{align}
 q_A \circ \phi&=q_A \circ (g \circ f)\\
-&=
+&=(q_A \circ g) \circ f\\
+&=p_A \circ f\\
+&=q_A
 \end{align}
 $$
 
