@@ -15,9 +15,6 @@ function $$f:Q \to P$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$
 
 [Category Theory: a concise course. 5. Product, Coproduct, Exponential](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
 
-<https://arbital.com/p/empty_set_universal_property/>
-
-
 <https://ncatlab.org/nlab/show/cartesian+product>
 
 <https://arbital.com/p/empty_set_universal_property/>
