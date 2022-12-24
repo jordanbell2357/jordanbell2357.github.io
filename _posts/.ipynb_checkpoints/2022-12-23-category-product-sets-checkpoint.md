@@ -3,15 +3,25 @@ layout: post
 title: Products in the category of sets
 ---
 
-Let $$A$$ and $$B$$ be sets. A product of $$A$$ and $$B$$ is a set $$P$$ and
-functions $$p_A:P \to A$$ and $$p_B:P \to B$$ such that if $$Q$$ is a set and
-$$q_A:Q \to A$$ and $$q_B:Q \to B$$ are functions, then there exists a unique
+Let $$A$$ and $$B$$ be sets. 
+If $$P$$ is a set and there are functions $$p_A:P \to A$$ and $$p_B:P \to B$$,
+define the predicate
+
+$$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$: if 
+$$Q$$ is a set and there are functions
+$$q_A:Q \to A$$ and $$q_B:Q \to B$$, then there exists a unique
 function $$f:Q \to P$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.[^1]
 
 [^1]: [Site copy of quiver diagram](/LaTeX/quiver/product.png)
 
 <!-- https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
+
+
+A product of $$A$$ and $$B$$ is a set $$P$$ and
+functions $$p_A:P \to A$$ and $$p_B:P \to B$$ such
+$$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$ is true.
+
 
 Suppose that $$P,p_A,f_B$$ and $$Q,q_A,q_B$$ are products of $$A$$ and $$B$$.
 Because $$P,p_A,f_B$$ is a product of $$A$$ and $$B$$, there is a unique function
