@@ -66,6 +66,10 @@ $$
     <th>\(p_B\)</th>
   </tr>
   <tr>
+    <th>\(p_A \circ \phi\)</th>
+    <th>\(p_B \circ \phi\)</th>
+  </tr>
+  <tr>
     <td>\(=(p_A \circ f) \circ g\)</td>
     <td>\(=(p_B \circ f) \circ g\)</td>
   </tr>
@@ -74,8 +78,8 @@ $$
     <td>\(=q_B \circ g\)</td>
   </tr>
   <tr>
-    <td>\(p_A\)</td>
-    <td>\(p_B\)</td>
+    <td>\(=p_A\)</td>
+    <td>\(=p_B\)</td>
   </tr>
 </table>
   
