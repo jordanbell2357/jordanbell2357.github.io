@@ -68,10 +68,6 @@ $$
 
 <table>
   <tr>
-    <th>\(p_A\)</th>
-    <th>\(p_B\)</th>
-  </tr>
-  <tr>
     <th>\(p_A \circ \phi\)</th>
     <th>\(p_B \circ \phi\)</th>
   </tr>
