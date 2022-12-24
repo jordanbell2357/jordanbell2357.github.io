@@ -3,13 +3,19 @@ layout: post
 title: Products in the category of sets
 ---
 
-Let $$A$$ and $$B$$ be sets. 
-If $$P$$ is a set and there are functions $$p_A:P \to A$$ and $$p_B:P \to B$$,
-define the predicate
+For any sets $$X$$ and $$Y$$, let $$Y^X$$ denote the set of all functions with domain $$X$$ and image
+contained in $$Y$$.
+
+Let $$A$$ and $$B$$ be sets.
+For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the following predicate:
+
+> $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$: $$q_A \in A^Q$$ and $$q_B \in B^Q$$ 
+
+If $$\mathbf{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate:
 
 > $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$: if 
-> $$Q$$ is a set and there are functions
-> $$q_A:Q \to A$$ and $$q_B:Q \to B$$, then there exists a unique
+> $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$ is true, then there 
+> exists a unique
 > function $$f:Q \to P$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.[^1]
 
 [^1]: [Site copy of quiver diagram](/LaTeX/quiver/product.png)
@@ -18,9 +24,9 @@ define the predicate
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
 
 
-A **product** of $$A$$ and $$B$$ is a set $$P$$ and
-functions $$p_A:P \to A$$ and $$p_B:P \to B$$ such
-$$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$ is true.
+A **product** of $$A$$ and $$B$$ is (a) a set $$P$$ and
+functions (b) $$p_A:P \to A$$ and (c) $$p_B:P \to B$$ such
+(d) $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$ is true.
 
 
 Suppose that $$P,p_A,f_B$$ and $$Q,q_A,q_B$$ are products of $$A$$ and $$B$$.
