@@ -23,3 +23,15 @@ For sets $$X$$ and $$Y$$, a
 
 function from $$X$$ to $$Y$$ is an element of $$\prod_{x \in X} Y$$. 
 
+<https://opendsa-server.cs.vt.edu/OpenDSA/Books/PIFLAS22/html/index.html>
+
+<https://www.csm.ornl.gov/~sheldon/ds/>
+
+<https://ncatlab.org/nlab/show/free+monoid>
+
+<https://encyclopediaofmath.org/wiki/Formal_languages_and_automata>
+
+<https://introcs.cs.princeton.edu/java/51language/>
+
+
+<https://icsatkcc.github.io/Discrete-Math-for-Computer-Science/s-free-monoids-and-languages.html>
