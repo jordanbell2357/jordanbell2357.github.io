@@ -10,8 +10,8 @@ function $$f:Q \to P$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$
 
 [^1]: [Site copy of quiver diagram](/LaTeX/quiver/product.png)
 
-<!-- https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgcSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
-<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgcSIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
+<!-- https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
 
 Suppose that $$P,p_A,f_B$$ and $$Q,q_A,q_B$$ are products of $$A$$ and $$B$$.
 Because $$P,p_A,f_B$$ is a product of $$A$$ and $$B$$, there is a unique function
@@ -20,7 +20,8 @@ $$f:Q \to P$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.
 Likewise, because $$Q,q_A,q_B$$ is a product of $$A$$ and $$B$$, there is a unique function
 $$g:P \to Q$$ such that $$q_A \circ g = p_A$$ and $$q_B \circ g = p_B$$.
 
-Define $$\phi=f \circ g$$, which is a function $$P \to P$$.
+Define $$\phi=f \circ g$$. Because
+$$g:P \to Q$$ and $$f:Q \to P$$, we have $$\phi:P \to P$$.
 We have
 
 $$
@@ -43,13 +44,26 @@ p_B \circ \phi&=p_B \circ (f \circ g)\\
 \end{align}
 $$
 
-Define $$\psi=g \circ f$$, which is a function $$Q \to Q$$.
+Define $$\psi=g \circ f$$, and we have $$\psi:Q \to Q$$.
 Like above with $$\phi$$, we have
 
 $$
 \begin{align}
 q_A \circ \phi&=q_A \circ (g \circ f)\\
-&=
+&=(q_A \circ g) \circ f\\
+&=p_A \circ f\\
+&=q_A
+\end{align}
+$$
+
+and
+
+$$
+\begin{align}
+q_B \circ \psi&=q_B \circ (g \circ f)\\
+&=(q_B \circ g) \circ f\\
+&=q_B \circ f\\
+&=q_B
 \end{align}
 $$
 
