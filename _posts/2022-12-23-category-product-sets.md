@@ -30,8 +30,14 @@ $$f:Q \to P$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.
 Likewise, because $$Q,q_A,q_B$$ is a product of $$A$$ and $$B$$, there is a unique function
 $$g:P \to Q$$ such that $$q_A \circ g = p_A$$ and $$q_B \circ g = p_B$$.
 
-Define $$\phi=f \circ g$$. Because
-$$g:P \to Q$$ and $$f:Q \to P$$, we have $$\phi:P \to P$$.
+
+
+On the one hand, because $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$ is true, there exists a unique function
+$$h:P \to P$$ such that $$p_A \circ h = q_A$$ and $$p_B \circ h = q_B$$.
+
+
+
+
 We have
 
 $$
@@ -54,7 +60,17 @@ p_B \circ \phi&=p_B \circ (f \circ g)\\
 \end{align}
 $$
 
-Define $$\psi=g \circ f$$, and we have $$\psi:Q \to Q$$.
+ 
+On the one hand:
+Define $$\phi=f \circ g$$.
+Because
+$$g:P \to Q$$ and $$f:Q \to P$$, we have (i) $$\phi:P \to P$$, (ii) $$p_A \circ \phi:P \to A$$,
+and (iii) $$p_B \circ \phi:P \to B$$.
+
+
+
+
+Define $$\psi=g \circ f$$, and we have $$\psi:Q \to Q$$ and 
 Like above with $$\phi$$, we have
 
 $$
@@ -81,5 +97,3 @@ $$
 ---
 
 [Category Theory: a concise course. 5. Product, Coproduct, Exponential](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
-
-<https://arbital.com/p/empty_set_universal_property/>
