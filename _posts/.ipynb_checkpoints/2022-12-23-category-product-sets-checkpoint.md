@@ -18,7 +18,7 @@ function $$f:Q \to P$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
 
 
-A product of $$A$$ and $$B$$ is a set $$P$$ and
+A **product** of $$A$$ and $$B$$ is a set $$P$$ and
 functions $$p_A:P \to A$$ and $$p_B:P \to B$$ such
 $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$ is true.
 
@@ -59,6 +59,26 @@ p_B \circ \phi&=p_B \circ (f \circ g)\\
 &=p_B
 \end{align}
 $$
+
+<table>
+  <tr>
+    <th>\(p_A\)</th>
+    <th>\(p_B\)</th>
+  </tr>
+  <tr>
+    <td>\(=(p_A \circ f) \circ g\)</td>
+    <td>\(=(p_B \circ f) \circ g\)</td>
+  </tr>
+  <tr>
+    <td>\(=q_A \circ g\)</td>
+    <td>\(=q_B \circ g\)</td>
+  </tr>
+  <tr>
+    <td>\(p_A\)</td>
+    <td>\(p_B\)</td>
+  </tr>
+</table>
+  
 
  
 On the one hand:
