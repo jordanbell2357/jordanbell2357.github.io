@@ -29,7 +29,7 @@ If $$\mathbf{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate
 A **product** of $$A$$ and $$B$$ is a set $$P$$, a function $$p_A \in A^P$$,
 and a function $$p_B \in B^P$$ such that $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$ is true.
 
-Suppose that $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathbf{Prod}_{A,B}(Q,q_A,q_B)$$ is true.
+Suppose that $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathbf{Prod}_{A,B}(Q,q_A,q_B)$$ is true.
 Because $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$ is true,
 there is a unique function
 $$f \in P^Q$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.
