@@ -30,8 +30,7 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 
 Suppose that $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true.
 Because $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Compatible}_{A,B}(Q,q_A,q_B)$$ is true,
-there is a unique function
-$$f \in P^Q$$ such that
+there is a unique function $$f \in P^Q$$ such that
 
 $$
 \begin{equation}
@@ -80,7 +79,22 @@ $$p_B \in B^P$$, it follows that $$p_B \circ \phi \in B^P$$.
 Therefore,
 $$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true, and
 thus there is a unique function $$h \in P^P$$ such that 
-$$p_A \circ h = p_A \circ \phi$$ and  $$p_B \circ h = p_B \circ \phi$$.
+
+$$
+\begin{equation}
+p_A \circ h = p_A \circ \phi
+\label{pAphi}
+\end{equation}
+$$
+
+and
+
+$$
+\begin{equation}
+p_B \circ h = p_B \circ \phi
+\label{pBphi}
+\end{equation}
+$$.
 
 Then[^3]
 
@@ -89,8 +103,8 @@ Then[^3]
 $$
 \begin{align*}
 p_A \circ \phi&= p_A \circ (f \circ g)\\
-&=(p_A \circ f) \circ g \; \textrm{by associativity}\\
-&=q_A \circ g \; \textrm{by} \; p_A \circ f = q_A\\
+&=(p_A \circ f) \circ g \qquad \textrm{by associativity}\\
+&=q_A \circ g \qquad \textrm{by} \eqref{}\\
 &=p_A \; \textrm{by} \; q_A \circ g = p_A
 \end{align*}
 $$
