@@ -88,4 +88,13 @@ $$
 
 ---
 
+$$
+\begin{equation}
+x=y
+\label{P}
+\end{equation}
+$$
+
+$$\eqref{P}$$
+
 [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
