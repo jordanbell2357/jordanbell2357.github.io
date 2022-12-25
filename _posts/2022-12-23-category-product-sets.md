@@ -13,7 +13,7 @@ Let sets $$A$$ and $$B$$ be given.
 For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the predicate
 
 <div class="bubblebox_white">
-\(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\): \(q_A \in A^Q\) and \(q_B \in B^Q\)
+\(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\): \(q_A \in A^Q\) and \(q_B \in B^Q\).
 </div>
 
 If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate[^2]
@@ -71,7 +71,9 @@ $$
 $$
 
 From $$f \in P^Q$$ and $$g \in Q^P$$, it follows that $$f \circ g \in P^P$$.
-Let $$\phi = f \circ g$$, $$\phi \in P^P$$.
+Let
+
+$$\phi = f \circ g, \qquad \phi \in P^P.$$
 
 From $$\phi \in P^P$$ and $$p_A \in A^P$$, it follows that
 $$p_A \circ \phi \in A^P$$, and likewise from $$\phi \in P^P$$ and
@@ -118,7 +120,9 @@ p_B \circ \phi&=p_B \circ (f \circ g)\\
 $$
 
 From $$g \in Q^P$$ and $$f \in P^Q$$, it follows that $$g \circ f \in Q^Q$$.
-Let $$\psi = g \circ f$$, $$\psi \in Q^Q$$.
+Let
+
+$$\psi = g \circ f, \qquad \psi \in Q^Q.$$
 
 $$
 \begin{align*}
