@@ -51,11 +51,11 @@ $$
 From $$\phi \in P^P$$ and $$p_A \in A^P$$, it follows that
 $$p_A \circ \phi \in A^P$$, and likewise from $$\phi \in P^P$$ and
 $$p_B \in B^P$$, it follows that $$p_B \circ \phi \in B^P$$.
+Therefore,
+$$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true, and
+thus there is a unique function $$h \in P^P$$ such that 
 
-$$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true, so
-there is a unique function $$h \in P^P$$ such that 
-
-$$p_A \circ h = p_A \circ \phi, \qquad p_B \circ h = p_B \circ \phi.$$
+$$p_A \circ h = p_A \circ \phi \quad \textrm{and} \quad p_B \circ h = p_B \circ \phi.$$
 
 
 
