@@ -12,7 +12,9 @@ Let sets $$A$$ and $$B$$ be given.
 
 For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the predicate
 
-> $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$: $$q_A \in A^Q$$ and $$q_B \in B^Q$$ 
+<div class="bubblebox_white">
+\(\mathbf{Compatible}_{A,B}(Q,q_A,q_B)\): \(q_A \in A^Q\) and \(q_B \in B^Q\)
+</div>
 
 If $$\mathbf{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate
 
