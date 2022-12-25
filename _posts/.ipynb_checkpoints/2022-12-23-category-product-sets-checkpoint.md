@@ -38,7 +38,7 @@ $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true,
 there is a unique function
 $$g \in Q^P$$ such that $$q_A \circ g = p_A$$ and $$q_B \circ g = p_B$$.
 
-From $$f \in P^Q$$ and $$g \in Q^P$$, it follows $$f \circ g \in P^P$$.
+From $$f \in P^Q$$ and $$g \in Q^P$$, it follows that $$f \circ g \in P^P$$.
 Let $$\phi = f \circ g$$, $$\phi \in P^P$$.
 
 From $$\phi \in P^P$$ and $$p_A \in A^P$$, it follows that
@@ -47,21 +47,39 @@ $$p_B \in B^P$$, it follows that $$p_B \circ \phi \in B^P$$.
 Therefore,
 $$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true, and
 thus there is a unique function $$h \in P^P$$ such that 
-$$p_A \circ h = p_A \circ \phi$$ and  $$p_B \circ h = p_B \circ \phi.$$
+$$p_A \circ h = p_A \circ \phi$$ and  $$p_B \circ h = p_B \circ \phi$$.
 
-Using $$$$ and $$$$,
+Then[^3]
+
+[^3]: [Category Theory: a concise course. 5. Product, Coproduct, Exponential](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
 
 $$
 \begin{align}
-p_A \circ \phi&= p_A \circ (f \circ g) \; \textrm{by} \; p_A \circ h = p_A \circ \phi\\
+p_A \circ \phi&= p_A \circ (f \circ g)\\
 &=(p_A \circ f) \circ g \; \textrm{by associativity}\\
 &=q_A \circ g \; \textrm{by} \; p_A \circ f = q_A
 &=p_A \; \textrm{by} \; q_A \circ g = p_A
 \end{align}
 $$
 
----
+$$
+\begin{align}
+p_B \circ \phi&=p_B \circ (f \circ g)\\
+&=(p_B \circ f) \circ g \; \textrm{by associativity}\\
+&=q_B \circ g \; \textrm{by} \; p_B \circ f = q_B\\
+&=p_B \; \textrm{by} \; q_B \circ g = p_B
+\end{align}
+$$
 
-[Category Theory: a concise course. 5. Product, Coproduct, Exponential](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
+From $$g \in Q^P$$ and $$f \in P^Q$$, it follows that $$g \circ f \in Q^Q$$.
+Let $$\psi = g \circ f$$, $$\psi \in Q^Q$$.
+
+$$
+\begin{align}
+
+\end{align}
+$$
+
+---
 
 [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
