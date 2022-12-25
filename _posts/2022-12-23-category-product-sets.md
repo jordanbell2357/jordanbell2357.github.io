@@ -71,8 +71,6 @@ $$
 \end{equation}
 $$
 
-
-
 From $$f \in P^Q$$ and $$g \in Q^P$$, it follows that $$f \circ g \in P^P$$.
 Let $$\phi = f \circ g$$, $$\phi \in P^P$$.
 
@@ -113,7 +111,7 @@ $$
 \begin{align*}
 q_A \circ \psi&=q_A \circ (g \circ f)\\
 &=(q_A \circ g) \circ f \; \textrm{by associativity}\\
-&=
+&=p_A \; \textrm{by} \; \eqref{pA}
 \end{align*}
 $$
 
