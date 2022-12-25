@@ -12,13 +12,12 @@ Let sets $$A$$ and $$B$$ be given.
 
 For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the following predicate:
 
-> $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$: $$q_A \in A^Q$$ and $$q_B \in B^Q$$ 
+$$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$: $$q_A \in A^Q$$ and $$q_B \in B^Q$$ 
 
 If $$\mathbf{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate:
 
-> $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$: if 
-> $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$ is true, then there 
-> exists a unique function $$f \in P^Q$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.[^2]
+$$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$: if $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$ is true, then there 
+exists a unique function $$f \in P^Q$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.[^2]
 
 [^2]: [Site copy of quiver diagram](/LaTeX/quiver/product.png)
 
