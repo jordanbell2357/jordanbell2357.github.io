@@ -36,7 +36,9 @@ $$f \in P^Q$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.
 Likewise, because $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true and
 $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true,
 there is a unique function
-$$g \in Q^P$$ such that $$q_A \circ g = p_A$$ and $$q_B \circ g = p_B$$.
+$$g \in Q^P$$ such that
+
+$$q_A \circ g = p_A \quad \textrm{and} \quad q_B \circ g = p_B$$.
 
 From $$f \in P^Q$$ and $$g \in Q^P$$, it follows that $$f \circ g \in P^P$$.
 Let $$\phi = f \circ g$$, $$\phi \in P^P$$.
@@ -76,7 +78,8 @@ Let $$\psi = g \circ f$$, $$\psi \in Q^Q$$.
 
 $$
 \begin{align}
-
+q_A \circ \psi&=q_A \circ (g \circ f)\\
+&=(q_A \circ g) \circ f \; \textrm{by} \;
 \end{align}
 $$
 
