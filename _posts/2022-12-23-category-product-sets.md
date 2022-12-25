@@ -16,12 +16,15 @@ For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the predicate
 \(\mathbf{Compatible}_{A,B}(Q,q_A,q_B)\): \(q_A \in A^Q\) and \(q_B \in B^Q\)
 </div>
 
-If $$\mathbf{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate
-
-> $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$: If $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$ is true, then there 
-> exists a unique function $$f \in P^Q$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.[^2]
+If $$\mathbf{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate[^2]
 
 [^2]: [Site copy of quiver diagram](/LaTeX/quiver/product.png)
+
+<div class="bubblebox_white">
+\(\mathbf{Prod}_{A,B}(P,p_A,p_B)\): If \(\mathbf{Compatible}_{A,B}(Q,q_A,q_B)\) is true, then there 
+exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B \circ f = q_B\).
+</div>
+  
 
 <!-- https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
