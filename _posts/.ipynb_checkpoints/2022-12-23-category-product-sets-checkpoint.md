@@ -31,7 +31,9 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 Suppose that $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true.
 Because $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Compatible}_{A,B}(Q,q_A,q_B)$$ is true,
 there is a unique function
-$$f \in P^Q$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.
+$$f \in P^Q$$ such that
+
+$$p_A \circ f = q_A, \quad \textrm{and} \quad p_B \circ f = q_B.$$
 
 Likewise, because $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true and
 $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true,
@@ -79,7 +81,8 @@ Let $$\psi = g \circ f$$, $$\psi \in Q^Q$$.
 $$
 \begin{align}
 q_A \circ \psi&=q_A \circ (g \circ f)\\
-&=(q_A \circ g) \circ f \; \textrm{by} \;
+&=(q_A \circ g) \circ f \; \textrm{by associativity}\\
+&=
 \end{align}
 $$
 
