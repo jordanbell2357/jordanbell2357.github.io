@@ -58,32 +58,32 @@ Then[^3]
 [^3]: [Category Theory: a concise course. 5. Product, Coproduct, Exponential](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
 
 $$
-\begin{align}
+\begin{align*}
 p_A \circ \phi&= p_A \circ (f \circ g)\\
 &=(p_A \circ f) \circ g \; \textrm{by associativity}\\
 &=q_A \circ g \; \textrm{by} \; p_A \circ f = q_A\\
 &=p_A \; \textrm{by} \; q_A \circ g = p_A
-\end{align}
+\end{align*}
 $$
 
 $$
-\begin{align}
+\begin{align*}
 p_B \circ \phi&=p_B \circ (f \circ g)\\
 &=(p_B \circ f) \circ g \; \textrm{by associativity}\\
 &=q_B \circ g \; \textrm{by} \; p_B \circ f = q_B\\
 &=p_B \; \textrm{by} \; q_B \circ g = p_B
-\end{align}
+\end{align*}
 $$
 
 From $$g \in Q^P$$ and $$f \in P^Q$$, it follows that $$g \circ f \in Q^Q$$.
 Let $$\psi = g \circ f$$, $$\psi \in Q^Q$$.
 
 $$
-\begin{align}
+\begin{align*}
 q_A \circ \psi&=q_A \circ (g \circ f)\\
 &=(q_A \circ g) \circ f \; \textrm{by associativity}\\
 &=
-\end{align}
+\end{align*}
 $$
 
 ---
@@ -98,3 +98,12 @@ $$
 $$\eqref{P}$$
 
 [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
+
+<script>
+  MathJax = {
+    tex: {
+      tags: 'ams'  // should be 'ams', 'none', or 'all'
+    }
+  };
+</script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
