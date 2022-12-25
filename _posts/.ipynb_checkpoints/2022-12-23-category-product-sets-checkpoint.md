@@ -61,7 +61,7 @@ $$
 \begin{align}
 p_A \circ \phi&= p_A \circ (f \circ g)\\
 &=(p_A \circ f) \circ g \; \textrm{by associativity}\\
-&=q_A \circ g \; \textrm{by} \; p_A \circ f = q_A
+&=q_A \circ g \; \textrm{by} \; p_A \circ f = q_A\\
 &=p_A \; \textrm{by} \; q_A \circ g = p_A
 \end{align}
 $$
