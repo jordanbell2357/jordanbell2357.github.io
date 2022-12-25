@@ -1,5 +1,5 @@
 ---
-layout: pag
+layout: post
 title: Subset sum problem
 ---
 
