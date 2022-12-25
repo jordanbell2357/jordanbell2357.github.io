@@ -28,9 +28,6 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 <!-- https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
 
-A **product** of $$A$$ and $$B$$ is a set $$P$$, a function $$p_A \in A^P$$,
-and a function $$p_B \in B^P$$ such that $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true.
-
 Suppose that $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true.
 Because $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Compatible}_{A,B}(Q,q_A,q_B)$$ is true,
 there is a unique function
@@ -42,11 +39,7 @@ there is a unique function
 $$g \in Q^P$$ such that $$q_A \circ g = p_A$$ and $$q_B \circ g = p_B$$.
 
 From $$f \in P^Q$$ and $$g \in Q^P$$, it follows $$f \circ g \in P^P$$.
-Let
-
-$$
-\phi = f \circ g, \qquad \phi \in P^P.
-$$
+Let $$\phi = f \circ g$$, $$\phi \in P^P$$.
 
 From $$\phi \in P^P$$ and $$p_A \in A^P$$, it follows that
 $$p_A \circ \phi \in A^P$$, and likewise from $$\phi \in P^P$$ and
@@ -54,11 +47,18 @@ $$p_B \in B^P$$, it follows that $$p_B \circ \phi \in B^P$$.
 Therefore,
 $$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true, and
 thus there is a unique function $$h \in P^P$$ such that 
+$$p_A \circ h = p_A \circ \phi$$ and  $$p_B \circ h = p_B \circ \phi.$$
 
-$$p_A \circ h = p_A \circ \phi \quad \textrm{and} \quad p_B \circ h = p_B \circ \phi.$$
+Using $$$$ and $$$$,
 
-
-
+$$
+\begin{align}
+p_A \circ \phi&= p_A \circ (f \circ g) \; \textrm{by} \; p_A \circ h = p_A \circ \phi\\
+&=(p_A \circ f) \circ g \; \textrm{by associativity}\\
+&=q_A \circ g \; \textrm{by} \; p_A \circ f = q_A
+&=
+\end{align}
+$$
 
 ---
 
