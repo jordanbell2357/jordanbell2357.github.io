@@ -3,7 +3,7 @@ layout: post
 title: Products in the category of sets
 ---
 
-For any sets $$X$$ and $$Y$$, let $$Y^X$$ denote the set of all functions whose domain is $$X$$ and whose image is
+For any sets $$X$$ and $$Y$$, let $$Y^X$$ denote the set of all functions with domain $$X$$ and image
 contained in $$Y$$.[^1]
 
 [^1]: Indeed, this makes sense when one or both of $$X$$ or $$Y$$ is the empty set.
@@ -12,7 +12,7 @@ Let sets $$A$$ and $$B$$ be given.
 
 For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the predicate
 
-$$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$: $$q_A \in A^Q$$ and $$q_B \in B^Q$$ 
+> $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$: $$q_A \in A^Q$$ and $$q_B \in B^Q$$ 
 
 If $$\mathbf{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate
 
