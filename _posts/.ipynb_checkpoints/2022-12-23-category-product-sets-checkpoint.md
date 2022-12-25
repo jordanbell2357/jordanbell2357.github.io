@@ -91,10 +91,9 @@ and
 
 $$
 \begin{equation}
-p_B \circ h = p_B \circ \phi
-\label{pBphi}
+p_B \circ h = p_B \circ \phi.\label{pBphi}.
 \end{equation}
-$$.
+$$
 
 Then[^3]
 
@@ -104,17 +103,17 @@ $$
 \begin{align*}
 p_A \circ \phi&= p_A \circ (f \circ g)\\
 &=(p_A \circ f) \circ g \qquad \textrm{by associativity}\\
-&=q_A \circ g \qquad \textrm{by} \eqref{}\\
-&=p_A \; \textrm{by} \; q_A \circ g = p_A
+&=q_A \circ g \qquad \eqref{qA}\\
+&=p_A \qquad \eqref{pA}
 \end{align*}
 $$
 
 $$
 \begin{align*}
 p_B \circ \phi&=p_B \circ (f \circ g)\\
-&=(p_B \circ f) \circ g \; \textrm{by associativity}\\
-&=q_B \circ g \; \textrm{by} \; p_B \circ f = q_B\\
-&=p_B \; \textrm{by} \; q_B \circ g = p_B
+&=(p_B \circ f) \circ g \qquad \textrm{by associativity}\\
+&=q_B \circ g \; \textrm{by} \qquad \eqref{qB}\\
+&=p_B \qquad \eqref{pB}
 \end{align*}
 $$
 
@@ -124,8 +123,8 @@ Let $$\psi = g \circ f$$, $$\psi \in Q^Q$$.
 $$
 \begin{align*}
 q_A \circ \psi&=q_A \circ (g \circ f)\\
-&=(q_A \circ g) \circ f \; \textrm{by associativity}\\
-&=p_A \; \textrm{by} \; \eqref{pA}
+&=(q_A \circ g) \circ f \qquad \textrm{by associativity}\\
+&=p_A \qquad \eqref{pA}
 \end{align*}
 $$
 
