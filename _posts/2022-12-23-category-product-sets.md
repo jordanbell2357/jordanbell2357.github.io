@@ -33,14 +33,45 @@ Because $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Compatible}_{A,
 there is a unique function
 $$f \in P^Q$$ such that
 
-$$p_A \circ f = q_A, \quad \textrm{and} \quad p_B \circ f = q_B.$$
+$$
+\begin{equation}
+p_A \circ f = q_A
+\label{qA}
+\end{equation}
+$$
+
+and
+
+$$
+\begin{equation}
+\quad p_B \circ f = q_B.
+\label{qB}
+\end{equation}
+$$
+
 
 Likewise, because $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true and
 $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true,
 there is a unique function
 $$g \in Q^P$$ such that
 
-$$q_A \circ g = p_A \quad \textrm{and} \quad q_B \circ g = p_B$$.
+$$
+\begin{equation}
+q_A \circ g = p_A
+\label{pA}
+\end{equation}
+$$
+
+and
+
+$$
+\begin{equation}
+\quad q_B \circ g = p_B.
+\label{pB}
+\end{equation}
+$$
+
+
 
 From $$f \in P^Q$$ and $$g \in Q^P$$, it follows that $$f \circ g \in P^P$$.
 Let $$\phi = f \circ g$$, $$\phi \in P^P$$.
@@ -87,15 +118,6 @@ q_A \circ \psi&=q_A \circ (g \circ f)\\
 $$
 
 ---
-
-$$
-\begin{equation}
-x=y
-\label{P}
-\end{equation}
-$$
-
-$$\eqref{P}$$
 
 [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
 
