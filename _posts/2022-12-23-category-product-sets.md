@@ -16,8 +16,8 @@ For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the predicate
 
 If $$\mathbf{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate
 
-$$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$: If $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$ is true, then there 
-exists a unique function $$f \in P^Q$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.[^2]
+> $$\mathbf{Prod}_{A,B}(P,p_A,p_B)$$: If $$\mathbf{Compatible}_{A,B}(Q,q_A,q_B)$$ is true, then there 
+> exists a unique function $$f \in P^Q$$ such that $$p_A \circ f = q_A$$ and $$p_B \circ f = q_B$$.[^2]
 
 [^2]: [Site copy of quiver diagram](/LaTeX/quiver/product.png)
 
@@ -37,10 +37,18 @@ $$\mathbf{Compatible}_{A,B}(P,p_A,p_B)$$ is true,
 there is a unique function
 $$g \in Q^P$$ such that $$q_A \circ g = p_A$$ and $$q_B \circ g = p_B$$.
 
-Because $$f \in P^Q$$ and $$g \in Q^P$$, $$f \circ g \in P^P$$.
-Then $$\mathbf{Compatible}_{A,B}(P,p_A \circ (f \circ g),p_B \circ (f \circ g))$$
-is true, whence there is a unique function $$h \in P^P$$ such that 
-$$p_A \circ h = p_A \circ (f \circ g)$$ and $$p_B \circ h = p_B \circ (f \circ g)$$.
+From $$f \in P^Q$$ and $$g \in Q^P$$, it follows $$f \circ g \in P^P$$.
+Let
+
+$$
+\phi = f \circ g, \qquad \phi \in P^P.
+$$
+
+$$\mathbf{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true, so
+there is a unique function $$h \in P^P$$ such that 
+
+$$p_A \circ h = p_A \circ \phi, \qquad p_B \circ h = p_B \circ \phi.$$
+
 
 
 
