@@ -48,6 +48,10 @@ $$
 \phi = f \circ g, \qquad \phi \in P^P.
 $$
 
+From $$\phi \in P^P$$ and $$p_A \in A^P$$, it follows that
+$$p_A \circ \phi \in A^P$$, and likewise from $$\phi \in P^P$$ and
+$$p_B \in B^P$$, it follows that $$p_B \circ \phi \in B^P$$.
+
 $$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true, so
 there is a unique function $$h \in P^P$$ such that 
 
