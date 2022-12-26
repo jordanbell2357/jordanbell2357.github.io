@@ -161,7 +161,7 @@ q_B \circ k = q_B \circ \psi.
 $$
 
 Then
-
+      
 $$
 \begin{align*}
 q_A \circ \psi&=q_A \circ (g \circ f)\\
