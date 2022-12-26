@@ -30,124 +30,119 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 
 <div class="proof">
 
-### ➡ $$f$$ and $$g$$
+<h2>➡ \(f\) and \(g\)</h2>
 
-Suppose that $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true.
-Because $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Compatible}_{A,B}(Q,q_A,q_B)$$ is true,
-there is a unique function $$f \in P^Q$$ such that
+Suppose that \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true.
+Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\) is true,
+there is a unique function \(f \in P^Q\) such that
 
-$$
+\(
 \begin{equation}
 p_A \circ f = q_A
 \label{qA}
 \end{equation}
-$$
+\)
 
 and
 
-$$
+\(
 \begin{equation}
 \quad p_B \circ f = q_B.
 \label{qB}
 \end{equation}
-$$
+\)
 
 
-Because $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true and
-$$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true,
+Because \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true and
+\(\mathtt{Compatible}_{A,B}(P,p_A,p_B)\) is true,
 there is a unique function
-$$g \in Q^P$$ such that
+\(g \in Q^P\) such that
 
-$$
+\(
 \begin{equation}
 q_A \circ g = p_A
 \label{pA}
 \end{equation}
-$$
+\)
 
 and
 
-$$
+\(
 \begin{equation}
 \quad q_B \circ g = p_B.
 \label{pB}
 \end{equation}
-$$
+\)
 
-### ➡ $$\phi$$
+<h2>➡ \(\phi\)</h2>
 
-From $$f \in P^Q$$ and $$g \in Q^P$$, it follows that $$f \circ g \in P^P$$.
+From \(f \in P^Q\) and \(g \in Q^P\), it follows that \(f \circ g \in P^P\).
 Define
 
-$$\phi = f \circ g, \qquad \phi \in P^P.$$
+\(\phi = f \circ g, \qquad \phi \in P^P.\)
 
-From $$\phi \in P^P$$ and $$p_A \in A^P$$, it follows that
-$$p_A \circ \phi \in A^P$$. From $$\phi \in P^P$$ and
-$$p_B \in B^P$$, it follows that $$p_B \circ \phi \in B^P$$.
+From \(\phi \in P^P\) and \(p_A \in A^P\), it follows that
+\(p_A \circ \phi \in A^P\). From \(\phi \in P^P\) and
+\(p_B \in B^P\), it follows that \(p_B \circ \phi \in B^P\).
 Therefore,
-$$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true.
-Because $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$
+\(\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)\) is true.
+Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)\)
 is true,
-there is a unique function $$h \in P^P$$ such that 
+there is a unique function \(h \in P^P\) such that 
 
-$$
+\(
 \begin{equation}
 p_A \circ h = p_A \circ \phi
 \label{pAphi}
 \end{equation}
-$$
+\)
 
 and
 
-$$
+\(
 \begin{equation}
 p_B \circ h = p_B \circ \phi.\label{pBphi}
 \end{equation}
-$$
+\)
 
 Then
 
-$$
+\(
 \begin{align*}
 p_A \circ \phi&= p_A \circ (f \circ g)\\
 &=(p_A \circ f) \circ g \quad \textrm{by associativity}\\
 &=q_A \circ g \quad \eqref{qA}\\
 &=p_A \quad \eqref{pA}
 \end{align*}
-$$
+\)
 
 and
 
-$$
+\(
 \begin{align*}
 p_B \circ \phi&=p_B \circ (f \circ g)\\
 &=(p_B \circ f) \circ g \quad \textrm{by associativity}\\
 &=q_B \circ g \quad \textrm{by \eqref{qB}}\\
 &=p_B. \quad \eqref{pB}
 \end{align*}
-$$
+\)
 
-### ➡ $$\psi$$
+<h2>➡ \(\psi\)</h2>
 
-From $$g \in Q^P$$ and $$f \in P^Q$$, it follows that $$g \circ f \in Q^Q$$.
+From \(g \in Q^P\) and \(f \in P^Q\), it follows that \(g \circ f \in Q^Q\).
 Define
 
 $$\psi = g \circ f, \qquad \psi \in Q^Q.$$
 
-From $$\psi \in Q^Q$$ and $$q_A \in A^Q$$, it follows that 
-$$q_A \circ \psi \in A^Q$$.
-From $$\psi \in Q^Q$$ and $$q_B \in B^Q$$, it follows that
-$$q_B \circ \psi \in B^Q$$. Therefore,
-$$\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)$$ is true.
-Because $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true and
-$$\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)$$ is true,
-there is a unique function $$k \in Q^Q$$
+From \(\psi \in Q^Q\) and \(q_A \in A^Q\), it follows that 
+\(q_A \circ \psi \in A^Q\).
+From \(\psi \in Q^Q\) and \(q_B \in B^Q\), it follows that
+\(q_B \circ \psi \in B^Q\). Therefore,
+\(\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)\) is true.
+Because \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true and
+\(\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)\) is true,
+there is a unique function \(k \in Q^Q\)
 such that
-
-
-
-
-
 
 \(
 \begin{equation}
@@ -187,14 +182,8 @@ q_B \circ \psi&=q_B \circ (g \circ f)\\
 \end{align*}
 \)
 
-
-
 <h2>➡ \(\textrm{id}_P\)</h2>
   
-
-
-
-
 <h2>➡ \(\textrm{id}_Q\)</h2>
   
 <div class="bottomright">∎</div>
