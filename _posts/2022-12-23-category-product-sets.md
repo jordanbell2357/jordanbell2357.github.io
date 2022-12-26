@@ -14,6 +14,7 @@ For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the predicate
 
 <div class="bubblebox_white">
 \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\): \(q_A \in A^Q\) and \(q_B \in B^Q\).
+<div class="bottomright">∎</div>
 </div>
 
 If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate[^2]
@@ -135,6 +136,7 @@ Define
 $$\psi = g \circ f, \qquad \psi \in Q^Q.$$
 
 From 
+
 
 
 
