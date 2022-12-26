@@ -156,6 +156,20 @@ $$
 
 [^4]: [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
 
+---
+
+<div class="two">
+  <h1>Style Two
+    <span>Example Tagline Text</span>
+  </h1>
+</div>
+
+<div class="two alt-two">
+  <h1>Alternate
+    <span>Example Tagline Text</span>
+  </h1>
+</div>
+
 <script>
   MathJax = {
     tex: {
