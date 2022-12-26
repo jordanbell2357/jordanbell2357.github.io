@@ -146,7 +146,7 @@ such that
 
 <div class="proof">
   hello
-  <div class="bottomright">∎</div>
+
 
 
 $$
@@ -189,7 +189,9 @@ $$
 
 
 
-### ➡ $$\textrm{id}_P$$
+<h2>➡ $$\textrm{id}_P$$</h2>
+  
+<div class="bottomright">∎</div>
 </div>
 
 
