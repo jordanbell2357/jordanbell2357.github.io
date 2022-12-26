@@ -173,14 +173,14 @@ $$
 
 and
 
-\(
+$$
 \begin{align*}
 q_B \circ \psi&=q_B \circ (g \circ f)\\
 &=(q_B \circ g) \circ f \quad \textrm{by associativity}\\
 &=p_B \circ f \quad \eqref{pB}\\
 &=q_B. \quad \eqref{qB}
 \end{align*}
-\)
+$$
 
 <h2>➡ \(\textrm{id}_P\)</h2>
   
