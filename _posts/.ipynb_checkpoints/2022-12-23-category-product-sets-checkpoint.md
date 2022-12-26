@@ -14,7 +14,6 @@ For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the predicate
 
 <div class="bubblebox_white">
 \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\): \(q_A \in A^Q\) and \(q_B \in B^Q\).
-<div class="bottomright">∎</div>
 </div>
 
 If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate[^2]
@@ -23,7 +22,7 @@ If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate[^2]
 
 <div class="bubblebox_white">
 \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\): If \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\) is true, then there 
-exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B \circ f = q_B\).<span class="bottomright">∎</span>
+exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B \circ f = q_B\).
 </div>
 
 <!-- https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
@@ -161,7 +160,10 @@ $$
 [^4]: [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
 
 
-
+<div class="container">
+  hello
+  <div class="bottomright">Bottom Right</div>
+</div>
 
 
 
