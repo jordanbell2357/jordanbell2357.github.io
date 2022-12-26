@@ -18,7 +18,7 @@ For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the predicate
 
 If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate[^2]
 
-[^2]: [Site copy of quiver diagram](/LaTeX/quiver/product.png)
+[^2]: [/LaTeX/quiver/product.png](/LaTeX/quiver/product.png)
 
 <div class="bubblebox_white">
 \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\): If \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\) is true, then there 
@@ -85,8 +85,10 @@ From $$\phi \in P^P$$ and $$p_A \in A^P$$, it follows that
 $$p_A \circ \phi \in A^P$$. From $$\phi \in P^P$$ and
 $$p_B \in B^P$$, it follows that $$p_B \circ \phi \in B^P$$.
 Therefore,
-$$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true, and
-thus there is a unique function $$h \in P^P$$ such that 
+$$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true.
+Because $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$
+is true,
+there is a unique function $$h \in P^P$$ such that 
 
 $$
 \begin{equation}
@@ -103,9 +105,7 @@ p_B \circ h = p_B \circ \phi.\label{pBphi}
 \end{equation}
 $$
 
-Then[^3]
-
-[^3]: [Category Theory: a concise course. 5. Product, Coproduct, Exponential](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
+Then
 
 $$
 \begin{align*}
@@ -135,6 +135,37 @@ Define
 $$\psi = g \circ f, \qquad \psi \in Q^Q.$$
 
 From $$\psi \in Q^Q$$ and $$q_A \in A^Q$$, it follows that 
+$$q_A \circ \psi \in A^Q$$.
+From $$\psi \in Q^Q$$ and $$q_B \in B^Q$$, it follows that
+$$q_B \circ \psi \in B^Q$$. Therefore,
+$$\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)$$ is true.
+Because $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true and
+$$\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)$$ is true,
+there is a unique function $$k \in Q^Q$$
+such that
+
+$$
+\begin{equation}
+q_A \circ k = q_A \circ \psi
+\label{qApsi}
+\end{equation}
+$$
+
+and
+
+$$
+\begin{equation}
+q_B \circ k = q_B \circ \psi.
+\label{qBpsi}
+\end{equation}
+$$
+
+
+
+
+
+
+
 
 
 
@@ -154,6 +185,10 @@ $$
 
 ### ➡ $$\textrm{id}_Q$$
 
+
+[^3]
+
+[^3]: [Category Theory: a concise course. 5. Product, Coproduct, Exponential](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
 
 [^4]
 
