@@ -189,7 +189,7 @@ $$
 
 
 
-<h2>➡ $$\textrm{id}_P$$</h2>
+<h2>➡ \(\textrm{id}_P\)</h2>
   
 <div class="bottomright">∎</div>
 </div>
