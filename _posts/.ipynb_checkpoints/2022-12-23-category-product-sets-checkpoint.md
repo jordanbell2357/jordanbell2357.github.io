@@ -28,7 +28,7 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 <!-- https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
 
----
+<div class="proof">
 
 ### ➡ $$f$$ and $$g$$
 
@@ -144,58 +144,61 @@ $$\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)$$ is true,
 there is a unique function $$k \in Q^Q$$
 such that
 
-<div class="proof">
-  hello
 
 
 
-$$
+
+
+\(
 \begin{equation}
 q_A \circ k = q_A \circ \psi
 \label{qApsi}
 \end{equation}
-$$
+\)
 
 and
 
-$$
+\(
 \begin{equation}
 q_B \circ k = q_B \circ \psi.
 \label{qBpsi}
 \end{equation}
-$$
+\)
 
 Then
       
-$$
+\(
 \begin{align*}
 q_A \circ \psi&=q_A \circ (g \circ f)\\
 &=(q_A \circ g) \circ f \quad \textrm{by associativity}\\
 &=p_A \circ f \quad \eqref{pA}\\
 &=q_A \quad \eqref{qA}
 \end{align*}
-$$
+\)
 
 and
 
-$$
+\(
 \begin{align*}
 q_B \circ \psi&=q_B \circ (g \circ f)\\
 &=(q_B \circ g) \circ f \quad \textrm{by associativity}\\
 &=p_B \circ f \quad \eqref{pB}\\
 &=q_B. \quad \eqref{qB}
 \end{align*}
-$$
+\)
 
 
 
 <h2>➡ \(\textrm{id}_P\)</h2>
   
+
+
+
+
+<h2>➡ \(\textrm{id}_Q\)</h2>
+  
 <div class="bottomright">∎</div>
 </div>
-
-
-### ➡ $$\textrm{id}_Q$$
 
 
 [^3]
