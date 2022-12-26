@@ -144,6 +144,11 @@ $$\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)$$ is true,
 there is a unique function $$k \in Q^Q$$
 such that
 
+<div class="proof">
+  hello
+  <div class="bottomright">∎</div>
+
+
 $$
 \begin{equation}
 q_A \circ k = q_A \circ \psi
@@ -185,7 +190,7 @@ $$
 
 
 ### ➡ $$\textrm{id}_P$$
-
+</div>
 
 
 ### ➡ $$\textrm{id}_Q$$
