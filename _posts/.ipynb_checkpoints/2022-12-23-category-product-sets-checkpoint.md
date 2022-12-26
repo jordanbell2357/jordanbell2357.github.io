@@ -162,14 +162,14 @@ q_B \circ k = q_B \circ \psi.
 
 Then
       
-\(
+$$
 \begin{align*}
 q_A \circ \psi&=q_A \circ (g \circ f)\\
 &=(q_A \circ g) \circ f \quad \textrm{by associativity}\\
 &=p_A \circ f \quad \eqref{pA}\\
 &=q_A \quad \eqref{qA}
 \end{align*}
-\)
+$$
 
 and
 
