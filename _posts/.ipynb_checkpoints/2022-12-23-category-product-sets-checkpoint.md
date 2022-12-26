@@ -198,11 +198,6 @@ q_B \circ \psi&=q_B \circ (g \circ f)\\
 
 [^4]: [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
 
-<div class="proof">
-  hello
-  <div class="bottomright">∎</div>
-</div>
-
 <script>
   MathJax = {
     tex: {
