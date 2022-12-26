@@ -28,7 +28,7 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 <!-- https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
 
-### $$f$$ and $$g$$
+### - $$f$$ and $$g$$
 
 Suppose that $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true.
 Because $$\mathtt{Prod}_{A,B}(P,p_A,p_B)$$ is true and $$\mathtt{Compatible}_{A,B}(Q,q_A,q_B)$$ is true,
@@ -72,7 +72,7 @@ $$
 \end{equation}
 $$
 
-### $$\phi$$
+### - $$\phi$$
 
 From $$f \in P^Q$$ and $$g \in Q^P$$, it follows that $$f \circ g \in P^P$$.
 Define
@@ -125,7 +125,7 @@ p_B \circ \phi&=p_B \circ (f \circ g)\\
 \end{align*}
 $$
 
-### $$\psi$$
+### - $$\psi$$
 
 From $$g \in Q^P$$ and $$f \in P^Q$$, it follows that $$g \circ f \in Q^Q$$.
 Define
@@ -145,11 +145,11 @@ q_A \circ \psi&=q_A \circ (g \circ f)\\
 \end{align*}
 $$
 
-### $$\textrm{id}_P$$
+### - $$\textrm{id}_P$$
 
 
 
-### $$\textrm{id}_Q$$
+### - $$\textrm{id}_Q$$
 
 
 [^4]
