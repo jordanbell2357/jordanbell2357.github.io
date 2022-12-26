@@ -49,7 +49,7 @@ $$
 $$
 
 
-Likewise, because $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true and
+Because $$\mathtt{Prod}_{A,B}(Q,q_A,q_B)$$ is true and
 $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true,
 there is a unique function
 $$g \in Q^P$$ such that
@@ -71,7 +71,7 @@ $$
 $$
 
 From $$f \in P^Q$$ and $$g \in Q^P$$, it follows that $$f \circ g \in P^P$$.
-Write
+Define
 
 $$\phi = f \circ g, \qquad \phi \in P^P.$$
 
@@ -120,7 +120,7 @@ p_B \circ \phi&=p_B \circ (f \circ g)\\
 $$
 
 From $$g \in Q^P$$ and $$f \in P^Q$$, it follows that $$g \circ f \in Q^Q$$.
-Write
+Define
 
 $$\psi = g \circ f, \qquad \psi \in Q^Q.$$
 
