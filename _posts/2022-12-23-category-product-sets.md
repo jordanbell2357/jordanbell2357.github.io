@@ -199,11 +199,6 @@ $$
 
 [^4]: [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
 
-<div class="container">
-  hello
-  <div class="bottomright">∎</div>
-</div>
-
 <div class="proof">
   hello
   <div class="bottomright">∎</div>
