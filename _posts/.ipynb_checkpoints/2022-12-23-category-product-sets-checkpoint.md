@@ -99,7 +99,7 @@ and
 
 $$
 \begin{equation}
-p_B \circ h = p_B \circ \phi.\label{pBphi}.
+p_B \circ h = p_B \circ \phi.\label{pBphi}
 \end{equation}
 $$
 
@@ -159,13 +159,15 @@ $$
 
 [^4]: [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
 
-
 <div class="container">
   hello
-  <div class="bottomright">Bottom Right</div>
+  <div class="bottomright">∎</div>
 </div>
 
-
+<div class="proof">
+  hello
+  <div class="bottomright">∎</div>
+</div>
 
 <script>
   MathJax = {
