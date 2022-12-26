@@ -122,7 +122,7 @@ $$
 \begin{align*}
 p_B \circ \phi&=p_B \circ (f \circ g)\\
 &=(p_B \circ f) \circ g \quad \textrm{by associativity}\\
-&=q_B \circ g \; \textrm{by} \quad \textrm{\eqref{qB}}\\
+&=q_B \circ g \quad \textrm{by \eqref{qB}}\\
 &=p_B. \quad \eqref{pB}
 \end{align*}
 $$
