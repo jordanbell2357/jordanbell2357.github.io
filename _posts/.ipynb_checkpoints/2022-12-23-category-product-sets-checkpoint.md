@@ -160,16 +160,7 @@ q_B \circ k = q_B \circ \psi.
 \end{equation}
 $$
 
-
-
-
-
-
-
-
-
-
-
+Then
 
 $$
 \begin{align*}
@@ -179,6 +170,19 @@ q_A \circ \psi&=q_A \circ (g \circ f)\\
 &=q_A \quad \eqref{qA}
 \end{align*}
 $$
+
+and
+
+$$
+\begin{align*}
+q_B \circ \psi&=q_B \circ (g \circ f)\\
+&=(q_B \circ g) \circ f \quad \textrm{by associativity}\\
+&=p_B \circ f \quad \eqref{pB}\\
+&=q_B \quad \eqref{qB}
+\end{align*}
+$$
+
+
 
 ### ➡ $$\textrm{id}_P$$
 
