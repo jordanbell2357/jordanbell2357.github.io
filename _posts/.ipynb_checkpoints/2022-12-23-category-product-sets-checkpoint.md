@@ -145,7 +145,7 @@ q_A \circ \psi&=q_A \circ (g \circ f)\\
 \end{align*}
 $$
 
-### ➡ $$\textrm{id}_P$$
+### ¶ $$\textrm{id}_P$$
 
 
 
