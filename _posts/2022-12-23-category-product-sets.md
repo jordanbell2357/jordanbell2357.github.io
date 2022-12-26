@@ -82,7 +82,7 @@ Define
 $$\phi = f \circ g, \qquad \phi \in P^P.$$
 
 From $$\phi \in P^P$$ and $$p_A \in A^P$$, it follows that
-$$p_A \circ \phi \in A^P$$, and likewise from $$\phi \in P^P$$ and
+$$p_A \circ \phi \in A^P$$. From $$\phi \in P^P$$ and
 $$p_B \in B^P$$, it follows that $$p_B \circ \phi \in B^P$$.
 Therefore,
 $$\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)$$ is true, and
@@ -134,7 +134,7 @@ Define
 
 $$\psi = g \circ f, \qquad \psi \in Q^Q.$$
 
-From 
+From $$\psi \in Q^Q$$ and $$q_A \in A^Q$$, it follows that 
 
 
 
