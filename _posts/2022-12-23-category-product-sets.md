@@ -29,6 +29,7 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
 
 <div class="proof">
+<div class="topleft">Proof</div>
 
 <h2>➡ \(f\) and \(g\)</h2>
 
@@ -58,28 +59,28 @@ Because \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true and
 there is a unique function
 \(g \in Q^P\) such that
 
-\(
+$$
 \begin{equation}
 q_A \circ g = p_A
 \label{pA}
 \end{equation}
-\)
+$$
 
 and
 
-\(
+$$
 \begin{equation}
 \quad q_B \circ g = p_B.
 \label{pB}
 \end{equation}
-\)
+$$
 
 <h2>➡ \(\phi\)</h2>
 
 From \(f \in P^Q\) and \(g \in Q^P\), it follows that \(f \circ g \in P^P\).
 Define
 
-\(\phi = f \circ g, \qquad \phi \in P^P.\)
+$$\phi = f \circ g, \qquad \phi \in P^P.$$
 
 From \(\phi \in P^P\) and \(p_A \in A^P\), it follows that
 \(p_A \circ \phi \in A^P\). From \(\phi \in P^P\) and
@@ -90,42 +91,42 @@ Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,
 is true,
 there is a unique function \(h \in P^P\) such that 
 
-\(
+$$
 \begin{equation}
 p_A \circ h = p_A \circ \phi
 \label{pAphi}
 \end{equation}
-\)
+$$
 
 and
 
-\(
+$$
 \begin{equation}
 p_B \circ h = p_B \circ \phi.\label{pBphi}
 \end{equation}
-\)
+$$
 
 Then
 
-\(
+$$
 \begin{align*}
 p_A \circ \phi&= p_A \circ (f \circ g)\\
 &=(p_A \circ f) \circ g \quad \textrm{by associativity}\\
 &=q_A \circ g \quad \eqref{qA}\\
 &=p_A \quad \eqref{pA}
 \end{align*}
-\)
+$$
 
 and
 
-\(
+$$
 \begin{align*}
 p_B \circ \phi&=p_B \circ (f \circ g)\\
 &=(p_B \circ f) \circ g \quad \textrm{by associativity}\\
 &=q_B \circ g \quad \textrm{by \eqref{qB}}\\
 &=p_B. \quad \eqref{pB}
 \end{align*}
-\)
+$$
 
 <h2>➡ \(\psi\)</h2>
 
@@ -144,21 +145,21 @@ Because \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true and
 there is a unique function \(k \in Q^Q\)
 such that
 
-\(
+$$
 \begin{equation}
 q_A \circ k = q_A \circ \psi
 \label{qApsi}
 \end{equation}
-\)
+$$
 
 and
 
-\(
+$$
 \begin{equation}
 q_B \circ k = q_B \circ \psi.
 \label{qBpsi}
 \end{equation}
-\)
+$$
 
 Then
       
