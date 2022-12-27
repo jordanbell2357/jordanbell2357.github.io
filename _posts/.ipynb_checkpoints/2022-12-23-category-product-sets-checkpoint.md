@@ -193,7 +193,7 @@ $$
 
 [^2]
 
-[^2]: [/LaTeX/quiver/product.png](/LaTeX/quiver/product.png)
+[^2]: [product.png](/LaTeX/quiver/product.png)
 
 [^3]
 
