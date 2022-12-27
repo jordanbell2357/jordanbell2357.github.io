@@ -31,9 +31,9 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 <h2>➡ \(f\) and \(g\)</h2>
 <p>
 Suppose that \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true.
-
+</p>
   
-Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\) is true,
+<p>Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\) is true,
 there is a unique function \(f \in P^Q\) such that
 
 \(
@@ -51,8 +51,9 @@ and
 \label{qB}
 \end{equation}
 \)
+</p>
 
-
+<p>
 Because \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true and
 \(\mathtt{Compatible}_{A,B}(P,p_A,p_B)\) is true,
 there is a unique function
@@ -81,16 +82,17 @@ From \(f \in P^Q\) and \(g \in Q^P\), it follows that \(f \circ g \in P^P\).
 Define
 
 $$\phi = f \circ g, \qquad \phi \in P^P.$$
+</p>
 
+<p>
 From \(\phi \in P^P\) and \(p_A \in A^P\), it follows that
 \(p_A \circ \phi \in A^P\). From \(\phi \in P^P\) and
 \(p_B \in B^P\), it follows that \(p_B \circ \phi \in B^P\).
 Therefore,
 \(\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)\) is true.
+</p>
 
-
- 
-
+<p>
 Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)\)
 is true,
 there is a unique function \(h \in P^P\) such that 
@@ -109,7 +111,9 @@ $$
 p_B \circ h = p_B \circ \phi.\label{pBphi}
 \end{equation}
 $$
+</p>
 
+<p>
 Then
 
 $$
@@ -139,14 +143,17 @@ From \(g \in Q^P\) and \(f \in P^Q\), it follows that \(g \circ f \in Q^Q\).
 Define
 
 $$\psi = g \circ f, \qquad \psi \in Q^Q.$$
+</p>
 
+<p>
 From \(\psi \in Q^Q\) and \(q_A \in A^Q\), it follows that 
 \(q_A \circ \psi \in A^Q\).
 From \(\psi \in Q^Q\) and \(q_B \in B^Q\), it follows that
 \(q_B \circ \psi \in B^Q\). Therefore,
 \(\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)\) is true.
+</p>
 
-
+<p>
 Because \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true and
 \(\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)\) is true,
 there is a unique function \(k \in Q^Q\)
@@ -167,7 +174,9 @@ q_B \circ k = q_B \circ \psi.
 \label{qBpsi}
 \end{equation}
 $$
+</p>
 
+<p>
 Then
       
 $$
