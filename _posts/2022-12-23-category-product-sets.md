@@ -16,9 +16,7 @@ For sets $$Q$$ and functions $$q_A$$ and $$q_B$$, we define the predicate
 \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\): \(q_A \in A^Q\) and \(q_B \in B^Q\).
 </div>
 
-If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate[^2]
-
-[^2]: [/LaTeX/quiver/product.png](/LaTeX/quiver/product.png)
+If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate
 
 <div class="bubblebox_white">
 \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\): If \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\) is true, then there 
@@ -190,6 +188,9 @@ $$
 <div class="bottomright">∎</div>
 </div>
 
+[^2]
+
+[^2]: [/LaTeX/quiver/product.png](/LaTeX/quiver/product.png)
 
 [^3]
 
