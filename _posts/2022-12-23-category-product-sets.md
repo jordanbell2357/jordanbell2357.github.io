@@ -183,7 +183,7 @@ $$
 q_B \circ \psi&=q_B \circ (g \circ f)\\
 &=(q_B \circ g) \circ f \quad \textrm{by associativity}\\
 &=p_B \circ f \quad \textrm{by \eqref{pB}}\\
-&=q_B. \quad \textrm{by \eqref{qB}}
+&=q_B \quad \textrm{by \eqref{qB}}.
 \end{align*}
 $$
 
