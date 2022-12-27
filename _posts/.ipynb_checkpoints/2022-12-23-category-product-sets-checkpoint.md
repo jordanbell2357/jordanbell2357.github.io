@@ -194,15 +194,17 @@ $$
 <div class="bottomright">∎</div>
 </div>
 
-[^2]
+References[^2] [^3] [^4]
+
+
 
 [^2]: [product.png](/LaTeX/quiver/product.png)
 
-[^3]
+
 
 [^3]: [Category Theory: a concise course. 5. Product, Coproduct, Exponential](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
 
-[^4]
+
 
 [^4]: [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
 
