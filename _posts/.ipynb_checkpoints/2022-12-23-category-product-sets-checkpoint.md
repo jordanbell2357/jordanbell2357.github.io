@@ -87,7 +87,9 @@ From \(\phi \in P^P\) and \(p_A \in A^P\), it follows that
 \(p_B \in B^P\), it follows that \(p_B \circ \phi \in B^P\).
 Therefore,
 \(\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)\) is true.
-  
+
+
+ 
 
 Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(P,p_A \circ \phi,p_B \circ \phi)\)
 is true,
@@ -142,7 +144,7 @@ From \(\psi \in Q^Q\) and \(q_A \in A^Q\), it follows that
 From \(\psi \in Q^Q\) and \(q_B \in B^Q\), it follows that
 \(q_B \circ \psi \in B^Q\). Therefore,
 \(\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)\) is true.
-  
+
 
 Because \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true and
 \(\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)\) is true,
