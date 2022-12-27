@@ -114,8 +114,8 @@ $$
 \begin{align*}
 p_A \circ \phi&= p_A \circ (f \circ g)\\
 &=(p_A \circ f) \circ g \quad \textrm{by associativity}\\
-&=q_A \circ g \quad \eqref{qA}\\
-&=p_A \quad \eqref{pA}
+&=q_A \circ g \quad \textrm{by \eqref{qA}}\\
+&=p_A \quad \textrm{\eqref{pA}}
 \end{align*}
 $$
 
@@ -126,7 +126,7 @@ $$
 p_B \circ \phi&=p_B \circ (f \circ g)\\
 &=(p_B \circ f) \circ g \quad \textrm{by associativity}\\
 &=q_B \circ g \quad \textrm{by \eqref{qB}}\\
-&=p_B. \quad \eqref{pB}
+&=p_B. \quad \textrm{by \eqref{pB}}
 \end{align*}
 $$
 
@@ -171,8 +171,8 @@ $$
 \begin{align*}
 q_A \circ \psi&=q_A \circ (g \circ f)\\
 &=(q_A \circ g) \circ f \quad \textrm{by associativity}\\
-&=p_A \circ f \quad \eqref{pA}\\
-&=q_A \quad \eqref{qA}
+&=p_A \circ f \quad \textrm{by \eqref{pA}}\\
+&=q_A \quad \textrm{by \eqref{qA}}
 \end{align*}
 $$
 
@@ -182,8 +182,8 @@ $$
 \begin{align*}
 q_B \circ \psi&=q_B \circ (g \circ f)\\
 &=(q_B \circ g) \circ f \quad \textrm{by associativity}\\
-&=p_B \circ f \quad \eqref{pB}\\
-&=q_B. \quad \eqref{qB}
+&=p_B \circ f \quad \textrm{by \eqref{pB}}\\
+&=q_B. \quad \textrm{by \eqref{qB}}
 \end{align*}
 $$
 
