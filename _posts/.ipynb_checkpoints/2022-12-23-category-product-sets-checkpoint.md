@@ -202,10 +202,13 @@ $$
 
 <h2>➡ \(\textrm{id}_P \in P^P\)</h2>
 <p>
-
+\(p_A \circ \textrm{id}_P \in P^P\)
 </p>
 
 <h2>➡ \(\textrm{id}_Q \in Q^Q\)</h2>
+<p>
+\(Q_A \circ \textrm{id}_Q \in P^P\)
+</p>
   
 <div class="bottomright">∎</div>
 </div>
