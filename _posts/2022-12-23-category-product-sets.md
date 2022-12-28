@@ -28,7 +28,7 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 
 <div class="proof">
 <div class="topleft">Proof</div>
-<h2>➡ \(f\) and \(g\)</h2>
+<h2>➡ \(f \in P^Q\) and \(g \in Q^P\)</h2>
 <p>
 Suppose that \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true.
 </p>
@@ -76,7 +76,7 @@ $$
 $$
 </p>
 
-<h2>➡ \(\phi\)</h2>
+<h2>➡ \(\phi \in P^P\)</h2>
 <p>
 From \(f \in P^Q\) and \(g \in Q^P\), it follows that \(f \circ g \in P^P\).
 Define
@@ -137,7 +137,7 @@ p_B \circ \phi&=p_B \circ (f \circ g)\\
 $$
 </p>
 
-<h2>➡ \(\psi\)</h2>
+<h2>➡ \(\psi \in Q^Q\)</h2>
 <p>
 From \(g \in Q^P\) and \(f \in P^Q\), it follows that \(g \circ f \in Q^Q\).
 Define
@@ -200,10 +200,12 @@ q_B \circ \psi&=q_B \circ (g \circ f)\\
 $$
 </p>
 
-<h2>➡ \(\textrm{id}_P\)</h2>
+<h2>➡ \(\textrm{id}_P \in P^P\)</h2>
+<p>
 
+</p>
 
-<h2>➡ \(\textrm{id}_Q\)</h2>
+<h2>➡ \(\textrm{id}_Q \in Q^Q\)</h2>
   
 <div class="bottomright">∎</div>
 </div>
