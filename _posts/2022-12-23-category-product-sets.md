@@ -108,7 +108,8 @@ and
 
 $$
 \begin{equation}
-p_B \circ h = p_B \circ \phi.\label{pBphi}
+p_B \circ h = p_B \circ \phi.
+\label{pBphi}
 \end{equation}
 $$
 </p>
@@ -135,6 +136,31 @@ p_B \circ \phi&=p_B \circ (f \circ g)\\
 &=p_B \quad \textrm{by \eqref{pB}}.
 \end{align*}
 $$
+</p>
+  
+<p>
+Therefore $$\eqref{pAphi}$$ is equivalent to
+
+$$
+\begin{equation}
+p_A \circ h = p_A
+\label{hA}
+\end{equation}
+$$
+  
+and $$\eqref{pBphi}$$ is equivalent to
+  
+$$
+\begin{equation}
+p_B \circ h = p_B.
+\label{hB}
+\end{equation}
+$$
+</p>
+  
+<p>
+Because $$\textrm{id}_P \in P^P$$ satisfies $$\eqref{hA}$$ and $$\eqref{hB}$$, it follows from \(h\) being unique that
+\(h=\textrm{id}_P\).
 </p>
 
 <h2>➡ \(\psi \in Q^Q\)</h2>
@@ -199,8 +225,36 @@ q_B \circ \psi&=q_B \circ (g \circ f)\\
 \end{align*}
 $$
 </p>
-
   
+<p>
+Therefore $$\eqref{qApsi}$$ is equivalent to
+
+$$
+\begin{equation}
+q_A \circ k = q_A
+\label{kA}
+\end{equation}
+$$
+  
+and $$\eqref{qBpsi}$$ is equivalent to
+  
+$$
+\begin{equation}
+q_B \circ k = q_B.
+\label{kB}
+\end{equation}
+$$
+</p>
+  
+<p>
+Because $$\textrm{id}_Q \in Q^Q$$ satisfies $$\eqref{kA}$$ and $$\eqref{kB}$$, it follows from \(k\) being unique that
+\(k=\textrm{id}_Q\).
+</p>
+  
+  
+  
+  
+
   
   
 <!--
