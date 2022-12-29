@@ -205,12 +205,26 @@ $$
 \(p_A \circ \textrm{id}_P \in A^P\) and \(p_B \circ \textrm{id}_P \in B^P\),
 which means that \(\mathtt{Compatible}_{A,B}(P,p_A \circ \textrm{id}_P,p_B \circ \textrm{id}_P)\) is true.
 </p>
+  
+<p>
+Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(P,p_A \circ \textrm{id}_P,p_B \circ \textrm{id}_P)\)
+is true, there exists a unique function \(h \in P^P\) such that
+  
+$$p_A \circ h = p_A \circ \textrm{id}_P$$
+
+and
+
+$$p_B \circ h = p_B \circ \textrm{id}_P.$$
+  
+
 
 <h2>➡ \(\textrm{id}_Q \in Q^Q\)</h2>
 <p>
 \(q_A \circ \textrm{id}_Q \in A^Q\) and \(p_B \circ \textrm{id}_Q \in B^Q\),
 which means that \(\mathtt{Compatible}_{A,B}(Q,q_A \circ \textrm{id}_Q,p_B \circ \textrm{id}_Q)\) is true.
 </p>
+  
+
   
 <div class="bottomright">∎</div>
 </div>

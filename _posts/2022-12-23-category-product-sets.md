@@ -208,7 +208,15 @@ which means that \(\mathtt{Compatible}_{A,B}(P,p_A \circ \textrm{id}_P,p_B \circ
   
 <p>
 Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(P,p_A \circ \textrm{id}_P,p_B \circ \textrm{id}_P)\)
-is true, there exists a unique function \(h \in P^P\) such that \(
+is true, there exists a unique function \(h \in P^P\) such that
+  
+$$p_A \circ h = p_A \circ \textrm{id}_P$$
+
+and
+
+$$p_B \circ h = p_B \circ \textrm{id}_P.$$
+  
+
 
 <h2>➡ \(\textrm{id}_Q \in Q^Q\)</h2>
 <p>
