@@ -139,7 +139,7 @@ $$
 </p>
   
 <p>
-Therefore \(\eqref{pAphi}\) is equivalent to
+Thus \(\eqref{pAphi}\) is equivalent with
 
 $$
 \begin{equation}
@@ -148,7 +148,7 @@ p_A \circ h = p_A
 \end{equation}
 $$
   
-and \(\eqref{pBphi}\) is equivalent to
+and \(\eqref{pBphi}\) is equivalent with
   
 $$
 \begin{equation}
@@ -163,6 +163,7 @@ Because \(\textrm{id}_P \in P^P\) satisfies \(\eqref{hA}\) and \(\eqref{hB}\), i
 the unique element of \(P^P\) satsifying \(\eqref{pAphi}\) and \(\eqref{pBphi}\)
 that \(h=\textrm{id}_P\).
 </p>
+
 
 <h2>➡ \(\psi \in Q^Q\)</h2>
 <p>
@@ -227,7 +228,7 @@ $$
 </p>
   
 <p>
-Therefore \(\eqref{qApsi}\) is equivalent to
+Thus \(\eqref{qApsi}\) is equivalent with
 
 $$
 \begin{equation}
@@ -236,7 +237,7 @@ q_A \circ k = q_A
 \end{equation}
 $$
   
-and \(\eqref{qBpsi}\) is equivalent to
+and \(\eqref{qBpsi}\) is equivalent with
   
 $$
 \begin{equation}
