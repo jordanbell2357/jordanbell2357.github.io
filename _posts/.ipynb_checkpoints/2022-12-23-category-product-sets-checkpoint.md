@@ -200,6 +200,10 @@ q_B \circ \psi&=q_B \circ (g \circ f)\\
 $$
 </p>
 
+  
+  
+  
+<!--
 <h2>➡ \(\textrm{id}_P \in P^P\)</h2>
 <p>
 \(p_A \circ \textrm{id}_P \in A^P\) and \(p_B \circ \textrm{id}_P \in B^P\),
@@ -215,7 +219,7 @@ $$p_A \circ h = p_A \circ \textrm{id}_P$$
 and
 
 $$p_B \circ h = p_B \circ \textrm{id}_P.$$
-  
+
 
 
 <h2>➡ \(\textrm{id}_Q \in Q^Q\)</h2>
@@ -223,7 +227,7 @@ $$p_B \circ h = p_B \circ \textrm{id}_P.$$
 \(q_A \circ \textrm{id}_Q \in A^Q\) and \(p_B \circ \textrm{id}_Q \in B^Q\),
 which means that \(\mathtt{Compatible}_{A,B}(Q,q_A \circ \textrm{id}_Q,p_B \circ \textrm{id}_Q)\) is true.
 </p>
-  
+-->
 
   
 <div class="bottomright">∎</div>
