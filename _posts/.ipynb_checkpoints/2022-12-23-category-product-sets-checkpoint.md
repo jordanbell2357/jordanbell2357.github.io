@@ -159,8 +159,9 @@ $$
 </p>
   
 <p>
-Because \(\textrm{id}_P \in P^P\) satisfies \(\eqref{hA}\) and \(\eqref{hB}\), it follows from \(h\) being unique that
-\(h=\textrm{id}_P\).
+Because \(\textrm{id}_P \in P^P\) satisfies \(\eqref{hA}\) and \(\eqref{hB}\), it follows from \(h\)
+the unique element of \(P^P\) satsifying \(\eqref{pAphi}\) and \(\eqref{pBphi}\)
+that \(h=\textrm{id}_P\).
 </p>
 
 <h2>➡ \(\psi \in Q^Q\)</h2>
@@ -246,8 +247,9 @@ $$
 </p>
   
 <p>
-Because \(\textrm{id}_Q \in Q^Q\) satisfies \(\eqref{kA}\) and \(\eqref{kB}\), it follows from \(k\) being unique that
-\(k=\textrm{id}_Q\).
+Because \(\textrm{id}_Q \in Q^Q\) satisfies \(\eqref{kA}\) and \(\eqref{kB}\), it follows from \(k\) being
+the unique element of \(Q^Q\) satsifying \(\eqref{qApsi}\) and \(\eqref{qBpsi}\)
+that \(k=\textrm{id}_Q\).
 </p>
   
   
@@ -298,7 +300,7 @@ References[^2] [^3] [^4]
 
 
 
-[^4]: [Basic categorial constructions](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
+[^4]: [**Basic categorial constructions**](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
 
 <script>
   MathJax = {
