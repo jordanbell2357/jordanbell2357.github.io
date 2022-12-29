@@ -36,21 +36,21 @@ Suppose that \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Prod}_{A,B
 <p>Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\) is true,
 there is a unique function \(f \in P^Q\) such that
 
-\(
+$$
 \begin{equation}
 p_A \circ f = q_A
 \label{qA}
 \end{equation}
-\)
+$$
 
 and
 
-\(
+$$
 \begin{equation}
 \quad p_B \circ f = q_B.
 \label{qB}
 \end{equation}
-\)
+$$
 </p>
 
 <p>
@@ -115,7 +115,7 @@ $$
 </p>
 
 <p>
-Then
+But
 
 $$
 \begin{align*}
@@ -139,7 +139,7 @@ $$
 </p>
   
 <p>
-Therefore $$\eqref{pAphi}$$ is equivalent to
+Therefore \(\eqref{pAphi}\) is equivalent to
 
 $$
 \begin{equation}
@@ -148,7 +148,7 @@ p_A \circ h = p_A
 \end{equation}
 $$
   
-and $$\eqref{pBphi}$$ is equivalent to
+and \(\eqref{pBphi}\) is equivalent to
   
 $$
 \begin{equation}
@@ -159,7 +159,7 @@ $$
 </p>
   
 <p>
-Because $$\textrm{id}_P \in P^P$$ satisfies $$\eqref{hA}$$ and $$\eqref{hB}$$, it follows from \(h\) being unique that
+Because \(\textrm{id}_P \in P^P\) satisfies \(\eqref{hA}\) and \(\eqref{hB}\), it follows from \(h\) being unique that
 \(h=\textrm{id}_P\).
 </p>
 
@@ -182,8 +182,7 @@ From \(\psi \in Q^Q\) and \(q_B \in B^Q\), it follows that
 <p>
 Because \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true and
 \(\mathtt{Compatible}_{A,B}(Q,q_A \circ \psi,q_B \circ \psi)\) is true,
-there is a unique function \(k \in Q^Q\)
-such that
+there is a unique function \(k \in Q^Q\) such that
 
 $$
 \begin{equation}
@@ -203,7 +202,7 @@ $$
 </p>
 
 <p>
-Then
+But
       
 $$
 \begin{align*}
@@ -227,7 +226,7 @@ $$
 </p>
   
 <p>
-Therefore $$\eqref{qApsi}$$ is equivalent to
+Therefore \(\eqref{qApsi}\) is equivalent to
 
 $$
 \begin{equation}
@@ -236,7 +235,7 @@ q_A \circ k = q_A
 \end{equation}
 $$
   
-and $$\eqref{qBpsi}$$ is equivalent to
+and \(\eqref{qBpsi}\) is equivalent to
   
 $$
 \begin{equation}
@@ -247,7 +246,7 @@ $$
 </p>
   
 <p>
-Because $$\textrm{id}_Q \in Q^Q$$ satisfies $$\eqref{kA}$$ and $$\eqref{kB}$$, it follows from \(k\) being unique that
+Because \(\textrm{id}_Q \in Q^Q\) satisfies \(\eqref{kA}\) and \(\eqref{kB}\), it follows from \(k\) being unique that
 \(k=\textrm{id}_Q\).
 </p>
   
