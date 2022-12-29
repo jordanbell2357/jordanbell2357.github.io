@@ -294,7 +294,7 @@ References[^2] [^3] [^4]
 
 
 
-[^3]: [Category Theory: a concise course. 5. Product, Coproduct, Exponential](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
+[^3]: [**Category Theory: a concise course.** *5. Product, Coproduct, Exponential*](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
 
 
 
