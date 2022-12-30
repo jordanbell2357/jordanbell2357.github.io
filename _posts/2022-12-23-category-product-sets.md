@@ -142,25 +142,19 @@ $$
 Thus \(\eqref{pAphi}\) is equivalent with
 
 $$
-\begin{equation}
 p_A \circ h = p_A
-\label{hA}
-\end{equation}
 $$
   
 and \(\eqref{pBphi}\) is equivalent with
   
 $$
-\begin{equation}
 p_B \circ h = p_B.
-\label{hB}
-\end{equation}
 $$
 </p>
   
 <p>
-Because \(\textrm{id}_P \in P^P\) satisfies \(\eqref{hA}\) and \(\eqref{hB}\), from \(h\)
-the unique element of \(P^P\) satsifying \(\eqref{pAphi}\) and \(\eqref{pBphi}\) it follows 
+Thence \(\textrm{id}_P \in P^P\) satisfies \(\eqref{pAphi}\) and \(\eqref{pBphi}\).
+Because \(h\) is the unique element of \(P^P\) satsifying \(\eqref{pAphi}\) and \(\eqref{pBphi}\), it follows 
 that \(h=\textrm{id}_P\).
 </p>
 
@@ -231,24 +225,19 @@ $$
 Thus \(\eqref{qApsi}\) is equivalent with
 
 $$
-\begin{equation}
 q_A \circ k = q_A
-\label{kA}
-\end{equation}
 $$
   
 and \(\eqref{qBpsi}\) is equivalent with
   
 $$
-\begin{equation}
 q_B \circ k = q_B.
-\label{kB}
-\end{equation}
 $$
 </p>
   
 <p>
-Because \(\textrm{id}_Q \in Q^Q\) satisfies \(\eqref{kA}\) and \(\eqref{kB}\), from \(k\) being
+Thence \(\textrm{id}_Q \in Q^Q\) satisfies \(\eqref{qApsi}\) and \(\eqref{qBpsi}\).
+Because \(k\) is
 the unique element of \(Q^Q\) satsifying \(\eqref{qApsi}\) and \(\eqref{qBpsi}\), it follows
 that \(k=\textrm{id}_Q\).
 </p>
