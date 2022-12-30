@@ -27,12 +27,16 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
 
 <div class="proof">
-<div class="topleft">Proof</div>
-<h2>➡ \(f \in P^Q\) and \(g \in Q^P\)</h2>
+<div class="topleft">Theorem</div>
 <p>
-Suppose that \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true.
+If \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true,
+then there is
 </p>
-  
+</div>
+
+<div class="proof">
+<div class="topleft">Proof</div>
+<h2>➡ \(f \in P^Q\) and \(g \in Q^P\)</h2>  
 <p>Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\) is true,
 there is a unique function \(f \in P^Q\) such that
 
