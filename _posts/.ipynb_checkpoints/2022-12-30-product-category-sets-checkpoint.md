@@ -30,7 +30,7 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 <h1>Theorem</h1>
 <p>
 If \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Prod}_{A,B}(Q,q_A,q_B)\) is true,
-then there is
+then there is a unique bijection 
 </p>
 </div>
 
