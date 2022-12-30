@@ -84,6 +84,8 @@ $$
 \end{equation}
 $$
 </p>
+  
+<hr>
 
 <p>➡ \(\phi \in P^P\)</p>
 <p>
