@@ -1,6 +1,6 @@
 ---
-layout: page
-title: Weighted Average Cost of Capital (WACC)
+layout: post
+title: Weighted Average Cost of Capital (WACC) example
 ---
 
 <table>
