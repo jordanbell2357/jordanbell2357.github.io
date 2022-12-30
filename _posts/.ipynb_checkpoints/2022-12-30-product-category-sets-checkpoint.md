@@ -85,7 +85,7 @@ $$
 $$
 </p>
 
-<h2>➡ \(\phi \in P^P\)</h2>
+<p>➡ \(\phi \in P^P\)</p>
 <p>
 From \(f \in P^Q\) and \(g \in Q^P\), it follows that \(f \circ g \in P^P\).
 Define
@@ -170,7 +170,7 @@ $$h=\textrm{id}_P.$$
 </p>
 
 
-<h2>➡ \(\psi \in Q^Q\)</h2>
+<p>➡ \(\psi \in Q^Q\)</p>
 <p>
 From \(g \in Q^P\) and \(f \in P^Q\), it follows that \(g \circ f \in Q^Q\).
 Define
