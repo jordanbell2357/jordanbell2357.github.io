@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Weighted Average Cost of Capital (WACC) example
+title: Weighted Average Cost of Capital (WACC) exercise
 ---
 
 <table>
@@ -83,14 +83,3 @@ $$
 $$
 \mathrm{WACC} = w_1c_1 + w_2c_2 + w_3c_3 = 0.0282
 $$
-
-
-# Bond YTM
-
-> YNB Ltd. acquired MOU Pty Ltd. 10 years ago. In order to fund this acquisition, YNB Ltd issued a bond. Currently it has an outstanding amount of $50,000,000 with maturity in 2 years. The bond has a coupon rate of 5% (payable annually). What is the current price of the bond given the YTM is 7%?
-
-Annual coupon payment $$C=50000000\cdot0.05 = 2500000$$.
-
-$$Y=0.07$$
-
-$$\mathrm{PV} = \frac{C}{1+Y}+\frac{C}{\left(1+Y\right)^{2}}+\frac{50000000}{\left(1+Y\right)^{2}} = 48191981.83$$
