@@ -1,7 +1,6 @@
 ---
 layout: page
 title: Bubblesort loop invariant
-date: 2022-12-04
 ---
 
 ```python
