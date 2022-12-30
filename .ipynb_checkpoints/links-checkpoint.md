@@ -8,7 +8,6 @@ permalink: /links/
 - [Business](#business)
 - [Organizations](#organizations)
 - [Programming](#programming)
-- [Electronics](#electronics)
 - [Course platforms](#platforms)
 - [Mathematics learning](#mathematics)
 
@@ -90,16 +89,11 @@ permalink: /links/
 * [W3Schools Courses](https://courses.w3schools.com/)
 * [W3Schools My Learning](https://my-learning.w3schools.com/)
 
-# Electronics {#electronics}
-
-- [CircuitBread](https://www.circuitbread.com/)
-
 # Course platforms {#platforms}
 
 - [Coursera](https://www.coursera.org/)
 - [edX](https://www.edx.org/)
 - [Khan Academy](https://www.khanacademy.org/)
-- [OpenLearn](https://www.open.edu/openlearn)
 
 # Mathematics learning {#mathematics}
 
@@ -109,29 +103,20 @@ permalink: /links/
 * [GeoGebra](https://www.geogebra.org/geometry)
 * [Wolfram Alpha](https://www.wolframalpha.com/)
 
-## Exercises {#exercises}
+## Exercises and explanations {#exercises}
 
 * [Khan Academy](https://www.khanacademy.org/)
 * [CK-12](https://www.ck12.org/student/)
 * [MathsIsFun.com](https://www.mathsisfun.com/)
 * [Transum](https://www.transum.org/)
-
-## Course notes
-
 * [CEMC Courseware](https://cemc.uwaterloo.ca/resources/courseware/courseware.html)
-
-## Games {#games}
-
 * [PBS LearningMedia K-8 Mathematics](https://www.pbslearningmedia.org/subjects/mathematics/k-8-mathematics/)
 * [PBS PreK-12 Resources for New School Routines](https://www.pbslearningmedia.org/collection/new-school-routines/)
+* [Art of Problem Solving (AoPS)](https://artofproblemsolving.com/company)
+* [National Council of Teachers of Mathematics Classroom Resources](https://www.nctm.org/classroomresources/)
 
 ## Contests {#contests}
 
 * [University of Waterloo CEMC](https://www.cemc.uwaterloo.ca/)
 * [Canadian Math Kangaroo Contest](https://mathkangaroo.ca/)
 * [Canadian Mathematical Society (CMS) Competitions](https://cms.math.ca/competitions/)
-
-## Enrichment {#enrichment}
-
-* [Art of Problem Solving (AoPS)](https://artofproblemsolving.com/company)
-* [National Council of Teachers of Mathematics Classroom Resources](https://www.nctm.org/classroomresources/)
