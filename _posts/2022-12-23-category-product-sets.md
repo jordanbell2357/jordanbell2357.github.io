@@ -153,7 +153,7 @@ $$
 </p>
   
 <p>
-Thence \(\textrm{id}_P \in P^P\) satisfies \(\eqref{pAphi}\) and \(\eqref{pBphi}\).
+Thus, \(\textrm{id}_P \in P^P\) satisfies \(\eqref{pAphi}\) and \(\eqref{pBphi}\).
 Because \(h\) is the unique element of \(P^P\) satsifying \(\eqref{pAphi}\) and \(\eqref{pBphi}\), it follows 
 that \(h=\textrm{id}_P\).
 </p>
@@ -236,7 +236,7 @@ $$
 </p>
   
 <p>
-Thence \(\textrm{id}_Q \in Q^Q\) satisfies \(\eqref{qApsi}\) and \(\eqref{qBpsi}\).
+Thus, \(\textrm{id}_Q \in Q^Q\) satisfies \(\eqref{qApsi}\) and \(\eqref{qBpsi}\).
 Because \(k\) is
 the unique element of \(Q^Q\) satsifying \(\eqref{qApsi}\) and \(\eqref{qBpsi}\), it follows
 that \(k=\textrm{id}_Q\).
