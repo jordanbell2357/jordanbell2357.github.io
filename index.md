@@ -12,10 +12,16 @@ This website is the anchor for my internet presence and a platform for my writin
 
 ---
 
-<ul>
+<ul class="spaced_list">
   {% for post in site.posts %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date_to_long_string }}
     </li>
   {% endfor %}
 </ul>
+
+<!--
+
+https://developer.mozilla.org/en-US/docs/Learn/CSS/Styling_text/Styling_lists
+
+-->
