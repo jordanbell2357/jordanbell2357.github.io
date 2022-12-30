@@ -1,9 +1,9 @@
 ---
 layout: page
-title: CS
-permalink: /CS/
+title: Notes
+permalink: /notes/
 ---
 
-{% for example in site.CS %}
+{% for example in site.notes %}
 1. [{{example.title}}]({{ example.url }})
 {% endfor %}
