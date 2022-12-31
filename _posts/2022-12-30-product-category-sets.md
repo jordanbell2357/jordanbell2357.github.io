@@ -23,7 +23,7 @@ If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate
 exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B \circ f = q_B\).
 </div>
 
-[[!Quiver](/LaTeX/quiver/product.png)]((https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==))
+<a href="https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ=="><img src="/LaTeX/quiver/product.png"></a>
 
 <h1>Theorem</h1>
 
