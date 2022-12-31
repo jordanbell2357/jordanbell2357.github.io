@@ -23,8 +23,7 @@ If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate
 exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B \circ f = q_B\).
 </div>
 
-<!-- https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
-<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwyLCJBIl0sWzQsMiwiQiJdLFsyLDMsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="688" height="560" style="border-radius: 8px; border: none;"></iframe>
+[[!Quiver](/LaTeX/quiver/product.png)]((https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==))
 
 <h1>Theorem</h1>
 
@@ -293,19 +292,9 @@ which means that \(\mathtt{Compatible}_{A,B}(Q,q_A \circ \textrm{id}_Q,p_B \circ
 <div class="bottomright">∎</div>
 </div>
 
-References[^2] [^3] [^4]
+References[^2]
 
-
-
-[^2]: [product.png](/LaTeX/quiver/product.png)
-
-
-
-[^3]: [**Category Theory: a concise course.** *5. Product, Coproduct, Exponential*](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
-
-
-
-[^4]: [**Basic categorial constructions**](https://www-users.cse.umn.edu/~garrett/m/fun/Notes/06_categories.pdf)
+[^2]: [**Category Theory: a concise course.** *5. Product, Coproduct, Exponential*](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
 
 <script>
   MathJax = {
