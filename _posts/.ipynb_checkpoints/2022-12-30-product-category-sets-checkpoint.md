@@ -172,7 +172,7 @@ $$h=\textrm{id}_P.$$
 
 <hr>
 
-<p>➡ \(\psi \in Q^Q\)</p>
+<h3>\(\psi \in Q^Q\)</h3>
 <p>
 From \(g \in Q^P\) and \(f \in P^Q\), it follows that \(g \circ f \in Q^Q\).
 Define
