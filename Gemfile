@@ -3,8 +3,14 @@
 source "https://rubygems.org"
 gemspec
 
-gem "jekyll", ENV["JEKYLL_VERSION"] if ENV["JEKYLL_VERSION"]
+gem 'jekyll'
+
+group :jekyll_plugins do
+  gem 'jekyll-sitemap'
+  gem 'jekyll-paginate'
+  gem 'jekyll-feed'
+  gem 'jekyll-seo-tag'
+end
+
 gem "kramdown-parser-gfm" if ENV["JEKYLL_VERSION"] == "~> 3.9"
 gem "webrick", "~> 1.7"
-gem "jekyll-paginate"
-gem 'jekyll-sitemap'
