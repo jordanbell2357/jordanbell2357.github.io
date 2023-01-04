@@ -7,7 +7,10 @@ title: Relational algebra
 
 
 
-employee = <table>
+employee = 
+
+
+<table>
 <thead>
   <tr>
     <th>nr</th>
@@ -58,3 +61,4 @@ SELECT salary FROM employee
 </table>
 
 $$\Pi_{\mathrm{salary}}(\mathrm{employee})$$
+

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 title: Products in the category of sets
 ---
 
