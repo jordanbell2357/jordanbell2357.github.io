@@ -5,9 +5,9 @@ title: Relational algebra
 
 <http://www.databasteknik.se/webbkursen/relalg-lecture/index.html>
 
-employee = 
 
-<table>
+
+employee = <table>
 <thead>
   <tr>
     <th>nr</th>
@@ -57,4 +57,4 @@ SELECT salary FROM employee
 </tbody>
 </table>
 
-$$\Pi_{\mathrm{salary}}(employee)$$
+$$\Pi_{\mathrm{salary}}(\mathrm{employee})$$
