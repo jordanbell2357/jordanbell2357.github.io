@@ -5,6 +5,7 @@ permalink: /sites/
 ---
 
 - [Supply Chain Excellence Course](https://sites.google.com/view/supply-chain-excellence-course)
+- [Introduction to Psychology Course](https://sites.google.com/view/introduction-psychology-course)
 
 - [Gold Relics from Greater China](https://sites.google.com/jordanbell.info/gold-relics-china/home)
 - [Gold Relics from the Ancient World](https://sites.google.com/jordanbell.info/gold-relics/home)
