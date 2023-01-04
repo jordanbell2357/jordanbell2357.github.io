@@ -3,7 +3,9 @@ layout: page
 title: Relational algebra
 ---
 
-<http://www.databasteknik.se/webbkursen/relalg-lecture/index.html>
+<https://dbis-uibk.github.io/relax/landing>
+
+<https://db.grussell.org/ch5.html>
 
 
 
