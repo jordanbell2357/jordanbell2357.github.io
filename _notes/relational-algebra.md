@@ -56,3 +56,5 @@ SELECT salary FROM employee
   </tr>
 </tbody>
 </table>
+
+$$\Pi_{\mathrm{salary}}(employee)$$
