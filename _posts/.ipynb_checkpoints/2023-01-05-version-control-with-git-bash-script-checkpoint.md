@@ -7,7 +7,9 @@ The Final Project is in fact not graded - I completed the course with 100% compl
 the Final Project (and had to access the course from my Completed Courses to get to the Final Project).
 Because of this, I've judged it is decent to present my solution to this project. This is a step by step example for learners to imitate, and it is longer than most worked out examples in search engine results.
 
-Save below and only below in a file X.sh file then execute bash X.sh
+Copy below and save as file X.sh file; then execute bash X.sh.
+
+At this time: Copy up to and including merge H.
 
 ```bash
 #!/bin/bash
@@ -37,9 +39,9 @@ git add fileA.txt
 git commit -m "add feature 1"
 
 # E
-# I didn't fit a merge commit statement in this step which was a goal
 git checkout develop
 git merge feature1
+git commit -m "Merge branch 'feature1' into develop"
 
 # F
 git checkout -b feature2
