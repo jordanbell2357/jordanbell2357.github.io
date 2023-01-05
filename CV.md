@@ -87,9 +87,14 @@ Statistics, computer science, and financial economics tutoring
 
 - [Datacamp](https://app.datacamp.com/profile/jordanbell2357)
 
+- [openSAP](https://open.sap.com/verify/xenak-hesyv-katal-nebok-hityg)
+
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/public_profiles/c4354b0e-6e16-46ec-be5b-64b7b49e9611)
 
 - [Salesforce Trailhead](https://trailblazer.me/id/jordanbell2357)
+
+
+<!--
 
 ### Other online courses
 
@@ -117,3 +122,5 @@ Statistics, computer science, and financial economics tutoring
   </tr>
 </tbody>
 </table>
+
+-->
