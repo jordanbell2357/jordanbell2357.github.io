@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Version Control with Git Bash Script
+title: Version Control with Git bash script
 ---
 
 The Final Project is in fact not graded - I completed the course with 100% completing the quizzes and the final exam before I completed
