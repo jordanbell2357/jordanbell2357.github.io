@@ -17,8 +17,6 @@ Copy below and save as file X.sh file; then execute bash X.sh.
 
 At this time: Copy up to and including merge H.
 
-<!-- {% include codeHeader.html %} -->
-
 ```bash
 #!/bin/bash
 
