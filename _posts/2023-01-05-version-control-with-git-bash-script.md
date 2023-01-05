@@ -9,13 +9,13 @@ Because of this, I've judged it is decent to present my solution to this project
 
 <https://www.coursera.org/learn/version-control-with-git>
 
+[![FP1](/assets/images/screenshots/FP1.png)](https://www.coursera.org/learn/version-control-with-git)
+
+![FP2](/assets/images/screenshots/FP2.png)
+
 Copy below and save as file X.sh file; then execute bash X.sh.
 
 At this time: Copy up to and including merge H.
-
-![FP1](/assets/images/screenshots/FP1.png)
-
-![FP2](/assets/images/screenshots/FP2.png)
 
 ```bash
 #!/bin/bash
