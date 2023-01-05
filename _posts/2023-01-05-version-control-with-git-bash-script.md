@@ -7,6 +7,8 @@ The Final Project is in fact not graded - I completed the course with 100% compl
 the Final Project (and had to access the course from my Completed Courses to get to the Final Project).
 Because of this, I've judged it is decent to present my solution to this project. This is a step by step example for learners to imitate, and it is longer than most worked out examples in search engine results.
 
+Save below and only below in a file X.sh file then execute bash X.sh
+
 ```bash
 #!/bin/bash
 
