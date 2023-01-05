@@ -11,6 +11,10 @@ Copy below and save as file X.sh file; then execute bash X.sh.
 
 At this time: Copy up to and including merge H.
 
+![FP1](/assets/images/screenshots/FP1.png)
+
+![FP2](/assets/images/screenshots/FP2.png)
+
 ```bash
 #!/bin/bash
 
@@ -91,6 +95,3 @@ git commit -m "Merge branch 'hotfix1' into develop"
 git checkout feature2
 git rebase master
 ```
-![FP1](/assets/images/screenshots/FP1.png)
-
-![FP2](/assets/images/screenshots/FP2.png)
