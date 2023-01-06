@@ -96,3 +96,5 @@ git commit -m "Merge branch 'hotfix1' into develop"
 git checkout feature2
 git rebase master
 ```
+
+![Commit graph](/assets/images/screenshots/FP3.png)
