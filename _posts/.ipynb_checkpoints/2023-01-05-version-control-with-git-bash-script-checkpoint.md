@@ -3,19 +3,13 @@ layout: post
 title: Version Control with Git bash script
 ---
 
+<https://www.coursera.org/learn/version-control-with-git>
+
 The Final Project is in fact not graded - I completed the course with 100% completing the quizzes and the final exam before I completed
 the Final Project (and had to access the course from my Completed Courses to get to the Final Project).
 Because of this, I've judged it is decent to present my solution to this project. This is a step by step example for learners to imitate, and it is longer than most worked out examples that appear search engine results.
 
-<https://www.coursera.org/learn/version-control-with-git>
-
-[![FP1](/assets/images/screenshots/FP1.png)](https://www.coursera.org/learn/version-control-with-git)
-
-![FP2](/assets/images/screenshots/FP2.png)
-
-Copy below and save as file X.sh file; then execute ```bash bash X.sh```.
-
-At this time: Copy up to and including merge H.
+[![© 2018 Atlassian](/assets/images/screenshots/FP1.png)](https://www.coursera.org/learn/version-control-with-git)
 
 ```bash
 #!/bin/bash
@@ -48,6 +42,14 @@ git commit -m "add feature 1"
 git checkout develop
 git merge feature1
 git commit -m "Merge branch 'feature1' into develop"
+```
+
+[![© 2018 Atlassian](/assets/images/screenshots/FP2.png)](https://www.coursera.org/learn/version-control-with-git)
+
+```bash
+#!/bin/bash
+
+cd FinalProject
 
 # F
 git checkout -b feature2
@@ -97,4 +99,4 @@ git checkout feature2
 git rebase master
 ```
 
-![Commit graph](/assets/images/screenshots/FP3.png)
+[![Commit graph. © 2018 Atlassian](/assets/images/screenshots/FP3.png)](https://www.coursera.org/learn/version-control-with-git)
