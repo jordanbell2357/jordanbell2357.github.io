@@ -7,7 +7,9 @@ title: Version Control with Git bash script
 
 The Final Project is in fact not graded - I completed the course with 100% completing the quizzes and the final exam before I completed
 the Final Project (and had to access the course from my Completed Courses to get to the Final Project).
-Because of this, I've judged it is decent to present my solution to this project. This is a step by step example for learners to imitate, and it is longer than most worked out examples that appear search engine results.
+
+Because of this, I judge it be sound to present my solution to this project. This is a step by step example for learners to imitate,
+and it is longer than most worked out examples that appear at the top of many search engine results.
 
 [![© 2018 Atlassian](/assets/images/screenshots/FP1.png)](https://www.coursera.org/learn/version-control-with-git)
 
