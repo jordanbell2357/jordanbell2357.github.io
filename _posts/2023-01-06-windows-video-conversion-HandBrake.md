@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Windows video conversion
+title: Windows video conversion with HandBrake
 ---
 
 [HandBrake](https://handbrake.fr/) 
 
 > HandBrake is a open-source tool, built by volunteers, for converting video from nearly any format to a selection of modern, widely supported codecs.
 
-![HandBrake: Open Source Video Transcoder](/assets/images/screenshots/HandBrake_Transcoder.png
+![HandBrake: Open Source Video Transcoder](/assets/images/screenshots/HandBrake_Transcoder.png)
 
 By clicking on the prompts that appear using the HandBrake installer, I automatically downloaded
 ```windowsdesktop-runtime-6.0.12-win-x64.exe```.
