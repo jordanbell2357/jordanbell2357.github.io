@@ -4,10 +4,16 @@ title: Sites
 permalink: /sites/
 ---
 
+Topics
+
+- [Submarine fiber optic cables](https://sites.google.com/view/submarine-fiber-optic-cables)
+
+Course excerpts
+
 - [Supply Chain Excellence \| Coursera](https://sites.google.com/view/supply-chain-excellence-course)
 - [Introduction to Psychology \| Coursera](https://sites.google.com/view/introduction-psychology-course)
 
-- [Submarine fiber optic cables](https://sites.google.com/view/submarine-fiber-optic-cables)
+Artifacts
 
 - [Gold Relics from Greater China](https://sites.google.com/jordanbell.info/gold-relics-china/home)
 - [Gold Relics from the Ancient World](https://sites.google.com/jordanbell.info/gold-relics/home)
