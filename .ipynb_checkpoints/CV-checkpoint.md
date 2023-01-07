@@ -66,13 +66,11 @@ Statistics, computer science, and financial economics tutoring
 
 ## Profiles {#profiles}
 
-- [Amazon Public Profile](https://www.amazon.com/gp/profile/amzn1.account.AHBGB7NGF3DGOUKGRF67J2GIKZXQ)
+- [Amazon Public Profile](https://www.amazon.com/gp/profile/amzn1.account.AGO7DC5XJDEY5SKAU65F2OQULDZQ)
 
 - [Goodreads](https://www.goodreads.com/jordanbell2357)
 
 - [DEV Community](https://dev.to/jordanbell2357)
-
-- [GeoGebra](https://www.geogebra.org/u/jordanbell2357)
 
 - [Instagram](https://www.instagram.com/jordanbell2357/)
 
@@ -95,7 +93,6 @@ Statistics, computer science, and financial economics tutoring
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/public_profiles/c4354b0e-6e16-46ec-be5b-64b7b49e9611)
 
 - [Salesforce Trailhead](https://trailblazer.me/id/jordanbell2357)
-
 
 <!--
 
