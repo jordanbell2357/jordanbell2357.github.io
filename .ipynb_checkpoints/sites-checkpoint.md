@@ -4,8 +4,8 @@ title: Sites
 permalink: /sites/
 ---
 
-- [Supply Chain Excellence | Coursera](https://sites.google.com/view/supply-chain-excellence-course)
-- [Introduction to Psychology | Coursera](https://sites.google.com/view/introduction-psychology-course)
+- [Supply Chain Excellence \| Coursera](https://sites.google.com/view/supply-chain-excellence-course)
+- [Introduction to Psychology \| Coursera](https://sites.google.com/view/introduction-psychology-course)
 
 - [Submarine fiber optic cables](https://sites.google.com/view/submarine-fiber-optic-cables)
 
