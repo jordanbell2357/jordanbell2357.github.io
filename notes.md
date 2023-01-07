@@ -4,6 +4,10 @@ title: Notes
 permalink: /notes/
 ---
 
-{% for example in site.notes %}
-- [{{example.title}}]({{ example.url }})
-{% endfor %}
+<ul class="spaced_list">
+  {% for post in site.notes %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date_to_long_string }}
+    </li>
+  {% endfor %}
+</ul>
