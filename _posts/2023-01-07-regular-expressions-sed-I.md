@@ -8,8 +8,4 @@ title: Sed - An Introduction and Tutorial by Bruce Barnett
 
 
 
-<!--
-
-Consulting as reference [Thomas A. Alspaugh. Regular Expressions](https://thomasalspaugh.org/pub/fnd/regularExpression.html)
-
--->
+<https://sed.js.org/>
