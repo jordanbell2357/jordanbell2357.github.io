@@ -15,6 +15,16 @@ and it is longer than most worked out examples that appear at the top of many se
 
 [![© 2018 Atlassian](/assets/images/screenshots/FP2.png)](https://www.coursera.org/learn/version-control-with-git)
 
+I made this working on Git Bash ([Git for Windows](https://gitforwindows.org/)).[^1]
+
+[^1]: [Atlassian: Git Bash](https://www.atlassian.com/git/tutorials/git-bash)
+
+In the terminal (Git Bash, or a native Unix type terminal), change working directory to
+any directory `X` such that `X/FinalProject` does not exist.
+Save the below code block as `Y.sh` for any `Y`, and execute `bash Y.sh`.
+A directory `X/FinalProject` is created that is a git repository with the given
+commit history.
+
 ```bash
 #!/bin/bash
 
