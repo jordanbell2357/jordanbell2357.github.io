@@ -3,7 +3,7 @@ layout: post
 title: Version Control with Git
 ---
 
-[Atlassian University : Version Control with Git | Coursera](https://www.coursera.org/learn/version-control-with-git)
+[Atlassian University : Version Control with Git \| Coursera](https://www.coursera.org/learn/version-control-with-git)
 
 The Final Project is in fact not graded - I completed the course with 100% completing the quizzes and the final exam before I completed
 the Final Project (and had to access the course from my Completed Courses to get to the Final Project).
