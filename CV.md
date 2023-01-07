@@ -10,8 +10,8 @@ permalink: /CV/
 - [Awards](#awards)
 - [Service](#service)
 - [Online tutoring](#tutoring)
-- [Profiles](#profiles)
-- [Learning](#learning)
+- [Content profiles](#profiles)
+- [Learning profiles](#learning)
 
 ## Employment {#employment}
 
@@ -64,7 +64,7 @@ Statistics, computer science, and financial economics tutoring
 
 ![Jordan Bell Tutoring Toronto](/assets/images/logo.png)
 
-## Profiles {#profiles}
+## Content profiles {#profiles}
 
 - [Amazon Public Profile](https://www.amazon.com/gp/profile/amzn1.account.AGO7DC5XJDEY5SKAU65F2OQULDZQ)
 
@@ -80,7 +80,7 @@ Statistics, computer science, and financial economics tutoring
 
 - [Twitter](https://twitter.com/jordanbell2357)
 
-## Learning {#learning}
+## Learning profiles {#learning}
 
 - [Codeacademy](https://www.codecademy.com/profiles/jordanbell2357)
 
