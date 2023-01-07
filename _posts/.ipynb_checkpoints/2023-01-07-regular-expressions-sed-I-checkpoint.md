@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Regular languages, regular expressions, and sed I
+title: Sed - An Introduction and Tutorial by Bruce Barnett
 ---
-
-[sed, a stream editor](https://www.gnu.org/software/sed/manual/sed.html)
 
 [Sed - An Introduction and Tutorial by Bruce Barnett](https://www.grymoire.com/Unix/Sed.html)
 
