@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Windows video conversion with HandBrake
+title: HandBrake video conversion on Windows
 ---
 
 [HandBrake](https://handbrake.fr/) 
