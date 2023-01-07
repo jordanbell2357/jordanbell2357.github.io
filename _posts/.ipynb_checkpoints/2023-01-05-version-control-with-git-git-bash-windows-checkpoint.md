@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Version Control with Git bash script
+title: Version Control with Git using Git Bash on Windows
 ---
 
 <https://www.coursera.org/learn/version-control-with-git>
