@@ -1,25 +1,22 @@
 ---
-layout: page
-title: Loop invariants
+layout: post
+title: Bubblesort loop invariant
 ---
 
 ```python
-def sort(L):
+def bubblesort(L):
     '''
-    Precondition:
-      L is a list of 0s and 1s
-    Postcondition:
-      L is sorted (non-descending)
-      Returns True if 0 in L and False otherwise
-    ''' 
-    i = 0
-    j = -1
-    while i < len(L):
-        if L[i] == 0:
-            j += 1
-            L[i], L[j] = L[j], L[i]
+    Pre: L is a list of numbers
+    Post: L is sorted
+    '''
+    k = 0
+    while k < len(L):
+      i = 0
+      while i < len(L) - k:
+        if L[i] > L[i+1]:
+          swap L[i] and L[i+1]
         i += 1
-    return j >= 0
+      k +=1
 ```
 
 Let $$\mathbb{N}$$ be the set of nonnegative integers. For $$a,b \in \mathbb{N}$$, define 
