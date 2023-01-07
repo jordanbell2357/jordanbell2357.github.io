@@ -1,5 +1,5 @@
 ---
 layout: post
-title: Crash course in Gnuplot
+title: Gnuplot using WSL2 and Xming
 ---
 
