@@ -13,7 +13,7 @@ This website is the anchor for my internet presence and a platform for my writin
 ---
 
 <ul class="spaced_list">
-  {% for post in blog %}
+  {% for post in site.categories[blog] %}
     <li>
       <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date_to_long_string }}
     </li>
