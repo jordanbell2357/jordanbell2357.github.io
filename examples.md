@@ -77,13 +77,13 @@ permalink: /examples/
 
 ## Desmos
 
-<ul class="spaced_list">
+<ol class="spaced_list">
   {% for post in site.categories.desmos %}
     <li>
       <a href="{{ post.url }}">{{ post.title }} \({{ post.math}}\)</a> {{ post.date | date_to_long_string }}
     </li>
   {% endfor %}
-</ul>
+</ol>
 
 ## GeoGebra
 
