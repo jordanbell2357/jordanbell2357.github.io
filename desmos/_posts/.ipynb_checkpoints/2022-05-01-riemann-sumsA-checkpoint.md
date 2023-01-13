@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Riemann sums
-math: \\(x^{2}\sin(x)\\)
+math: x^{2}\sin(x)
 ---
 
 [Riemann sums for \\(x^{2}\sin(x)\\)](https://www.desmos.com/calculator/5ko20es8jr)
