@@ -75,16 +75,6 @@ permalink: /examples/
 1. [{{example.title}} {{example.math}}]({{ example.url }})
 {% endfor %}
 
-<!--
-
-## Desmos
-
-{% for post in site.desmos %}
-1. [{{ post.title}} {{ post.math}}]({{ post.url }})
-{% endfor %}
-
--->
-
 ## Desmos
 
 <ul class="spaced_list">
