@@ -3,6 +3,8 @@ layout: post
 title: join
 ---
 
-![The Linux Foundation](/assets/images/screenshots/Linux-Tools-for-Developers-using-join.png)
+![The Linux Foundation](/assets/images/screenshots/Using_join_Coursera.png)
 
-![The Linux Foundation](/assets/images/screenshots/Linux-Tools-for-Developers-using-join-csv.png)
+![tab separated](/assets/images/screenshots/Linux-Tools-for-Developers-using-join.png)
+
+![comma separated](/assets/images/screenshots/Linux-Tools-for-Developers-using-join-csv.png)
