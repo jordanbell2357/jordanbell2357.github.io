@@ -87,9 +87,13 @@ permalink: /examples/
 
 ## GeoGebra
 
-{% for post in site.geogebra %}
-1. [{{ post.title}}]({{ post.url }})
-{% endfor %}
+<ol class="spaced_list">
+  {% for post in site.categories.geogebra %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date_to_long_string }}
+    </li>
+  {% endfor %}
+</ol>
 
 ## WebQuiz
 
