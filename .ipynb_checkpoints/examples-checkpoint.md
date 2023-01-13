@@ -81,6 +81,16 @@ permalink: /examples/
 1. [{{ post.title}} {{ post.math}}]({{ post.url }})
 {% endfor %}
 
+## Desmos
+
+<ul class="spaced_list">
+  {% for post in site.categories.desmos %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }} {{ post.math}}</a> {{ post.date | date_to_long_string }}
+    </li>
+  {% endfor %}
+</ul>
+
 ## GeoGebra
 
 {% for post in site.geogebra %}
