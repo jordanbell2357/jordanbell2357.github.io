@@ -1,8 +1,10 @@
 ---
 layout: page
-title: Museum
-permalink: /museum/
+title: Quotes
+permalink: /quotes/
 ---
+
+#### Museum
 
 Excerpts from classic writings on the history and philosophy of education. Original text and selected English translations, with complete bibliographic data. For each quotation, multiple English translations are given - to have a robust sense of what a paragraph in a foreign language means while not knowing or nearly not knowing the language.
 
