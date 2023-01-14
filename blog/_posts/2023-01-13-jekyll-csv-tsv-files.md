@@ -3,10 +3,6 @@ layout: post
 title: Loading data from CSV and TSV in Jekyll
 ---
 
-<https://jekyllrb.com/tutorials/csv-to-table/>
-
-[CloudCannon Data files in Jekyll](https://cloudcannon.com/community/learn/jekyll-tutorial/introduction-to-jekyll-data-files/)
-
 <table>
   {% for row in site.data.join.csv.cities %}
     {% if forloop.first %}
@@ -23,6 +19,11 @@ title: Loading data from CSV and TSV in Jekyll
   {% endfor %}
 </table>
 
+
+<div><object data="_data/join/cities.csv"></object></div>
+
 ---
 
-<embed src="_data/join/cities.csv">
+<https://jekyllrb.com/tutorials/csv-to-table/>
+
+[CloudCannon Data files in Jekyll](https://cloudcannon.com/community/learn/jekyll-tutorial/introduction-to-jekyll-data-files/)

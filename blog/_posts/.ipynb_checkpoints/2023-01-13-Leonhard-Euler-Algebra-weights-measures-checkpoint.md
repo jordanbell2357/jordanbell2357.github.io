@@ -110,8 +110,6 @@ convert DE-MUS-814819-18201786-av.jpg -resize 400x400^ DE-MUS-814819-18201786-av
 
 [Command-line Basics: Resizing Images with ImageMagick \| DigitalOcean](https://www.digitalocean.com/community/tutorials/workflow-resizing-images-with-imagemagick)
 
----
-
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
