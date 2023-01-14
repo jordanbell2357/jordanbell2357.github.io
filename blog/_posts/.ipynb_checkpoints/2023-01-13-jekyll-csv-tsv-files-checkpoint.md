@@ -19,12 +19,7 @@ title: Loading data from CSV and TSV in Jekyll
   {% endfor %}
 </table>
 
-<!--
-<div><object data="data/cities.csv"></object></div>
--->
-
 ---
-
 
 [Data Files \| Jekyll](https://jekyllrb.com/docs/datafiles/)
 

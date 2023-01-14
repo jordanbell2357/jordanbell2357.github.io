@@ -25,6 +25,7 @@ Something that is a sentence in English may be part of a long paragraph in Latin
   {% endfor %}
 </ul>
 -->
+
 <ul>
 {% for quote in site.quotes %}
   <li>
