@@ -3,7 +3,7 @@ layout: post
 title: Weights and measures in Leonhard Euler's Algebra
 ---
 
-# My transcription of Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822. [Part {{ page.part}}. {{ page.title }}](/assets/euler/en/pt-II-2.pdf)
+#### My transcription of Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822. [Part {{ page.part}}. {{ page.title }}](/assets/euler/en/pt-II-2.pdf)
 
 <span class="art">28</span>[^1] Goldsmiths and coiners make great use of this rule,
 when they propose to make, from three or more kinds of
