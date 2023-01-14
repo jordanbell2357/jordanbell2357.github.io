@@ -3,12 +3,12 @@ layout: post
 title: Weights and measures in Leonhard Euler's Algebra
 ---
 
+# My transcription of Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822. [Part {{ page.part}}. {{ page.title }}](/assets/euler/en/pt-II-2.pdf)
+
 <span class="art">28</span>[^1] Goldsmiths and coiners make great use of this rule,
 when they propose to make, from three or more kinds of
 metal, a mixture of a given value, as the following example
 will show.
-
-[^1]: My transcription of Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822. [Part {{ page.part}}. {{ page.title }}](/assets/euler/en/pt-II-2.pdf)
 
 *Question 3.* A coiner has three kinds of silver, the first of 14 loth fineness, the second of 11 loth fineness,
 the third of 9 loth fineness. Now he wishes to form a mixture of them
