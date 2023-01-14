@@ -1,12 +1,16 @@
 ---
 layout: post
-title: Weighted Average Cost of Capital (WACC) exercise
+title: WACC formula
 ---
 
 <table>
 <tr>
 <th>Symbol</th>
 <th>Definition</th>
+</tr>
+<tr>
+<td>WACC</td>
+<td>Weighted Average Cost of Capital</td>
 </tr>
 <tr>
 <td>\(k_d\)</td>
