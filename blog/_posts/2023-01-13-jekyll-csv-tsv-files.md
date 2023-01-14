@@ -1,6 +1,6 @@
 ---
 layout: post
-title: List posts in a category in Jekyll
+title: Loading data from CSV and TSV in Jekyll
 ---
 
 <https://jekyllrb.com/tutorials/csv-to-table/>
