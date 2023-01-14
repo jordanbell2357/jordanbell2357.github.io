@@ -22,3 +22,7 @@ title: Loading data from CSV and TSV in Jekyll
     {% endtablerow %}
   {% endfor %}
 </table>
+
+---
+
+<embed src="_data/join/cities.csv">
