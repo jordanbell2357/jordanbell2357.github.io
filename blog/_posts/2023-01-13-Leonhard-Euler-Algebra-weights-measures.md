@@ -102,7 +102,7 @@ $$
 
 ---
 
-Kölner Mark, 233.97 g. Münzkabinett der Staatlichen Museen zu Berlin Object number 18201786 <https://ikmk.smb.museum/object?id=18201786>
+Kölner Mark, 233.97 g. Münzkabinett der Staatlichen Museen zu Berlin, 18201786 <https://ikmk.smb.museum/object?id=18201786>
 
 ![Image files are licensed Public Domain Mark 1.0. Münzkabinett der Staatlichen Museen zu Berlin, 18201786. Photographs by Reinhard Saczewski.](/assets/images/DE-MUS-814819-18201786-av.png)
 
