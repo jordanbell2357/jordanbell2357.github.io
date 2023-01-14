@@ -2,7 +2,7 @@
 layout: post
 title: Loading data from CSV and TSV in Jekyll
 ---
-
+<!--
 <table>
   {% for row in site.data.join.csv.cities %}
     {% if forloop.first %}
@@ -18,6 +18,7 @@ title: Loading data from CSV and TSV in Jekyll
     {% endtablerow %}
   {% endfor %}
 </table>
+-->
 
 ---
 
