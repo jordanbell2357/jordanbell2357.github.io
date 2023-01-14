@@ -3,9 +3,9 @@ layout: post
 title: Weights and measures in Leonhard Euler's Algebra
 ---
 
-#### My transcription of Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822. [Part {{ page.part}}. {{ page.title }}](/assets/euler/en/pt-II-2.pdf)
+#### My transcription of Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822. [Part II. Chapter 2. “Of the Rule which is called Regula Coeci, for determining, by means of two Equations, three or more Unknown Quantities.”](/assets/euler/en/pt-II-2.pdf)
 
-<span class="art">28</span>[^1] Goldsmiths and coiners make great use of this rule,
+<span class="art">28</span> Goldsmiths and coiners make great use of this rule,
 when they propose to make, from three or more kinds of
 metal, a mixture of a given value, as the following example
 will show.
@@ -117,6 +117,6 @@ convert DE-MUS-814819-18201786-av.jpg -resize 400x400^ DE-MUS-814819-18201786-av
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part}}. {{ page.title }}](/assets/euler/en/pt-II-2.pdf)
+    - [Part II. Chapter 2. "Of the Rule which is called Regula Coeci, for determining, by means of two Equations, three or more Unknown Quantities."](/assets/euler/en/pt-II-2.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
     - [Zweyter Theil. Zweyter Abschnitt. Capitel 2. Von der sogenannten Regula-Coeci, wo aus zwey Gleichungen drey oder mehr unbekannte Zahlen bestimmt werden sollen](/assets/euler/de/II-II-2.pdf)
