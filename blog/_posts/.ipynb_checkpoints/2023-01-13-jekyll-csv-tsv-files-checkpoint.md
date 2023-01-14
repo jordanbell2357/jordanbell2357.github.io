@@ -23,6 +23,8 @@ title: Loading data from CSV and TSV in Jekyll
 
 ---
 
-<https://jekyllrb.com/tutorials/csv-to-table/>
+[Data Files \| Jekyll](https://jekyllrb.com/docs/datafiles/)
 
-[CloudCannon Data files in Jekyll](https://cloudcannon.com/community/learn/jekyll-tutorial/introduction-to-jekyll-data-files/)
+[Tabulate CSV Data \| Jekyll](https://jekyllrb.com/tutorials/csv-to-table/)
+
+[Data files in Jekyll \| CloudCannon](https://cloudcannon.com/community/learn/jekyll-tutorial/introduction-to-jekyll-data-files/)
