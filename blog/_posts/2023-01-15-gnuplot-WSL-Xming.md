@@ -11,13 +11,8 @@ OS build	22621.963
 Serial number	PF3J7HN2
 Experience	Windows Feature Experience Pack 1000.22638.1000.0
 ```
+<iframe width="560" height="315" src="https://www.youtube.com/embed/KgYXwIToodg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-<!--
-
-<video width="320" height="240" controls>
+<video width="560" height="315" controls>
   <source src="/assets/videos/2023-01-06_22-57-23.mp4" type="video/mp4">
 </video>
-
--->
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/KgYXwIToodg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
