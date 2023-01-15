@@ -62,11 +62,11 @@ Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden di
 <p>
 <a href="https://ikmk.smb.museum/object?id=18201786" title="1 Mark weight. Staatlichen Museen zu Berlin">Münzkabinett der Staatlichen Museen zu Berlin. Object number 18201786. "KBA / 65536 / 1 / MARCK"</a>
 </p>
-  
+</div>
+
 > Kölner Mark, 233.97 g. Münzkabinett der Staatlichen Museen zu Berlin, 18201786 <https://ikmk.smb.museum/object?id=18201786>
 > 
 > [![Image files are licensed Public Domain Mark 1.0. Münzkabinett der Staatlichen Museen zu Berlin, 18201786. Photographs by Reinhard Saczewski.](/assets/images/DE-MUS-814819-18201786-av.png)](https://ikmk.smb.museum/object?id=18201786)
-</div>
 
 If he take 𝑥 Marks of the first kind, 𝑦 Marks of the second,
 and 𝑧 Marks of the third, he will have 𝑥+𝑦+𝑧=30,
