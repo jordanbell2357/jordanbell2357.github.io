@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Including txt in HTML
+title: "Including text in Jekyll using _includes and _data"
 ---
 
 <pre>
