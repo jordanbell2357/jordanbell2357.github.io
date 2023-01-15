@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Riemann sums
-math: \sin\bigg(\frac{x^{2}}{4}\bigg)
+math: \sin\Big(\frac{x^{2}}{4}\Big)
 ---
 
 [Riemann sums for \\(\sin\left(\frac{x^{2}}{4}\right)\\)](https://www.desmos.com/calculator/bbnm5kpfin)
