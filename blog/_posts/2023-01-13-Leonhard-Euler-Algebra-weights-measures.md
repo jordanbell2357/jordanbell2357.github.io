@@ -3,7 +3,7 @@ layout: post
 title: Weights and measures in Leonhard Euler's Algebra
 ---
 
-<p class="sc">My transcription of Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822. [Part II. Chapter 2. “Of the Rule which is called Regula Coeci, for determining, by means of two Equations, three or more Unknown Quantities.”](/assets/euler/en/pt-II-2.pdf)</p>
+> My transcription of Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822. [Part II. Chapter 2. “Of the Rule which is called Regula Coeci, for determining, by means of two Equations, three or more Unknown Quantities.”](/assets/euler/en/pt-II-2.pdf)
 
 ---
 
