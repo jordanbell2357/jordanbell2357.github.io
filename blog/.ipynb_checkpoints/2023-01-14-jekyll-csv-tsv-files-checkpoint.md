@@ -2,6 +2,7 @@
 layout: post
 title: Loading data from CSV and TSV in Jekyll
 ---
+
 <!--
 <table>
   {% for row in site.data.join.csv.cities %}
