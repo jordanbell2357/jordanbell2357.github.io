@@ -3,7 +3,4 @@ layout: post
 title: Including txt in HTML
 ---
 
-
-<iframe src="/assets/txt/cities.csv"></iframe>
-
-<embed type="text/html" src="/assets/txt/cities.csv"  width="500" height="200">
+<object data="/assets/txt/cities.tsv" width="500" height="200"></object>
