@@ -24,8 +24,6 @@ permalink: /examples/
 
 {% assign euler = site.examples | where: "topic", "euler" %}
 
-{:toc}
-
 ## Factors of quadratic polynomials
 
 {% for example in factors %}
