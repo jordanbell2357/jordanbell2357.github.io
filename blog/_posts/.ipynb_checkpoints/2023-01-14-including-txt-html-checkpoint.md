@@ -3,6 +3,8 @@ layout: post
 title: "Including text in Jekyll using _includes and _data"
 ---
 
+```{% include txt/cities.tsv %}```
+
 <pre>
 {% include txt/cities.tsv %}
 </pre>
