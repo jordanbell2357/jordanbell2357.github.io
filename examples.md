@@ -24,10 +24,7 @@ permalink: /examples/
 
 {% assign euler = site.examples | where: "topic", "euler" %}
 
-<!--
-* this unordered seed list will be replaced by toc as unordered list
 {:toc}
--->
 
 ## Factors of quadratic polynomials
 
