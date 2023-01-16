@@ -5,9 +5,13 @@ title: "Including text in Jekyll pages using _includes"
 
 # TSV
 
+`cities.tsv`
+
 <pre>
 {% include txt/cities.tsv %}
 </pre>
+
+`phonebook.tsv`
 
 <pre>
 {% include txt/phonebook.tsv %}
@@ -17,13 +21,19 @@ title: "Including text in Jekyll pages using _includes"
 
 # CSV
 
+`cities.csv`
+
 <pre>
 {% include txt/cities.csv %}
 </pre>
 
+`phonebook.csv`
+
 <pre>
 {% include txt/phonebook.csv %}
 </pre>
+
+`phonebookA.csv`
 
 <pre>
 {% include txt/phonebookA.csv %}
