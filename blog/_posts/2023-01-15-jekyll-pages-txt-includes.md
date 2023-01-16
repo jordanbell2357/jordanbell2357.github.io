@@ -17,7 +17,9 @@ title: "Including text in Jekyll pages using _includes"
 {% include txt/phonebook.tsv %}
 </pre>
 
-`join phonebook.tsv cities.tsv > output1.tsv`
+```bash
+join --header phonebook.tsv cities.tsv > output1.tsv
+```
 
 <pre>
 {% include txt/output1.tsv %}
@@ -38,7 +40,7 @@ title: "Including text in Jekyll pages using _includes"
 </pre>
 
 ```bash
-join -t , phonebook.csv cities.csv > output1.csv
+join -t , --header phonebook.csv cities.csv > output1.csv
 ```
 
 <pre>
@@ -51,7 +53,9 @@ join -t , phonebook.csv cities.csv > output1.csv
 {% include txt/phonebookA.csv %}
 </pre>
 
-`join -t , -1 2 -2 1 phonebookA.csv cities.csv > output2.csv`
+```bash
+join -t , -1 2 -2 1 --header phonebookA.csv cities.csv > output2.csv
+```
 
 <pre>
 {% include txt/output2.csv %}
