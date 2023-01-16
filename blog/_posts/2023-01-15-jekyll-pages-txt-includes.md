@@ -8,10 +8,20 @@ title: "Including text in Jekyll pages using _includes"
 </pre>
 
 <pre>
+{% include txt/phonebook.tsv %}
+</pre>
+
+<pre>
 {% include txt/cities.csv %}
 </pre>
 
-![The Linux Foundation](/assets/images/screenshots/Using_join_Coursera.png)
+<pre>
+{% include txt/phonebook.csv %}
+</pre>
+
+<pre>
+{% include txt/phonebookA.csv %}
+</pre>
 
 ![tab separated](/assets/images/screenshots/Linux-Tools-for-Developers-using-join.png)
 
