@@ -17,7 +17,11 @@ title: "Including text in Jekyll pages using _includes"
 {% include txt/phonebook.tsv %}
 </pre>
 
-![tab separated](/assets/images/screenshots/Linux-Tools-for-Developers-using-join.png)
+`join phonebook.tsv cities.tsv > output1.tsv`
+
+<pre>
+{% include txt/output1.tsv %}
+</pre>
 
 # CSV
 
@@ -33,15 +37,23 @@ title: "Including text in Jekyll pages using _includes"
 {% include txt/phonebook.csv %}
 </pre>
 
+`join -t , phonebook.csv cities.csv > output1.csv`
+
+<pre>
+{% include txt/output1.csv %}
+</pre>
+
 `phonebookA.csv`
 
 <pre>
 {% include txt/phonebookA.csv %}
 </pre>
 
-![comma separated](/assets/images/screenshots/Linux-Tools-for-Developers-using-join-csv.png)
+`join -t , -1 2 -2 1 phonebookA.csv cities.csv > output2.csv`
 
-![field flags](/assets/images/screenshots/Linux-Tools-for-Developers-using-join-csv-fields.png)
+<pre>
+{% include txt/output2.csv %}
+</pre>
 
 ---
 
