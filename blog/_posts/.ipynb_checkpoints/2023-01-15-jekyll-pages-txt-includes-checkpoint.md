@@ -64,3 +64,5 @@ join -t , -1 2 -2 1 --header phonebookA.csv cities.csv > output2.csv
 ---
 
 [Includes \| Jekyll](https://jekyllrb.com/docs/includes/)
+
+[join invocation \| GNU Coreutils 9.1](https://www.gnu.org/software/coreutils/manual/html_node/join-invocation.html)
