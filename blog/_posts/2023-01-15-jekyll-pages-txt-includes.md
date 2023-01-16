@@ -3,6 +3,8 @@ layout: post
 title: "Including text in Jekyll pages using _includes"
 ---
 
+# TSV
+
 <pre>
 {% include txt/cities.tsv %}
 </pre>
@@ -10,6 +12,10 @@ title: "Including text in Jekyll pages using _includes"
 <pre>
 {% include txt/phonebook.tsv %}
 </pre>
+
+![tab separated](/assets/images/screenshots/Linux-Tools-for-Developers-using-join.png)
+
+# CSV
 
 <pre>
 {% include txt/cities.csv %}
@@ -22,8 +28,6 @@ title: "Including text in Jekyll pages using _includes"
 <pre>
 {% include txt/phonebookA.csv %}
 </pre>
-
-![tab separated](/assets/images/screenshots/Linux-Tools-for-Developers-using-join.png)
 
 ![comma separated](/assets/images/screenshots/Linux-Tools-for-Developers-using-join-csv.png)
 
