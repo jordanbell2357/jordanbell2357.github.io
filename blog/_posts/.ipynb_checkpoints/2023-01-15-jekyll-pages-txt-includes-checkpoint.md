@@ -11,6 +11,22 @@ title: "Including text in Jekyll pages using _includes"
 {% include txt/cities.tsv %}
 </pre>
 
+```bash
+cut -f1 cities.tsv > output1
+```
+
+<pre>
+{% include txt/output1 %}
+</pre>
+
+```bash
+cut -f2 cities.tsv > output2
+```
+
+<pre>
+{% include txt/output2 %}
+</pre>
+
 `phonebook.tsv`
 
 <pre>
@@ -18,7 +34,7 @@ title: "Including text in Jekyll pages using _includes"
 </pre>
 
 ```bash
-join --header phonebook.tsv cities.tsv > output1.tsv
+join --header phonebook.tsv cities.tsv > output3
 ```
 
 <pre>
