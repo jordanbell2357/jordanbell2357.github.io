@@ -38,7 +38,7 @@ join --header phonebook.tsv cities.tsv > output3
 ```
 
 <pre>
-{% include txt/output1.tsv %}
+{% include txt/output3 %}
 </pre>
 
 # CSV
