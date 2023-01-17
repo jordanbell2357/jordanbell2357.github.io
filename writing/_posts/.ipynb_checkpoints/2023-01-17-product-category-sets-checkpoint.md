@@ -23,9 +23,12 @@ If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate
 exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B \circ f = q_B\).
 </div>
 
+<!--
+
 <a href="https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ=="><img src="/LaTeX/quiver/product.png" width="400" height="222"></a>
 
-<!-- https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
+-->
+
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="400" height="252" style="border-radius: 8px; border: none;"></iframe>
 
 <h1>Theorem</h1>
@@ -40,7 +43,6 @@ then there is a bijection \(P \to Q\).
 <h2>Proof</h2>
 
 <div class="proof">
-<h3>\(f \in P^Q\) and \(g \in Q^P\)</h3>
 <p>Because \(\mathtt{Prod}_{A,B}(P,p_A,p_B)\) is true and \(\mathtt{Compatible}_{A,B}(Q,q_A,q_B)\) is true,
 there is a unique function \(f \in P^Q\) such that
 
