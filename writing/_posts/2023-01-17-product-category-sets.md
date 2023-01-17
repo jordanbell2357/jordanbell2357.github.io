@@ -31,6 +31,8 @@ exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B
 
 <iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" class="center" style="border-radius: 8px; border: none;"></iframe>
 
+[
+
 <h1>Theorem</h1>
 
 <div class="bubblebox_white">
@@ -256,9 +258,11 @@ $$k=\textrm{id}_Q.$$
 <div class="bottomright">∎</div>
 </div>
 
-References[^2]
+References[^2] [^3]
 
 [^2]: [**Category Theory: a concise course.** *5. Product, Coproduct, Exponential*](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
+
+[^3]: [Product is unique up to isomorphism \| Arbital](https://arbital.com/p/product_is_unique_up_to_isomorphism/)
 
 <script>
   MathJax = {
