@@ -83,10 +83,7 @@ $$
 \end{equation}
 $$
 </p>
-  
-<hr>
-
-<h3>\(\phi \in P^P\)</h3>
+ 
 <p>
 From \(f \in P^Q\) and \(g \in Q^P\), it follows that \(f \circ g \in P^P\).
 Define
@@ -169,10 +166,7 @@ that
   
 $$h=\textrm{id}_P.$$
 </p>
-
-<hr>
-
-<h3>\(\psi \in Q^Q\)</h3>
+  
 <p>
 From \(g \in Q^P\) and \(f \in P^Q\), it follows that \(g \circ f \in Q^Q\).
 Define
