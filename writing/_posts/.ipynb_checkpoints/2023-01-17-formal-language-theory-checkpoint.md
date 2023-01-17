@@ -24,7 +24,7 @@ $$[n] = \{i \in \mathbb{N} : i < n\}$$.
   </tr>
   <tr>
     <td>0</td>
-    <td>\(\emptyset\)</td>
+    <td>\(\{\}=\emptyset\)</td>
   </tr>
   <tr>
     <td>1</td>
