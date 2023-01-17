@@ -23,11 +23,8 @@ If $$\mathtt{Compatible}_{A,B}(P,p_A,p_B)$$ is true, define the predicate
 exists a unique function \(f \in P^Q\) such that \(p_A \circ f = q_A\) and \(p_B \circ f = q_B\).
 </div>
 
-<!--
-
-<a href="https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ=="><img src="/LaTeX/quiver/product.png" width="400" height="222"></a>
-
--->
+<!-- https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
+<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="500" height="314" style="border-radius: 8px; border: none;"></iframe>
 
 
 
@@ -92,6 +89,10 @@ Define
 
 $$\phi = f \circ g, \qquad \phi \in P^P.$$
 </p>
+
+
+<div class="bottomright">∎</div>
+</div>
 
 <p>
 From \(\phi \in P^P\) and \(p_A \in A^P\), it follows that
@@ -253,15 +254,16 @@ that
 $$k=\textrm{id}_Q.$$
 </p>
   
-<div class="bottomright">∎</div>
-</div>
 
-<!-- https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ== -->
-<iframe class="quiver-embed" src="https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ==&embed" width="500" height="314" style="border-radius: 8px; border: none;"></iframe>
+<!--
+
+<a href="https://q.uiver.app/?q=WzAsNCxbMCwxLCJBIl0sWzQsMSwiQiJdLFsyLDIsIlAiXSxbMiwwLCJRIl0sWzIsMCwicF9BIiwyXSxbMiwxLCJwX0IiXSxbMywwLCJxX0EiXSxbMywxLCJxX0IiLDJdLFszLDIsIlxcZXhpc3RzICEgZiIsMSx7InN0eWxlIjp7ImJvZHkiOnsibmFtZSI6ImRhc2hlZCJ9fX1dXQ=="><img src="/LaTeX/quiver/product.png" width="400" height="222"></a>
+
+-->
 
 References[^2] [^3]
 
-[^2]: [**Category Theory: a concise course.** *5. Product, Coproduct, Exponential*](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
+[^2]: [**Category Theory: a concise course.** *5. Product, Coproduct, Exponential* \| Charlotte Aten, Venanzio Capretta, and William DeMeo](https://categorytheory.gitlab.io/product_coproduct_exponential.html)
 
 [^3]: [Product is unique up to isomorphism \| Arbital](https://arbital.com/p/product_is_unique_up_to_isomorphism/)
 
