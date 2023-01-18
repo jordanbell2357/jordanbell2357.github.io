@@ -17,7 +17,7 @@ A category $$\mathbf{C}$$ comprises the following data:[^1] [^2]
 6. for any $$f,g,h$$ are morphisms, if $$\textrm{cod}(f)=\textrm{dom}(g)$$ and $$\textrm{cod}(g)=\textrm{dom}(h)$$ then 
 
   $$h \circ (g \circ f) = (h \circ g) \circ f$$
-
+  
 7. for each morphism $$f$$, $$f \circ 1_{\textrm{dom}(f)} = f$$ (**unit law**)
 8. for each morphism $$f$$, $$1_{\textrm{cod}(f)} \circ f = f$$ (**associative law**)
 
