@@ -9,7 +9,7 @@ A category $$\mathbf{C}$$ comprises the following data:[^1] [^2]
 
 [^2]: [category in nLab](https://ncatlab.org/nlab/show/category)
 
-1. a class of **objects** $$X,Y,Z,\ldots$$, denoted $$\mathbf{C}_{\textrm{obj}}$$
+1. a class $$\mathbf{C}_{\textrm{obj}}$$ of **objects** $$X,Y,Z,\ldots$$
 2. for all objects $$X$$ and $$Y$$, a class of **morphisms with domain** $$X$$ **and codomain** $$Y$$, denoted $$\textrm{hom}(X,Y)$$
 3. for all objects $$X$$, $$Y$$ and $$Z$$ and morphsisms $$f \in \textrm{hom}(X,Y)$$
 and $$g \in \textrm{hom}(Y,Z)$$, there is a distinguished morphism $$g \circ f$$ with domain $$A$$ and
