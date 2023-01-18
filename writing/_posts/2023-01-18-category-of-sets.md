@@ -16,12 +16,12 @@ A category $$\mathbf{C}$$ comprises the following data:[^3] [^2]
 3. For each triple of objects $$X,Y,Z$$, a map
 $$
 \begin{equation}
-\textrm{hom}_{\mathbf{C}})(Y,Z) \times \textrm{hom}_{\mathbf{C}})(X,Y) \to \textrm{hom}_{\mathbf{C}})(X,Z)
+\textrm{hom}_{\mathbf{C}}(Y,Z) \times \textrm{hom}_{\mathbf{C}}(X,Y) \to \textrm{hom}_{\mathbf{C}}(X,Z)
 \end{equation}
 $$
 called **composition** and denoted by $$(g,f) \mapsto g \circ f$$.
 
-4. For each object $$X$$, a morphism denoted $$1_A \in \textrm{hom}_{\mathbf{C}})(X,X)$$, called the **identity morphism**.
+4. For each object $$X$$, a morphism in $$\textrm{hom}_{\mathbf{C}})(X,X)$$, denoted $$\textrm{id}_X$$, called the **identity morphism**.
 
 The data has to satisfy the following rules:
 
