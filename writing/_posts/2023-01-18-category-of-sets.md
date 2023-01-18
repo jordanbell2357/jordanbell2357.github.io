@@ -3,20 +3,27 @@ layout: post
 title: Category of sets
 ---
 
-A category $$\mathbf{C}$$ is
+A category $$\mathbf{C}$$ comprises the following data:[^1] [^2]
 
-1. a class of **objects** $$A,B,C,\ldots$$
-2. a class of **morphisms** $$f,g,h,\ldots$$
+[^1]: [*Category Theory: a concise course.* 2. Basic Definitions \| Charlotte Aten, Venanzio Capretta, and William DeMeo](https://categorytheory.gitlab.io/basic_definitions.html)
+
+[^2]: [category in nLab](https://ncatlab.org/nlab/show/category)
+
+1. a class of **objects** $$A,B,C,\ldots$$, denoted $$\mathbf{C}_{\textrm{obj}}$$
+2. a class of **morphisms** $$f,g,h,\ldots$$, denoted $$\mathbf{C}_{\textrm{mor}}$$
 3. for each morphism $$f$$, a distinguished object $$\textrm{dom}(f)$$ called the **domain** of $$f$$ and a distinguished object $$\textrm{cod}(f)$$ called the **codomain** of $$f$$.
-4. for any morphisms  $$f$$ and $$g$$, if $$\textrm{cod}(f)=\textrm{dom}(g)$$ then there is a distinguished morphism denoted $$g \circ f$$ with $$\textrm{dom}(g\circ f)=\textrm{dom}(f)$$ and $$\textrm{cod}(g\circ f)=\textrm{cod}(g)$$, called the **composition of the morphisms** $$f$$ **and** $$g$$
+4. for any morphisms  $$f$$ and $$g$$ with $$\textrm{cod}(f)=\textrm{dom}(g)$$, there is a distinguished morphism denoted $$g \circ f$$ with $$\textrm{dom}(g\circ f)=\textrm{dom}(f)$$ and $$\textrm{cod}(g\circ f)=\textrm{cod}(g)$$, called the **composition of the morphisms** $$f$$ **and** $$g$$
 5. for each object $$A$$ there is a distinguished morphism denoted $$1_A$$ with $$\textrm{dom}(1_A)=A$$ and $$\textrm{cod}(1_A)=A$$, called the **identity morphism**
 6. for any $$f,g,h$$ are morphisms, if $$\textrm{cod}(f)=\textrm{dom}(g)$$ and $$\textrm{cod}(g)=\textrm{dom}(h)$$ then 
 
   $$h \circ (g \circ f) = (h \circ g) \circ f$$
 
-7. for each morphism $$f$$, $$f \circ 1_{\textrm{dom}(f)} = f$$
-8. for each morphism $$f$$, $$1_{\textrm{cod}(f)} \circ f = f$$
+7. for each morphism $$f$$, $$f \circ 1_{\textrm{dom}(f)} = f$$ (**unit law**)
+8. for each morphism $$f$$, $$1_{\textrm{cod}(f)} \circ f = f$$ (**associative law**)
 
-For any objects $$A$$ and $$B$$, define
+For any objects $$A$$ and $$B$$, define $$\textrm{hom}(A,B)$$ to be the class
+of morphsisms with domain $$A$$ and codomain $$B$$. When for any objects $$A$$ and $$B$$ the class
+$$\textrm{hom}(A,B)$$ is a set, the category $$\mathbf{C}$$ is called **locally small**.
 
-$$\textrm{hom}(A,B) = \{\textrm{morphisms } f : \textrm{dom}(f)=A \, \textrm{ and } \, \textrm{cod}(f)=B\}$$
+Define $$\mathbf{Set}$$ as having objects sets and morphisms functions.
+
