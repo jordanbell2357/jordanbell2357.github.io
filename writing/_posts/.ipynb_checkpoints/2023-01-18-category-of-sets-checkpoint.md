@@ -1,31 +1,48 @@
 ---
 layout: post
-title: Category of sets
+title: The category of sets
 ---
 
-A category $$\mathbf{C}$$ comprises the following data:[^1] [^2]
+A category $$\mathbf{C}$$ comprises the following data:[^3] [^2]
 
-[^1]: [*Category Theory: a concise course.* 2. Basic Definitions \| Charlotte Aten, Venanzio Capretta, and William DeMeo](https://categorytheory.gitlab.io/basic_definitions.html)
+[^3]: [4.2 Definitions \| The Stacks project](https://stacks.math.columbia.edu/tag/0013)
 
 [^2]: [category in nLab](https://ncatlab.org/nlab/show/category)
 
-1. a class $$\mathbf{C}_{\textrm{obj}}$$ of **objects** $$X,Y,Z,\ldots$$
-2. for all objects $$X$$ and $$Y$$, a class of **morphisms with domain** $$X$$ **and codomain** $$Y$$, denoted $$\textrm{hom}(X,Y)$$
-3. for all objects $$X$$, $$Y$$ and $$Z$$ and morphsisms $$f \in \textrm{hom}(X,Y)$$
-and $$g \in \textrm{hom}(Y,Z)$$, there is a distinguished morphism $$g \circ f$$ with domain $$A$$ and
-codomain $$C$$, called the **composition of** $$f$$ **and** $$g$$.
-4. for any morphisms  $$f$$ and $$g$$ with $$\textrm{cod}(f)=\textrm{dom}(g)$$, there is a distinguished morphism denoted $$g \circ f$$ with $$\textrm{dom}(g\circ f)=\textrm{dom}(f)$$ and $$\textrm{cod}(g\circ f)=\textrm{cod}(g)$$, called the **composition of the morphisms** $$f$$ **and** $$g$$
-5. for each object $$A$$ there is a distinguished morphism denoted $$1_A$$ with $$\textrm{dom}(1_A)=A$$ and $$\textrm{cod}(1_A)=A$$, called the **identity morphism**
-6. for any $$f,g,h$$ are morphisms, if $$\textrm{cod}(f)=\textrm{dom}(g)$$ and $$\textrm{cod}(g)=\textrm{dom}(h)$$ then 
+1. A class of **objects** $$\textrm{Obj}(\mathbf{C})$$.
 
-  $$h \circ (g \circ f) = (h \circ g) \circ f$$
+2. For each pair of objects $$X,Y$$, a class of **morphisms** $$\textrm{hom}_{\mathbf{C}}(X,Y)$$. A morphism $$f \in \textrm{hom}_{\mathbf{C}}(X,Y)$$ has **domain** $$\textrm{dom}(f)=X$$ and **codomain** $$\textrm{cod}(f)=Y$$.
 
-7. for each morphism $$f$$, $$f \circ 1_{\textrm{dom}(f)} = f$$ (**unit law**)
-8. for each morphism $$f$$, $$1_{\textrm{cod}(f)} \circ f = f$$ (**associative law**)
+3. For each triple of objects $$X,Y,Z$$, a map
+$$
+\begin{equation}
+\textrm{hom}_{\mathbf{C}})(Y,Z) \times \textrm{hom}_{\mathbf{C}})(X,Y) \to \textrm{hom}_{\mathbf{C}})(X,Z)
+\end{equation}
+$$
+called **composition** and denoted by $$(g,f) \mapsto g \circ f$$.
 
-For any objects $$A$$ and $$B$$, define $$\textrm{hom}(A,B)$$ to be the class
-of morphsisms with domain $$A$$ and codomain $$B$$. When for any objects $$A$$ and $$B$$ the class
-$$\textrm{hom}(A,B)$$ is a set, the category $$\mathbf{C}$$ is called **locally small**.
+4. For each object $$X$$, a morphism denoted $$1_A \in \textrm{hom}_{\mathbf{C}})(X,X)$$, called the **identity morphism**.
 
-Define $$\mathbf{Set}$$ as having objects sets and morphisms functions.
+The data has to satisfy the following rules:
+
+1. For each morphism $$f$$, it holds that $$f \circ 1_{\textrm{dom}(f)} = f$$, called the **right unit law**
+2. For each morphism $$f$$, it holds that $$1_{\textrm{cod}(f)} \circ f = f$$, called the **left unit law**
+3. For each triple of morphisms $$f,g,h$$, if $$\textrm{cod}(f)=\textrm{dom}(g)$$ and $$\textrm{cod}(g)=\textrm{dom}(h)$$ then
+$$
+\begin{equation}
+h \circ (g \circ f) = (h \circ g) \circ f
+\end{equation}
+$$
+called the **associative law**.
+
+
+
+
+
+
+[^1]
+
+
+
+[^1]: [*Category Theory: a concise course.* 2. Basic Definitions \| Charlotte Aten, Venanzio Capretta, and William DeMeo](https://categorytheory.gitlab.io/basic_definitions.html)
 
