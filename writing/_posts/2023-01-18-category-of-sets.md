@@ -3,11 +3,11 @@ layout: post
 title: The category of sets
 ---
 
-A category $$\mathbf{C}$$ comprises the following data:[^3] [^2]
+A category $$\mathbf{C}$$ comprises the following data:[^1] [^2]
 
-[^3]: [4.2 Definitions \| The Stacks project](https://stacks.math.columbia.edu/tag/0013)
+[^1]: [category in nLab](https://ncatlab.org/nlab/show/category)
 
-[^2]: [category in nLab](https://ncatlab.org/nlab/show/category)
+[^2]: [4.2 Definitions \| The Stacks project](https://stacks.math.columbia.edu/tag/0013)
 
 1. A class of **objects** $$\textrm{Obj}(\mathbf{C})$$.
 
@@ -19,7 +19,7 @@ $$
 \circ_{X,Y,Z}:\textrm{hom}_{\mathbf{C}}(X,Y) \times \textrm{hom}_{\mathbf{C}}(Y,Z) \to \textrm{hom}_{\mathbf{C}}(X,Z)
 \end{equation}
 $$
-called **composition** and denoted by $$\circ_{X,Y,Z}(f,g) \mapsto g \circ f$$.[^3]
+called **composition** and denoted by $$g \circ f=\circ_{X,Y,Z}(f,g)$$.[^3]
 
 [^3]: [composition in nLab](https://ncatlab.org/nlab/show/composition)
 
@@ -38,15 +38,3 @@ h \circ (g \circ f) = (h \circ g) \circ f
 \end{equation}
 $$
 called the **associative law**.
-
-
-
-
-
-
-[^1]
-
-
-
-[^1]: [*Category Theory: a concise course.* 2. Basic Definitions \| Charlotte Aten, Venanzio Capretta, and William DeMeo](https://categorytheory.gitlab.io/basic_definitions.html)
-
