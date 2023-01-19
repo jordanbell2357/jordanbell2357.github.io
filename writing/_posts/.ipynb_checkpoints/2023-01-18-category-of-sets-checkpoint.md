@@ -79,6 +79,9 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 
 # Cartesian products
 
+For a set $$A$$, denote by $$\mathscr{P}(A)$$ the **power set of** $$A$$, the set whose elements are
+the subsets of $$A$$.
+
 Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 6. "Ordered Pairs." p. 19:
 
 > If $$A$$ and $$B$$ are sets, does there exist a set that contains all the ordered pairs $$(a,b)$$ with $$a$$ in
@@ -94,15 +97,15 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 > of the ordered pairs $$(a,b)$$ with $$a$$ in $$A$$ and $$b$$ in $$B$$. This set is called the
 > *Cartesian product* of $$A$$ and $$B$$; it is characterized by the fact that
 >
-> $$A \times B = \{x : x=(a,b) \textrm{for some} \, a \, \textrm{in} \, A \, \textrm{and for some} \, b \, \textrm{in} \, B\}.$$
+> $$A \times B = \{x : x=(a,b) \textrm{for some} \; a \; \textrm{in} \; A \; \textrm{and for some} \; b \; \textrm{in} \; B\}.$$
 
 Define $$\pi_A(a,b) = a$$, the first coordinate, and $$\pi_B(a,b)=b$$, the second coordinate.
+Equivalently,
 
-For a set $$A$$, denote by $$\mathscr{P}(A)$$ the **power set of** $$A$$, the set whose elements are
-the subsets of $$A$$.
+$$
+A \times B = \{x \in \mathscr{P}(\mathscr{P}(A \cup B)) : \pi_A(x) \in A, \pi_B(x) \in B\}.
+$$
 
-
-# 
 
 # Relations
 
