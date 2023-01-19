@@ -3,7 +3,7 @@ layout: post
 title: The category of sets
 ---
 
-A category $$\mathbf{C}$$ comprises the following data:[^1] [^2]
+A category $$\mathbf{C}$$ comprises the following data: [^1] [^2]
 
 [^1]: [category in nLab](https://ncatlab.org/nlab/show/category)
 
@@ -27,9 +27,9 @@ called **composition** and denoted by $$g \circ f=\circ_{X,Y,Z}(f,g)$$.[^3]
 
 The data has to satisfy the following rules:
 
-1. For each morphism $$f$$, it holds that $$f \circ \textrm{id}_{\textrm{dom}(f)} = f$$, called the **right identity law**
+1. For each morphism $$f$$, it holds that $$f \circ \textrm{id}_{\textrm{dom}(f)} = f$$, called the **right identity law**.
 
-2. For each morphism $$f$$, it holds that $$\textrm{id}_{\textrm{cod}(f)} \circ f = f$$, called the **left identity law**
+2. For each morphism $$f$$, it holds that $$\textrm{id}_{\textrm{cod}(f)} \circ f = f$$, called the **left identity law**.
 
 3. For each triple of morphisms $$f,g,h$$, if $$\textrm{cod}(f)=\textrm{dom}(g)$$ and $$\textrm{cod}(g)=\textrm{dom}(h)$$ then
 $$
@@ -40,7 +40,7 @@ $$
 called the **associative law**.
 
 When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$
-is a set, the category is called **locally small**.[^4]
+is a **set**, the category is called **locally small**.[^4]
 
 [^4]: [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
 
@@ -52,5 +52,3 @@ categories where morphisms are functions, I haven't encountered categories that 
 Specifically, the three areas in mathematics I've carefully worked through proofs of category theory constructions
 are the category of sets, the category of topological vector spaces, and the category of locally compact abelian groups with the Pontryagin duality theorem. Indeed these categories are not small, and my only encounters with small
 categories in retrospect have been categories arising from preorders on finite sets.
-
-
