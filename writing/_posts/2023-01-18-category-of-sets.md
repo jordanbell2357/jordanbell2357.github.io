@@ -38,3 +38,19 @@ h \circ (g \circ f) = (h \circ g) \circ f
 \end{equation}
 $$
 called the **associative law**.
+
+When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$
+is a set, the category is called **locally small**.[^4]
+
+[^4]: [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
+
+When the class of objects and the class of morphisms are both sets, the category is called **small**.
+For doing algebraic geometry my impression is that one works with small categories.
+
+When working with
+categories where morphisms are functions, I haven't encountered categories that fail to be locally small.
+Specifically, the three areas in mathematics I've carefully worked through proofs of category theory constructions
+are the category of sets, the category of topological vector spaces, and the category of locally compact abelian groups with the Pontryagin duality theorem. Indeed these categories are not small, and my only encounters with small
+categories in retrospect have been categories arising from preorders on finite sets.
+
+
