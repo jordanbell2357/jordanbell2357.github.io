@@ -3,17 +3,17 @@ layout: post
 title: The category of sets
 ---
 
-Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960.
+> Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960.
 
 # Section 1, "The Axiom of Extension"
 
-Halmos, Section 1, p. 2:
+p. 2:
 
 > **Axiom of extension.** Two sets are equal if and only if they have the same elements.
 
 # Section 2, "The Axiom of Specification"
 
-Halmos, Section 2, p. 6:
+p. 6:
 
 > **Axiom of specification.** To every set $$A$$ and to every condition $$S(x)$$
 > there corresponds a set $$B$$ whose elements are exactly those elements $$x$$ of
@@ -30,9 +30,30 @@ Halmos, Section 2, p. 6:
 
 In other words, in the above $$S(x)$$ is a **predicate**.
 
+# Section 3, "Unordered Pairs"
+
+p. 9:
+
+> **Axiom of pairing.** For any two sets there exists a set that they both belong to.
+
+p. 10:
+
+> If a is a set, we may form the unordered pair $$\{a, a\}$$. That unordered pair is
+> denoted by $$\{a\}$$ and is called the *singleton* of $$a$$; it is uniquely characterized by
+> the statement that it has $$a$$ as its only element. Thus, for instance, $$\emptyset$$ and $$\{\emptyset\}$$
+> are very different sets; the former has no elements, whereas the latter has
+> the unique element $$\emptyset$$. To say that $$a \in A$$ is equivalent to saying that $$\{a\} \subset A$$.
+
+# Section 4, "Unions and Intersections"
+
+p. 12:
+
+> **Axiom of unions.** For every collection of sets there exists a set that contains
+> all the elements that belong to at least one set of the given collection.
+
 # Section 5, "Complements and Powers"
 
-Halmos, Section 5, p. 19:
+p. 19:
 
 > **Axiom of powers.** For each set there exists a collection of sets that contains
 > among its elements all the subsets of the given set.
@@ -40,40 +61,9 @@ Halmos, Section 5, p. 19:
 For a set $$A$$, denote by $$\mathscr{P}(A)$$ the **power set of** $$A$$, the set whose elements are
 the subsets of $$A$$.
 
-# Cartesian products
+# Section 6, "Ordered Pairs"
 
-Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 6. "Ordered Pairs." p. 19:
-
-> If $$A$$ and $$B$$ are sets, does there exist a set that contains all the ordered pairs $$(a,b)$$ with $$a$$ in
-> $$A$$ and $$b$$ in $$B$$? It is quite easy to see that the
-> answer is yes. Indeed, if $$a \in A$$ and $$b \in B$$, then $$\{a\} \subset A$$
-> and $$\{b\} \subset B$$, and therefore $$\{a,b\} \subset A \cup B$$. Since also
-> $$\{a\} \subset A \cup B$$, it follows that both $$\{a\}$$ and $$\{a,b\}$$ are
-> elements of $$\mathscr{P}(A \cup B)$$. This implies that $$\{\{a\},\{a,b\}\}$$
-> is a subset of $$\mathscr{P}(A \cup B)$$, and hence that it is an element of
-> $$\mathscr{P}(\mathscr{P}(A \cup B))$$; in other words $$(a,b) \in \mathscr{P}(\mathscr{P}(A \cup B))$$
-> whenever $$a \in A$$ and $$b \in B$$. Once this is known, it is a routine matter to apply the axiom of
-> specification and the axiom of extension to produce the unique set $$A \times B$$ that consists exactly
-> of the ordered pairs $$(a,b)$$ with $$a$$ in $$A$$ and $$b$$ in $$B$$. This set is called the
-> *Cartesian product* of $$A$$ and $$B$$; it is characterized by the fact that
->
-> $$A \times B = \{x : x=(a,b) \; \textrm{for some} \; a \; \textrm{in} \; A \; \textrm{and for some} \; b \; \textrm{in} \; B\}.$$
-
-Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 6. "Ordered Pairs." p. 20:
-
-> The charge of artificiality is true, but it is not too high a price to pay for conceptual economy. The concept of an ordered pair could have been introduced as an
-> additional primitive, axiomatically endowed with just the right properties, no more
-> and no less. In some theories this is done. The mathematician’s choice is between
-> having to remember a few more axioms and having to forget a few accidental facts;
-> the choice is pretty clearly a matter of taste. Similar choices occur frequently in
-> mathematics; in this book, for instance, we shall encounter them again in connection with the definitions of numbers of various kinds.
-
-If either $$A$$ or $$B$$ is an empty set, then it follows that the Cartesian product $$A \times B$$ is an
-empty set.
-
-# Ordered pairs
-
-Halmos. Section 6. "Ordered Pairs." p. 19:
+p. 23:
 
 > The *ordered pair* of $$a$$ and $$b$$, with *first coordinate* $$a$$ and *second coordinate* $$b$$, is the set 
 > $$(a,b)$$ defined by
@@ -100,11 +90,42 @@ Halmos. Section 6. "Ordered Pairs." p. 19:
 > and $$b = x$$, and,
 > therefore, $$a = b$$), we must have $$b = y$$, and the proof is complete.
 
+pp. 23-24:
 
+> If $$A$$ and $$B$$ are sets, does there exist a set that contains all the ordered pairs $$(a,b)$$ with $$a$$ in
+> $$A$$ and $$b$$ in $$B$$? It is quite easy to see that the
+> answer is yes. Indeed, if $$a \in A$$ and $$b \in B$$, then $$\{a\} \subset A$$
+> and $$\{b\} \subset B$$, and therefore $$\{a,b\} \subset A \cup B$$. Since also
+> $$\{a\} \subset A \cup B$$, it follows that both $$\{a\}$$ and $$\{a,b\}$$ are
+> elements of $$\mathscr{P}(A \cup B)$$. This implies that $$\{\{a\},\{a,b\}\}$$
+> is a subset of $$\mathscr{P}(A \cup B)$$, and hence that it is an element of
+> $$\mathscr{P}(\mathscr{P}(A \cup B))$$; in other words $$(a,b) \in \mathscr{P}(\mathscr{P}(A \cup B))$$
+> whenever $$a \in A$$ and $$b \in B$$. Once this is known, it is a routine matter to apply the axiom of
+> specification and the axiom of extension to produce the unique set $$A \times B$$ that consists exactly
+> of the ordered pairs $$(a,b)$$ with $$a$$ in $$A$$ and $$b$$ in $$B$$. This set is called the
+> *Cartesian product* of $$A$$ and $$B$$; it is characterized by the fact that
+>
+> $$A \times B = \{x : x=(a,b) \; \textrm{for some} \; a \; \textrm{in} \; A \; \textrm{and for some} \; b \; \textrm{in} \; B\}.$$
 
-# Relations
+p. 25:
 
-Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 7. "Relations." p. 22:
+> The charge of artificiality is true, but it is not too high a price to pay for conceptual economy. The concept of an ordered pair could have been introduced as an
+> additional primitive, axiomatically endowed with just the right properties, no more
+> and no less. In some theories this is done. The mathematician’s choice is between
+> having to remember a few more axioms and having to forget a few accidental facts;
+> the choice is pretty clearly a matter of taste. Similar choices occur frequently in
+> mathematics; in this book, for instance, we shall encounter them again in connection with the definitions of numbers of various kinds.
+
+p. 25:
+
+> *Exercise.* If either $$A=\emptyset$$ or $$B=\emptyset$$, then
+> $$A \times B = \emptyset$$, and conversely. If $$A \subset X$$ and
+> $$B \subset Y$$, then $$A \times B \subset X \times Y$$, and (provided
+> $$A \times B \neq \emptyset$$) conversely.
+
+# Section 7, "Relations"
+
+pp. 26-27:
 
 > We may not know what a relation is, but we do know what a set is, and the
 > preceding considerations establish a close connection between relations and sets.
@@ -119,11 +140,11 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 >
 > and saying, as in everyday language, that $$x$$ stands in the relation $$R$$ to $$y$$.
 
-Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 7. "Relations." p. 23:
+p.27:
 
 > In the preceding section we saw that associated with every set $$R$$ of ordered pairs
 > there are two sets called the projections of $$R$$ onto the first and second coordinates.
-> In the theory of relations these sets are known as the domain and the range of $$R$$
+> In the theory of relations these sets are known as the *domain* and the *range* of $$R$$
 > (abbreviated dom $$R$$ and ran $$R$$); we recall that they are defined by
 >
 > $$\textrm{dom} R = \{x :  \textrm{for some} \; y \; (x R y)\}$$
@@ -132,16 +153,16 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 >
 > $$\textrm{ran} R = \{y: \textrm{for some} \; x \; (x R y)\}.$$
 
-Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 7. "Relations." p. 23:
+p. 27:
 
 > If $$R$$ is a relation included in a Cartesian product $$X \times Y$$
 > (so that $$\textrm{dom} R \subset X$$ and $$\textrm{ran} R \subset Y$$),
 > it is sometimes convenient to say that $$R$$ is a relation *from* $$X$$ *to* $$Y$$;
 > instead of a relation from $$X$$ to $$X$$ we may speak of a relation *in* $$X$$.
 
-# Functions
+# Section 8, "Functions"
 
-Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 8. "Functions." p. 25:
+p. 30:
 
 > If $$X$$ and $$Y$$ are sets, a *function from* (or *on*) $$X$$ *to* (or *into*) $$Y$$ is a relation $$f$$ such
 > that $$\textrm{dom} f = X$$ and such that for each $$x$$ in $$X$$ there is a unique element $$y$$ in $$Y$$ with
@@ -159,7 +180,7 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 > The set of all functions from $$X$$ to $$Y$$ is a subset of the power set
 > $$\mathscr{P}(X \times Y)$$; it will be denoted by $$Y^X$$.
 
-Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 8. "Functions." p. 27:
+p. 33:
 
 > *Exercise.* (i) $$Y^\emptyset$$ has exactly one element, namely $$\emptyset$$,
 > whether $$Y$$ is empty or not, and (ii) if $$X$$ is not empty, then $$\emptyset^X$$
