@@ -50,10 +50,36 @@ is a **set**, the category is called **locally small**. [^4] [^5]
 
 # Ordered pairs
 
+Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 6. "Ordered Pairs." p. 19:
+
+> The *ordered pair* of $$a$$ and $$b$$, with *first coordinate* $$a$$ and *second coordinate* $$b$$, is the set 
+> $$(a,b)$$ defined by
+>
+> $$(a,b) = \{\{a\},\{a,b\}\}.$$
+>
+> However convincing the motivation of this definition may be, we must 
+> that the result has the main property that an ordered pair must have to deserve its
+> name. We must show that if $$(a, b)$$ $$(x, y)$$ are ordered pairs and if
+> $$(a,b)=(x,y)$$, then
+> then $$a = x$$ and $$b = y$$. To prove this, we note first that if $$a$$ and $$b$$ happen to be equal,
+> then the ordered pair $$(a,b)$$ is the same as the singleton $$\{\{a\}\}$$. If, conversely, $$(a, b)$$
+> is a singleton, then $$\{a\}=\{a,b\}$$, so that $$b \in \{a\}$$, and therefore $$a=b$$. Suppose
+> now that $$(a,b)=(x,y)$$. If $$a = b$$, then both $$(a, b)$$ and $$(x, y)$$ are singletons, so that
+> $$x = y$$; since $$\{x\} \in (a,b)$$ and $$\{a\} \in (x,y)$$, it follows that
+> $$a$$, $$b$$, $$x$$, and $$y$$ are all equal.
+> If $$a \neq b$$, then both $$(a, b)$$ and $$(x, y)$$ contain exactly one singleton, namely $$\{a\}$$ and
+> $$\{x\}$$ respectively, so that $$a = x$$. Since in this case it is also true that both $$(a, b)$$
+> and $$(x, y)$$ contain exactly one unordered pair that is not a singleton,
+> namely $$\{a, b\}$$
+> and $$\{x, y\}$$ respectively, it follows that $$\{a,b\}=\{x,y\}$$, and therefore,
+> in particular,
+> $$b \in \{x,y\}$$. Since $$b$$ cannot be $$x$$ (for then we should have $$a = x$$
+> and $$b = x$$, and,
+> therefore, $$a = b$$), we must have $$b = y$$, and the proof is complete
+
 For a set $$A$$, denote by $$\mathscr{P}(A)$$ the **power set of** $$A$$, the set whose elements are
 the subsets of $$A$$.
 
-![Copyright ©1960 by LITTON EDUCATIONAL PUBLISHING, INC.](/assets/images/excerpts/Halmos-page-19.png)
 
 # Cartesian products
 
