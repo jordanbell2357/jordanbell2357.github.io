@@ -21,7 +21,7 @@ $$
 $$
 called **composition** and denoted by $$g \circ f=\circ_{X,Y,Z}(f,g)$$.[^3]
 
-4. For each object $$X$$, a morphism $$\textrm{id}_X \in \textrm{hom}_{\mathbf{C}})(X,X)$$, called the **identity morphism**.
+4. For each object $$X$$, a morphism $$\textrm{id}_X \in \textrm{hom}_{\mathbf{C}}(X,X)$$, called the **identity morphism**.
 
 [^3]: [composition in nLab](https://ncatlab.org/nlab/show/composition)
 
