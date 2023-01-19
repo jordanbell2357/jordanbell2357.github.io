@@ -53,6 +53,8 @@ is a **set**, the category is called **locally small**. [^4] [^5]
 For a set $$A$$, denote by $$\mathscr{P}(A)$$ the **power set of** $$A$$, the set whose elements are
 the subsets of $$A$$.
 
+![Copyright ©1960 by LITTON EDUCATIONAL PUBLISHING, INC.](/assets/images/excerpts/Halmos-page-19.png)
+
 Let $$\textrm{Obj}(\mathbf{Sets})$$ be the class of sets.
 
 $$\mathbf{Sets}$$ is a category.
