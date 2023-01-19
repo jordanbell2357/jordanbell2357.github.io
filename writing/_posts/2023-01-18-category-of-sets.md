@@ -166,17 +166,17 @@ The element $$y$$ is called the *value* that the function *sends* or *maps* or
 *transforms* $$x$$ onto $$y$$. The words *map* or *mapping*, *transformation*,
 *correspondence*, and *operator* are among some of the many that are sometimes used
 as synonyms for *function*. The symbol
-
-$$f:X \to Y$$
-
-is sometimes used as an abbreviation for "$$f$$ is a function from $$X$$ to $$Y$$.''
-The set of all functions from $$X$$ to $$Y$$ is a subset of the power set
-$$\mathscr{P}(X \times Y)$$; it will be denoted by $$Y^X$$.
+>
+> $$f:X \to Y$$
+>
+> is sometimes used as an abbreviation for "$$f$$ is a function from $$X$$ to $$Y$$.''
+> The set of all functions from $$X$$ to $$Y$$ is a subset of the power set
+> $$\mathscr{P}(X \times Y)$$; it will be denoted by $$Y^X$$.
 
 
 Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 8. "Functions." p. 27:
 
-> Exercise. (i) $$Y^\emptyset$$ has exactly one element, namely $$\emptyset$$,
+> *Exercise.* (i) $$Y^\emptyset$$ has exactly one element, namely $$\emptyset$$,
 > whether $$Y$$ is empty or not, and (ii) if $$X$$ is not empty, then $$\emptyset^X$$
 > is empty.
 
