@@ -3,6 +3,8 @@ layout: post
 title: The category of sets
 ---
 
+# Categories
+
 A category $$\mathbf{C}$$ comprises the following data: [^1] [^2]
 
 [^1]: [category in nLab](https://ncatlab.org/nlab/show/category)
@@ -46,3 +48,7 @@ is a **set**, the category is called **locally small**. [^4] [^5]
 
 [^5]: When the class of objects and the class of morphisms are both sets, the category is called **small**.
 For doing algebraic geometry my impression is that one works with small categories. See [The Stacks project](https://stacks.math.columbia.edu/)
+
+# Category of sets
+
+Let $$\textrm{Obj}(\mathbf{Sets})$$ be the class of sets.
