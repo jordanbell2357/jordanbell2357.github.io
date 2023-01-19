@@ -173,7 +173,6 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 > The set of all functions from $$X$$ to $$Y$$ is a subset of the power set
 > $$\mathscr{P}(X \times Y)$$; it will be denoted by $$Y^X$$.
 
-
 Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 8. "Functions." p. 27:
 
 > *Exercise.* (i) $$Y^\emptyset$$ has exactly one element, namely $$\emptyset$$,
