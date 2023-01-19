@@ -16,17 +16,21 @@ A category $$\mathbf{C}$$ comprises the following data:[^3] [^2]
 3. For each triple of objects $$X,Y,Z$$, a map
 $$
 \begin{equation}
-\textrm{hom}_{\mathbf{C}}(Y,Z) \times \textrm{hom}_{\mathbf{C}}(X,Y) \to \textrm{hom}_{\mathbf{C}}(X,Z)
+\circ_{X,Y,Z}:\textrm{hom}_{\mathbf{C}}(X,Y) \times \textrm{hom}_{\mathbf{C}}(Y,Z) \to \textrm{hom}_{\mathbf{C}}(X,Z)
 \end{equation}
 $$
-called **composition** and denoted by $$(g,f) \mapsto g \circ f$$.
+called **composition** and denoted by $$\circ_{X,Y,Z}(f,g) \mapsto g \circ f$$.[^3]
 
-4. For each object $$X$$, a morphism in $$\textrm{hom}_{\mathbf{C}})(X,X)$$, denoted $$\textrm{id}_X$$, called the **identity morphism**.
+[^3]: [composition in nLab](https://ncatlab.org/nlab/show/composition)
+
+4. For each object $$X$$, a morphism $$\textrm{id}_X \in \textrm{hom}_{\mathbf{C}})(X,X)$$, called the **identity morphism**.
 
 The data has to satisfy the following rules:
 
-1. For each morphism $$f$$, it holds that $$f \circ 1_{\textrm{dom}(f)} = f$$, called the **right unit law**
-2. For each morphism $$f$$, it holds that $$1_{\textrm{cod}(f)} \circ f = f$$, called the **left unit law**
+1. For each morphism $$f$$, it holds that $$f \circ \textrm{id}_{\textrm{dom}(f)} = f$$, called the **right identity law**
+
+2. For each morphism $$f$$, it holds that $$\textrm{id}_{\textrm{cod}(f)} \circ f = f$$, called the **left identity law**
+
 3. For each triple of morphisms $$f,g,h$$, if $$\textrm{cod}(f)=\textrm{dom}(g)$$ and $$\textrm{cod}(g)=\textrm{dom}(h)$$ then
 $$
 \begin{equation}
