@@ -75,13 +75,34 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 > in particular,
 > $$b \in \{x,y\}$$. Since $$b$$ cannot be $$x$$ (for then we should have $$a = x$$
 > and $$b = x$$, and,
-> therefore, $$a = b$$), we must have $$b = y$$, and the proof is complete
+> therefore, $$a = b$$), we must have $$b = y$$, and the proof is complete.
+
+# Cartesian products
+
+Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 6. "Ordered Pairs." p. 19:
+
+> If $$A$$ and $$B$$ are sets, does there exist a set that contains all the ordered pairs $$(a,b)$$ with $$a$$ in
+> $$A$$ and $$b$$ in $$B$$? It is quite easy to see that the
+> answer is yes. Indeed, if $$a \in A$$ and $$b \in B$$, then $$\{a\} \subset A$$
+> and $$\{b\} \subset B$$, and therefore $$\{a,b\} \subset A \cup B$$. Since also
+> $$\{a\} \subset A \cup B$$, it follows that both $$\{a\}$$ and $$\{a,b\}$$ are
+> elements of $$\mathscr{P}(A \cup B)$$. This implies that $$\{\{a\},\{a,b\}\}$$
+> is a subset of $$\mathscr{P}(A \cup B)$$, and hence that it is an element of
+> $$\mathscr{P}(\mathscr{P}(A \cup B))$$; in other words $$(a,b) \in \mathscr{P}(\mathscr{P}(A \cup B))$$
+> whenever $$a \in A$$ and $$b \in B$$. Once this is known, it is a routine matter to apply the axiom of
+> specification and the axiom of extension to produce the unique set $$A \times B$$ that consists exactly
+> of the ordered pairs $$(a,b)$$ with $$a$$ in $$A$$ and $$b$$ in $$B$$. This set is called the
+> *Cartesian product* of $$A$$ and $$B$$; it is characterized by the fact that
+>
+> $$A \times B = \{x : x=(a,b) \textrm{for some} \, a \, \textrm{in} \, A \, \textrm{and for some} \, b \, \textrm{in} \, B\}.$$
+
+Define $$\pi_A(a,b) = a$$, the first coordinate, and $$\pi_B(a,b)=b$$, the second coordinate.
 
 For a set $$A$$, denote by $$\mathscr{P}(A)$$ the **power set of** $$A$$, the set whose elements are
 the subsets of $$A$$.
 
 
-# Cartesian products
+# 
 
 # Relations
 
