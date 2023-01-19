@@ -32,11 +32,11 @@ The data has to satisfy the following rules:
 2. For each morphism $$f$$, it holds that $$\textrm{id}_{\textrm{cod}(f)} \circ f = f$$, called the **left identity law**.
 
 3. For each triple of morphisms $$f,g,h$$, if $$\textrm{cod}(f)=\textrm{dom}(g)$$ and $$\textrm{cod}(g)=\textrm{dom}(h)$$ then
+
 $$
-\begin{equation}
 h \circ (g \circ f) = (h \circ g) \circ f
-\end{equation}
 $$
+
 called the **associative law**.
 
 When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$
