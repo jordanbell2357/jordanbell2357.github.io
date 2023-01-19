@@ -5,6 +5,8 @@ title: The category of sets
 
 > Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960.
 
+{:toc}
+
 # Section 1, "The Axiom of Extension"
 
 p. 2:
@@ -224,15 +226,18 @@ $$
 
 called the **associative law**.
 
+# **Sets** is a category
+
+Let $$\textrm{Obj}(\mathbf{Sets})$$ be the class of sets.
+
+$$\mathbf{Sets}$$ is a category.
+
+
+# Locally small categories
+
 When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$
 is a **set**, the category is called **locally small**. [^4] [^5]
 
 [^4]: [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
 
 [^5]: When the class of objects and the class of morphisms are both sets, the category is called **small**. For doing algebraic geometry my impression is that one works with small categories. See [The Stacks project](https://stacks.math.columbia.edu/)
-
-# **Sets** is a category
-
-Let $$\textrm{Obj}(\mathbf{Sets})$$ be the class of sets.
-
-$$\mathbf{Sets}$$ is a category.
