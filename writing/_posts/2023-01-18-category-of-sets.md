@@ -46,9 +46,13 @@ is a **set**, the category is called **locally small**. [^4] [^5]
 
 [^4]: [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
 
-[^5]: When the class of objects and the class of morphisms are both sets, the category is called **small**.
-For doing algebraic geometry my impression is that one works with small categories. See [The Stacks project](https://stacks.math.columbia.edu/)
+[^5]: When the class of objects and the class of morphisms are both sets, the category is called **small**. For doing algebraic geometry my impression is that one works with small categories. See [The Stacks project](https://stacks.math.columbia.edu/)
 
 # Category of sets
 
+For a set $$A$$, denote by $$\mathscr{P}(A)$$ the **power set of** $$A$$, the set whose elements are
+the subsets of $$A$$.
+
 Let $$\textrm{Obj}(\mathbf{Sets})$$ be the class of sets.
+
+$$\mathbf{Sets}$$ is a category.
