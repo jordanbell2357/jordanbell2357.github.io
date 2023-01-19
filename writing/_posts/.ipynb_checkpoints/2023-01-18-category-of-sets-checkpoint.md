@@ -59,8 +59,8 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 >
 > However convincing the motivation of this definition may be, we must 
 > that the result has the main property that an ordered pair must have to deserve its
-> name. We must show that if $$(a, b)$$ $$(x, y)$$ are ordered pairs and if
-> $$(a,b)=(x,y)$$, then
+> name. We must show that if $$(a, b)$$ and $$(x, y)$$ are ordered pairs and if
+> $$(a,b)=(x,y)$$, 
 > then $$a = x$$ and $$b = y$$. To prove this, we note first that if $$a$$ and $$b$$ happen to be equal,
 > then the ordered pair $$(a,b)$$ is the same as the singleton $$\{\{a\}\}$$. If, conversely, $$(a, b)$$
 > is a singleton, then $$\{a\}=\{a,b\}$$, so that $$b \in \{a\}$$, and therefore $$a=b$$. Suppose
@@ -106,8 +106,45 @@ $$
 A \times B = \{x \in \mathscr{P}(\mathscr{P}(A \cup B)) : \pi_A(x) \in A, \pi_B(x) \in B\}.
 $$
 
+If either $$A$$ or $$B$$ is an empty set, then it follows that the Cartesian product $$A \times B$$ is an
+empty set.
 
 # Relations
+
+Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 7. "Relations." p. 22:
+
+> We may not know what a relation is, but we do know what a set is, and the
+> preceding considerations establish a close connection between relations and sets.
+> The precise set-theoretic treatment of relations takes advantage of that heuristic
+> connection; the simplest thing to do is to define a relation to be the corresponding
+> set. This is what we do; we hereby define a *relation* as a set of ordered pairs.
+> Explicitly: a set $$R$$ is a relation if each element of $$R$$ is an ordered pair; this means, of course, that if
+> $$z \in R$$, then there exist $$x$$ and $$y$$ so that $$z=(x,y)$$. If $$R$$ is a relation, it is sometimes
+> convenient to express the fact that $$(x,y) \in R$$ by writing
+>
+> $$xRy$$
+>
+> and saying, as in everyday language, that $$x$$ stands in the relation $$R$$ to $$y$$.
+
+Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 7. "Relations." p. 23:
+
+> In the preceding section we saw that associated with every set $$R$$ of ordered pairs
+> there are two sets called the projections of $$R$$ onto the first and second coordinates.
+> In the theory of relations these sets are known as the domain and the range of $$R$$
+> (abbreviated dom $$R$$ and ran $$R$$); we recall that they are defined by
+>
+> $$\textrm{dom} R = \{x : \textrm{for some} \; y (x R y)\}$$
+>
+> and
+>
+> $$\textrm{ran} R = \{y: \textrm{for some} \; x (x R y)\}.$$
+
+Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 7. "Relations." p. 23:
+
+> If $$R$$ is a relation included in a Cartesian product $$X \times Y$$
+> (so that $$\textrm{dom} R \subset X$$ and $$\textrm{ran} R \subset Y$$),
+> it is sometimes convenient to say that $$R$$ is a relation *from* $$X$$ *to* $$Y$$;
+> instead of a relation from $$X$$ to $$X$$ we may speak of a relation *in* $$X$$.
 
 # Functions
 
