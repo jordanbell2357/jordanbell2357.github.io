@@ -157,7 +157,15 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 
 Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 8. "Functions." p. 25:
 
-> If $$X$$ and $$Y$$ are sets, a *function from* (or *on*) $$X$$ *to* (or *into*) $$Y$$ is a relation $$f$$ such that $$\textrm{dom} f = X$$ and such that for each $$x$$ in $$X$$ there is a unique element $$y$$ in $$Y$$ with $$(x,y) \in f$$. The uniqueness condition can be formulated explicitly as follows: if $$(x,y) \in f$$ and $$(x,z) \in f$$, then $$y=z$$. For each $$x$$ in $$X$$, the unique $$y$$ in $$Y$$ such that $$(x,y) \in f$$ is denoted by $$f(x)$$. For functions this notation and its minor variants supersede the others used for more general relations; from now on, if $$f$$ is a function, we shall write $$f(x)=y$$ instead of $$(x,y) \in f$$ or $$x f y$$. The element $$y$$ is called the *value* that the function *sends* or *maps* or *transforms* $$x$$ onto $$y$$. The words *map* or *mapping*, *transformation*, *correspondence*, and *operator* are among some of the many that are sometimes used as synonyms for *function*. The symbol
+> If $$X$$ and $$Y$$ are sets, a *function from* (or *on*) $$X$$ *to* (or *into*) $$Y$$ is a relation $$f$$ such
+> that $$\textrm{dom} f = X$$ and such that for each $$x$$ in $$X$$ there is a unique element $$y$$ in $$Y$$ with
+> $$(x,y) \in f$$. The uniqueness condition can be formulated explicitly as follows:
+> if $$(x,y) \in f$$ and $$(x,z) \in f$$, then $$y=z$$. For each $$x$$ in $$X$$, the unique $$y$$ in $$Y$$ such that
+> $$(x,y) \in f$$ is denoted by $$f(x)$$. For functions this notation and its minor variants supersede
+> the others used for more general relations; from now on, if $$f$$ is a function, we shall write $$f(x)=y$$
+> instead of $$(x,y) \in f$$ or $$x f y$$. The element $$y$$ is called the *value* that the function *sends* or
+> *maps* or *transforms* $$x$$ onto $$y$$. The words *map* or *mapping*, *transformation*, *correspondence*,
+> and *operator* are among some of the many that are sometimes used as synonyms for *function*. The symbol
 >
 > $$f:X \to Y$$
 >
