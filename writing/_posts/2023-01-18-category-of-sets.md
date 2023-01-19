@@ -48,12 +48,20 @@ is a **set**, the category is called **locally small**. [^4] [^5]
 
 [^5]: When the class of objects and the class of morphisms are both sets, the category is called **small**. For doing algebraic geometry my impression is that one works with small categories. See [The Stacks project](https://stacks.math.columbia.edu/)
 
-# Category of sets
+# Ordered pairs
 
 For a set $$A$$, denote by $$\mathscr{P}(A)$$ the **power set of** $$A$$, the set whose elements are
 the subsets of $$A$$.
 
 ![Copyright ©1960 by LITTON EDUCATIONAL PUBLISHING, INC.](/assets/images/excerpts/Halmos-page-19.png)
+
+# Cartesian products
+
+# Relations
+
+# Functions
+
+# **Sets** is a category
 
 Let $$\textrm{Obj}(\mathbf{Sets})$$ be the class of sets.
 
