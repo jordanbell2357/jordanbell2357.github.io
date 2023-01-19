@@ -57,7 +57,7 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 >
 > $$(a,b) = \{\{a\},\{a,b\}\}.$$
 >
-> However convincing the motivation of this definition may be, we must 
+> However convincing the motivation of this definition may be, we must still prove
 > that the result has the main property that an ordered pair must have to deserve its
 > name. We must show that if $$(a, b)$$ and $$(x, y)$$ are ordered pairs and if
 > $$(a,b)=(x,y)$$, 
@@ -79,6 +79,11 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 
 # Cartesian products
 
+Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 5. "Complements and Powers." p. 19:
+
+> **Axiom of powers.** For each set there exists a collection of sets that contains
+> among its elements all the subsets of the given set.
+
 For a set $$A$$, denote by $$\mathscr{P}(A)$$ the **power set of** $$A$$, the set whose elements are
 the subsets of $$A$$.
 
@@ -97,14 +102,16 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 > of the ordered pairs $$(a,b)$$ with $$a$$ in $$A$$ and $$b$$ in $$B$$. This set is called the
 > *Cartesian product* of $$A$$ and $$B$$; it is characterized by the fact that
 >
-> $$A \times B = \{x : x=(a,b) \textrm{for some} \; a \; \textrm{in} \; A \; \textrm{and for some} \; b \; \textrm{in} \; B\}.$$
+> $$A \times B = \{x : x=(a,b) \; \textrm{for some} \; a \; \textrm{in} \; A \; \textrm{and for some} \; b \; \textrm{in} \; B\}.$$
 
-Define $$\pi_A(a,b) = a$$, the first coordinate, and $$\pi_B(a,b)=b$$, the second coordinate.
-Equivalently,
+Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 6. "Ordered Pairs." p. 20:
 
-$$
-A \times B = \{x \in \mathscr{P}(\mathscr{P}(A \cup B)) : \pi_A(x) \in A, \pi_B(x) \in B\}.
-$$
+> The charge of artificiality is true, but it is not too high a price to pay for conceptual economy. The concept of an ordered pair could have been introduced as an
+> additional primitive, axiomatically endowed with just the right properties, no more
+> and no less. In some theories this is done. The mathematician’s choice is between
+> having to remember a few more axioms and having to forget a few accidental facts;
+> the choice is pretty clearly a matter of taste. Similar choices occur frequently in
+> mathematics; in this book, for instance, we shall encounter them again in connection with the definitions of numbers of various kinds.
 
 If either $$A$$ or $$B$$ is an empty set, then it follows that the Cartesian product $$A \times B$$ is an
 empty set.
@@ -133,11 +140,11 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 > In the theory of relations these sets are known as the domain and the range of $$R$$
 > (abbreviated dom $$R$$ and ran $$R$$); we recall that they are defined by
 >
-> $$\textrm{dom} R = \{x : \textrm{for some} \; y (x R y)\}$$
+> $$\textrm{dom} R = \{x :  \textrm{for some} \; y \; (x R y)\}$$
 >
 > and
 >
-> $$\textrm{ran} R = \{y: \textrm{for some} \; x (x R y)\}.$$
+> $$\textrm{ran} R = \{y: \textrm{for some} \; x \; (x R y)\}.$$
 
 Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 7. "Relations." p. 23:
 
@@ -147,6 +154,32 @@ Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section
 > instead of a relation from $$X$$ to $$X$$ we may speak of a relation *in* $$X$$.
 
 # Functions
+
+Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 8. "Functions." p. 25:
+
+> If $$X$$ and $$Y$$ are sets, a *function from* (or *on*) $$X$$ *to* (or *into*) $$Y$$ is a relation $$f$$ such that $$\textrm{dom} f = X$$ and such that for each $$x$$ in $$X$$ there is a unique element $$y$$ in $$Y$$ with $$(x,y) \in f$$. The uniqueness
+condition can be formulated explicitly as follows: if $$(x,y) \in f$$ and $$(x,z) \in f$$, then $$y=z$$. For each $$x$$ in $$X$$, the unique $$y$$ in $$Y$$ such that
+$$(x,y) \in f$$ is denoted by $$f(x)$$. For functions this notation and its minor
+variants supersede the others used for more general relations; from now on, if $$f$$
+is a function, we shall write $$f(x)=y$$ instead of $$(x,y) \in f$$ or $$x f y$$.
+The element $$y$$ is called the *value* that the function *sends* or *maps* or
+*transforms* $$x$$ onto $$y$$. The words *map* or *mapping*, *transformation*,
+*correspondence*, and *operator* are among some of the many that are sometimes used
+as synonyms for *function*. The symbol
+
+$$f:X \to Y$$
+
+is sometimes used as an abbreviation for "$$f$$ is a function from $$X$$ to $$Y$$.''
+The set of all functions from $$X$$ to $$Y$$ is a subset of the power set
+$$\mathscr{P}(X \times Y)$$; it will be denoted by $$Y^X$$.
+
+
+Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960. Section 8. "Functions." p. 27:
+
+> Exercise. (i) $$Y^\emptyset$$ has exactly one element, namely $$\emptyset$$,
+> whether $$Y$$ is empty or not, and (ii) if $$X$$ is not empty, then $$\emptyset^X$$
+> is empty.
+
 
 # **Sets** is a category
 
