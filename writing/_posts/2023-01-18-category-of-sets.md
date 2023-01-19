@@ -19,7 +19,7 @@ $$
 \circ_{X,Y,Z}:\textrm{hom}_{\mathbf{C}}(X,Y) \times \textrm{hom}_{\mathbf{C}}(Y,Z) \to \textrm{hom}_{\mathbf{C}}(X,Z)
 \end{equation}
 $$
-called **composition** and denoted by $$\circ_{X,Y,Z}:(f,g) \mapsto g \circ f$$.[^3]
+called **composition** and denoted by $$\circ_{X,Y,Z}:(f,g) \mapsto g \circ f$$. [^3]
 
 4. For each object $$X$$, a morphism $$\textrm{id}_X \in \textrm{hom}_{\mathbf{C}}(X,X)$$, called the **identity morphism**.
 
@@ -40,15 +40,9 @@ $$
 called the **associative law**.
 
 When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$
-is a **set**, the category is called **locally small**.[^4]
+is a **set**, the category is called **locally small**. [^4] [^5]
 
 [^4]: [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
 
-When the class of objects and the class of morphisms are both sets, the category is called **small**.
-For doing algebraic geometry my impression is that one works with small categories.
-
-When working with
-categories where morphisms are functions, I haven't encountered categories that fail to be locally small.
-Specifically, the three areas in mathematics I've carefully worked through proofs of category theory constructions
-are the category of sets, the category of topological vector spaces, and the category of locally compact abelian groups with the Pontryagin duality theorem. Indeed these categories are not small, and my only encounters with small
-categories in retrospect have been categories arising from preorders on finite sets.
+[^5]: When the class of objects and the class of morphisms are both sets, the category is called **small**.
+For doing algebraic geometry my impression is that one works with small categories. See [The Stacks project](https://stacks.math.columbia.edu/)
