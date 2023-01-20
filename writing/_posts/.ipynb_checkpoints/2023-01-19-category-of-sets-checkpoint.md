@@ -224,7 +224,7 @@ $$
 
 called the **associative law**.
 
-# **Set** is a category
+# The category structure of **Set**
 
 Let $$\textrm{Obj}(\mathbf{Set})$$ be the class of sets.
 
