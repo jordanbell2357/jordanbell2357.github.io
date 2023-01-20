@@ -224,11 +224,11 @@ $$
 
 called the **associative law**.
 
-# **Sets** is a category
+# **Set** is a category
 
-Let $$\textrm{Obj}(\mathbf{Sets})$$ be the class of sets.
+Let $$\textrm{Obj}(\mathbf{Set})$$ be the class of sets.
 
-$$\mathbf{Sets}$$ is a category.
+$$\mathbf{Set}$$ is a category.
 
 
 # Locally small categories
