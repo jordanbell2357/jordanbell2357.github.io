@@ -3,9 +3,7 @@ layout: post
 title: The category of sets
 ---
 
-> Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960.
-
-{:toc}
+`Paul R. Halmos. Naive Set Theory. Van Nostrand Reinhold Company. 1960.`
 
 # Section 1, "The Axiom of Extension"
 
