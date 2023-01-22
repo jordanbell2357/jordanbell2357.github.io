@@ -12,7 +12,7 @@ title: Standard deviation of returns
 [^3]: [Data files in Jekyll \| CloudCannon](https://cloudcannon.com/community/learn/jekyll-tutorial/introduction-to-jekyll-data-files/)
   
 {% assign table_rows = site.data.Hasbro2014 %}
-  <table>
+  <table class="fixed_header">
       {% for row in table_rows %}
           {% if forloop.first %}
               <tr>
