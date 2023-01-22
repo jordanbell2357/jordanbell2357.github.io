@@ -3,7 +3,7 @@ layout: post
 title: Standard deviation of returns
 ---
 
-`Hasbro2014.csv` [^1] [^2] [^3]
+*Hasbro2014.csv* [^1] [^2] [^3]
 
 [^1]: [Data Files \| Jekyll](https://jekyllrb.com/docs/datafiles/)
 
