@@ -51,6 +51,30 @@ title: Standard deviation of returns
   </table>
 </div>
 
+`GOOGLEFINANCE("INDEXSP:.INX","price",DATE(2022,1,1),DATE(2022,12,31),"WEEKLY")`
+
+{% assign table_rows3 = site.data.INDEXSP %}
+
+<div style="overflow-x:auto;">
+  <table>
+      {% for row in table_rows3 %}
+          {% if forloop.first %}
+              <tr>
+                  {% for pair in row %}
+                      <th>
+                          {{ pair[0] }}
+                      </th>
+                  {% endfor %}
+              </tr>
+          {% endif %}
+
+          {% tablerow pair in row %}
+              {{ pair[1] }}
+          {% endtablerow %}
+      {% endfor %}
+  </table>
+</div>
+
 
   
 [^1] [^2] [^3]
