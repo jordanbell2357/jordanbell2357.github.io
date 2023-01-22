@@ -3,13 +3,13 @@ layout: post
 title: Standard deviation of returns
 ---
 
-`GOOGLEFINANCE("OSPTX","price",DATE(2022,1,1),DATE(2022,12,31),"WEEKLY")`
+`GOOGLEFINANCE("TSE:H","price",DATE(2022,1,1),DATE(2022,12,31),"WEEKLY")`
 
-{% assign table_rows = site.data.OSPTX %}
+{% assign table_rows1 = site.data.TSE_H %}
 
 <div style="overflow-x:auto;">
   <table>
-      {% for row in table_rows %}
+      {% for row in table_rows1 %}
           {% if forloop.first %}
               <tr>
                   {% for pair in row %}
@@ -26,6 +26,32 @@ title: Standard deviation of returns
       {% endfor %}
   </table>
 </div>
+
+`GOOGLEFINANCE("OSPTX","price",DATE(2022,1,1),DATE(2022,12,31),"WEEKLY")`
+
+{% assign table_rows2 = site.data.OSPTX %}
+
+<div style="overflow-x:auto;">
+  <table>
+      {% for row in table_rows2 %}
+          {% if forloop.first %}
+              <tr>
+                  {% for pair in row %}
+                      <th>
+                          {{ pair[0] }}
+                      </th>
+                  {% endfor %}
+              </tr>
+          {% endif %}
+
+          {% tablerow pair in row %}
+              {{ pair[1] }}
+          {% endtablerow %}
+      {% endfor %}
+  </table>
+</div>
+
+
   
 [^1] [^2] [^3]
 
