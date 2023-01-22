@@ -3,7 +3,10 @@ layout: post
 title: Standard deviation of returns
 ---
 
-{% assign table_rows = site.data.TSE_H %}
+`GOOGLEFINANCE("OSPTX","price",DATE(2022,1,1),DATE(2022,12,31),"WEEKLY")`
+
+{% assign table_rows = site.data.OSPTX %}
+
 <div style="overflow-x:auto;">
   <table>
       {% for row in table_rows %}
