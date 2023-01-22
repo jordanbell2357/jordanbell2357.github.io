@@ -4,8 +4,8 @@ title: Standard deviation of returns
 ---
 
 {% assign table_rows = site.data.TSE_H %}
-
-  <table class="fixed_header">
+<div style="overflow-x:auto;">
+  <table>
       {% for row in table_rows %}
           {% if forloop.first %}
               <tr>
@@ -22,6 +22,7 @@ title: Standard deviation of returns
           {% endtablerow %}
       {% endfor %}
   </table>
+</div>
   
 [^1] [^2] [^3]
 
