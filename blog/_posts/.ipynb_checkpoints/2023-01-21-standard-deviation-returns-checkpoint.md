@@ -12,8 +12,8 @@ title: Standard deviation of returns
 [^3]: [Data files in Jekyll \| CloudCannon](https://cloudcannon.com/community/learn/jekyll-tutorial/introduction-to-jekyll-data-files/)
   
 {% assign table_rows = site.data.Hasbro2014 %}
-
-  <table>
+  <div class="tableContainer">
+  <table class="table">
       {% for row in table_rows %}
           {% if forloop.first %}
               <tr>
@@ -30,3 +30,4 @@ title: Standard deviation of returns
           {% endtablerow %}
       {% endfor %}
   </table>
+  </div>
