@@ -27,6 +27,14 @@ title: Standard deviation of returns
   </table>
 </div>
 
+Standard deviation of weekly returns of TSE:H is 0.025332
+
+Annualized standard deviation of TSE:H is
+
+$$
+\sigma_{\textrm{TSE:H}}= 0.025332 \cdot \sqrt{52} = 0.182675
+$$
+
 `GOOGLEFINANCE("OSPTX","price",DATE(2022,1,1),DATE(2022,12,31),"WEEKLY")`
 
 {% assign table_rows2 = site.data.OSPTX %}
@@ -51,6 +59,14 @@ title: Standard deviation of returns
   </table>
 </div>
 
+Standard deviation of weekly returns of OSPTX is 0.022458
+
+Annualized standard deviation of OSPTX is
+
+$$
+\sigma_{\textrm{OSPTX}}= 0.022458 \cdot \sqrt{52} = 0.161945
+$$
+
 `GOOGLEFINANCE("INDEXSP:.INX","price",DATE(2022,1,1),DATE(2022,12,31),"WEEKLY")`
 
 {% assign table_rows3 = site.data.INDEXSP %}
@@ -74,6 +90,30 @@ title: Standard deviation of returns
       {% endfor %}
   </table>
 </div>
+
+Standard deviation of weekly returns of INDEXSP is 0.032259
+
+Annualized standard deviation of INDEXSP is
+
+$$
+\sigma_{\textrm{INDEXSP}}= 0.032259 \cdot \sqrt{52} = 0.232624
+$$
+
+Correlation of weekly returns of TSE:H and OSPTX is
+
+$$
+\rho_{\textrm{TSE:H,OSPTX}} = 0.315180.
+$$
+
+Correlation of weekly returns of TSE:H and INDEXSP is
+
+$$
+\rho_{\textrm{TSE:H,INDEXSP}} = 0.339743.
+$$
+
+
+
+
 
 
   
