@@ -10,7 +10,6 @@ Topics
 
 Course excerpts
 
-- [Supply Chain Excellence \| Coursera](https://sites.google.com/view/supply-chain-excellence-course)
 - [Introduction to Psychology \| Coursera](https://sites.google.com/view/introduction-psychology-course)
 
 Artifacts
