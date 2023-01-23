@@ -111,13 +111,13 @@ $$
 \rho_{\textrm{TSE:H,INDEXSP}} = 0.339743.
 $$
 
-Using OSPTX as market,
+Using OSPTX as the market,
 
 $$
 \beta_{\textrm{TSE:H}} = \dfrac{\sigma_{\textrm{TSE:H}} \rho_{\textrm{TSE:H,OSPTX}}}{\sigma_{\textrm{OSPTX}}} = 0.355525
 $$
 
-Using INDEXSP as market,
+Using INDEXSP as the market,
 
 $$
 \beta_{\textrm{TSE:H}} = \dfrac{\sigma_{\textrm{TSE:H}} \rho_{\textrm{TSE:H,INDEXSP}}}{\sigma_{\textrm{INDEXSP}}} = 0.266793
