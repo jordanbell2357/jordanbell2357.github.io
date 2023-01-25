@@ -227,6 +227,10 @@ called the **associative law**.
 
 Let $$\textrm{Obj}(\mathbf{Set})$$ be the class of sets.
 
+For each pair of objects $$X,Y$$, let
+
+$$\textrm{hom}_{\mathbf{Set}}(X,Y)=Y^X.$$
+
 $$\mathbf{Set}$$ is a category.
 
 
