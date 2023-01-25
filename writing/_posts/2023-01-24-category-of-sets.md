@@ -218,9 +218,9 @@ The data has to satisfy the following rules:
 
 3. For each triple of morphisms $$f,g,h$$, if
 $$\textrm{cod}(f)=\textrm{dom}(g)$$ and $$\textrm{cod}(g)=\textrm{dom}(h)$$ then  
-$$$
-h \circ (g \circ f) = (h \circ g) \circ f
-$$$
+$$
+h \circ (g \circ f) = (h \circ g) \circ f,
+$$
 called the **associative law**.
 
 # The category structure of **Set**
