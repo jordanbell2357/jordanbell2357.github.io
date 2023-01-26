@@ -204,7 +204,7 @@ $$
 \circ_{X,Y,Z}:\textrm{hom}_{\mathbf{C}}(X,Y) \times \textrm{hom}_{\mathbf{C}}(Y,Z) \to \textrm{hom}_{\mathbf{C}}(X,Z)
 \end{equation}
 $$
-called **composition**[^3] and denoted by $$\circ_{X,Y,Z}:(f,g) \mapsto g \circ f$$. 
+called **composition** and denoted by $$\circ_{X,Y,Z}:(f,g) \mapsto g \circ f$$. [^3]
 
 4. For each object $$X$$, a morphism $$\textrm{id}_X \in \textrm{hom}_{\mathbf{C}}(X,X)$$, called the **identity morphism**.
 
@@ -212,7 +212,7 @@ called **composition**[^3] and denoted by $$\circ_{X,Y,Z}:(f,g) \mapsto g \circ 
 
 The data has to satisfy the following rules:
 
-1. For each morphism $$f$$, it holds that $$f \circ \textrm{id}_{\textrm{dom}(f)} = f$$, called the **right identity law**.[^4]
+1. For each morphism $$f$$, it holds that $$f \circ \textrm{id}_{\textrm{dom}(f)} = f$$, called the **right identity law**. [^4]
 
 2. For each morphism $$f$$, it holds that $$\textrm{id}_{\textrm{cod}(f)} \circ f = f$$, called the **left identity law**.
 
@@ -221,7 +221,7 @@ $$\textrm{cod}(f)=\textrm{dom}(g)$$ and $$\textrm{cod}(g)=\textrm{dom}(h)$$ then
 $$
 h \circ (g \circ f) = (h \circ g) \circ f,
 $$
-called the **associative law**.[^5]
+called the **associative law**. [^5]
 
 [^4]: [identity element in nLab](https://ncatlab.org/nlab/show/identity+element)
 
@@ -232,7 +232,7 @@ called the **associative law**.[^5]
 $$\textrm{Obj}(\mathbf{Set})$$ is the class of sets.
 
 For each pair of sets $$X,Y$$, the class of morphisms
-$$\textrm{hom}_{\mathbf{Set}}(X,Y)$$ is the set of functions $$Y^X$$.[^small]
+$$\textrm{hom}_{\mathbf{Set}}(X,Y)$$ is the set of functions $$Y^X$$. [^small]
 
 For each triple of objects $$X,Y,Z$$, the composition
 
@@ -244,6 +244,12 @@ $$
 \circ_{X,Y,Z}(f,g)(x) = g(f(x)),\quad (f,g) \in Y^X \times Z^Y, \quad x \in X.
 $$
 
+For each set $$X$$, the identity morphism $$\textrm{id}_X \in X^X$$ is
+
+$$
+\textrm{id}_X(x) = x, \quad x \in X.
+$$
+
 # Theorem: $$\mathbf{Set}$$ is a category.
 
 # Proof
@@ -251,8 +257,6 @@ $$
 ## ∎
 
 
-[^small]: When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$ is a **set**, the category is called **locally small**.
-    
-    [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
+[^small]: When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$ is a **set**, the category is called **locally small**. [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
     
     When the class of objects and the class of morphisms are both sets, the category is called **small**. For doing algebraic geometry my impression is that one works with small categories. See [The Stacks project](https://stacks.math.columbia.edu/)
