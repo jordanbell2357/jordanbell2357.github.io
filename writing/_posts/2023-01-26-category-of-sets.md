@@ -244,7 +244,7 @@ $$
 \circ_{X,Y,Z}(f,g)(x) = g(f(x)),\quad (f,g) \in Y^X \times Z^Y, \quad x \in X.
 $$
 
-For each set $$X$$, the identity morphism $$\textrm{id}_X \in X^X$$ is
+For each set $$X$$ that is not the empty set, the identity morphism $$\textrm{id}_X \in X^X$$ is
 
 $$
 \textrm{id}_X(x) = x, \quad x \in X.
@@ -257,6 +257,6 @@ $$
 ## ∎
 
 
-[^small]: When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$ is a **set**, the category is called **locally small**. [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
+[^small]: When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$ is a **set**, the category is called **locally small**. See [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
     
     When the class of objects and the class of morphisms are both sets, the category is called **small**. For doing algebraic geometry my impression is that one works with small categories. See [The Stacks project](https://stacks.math.columbia.edu/)
