@@ -251,8 +251,7 @@ $$
 ## ∎
 
 
-[^small]: When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$
-is a **set**, the category is called **locally small**.
+[^small]: When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$ is a **set**, the category is called **locally small**.
   
   [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
   
