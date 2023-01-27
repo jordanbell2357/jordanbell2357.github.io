@@ -298,6 +298,12 @@ $$\textrm{Obj}(\mathbf{Set})$$ is the class of sets.
 For each pair of sets $$X,Y$$, the class of morphisms
 $$\textrm{hom}_{\mathbf{Set}}(X,Y)$$ is the set of functions $$Y^X$$. [^small]
 
+From Halmos, Section 8, "Functions":
+
+> $$Y^\emptyset$$ has exactly one element, namely $$\emptyset$$,
+> whether $$Y$$ is empty or not, and (ii) if $$X$$ is not empty, then $$\emptyset^X$$
+> is empty.
+
 For each triple of objects $$X,Y,Z$$, the composition
 
 $$\circ_{X,Y,Z}:Y^X \times Z^Z \to Z^X$$
