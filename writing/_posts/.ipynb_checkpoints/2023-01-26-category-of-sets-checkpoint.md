@@ -186,6 +186,27 @@ p. 33:
 > whether $$Y$$ is empty or not, and (ii) if $$X$$ is not empty, then $$\emptyset^X$$
 > is empty.
 
+# Section 10, "Inverses and Composites"
+
+p. 38:
+
+> A correspondence between the elements of $$X$$ and the elements of $$Y$$
+> does always induce a well-behaved correspondence between the subsets of
+> $$X$$ and the subsets of $$Y$$, not forward, by the formation of images, but
+> backward, by the formation of inverse images. Given a function $$f$$ from
+> $$X$$ to $$Y$$, let $$f^{-1}$$, the *inverse* of $$f$$, be the function from
+> $$\mathscr{P}(Y)$$ to $$\mathscr{P}(X)$$ such
+> that if $$B \subset Y$$, then
+>
+> $$f^{-1}(B) = \{x \in X: f(x) \in B\}.$$
+>
+> In words: $$f^{-1}(B)$$ consists of exactly those elements of X that $$f$$ maps into $$Y$$;
+> the set $$f^{-1}(B)$$ is called the *inverse image* of $$B$$ under $$f$$.
+> A necessary and sufficient condition that $$f$$ map X onto $$Y$$ is that the inverse image
+> under $$f$$ of each non-empty subset of $$Y$$ be a non-empty subset of $$X$$. (Proof?)
+> A necessary and sufficient condition that $$f$$ be one-to-one is that the inverse
+> image under $$f$$ of each singleton in the range of $$f$$ be a singleton in $$X$$.
+
 # Categories
 
 A category **C** comprises the following data: [^1] [^2]
