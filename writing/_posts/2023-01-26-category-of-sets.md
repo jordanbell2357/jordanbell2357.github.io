@@ -243,8 +243,8 @@ pp. 39-40:
 >
 > The connection between inversion and composition is important; 
 > something like it crops up all over mathematics. If $$f$$ maps $$X$$ into $$Y$$
-> and $$g$$ maps $$Y$$ into $$Z$$, then $$f^{-1}$$ maps $\mathscr{P}(Y)$$ into $$\mathscr{P}(X)$$
-> and $$g^{-1}$$ maps $$\mathscr{P}(Z)$ into $$\mathscr{P}(Y)$$. In this situation, the composites that
+> and $$g$$ maps $$Y$$ into $$Z$$, then $$f^{-1}$$ maps $$\mathscr{P}(Y)$$ into $$\mathscr{P}(X)$$
+> and $$g^{-1}$$ maps $$\mathscr{P}(Z)$$ into $$\mathscr{P}(Y)$$. In this situation, the composites that
 > are formable are $$gf$$ and $$f^{-1}g^{-1}$$; the assertion is that the latter is the inverse of the former.
 > Proof: if $$x \in (gf)^{-1}(C)$$, where $$x \in X$$ and $$C \subset Z$$, then
 > $$g(f(x)) \in C$$, so that $$f(x) \in g^{-1}(C)$$, and therefore
