@@ -188,7 +188,7 @@ p. 33:
 
 # Categories
 
-A category $$\mathbf{C}$$ comprises the following data: [^1] [^2]
+A category **C** comprises the following data: [^1] [^2]
 
 [^1]: [category in nLab](https://ncatlab.org/nlab/show/category)
 
@@ -257,6 +257,6 @@ $$
 ## ∎
 
 
-[^small]: When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$ is a **set**, the category is called **locally small**. See [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
+[^small]: When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$ is a **set**, the category **C** is called **locally small**. See [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
     
-    When the class of objects and the class of morphisms are both sets, the category is called **small**. For doing algebraic geometry my impression is that one works with small categories. See [The Stacks project](https://stacks.math.columbia.edu/)
+    When the class of objects and the class of morphisms are both sets, the category is called **small**. For doing algebraic geometry my impression is that there one works with small categories. See [The Stacks project](https://stacks.math.columbia.edu/)
