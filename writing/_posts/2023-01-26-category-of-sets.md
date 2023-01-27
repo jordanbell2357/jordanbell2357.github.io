@@ -298,7 +298,7 @@ $$\textrm{Obj}(\mathbf{Set})$$ is the class of sets.
 For each pair of sets $$X,Y$$, the class of morphisms
 $$\textrm{hom}_{\mathbf{Set}}(X,Y)$$ is the set of functions $$Y^X$$. [^small]
 
-From Halmos, [Section 8, "Functions"](#section8):
+[Halmos, Section 8, "Functions"](#section8):
 
 > $$Y^\emptyset$$ has exactly one element, namely $$\emptyset$$,
 > whether $$Y$$ is empty or not, and (ii) if $$X$$ is not empty, then $$\emptyset^X$$
@@ -320,7 +320,7 @@ $$
 \textrm{id}_X(x) = x, \quad x \in X.
 $$
 
-# Theorem: $$\mathbf{Set}$$ is a category.
+# Theorem: **Set** is a category.
 
 # Proof
 
