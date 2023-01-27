@@ -5,8 +5,6 @@ title: The category of sets
 
 Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960.
 
-{:toc}
-
 # Section 1, "The Axiom of Extension" {#section1}
 
 p. 2:
@@ -311,6 +309,20 @@ For each triple of objects $$X,Y,Z$$, the composition
 $$\circ_{X,Y,Z}:Y^X \times Z^Z \to Z^X$$
 
 is
+
+<table>
+  <tr>
+    <th>X</th>
+    <th>Y</th>
+    <th>Z</th>
+    <th>\(\circ_{X,Y,Z}\)</th>
+  </tr>
+  <tr>
+    <td>not empty</td>
+    <td>not empty</td>
+    <td>not empty</td>
+  </tr>
+</table>
 
 $$
 \circ_{X,Y,Z}(f,g)(x) = g(f(x)),\quad (f,g) \in Y^X \times Z^Y, \quad x \in X.
