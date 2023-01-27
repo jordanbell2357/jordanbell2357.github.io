@@ -1,0 +1,156 @@
+<!DOCTYPE html><html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Structural Induction</title>
+<!--Generated on Thu Jan 26 23:12:57 2023 by LaTeXML (version 0.8.6) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on January 2023.-->
+
+<link rel="stylesheet" href="/assets/css/LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="/assets/css/ltx-article.css" type="text/css">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Structural Induction</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_dates">(January 2023)</div>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Let <math id="p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> be the smallest set such that</p>
+</div>
+<div id="p2" class="ltx_para">
+<ul id="S0.I1" class="ltx_itemize">
+<li id="S0.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I1.i1.p1.m1" class="ltx_Math" alttext="x,y,z\in E" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi><mo>,</mo><mi>z</mi></mrow><mo>∈</mo><mi>E</mi></mrow></math></p>
+</div>
+</li>
+<li id="S0.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">if <math id="S0.I1.i2.p1.m1" class="ltx_Math" alttext="e_{1},e_{2}\in E" display="inline"><mrow><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><msub><mi>e</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>E</mi></mrow></math>, then <math id="S0.I1.i2.p1.m2" class="ltx_Math" alttext="(e_{1}+e_{2})\in E" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>+</mo><msub><mi>e</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>E</mi></mrow></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">For <math id="p3.m1" class="ltx_Math" alttext="e\in E" display="inline"><mrow><mi>e</mi><mo>∈</mo><mi>E</mi></mrow></math>, define
+</p>
+</div>
+<div id="p4" class="ltx_para">
+<ul id="S0.I2" class="ltx_itemize">
+<li id="S0.I2.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I2.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I2.i1.p1.m1" class="ltx_Math" alttext="B(e)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be the number of binary operators in <math id="S0.I2.i1.p1.m2" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math></p>
+</div>
+</li>
+<li id="S0.I2.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S0.I2.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S0.I2.i2.p1.m1" class="ltx_Math" alttext="P(e)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be the number of parentheses in <math id="S0.I2.i2.p1.m2" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math></p>
+</div>
+</li>
+</ul>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Since the only binary operator that occurs, <math id="p5.m1" class="ltx_Math" alttext="B(e)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the number of occurrences of ’+’ in <math id="p5.m2" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>.</p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Define <math id="p6.m1" class="ltx_Math" alttext="Q(e)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></math>: <math id="p6.m2" class="ltx_Math" alttext="P(e)=2\cdot B(e)" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⋅</mo><mi>B</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Base cases</span></p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><math id="p8.m1" class="ltx_Math" alttext="P(x)=0" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="p8.m2" class="ltx_Math" alttext="B(x)=0" display="inline"><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, so <math id="p8.m3" class="ltx_Math" alttext="Q(x)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p"><math id="p9.m1" class="ltx_Math" alttext="P(y)=0" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="p9.m2" class="ltx_Math" alttext="B(y)=0" display="inline"><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, so <math id="p9.m3" class="ltx_Math" alttext="Q(y)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true</p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p"><math id="p10.m1" class="ltx_Math" alttext="P(z)=0" display="inline"><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="p10.m2" class="ltx_Math" alttext="B(z)=0" display="inline"><mrow><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, so <math id="p10.m3" class="ltx_Math" alttext="Q(z)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Inductive step</span></p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">Suppose <math id="p12.m1" class="ltx_Math" alttext="e_{1},e_{2}\in E" display="inline"><mrow><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><msub><mi>e</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>E</mi></mrow></math> and <math id="p12.m2" class="ltx_Math" alttext="Q(e_{1})" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="p12.m3" class="ltx_Math" alttext="Q(e_{2})" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math> are true. By
+the recursive rule, <math id="p12.m4" class="ltx_Math" alttext="e=(e_{1}+e_{2})\in E" display="inline"><mrow><mi>e</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>+</mo><msub><mi>e</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>E</mi></mrow></math>. We wish to prove that <math id="p12.m5" class="ltx_Math" alttext="Q(e)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+<div id="p13" class="ltx_para">
+<table id="S0.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex1"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex1.m1" class="ltx_Math" alttext="\displaystyle P(e)" display="inline"><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex1.m2" class="ltx_Math" alttext="\displaystyle=P((e_{1}+e_{2}))" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>+</mo><msub><mi>e</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex2.m1" class="ltx_Math" alttext="\displaystyle=2+P(e_{1})+P(e_{2})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>+</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex3.m1" class="ltx_Math" alttext="\displaystyle=2+2\cdot B(e_{1})+2\cdot B(e_{2})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>2</mn><mo>+</mo><mrow><mrow><mn>2</mn><mo>⋅</mo><mi>B</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mn>2</mn><mo>⋅</mo><mi>B</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p14" class="ltx_para">
+<table id="S0.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S0.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S0.Ex4.m1" class="ltx_Math" alttext="\displaystyle B(e)" display="inline"><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex4.m2" class="ltx_Math" alttext="\displaystyle=B((e_{1}+e_{2}))" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>+</mo><msub><mi>e</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S0.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S0.Ex5.m1" class="ltx_Math" alttext="\displaystyle=1+B(e_{1})+B(e_{2})" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>B</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="p15" class="ltx_para">
+<p class="ltx_p">Thus</p>
+</div>
+<div id="p16" class="ltx_para">
+<table id="S0.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S0.Ex6.m1" class="ltx_Math" alttext="P(e)=2\cdot B(e)," display="block"><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mn>2</mn><mo>⋅</mo><mi>B</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="p17" class="ltx_para">
+<p class="ltx_p">showing that <math id="p17.m1" class="ltx_Math" alttext="Q(e)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true.</p>
+</div>
+<div id="p18" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Conclusion</span> By structural induction, the predicate <math id="p18.m1" class="ltx_Math" alttext="Q(e)" display="inline"><mrow><mi>Q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>e</mi><mo stretchy="false">)</mo></mrow></mrow></math> is true
+for all <math id="p18.m2" class="ltx_Math" alttext="e\in E" display="inline"><mrow><mi>e</mi><mo>∈</mo><mi>E</mi></mrow></math>.</p>
+</div>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Jan 26 23:12:57 2023 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>
