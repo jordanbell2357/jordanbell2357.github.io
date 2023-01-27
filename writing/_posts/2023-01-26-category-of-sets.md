@@ -188,7 +188,7 @@ p. 33:
 
 # Section 10, "Inverses and Composites"
 
-p. 38:
+pp. 38-39:
 
 > A correspondence between the elements of $$X$$ and the elements of $$Y$$
 > does always induce a well-behaved correspondence between the subsets of
@@ -206,6 +206,49 @@ p. 38:
 > under $$f$$ of each non-empty subset of $$Y$$ be a non-empty subset of $$X$$. (Proof?)
 > A necessary and sufficient condition that $$f$$ be one-to-one is that the inverse
 > image under $$f$$ of each singleton in the range of $$f$$ be a singleton in $$X$$.
+>
+> If the last condition is satisfied, then the symbol $$f^{-1}$$ is frequently 
+> assigned a second interpretation, namely as the function whose domain is
+> the range of $$f$$, and whose value for each $$y$$ in the range of $$f$$ is the unique
+> $$x$$ in $$X$$ for which $$f(x) = y$$. In other words, for one-to-one functions $$f$$ we may write
+> $$f^{-1}(y)=x$$ if and only if $$f(x) = y$$. This use of the notation is
+> mildly inconsistent with our first interpretation of $$f^{-1}$$, but the double
+> meaning is not likely to lead to any confusion.
+
+pp. 39-40:
+
+> The discussion of inverses shows that what a function does can in a certain sense be undone;
+> the next thing we shall see is that what two functions
+> do can sometimes be done in one step. If, to be explicit, $$f$$ is a function
+> from $$X$$ to $$Y$$ and $$g$$ is a function from $$Y$$ to $$Z$$, then every element in the
+> range of $$f$$ belongs to the domain of $$g$$, and, consequently, $$g(f(x))$$ makes
+> sense for each $$x$$ in $$X$$. The function $$h$$ from $$X$$ to $$Z$$, defined by
+> $$h(x) = g(f(x))$$ is called the *composite* of the functions $$f$$ and $$g$$; it is denoted by
+> $$g \circ f$$ or, more simply, by $$gf$$. (Since we shall not have occasion to consider
+> any other kind of multiplication for functions, in this book we shall use
+> the latter, simpler notation only.)
+>
+> Observe that the order of events is important in the theory of functional
+> composition. In order that $$gf$$ be defined, the range of $$f$$ must be included
+> in the domain of $$g$$, and this can happen without it necessarily happening
+> in the other direction at the same time. Even if both $$fg$$ and $$gf$$ are defined,
+> which happens if, for instance, $$f$$ maps $$X$$ into $$Y$$ and $$g$$ maps $$Y$$ into $$X$$, the
+> functions $$fg$$ and $$gf$$ need not be the same; in other words, functional 
+> composition is not necessarily commutative.
+>
+> Functional composition may not be commutative, but it is always
+> associative. If $$f$$ maps $$X$$ into $$Y$$, if $$g$$ maps $$Y$$ into $$Z$$, and if
+> $$h$$ maps $$Z$$ into $$U$$, then we can form the composite of $$h$$ with $$gf$$
+> and the composite of $$hg$$ with $$f$$; it is a simple exercise to show that the result is the same in either case.
+>
+> The connection between inversion and composition is important; 
+> something like it crops up all over mathematics. If $$f$$ maps $$X$$ into $$Y$$
+> and $$g$$ maps $$Y$$ into $$Z$$, then $$f^{-1}$$ maps $\mathscr{P}(Y)$$ into $$\mathscr{P}(X)$$
+> and $$g^{-1}$$ maps $$\mathscr{P}(Z)$ into $$\mathscr{P}(Y)$$. In this situation, the composites that
+> are formable are $$gf$$ and $$f^{-1}g^{-1}$$; the assertion is that the latter is the inverse of the former.
+> Proof: if $$x \in (gf)^{-1}(C)$$, where $$x \in X$$ and $$C \subset Z$$, then
+> $$g(f(x)) \in C$$, so that $$f(x) \in g^{-1}(C)$$, and therefore
+> $$x \in f^{-1}(g^{-1}(C))$$; the steps of the argument are reversible.
 
 # Categories
 
