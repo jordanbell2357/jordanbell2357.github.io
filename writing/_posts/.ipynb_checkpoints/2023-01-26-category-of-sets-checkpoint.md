@@ -5,13 +5,13 @@ title: The category of sets
 
 Paul R. Halmos. *Naive Set Theory*. Van Nostrand Reinhold Company. 1960.`
 
-# Section 1, "The Axiom of Extension"
+# Section 1, "The Axiom of Extension" {#section1}
 
 p. 2:
 
 > **Axiom of extension.** Two sets are equal if and only if they have the same elements.
 
-# Section 2, "The Axiom of Specification"
+# Section 2, "The Axiom of Specification" {#section2}
 
 p. 6:
 
@@ -30,7 +30,7 @@ p. 6:
 
 In other words, in the above $$S(x)$$ is a **predicate**.
 
-# Section 3, "Unordered Pairs"
+# Section 3, "Unordered Pairs" {#section3}
 
 p. 9:
 
@@ -44,14 +44,14 @@ p. 10:
 > are very different sets; the former has no elements, whereas the latter has
 > the unique element $$\emptyset$$. To say that $$a \in A$$ is equivalent to saying that $$\{a\} \subset A$$.
 
-# Section 4, "Unions and Intersections"
+# Section 4, "Unions and Intersections" {#section4}
 
 p. 12:
 
 > **Axiom of unions.** For every collection of sets there exists a set that contains
 > all the elements that belong to at least one set of the given collection.
 
-# Section 5, "Complements and Powers"
+# Section 5, "Complements and Powers" {#section5}
 
 p. 19:
 
@@ -61,7 +61,7 @@ p. 19:
 For a set $$A$$, denote by $$\mathscr{P}(A)$$ the **power set of** $$A$$, the set whose elements are
 the subsets of $$A$$.
 
-# Section 6, "Ordered Pairs"
+# Section 6, "Ordered Pairs" {#section6}
 
 p. 23:
 
@@ -123,7 +123,7 @@ p. 25:
 > $$B \subset Y$$, then $$A \times B \subset X \times Y$$, and (provided
 > $$A \times B \neq \emptyset$$) conversely.
 
-# Section 7, "Relations"
+# Section 7, "Relations" {#section7}
 
 pp. 26-27:
 
@@ -160,7 +160,7 @@ p. 27:
 > it is sometimes convenient to say that $$R$$ is a relation *from* $$X$$ *to* $$Y$$;
 > instead of a relation from $$X$$ to $$X$$ we may speak of a relation *in* $$X$$.
 
-# Section 8, "Functions"
+# Section 8, "Functions" {#section8}
 
 p. 30:
 
@@ -186,7 +186,7 @@ p. 33:
 > whether $$Y$$ is empty or not, and (ii) if $$X$$ is not empty, then $$\emptyset^X$$
 > is empty.
 
-# Section 10, "Inverses and Composites"
+# Section 10, "Inverses and Composites" {#section10}
 
 pp. 38-39:
 
@@ -250,7 +250,7 @@ pp. 39-40:
 > $$g(f(x)) \in C$$, so that $$f(x) \in g^{-1}(C)$$, and therefore
 > $$x \in f^{-1}(g^{-1}(C))$$; the steps of the argument are reversible.
 
-# Categories
+# Categories {#categories}
 
 A category **C** comprises the following data: [^1] [^2]
 
@@ -298,7 +298,7 @@ $$\textrm{Obj}(\mathbf{Set})$$ is the class of sets.
 For each pair of sets $$X,Y$$, the class of morphisms
 $$\textrm{hom}_{\mathbf{Set}}(X,Y)$$ is the set of functions $$Y^X$$. [^small]
 
-From Halmos, Section 8, "Functions":
+From Halmos, [Section 8, "Functions"](#section8):
 
 > $$Y^\emptyset$$ has exactly one element, namely $$\emptyset$$,
 > whether $$Y$$ is empty or not, and (ii) if $$X$$ is not empty, then $$\emptyset^X$$
