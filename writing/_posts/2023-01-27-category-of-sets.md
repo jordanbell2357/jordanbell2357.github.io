@@ -308,25 +308,25 @@ For each triple of objects $$X,Y,Z$$, the composition
 
 $$\circ_{X,Y,Z}:Y^X \times Z^Z \to Z^X$$
 
-is
-
-<table>
-  <tr>
-    <th>X</th>
-    <th>Y</th>
-    <th>Z</th>
-    <th>\(\circ_{X,Y,Z}\)</th>
-  </tr>
-  <tr>
-    <td>not empty</td>
-    <td>not empty</td>
-    <td>not empty</td>
-  </tr>
-</table>
+## $$X \neq \emptyset, Y \neq \emptyset, Z \neq \emptyset$$
 
 $$
 \circ_{X,Y,Z}(f,g)(x) = g(f(x)),\quad (f,g) \in Y^X \times Z^Y, \quad x \in X.
 $$
+
+## $$X = \emptyset, Y \neq \emptyset, Z \neq \emptyset$$
+
+## $$X \neq \emptyset, Y = \emptyset, Z \neq \emptyset$$
+
+## $$X \neq \emptyset, Y \neq \emptyset, Z = \emptyset$$
+
+## $$X = \emptyset, Y = \emptyset, Z \neq \emptyset$$
+
+## $$X = \emptyset, Y \neq \emptyset, Z = \emptyset$$
+
+## $$X \neq \emptyset, Y = \emptyset, Z = \emptyset$$
+
+## $$X = \emptyset, Y = \emptyset, Z = \emptyset$$
 
 For each set $$X$$ that is not the empty set, the identity morphism $$\textrm{id}_X \in X^X$$ is
 
