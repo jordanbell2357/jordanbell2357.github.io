@@ -41,8 +41,5 @@ echo "(1/2 - 1/3) * 6" | bc -l
 1.00000000000000000002
 ```
 
-
-
-
-[^1]: [The Open Group Base Specifications Issue 7, 2018 edition](https://pubs.opengroup.org/onlinepubs/9699919799/)
+[^1]: [The Open Group Base Specifications Issue 7, 2018 edition. Copyright © 2001-2018 IEEE and The Open Group](https://pubs.opengroup.org/onlinepubs/9699919799/)
 
