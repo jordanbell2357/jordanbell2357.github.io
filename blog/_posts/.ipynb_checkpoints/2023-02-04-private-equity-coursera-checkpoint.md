@@ -11,7 +11,6 @@ title: Private Equity and Venture Capital by Università Bocconi
 
 ![XLSX Screenshot 2](/assets/images/posts/CEF2.png)
 
-![Closed End Fund](/assets/images/posts/Closed-End-Fund.png)
 
 ```bash
 gs -dNOPAUSE -dBATCH -dFirstPage=87 -dLastPage=87 -sDEVICE=pdfwrite -sOutputFile=Closed-End-Fund.pdf -f Slides-Week-2.pdf
@@ -29,3 +28,5 @@ convert -density 600 Closed-End-Fund.pdf -background white -flatten -resize 700x
 [^2]
 
 [^2]: [Annotated List of Command-line Options \| ImageMagick](https://imagemagick.org/script/command-line-options.php)
+
+![Closed End Fund](/assets/images/posts/Closed-End-Fund.png)
