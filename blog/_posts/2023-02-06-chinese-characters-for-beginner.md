@@ -213,6 +213,12 @@ title: Chinese Characters for beginner 汉字, by Peking University
     <td>yī wàn</td>
     <td>ten thousand</td>
   </tr>
+  <tr>
+    <td>80000</td>
+    <td>八万</td>
+    <td>bā wàn</td>
+    <td>eighty thousand</td>
+  </tr>
 </tbody>
 </table>
 
