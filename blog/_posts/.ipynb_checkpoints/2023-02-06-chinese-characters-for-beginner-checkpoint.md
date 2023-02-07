@@ -9,8 +9,6 @@ title: Chinese Characters for beginner 汉字, by Peking University
 
 <https://www.mdbg.net/chinese/dictionary?page=chardict>
 
-
-
 ---
 
 <table>
@@ -184,6 +182,36 @@ title: Chinese Characters for beginner 汉字, by Peking University
     <td>九十</td>
     <td>jiǔ shí</td>
     <td>ninety</td>
+  </tr>
+  <tr>
+    <td>100</td>
+    <td>一百</td>
+    <td>yī bǎi</td>
+    <td>one hundred</td>
+  </tr>
+  <tr>
+    <td>300</td>
+    <td>三百</td>
+    <td>sān bǎi</td>
+    <td>three hundred</td>
+  </tr>
+  <tr>
+    <td>1000</td>
+    <td>一千</td>
+    <td>yī qiān</td>
+    <td>one thousand</td>
+  </tr>
+  <tr>
+    <td>5000</td>
+    <td>五千</td>
+    <td>wǔ qiān</td>
+    <td>one thousand</td>
+  </tr>
+  <tr>
+    <td>10000</td>
+    <td>一万</td>
+    <td>yī wàn</td>
+    <td>ten thousand</td>
   </tr>
 </tbody>
 </table>
