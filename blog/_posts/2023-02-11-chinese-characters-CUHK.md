@@ -25,7 +25,7 @@ title: "漢語多功能字庫 Multi-function Chinese Character Database: With Ar
   <tr>
     <td>3</td>
     <td>三</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=三"><img src="/assets/CHANT/CHANT4166.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=三"><img src="/assets/CHANT/CHANT9686.jfif"></a></td>
   </tr>
   <tr>
     <td>4</td>
@@ -83,7 +83,11 @@ title: "漢語多功能字庫 Multi-function Chinese Character Database: With Ar
 
 [^CUHK]
 
-[^CUHK]: [漢語多功能字庫 Multi-function Chinese Character Database: With Archaic Script Forms \| Research Centre for Humanities Computing, CUHK](https://humanum.arts.cuhk.edu.hk//Lexis/lexi-mf/) Copyright © Research Centre for Humanities Computing (RCHC), CUHK. 
+[^CUHK]: [漢語多功能字庫 Multi-function Chinese Character Database: With Archaic Script Forms \| Research Centre for Humanities Computing, CUHK](https://humanum.arts.cuhk.edu.hk//Lexis/lexi-mf/) Copyright © Research Centre for Humanities Computing (RCHC), CUHK.
+
+[^CHANT]
+
+[^CHANT]: [CHANT Database \| Copyright © 2021 D.C. Lau Research Centre for Chinese Ancient Texts. All Rights Reserved.](https://www.cuhk.edu.hk/ics/rccat/en/database.html)
 
 [^sinica]
 
