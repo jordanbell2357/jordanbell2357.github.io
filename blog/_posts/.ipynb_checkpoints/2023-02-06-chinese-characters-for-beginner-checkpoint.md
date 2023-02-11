@@ -231,7 +231,7 @@ title: Chinese Characters for beginner 汉字, by Peking University
   <tr>
     <th>Number</th>
     <th>hanzi</th>
-    <th>Multi-function Chinese Character Database, RCHC CUHK</th>
+    <th>Bronze Script Characters, 漢語多功能字庫, RCHC CUHK</th>
   </tr>
 </thead>
 <tbody>
