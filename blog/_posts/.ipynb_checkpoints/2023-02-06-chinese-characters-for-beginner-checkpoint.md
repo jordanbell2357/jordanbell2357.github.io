@@ -222,6 +222,27 @@ title: Chinese Characters for beginner 汉字, by Peking University
 </tbody>
 </table>
 
+<table>
+<thead>
+  <tr>
+    <th>Number</th>
+    <th>hanzi</th>
+    <th>CHANT</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>4</td>
+    <td>四</td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=四"><img src="/assets/CHANT/CHANT4166.jfif"></a></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>五</td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=五"><img src="/assets/CHANT/CHANT3026.jfif"></a></td>
+  </tr>
+</tbody>
+</table>
 
 ---
 
