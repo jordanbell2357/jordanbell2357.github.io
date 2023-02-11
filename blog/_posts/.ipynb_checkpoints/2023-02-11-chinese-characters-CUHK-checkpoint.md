@@ -93,11 +93,3 @@ title: "漢語多功能字庫 Multi-function Chinese Character Database: With Ar
 
 [^sinica]: [Multi-database Search System for Historical Chinese Characters \| Institute of History and Philology, Academia Sinica](https://wcd-ihp.ascdc.sinica.edu.tw/union/en/index.php)
 
-[^characters]
-
-[^characters]: [Chinese-Characters.org](http://www.chinese-characters.org/)
-
-[^hanziyuan]
-
-[^hanziyuan]: [Chinese Etymology 字源 \| hanziyuan.net](https://hanziyuan.net/#)
-
