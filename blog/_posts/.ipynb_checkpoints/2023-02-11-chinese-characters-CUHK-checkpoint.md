@@ -13,6 +13,21 @@ title: "漢語多功能字庫 Multi-function Chinese Character Database: With Ar
 </thead>
 <tbody>
   <tr>
+    <td>1</td>
+    <td>一</td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=一"><img src="/assets/CHANT/CHANT788.jfif"></a></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>二</td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=二"><img src="/assets/CHANT/CHANT12037.jfif"></a></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>三</td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=三"><img src="/assets/CHANT/CHANT4166.jfif"></a></td>
+  </tr>
+  <tr>
     <td>4</td>
     <td>四</td>
     <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=四"><img src="/assets/CHANT/CHANT4166.jfif"></a></td>
