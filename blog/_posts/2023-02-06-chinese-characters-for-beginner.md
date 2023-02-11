@@ -243,12 +243,7 @@ title: Chinese Characters for beginner 汉字, by Peking University
   <tr>
     <td>5</td>
     <td>五</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=五"><img src="/assets/CHANT/CHANT3026.jfif"></a></td>
-  </tr>
-  <tr>
-    <td>5</td>
-    <td>五</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=五"><img src="/assets/CHANT/CHANT10353.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=五"><img src="/assets/CHANT/CHANT3026.jfif"></a> <a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=五"><img src="/assets/CHANT/CHANT10353.jfif"></a></td>
   </tr>
   <tr>
     <td>6</td>
@@ -268,12 +263,7 @@ title: Chinese Characters for beginner 汉字, by Peking University
   <tr>
     <td>9</td>
     <td>九</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=九"><img src="/assets/CHANT/CHANT9726.jfif"></a></td>
-  </tr>
-  <tr>
-    <td>9</td>
-    <td>九</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=九"><img src="/assets/CHANT/CHANT9693.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=九"><img src="/assets/CHANT/CHANT9726.jfif"></a> <a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=九"><img src="/assets/CHANT/CHANT9693.jfif"></a></td>
   </tr>
   <tr>
     <td>10</td>
