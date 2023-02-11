@@ -238,59 +238,67 @@ title: Chinese Characters for beginner 汉字, by Peking University
   <tr>
     <td>4</td>
     <td>四</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk//Lexis/lexi-mf/bronzePiece.php?piece=四"><img src="/assets/CHANT/CHANT4166.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=四"><img src="/assets/CHANT/CHANT4166.jfif"></a></td>
   </tr>
   <tr>
     <td>5</td>
     <td>五</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=五"><img src="/assets/CHANT/CHANT3026.jfif"></a> <br> <a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=五"><img src="/assets/CHANT/CHANT10353.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=五"><img src="/assets/CHANT/CHANT3026.jfif"></a> <br> <a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=五"><img src="/assets/CHANT/CHANT10353.jfif"></a></td>
   </tr>
   <tr>
     <td>6</td>
     <td>六</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=六"><img src="/assets/CHANT/CHANT4047.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=六"><img src="/assets/CHANT/CHANT4047.jfif"></a></td>
   </tr>
   <tr>
     <td>7</td>
     <td>七</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=七"><img src="/assets/CHANT/CHANT2821.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=七"><img src="/assets/CHANT/CHANT2821.jfif"></a></td>
   </tr>
   <tr>
     <td>8</td>
     <td>八</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=八"><img src="/assets/CHANT/CHANT106.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=八"><img src="/assets/CHANT/CHANT106.jfif"></a></td>
   </tr>
   <tr>
     <td>9</td>
     <td>九</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=九"><img src="/assets/CHANT/CHANT9726.jfif"></a> <br> <a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=九"><img src="/assets/CHANT/CHANT9693.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=九"><img src="/assets/CHANT/CHANT9726.jfif"></a> <br> <a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=九"><img src="/assets/CHANT/CHANT9693.jfif"></a></td>
   </tr>
   <tr>
     <td>10</td>
     <td>十</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=十"><img src="/assets/CHANT/CHANT114.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=十"><img src="/assets/CHANT/CHANT114.jfif"></a></td>
   </tr>
   <tr>
     <td>100</td>
     <td>百</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=百"><img src="/assets/CHANT/CHANT4235.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=百"><img src="/assets/CHANT/CHANT4235.jfif"></a></td>
   </tr>
   <tr>
     <td>1000</td>
     <td>千</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=千"><img src="/assets/CHANT/CHANT2768.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=千"><img src="/assets/CHANT/CHANT2768.jfif"></a></td>
   </tr>
   <tr>
     <td>10000</td>
     <td>万</td>
-    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/bronzePiece.php?piece=万"><img src="/assets/CHANT/CHANT11267.jfif"></a></td>
+    <td><a href="https://humanum.arts.cuhk.edu.hk/Lexis/lexi-mf/search.php?word=万"><img src="/assets/CHANT/CHANT11267.jfif"></a></td>
   </tr>
 </tbody>
 </table>
 
 ---
 
-<https://wcd-ihp.ascdc.sinica.edu.tw/union/en/index.php>
+[^sinica]
 
-<http://chinese-characters.org/>
+[^sinica]: [Multi-database Search System for Historical Chinese Characters \| Institute of History and Philology, Academia Sinica](https://wcd-ihp.ascdc.sinica.edu.tw/union/en/index.php)
+
+[^characters]
+
+[^characters]: [Chinese-Characters.org](http://www.chinese-characters.org/)
+
+[^hanziyuan]
+
+[^hanziyuan]: [Chinese Etymology 字源 \| hanziyuan.net](https://hanziyuan.net/#)
 
