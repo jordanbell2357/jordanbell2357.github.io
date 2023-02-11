@@ -222,9 +222,7 @@ title: Chinese Characters for beginner 汉字, by Peking University
 </tbody>
 </table>
 
-[^CUHK]
 
-[^CUHK]: [漢語多功能字庫 Multi-function Chinese Character Database: With Archaic Script Forms \| Research Centre for Humanities Computing, CUHK](https://humanum.arts.cuhk.edu.hk//Lexis/lexi-mf/) Copyright © Research Centre for Humanities Computing (RCHC), CUHK. 
 
 <table>
 <thead>
@@ -288,7 +286,10 @@ title: Chinese Characters for beginner 汉字, by Peking University
 </tbody>
 </table>
 
----
+
+[^CUHK]
+
+[^CUHK]: [漢語多功能字庫 Multi-function Chinese Character Database: With Archaic Script Forms \| Research Centre for Humanities Computing, CUHK](https://humanum.arts.cuhk.edu.hk//Lexis/lexi-mf/) Copyright © Research Centre for Humanities Computing (RCHC), CUHK. 
 
 [^sinica]
 
