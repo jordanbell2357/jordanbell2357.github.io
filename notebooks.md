@@ -4,12 +4,6 @@ title: Notebooks
 permalink: /notebooks/
 ---
 
-## Visualizations
-
-{% for visualization in site.visualizations %}
-- [{{ visualization.title}}]({{ visualization.url }})
-{% endfor %}
-
 ## R notebooks
 
 Transforming and visualizing public datasets of geospatial and time series data.
