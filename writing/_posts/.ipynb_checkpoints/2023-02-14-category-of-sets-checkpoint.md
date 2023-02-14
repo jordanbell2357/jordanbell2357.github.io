@@ -334,17 +334,18 @@ $$
 
 ## $$X = \emptyset, Y = \emptyset, Z = \emptyset$$
 
-For each set $$X$$ that is not the empty set, the identity morphism $$\textrm{id}_X \in X^X$$ is
+For each set $$X$$ that is not empty, the identity morphism $$\textrm{id}_X \in X^X$$ is
 
 $$
 \textrm{id}_X(x) = x, \quad x \in X.
 $$
 
-# Theorem: **Set** is a category.
+When $$X$$ is empty,
 
-# Proof
+$$
+\id_\emptyset = \emptyset \in \emptyset^\emptyset.
+$$
 
-## ∎
 
 
 [^small]: When for each pair of objects $$X,Y$$ it holds that the class of morphisms $$\textrm{hom}_{\mathbf{C}}(X,Y)$$ is a **set**, the category **C** is called **locally small**. See [locally small category in nLab](https://ncatlab.org/nlab/show/locally+small+category)
