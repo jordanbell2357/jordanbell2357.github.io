@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Formal language theory
+title: Formal languages
 ---
 
 The empty set $$\emptyset$$ is an **initial object** in the category of sets:
@@ -66,15 +66,13 @@ We call $$\epsilon_A$$ the **empty word** over the alphabet $$A$$.
 
 
 
-<https://royalsocietypublishing.org/doi/10.1098/rstb.2012.0077>
+
 
 
 <https://cs.lmu.edu/~ray/notes/languagetheory/>
 
 
 <https://opendsa-server.cs.vt.edu/OpenDSA/Books/PIFLAS22/html/index.html>
-
-<https://www.csm.ornl.gov/~sheldon/ds/>
 
 <https://ncatlab.org/nlab/show/free+monoid>
 
@@ -83,3 +81,8 @@ We call $$\epsilon_A$$ the **empty word** over the alphabet $$A$$.
 
 
 <https://icsatkcc.github.io/Discrete-Math-for-Computer-Science/s-free-monoids-and-languages.html>
+
+
+---
+
+<https://royalsocietypublishing.org/doi/10.1098/rstb.2012.0077>
