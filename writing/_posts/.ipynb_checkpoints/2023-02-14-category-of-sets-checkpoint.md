@@ -324,15 +324,27 @@ $$
 
 ## $$X \neq \emptyset, Y = \emptyset, Z \neq \emptyset$$
 
+...
+
 ## $$X \neq \emptyset, Y \neq \emptyset, Z = \emptyset$$
+
+...
 
 ## $$X = \emptyset, Y = \emptyset, Z \neq \emptyset$$
 
+...
+
 ## $$X = \emptyset, Y \neq \emptyset, Z = \emptyset$$
+
+...
 
 ## $$X \neq \emptyset, Y = \emptyset, Z = \emptyset$$
 
+...
+
 ## $$X = \emptyset, Y = \emptyset, Z = \emptyset$$
+
+...
 
 For each set $$X$$ that is not empty, the identity morphism $$\textrm{id}_X \in X^X$$ is
 
@@ -343,7 +355,7 @@ $$
 When $$X$$ is empty,
 
 $$
-\id_\emptyset = \emptyset \in \emptyset^\emptyset.
+\mathrm{id}_\emptyset = \emptyset \in \emptyset^\emptyset.
 $$
 
 
