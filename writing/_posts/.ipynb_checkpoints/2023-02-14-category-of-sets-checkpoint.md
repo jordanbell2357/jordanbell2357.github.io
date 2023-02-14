@@ -311,10 +311,16 @@ $$\circ_{X,Y,Z}:Y^X \times Z^Z \to Z^X$$
 ## $$X \neq \emptyset, Y \neq \emptyset, Z \neq \emptyset$$
 
 $$
-\circ_{X,Y,Z}(f,g)(x) = g(f(x)),\quad (f,g) \in Y^X \times Z^Y, \quad x \in X.
+\circ_{X,Y,Z}(f,g)(x) = g(f(x)),\quad f \in Y^X, g \in Z^Y, \quad x \in X.
 $$
 
 ## $$X = \emptyset, Y \neq \emptyset, Z \neq \emptyset$$
+
+$$Y^X=\{\emptyset\}$$
+
+$$
+\circ_{X,Y,Z}(\emptyset,g) = \emptyset, \quad g \in Z^Y.
+$$
 
 ## $$X \neq \emptyset, Y = \emptyset, Z \neq \emptyset$$
 
