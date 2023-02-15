@@ -81,8 +81,3 @@ We call $$\epsilon_A$$ the **empty word** over the alphabet $$A$$.
 
 
 <https://icsatkcc.github.io/Discrete-Math-for-Computer-Science/s-free-monoids-and-languages.html>
-
-
----
-
-<https://royalsocietypublishing.org/doi/10.1098/rstb.2012.0077>
