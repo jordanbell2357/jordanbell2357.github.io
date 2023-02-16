@@ -1,9 +1,7 @@
 ---
 layout: post
-title: Chinese Characters for beginner 汉字, by Peking University
+title: Chinese characters for numbers
 ---
-
-<https://www.coursera.org/learn/hanzi>
 
 <https://www.qhanzi.com/>
 
