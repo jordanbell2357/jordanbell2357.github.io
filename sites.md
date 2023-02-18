@@ -8,10 +8,6 @@ Topics
 
 - [Submarine fiber optic cables](https://sites.google.com/view/submarine-fiber-optic-cables)
 
-Course excerpts
-
-- [Introduction to Psychology \| Coursera](https://sites.google.com/view/introduction-psychology-course)
-
 Artifacts
 
 - [Gold Relics from Greater China](https://sites.google.com/jordanbell.info/gold-relics-china/home)
