@@ -1,9 +1,11 @@
 ---
 layout: post
-title: Continued fractions and quadratic irrationals
+title: Continued fractions in Sage
 ---
 
-[Sage Cell Server](https://sagecell.sagemath.org/?z=eJxLzs8rycwrTU2JTytKTC7JzM_TKC4sKtEwNNHUBACj5QpQ&lang=sage&interacts=eJyLjgUAARUAuQ==)
+[Continued fractions - Diophantine approximation \| Sage Reference Manual](https://doc.sagemath.org/html/en/reference/diophantine_approximation/sage/rings/continued_fraction.html)
+
+[SageMathCell](https://sagecell.sagemath.org/?z=eJxLzs8rycwrTU2JTytKTC7JzM_TKC4sKtEwNNHUBACj5QpQ&lang=sage&interacts=eJyLjgUAARUAuQ==)
 
 `continued_fraction(sqrt(2))`
 
@@ -117,4 +119,26 @@ title: Continued fractions and quadratic irrationals
 
 ```
 [4; 1, 3, 1, 8, 1, 3, 1, 8, 1, 3, 1, 8, 1, 3, 1, 8, 1, 3, 1, ...]
+```
+
+---
+
+[SageMathCell](https://sagecell.sagemath.org/?z=eJxLzs8rycwrTU2JTytKTC7JzM_TKC4sKtEwNNHUBACj5QpQ&lang=sage&interacts=eJyLjgUAARUAuQ==)
+
+`continued_fraction((1+sqrt(5))/2)`
+
+```
+[1; 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, ...]
+```
+
+`continued_fraction((1+sqrt(13))/2)`
+
+```
+[2; 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, ...]
+```
+
+`continued_fraction((1+sqrt(17))/2)`
+
+```
+[2; 1, 1, 3, 1, 1, 3, 1, 1, 3, 1, 1, 3, 1, 1, 3, 1, 1, 3, 1, ...]
 ```
