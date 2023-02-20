@@ -28,15 +28,23 @@ plt.title(r'$m \mapsto \frac{1}{m \log m}\displaystyle \sum_{j=1}^m \frac{1}{\ve
 plt.savefig('m20000_40000.png', dpi=300)
 ```
 
-Let $$\norm{x}$$ be the distance from $$x \in \mathbb{R}$$ to $$\mathbb{Z}$$, that is,
+Let $$\vert \vert x \vert \vert$$ be the distance from $$x \in \mathbb{R}$$ to $$\mathbb{Z}$$, that is,
 the distance from $$x$$ to the nearest integer.
 
-$$\norm{x}$$ = `int_dist(x)`
+$$\vert \vert x \vert \vert$$ = `int_dist(x)`
+
+![Golden ratio](/python/m5000_40000_g.png)
 
 ![Golden ratio](/python/m20000_40000_g.png)
 
+![√ 5](/python/m5000_40000_sqrt_5.png)
+
 ![√ 5](/python/m20000_40000_sqrt_5.png)
 
+![√ 5 divided by 2](/python/m5000_40000_sqrt_5_div_2.png)
+
 ![√ 5 divided by 2](/python/m20000_40000_sqrt_5_div_2.png)
+
+![√ 17](/python/m5000_40000_sqrt_17.png)
 
 ![√ 17](/python/m20000_40000_sqrt_17.png)
