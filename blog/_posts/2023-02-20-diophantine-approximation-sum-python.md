@@ -1,0 +1,37 @@
+---
+layout: post
+title: Diophantine approximation sum plots
+---
+
+```python3
+import math
+import matplotlib.pyplot as plt
+
+def int_dist(x):
+    return abs(x - round(x))
+
+def f(m, x):
+    return 1/(m*math.log(m)) * sum([1 / int_dist(j*x) for j in range(1,m+1)])
+```
+
+```python3
+X20000_40000 = range(20000,40000+1)
+
+Y20000_40000_g = [f(m,(-1+math.sqrt(5))/2) for m in range(20000,40000+1)]
+```
+
+```python3
+plt.rcParams['text.usetex'] = True
+plt.plot(X20000_40000, Y20000_40000)
+plt.xlabel(r'$m$')
+plt.title(r'$m \mapsto \frac{1}{m \log m}\displaystyle \sum_{j=1}^m \frac{1}{\vert \vert jx \vert \vert}$ for $x=\frac{-1+\sqrt{5}}{2}$')
+plt.savefig('m20000_40000.png', dpi=300)
+```
+
+![Golden ratio](/python/m20000_40000_g.png)
+
+![√ 5](/python/m20000_40000_sqrt_5.png)
+
+![√ 5 divided by 2](/python/m20000_40000_sqrt_5_div_2.png)
+
+![√ 17](/python/m20000_40000_sqrt_17.png)
