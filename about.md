@@ -1,11 +1,12 @@
 ---
 layout: page
-title: CV
-permalink: /CV/
+title: About
+permalink: /about/
 ---
 
+[CV PDF](/LaTeX/CV/cv_bell.pdf)
+
 - [Employment](#employment)
-- [CV PDF](#cv-pdf)
 - [Education](#education)
 - [Awards](#awards)
 - [Service](#service)
@@ -18,10 +19,6 @@ permalink: /CV/
 June 2022 - Present
 
 ![Data Science Associate, Network Performance, Canadian Tire Corp](/assets/images/J_Bell.png)
-
-## CV PDF {#cv-pdf}
-
-[CV](/LaTeX/CV/cv_bell.pdf)
 
 ## Education {#education}
 
