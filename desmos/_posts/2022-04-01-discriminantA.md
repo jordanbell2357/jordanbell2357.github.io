@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Discriminant, vertex form and factored form
-math: 2x^2+x-1
+math: $$2x^2+x-1$$
 ---
 
 [Discriminant, vertex form and factored form for \\(2x^2+x-1\\)](https://www.desmos.com/calculator/zag6xxbayi)

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Riemann sums
-math: 2^{x}
+math: $$2^{x}$$
 ---
 
 [Riemann sums for \\(2^{x}\\)](https://www.desmos.com/calculator/ifa9pxlpor)

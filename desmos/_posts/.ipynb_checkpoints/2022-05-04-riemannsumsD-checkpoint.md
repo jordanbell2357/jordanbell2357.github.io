@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Riemann sums
-math: \prod_{k=1}^K\vert \sin(kx)\vert
+math: $$\prod_{k=1}^K\vert \sin(kx)\vert$$
 ---
 
 [Riemann sums for \\(\prod_{k=1}^K\vert \sin(kx)\vert\\)](https://www.desmos.com/calculator/l8utnpxrqq)
