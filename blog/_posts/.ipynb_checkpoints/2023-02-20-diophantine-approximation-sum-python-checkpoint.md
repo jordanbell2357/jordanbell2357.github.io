@@ -49,11 +49,17 @@ $$\vert \vert x \vert \vert$$ = `int_dist(x)`
 
 ![√ 5](/python/m20000_40000_sqrt_5.png)
 
+![√ 6](/python/m5000_40000_sqrt_6.png)
+
 ![√ 7](/python/m5000_40000_sqrt_7.png)
+
+![√ 10](/python/m5000_40000_sqrt_10.png)
 
 ![√ 11](/python/m5000_40000_sqrt_11.png)
 
 ![√ 13](/python/m5000_40000_sqrt_13.png)
+
+![√ 15](/python/m5000_40000_sqrt_15.png)
 
 ![√ 17](/python/m5000_40000_sqrt_17.png)
 
