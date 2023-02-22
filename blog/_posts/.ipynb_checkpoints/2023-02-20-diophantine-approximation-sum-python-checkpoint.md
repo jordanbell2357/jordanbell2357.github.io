@@ -37,16 +37,30 @@ $$\vert \vert x \vert \vert$$ = `int_dist(x)`
 
 ![Golden ratio](/python/m20000_40000_g.png)
 
-![√ 5](/python/m5000_40000_sqrt_5.png)
-
-![√ 5](/python/m20000_40000_sqrt_5.png)
-
 ![√ 5 divided by 2](/python/m5000_40000_sqrt_5_div_2.png)
 
 ![√ 5 divided by 2](/python/m20000_40000_sqrt_5_div_2.png)
 
+![√ 2](/python/m5000_40000_sqrt_2.png)
+
+![√ 3](/python/m5000_40000_sqrt_3.png)
+
+![√ 5](/python/m5000_40000_sqrt_5.png)
+
+![√ 5](/python/m20000_40000_sqrt_5.png)
+
+![√ 7](/python/m5000_40000_sqrt_7.png)
+
+![√ 11](/python/m5000_40000_sqrt_11.png)
+
+![√ 13](/python/m5000_40000_sqrt_13.png)
+
 ![√ 17](/python/m5000_40000_sqrt_17.png)
 
 ![√ 17](/python/m20000_40000_sqrt_17.png)
+
+![√ 19](/python/m5000_40000_sqrt_19.png)
+
+![√ 23](/python/m5000_40000_sqrt_23.png)
 
 ![e](/python/m20000_40000_e.png)
