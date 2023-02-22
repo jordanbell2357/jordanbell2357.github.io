@@ -9,7 +9,7 @@ permalink: /examples/
 - [Geogebra](#geogebra)
 - [WebQuiz](#webquiz)
 
-## Examples {#exmaples}
+## Examples {#examples}
 
 <ol class="spaced_list">
   {% for post in site.categories.examples %}
