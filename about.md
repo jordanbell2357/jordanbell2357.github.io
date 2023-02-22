@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-[CV PDF](/LaTeX/CV/cv_bell.pdf)
+[PDF of my CV](/LaTeX/CV/cv_bell.pdf)
 
 - [Employment](#employment)
 - [Education](#education)

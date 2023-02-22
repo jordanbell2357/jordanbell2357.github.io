@@ -4,7 +4,7 @@ title: Examples
 permalink: /examples/
 ---
 
-- [Examples](#exmaples)
+- [Examples](#examples)
 - [Desmos](#desmos)
 - [Geogebra](#geogebra)
 - [WebQuiz](#webquiz)
@@ -19,7 +19,7 @@ permalink: /examples/
   {% endfor %}
 </ol>
 
-## Desmos {#demos}
+## Desmos {#desmos}
 
 <ol class="spaced_list">
   {% for post in site.categories.desmos %}
