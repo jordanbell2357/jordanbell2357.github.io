@@ -4,75 +4,22 @@ title: Examples
 permalink: /examples/
 ---
 
-{% assign roots = site.examples | where: "topic", "roots" %}
+- [Examples](#exmaples)
+- [Desmos](#desmos)
+- [Geogebra](#geogebra)
+- [WebQuiz](#webquiz)
 
-{% assign factors = site.examples | where: "topic", "factors" %}
+## Examples {#exmaples}
 
-{% assign intersections = site.examples | where: "topic", "intersections" %}
+<ol class="spaced_list">
+  {% for post in site.categories.examples %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }} \({{ post.math}}\)</a> {{ post.date | date_to_long_string }}
+    </li>
+  {% endfor %}
+</ol>
 
-{% assign vertex = site.examples | where: "topic", "vertex" %}
-
-{% assign directrix = site.examples | where: "topic", "directrix" %}
-
-{% assign focus = site.examples | where: "topic", "focus" %}
-
-{% assign curvature = site.examples | where: "topic", "curvature" %}
-
-{% assign rational = site.examples | where: "topic", "rational" %}
-
-{% assign gm = site.examples | where: "topic", "gm" %}
-
-{% assign euler = site.examples | where: "topic", "euler" %}
-
-## Factors of quadratic polynomials
-
-{% for example in factors %}
-1. [{{example.title}} {{example.math}}]({{ example.url }})
-{% endfor %}
-
-## Roots of quadratic polynomials
-
-{% for example in roots %}
-1. [{{example.title}} {{example.math}}]({{ example.url }})
-{% endfor %}
-
-## Vertex form for quadratic polynomials
-
-{% for example in vertex %}
-1. [{{example.title}} {{example.math}}]({{ example.url }})
-{% endfor %}
-
-## Focus and directrix of parabolas
-
-{% for example in directrix %}
-1. [{{example.title}}]({{ example.url }})
-{% endfor %}
-
-## Intersections
-
-{% for example in intersections %}
-1. [{{example.title}}]({{ example.url }})
-{% endfor %}
-
-## Parabolas and reflection
-
-{% for example in focus %}
-1. [{{example.title}}]({{ example.url }})
-{% endfor %}
-
-## Radius of curvature of parabolas
-
-{% for example in curvature %}
-1. [{{example.title}}]({{ example.url }})
-{% endfor %}
-
-## Rational expressions
-
-{% for example in rational %}
-1. [{{example.title}} {{example.math}}]({{ example.url }})
-{% endfor %}
-
-## Desmos
+## Desmos {#demos}
 
 <ol class="spaced_list">
   {% for post in site.categories.desmos %}
@@ -82,26 +29,20 @@ permalink: /examples/
   {% endfor %}
 </ol>
 
-## GeoGebra
+## GeoGebra {#geogebra}
 
 <ol class="spaced_list">
   {% for post in site.categories.geogebra %}
     <li>
-      <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date_to_long_string }}
+      <a href="{{ post.url }}">{{ post.title }} \({{ post.math }}\)</a> {{ post.date | date_to_long_string }}
     </li>
   {% endfor %}
 </ol>
 
-## WebQuiz
+## WebQuiz {#webquiz}
 
 1. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq1.html)
 
 1. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq2.html)
 
 1. [Systems of linear equations](https://jordanbell.info/WebQuiz/wq3.html)
-
-## Graspable Math
-
-{% for exercise in gm %}
-1. [{{ exercise.title}}]({{ exercise.url }})
-{% endfor %}
