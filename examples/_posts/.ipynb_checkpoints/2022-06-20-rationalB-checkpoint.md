@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Rational expression
-math: \\(\frac{1}{4x+1}-\frac{1}{3}+\frac{1}{2x-3}\\)
+math: \frac{1}{4x+1}-\frac{1}{3}+\frac{1}{2x-3}
 topic: rational
 ---
 

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Quadratic formula
-math: \\(4x^2+4x-7\\)
+math: 4x^2+4x-7
 topic: roots
 ---
 
