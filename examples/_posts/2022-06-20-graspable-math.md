@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fractions and variables
+title: Graspable Math
 topic: gm
 ---
 
