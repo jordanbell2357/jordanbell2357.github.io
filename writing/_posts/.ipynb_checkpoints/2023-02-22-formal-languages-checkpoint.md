@@ -42,13 +42,31 @@ $$A^{[0]} = A^\emptyset = \{\epsilon_A\},$$
 so the unique word over $$A$$ of length 0 is $$\epsilon_A$$.
 We call $$\epsilon_A$$ the **empty word** over the alphabet $$A$$.
 
-If $$x \in A^{[m}]$$ and $$y \in A^{[n]}$$, define the **composition** $$xy \in A^{[m+n]}$$ by
+If $$N$$ is an empty set, then as we have stated above, $$\emptyset^N = \{\emptyset\}$$.
+If $$N$$ is a nonempty set, then $$\emptyset^N = \emptyset$$. Thus, if the alphabet $$A$$ is empty, then
+$$A^{[n]\}=\emptyset$$ for $$n > 0$$.
 
-$$(xy)(i) = \begin{cases}
+If $$x \in A^{[m}]$$ and $$y \in A^{[n]}$$, define the **composition** $$x*y \in A^{[m+n]}$$ by
+
+$$(x*y)(i) = \begin{cases}
 x(i)&i \in [m]\\
 y(i-m)&i \in [m,m+n]
 \end{cases},
 \quad i \in [m+n]$$
+
+Define
+
+$$A^* = \bigcup_{n \in \mathbb{N}} A^{[n]}.$$
+
+The sets in this union are pairwise disjoint; this is true whether or not the alphabet $$A$$ is empty,
+according to separate reasons.
+If the alphabet $$A$$ is empty,
+then $$A^{[0]}=\{\epsilon_A\}$$, and $$A^{[n]}=\emptyset$$ for $$n>0$$; and in this case
+the sets are indeed pairwise disjoint. If the alphabet $$A$$ is nonempty, then
+a word of some length is not a word of any other length, so in this case the sets are
+pairwise disjoint.
+
+$$(A^*,*,\epsilon_A)$$ is the **free monoid on** $$A$$. [^2]
 
 
 
