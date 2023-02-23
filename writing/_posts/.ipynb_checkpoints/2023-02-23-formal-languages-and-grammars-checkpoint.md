@@ -5,12 +5,16 @@ title: Formal languages and grammars
 
 # Formal languages
 
-The empty set $$\emptyset$$ is an **initial object** in the category of sets **Sets**:
+The empty set $$\emptyset$$ is an **initial object** in the category of sets **Set**:
 for any set $$Y$$ there is a unique function $$\emptyset_Y:\emptyset \to Y$$. [^1]
 
 [^1]: [empty function in nLab](https://ncatlab.org/nlab/show/empty+function)
 
-For sets $$X$$ and $$Y$$, let $$Y^X$$ be the set of functions with domain $$X$$ and image contained in $$Y$$.
+For sets $$X$$ and $$Y$$, let
+
+$$\mathrm{hom}_{\mathbf{Set}}=Y^X$$
+
+be the set of functions with domain $$X$$ and image contained in $$Y$$.
 In particular, $$Y^\emptyset = \{\emptyset_Y\}$$.
 
 Let $$\mathbb{N}=\{0,1,2,\ldots\}$$. For $$n \in \mathbb{N}$$, define
@@ -107,6 +111,14 @@ $$L_1 * L_2 = \{x*y : x \in L_1, y \in L_2\} \subset A^*.$$
 
 $$L^* = \bigcup_{n \in \mathbb{N}} L^{[n]} \subset A^*.$$
 
+
+# Coproducts of sets
+
+Let $$X \coprod Y$$ be the coproduct of the sets $$X$$ and $$Y$$: say, [^coproduct]
+
+$$X \coprod Y = \{(1,x) : x \in X\} \cup \{(2,y) : y \in Y\}.$$
+
+[^coproduct]: [disjoint union in nLab](https://ncatlab.org/nlab/show/disjoint+union)
 
 
 # Formal grammars
