@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Formal languages and grammars
+title: Formal languages
 ---
 
 # Formal languages
@@ -12,7 +12,7 @@ for any set $$Y$$ there is a unique function $$\emptyset_Y:\emptyset \to Y$$. [^
 
 For sets $$X$$ and $$Y$$, let
 
-$$\mathrm{hom}_{\mathbf{Set}}=Y^X$$
+$$\mathrm{hom}_{\mathbf{Set}}(X,Y)=Y^X$$
 
 be the set of functions with domain $$X$$ and image contained in $$Y$$.
 In particular, $$Y^\emptyset = \{\emptyset_Y\}$$.
@@ -112,34 +112,12 @@ $$L_1 * L_2 = \{x*y : x \in L_1, y \in L_2\} \subset A^*.$$
 $$L^* = \bigcup_{n \in \mathbb{N}} L^{[n]} \subset A^*.$$
 
 
-# Coproducts of sets
-
-Let $$X \coprod Y$$ be the coproduct of the sets $$X$$ and $$Y$$: say, [^coproduct]
-
-$$X \coprod Y = \{(1,x) : x \in X\} \cup \{(2,y) : y \in Y\}.$$
-
-[^coproduct]: [disjoint union in nLab](https://ncatlab.org/nlab/show/disjoint+union)
-
-
-# Formal grammars
-
-
-
-
-
-# Regular languages
-
-
-
 ---
 
 <https://cs.lmu.edu/~ray/notes/languagetheory/>
 
 
 <https://opendsa-server.cs.vt.edu/OpenDSA/Books/PIFLAS22/html/index.html>
-
-
-<https://introcs.cs.princeton.edu/java/51language/>
 
 
 <https://icsatkcc.github.io/Discrete-Math-for-Computer-Science/s-free-monoids-and-languages.html>
