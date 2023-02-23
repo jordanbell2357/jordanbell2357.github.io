@@ -11,8 +11,6 @@ for any set $$Y$$ there is a unique function $$\emptyset_Y:\emptyset \to Y$$. [^
 For sets $$X$$ and $$Y$$, let $$Y^X$$ be the set of functions with domain $$X$$ and image contained in $$Y$$.
 In particular, $$Y^\emptyset = \{\emptyset_Y\}$$.
 
-
-
 Let $$\mathbb{N}=\{0,1,2,\ldots\}$$. For $$n \in \mathbb{N}$$, define
 
 $$[n] = \{i \in \mathbb{N} : i < n\}.$$
@@ -68,10 +66,30 @@ pairwise disjoint.
 
 $$(A^*,*,\epsilon_A)$$ is the **free monoid on** $$A$$. [^2]
 
+For $$x \in A^*$$, define $$\mathrm{len}(x)$$ to be the $$n$$ such that $$x \in A^{[n]}$$,
+the **length** of a word. [^3]
 
+[^3]: [list in nLab](https://ncatlab.org/nlab/show/list)
 
+If $$A$$ is an empty set, then $$A^*=\{\epsilon_A\}$$.
 
+If $$A$$ is a set with one element, say $$A=\{a\}$$, then for each $$n>0$$, the unique
+function $$[n] \to A$$ is $$i \mapsto a$$ for $$i \in [n]$$. Thus when $$A=\{a\}$$,
+it is the case that for $$n>0$$ the set $$A^{[n]}$$ has exactly one element, function
 
+$$i \mapsto a, \quad i \in [n],$$
+
+that is, the word
+
+$$\underbrace{a \cdots a}_{n}.$$
+
+If $$A=\{a\}$$ then $$x \mapsto \mathrm{len}(x)$$ is an isomorphism of monoids
+$$A^* \to \mathbb{N}$$.
+
+A **language over the alphabet** $$A$$ is any subset of
+the free monoid $$A^*$$ on $$A$$. [^4]
+
+[^4]: [formal grammar in nLab](https://ncatlab.org/nlab/show/formal+grammar)
 
 <https://cs.lmu.edu/~ray/notes/languagetheory/>
 
