@@ -42,7 +42,7 @@ We call $$\epsilon_A$$ the **empty word** over the alphabet $$A$$.
 
 If $$N$$ is an empty set, then as we have stated above, $$\emptyset^N = \{\emptyset\}$$.
 If $$N$$ is a nonempty set, then $$\emptyset^N = \emptyset$$. Thus, if the alphabet $$A$$ is empty, then
-$$A^{[n]\}=\emptyset$$ for $$n > 0$$.
+$$A^{[n]}=\emptyset$$ for $$n > 0$$.
 
 If $$x \in A^{[m}]$$ and $$y \in A^{[n]}$$, define the **composition** $$x*y \in A^{[m+n]}$$ by
 
