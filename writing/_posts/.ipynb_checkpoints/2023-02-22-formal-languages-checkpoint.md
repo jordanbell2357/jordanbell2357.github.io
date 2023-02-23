@@ -64,7 +64,9 @@ the sets are indeed pairwise disjoint. If the alphabet $$A$$ is nonempty, then
 a word of some length is not a word of any other length, so in this case the sets are
 pairwise disjoint.
 
-$$(A^*,*,\epsilon_A)$$ is the **free monoid on** $$A$$. [^2]
+$$(A^*,*,\epsilon_A)$$ is the **free monoid on** $$A$$. [^2] This is also called the **Kleene star of** $$A$$. [^Kleene]
+
+[^Kleene]: [Kleene star \| Wikipedia](https://en.wikipedia.org/wiki/Kleene_star)
 
 For $$x \in A^*$$, define $$\mathrm{len}(x)$$ to be the $$n$$ such that $$x \in A^{[n]}$$,
 the **length** of a word. [^3]
@@ -79,7 +81,7 @@ it is the case that for $$n>0$$ the set $$A^{[n]}$$ has exactly one element, fun
 
 $$i \mapsto a, \quad i \in [n],$$
 
-that is, the word
+that is, the unique word of length $$n$$ over $$A=\{a\}$$,
 
 $$\underbrace{a \cdots a}_{n}.$$
 
