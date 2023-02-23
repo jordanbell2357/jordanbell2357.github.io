@@ -89,7 +89,12 @@ $$A^* \to \mathbb{N}$$.
 A **language over the alphabet** $$A$$ is any subset of
 the free monoid $$A^*$$ on $$A$$. [^4]
 
-[^4]: [formal grammar in nLab](https://ncatlab.org/nlab/show/formal+grammar)
+[^4]: [Formal languages and automata. *Encyclopedia of Mathematics*](https://encyclopediaofmath.org/wiki/Formal_languages_and_automata)
+
+
+
+
+---
 
 <https://cs.lmu.edu/~ray/notes/languagetheory/>
 
