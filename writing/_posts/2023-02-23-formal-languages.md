@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Formal languages
+title: Formal languages and formal grammars
 ---
+
+# Formal languages
 
 The empty set $$\emptyset$$ is an **initial object** in the category of sets **Sets**:
 for any set $$Y$$ there is a unique function $$\emptyset_Y:\emptyset \to Y$$. [^1]
@@ -50,7 +52,7 @@ $$(x*y)(i) = \begin{cases}
 x(i)&i \in [m]\\
 y(i-m)&i \in [m,m+n]
 \end{cases},
-\quad i \in [m+n]$$
+\quad i \in [m+n].$$
 
 Define
 
@@ -93,6 +95,13 @@ the free monoid $$A^*$$ on $$A$$. [^4]
 
 [^4]: [Formal languages and automata. *Encyclopedia of Mathematics*](https://encyclopediaofmath.org/wiki/Formal_languages_and_automata)
 
+# Formal grammars
+
+
+
+
+
+# Regular languages
 
 
 
