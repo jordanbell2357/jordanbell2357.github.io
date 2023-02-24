@@ -3,12 +3,14 @@ layout: post
 title: Formal languages
 ---
 
-# Formal languages
+# Formal languages [^CS4114]
+
+[^CS4114]: [CS4114 Formal Languages and Automata: Spring 2022 \| OpenDSA Project](https://opendsa-server.cs.vt.edu/OpenDSA/Books/PIFLAS22/html/index.html)
 
 The empty set $$\emptyset$$ is an **initial object** in the category of sets **Set**:
-for any set $$Y$$ there is a unique function $$\emptyset_Y:\emptyset \to Y$$. [^1]
+for any set $$Y$$ there is a unique function $$\emptyset_Y:\emptyset \to Y$$. [^empty]
 
-[^1]: [empty function in nLab](https://ncatlab.org/nlab/show/empty+function)
+[^empty]: [empty function in nLab](https://ncatlab.org/nlab/show/empty+function)
 
 For sets $$X$$ and $$Y$$, let
 
@@ -35,9 +37,9 @@ Write $$\epsilon_A=\emptyset_A$$, the unique function
 $$\emptyset \to A$$. Thus $$A^\emptyset = \{\epsilon_A\}$$.
 
 A **word over the alphabet** $$A$$ **of length** $$n$$, $$n \in \mathbb{N}$$, is an element
-of $$A^{[n]}$$. [^2]
+of $$A^{[n]}$$. [^monoid]
 
-[^2]: [free monoid in nLab](https://ncatlab.org/nlab/show/free+monoid)
+[^monoid]: [free monoid in nLab](https://ncatlab.org/nlab/show/free+monoid)
 
 A word over $$A$$ of length 0 is an element of $$A^{[0]}$$, and
 
@@ -58,6 +60,8 @@ y(i-m)&i \in [m,m+n]
 \end{cases},
 \quad i \in [m+n].$$
 
+## Free monoid on a set [^monoid]
+
 Define
 
 $$A^* = \bigcup_{n \in \mathbb{N}} A^{[n]}.$$
@@ -70,14 +74,16 @@ the sets are indeed pairwise disjoint. If the alphabet $$A$$ is nonempty, then
 a word of some length is not a word of any other length, so in this case the sets are
 pairwise disjoint.
 
-$$(A^*,*,\epsilon_A)$$ is the **free monoid on** $$A$$. [^2] (This is also called the **Kleene star of** $$A$$. [^Kleene])
+$$(A^*,*,\epsilon_A)$$ is the **free monoid on** $$A$$. [^monoid] [^DM4CS] (This is also called the **Kleene star of** $$A$$. [^Kleene])
 
 [^Kleene]: [Kleene star \| Wikipedia](https://en.wikipedia.org/wiki/Kleene_star)
 
-For $$x \in A^*$$, define $$\mathrm{len}(x)$$ to be the unique $$n \in \mathbb{N}$$ such that $$x \in A^{[n]}$$,
-the **length** of a word. [^3]
+[^DM4CS]: [Discrete Mathematics for Computer Science \| OpenDSA Project](https://icsatkcc.github.io/Discrete-Math-for-Computer-Science/s-Monoids.html)
 
-[^3]: [list in nLab](https://ncatlab.org/nlab/show/list)
+For $$x \in A^*$$, define $$\mathrm{len}(x)$$ to be the unique $$n \in \mathbb{N}$$ such that $$x \in A^{[n]}$$,
+the **length** of a word. [^list]
+
+[^list]: [list in nLab](https://ncatlab.org/nlab/show/list)
 
 If $$A$$ is an empty set, then $$A^*=\{\epsilon_A\}$$.
 
@@ -95,29 +101,35 @@ If $$A=\{a\}$$ then $$x \mapsto \mathrm{len}(x)$$ is an isomorphism of monoids
 $$A^* \to \mathbb{N}$$.
 
 A **language over the alphabet** $$A$$ is any subset of $$A^*$$,
-the free monoid on $$A$$. [^4]
+the free monoid on $$A$$. [^language]
 
-[^4]: [Formal languages and automata. *Encyclopedia of Mathematics*](https://encyclopediaofmath.org/wiki/Formal_languages_and_automata)
+[^language]: [Formal languages and automata. *Encyclopedia of Mathematics*](https://encyclopediaofmath.org/wiki/Formal_languages_and_automata)
 
-# Operations on languages
+## Free semigroup on a set [^semigroup]
+
+Define
+
+$$A^+ = \bigcup_{n \in \mathbb{N} \setminus\{0\}} A^{[n]}.$$
+
+$$(A^+,*)$$ is the **free semigroup on** $$A$$.
+
+$$A^+ = A^* \setminus \{\epsilon_A\}.$$
+
+[^semigroup]: [Free semi-group. *Encyclopedia of Mathematics*](https://encyclopediaofmath.org/wiki/Free_semi-group)
+
+# Operations on languages [^Toal]
+
+[^Toal]: [Introduction to Language Theory \| Ray Toal, Loyola Marymount University](https://cs.lmu.edu/~ray/notes/languagetheory/)
+
+We remind ourselves that a formal language is any subset of the free monoid $$A^*$$, in other words,
+the power set $$\mathscr{P}(A^*)$$ is the set of all formal languages over an alphabet $$A$$.
 
 **Union.** For $$L_1, L_2 \subset A^*$$, the union $$L_1 \cup L_2 \subset A^*$$.
 
 **Concatenation.** For $$L_1, L_2 \subset A^*$$,
 
-$$L_1 * L_2 = \{x*y : x \in L_1, y \in L_2\} \subset A^*.$$
+$$L_1 L_2 = \{x*y : x \in L_1, y \in L_2\} \subset A^*.$$
 
 **Kleene star.** For $$L \subset A^*$$, the Kleene star of $$L$$ is
 
 $$L^* = \bigcup_{n \in \mathbb{N}} L^{[n]} \subset A^*.$$
-
-
----
-
-<https://cs.lmu.edu/~ray/notes/languagetheory/>
-
-
-<https://opendsa-server.cs.vt.edu/OpenDSA/Books/PIFLAS22/html/index.html>
-
-
-<https://icsatkcc.github.io/Discrete-Math-for-Computer-Science/s-free-monoids-and-languages.html>
