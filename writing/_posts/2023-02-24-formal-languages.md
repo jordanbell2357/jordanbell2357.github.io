@@ -80,7 +80,7 @@ the sets are indeed pairwise disjoint. If the alphabet $$A$$ is nonempty, then
 a word of some length is not a word of any other length, so in this case the sets are
 pairwise disjoint.
 
-$$(A^*,*,\epsilon_A)$$ is the **free monoid on** $$A$$. [^monoid] ($$A^*$$ is also called the **Kleene star of** $$A$$. [^Kleene])
+$$(A^*,*,\epsilon_A)$$ is the **free monoid on** $$A$$. [^monoid] ($$A^*$$ is also called the **Kleene star of** $$A$$.[^Kleene])
 
 [^Kleene]: [Kleene star \| Wikipedia](https://en.wikipedia.org/wiki/Kleene_star)
 
