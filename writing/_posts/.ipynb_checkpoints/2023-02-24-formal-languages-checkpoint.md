@@ -3,7 +3,13 @@ layout: post
 title: Formal languages
 ---
 
-# Formal languages [^CS4114]
+# Languages over an alphabet 
+
+References: [^language] [^Toal] [^CS4114]
+
+[^language]: [Formal languages and automata. *Encyclopedia of Mathematics*](https://encyclopediaofmath.org/wiki/Formal_languages_and_automata)
+
+[^Toal]: [Introduction to Language Theory \| Ray Toal, Loyola Marymount University](https://cs.lmu.edu/~ray/notes/languagetheory/)
 
 [^CS4114]: [CS4114 Formal Languages and Automata: Spring 2022 \| OpenDSA Project](https://opendsa-server.cs.vt.edu/OpenDSA/Books/PIFLAS22/html/index.html)
 
@@ -60,21 +66,21 @@ y(i-m)&i \in [m,m+n]
 \end{cases},
 \quad i \in [m+n].$$
 
-## Free monoid on a set [^monoid]
+## Free monoid on a set
 
 Define
 
 $$A^* = \bigcup_{n \in \mathbb{N}} A^{[n]}.$$
 
 The sets in this union are pairwise disjoint; this is true whether or not the alphabet $$A$$ is empty,
-according to separate reasons.
+for different reasons.
 If the alphabet $$A$$ is empty,
 then $$A^{[0]}=\{\epsilon_A\}$$, and $$A^{[n]}=\emptyset$$ for $$n>0$$; and in this case
 the sets are indeed pairwise disjoint. If the alphabet $$A$$ is nonempty, then
 a word of some length is not a word of any other length, so in this case the sets are
 pairwise disjoint.
 
-$$(A^*,*,\epsilon_A)$$ is the **free monoid on** $$A$$. [^monoid] [^DM4CS] (This is also called the **Kleene star of** $$A$$. [^Kleene])
+$$(A^*,*,\epsilon_A)$$ is the **free monoid on** $$A$$. [^monoid] ($$A^*$$ is also called the **Kleene star of** $$A$$. [^Kleene])
 
 [^Kleene]: [Kleene star \| Wikipedia](https://en.wikipedia.org/wiki/Kleene_star)
 
@@ -101,28 +107,24 @@ If $$A=\{a\}$$ then $$x \mapsto \mathrm{len}(x)$$ is an isomorphism of monoids
 $$A^* \to \mathbb{N}$$.
 
 A **language over the alphabet** $$A$$ is any subset of $$A^*$$,
-the free monoid on $$A$$. [^language]
+the free monoid on $$A$$.
 
-[^language]: [Formal languages and automata. *Encyclopedia of Mathematics*](https://encyclopediaofmath.org/wiki/Formal_languages_and_automata)
-
-## Free semigroup on a set [^semigroup]
+## Free semigroup on a set
 
 Define
 
 $$A^+ = \bigcup_{n \in \mathbb{N} \setminus\{0\}} A^{[n]}.$$
 
-$$(A^+,*)$$ is the **free semigroup on** $$A$$.
+$$(A^+,*)$$ is the **free semigroup on** $$A$$. [^semigroup]
 
 $$A^+ = A^* \setminus \{\epsilon_A\}.$$
 
 [^semigroup]: [Free semi-group. *Encyclopedia of Mathematics*](https://encyclopediaofmath.org/wiki/Free_semi-group)
 
-# Operations on languages [^Toal]
+# Operations on languages 
 
-[^Toal]: [Introduction to Language Theory \| Ray Toal, Loyola Marymount University](https://cs.lmu.edu/~ray/notes/languagetheory/)
-
-We remind ourselves that a formal language is any subset of the free monoid $$A^*$$, in other words,
-the power set $$\mathscr{P}(A^*)$$ is the set of all formal languages over an alphabet $$A$$.
+We remind ourselves that a language over an alphabet $$A$$ is any subset of the free monoid $$A^*$$. In other words,
+the power set $$\mathscr{P}(A^*)$$ is the set of all languages over an alphabet $$A$$.
 
 **Union.** For $$L_1, L_2 \subset A^*$$, the union $$L_1 \cup L_2 \subset A^*$$.
 
@@ -130,6 +132,6 @@ the power set $$\mathscr{P}(A^*)$$ is the set of all formal languages over an al
 
 $$L_1 L_2 = \{x*y : x \in L_1, y \in L_2\} \subset A^*.$$
 
-**Kleene star.** For $$L \subset A^*$$, the Kleene star of $$L$$ is
+**Kleene star.** For $$L \subset A^*$$, the Kleene star of $$L$$ is [^Kleene]
 
 $$L^* = \bigcup_{n \in \mathbb{N}} L^{[n]} \subset A^*.$$
