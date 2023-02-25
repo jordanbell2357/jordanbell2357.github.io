@@ -13,7 +13,7 @@ title: Erasmus Econometrics Training Exercise 1.4
 >
 > The observed $$x$$-values are $$x_i = x_i^* + v_i$$, with measurement errors $$v_i$$ that are uncorrelated with $$x_i^*$$
 > and $$\epsilon_i^*$$. The signal-to-noise ratio is defined as $$SN = \frac{\sigma_*^2}{\sigma_v^2}$$,
-> where $$\sigma_*^2$$ is te variance of $$x^*$$ and $$\sigma_v^2$$ that of $$v$$.
+> where $$\sigma_*^2$$ is the variance of $$x^*$$ and $$\sigma_v^2$$ that of $$v$$.
 >
 > The estimated regression model is $$y_i = \alpha + \beta x_i + \epsilon_i$$, and we consider the least squares estimator $$b$$ of $$\beta$$.
 >
@@ -30,3 +30,14 @@ title: Erasmus Econometrics Training Exercise 1.4
 > **(e)** Show that for large sample size $$n$$ we get $$b-\beta \approx \dfrac{-\beta \sigma_v^2}{\sigma_*^2+\sigma_v^2}$$
 >
 > **(f)** Compute the approximate bias $$b-\beta$$ for $$\beta=1$$ in the cases $$SN=1$$, $$SN=3$$, and $$SN=10$$.
+
+$$
+\begin{align*}
+\epsilon_i &= y_i - \alpha - \beta x_i\\
+&=\alpha + \beta x_i^* + \epsilon_i^* - \alpha - \beta x_i\\
+&=\beta(x_i^* - x_i)+\epsilon_i^*\\
+&=\beta(-v_i) + \epsilon_i^*\\
+&=-\beta v_i + \epsilon_i^*
+\end{align*}
+$$
+
