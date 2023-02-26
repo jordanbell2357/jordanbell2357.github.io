@@ -174,6 +174,45 @@ $$
 
 > **(e)** Show that for large sample size $$n$$ we get $$b-\beta \approx \dfrac{-\beta \sigma_v^2}{\sigma_*^2+\sigma_v^2}$$
 
+We have established that
+
+$$
+b =  \beta + \dfrac{\mathrm{cov}(x_i,\epsilon_i)}{s_x^2}
+$$
+
+and $$s_x^2 = s_{x^*}^2 + s_v^2$$ and $$\mathrm{cov}(x_i,\epsilon_i)=-\beta s_v^2$$.
+
+
+Using these,
+
+$$
+b=\beta + \dfrac{-\beta s_v^2}{s_{x^*}^2 + s_v^2}
+$$
+
+$$
+\begin{align*}
+\sigma_{x^*}^2 &= \frac{1}{n} \sum_{i=1}^n (x_i-\overline{x})^2\\
+&= \frac{n-1}{n} \frac{1}{n-1}\sum_{i=1}^n (x_i-\overline{x})^2\\
+&=\frac{n-1}{n} s_x^2,
+\end{align*}
+$$
+
+and likewise $$\sigma_{x^*}^2 = \frac{n-1}{n} s_{x^*}^2$$ and $$\sigma_v^2 = \frac{n-1}{n} s_v^2$$.
+
+Therefore
+
+$$
+\begin{align*}
+b&=\beta - \beta \dfrac{\frac{n}{n-1} \simga_v^2}{\frac{n}{n-1} \sigma_{x^*}^2 + \frac{n}{n-1} \simga_v^2}\\
+&=\beta-\beta \dfrac{\sigma_v^2}{\sigma_{x^*}^2 + \sigma_v^2}
+\end{align*}
+$$
+
+so
+
+$$
+b - \beta = \dfrac{-\beta \sigma_v^2}{\sigma_{x^*}^2 + \sigma_v^2}
+$$
 
 # (f)
 
