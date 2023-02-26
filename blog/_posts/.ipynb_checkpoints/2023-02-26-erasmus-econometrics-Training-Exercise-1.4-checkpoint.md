@@ -203,7 +203,7 @@ Therefore
 
 $$
 \begin{align*}
-b&=\beta - \beta \dfrac{\frac{n}{n-1} \simga_v^2}{\frac{n}{n-1} \sigma_{x^*}^2 + \frac{n}{n-1} \simga_v^2}\\
+b&=\beta - \beta \dfrac{\frac{n}{n-1} \sigma^2}{\frac{n}{n-1} \sigma_{x^*}^2 + \frac{n}{n-1} \sigma_v^2}\\
 &=\beta-\beta \dfrac{\sigma_v^2}{\sigma_{x^*}^2 + \sigma_v^2}
 \end{align*}
 $$
