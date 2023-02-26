@@ -43,11 +43,15 @@ $$s_y^2 = \frac{1}{n-1} \sum_{i=1}^n (y_i - \overline{y})^2$$
 
 ## Sample covariance
 
+The sample covariance of $$x_i$$ and $$y_i$$ is
+
 $$\mathrm{cov}(x,y) = \frac{1}{n-1} \sum_{i=1}^n (x_i-\overline{x})(y_i-\overline{y})$$
 
 ## Sample correlation coefficient
 
 Let $$A=\frac{1}{n-1}$$.
+
+The sample correlation coefficient of $$x_i$$ and $$y_i$$ is
 
 $$
 \begin{align*}
@@ -77,7 +81,7 @@ $$
 b = \dfrac{\mathrm{cov}(x,y)}{s_{x^*}^2+s_v^2}
 $$
 
-is the way that $$b$$ depends on the variance of the measurement errors.
+is the way that $$b$$ depends on $$s_v^2$$, the variance of the measurement errors.
 
 # (b)
 
@@ -112,14 +116,10 @@ $$\epsilon_i = \epsilon_i^* - \beta v_i$$
 
 > **(d)** Show that the covariance between $$x_i$$ and $$\epsilon_i$$ is equal to $$-\beta \sigma_v^2$$.
 
-
-
-
-
 $$
 \begin{align*}
 \mathrm{cov}(x_i,\epsilon_i)&=\mathrm{cov}(x_i^* + v_i, -\beta v_i + \epsilon_i^*)\\
-&=-\beta \mathrm{cov}(x_i, v_i) +\mathrm{cov}(x_i^*, \epsilon_i^*) - \beta \mathrm{cov}(v_i,v_i) + \mathrm{cov}(v_i,\epsilon_i^*)\\
+&=-\beta \mathrm{cov}(x_i^*, v_i) +\mathrm{cov}(x_i^*, \epsilon_i^*) - \beta \mathrm{cov}(v_i,v_i) + \mathrm{cov}(v_i,\epsilon_i^*)\\
 &=
 \end{align*}
 $$
