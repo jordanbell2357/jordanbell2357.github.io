@@ -3,6 +3,8 @@ layout: post
 title: Erasmus Econometrics Training Exercise 1.4
 ---
 
+# Erasmus Econometrics Training Exercise 1.4
+
 > Consider the situation where the $$x$$-variable is observed with measurement error, which is rather common for complex macroeconomic variables like national income.
 >
 > Let $$x^*$$ be the true, unobserved economic variable, and let the data generating process (DGP) be given by
@@ -30,6 +32,8 @@ title: Erasmus Econometrics Training Exercise 1.4
 > **(e)** Show that for large sample size $$n$$ we get $$b-\beta \approx \dfrac{-\beta \sigma_v^2}{\sigma_*^2+\sigma_v^2}$$
 >
 > **(f)** Compute the approximate bias $$b-\beta$$ for $$\beta=1$$ in the cases $$SN=1$$, $$SN=3$$, and $$SN=10$$.
+
+$$b=\dfrac{\sum_{i=1}^n (x_i-\overline{x})(y_i-\overline{y})}{\sum_{i=1}^n (x_i-\overline{x})^2}$$
 
 $$
 \begin{align*}
