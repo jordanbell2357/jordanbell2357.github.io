@@ -33,6 +33,8 @@ title: Erasmus Econometrics Training Exercise 1.4
 >
 > **(f)** Compute the approximate bias $$b-\beta$$ for $$\beta=1$$ in the cases $$SN=1$$, $$SN=3$$, and $$SN=10$$.
 
+# (a)
+
 ## Unbiased sample variance
 
 $$s_x^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2$$
@@ -55,7 +57,30 @@ $$
 \end{align*}
 $$
 
-$$b=\dfrac{\sum_{i=1}^n (x_i-\overline{x})(y_i-\overline{y})}{\sum_{i=1}^n (x_i-\overline{x})^2}$$
+## Estimator $$b$$ of $$\beta$$
+
+$$
+\begin{align*}
+b=&\dfrac{\sum_{i=1}^n (x_i-\overline{x})(y_i-\overline{y})}{\sum_{i=1}^n (x_i-\overline{x})^2}\\
+&= \dfrac{(n-1) \textrm{cov}(x,y)}{(n-1) s_x^2}\\
+&=\dfrac{\mathrm{cov}(x,y)}{s_x^2}
+\end{align*}
+$$
+
+$$x_i = x_i^*+v_i$$, and $$v_i$$ are uncorrelated with $$x_i^*$$. It follows that
+
+$$s_x^2 = s_{x^*}^2 + 2 \mathrm{cov}(x,v) + s_v^2 = s_{x^*}^2 + s_v^2$$
+
+Thus
+
+$$
+b = \dfrac{\mathrm{cov}(x,y)}{s_{x^*}^2+s_v^2}
+$$
+
+is the way that $$b$$ depends on the variance of the measurement errors.
+
+# (b)
+
 
 $$
 \begin{align*}
