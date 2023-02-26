@@ -13,7 +13,7 @@ title: Erasmus Econometrics Training Exercise 1.4
 >
 > The observed $$x$$-values are $$x_i = x_i^* + v_i$$, with measurement errors $$v_i$$ that are uncorrelated with $$x_i^*$$
 > and $$\epsilon_i^*$$. The signal-to-noise ratio is defined as $$SN = \frac{\sigma_*^2}{\sigma_v^2}$$,
-> where $$\sigma_*^2$$ is the variance of $$x^*$$ and $$\sigma_v^2$$ that of $$v$$.
+> where $$\sigma_{x^*}^2$$ is the variance of $$x^*$$ and $$\sigma_v^2$$ that of $$v$$.
 >
 > The estimated regression model is $$y_i = \alpha + \beta x_i + \epsilon_i$$, and we consider the least squares estimator $$b$$ of $$\beta$$.
 >
@@ -27,7 +27,7 @@ title: Erasmus Econometrics Training Exercise 1.4
 >
 > **(d)** Show that the covariance between $$x_i$$ and $$\epsilon_i$$ is equal to $$-\beta \sigma_v^2$$.
 >
-> **(e)** Show that for large sample size $$n$$ we get $$b-\beta \approx \dfrac{-\beta \sigma_v^2}{\sigma_*^2+\sigma_v^2}$$
+> **(e)** Show that for large sample size $$n$$ we get $$b-\beta \approx \dfrac{-\beta \sigma_v^2}{\sigma_{x^*}^2+\sigma_v^2}$$
 >
 > **(f)** Compute the approximate bias $$b-\beta$$ for $$\beta=1$$ in the cases $$SN=1$$, $$SN=3$$, and $$SN=10$$.
 
@@ -208,7 +208,9 @@ b&=\beta - \beta \dfrac{\frac{n}{n-1} \sigma^2}{\frac{n}{n-1} \sigma_{x^*}^2 + \
 \end{align*}
 $$
 
-so
+so [^approx]
+
+[^approx]: I have made a mistake or made an unstated assumption, since I have derived equality for a formula that we are told to show applies as $$n \to \infty$$, and thus what I have deduced is too strong.
 
 $$
 b - \beta = \dfrac{-\beta \sigma_v^2}{\sigma_{x^*}^2 + \sigma_v^2}
@@ -218,7 +220,28 @@ $$
 
 > **(f)** Compute the approximate bias $$b-\beta$$ for $$\beta=1$$ in the cases $$SN=1$$, $$SN=3$$, and $$SN=10$$.
 
+The signal-to-noise ratio is defined as $$SN = \frac{\sigma_{x^*}^2}{\sigma_v^2}$$.
 
-References: [^1]
+$$SN=1$$ implies $$\sigma_{x^*}^2=\sigma_v^2$$.
+
+Then
+
+$$b-\beta = \dfrac{-\sigma_v^2}{\sigma_v^2+\sigma_v^2} = -\frac{1}{2}$$
+
+$$SN=3$$ implies $$\sigma_{x^*}^2 = 3\sigma_v^2$$.
+
+Then
+
+$$
+b-\beta = \dfrac{- \sigma_v^2}{3\sigma_v^2+\sigma_v^2} = -\frac{1}{4}
+$$
+
+$$SN=10$$ implies $$\sigma_{x^*}^2=10\sigma_v^2$$.
+
+Then
+
+$$b-\beta = \dfrac{-\sigma_v^2}{10\sigma_v^2+\sigma_v^2} = -\frac{1}{11}$$
+
+## References: [^1]
 
 [^1]: [Simple Linear Regression \| Michael Foley](https://rstudio-pubs-static.s3.amazonaws.com/462898_c49a57f185c34d3898e8e0642abe3754.html)
