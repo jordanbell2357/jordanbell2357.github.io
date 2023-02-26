@@ -33,6 +33,28 @@ title: Erasmus Econometrics Training Exercise 1.4
 >
 > **(f)** Compute the approximate bias $$b-\beta$$ for $$\beta=1$$ in the cases $$SN=1$$, $$SN=3$$, and $$SN=10$$.
 
+## Unbiased sample variance
+
+$$s_x^2 = \frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2$$
+
+$$s_y^2 = \frac{1}{n-1} \sum_{i=1}^n (y_i - \overline{y})^2$$
+
+## Sample covariance
+
+$$\mathrm{cov}(x,y) = \frac{1}{n-1} \sum_{i=1}^n (x_i-\overline{x})(y_i-\overline{y})$$
+
+## Sample correlation coefficient
+
+Let $$A=\frac{1}{n-1}$$.
+
+$$
+\begin{align*}
+\rho_{x,y} &= \dfrac{\mathrm{cov}(x,y)}{s_x s_y}\\
+&=\dfrac{A \sum_{i=1}^n (x_i-\overline{x})(y_i-\overline{y})}{\sqrt{A \sum_{i=1}^n (x_i - \overline{x})^2}\sqrt{\sum_{i=1}^n (y_i - \overline{y})^2}}\\
+&=\dfrac{\sum_{i=1}^n (x_i-\overline{x})(y_i-\overline{y})}{\sqrt{\sum_{i=1}^n (x_i - \overline{x})^2} \sqrt{\sum_{i=1}^n (y_i - \overline{y})^2}}
+\end{align*}
+$$
+
 $$b=\dfrac{\sum_{i=1}^n (x_i-\overline{x})(y_i-\overline{y})}{\sum_{i=1}^n (x_i-\overline{x})^2}$$
 
 $$
