@@ -93,11 +93,6 @@ is the way that $$b$$ depends on the variance of the measurement errors.
 
 > **(c)** Show that $$\epsilon_i = \epsilon_i^*-\beta v_i$$.
 
-
-# (d)
-
-> **(d)** Show that the covariance between $$x_i$$ and $$\epsilon_i$$ is equal to $$-\beta \sigma_v^2$$.
-
 $$
 \begin{align*}
 \epsilon_i &= y_i - \alpha - \beta x_i\\
@@ -108,12 +103,23 @@ $$
 \end{align*}
 $$
 
-Then
+Thus
+
+$$\epsilon_i = \epsilon_i^* - \beta v_i$$
+
+
+# (d)
+
+> **(d)** Show that the covariance between $$x_i$$ and $$\epsilon_i$$ is equal to $$-\beta \sigma_v^2$$.
+
+
+
+
 
 $$
 \begin{align*}
 \mathrm{cov}(x_i,\epsilon_i)&=\mathrm{cov}(x_i^* + v_i, -\beta v_i + \epsilon_i^*)\\
-&=-\beta \mathrm{cov}(x_i, v_i) +\mathrm{cov}(x_i^*, \epsilon_i^*) - \beta \mathrm{cov}(v_i,v_i} + \mathrm{cov}(v_i,\epsilon_i^*)\\
+&=-\beta \mathrm{cov}(x_i, v_i) +\mathrm{cov}(x_i^*, \epsilon_i^*) - \beta \mathrm{cov}(v_i,v_i) + \mathrm{cov}(v_i,\epsilon_i^*)\\
 &=
 \end{align*}
 $$
