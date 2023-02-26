@@ -89,6 +89,10 @@ is the way that $$b$$ depends on $$s_v^2$$, the variance of the measurement erro
 >
 > $$b = \beta + \dfrac{\sum_{i=1}^n (x_i-\overline{x})(\epsilon_i-\overline{\epsilon})}{\sum_{i=1}^n (x_i-\overline{x})^2}.$$
 
+We have established so far that
+
+$$b=\dfrac{\mathrm{cov}(x,y)}{s_x^2}$$
+
 
 
 
@@ -120,7 +124,8 @@ $$
 \begin{align*}
 \mathrm{cov}(x_i,\epsilon_i)&=\mathrm{cov}(x_i^* + v_i, -\beta v_i + \epsilon_i^*)\\
 &=-\beta \mathrm{cov}(x_i^*, v_i) +\mathrm{cov}(x_i^*, \epsilon_i^*) - \beta \mathrm{cov}(v_i,v_i) + \mathrm{cov}(v_i,\epsilon_i^*)\\
-&=
+&=-\beta (0) + 0 - \beta s_v^2 + 0\\
+&=-\beta s_v^2
 \end{align*}
 $$
 
