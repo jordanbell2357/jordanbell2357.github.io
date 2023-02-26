@@ -93,8 +93,43 @@ We have established so far that
 
 $$b=\dfrac{\mathrm{cov}(x,y)}{s_x^2}$$
 
+$$
+\begin{align*}
+\mathrm{cov}(x_i,y_i)&=\mathrm{cov}(x_i,\alpha + \beta x_i + \epsilon_i)\\
+&=\mathrm{cov}(x_i,\alpha) + \mathrm{cov}(x_i,\beta x_i) + \mathrm{cov}(x_i,\epsilon_i)\\
+&=0+\beta \mathrm{cov}(x_i,x_i) + \mathrm{cov}(x_i,\epsilon_i)\\
+&=\beta s_x^2 + \mathrm{cov}(x_i,\epsilon_i)
+\end{align*}
+$$
 
+that is,
 
+$$
+\mathrm{cov}(x_i,y_i) = \beta s_x^2 + \mathrm{cov}(x_i,\epsilon_i)
+$$
+
+Hence
+
+$$
+\dfrac{\mathrm{cov}(x_i,y_i)}{s_x^2} = \beta + \dfrac{\mathrm{cov}(x_i,\epsilon_i)}{s_x^2}
+$$
+
+Therefore
+
+$$
+b =  \beta + \dfrac{\mathrm{cov}(x_i,\epsilon_i)}{s_x^2}
+$$
+
+This means
+
+$$
+\begin{align*}
+b&= \beta + \dfrac{\frac{1}{n-1} \sum_{i=1}^n (x_i-\overline{x})(\epsilon_i-\overline{\epsilon}}{\frac{1}{n-1} \sum_{i=1}^n (x_i - \overline{x})^2}\\
+&=\beta + \dfrac{\sum_{i=1}^n (x_i-\overline{x})(\epsilon_i-\overline{\epsilon})}{\sum_{i=1}^n (x_i-\overline{x})^2}
+\end{align*}
+$$
+
+which is what we are asked to establish in (b).
 
 
 # (c)
@@ -129,6 +164,12 @@ $$
 \end{align*}
 $$
 
+Hence
+
+$$
+\mathrm{cov}(x_i,\epsilon_i)=-\beta s_v^2
+$$
+
 # (e)
 
 > **(e)** Show that for large sample size $$n$$ we get $$b-\beta \approx \dfrac{-\beta \sigma_v^2}{\sigma_*^2+\sigma_v^2}$$
@@ -137,3 +178,8 @@ $$
 # (f)
 
 > **(f)** Compute the approximate bias $$b-\beta$$ for $$\beta=1$$ in the cases $$SN=1$$, $$SN=3$$, and $$SN=10$$.
+
+
+References: [^1]
+
+[^1]: [Simple Linear Regression \| Michael Foley](https://rstudio-pubs-static.s3.amazonaws.com/462898_c49a57f185c34d3898e8e0642abe3754.html)
