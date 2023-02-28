@@ -32,3 +32,11 @@ Burnett, D. R., Beckman, R., and Davenport, T. M. (Eds.). (24 Oct. 2013). Submar
 [Cyber defense across the ocean floor: The geopolitics of submarine cable security](https://www.atlanticcouncil.org/in-depth-research-reports/report/cyber-defense-across-the-ocean-floor-the-geopolitics-of-submarine-cable-security/)
 
 [Ireland’s Defence Deficit](https://www.rusi.org/explore-our-research/publications/commentary/irelands-defence-deficit)
+
+<https://salienceconsulting.ae/wp-content/uploads/2018/09/Submarine_Cables_Structuring_and_Financing_Options_Jan_2015.pdf>
+
+<https://www.projectfinance.law/publications/2020/june/financing-subsea-cables-in-latin-america/>
+
+<https://tech.facebook.com/engineering/2022/2/economic-impact-subsea-cables/>
+
+<https://copenhageneconomics.com/wp-content/uploads/2022/06/The-economic-value-of-submarine-cables-in-the-Arctic-Copenhagen-Economics-2022.pdf>
