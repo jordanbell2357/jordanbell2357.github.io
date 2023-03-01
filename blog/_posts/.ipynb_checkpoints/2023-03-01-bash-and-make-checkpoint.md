@@ -21,7 +21,7 @@ title: Bash and Make
 >
 > - The program should be more than 20 lines of code but less than 50 lines of code.
 >
-> The makefile should produce the README.md which should contain the following information:
+> The makefile should produce the `README.md` which should contain the following information:
 >
 > - The title of the project.
 >
@@ -32,6 +32,8 @@ title: Bash and Make
 > - The `README.md` should be produced entirely from the makefile and should not be edited by hand.
 
 <https://github.com/jordanbell2357/bash-make-git-and-github>
+
+`guessinggame.sh`
 
 ```bash
 #!/usr/bin/bash
@@ -57,4 +59,21 @@ do
   user_guess
 done
 echo "Guess is correct. Congratulations!"
+```
+
+`makefile`
+
+```bash
+all: README.md
+
+README.md: guessinggame.sh
+	echo "# Bash, Make, Git, and GitHub" > README.md
+	echo "The date and time at which make was run:" >> README.md
+	date >> README.md
+	echo "\n" >> README.md
+	echo "The number of lines of code contained in guessinggame.sh:" >> README.md
+	wc -l guessinggame.sh | egrep -o "[0-9]+" >> README.md
+
+clean:
+	rm README.md
 ```
