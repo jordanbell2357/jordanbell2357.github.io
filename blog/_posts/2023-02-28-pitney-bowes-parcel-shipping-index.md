@@ -29,12 +29,6 @@ title: Pitney Bowes Parcel Shipping Index
 >
 > U.S. businesses spent more than $85 billion on parcel shipping in 2015, up 1.2 percent from 2014.
 
-<https://www.pitneybowes.com/au/newsroom/press-releases/pitney-bowes-parcel-shipping-index-reports-continued-growth-as-global-parcel.html>
-
-<https://news.pb.com/article_display.cfm?article_id=5784>
-
-<https://www.pitneybowes.com/content/dam/pitneybowes/us/en/newsroom/final_infographic_sept_10.pdf>
-
 [Pitney Bowes Parcel Shipping Index](https://www.pitneybowes.com/us/shipping-index.html)
 
 [Parcel shipping index 2022](https://www.pitneybowes.com/content/dam/pitneybowes/us/en/shipping-index/22-pbcs-04529-2021-global-parcel-shipping-index-ebook-web-002.pdf)
@@ -46,7 +40,7 @@ title: Pitney Bowes Parcel Shipping Index
 <thead>
   <tr>
     <th>Year</th>
-    <th>Global parcel volume (billion)</th>
+    <th>Global parcel shipments (billion)</th>
     <th>US parcel shipments (billion)</th>
     <th>Canada parcel shipments (billion)</th>
     <th>China parcel shipments (billion)</th>
@@ -111,3 +105,11 @@ title: Pitney Bowes Parcel Shipping Index
   </tr>
 </tbody>
 </table>
+
+[^1] [^2] [^3]
+
+[^1]: <https://www.pitneybowes.com/au/newsroom/press-releases/pitney-bowes-parcel-shipping-index-reports-continued-growth-as-global-parcel.html>
+
+[^2]: <https://news.pb.com/article_display.cfm?article_id=5784>
+
+[^3]: <https://www.pitneybowes.com/content/dam/pitneybowes/us/en/newsroom/final_infographic_sept_10.pdf>
