@@ -5,13 +5,11 @@ title: Formal languages
 
 # Languages over an alphabet 
 
-References: [^language] [^Toal] [^CS4114]
+References: [^language] [^Toal]
 
 [^language]: [Formal languages and automata. *Encyclopedia of Mathematics*](https://encyclopediaofmath.org/wiki/Formal_languages_and_automata)
 
 [^Toal]: [Introduction to Language Theory \| Ray Toal, Loyola Marymount University](https://cs.lmu.edu/~ray/notes/languagetheory/)
-
-[^CS4114]: [CS4114 Formal Languages and Automata: Spring 2022 \| OpenDSA Project](https://opendsa-server.cs.vt.edu/OpenDSA/Books/PIFLAS22/html/index.html)
 
 The empty set $$\emptyset$$ is an **initial object** in the category of sets **Set**:
 for any set $$Y$$ there is a unique function $$\emptyset_Y:\emptyset \to Y$$. [^empty]
