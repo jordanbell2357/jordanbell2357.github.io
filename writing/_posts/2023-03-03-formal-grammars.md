@@ -7,7 +7,7 @@ title: Formal grammars
 
 [OpenDSA](https://opendsa-server.cs.vt.edu/embed)
 
-<iframe src="https://opendsa-server.cs.vt.edu/embed/CharacterizeLang1" width="75%"></iframe>
+<iframe src="https://opendsa-server.cs.vt.edu/embed/CharacterizeLang1" height="400" width="100%"></iframe>
 
 
 
