@@ -22,7 +22,7 @@ Define the $$p$$-adic absolute value for $$x \in \mathbb{Q}_p$$ by
 
 $$|x|_p = p^{-v_p(x)}.$$
 
-If $$v_p(x)=\infty$$, then $$|x|_p=0$$.
+If $$v_p(x)=\infty$$, then \(|x|_p=0\).
 
 The $$p$$-adic absolute value satisfies what is called an ultrametric property: for $$x,y \in \mathbb{Q}_p$$,
 
