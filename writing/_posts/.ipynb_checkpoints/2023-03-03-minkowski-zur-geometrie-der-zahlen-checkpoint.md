@@ -20,24 +20,24 @@ gs -dNOPAUSE -dBATCH -dFirstPage=174 -dLastPage=183 -sDEVICE=pdfwrite -sOutputFi
 ```
 
 <samp>
-GPL Ghostscript 9.55.0 (2021-09-27)
-Copyright (C) 2021 Artifex Software, Inc.  All rights reserved.
-This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:
-see the file COPYING for details.
-Processing pages 174 through 183.
-Page 174
-Loading NimbusRoman-Regular font from /usr/share/ghostscript/9.55.0/Resource/Font/NimbusRoman-Regular... 5147580 3625027 4498864 2928442 4 done.
-Loading NimbusRoman-Bold font from /usr/share/ghostscript/9.55.0/Resource/Font/NimbusRoman-Bold... 5233892 3836205 4572608 2996236 4 done.
-Loading NimbusRoman-BoldItalic font from /usr/share/ghostscript/9.55.0/Resource/Font/NimbusRoman-BoldItalic... 5421204 4063312 4787752 3202185 4 done.
-Page 175
-Page 176
-Page 177
-Loading NimbusRoman-Italic font from /usr/share/ghostscript/9.55.0/Resource/Font/NimbusRoman-Italic... 5689316 4323230 5151352 3551385 4 done.
-Page 178
-Page 179
-Page 180
-Page 181
-Page 182
+GPL Ghostscript 9.55.0 (2021-09-27)  
+Copyright (C) 2021 Artifex Software, Inc.  All rights reserved.  
+This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:  
+see the file COPYING for details.  
+Processing pages 174 through 183.  
+Page 174  
+Loading NimbusRoman-Regular font ... done.  
+Loading NimbusRoman-Bold font ... done.  
+Loading NimbusRoman-BoldItalic font ... done.  
+Page 175  
+Page 176  
+Page 177  
+Loading NimbusRoman-Italic font ... done done.  
+Page 178  
+Page 179  
+Page 180  
+Page 181  
+Page 182  
 Page 183
 </samp>
 
