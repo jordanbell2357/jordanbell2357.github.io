@@ -16,11 +16,11 @@ If $$x(k)=0$$ for all $$k \in \mathbb{Z}$$, then $$v_p(x) = \infty$$.
 
 Define the $$p$$-adic integers
 
-$$\mathbb{Z}_p = \{x \in \mathbb{Q}_p : v_p(x) \geq 0\}$$
+$$\mathbb{Z}_p = \{x \in \mathbb{Q}_p : v_p(x) \geq 0\}.$$
 
 Define the $$p$$-adic absolute value for $$x \in \mathbb{Q}_p$$ by
 
-$$|x|_p = p^{-v_p(x)}$$
+$$|x|_p = p^{-v_p(x)}.$$
 
 If $$v_p(x)=\infty$$, then $$|x|_p=0$$.
 
@@ -39,9 +39,10 @@ that is, the $$p$$-adic integers are a closed ball of radius 1 in the $$p$$-adic
 $$\mathbb{Q}_p$$ is a field and $$\mathbb{Z}_p$$ is a ring. The multiplicative group of units
 of $$\mathbb{Z}_p$$ is
 
-$$\mathbb{Z}_p^\times  = \{x \in \mathbb{Z}_p: |x|_p = 1\}$$
+$$\mathbb{Z}_p^\times  = \{x \in \mathbb{Z}_p: |x|_p = 1\}.$$
 
-The additive group $$\mathbb{Q}_p$$ is a locally compact abelian group. $$\mathbb{Z}_p$$ is a compact set
+The additive group $$\mathbb{Q}_p$$ is a locally compact abelian group.
+$$\mathbb{Z}_p$$ is a compact set
 in $$\mathbb{Q}_p$$ so it has finite Haar measure, and it is an open set in $$\mathbb{Q}_p$$ so it has positive Haar measure.
 Therefore there is a unique unique Haar measure $$\mu_p$$ on
 $$\mathbb{Q}_p$$ such that $$\mu_p(\mathbb{Z}_p)=1$$.
