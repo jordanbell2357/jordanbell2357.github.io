@@ -20,9 +20,9 @@ $$\mathbb{Z}_p = \{x \in \mathbb{Q}_p : v_p(x) \geq 0\}.$$
 
 Define the $$p$$-adic absolute value for $$x \in \mathbb{Q}_p$$ by
 
-$$|x|_p = p^{-v_p(x)}.$$
+$$\vert x \vert_p = p^{-v_p(x)}.$$
 
-If $$v_p(x)=\infty$$, then \(|x|_p=0\).
+If $$v_p(x)=\infty$$, then $$\vert x \vert_p=0$$.
 
 The $$p$$-adic absolute value satisfies what is called an ultrametric property: for $$x,y \in \mathbb{Q}_p$$,
 
