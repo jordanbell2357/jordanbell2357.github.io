@@ -19,28 +19,6 @@ Ghostscript: [^1] [^2]
 gs -dNOPAUSE -dBATCH -dFirstPage=174 -dLastPage=183 -sDEVICE=pdfwrite -sOutputFile=Minkowski1904.pdf -f ICM1904.ocr.pdf
 ```
 
-<samp>
-GPL Ghostscript 9.55.0 (2021-09-27)  
-Copyright (C) 2021 Artifex Software, Inc.  All rights reserved.  
-This software is supplied under the GNU AGPLv3 and comes with NO WARRANTY:  
-see the file COPYING for details.  
-Processing pages 174 through 183.  
-Page 174  
-Loading NimbusRoman-Regular font ... done.  
-Loading NimbusRoman-Bold font ... done.  
-Loading NimbusRoman-BoldItalic font ... done.  
-Page 175  
-Page 176  
-Page 177  
-Loading NimbusRoman-Italic font ... done done.  
-Page 178  
-Page 179  
-Page 180  
-Page 181  
-Page 182  
-Page 183
-</samp>
-
 [H. Minkowski. *Zur Geometrie der Zahlen.* PDF](/gs/Minkowski1904.pdf)
 
 > Mit Projektionsbildern auf einer Doppeltafel.
