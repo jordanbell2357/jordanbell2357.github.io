@@ -3,7 +3,7 @@ layout: post
 title: Tate's thesis
 ---
 
-Let $$p$$ be a prime and let $$N_p=\{0,\ldots,p-1\}$$.
+Let $$p$$ be a prime and let $$N_p=\{0,\ldots,p-1\}$$. Let $$\mathbb{N}$$ be the nonnegative integers.
 
 Define the $$p$$-adic rationals $$\mathbb{Q}_p$$ to be the set of functions $$x:\mathbb{Z} \to N_p$$
 for which there exists some $$k_x$$ such that $$x(k)=0$$ for all $$k<k_x$$.
@@ -22,9 +22,13 @@ Define the $$p$$-adic absolute value for $$x \in \mathbb{Q}_p$$ by
 
 $$|x|_p = p^{-v_p(x)}$$
 
-The $$p$$-adic absolute value satisfies the ultrametric property, for $$x,y \in \mathbb{Q}_p$$,
+If $$v_p(x)=\infty$$, then $$|x|_p=0$$.
 
-$$|x+y|_p \leq \max\{|x|_p,|y|_p\}$$
+The $$p$$-adic absolute value satisfies what is called an ultrametric property: for $$x,y \in \mathbb{Q}_p$$,
+
+$$|x+y|_p \leq \max\{|x|_p,|y|_p\};$$
+
+the $$p$$-adic absolute value is called non-Archimedean.
 
 Expressed using the $$p$$-adic absolute value,
 
@@ -47,13 +51,31 @@ define $$p^k x \in \mathbb{Q}_p$$ by
 
 $$(p^k x)(j) = x(j-k). \qquad j \in \mathbb{Z}$$
 
-In particular, expressed using $$p$$-adic valuations,
+Then, for $$p$$-adic valuations,
 
-$$p^k \mathbb{Z}_p = \{x \in \mathbb{Q}_p: v_p(x) \geq k\}$$
+$$v_p(p^k x) = -k + v_p(x)$$
 
-and expressed using $$p$$-adic absolute values,
+and $$p$$-adic absolute values,
+
+$$|p^k x|_p = p^{-v_p(p^kx)} = p^{k-v_p(x)} = p^k |x|_p$$
+
+In particular,
 
 $$p^k \mathbb{Z}_p = \{x \in \mathbb{Q}_p: |x|_p \leq p^{-k}\}$$
+
+and
+
+$$p^k \mathbb{Z}_p^\times =  \{x \in \mathbb{Q}_p: |x|_p = p^{-k}\}$$
+
+and one checks that
+
+$$\mathbb{Q}_p = \{0\} \cup \bigcup_{k \in \mathbb{Z}} p^k \mathbb{Z}_p^\times$$
+
+and
+
+$$\mathbb{Z}_p = \{0\} \cup \bigcup_{k \in \mathbb{N}} p^k \mathbb{Z}_p^\times$$
+
+One checks
 
 $$\mu_p(p^k \mathbb{Z}_p)=p^{-k}$$
 
@@ -90,11 +112,9 @@ and then that for $$\mathrm{Re}(x)>0$$,
 $$\int_{\mathbb{Z}_p^\times} |x|_p^s d\mu_p(x) = \dfrac{1}{1-p^{-s}}$$
 
 
-For each $$x \in \mathbb{Q}_p$$, the collection
+Step by step proofs of every statement made above are given in various notes on <https://jordanbell.info/mathematics/>
 
-$$\{x + p^k \mathbb{Z}_p : k \ in \mathbb{Z}\}$$
+From here, we use Chapter 2, "Preliminaries on p-adic and Adelic Technology", of Philipp Fleig, Henrik P. A. Gustafsson, Axel Kleinschmidt and Daniel Persson. *Eisenstein Series and Automorphic Representations with Applications in String Theory*. Cambridge Studies in Advanced Mathematics. Volume 176. Cambridge University Press. 2018.
 
-is a local base for the topology of $$\mathbb{Q}_p$$.
 
-Chapter 2, "Preliminaries on p-adic and Adelic Technology", of Philipp Fleig, Henrik P. A. Gustafsson, Axel Kleinschmidt and Daniel Persson. *Eisenstein Series and Automorphic Representations with Applications in String Theory*. Cambridge Studies in Advanced Mathematics. Volume 176. Cambridge University Press. 2018.
 
