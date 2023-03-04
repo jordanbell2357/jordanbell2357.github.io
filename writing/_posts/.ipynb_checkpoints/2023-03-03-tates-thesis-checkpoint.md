@@ -95,3 +95,6 @@ For each $$x \in \mathbb{Q}_p$$, the collection
 $$\{x + p^k \mathbb{Z}_p : k \ in \mathbb{Z}\}$$
 
 is a local base for the topology of $$\mathbb{Q}_p$$.
+
+Chapter 2, "Preliminaries on p-adic and Adelic Technology", of Philipp Fleig, Henrik P. A. Gustafsson, Axel Kleinschmidt and Daniel Persson. *Eisenstein Series and Automorphic Representations with Applications in String Theory*. Cambridge Studies in Advanced Mathematics. Volume 176. Cambridge University Press. 2018.
+
