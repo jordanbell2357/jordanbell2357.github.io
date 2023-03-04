@@ -80,22 +80,23 @@ One checks
 
 $$\mu_p(p^k \mathbb{Z}_p)=p^{-k}$$
 
+and
+
+$$\mu_p(\mathbb{Z}_p^\times) = \frac{p-1}{p}.$$
+
 For a Borel set $$A$$ in $$\mathbb{Q}_p$$ and for $$x \in \mathbb{Q}_p$$,
 
 $$\mu_p(x \cdot A) = |x|_p \mu_p(A)$$
 
 For $$f \in L^1(\mathbb{Q}_p)$$ and $$x \in \mathbb{Q}_p \setminus \{0\}$$,
 
-$$\int_{\mathbb{Q}_p} f(x^{-1}y)d\mu_p(y) = |x|_p \int_{\mathbb{Q}_p} f(y) d\mu_p(y)$$
-
+$$\int_{\mathbb{Q}_p} f(x^{-1}y)d\mu_p(y) = |x|_p \int_{\mathbb{Q}_p} f(y) d\mu_p(y).$$
 
 The multiplicative group
 
 $$\mathbb{Q}_p^\times = \{x \in \mathbb{Q}_p : x \neq 0\} = \mathbb{Q}_p \setminus \{0\}$$
 
-is a locally compact abelian group
-
-The restriction of $$\mu_p$$ to the Borel $$\sigma$$-algebra of $$\mathbb{Q}_p^\times$$
+is a locally compact abelian group. The restriction of $$\mu_p$$ to the Borel $$\sigma$$-algebra of $$\mathbb{Q}_p^\times$$
 is a Borel measure on $$\mathbb{Q}_p^\times$$.
 
 One then proves that
@@ -108,14 +109,19 @@ One then proves that for $$s \in \mathbb{C}$$ with $$\mathrm{Re}(s)>-1$$,
 
 $$\int_{\mathbb{Z}_p^\times} |x|_p^s d\mu_p(x) = \dfrac{p-1}{p(1-p^{-1-s})}$$
 
-and then that for $$\mathrm{Re}(x)>0$$,
+and that for $$\mathrm{Re}(s)>0$$,
 
-$$\int_{\mathbb{Z}_p^\times} |x|_p^s d\mu_p(x) = \dfrac{1}{1-p^{-s}}$$
+$$\int_{\mathbb{Z}_p^\times} |x|_p^s d\nu_p(x) = \dfrac{1}{1-p^{-s}}.$$
+
+References: [^1] [^2] [^3]
+
+[^1]: <https://jordanbell.info/LaTeX/mathematics/padicfield/>
+
+[^2]: <https://jordanbell.info/LaTeX/mathematics/padicharmonic/>
+
+[^3]: <https://jordanbell.info/LaTeX/mathematics/Qdual>
 
 
-Step by step proofs of every statement made above are given in various notes on <https://jordanbell.info/mathematics/>
-
-From here, we use Chapter 2, "Preliminaries on p-adic and Adelic Technology", of Philipp Fleig, Henrik P. A. Gustafsson, Axel Kleinschmidt and Daniel Persson. *Eisenstein Series and Automorphic Representations with Applications in String Theory*. Cambridge Studies in Advanced Mathematics. Volume 176. Cambridge University Press. 2018.
-
-
-
+We now follow Chapter 2, "Preliminaries on p-adic and Adelic Technology", of Philipp Fleig, Henrik P. A. Gustafsson,
+Axel Kleinschmidt and Daniel Persson. *Eisenstein Series and Automorphic Representations with Applications in String Theory*.
+Cambridge Studies in Advanced Mathematics. Volume 176. Cambridge University Press. 2018.
