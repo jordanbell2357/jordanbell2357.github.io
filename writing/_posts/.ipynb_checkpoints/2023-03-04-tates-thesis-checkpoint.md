@@ -66,7 +66,7 @@ Because $$v_p$$ is a discrete valuation, it follows that there is some $$\epsilo
 
 $$\{x \in \mathbb{Q}_p: |x|_p \leq 1\} = \{x \in \mathbb{Q}_p: |x|_p < 1 + \epsilon\},$$
 
-which shows that $$\mathb{Z}_p$$ is in fact an open set in $$\mathbb{Q}_p$$.
+which shows that $$\mathbb{Z}_p$$ is in fact an open set in $$\mathbb{Q}_p$$.
 
 # Additive Haar measure
 
@@ -146,10 +146,18 @@ References: [^4] [^5] [^6]
 
 [^5]: Philipp Fleig, Henrik P. A. Gustafsson, Axel Kleinschmidt and Daniel Persson. *Eisenstein Series and Automorphic Representations with Applications in String Theory*. Cambridge Studies in Advanced Mathematics. Volume 176. Cambridge University Press. 2018.
 
-[^6]: Dorian Goldfeld and Joseph Hundley. *Automorphic Representations and L-Functions for the General Linear Group. Volume I*. Cambridge University Press. 2011.
+[^6]: Dorian Goldfeld and Joseph Hundley. *Automorphic Representations and L-Functions for the General Linear Group. Volume I*. Cambridge Studies in Advanced Mathematics. Volume 129. Cambridge University Press. 2011.
 
-Chapter 2, "Preliminaries on p-adic and Adelic Technology" of Fleig, Gustafsson, Kleinschmidt, and Persson [^5].
+Chapter 2, "Preliminaries on p-adic and Adelic Technology" of [^5].
+
+
 
 
 
 # Ideles
+
+
+
+
+
+# Class group
