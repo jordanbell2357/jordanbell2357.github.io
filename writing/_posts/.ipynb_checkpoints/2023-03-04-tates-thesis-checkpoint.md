@@ -144,12 +144,12 @@ References: [^4] [^5] [^6]
 
 [^4]: <https://jordanbell.info/LaTeX/mathematics/Qdual/>
 
-[^5]: Dorian Goldfeld and Joseph Hundley. *Automorphic Representations and L-Functions for the General Linear Group. Volume I*. Cambridge University Press. 2011.
+[^5]: Philipp Fleig, Henrik P. A. Gustafsson, Axel Kleinschmidt and Daniel Persson. *Eisenstein Series and Automorphic Representations with Applications in String Theory*. Cambridge Studies in Advanced Mathematics. Volume 176. Cambridge University Press. 2018.
 
-[^6]: Philipp Fleig, Henrik P. A. Gustafsson, Axel Kleinschmidt and Daniel Persson. *Eisenstein Series and Automorphic Representations with Applications in String Theory*. Cambridge Studies in Advanced Mathematics. Volume 176. Cambridge University Press. 2018.
+[^6]: Dorian Goldfeld and Joseph Hundley. *Automorphic Representations and L-Functions for the General Linear Group. Volume I*. Cambridge University Press. 2011.
 
+Chapter 2, "Preliminaries on p-adic and Adelic Technology" of Fleig, Gustafsson, Kleinschmidt, and Persson [^5].
 
-Chapter 2, "Preliminaries on p-adic and Adelic Technology" of [^6].
 
 
 # Ideles
