@@ -68,6 +68,8 @@ $$\{x \in \mathbb{Q}_p: |x|_p \leq 1\} = \{x \in \mathbb{Q}_p: |x|_p < 1 + \epsi
 
 which shows that $$\mathbb{Z}_p$$ is in fact an open set in $$\mathbb{Q}_p$$.
 
+# Embedding $$\mathbb{Q} \hookrightarrow \mathbb{Q}_p$$
+
 # Additive Haar measure
 
 The additive group $$\mathbb{Q}_p$$ is a locally compact abelian group.
