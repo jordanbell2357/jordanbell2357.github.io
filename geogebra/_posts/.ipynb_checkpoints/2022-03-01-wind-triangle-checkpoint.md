@@ -13,7 +13,7 @@ title: Wind Triangle
 
 [FAA Pilot’s Handbook of Aeronautical Knowledge. Chapter 16: Navigation](https://www.faa.gov/regulations_policies/handbooks_manuals/aviation/phak/) (chapter 16, page 10):
 
-![PHAK 16-10](/assets/geogebra/phak1610.png)
+![PHAK 16-10](/images/GeoGebra/phak1610.png)
 
 ## Further resources
 
