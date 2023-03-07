@@ -9,16 +9,16 @@ title: NetLogo
 
 ## Small Worlds
 
-![Small Worlds - NetLogo](/assets/screenshots/Small_Worlds_NetLogo_Setup.png)
+![Small Worlds - NetLogo](/images/NetLogo/Small_Worlds_NetLogo_Setup.png)
 
-![Small Worlds - NetLogo](/assets/screenshots/Small_Worlds_NetLogo_Rewire_Partial.png)
+![Small Worlds - NetLogo](/images/NetLogo/Small_Worlds_NetLogo_Rewire_Partial.png)
 
-![Small Worlds - NetLogo](/assets/screenshots/Small_Worlds_NetLogo_Rewire_All.png)
+![Small Worlds - NetLogo](/images/NetLogo/Small_Worlds_NetLogo_Rewire_All.png)
 
 ## GasLab Adiabatic Piston
 
-![GasLab Adiabatic Piston - NetLogo](/assets/screenshots/Adiabatic1.png)
+![GasLab Adiabatic Piston - NetLogo](/images/NetLogo/Adiabatic1.png)
 
-![GasLab Adiabatic Piston - NetLogo](/assets/screenshots/Adiabatic2.png)
+![GasLab Adiabatic Piston - NetLogo](/images/NetLogo/Adiabatic2.png)
 
-![GasLab Adiabatic Piston - NetLogo](/assets/screenshots/Adiabatic3.png)
+![GasLab Adiabatic Piston - NetLogo](/images/NetLogo/Adiabatic3.png)

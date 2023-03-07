@@ -19,7 +19,7 @@ Ghostscript: [^1] [^2]
 gs -dNOPAUSE -dBATCH -dFirstPage=174 -dLastPage=183 -sDEVICE=pdfwrite -sOutputFile=Minkowski1904.pdf -f ICM1904.ocr.pdf
 ```
 
-[H. Minkowski. *Zur Geometrie der Zahlen.* PDF](/gs/Minkowski1904.pdf)
+[H. Minkowski. *Zur Geometrie der Zahlen.* PDF](/gs/Minkowski/Minkowski1904.pdf)
 
 > Mit Projektionsbildern auf einer Doppeltafel.
 
@@ -28,7 +28,7 @@ scanned in the Bibliothèque nationale de France (BnF) Gallica copy:
 
 <https://gallica.bnf.fr/ark:/12148/bpt6k99443c/f188.item.r=Minkowski>
 
-[Figures PDF](/gs/Doppeltafel.pdf)
+[Figures PDF](/gs/Minkowski/Doppeltafel.pdf)
 
 ImageMagick: [^3]
 
@@ -38,4 +38,4 @@ ImageMagick: [^3]
 convert -density 600 Doppeltafel.pdf[2] -background white -flatten -resize 1400x1400^ -quality 100 Doppeltafel.png
 ```
 
-[![Figures PNG](/gs/Doppeltafel.png)](/gs/Doppeltafel.png)
+[![Figures PNG](/gs/Minkowski/Doppeltafel.png)](/gs/Minkowski/Doppeltafel.png)

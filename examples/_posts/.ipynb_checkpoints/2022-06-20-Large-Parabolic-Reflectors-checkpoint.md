@@ -6,9 +6,9 @@ topic: focus
 
 [Edmund Optics: Large Parabolic Reflectors](https://www.edmundoptics.com/f/large-parabolic-reflectors/11483/)
 
-![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/LargeParabolicReflectors.png)
+![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/images/Edmund-Optics/LargeParabolicReflectors.png)
 
-![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/assets/images/Edmund-Optics/StockNumber.png)
+![Edmund Optics: Large Parabolic Reflectors, Family ID \#1364](/images/Edmund-Optics/StockNumber.png)
 
 <table>
 <tr>

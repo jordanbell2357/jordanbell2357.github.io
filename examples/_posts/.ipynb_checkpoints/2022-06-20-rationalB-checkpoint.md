@@ -53,4 +53,4 @@ $$
 
 
 
-[Symbolab](/assets/symbolab/rationalB.pdf)
+[Symbolab](/gs/SymboLab/rationalB.pdf)

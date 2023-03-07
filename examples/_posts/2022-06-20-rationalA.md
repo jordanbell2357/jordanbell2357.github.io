@@ -60,4 +60,4 @@ $$
 \dfrac{-2x+8}{(x+2)(x-2)}
 $$
 
-[Symbolab](/assets/symbolab/rationalA.pdf)
+[Symbolab](/gs/Symbolab/rationalA.pdf)

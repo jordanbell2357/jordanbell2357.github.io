@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-[PDF of my CV](/assets/pdfs/cv_bell.pdf)
+[PDF of my CV](/gs/CV/cv_bell.pdf)
 
 - [Employment](#employment)
 - [Education](#education)
@@ -18,7 +18,7 @@ permalink: /about/
 
 June 2022 - Present
 
-![Data Science Associate, Network Performance, Canadian Tire Corp](/assets/images/J_Bell.png)
+![Data Science Associate, Network Performance, Canadian Tire Corp](/images/about/J_Bell.png)
 
 ## Education {#education}
 
@@ -47,7 +47,7 @@ University Medal in Mathematics
 
 > Jordan Bell: <tt>0x$1.00</tt>
 
-![Donald E. Knuth. Bank of San Serriffe](/assets/images/screenshots/Knuth_ The_Bank_of_San_Serriffe.png)
+![Donald E. Knuth. Bank of San Serriffe](/images/about/Knuth_ The_Bank_of_San_Serriffe.png)
 
 ## Service {#service}
 
@@ -59,7 +59,7 @@ University Medal in Mathematics
 
 Statistics, computer science, and financial economics tutoring
 
-![Jordan Bell Tutoring Toronto](/assets/images/logo.png)
+![Jordan Bell Tutoring Toronto](/images/about/logo.png)
 
 ## Content profiles {#profiles}
 
@@ -90,34 +90,3 @@ Statistics, computer science, and financial economics tutoring
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/public_profiles/c4354b0e-6e16-46ec-be5b-64b7b49e9611)
 
 - [Salesforce Trailhead](https://trailblazer.me/id/jordanbell2357)
-
-<!--
-
-### Other online courses
-
-<table>
-<thead>
-  <tr>
-    <th>Course</th>
-    <th>Organization</th>
-    <th>Platform</th>
-    <th>Date Completed</th>
-  </tr>
-</thead>
-<tbody>
-  <tr>
-    <td><a href="https://open.sap.com/verify/xenak-hesyv-katal-nebok-hityg">Data Science in Action - Building a Predictive Churn Model</a></td>
-    <td>openSAP</td>
-    <td>openSAP</td>
-    <td>April, 2019</td>
-  </tr>
-  <tr>
-    <td><a href="https://learn.baselgovernance.org/course/view.php?id=17">Source and Application of Funds Analysis</a> (<a href="https://jordanbell.info/assets/pdfs/aJImmI2u8i.pdf">Certificate of Completion</a>)</td>
-    <td>International Centre for Asset Recovery (ICAR), Basel Institute on Governance</td>
-    <td>Basel LEARN</td>
-    <td>December, 2022</td>
-  </tr>
-</tbody>
-</table>
-
--->
