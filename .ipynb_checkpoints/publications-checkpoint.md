@@ -35,4 +35,4 @@ permalink: /publications/
 
 ## Translations {#translations}
 
-- Hawking, Stephen (ed.), *God Created the Integers: The Mathematical Breakthroughs That Changed History (New Edition)*. Leonhard Euler, “On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)”, pp. 393-399, translated from the Latin by Jordan Bell. Running Press, Philadelphia, 2007. [PDF](/assets/pdfs/E41.pdf)
+- Hawking, Stephen (ed.), *God Created the Integers: The Mathematical Breakthroughs That Changed History (New Edition)*. Leonhard Euler, “On the Sums of Series of Reciprocals (De Summis Serierum Reciprocarum)”, pp. 393-399, translated from the Latin by Jordan Bell. Running Press, Philadelphia, 2007. [PDF](/gs/E41/E41.pdf)

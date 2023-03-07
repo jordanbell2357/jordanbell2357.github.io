@@ -66,7 +66,7 @@ Da ferner ein Marck von der ersten Sorte 14 Loth fein Silber hält, so werden di
 
 > Kölner Mark, 233.97 g. Münzkabinett der Staatlichen Museen zu Berlin, 18201786 <https://ikmk.smb.museum/object?id=18201786>
 > 
-> [![Image files are licensed Public Domain Mark 1.0. Münzkabinett der Staatlichen Museen zu Berlin, 18201786. Photographs by Reinhard Saczewski.](/assets/images/DE-MUS-814819-18201786-av.png)](https://ikmk.smb.museum/object?id=18201786)
+> [![Image files are licensed Public Domain Mark 1.0. Münzkabinett der Staatlichen Museen zu Berlin, 18201786. Photographs by Reinhard Saczewski.](/images/SMB/DE-MUS-814819-18201786-av.png)](https://ikmk.smb.museum/object?id=18201786)
 
 If he take 𝑥 Marks of the first kind, 𝑦 Marks of the second,
 and 𝑧 Marks of the third, he will have 𝑥+𝑦+𝑧=30,

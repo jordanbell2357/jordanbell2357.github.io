@@ -5,11 +5,11 @@ title: Private Equity and Venture Capital by Università Bocconi
 
 [Private Equity and Venture Capital by Università Bocconi](https://www.coursera.org/learn/private-equity)
 
-![2-11-Calculating-Returns-Coursera](/assets/images/posts/2-11-Calculating-Returns-Coursera.png)
+![2-11-Calculating-Returns-Coursera](/images/Bocconi/2-11-Calculating-Returns-Coursera.png)
 
-![XLSX Screenshot 1](/assets/images/posts/CEF1.png)
+![XLSX Screenshot 1](/images/Bocconi/CEF1.png)
 
-![XLSX Screenshot 2](/assets/images/posts/CEF2.png)
+![XLSX Screenshot 2](/images/Bocconi/CEF2.png)
 
 
 ```bash
@@ -29,4 +29,4 @@ convert -density 600 Closed-End-Fund.pdf -background white -flatten -resize 700x
 
 [^2]: [Annotated List of Command-line Options \| ImageMagick](https://imagemagick.org/script/command-line-options.php)
 
-![Closed End Fund](/assets/images/posts/Closed-End-Fund.png)
+![Closed End Fund](/images/Bocconi/Closed-End-Fund.png)

@@ -47,7 +47,7 @@ CDLI Composite no. Q000756, CDLI no. P478952, ll. 1-20:[^2]
 
 CLDI no. P276217. ETCSL 5.01.03 Edubba C (witness):[^3] [^4] [^5]
 
-[![CDLI no. P276217](/assets/images/P276217.png)](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P276217)
+[![CDLI no. P276217](/images/CDLI/P276217.png)](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P276217)
 
 [^3]: [CLDI no. P276217](https://cdli.ucla.edu/search/archival_view.php?ObjectID=P276217)
 

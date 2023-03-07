@@ -29,21 +29,21 @@ Part One: The Old Kingdom, Chapter V, Didactic Literature, *The Instruction of P
 
 [^6]: [Electronic Publications of the Czech Institute of Egyptology. Zbyněk Žába, *Les maximes de Ptaḥḥotep*, Éditions de l'Académie Tchécoslovaque des Sciences, Prague, 1956. pp. 20-21](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
 
-[![Žába, *Les maximes de Ptaḥḥotep*](/assets/images/Zaba1.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+[![Žába, *Les maximes de Ptaḥḥotep*](/gs/Ptahhotep/Zaba1.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
 
 p. 20:
 
-[![Žába, *Les maximes de Ptaḥḥotep*, p. 20](/assets/images/Zaba19.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+[![Žába, *Les maximes de Ptaḥḥotep*, p. 20](/gs/Ptahhotep/Zaba19.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
 
 p. 21:
 
-[![Žába, *Les maximes de Ptaḥḥotep*, p. 21](/assets/images/Zaba20.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
+[![Žába, *Les maximes de Ptaḥḥotep*, p. 21](/gs/Ptahhotep/Zaba20.jpg)](http://ceguold.ff.cuni.cz/?req=doc:ebooks&lang=en&PHPSESSID=a1f5160bf2ae1028db8399b94d84cf02)
 
 #### Mark-Jan Nederhof, St Andrews Corpus[^4] [^5] [^6] [^7]
 
-[![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/assets/images/nederhof1.png)](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/)
+[![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/gs/Ptahhotep/nederhof1.png)](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/)
 
-[![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/assets/images/nederhof2.png)](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/)
+[![Mark-Jan Nederhof and Robert Myers, "Instruction of Ptahhotep"](/gs/Ptahhotep/nederhof2.png)](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/)
 
 [^4]: [Mark-Jan Nederhof, St Andrews Corpus](https://mjn.host.cs.st-andrews.ac.uk/egyptian/texts/corpus/pdf/)
 
@@ -57,7 +57,7 @@ p. 21:
 
 [^B]: [BnF Archives et manuscrits. Egyptien 183-194. Papyrus Prisse](https://archivesetmanuscrits.bnf.fr/ark:/12148/cc12921q)
 
-[![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/assets/images/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
+[![Papyrus Prisse. Egyptien 186. Enseignement de Ptahhotep (1-73)](/gs/Ptahhotep/Papyrus_Prisse_Egyptien_186.png)](https://gallica.bnf.fr/ark:/12148/btv1b8304609v)
     
 #### British Museum EA10509,1[^C]
     
@@ -65,7 +65,7 @@ p. 21:
 
 > Late 18th Dynasty papyrus with hieratic literary text on recto: The Teaching of Ptahhotep column 1, with blank margin. This sheet contains the Title, Prologue and maxims 1-2 (verses \[ed. Zaba\] 1-66). Part of an archive of literary texts, mostly now in Moscow, apparently from Luxor. The manuscript is carefully written with rubrics marking the start of verses and some corrections.
     
-[![British Museum EA10509,1. © The Trustees of the British Museum](/assets/images/537587001.png)](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
+[![British Museum EA10509,1. © The Trustees of the British Museum](/gs/Ptahhotep/537587001.png)](https://www.britishmuseum.org/collection/object/Y_EA10509-1)
 
 #### University College London, Digital Egypt for Universities, *Teaching of Ptahhotep*[^2]
 

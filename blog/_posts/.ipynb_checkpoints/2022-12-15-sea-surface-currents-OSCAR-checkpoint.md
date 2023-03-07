@@ -51,7 +51,7 @@ with xr.open_dataset('oscar_vel2020.nc.gz') as ds:
     plt.show()
 ```
 
-![Sea surface currents derived from OSCAR](/assets/images/posts/currents18x9.png)
+![Sea surface currents derived from OSCAR](/images/OSCAR/currents18x9.png)
 
 # Twitter {#twitter}
 

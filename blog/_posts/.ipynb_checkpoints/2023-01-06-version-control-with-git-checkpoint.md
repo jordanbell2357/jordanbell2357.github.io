@@ -11,9 +11,9 @@ the Final Project (and had to access the course from my Completed Courses to get
 Because of this, I judge it be sound to present my solution to this project. This is a step by step example for learners to imitate,
 and it is longer than most worked out examples that appear at the top of many search engine results.
 
-[![© 2018 Atlassian](/assets/images/screenshots/FP1.png)](https://www.coursera.org/learn/version-control-with-git)
+[![© 2018 Atlassian](/images/Atlassian/FP1.png)](https://www.coursera.org/learn/version-control-with-git)
 
-[![© 2018 Atlassian](/assets/images/screenshots/FP2.png)](https://www.coursera.org/learn/version-control-with-git)
+[![© 2018 Atlassian](/images/Atlassian/FP2.png)](https://www.coursera.org/learn/version-control-with-git)
 
 I made this working on Git Bash ([Git for Windows](https://gitforwindows.org/)).[^1]
 
@@ -105,4 +105,4 @@ git checkout feature2
 git rebase master
 ```
 
-[![Commit graph. © 2018 Atlassian](/assets/images/screenshots/FP3.png)](https://www.coursera.org/learn/version-control-with-git)
+[![Commit graph. © 2018 Atlassian](/images/Atlassian/FP3.png)](https://www.coursera.org/learn/version-control-with-git)
