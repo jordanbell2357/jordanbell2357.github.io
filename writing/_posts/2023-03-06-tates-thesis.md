@@ -138,6 +138,37 @@ and that for $$\mathrm{Re}(s)>0$$,
 
 $$\int_{\mathbb{Z}_p^\times} |x|_p^s d\nu_p(x) = \dfrac{1}{1-p^{-s}}.$$
 
+# $$p$$-adic fractional parts
+
+For $$x \in \mathbb{Q}_p$$, define $$[x]_p \in \mathbb{Q}_p$$ by
+
+$$
+[x]_p(k) = \begin{cases}
+x(k)&k<0\\
+0&k \geq 0
+\end{cases},
+\quad k \in \mathbb{Z},
+$$
+
+called the $$p$$**-adic fractional part** of $$x$$.
+
+For $$x \in \mathbb{Q}$$, [^4]
+
+[^4]: <https://jordanbell.info/LaTeX/mathematics/Qdual/#S9>
+
+$$
+x - \sum_{p} [x]_p \in \mathbb{Z}.
+$$
+
+# Additive characters on $$\mathbb{Q}_p$$
+
+
+# $$p$$-adic Fourier transform
+
+
+# $$p$$-adic Gaussians
+
+
 # Adeles
 
 References: [^4] [^5] [^6]
@@ -151,13 +182,10 @@ References: [^4] [^5] [^6]
 Chapter 2, "Preliminaries on p-adic and Adelic Technology" of [^5].
 
 
-
-
-
 # Ideles
 
 
+# Haar measure on adeles
 
 
-
-# Class group
+# Tate's thesis
