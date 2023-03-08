@@ -614,7 +614,7 @@ numbers 31 and 20, and particularly on the ratio which we
 discover by seeking the greatest common divisor of these two
 numbers. In fact, if we perform this operation,
 
-<img src="/assets/euler/rhyzvfrp.png" alt="Greatest common divisor by long division" title="Greatest common divisor by long division" width="268" height="74">
+<img src="/EulerAlgebra/rhyzvfrp.png" alt="Greatest common divisor by long division" title="Greatest common divisor by long division" width="268" height="74">
 
 it is evident tliat the quotients are found also in the successive
 values of the letters $$p$$, $$q$$, $$r$$, $$s$$, etc. and that they are
@@ -851,6 +851,6 @@ the impossibility of such questions.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part}}. {{ page.title }}](/assets/euler/en/pt-II-1.pdf)
+    - [Part {{ page.part}}. {{ page.title }}](/EulerAlgebra/en/pt-II-1.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Zweyter Abschnitt. Capitel 1. Von der Auflösung der einfachen Gleichungen, worinnen mehr als eine unbekannte Zahl vorkommt](/assets/euler/de/II-II-1.pdf)
+    - [Zweyter Theil. Zweyter Abschnitt. Capitel 1. Von der Auflösung der einfachen Gleichungen, worinnen mehr als eine unbekannte Zahl vorkommt](/EulerAlgebra/de/II-II-1.pdf)

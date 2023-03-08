@@ -900,6 +900,6 @@ $$83n^2+1=m^2$$, where $$n=9$$, and $$m=82$$.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part}}. {{ page.title }}](/assets/euler/en/pt-II-7.pdf)
+    - [Part {{ page.part}}. {{ page.title }}](/EulerAlgebra/en/pt-II-7.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Zweyter Abschnitt. Capitel 7. Von einer besondern Methode die Formel $$ann+1$$ zu einem Quadrat in gantzen Zahlen zu machen](/assets/euler/de/II-II-7.pdf)
+    - [Zweyter Theil. Zweyter Abschnitt. Capitel 7. Von einer besondern Methode die Formel $$ann+1$$ zu einem Quadrat in gantzen Zahlen zu machen](/EulerAlgebra/de/II-II-7.pdf)

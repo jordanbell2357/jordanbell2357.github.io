@@ -88,7 +88,7 @@ ought to produce the dividend $$a^2+3ab+2b^2$$. See the operation.[^1]
 [^1]: Made using [Tables Generator](https://www.tablesgenerator.com/) and [TeXeR](https://artofproblemsolving.com/texer/)
 
 <a href="https://artofproblemsolving.com/texer/jptasmxh">
-<img src="/assets/euler/jptasmxh.png" alt="Polynomial long division" width="272" height="172">
+<img src="/EulerAlgebra/jptasmxh.png" alt="Polynomial long division" width="272" height="172">
 </a>
 
 <span class="art">288</span> This operation will be considerably facilitated by
@@ -101,60 +101,60 @@ was $$a$$. The following examples will render the process
 more perspicuous.
 
 <a href="https://artofproblemsolving.com/texer/ntjqbsro">
-<img src="/assets/euler/ntjqbsro.png" alt="Polynomial long division" width="360" height="235">
+<img src="/EulerAlgebra/ntjqbsro.png" alt="Polynomial long division" width="360" height="235">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/rcgwurze">
-<img src="/assets/euler/rcgwurze.png" alt="Polynomial long division" width="246" height="171">
+<img src="/EulerAlgebra/rcgwurze.png" alt="Polynomial long division" width="246" height="171">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/edpbsfug">
-<img src="/assets/euler/edpbsfug.png" alt="Polynomial long division" width="335" height="171">
+<img src="/EulerAlgebra/edpbsfug.png" alt="Polynomial long division" width="335" height="171">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/nttoyunx">
-<img src="/assets/euler/nttoyunx.png" alt="Polynomial long division" width="334" height="235">
+<img src="/EulerAlgebra/nttoyunx.png" alt="Polynomial long division" width="334" height="235">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/cmrlbojt">
-<img src="/assets/euler/cmrlbojt.png" alt="Polynomial long division" width="386" height="235">
+<img src="/EulerAlgebra/cmrlbojt.png" alt="Polynomial long division" width="386" height="235">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/gpphlavj">
-<img src="/assets/euler/gpphlavj.png" alt="Polynomial long division" width="552" height="237">
+<img src="/EulerAlgebra/gpphlavj.png" alt="Polynomial long division" width="552" height="237">
 </a>
 
 ---
     
 <a href="https://artofproblemsolving.com/texer/iytxpnib">
-<img src="/assets/euler/iytxpnib.png" alt="Polynomial long division" width="589" height="235">
+<img src="/EulerAlgebra/iytxpnib.png" alt="Polynomial long division" width="589" height="235">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/wdjlpmdc">
-<img src="/assets/euler/wdjlpmdc.png" alt="Polynomial long division" width="575" height="236">
+<img src="/EulerAlgebra/wdjlpmdc.png" alt="Polynomial long division" width="575" height="236">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/zldggvdq">
-<img src="/assets/euler/zldggvdq.png" alt="Polynomial long division" width="580" height="296">
+<img src="/EulerAlgebra/zldggvdq.png" alt="Polynomial long division" width="580" height="296">
 </a>
 
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-4.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/II-4.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Erster Theil. Zweyter Abschnitt. Capitel 4. Von der Division mit zusammengesetzten Größen](/assets/euler/de/I-II-4.pdf)
+    - [Erster Theil. Zweyter Abschnitt. Capitel 4. Von der Division mit zusammengesetzten Größen](/EulerAlgebra/de/I-II-4.pdf)

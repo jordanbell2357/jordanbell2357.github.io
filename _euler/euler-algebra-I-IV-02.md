@@ -207,6 +207,6 @@ $$x = \dfrac{1.9084850}{0.9542425}=\dfrac{19084850}{09542425}=2.$$
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-2.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/IV-2.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Erster Abschnitt. Capitel 2. Von den Gleichungen des ersten Grads und ihrer Auflösung](/assets/euler/de/II-I-2.pdf)
+    - [Zweyter Theil. Erster Abschnitt. Capitel 2. Von den Gleichungen des ersten Grads und ihrer Auflösung](/EulerAlgebra/de/II-I-2.pdf)

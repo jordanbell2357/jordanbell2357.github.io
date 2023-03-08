@@ -236,7 +236,7 @@ number 2197:[^1] [^2]
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
-<img src="/assets/euler/atozmath2197.png" title="© 2022 AtoZmath.com. Cube root of 2197 using long division" alt="© 2022 AtoZmath.com. Cube root of 2197 using long division" width="500" height="367">
+<img src="/EulerAlgebra/atozmath2197.png" title="© 2022 AtoZmath.com. Cube root of 2197 using long division" alt="© 2022 AtoZmath.com. Cube root of 2197 using long division" width="500" height="367">
 </a>
 <figcaption>© 2022 AtoZmath.com. Cube root of 2197 using long division</figcaption>
 </figure>
@@ -245,7 +245,7 @@ Let us also extract the cube root of 34965783:
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=8">
-<img src="/assets/euler/atozmath34965783.png" title="© 2022 AtoZmath.com. Cube root 34965783 using long division" alt="© 2022 AtoZmath.com. Cube root 34965783 using long division" width="600" height="378">
+<img src="/EulerAlgebra/atozmath34965783.png" title="© 2022 AtoZmath.com. Cube root 34965783 using long division" alt="© 2022 AtoZmath.com. Cube root 34965783 using long division" width="600" height="378">
 </a>
 <figcaption>© 2022 AtoZmath.com. Cube root of 2197 using long division</figcaption>
 </figure>
@@ -253,6 +253,6 @@ Let us also extract the cube root of 34965783:
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-9.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/II-9.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Erster Theil. Zweyter Abschnitt. Capitel 9. Von den Cubis und von der Ausziehung der Cubic-Wurzel](/assets/euler/de/I-II-9.pdf)
+    - [Erster Theil. Zweyter Abschnitt. Capitel 9. Von den Cubis und von der Ausziehung der Cubic-Wurzel](/EulerAlgebra/de/I-II-9.pdf)

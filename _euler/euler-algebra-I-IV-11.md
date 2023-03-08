@@ -100,7 +100,7 @@ for $$x=2$$ being one of the roots $$x-2$$ is a factor of the equation,
 adn as we have only to see the other factor by means of division as follows:
 
 <a href="https://artofproblemsolving.com/texer/uptzquhb">
-<img src="/assets/euler/uptzquhb.png" alt="Polynomial long division" width="213" height="177">
+<img src="/EulerAlgebra/uptzquhb.png" alt="Polynomial long division" width="213" height="177">
 </a>
 
 Since, therefore, the formula is represented by the product
@@ -209,7 +209,7 @@ equation, by means of which we easily find the two other
 roots; for, actually dividing by $$x-2$$, we have
 
 <a href="https://artofproblemsolving.com/texer/geyfrhwy">
-<img src="/assets/euler/geyfrhwy.png" alt="Polynomial long division" width="231" height="177">
+<img src="/EulerAlgebra/geyfrhwy.png" alt="Polynomial long division" width="231" height="177">
 </a>
 
 And making the quotient $$x^2-3x-28=0$$,
@@ -259,7 +259,7 @@ found by dividing
 $$y^3+9y^2+18y-910$$ by $$y-7$$, thus:
 
 <a href="https://artofproblemsolving.com/texer/ncijelkw">
-<img src="/assets/euler/ncijelkw.png" alt="Polynomial long division" width="255" height="177">
+<img src="/EulerAlgebra/ncijelkw.png" alt="Polynomial long division" width="255" height="177">
 </a>
 
 Supposing now this quotient $$y^2+16y+130=0$$, we shall have $$y^2 + 16y = -130$$, and thence
@@ -498,7 +498,7 @@ it. Let us now seek for the other two, by dividing the
 second form of our equation by $$x-7$$.
 
 <a href="https://artofproblemsolving.com/texer/nxoigbhu">
-<img src="/assets/euler/nxoigbhu.png" alt="Polynomial long division" width="309" height="212">
+<img src="/EulerAlgebra/nxoigbhu.png" alt="Polynomial long division" width="309" height="212">
 </a>
 
 Now, making this quotient equal to nothing, we have
@@ -576,6 +576,6 @@ conditions of the question:
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-11.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/IV-11.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Erster Abschnitt. Capitel 11. Von der Auflösung der vollständigen cubischen Gleichungen](/assets/euler/de/II-I-11.pdf)
+    - [Zweyter Theil. Erster Abschnitt. Capitel 11. Von der Auflösung der vollständigen cubischen Gleichungen](/EulerAlgebra/de/II-I-11.pdf)

@@ -329,6 +329,6 @@ So that there are fifteen partners, and each contributed 150 crowns.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-5.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/IV-5.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Erster Abschnitt. Capitel 5. Von der Auflösung der reinen Quadratischen Gleichungen](/assets/euler/de/II-I-5.pdf)
+    - [Zweyter Theil. Erster Abschnitt. Capitel 5. Von der Auflösung der reinen Quadratischen Gleichungen](/EulerAlgebra/de/II-I-5.pdf)

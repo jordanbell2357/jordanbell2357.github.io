@@ -102,14 +102,14 @@ produces only 21, which is 3 less than 24. We may also
 consider the following examples in the same manner:
 
 <a href="https://artofproblemsolving.com/texer/abfbqtug">
-<img src="/assets/euler/abfbqtug.png" alt="Long division" width="46" height="88">
+<img src="/EulerAlgebra/abfbqtug.png" alt="Long division" width="46" height="88">
 </a>
 
 that is to say, the divisor is 6, the dividend 84, the quotient 5, and the
 remainder 4.
 
 <a href="https://artofproblemsolving.com/texer/rhppibyu">
-<img src="/assets/euler/rhppibyu.png" alt="Long division" width="46" height="87">
+<img src="/EulerAlgebra/rhppibyu.png" alt="Long division" width="46" height="87">
 </a>
 
 here the divisor is 9, the dividend
@@ -165,6 +165,6 @@ divisors.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/I-5.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/I-5.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Erster Theil. Erster Abschnitt. Capitel 5. Von der Division mit einfachen Größen](/assets/euler/de/I-I-5.pdf)
+    - [Erster Theil. Erster Abschnitt. Capitel 5. Von der Division mit einfachen Größen](/EulerAlgebra/de/I-I-5.pdf)

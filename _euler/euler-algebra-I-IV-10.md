@@ -43,7 +43,7 @@ let us
 therefore perform this division.
 
 <a href="https://artofproblemsolving.com/texer/nqyxzgxd">
-<img src="/assets/euler/nqyxzgxd.png" alt="Polynomial long division" width="213" height="177">
+<img src="/EulerAlgebra/nqyxzgxd.png" alt="Polynomial long division" width="213" height="177">
 </a>
 
 Hence it follows, that our equation, $$x^3=8$$,
@@ -131,7 +131,7 @@ will be divisible by $$x-c$$,
 as the actual division shows
 
 <a href="https://artofproblemsolving.com/texer/chcvtqld">
-<img src="/assets/euler/chcvtqld.png" alt="Polynomial long division" width="218" height="173">
+<img src="/EulerAlgebra/chcvtqld.png" alt="Polynomial long division" width="218" height="173">
 </a>
 
 Consequently, the equation in question may be represented by the product
@@ -248,6 +248,6 @@ for eighteen hens.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-10.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/IV-10.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Erster Abschnitt. Capitel 10. Von der Auflösung der reinen cubischen Gleichungen](/assets/euler/de/II-I-10.pdf)
+    - [Zweyter Theil. Erster Abschnitt. Capitel 10. Von der Auflösung der reinen cubischen Gleichungen](/EulerAlgebra/de/II-I-10.pdf)

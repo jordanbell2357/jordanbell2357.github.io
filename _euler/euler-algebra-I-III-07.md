@@ -30,7 +30,7 @@ and this last divisor will be the greatest common divisor of
 the two given numbers.
 
 <a href="https://artofproblemsolving.com/texer/pfotexig">
-<img src="/assets/euler/pfotexig.png" alt="Finding greatest common divisor with long division" width="400" height="121">
+<img src="/EulerAlgebra/pfotexig.png" alt="Finding greatest common divisor with long division" width="400" height="121">
 </a>
 
 Thus, for the two numbers 576 and 252.
@@ -42,7 +42,7 @@ examples; and, for this purpose, let the greatest common
 divisor of the numbers 504 and 312 be required.
 
 <a href="https://artofproblemsolving.com/texer/gjyncrpl">
-<img src="/assets/euler/gjyncrpl.png" alt="Finding greatest common divisor with long division" width="500" height="83">
+<img src="/EulerAlgebra/gjyncrpl.png" alt="Finding greatest common divisor with long division" width="500" height="83">
 </a>
 
 So that 24 is the greatest common divisor, and consequently the relation 504:312
@@ -52,7 +52,7 @@ is reduced to the form 21:13.
 common divisor of these two numbers be required.
 
 <a href="https://artofproblemsolving.com/texer/kreecolj">
-<img src="/assets/euler/kreecolj.png" alt="Finding greatest common divisor with long division" width="500" height="152">
+<img src="/EulerAlgebra/kreecolj.png" alt="Finding greatest common divisor with long division" width="500" height="152">
 </a>
 
 Wherefore 1 is, in this case, the greatest common divisor,
@@ -109,7 +109,7 @@ requiring the greatest common divisor of the numbers 1728
 and 2304. The operation is as follows:
 
 <a href="https://artofproblemsolving.com/texer/cawdsrdc">
-<img src="/assets/euler/cawdsrdc.png" alt="Finding greatest common divisor with long division" width="290" height="109">
+<img src="/EulerAlgebra/cawdsrdc.png" alt="Finding greatest common divisor with long division" width="290" height="109">
 </a>
 
 Hence it follows that 576 is the greatest common divisor,
@@ -119,6 +119,6 @@ is to say, 1728 is to 2304 in the same relation as 3 is to 4.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/III-7.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/III-7.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Erster Theil. Dritter Abschnitt. Capitel 7. Von dem größten gemeinen Theiler zweyer gegebenen Zahlen](/assets/euler/de/I-III-7.pdf)
+    - [Erster Theil. Dritter Abschnitt. Capitel 7. Von dem größten gemeinen Theiler zweyer gegebenen Zahlen](/EulerAlgebra/de/I-III-7.pdf)

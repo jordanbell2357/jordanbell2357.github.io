@@ -243,7 +243,7 @@ the factors of the equation, or that $$x^2+4x-21$$ is divisible
 by $$x-3$$, which the actual division proves. Thus,
 
 <a href="https://artofproblemsolving.com/texer/qznvljcs">
-<img src="/assets/euler/qznvljcs.png" alt="Polynomial long division" width="172" height="130">
+<img src="/EulerAlgebra/qznvljcs.png" alt="Polynomial long division" width="172" height="130">
 </a>
 
 So that the other factor is $$x + 7$$, and our equation is represented by the
@@ -253,6 +253,6 @@ first factor giving $$x=3$$, and the other $$x= -7$$.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-9.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/IV-9.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Erster Abschnitt. Capitel 9. Von der Natur der Quadratischen Gleichungen](/assets/euler/de/II-I-9.pdf)
+    - [Zweyter Theil. Erster Abschnitt. Capitel 9. Von der Natur der Quadratischen Gleichungen](/EulerAlgebra/de/II-I-9.pdf)

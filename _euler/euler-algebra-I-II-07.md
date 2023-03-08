@@ -129,25 +129,25 @@ will render this operation more clear.
 
 
 <a href="https://artofproblemsolving.com/texer/youjickd">
-<img src="/assets/euler/youjickd.png" alt="Polynomial square root" width="500" height="143">
+<img src="/EulerAlgebra/youjickd.png" alt="Polynomial square root" width="500" height="143">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/gqwjcjed">
-<img src="/assets/euler/gqwjcjed.png" alt="Polynomial square root" width="447" height="135">
+<img src="/EulerAlgebra/gqwjcjed.png" alt="Polynomial square root" width="447" height="135">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/krbauhty">
-<img src="/assets/euler/krbauhty.png" alt="Polynomial square root" width="539" height="135">
+<img src="/EulerAlgebra/krbauhty.png" alt="Polynomial square root" width="539" height="135">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/wclmufmg">
-<img src="/assets/euler/wclmufmg.png" alt="Polynomial square root" width="810" height="175">
+<img src="/EulerAlgebra/wclmufmg.png" alt="Polynomial square root" width="810" height="175">
 </a>
 
 <span class="art">324</span> We easily deduce from the rule which we have explained, the method which is taught in books of arithmetic
@@ -163,20 +163,20 @@ following examples in numbers:[^1] [^2] [^3] [^4]
 [^4]: AlgebraDen.com: [Square Root by Long Division Method](https://www.algebraden.com/square-root-by-long-division-method.htm)
 
 <a href="https://artofproblemsolving.com/texer/vpnfjpvf">
-<img src="/assets/euler/vpnfjpvf.png" alt="Square root" width="256" height="427">
+<img src="/EulerAlgebra/vpnfjpvf.png" alt="Square root" width="256" height="427">
 </a>
 
 ---
 
 <a href="https://artofproblemsolving.com/texer/jmwdlaqw">
-<img src="/assets/euler/jmwdlaqw.png" alt="Square root" width="379" height="522">
+<img src="/EulerAlgebra/jmwdlaqw.png" alt="Square root" width="379" height="522">
 </a>
 
 ---
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
-<img src="/assets/euler/atozmath529.png" title="© 2022 AtoZmath.com. Square root of 529 using long division" alt="© 2022 AtoZmath.com. Square root of 529 using long division" width="500" height="374">
+<img src="/EulerAlgebra/atozmath529.png" title="© 2022 AtoZmath.com. Square root of 529 using long division" alt="© 2022 AtoZmath.com. Square root of 529 using long division" width="500" height="374">
 </a>
 <figcaption>© 2022 AtoZmath.com. Square root of 529 using long division</figcaption>
 </figure>
@@ -185,7 +185,7 @@ following examples in numbers:[^1] [^2] [^3] [^4]
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
-<img src="/assets/euler/atozmath2304.png" title="© 2022 AtoZmath.com. Square root of 2304 using long division" alt="© 2022 AtoZmath.com. Square root of 2304 using long division" width="500" height="365">
+<img src="/EulerAlgebra/atozmath2304.png" title="© 2022 AtoZmath.com. Square root of 2304 using long division" alt="© 2022 AtoZmath.com. Square root of 2304 using long division" width="500" height="365">
 </a>
 <figcaption>© 2022 AtoZmath.com. Square root of 2304 using long division</figcaption>
 </figure>
@@ -194,7 +194,7 @@ following examples in numbers:[^1] [^2] [^3] [^4]
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
-<img src="/assets/euler/atozmath4096.png" title="© 2022 AtoZmath.com. Square root of 4096 using long division" alt="© 2022 AtoZmath.com. Square root of 4096 using long division" width="500" height="370">
+<img src="/EulerAlgebra/atozmath4096.png" title="© 2022 AtoZmath.com. Square root of 4096 using long division" alt="© 2022 AtoZmath.com. Square root of 4096 using long division" width="500" height="370">
 </a>
 <figcaption>© 2022 AtoZmath.com. Square root of 4096 using long division</figcaption>
 </figure>
@@ -203,7 +203,7 @@ following examples in numbers:[^1] [^2] [^3] [^4]
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
-<img src="/assets/euler/atozmath15625.png" title="© 2022 AtoZmath.com. Square root of 15625 using long division" alt="© 2022 AtoZmath.com. Square root of 15625 using long division" width="500" height="428">
+<img src="/EulerAlgebra/atozmath15625.png" title="© 2022 AtoZmath.com. Square root of 15625 using long division" alt="© 2022 AtoZmath.com. Square root of 15625 using long division" width="500" height="428">
 </a>
 <figcaption>© 2022 AtoZmath.com. Square root of 15625 using long division</figcaption>
 </figure>
@@ -212,7 +212,7 @@ following examples in numbers:[^1] [^2] [^3] [^4]
 
 <figure>
 <a href="https://atozmath.com/Pow_Root_DivMethod.aspx?q=7">
-<img src="/assets/euler/atozmath998001.png" title="© 2022 AtoZmath.com. Square root of 998001 using long division" alt="© 2022 AtoZmath.com. Square root of 998001 using long division" width="500" height="404">
+<img src="/EulerAlgebra/atozmath998001.png" title="© 2022 AtoZmath.com. Square root of 998001 using long division" alt="© 2022 AtoZmath.com. Square root of 998001 using long division" width="500" height="404">
 </a>
 <figcaption>© 2022 AtoZmath.com. Square root of 998001 using long division</figcaption>
 </figure>
@@ -233,6 +233,6 @@ $$(a^2+b^2)^{\frac{1}{2}}$$.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-7.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/II-7.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Erster Theil. Zweyter Abschnitt. Capitel 7. Von der Ausziehung der Quadrat-Wurzel in zusammengesetzten Größen](/assets/euler/de/I-II-7.pdf)
+    - [Erster Theil. Zweyter Abschnitt. Capitel 7. Von der Ausziehung der Quadrat-Wurzel in zusammengesetzten Größen](/EulerAlgebra/de/I-II-7.pdf)

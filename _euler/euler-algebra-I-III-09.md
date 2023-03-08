@@ -243,7 +243,7 @@ Polish złoty are equivalent to
 Therefore 1500 ducats = 12019 złoty.
 
 <a href="https://artofproblemsolving.com/texer/mtqkgrbj">
-<img src="/assets/euler/mtqkgrbj.png" alt="Long division" width="88" height="158">
+<img src="/EulerAlgebra/mtqkgrbj.png" alt="Long division" width="88" height="158">
 </a>
 
 hence 500 ducats = 4006⅓ złoty.
@@ -274,7 +274,7 @@ for 1000 ducats?
 Therefore 210000 ducats = 554320 Thaler in Leipzig; so 21000 ducats = 55432 Thaler in Leipzig.
 
 <a href="https://artofproblemsolving.com/texer/smvsljqk">
-<img src="/assets/euler/smvsljqk.png" alt="Long division" width="206" height="331">
+<img src="/EulerAlgebra/smvsljqk.png" alt="Long division" width="206" height="331">
 </a>
 
 Thus dividing by 3,
@@ -288,6 +288,6 @@ and dividing by 7,
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/III-9.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/III-9.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Erster Theil. Dritter Abschnitt. Capitel 9. Anmerckungen über die Proportionen und ihren Nutzen](/assets/euler/de/I-III-9.pdf)
+    - [Erster Theil. Dritter Abschnitt. Capitel 9. Anmerckungen über die Proportionen und ihren Nutzen](/EulerAlgebra/de/I-III-9.pdf)

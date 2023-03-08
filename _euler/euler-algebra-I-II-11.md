@@ -241,6 +241,6 @@ which is a still farther confirmation of the rule.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/II-11.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/II-11.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Erster Theil. Zweyter Abschnitt. Capitel 11. Von der Versetzung der Buchstaben, als worauf der Beweiß der vorigen Regul, wie eine jegliche Potestät von einer zusammengesetzten Größe leicht gefunden werden soll, beruhet](/assets/euler/de/I-II-11.pdf)
+    - [Erster Theil. Zweyter Abschnitt. Capitel 11. Von der Versetzung der Buchstaben, als worauf der Beweiß der vorigen Regul, wie eine jegliche Potestät von einer zusammengesetzten Größe leicht gefunden werden soll, beruhet](/EulerAlgebra/de/I-II-11.pdf)

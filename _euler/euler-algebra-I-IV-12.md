@@ -443,7 +443,7 @@ equation proposed, and the other two will be found by
 dividing the equation by $$x-3$$.
 
 <a href="https://artofproblemsolving.com/texer/oqfowwuq">
-<img src="/assets/euler/oqfowwuq.png" alt="Polynomial long division" width="230" height="176">
+<img src="/EulerAlgebra/oqfowwuq.png" alt="Polynomial long division" width="230" height="176">
 </a>
 
 Also making the quotient $$x^2-3x+4=0$$, we have $$x^2=3x-4$$; and
@@ -471,6 +471,6 @@ which cannot be otherwise expressed.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-12.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/IV-12.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Erster Abschnitt. Capitel 12. Von der Regel des Cardani oder des Scipionis Ferrei](/assets/euler/de/II-I-12.pdf)
+    - [Zweyter Theil. Erster Abschnitt. Capitel 12. Von der Regel des Cardani oder des Scipionis Ferrei](/EulerAlgebra/de/II-I-12.pdf)

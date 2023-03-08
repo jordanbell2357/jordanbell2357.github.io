@@ -594,6 +594,6 @@ Swabians 583; and that of Saxons 689.
 #### Editions
 
 1. Leonhard Euler. *Elements of Algebra*. Translated by Rev. John Hewlett. Third Edition. Longmans, Hurst, Rees, Orme, and Co. London. 1822.
-    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/assets/euler/en/IV-4.pdf)
+    - [Part {{ page.part }}. Section {{ page.section }}. {{ page.title }}](/EulerAlgebra/en/IV-4.pdf)
 2. Leonhard Euler. *Vollständige Anleitung zur Algebra. Mit den Zusätzen von Joseph Louis Lagrange.* Herausgegeben von Heinrich Weber. B. G. Teubner. Leipzig and Berlin. 1911. Leonhardi Euleri Opera omnia. Series prima. Opera mathematica. Volumen primum.
-    - [Zweyter Theil. Erster Abschnitt. Capitel 4. Von Auflösung zweyer oder mehr Gleichungen vom ersten Grad](/assets/euler/de/II-I-4.pdf)
+    - [Zweyter Theil. Erster Abschnitt. Capitel 4. Von Auflösung zweyer oder mehr Gleichungen vom ersten Grad](/EulerAlgebra/de/II-I-4.pdf)
