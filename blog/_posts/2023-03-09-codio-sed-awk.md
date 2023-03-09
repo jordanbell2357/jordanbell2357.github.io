@@ -1,6 +1,6 @@
 ---
 layout: post
-title: sed, awk, and printf \| Codio
+title: My favorite material from Codio's Unix System Basics on Coursera 
 ---
 
 [Unix System Basics \| Codio](https://www.coursera.org/learn/codio-unix-system-basics)
