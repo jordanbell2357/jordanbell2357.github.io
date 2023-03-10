@@ -70,3 +70,19 @@ printf "%d\n" $((8+4))
 ```bash
 printf "%.4f\n" 3.1415926535
 ```
+
+# dd
+
+> This command copies the contents of trydd.txt to outdd.txt using the conversion ucase which turned it all to upper case characters.
+
+```bash
+dd if=trydd.txt of=outdd.txt conv=ucase
+```
+
+# while
+
+> Create a foreground job that prints out numbers to the console in a forever loop.
+
+```bash
+COUNTER=0; while true; do printf $COUNTER; sleep 1; let COUNTER++; done
+```
