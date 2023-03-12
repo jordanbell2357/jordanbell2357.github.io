@@ -5,7 +5,7 @@ title: My favorite material from Codio's Bash Scripting and System Configuration
 
 [Bash Scripting and System Configuration \| Codio](https://www.coursera.org/learn/codio-bash-scripting-and-system-configuration)
 
-# <<
+# \<\<
 
 ```bash
 cat << ThisIsTheEnd
@@ -431,6 +431,56 @@ do
         esac
 done
 ```
+
+# read -i
+
+```bash
+#!/usr/bin/env bash
+
+read -ep "What is your pet's name? " -i "Pabu" petname
+
+echo $petname
+
+if (($# < 3 )); then
+    echo "This command takes three arguments:"
+    echo "petname, pettype, and petbreed."
+
+else
+
+    echo "Pet Name: $1"
+    echo "Pet Type: $2"
+    echo "Pet Breed: $3"
+
+fi
+```
+
+# [[ -z ]]
+
+```bash
+#!/usr/bin/env bash
+
+read -p "What would you like for dinner? [Chicken Noodle Soup] " dinner
+
+while [[ -z $dinner ]]
+do
+    dinner="Chicken Noodle Soup"
+done
+
+echo "You will be having $dinner$ for dinner!"
+```
+
+```bash
+#!/usr/bin/env bash
+
+read -p "Please enter a 5-digit zip code: [nnnnn]" zipcode
+
+until [[ $zipcode =~ [0-9]{5} ]]; do
+    read -p "Still waiting on that zip code! [nnnnn] " zipcode
+done
+
+echo "Your zip code is $zipcode
+```
+
 
 
 
