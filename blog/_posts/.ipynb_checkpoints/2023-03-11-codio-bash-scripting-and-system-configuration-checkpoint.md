@@ -263,3 +263,174 @@ case $genre in
     ;;
 esac
 ```
+
+# for
+
+```bash
+for i in 1 2 3 4 5
+do
+    echo $i
+done
+```
+
+```bash
+for i in 1 2 3 4 5; do echo $i; done
+```
+
+> Let’s create an array called `favMusicals` and write a for loop that displays each array item’s value to the terminal.
+
+```bash
+declare -a favMusicals=('Hamilton' 'The Lion King' 'Grease' 'West Side Story' 'Rent')
+
+for musical in "${favMusicals[@]}"
+do
+  echo "I love the musical: $musical"
+done
+```
+
+# while
+
+```bash
+declare -i n=0
+while (( n < 10 ))
+do
+       echo "n is equal to: $n"
+       (( n++ ))
+done
+```
+
+# until
+
+```bash
+declare -i m=0
+until (( m == 10 ))
+do
+        echo "m is equal to: $m"
+        (( m++ ))
+        sleep 1
+done
+```
+
+# functions
+
+```bash
+briefing() {
+  echo "Good Morning, $1!"  # $1 represents the first variable passed to the function
+  echo "The weather today will be $2."  # $2 is the second variable passed to the function
+}
+
+echo "It's time to get ready for your day..."
+
+briefing Tony sunny. # Here, we call the briefing function, passing Tony as variable 1 and sunny as variable 2
+```
+
+```bash
+declare -A BPM
+
+BPM=( [Lento]=40 [Largo]=45 [Adagio]=55 [Andante]=75, [Moderato]=95, [Vivace]=135, [Presto]=175 )
+
+for KEY in "${!BPM[@]}"; do echo "Key: $KEY"; echo "Value: ${BPM[$KEY]}"; echo; done
+
+currentTempo=0
+while [ $currentTempo -le 40 ]
+do
+    echo "$currentTempo BPM is too slow to play"
+    (( currentTempo+=5 ))
+done
+```
+
+# Arguments
+
+```bash
+#!/bin/bash
+for i in $@
+do
+    echo $i
+done
+echo "There were $# arguments."
+```
+
+# Options
+
+```bash
+#!/bin/bash
+while getopts u:p: option; do
+        case ${option} in
+                u) user=$OPTARG;;
+                p) pass=$OPTARG;;
+        esac
+done
+
+echo "user:$user / pass: $pass"
+```
+
+```bash
+#!/bin/bash
+while getopts :u:p:ab option; do
+        case $option in
+                u) user=$OPTARG;;
+                p) pass=$OPTARG;;
+                a) echo "got the A flag";;
+                b) echo "got the B flag";;
+                ?) echo "I don't know what $OPTARG is!";;
+        esac
+done
+
+echo "user:$user / pass: $pass"
+```
+
+```bash
+while getopts u:p:s: option; do
+        case ${option} in
+                u) user=$OPTARG;;
+                p) pass=$OPTARG;;
+                s) skey=$OPTARG;;
+        esac
+done
+
+echo "Username: $user"
+echo "Password: $pass"
+echo "Security Key: $skey"
+```
+
+# read
+
+```bash
+#!/bin/bash
+
+echo "What is your name?"
+read name
+
+echo "What is your password?"
+read -s pass
+
+read -p "What's your favorite animal? " animal
+
+echo "Name: $name, Password: $pass, Fave Animal: $animal"
+
+echo "Which animal"
+select animal in "cat" "dog" "bird" "fish"
+
+do
+    echo "You selected $animal!"
+    break
+done
+```
+
+```bash
+#!/bin/bash
+
+echo "Which animal"
+select animal in "cat" "dog" "quit"
+do
+       case $animal in 
+               cat) echo "Cats like to sleep.";;
+               dog) echo "Dogs like to play catch.";;
+               quit) break;;
+               *) echo "I'm not sure what that is.";;
+        esac
+done
+```
+
+
+
