@@ -1,13 +1,11 @@
 ---
 layout: post
-title: My favorite material from Codio's Bash Scripting and System Configuration on Coursera 
+title: My favorite material from Codio's Bash Week 1 on Coursera 
 ---
 
 [Bash Scripting and System Configuration \| Codio](https://www.coursera.org/learn/codio-bash-scripting-and-system-configuration)
 
-# Week 1
-
-## \<\<
+# \<\<
 
 ```bash
 cat << ThisIsTheEnd
@@ -18,7 +16,7 @@ No escape from reality
 ThisIsTheEnd
 ```
 
-## Brace Expansion
+# Brace Expansion
 
 > The following command displays numbers 0-20 in intervals of 2
 
@@ -30,7 +28,7 @@ echo {0..20..2}
 echo {earth,wind,fire}_{1..3}
 ```
 
-## Parameter Expansion
+# Parameter Expansion
 
 ```bash
 book="Where the Sidewalk Ends" 
@@ -42,7 +40,7 @@ book="Where the Sidewalk Ends"
 echo ${book//e/&}
 ```
 
-## Arithmetic Expansion
+# Arithmetic Expansion
 
 ```bash
 #!/bin/bash
@@ -57,13 +55,13 @@ message="impossible work!"
 echo ${message:2}
 ```
 
-## Command Substitution
+# Command Substitution
 
 ```bash
 echo "Today is $(date)."
 ```
 
-## \[\]
+# \[\]
 
 ```bash
 ls doc[1-5][a-e].png
@@ -73,14 +71,14 @@ ls doc[1-5][a-e].png
 ls doc[[:digit:]][[:lower:]].txt
 ```
 
-## File globbing
+# File globbing
 
 > Write a command using a named character class to list all of the files that contain a number.
 
 ```bash
 ls *[[:digit:]]*
 ```
-## printf
+# printf
 
 ```bash
 echo "The answers are: $(( 8 - 5)) and $(( 15 / 3 ))"
@@ -104,7 +102,7 @@ printf "Available Memory:\t%s\n" $(free -h)
 printf "Files in Directory:\t%s\n" $(ls | wc -l)
 ```
 
-## test
+# test
 
 ```bash
 [ "green" = "green" ]; echo $?
@@ -124,15 +122,15 @@ printf "Files in Directory:\t%s\n" $(ls | wc -l)
 
 <samp>1</samp>
 
-## Arrays
+# Arrays
 
-Implicit
+**Implicit**
 
 ```bash
 instruments=("piano" "flute" "guitar" "oboe")
 ```
 
-Explicit
+**Explicit**
 
 ```bash
 declare -a instruments=("piano" "flute" "guitar" "oboe")
@@ -152,7 +150,17 @@ echo ${instruments[@]}
 for i in {0..6}; do echo "$i: ${instruments[$i]}"; done
 ```
 
-## Associative Arrays
+```bash
+#!/bin/bash
+
+even=(2 4 6 8 10)
+odd=(1 3 5 7 9)
+
+[ ${even[2]} -gt ${odd[2]} ]; echo $?
+[[ $((${even[4]} + ${odd[3]})) -gt 10 ]] && echo "This is larger than 10"
+```
+
+# Associative Arrays
 
 ```bash
 declare -A student
@@ -163,7 +171,7 @@ echo ${student[name]} is majoring in ${student["area of study"]}.
 
 <samp>Rodney is majoring in Systems Administration.</samp>
 
-## if
+# if
 
 ```bash
 declare -i a=3
@@ -185,7 +193,7 @@ else
 fi
 ```
 
-## case
+# case
 
 > This statement checks the country entered by the user and responds with the commands nested within that particular criteria.
 
@@ -217,7 +225,7 @@ case $COUNTRY in
 esac
 ```
 
-## elif
+# elif
 
 ```bash
 #!/bin/bash
@@ -266,7 +274,7 @@ case $genre in
 esac
 ```
 
-## for
+# for
 
 ```bash
 for i in 1 2 3 4 5
@@ -290,7 +298,7 @@ do
 done
 ```
 
-## while
+# while
 
 ```bash
 declare -i n=0
@@ -301,7 +309,7 @@ do
 done
 ```
 
-## until
+# until
 
 ```bash
 declare -i m=0
@@ -313,7 +321,7 @@ do
 done
 ```
 
-## Functions
+# Functions
 
 ```bash
 briefing() {
@@ -341,7 +349,7 @@ do
 done
 ```
 
-## Arguments
+# Arguments
 
 ```bash
 #!/bin/bash
@@ -352,7 +360,7 @@ done
 echo "There were $# arguments."
 ```
 
-## Options
+# Options
 
 ```bash
 #!/bin/bash
@@ -395,7 +403,7 @@ echo "Password: $pass"
 echo "Security Key: $skey"
 ```
 
-## read
+# read
 
 ```bash
 #!/bin/bash
@@ -434,7 +442,7 @@ do
 done
 ```
 
-## read -i
+# read -i
 
 ```bash
 #!/usr/bin/env bash
@@ -456,7 +464,7 @@ else
 fi
 ```
 
-## [[ -z ]]
+# \[\[ -z \]\]
 
 ```bash
 #!/usr/bin/env bash
@@ -483,7 +491,7 @@ done
 echo "Your zip code is $zipcode
 ```
 
-## tr
+# tr
 
 ```bash
 echo "dog dOg" | tr "[a-z]" "[A-Z]"
@@ -501,7 +509,7 @@ echo "dog dOg" | tr "[:lower:]" "[:upper:]"
 echo "dog dOg" | tr [:space:] '\t'
 ```
 
-## awk
+# awk
 
 > Print all of the lines of data
 
@@ -515,7 +523,7 @@ awk '{print}' students.txt
 awk '/freshman/ {print}' students.txt 
 ```
 
-## cut
+# cut
 
 > Let’s use cut to print the first, third, and fifth characters from each line of the file pres_first.txt.
 
@@ -529,7 +537,7 @@ cut -c 1,3,5 pres_first.txt
 cut -c 2-6 pres_last.txt
 ```
 
-## tee
+# tee
 
 > We can append information to one or more files with the -a option.
 
@@ -537,25 +545,13 @@ cut -c 2-6 pres_last.txt
 echo "that only few can see" | tee -a message1.txt message2.txt
 ```
 
-## xargs
+# xargs
 
 ```bash
 echo 'red blue yellow' | xargs mkdir
 ```
 
-## Arrays
-
-```bash
-#!/bin/bash
-
-even=(2 4 6 8 10)
-odd=(1 3 5 7 9)
-
-[ ${even[2]} -gt ${odd[2]} ]; echo $?
-[[ $((${even[4]} + ${odd[3]})) -gt 10 ]] && echo "This is larger than 10"
-```
-
-## RANDOM
+# RANDOM
 
 ```bash
 echo $(( 1 + $RANDOM % 5 ))
