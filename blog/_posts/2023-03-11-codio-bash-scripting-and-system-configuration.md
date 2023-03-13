@@ -313,7 +313,7 @@ do
 done
 ```
 
-## functions
+## Functions
 
 ```bash
 briefing() {
@@ -528,5 +528,38 @@ cut -c 1,3,5 pres_first.txt
 ```bash
 cut -c 2-6 pres_last.txt
 ```
+
+## tee
+
+> We can append information to one or more files with the -a option.
+
+```bash
+echo "that only few can see" | tee -a message1.txt message2.txt
+```
+
+## xargs
+
+```bash
+echo 'red blue yellow' | xargs mkdir
+```
+
+## Arrays
+
+```bash
+#!/bin/bash
+
+even=(2 4 6 8 10)
+odd=(1 3 5 7 9)
+
+[ ${even[2]} -gt ${odd[2]} ]; echo $?
+[[ $((${even[4]} + ${odd[3]})) -gt 10 ]] && echo "This is larger than 10"
+```
+
+## RANDOM
+
+```bash
+echo $(( 1 + $RANDOM % 5 ))
+```
+
 
 
