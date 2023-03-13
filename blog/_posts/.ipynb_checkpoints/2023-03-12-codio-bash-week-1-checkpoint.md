@@ -557,5 +557,122 @@ echo 'red blue yellow' | xargs mkdir
 echo $(( 1 + $RANDOM % 5 ))
 ```
 
+# Scripting
 
+**My solution**
 
+```bash
+#!/bin/bash
+
+###############
+## VARIABLES ##
+###############
+
+declare -a tops=('top1' 'top2' 'top3' 'top4' 'top5')
+declare -a bottoms=('bottom1' 'bottom2' 'bottom3' 'bottom4' 'bottom5')
+declare -a shoes=('shoe1' 'shoe2' 'shoe3' 'shoe4' 'shoe5')
+declare -a accessories=('accessory1' 'accessory2' 'accessory3' 'accessory4' 'accesory5')
+declare -a days=('Monday' 'Tuesday' 'Wednesday' 'Thursday' 'Friday')
+
+#########################
+## FUNCTION DEFINITION ##
+#########################
+
+selectWardrobe() {
+  echo "Now selecting weekly wardrobe"
+  for day in "${days[@]}"
+  do
+    index1=$(( $RANDOM % 5 ))
+    index2=$(( $RANDOM % 5 ))
+    index3=$(( $RANDOM % 5 ))
+    index4=$(( $RANDOM % 5 ))
+    index5=$(( $RANDOM % 5 ))
+    top=${tops[$index1]}
+    bottom=${bottoms[$index2]}
+    shoe=${shoes[$index3]}
+    accessory1=${accessories[$index4]}
+    accessory2=${accessories[$index5]}
+    echo "On $day, you should wear: $top, $bottom, and $shoe"
+    echo "Pair with: $accessory1 and $accessory2"
+    echo
+done
+}
+
+outfitSelection() {
+  echo "Generating outfit selection for $1 weeks"
+  workWeek="0"
+  while [ $workWeek -lt $1 ]
+  do
+    workWeek=$[$workWeek+1]
+    echo "Week $workWeek Wardrobe:"
+    selectWardrobe
+  done
+  echo "Enjoy $1 weeks of outfit selections"
+}
+
+#######################
+## CALLING FUNCTIONS ##
+#######################
+
+outfitSelection 4 > monthlyOutfit.txt
+
+while read -r line;
+do
+   echo "$line" ;
+done < monthlyOutfit.txt
+```
+
+**Codio's solution**
+
+```bash
+#!/bin/bash
+
+echo "Reading Loud and Clear"
+
+##VARIABLES
+declare -a tops=('Tshirt' 'V-Neck' 'Sweater' 'cardigan' 'blouse')
+declare -a bottoms=('Blue Jeans' 'Black Jeans' 'Black Slacks' 'Skirt' 'Khakis')
+declare -a shoes=('Sneakers' 'Flats' 'Heels' 'Oxfords' 'Whatever Feels Good')
+declare -a accessories=('Watch' 'Bracelet' 'Necklace' 'Earrings' 'Hat')
+declare -a days=("Monday" "Tuesday" "Wednesday" "Thursday" "Friday")
+
+##FUNCTION DEFINITION
+selectWardrobe(){
+  echo "Now selecting weekly wardrobe"
+  for day in ${days[@]}
+  
+  do
+    randomTop=$(( 0 + $RANDOM % 5))
+    randomBottom=$(( 0 + $RANDOM % 5))
+    randomShoes=$(( 0 + $RANDOM % 5))
+    randomAcc1=$(( 0 + $RANDOM % 5))
+    randomAcc2=$(( 0 + $RANDOM % 5))
+
+    echo "On $day you should wear: ${tops[randomTop]}, ${bottoms[randomBottom]}, and ${shoes[randomShoes]}"
+    echo "Pair with: ${accessories[randomAcc1]} and ${accessories[randomAcc2]}"
+    echo
+  done
+}
+
+outfitSelection(){
+  echo "Generating outfit selection for $1 weeks"
+
+  workWeek=1
+  while (( workWeek < $(( $1+1 )) ))
+  do
+       echo "Week $workWeek Wardrobe:"
+       selectWardrobe
+       (( workWeek++ ))
+  done
+  echo Enjoy $1 weeks of outfit selections!
+  
+}
+
+##CALLING FUNCTIONS
+outfitSelection 4 > monthlyOutfit.txt
+
+while read textline
+do
+    echo $textline
+done < /home/codio/workspace/monthlyOutfit.txt
+```
