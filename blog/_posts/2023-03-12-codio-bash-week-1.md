@@ -61,7 +61,7 @@ echo ${message:2}
 echo "Today is $(date)."
 ```
 
-# \[\]
+# \[ \]
 
 ```bash
 ls doc[1-5][a-e].png
