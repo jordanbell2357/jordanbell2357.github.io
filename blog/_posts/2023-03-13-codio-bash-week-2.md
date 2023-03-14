@@ -80,9 +80,13 @@ sed -E 's/[0-9]{3}/(&)/' data.csv
 ```
 
 > We can use backreferences to modify this approach and add a hyphen between the remaining three and four characters.
+>
 > Let's create three backreference groups by wrapping our patterns to match in parenthesis ().
+>
 > `\1`: 3-digit Area Code: `([0-9]{3})`
+>
 > `\2`: 3-digit Exchange Code: `([0-9]{3})`
+>
 > `\3`: 4-digit Line Number: `([0-9]{4})`
 
 ```bash
@@ -151,9 +155,12 @@ done < credit.csv
 >
 > top level domain of .com, .org, or .net
 
-End with .com, .org or .net:
-
 ```bash
-grep -E '(\.com|\.org|\.net){1}$' signups.txt
+grep -E '([[:alnum:]]|\.|\_)+(@)([[:alnum:]]|\.|\_)+(\.com|\.org|\.net)$' signups.txt | grep -E '([[:alnum:]]|\.|\_\@){1,16}'
 ```
 
+```bash
+#!/bin/bash
+
+grep -E '(^[A-Za-z0-9_\.]{1,16})@[[:lower:]]+\.(com|org|net)' signups.txt
+```
