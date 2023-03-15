@@ -89,3 +89,15 @@ graph TD;
     B-->D;
     C-->D;
 ```
+
+```bash
+sudo docker build code/
+
+sudo docker images
+```
+
+<samp>
+REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
+<none>        <none>    7553068eca5c   6 seconds ago   231MB
+hello-world   latest    feb5d9fea6a5   17 months ago   13.3kB
+</samp>
