@@ -80,24 +80,158 @@ WORKDIR /code
 ENTRYPOINT ["bash", "evenOdd.sh"]
 ```
 
-Here is a simple flow chart:
-
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
-
 ```bash
 sudo docker build code/
 
 sudo docker images
 ```
 
-<samp>
+```
 REPOSITORY    TAG       IMAGE ID       CREATED         SIZE
 <none>        <none>    7553068eca5c   6 seconds ago   231MB
 hello-world   latest    feb5d9fea6a5   17 months ago   13.3kB
+```
+
+```bash
+sudo docker build -t even-odd code/
+
+sudo docker images
+```
+
+```
+REPOSITORY    TAG       IMAGE ID       CREATED          SIZE
+even-odd      latest    7553068eca5c   16 minutes ago   231MB
+hello-world   latest    feb5d9fea6a5   17 months ago    13.3kB
+```
+
+```bash
+sudo docker run --name eo-container even-odd
+```
+
+> This is a very simple example of a running a custom image in a container. The general process, however, is common. Create a Dockerfile specific to our needs. We chose our own operating system, copied over the files we need, and then gave a command to run an application. The resulting container is an isolated environment that runs our application on startup and then stops once the application is done.
+
+```bash
+cat server/server.py
+```
+
+```python3
+from http.server import BaseHTTPRequestHandler, HTTPServer
+
+class ContainerRequests(BaseHTTPRequestHandler):
+    def do_GET(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write('Hello from a Docker container\n'.encode())
+        
+    def do_POST(self):
+        self.send_response(200)
+        self.send_header('Content-type', 'text/html')
+        self.end_headers()
+        self.wfile.write('Hello from port 9000.\n'.encode())
+
+host = '0.0.0.0'
+port = 9000
+HTTPServer((host, port), ContainerRequests).serve_forever()
+```
+
+```bash
+sudo touch server/Dockerfile
+```
+
+```bash
+FROM python
+
+Add . /code
+
+WORKDIR /code
+
+ENTRYPOINT ["python", "server.py"]
+```
+
+```bash
+sudo docker build -t python_server server/
+
+sudo docker run -d --name web_server python_server
+```
+
+```
+CONTAINER ID   IMAGE           COMMAND              CREATED          STATUS          PORTS     NAMES
+8e7877cbeb26   python_server   "python server.py"   17 seconds ago   Up 16 seconds             web_server
+```
+
+> We can add a flag when running our image to map a port on the Linux VM to the port in the container. Before we can do that, we first need to remove the web_server container.
+
+```bash
+sudo docker stop web_server
+
+sudo docker rm web_server
+
+sudo docker run -p 80:9000 -d --name web_server python_server
+```
+
+```
+CONTAINER ID   IMAGE           COMMAND              CREATED              STATUS              PORTS                                   NAMES
+1056057c44f4   python_server   "python server.py"   About a minute ago   Up About a minute   0.0.0.0:80->9000/tcp, :::80->9000/tcp   web_server
+```
+
+```bash
+curl 0.0.0.0:80
+
+curl -X POST 0.0.0.0:80
+```
+
+<samp>
+Hello from a Docker container
+
+Hello from port 9000.
+</samp>
+
+```bash
+sudo docker stop web_server
+```
+
+> Containers need an operating system but they are also environments to run specific applications. That means they may need special packages installed as well. Instead of building on top of a general purpose image like CentOS, you can select an image for a specific programming language, database, web server, or other tools like load balancers, content management, etc.
+>
+> Choosing one of these task-specific images as a starting point offers a convenience of not having to specify which software you have to install. On the last page, the base image in our Dockerfile was python. We used this instead of centos so that we did not have to install Python ourselves.
+
+
+```bash
+sudo touch birthday/Dockerfile
+```
+
+```bash
+FROM alpine
+
+ADD . /code
+
+WORKDIR /code
+
+RUN apk add py3-pip python3
+
+RUN python3 -m pip install -r requirements.txt
+
+ENTRYPOINT ["python3", "main.py"]
+```
+
+```bash
+sudo docker build -t birthday-image birthday/
+
+sudo docker images
+```
+
+```
+REPOSITORY       TAG       IMAGE ID       CREATED          SIZE                                                         
+birthday-image   latest    92f31c7d65ec   9 seconds ago    85.9MB
+python_server    latest    3c61b2f2d123   10 minutes ago   921MB
+even-odd         latest    7553068eca5c   32 minutes ago   231MB
+hello-world      latest    feb5d9fea6a5   17 months ago    13.3kB
+```
+
+<samp>
+REPOSITORY       TAG       IMAGE ID       CREATED          SIZE                                                         
+birthday-image   latest    92f31c7d65ec   9 seconds ago    85.9MB
+python_server    latest    3c61b2f2d123   10 minutes ago   921MB
+even-odd         latest    7553068eca5c   32 minutes ago   231MB
+hello-world      latest    feb5d9fea6a5   17 months ago    13.3kB
 </samp>
