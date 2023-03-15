@@ -235,3 +235,21 @@ sudo docker build -t even-odd:0.2 code/
 
 sudo docker run -d -t --name secrets even-odd:0.2
 ```
+
+>  Stop all running containers with a single command.
+
+```bash
+sudo docker stop $(sudo docker container ls -q)
+```
+
+![Codio](/images/Codio/Codio-Custom-Images.png)
+
+![Codio](/images/Codio/Codio-Container-Registries.png)
+
+![Docker](/images/Docker/docker101tutorial.png)
+
+![Docker](/images/Docker/Getting-Started-Getting-Started.png)
+
+![Docker](/images/Docker/March_15_2023.png)
+
+![Docker](/images/Docker/Todo-App.png)
