@@ -23,11 +23,9 @@ docker --version
 docker compose version
 ```
 
-<samp>
-Docker version 23.0.1, build a5ee5b1
+<samp>Docker version 23.0.1, build a5ee5b1</samp>
   
-Docker Compose version v2.16.0
-</samp>
+<samp>Docker Compose version v2.16.0</samp>
 
 ```bash
 sudo mkdir code
@@ -181,11 +179,11 @@ curl 0.0.0.0:80
 curl -X POST 0.0.0.0:80
 ```
 
-<samp>
+```
 Hello from a Docker container
 
 Hello from port 9000.
-</samp>
+```
 
 ```bash
 sudo docker stop web_server
@@ -221,17 +219,19 @@ sudo docker images
 ```
 
 ```
-REPOSITORY       TAG       IMAGE ID       CREATED          SIZE                                                         
+REPOSITORY       TAG       IMAGE ID       CREATED          SIZE
 birthday-image   latest    92f31c7d65ec   9 seconds ago    85.9MB
 python_server    latest    3c61b2f2d123   10 minutes ago   921MB
 even-odd         latest    7553068eca5c   32 minutes ago   231MB
 hello-world      latest    feb5d9fea6a5   17 months ago    13.3kB
 ```
 
-<samp>
-REPOSITORY       TAG       IMAGE ID       CREATED          SIZE                                                         
-birthday-image   latest    92f31c7d65ec   9 seconds ago    85.9MB
-python_server    latest    3c61b2f2d123   10 minutes ago   921MB
-even-odd         latest    7553068eca5c   32 minutes ago   231MB
-hello-world      latest    feb5d9fea6a5   17 months ago    13.3kB
-</samp>
+```bash
+sudo touch code/passwords.txt
+
+Super-secret password
+
+sudo docker build -t even-odd:0.2 code/
+
+sudo docker run -d -t --name secrets even-odd:0.2
+
