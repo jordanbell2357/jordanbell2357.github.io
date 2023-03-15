@@ -29,3 +29,63 @@ Docker version 23.0.1, build a5ee5b1
 Docker Compose version v2.16.0
 </samp>
 
+```bash
+sudo mkdir code
+
+sudo touch code/numbers.txt
+
+8
+4
+3
+1
+7
+22
+48
+100
+9
+
+sudo touch code/evenOdd.sh
+```
+
+```bash
+#!bin/bash
+
+file='numbers.txt'
+
+while read number; do
+  remainder=$((number%2))
+  if [ $remainder == 0 ]; then
+        echo "Number is even"
+    else
+        echo "Number is odd"
+  fi
+done < $file
+```
+
+```bash
+cd ..
+
+sudo docker login
+
+sudo touch code/Dockerfile
+```
+
+```bash
+FROM centos
+
+ADD . /code
+
+WORKDIR /code
+
+ENTRYPOINT ["bash", "evenOdd.sh"]
+```
+
+Here is a simple flow chart:
+
+```mermaid
+graph TD;
+    A-->B;
+    A-->C;
+    B-->D;
+    C-->D;
+```
