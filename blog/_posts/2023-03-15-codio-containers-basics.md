@@ -253,3 +253,5 @@ sudo docker stop $(sudo docker container ls -q)
 ![Docker](/images/Docker/March_15_2023.png)
 
 ![Docker](/images/Docker/Todo-App.png)
+
+![Docker Playground](/images/Docker/Docker-Playground.png)

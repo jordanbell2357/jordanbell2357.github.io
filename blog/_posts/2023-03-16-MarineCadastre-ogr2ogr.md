@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MarineCadastre.gov
+title: MarineCadastre.gov AIS Vessel Tracks and GDAL
 ---
 
 [AccessAIS \| BOEM, NOAA, U.S. Coast Guard Navigation Center](https://marinecadastre.gov/accessais/)
@@ -17,12 +17,40 @@ unzip AISVesselTracks2018GreatLakes.zip
 ogr2ogr -f "ESRI Shapefile" AISVesselTracks2018GreatLakes GreatLakes.gdb
 ```
 
-The following merges the shapefiles into a shapefile with a month field.
+The following merges the shapefiles into a shapefile with a month field and makes a zip archive of the shapefile directory.
 
 ```bash
 ogrmerge.py -single -o Tracks_2018_merged.shp Tracks_2018_*.shp -src_layer_field_name month
+
+mkdir ../AISVesselTracks2018GreatLakes_merged
+
+mv Tracks_2018_merged* ../AISVesselTracks2018GreatLakes_merged
+
+cd ../
+
+zip -r AISVesselTracks2018GreatLakes_merged.zip AISVesselTracks2018GreatLakes_merged
 ```
 
+![MarineCadastre.gov AccessAIS](/images/MarineCadastre/AccessAIS-MarineCadastre-gov.png)
 
+![MarineCadastre.gov Data](/images/MarineCadastre/MarineCadastre-gov.png)
 
+![MarineCadastre.gov Data](/images/MarineCadastre/MarineCadastre-gov-Vessel-Traffic-Data.png)
 
+![QGIS Monthly AIS Vessel Tracks](/images/MarineCadastre/QGIS_monthly.png)
+
+Merged with QGIS:
+
+![Merged with QGIS](/images/MarineCadastre/QGIS_merge.png)
+
+Merged with GDAL:
+
+![Merged with GDAL](/images/MarineCadastre/GDAL_merge.png)
+
+```bash
+unzip AISVesselTracks2021.zip
+
+ogr2ogr -f "ESRI Shapefile" AISVesselTracks2021 AISVesselTracks2021.gdb
+
+zip -r AISVesselTracks2021.zip AISVesselTracks2021
+```
