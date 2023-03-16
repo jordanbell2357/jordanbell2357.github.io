@@ -129,7 +129,8 @@ $$
 \gamma_3\\
 \gamma_4\\
 \gamma_5\\
-\gamma_6
+\gamma_6\\
+\gamma_7
 \end{pmatrix}
 =
 \begin{pmatrix}
@@ -138,11 +139,13 @@ $$
 \gamma_3\\
 \gamma_4\\
 2\gamma_4\\
-3\gamma_4
+3\gamma_4\\
+\gamma_7
 \end{pmatrix}
 =
 \gamma_1 \begin{pmatrix}
 1\\
+0\\
 0\\
 0\\
 0\\
@@ -155,12 +158,14 @@ $$
 0\\
 0\\
 0\\
+0\\
 0
 \end{pmatrix}
 + \gamma_3 \begin{pmatrix}
 0\\
 0\\
 1\\
+0\\
 0\\
 0\\
 0
@@ -171,18 +176,32 @@ $$
 0\\
 1\\
 2\\
-3
+3\\
+0
+\end{pmatrix}
++\gamma_7 \begin{pmatrix}
+0\\
+0\\
+0\\
+0\\
+0\\
+0\\
+1
 \end{pmatrix}
 $$
 
 $$
+\underbrace{
 \begin{pmatrix}
 0&0&0&-2&1&0&0\\
 0&0&0&-3&0&1&0
 \end{pmatrix}
+}_{R}
 \gamma=
-\begin{pmatrix}
+\underbrace{\begin{pmatrix}
 0\\
 0
-\end{pmatrix}
+\end{pmatrix}}_{r}
 $$
+
+$$g=2$$
