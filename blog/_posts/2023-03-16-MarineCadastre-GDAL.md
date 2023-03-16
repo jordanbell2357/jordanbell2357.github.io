@@ -33,8 +33,6 @@ zip -r AISVesselTracks2018GreatLakes_merged.zip AISVesselTracks2018GreatLakes_me
 
 ![MarineCadastre.gov AccessAIS](/images/MarineCadastre/AccessAIS-MarineCadastre-gov.png)
 
-![MarineCadastre.gov Data](/images/MarineCadastre/MarineCadastre-gov.png)
-
 ![MarineCadastre.gov Data](/images/MarineCadastre/MarineCadastre-gov-Vessel-Traffic-Data.png)
 
 ![QGIS Monthly AIS Vessel Tracks](/images/MarineCadastre/QGIS_monthly.png)
