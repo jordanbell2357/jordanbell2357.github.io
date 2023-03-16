@@ -39,10 +39,6 @@ title: CSIRO Vessel Traffic Density from AIS Data
 
 ![Shipping Summary 2014 WMS](/images/CSIRO/Shipping_Summary_2014.png)
 
-GeoTIFF 2009:
+[GeoTIFF 2009](/images/CSIRO/nerp-ausrep_shipping_2009.tif)
 
-![GeoTIFF 2009](/images/CSIRO/nerp-ausrep_shipping_2009.tif)
-
-GeoTIFF 2015:
-
-![GeoTIFF 2009](/images/CSIRO/nerp-ais_shipping_2015.tif)
+[GeoTIFF 2015](/images/CSIRO/nerp-ais_shipping_2015.tif)
