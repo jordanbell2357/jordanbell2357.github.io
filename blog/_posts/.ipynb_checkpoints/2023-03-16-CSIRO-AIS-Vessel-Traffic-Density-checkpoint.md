@@ -17,6 +17,8 @@ title: CSIRO Vessel Traffic Density from AIS Data
 > NESP MB PROJECT C5 – QUANTIFICATION OF RISK FROM SHIPPING TO LARGE MARINE FAUNA ACROSS AUSTRALIA
 > <https://catalogue.aodn.org.au/geonetwork/srv/eng/metadata.show?uuid=5fb8766b-b3cb-4fd0-aad7-7dfcda6582a9>
 
+![CSIRO Marlin3](/images/CSIRO/Marlin3-Marlin-CSIRO-Oceans-and-Atmosphere-Metadata-Catalogue.png)
+
 [WMS Data Link - nerp:vesseldensity2015_finescale](https://www.cmar.csiro.au/geoserver/nerp/wms?service=WMS&version=1.1.0&request=GetMap&layers=nerp:vesseldensity2015_finescale&styles=&bbox=108.930328369141,-44.2295036315918,163.403015136719,-11.3371658325195&width=768&height=463&srs=EPSG:4326&format=application/openlayers)
 
 ![vesseldensity2015_finescale](/images/CSIRO/vesseldensity2015_finescale.png)
