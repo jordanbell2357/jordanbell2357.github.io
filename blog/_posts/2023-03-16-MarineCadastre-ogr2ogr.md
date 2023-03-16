@@ -46,11 +46,3 @@ Merged with QGIS:
 Merged with GDAL:
 
 ![Merged with GDAL](/images/MarineCadastre/GDAL_merge.png)
-
-```bash
-unzip AISVesselTracks2021.zip
-
-ogr2ogr -f "ESRI Shapefile" AISVesselTracks2021 AISVesselTracks2021.gdb
-
-zip -r AISVesselTracks2021.zip AISVesselTracks2021
-```
