@@ -20,9 +20,14 @@ title: Erasmus Econometrics Training Exercise 2.2
 > constant term). Formulate the null hypothesis that none of these four factors has effect on wage in the form
 > $$R\beta=r$$, that is, determine $$R$$ and $$r$$.
 
+- Wage = W
+- Female = F
+- Age = A
+- Education = E
+- Parttime = P
+
 $$
-\mathrm{log(Wage)} = \beta_1 + \beta_2 \mathrm{Female} + \beta_3 \mathrm{Age} + \beta_4 \mathrm{Education}
-+\beta_5 \mathrm{parttime} + \epsilon 
+\mathrm{log(Wage)} = \beta_1 + \beta_2 F + \beta_3 A + \beta_4 E +\beta_5 P + \epsilon 
 $$
 
 Let
@@ -48,7 +53,14 @@ $$
 0&0&0&1&0\\
 0&0&0&0&1
 \end{pmatrix}
-\beta = 0 \in \mathbb{R}^5
+\beta = 
+\begin{pmatrix}
+0\\
+0\\
+0\\
+0\\
+0
+\end{pmatrix}
 $$
 
 or
@@ -62,7 +74,12 @@ $$
 0&0&0&0&1
 \end{pmatrix}
 }_{R}
-\beta = \underbrace{0}_{r} \in \mathbb{R}^4
+\beta = \underbrace{\begin{pmatrix}
+0\\
+0\\
+0\\
+0
+\end{pmatrix}}_{r}
 $$
 
 for $$R:\mathbb{R}^5 \to \mathbb{R}^4$$ and $$r \in \mathbb{R}^4$$.
@@ -75,18 +92,14 @@ for $$R:\mathbb{R}^5 \to \mathbb{R}^4$$ and $$r \in \mathbb{R}^4$$.
 
 $$
 D_k = \begin{cases}
-1&\mathrm{Education} \in \{k\}\\
-0&\mathrm{Education} \in \{1,2,3,4\} \setminus \{k\}
+1&E \in \{k\}\\
+0&E \in \{1,2,3,4\} \setminus \{k\}
 \end{cases}
 $$
 
 
 $$
-\begin{align*}
-\mathrm{log(Wage)} &= \gamma_1 + \gamma_2 \mathrm{Female} + \gamma_3 \mathrm{Age}\\
-&+ \gamma_4 D_2 + \gamma_5 D_3 + \gamma_6 D_4\\
-&+\gamma_7 \mathrm{parttime} + \epsilon
-\end{align*}
+\mathrm{log(W)} = \gamma_1 + \gamma_2 \mathrm{F} + \gamma_3 \mathrm{A}+ \gamma_4 D_2 + \gamma_5 D_3 + \gamma_6 D_4 + \gamma_7 P + \epsilon
 $$
 
 
@@ -107,6 +120,59 @@ $$
 
 $$
 \gamma_5=2\gamma_4, \qquad \gamma_6=3\gamma_4
+$$
+
+$$
+\gamma = \begin{pmatrix}
+\gamma_1\\
+\gamma_2\\
+\gamma_3\\
+\gamma_4\\
+\gamma_5\\
+\gamma_6
+\end{pmatrix}
+=
+\begin{pmatrix}
+\gamma_1\\
+\gamma_2\\
+\gamma_3\\
+\gamma_4\\
+2\gamma_4\\
+3\gamma_4
+\end{pmatrix}
+=
+\gamma_1 \begin{pmatrix}
+1\\
+0\\
+0\\
+0\\
+0\\
+0
+\end{pmatrix}
++ \gamma_2 \begin{pmatrix}
+0\\
+1\\
+0\\
+0\\
+0\\
+0
+\end{pmatrix}
++ \gamma_3 \begin{pmatrix}
+0\\
+0\\
+1\\
+0\\
+0\\
+0
+\end{pmatrix}
++ \gamma_4 \begin{pmatrix}
+0\\
+0\\
+0\\
+1\\
+2\\
+3
+\end{pmatrix}
 $$
 
 $$
