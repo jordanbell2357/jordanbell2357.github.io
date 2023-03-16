@@ -7,7 +7,7 @@ title: Erasmus Econometrics Training Exercise 2.2
 > multiple regression model (with Educ as 4-th explanatory factor) assumes a constant marginal effect:
 >
 > $$
-> \dfrac{\partial \mathrm{log(Wage)}}{\partial \mathrm{Educ}} = \beta_4.
+> \dfrac{\partial \log(\mathrm{Wage})}{\partial \mathrm{Educ}} = \beta_4.
 > $$
 >
 > This means that increasing education by one level always leads to the same relative wage increase. This effect may,
@@ -27,7 +27,7 @@ title: Erasmus Econometrics Training Exercise 2.2
 - Parttime = P
 
 $$
-\mathrm{log(Wage)} = \beta_1 + \beta_2 F + \beta_3 A + \beta_4 E +\beta_5 P + \epsilon 
+\log W = \beta_1 + \beta_2 F + \beta_3 A + \beta_4 E +\beta_5 P + \epsilon 
 $$
 
 Let
@@ -99,7 +99,7 @@ $$
 
 
 $$
-\mathrm{log(W)} = \gamma_1 + \gamma_2 \mathrm{F} + \gamma_3 \mathrm{A}+ \gamma_4 D_2 + \gamma_5 D_3 + \gamma_6 D_4 + \gamma_7 P + \epsilon
+\log W = \gamma_1 + \gamma_2 F + \gamma_3 A+ \gamma_4 D_2 + \gamma_5 D_3 + \gamma_6 D_4 + \gamma_7 P + \epsilon
 $$
 
 
