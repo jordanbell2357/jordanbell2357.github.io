@@ -3,6 +3,17 @@ layout: post
 title: Erasmus Econometrics Training Exercise 2.2
 ---
 
+> In the wage database, education is measured in terms of a single variable ‘Educ’ with values 1, 2, 3, and 4. The
+> multiple regression model (with Educ as 4-th explanatory factor) assumes a constant marginal effect:
+>
+> $$
+> \dfrac{\partial \mathrm{log(Wage)}}{\partial \mathrm{Educ}} = \beta_4.
+> $$
+>
+> This means that increasing education by one level always leads to the same relative wage increase. This effect may,
+> however, depend on the education level, for example, if the effect is smaller for a shift from eduction level 1 to 2 as
+> compared to a shift from 3 to 4.
+
 # (a)
 
 > (a) The wage equation presented at the start of Lecture 2.2 contains four explanatory factors (apart from the
@@ -99,7 +110,6 @@ $$
 $$
 
 $$
-\gamma =
 \begin{pmatrix}
 0&0&0&-2&1&0&0\\
 0&0&0&-3&0&1&0
