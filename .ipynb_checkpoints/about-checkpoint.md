@@ -53,17 +53,15 @@ University Medal in Mathematics
 
 - Ask Dr. Math® "Math Doctor", 2003-2008. [Ask Dr. Math®](https://www.nctm.org/archives/dr.math/index.htm)
 
-## Online tutoring {#tutoring}
-
-[Jordan Bell Tutoring Toronto](/tutoring)
-
-Statistics, computer science, and financial economics tutoring
-
 ![Jordan Bell Tutoring Toronto](/images/about/logo.png)
 
 ## Content profiles {#profiles}
 
 - [Amazon Public Profile](https://www.amazon.com/gp/profile/amzn1.account.AGO7DC5XJDEY5SKAU65F2OQULDZQ)
+
+- [Docker Hub](https://hub.docker.com/u/jordanbell2357)
+
+- [GitHub](https://github.com/jordanbell2357)
 
 - [Goodreads](https://www.goodreads.com/jordanbell2357)
 
@@ -76,6 +74,8 @@ Statistics, computer science, and financial economics tutoring
 - [Social Psychology Network](https://www.socialpsychology.org/member/jordan-bell)
 
 - [Twitter](https://twitter.com/jordanbell2357)
+
+- [YouTube](https://www.youtube.com/channel/UCp-caj4iH7XyxveP5jkAJIg)
 
 ## Learning profiles {#learning}
 
