@@ -15,12 +15,8 @@ etc.
 
 There is a zipped shapefile for each month of 2020.
 
-![QGIS Attribute Table](/images/AMSA/Attribute_Table.png)
+![QGIS Attribute Table](/images/AMSA/QGIS_Attribute_Table.png)
 
 The attributes include a timestamp, and we can thus merge the shapefiles without having to create a new attribute (flag for the month).
 
 ![QGIS Merge Vector Layers](/images/AMSA/QGIS_AMSA_merge.png)
-
-
-
-

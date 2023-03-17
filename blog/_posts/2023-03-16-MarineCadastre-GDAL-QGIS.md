@@ -7,6 +7,8 @@ title: MarineCadastre.gov AIS Vessel Tracks using GDAL and QGIS
 
 [Vessel Traffic Data](https://marinecadastre.gov/ais/)
 
+# AISVesselTracks2018GreatLakes
+
 [GDAL documentation » Programs » ogrmerge.p](https://gdal.org/programs/ogrmerge.html)
 
 The following creates shapefiles from geodatabase files.
@@ -47,6 +49,6 @@ Merged with GDAL:
 
 ![Merged with GDAL](/images/MarineCadastre/GDAL_merge.png)
 
-12NM Territorial Sea and Principal Ports:
+# 12NM Territorial Sea and Principal Ports
 
 ![12NM Territorial Sea and Principal Ports](/images/MarineCadastre/PrincipalPorts.png)
