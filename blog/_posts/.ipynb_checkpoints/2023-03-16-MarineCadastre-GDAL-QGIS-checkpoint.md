@@ -25,9 +25,11 @@ ogrmerge.py -single -o Tracks_2018_merged.shp Tracks_2018_*.shp -src_layer_field
 mkdir ../AISVesselTracks2018GreatLakes_merged
 
 mv Tracks_2018_merged* ../AISVesselTracks2018GreatLakes_merged
+```
 
-cd ../
+Make zipfile of shapefile:
 
+```bash
 zip -r AISVesselTracks2018GreatLakes_merged.zip AISVesselTracks2018GreatLakes_merged
 ```
 
@@ -44,3 +46,7 @@ Merged with QGIS:
 Merged with GDAL:
 
 ![Merged with GDAL](/images/MarineCadastre/GDAL_merge.png)
+
+12NM Territorial Sea and Principal Ports:
+
+![12NM Territorial Sea and Principal Ports](/images/MarineCadastre/PrincipalPorts.png)
