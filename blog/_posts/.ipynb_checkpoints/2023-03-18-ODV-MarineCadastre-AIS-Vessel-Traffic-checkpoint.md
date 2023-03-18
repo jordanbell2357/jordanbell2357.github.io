@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Visualizing MarineCadastre.gov AIS Vessel Traffic with Ocean Data View (ODV)
+title: Using Ocean Data View (ODV) with MarineCadastre.gov AIS Vessel Traffic
 ---
 
 # ODV
@@ -114,8 +114,6 @@ MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselName,IMO,CallSign,VesselType,Sta
 367318760,2022-06-21T00:00:02,39.84967,-75.31567,7.6,270.0,265.0,BOHEMIA,IMO9493004,WDD9977,31,0,30,10,4.0,32,A
 367016590,2022-06-21T00:00:03,29.27181,-89.68693,8.9,212.6,511.0,MARY VIRGINIA,,WYR2142,30,15,56,12,0.0,30,A
 ```
-
-![June 21, 2022 AIS Vessel Traffic for CONUS](/images/ODV/AIS_2022_06_21_ODV_CONUS.png)
 
 Save Canvas as Image:
 
