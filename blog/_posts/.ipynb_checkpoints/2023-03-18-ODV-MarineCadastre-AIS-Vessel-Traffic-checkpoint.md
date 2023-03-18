@@ -77,7 +77,21 @@ MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselName,IMO,CallSign,VesselType,Sta
 368005340,2021-06-21T00:00:01,42.79171,-78.98200,7.8,242.9,511.0,FLO,IMO0000000,WDJ7298,36,,13,6,,,B
 ```
 
-![June 21, 2021 AIS Vessel Traffic](/images/ODV/AIS_2021_06_21_ODV.png)
+Save Canvas as Image:
+
+![Save Canvas as Image](/images/ODV/AIS_2021_06_21_Canvas.png)
+
+X/Y Distribution:
+
+![X/Y Distribution](/images/ODV/AIS_2021_06_21_XY_distribution.png)
+
+X Histogram:
+
+![X Histogram](/images/ODV/AIS_2021_06_21_X_Histogram.png)
+
+Y Histogram:
+
+![Y Histogram](/images/ODV/AIS_2021_06_21_Y_Histogram.png)
 
 ## AIS_2022_06_21
 
@@ -101,5 +115,18 @@ MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselName,IMO,CallSign,VesselType,Sta
 367016590,2022-06-21T00:00:03,29.27181,-89.68693,8.9,212.6,511.0,MARY VIRGINIA,,WYR2142,30,15,56,12,0.0,30,A
 ```
 
-![June 21, 2022 AIS Vessel Traffic](/images/ODV/AIS_2021_06_22_ODV.png)
+Save Canvas as Image:
 
+![Save Canvas as Image](/images/ODV/AIS_2022_06_21_Canvas.png)
+
+X/Y Distribution:
+
+![X/Y Distribution](/images/ODV/AIS_2022_06_21_XY_distribution.png)
+
+X Histogram:
+
+![X Histogram](/images/ODV/AIS_2022_06_21_X_Histogram.png)
+
+Y Histogram:
+
+![Y Histogram](/images/ODV/AIS_2022_06_21_Y_Histogram.png)
