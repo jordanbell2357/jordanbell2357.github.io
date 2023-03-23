@@ -17,13 +17,13 @@ title: Marine Regions VLIMAR
 >
 > This geodatabase represents the Maritime Boundaries of the world. The database includes seven global datasets:
 >
-> 1 Exclusive Economic Zones (200NM), version 11 (including the boundary polylines)
-> 1 Territorial Seas (12NM), version 3
-> 1 Contiguous Zones (24NM), version 3
-> 1 Internal Waters, version 3
-> 1 Archipelagic Waters, version 3
-> 1 High Seas, version 1
-> 1 Extended Continental Shelves, version 1 (including the boundary polylines)
+> 1. Exclusive Economic Zones (200NM), version 11 (including the boundary polylines)
+> 1. Territorial Seas (12NM), version 3
+> 1. Contiguous Zones (24NM), version 3
+> 1. Internal Waters, version 3
+> 1. Archipelagic Waters, version 3
+> 1. High Seas, version 1
+> 1. Extended Continental Shelves, version 1 (including the boundary polylines)
 
 ```python3
 from mpl_toolkits.basemap import Basemap
