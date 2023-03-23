@@ -25,4 +25,13 @@ title: Marine Regions VLIMAR
 > 1 High Seas, version 1
 > 1 Extended Continental Shelves, version 1 (including the boundary polylines)
 
+```python3
+from mpl_toolkits.basemap import Basemap
+import matplotlib.pyplot as plt
 
+map = Basemap()
+map.readshapefile('C:/Users/jorda/repos/MarineRegions/World_EEZ_v11_20191118/eez_v11', 'eez_v11')
+plt.savefig('eez_v11.png')
+```
+
+![EEZ v11](/images/MarineRegions/eez_v11.png)
