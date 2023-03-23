@@ -3,6 +3,10 @@ layout: post
 title: HELCOM Ship traffic intensity 2006 - 2020
 ---
 
+[About us - HELCOM](https://helcom.fi/about-us/):
+
+> The Baltic Marine Environment Protection Commission – also known as the Helsinki Commission (HELCOM) – is an intergovernmental organisation (IGO) and a regional sea convention in the Baltic Sea area. A regional platform for environmental policy making, HELCOM was established in 1974 to protect the marine environment of the Baltic Sea from all sources of pollution.
+
 [HELCOM AIS Shipping density maps](https://metadata.helcom.fi/geonetwork/srv/api/records/2558244b-0cea-46e9-8053-af6ef5d01853)
 
 ![HELCOM metadata catalogue](/images/HELCOM/Helcom-metadata-catalogue.png)
