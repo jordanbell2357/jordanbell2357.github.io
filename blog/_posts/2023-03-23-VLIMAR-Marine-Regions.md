@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Marine Regions VLIMAR
+title: VLIMAR Marine Regions
 ---
 
 [Marine Regions](https://www.marineregions.org/about.php)
