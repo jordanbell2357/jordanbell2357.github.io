@@ -13,4 +13,6 @@ title: River and Groundwater Basins of the World (WHYMAP RGWB)
 
 ![WHYMAP rivers and waterbodies](/images/WHYMAP/RiversWaterbodiesQGIS.png)
 
+The rivers layer can be downloaded from:
+
 [World Rivers - IHP-Wins - Unesco.org](http://ihp-wins.unesco.org/layers/geonode:world_rivers)
