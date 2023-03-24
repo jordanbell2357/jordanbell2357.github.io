@@ -11,6 +11,6 @@ title: River and Groundwater Basins of the World (WHYMAP RGWB)
 
 `whymap_rivers__v1_line.shp` and `whymap_waterbodies__v1_poly.shp`
 
-![WHYMAP rivers and waterbodies](/images/WHYMAP/RiversWaterbodiesQGIS)
+![WHYMAP rivers and waterbodies](/images/WHYMAP/RiversWaterbodiesQGIS.png)
 
 [World Rivers - IHP-Wins - Unesco.org](http://ihp-wins.unesco.org/layers/geonode:world_rivers)
