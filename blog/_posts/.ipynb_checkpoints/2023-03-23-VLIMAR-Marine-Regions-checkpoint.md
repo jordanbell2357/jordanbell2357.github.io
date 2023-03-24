@@ -29,6 +29,7 @@ title: VLIMAR Marine Regions
 from mpl_toolkits.basemap import Basemap
 import matplotlib.pyplot as plt
 
+plt.figure(figsize=(10,8))
 map = Basemap()
 map.readshapefile('C:/Users/jorda/repos/MarineRegions/World_EEZ_v11_20191118/eez_v11', 'eez_v11')
 plt.savefig('eez_v11.png')
