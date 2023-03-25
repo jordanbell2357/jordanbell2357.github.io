@@ -7,6 +7,10 @@ title: World Bank Official Boundaries
 
 `World Boundaries GeoJSON - Very High Resolution`
 
+```bash
+ls -1
+```
+
 ```
 WB_Admin0_boundary_lines.geojson
 WB_Admin0_disputed_areas.geojson
