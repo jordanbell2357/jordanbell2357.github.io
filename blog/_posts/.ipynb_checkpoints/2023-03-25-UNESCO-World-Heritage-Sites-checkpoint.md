@@ -1,14 +1,6 @@
 ---
 layout: post
-title: UNESCO
----
-
-[UNESCO Silk Roads Programme](https://en.unesco.org/silkroad/)
-
-[Major Cities along the Silk Roads](https://en.unesco.org/silkroad/silkroad-interactive-map)
-
-[![Major Cities along the Silk Roads](/images/UNESCO/Silk-Roads-Programme.png)](https://en.unesco.org/silkroad/silkroad-interactive-map)
-
+title: UNESCO World Heritage Sites
 ---
 
 [UNESCO World Heritage List](https://whc.unesco.org/en/list)
