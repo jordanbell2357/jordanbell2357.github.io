@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IEEE DataPort: VESSEL TRACKING (AIS), VESSEL METADATA AND DIRWAY DATASETS
+title: IEEE DataPort - VESSEL TRACKING (AIS), VESSEL METADATA AND DIRWAY DATASETS
 ---
 
 [VESSEL TRACKING (AIS), VESSEL METADATA AND DIRWAY DATASETS \| IEEE DataPort](https://ieee-dataport.org/open-access/vessel-tracking-ais-vessel-metadata-and-dirway-datasets)
