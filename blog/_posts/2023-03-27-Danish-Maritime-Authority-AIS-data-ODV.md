@@ -175,3 +175,9 @@ head aisdk-2023-02-15.csv
 ![aisdk-2023-02-15 Canvas](/images/DanishMaritimeAuthority/aisdk-2023-02-15-canvas.png)
 
 ![aisdk-2023-02-15 X/Y Distribution](/images/DanishMaritimeAuthority/aisdk-2023-02-15-X_Y.png)
+
+`aisdk-2023-02-22`
+
+![aisdk-2023-02-22 Canvas](/images/DanishMaritimeAuthority/aisdk-2023-02-22-canvas.png)
+
+![aisdk-2023-02-22 X/Y Distribution](/images/DanishMaritimeAuthority/aisdk-2023-02-22-X_Y.png)
