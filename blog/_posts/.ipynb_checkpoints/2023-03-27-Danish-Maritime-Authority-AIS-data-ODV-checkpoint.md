@@ -151,7 +151,6 @@ title: Danish Maritime Authority (DMA) AIS data using Ocean Data View
 1.8G    aisdk-2023-03-01.csv
 1.5G    aisdk-2023-03-08.csv
 1.6G    aisdk-2023-03-15.csv
-1.7G    aisdk-2023-03-18.csv
 ```
 
 ```bash
@@ -194,3 +193,9 @@ head aisdk-2023-02-15.csv
 ![aisdk-2023-03-08 Canvas](/images/DanishMaritimeAuthority/aisdk-2023-03-08-canvas.png)
 
 ![aisdk-2023-03-08 X/Y Distribution](/images/DanishMaritimeAuthority/aisdk-2023-03-08-X_Y.png)
+
+`aisdk-2023-03-15`
+
+![aisdk-2023-03-15 Canvas](/images/DanishMaritimeAuthority/aisdk-2023-03-15-canvas.png)
+
+![aisdk-2023-03-15 X/Y Distribution](/images/DanishMaritimeAuthority/aisdk-2023-03-15-X_Y.png)
