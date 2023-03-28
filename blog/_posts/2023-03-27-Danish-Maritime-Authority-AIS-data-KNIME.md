@@ -9,34 +9,140 @@ title: Danish Maritime Authority (DMA) AIS data and KNIME and ODV
 
 `!_README_information_CSV_files.rtf	`
 
-```
-1.	Timestamp			Timestamp from the AIS basestation, format: 31/12/2015 23:59:59	
-2.	Type of mobile			Describes what type of target this message is received from (class A AIS Vessel, Class B AIS vessel, etc)
-3.	MMSI				MMSI number of vessel
-4.	Latitude			Latitude of message report (e.g. 57,8794)
-5.	Longitude			Longitude of message report (e.g. 17,9125)
-6.	Navigational status		Navigational status from AIS message if available, e.g.: 'Engaged in fishing', 'Under way using engine', mv.
-7.	ROT				Rot of turn from AIS message if available
-8.	SOG				Speed over ground from AIS message if available
-9.	COG				Course over ground from AIS message if available
-10.	Heading			Heading from AIS message if available
-11.	IMO				IMO number of the vessel
-12.	Callsign				Callsign of the vessel 
-13.	Name				Name of the vessel
-14.	Ship type			Describes the AIS ship type of this vessel 
-15.	Cargo type			Type of cargo from the AIS message 
-16.	Width				Width of the vessel
-17.	Length				Lenght of the vessel 
-18.	Type of position fixing device	Type of positional fixing device from the AIS message 
-19.	Draught			Draugth field from AIS message
-20.	Destination			Destination from AIS message
-21.	ETA				Estimated Time of Arrival, if available  
-22.	Data source type		Data source type, e.g. AIS
-23. Size A				Length from GPS to the bow
-24. Size B				Length from GPS to the stern
-25. Size C				Length from GPS to starboard side
-26. Size D				Length from GPS to port side
-```
+<table>
+<tbody>
+  <tr>
+    <td>1.</td>
+    <td>Timestamp</td>
+    <td>Timestamp from the AIS basestation, format: 31/12/2015 23:59:59</td>
+  </tr>
+  <tr>
+    <td>2.</td>
+    <td>Type of mobile</td>
+    <td>Describes what type of target this message is received from (class A AIS Vessel, Class B AIS vessel, etc)</td>
+  </tr>
+  <tr>
+    <td>3.</td>
+    <td>MMSI</td>
+    <td>MMSI number of vessel</td>
+  </tr>
+  <tr>
+    <td>4.</td>
+    <td>Latitude</td>
+    <td>Latitude of message report (e.g. 57,8794)</td>
+  </tr>
+  <tr>
+    <td>5.</td>
+    <td>Longitude</td>
+    <td>Longitude of message report (e.g. 17,9125)</td>
+  </tr>
+  <tr>
+    <td>6.</td>
+    <td>Navigational status</td>
+    <td>Navigational status from AIS message if available, e.g.: 'Engaged in fishing', 'Under way using engine', mv.</td>
+  </tr>
+  <tr>
+    <td>7.</td>
+    <td>ROT</td>
+    <td>Rot of turn from AIS message if available</td>
+  </tr>
+  <tr>
+    <td>8.</td>
+    <td>SOG</td>
+    <td>Speed over ground from AIS message if available</td>
+  </tr>
+  <tr>
+    <td>9.</td>
+    <td>COG</td>
+    <td>Course over ground from AIS message if available</td>
+  </tr>
+  <tr>
+    <td>10.</td>
+    <td>Heading</td>
+    <td>Heading from AIS message if available</td>
+  </tr>
+  <tr>
+    <td>11.</td>
+    <td>IMO</td>
+    <td>IMO number of the vessel</td>
+  </tr>
+  <tr>
+    <td>12.</td>
+    <td>Callsign</td>
+    <td>Callsign of the vessel</td>
+  </tr>
+  <tr>
+    <td>13.</td>
+    <td>Name</td>
+    <td>Name of the vessel</td>
+  </tr>
+  <tr>
+    <td>14.</td>
+    <td>Ship type</td>
+    <td>Describes the AIS ship type of this vessel</td>
+  </tr>
+  <tr>
+    <td>15.</td>
+    <td>Cargo type</td>
+    <td>Type of cargo from the AIS message</td>
+  </tr>
+  <tr>
+    <td>16.</td>
+    <td>Width</td>
+    <td>Width of the vessel</td>
+  </tr>
+  <tr>
+    <td>17.</td>
+    <td>Length</td>
+    <td>Lenght of the vessel</td>
+  </tr>
+  <tr>
+    <td>18.</td>
+    <td>Type of position fixing device</td>
+    <td>Type of positional fixing device from the AIS message</td>
+  </tr>
+  <tr>
+    <td>19.</td>
+    <td>Draught</td>
+    <td>Draugth field from AIS message</td>
+  </tr>
+  <tr>
+    <td>20.</td>
+    <td>Destination</td>
+    <td>Destination from AIS message</td>
+  </tr>
+  <tr>
+    <td>21.</td>
+    <td>ETA</td>
+    <td>Estimated Time of Arrival, if available</td>
+  </tr>
+  <tr>
+    <td>22.</td>
+    <td>Data source type</td>
+    <td>Data source type, e.g. AIS</td>
+  </tr>
+  <tr>
+    <td>23.</td>
+    <td>Size A</td>
+    <td>Length from GPS to the bow</td>
+  </tr>
+  <tr>
+    <td>24.</td>
+    <td>Size B</td>
+    <td>Length from GPS to the stern</td>
+  </tr>
+  <tr>
+    <td>25.</td>
+    <td>Size C</td>
+    <td>Length from GPS to starboard side</td>
+  </tr>
+  <tr>
+    <td>26.</td>
+    <td>Size D</td>
+    <td>Length from GPS to port side</td>
+  </tr>
+</tbody>
+</table>
 
 
 ```
