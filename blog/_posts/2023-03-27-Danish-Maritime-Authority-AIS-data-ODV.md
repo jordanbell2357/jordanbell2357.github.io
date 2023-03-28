@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Danish Maritime Authority (DMA) AIS data using ODV
+title: Danish Maritime Authority (DMA) AIS data using Ocean Data View
 ---
 
 <https://dma.dk/safety-at-sea/navigational-information/download-data>
@@ -148,6 +148,7 @@ title: Danish Maritime Authority (DMA) AIS data using ODV
 ```
 2.6G    aisdk-2023-02-15.csv
 1.6G    aisdk-2023-02-22.csv
+1.8G    aisdk-2023-03-01.csv
 1.5G    aisdk-2023-03-08.csv
 1.6G    aisdk-2023-03-15.csv
 1.7G    aisdk-2023-03-18.csv
@@ -181,3 +182,15 @@ head aisdk-2023-02-15.csv
 ![aisdk-2023-02-22 Canvas](/images/DanishMaritimeAuthority/aisdk-2023-02-22-canvas.png)
 
 ![aisdk-2023-02-22 X/Y Distribution](/images/DanishMaritimeAuthority/aisdk-2023-02-22-X_Y.png)
+
+`aisdk-2023-03-01`
+
+![aisdk-2023-03-01 Canvas](/images/DanishMaritimeAuthority/aisdk-2023-03-01-canvas.png)
+
+![aisdk-2023-03-01 X/Y Distribution](/images/DanishMaritimeAuthority/aisdk-2023-03-01-X_Y.png)
+
+`aisdk-2023-03-08`
+
+![aisdk-2023-03-08 Canvas](/images/DanishMaritimeAuthority/aisdk-2023-03-08-canvas.png)
+
+![aisdk-2023-03-08 X/Y Distribution](/images/DanishMaritimeAuthority/aisdk-2023-03-08-X_Y.png)
