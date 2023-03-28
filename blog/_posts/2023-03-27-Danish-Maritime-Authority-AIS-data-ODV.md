@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Danish Maritime Authority (DMA) AIS data and KNIME and ODV
+title: Danish Maritime Authority (DMA) AIS data using ODV
 ---
 
 <https://dma.dk/safety-at-sea/navigational-information/download-data>
@@ -154,19 +154,24 @@ title: Danish Maritime Authority (DMA) AIS data and KNIME and ODV
 ```
 
 ```bash
-head aisdk-2023-03-18.csv
+head aisdk-2023-02-15.csv
 ```
 
 ```
 # Timestamp,Type of mobile,MMSI,Latitude,Longitude,Navigational status,ROT,SOG,COG,Heading,IMO,Callsign,Name,Ship type,Cargo type,Width,Length,Type of position fixing device,Draught,Destination,ETA,Data source type,A,B,C,D
-18/03/2023 00:00:00,Base Station,2190064,56.7166,11.519,Unknown value,,,,,Unknown,,,Undefined,,,,GPS,,,,AIS,,,,
-18/03/2023 00:00:00,Class A,352002266,55.4921,14.7525,Under way using engine,0.7,12.5,241.8,241,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
-18/03/2023 00:00:00,Class A,211551940,54.6926,8.57745,Under way using engine,0.0,0.0,269.3,92,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
-18/03/2023 00:00:00,Class A,219030190,57.5203,8.34178,Under way using engine,0.0,8.7,151.4,160,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
-18/03/2023 00:00:00,Class A,255619000,54.8512,13.2935,Under way using engine,0.0,10.7,69.4,67,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
-18/03/2023 00:00:00,Class A,219554000,57.969,11.2706,Under way using engine,0.0,16.6,348.9,349,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
-18/03/2023 00:00:00,Class A,219472000,91,0,Unknown value,,,,,9686429,OWMI2,GUARDVESSEL ADVANCER,Other,,8,23,GPS,1.9,GUARD VESSEL FEMARN,11/03/2023 21:00:00,AIS,16,7,5,3
-18/03/2023 00:00:00,Class A,219007401,57.123,8.59783,Under way using engine,0.0,0.0,229.1,243,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
-18/03/2023 00:00:00,Class A,241580000,57.7565,10.992,Constrained by her draught,0.0,12.5,319.6,316,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
+15/02/2023 00:00:00,Class A,219063000,57.1152,8.33121,Under way using engine,0.0,6.4,216.9,217,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
+15/02/2023 00:00:00,Class A,220228000,55.4732,8.42364,Engaged in fishing,0.0,0.0,136.7,332,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
+15/02/2023 00:00:00,Base Station,2190064,56.7166,11.5191,Unknown value,,,,,Unknown,,,Undefined,,,,GPS,,,,AIS,,,,
+15/02/2023 00:00:00,Class A,220228000,55.4732,8.42364,Engaged in fishing,0.0,0.0,136.7,332,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
+15/02/2023 00:00:00,Class A,220304000,56.7157,11.5125,Engaged in fishing,0.0,0.0,271.8,289,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
+15/02/2023 00:00:00,Class A,355378000,55.4983,5.41641,Under way using engine,0.0,11.9,17.6,15,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
+15/02/2023 00:00:00,Class A,220304000,56.7157,11.5125,Engaged in fishing,0.0,0.0,271.8,289,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
+15/02/2023 00:00:00,Base Station,2194006,55.5389,5.0334,Unknown value,,,,,Unknown,,,Undefined,,,,Surveyed,,,,AIS,,,,
+15/02/2023 00:00:00,Class A,219002857,55.6791,12.5935,Under way using engine,0.0,0.0,270.3,297,Unknown,,,Undefined,,,,Undefined,,,,AIS,,,,
 ```
 
+`aisdk-2023-02-15`
+
+![aisdk-2023-02-15 Canvas](/images/DanishMaritimeAuthority/aisdk-2023-02-15-canvas.png)
+
+![aisdk-2023-02-15 X/Y Distribution](/images/DanishMaritimeAuthority/aisdk-2023-02-15-X_Y.png)
