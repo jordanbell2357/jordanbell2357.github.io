@@ -33,102 +33,39 @@ title: UK Marine Management Organisation (MMO) AIS Data
 <tbody>
   <tr>
     <td>Shipping&nbsp;&nbsp;&nbsp;vessel density grid 2011</td>
-    <td>http://environment.data.gov.uk/ds/wms?SERVICE=WMS&amp;INTERFACE=ENVIRONMENT--6746a5deae4ea34cc79b9b9dd448fb3e</td>
-    <td>http://environment.data.gov.uk/ds/wfs?SERVICE=WFS&amp;INTERFACE=ENVIRONMENTWFS--6746a5deae4ea34cc79b9b9dd448fb3e</td>
-    <td>https://environment.data.gov.uk/spatialdata/mmo1066-vessel-density-grid-2011/wms</td>
-    <td>https://environment.data.gov.uk/spatialdata/mmo1066-vessel-density-grid-2011/wfs</td>
     <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2011&amp;Mode=spatial</td>
-    <td>6746a5deae4ea34cc79b9b9dd448fb3e</td>
-    <td>https://environment.data.gov.uk/arcgis/rest/services/MMO/ShippingVesselDensityGrid2011/MapServer</td>
-    <td>mmo_shipping_vessel_density_grid_2011</td>
   </tr>
   <tr>
     <td>Shipping vessel density grid 2012</td>
-    <td>http://environment.data.gov.uk/ds/wms?SERVICE=WMS&amp;INTERFACE=ENVIRONMENT--bfb137087b9e1ada0e8a3fd051782bb1</td>
-    <td>http://environment.data.gov.uk/ds/wfs?SERVICE=WFS&amp;INTERFACE=ENVIRONMENTWFS--bfb137087b9e1ada0e8a3fd051782bb1</td>
-    <td>https://environment.data.gov.uk/spatialdata/mmo1066-vessel-density-grid-2012/wms</td>
-    <td>https://environment.data.gov.uk/spatialdata/mmo1066-vessel-density-grid-2012/wfs</td>
     <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2012&amp;Mode=spatial</td>
-    <td>bfb137087b9e1ada0e8a3fd051782bb1</td>
-    <td>https://environment.data.gov.uk/arcgis/rest/services/MMO/ShippingVesselDensityGrid2012/MapServer</td>
-    <td>mmo_shipping_vessel_density_grid_2012</td>
   </tr>
   <tr>
     <td>Shipping Vessel Density Grid 2013</td>
-    <td>http://environment.data.gov.uk/ds/wms?SERVICE=WMS&amp;INTERFACE=ENVIRONMENT--200f5f967533b477f3988a72447a2579</td>
-    <td>http://environment.data.gov.uk/ds/wfs?SERVICE=WFS&amp;INTERFACE=ENVIRONMENTWFS--200f5f967533b477f3988a72447a2579</td>
-    <td>https://environment.data.gov.uk/spatialdata/vessel-density-grid-2013/wms</td>
-    <td>https://environment.data.gov.uk/spatialdata/vessel-density-grid-2013/wfs</td>
     <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2013&amp;Mode=spatial</td>
-    <td>200f5f967533b477f3988a72447a2579</td>
-    <td>https://environment.data.gov.uk/arcgis/rest/services/MMO/ShippingVesselDensityGrid2013/MapServer</td>
-    <td>mmo_shipping_vessel_density_grid_2013</td>
   </tr>
   <tr>
     <td>Shipping Vessel Density Grid 2014</td>
-    <td>http://environment.data.gov.uk/ds/wms?SERVICE=WMS&amp;INTERFACE=ENVIRONMENT--6f49c35180e495ba6a0733d14cf2ef12</td>
-    <td>http://environment.data.gov.uk/ds/wfs?SERVICE=WFS&amp;INTERFACE=ENVIRONMENTWFS--6f49c35180e495ba6a0733d14cf2ef12</td>
-    <td>https://environment.data.gov.uk/spatialdata/vessel-density-grid-2014/wms</td>
-    <td>https://environment.data.gov.uk/spatialdata/vessel-density-grid-2014/wfs</td>
     <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2014&amp;Mode=spatial</td>
-    <td>6f49c35180e495ba6a0733d14cf2ef12</td>
-    <td>https://environment.data.gov.uk/arcgis/rest/services/MMO/ShippingVesselDensityGrid2014/MapServer</td>
-    <td>mmo_shipping_vessel_density_grid_2014</td>
   </tr>
   <tr>
     <td>Shipping Vessel Density Grid 2015</td>
-    <td>http://environment.data.gov.uk/ds/wms?SERVICE=WMS&amp;INTERFACE=ENVIRONMENT--9281c0707a10eb1e2805621ffb324898</td>
-    <td>http://environment.data.gov.uk/ds/wfs?SERVICE=WFS&amp;INTERFACE=ENVIRONMENTWFS--9281c0707a10eb1e2805621ffb324898</td>
-    <td>https://environment.data.gov.uk/spatialdata/vessel-density-grid-2015/wms</td>
-    <td>https://environment.data.gov.uk/spatialdata/vessel-density-grid-2015/wfs</td>
     <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2015&amp;Mode=spatial</td>
-    <td>9281c0707a10eb1e2805621ffb324898</td>
-    <td>https://environment.data.gov.uk/arcgis/rest/services/MMO/ShippingVesselDensityGrid2015/MapServer</td>
-    <td>mmo_shipping_vessel_density_grid_2015</td>
   </tr>
   <tr>
     <td>Shipping Vessel Density Grid 2016</td>
-    <td> </td>
-    <td> </td>
-    <td><a href="https://environment.data.gov.uk/spatialdata/vessel-density-grid-2016/wms">https://environment.data.gov.uk/spatialdata/vessel-density-grid-2016/wms</a></td>
-    <td><a href="https://environment.data.gov.uk/spatialdata/vessel-density-grid-2016/wfs">https://environment.data.gov.uk/spatialdata/vessel-density-grid-2016/wfs</a></td>
     <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2016&amp;mode=spatial</td>
-    <td> </td>
-    <td>https://environment.data.gov.uk/arcgis/rest/services/MMO/ShippingVesselDensityGrid2016/MapServer</td>
-    <td>mmo_shipping_vessel_density_grid_2016</td>
   </tr>
   <tr>
     <td>Shipping Vessel Density Grid 2017</td>
-    <td> </td>
-    <td> </td>
-    <td><a href="https://environment.data.gov.uk/spatialdata/vessel-density-grid-2017/wms">https://environment.data.gov.uk/spatialdata/vessel-density-grid-2017/wms</a></td>
-    <td><a href="https://environment.data.gov.uk/spatialdata/vessel-density-grid-2017/wfs">https://environment.data.gov.uk/spatialdata/vessel-density-grid-2017/wfs</a></td>
     <td><a href="https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2017&mode=spatial">https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2017&amp;mode=spatial</a></td>
-    <td> </td>
-    <td>https://environment.data.gov.uk/arcgis/rest/services/MMO/ShippingVesselDensityGrid2017/MapServer</td>
-    <td>mmo_shipping_vessel_density_grid_2017</td>
   </tr>
   <tr>
     <td>Shipping Vessel Density Grid 2018</td>
-    <td> </td>
-    <td> </td>
-    <td>https://environment.data.gov.uk/spatialdata/vessel-density-grid-2018/wms</td>
-    <td>https://environment.data.gov.uk/spatialdata/vessel-density-grid-2018/wfs</td>
     <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2018&amp;mode=spatial</td>
-    <td> </td>
-    <td>https://environment.data.gov.uk/arcgis/rest/services/MMO/ShippingVesselDensityGrid2018/MapServer</td>
-    <td>mmo_shipping_vessel_density_grid_2018</td>
   </tr>
   <tr>
     <td>Shipping Vessel Density Grid 2019</td>
-    <td> </td>
-    <td> </td>
-    <td>https://environment.data.gov.uk/spatialdata/vessel-density-grid-2019/wms</td>
-    <td>https://environment.data.gov.uk/spatialdata/vessel-density-grid-2019/wfs</td>
     <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2019&amp;mode=spatial</td>
-    <td> </td>
-    <td>https://environment.data.gov.uk/arcgis/rest/services/MMO/ShippingVesselDensityGrid2019/MapServer</td>
-    <td>mmo_shipping_vessel_density_grid_2019</td>
   </tr>
 </tbody>
 </table>
