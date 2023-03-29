@@ -7,6 +7,53 @@ title: UK Marine Management Organisation (MMO) AIS Data
 
 ---
 
+[Defra Data Services Platform](https://environment.data.gov.uk/)
+
+[Marine Management Organisation Datasets](https://environment.data.gov.uk/dataset/4e725520-a7d0-4879-8e9c-cf1638545e82)
+
+<table>
+<tbody>
+  <tr>
+    <td>Shipping&nbsp;&nbsp;&nbsp;vessel density grid 2011</td>
+    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2011&amp;Mode=spatial</td>
+  </tr>
+  <tr>
+    <td>Shipping vessel density grid 2012</td>
+    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2012&amp;Mode=spatial</td>
+  </tr>
+  <tr>
+    <td>Shipping Vessel Density Grid 2013</td>
+    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2013&amp;Mode=spatial</td>
+  </tr>
+  <tr>
+    <td>Shipping Vessel Density Grid 2014</td>
+    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2014&amp;Mode=spatial</td>
+  </tr>
+  <tr>
+    <td>Shipping Vessel Density Grid 2015</td>
+    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2015&amp;Mode=spatial</td>
+  </tr>
+  <tr>
+    <td>Shipping Vessel Density Grid 2016</td>
+    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2016&amp;mode=spatial</td>
+  </tr>
+  <tr>
+    <td>Shipping Vessel Density Grid 2017</td>
+    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2017&amp;mode=spatial</td>
+  </tr>
+  <tr>
+    <td>Shipping Vessel Density Grid 2018</td>
+    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2018&amp;mode=spatial</td>
+  </tr>
+  <tr>
+    <td>Shipping Vessel Density Grid 2019</td>
+    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2019&amp;mode=spatial</td>
+  </tr>
+</tbody>
+</table>
+
+---
+
 [MMO1066 Anonymised AIS derived track lines 2011](https://www.data.gov.uk/dataset/9179b000-f83e-4258-86d8-1c73a2b0c1ed/mmo1066-anonymised-ais-derived-track-lines-2011)
 
 [MMO1066 Anonymised AIS derived track lines 2012](https://www.data.gov.uk/dataset/996aa879-0fc0-4e3f-81fa-26ceeb7257e1/mmo1066-anonymised-ais-derived-track-lines-2012)
@@ -51,47 +98,3 @@ title: UK Marine Management Organisation (MMO) AIS Data
 
 ---
 
-[Defra Data Services Platform](https://environment.data.gov.uk/)
-
-[Marine Management Organisation Datasets](https://environment.data.gov.uk/dataset/4e725520-a7d0-4879-8e9c-cf1638545e82)
-
-<table>
-<tbody>
-  <tr>
-    <td>Shipping&nbsp;&nbsp;&nbsp;vessel density grid 2011</td>
-    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2011&amp;Mode=spatial</td>
-  </tr>
-  <tr>
-    <td>Shipping vessel density grid 2012</td>
-    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2012&amp;Mode=spatial</td>
-  </tr>
-  <tr>
-    <td>Shipping Vessel Density Grid 2013</td>
-    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2013&amp;Mode=spatial</td>
-  </tr>
-  <tr>
-    <td>Shipping Vessel Density Grid 2014</td>
-    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2014&amp;Mode=spatial</td>
-  </tr>
-  <tr>
-    <td>Shipping Vessel Density Grid 2015</td>
-    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2015&amp;Mode=spatial</td>
-  </tr>
-  <tr>
-    <td>Shipping Vessel Density Grid 2016</td>
-    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2016&amp;mode=spatial</td>
-  </tr>
-  <tr>
-    <td>Shipping Vessel Density Grid 2017</td>
-    <td><a href="https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2017&mode=spatial">https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2017&amp;mode=spatial</a></td>
-  </tr>
-  <tr>
-    <td>Shipping Vessel Density Grid 2018</td>
-    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2018&amp;mode=spatial</td>
-  </tr>
-  <tr>
-    <td>Shipping Vessel Density Grid 2019</td>
-    <td>https://environment.data.gov.uk/DefraDataDownload/?mapService=MMO/ShippingVesselDensityGrid2019&amp;mode=spatial</td>
-  </tr>
-</tbody>
-</table>
