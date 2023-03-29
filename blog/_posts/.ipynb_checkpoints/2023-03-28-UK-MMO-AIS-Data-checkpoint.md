@@ -25,6 +25,32 @@ title: UK Marine Management Organisation (MMO) AIS Data
 
 ---
 
+[Vessel Density Grid 2015](https://www.data.gov.uk/dataset/b7ae1346-7885-4e2d-aedf-c08a37d829ee/vessel-density-grid-2015)
+
+> This dataset contains the average weekly shipping density for the whole of the UK at a 2km grid resolution. For 2015, AIS datasets were sampled from the first seven days of each month, commencing with January,at monthly intervals. The total value for all 12 weeks was divided by 12 to determine the weekly average, therefore decimal values may occur for certain cells. The weekly average was also multiplied by 52 to provide the estimated annual average.
+>
+> Ship type groups (STG): 0 - Unknown Vessels 1 - Non-Port service craft 2 - Port service craft 3 - Vessels engaged in dredging or underwater operations 4 - High Speed Craft 5 - Military or Law enforcement 6 - Passenger 7 - Cargo 8 - Tankers 9 - Fishing vessels 10 - Recreational vessels
+>
+> The field headings in the attribute table are as follows:
+>
+> - CELLID - ID of grid cell
+> - AvgSTG0 - Weekly average number of transits of Unknown Vessels
+> - AvgSTG1 - Weekly average number of transits of Non-Port service craft Avg
+> - STG2 - Weekly average number of transits of Port service craft
+> - AvgSTG3 - Weekly average number of transits of Vessels engaged in dredging or underwater operations
+> - AvgSTG4 - Weekly average number of transits of High Speed Craft
+> - AvgSTG5 - Weekly average number of transits of Military or Law enforcement vessels
+> - AvgSTG6 - Weekly average number of transits of Passenger vessels
+> - AvgSTG7 - Weekly average number of transits of Cargo vessels
+> - AvgSTG8 - Weekly average number of transits of Tankers
+> - AvgSTG9 - Weekly average number of transits of Fishing vessels
+> - AvgSTG10 - Weekly average number of transits of Recreational vessels
+> - AvgTotalSTG - Weekly average number of all vessel transits
+> - WeeklyAvgSTGTotal - Weekly average number of all vessel transits
+> - YearlyAvgSTG_Total - Estimated annual density of all vessel transits
+
+---
+
 [Defra Data Services Platform](https://environment.data.gov.uk/)
 
 [Marine Management Organisation Datasets](https://environment.data.gov.uk/dataset/4e725520-a7d0-4879-8e9c-cf1638545e82)
