@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using Ocean Data View (ODV) with MarineCadastre.gov AIS Vessel Traffic
+title: MarineCadastre.gov AIS Vessel Traffic using Ocean Data View (ODV) 
 ---
 
 # ODV
