@@ -5,13 +5,18 @@ title: Stanford Automata Theory Week 1
 
 [Automata Theory \| edX](https://www.edx.org/course/automata-theory)
 
-[automaton in nLab](https://ncatlab.org/nlab/show/automaton)
 
-A **deterministic automaton** comprises
+2.2.1 Definition of a Deterministic Finite Automaton, p. 45:
 
-1. A set $$Q$$ of **states**
-2. A set $$\Sigma$$ of **input symbols**
-3. A set $$Y$$ of **output symbols**
-4. A function $$\delta:\Sigma \times Q \to Q$$, the **transition map**
-5. An element $$q_0$$ of $$Q$$, the **initial state**
-6. A function $$y:Q \to Y$$, the **output map**
+A **deterministic finite automaton** comprises
+
+1. A finite set $$Q$$ of **states**
+2. A finite set $$\Sigma$$ of **input symbols**
+3. A function $$\delta:\Sigma \times Q \to Q$$, the **transition map**
+4. An element $$q_0$$ of $$Q$$, the **initial state**
+5. A subset $$F$$ of $$Q$$, the **final states**
+
+$$A=(Q,\Sigma,\delta,q_0,F)$$
+
+
+

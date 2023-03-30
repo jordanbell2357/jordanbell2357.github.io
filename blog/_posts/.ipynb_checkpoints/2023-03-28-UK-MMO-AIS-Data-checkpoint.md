@@ -7,6 +7,10 @@ title: UK Marine Management Organisation (MMO) AIS Data
 
 ---
 
+MMO = Marine Management Organisation
+
+Defra = Department for Environment Food & Rural Affairs
+
 [Defra Data Services Platform](https://environment.data.gov.uk/)
 
 [Marine Management Organisation Datasets](https://environment.data.gov.uk/dataset/4e725520-a7d0-4879-8e9c-cf1638545e82)
