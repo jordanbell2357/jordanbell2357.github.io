@@ -5,6 +5,7 @@ title: Stanford Automata Theory Week 1
 
 [Automata Theory \| edX](https://www.edx.org/course/automata-theory)
 
+John E. Hopcroft, Rajeev Motwani, and Jeffrey D. Ullman. *Introduction to Automata Theory, Languages, and Computation*. 3rd ed. Pearson. 2007.
 
 2.2.1 Definition of a Deterministic Finite Automaton, p. 45:
 
