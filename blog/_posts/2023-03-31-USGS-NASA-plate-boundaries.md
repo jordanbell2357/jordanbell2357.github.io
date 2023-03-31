@@ -11,6 +11,8 @@ title: USGS and NASA tectonic plate boundaries
 
 ![Tectonic Plate Boundaries USGS](/images/USGS/plate-boundaries.png)
 
+`plate-boundaries.kmz` with Natural Earth `ne_10m_land.shp`
+
 ![Tectonic Plate Boundaries USGS with Natural Earth land map](/images/USGS/ne_10m_land.png)
 
 # NASA
