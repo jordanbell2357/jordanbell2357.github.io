@@ -79,7 +79,7 @@ University Medal in Mathematics
 
 ## Learning profiles {#learning}
 
-- [Codeacademy](https://www.codecademy.com/profiles/jordanbell2357)
+- [codecademy](https://www.codecademy.com/profiles/jordanbell2357)
 
 - [Coursera](https://www.coursera.org/user/a7586c089cd57b49ac8851febd502156)
 

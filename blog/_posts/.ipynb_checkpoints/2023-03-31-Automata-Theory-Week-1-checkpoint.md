@@ -19,5 +19,10 @@ A **deterministic finite automaton** comprises
 
 $$A=(Q,\Sigma,\delta,q_0,F)$$
 
+Let $$a = a_1 \cdots a_n \in \Sigma^n$$, a **string of length** $$n$$.
+Define by induction $$q_i = \delta(q_{i-1}, a_i)$$ for $$1 \leq i \leq n$$. (The induction is on $$n$$, not on $$i$$.)
+The string is said to be **accepted** by $$A$$ if $$q_n \in F$$, and **rejected** by $$A$$ if $$q_n \not \in F$$.
+
+
 
 
