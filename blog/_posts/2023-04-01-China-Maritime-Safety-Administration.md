@@ -5,6 +5,6 @@ title: China Maritime Safety Administration (MSA) (中华人民共和国海事�
 
 [China Maritime Safety Administration (MSA) (中华人民共和国海事局)](https://en.msa.gov.cn/)
 
-AIS Platform (国家海事交通管理信息服务平台):
+[AIS Platform (国家海事交通管理信息服务平台)](https://ais.msa.gov.cn/):
 
-![China Maritime Safety Administration AIS Map](/images/ChinaMSA/AIS_MSA_GOV_CN.png)
+[![China Maritime Safety Administration AIS Map](/images/ChinaMSA/AIS_MSA_GOV_CN.png)](https://ais.msa.gov.cn/)

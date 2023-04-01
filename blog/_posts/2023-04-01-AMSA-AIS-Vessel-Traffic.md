@@ -25,3 +25,18 @@ These shapefiles are point sets (latitude and longitude, which other fields), ra
 
 [^1]: Question for me to return to: understand how WKT, KML, KMZ work more deeply than I do for point sets.
 
+```
+206M    cts_srr_01_2020_pt.csv
+193M    cts_srr_02_2020_pt.csv
+218M    cts_srr_03_2020_pt.csv
+207M    cts_srr_04_2020_pt.csv
+216M    cts_srr_05_2020_pt.csv
+205M    cts_srr_06_2020_pt.csv
+227M    cts_srr_07_2020_pt.csv
+229M    cts_srr_08_2020_pt.csv
+219M    cts_srr_09_2020_pt.csv
+234M    cts_srr_10_2020_pt.csv
+233M    cts_srr_11_2020_pt.csv
+248M    cts_srr_12_2020_pt.csv
+```
+
