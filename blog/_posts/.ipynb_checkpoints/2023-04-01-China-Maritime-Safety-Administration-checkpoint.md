@@ -9,6 +9,4 @@ title: China Maritime Safety Administration (MSA) (中华人民共和国海事�
 
 [![China Maritime Safety Administration AIS Map](/images/ChinaMSA/AIS_MSA_GOV_CN.png)](https://ais.msa.gov.cn/)
 
-[![China Maritime Safety Administration AIS Map](/images/ChinaMSA/AIS_MSA_GOV_ZOOM.png)](https://ais.msa.gov.cn/)
-
 [![China Maritime Safety Administration AIS Map](/images/ChinaMSA/AIS_MSA_GOV_ZOOM_FOLD.png)](https://ais.msa.gov.cn/)
