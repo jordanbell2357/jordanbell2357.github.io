@@ -103,12 +103,12 @@ title: Australian Maritime Safety Authority (AMSA) AIS Vessel Tracking Data
 ogr2ogr -f CSV cts_srr_02_2023_pt.csv cts_srr_02_2023_pt.shp -lco GEOMETRY=AS_XYZ
 ```
 
-```bash
-head -n 5 cts_srr_02_2023_pt.csv
-```
-
 ```
 345M    cts_srr_02_2023_pt.csv
+```
+
+```bash
+head -n 5 cts_srr_02_2023_pt.csv
 ```
 
 ```
