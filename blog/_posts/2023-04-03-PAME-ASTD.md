@@ -61,7 +61,7 @@ Arkhangelsk (Арха́нгельск)
 
 ![Arkhangelsk](/images/ASTD/Arkhangelsk.jpg)
 
-Novaya Zemlya archipelago
+Novaya Zemlya Archipelago
 
 ![Novaya Zemlya archipelago](/images/ASTD/NovayaZemlya.jpg)
 
