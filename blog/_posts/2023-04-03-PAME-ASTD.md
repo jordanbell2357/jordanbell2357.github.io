@@ -13,6 +13,28 @@ title: PAME Arctic Ship Traffic Data (ASTD)
 
 ![Ports](/images/ASTD/ASTD-Arctic-Ship-Traffic-Database-Ports.png)
 
+{% assign table_rows1 = site.data.ASTD_Ports_2023 %}
+
+<div style="overflow-x:auto;">
+  <table>
+      {% for row in table_rows1 %}
+          {% if forloop.first %}
+              <tr>
+                  {% for pair in row %}
+                      <th>
+                          {{ pair[0] }}
+                      </th>
+                  {% endfor %}
+              </tr>
+          {% endif %}
+
+          {% tablerow pair in row %}
+              {{ pair[1] }}
+          {% endtablerow %}
+      {% endfor %}
+  </table>
+</div>
+
 Murmansk (Мурманск)
 
 ![Murmansk](/images/ASTD/Murmansk.jpg)
