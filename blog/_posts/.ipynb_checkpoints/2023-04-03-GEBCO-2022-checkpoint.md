@@ -23,4 +23,4 @@ title: GEBCO 2022 Using Panoply
 
 Using QGIS:
 
-![International Bathymetric Chart of the Arctic Ocean (IBCAO) V4.1](/images/GEBCO/IBCAO_v4_1_200m-QGIS)
+![International Bathymetric Chart of the Arctic Ocean (IBCAO) V4.1](/images/GEBCO/IBCAO_v4_1_200m-QGIS.png)
