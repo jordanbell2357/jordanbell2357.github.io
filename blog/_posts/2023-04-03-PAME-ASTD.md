@@ -13,6 +13,24 @@ title: PAME Arctic Ship Traffic Data (ASTD)
 
 ![Ports](/images/ASTD/ASTD-Arctic-Ship-Traffic-Database-Ports.png)
 
+`Ports.csv`
+
+```
+head -n 5 Ports.csv
+```
+
+```
+﻿havn   havn_en terminalna      terminalna_en   geom_wkt
+Tiksi                           POINT(128.872523555144 71.6443193634454)
+Ust-Kara                                POINT(64.9155175661919 69.2491104220271)
+Nuuk-Godthaab                           POINT(-51.720420892676 64.1708873011146)
+Sisimiut                                POINT(-53.6753882255269 66.9414846843146)
+```
+
+```bash
+cut -d$'\t' -f1,5 Ports.csv > ASTD_Ports_2023.tsv
+```
+
 {% assign table_rows1 = site.data.ASTD_Ports_2023 %}
 
 <div style="overflow-x:auto;">
