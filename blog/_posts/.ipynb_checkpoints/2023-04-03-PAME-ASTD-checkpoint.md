@@ -11,28 +11,28 @@ title: PAME Arctic Ship Traffic Data (ASTD)
 
 ![Arctic Ship Traffic Data - ASTD](/images/ASTD/ASTD-Arctic-Ship-Traffic-Database.png)
 
-`Ports.geojson`
+![Ports](/images/ASTD/ASTD-Arctic-Ship-Traffic-Database-Ports.png)
 
 Murmansk (Мурманск)
 
-![Murmansk](/images/ATSD/Murmansk.jpg)
+![Murmansk](/images/ASTD/Murmansk.jpg)
 
 Arkhangelsk (Арха́нгельск)
 
-![Arkhangelsk](/images/ATSD/Arkhangelsk.jpg)
+![Arkhangelsk](/images/ASTD/Arkhangelsk.jpg)
 
 Novaya Zemlya archipelago
 
-![Novaya Zemlya archipelago](/images/ATSD/NovayaZemlya.jpg)
+![Novaya Zemlya archipelago](/images/ASTD/NovayaZemlya.jpg)
 
 Yamal Peninsula
 
-![Yamal Peninsula](/images/ATSD/YamalPeninsula.jpg)
+![Yamal Peninsula](/images/ASTD/YamalPeninsula.jpg)
 
 Taymyr Peninsula
 
-![Taymyr Peninsula](/images/ATSD/TaymyrPeninsula.jpg)
+![Taymyr Peninsula](/images/ASTD/TaymyrPeninsula.jpg)
 
 Bering Strait
 
-![Bering Strait](/images/ATSD/BeringStrait.jpg)
+![Bering Strait](/images/ASTD/BeringStrait.jpg)
