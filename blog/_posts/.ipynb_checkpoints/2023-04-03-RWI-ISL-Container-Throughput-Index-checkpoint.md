@@ -9,12 +9,8 @@ title: RWI/ISL Container Throughput Index
 
 `containerumschlag-index_220729.xlsx`
 
-<div class="iframe">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-4XyMbxMrPuQqNgPdzJXzwT9-FtS3NegSmiXJhA-9T0OdBViOk1bUG1drZaxBTr01pyoyiWKq9q58/pubhtml?widget=true&amp;headers=false"></iframe>
-</div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-4XyMbxMrPuQqNgPdzJXzwT9-FtS3NegSmiXJhA-9T0OdBViOk1bUG1drZaxBTr01pyoyiWKq9q58/pubhtml?widget=true&amp;headers=false" width="600"></iframe>
 
 [Logistics Performance Index (LPI)](https://databank.worldbank.org/source/logistics-performance-index-(lpi))
 
-<div class="iframe">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6PQXe0vhwIfkVHGUyUqmlN8rHfFXWm54ozum4_UKu-kOuOWQrWlKlvatt6IANGVx7rQ5etwy39csS/pubhtml?widget=true&amp;headers=false"></iframe>
-</div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6PQXe0vhwIfkVHGUyUqmlN8rHfFXWm54ozum4_UKu-kOuOWQrWlKlvatt6IANGVx7rQ5etwy39csS/pubhtml?widget=true&amp;headers=false" width="100%"></iframe>
