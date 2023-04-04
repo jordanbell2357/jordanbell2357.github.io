@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Logistics indices
+title: RWI/ISL Container Throughput Index
 ---
 
 [RWI/ISL Container Throughput Index](https://www.isl.org/en/containerindex)
