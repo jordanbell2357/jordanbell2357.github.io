@@ -7,7 +7,6 @@ title: Shipping Indices
 
 [Tianjin Shipping Index (TSI) = 天津航运指数TSI](https://www.tjtsi.pro/en/index.html)
 
-
 [Drewry World Container Index](https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry)
 
 [Drewry World Container Index](https://en.macromicro.me/collections/4356/freight/44756/drewry-world-container-index)
