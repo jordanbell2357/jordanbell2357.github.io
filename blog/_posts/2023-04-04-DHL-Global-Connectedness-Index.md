@@ -7,7 +7,7 @@ title: DHL Global Connectedness Index
 
 [DHL Global Connectedness Index \| NYU Stern](https://www.stern.nyu.edu/experience-stern/about/departments-centers-initiatives/centers-of-research/center-future-management/dhl-initiative-globalization/dhl-global-connectedness-index)
 
-{% assign table_rows1 = site.data.GCI_Data %}
+{% assign table_rows1 = site.data.DHL_GCI %}
 
 <div style="overflow-x:auto;">
   <table>
