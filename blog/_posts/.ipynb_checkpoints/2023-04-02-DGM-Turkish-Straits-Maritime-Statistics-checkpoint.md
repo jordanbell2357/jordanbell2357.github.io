@@ -30,12 +30,8 @@ title: Denizcilik Genel Müdürlüğü (DGM) Turkish Straits Vessel Traffic Stat
 
 Çanakkale
 
-<div class="iframe">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSVbA8AmyDIlPujUd5iAvLNnucIh-rqZ7LEWW2CuKq5fJ-8cuDoK_ZyHgmTS-9jKFm1vKTPJA35cfVm/pubhtml?widget=true&amp;headers=false"></iframe>
-</div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSVbA8AmyDIlPujUd5iAvLNnucIh-rqZ7LEWW2CuKq5fJ-8cuDoK_ZyHgmTS-9jKFm1vKTPJA35cfVm/pubhtml?widget=true&amp;headers=false" width="100%" height="600"></iframe>
 
 İstanbul
 
-<div class="iframe">
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQm9yvcc4LOi_330kn_p3zMlnvvImCbQQ-5hto1r6w2Z0VsHZHB1zOqxkQE_3zKVDoNLQglotkqhDWA/pubhtml?widget=true&amp;headers=false"></iframe>
-</div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQm9yvcc4LOi_330kn_p3zMlnvvImCbQQ-5hto1r6w2Z0VsHZHB1zOqxkQE_3zKVDoNLQglotkqhDWA/pubhtml?widget=true&amp;headers=false" width="100%" height="600"></iframe>
