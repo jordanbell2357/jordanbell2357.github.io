@@ -32,3 +32,20 @@ title: DHL Global Connectedness Index with Gnuplot
 [^1]
 
 [^1]: <https://www.convertcsv.com/transpose-csv.htm>
+
+```bash
+cut -d ',' -f 1,2 DHL_GCI.csv > overall.csv
+```
+
+```bash
+cut -d ',' -f 1,3 DHL_GCI.csv > trade.csv
+```
+
+```bash
+cut -d ',' -f 1,4 DHL_GCI.csv > people.csv
+```
+
+```bash
+cut -d ',' -f 1,5 DHL_GCI.csv > capital.csv
+```
+
