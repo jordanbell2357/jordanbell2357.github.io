@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Map Of Türkiye Administrative Boundaries
+title: Map of Türkiye Administrative Boundaries
 ---
 
 [Harita Genel Müdürlüğü (HGM) = General Directorate of Mapping (GDM)](https://www.harita.gov.tr/urun/political-map-of-turkiye/232)
