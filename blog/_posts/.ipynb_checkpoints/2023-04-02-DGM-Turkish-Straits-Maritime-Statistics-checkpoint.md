@@ -7,7 +7,7 @@ title: Denizcilik Genel Müdürlüğü (DGM) Turkish Straits Vessel Traffic Stat
 
 [Sahil Güvenlik Komutanlığı = Turkish Coast Guard Command](https://en.sg.gov.tr/)
 
-[Safety of Life and Property](https://en.sg.gov.tr/safety-of-life-and-property)
+[Arama Kurtarma ve Tıbbi Tahliye = Safety of Life and Property](https://en.sg.gov.tr/safety-of-life-and-property)
 
 [Kıyı Emniyeti Genel Müdürlüğü (KEGM) = Directorate General of Coastal Safety (DGCS)](https://kiyiemniyeti.gov.tr/?lang=1)
 
