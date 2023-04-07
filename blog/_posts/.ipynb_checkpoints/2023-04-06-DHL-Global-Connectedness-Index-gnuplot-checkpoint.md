@@ -31,6 +31,8 @@ title: DHL Global Connectedness Index (GCI) with Gnuplot
   </table>
 </div>
 
+# Gnuplot
+
 ```
 head -n 5 DHL_GCI.csv
 ```
@@ -42,8 +44,6 @@ year,overall,trade,people,capital,information
 2003,101.8877,101.8284,101.5175,99.617,107.6942
 2004,107.3731,105.9474,102.9709,106.1532,117.948
 ```
-
-# Gnuplot
 
 [Time/Date data \| Gnuplot](http://gnuplot.info/docs_5.5/loc4651.html)
 
