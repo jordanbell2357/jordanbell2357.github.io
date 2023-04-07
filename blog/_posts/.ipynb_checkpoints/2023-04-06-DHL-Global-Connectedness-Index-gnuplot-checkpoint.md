@@ -45,7 +45,7 @@ year,overall,trade,people,capital,information
 
 # Gnuplot
 
-[Gnuplot](http://www.gnuplot.info/docs_4.2/node122.html)
+[Time/Date data \| Gnuplot](http://gnuplot.info/docs_5.5/loc4651.html)
 
 `DHL_GCI.gp`
 
