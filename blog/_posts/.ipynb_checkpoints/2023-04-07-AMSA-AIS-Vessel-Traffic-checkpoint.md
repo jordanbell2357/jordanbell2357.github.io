@@ -161,3 +161,6 @@ cut -d ',' -f 14 *.csv > timestamps.csv
 21/01/2023 5:06:00 AM
 ```
 
+<https://www.gnu.org/software/gawk/manual/html_node/Time-Functions.html>
+
+<https://awk.js.org/>
