@@ -1,7 +1,9 @@
 ---
 layout: post
-title: DHL Global Connectedness Index with Gnuplot
+title: DHL Global Connectedness Index (GCI) with Gnuplot
 ---
+
+# DHL Global Connectedness Index (GCI)
 
 [DHL Global Connectedness Index (GCI)](https://www.dhl.com/global-en/delivered/globalization/global-connectedness-index.html)
 
@@ -29,23 +31,37 @@ title: DHL Global Connectedness Index with Gnuplot
   </table>
 </div>
 
-[^1]
+```
+head -n 5 DHL_GCI.csv
+```
 
-[^1]: <https://www.convertcsv.com/transpose-csv.htm>
+```
+year,overall,trade,people,capital,information
+2001,100,100,100,100,100
+2002,97.9827,100.3042,100.9841,92.2775,102.8764
+2003,101.8877,101.8284,101.5175,99.617,107.6942
+2004,107.3731,105.9474,102.9709,106.1532,117.948
+```
 
-```bash
-cut -d ',' -f 1,2 DHL_GCI.csv > overall.csv
+# Gnuplot
+
+[Gnuplot](http://www.gnuplot.info/docs_4.2/node122.html)
+
+`DHL_GCI.gp`
+
+```
+set datafile separator ','
+set timefmt '%Y'
+set format x '%Y'
+set xdata time
+set title 'DHL Global Connectedness Index (GCI)'
+set xlabel 'Year'
+set ylabel 'Index'
+plot for [col=2:5] 'DHL_GCI.csv' using 1:col with linespoints title columnheader
 ```
 
 ```bash
-cut -d ',' -f 1,3 DHL_GCI.csv > trade.csv
+gnuplot -p DHL_GCI.gp
 ```
 
-```bash
-cut -d ',' -f 1,4 DHL_GCI.csv > people.csv
-```
-
-```bash
-cut -d ',' -f 1,5 DHL_GCI.csv > capital.csv
-```
-
+![DHL Global Connectedness Index (GCI) with Gnuplot](/images/DHL/DHL_GCI.png)
