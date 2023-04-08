@@ -5,9 +5,9 @@ title: Akamai Internet Traffic Map using Gnuplot
 
 [Internet Traffic Map](https://www.akamai.com/internet-station/traffic-map)
 
-![DNS trends and traffic](/images/Akamai/DNS_trends_and_traffic.png)
+[![DNS trends and traffic](/images/Akamai/DNS_trends_and_traffic.png)](https://www.akamai.com/internet-station/traffic-map)
 
-<https://www.akamai.com/dv/traffic/dns-trends-traffic/dns_total_traffic_trend.json>
+[dns_total_traffic_trend.json](https://www.akamai.com/dv/traffic/dns-trends-traffic/dns_total_traffic_trend.json)
 
 `dns_total_traffic_trend.json`
 

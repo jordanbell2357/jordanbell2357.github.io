@@ -5,6 +5,8 @@ title: Cisco Annual Internet Report, 2018–2023 using Gnuplot
 
 [Cisco Annual Internet Report](https://www.cisco.com/c/en/us/solutions/executive-perspectives/annual-internet-report/index.html)
 
+> March 9, 2020
+
 > Table 5. Fixed broadband speeds (in Mbps), 2018–2023
 
 ```
