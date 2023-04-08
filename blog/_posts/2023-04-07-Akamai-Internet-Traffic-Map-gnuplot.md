@@ -29,7 +29,7 @@ set xdata time
 set title 'Akamai Internet Traffic Map. ©2023 Akamai Technologies'
 set xlabel 'Date'
 set ylabel 'G'
-plot for [col=2:2] 'dns.csv' using 1:col with linespoints title columnheader
+plot for [col=2:2] 'dns.csv' using 1:col with lines title columnheader
 ```
 
 ![DNS trends and traffic using Gnuplot](/images/Akamai/dns.png)
