@@ -6,6 +6,8 @@ title: Erasmus Econometrics Training Exercise 2.3
 For real finite dimensional vector spaces $$V$$ and $$W$$, let $$\mathscr{L}(V,W)$$
 be the set of linear transformations $$V \to W$$, which is itself a real finite dimensional vector space.
 
+$$\dim \mathscr{L}(V,W) = \dim V \cdot \dim W$$
+
 Let $$V^* = \mathscr{L}(V,\mathbb{R})$$, the dual space of $$V$$.
 
 A column vector of length $$n$$ is an element of $$\mathbb{R}^n$$. A row vector of length $$k$$ is an
