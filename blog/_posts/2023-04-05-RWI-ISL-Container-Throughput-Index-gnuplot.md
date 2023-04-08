@@ -13,12 +13,6 @@ title: RWI/ISL Container Throughput Index using Gnuplot
 
 <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ-4XyMbxMrPuQqNgPdzJXzwT9-FtS3NegSmiXJhA-9T0OdBViOk1bUG1drZaxBTr01pyoyiWKq9q58/pubhtml?widget=true&amp;headers=false" width="100%" height="600"></iframe>
 
-## World Bank Logistics Performance Index (LPI)
-
-[Logistics Performance Index (LPI)](https://databank.worldbank.org/source/logistics-performance-index-(lpi))
-
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6PQXe0vhwIfkVHGUyUqmlN8rHfFXWm54ozum4_UKu-kOuOWQrWlKlvatt6IANGVx7rQ5etwy39csS/pubhtml?widget=true&amp;headers=false" width="100%" height="600"></iframe>
-
 # Gnuplot
 
 [Time/date specifiers \| Gnuplot](http://www.gnuplot.info/docs_4.2/node185.html)
@@ -53,3 +47,9 @@ gnuplot -p ISL.gp
 ```
 
 ![RWI/ISL Container Throughput Index using Gnuplot](/images/ISL/ISL.png)
+
+# World Bank Logistics Performance Index (LPI)
+
+[Logistics Performance Index (LPI)](https://databank.worldbank.org/source/logistics-performance-index-(lpi))
+
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6PQXe0vhwIfkVHGUyUqmlN8rHfFXWm54ozum4_UKu-kOuOWQrWlKlvatt6IANGVx7rQ5etwy39csS/pubhtml?widget=true&amp;headers=false" width="100%" height="600"></iframe>
