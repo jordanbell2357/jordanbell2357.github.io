@@ -51,7 +51,7 @@ set format x '%m/%y'
 set xdata time
 set title 'CAICT China Mobile Phone Market Report'
 set xlabel 'Month'
-set ylabel 'Million/month'
+set ylabel 'Units/Month'
 plot for [col=2:8] 'CAICT.csv' using 1:col with lines title columnheader
 ```
 
