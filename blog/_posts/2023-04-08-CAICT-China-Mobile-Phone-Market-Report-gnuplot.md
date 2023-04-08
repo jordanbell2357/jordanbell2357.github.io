@@ -47,7 +47,7 @@ tail -n 5 CAICT.csv
 ```
 set datafile separator ','
 set timefmt '%Y-%m-%d'
-set format x '%m/%y'
+set format x '%Y'
 set xdata time
 set title 'CAICT China Mobile Phone Market Report'
 set xlabel 'Month'
