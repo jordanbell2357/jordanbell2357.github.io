@@ -18,8 +18,7 @@ An $$n \times k$$ matrix is an element of $$\mathscr{L}(\mathbb{R}^k,\mathbb{R}^
 
 Let $$V^* = \mathscr{L}(V,\mathbb{R})$$, the **dual space** of $$V$$.
 
-A column vector of length $$n$$ is an element of $$\mathbb{R}^n$$. A row vector of length $$k$$ is an
-element of $$(\mathbb{R}^k)^*$$.
+A column vector $$v$$ of length $$n$$ is an element of $$\mathbb{R}^n$$. A row vector $$w^T$$ of length $$k$$ is an element of $$(\mathbb{R}^k)^*$$.
 
 For $$v \in \mathbb{R}^n$$, the transpose $$v^T$$ belongs to $$(\mathbb{R}^n)^*$$, and for
 $$v^T \in (\mathbb{R}^n)^*$$, the transpose $$(v^T)^T = v$$ belongs to $$((\mathbb{R}^n)^*)^*=\mathbb{R}^n$$.
@@ -30,7 +29,7 @@ $$[v^T,w] = v^T w, \qquad v^T \in (\mathbb{R}^n)^*, w \in \mathbb{R}^n.$$
 
 # Ordinary Least Squares (OLS)
 
-Observed data: $$y \in \mathbb{R}^n$$, $$X:\mathbb{R}^k \to \mathbb{R}^n$$
+Observed data: $$y \in \mathbb{R}^n$$, $$X \in \mathscr{L}(\mathbb{R}^k,\mathbb{R}^n)$$
 
 Unobserved data: $$\beta \in \mathbb{R}^k$$, $$\epsilon \in \mathbb{R}^n$$
 
@@ -38,11 +37,13 @@ Model: $$y = X\beta + \epsilon$$
 
 Estimate $$\beta$$ by $$b$$ so that $$Xb$$ is close to $$y$$, i.e. $$y-Xb$$ is close to $$0 \in \mathbb{R}^n$$.
 
-$$e=y-Xb$$
+Define $$e=y-Xb$$
 
-$$y \in \mathbb{R}^n$$, $$X:\mathbb{R}^k \to \mathbb{R}^n$$, $$b \in \mathbb{R}^k$$, $$e \in \mathbb{R}^n$$
+$$y \in \mathbb{R}^n$$, $$X \in \mathscr{L}(\mathbb{R}^k,\mathbb{R}^n)$$, $$b \in \mathbb{R}^k$$, $$e \in \mathbb{R}^n$$
 
-Ordinary Least Squares (OLS): minimize $$S(b) = e^T e = \sum_{i=1}^n e_i^2$$.
+Ordinary Least Squares (OLS): minimize $$S:\mathbb{R}^n \to \mathbb{R}$$ defined by
+
+$$S(b) = e^T e = \sum_{i=1}^n e_i^2.$$
 
 $$
 \begin{align*}
