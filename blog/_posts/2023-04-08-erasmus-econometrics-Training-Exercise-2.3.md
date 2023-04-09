@@ -52,7 +52,18 @@ S(b)&=y^T y - y^T Xb - y^TXb + b^T X^T Xb\\
 \end{align*}
 $$
 
-[Fréchet derivatives and Gâteaux derivatives](https://jordanbell.info/LaTeX/mathematics/frechetderivatives/)
+[Fréchet derivatives and Gâteaux derivatives](https://jordanbell.info/LaTeX/mathematics/frechetderivatives/) [^1]
 
-[Gradients and Hessians in Hilbert spaces](https://jordanbell.info/LaTeX/mathematics/gradienthilbert/)
+[^1]: cf. [Gradients and Hessians in Hilbert spaces](https://jordanbell.info/LaTeX/mathematics/gradienthilbert/)
+
+For $$b_0 \in \mathbb{R}^k$$ and $$b \in \mathbb{R}^k$$,
+
+$$
+\begin{align*}
+S(b)-S(b_0)&=y^T y - 2y^TXb + b^TX^TXb-(y^T y - 2y^TXb_0 + b_0^TX^TXb_0)\\
+&=- 2y^TX(b-b_0) + b^TX^TXb - b_0^TX^TXb_0\\
+&=- 2y^TX(b-b_0) + b^TX^TXb - b_0^TX^TXb + b_0^TX^TXb - b_0^TX^TXb_0\\
+&=
+\end{align*}
+$$
 
