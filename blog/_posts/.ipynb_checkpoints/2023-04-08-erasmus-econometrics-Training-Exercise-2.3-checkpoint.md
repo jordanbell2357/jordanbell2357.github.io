@@ -6,14 +6,18 @@ title: Erasmus Econometrics Training Exercise 2.3
 For real finite dimensional vector spaces $$V$$ and $$W$$, let $$\mathscr{L}(V,W)$$
 be the set of linear transformations $$V \to W$$, which is itself a real finite dimensional vector space.
 
-$$\dim \mathscr{L}(V,W) = \dim V \cdot \dim W$$
+$$\dim \mathscr{L}(V,W) = \dim V \cdot \dim W.$$
+
+In particular,
+
+$$\dim \mathscr{L}(\mathbb{R}^k,\mathbb{R}^n) = \dim \mathbb{R}^k \cdot \dim \mathbb{R}^n = k\cdot n.$$
+
+An $$n \times k$$ matrix is an element of $$\mathscr{L}(\mathbb{R}^k,\mathbb{R}^n)$$.
 
 Let $$V^* = \mathscr{L}(V,\mathbb{R})$$, the dual space of $$V$$.
 
 A column vector of length $$n$$ is an element of $$\mathbb{R}^n$$. A row vector of length $$k$$ is an
 element of $$(\mathbb{R}^k)^*$$.
-
-An $$n \times k$$ matrix is an element of $$\mathscr{L}(\mathbb{R}^k,\mathbb{R}^n)$$.
 
 Observed data: $$y \in \mathbb{R}^n$$, $$X:\mathbb{R}^k \to \mathbb{R}^n$$
 
