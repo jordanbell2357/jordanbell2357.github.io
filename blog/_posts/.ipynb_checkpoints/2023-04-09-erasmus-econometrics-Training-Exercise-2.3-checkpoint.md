@@ -18,14 +18,28 @@ An $$n \times k$$ matrix is an element of $$\mathscr{L}(\mathbb{R}^k,\mathbb{R}^
 
 Let $$V^* = \mathscr{L}(V,\mathbb{R})$$, the **dual space** of $$V$$.
 
-A column vector $$v$$ of length $$n$$ is an element of $$\mathbb{R}^n$$. A row vector $$w^T$$ of length $$k$$ is an element of $$(\mathbb{R}^k)^*$$.
+Define $$[\cdot,\cdot]:V \times V^* \to \mathbb{R}$$ by
 
-For $$v \in \mathbb{R}^n$$, the transpose $$v^T$$ belongs to $$(\mathbb{R}^n)^*$$, and for
-$$v^T \in (\mathbb{R}^n)^*$$, the transpose $$(v^T)^T = v$$ belongs to $$((\mathbb{R}^n)^*)^*=\mathbb{R}^n$$.
+$$[v,\phi] = \phi(v), \qquad v \in V, \phi \in V^*.$$
 
-Let $$[\cdot,\cdot]:(\mathbb{R}^n)^* \times \mathbb{R}^n \to \mathbb{R}$$ be the **dual pairing**:
+# $$V=\mathbb{R}^k$$
 
-$$[v^T,w] = v^T w, \qquad v^T \in (\mathbb{R}^n)^*, w \in \mathbb{R}^n.$$
+Let $$V=\mathbb{R}^k$$. Define $$\langle \cdot,\cdot \rangle : V \times V \to \mathbb{R}$$ by
+
+$$\angle e_i,e_j \rangle = \delta_{i,j}.$$
+
+For $$v \in V$$, define $$v^T \in V^*$$ by
+
+$$v^T(w) = \langle v, w \rangle, \qquad w \in V.$$
+
+In particular,
+
+$$v^T(e_i) = \langle v, e_i \rangle.$$
+
+The map $$v \mapsto v^T$$ is a linear isomorphism $$V \to V^*$$. (In particular, it is onto because $$V$$ is
+finite dimensional.)
+
+$$[w,v^T] = v^T(w) = \langle v, w \rangle, \qquad w \in V, v^T \in V^*.$$ 
 
 # Ordinary Least Squares (OLS)
 
