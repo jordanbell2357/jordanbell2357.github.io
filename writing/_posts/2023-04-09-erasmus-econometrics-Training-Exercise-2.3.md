@@ -22,24 +22,40 @@ Define $$[\cdot,\cdot]:V \times V^* \to \mathbb{R}$$ by
 
 $$[v,\phi] = \phi(v), \qquad v \in V, \phi \in V^*.$$
 
-# $$V=\mathbb{R}^k$$
+# $$\mathbb{R}^d$$
 
-Let $$V=\mathbb{R}^k$$. Define $$\langle \cdot,\cdot \rangle : V \times V \to \mathbb{R}$$ by
+Let $$\mathbb{N}$$ be the nonnegative integers and let $$d$$ be a positive integer.
 
-$$\angle e_i,e_j \rangle = \delta_{i,j}.$$
+Define $$[d]=\{i \in \mathbb{N}: 1 \leq i \leq d\}$$.
 
-For $$v \in V$$, define $$v^T \in V^*$$ by
+Let $$\mathbb{R}^d$$ be the set of functions $$[d] \to \mathbb{R}$$. This is a real vector space.
 
-$$v^T(w) = \langle v, w \rangle, \qquad w \in V.$$
+Define $$e_i \in \mathbb{R}^d$$ by $$e_i(j) = \delta_{i,j}$$. $$\{e_i: 1 \leq i \leq d\}$$
+is a basis for $$\mathbb{R}^d$$.
+
+For $$v, w \in \mathbb{R}^d$$, define
+
+$$\langle v,w \rangle = \sum_{i \in [d]\} v(i)w(i).$$
+
+For $$v \in \mathbb{R}^d$$,
+
+$$
+v = \sum_{i \in [d]} \langle v,e_i \rangle e_i.
+$$
+
+For $$v \in \mathbb{R}^d$$, define $$v^T \in (\mathbb{R}^d)^*$$ by
+
+$$v^T(w) = \langle v, w \rangle =\sum_{i \in [d]\} v(i)w(i), \qquad w \in \mathbb{R}^d.$$
 
 In particular,
 
 $$v^T(e_i) = \langle v, e_i \rangle.$$
 
-The map $$v \mapsto v^T$$ is a linear isomorphism $$V \to V^*$$. (In particular, it is onto because $$V$$ is
-finite dimensional.)
+The map $$v \mapsto v^T$$ is a linear isomorphism $$\mathbb{R}^d \to (\mathbb{R}^d)^*$$. (In particular, it is onto because $$\mathbb{R}^d$$ is finite dimensional.)
 
-$$[w,v^T] = v^T(w) = \langle v, w \rangle, \qquad w \in V, v^T \in V^*.$$ 
+For $$w \in \mathbb{R}^d$$ and $$v^T \in (\mathbb{R}^d)^*$$,
+
+$$[w,v^T] = v^T(w) = \langle v, w \rangle=\sum_{i \in [d]\} v(i)w(i).$$
 
 # Ordinary Least Squares (OLS)
 
@@ -57,34 +73,10 @@ $$y \in \mathbb{R}^n$$, $$X \in \mathscr{L}(\mathbb{R}^k,\mathbb{R}^n)$$, $$b \i
 
 Ordinary Least Squares (OLS): minimize $$S:\mathbb{R}^n \to \mathbb{R}$$ defined by
 
-$$S(b) = e^T e = \sum_{i=1}^n e_i^2.$$
+$$S(b) = [e, e^T] = \sum_{i=1}^n \langle e, e_i \rangle^2$$
 
-$$
-\begin{align*}
-S(b)&=[e^T,e]\\
-&=[(y-Xb)^T,y-Xb]\\
-&=[y^T - (Xb)^T, y- Xb]\\
-&=[y^T,y-Xb] - [(Xb)^T,y-Xb]\\
-&=[y^T,y]-[y^T,Xb] - [(Xb)^T,y] + [(Xb)^T,Xb].
-\end{align*}
-$$
 
-Because $$[v^T,w] = [v,w^T]$$,
-
-$$
-S(b)=[y^T,y] - 2[y^T,Xb]+ [(Xb)^T,Xb]
-$$
 
 [Fréchet derivatives and Gâteaux derivatives](https://jordanbell.info/LaTeX/mathematics/frechetderivatives/) [^1]
 
 [^1]: cf. [Gradients and Hessians in Hilbert spaces](https://jordanbell.info/LaTeX/mathematics/gradienthilbert/)
-
-For $$b_0 \in \mathbb{R}^k$$ and $$b \in \mathbb{R}^k$$,
-
-$$
-\begin{align*}
-S(b)-S(b_0)&=[y^T,y] - 2[y^T,Xb]+ [(Xb)^T,Xb]-([y^T,y] - 2[y^T,Xb_0]+ [(Xb_0)^T,Xb_0])\\
-&=- 2[y^T,Xb]+ [(Xb)^T,Xb]+2[y^T,Xb_0]-[(Xb_0)^T,Xb_0]\\
-&=
-\end{align*}
-$$
