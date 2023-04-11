@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Erasmus Econometrics Training Exercise 2.3
+title: \(\mathbb{R}^n\)
 ---
 
 # Linear algebra
