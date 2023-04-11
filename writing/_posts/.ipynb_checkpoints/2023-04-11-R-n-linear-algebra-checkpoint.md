@@ -1,6 +1,6 @@
 ---
 layout: post
-title: \(\mathbb{R}^n\)
+title: ℝⁿ
 ---
 
 # Linear algebra
