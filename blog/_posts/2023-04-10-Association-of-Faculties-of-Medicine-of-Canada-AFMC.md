@@ -17,7 +17,7 @@ Use [Tabula](https://tabula.technology/)
 
 > Table H-1 MD Degrees Awarded by Canadian Universities by Sex of Graduates 1992 to 2021
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQfV54Wstj3i7CjqxRMBe8REnbBYuWuEkmOYsPncxQO-hCBNn1vC4cNZZJtKmYejg_XrkIAWnsdLKFv/pubhtml?widget=true&amp;headers=false"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQfV54Wstj3i7CjqxRMBe8REnbBYuWuEkmOYsPncxQO-hCBNn1vC4cNZZJtKmYejg_XrkIAWnsdLKFv/pubhtml?widget=true&amp;headers=false" width="100%" height="600"></iframe>
 
 ```
 Year,Male,Female,Total,% Female
