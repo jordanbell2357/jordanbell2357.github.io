@@ -3,28 +3,9 @@ layout: post
 title: ℝⁿ
 ---
 
-# Linear algebra
+# $$\mathbb{R}^n$$
 
-For real finite dimensional vector spaces $$V$$ and $$W$$, let $$\mathscr{L}(V,W)$$
-be the set of linear transformations $$V \to W$$, which is itself a real finite dimensional vector space.
-
-$$\dim \mathscr{L}(V,W) = \dim V \cdot \dim W.$$
-
-In particular,
-
-$$\dim \mathscr{L}(\mathbb{R}^k,\mathbb{R}^n) = \dim \mathbb{R}^k \cdot \dim \mathbb{R}^n = k\cdot n.$$
-
-An $$n \times k$$ matrix is an element of $$\mathscr{L}(\mathbb{R}^k,\mathbb{R}^n)$$.
-
-Let $$V^* = \mathscr{L}(V,\mathbb{R})$$, the **dual space** of $$V$$.
-
-Define $$[\cdot,\cdot]:V \times V^* \to \mathbb{R}$$ by
-
-$$[v,\phi] = \phi(v), \qquad v \in V, \phi \in V^*.$$
-
-# $$\mathbb{R}^d$$
-
-Let $$\mathbb{N}$$ be the nonnegative integers and let $$d$$ be a positive integer.
+Let $$\mathbb{N}$$ be the nonnegative integers and let $$n$$ be a positive integer.
 
 Define $$[d]=\{i \in \mathbb{N}: 1 \leq i \leq d\}$$.
 
@@ -57,26 +38,21 @@ For $$w \in \mathbb{R}^d$$ and $$v^T \in (\mathbb{R}^d)^*$$,
 
 $$[w,v^T] = v^T(w) = \langle v, w \rangle=\sum_{i \in [d]\} v(i)w(i).$$
 
-# Ordinary Least Squares (OLS)
+# Linear algebra
 
-Observed data: $$y \in \mathbb{R}^n$$, $$X \in \mathscr{L}(\mathbb{R}^k,\mathbb{R}^n)$$
+For real finite dimensional vector spaces $$V$$ and $$W$$, let $$\mathscr{L}(V,W)$$
+be the set of linear transformations $$V \to W$$, which is itself a real finite dimensional vector space.
 
-Unobserved data: $$\beta \in \mathbb{R}^k$$, $$\epsilon \in \mathbb{R}^n$$
+$$\dim \mathscr{L}(V,W) = \dim V \cdot \dim W.$$
 
-Model: $$y = X\beta + \epsilon$$
+In particular,
 
-Estimate $$\beta$$ by $$b$$ so that $$Xb$$ is close to $$y$$, i.e. $$y-Xb$$ is close to $$0 \in \mathbb{R}^n$$.
+$$\dim \mathscr{L}(\mathbb{R}^k,\mathbb{R}^n) = \dim \mathbb{R}^k \cdot \dim \mathbb{R}^n = k\cdot n.$$
 
-Define $$e=y-Xb$$
+An $$n \times k$$ matrix is an element of $$\mathscr{L}(\mathbb{R}^k,\mathbb{R}^n)$$.
 
-$$y \in \mathbb{R}^n$$, $$X \in \mathscr{L}(\mathbb{R}^k,\mathbb{R}^n)$$, $$b \in \mathbb{R}^k$$, $$e \in \mathbb{R}^n$$
+Let $$V^* = \mathscr{L}(V,\mathbb{R})$$, the **dual space** of $$V$$.
 
-Ordinary Least Squares (OLS): minimize $$S:\mathbb{R}^n \to \mathbb{R}$$ defined by
+Define $$[\cdot,\cdot]:V \times V^* \to \mathbb{R}$$ by
 
-$$S(b) = [e, e^T] = \sum_{i=1}^n \langle e, e_i \rangle^2$$
-
-
-
-[Fréchet derivatives and Gâteaux derivatives](https://jordanbell.info/LaTeX/mathematics/frechetderivatives/) [^1]
-
-[^1]: cf. [Gradients and Hessians in Hilbert spaces](https://jordanbell.info/LaTeX/mathematics/gradienthilbert/)
+$$[v,\phi] = \phi(v), \qquad v \in V, \phi \in V^*.$$
