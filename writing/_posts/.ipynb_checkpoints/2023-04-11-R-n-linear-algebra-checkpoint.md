@@ -5,54 +5,103 @@ title: ℝⁿ
 
 # $$\mathbb{R}^n$$
 
-Let $$\mathbb{N}$$ be the nonnegative integers and let $$n$$ be a positive integer.
+Let $$\mathbb{N}$$ be the nonnegative integers and let $$n \in \mathbb{N}$$.
 
-Define $$[d]=\{i \in \mathbb{N}: 1 \leq i \leq d\}$$.
+Define $$[n]=\{i \in \mathbb{N}: 1 \leq i \leq n\}$$.
 
-Let $$\mathbb{R}^d$$ be the set of functions $$[d] \to \mathbb{R}$$. This is a real vector space.
+Let $$\mathbb{R}^n=\mathbb{R}^{[n]}$$,
+the set of functions $$[n] \to \mathbb{R}$$.
 
-Define $$e_i \in \mathbb{R}^d$$ by $$e_i(j) = \delta_{i,j}$$. $$\{e_i: 1 \leq i \leq d\}$$
-is a basis for $$\mathbb{R}^d$$.
+## $$n=0$$
 
-For $$v, w \in \mathbb{R}^d$$, define
+$$[0]=\emptyset$$.
 
-$$\langle v,w \rangle = \sum_{i \in [d]\} v(i)w(i).$$
+$$\mathbb{R}^0 = \mathbb{R}^\emptyset = \{\emptyset\}$$. [^1]
 
-For $$v \in \mathbb{R}^d$$,
+[^1]: [empty function in nLab](https://ncatlab.org/nlab/show/empty+function)
+
+$$\mathbb{R}^0$$ is a real vector space, with one element.
+
+## $$n \geq 1$$
+
+For $$n \in \mathbb{N}_{\geq 1}$$, we define vector addition by
+$$(x+y)(i)=x(i)+y(i)$$, $$i \in [n]$$, for $$x,y \in \mathbb{R}^n$$, and scalar multiplication
+by $$(cx)(i)=cx(i)$$, $$i \in [n]$$, for $$x \in \mathbb{R}^n$$.
+Then $$\mathbb{R}^n$$ is a real vector space.
+
+For $$i,j \in \mathbb{N}$$, define
 
 $$
-v = \sum_{i \in [d]} \langle v,e_i \rangle e_i.
+\delta_{i,j} = \begin{cases}1&i = j\\
+0&i \neq j
+\end{cases}
 $$
 
-For $$v \in \mathbb{R}^d$$, define $$v^T \in (\mathbb{R}^d)^*$$ by
+For $$k \in [n]$$ define $$e_k \in \mathbb{R}^n$$ by 
 
-$$v^T(w) = \langle v, w \rangle =\sum_{i \in [d]\} v(i)w(i), \qquad w \in \mathbb{R}^d.$$
+$$e_k(i) = \delta_{i,k}, \qquad i \in [n].$$
 
-In particular,
+$$\{e_k: k \in [n]\}$$ is a basis for $$\mathbb{R}^n$$.
 
-$$v^T(e_i) = \langle v, e_i \rangle.$$
+## Dual space $$(\mathbb{R}^n)^*$$
 
-The map $$v \mapsto v^T$$ is a linear isomorphism $$\mathbb{R}^d \to (\mathbb{R}^d)^*$$. (In particular, it is onto because $$\mathbb{R}^d$$ is finite dimensional.)
+Let $$(\mathbb{R}^n)^*$$ be the set of linear maps $$\mathbb{R}^n \to \mathbb{R}$$, the **dual space**
+of $$\mathbb{R}^n$$.
 
-For $$w \in \mathbb{R}^d$$ and $$v^T \in (\mathbb{R}^d)^*$$,
+For $$x \in \mathbb{R}^n$$, define $$x^T \in (\mathbb{R}^n)^*$$ by
 
-$$[w,v^T] = v^T(w) = \langle v, w \rangle=\sum_{i \in [d]\} v(i)w(i).$$
+$$x^T y = \sum_{i \in [n]} x(i)y(i),\qquad y \in \mathbb{R}^n.$$
+
+We call $$x^T$$ the **transpose** of $$x$$: $$x$$ is a vector/column vector and $$x^T$$ is a covector/row vector.
+
+$$\{e_k^T: k \in [n]\}$$ is a basis for $$(\mathbb{R}^n)^*$$.
+
+The map $$x \mapsto x^T$$ is a linear isomorphism $$\mathbb{R}^n \to (\mathbb{R}^n)^*$$.
+
+## Basis expansion
+
+For $$x \in \mathbb{R}^n$$ and for $$k \in [n]$$, we have
+
+$$x^T e_k = \sum_{i \in [n]} x(i) e_k(i) =
+\sum_{i \in [n]} x(i) \delta_{i,k} = x(k)$$
+
+and
+
+$$e_k^T x = \sum_{i \in [n]} e_k(i) x(i) =
+\sum_{i \in [n]} \delta_{i,k} x(i)= x(k)$$.
+
+Using this, one then works out that
+
+$$
+x = \sum_{k \in [n]} (e_k^T x)e_k.
+$$
 
 # Linear algebra
 
 For real finite dimensional vector spaces $$V$$ and $$W$$, let $$\mathscr{L}(V,W)$$
 be the set of linear transformations $$V \to W$$, which is itself a real finite dimensional vector space.
 
+$$(\mathbb{R}^n)^* = \mathscr{L}(\mathbb{R}^n,\mathbb{R}).$$
+
+An $$m \times n$$ matrix is an element of $$\mathscr{L}(\mathbb{R}^n,\mathbb{R}^m)$$.
+
 $$\dim \mathscr{L}(V,W) = \dim V \cdot \dim W.$$
 
 In particular,
 
-$$\dim \mathscr{L}(\mathbb{R}^k,\mathbb{R}^n) = \dim \mathbb{R}^k \cdot \dim \mathbb{R}^n = k\cdot n.$$
+$$\dim \mathscr{L}(\mathbb{R}^m,\mathbb{R}^n) = \dim \mathbb{R}^m \cdot \dim \mathbb{R}^n = m\cdot n.$$
 
-An $$n \times k$$ matrix is an element of $$\mathscr{L}(\mathbb{R}^k,\mathbb{R}^n)$$.
+# Transposes of linear maps
 
-Let $$V^* = \mathscr{L}(V,\mathbb{R})$$, the **dual space** of $$V$$.
+Let $$A \in \mathscr{L}(\mathbb{R}^n,\mathbb{R}^m)$$.
 
-Define $$[\cdot,\cdot]:V \times V^* \to \mathbb{R}$$ by
+Define $$A^T \in \mathscr{L}((\mathbb{R}^m)^*,(\mathbb{R}^n)^*)$$ by
 
-$$[v,\phi] = \phi(v), \qquad v \in V, \phi \in V^*.$$
+$$A^T f x = f(Ax),\qquad f \in (\mathbb{R}^m)^*, x \in \mathbb{R}^n,$$
+
+called the **transpose** of $$A$$.
+
+We remind ourselves that $$y \mapsto y^T$$ is a linear isomorphism $$\mathbb{R}^m \to (\mathbb{R}^m)^*$$.
+Thus,
+
+$$A^T y^T x = y^T(Ax),\qquad y \in \mathbb{R}^m, x \in \mathbb{R}^n.$$
