@@ -17,11 +17,9 @@ title: CIHI Health Workforce in Canada, 2017 to 2021
 
 `health-workforce-canada-2017-2021-overview-data-tables-en.xlsx`
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQP4zpSgEHPJLs51mnBPggNQv-VVIyB_6iFopJIrWlcD2wouQHHcIKIh0lHfpjwZba6AjxdKuRdI821/pubhtml?widget=true&amp;headers=false" width="100%" height="600"></iframe>
-
 Physician count by province and year (using Tables 1-13):
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRMsJ3DUh84eTOLI3lCY254WriYiFwG6v20N7zdX9YJEmxBnByaLSDbN0yCEukf_WDUcg6R92zuFkzz/pubhtml?widget=true&amp;headers=false" width="100%" height="600"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRMsJ3DUh84eTOLI3lCY254WriYiFwG6v20N7zdX9YJEmxBnByaLSDbN0yCEukf_WDUcg6R92zuFkzz/pubhtml?widget=true&amp;headers=false" width="100%" height="300"></iframe>
 
 `Health_Workforce_in_Canada_2017_to_2021_Physicians.csv`
 
