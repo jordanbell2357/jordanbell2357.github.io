@@ -47,9 +47,3 @@ gnuplot -p ISL.gp
 ```
 
 ![RWI/ISL Container Throughput Index using Gnuplot](/images/ISL/ISL.png)
-
-# World Bank Logistics Performance Index (LPI)
-
-[Logistics Performance Index (LPI)](https://databank.worldbank.org/source/logistics-performance-index-(lpi))
-
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vS6PQXe0vhwIfkVHGUyUqmlN8rHfFXWm54ozum4_UKu-kOuOWQrWlKlvatt6IANGVx7rQ5etwy39csS/pubhtml?widget=true&amp;headers=false" width="100%" height="600"></iframe>
