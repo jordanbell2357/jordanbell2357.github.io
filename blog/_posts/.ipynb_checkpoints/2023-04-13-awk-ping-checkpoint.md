@@ -22,24 +22,21 @@ head -n 5 Google-3600A
 ```
 
 ```bash
-awk '{ gsub(/[|]/,""); split($(NF-1), lt, "="); printf("%s, %.2f\n", $1, lt[2]); } ' Google-3600A > Google_A.dat
+cat Google-3600A | tr -d ['\[','\]'] | tr '=' ' ' | awk -F " " '{ printf("%d, %d, %s, %.2f\n", NR, $8, $1, $12) }' > Google_A.csv
 ```
 
 ```bash
-head -n 5 Google_A.dat
+cat GTT-3600A | tr -d ['\[','\]'] | tr '=' ' ' | awk -F " " '{ printf("%d, %d, %s, %.2f\n", NR, $8, $1, $12) }' > GTT_A.csv
 ```
 
-Unix Timestamp, Ping Time (ms)
-
-```
-[1672984648.605701], 4.36
-[1672984649.607109], 3.78
-[1672984650.608478], 3.38
-[1672984651.611088], 4.49
-[1672984652.611526], 4.21
+```bash
+cat Tata-3600A | tr -d ['\[','\]'] | tr '=' ' ' | awk -F " " '{ printf("%d, %d, %s, %.2f\n", NR, $8, $1, $12) }' > Tata_A.csv
 ```
 
+```bash
+cat Verizon-3600A | tr -d ['\[','\]'] | tr '=' ' ' | awk -F " " '{ printf("%d, %d, %s, %.2f\n", NR, $8, $1, $12) }' > Verizon_A.csv
+```
 
-<https://www.gnu.org/software/gawk/manual/html_node/Time-Functions.html>
+A, B, C for each
 
-<https://awk.js.org/>
+
