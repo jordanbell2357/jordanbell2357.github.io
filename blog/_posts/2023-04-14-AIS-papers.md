@@ -102,3 +102,5 @@ https://doi.org/10.1016/j.martra.2022.100072.
 <https://open-ais.org/>
 
 <https://arundaleais.github.io/docs/ais/nmearouter.html>
+
+<https://towardsdatascience.com/creating-sea-routes-from-the-sea-of-ais-data-30bc68d8530e>
