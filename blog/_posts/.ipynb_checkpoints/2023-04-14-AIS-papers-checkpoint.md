@@ -38,6 +38,16 @@ Volume 40,
 ISSN 2352-3409,
 https://doi.org/10.1016/j.dib.2021.107782.
 
+Marta Mieczyńska, Ireneusz Czarnowski,
+DBSCAN algorithm for AIS data reconstruction,
+Procedia Computer Science,
+Volume 192,
+2021,
+Pages 2512-2521,
+ISSN 1877-0509,
+https://doi.org/10.1016/j.procs.2021.09.020.
+
+
 
 Wang, Z.; Claramunt, C.; Wang, Y. Extracting Global Shipping Networks from Massive Historical Automatic Identification System Sensor Data: A Bottom-Up Approach. *Sensors* **2019**, 19, 3363. <https://doi.org/10.3390/s19153363>
 
@@ -51,3 +61,13 @@ Volume 229,
 106338,
 ISSN 0964-5691,
 https://doi.org/10.1016/j.ocecoaman.2022.106338.
+
+M. Le Tixerant, D. Le Guyader, F. Gourmelon, B. Queffelec,
+How can Automatic Identification System (AIS) data be used for maritime spatial planning?,
+Ocean & Coastal Management,
+Volume 166,
+2018,
+Pages 18-30,
+ISSN 0964-5691,
+https://doi.org/10.1016/j.ocecoaman.2018.05.005.
+

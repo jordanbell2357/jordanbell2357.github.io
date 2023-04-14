@@ -9,4 +9,4 @@ title: Statistical estimators
 
 [Maximum likelihood estimator of variance is biased \| The Book of Statistical Proofs](https://statproofbook.github.io/P/resvar-bias)
 
-
+[Research Module in Econometrics & Statistics](http://www.dliebl.com/RM_ES_Script/estimation-theory.html)
