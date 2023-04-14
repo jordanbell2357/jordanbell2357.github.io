@@ -3,6 +3,8 @@ layout: post
 title: AIS papers
 ---
 
+<https://carto.com/blog/data-warehouses-vs-gpu-analytics>
+
 Filipiak, D., Węcel, K., Stróżyna, M. *et al.* Extracting Maritime Traffic Networks from AIS Data Using Evolutionary Algorithm. *Bus Inf Syst Eng* **62**, 435–450 (2020). <https://doi.org/10.1007/s12599-020-00661-0>
 
 Skauen, A.N. Ship tracking results from state-of-the-art space-based AIS receiver systems for maritime surveillance. *CEAS Space J* **11**, 301–316 (2019). https://doi.org/10.1007/s12567-019-00245-z
@@ -79,3 +81,24 @@ Volume 3,
 100072,
 ISSN 2666-822X,
 https://doi.org/10.1016/j.martra.2022.100072.
+
+
+
+---
+
+<https://shipping.nato.int/nsc/operations/news/2021/ais-automatic-identification-system-overview>
+
+<https://www.navcen.uscg.gov/ais-frequently-asked-questions>
+
+<https://www.elibrary.imf.org/view/journals/001/2019/275/article-A001-en.xml>
+
+<https://deepai.org/publication/challenges-in-vessel-behavior-and-anomaly-detection-from-classical-machine-learning-to-deep-learning>
+
+<https://deepai.org/publication/deep-learning-methods-for-vessel-trajectory-prediction-based-on-recurrent-neural-networks>
+
+<https://deepai.org/publication/fra-lstm-a-vessel-trajectory-prediction-method-based-on-fusion-of-the-forward-and-reverse-sub-network>
+
+
+<https://open-ais.org/>
+
+<https://arundaleais.github.io/docs/ais/nmearouter.html>
