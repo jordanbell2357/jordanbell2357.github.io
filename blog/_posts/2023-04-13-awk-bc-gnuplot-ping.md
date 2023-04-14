@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using awk with ping
+title: Using awk, bc and Gnuplot with ping
 ---
 
 # ping
@@ -131,7 +131,7 @@ awk 'BEGIN{s=0;}{s+=$4;}END{print s/NR;}' Google_A.csv
 ```
 set datafile separator ','
 set title 'google.com ping time for Friday, January 6, 2023 6:57:09.510 AM GMT'
-set xlabel 'icmp_seq'
+set xlabel 'icmp\_seq'
 set ylabel 'Ping time (ms)'
 plot 'Google_A.csv' using 2:4 with lines title 'google.com ping time (ms)'
 ```
