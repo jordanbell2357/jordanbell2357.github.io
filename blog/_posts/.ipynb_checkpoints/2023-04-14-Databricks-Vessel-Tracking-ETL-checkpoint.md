@@ -3,6 +3,8 @@ layout: post
 title: Databricks Vessel Tracking - ETL
 ---
 
+[Leveraging ESG Data to Operationalize Sustainability \| Antoine Amend](https://www.databricks.com/blog/2020/11/11/leveraging-esg-data-to-operationalize-sustainability.html)
+
 <https://www.databricks.com/notebooks/esgops_notebooks/01_vessel_etl.html>
 
 <https://www.databricks.com/notebooks/esgops_notebooks/02_vessel_trips.html>
