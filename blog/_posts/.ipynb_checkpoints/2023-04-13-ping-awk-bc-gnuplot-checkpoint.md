@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using awk, bc and Gnuplot with ping
+title: Transforming and exploration of ping output with awk, bc and Gnuplot
 ---
 
 # ping
