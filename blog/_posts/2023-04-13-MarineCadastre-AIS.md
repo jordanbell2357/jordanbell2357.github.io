@@ -11,3 +11,5 @@ title: MarineCadastre.gov AIS data
 
 [19.11.8. Marine Cadastre AIS \| GeoMesa](https://www.geomesa.org/documentation/2.1.3/user/convert/premade/marinecadastre-ais.html)
 
+<https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2022/>
+
