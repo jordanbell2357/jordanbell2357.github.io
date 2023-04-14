@@ -142,4 +142,4 @@ Antonio,-71.62,-33.59,-118.26,33.73
 
 ![Route distance and CO2 from Marseille to Shanghai](/images/Searoutes/Route-distance-and-CO2-from-Marseille-to-Shanghai-Searoutes.png)
 
-![Route distance and CO2 from Marseille to Port Melbourne](/images/SeaRoute/Route-distance-and-CO2-from-Marseille-to-Port-Melbourne-Searoutes.png)
+![Route distance and CO2 from Marseille to Port Melbourne](/images/Searoutes/Route-distance-and-CO2-from-Marseille-to-Port-Melbourne-Searoutes.png)
