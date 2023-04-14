@@ -71,3 +71,11 @@ Pages 18-30,
 ISSN 0964-5691,
 https://doi.org/10.1016/j.ocecoaman.2018.05.005.
 
+Wells Wang, Junchi Bin, Amirhossein Zaji, Richard Halldearn, Fabien Guillaume, Eric Li, Zheng Liu,
+A multi-task learning-based framework for global maritime trajectory and destination prediction with AIS data,
+Maritime Transport Research,
+Volume 3,
+2022,
+100072,
+ISSN 2666-822X,
+https://doi.org/10.1016/j.martra.2022.100072.
