@@ -138,6 +138,8 @@ plot 'Google_A.csv' using 2:4 with lines title 'google.com ping time (ms)'
 
 ![google.com ping time for Friday, January 6, 2023 6:57:09.510 AM GMT](/images/ping/google_A.png)
 
-Sunday, January 15, 2023 3:50:26.291 AM
+![gtt.net ping time for Sunday, January 15, 2023 3:50:26.291 AM GMT](/images/ping/gtt_A.png)
 
-Saturday, January 7, 2023 3:26:50.810 AM
+![tatacommunications.com ping time for Saturday, January 7, 2023 3:26:50.810 AM GMT](/images/ping/tata_A.png)
+
+![verizon.com ping time for Saturday, January 7, 2023 1:57:39.418 PM GMT](/images/ping/verizon_A.png)
