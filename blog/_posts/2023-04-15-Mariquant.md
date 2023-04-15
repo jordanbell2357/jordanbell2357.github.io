@@ -118,7 +118,7 @@ print(clf.feature_importances_)
 
 ![Lake Ontario](/images/Mariquant/LakeOntario.jpeg)
 
-![Lake Ontario](/images/Mariquant/LakeOntario.jpeg)
+![Lake Ontario](/images/Mariquant/StLawrenceRiver.jpeg)
 
 ```bash
 head -n 5 distances.csv
