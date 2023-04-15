@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IPinfo on Snowflake and using API token with curl
+title: IPinfo using Snowflake and using an API token with curl
 ---
 
 [IPinfo Free IP Geolocation Sample](https://app.snowflake.com/marketplace/listing/GZSTZ3VDMEH/ipinfo-ipinfo-free-ip-geolocation-sample?available=available)
