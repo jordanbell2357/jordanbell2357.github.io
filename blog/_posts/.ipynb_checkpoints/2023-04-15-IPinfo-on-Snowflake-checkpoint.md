@@ -28,7 +28,9 @@ title: IPinfo using Snowflake and using an API token with curl
 > - Nairobi, Nairobi, KE
 > - Shanghai, Shanghai, CN
 
-Shanghai Shipping Exchange <samp>en.sse.net.cn</samp>
+## Shanghai Shipping Exchange
+
+[en.sse.net.cn](https://en.sse.net.cn/)
 
 ```bash
 host en.sse.net.cn
@@ -53,6 +55,8 @@ CITY,COUNTRY,LAT,LNG
 Shanghai,CN,31.22222,121.45806
 ```
 
+## google.com
+
 ```bash
 host google.com
 ```
@@ -73,9 +77,8 @@ WHERE TO_INT('142.251.41.46') BETWEEN start_ip_int AND end_ip_int;
 
 We use an API token for [IPinfo.io](https://ipinfo.io/).
 
-Denoting by `${token}` the value of the variable `token`,
-
 ```bash
+token= #my token
 curl "ipinfo.io/142.251.41.46?token=${token}"
 ```
 
@@ -92,6 +95,10 @@ curl "ipinfo.io/142.251.41.46?token=${token}"
   "timezone": "America/Toronto"
 }
 ```
+
+I did this in Toronto. Speculation: in any major city, `google.com` resolves to an IP address that will geolocate to that city.
+
+## Peking University
 
 ```bash
 host pku.edu.cn
