@@ -7,6 +7,8 @@ title: IPinfo using Snowflake and using an API token with curl
 
 ![IPinfo Free IP Geolocation Sample](/images/IPinfo/IPinfo-IPinfo-Free-IP-Geolocation-Sample.png)
 
+> Speedtest data is used today by commercial fixed and mobile network operators around the world to inform network buildout, improve global Internet quality, and increase Internet accessibility. Government regulators such as the United States Federal Communications Commission and the Malaysian Communications and Multimedia Commission use Speedtest data to hold telecommunications entities accountable and direct funds for rural and urban connectivity development. Ookla licenses data to NGOs and educational institutions to fulfill its mission: to help make the internet better, faster and more accessible for everyone. Ookla hopes to further this mission by distributing the data to make it easier for individuals and organizations to use it for the purposes of bridging the social and economic gaps between those with and without modern Internet access.
+>
 > Our IP geolocation data provides a response that includes every IP’s latitude and longitude coordinates, region, country, postal/ZIP code, and city. Using our IP address geolocation data, customers can resolve their web traffic to meaningful locations as specific as a street address. IPinfo builds and maintains its own proprietary IP geolocation database, which can be used to generate various forms of geographic information for your IP traffic.
 >
 > IPinfo Snowflake Documentation: https://ipinfo.io/developers/integrations#snowflake
@@ -67,7 +69,7 @@ FROM demo.location
 WHERE TO_INT('142.251.41.46') BETWEEN start_ip_int AND end_ip_int;
 ```
 
-<samp>Query produced no results</samp>
+`Query produced no results`
 
 We use an API token for [IPinfo.io](https://ipinfo.io/).
 
