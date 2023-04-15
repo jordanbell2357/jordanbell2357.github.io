@@ -3,14 +3,14 @@ layout: post
 title: Creating sea routes from the sea of AIS data by Mariquant
 ---
 
-Work in progres. When this is ready for any public presentation, I'll have digested all the original material enough to give my explanation. As a gloss, there will still be full paragraph quotes of which I give my explanation, but only what I take to be key passages.
-
-Presently I've copied each paragraph of text of the article with space after for my "gloss", my working through of it, or working out a story of what it means. I do not copy the tables or figures from the article. This
-is a gloss that expands on the original and the only audience for this post are readers of the original work.
-
 Gloss on:
 
 [Creating sea routes from the sea of AIS data. Alexei Novikov. Mariquant. May 15, 2019. Towards Data Science (TDS)](https://towardsdatascience.com/creating-sea-routes-from-the-sea-of-ais-data-30bc68d8530e)
+
+Work in progres. When this is ready for any public presentation, I'll have digested all the original material enough merely to quote a handful of paragraphs and expand on them.
+
+Presently I've copied each paragraph of text of the article with space after for my "gloss", my working through of it, or working out a story of what it means. I do not copy the tables or figures from the article. This
+is a gloss that expands on the original and the only audience for this post are readers of the original work.
 
 > Mariquant has hourly data from one of the AIS data providers for the bulkers and tankers from the beginning of 2016 to the middle of 2018. This data has information from around 19 000 unique ships with records, occupying approximately 100 Gb as uncompressed parquet file.
 
@@ -114,7 +114,11 @@ print(clf.feature_importances_)
 
 `WorldRoutes.html`
 
-![WorldRoutes.html](/images/Mariquant/WorldRoutes.png)
+![WorldRoutes.html](/images/Mariquant/WorldRoutes.jpeg)
+
+![Lake Ontario](/images/Mariquant/LakeOntario.jpeg)
+
+![Lake Ontario](/images/Mariquant/LakeOntario.jpeg)
 
 ```bash
 head -n 5 distances.csv
