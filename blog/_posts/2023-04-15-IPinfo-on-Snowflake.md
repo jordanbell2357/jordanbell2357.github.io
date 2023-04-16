@@ -109,6 +109,7 @@ pku.edu.cn has address 162.105.131.160
 ```
 
 ```bash
+token= #my token
 curl "ipinfo.io/162.105.131.160?token=${token}"
 ```
 
@@ -121,5 +122,28 @@ curl "ipinfo.io/162.105.131.160?token=${token}"
   "loc": "39.9075,116.3972",
   "org": "AS24349 CERNET2 IX at Peking University",
   "timezone": "Asia/Shanghai"
+}
+```
+
+## TANet
+
+```bash
+host noc.tanet.edu.tw
+```
+
+```
+noc.tanet.edu.tw has address 192.83.166.30
+```
+
+```json
+{
+  "ip": "192.83.166.30",
+  "city": "Taipei",
+  "region": "Taiwan",
+  "country": "TW",
+  "loc": "25.0478,121.5319",
+  "org": "AS1659 Taiwan Academic Network (TANet) Information Center",
+  "timezone": "Asia/Taipei",
+  "readme": "https://ipinfo.io/missingauth"
 }
 ```
