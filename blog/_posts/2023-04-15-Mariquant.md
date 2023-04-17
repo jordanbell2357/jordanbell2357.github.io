@@ -3,11 +3,11 @@ layout: post
 title: Creating sea routes from the sea of AIS data by Mariquant
 ---
 
-Gloss on:
+This post is a gloss on:
 
 [Creating sea routes from the sea of AIS data. Alexei Novikov. Mariquant. May 15, 2019. Towards Data Science (TDS)](https://towardsdatascience.com/creating-sea-routes-from-the-sea-of-ais-data-30bc68d8530e)
 
-Work in progres. When this is ready for any public presentation, I'll have digested all the original material enough merely to quote a handful of paragraphs and expand on them.
+Work in progress. When this is ready for any public presentation, I'll have digested all the original material enough merely to quote a handful of paragraphs and expand on them.
 
 Presently I've copied each paragraph of text of the article with space after for my "gloss", my working through of it, or working out a story of what it means. I do not copy the tables or figures from the article. This
 is a gloss that expands on the original and the only audience for this post are readers of the original work.
@@ -155,6 +155,12 @@ head -n 5 routes.csv
 7643,1984063,4410,3658,45.56013333,-87.03423333,1.0
 7644,1984063,4410,3658,45.48103333,-87.01585,1.0
 ```
+
+`routes.csv` using [Ocean Data View (ODV)](https://odv.awi.de/):
+
+![routes.csv using Ocean Data View](/images/Mariquant/Mariquant_ODV_XY.png)
+
+![routes.csv X/Y distribution using Ocean Data View](/images/Mariquant/ODV.png)
 
 [sklearn.ensemble.RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 
