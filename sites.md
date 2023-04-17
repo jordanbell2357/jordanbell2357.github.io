@@ -4,6 +4,8 @@ title: Sites
 permalink: /sites/
 ---
 
+[Google Earth Engine API](https://sites.google.com/view/earth-engine-api/)
+
 Artifacts
 
 - [Gold Relics from Greater China](https://sites.google.com/jordanbell.info/gold-relics-china/home)
