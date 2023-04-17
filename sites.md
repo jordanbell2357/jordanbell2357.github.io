@@ -4,7 +4,11 @@ title: Sites
 permalink: /sites/
 ---
 
+[Learning Journal](https://sites.google.com/view/learning-journal-jordan)
+
+<!--
 [Google Earth Engine API](https://sites.google.com/view/earth-engine-api/)
+-->
 
 Artifacts
 
