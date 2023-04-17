@@ -116,9 +116,21 @@ print(clf.feature_importances_)
 
 ![WorldRoutes.html](/images/Mariquant/WorldRoutes.jpeg)
 
+Lake Ontario:
+
 ![Lake Ontario](/images/Mariquant/LakeOntario.jpeg)
 
+St. Lawrence River:
+
 ![Lake Ontario](/images/Mariquant/StLawrenceRiver.jpeg)
+
+Sea of Marmara:
+
+![Sea of Marmara](/images/Mariquant/Marmara_Sea.jpeg)
+
+Suez Canal, Red Sea, Bab-el-Mandeb, Gulf of Aden, Arabian Sea, Strait of Hormuz, Persian Gulf:
+
+![Suez Canal, Red Sea, Bab-el-Mandeb, Gulf of Aden, Arabian Sea, Strait of Hormuz, Persian Gulf](/images/Mariquant/RedSea.jpeg)
 
 ```bash
 head -n 5 distances.csv
