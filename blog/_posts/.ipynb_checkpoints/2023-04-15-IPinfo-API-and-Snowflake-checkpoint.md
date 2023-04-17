@@ -1,6 +1,6 @@
 ---
 layout: post
-title: IPinfo using API token with curl and Snowflake
+title: IPinfo using API token with curl and using Snowflake
 ---
 
 # API token

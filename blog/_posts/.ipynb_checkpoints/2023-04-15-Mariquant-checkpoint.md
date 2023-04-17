@@ -112,6 +112,10 @@ print(clf.feature_importances_)
 > 4. ECML/PKDD 15: Taxi Trajectory Prediction (I)
 > 5. L. Chen and R. Ng, “On the marriage of lp-norms and edit distance,” Proceedings of the Thirtieth international conference on Very large data bases-Volume 30. VLDB Endowment, 2004, pp. 792–803.
 
+[sklearn.ensemble.RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
+
+[sklearn.cluster.AffinityPropagation](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AffinityPropagation.html)
+
 `WorldRoutes.html`
 
 ![WorldRoutes.html](/images/Mariquant/WorldRoutes.jpeg)
@@ -170,10 +174,6 @@ head -n 5 routes.csv
 
 `routes.csv` using [Ocean Data View (ODV)](https://odv.awi.de/):
 
-![routes.csv using Ocean Data View](/images/Mariquant/Mariquant_ODV_XY.png)
-
 ![routes.csv X/Y distribution using Ocean Data View](/images/Mariquant/ODV.png)
 
-[sklearn.ensemble.RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
-
-[sklearn.cluster.AffinityPropagation](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AffinityPropagation.html)
+![routes.csv using Ocean Data View](/images/Mariquant/Mariquant_ODV_XY.png)
