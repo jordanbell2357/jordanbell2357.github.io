@@ -3,15 +3,11 @@ layout: post
 title: Codecamy Learn Statistics with NumPy Course
 ---
 
-```
-13.89,14.7,13.,11.37,12.1,...,12.93,13.19,11.53,12.78,12.79
-```
-
 ```python3
 import numpy as np
 from matplotlib import pyplot as plt
 
-sunflowers = np.genfromtxt('sunflower_heights.csv', delimiter=',')
+sunflowers = np.genfromtxt('sunflower_heights.csv', delimiter='\n')
 
 # Calculate mean and std of sunflowers here:
 sunflowers_mean = np.mean(sunflowers)
