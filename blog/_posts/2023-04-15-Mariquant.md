@@ -172,6 +172,22 @@ head -n 5 routes.csv
 7644,1984063,4410,3658,45.48103333,-87.01585,1.0
 ```
 
+```bash
+wc -l routes.csv
+```
+
+```
+10882102 routes.csv
+```
+
+```bash
+head -n 1 routes.csv > routes_shuf_100000.csv
+shuf -n 100000 routes.csv >> routes_shuf_100000.csv
+```
+
+
+
+
 `routes.csv` using [Ocean Data View (ODV)](https://odv.awi.de/):
 
 ![routes.csv X/Y distribution using Ocean Data View](/images/Mariquant/ODV.png)
