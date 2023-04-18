@@ -132,9 +132,9 @@ Sea of Marmara:
 
 ![Sea of Marmara](/images/Mariquant/Marmara_Sea.jpeg)
 
-Suez Canal, Red Sea, Bab-el-Mandeb, Gulf of Aden, Arabian Sea, Strait of Hormuz, Persian Gulf:
+Red Sea and Indian Ocean:
 
-![Suez Canal, Red Sea, Bab-el-Mandeb, Gulf of Aden, Arabian Sea, Strait of Hormuz, Persian Gulf](/images/Mariquant/RedSea.jpeg)
+![Red Sea and Indian Ocean:](/images/Mariquant/RedSea.jpeg)
 
 ```bash
 head -n 5 distances.csv
