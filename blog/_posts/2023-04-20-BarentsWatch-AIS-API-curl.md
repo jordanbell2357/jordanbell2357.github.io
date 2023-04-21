@@ -40,7 +40,7 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6IjBCM0I1NEUyRkQ5OUZCQkY5NzVERDMxNDBDREQ4OEI1QzA5RkFD
 
 # curl and jq
 
-## `https://live.ais.barentswatch.no/v1/combined`
+#### `https://live.ais.barentswatch.no/v1/combined`
 
 ```bash
 curl --location --request GET 'https://live.ais.barentswatch.no/v1/combined' --header "Authorization: Bearer $access_token" --max-time 600 > AIS_2023_04_20_lines.json
@@ -71,7 +71,7 @@ jq .[0] AIS_2023_04_20.json
 
 ![Visualizing AIS_2023_04_20.json using kepler.gl](/images/BarentsWatch/keplergl_AIS_2023_04_20.png)
 
-## `https://live.ais.barentswatch.no/v1/latest/combined`
+#### `https://live.ais.barentswatch.no/v1/latest/combined`
 
 ```bash
 curl --location --request GET 'https://live.ais.barentswatch.no/v1/latest/combined' --header "Authorization: Bearer $access_token" > AIS_2023_04_20.json
