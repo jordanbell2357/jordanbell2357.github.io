@@ -1,6 +1,6 @@
 ---
 layout: post
-title: BarentsWatch AIS API and curl
+title: BarentsWatch AIS API using curl and jq
 ---
 
 [Application registration and authentication](https://developer.barentswatch.no/docs/appreg/)
@@ -19,7 +19,7 @@ client_secret= #client_secret
 
 ```bash
 curl -X POST --header "Content-Type: application/x-www-form-urlencoded" \
--d "client_id=$client_id&scope=ais&client_secret=$client_secret&grant_type=client_credentials" \
+--data "client_id=$client_id&scope=ais&client_secret=$client_secret&grant_type=client_credentials" \
 https://id.barentswatch.no/connect/token > token.json
 ```
 
@@ -44,6 +44,8 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6IjBCM0I1NEUyRkQ5OUZCQkY5NzVERDMxNDBDREQ4OEI1QzA5RkFD
 [jq](https://devdocs.io/jq/)
 
 ## live.ais.barentswatch.no/v1/combined
+
+### April 20, 2023
 
 10 minutes (600 seconds):
 
@@ -79,13 +81,45 @@ Visualizing using [kepler.gl](https://kepler.gl/): (colored according to shipTyp
 
 ![Visualizing AIS_2023_04_20.json using kepler.gl](/images/BarentsWatch/keplergl_AIS_2023_04_20.png)
 
+### April 21, 2023
+
+```bash
+curl --location --request GET 'https://live.ais.barentswatch.no/v1/combined' \
+--header "Authorization: Bearer $access_token" --max-time 600 > AIS_2023_04_21_lines.json
+```
+
+```bash
+jq --slurp '.' AIS_2023_04_21_lines.json > AIS_2023_04_21.json
+```
+
+```bash
+jq '.[0]' AIS_2023_04_21.json
+```
+
+```json
+{
+  "courseOverGround": 324,
+  "latitude": 65.140352,
+  "longitude": 7.13467,
+  "name": "STRIL POSEIDON",
+  "rateOfTurn": 0,
+  "shipType": 51,
+  "speedOverGround": 0.3,
+  "trueHeading": 285,
+  "mmsi": 258117000,
+  "msgtime": "2023-04-21T22:29:52.6695296+00:00"
+}
+```
+
 ## live.ais.barentswatch.no/v1/latest/combined
+
+### April 20, 2023
 
 All latest positions:
 
 ```bash
 curl --location --request GET 'https://live.ais.barentswatch.no/v1/latest/combined' \
---header "Authorization: Bearer $access_token" > AIS_2023_04_20.json
+--header "Authorization: Bearer $access_token" > latest_2023-04-20-UTC-01-38.json
 ```
 
 ```bash
@@ -109,8 +143,35 @@ jq '.[0]' latest_2023-04-20-UTC-01-38.json
 
 Visualizing using [kepler.gl](https://kepler.gl/): (colored according to shipType group)
 
-![Visualizing latest_2023-04-20-UTC-01-38.json using kepler.gl](/images/BarentsWatch/keplergl_latest_2023-04-20-UTC-01-38.png)
+![Visualizing latest_2023-04-20-UTC-01-38.json using kepler.gl](/images/BarentsWatch/keplergl_latest_2023-04-20-UTC-01-38.json.png)
 
+### April 21, 2023
+
+All latest positions:
+
+```bash
+curl --location --request GET 'https://live.ais.barentswatch.no/v1/latest/combined' \
+--header "Authorization: Bearer $access_token" > latest_2023-04-21-UTC-11-25.json
+```
+
+```bash
+jq '.[0]' latest_2023-04-21-UTC-11-25.json
+```
+
+```json
+{
+  "courseOverGround": 269.4,
+  "latitude": 63.431932,
+  "longitude": 10.375452,
+  "name": "RESCUE UNE AMUNDSEN",
+  "rateOfTurn": 0,
+  "shipType": 51,
+  "speedOverGround": 0,
+  "trueHeading": 3,
+  "mmsi": 257918900,
+  "msgtime": "2023-04-21T23:26:01+00:00"
+}
+```
 
 # shipType
 
