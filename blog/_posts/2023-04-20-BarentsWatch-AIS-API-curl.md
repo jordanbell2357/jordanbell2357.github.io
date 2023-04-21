@@ -10,8 +10,12 @@ title: BarentsWatch AIS API and curl
 [BarentsWatch AIS Live OpenAPI Documentation](https://live.ais.barentswatch.no/index.html)
 
 
-
 # API token
+
+```bash
+client_id= #client_id
+client_secret= #client_secret
+```
 
 ```bash
 curl -X POST --header "Content-Type: application/x-www-form-urlencoded" \
