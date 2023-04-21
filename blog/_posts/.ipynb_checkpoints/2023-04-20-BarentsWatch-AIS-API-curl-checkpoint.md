@@ -75,6 +75,8 @@ jq '.[0]' AIS_2023_04_20.json
 }
 ```
 
+Visualizing using [kepler.gl](https://kepler.gl/): (colored according to shipType group)
+
 ![Visualizing AIS_2023_04_20.json using kepler.gl](/images/BarentsWatch/keplergl_AIS_2023_04_20.png)
 
 ## live.ais.barentswatch.no/v1/latest/combined
@@ -104,6 +106,8 @@ jq '.[0]' latest_2023-04-20-UTC-01-38.json
   "msgtime": "2023-04-21T01:38:11+00:00"
 }
 ```
+
+Visualizing using [kepler.gl](https://kepler.gl/): (colored according to shipType group)
 
 ![Visualizing latest_2023-04-20-UTC-01-38.json using kepler.gl](/images/BarentsWatch/keplergl_latest_2023-04-20-UTC-01-38.png)
 
