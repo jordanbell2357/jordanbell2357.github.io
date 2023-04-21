@@ -23,6 +23,8 @@ curl -X POST --header "Content-Type: application/x-www-form-urlencoded" \
 https://id.barentswatch.no/connect/token > token.json
 ```
 
+Valid for 3600 seconds (1 hour).
+
 ```bash
 access_token=$(jq -r '.access_token' token.json)
 ```
@@ -85,7 +87,7 @@ curl --location --request GET 'https://live.ais.barentswatch.no/v1/latest/combin
 ```
 
 ```bash
-jq .[0] latest_2023-04-20-UTC-01-38.json
+jq '.[0]' latest_2023-04-20-UTC-01-38.json
 ```
 
 ```json
