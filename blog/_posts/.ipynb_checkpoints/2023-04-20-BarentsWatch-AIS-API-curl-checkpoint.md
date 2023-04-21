@@ -379,7 +379,8 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6IjBCM0I1NEUyRkQ5OUZCQkY5NzVERDMxNDBDREQ4OEI1QzA5RkFD
 ## live.ais.barentswatch.no/v1/combined
 
 ```bash
-curl --location --request GET 'https://live.ais.barentswatch.no/v1/combined' --header "Authorization: Bearer $access_token" --max-time 600 > AIS_2023_04_20_lines.json
+curl --location --request GET 'https://live.ais.barentswatch.no/v1/combined' \
+--header "Authorization: Bearer $access_token" --max-time 600 > AIS_2023_04_20_lines.json
 ```
 
 ```bash
@@ -410,7 +411,8 @@ jq .[0] AIS_2023_04_20.json
 ## live.ais.barentswatch.no/v1/latest/combined
 
 ```bash
-curl --location --request GET 'https://live.ais.barentswatch.no/v1/latest/combined' --header "Authorization: Bearer $access_token" > AIS_2023_04_20.json
+curl --location --request GET 'https://live.ais.barentswatch.no/v1/latest/combined' \
+--header "Authorization: Bearer $access_token" > AIS_2023_04_20.json
 ```
 
 ```bash
