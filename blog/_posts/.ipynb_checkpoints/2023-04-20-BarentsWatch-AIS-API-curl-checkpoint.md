@@ -3,20 +3,352 @@ layout: post
 title: BarentsWatch AIS API and curl
 ---
 
-[curl](https://everything.curl.dev/)
+[Application registration and authentication](https://developer.barentswatch.no/docs/appreg/)
 
-[jq](https://devdocs.io/jq/)
+[My page \| BarentsWatch](https://www.barentswatch.no/minside/)
 
-https://developer.barentswatch.no/docs/AIS/examples
+[BarentsWatch AIS Live OpenAPI Documentation](https://live.ais.barentswatch.no/index.html)
 
-https://developer.barentswatch.no/docs/appreg/
+[Type of ship/cargo \| BarentsWatch Developer](https://developer.barentswatch.no/docs/AIS/aisshiptype)
 
-https://www.barentswatch.no/minside/
-
-https://live.ais.barentswatch.no/index.html
-
-https://gpsd.gitlab.io/gpsd/AIVDM.html#_ais_payload_interpretation
-
+<table>
+<thead>
+  <tr>
+    <th>Type Code</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0</td>
+    <td>Not available (default)</td>
+  </tr>
+  <tr>
+    <td>1-19</td>
+    <td>Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>20</td>
+    <td>Wing in ground (WIG), all ships of this type</td>
+  </tr>
+  <tr>
+    <td>21</td>
+    <td>Wing in ground (WIG), Hazardous category A</td>
+  </tr>
+  <tr>
+    <td>22</td>
+    <td>Wing in ground (WIG), Hazardous category B</td>
+  </tr>
+  <tr>
+    <td>23</td>
+    <td>Wing in ground (WIG), Hazardous category C</td>
+  </tr>
+  <tr>
+    <td>24</td>
+    <td>Wing in ground (WIG), Hazardous category D</td>
+  </tr>
+  <tr>
+    <td>25</td>
+    <td>Wing in ground (WIG), Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>26</td>
+    <td>Wing in ground (WIG), Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>27</td>
+    <td>Wing in ground (WIG), Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>28</td>
+    <td>Wing in ground (WIG), Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>29</td>
+    <td>Wing in ground (WIG), Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>30</td>
+    <td>Fishing</td>
+  </tr>
+  <tr>
+    <td>31</td>
+    <td>Towing</td>
+  </tr>
+  <tr>
+    <td>32</td>
+    <td>Towing: length exceeds 200m or breadth exceeds 25m</td>
+  </tr>
+  <tr>
+    <td>33</td>
+    <td>Dredging or underwater ops</td>
+  </tr>
+  <tr>
+    <td>34</td>
+    <td>Diving ops</td>
+  </tr>
+  <tr>
+    <td>35</td>
+    <td>Military ops</td>
+  </tr>
+  <tr>
+    <td>36</td>
+    <td>Sailing</td>
+  </tr>
+  <tr>
+    <td>37</td>
+    <td>Pleasure Craft</td>
+  </tr>
+  <tr>
+    <td>38</td>
+    <td>Reserved</td>
+  </tr>
+  <tr>
+    <td>39</td>
+    <td>Reserved</td>
+  </tr>
+  <tr>
+    <td>40</td>
+    <td>High speed craft (HSC), all ships of this type</td>
+  </tr>
+  <tr>
+    <td>41</td>
+    <td>High speed craft (HSC), Hazardous category A</td>
+  </tr>
+  <tr>
+    <td>42</td>
+    <td>High speed craft (HSC), Hazardous category B</td>
+  </tr>
+  <tr>
+    <td>43</td>
+    <td>High speed craft (HSC), Hazardous category C</td>
+  </tr>
+  <tr>
+    <td>44</td>
+    <td>High speed craft (HSC), Hazardous category D</td>
+  </tr>
+  <tr>
+    <td>45</td>
+    <td>High speed craft (HSC), Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>46</td>
+    <td>High speed craft (HSC), Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>47</td>
+    <td>High speed craft (HSC), Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>48</td>
+    <td>High speed craft (HSC), Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>49</td>
+    <td>High speed craft (HSC), No additional information</td>
+  </tr>
+  <tr>
+    <td>50</td>
+    <td>Pilot Vessel</td>
+  </tr>
+  <tr>
+    <td>51</td>
+    <td>Search and Rescue vessel</td>
+  </tr>
+  <tr>
+    <td>52</td>
+    <td>Tug</td>
+  </tr>
+  <tr>
+    <td>53</td>
+    <td>Port Tender</td>
+  </tr>
+  <tr>
+    <td>54</td>
+    <td>Anti-pollution equipment</td>
+  </tr>
+  <tr>
+    <td>55</td>
+    <td>Law Enforcement</td>
+  </tr>
+  <tr>
+    <td>56</td>
+    <td>Spare - Local Vessel</td>
+  </tr>
+  <tr>
+    <td>57</td>
+    <td>Spare - Local Vessel</td>
+  </tr>
+  <tr>
+    <td>58</td>
+    <td>Medical Transport</td>
+  </tr>
+  <tr>
+    <td>59</td>
+    <td>Noncombatant ship according to RR Resolution No. 18</td>
+  </tr>
+  <tr>
+    <td>60</td>
+    <td>Passenger, all ships of this type</td>
+  </tr>
+  <tr>
+    <td>61</td>
+    <td>Passenger, Hazardous category A</td>
+  </tr>
+  <tr>
+    <td>62</td>
+    <td>Passenger, Hazardous category B</td>
+  </tr>
+  <tr>
+    <td>63</td>
+    <td>Passenger, Hazardous category C</td>
+  </tr>
+  <tr>
+    <td>64</td>
+    <td>Passenger, Hazardous category D</td>
+  </tr>
+  <tr>
+    <td>65</td>
+    <td>Passenger, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>66</td>
+    <td>Passenger, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>67</td>
+    <td>Passenger, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>68</td>
+    <td>Passenger, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>69</td>
+    <td>Passenger, No additional information</td>
+  </tr>
+  <tr>
+    <td>70</td>
+    <td>Cargo, all ships of this type</td>
+  </tr>
+  <tr>
+    <td>71</td>
+    <td>Cargo, Hazardous category A</td>
+  </tr>
+  <tr>
+    <td>72</td>
+    <td>Cargo, Hazardous category B</td>
+  </tr>
+  <tr>
+    <td>73</td>
+    <td>Cargo, Hazardous category C</td>
+  </tr>
+  <tr>
+    <td>74</td>
+    <td>Cargo, Hazardous category D</td>
+  </tr>
+  <tr>
+    <td>75</td>
+    <td>Cargo, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>76</td>
+    <td>Cargo, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>77</td>
+    <td>Cargo, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>78</td>
+    <td>Cargo, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>79</td>
+    <td>Cargo, No additional information</td>
+  </tr>
+  <tr>
+    <td>80</td>
+    <td>Tanker, all ships of this type</td>
+  </tr>
+  <tr>
+    <td>81</td>
+    <td>Tanker, Hazardous category A</td>
+  </tr>
+  <tr>
+    <td>82</td>
+    <td>Tanker, Hazardous category B</td>
+  </tr>
+  <tr>
+    <td>83</td>
+    <td>Tanker, Hazardous category C</td>
+  </tr>
+  <tr>
+    <td>84</td>
+    <td>Tanker, Hazardous category D</td>
+  </tr>
+  <tr>
+    <td>85</td>
+    <td>Tanker, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>86</td>
+    <td>Tanker, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>87</td>
+    <td>Tanker, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>88</td>
+    <td>Tanker, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>89</td>
+    <td>Tanker, No additional information</td>
+  </tr>
+  <tr>
+    <td>90</td>
+    <td>Other Type, all ships of this type</td>
+  </tr>
+  <tr>
+    <td>91</td>
+    <td>Other Type, Hazardous category A</td>
+  </tr>
+  <tr>
+    <td>92</td>
+    <td>Other Type, Hazardous category B</td>
+  </tr>
+  <tr>
+    <td>93</td>
+    <td>Other Type, Hazardous category C</td>
+  </tr>
+  <tr>
+    <td>94</td>
+    <td>Other Type, Hazardous category D</td>
+  </tr>
+  <tr>
+    <td>95</td>
+    <td>Other Type, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>96</td>
+    <td>Other Type, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>97</td>
+    <td>Other Type, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>98</td>
+    <td>Other Type, Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>99</td>
+    <td>Other Type, no additional information</td>
+  </tr>
+</tbody>
+</table>
 
 # API token
 
@@ -40,7 +372,11 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6IjBCM0I1NEUyRkQ5OUZCQkY5NzVERDMxNDBDREQ4OEI1QzA5RkFD
 
 # curl and jq
 
-#### `https://live.ais.barentswatch.no/v1/combined`
+[curl](https://everything.curl.dev/)
+
+[jq](https://devdocs.io/jq/)
+
+## live.ais.barentswatch.no/v1/combined
 
 ```bash
 curl --location --request GET 'https://live.ais.barentswatch.no/v1/combined' --header "Authorization: Bearer $access_token" --max-time 600 > AIS_2023_04_20_lines.json
@@ -71,7 +407,7 @@ jq .[0] AIS_2023_04_20.json
 
 ![Visualizing AIS_2023_04_20.json using kepler.gl](/images/BarentsWatch/keplergl_AIS_2023_04_20.png)
 
-#### `https://live.ais.barentswatch.no/v1/latest/combined`
+## live.ais.barentswatch.no/v1/latest/combined
 
 ```bash
 curl --location --request GET 'https://live.ais.barentswatch.no/v1/latest/combined' --header "Authorization: Bearer $access_token" > AIS_2023_04_20.json
