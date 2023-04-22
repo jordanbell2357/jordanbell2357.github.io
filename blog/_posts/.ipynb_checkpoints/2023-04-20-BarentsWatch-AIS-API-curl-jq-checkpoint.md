@@ -9,6 +9,9 @@ title: BarentsWatch AIS API using curl and jq
 
 [BarentsWatch AIS Live OpenAPI Documentation](https://live.ais.barentswatch.no/index.html)
 
+# shipType
+
+[Type of ship/cargo \| BarentsWatch Developer](https://developer.barentswatch.no/docs/AIS/aisshiptype)
 
 # API token
 
@@ -221,10 +224,6 @@ jq '.[0]' latest_2023-04-22-UTC-16-33.json
   "msgtime": "2023-04-22T16:33:40+00:00"
 }
 ```
-
-# shipType
-
-[Type of ship/cargo \| BarentsWatch Developer](https://developer.barentswatch.no/docs/AIS/aisshiptype)
 
 # nc
 
