@@ -111,6 +111,25 @@ jq '.[0]' AIS_2023_04_21.json
 }
 ```
 
+### April 22, 2023
+
+```bash
+curl --location --request GET 'https://live.ais.barentswatch.no/v1/combined' \
+--header "Authorization: Bearer $access_token" --max-time 600 > AIS_2023_04_22_lines.json
+```
+
+```bash
+jq --slurp '.' AIS_2023_04_22_lines.json > AIS_2023_04_22.json
+```
+
+```bash
+jq '.[0]' AIS_2023_04_22.json
+```
+
+```json
+
+```
+
 ## live.ais.barentswatch.no/v1/latest/combined
 
 ### April 20, 2023
@@ -173,6 +192,43 @@ jq '.[0]' latest_2023-04-21-UTC-11-25.json
 }
 ```
 
+### April 22, 2023
+
+All latest positions:
+
+```bash
+curl --location --request GET 'https://live.ais.barentswatch.no/v1/latest/combined' --header "Authorization: Bearer $access_token" > latest_2023-04-22-UTC-16-33.json
+```
+
+```bash
+jq '.[0]' latest_2023-04-22-UTC-16-33.json
+```
+
+```json
+{
+  "courseOverGround": 251.9,
+  "latitude": 63.431933,
+  "longitude": 10.375468,
+  "name": "RESCUE UNE AMUNDSEN",
+  "rateOfTurn": 0,
+  "shipType": 51,
+  "speedOverGround": 0,
+  "trueHeading": 7,
+  "mmsi": 257918900,
+  "msgtime": "2023-04-22T16:33:40+00:00"
+}
+```
+
 # shipType
 
 [Type of ship/cargo \| BarentsWatch Developer](https://developer.barentswatch.no/docs/AIS/aisshiptype)
+
+# nc
+
+We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robin Moffatt. June 1, 2021](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
+
+```bash
+nc 153.44.253.27 5631
+```
+
+[gpsd](https://gpsd.gitlab.io/gpsd/AIVDM.html#_ais_payload_interpretation)

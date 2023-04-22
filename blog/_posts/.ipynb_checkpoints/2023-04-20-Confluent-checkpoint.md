@@ -17,3 +17,5 @@ https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location
 https://www.confluent.io/blog/streaming-data-with-confluent-and-ksqldb-for-new-use-cases-with-ais/
 
 https://gpsd.gitlab.io/gpsd/AIVDM.html#_ais_payload_interpretation
+
+https://docs.confluent.io/cloud/current/get-started/index.html#quick-start-for-ccloud
