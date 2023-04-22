@@ -143,7 +143,7 @@ jq '.[0]' latest_2023-04-20-UTC-01-38.json
 
 Visualizing using [kepler.gl](https://kepler.gl/): (colored according to shipType group)
 
-![Visualizing latest_2023-04-20-UTC-01-38.json using kepler.gl](/images/BarentsWatch/keplergl_latest_2023-04-20-UTC-01-38.json.png)
+![Visualizing latest_2023-04-20-UTC-01-38.json using kepler.gl](/images/BarentsWatch/keplergl_latest_2023-04-20-UTC-01-38.png)
 
 ### April 21, 2023
 
