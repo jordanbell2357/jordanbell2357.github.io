@@ -77,10 +77,6 @@ jq '.[0]' AIS_2023_04_20.json
 }
 ```
 
-Visualizing using [kepler.gl](https://kepler.gl/): (colored according to shipType group)
-
-![Visualizing AIS_2023_04_20.json using kepler.gl](/images/BarentsWatch/keplergl_AIS_2023_04_20.png)
-
 ### April 21, 2023
 
 ```bash
@@ -127,7 +123,18 @@ jq '.[0]' AIS_2023_04_22.json
 ```
 
 ```json
-
+{
+  "courseOverGround": 11.4,
+  "latitude": 63.797973,
+  "longitude": 11.167988,
+  "name": "YTTEROEY",
+  "rateOfTurn": 0,
+  "shipType": 90,
+  "speedOverGround": 0,
+  "trueHeading": 201,
+  "mmsi": 258046000,
+  "msgtime": "2023-04-22T16:35:35+00:00"
+}
 ```
 
 ## live.ais.barentswatch.no/v1/latest/combined
@@ -159,10 +166,6 @@ jq '.[0]' latest_2023-04-20-UTC-01-38.json
   "msgtime": "2023-04-21T01:38:11+00:00"
 }
 ```
-
-Visualizing using [kepler.gl](https://kepler.gl/): (colored according to shipType group)
-
-![Visualizing latest_2023-04-20-UTC-01-38.json using kepler.gl](/images/BarentsWatch/keplergl_latest_2023-04-20-UTC-01-38.png)
 
 ### April 21, 2023
 
