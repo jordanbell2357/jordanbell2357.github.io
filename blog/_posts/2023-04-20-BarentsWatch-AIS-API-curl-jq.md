@@ -22,7 +22,20 @@ client_secret= #client_secret
 
 ```bash
 curl -X POST --header "Content-Type: application/x-www-form-urlencoded" \
---data "client_id=$client_id&scope=ais&client_secret=$client_secret&grant_type=client_credentials" \
+-d "client_id=$client_id&scope=ais&client_secret=$client_secret&grant_type=client_credentials" \
+https://id.barentswatch.no/connect/token > token.json
+```
+
+The above command can be equivalently written as: [^1]
+
+[^1]: [Simple POST](https://everything.curl.dev/http/post/simple)
+
+```bash
+curl -X POST --header "Content-Type: application/x-www-form-urlencoded" \
+-d client_id=$client_id \
+-d scope=ais \
+-d client_secret=$client_secret \
+-d grant_type=client_credentials \
 https://id.barentswatch.no/connect/token > token.json
 ```
 
@@ -140,6 +153,36 @@ jq '.[0]' AIS_2023_04_22.json
 }
 ```
 
+### April 23, 2023
+
+```bash
+curl --location --request GET 'https://live.ais.barentswatch.no/v1/combined' \
+--header "Authorization: Bearer $access_token" --max-time 600 > AIS_2023_04_23_lines.json
+```
+
+```bash
+jq --slurp '.' AIS_2023_04_23_lines.json > AIS_2023_04_23.json
+```
+
+```bash
+jq '.[0]' AIS_2023_04_22.json
+```
+
+```json
+{
+  "courseOverGround": 11.4,
+  "latitude": 63.797973,
+  "longitude": 11.167988,
+  "name": "YTTEROEY",
+  "rateOfTurn": 0,
+  "shipType": 90,
+  "speedOverGround": 0,
+  "trueHeading": 201,
+  "mmsi": 258046000,
+  "msgtime": "2023-04-22T16:35:35+00:00"
+}
+```
+
 ## live.ais.barentswatch.no/v1/latest/combined
 
 ### April 20, 2023
@@ -222,6 +265,33 @@ jq '.[0]' latest_2023-04-22-UTC-16-33.json
   "trueHeading": 7,
   "mmsi": 257918900,
   "msgtime": "2023-04-22T16:33:40+00:00"
+}
+```
+
+### April 23, 2023
+
+All latest positions:
+
+```bash
+curl --location --request GET 'https://live.ais.barentswatch.no/v1/latest/combined' --header "Authorization: Bearer $access_token" > latest_2023-04-23-UTC-02-12.json
+```
+
+```bash
+jq '.[0]' latest_2023-04-23-UTC-02-12.json
+```
+
+```json
+{
+  "courseOverGround": 254.6,
+  "latitude": 63.431928,
+  "longitude": 10.375413,
+  "name": "RESCUE UNE AMUNDSEN",
+  "rateOfTurn": 0,
+  "shipType": 51,
+  "speedOverGround": 0.1,
+  "trueHeading": 6,
+  "mmsi": 257918900,
+  "msgtime": "2023-04-23T02:15:11+00:00"
 }
 ```
 
