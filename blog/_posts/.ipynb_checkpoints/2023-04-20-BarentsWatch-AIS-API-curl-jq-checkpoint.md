@@ -26,12 +26,29 @@ curl -X POST --header "Content-Type: application/x-www-form-urlencoded" \
 https://id.barentswatch.no/connect/token > token.json
 ```
 
-The above command can be equivalently written as: [^1]
+The above command can be equivalently written as: [^1] 
 
 [^1]: [Simple POST](https://everything.curl.dev/http/post/simple)
 
 ```bash
-curl -X POST --header "Content-Type: application/x-www-form-urlencoded" \
+curl -X POST -H "Content-Type: application/x-www-form-urlencoded" \
+-d client_id=$client_id \
+-d scope=ais \
+-d client_secret=$client_secret \
+-d grant_type=client_credentials \
+https://id.barentswatch.no/connect/token > token.json
+```
+
+and because [^2]
+
+[^2]: [Content-Type](https://everything.curl.dev/http/post/content-type)
+
+> POSTing with curl's `-d` option will make it include a default header that looks like `Content-Type: application/x-www-form-urlencoded`. That is what your typical browser will use for a plain POST.
+
+the command can be equivalently written as:
+
+```bash
+curl -X POST \
 -d client_id=$client_id \
 -d scope=ais \
 -d client_secret=$client_secret \
@@ -165,21 +182,21 @@ jq --slurp '.' AIS_2023_04_23_lines.json > AIS_2023_04_23.json
 ```
 
 ```bash
-jq '.[0]' AIS_2023_04_22.json
+jq '.[0]' AIS_2023_04_23.json
 ```
 
 ```json
 {
-  "courseOverGround": 11.4,
-  "latitude": 63.797973,
-  "longitude": 11.167988,
-  "name": "YTTEROEY",
+  "courseOverGround": 250.6,
+  "latitude": 66.021372,
+  "longitude": 12.624775,
+  "name": "LOVUND EXPRESS",
   "rateOfTurn": 0,
-  "shipType": 90,
+  "shipType": 40,
   "speedOverGround": 0,
-  "trueHeading": 201,
-  "mmsi": 258046000,
-  "msgtime": "2023-04-22T16:35:35+00:00"
+  "trueHeading": 244,
+  "mmsi": 259664000,
+  "msgtime": "2023-04-23T02:16:45+00:00"
 }
 ```
 
