@@ -70,6 +70,8 @@ echo $access_token
 eyJhbGciOiJSUzI1NiIsImtpZCI6IjBCM0I1NEUyRkQ5OUZCQkY5NzVERDMxNDBDREQ4OEI1QzA5RkFDRjNSUzI1NiIsIng1dCI6IkN6dFU0djJaLTctWFhkTVVETjJJdGNDZnJQTSIsInR5cCI6ImF0K2p3dCJ9.eyJpc3MiOiJodHRwczovL2lkLmJhcmVudHN3YXRjaC5ubyIsIm5iZiI6MTY4MjAzNTU2OCwiaWF0IjoxNjgyMDM1NTY4LCJleHAiOjE2ODIwMzkxNjgsImF1ZCI6ImFpcyIsInNjb3BlIjpbImFpcyJdLCJjbGllbnRfaWQiOiJqb3JkYW4uYmVsbEBnbWFpbC5jb206am9yZGFuYmVsbDIzNTcifQ.hLX6xs3-r0b5dK0Lkxtg8wK4_UfOI5JUsukH6mnWx7EetecniYAEbQr5q2eLJtbCKqPF7Az7M-Y0MAh9Bwv0XB6KbA66sPyFTnniGj_uRLOoMoTWUZVsDIC1iuF0HFGTLptU9N7mJU_0bcLlsDA1soDSnjrMD-Gq9UetDkTQ2yFhnOtv5VbTWQcaimelglIJS5CPhQVcfQS6BS0vlCrsgyKDm1ook7-FpCbAQlmT9UiG0HLGBUYPOfxYWktFfpBzoIPc2vkrR-UdVSE6Xac_tV-ortxedTf4lp3cOIB_ikZ9mdbH_EzPZcxGcsbLQatfllc96GUXkITJyHh7dRmwrc6cFhMasmxPb0Rn7kkzf1S2Y8sjKO092SOUYSgjCBpUQIUg0n1UyngyZBiTEnKFPkMGr2UWmKOeFqMZpyeCCO1Q9hoZODKTt0UoXhdZUYbB5wMfilyGBvGEnYiqTcTfsiq66HpG33dfVfZI-8TilVwd3wXvLQvaakFhrDuQk4nCBtUsZW-5oPW5O9iScXbduL9GZIt2Zts8FQSX05is73bBjfy37Gz-8U2MmhJFJiEL5azf-aMf92ql54o3h2ZoF6GMXZOsIAB2WvE6cWaFG9flCw2Dz_SwuT3NXolIPH0NKOqsZ_Hv0YkZUKfMcrvevvttUDQW2vWYr0M-AeKfPzI
 ```
 
+---
+
 # curl and jq
 
 [curl](https://everything.curl.dev/)
@@ -200,6 +202,8 @@ jq '.[0]' AIS_2023_04_23.json
 }
 ```
 
+---
+
 ## live.ais.barentswatch.no/v1/latest/combined
 
 ### April 20, 2023
@@ -311,13 +315,3 @@ jq '.[0]' latest_2023-04-23-UTC-02-12.json
   "msgtime": "2023-04-23T02:15:11+00:00"
 }
 ```
-
-# nc
-
-We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robin Moffatt. June 1, 2021](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
-
-```bash
-nc 153.44.253.27 5631
-```
-
-[gpsd](https://gpsd.gitlab.io/gpsd/AIVDM.html#_ais_payload_interpretation)
