@@ -74,7 +74,11 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6IjBCM0I1NEUyRkQ5OUZCQkY5NzVERDMxNDBDREQ4OEI1QzA5RkFD
 
 # curl and jq
 
-[curl](https://everything.curl.dev/)
+[curl](https://everything.curl.dev/) [^3]
+
+[^3]: [Tell curl to follow redirects](https://everything.curl.dev/http/redirects#tell-curl-to-follow-redirects)
+
+> In curl's tradition of only doing the basics unless you tell it differently, it does not follow HTTP redirects by default. Use the `-L`, `--location` option to tell it to do that.
 
 [jq](https://devdocs.io/jq/)
 
@@ -88,6 +92,15 @@ eyJhbGciOiJSUzI1NiIsImtpZCI6IjBCM0I1NEUyRkQ5OUZCQkY5NzVERDMxNDBDREQ4OEI1QzA5RkFD
 curl --location --request GET 'https://live.ais.barentswatch.no/v1/combined' \
 --header "Authorization: Bearer $access_token" --max-time 600 > AIS_2023_04_20_lines.json
 ```
+
+which can be equivalently written as
+
+```bash
+curl -L -X GET 'https://live.ais.barentswatch.no/v1/combined' \
+-H "Authorization: Bearer $access_token" --max-time 600 > AIS_2023_04_20_lines.json
+```
+
+Then
 
 ```bash
 jq --slurp '.' AIS_2023_04_20_lines.json > AIS_2023_04_20.json
