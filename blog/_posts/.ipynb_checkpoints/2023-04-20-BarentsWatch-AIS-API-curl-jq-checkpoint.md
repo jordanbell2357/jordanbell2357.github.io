@@ -3,15 +3,17 @@ layout: post
 title: BarentsWatch AIS API using curl and jq
 ---
 
+# API registration and documentation
+
 [Application registration and authentication](https://developer.barentswatch.no/docs/appreg/)
 
 [My page \| BarentsWatch](https://www.barentswatch.no/minside/)
 
 [BarentsWatch AIS Live OpenAPI Documentation](https://live.ais.barentswatch.no/index.html)
 
-# shipType
-
 [Type of ship/cargo \| BarentsWatch Developer](https://developer.barentswatch.no/docs/AIS/aisshiptype)
+
+---
 
 # API token
 
