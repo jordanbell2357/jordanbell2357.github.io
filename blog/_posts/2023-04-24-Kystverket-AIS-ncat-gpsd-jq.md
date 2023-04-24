@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kystverket AIS data using ncat, gpsd, and jq
+title: Kystverket AIS data using OpenCPN, ncat, gpsd, and jq
 ---
 
 We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robin Moffatt. June 1, 2021](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
@@ -16,6 +16,12 @@ We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robi
 [jq](https://devdocs.io/jq/)
 
 [5.5. Selecting Values \| Guide to Linux jq Command for JSON Processing. Last updated: April 22, 2023. Written by: Jonathan Cook \| Baeldung](https://www.baeldung.com/linux/jq-command-json#5-selecting-values)
+
+First, we show AIS data using [OpenCPN](https://opencpn.org/).
+
+# OpenCPN
+
+![OpenCPN connection to 153.44.253.27 5631](/images/OpenCPN/Kystverket_OpenCPN_April_24_2023.png)
 
 # nc
 
