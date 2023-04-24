@@ -15,6 +15,8 @@ We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robi
 
 [jq](https://devdocs.io/jq/)
 
+[5.5. Selecting Values \| Guide to Linux jq Command for JSON Processing. Last updated: April 22, 2023. Written by: Jonathan Cook \| Baeldung](https://www.baeldung.com/linux/jq-command-json#5-selecting-values)
+
 # nc
 
 ```bash
