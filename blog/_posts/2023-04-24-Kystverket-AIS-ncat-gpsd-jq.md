@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Kystverket AIS data using nc (or ncat), gpsd, and jq
+title: Kystverket AIS data using ncat, gpsd, and jq
 ---
 
 We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robin Moffatt. June 1, 2021](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
