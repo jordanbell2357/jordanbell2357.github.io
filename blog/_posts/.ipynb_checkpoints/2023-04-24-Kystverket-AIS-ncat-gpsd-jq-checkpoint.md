@@ -303,7 +303,45 @@ jq '.[0]' ncat_gpsd_jq_3600s.json
 timeout 3600s ncat 153.44.253.27 5631 > ncat_3600s_UTC_2023_04_24_20_25
 ```
 
+```bash
+cat ncat_3600s_UTC_2023_04_24_20_25 | gpsdecode | jq --slurp '.' > ncat_3600s_UTC_2023_04_24_20_25.json
+```
 
+```bash
+jq '.[0]' ncat_3600s_UTC_2023_04_24_20_25.json
+```
+
+```json
+{
+  "class": "AIS",
+  "device": "stdin",
+  "type": 21,
+  "repeat": 0,
+  "mmsi": 992581021,
+  "scaled": true,
+  "aid_type": 3,
+  "aid_type_text": "Fixed offshore structure",
+  "name": "HYWIND TAMPEN HY04",
+  "lon": 5.067205,
+  "lat": 60.829205,
+  "accuracy": false,
+  "to_bow": 0,
+  "to_stern": 0,
+  "to_port": 0,
+  "to_starboard": 0,
+  "epfd": 1,
+  "epfd_text": "GPS",
+  "second": 53,
+  "regional": 0,
+  "off_position": false,
+  "raim": false,
+  "virtual_aid": true
+}
+```
+
+```
+4.5M    ncat_3600s_UTC_2023_04_24_20_25.json
+```
 
 ---
 
