@@ -243,6 +243,8 @@ timeout 1s ncat 153.44.253.27 5631 > ncat_1s
 \s:2573584,c:1682303751*08\!BSVDM,1,1,,A,13mQ<R7001QeIg```AU0I8eD04B<,0*1D
 ```
 
+---
+
 ```bash
 timeout 3600s ncat 153.44.253.27 5631 > ncat_3600s
 ```
@@ -297,6 +299,14 @@ jq '.[0]' ncat_gpsd_jq_3600s.json
 ```
 47M     ncat_gpsd_jq_3600s.json
 ```
+
+---
+
+```bash
+timeout 3600s ncat 153.44.253.27 5631 > ncat_3600s_UTC_2023_04_24_20_25
+```
+
+
 
 ---
 
