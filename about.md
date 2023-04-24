@@ -83,6 +83,8 @@ University Medal in Mathematics
 
 - [Coursera](https://www.coursera.org/user/a7586c089cd57b49ac8851febd502156)
 
+- [Credly](https://www.credly.com/users/jordan-bell.919854df)
+
 - [Datacamp](https://app.datacamp.com/profile/jordanbell2357)
 
 - [openSAP](https://open.sap.com/verify/xenak-hesyv-katal-nebok-hityg)
