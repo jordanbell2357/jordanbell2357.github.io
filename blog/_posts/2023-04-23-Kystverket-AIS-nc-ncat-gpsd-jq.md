@@ -1,9 +1,11 @@
 ---
 layout: post
-title: BarentsWatch AIS API using nc (or ncat), gpsd, and jq
+title: Kystverket AIS data using nc (or ncat), gpsd, and jq
 ---
 
 We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robin Moffatt. June 1, 2021](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
+
+[Access to AIS data \| Kystverket](https://www.kystverket.no/en/navigation-and-monitoring/ais/access-to-ais-data/)
 
 [nc(1) - OpenBSD manual pages](https://man.openbsd.org/nc.1)
 
@@ -85,6 +87,10 @@ jq '.[0]' nc_gpsd_jq_1s.json
   "raim": true,
   "radio": 65672
 }
+```
+
+```
+47M     nc_gpsd_jq_3600s.json
 ```
 
 ---
@@ -276,4 +282,8 @@ jq '.[0]' ncat_gpsd_jq_3600s.json
   "raim": true,
   "radio": 917510
 }
+```
+
+```
+47M     ncat_gpsd_jq_3600s.json
 ```
