@@ -1,23 +1,19 @@
 ---
 layout: post
-title: BarentsWatch AIS API using nc, gpsd and jq
+title: BarentsWatch AIS API using nc (or ncat), gpsd, and jq
 ---
 
 We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robin Moffatt. June 1, 2021](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
 
-# gpsd
+[nc(1) - OpenBSD manual pages](https://man.openbsd.org/nc.1)
 
-[gpsd](https://gpsd.gitlab.io/gpsd/AIVDM.html#_ais_payload_interpretation)
+[Ncat Users' Guide \| Nmap](https://nmap.org/ncat/guide/index.html)
 
-# jq
+[gpsdecode(1) \| gpsd](https://gpsd.gitlab.io/gpsd/gpsdecode.html)
 
 [jq](https://devdocs.io/jq/)
 
 # nc
-
-[nc(1) - OpenBSD manual pages](https://man.openbsd.org/nc.1)
-
-[Ncat Users' Guide \| Nmap](https://nmap.org/ncat/guide/index.html)
 
 ```bash
 timeout 1s nc 153.44.253.27 5631 > nc_1s
@@ -45,36 +41,6 @@ timeout 1s nc 153.44.253.27 5631 > nc_1s
 !BSVDM,1,1,,B,13o4Wl00000J:blQi8IsgWJP0@9P,0*19
 \s:2573315,c:1682294944*03\!BSVDM,1,1,,A,H3n21e04pMHTd00000000000000,2*0F
 \s:2573593,c:1682294944*0B\!BSVDM,1,1,,A,B>1VPd@04pSm8E:4Mcu8Cwv0RJGT,0*73
-```
-
-```bash
-timeout 1s ncat 153.44.253.27 5631 > ncat_1s
-```
-
-```
-\s:2573243,c:1682303750*05\!BSVDM,1,1,,B,B3m9g5P0005avA`dR3kQ3wq1jD2J,0*45
-\s:2573235,c:1682303750*04\!BSVDM,1,1,,A,13nEo`70000Gp7HRHTT8HJWT0HMg,0*17
-\s:2573243,c:1682303750*05\!BSVDM,1,1,,B,33LG5b5000PG2q8RlawrL4oV0Der,0*71
-\s:2573577,c:1682303750*05\!BSVDM,1,1,,A,13m:KdPvP1Qt`f@`TGA:EUQR28Mi,0*54
-\s:2573405,c:1682303750*01\!BSVDM,1,1,,A,B=4UfNh000=ilw9E4`bu;wq43P06,0*4D
-\s:2573415,c:1682303750*00\!BSVDM,1,1,,A,H3n?jf0pu8@iU<0000000000000,2*66
-\s:2573405,c:1682303750*01\!BSVDM,1,1,,A,13mBPd00000pqnTUbMjshD5R00Sf,0*30
-\s:2573135,c:1682303750*07\!BSVDM,1,1,,B,13`eGl@02:PVMIHQ?lPQwAaP8D0A,0*2B
-\s:2573455,c:1682303750*04\!BSVDM,1,1,,A,13n3U5?w@0Q;aBBW?J61vlKT00SS,0*13
-\s:2573235,c:1682303750*04\!BSVDM,2,1,4,A,53nVqN42E@bhhAHR220huH59B1HTdTpN2222221618C654rdR01RDj1PDSDs,0*39
-\s:2573235,c:1682303750*04\!BSVDM,2,2,4,A,vLNL=e=Mp80,2*61
-!BSVDM,1,1,3,A,13n?OWgP00Q7NWtdhj6q;?wT2@Mp,0*32
-\s:2573235,c:1682303751*05\!BSVDM,1,1,,A,13o0`A00?wPH1abRTEbf46CV04B<,0*0B
-\s:2573450,c:1682303750*01\!BSVDM,1,1,,A,13m8oiW000PtQGPVuOd<nWmT0L0U,0*46
-\s:2573535,c:1682303751*02\!BSVDM,1,1,,A,13M4c`001`1FS7NWmEL8:FKT08Mr,0*14
-\s:2573515,c:1682303751*00\!BSVDM,1,1,,B,33m7ve51P01;gTDWG`71CwwR0E;:,0*7F
-\s:2573305,c:1682303751*07\!BSVDM,1,1,,A,13oGr<0P000GQl@SMM=N4?wT0@Mu,0*71
-\s:2573315,c:1682303751*06\!BSVDM,1,1,,B,13m8WGP000PU6CVT>I8@iVeR04B<,0*14
-\s:2573105,c:1682303751*05\!B2VDM,1,1,0,A,13n3=LP000Pj8S@Qp<?WnQKN04B<,0*04
-\s:2573315,c:1682303751*06\!BSVDM,2,1,3,A,53mdKB42<it0h@8:2208Tu=@5:222222222222167H73;4rdR08888888888,0*68
-\s:2573315,c:1682303751*06\!BSVDM,2,2,3,A,88888888880,2*3E
-\s:2573445,c:1682303751*04\!BSVDM,1,1,,B,13m=Q:2P00Q2entW2rfBiwwT28N0,0*01
-\s:2573584,c:1682303751*08\!BSVDM,1,1,,A,13mQ<R7001QeIg```AU0I8eD04B<,0*1D
 ```
 
 ```bash
@@ -226,5 +192,88 @@ jq '.[0]' nc_gpsd_jq_3600s.json
   "maneuver": 0,
   "raim": false,
   "radio": 49214
+}
+```
+
+# ncat
+
+```bash
+timeout 1s ncat 153.44.253.27 5631 > ncat_1s
+```
+
+```
+\s:2573243,c:1682303750*05\!BSVDM,1,1,,B,B3m9g5P0005avA`dR3kQ3wq1jD2J,0*45
+\s:2573235,c:1682303750*04\!BSVDM,1,1,,A,13nEo`70000Gp7HRHTT8HJWT0HMg,0*17
+\s:2573243,c:1682303750*05\!BSVDM,1,1,,B,33LG5b5000PG2q8RlawrL4oV0Der,0*71
+\s:2573577,c:1682303750*05\!BSVDM,1,1,,A,13m:KdPvP1Qt`f@`TGA:EUQR28Mi,0*54
+\s:2573405,c:1682303750*01\!BSVDM,1,1,,A,B=4UfNh000=ilw9E4`bu;wq43P06,0*4D
+\s:2573415,c:1682303750*00\!BSVDM,1,1,,A,H3n?jf0pu8@iU<0000000000000,2*66
+\s:2573405,c:1682303750*01\!BSVDM,1,1,,A,13mBPd00000pqnTUbMjshD5R00Sf,0*30
+\s:2573135,c:1682303750*07\!BSVDM,1,1,,B,13`eGl@02:PVMIHQ?lPQwAaP8D0A,0*2B
+\s:2573455,c:1682303750*04\!BSVDM,1,1,,A,13n3U5?w@0Q;aBBW?J61vlKT00SS,0*13
+\s:2573235,c:1682303750*04\!BSVDM,2,1,4,A,53nVqN42E@bhhAHR220huH59B1HTdTpN2222221618C654rdR01RDj1PDSDs,0*39
+\s:2573235,c:1682303750*04\!BSVDM,2,2,4,A,vLNL=e=Mp80,2*61
+!BSVDM,1,1,3,A,13n?OWgP00Q7NWtdhj6q;?wT2@Mp,0*32
+\s:2573235,c:1682303751*05\!BSVDM,1,1,,A,13o0`A00?wPH1abRTEbf46CV04B<,0*0B
+\s:2573450,c:1682303750*01\!BSVDM,1,1,,A,13m8oiW000PtQGPVuOd<nWmT0L0U,0*46
+\s:2573535,c:1682303751*02\!BSVDM,1,1,,A,13M4c`001`1FS7NWmEL8:FKT08Mr,0*14
+\s:2573515,c:1682303751*00\!BSVDM,1,1,,B,33m7ve51P01;gTDWG`71CwwR0E;:,0*7F
+\s:2573305,c:1682303751*07\!BSVDM,1,1,,A,13oGr<0P000GQl@SMM=N4?wT0@Mu,0*71
+\s:2573315,c:1682303751*06\!BSVDM,1,1,,B,13m8WGP000PU6CVT>I8@iVeR04B<,0*14
+\s:2573105,c:1682303751*05\!B2VDM,1,1,0,A,13n3=LP000Pj8S@Qp<?WnQKN04B<,0*04
+\s:2573315,c:1682303751*06\!BSVDM,2,1,3,A,53mdKB42<it0h@8:2208Tu=@5:222222222222167H73;4rdR08888888888,0*68
+\s:2573315,c:1682303751*06\!BSVDM,2,2,3,A,88888888880,2*3E
+\s:2573445,c:1682303751*04\!BSVDM,1,1,,B,13m=Q:2P00Q2entW2rfBiwwT28N0,0*01
+\s:2573584,c:1682303751*08\!BSVDM,1,1,,A,13mQ<R7001QeIg```AU0I8eD04B<,0*1D
+```
+
+```bash
+timeout 3600s ncat 153.44.253.27 5631 > ncat_3600s
+```
+
+```bash
+cat ncat_3600s | gpsdecode > ncat_gpsd_3600s
+```
+
+```bash
+wc -l ncat_gpsd_3600s
+```
+
+```
+115613 ncat_gpsd_3600s
+```
+
+```bash
+jq --slurp '.' ncat_gpsd_3600s > ncat_gpsd_jq_3600s.json
+```
+
+```bash
+jq '.[0]' ncat_gpsd_jq_3600s.json
+```
+
+```json
+{
+  "class": "AIS",
+  "device": "stdin",
+  "type": 18,
+  "repeat": 0,
+  "mmsi": 257732900,
+  "scaled": true,
+  "reserved": 0,
+  "speed": 0.1,
+  "accuracy": false,
+  "lon": 6.630712,
+  "lat": 58.227287,
+  "course": 319.3,
+  "heading": 511,
+  "second": 31,
+  "regional": 0,
+  "cs": true,
+  "display": false,
+  "dsc": true,
+  "band": true,
+  "msg22": true,
+  "raim": true,
+  "radio": 917510
 }
 ```
