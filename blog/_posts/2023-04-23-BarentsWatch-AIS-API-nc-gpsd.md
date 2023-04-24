@@ -138,3 +138,53 @@ jq '.[0]' nc_gpsd_jq_60s.json
   "radio": 49235
 }
 ```
+
+---
+
+```bash
+timeout 3600s nc 153.44.253.27 5631 > nc_3600s
+```
+
+```bash
+cat nc_60s | gpsdecode > nc_gpsd_60s
+```
+
+```bash
+head -n 1 nc_gpsd_60s
+```
+
+```json
+{"class":"AIS","device":"stdin","type":1,"repeat":0,"mmsi":259707000,"scaled":true,"status":0,"status_text":"Under way using engine","turn":0,"speed":2.3,"accuracy":false,"lon":19.028200,"lat":69.694137,"course":215.6,"heading":220,"second":1,"maneuver":0,"raim":false,"radio":49235}
+```
+
+```bash
+jq --slurp '.' nc_gpsd_60s > nc_gpsd_jq_60s.json
+```
+
+```bash
+jq '.[0]' nc_gpsd_jq_60s.json
+```
+
+```json
+{
+  "class": "AIS",
+  "device": "stdin",
+  "type": 1,
+  "repeat": 0,
+  "mmsi": 259707000,
+  "scaled": true,
+  "status": 0,
+  "status_text": "Under way using engine",
+  "turn": 0,
+  "speed": 2.3,
+  "accuracy": false,
+  "lon": 19.0282,
+  "lat": 69.694137,
+  "course": 215.6,
+  "heading": 220,
+  "second": 1,
+  "maneuver": 0,
+  "raim": false,
+  "radio": 49235
+}
+```
