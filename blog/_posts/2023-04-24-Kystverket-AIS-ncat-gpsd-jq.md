@@ -17,6 +17,8 @@ We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robi
 
 [5.5. Selecting Values \| Guide to Linux jq Command for JSON Processing. Last updated: April 22, 2023. Written by: Jonathan Cook \| Baeldung](https://www.baeldung.com/linux/jq-command-json#5-selecting-values)
 
+---
+
 First, we show AIS data using [OpenCPN](https://opencpn.org/).
 
 # OpenCPN
@@ -95,10 +97,6 @@ jq '.[0]' nc_gpsd_jq_1s.json
   "raim": true,
   "radio": 65672
 }
-```
-
-```
-47M     nc_gpsd_jq_3600s.json
 ```
 
 ---
@@ -209,6 +207,10 @@ jq '.[0]' nc_gpsd_jq_3600s.json
 }
 ```
 
+```
+47M     nc_gpsd_jq_3600s.json
+```
+
 # ncat
 
 ```bash
@@ -294,4 +296,53 @@ jq '.[0]' ncat_gpsd_jq_3600s.json
 
 ```
 47M     ncat_gpsd_jq_3600s.json
+```
+
+---
+
+```bash
+timeout 21600s ncat 153.44.253.27 5631 > ncat_21600s
+```
+
+```bash
+cat ncat_21600s | gpsdecode > ncat_gpsd_21600s
+```
+
+```bash
+jq --slurp '.' ncat_gpsd_21600s > ncat_gpsd_jq_21600s.json
+```
+
+```bash
+jq '.[0]' ncat_gpsd_jq_21600s.json
+```
+
+```json
+{
+  "class": "AIS",
+  "device": "stdin",
+  "type": 5,
+  "repeat": 0,
+  "mmsi": 257080750,
+  "scaled": true,
+  "imo": 9664433,
+  "ais_version": 0,
+  "callsign": "LGMC",
+  "shipname": "EIDSVAAG OPAL",
+  "shiptype": 90,
+  "shiptype_text": "Other Type - all ships of this type",
+  "to_bow": 21,
+  "to_stern": 64,
+  "to_port": 9,
+  "to_starboard": 9,
+  "epfd": 1,
+  "epfd_text": "GPS",
+  "eta": "04-21T02:45Z",
+  "draught": 4.8,
+  "destination": "FISHFARMS",
+  "dte": 0
+}
+```
+
+```
+142M    ncat_gpsd_jq_21600s.json
 ```
