@@ -3,14 +3,17 @@ layout: post
 title: Confluent
 ---
 
-<https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/>
+[Install the Confluent CLI \| Confluent Documentation](https://docs.confluent.io/confluent-cli/current/install.html)
 
-<https://docs.confluent.io/cloud/current/get-started/index.html#quick-start-for-ccloud>
+[Quick Start for Confluent Cloud](https://docs.confluent.io/cloud/current/get-started/index.html)
 
-<https://developer.confluent.io/tutorials/kafka-console-consumer-producer-basics/confluent.html>
+[Streaming ETL and Analytics on Confluent with Maritime AIS Data. June 1, 2021. Robin Moffatt \| Confluent Technology Blog](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
 
+[Console Producer and Consumer with (de)serializers](https://developer.confluent.io/tutorials/kafka-console-consumer-producer-avro/confluent.html)
 
 ```bash
+curl -sL --http1.1 https://cnfl.io/cli | sh -s -- latest
+
 export PATH="/home/$USER/bin:$PATH"
 ```
 
