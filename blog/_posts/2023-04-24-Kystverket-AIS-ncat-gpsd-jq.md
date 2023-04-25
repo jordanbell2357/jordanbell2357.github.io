@@ -3,9 +3,13 @@ layout: post
 title: Kystverket AIS data using OpenCPN, ncat, gpsd, and jq
 ---
 
-We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robin Moffatt. June 1, 2021](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
-
 [Access to AIS data \| Kystverket](https://www.kystverket.no/en/navigation-and-monitoring/ais/access-to-ais-data/)
+
+> AIS data are also available at the following IP address: 153.44.253.27 port 5631
+
+We use the following tools. We use `nc` (`netcat`) and `ncat` because (a) I've never used either, and (b) to see that `ncat` gives the same results as `nc`.
+
+[OpenCPN](https://opencpn.org/)
 
 [nc(1) - OpenBSD manual pages](https://man.openbsd.org/nc.1)
 
@@ -19,7 +23,7 @@ We follow [Streaming ETL and Analytics on Confluent with Maritime AIS Data. Robi
 
 ---
 
-First, we show AIS data using [OpenCPN](https://opencpn.org/).
+First, we view the AIS data from 153.44.253.27 port 5631 using OpenCPN.
 
 # OpenCPN
 
@@ -152,19 +156,52 @@ jq '.[0]' nc_gpsd_jq_60s.json
 ---
 
 ```bash
+timeout 1080s nc 153.44.253.27 5631 > nc_1080s_UTC_2023_04_25_16_07
+```
+
+```bash
+cat nc_1080s_UTC_2023_04_25_16_07 | gpsdecode | jq --slurp '.' > nc_1080s_UTC_2023_04_25_16_07.json
+```
+
+```bash
+jq '.[0]' nc_1080s_UTC_2023_04_25_16_07.json
+```
+
+```json
+{
+  "class": "AIS",
+  "device": "stdin",
+  "type": 5,
+  "repeat": 0,
+  "mmsi": 257595600,
+  "scaled": true,
+  "imo": 9321378,
+  "ais_version": 2,
+  "callsign": "LMOV",
+  "shipname": "ODANE",
+  "shiptype": 30,
+  "shiptype_text": "Fishing",
+  "to_bow": 10,
+  "to_stern": 18,
+  "to_port": 5,
+  "to_starboard": 3,
+  "epfd": 0,
+  "epfd_text": "Undefined",
+  "eta": "01-01T00:00Z",
+  "draught": 5,
+  "destination": "48300615",
+  "dte": 0
+}
+```
+
+---
+
+```bash
 timeout 3600s nc 153.44.253.27 5631 > nc_3600s
 ```
 
 ```bash
 cat nc_3600s | gpsdecode > nc_gpsd_3600s
-```
-
-```bash
-head -n 1 nc_gpsd_3600s
-```
-
-```json
-{"class":"AIS","device":"stdin","type":1,"repeat":0,"mmsi":257027750,"scaled":true,"status":0,"status_text":"Under way using engine","turn":0,"speed":0.0,"accuracy":false,"lon":11.220803,"lat":64.838193,"course":360.0,"heading":347,"second":40,"maneuver":0,"raim":false,"radio":49214}
 ```
 
 ```bash
@@ -291,6 +328,10 @@ jq '.[0]' ncat_gpsd_jq_3600s.json
   "raim": true,
   "radio": 917510
 }
+```
+
+```
+4.5M    ncat_3600s_UTC_2023_04_24_20_25.json
 ```
 
 ```
