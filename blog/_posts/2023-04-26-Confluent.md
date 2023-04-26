@@ -111,7 +111,7 @@ curl -X POST \
 
 ---
 
-[Kafka Streams 101 \| Confluent Developer](https://developer.confluent.io/learn-kafka/kafka-streams/get-started/)
+[Connect to External Systems in Confluent Cloud](https://docs.confluent.io/cloud/current/connectors/index.html)
 
 ---
 
