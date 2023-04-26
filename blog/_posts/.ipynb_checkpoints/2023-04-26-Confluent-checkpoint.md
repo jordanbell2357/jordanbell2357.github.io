@@ -87,8 +87,32 @@ confluent kafka cluster delete lkc-knrwgg
 
 ---
 
-[Quick Start for Confluent Cloud](https://docs.confluent.io/cloud/current/get-started/index.html)
+[Getting Started with Apache Kafka and Confluent REST Proxy \| Confluent Developer](https://developer.confluent.io/get-started/rest/)
+
+```bash
+docker compose -f rest-proxy.yml up -d
+```
+
+![docker compose rest-proxy.yml](/images/Confluent/docker_rest_proxy_yml.png)
+
+![Seeing container appear in Docker Desktop](/images/Confluent/docker_desktop_rest_proxy_yml.png)
+
+Create and consume three events for the `purchases` topic:
+
+```bash
+curl -X POST \
+     -H "Content-Type: application/vnd.kafka.json.v2+json" \
+     -H "Accept: application/vnd.kafka.v2+json" \
+     --data '{"records":[{"key":"jsmith","value":"alarm clock"},{"key":"htanaka","value":"batteries"},{"key":"awalther","value":"bookshelves"}]}' \
+     "http://localhost:8082/topics/purchases"
+```
+
+![purchases topic](/images/Confluent/purchases.png)
+
+---
+
+[Kafka Streams 101 \| Confluent Developer](https://developer.confluent.io/learn-kafka/kafka-streams/get-started/)
+
+---
 
 [Streaming ETL and Analytics on Confluent with Maritime AIS Data. June 1, 2021. Robin Moffatt \| Confluent Technology Blog](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
-
-[Console Producer and Consumer with (de)serializers](https://developer.confluent.io/tutorials/kafka-console-consumer-producer-avro/confluent.html)
