@@ -150,7 +150,7 @@ plt.show()
 
 OSCAR 2022 streamplot:
 
-![OSCAR 2022 streamplot]()/images/PODAAC/oscar_vel2022_18x9.png)
+![OSCAR 2022 streamplot](/images/PODAAC/oscar_vel2022_18x9.png)
 
 ---
 
