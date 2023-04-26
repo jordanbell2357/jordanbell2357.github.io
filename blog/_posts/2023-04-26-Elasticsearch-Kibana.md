@@ -5,8 +5,10 @@ title: Elasticsearch and Kibana
 
 [Kibana Fundamentals](https://learn.elastic.co/)
 
-Artificial flight data:
+[Kibana Fundamentals Lab Guide](https://www.elastic.co/pdf/kibana-fundamentals-additional-resources.pdf)
 
-![Artificial Flight Data](/images/Elastic/SampleFlightData.png)
+Sample synthetic flight data:
+
+![Sample synthetic Flight Data](/images/Elastic/SampleFlightData.png)
 
 
