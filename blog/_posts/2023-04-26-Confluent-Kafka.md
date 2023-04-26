@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Confluent
+title: Confluent and Kafka
 ---
 
 [Install the Confluent CLI \| Confluent Documentation](https://docs.confluent.io/confluent-cli/current/install.html)
@@ -111,10 +111,54 @@ curl -X POST \
 
 ---
 
-[Connect to External Systems in Confluent Cloud](https://docs.confluent.io/cloud/current/connectors/index.html)
+[Streaming ETL and Analytics on Confluent with Maritime AIS Data. June 1, 2021. Robin Moffatt \| Confluent Technology Blog](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
+
+```bash
+confluent environment use env-qr9drm
+confluent kafka cluster use lkc-nw8d2z
+confluent api-key create --resource lkc-nw8d2z
+```
+
+```bash
+confluent api-key use 2LZBPAHMULPNT7HG --resource lkc-nw8d2z
+```
+
+```bash
+confluent kafka topic create ais
+```
+
+```bash
+gcloud compute instances create-with-container rmoff-ais-ingest-v05 \
+        --zone=us-east1-b \
+        --metadata=google-logging-enabled=true \
+        --container-image edenhill/kafkacat:1.7.0-PRE1 \
+        --container-restart-policy=never \
+        --container-tty \
+        --container-command=/bin/sh \
+        --container-arg=-c \
+        --container-arg='set -x
+                        # Install stuff
+                        apk add gpsd gpsd-clients
+
+                        while [ 1 -eq 1 ];
+                        do
+                        nc 153.44.253.27 5631 | \
+                        gpsdecode | \
+                        kafkacat \
+                          -X security.protocol=SASL_SSL -X sasl.mechanisms=PLAIN \
+                          -X ssl.ca.location=./etc/ssl/cert.pem -X api.version.request=true \
+                          -b BROKER.gcp.confluent.cloud:9092 \
+                          -X sasl.username="CCLOUD_API_USER" \
+                          -X sasl.password="CCLOUD_API_PASSWORD" \
+                          -t ais -P
+
+                        sleep 180
+                        done
+'
+```
 
 ---
 
-[Streaming ETL and Analytics on Confluent with Maritime AIS Data. June 1, 2021. Robin Moffatt \| Confluent Technology Blog](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
+[Connect to External Systems in Confluent Cloud](https://docs.confluent.io/cloud/current/connectors/index.html)
 
 [sesam-io/ais-integration](https://github.com/sesam-io/ais-integration)
