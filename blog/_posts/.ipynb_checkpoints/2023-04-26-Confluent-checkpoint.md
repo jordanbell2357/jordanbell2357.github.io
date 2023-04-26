@@ -116,3 +116,5 @@ curl -X POST \
 ---
 
 [Streaming ETL and Analytics on Confluent with Maritime AIS Data. June 1, 2021. Robin Moffatt \| Confluent Technology Blog](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
+
+[sesam-io/ais-integration](https://github.com/sesam-io/ais-integration)
