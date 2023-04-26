@@ -17,11 +17,21 @@ timestamp,OriginCityName,DestCityName,Carrier,FlightDelayMin
 "Apr 26, 2023 @ 11:40:26.000",Bangor,"Jeju City","Logstash Airways",225
 ```
 
-Sample flight data:
+Kibana Sample Data Flights:
 
-![Sample Flight Data](/images/Elastic/Kibana_Sample_Data_Flights.jpeg)
+![Kibana Sample Data Flights](/images/Elastic/Kibana_Sample_Data_Flights.jpeg)
 
 [Elastic Stack Geospatial](https://www.elastic.co/geospatial)
 
 [Import geospatial data \| Kibana Guide](https://www.elastic.co/guide/en/kibana/current/import-geospatial-data.html)
 
+We use [amychan331/json-to-geojson](https://github.com/amychan331/json-to-geojson) to convert `AIS_2023_04_20.json` to
+`AIS_2023_04_20.geojson`. (See post on BarentsWatch AIS API.)
+
+Cluster map with hexagons, by message count:
+
+![Cluster map with hexagons, by message count for AIS_2023_04_20.geojson](/images/Elastic/AIS_2023_04_20_cluster_hexagon.jpeg)
+
+`shipType : 80` (tankers):
+
+![Filtering to tankers in AIS_2023_04_20.geojson](/images/Elastic/shipType_80.jpeg)
