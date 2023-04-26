@@ -3,12 +3,14 @@ layout: post
 title: Elasticsearch and Kibana
 ---
 
-[Kibana Fundamentals](https://learn.elastic.co/)
+[Kibana Fundamentals \| Elastic](https://learn.elastic.co/)
 
-[Kibana Fundamentals Lab Guide](https://www.elastic.co/pdf/kibana-fundamentals-additional-resources.pdf)
+[Kibana Fundamentals Lab Guide \| Elastic](https://www.elastic.co/pdf/kibana-fundamentals-additional-resources.pdf)
 
-Sample synthetic flight data:
+Sample flight data:
 
-![Sample synthetic Flight Data](/images/Elastic/SampleFlightData.png)
+![Sample Flight Data](/images/Elastic/SampleFlightData.png)
+
+[How-to Series: Kibana \| Elastic](https://www.elastic.co/videos/training-how-to-series-stack)
 
 
