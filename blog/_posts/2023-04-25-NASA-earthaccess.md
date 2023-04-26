@@ -3,6 +3,8 @@ layout: post
 title: NASA earthaccess
 ---
 
+# Preliminaries
+
 [NASA Earthdata Login (EDL)](https://urs.earthdata.nasa.gov/)
 
 [Create Your .netrc File \| Earthdata Login Documentation](https://urs.earthdata.nasa.gov/documentation/for_users/data_access/create_net_rc_file)
@@ -18,6 +20,8 @@ perl create_netrc.pl
 > Short Name: OSCAR_L4_OC_third-deg_YEARLY
 
 ![oscar_vel2022 granule](/images/PODAAC/cmr_oscar_vel2022.png)
+
+# earthaccess
 
 [nsidc/earthaccess](https://github.com/nsidc/earthaccess)
 
@@ -39,17 +43,17 @@ results = earthaccess.search_data(short_name="OSCAR_L4_OC_third-deg_YEARLY",
 earthaccess.download(results, "./local_folder")
 ```
 
-Then `local_folder` contains `oscar_vel2022.nc.gz`. We can use xarray directly with this file. But if we open the file with xarray two or
-more times, it becomes quicker to decmpress it now. So we run `gzip -d oscar_vel2022.nc.gz`, and now `local_folder` contains the file `oscar_vel2022.nc`.
-Then:
+Then `local_folder` contains the single file, `oscar_vel2022.nc.gz`. We can use xarray directly with this file. But if we open the file with xarray two or
+more times, it becomes quicker to decompress it now. So we run `gzip -d oscar_vel2022.nc.gz`, and now `local_folder` contains the single file `oscar_vel2022.nc`.
+Then: [^1]
+
+[^1]: [xarray.open_mfdataset](https://docs.xarray.dev/en/stable/generated/xarray.open_mfdataset.html)
 
 ```python3
 import xarray as xr
 
 ds = xr.open_mfdataset("local_folder/oscar_vel2022.nc")
 ```
-
-We now refer to the xarray documentation.
 
 [xarray.Dataset.info](https://docs.xarray.dev/en/stable/generated/xarray.Dataset.info.html)
 
@@ -154,6 +158,10 @@ OSCAR 2022 streamplot:
 
 ---
 
-My so-far favorite resource for xarray:
+My so-far favorite resources for xarray:
 
-<https://fabienmaussion.info/climate_system/week_04/01_Lesson_Wind-Derivatives-Integrals.html>
+[Xarray Tutorial](https://tutorial.xarray.dev/intro.html)
+
+[Xarray Tutorial \| Pangeo](http://gallery.pangeo.io/repos/pangeo-data/pangeo-tutorial-gallery/xarray.html)
+
+[Physics of the Climate System \| Fabien Maussion](https://fabienmaussion.info/climate_system/welcome.html)
