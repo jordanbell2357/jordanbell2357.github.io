@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Confluent Cloud and kcat (kafkacat)
+title: kcat (kafkacat)
 ---
 
 # kcat (kafkacat)
