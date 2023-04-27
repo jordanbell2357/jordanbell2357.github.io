@@ -26,7 +26,7 @@ where the cluster's bootstrap server endpoint is `pkc-419q3.us-east4.gcp.conflue
 where `3FPYLWJU5MMU2TL2` is an API key for the cluster.
 
 The syntax we end up with does not invoke the environment ID or the cluster ID, but we do not
-know that beforehand; above we laid out all the parameters we have with which to work.
+know that beforehand; above we laid out all the parameters at our disposal.
 
 We use `gpsdecode` from `gpsd-clients`.
 
