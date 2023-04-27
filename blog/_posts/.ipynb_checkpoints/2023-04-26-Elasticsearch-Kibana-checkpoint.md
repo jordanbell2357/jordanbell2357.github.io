@@ -35,3 +35,8 @@ Cluster map with hexagons, by message count:
 `shipType : 80` (tankers):
 
 ![Filtering to tankers in AIS_2023_04_20.geojson](/images/Elastic/shipType_80.jpeg)
+
+---
+
+[Using Open Sea Map data in Kibana maps. Mar 4, 2021. Robin Moffatt](https://rmoff.net/2021/03/04/using-open-sea-map-data-in-kibana-maps/)
+
