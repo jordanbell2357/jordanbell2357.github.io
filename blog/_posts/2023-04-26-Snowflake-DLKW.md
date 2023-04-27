@@ -36,7 +36,7 @@ WITHIN GROUP (
             point_id
     ) || ')' AS my_linestring
 FROM cherry_creek_trail
-WHERE point_id BETWEEN 1 and 20
+WHERE point_id BETWEEN 1 and 10
 GROUP BY trail_name;
 ```
 
@@ -49,10 +49,14 @@ We copy the query result to clipbard and use
 
 ![OpenStreetMap WKT Playground: 10 points with LINESTRING](/images/Snowflake/OpenStreetMap_WKT_Playground_10_points.jpeg)
 
-## First 30 points:
+## First 20 points:
 
-![OpenStreetMap WKT Playground: 30 points with LINESTRING](/images/Snowflake/OpenStreetMap_WKT_Playground_30_points.jpeg)
+`WHERE point_id BETWEEN 1 and 20`
+
+![OpenStreetMap WKT Playground: 20 points with LINESTRING](/images/Snowflake/OpenStreetMap_WKT_Playground_20_points.jpeg)
 
 ## All (3527) points:
+
+Remove WHERE clause.
 
 ![OpenStreetMap WKT Playground: 3527 points with LINESTRING](/images/Snowflake/OpenStreetMap_WKT_Playground_3527_points.jpeg)
