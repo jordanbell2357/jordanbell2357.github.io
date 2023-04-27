@@ -38,5 +38,5 @@ Cluster map with hexagons, by message count:
 
 ---
 
-[Using Open Sea Map data in Kibana maps. Mar 4, 2021. Robin Moffatt](https://rmoff.net/2021/03/04/using-open-sea-map-data-in-kibana-maps/)
+[Create an Apache Kafka Client App for kcat](https://docs.confluent.io/platform/current/clients/examples/kcat.html#client-examples-kcat)
 
