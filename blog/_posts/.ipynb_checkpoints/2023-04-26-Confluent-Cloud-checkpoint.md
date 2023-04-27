@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Confluent and Kafka
+title: Confluent Cloud
 ---
 
 [Install the Confluent CLI \| Confluent Documentation](https://docs.confluent.io/confluent-cli/current/install.html)
