@@ -113,6 +113,25 @@ curl -X POST \
 
 [Streaming ETL and Analytics on Confluent with Maritime AIS Data. June 1, 2021. Robin Moffatt \| Confluent Technology Blog](https://www.confluent.io/blog/streaming-etl-and-analytics-for-real-time-location-tracking/)
 
+[confluentinc/demo-scene/maritime-ais](https://github.com/confluentinc/demo-scene/tree/master/maritime-ais)
+
+```bash
+nc 153.44.253.27 5631 | \
+gpsdecode | \
+kcat \
+-X security.protocol=SASL_SSL -X sasl.mechanisms=PLAIN \
+-X ssl.ca.location=./etc/ssl/cert.pem -X api.version.request=true \
+-b BROKER.gcp.confluent.cloud:9092 \
+-X sasl.username="API_USER" \
+-X sasl.password="API_PASSWORD" \
+-t ais -P
+```
+
+
+
+
+
+
 ```bash
 confluent environment use env-qr9drm
 confluent kafka cluster use lkc-nw8d2z
@@ -156,6 +175,24 @@ gcloud compute instances create-with-container rmoff-ais-ingest-v05 \
                         done
 '
 ```
+---
+
+[kcat](https://github.com/edenhill/kcat):
+
+```bash
+git clone https://github.com/edenhill/kcat.git
+cd kcat
+bash bootstrap.sh
+./configure
+make
+sudo make install
+```
+
+
+[Create an Apache Kafka Client App for kcat](https://docs.confluent.io/platform/current/clients/examples/kcat.html#client-examples-kcat)
+
+
+
 
 ---
 

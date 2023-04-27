@@ -36,7 +36,5 @@ Cluster map with hexagons, by message count:
 
 ![Filtering to tankers in AIS_2023_04_20.geojson](/images/Elastic/shipType_80.jpeg)
 
----
 
-[Create an Apache Kafka Client App for kcat](https://docs.confluent.io/platform/current/clients/examples/kcat.html#client-examples-kcat)
 
