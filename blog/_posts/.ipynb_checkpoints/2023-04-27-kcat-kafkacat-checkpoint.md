@@ -3,9 +3,7 @@ layout: post
 title: kcat (kafkacat)
 ---
 
-# kcat (kafkacat)
-
-[kcat](https://github.com/edenhill/kcat):
+[edenhill/kcat](https://github.com/edenhill/kcat):
 
 ```bash
 git clone https://github.com/edenhill/kcat.git
@@ -22,10 +20,13 @@ sudo make install
 
 We follow the above example.
 
-We start by running `nc` locally and use `kcat` to send messages to the Confluent Cloud environment
-`env-qr9drm` (which does not occur in the command), to the cluster `lkc-nw8d2z`, to the topic `ais2`, 
+We run `nc` locally and use `kcat` to send messages to the Confluent Cloud environment
+`env-qr9drm`, to the cluster `lkc-nw8d2z`, to the topic `ais2`, 
 where the cluster's bootstrap server endpoint is `pkc-419q3.us-east4.gcp.confluent.cloud:9092`, and
 where `3FPYLWJU5MMU2TL2` is an API key for the cluster.
+
+The syntax we end up with does not invoke the environment ID or the cluster ID, but we do not
+know that beforehand; above we laid out all the parameters we have with which to work.
 
 We use `gpsdecode` from `gpsd-clients`.
 
