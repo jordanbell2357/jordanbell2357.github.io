@@ -177,6 +177,15 @@ gcloud compute instances create-with-container rmoff-ais-ingest-v05 \
 ```
 ---
 
+[What Is Apache Kafka?](https://developer.confluent.io/what-is-apache-kafka/)
+
+[Hands On: Your First Kafka Application in 10 Minutes or Less](https://developer.confluent.io/learn-kafka/apache-kafka/get-started-hands-on/)
+
+
+---
+
+
+
 [kcat](https://github.com/edenhill/kcat):
 
 ```bash

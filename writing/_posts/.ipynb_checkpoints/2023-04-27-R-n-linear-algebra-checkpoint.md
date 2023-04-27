@@ -7,7 +7,7 @@ title: ℝⁿ
 
 Let $$\mathbb{N}$$ be the nonnegative integers and let $$n \in \mathbb{N}$$.
 
-Define $$[n]=\{i \in \mathbb{N}: 1 \leq i \leq n\}$$.
+Define $$[n]=\{i \in \mathbb{N}: i < n\}$$.
 
 Let $$\mathbb{R}^n=\mathbb{R}^{[n]}$$,
 the set of functions $$[n] \to \mathbb{R}$$.
@@ -20,14 +20,19 @@ $$\mathbb{R}^0 = \mathbb{R}^\emptyset = \{\emptyset\}$$. [^1]
 
 [^1]: [empty function in nLab](https://ncatlab.org/nlab/show/empty+function)
 
-$$\mathbb{R}^0$$ is a real vector space, with one element.
+$$\mathbb{R}^0$$ is an $$\mathbb{R}$$-linear space, with one element.
 
 ## $$n \geq 1$$
 
-For $$n \in \mathbb{N}_{\geq 1}$$, we define vector addition by
-$$(x+y)(i)=x(i)+y(i)$$, $$i \in [n]$$, for $$x,y \in \mathbb{R}^n$$, and scalar multiplication
-by $$(cx)(i)=cx(i)$$, $$i \in [n]$$, for $$x \in \mathbb{R}^n$$.
-Then $$\mathbb{R}^n$$ is a real vector space.
+Let $$n \in \mathbb{N}_{\geq 1}$$.
+For $$x,y \in \mathbb{R}^n$$,
+we define $$x+y \in \mathbb{R}^n$$ by
+$$(x+y)(i)=x(i)+y(i)$$, $$i \in [n]$$.
+
+For $$x \mathbb{R}^n$$ and $$c \in \mathbb{R}$$, we define
+$$cx \in \mathbb{R}^n$$
+by $$(cx)(i)=cx(i)$$, $$i \in [n]$$.
+Then $$\mathbb{R}^n$$ is an $$\mathbb{R}$$-linear space.
 
 For $$i,j \in \mathbb{N}$$, define
 
