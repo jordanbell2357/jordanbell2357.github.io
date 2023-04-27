@@ -34,7 +34,7 @@ We use [amychan331/json-to-geojson](https://github.com/amychan331/json-to-geojso
 
 # Elastic Maps Service
 
-Points in `AIS_2023_04_20.geojson`:
+Messages in `AIS_2023_04_20.geojson`:
 
 ![Points in AIS_2023_04_20.geojson](/images/Elastic/AIS_2023_04_20.jpeg)
 
@@ -42,6 +42,6 @@ Cluster map with hexagons, by message count:
 
 ![Cluster map with hexagons, by message count for AIS_2023_04_20.geojson](/images/Elastic/AIS_2023_04_20_cluster_hexagon.jpeg)
 
-Points with `shipType : 80` (tankers):
+Applying filter `shipType : 80` (tankers):
 
 ![Filtering to tankers in AIS_2023_04_20.geojson](/images/Elastic/shipType_80.jpeg)
