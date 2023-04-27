@@ -115,17 +115,7 @@ curl -X POST \
 
 [confluentinc/demo-scene/maritime-ais](https://github.com/confluentinc/demo-scene/tree/master/maritime-ais)
 
-```bash
-nc 153.44.253.27 5631 | \
-gpsdecode | \
-kcat \
--X security.protocol=SASL_SSL -X sasl.mechanisms=PLAIN \
--X ssl.ca.location=./etc/ssl/cert.pem -X api.version.request=true \
--b BROKER.gcp.confluent.cloud:9092 \
--X sasl.username="API_USER" \
--X sasl.password="API_PASSWORD" \
--t ais -P
-```
+
 
 
 
@@ -146,45 +136,8 @@ confluent api-key use 2LZBPAHMULPNT7HG --resource lkc-nw8d2z
 confluent kafka topic create ais
 ```
 
-```bash
-gcloud compute instances create-with-container rmoff-ais-ingest-v05 \
-        --zone=us-east1-b \
-        --metadata=google-logging-enabled=true \
-        --container-image edenhill/kafkacat:1.7.0-PRE1 \
-        --container-restart-policy=never \
-        --container-tty \
-        --container-command=/bin/sh \
-        --container-arg=-c \
-        --container-arg='set -x
-                        # Install stuff
-                        apk add gpsd gpsd-clients
-
-                        while [ 1 -eq 1 ];
-                        do
-                        nc 153.44.253.27 5631 | \
-                        gpsdecode | \
-                        kafkacat \
-                          -X security.protocol=SASL_SSL -X sasl.mechanisms=PLAIN \
-                          -X ssl.ca.location=./etc/ssl/cert.pem -X api.version.request=true \
-                          -b BROKER.gcp.confluent.cloud:9092 \
-                          -X sasl.username="CCLOUD_API_USER" \
-                          -X sasl.password="CCLOUD_API_PASSWORD" \
-                          -t ais -P
-
-                        sleep 180
-                        done
-'
-```
----
-
-[What Is Apache Kafka?](https://developer.confluent.io/what-is-apache-kafka/)
-
-[Hands On: Your First Kafka Application in 10 Minutes or Less](https://developer.confluent.io/learn-kafka/apache-kafka/get-started-hands-on/)
-
 
 ---
-
-
 
 [kcat](https://github.com/edenhill/kcat):
 
@@ -198,13 +151,8 @@ sudo make install
 ```
 
 
-[Create an Apache Kafka Client App for kcat](https://docs.confluent.io/platform/current/clients/examples/kcat.html#client-examples-kcat)
+![kcat](/images/Confluent/ais2_kcat.jpeg)
 
 
 
 
----
-
-[Connect to External Systems in Confluent Cloud](https://docs.confluent.io/cloud/current/connectors/index.html)
-
-[sesam-io/ais-integration](https://github.com/sesam-io/ais-integration)
