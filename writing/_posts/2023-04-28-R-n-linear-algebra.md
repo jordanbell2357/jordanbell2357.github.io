@@ -88,7 +88,7 @@ be the set of linear transformations $$V \to W$$, which is itself a real finite 
 
 $$(\mathbb{R}^n)^* = \mathscr{L}(\mathbb{R}^n,\mathbb{R}).$$
 
-An $$m \times n$$ matrix is an element of $$\mathscr{L}(\mathbb{R}^n,\mathbb{R}^m)$$.
+An $$m \times n$$ matrix is an element of $$\mathscr{L}(\mathbb{R}^n,\mathbb{R}^m)$$ and a choice of basis for $$\mathbb{R}^n$$.
 
 $$\dim \mathscr{L}(V,W) = \dim V \cdot \dim W.$$
 
@@ -106,7 +106,22 @@ $$A^T f x = f(Ax),\qquad f \in (\mathbb{R}^m)^*, x \in \mathbb{R}^n,$$
 
 called the **transpose** of $$A$$.
 
-We remind ourselves that $$y \mapsto y^T$$ is a linear isomorphism $$\mathbb{R}^m \to (\mathbb{R}^m)^*$$.
-Thus,
+# Transposes of matrices
 
-$$A^T y^T x = y^T(Ax),\qquad y \in \mathbb{R}^m, x \in \mathbb{R}^n.$$
+We remind ourselves that $$\{e_k^T: k \in [m]\}$$ is a basis for $$(\mathbb{R}^m)^*$$
+and $$\{e_j^T: j \in [n]\}$$ is a basis for $$\mathbb{R}^n$$.
+Thus, $$A^T \in \mathscr{L}((\mathbb{R}^m)^*,(\mathbb{R}^n)^*)$$ is also defined by
+
+$$A^T e_k^T e_j = e_k^T(Ae_j),\qquad j \in [n], k \in [m].$$
+
+# Bilinear maps
+
+
+
+# Tenosr products
+
+
+
+
+# Determinants
+
