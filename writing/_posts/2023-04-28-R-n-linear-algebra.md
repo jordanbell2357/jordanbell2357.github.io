@@ -125,3 +125,11 @@ $$A^T e_k^T e_j = e_k^T(Ae_j),\qquad j \in [n], k \in [m].$$
 
 # Determinants
 
+
+
+# Fréchet derivative
+
+
+
+# Ordinary Least Squares (OLS)
+
