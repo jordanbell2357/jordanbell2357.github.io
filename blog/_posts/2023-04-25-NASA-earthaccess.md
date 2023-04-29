@@ -156,6 +156,8 @@ OSCAR 2022 streamplot:
 
 ![OSCAR 2022 streamplot](/images/PODAAC/oscar_vel2022.png)
 
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">Global sea surface currents, 2022. Streamplot of sea surface velocity from <a href="https://t.co/m1l6hzAjiA">https://t.co/m1l6hzAjiA</a> using Xarray (<a href="https://t.co/Pc25mclkus">https://t.co/Pc25mclkus</a>) <a href="https://t.co/pcjDKz6uCj">pic.twitter.com/pcjDKz6uCj</a></p>&mdash; Jordan Bell (@jordanbell2357) <a href="https://twitter.com/jordanbell2357/status/1652120208868274179?ref_src=twsrc%5Etfw">April 29, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
 ---
 
 My so-far favorite resources for xarray:
