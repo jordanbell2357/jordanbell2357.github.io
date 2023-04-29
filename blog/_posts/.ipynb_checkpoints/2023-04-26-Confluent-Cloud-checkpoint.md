@@ -13,7 +13,22 @@ curl -sL --http1.1 https://cnfl.io/cli | sh -s -- latest
 export PATH="/home/$USER/bin:$PATH"
 ```
 
----
+Then we follow [Connect Confluent CLI to Confluent Cloud Cluster](https://docs.confluent.io/confluent-cli/current/connect.html). For me, the key parts are:
+
+```bash
+ENVIRONMENT_ID='env-qr9drm'
+CLUSTER_ID='lkc-nw8d2z'
+TOPIC_ID='ais2'
+API_KEY='3FPYLWJU5MMU2TL2'
+API_SECRET= #
+
+confluent login --save
+confluent environment use $ENVIRONMENT_ID
+confluent kafka cluster use $CLUSTER_ID
+confluent api-key store $API_KEY $API_SECRET --resource $TOPIC_ID
+```
+
+# Schema Registry
 
 [Get started with Confluent Stream Governance \| Learn - Confluent Cloud](https://confluent.cloud/learn)
 
@@ -85,7 +100,7 @@ confluent kafka cluster delete lkc-knrwgg
 
 ![Confluent CLI](/images/Confluent/ccloud-learn-kafka.png)
 
----
+# Confluent REST Proxy
 
 [Getting Started with Apache Kafka and Confluent REST Proxy \| Confluent Developer](https://developer.confluent.io/get-started/rest/)
 
