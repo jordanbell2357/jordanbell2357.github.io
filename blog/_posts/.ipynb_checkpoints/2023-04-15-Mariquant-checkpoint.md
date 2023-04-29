@@ -225,7 +225,7 @@ sed -n 6000002,7000001p routes.csv >> routes_to_7000000.csv
 sed -n 7000002,8000001p routes.csv >> routes_to_8000000.csv
 sed -n 8000002,9000001p routes.csv >> routes_to_9000000.csv
 sed -n 9000002,10000001p routes.csv >> routes_to_10000000.csv
-sed -n '10000002,$p' routes.csv > routes_to_11000000.csv
+sed -n '10000002,$p' routes.csv >> routes_to_11000000.csv
 ```
 
 # Elastic Maps Service
@@ -234,5 +234,10 @@ We use [Elastic Maps Service](https://cloud.elastic.co/) first with the random s
 
 ![Hexagons using Elastic Maps Service](/images/Mariquant/routes_shuf_1000000_elatic_maps_hexagons.jpeg)
 
-Now `routes_to_1000000.csv`:
+Now we visualize the `routes_to_${i}000000.csv` files using Elastic Maps Service. 
 
+![Route csv files using Elastic Maps Service](/images/Mariquant/routes_elastic_maps.jpeg)
+
+We make a heat map with each document:
+
+![Heat map using Elastic Maps Service](/images/Mariquant/EMS_heat_map.jpeg)
