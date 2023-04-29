@@ -5,6 +5,8 @@ title: AWS
 
 [AWS Cloud Practitioner Essentials](https://www.coursera.org/learn/aws-cloud-practitioner-essentials)
 
+[Certificate](https://coursera.org/share/fd1209f15f536370715adfbbc2939a26)
+
 [AWS Fundamentals Specialization](https://www.coursera.org/specializations/aws-fundamentals)
 
 [Download to a file named by the URL](https://everything.curl.dev/usingcurl/downloads/url-named)
