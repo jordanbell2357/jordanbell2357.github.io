@@ -238,6 +238,6 @@ Now we visualize the `routes_to_${i}000000.csv` files using Elastic Maps Service
 
 ![Route csv files using Elastic Maps Service](/images/Mariquant/routes_elastic_maps.jpeg)
 
-We make a heat map with each document:
+We make heat maps with all the documents:
 
 ![Heat map using Elastic Maps Service](/images/Mariquant/EMS_heat_map.jpeg)
