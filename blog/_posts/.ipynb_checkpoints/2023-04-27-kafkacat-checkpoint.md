@@ -1,7 +1,9 @@
 ---
 layout: post
-title: kcat (kafkacat)
+title: kafkacat
 ---
+
+# kcat
 
 [edenhill/kcat](https://github.com/edenhill/kcat):
 
