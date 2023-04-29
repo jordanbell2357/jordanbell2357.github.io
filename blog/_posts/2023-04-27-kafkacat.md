@@ -56,10 +56,14 @@ kcat -b $BOOTSTRAP_SERVER \
 
 # Deploying on EC2 instance
 
-Connect to EC2 instance using OpenSSH. On WSL2, to get the permissions on the `.pem` file to `400`, I moved it to my Ubuntu home
-directory; there seemed to be issues with permissions keeping it in a Windows created directory.
+We create an EC2 instance running Ubuntu:
 
-In the instance, do the following.
+![EC2 instance running Ubuntu](/images/Confluent/aws_ec2_instance.jpeg)
+
+Connect to EC2 instance using OpenSSH. On WSL2, to get the permissions on the `.pem` file to `400`,
+we move it to the Ubuntu home directory: there seemed to be issues with permissions keeping it in a Windows created directory.
+
+Connected with OpenSSH to the instance, we do the following.
 
 [Install the Confluent CLI \| Confluent Documentation](https://docs.confluent.io/confluent-cli/current/install.html)
 
@@ -105,9 +109,6 @@ Then:
 
 ```bash
 nohup bash my_command.sh &
-```
-
-```bash
 exit
 ```
 

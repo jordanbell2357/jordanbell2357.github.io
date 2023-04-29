@@ -62,4 +62,4 @@ We copy the query result to clipbard and use
 
 Remove WHERE clause.
 
-![OpenStreetMap WKT Playground: 3527 points with LINESTRING](/images/Snowflake/OpenStreetMap_WKT_Playground_3527_points.jpeg)
+![OpenStreetMap WKT Playground: 3526 points with LINESTRING](/images/Snowflake/OpenStreetMap_WKT_Playground_3526_points.jpeg)
