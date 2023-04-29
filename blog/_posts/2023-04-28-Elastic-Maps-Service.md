@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Elasticsearch and Kibana
+title: Elastic Maps Service
 ---
 
 # Kibana Sample Data Flights
@@ -95,10 +95,3 @@ MMSI, order by timestamp.
 Below we show the tracks created thus in the Indian Ocean:
 
 ![Indian Ocean ship tracks using FleetMon sample AIS data](/images/Elastic/FleetMon_sample_data_tracks.jpeg)
-
-# App Search Fundamentals
-
-[App Search Fundamentals \| Elastic](https://learn.elastic.co/)
-
-[App Search Fundamentals Lab Guide \| Elastic](https://www.elastic.co/pdf/app-search-fundamentals-additional-resources.pdf)
-
