@@ -16,6 +16,26 @@ make
 sudo make install
 ```
 
+# Apache Kafka® 101
+
+[Lesson 1. Events \| Confluent Developer](https://developer.confluent.io/learn-kafka/)
+
+> Kafka is based on the abstraction of a distributed commit log. By splitting a log into partitions, Kafka is able to scale-out systems. As such, Kafka models events as key/value pairs. Internally, keys and values are just sequences of bytes, but externally in your programming language of choice, they are often structured objects represented in your language’s type system. Kafka famously calls the translation between language types and internal bytes serialization and deserialization. The serialized format is usually JSON, JSON Schema, Avro, or Protobuf.
+>
+> Values are typically the serialized representation of an application domain object or some form of raw message input, like the output of a sensor.
+
+[Lesson 3. Topics \| Confluent Developer](https://developer.confluent.io/learn-kafka/apache-kafka/topics/)
+
+> Events have a tendency to proliferate—just think of the events that happened to you this morning—so we’ll need a system for organizing them. Apache Kafka's most fundamental unit of organization is the topic, which is something like a table in a relational database. As a developer using Kafka, the topic is the abstraction you probably think the most about. You create different topics to hold different kinds of events and different topics to hold filtered and transformed versions of the same kind of event.
+>
+> A topic is a log of events. Logs are easy to understand, because they are simple data structures with well-known semantics. First, they are append only: When you write a new message into a log, it always goes on the end. Second, they can only be read by seeking an arbitrary offset in the log, then by scanning sequential log entries. Third, events in the log are immutable—once something has happened, it is exceedingly difficult to make it un-happen. The simple semantics of a log make it feasible for Kafka to deliver high levels of sustained throughput in and out of topics, and also make it easier to reason about the replication of topics, which we’ll cover more later.
+
+[Lesson 6. Brokers \| Confluent Developer](https://developer.confluent.io/learn-kafka/apache-kafka/brokers/)
+
+[Lesson 8. Producers \| Confluent Developer](https://developer.confluent.io/learn-kafka/apache-kafka/producers/)
+
+> The API surface of the producer library is fairly lightweight: In Java, there is a class called `KafkaProducer` that you use to connect to the cluster. You give this class a map of configuration parameters, including the address of some brokers in the cluster, any appropriate security configuration, and other settings that determine the network behavior of the producer. There is another class called `ProducerRecord` that you use to hold the key-value pair you want to send to the cluster.
+
 # confluentinc/demo-scene/maritime-ais
 
 [confluentinc/demo-scene/maritime-ais](https://github.com/confluentinc/demo-scene/tree/master/maritime-ais)

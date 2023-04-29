@@ -112,6 +112,14 @@ print(clf.feature_importances_)
 > 4. ECML/PKDD 15: Taxi Trajectory Prediction (I)
 > 5. L. Chen and R. Ng, “On the marriage of lp-norms and edit distance,” Proceedings of the Thirtieth international conference on Very large data bases-Volume 30. VLDB Endowment, 2004, pp. 792–803.
 
+```
+424M    WorldRoutes.html
+2.9M    distances.csv
+172K    ports.csv
+633M    routes.csv
+633M    routes_noheader.csv
+```
+
 [sklearn.ensemble.RandomForestClassifier](https://scikit-learn.org/stable/modules/generated/sklearn.ensemble.RandomForestClassifier.html)
 
 [sklearn.cluster.AffinityPropagation](https://scikit-learn.org/stable/modules/generated/sklearn.cluster.AffinityPropagation.html)
@@ -180,16 +188,24 @@ wc -l routes.csv
 10882102 routes.csv
 ```
 
-```bash
-head -n 1 routes.csv > routes_shuf_100000.csv
-shuf -n 100000 routes.csv >> routes_shuf_100000.csv
-```
-
-
-
-
 `routes.csv` using [Ocean Data View (ODV)](https://odv.awi.de/):
 
 ![routes.csv X/Y distribution using Ocean Data View](/images/Mariquant/ODV.png)
 
 ![routes.csv using Ocean Data View](/images/Mariquant/Mariquant_ODV_XY.png)
+
+```bash
+sed '1d' routes.csv > routes_noheader.csv
+NUMROUTES=1000000
+head -n 1 routes.csv > routes_shuf_$NUMROUTES.csv
+shuf -n $NUMROUTES routes_noheader.csv >> routes_shuf_$NUMROUTES.csv
+```
+
+```
+59M     routes_shuf_1000000.csv
+```
+
+We then use Elastic Maps Service with this sample of 1000000 (one million) rows to make hexagon clusters showing vessel count in each hexagon:
+
+![Hexagons using Elastic Maps Service](/images/Mariquant/routes_shuf_1000000_elatic_maps_hexagons.jpeg)
+
