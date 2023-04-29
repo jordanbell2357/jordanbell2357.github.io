@@ -194,6 +194,8 @@ wc -l routes.csv
 
 ![routes.csv using Ocean Data View](/images/Mariquant/Mariquant_ODV_XY.png)
 
+# shuf
+
 ```bash
 sed '1d' routes.csv > routes_noheader.csv
 NUMROUTES=1000000
@@ -205,7 +207,32 @@ shuf -n $NUMROUTES routes_noheader.csv >> routes_shuf_$NUMROUTES.csv
 59M     routes_shuf_1000000.csv
 ```
 
-We then use Elastic Maps Service with this sample of 1000000 (one million) rows to make hexagon clusters showing vessel count in each hexagon:
+# sed
+
+```bash
+HEADER_ROW=$(head -n 1 routes.csv)
+for i  in {1..11}; do echo $HEADER_ROW > routes_to_${i}000000.csv; done
+```
+
+```bash
+sed -n 2,1000001p routes.csv >> routes_to_1000000.csv
+sed -n 1000002,2000001p routes.csv >> routes_to_2000000.csv
+sed -n 2000002,3000001p routes.csv >> routes_to_3000000.csv
+sed -n 3000002,4000001p routes.csv >> routes_to_4000000.csv
+sed -n 4000002,5000001p routes.csv >> routes_to_5000000.csv
+sed -n 5000002,6000001p routes.csv >> routes_to_6000000.csv
+sed -n 6000002,7000001p routes.csv >> routes_to_7000000.csv
+sed -n 7000002,8000001p routes.csv >> routes_to_8000000.csv
+sed -n 8000002,9000001p routes.csv >> routes_to_9000000.csv
+sed -n 9000002,10000001p routes.csv >> routes_to_10000000.csv
+sed -n '10000002,$p' routes.csv > routes_to_11000000.csv
+```
+
+# Elastic Maps Service
+
+We use [Elastic Maps Service](https://cloud.elastic.co/) first with the random sample `routes_shuf_1000000.csv` of 1000000 (one million) rows to make hexagon clusters showing vessel count in each hexagon:
 
 ![Hexagons using Elastic Maps Service](/images/Mariquant/routes_shuf_1000000_elatic_maps_hexagons.jpeg)
+
+Now `routes_to_1000000.csv`:
 
