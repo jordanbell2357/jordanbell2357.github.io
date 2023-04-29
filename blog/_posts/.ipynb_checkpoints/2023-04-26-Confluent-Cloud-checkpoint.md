@@ -123,3 +123,7 @@ curl -X POST \
 ```
 
 ![purchases topic](/images/Confluent/purchases.png)
+
+# 100 Days of Code with Apache Kafka®
+
+[100 Days of Code with Apache Kafka®](https://developer.confluent.io/100-days-of-code/)
