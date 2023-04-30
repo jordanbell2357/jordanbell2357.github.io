@@ -50,8 +50,8 @@ rm AIS_2022_06_${i}.zip
 rm AIS_2022_06_${i}.csv
 ```
 
-Google Cloud Self-Paced Labs: **Cloud Storage: Qwik Start - CLI/SDK (GSP074)**, **Ingesting Data Into The Cloud (GSP194)**,
-**Ingesting New Datasets into BigQuery (GSP 411)**, **Loading Your Own Data into BigQuery (GSP
+Relevant Google Cloud Self-Paced Labs (GSP): **Cloud Storage: Qwik Start - CLI/SDK (GSP074)**,
+**Ingesting Data Into The Cloud (GSP194)**, **Ingesting New Datasets into BigQuery (GSP 411)**, **Loading Your Own Data into BigQuery (GSP865)**.
 
 We use `bq` thus:
 
