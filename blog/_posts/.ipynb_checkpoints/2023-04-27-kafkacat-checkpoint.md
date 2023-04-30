@@ -135,3 +135,9 @@ exit
 In Confluent Cloud, we see after exiting OpenSSH, the EC2 instance continues to send messages to the topic.
 
 ![EC2 instance sending messages to Confluent Cloud](/images/Confluent/aws_nohup.jpeg)
+
+Days later (Sun Apr 30 06:05:37 UTC 2023), we connect to the EC2 instance using EC2 Instance Connect. We run
+`ps aux | grep kafkacat`, set `PID= # process ID`, and `kill -s SIGKILL $PID`.
+
+After depositing messages in a topic in Kafka, we are now going to access this data.
+
