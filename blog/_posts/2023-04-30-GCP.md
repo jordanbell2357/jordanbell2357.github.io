@@ -61,5 +61,7 @@ for i in {21..27}; do bq load --source_format=CSV --autodetect AIS_2022_06_21_to
 
 
 
+[gsutil](https://cloud.google.com/storage/docs/gsutil_install#deb)
+
 
 
