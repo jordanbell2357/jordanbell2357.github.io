@@ -109,6 +109,11 @@ confluent api-key store $API_KEY $API_SECRET --resource $TOPIC_ID
 Then we make the file `my_command.sh`:
 
 ```bash
+BOOTSTRAP_SERVER='pkc-419q3.us-east4.gcp.confluent.cloud:9092'
+API_KEY='3FPYLWJU5MMU2TL2'
+API_SECRET= #
+
+cat > my_command.sh <<EOF
 #!/bin/bash
 # my_command.sh
 
@@ -123,6 +128,7 @@ kcat -b $BOOTSTRAP_SERVER \
 -K ':' \
 -D '\n' \
 -P
+EOF
 ```
 
 Then:

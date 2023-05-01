@@ -106,12 +106,3 @@ with success. Now we clean up,
 rm AIS_2022_06_20.zip
 rm AIS_2022_06_20.csv
 ```
-
-```bash
-cat > file <<EOF
-line1
-
-line3
-
-EOF
-```
