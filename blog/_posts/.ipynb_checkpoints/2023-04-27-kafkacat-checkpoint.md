@@ -131,6 +131,12 @@ kcat -b $BOOTSTRAP_SERVER \
 EOF
 ```
 
+Kernighan and Pike, *The Unix Programming Environment*, Section 3.7:
+
+> The shell jargon for this construction is a *here document*; it means that the input is right here instead of in a file
+> somewhere. The `<<` signals the construction; the word that follows (`End` in our example) is used to delimit the input,
+> which is taken to be everything up to an occurrence of that word on a line by itself.
+
 Then:
 
 ```bash
