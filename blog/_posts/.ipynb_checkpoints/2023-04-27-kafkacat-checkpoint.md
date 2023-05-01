@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Using kafkacat with Confluent Cloud for AIS messages
+title: kafkacat with Confluent Cloud for AIS messages
 ---
 
 # kcat
@@ -119,7 +119,7 @@ cat > my_command.sh <<EOF
 
 nc 153.44.253.27 5631 | \
 gpsdecode | \
-kcat -b $BOOTSTRAP_SERVER \
+kafkacat -b $BOOTSTRAP_SERVER \
 -X security.protocol=SASL_SSL \
 -X sasl.mechanisms=PLAIN \
 -X sasl.username=$API_KEY \
@@ -153,5 +153,42 @@ In Confluent Cloud, we see after exiting OpenSSH, the EC2 instance continues to 
 Days later (Sun Apr 30 06:05:37 UTC 2023), we connect to the EC2 instance using EC2 Instance Connect. We run
 `ps aux | grep kafkacat`, set `PID= # process ID`, and `kill -s SIGKILL $PID`.
 
+Next, we do the same thing on a Google Compute Engine instance.
 
+```bash
+ENVIRONMENT_ID='env-qr9drm'
+CLUSTER_ID='lkc-nw8d2z'
+BOOTSTRAP_SERVER='pkc-419q3.us-east4.gcp.confluent.cloud:9092'
+API_KEY='3FPYLWJU5MMU2TL2'
+API_SECRET= #
 
+curl -sL --http1.1 https://cnfl.io/cli | sh -s -- latest
+confluent login --save
+confluent environment use $ENVIRONMENT_ID
+confluent kafka cluster use $CLUSTER_ID
+confluent api-key store $API_KEY $API_SECRET --resource $TOPIC_ID
+sudo apt install netcat
+sudo apt install kafkacat
+sudo apt install gpsd-clients
+
+cat > my_command.sh <<EOF
+#!/bin/bash
+# my_command.sh
+
+nc 153.44.253.27 5631 | \
+gpsdecode | \
+kafkacat -b $BOOTSTRAP_SERVER \
+-X security.protocol=SASL_SSL \
+-X sasl.mechanisms=PLAIN \
+-X sasl.username=$API_KEY \
+-X sasl.password=$API_SECRET \
+-t ais2 \
+-K ':' \
+-D '\n' \
+-P
+EOF
+
+nohup bash my_command.sh &
+```
+
+![Instance running on Google Compute Engine](/images/Confluent/ComputeEngine_kafkacat.jpeg)
