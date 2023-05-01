@@ -155,6 +155,8 @@ Days later (Sun Apr 30 06:05:37 UTC 2023), we connect to the EC2 instance using 
 
 Next, we do the same thing on a Google Compute Engine instance.
 
+![Google Compute Engine](/images/Confluent/GCP_kafkacat_cluster.jpeg)
+
 ```bash
 ENVIRONMENT_ID='env-qr9drm'
 CLUSTER_ID='lkc-nw8d2z'
