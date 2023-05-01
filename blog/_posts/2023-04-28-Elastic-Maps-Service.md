@@ -95,3 +95,7 @@ MMSI, order by timestamp.
 Below we show the tracks created thus in the Indian Ocean:
 
 ![Indian Ocean ship tracks using FleetMon sample AIS data](/images/Elastic/FleetMon_sample_data_tracks.jpeg)
+
+and the English Channel:
+
+![English Channel ship tracks using FleetMon sample AIS data](/images/Elastic/FleetMon_sample_English_Channel.jpeg)

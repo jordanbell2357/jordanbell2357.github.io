@@ -1,6 +1,6 @@
 ---
 layout: post
-title: NASA earthaccess
+title: NASA earthaccess and Xarray
 ---
 
 # Preliminaries
