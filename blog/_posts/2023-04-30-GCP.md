@@ -35,8 +35,8 @@ S3 bucket:
 
 [Discover object storage with the gsutil tool](https://cloud.google.com/storage/docs/discover-object-storage-gsutil)
 
-Using EC2 Instance Connect was not possible in my configuration, because the size of each pair of zip file and csv file is
-over 1 GB in each case. However, in my configuration of Google Cloud Platform, the 5 GB available space is enough to 
+Using EC2 Instance Connect was not possible in my AWS configuration, because the size of each pair of zip file and csv file is
+over 1 GB in each case. On the other hand, in my configuration of Google Cloud Platform, the 5 GB available space is enough to 
 store one by one the zip file and csv file.
 
 We write out the steps for June 21, 2022, in a general way.
@@ -59,9 +59,51 @@ We use `bq` thus:
 for i in {21..27}; do bq load --source_format=CSV --autodetect AIS_2022_06_21_to_27.AIS_2022_06_${i} gs://jordanbell2357marinecadastre/AIS_2022_06_${i}.csv; done
 ```
 
+Now, to make sure we can do the same task multiple ways, we will do the above locally for June 20, 2022.
 
+```bash
+curl -O https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2022/AIS_2022_06_20.zip
+unzip AIS_2022_06_20.zip
+```
 
-[gsutil](https://cloud.google.com/storage/docs/gsutil_install#deb)
+If we now run
 
+```bash
+gsutil cp AIS_2022_06_20.csv gs://jordanbell2357/marinecadastre/
+```
 
+we get
+
+```
+ResumableUploadAbortException: 401 Anonymous caller does not have storage.objects.create access to the Google Cloud Storage object. Permission 'storage.objects.create' denied on resource (or it may not exist).
+```
+
+[Initializing the gcloud CLI](https://cloud.google.com/sdk/docs/initializing)
+
+[Install gsutil](https://cloud.google.com/storage/docs/gsutil_install#deb)
+
+We run
+
+```bash
+gcloud init
+```
+
+and then run
+
+```bash
+gsutil cp AIS_2022_06_20.csv gs://jordanbell2357/marinecadastre/
+```
+
+with success. Then
+
+```bash
+bq load --source_format=CSV --autodetect AIS_2022_06_21_to_27.AIS_2022_06_20 gs://jordanbell2357marinecadastre/AIS_2022_06_20.csv
+```
+
+with success. Now we clean up,
+
+```bash
+rm AIS_2022_06_20.zip
+rm AIS_2022_06_20.csv
+```
 
