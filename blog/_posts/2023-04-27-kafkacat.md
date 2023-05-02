@@ -1,6 +1,6 @@
 ---
 layout: post
-title: kafkacat with Confluent Cloud for AIS messages
+title: kafkacat and Google Cloud Storage Sink connector with Confluent Cloud
 ---
 
 # kcat
