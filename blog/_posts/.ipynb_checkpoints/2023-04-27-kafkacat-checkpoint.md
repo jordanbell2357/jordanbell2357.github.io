@@ -1,6 +1,6 @@
 ---
 layout: post
-title: kafkacat and Google Cloud BigQuery Sink connector with Confluent Cloud
+title: kafkacat
 ---
 
 # kcat
