@@ -1,6 +1,6 @@
 ---
 layout: post
-title: kafkacat and Google Cloud Storage Sink connector with Confluent Cloud
+title: kafkacat and Google Cloud BigQuery Sink connector with Confluent Cloud
 ---
 
 # kcat
@@ -194,26 +194,3 @@ nohup bash my_command.sh &
 ```
 
 ![Instance running on Google Compute Engine](/images/Confluent/ComputeEngine_kafkacat.jpeg)
-
-Once this hit the storage limit on the trial account -- which I speculate to be 2GB because this topic had
-size 1.95GB when the storage limit was hit -- I created a 
-Google Cloud Storage bucket `kafkacat` in location `us-east4`, chosen because that is the location
-of my Confluent cluster `lkc-nw8d2z`:
-
-![Confluent Cluster](/images/Confluent/cluster.jpeg)
-
-I then created a `Google Cloud Storage Sink` connector in Confluent Cloud for this cluster `lkc-nw8d2z`, connecting
-to the bucket `kafkacat`. This runs for some time, and we end up with:
-
-![Google Cloud Storage Sink connector on Confluent Cloud](/images/Confluent/connector_done.jpeg)
-
-Checking the bucket in Google Cloud Storage, we see:
-
-![Folder created in bucket in Google Cloud Storage](/images/Confluent/bucket_folder.jpeg)
-
-![Files created in subfolders in bucket in Google Cloud Storage](/images/Confluent/bucket_files.jpeg)
-
-We then delete the connector in the Confluent Cloud cluster.
-
-Now we have the data in this semi-structured format of directoires and json files in a bucket.
-Later, we will describe the process of transforming this data to something structured in Google BigQuery.
