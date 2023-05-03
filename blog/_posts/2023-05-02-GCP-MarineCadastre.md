@@ -202,7 +202,7 @@ title: Google Cloud Platform and MarineCadastre.gov
 </tbody>
 </table>
 
-
+[AIS Fundamentals \| Spire Maritime Documentation](https://documentation.spire.com/ais-fundamentals/ais-data-sources/satellite-ais/)
 
 # Unix text processing
 
@@ -340,4 +340,27 @@ with success. Now we clean up,
 rm AIS_2022_06_20.zip
 rm AIS_2022_06_20.csv
 ```
+
+# BigQuery
+
+[Query syntax \| BigQuery](https://cloud.google.com/bigquery/docs/reference/standard-sql/query-syntax#union_example)
+
+```sql
+(SELECT MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselType,Status,Length,Width FROM ais-data-385301.AIS_2022_06_21_to_27.AIS_2022_06_21)
+UNION ALL
+(SELECT MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselType,Status,Length,Width FROM ais-data-385301.AIS_2022_06_21_to_27.AIS_2022_06_22)
+UNION ALL
+(SELECT MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselType,Status,Length,Width FROM ais-data-385301.AIS_2022_06_21_to_27.AIS_2022_06_23)
+UNION ALL
+(SELECT MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselType,Status,Length,Width FROM ais-data-385301.AIS_2022_06_21_to_27.AIS_2022_06_24)
+UNION ALL
+(SELECT MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselType,Status,Length,Width FROM ais-data-385301.AIS_2022_06_21_to_27.AIS_2022_06_25)
+UNION ALL
+(SELECT MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselType,Status,Length,Width FROM ais-data-385301.AIS_2022_06_21_to_27.AIS_2022_06_26)
+UNION ALL
+(SELECT MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselType,Status,Length,Width FROM ais-data-385301.AIS_2022_06_21_to_27.AIS_2022_06_27)
+```
+
+We save the results to a BigQuery table, creating a new table we name `union-table`
+(`ais-data-385301.AIS_2022_06_21_to_27.union-table`).
 
