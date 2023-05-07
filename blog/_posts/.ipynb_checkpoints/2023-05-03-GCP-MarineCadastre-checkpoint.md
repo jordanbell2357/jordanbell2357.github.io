@@ -361,6 +361,6 @@ UNION ALL
 (SELECT MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselType,Status,Length,Width FROM ais-data-385301.AIS_2022_06_21_to_27.AIS_2022_06_27)
 ```
 
-We save the results to a BigQuery table, creating a new table we name `union-table`
-(`ais-data-385301.AIS_2022_06_21_to_27.union-table`).
+We save the results to a BigQuery table, creating a new table we name `AIS_2022_06_21_to_27`
+(`ais-data-385301.AIS_2022_06_21_to_27.AIS_2022_06_21_to_27`).
 
