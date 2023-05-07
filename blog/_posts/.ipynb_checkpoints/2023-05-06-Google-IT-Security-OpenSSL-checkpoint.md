@@ -172,8 +172,8 @@ sed -i '$d' secret.txt
 
 Then:
 
-```bopenssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.txtash
-
+```bash
+openssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.txt
 ```
 
 gives output `Verified OK`.
