@@ -45,11 +45,15 @@ vyU3CfSKM9HFeMNsnCHsVV8p2ZOQT3JvH31Qv0bH2JE9d9Au17AZ
 -----END RSA PRIVATE KEY-----
 ```
 
-> Now, let's generate the public key from the private key, and inspect that one, too. Now that you have a private key, you need to generate a public key that goes along with it. You can give that to anyone who wants to send you encrypted data. When data is hashed using your public key, nobody will be able to decrypt it unless they have your private key. To create a public key based on a private key, enter the command below. You should see the following output ("writing RSA key"):
-
-```bash
-openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem
-```
+> Now, let's generate the public key from the private key, and inspect that one, too. Now that you have a private key, you need to generate a public key that goes along with it. You can give that to anyone who wants to send you encrypted data. When data is hashed using your public key, nobody will be able to decrypt it unless they have your private key. To create a public key based on a private key, enter the command below. You should see the following output:
+>
+> ```bash
+> openssl rsa -in private_key.pem -outform PEM -pubout -out public_key.pem
+> ```
+>
+> `writing RSA key`
+>
+> You can view the public key in the same way that you viewed the private key. It should look like a bunch of random characters, like the private key, but different and slightly shorter:
 
 ```bash
 cat public_key.pem
@@ -68,7 +72,7 @@ bQIDAQAB
 ```
 
 > You'll simulate someone encrypting a file using your public key and sending it to you, which allows you (and only you!) to decrypt it using your private key. Similarly, you can encrypt files using other people's public keys, knowing that only they will be able to decrypt them.
-
+>
 > You'll create a text file that contains some information you want to protect by encrypting it. Then, you'll encrypt and inspect it. To create the file, enter the command below. It will create a new text file called "secret.txt" which just contains the text, "This is a secret message, for authorized parties only". Feel free to change this message to anything you'd like.
 
 To practice Unix text processing, we rewrite the command in the format of a "here document".
@@ -92,17 +96,25 @@ This is a secret message, for authorized parties only!
 ```
 
 > Then, to encrypt the file using your public key, enter this command:
-
-```bash
-openssl rsautl -encrypt -pubin -inkey public_key.pem -in secret.txt -out secret.enc
-```
-
+>
+> ```bash
+> openssl rsautl -encrypt -pubin -inkey public_key.pem -in secret.txt -out secret.enc
+> ```
+>
 > This creates the file "secret.enc", which is an encrypted version of "secret.txt". Notice that if you try to view the contents of the encrypted file, the output is garbled. This is totally normal for encrypted messages because they're not meant to have their contents displayed visually.
 
 > The encrypted file will now be ready to send to whoever holds the matching private key. Since that's you, you can decrypt it and get the original contents back. Remember that we must use the private key to decrypt the message, since it was encrypted using the public key. Go ahead and decrypt the file, using this command:
+>
+> ```bash
+> openssl rsautl -decrypt -inkey private_key.pem -in secret.enc
+> ```
+>
+> This will print the contents of the decrypted file to the screen, which should match the contents of "secret.txt":
 
-```bash
-openssl rsautl -decrypt -inkey private_key.pem -in secret.enc
+```
+This is a secret message, for authorized parties only
+
+This is a secret message, for authorized parties only!
 ```
 
 > Now, you'll create a hash digest of the message, then create a digital signature of this digest. Once that's done, you'll verify the signature of the digest. This allows you to ensure that your message wasn't modified or forged. If the message was modified, the hash would be different from the signed one, and the verification would fail.
@@ -116,3 +128,52 @@ openssl dgst -sha256 -sign private_key.pem -out secret.txt.sha256 secret.txt
 > This creates a file called "secret.txt.sha256" using your private key, which contains the hash digest of your secret text file.
 >
 > With this file, anyone can use your public key and the hash digest to verify that the file hasn't been modified since you created and hashed it. To perform this verification, enter this command:
+
+```bash
+openssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.txt
+```
+
+> This should show the following output, indicating that the verification was successful and the file hasn't been modified by a malicious third party:
+>
+> `Verified OK`
+>
+> If any other output was shown, it would indicate that the contents of the file had been changed, and it's likely no longer safe.
+
+We modify `secret.txt`:
+
+```bash
+echo "Another line" >> secret.txt
+```
+
+```
+cat secret.txt
+```
+
+```
+This is a secret message, for authorized parties only
+
+This is a secret message, for authorized parties only!
+Another line
+```
+
+Now we check that `secret.txt` is not the file corresponding to the hash `secret.txt.sha256`:
+
+```bash
+openssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.txt
+```
+
+`Verification Failure`
+
+We delete the last line of the file:
+
+```bash
+sed -i '$d' secret.txt
+```
+
+Then:
+
+```bopenssl dgst -sha256 -verify public_key.pem -signature secret.txt.sha256 secret.txtash
+
+```
+
+gives output `Verified OK`.
