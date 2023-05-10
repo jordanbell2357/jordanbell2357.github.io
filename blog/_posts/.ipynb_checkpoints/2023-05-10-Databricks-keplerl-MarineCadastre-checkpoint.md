@@ -7,7 +7,7 @@ title: Databricks keplergl and MarineCadastre.gov
 
 AIS data for June 2022: 
 
-![June 2022](/images/MarineCadastre/keplergl-MarineCadase.png)
+![June 2022](/images/MarineCadastre/keplergl-MarineCadastre.png)
 
 AIS data for June 2022 CONUS:
 
