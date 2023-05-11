@@ -13,4 +13,4 @@ title: National Geospatial-Intelligence Agency (NGA) World Port Index (Pub 150) 
 
 ![df_reduced_north_america](/images/NGA/df_reduced_north_america.png)
 
-![Kepler.gl](/images/NGA/keplergl-df_reduced_north_america.png)
+![Kepler.gl](/images/NGA/keplergl-WPI.jpeg)
