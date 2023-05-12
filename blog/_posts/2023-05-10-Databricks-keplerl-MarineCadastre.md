@@ -7,6 +7,8 @@ title: Databricks keplergl and MarineCadastre.gov
 
 [MarineCadastre.gov Data Registry](https://marinecadastre.gov/data/)
 
+[Office for Coastal Management, 2023: Nationwide Automatic Identification System 2022, https://www.fisheries.noaa.gov/inport/item/67336](https://www.fisheries.noaa.gov/inport/item/67336)
+
 AIS data for June 2022: 
 
 ![June 2022](/images/MarineCadastre/keplergl-MarineCadastre.jpeg)
