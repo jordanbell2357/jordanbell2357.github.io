@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Databricks keplergl and MarineCadastre.gov
+title: MarineCadastre.gov AIS data and keplergl on Databricks
 ---
 
 [Leveraging ESG Data to Operationalize Sustainability. November 11, 2020. Antoine Amend. Databricks](https://www.databricks.com/blog/2020/11/11/leveraging-esg-data-to-operationalize-sustainability.html)
@@ -16,3 +16,7 @@ AIS data for June 2022:
 AIS cargo data for June 2022: 
 
 ![June 2022 cargo](/images/MarineCadastre/keplergl-MarineCadastre-cargo.jpeg)
+
+Sessionized cargo vessel messages for June 2022:
+
+![Sessionized cargo vessel messages for June 2022](/images/MarineCadastre/dbc-9528dae4-a240.cloud.databricks.com.jpeg)
