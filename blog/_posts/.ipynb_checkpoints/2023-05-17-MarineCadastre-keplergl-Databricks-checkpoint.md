@@ -21,6 +21,11 @@ Sessionized cargo vessel messages for June 2022, using keplergl:
 
 ![Sessionized cargo vessel messages for June 2022](/images/MarineCadastre/dbc-9528dae4-a240.cloud.databricks.com.jpeg)
 
+Sessionized cargo vessel messages for June 2022, using keplergl:
+
+![Sessionized cargo vessel messages for June 2022, using keplergl](/images/MarineCadastre/dbc-9528dae4-a240.cloud.databricks.com_zoom.jpeg)
+
 Sessionized cargo vessel messages for June 2022, using GeoPandas:
 
 ![Sessionized cargo vessel messages for June 2022, using GeoPandas](/images/MarineCadastre/geopandas_sessionizing_june_2022.png)
+
