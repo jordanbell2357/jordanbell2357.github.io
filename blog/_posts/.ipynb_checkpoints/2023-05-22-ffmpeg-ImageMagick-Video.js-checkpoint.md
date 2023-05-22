@@ -44,15 +44,15 @@ This script will create 30 images for the progress bars named `progress_*.png`. 
 
 This is a map of AIS messages from MarineCadastre.gov, downsampled to 1 day frequency, for the 30 days of June 2022.
 
-<body>
+
   <video
     id="my-video"
     class="video-js"
     controls
     preload="auto"
-    width="640"
-    height="264"
-    poster="/images/FFmpeg/ais_june_choropleth_1.png"
+    width="100%"
+    height="350"
+    poster="/images/FFmpeg/ais_june_choropleth_progress_15.png"
     data-setup="{}"
   >
     <source src="/images/FFmpeg/ais_june_choropleth.mp4" type="video/mp4" />
@@ -68,7 +68,6 @@ This is a map of AIS messages from MarineCadastre.gov, downsampled to 1 day freq
   <script>
     var player = videojs('my-video');
   </script>
-</body>
 
 ```html
 <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
@@ -80,9 +79,9 @@ This is a map of AIS messages from MarineCadastre.gov, downsampled to 1 day freq
     class="video-js"
     controls
     preload="auto"
-    width="640"
-    height="264"
-    poster="/images/FFmpeg/ais_june_choropleth_1.png"
+    width="100%"
+    height="350"
+    poster="/images/FFmpeg/ais_june_choropleth_progress_15.png"
     data-setup="{}"
   >
     <source src="/images/FFmpeg/ais_june_choropleth.mp4" type="video/mp4" />
