@@ -48,8 +48,8 @@ These are first, a map of all AIS messages from MarineCadastre.gov, downsampled 
     class="video-js"
     controls
     preload="auto"
-    width="100%"
-    height="264"
+    width="500"
+    height="250"
     poster="/images/FFmpeg/ais_june_choropleth_progress_15.png"
     data-setup="{}"
   >
@@ -74,8 +74,8 @@ These are first, a map of all AIS messages from MarineCadastre.gov, downsampled 
     class="video-js"
     controls
     preload="auto"
-    width="640"
-    height="264"
+    width="500"
+    height="250"
     poster="/images/FFmpeg/ais_june_cargo_choropleth_progress_15.png"
     data-setup="{}"
   >
