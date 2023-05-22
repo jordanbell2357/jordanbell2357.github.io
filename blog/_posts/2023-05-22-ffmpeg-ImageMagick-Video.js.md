@@ -19,7 +19,7 @@ for i in {1..30}; do
     convert -size 1000x200 xc:grey50 -fill "rgb(100,149,237)" -draw "rectangle 0,0 $progress,200" progress_$(printf "%02d" $i).png
 done
 
-width=2000  # change this to the width of your original images
+width=1440  # width of original images
 
 # Overlay progress bar onto each image, create new image
 for i in {1..30}; do
