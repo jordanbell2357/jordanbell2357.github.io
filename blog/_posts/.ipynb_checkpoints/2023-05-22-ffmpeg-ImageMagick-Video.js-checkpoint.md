@@ -1,6 +1,6 @@
 ---
 layout: post
-title: FFmpeg and ImageMagick
+title: ffmpeg, ImageMagick, and Video.js
 ---
 
 <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
@@ -9,6 +9,8 @@ title: FFmpeg and ImageMagick
 [ffmpeg Documentation](https://ffmpeg.org/ffmpeg.html)
 
 [Convert Between Image Formats \| ImageMagick](https://imagemagick.org/script/convert.php)
+
+[Video.js Options Reference](https://videojs.com/guides/options/)
 
 ```bash
 # Create 30 images with increasing filled progress bars
@@ -36,6 +38,12 @@ rm progress_*.png
 rm ais_june_choropleth_progress_*.png
 ```
 
+In this script, the `$(printf "%02d" $i)` part is only used for the progress bar images and the final composited images, which will always have filenames with zero-padded numbers. But the original image filenames are referenced as they are (i.e., `ais_june_choropleth_$i.png`), preserving the original non-zero-padded format.
+
+This script will create 30 images for the progress bars named `progress_*.png`. It will then overlay these progress bars onto the original images and save the result as `ais_june_choropleth_progress_*.png`. Finally, it will compile these composite images into a video and clean up the temporary images.
+
+This is a map of AIS messages from MarineCadastre.gov, downsampled to 1 day frequency, for the 30 days of June 2022.
+
 <body>
   <video
     id="my-video"
@@ -61,3 +69,34 @@ rm ais_june_choropleth_progress_*.png
     var player = videojs('my-video');
   </script>
 </body>
+
+```html
+<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+
+<body>
+  <video
+    id="my-video"
+    class="video-js"
+    controls
+    preload="auto"
+    width="640"
+    height="264"
+    poster="/images/FFmpeg/ais_june_choropleth_1.png"
+    data-setup="{}"
+  >
+    <source src="/images/FFmpeg/ais_june_choropleth.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+
+  <script>
+    var player = videojs('my-video');
+  </script>
+</body>
+```
