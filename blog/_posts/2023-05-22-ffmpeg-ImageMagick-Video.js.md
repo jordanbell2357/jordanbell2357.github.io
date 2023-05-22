@@ -44,7 +44,6 @@ This script will create 30 images for the progress bars named `progress_*.png`. 
 
 These are first, a map of all AIS messages from MarineCadastre.gov, downsampled to 1 day frequency, for the 30 days of June 2022, and second, filtered to cargo vessels (VesselType = 70).
 
-<body>
   <video
     id="my-video"
     class="video-js"
@@ -68,9 +67,9 @@ These are first, a map of all AIS messages from MarineCadastre.gov, downsampled 
   <script>
     var player = videojs('my-video');
   </script>
-</body>
 
-<body>
+---
+
   <video
     id="my-video"
     class="video-js"
@@ -94,8 +93,6 @@ These are first, a map of all AIS messages from MarineCadastre.gov, downsampled 
   <script>
     var player = videojs('my-video');
   </script>
-</body>
-
 
 ```html
 <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
