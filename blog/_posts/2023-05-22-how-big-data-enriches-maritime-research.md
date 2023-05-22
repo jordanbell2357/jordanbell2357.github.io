@@ -5,6 +5,8 @@ title: How big data enriches maritime research – a critical review of Automati
 
 Yang, D., Wu, L., Wang, S., Jia, H., & Li, K. X. (2019). *How big data enriches maritime research – a critical review of Automatic Identification System (AIS) data applications*. Transport Reviews **39**, no. 6, 755-773. doi: [10.1080/01441647.2019.1649315](https://doi.org/10.1080/01441647.2019.1649315)
 
+pp. 3-4:
+
 > AIS was developed in the 1990s, with the primary goal of preventing ship collisions and
 > enhancing navigation safety. Through the use of VHF, ships equipped with AIS can broadcast
 > and receive messages to and from other ships or coastal authorities that are also
@@ -30,10 +32,8 @@ Yang, D., Wu, L., Wang, S., Jia, H., & Li, K. X. (2019). *How big data enriches 
 > a detailed classification and description of these data fields.
 
 <table>
+  <caption>Table 2. Attributes of AIS data.</caption>
   <thead>
-    <tr>
-      <th>Table 2. Attributes of AIS data.</th>
-    </tr>
     <tr>
       <th>Data field</th>
       <th>Type</th>
@@ -98,3 +98,88 @@ Yang, D., Wu, L., Wang, S., Jia, H., & Li, K. X. (2019). *How big data enriches 
     </tr>
   </tbody>
 </table>
+
+p. 6:
+
+> One practical difficulty in applying AIS data is that the volume of data is extremely large,
+> even for traffic data within a restricted geographical area covering a short period. For
+> example, if AIS data is transmitted every 10 s, then a total of over 3 million records
+> can be generated for a single ship in 1 year. The AIS data for 5000 ships over 3 years
+> includes approximately 40 billion records. Therefore, AIS data mining is the research
+> basis of many relevant studies. AIS was initially introduced to avoid ship collisions and
+> improve navigation safety and this serves as the most basic application of AIS data.
+> Because this part has already been reviewed by Tu et al. (2018), Sidibé and Shu (2017)
+> and Zhao et al. (2014), in this section we only briefly explain the ideas and review the
+> most up-to-date studies.
+
+p. 7:
+
+> Data mining is a knowledge extraction process based on raw data. Raw AIS data comprises
+> a group of spatially and temporarily scattered points from which only limited information
+> can be directly obtained. Therefore, data mining is significant for AIS data and provides the
+> foundation for the majority of studies based on AIS data. The most common methods for
+> processing and mining AIS data include trajectory extraction, trajectory clustering, and trajectory prediction.
+>
+> Trajectory extraction and clustering play a vital role in AIS data applications because
+> they form the foundation of many further studies (including trajectory prediction and
+> analysis, anomaly detection, and collision avoidance). Trajectory extraction refers to the
+> construction of a ship’s trajectory based on the reported spatiotemporal sequence data.
+> Trajectory clustering is based on the extraction results, which refers to the algorithms
+> for grouping similar trajectories as a whole, thereby discovering common trajectories
+> (Lee, Han, & Whang, 2007). Trajectory extraction and clustering using AIS data have elicited
+> considerable attention in the literature, and the most recent explorations include those of
+> Arguedas et al. (2018) and Wang, Zhu, Zhou, and Zhang (2017).
+>
+> Based on trajectory extraction and clustering, trajectory prediction can be carried out to
+> predict a ship’s short-term future position and trajectory. Trajectory prediction enables
+> navigators or coastal authorities to detect possible threats and take preventive actions
+> as early as possible. A route prediction algorithm based on the Ornstein-Uhlenbeck stochastic process
+> was proposed by Pallotta, Horn, Braca, and Bryan (2014), in which historical
+> trajectories extracted from raw AIS data were used to estimate the parameters of the
+> algorithm.
+
+p. 11:
+
+> With its increasing availability and completeness, AIS data can provide more detailed and
+> timely trade statistics compared with traditional data sources (e.g. official customs data
+> and port throughput data). Thus, Adland et al. (2017) adopted AIS data as an alternative
+> statistic source for global trade analyses. An empirical study based on crude oil export statistics
+> was conducted in their research. Jia, Lampe, Solteszova, and Strandenes (2017) proposed
+> an algorithm for automatically generating seaborne transport pattern maps based
+> on AIS data. The algorithm automatically detects major ports and zones and aggregates
+> “real-time” trade flows among them. Prochazka and Adland (2017) used AIS data to
+> analyse the location distribution of VLCC oil tankers on a global level.
+
+p. 14
+
+> Data mining focuses on deriving knowledge from raw AIS data. The most basic
+> methods for AIS data mining are trajectory extraction, clustering, and prediction. Many
+> applications, including anomaly detection (Zhen et al., 2017), maritime monitoring
+> (Perera et al., 2012), and shipping density analyses (Kaluza et al., 2010), have been
+> implemented based on trajectory extraction or prediction results. Visualisation techniques
+> have also been utilised in AIS data studies to improve maritime monitoring (Pan et al.,
+> 2012) or help analyse trade trends (Jia, Lampe, et al., 2017).
+>
+> The AIS provides data that records shipping activities with unparalleled high resolution.
+> This data not only makes shipping activities more visible but also makes them more analysable.
+> Many studies have developed methods of building evaluation indices to measure
+> the performance of shipping activities by using AIS data. These methods and applications
+> include ship domain construction (Hansen et al., 2013), collision risk assessment (Li et al.,
+> 2018), ship emission inventory (Winther et al., 2014), oil spill risk assessment (Eide et al.,
+> 2007), evaluation of green shipping policies (Jia, Adland, et al., 2017), and Arctic shipping
+> trend analysis (Eguíluz et al., 2016).
+
+p. 16:
+
+> From the viewpoint of improving fleet productivity by way of increasing capacity utilisation,
+> particularly in tramp shipping, choosing the port to which to reposition an empty
+> ship is one of the most important decisions. This is both an operational issue faced by shipping
+> companies and an interesting research topic. With the trend of increasing vessel sizes
+> and orderbooks, it has been suggested that the world tanker fleet currently only has half of
+> the productivity of that in the 1970s (Stopford, 2018). Low capacity utilisation resulting
+> from a high proportion of ballast voyages and low load factor in laden voyages, may be
+> one of the reasons. However, due to the lack of availability of cargo size data on actual
+> vessel voyages, such line of research hardly exists. The draft information from AIS is a valu-
+> able factor in estimating cargo sizes (Jia, Prakash, et al., 2018). Thus, the transparency provided
+> by AIS data allows researchers to examine shipping market dynamics from the micro
+> level, as opposed to relying on assumptions in the literature.
