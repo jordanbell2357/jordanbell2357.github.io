@@ -41,7 +41,7 @@ In this script, the `$(printf "%02d" $i)` part is only used for the progress bar
 
 This script will create 30 images for the progress bars named `progress_*.png`. It will then overlay these progress bars onto the original images and save the result as `ais_june_choropleth_progress_*.png`. Finally, it will compile these composite images into a video and clean up the temporary images.
 
-These are first, a map of all AIS messages from MarineCadastre.gov, downsampled to 1 day frequency, for the 30 days of June 2022, and second, filtered to cargo vessels (VesselType = 70).
+These are first, a map of all AIS messages from MarineCadastre.gov, downsampled to 1 day frequency, for the 30 days of June 2022, and second, filtered to cargo vessels (VesselType = 70). Daily density plots made using h3 on Databricks.
 
   <video
     id="my-video1"
