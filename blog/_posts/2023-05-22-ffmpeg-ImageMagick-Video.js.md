@@ -10,7 +10,6 @@ title: ffmpeg, ImageMagick, and Video.js
 
 [Convert Between Image Formats \| ImageMagick](https://imagemagick.org/script/convert.php)
 
-[Video.js Options Reference](https://videojs.com/guides/options/)
 
 ```bash
 # Create 30 images with increasing filled progress bars
@@ -45,11 +44,11 @@ This script will create 30 images for the progress bars named `progress_*.png`. 
 These are first, a map of all AIS messages from MarineCadastre.gov, downsampled to 1 day frequency, for the 30 days of June 2022, and second, filtered to cargo vessels (VesselType = 70).
 
   <video
-    id="my-video"
+    id="my-video1"
     class="video-js"
     controls
     preload="auto"
-    width="640"
+    width="100%"
     height="264"
     poster="/images/FFmpeg/ais_june_choropleth_progress_15.png"
     data-setup="{}"
@@ -65,13 +64,13 @@ These are first, a map of all AIS messages from MarineCadastre.gov, downsampled 
   </video>
 
   <script>
-    var player = videojs('my-video');
+    var player = videojs('my-video1');
   </script>
 
 ---
 
   <video
-    id="my-video"
+    id="my-video2"
     class="video-js"
     controls
     preload="auto"
@@ -91,8 +90,10 @@ These are first, a map of all AIS messages from MarineCadastre.gov, downsampled 
   </video>
 
   <script>
-    var player = videojs('my-video');
+    var player = videojs('my-video2');
   </script>
+
+[Video.js Options Reference](https://videojs.com/guides/options/)
 
 ```html
 <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
