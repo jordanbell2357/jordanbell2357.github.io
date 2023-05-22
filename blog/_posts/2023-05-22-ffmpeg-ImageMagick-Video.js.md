@@ -50,8 +50,8 @@ This is a map of AIS messages from MarineCadastre.gov, downsampled to 1 day freq
     class="video-js"
     controls
     preload="auto"
-    width="100%"
-    height="350"
+    width="640"
+    height="264"
     poster="/images/FFmpeg/ais_june_choropleth_progress_15.png"
     data-setup="{}"
   >
@@ -80,8 +80,8 @@ This is a map of AIS messages from MarineCadastre.gov, downsampled to 1 day freq
     class="video-js"
     controls
     preload="auto"
-    width="100%"
-    height="350"
+    width="640"
+    height="264"
     poster="/images/FFmpeg/ais_june_choropleth_progress_15.png"
     data-setup="{}"
   >
