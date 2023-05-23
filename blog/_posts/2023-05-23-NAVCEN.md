@@ -7,4 +7,6 @@ title: U.S. Coast Guard Navigation Center
 
 [NAVCEN \| NIST](https://csrc.nist.gov/glossary/term/navcen)
 
+[Class A Reports \| NAVCEN](https://navcen.uscg.gov/ais-class-a-reports)
+
 
