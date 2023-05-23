@@ -6,6 +6,109 @@ title: Rec. ITU-R M.1371-5
 [M.1371 : Technical characteristics for an automatic identification system using time division multiple access in the VHF maritime mobile frequency band (Rec. ITU-R M.1371-5) \| ITU](https://www.itu.int/rec/R-REC-M.1371-5-201402-I/en)
 
 <table>
+  <caption>Table 1: Class A shipborne mobile equipment reporting intervals</caption>
+  <thead>
+    <tr>
+      <th>Ship’s dynamic conditions</th>
+      <th>Nominal reporting interval</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Ship at anchor or moored and not moving faster than 3 knots</td>
+      <td>3 min</td>
+    </tr>
+    <tr>
+      <td>Ship at anchor or moored and moving faster than 3 knots</td>
+      <td>10 s</td>
+    </tr>
+    <tr>
+      <td>Ship 0-14 knots</td>
+      <td>10 s</td>
+    </tr>
+    <tr>
+      <td>Ship 0-14 knots and changing course</td>
+      <td>3 1/3 s</td>
+    </tr>
+    <tr>
+      <td>Ship 14-23 knots</td>
+      <td>6 s</td>
+    </tr>
+    <tr>
+      <td>Ship 14-23 knots and changing course</td>
+      <td>2 s</td>
+    </tr>
+    <tr>
+      <td>Ship > 23 knots</td>
+      <td>2 s</td>
+    </tr>
+    <tr>
+      <td>Ship > 23 knots and changing course</td>
+      <td>2 s</td>
+    </tr>
+  </tbody>
+</table>
+
+<table>
+  <caption>Table 2: Reporting intervals for equipment other than Class A shipborne mobile equipment</caption>
+  <thead>
+    <tr>
+      <th>Platform’s condition</th>
+      <th>Nominal reporting interval</th>
+      <th>Increased reporting interval</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Class B "SO" shipborne mobile equipment not moving faster than 2 knots</td>
+      <td>3 min</td>
+      <td>3 min</td>
+    </tr>
+    <tr>
+      <td>Class B "SO" shipborne mobile equipment moving 2-14 knots</td>
+      <td>30 s</td>
+      <td>30 s</td>
+    </tr>
+    <tr>
+      <td>Class B "SO" shipborne mobile equipment moving 14-23 knots</td>
+      <td>15 s</td>
+      <td>30 s</td>
+    </tr>
+    <tr>
+      <td>Class B "SO" shipborne mobile equipment moving >23 knots</td>
+      <td>5 s</td>
+      <td>15 s</td>
+    </tr>
+    <tr>
+      <td>Class B "CS" shipborne mobile equipment not moving faster than 2 knots</td>
+      <td>3 min</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Class B "CS" shipborne mobile equipment moving faster than 2 knots</td>
+      <td>30 s</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Search and rescue aircraft (airborne mobile equipment)</td>
+      <td>10 s</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>Aids to navigation</td>
+      <td>3 min</td>
+      <td>-</td>
+    </tr>
+    <tr>
+      <td>AIS base station</td>
+      <td>10 s</td>
+      <td>-</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<table>
   <caption>Table 48</caption>
   <tr>
     <th>Parameter</th>
