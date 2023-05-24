@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Quadratic fields in Sage
+topic: mathematics
 ---
 
 [Number fields - Constructions \| Sage Reference Manual](https://doc.sagemath.org/html/en/constructions/number_fields.html)

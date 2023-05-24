@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Continued fractions in Sage
+topic: mathematics
 ---
 
 [Continued fractions - Diophantine approximation \| Sage Reference Manual](https://doc.sagemath.org/html/en/reference/diophantine_approximation/sage/rings/continued_fraction.html)

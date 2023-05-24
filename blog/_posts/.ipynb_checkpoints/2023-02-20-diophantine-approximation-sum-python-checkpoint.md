@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Diophantine approximation sum plots
+topic: mathematics
 ---
 
 ```python3

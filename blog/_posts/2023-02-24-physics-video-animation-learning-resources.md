@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Physics video and animation learning resources
+topic: learning-content
 ---
 
 # LivePhoto Physics Project
