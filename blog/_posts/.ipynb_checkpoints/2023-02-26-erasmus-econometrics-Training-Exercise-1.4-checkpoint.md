@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Erasmus Econometrics Training Exercise 1.4
+topic: training
 ---
 
 > Consider the situation where the $$x$$-variable is observed with measurement error, which is rather common for complex macroeconomic variables like national income.

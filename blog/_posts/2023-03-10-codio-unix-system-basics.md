@@ -1,6 +1,7 @@
 ---
 layout: post
-title: My favorite material from Codio's Unix System Basics on Coursera 
+title: My favorite material from Codio's Unix System Basics on Coursera
+topic: training
 ---
 
 [Unix System Basics \| Codio](https://www.coursera.org/learn/codio-unix-system-basics)

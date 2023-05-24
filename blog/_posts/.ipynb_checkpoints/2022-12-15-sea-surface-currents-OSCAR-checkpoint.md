@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Sea surface currents derived from OSCAR
+topic: maps
 ---
 
 - [Twitter](#twitter)

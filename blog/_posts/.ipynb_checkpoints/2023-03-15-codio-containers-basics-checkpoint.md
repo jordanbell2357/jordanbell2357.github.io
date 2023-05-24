@@ -1,6 +1,7 @@
 ---
 layout: post
-title: My favorite material from Codio's Container Basics on Coursera 
+title: My favorite material from Codio's Container Basics on Coursera
+topic: training
 ---
 
 [Container Creation and Orchestration Basics \| Codio](https://www.coursera.org/learn/codio-container-creation-and-orchestration-basics)

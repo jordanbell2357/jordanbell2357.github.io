@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bash variables
+topic: cli
 ---
 
 `cat vars.sh`

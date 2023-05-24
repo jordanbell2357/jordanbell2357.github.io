@@ -10,7 +10,7 @@ layout: home
 
 This website is the anchor for my internet presence and a platform for my writings, projects, and notebooks.
 
-# Post topics
+# Topics
 
 <ul class="topic_list">
   {% for topic in site.data.topics %}

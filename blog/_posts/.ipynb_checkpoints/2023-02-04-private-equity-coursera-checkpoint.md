@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Private Equity and Venture Capital by Università Bocconi
+topic: training
 ---
 
 [Private Equity and Venture Capital by Università Bocconi](https://www.coursera.org/learn/private-equity)

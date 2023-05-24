@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pitney Bowes Parcel Shipping Index
+topic: datasets
 ---
 
 [Pitney Bowes Parcel Shipping Index Forecasts a 20 Percent Increase in Volume by 2018 \| November 15, 2016](https://news.pb.com/article_display.cfm?article_id=5730)
