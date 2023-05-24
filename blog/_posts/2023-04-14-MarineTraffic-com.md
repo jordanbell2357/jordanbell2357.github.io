@@ -1,6 +1,9 @@
 ---
 layout: post
 title: MarineTraffic.com
+topics:
+  - maps
+  - datasets
 ---
 
 [Toti waters host international cable-laying ship. February 2, 2023. South Coast Sun. Vusi Mthalane](https://southcoastsun.co.za/225382/toti-waters-host-international-cable-laying-ship/)

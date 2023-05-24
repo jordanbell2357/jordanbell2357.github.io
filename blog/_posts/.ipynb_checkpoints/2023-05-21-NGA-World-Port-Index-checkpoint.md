@@ -1,6 +1,9 @@
 ---
 layout: post
 title: National Geospatial-Intelligence Agency (NGA) World Port Index (Pub 150) (WPI)
+topics:
+  - datasets
+  - maps
 ---
 
 [National Geospatial-Intelligence Agency (NGA) Maritime Safety Information](https://msi.nga.mil/)

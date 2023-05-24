@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Confluent Cloud
+topics:
+  - ais
+  - cli
 ---
 
 [Install the Confluent CLI \| Confluent Documentation](https://docs.confluent.io/confluent-cli/current/install.html)

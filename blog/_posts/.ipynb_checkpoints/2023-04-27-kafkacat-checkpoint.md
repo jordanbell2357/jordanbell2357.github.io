@@ -1,6 +1,9 @@
 ---
 layout: post
 title: kafkacat
+topics:
+  - ais
+  - cli
 ---
 
 # kcat

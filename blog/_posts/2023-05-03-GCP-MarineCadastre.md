@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Google Cloud Platform and MarineCadastre.gov
+topics:
+  - ais
+  - datasets
 ---
 
 # MarineCadastre.gov

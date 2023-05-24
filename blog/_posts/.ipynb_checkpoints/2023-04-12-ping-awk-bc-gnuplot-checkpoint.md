@@ -1,6 +1,8 @@
 ---
 layout: post
 title: Transforming and exploring ping output with awk, bc and Gnuplot
+topics:
+  - cli
 ---
 
 # ping

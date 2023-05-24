@@ -1,6 +1,11 @@
 ---
 layout: post
-title: "Mariquant: Creating sea routes from the sea of AIS data" 
+title: "Mariquant: Creating sea routes from the sea of AIS data"
+topics:
+  - ais
+  - readings
+  - datasets
+  - maps
 ---
 
 This post is a gloss on:
