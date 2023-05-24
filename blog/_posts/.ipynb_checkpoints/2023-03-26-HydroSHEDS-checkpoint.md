@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HydroSHEDS
+topic: datasets
 ---
 
 [HydroLAKES \| HydroSHEDS](https://www.hydrosheds.org/products/hydrolakes)

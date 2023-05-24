@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Elastic Maps Service
-topics:
-  - maps
+topic: maps
 ---
 
 # Kibana Sample Data Flights

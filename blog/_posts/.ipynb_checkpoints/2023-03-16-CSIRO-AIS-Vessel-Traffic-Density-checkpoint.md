@@ -1,6 +1,7 @@
 ---
 layout: post
 title: CSIRO Vessel Traffic Density from AIS Data
+topic: datasets
 ---
 
 # Vessel Traffic Density from AIS Data (2013-2015)

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Erasmus Econometrics Training Exercise 2.2
+topic: training
 ---
 
 > In the wage database, education is measured in terms of a single variable ‘Educ’ with values 1, 2, 3, and 4. The

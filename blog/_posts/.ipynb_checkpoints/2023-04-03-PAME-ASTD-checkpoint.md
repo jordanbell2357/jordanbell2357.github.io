@@ -1,10 +1,7 @@
 ---
 layout: post
 title: PAME Arctic Ship Traffic Data (ASTD)
-topics:
-  - maps
-  - datasets
-  - cli
+topic: maps
 ---
 
 [Arctic Shipping Status Reports \| PAME](https://pame.is/projects-new/arctic-shipping/pame-shipping-highlights/411-arctic-shipping-status-reports)

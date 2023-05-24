@@ -1,11 +1,7 @@
 ---
 layout: post
 title: Kystverket AIS data using OpenCPN, ncat, gpsd, and jq
-topics:
-  - cli
-  - datasets
-  - ais
-  - maps
+topic: cli
 ---
 
 [Access to AIS data \| Kystverket](https://www.kystverket.no/en/navigation-and-monitoring/ais/access-to-ais-data/)

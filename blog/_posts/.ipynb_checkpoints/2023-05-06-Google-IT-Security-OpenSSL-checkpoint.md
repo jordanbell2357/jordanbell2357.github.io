@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Google IT Security OpenSSL
+topic: cli
 ---
 
 > First, let's generate a 2048-bit RSA private key, and take a look at it. To generate the key, enter this command into the terminal:

@@ -1,10 +1,7 @@
 ---
 layout: post
 title: MarineCadastre.gov AIS data and keplergl on Databricks
-topics:
-  - ais
-  - maps
-  - MarineCadastre
+topic: ais
 ---
 
 [Leveraging ESG Data to Operationalize Sustainability. November 11, 2020. Antoine Amend. Databricks](https://www.databricks.com/blog/2020/11/11/leveraging-esg-data-to-operationalize-sustainability.html)

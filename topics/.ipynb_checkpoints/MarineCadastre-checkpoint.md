@@ -1,6 +1,6 @@
 ---
 layout: default
-title: MarineCadastre.gov
+title: MarineCadastre.gov 2022 National AIS at 1 Minute Intervals
 permalink: /topics/MarineCadastre/
 ---
 

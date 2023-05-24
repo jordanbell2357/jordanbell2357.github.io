@@ -1,6 +1,7 @@
 ---
 layout: post
 title: MarineCadastre.gov AIS Vessel Tracks using GDAL and QGIS
+topic: maps
 ---
 
 [AccessAIS \| BOEM, NOAA, U.S. Coast Guard Navigation Center](https://marinecadastre.gov/accessais/)

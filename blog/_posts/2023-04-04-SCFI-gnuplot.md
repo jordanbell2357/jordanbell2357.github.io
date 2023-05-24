@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Shanghai Containerized Freight Index (SCFI) (上海出口集装箱运价指数) using Gnuplot
-topics:
-  - cli
-  - datasets
+topic: datasets
 ---
 
 [Shanghai Containerized Freight Index (SCFI) = 上海出口集装箱运价指数(SCFI)](https://en.sse.net.cn/home)

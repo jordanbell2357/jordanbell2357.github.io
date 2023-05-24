@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Danish Maritime Authority (DMA) AIS data using Ocean Data View
+topic: datasets
 ---
 
 <https://dma.dk/safety-at-sea/navigational-information/download-data>

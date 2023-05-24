@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Australian Maritime Safety Authority (AMSA) AIS Vessel Tracking Data
+topic: datasets
 ---
 
 [Vessel Tracking Data \| Spatial@AMSA](https://www.operations.amsa.gov.au/Spatial/DataServices/DigitalData)

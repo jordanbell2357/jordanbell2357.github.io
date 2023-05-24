@@ -1,10 +1,7 @@
 ---
 layout: post
 title: UK Marine Management Organisation (MMO) AIS Data
-topics:
-  - maps
-  - datasets
-  - ais
+topic: datasets
 ---
 
 # MMO 1066

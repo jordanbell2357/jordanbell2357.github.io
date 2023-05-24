@@ -1,9 +1,7 @@
 ---
 layout: post
 title: GEBCO 2022 Using Panoply
-topics:
-  - maps
-  - datasets
+topic: datasets
 ---
 
 [GEBCO 2022 Grid - With ice surface elevation](https://www.gebco.net/data_and_products/gridded_bathymetry_data/)

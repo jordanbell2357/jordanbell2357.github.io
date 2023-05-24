@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HELCOM Ship traffic intensity 2006 - 2020
+topic: datasets
 ---
 
 [About us - HELCOM](https://helcom.fi/about-us/):

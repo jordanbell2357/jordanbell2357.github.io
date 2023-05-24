@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Snowflake Datalake Workshop (DLKW)
-topics:
-  - maps
-  - training
+topic: training
 ---
 
 [ESS-DLKW Badge 4: Data Lake Workshop](https://learn.snowflake.com)

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: VLIMAR Marine Regions
+topic: datasets
 ---
 
 [Marine Regions](https://www.marineregions.org/about.php)

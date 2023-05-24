@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Cisco Annual Internet Report, 2018–2023 using Gnuplot
-topics:
-  - cli
-  - datasets
+topic: datasets
 ---
 
 [Cisco Annual Internet Report](https://www.cisco.com/c/en/us/solutions/executive-perspectives/annual-internet-report/index.html)

@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Google IT Security md5sum and shasum
-topics:
-  - training
-  - cli
+topic: cli
 ---
 
 ```bash

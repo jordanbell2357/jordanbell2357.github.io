@@ -1,9 +1,7 @@
 ---
 layout: post
 title: China Maritime Safety Administration (MSA) (中华人民共和国海事局)
-topics:
-  - maps
-  - datasets
+topic: maps
 ---
 
 [China Maritime Safety Administration (MSA) (中华人民共和国海事局)](https://en.msa.gov.cn/)

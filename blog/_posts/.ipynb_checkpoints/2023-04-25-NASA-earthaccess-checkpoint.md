@@ -1,9 +1,7 @@
 ---
 layout: post
 title: NASA earthaccess and Xarray
-topics:
-  - maps
-  - datasets
+topic: datasets
 ---
 
 # Preliminaries

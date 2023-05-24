@@ -1,8 +1,7 @@
 ---
 layout: post
 title: Denizcilik Genel Müdürlüğü (DGM) Turkish Straits Vessel Traffic Statistics
-topics:
-  - datasets
+topic: datasets
 ---
 
 # Organizations

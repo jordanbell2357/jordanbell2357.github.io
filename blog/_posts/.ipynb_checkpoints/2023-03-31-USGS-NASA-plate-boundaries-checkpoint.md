@@ -1,9 +1,7 @@
 ---
 layout: post
 title: USGS and NASA tectonic plate boundaries
-topics:
-  - maps
-  - datasets
+topic: datasets
 ---
 
 # USGS

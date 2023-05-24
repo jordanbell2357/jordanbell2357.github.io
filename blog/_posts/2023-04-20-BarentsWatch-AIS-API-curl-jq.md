@@ -1,10 +1,7 @@
 ---
 layout: post
 title: BarentsWatch AIS API using curl and jq
-topics:
-  - cli
-  - datasets
-  - ais
+topic: cli
 ---
 
 # API registration and documentation

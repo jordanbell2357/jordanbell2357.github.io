@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Natural Earth
+topic: datasets
 ---
 
 [Natural Earth](https://www.naturalearthdata.com/)

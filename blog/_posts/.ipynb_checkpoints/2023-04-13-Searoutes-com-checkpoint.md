@@ -1,9 +1,7 @@
 ---
 layout: post
 title: Searoutes.com
-topics:
-  - maps
-  - datasets
+topic: maps
 ---
 
 [Routing API - Searoutes](https://searoutes.com/routing-api/)

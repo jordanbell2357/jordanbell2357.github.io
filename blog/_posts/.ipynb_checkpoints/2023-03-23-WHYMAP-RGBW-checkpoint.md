@@ -1,6 +1,7 @@
 ---
 layout: post
 title: River and Groundwater Basins of the World (WHYMAP RGWB)
+topic: datasets
 ---
 
 [River and Groundwater Basins of the World (WHYMAP RGWB) \| Bundesanstalt für Geowissenschaften und Rohstoffe (BGR)](https://produktcenter.bgr.de/terraCatalog/DetailResult.do?fileIdentifier=54e5d435-ac3f-4d2e-9e42-bd77728c1e05)
