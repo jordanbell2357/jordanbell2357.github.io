@@ -1,6 +1,9 @@
 ---
 layout: post
 title: U.S. Coast Guard Navigation Center
+topics:
+  - ais
+  - readings
 ---
 
 [U.S. Coast Guard Navigation Center](https://www.navcen.uscg.gov/)

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Rec. ITU-R M.1371-5
+topics:
+  - ais
+  - readings
 ---
 
 [M.1371 : Technical characteristics for an automatic identification system using time division multiple access in the VHF maritime mobile frequency band (Rec. ITU-R M.1371-5) \| ITU](https://www.itu.int/rec/R-REC-M.1371-5-201402-I/en)

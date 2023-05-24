@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Garmin on AIS
+topics:
+  - ais
+  - readings
 ---
 
 [AIS Definition \| Garmin Support Center](https://support.garmin.com/en-CA/?faq=6FxfgOckXI9Qyit0d90BGA)

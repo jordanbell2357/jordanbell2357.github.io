@@ -12,6 +12,17 @@ This website is the anchor for my internet presence and a platform for my writin
 
 ---
 
+<ul class="topic_list">
+  {% for topic in site.data.topics %}
+    <li>
+      <a href="/topics/{{ topic.slug }}">{{ topic.name }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+
+<!--
+
 <ul class="spaced_list">
   {% for post in site.posts %}
     <li>
@@ -19,3 +30,5 @@ This website is the anchor for my internet presence and a platform for my writin
     </li>
   {% endfor %}
 </ul>
+
+-->
