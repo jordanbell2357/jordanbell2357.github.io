@@ -8,9 +8,9 @@ permalink: /topics/readings/
 
 <ul class="spaced_list">
   {% for post in site.posts %}
-    {% if post.topics contains 'readings' %}
+    {% if post.topic == 'readings' %}
       <li>
-        {{ post.date | date_to_long_string }} <a href="{{ post.url }}">{{ post.title }}</a>
+        {{ post.date | date_to_long_string }} <a href="{{ post.url }}">{{ post.title }} \({{ post.math }}\)</a>
       </li>
     {% endif %}
   {% endfor %}
