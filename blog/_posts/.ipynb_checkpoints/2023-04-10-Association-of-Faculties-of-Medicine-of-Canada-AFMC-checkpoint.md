@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Association of Faculties of Medicine of Canada (AFMC)
+topics:
+  - datasets
+  - cli
 ---
 
 [Association of Faculties of Medicine of Canada (AFMC)](https://www.afmc.ca/)

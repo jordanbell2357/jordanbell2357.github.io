@@ -1,6 +1,9 @@
 ---
 layout: post
 title: CIHI Health Workforce in Canada, 2017 to 2021
+topics:
+  - datasets
+  - cli
 ---
 
 [Canadian Institute for Health Information (CIHI)](https://www.cihi.ca/en)

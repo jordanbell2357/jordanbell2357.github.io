@@ -1,6 +1,9 @@
 ---
 layout: post
 title: CAICT China Mobile Phone Market Report using Gnuplot
+topics:
+  - datasets
+  - cli
 ---
 
 [中国信息通信研究院 (中国信通院)](http://www.caict.ac.cn/)

@@ -1,6 +1,9 @@
 ---
 layout: post
 title: "CMA: Active Physicians by Country of MD Graduation, Canada, 2008-2019"
+topics:
+  - datasets
+  - cli
 ---
 
 [Canadian Medical Association (CMA) Physician Data Centre](https://www.cma.ca/physician-data-centre)
