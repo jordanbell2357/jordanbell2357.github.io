@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Math curriculum links
+topic: learning-content
 ---
 
 * [Common Core State Standards Initiative](http://www.corestandards.org/read-the-standards/)

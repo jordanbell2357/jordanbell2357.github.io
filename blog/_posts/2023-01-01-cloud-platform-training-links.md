@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Cloud platform training links
+topic: learning-content
 ---
 
 - [Adobe Digital Learning Services](https://learning.adobe.com/)

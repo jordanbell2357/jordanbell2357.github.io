@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Programming learning links
+topic: learning-content
 ---
 
 * [Algorithm Wiki](https://thimbleby.gitlab.io/algorithm-wiki-site/)

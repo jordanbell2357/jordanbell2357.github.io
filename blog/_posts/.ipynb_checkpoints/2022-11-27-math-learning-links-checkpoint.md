@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Math learning links
+topic: learning-content
 ---
 
 ## Tools {#tools}

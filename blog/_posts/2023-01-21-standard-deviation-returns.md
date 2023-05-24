@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Standard deviation of returns
+topic: finance
 ---
 
 `GOOGLEFINANCE("TSE:H","price",DATE(2022,1,1),DATE(2022,12,31),"WEEKLY")`

@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Version Control with Git
-topic: training
+topic: cli
 ---
 
 [Atlassian University : Version Control with Git \| Coursera](https://www.coursera.org/learn/version-control-with-git)

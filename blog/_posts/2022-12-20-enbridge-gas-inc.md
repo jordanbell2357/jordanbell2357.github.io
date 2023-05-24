@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Enbridge Gas Inc.
+topic: datasets
 ---
 
 ![Enbridge Gas Inc. Deliveries (GJ) vs. Gas Day 2022](/images/Enbridge/Enbridge_Gas_Inc_Deliveries_(GJ)_vs_Gas_Day.png)

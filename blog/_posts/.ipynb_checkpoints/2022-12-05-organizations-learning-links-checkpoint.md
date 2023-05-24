@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Organizations learning links
+topic: learning-content
 ---
 
 # Industry {#industry}

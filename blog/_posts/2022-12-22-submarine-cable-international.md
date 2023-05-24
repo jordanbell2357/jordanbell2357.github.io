@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Submarine cable legal and military resources
+topic: readings
 ---
 
 [Underwater Fiberoptic Cables: A Customary International Law Approach to Solving the Gaps in the International Legal Framework](https://apps.dtic.mil/sti/citations/AD1080501)

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: WACC formula
+topic: finance
 ---
 
 <table>
