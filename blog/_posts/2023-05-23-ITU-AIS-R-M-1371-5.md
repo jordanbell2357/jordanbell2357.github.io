@@ -5,8 +5,10 @@ title: Rec. ITU-R M.1371-5
 
 [M.1371 : Technical characteristics for an automatic identification system using time division multiple access in the VHF maritime mobile frequency band (Rec. ITU-R M.1371-5) \| ITU](https://www.itu.int/rec/R-REC-M.1371-5-201402-I/en)
 
+# Table 1: Class A shipborne mobile equipment reporting intervals
+
 <table>
-  <caption>Table 1: Class A shipborne mobile equipment reporting intervals</caption>
+  <caption>Table 1: Class A shipborne mobile equipment reporting intervals (p. 8)</caption>
   <thead>
     <tr>
       <th>Ship’s dynamic conditions</th>
@@ -50,7 +52,7 @@ title: Rec. ITU-R M.1371-5
 </table>
 
 <table>
-  <caption>Table 2: Reporting intervals for equipment other than Class A shipborne mobile equipment</caption>
+  <caption>Table 2: Reporting intervals for equipment other than Class A shipborne mobile equipment (p. 9)</caption>
   <thead>
     <tr>
       <th>Platform’s condition</th>
@@ -107,9 +109,10 @@ title: Rec. ITU-R M.1371-5
   </tbody>
 </table>
 
+# Table 48: Message descriptions. Position reports
 
 <table>
-  <caption>Table 48</caption>
+  <caption>Table 48: Message descriptions. Position reports (pp. 109-110)</caption>
   <tr>
     <th>Parameter</th>
     <th>Number of bits</th>
@@ -202,13 +205,13 @@ title: Rec. ITU-R M.1371-5
   </tr>
 </table>
 
-
+## Navigational status (from Table 48)
 
 <table>
- <caption>Table 48: Navigational status</caption>
+ <caption>Navigational status (from Table 48, p. 109)</caption>
 <thead>
   <tr>
-    <th>Navigation Status:</th>
+    <th>Navigational status:</th>
     <th>Description:</th>
   </tr>
 </thead>
@@ -280,11 +283,132 @@ title: Rec. ITU-R M.1371-5
 </tbody>
 </table>
 
-
-
+# Table 52: Ship static and voyage related data
 
 <table>
-  <caption>Table 53</caption>
+  <caption>Table 52: Ship static and voyage related data (pp. 112-113)</caption>
+  <tr>
+    <th>Parameter</th>
+    <th>Number of bits</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Message ID</td>
+    <td>6</td>
+    <td>Identifier for this Message</td>
+  </tr>
+  <tr>
+    <td>Repeat indicator</td>
+    <td>2</td>
+    <td>Used by the repeater to indicate how many times a message has been repeated. Refer to § 4.6.1, Annex 2; 0-3; 0 = default; 3 = do not repeat any more</td>
+  </tr>
+  <tr>
+    <td>User ID</td>
+    <td>30</td>
+    <td>MMSI number</td>
+  </tr>
+  <tr>
+    <td>AIS version indicator</td>
+    <td>2</td>
+    <td>0 = station compliant with Recommendation ITU-R M.1371-1
+1 = station compliant with Recommendation ITU-R M.1371-3 (or later)
+2 = station compliant with Recommendation ITU-R M.1371-5 (or later)
+3 = station compliant with future editions</td>
+  </tr>
+  <tr>
+    <td>IMO number</td>
+    <td>30</td>
+    <td>0 = not available = default – Not applicable to SAR aircraft
+0000000001-0000999999 not used
+0001000000-0009999999 = valid IMO number;
+0010000000-1073741823 = official flag state number.</td>
+  </tr>
+  <tr>
+    <td>Call sign</td>
+    <td>42</td>
+    <td>7 x 6 bit ASCII characters, @@@@@@@ = not available = default. Craft associated with a parent vessel, should use “A” followed by the last 6 digits of the MMSI of the parent vessel. Examples of these craft include towed vessels, rescue boats, tenders, lifeboats and liferafts.</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>120</td>
+    <td>Maximum 20 characters 6 bit ASCII, as defined in Table 47
+“@@@@@@@@@@@@@@@@@@@@” = not available = default.
+The Name should be as shown on the station radio license. For SAR aircraft, it should be set to “SAR AIRCRAFT NNNNNNN” where NNNNNNN equals the aircraft registration number.</td>
+  </tr>
+  <tr>
+    <td>Type of ship and cargo type</td>
+    <td>8</td>
+    <td>0 = not available or no ship = default
+1-99 = as defined in § 3.3.2
+100-199 = reserved, for regional use
+200-255 = reserved, for future use
+Not applicable to SAR aircraft</td>
+  </tr>
+  <tr>
+    <td>Overall dimension/reference for position</td>
+    <td>30</td>
+    <td>Reference point for reported position. Also indicates the dimension of ship (m) (see Fig. 41 and § 3.3.3)
+For SAR aircraft, the use of this field may be decided by the responsible administration. If used it should indicate the maximum dimensions of the craft. As default should A = B = C = D be set to “0”</td>
+  </tr>
+  <tr>
+    <td>Type of electronic position fixing device</td>
+    <td>4</td>
+    <td>0 = undefined (default)
+1 = GPS
+2 = GLONASS
+3 = combined GPS/GLONASS
+4 = Loran-C
+5 = Chayka
+6 = integrated navigation system
+7 = surveyed
+8 = Galileo,
+9-14 = not used
+15 = internal GNSS</td>
+  </tr>
+  <tr>
+    <td>ETA</td>
+    <td>20</td>
+    <td>Estimated time of arrival; MMDDHHMM UTC
+Bits 19-16: month; 1-12; 0 = not available = default
+Bits 15-11: day; 1-31; 0 = not available = default
+Bits 10-6: hour; 0-23; 24 = not available = default
+Bits 5-0: minute; 0-59; 60 = not available = default
+For SAR aircraft, the use of this field may be decided by the responsible administration</td>
+  </tr>
+  <tr>
+    <td>Maximum present static draught</td>
+    <td>8</td>
+    <td>In 1/10 m, 255 = draught 25.5 m or greater, 0 = not available = default; in accordance with IMO Resolution A.851
+Not applicable to SAR aircraft, should be set to 0</td>
+  </tr>
+  <tr>
+    <td>Destination</td>
+    <td>120</td>
+    <td>Maximum 20 characters using 6-bit ASCII; @@@@@@@@@@@@@@@@@@@@ = not available
+For SAR aircraft, the use of this field may be decided by the responsible administration</td>
+  </tr>
+  <tr>
+    <td>DTE</td>
+    <td>1</td>
+    <td>Data terminal equipment (DTE) ready (0 = available, 1 = not available = default) (see § 3.3.1)</td>
+  </tr>
+  <tr>
+    <td>Spare</td>
+    <td>1</td>
+    <td>Spare. Not used. Should be set to zero. Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>Number of bits</td>
+    <td>424</td>
+    <td>Occupies 2 slots</td>
+  </tr>
+</table>
+
+
+# Table 53: Identifiers to be used by ships to report their type
+
+<table>
+  <caption>Table 53: Identifiers to be used by ships to report their type (p. 114)</caption>
   <tr>
     <th>Identifier No.</th>
     <th>Special craft</th>
@@ -333,7 +457,7 @@ title: Rec. ITU-R M.1371-5
 
 
 <table>
-  <caption>Table 53 - Other ships</caption>
+  <caption>Table 53 (continued): Other ships (p. 114)</caption>
   <tr>
     <th>First digit(1)</th>
     <th>Second digit(1)</th>
@@ -402,8 +526,10 @@ title: Rec. ITU-R M.1371-5
   </tr>
 </table>
 
+# Table 70: Standard class B equipment position report
+
 <table>
-  <caption>TABLE 70</caption>
+  <caption>Table 70: Standard class B equipment position report (pp. 126-127)</caption>
   <thead>
     <tr>
       <th>Parameter</th>
@@ -525,3 +651,127 @@ title: Rec. ITU-R M.1371-5
   </tbody>
 </table>
 
+# Table 71: Extended class B equipment position report
+
+<table>
+  <caption>Table 71: Extended class B equipment position report (pages 127-128)</caption>
+  <tr>
+    <th>Parameter</th>
+    <th>Number of bits</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>Message ID</td>
+    <td>6</td>
+    <td>Identifier for Message 19; always 19</td>
+  </tr>
+  <tr>
+    <td>Repeat indicator</td>
+    <td>2</td>
+    <td>Used by the repeater to indicate how many times a message has been repeated. See § 4.6.1, Annex 2; 0-3; 0 = default; 3 = do not repeat any more</td>
+  </tr>
+  <tr>
+    <td>User ID</td>
+    <td>30</td>
+    <td>MMSI number</td>
+  </tr>
+  <tr>
+    <td>Spare</td>
+    <td>8</td>
+    <td>Not used. Should be set to zero. Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>SOG</td>
+    <td>10</td>
+    <td>Speed over ground in 1/10 knot steps (0-102.2 knots)
+1 023 = not available, 1 022 = 102.2 knots or higher</td>
+  </tr>
+  <tr>
+    <td>Position accuracy</td>
+    <td>1</td>
+    <td>1 = high (≤10 m)
+0 = low (>10 m)
+0 = default
+The PA flag should be determined in accordance with Table 50</td>
+  </tr>
+  <tr>
+    <td>Longitude</td>
+    <td>28</td>
+    <td>Longitude in 1/10 000 min (±180°, East = positive (as per 2’s complement), West = negative (as per 2’s complement);
+181° (6791AC0h) = not available = default)</td>
+  </tr>
+  <tr>
+    <td>Latitude</td>
+    <td>27</td>
+    <td>Latitude in 1/10 000 min (±90°, North = positive (as per 2’s complement), South = negative (as per 2’s complement);
+91 = (3412140h) = not available = default)</td>
+  </tr>
+  <tr>
+    <td>COG</td>
+    <td>12</td>
+    <td>Course over ground in 1/10 = (0-3 599). 3 600 (E10h) = not available = default; 3 601-4 095 should not be used</td>
+  </tr>
+  <tr>
+    <td>True heading</td>
+    <td>9</td>
+    <td>Degrees (0-359) (511 indicates not available = default)</td>
+  </tr>
+  <tr>
+    <td>Time stamp</td>
+    <td>6</td>
+    <td>UTC second when the report was generated by the EPFS (0-59 or 60) if time stamp is not available, which should also be the default value or 61 if positioning system is in manual input mode or 62 if electronic position fixing system operates in estimated (dead reckoning) mode, or 63 if the positioning system is inoperative)</td>
+  </tr>
+  <tr>
+    <td>Spare</td>
+    <td>4</td>
+    <td>Not used. Should be set to zero. Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>120</td>
+    <td>Maximum 20 characters 6-bit ASCII, as defined in Table 47. @@@@@@@@@@@@@@@@@@@@ = not available = default</td>
+  </tr>
+  <tr>
+    <td>Type of ship and cargo type</td>
+    <td>8</td>
+    <td>0 = not available or no ship = default
+1-99 = as defined in § 3.3.2
+100-199 = reserved, for regional use
+200-255 = reserved, for future use</td>
+  </tr>
+  <tr>
+    <td>Dimension of ship/reference for position</td>
+    <td>30</td>
+    <td>Dimensions of ship in meters and reference point for reported position (see Fig. 41 and § 3.3.3)</td>
+  </tr>
+  <tr>
+    <td>Type of electronic position fixing device</td>
+    <td>4</td>
+    <td>0 = Undefined (default); 1 = GPS, 2 = GLONASS, 3 = combined GPS/GLONASS, 4 = Loran-C, 5 = Chayka, 6 = integrated navigation system, 7 = surveyed; 8 = Galileo, 9-14 = not used, 15 = internal GNSS</td>
+  </tr>
+  <tr>
+    <td>RAIM-flag</td>
+    <td>1</td>
+    <td>RAIM (Receiver autonomous integrity monitoring) flag of electronic position fixing device; 0 = RAIM not in use = default; 1 = RAIM in use - see Table 50</td>
+  </tr>
+  <tr>
+    <td>DTE</td>
+    <td>1</td>
+    <td>Data terminal ready (0 = available 1 = not available; = default) (see § 3.3.1)</td>
+  </tr>
+  <tr>
+    <td>Assigned mode flag</td>
+    <td>1</td>
+    <td>0 = Station operating in autonomous and continuous mode = default, 1 = Station operating in assigned mode</td>
+  </tr>
+  <tr>
+    <td>Spare</td>
+    <td>4</td>
+    <td>Not used. Should be set to zero. Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>Number of bits</td>
+    <td>312</td>
+    <td>Occupies two slots</td>
+  </tr>
+</table>

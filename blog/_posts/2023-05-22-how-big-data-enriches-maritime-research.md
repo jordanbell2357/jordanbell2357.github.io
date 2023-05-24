@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How big data enriches maritime research – a critical review of Automatic Identification System (AIS) data applications
+title: How big data enriches maritime research (Transport Reviews, 2019)
 ---
 
 Yang, D., Wu, L., Wang, S., Jia, H., & Li, K. X. (2019). *How big data enriches maritime research – a critical review of Automatic Identification System (AIS) data applications*. Transport Reviews **39**, no. 6, 755-773. doi: [10.1080/01441647.2019.1649315](https://doi.org/10.1080/01441647.2019.1649315)
