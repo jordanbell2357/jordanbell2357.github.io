@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Global Runoff Data Centre (GRDC) Major River Basins of the World
+topics:
+  - maps
+  - datasets
 ---
 
 [Global Runoff Data Centre (GRDC) \| Bundesanstalt für Gewässerkunde (BfG)](https://www.bafg.de/GRDC/EN/Home/homepage_node.html)

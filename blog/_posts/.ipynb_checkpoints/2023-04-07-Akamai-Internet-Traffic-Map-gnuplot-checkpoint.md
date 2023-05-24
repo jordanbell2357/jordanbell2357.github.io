@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Akamai Internet Traffic Map using Gnuplot
+topics:
+  - cli
+  - datasets
 ---
 
 [Internet Traffic Map](https://www.akamai.com/internet-station/traffic-map)

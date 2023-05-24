@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Japan Oceanographic Data Center (JODC) (日本海洋データセンター)
+topics:
+  - maps
+  - datasets
 ---
 
 [Japan Oceanographic Data Center (JODC) (日本海洋データセンター)](https://www.jodc.go.jp/jodcweb/index.html)

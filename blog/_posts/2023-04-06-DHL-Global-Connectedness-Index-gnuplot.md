@@ -1,6 +1,9 @@
 ---
 layout: post
 title: DHL Global Connectedness Index (GCI) using Gnuplot
+topics:
+  - cli
+  - datasets
 ---
 
 # DHL Global Connectedness Index (GCI)

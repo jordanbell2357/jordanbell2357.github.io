@@ -4,15 +4,21 @@ title: Google Cloud Platform and MarineCadastre.gov
 topics:
   - ais
   - datasets
+  - MarineCadastre
+  - cli
 ---
 
 # MarineCadastre.gov
 
 [Vessel Traffic Data](https://marinecadastre.gov/AIS/)
 
+[National AIS at 1 Minute Intervals](https://marinecadastre.gov/data/)
+
 [AIS Data for 2022](https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2022/index.html)
 
 `AIS_2022_01_01.zip`, `AIS_2022_01_02.zip`, ..., `AIS_2022_12_31.zip`
+
+i.e. `AIS_2022_(0[1-9]|1[0-2])_(0[1-9]|[12][0-9]|3[01])\.zip`
 
 [Nationwide Automatic Identification System 2022](https://www.fisheries.noaa.gov/inport/item/67336)
 

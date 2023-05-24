@@ -1,6 +1,9 @@
 ---
 layout: post
 title: IPinfo using API token with curl and using Snowflake
+topics:
+  - cli
+  - datasets
 ---
 
 # API token

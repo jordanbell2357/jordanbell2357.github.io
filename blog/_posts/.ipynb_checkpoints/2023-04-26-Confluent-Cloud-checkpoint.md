@@ -4,6 +4,7 @@ title: Confluent Cloud
 topics:
   - ais
   - cli
+  - training
 ---
 
 [Install the Confluent CLI \| Confluent Documentation](https://docs.confluent.io/confluent-cli/current/install.html)

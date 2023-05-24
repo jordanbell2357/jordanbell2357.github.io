@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Ericsson Mobility Report November 2022 using Gnuplot
+topics:
+  - cli
+  - datasets
 ---
 
 [Ericsson Mobility Report November 2022](https://www.ericsson.com/en/reports-and-papers/mobility-report)

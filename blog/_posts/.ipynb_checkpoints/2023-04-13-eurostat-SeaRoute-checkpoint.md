@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Eurostat SeaRoute eurostat/searoute
+topics:
+  - cli
+  - maps
 ---
 
 [eurostat/searoute](https://github.com/eurostat/searoute)

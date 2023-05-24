@@ -1,6 +1,9 @@
 ---
 layout: post
 title: RWI/ISL Container Throughput Index using Gnuplot
+topics:
+  - cli
+  - datasets
 ---
 
 # RWI/ISL Container Throughput Index

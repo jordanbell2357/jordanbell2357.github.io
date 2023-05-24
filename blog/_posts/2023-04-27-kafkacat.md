@@ -4,6 +4,7 @@ title: kafkacat
 topics:
   - ais
   - cli
+  - training
 ---
 
 # kcat

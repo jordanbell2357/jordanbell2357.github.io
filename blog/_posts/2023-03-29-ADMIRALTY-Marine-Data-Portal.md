@@ -1,6 +1,9 @@
 ---
 layout: post
 title: ADMIRALTY Marine Data Portal
+topics:
+  - maps
+  - datasets
 ---
 
 [ADMIRALTY Marine Data Portal](https://datahub.admiralty.co.uk/portal/apps/sites/#/marine-data-portal)

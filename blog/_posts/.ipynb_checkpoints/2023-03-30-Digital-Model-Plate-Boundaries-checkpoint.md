@@ -1,6 +1,9 @@
 ---
 layout: post
 title: Peter Bird, "An updated digital model of plate boundaries"
+topics:
+  - maps
+  - datasets
 ---
 
 ## Peter Bird. An updated digital model of plate boundaries. *Geochemistry, Geophysics, Geosystems*. Volume 4. No. 3. [doi:10.1029/2001GC000252](https://doi.org/10.1029/2001GC000252)
