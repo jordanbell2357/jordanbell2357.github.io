@@ -8,7 +8,7 @@ permalink: /topics/maps/
 
 <ul class="spaced_list">
   {% for post in site.posts %}
-    {% if post.topics contains 'maps' %}
+    {% if post.topic == 'maps' %}
       <li>
         {{ post.date | date_to_long_string }} <a href="{{ post.url }}">{{ post.title }}</a>
       </li>
