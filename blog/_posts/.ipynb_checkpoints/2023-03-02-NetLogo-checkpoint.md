@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NetLogo
+topic: simulation
 ---
 
 [NetLogo \| Uri Wilensky, Center for Connected Learning and Computer-Based Modeling, Northwestern University](https://ccl.northwestern.edu/netlogo/)

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Game theory using Sage
+topic: mathematics
 ---
 
 [Game Theory \| Sage Reference Manual](https://doc.sagemath.org/html/en/reference/game_theory/index.html)

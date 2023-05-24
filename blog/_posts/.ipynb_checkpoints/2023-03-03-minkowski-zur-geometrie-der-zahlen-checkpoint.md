@@ -1,6 +1,7 @@
 ---
 layout: post
 title: The figures in Minkowski's Zur Geometrie der Zahlen
+topic: image-processing
 ---
 
 <http://histmath-heidelberg.de/htmg/imc-1904.htm>

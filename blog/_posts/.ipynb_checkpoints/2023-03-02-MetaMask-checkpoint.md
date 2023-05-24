@@ -1,6 +1,7 @@
 ---
 layout: post
 title: MetaMask
+topic: finance
 ---
 
 # Decentralized Finance (DeFi) Primitives by Cam Harvey \| Coursera
