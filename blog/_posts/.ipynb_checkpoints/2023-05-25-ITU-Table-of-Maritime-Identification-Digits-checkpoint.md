@@ -33,7 +33,7 @@ Digit,Allocated to
 
 [^1]: [Databricks CLI](https://docs.databricks.com/dev-tools/cli/index.html)
 
-<div class="table-container">
+<div style="overflow:auto;">
   <table>
       {% for row in site.data.MaritimeIdentificationDigits %}
           {% if forloop.first %}
