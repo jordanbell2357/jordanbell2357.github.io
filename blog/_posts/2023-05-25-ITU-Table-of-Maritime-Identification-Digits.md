@@ -34,6 +34,28 @@ Digit,Allocated to
 [^1]: [Databricks CLI](https://docs.databricks.com/dev-tools/cli/index.html)
 
 <div style="overflow:auto;">
+  <table style="table-layout:fixed; width:100%;">
+    <thead>
+      <tr>
+        {% for pair in site.data.MaritimeIdentificationDigits[0] %}
+          <th>{{ pair[0] }}</th>
+        {% endfor %}
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in site.data.MaritimeIdentificationDigits %}
+        <tr>
+          {% for pair in row %}
+            <td>{{ pair[1] }}</td>
+          {% endfor %}
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+
+
+<div style="overflow:auto;">
   <table>
       {% for row in site.data.MaritimeIdentificationDigits %}
           {% if forloop.first %}
