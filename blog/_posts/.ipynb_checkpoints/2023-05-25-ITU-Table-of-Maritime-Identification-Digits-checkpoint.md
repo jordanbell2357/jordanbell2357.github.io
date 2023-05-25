@@ -1,6 +1,6 @@
 ---
 layout: post
-title: ITU Table of Maritime Identification Digits
+title: "ITU Table of Maritime Identification Digits"
 topic: datasets
 ---
 
@@ -27,6 +27,7 @@ Digit,Allocated to
 209,Cyprus (Republic of)
 ```
 
+<!--
 ```
 <pre>
 {% include txt/MaritimeIdentificationDigits.csv %}
@@ -38,6 +39,7 @@ Digit,Allocated to
 {% include txt/MaritimeIdentificationDigits.csv %}
 </pre>
 </div>
+-->
 
 `databricks fs cp MaritimeIdentificationDigits.csv dbfs:/FileStore/tables` [^1]
 
