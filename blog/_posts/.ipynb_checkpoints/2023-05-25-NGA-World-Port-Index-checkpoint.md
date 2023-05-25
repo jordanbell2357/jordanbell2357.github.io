@@ -16,46 +16,4 @@ topic: datasets
 
 ![Kepler.gl](/images/NGA/keplergl-WPI.jpeg)
 
-<div style="overflow:auto;">
-  <table style="table-layout:fixed; width:100%;">
-    <thead>
-      <tr>
-        {% for column in site.data.WorldPortIndex_dictionary[0] %}
-          <th>{{ column[0] }}</th>
-        {% endfor %}
-      </tr>
-    </thead>
-    <tbody>
-      {% for row in site.data.WorldPortIndex_dictionary %}
-        <tr>
-          {% for column in row %}
-            <td>{{ column[1] }}</td>
-          {% endfor %}
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
-
-
-
-<div style="overflow:auto;">
-  <table style="table-layout:fixed; width:100%;">
-    <thead>
-      <tr>
-        {% for pair in site.data.WorldPortIndex_dictionary[0] %}
-          <th>{{ pair[0] }}</th>
-        {% endfor %}
-      </tr>
-    </thead>
-    <tbody>
-      {% for row in site.data.MaritimeIdentificationDigits %}
-        <tr>
-          {% for pair in row %}
-            <td>{{ pair[1] }}</td>
-          {% endfor %}
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTL0uXgtXUyrkSxHFBd5kY0lfMXiVdHFm3GkSmaa6YPihn6c_nnQJd4ql_aWTf9Snrr5K5N3XN6fCvD/pubhtml?gid=1377458813&amp;single=true&amp;widget=true&amp;headers=false"></iframe>

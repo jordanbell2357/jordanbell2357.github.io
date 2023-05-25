@@ -27,51 +27,7 @@ Digit,Allocated to
 209,Cyprus (Republic of)
 ```
 
-`databricks fs cp MaritimeIdentificationDigits.csv dbfs:/FileStore/tables`
-
-[^1]
+`databricks fs cp MaritimeIdentificationDigits.csv dbfs:/FileStore/tables` [^1]
 
 [^1]: [Databricks CLI](https://docs.databricks.com/dev-tools/cli/index.html)
 
-<div style="overflow:auto;">
-  <table style="table-layout:fixed; width:100%;">
-    <thead>
-      <tr>
-        {% for column in site.data.MaritimeIdentificationDigits[0] %}
-          <th>{{ column[0] }}</th>
-        {% endfor %}
-      </tr>
-    </thead>
-    <tbody>
-      {% for row in site.data.MaritimeIdentificationDigits %}
-        <tr>
-          {% for column in row %}
-            <td>{{ column[1] }}</td>
-          {% endfor %}
-        </tr>
-      {% endfor %}
-    </tbody>
-  </table>
-</div>
-
-
-
-<div style="overflow:auto;">
-  <table>
-      {% for row in site.data.MaritimeIdentificationDigits %}
-          {% if forloop.first %}
-              <tr>
-                  {% for pair in row %}
-                      <th>
-                          {{ pair[0] }}
-                      </th>
-                  {% endfor %}
-              </tr>
-          {% endif %}
-
-          {% tablerow pair in row %}
-              {{ pair[1] }}
-          {% endtablerow %}
-      {% endfor %}
-  </table>
-</div>
