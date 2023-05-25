@@ -31,3 +31,4 @@ Digit,Allocated to
 
 [^1]: [Databricks CLI](https://docs.databricks.com/dev-tools/cli/index.html)
 
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoz4rQDDWlWBjwkF683S5s00do-ccRmFAm3-dt_7MlHBm4AH1sn6mAy7_cVf5OLwXlaQjw8A9OAyxM/pubhtml?gid=1584142566&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="600"></iframe>
