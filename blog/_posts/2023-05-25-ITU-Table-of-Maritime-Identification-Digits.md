@@ -27,3 +27,9 @@ Digit,Allocated to
 209,Cyprus (Republic of)
 ```
 
+`databricks fs cp MaritimeIdentificationDigits.csv dbfs:/FileStore/tables`
+
+[^1]
+
+[^1]: [Databricks CLI](https://docs.databricks.com/dev-tools/cli/index.html)
+
