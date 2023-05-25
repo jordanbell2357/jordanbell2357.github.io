@@ -1,7 +1,7 @@
 ---
 layout:
 title: ITU Table of Maritime Identification Digits
-topic: dataset
+topic: datasets
 ---
 
 [ITU GLobal Administration Data System (GLAD)](https://www.itu.int/en/ITU-R/terrestrial/fmd/Pages/glad.aspx)
@@ -42,4 +42,3 @@ Digit,Allocated to
 `databricks fs cp MaritimeIdentificationDigits.csv dbfs:/FileStore/tables` [^1]
 
 [^1]: [Databricks CLI](https://docs.databricks.com/dev-tools/cli/index.html)
-
