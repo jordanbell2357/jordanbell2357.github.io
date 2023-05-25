@@ -1,5 +1,5 @@
 ---
-layout:
+layout: post
 title: ITU Table of Maritime Identification Digits
 topic: datasets
 ---
