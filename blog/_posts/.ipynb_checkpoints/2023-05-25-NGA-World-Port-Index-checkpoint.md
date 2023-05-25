@@ -16,4 +16,4 @@ topic: datasets
 
 ![Kepler.gl](/images/NGA/keplergl-WPI.jpeg)
 
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTL0uXgtXUyrkSxHFBd5kY0lfMXiVdHFm3GkSmaa6YPihn6c_nnQJd4ql_aWTf9Snrr5K5N3XN6fCvD/pubhtml?gid=1377458813&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="400"></iframe>
+<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTL0uXgtXUyrkSxHFBd5kY0lfMXiVdHFm3GkSmaa6YPihn6c_nnQJd4ql_aWTf9Snrr5K5N3XN6fCvD/pubhtml?widget=true&amp;headers=false" width="100%" height="400"></iframe>
