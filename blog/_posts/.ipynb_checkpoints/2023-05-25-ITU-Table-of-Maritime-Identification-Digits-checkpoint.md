@@ -33,3 +33,22 @@ Digit,Allocated to
 
 [^1]: [Databricks CLI](https://docs.databricks.com/dev-tools/cli/index.html)
 
+<div class="table-container">
+  <table>
+      {% for row in site.data.MaritimeIdentificationDigits %}
+          {% if forloop.first %}
+              <tr>
+                  {% for pair in row %}
+                      <th>
+                          {{ pair[0] }}
+                      </th>
+                  {% endfor %}
+              </tr>
+          {% endif %}
+
+          {% tablerow pair in row %}
+              {{ pair[1] }}
+          {% endtablerow %}
+      {% endfor %}
+  </table>
+</div>
