@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "漢語多功能字庫 Multi-function Chinese Character Database: With Archaic Script Forms"
+topic: mathematics
 ---
 
 <table>

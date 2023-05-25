@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Chinese characters for numbers
+topic: mathematics
 ---
 
 <https://www.qhanzi.com/>

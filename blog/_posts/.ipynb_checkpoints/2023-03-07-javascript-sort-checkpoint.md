@@ -1,6 +1,7 @@
 ---
 layout: post
 title: JavaScript sort
+topic: javascript
 ---
 
 <button onclick="myFunction1()">Sort Alphabetically</button>
