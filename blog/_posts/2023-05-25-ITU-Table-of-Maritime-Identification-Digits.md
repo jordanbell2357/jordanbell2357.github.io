@@ -37,22 +37,23 @@ Digit,Allocated to
   <table style="table-layout:fixed; width:100%;">
     <thead>
       <tr>
-        {% for pair in site.data.MaritimeIdentificationDigits[0] %}
-          <th>{{ pair[0] }}</th>
+        {% for column in site.data.MaritimeIdentificationDigits[0] %}
+          <th>{{ column[0] }}</th>
         {% endfor %}
       </tr>
     </thead>
     <tbody>
       {% for row in site.data.MaritimeIdentificationDigits %}
         <tr>
-          {% for pair in row %}
-            <td>{{ pair[1] }}</td>
+          {% for column in row %}
+            <td>{{ column[1] }}</td>
           {% endfor %}
         </tr>
       {% endfor %}
     </tbody>
   </table>
 </div>
+
 
 
 <div style="overflow:auto;">
