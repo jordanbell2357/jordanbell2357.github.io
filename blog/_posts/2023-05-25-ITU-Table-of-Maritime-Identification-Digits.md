@@ -27,20 +27,3 @@ Digit,Allocated to
 209,Cyprus (Republic of)
 ```
 
-<!--
-```
-<pre>
-{% include txt/MaritimeIdentificationDigits.csv %}
-</pre>
-```
-
-<div class="table-container">
-<pre>
-{% include txt/MaritimeIdentificationDigits.csv %}
-</pre>
-</div>
--->
-
-`databricks fs cp MaritimeIdentificationDigits.csv dbfs:/FileStore/tables` [^1]
-
-[^1]: [Databricks CLI](https://docs.databricks.com/dev-tools/cli/index.html)
