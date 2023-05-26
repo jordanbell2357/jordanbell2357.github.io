@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Google Cloud Platform and MarineCadastre.gov
+title: GCP, AWS and and MarineCadastre.gov AIS data
 topic: MarineCadastre
 ---
 
