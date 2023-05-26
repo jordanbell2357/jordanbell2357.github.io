@@ -318,6 +318,62 @@ ALTER TABLE `ais-data-385301.NAIS.AIS_2022_06` RENAME COLUMN new_column TO Statu
 
 [Running parameterized queries](https://cloud.google.com/bigquery/docs/parameterized-queries#bq)
 
+## Schema check
+
+`schema_check.sql`:
+
+```sql
+DECLARE start_day INT64;
+DECLARE end_day INT64;
+DECLARE table_names ARRAY<STRING>;
+DECLARE table_count INT64 DEFAULT 0;
+DECLARE column_diffs ARRAY<STRUCT<column_name STRING, data_type STRING>>;
+
+-- Generate the table names based on the start and end day parameters
+SET table_names = ARRAY(
+  SELECT CONCAT('ais-data-385301.NAIS.AIS_2022_06_', LPAD(CAST(day AS STRING), 2, '0'))
+  FROM UNNEST(GENERATE_ARRAY(start_day, end_day)) AS day
+);
+SET table_count = ARRAY_LENGTH(table_names);
+
+-- Check for schema differences
+FOR table_name IN UNNEST(table_names) DO
+  SET column_diffs = ARRAY(
+    SELECT AS STRUCT column_name, data_type
+    FROM `ais-data-385301.INFORMATION_SCHEMA.COLUMNS`
+    WHERE table_name = table_name
+    EXCEPT DISTINCT
+    SELECT AS STRUCT column_name, data_type
+    FROM UNNEST(column_diffs)
+  );
+END FOR;
+
+-- Return the schema differences
+SELECT column_name, data_type
+FROM UNNEST(column_diffs);
+```
+
+```bash
+bq query \
+  --use_legacy_sql=false \
+  --parameter='start_day:INT64:1' \
+  --parameter='end_day:INT64:30' \
+  --format=prettyjson \
+  "$(cat schema_check.sql | tr '\n' ' ')"
+```
+
+Output:
+
+<pre>
+Waiting on bqjob_rda6f5245cf69416_00000188591dd105_1 ... (0s) Current status: DONE   
+[]
+</pre>
+
+Therefore, the tables have identical schema.
+
+
+## UNION ALL and CTAS
+
 ```bash
 bq query --use_legacy_sql=false --parameter=start_day:INT64:1,end_day:INT64:30,table_name:STRING:'ais-data-385301.NAIS.AIS_2022_06' "$(cat parameterized_query.sql)"
 ```
