@@ -48,8 +48,10 @@ A Latin Dictionary. Founded on Andrews' edition of Freund's Latin dictionary. re
 The word schēma used in the neuter is a third declension noun.
 
 <table>
+  <caption>Singular</caption>
   <tr>
-    <th colspan="2">SINGULAR</th>
+    <th>Case</th>
+    <th>Inflection</th>
   </tr>
   <tr>
     <td>Nom.</td>
@@ -75,8 +77,13 @@ The word schēma used in the neuter is a third declension noun.
     <td>Voc.</td>
     <td>schema</td>
   </tr>
+</table>
+
+<table>
+  <caption>Singular</caption>
   <tr>
-    <th colspan="2">PLURAL</th>
+    <th>Case</th>
+    <th>Inflection</th>
   </tr>
   <tr>
     <td>Nom.</td>
@@ -103,7 +110,6 @@ The word schēma used in the neuter is a third declension noun.
     <td>schemata</td>
   </tr>
 </table>
-
 
 # ΛΟΓΕΙΟΝ
 
