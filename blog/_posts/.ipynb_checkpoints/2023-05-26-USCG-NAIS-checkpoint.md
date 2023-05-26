@@ -1,12 +1,24 @@
 ---
 layout: post
-title: U.S. Coast Guard Navigation Center (NAVCEN)
+title: USCG Nationwide Automatic Identification System (NAIS)
 topic: readings
 ---
 
-[U.S. Coast Guard Navigation Center](https://www.navcen.uscg.gov/)
+[Nationwide Automatic Identification System \| United States Coast Guard Acquisition Directorate](https://www.dcms.uscg.mil/Our-Organization/Assistant-Commandant-for-Acquisitions-CG-9/Programs/C4ISR-Programs/nais/)
 
-[NAVCEN \| NIST](https://csrc.nist.gov/glossary/term/navcen)
+> The Nationwide Automatic Identification System (NAIS) has enhanced the Coast Guard’s maritime domain awareness (MDA) of vessels operating in or approaching the nation’s waterways, ports and infrastructure. The system was based on the Automatic Identification System which was sanctioned by the International Maritime Organization as a global standard for ship-to-ship, ship-to-shore, and shore-to-ship communication. Permanent NAIS systems have been installed at 134 sites across 37 sectors. On a daily basis, NAIS receives approximately 120 million messages and provides data feeds to over 80 Coast Guard and other government agency systems. NAIS transitioned to sustainment in August 2018; two contracts are in place to provide corrective maintenance as well as engineering support services for information assurance, system administration, grooming processes and detailed troubleshooting requirements.
+>
+> NAIS contributes to a the concept of maritime domain awareness, which is a joint Coast Guard and U.S. Navy term for the effective understanding of anything associated with the global maritime domain that could impact the security, safety, economy or environment of the United States. By providing accurate information on vessel traffic to and from U.S. ports, NAIS helps to build a foundation of data that the government can use to develop effective maritime homeland security strategies.
+>
+> **Features**  
+> - Land, sea and space-based AIS radio frequency infrastructure capable of receiving and transmitting information from and to AIS-equipped vessels in U.S. coastal zones, waterways and ports
+> - Integrated AIS data storage, processing and networking infrastructure
+
+[U.S. Coast Guard Navigation Center (NAVCEN)](https://www.navcen.uscg.gov/) [^1]
+
+[^1]: [NAVCEN \| NIST](https://csrc.nist.gov/glossary/term/navcen)
+
+
 
 [Class A Reports \| NAVCEN](https://navcen.uscg.gov/ais-class-a-reports)
 
