@@ -17,14 +17,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
     if (level === 1) {
       tocList.appendChild(listItem);
-    } else {
-      const parent = tocList.lastElementChild;
-      const parentList = parent.querySelector("ul");
-      if (!parentList) {
-        const newList = document.createElement("ul");
-        parent.appendChild(newList);
-      }
-      parent.querySelector("ul").appendChild(listItem);
+    } else if (level === 2) {
+      const newList = document.createElement("ul");
+      newList.appendChild(listItem);
+      tocList.lastElementChild.appendChild(newList);
     }
   });
 });
