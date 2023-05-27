@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "ITU Table of Maritime Identification Digits"
-topic: datasets
+topic: uscg-nais
 ---
 
 [ITU GLobal Administration Data System (GLAD)](https://www.itu.int/en/ITU-R/terrestrial/fmd/Pages/glad.aspx)

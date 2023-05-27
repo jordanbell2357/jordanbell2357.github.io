@@ -1,7 +1,7 @@
 ---
 layout: post
 title: USCG Nationwide Automatic Identification System (NAIS)
-topic: readings
+topic: uscg-nais
 toc: true
 ---
 
