@@ -38,7 +38,11 @@ topic: readings
 
 [U.S. Coast Guard Navigation Center (NAVCEN)](https://www.navcen.uscg.gov/)
 
-## Class A AIS Position Report
+## Vessel Information Verification Service (VIVS)
+
+[Vessel Information Verification Service (VIVS)](https://navcen.uscg.gov/ais-vivs-home)
+
+## Class A AIS Reports
 
 [Class A AIS Position Report (Messages 1, 2, and 3) \| NAVCEN](https://navcen.uscg.gov/ais-class-a-reports)
 
@@ -74,9 +78,9 @@ topic: readings
     <td>0 = under way using engine, 1 = at anchor, 2 = not under command, 3 = restricted maneuverability, 4 = constrained by her draught, 5 = moored, 6 = aground, 7 = engaged in fishing, 8 = under way sailing, 9 = reserved for future amendment of navigational status for ships carrying DG, HS, or MP, or IMO hazard or pollutant category C, high speed craft (HSC), 10 = reserved for future amendment of navigational status for ships carrying dangerous goods (DG), harmful substances (HS) or marine pollutants (MP), or IMO hazard or pollutant category A, wing in ground (WIG); 11 = power-driven vessel towing astern (regional use); 12 = power-driven vessel pushing ahead or towing alongside (regional use);<br>13 = reserved for future use,<br>14 = AIS-SART (active), MOB-AIS, EPIRB-AIS<br>15 = undefined = default (also used by AIS-SART, MOB-AIS and EPIRB-AIS under test)</td>
   </tr>
   <tr>
-    <td>Rate of turn<br>ROTAIS</td>
+    <td>Rate of turn<br>ROT<sub>AIS</sub></td>
     <td>8</td>
-    <td>0 to +126 = turning right at up to 708 deg per min or higher<br>0 to -126 = turning left at up to 708 deg per min or higher Values between 0 and 708 deg per min coded by ROTAIS = 4.733 SQRT(ROTsensor) degrees per min<br>where ROTsensor is the Rate of Turn as input by an external Rate of Turn Indicator (TI). ROTAIS is rounded to the nearest integer value.<br>+127 = turning right at more than 5 deg per 30 s (No TI available)<br>-127 = turning left at more than 5 deg per 30 s (No TI available)<br>-128 (80 hex) indicates no turn information available (default).<br>ROT data should not be derived from COG information.</td>
+    <td>0 to +126 = turning right at up to 708 deg per min or higher<br>0 to -126 = turning left at up to 708 deg per min or higher Values between 0 and 708 deg per min coded by ROT<sub>AIS</sub> = 4.733 SQRT(ROT<sub>sensor</sub>) degrees per min where ROT<sub>sensor</sub> is the Rate of Turn as input by an external Rate of Turn Indicator (TI). ROT<sub>AIS</sub> is rounded to the nearest integer value.<br>+127 = turning right at more than 5 deg per 30 s (No TI available)<br>-127 = turning left at more than 5 deg per 30 s (No TI available)<br>-128 (80 hex) indicates no turn information available (default).<br>ROT data should not be derived from COG information.</td>
   </tr>
   <tr>
     <td>SOG</td>
@@ -168,50 +172,59 @@ vessel’s official radio license or documentation
 > LAPD, NYFD, WSF. Undocumented vessels should reflect the vessel’s state
 > registration number−vice name̶−preceded by ‘US#’, e.g. US#AZ1234YZ.
 >
-> Call-sign must reflect the call-sign assigned to the vessel by
+> **Call-sign** must reflect the call-sign assigned to the vessel by
 the FCC; absent an assignment, leave blank.
 >
-> IMO Number4 must reflect the assigned 7-digit IMO number.
-Use leading zeroes (not trailing zeroes) to fill the parameter,
-e.g. 0001234567. U.S. vessels without an IMO assignment
-should (if your AIS is 10-digit capable) input their U.S. official
-number preceded by ‘10000’, e.g. 1001234567, 1000123456.
+> **IMO Number** must reflect the assigned 7-digit IMO number.
+> Use leading zeroes (not trailing zeroes) to fill the parameter,
+> e.g. 0001234567. U.S. vessels without an IMO assignment
+> should (if your AIS is 10-digit capable) input their U.S. official
+> number preceded by ‘10000’, e.g. 1001234567, 1000123456.
 >
-> Type of positioning source must reflect the
-actual positioning system in use; i.e. interfaced
-to the AIS or the internal AIS EPFS.
+> **Type of positioning source** must reflect the
+> actual positioning system in use; i.e. interfaced
+> to the AIS or the internal AIS EPFS.
 >
-> Type of vessel (and cargo) should reflect the
-appropriate Ship Type listed in the Table; but,
-not its cargo type.
+> **Type of vessel (and cargo)** should reflect the
+> appropriate Ship Type listed in the Table; but,
+> not its cargo type.
 >
-> Antenna Position | Dimensions (ABCD values)
-must be encoded in meters, not feet, and reflect
-the overall dimensions of the vessel, ABDC
-values expressed as the distance fore (A), aft
-(B), to port (C), and to starboard (D) to the
-positioning-system antenna used by AIS; the
-intersection of the two white lines in the
-diagram. Improper calibration or encoding could
-navigation safety.
+> **Antenna Position \| Dimensions (ABCD values)**
+> must be encoded in meters, not feet, and reflect
+> the overall dimensions of the vessel, ABDC
+> values expressed as the distance fore (A), aft
+> (B), to port (C), and to starboard (D) to the
+> positioning-system antenna used by AIS; the
+> intersection of the two white lines in the
+> diagram. Improper calibration or encoding could
+> navigation safety.
+
+### Voyage Related Data
+
+> **Voyage Related Data**…should be encoded as needed
+and kept accurate and up to date
 >
-> Navigation Status must always be up-to-date, i.e. at anchor,
-underway, engaged in fishing, etc. Vessels engaged in towing,
-if capable, should use Navigation Status ‘11’ when towing
-astern or ‘12’ when pushing ahead or alongside5
-Remember to change update your status when at anchor
+> **Navigation Status** must always be up-to-date, i.e. at anchor,
+> underway, engaged in fishing, etc. Vessels engaged in towing,
+> if capable, should use Navigation Status ‘11’ when towing
+> astern or ‘12’ when pushing ahead or alongside.
+>
+> Remember to change update your status when at anchor
 or moored, which reduces AIS reporting rates to every 3
 minutes; thus mitigates network congestion and
 improves overall AIS efficiency and range.
 >
-> • Static Draft must be encoded in meters, not feet, and reflect
-the vessel’s actual or maximum draft.
+> **Static Draft** must be encoded in meters, not feet, and reflect
+> the vessel’s actual or maximum draft.
 >
-> People on Board (POB), although some legacy AIS devices
+> **People on Board (POB)**, although some legacy AIS devices
 allow for POB reporting it is not required.
 >
-> 
-
+> **Estimated Time of Arrival (ETA)** must be encoded in
+> Universal Time Coordinated (UTC), not local time; and, reflect
+> the ETA to your destination or voyage departure time, if
+> moored or anchored. Not applicable to vessels on unknown
+> or variable schedules (e.g. workboats).
 
 # U.S. Army Corps of Engineers (USACE)
 
