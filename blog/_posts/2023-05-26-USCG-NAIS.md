@@ -4,6 +4,8 @@ title: USCG Nationwide Automatic Identification System (NAIS)
 topic: readings
 ---
 
+{% include toc %}
+
 # U.S. Coast Guard Acquisition Directorate
 
 [Nationwide Automatic Identification System \| U.S. Coast Guard Acquisition Directorate](https://www.dcms.uscg.mil/Our-Organization/Assistant-Commandant-for-Acquisitions-CG-9/Programs/C4ISR-Programs/nais/)
@@ -35,6 +37,8 @@ topic: readings
 # U.S. Coast Guard Navigation Center (NAVCEN)
 
 [U.S. Coast Guard Navigation Center (NAVCEN)](https://www.navcen.uscg.gov/)
+
+## Class A AIS Position Report
 
 [Class A AIS Position Report (Messages 1, 2, and 3) \| NAVCEN](https://navcen.uscg.gov/ais-class-a-reports)
 
@@ -139,9 +143,74 @@ topic: readings
 
 > Communications State (19 bit field): The Communications State in Class A AIS Position Report messages is used in planning for the next transmission in order to avoiding mutual interference. It is inherent to the self organizing time division multiple access (SOTDMA) process. This information, along with the 6 bit time stamp information identified above, can also provide information on the existence of radio interference or other anomalies affecting reception of GPS signals in the local area.
 
+## USCG AIS Encoding Guide v.25
+
 [USCG AIS Encoding Guide v.25](https://www.navcen.uscg.gov/sites/default/files/pdf/AIS/AISGuide.pdf)
 
-> Maritime Mobile Service Identity (MMSI) must reflect the MMSI assigned to the vessel by the FCC or one of its agents.
+> This Guide is intended to assist in the
+> proper encoding of an Automatic
+> Identification System (AIS) used in
+> U.S. navigable waters
+
+### Static data
+
+> **Static Data**…should be encoded at installation and reflect the
+vessel’s official radio license or documentation
+
+> **Maritime Mobile Service Identity (MMSI)** must reflect the MMSI assigned to the vessel by the FCC or one of its agents.
+>
+> **Vessel Names** that exceed the AIS’s 20 character limit should be shortened
+> (not truncated) to 15 character-spaces, followed by an underscore \{\_\},
+> thence the last 4 characters-spaces of the vessel name, e.g. GRAND JOLLY
+> ROGER OF THE SEA to GRAND JOLLY OF \_ SEA, THE GRAND JOLLY ROGER to THE
+> GRAND JOLLY_OGER. Names should not include vessel type precursors, e.g.
+> F/V, M/V, MV, OSV, P/V, REC, S/V, T/B; except public vessels, e.g. CG, CBP, USN,
+> LAPD, NYFD, WSF. Undocumented vessels should reflect the vessel’s state
+> registration number−vice name̶−preceded by ‘US#’, e.g. US#AZ1234YZ.
+>
+> Call-sign must reflect the call-sign assigned to the vessel by
+the FCC; absent an assignment, leave blank.
+>
+> IMO Number4 must reflect the assigned 7-digit IMO number.
+Use leading zeroes (not trailing zeroes) to fill the parameter,
+e.g. 0001234567. U.S. vessels without an IMO assignment
+should (if your AIS is 10-digit capable) input their U.S. official
+number preceded by ‘10000’, e.g. 1001234567, 1000123456.
+>
+> Type of positioning source must reflect the
+actual positioning system in use; i.e. interfaced
+to the AIS or the internal AIS EPFS.
+>
+> Type of vessel (and cargo) should reflect the
+appropriate Ship Type listed in the Table; but,
+not its cargo type.
+>
+> Antenna Position | Dimensions (ABCD values)
+must be encoded in meters, not feet, and reflect
+the overall dimensions of the vessel, ABDC
+values expressed as the distance fore (A), aft
+(B), to port (C), and to starboard (D) to the
+positioning-system antenna used by AIS; the
+intersection of the two white lines in the
+diagram. Improper calibration or encoding could
+navigation safety.
+>
+> Navigation Status must always be up-to-date, i.e. at anchor,
+underway, engaged in fishing, etc. Vessels engaged in towing,
+if capable, should use Navigation Status ‘11’ when towing
+astern or ‘12’ when pushing ahead or alongside5
+Remember to change update your status when at anchor
+or moored, which reduces AIS reporting rates to every 3
+minutes; thus mitigates network congestion and
+improves overall AIS efficiency and range.
+>
+> • Static Draft must be encoded in meters, not feet, and reflect
+the vessel’s actual or maximum draft.
+>
+> People on Board (POB), although some legacy AIS devices
+allow for POB reporting it is not required.
+>
+> 
 
 
 # U.S. Army Corps of Engineers (USACE)
