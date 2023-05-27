@@ -219,17 +219,17 @@ NAIS/VIVS Coverage:
     <td>Maximum 20 characters 6 bit ASCII "@@@@@@@@@@@@@@@@@@@@" = not available = default<br>The Name should be as shown on the station radio license. For SAR aircraft,<br>it should be set to “SAR AIRCRAFT NNNNNNN” where NNNNNNN<br>equals the aircraft registration number.</td>
   </tr>
   <tr>
-    <td><a href="https://navcen.uscg.gov/ais-class-a-static-voyage-message-5#TypeOfShip">Type of ship and cargo type</a></td>
+    <td>Type of ship and cargo type</td>
     <td>8</td>
     <td>0 = not available or no ship = default<br>1-99 = as defined below<br>100-199 = reserved, for regional use<br>200-255 = reserved, for future use<br>Not applicable to SAR aircraft</td>
   </tr>
   <tr>
-    <td><a href="https://navcen.uscg.gov/ais-class-a-static-voyage-message-5#_Reference_point_for">Overall dimension/</a><br><a href="https://navcen.uscg.gov/ais-class-a-static-voyage-message-5#_Reference_point_for">reference for position</a></td>
+    <td>Overall dimension/reference for position</td>
     <td>30</td>
     <td>Reference point for reported position.<br>Also indicates the dimension of ship (m) <a href="https://navcen.uscg.gov/ais-class-a-static-voyage-message-5#_Reference_point_for">(see below)</a><br>For SAR aircraft, the use of this field may be decided by the responsible<br>administration. If used it should indicate the maximum dimensions of the<br>craft. As default should A = B = C = D be set to “0”</td>
   </tr>
   <tr>
-    <td><a href="https://navcen.uscg.gov/ais-class-a-static-voyage-message-5#EPFS">Type of electronic position fixing device</a></td>
+    <td>Type of electronic position fixing device</td>
     <td>4</td>
     <td>0 = undefined (default)<br>1 = GPS<br>2 = GLONASS<br>3 = combined GPS/GLONASS<br>4 = Loran-C<br>5 = Chayka<br>6 = integrated navigation system<br>7 = surveyed<br>8 = Galileo,<br>9-14 = not used<br>15 = internal GNSS</td>
   </tr>
@@ -478,7 +478,7 @@ NAIS/VIVS Coverage:
     <td>Identifier for the message part number; always 1 for Part B</td>
   </tr>
   <tr>
-    <td><a href="https://navcen.uscg.gov/ais-class-b-reports?pageName=AISMessagesAStatic#TypeOfShip">Type of ship and cargo type</a></td>
+    <td>Type of ship and cargo type</td>
     <td>8</td>
     <td>0 = not available or no ship = default<br>1-99 = as defined in § 3.3.2<br>100-199 = reserved, for regional use<br>200-255 = reserved, for future use<br>Not applicable to SAR aircraft</td>
   </tr>
