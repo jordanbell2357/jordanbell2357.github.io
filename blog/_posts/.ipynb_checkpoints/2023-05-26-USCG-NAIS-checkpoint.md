@@ -2,7 +2,10 @@
 layout: post
 title: USCG Nationwide Automatic Identification System (NAIS)
 topic: readings
+toc: true
 ---
+
+{% toc %}
 
 {% include toc %}
 
