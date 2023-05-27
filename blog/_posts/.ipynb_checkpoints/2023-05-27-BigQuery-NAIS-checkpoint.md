@@ -27,7 +27,7 @@ done
 
 [Specifying a schema](https://cloud.google.com/bigquery/docs/schemas)
 
-`AIS_2022_06.json`
+`ais_2022_06.json`
 
 ```json
 [
@@ -57,19 +57,19 @@ done
   },
   {
     "description": "knots. Speed Over Ground",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "name": "SOG",
     "type": "FLOAT"
   },
   {
     "description": "degrees. Course Over Ground",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "name": "COG",
     "type": "FLOAT"
   },
   {
     "description": "degrees. True heading angle",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "name": "Heading",
     "type": "FLOAT"
   },
@@ -129,7 +129,7 @@ done
   },
   {
     "description": "Class of AIS transceiver",
-    "mode": "NULLABLE",
+    "mode": "REQUIRED",
     "name": "TransceiverClass",
     "type": "STRING"
   }
@@ -141,7 +141,7 @@ done
 # bq mk
 
 ```bash
-bq mk --table --schema=AIS_2022_06.json uscg_nais.ais_2022_06
+bq mk --table --schema=ais_2022_06.json uscg_nais.ais_2022_06
 ```
 
 # bq show
@@ -151,7 +151,7 @@ bq show --schema --format=prettyjson ais-data-385301:uscg_nais.ais_2022_06
 ```
 
 ```bash
-bq show --schema --format=prettyjson ais-data-385301:uscg_nais.ais_2022_06 | diff AIS_2022_06.json -
+bq show --schema --format=prettyjson ais-data-385301:uscg_nais.ais_2022_06 | diff ais_2022_06.json -
 ```
 
 # bq load
@@ -161,7 +161,7 @@ for i in {01..30}; do \
 bq load \
 --source_format=CSV \
 --max_bad_records=200 \
---schema=AIS_2022_06.json \
+--schema=ais_2022_06.json \
 uscg_nais.ais_2022_06 \
 gs://jordanbell2357marinecadastre/AIS_2022_06_${i}.csv; \
 done
