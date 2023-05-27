@@ -39,9 +39,31 @@ toc: true
 
 [U.S. Coast Guard Navigation Center (NAVCEN)](https://www.navcen.uscg.gov/)
 
+## Maritime Mobile Service Identity (MMSI)
+
+[Maritime Mobile Service Identity \| NAVCEN](https://navcen.uscg.gov/maritime-mobile-service-identity)
+
+> Maritime Mobile Service Identities (MMSIs) are nine-digit numbers used by maritime digital selective calling (DSC), automatic identification systems (AIS), and certain other equipment to uniquely identify a ship or a coast radio station. MMSIs are regulated and managed internationally by the International Telecommunications Union in Geneva, Switzerland, just as radio call signs are regulated. The MMSI format and use is documented in Article 19 of the ITU Radio Regulations and ITU-R Recommendation M.585-6, available from the ITU.
+
+> **Maritime Identification Digits (MID)** MIDs are three digit identifiers ranging from 201 to 775 denoting the administration (country) or geographical area of the administration responsible for the ship station so identified. See the ITU Table of Maritime Identification Digits.
+>
+> **Ships** All ship MMSIs use the format M<sub>1</sub> I<sub>2</sub>D<sub>3</sub>X<sub>4</sub>X<sub>5</sub>X<sub>6</sub>X<sub>7</sub>X<sub>8</sub>X<sub>9</sub> where in the first three digits represent the Maritime Identification Digits (MID) and X is any figure from 0 to 9. (Hint: Ships transmitting with an MMSI not starting with the digits 201-775 are likely doing so improperly, and may be subject to FCC or USCG enforcement action).
+
+```
+'s/[0-9]/<sub>&<\/sub>/g'
+```
+
+> **Coast Radio Stations (Base Stations)** All coast or base stations use the format 0<sub>1</sub>0<sub>2</sub>M<sub>3</sub>I<sub>4</sub>D<sub>5</sub><sub>0</sub><sub>6</sub><sub>0</sub><sub>7</sub><sub>0</sub><sub>8</sub><sub>0</sub><sub>9</sub>,where the digits 3, 4 and 5 represent the MID and X is any figure from 0 to 9. Groups of DSC coast radio stations use the same format.
+
 ## Vessel Information Verification Service (VIVS)
 
 [Vessel Information Verification Service (VIVS)](https://navcen.uscg.gov/ais-vivs-home)
+
+`convert -density 600 VIVS_Coverage.pdf -background white -flatten -resize 900x900^ -quality 100 VIVS_Coverage.png`
+
+NAIS/VIVS Coverage:
+
+![NAIS/VIVS Coverage](/images/USCG/VIVS_Coverage.png)
 
 ## Class A AIS Reports
 
@@ -148,7 +170,7 @@ toc: true
 
 > Communications State (19 bit field): The Communications State in Class A AIS Position Report messages is used in planning for the next transmission in order to avoiding mutual interference. It is inherent to the self organizing time division multiple access (SOTDMA) process. This information, along with the 6 bit time stamp information identified above, can also provide information on the existence of radio interference or other anomalies affecting reception of GPS signals in the local area.
 
-## AIS Class A Ship Static and Voyage Related Data (Message 5)
+### AIS Class A Ship Static and Voyage Related Data (Message 5)
 
 > In addition, the Class A AIS unit broadcasts the following information every 6 minutes. Should only be used by Class A shipborne and SAR aircraft AIS stations when reporting static or voyage related data:
 
@@ -372,7 +394,7 @@ toc: true
 </tbody>
 </table>
 
-### MESSAGE 24: STATIC DATA REPORT
+## Message 24: Static Data Report
 
 > Equipment that supports Message 24 part A shall transmit once every 6 min alternating between channels.
 >
@@ -380,7 +402,7 @@ toc: true
 >
 > Message 24 Part A and Part B should be transmitted once every 6 min by Class B “CS” and Class B “SO” shipborne mobile equipment. The message consists of two parts. Message 24B should be transmitted within 1 min following Message 24A.
 
-##### MESSAGE 24 PART A
+### Message 24 Part A
 
 <table>
 <thead>
@@ -424,7 +446,7 @@ toc: true
 </tbody>
 </table>
 
-##### MESSAGE 24 PART B
+### Message 24 Part B
 
 <table>
 <thead>
@@ -502,8 +524,6 @@ toc: true
 > Identification System (AIS) used in
 > U.S. navigable waters
 
-### Static data
-
 > **Static Data**…should be encoded at installation and reflect the
 vessel’s official radio license or documentation
 
@@ -545,8 +565,6 @@ the FCC; absent an assignment, leave blank.
 > diagram. Improper calibration or encoding could
 > navigation safety.
 
-### Voyage Related Data
-
 > **Voyage Related Data**…should be encoded as needed
 and kept accurate and up to date
 >
@@ -572,9 +590,8 @@ allow for POB reporting it is not required.
 > moored or anchored. Not applicable to vessels on unknown
 > or variable schedules (e.g. workboats).
 
-### AIS ‘Type of Ship’ parameter
-
 <table>
+  <caption>AIS ‘Type of Ship’ parameter</caption>
 <thead>
   <tr>
     <th>1st digit</th>
@@ -640,22 +657,6 @@ allow for POB reporting it is not required.
   </tr>
 </tbody>
 </table>
-
-## Maritime Mobile Service Identity (MMSI)
-
-[Maritime Mobile Service Identity \| NAVCEN](https://navcen.uscg.gov/maritime-mobile-service-identity)
-
-> Maritime Mobile Service Identities (MMSIs) are nine-digit numbers used by maritime digital selective calling (DSC), automatic identification systems (AIS), and certain other equipment to uniquely identify a ship or a coast radio station. MMSIs are regulated and managed internationally by the International Telecommunications Union in Geneva, Switzerland, just as radio call signs are regulated. The MMSI format and use is documented in Article 19 of the ITU Radio Regulations and ITU-R Recommendation M.585-6, available from the ITU.
-
-> **Maritime Identification Digits (MID)** MIDs are three digit identifiers ranging from 201 to 775 denoting the administration (country) or geographical area of the administration responsible for the ship station so identified. See the ITU Table of Maritime Identification Digits.
->
-> **Ships** All ship MMSIs use the format M<sub>1</sub> I<sub>2</sub>D<sub>3</sub>X<sub>4</sub>X<sub>5</sub>X<sub>6</sub>X<sub>7</sub>X<sub>8</sub>X<sub>9</sub> where in the first three digits represent the Maritime Identification Digits (MID) and X is any figure from 0 to 9. (Hint: Ships transmitting with an MMSI not starting with the digits 201-775 are likely doing so improperly, and may be subject to FCC or USCG enforcement action).
-
-```
-'s/[0-9]/<sub>&<\/sub>/g'
-```
-
-> **Coast Radio Stations (Base Stations)** All coast or base stations use the format 0<sub>1</sub>0<sub>2</sub>M<sub>3</sub>I<sub>4</sub>D<sub>5</sub><sub>0</sub><sub>6</sub><sub>0</sub><sub>7</sub><sub>0</sub><sub>8</sub><sub>0</sub><sub>9</sub>,where the digits 3, 4 and 5 represent the MID and X is any figure from 0 to 9. Groups of DSC coast radio stations use the same format.
 
 # U.S. Army Corps of Engineers (USACE)
 
