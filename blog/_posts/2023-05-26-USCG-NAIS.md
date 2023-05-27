@@ -5,10 +5,6 @@ topic: readings
 toc: true
 ---
 
-{% toc %}
-
-{% include toc %}
-
 {% include toc.html %}
 
 # U.S. Coast Guard Acquisition Directorate
@@ -230,6 +226,18 @@ allow for POB reporting it is not required.
 > the ETA to your destination or voyage departure time, if
 > moored or anchored. Not applicable to vessels on unknown
 > or variable schedules (e.g. workboats).
+
+## Maritime Mobile Service Identity (MMSI)
+
+[Maritime Mobile Service Identity \| NAVCEN](https://navcen.uscg.gov/maritime-mobile-service-identity)
+
+> Maritime Mobile Service Identities (MMSIs) are nine-digit numbers used by maritime digital selective calling (DSC), automatic identification systems (AIS), and certain other equipment to uniquely identify a ship or a coast radio station. MMSIs are regulated and managed internationally by the International Telecommunications Union in Geneva, Switzerland, just as radio call signs are regulated. The MMSI format and use is documented in Article 19 of the ITU Radio Regulations and ITU-R Recommendation M.585-6, available from the ITU.
+
+> **Maritime Identification Digits (MID)** MIDs are three digit identifiers ranging from 201 to 775 denoting the administration (country) or geographical area of the administration responsible for the ship station so identified. See the ITU Table of Maritime Identification Digits.
+>
+> **Ships** All ship MMSIs use the format M<sub>1</sub> I2D3X4X5X6X7X8X9 where in the first three digits represent the Maritime Identification Digits (MID) and X is any figure from 0 to 9. (Hint: Ships transmitting with an MMSI not starting with the digits 201-775 are likely doing so improperly, and may be subject to FCC or USCG enforcement action).
+
+**Coast Radio Stations (Base Stations)** All coast or base stations use the format 0102M3I4D5X6X7X8X9,where the digits 3, 4 and 5 represent the MID and X is any figure from 0 to 9. Groups of DSC coast radio stations use the same format.
 
 # U.S. Army Corps of Engineers (USACE)
 
