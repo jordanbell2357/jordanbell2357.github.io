@@ -1,14 +1,14 @@
 ---
 layout: default
-title: Readings
-permalink: /topics/readings/
+title: Simulation
+permalink: /topics/simulation/
 ---
 
 <h1>{{ page.title }}</h1>
 
 <ul class="spaced_list">
   {% for post in site.posts %}
-    {% if post.topic == 'readings' %}
+    {% if post.topic == 'simulation' %}
       <li>
         {{ post.date | date_to_long_string }} <a href="{{ post.url }}">{{ post.title }} \({{ post.math }}\)</a>
       </li>

@@ -177,3 +177,18 @@ bq query --use_legacy_sql=false 'SELECT COUNT(*) FROM ais-data-385301.uscg_nais.
 
 
 <pre>249 million 325 thousand 885 messages</pre>
+
+
+<div class="code-snippet">
+  <pre>
+    <code class="language-bash">
+      echo "I want to be copied"
+    </code>
+  </pre>
+  <button class="copy-button" data-clipboard-target=".code-snippet">Copy to Clipboard</button>
+</div>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.8/clipboard.min.js"></script>
+
+<script src="/assets/js/copy-to-clipboard.js"></script>
