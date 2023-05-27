@@ -10,7 +10,9 @@ layout: home
 
 This website is the anchor for my internet presence and a platform for my writings, projects, and notebooks.
 
-# Topics
+All blog posts: [Blog](/blog/)
+
+# Blog posts by topics
 
 <ul class="topic_list">
   {% for topic in site.data.topics %}
@@ -19,16 +21,3 @@ This website is the anchor for my internet presence and a platform for my writin
     </li>
   {% endfor %}
 </ul>
-
-
-<!--
-
-<ul class="spaced_list">
-  {% for post in site.posts %}
-    <li>
-      {{ post.date | date_to_long_string }} <a href="{{ post.url }}">{{ post.title }} \({{ post.math }}\)</a>
-    </li>
-  {% endfor %}
-</ul>
-
--->

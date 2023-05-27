@@ -1,7 +1,7 @@
 ---
 layout: post
 title: MarineCadastre.gov AIS data on BigQuery
-topic: MarineCadastre
+topic: uscg-nais
 ---
 
 # curl
@@ -141,17 +141,17 @@ done
 # bq mk
 
 ```bash
-bq mk --table --schema=AIS_2022_06.json ais-data-385301:NAIS.AIS_2022_06
+bq mk --table --schema=AIS_2022_06.json uscg_nais.ais_2022_06
 ```
 
 # bq show
 
 ```bash
-bq show --schema --format=prettyjson ais-data-385301:NAIS.AIS_2022_06
+bq show --schema --format=prettyjson ais-data-385301:uscg_nais.ais_2022_06
 ```
 
 ```bash
-bq show --schema --format=prettyjson ais-data-385301:NAIS.AIS_2022_06 | diff AIS_2022_06.json -
+bq show --schema --format=prettyjson ais-data-385301:uscg_nais.ais_2022_06 | diff AIS_2022_06.json -
 ```
 
 # bq load
@@ -162,7 +162,7 @@ bq load \
 --source_format=CSV \
 --max_bad_records=200 \
 --schema=AIS_2022_06.json \
-NAIS.AIS_2022_06_${i} \
+uscg_nais.ais_2022_06 \
 gs://jordanbell2357marinecadastre/AIS_2022_06_${i}.csv; \
 done
 ```
@@ -170,6 +170,7 @@ done
 ## bq query
 
 ```bash
-bq query --use_legacy_sql=false 'SELECT COUNT(*) FROM ais-data-385301.NAIS.AIS_2022_06;'
+bq query --use_legacy_sql=false 'SELECT COUNT(*) FROM ais-data-385301.uscg_nais.ais_2022_06;'
 ```
+
 

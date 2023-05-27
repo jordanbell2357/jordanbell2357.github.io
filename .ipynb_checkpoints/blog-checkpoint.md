@@ -11,7 +11,3 @@ permalink: /blog/
     </li>
   {% endfor %}
 </ul>
-
-<!--
-https://learn.cloudcannon.com/jekyll/list-posts-in-a-category/
--->
