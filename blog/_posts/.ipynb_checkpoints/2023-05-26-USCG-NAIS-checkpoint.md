@@ -651,11 +651,11 @@ allow for POB reporting it is not required.
 >
 > **Ships** All ship MMSIs use the format M<sub>1</sub> I<sub>2</sub>D<sub>3</sub>X<sub>4</sub>X<sub>5</sub>X<sub>6</sub>X<sub>7</sub>X<sub>8</sub>X<sub>9</sub> where in the first three digits represent the Maritime Identification Digits (MID) and X is any figure from 0 to 9. (Hint: Ships transmitting with an MMSI not starting with the digits 201-775 are likely doing so improperly, and may be subject to FCC or USCG enforcement action).
 
-[^sed]
+```
+'s/[0-9]/<sub>&<\/sub>/g'
+```
 
-[^sed]: `echo "M1 I2D3X4X5X6X7X8X9" | sed -E 's/[0-9]/<sub>&<\/sub>/g'`
-
-> **Coast Radio Stations (Base Stations)** All coast or base stations use the format <sub>0</sub><sub>1</sub><sub>0</sub><sub>2</sub>M<sub>3</sub>I<sub>4</sub>D<sub>5</sub><sub>0</sub><sub>6</sub><sub>0</sub><sub>7</sub><sub>0</sub><sub>8</sub><sub>0</sub><sub>9</sub>,where the digits 3, 4 and 5 represent the MID and X is any figure from 0 to 9. Groups of DSC coast radio stations use the same format.
+> **Coast Radio Stations (Base Stations)** All coast or base stations use the format 0<sub>1</sub>0<sub>2</sub>M<sub>3</sub>I<sub>4</sub>D<sub>5</sub><sub>0</sub><sub>6</sub><sub>0</sub><sub>7</sub><sub>0</sub><sub>8</sub><sub>0</sub><sub>9</sub>,where the digits 3, 4 and 5 represent the MID and X is any figure from 0 to 9. Groups of DSC coast radio stations use the same format.
 
 # U.S. Army Corps of Engineers (USACE)
 
