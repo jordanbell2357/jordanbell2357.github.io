@@ -148,6 +148,351 @@ toc: true
 
 > Communications State (19 bit field): The Communications State in Class A AIS Position Report messages is used in planning for the next transmission in order to avoiding mutual interference. It is inherent to the self organizing time division multiple access (SOTDMA) process. This information, along with the 6 bit time stamp information identified above, can also provide information on the existence of radio interference or other anomalies affecting reception of GPS signals in the local area.
 
+## AIS Class A Ship Static and Voyage Related Data (Message 5)
+
+> In addition, the Class A AIS unit broadcasts the following information every 6 minutes. Should only be used by Class A shipborne and SAR aircraft AIS stations when reporting static or voyage related data:
+
+<table>
+<thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Bits</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Message ID</td>
+    <td>6</td>
+    <td>Identifier for this Message</td>
+  </tr>
+  <tr>
+    <td>Repeat indicator</td>
+    <td>2</td>
+    <td>Used by the repeater to indicate how many times a message has been repeated. Refer to §?4.6.1, Annex 2; 0-3; 0 = default; 3 = do not repeat any more</td>
+  </tr>
+  <tr>
+    <td>User ID</td>
+    <td>30</td>
+    <td>MMSI number</td>
+  </tr>
+  <tr>
+    <td>AIS version indicator</td>
+    <td>2</td>
+    <td>0 = station compliant with Recommendation ITU-R M.1371-1<br>1 = station compliant with Recommendation ITU-R M.1371-3 (or later)<br>2 = station compliant with Recommendation ITU-R M.1371-5 (or later)<br>3 = station compliant with future editions</td>
+  </tr>
+  <tr>
+    <td>IMO number</td>
+    <td>30</td>
+    <td>0 = not available = default – Not applicable to SAR aircraft<br>0000000001-0000999999 not used<br>0001000000-0009999999 = valid IMO number;<br>0010000000-1073741823 = official flag state number.</td>
+  </tr>
+  <tr>
+    <td>Call sign</td>
+    <td>42</td>
+    <td>7?=?6 bit ASCII characters, @@@@@@@ = not available = default<br>Craft associated with a parent vessel, should use “A” followed by the last<br>6 digits of the MMSI of the parent vessel. Examples of these craft include<br>towed vessels, rescue boats, tenders, lifeboats and liferafts.</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>120</td>
+    <td>Maximum 20 characters 6 bit ASCII "@@@@@@@@@@@@@@@@@@@@" = not available = default<br>The Name should be as shown on the station radio license. For SAR aircraft,<br>it should be set to “SAR AIRCRAFT NNNNNNN” where NNNNNNN<br>equals the aircraft registration number.</td>
+  </tr>
+  <tr>
+    <td><a href="https://navcen.uscg.gov/ais-class-a-static-voyage-message-5#TypeOfShip">Type of ship and cargo type</a></td>
+    <td>8</td>
+    <td>0 = not available or no ship = default<br>1-99 = as defined below<br>100-199 = reserved, for regional use<br>200-255 = reserved, for future use<br>Not applicable to SAR aircraft</td>
+  </tr>
+  <tr>
+    <td><a href="https://navcen.uscg.gov/ais-class-a-static-voyage-message-5#_Reference_point_for">Overall dimension/</a><br><a href="https://navcen.uscg.gov/ais-class-a-static-voyage-message-5#_Reference_point_for">reference for position</a></td>
+    <td>30</td>
+    <td>Reference point for reported position.<br>Also indicates the dimension of ship (m) <a href="https://navcen.uscg.gov/ais-class-a-static-voyage-message-5#_Reference_point_for">(see below)</a><br>For SAR aircraft, the use of this field may be decided by the responsible<br>administration. If used it should indicate the maximum dimensions of the<br>craft. As default should A = B = C = D be set to “0”</td>
+  </tr>
+  <tr>
+    <td><a href="https://navcen.uscg.gov/ais-class-a-static-voyage-message-5#EPFS">Type of electronic position fixing device</a></td>
+    <td>4</td>
+    <td>0 = undefined (default)<br>1 = GPS<br>2 = GLONASS<br>3 = combined GPS/GLONASS<br>4 = Loran-C<br>5 = Chayka<br>6 = integrated navigation system<br>7 = surveyed<br>8 = Galileo,<br>9-14 = not used<br>15 = internal GNSS</td>
+  </tr>
+  <tr>
+    <td>ETA</td>
+    <td>20</td>
+    <td>Estimated time of arrival; MMDDHHMM UTC<br>Bits 19-16: month; 1-12; 0 = not available = default<br>Bits 15-11: day; 1-31; 0 = not available = default<br>Bits 10-6: hour; 0-23; 24 = not available = default<br>Bits 5-0: minute; 0-59; 60 = not available = default<br>For SAR aircraft, the use of this field may be decided by the responsible administration</td>
+  </tr>
+  <tr>
+    <td>Maximum present static draught</td>
+    <td>8</td>
+    <td>In 1/10 m, 255 = draught 25.5 m or greater, 0 = not available = default; in accordance with IMO Resolution A.851<br>Not applicable to SAR aircraft, should be set to 0</td>
+  </tr>
+  <tr>
+    <td>Destination</td>
+    <td>120</td>
+    <td>Maximum 20 characters using 6-bit ASCII;<br>@@@@@@@@@@@@@@@@@@@@ = not available<br>For SAR aircraft, the use of this field may be decided by the responsible administration</td>
+  </tr>
+  <tr>
+    <td>DTE</td>
+    <td>1</td>
+    <td>Data terminal equipment (DTE) ready (0 = available, 1 = not available = default)</td>
+  </tr>
+  <tr>
+    <td>Spare</td>
+    <td>1</td>
+    <td>Spare. Not used. Should be set to zero. Reserved for future use.</td>
+  </tr>
+  <tr>
+    <td>Number of bits</td>
+    <td>424</td>
+    <td>Occupies 2 slots</td>
+  </tr>
+</tbody>
+</table>
+
+## Class B AIS Reports
+
+[Class B Reports](https://navcen.uscg.gov/ais-class-b-reports)
+
+### AIS Standard Class B Equipment Position Report (Message 18)
+
+<table>
+<thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Bits</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Message ID</td>
+    <td>6</td>
+    <td>Identifier for Message 18; always 18</td>
+  </tr>
+  <tr>
+    <td>Repeat indicator</td>
+    <td>2</td>
+    <td>Used by the repeater to indicate how many times a message has been repeated; 0-3; 0 = default; 3 = do not repeat anymore; should be 0 for “CS” transmissions</td>
+  </tr>
+  <tr>
+    <td>User ID</td>
+    <td>30</td>
+    <td>MMSI number</td>
+  </tr>
+  <tr>
+    <td>Spare</td>
+    <td>8</td>
+    <td>Not used. Should be set to zero. Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>SOG</td>
+    <td>10</td>
+    <td>Speed over ground in 1/10 knot steps (0-102.2 knots)<br>1 023 = not available, 1 022 = 102.2 knots or higher</td>
+  </tr>
+  <tr>
+    <td>Position accuracy</td>
+    <td>1</td>
+    <td>1 = high (&lt;= 10 m)<br>0 = low (&gt; 10 m)<br>0 = default</td>
+  </tr>
+  <tr>
+    <td>Longitude</td>
+    <td>28</td>
+    <td>Longitude in 1/10 000 min (+180º, East = positive (as per 2's complement)), West = negative (as per 2's complement);<br>181º (6791AC0h) = not available = default)</td>
+  </tr>
+  <tr>
+    <td>Latitude</td>
+    <td>27</td>
+    <td>Latitude in 1/10 000 min (90º, North = positive (as per 2's complement)), South = negative (as per 2's complement);<br>91º = (3412140h) = not available = default)</td>
+  </tr>
+  <tr>
+    <td>COG</td>
+    <td>12</td>
+    <td>Course over ground in 1/10= (0-3 599). 3 600 (E10h) = not available = default; 3 601-4 095 should not be used</td>
+  </tr>
+  <tr>
+    <td>True heading</td>
+    <td>9</td>
+    <td>Degrees (0-359) (511 indicates not available = default)</td>
+  </tr>
+  <tr>
+    <td>Time stamp</td>
+    <td>6</td>
+    <td>UTC second when the report was generated by the EPFS (0-59<br>or 60 if time stamp is not available, which should also be the default value or 61 if positioning system is in manual input mode or 62 if electronic position fixing system operates in estimated (dead reckoning) mode or 63 if the positioning system is inoperative)<br>61, 62, 63 are not used by "CS" AIS</td>
+  </tr>
+  <tr>
+    <td>Spare</td>
+    <td>2</td>
+    <td>Not used. Should be set to zero. Reserved for future use</td>
+  </tr>
+  <tr>
+    <td>Class B unit flag</td>
+    <td>1</td>
+    <td>0 = Class B SOTDMA unit<br>1 = Class B "CS" unit</td>
+  </tr>
+  <tr>
+    <td>Class B display flag</td>
+    <td>1</td>
+    <td>0 = No display available; not capable of displaying Message 12 and 14<br>1 = Equipped with integrated display displaying Message 12 and 14</td>
+  </tr>
+  <tr>
+    <td>Class B DSC flag</td>
+    <td>1</td>
+    <td>0 = Not equipped with DSC function<br>1 = Equipped with DSC function (dedicated or time-shared)</td>
+  </tr>
+  <tr>
+    <td>Class B band flag</td>
+    <td>1</td>
+    <td>0 = Capable of operating over the upper 525 kHz band of the marine band<br>1 = Capable of operating over the whole marine band<br>(irrelevant if "Class B Message 22 flag" is 0)</td>
+  </tr>
+  <tr>
+    <td>Class B Message 22 flag</td>
+    <td>1</td>
+    <td>0 = No frequency management via Message 22 , operating on AIS1, AIS2 only<br>1 = Frequency management via Message 22</td>
+  </tr>
+  <tr>
+    <td>Mode flag</td>
+    <td>1</td>
+    <td>0 = Station operating in autonomous and continuous mode = default<br>1 = Station operating in assigned mode</td>
+  </tr>
+  <tr>
+    <td>RAIM-flag</td>
+    <td>1</td>
+    <td>RAIM (Receiver autonomous integrity monitoring) flag of electronic position fixing device; 0 = RAIM not in use = default; 1 = RAIM in use</td>
+  </tr>
+  <tr>
+    <td>Communication state selector flag</td>
+    <td>1</td>
+    <td>0 = SOTDMA communication state follows<br>1 = ITDMA communication state follows<br>(always "1" for Class-B "CS")</td>
+  </tr>
+  <tr>
+    <td>Communication state</td>
+    <td>19</td>
+    <td>SOTDMA communication state. Because Class B "CS" does not use any Communication State information, this field shall be filled with the following value: 1100000000000000110.</td>
+  </tr>
+  <tr>
+    <td>Number of bits</td>
+    <td>168</td>
+    <td>Occupies one slot</td>
+  </tr>
+</tbody>
+</table>
+
+### MESSAGE 24: STATIC DATA REPORT
+
+> Equipment that supports Message 24 part A shall transmit once every 6 min alternating between channels.
+>
+> Message 24 Part A may be used by any AIS station to associate a MMSI with a name.
+>
+> Message 24 Part A and Part B should be transmitted once every 6 min by Class B “CS” and Class B “SO” shipborne mobile equipment. The message consists of two parts. Message 24B should be transmitted within 1 min following Message 24A.
+
+##### MESSAGE 24 PART A
+
+<table>
+<thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Bits</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Message ID</td>
+    <td>6</td>
+    <td>Identifier for Message 24; always 24</td>
+  </tr>
+  <tr>
+    <td>Repeat indicator</td>
+    <td>2</td>
+    <td>Used by the repeater to indicate how many times a message has been repeated. 0 = default; 3 = do not repeat any more</td>
+  </tr>
+  <tr>
+    <td>User ID</td>
+    <td>30</td>
+    <td>MMSI number</td>
+  </tr>
+  <tr>
+    <td>Part number</td>
+    <td>2</td>
+    <td>Identifier for the message part number; always 0 for Part A</td>
+  </tr>
+  <tr>
+    <td>Name</td>
+    <td>120</td>
+    <td>Name of the MMSI-registered vessel. Maximum 20 characters 6-bit ASCII, @@@@@@@@@@@@@@@@@@@@ = not<br>available = default<br>For SAR aircraft, it should be set to “SAR AIRCRAFT NNNNNNN” where NNNNNNN equals the aircraft registration number</td>
+  </tr>
+  <tr>
+    <td>Number of bits</td>
+    <td>160</td>
+    <td>Occupies one-time period</td>
+  </tr>
+</tbody>
+</table>
+
+##### MESSAGE 24 PART B
+
+<table>
+<thead>
+  <tr>
+    <th>Parameter</th>
+    <th>Bits</th>
+    <th>Description</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>Message ID</td>
+    <td>6</td>
+    <td>Identifier for Message 24; always 24</td>
+  </tr>
+  <tr>
+    <td>Repeat indicator</td>
+    <td>2</td>
+    <td>Used by the repeater to indicate how many times a message has been repeated. 0 = default; 3 = do not repeat any more</td>
+  </tr>
+  <tr>
+    <td>User ID</td>
+    <td>30</td>
+    <td>MMSI number</td>
+  </tr>
+  <tr>
+    <td>Part number</td>
+    <td>2</td>
+    <td>Identifier for the message part number; always 1 for Part B</td>
+  </tr>
+  <tr>
+    <td><a href="https://navcen.uscg.gov/ais-class-b-reports?pageName=AISMessagesAStatic#TypeOfShip">Type of ship and cargo type</a></td>
+    <td>8</td>
+    <td>0 = not available or no ship = default<br>1-99 = as defined in § 3.3.2<br>100-199 = reserved, for regional use<br>200-255 = reserved, for future use<br>Not applicable to SAR aircraft</td>
+  </tr>
+  <tr>
+    <td>Vendor ID</td>
+    <td>42</td>
+    <td>Unique identification of the Unit by a number as defined by the manufacturer (option; "@@@@@@@" = not available = default)<br>See vendor Identification field table below</td>
+  </tr>
+  <tr>
+    <td>Call sign</td>
+    <td>42</td>
+    <td>Call sign of the MMSI-registered vessel. 7 X 6 bit ASCII characters, "@@@@@@@" = not available = default<br>Craft associated with a parent vessel should use “A” followed by the last 6 digits of the MMSI of the parent vessel. Examples of these craft include towed vessels, rescue boats, tenders, lifeboats and life rafts</td>
+  </tr>
+  <tr>
+    <td>Dimension of ship/reference for position.</td>
+    <td>30</td>
+    <td>Dimensions of ship in meters and reference point for reported position.<br>For SAR aircraft, the use of this field may be decided by the responsible administration. If used it should indicate the maximum dimensions of the craft. As default should A = B = C = D be set to “0”.</td>
+  </tr>
+  <tr>
+    <td>Type of electronic position fixing device</td>
+    <td>4</td>
+    <td>0 = Undefined (default); 1 = GPS, 2 = GLONASS, 3 = combined GPS/GLONASS, 4 = Loran-C, 5 = Chayka, 6 = integrated navigation system, 7 = surveyed; 8 = Galileo, 9-14 = not used, 15 = internal GNSS</td>
+  </tr>
+  <tr>
+    <td>Spare</td>
+    <td>2</td>
+    <td> </td>
+  </tr>
+  <tr>
+    <td>Number of bits</td>
+    <td>168</td>
+    <td>Occupies one-time period</td>
+  </tr>
+</tbody>
+</table>
+
 ## USCG AIS Encoding Guide v.25
 
 [USCG AIS Encoding Guide v.25](https://www.navcen.uscg.gov/sites/default/files/pdf/AIS/AISGuide.pdf)
@@ -227,6 +572,75 @@ allow for POB reporting it is not required.
 > moored or anchored. Not applicable to vessels on unknown
 > or variable schedules (e.g. workboats).
 
+### AIS ‘Type of Ship’ parameter
+
+<table>
+<thead>
+  <tr>
+    <th>1st digit</th>
+    <th>2nd digit</th>
+    <th>[3x] others “engaged in”</th>
+    <th>[5x] special craft</th>
+  </tr>
+</thead>
+<tbody>
+  <tr>
+    <td>0 – Not available</td>
+    <td>0 – All ships of this type</td>
+    <td>30 – Fishing should include fish processors and fish tenders*</td>
+    <td>50 – Pilot vessel</td>
+  </tr>
+  <tr>
+    <td>1 – Reserved for future use</td>
+    <td>1 – Carrying DG, HS or MP , IMO hazard or pollutant category X DO NOT USE</td>
+    <td>31 – Towing ahead or alongside, but, not astern*</td>
+    <td>51 – Search and rescue vessels, i.e. USCG boats, USCG Auxiliaryboats, assistance towers, first-responders, standby vessels</td>
+  </tr>
+  <tr>
+    <td>2 – WIG (Wing-In-Ground) craft</td>
+    <td>2 – Carrying DG, HS, or MP, IMO hazard or pollutant category Y DO NOT USE</td>
+    <td>32 – Towing astern, regardless whether the and length of the tow exceeds 200 m or breadth exceeds 25 m*</td>
+    <td>52 – Tugs, light boats, fleet boats, or similar workboats</td>
+  </tr>
+  <tr>
+    <td>3 – Other vessels engaged in actions listed in column [3x]</td>
+    <td>3 – Carrying DG, HS, or MP, IMO hazard or pollutant category Z DO NOT USE</td>
+    <td>33 – Engaged in dredging or underwater operations, or other equipment operations that may obstruct navigation (such as buoy tending, exploration, ice breaking, production, salvaging,sampling, surveying, or other similar activities, but, not diving,fishing, towing or military operations)*</td>
+    <td>53 – Port tenders, yacht tenders, dive tenders, attending and off-shore supply vessels, or similar support craft; but, not fish tenders</td>
+  </tr>
+  <tr>
+    <td>4 – HSC (hi-speed craft) or passenger ferries</td>
+    <td>4 – Carrying DG, HS, or MP, IMO hazard or pollutant category OS DO NOT USE</td>
+    <td>34 – Engaged in diving operations or other types of operations with persons in the water*</td>
+    <td>54 – Vessels with anti-pollution facilities or equipment</td>
+  </tr>
+  <tr>
+    <td>5 – Special craft per column [5x]</td>
+    <td>5 – Reserved for future use</td>
+    <td>35 – Engaged in military operations or other types of restrictedoperations*</td>
+    <td>55 – Law enforcement vessels, i.e. U.S. Customs and Border Protection vessels, Department of Natural Resources Conservationboats, marine police boats , etc.</td>
+  </tr>
+  <tr>
+    <td>6 – Passenger ships other than HSC and passenger ferries; not including tendersor off-shore supply vessels [see 53]</td>
+    <td>6 – Reserved for future use</td>
+    <td>36 – Sailing vessels*</td>
+    <td>56 – Spare–for assignments to local vessels DO NOT USE</td>
+  </tr>
+  <tr>
+    <td>7 –Cargo (freight) ships or integrated tug barge (ITB) vessels</td>
+    <td>7 – Reserved for future use</td>
+    <td>37 – Pleasure craft</td>
+    <td>57 – Spare–for assignments to local vessels, i.e. articulated tug-barges, pushboats, long haulers, whose dimensions (See Fig.1, ABCD values) represent the overall rectangular area of the vessel including its tow* Do not use when ABCD values DO NOT include the tow</td>
+  </tr>
+  <tr>
+    <td>8 – Tankers or integrated tug tank barge vessels</td>
+    <td>8 – Reserved for future use</td>
+    <td>38 – Reserved for future use</td>
+    <td>58 – Medical transports (as defined in the 1949 Geneva Convention and Additional Protocols) or similar public safety vessels</td>
+  </tr>
+</tbody>
+</table>
+
 ## Maritime Mobile Service Identity (MMSI)
 
 [Maritime Mobile Service Identity \| NAVCEN](https://navcen.uscg.gov/maritime-mobile-service-identity)
@@ -235,9 +649,13 @@ allow for POB reporting it is not required.
 
 > **Maritime Identification Digits (MID)** MIDs are three digit identifiers ranging from 201 to 775 denoting the administration (country) or geographical area of the administration responsible for the ship station so identified. See the ITU Table of Maritime Identification Digits.
 >
-> **Ships** All ship MMSIs use the format M<sub>1</sub> I2D3X4X5X6X7X8X9 where in the first three digits represent the Maritime Identification Digits (MID) and X is any figure from 0 to 9. (Hint: Ships transmitting with an MMSI not starting with the digits 201-775 are likely doing so improperly, and may be subject to FCC or USCG enforcement action).
+> **Ships** All ship MMSIs use the format M<sub>1</sub> I<sub>2</sub>D<sub>3</sub>X<sub>4</sub>X<sub>5</sub>X<sub>6</sub>X<sub>7</sub>X<sub>8</sub>X<sub>9</sub> where in the first three digits represent the Maritime Identification Digits (MID) and X is any figure from 0 to 9. (Hint: Ships transmitting with an MMSI not starting with the digits 201-775 are likely doing so improperly, and may be subject to FCC or USCG enforcement action).
 
-**Coast Radio Stations (Base Stations)** All coast or base stations use the format 0102M3I4D5X6X7X8X9,where the digits 3, 4 and 5 represent the MID and X is any figure from 0 to 9. Groups of DSC coast radio stations use the same format.
+[^sed]
+
+[^sed]: `echo "M1 I2D3X4X5X6X7X8X9" | sed -E 's/[0-9]/<sub>&<\/sub>/g'`
+
+> **Coast Radio Stations (Base Stations)** All coast or base stations use the format <sub>0</sub><sub>1</sub><sub>0</sub><sub>2</sub>M<sub>3</sub>I<sub>4</sub>D<sub>5</sub><sub>0</sub><sub>6</sub><sub>0</sub><sub>7</sub><sub>0</sub><sub>8</sub><sub>0</sub><sub>9</sub>,where the digits 3, 4 and 5 represent the MID and X is any figure from 0 to 9. Groups of DSC coast radio stations use the same format.
 
 # U.S. Army Corps of Engineers (USACE)
 
