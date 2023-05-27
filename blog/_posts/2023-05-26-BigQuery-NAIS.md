@@ -1,6 +1,6 @@
 ---
 layout: post
-title: MarineCadastre.gov AIS data on BigQuery
+title: National AIS at 1 Minute Intervals Data on BigQuery
 topic: uscg-nais
 ---
 
@@ -172,5 +172,7 @@ done
 ```bash
 bq query --use_legacy_sql=false 'SELECT COUNT(*) FROM ais-data-385301.uscg_nais.ais_2022_06;'
 ```
+
+<pre>249325885</pre>
 
 

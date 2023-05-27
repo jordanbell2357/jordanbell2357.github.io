@@ -31,9 +31,9 @@ A Latin Dictionary. Founded on Andrews' edition of Freund's Latin dictionary. re
 
 [schēma \| Lewis and Short](http://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.04.0059%3Aalphabetic+letter%3DS%3Aentry+group%3D17%3Aentry%3Dschema)
 
-> schēma , ae, f. (cf.:
->
-> I.“diadema, dogma, etc.,” Prisc. p. 679 P.), and (mostly post-Aug.) ătis, n. (dat. and abl. plur. schemasin, Varr. ap. Charis. p. 38; “but schematibus,” Lampr. Heliog. 19), = σχῆμα.
+[p. 1641. Lewis and Short. Google Books](https://www.google.ca/books/edition/A_Latin_Dictionary_Founded_on_Andrews_Ed/RGFRKmSHAQwC?hl=en&gbpv=1&pg=PA1641&printsec=frontcover)
+
+> **schēma** , ae, f. (cf.: “diadema, dogma, etc.,” Prisc. p. 679 P.), and (mostly post-Aug.) ătis, n. (dat. and abl. plur. schemasin, Varr. ap. Charis. p. 38; “but schematibus,” Lampr. Heliog. 19), = σχῆμα.
 >
 > I. In gen., *a shape, figure, form, fashion, manner, posture, attitude*, etc. (so mostly ante-class.; not in Cic.).
 >
