@@ -176,3 +176,4 @@ bq query --use_legacy_sql=false 'SELECT COUNT(*) FROM ais-data-385301.uscg_nais.
 <pre>249325885</pre>
 
 
+<pre>249 million 325 thousand 885</pre>
