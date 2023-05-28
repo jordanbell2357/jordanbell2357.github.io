@@ -1,6 +1,6 @@
 ---
 layout: post
-title: National AIS at 1 Minute Intervals Data on BigQuery
+title: USCG NAIS National AIS at 1 Minute Intervals Data on BigQuery
 topic: uscg-nais
 ---
 
@@ -27,7 +27,7 @@ done
 
 [Specifying a schema](https://cloud.google.com/bigquery/docs/schemas)
 
-`ais_2022_06.json`
+`MarineCadastre_schema.json`
 
 ```json
 [
@@ -141,17 +141,17 @@ done
 # bq mk
 
 ```bash
-bq mk --table --schema=ais_2022_06.json uscg_nais.ais_2022_06
+bq mk --table --schema=MarineCadastre_schema.json uscg.nais
 ```
 
 # bq show
 
 ```bash
-bq show --schema --format=prettyjson ais-data-385301:uscg_nais.ais_2022_06
+bq show --schema --format=prettyjson ais-data-385301:uscg.nais
 ```
 
 ```bash
-bq show --schema --format=prettyjson ais-data-385301:uscg_nais.ais_2022_06 | diff ais_2022_06.json -
+bq show --schema --format=prettyjson ais-data-385301:uscg.nais | diff MarineCadastre_schema.json -
 ```
 
 # bq load
@@ -161,19 +161,19 @@ for i in {01..30}; do \
 bq load \
 --source_format=CSV \
 --max_bad_records=200 \
---schema=ais_2022_06.json \
-uscg_nais.ais_2022_06 \
+--schema=MarineCadastre_schema.json \
+uscg.nais \
 gs://jordanbell2357marinecadastre/AIS_2022_06_${i}.csv; \
 done
 ```
 
 `max_bad_records=200` is chosen because `max_bad_records=100` fails. (That is, at least one daily CSV file has have more than
-100 records not fitting the schema `ais_2022_06.json`, but there is no daily CSV file with more than 200 records not fitting the schema.)
+100 records not fitting the schema `MarineCadastre_schema.json`, but there is no daily CSV file with more than 200 records not fitting the schema.)
 
 ## bq query
 
 ```bash
-bq query --use_legacy_sql=false 'SELECT COUNT(*) FROM ais-data-385301.uscg_nais.ais_2022_06;'
+bq query --use_legacy_sql=false 'SELECT COUNT(*) FROM ais-data-385301.uscg.nais;'
 ```
 
 <pre>249325885</pre>
