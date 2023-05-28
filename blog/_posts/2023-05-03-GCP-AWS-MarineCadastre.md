@@ -1,7 +1,7 @@
 ---
 layout: post
 title: GCP, AWS and and MarineCadastre.gov AIS data
-topic: MarineCadastre
+topic: datasets
 ---
 
 # MarineCadastre.gov
