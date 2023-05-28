@@ -1,6 +1,6 @@
 ---
 layout: post
-title: USCG NAIS National AIS at 1 Minute Intervals Data on BigQuery
+title: USCG NAIS National AIS at 1 Minute Intervals schema for BigQuery
 topic: uscg-nais
 ---
 

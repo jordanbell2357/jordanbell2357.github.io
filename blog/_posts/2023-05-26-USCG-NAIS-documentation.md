@@ -1,6 +1,6 @@
 ---
 layout: post
-title: USCG Nationwide Automatic Identification System (NAIS)
+title: USCG Nationwide Automatic Identification System (NAIS) documentation
 topic: uscg-nais
 toc: true
 ---
@@ -63,7 +63,12 @@ toc: true
 
 NAIS/VIVS Coverage:
 
-![NAIS/VIVS Coverage](/images/USCG/VIVS_Coverage.png)
+<figure>
+  ![NAIS/VIVS Coverage](/images/USCG/VIVS_Coverage.png)
+  <figcaption>Caption for the image</figcaption>
+</figure>
+
+
 
 ## Class A AIS Reports
 
