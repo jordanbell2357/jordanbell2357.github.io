@@ -19,7 +19,7 @@ rm AIS_2022_06_${i}.zip;
 done
 ```
 
-# gsutil
+# gsutil cp
 
 ```bash
 for i in {01..30}; do \
@@ -27,6 +27,25 @@ gsutil cp AIS_2022_06_${i}.csv gs://jordanbell2357marinecadastre/; \
 rm AIS_2022_06_${i}.csv; \
 done
 ```
+
+# gsutil cat
+
+```bash
+gsutil cat gs://jordanbell2357marinecadastre/AIS_2022_06_01.csv | head
+```
+
+<pre>
+MMSI,BaseDateTime,LAT,LON,SOG,COG,Heading,VesselName,IMO,CallSign,VesselType,Status,Length,Width,Draft,Cargo,TransceiverClass
+367777550,2022-06-01T00:00:02,28.10198,-96.93931,0.0,360.0,511.0,HARRY LEE,,WDJ4420,52,0,0,0,0.0,52,A
+367544180,2022-06-01T00:00:07,46.16795,-123.91430,0.0,342.5,511.0,JEANNE ARAIN,,WDG5186,30,15,18,,,30,A
+368001000,2022-06-01T00:00:04,29.05437,-90.23010,7.9,180.0,168.0,GRANT CANDIES,IMO9481374,WDE5747,90,0,89,18,6.0,0,A
+366772750,2022-06-01T00:00:04,48.52818,-122.80100,16.2,276.1,277.0,WSF YAKIMA,IMO8835360,WCD7863,60,0,116,22,5.5,60,A
+368102480,2022-06-01T00:00:03,32.77822,-79.95351,0.0,360.0,511.0,CHARLESTON PRINCESS,,WDK9315,69,0,69,19,2.2,69,A
+366972280,2022-06-01T00:00:02,29.74435,-95.10025,0.0,247.9,511.0,JOEY DEVALL,,WYB7063,31,0,18,7,,31,A
+367344920,2022-06-01T00:00:00,30.28591,-88.74167,6.5,271.0,272.0,JACK BINION,,WDF2412,31,12,24,9,,57,A
+367305040,2022-06-01T00:00:01,41.37956,-71.51142,0.0,226.3,305.0,BLOCK ISLAND,IMO8662763,WCX6756,60,0,57,11,,60,A
+368091590,2022-06-01T00:00:01,25.76444,-80.14482,0.0,360.0,285.0,EAGLE_II,,WDK8178,60,0,0,0,0.0,60,A
+</pre>
 
 # Schema
 
@@ -165,6 +184,7 @@ bq show --schema --format=prettyjson ais-data-385301:uscg.nais | diff MarineCada
 for i in {01..30}; do \
 bq load \
 --source_format=CSV \
+--skip_leading_rows=1 \
 --max_bad_records=200 \
 --schema=MarineCadastre_schema.json \
 uscg.nais \
