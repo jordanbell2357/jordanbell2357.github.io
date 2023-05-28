@@ -1,7 +1,7 @@
 ---
 layout: post
 title: National Geospatial-Intelligence Agency (NGA) World Port Index (Pub 150) (WPI)
-topic: uscg-nais
+topic: datasets
 ---
 
 [National Geospatial-Intelligence Agency (NGA) Maritime Safety Information](https://msi.nga.mil/)
