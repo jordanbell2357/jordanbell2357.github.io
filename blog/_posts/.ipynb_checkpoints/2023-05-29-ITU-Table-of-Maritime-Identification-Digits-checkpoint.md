@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "ITU Table of Maritime Identification Digits"
+title: "ITU Table of Maritime Identification Digits (MID)"
 topic: uscg-nais
 ---
 
@@ -27,8 +27,22 @@ Digit,Allocated to
 209,Cyprus (Republic of)
 ```
 
-`databricks fs cp MaritimeIdentificationDigits.csv dbfs:/FileStore/tables` [^1]
+<div style="overflow-x:auto;">
+  <table>
+      {% for row in site.data.MaritimeIdentificationDigits %}
+          {% if forloop.first %}
+              <tr>
+                  {% for pair in row %}
+                      <th>
+                          {{ pair[0] }}
+                      </th>
+                  {% endfor %}
+              </tr>
+          {% endif %}
 
-[^1]: [Databricks CLI](https://docs.databricks.com/dev-tools/cli/index.html)
-
-<iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSoz4rQDDWlWBjwkF683S5s00do-ccRmFAm3-dt_7MlHBm4AH1sn6mAy7_cVf5OLwXlaQjw8A9OAyxM/pubhtml?gid=1584142566&amp;single=true&amp;widget=true&amp;headers=false" width="100%" height="400"></iframe>
+          {% tablerow pair in row %}
+              {{ pair[1] }}
+          {% endtablerow %}
+      {% endfor %}
+  </table>
+</div>
