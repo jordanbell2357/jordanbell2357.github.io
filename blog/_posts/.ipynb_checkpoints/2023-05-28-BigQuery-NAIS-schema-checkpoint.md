@@ -1,6 +1,6 @@
 ---
 layout: post
-title: USCG NAIS National AIS at 1 Minute Intervals CSV schema for BigQuery
+title: BigQuery schema for USCG NAIS National AIS at 1 Minute Intervals CSV files
 topic: uscg-nais
 toc: true
 ---
