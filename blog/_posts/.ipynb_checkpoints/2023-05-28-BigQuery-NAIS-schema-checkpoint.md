@@ -204,3 +204,28 @@ bq query --use_legacy_sql=false 'SELECT COUNT(*) FROM ais-data-385301.uscg.nais;
 <pre>249325885</pre>
 
 <pre>249 million 325 thousand 885 messages</pre>
+
+# pipe combination
+
+```bash
+for i in {06..10}; do \
+curl -O https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2022/AIS_2022_07_${i}.zip; \
+unzip AIS_2022_07_${i}.zip; \
+rm AIS_2022_07_${i}.zip; \
+gsutil cp AIS_2022_07_${i}.csv gs://jordanbell2357marinecadastre/; \
+rm AIS_2022_07_${i}.csv; \
+done
+```
+
+```bash
+for i in {06..10}; do \
+bq load \
+--source_format=CSV \
+--skip_leading_rows=1 \
+--max_bad_records=200 \
+--schema=MarineCadastre_schema.json \
+uscg.nais \
+gs://jordanbell2357marinecadastre/AIS_2022_07_${i}.csv; \
+gsutil rm gs://jordanbell2357marinecadastre/AIS_2022_07_${i}.csv; \
+done
+```
