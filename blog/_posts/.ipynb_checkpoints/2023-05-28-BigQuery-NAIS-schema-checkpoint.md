@@ -207,6 +207,8 @@ bq query --use_legacy_sql=false 'SELECT COUNT(*) FROM ais-data-385301.uscg.nais;
 
 # pipe combination
 
+## Two stage
+
 ```bash
 for i in {06..10}; do \
 curl -O https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2022/AIS_2022_07_${i}.zip; \
@@ -227,5 +229,45 @@ bq load \
 uscg.nais \
 gs://jordanbell2357marinecadastre/AIS_2022_07_${i}.csv; \
 gsutil rm gs://jordanbell2357marinecadastre/AIS_2022_07_${i}.csv; \
+done
+```
+
+## One stage
+```bash
+for i in {11..12}; do \
+curl -O https://coast.noaa.gov/htdata/CMSP/AISDataHandler/2022/AIS_2022_07_${i}.zip; \
+unzip AIS_2022_07_${i}.zip; \
+rm AIS_2022_07_${i}.zip; \
+gsutil cp AIS_2022_07_${i}.csv gs://jordanbell2357marinecadastre/; \
+rm AIS_2022_07_${i}.csv; \
+bq load \
+--source_format=CSV \
+--skip_leading_rows=1 \
+--max_bad_records=200 \
+--schema=MarineCadastre_schema.json \
+uscg.nais \
+gs://jordanbell2357marinecadastre/AIS_2022_07_${i}.csv; \
+gsutil rm gs://jordanbell2357marinecadastre/AIS_2022_07_${i}.csv; \
+done
+```
+
+## One stage with parameters
+```bash
+y='2022'
+m='07'
+for d in {13..14}; do \
+curl -O https://coast.noaa.gov/htdata/CMSP/AISDataHandler/${y}/AIS_${y}_${m}_${d}.zip; \
+unzip AIS_${y}_${m}_${d}.zip; \
+rm AIS_${y}_${m}_${d}.zip; \
+gsutil cp AIS_${y}_${m}_${d}.csv gs://jordanbell2357marinecadastre/; \
+rm AIS_${y}_${m}_${d}; \
+bq load \
+--source_format=CSV \
+--skip_leading_rows=1 \
+--max_bad_records=200 \
+--schema=MarineCadastre_schema.json \
+uscg.nais \
+gs://jordanbell2357marinecadastre/AIS_${y}_${m}_${d}; \
+gsutil rm gs://jordanbell2357marinecadastre/AIS_${y}_${m}_${d}.csv; \
 done
 ```

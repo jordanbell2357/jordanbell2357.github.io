@@ -1,6 +1,7 @@
 ---
 layout: post
 title: NGA MSI World Port Index (Pub 150) (WPI)
+topic: uscg-nais
 ---
 
 [Maritime Safety Information (MSI) \| National Geospatial-Intelligence Agency (NGA)](https://msi.nga.mil/)
