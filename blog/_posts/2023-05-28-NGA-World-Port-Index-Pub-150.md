@@ -16,3 +16,25 @@ title: NGA MSI World Port Index (Pub 150) (WPI)
 Retrieved May 28, 2023.
 
 [Explanation of Data Fields](https://msi.nga.mil/api/publications/download?key=16920959/SFH00000/WPI_Explanation_of_Data_Fields.pdf&type=view)
+
+`WPI_Explanation_of_Data_Fields.pdf`
+
+<div style="overflow-x:auto;">
+  <table>
+      {% for row in site.data.WorldPortIndex_dictionary %}
+          {% if forloop.first %}
+              <tr>
+                  {% for pair in row %}
+                      <th>
+                          {{ pair[0] }}
+                      </th>
+                  {% endfor %}
+              </tr>
+          {% endif %}
+
+          {% tablerow pair in row %}
+              {{ pair[1] }}
+          {% endtablerow %}
+      {% endfor %}
+  </table>
+</div>

@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Rec. ITU-R M.1371-5
+title: "ITU-R M.1371-5: Technical characteristics for an automatic identification system using time division multiple access in the VHF maritime mobile frequency band"
 topic: uscg-nais
 ---
 
