@@ -4,23 +4,21 @@ title: "NATO Shipping Centre: AIS (Automatic Identification System) overview"
 topic: readings
 ---
 
-[NATO Shipping Centre](https://shipping.nato.int/nsc/operations/news/2021/ais-automatic-identification-system-overview)
+[NATO Shipping Centre](https://shipping.nato.int/nsc)
+
+[AIS (Automatic Identification System) overview \| NATO Shipping Centre](https://shipping.nato.int/nsc/operations/news/2021/ais-automatic-identification-system-overview)
 
 # AIS (Automatic Identification System) overview
 
-## The Automatic Identification System (AIS) is a short-range coastal tracking system currently used on ships. It was developed to provide identification and positioning information to both vessels and shore stations.
+**The Automatic Identification System (AIS) is a short-range coastal tracking system currently used on ships. It was developed to provide identification and positioning information to both vessels and shore stations.**
 
-> AIS (Automatic Identification System) is the mariner's most significant development in navigation safety since the introduction of radar. This is a digital positional awareness system operating in the Very High Frequency (VHF) maritime band. Its purpose is to help identify ships, assist in target tracking, assist in search and rescue operation, simplify information exchange and provide additional information to assist situational awareness _(International Maritime Organization (IMO), A 29/Res.1106)_. Originally developed as a collision avoidance tool to enable commercial vessels to 'see' each other more clearly in all conditions and improve the helmsman's information about his surrounding environment. AIS does this by continuously transmitting a vessels identity, position, speed and course along with other relevant information to all other AIS equipped vessels within range. Combined with a shore station, this system also offers port authorities and maritime safety bodies the ability to manage maritime traffic and reduce the hazards of marine navigation.
+AIS (Automatic Identification System) is the mariner's most significant development in navigation safety since the introduction of radar. This is a digital positional awareness system operating in the Very High Frequency (VHF) maritime band. Its purpose is to help identify ships, assist in target tracking, assist in search and rescue operation, simplify information exchange and provide additional information to assist situational awareness _(International Maritime Organization (IMO), A 29/Res.1106)_. Originally developed as a collision avoidance tool to enable commercial vessels to 'see' each other more clearly in all conditions and improve the helmsman's information about his surrounding environment. AIS does this by continuously transmitting a vessels identity, position, speed and course along with other relevant information to all other AIS equipped vessels within range. Combined with a shore station, this system also offers port authorities and maritime safety bodies the ability to manage maritime traffic and reduce the hazards of marine navigation.
 
-> The range of reception can be variable and is dependent on factors including signal propagation conditions, sea state, the height of the transmitting and receiving antenna and the strength of the vessel transmitter. Reception could be as little as 20 nautical miles, or as much as 350 nautical miles for powerful transmissions during appropriate atmospheric conditions. In the context of the factors that act to control AIS reception range it is considered likely that on average a 40 nautical mile reception radius will be achieved by the AIS receiver network. The same coverage assumptions do not apply to AIS-B which has a smaller power output with ranges of up to 10 nautical miles
+The range of reception can be variable and is dependent on factors including signal propagation conditions, sea state, the height of the transmitting and receiving antenna and the strength of the vessel transmitter. Reception could be as little as 20 nautical miles, or as much as 350 nautical miles for powerful transmissions during appropriate atmospheric conditions. In the context of the factors that act to control AIS reception range it is considered likely that on average a 40 nautical mile reception radius will be achieved by the AIS receiver network. The same coverage assumptions do not apply to AIS-B which has a smaller power output with ranges of up to 10 nautical miles
 
-## How AIS Works:
+**How AIS Works:**
 
-> AIS works by taking your position and movements via the vessels' GPS system or an internal sensor built into an AIS unit. That information is then collated along with programmable information from the AIS unit (e.g. Maritime Mobile Service Identity (MMSI) number, vessel name, destination, cargo type) and is transmitted in the background at regular intervals whilst also receiving other vessels AIS information. The AIS unit can have its own separate antenna or an antenna splitter can be used from the antenna the VHF radio transmits from. If an antenna splitter is used, it must be an active splitter suitable for a VHF radio and AIS transponder.
-
-# 
-
-****
+AIS works by taking your position and movements via the vessels' GPS system or an internal sensor built into an AIS unit. That information is then collated along with programmable information from the AIS unit (e.g. Maritime Mobile Service Identity (MMSI) number, vessel name, destination, cargo type) and is transmitted in the background at regular intervals whilst also receiving other vessels AIS information. The AIS unit can have its own separate antenna or an antenna splitter can be used from the antenna the VHF radio transmits from. If an antenna splitter is used, it must be an active splitter suitable for a VHF radio and AIS transponder.
 
 **SOLAS requirements:** The IMO Convention for the Safety Of Life At Sea (SOLAS) Regulation V/19.2.4 requires all vessels of 300 GT and above engaged on international voyages and all passenger ships irrespective of size to carry AIS onboard.
 
