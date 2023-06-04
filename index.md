@@ -22,8 +22,6 @@ This website is the anchor for my internet presence and a platform for my writin
 
 # Blog posts
 
-[Blog](/blog/)
-
 <ul class="spaced_list">
   {% for post in site.categories.blog %}
     <li>
