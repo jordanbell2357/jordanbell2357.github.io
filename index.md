@@ -10,14 +10,24 @@ layout: home
 
 This website is the anchor for my internet presence and a platform for my writings, projects, and notebooks.
 
-All blog posts: [Blog](/blog/)
-
 # Blog posts by topics
 
 <ul class="topic_list">
   {% for topic in site.data.topics %}
     <li>
       <a href="/topics/{{ topic.slug }}">{{ topic.name }}</a>
+    </li>
+  {% endfor %}
+</ul>
+
+# Blog posts
+
+[Blog](/blog/)
+
+<ul class="spaced_list">
+  {% for post in site.categories.blog %}
+    <li>
+      <a href="{{ post.url }}">{{ post.title }}</a> {{ post.date | date_to_long_string }}
     </li>
   {% endfor %}
 </ul>
