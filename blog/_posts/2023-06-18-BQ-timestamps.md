@@ -13,7 +13,7 @@ WITH all_dates AS (
   SELECT DATE(d) AS missing_date
   FROM UNNEST(GENERATE_DATE_ARRAY(DATE('2022-01-01'), DATE('2022-12-31'))) AS d
 )
-SELECT FORMAT_TIMESTAMP('%d-%m', missing_date) AS missing_dates
+SELECT FORMAT_TIMESTAMP('%Y-%m-%d', missing_date) AS missing_dates
 FROM all_dates
 LEFT JOIN (
   SELECT DISTINCT DATE(BaseDateTime) AS existing_date
