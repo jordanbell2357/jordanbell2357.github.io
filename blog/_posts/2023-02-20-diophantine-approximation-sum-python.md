@@ -34,40 +34,40 @@ the distance from $$x$$ to the nearest integer.
 
 $$\vert \vert x \vert \vert$$ = `int_dist(x)`
 
-![Golden ratio](/python/m5000_40000_g.png)
+![Golden ratio](/LaTeX/diophantine/diophantine_python/m5000_40000_g.png)
 
-![Golden ratio](/python/m20000_40000_g.png)
+![Golden ratio](/LaTeX/diophantine/diophantine_python/m20000_40000_g.png)
 
-![√ 5 divided by 2](/python/m5000_40000_sqrt_5_div_2.png)
+![√ 5 divided by 2](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_5_div_2.png)
 
-![√ 5 divided by 2](/python/m20000_40000_sqrt_5_div_2.png)
+![√ 5 divided by 2](/LaTeX/diophantine/diophantine_python/m20000_40000_sqrt_5_div_2.png)
 
-![√ 2](/python/m5000_40000_sqrt_2.png)
+![√ 2](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_2.png)
 
-![√ 3](/python/m5000_40000_sqrt_3.png)
+![√ 3](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_3.png)
 
-![√ 5](/python/m5000_40000_sqrt_5.png)
+![√ 5](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_5.png)
 
-![√ 5](/python/m20000_40000_sqrt_5.png)
+![√ 5](/LaTeX/diophantine/diophantine_python/m20000_40000_sqrt_5.png)
 
-![√ 6](/python/m5000_40000_sqrt_6.png)
+![√ 6](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_6.png)
 
-![√ 7](/python/m5000_40000_sqrt_7.png)
+![√ 7](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_7.png)
 
-![√ 10](/python/m5000_40000_sqrt_10.png)
+![√ 10](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_10.png)
 
-![√ 11](/python/m5000_40000_sqrt_11.png)
+![√ 11](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_11.png)
 
-![√ 13](/python/m5000_40000_sqrt_13.png)
+![√ 13](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_13.png)
 
-![√ 15](/python/m5000_40000_sqrt_15.png)
+![√ 15](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_15.png)
 
-![√ 17](/python/m5000_40000_sqrt_17.png)
+![√ 17](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_17.png)
 
-![√ 17](/python/m20000_40000_sqrt_17.png)
+![√ 17](/LaTeX/diophantine/diophantine_python/m20000_40000_sqrt_17.png)
 
-![√ 19](/python/m5000_40000_sqrt_19.png)
+![√ 19](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_19.png)
 
-![√ 23](/python/m5000_40000_sqrt_23.png)
+![√ 23](/LaTeX/diophantine/diophantine_python/m5000_40000_sqrt_23.png)
 
-![e](/python/m20000_40000_e.png)
+![e](/LaTeX/diophantine/diophantine_python/m20000_40000_e.png)
