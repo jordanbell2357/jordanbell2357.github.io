@@ -75,3 +75,5 @@ INSERT INTO `ais-data-385301.uscg.nais_2022_partition_by_MMSI_and_BaseDateTime`
 SELECT *
 FROM `ais-data-385301.uscg.nais_2022_nodups`;
 ```
+
+> This statement added 2,965,744,033 rows to nais_2022_partition_by_MMSI_and_BaseDateTime.
