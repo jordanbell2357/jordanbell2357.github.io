@@ -73,6 +73,12 @@ rm ${output_dir}/oscar_vel2022_progress_t*.png
     </p>
   </video>
 
+```bash
+ffmpeg -i ffmpeg/oscar_vel2022.mp4 -vf "fps=3,scale=1000:-1:flags=lanczos" -c:v gif ffmpeg/oscar_vel2022.gif
+```
+
+![OSCAR SSV 2022 GIF](/images/FFmpeg/oscar_vel2022.gif)
+
   <script>
     var player = videojs('my-video1');
   </script>
