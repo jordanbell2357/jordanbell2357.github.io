@@ -1,10 +1,6 @@
 ---
 layout: post
-title: OSCAR 
-
----
-layout: post
-title: ffmpeg, ImageMagick, and Video.js
+title: OSCAR 2022 sea surface velocity steamplot animation
 topic: cli
 ---
 
