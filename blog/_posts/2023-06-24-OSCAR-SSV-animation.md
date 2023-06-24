@@ -1,0 +1,80 @@
+---
+layout: post
+title: OSCAR 
+
+---
+layout: post
+title: ffmpeg, ImageMagick, and Video.js
+topic: cli
+---
+
+<link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
+<script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
+
+```bash
+#!/bin/bash
+
+# Define total number of time steps
+N=72
+
+# Define output directory
+output_dir="ffmpeg"
+
+# Create output directory if it doesn't exist
+mkdir -p $output_dir
+
+# Define width and height
+width=2700
+height=1350
+
+# Define progress bar height
+progress_height=80
+
+# Create N images with increasing filled progress bars
+for i in $(seq 1 $N); do
+    progress=$((i*width/N))  # proportionally increase size
+    convert -size ${width}x${progress_height} xc:grey50 -fill "rgb(0,0,0)" -draw "rectangle 0,0 $progress,${progress_height}" ${output_dir}/progress_${i}.png
+done
+
+# Overlay progress bar onto each image, create new image
+for i in $(seq 1 $N); do
+    # Calculate progress bar position
+    y_offset=$(( height-progress_height-10 ))  # place the progress bar at the bottom, with 10 pixels padding
+
+    # Overlay progress bar and save as new image
+    convert oscar_vel2022_t${i}.png ${output_dir}/progress_${i}.png -geometry +0+${y_offset} -composite ${output_dir}/oscar_vel2022_progress_t${i}.png
+done
+
+# Create video using ffmpeg
+ffmpeg -framerate 5 -i "${output_dir}/oscar_vel2022_progress_t%d.png" -c:v libx264 -r 30 -pix_fmt yuv420p ${output_dir}/oscar_vel2022.mp4
+
+# Clean up progress bar and composite images
+rm ${output_dir}/progress_*.png
+rm ${output_dir}/oscar_vel2022_progress_t*.png
+```
+
+  <video
+    id="my-video1"
+    class="video-js"
+    controls
+    preload="auto"
+    width="500"
+    height="250"
+    poster="/images/FFmpeg/oscar_vel2022_progress_t36.png"
+    data-setup="{}"
+  >
+    <source src="/images/FFmpeg/oscar_vel2022.mp4" type="video/mp4" />
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank"
+        >supports HTML5 video</a
+      >
+    </p>
+  </video>
+
+  <script>
+    var player = videojs('my-video1');
+  </script>
+
+[Video.js Options Reference](https://videojs.com/guides/options/)
