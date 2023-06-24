@@ -6,8 +6,6 @@ topic: uscg-nais
 
 Find days of 2022 for which we have not loaded daily CSV data file:
 
-<https://chat.openai.com/share/1dd92e4d-f5e2-4990-a713-4cc8adee4e21>
-
 ```sql
 WITH all_dates AS (
   SELECT DATE(d) AS missing_date
