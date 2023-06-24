@@ -64,16 +64,3 @@ SELECT COUNT(*) FROM `ais-data-385301.uscg.no_dups`;
 ```
 
 `873213`
-
-
-```bash
-bq mk --time_partitioning_field BaseDateTime --time_partitioning_type DAY --schema MarineCadastre_schema.json ais-data-385301:uscg.nais_2022_partition_by_MMSI_and_BaseDateTime
-```
-
-```sql
-INSERT INTO `ais-data-385301.uscg.nais_2022_partition_by_MMSI_and_BaseDateTime`
-SELECT *
-FROM `ais-data-385301.uscg.nais_2022_nodups`;
-```
-
-> This statement added 2,965,744,033 rows to nais_2022_partition_by_MMSI_and_BaseDateTime.
