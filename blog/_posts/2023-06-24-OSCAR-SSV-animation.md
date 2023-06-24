@@ -49,6 +49,8 @@ rm ${output_dir}/progress_*.png
 rm ${output_dir}/oscar_vel2022_progress_t*.png
 ```
 
+[Video.js Options Reference](https://videojs.com/guides/options/)
+
   <video
     id="my-video1"
     class="video-js"
@@ -78,5 +80,3 @@ ffmpeg -i ffmpeg/oscar_vel2022.mp4 -vf "fps=3,scale=1000:-1:flags=lanczos" -c:v 
   <script>
     var player = videojs('my-video1');
   </script>
-
-[Video.js Options Reference](https://videojs.com/guides/options/)
