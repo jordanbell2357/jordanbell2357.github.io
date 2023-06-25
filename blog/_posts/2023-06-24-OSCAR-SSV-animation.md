@@ -7,6 +7,52 @@ topic: cli
 <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
 <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
 
+```python
+import xarray as xr
+# Open the dataset
+ds = xr.open_dataset("local_folder/oscar_vel2022.nc")
+```
+
+```python
+import numpy as np
+import cartopy.crs as ccrs
+import matplotlib.pyplot as plt
+import os
+
+dec = 2 # decimation
+
+# Create a directory for the images if it doesn't exist
+output_dir = "oscar_images"
+os.makedirs(output_dir, exist_ok=True)
+
+for t in range(len(ds.time)):
+    plt.figure(figsize=(18, 9))
+    ax = plt.axes(projection=ccrs.PlateCarree()) # plate carrée projection
+    
+    lon = ds.longitude.values[::dec]
+    lon[lon > 180] = lon[lon > 180] - 360
+    
+    plt.streamplot(
+        lon,
+        ds.latitude.values[::dec],
+        ds.u.values[t, 0, ::dec, ::dec],
+        ds.v.values[t, 0, ::dec, ::dec],
+        8,
+        transform = ccrs.PlateCarree()
+    )
+    
+    ax.coastlines()
+
+    # Create a title using the time dimension
+    plt.title(f'Sea surface currents derived from oscar_vel2022.nc, Time: {ds.time.values[t]}')
+
+    # Save the figure with a filename based on the time step
+    plt.savefig(f"{output_dir}/oscar_vel2022_t{t}.png", dpi=150)
+
+    # Close the figure to free up memory
+    plt.close()
+```
+
 ```bash
 #!/bin/bash
 
