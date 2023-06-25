@@ -4,6 +4,8 @@ title: OSCAR 2022 sea surface velocity steamplot animation
 topic: cli
 ---
 
+<https://podaac.jpl.nasa.gov/dataset/OSCAR_L4_OC_third-deg>
+
 <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
 <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
 
