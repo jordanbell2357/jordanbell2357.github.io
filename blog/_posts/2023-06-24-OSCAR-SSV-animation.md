@@ -212,16 +212,16 @@ rm ${output_dir}/oscar_vel2022_progress_t*.png
 [Video.js Options Reference](https://videojs.com/guides/options/)
 
   <video
-    id="my-video1"
+    id="my-video2"
     class="video-js"
     controls
     preload="auto"
     width="500"
     height="250"
-    poster="/images/FFmpeg/oscar_vel2022_progress_t36.png"
+    poster="/images/FFmpeg/oscar_vel2022_peters_progress_t36.png"
     data-setup="{}"
   >
-    <source src="/images/FFmpeg/oscar_vel2022.mp4" type="video/mp4" />
+    <source src="/images/FFmpeg/oscar_vel2022_peters.mp4" type="video/mp4" />
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a
       web browser that
@@ -232,10 +232,10 @@ rm ${output_dir}/oscar_vel2022_progress_t*.png
   </video>
 
 ```bash
-ffmpeg -i ffmpeg/oscar_vel2022.mp4 -vf "fps=3,scale=1000:-1:flags=lanczos" -c:v gif ffmpeg/oscar_vel2022.gif
+ffmpeg -i oscar_vel2022_peters.mp4 -vf "fps=3,scale=1000:-1:flags=lanczos" -c:v gif oscar_vel2022_peters.gif
 ```
 
-![OSCAR SSV 2022 GIF](/images/FFmpeg/oscar_vel2022.gif)
+![OSCAR SSV 2022 GIF](/images/FFmpeg/oscar_vel2022_peters.gif)
 
 <script>
   var player = videojs('my-video1');
