@@ -138,12 +138,12 @@ import os
 dec = 2 # decimation
 
 # Create a directory for the images if it doesn't exist
-output_dir = "oscar_images"
+output_dir = "output_Peters"
 os.makedirs(output_dir, exist_ok=True)
 
 for t in range(len(ds.time)):
     plt.figure(figsize=(18, 9))
-    ax = plt.axes(projection=ccrs.PlateCarree()) # plate carrée projection
+    ax = plt.axes(projection=ccrs.EqualEarth()) # Equal Earth (similar to Peters) projection
     
     lon = ds.longitude.values[::dec]
     lon[lon > 180] = lon[lon > 180] - 360
