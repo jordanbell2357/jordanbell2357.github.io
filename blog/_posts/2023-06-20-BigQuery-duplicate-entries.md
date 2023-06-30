@@ -60,7 +60,7 @@ SELECT COUNT(*) FROM `ais-data-385301.uscg.no_dups`;
 `2965744033`
 
 ```sql
-SELECT COUNT(*) FROM `ais-data-385301.uscg.no_dups`;
+SELECT COUNT(*) FROM `ais-data-385301.uscg.dups`;
 ```
 
 `873213`
