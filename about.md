@@ -69,9 +69,11 @@ University Medal in Mathematics
 
 - [Instagram](https://www.instagram.com/jordanbell2357/)
 
+- [KNIME Community Hub](https://hub.knime.com/jordanbell2357_)
+
 - [Mastodon](https://graphics.social/@jordanbell2357)
 
-- [Social Psychology Network](https://www.socialpsychology.org/member/jordan-bell)
+- [Tableau Public](https://public.tableau.com/app/profile/jordan.bell6481)
 
 - [Twitter](https://twitter.com/jordanbell2357)
 
