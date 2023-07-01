@@ -10,7 +10,6 @@ permalink: /about/
 - [Education](#education)
 - [Awards](#awards)
 - [Service](#service)
-- [Online tutoring](#tutoring)
 - [Content profiles](#profiles)
 - [Learning profiles](#learning)
 
