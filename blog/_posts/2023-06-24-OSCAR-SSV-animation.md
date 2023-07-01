@@ -1,6 +1,6 @@
 ---
 layout: post
-title: OSCAR 2022 sea surface velocity steamplot animation
+title: OSCAR 2022 sea surface velocity streamplot animation
 topic: cli
 ---
 
