@@ -3,33 +3,19 @@ layout: post
 title: Jaccard similarity
 ---
 
-In equation \eqref{eq:sample1}, we find the value of an
-interesting integral:
+$$e^{\pi i} + 1 = 0 \label{eqone}$$
 
-\begin{equation}
-  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
-  \label{eq:sample1}
-\end{equation}
+Let's go back to Eq. \eqref{eqone}.
 
-$
-In equation \eqref{eq:sample2}, we find the value of an
-interesting integral:
+Let's write another equation:
 
-\begin{equation}
-  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
-  \label{eq:sample2}
-\end{equation}
-$
+$$a + b = c \label{eqtwo}$$
 
-$$
-In equation \eqref{eq:sample3}, we find the value of an
-interesting integral:
+Here I'm going to write some filler .... 
+then make the window really short, 
+so that you can test references, and ...
 
-\begin{equation}
-  \int_0^\infty \frac{x^3}{e^x-1}\,dx = \frac{\pi^4}{15}
-  \label{eq:sample3}
-\end{equation}
-$$
+And now I want to reference both Eq.s \eqref{eqone} and \eqref{eqtwo}.
 
 https://deepai.org/machine-learning-glossary-and-terms/jaccard-index
 
