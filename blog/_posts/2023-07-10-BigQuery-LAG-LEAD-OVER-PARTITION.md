@@ -49,3 +49,17 @@ FROM grouped_stays
 WHERE total_duration >= 60
 ORDER BY MMSI, stay_start;
 ```
+
+```sql
+CREATE OR REPLACE TABLE `ais-data-385301.uscg.port_monthly_visits` AS
+SELECT 
+    WPI_Number AS Port, 
+    FORMAT_TIMESTAMP('%Y-%m', stay_start) AS Month, 
+    COUNT(MMSI) AS Visit_Count
+FROM 
+    `ais-data-385301.uscg.vessel_port_max_stay`
+GROUP BY 
+    Port, Month
+ORDER BY 
+    Port, Month;
+```
