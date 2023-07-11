@@ -26,4 +26,14 @@ SET port_geography = ST_GEOGPOINT(Longitude, Latitude)
 WHERE Longitude IS NOT NULL AND Latitude IS NOT NULL;
 ```
 
+```sql
+CREATE TABLE `ais-data-385301.uscg.nais_2022_simplified` AS
+SELECT 
+    MMSI, 
+    BaseDateTime, 
+    vessel_geography
+FROM 
+    `ais-data-385301.uscg.nais_2022_nodups`;
+```
+
 `This statement modified 666 rows in wpi_us.`
