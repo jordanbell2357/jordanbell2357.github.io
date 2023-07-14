@@ -8,7 +8,7 @@ topic: usace-nais
 
 [Navigation and Civil Works Decision Support Center (NDC)](https://www.iwr.usace.army.mil/About/Technical-Centers/NDC-Navigation-and-Civil-Works-Decision-Support/)
 
-[NDC - Principal Port]([https://hub.arcgis.com/datasets/349ce90ebfcd47f49401ac4d817b0d58_1/about)](https://hub.arcgis.com/datasets/349ce90ebfcd47f49401ac4d817b0d58_1/about)
+[NDC - Principal Port](https://hub.arcgis.com/datasets/349ce90ebfcd47f49401ac4d817b0d58_1/about)
 
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/c600d5cd-0846-4054-b7e3-fd79fc5b08db)
 
