@@ -5,5 +5,3 @@ title: Cloudera QuickStart VirtualBox VM
 
 <https://downloads.cloudera.com/demo_vm/virtualbox/cloudera-quickstart-vm-5.13.0-0-virtualbox.zip>
 
-<https://downloads.cloudera.com/demo_vm/virtualbox/cloudera-quickstart-vm-5.4.2-0-virtualbox.zip>
-

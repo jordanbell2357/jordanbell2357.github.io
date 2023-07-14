@@ -160,7 +160,7 @@ ffmpeg -framerate 12 -i vel.%04d.png -crf 0 vel.mp4
     preload="auto"
     width="500"
     height="250"
-    poster="/modeling/lbm28/vel.1206.png"
+    poster="/modeling/lbm28/vel.2999.png"
     data-setup="{}">
     <source src="/modeling/lbm28/vel.mp4" type="video/mp4"/>
     <p class="vjs-no-js">
@@ -179,9 +179,28 @@ ffmpeg -framerate 12 -i vel.%04d.png -crf 0 vel.mp4
     preload="auto"
     width="500"
     height="250"
-    poster="/modeling/lbm30/vel.0999.png"
+    poster="/modeling/lbm30/vel.1999.png"
     data-setup="{}">
     <source src="/modeling/lbm30/vel.mp4" type="video/mp4"/>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+
+# Re=35
+
+  <video
+    id="lbm35"
+    class="video-js"
+    controls
+    preload="auto"
+    width="500"
+    height="250"
+    poster="/modeling/lbm35/vel.1999.png"
+    data-setup="{}">
+    <source src="/modeling/lbm35/vel.mp4" type="video/mp4"/>
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a
       web browser that
@@ -198,7 +217,7 @@ ffmpeg -framerate 12 -i vel.%04d.png -crf 0 vel.mp4
     preload="auto"
     width="500"
     height="250"
-    poster="/modeling/lbm40/vel.0999.png"
+    poster="/modeling/lbm40/vel.1999.png"
     data-setup="{}">
     <source src="/modeling/lbm40/vel.mp4" type="video/mp4"/>
     <p class="vjs-no-js">
