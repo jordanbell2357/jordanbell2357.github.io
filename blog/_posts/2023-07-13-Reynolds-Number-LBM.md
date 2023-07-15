@@ -110,7 +110,7 @@ for time in range(maxIter):
 ```
 
 ```bash
-ffmpeg -framerate 12 -i vel.%04d.png -crf 0 vel.mp4
+ffmpeg -framerate 60 -i vel.%04d.png -crf 0 vel.mp4
 ```
 
 # Re=10
@@ -144,6 +144,25 @@ ffmpeg -framerate 12 -i vel.%04d.png -crf 0 vel.mp4
     poster="/modeling/lbm20/vel.1499.png"
     data-setup="{}">
     <source src="/modeling/lbm20/vel.mp4" type="video/mp4"/>
+    <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a
+      web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+
+# Re=25
+
+  <video
+    id="lbm25"
+    class="video-js"
+    controls
+    preload="auto"
+    width="500"
+    height="250"
+    poster="/modeling/lbm25/vel.1999.png"
+    data-setup="{}">
+    <source src="/modeling/lbm25/vel.mp4" type="video/mp4"/>
     <p class="vjs-no-js">
       To view this video please enable JavaScript, and consider upgrading to a
       web browser that
@@ -234,6 +253,10 @@ ffmpeg -framerate 12 -i vel.%04d.png -crf 0 vel.mp4
 
 <script>
   var player = videojs('lbm20');
+</script>
+
+<script>
+  var player = videojs('lbm25');
 </script>
 
 <script>
