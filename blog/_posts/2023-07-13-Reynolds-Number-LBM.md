@@ -268,5 +268,9 @@ ffmpeg -framerate 60 -i vel.%04d.png -crf 0 vel.mp4
 </script>
 
 <script>
+  var player = videojs('lbm35');
+</script>
+
+<script>
   var player = videojs('lbm40');
 </script>
