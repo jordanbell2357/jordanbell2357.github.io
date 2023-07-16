@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Reynolds Number Lattice Boltzman method simulation
+title: Barnes Hut simulation
 ---
 
 [Simulation and modeling of natural processes \| University of Geneva \| Coursera](https://www.coursera.org/learn/modeling-simulation-natural-processes)
