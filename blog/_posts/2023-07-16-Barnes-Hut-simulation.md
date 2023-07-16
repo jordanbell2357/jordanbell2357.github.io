@@ -7,6 +7,8 @@ title: Barnes Hut simulation
 
 **Week 6: Particles and point-like objects. Jonas Latt**
 
+<https://github.com/jordanbell2357/modeling/blob/main/barnes_hut_2d/barnes_hut.ipynb>
+
 # 2d
 
   <video
@@ -31,6 +33,8 @@ ffmpeg -framerate 36 -i bodies_%06d.png -c:v libx264 -pix_fmt yuv420p barnes_hut
 ```
 
 # 3d
+
+<https://github.com/jordanbell2357/modeling/blob/main/barnes_hut_3d/barnes_hut.ipynb>
 
   <video
     id="barnes_hut_3d"
