@@ -110,7 +110,7 @@ for time in range(maxIter):
 ```
 
 ```bash
-ffmpeg -framerate 60 -i vel.%04d.png -crf 0 vel.mp4
+ffmpeg -framerate 60 -i vel.%04d.png -c:v libx264 -pix_fmt yuv420p vel.mp4
 ```
 
 # Re=10
