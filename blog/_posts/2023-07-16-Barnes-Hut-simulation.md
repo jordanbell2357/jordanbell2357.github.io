@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Barnes Hut simulation
+title: Barnes-Hut simulation in 2d and 3d
 ---
 
 [Simulation and modeling of natural processes \| University of Geneva \| Coursera](https://www.coursera.org/learn/modeling-simulation-natural-processes)
@@ -9,7 +9,7 @@ title: Barnes Hut simulation
 
 <https://github.com/jordanbell2357/modeling/blob/main/barnes_hut_2d/barnes_hut.ipynb>
 
-# 2d
+# Barnes-Hut simulation 2d
 
   <video
     id="barnes_hut_2d"
@@ -32,7 +32,7 @@ title: Barnes Hut simulation
 ffmpeg -framerate 36 -i bodies_%06d.png -c:v libx264 -pix_fmt yuv420p barnes_hut_2d.mp4
 ```
 
-# 3d
+# Barnes-Hut simulation 3d
 
 <https://github.com/jordanbell2357/modeling/blob/main/barnes_hut_3d/barnes_hut.ipynb>
 
