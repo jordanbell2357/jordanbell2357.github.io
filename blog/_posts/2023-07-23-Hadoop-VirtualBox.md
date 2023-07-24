@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing and using Hadoop with VirtualBox
+title: Installing and using Hadoop with Ubuntu on VirtualBox
 ---
 
 [How To Install Hadoop in Stand-Alone Mode on Ubuntu 20.04. Published on February 15, 2022. By Tony Tran and Hanif Jetha. DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-20-04)
