@@ -38,3 +38,8 @@ predictions.select('prediction', 'label').write \
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/e79d3191-ce4f-4be4-b342-6395116fad18)
 
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/1d2421ab-fd3d-4320-abc5-6397f1de31ae)
+
+Connecting to Github:
+
+![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/3e708dcb-4210-4f5c-ab5e-cc25a2b7896c)
+
