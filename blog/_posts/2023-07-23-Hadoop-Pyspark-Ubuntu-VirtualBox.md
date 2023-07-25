@@ -48,7 +48,3 @@ Jupyter Lab:
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/3bb7f2c7-c91d-45ba-bc9e-7d329782e6fd)
 
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/4a504891-932f-43fa-994b-fbb29b39db7d)
-
-
-
-
