@@ -102,6 +102,4 @@ spark.stop()
 
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/a472569d-35e2-4f39-b381-8c0359e3521e)
 
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/955a50e9-d4f5-4f41-8b63-054f6f35eaea)
-
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/1dc7ce1f-49a2-4b1d-aef6-a89a2808641a)
+![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/316918c2-6bb8-42f1-864b-69c2c58bc76c)
