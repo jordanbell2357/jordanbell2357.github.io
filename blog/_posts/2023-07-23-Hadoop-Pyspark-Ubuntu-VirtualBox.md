@@ -12,6 +12,10 @@ su
 usermod -aG ubuntu sudo
 ```
 
+```bash
+sudo apt install default-jdk
+```
+
 `wget https://dlcdn.apache.org/hadoop/common/hadoop-3.3.6/hadoop-3.3.6.tar.gz`
 
 `tar -xvzf hadoop-3.3.6.tar.gz`
