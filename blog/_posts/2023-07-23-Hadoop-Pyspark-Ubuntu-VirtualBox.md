@@ -45,6 +45,12 @@ predictions.select('prediction', 'label').write \
 
 Connecting to Github:
 
+[Download GitKraken](https://www.gitkraken.com/download)
+
+```bash
+sudo dpkg -i gitkraken-amd64.deb
+```
+
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/3e708dcb-4210-4f5c-ab5e-cc25a2b7896c)
 
 Jupyter Lab:
