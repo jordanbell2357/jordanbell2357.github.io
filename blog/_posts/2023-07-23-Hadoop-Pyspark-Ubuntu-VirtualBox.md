@@ -49,24 +49,4 @@ Jupyter Lab:
 
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/4a504891-932f-43fa-994b-fbb29b39db7d)
 
-Increasing disk size of Ubuntu virtual disk:
-
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/b86d251b-016e-462c-8562-4bd4d1d71220)
-
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/fedd42eb-c822-4e07-90c2-8cdf39e2b6a9)
-
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/84f1de18-9b32-41b5-8134-b8b4f747f340)
-
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/1e425474-328e-446d-a710-ed3405027da3)
-
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/3d945c5e-021e-4d70-8100-fa365f5c3c41)
-
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/5e2a7eaf-40cf-44e8-b754-8392300b1662)
-
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/76ff01a2-87c9-4b76-8755-4c2b2ecc84b0)
-
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/35ae8d81-93e7-4962-a5d2-eb3517c24b01)
-
-
-
 
