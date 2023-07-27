@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing and using Hadoop and Pyspark on Ubuntu with VirtualBox
+title: Installing and using Hadoop and Pyspark on Ubuntu with VirtualBox and VMware
 ---
 
 [How To Install Hadoop in Stand-Alone Mode on Ubuntu 20.04. Published on February 15, 2022. By Tony Tran and Hanif Jetha. DigitalOcean](https://www.digitalocean.com/community/tutorials/how-to-install-hadoop-in-stand-alone-mode-on-ubuntu-20-04)
@@ -59,4 +59,7 @@ Jupyter Lab:
 
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/4a504891-932f-43fa-994b-fbb29b39db7d)
 
+[Install Hadoop on Ubuntu. Sagar Sharma. Mar 17, 2023](https://learnubuntu.com/install-hadoop/)
+
+![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/cfb42595-00e9-4a02-9586-bd51aef27edc)
 
