@@ -16,80 +16,92 @@ head -n 2 98-401-X2021001_English_CSV_data.csv
 ```
 
 ```csv
-CENSUS_YEAR,DGUID,ALT_GEO_CODE,GEO_LEVEL,GEO_NAME,TNR_SF,TNR_LF,DATA_QUALITY_FLAG,CHARACTERISTIC_ID,CHARACTERISTIC_NAME,CHARACTERISTIC_NOTE,C1_COUNT_TOTAL,SYMBOL,C2_COUNT_MEN+,SYMBOL,C3_COUNT_WOMEN+,SYMBOL,C10_RATE_TOTAL,SYMBOL,C11_RATE_MEN+,SYMBOL,C12_RATE_WOMEN+,SYMBOL
+G,CHARACTERISTIC_ID,CHARACTERISTIC_NAME,CHARACTERISTIC_NOTE,C1_COUNT_TOTAL,SYMBOL,C2_COUNT_MEN+,SYMBOL,C3_COUNT_WOMEN+,SYMBOL,C10_RATE_TOTAL,SYMBOL,C11_RATE_MEN+,SYMBOL,C12_RATE_WOMEN+,SYMBOL
 2021,"2021A000011124","01","Country","Canada",3.1,4.3,"20000",1,"Population, 2021",1,36991981,"",,"...",,"...",,"...",,"...",,"..."
 ```
 
 ```bash
-cut -d',' -f2,3,4,5,9,10,12,14,16,18,20,22 98-401-X2021001_English_CSV_data.csv > census2021_ada.csv
-head -n 2 census2021_ada.csv
-```
-
-```csv
-DGUID,ALT_GEO_CODE,GEO_LEVEL,GEO_NAME,CHARACTERISTIC_ID,CHARACTERISTIC_NAME,C1_COUNT_TOTAL,C2_COUNT_MEN+,C3_COUNT_WOMEN+,C10_RATE_TOTAL,C11_RATE_MEN+,C12_RATE_WOMEN+
-"2021A000011124","01","Country","Canada",1,"Population,1,"","...","...","...","..."
+awk 'BEGIN {FS = OFS = ","} {gsub(/"/, ""); for (i=1; i<=NF; i++) if ($i == ".." || $i == "E" || $i == "F" || $i == "r" || $i == "x" || $i == "rE") $i = ""; else if ($i == "...") $i = ""; print}' 98-401-X2021001_English_CSV_data.csv > step1.csv
 ```
 
 ```bash
-hdfs dfs -mkdir /user/hive/warehouse/census2021.db
-hdfs dfs -mkdir /user/hive/warehouse/census2021.db/ada
-# hdfs dfs -mkdir -p /user/hive/warehouse/census2021.db/ada
-hdfs dfs -put 98-401-X2021012_English_CSV_data.csv /user/hive/warehouse/census2021.db/ada/
-```
-
-```bash
-hdfs dfs -cat /user/hive/warehouse/census2021.db/ada/98-401-X2021012_English_CSV_data.csv | head
+head -n 2 step1.csv
 ```
 
 ```csv
 CENSUS_YEAR,DGUID,ALT_GEO_CODE,GEO_LEVEL,GEO_NAME,TNR_SF,TNR_LF,DATA_QUALITY_FLAG,CHARACTERISTIC_ID,CHARACTERISTIC_NAME,CHARACTERISTIC_NOTE,C1_COUNT_TOTAL,SYMBOL,C2_COUNT_MEN+,SYMBOL,C3_COUNT_WOMEN+,SYMBOL,C10_RATE_TOTAL,SYMBOL,C11_RATE_MEN+,SYMBOL,C12_RATE_WOMEN+,SYMBOL
-2021,"2021S051610010001","10010001","Aggregate dissemination area","10010001",3.1,4.6,"00000",1,"Population, 2021",1,8881,"",,"...",,"...",,"...",,"...",,"..."
-2021,"2021S051610010001","10010001","Aggregate dissemination area","10010001",3.1,4.6,"00000",2,"Population, 2016",1,9334,"",,"...",,"...",,"...",,"...",,"..."
-2021,"2021S051610010001","10010001","Aggregate dissemination area","10010001",3.1,4.6,"00000",3,"Population percentage change, 2016 to 2021",,-4.9,"",,"...",,"...",-4.9,"",,"...",,"..."
-2021,"2021S051610010001","10010001","Aggregate dissemination area","10010001",3.1,4.6,"00000",4,"Total private dwellings",2,5737,"",,"...",,"...",,"...",,"...",,"..."
-2021,"2021S051610010001","10010001","Aggregate dissemination area","10010001",3.1,4.6,"00000",5,"Private dwellings occupied by usual residents",3,4121,"",,"...",,"...",,"...",,"...",,"..."
-```
-
-`load_census_data.sql`
-
-```sql
--- load_census_data.sql
-
--- Create the external table
-CREATE EXTERNAL TABLE IF NOT EXISTS census_data_2021 (
-  CENSUS_YEAR INT,
-  DGUID STRING,
-  ALT_GEO_CODE INT,
-  GEO_LEVEL STRING,
-  GEO_NAME STRING,
-  TNR_SF DOUBLE,
-  TNR_LF DOUBLE,
-  DATA_QUALITY_FLAG INT,
-  CHARACTERISTIC_ID INT,
-  CHARACTERISTIC_NAME STRING,
-  CHARACTERISTIC_NOTE INT,
-  C1_COUNT_TOTAL INT,
-  SYMBOL STRING,
-  C2_COUNT_MEN_PLUS DOUBLE,
-  SYMBOL STRING,
-  C3_COUNT_WOMEN_PLUS DOUBLE,
-  SYMBOL STRING,
-  C10_RATE_TOTAL DOUBLE,
-  SYMBOL STRING,
-  C11_RATE_MEN_PLUS DOUBLE,
-  SYMBOL STRING,
-  C12_RATE_WOMEN_PLUS DOUBLE,
-  SYMBOL STRING
-)
-ROW FORMAT DELIMITED
-FIELDS TERMINATED BY ','
-STORED AS TEXTFILE
-LOCATION '/user/hive/warehouse/census2021.db/ada/';
-
--- Load data into the table
-LOAD DATA INPATH '/user/hive/warehouse/census2021.db/ada/98-401-X2021001_English_CSV_data.csv' INTO TABLE census_data_2021;
+2021,2021A000011124,01,Country,Canada,3.1,4.3,20000,1,Population, 2021,1,36991981,,,,,,,,,,,...
 ```
 
 ```bash
-beeline -u jdbc:hive2://localhost:10000 -f load_census_data.sql
+cut -d',' -f2,3,4,5,9,10,12,16,18 step1.csv > census2021_ada.csv
 ```
+
+```bash
+head census2021_ada.csv
+```
+
+```csv
+DGUID,ALT_GEO_CODE,GEO_LEVEL,GEO_NAME,CHARACTERISTIC_ID,CHARACTERISTIC_NAME,C1_COUNT_TOTAL,C3_COUNT_WOMEN+,C10_RATE_TOTAL
+2021A000011124,01,Country,Canada,1,Population,1,,
+2021A000011124,01,Country,Canada,2,Population,1,,
+2021A000011124,01,Country,Canada,3,Population percentage change,,,
+2021A000011124,01,Country,Canada,4,Total private dwellings,16284235,,
+2021A000011124,01,Country,Canada,5,Private dwellings occupied by usual residents,14978941,,
+2021A000011124,01,Country,Canada,6,Population density per square kilometre,4.2,,4.2
+2021A000011124,01,Country,Canada,7,Land area in square kilometres,8788702.8,,
+2021A000011124,01,Country,Canada,8,Total - Age groups of the population - 100% data,36991980,18765740,100
+2021A000011124,01,Country,Canada,9,  0 to 14 years,6012795,2926285,16.3
+```
+
+```bash
+beeline -u jdbc:hive2://localhost:10000 -e "CREATE DATABASE IF NOT EXISTS census2021;"
+hdfs dfs -ls /user/hive/warehouse/census2021.db
+```
+
+```bash
+beeline -u jdbc:hive2://localhost:10000/census2021 -e "CREATE TABLE ada (DGUID STRING, ALT_GEO_CODE STRING, GEO_LEVEL STRING, GEO_NAME STRING, CHARACTERISTIC_ID INT, CHARACTERISTIC_NAME STRING, C1_COUNT_TOTAL INT, RATE_TOTAL DOUBLE) ROW FORMAT DELIMITED FIELDS TERMINATED BY ',' STORED AS TEXTFILE;"
+hdfs dfs -ls /user/hive/warehouse/census2021.db/ada
+```
+
+```bash
+hdfs dfs -put census2021_ada.csv /user/hive/warehouse/census2021.db/ada/
+hdfs dfs -cat /user/hive/warehouse/census2021.db/ada/census2021_ada.csv | head
+```
+
+```csv
+DGUID,ALT_GEO_CODE,GEO_LEVEL,GEO_NAME,CHARACTERISTIC_ID,CHARACTERISTIC_NAME,C1_COUNT_TOTAL,C3_COUNT_WOMEN+,C10_RATE_TOTAL
+2021A000011124,01,Country,Canada,1,Population,1,,
+2021A000011124,01,Country,Canada,2,Population,1,,
+2021A000011124,01,Country,Canada,3,Population percentage change,,,
+2021A000011124,01,Country,Canada,4,Total private dwellings,16284235,,
+2021A000011124,01,Country,Canada,5,Private dwellings occupied by usual residents,14978941,,
+2021A000011124,01,Country,Canada,6,Population density per square kilometre,4.2,,4.2
+2021A000011124,01,Country,Canada,7,Land area in square kilometres,8788702.8,,
+2021A000011124,01,Country,Canada,8,Total - Age groups of the population - 100% data,36991980,18765740,100
+2021A000011124,01,Country,Canada,9,  0 to 14 years,6012795,2926285,16.3
+```
+
+```bash
+beeline -u jdbc:hive2://localhost:10000/census2021 -e "LOAD DATA INPATH '/user/hive/warehouse/census2021.db/ada/census2021_ada.csv' INTO TABLE ada;"
+beeline -u jdbc:hive2://localhost:10000/census2021 -e "SELECT * FROM ada LIMIT 10;"
+```
+
+```bash
+hive -S -e "set hive.cli.print.header=true; set hive.resultset.use.unique.column.names=false; set hive.cli.print.row.delimiter='\n'; set hive.cli.print.header=false; SELECT * FROM census2021.ada LIMIT 10;" | sed '/WARN:/d; s/[[:space:]]\+/,/g' > output.csv
+cat output.csv
+```
+
+```csv
+DGUID,ALT_GEO_CODE,GEO_LEVEL,GEO_NAME,NULL,CHARACTERISTIC_NAME,NULL,NULL
+2021A000011124,01,Country,Canada,1,Population,1,NULL
+2021A000011124,01,Country,Canada,2,Population,1,NULL
+2021A000011124,01,Country,Canada,3,Population,percentage,change,NULL,NULL
+2021A000011124,01,Country,Canada,4,Total,private,dwellings,16284235,NULL
+2021A000011124,01,Country,Canada,5,Private,dwellings,occupied,by,usual,residents,14978941,NULL
+2021A000011124,01,Country,Canada,6,Population,density,per,square,kilometre,4,NULL
+2021A000011124,01,Country,Canada,7,Land,area,in,square,kilometres,8788702,NULL
+2021A000011124,01,Country,Canada,8,Total,-,Age,groups,of,the,population,-,100%,data,36991980,1.876574E7
+2021A000011124,01,Country,Canada,9,0,to,14,years,6012795,2926285.0
+```
+
