@@ -27,8 +27,12 @@ GRANT UNLIMITED TABLESPACE to StoreSalesDBA;
 
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/dd13715f-49f6-4056-8fdf-05e4998db482)
 
-
+![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/7bb0b10b-eaad-402b-9439-5eb8917636ab)
 
 # Oracle University
 
+<https://mylearn.oracle.com/>
 
+![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/e592e8ea-4d3e-49ac-aa54-50a24bf6f285)
+
+![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/cb5cd5dd-0459-4519-b094-6e08068d17af)
