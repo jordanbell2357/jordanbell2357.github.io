@@ -1,7 +1,9 @@
 ---
 layout: post
-title: Oracle Cloud Infrastructure
+title: Oracle Cloud Infrastructure and Oracle University
 ---
+
+# Oracle Cloud Infrastructure
 
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/2ef6b4a0-69b1-40d0-b34f-31d08c12ce22)
 
@@ -24,3 +26,9 @@ GRANT UNLIMITED TABLESPACE to StoreSalesDBA;
 ```
 
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/dd13715f-49f6-4056-8fdf-05e4998db482)
+
+
+
+# Oracle University
+
+
