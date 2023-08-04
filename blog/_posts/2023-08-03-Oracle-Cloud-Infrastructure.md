@@ -111,6 +111,15 @@ CONSTRAINT OfferingFK FOREIGN KEY (OfferNo) REFERENCES Offering ON DELETE CASCAD
 CONSTRAINT StudentFK FOREIGN KEY (StdNo) REFERENCES Student ON DELETE CASCADE );
 ```
 
+Have to modify INSERT statements for date format: (original in format '15-Apr-2008')
+
+```sql
+INSERT INTO Faculty
+	(FacNo, FacFirstName, FacLastName, FacCity, FacState,
+	 FacDept, FacRank, FacSalary, FacSupervisor, FacHireDate, FacZipCode)
+	 VALUES ('543-21-0987','VICTORIA','EMMANUEL','BOTHELL','WA','MS','PROF',120000.00,NULL,'2008-04-15','98011-2242');
+```
+
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/d0db8b77-d9b4-4250-822d-b9667f67c26e)
 
 
