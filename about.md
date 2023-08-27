@@ -15,7 +15,7 @@ permalink: /about/
 
 ## Employment {#employment}
 
-June 2022 - Present
+June 2022 - August 2023
 
 ![Data Science Associate, Network Performance, Canadian Tire Corp](/images/about/J_Bell.png)
 
