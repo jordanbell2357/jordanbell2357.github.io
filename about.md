@@ -72,7 +72,7 @@ University Medal in Mathematics
 
 - [Mastodon](https://graphics.social/@jordanbell2357)
 
-- [Tableau Public](https://public.tableau.com/app/profile/jordan.bell6481)
+- [Tableau Public](https://public.tableau.com/app/profile/jordanbell2357/vizzes)
 
 - [Twitter](https://twitter.com/jordanbell2357)
 
