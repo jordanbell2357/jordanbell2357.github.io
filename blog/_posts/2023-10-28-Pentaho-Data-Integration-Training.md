@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Pentaho Data Integration Training
+topic: training
 ---
 
 [Pentaho Data Integration Fundamentals (PDI1000S) \| Hitachi Vantara Training](https://learning.lumada.hitachivantara.com/courses/pentaho-data-integration-fundamentals-pdi1000s)
