@@ -11,4 +11,4 @@ title: Pentaho Data Integration Training
 
 ![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/7cb44f4a-96d8-42f2-a023-eaea9cce009d)
 
-![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/33b8ffab-a0dc-44a2-872f-3175a9a29174)
+![image](https://github.com/jordanbell2357/jordanbell2357.github.io/assets/47544607/4bac6b91-515b-4955-812b-c8e68153fdf0)
