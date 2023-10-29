@@ -4,7 +4,7 @@ title: Pentaho Data Integration Training
 topic: training
 ---
 
-[Official Elastic Training](https://www.elastic.co/training/free)
+[Hitachi Vantara Pentaho Training](https://learning.lumada.hitachivantara.com/learn/dashboard)
 
 [Pentaho Data Integration Fundamentals (PDI1000S) \| Hitachi Vantara Training](https://learning.lumada.hitachivantara.com/courses/pentaho-data-integration-fundamentals-pdi1000s)
 
