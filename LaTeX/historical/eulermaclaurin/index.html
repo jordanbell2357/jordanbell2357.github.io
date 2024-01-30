@@ -1,0 +1,691 @@
+<!DOCTYPE html><html>
+<head>
+<title>The Euler-Maclaurin summation formula</title>
+<!--Generated on Mon Feb 21 16:29:51 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on August 22, 2015.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">The Euler-Maclaurin summation formula</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">August 22, 2015</div>
+
+<div id="p1" class="ltx_para">
+<p class="ltx_p">Whiteside <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="The mathematical papers of Isaac Newton, volume VIII: 1697–1722" class="ltx_ref">62</a>, pp. 44, 257]</cite></p>
+</div>
+<div id="p2" class="ltx_para">
+<p class="ltx_p">Newton and Collins <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib50" title="Elements of mathematics: functions of a real variable, elementary theory" class="ltx_ref">8</a>, pp. 186, 199]</cite></p>
+</div>
+<div id="p3" class="ltx_para">
+<p class="ltx_p">Domingues <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib20" title="Lacroix and the calculus" class="ltx_ref">12</a>, p. 44]</cite></p>
+</div>
+<div id="p4" class="ltx_para">
+<p class="ltx_p">Todhunter <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib26" title="A history of the mathematical theory of probability: from the time of Pascal to that of Laplace" class="ltx_ref">54</a>, p. 192]</cite></p>
+</div>
+<div id="p5" class="ltx_para">
+<p class="ltx_p">Estrada and Kanwal <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib48" title="A distributional approach to asymptotics: theory and applications" class="ltx_ref">16</a>, p. 36]</cite></p>
+</div>
+<div id="p6" class="ltx_para">
+<p class="ltx_p">Bourbaki <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib50" title="Elements of mathematics: functions of a real variable, elementary theory" class="ltx_ref">8</a>, Chapter VI]</cite></p>
+</div>
+<div id="p7" class="ltx_para">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib47" title="Leonhardi Euleri Opera omnia. Series quarta A: Commercium epistolicum. Volumen secundum: Briefwechsel von Leonhard Euler mit Johann I Bernoulli und Niklaus I Bernoulli" class="ltx_ref">17</a>, pp. 45, 160, 337, 475, 531]</cite></p>
+</div>
+<div id="p8" class="ltx_para">
+<p class="ltx_p"><cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib43" title="Leonhardi euleri opera omnia. series prima, volumen nonum: introductio in analysin infinitorum, tomus secundus" class="ltx_ref">52</a>, pp. XL–XLIX]</cite></p>
+</div>
+<div id="p9" class="ltx_para">
+<p class="ltx_p">Stirling <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib42" title="James Stirling’s Methodus differentialis: an annotated translation of Stirling’s text" class="ltx_ref">57</a>, p. 274]</cite></p>
+</div>
+<div id="p10" class="ltx_para">
+<p class="ltx_p">Euler correspondence R. 1998, 236; p. 53, 113, 137, 433</p>
+</div>
+<div id="p11" class="ltx_para">
+<p class="ltx_p">Institutiones calculi differentialis, E212</p>
+</div>
+<div id="p12" class="ltx_para">
+<p class="ltx_p">E19, E20, E25, E43, E47, E55, E125, E130, E247, E352, E368, E393, E432, E642, E746</p>
+</div>
+<div id="p13" class="ltx_para">
+<p class="ltx_p"></p>
+</div>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul id="bib.L1" class="ltx_biblist">
+<li id="bib.bib24" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">W. J. Adams</span><span class="ltx_text ltx_bib_year"> (2009)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The life and times of the central limit theorem</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">second edition</span>, <span class="ltx_text ltx_bib_series">History of Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">35</span>,  <span class="ltx_text ltx_bib_publisher">American Mathematical Society</span>, <span class="ltx_text ltx_bib_place">Providence, RI</span>.
+</span>
+</li>
+<li id="bib.bib8" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">T. M. Apostol</span><span class="ltx_text ltx_bib_year"> (1999)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">An elementary view of Euler’s summation formula</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Amer. Math. Monthly</span> <span class="ltx_text ltx_bib_volume">106</span> (<span class="ltx_text ltx_bib_number">5</span>), <span class="ltx_text ltx_bib_pages"> pp. 409–418</span>.
+</span>
+</li>
+<li id="bib.bib56" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. H. Arnold</span><span class="ltx_text ltx_bib_year"> (1983)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The mécanique physique of Siméon Denis Poisson: the evolution and isolation in France of his approach to physical theory (1800–1840). IX. Poisson’s closing synthesis: traité de physique mathématique</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. Hist. Exact Sci.</span> <span class="ltx_text ltx_bib_volume">29</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 73–94</span>.
+</span>
+</li>
+<li id="bib.bib55" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. H. Arnold</span><span class="ltx_text ltx_bib_year"> (1983)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The mécanique physique of Siméon Denis Poisson: the evolution and isolation in France of his approach to physical theory (1800–1840). VIII. Applications of the mécanique physique</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. Hist. Exact Sci.</span> <span class="ltx_text ltx_bib_volume">29</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 53–72</span>.
+</span>
+</li>
+<li id="bib.bib15" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. H. Arnold</span><span class="ltx_text ltx_bib_year"> (1984)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The mécanique physique of Siméon Denis Poisson: the evolution and isolation in France of his approach to physical theory (1800–1840). X. Some perspective on Poisson’s contributions to the emergence of mathematical physics</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. Hist. Exact Sci.</span> <span class="ltx_text ltx_bib_volume">29</span> (<span class="ltx_text ltx_bib_number">4</span>), <span class="ltx_text ltx_bib_pages"> pp. 287–307</span>.
+</span>
+</li>
+<li id="bib.bib5" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. R. Bellhouse</span><span class="ltx_text ltx_bib_year"> (2011)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Abraham De Moivre: setting the stage for classical probability and its applications</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">CRC Press</span>.
+</span>
+</li>
+<li id="bib.bib21" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. Boole</span><span class="ltx_text ltx_bib_year"> (1880)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">A treatise on the calculus of finite differences</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">third edition</span>,  <span class="ltx_text ltx_bib_publisher">Macmillan</span>, <span class="ltx_text ltx_bib_place">London</span>.
+</span>
+</li>
+<li id="bib.bib50" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">N. Bourbaki</span><span class="ltx_text ltx_bib_year"> (2004)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Elements of mathematics: functions of a real variable, elementary theory</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">Translated from the French by Philip Spain</span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#p2" title="The Euler-Maclaurin summation formula" class="ltx_ref"><span class="ltx_text ltx_ref_title">The Euler-Maclaurin summation formula</span></a>,
+<a href="#p6" title="The Euler-Maclaurin summation formula" class="ltx_ref"><span class="ltx_text ltx_ref_title">The Euler-Maclaurin summation formula</span></a>.
+</span>
+</li>
+<li id="bib.bib32" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. V. Čirikov</span><span class="ltx_text ltx_bib_year"> (1960)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Sur l’histoire des séries asymptotiques</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Istor.-Mat. Issled.</span> <span class="ltx_text ltx_bib_volume">13</span>, <span class="ltx_text ltx_bib_pages"> pp. 441–472</span>.
+</span>
+</li>
+<li id="bib.bib45" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. I. Dale</span><span class="ltx_text ltx_bib_year"> (1991)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Thomas Bayes’s work on infinite series</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Historia Math.</span> <span class="ltx_text ltx_bib_volume">18</span> (<span class="ltx_text ltx_bib_number">4</span>), <span class="ltx_text ltx_bib_pages"> pp. 312–327</span>.
+</span>
+</li>
+<li id="bib.bib46" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. I. Dale</span><span class="ltx_text ltx_bib_year"> (2003)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Most honourable remembrance: the life and work of Thomas Bayes</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Sources and Studies in the History of Mathematics and Physical Sciences</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+</li>
+<li id="bib.bib20" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. C. Domingues</span><span class="ltx_text ltx_bib_year"> (2008)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Lacroix and the calculus</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Science Network Historical Studies</span>, Vol. <span class="ltx_text ltx_bib_volume">35</span>,  <span class="ltx_text ltx_bib_publisher">Birkhäuser</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#p3" title="The Euler-Maclaurin summation formula" class="ltx_ref"><span class="ltx_text ltx_ref_title">The Euler-Maclaurin summation formula</span></a>.
+</span>
+</li>
+<li id="bib.bib34" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Dutka</span><span class="ltx_text ltx_bib_year"> (1984)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The early history of the hypergeometric function</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. Hist. Exact Sci.</span> <span class="ltx_text ltx_bib_volume">31</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 15–34</span>.
+</span>
+</li>
+<li id="bib.bib29" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[14]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Dutka</span><span class="ltx_text ltx_bib_year"> (1991)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The early history of the factorial function</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. Hist. Exact Sci.</span> <span class="ltx_text ltx_bib_volume">43</span> (<span class="ltx_text ltx_bib_number">3</span>), <span class="ltx_text ltx_bib_pages"> pp. 225–249</span>.
+</span>
+</li>
+<li id="bib.bib16" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[15]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Dutka</span><span class="ltx_text ltx_bib_year"> (1996)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">On the summation of some divergent series of Euler and the zeta functions</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. Hist. Exact Sci.</span> <span class="ltx_text ltx_bib_volume">50</span> (<span class="ltx_text ltx_bib_number">2</span>), <span class="ltx_text ltx_bib_pages"> pp. 187–200</span>.
+</span>
+</li>
+<li id="bib.bib48" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[16]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">R. Estrada and R. P. Kanwal</span><span class="ltx_text ltx_bib_year"> (2002)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">A distributional approach to asymptotics: theory and applications</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">second edition</span>,  <span class="ltx_text ltx_bib_publisher">Birkhäuser</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#p5" title="The Euler-Maclaurin summation formula" class="ltx_ref"><span class="ltx_text ltx_ref_title">The Euler-Maclaurin summation formula</span></a>.
+</span>
+</li>
+<li id="bib.bib47" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[17]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_editor">E. A. Fellmann and G. K. Mikhajlov (Eds.)</span><span class="ltx_text ltx_bib_year"> (1998)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Leonhardi Euleri Opera omnia. Series quarta A: Commercium epistolicum. Volumen secundum: Briefwechsel von Leonhard Euler mit Johann I Bernoulli und Niklaus I Bernoulli</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Birkhäuser</span>, <span class="ltx_text ltx_bib_place">Basel</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#p7" title="The Euler-Maclaurin summation formula" class="ltx_ref"><span class="ltx_text ltx_ref_title">The Euler-Maclaurin summation formula</span></a>.
+</span>
+</li>
+<li id="bib.bib53" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[18]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">E. A. Fellmann</span><span class="ltx_text ltx_bib_year"> (1986)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Infinite series in the correspondence of Leonhard Euler and John I Bernoulli</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Bull. Soc. Math. Belg. Sér. A</span> <span class="ltx_text ltx_bib_volume">38</span>, <span class="ltx_text ltx_bib_pages"> pp. 191–200 (1987)</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0037-9476</span>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=885530" title="" class="ltx_ref mr ltx_bib_external">MathReview (E. J. Barbeau)</a></span>
+</span>
+</li>
+<li id="bib.bib19" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[19]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. Ferraro</span><span class="ltx_text ltx_bib_year"> (1998)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Some aspects of Euler’s theory of series: inexplicable functions and the Euler-Maclaurin summation formula</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Historia Math.</span> <span class="ltx_text ltx_bib_volume">25</span> (<span class="ltx_text ltx_bib_number">3</span>), <span class="ltx_text ltx_bib_pages"> pp. 290–317</span>.
+</span>
+</li>
+<li id="bib.bib39" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[20]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. Ferraro</span><span class="ltx_text ltx_bib_year"> (1999)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The first modern definition of the sum of a divergent series: an aspect of the rise of 20th century mathematics</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. Hist. Exact Sci.</span> <span class="ltx_text ltx_bib_volume">54</span> (<span class="ltx_text ltx_bib_number">2</span>), <span class="ltx_text ltx_bib_pages"> pp. 101–135</span>.
+</span>
+</li>
+<li id="bib.bib38" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[21]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. Ferraro</span><span class="ltx_text ltx_bib_year"> (2008)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The rise and development of the theory of series up to the early 1820s</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Sources and Studies in the History of Mathematics and Physical Sciences</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+</li>
+<li id="bib.bib18" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[22]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">H. H. Goldstine</span><span class="ltx_text ltx_bib_year"> (1977)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">A history of numerical analysis from the 16th through the 19th century</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Studies in the History of Mathematics and Physical Sciences</span>, Vol. <span class="ltx_text ltx_bib_volume">2</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+</li>
+<li id="bib.bib57" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[23]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">I. A. Golovinskiĭ</span><span class="ltx_text ltx_bib_year"> (1982)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The Euler-Boole summation formula</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Istor.-Mat. Issled.</span> (<span class="ltx_text ltx_bib_number">26</span>), <span class="ltx_text ltx_bib_pages"> pp. 52–91</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0136-0949</span>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=704406" title="" class="ltx_ref mr ltx_bib_external">MathReview (E. Stipanić)</a></span>
+</span>
+</li>
+<li id="bib.bib36" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[24]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">H. W. Gould</span><span class="ltx_text ltx_bib_year"> (1978)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Euler’s formula for <math id="bib.bib36.m1a" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>th differences of powers</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Amer. Math. Monthly</span> <span class="ltx_text ltx_bib_volume">85</span> (<span class="ltx_text ltx_bib_number">6</span>), <span class="ltx_text ltx_bib_pages"> pp. 450–467</span>.
+</span>
+</li>
+<li id="bib.bib4" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[25]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">R. Gowing</span><span class="ltx_text ltx_bib_year"> (1983)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Roger Cotes, natural philosopher</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Cambridge University Press</span>.
+</span>
+</li>
+<li id="bib.bib62" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[26]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. V. Grabiner</span><span class="ltx_text ltx_bib_year"> (1997)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Was Newton’s calculus a dead end? The continental influence of Maclaurin’s treatise of fluxions</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Amer. Math. Monthly</span> <span class="ltx_text ltx_bib_volume">104</span> (<span class="ltx_text ltx_bib_number">5</span>), <span class="ltx_text ltx_bib_pages"> pp. 393–410</span>.
+</span>
+</li>
+<li id="bib.bib30" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[27]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. N. Gusev</span><span class="ltx_text ltx_bib_year"> (1968)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The derivation of the summation formula in Euler’s writings</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Jaroslav. Gos. Ped. Inst. Učen. Zap. Vyp.</span> <span class="ltx_text ltx_bib_volume">60</span>, <span class="ltx_text ltx_bib_pages"> pp. 50–54</span>.
+</span>
+</li>
+<li id="bib.bib61" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[28]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Havil</span><span class="ltx_text ltx_bib_year"> (2003)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Gamma: exploring Euler’s constant</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Princeton University Press</span>.
+</span>
+</li>
+<li id="bib.bib11" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[29]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">F. B. Hildebrand</span><span class="ltx_text ltx_bib_year"> (1987)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Introduction to numerical analysis</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">second edition</span>,  <span class="ltx_text ltx_bib_publisher">Dover Publications</span>.
+</span>
+</li>
+<li id="bib.bib52" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[30]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">Jos. E. Hofmann</span><span class="ltx_text ltx_bib_year"> (1957)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Zur Entwicklungsgeschichte der Eulerschen Summenformel</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Math. Z.</span> <span class="ltx_text ltx_bib_volume">67</span>, <span class="ltx_text ltx_bib_pages"> pp. 139–146</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0025-5874</span>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=0085983" title="" class="ltx_ref mr ltx_bib_external">MathReview</a></span>
+</span>
+</li>
+<li id="bib.bib1" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[31]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. E. Hofmann</span><span class="ltx_text ltx_bib_year"> (1974)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Leibniz in Paris 1672–1676: his growth to mathematical maturity</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Cambridge University Press</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">Translated from the German by A. Prag and D. T. Whiteside</span>
+</span>
+</li>
+<li id="bib.bib31" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[32]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">H. Jeffreys</span><span class="ltx_text ltx_bib_year"> (1974)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Asymptotic approximations and notation</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Bull. Inst. Math. Appl.</span> <span class="ltx_text ltx_bib_volume">10</span> (<span class="ltx_text ltx_bib_number">9-10</span>), <span class="ltx_text ltx_bib_pages"> pp. 334–339</span>.
+</span>
+</li>
+<li id="bib.bib9" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[33]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">C. Jordan</span><span class="ltx_text ltx_bib_year"> (1965)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Calculus of finite differences</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">third edition</span>,  <span class="ltx_text ltx_bib_publisher">Chelsea Publishing Company</span>.
+</span>
+</li>
+<li id="bib.bib23" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[34]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. E. Knuth</span><span class="ltx_text ltx_bib_year"> (1997)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The art of computer programming, vol. I: fundamental algorithms</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">third edition</span>,  <span class="ltx_text ltx_bib_publisher">Addison-Wesley</span>.
+</span>
+</li>
+<li id="bib.bib17" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[35]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_editor">A. N. Kolmogorov and A. P. Yushkevich (Eds.)</span><span class="ltx_text ltx_bib_year"> (1998)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Mathematics of the 19th century, volume 3</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Birkhäuser</span>.
+</span>
+</li>
+<li id="bib.bib3" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[36]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">R. Kress</span><span class="ltx_text ltx_bib_year"> (1998)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Numerical analysis</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Graduate Texts in Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">181</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+</li>
+<li id="bib.bib59" class="ltx_bibitem ltx_bib_incollection">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[37]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">S. G. Langton</span><span class="ltx_text ltx_bib_year"> (2007)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Some combinatorics in Jacob Bernoulli’s <span class="ltx_text ltx_font_italic">Ars conjectandi</span></span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">Euler at 300</span>,
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">MAA Spectrum</span>, <span class="ltx_text ltx_bib_pages"> pp. 191–202</span>.
+</span>
+</li>
+<li id="bib.bib33" class="ltx_bibitem ltx_bib_incollection">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[38]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">V. V. Lihin</span><span class="ltx_text ltx_bib_year"> (1966)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">First investigations in the theory of summation of functions</span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">History Methodology Natur. Sci., No. V, Math.
+(Russian)</span>,
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_pages"> pp. 219–227</span>.
+</span>
+</li>
+<li id="bib.bib54" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[39]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">S. Mills</span><span class="ltx_text ltx_bib_year"> (1985)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The independent derivations by Leonhard Euler and Colin Maclaurin of the Euler-Maclaurin summation formula</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. Hist. Exact Sci.</span> <span class="ltx_text ltx_bib_volume">33</span> (<span class="ltx_text ltx_bib_number">1-3</span>), <span class="ltx_text ltx_bib_pages"> pp. 1–13</span>.
+</span>
+</li>
+<li id="bib.bib22" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[40]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">L. M. Milne-Thomson</span><span class="ltx_text ltx_bib_year"> (2000)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The calculus of finite differences</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">second edition</span>,  <span class="ltx_text ltx_bib_publisher">AMS Chelsea Publishing</span>, <span class="ltx_text ltx_bib_place">Providence, RI</span>.
+</span>
+</li>
+<li id="bib.bib12" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[41]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">H. L. Montgomery and R. C. Vaughan</span><span class="ltx_text ltx_bib_year"> (2007)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Multiplicative number theory I: classical theory</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Cambridge Studies in Advanced Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">97</span>,  <span class="ltx_text ltx_bib_publisher">Cambridge University Press</span>.
+</span>
+</li>
+<li id="bib.bib63" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[42]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Ostrowski</span><span class="ltx_text ltx_bib_year"> (1969)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Note on Poisson’s treatment of the Euler-Maclaurin formula</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Comment. Math. Helv.</span> <span class="ltx_text ltx_bib_volume">44</span>, <span class="ltx_text ltx_bib_pages"> pp. 202–206</span>.
+</span>
+</li>
+<li id="bib.bib44" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[43]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. Ostrowski</span><span class="ltx_text ltx_bib_year"> (1969)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">On the remainder term of the Euler-Maclaurin formula</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Reine Angew. Math.</span> <span class="ltx_text ltx_bib_volume">239/240</span>, <span class="ltx_text ltx_bib_pages"> pp. 268–286</span>.
+</span>
+</li>
+<li id="bib.bib25" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[44]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">K. Pearson</span><span class="ltx_text ltx_bib_year"> (1978)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The history of statistics in the 17th and 18th centuries against the changing background of intellectual, scientific and religious thought</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Macmillan</span>.
+</span>
+</li>
+<li id="bib.bib51" class="ltx_bibitem ltx_bib_incollection">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[45]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. J. Pengelley</span><span class="ltx_text ltx_bib_year"> (2007)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Dances between continuous and discrete: Euler’s summation formula</span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">Euler at 300</span>,
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">MAA Spectrum</span>, <span class="ltx_text ltx_bib_pages"> pp. 169–189</span>.
+</span>
+</li>
+<li id="bib.bib27" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[46]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">S. S. Petrova</span><span class="ltx_text ltx_bib_year"> (1989)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Euler-Maclaurin’s summation formula, and asymptotic series</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Istor. Metodol. Estestv. Nauk</span> (<span class="ltx_text ltx_bib_number">36</span>), <span class="ltx_text ltx_bib_pages"> pp. 103–108</span>.
+</span>
+</li>
+<li id="bib.bib58" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[47]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">R. Roy</span><span class="ltx_text ltx_bib_year"> (2011)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Sources in the development of mathematics</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Cambridge University Press</span>, <span class="ltx_text ltx_bib_place">Cambridge</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">Infinite series and products from the fifteenth to the
+twenty-first century</span>
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text isbn ltx_bib_external">ISBN 978-0-521-11470-7</span>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=2807493" title="" class="ltx_ref mr ltx_bib_external">MathReview (Mehdi Hassani)</a></span>
+</span>
+</li>
+<li id="bib.bib2" class="ltx_bibitem ltx_bib_incollection">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[48]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">C. Runge and Fr. A. Willers</span><span class="ltx_text ltx_bib_year"> (1909–1921)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Numerische und graphische Quadratur und Integration gewöhnlicher partieller Differentialgleichungen</span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">Encyklopädie der Mathematischen Wissenschaften mit Einschluss ihrer Anwendungen, Band II, 3. Teil, 1. Hälfte</span>,  <span class="ltx_text ltx_bib_editor">H. Burkhardt, M. Wirtinger, R. Fricke, and E. Hilb (Eds.)</span>,
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_pages"> pp. 47–176</span>.
+</span>
+</li>
+<li id="bib.bib13" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[49]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">I. Schneider</span><span class="ltx_text ltx_bib_year"> (1968)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Der Mathematiker Abraham de Moivre (1667–1754)</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. History Exact Sci.</span> <span class="ltx_text ltx_bib_volume">5</span> (<span class="ltx_text ltx_bib_number">3-4</span>), <span class="ltx_text ltx_bib_pages"> pp. 177–317</span>.
+</span>
+</li>
+<li id="bib.bib28" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[50]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">O. B. Sheynin</span><span class="ltx_text ltx_bib_year"> (1977/78)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">S. D. Poisson’s work in probability</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. History Exact Sci.</span> <span class="ltx_text ltx_bib_volume">18</span> (<span class="ltx_text ltx_bib_number">3</span>), <span class="ltx_text ltx_bib_pages"> pp. 245–300</span>.
+</span>
+</li>
+<li id="bib.bib14" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[51]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">H. K. Sørensen</span><span class="ltx_text ltx_bib_year"> (2010)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Throwing some light on the vast darkness that is analysis: Niels Henrik Abel’s critical revision and the concept of absolute convergence</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Centaurus</span> <span class="ltx_text ltx_bib_volume">52</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 38–72</span>.
+</span>
+</li>
+<li id="bib.bib43" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[52]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_editor">A. Speiser (Ed.)</span><span class="ltx_text ltx_bib_year"> (1945)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Leonhardi euleri opera omnia. series prima, volumen nonum: introductio in analysin infinitorum, tomus secundus</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Orell Füssli</span>, <span class="ltx_text ltx_bib_place">Zürich</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#p8" title="The Euler-Maclaurin summation formula" class="ltx_ref"><span class="ltx_text ltx_ref_title">The Euler-Maclaurin summation formula</span></a>.
+</span>
+</li>
+<li id="bib.bib49" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[53]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">P. Stäckel</span><span class="ltx_text ltx_bib_year"> (1907)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Eine vergessene Abhandlung Leonhard Eulers über die Summe der reziproken Quadrate der natürlichen Zahlen</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Bibliotheca mathematica, 3. Folge</span> <span class="ltx_text ltx_bib_volume">8</span>, <span class="ltx_text ltx_bib_pages"> pp. 37–60</span>.
+</span>
+</li>
+<li id="bib.bib26" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[54]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">I. Todhunter</span><span class="ltx_text ltx_bib_year"> (1865)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">A history of the mathematical theory of probability: from the time of Pascal to that of Laplace</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Macmillan</span>, <span class="ltx_text ltx_bib_place">Cambridge and London</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#p4" title="The Euler-Maclaurin summation formula" class="ltx_ref"><span class="ltx_text ltx_ref_title">The Euler-Maclaurin summation formula</span></a>.
+</span>
+</li>
+<li id="bib.bib41" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[55]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">I. Tweddle</span><span class="ltx_text ltx_bib_year"> (1988)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">James Stirling</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Scottish Academic Press</span>, <span class="ltx_text ltx_bib_place">Edinburgh</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">“This about series and such things”</span>
+</span>
+</li>
+<li id="bib.bib40" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[56]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">I. Tweddle</span><span class="ltx_text ltx_bib_year"> (1992)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">James Stirling’s early work on acceleration of convergence</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. Hist. Exact Sci.</span> <span class="ltx_text ltx_bib_volume">45</span> (<span class="ltx_text ltx_bib_number">2</span>), <span class="ltx_text ltx_bib_pages"> pp. 105–125</span>.
+</span>
+</li>
+<li id="bib.bib42" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[57]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">I. Tweddle</span><span class="ltx_text ltx_bib_year"> (2003)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">James Stirling’s <span class="ltx_text ltx_font_italic">Methodus differentialis</span>: an annotated translation of Stirling’s text</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Sources and Studies in the History of Mathematics and Physical
+Sciences</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#p9" title="The Euler-Maclaurin summation formula" class="ltx_ref"><span class="ltx_text ltx_ref_title">The Euler-Maclaurin summation formula</span></a>.
+</span>
+</li>
+<li id="bib.bib37" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[58]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">I. Tweddle</span><span class="ltx_text ltx_bib_year"> (2007)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">MacLaurin’s physical dissertations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Sources and Studies in the History of Mathematics and Physical
+Sciences</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+</li>
+<li id="bib.bib35" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[59]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">V. S. Varadarajan</span><span class="ltx_text ltx_bib_year"> (2006)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Euler through time: a new look at old themes</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">American Mathematical Society</span>, <span class="ltx_text ltx_bib_place">Providence, RI</span>.
+</span>
+</li>
+<li id="bib.bib60" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[60]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">V. S. Varadarajan</span><span class="ltx_text ltx_bib_year"> (2007)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Euler and his work on infinite series</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Bull. Amer. Math. Soc. (N.S.)</span> <span class="ltx_text ltx_bib_volume">44</span> (<span class="ltx_text ltx_bib_number">4</span>), <span class="ltx_text ltx_bib_pages"> pp. 515–539</span>.
+</span>
+</li>
+<li id="bib.bib7" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[61]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_editor">D. T. Whiteside (Ed.)</span><span class="ltx_text ltx_bib_year"> (1971)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The mathematical papers of Isaac Newton, volume IV: 1674–1684</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Cambridge University Press</span>.
+</span>
+</li>
+<li id="bib.bib6" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[62]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_editor">D. T. Whiteside (Ed.)</span><span class="ltx_text ltx_bib_year"> (1981)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The mathematical papers of Isaac Newton, volume VIII: 1697–1722</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Cambridge University Press</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#p1" title="The Euler-Maclaurin summation formula" class="ltx_ref"><span class="ltx_text ltx_ref_title">The Euler-Maclaurin summation formula</span></a>.
+</span>
+</li>
+<li id="bib.bib10" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[63]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">E. T. Whittaker and G. Robinson</span><span class="ltx_text ltx_bib_year"> (1924)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The calculus of observations: a treatise on numerical mathematics</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Blackie and Son</span>, <span class="ltx_text ltx_bib_place">London</span>.
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Mon Feb 21 16:29:51 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

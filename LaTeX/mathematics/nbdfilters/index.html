@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jordan Bell" />
+  <meta name="dcterms.date" content="2014-04-03" />
+  <title>Topological spaces and neighborhood filters</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Topological spaces and neighborhood filters</h1>
+<p class="author">Jordan Bell</p>
+<p class="date">April 3, 2014</p>
+</header>
+<p>If <span class="math inline">X</span> is a set, a <span><em>filter</em></span> on <span class="math inline">X</span> is a set <span class="math inline">\mathcal{F}</span> of subsets of <span class="math inline">X</span> such that <span class="math inline">\emptyset \not \in \mathcal{F}</span>; if <span class="math inline">A,B \in \mathcal{F}</span> then <span class="math inline">A \cap B \in \mathcal{F}</span>; if <span class="math inline">A \subseteq X</span> and there is some <span class="math inline">B \in \mathcal{F}</span> such that <span class="math inline">B \subseteq A</span>, then <span class="math inline">A \in \mathcal{F}</span>. For example, if <span class="math inline">x \in X</span> then the set of all subsets of <span class="math inline">X</span> that include <span class="math inline">x</span> is a filter on <span class="math inline">X</span>.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> A <span><em>basis</em></span> for the filter <span class="math inline">\mathcal{F}</span> is a subset <span class="math inline">\mathcal{B} \subseteq \mathcal{F}</span> such that if <span class="math inline">A \in \mathcal{F}</span> then there is some <span class="math inline">B \in \mathcal{B}</span> such that <span class="math inline">B \subseteq A</span>.</p>
+<p>If <span class="math inline">X</span> is a set, a <span><em>topology</em></span> on <span class="math inline">X</span> is a set <span class="math inline">\mathcal{O}</span> of subsets of <span class="math inline">X</span> such that: <span class="math inline">\emptyset, X \in \mathcal{O}</span>; if <span class="math inline">U_\alpha \in \mathcal{O}</span> for all <span class="math inline">\alpha \in I</span>, then <span class="math inline">\bigcup_{\alpha \in I} U_\alpha \in \mathcal{O}</span>; if <span class="math inline">I</span> is finite and <span class="math inline">U_\alpha \in \mathcal{O}</span> for all <span class="math inline">\alpha \in I</span>, then <span class="math inline">\bigcap_{\alpha \in I} U_\alpha \in \mathcal{O}</span>. If <span class="math inline">N \subseteq X</span> and <span class="math inline">x \in X</span>, we say that <span class="math inline">N</span> is a <span><em>neighborhood</em></span> of <span class="math inline">x</span> if there is some <span class="math inline">U \in \mathcal{O}</span> such that <span class="math inline">x \in U \subseteq N</span>. In particular, an open set is a neighborhood of every element of itself. A <span><em>basis</em></span> for a topology <span class="math inline">\mathcal{O}</span> is a subset <span class="math inline">\mathcal{B}</span> of <span class="math inline">\mathcal{O}</span> such that if <span class="math inline">x \in X</span> then there is some <span class="math inline">B \in \mathcal{B}</span> such that <span class="math inline">x \in B</span>, and such that if <span class="math inline">B_1,B_2 \in \mathcal{B}</span> and <span class="math inline">x \in B_1 \cap B_2</span>, then there is some <span class="math inline">B_3 \in \mathcal{B}</span> such that <span class="math inline">x \in B_3 \subseteq B_1 \cap B_2</span>.<a href="#fn2" class="footnote-ref" id="fnref2" role="doc-noteref"><sup>2</sup></a></p>
+<p>On the one hand, suppose that <span class="math inline">X</span> is a topological space with topology <span class="math inline">\mathcal{O}</span>. For each <span class="math inline">x \in X</span>, let <span class="math inline">\mathcal{F}_x</span> be the set of neighborhoods of <span class="math inline">x</span>; we call <span class="math inline">\mathcal{F}_x</span> the <span><em>neighborhood filter</em></span> of <span class="math inline">x</span>. It is straightforward to verify that <span class="math inline">\mathcal{F}_x</span> is a filter for each <span class="math inline">x \in X</span>. If <span class="math inline">N \in \mathcal{F}_x</span>, there is some <span class="math inline">U \in \mathcal{F}_x</span> that is open, and for each <span class="math inline">y \in U</span> we have <span class="math inline">N \in \mathcal{F}_y</span>.</p>
+<p>On the other hand, suppose <span class="math inline">X</span> is a set, for each <span class="math inline">x \in X</span> there is some filter <span class="math inline">\mathcal{F}_x</span>, and: if <span class="math inline">N \in \mathcal{F}_x</span> then <span class="math inline">x \in N</span>; if <span class="math inline">N \in \mathcal{F}_x</span> then there is some <span class="math inline">U \in \mathcal{F}_x</span> such that if <span class="math inline">y \in U</span> then <span class="math inline">N \in \mathcal{F}_y</span>. We define <span class="math inline">\mathcal{O}</span> in the following way: The elements <span class="math inline">U</span> of <span class="math inline">\mathcal{O}</span> are those subsets of <span class="math inline">X</span> such that if <span class="math inline">x \in U</span> then <span class="math inline">U \in \mathcal{F}_x</span>. Vacuously, <span class="math inline">\emptyset \in \mathcal{O}</span>, and it is immediate that <span class="math inline">X \in \mathcal{O}</span>. If <span class="math inline">U_\alpha \in \mathcal{O}</span>, <span class="math inline">\alpha \in I</span> and <span class="math inline">x \in U=\bigcup_{\alpha \in I} U_\alpha</span> then there is at least one <span class="math inline">\alpha \in I</span> such that <span class="math inline">x \in U_\alpha</span> and so <span class="math inline">U_\alpha \in \mathcal{F}_x</span>. As <span class="math inline">x \in U_\alpha \subseteq U</span> and <span class="math inline">\mathcal{F}_x</span> is a filter, we get <span class="math inline">U \in \mathcal{F}_x</span>. If <span class="math inline">I</span> is finite and <span class="math inline">U_\alpha \in I</span>, <span class="math inline">\alpha \in I</span>, let <span class="math inline">U=\bigcap_{\alpha \in I} U_\alpha</span>. If <span class="math inline">x \in U</span>, then for each <span class="math inline">\alpha \in I</span>, <span class="math inline">x \in U_\alpha</span>, and hence for each <span class="math inline">\alpha \in I</span>, <span class="math inline">U_\alpha \in \mathcal{F}_x</span>. As <span class="math inline">\mathcal{F}_x</span> is a filter, the intersection of any two elements of it is an element of it, and thus the intersection of finitely many elements of it is an element of it, so <span class="math inline">U \in
+\mathcal{F}_x</span>, showing that <span class="math inline">U \in \mathcal{O}</span>. This shows that <span class="math inline">\mathcal{O}</span> is a topology. We will show that a set <span class="math inline">N</span> is a neighborhood of a point <span class="math inline">x</span> if and only if <span class="math inline">N \in \mathcal{F}_x</span>.</p>
+<p>If <span class="math inline">N \in \mathcal{F}_x</span>, then let <span class="math inline">V=\{y \in N: N \in \mathcal{F}_y\}</span>. There is some <span class="math inline">U_0 \in \mathcal{F}_x</span> such that if <span class="math inline">y \in U_0</span> then <span class="math inline">N \in \mathcal{F}_y</span>. If <span class="math inline">y \in U_0</span> then <span class="math inline">N \in \mathcal{F}_y</span>, which implies that <span class="math inline">y \in N</span>, and hence <span class="math inline">U_0 \subseteq V</span>. <span class="math inline">U_0 \subseteq V</span> and <span class="math inline">U_0 \in \mathcal{F}_x</span> imply that <span class="math inline">V \in \mathcal{F}_x</span>, which implies that <span class="math inline">x \in V</span>. If <span class="math inline">y \in V</span> then <span class="math inline">N \in \mathcal{F}_y</span>, and hence there is some <span class="math inline">U \in \mathcal{F}_y</span> such that if <span class="math inline">z \in U</span> then <span class="math inline">N \in \mathcal{F}_z</span>. If <span class="math inline">z \in U</span> then <span class="math inline">N \in \mathcal{F}_z</span>, which implies that <span class="math inline">z \in N</span>, and hence <span class="math inline">U \subseteq V</span>. <span class="math inline">U \subseteq V</span> and <span class="math inline">U \in \mathcal{F}_y</span> imply that <span class="math inline">V \in \mathcal{F}_y</span>. Thus, if <span class="math inline">y \in V</span> then <span class="math inline">V \in \mathcal{F}_y</span>, which means that <span class="math inline">V</span> is open, <span class="math inline">x \in V \subseteq N</span> tells us that <span class="math inline">N</span> is a neighborhood of <span class="math inline">x</span>.</p>
+<p>If a set <span class="math inline">N</span> is a neighborhood of a point <span class="math inline">x</span>, then there is some open set <span class="math inline">U</span> with <span class="math inline">x \in U \subseteq N</span>. <span class="math inline">U</span> being open means that if <span class="math inline">y \in U</span> then <span class="math inline">U \in \mathcal{F}_y</span>. As <span class="math inline">x \in U</span> we get <span class="math inline">U \in \mathcal{F}_x</span>, and as <span class="math inline">U \subset N</span> we get <span class="math inline">N \in \mathcal{F}_x</span>. Therefore a set <span class="math inline">N</span> is a neighborhood of a point <span class="math inline">x</span> if and only if <span class="math inline">N \in \mathcal{F}_x</span>.</p>
+<p>In conclusion: If <span class="math inline">X</span> is a topological space and for each <span class="math inline">x \in X</span> we define <span class="math inline">\mathcal{F}_x</span> to be the neighborhood filter of <span class="math inline">x</span>, then these filters satisfy the two conditions that if <span class="math inline">N \in \mathcal{F}_x</span> then <span class="math inline">x \in N</span> and that if <span class="math inline">N \in \mathcal{F}_x</span> there is some <span class="math inline">U \in \mathcal{F}_x</span> such that if <span class="math inline">y \in U</span> then <span class="math inline">N \in \mathcal{F}_y</span>. In the other direction, if <span class="math inline">X</span> is a set and for each point <span class="math inline">x \in X</span> there is a filter <span class="math inline">\mathcal{F}_x</span> and the filters satisfy these two conditions, then there is a topology on <span class="math inline">X</span> such that these filters are precisely the neighborhood filters of each point.</p>
+<section class="footnotes" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>cf. Fran<span>ç</span>ois Trèves, <span><em>Topological Vector Spaces, Distributions and Kernels</em></span>, p. 6.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+<li id="fn2" role="doc-endnote"><p>cf. James R. Munkres, <span><em>Topology</em></span>, second ed., p. 78.<a href="#fnref2" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

@@ -1,0 +1,450 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\newcommand{\SA}{\mathscr{B}_{\ensuremath\mathrm{sa}}(H)} 
+\newcommand{\positive}{\mathscr{B}_{\mathrm{+}}(H)} 
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{The spectrum of a self-adjoint operator is a compact subset of $\mathbb{R}$}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+\begin{abstract}
+In these notes I prove that the 
+spectrum of a bounded linear operator from a Hilbert space to itself is a nonempty compact subset of $\mathbb{C}$,
+and that if the operator is self-adjoint then the spectrum is contained in $\mathbb{R}$. To show that the spectrum is nonempty I prove
+various facts about resolvents.
+\end{abstract}
+
+
+\section{Adjoints}
+\subsection{Operator norm}
+Let $H$ be a Hilbert space with inner product $\inner{\cdot}{\cdot}:H \times H \to \mathbb{C}$, and define $I:H \to H$ by $Ix=x$, $x \in H$..
+For $v \in H$, let $\norm{v} = \sqrt{\inner{v}{v}}$, and if $T:H \to H$ is a bounded linear map, let
+\[
+\norm{T}=\sup_{\norm{v} \leq 1} \norm{Tv}.
+\]
+namely, the {\em operator norm} of $T$.
+
+\subsection{Definition of adjoint}
+The {\em Riesz representation theorem} states that if $\phi:H \to \mathbb{C}$ is a bounded linear map then there is a unique $v_\phi \in H$ such that 
+\[
+\phi(x)=\inner{x}{v_\phi}
+\]
+for all $x \in H$. Let $T:H \to H$ be a bounded linear map, and for $y \in H$, define $\phi_y:H \to \mathbb{C}$ by
+\[
+\phi_y(x)=\inner{Tx}{y}.
+\]
+$\phi_y:H \to \mathbb{C}$ is a bounded linear map,
+so by the Riesz representation theorem there is a unique $v_y$ such that
+\[
+\phi_y(x)=\inner{x}{v_y}
+\]
+for all $x \in H$. Define $T^*:H \to H$ by
+\[
+T^*y=v_y.
+\]
+$T^*y$ is well-defined because
+of the uniqueness in the Riesz representation theorem.
+For all $x, y \in H$, 
+\[
+\inner{x}{T^*y}=\inner{x}{v_y}=\phi_y(x)=\inner{Tx}{y}.
+\]
+We call $T^*:H \to H$ the {\em adjoint} of $T:H \to H$. 
+
+\subsection{Adjoint is linear}
+For $y_1,y_2 \in H$, we have for all $x \in H$ that
+\begin{eqnarray*}
+\inner{x}{T^*(y_1+y_2)}&=&\inner{Tx}{y_1+y_2}\\
+&=&\inner{Tx}{y_1}+\inner{Tx}{y_2}\\
+&=&\inner{x}{T^*y_1+T^*y_2}.
+\end{eqnarray*}
+Hence for all $x \in H$,
+\[
+\inner{x}{T^*(y_1+y_2)-T^*y_1-T^*y_2}=0.
+\]
+In particular this is true for $x=T^*(y_1+y_2)-T^*y_1-T^*y_2$, so by the nondegeneracy of $\inner{\cdot}{\cdot}$ we get
+\[
+T^*(y_1+y_2)-T^*y_1-T^*y_2=0.
+\]
+We similarly obtain for all $\lambda \in \mathbb{C}$ and all $y \in H$ that
+\[
+T^*(\lambda y)- \lambda T^*y=0.
+\]
+Hence $T^*:H \to H$ is a linear map. 
+
+\subsection{Adjoint is bounded}
+For $x, y \in H$, by the Cauchy-Schwarz inequality we have
+\[
+|\phi_y(x)|  = |\inner{x}{v_y}| \leq \norm{x} \norm{v_y},
+\]
+so $\norm{\phi_y} \leq \norm{v_y}$, i.e. the operator norm of $\phi_y$ is less than or equal to the norm of $v_y$.
+If $v_y \neq 0$, then $\norm{\frac{v_y}{\norm{v_y}}}=1$ and
+\[
+\left| \phi_y \left( \frac{v_y}{\norm{v_y}} \right) \right| = \inner{\frac{v_y}{\norm{v_y}}}{v_y}=\norm{v_y}.
+\]
+It follows that
+\[
+\norm{\phi_y}=\norm{v_y}.
+\]
+Then for $y \in H$, by the Cauchy-Schwarz inequality and because $T$ is bounded we have
+\begin{eqnarray*}
+\norm{T^* y}&=&\norm{v_y}\\
+&=&\norm{\phi_y}\\
+&=&\sup_{\norm{x} \leq 1} \norm{\phi_y(x)}\\
+&=&\sup_{\norm{x} \leq 1} |\inner{Tx}{y}|\\
+&\leq&\sup_{\norm{x} \leq 1} \norm{T} \norm{x} \norm{y}\\
+&\leq&\norm{T}\norm{y}.
+\end{eqnarray*}
+Therefore $T^*$ is bounded. Thus if $T:H \to H$ is a bounded linear map then its adjoint $T^*:H \to H$ is a bounded
+linear map.
+
+\subsection{Adjoint is involution}
+Because $T^*:H \to H$ is a bounded linear map, it has an adjoint $T^{**}:H \to H$, and $T^{**}$ is itself a bounded
+linear map. For all $x, y \in H$,
+\begin{eqnarray*}
+\inner{Tx}{y}&=&\inner{x}{T^* y}\\
+&=&\overline{\inner{T^* y}{x}}\\
+&=&\overline{\inner{y}{T^{**}x}}\\
+&=&\inner{T^{**}x}{y}.
+\end{eqnarray*}
+Hence for all $x, y \in H$,
+\[
+\inner{Tx-T^{**}x}{y}=0.
+\]
+This is true in particular for $y=Tx-T^{**}x$, so by the nondegeneracy of $\inner{\cdot}{\cdot}$
+we obtain
+\[
+Tx-T^{**}x=0, \qquad x \in H.
+\]
+Thus for any bounded linear map $T:H \to H$, $T^{**}=T$. In words, if $T$ is a bounded linear map from a Hilbert space to itself,
+then the adjoint of its adjoint is itself.
+We have shown already that $\norm{T^*} \leq \norm{T}$. Hence also $\norm{T}= \norm{T^{**}} \leq \norm{T^*}$, so
+\[
+\norm{T}=\norm{T^*}.
+\]
+
+If $T^*=T$, we say that $T$ is {\em self-adjoint}. 
+
+
+
+\section{Bounded linear operators}
+Let $\mathscr{B}(H)$ be the set of bounded linear maps $H \to H$. With the operator norm, one checks that $\mathscr{B}(H)$ is a Banach space. We define a product on $\mathscr{B}(H)$ by
+$T_1T_2 = T_1 \circ T_2$, and thus $\mathscr{B}(H)$ is an algebra. We have 
+\[
+\norm{T_1 T_2} = \sup_{\norm{x} \leq 1} \norm{T_1 ( T_2 x)} \leq \sup_{\norm{x} \leq 1} \norm{T_1} \norm{T_2 x} 
+= \norm{T_1}  \sup_{\norm{x} \leq 1} \norm{T_2 x} \leq \norm{T_1} \norm{T_2},
+\]
+and thus $\mathscr{B}(H)$ is a {\em Banach algebra}.\footnote{The adjoint map $*:\mathscr{B}(H) \to \mathscr{B}(H)$ satisfies, for $\lambda \in \mathbb{C}$ and
+$T_1,T_2 \in \mathscr{B}(H)$, 
+\[
+T^{**}=T,\quad (T_1+T_2)^*=T_1^*+T_2^*, \quad (\lambda T)^*=\overline{\lambda} T^*, \quad \norm{T^* T}=\norm{T}^2.
+\]
+Thus $\mathscr{B}(H)$ is a {\em $C^*$-algebra}. $I \in \mathscr{B}(H)$, so we say that $\mathscr{B}(H)$ is {\em unital}.}
+Let $\SA$ be the set of all $T \in \mathscr{B}(H)$ that are self-adjoint.
+
+
+\begin{theorem}
+If $T \in \mathscr{B}(H)$, then $T$ is self-adjoint if and only if $\inner{Tx}{x} \in \mathbb{R}$ for all $x \in H$.
+\end{theorem}
+\begin{proof}
+If $T \in \SA$, then for all $x \in H$,
+\[
+\inner{Tx}{x} = \inner{x}{T^*x}=\inner{x}{Tx}=\overline{\inner{Tx}{x}},
+\]
+so $\inner{Tx}{x} \in \mathbb{R}$.
+
+If $T \in \mathscr{B}(H)$ and $\inner{Tx}{x} \in \mathbb{R}$ for all $x \in H$, then 
+\[
+\inner{Tx}{x}=\inner{x}{T^*x}=\overline{\inner{T^*x}{x}}=\inner{T^*x}{x},
+\]
+so, putting $A=T-T^*$, for all $x \in H$ we have
+\[
+\inner{Ax}{x}=0.
+\]
+Thus, for all $x, y \in H$ we have
+\[
+\inner{Ax}{x}=0, \qquad \inner{Ay}{y}=0, \qquad \inner{A(x+y)}{x+y}=0,
+\]
+ and combining these three equations,
+\[
+0=\inner{Ax}{x}+\inner{Ax}{y}+\inner{Ay}{x}+\inner{Ay}{y}=0+\inner{Ax}{y}+\inner{Ay}{x}+0.
+\]
+But $A^*=-A$, so we get
+\[
+\inner{Ax}{y}+\inner{y}{-Ax}=0,
+\]
+hence
+\begin{equation}
+\inner{Ax}{y}-\overline{\inner{Ax}{y}}=0.
+\label{imeqn}
+\end{equation}
+As well, for all $x,y \in H$ we have
+\[
+\inner{Ax}{-iy}-\overline{\inner{Ax}{-iy}}=0,
+\]
+so
+\begin{equation}
+\inner{Ax}{y}+\overline{\inner{Ax}{y}}=0.
+\label{reeqn}
+\end{equation}
+By \eqref{imeqn} and \eqref{reeqn}, for all $x, y \in H$ we have
+\[
+\inner{Ax}{y}=0,
+\]
+and thus $A=0$, i.e. $T=T^*$.
+\end{proof}
+
+Using the above characterization of bounded self-adjoint operators, we can prove that a limit of bounded self-adjoint operators is itself a bounded self-adjoint operator.
+
+\begin{theorem}
+$\SA$ is a closed subset of $\mathscr{B}(H)$.
+\end{theorem}
+\begin{proof}
+If $T_n \in \SA$ and $T_n \to T \in \mathscr{B}(H)$, then for $x \in H$ we have
+\[
+\inner{Tx}{x} = \lim_{n \to \infty} \inner{T_n x}{x} \in \mathbb{R},
+\]
+hence $T \in \SA$.
+\end{proof} 
+
+If $T \in \SA$ and $\inner{Tx}{x} \geq 0$ for all $x \in H$, we say that $T$ is {\em positive}. Let $\positive$ be the set of all
+positive $T \in \SA$. For $S,T \in \SA$, if
+\[
+T-S \in \positive
+\]
+we write $S \leq T$. Thus, we can talk about one self-adjoint operator being greater than or equal to another self-adjoint operator.
+$S \leq T$ is equivalent to
+\[
+\inner{Sx}{x} \leq \inner{Tx}{x}
+\]
+for all $x \in H$. 
+
+
+
+\section{A condition for invertibility}
+\begin{theorem}
+If $T \in \mathscr{B}(H)$ and there is some $\alpha>0$ such that $\alpha I \leq TT^*$ and $\alpha I \leq T^*T$, then $T^{-1} \in \mathscr{B}(H)$.
+\label{invertible}
+\end{theorem}
+\begin{proof}
+By $\alpha I \leq T^*T$, we 
+have for all $x \in H$,
+\[
+\norm{Tx}^2 = \inner{Tx}{Tx}=\inner{T^* Tx}{x} \geq \inner{\alpha x}{x} = \alpha \norm{x}^2,
+\]
+so $\norm{Tx} \geq \sqrt{\alpha}\norm{x}$. 
+This implies that $T$ is injective.
+By $\alpha I \leq TT^*$, we have for all $x \in H$,
+\[
+\norm{T^*x}^2 = \inner{T^*x}{T^*x}=\inner{TT^*x}{x} \geq \inner{\alpha x}{x} = \alpha\norm{x}^2,
+\]
+so $\norm{T^* x} \geq \sqrt{\alpha}\norm{x}$, and hence $T^*$ is injective.
+Let $Tx_n \to y \in H$. Then,
+\[
+\norm{Tx_n-Tx_m}^2 =\norm{T(x_n-x_m)}^2 \geq \alpha \norm{x_n-x_m}^2.
+\]
+Since $Tx_n$ converges it is a Cauchy sequence, and from the above inequality it follows that $x_n$ is a Cauchy sequence, hence there is some
+$x \in H$ with $x_n \to x$. As $T$ is continuous, $y=Tx \in T(H)$, showing that
+$T(H)$ is a closed subset of $H$.
+But it is a fact that if $T \in \mathscr{B}(H)$ then the closure of $T(H)$ is equal to $(\ker T^*)^\perp$.\footnote{It is straightforward
+to show that if $v$ is in the closure of $T(H)$ and $w \in \ker T^*$ then $\inner{v}{w}=0$. It is less straightforward to show the opposite inclusion.}
+Thus, as we have shown that $T^*$ is injective,
+\[
+T(H)=(\ker T^*)^\perp = \{0\}^\perp = H,
+\]
+i.e. $T$ is surjective. Hence $T:H \to H$ is bijective. It is a fact that if $T \in \mathscr{B}(H)$ is bijective then $T^{-1} \in \mathscr{B}(H)$, completing the proof.\footnote{$T^{-1}:H \to H$ is linear. The {\em open mapping theorem} states that if $X$ and $Y$ are Banach spaces and $S:X \to Y$ is a bounded linear map that is surjective, then $S$ is an open map, i.e., if $U$ is an open subset of $X$ then
+$S(U)$ is an open subset of $Y$. Here, $T \in \mathscr{B}(H)$ and $T$ is bijective, and so by the open mapping theorem $T$ is open, from which it follows that $T^{-1}:H \to H$ is continuous,
+and so bounded (a linear map between normed vector spaces is continuous if and only if it is bounded).} 
+\end{proof}
+
+
+\section{Spectrum}
+For $T \in \mathscr{B}(H)$, we define the {\em spectrum} $\sigma(T)$ of $T$ to be the set of all $\lambda \in \mathbb{C}$ such $T-\lambda I$ is not bijective, and we
+define the {\em resolvent set} of $T$ to be $\rho(T) = \mathbb{C} \setminus \sigma(T)$. 
+To say that $\lambda \in \rho(T)$ is to say that $T-\lambda I$ is a bijection, and if $T-\lambda I$ is a bijection it follows from the open mapping theorem that
+its inverse function is an element of $\mathscr{B}(H)$: the inverse of a linear bijection is itself linear, but the inverse of a continuous bijection need not itself be  continuous, which
+is where we use the open mapping theorem.
+
+We prove that the spectrum of a bounded self-adjoint operator is real.
+
+\begin{theorem}
+If $T \in \SA$, then $\sigma(T) \subseteq \mathbb{R}$.
+\end{theorem}
+\begin{proof}
+If $\lambda \in \mathbb{C} \setminus \mathbb{R}$, $\lambda=a+ib$, $b \neq 0$, and $X=T-\lambda I$, then
+\begin{eqnarray*}
+XX^*&=&(T-\lambda I)(T-\lambda I)^*\\
+&=&(T-(a+ib)I)(T-(a-ib)I)\\
+&=&T^2-(a-ib)T-(a+ib)T+ (a^2+b^2)I\\
+&=&(a^2+b^2)I-2aT+T^2\\
+&=&b^2 I + (aI-T)^2\\
+&=&b^2 I + (aI-T)(aI-T)^*\\
+&\geq&b^2 I.
+\end{eqnarray*}
+$X^*X=XX^* \geq b^2 I$ and $b>0$, so by Theorem \ref{invertible},  $X=T-\lambda I$ has an inverse $(T-\lambda I)^{-1} \in \mathscr{B}(H)$, showing $\lambda \not \in \sigma(T)$. 
+\end{proof}
+
+
+\section{The spectrum of a bounded linear map is bounded}
+If $\lambda \in \rho(T)$ then we define $R_\lambda= (T-\lambda I)^{-1} \in \mathscr{B}(H)$, called the {\em resolvent} of $T$.
+
+\begin{theorem}
+If $T \in \mathscr{B}(H)$ and 
+ $|\lambda|>\norm{T}$ then $\lambda \in \rho(T)$.
+\end{theorem}
+\begin{proof}
+Define $R_{\lambda,N} \in \mathscr{B}(H)$ by
+\[
+R_{\lambda,N}=-\frac{1}{\lambda} \sum_{n=0}^N \frac{T^n}{\lambda^n}.
+\]
+As $\frac{\norm{T}}{|\lambda|} < 1$, the geometric series $\sum_{n=0}^\infty \frac{\norm{T}^n}{|\lambda|^n}$ converges, from which it follows that
+$R_{\lambda,N}$ is a Cauchy sequence in $\mathscr{B}(H)$ and so converges to some $S_\lambda \in \mathscr{B}(H)$.
+We have
+\begin{eqnarray*}
+\norm{S_\lambda(T-\lambda I) - I}&\leq&\norm{S_\lambda(T-\lambda I) - R_{\lambda,N}(T-\lambda I)}\\
+&&+\norm{R_{\lambda,N}(T-\lambda I)-I}\\
+&\leq&\norm{S_\lambda - R_{\lambda,N}} \norm{T-\lambda I} + \norm{-\frac{T}{\lambda} \sum_{n=0}^N \frac{T^n}{\lambda^n}
++\sum_{n=0}^N \frac{T^n}{\lambda^n} -I}\\
+&=&\norm{S_\lambda - R_{\lambda,N}} \norm{T-\lambda I} + \norm{-\frac{T^{N+1}}{\lambda^{N+1}}}\\
+&\leq&\norm{S_\lambda - R_{\lambda,N}} \norm{T-\lambda I} + \left( \frac{\norm{T}}{|\lambda|} \right)^{N+1},
+\end{eqnarray*}
+which tends to $0$ as $N \to \infty$. Therefore
+$S_\lambda(T-\lambda I) = I$. And,
+\begin{eqnarray*}
+\norm{(T-\lambda I) S_\lambda-I}&\leq&\norm{(T-\lambda I) S_\lambda - (T-\lambda I) R_{\lambda,N}}\\
+&&+\norm{(T-\lambda I) R_{\lambda,N} - I}\\
+&\leq&\norm{T-\lambda I} \norm{S_\lambda -R_{\lambda,N}} + \left(\frac{\norm{T}}{|\lambda|} \right)^{N+1},
+\end{eqnarray*}
+whence $(T-\lambda I) S_\lambda = I$, showing that
+\[
+S_\lambda = (T-\lambda I)^{-1}.
+\]
+Thus, if $|\lambda| > \norm{T}$ then $\lambda  \in \rho(T)$.
+\end{proof}
+
+
+ The above theorem shows that $\sigma(T)$ is a bounded set: it is contained in the closed disc
+$|\lambda| \leq \norm{T}$. Moreover, if $|\lambda| > \norm{T}$ then we have an explicit expression for the resolvent
+$R_\lambda$:
+\[
+R_\lambda = - \frac{1}{\lambda} \sum_{n=0}^\infty \frac{T^n}{\lambda^n}.
+\]
+
+\section{The spectrum of a bounded linear map is closed}
+\begin{theorem}
+If $T \in \mathscr{B}(H)$, then $\rho(T)$ is an open subset of $\mathbb{C}$.
+\end{theorem}
+\begin{proof}
+ If $\lambda \in \rho(T)$, let $|\mu-\lambda| < \norm{R_\lambda}^{-1}$, and
+define $R_{\mu,N} \in \mathscr{B}(H)$ by
+\[
+R_{\mu,N}=R_\lambda \sum_{n=0}^N (\mu-\lambda)^n R_\lambda^n.
+\]
+Because $|\mu-\lambda| < \norm{R_\lambda}^{-1}$, $R_{\mu,N}$ is a Cauchy sequence in $\mathscr{B}(H)$ and converges to some $S_\mu
+\in \mathscr{B}(H)$. 
+We have, as $R_\lambda=(T-\lambda I)^{-1}$,
+\begin{eqnarray*}
+\norm{S_\mu(T-\mu I)-I}&\leq&\norm{S_\mu(T-\mu I)-R_{\mu,N}(T-\mu I)}\\
+&&+\norm{R_{\mu,N}(T-\mu I+ \lambda I - \lambda I)-I}\\
+&\leq&\norm{S_\mu-R_{\mu,N}} \norm{T-\mu   I}\\
+&& + \norm{R_{\mu,N}(T-\lambda   I) - R_{\mu,N}(\mu-\lambda)  -  I}\\
+&=&\norm{S_\mu-R_{\mu,N}} \norm{T-\mu I} \\
+&&+\norm{\sum_{n=0}^N ( \mu-\lambda)^n R_\lambda ^n - (\mu - \lambda)R_\lambda \sum_{n=0}^N (\mu-\lambda)^n R_\lambda ^n - I}\\
+&=&\norm{S_\mu-R_{\mu,N}} \norm{T-\mu I} + \norm{- (\mu - \lambda)^{N+1} R_\lambda^{N+1}}\\
+&=&\norm{S_\mu-R_{\mu,N}} \norm{T-\mu I} + |\mu-\lambda|^{N+1} \norm{R_\lambda}^{N+1},
+\end{eqnarray*}
+which tends to $0$ as $N \to \infty$. Therefore $S_\mu(T-\mu I)=I$. One checks likewise that $(T-\mu I) S_\mu  = I$, and hence that
+\[
+(T-\mu I)^{-1} = S_\mu,
+\]
+showing that $\mu \in \rho(T)$.
+\end{proof}
+
+ As $\sigma(T)$ is bounded and closed, it is a compact
+set in $\mathbb{C}$. Moreover, if $\lambda \not \in \sigma(T)$ and $|\mu-\lambda| < \norm{R_\lambda}^{-1}$, then
+\[
+R_\mu = R_\lambda \sum_{n=0}^\infty (\mu-\lambda)^n R_\lambda^n.
+\]
+
+\section{The spectrum of a bounded linear map is nonempty}
+\begin{theorem}
+If $T \in \mathscr{B}(H)$ is self-adjoint, then $\sigma(T) \neq \emptyset$.
+\end{theorem}
+\begin{proof}
+Suppose by contradiction that $\sigma(T) = \emptyset$.\footnote{For each $v, w \in H$  we are going to construct a bounded entire
+function $\mathbb{C} \to \mathbb{C}$ depending on $v$ and $w$, which by Liouville's theorem must be constant, and it will turn out to be 0. This will
+lead to a contradiction.}
+If $\lambda, \mu \in \mathbb{C}$, then
+\begin{eqnarray*}
+(T-\lambda I)(R_\lambda - R_\mu)(T-\mu I)&=&(I-(T-\lambda I) R_\mu)(T-\mu I)\\
+&=&T-\mu I -(T-\lambda I)\\
+&=&(\lambda - \mu)I,
+\end{eqnarray*}
+so
+\begin{equation}
+R_\lambda - R_\mu = (\lambda - \mu) R_\lambda R_\mu,
+\label{resolventidentity}
+\end{equation}
+the {\em resolvent identity}.
+Thus
+\[
+\norm{R_\lambda-R_\mu} \leq |\lambda - \mu| \norm{R_\lambda} \norm{R_\mu},
+\]
+and together with $\norm{R_\mu}-\norm{R_\lambda} \leq \norm{R_\mu- R_\lambda}$ we get
+\[
+\norm{R_\mu}(1-|\lambda-\mu| \norm{R_\lambda}) \leq \norm{R_\lambda}.
+\]
+If $|\lambda - \mu | \leq \frac{1}{2}\cdot\norm{R_\lambda}^{-1}$, then
+\[
+\norm{R_\mu} \leq 2\norm{R_\lambda},
+\]
+whence, for $|\lambda - \mu| \leq \frac{1}{2}\cdot\norm{R_\lambda}^{-1}$,
+\[
+\norm{R_\lambda - R_\mu} \leq 2 |\lambda-\mu| \norm{R_\lambda}^2.
+\]
+Therefore, $\lambda \mapsto R_\lambda$ is a continuous function $\mathbb{C} \to \mathscr{B}(H)$. 
+From this and \eqref{resolventidentity} it follows that 
+for each $\lambda \in \mathbb{C}$,\footnote{There are no complications
+that appear if we do complex analysis on functions from $\mathbb{C}$ to a complex Banach algebra rather than on functions from $\mathbb{C}$ to $\mathbb{C}$. Thus this statement
+is that $\lambda \to R_\lambda$ is a holomorphic function $\mathbb{C} \to \mathscr{B}(H)$.}
+\[
+\lim_{\mu \to \lambda} \frac{R_\lambda - R_\mu}{\lambda- \mu} = R_\lambda^2.
+\]
+Let $v, w \in H$ and define $f_{v,w}:\mathbb{C} \to \mathbb{C}$ by
+\[
+f_{v,w}(\lambda)=\inner{R_\lambda v}{w}, \qquad \lambda \in \mathbb{C}.
+\]
+For $\lambda \in \mathbb{C}$,
+\[
+\lim_{\mu \to \lambda} \frac{f_{v,w}(\lambda)-f_{v,w}(\mu)}{\lambda-\mu}=\lim_{\mu \to \lambda} \inner{\frac{R_\lambda  -R_\mu}{\lambda-\mu} v}{w}
+=\inner{R_\lambda^2 v}{w}.
+\]
+Thus $f_{v,w}$ is an entire function. 
+For $|\lambda| > \norm{T}$, $R_\lambda=-\frac{1}{\lambda} \sum_{n=0}^\infty \frac{T^n}{\lambda^n}$, so, for $r=\frac{\norm{T}}{|\lambda|}$,
+\begin{eqnarray*}
+\norm{R_\lambda}&=&\frac{1}{|\lambda|} \norm{ \sum_{n=0}^\infty \frac{T^n}{\lambda}}\\
+&\leq&\frac{1}{|\lambda|} \sum_{n=0}^\infty r^n\\
+&=&\frac{1}{|\lambda|} \frac{1}{1-r}\\
+&=&\frac{1}{|\lambda|} \frac{1}{1-\frac{\norm{T}}{|\lambda|}}\\
+&=&\frac{1}{|\lambda|-\norm{T}}.
+\end{eqnarray*}
+Hence, for $|\lambda| > \norm{T}$,
+\begin{eqnarray*}
+|f_{v,w}(\lambda)|&=&|\inner{R_\lambda v}{w}|\\
+&\leq&\norm{R_\lambda} \norm{v} \norm{w}\\
+&\leq&\frac{ \norm{v} \norm{w}}{|\lambda|-\norm{T}},
+\end{eqnarray*}
+from which it follows that $f_{v,w}$ is bounded and that $\lim_{|\lambda| \to \infty} f_{v,w}(\lambda)=0$. Therefore by Liouville's theorem, $f_{v,w}(\lambda)=0$ for all
+$\lambda$. Let's recap: for all $v,w \in H$ and for all $\lambda \in \mathbb{C}$, $\inner{R_\lambda v}{w}=0$. Switching the order of the universal quantifiers, 
+for all $\lambda \in \mathbb{C}$ and  for all $v,w \in H$  we have $\inner{R_\lambda v}{w}=0$, which implies that for all $\lambda \in
+\mathbb{C}$ we have $R_\lambda=0$. But by assumption $R_\lambda$ is invertible, so this is a contradiction.  Hence $\sigma(T)$ is  nonempty.
+\end{proof}
+
+\end{document}

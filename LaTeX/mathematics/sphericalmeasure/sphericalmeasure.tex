@@ -1,0 +1,217 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\Res}{\mathrm{Res}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{The Fourier transform of spherical surface  measure and radial functions}
+\author{Jordan Bell}
+\date{August 24, 2015}
+
+\maketitle
+
+\section{Notation}
+For a topological space $X$, we denote by $\mathscr{B}_X$ the Borel $\sigma$-algebra of $X$.
+Let $\rho_d$ be the Euclidean metric on $\mathbb{R}^d$ and let $m_d$ be Lebesgue measure on $\mathbb{R}^d$. 
+
+
+\section{Polar coordinates}
+Let $X=(0,\infty)$, which is a metric space with the metric inherited from $\mathbb{R}$.
+Define $\mu:\mathscr{B}_X \to [0,\infty]$ by
+\[
+d\mu(r)=r^{d-1} dm_1(r).
+\]
+
+Let $S^{d-1}$ be the unit sphere in $\mathbb{R}^d$.
+Define $S:\mathscr{P}(S^{d-1}) \to \mathscr{P}(\mathbb{R}^d)$ by
+\[
+S(E) = \left\{x \in \mathbb{R}^d: \frac{x}{|x|} \in E, 0 < |x| < 1 \right\}.
+\]
+Namely, $S(E)$ is the sector subtended by the set $E$.
+$S^{d-1}$ is a metric space with the metric inherited from $\mathbb{R}^d$, and 
+if $E$ is an open set in $(S^{d-1},\rho_d)$, then $S(E)$ is an open set in $\mathbb{R}^d$. 
+For $E_\alpha \in \mathscr{P}(S^{d-1})$,
+\[
+S\left( \bigcup E_\alpha \right) = \bigcup S(E_\alpha),
+\qquad S\left( \bigcap E_\alpha \right) = \bigcap S(E_\alpha),
+\]
+and for $E,F \in \mathscr{P}(S^{d-1})$,
+\[
+S(E \setminus F) = S(E) \setminus S(F).
+\]
+
+\begin{lemma}
+\[
+S ( \mathscr{B}_{S^{d-1}}) \subset \mathscr{B}_{\mathbb{R}^d}.
+\]
+\end{lemma}
+
+We define $\sigma_{d-1}:\mathscr{B}_{S^{d-1}} \to [0,\infty)$ by
+\[
+\sigma_{d-1}(E) = d \cdot m_d(S(E)),
+\qquad E \in \mathscr{B}_{S^{d-1}}.
+\]
+
+For $f:\mathbb{R}^d \to \mathbb{C}$ and $\gamma \in S^{d-1}$, define $f^\gamma:(0,\infty) \to \mathbb{C}$ by
+\[
+f^\gamma(r) = f(r\gamma), \qquad r \in (0,\infty).
+\]
+
+
+The following is proved in Stein and Shakarchi.\footnote{Elias M. Stein and Rami Shakarchi, {\em Real Analysis}, 
+p.~280, Chapter 6, Theorem 3.4.}
+
+\begin{theorem}
+If $f \in L^1(\mathbb{R}^d,m_d)$, then (i) for $\sigma$-almost all $\gamma \in S^{d-1}$ we have $f^\gamma \in L^1((0,\infty),\mu)$, 
+(ii) the function
+\[
+\gamma \mapsto \int_0^\infty f^\gamma(r) d\mu(r)
+\]
+belongs to $L^1(S^{d-1},\sigma)$, and (iii)
+\[
+\int_{\mathbb{R}^d} f(x) dm_d(x) = \int_{S^{d-1}} \left( \int_0^\infty f^\gamma(r) d\mu(r) \right) d\sigma(\gamma).
+\]
+\end{theorem}
+
+For $r \in (0,\infty)$, define $f_r:S^{d-1} \to \mathbb{C}$ by
+\[
+f_r(\gamma) = f(r\gamma), \qquad \gamma \in S^{d-1}.
+\]
+
+\begin{theorem}
+If $f \in L^1(\mathbb{R}^d,m_d)$, then (i) for $\mu$-almost all $r \in (0,\infty)$ we have $f_r \in L^1(S^{d-1},\sigma)$, 
+(ii) the function
+\[
+r \mapsto \int_{S^{d-1}} f_r(\gamma) d\sigma(\sigma)
+\]
+belongs to $L^1((0,\infty),\mu)$, and (iii)
+\[
+\int_{\mathbb{R}^d} f(x) dm_d(x) = \int_0^\infty \left( \int_{S^{d-1}}  f_r(\gamma) d\sigma(\gamma) \right) d\mu(r).
+\]
+\end{theorem}
+
+
+
+\section{The Fourier transform of spherical surface measure}
+For real $\nu>-\frac{1}{2}$,
+\[
+J_\nu(s) = \frac{\left(\frac{s}{2}\right)^\nu}{\Gamma\left(\nu+\frac{1}{2}\right)\sqrt{\pi}} \int_{-1}^1
+e^{isx} (1-x^2)^{\nu-\frac{1}{2}} dx, \qquad s \in \mathbb{R}.
+\]
+One checks that $J_\nu$ satisfies
+\[
+J_\nu(-s)=e^{i\pi \nu} J_\nu(s), \qquad s \in \mathbb{R}.
+\]
+
+We remind ourselves of \textbf{spherical coordinates} for $S^{d-1}$. The Jacobian of the transformation
+\begin{align*}
+\gamma_1&=\cos \phi_1\\
+\gamma_2&=\sin \phi_1 \cos \phi_2\\
+\gamma_3&=\sin \phi_1 \sin \phi_2 \cos \phi_3\\
+&\cdots\\
+\gamma_{d-1}&=\sin \phi_1 \sin \phi_2 \sin \phi_3 \cdots \sin \phi_{d-2} \cos \phi_{d-1}\\
+\gamma_d&=\sin \phi_1 \sin \phi_2 \sin \phi_3 \cdots \sin \phi_{d-2} \sin \phi_{d-1},
+\end{align*}
+with
+\[
+0 \leq \phi_1, \ldots, \phi_{d-2} \leq \pi, \qquad 0 \leq \phi_{d-1} \leq 2\pi,
+\]
+is
+\[
+J=\sin^{d-2} \phi_1 \sin^{d-3} \phi_2 \cdots \sin^2 \phi_{d-3} \sin \phi_{d-2}.
+\]
+Then, for $\xi=(\xi_1,0,\ldots,0)$, $\xi_1 \neq 0$,
+\begin{align*}
+\widehat{\sigma}_{d-1}(\xi)&=\int_{S^{d-1}} e^{-2\pi i\gamma\cdot \xi} d\sigma(\gamma)\\
+&=\int_{\phi_1=0}^\pi \int_{\phi_2=0}^\pi \cdots \int_{\phi_{d-2}=0}^\pi \int_{\phi_{d-1}=0}^{2\pi} 
+e^{-2\pi i\xi_1 \cos \phi_1}  J d\phi_{d-1} d\phi_{d-2} \cdots d\phi_2 d\phi_1\\
+&=2\pi \cdot \int_{\phi_1=0}^\pi e^{-2\pi i\xi_1 \cos \phi_1} \sin^{d-2} \phi_1 d\phi_1 \cdot \prod_{j=2}^{d-2} \int_{\phi_j=0}^\pi \sin^{d-j-1} \phi_j d\phi_j.
+\end{align*}
+We work out that
+\[
+\int_0^\pi \sin^k t dt = \frac{\sqrt{\pi} \Gamma\left(\frac{k+1}{2}\right)}{\Gamma\left(\frac{k+2}{2}\right)}.
+\]
+This gives
+\begin{align*}
+\prod_{j=2}^{d-2} \int_{\phi_j=0}^\pi \sin^{d-j-1} \phi_j d\phi_j&=
+\prod_{j=2}^{d-2} \frac{\sqrt{\pi} \Gamma\left( \frac{d-j}{2}  \right)}{\Gamma\left( \frac{d-j+1}{2} \right)}
+=\pi^{\frac{d-3}{2}} \frac{\Gamma\left(\frac{2}{2}\right)}{\Gamma\left(\frac{d-1}{2}\right)}
+=\frac{\pi^{\frac{d-3}{2}}}{\Gamma\left(\frac{d-1}{2}\right)}.
+\end{align*}
+With this we have, for $\xi=(\xi_1,0,\ldots,0)$, $\xi_1 \neq 0$,
+\[
+\widehat{\sigma}_{d-1}(\xi) = 2\pi \frac{\pi^{\frac{d-3}{2}}}{\Gamma\left(\frac{d-1}{2}\right)} \int_0^\pi e^{-2\pi i\xi_1 \cos t} \sin^{d-2} t dt.
+\]
+But doing the change of variable $x=\cos t$, for nonzero real $s$ we have
+\begin{align*}
+\int_0^\pi e^{is\cos t} \sin^{d-2}t dt &=\int_0^\pi e^{is\cos t} (1-\cos^2 t)^{\frac{d-2}{2}} dt\\
+&=\int_1^{-1} e^{isx}(1-x^2)^{\frac{d-2}{2}} \frac{-dx}{\sqrt{1-x^2}}\\
+&=\int_{-1}^1 e^{isx} (1-x^2)^{\frac{d}{2}-1-\frac{1}{2}} dx\\
+&=\frac{\Gamma\left(\frac{d}{2}-\frac{1}{2} \right)\sqrt{\pi}}{\left(\frac{s}{2}\right)^{\frac{d}{2}-1}} J_{\frac{d}{2}-1}(s).
+\end{align*}
+Thus, taking $s=-2\pi \xi_1$,
+\begin{align*}
+\widehat{\sigma}_{d-1}(\xi) &= 2\pi \frac{\pi^{\frac{d-3}{2}}}{\Gamma\left(\frac{d-1}{2}\right)} 
+\frac{\Gamma\left(\frac{d}{2}-\frac{1}{2} \right) \sqrt{\pi}}{\left(\frac{-2\pi \xi_1}{2}\right)^{\frac{d}{2}-1}} J_{\frac{d}{2}-1}(-2\pi \xi_1)\\
+&=2\pi \cdot (-\xi_1)^{-\frac{d}{2}+1}J_{\frac{d}{2}-1}(-2\pi \xi_1).
+\end{align*}
+For $\xi_1<0$ this is
+\[
+\widehat{\sigma}_{d-1}(\xi) = 2\pi |\xi|^{-\frac{d}{2}+1} 
+J_{\frac{d}{2}-1}(2\pi |\xi|).
+\]
+
+In general, take nonzero $\xi \in \mathbb{R}^d$. Let
+$T:\mathbb{R}^d \to \mathbb{R}^d$ be the rotation that sends $\xi$ ti $(0,\ldots,0,-|\xi|)$.
+Since $\sigma_{d-1} \circ T = \sigma_{d-1}$ (namely,
+surface measure $\sigma_{d-1}$ is invariant under rotations),
+\[
+\widehat{\sigma}_{d-1}(\xi) = \widehat{\sigma}_{d-1}((0,\ldots,0,-|\xi|))=2\pi |\xi|^{-\frac{d}{2}+1} 
+J_{\frac{d}{2}-1}(2\pi |\xi|).
+\]
+
+For real $\nu>-\frac{1}{2}$, we use the following asymptotic formula for $J_\nu(s)$:\footnote{Elias M. Stein and Rami Shakarchi,
+{\em Complex Analysis}, p.~319, Appendix A.1.}
+\[
+J_\nu(s) = \sqrt{\frac{2}{\pi s}} \cos\left(s-\frac{\pi \nu}{2}-\frac{\pi}{4}\right) + O(s^{-3/2}), \qquad s \to +\infty.
+\]
+We get from this that
+\[
+|\widehat{\sigma}_{d-1}(\xi)| = O(|\xi|^{-\frac{d}{2}+\frac{1}{2}}), \qquad |\xi| \to \infty.
+\]
+
+
+\section{The Fourier transform of radial functions}
+A function $f:\mathbb{R}^d \to \mathbb{C}$ is said to be \textbf{radial} if there is a function
+$f_0:[0,\infty) \to \mathbb{C}$ such that
+\[
+f(x) = f_0(|x|), \qquad x \in \mathbb{R}^d.
+\]
+For $f \in L^1(\mathbb{R}^d)$,
+Using polar coordinates we determine the Fourier transform of a radial function. For $\xi \in \mathbb{R}^d$,
+\begin{align*}
+\widehat{f}(\xi)&=\int_{\mathbb{R}^d} e^{-2\pi ix\cdot \xi} f(x) dx\\
+&=\int_0^\infty \left( \int_{S^{d-1}} e^{-2\pi ir\sigma \cdot \xi} f(r\sigma) d\sigma(\gamma) \right) d\mu(r)\\
+&=\int_0^\infty \left( \int_{S^{d-1}} e^{-2\pi ir\gamma \cdot \xi} d\sigma(\gamma) \right)  f_0(r) d\mu(r)\\
+&=\int_0^\infty \widehat{\sigma}_{d-1}(r\xi) f_0(r) d\mu(r)\\
+&=\int_0^\infty 2\pi (r|\xi|)^{-\frac{d}{2}+1} J_{\frac{d}{2}-1}(2\pi r|\xi|) f_0(r) d\mu(r)\\
+&=2\pi |\xi|^{-\frac{d}{2}+1} \int_0^\infty r^{-\frac{d}{2}+1}J_{\frac{d}{2}-1}(2\pi r|\xi|) f_0(r) d\mu(r).
+\end{align*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

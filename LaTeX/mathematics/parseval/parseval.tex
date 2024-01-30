@@ -1,0 +1,130 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\SA}{B_{\textrm{sa}}(H)} 
+\newcommand{\positive}{B_{\textrm{+}}(H)} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Abstract Fourier series and Parseval's identity}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+\section{Orthonormal basis}
+Let $H$ be a separable complex Hilbert space.\footnote{One talk do everything we are doing and obtain the same results for nonseparable Hilbert spaces, but
+one has to define what uncountable sums mean. This is done in John B. Conway, {\em A Course in Functional Analysis}, second ed., chapter I.}
+ If $e_i \in H$, $i \geq 1$, and $\inner{e_i}{e_j}=\delta_{i,j}$, we say that the set $\{e_i\}$ is {\em orthonormal}. If
+$\Span\{e_i: i \geq 1\}$ is a dense subspace of $H$, we say that $\{e_i: i \geq 1\}$ is an {\em orthonormal basis} for $H$. 
+We can write this in another way. If $S_\alpha, \alpha \in I$ are subsets of $H$, let $\bigvee_{\alpha \in I} S_\alpha$ be the closure of the span of 
+$\bigcup_{\alpha \in I} S_\alpha$. To say that $\{e_i\}$ is an orthonormal basis for $H$ is to say that $\{e_i\}$ is orthonormal and that
+$H=\bigvee_{i \geq 1} \{e_i\}$.
+
+\section{Abstract Fourier series}
+If $a_k \in \mathbb{C}$ and the sequence
+$\sum_{k=1}^n a_k e_k$ converges in $H$, we denote its limit by
+\[
+\sum_{k=1}^\infty a_k e_k.
+\]
+This is a {\em definition} of an infinite sum in $H$. Since $H$ is complete, one usually shows that a sequence converges by showing that the sequence is Cauchy, and hence
+to show that $\sum_{k=1}^n a_k e_k$ converges it is equivalent to show that
+\[
+\sum_{k=m+1}^n a_k e_k \to 0
+\]
+as $m,n \to \infty$. And showing this is equivalent to showing that
+\[
+\inner{\sum_{k=m+1}^n a_k e_k}{\sum_{k=m+1}^n a_k e_k} \to 0
+\] 
+as $m, n \to \infty$. This is equivalent to
+\[
+\sum_{k=m+1}^n |a_k|^2 \to 0
+\]
+as $m,n \to \infty$, and this is equivalent to the series
+\[
+\sum_{k=1}^\infty |a_k|^2
+\]
+converging. Thus, the series $\sum_{k=1}^\infty a_k e_k$ converges if and only if the series $\sum_{k=1}^\infty |a_k|^2$ converges.\footnote{Furthermore, using the triangle
+inequality rather than the orthonormality of the $e_k$, one can check that if
+the series $\sum_{k=1}^\infty |a_k|$ converges then the series $\sum_{k=1}^\infty a_k e_k$ converges.}
+
+Let $\{e_i:i \geq 1\}$ be an orthonormal basis for $H$; it is a fact that one exists. 
+Let $v \in H$ and define
+\[
+s_n=\sum_{k=1}^n \inner{v}{e_k}e_k.
+\]
+If $1 \leq i \leq n$ then
+\[
+\inner{v-s_n}{e_i}=\inner{v}{e_i} - \sum_{k=1}^n \inner{v}{e_k}\inner{e_k}{e_i}
+=\inner{v}{e_i}-\inner{v}{e_i}=0,
+\]
+hence
+\[
+\inner{v-s_n}{s_n}=0.
+\]
+It follows that
+\begin{eqnarray*}
+\sum_{k=1}^n |\inner{v}{e_k}|^2&=&\inner{s_n}{s_n}\\
+&\leq&\inner{s_n}{s_n}+\inner{v-s_n}{v-s_n}\\
+&=&\inner{v}{v},
+\end{eqnarray*}
+where we used $\inner{v-s_n}{s_n}=0$ in the third line.
+Therefore the series $\sum_{k=1}^\infty |\inner{v}{e_k}|^2$ converges, and so the sequence $s_n$ converges to some
+$v'=\sum_{k=1}^\infty \inner{v}{e_k}e_k \in H$. Since $s_n$ converges to $v'$, in particular it converges weakly to $v'$, i.e., for
+any $w \in H$,
+\[
+\lim_{n \to \infty} \inner{s_n}{w}=\inner{v'}{w}.
+\]
+Therefore for any $j$,
+\[
+\inner{v-v'}{e_j}=\inner{v}{e_j}-\inner{v'}{e_j}=\inner{v}{v_j}-\lim_{n \to \infty} \inner{s_n}{e_j}
+=\inner{v}{v_j}-\inner{v}{v_j}=0;
+\]
+this is because for $n \geq j$ we have $\inner{v-s_n}{e_j}=0$ and hence $\inner{v}{e_j}=\inner{s_n}{e_j}$.
+As $\inner{v-v'}{e_j}=0$ for all $j$, it follows that $v-v'=0$, i.e. $v=v'$. Hence,
+\[
+v = \sum_{k=1}^\infty \inner{v}{e_k}e_k.
+\]
+We call this an {\em abstract Fourier series} for $v$.\footnote{If $H=L^2(\mathbb{T})$,
+one checks that
+$e_k=e^{ik}, k \in \mathbb{Z}$, is an orthonormal basis for $H$.
+Then,
+\[
+\inner{f}{e_k}=\frac{1}{2\pi} \int_0^{2\pi} f(t) e^{-ik} dt
+\]
+and $f$ is the limit in $H$ of $\sum_{k=0}^n \inner{f}{e_k} e^{ik}$. Thus in $H$,
+\[
+f=\sum_{k \in \mathbb{Z}} \inner{f}{e_k} e^{ik}.
+\]
+}
+It can be written as
+\[
+v= \sum_{k=1}^\infty (e_k \otimes e_k)v,
+\]
+and thus can be written without $v$ as
+\[
+\id_H = \sum_{k=1}^\infty e_k \otimes e_k;
+\]
+$e_k \otimes e_k \in B(H)$ is a projection with rank 1, and the above series conveges in the {\em strong operator topology} on $B(H)$.
+Writing the identity map in this way is called a {\em resolution of the identity}.
+
+\section{Parseval's identity}
+On the one hand
+\[
+\lim_{n \to \infty} \norm{s_n}^2 = \sum_{k=1}^\infty |\inner{v}{e_k}|^2.
+\]
+On the other hand,
+\[
+\lim_{n \to \infty} \norm{s_n}^2 = \norm{v}^2.
+\]
+Hence
+\[
+\norm{v}^2 = \sum_{k=1}^\infty |\inner{v}{e_k}|^2,
+\]
+which is {\em Parseval's identity}. 
+\end{document}

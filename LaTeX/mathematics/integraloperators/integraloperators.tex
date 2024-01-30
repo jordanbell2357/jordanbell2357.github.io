@@ -1,0 +1,439 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\HS}{\ensuremath\mathrm{HS}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}}
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Integral operators}
+\author{Jordan Bell}
+\date{April 26, 2016}
+
+\maketitle
+
+\section{Product measures}
+Let $(X,\mathscr{A},\mu)$ be a $\sigma$-finite measure space. Then with $\mathscr{A} \otimes \mathscr{A}$
+the product $\sigma$-algebra and $\mu \otimes \mu$ the product measure on $\mathscr{A} \otimes \mathscr{A}$,
+$(X \times X,\mathscr{A} \otimes \mathscr{A},\mu \otimes \mu)$ is itself a $\sigma$-finite measure space.
+
+Write 
+$F_x(y)=F(x,y)$ and $F^y(x)=F(x,y)$. 
+For any measurable space $(X',\mathscr{A}')$, it is a fact that
+if $F:X \times X \to X'$ is measurable then $F_x$ is measurable for each $x \in X$ and $F^y$ is measurable
+for each $y \in X$.\footnote{Heinz Bauer, {\em Measure and Integration Theory},
+p.~138, Lemma 23.5.}
+
+Suppose that $F \in \mathscr{L}^1(X \times X)$, $F:X \to \mathbb{C}$.
+Fubini's theorem
+tells us the following.\footnote{Heinz Bauer, {\em Measure and Integration Theory},
+p.~139, Corollary 23.7.}
+\footnote{Suppose that $F:X \times X \to [0,\infty]$ is measurable.
+Tonelli's theorem, Heinz Bauer, {\em Measure and Integration Theory},
+p.~138, Theorem 23.6, tells us that the functions
+\[
+x \mapsto \int_X F_x d\mu,\qquad y \mapsto \int_X F^y d\mu
+\]
+are measurable $X \to [0,\infty]$, and that
+\[
+\int_{X \times X} F d(\mu \otimes \mu) = \int_X \left( \int_X F^y d\mu \right) d\mu(y)
+=\int_X \left( \int_X F_x d\mu\right) d\mu(x).
+\]}
+There are sets $N_1,N_2 \in \mathscr{A}$ with $\mu(N_1)=0$ and $\mu(N_2)=0$ such that
+if $x \in N_1^c$ then $F_x \in \mathscr{L}^1(X)$ and if $y \in N_2^c$ then
+$F^y \in \mathscr{L}^1(X)$. 
+Define
+\[
+I_1(x)=\begin{cases}
+\int_X F_x(y) d\mu(y)&x \in N_1^c\\
+0&x \in N_1
+\end{cases}
+\]
+and
+\[
+I_2(y)=\begin{cases}
+\int_X F^y(x) d\mu(x)&y \in N_2^c\\
+0&y \in N_2.
+\end{cases}
+\]
+$I_1 \in \mathscr{L}^1(X)$ and $I_2 \in \mathscr{L}^1(X)$,
+and 
+\[
+\int_{X \times X} F d(\mu \otimes \mu) = \int_X I_2(y) d\mu(y)
+=\int_X I_1(x) d\mu(x).
+\]
+
+
+\section{Integral operators in {\em L}\textsuperscript{2}}
+Let $k \in \mathscr{L}^2(X \times X)$ and let $g \in \mathscr{L}^2(X)$. 
+By Fubini's theorem, there is a set $Z \in \mathscr{A}$ with $\mu(Z)=0$ such that
+if $x \in Z^c$ then $k_x \in \mathscr{L}^2(X)$. For $x \in Z_n^c$, by the Cauchy-Schwarz inequality,
+\[
+\int_X |k_x g| d\mu \leq \left( \int_X |k_x|^2 d\mu\right)^{1/2} \left( \int_X |g|^2 d\mu \right)^{1/2} = \norm{k_x}_{L^2} 
+\norm{g}_{L^2},
+\]
+so $k_x g \in \mathscr{L}^1(X)$. 
+
+
+
+Since $\mu$ is $\sigma$-finite, there are 
+$A_n \in \mathscr{A}$, $\mu(A_n)<\infty$, with
+$A_n \uparrow X$. 
+For each $n$, the function $(x,y) \mapsto 1_{A_n}(x)  g(y)$ belongs to $\mathscr{L}^2(X \times X)$ and 
+hence, by the Cauchy-Schwarz inequality,
+$(x,y) \mapsto k(x,y) 1_{A_n}(x) g(y)$
+belongs to $\mathscr{L}^1(X \times X)$. 
+Applying Fubini's theorem, there is a set $N_n \in \mathscr{A}$ with $\mu(N_n)=0$ such that
+if $x \in N_n^c$ then
+$y \mapsto k(x,y) 1_{A_n}(x) g(y)$ belongs to 
+$\mathscr{L}^1(X)$, 
+and the function $I_n:X \to \mathbb{C}$ defined by
+\[
+I_n(x)=\begin{cases}
+\int_X k_x(y) 1_{A_n}(x) g(y) d\mu(y)&x \in N_n^c\\
+0&x \in N_n
+\end{cases}
+\]
+belongs to $\mathscr{L}^1(X)$.
+
+Let $M = \bigcup_n (Z \cup N_n)$, for which
+\[
+\mu(M) \leq \sum_n \mu(Z \cup N_n) \leq \sum_n (\mu(Z)+\mu(N_n)) = 0. 
+\]
+We note
+\[
+M^c = \bigcap_n (Z^c \cap N_n^c).
+\]
+For $g \in \mathscr{L}^2(X)$, define
+$K_M g:X \to \mathbb{C}$ by
+\begin{equation}
+K_M g(x) =\begin{cases}
+\int_X k_x(y) g(y) d\mu(y)&x \in M^c\\
+0&x \in M.
+\end{cases}
+\label{KM}
+\end{equation}
+For $x \in M^c$,
+\[
+I_n(x) = \int_X k_x(y) 1_{A_n}(x) g(y) d\mu(y) =1_{A_n}(x) \int_X k_x(y) g(y) d\mu(y)
+=1_{A_n}(x) \cdot K_M g(x).
+\]
+Then
+\[
+1_{A_n} \cdot K_M g = 1_{M^c} \cdot 1_{A_n} \cdot Kg = 1_{M^c} \cdot I_n,
+\]
+which shows that $f_n=1_{A_n} \cdot K_M g$ is measurable $X \to \mathbb{C}$. 
+For any $x \in X$,
+for sufficiently large $n$ we have
+$f_n(x)=K_M g(x)$, thus
+$f_n \to K_M g$ pointwise, which implies
+that $K_M g:X \to \mathbb{C}$ is measurable.\footnote{Charalambos D. Aliprantis and Kim C. Border,
+{\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~142, Lemma 4.29.}
+
+
+Using the Cauchy-Schwarz inequality and then Fubini's theorem,
+\begin{align*}
+\int_X |K_M g(x)|^2 d\mu(x)&=\int_{M^c} \left| \int_X k_x(y) g(y) d\mu(y) \right|^2 d\mu(x)\\
+&\leq \norm{g}_{L^2}^2 \cdot \int_{M^c} \left( \int_X |k_x(y)|^2 d\mu(y) \right) d\mu(x)\\
+&=\norm{g}_{L^2}^2 \cdot \norm{k}_{L^2}^2.
+\end{align*}
+This shows that $K_M g \in \mathscr{L}^2(X)$, with
+\[
+\norm{K_M g}_{L^2} \leq \norm{k}_{L^2} \cdot \norm{g}_{L^2}.
+\]
+
+ 
+
+Recapitulating, for $g \in \mathscr{L}^2(X)$ there is some $M \in \mathscr{A}$ with
+$\mu(M)=0$ such that for $x \in M^c$, 
+$k_x \in \mathscr{L}^2(X)$, and such that 
+$K_M g:X \to \mathbb{C}$ defined by \eqref{KM} 
+belongs to $\mathscr{L}^2(X)$. If $N$ is any set satisfying these conditions,
+then for $x \in M^c \cap N^c$, 
+\[
+K_M g(x) = 
+\int_X k_x(y) g(y) d\mu(y)
+=K_N g(x),
+\]
+and $\mu((M^c \cap N^c)^c) = \mu(M \cup N)=0$. 
+Therefore, for $g \in \mathscr{L}^2(X)$ it makes sense to define $Kg \in L^2(X)$
+by $Kg = K_Mg$. 
+
+If $f,g \in \mathscr{L}^2(X)$ and $f=g$ in $L^2(X)$, check that
+$Kf=Kg$ in $L^2(X)$. We  thus define
+$K:L^2(X) \to L^2(X)$ for $g \in L^2(X)$ as
+\[
+Kg(x) =\int_X k_x(y) g(y) d\mu(y)= \inner{g}{\overline{k_x}},
+\]
+where
+\[
+\inner{f}{g} = \int_X f \cdot \overline{g} d\mu.
+\]
+
+\begin{theorem}
+Let $(X,\mathscr{A},\mu)$ be a $\sigma$-finite measure space. For $k \in L^2(X \times X)$, it makes sense to define
+$Kg \in L^2(X)$ by
+\[
+Kg(x) = \int_X k_x(y) g(y) d\mu(y) = \inner{g}{\overline{k_x}}.
+\]
+$K:L^2(X) \to L^2(X)$ is a bounded linear operator with $\norm{K} \leq \norm{k}_{L^2}$.
+\end{theorem}
+
+
+\section{Integrals of functions}
+Suppose that $f:X \to \mathbb{C}$ is a function, which we do not ask to be measurable, and 
+that $Z_1,Z_2 \in \mathscr{A}$, $\mu(Z_1)=0$, $\mu(Z_2)=0$, satisfy $1_{Z_1^c} \cdot f,
+1_{Z_2^c} \cdot f \in \mathscr{L}^1(X)$. 
+We have 
+\begin{align*}
+\int_X 1_{Z_1^c} \cdot f  d\mu &= \int_X 1_{Z_1^c}\cdot (1_{Z_2}+1_{Z_2^c}) \cdot f d\mu\\
+&=\int_X 1_{Z_1^c \cap Z_2}\cdot fd\mu + \int_X 1_{Z_1^c \cap Z_2^c} \cdot f d\mu\\
+&= \int_X 1_{Z_1^c \cap Z_2^c} \cdot f d\mu\\
+&=\int_X 1_{Z_2^c \cap Z_1^c} \cdot f d\mu\\
+&=\int_X 1_{Z_2^c} \cdot f d\mu.
+\end{align*}
+Therefore if there is some $Z \in \mathscr{A}$ with $\mu(Z)=0$ and $1_Z \cdot f \in \mathscr{L}^1(X)$, 
+it makes sense to define
+\[
+\int_X f d\mu = \int_X 1_Z\cdot f d\mu.
+\]
+However, only if $f$ is itself measurable do we write $f \in \mathscr{L}^1(X)$.
+
+
+
+\section{Self-adjoint operators}
+\begin{theorem}
+Let $(X,\mathscr{A},\mu)$ be a $\sigma$-finite measure space. For $k \in L^2(X \times X)$ satisfying
+$k_x=\overline{k^x}$,
+$K:L^2(X) \to L^2(X)$ is self-adjoint.
+\end{theorem}
+\begin{proof}
+For $f,g \in L^2(X)$,
+\begin{align*}
+\inner{Kf}{g}&=\int_X Kf(x) \cdot \overline{g(x)} d\mu(x)\\
+&=\int_X \left( \int_X k_x(y) f(y) d\mu(y) \right) \overline{g(x)} d\mu(x)\\
+&=\int_X \left( \int_X k^y(x) \cdot  \overline{g(x)} d\mu(x) \right) f(y) d\mu(y)\\
+&=\int_X \left( \int_X \overline{k_y(x)} \overline{g(x)} d\mu(x) \right) f(y) d\mu(y)\\
+&=\int_X \overline{Kg(y)} \cdot f(y) d\mu(y)\\
+&=\inner{f}{Kg}.
+\end{align*}
+It follows that $K:L^2(X) \to L^2(X)$ is self-adjoint. 
+\end{proof}
+
+
+
+\section{Hilbert-Schmidt operators}
+Let $(X,\mathscr{A},\mu)$ be a measure space and let $1 \leq p < \infty$. It is a fact that if
+$\mu$ is $\sigma$-finite and $\mathscr{A}$ is countably generated, then the Banach space 
+$L^p(X)$ is separable.\footnote{Donald L. Cohn, {\em Measure Theory}, second ed.,
+p.~102, Proposition 3.4.5.}
+
+\begin{theorem}
+Let $(X,\mathscr{A},\mu)$ be a $\sigma$-finite countably generated measure space.  
+For $k \in L^2(X \times X)$, $K:L^2(X) \to L^2(X)$ is a Hilbert-Schmidt operator with
+ \[
+\norm{K}_{\HS} = \norm{k}_{L^2}.
+ \]
+\end{theorem}
+\begin{proof}
+$L^2(X)$ is separable, so there is an orthonormal basis $\{e_n\}$ for $L^2(X)$. 
+Using Parseval's formula and then Fubini's theorem,
+\begin{align*}
+\sum_n \inner{Ke_n}{Ke_n}&=\sum_n \int_X |Ke_n(x)|^2 d\mu(x)\\
+&=\sum_n \int_X |\inner{e_n}{\overline{k_x}}|^2 d\mu(x)\\
+&=\int_X \left( \sum_n |\inner{e_n}{\overline{k_x}}|^2\right) d\mu(x)\\
+&=\int_X \inner{\overline{k_x}}{\overline{k_x}} d\mu(x)\\
+&=\int_X \left( \int_X |k_x|^2 d\mu(y) \right) d\mu(x)\\
+&=\int_{X \times X} |k|^2 d(\mu \otimes \mu)\\
+&=\norm{k}_{L^2}^2.
+\end{align*}
+This shows that
+\[
+\norm{K}_{\HS} = \left( \sum_n \inner{Ke_n}{Ke_n} \right)^{1/2}
+= \norm{k}_{L^2}.
+\]
+\end{proof}
+
+
+If $T$ is a compact linear operator on $L^2(X)$, then $T^*T$ is a positive compact operator on $L^2(X)$. 
+Then $|T|=\sqrt{T^*T}$ is a positive compact operator.\footnote{See 
+Anton Deitmar and Siegfried Echterhoff,
+{\em Principles of Harmonic Analysis}, second ed.,
+p.~109, Theorem 5.1.3}
+Let $s_j$ be the  nonzero eigenvalues of $|T|$ repeated according to geometric
+multiplicity, with $s_{j+1} \leq s_j$, $j \geq 1$,
+called the \textbf{singular values of $T$}.
+By the spectral theorem,  there is an orthonormal basis for $\{e_j: j \geq 1\}$ for $L^2(X)$ such that
+$|T|e_j=s_j e_j$ for each $j \geq 1$.
+Then
+\begin{align*}
+\norm{T}_{\HS}^2&=\sum_{j \geq 1} \inner{Te_j}{Te_j}\\
+&=\sum_{j \geq 1} \inner{T^*Te_j}{e_j}\\
+&=\sum_{j \geq 1} \inner{|T|^2 e_j}{e_j}\\
+&=\sum_{j \geq 1} \inner{|T|e_j}{|T|e_j}\\
+&= \sum_{j \geq 1} \inner{s_j}{s_j}\\
+&= \sum_{j \geq 1} |s_j|^2.
+\end{align*}
+Summarizing,
+\[
+\norm{k}_{L^2}^2 = \norm{K}_{\HS}^2 = \sum_{j \geq 1} |s_j(T)|^2.
+\]
+
+
+
+\section{Trace class operators}
+A compact operator $T$ on $L^2(X)$ is called \textbf{trace class} if 
+$\norm{T}_{\tr} < \infty$, where
+\[
+\norm{T}_{\tr} = \sum_{j \geq 1} s_j(T).
+\]
+For  a trace class operator it makes sense to define
+\[
+\tr(T) = \sum_n \inner{Te_n}{e_n},
+\]
+which does not depend on the orthonormal basis $\{e_n\}$ of $L^2(X)$. 
+
+
+Let $X$ be a locally compact Hausdorff space and let $\mathscr{B}$ be the Borel $\sigma$-algebra of $X$.
+A \textbf{Borel measure} on $X$ is a measure on $\mathscr{B}$. We say that a Borel measure $\mu$ on $X$
+is \textbf{locally finite} if for each
+$x \in X$ there is an open set $U_x$ with $x \in U_x$ and $\mu(U_x)<\infty$. 
+A \textbf{Radon measure} on $X$ is a locally finite Borel measure $\mu$ on $X$ such that for
+each $A \in \mathscr{B}$ and for any $\epsilon>0$ there is an open set $U_\epsilon$ with $A \subset U_\epsilon$ and
+\[
+\mu(A)>\mu(U_\epsilon)-\epsilon
+\] 
+and for each open set $U$ and for any $\epsilon>0$ there is a compact set $K_\epsilon$ with $K_\epsilon \subset U$ and
+\[
+\mu(U) < \mu(K_\epsilon)+\epsilon.
+\]
+
+
+By definition, if $\mu$ is a Radon measure then $\mu(U)$ can be approximated by $\mu(K)$ for compact sets $K$ contained in $U$.
+We prove that this holds for $\mu(A)$ if $\mu(A)<\infty$.\footnote{Anton Deitmar and Siegfried Echterhoff,
+{\em Principles of Harmonic Analysis}, second ed.,
+p.~291, Lemma B.2.1.}
+
+\begin{lemma}
+Let $X$ be a locally compact Hausdorff space and let $\mu$ be a Radon measure on $X$. If
+$A \in \mathscr{B}$ with $\mu(A)<\infty$, there for any $\epsilon>0$ there is a compact set $K_\epsilon$, $K_\epsilon \subset A$,
+such that
+\[
+\mu(A) < \mu(K_\epsilon)+\epsilon.
+\]
+\end{lemma}
+\begin{proof}
+If $L$ is a compact set, $B \in \mathscr{B}$, and $B \subset L$, let $T=L \setminus B$. 
+For $\delta>0$ there is an open set $W_\delta$, $T \subset W_\delta$, such that
+$\mu(W_\delta)<\mu(T)+\delta$. Let $K_\delta = L \setminus W_\delta$, and because $X$ is Hausdorff, $L$ is closed
+and hence $K_\delta$ is closed and therefore compact. 
+Now, as $B \subset L$,
+\[
+L \setminus W_\delta \subset L \setminus T = L \setminus (L \setminus B) = B
+\]
+and
+\[
+\mu(B \setminus K_\delta) = \mu(B \setminus (L \setminus W_\delta))
+\leq \mu(W_\delta \setminus (L \setminus B))
+=\mu(W_\delta \setminus T)
+<\delta.
+\]
+We have proved that if $L$ is a compact set and $B$ is a Borel set contained in $L$, then for any $\delta>0$
+then there is a compact set $K_\delta$ with $K_\delta \subset B$ and
+\[
+\mu(B \setminus K_\delta) < \delta.
+\]
+
+Now let $U$ be an open set with $A \subset U$ and $\mu(U)<\infty$, say
+$\mu(U)<\mu(A)+1$. Let $L$ be a compact set with $L \subset U$ and
+\[
+\mu(U) < \mu(L)+\epsilon.
+\]
+$A = (A \cap L) \cup (A \setminus L)$, so 
+\[
+\mu(A) = \mu(A \cap L) + \mu(A \setminus L),
+\]
+and
+\[
+\mu(A \setminus L) \leq \mu(U \setminus L) < \epsilon.
+\]
+Let $B = A \cap L$. Because $B$ is a Borel set contained in a compact set $L$, 
+there is a compact set $K$ contained in $B$ such that 
+\[
+\mu(B \setminus K) < \epsilon.
+\]
+As $A = B \cup (A \setminus L)$ and $K \subset B$,
+\[
+\mu(A \setminus K) = \mu((B \setminus K) \cup (A \setminus L)) = 
+\mu(B \setminus K) + \mu(A \setminus L) < 2\epsilon.
+\]
+\end{proof}
+
+
+Let $X$ be a locally compact Hausdorff space and let
+$\mu$ be a Radon measure on $X$. 
+An \textbf{admissible kernel} is a function
+$k \in C(X \times X) \cap \mathscr{L}^2(X \times X)$ for which
+there is some $g \in C(X) \cap \mathscr{L}^2(X)$ such that
+$|k(x,y)| \leq g(x) g(y)$ for all $(x,y) \in X \times X$. 
+We call $S:L^2(X) \to L^2(X)$ an \textbf{admissible integral operator} if there is an admissible
+kernel $k$ such that
+\[
+Sg(x) = \int_X k_x(y) g(y) d\mu(y).
+\]
+The following gives conditions under which we can calculate the trace of 
+an integral operator.\footnote{Anton Deitmar and Siegfried Echterhoff,
+{\em Principles of Harmonic Analysis}, second ed.,
+p.~172, Proposition 9.3.1.}
+
+\begin{theorem}
+Let $X$ be a first-countable locally compact Hausdorff space and let $\mu$ be a Radon measure on $X$. 
+Let $k \in C(X \times X) \cap \mathscr{L}^2(X)$ and let
+\[
+Kg(x) = \int_X k_x(y) g(y) d\mu(y).
+\]
+If there are admissible integral operators $S_1$ and $S_2$ such that $K=S_1 S_2$, then
+$K$ is of trace class and
+\[
+\tr(K) = \int_X k(x,x) d\mu(x).
+\]
+\end{theorem}
+
+The following is \textbf{Mercer's theorem}.\footnote{E. Brian Davies, {\em Linear Operators and their Spectra}, p.~156, Proposition 5.6.9.}
+
+\begin{theorem}[Mercer's theorem]
+If $k \in C(X \times X) \cap \mathscr{L}^2(X \times X)$ and $K:L^2(X) \to L^2(X)$ is a positive operator, then 
+\[
+\tr(K) = \int_X k(x,x) d\mu(x).
+\]
+\end{theorem}
+
+
+
+
+
+
+
+\end{document}

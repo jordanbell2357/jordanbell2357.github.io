@@ -1,0 +1,830 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\osc}{\ensuremath\mathrm{osc}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\cco}{\ensuremath\overline{\mathrm{co}}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\ba}{\ensuremath\mathrm{ba}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\Cyl}{\ensuremath\mathrm{Cyl}\,}
+\newcommand{\extreals}{\overline{\mathbb{R}}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Stone-\v{C}ech compactification of Tychonoff spaces}
+\author{Jordan Bell}
+\date{June 27, 2014}
+
+\maketitle
+
+\section{Completely regular spaces and Tychonoff spaces}
+\label{introduction}
+A topological space $X$ is said to be \textbf{completely regular} if whenever
+$F$ is a nonempty closed set and $x \in X \setminus F$,
+there is a continuous function $f:X \to [0,1]$ such that $f(x)=0$ and $f(F) = \{1\}$. 
+A completely regular space need not be Hausdorff. For example, if $X$ is any set with more than one point,
+then the trivial topology, in which the only closed sets are $\emptyset$ and $X$, is vacuously completely regular, but not Hausdorff.
+A topological space is said to be a \textbf{Tychonoff space} if it is completely regular and Hausdorff. 
+
+\begin{lemma}
+A topological space $X$ is completely regular if and only if for any 
+nonempty closed set $F$, any $x \in X \setminus F$, and
+any
+distinct $a,b \in \mathbb{R}$, there is a continuous
+function $f:X \to \mathbb{R}$ such $f(x)=a$ and $f(F)=\{b\}$.
+\label{equivalentcr}
+\end{lemma}
+
+
+\begin{theorem}
+If $X$ is a Hausdorff space and $A \subset X$, then $A$ with the subspace topology is a Hausdorff space. If $\{X_i:i \in I\}$
+is a family of Hausdorff spaces, then $\prod_{i \in I} X_i$ is Hausdorff.
+\end{theorem}
+\begin{proof}
+Suppose that $a,b$ are distinct points in $A$. Because $X$ is Hausdorff, there are disjoint open sets $U,V$ in $X$ with $a \in U, b \in V$. 
+Then $U \cap A, V \cap A$ are disjoint open sets in $A$ with the subspace topology  and $a \in U \cap A, b \in V \cap A$, showing that $A$ is Hausdorff.
+
+Suppose that $x,y$ are distinct elements of $\prod_{i \in I} X_i$. $x$ and $y$ being distinct means there is some $i \in I$ such that
+$x(i) \neq y(i)$. Then $x(i), y(i)$ are distinct points in $X_i$, which is Hausdorff, so there are disjoint open sets $U_i, V_i$ in $X_i$
+with $x(i) \in U_i, y(i) \in V_i$. Let $U=\pi_i^{-1}(U_i), V=\pi_i^{-1}(V_i)$, where $\pi_i$ is the projection map
+from the product to $X_i$. $U$ and $V$ are disjoint, and $x \in U, y \in V$, showing that $\prod_{i \in I} X_i$ is Hausdorff.
+\end{proof}
+
+
+We  prove that subspaces and products of completely regular spaces are completely regular.\footnote{Stephen Willard, {\em General Topology}, p.~95, Theorem 14.10.} 
+
+\begin{theorem}
+If $X$ is Hausdorff and $A \subset X$, then $A$ with the subspace topology is completely regular. If
+$\{X_i: i \in I\}$ is a family of completely regular spaces, then $\prod_{i \in I} X_i$ is completely
+regular.
+\end{theorem}
+\begin{proof}
+Suppose that $F$ is closed in $A$ with the subspace topology and $x \in A \setminus F$. There is a closed set $G$ in $X$
+with $F=G \cap A$.  Then $x \not \in G$, so there is a continuous function $f:X \to [0,1]$ satisfying
+$f(x)=0$ and $f(F)=\{1\}$. The restriction of $f$ to $A$ with the subspace topology is continuous, showing that $A$ is completely regular. 
+
+Suppose that $F$ is a closed subset of $X=\prod_{i \in I} X_i$ and that $x \in X \setminus F$. 
+A base for the product topology consists of intersections of finitely many sets of the form
+$\pi_i^{-1}(U_i)$ where $i \in I$ and $U_i$ is an open subset of $X_i$, and because
+$X \setminus F$ is an open neighborhood of $x$, there  is a  finite
+subset $J$ of $I$ and open sets $U_j$ in $X_j$ for $j \in J$ such that
+\[
+x \in \bigcap_{j \in J} \pi_j^{-1}(U_j) \subset X \setminus F.
+\]
+For each $j \in J$,   $X_j \setminus U_j$ is closed in $X_j$ and $x(j) \in U_j$, and because $X_j$ is completely
+regular there is a continuous function $f_j:X_j \to [0,1]$ such that $f_j(x(j))=0$ and $f_j(X_j \setminus U_j)=\{1\}$. 
+Define $g:X \to [0,1]$ by
+\[
+g(y)=\max_{j \in J} (f_j \circ \pi_j) (y), \qquad y \in X.
+\]
+
+In general, suppose that $Y$ is a topological space and denote by $C(Y)$ the set of continuous functions $Y \to \mathbb{R}$. It is 
+a fact that  $C(Y)$
+is a \textbf{lattice} with the partial order $F \leq G$ when $F(y) \leq G(y)$ for all $y \in Y$. Hence, the maximum of finitely many
+continuous functions is also a continuous functions, hence $g:X \to [0,1]$ is continuous. 
+Because $(f_j \circ \pi_j)(x)=0$ for each $j \in J$, $g(x)=0$. On the other hand, $F \subset X \setminus \bigcap_{j \in J} \pi_j^{-1}(U_j)$, so
+if $y \in F$ then there is some  $j \in J$ such that $\pi_j(y) \in X_j \setminus U_j$ and then $(f_j \circ \pi_j)(y)=1$. Hence, for any $y \in F$ we have
+$g(y)=1$. Thus we have proved that $g:X \to [0,1]$ is a continuous function such that $g(x)=0$ and $g(F)=\{1\}$, which shows that
+$X$ is completely regular.
+\end{proof}
+
+Therefore, subspaces and products of Tychonoff spaces are Tychonoff.
+
+If $X$ is a normal topological space, it is immediate from \textbf{Urysohn's lemma} that $X$ is completely regular. A metrizable
+space is normal and Hausdorff, so a metrizable space is thus a Tychonoff space. 
+Let $X$ be a locally compact Hausdorff space. Either $X$ or the one-point compactification of $X$ is a compact Hausdorff space $Y$ of which $X$ is a subspace.
+$Y$ being a compact Hausdorff space implies that it is normal and hence completely
+regular. But $X$ is a subspace of $Y$ and being completely regular is a hereditary property, so
+$X$ is completely regular, and therefore Tychonoff. Thus, we have proved that a locally compact Hausdorff space is Tychonoff. 
+
+
+
+\section{Initial topologies}
+Suppose that $X$ is a set, $X_i$, $i \in I$, are topological spaces, and 
+$f_i:X \to X_i$ are functions. The \textbf{initial topology on $X$ induced by
+$\{f_i: i \in I\}$} is the coarsest topology on $X$ such that each $f_i$ is continuous.
+A subbase for the initial topology is the collection of those sets of the form
+$f_i^{-1}(U_i)$, $i \in I$ and $U_i$ open in $X_i$.  
+
+If $f_i:X \to X_i$, $i \in I$, are functions, the \textbf{evaluation map}
+is the function
+$e:X \to \prod_{i \in I} X_i$ defined by
+\[
+(\pi_i \circ e)(x) = f_i(x), \qquad i \in I.
+\] 
+
+We say that a  collection $\{f_i:i \in I\}$ of functions on $X$  \textbf{separates points} if
+$x \neq y$ implies that there is some $i \in I$ such that $f_i(x) \neq f_i(y)$.
+We remind ourselves that if $X$ and $Y$ are topological spaces and $\phi:X \to Y$ is a function, $\phi$ is called an
+\textbf{embedding} when $\phi:X \to \phi(X)$ is a homeomorphism, where $\phi(X)$ has the subspace topology inherited from $Y$.
+The following theorem
+gives conditions on when $X$ can be embedded into the product of the codomains
+of the $f_i$.\footnote{Stephen Willard, {\em General Topology}, p.~56, Theorem 8.12.} 
+
+
+\begin{theorem}
+Let $X$ be a topological space, let $X_i$, $i \in I$, be topological spaces, and let
+$f_i:X \to X_i$ be functions. The evaluation map $e:X \to \prod_{i \in I} X_i$ is an embedding
+if and only if both (i) $X$ has the initial topology induced by the family $\{f_i: i \in I\}$ and
+(ii) the family $\{f_i: i \in I\}$ separates points in $X$.
+\label{812}
+\end{theorem}
+\begin{proof}
+Write $P=\prod_{i \in I} X_i$ and let $p_i:e(X) \to X_i$ be the restriction of $\pi_i:X \to X_i$ to $e(X)$.
+A subbase for  $e(X)$ with the subspace topology inherited from $P$ consists of those sets of the form $\pi_i^{-1}(U_i) \cap e(X)$, $i \in I$ and $U_i$ open in $X_i$. 
+But $\pi_i^{-1}(U_i) \cap e(X) = p_i^{-1}(U_i)$, and the collection of  sets of this form is a subbase for $e(X)$ with the initial
+topology induced by the family $\{p_i: i \in I\}$, so these topologies are equal.
+
+Assume that $e:X \to e(X)$ is a homeomorphism. Because $e$ is a homeomorphism and 
+$f_i=\pi_i \circ e=p_i \circ e$, $e(X)$ having the initial topology induced by $\{p_i : i \in I\}$
+implies that $X$ has the initial topology induced by $\{f_i : i \in I\}$. 
+If $x,y$ are distinct elements of $X$ then there is some $i \in I$ such that $p_i(e(x)) \neq p_i(e(y))$, i.e.
+$f_i(x) \neq f_i(y)$, showing that $\{f_i : i \in I\}$ separates points in $X$.
+
+Assume that $X$ has the initial topology induced by $\{f_i : i \in I\}$ and that the family $\{f_i: i \in I\}$
+separates points in $X$. We shall prove that $e:X \to e(X)$ is a homeomorphism, for which it suffices to prove that
+$e:X \to P$ is one-to-one and continuous and that $e:X \to e(X)$ is open.
+If $x,y \in X$ are distinct then because the $f_i$ separate points, there is some $i \in I$ such that $f_i (x) \neq f_i(y)$, and so 
+$e(x) \neq e(y)$, showing that $e$ is one-to-one.
+
+For each $i \in I$, $f_i$ is continuous and $f_i = \pi_i \circ e$. The fact that this is true for all
+$i \in I$ implies that $e:X \to P$ is continuous. (Because the product topology is the initial topology induced by the family of projection maps,
+a map to a product is continuous if and only if its composition with each projection map is continuous.)
+
+A subbase for the topology of $X$ consists of those sets of the form $V=f_i^{-1}(U_i)$, $i \in I$ and $U_i$ open in $X_i$. 
+As $f_i = p_i \circ e$ we can write this as
+\[
+V = (p_i \circ e)^{-1}(U_i) = e^{-1}(p_i^{-1}(U_i)),
+\]
+which implies that $e(V) = p_i^{-1}(U_i)$, which is open in $e(X)$ and thus shows that $e:X \to e(X)$ is open. 
+\end{proof}
+
+
+
+We say that a collection $\{f_i: i \in I\}$ of functions on a topological space $X$ \textbf{separates points from closed sets}
+if whenever $F$ is a closed subset of $X$ and $x \in X \setminus F$, there is some $i \in I$ such that
+$f_i(x) \not \in \overline{f_i(F)}$, where $\overline{f_i(F)}$ is the closure of $f_i(F)$ in the codomain of $f$. 
+
+
+\begin{theorem}
+Assume that $X$ is a topological space and that $f_i:X \to X_i$, $i \in I$, are continuous functions.
+This family separates points from closed sets  if and only if the collection of sets
+of the form $f_i^{-1}(U_i)$, $i \in I$ and $U_i$ open in $X_i$, is a base for the topology of $X$.
+\label{815}
+\end{theorem}
+\begin{proof}
+Assume that the family $\{f_i: i \in I\}$ separates points from closed sets in $X$. Say  $x \in X$ and 
+that $U$ is an open neighborhood of $x$. 
+Then $F=X \setminus U$ is closed so there is some $i \in I$ such that
+$f_i(x) \not \in \overline{f_i(F)}$. 
+Thus 
+$U_i=X_i \setminus \overline{f_i(F)}$ is open in $X_i$,
+hence $f_i^{-1}(U_i)$ is open in $X$. On the one hand, $f(x_i) \in U_i$ yields
+$x_i \in f_i^{-1}(U_i)$. On the other hand, if $y \in f_i^{-1}(U_i)$ then
+$f_i(y) \in U_i$, which tells us that $y \not \in F$ and so $y \in U$,
+giving $f_i^{-1}(U_i) \subset U$. This shows us that the collection of sets of the form
+$f_i^{-1}(U_i)$, $i \in I$ and $U_i$ open in $X_i$, is a base for the topology of $X$.
+
+Assume that the collection of sets of the form $f_i^{-1}(U_i)$, $i \in I$ and $U_i$ open in $X_i$, is a base for
+the topology of $X$, and suppose that $F$ is a closed subset  of $X$ and that $x \in X \setminus F$. 
+Because $X \setminus F$ is an open neighborhood of $x$, there is some $i \in I$ and open  $U_i$ in $X_i$
+such that $x \in f_i^{-1}(U_i) \subset X \setminus F$, so $f_i(x) \in U_i$.
+Suppose by contradiction that there is some $y \in F$ such that $f_i(y) \in U_i$. This gives 
+$y \in f_i^{-1}(U_i) \subset X \setminus F$, which contradicts  $y \in F$. Therefore
+$U_i \cap f_i(F) = \emptyset$, and hence $X_i \setminus U_i$ is a closed set that contains
+$f_i(F)$, which tells us that $\overline{f_i(F)} \subset X_i \setminus U_i$, i.e.
+$\overline{f_i(F)} \cap U_i = \emptyset$. But $f_i(x) \in U_i$, so we have proved that $\{f_i: i \in I\}$ separates points from closed sets.
+\end{proof}
+
+
+A \textbf{$T_1$ space} is a topological space in which all singletons are closed.
+
+
+\begin{theorem}
+If  $X$ is a $T_1$ space,  $X_i$, $i \in I$, are topological spaces,   $f_i:X \to X_i$ are continuous functions, and $\{f_i: i \in I\}$  separates
+points from closed sets in $X$, then the evaluation map $e:X \to \prod_{i \in I} X_i$ is an embedding.
+\label{816}
+\end{theorem}
+\begin{proof}
+By Theorem \ref{815}, there is a base for the topology of $X$ consisting of sets of the form $f_i^{-1}(U_i)$, $i \in I$ and $U_i$ open in $X_i$. 
+Since this collection of sets is a base it is a fortiori a subbase, and the topology generated by this subbase is the initial topology
+for the family of functions $\{f_i: i \in I\}$. Because $X$ is $T_1$, singletons are closed and therefore the fact that $\{f_i: i \in I\}$ separates points and closed
+sets implies that it separates points in $X$. Therefore we can apply Theorem \ref{812}, which tells us that the evaluation map is an embedding.
+\end{proof}
+
+
+
+
+\section{Bounded continuous functions}
+For any set $X$, we denote by $\ell^\infty(X)$ the set of all bounded functions $X \to \mathbb{R}$,
+and we take as known that $\ell^\infty(X)$ is a Banach space with the 
+\textbf{supremum norm}
+\[
+\norm{f}_\infty = \sup_{x \in X} |f(x)|, \qquad f \in \ell^\infty(X).
+\]
+
+ 
+ If $X$ is a topological space, we denote by $C_b(X)$ the set of bounded continuous functions $X \to \mathbb{R}$.
+ $C_b(X) \subset \ell^\infty(X)$, and it is apparent that $C_b(X)$ is a linear subspace of $\ell^\infty(X)$. One proves that 
+ $C_b(X)$ is closed in $\ell^\infty(X)$ (i.e., that if a sequence of bounded continuous functions converges to some bounded function,
+ then this function is continuous), and hence  with the supremum norm, $C_b(X)$ is a Banach space.
+
+
+
+
+
+The following result  shows  that the Banach space $C_b(X)$ of bounded continuous functions $X \to \mathbb{R}$ is
+ a  useful collection of functions to talk about.\footnote{Stephen Willard, {\em General Topology}, p.~96, Theorem 14.12.} 
+
+\begin{theorem}
+Let $X$ be a topological space. $X$ is completely regular if and only if $X$ has the initial topology induced by $C_b(X)$. 
+\label{Cbinduced}
+\end{theorem}
+\begin{proof}
+Assume that $X$ is completely regular. If $F$ is a closed subset of $X$ and $x \in X \setminus F$, 
+then there is a continuous function $f:X \to [0,1]$ such that $f(x)=0$ and $f(F)=\{1\}$. Then $f \in C_b(X)$,
+and $f(x)=0 \not \in \{1\} =  \overline{f(F)}$. This shows that $C_b(X)$ separates points from closed sets in $X$.
+Applying Theorem \ref{815}, we get that $X$ has the initial topology induced by $C_b(X)$. (This would follow if the collection that
+Theorem \ref{815} tells us is a base
+were merely a subbase.)
+
+Assume that $X$ has the initial topology induced by $C_b(X)$.
+Suppose that $F$ is a closed subset of $X$ and that $x \in U=X \setminus F$.
+A subbase for the initial topology induced by $C_b(X)$ consists of those sets of the form $f^{-1}(V)$ for $f \in C_b(X)$ and $V$ an \textbf{open ray} in
+$\mathbb{R}$ (because the open rays are a subbase for the topology of $\mathbb{R}$), so because $U$ is an open neighborhood of $x$,
+there is a finite subset $J$ of $C_b(X)$ and open rays $V_f$ in $\mathbb{R}$ for each $f \in J$ such that
+\[
+x \in \bigcap_{f \in J} f^{-1}(V_f) \subset U.
+\] 
+If some $V_j$ is of the form $(-\infty,a_f)$, then with $g=-f$  we have $f^{-1}(-\infty,a_f)=g^{-1}(-a_f,\infty)$. We therefore
+suppose that in fact $V_f = (a_f,\infty)$ for each $f \in J$. For each $f \in J$, define
+$g_f:X \to \mathbb{R}$ by
+\[
+g_f(x) = \sup \{ f(x)-a_f, 0\},
+\]
+which is continuous and $\geq 0$, and satisfies
+$f^{-1}(a_f,\infty) = g_f^{-1}(0,\infty)$, so that 
+\[
+x \in \bigcap_{f \in J} g_f^{-1}(0,\infty) \subset U.
+\]
+Define $g=\prod_{f \in J} g_f$, which is continuous because each factor is continuous.
+ This function satisfies $g(x) = \prod_{f \in J} g_f(x)>0$ because this is a product of finitely many
+factors each of which are $>0$. If $y \in g^{-1}(0,\infty)$ then 
+$y \in \bigcap_{f \in J} g_f^{-1}(0,\infty) \subset U$, so $g^{-1}(0,\infty) \subset U$. 
+But $g$ is nonnegative, so this tells us that $g(X \setminus U)=\{0\}$, i.e. $g(F)=\{0\}$.  
+By Lemma \ref{equivalentcr} this suffices to show that $X$ is completely regular.
+\end{proof}
+
+
+
+A \textbf{cube} is a topological space that is homeomorphic to a product of compact intervals in $\mathbb{R}$.
+Any product is homeomorphic to the same product without singleton factors, (e.g. $\mathbb{R} \times
+\mathbb{R} \times \{3\}$ is homeomorphic
+to $\mathbb{R} \times \mathbb{R}$) and a product 
+of nonsingleton compact intervals with index set $I$
+is  homeomorphic to $[0,1]^I$.
+We remind ourselves that to say that a topological space is homeomorphic to a subspace of a cube is equivalent to saying that the space can be embedded into the cube.
+
+\begin{theorem}
+A topological space $X$ is a Tychonoff space if and only if it is homeomorphic to a subspace of a cube.
+\label{cube}
+\end{theorem}
+\begin{proof}
+Suppose that $I$ is a set and that $X$ is homeomorphic to a subspace $Y$ of $[0,1]^I$. $[0,1]$ is Tychonoff so the product
+$[0,1]^I$ is Tychonoff, and hence the subspace $Y$ is Tychonoff, thus $X$ is Tychonoff.
+
+Suppose that $X$ is Tychonoff. By Theorem \ref{Cbinduced}, $X$ has the initial topology induced by $C_b(X)$. 
+For each $f \in C_b(X)$, let $I_f =[-\norm{f}_\infty,\norm{f}_\infty]$, which is a compact interval in $\mathbb{R}$, and
+$f:X \to I_f$ is continuous. Because $X$ is Tychonoff, it is $T_1$
+and the functions $f:X \to I_f$, $f \in C_b(X)$, separate points and closed sets,
+we can  now apply
+Theorem \ref{816}, which tells us that the evaluation map $e:X \to \prod_{f \in C_b(X)} I_f$ is an embedding. 
+\end{proof}
+
+
+
+\section{Compactifications}
+In \S \ref{introduction} we  talked about the one-point compactification of a locally compact Hausdorff space.
+A \textbf{compactification} of a topological space $X$ is a pair $(K,h)$ where (i) $K$ is a compact Hausdorff space, (ii) $h:X \to K$ is an embedding, 
+and (iii) $h(X)$ is a dense subset of $K$. For example, if $X$ is a compact Hausdorff space then $(X,\id_X)$ is a compactification of $X$, and if $X$ is a locally
+compact Hausdorff space, then the one-point compactification $X^*=X \cup \{\infty\}$, where $\infty$ is some symbol that does not belong to $X$, together with
+ the inclusion map $X \to X^*$ is a compactification. 
+ 
+Suppose that $X$ is a topological space and that $(K,h)$ is a compactification of $X$. Because $K$ is a compact Hausdorff space it is normal, and then
+Urysohn's lemma tells us that $K$ is completely regular. But $K$ is Hausdorff, so in fact $K$ is Tychonoff. A subspace of a Tychonoff space is Tychonoff,
+so $h(X)$ with the subspace topology is Tychonoff. But $X$ and $h(X)$ are homeomorphic, so $X$ is Tychonoff. Thus, if a topological space has a compactification
+then it is Tychonoff. 
+
+In Theorem \ref{cube} we proved that any Tychonoff space can be embedded into a cube. 
+Here review our proof of this result. Let $X$  be a Tychonoff space, and
+for each $f \in C_b(X)$ let $I_f = [-\norm{f}_\infty,\norm{f}_\infty]$,
+so that $f:X \to I_f$ is continuous, and the family of these functions separates points
+in $X$. The evaluation map for this family is $e:X \to \prod_{f \in C_b(X)} I_f$ defined
+by $(\pi_f \circ e)(x)=f(x)$ for $f \in C_b(X)$, and Theorem \ref{816} tells us that 
+$e:X \to \prod_{f \in C_b(X)} I_f$ is an embedding. 
+Because each interval $I_f$ is a compact Hausdorff space (we remark that if $f=0$ then $I_f=\{0\}$, which is indeed compact),
+the product $\prod_{f \in C_b(X)} I_f$ is a compact Hausdorff space, and hence any closed
+subset of it is compact. We define $\beta X$ to be the closure of $e(X)$ in $\prod_{f \in C_b(X)} I_f$,
+and the \textbf{Stone-\v{C}ech compactification of $X$} is the pair $(\beta X,e)$, and what
+we have said shows that indeed this is a compactification of $X$. 
+
+The Stone-\v{C}ech compactification of a Tychonoff space is useful beyond displaying
+that every Tychonoff space has a compactification.
+We prove in the following that any continuous function from a Tychonoff space to a compact Hausdorff space
+factors through its Stone-\v{C}ech compactification.\footnote{Stephen Willard, {\em General Topology}, p.~137, Theorem 19.5.} 
+
+\begin{theorem}
+If $X$ is a Tychonoff space, $K$ is a compact Hausdorff space, and $\phi:X \to K$ is continuous, then there
+is a unique continuous function $\Phi:\beta X \to K$ such that $\phi = \Phi \circ e$. 
+\label{extend}
+\end{theorem}
+\begin{proof}
+$K$ is Tychonoff because a compact Hausdorff space is Tychonoff, so the evaluation map $e_K:K \to \prod_{g \in C_b(K)} I_g$
+is an embedding.
+Write $F=\prod_{f \in C_b(X)} I_f$, $G=\prod_{g \in C_b(K)} I_g$, and let $p_f:F \to I_f$, $q_g: G \to I_g$  be the projection maps. 
+
+We define $H:F \to G$ for 
+$t \in F$ by 
+ $(q_g \circ H)(t) = t(g \circ \phi)=p_{g \circ \phi}(t)$. For each $g \in G$, the map $q_g \circ H:F \to I_{g \circ \phi}$ is continuous, so $H$ is continuous.
+
+For $x \in X$, we have 
+\begin{eqnarray*}
+(q_g \circ H \circ e)(x) &=&(q_g \circ H)(e(x))\\
+&=&p_{g \circ \phi}(e(x))\\
+& =& (p_{g \circ \phi} \circ e)(x)\\
+&=&(g \circ \phi)(x)\\
+& =& g(\phi(x))\\
+&=&(q_g \circ e_K)(\phi(x))\\
+&=&(q_g \circ e_K \circ \phi)(x),
+\end{eqnarray*}
+so 
+\begin{equation}
+H \circ e = e_K \circ \phi.
+\label{eK}
+\end{equation}
+
+
+On the one hand,
+because $K$ is compact and $e_K$ is continuous, $e_K(K)$ is compact
+and hence is a closed subset of $G$ ($G$ is Hausdorff so a compact subset is closed). From 
+\eqref{eK} we know $H(e(X)) \subset e_K(K)$, and thus  
+\[
+\overline{H(e(X))} \subset \overline{e_K(K)}=e_K(K).
+\]
+On the other hand,  because $\beta X$ is compact and $H$ is continuous, $H(\beta X)$ is compact and hence is a closed subset of
+$G$. As
+ $e(X)$ is dense in $\beta X$ and $H$ is continuous,  $H(e(X))$ is dense in $H(\beta X)$, and thus
+\[
+\overline{H(e(X))} = \overline{H(\beta X)} = H(\beta X).
+\]
+Therefore we have
+\[
+H(\beta X) \subset e_K(K).
+\]
+
+Let $h$ be the restriction of $H$ to $\beta X$, and define $\Phi:\beta X \to K$ by 
+$\Phi = e_K^{-1} \circ h$, which makes sense because $e_K:K \to e_K(K)$ is a homeomorphism and $h$ takes values in $e_K(K)$. 
+$\Phi$ is continuous, and for $x \in X$ we have, using \eqref{eK},
+\[
+(\Phi \circ e)(x) = (e_K^{-1} \circ h \circ e)(x) = (e_K^{-1} \circ H \circ e)(x) = \phi(x),
+\]
+showing that $\Phi \circ e = \phi$.
+
+If $\Psi:\beta X \to K$ is a continuous function satisfying $f= \Psi \circ e$, let $y \in e(X)$. There is some $x \in X$ such that
+$y=e(x)$, and $f(x)=(\Psi \circ e)(x)=\Psi(y)$, $f(x)=(\Phi \circ e)(x)=\Phi(y)$, showing that for all $y \in e(X)$, $\Psi(y)=\Phi(y)$. 
+Since $\Psi$ and $\Phi$ are continuous and are equal on $e(X)$, which is a dense subset of $\beta X$, we get
+$\Psi=\Phi$, which completes the proof.
+\end{proof}
+
+
+If $X$ is a Tychonoff space with Stone-\v{C}ech compactification $(\beta X,e)$, then
+because $\beta X$ is a compact space, $C(\beta X)$ with the supremum norm is a Banach space. 
+We show in the following that the extension in Theorem \ref{extend} produces
+an isometric isomorphism $C_b(X) \to C(\beta X)$.
+
+\begin{theorem}
+If $X$ is a Tychonoff space with Stone-\v{C}ech compactification $(\beta X,e)$, then
+there is an isomorphism of Banach spaces $C_b(X) \to C(\beta X)$.
+\label{stonecechC}
+\end{theorem}
+\begin{proof}
+Let $f,g \in C_b(X)$, let $\alpha$ be a scalar, and let $K=[-|\alpha| \norm{f}-\norm{g}, |\alpha| \norm{f}+\norm{g}]$, which is a compact set.  Define
+$\phi=\alpha f+g$, and then Theorem \ref{extend} tells us that there is a unique continuous function
+$F:\beta X \to K$ such that $f = F \circ e$, a unique continuous function 
+$G:\beta X \to K$ such that $g = G \circ e$, and a unique continuous function $\Phi:\beta X \to K$ such that
+$\phi = \Phi \circ e$. For $y \in e(X)$ and $x \in X$ such that $y=e(x)$,
+\[
+\Phi(y) = \phi(x) = \alpha f(x)+g(x) = \alpha F(y)+G(y).
+\]
+Since $\Phi$ and $\alpha F+G$ are continuous functions $\beta X \to K$ that are equal on the dense set $e(X)$,
+we get $\Phi=\alpha F+G$. Therefore, the map that sends $f \in C_b(X)$ to the unique $F \in C(\beta X)$ such that
+$f = F \circ e$ is linear. 
+
+Let $f \in C_b(X)$ and let $F$ be the unique element of $C(\beta X)$ such that $f = F \circ e$.
+For any $x \in X$, $|f(x)| = |(F \circ e)(x)|$, so
+\[
+\norm{f}_\infty  = \sup_{x \in X} |f(x)| = \sup_{x \in X} |(F \circ e)(x)| = \sup_{y \in e(X)} |F(y)|.
+\]
+Because $F$ is continuous and $e(X)$ is
+dense in $\beta X$,
+\[
+\sup_{y \in e(X)} |F(y)| = \sup_{y \in \beta X} |F(y)| = \norm{F}_\infty,
+\]
+so $\norm{f}_\infty = \norm{F}_\infty$, showing that $f \mapsto F$ is an isometry. 
+
+For $\Phi \in C(\beta X)$, define $\phi=\Phi \circ e$. $\Phi$ is bounded so $\phi$ is also, and $\phi$ is a composition of continuous functions,
+hence $\phi \in C_b(X)$. Thus $\phi \mapsto \Phi$ is onto, completing the proof.
+\end{proof}
+
+
+\section{Spaces of continuous functions}
+If $X$ is a topological space, we denote by $C(X)$ the set of continuous functions $X \to \mathbb{R}$. For
+$K$ a compact set in $X$ (in particular a singleton) and $f \in C(X)$, define $p_K(f)=\sup_{x \in K} |f(x)|$. The collection
+of $p_K$ for all compact subsets of $K$ of $X$ is a \textbf{separating family of seminorms}, because if $f$ is nonzero there is some $x \in X$ for which
+$f(x) \neq 0$ and then $p_{\{x\}}(f) >0$. Hence $C(X)$ with the topology induced by this family of seminorms is a locally convex space. (If $X$ is 
+\textbf{$\sigma$-compact} then the seminorm topology is induced by countably many of the seminorms, and then $C(X)$ is metrizable.)
+However, since we usually are not given that $X$ is compact (in which case $C(X)$ is normable with $p_X$)
+ and since it is often more convenient to work with normed spaces than
+with locally convex spaces, we shall talk about subsets of $C(X)$.
+
+
+For $X$ a topological space, we say that a function $f:X \to \mathbb{R}$ \textbf{vanishes at infinity} if for each $\epsilon>0$ there is a compact set $K$
+such that $|f(x)|<\epsilon$ whenever $x \in X \setminus K$, and we denote by $C_0(X)$ the set of all continuous functions
+$X \to \mathbb{R}$ that vanish at infinity.
+
+The following theorem shows first that $C_0(X)$ is contained in $C_b(X)$, second that $C_0(X)$ is a linear space, and third that it is a closed
+subset of $C_b(X)$. With the supremum norm $C_b(X)$ is a Banach space, so this shows
+that $C_0(X)$ is a Banach subspace. We work through the proof in detail because it is often proved
+with unnecessary assumptions on the topological space $X$.  
+
+\begin{theorem}
+Suppose that $X$ is a topological space. Then $C_0(X)$ is a closed linear subspace of 
+$C_b(X)$. 
+\end{theorem}
+\begin{proof}
+If $f \in C_0(X)$, then there is a compact set $K$ such that $x \in X \setminus K$ implies
+that $|f(x)|<1$. On the other hand, because $f$ is continuous, $f(K)$ is a compact subset of the scalar
+field and hence is bounded, i.e., there is some $M \geq 0$ such that $x \in K$ implies that $|f(x)| \leq M$. Therefore
+$f$ is bounded, showing that $C_0(X) \subset C_b(X)$.
+
+Let $f,g \in C_0(X)$ and let $\epsilon>0$. There is a compact set $K_1$
+such that $x \in X \setminus K_1$ implies that $|f(x)|<\frac{\epsilon}{2}$ and a compact set $K_2$
+such that $x \in X \setminus K_2$ implies that $|g(x)|<\frac{\epsilon}{2}$.
+Let $K=K_1 \cup K_2$, which is a union of two compact sets hence is itself compact. 
+If $x \in X \setminus K$, then $x \in X \setminus K_1$ implying $|f(x)| < \frac{\epsilon}{2}$ and
+$x \in X \setminus K_2$ implying $|g(x)|< \frac{\epsilon}{2}$, hence
+$|f(x)+g(x)| \leq |f(x)|+|g(x)|<\epsilon$. This shows that $f+g \in C_0(X)$. 
+
+If $f \in C_0(X)$ and $\alpha$ is a nonzero scalar, let $\epsilon>0$. There is a compact set
+$K$ such that $x \in X \setminus K$ implies that $|f(x)|<\frac{\epsilon}{|\alpha|}$, and hence
+$|(\alpha f)(x)| = |\alpha| |f(x)| < \epsilon$, showing that $\alpha f\in C_0(X)$.
+Therefore $C_0(X)$ is a linear subspace of $C_b(X)$.
+
+Suppose that $f_n$ is a sequence of elements of $C_0(X)$ that converges to some $f \in C_b(X)$.
+For $\epsilon>0$, there is some $n_\epsilon$ such that $n \geq n_\epsilon$ implies that
+$\norm{f_n-f}_\infty<\frac{\epsilon}{2}$, that is,
+\[
+\sup_{x \in X} |f_n(x)-f(x)|<\frac{\epsilon}{2}.
+\]
+For each $n$, let $K_n$ be a compact set in $X$ such that $x \in X \setminus K_n$ implies that
+$|f_n(x)|<\frac{\epsilon}{2}$; there are such $K_n$ because   $f_n \in C_0(X)$. 
+If $x \in X \setminus K_{n_\epsilon}$, then
+\[
+|f(x)|\leq |f_{n_\epsilon}(x)-f(x)| + |f_{n_\epsilon}(x)|
+<\frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon,
+\]
+showing that $f \in C_0(X)$. 
+\end{proof}
+
+If $X$ is a topological space and $f:X \to \mathbb{R}$ is a function, the \textbf{support of $f$} is the set
+\[
+\supp f = \overline{\{x \in X: f(x) \neq 0\}}.
+\]
+If $\supp f$ is compact we say that $f$ has \textbf{compact support}, and we denote by $C_c(X)$ the set of all
+continuous functions $X \to \mathbb{R}$ with compact support.
+
+Suppose that $X$ is a topological space and
+let $f \in C_c(X)$. For any $\epsilon>0$, if $x \in X \setminus \supp f$ then $|f(x)|=0<\epsilon$, showing that
+$f \in C_0(X)$.  Therefore
+\[
+C_c(X) \subset C_0(X),
+\]
+and this makes no assumptions about the topology of $X$.
+
+We can prove that if $X$ is a locally compact Hausdorff space then $C_c(X)$ is dense in $C_0(X)$.\footnote{Gerald
+B. Folland, {\em Real Analysis: Modern Techniques and Their Applications}, p.~132, Proposition 4.35.}
+
+\begin{theorem}
+If $X$ is a locally compact Hausdorff space, then $C_c(X)$ is a dense subset of $C_0(X)$.
+\end{theorem}
+\begin{proof}
+Let $f \in C_0(X)$, 
+and for each $n \in \mathbb{N}$
+define 
+\[
+C_n = \left\{x \in X: |f(x)| \geq \frac{1}{n}\right\}.
+\]
+For  $n \in \mathbb{N}$,
+because $f \in C_0(X)$ there is a compact set $K_n$ such that $x \in X \setminus K_n$ implies that
+$|f(x)|<\frac{1}{n}$, and hence $C_n \subset K_n$. Because $x \mapsto |f_n(x)|$ is continuous, 
+$C_n$ is a closed set in $X$, and it follows that $C_n$, being contained in the compact set $K_n$, is compact. (This does not use that $X$ is Hausdorff.)
+
+Let $n \in \mathbb{N}$. Because $X$ is a locally compact Hausdorff space and $C_n$ is compact, Urysohn's lemma\footnote{Gerald
+B. Folland, {\em Real Analysis: Modern Techniques and Their Applications}, p.~131, Lemma 4.32.}  
+tells us that there is a compact set $D_n$ containing $C_n$ and a continuous function $g_n:X \to [0,1]$ such that $g_n(C_n)=\{1\}$ and 
+$g_n(X \setminus D_n) \subset \{0\}$. That is, $g_n \in C_c(X)$, $0 \leq g_n \leq 1$, and $g_n(C_n)=\{1\}$. Define
+$f_n = g_nf \in C_c(X)$. (A product of continuous functions is continuous, and
+ because $f$ is  bounded and $g_n$ has compact support, $g_n f$ has compact support.) For $x \in C_n$, $f_n(x)-f(x)=(g_n(x)-1)f(x)=0$, and for $x \in X \setminus C_n$,
+$|f_n(x)-f(x)|=|g_n(x)-1| |f(x)| \leq 1\cdot \frac{1}{n}$.  Therefore
+\[
+\norm{f_n-f}_\infty \leq \frac{1}{n},
+\]
+and hence $f_n$ is a sequence in $C_c(X)$ that converges to $f$, showing that $C_c(X)$ is dense in $C_0(X)$. 
+\end{proof}
+
+
+If $X$ is a Hausdorff space, then we prove that $C_c(X)$ is a linear subspace of $C_0(X)$. When $X$ is a locally compact Hausdorff
+space then combined with the above this shows that $C_c(X)$ is a dense linear subspace of $C_0(X)$. 
+
+\begin{lemma}
+Suppose that $X$ is a Hausdorff space. Then $C_c(X)$ is a linear subspace of  $C_0(X)$.
+\end{lemma}
+\begin{proof}
+If $f,g \in C_c(X)$ and $\alpha$ is a scalar, let $K=\supp f \cup \supp g$, which is a union of two compact sets hence compact.
+If $x \in X \setminus K$, then $f(x)=0$ because $x \not \in \supp f$ and $g(x)=0$ because $x \not \in \supp g$, so
+$(\alpha f+g)(x)=0$. Therefore $\{x \in X: (\alpha f+g)(x) \neq 0\} \subset K$ and hence
+$\supp(\alpha f+g)  \subset \overline{K}$.
+But as $X$ is Hausdorff, $K$ being compact implies that
+$K$ is closed in $X$, so we get $\supp(\alpha f+g) \subset K$. Because $\supp(\alpha f+g)$ is closed and is contained
+in the compact set $K$, it is itself compact, so $\alpha f+g \in C_c(X)$.
+\end{proof}
+
+
+
+
+Let $X$ be a topological space, and for  $x \in X$ define $\delta_x:C_b(X) \to \mathbb{R}$ by
+$\delta_x(f) = f(x)$. For each $x \in X$, $\delta_x$ is linear and $|\delta_x(f)|  = |f(x)| \leq \norm{f}_\infty$, so $\delta_x$
+is continuous and hence belongs to the dual space $C_b(X)^*$. Moreover, 
+the constant function $f(x)=1$ shows that $\norm{\delta_x}=1$. We define $\Delta:X \to C_b(X)^*$ by
+$\Delta(x)=\delta_x$. Suppose that $x_i$ is a net in $X$ that converges to some $x \in X$. Then
+for every $f \in C_b(X)$ we have $f(x_i) \to f(x)$, and this means that $\delta_{x_i}$ weak-* converges
+to $\delta_x$ in $C_b(X)^*$. This shows that with $C_b(X)^*$ assigned the weak-* topology,
+$\Delta:X \to C_b(X)^*$ is continuous. We now characterize when $\Delta$ is an embedding.\footnote{John B. Conway,
+{\em A Course in Functional Analysis}, second ed., p.~137, Proposition 6.1.}
+
+\begin{theorem}
+Suppose that $X$ is a topological space and assign $C_b(X)^*$ the weak-* topology. Then the map
+$\Delta:X \to \Delta(X)$ is a homeomorphism if and only if $X$ is Tychonoff, where $\Delta(X)$ has the subspace topology inherited from
+$C_b(X)^*$.
+\label{deltahomeo}
+\end{theorem}
+\begin{proof}
+Suppose that $X$ is Tychonoff. If $x,y \in X$ are distinct, then there is some $f \in C_b(X)$ such that
+$f(x)=0$ and $f(y)=1$, and then $\delta_x(f)=0 \neq 1 =\delta_y(f)$, so $\Delta(x) \neq \Delta(y)$, showing that $\Delta$ is one-to-one.
+To show that $\Delta:X \to \Delta(X)$ is a homeomorphism, it suffices to prove that $\Delta$ is an open map, so let
+$U$ be an open subset of $X$. For $x_0 \in U$, because $X \setminus U$ is closed there is some $f \in C_b(X)$ such that
+$f(x_0)=0$ and $f(X \setminus U) = \{1\}$. Let 
+\[
+V_1=\{\mu \in C_b(X)^*: \mu(f)<1\}.
+\]
+This is an open subset of $C_b(X)^*$ as it is the inverse image of $(-\infty,1)$ under the  map
+$\mu \mapsto \mu(f)$, which is continuous $C_b(X)^* \to \mathbb{R}$ by definition of the weak-* topology. 
+Then
+\[
+V = V_1 \cap \Delta(X) = \{\delta_x : f(x)<1\}
+\]
+is an open subset of the subspace $\Delta(X)$, and we have both $\delta_{x_0} \in V$ and
+$V \subset \Delta(U)$. This shows that for any element $\delta_{x_0}$ of $\Delta(U)$, there is some open set $V$ in the subspace
+$\Delta(X)$ such that $\delta_{x_0} \in V \subset \Delta(U)$, 
+which tells us that $\Delta(U)$ is an open set in the subspace $\Delta(U)$, showing that $\Delta$ is an open map and therefore
+a homeomorphism.
+
+Suppose that $\Delta:X \to \Delta(X)$ is a homeomorphism. By the Banach-Alaoglu theorem we know that
+the closed unit ball $B_1$ in $C_b(X)^*$ is compact. (We remind ourselves that we have assigned $C_b(X)^*$ the weak-* topology.)
+That is, with the subspace topology inherited from $C_b(X)^*$, $B_1$ is a compact space.
+It is Hausdorff because $C_b(X)^*$ is Hausdorff, and a compact Hausdorff space is Tychonoff. But $\Delta(X)$ is contained in
+the surface of $B_1$, in particular $\Delta(X)$ is contained in $B_1$ and hence is itself Tychonoff with the subspace topology
+inherited from $B_1$, which is equal to the subspace topology inherited from $C_b(X)^*$. Since
+$\Delta:X \to \Delta(X)$ is a homeomorphism, we get that $X$ is a Tychonoff space, completing the proof.
+\end{proof}
+
+
+The following result shows when the Banach space $C_b(X)$ is separable.\footnote{John B. Conway,
+{\em A Course in Functional Analysis}, second ed., p.~140, Theorem 6.6.}
+
+\begin{theorem}
+Suppose that $X$ is a Tychonoff space. Then the Banach space $C_b(X)$ is separable if and only if $X$ is compact and metrizable.
+\end{theorem}
+\begin{proof}
+Assume that $X$ is compact and metrizable, with a compatible metric $d$. For each $n \in \mathbb{N}$
+there are open balls $U_{n,1},\ldots,U_{n,N_n}$ of radius $\frac{1}{n}$ that cover $X$.
+As $X$ is metrizable it is normal, so there is a \textbf{partition of unity subordinate to the cover $\{U_{n,k}: 1 \leq k \leq N_n\}$}.\footnote{John
+B. Conway, {\em A Course in Functional Analysis}, second ed., p.~139, Theorem 6.5.} That is,
+there are continuous functions $f_{n,1},\ldots,f_{n,N_n}:X \to [0,1]$ such that
+$\sum_{k=1}^{N_n} f_{n,k}=1$ and such that  $x \in X \setminus U_{n,k}$ implies that $f_{n,k}(x)=0$. Then
+$\{f_{n,k}: n \in \mathbb{N}, 1 \leq k \leq N_n\}$ is countable, so its span $D$ over $\mathbb{Q}$ is also countable. 
+We shall prove that $D$ is dense in $C(X)=C_b(X)$, which will show that $C_b(X)$ is separable.
+
+Let $f\in C(X)$ and let $\epsilon>0$. Because $(X,d)$ is a compact metric space, $f$ is uniformly continuous, so there is some
+$\delta>0$ such that $d(x,y)<\delta$ implies that $|f(x)-f(y)|<\frac{\epsilon}{2}$. Let $n\in \mathbb{N}$ be $>\frac{2}{\delta}$, and for
+each $1 \leq k \leq N_n$ let $x_k \in U_{n,k}$. For each $k$ there is some $\alpha_k \in \mathbb{Q}$ such that
+$|\alpha_k - f(x_k)|<\frac{\epsilon}{2}$, and we define 
+\[
+g = \sum_{k=1}^{N_n} \alpha_k f_{n,k} \in D.
+\]
+Because $\sum_{k=1}^{N_n} f_{n,k}=1$ we have $f= \sum_{k=1}^{N_n} f f_{n,k}$. Let $x \in X$, and then
+\[
+|f(x)-g(x)|=\left| \sum_{k=1}^{N_n} (f(x)-\alpha_k) f_{n,k}(x) \right|
+\leq \sum_{k=1}^{N_n} |f(x)-\alpha_k| f_{n,k}(x).
+\]
+For each $1 \leq k \leq N_n$, either $x \in U_{n,k}$ or $x \not \in U_{n,k}$. In the first case,
+since $x$ and $x_k$ are then in the same open ball of radius $\frac{1}{n}$, $d(x,x_k) < \frac{2}{n}<\delta$, so
+\[
+|f(x)-\alpha_k| \leq |f(x)-f(x_k)| + |f(x_k)-\alpha_k| < \frac{\epsilon}{2}+\frac{\epsilon}{2}=\epsilon.
+\]
+In the second case, $f_{n,k}(x)=0$. Therefore,
+\[
+ \sum_{k=1}^{N_n} |f(x)-\alpha_k| f_{n,k}(x) \leq \sum_{k=1}^{N_n} \epsilon f_{n,k}(x) 
+ =\epsilon,
+\]
+showing that $|f(x)-g(x)| \leq \epsilon$. This shows that $D$ is dense in $C(X)$, and therefore that $C_b(X)=C(X)$ is separable.
+
+
+Suppose that $C_b(X)$ is separable.
+Because $X$ is Tychonoff, by Theorem \ref{stonecechC} there is an isometric isomorphism between the Banach spaces
+$C_b(X)$ and  $C(\beta X)$, where $(\beta X,e)$ is the Stone-\v{C}ech compactification of $X$.
+Hence $C(\beta X)$ is separable.
+But it is a fact that a compact Hausdorff space $Y$ is metrizable if and only if the Banach space $C(Y)$ is separable.\footnote{Charalambos D. 
+Aliprantis and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~353, Theorem 9.14.}
+(This is proved using the Stone-Weierstrass theorem.)
+As $\beta X$ is a compact Hausdorff space and $C(\beta X)$ is separable, we thus get that $\beta X$ is metrizable. 
+
+
+It is a fact that if $Y$ is a Banach space  and $B_1$ is the closed unit ball in the dual space $Y^*$, then $B_1$ with the subspace
+topology inherited from $Y^*$ with the weak-* topology is metrizable if and only if $Y$ is separable.\footnote{John
+B. Conway, {\em A Course in Functional Analysis}, second ed., p.~134, Theorem 5.1.}
+Thus, the closed unit ball $B_1$ in $C_b(X)^*$ is metrizable. 
+Theorem \ref{deltahomeo} tells us there is an embedding $\Delta:X \to B_1$, and $B_1$ being metrizable implies that $\Delta(X)$ is metrizable. As $\Delta:X \to 
+\Delta(X)$ is a homeomorphism,  we get that $X$ is metrizable.
+
+
+Because $\beta X$ is compact and metrizable, to prove that $X$ is compact and metrizable it suffices to prove
+that $\beta X \setminus e(X) = \emptyset$,
+so we suppose by contradiction that there is some $\tau \in \beta X \setminus e(X)$. 
+$e(X)$ is dense in $\beta X$, so there is a sequence $x_n \in X$, for which we take $x_n \neq x_m$ when $n \neq m$, such that $e(x_n) \to \tau$.
+If $x_n$ had a subsequence $x_{a(n)}$ that converged to some $y \in X$, then
+$e(x_{a(n)}) \to e(y)$ and hence $e(y)=\tau$, a contradiction. Therefore the sequence $x_n$ has no limit points, so
+the sets
+$A=\{x_n: \textrm{$n$ odd}\}$ and $B=\{x_n:\textrm{$n$ even}\}$ are closed and disjoint. 
+Because $X$ is metrizable it is normal, hence by Urysohn's lemma there is a continuous function $\phi:X \to [0,1]$
+such that $\phi(a)=0$ for all $a \in A$ and $\phi(b)=1$ for all $b \in B$. Then, by Theorem \ref{extend} there is a unique
+continuous $\Phi:X \to [0,1]$ such that $\phi = \Phi \circ e$. Then we have, because a subsequence of a convergent sequence has the same limit,
+\begin{eqnarray*}
+\Phi(\tau)&=&\Phi\left( \lim_{n \to \infty} e(x_n) \right)\\
+& =& \Phi\left( \lim_{n \to \infty} e(x_{2n+1}) \right)\\
+& = &\lim_{n \to \infty} (\Phi \circ e)(x_{2n+1})\\
+&=&\lim_{n \to \infty} \phi(x_{2n+1})\\
+&=&0,
+\end{eqnarray*}
+and likewise
+\[
+\Phi(\tau) = 
+\lim_{n \to \infty} \phi(x_{2n}) = 1,
+\]
+a contradiction.
+This shows that $\beta X \setminus e(X) = \emptyset$, which completes the proof.
+\end{proof}
+
+
+
+\section{𝐶\textsuperscript{*}-algebras and the Gelfand transform}
+A \textbf{$C^*$-algebra} is a complex Banach algebra $A$
+with a map $^*:A \to A$ such
+that
+\begin{enumerate}
+\item $a^{**}=a$ for all $a \in A$ (namely, $^*$ is an \textbf{involution}),
+\item $(a+b)^*=a^*+b^*$ and $(ab)^*=b^*a^*$ for all $a \in A$,
+\item $(\lambda a)^* = \overline{\lambda} a^*$ for all $a \in A$ and $\lambda \in \mathbb{C}$,
+\item $\norm{a^*a}=\norm{a}^2$ for all $a \in A$.
+\end{enumerate}
+We do not require that a $C^*$-algebra be unital. 
+If $a=0$ then $\norm{a^*}=\norm{0}=\norm{a}$. 
+Otherwise,
+\[
+\norm{a}^2=\norm{a^*a} \leq \norm{a^*} \norm{a}
+\]
+gives $\norm{a} \leq \norm{a^*}$ and
+\[
+\norm{a^*}^2 = \norm{a^{**}a^*} = \norm{aa^*} \leq \norm{a}\norm{a^*}
+\]
+gives $\norm{a^*} \leq \norm{a}$, showing that $^*$ is an isometry. 
+
+
+
+We now take $C_b(X)$ to denote $C_b(X,\mathbb{C})$ rather than $C_b(X,\mathbb{R})$, and likewise for $C(X), C_0(X)$, and $C_c(X)$. 
+It is routine   to verify that everything we have asserted about these spaces when the codomain is $\mathbb{R}$ is
+true
+when the codomain is $\mathbb{C}$, but this is not obvious. In particular, $C_b(X)$ is a Banach space with the supremum norm and $C_0(X)$ is a closed linear subspace, 
+whatever the topological space $X$. It is then straightforward to check that with the involution $f^*= \overline{f}$ they
+are commutative $C^*$-algebras. 
+
+
+A \textbf{homomorphism of $C^*$-algebras} is an algebra homomorphism $f:A \to B$, where $A$ and $B$ are $C^*$-algebras, such that
+$f(a^*)=f(a)^*$ for all $a \in A$. It can be proved that $\norm{f} \leq 1$.\footnote{Jos\'e M. Gracia-Bond\'ia, Joseph C. V\'arilly and
+H\'ector Figueroa, {\em Elements of Noncommutative Geometry}, p.~29, Lemma 1.16.} We define an
+\textbf{isomorphism of $C^*$-algebras} to be an algebra isomorphism $f:A \to B$ such that
+$f(a^*)=f(a)^*$ for all $a \in A$. It follows that $\norm{f} \leq 1$ and because $f$ is bijective, the inverse $f^{-1}$ is a $C^*$-algebra homomorphism,
+giving $\norm{f^{-1}} \leq 1$ and therefore $\norm{f}=1$. Thus, an isomorphism of $C^*$-algebras is an isometric isomorphism.
+
+
+
+Suppose that $A$ is a commutative $C^*$-algebra, which we do not assume to be unital. A \textbf{character of $A$} is a nonzero algebra homomorphism $A \to \mathbb{C}$. We denote the set of
+characters of $A$ by $\sigma(A)$, which we call the \textbf{Gelfand spectrum of $A$}. We make some assertions in the following text
+that are proved in Folland.\footnote{Gerald B. Folland, {\em A Course in Abstract Harmonic Analysis}, p.~12, \S 1.3.}
+It is a fact that for every $h \in \sigma(A)$, $\norm{h} \leq 1$, so $\sigma(A)$ is contained in the closed unit  ball of $A^*$, where $A^*$
+denotes the dual of the Banach space $A$. Furthermore, one can prove that $\sigma(A) \cup \{0\}$ is a weak-* closed set in $A^*$, and hence
+is weak-* compact because it is contained in the closed unit ball which we know to be weak-* compact by the Banach-Alaoglu theorem.
+We assign $\sigma(A)$ the subspace topology inherited from $A^*$ with the weak-* topology. Depending on whether
+$0$ is or is not an isolated point in $\sigma(A) \cup \{0\}$, $\sigma(A)$ is a compact or a locally compact Hausdorff space;  in any case
+$\sigma(A)$ is a locally compact Hausdorff space. 
+
+The \textbf{Gelfand transform} is the map $\Gamma:A \to C_0(\sigma(A))$ defined by $\Gamma(a)(h)=h(a)$; 
+that $\Gamma(a)$ is continuous follows from $\sigma(A)$ having the weak-* topology, and one
+proves that in fact $\Gamma(a) \in C_0(\sigma(A))$.\footnote{Gerald B. Folland, {\em A Course in Abstract Harmonic Analysis}, p.~15.}
+The \textbf{Gelfand-Naimark theorem}\footnote{Gerald B. Folland, {\em A Course in Abstract Harmonic Analysis}, p.~16, Theorem 1.31.}
+states that $\Gamma:A \to C_0(\sigma(A))$ is an isomorphism of $C^*$-algebras.
+
+It can be proved that two commutative $C^*$-algebras are isomorphic as $C^*$-algebras if and only if their
+Gelfand spectra are homeomorphic.\footnote{Jos\'e M. Gracia-Bond\'ia, Joseph C. V\'arilly and
+H\'ector Figueroa, {\em Elements of Noncommutative Geometry}, p.~11, Proposition 1.5.}
+
+
+\section{Multiplier algebras}
+An \textbf{ideal of a $C^*$-algebra} $A$ is a closed linear subspace $I$ of $A$ such that $IA \subset I$ and $AI \subset I$.
+An ideal $I$ is said to be \textbf{essential} if $I \cap J \neq \{0\}$ for every nonzero ideal $J$ of $A$.
+In particular, $A$ is itself an  essential ideal.
+
+Suppose that $A$ is a $C^*$-algebra. The \textbf{multiplier algebra of $A$}, denoted $M(A)$, is
+a  $C^*$-algebra containing $A$ as an essential
+ideal such that if $B$ is a $C^*$-algebra containing $A$ as an essential ideal then there is
+a unique homomorphism of $C^*$-algebras $\pi:B \to M(A)$ whose restriction to $A$ is the identity.
+We have not shown that there is a multiplier algebra of $A$, but we shall now prove that this definition is a \textbf{universal property}:
+that any $C^*$-algebra satisfying the definition is isomorphic as a $C^*$-algebra to $M(A)$, which allows us to talk about ``the'' multiplier algebra
+rather than ``a'' multiplier algebra.
+
+Suppose that $C$ is a $C^*$-algebra containing $A$ as an essential ideal such that
+if $B$ is a $C^*$-algebra containing $A$ as an essential ideal then there is a unique $C^*$-algebra homomorphism
+$\pi:B \to C$ whose restriction to $A$ is the identity. 
+Hence there is a unique homomorphism of $C^*$-algebras $\pi_1:C \to M(A)$ whose restriction to $A$ is the identity,
+and there is a unique homomorphism of $C^*$-algebras $\pi_2:M(A) \to C$ whose restriction to $A$ is the identity.
+Then $\pi_2 \circ \pi_1:C \to C$ and $\pi_1 \circ \pi_2:M(A) \to M(A)$ are  homomorphisms of $C^*$-algebras
+whose restrictions to $A$ are the identity. But the identity maps $\id_C:C \to C$ and $\id_{M(A)}:M(A) \to M(A)$ are also homomorphisms
+of $C^*$-algebras whose restrictions to $A$ are the identity. Therefore, 
+by uniqueness we get that $\pi_2 \circ \pi_1 = \id_C$ and $\pi_1 \circ \pi_2 = \id_{M(A)}$. 
+Therefore $\pi_1:C \to M(A)$ is an isomorphism of $C^*$-algebras.
+
+One can prove that if $A$ is unital then $M(A)=A$.\footnote{Paul Skoufranis,
+{\em An Introduction to Multiplier Algebras},
+\url{http://www.math.ucla.edu/~pskoufra/OANotes-MultiplierAlgebras.pdf}, p.~4, Lemma 1.9.}
+It can be proved that for any $C^*$-algebra $A$, the multiplier algebra $M(A)$ is unital.\footnote{Paul Skoufranis,
+{\em An Introduction to Multiplier Algebras},
+\url{http://www.math.ucla.edu/~pskoufra/OANotes-MultiplierAlgebras.pdf}, p.~9, Corollary 2.8.}
+For a locally compact Hausdorff space $X$, it can be proved that $M(C_0(X))=C_b(X)$.\footnote{Eberhard
+Kaniuth, {\em A Course in Commutative Banach Algebras}, p.~29, Example 1.4.13;
+Jos\'e M. Gracia-Bond\'ia, Joseph C. V\'arilly and
+H\'ector Figueroa, {\em Elements of Noncommutative Geometry}, p.~14, Proposition 1.10.} This last assertion is the reason for my interest in multiplier algebras. We have
+seen that if $X$ is a locally compact Hausdorff space then $C_c(X)$ is a dense linear subspace of $C_0(X)$, and for any topological space $C_0(X)$ is a closed linear
+subspace of $C_b(X)$, but before talking about multiplier algebras we did not have a tight fit between the $C^*$-algebras $C_0(X)$ and $C_b(X)$.
+
+
+\section{Riesz representation theorem for compact Hausdorff spaces}
+There is a proof due to D. J. H. Garling  of the Riesz representation theorem for compact Hausdorff
+spaces that uses the Stone-\v{C}ech compactification of discrete topological spaces. This
+proof is presented in Carothers' book.\footnote{N. L. Carothers, {\em A Short Course on Banach
+Space Theory}, Chapter 16, pp.~156--165.}
+
+
+
+
+
+\end{document}

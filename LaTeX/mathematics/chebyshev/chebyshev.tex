@@ -1,0 +1,373 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Hilb}{\ensuremath\mathrm{Hilb}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\Ran}{\ensuremath\mathrm{Ran}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\spr}{\ensuremath\mathrm{spr}}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Chebyshev polynomials}
+\author{Jordan Bell}
+\date{December 7, 2016}
+
+\maketitle
+
+\section{First kind}
+On the one hand, 
+\begin{align*}
+(\cos \theta + i \sin \theta)^n&=\sum_{0 \leq \nu \leq n} i^\nu \binom{n}{\nu} \cos^{n-\nu} \theta \sin^\nu \theta\\
+&=\sum_{0 \leq 2k \leq n} (-1)^k \binom{n}{2k}\cos^{n-2k}(\theta) \sin^{2k}(\theta)\\
+&+i\sum_{0 \leq 2k+1 \leq n}  (-1)^k \binom{n}{2k+1}\cos^{n-2k-1}(\theta) \sin^{2k+1}(\theta).
+\end{align*}
+On the other hand,
+\[
+(\cos \theta+i\sin \theta)^n = (e^{i\theta})^n = e^{in\theta} = \cos n\theta + i\sin n\theta.
+\]
+Therefore
+\begin{align*}
+\cos n\theta&=\sum_{0 \leq k \leq n/2} (-1)^k \binom{n}{2k}\cos^{n-2k}(\theta) \sin^{2k}(\theta)\\
+&=\sum_{0 \leq k \leq n/2} (-1)^k \binom{n}{2k}\cos^{n-2k}(\theta) (1-\cos^2 \theta)^k\\
+&=\sum_{0 \leq k \leq n/2} \binom{n}{2k}\cos^{n-2k}(\theta) (\cos^2 \theta-1)^k\\
+&=\sum_{0 \leq k \leq n/2} \binom{n}{2k}\cos^{n-2k}(\theta) \sum_{0 \leq j \leq k} \binom{k}{j} \cos^{2k-2j}(\theta)  (-1)^j\\
+&=\sum_{0 \leq j \leq n/2} (-1)^j \cos^{n-2j}(\theta) \sum_{j \leq k \leq n/2} \binom{n}{2k} \binom{k}{j}.
+\end{align*}
+Now,
+\begin{align*}
+\sum_{j \leq k \leq n/2} \binom{n}{2k} \binom{k}{j}&=
+2^{n-2j-1} \binom{n-j}{j} \frac{n}{n-j}.
+\end{align*}
+Hence
+\[
+\cos n\theta = \sum_{0 \leq j \leq n/2} (-1)^j \cos^{n-2j}(\theta)2^{n-2j-1} \binom{n-j}{j} \frac{n}{n-j}.
+\]
+
+For $z \in \mathbb{C}$ let 
+\begin{equation}
+T_n(z) =  \sum_{0 \leq j \leq n/2} (-1)^j 2^{n-2j-1} \binom{n-j}{j} \frac{n}{n-j} z^{n-2j}.
+\label{Tn}
+\end{equation}
+Note
+\[
+T_n(z)[z^n] = 2^{n-1} z^n.
+\]
+
+\begin{theorem}
+\[
+T_n(\cos \theta) = \cos(n\theta)
+\]
+and
+\[
+T_m \circ T_n = T_{mn}.
+\]
+\label{Tncos}
+\end{theorem}
+\begin{proof}
+For $\theta \in \mathbb{R}$,
+\[
+T_n(\cos \theta) = \cos(n\theta).
+\]
+Then
+\[
+T_m(T_n(\cos \theta)) = T_m( \cos (n\theta))
+=\cos (mn\theta)
+=T_{mn}(\theta).
+\]
+That is, for $z \in [-1,1]$ we have
+$T_m(T_n(z)) = T_{mn}(z)$. Then by analytic continuation it follows that
+this is true for all $z$.
+\end{proof}
+
+\begin{theorem}
+\[
+T_n(z)+T_{n-2}(z)=2zT_{n-1}(z).
+\]
+\end{theorem}
+\begin{proof}
+Using $\cos(\alpha+\beta)=\cos \alpha \cos \beta - \sin \alpha \sin \beta$, 
+\[
+\cos(n\theta) = \cos(\theta+(n-1)\theta)
+=\cos \theta \cos((n-1)\theta)-\sin\theta\sin((n-1)\theta)
+\]
+and
+\[
+\cos((n-2)\theta) = \cos(-\theta+(n-1)\theta)
+=\cos \theta \cos((n-1)\theta)+\sin\theta\sin((n-1)\theta).
+\]
+Then
+\[
+\cos(n\theta)+\cos((n-2)\theta)=2 \cos \theta \cos((n-1)\theta).
+\]
+Therefore
+\begin{align*}
+T_n(\cos \theta)+T_{n-2}(\cos\theta)&=\cos(n\theta)
++\cos((n-2)\theta)\\
+&=2 \cos \theta \cos((n-1)\theta)\\
+&=2 \cos \theta \cdot T_{n-1}(\cos\theta).
+\end{align*}
+That is, for $z \in [-1,1]$,
+\[
+T_n(z)+T_{n-2}(z)=2zT_{n-1}(z),
+\]
+and by analytic continuation this is true for all $z \in \mathbb{C}$.
+\end{proof}
+
+
+
+\section{Second kind}
+Define
+\begin{equation}
+nU_{n-1}(z) = T_n'(z).
+\label{Un}
+\end{equation}
+
+
+\begin{theorem}
+\[
+U_{n-1}(\cos \theta) = \frac{\sin(n\theta)}{\sin \theta}
+\]
+and
+\[
+(1-z^2)T_n''(z) = n U_n(z) - n(n+1) T_n(z).
+\]
+\label{D2T}
+\end{theorem}
+\begin{proof}
+On the one hand,
+\begin{align*}
+(T_n(\cos \theta))'&=-\sin\theta \cdot T_n'(\cos \theta).
+\end{align*}
+On the other hand,
+\[
+(T_n(\cos \theta))'
+=(\cos (n\theta))'
+=-n\sin(n\theta).
+\]
+Hence
+\[
+T_n'(\cos \theta) = n \frac{\sin (n\theta)}{\sin \theta},
+\qquad U_{n-1}(\cos \theta) = \frac{\sin(n\theta)}{\sin \theta}.
+\]
+Now,
+\[
+(T_n'(\cos \theta))' =
+-\sin \theta\cdot T_n''(\cos \theta)
+\]
+and
+\begin{align*}
+(T_n'(\cos \theta))' &= n \frac{n\cos(n\theta)\sin\theta - \sin(n\theta)\cos \theta}{\sin^2 \theta}\\
+&=-n\frac{\cos(n\theta)\sin \theta+\sin(n\theta)\cos \theta}{\sin^2\theta}
++n(n+1) \frac{\cos(n\theta)\sin\theta}{\sin^2\theta}\\
+&=-n\frac{\sin((n+1)\theta)}{\sin^2\theta}+n(n+1) \frac{\cos(n\theta)}{\sin\theta}\\
+&=-n \frac{U_n(\cos \theta)}{\sin \theta} + n(n+1) \frac{T_n(\cos \theta)}{\sin \theta}.
+\end{align*}
+Hence
+\[
+T_n''(\cos \theta) = n \frac{U_n(\cos \theta)}{\sin^2 \theta} - n(n+1) \frac{T_n(\cos \theta)}{\sin^2 \theta}
+\]
+and then
+\[
+T_n''(\cos \theta) 
+=n \frac{U_n(\cos \theta)}{1-\cos^2\theta} - n(n+1) \frac{T_n(\cos \theta)}{1-\cos^2\theta}.
+\]
+By analytic continuation,
+\[
+(1-z^2)T_n''(z) = n U_n(z) - n(n+1) T_n(z).
+\]
+\end{proof}
+
+\begin{theorem}
+\[
+T_{n+1}(z) = z T_n(z) - (1-z^2)U_{n-1}(z).
+\]
+\label{Tnformula}
+\end{theorem}
+\begin{proof}
+\begin{align*}
+T_{n+1}(\cos \theta)&=\cos(n\theta+\theta)\\
+&=\cos(n\theta)\cos\theta - \sin(n\theta)\sin\theta\\
+&=T_n(\cos \theta) \cos \theta - U_{n-1}(\cos \theta)\sin^2\theta\\
+&=T_n(\cos \theta) \cos \theta - U_{n-1}(\cos \theta)(1-\cos^2\theta).
+\end{align*}
+Therefore by analytic continuation,
+\[
+T_{n+1}(z) = z T_n(z) - (1-z^2)U_{n-1}(z).
+\]
+\end{proof}
+
+\begin{theorem}
+\[
+U_n(z)=T_n(z)+zU_{n-1}(z).
+\]
+\label{Unformula}
+\end{theorem}
+\begin{proof}
+\begin{align*}
+U_n(\cos\theta)&=\frac{\sin (n\theta+\theta)}{\sin \theta}\\
+&=\frac{\cos(n\theta)\sin\theta + \cos \theta \sin(n\theta)}{\sin \theta}\\
+&=T_n(\cos \theta)+\cos \theta \cdot U_{n-1}(\cos \theta).
+\end{align*}
+Therefore by analytic continuation,
+\[
+U_n(z)=T_n(z)+zU_{n-1}(z).
+\]
+\end{proof}
+
+\begin{theorem}
+\[
+U_n(z)=2zU_{n-1}(z)+U_{n-2}(z).
+\]
+\end{theorem}
+\begin{proof}
+Using Theorem \ref{Tnformula} and Theorem \ref{Unformula},
+\begin{align*}
+U_n(z) &= T_n(z)+zU_{n-1}(z)\\
+&=zT_{n-1}(z) - (1-z^2)U_{n-2}(z)+zU_{n-1}(z)\\
+&=z \bigg[U_{n-1}(z)-zU_{n-2}(z)\bigg] - (1-z^2)U_{n-2}(z) + zU_{n-1}(z)\\
+&=2zU_{n-1}(z)+U_{n-2}(z).
+\end{align*}
+\end{proof}
+
+\begin{theorem}
+\[
+(1-z^2)T_n''(z)-zT_n'(z)+n^2T_n(z)=0.
+\]
+\end{theorem}
+\begin{proof}
+Using Theorem \ref{D2T},
+and Theorem \ref{Unformula},
+\[
+\begin{split}
+&(1-z^2)T_n''(z)-zT_n'(z)+n^2T_n(z)\\
+=&n U_n(z) - n(n+1)T_n(z)
+-nzU_{n-1}(z)+n^2T_n(z)\\
+=&n(T_n(z)+zU_{n-1}(z))-n(n+1)T_n(z)-nzU_{n-1}(z)+n^2T_n(z)\\
+=&0.
+\end{split}
+\]
+\end{proof}
+
+From Theorem \ref{Tncos}
+\[
+T_n(1)=T_n(\cos 0) = \cos(n \cdot 0)=1.
+\]
+From Theorem \ref{D2T},
+\[
+T_n'(1) = nU_{n-1}(1) = n^2.
+\]
+Thus, $T_n$ is the unique solution of the initial value problem
+\[
+(1-x^2)y''(x)-xy'(x)+n^2y(x)=0,\qquad
+y(1)=1,y'(1)=n^2.
+\]
+
+
+\begin{theorem}
+\[
+T_n(z)^2- (z^2-1)U_{n-1}(z)^2=1.
+\]
+\label{pell}
+\end{theorem}
+\begin{proof}
+Using Theorem \ref{Tncos} and Theorem \ref{D2T}, for $z=\cos \theta$,
+\begin{align*}
+T_n(z)^2-(z^2-1)U_{n-1}(z)^2&=
+T_n(\cos \theta)^2 + (\sin^2\theta) U_{n-1}(\cos \theta)^2\\
+&=\cos^2(n\theta)+(\sin^2 \theta) \frac{\sin^2(n\theta)}{\sin^2\theta}\\
+&=\cos^2(n\theta)+\sin^2(n\theta)\\
+&=1.
+\end{align*}
+By analytic continuation, this is true for all $z$. 
+\end{proof}
+
+
+
+
+
+
+
+\section{Inner products}
+For $0 \leq \theta \leq \pi$ let $y_n(\theta) = \cos(n\theta)$. 
+\[
+y_n''+n^2y_n=0,\qquad y_n'(0)=0,y_n'(\pi)=0.
+\]
+
+
+\begin{theorem}
+\[
+\int_{-1}^1 \frac{T_m(x)T_n(x)}{\sqrt{1-x^2}} dx=
+\int_0^\pi y_my_nd\theta = \frac{\pi}{2} \cdot \delta_{m,n}.
+\]
+\end{theorem}
+\begin{proof}
+Let $W=y_my_n'-y_ny_m'$. 
+We calculate
+\begin{align*}
+W'&=y_m'y_n'+y_my_n''-y_n'y_m'-y_ny_m''
+y_my_n''-y_ny_m''\\
+&=y_my_n''-y_ny_m''\\
+&=y_m(-n^2y_n) - y_n(-m^2y_m)\\
+&=(m^2-n^2)y_my_n.
+\end{align*}
+Using $W(0)=0$ and $W(\pi)=0$,
+\[
+\int_0^\pi W'(\theta) d\theta = W(\pi)-W(0) = 0.
+\]
+Then
+\[
+\int_0^\pi (m^2-n^2)y_my_n d\theta = 0.
+\]
+Doing the substitution $\phi=n\theta$,
+\begin{align*}
+\int_0^\pi y_n^2 d\theta &= \int_0^\pi \cos^2(n\theta) d\theta\\
+&=\int_0^\pi \frac{1+\cos(2n\theta)}{2} d\theta\\
+&=\frac{\pi}{2}.
+\end{align*}
+Therefore
+\[
+\int_0^\pi y_my_nd\theta = \frac{\pi}{2} \cdot \delta_{m,n}.
+\]
+
+For $0 \leq \theta \leq \pi$, 
+$\sqrt{1-\cos^2 \theta}=\sin \theta$. Then
+doing the substitution $x=\cos \theta$, $dx=-\sin \theta d\theta$,
+\begin{align*}
+\int_0^\pi y_my_nd\theta&=\int_0^\pi \cos(m\theta) \cos(n\theta) d\theta\\
+&=\int_0^\pi \cos(m\theta) \cos(n\theta) \frac{-\sin \theta d\theta}{-\sin \theta}\\
+&=\int_0^\pi \frac{\cos(m\theta) \cos(n\theta)}{-\sqrt{1-\cos^2\theta}} (-\sin \theta) d\theta\\
+&=\int_1^{-1} \frac{T_m(x)T_n(x)}{-\sqrt{1-x^2}} dx\\
+&=\int_{-1}^1 \frac{T_m(x)T_n(x)}{\sqrt{1-x^2}} dx.
+\end{align*}
+\end{proof}
+
+
+
+
+
+
+
+\end{document}

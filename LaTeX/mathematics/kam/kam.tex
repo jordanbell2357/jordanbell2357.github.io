@@ -1,0 +1,422 @@
+\documentclass{article}
+\usepackage{amssymb,mathrsfs,amsthm,amsmath}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newcommand{\rank}{\operatorname{rank}}
+\begin{document}
+\title{Notes on the KAM theorem}
+\author{Jordan Bell}
+\date{April 6, 2015}              
+
+\maketitle
+
+\section{Introduction}
+I hope eventually to expand these notes into a standalone presentation of KAM that presents a precise formulation of the theorem and gives detailed proofs of everything. There are few presentations of KAM in the literature that
+give a precise formulation of the theorem, and even those that give precise
+formulations such as \cite{MR2026200} and \cite{poeschel} glide over
+some details. Gallavotti \cite{gallavotti} explains the history of quasi-periodic phenomena in celestial mechanics.
+
+Let $\mathbb{T}^n=\mathbb{R}^n/\mathbb{Z}^n$.
+
+For $x,y \in \mathbb{R}^n$, let $\langle x,y \rangle = \sum_{j=1}^n x_j y_j$.
+Let $\norm{x}=\sum_{j=1}^n x_j^2$ and let $\norm{x}_\infty=\max_{1 \leq j \leq n} |x_j|$. For $x,y \in \mathbb{R}^n$, we have $|\langle x,y \rangle|
+\leq n \norm{x}_\infty \norm{y}_\infty$.
+
+If $(M,\omega)$ is a symplectic manifold and $H \in C^\infty(M)$, then the
+{\em Hamiltonian vector field} with energy function $H$ is the vector
+field $X_H$ on $M$ uniquely determined by the condition $\omega_x (X_H(x),v)=(dH)(x)(v)$ for all points $x \in M$ and tangent vectors $v \in T_x M$.
+
+We say that $(q^1,\ldots,q^n,p_1,\ldots,p_n)$ are {\em canonical coordinates}
+for $(M,\omega)$ if $\omega=\sum_{j=1}^n dq^j \wedge dp_j$. If
+$(q^1,\ldots,q^n,p_1,\ldots,p_n)$ are canonical coordinates for $(M,\omega)$
+and $H \in C^\infty(M)$ then
+\[
+X_H(x)=((\partial_p H)(x),(-\partial_q H)(x))
+\]
+for all $x \in M$, where
+\[
+\partial_q H=\Big( \frac{\partial H}{\partial q^1},\ldots,\frac{\partial H}{\partial q^n} \Big), \quad \partial_p H=\Big( \frac{\partial H}{\partial p_1},\ldots,\frac{\partial H}{\partial p_n} \Big).
+\]
+Let $\phi$ be the flow of $X_H$ on $M$. Then
+\[
+\frac{d(q^j(\phi_t(x)))}{dt}=\frac{\partial H}{\partial p_j}(\phi_t(x)),
+\quad \frac{d(p_j(\phi_t(x)))}{dt}=-\frac{\partial H}{\partial q^j}(\phi_t(x)),
+\]
+called {\em Hamilton's equations}.
+
+\section{Action-angle coordinates}
+Let $(M,\omega)$ be a $2n$-dimensional symplectic manifold. Let $f_1,\ldots,f_n \in C^\infty(M)$. If $\{f_i,f_j\}=0$ for all
+$1 \leq i,j \leq n$ (namely the functions are in involution) and if at each point in $M$
+the differentials of the functions are linearly
+independent in the cotangent space at that point, then we say that
+the set of functions is {\em completely integrable}.
+
+We define the {\em momentum map} $F:M \to \mathbb{R}^n$ by
+$F=f_1 \times \cdots \times f_n$.
+
+We say that $F$ is {\em locally trivial} at a value $y_0$ in its range if
+there is a neighborhood $U$ of $y_0$ such that for all $y\in U$ there is a smooth map $h_y:F^{-1}(U) \to F^{-1}(y_0)$ such that $F \times h_y$ is a diffeomorphism from $F^{-1}(U)$ to $U \times F^{-1}(y_0)$. The
+{\em bifurcation set} of $F$ is the set $\Sigma_F$ of $y_0 \in \mathbb{R}^n$ at which
+$F$ fails to be locally trivial.
+
+The following theorem is proved in \cite[Theorem 5.2.21]{foundations}.
+
+\begin{theorem}
+Let $U \subseteq \mathbb{R}^n$ be open. If $F|F^{-1}(U):F^{-1}(U) \to U$
+is a proper map then each of the vector fields $X_{f_i}|F^{-1}(U)$ is complete, $U \subseteq \mathbb{R}^n \setminus \Sigma_F$, and the fibers
+of the locally trivial fibration $F|F^{-1}(U)$ are disjoint unions
+of manifolds each diffeomorphic with $\mathbb{T}^n$.
+\end{theorem}  
+
+Let $\nu \in \mathbb{R}^n$, and define the linear flow $F$ on $\mathbb{R}^n$
+by
+$F_t(v)=v+t\nu$. Let $\pi:\mathbb{R}^n \to \mathbb{T}^n$ be the projection
+map and let $\phi_t:\mathbb{T}^n \to \mathbb{T}^n$ be such that
+$\pi \circ F_t = \phi_t \circ \pi$; if $\pi(v_1)=\pi(v_2)$ then
+$\pi \circ F_t(v_1)=\pi \circ F_t(v_2)$, so such a map exists,  and is clearly unique.
+A flow $\phi$ on $\mathbb{T}^n$ induced by a linear flow on $\mathbb{R}^n$ is called a {\em quasi-periodic} flow.
+
+Say that $\nu \neq \mu$, and let $\phi$ be the flow induced by $\nu$
+and $\psi$ be the flow induced by $\mu$. Then for some $i$, $\nu_i \neq
+\mu_i$ and for any $t$ such that $t(\nu_i-\mu_i) \not \in \mathbb{Z}$,
+$\phi_t(\theta) \neq \psi_t(\theta)$ for any $\theta \in \mathbb{T}^n$. Hence
+$\phi \neq \psi$. Thus  
+a quasi-periodic flow is induced by
+a unique vector $\nu \in \mathbb{R}^n$. We call $\nu$ the {\em frequency vector} of the flow $\phi$.
+
+We say that
+$\nu \in \mathbb{R}^n$ is {\em resonant} if there is some $0 \neq k \in \mathbb{Z}^n$ such that $\langle k,\nu \rangle=0$, and we say that it is {\em nonresonant} otherwise.
+
+Let $\phi$ be the quasi-periodic flow on $\mathbb{T}^n$ with frequency vector $\nu \in \mathbb{R}^n$.
+It can be shown that each orbit of $\phi$ is dense in $\mathbb{T}^n$ if and only
+if $\nu$ is nonresonant. This is proved in \cite[pp. 818--820]{foundations}; that each orbit of $\phi$ is dense in $\mathbb{T}^n$ if $\nu$ is nonresonant is proved in \cite[Theorem 444]{MR2445243}.
+
+Let $H=f_1$; we call this distinguished function the Hamiltonian, and we are
+concerned with the flow of the Hamiltonian vector field $X_H$.
+
+The following theorem is proved in \cite[Theorem 5.2.24]{foundations}. 
+
+\begin{theorem}
+Let $c$ be in the range of $F$, let $I_c^0$ denote a connected component
+of $F^{-1}(c)$, and let $\phi$ be the flow of $X_H$. Then there is a quasiperiodic flow $\psi$ on $\mathbb{T}^n$ and a diffeomorphism $g:\mathbb{T}^n \to I_c^0$ such that $g \circ \psi_t=\phi_t|I_c^0 \circ g$.
+\end{theorem}
+
+Let $\mathbb{R}^{2n}=\{q^1,\ldots,q^n,p_1,\ldots,p_n\}$ and let
+$\omega=\sum_{j=1}^n dq^j \wedge dp_j$.
+Let $J=\begin{bmatrix}0&I\\-I&0\end{bmatrix}$, where $I$ is the $n \times n$
+identity matrix. For $u,v \in \mathbb{R}^{2n}$ we have that $\omega(u,v)=\langle u,Jv \rangle$. 
+
+Let $B^n$ be an open ball in $\mathbb{R}^n$. $B^n \times \mathbb{T}^n$
+is a symplectic submanifold of $\mathbb{R}^{2n}$. We define coordinates
+$I^j=q^j$ and $\theta_j=p_j+\mathbb{Z}$, $j=1,\ldots,n$.
+If $H \in C^\infty(B^n \times \mathbb{T}^n)$ does not depend on $\theta_1,\ldots,\theta_n$ then we say that it has {\em action-angle coordinates}
+in $B^n \times \mathbb{T}^n$.
+
+If $H \in C^\infty(B^n \times \mathbb{T}^n)$ admits action-angle coordinates
+$(I,\theta)$ then for all $x \in B^n \times \mathbb{T}^n$ we have
+\[
+\frac{d(I^j(\phi_t(x)))}{dt}=\frac{\partial H}{\partial \theta_j}(\phi_t(x))=0,
+\]
+i.e. $I^j(\phi_t(x))=I^j(x)$ for all $t$, and as $H$ depends only
+on $I$ this gives
+\[
+\frac{d(\theta_j(\phi_t(x)))}{dt}=-\frac{\partial H}{\partial I^j}(\phi_t(x))=
+-\frac{\partial H}{\partial I^j}(x)=\nu_j,
+\]
+where $\nu=\nu(I(x))$.
+We integrate this equation from $0$ to $t$ and get
+\[
+\theta_j(\phi_t(x))-\theta_j(x)=t\nu_j.
+\]
+Thus for $x \in B^n \times \mathbb{T}^n$, given
+$I(x)$ the trajectory $\phi_t(x)$ of $x$ under the Hamiltonian flow of $H$ 
+can be explicitly seen if we know $\nu(I(x))$.
+We say that a value of $I$ determines an {\em invariant torus} for the Hamiltonian flow of $H$.
+
+If $(M,\omega)$ is a symplectic manifold and $H \in C^\infty(M)$, we say
+that $H$ {\em admits action-angle coordinates} $(I,\theta)$ on an open set
+$U \subset M$ if there exists a symplectic diffeomorphism $\psi:U \to
+B^n \times \mathbb{T}^n$ such that $H \circ \psi^{-1}$ has action-angle
+coordinates $(I,\theta)$ in $B^n \times \mathbb{T}^n$. If $H$ admits action-angle coordinates, then one can check that the push-forward $\psi_* X_H$ is
+the Hamiltonian vector field $X_{H \circ \psi^{-1}}$, so that
+\[
+\psi_* X_H = - \sum_{j=1}^n \frac{\partial(H\circ \psi^{-1})}{\partial I_j}
+\frac{\partial}{\partial \theta_j}.
+\]
+
+Let $f_1,\ldots,f_n \in C^\infty(\mathbb{R}^{2n})$. If the set
+$\{f_1,\ldots,f_n\}$ is completely integrable, with $H=f_1$,
+then for any open set $U \subseteq \mathbb{R}^{2n} \setminus \Sigma_F$
+for which $F^{-1}(c)=\mathbb{T}^n$ for all $c \in U$, 
+Abraham and Marsden \cite[pp. 398--400]{foundations} find action-angle coordinates in $U$.
+Here $F=f_1 \times \cdots f_n$, the momentum map.
+This construction is also explained by
+Arnold \cite[pp. 282--284]{arnold}.
+
+Suppose that $H \in C^\infty(B^n \times \mathbb{T}^n)$ has action-angle
+coordinates $(I,\theta)$, and assume that for all $I \in B^n$,
+\[
+\det (\partial^2_I H (I)) \neq 0.
+\]
+Then by the inverse function theorem, for every $I \in B^n$ there
+is a neighborhood $U$ of $I$ and a neighborhood $V$ of
+$\nu=\partial_I H(I)$ such that $\partial_I H:U \to V$ is a diffeomorphism.
+In $U \times \mathbb{T}^n$ we can use $\nu$ and $\theta$ as coordinates.
+
+For $\nu \in \mathbb{R}^n$, let $g_\nu=\{k \in \mathbb{Z}^n:\langle \nu,k \rangle=0\}$, and let $\rank(g_\nu)$ be the rank of the $\mathbb{Z}$-module $g_\nu$, 
+i.e. the maximal number of elements of $g_\nu$ that are linearly
+independent over $\mathbb{Z}$. The proof of the following theorem follows
+\cite[Proposition 2.1]{treschev}.
+
+\begin{theorem}
+Let $\nu \in \Omega$ and let $r=\rank(g_\nu)$. In the torus with frequency $\nu$, each trajectory is dense in some
+$(n-r)$-dimensional subtorus and the $n$-dimensional torus is foliated
+by these $(n-r)$-dimensional tori.
+\end{theorem}
+\begin{proof}
+There exists a basis $k_1,\ldots,k_r$ of $g_\nu$ and vectors
+$k_1^*,\ldots,k_{n-r}^* \in \mathbb{Z}^n$ such that the $n \times n$ matrix $K_0$ with rows
+$k_1^*,\ldots,k_{n-r}^*,k_1,\ldots,k_r,$ has determinant $1$. (I should
+show why such a basis exists.)
+Let $K_0=\begin{bmatrix}K^*\\K \end{bmatrix}$. $K^*$ is an $(n-r) \times n$ matrix
+and $K$ is an $r \times n$ matrix.
+
+Let $q=K_0 \theta$. Since $\det(K_0)=1$, $K_0$ is invertible over
+$\mathbb{Z}$. The coordinate $\theta$ is only determined up to
+$\mathbb{Z}^n$, and for $q_1-q_2 \in \mathbb{Z}^n$ then also
+$\theta_1-\theta_2 \in \mathbb{Z}^n$. Thus $q=K_0 \theta$ are coordinates
+on $\mathbb{T}^n$.
+The equation $\dot{\theta}=\nu$ can be written using the $q$ coordinates
+as $\dot{q}=K_0 \nu$. Then
+\[
+K_0 \nu=\begin{bmatrix}K^*\\K\end{bmatrix}\nu=
+\begin{bmatrix}K^* \nu\\K \nu \end{bmatrix}=
+\begin{bmatrix}K^* \nu\\0 \end{bmatrix}.
+\]
+Let $\nu^*=K^* \nu$.
+
+We see that $\{l \in \mathbb{Z}^n:l_1=\cdots=l_{n-r}=0\} \subseteq g_{K_0 \nu}$; since they both have rank $r$, they are equal. It follows that $\nu^* \in \mathbb{R}^{n-r}$ is
+nonresonant. Hence any trajectory on the $n$-dimensional torus with frequency
+$\nu$ is dense in the $r$-dimensional torus $\{q \in \mathbb{T}^n:
+q_{n-r+1}=\cdots=q_n=\text{constant}\}$.
+\end{proof}
+
+
+\section{Diophantine frequency vectors}
+For $c>0$ and $\gamma \geq 0$ we define 
+\[
+D_n(c,\gamma)=\{\nu \in \mathbb{R}^n: |\langle k,\nu \rangle| \geq
+\frac{1}{c\norm{k}_\infty^\gamma} \ \ \textrm{for all} \ k \in \mathbb{Z}^n\}.
+\]
+
+We further define $D_n(\gamma)=\bigcup_{c>0} D_n(c,\gamma)$.
+
+\begin{theorem}
+\label{thm:smallgamma}
+For any $\nu \in \mathbb{R}^n$ and for any positive integer $K$, there is some $0 \neq k \in \mathbb{Z}^n$ with $\norm{k}_\infty \leq 2K$
+such that 
+\[
+|\langle k,\nu \rangle | \leq \frac{n\norm{\nu}_\infty}{(2K)^{n-1}}.
+\]
+\end{theorem}
+\begin{proof}
+Let $B_K=\{k \in \mathbb{Z}^n: 0<\norm{k}_\infty \leq K\}$. The set $B_K$ has $(2K+1)^n-1$ elements. For
+$k \in B_K$ we have
+\[
+|\langle k,\nu \rangle | \leq n \norm{k}_\infty \norm{\nu}_\infty \leq nK \norm{\nu}_\infty.
+\]
+Let $A=nK \norm{\nu}_\infty$.
+
+Let $M=(2K+1)^n-2$.  In the set $\{|\langle k,\nu \rangle |: k \in B_K\}$, there are two elements that
+are in  same interval $[\frac{(j-1)A}{M},\frac{jA}{M}]$, $j=1,\ldots,M$, since $B_K$ has $M+1$ elements and there
+are $M$ such intervals. That is, there are $k',k'' \in B_K$ such that 
+$|\langle k',\nu \rangle|, |\langle k'',\nu \rangle| \in [\frac{(j-1)A}{M},\frac{jA}{M}]$ for some $j$. Hence
+$|\langle k',\nu \rangle - \langle k'',\nu \rangle| \leq \frac{A}{M}=\frac{nK \norm{\nu}_\infty}{(2K+1)^n-2}$.
+
+One can show by induction that for all $n \geq 1$, $\frac{K}{(2K+1)^n-2} \leq \frac{1}{(2K)^{n-1}}$. Therefore for $k=k'-k''$ we have
+\[
+|\langle k,\nu \rangle | \leq \frac{n \norm{\nu}_\infty}{(2K)^{n-1}},
+\]
+Finally, $\norm{k}_\infty \leq \norm{k'}_\infty+\norm{k''}_\infty \leq 2K$.
+\end{proof}
+
+\begin{corollary}
+If $\gamma<n-1$ then $D_n(\gamma)=\emptyset$.
+\end{corollary}
+\begin{proof}
+Let $c>0$. Suppose that there is some $\nu \in D_n(c,\gamma)$. Let $K$
+be the least integer such that $(2K)^{n-1-\gamma}$ is greater than
+$2cn \norm{\nu}_\infty$; since $n-1-\gamma>0$ such a $K$ exists.
+
+By Theorem \ref{thm:smallgamma}, there is some $0 \neq k \in \mathbb{Z}^n$ with 
+\[
+|\langle k,\nu \rangle | \leq \frac{n\norm{\nu}_\infty}{(2K)^{n-1}}.
+\]
+Then
+\begin{eqnarray*}
+|\langle k,\nu \rangle |& \leq& \frac{n\norm{\nu}_\infty (2K)^{-\gamma}}{(2K)^{n-1-\gamma}}\\
+&\leq&\frac{n\norm{\nu}_\infty (2K)^{-\gamma}}{2cn\norm{\nu}_\infty}\\
+&=&\frac{1}{2c(2K)^\gamma}\\
+&\leq&\frac{1}{2c(4\norm{k}_\infty)^\gamma}\\
+&<&\frac{1}{c\norm{k}_\infty^\gamma},
+\end{eqnarray*}
+contradicting that $\nu \in D_n(c,\gamma)$. Therefore for all $c>0$,
+$D_n(c,\gamma)=\emptyset$.
+
+\end{proof}
+
+Treschev and Zubelevich give a construction for points in $D_n(c,n-1)$ for sufficiently
+large $c$ \cite[Theorem 9.2]{treschev}. Thus there is some $C(n)$ such that
+for all $c \geq C(n)$, $D_n(c,n-1) \neq \emptyset$. It is clear that for $\gamma' \geq \gamma$ we have the inclusion
+$D_n(c,\gamma) \subseteq D_n(c,\gamma')$. Hence this construction
+also shows that $D_n(c,\gamma) \neq \emptyset$
+for all $\gamma \geq n-1$ and $c \geq C(n)$. However this construction does not show that
+$m(D_n(c,n-1))>0$ for $c \geq C(n)$. Indeed, one can show that $m(D_n(n-1))=0$, but also that the set $D_n(n-1)$ has Hausdorff dimension $n$ \cite[p. 5]{poeschel}. 
+
+Our proof of the following theorem expands on \cite[Theorem 9.3]{treschev}.  Let
+$Q_n(L)=\{\nu \in \mathbb{R}^n: \norm{\nu}_\infty \leq \frac{L}{2}\}$, the cube in
+$\mathbb{R}^n$ of edge length $L$. Let $m$ be $n$-dimensional Lebesgue measure. We will use the fact that the maximal $n-1$ dimensional area of the intersection of $Q_n(L)$ and a hyperplane is $\sqrt{2}L^{n-1}$ \cite{MR840631}.
+
+\begin{theorem}
+\label{thm:biggamma}
+Let $L>0$.
+For $\gamma>n-1$ and $c>0$,
+\[
+m(Q_n(L) \setminus D_n(c,\gamma)) \leq \frac{4\sqrt{2}n (3L)^{n-1}}{c} \Big(1-\frac{1}{\gamma-n+1} \Big).
+\]
+\end{theorem}
+\begin{proof}
+Let $Q_n=Q_n(L)$.
+Let $\Pi_k=\{\nu \in \mathbb{R}^n:|\langle \nu,k\rangle | <
+\frac{1}{c\norm{k}_\infty^\gamma}\}$. 
+Let $\nu \in Q_n \setminus D_n(c,\gamma)$. Then there is some $k \neq 0$ such that
+$|\langle k,\nu \rangle| < \frac{1}{c \norm{k}_\infty^\gamma}$, and so $\nu \in \Pi_k$. Thus
+\[
+Q_n \setminus D_n(c,\gamma) \subseteq \bigcup_{k \neq 0}
+(Q_n \cap \Pi_k),
+\]
+so
+\[
+m(Q_n \setminus D_n(c,\gamma)) \leq \sum_{k \neq 0} m(Q_n \cap \Pi_k).
+\]
+
+Let $k \neq 0$.
+$\Pi_k$ is the region bounded by the two hyperplanes
+$\pi_1 = \{\nu \in \mathbb{R}^n: \langle \nu,k \rangle = \frac{1}{c \norm{k}_\infty^\gamma}\}$ and $\pi_2=\{\nu \in \mathbb{R}^n: \langle \nu,k \rangle = -\frac{1}{c \norm{k}_\infty^\gamma}\}$.
+Let $p_1=\frac{k}{c \norm{k}_\infty^\gamma \norm{k}} \in \pi_1$
+and $p_2=-\frac{k}{c \norm{k}_\infty^\gamma \norm{k}} \pi_2$.
+For any two points $\nu_1,\nu_2 \in \pi_1$ we can check that
+$\langle p_1-p_2,\nu_1-\nu_2 \rangle =0$, and for any two points $\nu_1,\nu_2 \in \pi_2$
+we can check that $\langle p_1-p_2,\nu_1-\nu_2 \rangle =0$. Thus the vector
+$p_1-p_2$ is orthogonal to each of the hyperplanes $\pi_1$ and $\pi_2$. It follows
+that the distance between the hyperplanes $\pi_1$ and $\pi_2$ is the distance between the points
+$p_1$ and $p_2$, which is $2\cdot \frac{\norm{k}}{c\norm{k}_\infty^\gamma \norm{k}^2}$. Since $\norm{k} \geq
+\norm{k}_\infty$, this is $\leq \frac{2}{c\norm{k}_\infty^{\gamma+1}}$.
+Therefore
+\[
+m(Q_n \cap \Pi_k) \leq \frac{2}{c\norm{k}_\infty^{\gamma+1}} \cdot \sqrt{2}L^{n-1},
+\]
+where we use the fact that the maximal $n-1$ dimensional area of the intersection of $Q_n=Q_n(L)$ and a hyperplane is $\sqrt{2}L^{n-1}$ \cite{MR840631}.
+
+For each positive integer $l$, the hypercube $\{k \in \mathbb{Z}^n: 
+\norm{k}_\infty =l\}$ has $2n$ faces, on each of which there are $(2l+1)^{n-1}$
+points with integer coordinates. Hence for each integer positive integer $l$, we have
+$\#\{k \in \mathbb{Z}^n: \norm{k}_\infty = l \} \leq 2n (2l+1)^{n-1}$. 
+
+Therefore
+\begin{eqnarray*}
+m(Q_n \setminus D_n(c,\gamma))&\leq&\sum_{k \neq 0} m(Q_n \cap \Pi_k)\\
+&\leq&\sum_{k \neq 0} \frac{2\sqrt{2}L^{n-1}}{c\norm{k}_\infty^{\gamma+1}}\\
+&=&\sum_{l=1}^\infty \sum_{\norm{k}_\infty =l} \frac{2\sqrt{2}L^{n-1}}{cl^{\gamma+1}} \\\
+&\leq&\sum_{l=1}^\infty 2n (2l+1)^{n-1} \frac{2\sqrt{2}L^{n-1}}{cl^{\gamma+1}}\\
+&\leq&\sum_{l=1}^\infty 2n (3l)^{n-1} \frac{2\sqrt{2}L^{n-1}}{cl^{\gamma+1}}\\
+&=&\frac{4\sqrt{2}n (3L)^{n-1}}{c} \sum_{l=1}^\infty \frac{1}{l^{\gamma-n+2}}.
+\end{eqnarray*}
+
+Since the terms in the sum are positive and decreasing, we can estimate the sum using an integral:
+\[
+\sum_{l=1}^\infty \frac{1}{l^{\gamma-n+2}} \leq 1+ \int_1^\infty
+\frac{dx}{x^{\gamma-n+2}} = 1+ \frac{1}{\gamma-n+1},
+\]
+finishing the proof.
+\end{proof}
+
+\begin{corollary}
+If $\gamma>n-1$ then $m(\mathbb{R}^n \setminus D_n(\gamma))=0.$ 
+\end{corollary}
+\begin{proof}
+Let $L>0$. For every $c>0$, $m(Q_n(L) \setminus D_n(\gamma))
+\leq m(Q_n(L) \setminus D_n(c,\gamma))$. By Theorem \ref{thm:biggamma},
+$m(Q_n(L) \setminus D_n(c,\gamma)) \to 0$ as $c \to \infty$. Hence
+$m(Q_n(L) \setminus D_n(\gamma))=0$. But then
+\[
+m(\mathbb{R}^n \setminus
+D_n(\gamma)) = \lim_{L \to \infty} m(Q_n(L) \setminus D_n(\gamma))
+=\lim_{L \to \infty} 0 =0.
+\]
+\end{proof}
+
+Fix $\gamma>n-1$.
+Let $\alpha=\frac{1}{c}$. Let $A_\alpha$ be an $\alpha$-neighborhood of the boundary of $\Omega$. We will make whatever assumption
+about $\partial \Omega$ we need in order to get $m(A_\alpha)=O(\alpha)$. 
+
+Suppose that $L$ is sufficiently large so that $\Omega \subseteq Q_n(L)$. Then Theorem \ref{thm:biggamma} gives us that $m(\Omega \setminus D_n(c,\gamma))=
+O(\alpha)$.
+
+Let $\Omega_\alpha=D_n(c,\gamma) \cap (\Omega \setminus A_\alpha)$.
+Since $\Omega \setminus \Omega_\alpha = (\Omega \setminus D_n(c,\gamma)) \cup
+(\Omega \cap A_\alpha)$, we have
+$m(\Omega \setminus \Omega_\alpha)=O(\alpha)$.
+
+
+
+\section{Statement of KAM}
+If we have a Hamiltonian system which admits action-angle coordinates
+in $B^n \times \mathbb{T}^n$, then the trajectories of points in phase
+space are constrained to lie on invariant tori. Moreover, on these tori
+the dynamics of the system are quasi-periodic; a priori we don't have a reason to expect that the dynamics should be so nice just because the trajectories lie on tori. But a generic Hamiltonian on the same phase space (I would like to make
+this notion precise) does not admit action-angle coordinates. The KAM
+theorem is a statement about the dynamics induced by making a sufficiently small change to a Hamiltonian. If we perturb a Hamiltonian which admits
+action-angle coordinates to one which probably does not, if the perturbation
+is sufficiently small, then most of the trajectories of points under the flow of the new Hamiltonian will also lie on tori. In some sense which I want to clarify, the invariant tori of the new Hamiltonian are close to the invariant
+tori of the Hamiltonian that admits action-angle coordinates. It is not
+clear to me how an invariant torus of the old Hamiltonian transforms into
+an invariant torus of the new Hamiltonian; in what sense does an invariant torus for the old Hamiltonian become an invariant torus for the new Hamiltonian?
+
+In particular, a consequence of the KAM theorem is that if we make a small
+perturbation of a Hamiltonian system that admits action-angle coordinates then
+the trajectories of most points will not be dense on a hypersurface in phase space, since they
+are constrained to lie on $n$-dimensional tori. In other words, the
+new Hamiltonian system is not ergodic, since the invariant tori have lower
+dimension than $n-1$, and so have $n-1$-dimensional measure 0.
+
+Let's explain the KAM theorem in another way. Suppose that we have a 
+symplectic manifold $M$ and a Lagrangian foliation $\mathscr{F}_0$ whose
+leaves are tori, and suppose that the leaves of $\mathscr{F}_0$ are invariant
+tori for a Hamiltonian $H_0$. That is,
+the Hamiltonian vector field $X_{H_0}$ is tangent to all the leaves
+in $\mathscr{F}_0$.
+Now let $H=H_0+\epsilon H_1$. The leaves
+of the foliation $\mathscr{F}_0$ will not be invariant under the flow 
+of $H$. We would like to obtain a symplectomorphism $\Phi:M \to M$
+such that the Hamiltonian vector field $X_H$ is tangent to most
+leaves in the foliation $\mathscr{F}=\Phi(\mathscr{F}_0)$.
+Here we mean most in a measure theoretic sense that depends on the magnitude
+$\epsilon$ of the perturbation away from the Hamiltonian that admits action-angle
+coordinates.
+
+How do we construct a diffeomorphism? Often the best way is to demand
+that it be the time $1$ flow of a vector field, so $\Phi=\Phi_1$ for
+some $\Phi_t$, and to see if such a vector
+field exists. Suppose that $f$ is a function such that if $\Phi_t$ is the flow of $X_f$ then $\Phi_1=\Phi$.
+ 
+
+\section{Normal forms}
+Normal forms of vector fields,
+homological equation \cite{wiggins}.
+
+\bibliographystyle{amsplain}
+\bibliography{kam}
+
+\end{document}

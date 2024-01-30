@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{$L^p$ norms of a sine sum}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+George Pólya and Gábor Szegő, {\em Problems and theorems in analysis, Volume II}, volume 216 of {\em Die Grundlehren der mathematischen Wissenschaften}, Springer, 1976, translated from the German by C. E. Billigheimer.
+
+The following is an estimate of the $L^p$ norms of a sum with nonnegative terms (p. 77, no. 38).
+
+Let $\Gamma_n(t)=\sum_{k=1}^n \frac{|\sin kt|}{k}$. As $|\sin kt| \leq 1$, we have $\Gamma_n(t) \leq \sum_{k=1}^n \frac{1}{k}$, but we can
+give a sharper upper bound for $\Gamma_n(t)$ using the following two results.
+First, if $B_n(t)=\sum_{k=1}^n \frac{\cos kt}{k}$, then $B_n(t) \geq  -1$ for all $t$ (p.~75, no.~28).
+Second , for all $t$ (p.~76, no.~34),
+\[
+|\sin t|=\frac{2}{\pi}-\frac{4}{\pi}\sum_{j=1}^\infty \frac{\cos 2jt}{4j^2-1}.
+\]
+Therefore
+\begin{eqnarray*}
+\Gamma_n(t)&=&\sum_{k=1}^n \frac{1}{k} \left( \frac{2}{\pi}-\frac{4}{\pi} \sum_{j=1}^\infty \frac{\cos 2jkt}{4j^2-1} \right)\\
+&=&\frac{2}{\pi}\sum_{k=1}^n \frac{1}{k}-\frac{4}{\pi}\sum_{j=1}^\infty \frac{1}{4j^2-1} \sum_{k=1}^n \frac{\cos 2jkt}{k}\\
+&=&\frac{2}{\pi}\sum_{k=1}^n \frac{1}{k}-\frac{4}{\pi}\sum_{j=1}^\infty \frac{B_n(2jt)}{4j^2-1}\\
+&\leq&\frac{2}{\pi}\sum_{k=1}^n \frac{1}{k}+\frac{4}{\pi}\sum_{j=1}^\infty \frac{1}{4j^2-1}\\
+&=&\frac{2}{\pi}\sum_{k=1}^n \frac{1}{k}+\frac{2}{\pi},
+\end{eqnarray*}
+using 
+\[
+\sum_{j=1}^\infty \frac{1}{4j^2-1}=
+\sum_{j=1}^\infty \frac{1}{2}\cdot \frac{1}{2j-1}-\frac{1}{2}\cdot \frac{1}{2j+1} 
+=
+\frac{1}{2}.
+\]
+Thus $\norm{\Gamma_n}_p \leq \norm{\Gamma_n}_\infty \leq \frac{2}{\pi}\sum_{k=1}^n \frac{1}{k}+\frac{2}{\pi}$.
+On the other hand, 
+\begin{eqnarray*}
+\norm{\Gamma_n}_1&=&\frac{1}{2\pi}\int_0^{2\pi} \Gamma_n(t) dt\\
+&=&\frac{1}{2\pi} \sum_{k=1}^n \frac{1}{k} \int_0^{2\pi} |\sin kt| dt\\
+&=&\frac{1}{2\pi} \sum_{k=1}^n \frac{1}{k^2} \int_0^{2\pi k} |\sin t| dt\\
+&=&\frac{1}{2\pi} \sum_{k=1}^n \frac{1}{k} \int_0^{2\pi} |\sin t| dt\\
+&=&\frac{1}{2\pi} \sum_{k=1}^n \frac{1}{k} \cdot 4\\
+&=&\frac{2}{\pi}\sum_{k=1}^n \frac{1}{k}. 
+\end{eqnarray*}
+Therefore $\norm{\Gamma_n}_p \geq \norm{\Gamma_n}_1= \frac{2}{\pi}\sum_{k=1}^n \frac{1}{k}$.
+
+Hence for $1 \leq p \leq \infty$,
+\[
+ \frac{2}{\pi}\sum_{k=1}^n \frac{1}{k} \leq \norm{\Gamma_n}_p \leq \frac{2}{\pi}+ \frac{2}{\pi}\sum_{k=1}^n \frac{1}{k}.
+\]
+So,
+\[
+\norm{\Gamma_n}_p = \frac{2}{\pi} \log n + O(1).
+\]
+
+
+\end{document}

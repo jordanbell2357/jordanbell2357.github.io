@@ -1,0 +1,389 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The cross-polytope, the ball, and the cube}
+\author{Jordan Bell}
+\date{March 28, 2016}
+
+\maketitle
+
+\section{{\em l\textsuperscript{q}} norms and volume of the unit ball}
+For $x,y \in \mathbb{R}^n$,
+\[
+\inner{x}{y} = \sum_{j=1}^n x_j y_j.
+\]
+Let $e_1,\ldots,e_n$ be the standard basis for $\mathbb{R}^n$. 
+\[
+x = \sum_{j=1}^n x_j e_j = \sum_{j=1}^n \inner{x}{e_j} e_j.
+\]
+For $1 \leq q < \infty$ let
+\[
+|x|_q = \left( \sum_{j=1}^n |x_j|^q \right)^{1/q}
+\]
+and for $q=\infty$ let
+\[
+|x|_\infty = \max_{1 \leq j \leq n} |x_j|.
+\]
+Then for
+for $1 \leq  q \leq \infty$ let
+\[
+B_q^n = \{x \in \mathbb{R}^n: |x|_q \leq 1\}.
+\]
+
+For $0 \leq k \leq n$ let $\lambda_k$ be $k$-dimensional Lebesgue measure on $\mathbb{R}^n$.
+We calculate the volume of the unit ball with the $\ell^q$ norm for $1 \leq q<\infty$.
+
+\begin{theorem}
+For $n \geq 1$ and
+for $1 \leq  q < \infty$,
+\[
+\lambda_n(B_q^n) =\frac{(2\Gamma(\frac{1}{q}+1))^n}{\Gamma(\frac{n}{q}+1)}.
+\]
+\end{theorem}
+\begin{proof}
+For $R \geq 0$ let $V_q^n(R) = \lambda_n(R \cdot B_q^n)$. 
+For $n=1$,
+\[
+V_q^1(R) = \lambda_1(R \cdot B_q^1) = \int_{-R \leq x_1 \leq R} d\lambda_1(x_1)
+=2R.
+\]
+By induction, suppose for some $n$ that
+\[
+V_q^n(R) = \frac{(2R \Gamma(\frac{1}{q}+1))^n}{\Gamma(\frac{n}{q}+1)}.
+\]
+Using Fubini's theorem and the induction hypothesis and doing the change of variable
+$x_{n+1} = Rt$ we calculate
+\begin{align*}
+V_q^{n+1}(R)&=\int_{|x_1|^q+\cdots+|x_n|^q+|x_{n+1}|^q \leq R^q} d\lambda_{n+1}(x)\\
+&=\int_{-R \leq x_{n+1} \leq R} \left( \int_{|x_1|^q+\cdots+|x_n|_q \leq R^q - |x_{n+1}|^q} d\lambda_n(x_1,\ldots,x_n)\right)
+d\lambda_1(x_{n+1})\\
+&=\int_{-R \leq x_{n+1} \leq R} V_q^n((R^q-|x_{n+1}|^q)^{1/q}) d\lambda_1(x_{n+1})\\
+&=\int_{-R \leq x_{n+1} \leq R}  \frac{(2(R^q-|x_{n+1}|^q)^{1/q} \Gamma(\frac{1}{q}+1))^n}{\Gamma(\frac{n}{q}+1)}d\lambda_1(x_{n+1})\\
+&=\frac{(2 \Gamma(\frac{1}{q}+1))^n}{\Gamma(\frac{n}{q}+1)} 
+\int_{-1 \leq t \leq 1} (R^q-|Rt|^q)^{n/q} \cdot R d\lambda_1(t)\\
+&=\frac{(2 \Gamma(\frac{1}{q}+1))^n}{\Gamma(\frac{n}{q}+1)}  \cdot R^{n+1} \cdot 2 \int_{0 \leq t \leq 1} (1-t^q)^{n/q} d\lambda_1(t).
+\end{align*}
+Now, doing the change of variable $u=t^q$, namely $t = u^{1/q}$ with $t' = \frac{1}{q} u^{\frac{1}{q}-1}$
+and using the beta function $B(a,b) = \int_0^1 u^{a-1}(1-u)^{b-1} d\lambda_1(u)$,
+\begin{align*}
+\int_{0 \leq t \leq 1} (1-t^q)^{n/q} d\lambda_1(t)&=\int_{0 \leq u \leq 1} (1-u)^{n/q} \cdot  \frac{1}{q} u^{\frac{1}{q}-1} d\lambda_1(u)\\
+&=\frac{1}{q} B\left(\frac{1}{q},\frac{n}{q}+1\right).
+\end{align*}
+But $B(a,b) = \frac{\Gamma(a) \Gamma(b)}{\Gamma(a+b)}$, and using $\Gamma(a+1)=a \Gamma(a)$, 
+\[
+\frac{1}{q} B\left(\frac{1}{q},\frac{n}{q}+1\right) = \frac{1}{q} \frac{\Gamma\left(\frac{1}{q}\right) \Gamma\left(\frac{n}{q}+1\right)}{\Gamma\left(\frac{1}{q}+\frac{n}{q}+1\right)}
+=\frac{\Gamma\left(\frac{1}{q}+1\right) \Gamma\left( \frac{n}{q}+1\right)}{\Gamma\left(\frac{n+1}{q}+1\right)}.
+\]
+Therefore
+\begin{align*}
+V_q^{n+1}(R) &= \frac{(2 \Gamma(\frac{1}{q}+1))^n}{\Gamma(\frac{n}{q}+1)}  \cdot R^{n+1} \cdot 2 \cdot 
+\frac{\Gamma\left(\frac{1}{q}+1\right) \Gamma\left( \frac{n}{q}+1\right)}{\Gamma\left(\frac{n+1}{q}+1\right)}\\
+&=\frac{(2R\Gamma(\frac{1}{q}+1))^{n+1}}{\Gamma\left(\frac{n+1}{q}+1\right)},
+\end{align*}
+which proves the claim.
+\end{proof}
+
+$B_1^n$ is an $n$-dimensional \textbf{cross-polytope},
+$B_2^n$ is an $n$-dimensional \textbf{Euclidean ball},
+and $B_\infty^n$ is an $n$-dimensional \textbf{cube}.
+\[
+\lambda_n(B_1^n) =\frac{2^n}{n!},
+\quad \lambda_n(B_2^n) = \frac{\pi^{n/2}}{\Gamma(\frac{n}{2}+1)},
+\quad \lambda_n(B_\infty^n) = 2^n,
+\]
+using $\Gamma(n+1)=n!$ and $\Gamma(\frac{3}{2})=\frac{\sqrt{\pi}}{2}$.
+
+
+
+\section{Intersection of a hyperplane and the cube}
+Let $\xi \in S^{n-1}$ and $t \in \mathbb{R}$,  and define
+\[
+P_{\xi,t} = \{x \in \mathbb{R}^n: \inner{x}{\xi}=t\}.
+\]
+In particular,
+\[
+\xi^\perp = P_{\xi,0}.
+\]
+Let 
+\[
+A_\xi(t) = \lambda_{n-1}(P_{\xi,t} \cap B_\infty^n) = 
+\int_{P_{\xi,t}} 1_{B_\infty^n}(x) d\lambda_{n-1}(x).
+\]
+
+\begin{theorem}
+For $\xi \in S^{n-1}$ and $t \in \mathbb{R}$,
+\[
+A_\xi(t) = \frac{2^n}{\pi} \int_0^\infty \cos tr \cdot \prod_{i=1}^n \frac{2}{\xi_i r} \sin \xi_i r dr.
+\]
+\end{theorem}
+\begin{proof}
+Then by Fubini's theorem,
+\begin{align*}
+\widehat{A}_\xi(\tau) &= \int_{\mathbb{R}} A_\xi(t) e^{-2\pi it\tau} d\lambda_1(t)\\
+&=\int_{\mathbb{R}} \left(\int_{P_{\xi,t}} 1_{B_\infty^n}(x) e^{-2\pi i\inner{x}{\xi} \tau}  d\lambda_{n-1}(x)\right) 
+d\lambda_1(t)\\
+&=\int_{\mathbb{R}^n} 1_{B_\infty^n}(x) e^{-2\pi i\inner{x}{\xi}\tau} d\lambda_n(x).
+\end{align*}
+Now, 
+\[
+1_{B_\infty^n}(x) = (1_{B_\infty^1} \otimes \cdots \otimes 1_{B_\infty^1})(x)
+=\prod_{i=1}^n 1_{B_\infty^1}(x_i),
+\]
+whence, by Fubini's theorem,
+\begin{align*}
+\int_{\mathbb{R}^n} 1_{B_\infty^n}(x) e^{-2\pi i\inner{x}{\xi}\tau} d\lambda_n(x)&=
+\int_{\mathbb{R}^n} \left(\prod_{i=1}^n 1_{B_\infty^1}(x_i) e^{-2\pi i x_i \xi_i \tau}\right) d\lambda_n(x)\\
+&=\prod_{i=1}^n \int_{\mathbb{R}} 1_{B_\infty^1}(x_i) e^{-2\pi i x_i \xi_i \tau} d\lambda_1(x_i).
+\end{align*}
+But, when $\xi_i \tau \neq 0$,
+\[
+\int_{\mathbb{R}} 1_{B_\infty^1}(x_i) e^{-2\pi i x_i \xi_i \tau} d\lambda_1(x_i)
+=\int_{-1}^1 
+ e^{-2\pi i x_i \xi_i \tau} d\lambda_1(x_i)
+ =\frac{1}{\pi \xi_i \tau} \sin 2\pi \xi_i \tau,
+\]
+thus
+\[
+\widehat{A}_\xi(\tau) = \prod_{i=1}^n \frac{1}{\pi \xi_i \tau} \sin 2\pi \xi_i \tau.
+\]
+By the Fourier inversion theorem, using that $\widehat{A}_\xi$ is an even function,
+\begin{align*}
+A_\xi(t) &= \int_{\mathbb{R}} \widehat{A}_\xi(\tau) e^{2\pi it\tau} d\lambda_1(\tau)\\
+&=\int_{\mathbb{R}}  \widehat{A}_\xi(\tau) \cos 2\pi t \tau d\lambda_1(\tau)\\
+&=2 \int_0^\infty  \widehat{A}_\xi(\tau) \cos 2\pi t \tau d\tau\\
+&=2 \int_0^\infty  \cos 2\pi t \tau \cdot \prod_{i=1}^n \frac{1}{\pi \xi_i \tau} \sin 2\pi \xi_i \tau d\tau\\
+&=\frac{2^n}{\pi} \int_0^\infty \cos tr \cdot \prod_{i=1}^n \frac{2}{\xi_i r} \sin \xi_i r dr.
+\end{align*}
+\end{proof}
+
+
+
+
+
+\section{Schwartz functions}
+Let $\mathscr{S}$ be the Fr\'echet space of Schwartz function $\mathbb{R}^n \to \mathbb{C}$ and let
+$\mathscr{S}'$ be the locally convex space of tempered distributions $\mathscr{S} \to \mathbb{C}$. 
+If $f:\mathbb{R}^n \to \mathbb{C}$ is locally integrable and there is some $N$ such that
+\[
+\int_{|x|_2 \leq R} |f(x)| d\lambda_n(x) = O(R^N),\qquad R \to \infty,
+\]
+it is a fact that
+\[
+\phi \mapsto \inner{f}{\phi} = \int_{\mathbb{R}^n} f(x) \phi(x) d\lambda_n(x),\qquad \phi \in \mathscr{S},
+\]
+is a tempered distribution. 
+
+\begin{lemma}
+For $1 \leq q \leq \infty$ and for $0<h<n$, 
+$|x|_q^{-h}$ is a tempered distribution. 
+\end{lemma}
+\begin{proof}
+For $1 \leq q \leq 2$, 
+\[
+|x|_2 \leq |x|_q \leq n^{\frac{1}{q}-\frac{1}{2}} |x|_2,
+\]
+and for $2 \leq q \leq \infty$,
+\[
+|x|_q \leq |x|_2 \leq n^{\frac{1}{2}-\frac{1}{q}} |x|_q.
+\]
+Then
+for $1 \leq q \leq 2$ and for $0<h<n$, using polar coordinates and as $\sigma(S^{n-1}) = \frac{2\pi^{(n+1)/2}}{\Gamma(\frac{n+1}{2})}$,
+\begin{align*}
+\int_{|x|_2 \leq R} |x|_q^{-h} d\lambda_n(x)&\leq \int_{|x|_2 \leq R} |x|_2^{-h} d\lambda_n(x)\\
+&=\int_{S^{n-1}} \left( \int_0^\infty r^{-h} \cdot r^{n-1} dr \right) d\sigma\\
+&=\frac{2\pi^{(n+1)/2}}{\Gamma(\frac{n+1}{2})} \cdot \int_0^R r^{-h+n-1} dr \\
+&=\frac{2\pi^{(n+1)/2}}{\Gamma(\frac{n+1}{2})} \cdot \frac{r^{-h+n}}{-h+n} \bigg|_0^R\\
+&=\frac{2\pi^{(n+1)/2}}{\Gamma(\frac{n+1}{2})} \cdot \frac{R^{-h+n}}{-h+n}\\
+&=O(R^{-h+n}).
+\end{align*}
+For $2 \leq q \leq \infty$ and for $0<r<n$, 
+\begin{align*}
+\int_{|x|_2 \leq R} |x|_q^{-h} d\lambda_n(x)&\leq \int_{|x|_2 \leq R} (n^{-\frac{1}{2}+\frac{1}{q}} |x|_2)^{-h} d\lambda_n(x)\\
+&=n^{\frac{h}{2} - \frac{h}{q}} \int_{|x|_2 \leq R} |x|_2^{-h} d\lambda_n(x)\\
+&=n^{\frac{h}{2} - \frac{h}{q}}  \cdot \frac{2\pi^{(n+1)/2}}{\Gamma(\frac{n+1}{2})} \cdot \frac{R^{-h+n}}{-h+n}\\
+&=O(R^{-h+n}).
+\end{align*}
+\end{proof}
+
+For $\phi \in \mathscr{S}$ let
+\[
+\widehat{\phi}(\xi) = \int_{\mathbb{R}^n} \phi(x) e^{-2\pi i\inner{x}{\xi}} d\lambda_n(x).
+\]
+For $1 \leq q < \infty$ define $c_q:\mathbb{R} \to \mathbb{R}$ by
+\[
+c_q(z) = e^{-|z|^q},\qquad z \in \mathbb{R}, 
+\]
+which belongs to $\mathscr{S}(\mathbb{R})$,
+and let $\gamma_q = \widehat{c}_q$. 
+
+For a tempered distribution $T$, 
+\[
+\inner{\widehat{T}}{\phi} = \inner{T}{\widehat{\phi}},\qquad \phi \in \mathscr{S}.
+\]
+Define $f_{q,h}(x)=|x|_q^{-h}$. 
+We calculate the Fourier transform of the tempered distribution $f_{q,h}$.\footnote{Alexander Koldobsky and
+Vladyslav Yaskin, {\em The Interface between Convex Geometry and Harmonic Analysis},
+p.~9, Lemma 2.1.}
+
+\begin{theorem}
+Let $0<h<n$. 
+For $1 \leq q < \infty$,
+\[
+\widehat{f}_{q,h}(\xi) = \frac{q}{\Gamma(h/q)} \int_0^\infty t^{n-h-1} \prod_{j=1}^n \gamma_q(t\xi_j) dt,
+\]
+and for $q=\infty$,
+\[
+\widehat{f}_{\infty,h}(\xi) = 2^n h \int_0^\infty t^{n-h-1} \prod_{j=1}^n \frac{\sin t\xi_j}{t\xi_j} dt
+\]
+\end{theorem}
+\begin{proof}
+Suppose that $1 \leq q < \infty$. 
+For $x \neq 0$, doing the change of variable $z=t^{1/q} |x|_q^{-1}$,
+\begin{align*}
+\int_0^\infty z^{h-1} e^{-z^q |x|_q^q} dz&=\int_0^\infty (t^{1/q} |x|_q^{-1})^{h-1} e^{-t} |x|_q^{-1} \frac{1}{q} t^{\frac{1}{q}-1} dt\\
+&=\frac{|x|_q^{-h}}{q} \int_0^\infty t^{\frac{h}{q}-1} e^{-t} dt\\
+&=\frac{|x|_q^{-h}}{q} \cdot \Gamma(h/q),
+\end{align*}
+i.e. $f_{q,h}(x) = \frac{q}{\Gamma(h/q)} \int_0^\infty z^{h-1} e^{-z^q |x|_q^q} dz$.
+
+For  $z>0$ define $F_{q,z}:\mathbb{R}^n \to \mathbb{R}$ by
+\[
+F_{q,z}(x) = e^{-|zx|_q^q},\qquad x \in \mathbb{R}^n,
+\]
+which is a Schwartz function. Doing the change of variable
+$y=z\cdot x$ and using Fubini's theorem,
+\begin{align*}
+\widehat{F}_{q,z}(\xi)&=\int_{\mathbb{R}^n} e^{-|zx|_q^q} e^{-2\pi i\inner{x}{\xi}} d\lambda_n(x)\\
+&=\int_{\mathbb{R}^n} e^{-|y_1|^q-\cdots-|y_n|^q} e^{-2\pi i\inner{y}{z^{-1}\xi}} \cdot z^{-n} d\lambda_n(y)\\
+&=z^{-n} \prod_{j=1}^n \int_{\mathbb{R}} e^{-|y_j|^q} e^{-2\pi iy_j \cdot z^{-1} \xi_j} d\lambda_1(y_j)\\
+&=z^{-n} \prod_{j=1}^n \gamma_q(z^{-1}\xi_j).
+\end{align*}
+Then for $\phi \in \mathscr{S}$,
+\begin{align*}
+\inner{\widehat{f}_{q,h}}{\phi}&=\int_{\mathbb{R}^n} f_{q,h}(\xi) \widehat{\phi}(\xi) d\lambda_n(\xi)\\
+&=\int_{\mathbb{R}^n} \left( \frac{q}{\Gamma(h/q)} \int_0^\infty z^{h-1} e^{-z^q |\xi|_q^q} dz\right)  \widehat{\phi}(\xi) d\lambda_n(\xi)\\
+&=\frac{q}{\Gamma(h/q)} \int_0^\infty z^{h-1} \left( \int_{\mathbb{R}^n} e^{-|z\xi|_q^q}  \widehat{\phi}(\xi) d\lambda_n(\xi) \right) dz\\
+&=\frac{q}{\Gamma(h/q)} \int_0^\infty z^{h-1} \inner{F_{q,z}}{\widehat{\phi}} dz\\
+&=\frac{q}{\Gamma(h/q)} \int_0^\infty z^{h-1} \inner{\widehat{F}_{q,z}}{\phi} dz\\
+&=\frac{q}{\Gamma(h/q)} \int_0^\infty z^{h-1-n} \left(\int_{\mathbb{R}^n} \prod_{j=1}^n \gamma_q(z^{-1}\xi_j) \cdot \phi(\xi) d\lambda_n(\xi)\right)
+dz\\
+&= \int_{\mathbb{R}^n} \left(\frac{q}{\Gamma(h/q)}\int_0^\infty z^{h-1-n} \prod_{j=1}^n \gamma_q(z^{-1}\xi_j) dz\right) \phi(\xi) d\lambda_n(\xi).
+\end{align*}
+This implies, doing the change of variable $z=t^{-1}$,
+\begin{align*}
+\widehat{f}_{q,h}(\xi)&=\frac{q}{\Gamma(h/q)}\int_0^\infty z^{h-1-n} \prod_{j=1}^n \gamma_q(z^{-1}\xi_j) dz\\
+&=\frac{q}{\Gamma(h/q)}\int_0^\infty t^{n-h-1} \prod_{j=1}^n \gamma_q(t\xi_j) dt.
+\end{align*}
+\end{proof}
+
+
+\section{Fourier transform}
+We remind ourselves that
+$c_q(z) = e^{-|z|^q}$, $z \in \mathbb{R}$, 
+and  $\gamma_q = \widehat{c}_q$.
+We prove that $\gamma_q$ is positive and logconvex.\footnote{Alexander Koldobsky and
+Vladyslav Yaskin, {\em The Interface between Convex Geometry and Harmonic Analysis},
+p.~4, Lemma 1.4.}
+
+\begin{theorem}
+For $1 \leq q \leq 2$, $\gamma_q (\sqrt{z}) > 0$, and
+$z \mapsto \log \gamma_q (\sqrt{z})$
+is convex on $\mathbb{R}_{\geq 0}$.  
+\end{theorem}
+\begin{proof}
+Let $0<\alpha \leq 1$, and for $z \in [0,\infty)$ let
+ $f(z) = \exp z$ and $g(z) = -z^\alpha$. Then for $k \in \mathbb{Z}_{\geq 0}$ and
+$z \in (0,\infty)$,
+\[
+g^{(k)}(z) = -k! \binom{\alpha}{k} z^{\alpha-k},
+\qquad \sgn g^{(k)}(z) = (-1)^k.
+\]
+For $n \geq 1$,
+\textbf{Fa\`a di Bruno's formula} tells us
+\begin{align*}
+(f \circ g)^{(n)}(z) &= \sum_{(m_1,\ldots,m_n), 1\cdot m_1+\cdots+n \cdot m_n=n} \frac{n!}{m_1! \cdots m_n!} (f^{(m_1+\cdots+m_n)} 
+\circ g)(z)\\
+& \cdot \prod_{k=1}^n \left( \frac{g^{(k)}(z)}{k!} \right)^{m_k}.
+\end{align*}
+Then 
+\begin{align*}
+(-1)^n (f \circ g)^{(n)}(z) &= \sum_{(m_1,\ldots,m_n), 1\cdot m_1+\cdots+n \cdot m_n=n} \frac{n!}{m_1! \cdots m_n!} 
+(\exp \circ g)(z)\\
+&\cdot  \prod_{k=1}^n \left( (-1)^k \frac{ g^{(k)}(z)}{k!} \right)^{m_k}\\
+&\geq 0.
+\end{align*}
+This shows that $f \circ g$ is \textbf{completely monotone}. Furthermore,
+$(f \circ g)(0) = 1$, so by the \textbf{Bernstein-Widder theorem}
+there is a Borel probability measure $\mu$ on $[0,\infty)$ such that
+\[
+(f \circ g)(z) = \int_{[0,\infty)} e^{-zt} d\mu(t),\qquad z \in [0,\infty).
+\]
+With $\alpha= \frac{q}{2}$, there is thus a Borel probability measure $\mu_q$ on $[0,\infty)$ 
+such that
+\[
+\exp(-z^{q/2}) = \int_{[0,\infty)} e^{-zt} d\mu_q(t),\qquad z \in [0,\infty).
+\]
+Then for $z \in \mathbb{R}$,
+\[
+c_q(z) = \exp(-|z|^q) = \exp(- (z^2)^{q/2}) =   \int_{[0,\infty)} e^{-z^2 t} d\mu_{q/2}(t).
+\]
+For $w \in \mathbb{R}$ we calculate, using the Fourier transform of a Gaussian,
+\begin{align*}
+\gamma_q(w)&=\int_\mathbb{R} e^{-2\pi iwz} c_q(z) d\lambda_1(z)\\
+&=\int_\mathbb{R} e^{-2\pi iwz} \left( \int_{[0,\infty)} e^{-z^2 t}  d\mu_{q/2}(t)\right) d\lambda_1(z)\\
+&=\int_{[0,\infty)}  \left( \int_{\mathbb{R}}  e^{-t z^2}e^{-2\pi iwz} d\lambda_1(z)\right) d\mu_{q/2}(t)\\
+&=\int_{[0,\infty)} \sqrt{\frac{\pi}{t}} \exp\left(-\frac{(\pi w)^2}{t} \right)d\mu_{q/2}(t)\\
+&=\pi^{1/2} \int_{[0,\infty)} t^{-1/2} e^{-\pi^2 w^2/t} d\mu_{q/2}(t).
+\end{align*}
+From the final expression it is evident that $\gamma_k(w) > 0$. 
+Furthermore, for $w_1,w_2 \in (0,\infty)$, using the Cauchy-Schwarz inequality,
+\begin{align*}
+\log \gamma_q\left( \sqrt{\frac{w_1+w_2}{2}}\right)&=\frac{1}{2} \log  
+ \left(\pi^{1/2}  \int_{[0,\infty)} t^{-1/4} e^{-\pi^2 \cdot \frac{w_1}{2t}}  \cdot t^{-1/4}
+ e^{-\pi^2 \cdot \frac{w_2}{2t}} 
+ d\mu_{q/2}(t)\right)^2\\
+ &\leq \frac{1}{2} \log \bigg( \pi    \int_{[0,\infty)} t^{-1/2} e^{-\pi^2 \cdot \frac{w_1}{t}}  
+ d\mu_{q/2}(t)\\
+ &\cdot  \int_{[0,\infty)} t^{-1/2} e^{-\pi^2 \cdot \frac{w_2}{t}}  
+ d\mu_{q/2}(t) \bigg)\\
+ &=\frac{1}{2} \log \left( \pi^{1/2}   \int_{[0,\infty)} t^{-1/2} e^{-\pi^2 \cdot \frac{w_1}{t}}  
+ d\mu_{q/2}(t)\right)\\
+ &+\frac{1}{2} \log \left( \pi^{1/2}   \int_{[0,\infty)} t^{-1/2} e^{-\pi^2 \cdot \frac{w_2}{t}}  
+ d\mu_{q/2}(t)\right)\\
+ &=\frac{1}{2} \log \gamma_q(\sqrt{w_1})+\frac{1}{2} \log \gamma_q(\sqrt{w_2}).
+\end{align*}
+Because $w \mapsto \log \gamma_q(\sqrt{w})$ is continuous, this suffices to prove that it is convex.
+\end{proof}
+
+
+
+
+
+\end{document}

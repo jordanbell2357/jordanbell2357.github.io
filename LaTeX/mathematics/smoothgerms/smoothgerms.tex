@@ -1,0 +1,259 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\ev}{\ensuremath\mathrm{ev}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\Hess}{\ensuremath\mathrm{Hess}\,} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Germs of smooth functions}
+\author{Jordan Bell}
+\date{April 4, 2016}
+
+\maketitle
+
+\section{Sheafs}
+Let $M=\mathbb{R}^m$. 
+For an open set $U$ in $M$, write $\mathcal{F}(U) = C^\infty(U)$, which is a commutative ring with unity $1_M(x)=1$. 
+For open sets $V \subset U$ in $M$, define $r_{U,V}:\mathcal{F}(U) \to \mathcal{F}(V)$ by
+$r_{U,V} f = f|_V$, which is a homomorphism of rings. 
+$\mathcal{F}$ is a \textbf{presheaf}, a contravariant functor from the category of
+open  sets in $M$ to the category of commutative unital rings. For $\mathcal{F}$ to be a \textbf{sheaf} means
+the following:
+\begin{enumerate}
+\item If $U_i$, $i \in I$, is an open cover of an open set $U$ and if $f,g \in \mathcal{F}(U)$ satisfy
+$r_{U,U_i} f = r_{U,U_i} g$ for all $i \in I$, then $f=g$.
+\item If $U_i$, $i \in I$, is an open cover of an open set $U$ and for each $i \in I$ there is some $f_i \in \mathcal{F}(U_i)$ such that
+for all $i,j \in I$, $r_{U_i, U_i \cap U_j} f_i = r_{U_j, U_i \cap U_j} f_j$, then there is some $f \in \mathcal{F}(U)$ such that 
+$r_{U,U_i} f = f_i$ for each $i \in I$.
+\end{enumerate}
+For the first condition, let $p \in U$. As $U_i$ is an open cover of $U$, there is some $i$ for which $p \in U_i$. 
+As $f|_{U_i} = g|_{U_i}$, $f(p)=g(p)$. Therefore $f=g$. For the second condition, 
+let $p \in U$. If $p \in U_i$ and $p \in U_j$, then $f_i(p) = f_j(p)$. This shows that it makes
+sense to define $f:U \to \mathbb{R}$ by $f(p)=f_i(p)$, for any $i$ such that $p \in U_i$. 
+Then $f|_{U_i} = f_i$, which implies that $f \in \mathcal{F}(U)$: for each $p \in U$, there is some
+open neighborhood $U_i$ of $p$ on which $f$ is smooth. Therefore
+$\mathcal{F}$ is a sheaf.
+
+
+\section{Stalks and germs}
+For $p \in M$, let $\mathcal{U}_p$ be the set of open neighborhoods of $p$. For $U,V \in \mathcal{U}_p$, say $U \leq V$
+when $V \subset U$. For $U \leq V \leq W$ and $f \in \mathcal{F}(U)$,
+\[
+(r_{V,W} \circ r_{U,V}) (f) = r_{V,W} f|_V = f_W = r_{U,W} f.
+\]
+For $f \in \mathcal{F}(U)$ and $g \in \mathcal{F}(V)$, say $f \sim_p g$ if
+there is some $W \in \mathcal{U}_p$, $W \geq U$, $W \geq V$, such that  
+$r_{U,W} f = r_{V,W} g$. 
+Let 
+\[
+\mathcal{R}_p =   \bigsqcup_{U \in \mathcal{U}_p} \mathcal{F}(U),
+\]
+and
+let $\mathcal{F}_p$ be the direct limit of the direct system $\mathcal{F}(U)$, $r_{U,V}$ of commutative unital rings: 
+\[
+\mathcal{F}_p = \mathcal{R}_p / \sim_p.
+\]
+We call $\mathcal{F}_p$ the \textbf{stalk of $\mathcal{F}$ at $p$}.
+An element of $\mathcal{F}_p$ is called a \textbf{germ of $\mathcal{F}$ at $p$}.
+In other words, 
+for $f \in \mathcal{R}_p$, let
+$[f]_p$ be the set of those $g \in \mathcal{R}_p$ such that 
+$f \sim_p g$, equivalently, 
+$f|_{U_f \cap U_g} = g|_{U_f \cap U_g}$. A germ of $\mathcal{F}$ at $p$ is such an equivalence class $[f]_p$, and
+\[
+\mathcal{F}_p = \left\{ [f]_p: f \in \mathcal{R}_p \right\}.
+\]
+
+
+\section{Maximal ideals}
+For $p \in M$, and $f,g \in \mathcal{R}_p$ with $f \sim_p g$, $f(p)=g(p)$. Thus it makes sense to define
+$\ev_p:\mathcal{F}_p \to \mathbb{R}$ by $\ev_p [f]_p = f(p)$. Now, for $[f]_p,[g]_p \in \mathcal{F}_p$, 
+\[
+\ev_p ([f]_p + [g]_p) = \ev_p([f+g]_p) = (f+g)(p) = f(p)+g(p) = \ev_p [f]_p + \ev_p [g]_p,
+\]
+\[
+\ev_p ([f]_p [g]_p) = \ev_p ([fg]_p) = (fg)(p) = f(p)g(p) = \ev_p [f]_p \cdot \ev_p [g]_p,
+\]
+$\ev_p [1_M]_p = 1$. This means that $\ev_p:\mathcal{F}_p \to \mathbb{R}$ is a homomorphism of unital rings. It is straightforward
+that $\ev_p$ is surjective. Write
+$\mathfrak{m}_p = \ker \ev_p$. By the first isomorphism theorem, there is an isomorphism of unital rings
+$\mathcal{F}_p / \mathfrak{m}_p \to \mathbb{R}$. Therefore
+$\mathfrak{m}_p$ is a maximal ideal in $\mathcal{F}_p$. 
+Now, if $[f]_p \in \mathcal{F}_p \setminus \mathfrak{m}_p$ then 
+$\ev_p [f]_p \neq 0$, hence $f(p) \neq 0$. Then there is some $U \in \mathcal{U}_p$ such that
+$f(x) \neq 0$ for $x \in U$, and $(1/f)(x) = \frac{1}{f(x)}$ belongs to $\mathcal{F}(U)$. Then
+$[1/f]_p \in \mathcal{F}_p$ and $[f]_p \cdot [1/f]_p = [f \cdot 1/f]_p = [1_M]_p$, which shows that if
+$[f]_p \in \mathcal{F}_p \setminus \mathfrak{m}_p$ then $[f]_p$ has an inverse $[1/f]_p$ in $\mathcal{F}_p$. 
+This means $\mathfrak{m}_p$ is the set of noninvertible elements of $\mathcal{F}_p$, which means that
+$\mathcal{F}_p$ is a \textbf{local ring}. 
+
+For $1 \leq i \leq m$ define the coordinate function $x^i:M \to \mathbb{R}$ by $x^i(p) = p_i$, which belongs to
+$\mathcal{F}(M)$. Because $\ev_0 x^i = 0$, $[x^i]_0 \in \mathfrak{m}_0$. We prove 
+\textbf{Hadamard's lemma},
+that the ring $\mathfrak{m}_0$ is generated
+by the germs of the coordinate functions at $0$.\footnote{Liviu Nicolaescu, {\em An Invitation to Morse Theory}, second ed.,
+p.~14, Lemma 1.13.}
+
+\begin{lemma}[Hadamard's lemma]
+The ideal $\mathfrak{m}_0$ is generated by the set $\{[x^i]_0: 1 \leq i \leq m\}$.
+\label{hadamard}
+\end{lemma}
+\begin{proof}
+Let $[f]_0 \in \mathfrak{m}_0$ with $f \in \mathcal{F}(B_r)$ for some $r>0$. For
+$y \in B_r$, using the fundamental theorem of calculus and using the chain rule,
+\[
+f(y) = f(y) - f(0) = \int_0^1 \frac{d}{ds} f(sy) ds = \int_0^1 \sum_{i=1}^m x^i(y) (\partial_i f)(sy) ds
+=\sum_{i=1}^m x^i(y) u_i(y),
+\]
+and $u_i \in \mathcal{F}(B_r)$. This means that
+$[f]_0 = \sum_{i=1}^m [x^i]_0 [u_i]_0$, which shows that $[f]_0$ belongs to the ideal generated by 
+the set  $\{[x^i]_0: 1 \leq i \leq m\}$. 
+\end{proof}
+
+
+
+For a  multi-index $\alpha \in \mathbb{Z}_{\geq 0}^m$, write
+\[
+|\alpha| = \sum_{i=1}^m \alpha_i,\qquad \alpha! = \alpha_1! \cdots \alpha_m!
+\]
+and
+\[
+\partial^\alpha = \partial_1^{\alpha_1} \cdots \partial_m^{\alpha_m},\qquad x^\alpha = (x^1)^{\alpha_1} \cdots (x^m)^{\alpha_m},
+\]
+and say $\alpha \leq \beta$ if $\alpha_i \leq \beta_i$ for each $i$.
+We shall use the fact that
+\[
+\partial^\alpha x^\beta = \begin{cases}
+\frac{\beta!}{(\beta-\alpha)!} x^{\beta-\alpha}&\alpha \leq \beta\\
+0&\textrm{otherwise}.
+\end{cases}
+\]
+
+
+
+\begin{lemma}
+For $f \in \mathcal{R}_0$, if $(\partial^\alpha f)(0) = 0$ for all $|\alpha|<k$, then $[f]_0 \in \mathfrak{m}_0^k$. 
+\end{lemma}
+\begin{proof}
+For $k=1$, if $(\partial^\alpha f)(0)=0$ for $\alpha=(0,\ldots,0)$ then $\ev_0 f = f(0)=0$, hence
+$[f]_0 \in \mathfrak{m}_0$. 
+Suppose the claim is true for some
+$k \geq 1$, and suppose that $f \in \mathcal{R}_0$ and that $(\partial^\alpha f)(0)=0$ for all $|\alpha|<k+1$.
+A fortiori, $(\partial^\alpha f)(0)=0$ for all $|\alpha|<k$ and then by the induction hypothesis we get
+$[f]_0 \in \mathfrak{m}_0^k$. Now, 
+Lemma \ref{hadamard} tells us that the ideal $\mathfrak{m}_0$ is generated by the set
+$\{[x^i]_0: 1 \leq i \leq m\}$, and then
+the product ideal $\mathfrak{m}_0^k$ is generated by the
+set 
+\begin{align*}
+\{[x^{i_1}]_0 \cdots [x^{i_k}]_0 : 1 \leq i_1,\ldots,i_k \leq m\}&=\{[x^{i_1} \cdots x^{i_k}]_0: 1 \leq i_1, \ldots, i_k \leq m\}\\
+&=\{[x^\alpha]_0: |\alpha|=k\},
+\end{align*}
+for $x^\alpha = (x^1)^{\alpha_1} \cdots (x^m)^{\alpha_m}$. 
+As $[f]_0 \in \mathfrak{m}^k$, there are $[u_\alpha]_0 \in \mathcal{F}_0$, $|\alpha|=k$, such that
+\[
+[f]_0 = \sum_{|\alpha|=k} [u_\alpha]_0 [x^\alpha]_0.
+\]
+For $|\alpha|=k$, on some set in $\mathcal{U}_0$, using the Leibniz rule,
+\[
+\partial^\alpha f = \sum_{|\beta|=k} \partial^\alpha (u_\beta x^\beta)
+=\sum_{|\beta|=k} \sum_{\gamma \leq \alpha} \binom{\alpha}{\gamma} (\partial^{\alpha-\gamma} u_\beta) (\partial^{\gamma} x^\beta).
+\]
+And for $\gamma \neq \beta$, $(\partial^\gamma x^\beta)(0) = 0$, so 
+\[
+\partial^\alpha f \in u_\alpha \partial^\alpha x^\alpha + h,\qquad [h]_0 \in \mathfrak{m}_0.
+\]
+But $(\partial^\alpha f)(0)=0$, so $u_\alpha(0)=0$, which means that $u_\alpha \in \mathfrak{m}_0$. And
+\[
+[x^\alpha]_0 = [x^1]_0^{\alpha_1} \cdots [x^m]_0^{\alpha_m} \in \mathfrak{m}_0^{|\alpha|} = \mathfrak{m}_0^k,
+\]
+so $[u_\alpha]_0 [x^\alpha]_0 \in \mathfrak{m}_0^{k+1}$, showing that $[f]_0 \in \mathfrak{m}_0^{k+1}$. This completes the proof
+by induction.
+\end{proof}
+
+
+
+
+\section{Hessians}
+For an open set $U$ in $\mathbb{R}^m$ and $\phi \in \mathcal{F}(U)$, 
+$\phi':U \to \mathscr{L}(\mathbb{R}^m,\mathbb{R})$, and $\nabla \phi:U \to \mathbb{R}^m$ satisfies
+\[
+\inner{\nabla \phi(x)}{v} = \phi'(x)(v),\qquad x \in U,\quad v \in \mathbb{R}^m.
+\]
+$x \in U$ is a \textbf{critical point of $\phi$} if
+$\phi'(x)=0$, equivalently
+$\nabla \phi(x)=0$.
+Define $\Hess \phi:U \to \mathscr{L}(\mathbb{R}^m,\mathbb{R}^m)$ by
+\[
+\Hess \phi = (\nabla \phi)'.
+\]
+This satisfies\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/gradienthilbert.pdf}}
+\[
+\phi''(x)(u)(v) = \inner{v}{\Hess \phi(x)(u)},\qquad x \in U,\qquad u,v, \in \mathbb{R}^m.
+\]
+A critical point $x$ of $\phi$ is called \textbf{nondegenerate} if $\Hess \phi(x)$ is invertible
+in $\mathscr{L}(\mathbb{R}^m,\mathbb{R}^m)$. 
+
+
+
+For $\phi \in \mathcal{R}_p$, let $J_\phi$ be the ideal in the ring $\mathcal{F}_p$ generated by the set
+\[
+\{[\partial_i \phi]_p: 1 \leq i \leq m\}.
+\]
+We call $J_\phi$ the \textbf{Jacobian ideal of $\phi$ at $p$}.
+If $p$ is a critical point of $\phi$, then
+$(\partial_i \phi)(p)=0$ for each $i$, hence
+$[\partial_i \phi]_p \in \mathfrak{m}_p$ for each $i$.
+
+If $0$ is a nondegenerate critical point of $\phi$, we 
+prove that $\mathfrak{m}_0 \subset J_\phi$.\footnote{Liviu Nicolaescu, {\em An Invitation to Morse Theory}, second ed.,
+p.~15, Lemma 1.15.}
+
+\begin{theorem}
+Let $U$ be an open set in $\mathbb{R}^m$ containing $0$ and let $\phi \in \mathcal{F}(U)$.
+If $0$ is a nondegenerate critical point of $\phi$, then
+$J_\phi = \mathfrak{m}_0$.
+\end{theorem}
+\begin{proof}
+Let $f=\nabla \phi$, which is a smooth function $U \to \mathbb{R}^m$. 
+Because $0$ is a nondegenerate critical point of $\phi$,
+$f'(0)$ is invertible in $\mathscr{L}(\mathbb{R}^m,\mathbb{R}^m)$ and 
+hence by the \textbf{inverse function theorem},\footnote{Serge Lang,
+{\em Real and Functional Analysis}, third ed., p.~361, chapter XIV, Theorem 1.2.}
+$f$ is a local $C^\infty$ isomorphism at $x$: 
+there is some open set $V$, $x \in V$ and $V \subset U$, such that $W=f(V)$ is open in $\mathbb{R}^m$,
+and there is a smooth function $g:W \to V$ such that
+$g \circ f = \id_V$ and $f \circ g = \id_W$. 
+\end{proof}
+
+
+
+
+
+
+
+\end{document}

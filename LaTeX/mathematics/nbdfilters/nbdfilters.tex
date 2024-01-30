@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+\usepackage[draft]{hyperref}
+%\usepackage{tikz-cd}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\abs}{\textrm{abs}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\Hol}{\textrm{Hol}} 
+\newcommand{\SA}{B_{\textrm{sa}}(H)} 
+\newcommand{\positive}{B_{\textrm{+}}(H)} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Topological spaces and neighborhood filters}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+If $X$ is a set, a {\em filter} on $X$ is a set $\mathcal{F}$ of subsets of $X$ such that $\emptyset \not \in \mathcal{F}$; if $A,B \in \mathcal{F}$ then $A \cap B \in \mathcal{F}$;
+if $A \subseteq X$ and there is some $B \in \mathcal{F}$ such that $B \subseteq A$, then $A \in \mathcal{F}$. For example, if $x \in X$ then the set of all subsets of $X$ that include
+$x$ is a filter on $X$.\footnote{cf. Fran{\c c}ois Tr\`eves, {\em Topological Vector Spaces, Distributions and Kernels}, p.~6.}
+A {\em basis} for the filter $\mathcal{F}$ is a subset $\mathcal{B} \subseteq \mathcal{F}$ such that if $A \in \mathcal{F}$ then there is some $B \in \mathcal{B}$ such that
+$B \subseteq A$.
+
+
+If $X$ is a set, a {\em topology} on $X$ is a set $\mathcal{O}$ of subsets of $X$ such that: $\emptyset, X \in \mathcal{O}$; 
+if $U_\alpha \in \mathcal{O}$ for all $\alpha \in I$, then $\bigcup_{\alpha \in I} U_\alpha \in \mathcal{O}$; if $I$ is finite and
+$U_\alpha \in \mathcal{O}$ for all $\alpha \in I$, then $\bigcap_{\alpha \in I} U_\alpha \in \mathcal{O}$. If $N \subseteq X$ and $x \in X$, we say that
+$N$ is a {\em neighborhood} of $x$ if there is some $U \in \mathcal{O}$ such that $x \in U \subseteq N$. In particular, an open set is a neighborhood of every element of itself.
+A {\em basis} for a topology $\mathcal{O}$ is a subset $\mathcal{B}$ of $\mathcal{O}$ such that if $x \in X$ then there is some $B \in \mathcal{B}$ such that $x \in B$, and such that
+if $B_1,B_2 \in \mathcal{B}$ and $x \in B_1 \cap B_2$, then there is some $B_3 \in \mathcal{B}$ such that $x \in B_3 \subseteq B_1 \cap B_2$.\footnote{cf.
+James R. Munkres, {\em Topology}, second ed., p.~78.}
+
+On the one hand,
+suppose that $X$ is a topological space with topology $\mathcal{O}$. For each $x \in X$, let $\mathcal{F}_x$ be the set of neighborhoods of $x$; we call
+$\mathcal{F}_x$ the {\em neighborhood filter} of $x$. It is straightforward to verify that
+$\mathcal{F}_x$ is a filter for each $x \in X$. If $N \in \mathcal{F}_x$, there is some $U \in \mathcal{F}_x$ that is open, and for each $y \in U$ we have $N \in \mathcal{F}_y$. 
+
+On the other hand, suppose $X$ is a set,   for each $x \in X$ there is some filter $\mathcal{F}_x$, and: if $N \in \mathcal{F}_x$ then $x \in N$; if $N \in \mathcal{F}_x$ then there is some
+$U \in \mathcal{F}_x$ such that if $y \in U$ then $N \in \mathcal{F}_y$. We define $\mathcal{O}$ in the following way: The elements $U$ of $\mathcal{O}$ are those subsets
+of $X$ such that if $x \in U$ then $U \in \mathcal{F}_x$. Vacuously, $\emptyset \in \mathcal{O}$, and it is immediate that $X \in \mathcal{O}$. If $U_\alpha \in \mathcal{O}$,
+$\alpha \in I$ and $x \in U=\bigcup_{\alpha \in I} U_\alpha$ then there is at least one $\alpha \in I$ such that $x \in U_\alpha$ and so $U_\alpha \in \mathcal{F}_x$. As $x \in U_\alpha \subseteq U$ and  
+$\mathcal{F}_x$ is a filter, we get $U \in \mathcal{F}_x$. If $I$ is finite and $U_\alpha \in I$, $\alpha \in I$, let $U=\bigcap_{\alpha \in I} U_\alpha$.
+If $x \in U$, then for each $\alpha \in I$, $x \in U_\alpha$, and hence for each $\alpha \in I$, $U_\alpha \in \mathcal{F}_x$.
+As $\mathcal{F}_x$ is a filter, the intersection of any two elements of it is an element of it, and thus the intersection of finitely many elements of it is an element of it, so $U \in
+\mathcal{F}_x$, showing that $U \in \mathcal{O}$. This shows that $\mathcal{O}$ is a topology. We will show that a set $N$ is a neighborhood of a point $x$ if and only
+if $N \in \mathcal{F}_x$.
+
+If $N \in \mathcal{F}_x$, then let
+$V=\{y \in N: N \in \mathcal{F}_y\}$. There is some $U_0 \in \mathcal{F}_x$ such that if $y \in U_0$ then $N \in \mathcal{F}_y$. If $y \in U_0$ then $N \in \mathcal{F}_y$, which implies
+that $y \in N$, and hence $U_0 \subseteq V$. $U_0 \subseteq V$ and $U_0 \in \mathcal{F}_x$  imply that
+ $V \in \mathcal{F}_x$, which implies that $x \in V$.
+If $y \in V$ then $N \in \mathcal{F}_y$, and hence there is some $U \in \mathcal{F}_y$ such that if $z \in U$ then $N \in \mathcal{F}_z$. If $z \in U$ then $N \in \mathcal{F}_z$, which
+implies that $z \in N$, and hence $U \subseteq V$. $U \subseteq V$ and $U \in \mathcal{F}_y$ imply that $V \in \mathcal{F}_y$. Thus, if $y \in V$ then $V \in \mathcal{F}_y$, which
+means that $V$ is open, $x \in V \subseteq N$ tells us that $N$ is a neighborhood of $x$.
+
+If a set $N$ is a neighborhood of a point $x$, then there is some open set $U$ with $x \in U \subseteq N$. $U$ being open means that if $y \in U$ then $U \in \mathcal{F}_y$. 
+As $x \in U$ we get $U \in \mathcal{F}_x$, and as $U \subset N$ we get $N \in \mathcal{F}_x$. Therefore a set $N$ is a neighborhood of a point $x$ if and only if $N \in \mathcal{F}_x$.
+
+In conclusion: If $X$ is a topological space and for each $x \in X$ we define $\mathcal{F}_x$ to be the neighborhood filter of $x$,
+then these filters satisfy the two conditions that if $N \in \mathcal{F}_x$ then $x \in N$ and that if $N \in \mathcal{F}_x$ there is some $U \in \mathcal{F}_x$ such that
+if $y \in U$ then $N \in \mathcal{F}_y$. In the other direction, if $X$ is a set and for each point $x \in X$ there is a filter $\mathcal{F}_x$ and the filters satisfy these two
+conditions, then there is a  topology on $X$ such that these filters are precisely the neighborhood filters of each point.
+
+\end{document}

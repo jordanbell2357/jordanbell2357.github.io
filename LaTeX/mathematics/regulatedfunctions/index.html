@@ -1,0 +1,786 @@
+<!DOCTYPE html><html>
+<head>
+<title>Regulated functions and the regulated integral</title>
+<!--Generated on Mon Feb 14 08:20:32 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 3, 2014.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="LaTeXML-navbar-left.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<nav class="ltx_page_navbar">
+<div class="ltx_TOC">
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Regulated functions and step functions ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Regulated functions and step functions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 Integrals of step functions ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Integrals of step functions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 The regulated integral ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The regulated integral</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S4" title="4 Left and right derivatives ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Left and right derivatives</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S5" title="5 Primitives ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Primitives</span></a></li>
+</ul>
+</div>
+</nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Regulated functions and the regulated integral</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">April 3, 2014</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Regulated functions and step functions</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math> and let <math id="S1.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a normed space. A function <math id="S1.p1.m3" class="ltx_Math" alttext="f:I\to X" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi>X</mi></mrow></mrow></math> is said to be <span class="ltx_text ltx_font_italic">regulated</span> if for all
+<math id="S1.p1.m4" class="ltx_Math" alttext="t\in[a,b)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> the limit <math id="S1.p1.m5" class="ltx_Math" alttext="\lim_{s\to t^{+}}f(s)" display="inline"><mrow><msub><mo>lim</mo><mrow><mi>s</mi><mo>→</mo><msup><mi>t</mi><mo>+</mo></msup></mrow></msub><mo>⁡</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> exists and for all <math id="S1.p1.m6" class="ltx_Math" alttext="t\in(a,b]" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math> the limit <math id="S1.p1.m7" class="ltx_Math" alttext="\lim_{s\to t^{-}}f(s)" display="inline"><mrow><msub><mo>lim</mo><mrow><mi>s</mi><mo>→</mo><msup><mi>t</mi><mo>-</mo></msup></mrow></msub><mo>⁡</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> exists.
+We denote these limits respectively by <math id="S1.p1.m8" class="ltx_Math" alttext="f(t^{+})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S1.p1.m9" class="ltx_Math" alttext="f(t^{-})" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>-</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math>.
+We define <math id="S1.p1.m10" class="ltx_Math" alttext="R(I,X)" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be the set of regulated functions <math id="S1.p1.m11" class="ltx_Math" alttext="I\to X" display="inline"><mrow><mi>I</mi><mo>→</mo><mi>X</mi></mrow></math>. It is apparent that <math id="S1.p1.m12" class="ltx_Math" alttext="R(I,X)" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a vector space. One checks that a regulated function is bounded,
+and that <math id="S1.p1.m13" class="ltx_Math" alttext="R(I,X)" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a normed space with the norm
+<math id="S1.p1.m14" class="ltx_Math" alttext="\left\|f\right\|_{\infty}=\sup_{t\in[a,b]}\left\|f(t)\right\|" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><mrow><msub><mo>sup</mo><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></msub><mo>⁡</mo><mrow><mo>∥</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1</span></span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is a compact interval in <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi mathvariant="normal">R</mi></math> and <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a normed algebra, then <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="R(I,X)" display="inline"><mrow><mi>R</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>I</mi><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a normed algebra.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S1.p2.m1" class="ltx_Math" alttext="f,g\in R(I,X)" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S1.p2.m2" class="ltx_Math" alttext="fg\in R(I,X)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> because the limit of a product is equal to a product of limits.
+For <math id="S1.p2.m3" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math> we have</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\left\|(fg)(t)\right\|=\left\|f(t)g(t)\right\|\leq\left\|f(t)\right\|\left\|g(%
+t)\right\|\leq\left\|f\right\|_{\infty}\left\|g\right\|_{\infty}," display="block"><mrow><mrow><mrow><mo>∥</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>=</mo><mrow><mo>∥</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><mrow><mo>∥</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow></mrow><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="S1.p2.m4" class="ltx_Math" alttext="\left\|fg\right\|_{\infty}\leq\left\|f\right\|_{\infty}\left\|g\right\|_{\infty}" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>g</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">A function <math id="S1.p3.m1" class="ltx_Math" alttext="f:I\to X" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi>X</mi></mrow></mrow></math>, where <math id="S1.p3.m2" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>, is said to be a <span class="ltx_text ltx_font_italic">step function</span> if there are <math id="S1.p3.m3" class="ltx_Math" alttext="a=s_{0}&lt;s_{1}&lt;\cdots&lt;s_{k}=b" display="inline"><mrow><mi>a</mi><mo>=</mo><msub><mi>s</mi><mn>0</mn></msub><mo>&lt;</mo><msub><mi>s</mi><mn>1</mn></msub><mo>&lt;</mo><mi mathvariant="normal">⋯</mi><mo>&lt;</mo><msub><mi>s</mi><mi>k</mi></msub><mo>=</mo><mi>b</mi></mrow></math> for which
+<math id="S1.p3.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is constant on each open interval <math id="S1.p3.m5" class="ltx_Math" alttext="(s_{i-1},s_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math>.
+We denote the set of step functions <math id="S1.p3.m6" class="ltx_Math" alttext="I\to X" display="inline"><mrow><mi>I</mi><mo>→</mo><mi>X</mi></mrow></math> by <math id="S1.p3.m7" class="ltx_Math" alttext="S(I,X)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+It is apparent that <math id="S1.p3.m8" class="ltx_Math" alttext="S(I,X)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is contained in <math id="S1.p3.m9" class="ltx_Math" alttext="R(I,X)" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> and is a vector subspace, and the following theorem states that if <math id="S1.p3.m10" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a Banach space then <math id="S1.p3.m11" class="ltx_Math" alttext="S(I,X)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is dense in <math id="S1.p3.m12" class="ltx_Math" alttext="R(I,X)" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>.<span id="footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
+            <span class="ltx_tag ltx_tag_note">1</span>
+            
+            
+          Jean Dieudonné, <span class="ltx_text ltx_font_italic">Foundations of Modern Analysis</span>, enlarged and corrected printing, p. 145, Theorem 7.6.1;
+Rodney Coleman, <span class="ltx_text ltx_font_italic">Calculus on Normed Vector Spaces</span>, p. 70, Proposition 3.3;
+cf. Robert G. Bartle, <span class="ltx_text ltx_font_italic">A Modern Theory of
+Integration</span>, p. 49, Theorem 3.17.</span></span></span></p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 2</span></span>.</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> be a compact interval in <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi mathvariant="normal">R</mi></math>, let <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a Banach space, and let <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="f\in X^{I}" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><msup><mi>X</mi><mi>I</mi></msup></mrow></math>. <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="f\in R(I,X)" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><mrow><mi>R</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>I</mi><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>
+if and only if for all <math id="Thmtheorem2.p1.m6" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math> there is some <math id="Thmtheorem2.p1.m7" class="ltx_Math" alttext="g\in S(I,X)" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">∈</mo><mrow><mi>S</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>I</mi><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> such that <math id="Thmtheorem2.p1.m8" class="ltx_Math" alttext="\left\|f-g\right\|_{\infty}&lt;\epsilon" display="inline"><mrow><msub><mrow><mo mathvariant="normal">∥</mo><mrow><mi>f</mi><mo mathvariant="normal">-</mo><mi>g</mi></mrow><mo mathvariant="normal">∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo mathvariant="normal">&lt;</mo><mi>ϵ</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">We prove in the following theorem that the set of regulated functions from a compact interval to a Banach space is itself a Banach space.</p>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3</span></span>.</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is a compact interval in <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi mathvariant="normal">R</mi></math> and <math id="Thmtheorem3.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a Banach space, then <math id="Thmtheorem3.p1.m4" class="ltx_Math" alttext="R(I,X)" display="inline"><mrow><mi>R</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>I</mi><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a Banach space.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p5.m1" class="ltx_Math" alttext="f_{n}\in R(I,X)" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> be a Cauchy sequence. For each <math id="S1.p5.m2" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math> we have</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\left\|f_{n}(t)-f_{m}(t)\right\|\leq\left\|f_{n}-f_{m}\right\|_{\infty}," display="block"><mrow><mrow><mrow><mo>∥</mo><mrow><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>f</mi><mi>m</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow><mo>≤</mo><msub><mrow><mo>∥</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>-</mo><msub><mi>f</mi><mi>m</mi></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">hence <math id="S1.p5.m3" class="ltx_Math" alttext="f_{n}(t)" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a Cauchy sequence in <math id="S1.p5.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. As <math id="S1.p5.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a Banach space, this Cauchy sequence converges to some limit, and we define
+<math id="S1.p5.m6" class="ltx_Math" alttext="f(t)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be this limit. Thus <math id="S1.p5.m7" class="ltx_Math" alttext="f\in X^{I}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>X</mi><mi>I</mi></msup></mrow></math> and <math id="S1.p5.m8" class="ltx_Math" alttext="\left\|f-f_{n}\right\|_{\infty}\to 0" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><msub><mi>f</mi><mi>n</mi></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>→</mo><mn>0</mn></mrow></math>. We have to prove that <math id="S1.p5.m9" class="ltx_Math" alttext="f\in R(I,X)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Let <math id="S1.p5.m10" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. There is some <math id="S1.p5.m11" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> for which <math id="S1.p5.m12" class="ltx_Math" alttext="n\geq N" display="inline"><mrow><mi>n</mi><mo>≥</mo><mi>N</mi></mrow></math> implies that <math id="S1.p5.m13" class="ltx_Math" alttext="\left\|f-f_{n}\right\|_{\infty}&lt;\epsilon" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><msub><mi>f</mi><mi>n</mi></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>&lt;</mo><mi>ϵ</mi></mrow></math>; in particular,
+<math id="S1.p5.m14" class="ltx_Math" alttext="\left\|f-f_{N}\right\|_{\infty}&lt;\epsilon" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><msub><mi>f</mi><mi>N</mi></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>&lt;</mo><mi>ϵ</mi></mrow></math>.
+By Theorem <a href="#Thmtheorem2" title="Theorem 2. ‣ 1 Regulated functions and step functions ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>, there is some <math id="S1.p5.m15" class="ltx_Math" alttext="g_{N}\in S(I,X)" display="inline"><mrow><msub><mi>g</mi><mi>N</mi></msub><mo>∈</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> with <math id="S1.p5.m16" class="ltx_Math" alttext="\left\|f_{N}-g_{N}\right\|_{\infty}&lt;\epsilon" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><msub><mi>f</mi><mi>N</mi></msub><mo>-</mo><msub><mi>g</mi><mi>N</mi></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>&lt;</mo><mi>ϵ</mi></mrow></math>. Then,</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="\left\|f-g_{N}\right\|_{\infty}\leq\left\|f-f_{N}\right\|_{\infty}+\left\|f_{N%
+}-g_{N}\right\|_{\infty}&lt;2\epsilon," display="block"><mrow><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><msub><mi>g</mi><mi>N</mi></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><msub><mi>f</mi><mi>N</mi></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>+</mo><msub><mrow><mo>∥</mo><mrow><msub><mi>f</mi><mi>N</mi></msub><mo>-</mo><msub><mi>g</mi><mi>N</mi></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>&lt;</mo><mrow><mn>2</mn><mo>⁢</mo><mi>ϵ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and by Theorem <a href="#Thmtheorem2" title="Theorem 2. ‣ 1 Regulated functions and step functions ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> this implies that <math id="S1.p5.m17" class="ltx_Math" alttext="f\in R(I,X)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">The following lemma shows that the set of points of discontinuity of a regulated function taking values in a Banach space is countable.</p>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 4</span></span>.</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem4.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is a compact interval in <math id="Thmtheorem4.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi mathvariant="normal">R</mi></math>, <math id="Thmtheorem4.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a Banach space, and <math id="Thmtheorem4.p1.m4" class="ltx_Math" alttext="f\in R(I,X)" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><mrow><mi>R</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>I</mi><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>, then</span></p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="\{t\in I:\textrm{$f$ is discontinuous at $t$}\}" display="block"><mrow><mo stretchy="false">{</mo><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow><mo>:</mo><mrow><mi>f</mi><mtext mathvariant="italic"> is discontinuous at </mtext><mi>t</mi></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is countable.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">For each <math id="S1.p7.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> let <math id="S1.p7.m2" class="ltx_Math" alttext="g_{n}\in S(I,X)" display="inline"><mrow><msub><mi>g</mi><mi>n</mi></msub><mo>∈</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> satisfy <math id="S1.p7.m3" class="ltx_Math" alttext="\left\|f-g_{n}\right\|\leq\frac{1}{n}" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><msub><mi>g</mi><mi>n</mi></msub></mrow><mo>∥</mo></mrow><mo>≤</mo><mfrac><mn>1</mn><mi>n</mi></mfrac></mrow></math>, and let
+</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="D_{n}=\{t\in I:\textrm{$g_{n}$ is discontinuous at $t$}\}." display="block"><mrow><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow><mo>:</mo><mrow><msub><mi>g</mi><mi>n</mi></msub><mtext> is discontinuous at </mtext><mi>t</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><math id="S1.p7.m4" class="ltx_Math" alttext="g_{n}" display="inline"><msub><mi>g</mi><mi>n</mi></msub></math> is a step function so <math id="S1.p7.m5" class="ltx_Math" alttext="D_{n}" display="inline"><msub><mi>D</mi><mi>n</mi></msub></math> is finite, and hence <math id="S1.p7.m6" class="ltx_Math" alttext="D=\bigcup_{n=1}^{\infty}D_{n}" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><msubsup><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mi>n</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></msubsup><msub><mi>D</mi><mi>n</mi></msub></mrow></mrow></math> is countable.
+It need not be true that
+<math id="S1.p7.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is discontinuous at each point in <math id="S1.p7.m8" class="ltx_Math" alttext="D" display="inline"><mi>D</mi></math>, but we shall prove that
+if <math id="S1.p7.m9" class="ltx_Math" alttext="t\in I\setminus D" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mi>I</mi><mo>∖</mo><mi>D</mi></mrow></mrow></math> then <math id="S1.p7.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous at <math id="S1.p7.m11" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, which will prove the claim.</p>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S1.p8.m1" class="ltx_Math" alttext="t\in I\setminus D" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mi>I</mi><mo>∖</mo><mi>D</mi></mrow></mrow></math>, let <math id="S1.p8.m2" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, and take <math id="S1.p8.m3" class="ltx_Math" alttext="N&gt;\frac{1}{\epsilon}" display="inline"><mrow><mi>N</mi><mo>&gt;</mo><mfrac><mn>1</mn><mi>ϵ</mi></mfrac></mrow></math>.
+As <math id="S1.p8.m4" class="ltx_Math" alttext="t\not\in D_{N}" display="inline"><mrow><mi>t</mi><mo>∉</mo><msub><mi>D</mi><mi>N</mi></msub></mrow></math>, the step function <math id="S1.p8.m5" class="ltx_Math" alttext="g_{N}" display="inline"><msub><mi>g</mi><mi>N</mi></msub></math> is continuous at <math id="S1.p8.m6" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, and hence there is some
+<math id="S1.p8.m7" class="ltx_Math" alttext="\delta&gt;0" display="inline"><mrow><mi>δ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> for which <math id="S1.p8.m8" class="ltx_Math" alttext="|s-t|&lt;\delta" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>s</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>δ</mi></mrow></math> implies that <math id="S1.p8.m9" class="ltx_Math" alttext="\left\|g_{N}(s)-g_{N}(t)\right\|&lt;\epsilon" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><msub><mi>g</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>g</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow><mo>&lt;</mo><mi>ϵ</mi></mrow></math>.
+If <math id="S1.p8.m10" class="ltx_Math" alttext="|s-t|&lt;\delta" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>s</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>δ</mi></mrow></math>, then</p>
+<table id="S5.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S1.Ex9">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex6.m1" class="ltx_Math" alttext="\displaystyle\left\|f(s)-f(t)\right\|" display="inline"><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex6.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex6.m3" class="ltx_Math" alttext="\displaystyle\left\|f(s)-g_{N}(s)\right\|+\left\|g_{N}(s)-g_{N}(t)\right\|+%
+\left\|g_{N}(t)-f(t)\right\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>g</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow><mo>+</mo><mrow><mo>∥</mo><mrow><mrow><msub><mi>g</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>g</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow><mo>+</mo><mrow><mo>∥</mo><mrow><mrow><msub><mi>g</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex7.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex7.m3" class="ltx_Math" alttext="\displaystyle 2\left\|f-g_{N}\right\|_{\infty}+\left\|g_{N}(s)-g_{N}(t)\right\|" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><msub><mi>g</mi><mi>N</mi></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>+</mo><mrow><mo>∥</mo><mrow><mrow><msub><mi>g</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>g</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex8.m2" class="ltx_Math" alttext="\displaystyle&lt;" display="inline"><mo>&lt;</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex8.m3" class="ltx_Math" alttext="\displaystyle\frac{2}{N}+\epsilon" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>2</mn><mi>N</mi></mfrac></mstyle><mo>+</mo><mi>ϵ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex9.m2" class="ltx_Math" alttext="\displaystyle&lt;" display="inline"><mo>&lt;</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex9.m3" class="ltx_Math" alttext="\displaystyle 3\epsilon," display="inline"><mrow><mrow><mn>3</mn><mo>⁢</mo><mi>ϵ</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">showing that <math id="S1.p8.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous at <math id="S1.p8.m12" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Integrals of step functions</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p1.m1" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math> and let <math id="S2.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a normed space. If <math id="S2.p1.m3" class="ltx_Math" alttext="f\in S(I,X)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> then there is a subdivision <math id="S2.p1.m4" class="ltx_Math" alttext="a=s_{0}&lt;s_{1}&lt;\cdots&lt;s_{k}=b" display="inline"><mrow><mi>a</mi><mo>=</mo><msub><mi>s</mi><mn>0</mn></msub><mo>&lt;</mo><msub><mi>s</mi><mn>1</mn></msub><mo>&lt;</mo><mi mathvariant="normal">⋯</mi><mo>&lt;</mo><msub><mi>s</mi><mi>k</mi></msub><mo>=</mo><mi>b</mi></mrow></math> of <math id="S2.p1.m5" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math> and there are
+<math id="S2.p1.m6" class="ltx_Math" alttext="c_{i}\in X" display="inline"><mrow><msub><mi>c</mi><mi>i</mi></msub><mo>∈</mo><mi>X</mi></mrow></math> such that <math id="S2.p1.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> takes the value <math id="S2.p1.m8" class="ltx_Math" alttext="c_{i}" display="inline"><msub><mi>c</mi><mi>i</mi></msub></math> on the open interval <math id="S2.p1.m9" class="ltx_Math" alttext="(s_{i-1},s_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math>. Suppose that there is a subdivision <math id="S2.p1.m10" class="ltx_Math" alttext="a=t_{0}&lt;t_{1}&lt;\cdots&lt;t_{l}=b" display="inline"><mrow><mi>a</mi><mo>=</mo><msub><mi>t</mi><mn>0</mn></msub><mo>&lt;</mo><msub><mi>t</mi><mn>1</mn></msub><mo>&lt;</mo><mi mathvariant="normal">⋯</mi><mo>&lt;</mo><msub><mi>t</mi><mi>l</mi></msub><mo>=</mo><mi>b</mi></mrow></math> of <math id="S2.p1.m11" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math> and
+<math id="S2.p1.m12" class="ltx_Math" alttext="d_{i}\in X" display="inline"><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>∈</mo><mi>X</mi></mrow></math> such that <math id="S2.p1.m13" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> takes the value <math id="S2.p1.m14" class="ltx_Math" alttext="d_{i}" display="inline"><msub><mi>d</mi><mi>i</mi></msub></math> on the open interval <math id="S2.p1.m15" class="ltx_Math" alttext="(t_{i-1},t_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math>.
+One checks that</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="\sum_{i=1}^{k}(s_{i}-s_{i-1})c_{i}=\sum_{i=1}^{l}(t_{i}-t_{i-1})d_{i}." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>s</mi><mi>i</mi></msub><mo>-</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>c</mi><mi>i</mi></msub></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>l</mi></munderover><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>t</mi><mi>i</mi></msub><mo>-</mo><msub><mi>t</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>d</mi><mi>i</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We define the <span class="ltx_text ltx_font_italic">integral</span> of <math id="S2.p1.m16" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> to be the above element of <math id="S2.p1.m17" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and denote this element of <math id="S2.p1.m18" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> by <math id="S2.p1.m19" class="ltx_Math" alttext="\int_{I}f=\int_{a}^{b}f" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>f</mi></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi></mrow></mrow></math>.</p>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 5</span></span>.</h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem5.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is a compact interval in <math id="Thmtheorem5.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi mathvariant="normal">R</mi></math> and <math id="Thmtheorem5.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a normed space, then <math id="Thmtheorem5.p1.m4" class="ltx_Math" alttext="\int_{I}:S(I,X)\to X" display="inline"><mrow><msub><mo largeop="true" mathvariant="normal" symmetric="true">∫</mo><mi>I</mi></msub><mo mathvariant="normal">:</mo><mrow><mrow><mi>S</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>I</mi><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">→</mo><mi>X</mi></mrow></mrow></math> is linear.</span></p>
+</div>
+</div>
+<div id="Thmtheorem6" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 6</span></span>.</h6>
+<div id="Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem6.p1.m1" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>a</mi><mo mathvariant="normal">,</mo><mi>b</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math> and <math id="Thmtheorem6.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a normed space, then <math id="Thmtheorem6.p1.m3" class="ltx_Math" alttext="\int_{I}:S(I,X)\to X" display="inline"><mrow><msub><mo largeop="true" mathvariant="normal" symmetric="true">∫</mo><mi>I</mi></msub><mo mathvariant="normal">:</mo><mrow><mrow><mi>S</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>I</mi><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">→</mo><mi>X</mi></mrow></mrow></math> is a bounded linear map with operator norm <math id="Thmtheorem6.p1.m4" class="ltx_Math" alttext="b-a" display="inline"><mrow><mi>b</mi><mo mathvariant="normal">-</mo><mi>a</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p2.m1" class="ltx_Math" alttext="f\in S(I,X)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, let <math id="S2.p2.m2" class="ltx_Math" alttext="a=s_{0}&lt;s_{1}&lt;\cdots&lt;s_{k}=b" display="inline"><mrow><mi>a</mi><mo>=</mo><msub><mi>s</mi><mn>0</mn></msub><mo>&lt;</mo><msub><mi>s</mi><mn>1</mn></msub><mo>&lt;</mo><mi mathvariant="normal">⋯</mi><mo>&lt;</mo><msub><mi>s</mi><mi>k</mi></msub><mo>=</mo><mi>b</mi></mrow></math> be a subdivision of <math id="S2.p2.m3" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math> and let <math id="S2.p2.m4" class="ltx_Math" alttext="c_{i}\in X" display="inline"><mrow><msub><mi>c</mi><mi>i</mi></msub><mo>∈</mo><mi>X</mi></mrow></math> such that <math id="S2.p2.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> takes the value
+<math id="S2.p2.m6" class="ltx_Math" alttext="c_{i}" display="inline"><msub><mi>c</mi><mi>i</mi></msub></math> on the open interval <math id="S2.p2.m7" class="ltx_Math" alttext="(s_{i-1},s_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math>. Then,</p>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="\left\|\int_{I}f\right\|\leq\sum_{i=1}^{k}(s_{i}-s_{i-1})\left\|c_{i}\right\|%
+\leq\sum_{i=1}^{k}(s_{i}-s_{i-1})\left\|f\right\|_{\infty}=(b-a)\left\|f\right%
+\|_{\infty}." display="block"><mrow><mrow><mrow><mo>∥</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>f</mi></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>s</mi><mi>i</mi></msub><mo>-</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><msub><mi>c</mi><mi>i</mi></msub><mo>∥</mo></mrow></mrow></mrow><mo>≤</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>s</mi><mi>i</mi></msub><mo>-</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This shows that <math id="S2.p2.m8" class="ltx_Math" alttext="\left\|\int_{I}\right\|\leq b-a" display="inline"><mrow><mrow><mo>∥</mo><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mo>∥</mo></mrow><mo>≤</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow></mrow></math>, and if <math id="S2.p2.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is constant, say <math id="S2.p2.m10" class="ltx_Math" alttext="f(t)=c\in X" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>c</mi><mo>∈</mo><mi>X</mi></mrow></math> for all <math id="S2.p2.m11" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math>, then <math id="S2.p2.m12" class="ltx_Math" alttext="\int_{I}f=(b-a)c" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>f</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>c</mi></mrow></mrow></math> and
+<math id="S2.p2.m13" class="ltx_Math" alttext="\left\|\int_{I}f\right\|=(b-a)\left\|c\right\|=(b-a)\left\|f\right\|_{\infty}" display="inline"><mrow><mrow><mo>∥</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>f</mi></mrow><mo>∥</mo></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><mi>c</mi><mo>∥</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow></math>, showing that <math id="S2.p2.m14" class="ltx_Math" alttext="\left\|\int_{I}\right\|=b-a" display="inline"><mrow><mrow><mo>∥</mo><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mo>∥</mo></mrow><mo>=</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem7" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 7</span></span>.</h6>
+<div id="Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem7.p1.m1" class="ltx_Math" alttext="a\leq b\leq c" display="inline"><mrow><mi>a</mi><mo mathvariant="normal">≤</mo><mi>b</mi><mo mathvariant="normal">≤</mo><mi>c</mi></mrow></math>, if <math id="Thmtheorem7.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a normed space, and if <math id="Thmtheorem7.p1.m3" class="ltx_Math" alttext="g\in S([a,c],X)" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">∈</mo><mrow><mi>S</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>a</mi><mo mathvariant="normal">,</mo><mi>c</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>, then</span></p>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="\int_{a}^{c}g=\int_{a}^{b}g+\int_{b}^{c}g." display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>c</mi></msubsup><mi>g</mi></mrow><mo>=</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>b</mi></msubsup><mi>g</mi></mrow><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>b</mi><mi>c</mi></msubsup><mi>g</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>The regulated integral</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> be a compact interval in <math id="S3.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> and let <math id="S3.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a Banach space.
+Theorem <a href="#Thmtheorem2" title="Theorem 2. ‣ 1 Regulated functions and step functions ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> shows that <math id="S3.p1.m4" class="ltx_Math" alttext="S(I,X)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a dense subspace of <math id="S3.p1.m5" class="ltx_Math" alttext="R(I,X)" display="inline"><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and therefore
+if <math id="S3.p1.m6" class="ltx_Math" alttext="T_{0}\in\mathscr{B}(S(I,X),X)" display="inline"><mrow><msub><mi>T</mi><mn>0</mn></msub><mo>∈</mo><mrow><mi class="ltx_font_mathscript">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> then there is one and only one
+<math id="S3.p1.m7" class="ltx_Math" alttext="T\in\mathscr{B}(R(I,X),X)" display="inline"><mrow><mi>T</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> whose restriction to <math id="S3.p1.m8" class="ltx_Math" alttext="S(I,X)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is equal to <math id="S3.p1.m9" class="ltx_Math" alttext="T_{0}" display="inline"><msub><mi>T</mi><mn>0</mn></msub></math>, and this operator satisfies <math id="S3.p1.m10" class="ltx_Math" alttext="\left\|T\right\|=\left\|T_{0}\right\|" display="inline"><mrow><mrow><mo>∥</mo><mi>T</mi><mo>∥</mo></mrow><mo>=</mo><mrow><mo>∥</mo><msub><mi>T</mi><mn>0</mn></msub><mo>∥</mo></mrow></mrow></math>.
+Lemma <a href="#Thmtheorem6" title="Lemma 6. ‣ 2 Integrals of step functions ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>
+shows that <math id="S3.p1.m11" class="ltx_Math" alttext="\int_{I}:S(I,X)\to X" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mo>:</mo><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>X</mi></mrow></mrow></math> is a bounded linear operator, thus there is one and only one bounded linear
+operator
+<math id="S3.p1.m12" class="ltx_Math" alttext="R(I,X)\to X" display="inline"><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>X</mi></mrow></math> whose restriction to <math id="S3.p1.m13" class="ltx_Math" alttext="S(I,X)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is equal to <math id="S3.p1.m14" class="ltx_Math" alttext="\int_{I}" display="inline"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></math>, and we denote this operator <math id="S3.p1.m15" class="ltx_Math" alttext="R(I,X)\to X" display="inline"><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>X</mi></mrow></math> also by <math id="S3.p1.m16" class="ltx_Math" alttext="\int_{I}" display="inline"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></math>.
+With <math id="S3.p1.m17" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>, we have <math id="S3.p1.m18" class="ltx_Math" alttext="\left\|\int_{I}\right\|=b-a" display="inline"><mrow><mrow><mo>∥</mo><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mo>∥</mo></mrow><mo>=</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow></mrow></math>. We call <math id="S3.p1.m19" class="ltx_Math" alttext="\int_{I}:R(I,X)\to X" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mo>:</mo><mrow><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mi>X</mi></mrow></mrow></math> the <span class="ltx_text ltx_font_italic">regulated integral</span>.</p>
+</div>
+<div id="Thmtheorem8" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 8</span></span>.</h6>
+<div id="Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem8.p1.m1" class="ltx_Math" alttext="a\leq b\leq c" display="inline"><mrow><mi>a</mi><mo mathvariant="normal">≤</mo><mi>b</mi><mo mathvariant="normal">≤</mo><mi>c</mi></mrow></math>, if <math id="Thmtheorem8.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a Banach space, and if <math id="Thmtheorem8.p1.m3" class="ltx_Math" alttext="f\in R([a,c],X)" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><mrow><mi>R</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>a</mi><mo mathvariant="normal">,</mo><mi>c</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>, then</span></p>
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex13.m1" class="ltx_Math" alttext="\int_{a}^{c}f=\int_{a}^{b}f+\int_{b}^{c}f." display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>c</mi></msubsup><mi>f</mi></mrow><mo>=</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>b</mi></msubsup><mi>f</mi></mrow><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>b</mi><mi>c</mi></msubsup><mi>f</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p2.m1" class="ltx_Math" alttext="I_{1}=[a,b]" display="inline"><mrow><msub><mi>I</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>, <math id="S3.p2.m2" class="ltx_Math" alttext="I_{2}=[b,c]" display="inline"><mrow><msub><mi>I</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>b</mi><mo>,</mo><mi>c</mi><mo stretchy="false">]</mo></mrow></mrow></math>, <math id="S3.p2.m3" class="ltx_Math" alttext="I=[a,c]" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>c</mi><mo stretchy="false">]</mo></mrow></mrow></math>, and let <math id="S3.p2.m4" class="ltx_Math" alttext="f_{1}" display="inline"><msub><mi>f</mi><mn>1</mn></msub></math> and <math id="S3.p2.m5" class="ltx_Math" alttext="f_{2}" display="inline"><msub><mi>f</mi><mn>2</mn></msub></math> be the restriction of <math id="S3.p2.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> to <math id="S3.p2.m7" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> and <math id="S3.p2.m8" class="ltx_Math" alttext="I_{2}" display="inline"><msub><mi>I</mi><mn>2</mn></msub></math> respectively.
+From the definition of regulated functions, <math id="S3.p2.m9" class="ltx_Math" alttext="f_{1}\in R(I_{1},X)" display="inline"><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>I</mi><mn>1</mn></msub><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.p2.m10" class="ltx_Math" alttext="f_{2}\in R(I_{2},X)" display="inline"><mrow><msub><mi>f</mi><mn>2</mn></msub><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>I</mi><mn>2</mn></msub><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+By Theorem <a href="#Thmtheorem2" title="Theorem 2. ‣ 1 Regulated functions and step functions ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>,
+for any <math id="S3.p2.m11" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> there is
+some <math id="S3.p2.m12" class="ltx_Math" alttext="g\in S(I,X)" display="inline"><mrow><mi>g</mi><mo>∈</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> satisfying <math id="S3.p2.m13" class="ltx_Math" alttext="\left\|f-g\right\|_{\infty}&lt;\epsilon" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>&lt;</mo><mi>ϵ</mi></mrow></math>. Taking <math id="S3.p2.m14" class="ltx_Math" alttext="g_{1}" display="inline"><msub><mi>g</mi><mn>1</mn></msub></math> and <math id="S3.p2.m15" class="ltx_Math" alttext="g_{2}" display="inline"><msub><mi>g</mi><mn>2</mn></msub></math> to be the restriction of <math id="S3.p2.m16" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>
+to <math id="S3.p2.m17" class="ltx_Math" alttext="I_{1}" display="inline"><msub><mi>I</mi><mn>1</mn></msub></math> and <math id="S3.p2.m18" class="ltx_Math" alttext="I_{2}" display="inline"><msub><mi>I</mi><mn>2</mn></msub></math>, we check that <math id="S3.p2.m19" class="ltx_Math" alttext="g_{1}\in S(I_{1},X)" display="inline"><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>∈</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>I</mi><mn>1</mn></msub><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.p2.m20" class="ltx_Math" alttext="g_{2}\in S(I_{2},X)" display="inline"><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>∈</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>I</mi><mn>2</mn></msub><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then by Lemma <a href="#Thmtheorem7" title="Lemma 7. ‣ 2 Integrals of step functions ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>,</p>
+<table id="S5.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S3.Ex19">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex14.m1" class="ltx_Math" alttext="\displaystyle\left\|\int_{I}f-\int_{I_{1}}f_{1}-\int_{I_{2}}f_{2}\right\|_{\infty}" display="inline"><msub><mrow><mo>∥</mo><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mi>f</mi></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>1</mn></msub></msub></mstyle><msub><mi>f</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>2</mn></msub></msub></mstyle><msub><mi>f</mi><mn>2</mn></msub></mrow></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex14.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex14.m3" class="ltx_Math" alttext="\displaystyle\left\|\int_{I}f-\int_{I}g\right\|_{\infty}+\left\|\int_{I}g-\int%
+_{I_{1}}g_{1}-\int_{I_{2}}g_{2}\right\|_{\infty}" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mi>f</mi></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mi>g</mi></mrow></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>+</mo><msub><mrow><mo>∥</mo><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mi>g</mi></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>1</mn></msub></msub></mstyle><msub><mi>g</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>2</mn></msub></msub></mstyle><msub><mi>g</mi><mn>2</mn></msub></mrow></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex15.m3" class="ltx_Math" alttext="\displaystyle+\left\|\int_{I_{1}}g_{1}+\int_{I_{2}}g_{2}-\int_{I_{1}}f_{1}-%
+\int_{I_{2}}f_{2}\right\|_{\infty}" display="inline"><mrow><mo>+</mo><msub><mrow><mo>∥</mo><mrow><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>1</mn></msub></msub></mstyle><msub><mi>g</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>2</mn></msub></msub></mstyle><msub><mi>g</mi><mn>2</mn></msub></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>1</mn></msub></msub></mstyle><msub><mi>f</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>2</mn></msub></msub></mstyle><msub><mi>f</mi><mn>2</mn></msub></mrow></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex16.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex16.m3" class="ltx_Math" alttext="\displaystyle\left\|\int_{I}(f-g)\right\|_{\infty}+0" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>+</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex17.m3" class="ltx_Math" alttext="\displaystyle+\left\|\int_{I_{1}}(g_{1}-f_{1})\right\|_{\infty}+\left\|\int_{I%
+_{2}}(g_{2}-f_{2})\right\|_{\infty}" display="inline"><mrow><mrow><mo>+</mo><msub><mrow><mo>∥</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>1</mn></msub></msub></mstyle><mrow><mo stretchy="false">(</mo><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>-</mo><msub><mi>f</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>+</mo><msub><mrow><mo>∥</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>2</mn></msub></msub></mstyle><mrow><mo stretchy="false">(</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>-</mo><msub><mi>f</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex18.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex18.m3" class="ltx_Math" alttext="\displaystyle(c-a)\left\|f-g\right\|_{\infty}+(b-a)\left\|g_{1}-f_{2}\right\|_%
+{\infty}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo>∥</mo><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>-</mo><msub><mi>f</mi><mn>2</mn></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex19.m3" class="ltx_Math" alttext="\displaystyle+(c-b)\left\|g_{2}-f_{2}\right\|_{\infty}." display="inline"><mrow><mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>-</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo>∥</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>-</mo><msub><mi>f</mi><mn>2</mn></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">But <math id="S3.p2.m21" class="ltx_Math" alttext="\left\|g_{1}-f_{1}\right\|_{\infty}\leq\left\|g-f\right\|_{\infty}" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>-</mo><msub><mi>f</mi><mn>1</mn></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>≤</mo><msub><mrow><mo>∥</mo><mrow><mi>g</mi><mo>-</mo><mi>f</mi></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math> and <math id="S3.p2.m22" class="ltx_Math" alttext="\left\|g_{2}-f_{2}\right\|_{\infty}\leq\left\|g-f\right\|_{\infty}" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><msub><mi>g</mi><mn>2</mn></msub><mo>-</mo><msub><mi>f</mi><mn>2</mn></msub></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>≤</mo><msub><mrow><mo>∥</mo><mrow><mi>g</mi><mo>-</mo><mi>f</mi></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math>, hence we obtain</p>
+<table id="S3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex20.m1" class="ltx_Math" alttext="\left\|\int_{I}f-\int_{I_{1}}f_{1}-\int_{I_{2}}f_{2}\right\|_{\infty}&lt;(c-a)%
+\epsilon+(b-a)\epsilon+(c-b)\epsilon=2(c-a)\epsilon." display="block"><mrow><mrow><msub><mrow><mo>∥</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>f</mi></mrow><mo>-</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>1</mn></msub></msub><msub><mi>f</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>2</mn></msub></msub><msub><mi>f</mi><mn>2</mn></msub></mrow></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>&lt;</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ϵ</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ϵ</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>-</mo><mi>b</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ϵ</mi></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>c</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ϵ</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since <math id="S3.p2.m23" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> was arbitrary, we get</p>
+<table id="S3.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex21.m1" class="ltx_Math" alttext="\left\|\int_{I}f-\int_{I_{1}}f_{1}-\int_{I_{2}}f_{2}\right\|_{\infty}=0," display="block"><mrow><mrow><msub><mrow><mo>∥</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>f</mi></mrow><mo>-</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>1</mn></msub></msub><msub><mi>f</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>2</mn></msub></msub><msub><mi>f</mi><mn>2</mn></msub></mrow></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so</p>
+<table id="S3.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex22.m1" class="ltx_Math" alttext="\int_{I}f=\int_{I_{1}}f_{1}+\int_{I_{2}}f_{2}," display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>f</mi></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>1</mn></msub></msub><msub><mi>f</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>I</mi><mn>2</mn></msub></msub><msub><mi>f</mi><mn>2</mn></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">proving the claim.
+∎</p>
+</div>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">We prove that applying a bounded linear map and taking the regulated integral commute.<span id="footnote2" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>
+            <span class="ltx_tag ltx_tag_note">2</span>
+            
+            
+          Jean-Paul Penot, <span class="ltx_text ltx_font_italic">Calculus Without Derivatives</span>, p. 124, Proposition 2.18.</span></span></span></p>
+</div>
+<div id="Thmtheorem9" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 9</span></span>.</h6>
+<div id="Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheorem9.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is a compact interval in <math id="Thmtheorem9.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi mathvariant="normal">R</mi></math> and that <math id="Thmtheorem9.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="Thmtheorem9.p1.m4" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> are Banach spaces.
+If <math id="Thmtheorem9.p1.m5" class="ltx_Math" alttext="f\in R(I,X)" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><mrow><mi>R</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>I</mi><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="Thmtheorem9.p1.m6" class="ltx_Math" alttext="T\in\mathscr{B}(X,Y)" display="inline"><mrow><mi>T</mi><mo mathvariant="normal">∈</mo><mrow><mi class="ltx_font_mathscript" mathvariant="normal">B</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal">,</mo><mi>Y</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="Thmtheorem9.p1.m7" class="ltx_Math" alttext="T\circ f\in R(I,Y)" display="inline"><mrow><mrow><mi>T</mi><mo mathvariant="normal">∘</mo><mi>f</mi></mrow><mo mathvariant="normal">∈</mo><mrow><mi>R</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>I</mi><mo mathvariant="normal">,</mo><mi>Y</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> and</span></p>
+<table id="S3.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex23.m1" class="ltx_Math" alttext="\int_{I}T\circ f=T\int_{I}f." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mrow><mi>T</mi><mo>∘</mo><mi>f</mi></mrow></mrow><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>f</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Because <math id="S3.p4.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is continuous we have <math id="S3.p4.m2" class="ltx_Math" alttext="T\circ f\in R(I,Y)" display="inline"><mrow><mrow><mi>T</mi><mo>∘</mo><mi>f</mi></mrow><mo>∈</mo><mrow><mi>R</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. For <math id="S3.p4.m3" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, there is some
+<math id="S3.p4.m4" class="ltx_Math" alttext="g\in S(I,X)" display="inline"><mrow><mi>g</mi><mo>∈</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> satisfying <math id="S3.p4.m5" class="ltx_Math" alttext="\left\|f-g\right\|_{\infty}&lt;\epsilon" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>&lt;</mo><mi>ϵ</mi></mrow></math>. Write <math id="S3.p4.m6" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>.
+Because <math id="S3.p4.m7" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a step function, there is a subdivision <math id="S3.p4.m8" class="ltx_Math" alttext="a=s_{0}&lt;s_{1}&lt;\cdots&lt;s_{k}=b" display="inline"><mrow><mi>a</mi><mo>=</mo><msub><mi>s</mi><mn>0</mn></msub><mo>&lt;</mo><msub><mi>s</mi><mn>1</mn></msub><mo>&lt;</mo><mi mathvariant="normal">⋯</mi><mo>&lt;</mo><msub><mi>s</mi><mi>k</mi></msub><mo>=</mo><mi>b</mi></mrow></math> of <math id="S3.p4.m9" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>
+and there are <math id="S3.p4.m10" class="ltx_Math" alttext="c_{i}\in X" display="inline"><mrow><msub><mi>c</mi><mi>i</mi></msub><mo>∈</mo><mi>X</mi></mrow></math> such that <math id="S3.p4.m11" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> takes the value <math id="S3.p4.m12" class="ltx_Math" alttext="c_{i}" display="inline"><msub><mi>c</mi><mi>i</mi></msub></math> on the open interval <math id="S3.p4.m13" class="ltx_Math" alttext="(s_{i-1},s_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math>.
+Furthermore, <math id="S3.p4.m14" class="ltx_Math" alttext="T\circ g" display="inline"><mrow><mi>T</mi><mo>∘</mo><mi>g</mi></mrow></math> takes the value <math id="S3.p4.m15" class="ltx_Math" alttext="Tc_{i}" display="inline"><mrow><mi>T</mi><mo>⁢</mo><msub><mi>c</mi><mi>i</mi></msub></mrow></math> on the open interval <math id="S3.p4.m16" class="ltx_Math" alttext="(s_{i-1},s_{i})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>,</mo><msub><mi>s</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></math> so <math id="S3.p4.m17" class="ltx_Math" alttext="T\circ g\in S(I,Y)" display="inline"><mrow><mrow><mi>T</mi><mo>∘</mo><mi>g</mi></mrow><mo>∈</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and then because <math id="S3.p4.m18" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is linear,</p>
+<table id="S3.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex24.m1" class="ltx_Math" alttext="\int_{I}T\circ g=\sum_{i=1}^{k}(s_{i}-s_{i-1})Tc_{i}=T\sum_{i=1}^{k}(s_{i}-s_{%
+i-1})c_{i}=T\int_{I}g." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mrow><mi>T</mi><mo>∘</mo><mi>g</mi></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>s</mi><mi>i</mi></msub><mo>-</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>T</mi><mo>⁢</mo><msub><mi>c</mi><mi>i</mi></msub></mrow></mrow><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>k</mi></munderover><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>s</mi><mi>i</mi></msub><mo>-</mo><msub><mi>s</mi><mrow><mi>i</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>c</mi><mi>i</mi></msub></mrow></mrow></mrow><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>g</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using this,</p>
+<table id="S5.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S3.Ex30">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex25.m1" class="ltx_Math" alttext="\displaystyle\left\|\int_{I}T\circ f-T\int_{I}f\right\|" display="inline"><mrow><mo>∥</mo><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mrow><mi>T</mi><mo>∘</mo><mi>f</mi></mrow></mrow><mo>-</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mi>f</mi></mrow></mrow></mrow><mo>∥</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex25.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex25.m3" class="ltx_Math" alttext="\displaystyle\left\|\int_{I}T\circ f-\int_{I}T\circ g\right\|+\left\|\int_{I}T%
+\circ g-T\int_{I}g\right\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mrow><mi>T</mi><mo>∘</mo><mi>f</mi></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mrow><mi>T</mi><mo>∘</mo><mi>g</mi></mrow></mrow></mrow><mo>∥</mo></mrow><mo>+</mo><mrow><mo>∥</mo><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mrow><mi>T</mi><mo>∘</mo><mi>g</mi></mrow></mrow><mo>-</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mi>g</mi></mrow></mrow></mrow><mo>∥</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex26.m3" class="ltx_Math" alttext="\displaystyle+\left\|T\int_{I}g-T\int_{I}f\right\|" display="inline"><mrow><mo>+</mo><mrow><mo>∥</mo><mrow><mrow><mi>T</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mi>g</mi></mrow></mrow><mo>-</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mi>f</mi></mrow></mrow></mrow><mo>∥</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex27.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex27.m3" class="ltx_Math" alttext="\displaystyle\left\|\int_{I}T\circ(f-g)\right\|+\left\|T\int_{I}(f-g)\right\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mrow><mi>T</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow><mo>+</mo><mrow><mo>∥</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex28.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex28.m3" class="ltx_Math" alttext="\displaystyle(b-a)\left\|T\circ(f-g)\right\|_{\infty}+\left\|T\right\|\left\|%
+\int_{I}(f-g)\right\|" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo>∥</mo><mrow><mi>T</mi><mo>∘</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>+</mo><mrow><mrow><mo>∥</mo><mi>T</mi><mo>∥</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub></mstyle><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∥</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex29.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex29.m3" class="ltx_Math" alttext="\displaystyle(b-a)\left\|T\right\|\left\|f-g\right\|_{\infty}+\left\|T\right\|%
+(b-a)\left\|f-g\right\|_{\infty}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><mi>T</mi><mo>∥</mo></mrow><mo>⁢</mo><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>+</mo><mrow><mrow><mo>∥</mo><mi>T</mi><mo>∥</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>-</mo><mi>g</mi></mrow><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex30.m2" class="ltx_Math" alttext="\displaystyle&lt;" display="inline"><mo>&lt;</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex30.m3" class="ltx_Math" alttext="\displaystyle 2(b-a)\left\|T\right\|\epsilon." display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><mi>T</mi><mo>∥</mo></mrow><mo>⁢</mo><mi>ϵ</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">As <math id="S3.p4.m19" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> is arbitrary, this means that</p>
+<table id="S3.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex31.m1" class="ltx_Math" alttext="\left\|\int_{I}T\circ f-T\int_{I}f\right\|=0," display="block"><mrow><mrow><mrow><mo>∥</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mrow><mi>T</mi><mo>∘</mo><mi>f</mi></mrow></mrow><mo>-</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>f</mi></mrow></mrow></mrow><mo>∥</mo></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and so</p>
+<table id="S3.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex32.m1" class="ltx_Math" alttext="\int_{I}T\circ f=T\int_{I}f." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mrow><mi>T</mi><mo>∘</mo><mi>f</mi></mrow></mrow><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>I</mi></msub><mi>f</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Left and right derivatives</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S4.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is an open interval in <math id="S4.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, <math id="S4.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a normed space,
+<math id="S4.p1.m4" class="ltx_Math" alttext="f\in X^{I}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>X</mi><mi>I</mi></msup></mrow></math>, and <math id="S4.p1.m5" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math>. We say that <math id="S4.p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is <span class="ltx_text ltx_font_italic">right-differentiable at <math id="S4.p1.m7" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></span> if
+<math id="S4.p1.m8" class="ltx_Math" alttext="\frac{f(t+h)-f(t)}{h}" display="inline"><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></math> has a limit as <math id="S4.p1.m9" class="ltx_Math" alttext="h\to 0^{+}" display="inline"><mrow><mi>h</mi><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></math>, and that <math id="S4.p1.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is <span class="ltx_text ltx_font_italic">left-differentiable at <math id="S4.p1.m11" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></span> if
+<math id="S4.p1.m12" class="ltx_Math" alttext="\frac{f(t+h)-f(t)}{h}" display="inline"><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mi>h</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></math> has a limit as <math id="S4.p1.m13" class="ltx_Math" alttext="h\to 0^{-}" display="inline"><mrow><mi>h</mi><mo>→</mo><msup><mn>0</mn><mo>-</mo></msup></mrow></math>.
+We call these limits respectively the <span class="ltx_text ltx_font_italic">right derivative of <math id="S4.p1.m14" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="S4.p1.m15" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></span> and the <span class="ltx_text ltx_font_italic">left derivative of <math id="S4.p1.m16" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="S4.p1.m17" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math></span>,
+denoted respectively by
+<math id="S4.p1.m18" class="ltx_Math" alttext="f_{+}^{\prime}(t)" display="inline"><mrow><msubsup><mi>f</mi><mo>+</mo><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S4.p1.m19" class="ltx_Math" alttext="f_{-}^{\prime}(t)" display="inline"><mrow><msubsup><mi>f</mi><mo>-</mo><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>. For <math id="S4.p1.m20" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> to be differentiable at <math id="S4.p1.m21" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> means that <math id="S4.p1.m22" class="ltx_Math" alttext="f_{+}^{\prime}(t)" display="inline"><mrow><msubsup><mi>f</mi><mo>+</mo><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S4.p1.m23" class="ltx_Math" alttext="f_{-}^{\prime}(t)" display="inline"><mrow><msubsup><mi>f</mi><mo>-</mo><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> exist and are equal.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">The following is the mean value theorem for functions taking values in a Banach space.<span id="footnote3" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>
+            <span class="ltx_tag ltx_tag_note">3</span>
+            
+            
+          Henri Cartan, <span class="ltx_text ltx_font_italic">Differential Calculus</span>, p. 39, Theorem 3.1.3.</span></span></span></p>
+</div>
+<div id="Thmtheorem10" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 10</span></span> (Mean value theorem).</h6>
+<div id="Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheorem10.p1.m1" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>a</mi><mo mathvariant="normal">,</mo><mi>b</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math>, that <math id="Thmtheorem10.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a Banach space, and that <math id="Thmtheorem10.p1.m3" class="ltx_Math" alttext="f:I\to X" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>I</mi><mo mathvariant="normal">→</mo><mi>X</mi></mrow></mrow></math> and <math id="Thmtheorem10.p1.m4" class="ltx_Math" alttext="g:I\to\mathbb{R}" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">:</mo><mrow><mi>I</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">R</mi></mrow></mrow></math> are continuous
+functions. If there is a countable set <math id="Thmtheorem10.p1.m5" class="ltx_Math" alttext="D\subset I" display="inline"><mrow><mi>D</mi><mo mathvariant="normal">⊂</mo><mi>I</mi></mrow></math> such that <math id="Thmtheorem10.p1.m6" class="ltx_Math" alttext="t\in I\setminus D" display="inline"><mrow><mi>t</mi><mo mathvariant="normal">∈</mo><mrow><mi>I</mi><mo mathvariant="normal">∖</mo><mi>D</mi></mrow></mrow></math> implies that
+<math id="Thmtheorem10.p1.m7" class="ltx_Math" alttext="f_{+}^{\prime}(t)" display="inline"><mrow><msubsup><mi>f</mi><mo mathvariant="normal">+</mo><mo mathvariant="normal">′</mo></msubsup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> and <math id="Thmtheorem10.p1.m8" class="ltx_Math" alttext="g_{+}^{\prime}(t)" display="inline"><mrow><msubsup><mi>g</mi><mo mathvariant="normal">+</mo><mo mathvariant="normal">′</mo></msubsup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> exist and satisfy <math id="Thmtheorem10.p1.m9" class="ltx_Math" alttext="\left\|f_{+}^{\prime}(t)\right\|\leq g_{+}^{\prime}(t)" display="inline"><mrow><mrow><mo mathvariant="normal">∥</mo><mrow><msubsup><mi>f</mi><mo mathvariant="normal">+</mo><mo mathvariant="normal">′</mo></msubsup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">∥</mo></mrow><mo mathvariant="normal">≤</mo><mrow><msubsup><mi>g</mi><mo mathvariant="normal">+</mo><mo mathvariant="normal">′</mo></msubsup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>, then</span></p>
+<table id="S4.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex33.m1" class="ltx_Math" alttext="\left\|f(b)-f(a)\right\|\leq g(b)-g(a)." display="block"><mrow><mrow><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="Thmtheorem11" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 11</span></span>.</h6>
+<div id="Thmtheorem11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheorem11.p1.m1" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>a</mi><mo mathvariant="normal">,</mo><mi>b</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math>, that <math id="Thmtheorem11.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a Banach space, and that <math id="Thmtheorem11.p1.m3" class="ltx_Math" alttext="f:I\to X" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>I</mi><mo mathvariant="normal">→</mo><mi>X</mi></mrow></mrow></math> is continuous. If there is a countable set
+<math id="Thmtheorem11.p1.m4" class="ltx_Math" alttext="D\subset I" display="inline"><mrow><mi>D</mi><mo mathvariant="normal">⊂</mo><mi>I</mi></mrow></math> such that <math id="Thmtheorem11.p1.m5" class="ltx_Math" alttext="t\in I\setminus D" display="inline"><mrow><mi>t</mi><mo mathvariant="normal">∈</mo><mrow><mi>I</mi><mo mathvariant="normal">∖</mo><mi>D</mi></mrow></mrow></math> implies that <math id="Thmtheorem11.p1.m6" class="ltx_Math" alttext="f_{+}^{\prime}(t)=0" display="inline"><mrow><mrow><msubsup><mi>f</mi><mo mathvariant="normal">+</mo><mo mathvariant="normal">′</mo></msubsup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow></math>, then <math id="Thmtheorem11.p1.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is constant on <math id="Thmtheorem11.p1.m8" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>.</span></p>
+</div>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Primitives</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.p1.m1" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>, let <math id="S5.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a normed space, and let <math id="S5.p1.m3" class="ltx_Math" alttext="f,g\in X^{I}" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><msup><mi>X</mi><mi>I</mi></msup></mrow></math>. We say that <math id="S5.p1.m4" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a <span class="ltx_text ltx_font_italic">primitive of <math id="S5.p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math></span> if
+<math id="S5.p1.m6" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is continuous and
+if there is a countable set <math id="S5.p1.m7" class="ltx_Math" alttext="D\subset I" display="inline"><mrow><mi>D</mi><mo>⊂</mo><mi>I</mi></mrow></math> such that <math id="S5.p1.m8" class="ltx_Math" alttext="t\in I\setminus D" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mi>I</mi><mo>∖</mo><mi>D</mi></mrow></mrow></math> implies
+that <math id="S5.p1.m9" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is differentiable at <math id="S5.p1.m10" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> and <math id="S5.p1.m11" class="ltx_Math" alttext="g^{\prime}(t)=f(t)" display="inline"><mrow><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Thmtheorem12" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 12</span></span>.</h6>
+<div id="Thmtheorem12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheorem12.p1.m1" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is a compact interval in <math id="Thmtheorem12.p1.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi mathvariant="normal">R</mi></math>, that <math id="Thmtheorem12.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a Banach space, and that
+<math id="Thmtheorem12.p1.m4" class="ltx_Math" alttext="f:I\to X" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>I</mi><mo mathvariant="normal">→</mo><mi>X</mi></mrow></mrow></math> is a function. If <math id="Thmtheorem12.p1.m5" class="ltx_Math" alttext="g_{1},g_{2}:I\to X" display="inline"><mrow><mrow><msub><mi>g</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><msub><mi>g</mi><mn mathvariant="normal">2</mn></msub></mrow><mo mathvariant="normal">:</mo><mrow><mi>I</mi><mo mathvariant="normal">→</mo><mi>X</mi></mrow></mrow></math> are primitives of <math id="Thmtheorem12.p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math>, then <math id="Thmtheorem12.p1.m7" class="ltx_Math" alttext="g_{1}-g_{2}" display="inline"><mrow><msub><mi>g</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">-</mo><msub><mi>g</mi><mn mathvariant="normal">2</mn></msub></mrow></math> is constant on <math id="Thmtheorem12.p1.m8" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S5.p2.m1" class="ltx_Math" alttext="i=1,2" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mn>2</mn></mrow></mrow></math>, as <math id="S5.p2.m2" class="ltx_Math" alttext="g_{i}" display="inline"><msub><mi>g</mi><mi>i</mi></msub></math> is a primitive of <math id="S5.p2.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> there is a countable set <math id="S5.p2.m4" class="ltx_Math" alttext="D_{i}\subset I" display="inline"><mrow><msub><mi>D</mi><mi>i</mi></msub><mo>⊂</mo><mi>I</mi></mrow></math> such that <math id="S5.p2.m5" class="ltx_Math" alttext="t\in I\setminus D_{i}" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mi>I</mi><mo>∖</mo><msub><mi>D</mi><mi>i</mi></msub></mrow></mrow></math>
+implies that
+<math id="S5.p2.m6" class="ltx_Math" alttext="g_{i}" display="inline"><msub><mi>g</mi><mi>i</mi></msub></math> is differentiable at <math id="S5.p2.m7" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> and <math id="S5.p2.m8" class="ltx_Math" alttext="g_{i}^{\prime}(t)=f(t)" display="inline"><mrow><mrow><msubsup><mi>g</mi><mi>i</mi><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Let <math id="S5.p2.m9" class="ltx_Math" alttext="D=D_{1}\cup D_{2}" display="inline"><mrow><mi>D</mi><mo>=</mo><mrow><msub><mi>D</mi><mn>1</mn></msub><mo>∪</mo><msub><mi>D</mi><mn>2</mn></msub></mrow></mrow></math>, which is a countable set. Both <math id="S5.p2.m10" class="ltx_Math" alttext="g_{1}" display="inline"><msub><mi>g</mi><mn>1</mn></msub></math> and <math id="S5.p2.m11" class="ltx_Math" alttext="g_{2}" display="inline"><msub><mi>g</mi><mn>2</mn></msub></math> are continuous so <math id="S5.p2.m12" class="ltx_Math" alttext="g=g_{1}-g_{2}:I\to X" display="inline"><mrow><mrow><mi>g</mi><mo>=</mo><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>-</mo><msub><mi>g</mi><mn>2</mn></msub></mrow></mrow><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi>X</mi></mrow></mrow></math> is continuous, and if <math id="S5.p2.m13" class="ltx_Math" alttext="t\in I\setminus D" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mi>I</mi><mo>∖</mo><mi>D</mi></mrow></mrow></math>
+then <math id="S5.p2.m14" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is differentiable at <math id="S5.p2.m15" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> and <math id="S5.p2.m16" class="ltx_Math" alttext="g^{\prime}(t)=g_{1}^{\prime}(t)-g_{2}^{\prime}(t)=f(t)-f(t)=0" display="inline"><mrow><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msubsup><mi>g</mi><mn>1</mn><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msubsup><mi>g</mi><mn>2</mn><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. Then Corollary <a href="#Thmtheorem11" title="Corollary 11. ‣ 4 Left and right derivatives ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a> shows that <math id="S5.p2.m17" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is constant on
+<math id="S5.p2.m18" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, i.e., that <math id="S5.p2.m19" class="ltx_Math" alttext="g_{1}-g_{2}" display="inline"><mrow><msub><mi>g</mi><mn>1</mn></msub><mo>-</mo><msub><mi>g</mi><mn>2</mn></msub></mrow></math> is constant on <math id="S5.p2.m20" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>.∎</p>
+</div>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">We now give a construction of primitives of regulated functions.<span id="footnote4" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">4</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">4</sup>
+            <span class="ltx_tag ltx_tag_note">4</span>
+            
+            
+          Jean-Paul Penot, <span class="ltx_text ltx_font_italic">Calculus Without Derivatives</span>, p. 124, Theorem 2.19.</span></span></span>
+</p>
+</div>
+<div id="Thmtheorem13" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 13</span></span>.</h6>
+<div id="Thmtheorem13.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem13.p1.m1" class="ltx_Math" alttext="I=[a,b]" display="inline"><mrow><mi>I</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mi>a</mi><mo mathvariant="normal">,</mo><mi>b</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></math>, <math id="Thmtheorem13.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a Banach space, and <math id="Thmtheorem13.p1.m3" class="ltx_Math" alttext="f\in R(I,X)" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><mrow><mi>R</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>I</mi><mo mathvariant="normal">,</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>, then
+the map <math id="Thmtheorem13.p1.m4" class="ltx_Math" alttext="g:I\to X" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">:</mo><mrow><mi>I</mi><mo mathvariant="normal">→</mo><mi>X</mi></mrow></mrow></math> defined by <math id="Thmtheorem13.p1.m5" class="ltx_Math" alttext="g(t)=\int_{a}^{t}f" display="inline"><mrow><mrow><mi>g</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>t</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><msubsup><mo largeop="true" mathvariant="normal" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup><mi>f</mi></mrow></mrow></math> is a primitive of <math id="Thmtheorem13.p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> on <math id="Thmtheorem13.p1.m7" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">For <math id="S5.p4.m1" class="ltx_Math" alttext="t\in[a,b)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S5.p4.m2" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, because <math id="S5.p4.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is regulated there is some <math id="S5.p4.m4" class="ltx_Math" alttext="0&lt;\delta&lt;b-t" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>δ</mi><mo>&lt;</mo><mrow><mi>b</mi><mo>-</mo><mi>t</mi></mrow></mrow></math> such that
+<math id="S5.p4.m5" class="ltx_Math" alttext="0&lt;r\leq\delta" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>r</mi><mo>≤</mo><mi>δ</mi></mrow></math> implies that <math id="S5.p4.m6" class="ltx_Math" alttext="\left\|f(t+r)-f(t^{+})\right\|\leq\epsilon" display="inline"><mrow><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow><mo>≤</mo><mi>ϵ</mi></mrow></math>. For <math id="S5.p4.m7" class="ltx_Math" alttext="0&lt;r\leq\delta" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>r</mi><mo>≤</mo><mi>δ</mi></mrow></math> and for
+any <math id="S5.p4.m8" class="ltx_Math" alttext="0&lt;\eta&lt;r" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>η</mi><mo>&lt;</mo><mi>r</mi></mrow></math>,
+using Lemma <a href="#Thmtheorem8" title="Lemma 8. ‣ 3 The regulated integral ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a> we have</p>
+<table id="S5.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S5.Ex38">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S5.Ex34.m1" class="ltx_Math" alttext="\displaystyle\left\|\int_{a}^{t+r}f-\int_{a}^{t}f-\int_{t}^{t+r}f(t^{+})\right\|" display="inline"><mrow><mo>∥</mo><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mrow><mi>t</mi><mo>+</mo><mi>r</mi></mrow></msubsup></mstyle><mi>f</mi></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup></mstyle><mi>f</mi></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>t</mi><mrow><mi>t</mi><mo>+</mo><mi>r</mi></mrow></msubsup></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>∥</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex34.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex34.m3" class="ltx_Math" alttext="\displaystyle\left\|\int_{t}^{t+r}f-\int_{t}^{t+r}f(t^{+})\right\|" display="inline"><mrow><mo>∥</mo><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>t</mi><mrow><mi>t</mi><mo>+</mo><mi>r</mi></mrow></msubsup></mstyle><mi>f</mi></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>t</mi><mrow><mi>t</mi><mo>+</mo><mi>r</mi></mrow></msubsup></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>∥</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex35.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex35.m3" class="ltx_Math" alttext="\displaystyle\left\|\int_{t}^{t+\eta}(f-f(t^{+}))+\int_{t+\eta}^{t+r}(f-f(t^{+%
+}))\right\|" display="inline"><mrow><mo>∥</mo><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>t</mi><mrow><mi>t</mi><mo>+</mo><mi>η</mi></mrow></msubsup></mstyle><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mi>t</mi><mo>+</mo><mi>η</mi></mrow><mrow><mi>t</mi><mo>+</mo><mi>r</mi></mrow></msubsup></mstyle><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex36.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex36.m3" class="ltx_Math" alttext="\displaystyle\eta\sup_{t\leq s\leq t+\eta}\left\|f(s)-f(t^{+})\right\|" display="inline"><mrow><mi>η</mi><mo>⁢</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>t</mi><mo>≤</mo><mi>s</mi><mo>≤</mo><mrow><mi>t</mi><mo>+</mo><mi>η</mi></mrow></mrow></munder><mo>⁡</mo><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex37.m3" class="ltx_Math" alttext="\displaystyle+(r-\eta)\sup_{t+\eta\leq s\leq t+r}\left\|f(s)-f(t^{+})\right\|" display="inline"><mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mi>η</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mrow><mi>t</mi><mo>+</mo><mi>η</mi></mrow><mo>≤</mo><mi>s</mi><mo>≤</mo><mrow><mi>t</mi><mo>+</mo><mi>r</mi></mrow></mrow></munder><mo>⁡</mo><mrow><mo>∥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex38.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex38.m3" class="ltx_Math" alttext="\displaystyle 2\left\|f\right\|_{\infty}\eta+(r-\eta)\epsilon." display="inline"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>⁢</mo><mi>η</mi></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>r</mi><mo>-</mo><mi>η</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ϵ</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">This is true for all <math id="S5.p4.m9" class="ltx_Math" alttext="0&lt;\eta&lt;r" display="inline"><mrow><mn>0</mn><mo>&lt;</mo><mi>η</mi><mo>&lt;</mo><mi>r</mi></mrow></math>, so</p>
+<table id="S5.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex39.m1" class="ltx_Math" alttext="\left\|\int_{a}^{t+r}f-\int_{a}^{t}f-\int_{t}^{t+r}f(t^{+})\right\|\leq r\epsilon," display="block"><mrow><mrow><mrow><mo>∥</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mrow><mi>t</mi><mo>+</mo><mi>r</mi></mrow></msubsup><mi>f</mi></mrow><mo>-</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup><mi>f</mi></mrow><mo>-</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>t</mi><mrow><mi>t</mi><mo>+</mo><mi>r</mi></mrow></msubsup><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><mi>r</mi><mo>⁢</mo><mi>ϵ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.</p>
+<table id="S5.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex40.m1" class="ltx_Math" alttext="\left\|\frac{g(t+r)-g(t)}{r}-f(t^{+})\right\|\leq\epsilon." display="block"><mrow><mrow><mrow><mo>∥</mo><mrow><mfrac><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>r</mi></mfrac><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow><mo>≤</mo><mi>ϵ</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This shows that</p>
+<table id="S5.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex41.m1" class="ltx_Math" alttext="g_{+}^{\prime}(t)=f(t^{+})." display="block"><mrow><mrow><mrow><msubsup><mi>g</mi><mo>+</mo><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Similarly,</p>
+<table id="S5.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex42.m1" class="ltx_Math" alttext="g_{-}^{\prime}(t)=f(t^{-})." display="block"><mrow><mrow><mrow><msubsup><mi>g</mi><mo>-</mo><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>-</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because <math id="S5.p4.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is regulated, Lemma <a href="#Thmtheorem4" title="Lemma 4. ‣ 1 Regulated functions and step functions ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> shows that there is a countable set <math id="S5.p4.m11" class="ltx_Math" alttext="D\subset I" display="inline"><mrow><mi>D</mi><mo>⊂</mo><mi>I</mi></mrow></math> such that
+<math id="S5.p4.m12" class="ltx_Math" alttext="t\in I\setminus D" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mi>I</mi><mo>∖</mo><mi>D</mi></mrow></mrow></math> implies that <math id="S5.p4.m13" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous at <math id="S5.p4.m14" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. Therefore, if <math id="S5.p4.m15" class="ltx_Math" alttext="t\in I\setminus D" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mi>I</mi><mo>∖</mo><mi>D</mi></mrow></mrow></math> then
+<math id="S5.p4.m16" class="ltx_Math" alttext="f(t^{+})=f(t^{-})=f(t)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>+</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>t</mi><mo>-</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so <math id="S5.p4.m17" class="ltx_Math" alttext="g_{+}^{\prime}(t)=g_{-}^{\prime}(t)" display="inline"><mrow><mrow><msubsup><mi>g</mi><mo>+</mo><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mi>g</mi><mo>-</mo><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which means that if <math id="S5.p4.m18" class="ltx_Math" alttext="t\in I\setminus D" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mi>I</mi><mo>∖</mo><mi>D</mi></mrow></mrow></math> then <math id="S5.p4.m19" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math>
+is differentiable at <math id="S5.p4.m20" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, with <math id="S5.p4.m21" class="ltx_Math" alttext="g^{\prime}(t)=f(t)" display="inline"><mrow><mrow><msup><mi>g</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. To prove that <math id="S5.p4.m22" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is a primitive of <math id="S5.p4.m23" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> on <math id="S5.p4.m24" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> it suffices now to show that
+<math id="S5.p4.m25" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is continuous. For <math id="S5.p4.m26" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="S5.p4.m27" class="ltx_Math" alttext="t\in I" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>I</mi></mrow></math>, let <math id="S5.p4.m28" class="ltx_Math" alttext="\delta=\frac{\epsilon}{\left\|f\right\|_{\infty}}" display="inline"><mrow><mi>δ</mi><mo>=</mo><mfrac><mi>ϵ</mi><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mfrac></mrow></math>, and then
+for <math id="S5.p4.m29" class="ltx_Math" alttext="|s-t|&lt;\delta" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>s</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>δ</mi></mrow></math> we have by Lemma <a href="#Thmtheorem8" title="Lemma 8. ‣ 3 The regulated integral ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a> that</p>
+<table id="S5.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex43.m1" class="ltx_Math" alttext="\left\|g(s)-g(t)\right\|=\left\|\int_{a}^{s}f-\int_{a}^{t}f\right\|=\left\|%
+\int_{s}^{t}f\right\|\leq|t-s|\left\|f\right\|_{\infty}&lt;\delta\left\|f\right\|%
+_{\infty}=\epsilon," display="block"><mrow><mrow><mrow><mo>∥</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>∥</mo></mrow><mo>=</mo><mrow><mo>∥</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>s</mi></msubsup><mi>f</mi></mrow><mo>-</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup><mi>f</mi></mrow></mrow><mo>∥</mo></mrow><mo>=</mo><mrow><mo>∥</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>s</mi><mi>t</mi></msubsup><mi>f</mi></mrow><mo>∥</mo></mrow><mo>≤</mo><msub><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>t</mi><mo>-</mo><mi>s</mi></mrow><mo stretchy="false">|</mo></mrow><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>⁢</mo><mrow><mo>&lt;</mo><mi>δ</mi><mo fence="true">∥</mo></mrow><mo>⁢</mo><mi>f</mi></mrow><mo fence="true">∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><mi>ϵ</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">showing that <math id="S5.p4.m30" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is continuous at <math id="S5.p4.m31" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, completing the proof.
+∎</p>
+</div>
+</div>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S5.p5.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a Banach space and that <math id="S5.p5.m2" class="ltx_Math" alttext="f:[a,b]\to X" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>→</mo><mi>X</mi></mrow></mrow></math> is a primitive of a regulated function <math id="S5.p5.m3" class="ltx_Math" alttext="h:[a,b]\to X" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>→</mo><mi>X</mi></mrow></mrow></math>.
+Because <math id="S5.p5.m4" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> is regulated,
+by Theorem <a href="#Thmtheorem13" title="Theorem 13. ‣ 5 Primitives ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">13</span></a> the function <math id="S5.p5.m5" class="ltx_Math" alttext="g:[a,b]\to X" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow><mo>→</mo><mi>X</mi></mrow></mrow></math> defined by
+<math id="S5.p5.m6" class="ltx_Math" alttext="g(t)=\int_{a}^{t}f" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup><mi>f</mi></mrow></mrow></math> is a primitive of <math id="S5.p5.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> on <math id="S5.p5.m8" class="ltx_Math" alttext="[a,b]" display="inline"><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></math>. Then applying Lemma <a href="#Thmtheorem12" title="Lemma 12. ‣ 5 Primitives ‣ Regulated functions and the regulated integral" class="ltx_ref"><span class="ltx_text ltx_ref_tag">12</span></a>, there is some <math id="S5.p5.m9" class="ltx_Math" alttext="c\in X" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>X</mi></mrow></math> such that
+<math id="S5.p5.m10" class="ltx_Math" alttext="f(t)-g(t)=c" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mi>c</mi></mrow></math> for all <math id="S5.p5.m11" class="ltx_Math" alttext="t\in[a,b]" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>. But <math id="S5.p5.m12" class="ltx_Math" alttext="f(a)-g(a)=f(a)" display="inline"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so <math id="S5.p5.m13" class="ltx_Math" alttext="c=f(a)" display="inline"><mrow><mi>c</mi><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Hence, for all <math id="S5.p5.m14" class="ltx_Math" alttext="t\in[a,b]" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>,</p>
+<table id="S5.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex44.m1" class="ltx_Math" alttext="f(t)=f(a)+\int_{a}^{t}h." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup><mi>h</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But</p>
+<table id="S5.Ex45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex45.m1" class="ltx_Math" alttext="\int_{a}^{t}h=\int_{a}^{a+\eta_{1}}h+\int_{a+\eta_{1}}^{t-\eta_{2}}h+\int_{t-%
+\eta_{2}}^{t}h=\int_{a}^{a+\eta_{1}}h+\int_{a+\eta_{1}}^{t-\eta_{2}}f^{\prime}%
++\int_{t-\eta_{2}}^{t}h" display="block"><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup><mi>h</mi></mrow><mo>=</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mrow><mi>a</mi><mo>+</mo><msub><mi>η</mi><mn>1</mn></msub></mrow></msubsup><mi>h</mi></mrow><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mi>a</mi><mo>+</mo><msub><mi>η</mi><mn>1</mn></msub></mrow><mrow><mi>t</mi><mo>-</mo><msub><mi>η</mi><mn>2</mn></msub></mrow></msubsup><mi>h</mi></mrow><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mi>t</mi><mo>-</mo><msub><mi>η</mi><mn>2</mn></msub></mrow><mi>t</mi></msubsup><mi>h</mi></mrow></mrow><mo>=</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mrow><mi>a</mi><mo>+</mo><msub><mi>η</mi><mn>1</mn></msub></mrow></msubsup><mi>h</mi></mrow><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mi>a</mi><mo>+</mo><msub><mi>η</mi><mn>1</mn></msub></mrow><mrow><mi>t</mi><mo>-</mo><msub><mi>η</mi><mn>2</mn></msub></mrow></msubsup><msup><mi>f</mi><mo>′</mo></msup></mrow><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mi>t</mi><mo>-</mo><msub><mi>η</mi><mn>2</mn></msub></mrow><mi>t</mi></msubsup><mi>h</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S5.Ex46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex46.m1" class="ltx_Math" alttext="\left\|\int_{a}^{a+\eta_{1}}h\right\|\leq\eta_{1}\left\|h\right\|_{\infty},%
+\qquad\left\|\int_{t-\eta_{2}}^{t}h\right\|\leq\eta_{2}\left\|h\right\|_{%
+\infty}," display="block"><mrow><mrow><mrow><mrow><mo>∥</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mrow><mi>a</mi><mo>+</mo><msub><mi>η</mi><mn>1</mn></msub></mrow></msubsup><mi>h</mi></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><msub><mi>η</mi><mn>1</mn></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>h</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mo>∥</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mi>t</mi><mo>-</mo><msub><mi>η</mi><mn>2</mn></msub></mrow><mi>t</mi></msubsup><mi>h</mi></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><msub><mi>η</mi><mn>2</mn></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>h</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">hence as <math id="S5.p5.m15" class="ltx_Math" alttext="\eta_{1}\to 0^{+}" display="inline"><mrow><msub><mi>η</mi><mn>1</mn></msub><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></math> and <math id="S5.p5.m16" class="ltx_Math" alttext="\eta_{2}\to 0^{+}" display="inline"><mrow><msub><mi>η</mi><mn>2</mn></msub><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></math>,</p>
+<table id="S5.Ex47" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex47.m1" class="ltx_Math" alttext="\int_{a+\eta_{1}}^{t-\eta_{2}}f^{\prime}\to\int_{a}^{t}h," display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mi>a</mi><mo>+</mo><msub><mi>η</mi><mn>1</mn></msub></mrow><mrow><mi>t</mi><mo>-</mo><msub><mi>η</mi><mn>2</mn></msub></mrow></msubsup><msup><mi>f</mi><mo>′</mo></msup></mrow><mo>→</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup><mi>h</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and so it makes sense to write</p>
+<table id="S5.Ex48" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex48.m1" class="ltx_Math" alttext="\int_{a}^{t}f^{\prime}=\int_{a}^{t}h," display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup><msup><mi>f</mi><mo>′</mo></msup></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup><mi>h</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and thus for all <math id="S5.p5.m17" class="ltx_Math" alttext="t\in[a,b]" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><mi>a</mi><mo>,</mo><mi>b</mi><mo stretchy="false">]</mo></mrow></mrow></math>,</p>
+<table id="S5.Ex49" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex49.m1" class="ltx_Math" alttext="f(t)=f(a)+\int_{a}^{t}f^{\prime}." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>a</mi><mi>t</mi></msubsup><msup><mi>f</mi><mo>′</mo></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Mon Feb 14 08:20:32 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

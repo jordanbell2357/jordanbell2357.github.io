@@ -1,0 +1,198 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Meager sets of periodic functions}
+\author{Jordan Bell}
+\date{February 6, 2015}
+
+\maketitle
+
+The following is often useful.\footnote{Walter Rudin, {\em Real and Complex Analysis}, third ed.,
+p.~68, Theorem 3.12.}
+
+\begin{theorem}
+If $(X,\mu)$ is a measure space, $1 \leq p \leq \infty$, and $f_n \in L^p(\mu)$ is a sequence
+that converges in $L^p(\mu)$ to some $f \in L^p(\mu)$, then there is a subsequence
+of $f_n$ that converges pointwise almost everywhere to $f$.
+\end{theorem}
+\begin{proof}
+Assume that $1 \leq p < \infty$. For each $n$ there is some $a_n$ such that
+\[
+\norm{f_{a_n}-f}_p < 2^{-n}.
+\]
+Then
+\[
+\sum_{n=1}^\infty \norm{f_{a_n}-f}_p^p  < \sum_{n=1}^\infty 2^{-np}
+= \frac{2^{-p}}{1-2^{-p}}<\infty.
+\]
+
+Let $\epsilon>0$. We have
+\[
+\left\{x \in X: \limsup_{n \to \infty} |f_{a_n}(x)-f(x)|>\epsilon\right\}
+\subset \bigcap_{N=1}^\infty \bigcup_{n = N}^\infty \left\{x \in X: |f_{a_n}(x)-f(x)|>\epsilon\right\}.
+\]
+For any $N$, this gives, using Chebyshev's inequality, 
+\[
+\begin{split}
+&\mu\left(\left\{x \in X: \limsup_{n \to \infty} |f_{a_n}(x)-f(x)|>\epsilon\right\}\right)\\
+\leq&
+\sum_{n=N}^\infty \mu\left( \left\{x \in X: |f_{a_n}(x)-f(x)|>\epsilon\right\}\right)\\
+\leq& \epsilon^{-p}  \sum_{n=N}^\infty\norm{f_{a_n}-f}_p^p.
+\end{split}
+\]
+Because $\sum_{n=1}^\infty \norm{f_{a_n}-f}_p^p<\infty$,  we have
+$\sum_{n=N}^\infty\norm{f_{a_n}-f}_p^p \to 0$ as $N \to \infty$, which implies that
+\[
+\mu\left(\left\{x \in X: \limsup_{n \to \infty} |f_{a_n}(x)-f(x)|>\epsilon\right\}\right)
+=0.
+\]
+This is true for each $\epsilon>0$, hence
+\[
+\mu\left(\left\{x \in X: \limsup_{n \to \infty} |f_{a_n}(x)-f(x)|>0\right\}\right)=0,
+\]
+which means that for almost all $x \in X$,
+\[
+\lim_{n \to \infty} |f_{a_n}(x)-f(x)| =0.
+\]
+
+Assume that $p=\infty$. Let
+\[
+E_k = \{x \in X: |f_k(x)|>\norm{f_k}_\infty\}.
+\]
+The measure of each of these sets is $0$, so for
+\[
+E = \bigcup_k E_k
+\]
+we have $\mu(E)=0$.
+For $x \not \in E$,
+\[
+|f(x)-f_k(x)| \leq \norm{f-f_k}_\infty \to 0, \qquad k \to \infty,
+\]
+showing that for almost all $x \in X$, $f_k(x) \to f(x)$.
+\end{proof}
+
+
+
+The following results are in the pattern of $A$ being a strict subset of $X$ implying
+that $A$ is meager in $X$.
+
+We first work out two proofs of the following theorem.
+
+\begin{theorem}
+For $1 < p \leq \infty$, $L^p(\mathbb{T})$ is a meager subset of $L^1(\mathbb{T})$.
+\end{theorem}
+\begin{proof}
+For $n \geq 1$, let
+\[
+C_n = \left\{f \in L^1(\mathbb{T}): \norm{f}_p \leq n \right\}.
+\]
+Let $n \geq 1$. If a sequence $f_k \in C_n$ converges in $L^1(\mathbb{T})$ to some
+$f \in L^1(\mathbb{T})$, 
+then there is a subsequence
+$f_{a_k}$ of $f_k$
+such that for almost all $x \in \mathbb{T}$,
+$f_{a_k}(x) \to f(x)$, and so $f_{a_k}(x)^p \to f(x)^p$.
+Applying the dominated convergence theorem gives
+\[
+\frac{1}{2\pi} \int_{\mathbb{T}} |f(x)|^p dx 
+= \lim_{k \to \infty} \frac{1}{2\pi} \int_{\mathbb{T}} |f_{a_k}(x)|^p dx
+=\lim_{k \to \infty} \norm{f_{a_k}}_p^p
+\leq n^p,
+\]
+hence $\norm{f}_p \leq n$, showing that $f \in C_n$. Therefore, $C_n$ is a closed subset of $L^1(\mathbb{T})$
+On the other hand,
+let $f \in C_n$ and
+ let $g \in L^1(\mathbb{T}) \setminus L^p(\mathbb{T})$. 
+Then $f+\frac{1}{k}g \to f$ in $L^1(\mathbb{T})$, and for each $k$ we have
+$f+\frac{1}{k}g \not \in C_n$, as that would imply 
+$g \in L^p(\mathbb{T})$.
+This shows that $f$ does not belong to the interior of $C_n$. 
+Because $C_n$ is closed and has empty interior, it is nowhere dense. 
+Therefore
+\[
+L^p(\mathbb{T}) = \bigcup_{n=1}^\infty  \left\{f \in L^1(\mathbb{T}): \norm{f}_p \leq n \right\}
+\]
+is meager in $L^1(\mathbb{T})$.
+\end{proof}
+
+
+\begin{proof}
+The open mapping theorem
+tells us that if $X$ is an $F$-space, $Y$ is a topological vector space,
+$\Lambda:X \to Y$ is continuous and linear, and $\Lambda(X)$ is not meager
+in $Y$, then $\Lambda(X)=Y$, $\Lambda$ is an open mapping, and $Y$ is an $F$-space.\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~48, Theorem 2.11.}
+
+Let $j:L^p(\mathbb{T}) \to L^1(\mathbb{T})$ be the inclusion map.
+For $f \in L^p(\mathbb{T})$,
+\[
+\norm{j(f)}_1  = \norm{f}_1 \leq \norm{f}_p,
+\]
+showing that the inclusion map is continuous. On the other hand, 
+$j$ is not onto, so the open mapping theorem tells us that $j(L^p(\mathbb{T}))=L^p(\mathbb{T})$ is meager in $L^1(\mathbb{T})$.
+\end{proof}
+
+
+Suppose that $X$ is a topological vector space, that $Y$ is an $F$-space, and that $\Lambda_n$ is a sequence of continuous linear maps
+$X \to Y$. Let $L$ be the set of those $x \in X$ such that
+\[
+\Lambda x = \lim_{n \to \infty} \Lambda_n x
+\]
+exists. It is a consequence of the uniform boundedness principle that if $L$ is not meager in $X$, then $L=X$ and $\Lambda:X \to Y$ is continuous.\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~45, Theorem 2.7.}
+
+For $n \geq 1$, define $\Lambda_n:L^2(\mathbb{T}) \to \mathbb{C}$ by
+\[
+\Lambda_n f = \sum_{|k| \leq n} \hat{f}(k),
+\qquad f \in L^1(\mathbb{T}).
+\]
+Define
+\[
+L=\left\{ f \in L^2(\mathbb{T}): \textrm{$\lim_{n \to \infty} \Lambda_n f$ exists}\right\}.
+\]
+The sequence $t \mapsto \sum_{k=1}^n \frac{e^{ikt}}{k}$ is a Cauchy sequence in $L^2(\mathbb{T})$, 
+hence converges to some $f \in L^2(\mathbb{T})$, which satisfies
+\[
+\hat{f}(k) =\begin{cases}
+ \frac{1}{k} & k \geq 1\\
+ 0&k \leq 0.
+ \end{cases}
+\]
+Then
+\[
+\Lambda_n f = \sum_{k=1}^n \frac{1}{k} \to \infty, \qquad n \to \infty,
+\]
+meaning that $f \in L^2(\mathbb{T}) \setminus L$. This shows that
+$L \neq L^2(\mathbb{T})$. Therefore,  the above consequence of the uniform boundedness principle
+tells us that
+$L$ is meager. 
+
+
+
+\end{document}

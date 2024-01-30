@@ -1,0 +1,299 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\HS}{\ensuremath\mathrm{HS}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}}
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The inclusion map from the integers to the reals
+and universal properties of the floor and ceiling functions}
+\author{Jordan Bell}
+\date{April 29, 2016}
+
+\maketitle
+
+
+\section{Categories}
+If $X$ is a set, by a partial order on $X$ we mean a binary relation $\leq$ on $X$ that is reflexive, antisymmetric, and transitive, and we call
+$(X,\leq)$ a \textbf{poset}. 
+If $(X,\leq)$ is a poset, we define it to be a category whose objects are the elements of $X$, and
+for $x,y \in X$, 
+\[
+\Hom(x,y) = \begin{cases}
+\{(x,y)\}&x \leq y\\
+\emptyset&\neg (x \leq y).
+\end{cases}
+\]
+In particular, $\id_x = (x,x)$. 
+
+Let $U:\mathbb{Z} \to \mathbb{R}$ be the inclusion map. 
+If $(j,k) \in \Hom(j,k)$, define
+$U(j,k) = (Uj,Uk) \in \Hom(Uj,Uk)$. 
+\[
+U\id_j = U(j,j) = (Uj,Uj) = \id_{Uj}.
+\]
+If $(j,k) \in \Hom(j,k)$ and $(k,l) \in \Hom(k,l)$, then 
+$(k,l) \circ (j,k) = (j,l)$ and 
+\[
+U(k,l) \circ U(j,k)  =(Uk,Ul) \circ (Uj,Uk)   =  (Uj,Ul) = U(j,l)
+=U((j,l) \circ (j,k)).
+\] 
+This shows that $U:(\mathbb{Z},\leq) \to (\mathbb{R},\leq)$ is a functor.
+
+
+
+
+\section{Galois connections}
+If $(A,\leq)$ and $(B,\leq)$ are posets, 
+a function $G:A \to B$ is said to be \textbf{order-preserving} if 
+$a \leq a'$ implies $G(a) \leq G(a')$. 
+A \textbf{Galois connection from $A$ to $B$}
+is an order-preserving function $G:A \to B$ and an order-preserving function $H:B \to A$
+such that
+\[
+\textrm{$G(a) \leq b$ if and only if $a \leq H(b)$},\qquad a \in A,\quad b \in B.
+\]
+We say that $G$ is the \textbf{left-adjoint of $H$} and that
+$H$ is the \textbf{right-adjoint of $G$}.
+
+
+Let $I:\mathbb{Z} \to \mathbb{R}$ be the inclusion map. 
+Define $F:\mathbb{R} \to \mathbb{Z}$ by $F(x)=\lfloor x \rfloor$.
+For $n \in \mathbb{Z}$ and $x \in \mathbb{R}$,
+suppose $I(n) \leq x$. Then $F(I(n)) \leq F(x)$. But $F(I(n)) = n$, so
+$n \leq F(x)$. Suppose $n \leq F(x)$. Then $I(n) \leq I(F(x)) \leq x$. 
+Therefore $F:\mathbb{R} \to \mathbb{Z}$, $F(x) =\lfloor x \rfloor$ is the right-adjoint of $I:\mathbb{Z} \to \mathbb{R}$:\footnote{See
+Roland Backhouse, {\em Galois Connections and Fixed Point Calculus},
+\url{http://www.cs.nott.ac.uk/~psarb2/G53PAL/FPandGC.pdf}, p.~14;
+Samson Abramsky and Nikos Tzevelekos, {\em Introduction to Categories and Categorical Logic},
+\url{http://arxiv.org/abs/1102.1313},
+p.~44, \S 1.5.1.}
+\[
+I(n) \leq x \iff n \leq F(x),\qquad  n \in \mathbb{Z},\quad x \in \mathbb{R}.
+\]
+
+
+Define $C:\mathbb{R} \to \mathbb{Z}$ by  $C(x)=\lceil x \rceil$.
+For $n \in \mathbb{Z}$ and $x \in \mathbb{R}$,
+suppose $C(x) \leq n$. Then $I(C(x)) \leq I(n)$. But $I(C(x)) \geq x$, so
+$x \leq I(n)$. Suppose $x \leq I(n)$. Then
+$C(x) \leq C(I(n))$. But 
+$C(I(n))=n$, so
+$C(x) \leq n$. Therefore 
+$C:\mathbb{R} \to \mathbb{Z}$, $C(x) = \lceil x \rceil$ is the left-adjoint of $I:\mathbb{Z} \to \mathbb{R}$:
+\[
+C(x) \leq n \iff x \leq I(n),\qquad x \in \mathbb{R},\quad n \in \mathbb{Z}.
+\]
+
+
+\begin{lemma}
+For $x \geq 0$,
+\[
+\lfloor \sqrt{\lfloor x \rfloor} \rfloor = \lfloor \sqrt{x} \rfloor.
+\]
+\end{lemma}
+\begin{proof}
+For $k \in \mathbb{Z}_{\geq 0}$ and $y \in \mathbb{R}_{\geq 0}$,
+\begin{align*}
+k \leq \lfloor \sqrt{\lfloor y \rfloor} \rfloor&\iff I(k) \leq \sqrt{\lfloor y \rfloor}\\
+&\iff k^2 \leq \lfloor y \rfloor\\
+&\iff k^2 \leq y\\
+&\iff k \leq \sqrt{y}\\
+&\iff k \leq \lfloor \sqrt{y} \rfloor.
+\end{align*}
+\end{proof}
+
+
+\begin{lemma}
+If $x \in \mathbb{R}$ and $n \in \mathbb{Z}_{\geq 1}$, then
+\[
+\left\lfloor \frac{\lfloor x \rfloor}{n} \right\rfloor = \left\lfloor \frac{x}{n} \right\rfloor.
+\]
+\end{lemma}
+\begin{proof}
+For $k \in \mathbb{Z}$,
+\begin{align*}
+k\leq F(I(F(x))/I(n))&\iff I(k) \leq I(F(x))/I(n)\\
+&\iff I(k) I(n) \leq I(F(x))\\
+&\iff I(kn) \leq I(F(x))\\
+&\iff kn \leq F(x)\\
+&\iff I(kn) \leq x\\
+&\iff I(k) \leq x/I(n)\\
+&\iff k \leq F(x/I(n)).
+\end{align*}
+This means that $F(I(F(x))/I(n)) = F(x/I(n))$.
+\end{proof}
+
+
+
+\begin{lemma}
+If $n \in \mathbb{Z}_{\geq 1}$ and $m \in \mathbb{Z}$, then
+\[
+\left\lceil \frac{m}{n} \right\rceil  = \left \lfloor \frac{m+n-1}{n} \right \rfloor.
+\]
+\end{lemma}
+\begin{proof}
+For $k \in \mathbb{Z}$,
+\begin{align*}
+k\leq F(I(m+n-1)/I(n))&\iff I(k) \leq I(m+n-1)/I(n)\\
+&\iff I(k) I(n) \leq I(m+n-1)\\
+&\iff kn \leq m+n-1\\
+&\iff kn-n+1 \leq m\\
+&\iff kn-n < m\\
+&\iff I(k-1) < I(m)/I(n)\\
+&\iff k-1< C(I(m)/I(n))\\
+&\iff k \leq C(I(m)/I(n)).
+\end{align*}
+This means 
+\[
+F(I(m+n-1)/I(n)) = C(I(m)/I(n)).
+\]
+\end{proof}
+
+
+
+
+\section{The Euclidean algorithm and continued fractions}
+Let $a,b \in \mathbb{Z}_{\geq 1}$, $a > b$. 
+Let 
+\[
+v_0=a, \quad v_1=b.
+\]  
+Let
+\[
+a_1=\lfloor v_0/v_1 \rfloor,\quad v_2 = v_0-a_1v_1.
+\]
+For $m \geq 2$, if $v_m \neq 0$ then let
+\[
+a_m = \lfloor v_{m-1}/v_m \rfloor,\quad v_{m+1} = v_{m-1} - a_mv_m.
+\] 
+Then $0 \leq v_{m+1} < v_m$.\footnote{See Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of
+Continued Fractions}, p.~1, Chapter 1.}
+
+For example, let $a=83$, $b=14$. Then
+\[
+v_0=83,\quad v_1=14.
+\]
+Then 
+\[
+a_1=\lfloor 83/14 \rfloor = 5,\quad 
+v_2 = 83 - 5 \cdot 14 = 13.
+\] 
+Then
+\[
+a_2 = \lfloor v_1/v_2 \rfloor = 14/13 \rfloor = 1,\quad 
+v_3 = v_1 - a_2 v_2 = 14 - 1 \cdot 13 = 1.
+\]
+Then
+\[
+a_3 = \lfloor v_2/v_3 \rfloor = \lfloor 13/1 \rfloor = 13,\quad
+v_4 = v_2 - a_3 v_3 = 13 - 13 \cdot 1 = 0.
+\]
+As $v_3=1$ and $v_4=0$,
+\[
+\gcd(83,14) = 1.
+\]
+Written as a continued fraction, we get
+\[
+\frac{14}{83} = [0;5,1,13].
+\]
+
+
+
+For example, let $a=168$, $b=43$. Then
+\[
+v_0=168,\quad v_1=43.
+\]
+Then
+\[
+a_1=\lfloor 168/43 \rfloor = 3,\quad
+v_2 = v_0- a_1v_1 = 168 - 3 \cdot 43 = 39.
+\]
+Then
+\[
+a_2 = \lfloor 43/39 \rfloor = 1,\quad
+v_3 = v_1 - a_2 v_2 = 43 - 1 \cdot 39 = 4.
+\]
+Then
+\[
+a_3 = \lfloor v_2 / v_3 \rfloor = \lfloor 39/4 \rfloor = 9,\quad
+v_4 = v_2 - a_3 v_3 = 39 - 9 \cdot 4 = 3.
+\]
+Then
+\[
+a_4 = \lfloor v_3/v_4 \rfloor = \lfloor 4/3 \rfloor = 1,\quad 
+v_5 = v_3 - a_4 v_4 = 4 - 1 \cdot 3 = 1.
+\]
+Then
+\[
+a_5 = \lfloor v_4/v_5 \rfloor = \lfloor 3/1 \rfloor = 3,\quad
+v_6 = v_4 - a_5v_5 = 3 - 3 \cdot 1 = 0.
+\]
+As $v_5=1$ and $v_6=0$,
+\[
+\gcd(168,43) = 1.
+\]
+Written as a continued fraction, we get
+\[
+\frac{43}{168} = [0;3,1,9,1,3].
+\]
+
+
+
+For example, let $a=1463$ and $b=84$. Then
+\[
+v_0=1463,\quad v_1 = 84.
+\]
+Then
+\[
+a_1 = \lfloor 1463/84 \rfloor = 17,\quad v_2 = 1463 - 17\cdot 84 = 35.
+\]
+Then
+\[
+a_2 = \lfloor 84/35 \rfloor = 2,\quad v_3 = 84 - 2\cdot 35 = 14.
+\]
+Then
+\[
+a_3 = \lfloor 35/14 \rfloor = 2,\quad v_4 = 35 - 2\cdot 14 = 7.
+\]
+Then
+\[
+a_4 = \lfloor 14/7 \rfloor 2,\quad v_5 = 14 - 2\cdot 7 = 0.
+\]
+As $v_4=7$ and $v_5=0$, 
+\[
+\gcd(1463,84) = 7.
+\]
+Written as a continued fraction, we get
+\[
+\frac{84}{1463} = [0;17,2,2,2].
+\]
+
+
+
+\end{document}

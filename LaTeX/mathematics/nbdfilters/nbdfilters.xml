@@ -1,0 +1,1572 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/mnt/c/Users/Jordan/Documents/GitHub/LaTeX/latex_originals/nbdfilters"?>
+<?latexml class="article"?>
+<?latexml package="amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm"?>
+<?latexml package="hyperref" options="draft"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Topological spaces and neighborhood filters</title>
+  <creator role="author">
+    <personname>Jordan Bell</personname>
+  </creator>
+  <date role="creation">April 3, 2014</date>
+  <para xml:id="p1">
+    <p>If <Math mode="inline" tex="X" text="X" xml:id="p1.m1">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> is a set, a <text font="italic">filter</text> on <Math mode="inline" tex="X" text="X" xml:id="p1.m2">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> is a set <Math mode="inline" tex="\mathcal{F}" text="F" xml:id="p1.m3">
+        <XMath>
+          <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+        </XMath>
+      </Math> of subsets of <Math mode="inline" tex="X" text="X" xml:id="p1.m4">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> such that <Math mode="inline" tex="\emptyset\not\in\mathcal{F}" text="empty-set not-element-of F" xml:id="p1.m5">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="not-element-of" name="not-in" role="RELOP">∉</XMTok>
+            <XMTok meaning="empty-set" name="emptyset" role="ID">∅</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>; if <Math mode="inline" tex="A,B\in\mathcal{F}" text="list@(A, B) element-of F" xml:id="p1.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="list"/>
+                <XMRef idref="p1.m6.1"/>
+                <XMRef idref="p1.m6.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok font="italic" role="UNKNOWN" xml:id="p1.m6.1">A</XMTok>
+                <XMTok role="PUNCT">,</XMTok>
+                <XMTok font="italic" role="UNKNOWN" xml:id="p1.m6.2">B</XMTok>
+              </XMWrap>
+            </XMDual>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="A\cap B\in\mathcal{F}" text="A intersection B element-of F" xml:id="p1.m7">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok meaning="intersection" name="cap" role="ADDOP">∩</XMTok>
+              <XMTok font="italic" role="UNKNOWN">A</XMTok>
+              <XMTok font="italic" role="UNKNOWN">B</XMTok>
+            </XMApp>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>;
+<!--  %**** nbdfilters.tex Line 25 **** -->if <Math mode="inline" tex="A\subseteq X" text="A subset-of-or-equals X" xml:id="p1.m8">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and there is some <Math mode="inline" tex="B\in\mathcal{F}" text="B element-of F" xml:id="p1.m9">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">B</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> such that <Math mode="inline" tex="B\subseteq A" text="B subset-of-or-equals A" xml:id="p1.m10">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="italic" role="UNKNOWN">B</XMTok>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, then <Math mode="inline" tex="A\in\mathcal{F}" text="A element-of F" xml:id="p1.m11">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. For example, if <Math mode="inline" tex="x\in X" text="x element-of X" xml:id="p1.m12">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then the set of all subsets of <Math mode="inline" tex="X" text="X" xml:id="p1.m13">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> that include
+<Math mode="inline" tex="x" text="x" xml:id="p1.m14">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math> is a filter on <Math mode="inline" tex="X" text="X" xml:id="p1.m15">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math>.<note mark="1" role="footnote" xml:id="footnote1"><tags>
+          <tag>1</tag>
+          <tag role="autoref">footnote 1</tag>
+          <tag role="refnum">1</tag>
+          <tag role="typerefnum">footnote 1</tag>
+        </tags>cf. François Trèves, <text font="italic">Topological Vector Spaces, Distributions and Kernels</text>, p. 6.</note>
+A <text font="italic">basis</text> for the filter <Math mode="inline" tex="\mathcal{F}" text="F" xml:id="p1.m16">
+        <XMath>
+          <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+        </XMath>
+      </Math> is a subset <Math mode="inline" tex="\mathcal{B}\subseteq\mathcal{F}" text="B subset-of-or-equals F" xml:id="p1.m17">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">B</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> such that if <Math mode="inline" tex="A\in\mathcal{F}" text="A element-of F" xml:id="p1.m18">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then there is some <Math mode="inline" tex="B\in\mathcal{B}" text="B element-of B" xml:id="p1.m19">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">B</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">B</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> such that
+<Math mode="inline" tex="B\subseteq A" text="B subset-of-or-equals A" xml:id="p1.m20">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="italic" role="UNKNOWN">B</XMTok>
+            <XMTok font="italic" role="UNKNOWN">A</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>.</p>
+  </para>
+  <para xml:id="p2">
+    <p>If <Math mode="inline" tex="X" text="X" xml:id="p2.m1">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> is a set, a <text font="italic">topology</text> on <Math mode="inline" tex="X" text="X" xml:id="p2.m2">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> is a set <Math mode="inline" tex="\mathcal{O}" text="O" xml:id="p2.m3">
+        <XMath>
+          <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+        </XMath>
+      </Math> of subsets of <Math mode="inline" tex="X" text="X" xml:id="p2.m4">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> such that: <Math mode="inline" tex="\emptyset,X\in\mathcal{O}" text="list@(empty-set, X) element-of O" xml:id="p2.m5">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="list"/>
+                <XMRef idref="p2.m5.1"/>
+                <XMRef idref="p2.m5.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok meaning="empty-set" name="emptyset" role="ID" xml:id="p2.m5.1">∅</XMTok>
+                <XMTok role="PUNCT">,</XMTok>
+                <XMTok font="italic" role="UNKNOWN" xml:id="p2.m5.2">X</XMTok>
+              </XMWrap>
+            </XMDual>
+            <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>;
+if <Math mode="inline" tex="U_{\alpha}\in\mathcal{O}" text="U _ alpha element-of O" xml:id="p2.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+            </XMApp>
+            <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> for all <Math mode="inline" tex="\alpha\in I" text="alpha element-of I" xml:id="p2.m7">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" name="alpha" role="UNKNOWN">α</XMTok>
+            <XMTok font="italic" role="UNKNOWN">I</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, then <Math mode="inline" tex="\bigcup_{\alpha\in I}U_{\alpha}\in\mathcal{O}" text="(union _ (alpha element-of I))@(U _ alpha) element-of O" xml:id="p2.m8">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok fontsize="160%" mathstyle="text" meaning="union" name="bigcup" role="SUMOP" scriptpos="post">⋃</XMTok>
+                <XMApp>
+                  <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                  <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">I</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">U</XMTok>
+                <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+              </XMApp>
+            </XMApp>
+            <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>; if <Math mode="inline" tex="I" text="I" xml:id="p2.m9">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">I</XMTok>
+        </XMath>
+      </Math> is finite and
+<Math mode="inline" tex="U_{\alpha}\in\mathcal{O}" text="U _ alpha element-of O" xml:id="p2.m10">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+            </XMApp>
+            <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> for all <Math mode="inline" tex="\alpha\in I" text="alpha element-of I" xml:id="p2.m11">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" name="alpha" role="UNKNOWN">α</XMTok>
+            <XMTok font="italic" role="UNKNOWN">I</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, then <Math mode="inline" tex="\bigcap_{\alpha\in I}U_{\alpha}\in\mathcal{O}" text="(intersection _ (alpha element-of I))@(U _ alpha) element-of O" xml:id="p2.m12">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok fontsize="160%" mathstyle="text" meaning="intersection" name="bigcap" role="SUMOP" scriptpos="post">⋂</XMTok>
+                <XMApp>
+                  <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                  <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">I</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">U</XMTok>
+                <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+              </XMApp>
+            </XMApp>
+            <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. If <Math mode="inline" tex="N\subseteq X" text="N subset-of-or-equals X" xml:id="p2.m13">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="x\in X" text="x element-of X" xml:id="p2.m14">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, we say that
+<Math mode="inline" tex="N" text="N" xml:id="p2.m15">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">N</XMTok>
+        </XMath>
+      </Math> is a <text font="italic">neighborhood</text> of <Math mode="inline" tex="x" text="x" xml:id="p2.m16">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math> if there is some <Math mode="inline" tex="U\in\mathcal{O}" text="U element-of O" xml:id="p2.m17">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> such that <Math mode="inline" tex="x\in U\subseteq N" text="x element-of U subset-of-or-equals N" xml:id="p2.m18">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="multirelation"/>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. In particular, an open set is a neighborhood of every element of itself.
+A <text font="italic">basis</text> for a topology <Math mode="inline" tex="\mathcal{O}" text="O" xml:id="p2.m19">
+        <XMath>
+          <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+        </XMath>
+      </Math> is a subset <Math mode="inline" tex="\mathcal{B}" text="B" xml:id="p2.m20">
+        <XMath>
+          <XMTok font="caligraphic" role="UNKNOWN">B</XMTok>
+        </XMath>
+      </Math> of <Math mode="inline" tex="\mathcal{O}" text="O" xml:id="p2.m21">
+        <XMath>
+          <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+        </XMath>
+      </Math> such that if <Math mode="inline" tex="x\in X" text="x element-of X" xml:id="p2.m22">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then there is some <Math mode="inline" tex="B\in\mathcal{B}" text="B element-of B" xml:id="p2.m23">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">B</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">B</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> such that <Math mode="inline" tex="x\in B" text="x element-of B" xml:id="p2.m24">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">B</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, and such that
+if <Math mode="inline" tex="B_{1},B_{2}\in\mathcal{B}" text="list@(B _ 1, B _ 2) element-of B" xml:id="p2.m25">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="list"/>
+                <XMRef idref="p2.m25.1"/>
+                <XMRef idref="p2.m25.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMApp xml:id="p2.m25.1">
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                  <XMTok font="italic" role="UNKNOWN">B</XMTok>
+                  <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMTok role="PUNCT">,</XMTok>
+                <XMApp xml:id="p2.m25.2">
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                  <XMTok font="italic" role="UNKNOWN">B</XMTok>
+                  <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+              </XMWrap>
+            </XMDual>
+            <XMTok font="caligraphic" role="UNKNOWN">B</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="x\in B_{1}\cap B_{2}" text="x element-of B _ 1 intersection B _ 2" xml:id="p2.m26">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMApp>
+              <XMTok meaning="intersection" name="cap" role="ADDOP">∩</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">B</XMTok>
+                <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+              </XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">B</XMTok>
+                <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, then there is some <Math mode="inline" tex="B_{3}\in\mathcal{B}" text="B _ 3 element-of B" xml:id="p2.m27">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">B</XMTok>
+              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+            </XMApp>
+            <XMTok font="caligraphic" role="UNKNOWN">B</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> such that <Math mode="inline" tex="x\in B_{3}\subseteq B_{1}\cap B_{2}" text="x element-of B _ 3 subset-of-or-equals B _ 1 intersection B _ 2" xml:id="p2.m28">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="multirelation"/>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">B</XMTok>
+              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+            </XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMApp>
+              <XMTok meaning="intersection" name="cap" role="ADDOP">∩</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">B</XMTok>
+                <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+              </XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">B</XMTok>
+                <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>.<note mark="2" role="footnote" xml:id="footnote2"><tags>
+          <tag>2</tag>
+          <tag role="autoref">footnote 2</tag>
+          <tag role="refnum">2</tag>
+          <tag role="typerefnum">footnote 2</tag>
+        </tags>cf.
+James R. Munkres, <text font="italic">Topology</text>, second ed., p. 78.</note></p>
+  </para>
+  <para xml:id="p3">
+    <p>On the one hand,
+suppose that <Math mode="inline" tex="X" text="X" xml:id="p3.m1">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> is a topological space with topology <Math mode="inline" tex="\mathcal{O}" text="O" xml:id="p3.m2">
+        <XMath>
+          <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+        </XMath>
+      </Math>. For each <Math mode="inline" tex="x\in X" text="x element-of X" xml:id="p3.m3">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, let <Math mode="inline" tex="\mathcal{F}_{x}" text="F _ x" xml:id="p3.m4">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> be the set of neighborhoods of <Math mode="inline" tex="x" text="x" xml:id="p3.m5">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math>; we call
+<Math mode="inline" tex="\mathcal{F}_{x}" text="F _ x" xml:id="p3.m6">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> the <text font="italic">neighborhood filter</text> of <Math mode="inline" tex="x" text="x" xml:id="p3.m7">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math>. It is straightforward to verify that
+<Math mode="inline" tex="\mathcal{F}_{x}" text="F _ x" xml:id="p3.m8">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> is a filter for each <Math mode="inline" tex="x\in X" text="x element-of X" xml:id="p3.m9">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. If <Math mode="inline" tex="N\in\mathcal{F}_{x}" text="N element-of F _ x" xml:id="p3.m10">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, there is some <Math mode="inline" tex="U\in\mathcal{F}_{x}" text="U element-of F _ x" xml:id="p3.m11">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> that is open, and for each <Math mode="inline" tex="y\in U" text="y element-of U" xml:id="p3.m12">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">y</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> we have <Math mode="inline" tex="N\in\mathcal{F}_{y}" text="N element-of F _ y" xml:id="p3.m13">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>.</p>
+  </para>
+  <para xml:id="p4">
+    <p>On the other hand, suppose <Math mode="inline" tex="X" text="X" xml:id="p4.m1">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> is a set, for each <Math mode="inline" tex="x\in X" text="x element-of X" xml:id="p4.m2">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> there is some filter <Math mode="inline" tex="\mathcal{F}_{x}" text="F _ x" xml:id="p4.m3">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, and: if <Math mode="inline" tex="N\in\mathcal{F}_{x}" text="N element-of F _ x" xml:id="p4.m4">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="x\in N" text="x element-of N" xml:id="p4.m5">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>; if <Math mode="inline" tex="N\in\mathcal{F}_{x}" text="N element-of F _ x" xml:id="p4.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> then there is some
+<Math mode="inline" tex="U\in\mathcal{F}_{x}" text="U element-of F _ x" xml:id="p4.m7">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> such that if <Math mode="inline" tex="y\in U" text="y element-of U" xml:id="p4.m8">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">y</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="N\in\mathcal{F}_{y}" text="N element-of F _ y" xml:id="p4.m9">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. We define <Math mode="inline" tex="\mathcal{O}" text="O" xml:id="p4.m10">
+        <XMath>
+          <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+        </XMath>
+      </Math> in the following way: The elements <Math mode="inline" tex="U" text="U" xml:id="p4.m11">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">U</XMTok>
+        </XMath>
+      </Math> of <Math mode="inline" tex="\mathcal{O}" text="O" xml:id="p4.m12">
+        <XMath>
+          <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+        </XMath>
+      </Math> are those subsets
+of <Math mode="inline" tex="X" text="X" xml:id="p4.m13">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> such that if <Math mode="inline" tex="x\in U" text="x element-of U" xml:id="p4.m14">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="U\in\mathcal{F}_{x}" text="U element-of F _ x" xml:id="p4.m15">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. Vacuously, <Math mode="inline" tex="\emptyset\in\mathcal{O}" text="empty-set element-of O" xml:id="p4.m16">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok meaning="empty-set" name="emptyset" role="ID">∅</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, and it is immediate that <Math mode="inline" tex="X\in\mathcal{O}" text="X element-of O" xml:id="p4.m17">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. If <Math mode="inline" tex="U_{\alpha}\in\mathcal{O}" text="U _ alpha element-of O" xml:id="p4.m18">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+            </XMApp>
+            <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>,
+<Math mode="inline" tex="\alpha\in I" text="alpha element-of I" xml:id="p4.m19">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" name="alpha" role="UNKNOWN">α</XMTok>
+            <XMTok font="italic" role="UNKNOWN">I</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="x\in U=\bigcup_{\alpha\in I}U_{\alpha}" text="x element-of U = (union _ (alpha element-of I))@(U _ alpha)" xml:id="p4.m20">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="multirelation"/>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok fontsize="160%" mathstyle="text" meaning="union" name="bigcup" role="SUMOP" scriptpos="post">⋃</XMTok>
+                <XMApp>
+                  <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                  <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">I</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">U</XMTok>
+                <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+              </XMApp>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> then there is at least one <Math mode="inline" tex="\alpha\in I" text="alpha element-of I" xml:id="p4.m21">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" name="alpha" role="UNKNOWN">α</XMTok>
+            <XMTok font="italic" role="UNKNOWN">I</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> such that <Math mode="inline" tex="x\in U_{\alpha}" text="x element-of U _ alpha" xml:id="p4.m22">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> and so <Math mode="inline" tex="U_{\alpha}\in\mathcal{F}_{x}" text="U _ alpha element-of F _ x" xml:id="p4.m23">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+            </XMApp>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. As <Math mode="inline" tex="x\in U_{\alpha}\subseteq U" text="x element-of U _ alpha subset-of-or-equals U" xml:id="p4.m24">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="multirelation"/>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+            </XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and
+<Math mode="inline" tex="\mathcal{F}_{x}" text="F _ x" xml:id="p4.m25">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> is a filter, we get <Math mode="inline" tex="U\in\mathcal{F}_{x}" text="U element-of F _ x" xml:id="p4.m26">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. If <Math mode="inline" tex="I" text="I" xml:id="p4.m27">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">I</XMTok>
+        </XMath>
+      </Math> is finite and <Math mode="inline" tex="U_{\alpha}\in I" text="U _ alpha element-of I" xml:id="p4.m28">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+            </XMApp>
+            <XMTok font="italic" role="UNKNOWN">I</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, <Math mode="inline" tex="\alpha\in I" text="alpha element-of I" xml:id="p4.m29">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" name="alpha" role="UNKNOWN">α</XMTok>
+            <XMTok font="italic" role="UNKNOWN">I</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, let <Math mode="inline" tex="U=\bigcap_{\alpha\in I}U_{\alpha}" text="U = (intersection _ (alpha element-of I))@(U _ alpha)" xml:id="p4.m30">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok fontsize="160%" mathstyle="text" meaning="intersection" name="bigcap" role="SUMOP" scriptpos="post">⋂</XMTok>
+                <XMApp>
+                  <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                  <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">I</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">U</XMTok>
+                <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+              </XMApp>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>.
+If <Math mode="inline" tex="x\in U" text="x element-of U" xml:id="p4.m31">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, then for each <Math mode="inline" tex="\alpha\in I" text="alpha element-of I" xml:id="p4.m32">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" name="alpha" role="UNKNOWN">α</XMTok>
+            <XMTok font="italic" role="UNKNOWN">I</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, <Math mode="inline" tex="x\in U_{\alpha}" text="x element-of U _ alpha" xml:id="p4.m33">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, and hence for each <Math mode="inline" tex="\alpha\in I" text="alpha element-of I" xml:id="p4.m34">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" name="alpha" role="UNKNOWN">α</XMTok>
+            <XMTok font="italic" role="UNKNOWN">I</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, <Math mode="inline" tex="U_{\alpha}\in\mathcal{F}_{x}" text="U _ alpha element-of F _ x" xml:id="p4.m35">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok font="italic" fontsize="70%" name="alpha" role="UNKNOWN">α</XMTok>
+            </XMApp>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>.
+<!--  %**** nbdfilters.tex Line 50 **** -->As <Math mode="inline" tex="\mathcal{F}_{x}" text="F _ x" xml:id="p4.m36">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> is a filter, the intersection of any two elements of it is an element of it, and thus the intersection of finitely many elements of it is an element of it, so <Math mode="inline" tex="U\in\mathcal{F}_{x}" text="U element-of F _ x" xml:id="p4.m37">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, showing that <Math mode="inline" tex="U\in\mathcal{O}" text="U element-of O" xml:id="p4.m38">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. This shows that <Math mode="inline" tex="\mathcal{O}" text="O" xml:id="p4.m39">
+        <XMath>
+          <XMTok font="caligraphic" role="UNKNOWN">O</XMTok>
+        </XMath>
+      </Math> is a topology. We will show that a set <Math mode="inline" tex="N" text="N" xml:id="p4.m40">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">N</XMTok>
+        </XMath>
+      </Math> is a neighborhood of a point <Math mode="inline" tex="x" text="x" xml:id="p4.m41">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math> if and only
+if <Math mode="inline" tex="N\in\mathcal{F}_{x}" text="N element-of F _ x" xml:id="p4.m42">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>.</p>
+  </para>
+  <para xml:id="p5">
+    <p>If <Math mode="inline" tex="N\in\mathcal{F}_{x}" text="N element-of F _ x" xml:id="p5.m1">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, then let
+<Math mode="inline" tex="V=\{y\in N:N\in\mathcal{F}_{y}\}" text="V = conditional-set@(y element-of N, N element-of F _ y)" xml:id="p5.m2">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="conditional-set"/>
+                <XMRef idref="p5.m2.1"/>
+                <XMRef idref="p5.m2.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">{</XMTok>
+                <XMApp xml:id="p5.m2.1">
+                  <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">y</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">N</XMTok>
+                </XMApp>
+                <XMTok name="colon" role="METARELOP">:</XMTok>
+                <XMApp xml:id="p5.m2.2">
+                  <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">N</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">}</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math>. There is some <Math mode="inline" tex="U_{0}\in\mathcal{F}_{x}" text="U _ 0 element-of F _ x" xml:id="p5.m3">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+            </XMApp>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> such that if <Math mode="inline" tex="y\in U_{0}" text="y element-of U _ 0" xml:id="p5.m4">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">y</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="N\in\mathcal{F}_{y}" text="N element-of F _ y" xml:id="p5.m5">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. If <Math mode="inline" tex="y\in U_{0}" text="y element-of U _ 0" xml:id="p5.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">y</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="N\in\mathcal{F}_{y}" text="N element-of F _ y" xml:id="p5.m7">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, which implies
+that <Math mode="inline" tex="y\in N" text="y element-of N" xml:id="p5.m8">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">y</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, and hence <Math mode="inline" tex="U_{0}\subseteq V" text="U _ 0 subset-of-or-equals V" xml:id="p5.m9">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+            </XMApp>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. <Math mode="inline" tex="U_{0}\subseteq V" text="U _ 0 subset-of-or-equals V" xml:id="p5.m10">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+            </XMApp>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="U_{0}\in\mathcal{F}_{x}" text="U _ 0 element-of F _ x" xml:id="p5.m11">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">U</XMTok>
+              <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+            </XMApp>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> imply that
+<Math mode="inline" tex="V\in\mathcal{F}_{x}" text="V element-of F _ x" xml:id="p5.m12">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, which implies that <Math mode="inline" tex="x\in V" text="x element-of V" xml:id="p5.m13">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>.
+If <Math mode="inline" tex="y\in V" text="y element-of V" xml:id="p5.m14">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">y</XMTok>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="N\in\mathcal{F}_{y}" text="N element-of F _ y" xml:id="p5.m15">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, and hence there is some <Math mode="inline" tex="U\in\mathcal{F}_{y}" text="U element-of F _ y" xml:id="p5.m16">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> such that if <Math mode="inline" tex="z\in U" text="z element-of U" xml:id="p5.m17">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">z</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="N\in\mathcal{F}_{z}" text="N element-of F _ z" xml:id="p5.m18">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">z</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. If <Math mode="inline" tex="z\in U" text="z element-of U" xml:id="p5.m19">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">z</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="N\in\mathcal{F}_{z}" text="N element-of F _ z" xml:id="p5.m20">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">z</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, which
+implies that <Math mode="inline" tex="z\in N" text="z element-of N" xml:id="p5.m21">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">z</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, and hence <Math mode="inline" tex="U\subseteq V" text="U subset-of-or-equals V" xml:id="p5.m22">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. <Math mode="inline" tex="U\subseteq V" text="U subset-of-or-equals V" xml:id="p5.m23">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="U\in\mathcal{F}_{y}" text="U element-of F _ y" xml:id="p5.m24">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> imply that <Math mode="inline" tex="V\in\mathcal{F}_{y}" text="V element-of F _ y" xml:id="p5.m25">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. Thus, if <Math mode="inline" tex="y\in V" text="y element-of V" xml:id="p5.m26">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">y</XMTok>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="V\in\mathcal{F}_{y}" text="V element-of F _ y" xml:id="p5.m27">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, which
+means that <Math mode="inline" tex="V" text="V" xml:id="p5.m28">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">V</XMTok>
+        </XMath>
+      </Math> is open, <Math mode="inline" tex="x\in V\subseteq N" text="x element-of V subset-of-or-equals N" xml:id="p5.m29">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="multirelation"/>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> tells us that <Math mode="inline" tex="N" text="N" xml:id="p5.m30">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">N</XMTok>
+        </XMath>
+      </Math> is a neighborhood of <Math mode="inline" tex="x" text="x" xml:id="p5.m31">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math>.</p>
+  </para>
+  <para xml:id="p6">
+    <p>If a set <Math mode="inline" tex="N" text="N" xml:id="p6.m1">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">N</XMTok>
+        </XMath>
+      </Math> is a neighborhood of a point <Math mode="inline" tex="x" text="x" xml:id="p6.m2">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math>, then there is some open set <Math mode="inline" tex="U" text="U" xml:id="p6.m3">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">U</XMTok>
+        </XMath>
+      </Math> with <Math mode="inline" tex="x\in U\subseteq N" text="x element-of U subset-of-or-equals N" xml:id="p6.m4">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="multirelation"/>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMTok meaning="subset-of-or-equals" name="subseteq" role="RELOP">⊆</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. <Math mode="inline" tex="U" text="U" xml:id="p6.m5">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">U</XMTok>
+        </XMath>
+      </Math> being open means that if <Math mode="inline" tex="y\in U" text="y element-of U" xml:id="p6.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">y</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="U\in\mathcal{F}_{y}" text="U element-of F _ y" xml:id="p6.m7">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>.
+As <Math mode="inline" tex="x\in U" text="x element-of U" xml:id="p6.m8">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> we get <Math mode="inline" tex="U\in\mathcal{F}_{x}" text="U element-of F _ x" xml:id="p6.m9">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, and as <Math mode="inline" tex="U\subset N" text="U subset-of N" xml:id="p6.m10">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="subset-of" name="subset" role="RELOP">⊂</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> we get <Math mode="inline" tex="N\in\mathcal{F}_{x}" text="N element-of F _ x" xml:id="p6.m11">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. Therefore a set <Math mode="inline" tex="N" text="N" xml:id="p6.m12">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">N</XMTok>
+        </XMath>
+      </Math> is a neighborhood of a point <Math mode="inline" tex="x" text="x" xml:id="p6.m13">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math> if and only if <Math mode="inline" tex="N\in\mathcal{F}_{x}" text="N element-of F _ x" xml:id="p6.m14">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>.</p>
+  </para>
+  <para xml:id="p7">
+    <p>In conclusion: If <Math mode="inline" tex="X" text="X" xml:id="p7.m1">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> is a topological space and for each <Math mode="inline" tex="x\in X" text="x element-of X" xml:id="p7.m2">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> we define <Math mode="inline" tex="\mathcal{F}_{x}" text="F _ x" xml:id="p7.m3">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> to be the neighborhood filter of <Math mode="inline" tex="x" text="x" xml:id="p7.m4">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math>,
+then these filters satisfy the two conditions that if <Math mode="inline" tex="N\in\mathcal{F}_{x}" text="N element-of F _ x" xml:id="p7.m5">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="x\in N" text="x element-of N" xml:id="p7.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and that if <Math mode="inline" tex="N\in\mathcal{F}_{x}" text="N element-of F _ x" xml:id="p7.m7">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> there is some <Math mode="inline" tex="U\in\mathcal{F}_{x}" text="U element-of F _ x" xml:id="p7.m8">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> such that
+if <Math mode="inline" tex="y\in U" text="y element-of U" xml:id="p7.m9">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">y</XMTok>
+            <XMTok font="italic" role="UNKNOWN">U</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> then <Math mode="inline" tex="N\in\mathcal{F}_{y}" text="N element-of F _ y" xml:id="p7.m10">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">N</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. In the other direction, if <Math mode="inline" tex="X" text="X" xml:id="p7.m11">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> is a set and for each point <Math mode="inline" tex="x\in X" text="x element-of X" xml:id="p7.m12">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" role="UNKNOWN">X</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> there is a filter <Math mode="inline" tex="\mathcal{F}_{x}" text="F _ x" xml:id="p7.m13">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="caligraphic" role="UNKNOWN">F</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and the filters satisfy these two
+conditions, then there is a topology on <Math mode="inline" tex="X" text="X" xml:id="p7.m14">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">X</XMTok>
+        </XMath>
+      </Math> such that these filters are precisely the neighborhood filters of each point.</p>
+  </para>
+</document>

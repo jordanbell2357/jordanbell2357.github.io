@@ -1,0 +1,339 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\Res}{\ensuremath\mathrm{Res}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\sech}{\ensuremath\mathrm{sech}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Fourier transform of holomorphic functions}
+\author{Jordan Bell}
+\date{November 4, 2014}
+
+\maketitle
+
+For $f \in L^1(\mathbb{R})$, define
+\[
+\widehat{f}(\xi) = \int_{-\infty}^\infty e^{-2\pi i\xi x} f(x) dx,
+\qquad \xi \in \mathbb{R}.
+\]
+
+For $a>0$, write
+\[
+S_a = \{z \in \mathbb{C}: |\Im z|<a\}.
+\]
+We define $\mathfrak{F}_a$ to be the set of functions $f$ that are holomorphic on $S_a$ and for which there
+is some $A>0$ such that
+\begin{equation}
+|f(x+iy)| \leq \frac{A}{1+x^2}, \qquad x+iy \in S_a.
+\label{Sa}
+\end{equation}
+For example, for $f(z)=e^{-\pi z^2}$, 
+\[
+|f(z)| = |e^{-\pi(x+iy)^2}| = |e^{-\pi x^2 - 2\pi i xy + \pi y^2}|
+=e^{-\pi x^2} e^{\pi y^2},
+\]
+and for any $a>0$, $f \in S_a$. 
+
+The following is from Stein and Shakarchi.\footnote{Elias M. Stein and Rami Shakarchi, {\em Complex Analysis},
+p.~114, Theorem 2.1.}
+
+\begin{theorem}
+If $a>0$ and $f \in \mathfrak{F}_a$, then for any $0 \leq b < a$,
+\[
+\widehat{f}(\xi) = e^{-2\pi |\xi| b} \int_{-\infty}^\infty e^{-2\pi i\xi x} f(x-i\cdot  \sgn \xi \cdot b) dx,
+\qquad \xi \in \mathbb{R}.
+\]
+\label{bleqa}
+\end{theorem}
+\begin{proof}
+If $b=0$ then the claim is immediate. If $0<b<a$, 
+we define $g(z)=e^{-2\pi i\xi z} f(z)$.
+Because $f \in \mathfrak{F}_a$ there is some $A>0$ such that $f$ satisfies \eqref{Sa}. 
+We
+prove the claim separately for $\xi \geq 0$ and $\xi \leq 0$. 
+For $\xi \geq 0$, with $R>0$,
+\begin{align*}
+\left| \int_{-R-ib}^{-R} g(z) dz \right|&\leq \int_{-R-ib}^{-R} |e^{-2\pi i\xi z} f(z)| dz\\
+&=\int_{-b}^0 |e^{-2\pi i\xi(-R+iy)} f(-R+iy)| dy\\
+&=\int_{-b}^0 e^{2\pi \xi y} |f(-R+iy)| dy\\
+&\leq \int_{-b}^0 e^{2\pi \xi y} \frac{A}{1+R^2} dy\\
+&=O(R^{-2})
+\end{align*}
+and likewise
+\[
+\left| \int_{R}^{R-ib} g(z) dz \right|=O(R^{-2}).
+\]
+$g$ is holomorphic on $S_a$, so by Cauchy's integral theorem, taking $R \to \infty$,
+\[
+\int_{-\infty}^\infty g(z) dz=
+\int_{-\infty-ib}^{\infty-ib} g(z) dz,
+\]
+i.e.,
+\begin{align*}
+\widehat{f}(\xi)&=\int_{-\infty-ib}^{-\infty-ib} e^{-2\pi i\xi z} f(z)dz\\
+&=\int_{-\infty}^\infty e^{-2\pi i\xi(x-ib)} f(x-ib) dx\\
+&=e^{-2\pi \xi b} \int_{-\infty}^\infty e^{-2\pi i\xi x} f(x-ib) dx.
+\end{align*}
+
+For $\xi \leq 0$, with $R>0$,
+\begin{align*}
+\left| \int_{-R+ib}^{-R} g(z) dz \right|&\leq
+\int_{-R}^{-R+ib}  |e^{-2\pi i\xi z} f(z)| dz\\
+&=\int_{0}^{b} |e^{-2\pi i\xi(-R+iy)} f(-R+iy)| dy\\
+&=\int_0^b e^{2\pi \xi y} |f(-R+iy)| dy\\
+&\leq \int_0^b e^{2\pi \xi y} \frac{A}{1+R^2} dy\\
+&=O(R^{-2}),
+\end{align*}
+and likewise
+\[
+\left| \int_{R}^{R+ib} g(z) dz \right|=O(R^{-2}).
+\]
+By Cauchy's integral theorem, taking $R \to \infty$,
+\[
+\int_{-\infty}^\infty g(z) dz = \int_{-\infty+ib}^{\infty+ib} g(z) dz,
+\]
+i.e.,
+\begin{align*}
+\widehat{f}(\xi)&= \int_{-\infty+ib}^{\infty+ib} e^{-2\pi i\xi z} f(z) dz\\
+&=\int_{-\infty}^\infty e^{-2\pi i\xi(x+ib)} f(x+ib) dx\\
+&=e^{2\pi \xi b} \int_{-\infty}^\infty e^{-2\pi i\xi x} f(x+ib) dx.
+\end{align*}
+\end{proof}
+
+
+
+\begin{corollary}
+If $a>0$ and $f \in \mathfrak{F}_a$, then for any $0 \leq b < a$ there is some $B$ such that
+\[
+|\widehat{f}(\xi)| \leq B e^{-2\pi b|\xi|}, \qquad \xi \in \mathbb{R}.
+\]
+\end{corollary}
+\begin{proof}
+Because $f \in \mathfrak{F}_a$ there is some $A>0$ such $f$ satisfies \eqref{Sa}. Put
+\[
+B=A\int_{-\infty}^\infty \frac{1}{1+x^2} dx = \pi A.
+\]
+By Theorem \ref{bleqa}, 
+\begin{align*}
+|\widehat{f}(\xi)| &\leq e^{-2\pi |\xi| b} \int_{-\infty}^\infty |e^{-2\pi i\xi x} f(x-i\cdot  \sgn \xi \cdot b)| dx\\
+&=e^{-2\pi |\xi| b} \int_{-\infty}^\infty |f(x-i\cdot  \sgn \xi \cdot b)| dx\\
+&\leq e^{-2\pi |\xi| b}  \int_{-\infty}^\infty \frac{A}{1+x^2} dx\\
+&= e^{-2\pi |\xi| b} \cdot B.
+\end{align*}
+\end{proof}
+
+
+Define
+\[
+\mathfrak{F} = \bigcup_{a>0} \mathfrak{F}_a.
+\]
+We now prove the \textbf{Fourier inversion formula} for functions belonging to $\mathfrak{F}$.\footnote{Elias M. Stein and Rami Shakarchi, {\em Complex Analysis},
+p.~115, Theorem 2.2.}
+
+\begin{theorem}
+If $f \in \mathfrak{F}$, then
+\[
+f(x) = \int_{-\infty}^\infty e^{2\pi ix\xi} \widehat{f}(\xi) d\xi, \qquad x\in \mathbb{R}.
+\]
+\end{theorem}
+\begin{proof}
+Say $f \in \mathfrak{F}_a$, write
+\[
+\int_{-\infty}^\infty e^{2\pi i x\xi} d\xi = 
+\int_{0}^\infty e^{2\pi i x\xi} d\xi+
+\int_{-\infty}^0 e^{2\pi i x\xi} d\xi 
+ = 
+I_1+I_2,
+\]
+and take $0<b<a$. 
+First we handle $I_1$. By Theorem \ref{bleqa}, for $\xi > 0$,
+\[
+\widehat{f}(\xi) = e^{-2\pi \xi b} \int_{-\infty}^\infty e^{-2\pi i\xi u} f(u-ib) du
+=\int_{-\infty}^\infty e^{-2\pi i \xi(u-ib)} f(u-ib) du,
+\]
+with which, because $\xi b>0$,
+\begin{align*}
+\int_0^\infty e^{2\pi ix\xi} \widehat{f}(\xi) d\xi&=\int_0^\infty e^{2\pi ix\xi} \left(\int_{-\infty}^\infty e^{-2\pi i \xi(u-ib)} f(u-ib) du\right)
+d\xi\\
+&= \int_{-\infty}^\infty  f(u-ib) \int_0^\infty e^{-2\pi i\xi(u-ib-x)}  d\xi du\\
+&=\int_{-\infty}^\infty  f(u-ib) \frac{1}{2\pi i(u-ib-x)} du\\
+&=\frac{1}{2\pi i} \int_{L_1} \frac{f(\zeta)}{\zeta-x} d\zeta.
+\end{align*}
+where $L_1=\{u-ib: u \in \mathbb{R}\}$ traversed left to right. 
+Now we handle $I_2$. By Theorem \ref{bleqa}, for $\xi < 0$,
+\[
+\widehat{f}(\xi)=e^{2\pi \xi b} \int_{-\infty}^\infty e^{-2\pi i \xi u} f(u+i  b) dx
+=\int_{-\infty}^\infty e^{-2\pi i\xi(u+ib)} f(u+ib) dx,
+\]
+with which, because $\xi b<0$,
+\begin{align*}
+\int_{-\infty}^0 e^{2\pi ix \xi} \widehat{f}(\xi) d\xi&=\int_{-\infty}^0 e^{2\pi ix\xi} 
+\left(\int_{-\infty}^\infty e^{-2\pi i\xi(u+ib)} f(u+ib) du \right) d\xi\\
+&=\int_{-\infty}^\infty f(u+ib)  \int_{-\infty}^0 e^{-2\pi i\xi(u+ib-x)} d\xi du\\
+&=\int_{-\infty}^\infty f(u+ib) \frac{-1}{2\pi i(u+ib-x)} du\\
+&=-\frac{1}{2\pi i} \int_{L_2} \frac{f(\zeta)}{\zeta-x} d\xi,
+\end{align*}
+where $L_2=\{u+ib: u \in \mathbb{R}\}$ traversed left to right. Thus
+\begin{equation}
+\int_{-\infty}^\infty e^{2\pi ix \xi} \widehat{f}(\xi) d\xi = \frac{1}{2\pi i} \int_{L_1} \frac{f(\zeta)}{\zeta-x} d\zeta
+-\frac{1}{2\pi i} \int_{L_2} \frac{f(\zeta)}{\zeta-x} d\xi.
+\label{L1L2}
+\end{equation}
+Let $\gamma-R$ be the rectangle starting at $-R-ib$, going to $R-ib$, going to
+$R+ib$, going to $-R+ib$, going to $-R-ib$. Because this rectangle and its interior are contained in $S_a$, on which $f$ is holomorphic,
+by the residue theorem we have, for $R>|x|$,
+\[
+\int_{\gamma_R} \frac{f(\zeta)}{\zeta-x} d\zeta = 2\pi i \cdot \Res_{\zeta=x} \frac{f(\zeta)}{\zeta-x}=
+2\pi i \cdot f(x).
+\]
+We estimate the integrand on the vertical sides of $\gamma_R$. For the left side, taking $A$ such that $f$ satisfies \eqref{Sa},
+\[
+\left| \int_{-R+ib}^{-R-ib} \frac{f(\zeta)}{\zeta-x} d\zeta \right|
+\leq \int_{-b}^b \left| \frac{f(-R+iy)}{-R+iy-x} \right| dy
+\leq \int_{-b}^b \frac{A}{1+R^2} \cdot \frac{1}{R-|x|} dy
+=O(R^{-3}).
+\]
+For the right side,
+\[
+\left| \int_{R-ib}^{R+ib} \frac{f(\zeta)}{\zeta-x} d\zeta \right|
+\leq \int_{-b}^b \left| \frac{f(R+iy)}{R+iy-x}\right| dy
+\leq \int_{-b}^b \frac{A}{1+R^2} \cdot \frac{1}{R-|x|} dy
+=O(R^{-3}).
+\]
+Thus, taking $R \to \infty$ we get
+\[
+\int_{L_1} \frac{f(\zeta)}{\zeta-x} d\zeta
+-\int_{L_2} \frac{f(\zeta)}{\zeta-x} d\zeta
+=2\pi i \cdot f(x),
+\]
+which by \eqref{L1L2} is
+\[
+\int_{-\infty}^\infty e^{2\pi ix \xi} \widehat{f}(\xi) d\xi  = f(x),
+\]
+proving the claim.
+\end{proof}
+
+
+We now prove the \textbf{Poisson summation formula}.\footnote{Elias M. Stein and Rami Shakarchi, {\em Complex Analysis},
+p.~118, Theorem 2.4.}
+
+\begin{theorem}
+If $f \in \mathfrak{F}$, then
+\[
+\sum_{n \in \mathbb{Z}} f(n) = \sum_{n \in \mathbb{Z}} \widehat{f}(n).
+\]
+\end{theorem}
+\begin{proof}
+Say $f \in \mathfrak{F}_a$, take $0<b<a$, and for $N$ a positive integer
+ let $\gamma_N$ be the rectangle starting at $-N-\frac{1}{2}-ib$, going to $N+\frac{1}{2}-ib$, going to
+ $N+\frac{1}{2}+ib$, going to $-N-\frac{1}{2}+ib$, going to $-N-\frac{1}{2}-ib$. Because $f \in \mathfrak{F}_a$,
+$\frac{f(z)}{e^{2\pi iz}-1}$ is meromorphic on a region containing $\gamma_N$ and its interior, and has poles
+at $z=-N,\ldots,N$, with residues
+\[
+\Res_{z=n} \frac{f(z)}{e^{2\pi iz}-1}
+=\frac{f(n)}{2\pi i e^{2\pi in}}
+=\frac{f(n)}{2\pi i}.
+\]
+Thus the residue theorem gives us
+\begin{equation}
+\int_{\gamma_N} \frac{f(z)}{e^{2\pi iz}-1} dz = 2\pi i \sum_{|n| \leq N} \frac{f(n)}{2\pi i}
+=\sum_{|n| \leq N} f(n).
+\label{gammaN}
+\end{equation}
+For the left side of $\gamma_N$, with $z=-N-\frac{1}{2}+iy$, $-b \leq y \leq b$,
+\[
+|e^{2\pi iz}-1| = |e^{-2\pi iN - \pi i -2\pi y} - 1|
+=|-e^{-2\pi y}-1| \geq 1,
+\]
+so, taking $A>0$ such that $f$ satisfies \eqref{Sa},
+\begin{align*}
+\left| \int_{-N-\frac{1}{2}+ib}^{-N-\frac{1}{2}-ib} \frac{f(z)}{e^{2\pi iz}-1} dz\right|&
+\leq \int_{-b}^b \left| f\left(-N-\frac{1}{2}+iy\right) \right|dy\\
+&\leq \int_{-b}^b \frac{A}{1+\left(-N-\frac{1}{2}\right)^2} dy\\
+&=O(N^{-2}).
+\end{align*}
+Likewise,
+\[
+\left| \int_{N+\frac{1}{2}-ib}^{N+\frac{1}{2}+ib} \frac{f(z)}{e^{2\pi iz}-1} dz\right| = O(N^{-2}).
+\]
+Therefore, taking $N \to \infty$, \eqref{gammaN} becomes
+\[
+\int_{L_1}  \frac{f(z)}{e^{2\pi iz}-1} dz
+- \int_{L_2}  \frac{f(z)}{e^{2\pi iz}-1} dz = \sum_{n \in \mathbb{Z}} f(n),
+\]
+where $L_1=\{x-ib: x \in \mathbb{R}\}$, traversed left to right, and $L_2=\{x+ib:x \in \mathbb{R}\}$, traversed left to right.
+Then, as $b>0$,
+\begin{align*}
+\sum_{n \in \mathbb{Z}} f(n)&=\int_{L_1}  f(z) \frac{e^{-2\pi iz}}{1-e^{-2\pi iz}} dz
++ \int_{L_2} f(z) \frac{1}{1-e^{2\pi iz}} dz\\
+&=\int_{L_1} f(z) e^{-2\pi iz} \sum_{n =0}^\infty (e^{-2\pi iz})^n dz
++\int_{L_2} f(z) \sum_{n=0}^\infty (e^{2\pi iz})^n\\
+&=\sum_{n=0}^\infty \int_{L_1} e^{-2\pi i(n+1)z} f(z) dz
++\sum_{n=0}^\infty \int_{L_2} e^{2\pi inz} f(z) dz\\
+&=\sum_{n=1}^\infty \int_{-\infty}^\infty e^{-2\pi in(x-ib)}f(x-ib) dx
++\sum_{n=0}^\infty \int_{-\infty}^\infty e^{2\pi in(x+ib)}f(x+ib) dx\\
+&=\sum_{n=1}^\infty e^{-2\pi nb} \int_{-\infty}^\infty e^{-2\pi inx} f(x-ib) dx\\
+&+\sum_{n=0}^\infty e^{-2\pi nb} \int_{-\infty}^\infty e^{2\pi inx} f(x+ib) dx.
+\end{align*}
+Using Theorem \ref{bleqa} this becomes
+\[
+\sum_{n \in \mathbb{Z}} f(n) = \sum_{n=1}^\infty \widehat{f}(n) + \sum_{n=0}^\infty \widehat{f}(-n)
+=\sum_{n \in \mathbb{Z}} \widehat{f}(n),
+\]
+proving the claim.
+\end{proof}
+
+Take as granted that
+\[
+\int_{-\infty}^\infty e^{-2\pi i\xi x} e^{-\pi x^2} dx = e^{-\pi \xi^2}, 
+\qquad \xi \in \mathbb{R}.
+\]
+For $t>0$ and $a \in \mathbb{R}$, with $y=t^{1/2}(x+a)$,
+\begin{align*}
+\int_{-\infty}^\infty e^{-2\pi i\xi x} e^{-\pi t(x+a)^2} dx&=\int_{-\infty}^\infty 
+e^{-2\pi i\xi(t^{-1/2}y-a)} e^{-\pi y^2} t^{-1/2} dy\\
+&=e^{2\pi i\xi a} t^{-1/2} \int_{-\infty}^\infty e^{-2\pi i\xi t^{-1/2} y} e^{-\pi y^2} dy\\
+&=e^{2\pi i\xi a} t^{-1/2}  e^{-\pi\xi^2 t^{-1}}.
+\end{align*}
+With $f(x)=e^{-\pi t(x+a)^2}$, this shows us that 
+\[
+\widehat{f}(\xi) = e^{2\pi i\xi a} t^{-1/2}  e^{-\pi\xi^2 t^{-1}},
+\]
+and applying the Poisson summaton gives
+\begin{equation}
+\sum_{n \in \mathbb{Z}} e^{-\pi t(n+a)^2} = \sum_{n \in \mathbb{Z}}  e^{2\pi in a} t^{-1/2}  e^{-\pi n^2 t^{-1}}.
+\label{thetaa}
+\end{equation}
+Define
+\[
+\vartheta(t) = \sum_{n \in \mathbb{Z}} e^{-\pi n^2 t}, \qquad t>0.
+\]
+Using \eqref{thetaa} with $a=0$ gives
+\[
+\vartheta(t)=
+t^{-1/2} \vartheta\left(\frac{1}{t}\right).
+\]
+
+
+\end{document}

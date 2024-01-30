@@ -1,0 +1,412 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\HS}{\ensuremath\mathrm{HS}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}}
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The one-dimensional periodic Schrödinger equation}
+\author{Jordan Bell}
+\date{April 23, 2016}
+
+\maketitle
+
+
+\section{Translations and convolution}
+For $y \in \mathbb{R}$, let
+\[
+\tau_y f(x) =  f(x-y).
+\]
+To say that $f:\mathbb{R} \to \mathbb{C}$ is uniformly continuous means that
+$\norm{\tau_h f-f}_b \to 0$ as $h \to 0$, where
+\[
+\norm{g}_b = \sup_{x \in \mathbb{R}} |g(x)|.
+\]
+
+Let $1 \leq p < \infty$ and
+let $\mathscr{L}(L^p(\mathbb{R}))$ be the Banach algebra
+of bounded linear operators $L^p(\mathbb{R}) \to L^p(\mathbb{R})$, with the strong operator topology:
+a net $T_i$ converges to $T$ in the strong operator topology if and only if
+for each $f \in L^p(\mathbb{R})$, $\norm{T_i f - Tf}_{L^p} \to 0$. 
+
+\begin{lemma}
+$y \mapsto \tau_y$ is continuous 
+$\mathbb{R} \to \mathscr{L}(L^p(\mathbb{R}))$, using the strong operator
+topology.
+\end{lemma}
+\begin{proof}
+For $y \in \mathbb{R}$ and $f \in L^p(\mathbb{R})$, 
+$\norm{\tau_{y+h} f - \tau_y f}_{L^p} = \norm{\tau_h f - f}_{L^p}$.
+Take $\epsilon>0$ and 
+let $\phi \in C_c(\mathbb{R})$ with $\norm{f-\phi}_{L^p}<\infty$.
+Say $\supp \phi \subset [a,b]$. 
+Let $K=[a-1,b+1]$. For $|h| \leq 1$, if $x \notin K$ then
+$x-h,x \not \in \supp \phi$, and hence 
+\begin{align*}
+\norm{\tau_h \phi- \phi}_{L^p}^p& = \int_{\mathbb{R}} |\phi(x-h)-\phi(x)|^p dx\\
+&=\int_K  |\phi(x-h)-\phi(x)|^p dx\\
+&\leq (b-a+2) \norm{\tau_h \phi -  \phi}_b^p\\
+&=(b-a+2) \norm{\tau_ \phi - \tau_y \phi}_b^p.
+\end{align*}
+Because $\phi \in C_c(\mathbb{R})$, $\phi$ is uniformly continuous on $\mathbb{R}$, whence 
+$\norm{\tau_h \phi- \phi}_{L^p} \to 0$ as $h \to 0$, say 
+$\norm{\tau_h \phi-\phi}_{L^p} < \epsilon$ for $|h| \leq h_\epsilon$. 
+Hence
+\begin{align*}
+\norm{\tau_{y+h} f - \tau_y f}_{L^p} &= \norm{\tau_h f - f}_{L^p}\\
+&\leq \norm{\tau_h f - \tau_h \phi}_{L^p} + \norm{\tau_h \phi - \phi}_{L^p} + \norm{\phi-f}_{L^p}\\
+&=2 \norm{f-\phi}_{L^p} + \norm{\tau_h - \phi}_{L^p}\\
+&<3\epsilon.
+\end{align*}
+\end{proof}
+
+Define $A:\mathbb{R} \times \mathbb{R} \to \mathbb{R}$ by
+\[
+A(x_1,x_2) = x_1+x_2.
+\]
+If $\mu_1,\mu_2$ are finite Borel measures on $\mathbb{R}$,
+let $\mu_1 \otimes \mu_2$ be the product measure on $\mathbb{R}^2$, and let
+\[
+\mu_1 * \mu_2=A_* (\mu_1 \otimes \mu_2)
+\]
+be the pushforward of $\mu_1 \otimes \mu_2$ by $A$, called the \textbf{convolution} of $\mu_1$ and $\mu_2$.
+If $f:\mathbb{R} \to [0,\infty]$ is measurable then applying the change of variables formula and then Tonelli's
+theorem we obtain
+\begin{align*}
+\int f d(\mu_1*\mu_2)&=\int f \circ A d(\mu_1 \otimes \mu_2)\\
+&=\int \left( \int f \circ A(x_1,x_2) d\mu_1(x_1) \right) d\mu_2(x_2)\\
+&=\int \left( \int f(x_1+x_2) d\mu_1(x_1) \right) d\mu_2(x_2).
+\end{align*}
+If $B$ is a Borel set in $\mathbb{R}$ then applying the above with $f=1_B$,
+\begin{align*}
+(\mu_1 * \mu_2)(B) &= \int 1_B d(\mu_1*\mu_2)\\
+&= \int \left( \int 1_B(x_1+x_2) d\mu_1(x_1) \right) d\mu_2(x_2)\\
+&=\int \mu_1(B-x_2) d\mu_2(x_2).
+\end{align*}
+
+
+
+\section{Periodic functions}
+Let $\mathbb{T}=\mathbb{R}/\mathbb{Z}$, and let $\mathscr{S}(\mathbb{T})$ be the collection of
+$C^\infty$ functions $\phi:\mathbb{R} \to \mathbb{C}$ satisfying
+$\phi(x+1)=\phi(x)$ for all $x \in \mathbb{T}$.
+For $\phi,\psi \in \mathscr{S}(\mathbb{T})$, for $n \geq 1$ let
+\[
+d_n(\phi,\psi) = \sup_{x \in [0,1]} |\phi^{(n)}(x)-\psi^{(n)}(x)|
+\]
+and
+\[
+d(\phi,\psi) = \sum_{n=0}^\infty 2^{-n}  \frac{d_n(\phi,\psi)}{1+d_n(\phi,\psi)}.
+\]
+With this metric, $\mathscr{S}(\mathbb{T})$ is a Fr\'echet space.
+
+For $n \in \mathbb{Z}$, define
+\[
+e_n(x) = e^{2\pi inx},\qquad x \in \mathbb{R}.
+\]
+For $f \in L^1(\mathbb{T})$,
+define $\widehat{f}:\mathbb{Z} \to \mathbb{C}$, 
+ for $n \in \mathbb{Z}$, by
+\[
+\widehat{\phi}(n) =\int_0^1 \phi(x) e_{-n}(x) dx =  \int_0^1 \phi(x) e^{-2\pi inx} dx.
+\]
+
+Denote by $\mathscr{S}'(\mathbb{T})$ the dual space of $\mathscr{S}(\mathbb{T})$,
+the collection of continuous linear maps $\mathscr{S}(\mathbb{T}) \to \mathbb{C}$.
+For $L \in \mathscr{S}'(\mathbb{T})$, define $\widehat{L}:\mathbb{Z} \to \mathbb{C}$ by
+\[
+\widehat{L}(n) = L e_{-n}.
+\]
+
+For $x \in \mathbb{R}$, define $\delta_x:\mathscr{S}(\mathbb{T}) \to \mathbb{C}$ by
+\[
+\delta_x \phi = \phi(x).
+\]
+$\delta_x$ belongs to $\mathscr{S}'(\mathbb{T})$, and
+\[
+\widehat{\delta}_x(n) = \delta_x e_{-n} = e_{-n}(x) = e^{-2\pi inx}.
+\]
+
+
+
+For $f \in L^1(\mathbb{T})$, define $L_f \in \mathscr{S}'(\mathbb{T})$ by
+\[
+L_f \phi = \int_0^1 f(x) \phi(x) dx,\qquad \phi \in \mathscr{S}(\mathbb{T}).
+\]
+For $n \in \mathbb{Z}$,
+\[
+\widehat{L_f}(n) = L_f e_{-n} = \int_0^1 f(x) e_{-n}(x) dx = \widehat{f}(n).
+\]
+
+
+
+
+\section{The Poisson summation formula}
+If $f \in \mathscr{L}^1(\mathbb{R})$, 
+\begin{align*}
+\int_0^1 \sum_{n \in \mathbb{Z}} |f(x+n)| dx&=\sum_{n \in \mathbb{Z}} \int_0^1 |f(x+n)| dx\\
+&=\sum_{n \in \mathbb{Z}} \int_n^{n+1} |f(x)| dx\\
+&=\int_{\mathbb{R}} |f(x)| dx.
+\end{align*}
+This implies that there is a Borel set $N_f$ in $\mathbb{R}$ with $\lambda(N_f)=0$ such that
+for  $x \in N_f^c$,
+\[
+\sum_{n \in \mathbb{Z}} |f(x+n)| < \infty.
+\]
+We define $Pf(x)=\sum_{n \in \mathbb{Z}} f(x+n)$ for $x \in N_f^c$ and $Pf(x)=0$ for $x \in N_f$. Thus it makes sense to define
+$P:L^1(\mathbb{R}) \to L^1(\mathbb{R})$ by
+\[
+Pf(x) = \sum_{n \in \mathbb{Z}} f(x+n),
+\]
+in other words,
+\[
+Pf = \sum_{n \in \mathbb{Z}} \tau_{-n}f.
+\]
+Then
+\begin{align*}
+\int_0^1 Pf(x) e^{-2\pi imx} dx&=\int_0^1 \left( \sum_{n \in \mathbb{Z}} f(x+n) \right)e^{-2\pi imx} dx\\
+&=\sum_{n \in \mathbb{Z}} \int_0^1 f(x+n) e^{-2\pi imx} dx\\
+&=\sum_{n \in \mathbb{Z}} \int_n^{n+1} f(x) e^{-2\pi imx} dx\\
+&=\int_{\mathbb{R}} f(x) e^{-2\pi imx} dx\\
+&=\widehat{f}(m).
+\end{align*}
+That is,
+\[
+\widehat{P f}(m) = \widehat{f}(m).
+\]
+Supposing that $Pf(x) = \sum_{n \in \mathbb{Z}} \widehat{Pf}(n) e^{2\pi inx}$, 
+\[
+Pf(x) = \sum_{n \in \mathbb{Z}} \widehat{f}(n) e^{2\pi inx}
+\]
+and supposing $Pf(x)=\sum_{n \in \mathbb{Z}} f(x+n)$,
+\[
+\sum_{n \in \mathbb{Z}} f(x+n) = \sum_{n \in \mathbb{Z}} \widehat{f}(n) e^{2\pi inx},
+\]
+the \textbf{Poisson summation formula}.
+
+
+For $N \geq 1$, let
+\[
+L_N = \frac{1}{N} \sum_{j=0}^{N-1} \delta_{j/N}.
+\]
+For $n \in \mathbb{Z}$,
+\[
+\widehat{L}_N(n) = \frac{1}{N} \sum_{j=0}^{N-1} \delta_{j/N} e_{-n}
+=\frac{1}{N} \sum_{j=0}^{N-1} e_{-n}(j/N) 
+=\frac{1}{N} \sum_{j=0}^{N-1} e^{-2\pi inj/N}.
+\]
+If $n \in N \mathbb{Z}$ then $\widehat{L}_N(n) = 1$ and otherwise
+$\widehat{L}_N(n)=0$. 
+That is,
+\[
+L_N =  \frac{1}{N} \sum_{j=0}^{N-1} \delta_{j/N} \sim \sum_{k \in \mathbb{Z}} 
+\widehat{L}_N(k) e_k
+=\sum_{k \in \mathbb{Z}} e_{Nk}.
+\]
+
+
+
+
+
+\section{The heat kernel}
+For $x \in \mathbb{R}$ and $t>0$ define
+\[
+H_t(x) = \int_{\mathbb{R}} e^{-4\pi^2 t \xi^2} e^{2\pi i\xi x} d\xi.
+\]
+Using
+\[
+\int_{\mathbb{R}} \exp\left(\frac{1}{2}iaw^2 + iJw\right) dw = \sqrt{ \frac{2\pi i}{a}} \exp\left(-\frac{iJ^2}{2a}\right),
+\]
+for $\frac{1}{2}ia =-4\pi^2 t$ we get $a=8i \pi^2 t$ and $J=2\pi x$, and we calculate
+\begin{align*}
+H_t(x)&=\sqrt{\frac{2\pi i}{8\pi^2 it}} \exp\left( -\frac{i}{16\pi^2 it} \cdot 4\pi^2 x^2\right)\\
+&=\sqrt{\frac{1}{4\pi t}} \exp\left(-\frac{x^2}{4t} \right).
+\end{align*}
+By the Fourier inversion theorem,
+\[
+\widehat{H_t}(\xi) = e^{-4\pi^2 t\xi^2}.
+\]
+For $f \in L^1(\mathbb{R})$, 
+\[
+\widehat{\tau_y f}(\xi) = \int_{\mathbb{R}} f(x-y) e^{-2\pi i\xi x} dx
+=e^{-2\pi i\xi y} \widehat{f}(\xi) = e_{-n}(y) \widehat{f}(\xi).
+\]
+
+
+
+
+\section{The Schrödinger equation on ℝ}
+Let
+\[
+\Gamma(t,x) =\sqrt{\frac{i}{t}} e^{-\pi ix^2/t},
+\]
+which satisfies
+\[
+\partial_x \Gamma(t,x) = -\frac{2\pi ix}{t} \Gamma(t,x),
+\quad \partial_x^2 \Gamma(t,x) = -\frac{4\pi^2 x^2}{t^2} \Gamma(t,x)
+-\frac{2\pi i}{t} \Gamma(t,x)
+\]
+and
+\[
+\partial_t \Gamma(t,x) = -\frac{1}{2} t^{-1} \Gamma(t,x)+ \pi i x^2 t^{-2} \Gamma(t,x).
+\]
+This satisfies
+\begin{align*}
+\partial_t \Gamma(t,x)&=\frac{1}{2}  \left(-\frac{1}{t} + \frac{2\pi i x^2}{t^2}\right)\Gamma(t,x)\\
+&=\frac{1}{4\pi i} \left( -\frac{2\pi i}{t} - \frac{4\pi^2x^2}{t^2}\right)\Gamma(t,x)\\
+&=\frac{1}{4\pi i} \partial_x^2 \Gamma(t,x).
+\end{align*}
+
+For $f:\mathbb{R} \to \mathbb{C}$, let
+\[
+\psi(f)(t,x) = f*\Gamma(t,\cdot)(x) = \int_{\mathbb{R}} f(y) \Gamma(t,x-y) dy.
+\]
+This satisfies
+\begin{align*}
+\partial_t \psi(f)(t,x)& = \int_{\mathbb{R}} f(y) \cdot \partial_t \Gamma(t,x-y) dy\\
+&=\int_{\mathbb{R}} f(y) \cdot \frac{1}{4\pi i} \partial_x^2 \Gamma(t,x-y) dy\\
+&=\frac{1}{4\pi i} \partial_x^2 \psi(f)(t,x).
+\end{align*}
+
+We also calculate
+\begin{align*}
+\psi(f)(t,x)&= \int_{\mathbb{R}} f(y) \cdot \Gamma(t,x-y) dy\\
+&=\int_{\mathbb{R}} f(y) \cdot \sqrt{\frac{i}{t}} e^{-\pi i(x-y)^2/t} dy\\
+&=\int_{\mathbb{R}} f(y) \cdot \sqrt{\frac{i}{t}} \exp\left(-\frac{\pi ix^2}{t} + \frac{2\pi ixy}{t} - \frac{\pi i y^2}{t}\right) dy\\
+&=\Gamma(t,x) \cdot \int_{\mathbb{R}} f(y) \exp\left( - \frac{\pi i}{t} (y^2-2xy) \right) dy.
+\end{align*}
+
+Let
+\[
+\widehat{f}(y) = \int_{\mathbb{R}} f(x) e^{-2\pi ixy} dx.
+\]
+Using
+\[
+\int_{\mathbb{R}} \exp\left(\frac{1}{2}iaw^2 + iJw\right) dw = \sqrt{ \frac{2\pi i}{a}} \exp\left(-\frac{iJ^2}{2a}\right),
+\]
+we get, with $a=2\pi t$ and $J=2\pi u$,
+\[
+\begin{split}
+&\Gamma(t,x) \cdot \psi(\widehat{f})(-1/t,-x/t)\\
+=&\Gamma(t,x) \cdot \int_{\mathbb{R}} \widehat{f}(y)
+\Gamma\left(-\frac{1}{t},-\frac{x}{t}-y\right) dy\\
+=&\Gamma(t,x) \cdot \int_{\mathbb{R}} \widehat{f}\left(-\frac{x}{t}-y\right) \Gamma\left(-\frac{1}{t},y\right) dy\\
+=&\sqrt{\frac{i}{t}} e^{-\pi ix^2/t} \cdot \int_{\mathbb{R}} \left( \int_{\mathbb{R}} f(u) e^{-2\pi i u\left(-\frac{x}{t}-y\right)}
+du\right) \cdot \sqrt{-it} e^{\pi i t y^2} dy\\
+=&e^{-\pi ix^2/t} \int_{\mathbb{R}} f(u) e^{2\pi iux/t} \left( \int_{\mathbb{R}} e^{2\pi iuy+\pi ity^2} dy\right) du\\
+=&e^{-\pi ix^2/t} \int_{\mathbb{R}} f(u) e^{2\pi iux/t}  \cdot \sqrt{\frac{2\pi i}{2\pi t}} \exp\left(-\frac{i}{4\pi t} (2\pi u)^2 \right) du\\
+=&e^{-\pi ix^2/t} \sqrt{\frac{i}{t}} \int_{\mathbb{R}} f(u) e^{2\pi iux/t} \exp\left(-\frac{\pi iu^2}{t}\right) du\\
+=&\sqrt{\frac{i}{t}} \int_{\mathbb{R}} f(u) \exp\left(-\frac{\pi ix^2}{t}+\frac{2\pi iux}{t} - \frac{\pi iu^2}{t} \right) du\\
+=&\sqrt{\frac{i}{t}} \int_{\mathbb{R}} f(u) e^{-\frac{\pi i(x-u)^2}{t}} du\\
+=&\int_{\mathbb{R}} f(u) \Gamma(t,x-u) du\\
+=&\psi(f)(t,x).
+\end{split}
+\]
+In other words,
+\begin{align*}
+\psi(f)(t,x)&=\Gamma(t,x) \cdot \psi(\widehat{f})(-1/t,-x/t)\\
+&=\sqrt{\frac{i}{t}} e^{-\pi ix^2/t} \cdot \int_{\mathbb{R}} \widehat{f}(\xi) \cdot \sqrt{-it} \exp\left(\pi it \left(-\frac{x}{t}-\xi\right)^2 \right) d\xi\\
+&=\int_{\mathbb{R}} \widehat{f}(\xi)  \exp\left(-\frac{\pi ix^2}{t} + \frac{\pi ix^2}{t} + 2 \pi i x\xi + \pi i t \xi^2 \right) d\xi\\
+&=\int_{\mathbb{R}} \widehat{f}(\xi) e^{2\pi ix\xi + \pi it\xi^2} d\xi.
+\end{align*}
+
+
+
+\section{The Schrödinger equation on 𝕋}
+Given $t$ and $x$, let $\gamma(y) = \Gamma(t,x-y)$. We calculate
+\begin{align*}
+\widehat{\gamma}(\xi)&=\int_{\mathbb{R}} \gamma(y) e^{-2\pi i\xi y} dy\\
+&=\int_{\mathbb{R}} \sqrt{\frac{i}{t}}  e^{-\pi i(x-y)^2/t}e^{-2\pi i\xi y} dy\\
+&=\int_{\mathbb{R}} \sqrt{\frac{i}{t}}  \exp\left( -\frac{\pi ix^2}{t} + \frac{2\pi ixy}{t} - \frac{\pi iy^2}{t} - 2\pi i\xi y\right) dy.
+\end{align*}
+Using
+\[
+\int_{\mathbb{R}} \exp\left(\frac{1}{2}iaw^2 + iJw\right) dw = \sqrt{ \frac{2\pi i}{a}} \exp\left(-\frac{iJ^2}{2a}\right)
+\]
+with $a=-\frac{2\pi}{t}$ and $J=\frac{2\pi x}{t}-2\pi \xi$, for which $J^2 = \frac{4\pi^2 x^2}{t^2} - \frac{8\pi^2 x\xi}{t} + 4\pi^2 \xi^2$,
+\begin{align*}
+\widehat{\gamma}(\xi)&=\sqrt{\frac{i}{t}} \exp\left(-\frac{\pi ix^2}{t} \right) \cdot \sqrt{-it} \exp\left( \frac{it}{4\pi} J^2 \right)\\
+&=  \exp\left(-\frac{\pi ix^2}{t} \right)  \exp\left( \frac{i\pi x^2}{t} - 2\pi i x\xi + \pi i \xi^2 t \right)\\
+&=\exp\left(-2\pi ix\xi + \pi i\xi^2 t \right).
+\end{align*}
+The Poisson summation formula tells us
+\[
+\sum_{n \in \mathbb{Z}} \gamma(n) = \sum_{n \in \mathbb{Z}} \widehat{\gamma}(n),
+\]
+i.e.
+\[
+\sum_{n \in \mathbb{Z}}  \Gamma(t,x-n) = \sum_{n \in \mathbb{Z}} e^{-2\pi inx + \pi itn^2} = \sum_{n \in \mathbb{Z}} e^{2\pi inx
++\pi itn^2}.
+\]
+
+
+Define
+\[
+\Theta(t,x) =  \sum_{n \in \mathbb{Z}} e^{\pi i(tn^2+2xn)} = \sum_{n \in \mathbb{Z}} e^{\pi itn^2} e^{2\pi ixn}
+=\sum_{n \in \mathbb{Z}}  \Gamma(t,x-n).
+\]
+
+For $\phi \in \mathscr{S}$, namely a Schwartz function,
+define
+\[
+\Theta_t \phi(x) = \sum_{n \in \mathbb{Z}} \int_{\mathbb{R}} \phi(x)  e^{\pi itn^2} e^{2\pi ixn} dx,
+\]
+which satisfies
+\[
+\Theta_t \phi(x) = \sum_{n \in \mathbb{Z}} \widehat{\phi}(-n) e^{\pi itn^2} = \sum_{n \in \mathbb{Z}} \widehat{\phi}(n) e^{\pi itn^2}.
+\]
+
+If $f$ is $1$-periodic, for $n \in \mathbb{Z}$ let
+\[
+\widehat{f}(n) = \int_0^1 f(y) e^{-2\pi iny} dy.
+\]
+Define
+\[
+\psi(f)(t,x)=\Theta_t * f(x) = \int_0^1 \Theta(t,x-y) f(y) dy,
+\]
+which satisfies
+\begin{align*}
+\psi(f)(t,x)&=\int_0^1  \sum_{n \in \mathbb{Z}} e^{\pi itn^2} e^{2\pi i(x-y)n} f(y) dy\\
+&=\sum_{n \in \mathbb{Z}} e^{\pi itn^2} e^{2\pi ixn} \int_0^1 f(y) e^{-2\pi iny} dy\\
+&=\sum_{n \in \mathbb{Z}} e^{\pi itn^2} e^{2\pi ixn} \widehat{f}(n).
+\end{align*}
+
+
+We remind ourselves
+\[
+\Theta(t,x) =\Theta_t(x)=  \sum_{n \in \mathbb{Z}} e^{\pi itn^2} e^{2\pi ixn}
+\]
+and
+\[
+\widehat{\Theta}_t(n) = e^{\pi itn^2}.
+\]
+Say $t = \frac{2M}{N}$. Then for $k \in \mathbb{Z}$,
+\begin{align*}
+\widehat{\Theta}_t(k+N)&= \exp\left( \pi i \cdot \frac{2M}{N} \cdot (k+N)^2 \right)\\
+&=\exp\left(\pi i \cdot \frac{2M}{N} \cdot k^2 \right).
+\end{align*}
+
+\end{document}

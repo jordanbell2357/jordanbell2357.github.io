@@ -1,0 +1,600 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}}
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Harmonic analysis on the $p$-adic numbers}
+\author{Jordan Bell}
+\date{March 20, 2016}
+
+\maketitle
+
+\section{{\em p}-adic numbers}
+Let $p$ be prime and let $N_p=\{0,\ldots,p-1\}$.
+$\mathbb{Q}_p \subset \prod_{\mathbb{Z}} N_p$. For $x \in \mathbb{Q}_p$,
+\[
+x =\lim_{m \to \infty} \sum_{k \leq m} x(k) p^k = \sum_{k \in \mathbb{Z}} x(k) p^k = \sum_{k \geq v_p(x)} x(k) p^k
+\]
+for 
+\[
+v_p(x) = \inf\{k \in \mathbb{Z}: x(k) \neq 0\}.
+\]
+\[
+\mathbb{Z}_p = \{x \in \mathbb{Q}_p: v_p(x) \geq 0\}.
+\]
+For $x,y \in \mathbb{Q}_p$,
+\[
+v_p(xy) = v_p(x)+v_p(y),\qquad v_p(x+y) \geq \min(v_p(x),v_p(y)),
+\]
+and $v_p(x)=\infty$ if and only if $x=0$. 
+The $p$-integers $\mathbb{Z}_p$ with the valuation $v_p$
+are a Euclidean domain:
+for $f,g \in \mathbb{Z}_p$ with
+$v_p(f) \geq v_p(g)$ we have $f\cdot g^{-1} \in \mathbb{Z}_p$.
+$\mathbb{Z}_p^*$ is the set of those $x \in \mathbb{Z}_p$ for which there is some $y \in \mathbb{Z}_p$ satisfying $xy=1$.
+\[
+\mathbb{Z}_p^* = \{x \in \mathbb{Q}_p: v_p(x)=0\}.
+\]
+The ideals of the ring $\mathbb{Z}_p$ are $\{0\}$ and
+$p^n\mathbb{Z}_p$, $n \geq 0$.
+From this it follows that $\mathbb{Z}_p$ is a \textbf{discrete valuation ring}, a principal
+ideal domain with exactly one maximal ideal, namely $p\mathbb{Z}_p$; $\mathbb{Z}_p$ is the \textbf{valuation ring} of $\mathbb{Q}_p$ with the valuation
+$v_p$.
+For $n \geq 1$,
+$\mathbb{Z}_p/p^n \mathbb{Z}_p$ is isomorphic as a ring with
+$\mathbb{Z}/p^n\mathbb{Z}$.
+\[
+|x|_p = p^{-v_p(x)},\qquad d_p(x,y) = |x-y|_p.
+\]
+With the topology induced by the metric $d_p$, $\mathbb{Q}_p$ is a locally compact abelian group,
+and $(\mathbb{Q}_p,d_p)$ is a complete metric space.
+$(\mathbb{Q}_p,|\cdot|_p)$ is a complete nonarchimedean valued field. 
+For $x \in \mathbb{Q}_p$,
+\[
+\{x+p^n \mathbb{Z}_p: n \in \mathbb{Z}\} 
+\]
+is a local base at $x$ for the topology of $\mathbb{Q}_p$. 
+\[
+[x]_p = \sum_{k \geq 0} x(k) p^k \in \mathbb{Z}_p,\quad \{x\}_p = \sum_{k<0} x(k) p^k \in [0,1) \cap \mathbb{Z}[1/p].
+\]
+\[
+\psi_p(x) = e^{2\pi i\{x\}_p}
+\]
+is a continuous group homomorphism $\mathbb{Q}_p \to S^1$. Its image is the discrete abelian group
+\[
+\mathbb{Z}[p^\infty] = \{e^{2\pi imp^{-n}}: m,n \geq 0\},
+\]
+the Pr\"ufer $p$-group,
+and its kernel is
+$\mathbb{Z}_p$. $\mathbb{Q}_p / \mathbb{Z}_p$ and $\mathbb{Z}[p^\infty]$ are isomorphic as discrete abelian groups.
+There is a complete algebraically closed nonarchimedean valued field $\mathbb{C}_p$, unique up to unique
+isomorphism, that is an extension of $(\mathbb{Q}_p,|\cdot|_p)$. 
+
+
+\section{Pontryagin dual}
+Denote by $\widehat{\mathbb{Q}}_p$ the \textbf{Pontryagin dual} of the locally compact abelian group
+$(\mathbb{Q}_p,+)$. 
+For $\xi \in \widehat{\mathbb{Q}}_p$ and $x \in \mathbb{Q}_p$,
+\[
+x = \sum_{k \in \mathbb{Z}} x(k) p^k
+\]
+and
+\begin{equation}
+\inner{x}{\xi} = \xi(x) = \prod_{k \in \mathbb{Z}} \xi(x(k) p^k) = \prod_{k \in \mathbb{Z}}  \xi(p^k)^{x(k)}.
+\label{xiproduct}
+\end{equation}
+
+For $y \in \mathbb{Q}_p$, define $m_y:\mathbb{Q}_p \to \mathbb{Q}_p$ by
+$m_y(x)=y\cdot x$, which is a continuous group homomorphism. Then
+$\xi_y = \psi_p \circ m_y$ is a continuous group homomorphism $\mathbb{Q}_p \to S^1$, namely
+$\xi_y \in \widehat{\mathbb{Q}}_p$. The kernel
+of $\xi_y$ is $\{x \in \mathbb{Q}_p : yx \in \mathbb{Z}_p\}$, in other words
+\[
+\ker \xi_y = \{x \in \mathbb{Q}_p : |x|_p \leq |y|_p^{-1}\} 
+\]
+where $|0|_p^{-1} = \infty$. If $y \neq 0$ then
+\[
+\ker \xi_y = \{x \in \mathbb{Q}_p : |x|_p \leq |y|_p^{-1}\}  = p^{-v_p(y)} \mathbb{Z}_p.
+\]
+
+We shall prove that $y \mapsto \xi_y$ is an isomorphism of topological groups
+$\mathbb{Q}_p \to \widehat{\mathbb{Q}}_p$. We will use the following lemma.\footnote{Gerald B. Folland, {\em A Course in Abstract Harmonic
+Analysis}, p.~92, Lemma 4.9.}
+
+\begin{lemma}
+If $\xi \in \widehat{\mathbb{Q}}_p$ then there is some $n \in \mathbb{Z}$ such that
+$\inner{x}{\xi}=1$ for $x \in p^n \mathbb{Z}_p$. 
+\label{lemma49}
+\end{lemma}
+\begin{proof}
+Let $U=\{e^{2\pi i\theta}: |\theta|<\frac{1}{4}\}$, which is an open set in $S^1$.
+As
+$\xi(0) \in U$ and $\{p^n \mathbb{Z}_p: n \in \mathbb{Z}\}$ is a local base at $0$, 
+there is some $n \in \mathbb{Z}$ such that
+$p^n \mathbb{Z}_p \subset \xi^{-1}(U)$. This means that 
+$\xi(p^n \mathbb{Z}_p) \subset U$, and because $\xi:\mathbb{Q}_p \to S^1$ is a group homomorphism,
+$\xi(p^n \mathbb{Z}_p)$ is therefore a subgroup of $S^1$ contained in $U$.
+But the only subgroup of $S^1$ contained in $U$ is $\{1\}$, and therefore
+$\xi(p^n \mathbb{Z}_p) = \{1\}$.
+\end{proof}
+
+Suppose $\xi \in \widehat{\mathbb{Q}}_p$, $\xi \neq 1$. 
+By \eqref{xiproduct} there is then some $k$ such that $\xi(p^k) \neq 1$. Now,
+$|p^j|_p = p^{-j} \to 0$ as $j \to \infty$, so $p^j \to 0$ in $\mathbb{Q}_p$  and therefore
+$\xi(p^j) \to 1$ as $j \to \infty$. Let
+\[
+j_\xi-1 = \max\{k \in \mathbb{Z} : \inner{p^k}{\xi} \neq 1\}.
+\]
+Then $\inner{p^{j_\xi-1},\xi} \neq 1$ and $\inner{p^j}{\xi}=1$ for $j \geq j_\xi$.
+In particular, $j_\xi=0$ is equivalent with
+ $\inner{1}{\xi}=1$ and $\inner{p}{\xi}\neq 1$.\footnote{Gerald B. Folland, {\em A Course in Abstract Harmonic
+Analysis}, p.~92, Lemma 4.10.}
+
+\begin{lemma}
+Suppose that $\xi \in \widehat{\mathbb{Q}}_p$ with $\inner{1}{\xi}=1$ and $\inner{p^{-1}}{\xi} \neq 1$. Then there
+are $c_j \in N_p$, $j \geq 0$, with $c_0 \neq 0$, such that
+\[
+\inner{p^{-k}}{\xi} = \exp\left(2\pi i\sum_{j=1}^k c_{k-j} p^{-j} \right),\qquad k \geq 1.
+\]
+\label{lemma410}
+\end{lemma}
+\begin{proof}
+Let $\omega_0=\inner{1}{\xi}=1$ and 
+for $k \geq 1$ let $\omega_k = \inner{p^{-k}}{\xi} \in S^1$, which satisfy
+\[
+\omega_{k+1}^p = \inner{p^{-k}}{\xi} = \omega_k.
+\]
+Because $\omega_1^p=1$ this means that there is some
+$c_0 \in N_p$ such that $\omega_1 = e^{2\pi ic_0 p^{-1}}$, and
+by hypothesis $\omega_1 \neq 1$, which means $c_0 \neq 0$. By induction, suppose for
+some $k \geq 1$ and $c_0,\ldots,c_{k-1} \in N_p$, $c_0 \neq 0$, such that  
+\[
+\omega_k = \exp\left( 2\pi i\sum_{j=1}^k c_{k-j} p^{-j} \right).
+\]
+Generally, if $z^p = e^{i\theta}$ then there is some $c \in N_p$ such that
+$z = e^{\frac{1}{p} i\theta} e^{2\pi i cp^{-1}}$. 
+Thus, the fact that $\omega_{k+1}^p = \omega_k$ means that 
+there is some $c_k \in N_p$ such that
+\[
+\omega_{k+1} = \exp\left( \frac{1}{p} \cdot 2\pi i\sum_{j=1}^k c_{k-j} p^{-j} \right) \cdot e^{2\pi ic_k p^{-1}}
+=\exp\left(2\pi i\sum_{j=1}^{k+1} c_{k+1-j} p^{-j} \right).
+\]
+\end{proof}
+
+We prove a final lemma.\footnote{Gerald B. Folland, {\em A Course in Abstract Harmonic
+Analysis}, p.~92, Lemma 4.11.}
+
+
+\begin{lemma}
+Suppose that $\xi \in \widehat{\mathbb{Q}}_p$ with $\inner{1}{\xi}=1$ and $\inner{p^{-1}}{\xi} \neq 1$. 
+Then there is some $y \in \mathbb{Q}_p$ with $|y|_p=1$ and $\xi=\xi_y$.
+\label{lemma411}
+\end{lemma}
+\begin{proof}
+By Lemma \ref{lemma410} there are $c_j \in N_p$, $j \geq 0$, $c_0 \neq 0$, such that 
+\[
+\inner{p^{-k}}{\xi} = \exp\left(2\pi i\sum_{j=1}^k c_{k-j} p^{-j} \right),\qquad k \geq 1.
+\]
+Define $y \in \mathbb{Q}_p$ by $y(j) = c_j$ for $j \geq 0$ and $y(j)=0$ for $j<0$. As $y(0)=c_0 \neq 0$, $|y|_p=1$. 
+For $k \geq 1$ and $-k \leq j \leq -1$ we have 
+$(p^{-k}y)(j) = y(j+k) = c_{j+k}$, and for $j<-k$ we have $(p^{-k}y)(j)=y(j+k)=0$, so
+\[
+\{p^{-k}y\}_p = \sum_{j<0} (p^{-k}y)(j) p^j = \sum_{-k \leq j \leq -1}  (p^{-k}y)(j) p^j
+=\sum_{-k \leq j \leq -1} c_{j+k} p^j,
+\]
+yielding
+\[
+\inner{p^{-k}}{\xi}
+=\exp\left(2\pi i\sum_{-k \leq j \leq -1} c_{k+j} p^j\right)
+=\exp(2\pi i \{p^{-k}y\}_p),
+\]
+i.e.  $\inner{p^{-k}}{\xi} = \psi_p(p^{-k}y) = \inner{p^{-k}}{\xi_y}$. 
+But $\inner{1}{\xi}=1$ implies that $\inner{p^k}{\xi}=1$ for $k \geq 0$, and because
+$y(k)=0$ for $k<0$,
+\[
+\inner{1}{\xi_y} = e^{2\pi i\{y\}_p} = 1,
+\]
+which implies that $\inner{p^k}{\xi}=1$ for $k \geq 0$. 
+Therefore $\inner{p^k}{\xi}=\inner{p^k}{\xi_y}$ for all $k \in \mathbb{Z}$, which implies that $\xi=\xi_y$. 
+\end{proof}
+
+
+
+We now have worked out enough to prove that
+$y \mapsto \xi_y$ is an isomorphism.\footnote{Gerald B. Folland, {\em A Course in Abstract Harmonic
+Analysis}, p.~92, Theorem 4.12.}
+
+\begin{theorem}
+$y \mapsto \xi_y$ is an isomorphism of topological groups $\mathbb{Q}_p \to \widehat{\mathbb{Q}}_p$. 
+\end{theorem}
+\begin{proof}
+For $x \in \mathbb{Q}_p$,
+\[
+\inner{x}{\xi_y \xi_z} = \inner{x}{\xi_y} \inner{x}{\xi_z} = \psi_p(yx) \psi_p(zx) = \psi_p(yx+zx)=
+\inner{x}{\xi_{y+z}},
+\]
+showing that $y \mapsto \xi_y$ is a group homomorphism. Suppose that $\xi_y=1$. Then for all
+$x \in \mathbb{Q}_p$ we have $\inner{x}{\xi_y}=1$, i.e. $e^{2\pi i\{yx\}_p}=1$, i.e.
+$\{yx\}_p = 0$, i.e. $yx \in \mathbb{Z}_p$. 
+This implies $y=0$, showing that $y \mapsto \xi_y$ is injective.
+It remains to show that $y \mapsto \xi_y$ is surjective, that it is continuous, and that it is an open map. But in
+fact, the open mapping theorem for locally compact groups\footnote{Karl H. Hofmann and Sidney A. Morris,
+{\em The Structure of Compact Groups}, 2nd revised and augmented edition,
+p.~669, Appendix 1.} tells us that
+if $f:G \to H$ is a continuous group homomorphism of locally compact groups that is surjective and $G$ is $\sigma$-compact then
+$f$ is open. $\mathbb{Q}_p$ is $\sigma$-compact: $\mathbb{Q}_p = \bigcup_{n \in \mathbb{Z}} p^n \mathbb{Z}_p$. So to prove
+the claim it suffices to prove that $y \mapsto \xi_y$ is surjective and continuous.
+
+
+Let $\xi \in \widehat{\mathbb{Q}}_p$, $\xi \neq 1$. By Lemma \ref{lemma49}, 
+let
+\[
+j - 1 = \max\{k \in \mathbb{Z} : \inner{p^{k}}{\xi} \neq 1\},
+\]
+for which $\inner{p^{j-1}}{\xi} \neq 1$ and $\inner{p^j}{\xi}=1$.
+Define $\eta \in \widehat{\mathbb{Q}}_p$ by
+\[
+\inner{x}{\eta} = \inner{p^jx}{\xi},
+\] 
+which satisfies $\inner{1}{\eta} = \inner{p^jx}{\xi} = 1$ and
+$\inner{p^{-1}}{\eta} = \inner{p^{j-1}}{\xi} \neq 1$. Thus we can apply Lemma \ref{lemma411}:
+there is some $z \in \mathbb{Q}_p$, $|z|_p=1$,  such that $\eta=\xi_z$. 
+Now let $y=p^{-j}z \in \mathbb{Q}_p$, which satisfies
+\[
+\inner{x}{\xi_y} = e^{2\pi i\{yx\}_p} = e^{2\pi i \{z\cdot p^{-j}x\}_p} =
+\inner{p^{-j}x}{\xi_z} 
+=\inner{p^{-j}x}{\eta}
+=\inner{x}{\xi},
+\]
+from which it follows that $\xi=\xi_y$. Therefore $y \mapsto \xi_y$ is surjective. 
+
+For $j \geq 1$ and $k \geq 1$ define
+\[
+N(j,k) = \{\xi \in \widehat{\mathbb{Q}}_p : \textrm{$|\inner{x}{\xi}-1| < j^{-1}$ for
+$|x|_p \leq p^{-k}$}\}.
+\]
+It is a fact that $\{N(j,k): j \geq 1, k \geq 1\}$ is a local base at $1$ for the topology of $\widehat{\mathbb{Q}}_p$. 
+Suppose $y \in \mathbb{Z}_p$. For $j \geq 1$,
+$k \geq 1$ and $|x|_p \leq p^{-k}$, we have $xy \in \mathbb{Z}_p$ and hence
+$\inner{x}{\xi_y}=1$, hence $y \in N(j,k)$.  This shows that $\xi(\mathbb{Z}_p) \subset N(j,k)$, and therefore
+$y \mapsto \xi_y$ is continuous at $0$. 
+\end{proof}
+
+
+
+
+
+\section{Haar measure}
+For a locally compact abelian group $G$, a \textbf{Haar measure on $G$} is a Borel measure $m$ on $G$ such that (i)
+$m(x+E)=m(E)$ for each Borel set $E$ and $x \in G$, (ii) if $K$ is a compact set then $m(K)<\infty$, (iii) if $E$ is a Borel set then
+\[
+m(E) = \inf\{m(U): \textrm{$E \subset U$, $U$ open}\},
+\]
+and (iv) if $U$ is an open set then
+\[
+m(E) = \sup\{m(K): \textrm{$K \subset U$, $K$ compact}\},
+\]
+It is a fact that for any locally compact abelian group $G$ there is a Haar measure $m$ that is not identically $0$. One proves
+that if $U$ is an open set then $m(U)>0$ and that if $m_1,m_2$ are Haar measures that are not identically $0$ then for some
+positive real $c$, $m_1=cm_2$.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, pp.~1--2.}
+
+
+$\mathbb{Q}_p$ is a locally compact abelian group, so there is a Haar measure $m$ on $\mathbb{Q}_p$ that is not identically $0$. Because $\mathbb{Z}_p$ is compact,
+$m(\mathbb{Z}_p)<\infty$, and because $\mathbb{Z}_p$ is open, $m(\mathbb{Z}_p)>0$. Then let
+$\mu = \frac{1}{m(\mathbb{Z}_p)} m$, which is the unique Haar measure on $\mathbb{Q}_p$ satisfying
+\[
+\mu(\mathbb{Z}_p) = 1.
+\]
+
+
+\begin{lemma}
+For $k \in \mathbb{Z}$,
+\[
+\mu(p^k \mathbb{Z}_p) = p^{-k}.
+\]
+\label{balls}
+\end{lemma}
+\begin{proof}
+If $k>0$, then $p^k \mathbb{Z}_p$ is an ideal in $\mathbb{Z}_p$ and
+$\mathbb{Z}_p / p^k \mathbb{Z}_p$ is isomorphic as a ring with 
+$\mathbb{Z} / p^k \mathbb{Z}$. So there are 
+$x_j \in \mathbb{Z}_p$, $1 \leq j \leq p^k$, such that 
+$\mathbb{Z}_p = \bigcup_{1 \leq j \leq p^k} (x_j+p^k \mathbb{Z}_p)$, and
+the sets $x_j + p^k \mathbb{Z}_p$ are pairwise disjoint. Therefore
+\[
+1=\mu(\mathbb{Z}_p) = \sum_{j=1}^{p^k} \mu(x_j+p^k \mathbb{Z}_p) = \sum_{j=1}^{p_k} \mu(p^k\mathbb{Z}_p)
+=p^k \mu(p^k \mathbb{Z}_p),
+\]
+yielding $\mu(p^k \mathbb{Z}_p) = p^{-k}$.
+
+If $k<0$, then $p^k \mathbb{Z}_p$ is a ring and $\mathbb{Z}_p$ is an ideal in this ring. 
+\end{proof}
+
+We calculate $\mu(x \cdot E)$.\footnote{Anton Deitmar and Siegfried Echterhoff,
+{\em Principles of Harmonic Analysis}, second ed., p.~254, Lemma 13.2.1.}
+
+\begin{lemma}
+For $A$ a Borel set in $\mathbb{Q}_p$ and $x \in \mathbb{Q}_p$,
+\[
+\mu(x\cdot A) = |x|_p \mu(A).
+\]
+\end{lemma}
+\begin{proof}
+If $x=0$ then $x\cdot A = \{0\}$ and $\mu(x\cdot A)=0$ and $|x|_p \mu(A) = 0 \cdot \mu(A)=0$.
+(The set $\mathbb{Q}_p$ is infinite and $\mu$ is translation invariant,
+so finite sets have measure $0$.) 
+For $x \neq 0$,
+write $M_x(y)=x^{-1}  \cdot y$, which is an isomorphism of locally compact groups $(\mathbb{Q}_p,+)
+\to (\mathbb{Q}_p,+)$. Let $\mu_x$ be the pushforward of $\mu$ by $M_x$:
+\[
+\mu_x(E) = \mu(M_{x}^{-1} E) = \mu(\{y \in \mathbb{Q}_p : x^{-1}y \in E\})
+=\mu(x\cdot E).
+\]
+Because $M_x$ is an isomorphism, it follows that $\mu_x$ is a Haar measure on $\mathbb{Q}_p$. 
+And because $\mu_x(\mathbb{Q}_p) = \mu(\mathbb{Q}_p)=\infty$, showing $\mu_x$ is not identically $0$,
+there is some
+$c_x>0$ such that $\mu_x = c_x \mu$. 
+
+Now, as $x \neq 0$, $v_p(x) \in \mathbb{Z}$ and $|x|_p = p^{-v_p(x)}$. Then
+$p^{-v_p(x)} x \in \mathbb{Z}_p^*$, so 
+there is some $y \in \mathbb{Z}_p^*$ such that $x = p^{v_p(x)} y$. As $y \in \mathbb{Z}_p^*$, $y \cdot \mathbb{Z}_p
+=\mathbb{Z}_p$ and hence $x \cdot \mathbb{Z}_p = p^{v_p(x)} \cdot \mathbb{Z}_p$. 
+By Lemma \ref{balls}, $\mu(p^{v_p(x)} \mathbb{Z}) = p^{-v_p(x)}$, so 
+\[
+\mu_x(\mathbb{Z}_p) = \mu(x \cdot \mathbb{Z}_p) =\mu(p^{v_p(x)} \mathbb{Z}) = p^{-v_p(x)}
+\]
+and therefore
+\[
+p^{-v_p(x)} = c_x \mu(\mathbb{Z}_p) = c_x,
+\]
+and $|x|_p = p^{-v_p(x)}$ so $c_x = |x|_p$. Therefore $\mu_x = |x|_p \mu$.
+\end{proof}
+
+
+
+\begin{lemma}
+For $f \in L^1(\mathbb{Q}_p)$ and $x \neq 0$,
+\[
+\int_{\mathbb{Q}_p} f(x^{-1} y) d\mu(y) = |x|_p \int_{\mathbb{Q}_p} f(y) d\mu(y).
+\]
+\label{COV}
+\end{lemma}
+\begin{proof}
+$\mu_x$ is the pushforward of $\mu$ by $M_x(y) = x^{-1} \cdot y$, and by the change of variables formula,
+\[
+\int_{\mathbb{Q}_p} f(x^{-1} y) d\mu(y) 
+=\int_{\mathbb{Q}_p} (f \circ M_x)(y) d\mu(y)
+=\int_{\mathbb{Q}_p} f(y) d\mu_x(y)
+=|x|_p \int_{\mathbb{Q}_p} f(y) d\mu(y).
+\]
+\end{proof}
+
+
+
+The restriction of $\mu$ to the Borel $\sigma$-algebra of $\mathbb{Q}_p^* = \mathbb{Q}_p \setminus \{0\}$ is
+a Borel measure on $\mathbb{Q}_p^*$. We prove that
+the Borel measure on $\mathbb{Q}_p^*$ whose density with respect to
+$\mu$ is $x \mapsto \frac{1}{|x|_p}$ is a Haar measure.\footnote{Anton Deitmar and Siegfried Echterhoff,
+{\em Principles of Harmonic Analysis}, second ed., p.~255, Proposition 13.2.2.}
+
+\begin{theorem}
+$\frac{1}{|x|_p} d\mu(x)$ is a Haar measure on the multiplicative group
+$\mathbb{Q}_p^*$.
+\end{theorem}
+\begin{proof}
+For $f \in C_c(\mathbb{Q}_p^*)$ and $y \in \mathbb{Q}_p^*$, 
+writing $g_y(x) = \frac{f(x)}{|yx|_p}$, by
+Lemma \ref{COV} we have
+\begin{align*}
+\int_{\mathbb{Q}_p^*} f(y^{-1}x) \frac{1}{|x|_p} d\mu(x) &= \int_{\mathbb{Q}_p^*} (g_y \circ M_y)(x)
+d\mu(x)\\
+&=\int_{\mathbb{Q}_p^*} g_y(x) d\mu_y(x)\\
+&=|y|_p \int_{\mathbb{Q}_p^*}g_y(x)  d\mu(x)\\
+&=|y|_p \int_{\mathbb{Q}_p^*}\frac{f(x)}{|yx|_p}d\mu(x)\\
+&=\int_{\mathbb{Q}_p^*} f(x) \frac{1}{|x|_p} d\mu(x).
+\end{align*}
+\end{proof}
+
+Write $d\nu_0(x) = \frac{1}{|x|_p} d\mu(x)$. 
+For $x \in \mathbb{Q}_p^*$, $p^{-v_p(x)} x \in \mathbb{Z}_p^*$, i.e.
+$x \in p^{v_p(x)} \mathbb{Z}_p^*$, and 
+$\mathbb{Z}_p^*$ is the kernel of the group homomorphism
+$x \mapsto v_p(x)$, $\mathbb{Q}_p^* \to \mathbb{Z}$. It follows that
+the sets $p^k \mathbb{Z}_p^*$, $k \in \mathbb{Z}$, are pairwise disjoint and 
+$\mathbb{Q}_p^* = \bigcup_{k \in \mathbb{Z}} p^k \mathbb{Z}_p^*$. 
+For $k \in \mathbb{Z}$, because $p^k \mathbb{Z}_p^*$ is a compact open set in $\mathbb{Q}_p$ it is the case
+that
+$1_{p^k \mathbb{Z}_p^*} \in C_c(\mathbb{Q}_p)$ so
+by Lemma \ref{COV},
+\begin{align*}
+\nu_0(p^k \mathbb{Z}_p^*) &=\int_{\mathbb{Q}_p^*} 1_{p^k \mathbb{Z}_p^*}(x)  \frac{1}{|x|_p} d\mu(x)\\
+&=\int_{\mathbb{Q}_p^*} 1_{\mathbb{Z}_p^*} (p^{-k}x) \frac{1}{|p^{-k} \cdot p^k x|_p} d\mu(x)\\
+&=\int_{\mathbb{Q}_p^*} 1_{\mathbb{Z}_p^*}(x) \frac{1}{|p^k x|_p} d\mu_{p^k}(x)\\
+&=|p^k|_p \int_{\mathbb{Q}_p^*} 1_{\mathbb{Z}_p^*}(x) \frac{1}{|p^k x|_p} d\mu(x)\\
+&=\int_{\mathbb{Q}_p^*} 1_{\mathbb{Z}_p^*} \frac{1}{|x|_p} d\mu(x)\\
+&=\int_{\mathbb{Q}_p^*} 1_{\mathbb{Z}_p^*} d\mu(x)\\
+&=\mu(\mathbb{Z}_p^*).
+\end{align*}
+Check that $1+p\mathbb{Z}_p$ is a subgroup of $\mathbb{Z}_p^*$ with index $p-1$:
+the sets $a+p\mathbb{Z}_p$, $a \in N_p$, $a \neq 0$, are contained in
+$\mathbb{Z}_p^*$ and are pairwise disjoint. 
+This implies
+\[
+\mu(\mathbb{Z}_p^*) = (p-1) \mu(p\mathbb{Z}_p) = \frac{p-1}{p}.
+\]
+Then
+\[
+d\nu(x) = \frac{p}{p-1} \frac{1}{|x|_p} d\mu(x)
+\]
+is a Haar measure on $\mathbb{Q}_p^*$ with $\nu(\mathbb{Z}_p^*)=1$. 
+
+
+
+
+
+
+\section{Integration}
+As $\mathbb{Z}_p \setminus \{0\} = \bigcup_{n \geq 0} p^n \mathbb{Z}_p^*$, 
+for $\Re s>-1$,
+\begin{align*}
+\int_{\mathbb{Z}_p \setminus \{0\}} |x|_p^s d\mu(x)&=\sum_{n \geq 0} \int_{p^n \mathbb{Z}_p^*}
+|x|_p^s d\mu(x)\\
+&=\sum_{n \geq 0} p^{-ns} \mu(p^n \mathbb{Z}_p^*) \\
+&=\sum_{n \geq 0} p^{-ns} p^{-n} \cdot \mu(\mathbb{Z}_p^*)\\
+&=\sum_{n \geq 0} p^{-ns} p^{-n} \cdot \frac{p-1}{p}\\
+&=\frac{p-1}{p(1-p^{-1-s})}.
+\end{align*}
+
+For $\Re s>0$,
+\begin{align*}
+\int_{\mathbb{Z}_p \setminus \{0\}} |x|_p^s d\nu(x)&=\sum_{n \geq 0} \int_{p^n \mathbb{Z}_p^*}
+|x|_p^s \frac{p}{p-1} \frac{1}{|x|_p} d\mu(x)\\
+&=\frac{p}{p-1} \sum_{n \geq 0} \int_{p^n \mathbb{Z}_p^*} (p^{-n})^{s-1} d\mu(x)\\
+&=\frac{p}{p-1} \sum_{n \geq 0} p^{(-s+1)n}  p^{-n} \cdot \frac{p-1}{p}\\
+&=\sum_{n \geq 0} p^{-ns}\\
+&=\frac{1}{1-p^{-s}}.
+\end{align*}
+It is worth remarking that this is a factor of the Euler product for the Riemann zeta function. 
+
+
+We will use the following when working with the Fourier transform.\footnote{Dorian Goldfeld and Joseph Hundley, {\em Automorphic Representations and $L$-Functions for the General Linear Group}, volume
+ I, p.~16, Lemma 1.6.4.}
+
+\begin{lemma}
+For $n \in \mathbb{Z}$,
+\[
+\int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p}(x) e^{-2\pi i\{x\}_p} d\mu(x) = \begin{cases}
+p^{-n}&n\geq 0\\
+0&\textrm{otherwise}.
+\end{cases}
+\]
+\label{nontrivial}
+\end{lemma}
+\begin{proof}
+If $n \geq 0$ and $x \in p^n \mathbb{Z}_p$ then $\{x\}_p=0$ so  
+\[
+\int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p}(x) e^{-2\pi i\{x\}_p} d\mu(x) = \mu(p^n\mathbb{Z}_p) = p^{-n}.
+\]
+If $n<0$, let $y=p^n \in p^n \mathbb{Z}_p$, for which $\{y\}_p = p^{n}$.
+Define $T:\mathbb{Q}_p \to \mathbb{Q}_p$ by $T(x)=-y+x$. Then, as $\mu$ is translation invariant
+ and as $x+y \in p^n \mathbb{Z}_p$ if and only if $x \in p^n \mathbb{Z}_p$,
+\begin{align*}
+\int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p}(x) e^{-2\pi i\{x\}_p} d\mu(x) &=
+\int_{\mathbb{Q}_p} (1_{p^n \mathbb{Z}_p} \circ T)(y+x) e^{-2\pi i\{T(y+x)\}_p} d\mu(x)\\
+&=\int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p}(y+x) e^{-2\pi i\{y+x\}_p} d\mu(x)\\
+&=\int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p}(x) e^{-2\pi i\{y+x\}_p} d\mu(x)\\
+&=e^{-2\pi i\{y\}_p} \int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p}(x) e^{-2\pi i\{x\}_p} d\mu(x).
+\end{align*}
+Because $e^{-2\pi i\{y\}_p} \neq 1$, for $I= e^{-2\pi i\{y\}_p} I$ we have $I = 0$.
+\end{proof}
+
+
+\begin{lemma}
+For $n \in \mathbb{Z}$ and $y \in \mathbb{Q}_p$,
+\[
+\int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p}(x) e^{-2\pi i\{yx\}_p} d\mu(x) = \begin{cases}
+p^{-n}&y \in p^{-n}\mathbb{Z}_p\\
+0&\textrm{otherwise}.
+\end{cases}
+\label{characters}
+\]
+\end{lemma}
+\begin{proof}
+If $y \in p^{-n} \mathbb{Z}_p$ then for any $x \in p^n\mathbb{Z}_p$ we have
+$yx \in \mathbb{Z}_p$ and so $\{yx\}_p=0$ and $I=\mu(p^n\mathbb{Z}_p) = p^{-n}$.
+\end{proof}
+
+Another lemma.\footnote{Dorian Goldfeld and Joseph Hundley, {\em Automorphic Representations and $L$-Functions for the General Linear Group}, volume
+I, p.~16, Proposition 1.6.5.}
+ 
+\begin{lemma}
+For $n \in \mathbb{Z}$,
+\[
+\int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p^*}(x) e^{-2\pi i\{x\}_p} d\mu(x)
+=\begin{cases}
+p^{-n}(1-p^{-1})&n \geq 0\\
+-1&n=-1\\
+0&n<-1.
+\end{cases}
+\]
+\end{lemma}
+\begin{proof}
+$\mathbb{Z}_p^* = \mathbb{Z}_p - p \mathbb{Z}_p$ and $p^n \mathbb{Z}_p^* = p^n \mathbb{Z}_p - p^{n+1} \mathbb{Z}_p$
+and then
+\begin{align*}
+\int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p^*}(x) e^{-2\pi i\{x\}_p} d\mu(x)
+&=\int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p}(x) e^{-2\pi i\{x\}_p} d\mu(x)\\
+&-\int_{\mathbb{Q}_p} 1_{p^{n+1} \mathbb{Z}_p}(x) e^{-2\pi i\{x\}_p} d\mu(x)\\
+&=I_1-I_2.
+\end{align*}
+We apply Lemma \ref{nontrivial}. If $n \geq 0$ then $I_1=p^{-n}$ and $I_2=p^{-n-1}$ so
+$I=p^{-n}-p^{-n-1}= p^{-n}(1-p^{-1})$.
+If $n=-1$ then $I_1=0$ and $n+1\geq 0$ so $I_2=p^{-n-1}=1$ hence
+$I=-1$. Finally if $n<-1$ then $I_1=0$ and $I_2=0$ so $I=0$.
+\end{proof}
+
+
+
+
+
+
+For $f \in L^1(\mathbb{Q}_p)$ and $y \in \mathbb{Q}_p$, define $\widehat{f} \in C_0(\mathbb{Q}_p)$ by
+\[
+\widehat{f}(y) =(\mathscr{F}f)(y)= \int_{\mathbb{Q}_p} f(x) e^{-2\pi i\{yx\}_p} d\mu(x).
+\]
+
+
+Let $\mathscr{S}$ be the set of locally constant functions $\mathbb{Q}_p \to \mathbb{C}$ with compact support.
+We call an element of $\mathscr{S}$ a \textbf{$p$-adic Schwartz function}.\footnote{cf. A. A. Kirillov and A. D. Gvishiani, 
+{\em Theorems and Problems in Functional Analysis},
+p.~210, no. 639.}
+We prove that the Fourier transform of a $p$-adic Schwartz function is itself a $p$-adic Schwartz function.\footnote{Dorian Goldfeld and Joseph Hundley, {\em Automorphic Representations and $L$-Functions for the General Linear Group}, volume
+I, p.~17, Theorem 1.6.8.}
+
+
+
+\begin{theorem}
+If $f \in \mathscr{S}$ then $\widehat{f} \in \mathscr{S}$.
+\end{theorem}
+\begin{proof}
+Let $n \in \mathbb{Z}$, $a \in \mathbb{Q}_p$, and let $N=a+p^n \mathbb{Z}_p$. For $y \in \mathbb{Q}_p$,
+applying Lemma \ref{characters},
+\begin{align*}
+\widehat{1}_N(y)&=\int_{\mathbb{Q}_p} 1_{a+p^n \mathbb{Z}_p}(x) e^{-2\pi i\{yx\}_p} d\mu(x)\\
+&=\int_{\mathbb{Q}_p} 1_{p^n\mathbb{Z}_p}(-a+x) e^{-2\pi i\{y(-a+x)+ay\}_p} d\mu(x)\\
+&=e^{-2\pi i\{ay\}_y}  \int_{\mathbb{Q}_p} 1_{p^n\mathbb{Z}_p}(-a+x) e^{-2\pi i\{y(-a+x)\}_p} d\mu(x)\\
+&=e^{-2\pi i\{ay\}_y} \int_{\mathbb{Q}_p} 1_{p^n \mathbb{Z}_p}(x) e^{-2\pi i\{yx\}_p} d\mu(x)\\
+&=e^{-2\pi i\{ay\}_y} p^{-n} 1_{p^{-n} \mathbb{Z}_p}(y).
+\end{align*}
+\end{proof}
+
+
+
+
+
+
+\end{document}

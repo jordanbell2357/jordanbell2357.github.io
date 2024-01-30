@@ -1,0 +1,507 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_{\mathrm{HS}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Kronecker's theorem}
+\author{Jordan Bell}
+\date{August 29, 2015}
+
+\maketitle
+
+
+
+\section{Equivalent statements of Kronecker's theorem}
+We shall now give  two statements of \textbf{Kronecker's theorem}, and prove that they
+are equivalent before proving that they are true.
+
+\begin{theorem}
+If $\theta_1,\ldots,\theta_k,1$ are real numbers that are linearly
+independent over $\mathbb{Z}$,  $\alpha_1,\ldots,\alpha_k$ are real 
+numbers, and $N$ and $\epsilon$ are positive real numbers, then there are integers
+$n>N$ and $p_1,\ldots,p_k$ such that for $m=1,\ldots,k$,
+\[
+|n\theta_m - p_m - \alpha_m| < \epsilon.
+\]
+\label{kronecker1}
+\end{theorem}
+
+\begin{theorem}
+If $\theta_1,\ldots,\theta_k$ are real numbers that are linearly
+independent over $\mathbb{Z}$, $\alpha_1,\ldots,\alpha_k$ are real numbers,
+and $T$ and $\epsilon$ are positive real numbers, then there is a  real number $t>T$ 
+and integers $p_1,\ldots,p_k$ such that for $m=1,\ldots,k$,
+\[
+|t\theta_m - p_m - \alpha_m | < \epsilon.
+\]
+\label{kronecker2}
+\end{theorem}
+
+We now prove that the above two statements are equivalent.\footnote{K. Chandrasekharan, {\em Introduction to Analytic Number Theory},
+pp.~92--93, Chapter VIII, \S 5.}
+
+\begin{lemma}
+Theorem \ref{kronecker1} is true if and only if Theorem \ref{kronecker2}
+is true.
+\end{lemma}
+\begin{proof}
+Assume that Theorem \ref{kronecker2} is true and let
+$\theta_1',\ldots,\theta_k',1$ be real numbers that are linearly
+independent over $\mathbb{Z}$,  let $\alpha_1,\ldots,\alpha_k$ be real 
+numbers, let $N>0$ and let $0<\epsilon<1$. 
+Let $\theta_m=\theta_m'-q_m$ with $0<\theta_m \leq 1$.
+Because $\theta_1',\ldots,\theta_k',1$ are linearly independent over $\mathbb{Z}$, so are
+$\theta_1,\ldots,\theta_k,1$. 
+Using Theorem \ref{kronecker2} with $k+1$ instead of $k$, $N+1$ instead of $T$, $\frac{1}{2}\epsilon$
+instead of $\epsilon$, applied with
+\[
+\theta_1,\ldots,\theta_k,1,\qquad \alpha_1,\ldots,\alpha_k,0,
+\]
+there is a real number $t>N+1$ and integers $p_1,\ldots,p_k,p_{k+1}$ such that for $m=1,\ldots,k$,
+\[
+|t\theta_m - p_m - \alpha_m | < \frac{1}{2} \epsilon,
+\]
+and
+\[
+|t - p _{k+1}| < \frac{1}{2}\epsilon.
+\]
+Then $p_{k+1}>t-\frac{1}{2}\epsilon>t-\frac{1}{2}>N$, and for $m=1,\ldots,k$, because $0<\theta_m \leq 1$,
+\begin{align*}
+|p_{k+1} \theta_m - p_m - \alpha_m|&=|p_{k+1} \theta_m -p_m + t\theta_m - t\theta_m -\alpha_m|\\
+&\leq |t\theta_m- p_m - \alpha_m| + |(p_{k+1}-t)\theta_m|\\
+&\leq |t\theta_m - p_m - \alpha_m| + |p_{k+1}-t|\\
+&<\frac{1}{2}\epsilon+\frac{1}{2}\epsilon.
+\end{align*}
+Thus for $n=p_{k+1}$, we have $n>N$, and for $m=1,\ldots,k$,
+\[
+|n\theta_m'-(nq_m+p_m) - \alpha|
+=
+|n\theta_m - p_m - \alpha_m| < \epsilon,
+\]
+proving Theorem \ref{kronecker1}.
+
+Assume that Theorem \ref{kronecker1} is true. 
+The claim of Theorem \ref{kronecker2} is immediate when $k=1$. For $k>1$, let $\theta_1',\ldots,\theta_k'$ be linearly independent over
+$\mathbb{Z}$, let $\alpha_1,\ldots,\alpha_k$ be real numbers, and let $T$ and $\epsilon$ be positive real numbers. 
+Let $\theta_m=|\theta_m'|>0$, and because $\theta_1',\ldots,\theta_k'$ are linearly independent over $\mathbb{Z}$, so are
+$\theta_1,\ldots,\theta_k$, and then 
+\[
+\frac{\theta_1}{\theta_k},\frac{\theta_2}{\theta_k},\ldots,\frac{\theta_{k-1}}{\theta_k},1
+\]
+are linearly independent over $\mathbb{Z}$. Applying Theorem \ref{kronecker1} with $N=T\theta_k$ and
+\[
+\frac{\theta_1}{\theta_k},\frac{\theta_2}{\theta_k},\ldots,\frac{\theta_{k-1}}{\theta_k},
+\qquad \sgn \theta_1' \cdot \alpha_1,\ldots, \sgn \theta_{k-1}' \cdot \alpha_{k-1},
+\] 
+ we get that there are integers $n>T\theta_k$ and $p_1,\ldots,p_{k-1}$ such that  
+for $m=1,\ldots,k-1$,
+\[
+\left|n\frac{\theta_m}{\theta_k} - p_m - \sgn \theta_m' \cdot \alpha_m\right| < \frac{1}{2} \epsilon.
+\]
+Let $t=\frac{n}{\theta_k}$. Then $t>T$ and for $m=1,\ldots,k-1$,
+\[
+|t\theta_m - p_m -\sgn \theta_m' \cdot \alpha_m| = 
+\left| n \frac{\theta_m}{\theta_k} - p_m - \sgn \theta_m' \cdot \alpha_m \right| < \frac{1}{2}\epsilon,
+\]
+and
+\[
+|t\theta_k - n| = 0 <\frac{1}{2} \epsilon. 
+\]
+On the other hand, applying Theorem \ref{kronecker1} with $N=T$ and 
+\[
+\theta_1,\ldots,\theta_k,
+\qquad 0,\ldots,0,\sgn \theta_k' \cdot \alpha_k,
+\] 
+we get that there are integers $\nu>T$ and $q_1,\ldots,q_k$ such that 
+for $m=1,\ldots,k-1$,
+\[
+|\nu \theta_m - q_m| < \frac{1}{2}\epsilon
+\]
+and 
+\[
+|\nu \theta_k - q_k -\sgn \theta_k' \cdot \alpha_k|<\frac{1}{2}\epsilon.
+\]
+For $m=1,\ldots,k-1$,
+\begin{align*}
+|(t+\nu)\theta_m - (p_m+q_m)-\sgn \theta_m' \cdot \alpha_m|&\leq |t\theta_m - p_m -\sgn \theta_m' \cdot \alpha_m| + |\nu \theta_m - q_m|\\
+&<\frac{1}{2}\epsilon+\frac{1}{2}\epsilon
+\end{align*}
+and
+\begin{align*}
+|(t+\nu)\theta_k - (p_k+q_k) -\sgn \theta_k' \cdot \alpha_k|&\leq |t\theta_k - p_k| + |\nu\theta_k - q_k -\sgn \theta_k' \cdot \alpha_k|\\
+&<\frac{1}{2}\epsilon + \frac{1}{2}.
+\end{align*}
+Therefore for $m=1,\ldots,k$, 
+\[
+\begin{split}
+&|(t+\nu)\theta_m' -  \sgn \theta_m' \cdot (p_m+q_m) - \alpha_m|\\
+=&|\sgn \theta_m' \cdot (t+\nu)  \theta_m - \sgn \theta_m' \cdot (p_m+q_m)   -  \alpha_m|\\
+=&|(t+\nu)\theta_m  - (p_m+q_m) -  \sgn \theta_m' \cdot \alpha_m|\\
+<&\epsilon,
+\end{split}
+\]
+which proves Theorem \ref{kronecker2}.
+\end{proof}
+
+
+
+\section{Proof of Kronecker's theorem}
+We now prove Theorem \ref{kronecker2}.\footnote{K. Chandrasekharan, {\em Introduction to Analytic Number Theory},
+pp.~93--96, Chapter VIII, \S 5.}
+
+\begin{proof}[Proof of Theorem \ref{kronecker2}]
+Let $\theta_1,\ldots,\theta_k$ be real numbers that are linearly
+independent over $\mathbb{Z}$, let $\alpha_1,\ldots,\alpha_k$ be real numbers,
+and let $T$ and $\epsilon$ be positive real numbers. 
+
+For real $c$ and $\tau>0$, 
+\[
+\lim_{\tau \to \infty} \frac{1}{\tau} \int_0^\tau e^{ict} dt = 
+\begin{cases}
+0&c \neq 0\\
+1&c = 0.
+\end{cases}
+\]
+For $c_1,\ldots,c_r \in \mathbb{R}$ with $c_m \neq c_n$ for $m \neq n$, and for $b_\nu \in \mathbb{C}$, let
+\[
+\chi(t) = \sum_{\nu=1}^r b_\nu e^{ic_\nu t}.
+\]
+Then for $1 \leq \mu \leq r$,
+\[
+\lim_{\tau \to \infty} \frac{1}{\tau} \int_0^\tau \chi(t) e^{-ic_\mu t} dt
+=\sum_{\nu=1}^r b_\nu  \lim_{\tau \to \infty} \frac{1}{\tau} \int_0^\tau e^{i(c_\nu - c_\mu)t} dt
+=b_\mu.
+\]
+Let
+\[
+F(t) = 1 + \sum_{m=1}^k e^{2\pi i(t\theta_m - \alpha_m)} = 1+ \sum_{m=1}^k e^{-2\pi i\alpha_m}
+e^{2\pi it\theta_m}
+\]
+and let
+\[
+\phi(t) = |F(t)|,
+\]
+which satisfies $0 \leq \phi(t) \leq k+1$. 
+
+Define $\phi:\mathbb{R}^k \to \mathbb{R}$ by
+\[
+\psi(x_1,\ldots,x_k) = 1 + x_1 + \cdots + x_k
+\]
+and let $p$ be a positive integer. 
+By the multinomial theorem,
+\begin{align*}
+\psi^p &= (1 + x_1 + \cdots + x_k)^p\\
+& = \sum_{\nu_0+\nu_1+\cdots+\nu_k = p}
+\binom{p}{\nu_0,\nu_1,\ldots,\nu_k}  x_1^{\nu_1} \cdots x_k^{\nu_k}\\
+&=\sum_\nu a_{\nu_1,\ldots,\nu_k}  x_1^{\nu_1} \cdots x_k^{\nu_k},
+\end{align*}
+for which
+\[
+\sum_\nu a_{\nu_1,\ldots,\nu_k} = (k+1)^p
+\]
+and the number of terms in the above sum is $\binom{p+k}{k}$. 
+We can write $F(t)$ as
+\[
+F(t) = \psi(e^{2\pi i(t\theta_1-\alpha_1)},\ldots,e^{2\pi i(t\theta_k-\alpha_k)}).
+\]
+Then
+\[
+F(t)^p = \sum a_{\nu_1,\ldots,\nu_k} \exp\left( \sum_{m=1}^k \nu_m \cdot 2\pi i(t\theta_m-\alpha_m)\right).
+\]
+Because $\theta_1,\ldots,\theta_k$ are linearly independent over $\mathbb{Z}$, for $\nu \neq \mu$ it is the case
+that $2\pi \sum_{m=1}^k \nu_m \theta_m \neq 2\pi \sum_{m=1}^k \mu_m \theta_m$. Write
+$c_\nu = 2\pi \nu \cdot \theta$ 
+and
+\[
+b_\nu = a_{\nu_1,\ldots,\nu_k} \exp\left(-2\pi i \sum_{m=1}^k \nu_m \alpha_m\right),
+\]
+with which
+\[
+F(t)^p = \sum b_\nu e^{i c_\nu t}.
+\]
+Then for each multi-index $\mu$,
+\begin{equation}
+\lim_{\tau \to \infty} \frac{1}{\tau} \int_0^\tau F(t)^p e^{-ic_\mu t} dt = b_\mu.
+\label{bmu}
+\end{equation}
+Suppose by contradiction that 
+\[
+\limsup_{t \to \infty} \phi(t) < k+1.
+\]
+Then there is some $\lambda<k+1$ and some $t_0$ such that when $t \geq t_0$,
+\[
+|F(t)| = \phi(t) \leq \lambda.
+\]
+Thus for $p$ a positive integer,
+\begin{align*}
+\limsup_{\tau \to \infty} \frac{1}{\tau} \int_0^\tau |F(t)|^p dt & \leq
+\limsup_{\tau \to \infty} \frac{1}{\tau} \int_0^{t_0} |F(t)|^p dt
++ \limsup_{\tau \to \infty} \frac{1}{\tau} \int_{t_0}^\tau |F(t)|^p dt\\
+&= \limsup_{\tau \to \infty} \frac{1}{\tau} \int_{t_0}^\tau |F(t)|^p dt\\
+&\leq \limsup_{\tau \to \infty} \frac{1}{\tau} \lambda^p (\tau-t_0)\\
+&= \lambda^p. 
+\end{align*}
+But then by \eqref{bmu}, 
+\[
+|b_\mu| \leq \limsup_{\tau \to \infty} \frac{1}{\tau} \int_0^\tau |F(t)|^p dt
+\leq \lambda^p,
+\]
+and then
+\begin{align*}
+(k+1)^p&=\sum_\nu a_{\nu_1,\ldots,\nu_k}\\
+&=\sum_\nu |b_\nu|\\
+&\leq  \sum_\nu \lambda^p\\
+&\leq \lambda^p \cdot \binom{p+k}{k}.
+\end{align*}
+Let $r = \frac{\lambda}{k+1}$, for which $0<r<1$, and so for each positive integer $p$ it holds that
+\begin{equation}
+1 \leq r^p \cdot \binom{p+k}{k}.
+\label{rp}
+\end{equation}
+Now, 
+\[
+\binom{p+k}{k} = \binom{p+k}{p} = \frac{p^k}{\Gamma(k+1)}\left(1+\frac{k(k+1)}{2p} + O(p^{-2}) \right),
+\qquad p \to \infty.
+\]
+In particular,
+\[
+r^p \cdot \binom{p+k}{k} = O(r^p \cdot p^k),\qquad p \to \infty,
+\]
+and because $0<r<1$, $r^p \cdot p^k \to 0$ as $p \to \infty$, contradicting \eqref{rp} being true for all
+positive integers $p$. This contradiction shows that in fact
+\[
+\limsup_{t \to \infty} \phi(t) \geq k+1,
+\]
+and because $\phi(t) \leq k+1$, 
+\begin{equation}
+\limsup_{t \to \infty} \phi(t) = k+1.
+\label{limsup}
+\end{equation}
+
+Now let $0<\eta<1$. By \eqref{limsup} there is some $t \geq T$ for which $\phi(t) \geq k+1-\eta$. 
+For $1 \leq m \leq k$, write
+\[
+z_m=e^{2\pi i(t\theta_m-\alpha_m)} = x_m+iy_m.
+\]
+It is straightforward from the definition of $\phi(t)$ that 
+\[
+k+1-\eta \leq \phi(t) \leq (k-1) + |1+e^{2\pi i(t\theta_m-\alpha_m)}|,
+\]
+which yields
+\[
+2 \geq |1+e^{2\pi i(t\theta_m-\alpha_m)}| \geq 2-\eta.
+\]
+Because $|z_m|=1$,
+\[
+|1+z_m|^2=(1+x_m)^2+y_m^2
+=(1+x_m)^2+(1-x_m^2)
+=2+2x_m,
+\]
+hence
+\[
+2+2x_m \geq (2-\eta)^2 = 4-4\eta + \eta^2 > 4-4\eta,
+\]
+so
+\[
+1-2\eta < x_m \leq 2.
+\]
+Furthermore,
+\[
+y_m^2 = 1-x_m^2 = (1-x_m)(1+x_m) \leq 2(1-x_m) < 2\cdot 2\eta = 4\eta.
+\]
+Therefore
+\[
+|z_m-1|^2 = (x_m-1)^2 + y_m^2 < 4\eta^2 + 4\eta < 8\eta,
+\]
+hence
+\[
+2 |\sin \pi(t\theta_m-\alpha_m)|
+=
+|e^{2\pi i(t\theta_m-\alpha_m)}-1| < 8^{1/2} \eta^{1/2} < 4 \eta^{1/2}.
+\]
+For $x \in \mathbb{R}$, denote by $\norm{x}$ the distance from $x$ to the nearest integer. We check that
+\[
+|\sin (\pi x)| = \sin(\pi \norm{x}) \geq \frac{2}{\pi} \cdot \pi \norm{x} = 2\norm{x}. 
+\]
+Thus, for each $m=1,\ldots,k$,
+\[
+\norm{t\theta_m-\alpha_m} < \eta^{1/2}.
+\]
+We have taken $t \geq T$ .Take
+ $\eta^{1/2} = \epsilon$, i.e. $\eta = \epsilon^2$, and take $p_m$ to be the nearest integer to $t\theta_m-\alpha_m$, for which
+ $|t\theta_m - p_m - \alpha_m| < \epsilon$, proving the claim.
+\end{proof}
+
+
+
+
+\section{Uniform distribution modulo $1$}
+For $x \in \mathbb{R}$ let $[x]$ be the greatest integer $\leq x$, and let
+$\{x\}=x-[x]$, called the fractional part of $x$.
+For $P=(x_1,\ldots,x_d) \in \mathbb{R}^d$ let
+$\{P\} = (\{x_1\},\ldots,\{x_d\})$, which belongs to
+the set $Q=[0,1)^d$. 
+Let $P_j=(x_{j,1},\ldots,x_{j,d})$, $j \geq 1$, be a sequence in $\mathbb{R}^d$, and
+for $A \subset Q$ let
+\[
+\phi_n(A) = \{k: 1 \leq k \leq n, \{P_j\} \in A\}.
+\]
+We say that $(P_j)$ is \textbf{uniformly distributed modulo $1$} if 
+for each closed rectangle $V$ contained in $Q$,
+\[
+\lim_{n \to \infty} \frac{\phi_n(V)}{n} = \lambda(V),
+\]
+where $\lambda$ is Lebesgue measure on $\mathbb{R}^d$: for
+$V=[a_1,b_1] \times \cdots [a_d,b_d]$, $\lambda(V) = \prod_{j=1}^d (b_j-a_j)$. 
+
+We have proved that if $\theta_1,\ldots,\theta_k,1$ are linearly independent over $\mathbb{Z}$, 
+then the sequence $\{n \theta\} = (\{n\theta_1\},\ldots,\{n\theta_k\})$ is dense in $Q$.a
+It can in fact be proved that $(n\theta)$ is uniformly distributed modulo $1$.\footnote{Giancarlo Travaglini,
+{\em Number Theory, Fourier Analysis and Geometric Discrepancy},
+p.~108, Theorem 6.3.}
+
+
+\section{Unique ergodicity}
+Let $X$ be a compact metric space,
+let $C(X)$ be the Banach space of continuous functions $X \to \mathbb{R}$, 
+ and let $\mathscr{M}(X)$ be the space of Borel probability measures on $X$, with the subspace topology inherited
+ from $C(X)^*$ with the weak-* topology.\footnote{This is the same as the narrow topology on $\mathscr{M}(X)$.}
+ One proves that $\mu$ and $\nu$ in $\mathscr{M}(X)$ are equal if and only if $\int_X f d\mu = \int_X f d\nu$ for all
+$f \in C(X)$.
+$\mathscr{M}(X)$ is a closed set in $C(X)^*$ that is contained in the closed unit ball, and  by the Banach-Alaoglu
+theorem that closed unit ball is compact, so $\mathscr{M}(X)$ is itself compact. $C(X)^*$, with the weak-* topology, is not metrizable, 
+but it is the case that $\mathscr{M}(X)$ with the subspace topology inherited from $C(X)^*$ is metrizable.
+
+For a continuous map $T:X \to X$, define $T_*:\mathscr{M}(X) \to \mathscr{M}(X)$
+by
+\[
+(T_*\mu)(A) = \mu(T^{-1}A)
+\]
+for  Borel sets $A$ in $X$. 
+ For $\mu_n \to \mu$ in $\mathscr{M}(X)$ and $f \in C(X)$, by the change of variables theorem we have
+\[
+\int_X f d(T_*\mu_n) = \int_X f \circ T d\mu_n \to \int_X f \circ T d\mu = \int_X f d(T_*\mu),
+\]
+which means that $T_*\mu_n \to T_*\mu$, and therefore the map $T_*$ is continuous.
+We say that $\mu \in \mathscr{M}(X)$ is \textbf{$T$-invariant} if $T_*\mu = \mu$. Equivalently,
+$T:(X,\mathscr{B}_X,\mu) \to (X,\mathscr{B}_X,\mu)$ is \textbf{measure-preserving}.
+We denote by $\mathscr{M}^T(X)$ the set of $T$-invariant $\mu \in \mathscr{M}(X)$. 
+The \textbf{Kryloff-Bogoliouboff theorem} states that $\mathscr{M}^T(X)$ is nonempty. It is immediate that $\mathscr{M}^T(X)$
+is a convex subset of $C(X)^*$. Let $\mu_n \in \mathscr{M}^T(X)$ converge to some $\mu \in \mathscr{M}(X)$.
+For $f \in C(X)$ we have,  because $T_*$ is continuous,
+\[
+\int_X f d(T_*\mu) = \lim_{n \to \infty} \int_X f d(T_* \mu_n) = \lim_{n \to \infty} \int_X f d\mu_n
+= \int_X f d\mu,
+\]
+which shows that $\mu$ is $T$-invariant. Therefore $\mathscr{M}^T(X)$ is a closed set in
+$\mathscr{M}(X)$, and we have thus established that $\mathscr{M}^T(X)$ is a nonempty compact convex set. 
+
+A measure $\mu \in \mathscr{M}^T(X)$ is called \textbf{ergodic} if for
+any $A \in \mathscr{B}_X$ with $T^{-1}A=A$ it holds that $\mu(A)=0$ or $\mu(A)=1$.
+It is proved that $\mu \in \mathscr{M}^T(X)$ is ergodic if and only if $\mu$ is an extreme point
+of $\mathscr{M}^T(X)$.\footnote{Manfred Einsiedler and Thomas Ward, {\em Ergodic Theory with a view towards Number Theory},
+p.~99, Theorem 4.4.}
+The \textbf{Krein-Milman theorem} states that if $S$ is a nonempty compact convex set in a locally
+convex space, then $S$ is equal to the closed convex hull of the set of extreme  points of $S$.\footnote{Walter Rudin, {\em Functional Analysis},
+second ed., p.~75, Theorem 3.23.} 
+In particular this shows us that there exist extreme points of $S$.
+Let $\mathscr{E}^T(X)$ be the set of extreme points of $\mathscr{M}^T(X)$, and
+applying the Krein-Milman theorem with $\mathscr{M}^T(X)$, which is a nonempty compact convex set in the locally
+convex space $C(X)^*$,
+we have that $\mathscr{M}^T(X)$ is equal to the closed convex hull $\mathscr{E}^T$.
+That is, $\mathscr{M}^T(X)$ is equal to the closed convex hull of the set of ergodic $\mu \in \mathscr{M}^T(X)$. 
+
+\textbf{Choquet's theorem}\footnote{Manfred Einsiedler and Thomas Ward, {\em Ergodic Theory with a view towards Number Theory},
+p.~103, Theorem 4.8.} tells us that for each $\mu \in \mathscr{M}^T(X)$ there is a unique 
+Borel probability measure $\lambda$ on the compact metrizable space $\mathscr{M}^T(X)$ such that
+\[
+\lambda(\mathscr{E}^T(X))=1
+\]
+and for all $f \in C(X)$,
+\[
+\int_X f d\mu = \int_{\mathscr{E}^T(X)} \left( \int_X f d\nu \right) d\lambda(\nu).
+\]
+
+We have established that $\mathscr{M}^T(X)$ contains at least one element.
+$T$ is called \textbf{uniquely ergodic} if $\mathscr{M}^T(X)$ is a singleton. 
+If $\mathscr{M}^T(X)=\{\mu_0\}$ then $\mu_0$ is an extreme point of
+$\mathscr{M}^T(X)$, hence is ergodic. If $\mathscr{E}^T(X)=\{\mu_0\}$, then for 
+$\mu \in \mathscr{M}^T(X)$, by Choquet's theorem there is a unique Borel probability
+measure $\lambda$ on $\mathscr{M}^T(X)$ satisfying
+$\lambda = \delta_{\mu_0}$ and
+\[
+\int_X f d\mu = \int_{\{\mu_0\}} \left( \int_X f d\nu\right) d\lambda(\nu),
+\]
+i.e.
+\[
+\int_X fd\mu = \int_X f d\mu_0,
+\]
+which means that $\mu = \mu_0$. Therefore, $T$ is uniquely ergodic if and only if $\mathscr{E}^T(X)$
+is a singleton.
+It can be proved that $T$ is uniquely ergodic if and only if for each
+$f \in C(X)$ there is some $C_f$ such that
+\[
+\frac{1}{N} \sum_{n=0}^{N-1} f(T^n x) \to C_f
+\]
+uniformly on $X$.\footnote{Manfred Einsiedler and Thomas Ward, {\em Ergodic Theory with a view towards Number Theory},
+p.~105, Theorem 4.10.}
+This constant $C_f$ is equal to $\int_X f d\mu$, where $\mathscr{M}^T(X)=\{\mu\}$.
+
+For a topological group $X$ and for $g \in X$, define $R_g(x) = gx$, which is continuous
+$X \to X$. 
+For a compact metrizable group, there is a unique Borel probability measure
+$m_X$ on $X$ that is $R_g$-invariant for every $g \in X$, called the \textbf{Haar measure on $X$}.
+Thus for each $g \in X$, the Haar measure $m_X$ belongs to $\mathscr{M}^{R_g}(X)$, and for
+$R_g$ to be uniquely ergodic means that $m_X$ is the only element of $\mathscr{M}^{R_g}(X)$.
+For a locally compact abelian group $X$, let $\widehat{X}$ be its Pontryagin dual.
+The following theorem gives a condition that is equivalent to a translation being uniquely ergodic.\footnote{Manfred Einsiedler and Thomas Ward, {\em Ergodic Theory with a view towards Number Theory},
+p.~108, Theorem 4.14.}
+
+
+\begin{theorem}
+Let $X$ be a compact metrizable group and let $g \in X$. $R_g$ is uniquely
+ergodic if and only if $X$ is abelian and $\chi(g) \neq 1$ for all nontrivial $\chi \in \widehat{X}$.
+\end{theorem}
+
+
+Let $\mathbb{T} = \mathbb{R} / \mathbb{Z}$,  let
+$X = \mathbb{T}^d = \mathbb{R}^d / \mathbb{Z}^d$, which is  a compact abelian group,
+and let $g=(\alpha_1,\ldots,\alpha_d) \in \mathbb{R}^d$. 
+For
+$\chi \in \widehat{X} = \mathbb{Z}^d$, $\chi = (k_1,\ldots,k_d)$,
+\[
+\chi(g) = \exp\left(2\pi i \sum_{j=1}^d k_j \alpha_j \right).
+\]
+ $\chi(g)=1$ if and only if $\sum_{j=1}^d k_j \alpha_j  \in \mathbb{Z}$ if and only if there is some
+ $k_{d+1} \in \mathbb{Z}$ such that $k_1\alpha_1 + \cdots + k_d\alpha_d + k_{d+1}=0$. 
+ Therefore for $\alpha_1,\ldots,\alpha_d \in \mathbb{R}$, the set 
+ $\{\alpha_1,\ldots,\alpha_d,1\}$ is linearly independent over $\mathbb{Z}$ if and only if
+for $g=(\alpha_1,\ldots,\alpha_d)$, the map $R_g(x) = x+g$, $\mathbb{T}^d \to \mathbb{T}^d$,  is uniquely ergodic.
+
+
+\end{document}

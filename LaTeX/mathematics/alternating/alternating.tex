@@ -1,0 +1,819 @@
+\documentclass{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,mathrsfs}
+%\usepackage{graphicx}
+\newcommand{\sgn}{\mathrm{sgn}\,}
+\newcommand{\Alt}{\mathrm{Alt}}
+\newcommand{\Mat}{\mathrm{Mat}}
+\newcommand{\Sh}{\mathrm{Sh}}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{lemma}[theorem]{Lemma}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{Alternating multilinear forms}
+\author{Jordan Bell}
+\date{August 21, 2018}
+\maketitle
+
+\section{Permutations}
+We follow Cartan \cite{cartan} and Abraham and Marsden \cite{abraham}.
+
+Let $E$ be a real vector space.
+Let $\mathscr{L}_p(E;\mathbb{R})$ be the set of multilinear maps $E^p \to \mathbb{R}$. 
+
+\begin{definition}
+A map $f \in \mathscr{L}_p(E;\mathbb{R})$ is called \textbf{alternating} if
+$(x_1,\ldots,x_p) \in E^p$ with $x_i=x_{i+1}$ for some $1 \leq i < p$ implies $f(x_1,\ldots,x_p)=0$.
+Let $\mathscr{A}_p(E;\mathbb{R})$ be the set of alternating elements of $\mathscr{L}_p(E;\mathbb{R})$.
+\end{definition}
+
+For a set $X$, let $S_X$ be the group of bijections $X \to X$, and let
+$S_p=S_{\{1,\ldots,p\}}$.
+For $\sigma,\tau \in S_X$, write $\sigma \tau = \sigma \circ \tau$.
+
+\begin{definition}
+For a function $f:E^p \to \mathbb{R}$ and a permutation $\sigma \in S_p$, define the function
+$\sigma f:E^p \to \mathbb{R}$ by 
+\[
+(\sigma f)(x_1,\ldots,x_p) = f(x_{\sigma(1)},\ldots,x_{\sigma(p)}), \qquad (x_1,\ldots,x_p) \in E^p.
+\]
+\end{definition}
+
+\begin{theorem}
+For a function $f:E^p \to \mathbb{R}$ and for $\sigma,\tau \in S_p$,
+\[
+\tau(\sigma f) = (\tau \sigma) f.
+\]
+\label{action}
+\end{theorem}
+\begin{proof}
+Define
+ $g=\sigma f$. For $(x_1,\ldots,x_p) \in E^p$ and for 
+$y_i = x_{\tau(i)}$, we have
+\begin{align*}
+\tau(\sigma f)(x_1,\ldots,x_p)&=\tau(g)(x_1,\ldots,x_p)\\
+&=g(x_{\tau(1)},\ldots,x_{\tau(p)})\\
+&=g(y_1,\ldots,y_p)\\
+&=(\sigma f)(y_1,\ldots,y_p)\\
+&=f(y_{\sigma(1)},\ldots,y_{\sigma(p)})\\
+&=f(x_{\tau(\sigma(1))},\ldots,x_{\tau(\sigma(p))})\\
+&=(\tau \sigma)(f)(x_1,\ldots,x_p).
+\end{align*}
+Thus
+\[
+\tau(\sigma f) = (\tau \sigma) f.
+\]
+\end{proof}
+
+For $1 \leq i, j \leq p$, define $(i,j) \in S_p$ by
+\[
+(i,j)(k) = \begin{cases}
+j&k=i,\\
+i&k=j,\\
+k&k \neq i,j,
+\end{cases}
+\]
+called a \textbf{transposition}.
+Define
+\[
+\tau_i = (i,i+1),
+\]
+called an \textbf{adjacent transposition}.
+We can write a transposition $(i,j)$, $i<j$, as a product of $2j-2i-1$ adjacent transpositions:
+\begin{align*}
+(i,j) & = (j-1,j)(j-2,j-1)\cdots(i+1,i+2)(i,i+1)(i+1,i+2)\cdots(j-1,j)\\
+&=\tau_{j-1} \cdots \tau_{i+1} \tau_i \tau_{i+1} \cdots \tau_{j-1}.
+\end{align*}
+
+\begin{theorem}
+For $\sigma,\tau \in S_p$,
+\[
+\sgn(\sigma \tau) = \sgn(\sigma) \sgn(\tau).
+\]
+\label{sgnhomo}
+\end{theorem}
+
+\begin{theorem}
+Let $f \in \mathscr{L}_p(E;\mathbb{R})$. $f \in \mathscr{A}_p(E;\mathbb{R})$ if and only if $\sigma f = (\sgn \sigma) f$ for all
+$\sigma \in S_p$.
+\label{sgnalternating}
+\end{theorem}
+\begin{proof}
+(i) Suppose that $f \in \mathscr{A}_p(E;\mathbb{R})$ and let $\sigma \in S_p$; we have to show that $\sigma f = (\sgn \sigma) f$. 
+Let $(x_1,\ldots,x_p) \in E^p$ and for $1 \leq i < p$ define $g_i:E^2 \to \mathbb{R}$ by
+\[
+g_i(y_1,y_2) = f(x_1,\ldots,\underbrace{y_1}_i,\underbrace{y_2}_{i+1},\ldots,x_p),
+\qquad (y_1,y_2) \in E^2.
+\]
+Because $f$ is multilinear and alternating, on the one hand
+\[
+g_i(x_i+x_{i+1},x_i+x_{i+1}) = 0,
+\]
+and on the other hand
+\begin{align*}
+g_i(x_i+x_{i+1},x_i+x_{i+1})&=g_i(x_i,x_i)+g_i(x_i,x_{i+1})+
+g_i(x_{i+1},x_i)+g_i(x_{i+1},x_{i+1})\\
+&=g_i(x_i,x_{i+1})+
+g_i(x_{i+1},x_i).
+\end{align*} 
+Therefore
+\[
+g_i(x_{i+1},x_i) = -g_i(x_i,x_{i+1}),
+\]
+that is,
+\[
+f(x_1,\ldots,x_p) = -f(x_1,\ldots,x_p).
+\]
+Thus, as $\sgn \tau_i=-1$,
+\[
+\tau_i f = (\sgn \tau_i) f.
+\]
+Because $\sigma$ is equal to a product of adjacent transpositions, it then follows from Theorem \ref{action} and
+Theorem \ref{sgnhomo} that 
+$\sigma f = (\sgn \sigma) f$. 
+
+(ii) Suppose that $\sigma f = (\sgn \sigma) f$ for all $\sigma \in S_p$. 
+Let $(x_1,\ldots,x_p) \in E^p$ with $x_i=x_{i+1}$ for some $1 \leq i < p$; we have
+to show that $f(x_1,\ldots,x_p)=0$.
+On the one hand,
+\[
+\tau_i f(x_1,\ldots,x_p) = (\sgn \tau_i) f(x_1,\ldots,x_p) = -f(x_1,\ldots,x_p).
+\]
+On the other hand, using that $x_i=x_{i+1}$,
+\begin{align*}
+\tau_i f(x_1,\ldots,x_p) &= f(x_{\tau_i(1)},\ldots,x_{\tau_i(i)},
+x_{\tau_i(i+1)},\ldots,x_{\tau_i(p)})\\
+&=f(x_1,\ldots,x_{i+1},x_i,\ldots,x_p)\\
+&=f(x_1,\ldots,x_i,x_{i+1},\ldots,x_p).
+\end{align*}
+Hence
+\[
+-f(x_1,\ldots,x_p) = f(x_1,\ldots,x_p),
+\]
+which implies that $f(x_1,\ldots,x_p)=0$. This shows that $f \in \mathscr{A}_p(E;\mathbb{R})$.
+\end{proof}
+
+\begin{theorem}
+Let $f \in \mathscr{A}_p(E;\mathbb{R})$. If
+$(x_1,\ldots,x_p) \in E^p$ with $x_i=x_j$ for some $i \neq j$, then
+$f(x_1,\ldots,x_p) = 0$.
+\label{transposition}
+\end{theorem}
+\begin{proof}
+Check that there is some $\sigma \in S_p$ satisfying $\sigma(1)=i$ and $\sigma(2)=j$.
+For this $\sigma$,
+\begin{align*}
+(\sigma f)(x_1,\ldots,x_p) &=f(x_i,x_j,x_{\sigma(3)},\ldots,x_{\sigma(p)})\\
+&=f(x_i,x_i,x_{\sigma(3)},\ldots,x_{\sigma(p)})\\
+&=0.
+\end{align*}
+But $(\sigma f) = (\sgn \sigma) f$, so $(\sgn \sigma) f(x_1,\ldots,x_p) = 0$. Therefore
+$f(x_1,\ldots,x_p)=0$.
+\end{proof}
+
+
+\begin{definition}
+For $f \in \mathscr{L}_p(E;\mathbb{R})$, define
+\[
+A_p f = \frac{1}{p!} \sum_{\sigma \in S_p} (\sgn \sigma) \sigma f.
+\]
+\end{definition}
+
+\begin{lemma}
+$A_p$ is a linear map $\mathscr{L}_p(E;\mathbb{R}) \to \mathscr{A}_p(E;\mathbb{R})$.
+\label{Aplemma}
+\end{lemma}
+\begin{proof}
+Let $f \in \mathscr{L}_p(E;\mathbb{R})$.  For $\sigma \in S_p$, $\sigma f \in \mathscr{L}_p(E;\mathbb{R})$, hence
+$A_p f \in \mathscr{L}_p(E;\mathbb{R})$. Namely, $A_pf$ is multilinear. It remains to show that it is alternating.
+
+
+For $\sigma \in S_p$, as $\tau \mapsto \sigma \tau$ is a bijection $S_p \to S_p$,
+\begin{align*}
+\sigma (A_pf) &=  \frac{1}{p!}\sum_{\tau \in S_p} (\sgn \tau) \sigma \tau f\\
+&=(\sgn \sigma)  \frac{1}{p!} \sum_{\tau \in S_p} (\sgn \tau) \tau f\\
+&=(\sgn \sigma) Af,
+\end{align*}
+showing that $A_pf$ is alternating by Theorem \ref{sgnalternating}, so $A_pf \in \mathscr{A}_p(E;\mathbb{R})$. 
+\end{proof}
+
+
+\begin{theorem}
+Let $f \in \mathscr{L}_p(E;\mathbb{R})$. $f \in \mathscr{A}_p(E;\mathbb{R})$ if and only if $A_pf=f$.
+\label{Aproj}
+\end{theorem}
+\begin{proof}
+Suppose $f \in  \mathscr{A}_p(E;\mathbb{R})$. Then $\sigma f  = (\sgn \sigma) f$ for each $\sigma \in S_p$, by Theorem \ref{sgnalternating}.
+Then
+\[
+A_p f = \frac{1}{p!} \sum_{\sigma \in S_p} \sigma f = \frac{1}{p!} \sum_{\sigma \in S_p} f = f.
+\]
+
+Suppose $A_pf =f$. Lemma \ref{Aplemma} tells us $A_pf \in \mathscr{A}_p(E;\mathbb{R})$, hence $f \in \mathscr{A}_p(E;\mathbb{R})$.
+\end{proof}
+
+
+
+\section{Wedge products}
+A permutation $\sigma \in S_{p+q}$ is called a \textbf{$(p,q)$-riffle shuffle} if 
+\[
+\sigma(1)<\cdots<\sigma(p),\qquad \sigma(p+1)<\cdots<\sigma(p+q).
+\]
+Denote by $S_{p,q}$ those elements of $S_{p+q}$ that are $(p,q)$-riffle shuffles.
+
+\begin{lemma}
+$|S_{p,q}| = \binom{p+q}{p} = \frac{(p+q)!}{p!q!}$.
+\end{lemma}
+
+Let $\mathscr{A}_{p,q}(E;\mathbb{R})$ be the set of those
+$h \in \mathscr{L}_{p+q}(E;\mathbb{R})$ such that (i) for each $(y_1,\ldots,y_q) \in E^q$, the map
+\[
+(x_1,\ldots,x_p) \mapsto h(x_1,\ldots,x_p,y_1,\ldots,y_q),\qquad
+E^p \to \mathbb{R},
+\]
+belongs to $\mathscr{A}_p(E;\mathbb{R})$, and (ii)
+for $(x_1,\ldots,x_p) \in E^p$, the map
+\[
+(y_1,\ldots,y_q) \mapsto h(x_1,\ldots,x_p,y_1,\ldots,y_q),
+\qquad E^q \to \mathbb{R},
+\]
+belongs to $\mathscr{A}_q(E;\mathbb{R})$.
+
+\begin{definition}
+For $h \in \mathscr{A}_{p,q}(E;\mathbb{R})$ define
+\[
+\phi_{p,q}(h) = \sum_{\sigma \in S_{p,q}} (\sgn \sigma) (\sigma h).
+\]
+\end{definition}
+
+\begin{theorem}
+$\phi_{p,q}$ is a linear map $\mathscr{A}_{p,q}(E;\mathbb{R}) \to \mathscr{A}_{p+q}(E;\mathbb{R})$.
+\end{theorem}
+\begin{proof}
+Let $h \in \mathscr{A}_{p,q}(E;\mathbb{R})$,
+and say $(x_1,\ldots,x_{p+q}) \in E^{p+q}$ with $x_k=x_{k+1}$ for some $1 \leq k < p$.
+
+Let $A_1$ be those $\sigma \in S_{p,q}$ such that  $i=\sigma^{-1}(k), j=\sigma^{-1}(k+1) \leq p$. For $\sigma \in A_1$,
+by Theorem \ref{transposition},\footnote{$i,j$ are distinct and $1 \leq i,j \leq p$; they need not be adjacent.}
+\[
+(\sigma h)(x_1,\ldots,x_{p+q})=h(x_{\sigma(1)},\ldots,x_{\sigma(p)},\ldots,x_{\sigma(p+q)})=0.
+\]
+Let $A_2$ be those $\sigma \in S_{p,q}$ such that $\sigma^{-1}(k), \sigma^{-1}(k+1) \geq p+1$. For $\sigma \in A_2$,
+by Theorem \ref{transposition},
+\[
+(\sigma h)(x_1,\ldots,x_{p+q}) = h(x_{\sigma(1)},\ldots,x_{\sigma(p)},\ldots,x_{\sigma(p+q)})=0.
+\]
+Thus
+\[
+\sum_{\sigma \in A_1} (\sgn \sigma) (\sigma h)(x_1,\ldots,x_{p+q})=0
+\]
+and
+\[
+\sum_{\sigma \in A_2} (\sgn \sigma) (\sigma h)(x_1,\ldots,x_{p+q})=0.
+\]
+
+Let $A_3$ be those $\sigma \in S_{p,q}$ for which $\sigma^{-1}(k) <p$ and $\sigma^{-1}(k+1) \geq p+1$ and 
+let $A_4$ be those $\sigma \in S_{p,q}$ for which $\sigma^{-1}(k) \geq p+1$ and $\sigma^{-1}(k+1) \leq p$.
+If $\sigma \in A_3$ then
+\[
+(\tau_k \sigma)^{-1}(k) = \sigma^{-1} \tau_k^{-1}(k) = \sigma^{-1}(k+1) \geq p+1
+\]
+and
+\[
+(\tau_k \sigma)^{-1}(k+1) = \sigma^{-1} \tau_k^{-1}(k+1) = \sigma^{-1}(k)<p,
+\]
+so $\tau_k \sigma \in A_4$. Likewise, if $\sigma \in A_4$ then $\tau_k \sigma \in A_3$.
+Thus $A_4=\tau_k A_3$. For $\sigma \in A_3$,
+let $i=\sigma^{-1}(k)$ and $j=\sigma^{-1}(k+1)$, for which
+$i<p$ and $j \geq p+1$. Then, as $x_k=x_{k+1}$,
+\[
+\begin{split}
+&(\sgn \sigma)(\sigma h)(x_1,\ldots,x_{p+q})+(\sgn \tau_k \sigma)(\tau_k \sigma h)(x_1,\ldots,x_{p+q})\\
+=&(\sgn \sigma) h(x_{\sigma(1)},\ldots,x_{\sigma(p+q)})-(\sgn \sigma)h(x_{\tau_k \sigma(1)},\ldots,x_{\tau_k \sigma(p+q)})\\
+=&(\sgn \sigma) \big( h(x_{\sigma(1)},\ldots,x_{\sigma(p+q)}) - h(x_{\tau_k \sigma(1)},\ldots,x_{\tau_k \sigma(i)},\ldots,x_{\tau_k \sigma(j)}, \ldots, x_{\tau_k \sigma(p+q)}) \big)\\
+=&(\sgn \sigma) \big( h(x_{\sigma(1)},\ldots,x_{\sigma(p+q)}) - h(x_{\tau_k \sigma(1)},\ldots,x_{\tau_k(k)},\ldots,x_{\tau_k(k+1)}, \ldots, x_{\tau_k \sigma(p+q)}) \big)\\
+=&(\sgn \sigma) \big( h(x_{\sigma(1)},\ldots,x_{\sigma(p+q)}) - h(x_{\sigma(1)},\ldots,x_{k+1},\ldots,x_k, \ldots, x_{\sigma(p+q)}) \big)\\
+=&(\sgn \sigma) \big( h(x_{\sigma(1)},\ldots,x_{\sigma(p+q)}) - h(x_{\sigma(1)},\ldots,x_k,\ldots,x_{k+1}, \ldots, x_{\sigma(p+q)}) \big)\\
+=&(\sgn \sigma) \big( h(x_{\sigma(1)},\ldots,x_{\sigma(p+q)}) - h(x_{\sigma(1)},\ldots,x_{\sigma(p+q)}) \big)\\
+=&0.
+\end{split}
+\]
+Therefore
+\[
+\sum_{\sigma \in A_3 \cup A_4} (\sgn \sigma)(\sigma h)(x_1,\ldots,x_{p+q}) = 0.
+\]
+
+But $S_{p,q} = A_1 \cup A_2 \cup A_3 \cup A_4$, so
+\[
+\phi_{p,q}(h)(x_1,\ldots,x_{p+q})=0.
+\]
+Thus $\phi_{p,q}(h) \in \mathscr{A}_{p+q}(E;\mathbb{R})$.
+\end{proof}
+
+
+\begin{definition}
+For $f \in \mathscr{L}_p(E;\mathbb{R})$ and $g \in \mathscr{L}_q(E;\mathbb{R})$, 
+define the \textbf{tensor product}
+$f \otimes_{p,q} g \in \mathscr{L}_{p+q}(E;\mathbb{R})$ by
+\[
+(f \otimes_{p,q} g)(x_1,\ldots,x_{p+q}) = f(x_1,\ldots,x_p) g(x_{p+1},\ldots,x_{p+q}).
+\]
+\end{definition}
+
+It is apparent that
+\[
+(f \otimes_{p,q} g) \otimes_{p+q,r} h 
+=f \otimes_{p,q+r} (g \otimes_{q,r} h),
+\]
+and thus it makes sense to write the tensor product without indices.
+
+\begin{definition}
+Define the \textbf{wedge product} 
+\[
+\wedge_{p,q}:\mathscr{A}_p(E;\mathbb{R}) \times \mathscr{A}_q(E;\mathbb{R}) \to 
+\mathscr{A}_{p+q}(E;\mathbb{R})
+\]
+by, for $f \in \mathscr{A}_p(E;\mathbb{R}), g \in \mathscr{A}_q(E;\mathbb{R})$,
+\[
+f \wedge_{p,q} g = \phi_{p,q}(f \otimes g),
+\]
+i.e., for $h = f \otimes g$,
+\begin{align*}
+(f \wedge_{p,q} g)(x_1,\ldots,x_{p+q}) &= 
+\sum_{\sigma \in S_{p,q}} (\sgn \sigma) (\sigma h)\\
+&=\sum_{\sigma \in S_{p,q}} (\sgn \sigma) h(x_{\sigma(1)},\ldots,x_{\sigma(p+q)})\\
+&=\sum_{\sigma \in S_{p,q}} (\sgn \sigma) f(x_{\sigma(1)},\ldots,x_{\sigma(p)}) g(x_{\sigma(p+1)},\ldots,x_{\sigma(p+q)}).
+\end{align*}
+\end{definition}
+
+
+\begin{theorem}
+For $f \in \mathscr{A}_p(E;\mathbb{R})$ and $g \in \mathscr{A}_q(E;\mathbb{R})$,
+\[
+f \wedge_{p,q} g = \frac{(p+q)!}{p!q!} A_{p+q}(f \otimes g).
+\]
+\end{theorem}
+\begin{proof}
+For $\sigma \in S_{p,q}$,
+\[
+\sigma(1)<\cdots<\sigma(p),\qquad \sigma(p+1)<\cdots<\sigma(p+q).
+\]
+Let $I_\sigma=\{\sigma(i): 1 \leq i \leq p\}$ and $J_\sigma = 
+\{\sigma(i): p+1 \leq i \leq p+q\}$. 
+
+\begin{align*}
+f \wedge_{p,q} g&=
+\end{align*}
+\end{proof}
+
+
+
+
+\begin{theorem}
+For $f \in \mathscr{A}_p(E;\mathbb{R})$ and  $g \in \mathscr{A}_q(E;\mathbb{R})$,
+\[
+g \wedge_{q,p} f = (-1)^{pq} f \wedge_{p,q} g.
+\]
+\label{swap}
+\end{theorem}
+\begin{proof}
+Define $\alpha \in S_{p,q}$ by
+\[
+\alpha(i) = q+i,\quad 1 \leq i \leq p,\qquad \alpha(p+i) = i,\quad 1 \leq i \leq q.
+\]
+Then\footnote{For example, take $p=3$ and $q=2$. Then
+\[
+\alpha(1) = 3, \alpha(2) = 4, \alpha(3) = 5, \alpha(4) = 1, \alpha(5)=2.
+\]
+Here
+\begin{align*}
+\prod_{1 \leq i \leq p} \prod_{1 \leq j \leq q} (i+q-j,i+q-j+1)&=
+\prod_{1 \leq i \leq 3} \prod_{1 \leq j \leq 2} (i-j+2,i-j+3)\\
+&=\prod_{1 \leq i \leq 3} (i+1,i+2)(i,i+1)\\
+&=(2,3)(1,2)(3,4)(2,3)(4,5)(3,4)\\
+&=\alpha.
+\end{align*}
+}
+\[
+\alpha=\prod_{1 \leq i \leq p} \prod_{1 \leq j \leq q} (i+q-j,i+q-j+1).
+\]
+Thus
+\[
+\sgn \alpha = \prod_{1 \leq i \leq p} \prod_{1 \leq j \leq q} (-1)
+=(-1)^{pq}.
+\]
+
+
+Let  $\tau \in S_{q,p}$, then 
+for $1 \leq i \leq p$,
+\[
+(\tau \alpha)(i) = \tau(q+i)
+\]
+and
+for $1 \leq i \leq q$,
+\[
+(\tau \alpha)(p+i) = \tau(i),
+\]
+But $\tau \in S_{q,p}$ so
+\[
+\tau(1)<\cdots<\tau(q),\qquad \tau(q+1)<\cdots<\tau(q+p),
+\]
+thus
+\[
+(\tau \alpha)(1)<\cdots<(\tau \alpha)(p),
+\qquad (\tau \alpha)(p+1)<\cdots<(\tau\alpha)(p+q),
+\]
+which means that $\tau \alpha \in S_{p,q}$. 
+Likewise, if $\sigma \in S_{p,q}$ then
+\[
+(\sigma \alpha^{-1})(1) = \sigma(q+1),
+\ldots, (\sigma \alpha^{-1})(q) = \sigma(p+q)
+\]
+and
+\[
+(\sigma \alpha^{-1})(q+1)=\sigma(1),
+\ldots, (\sigma \alpha^{-1})(q+p)=\sigma(p),
+\]
+and because $\sigma \in S_{p,q}$ it follows that
+$\sigma \alpha^{-1} \in S_{q,p}$. 
+
+
+Hence for
+$(x_1,\ldots,x_{p+q}) \in E^{p+q}$,
+\[
+\begin{split}
+&(g \wedge_{q,p} f)(x_1,\ldots,x_{p+q})\\
+=&\sum_{\tau \in S_{q,p}} (\sgn \tau) g(x_{\tau(1)},\ldots,x_{\tau(q)}) f(x_{\tau(q+1)},\ldots,x_{\tau(q+p)})\\
+=&\sum_{\sigma \in S_{p,q}} (\sgn \sigma \alpha^{-1}) g(x_{(\sigma \alpha^{-1})(1)},\ldots,
+x_{(\sigma \alpha^{-1})(q)})
+f(x_{(\sigma \alpha^{-1})(q+1)},\ldots,
+x_{(\sigma \alpha^{-1})(q+p)})\\
+=&(\sgn \alpha^{-1}) \sum_{\sigma \in S_{p,q}} (\sgn \sigma) g(x_{\sigma(p+1)},\ldots,x_{\sigma(p+q)})
+f(x_{\sigma(1)},\ldots,x_{\sigma(p)})\\
+=&(-1)^{pq} \sum_{\sigma \in S_{p,q}} (\sgn \sigma) f(x_{\sigma(1)},\ldots,x_{\sigma(p)}) g(x_{\sigma(p+1)},\ldots,x_{\sigma(p+q)})\\
+=&(-1)^{pq} (f \wedge_{p,q} g)(x_1,\ldots,x_{p+q}).
+\end{split}
+\]
+Thus
+\[
+g \wedge_{q,p} f = (-1)^{pq} f \wedge_{p,q} g. 
+\]
+\end{proof}
+
+
+
+Let $\mathscr{A}_{p,q,r}(E;\mathbb{R})$ be the set of those
+$u \in \mathscr{L}_{p+q+r}(E;\mathbb{R})$ such that (i) for each $(y_1,\ldots,y_q,z_1,\ldots,z_r) \in E^{q+r}$, the map
+\[
+(x_1,\ldots,x_p) \mapsto u(x_1,\ldots,x_p,y_1,\ldots,y_q,z_1,\ldots,z_r),\qquad
+E^p \to \mathbb{R},
+\]
+belongs to $\mathscr{A}_p(E;\mathbb{R})$,  (ii)
+for $(x_1,\ldots,x_p,z_1,\ldots,z_r) \in E^{p+r}$, the map
+\[
+(y_1,\ldots,y_q) \mapsto u(x_1,\ldots,x_p,y_1,\ldots,y_q,z_1,\ldots,z_r),
+\qquad E^q \to \mathbb{R},
+\]
+belongs to $\mathscr{A}_q(E;\mathbb{R})$, and (iii)
+for $(x_1,\ldots,x_p,y_1,\ldots,y_q) \in E^{p+q}$, the map
+\[
+(z_1,\ldots,z_r) \mapsto u(x_1,\ldots,x_p,y_1,\ldots,y_q,z_1,\ldots,z_r),
+\qquad E^r \to \mathbb{R},
+\]
+belongs to $\mathscr{A}_r(E;\mathbb{R})$. 
+
+Let $S_{p,q,\overline{r}}$ be those $\sigma \in S_{p+q+r}$ such that
+\[
+\sigma(1)<\cdots<\sigma(p),
+\quad \sigma(p+1)<\cdots<\sigma(p+q),
+\quad \sigma(p+q+i)=p+q+i, 1 \leq i \leq r.
+\]
+Let $S_{\overline{p},q,r}$ be those $\sigma \in S_{p+q+r}$ such that
+\[
+\sigma(i)=i, 1 \leq i \leq p,
+\quad 
+\quad \sigma(p+1)<\cdots<\sigma(p+q),
+\quad \sigma(p+q+1)<\cdots<\sigma(p+q+r).
+\]
+Let $S_{p,q,r}$ be those $\sigma \in S_{p+q+r}$ such that
+\[
+\sigma(1)<\cdots<\sigma(p),
+\quad \sigma(p+1)<\cdots<\sigma(p+q),
+\quad \sigma(p+q+1)<\cdots<\sigma(p+q+r).
+\]
+
+
+\begin{lemma}
+\[
+S_{p+q,r} S_{p,q,\overline{r}} = S_{p,q,r}
+\]
+and
+\[
+S_{p,q+r} S_{\overline{p},q,r} = S_{p,q,r}.
+\]
+\label{pqr}
+\end{lemma}
+\begin{proof}
+Let $\sigma \in S_{p+q,r}$ and $\tau \in S_{p,q,\overline{r}}$. Then 
+\[
+\sigma(1)<\cdots<\sigma(p+q), \quad
+\sigma(p+q+1)<\cdots<\sigma(p+q+r)
+\]
+and
+\[
+\tau(1)<\cdots<\tau(p),
+\quad \tau(p+1)<\cdots<\tau(p+q),
+\quad \tau(p+q+i)=p+q+i, 1 \leq i \leq r.
+\]
+It follows that
+\[
+(\sigma \tau)(1)<\cdots<(\sigma \tau)(p)
+\]
+and
+\[
+(\sigma \tau)(p+1)<\cdots<(\sigma \tau)(p+q)
+\]
+and for $1 \leq i \leq r$,
+$(\sigma \tau)(p+q+i) = \sigma(p+q+i)$, so
+\[
+(\sigma \tau)(p+q+1)<\cdots<\sigma(p+q+r).
+\]
+Thus $\sigma \tau \in S_{p,q,r}$. 
+\end{proof}
+
+
+
+Define $\phi_{p,q,\overline{r}}:\mathscr{A}_{p,q,r}(E;\mathbb{R}) \to \mathscr{A}_{p+q,r}(E;\mathbb{R})$
+by 
+\[
+\phi_{p,q,\overline{r}}(u) = \sum_{\sigma \in S_{p,q,\overline{r}}} (\sgn \sigma)(\sigma u),
+\qquad u \in \mathscr{A}_{p,q,r}(E;\mathbb{R})
+\]
+and
+define $\phi_{\overline{p},q,r}:\mathscr{A}_{p,q,r}(E;\mathbb{R}) \to \mathscr{A}_{p,q+r}(E;\mathbb{R})$
+by 
+\[
+\phi_{\overline{p},q,r}(u) = \sum_{\sigma \in S_{\overline{p},q,r}} (\sgn \sigma)(\sigma u),
+\qquad u \in \mathscr{A}_{p,q,r}(E;\mathbb{R})
+\]
+
+
+\begin{lemma}
+For $u \in \mathscr{A}_{p,q,r}(E;\mathbb{R})$,
+\[
+(\phi_{p+q,r} \circ \phi_{p,q,\overline{r}})u = \sum_{\rho \in S_{p,q,r}} (\sgn \rho) \rho u
+\]
+and
+\[
+(\phi_{p,q+r} \circ \phi_{\overline{p},q,r})u = \sum_{\rho \in S_{p,q,r}} (\sgn \rho) \rho u,
+\]
+and so
+\[
+\phi_{p+q,r} \circ \phi_{p,q,\overline{r}} = \phi_{p,q+r} \circ \phi_{\overline{p},q,r}.
+\]
+\label{associative}
+\end{lemma}
+\begin{proof}
+Applying Lemma \ref{pqr} we get
+\begin{align*}
+(\phi_{p+q,r} \circ \phi_{p,q,\overline{r}})u&=\sum_{\sigma \in S_{p+q,r}} (\sgn \sigma) \sigma \phi_{p,q,\overline{r}}(u)\\
+&=\sum_{\sigma \in S_{p+q,r}} (\sgn \sigma) \sigma \sum_{\tau \in S_{p,q,\overline{r}}} (\sgn \tau)(\tau u)\\
+&=\sum_{\sigma \in S_{p+q,r}} (\sgn \sigma \tau) \sum_{\tau \in S_{p,q,\overline{r}}} \sigma \tau u\\
+&=\sum_{\rho \in S_{p,q,r}} (\sgn \rho) \rho u
+\end{align*}
+and similarly
+\begin{align*}
+(\phi_{p,q+r} \circ \phi_{\overline{p},q,r})u&=\sum_{\sigma \in S_{p,q+r}} (\sgn \sigma) \sigma \phi_{\overline{p},q,r}(u)\\
+&=\sum_{\sigma \in S_{p,q+r}} (\sgn \sigma) \sigma \sum_{\tau \in S_{\overline{p},q,r}} (\sgn \tau)(\tau u)\\
+&=\sum_{\sigma \in S_{p,q+r}} (\sgn \sigma \tau) \sum_{\tau \in S_{\overline{p},q,r}} \sigma \tau u\\
+&=\sum_{\rho \in S_{p,q,r}} (\sgn \rho) \rho u.
+\end{align*}
+Thus
+\[
+(\phi_{p+q,r} \circ \phi_{p,q,\overline{r}})u=(\phi_{p,q+r} \circ \phi_{\overline{p},q,r})u,
+\]
+from which the claim follows.
+\end{proof}
+
+
+
+\begin{theorem}
+If $f \in \mathscr{A}_p(E;\mathbb{R})$, $g \in \mathscr{A}_q(E;\mathbb{R})$,
+and $h \in \mathscr{A}_r(E;\mathbb{R})$, then 
+\[
+(f \wedge_{p,q} g) \wedge_{p+q,r} h = f \wedge_{p,q+r} (g \wedge_{q,r} h).
+\]
+\end{theorem}
+\begin{proof}
+On the one hand,
+\begin{align*}
+(\phi_{p+q,r} \circ \phi_{p,q,\overline{r}})(f \otimes g \otimes h)&=\phi_{p+q,r}(\phi_{p,q,\overline{r}}((f \otimes g) \otimes h)\\
+&=\phi_{p+q,r}((f \wedge_{p,q} g) \otimes h)\\
+&=(f \wedge_{p,q} g) \wedge_{p+q,r} h.
+\end{align*}
+On the other hand,
+\begin{align*}
+(\phi_{p,q+r} \circ \phi_{\overline{p},q,r})(f \otimes g \otimes h)&=\phi_{p,q+r}(\phi_{\overline{p},q,r})(f \otimes (g \otimes h))\\
+&=\phi_{p,q+r}(f \otimes (g \wedge_{q,r} h))\\
+&=f \wedge_{p,q+r} (g \wedge_{q,r} h).
+\end{align*}
+But by Lemma \ref{associative}, 
+\[
+\phi_{p+q,r} \circ \phi_{p,q,\overline{r}} = \phi_{p,q+r} \circ \phi_{\overline{p},q,r},
+\]
+hence
+\[
+(f \wedge_{p,q} g) \wedge_{p+q,r} h = f \wedge_{p,q+r} (g \wedge_{q,r} h).
+\]
+\end{proof}
+
+
+
+\section{Linear forms}
+Let $E^* = \mathscr{L}_1(E;\mathbb{R})$, the \textbf{dual space of $E$}, whose elements we call \textbf{linear forms}.
+It is immediate that $\mathscr{A}_1(E;\mathbb{R}) = \mathscr{L}_1(E;\mathbb{R})=E^*$.
+
+
+\begin{theorem}
+If $f_1,\ldots,f_n \in E^*$ then for $(x_1,\ldots,x_n) \in E^n$,
+\[
+(f_1 \wedge \cdots \wedge f_n)(x_1,\ldots,x_n) = \sum_{\sigma \in S_n} (\sgn \sigma) f_1(x_{\sigma(1)}) \cdots f_n(x_{\sigma(n)}).
+\]
+\label{nwedge}
+\end{theorem}
+\begin{proof}
+For $n=1$ the claim is immediate. For $n=2$,
+on the one hand, using the definition of the wedge product,
+\[
+(f_1 \wedge f_2)(x_1,x_2) =
+\sum_{\sigma \in S_{1,1}} (\sgn \sigma) f_1(x_{\sigma(1)}) f_2(x_{\sigma(2)}),
+\]
+and as $S_{1,1}=S_2$ the claim is true for $n=2$. 
+Suppose the claim is true for some $n \geq 2$ 
+and let $(f_1,\ldots,f_n,f_{n+1}) \in E^*$ and $(x_1,\ldots,x_n,x_{n+1}) \in E^{n+1}$. Then, setting
+$u=f_1 \wedge \cdots \wedge f_n \in \mathscr{A}_n(E;\mathbb{R})$, we have
+\[
+\begin{split}
+&(f_1 \wedge \cdots \wedge f_n \wedge f_{n+1})(x_1,\ldots,x_n,x_{n+1})\\
+=&(u \wedge_{n,1} f_{n+1})(x_1,\ldots,x_n,x_{n+1})\\
+=&\sum_{\sigma \in S_{n,1}} (\sgn \sigma) u(x_{\sigma(1)},\ldots,x_{\sigma(n)}) f_{n+1}(x_{\sigma(n+1)})\\
+=&\sum_{\sigma \in S_{n,1}} (\sgn \sigma) \left( \sum_{\tau \in S_n} (\sgn \tau) f_1(x_{(\sigma \tau)(1)}) \cdots f_n(x_{(\sigma \tau)(n)}) \right) f_{n+1}(x_{\sigma(n+1)})\\
+=&\sum_{\rho \in S_{n+1}} (\sgn \rho) f_1(x_{\rho(1)}) \cdots
+f_n(x_{\rho(n)}) f_{n+1}(x_{\rho(n+1)}),
+\end{split}
+\]
+thus the claim is true for $n+1$. 
+\end{proof}
+
+
+
+
+Let $f_1,\ldots,f_n \in E^*$ and $x_1,\ldots,x_n \in E$ and put
+\[
+a_{i,j}=f_i(x_j), \qquad 1 \leq i,j \leq n;
+\]
+$a \in \Mat_n(\mathbb{R})$.
+The Leibniz formula for the determinant of an $n \times n$ matrix tells us
+\[
+\det a=\sum_{\sigma \in S_n} (\sgn \sigma) \prod_{i=1}^n a_{i,\sigma(i)}
+=\sum_{\sigma \in S_n} (\sgn \sigma) \prod_{i=1}^n f_i(x_{\sigma(j)}).
+\]
+Then Theorem \ref{nwedge} gives
+\[
+\det (f_i(x_j))_{1 \leq i,j \leq n} = (f_1 \wedge \cdots \wedge f_n)(x_1,\ldots,x_n).
+\]
+
+
+
+\begin{lemma}
+If $f_1,\ldots,f_n \in E^*$ are linearly independent then there are
+$x_1,\ldots,x_n \in E$ such that
+\[
+f_i(x_j) = \delta_{i,j},\qquad 1 \leq i,j \leq n.
+\]
+\label{dualset}
+\end{lemma}
+
+
+\begin{theorem}
+$f_1,\ldots,f_n \in E^*$ are linearly dependent if and only if 
+\[
+f_1 \wedge \cdots \wedge f_n=0.
+\]
+\end{theorem}
+\begin{proof}
+Suppose $f_1,\ldots,f_n$ are linearly dependent, say, for some
+$\lambda_i \in \mathbb{R}$, $i \neq k$,
+\[
+f_k = \sum_{i \neq k} \lambda_i f_i.
+\]
+Then, as $f_i \wedge f_i =0$,
+\[
+f_1 \wedge \cdots \wedge f_n = 0.
+\]
+
+Suppose
+that $f_1,\ldots,f_n \in E^*$ are linearly independent. 
+By Lemma \ref{dualset},
+there are $x_1,\ldots,x_n \in E$ such that 
+\[
+f_i(x_j) = \delta_{i,j},\qquad 1 \leq i, j \leq n.
+\]
+Then $\det (f_i(x_j)) = 1$, and hence 
+\[
+(f_1 \wedge \cdots \wedge f_n)(x_1,\ldots,x_n) = 1,
+\]
+so $f_1 \wedge \cdots \wedge f_n$ is not identically $0$.
+\end{proof}
+
+
+
+
+
+\section{\textbf{R}\textsuperscript{k}}
+We now take $E=\mathbb{R}^k$.
+For $1 \leq i \leq k$ define $\xi_i \in (\mathbb{R}^k)^*$ by
+\[
+\xi_i(x_1,\ldots,x_k) = x_i,\qquad (x_1,\ldots,x_k) \in \mathbb{R}^k.
+\]
+Let $e_i = (0,\ldots,\underbrace{1}_i,\ldots,0) \in \mathbb{R}^k$ for $1 \leq i \leq k$, in other words,
+\[
+\xi_i(e_j) = \delta_{i,j},\qquad 1 \leq i,j \leq k.
+\]  
+For $x \in \mathbb{R}^k$,
+\[
+x = \sum_{1 \leq i \leq k} \xi_i(x)e_i.
+\]
+
+\begin{theorem}
+(i) If $f \in \mathscr{L}_p(\mathbb{R}^k;\mathbb{R})$ then for $(x_1,\ldots,x_k) \in (\mathbb{R}^k)^p$,
+\[
+f(x_1,\ldots,x_p) =\sum_{1 \leq i_1, \ldots, i_p \leq k} f(e_{i_1}, \ldots,e_{i_p}) \xi_{i_1}(x_1)\cdots \xi_{i_p}(x_p).
+\]
+
+(ii) If $f \in \mathscr{A}_p(\mathbb{R}^k;\mathbb{R})$ then
+\[
+f = \sum_{1 \leq i_1 < \cdots < i_p \leq k} f(e_{i_1}, \ldots,e_{i_p}) \xi_{i_1} \wedge \cdots \wedge \xi_{i_p}.
+\]
+
+(iii)
+\[
+\dim \mathscr{A}_p(\mathbb{R}^k;\mathbb{R}) = \binom{k}{p}.
+\]
+
+(iv) If $f \in \mathscr{A}_k(\mathbb{R}^k;\mathbb{R})$ then
+\[
+f = f(e_1,\ldots,e_n) \xi_1 \wedge \cdots \wedge \xi_k.
+\]
+\label{increasing}
+\end{theorem}
+\begin{proof}
+(i) Let $f \in \mathscr{L}_p(\mathbb{R}^k;\mathbb{R})$. For $(x_1,\ldots,x_p) \in (\mathbb{R}^k)^p$, because $f:(\mathbb{R}^k)^p \to \mathbb{R}$ is multilinear,
+\begin{align*}
+f(x_1,\ldots,x_p)&=f\left( \sum_{1 \leq i_1 \leq k} \xi_{i_1}(x_1)e_{i_1},
+\ldots,\sum_{1 \leq i_p \leq k} \xi_{i_p}(x_p)e_{i_p}\right)\\
+&=\sum_{1 \leq i_1, \ldots, i_p \leq k} \xi_{i_1}(x_1)\cdots \xi_{i_p}(x_p) f(e_{i_1},
+\ldots,e_{i_p}).
+\end{align*}
+
+(ii) Let $f \in \mathscr{A}_p(\mathbb{R}^k;\mathbb{R})$. Then $f=A_pf$ (Theorem \ref{Aproj}),
+\[
+f = \frac{1}{p!} \sum_{\sigma \in S_p} (\sgn \sigma) \sigma f,
+\]
+so for $(x_1,\ldots,x_p) \in (\mathbb{R}^k)^p$, applying Theorem \ref{nwedge},
+\begin{align*}
+f(x_1,\ldots,x_p) &= \frac{1}{p!} \sum_{\sigma \in S_p} (\sgn \sigma) f(x_{\sigma(1)},\ldots,x_{\sigma(p)})\\
+&= \frac{1}{p!} \sum_{\sigma \in S_p} (\sgn \sigma) 
+\sum_{1 \leq i_1, \ldots, i_p \leq k} \xi_{i_1}(x_{\sigma(1)})\cdots \xi_{i_p}(x_{\sigma(p)}) f(e_{i_1},\ldots,e_{i_p})\\
+&=\frac{1}{p!} \sum_{1 \leq i_1, \ldots, i_p \leq k} f(e_{i_1},\ldots,e_{i_p}) \sum_{\sigma \in S_p} (\sgn \sigma) \xi_{i_1}(x_{\sigma(1)})\cdots \xi_{i_p}(x_{\sigma(p)})\\
+&=\frac{1}{p!} \sum_{1 \leq i_1, \ldots, i_p \leq k} f(e_{i_1},\ldots,e_{i_p}) (\xi_{i_1} \wedge \cdots \wedge \xi_{i_p})(x_1,\ldots,x_p).
+\end{align*}
+Since $f$ is alternating, $i_r = i_s$ for $r \neq s$ implies $f(e_{i_1},\ldots,e_{i_p})=0$. 
+Let 
+\[
+\mathscr{I}_{p,k} = \{I \subset \{1,\ldots,k\}: |I|=p\};
+\]
+
+For $I \in \mathscr{I}_{p,k}$, define $I_1,\ldots,I_p$ by $I=\{I_1,\ldots,I_p\}$ and
+$I_1<\cdots<I_p$. 
+Then, applying Theorem \ref{swap}, as $|S_I|=p!$,
+\begin{align*}
+f&= \frac{1}{p!} \sum_{I \in \mathscr{I}_{p,k}} \sum_{\tau \in S_I} f(e_{\tau(I_1)},\ldots,e_{\tau(I_p)}) \xi_{\tau(I_1)} \wedge \cdots \wedge \xi_{\tau(I_p)}\\
+&=\frac{1}{p!} \sum_{I \in \mathscr{I}_{p,k}} \sum_{\tau \in S_I} (\sgn \tau) f(e_{I_1},\ldots,e_{I_p}) (\sgn \tau) \xi_{I_1} \wedge \cdots \wedge \xi_{I_p}\\
+&=\sum_{I \in \mathscr{I}_{p,k}} f(e_{I_1},\ldots,e_{I_p}) \xi_{I_1} \wedge \cdots \wedge \xi_{I_p}.
+\end{align*}
+proving the claim.
+
+(iii) $|\mathscr{I}_{p,k}| = \binom{k}{p}$.
+
+(iv) This follows from (ii) and the fact that $|\mathscr{I}_{p,k}|=1$ with $\mathscr{I}_{p,k} = \{\{1,\ldots,k\}\}$.
+\end{proof}
+
+\bibliographystyle{plain}
+\bibliography{alternating}
+
+\end{document}

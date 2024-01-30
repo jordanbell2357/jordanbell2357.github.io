@@ -1,0 +1,855 @@
+\documentclass{article}
+
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm,enumitem,xfrac,flexisym}
+\usepackage[polutonikogreek,english]{babel}
+\newcommand{\Gk}[1]{\selectlanguage{polutonikogreek}#1\selectlanguage{english}}%\usepackage{caption}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\gcm}{\ensuremath\mathrm{gcm}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Book VII of Euclid's {\em Elements}}
+\author{Jordan Bell\\ \texttt{jordan.bell@gmail.com}\\Department of Mathematics, University of Toronto}
+\date{\today}
+
+\maketitle
+
+\section{Introduction}
+Mueller \cite[p.~11]{mueller} explains the format of the propositions in the {\em Elements}.
+A usual proposition has
+the format 
+{\em protasis}, {\em ekthesis}, {\em diorismos}, {\em kataskeu\={e}}, {\em apodeixis}, and {\em sumperasma}.
+The {\em protasis} is the statement of the proposition. The {\em ekthesis} instantiates typical objects that are going to be worked with.
+The {\em diorismos} asserts that to prove the proposition it suffices to prove something about the instantiated objects.
+The {\em kataskeu\={e}} constructs things using the instantiated object. The {\em apodeixis} proves
+the claim of the {\em diorismos}. The {\em sumperasma} asserts that the proposition is proved by what has been done with the instantiated objects.
+
+Netz \cite[pp.~268--269]{netz}:
+
+\begin{quote}
+The Greeks cannot speak of `$A_1,A_2,\ldots,A_n$'.
+What they must do is to use, effectively, something like a dot-representation:
+the general set of numbers is represented by a diagram consisting 
+of a {\em definite} number of lines. Here the generalisation procedure
+becomes very problematic, and I think the Greeks realised this. This is
+shown by their tendency to prove such propositions with a number of
+numbers above the required minimum. This is an odd redundancy,
+untypical of Greek mathematical economy, and must represent what is
+after all a justified concern that the minimal case, being also a limiting
+case, might turn out to be unrepresentative. The fear is justified, but
+the case of $n=3$ is only quantitatively different from the case of $n=2$.
+The truth is that in these propositions Greek actually prove for particular
+cases, the generalisation being no more than a guess; arithmeticians
+are prone to guess.
+
+To sum up: in arithmetic, the generalisation is from a particular
+case to an infinite multitude of mathematically distinguishable cases.
+This must have exercised the Greeks. They came up with something
+of a solution for the case of a single infinity. The double infinity of sets
+of numbers left them defenceless. I suspect Euclid was aware of this,
+and thus did not consider his particular proofs as rigorous proofs for
+the general statement, hence the absence of the {\em sumperasma}. It is not
+that he had any doubt about the truth of the general conclusion, but
+he did feel the invalidity of the move to that conclusion.
+
+The issue of mathematical induction belongs here.
+
+Mathematical induction is a procedure similar to the one described
+in this chapter concerning Greek geometry. It is a procedure in which
+generality is sustained by repeatability. Here the similarity stops. The
+repeatability, in mathematical induction, is not left to be seen by the
+well-educated mathematical reader, but is proved. Nothing in the
+practices of Greek geometry would suggest that a proof of repeatability
+is either possible or necessary. Everything in the practices of Greek
+geometry prepares one to accept the intuition of repeatability as a substitute
+for its proof. It is true that the result of this is that arithmetic is
+less tightly logically principled than geometry -- reflecting the difference
+in their subject matters. Given the paradigmatic role of geometry in
+this mathematics, this need not surprise us.
+\end{quote}
+
+
+
+\section{Euclid}
+VII, Definitions:
+
+\begin{quote}
+1. An unit is that by virtue of which each of the things that exist is called one.
+2. A number is a multitude composed of units.
+3. A number is a part of a number, the less of the
+greater, when it measures the greater;
+4. but parts when it does not measure it.
+5. The greater number is a multiple of the less when
+it is measured by the less.
+
+20. Numbers are proportional when the first is the same multiple, or the same part, or the same parts, of the second that the third is of the fourth.
+\end{quote}
+
+``$A$ is the same part of $B$ that $C$ is of $D$'' 
+means that as many numbers as there are in $B$ equal to $A$, so many numbers are there in $D$ equal to $C$.
+In other words, 
+$B$ can be divided into numbers $B_1,\ldots$ equal to $A$ and $D$ can be divided
+into numbers $D_1,\ldots$ equal to $C$, and the multitude of  $B_1,\ldots$ is equal
+to the multitude of $D_1,\ldots$.
+In other words, whatever multiple $B$ is of $A$, the same multiple is $D$ of $C$.
+
+``$A$ is the same parts of $B$ that $C$ is of $D$'' means
+that there is a part of $B$ and a part of $D$ such that 
+(i) the part of $B$ is the same part of $A$ that the part of $D$ is of $C$, and (ii) the part of $B$ is the same part of $B$ that the part of $D$ is of $D$.
+In other words, there is a part of $B$ and a part of $D$ such that (i) $A$ can be divided into numbers
+$A_1,\ldots$ equal to the part of $B$ and $C$ can be divided into numbers $C_1,\ldots$ equal to the part of $D$,
+and the multitude of $A_1,\ldots$ is equal to the multitude of $C_1,\ldots$, and (ii)
+ $A_j$ is the same part of $B$ that $C_j$ is of $D$.
+
+``sum of''
+
+``divided''
+
+``equal''
+
+``same multiple''
+
+\textbf{VII.5}: ``If a number be a part of a number, and another be the same part of another, the sum will also be the same part of the sum that the one is of the one.''
+
+\begin{proof}
+Let $A$ be the same part of $BC$ that $D$ is of $EF$. 
+I say that the sum of $A,D$ is also the same part of the sum of $BC,EF$ that $A$ is of $BC$. 
+
+Say
+\[
+BC = B_1B_2,\ldots,\qquad B_jB_{j+1}=A,
+\]
+and
+\[
+EF = E_1E_2,\ldots, \qquad E_jE_{j+1}=D,
+\]
+and the multitude of $B_1B_2,\ldots$ is equal to the multitude of $E_1E_2,\ldots$. 
+
+Since $B_jB_{j+1}=A$ and $E_jE_{j+1}=D$,  therefore
+ $B_jB_{j+1},E_jE_{j+1}=A,D$.
+But, as the multitude of $B_1B_2,\ldots$ is equal to the multitude of $E_1E_2,\ldots$, the sum of $BC,EF$ can be divided as 
+\[
+BC,EF = B_1B_2,\ldots, E_1E_2,\ldots
+=(B_1B_2,E_1E_2),\ldots,
+\]
+and the multitude of $(B_1B_2,E_1E_2),\ldots$ is equal to the multitude of $B_1B_2,\ldots$.
+Therefore, whatever multiple $BC$ is of $A$, the sum of $BC,EF$ is the same multiple of the sum of $A,D$. 
+Therefore, whatever part $A$ is of $BC$, the sum of $A,D$ is the same part of the sum of $BC,EF$.
+\end{proof}
+
+``same parts''
+
+\textbf{VII.6}: ``If a number be parts of a number, and another be the same parts of another, the sum will also be the same parts of the sum
+that the one is of the one.''
+
+\begin{proof}
+Let $AB$ be the same parts of $C$ that $DE$ is of $F$.
+I say that the sum of $AB,DE$ is the same parts of the sum of $C,F$ that $AB$ is of $C$.
+
+Because $AB$ be the same parts of $C$ that $DE$ is of $F$, there is a part of $C$ and a part of $F$ such that 
+$AB$ can be divided as
+$AB=A_1B_1,\ldots$ with $A_jB_j$ equal to the part of $C$,
+and $DE$ can be divided as $DE=D_1E_1,\ldots$ with $D_jE_j$ equal to the part of $D$, and 
+the multitude of $A_1B_1,\ldots$ is equal to the multitude of $D_1E_1,\ldots$, and
+$A_jB_j$ is the same part of $C$ that $D_jE_j$ is of $F$.
+
+Because $A_jB_j$ is the same part of $C$ that $D_jE_j$ is of $F$,
+therefore
+$A_jB_j$ is the same part of $C$ that the sum of $A_jB_j,D_jE_j$ is of the sum of $C,F$ (VII.5).
+
+And, as the multitude of $A_1B_1,\ldots$ is equal to the multitude of $D_1E_1,\ldots$, the sum of $AB,DE$ can be divided as 
+\[
+AB,DE = A_1B_1,\ldots, D_1E_1,\ldots
+=(A_1B_1,D_1E_1),\ldots,
+\]
+where each $A_jB_j,D_jE_j$ is equal to the same part of $AB,DE$,
+and the multitude of $(A_1B_1,D_1E_1),\ldots$ is equal to the multitude of $A_1B_1,\ldots$.
+
+Therefore $AB$ is the same parts of $C$ that $AB,DE$ is of $C,F$.
+\end{proof}
+
+transitivity of same part
+
+if $A$ is the same part of $B$ that it is of $C$, then $B=C$
+
+\textbf{VII.7}: ``If a number be that part of a number, which a number subtracted is of a number subtracted, the remainder will also be the same part of the remainder that the whole is of the whole.''
+
+\begin{proof}
+Let $AB$ be the same part of $CD$ that $AE$ is of $CF$. 
+I say that
+$EB$ is the same part of $FD$ that  $AB$ is of $CD$. 
+
+Let $G$ be such that $EB$ is the same part of $CG$ that $AE$ is of $CF$. 
+
+Because $AE$ is the same part of $CF$ that $EB$ is  of $CG$,
+it follows that $AE,EB$ is the same part of $CF,CG$ that $AE$ is of $CF$ (VII.5).
+But $AE,EB=AB$ and $CG,CF=GF$, so 
+$AE$ is the same part of $CF$ that $AB$ is of $GF$.
+
+But by hypothesis, $AE$ is the same part of $CF$  that $AB$ is of $CD$. Therefore $AB$ is the same part
+of $GF$ that it is of $CD$, and therefore $GF=CD$. Subtract $CF$ from
+$GF$ and $CD$; Then
+$GF-CF=CD-CF$, i.e. $GC=FD$. 
+
+By construction of $G$, $AE$ is the same part of $CF$ that $EB$ is of $GC$.
+And $GC=FD$. Therefore $AE$ is the same part of $CF$ that $EB$ is of $FD$. 
+But by hypothesis, $AE$ is the same part of $CF$ that $AB$ is of $CD$. Therefore
+$EB$ is the same part of $FD$ that  $AB$ is of $CD$. 
+\end{proof}
+
+\textbf{VII.8}: ``If a number be the same parts of a number that a number subtracted is of a number subtracted, the remainder will also be the same parts of the remainder that the whole is of the whole.''
+
+\begin{proof}
+Let $AB$ be the same parts of $CD$ that $AE$ is of $CF$. 
+I say that $EB$ is the same parts of $FD$ that $AB$ is of $CD$. 
+
+Let $GH$ be made equal to $AB$.
+So $GH$ is the same parts of $CD$ that $AE$ is of $CF$. This means 
+that there is a part of $CD$ and a part of $CF$ such that
+$GH$ can be divided as $GH=G_1H_1,\ldots$ where each $G_jH_j$ is equal to the part of $CD$,
+and $AE$ can be divided as 
+$AE=A_1E_1,\ldots$ where each $A_jE_j$ is equal to the part of $CF$,
+and the multitude of $G_1H_1,\ldots$ is equal to the multitude of $A_1E_1,\ldots$, and 
+$G_jH_j$ is the same part of $CD$ that $A_jE_j$ is of $CF$.
+
+Because $G_jH_j$ is the same part of $CD$ that $A_jE_j$ is of $CF$ while $CD$ is greater than $CF$,
+therefore $G_jH_j$ is greater than $A_jE_j$. Let $G_jM_j$ be made equal to $A_jE_j$.
+Thus $G_jH_j$ is the same part of $CD$ that $G_jM_j$ is of $CF$.
+Therefore the remainder $G_jH_j-G_jM_j=M_jH_j$ is the same part of $CD-CF=FD$ that $G_jM_j$ is of $CF$ (VII.7).
+
+Each $M_jH_j$ is equal to the same part of $FD$. And the multitude of 
+$M_1H_1,\ldots$ is equal to the multitude of $G_1H_1,\ldots$. 
+Therefore
+$M_1H_1,\ldots$ is the same parts of $FD$ that $GH$ is of $CD$.
+
+$EB=AB-AE$. But $AB=GH$. So $EB=GH-AE$. 
+Then
+\begin{align*}
+EB&=GH-AE\\
+& = G_1H_1,\ldots - A_1E_1,\ldots\\
+&=(G_1H_1-A_1E_1),\ldots\\
+&=(G_1H_1-G_1M_1),\ldots\\
+&=M_1H_1,\ldots.
+\end{align*}
+And $HG=AB$, therefore $EB$ is the same parts of $FD$ that $AB$ is of $CD$.
+\end{proof}
+
+
+Uses VII.5,6 for arbitrarily many terms
+
+\textbf{VII.9}: ``If a number be a part of a number, and another be the same part of another, alternately also, whatever part or parts the first is of the third, the same part, or the same parts, will the second also be of the fourth.''
+
+\begin{proof}
+Let $A$ be the same part of $BC$ that $D$ is of $EF$. I say that, alternately also, 
+$A$ is the same part or parts of $D$ that $BC$ is of $EF$. 
+
+Since $A$ is the same part of $BC$ that $D$ is of $EF$,  $BC$ can be divided into numbers
+$B_1C_1,\ldots$ equal to $A$, $EF$ can be divided into numbers $E_1F_1,\ldots$ equal to $D$, and the 
+multitude of $B_1C_1,\ldots$ is equal to the multitude of $E_1F_1,\ldots$. 
+Because $B_jC_j=B_kC_k$ and $E_jF_j=E_kF_k$ for each $j$ and $k$,
+whatever part or parts $B_jC_j$ is of $E_jF_j$, the same part or parts is $B_kC_k$ of $E_kF_k$. 
+Therefore whatever part or parts $B_jC_j$ is of $E_jF_j$, the same part or parts is
+the sum of $B_1C_1,\ldots$ of the sum of $E_1F_1,\ldots$ (VII.5, 6). That is, whatever part or parts $B_jC_j$ is of $E_jF_j$, the same
+part or parts is $BC$ of $EF$. 
+
+But $B_jC_j=A$ and $E_jF_j=D$, so whatever part or parts $A$ is of $D$, the same part or parts is $BC$ of $EF$.
+\end{proof}
+
+
+\textbf{VII.10}: ``If a number be parts of a number, and another be the same parts of another, alternately also, whatever parts or part the first is of the third, the same parts or the same part will the second also be of the fourth.''
+
+\begin{proof}
+Let $AB$ be the same parts of $C$ that $DE$ is of $F$. I say that, alternately also,
+$AB$ is the same part or parts of $DE$ that $C$ is of $F$.
+
+Because $AB$ is the same parts of $C$ that $DE$ is of $F$, there is a part of $C$ and a part of $F$ such that
+$AB$ can be divided as $AB=A_1B_1,\ldots$ with each $A_jB_j$ equal to the part of $C$,
+and $DE$ can be divided as $DE=D_1E_1,\ldots$ with each $D_jE_j$ equal to the part of $F$, and the multitude of
+$A_1B_1,\ldots$ is equal to the multitude of $D_1E_1,\ldots$. 
+
+Since $A_jB_j$ is the same part of $C$ that $D_jE_j$ is of $F$,
+alternately also,
+$A_jB_j$ is the same part or parts of $D_jE_j$ that $C$ is of $F$ (VII.9).
+
+
+
+Therefore whatever part or parts $A_jB_j$ is of $D_jE_j$, the same part or parts is
+the sum of $A_1B_1,\ldots$ of the sum of $D_1E_1,\ldots$ (VII.5, 6).
+But 
+$A_jB_j$ is the same part or parts of $D_jE_j$ that $C$ is of $F$ and
+$AB=A_1B_1,\ldots$, $DE=D_1E_1,\ldots$, therefore
+whatever part or parts $C$ is of $F$, the same part or parts is $AB$ of $DE$.
+\end{proof}
+
+
+
+``$A$ is to $B$ as $C$ is to $D$''
+
+\textbf{VII.11}: ``If, as whole is to whole, so is a number subtracted to a number subtracted, the remainder will also be to the remainder as whole to whole.''
+
+\begin{proof}
+Let $AE$ be to $CF$ as $AB$ is to $CD$. I say that $EB$ is to $FD$ as $AB$ is to $CD$.
+
+Since as $AB$ is to $CD$ so $AE$ is to $CF$, $AB$ is the same part or parts of $CD$ that
+$AE$ is of $CF$ (VII, Definition 20). Therefore
+the remainder $EB$ is the same part or parts of the remainder $FD$ that $AB$ is of $CD$ (VII.7, 8).
+
+Therefore, as $EB$ is to $FD$, so is $AB$ to $CD$ (VII, Definition 20).
+\end{proof}
+
+``antecedent'', ``consequent''
+
+\textbf{VII.12}: ``If there be as many numbers as we please in proportion, then, as one of the antecedents is to one of the consequents, so are all the antecedents to all the consequents.''
+
+\begin{proof}
+Let $A_1,A_1',A_2,A_2',\ldots$ be as many numbers as we please in proportion, so that as $A_j$ is to $A_j'$ so is $A_k$ to $A_k'$.
+I say that, as $A_j$ is to $A_j'$, so is $A_1,A_2,\ldots$ to $A_1',A_2',\ldots$.
+
+Since, as $A_j$ is to $A_j'$ so is $A_k$ to $A_k'$, whatever part or parts $A_j$ is of $A_j'$ the same part or parts is $A_k$ of $A_k'$.
+Therefore the sum of $A_1,A_2,\ldots$ is the same part or parts of the sum of $A_1',A_2',\ldots$ that 
+$A_j$ is of $A_j'$ (VII.5, 6). 
+
+Therefore, as $A_j$ is to $A_j'$, so are $A_1,A_2,\ldots$ to $A_1',A_2',\ldots$ (VII, Definition 20).
+\end{proof}
+
+
+
+\textbf{VII.13}: ``If four numbers be proportional, they will also be propor­tional alternately.''
+
+\begin{proof}
+Let $A,B,C,D$ be proportional, so that as $A$ is to $B$, so is $C$ to $D$. I say that
+they are also proportional alternately, that is, that 
+as $A$ is to $C$, so is $B$ to $D$.
+
+Since $A$ is to $B$ as $C$ is to $D$, whatever part or parts $A$ is of $B$, the same part or parts is $C$ of $D$ (VII, Definition 20).
+Therefore, alternately, whatever part or part $A$ is of $C$, the same part or parts is $B$ of $D$ (VII.10).
+Therefore, as $A$ is to $C$, so is $B$ to $D$ (VII, Definition 20).
+\end{proof}
+
+``same ratio''
+
+transitivity of same ratio
+
+\textbf{VII.14}: ``If there be as many numbers as we please, and others equal to them in multitude, which taken two and two are in the same ratio, they will also be in the same ratio {\em ex aequali}.''
+
+\begin{proof}
+Let there be as many numbers as we please
+$A_1,\ldots,A_n$ and others equal to them in multitude $A_1',\ldots,A_n'$ which when taken two and two are in the same ratio, so that
+as $A_j$ is to $A_{j+1}$ so is $A_j'$ to $A_{j+1}'$. I say that, {\em ex aequali},
+as $A_1$ is to $A_n$ so is $A_1'$ to $A_n'$.
+
+Since as $A_1$ is to $A_2$ so is $A_1'$ to $A_2'$, therefore, alternately,
+as $A_1$ is to $A_1'$, so is $A_2$ to $A_2'$ (VII.13).
+Likewise, as $A_2$ is to $A_2'$, so is $A_3$ to $A_3'$, etc., and because $A_1$ is to $A_1'$, so is $A_2$ to $A_2'$,
+then as $A_1$ is to $A_1'$, so is $A_3$ to $A_3'$. And so on.
+Thus as $A_1$ is to $A_1'$, so is $A_n$ to $A_n'$.
+Therefore, alternately, $A_1$ is to $A_1'$, so is $A_n$ to $A_n'$ (VII.13).
+\end{proof}
+
+``measures the same number of times''
+
+cf. VII.8.
+
+\textbf{VII.15}: ``If an unit measure any number, and another number measure any other number the same number of times, alternately also, the unit will measure the third number the same number of times that the second measures the fourth.''
+
+\begin{proof}
+Let the unit $A$ measure any number $BC$ and let
+another number $D$ measure any other number $EF$ the same number of times.
+I say that, alternately also, the unit $A$ measures the number $D$ the same number
+of times that $BC$ measures $EF$. 
+
+Since the unit $A$ measures the number $BC$ the same number of times that $D$ measures $EF$,
+therefore, as many units as there are in $BC$, so many numbers equal to $D$ are there in $EF$ also.
+Let $BC$ be divided into the units in it,
+$B_1C_1,\ldots$, and let 
+and $EF$ be divided into the numbers $E_1F_1,\ldots$ in it equal to $D$.
+Thus the multitude of $B_1C_1,\ldots$ is equal to the multitude of $E_1F_1,\ldots$.
+
+Because the units $B_1C_1,\ldots$ are equal to one another,
+and the numbers $E_1F_1,\ldots$ are equal to one another,
+and the multitude of the units $B_1C_1,\ldots$ is equal to the multitude of the numbers
+$E_1F_1,\ldots$, therefore,
+as $B_jC_j$ is to $E_jF_j$ so is $B_kC_k$ to $E_kF_k$.
+Therefore, 
+as one of the antecedents is to one of the consequents, so are all the antecedents to all the consequents (VII.12).
+All the antecedents are $B_1C_1,\ldots=BC$, and all the consequents are $E_1F_1,\ldots=EF$,  
+so as the unit $B_1C_1$ is to the number $E_1F_1$, so is $BC$ to $EF$.
+But the unit $B_1C_1$ is equal to the unit $A$ and the number $E_1F_1$ is equal to the number $D$.
+Therefore, as the unit $A$ is to the number $D$, so is $BC$ to $EF$.
+Therefore, the unit $A$ measures the number $D$ the same number of times that $BC$ measures $EF$.
+\end{proof}
+
+VII, Definitions:
+
+\begin{quote}
+11. A prime number is that which is measured by an unit alone.
+12. Numbers prime to one another are those which are measured by an unit alone as a common measure.
+13. A composite number is that which is measured by some number.
+14. Numbers composite to one another are those which are measured by some number as a common measure.
+15. A number is said to multiply a number when that which is multiplied is added to itself as many times as there are units in the other, and thus some number is produced.
+\end{quote}
+
+``$B$ measures $C$ according to the units in $A$''
+
+\textbf{VII.16}: ``If two numbers by multiplying one another make certain numbers, the numbers so produced will be equal to one another.''
+
+\begin{proof}
+Let $A,B$ be two numbers and let $A$ by multiplying $B$ make $C$,
+and $B$ by multiplying $A$ make $D$. I say that $C=D$.
+
+Since $A$ by multiplying $B$ has made $C$,
+therefore $B$ measures $C$ according to the units in $A$. But the unit $E$ also measures
+the number $A$ according to the units in $A$; therefore, 
+the unit $E$ measures $A$ the same number of times that $B$ measures $C$. 
+Therefore, alternately, the unit $E$ measures $B$ the same number of times that 
+$A$ measures $C$ (VII.15).
+
+Again, since $B$ by multiplying $A$ has made $D$,
+therefore $A$ measures $D$ according to the units in $B$. But the 
+unit $E$ also measures $B$ according to the units in $B$; therefore 
+the unit $E$ measures $B$ the same number of times that $A$ measures $D$.
+
+But the unit $E$ also measures $B$ the same number of times that $A$ measures $C$.
+Therefore $A$ measures each of the numbers $C,D$ the same number of times. Therefore
+$C=D$.
+\end{proof}
+
+
+\textbf{VII.17}: ``If a number by multiplying two numbers make certain numbers, the numbers so produced will have the same ratio as the numbers multiplied.''
+
+\begin{proof}
+Let the number $A$ by multiplying the two numbers $B,C$ make $D,E$.
+I say that, as $B$ is to $C$, so is $D$ to $E$.
+
+Since $A$ by multiplying $B$ has made $D$, therefore
+$B$ measures $D$ according to the units in $A$.
+But the unit $F$ also measures the number $A$ according to the units in $A$;
+therefore the unit $F$ measures the number $A$ the same number of times that $B$ measures $D$.
+Therefore, as the unit $F$ is to the number $A$, so is $B$ to $D$ (VII, Definition 20).
+
+For the same reason, as the unit $F$ is to the number $A$, so is $C$ to $E$.
+Therefore, as $B$ is to $D$, so is $C$ to $E$.
+Therefore, alternately, as $B$ is to $C$, so is $D$ to $E$ (VII.13).
+\end{proof}
+
+
+\textbf{VII.18}: ``If two numbers by multiplying any number make certain numbers, the numbers so produced will have the same ratio as the multipliers.''
+
+\begin{proof}
+Let two numbers $A,B$ by multiplying any number $C$ make $D,E$. I say that
+as $A$ is to $B$, so is $D$ to $E$.
+
+Since $A$ by multiplying $C$ has made $D$,
+therefore also $C$ by multiplying $A$ has made $D$ (VII.16).
+For the same reason, since $B$ by multiplying $C$ has made $E$, therefore also
+$C$ by multiplying $B$ has made $E$.
+
+Therefore, the number $C$ by multiplying the two numbers $A,B$ has made $D,E$.
+Therefore, as $A$ is to $B$, so is $D$ to $E$ (VII.17).
+\end{proof}
+
+\textbf{VII.19}: ``If four numbers be proportional, the number produced from the first and fourth will be equal to the number produced from the second and third; and, if the number produced from the first and fourth be equal to that produced from the second and third, the four numbers will be proportional.''
+
+\begin{proof}
+Let $A,B,C,D$ be four numbers in proportion, so that as $A$ is to $B$, so is $C$ to $D$;
+and let $A$ by multiplying $D$ make $E$, and let $B$ by multiplying $C$ make $F$. I say that $E=F$.
+
+Let $A$ by multiplying $C$ make $G$. Since $A$ by multiplying $C$ has made $G$, and by multiplying $D$ has made $E$, the number
+$A$ multiplying the two numbers $C,D$ has made $G,E$.
+Therefore, as $C$ is to $D$, so is $G$ to $E$ (VII.17).
+
+But by hypothesis as $C$ is to $D$, so is $A$ to $B$; therefore as $A$ is to $B$, so is $G$ to $E$.
+
+Since $A$ by multiplying $C$ has made $G$ but also $B$ by multiplying $C$ has made $F$, the two numbers $A,B$ by multiplying a certain number $C$
+have made $G,F$. Therefore as $A$ is to $B$, so is $G$ to $F$ (VII.18).
+But further, as $A$ is to $B$, so is $G$ to $E$; therefore,
+as $G$ is to $E$, so is $G$ to $F$. Therefore $G$ has to each of the numbers $E,F$ the same ratio; therefore $E=F$.
+
+Again, let $E=F$. I say that, as $A$ is to $B$, so is $C$ to $D$.
+With the same construction, since $E=F$, as $G$ is to $E$ so is $G$ to $F$. But as $G$ is to $E$ so is $C$ to $D$ (VII.17),
+and as $G$ is to $F$ so is $A$ to $B$ (VII.18). Therefore, as $A$ is to $B$, so is $G$ to $E$, and as $G$ is to $E$ so is $C$ to $D$, so
+as $A$ is to $B$, so is $C$ to $D$.
+\end{proof}
+
+\textbf{VII.20}: ``The least numbers of those which have the same ratio with them measure those which have the same ratio the same number of times, the greater the greater and the less the less.''
+
+\begin{proof}
+Let $CD,EF$ be the least numbers of those which have the same ratio with $A,B$. I say that $CD$ measures $A$ the same number of times that $EF$ measures $B$.
+
+Now, $CD$ is not parts of $A$. For, if possible, let it be so. Since $CD$ is to $EF$ as $A$ is to $B$, therefore $CD$ is to $A$ so is $EF$ to $B$ (VII.13). 
+Therefore $EF$ is the same parts of $B$ that $CD$ is of $A$ (VII, Definition 20).
+Therefore there is a part of $A$ such that $CD$ can be divided into numbers $C_1D_1,\ldots$ each equal to this part, 
+there is a part of $B$ such that $EF$ can be divided into numbers $E_1F_1,\ldots$ each equal to this part, the multitude 
+$C_1D_1,\ldots$ is equal to the multitude of $E_1F_1,\ldots$, and each $C_jD_j$ is the same part of $A$ that $E_jF_j$ is of $B$.
+Since the numbers $C_jD_j$ and $C_kD_k$ are equal to one another,
+and the numbers $E_jF_j$ and $E_kF_k$ are equal to one another, 
+and the multitude of $C_1D_1,\ldots$ is equal to the multitude of $E_1F_1,\ldots$,
+then as $C_jD_j$ is to $E_jF_j$ so is $C_kD_k$ to $E_kF_k$. 
+Thus as one of the antecedents is to one of the consequents, so are all the antecedents to all
+the consequents (VII.12). But $CD=C_1D_1,\ldots$ and $EF=E_1F_1,\ldots$;
+therefore, as $C_1D_1$ is to $E_1F_1$ so is $CD$ to $EF$. 
+Therefore $C_1D_1,E_1F_1$ are in the same ratio as
+$CD,EF$, being less than them; this is impossible because by hypothesis $CD,EF$ are the least numbers
+of those which have the same ratio as them.
+
+Therefore $CD$ is not parts of $A$. Therefore $CD$ is part of $A$ (VII.4). But 
+as $CD$ is to $EF$ so is $A$ to $B$, therefore
+as $CD$ is to $A$ so is $EF$ to $B$ (VII.12).  
+Therefore $CD$ is the same part of $A$ that $EF$ is of $B$ (VII, Definition 20).
+Therefore $CD$ measures $A$ the same number of times that $EF$ measures $B$.  
+\end{proof}
+
+
+``least numbers'' 
+
+``as many times as $C$ measures $A$, so many units let there be in $E$''
+
+\textbf{VII.21}: ``Numbers prime to one another are the least of those which have the same ratio with them.''
+
+\begin{proof}
+Let $A,B$ be numbers prime to one another. I say that $A,B$ are the least of those which have the same
+ratio with them.
+
+If not, there will be some numbers less than $A,B$ which are [the least numbers] in the same ratio with $A,B$. Let them be $C,D$.
+But
+the least numbers of those which have the same ratio measure those which have the same ratio the same number of times, the greater the greater and the less the less,
+that is, the antecedent the antecedent and the consequent the consequent (VII.20).
+Therefore $C$ measures $A$ the same number of times that $B$ measures $D$.
+
+As many times as $C$ measures $A$, so many units let there be in $E$. 
+Therefore $D$ also measures $B$ according to the units in $E$.
+
+And since $C$ measures $A$ according to the units in $E$, 
+therefore $E$ also measures $A$ according to the units in $C$ (VII.16).
+For the same reason, $E$ also measures $B$ according to the units in $D$ (VII.16).
+Therefore $E$ measures $A,B$ which are prime to one another: which is impossible (VII, Definition 12). 
+
+Therefore there will be no numbers less than $A,B$ which are in the same ratio with $A,B$. 
+
+Therefore $A,B$ are the least of those which have the same ratio with them.
+\end{proof}
+
+
+
+\textbf{VII.22}: ``The least numbers of those which have the same ratio with
+them are prime to one another.''
+
+\begin{proof}
+Let $A,B$ be the least of those numbers which have the same ratio with them. I say that $A,B$ are prime to one another.
+
+If they are not prime to one another, some number will measure them.
+
+Let some number measure them, and let it be $C$.
+And as many times as $C$ measures $A$, so many units let there be in $D$, and as many times as $C$ measures $B$, so many units
+let there be in $E$.
+
+Since $C$ measures $A$ according to the units in $D$, therefore $C$ by multiplying $D$ has made $A$ (VII, Definition 15).
+For the same reason also, $C$ by multiplying $E$ has made $B$ (VII, Definition 15).
+Thus, the number $C$ multiplying the two numbers $D,E$ has made $A,B$; therefore,
+as $D$ is to $E$, so is $A$ to $B$ (VII.17); therefore
+$D,E$ are in the same ratio with $A,B$, being less than $A,B$: which is impossible.
+
+Therefore, no number will measure the numbers $A,B$.
+
+Therefore $A,B$ are prime to one another.
+\end{proof}
+
+
+
+\textbf{VII.23}: ``If two numbers be prime to one another, the number which measures the one of them will be prime to the remaining number.''
+
+\begin{proof}
+
+
+\end{proof}
+
+
+
+\textbf{VII.24}: ``If two numbers be prime to any number, their product also
+will be prime to the same.''
+
+\begin{proof}
+
+
+\end{proof}
+
+
+
+
+\textbf{VII.25}: ``If two numbers be prime to one another, the product of one
+of them into itself will be prime to the remaining one.''
+
+\begin{proof}
+
+
+\end{proof}
+
+
+\textbf{VII.26}: ``If two numbers be prime to two numbers, both to each, their
+products also will be prime to one another.''
+
+\begin{proof}
+
+
+\end{proof}
+
+
+
+\section{Works on arithmetic and music theory}
+Domninus of Larissa, {\em Encheiridion} 20--31  \cite[pp.~111--115]{domninus}:
+
+\begin{quote}
+20. Every number, when compared to an arbitrary number with regard to the multitude
+of monads in them, is either equal to it, or unequal. If they are equal to one another,
+their relationship to one another will be unique and not further distinguishable.
+For in the case of equality, one thing cannot be in this fashion and the other thing in
+that fashion, since what is equal is equal in one single and the same way. If, however,
+they are unequal, ten different relationships can be contemplated concurrently. 
+
+21. But before giving an account of these, we must state that it is true for every pair
+of numbers that the lesser is either a part, or parts, of the greater number, since, if it
+measures the greater one, it is a part of the greater number, such as in the case of 2
+which measures 4 and 6, of which it is a half or a third part, respectively. If it does not
+measure it, it is parts of it, such as in case of 2, which, not measuring 3, is two thirds of
+it, or in the case of 9, which, not measuring 15, is three fifths of it.
+
+22. Having stated this as a preliminary, we say that if those two numbers which lie
+before us for inspection are unequal, the lesser either measures the greater, or it does
+not.
+
+23. If it measures it, the greater number is a multiple of the lesser one, and the lesser
+number is a submultiple of the greater one, as in the case of 3 and 9, since 9 is a multiple 
+of 3, being its triple, and 3 is a submultiple of 9, being its subtriple.
+
+24. If it does not measure the greater number, and if one subtracts it from it once or
+several times, it will leave behind something less than itself whch will, by necessity, be
+either a part, or parts, of the number. For it will leave behind either a monad or some
+number.
+
+25. If it leaves behind a monad, it obviously leaves behind a part of itself. For the
+monad is part of every number, since every number is a combination of monads.
+
+26. If it leaves behind some number, it will be either a part of itself, or parts. For it is
+true for every pair of numbers that the lesser is either a part, or parts, of the greater.
+
+27. Now then, if the lesser number is subtracted once from the greater, and it leaves
+behind a number less than itself which is a part of it, then the greater number will be
+superparticular to the lesser, while the lesser number will be subsuperparticular to the
+greater, as in the case of 2 and 3. For 3 is superparticular to 2, since it includes it and a
+half of it (therefore, it is also called sesquialter of it), while 2 is subsesquialter to 3. And
+the same is the case with 6 and 8, as 8 is sesquitertian to 6, while 6 is subsesquitertian
+to 8.
+
+28. If the remainder is parts of the lesser number, then the greater number will be
+superpartient, while the lesser number will be subsuperparticular to the greater, as in the
+case of 3 and 5. For 5 is superpartient to 3, since it includes it and two thirds of it (therefore,
+it is also called superbitertian of it), while 3 is subsuperbitertian to 5. And the same
+is the case with 15 and 24, as 24 is supertriquantan of 15, since it includes it and three
+fifths of it, while 15 is subsupertriquintan of 24.
+
+29. If the lesser number is subtracted more often than once from the greater, and it
+leaves behind a number less than itself which is part of it, then the greater number
+will be multiple-superparticular, while the lesser number will be submultiple-superparticular
+to the greater, as in the case of 2 and 5. For 5 is multiple-superparticular to 2,
+since it includes it twice and a half of it (therefore, it is also called duplex-sesquialter of
+it), while 2 is subduplex-sesquialter to 5. And the same is the case with 6 and 26, as 26 is
+quadruplex-sesquitertian to 6, while 6 is subquadruplex-sesquitertian to 26.
+
+30. If the  remainder is parts of the lesser number, then the greater number is multiple-superpartient,
+while the lesser number is submultiple-superpartient to the greater,
+as in the case of 3 and 8. For 8 is duplex-superbitertian to 3, while 3 is subduplex-superbitertian
+to 8. And the same is the case with 10 and 34, as 34 is triplex-superbiquintan
+of 10, while 10 is subtriplex-superbiquintan of 34.
+
+31. And these are the so-called ten relationships of inequality, to which the ancients
+also referred as ratios:
+\begin{enumerate}
+\item multiple,
+\item submultiple,
+\item superparticular,
+\item subsuperparticular,
+\item superpartient,
+\item subsuperpartient,
+\item multiple-superparticular, 
+\item submultiple-superparticular,
+\item multiple-superpartient,
+\item submultiple-superpartient.
+\end{enumerate}
+This is the theory of numbers with regard
+to one another according to the multitude underlying them.
+\end{quote}
+
+Nicomachus \cite{nicomachus}
+
+Theon \cite{theon}
+
+Szab\'o \cite{szabo} assembles a philological argument that the Euclidean algorithm was created
+as part of the Pythagorean theory of music. Szab\'o \cite[p.~136, Chapter 2.8]{szabo} summarizes, ``More precisely, 
+this method was developed in the course of experiments with the monochord and was used originally to ascertain the ratio
+between the lengths of two sections on the monochord. In other words, successive subtraction was first developed in the musical
+theory of proportions.'' Earlier in this work Szab\'o \cite[pp.~28--29]{szabo} says, ``Euclidean arithmetic is predominantly of musical origin
+not just because, following a tradition developed in the theory of music, it uses straight lines (originally `sections of a string') to symbolize numbers, but also because
+it uses the method of successive subtraction which was developed originally in the theory of music. However, the theory of odd and even clearly derives from
+an `arithmetic of counting stones' (\textgreek{y\~hfoi}), which did not originally contain the method of successive subtraction.''
+
+
+
+Jordanus Nemorarius, {\em De elementis arithmetice artis} \cite{jordanus}
+
+Jordanus Nemorarius, {\em De elementis arithmetice artis} \cite[]{grant}
+
+\begin{quote}
+
+\end{quote}
+
+Jordanus Nemorarius, {\em De elementis arithmetice artis} II \cite[p.~697]{rommevaux2009}:
+
+\begin{quote}
+What we call the denomination of a ratio, at least of a smaller number to a greater, is the
+part or parts that the smaller is of the greater; and of a greater number to a smaller, the
+number by which it contains it and the part or parts of the smaller that remain in the
+greater.
+
+{\em Denominatio dicitur proportionis minoris quidem ad maiorem pars vel partes quote illius fuerit,
+maioris vero ad minus numerus secundum quem eum continet et pars vel partes minoris que in maiore
+superfluunt.}
+\end{quote}
+
+Barker \cite{barker}
+
+van der Waerden \cite[p.~113]{waerden}: VII.1,2,3, 4--10, 11--19, 20, 21, 22, 24, 26, 27, 33, VIII.2,3,7,8.
+
+Burkert \cite{burkert}
+
+Philolaus \cite{philolaus}
+
+Archytas \cite{archytas}
+
+Vitrac \cite[p.~305]{vitrac2}
+
+Heath \cite{euclidII}
+
+Vandoulakis \cite{vandoulakis}
+
+Knorr \cite[p.~212]{knorr}
+
+Knorr \cite[p.~244]{knorr}
+
+\begin{quote}
+To Theaetetus, then, we ascribe {\em inter ali}a these contributions: the discovery of general theorems and classifications in the area of
+incommensurability; the organization of the fundaments of arithmetic in a systematic
+and rigorous way as the necessary prelude to those theorems. This effectively places the composition of {\em Elements} VII with Theaetetus, but it is
+clear that much of that work was based on techniques commonplace in
+the practical computation with fractions: the division algorithm, the properties of ratios of integers. and so on. Theaetetus' innovations here were
+the theoretical use of the division algorithm. the devising of sequences
+of theorems framed around an explicit definition of numerical proportionality (VII, Def. 20). the establishment of a new geometric representation for
+numbers, contrasting with the older dot-methods. and the
+discovery and proof of the fundamental theorems on relative primes.
+(VII.21--28).
+\end{quote}
+
+Itard \cite{itard}
+
+Heiberg \cite{euclidisII}
+
+Taisbak \cite{taisbak}
+
+Pengelley and Richman \cite{pengelley}
+
+Pengelley \cite{pengelley2013}
+
+Witelo \cite[p.~47]{witelo}, Definitions:
+
+\begin{quote}
+The quantity which, if multiplied by the smaller, produces the larger or which divides
+the larger to yield the smaller is called the ``denomination of the ratio of the
+first to the second''. A ratio is said to be compounded of two ratios whenever
+the denomination of that ratio is produced by multiplying the denominations of
+those two ratios, [namely] of one into the other.
+\end{quote}
+
+Aristotle, {\em Metaphysics} V.15, 1020-1.
+
+Aristotle, {\em Nicomachean Ethics} V.3, 1131a,b.
+
+\begin{quote}
+The just, then, is a species of the proportionate (proportion
+being not a property only of the kind of number which consists of
+abstract units, but of number in general). For proportion is equality
+of ratios, and involves four terms at least (that discrete proportion
+involves four terms is plain, but so does continuous proportion, for
+it uses one term as two and mentions it twice; e.g. `as the line $A$ is
+to the line $B$, so is the line $B$ to the line $C$'; the line $B$, then, has been
+mentioned twice, so that if the line $B$ be assumed twice, the proportional
+terms will be four); and the just, too, involves at least four
+terms, and the ratio between one pair is the same as that between
+the other pair; for there is a similar distinction between the persons
+and between the things. As the term $A$, then, is to $B$, so will $C$ be
+to $D$, and therefore, {\em alternando}, as $A$ is to $C$, $B$ will be to $D$.
+Therefore also the whole is in the same ratio to the whole; and the
+distribution pairs them in this way, and if they are so combined,
+pairs them justly. The conjunction, then, of the term $A$ with $C$ and
+of $B$ with $D$ is what is just in distribution, and this species of the
+just is intermediate, and the unjust is what violates the proportion;
+for the proportional is intermediate, and the just is proportional.
+(Mathematicians call this kind of proportion geometrical; for it is
+in geometrical proportion that it follows that the whole is to the
+whole as either part is to the corresponding part.) This proportion
+is not continuous; for we cannot get a single term standing for a
+person and a thing.
+\end{quote}
+
+Campanus
+
+\begin{quote}
+(xii) Pars est numerus numeri minor 
+\end{quote}
+
+Peletarius
+
+Billingsley, {\em The elements of geometrie}
+
+Forcadel
+
+Zamberti
+
+Jean Errard, {\em Les neuf premiers livres des \'el\'emens d'Euclide},
+
+Denis Henrion, {\em Les quinze livres des Elements d'Euclide}
+
+Robert Simson, {\em The Elements of Euclid}, pp.~253--254 proves that proportion is equivalent in Books V and VII.
+
+\begin{quote}
+
+\end{quote}
+
+Clavius
+
+Tartaglia
+
+Commandinus, {\em Euclidis Elementorum libri XV}, p.~87
+
+\begin{quote}
+
+\end{quote}
+
+\bibliographystyle{amsplain}
+\bibliography{euclidVII}
+
+\end{document}

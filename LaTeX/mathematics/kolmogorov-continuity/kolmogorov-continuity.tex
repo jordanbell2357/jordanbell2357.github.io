@@ -1,0 +1,536 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Kolmogorov continuity theorem, H\"older continuity, and the Kolmogorov-Chentsov theorem}
+\author{Jordan Bell}
+\date{June 11, 2015}
+
+\maketitle
+
+\section{Modifications}
+Let $(\Omega,\mathscr{F},P)$ be a probability space, let $I$ be a nonempty set, and let
+$(E,\mathscr{E})$ be a measurable space. A \textbf{stochastic process with index set $I$ and state space $E$} is a family 
+$(X_t)_{t \in I}$ of random variables $X_t:(\Omega,\mathscr{F}) \to (E,\mathscr{E})$.
+If $X$ and $Y$ are stochastic processes, we say that \textbf{$X$ is a modification of $Y$} if 
+for each $t \in I$, 
+\[
+P\{\omega \in \Omega: X_t(\omega)=Y_t(\omega)\}=1.
+\]
+
+\begin{lemma}
+If $X$ is a modification of $Y$, then $X$ and $Y$ have the same finite-dimensional distributions.
+\end{lemma}
+\begin{proof}
+For $t_1,\ldots,t_n \in  I$, let $A_i \in \mathscr{E}$ for each $1 \leq i \leq n$, and let
+\[
+A = \bigcap_{i=1}^n X_{t_i}^{-1}(A_i) \in \mathscr{F}, \qquad B = \bigcap_{i=1}^n Y_{t_i}^{-1}(A_i) \in \mathscr{F}.
+\]
+If $\omega \in A \setminus B$ then there is some $i$ for which $\omega \not \in Y_{t_i}^{-1}(A_i)$, and
+$\omega \in X_{t_i}^{-1}(A_i)$ so $X_{t_i}(\omega) \neq Y_{t_i}(\omega)$. Therefore
+\[
+A \triangle B \subset \bigcup_{i=1}^n \{\omega \in \Omega: X_{t_i}(\omega) \neq Y_{t_i}(\omega)\}.
+\]
+Because $X$ is a modification of $Y$, the right-hand side is a union of finitely many $P$-null sets,
+hence is itself a $P$-null set.  $A$ and $B$ each belong to $\mathscr{F}$, so
+$P(A \triangle B)=0$.\footnote{We have not assumed that $(\Omega,\mathscr{F},P)$ is a complete measure space, so we must verify
+that a set is measurable before speaking about its measure.}
+Because $P(A \triangle B)=0$, $P(A)=P(B)$, i.e.
+\[
+P(X_{t_1} \in A_1, \ldots, X_{t_n} \in A_n) = P(Y_{t_1} \in A_1, \ldots, Y_{t_n} \in A_n).
+\]
+This implies that\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/finitedimdistributions.pdf}}
+\[
+P_*(X_{t_1} \otimes \cdots \otimes X_{t_n}) = P_*(Y_{t_1} \otimes \cdots \otimes Y_{t_n}),
+\]
+namely,  $X$ and $Y$ have the same finite-dimensional distributions.
+\end{proof}
+
+
+\section{Continuous modifications}
+Let $E$ be a Polish space with Borel $\sigma$-algebra $\mathscr{E}$. 
+A stochastic process $(X_t)_{t \in \mathbb{R}_{\geq 0}}$ is called \textbf{continuous} if for each $\omega \in \Omega$, the \textbf{path}
+$t \mapsto X_t(\omega)$ is continuous $\mathbb{R}_{\geq 0} \to E$. 
+
+A \textbf{dyadic rational} is an element of
+\[
+D=\bigcup_{i=0}^\infty 2^{-i} \mathbb{Z}.
+\]
+
+
+The \textbf{Kolmogorov continuity theorem} gives conditions under which a stochastic process whose state space is a Polish space 
+has a continuous modification.\footnote{Heinz
+Bauer, {\em Probability Theory}, p.~335, Theorem 39.3. It was only after working through the proof given by Bauer that I realized that the statement is true when the state space is a Polish space rather than merely $\mathbb{R}^d$. In the proof I do not use that $|\cdot|$ is a norm on $\mathbb{R}^d$, and only use that $d(x,y)=|x-y|$ is a metric on $\mathbb{R}^d$,
+so it is straightforward to rewrite the proof.}
+This is like the \textbf{Sobolev lemma},\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~202, Theorem 7.25.} which states that if
+$f \in H^s(\mathbb{R}^d)$ and
+$s>k+\frac{d}{2}$, then there is some $\phi \in C^k(\mathbb{R}^d)$
+such that $f=\phi$ almost everywhere. It does not make sense to say that an element of a Sobolev space is itself $C^k$, because elements of
+Sobolev
+spaces are equivalence classes of functions, but it does make sense to say that there is a $C^k$ version of this element.
+
+\begin{theorem}[Kolmogorov continuity theorem]
+Suppose that $(\Omega,\mathscr{F},P,(X_t)_{t \in \mathbb{R}_{\geq 0}})$ is a stochastic process with state space
+$\mathbb{R}^d$. If there are $\alpha,\beta,c>0$ such that 
+\begin{equation}
+E(|X_t-X_s|^\alpha) \leq c | t-s|^{1+\beta}, \qquad s,t \in \mathbb{R}_{\geq 0},
+\label{kolmogorov}
+\end{equation}
+then the stochastic process has a continuous modification that itself satisfies \eqref{kolmogorov}.
+\end{theorem}
+\begin{proof}
+Let $0<\gamma<\frac{\beta}{\alpha}$ and let
+\[
+\delta = \beta - \alpha \gamma > 0.
+\]
+For $m \geq 1$, let $S_m$ be the set of all pairs $(s,t)$ with
+\[
+s,t \in 
+\{j2^{-m}: 0 \leq j \leq 2^m\},
+\]
+and $|s-t|=2^{-m}$. There are $2\cdot 2^m$ such pairs, i.e. $|S_m|=2\cdot 2^m$. 
+Let
+\[
+A_m = \bigcup_{(s,t) \in S_m} \{|X_s-X_t| \geq 2^{-\gamma m}\} \in \mathscr{F}.
+\]
+For $(s,t) \in S_m$,
+using Chebyshev's inequality and \eqref{kolmogorov} we get
+\begin{align*}
+P(|X_t-X_s| \geq 2^{-\gamma m})&\leq (2^{\gamma m})^\alpha E(|X_t-X_s|^\alpha)\\
+&\leq 2^{\alpha \gamma m} \cdot c|t-s|^{1+\beta}\\
+&= c2^{\alpha \gamma m} 2^{-m(1+\beta)}\\
+&< c2^{-m-\delta m}.
+\end{align*}
+Hence
+\[
+P(A_m) \leq \sum_{(s,t) \in S_m} P \{|X_s-X_t| \geq 2^{-\gamma m}\}
+<\sum_{(s,t) \in S_m} c 2^{-m-\delta m}
+=2c\cdot 2^{-\delta m}.
+\]
+Because $\sum_m P(A_m)<\infty$, the Borel-Cantelli lemma tells us that
+\[
+P\left(\bigcap_{n=1}^\infty \bigcup_{m=n}^\infty A_m \right)=P(N_0)=0,
+\]
+where for  each $\omega \in \Omega \setminus N_0$ there is some $m_0(\omega)$ such that
+$\omega \not \in A_m$ when $m \geq m_0(\omega)$. That is,
+for $\omega \in \Omega \setminus N_0$ 
+there is some $m_0(\omega)$ such that  
+\begin{equation}
+|X_t(\omega)-X_s(\omega)| < 2^{-\gamma m},
+\qquad m \geq m_0(\omega), \quad (s,t) \in S_m.
+\label{393}
+\end{equation}
+
+Now let $\omega \in \Omega \setminus N_0$ and let $s,t \in [0,1]$ be dyadic rationals satisfying
+\[
+0<|s-t| \leq 2^{-m_0(\omega)}.
+\]
+Let $m=m(s,t)$ be the greatest integer  such that $|s-t| \leq 2^{-m}$:  
+\begin{equation}
+2^{-m-1} < |s-t| \leq 2^{-m},
+\label{maximalm}
+\end{equation}
+which implies that $m \geq m_0(\omega)$.
+There are some $i_0, j_0 \in \{0,1,2,3,\ldots,2^m\}$ such that 
+\[
+s_0 = i_0 2^{-m} \leq s < (i_0+1)2^{-m}, \qquad t_0= j_0 2^{-m} \leq t < (j_0+1)2^{-m}.
+\]
+As $0 \leq s-s_0 < 2^{-m}$ and $0 \leq t-t_0 < 2^{-m}$, there are 
+sequences $\sigma_j, \tau_j \in \{0,1\}$, $j>m$, each of which have cofinitely many zero entries, such that
+\[
+s=s_0+\sum_{j > m} \sigma_j 2^{-j}, \qquad t=t_0+ \sum_{j > m} \tau_j 2^{-j}.
+\]
+Because $0\leq s-s_0<2^{-m}$ and $\leq t-t_0<2^{-m}$,
+\[
+2^{-m} > |(s-s_0)-(t-t_0)|
+=|(s-t)-(s_0-t_0)|
+\geq |s_0-t_0|-|s-t|,
+\]
+and with \eqref{maximalm},
+\[
+|s_0-t_0| < 2^{-m}+|s-t| \leq 2^{-m}+2^{-m} =2^{-m+1}.
+\] 
+Thus $|i_0-j_0| < 2$, so
+$|i_0-j_0| \in \{0,1\}$ and so either
+$s_0=t_0$ or $(s_0,t_0) \in S_m$. 
+In the first case, $|X_{t_0}(\omega)-X_{s_0}(\omega)|=0$.
+ In the second case, since $m \geq m_0(\omega)$,
+by \eqref{393} we have
+\begin{equation}
+|X_{t_0}(\omega)-X_{s_0}(\omega)| < 2^{-\gamma m} .
+\label{396}
+\end{equation}
+Define by induction
+\[
+s_n = s_{n-1}+\sigma_{m+n}2^{-(m+n)}, \qquad n \geq 1,
+\]
+i.e.
+\[
+s_n = s_0 + \sum_{m<j \leq m+n} \sigma_j 2^{-j}.
+\]
+For each $n \geq 1$,  $s_n-s_{n-1} \in \{0,2^{-(m+n)}\}$, so either
+$s_n=s_{n-1}$ or $(s_{n-1},s_n) \in S_{m+n}$, and because
+ $m+n \geq m+1>m_0(\omega)$, applying \eqref{393} yields
+\[
+|X_{s_n}(\omega)-X_{s_{n-1}}(\omega)| < 2^{-\gamma(m+n)}.
+\]
+Because the sequence $\sigma_j$ is eventually equal to $0$, the sequence $s_n$ is eventually equal to $s$.  Thus
+\[
+\sum_{n=1}^\infty (X_{s_n}(\omega)-X_{s_{n-1}}(\omega))
+=X_s(\omega)-X_{s_0}(\omega),
+\]
+whence
+\[
+|X_s(\omega)-X_{s_0}(\omega)| \leq \sum_{n=1}^\infty |X_{s_n}(\omega)-X_{s_{n-1}}(\omega)|
+<\sum_{n=1}^\infty 2^{-\gamma(m+n)}
+=\frac{2^{-\gamma (m+1)}}{1-2^{-\gamma}}.
+\]
+By the same reasoning we get 
+\[
+|X_t(\omega)-X_{t_0}(\omega)| < \frac{2^{-\gamma (m+1)}}{1-2^{-\gamma}}.
+\]
+Using these and \eqref{396} yields
+\begin{align*}
+|X_t(\omega)-X_s(\omega)|&\leq |X_t(\omega)-X_{t_0}(\omega)|
++|X_{t_0}(\omega)-X_{s_0}(\omega)|+|X_s(\omega)-X_{s_0}(\omega)|\\
+&<\frac{2^{-\gamma (m+1)}}{1-2^{-\gamma}}+2^{-\gamma m}+\frac{2^{-\gamma (m+1)}}{1-2^{-\gamma}}\\
+&=C\cdot 2^{-\gamma(m+1)},
+\end{align*}
+for $C=2^\gamma+\frac{2}{1-2^{-\gamma}}$. 
+By \eqref{maximalm}, $2^{-(m+1)}<|t-s|$,
+hence
+\begin{equation}
+|X_t(\omega)-X_s(\omega)| \leq C |t-s|^\gamma.
+\label{398}
+\end{equation}
+This is true for all dyadic rationals $s,t \in [0,1]$ with $|s-t| \leq 2^{-m_0(\omega)}$; when $|s-t|=0$ it is immediate.
+
+For $k \geq 1$, let $X^k_t=X_{k+t}$, which satisfies \eqref{kolmogorov}. 
+By what we have worked out, 
+there is a $P$-null set $N_1' \in \mathscr{F}$ such that for each
+$\omega \in \Omega \setminus N_1'$ there is some $m_1'(\omega)$ such that
+$m \geq m_1'(\omega)$ and $(s,t) \in S_m$ imply that $|X^1_t(\omega)-X^1_s(\omega)|
+<2^{-\gamma m}$. 
+Let $N_1=N_0 \cup N_1'$, which is $P$-null, and for
+$\omega \in \Omega \setminus N_1$ let $m_1(\omega)=\max\{m_0(\omega),m_1'(\omega)\}$. 
+For $s,t \in D \cap [0,1]$ with $|s-t| \leq 2^{-m_1(\omega)}$, what we have worked out yields
+\[
+|X_t(\omega)-X_s(\omega)| \leq C|t-s|^\gamma, \qquad 
+|X^1_t(\omega)-X^1_s(\omega)| \leq C|t-s|^\gamma.
+\]
+By induction, we get that for each $k \geq 1$ there are $P$-null sets $N_0 \subset N_1 \subset \cdots \subset N_k$ and for
+each $\omega \in \Omega \setminus N_k$ there is some $m_k(\omega)$ such that
+for $s,t \in D \cap [0,1]$ with $|s-t| \leq 2^{-m_k(\omega)}$,
+\begin{align*}
+|X_t(\omega)-X_s(\omega)| &\leq C|t-s|^\gamma\\
+|X^1_t(\omega)-X^1_s(\omega)|&\leq C|t-s|^\gamma\\
+&\ldots\\
+|X^k_t(\omega)-X^k_s(\omega)|&\leq C|t-s|^\gamma.
+\end{align*}
+Let
+\[
+N_\gamma=\bigcup_{k \geq 1} N_k,
+\]
+ which is an increasing sequence of sets whose union is $P$-null. For $\omega \in \Omega \setminus N_\gamma$,
+there is a nondecreasing sequence $m_k(\omega)$ such that when
+$0 \leq j \leq k$ and  $s,t \in D \cap [j,j+1]$ with
+$|s-t| \leq 2^{-m_k(\omega)}$, it is the case that $|X_t(\omega)-X_s(\omega)| \leq C|t-s|^\gamma$. 
+For $s,t \in D \cap [0,k+1]$ with $|s-t| \leq 2^{-m_k(\omega)}$, 
+because $|s-t| \leq \frac{1}{2}$, either there is some $0 \leq j \leq k$ for which 
+$s,t \in [j,j+1]$ or there is some $1 \leq j \leq k$ for which, say, $s<j<t$. In the first case,
+$|X_t(\omega)-X_s(\omega)| \leq C|t-s|^\gamma$.  In the second case, 
+because $|j-s|<|t-s| \leq 2^{-m_k(\omega)}$ and $|t-j| < |t-s| \leq 2^{-m_k(\omega)}$, we get, because $s,j \in D \cap [j-1,j]$
+and
+$j,t \in D \cap [j,j+1]$,
+\begin{align*}
+|X_t(\omega)-X_s(\omega)|&\leq |X_t(\omega)-X_j(\omega)| + |X_j(\omega)-X_s(\omega)|\\
+&\leq C|t-j|^\gamma+C|j-s|^\gamma\\
+&< 2C|t-s|^\gamma. 
+\end{align*}
+Thus for
+\[
+C_\gamma=2C =  2^{\gamma+1}+\frac{4}{1-2^{-\gamma}},
+\]
+we have established that for $\omega \in \Omega \setminus N_\gamma$, $k \geq 1$, and $s,t \in D \cap [0,k+1]$
+satisfying $|t-s| \leq 2^{-m_k(\omega)}$, it is the case that
+\begin{equation}
+|X_t(\omega)-X_s(\omega)| \leq C_\gamma |t-s|^\gamma.
+\label{399}
+\end{equation}
+This implies that for each $\omega \in \Omega \setminus N_\gamma$ and for $k \geq 1$,  the mapping
+$t \mapsto X_t(\omega)$ is uniformly continuous on $D \cap [0,k+1]$. 
+For $t \in \mathbb{R}_{\geq 0}$ and $\omega \in \Omega\setminus N_\gamma$, define
+\begin{equation}
+Y_t(\omega) = \lim_{\stackrel{s \to t}{s \in D}} X_s(\omega).
+\label{3910}
+\end{equation}
+For each $k \geq 0$,
+because $t \mapsto X_t(\omega)$ is uniformly continuous $D \cap  [0,k+1] \to \mathbb{R}^d$, 
+where
+$D \cap [0,k+1]$  is dense in $[0,k+1]$ and $\mathbb{R}^d$ is a complete metric space,
+the map $t \mapsto Y_t(\omega)$ is uniformly continuous $[0,k+1] \to \mathbb{R}^d$.\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~77, Lemma 3.11.}
+Then $t \mapsto Y_t(\omega)$ is continuous $\mathbb{R}_{\geq 0} \to \mathbb{R}^d$.
+For $\omega \in N_\gamma$, we define
+\[
+Y_t(\omega) = 0,\qquad t \in \mathbb{R}_{\geq 0}.
+\]
+Then for each $\omega \in \Omega$, $t \mapsto Y_t(\omega)$ is continuous $\mathbb{R}_{\geq 0} \to \mathbb{R}^d$.
+For $t \in \mathbb{R}_{\geq 0}$, $\omega \mapsto Y_t(\omega)$ is the pointwise limit of the sequence of mappings
+$\omega \mapsto X_s(\omega)$ as $s \to t$, $s \in D$.  For each $s \in D$, $\omega \mapsto X_s(\omega)$ is measurable
+$\mathscr{F} \to \mathscr{B}_{\mathbb{R}^d}$, which implies that $\omega \mapsto Y_t(\omega)$ is itself measurable 
+$\mathscr{F} \to \mathscr{B}_{\mathbb{R}^d}$.\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~142, Lemma 4.29.}
+ Namely, $(Y_t)_{t \in \mathbb{R}_{\geq 0}}$ is a continuous stochastic process.
+
+We must show that $Y$ is a modification of $X$. For $s \in D$, for all $\omega \in \Omega \setminus N_\gamma$ we have
+$Y_s(\omega) = X_s(\omega)$. For $t \in \mathbb{R}_{\geq 0}$, there is a sequence $s_n \in D$ tending to $t$, and then
+for all $\omega \in \Omega \setminus N_\gamma$  by \eqref{3910} we have $X_{s_n}(\omega) \to Y_t(\omega)$. 
+$P(N_\gamma)=0$, namely, $X_{s_n}$ converges to $Y_t$ almost surely. Because $X_{s_n}$ converges to $Y_t$
+almost surely and $P$ is a probability measure, $X_{s_n}$ converges in measure to $Y_t$.\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~479, Theorem 13.37.}
+On the other hand, 
+for
+$\eta>0$, by  Chebyshev's inequality and \eqref{kolmogorov},
+\[
+P\{|X_{s_n}-X_t| \geq \eta\} \leq \eta^{-\alpha} E(|X_{s_n}-X_t|^\alpha) \leq \eta^{-\alpha} \cdot c |s_n-t|^{1+\beta},
+\]
+and because this is true for each $\eta>0$,
+this shows that $X_{s_n}$ converges in measure to $X_t$. Hence, 
+the limits $Y_t$ and $X_t$ are equal as  equivalence classes of
+measurable functions $\Omega \to \mathbb{R}^d$.\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/L0.pdf}}
+That is, $P\{Y_t = X_t\}=1$.  This is true for each $t \in \mathbb{R}_{\geq 0}$, showing that $Y$ is a modification of $X$, completing the proof.
+\end{proof}
+
+\section{H\"older continuity}
+Let $(X,d)$ and $(Y,\rho)$ be metric spaces, let $0<\gamma<1$, and let
+$\phi:X \to Y$ be a function. For 
+$x_0 \in X$, we say that $\phi$ is \textbf{$\gamma$-H\"older continuous at $x_0$}
+if there is some $0<\epsilon_{x_0}<1$ and some $C_{x_0}$ such that when
+$d(x,x_0)< \epsilon_{x_0}$,
+\[
+\rho(\phi(x),\phi(x_0)) \leq C_{x_0} d(x,x_0)^\gamma.
+\]
+We say that $\phi$ is \textbf{locally $\gamma$-H\"older continuous} if for each
+$x_0 \in X$ there is some $0<\epsilon_{x_0}<1$ and some
+$C_{x_0}$ such that when $d(x,x_0)< \epsilon_{x_0}$ and $d(y,x_0)< \epsilon_{x_0}$,
+\[
+\rho(\phi(x),\phi(y)) \leq C_{x_0} d(x,y)^\gamma.
+\]
+We say that $\phi$ is \textbf{uniformly $\gamma$-H\"older continuous} if there is some
+$C$ such that for all $x,y \in X$,
+\[
+\rho(\phi(x),\phi(y)) \leq C d(x,y)^\gamma.
+\]
+
+We establish properties of H\"older continuous functions in the following.\footnote{Achim Klenke, {\em Probability Theory: A Comprehensive Course}, p.~448, Lemma 21.3.}
+
+\begin{lemma}
+Let $V$ be a nonempty subset of $\mathbb{R}_{\geq 0}$, let $0<\gamma<1$, and let
+$f:V \to \mathbb{R}^d$ be locally $\gamma$-H\"older continuous. 
+\begin{enumerate}
+\item If $0<\gamma'<\gamma$ then $f$ is locally $\gamma'$-H\"older continuous.
+\item If $V$ is compact, then $f$ is uniformly $\gamma$-H\"older continuous.
+\item If $V$ is an interval of length $T>0$ and there is some $\epsilon>0$ and some $C$ such that for all
+$s,t \in V$ with $|t-s| \leq \epsilon$ we have
+\begin{equation}
+|f(t)-f(s)| \leq C |t-s|^\gamma,
+\label{epsilon}
+\end{equation}
+then
+\[
+|f(t)-f(s)| \leq C \left\lceil \frac{T}{\epsilon} \right\rceil^{1-\gamma}  |t-s|^\gamma, \qquad s,t \in V.
+\]
+\end{enumerate}
+\end{lemma}
+\begin{proof}
+For $t_0 \in \mathbb{R}_{\geq 0}$, there is some $0<\epsilon_{t_0}<1$ and some $C_{t_0}$ such that when
+$|t-t_0|< \epsilon_{t_0}$,
+\[
+|f(t)-f(t_0)| \leq C_{t_0} |t-t_0|^\gamma \leq C_{t_0} |t-t_0|^{\gamma'},
+\]
+showing that $f$ is locally $\gamma'$-H\"older continuous.
+
+
+With the metric inherited from $\mathbb{R}_{\geq 0}$, $V$ is a compact  metric space. 
+For $t \in V$ and $\epsilon>0$, write
+\[
+B_\epsilon(t) = \{v \in V: |v-t| < \epsilon\},
+\]
+which is an open subset of $V$.
+Because $f$ is locally $\gamma$-H\"older continuous, for each $t \in V$ there is some $0<\epsilon_t<1$ and some
+$C_t$ such that for all $u,v \in B_{\epsilon_t}(t)$,
+\begin{equation}
+|f(u)-f(v)| \leq C_t |u-v|^\gamma.
+\label{Bepsilon}
+\end{equation}
+Write $U_t=B_{\epsilon_t}(t)$. Because $t \in U_t$, 
+$\{U_t: t \in V\}$ is an open cover of $V$, and because $V$ is compact there are $t_1,\ldots,t_n \in V$ such that
+$\mathfrak{U}=\{U_{t_1},\ldots,U_{t_n}\}$ is an open cover of $V$.
+Because $V$ is a compact metric space, there is a \textbf{Lebesgue number} $\delta>0$ of the open cover $\mathfrak{U}$:\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~85, Lemma 3.27.}
+for each $t \in V$, there is some $1 \leq i \leq n$ such that $B_\delta(t) \subset U_{t_i}$. 
+Let 
+\[
+C = \max\{C_{t_1},\ldots,C_{t_n},2\norm{f}_u \delta^{-\gamma}\},
+\]
+ For $s,t \in V$ with $|t-s| < \delta$, i.e.
+  $s \in B_\delta(t)$, there is some $1 \leq i \leq n$ with
+ $s,t \in U_{t_i}$. By \eqref{Bepsilon},
+ \[
+ |f(s)-f(t)| \leq C_{t_i} |s-t|^\gamma \leq C|s-t|^\gamma.
+ \]
+ On the other hand, for $s,t \in V$ with $|t-s| \geq \delta$, 
+ \[
+ |f(s)-f(t)| \leq 2 \norm{f}_u  \leq 2 \norm{f}_u \left(\frac{|s-t|}{\delta} \right)^\gamma 
+ =2\norm{f}_u \delta^{-\gamma} |s-t|^\gamma
+ \leq C|s-t|^\gamma.
+ \]
+ Thus, for all $s,t \in V$, 
+ \[
+ |f(s)-f(t)| \leq C |s-t|^\gamma,
+ \]
+ showing that $f$ is uniformly $\gamma$-H\"older continuous.
+ 
+ Let $n = \left\lceil \frac{T}{\epsilon} \right\rceil$. For $s,t \in V$, because $V$ is an interval of length $T$, 
+ $|s-t| \leq T \leq \epsilon n$, and then applying \eqref{epsilon}, because $\frac{|t-s|}{n} \leq \epsilon$,
+\begin{align*}
+|f(t)-f(s)|&= \left| \sum_{k=1}^n f\left(s+(t-s)\frac{k}{n}\right)-f\left(s+(t-s)\frac{k-1}{n}\right)\right|\\
+&\leq \sum_{k=1}^n \left| f\left(s+(t-s)\frac{k}{n}\right)-f\left(s+(t-s)\frac{k-1}{n}\right)\right|\\
+&\leq \sum_{k=1}^n C\left|\frac{t-s}{n}\right|^\gamma\\
+&=C n^{1-\gamma} |t-s|^\gamma.
+\end{align*}
+\end{proof}
+
+
+The following theorem does not speak about a version of a stochastic process. Rather, it shows what can be said about a stochastic
+process that satisfies \eqref{kolmogorov} when almost all of its sample paths are continuous.\footnote{Heinz Bauer, {\em Probability Theory}, p.~338, Theorem 39.4.}
+
+\begin{theorem}
+If a stochastic process $(X_t)_{t \in \mathbb{R}_{\geq 0}}$ with state space $\mathbb{R}^d$ satisfies \eqref{kolmogorov} and for almost every
+$\omega \in \Omega$ the map $t \mapsto X_t(\omega)$ is continuous $\mathbb{R}_{\geq 0} \to \mathbb{R}^d$, then
+for almost every $\omega \in \Omega$, 
+for  every $0<\gamma<\frac{\beta}{\alpha}$,
+the map $t \mapsto X_t(\omega)$ is  locally 
+$\gamma$-H\"older continuous.
+\label{holder}
+\end{theorem}
+\begin{proof}
+There is a $P$-null set $N \in \mathscr{F}$ such that for $\omega \in \Omega \setminus N$, the map
+$t \mapsto X_t(\omega)$ is continuous $\mathbb{R}_{\geq 0} \to \mathbb{R}^d$. 
+For each $0<\gamma<\frac{\beta}{\alpha}$, we have established in \eqref{399} that there is a $P$-null set
+$N_\gamma \in \mathscr{F}$ such that for $k \geq 1$ 
+there is some $m_k(\omega)$ such that when 
+ $s,t \in D \cap [0,k+1]$ and $|t-s| \leq 2^{-m_k(\omega)}$,
+ \begin{equation}
+ |X_t(\omega)-X_s(\omega)| \leq C_\gamma |t-s|^\gamma,
+ \label{3913}
+ \end{equation}
+ where $C_\gamma = 2^{\gamma+1}+\frac{4}{1-2^{-\gamma}}$. 
+ Write  $\delta(k,\omega) = 2^{-m_k(\omega)}$, and
+ let $M_\gamma = N_\gamma \cup N$.
+ For $\omega \in \Omega \setminus M_\gamma$, the map $t \mapsto 
+ X_t(\omega)$ is continuous $\mathbb{R}_{\geq 0} \to \mathbb{R}^d$. 
+ For $k \geq 1$ and for $s,t \in [0,k+1]$ satisfying $|s-t| \leq \delta(k,\omega)$, say with $s \leq t$,
+let $m=\frac{t-s}{2}$ and let
+$s\leq s_n \leq t$ be a sequence of dyadic rationals decreasing to $s$ and let
+$s \leq t_n \leq t$ be a sequence of dyadic rationals inceasing to $t$. 
+Then $s_n,t_n \in D \cap [0,k+1]$
+and $|s_n-t_n| \leq |s-t| \leq \delta(k,\omega)$,  
+ so  by \eqref{3913}, 
+ \[
+ |X_{t_n}(\omega)-X_{s_n}(\omega)| \leq C_\gamma |t_n-s_n|^\gamma.
+ \]
+Because $\omega \in \Omega \setminus N$, $X_{t_n}(\omega) \to X_t(\omega)$ and
+$X_{s_n}(\omega) \to X_s(\omega)$, so
+\begin{align*}
+|X_t(\omega)-X_s(\omega)|& \leq |X_t(\omega)-X_{t_n}(\omega)|
++|X_{t_n}(\omega)-X_{s_n}(\omega)|+|X_s(\omega)-X_{s_n}(\omega)|\\
+&\leq |X_t(\omega)-X_{t_n}(\omega)|+C_\gamma |t_n-s_n|^\gamma+|X_s(\omega)-X_{s_n}(\omega)|\\
+&\downarrow C_\gamma |t-s|^\gamma,
+\end{align*}
+thus
+\[
+|X_t(\omega)-X_s(\omega)| \leq C_\gamma |t-s|^\gamma,
+\]
+showing that for  $0<\gamma<\frac{\beta}{\alpha}$ and 
+$\omega \in \Omega \setminus M_\gamma$, the map $t \mapsto X_t(\omega)$ is locally
+$\gamma$-H\"older continuous. 
+
+Let $0<\gamma_n<\frac{\beta}{\alpha}$ be a sequence increasing to $\frac{\beta}{\alpha}$ and let 
+\[
+M = \bigcup_{n \geq 1} M_{\gamma_n},
+\]
+which is a $P$-null set. 
+Let $0<\gamma<\frac{\beta}{\alpha}$ and let $n$ be such that $\gamma_n \geq \gamma$.
+For $\omega \in \Omega \setminus M$, the map
+$t \mapsto X_t(\omega)$ is locally $\gamma_n$-H\"older continuous, and because
+$\gamma \leq \gamma_n$ this implies that the map is locally $\gamma$-H\"older continuous, completing the proof.
+\end{proof}
+
+
+
+
+Bauer attributes the following theorem to Kolgmorov and Chentsov.\footnote{Nikolai Nikolaevich Chentsov,
+1930--1993,
+ obituary in Russian Math. Surveys \textbf{48} (1993), no. 2, 161--166.}
+ It does not merely state that for any
+$0<\gamma<\frac{\beta}{\alpha}$ there is a modification that is locally $\gamma$-H\"older continuous, but that
+there is a modification that for all $0<\gamma<\frac{\beta}{\alpha}$ is locally
+$\gamma$-H\"older continuous.\footnote{Heinz Bauer, {\em Probability Theory},
+p.~339, Corollary 39.5.}
+
+\begin{theorem}[Kolmogorov-Chentsov theorem]
+If a stochastic process $(X_t)_{t \in \mathbb{R}_{\geq 0}}$ with state space $\mathbb{R}^d$ satisfies \eqref{kolmogorov},
+then $X$ has a modification $Y$ such that for all $\omega \in \Omega$ and $0<\gamma<\frac{\beta}{\alpha}$,
+the path $t \mapsto Y_t(\omega)$ is locally $\gamma$-H\"older continuous.
+\end{theorem}
+\begin{proof}
+Applying the Kolmogorov continuity theorem, there is a continuous modification $Z$ of $X$ that 
+also satisfies \eqref{kolmogorov}. 
+By Theorem \ref{holder}, there is a $P$-null set $M$ such that for 
+$\omega \in \Omega \setminus M$ and $0<\gamma<\frac{\beta}{\alpha}$,
+the map
+$t \mapsto Z_t(\omega)$ is locally $\gamma$-H\"older continuous.
+For $t \in \mathbb{R}_{\geq 0}$, define
+\[
+Y_t(\omega) = \begin{cases}
+Z_t(\omega)&\omega \in \Omega \setminus M\\
+0&\omega \in M,
+\end{cases}
+\]
+i.e. $Y_t = 1_{\Omega \setminus M} Z_t$, which is measurable $\mathscr{F} \to \mathscr{B}_{\mathbb{R}^d}$, and so
+$(Y_t)_{t \in \mathbb{R}_{\geq 0}}$ is a stochastic process. For every $\omega \in \Omega$ and $0<\gamma<\frac{\beta}{\alpha}$, the map
+$t \mapsto Y_t(\omega)$ is locally $\gamma$-H\"older continuous. 
+For $t \in \mathbb{R}_{\geq 0}$,
+\[
+\{X_t \neq Y_t\} = \{X_t \neq Y_t, X_t = Z_t\} \cup \{X_t \neq Y_t, X_t \neq Z_t\}
+\subset \{Y_t \neq Z_t\} \cup \{X_t \neq Z_t\}.
+\]
+Because $P(Y_t \neq Z_t)=P(M)=0$ and $P(X_t \neq Z_t)=0$, since $Z$ is a modification of $X$, we get
+$P(X_t \neq Y_t)=0$, namely, $Y$ is a modification of $X$.
+\end{proof}
+
+\end{document}

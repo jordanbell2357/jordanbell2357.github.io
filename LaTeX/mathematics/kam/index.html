@@ -1,0 +1,854 @@
+<!DOCTYPE html><html>
+<head>
+<title>Notes on the KAM theorem</title>
+<!--Generated on Sun Feb 13 21:14:56 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 6, 2015.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="LaTeXML-navbar-left.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<nav class="ltx_page_navbar">
+<div class="ltx_TOC">
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Introduction ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Introduction</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 Action-angle coordinates ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Action-angle coordinates</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 Diophantine frequency vectors ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Diophantine frequency vectors</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S4" title="4 Statement of KAM ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Statement of KAM</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S5" title="5 Normal forms ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Normal forms</span></a></li>
+</ul>
+</div>
+</nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Notes on the KAM theorem</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">April 6, 2015</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">I hope eventually to expand these notes into a standalone presentation of KAM that presents a precise formulation of the theorem and gives detailed proofs of everything. There are few presentations of KAM in the literature that
+give a precise formulation of the theorem, and even those that give precise
+formulations such as <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="A proof of Kolmogorov’s theorem" class="ltx_ref">6</a>]</cite> and <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="A lecture on the classical KAM theorem" class="ltx_ref">7</a>]</cite> glide over
+some details. Gallavotti <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="Quasi periodic motions from Hipparchus to Kolmogorov" class="ltx_ref">4</a>]</cite> explains the history of quasi-periodic phenomena in celestial mechanics.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p2.m1" class="ltx_Math" alttext="\mathbb{T}^{n}=\mathbb{R}^{n}/\mathbb{Z}^{n}" display="inline"><mrow><msup><mi>𝕋</mi><mi>n</mi></msup><mo>=</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>/</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">For <math id="S1.p3.m1" class="ltx_Math" alttext="x,y\in\mathbb{R}^{n}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>, let <math id="S1.p3.m2" class="ltx_Math" alttext="\langle x,y\rangle=\sum_{j=1}^{n}x_{j}y_{j}" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><msub><mi>x</mi><mi>j</mi></msub><mo>⁢</mo><msub><mi>y</mi><mi>j</mi></msub></mrow></mrow></mrow></math>.
+Let <math id="S1.p3.m3" class="ltx_Math" alttext="\|x\|=\sum_{j=1}^{n}x_{j}^{2}" display="inline"><mrow><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><msubsup><mi>x</mi><mi>j</mi><mn>2</mn></msubsup></mrow></mrow></math> and let <math id="S1.p3.m4" class="ltx_Math" alttext="\|x\|_{\infty}=\max_{1\leq j\leq n}|x_{j}|" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><mrow><msub><mi>max</mi><mrow><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><msub><mi>x</mi><mi>j</mi></msub><mo stretchy="false">|</mo></mrow></mrow></mrow></math>. For <math id="S1.p3.m5" class="ltx_Math" alttext="x,y\in\mathbb{R}^{n}" display="inline"><mrow><mrow><mi>x</mi><mo>,</mo><mi>y</mi></mrow><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>, we have <math id="S1.p3.m6" class="ltx_Math" alttext="|\langle x,y\rangle|\leq n\|x\|_{\infty}\|y\|_{\infty}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>n</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>y</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow></math>.
+</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">If <math id="S1.p4.m1" class="ltx_Math" alttext="(M,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></math> is a symplectic manifold and <math id="S1.p4.m2" class="ltx_Math" alttext="H\in C^{\infty}(M)" display="inline"><mrow><mi>H</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then the
+<span class="ltx_text ltx_font_italic">Hamiltonian vector field</span> with energy function <math id="S1.p4.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is the vector
+field <math id="S1.p4.m4" class="ltx_Math" alttext="X_{H}" display="inline"><msub><mi>X</mi><mi>H</mi></msub></math> on <math id="S1.p4.m5" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> uniquely determined by the condition <math id="S1.p4.m6" class="ltx_Math" alttext="\omega_{x}(X_{H}(x),v)=(dH)(x)(v)" display="inline"><mrow><mrow><msub><mi>ω</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>X</mi><mi>H</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>d</mi><mo>⁢</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all points <math id="S1.p4.m7" class="ltx_Math" alttext="x\in M" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>M</mi></mrow></math> and tangent vectors <math id="S1.p4.m8" class="ltx_Math" alttext="v\in T_{x}M" display="inline"><mrow><mi>v</mi><mo>∈</mo><mrow><msub><mi>T</mi><mi>x</mi></msub><mo>⁢</mo><mi>M</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">We say that <math id="S1.p5.m1" class="ltx_Math" alttext="(q^{1},\ldots,q^{n},p_{1},\ldots,p_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi>q</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>q</mi><mi>n</mi></msup><mo>,</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> are <span class="ltx_text ltx_font_italic">canonical coordinates</span>
+for <math id="S1.p5.m2" class="ltx_Math" alttext="(M,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></math> if <math id="S1.p5.m3" class="ltx_Math" alttext="\omega=\sum_{j=1}^{n}dq^{j}\wedge dp_{j}" display="inline"><mrow><mi>ω</mi><mo>=</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>q</mi><mi>j</mi></msup></mrow></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><msub><mi>p</mi><mi>j</mi></msub></mrow></mrow></mrow></math>. If
+<math id="S1.p5.m4" class="ltx_Math" alttext="(q^{1},\ldots,q^{n},p_{1},\ldots,p_{n})" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi>q</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>q</mi><mi>n</mi></msup><mo>,</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></math> are canonical coordinates for <math id="S1.p5.m5" class="ltx_Math" alttext="(M,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></math>
+and <math id="S1.p5.m6" class="ltx_Math" alttext="H\in C^{\infty}(M)" display="inline"><mrow><mi>H</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> then</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="X_{H}(x)=((\partial_{p}H)(x),(-\partial_{q}H)(x))" display="block"><mrow><mrow><msub><mi>X</mi><mi>H</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mo>∂</mo><mi>p</mi></msub><mo>⁡</mo><mi>H</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mrow><msub><mo>∂</mo><mi>q</mi></msub><mo>⁡</mo><mi>H</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="S1.p5.m7" class="ltx_Math" alttext="x\in M" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>M</mi></mrow></math>, where</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\partial_{q}H=\Big{(}\frac{\partial H}{\partial q^{1}},\ldots,\frac{\partial H%
+}{\partial q^{n}}\Big{)},\quad\partial_{p}H=\Big{(}\frac{\partial H}{\partial p%
+_{1}},\ldots,\frac{\partial H}{\partial p_{n}}\Big{)}." display="block"><mrow><mrow><mrow><mrow><msub><mo>∂</mo><mi>q</mi></msub><mo>⁡</mo><mi>H</mi></mrow><mo>=</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>q</mi><mn>1</mn></msup></mrow></mfrac><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>q</mi><mi>n</mi></msup></mrow></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><msub><mo>∂</mo><mi>p</mi></msub><mo>⁡</mo><mi>H</mi></mrow><mo>=</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>p</mi><mn>1</mn></msub></mrow></mfrac><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>p</mi><mi>n</mi></msub></mrow></mfrac><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S1.p5.m8" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> be the flow of <math id="S1.p5.m9" class="ltx_Math" alttext="X_{H}" display="inline"><msub><mi>X</mi><mi>H</mi></msub></math> on <math id="S1.p5.m10" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>. Then</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="\frac{d(q^{j}(\phi_{t}(x)))}{dt}=\frac{\partial H}{\partial p_{j}}(\phi_{t}(x)%
+),\quad\frac{d(p_{j}(\phi_{t}(x)))}{dt}=-\frac{\partial H}{\partial q^{j}}(%
+\phi_{t}(x))," display="block"><mrow><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>q</mi><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>p</mi><mi>j</mi></msub></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>p</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>q</mi><mi>j</mi></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">called <span class="ltx_text ltx_font_italic">Hamilton’s equations</span>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Action-angle coordinates</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p1.m1" class="ltx_Math" alttext="(M,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></math> be a <math id="S2.p1.m2" class="ltx_Math" alttext="2n" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></math>-dimensional symplectic manifold. Let <math id="S2.p1.m3" class="ltx_Math" alttext="f_{1},\ldots,f_{n}\in C^{\infty}(M)" display="inline"><mrow><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub></mrow><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. If <math id="S2.p1.m4" class="ltx_Math" alttext="\{f_{i},f_{j}\}=0" display="inline"><mrow><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo stretchy="false">}</mo></mrow><mo>=</mo><mn>0</mn></mrow></math> for all
+<math id="S2.p1.m5" class="ltx_Math" alttext="1\leq i,j\leq n" display="inline"><mrow><mrow><mn>1</mn><mo>≤</mo><mi>i</mi></mrow><mo>,</mo><mrow><mi>j</mi><mo>≤</mo><mi>n</mi></mrow></mrow></math> (namely the functions are in involution) and if at each point in <math id="S2.p1.m6" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math>
+the differentials of the functions are linearly
+independent in the cotangent space at that point, then we say that
+the set of functions is <span class="ltx_text ltx_font_italic">completely integrable</span>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">We define the <span class="ltx_text ltx_font_italic">momentum map</span> <math id="S2.p2.m1" class="ltx_Math" alttext="F:M\to\mathbb{R}^{n}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> by
+<math id="S2.p2.m2" class="ltx_Math" alttext="F=f_{1}\times\cdots\times f_{n}" display="inline"><mrow><mi>F</mi><mo>=</mo><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>×</mo><mi mathvariant="normal">⋯</mi><mo>×</mo><msub><mi>f</mi><mi>n</mi></msub></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">We say that <math id="S2.p3.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is <span class="ltx_text ltx_font_italic">locally trivial</span> at a value <math id="S2.p3.m2" class="ltx_Math" alttext="y_{0}" display="inline"><msub><mi>y</mi><mn>0</mn></msub></math> in its range if
+there is a neighborhood <math id="S2.p3.m3" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> of <math id="S2.p3.m4" class="ltx_Math" alttext="y_{0}" display="inline"><msub><mi>y</mi><mn>0</mn></msub></math> such that for all <math id="S2.p3.m5" class="ltx_Math" alttext="y\in U" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>U</mi></mrow></math> there is a smooth map <math id="S2.p3.m6" class="ltx_Math" alttext="h_{y}:F^{-1}(U)\to F^{-1}(y_{0})" display="inline"><mrow><msub><mi>h</mi><mi>y</mi></msub><mo>:</mo><mrow><mrow><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> such that <math id="S2.p3.m7" class="ltx_Math" alttext="F\times h_{y}" display="inline"><mrow><mi>F</mi><mo>×</mo><msub><mi>h</mi><mi>y</mi></msub></mrow></math> is a diffeomorphism from <math id="S2.p3.m8" class="ltx_Math" alttext="F^{-1}(U)" display="inline"><mrow><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> to <math id="S2.p3.m9" class="ltx_Math" alttext="U\times F^{-1}(y_{0})" display="inline"><mrow><mrow><mi>U</mi><mo>×</mo><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>y</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math>. The
+<span class="ltx_text ltx_font_italic">bifurcation set</span> of <math id="S2.p3.m10" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> is the set <math id="S2.p3.m11" class="ltx_Math" alttext="\Sigma_{F}" display="inline"><msub><mi mathvariant="normal">Σ</mi><mi>F</mi></msub></math> of <math id="S2.p3.m12" class="ltx_Math" alttext="y_{0}\in\mathbb{R}^{n}" display="inline"><mrow><msub><mi>y</mi><mn>0</mn></msub><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> at which
+<math id="S2.p3.m13" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> fails to be locally trivial.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">The following theorem is proved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Foundations of mechanics" class="ltx_ref">1</a>, Theorem 5.2.21]</cite>.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1</span></span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="U\subseteq\mathbb{R}^{n}" display="inline"><mrow><mi>U</mi><mo mathvariant="normal">⊆</mo><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></mrow></math> be open. If <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="F|F^{-1}(U):F^{-1}(U)\to U" display="inline"><mrow><mrow><mi>F</mi><mo lspace="2.5pt" mathvariant="normal" rspace="2.5pt" stretchy="false">|</mo><mrow><msup><mi>F</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>U</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="normal">:</mo><mrow><mrow><msup><mi>F</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>U</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">→</mo><mi>U</mi></mrow></mrow></math>
+is a proper map then each of the vector fields <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="X_{f_{i}}|F^{-1}(U)" display="inline"><mrow><msub><mi>X</mi><msub><mi>f</mi><mi>i</mi></msub></msub><mo lspace="2.5pt" mathvariant="normal" rspace="2.5pt" stretchy="false">|</mo><mrow><msup><mi>F</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>U</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> is complete, <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="U\subseteq\mathbb{R}^{n}\setminus\Sigma_{F}" display="inline"><mrow><mi>U</mi><mo mathvariant="normal">⊆</mo><mrow><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup><mo mathvariant="normal">∖</mo><msub><mi mathvariant="normal">Σ</mi><mi>F</mi></msub></mrow></mrow></math>, and the fibers
+of the locally trivial fibration <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="F|F^{-1}(U)" display="inline"><mrow><mi>F</mi><mo lspace="2.5pt" mathvariant="normal" rspace="2.5pt" stretchy="false">|</mo><mrow><msup><mi>F</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>U</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> are disjoint unions
+of manifolds each diffeomorphic with <math id="Thmtheorem1.p1.m6" class="ltx_Math" alttext="\mathbb{T}^{n}" display="inline"><msup><mi mathvariant="normal">T</mi><mi>n</mi></msup></math>.</span></p>
+</div>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p5.m1" class="ltx_Math" alttext="\nu\in\mathbb{R}^{n}" display="inline"><mrow><mi>ν</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>, and define the linear flow <math id="S2.p5.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> on <math id="S2.p5.m3" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>
+by
+<math id="S2.p5.m4" class="ltx_Math" alttext="F_{t}(v)=v+t\nu" display="inline"><mrow><mrow><msub><mi>F</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>v</mi><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi>ν</mi></mrow></mrow></mrow></math>. Let <math id="S2.p5.m5" class="ltx_Math" alttext="\pi:\mathbb{R}^{n}\to\mathbb{T}^{n}" display="inline"><mrow><mi>π</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></mrow></math> be the projection
+map and let <math id="S2.p5.m6" class="ltx_Math" alttext="\phi_{t}:\mathbb{T}^{n}\to\mathbb{T}^{n}" display="inline"><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>:</mo><mrow><msup><mi>𝕋</mi><mi>n</mi></msup><mo>→</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></mrow></math> be such that
+<math id="S2.p5.m7" class="ltx_Math" alttext="\pi\circ F_{t}=\phi_{t}\circ\pi" display="inline"><mrow><mrow><mi>π</mi><mo>∘</mo><msub><mi>F</mi><mi>t</mi></msub></mrow><mo>=</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>∘</mo><mi>π</mi></mrow></mrow></math>; if <math id="S2.p5.m8" class="ltx_Math" alttext="\pi(v_{1})=\pi(v_{2})" display="inline"><mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math> then
+<math id="S2.p5.m9" class="ltx_Math" alttext="\pi\circ F_{t}(v_{1})=\pi\circ F_{t}(v_{2})" display="inline"><mrow><mrow><mrow><mi>π</mi><mo>∘</mo><msub><mi>F</mi><mi>t</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>π</mi><mo>∘</mo><msub><mi>F</mi><mi>t</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so such a map exists, and is clearly unique.
+A flow <math id="S2.p5.m10" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> on <math id="S2.p5.m11" class="ltx_Math" alttext="\mathbb{T}^{n}" display="inline"><msup><mi>𝕋</mi><mi>n</mi></msup></math> induced by a linear flow on <math id="S2.p5.m12" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> is called a <span class="ltx_text ltx_font_italic">quasi-periodic</span> flow.</p>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">Say that <math id="S2.p6.m1" class="ltx_Math" alttext="\nu\neq\mu" display="inline"><mrow><mi>ν</mi><mo>≠</mo><mi>μ</mi></mrow></math>, and let <math id="S2.p6.m2" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> be the flow induced by <math id="S2.p6.m3" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math>
+and <math id="S2.p6.m4" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> be the flow induced by <math id="S2.p6.m5" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math>. Then for some <math id="S2.p6.m6" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>, <math id="S2.p6.m7" class="ltx_Math" alttext="\nu_{i}\neq\mu_{i}" display="inline"><mrow><msub><mi>ν</mi><mi>i</mi></msub><mo>≠</mo><msub><mi>μ</mi><mi>i</mi></msub></mrow></math> and for any <math id="S2.p6.m8" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> such that <math id="S2.p6.m9" class="ltx_Math" alttext="t(\nu_{i}-\mu_{i})\not\in\mathbb{Z}" display="inline"><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ν</mi><mi>i</mi></msub><mo>-</mo><msub><mi>μ</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∉</mo><mi>ℤ</mi></mrow></math>,
+<math id="S2.p6.m10" class="ltx_Math" alttext="\phi_{t}(\theta)\neq\psi_{t}(\theta)" display="inline"><mrow><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><msub><mi>ψ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for any <math id="S2.p6.m11" class="ltx_Math" alttext="\theta\in\mathbb{T}^{n}" display="inline"><mrow><mi>θ</mi><mo>∈</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></math>. Hence
+<math id="S2.p6.m12" class="ltx_Math" alttext="\phi\neq\psi" display="inline"><mrow><mi>ϕ</mi><mo>≠</mo><mi>ψ</mi></mrow></math>. Thus
+a quasi-periodic flow is induced by
+a unique vector <math id="S2.p6.m13" class="ltx_Math" alttext="\nu\in\mathbb{R}^{n}" display="inline"><mrow><mi>ν</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>. We call <math id="S2.p6.m14" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> the <span class="ltx_text ltx_font_italic">frequency vector</span> of the flow <math id="S2.p6.m15" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math>.</p>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p">We say that
+<math id="S2.p7.m1" class="ltx_Math" alttext="\nu\in\mathbb{R}^{n}" display="inline"><mrow><mi>ν</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> is <span class="ltx_text ltx_font_italic">resonant</span> if there is some <math id="S2.p7.m2" class="ltx_Math" alttext="0\neq k\in\mathbb{Z}^{n}" display="inline"><mrow><mn>0</mn><mo>≠</mo><mi>k</mi><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow></math> such that <math id="S2.p7.m3" class="ltx_Math" alttext="\langle k,\nu\rangle=0" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mi>k</mi><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>, and we say that it is <span class="ltx_text ltx_font_italic">nonresonant</span> otherwise.</p>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p8.m1" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> be the quasi-periodic flow on <math id="S2.p8.m2" class="ltx_Math" alttext="\mathbb{T}^{n}" display="inline"><msup><mi>𝕋</mi><mi>n</mi></msup></math> with frequency vector <math id="S2.p8.m3" class="ltx_Math" alttext="\nu\in\mathbb{R}^{n}" display="inline"><mrow><mi>ν</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>.
+It can be shown that each orbit of <math id="S2.p8.m4" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is dense in <math id="S2.p8.m5" class="ltx_Math" alttext="\mathbb{T}^{n}" display="inline"><msup><mi>𝕋</mi><mi>n</mi></msup></math> if and only
+if <math id="S2.p8.m6" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> is nonresonant. This is proved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Foundations of mechanics" class="ltx_ref">1</a>, pp. 818–820]</cite>; that each orbit of <math id="S2.p8.m7" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> is dense in <math id="S2.p8.m8" class="ltx_Math" alttext="\mathbb{T}^{n}" display="inline"><msup><mi>𝕋</mi><mi>n</mi></msup></math> if <math id="S2.p8.m9" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> is nonresonant is proved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="An introduction to the theory of numbers" class="ltx_ref">5</a>, Theorem 444]</cite>.</p>
+</div>
+<div id="S2.p9" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p9.m1" class="ltx_Math" alttext="H=f_{1}" display="inline"><mrow><mi>H</mi><mo>=</mo><msub><mi>f</mi><mn>1</mn></msub></mrow></math>; we call this distinguished function the Hamiltonian, and we are
+concerned with the flow of the Hamiltonian vector field <math id="S2.p9.m2" class="ltx_Math" alttext="X_{H}" display="inline"><msub><mi>X</mi><mi>H</mi></msub></math>.</p>
+</div>
+<div id="S2.p10" class="ltx_para">
+<p class="ltx_p">The following theorem is proved in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Foundations of mechanics" class="ltx_ref">1</a>, Theorem 5.2.24]</cite>.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 2</span></span>.</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> be in the range of <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math>, let <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="I_{c}^{0}" display="inline"><msubsup><mi>I</mi><mi>c</mi><mn mathvariant="normal">0</mn></msubsup></math> denote a connected component
+of <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="F^{-1}(c)" display="inline"><mrow><msup><mi>F</mi><mrow><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>c</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>, and let <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="\phi" display="inline"><mi>ϕ</mi></math> be the flow of <math id="Thmtheorem2.p1.m6" class="ltx_Math" alttext="X_{H}" display="inline"><msub><mi>X</mi><mi>H</mi></msub></math>. Then there is a quasiperiodic flow <math id="Thmtheorem2.p1.m7" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> on <math id="Thmtheorem2.p1.m8" class="ltx_Math" alttext="\mathbb{T}^{n}" display="inline"><msup><mi mathvariant="normal">T</mi><mi>n</mi></msup></math> and a diffeomorphism <math id="Thmtheorem2.p1.m9" class="ltx_Math" alttext="g:\mathbb{T}^{n}\to I_{c}^{0}" display="inline"><mrow><mi>g</mi><mo mathvariant="normal">:</mo><mrow><msup><mi mathvariant="normal">T</mi><mi>n</mi></msup><mo mathvariant="normal">→</mo><msubsup><mi>I</mi><mi>c</mi><mn mathvariant="normal">0</mn></msubsup></mrow></mrow></math> such that <math id="Thmtheorem2.p1.m10" class="ltx_Math" alttext="g\circ\psi_{t}=\phi_{t}|I_{c}^{0}\circ g" display="inline"><mrow><mrow><mi>g</mi><mo mathvariant="normal">∘</mo><msub><mi>ψ</mi><mi>t</mi></msub></mrow><mo mathvariant="normal">=</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo lspace="2.5pt" mathvariant="normal" rspace="2.5pt" stretchy="false">|</mo><mrow><msubsup><mi>I</mi><mi>c</mi><mn mathvariant="normal">0</mn></msubsup><mo mathvariant="normal">∘</mo><mi>g</mi></mrow></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="S2.p11" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p11.m1" class="ltx_Math" alttext="\mathbb{R}^{2n}=\{q^{1},\ldots,q^{n},p_{1},\ldots,p_{n}\}" display="inline"><mrow><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><msup><mi>q</mi><mn>1</mn></msup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msup><mi>q</mi><mi>n</mi></msup><mo>,</mo><msub><mi>p</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>p</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></mrow></math> and let
+<math id="S2.p11.m2" class="ltx_Math" alttext="\omega=\sum_{j=1}^{n}dq^{j}\wedge dp_{j}" display="inline"><mrow><mi>ω</mi><mo>=</mo><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></msubsup><mrow><mi>d</mi><mo>⁢</mo><msup><mi>q</mi><mi>j</mi></msup></mrow></mrow><mo>∧</mo><mrow><mi>d</mi><mo>⁢</mo><msub><mi>p</mi><mi>j</mi></msub></mrow></mrow></mrow></math>.
+Let <math id="S2.p11.m3" class="ltx_Math" alttext="J=\begin{bmatrix}0&amp;I\\
+-I&amp;0\end{bmatrix}" display="inline"><mrow><mi>J</mi><mo>=</mo><mrow><mo>[</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi>I</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>I</mi></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>, where <math id="S2.p11.m4" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> is the <math id="S2.p11.m5" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math>
+identity matrix. For <math id="S2.p11.m6" class="ltx_Math" alttext="u,v\in\mathbb{R}^{2n}" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></mrow></math> we have that <math id="S2.p11.m7" class="ltx_Math" alttext="\omega(u,v)=\langle u,Jv\rangle" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">⟨</mo><mi>u</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">⟩</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p12" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p12.m1" class="ltx_Math" alttext="B^{n}" display="inline"><msup><mi>B</mi><mi>n</mi></msup></math> be an open ball in <math id="S2.p12.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. <math id="S2.p12.m3" class="ltx_Math" alttext="B^{n}\times\mathbb{T}^{n}" display="inline"><mrow><msup><mi>B</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></math>
+is a symplectic submanifold of <math id="S2.p12.m4" class="ltx_Math" alttext="\mathbb{R}^{2n}" display="inline"><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup></math>. We define coordinates
+<math id="S2.p12.m5" class="ltx_Math" alttext="I^{j}=q^{j}" display="inline"><mrow><msup><mi>I</mi><mi>j</mi></msup><mo>=</mo><msup><mi>q</mi><mi>j</mi></msup></mrow></math> and <math id="S2.p12.m6" class="ltx_Math" alttext="\theta_{j}=p_{j}+\mathbb{Z}" display="inline"><mrow><msub><mi>θ</mi><mi>j</mi></msub><mo>=</mo><mrow><msub><mi>p</mi><mi>j</mi></msub><mo>+</mo><mi>ℤ</mi></mrow></mrow></math>, <math id="S2.p12.m7" class="ltx_Math" alttext="j=1,\ldots,n" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>.
+If <math id="S2.p12.m8" class="ltx_Math" alttext="H\in C^{\infty}(B^{n}\times\mathbb{T}^{n})" display="inline"><mrow><mi>H</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>B</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> does not depend on <math id="S2.p12.m9" class="ltx_Math" alttext="\theta_{1},\ldots,\theta_{n}" display="inline"><mrow><msub><mi>θ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>θ</mi><mi>n</mi></msub></mrow></math> then we say that it has <span class="ltx_text ltx_font_italic">action-angle coordinates</span>
+in <math id="S2.p12.m10" class="ltx_Math" alttext="B^{n}\times\mathbb{T}^{n}" display="inline"><mrow><msup><mi>B</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></math>.</p>
+</div>
+<div id="S2.p13" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p13.m1" class="ltx_Math" alttext="H\in C^{\infty}(B^{n}\times\mathbb{T}^{n})" display="inline"><mrow><mi>H</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>B</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> admits action-angle coordinates
+<math id="S2.p13.m2" class="ltx_Math" alttext="(I,\theta)" display="inline"><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></math> then for all <math id="S2.p13.m3" class="ltx_Math" alttext="x\in B^{n}\times\mathbb{T}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><msup><mi>B</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></mrow></math> we have</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex4.m1" class="ltx_Math" alttext="\frac{d(I^{j}(\phi_{t}(x)))}{dt}=\frac{\partial H}{\partial\theta_{j}}(\phi_{t%
+}(x))=0," display="block"><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>I</mi><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>θ</mi><mi>j</mi></msub></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e. <math id="S2.p13.m4" class="ltx_Math" alttext="I^{j}(\phi_{t}(x))=I^{j}(x)" display="inline"><mrow><mrow><msup><mi>I</mi><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>I</mi><mi>j</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S2.p13.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, and as <math id="S2.p13.m6" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> depends only
+on <math id="S2.p13.m7" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> this gives</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="\frac{d(\theta_{j}(\phi_{t}(x)))}{dt}=-\frac{\partial H}{\partial I^{j}}(\phi_%
+{t}(x))=-\frac{\partial H}{\partial I^{j}}(x)=\nu_{j}," display="block"><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>θ</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>I</mi><mi>j</mi></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>I</mi><mi>j</mi></msup></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><msub><mi>ν</mi><mi>j</mi></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.p13.m8" class="ltx_Math" alttext="\nu=\nu(I(x))" display="inline"><mrow><mi>ν</mi><mo>=</mo><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+We integrate this equation from <math id="S2.p13.m9" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> to <math id="S2.p13.m10" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> and get</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="\theta_{j}(\phi_{t}(x))-\theta_{j}(x)=t\nu_{j}." display="block"><mrow><mrow><mrow><mrow><msub><mi>θ</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>θ</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi>ν</mi><mi>j</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus for <math id="S2.p13.m11" class="ltx_Math" alttext="x\in B^{n}\times\mathbb{T}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><msup><mi>B</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></mrow></math>, given
+<math id="S2.p13.m12" class="ltx_Math" alttext="I(x)" display="inline"><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> the trajectory <math id="S2.p13.m13" class="ltx_Math" alttext="\phi_{t}(x)" display="inline"><mrow><msub><mi>ϕ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> of <math id="S2.p13.m14" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> under the Hamiltonian flow of <math id="S2.p13.m15" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>
+can be explicitly seen if we know <math id="S2.p13.m16" class="ltx_Math" alttext="\nu(I(x))" display="inline"><mrow><mi>ν</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>.
+We say that a value of <math id="S2.p13.m17" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> determines an <span class="ltx_text ltx_font_italic">invariant torus</span> for the Hamiltonian flow of <math id="S2.p13.m18" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>.</p>
+</div>
+<div id="S2.p14" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p14.m1" class="ltx_Math" alttext="(M,\omega)" display="inline"><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></math> is a symplectic manifold and <math id="S2.p14.m2" class="ltx_Math" alttext="H\in C^{\infty}(M)" display="inline"><mrow><mi>H</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we say
+that <math id="S2.p14.m3" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> <span class="ltx_text ltx_font_italic">admits action-angle coordinates</span> <math id="S2.p14.m4" class="ltx_Math" alttext="(I,\theta)" display="inline"><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></math> on an open set
+<math id="S2.p14.m5" class="ltx_Math" alttext="U\subset M" display="inline"><mrow><mi>U</mi><mo>⊂</mo><mi>M</mi></mrow></math> if there exists a symplectic diffeomorphism <math id="S2.p14.m6" class="ltx_Math" alttext="\psi:U\to B^{n}\times\mathbb{T}^{n}" display="inline"><mrow><mi>ψ</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><mrow><msup><mi>B</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></mrow></mrow></math> such that <math id="S2.p14.m7" class="ltx_Math" alttext="H\circ\psi^{-1}" display="inline"><mrow><mi>H</mi><mo>∘</mo><msup><mi>ψ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> has action-angle
+coordinates <math id="S2.p14.m8" class="ltx_Math" alttext="(I,\theta)" display="inline"><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></math> in <math id="S2.p14.m9" class="ltx_Math" alttext="B^{n}\times\mathbb{T}^{n}" display="inline"><mrow><msup><mi>B</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></math>. If <math id="S2.p14.m10" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> admits action-angle coordinates, then one can check that the push-forward <math id="S2.p14.m11" class="ltx_Math" alttext="\psi_{*}X_{H}" display="inline"><mrow><msub><mi>ψ</mi><mo>*</mo></msub><mo>⁢</mo><msub><mi>X</mi><mi>H</mi></msub></mrow></math> is
+the Hamiltonian vector field <math id="S2.p14.m12" class="ltx_Math" alttext="X_{H\circ\psi^{-1}}" display="inline"><msub><mi>X</mi><mrow><mi>H</mi><mo>∘</mo><msup><mi>ψ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></msub></math>, so that</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="\psi_{*}X_{H}=-\sum_{j=1}^{n}\frac{\partial(H\circ\psi^{-1})}{\partial I_{j}}%
+\frac{\partial}{\partial\theta_{j}}." display="block"><mrow><mrow><mrow><msub><mi>ψ</mi><mo>*</mo></msub><mo>⁢</mo><msub><mi>X</mi><mi>H</mi></msub></mrow><mo>=</mo><mrow><mo>-</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>j</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>H</mi><mo>∘</mo><msup><mi>ψ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>I</mi><mi>j</mi></msub></mrow></mfrac><mo>⁢</mo><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>θ</mi><mi>j</mi></msub></mrow></mfrac></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p15" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p15.m1" class="ltx_Math" alttext="f_{1},\ldots,f_{n}\in C^{\infty}(\mathbb{R}^{2n})" display="inline"><mrow><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub></mrow><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. If the set
+<math id="S2.p15.m2" class="ltx_Math" alttext="\{f_{1},\ldots,f_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> is completely integrable, with <math id="S2.p15.m3" class="ltx_Math" alttext="H=f_{1}" display="inline"><mrow><mi>H</mi><mo>=</mo><msub><mi>f</mi><mn>1</mn></msub></mrow></math>,
+then for any open set <math id="S2.p15.m4" class="ltx_Math" alttext="U\subseteq\mathbb{R}^{2n}\setminus\Sigma_{F}" display="inline"><mrow><mi>U</mi><mo>⊆</mo><mrow><msup><mi>ℝ</mi><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></msup><mo>∖</mo><msub><mi mathvariant="normal">Σ</mi><mi>F</mi></msub></mrow></mrow></math>
+for which <math id="S2.p15.m5" class="ltx_Math" alttext="F^{-1}(c)=\mathbb{T}^{n}" display="inline"><mrow><mrow><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></math> for all <math id="S2.p15.m6" class="ltx_Math" alttext="c\in U" display="inline"><mrow><mi>c</mi><mo>∈</mo><mi>U</mi></mrow></math>,
+Abraham and Marsden <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Foundations of mechanics" class="ltx_ref">1</a>, pp. 398–400]</cite> find action-angle coordinates in <math id="S2.p15.m7" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math>.
+Here <math id="S2.p15.m8" class="ltx_Math" alttext="F=f_{1}\times\cdots f_{n}" display="inline"><mrow><mi>F</mi><mo>=</mo><mrow><mrow><msub><mi>f</mi><mn>1</mn></msub><mo>×</mo><mi mathvariant="normal">⋯</mi></mrow><mo>⁢</mo><msub><mi>f</mi><mi>n</mi></msub></mrow></mrow></math>, the momentum map.
+This construction is also explained by
+Arnold <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="Mathematical methods of classical mechanics" class="ltx_ref">2</a>, pp. 282–284]</cite>.</p>
+</div>
+<div id="S2.p16" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S2.p16.m1" class="ltx_Math" alttext="H\in C^{\infty}(B^{n}\times\mathbb{T}^{n})" display="inline"><mrow><mi>H</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>B</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> has action-angle
+coordinates <math id="S2.p16.m2" class="ltx_Math" alttext="(I,\theta)" display="inline"><mrow><mo stretchy="false">(</mo><mi>I</mi><mo>,</mo><mi>θ</mi><mo stretchy="false">)</mo></mrow></math>, and assume that for all <math id="S2.p16.m3" class="ltx_Math" alttext="I\in B^{n}" display="inline"><mrow><mi>I</mi><mo>∈</mo><msup><mi>B</mi><mi>n</mi></msup></mrow></math>,</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="\det(\partial^{2}_{I}H(I))\neq 0." display="block"><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msubsup><mo>∂</mo><mi>I</mi><mn>2</mn></msubsup><mo>⁡</mo><mi>H</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then by the inverse function theorem, for every <math id="S2.p16.m4" class="ltx_Math" alttext="I\in B^{n}" display="inline"><mrow><mi>I</mi><mo>∈</mo><msup><mi>B</mi><mi>n</mi></msup></mrow></math> there
+is a neighborhood <math id="S2.p16.m5" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> of <math id="S2.p16.m6" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> and a neighborhood <math id="S2.p16.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> of
+<math id="S2.p16.m8" class="ltx_Math" alttext="\nu=\partial_{I}H(I)" display="inline"><mrow><mi>ν</mi><mo>=</mo><mrow><mrow><msub><mo>∂</mo><mi>I</mi></msub><mo>⁡</mo><mi>H</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>I</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> such that <math id="S2.p16.m9" class="ltx_Math" alttext="\partial_{I}H:U\to V" display="inline"><mrow><mrow><msub><mo>∂</mo><mi>I</mi></msub><mo>⁡</mo><mi>H</mi></mrow><mo>:</mo><mrow><mi>U</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> is a diffeomorphism.
+In <math id="S2.p16.m10" class="ltx_Math" alttext="U\times\mathbb{T}^{n}" display="inline"><mrow><mi>U</mi><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></math> we can use <math id="S2.p16.m11" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> and <math id="S2.p16.m12" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> as coordinates.</p>
+</div>
+<div id="S2.p17" class="ltx_para">
+<p class="ltx_p">For <math id="S2.p17.m1" class="ltx_Math" alttext="\nu\in\mathbb{R}^{n}" display="inline"><mrow><mi>ν</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>, let <math id="S2.p17.m2" class="ltx_Math" alttext="g_{\nu}=\{k\in\mathbb{Z}^{n}:\langle\nu,k\rangle=0\}" display="inline"><mrow><msub><mi>g</mi><mi>ν</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>k</mi><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ν</mi><mo>,</mo><mi>k</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and let <math id="S2.p17.m3" class="ltx_Math" alttext="\operatorname{rank}(g_{\nu})" display="inline"><mrow><mi>rank</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>g</mi><mi>ν</mi></msub><mo stretchy="false">)</mo></mrow></mrow></math> be the rank of the <math id="S2.p17.m4" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>-module <math id="S2.p17.m5" class="ltx_Math" alttext="g_{\nu}" display="inline"><msub><mi>g</mi><mi>ν</mi></msub></math>,
+i.e. the maximal number of elements of <math id="S2.p17.m6" class="ltx_Math" alttext="g_{\nu}" display="inline"><msub><mi>g</mi><mi>ν</mi></msub></math> that are linearly
+independent over <math id="S2.p17.m7" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. The proof of the following theorem follows
+<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="Introduction to the perturbation theory of Hamiltonian systems" class="ltx_ref">8</a>, Proposition 2.1]</cite>.</p>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3</span></span>.</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="\nu\in\Omega" display="inline"><mrow><mi>ν</mi><mo mathvariant="normal">∈</mo><mi mathvariant="normal">Ω</mi></mrow></math> and let <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="r=\operatorname{rank}(g_{\nu})" display="inline"><mrow><mi>r</mi><mo mathvariant="normal">=</mo><mrow><mi mathvariant="normal">rank</mi><mo mathvariant="italic">⁡</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msub><mi>g</mi><mi>ν</mi></msub><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>. In the torus with frequency <math id="Thmtheorem3.p1.m3" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math>, each trajectory is dense in some
+<math id="Thmtheorem3.p1.m4" class="ltx_Math" alttext="(n-r)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mi>r</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>-dimensional subtorus and the <math id="Thmtheorem3.p1.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional torus is foliated
+by these <math id="Thmtheorem3.p1.m6" class="ltx_Math" alttext="(n-r)" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mi>r</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>-dimensional tori.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S2.p18" class="ltx_para">
+<p class="ltx_p">There exists a basis <math id="S2.p18.m1" class="ltx_Math" alttext="k_{1},\ldots,k_{r}" display="inline"><mrow><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>k</mi><mi>r</mi></msub></mrow></math> of <math id="S2.p18.m2" class="ltx_Math" alttext="g_{\nu}" display="inline"><msub><mi>g</mi><mi>ν</mi></msub></math> and vectors
+<math id="S2.p18.m3" class="ltx_Math" alttext="k_{1}^{*},\ldots,k_{n-r}^{*}\in\mathbb{Z}^{n}" display="inline"><mrow><mrow><msubsup><mi>k</mi><mn>1</mn><mo>*</mo></msubsup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msubsup><mi>k</mi><mrow><mi>n</mi><mo>-</mo><mi>r</mi></mrow><mo>*</mo></msubsup></mrow><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow></math> such that the <math id="S2.p18.m4" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix <math id="S2.p18.m5" class="ltx_Math" alttext="K_{0}" display="inline"><msub><mi>K</mi><mn>0</mn></msub></math> with rows
+<math id="S2.p18.m6" class="ltx_Math" alttext="k_{1}^{*},\ldots,k_{n-r}^{*},k_{1},\ldots,k_{r}," display="inline"><mrow><mrow><msubsup><mi>k</mi><mn>1</mn><mo>*</mo></msubsup><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msubsup><mi>k</mi><mrow><mi>n</mi><mo>-</mo><mi>r</mi></mrow><mo>*</mo></msubsup><mo>,</mo><msub><mi>k</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>k</mi><mi>r</mi></msub></mrow><mo>,</mo></mrow></math> has determinant <math id="S2.p18.m7" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>. (I should
+show why such a basis exists.)
+Let <math id="S2.p18.m8" class="ltx_Math" alttext="K_{0}=\begin{bmatrix}K^{*}\\
+K\end{bmatrix}" display="inline"><mrow><msub><mi>K</mi><mn>0</mn></msub><mo>=</mo><mrow><mo>[</mo><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>K</mi><mo>*</mo></msup></mtd></mtr><mtr><mtd columnalign="center"><mi>K</mi></mtd></mtr></mtable><mo>]</mo></mrow></mrow></math>. <math id="S2.p18.m9" class="ltx_Math" alttext="K^{*}" display="inline"><msup><mi>K</mi><mo>*</mo></msup></math> is an <math id="S2.p18.m10" class="ltx_Math" alttext="(n-r)\times n" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mi>r</mi></mrow><mo stretchy="false">)</mo></mrow><mo>×</mo><mi>n</mi></mrow></math> matrix
+and <math id="S2.p18.m11" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is an <math id="S2.p18.m12" class="ltx_Math" alttext="r\times n" display="inline"><mrow><mi>r</mi><mo>×</mo><mi>n</mi></mrow></math> matrix.</p>
+</div>
+<div id="S2.p19" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p19.m1" class="ltx_Math" alttext="q=K_{0}\theta" display="inline"><mrow><mi>q</mi><mo>=</mo><mrow><msub><mi>K</mi><mn>0</mn></msub><mo>⁢</mo><mi>θ</mi></mrow></mrow></math>. Since <math id="S2.p19.m2" class="ltx_Math" alttext="\det(K_{0})=1" display="inline"><mrow><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><msub><mi>K</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, <math id="S2.p19.m3" class="ltx_Math" alttext="K_{0}" display="inline"><msub><mi>K</mi><mn>0</mn></msub></math> is invertible over
+<math id="S2.p19.m4" class="ltx_Math" alttext="\mathbb{Z}" display="inline"><mi>ℤ</mi></math>. The coordinate <math id="S2.p19.m5" class="ltx_Math" alttext="\theta" display="inline"><mi>θ</mi></math> is only determined up to
+<math id="S2.p19.m6" class="ltx_Math" alttext="\mathbb{Z}^{n}" display="inline"><msup><mi>ℤ</mi><mi>n</mi></msup></math>, and for <math id="S2.p19.m7" class="ltx_Math" alttext="q_{1}-q_{2}\in\mathbb{Z}^{n}" display="inline"><mrow><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>-</mo><msub><mi>q</mi><mn>2</mn></msub></mrow><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow></math> then also
+<math id="S2.p19.m8" class="ltx_Math" alttext="\theta_{1}-\theta_{2}\in\mathbb{Z}^{n}" display="inline"><mrow><mrow><msub><mi>θ</mi><mn>1</mn></msub><mo>-</mo><msub><mi>θ</mi><mn>2</mn></msub></mrow><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow></math>. Thus <math id="S2.p19.m9" class="ltx_Math" alttext="q=K_{0}\theta" display="inline"><mrow><mi>q</mi><mo>=</mo><mrow><msub><mi>K</mi><mn>0</mn></msub><mo>⁢</mo><mi>θ</mi></mrow></mrow></math> are coordinates
+on <math id="S2.p19.m10" class="ltx_Math" alttext="\mathbb{T}^{n}" display="inline"><msup><mi>𝕋</mi><mi>n</mi></msup></math>.
+The equation <math id="S2.p19.m11" class="ltx_Math" alttext="\dot{\theta}=\nu" display="inline"><mrow><mover accent="true"><mi>θ</mi><mo>˙</mo></mover><mo>=</mo><mi>ν</mi></mrow></math> can be written using the <math id="S2.p19.m12" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> coordinates
+as <math id="S2.p19.m13" class="ltx_Math" alttext="\dot{q}=K_{0}\nu" display="inline"><mrow><mover accent="true"><mi>q</mi><mo>˙</mo></mover><mo>=</mo><mrow><msub><mi>K</mi><mn>0</mn></msub><mo>⁢</mo><mi>ν</mi></mrow></mrow></math>. Then</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="K_{0}\nu=\begin{bmatrix}K^{*}\\
+K\end{bmatrix}\nu=\begin{bmatrix}K^{*}\nu\\
+K\nu\end{bmatrix}=\begin{bmatrix}K^{*}\nu\\
+0\end{bmatrix}." display="block"><mrow><mrow><mrow><msub><mi>K</mi><mn>0</mn></msub><mo>⁢</mo><mi>ν</mi></mrow><mo>=</mo><mrow><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><msup><mi>K</mi><mo>*</mo></msup></mtd></mtr><mtr><mtd columnalign="center"><mi>K</mi></mtd></mtr></mtable><mo>]</mo></mrow><mo>⁢</mo><mi>ν</mi></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msup><mi>K</mi><mo>*</mo></msup><mo>⁢</mo><mi>ν</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mrow><mi>K</mi><mo>⁢</mo><mi>ν</mi></mrow></mtd></mtr></mtable><mo>]</mo></mrow><mo>=</mo><mrow><mo>[</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><msup><mi>K</mi><mo>*</mo></msup><mo>⁢</mo><mi>ν</mi></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>]</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S2.p19.m14" class="ltx_Math" alttext="\nu^{*}=K^{*}\nu" display="inline"><mrow><msup><mi>ν</mi><mo>*</mo></msup><mo>=</mo><mrow><msup><mi>K</mi><mo>*</mo></msup><mo>⁢</mo><mi>ν</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p20" class="ltx_para">
+<p class="ltx_p">We see that <math id="S2.p20.m1" class="ltx_Math" alttext="\{l\in\mathbb{Z}^{n}:l_{1}=\cdots=l_{n-r}=0\}\subseteq g_{K_{0}\nu}" display="inline"><mrow><mrow><mo stretchy="false">{</mo><mrow><mi>l</mi><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><msub><mi>l</mi><mn>1</mn></msub><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><msub><mi>l</mi><mrow><mi>n</mi><mo>-</mo><mi>r</mi></mrow></msub><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow><mo>⊆</mo><msub><mi>g</mi><mrow><msub><mi>K</mi><mn>0</mn></msub><mo>⁢</mo><mi>ν</mi></mrow></msub></mrow></math>; since they both have rank <math id="S2.p20.m2" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>, they are equal. It follows that <math id="S2.p20.m3" class="ltx_Math" alttext="\nu^{*}\in\mathbb{R}^{n-r}" display="inline"><mrow><msup><mi>ν</mi><mo>*</mo></msup><mo>∈</mo><msup><mi>ℝ</mi><mrow><mi>n</mi><mo>-</mo><mi>r</mi></mrow></msup></mrow></math> is
+nonresonant. Hence any trajectory on the <math id="S2.p20.m4" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional torus with frequency
+<math id="S2.p20.m5" class="ltx_Math" alttext="\nu" display="inline"><mi>ν</mi></math> is dense in the <math id="S2.p20.m6" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>-dimensional torus <math id="S2.p20.m7" class="ltx_Math" alttext="\{q\in\mathbb{T}^{n}:q_{n-r+1}=\cdots=q_{n}=\text{constant}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>q</mi><mo>∈</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><msub><mi>q</mi><mrow><mrow><mi>n</mi><mo>-</mo><mi>r</mi></mrow><mo>+</mo><mn>1</mn></mrow></msub><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><msub><mi>q</mi><mi>n</mi></msub><mo>=</mo><mtext>constant</mtext></mrow><mo stretchy="false">}</mo></mrow></math>.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Diophantine frequency vectors</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S3.p1.m1" class="ltx_Math" alttext="c&gt;0" display="inline"><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn></mrow></math> and <math id="S3.p1.m2" class="ltx_Math" alttext="\gamma\geq 0" display="inline"><mrow><mi>γ</mi><mo>≥</mo><mn>0</mn></mrow></math> we define</p>
+<table id="S3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex10.m1" class="ltx_Math" alttext="D_{n}(c,\gamma)=\{\nu\in\mathbb{R}^{n}:|\langle k,\nu\rangle|\geq\frac{1}{c\|k%
+\|_{\infty}^{\gamma}}\ \ \textrm{for all}\ k\in\mathbb{Z}^{n}\}." display="block"><mrow><mrow><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>ν</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>k</mi><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>≥</mo><mfrac><mn>1</mn><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mi>γ</mi></msubsup></mrow></mfrac></mrow><mo mathvariant="italic" separator="true"> </mo><mrow><mrow><mpadded width="+5pt"><mtext>for all</mtext></mpadded><mo>⁢</mo><mi>k</mi></mrow><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">We further define <math id="S3.p2.m1" class="ltx_Math" alttext="D_{n}(\gamma)=\bigcup_{c&gt;0}D_{n}(c,\gamma)" display="inline"><mrow><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn></mrow></msub><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4</span></span>.</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">For any <math id="Thmtheorem4.p1.m1" class="ltx_Math" alttext="\nu\in\mathbb{R}^{n}" display="inline"><mrow><mi>ν</mi><mo mathvariant="normal">∈</mo><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></mrow></math> and for any positive integer <math id="Thmtheorem4.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, there is some <math id="Thmtheorem4.p1.m3" class="ltx_Math" alttext="0\neq k\in\mathbb{Z}^{n}" display="inline"><mrow><mn mathvariant="normal">0</mn><mo mathvariant="normal">≠</mo><mi>k</mi><mo mathvariant="normal">∈</mo><msup><mi mathvariant="normal">Z</mi><mi>n</mi></msup></mrow></math> with <math id="Thmtheorem4.p1.m4" class="ltx_Math" alttext="\|k\|_{\infty}\leq 2K" display="inline"><mrow><msub><mrow><mo mathvariant="normal">∥</mo><mi>k</mi><mo mathvariant="normal">∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo mathvariant="normal">≤</mo><mrow><mn mathvariant="normal">2</mn><mo mathvariant="italic">⁢</mo><mi>K</mi></mrow></mrow></math>
+such that</span></p>
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex11.m1" class="ltx_Math" alttext="|\langle k,\nu\rangle|\leq\frac{n\|\nu\|_{\infty}}{(2K)^{n-1}}." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>k</mi><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p3.m1" class="ltx_Math" alttext="B_{K}=\{k\in\mathbb{Z}^{n}:0&lt;\|k\|_{\infty}\leq K\}" display="inline"><mrow><msub><mi>B</mi><mi>K</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>k</mi><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><mn>0</mn><mo>&lt;</mo><msub><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>≤</mo><mi>K</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. The set <math id="S3.p3.m2" class="ltx_Math" alttext="B_{K}" display="inline"><msub><mi>B</mi><mi>K</mi></msub></math> has <math id="S3.p3.m3" class="ltx_Math" alttext="(2K+1)^{n}-1" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>-</mo><mn>1</mn></mrow></math> elements. For
+<math id="S3.p3.m4" class="ltx_Math" alttext="k\in B_{K}" display="inline"><mrow><mi>k</mi><mo>∈</mo><msub><mi>B</mi><mi>K</mi></msub></mrow></math> we have</p>
+<table id="S3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex12.m1" class="ltx_Math" alttext="|\langle k,\nu\rangle|\leq n\|k\|_{\infty}\|\nu\|_{\infty}\leq nK\|\nu\|_{%
+\infty}." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>k</mi><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>n</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>≤</mo><mrow><mi>n</mi><mo>⁢</mo><mi>K</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S3.p3.m5" class="ltx_Math" alttext="A=nK\|\nu\|_{\infty}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>n</mi><mo>⁢</mo><mi>K</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mrow></math>.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p4.m1" class="ltx_Math" alttext="M=(2K+1)^{n}-2" display="inline"><mrow><mi>M</mi><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>-</mo><mn>2</mn></mrow></mrow></math>. In the set <math id="S3.p4.m2" class="ltx_Math" alttext="\{|\langle k,\nu\rangle|:k\in B_{K}\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>k</mi><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>:</mo><mrow><mi>k</mi><mo>∈</mo><msub><mi>B</mi><mi>K</mi></msub></mrow></mrow><mo stretchy="false">}</mo></mrow></math>, there are two elements that
+are in same interval <math id="S3.p4.m3" class="ltx_Math" alttext="[\frac{(j-1)A}{M},\frac{jA}{M}]" display="inline"><mrow><mo stretchy="false">[</mo><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>A</mi></mrow><mi>M</mi></mfrac><mo>,</mo><mfrac><mrow><mi>j</mi><mo>⁢</mo><mi>A</mi></mrow><mi>M</mi></mfrac><mo stretchy="false">]</mo></mrow></math>, <math id="S3.p4.m4" class="ltx_Math" alttext="j=1,\ldots,M" display="inline"><mrow><mi>j</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>M</mi></mrow></mrow></math>, since <math id="S3.p4.m5" class="ltx_Math" alttext="B_{K}" display="inline"><msub><mi>B</mi><mi>K</mi></msub></math> has <math id="S3.p4.m6" class="ltx_Math" alttext="M+1" display="inline"><mrow><mi>M</mi><mo>+</mo><mn>1</mn></mrow></math> elements and there
+are <math id="S3.p4.m7" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> such intervals. That is, there are <math id="S3.p4.m8" class="ltx_Math" alttext="k^{\prime},k^{\prime\prime}\in B_{K}" display="inline"><mrow><mrow><msup><mi>k</mi><mo>′</mo></msup><mo>,</mo><msup><mi>k</mi><mo>′′</mo></msup></mrow><mo>∈</mo><msub><mi>B</mi><mi>K</mi></msub></mrow></math> such that
+<math id="S3.p4.m9" class="ltx_Math" alttext="|\langle k^{\prime},\nu\rangle|,|\langle k^{\prime\prime},\nu\rangle|\in[\frac%
+{(j-1)A}{M},\frac{jA}{M}]" display="inline"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>k</mi><mo>′</mo></msup><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>,</mo><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>k</mi><mo>′′</mo></msup><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>∈</mo><mrow><mo stretchy="false">[</mo><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>j</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>A</mi></mrow><mi>M</mi></mfrac><mo>,</mo><mfrac><mrow><mi>j</mi><mo>⁢</mo><mi>A</mi></mrow><mi>M</mi></mfrac><mo stretchy="false">]</mo></mrow></mrow></math> for some <math id="S3.p4.m10" class="ltx_Math" alttext="j" display="inline"><mi>j</mi></math>. Hence
+<math id="S3.p4.m11" class="ltx_Math" alttext="|\langle k^{\prime},\nu\rangle-\langle k^{\prime\prime},\nu\rangle|\leq\frac{A%
+}{M}=\frac{nK\|\nu\|_{\infty}}{(2K+1)^{n}-2}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">⟨</mo><msup><mi>k</mi><mo>′</mo></msup><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo>-</mo><mrow><mo stretchy="false">⟨</mo><msup><mi>k</mi><mo>′′</mo></msup><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mfrac><mi>A</mi><mi>M</mi></mfrac><mo>=</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><mi>K</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>-</mo><mn>2</mn></mrow></mfrac></mrow></math>.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">One can show by induction that for all <math id="S3.p5.m1" class="ltx_Math" alttext="n\geq 1" display="inline"><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow></math>, <math id="S3.p5.m2" class="ltx_Math" alttext="\frac{K}{(2K+1)^{n}-2}\leq\frac{1}{(2K)^{n-1}}" display="inline"><mrow><mfrac><mi>K</mi><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mi>n</mi></msup><mo>-</mo><mn>2</mn></mrow></mfrac><mo>≤</mo><mfrac><mn>1</mn><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mrow></math>. Therefore for <math id="S3.p5.m3" class="ltx_Math" alttext="k=k^{\prime}-k^{\prime\prime}" display="inline"><mrow><mi>k</mi><mo>=</mo><mrow><msup><mi>k</mi><mo>′</mo></msup><mo>-</mo><msup><mi>k</mi><mo>′′</mo></msup></mrow></mrow></math> we have</p>
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex13.m1" class="ltx_Math" alttext="|\langle k,\nu\rangle|\leq\frac{n\|\nu\|_{\infty}}{(2K)^{n-1}}," display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>k</mi><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Finally, <math id="S3.p5.m4" class="ltx_Math" alttext="\|k\|_{\infty}\leq\|k^{\prime}\|_{\infty}+\|k^{\prime\prime}\|_{\infty}\leq 2K" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><msup><mi>k</mi><mo>′</mo></msup><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>+</mo><msub><mrow><mo>∥</mo><msup><mi>k</mi><mo>′′</mo></msup><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 5</span></span>.</h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem5.p1.m1" class="ltx_Math" alttext="\gamma&lt;n-1" display="inline"><mrow><mi>γ</mi><mo mathvariant="normal">&lt;</mo><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></mrow></math> then <math id="Thmtheorem5.p1.m2" class="ltx_Math" alttext="D_{n}(\gamma)=\emptyset" display="inline"><mrow><mrow><msub><mi>D</mi><mi>n</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>γ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p6.m1" class="ltx_Math" alttext="c&gt;0" display="inline"><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. Suppose that there is some <math id="S3.p6.m2" class="ltx_Math" alttext="\nu\in D_{n}(c,\gamma)" display="inline"><mrow><mi>ν</mi><mo>∈</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Let <math id="S3.p6.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>
+be the least integer such that <math id="S3.p6.m4" class="ltx_Math" alttext="(2K)^{n-1-\gamma}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn><mo>-</mo><mi>γ</mi></mrow></msup></math> is greater than
+<math id="S3.p6.m5" class="ltx_Math" alttext="2cn\|\nu\|_{\infty}" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math>; since <math id="S3.p6.m6" class="ltx_Math" alttext="n-1-\gamma&gt;0" display="inline"><mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn><mo>-</mo><mi>γ</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> such a <math id="S3.p6.m7" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> exists.</p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">By Theorem <a href="#Thmtheorem4" title="Theorem 4. ‣ 3 Diophantine frequency vectors ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a>, there is some <math id="S3.p7.m1" class="ltx_Math" alttext="0\neq k\in\mathbb{Z}^{n}" display="inline"><mrow><mn>0</mn><mo>≠</mo><mi>k</mi><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow></math> with</p>
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex14.m1" class="ltx_Math" alttext="|\langle k,\nu\rangle|\leq\frac{n\|\nu\|_{\infty}}{(2K)^{n-1}}." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>k</mi><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mfrac><mrow><mi>n</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then</p>
+<table id="S5.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S3.Ex19">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex15.m1" class="ltx_Math" alttext="\displaystyle|\langle k,\nu\rangle|" display="inline"><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>k</mi><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex15.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex15.m3" class="ltx_Math" alttext="\displaystyle\frac{n\|\nu\|_{\infty}(2K)^{-\gamma}}{(2K)^{n-1-\gamma}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mi>γ</mi></mrow></msup></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn><mo>-</mo><mi>γ</mi></mrow></msup></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex16.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex16.m3" class="ltx_Math" alttext="\displaystyle\frac{n\|\nu\|_{\infty}(2K)^{-\gamma}}{2cn\|\nu\|_{\infty}}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mi>n</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mi>γ</mi></mrow></msup></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex17.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex17.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{2c(2K)^{\gamma}}" display="inline"><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>K</mi></mrow><mo stretchy="false">)</mo></mrow><mi>γ</mi></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex18.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex18.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{2c(4\|k\|_{\infty})^{\gamma}}" display="inline"><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>c</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>4</mn><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mi>γ</mi></msup></mrow></mfrac></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex19.m2" class="ltx_Math" alttext="\displaystyle&lt;" display="inline"><mo>&lt;</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex19.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{c\|k\|_{\infty}^{\gamma}}," display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mi>γ</mi></msubsup></mrow></mfrac></mstyle><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">contradicting that <math id="S3.p7.m2" class="ltx_Math" alttext="\nu\in D_{n}(c,\gamma)" display="inline"><mrow><mi>ν</mi><mo>∈</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Therefore for all <math id="S3.p7.m3" class="ltx_Math" alttext="c&gt;0" display="inline"><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,
+<math id="S3.p7.m4" class="ltx_Math" alttext="D_{n}(c,\gamma)=\emptyset" display="inline"><mrow><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>.</p>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="S3.p9" class="ltx_para">
+<p class="ltx_p">Treschev and Zubelevich give a construction for points in <math id="S3.p9.m1" class="ltx_Math" alttext="D_{n}(c,n-1)" display="inline"><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> for sufficiently
+large <math id="S3.p9.m2" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="Introduction to the perturbation theory of Hamiltonian systems" class="ltx_ref">8</a>, Theorem 9.2]</cite>. Thus there is some <math id="S3.p9.m3" class="ltx_Math" alttext="C(n)" display="inline"><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that
+for all <math id="S3.p9.m4" class="ltx_Math" alttext="c\geq C(n)" display="inline"><mrow><mi>c</mi><mo>≥</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="S3.p9.m5" class="ltx_Math" alttext="D_{n}(c,n-1)\neq\emptyset" display="inline"><mrow><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>. It is clear that for <math id="S3.p9.m6" class="ltx_Math" alttext="\gamma^{\prime}\geq\gamma" display="inline"><mrow><msup><mi>γ</mi><mo>′</mo></msup><mo>≥</mo><mi>γ</mi></mrow></math> we have the inclusion
+<math id="S3.p9.m7" class="ltx_Math" alttext="D_{n}(c,\gamma)\subseteq D_{n}(c,\gamma^{\prime})" display="inline"><mrow><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><msup><mi>γ</mi><mo>′</mo></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Hence this construction
+also shows that <math id="S3.p9.m8" class="ltx_Math" alttext="D_{n}(c,\gamma)\neq\emptyset" display="inline"><mrow><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>
+for all <math id="S3.p9.m9" class="ltx_Math" alttext="\gamma\geq n-1" display="inline"><mrow><mi>γ</mi><mo>≥</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mrow></math> and <math id="S3.p9.m10" class="ltx_Math" alttext="c\geq C(n)" display="inline"><mrow><mi>c</mi><mo>≥</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. However this construction does not show that
+<math id="S3.p9.m11" class="ltx_Math" alttext="m(D_{n}(c,n-1))&gt;0" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math> for <math id="S3.p9.m12" class="ltx_Math" alttext="c\geq C(n)" display="inline"><mrow><mi>c</mi><mo>≥</mo><mrow><mi>C</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Indeed, one can show that <math id="S3.p9.m13" class="ltx_Math" alttext="m(D_{n}(n-1))=0" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, but also that the set <math id="S3.p9.m14" class="ltx_Math" alttext="D_{n}(n-1)" display="inline"><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></math> has Hausdorff dimension <math id="S3.p9.m15" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="A lecture on the classical KAM theorem" class="ltx_ref">7</a>, p. 5]</cite>.</p>
+</div>
+<div id="S3.p10" class="ltx_para">
+<p class="ltx_p">Our proof of the following theorem expands on <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="Introduction to the perturbation theory of Hamiltonian systems" class="ltx_ref">8</a>, Theorem 9.3]</cite>. Let
+<math id="S3.p10.m1" class="ltx_Math" alttext="Q_{n}(L)=\{\nu\in\mathbb{R}^{n}:\|\nu\|_{\infty}\leq\frac{L}{2}\}" display="inline"><mrow><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>ν</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><msub><mrow><mo>∥</mo><mi>ν</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>≤</mo><mfrac><mi>L</mi><mn>2</mn></mfrac></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, the cube in
+<math id="S3.p10.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> of edge length <math id="S3.p10.m3" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. Let <math id="S3.p10.m4" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> be <math id="S3.p10.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional Lebesgue measure. We will use the fact that the maximal <math id="S3.p10.m6" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> dimensional area of the intersection of <math id="S3.p10.m7" class="ltx_Math" alttext="Q_{n}(L)" display="inline"><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow></math> and a hyperplane is <math id="S3.p10.m8" class="ltx_Math" alttext="\sqrt{2}L^{n-1}" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msup><mi>L</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="Cube slicing in Rn" class="ltx_ref">3</a>]</cite>.</p>
+</div>
+<div id="Thmtheorem6" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 6</span></span>.</h6>
+<div id="Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem6.p1.m1" class="ltx_Math" alttext="L&gt;0" display="inline"><mrow><mi>L</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>.
+For <math id="Thmtheorem6.p1.m2" class="ltx_Math" alttext="\gamma&gt;n-1" display="inline"><mrow><mi>γ</mi><mo mathvariant="normal">&gt;</mo><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></mrow></math> and <math id="Thmtheorem6.p1.m3" class="ltx_Math" alttext="c&gt;0" display="inline"><mrow><mi>c</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>,</span></p>
+<table id="S3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex20.m1" class="ltx_Math" alttext="m(Q_{n}(L)\setminus D_{n}(c,\gamma))\leq\frac{4\sqrt{2}n(3L)^{n-1}}{c}\Big{(}1%
+-\frac{1}{\gamma-n+1}\Big{)}." display="block"><mrow><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mfrac><mrow><mn>4</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><mi>L</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mi>c</mi></mfrac><mo>⁢</mo><mrow><mo maxsize="160%" minsize="160%">(</mo><mrow><mn>1</mn><mo>-</mo><mfrac><mn>1</mn><mrow><mrow><mi>γ</mi><mo>-</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></mfrac></mrow><mo maxsize="160%" minsize="160%">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p11" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p11.m1" class="ltx_Math" alttext="Q_{n}=Q_{n}(L)" display="inline"><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>=</mo><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Let <math id="S3.p11.m2" class="ltx_Math" alttext="\Pi_{k}=\{\nu\in\mathbb{R}^{n}:|\langle\nu,k\rangle|&lt;\frac{1}{c\|k\|_{\infty}^%
+{\gamma}}\}" display="inline"><mrow><msub><mi mathvariant="normal">Π</mi><mi>k</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>ν</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>ν</mi><mo>,</mo><mi>k</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mn>1</mn><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mi>γ</mi></msubsup></mrow></mfrac></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.
+Let <math id="S3.p11.m3" class="ltx_Math" alttext="\nu\in Q_{n}\setminus D_{n}(c,\gamma)" display="inline"><mrow><mi>ν</mi><mo>∈</mo><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. Then there is some <math id="S3.p11.m4" class="ltx_Math" alttext="k\neq 0" display="inline"><mrow><mi>k</mi><mo>≠</mo><mn>0</mn></mrow></math> such that
+<math id="S3.p11.m5" class="ltx_Math" alttext="|\langle k,\nu\rangle|&lt;\frac{1}{c\|k\|_{\infty}^{\gamma}}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">⟨</mo><mi>k</mi><mo>,</mo><mi>ν</mi><mo stretchy="false">⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mfrac><mn>1</mn><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mi>γ</mi></msubsup></mrow></mfrac></mrow></math>, and so <math id="S3.p11.m6" class="ltx_Math" alttext="\nu\in\Pi_{k}" display="inline"><mrow><mi>ν</mi><mo>∈</mo><msub><mi mathvariant="normal">Π</mi><mi>k</mi></msub></mrow></math>. Thus</p>
+<table id="S3.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex21.m1" class="ltx_Math" alttext="Q_{n}\setminus D_{n}(c,\gamma)\subseteq\bigcup_{k\neq 0}(Q_{n}\cap\Pi_{k})," display="block"><mrow><mrow><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>⊆</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mi>k</mi><mo>≠</mo><mn>0</mn></mrow></munder><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>∩</mo><msub><mi mathvariant="normal">Π</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so
+</p>
+<table id="S3.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex22.m1" class="ltx_Math" alttext="m(Q_{n}\setminus D_{n}(c,\gamma))\leq\sum_{k\neq 0}m(Q_{n}\cap\Pi_{k})." display="block"><mrow><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>≠</mo><mn>0</mn></mrow></munder><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>∩</mo><msub><mi mathvariant="normal">Π</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p12" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p12.m1" class="ltx_Math" alttext="k\neq 0" display="inline"><mrow><mi>k</mi><mo>≠</mo><mn>0</mn></mrow></math>.
+<math id="S3.p12.m2" class="ltx_Math" alttext="\Pi_{k}" display="inline"><msub><mi mathvariant="normal">Π</mi><mi>k</mi></msub></math> is the region bounded by the two hyperplanes
+<math id="S3.p12.m3" class="ltx_Math" alttext="\pi_{1}=\{\nu\in\mathbb{R}^{n}:\langle\nu,k\rangle=\frac{1}{c\|k\|_{\infty}^{%
+\gamma}}\}" display="inline"><mrow><msub><mi>π</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>ν</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ν</mi><mo>,</mo><mi>k</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mi>γ</mi></msubsup></mrow></mfrac></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S3.p12.m4" class="ltx_Math" alttext="\pi_{2}=\{\nu\in\mathbb{R}^{n}:\langle\nu,k\rangle=-\frac{1}{c\|k\|_{\infty}^{%
+\gamma}}\}" display="inline"><mrow><msub><mi>π</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>ν</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">⟨</mo><mi>ν</mi><mo>,</mo><mi>k</mi><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mrow><mo>-</mo><mfrac><mn>1</mn><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mi>γ</mi></msubsup></mrow></mfrac></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.
+Let <math id="S3.p12.m5" class="ltx_Math" alttext="p_{1}=\frac{k}{c\|k\|_{\infty}^{\gamma}\|k\|}\in\pi_{1}" display="inline"><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>=</mo><mfrac><mi>k</mi><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mi>γ</mi></msubsup><mo>⁢</mo><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow></mrow></mfrac><mo>∈</mo><msub><mi>π</mi><mn>1</mn></msub></mrow></math>
+and <math id="S3.p12.m6" class="ltx_Math" alttext="p_{2}=-\frac{k}{c\|k\|_{\infty}^{\gamma}\|k\|}\pi_{2}" display="inline"><mrow><msub><mi>p</mi><mn>2</mn></msub><mo>=</mo><mrow><mo>-</mo><mrow><mfrac><mi>k</mi><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mi>γ</mi></msubsup><mo>⁢</mo><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow></mrow></mfrac><mo>⁢</mo><msub><mi>π</mi><mn>2</mn></msub></mrow></mrow></mrow></math>.
+For any two points <math id="S3.p12.m7" class="ltx_Math" alttext="\nu_{1},\nu_{2}\in\pi_{1}" display="inline"><mrow><mrow><msub><mi>ν</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ν</mi><mn>2</mn></msub></mrow><mo>∈</mo><msub><mi>π</mi><mn>1</mn></msub></mrow></math> we can check that
+<math id="S3.p12.m8" class="ltx_Math" alttext="\langle p_{1}-p_{2},\nu_{1}-\nu_{2}\rangle=0" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>-</mo><msub><mi>p</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><msub><mi>ν</mi><mn>1</mn></msub><mo>-</mo><msub><mi>ν</mi><mn>2</mn></msub></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>, and for any two points <math id="S3.p12.m9" class="ltx_Math" alttext="\nu_{1},\nu_{2}\in\pi_{2}" display="inline"><mrow><mrow><msub><mi>ν</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ν</mi><mn>2</mn></msub></mrow><mo>∈</mo><msub><mi>π</mi><mn>2</mn></msub></mrow></math>
+we can check that <math id="S3.p12.m10" class="ltx_Math" alttext="\langle p_{1}-p_{2},\nu_{1}-\nu_{2}\rangle=0" display="inline"><mrow><mrow><mo stretchy="false">⟨</mo><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>-</mo><msub><mi>p</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><msub><mi>ν</mi><mn>1</mn></msub><mo>-</mo><msub><mi>ν</mi><mn>2</mn></msub></mrow><mo stretchy="false">⟩</mo></mrow><mo>=</mo><mn>0</mn></mrow></math>. Thus the vector
+<math id="S3.p12.m11" class="ltx_Math" alttext="p_{1}-p_{2}" display="inline"><mrow><msub><mi>p</mi><mn>1</mn></msub><mo>-</mo><msub><mi>p</mi><mn>2</mn></msub></mrow></math> is orthogonal to each of the hyperplanes <math id="S3.p12.m12" class="ltx_Math" alttext="\pi_{1}" display="inline"><msub><mi>π</mi><mn>1</mn></msub></math> and <math id="S3.p12.m13" class="ltx_Math" alttext="\pi_{2}" display="inline"><msub><mi>π</mi><mn>2</mn></msub></math>. It follows
+that the distance between the hyperplanes <math id="S3.p12.m14" class="ltx_Math" alttext="\pi_{1}" display="inline"><msub><mi>π</mi><mn>1</mn></msub></math> and <math id="S3.p12.m15" class="ltx_Math" alttext="\pi_{2}" display="inline"><msub><mi>π</mi><mn>2</mn></msub></math> is the distance between the points
+<math id="S3.p12.m16" class="ltx_Math" alttext="p_{1}" display="inline"><msub><mi>p</mi><mn>1</mn></msub></math> and <math id="S3.p12.m17" class="ltx_Math" alttext="p_{2}" display="inline"><msub><mi>p</mi><mn>2</mn></msub></math>, which is <math id="S3.p12.m18" class="ltx_Math" alttext="2\cdot\frac{\|k\|}{c\|k\|_{\infty}^{\gamma}\|k\|^{2}}" display="inline"><mrow><mn>2</mn><mo>⋅</mo><mfrac><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mi>γ</mi></msubsup><mo>⁢</mo><msup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mn>2</mn></msup></mrow></mfrac></mrow></math>. Since <math id="S3.p12.m19" class="ltx_Math" alttext="\|k\|\geq\|k\|_{\infty}" display="inline"><mrow><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mo>≥</mo><msub><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub></mrow></math>, this is <math id="S3.p12.m20" class="ltx_Math" alttext="\leq\frac{2}{c\|k\|_{\infty}^{\gamma+1}}" display="inline"><mrow><mi></mi><mo>≤</mo><mfrac><mn>2</mn><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mrow><mi>γ</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mrow></mfrac></mrow></math>.
+Therefore</p>
+<table id="S3.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex23.m1" class="ltx_Math" alttext="m(Q_{n}\cap\Pi_{k})\leq\frac{2}{c\|k\|_{\infty}^{\gamma+1}}\cdot\sqrt{2}L^{n-1}," display="block"><mrow><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>∩</mo><msub><mi mathvariant="normal">Π</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mrow><mfrac><mn>2</mn><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mrow><mi>γ</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mrow></mfrac><mo>⋅</mo><msqrt><mn>2</mn></msqrt></mrow><mo>⁢</mo><msup><mi>L</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where we use the fact that the maximal <math id="S3.p12.m21" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math> dimensional area of the intersection of <math id="S3.p12.m22" class="ltx_Math" alttext="Q_{n}=Q_{n}(L)" display="inline"><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>=</mo><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and a hyperplane is <math id="S3.p12.m23" class="ltx_Math" alttext="\sqrt{2}L^{n-1}" display="inline"><mrow><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msup><mi>L</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></math> <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="Cube slicing in Rn" class="ltx_ref">3</a>]</cite>.</p>
+</div>
+<div id="S3.p13" class="ltx_para">
+<p class="ltx_p">For each positive integer <math id="S3.p13.m1" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math>, the hypercube <math id="S3.p13.m2" class="ltx_Math" alttext="\{k\in\mathbb{Z}^{n}:\|k\|_{\infty}=l\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>k</mi><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><msub><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><mi>l</mi></mrow><mo stretchy="false">}</mo></mrow></math> has <math id="S3.p13.m3" class="ltx_Math" alttext="2n" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></math> faces, on each of which there are <math id="S3.p13.m4" class="ltx_Math" alttext="(2l+1)^{n-1}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>l</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></math>
+points with integer coordinates. Hence for each integer positive integer <math id="S3.p13.m5" class="ltx_Math" alttext="l" display="inline"><mi>l</mi></math>, we have
+<math id="S3.p13.m6" class="ltx_Math" alttext="\#\{k\in\mathbb{Z}^{n}:\|k\|_{\infty}=l\}\leq 2n(2l+1)^{n-1}" display="inline"><mrow><mrow><mi mathvariant="normal">#</mi><mo>⁢</mo><mrow><mo stretchy="false">{</mo><mrow><mi>k</mi><mo>∈</mo><msup><mi>ℤ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><msub><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><mi>l</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>l</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>.</p>
+</div>
+<div id="S3.p14" class="ltx_para">
+<p class="ltx_p">Therefore</p>
+<table id="S5.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S3.Ex29">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex24.m1" class="ltx_Math" alttext="\displaystyle m(Q_{n}\setminus D_{n}(c,\gamma))" display="inline"><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex24.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex24.m3" class="ltx_Math" alttext="\displaystyle\sum_{k\neq 0}m(Q_{n}\cap\Pi_{k})" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>≠</mo><mn>0</mn></mrow></munder></mstyle><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>∩</mo><msub><mi mathvariant="normal">Π</mi><mi>k</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex25.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex25.m3" class="ltx_Math" alttext="\displaystyle\sum_{k\neq 0}\frac{2\sqrt{2}L^{n-1}}{c\|k\|_{\infty}^{\gamma+1}}" display="inline"><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>≠</mo><mn>0</mn></mrow></munder></mstyle><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msup><mi>L</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mrow><mi>c</mi><mo>⁢</mo><msubsup><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi><mrow><mi>γ</mi><mo>+</mo><mn>1</mn></mrow></msubsup></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex26.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex26.m3" class="ltx_Math" alttext="\displaystyle\sum_{l=1}^{\infty}\sum_{\|k\|_{\infty}=l}\frac{2\sqrt{2}L^{n-1}}%
+{cl^{\gamma+1}}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mstyle displaystyle="true"><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><msub><mrow><mo>∥</mo><mi>k</mi><mo>∥</mo></mrow><mi mathvariant="normal">∞</mi></msub><mo>=</mo><mi>l</mi></mrow></munder></mstyle><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msup><mi>L</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mrow><mi>c</mi><mo>⁢</mo><msup><mi>l</mi><mrow><mi>γ</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex27.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex27.m3" class="ltx_Math" alttext="\displaystyle\sum_{l=1}^{\infty}2n(2l+1)^{n-1}\frac{2\sqrt{2}L^{n-1}}{cl^{%
+\gamma+1}}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>l</mi></mrow><mo>+</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msup><mi>L</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mrow><mi>c</mi><mo>⁢</mo><msup><mi>l</mi><mrow><mi>γ</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex28.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex28.m3" class="ltx_Math" alttext="\displaystyle\sum_{l=1}^{\infty}2n(3l)^{n-1}\frac{2\sqrt{2}L^{n-1}}{cl^{\gamma%
++1}}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><mi>l</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt><mo>⁢</mo><msup><mi>L</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mrow><mi>c</mi><mo>⁢</mo><msup><mi>l</mi><mrow><mi>γ</mi><mo>+</mo><mn>1</mn></mrow></msup></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex29.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex29.m3" class="ltx_Math" alttext="\displaystyle\frac{4\sqrt{2}n(3L)^{n-1}}{c}\sum_{l=1}^{\infty}\frac{1}{l^{%
+\gamma-n+2}}." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>4</mn><mo>⁢</mo><msqrt><mn>2</mn></msqrt><mo>⁢</mo><mi>n</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>3</mn><mo>⁢</mo><mi>L</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow><mi>c</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><mstyle displaystyle="true"><mfrac><mn>1</mn><msup><mi>l</mi><mrow><mrow><mi>γ</mi><mo>-</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow></msup></mfrac></mstyle></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S3.p15" class="ltx_para">
+<p class="ltx_p">Since the terms in the sum are positive and decreasing, we can estimate the sum using an integral:</p>
+<table id="S3.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex30.m1" class="ltx_Math" alttext="\sum_{l=1}^{\infty}\frac{1}{l^{\gamma-n+2}}\leq 1+\int_{1}^{\infty}\frac{dx}{x%
+^{\gamma-n+2}}=1+\frac{1}{\gamma-n+1}," display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>l</mi><mo>=</mo><mn>1</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mfrac><mn>1</mn><msup><mi>l</mi><mrow><mrow><mi>γ</mi><mo>-</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow></msup></mfrac></mrow><mo>≤</mo><mrow><mn>1</mn><mo>+</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>1</mn><mi mathvariant="normal">∞</mi></msubsup><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow><msup><mi>x</mi><mrow><mrow><mi>γ</mi><mo>-</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow></msup></mfrac></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><mfrac><mn>1</mn><mrow><mrow><mi>γ</mi><mo>-</mo><mi>n</mi></mrow><mo>+</mo><mn>1</mn></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">finishing the proof.
+∎</p>
+</div>
+</div>
+<div id="Thmtheorem7" class="ltx_theorem ltx_theorem_corollary">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Corollary 7</span></span>.</h6>
+<div id="Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem7.p1.m1" class="ltx_Math" alttext="\gamma&gt;n-1" display="inline"><mrow><mi>γ</mi><mo mathvariant="normal">&gt;</mo><mrow><mi>n</mi><mo mathvariant="normal">-</mo><mn mathvariant="normal">1</mn></mrow></mrow></math> then <math id="Thmtheorem7.p1.m2" class="ltx_Math" alttext="m(\mathbb{R}^{n}\setminus D_{n}(\gamma))=0." display="inline"><mrow><mrow><mrow><mi>m</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup><mo mathvariant="normal">∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>γ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mn mathvariant="normal">0</mn></mrow><mo mathvariant="normal">.</mo></mrow></math></span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p16" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p16.m1" class="ltx_Math" alttext="L&gt;0" display="inline"><mrow><mi>L</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. For every <math id="S3.p16.m2" class="ltx_Math" alttext="c&gt;0" display="inline"><mrow><mi>c</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, <math id="S3.p16.m3" class="ltx_Math" alttext="m(Q_{n}(L)\setminus D_{n}(\gamma))\leq m(Q_{n}(L)\setminus D_{n}(c,\gamma))" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. By Theorem <a href="#Thmtheorem6" title="Theorem 6. ‣ 3 Diophantine frequency vectors ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>,
+<math id="S3.p16.m4" class="ltx_Math" alttext="m(Q_{n}(L)\setminus D_{n}(c,\gamma))\to 0" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math> as <math id="S3.p16.m5" class="ltx_Math" alttext="c\to\infty" display="inline"><mrow><mi>c</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>. Hence
+<math id="S3.p16.m6" class="ltx_Math" alttext="m(Q_{n}(L)\setminus D_{n}(\gamma))=0" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. But then</p>
+<table id="S3.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex31.m1" class="ltx_Math" alttext="m(\mathbb{R}^{n}\setminus D_{n}(\gamma))=\lim_{L\to\infty}m(Q_{n}(L)\setminus D%
+_{n}(\gamma))=\lim_{L\to\infty}0=0." display="block"><mrow><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>L</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>L</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mn>0</mn></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="S3.p17" class="ltx_para">
+<p class="ltx_p">Fix <math id="S3.p17.m1" class="ltx_Math" alttext="\gamma&gt;n-1" display="inline"><mrow><mi>γ</mi><mo>&gt;</mo><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></mrow></math>.
+Let <math id="S3.p17.m2" class="ltx_Math" alttext="\alpha=\frac{1}{c}" display="inline"><mrow><mi>α</mi><mo>=</mo><mfrac><mn>1</mn><mi>c</mi></mfrac></mrow></math>. Let <math id="S3.p17.m3" class="ltx_Math" alttext="A_{\alpha}" display="inline"><msub><mi>A</mi><mi>α</mi></msub></math> be an <math id="S3.p17.m4" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math>-neighborhood of the boundary of <math id="S3.p17.m5" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. We will make whatever assumption
+about <math id="S3.p17.m6" class="ltx_Math" alttext="\partial\Omega" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi mathvariant="normal">Ω</mi></mrow></math> we need in order to get <math id="S3.p17.m7" class="ltx_Math" alttext="m(A_{\alpha})=O(\alpha)" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>α</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S3.p18" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S3.p18.m1" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math> is sufficiently large so that <math id="S3.p18.m2" class="ltx_Math" alttext="\Omega\subseteq Q_{n}(L)" display="inline"><mrow><mi mathvariant="normal">Ω</mi><mo>⊆</mo><mrow><msub><mi>Q</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>L</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Then Theorem <a href="#Thmtheorem6" title="Theorem 6. ‣ 3 Diophantine frequency vectors ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a> gives us that <math id="S3.p18.m3" class="ltx_Math" alttext="m(\Omega\setminus D_{n}(c,\gamma))=O(\alpha)" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Ω</mi><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S3.p19" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p19.m1" class="ltx_Math" alttext="\Omega_{\alpha}=D_{n}(c,\gamma)\cap(\Omega\setminus A_{\alpha})" display="inline"><mrow><msub><mi mathvariant="normal">Ω</mi><mi>α</mi></msub><mo>=</mo><mrow><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Ω</mi><mo>∖</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Since <math id="S3.p19.m2" class="ltx_Math" alttext="\Omega\setminus\Omega_{\alpha}=(\Omega\setminus D_{n}(c,\gamma))\cup(\Omega%
+\cap A_{\alpha})" display="inline"><mrow><mrow><mi mathvariant="normal">Ω</mi><mo>∖</mo><msub><mi mathvariant="normal">Ω</mi><mi>α</mi></msub></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Ω</mi><mo>∖</mo><mrow><msub><mi>D</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>c</mi><mo>,</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∪</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Ω</mi><mo>∩</mo><msub><mi>A</mi><mi>α</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we have
+<math id="S3.p19.m3" class="ltx_Math" alttext="m(\Omega\setminus\Omega_{\alpha})=O(\alpha)" display="inline"><mrow><mrow><mi>m</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi mathvariant="normal">Ω</mi><mo>∖</mo><msub><mi mathvariant="normal">Ω</mi><mi>α</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Statement of KAM</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">If we have a Hamiltonian system which admits action-angle coordinates
+in <math id="S4.p1.m1" class="ltx_Math" alttext="B^{n}\times\mathbb{T}^{n}" display="inline"><mrow><msup><mi>B</mi><mi>n</mi></msup><mo>×</mo><msup><mi>𝕋</mi><mi>n</mi></msup></mrow></math>, then the trajectories of points in phase
+space are constrained to lie on invariant tori. Moreover, on these tori
+the dynamics of the system are quasi-periodic; a priori we don’t have a reason to expect that the dynamics should be so nice just because the trajectories lie on tori. But a generic Hamiltonian on the same phase space (I would like to make
+this notion precise) does not admit action-angle coordinates. The KAM
+theorem is a statement about the dynamics induced by making a sufficiently small change to a Hamiltonian. If we perturb a Hamiltonian which admits
+action-angle coordinates to one which probably does not, if the perturbation
+is sufficiently small, then most of the trajectories of points under the flow of the new Hamiltonian will also lie on tori. In some sense which I want to clarify, the invariant tori of the new Hamiltonian are close to the invariant
+tori of the Hamiltonian that admits action-angle coordinates. It is not
+clear to me how an invariant torus of the old Hamiltonian transforms into
+an invariant torus of the new Hamiltonian; in what sense does an invariant torus for the old Hamiltonian become an invariant torus for the new Hamiltonian?</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">In particular, a consequence of the KAM theorem is that if we make a small
+perturbation of a Hamiltonian system that admits action-angle coordinates then
+the trajectories of most points will not be dense on a hypersurface in phase space, since they
+are constrained to lie on <math id="S4.p2.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>-dimensional tori. In other words, the
+new Hamiltonian system is not ergodic, since the invariant tori have lower
+dimension than <math id="S4.p2.m2" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>, and so have <math id="S4.p2.m3" class="ltx_Math" alttext="n-1" display="inline"><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></math>-dimensional measure 0.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">Let’s explain the KAM theorem in another way. Suppose that we have a
+symplectic manifold <math id="S4.p3.m1" class="ltx_Math" alttext="M" display="inline"><mi>M</mi></math> and a Lagrangian foliation <math id="S4.p3.m2" class="ltx_Math" alttext="\mathscr{F}_{0}" display="inline"><msub><mi class="ltx_font_mathscript">ℱ</mi><mn>0</mn></msub></math> whose
+leaves are tori, and suppose that the leaves of <math id="S4.p3.m3" class="ltx_Math" alttext="\mathscr{F}_{0}" display="inline"><msub><mi class="ltx_font_mathscript">ℱ</mi><mn>0</mn></msub></math> are invariant
+tori for a Hamiltonian <math id="S4.p3.m4" class="ltx_Math" alttext="H_{0}" display="inline"><msub><mi>H</mi><mn>0</mn></msub></math>. That is,
+the Hamiltonian vector field <math id="S4.p3.m5" class="ltx_Math" alttext="X_{H_{0}}" display="inline"><msub><mi>X</mi><msub><mi>H</mi><mn>0</mn></msub></msub></math> is tangent to all the leaves
+in <math id="S4.p3.m6" class="ltx_Math" alttext="\mathscr{F}_{0}" display="inline"><msub><mi class="ltx_font_mathscript">ℱ</mi><mn>0</mn></msub></math>.
+Now let <math id="S4.p3.m7" class="ltx_Math" alttext="H=H_{0}+\epsilon H_{1}" display="inline"><mrow><mi>H</mi><mo>=</mo><mrow><msub><mi>H</mi><mn>0</mn></msub><mo>+</mo><mrow><mi>ϵ</mi><mo>⁢</mo><msub><mi>H</mi><mn>1</mn></msub></mrow></mrow></mrow></math>. The leaves
+of the foliation <math id="S4.p3.m8" class="ltx_Math" alttext="\mathscr{F}_{0}" display="inline"><msub><mi class="ltx_font_mathscript">ℱ</mi><mn>0</mn></msub></math> will not be invariant under the flow
+of <math id="S4.p3.m9" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>. We would like to obtain a symplectomorphism <math id="S4.p3.m10" class="ltx_Math" alttext="\Phi:M\to M" display="inline"><mrow><mi mathvariant="normal">Φ</mi><mo>:</mo><mrow><mi>M</mi><mo>→</mo><mi>M</mi></mrow></mrow></math>
+such that the Hamiltonian vector field <math id="S4.p3.m11" class="ltx_Math" alttext="X_{H}" display="inline"><msub><mi>X</mi><mi>H</mi></msub></math> is tangent to most
+leaves in the foliation <math id="S4.p3.m12" class="ltx_Math" alttext="\mathscr{F}=\Phi(\mathscr{F}_{0})" display="inline"><mrow><mi class="ltx_font_mathscript">ℱ</mi><mo>=</mo><mrow><mi mathvariant="normal">Φ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathscript">ℱ</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Here we mean most in a measure theoretic sense that depends on the magnitude
+<math id="S4.p3.m13" class="ltx_Math" alttext="\epsilon" display="inline"><mi>ϵ</mi></math> of the perturbation away from the Hamiltonian that admits action-angle
+coordinates.</p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">How do we construct a diffeomorphism? Often the best way is to demand
+that it be the time <math id="S4.p4.m1" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math> flow of a vector field, so <math id="S4.p4.m2" class="ltx_Math" alttext="\Phi=\Phi_{1}" display="inline"><mrow><mi mathvariant="normal">Φ</mi><mo>=</mo><msub><mi mathvariant="normal">Φ</mi><mn>1</mn></msub></mrow></math> for
+some <math id="S4.p4.m3" class="ltx_Math" alttext="\Phi_{t}" display="inline"><msub><mi mathvariant="normal">Φ</mi><mi>t</mi></msub></math>, and to see if such a vector
+field exists. Suppose that <math id="S4.p4.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a function such that if <math id="S4.p4.m5" class="ltx_Math" alttext="\Phi_{t}" display="inline"><msub><mi mathvariant="normal">Φ</mi><mi>t</mi></msub></math> is the flow of <math id="S4.p4.m6" class="ltx_Math" alttext="X_{f}" display="inline"><msub><mi>X</mi><mi>f</mi></msub></math> then <math id="S4.p4.m7" class="ltx_Math" alttext="\Phi_{1}=\Phi" display="inline"><mrow><msub><mi mathvariant="normal">Φ</mi><mn>1</mn></msub><mo>=</mo><mi mathvariant="normal">Φ</mi></mrow></math>.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Normal forms</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Normal forms of vector fields,
+homological equation <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="Introduction to applied nonlinear dynamical systems and chaos" class="ltx_ref">9</a>]</cite>.</p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul id="bib.L1" class="ltx_biblist">
+<li id="bib.bib5" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">R. Abraham and J. E. Marsden</span><span class="ltx_text ltx_bib_year"> (2008)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Foundations of mechanics</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">Second edition</span>,  <span class="ltx_text ltx_bib_publisher">AMS Chelsea Publishing</span>, <span class="ltx_text ltx_bib_place">Providence, Rhode Island</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p10" title="2 Action-angle coordinates ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#S2.p15" title="2 Action-angle coordinates ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#S2.p4" title="2 Action-angle coordinates ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#S2.p8" title="2 Action-angle coordinates ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib2" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">V. I. Arnold</span><span class="ltx_text ltx_bib_year"> (1989)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Mathematical methods of classical mechanics</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">Second edition</span>, <span class="ltx_text ltx_bib_series">Graduate Texts in Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">60</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p15" title="2 Action-angle coordinates ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib9" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">K. Ball</span><span class="ltx_text ltx_bib_year"> (1986)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Cube slicing in <math id="bib.bib9.m1a" class="ltx_Math" alttext="{\bf R}^{n}" display="inline"><msup><mi>𝐑</mi><mi>n</mi></msup></math></span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Proc. Amer. Math. Soc.</span> <span class="ltx_text ltx_bib_volume">97</span> (<span class="ltx_text ltx_bib_number">3</span>), <span class="ltx_text ltx_bib_pages"> pp. 465–473</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0002-9939</span>,
+<a href="http://dx.doi.org/10.2307/2046239" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="http://dx.doi.org/10.2307/2046239" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Jeffrey D. Vaaler)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S3.p10" title="3 Diophantine frequency vectors ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>,
+<a href="#S3.p12" title="3 Diophantine frequency vectors ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>.
+</span>
+</li>
+<li id="bib.bib1" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. Gallavotti</span><span class="ltx_text ltx_bib_year"> (2001)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Quasi periodic motions from Hipparchus to Kolmogorov</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Atti della Accademia Nazionale dei Lincei. Classe di Scienze Fisiche, Matematiche e Naturali. Rendiconti Lincei. Matematica e Applicazioni</span> <span class="ltx_text ltx_bib_volume">12</span> (<span class="ltx_text ltx_bib_number">2</span>), <span class="ltx_text ltx_bib_pages"> pp. 125–152</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p1" title="1 Introduction ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib6" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. H. Hardy and E. M. Wright</span><span class="ltx_text ltx_bib_year"> (2008)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">An introduction to the theory of numbers</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">Sixth edition</span>,  <span class="ltx_text ltx_bib_publisher">Oxford University Press</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text isbn ltx_bib_external">ISBN 978-0-19-921986-5</span></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p8" title="2 Action-angle coordinates ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib4" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Hubbard and Y. Ilyashenko</span><span class="ltx_text ltx_bib_year"> (2004)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">A proof of Kolmogorov’s theorem</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Discrete Contin. Dyn. Syst.</span> <span class="ltx_text ltx_bib_volume">10</span> (<span class="ltx_text ltx_bib_number">1-2</span>), <span class="ltx_text ltx_bib_pages"> pp. 367–385</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 1078-0947</span>,
+<a href="http://dx.doi.org/10.3934/dcds.2004.10.367" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="http://dx.doi.org/10.3934/dcds.2004.10.367" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Dario Bambusi)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p1" title="1 Introduction ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib7" class="ltx_bibitem ltx_bib_incollection">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Pöschel</span><span class="ltx_text ltx_bib_year"> (2001)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">A lecture on the classical KAM theorem</span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">Smooth Ergodic Theory and Its Applications</span>,  <span class="ltx_text ltx_bib_editor">A. Katok, R. de la Llave, Y. Pesin, and H. Weiss (Eds.)</span>,
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Proceedings of Symposia in Pure Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">69</span>, <span class="ltx_text ltx_bib_pages"> pp. 707–732</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p1" title="1 Introduction ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
+<a href="#S3.p9" title="3 Diophantine frequency vectors ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>.
+</span>
+</li>
+<li id="bib.bib8" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. Treschev and O. Zubelevich</span><span class="ltx_text ltx_bib_year"> (2010)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Introduction to the perturbation theory of Hamiltonian systems</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Springer Monographs in Mathematics</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p17" title="2 Action-angle coordinates ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#S3.p10" title="3 Diophantine frequency vectors ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>,
+<a href="#S3.p9" title="3 Diophantine frequency vectors ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>.
+</span>
+</li>
+<li id="bib.bib3" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">S. Wiggins</span><span class="ltx_text ltx_bib_year"> (2003)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Introduction to applied nonlinear dynamical systems and chaos</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">second edition</span>, <span class="ltx_text ltx_bib_series">Texts in Applied Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">2</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S5.p1" title="5 Normal forms ‣ Notes on the KAM theorem" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§5</span></a>.
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sun Feb 13 21:14:56 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

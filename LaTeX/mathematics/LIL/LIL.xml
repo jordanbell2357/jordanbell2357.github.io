@@ -1,0 +1,499 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/mnt/c/Users/Jordan/Documents/GitHub/LaTeX/latex_originals/LIL"?>
+<?latexml class="article"?>
+<?latexml package="amsmath,amssymb,mathrsfs,amsthm"?>
+<?latexml package="hyperref" options="draft"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>The law of the iterated logarithm</title>
+  <creator role="author">
+    <personname>Jordan Bell</personname>
+  </creator>
+  <date role="creation">June 3, 2014</date>
+  <para xml:id="p1">
+    <p>There are surprisingly few books that have complete proofs of the law of the iterated logarithm. This is like
+many theorems that are hard to prove, and which are often given a squalid sketch that might be useful
+to the author as a memory aid but
+which is unlikely to help someone seeing the result for the first time, especially when the result is not even stated with the meticulous
+precision a newcomer needs.
+Indeed, what a serious beginner needs most are as many details as can be given, rather than a presentation that the master imagines
+gets to the point.</p>
+  </para>
+  <para xml:id="p2">
+    <p>Aside from some books
+making assumptions that are not needed for the result to be true, such as having finite third moments, most books
+present the <text font="bold">Hartman-Wintner law of the iterated logarithm</text>, which
+talks about the limit superior and limit inferior of a sequence. There is a version due to
+<!--  %**** LIL.tex Line 50 **** -->Strassen that makes a single assertion about the set of limit points of a sequence rather than merely its limit inferior and limit superior.
+For a sequence of real numbers <Math mode="inline" tex="x_{n}" text="x _ n" xml:id="p2.m1">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, we denote the set of limit points of the sequence by</p>
+    <equation xml:id="S0.Ex1">
+      <Math mode="display" tex="H(x_{n})" text="H * x _ n" xml:id="S0.Ex1.m1">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+            <XMTok font="italic" role="UNKNOWN">H</XMTok>
+            <XMDual>
+              <XMRef idref="S0.Ex1.m1.1"/>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                <XMApp xml:id="S0.Ex1.m1.1">
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                  <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math>
+    </equation>
+    <p>Then,</p>
+    <equation xml:id="S0.Ex2">
+      <Math mode="display" tex="\liminf_{n\to\infty}x_{n}=\inf H(x_{n}),\qquad\limsup_{n\to\infty}x_{n}=\sup H%&#10;(x_{n})." text="formulae@((limit-infimum _ (n to infinity))@(x _ n) = infimum@(H * x _ n), (limit-supremum _ (n to infinity))@(x _ n) = supremum@(H * x _ n))" xml:id="S0.Ex2.m1">
+        <XMath>
+          <XMDual>
+            <XMRef idref="S0.Ex2.m1.1"/>
+            <XMWrap>
+              <XMDual xml:id="S0.Ex2.m1.1">
+                <XMApp>
+                  <XMTok meaning="formulae"/>
+                  <XMRef idref="S0.Ex2.m1.1.1"/>
+                  <XMRef idref="S0.Ex2.m1.1.2"/>
+                </XMApp>
+                <XMWrap>
+                  <XMApp xml:id="S0.Ex2.m1.1.1">
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMApp scriptpos="mid">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                        <XMTok meaning="limit-infimum" name="liminf" role="LIMITOP" scriptpos="mid">lim inf</XMTok>
+                        <XMApp>
+                          <XMTok fontsize="70%" name="to" role="ARROW">→</XMTok>
+                          <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+                          <XMTok fontsize="70%" meaning="infinity" name="infty" role="ID">∞</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                        <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                        <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="infimum" role="LIMITOP" scriptpos="mid">inf</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">H</XMTok>
+                        <XMDual>
+                          <XMRef idref="S0.Ex2.m1.1.1.1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMApp xml:id="S0.Ex2.m1.1.1.1">
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="PUNCT" rpadding="20.0pt">,</XMTok>
+                  <XMApp xml:id="S0.Ex2.m1.1.2">
+                    <XMTok meaning="equals" role="RELOP">=</XMTok>
+                    <XMApp>
+                      <XMApp scriptpos="mid">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                        <XMTok meaning="limit-supremum" name="limsup" role="LIMITOP" scriptpos="mid">lim sup</XMTok>
+                        <XMApp>
+                          <XMTok fontsize="70%" name="to" role="ARROW">→</XMTok>
+                          <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+                          <XMTok fontsize="70%" meaning="infinity" name="infty" role="ID">∞</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                        <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                        <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="supremum" role="LIMITOP" scriptpos="mid">sup</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" role="UNKNOWN">H</XMTok>
+                        <XMDual>
+                          <XMRef idref="S0.Ex2.m1.1.2.1"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMApp xml:id="S0.Ex2.m1.1.2.1">
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                              <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                </XMWrap>
+              </XMDual>
+              <XMTok role="PERIOD">.</XMTok>
+            </XMWrap>
+          </XMDual>
+        </XMath>
+      </Math>
+    </equation>
+  </para>
+  <para xml:id="p3">
+    <p>The following is the statement due to <text font="bold">Strassen</text> of the law of the iterated logarithm, given
+in Bauer.<note mark="1" role="footnote" xml:id="footnote1"><tags>
+          <tag>1</tag>
+          <tag role="autoref">footnote 1</tag>
+          <tag role="refnum">1</tag>
+          <tag role="typerefnum">footnote 1</tag>
+        </tags>Heinz
+Bauer, <text font="italic">Probability Theory</text>, p. 283, chapter VII, Theorem 33.1.</note> The proof indeed involves a lot of machinery, but the machinery is laid out cleanly in Bauer’s presentation.
+We write</p>
+    <equation xml:id="S0.Ex3">
+      <Math mode="display" tex="L(x)=\begin{cases}1&amp;\log x\leq e\\&#10;\log\log x&amp;\log x&gt;e.\end{cases}" text="L * x = cases@(1, logarithm@(x) less= e, logarithm@(logarithm@(x)), logarithm@(x) &gt; e)" xml:id="S0.Ex3.m1">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMTok font="italic" role="UNKNOWN">L</XMTok>
+              <XMDual>
+                <XMRef idref="S0.Ex3.m1.5"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex3.m1.5">x</XMTok>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="cases"/>
+                <XMRef idref="S0.Ex3.m1.1"/>
+                <XMRef idref="S0.Ex3.m1.2"/>
+                <XMRef idref="S0.Ex3.m1.3"/>
+                <XMRef idref="S0.Ex3.m1.4"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="true">{</XMTok>
+                <XMArray>
+                  <XMRow>
+                    <XMCell align="left">
+                      <XMTok meaning="1" role="NUMBER" xml:id="S0.Ex3.m1.1">1</XMTok>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp xml:id="S0.Ex3.m1.2">
+                        <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                        <XMApp>
+                          <XMTok meaning="logarithm" role="OPFUNCTION">log</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                        </XMApp>
+                        <XMTok font="italic" role="UNKNOWN">e</XMTok>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="left">
+                      <XMApp xml:id="S0.Ex3.m1.3">
+                        <XMTok meaning="logarithm" role="OPFUNCTION">log</XMTok>
+                        <XMApp>
+                          <XMTok meaning="logarithm" role="OPFUNCTION">log</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMDual xml:id="S0.Ex3.m1.4">
+                        <XMRef idref="S0.Ex3.m1.4.1"/>
+                        <XMWrap>
+                          <XMApp xml:id="S0.Ex3.m1.4.1">
+                            <XMTok meaning="greater-than" role="RELOP">&gt;</XMTok>
+                            <XMApp>
+                              <XMTok meaning="logarithm" role="OPFUNCTION">log</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+                            </XMApp>
+                            <XMTok font="italic" role="UNKNOWN">e</XMTok>
+                          </XMApp>
+                          <XMTok role="PERIOD">.</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math>
+    </equation>
+  </para>
+  <theorem class="ltx_theorem_theorem" inlist="thm theorem:theorem" xml:id="Thmtheorem1">
+    <tags>
+      <tag>Theorem 1</tag>
+      <tag role="autoref">Theorem 1</tag>
+      <tag role="refnum">1</tag>
+      <tag role="typerefnum">Theorem 1</tag>
+    </tags>
+    <title class="ltx_runin"><tag><text font="bold">Theorem 1</text></tag> (Law of the iterated logarithm).</title>
+    <para xml:id="Thmtheorem1.p1">
+      <p><text font="italic">Suppose that <Math mode="inline" tex="X_{n}:(\Omega,\mathscr{F},P)\to\mathbb{R}" text="X _ n colon vector@(Omega, F, P) to R" xml:id="Thmtheorem1.p1.m1">
+            <XMath>
+              <XMApp>
+                <XMTok font="upright" name="colon" role="METARELOP">:</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                  <XMTok role="UNKNOWN">X</XMTok>
+                  <XMTok fontsize="70%" role="UNKNOWN">n</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMTok font="upright" name="to" role="ARROW">→</XMTok>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="vector"/>
+                      <XMRef idref="Thmtheorem1.p1.m1.1"/>
+                      <XMRef idref="Thmtheorem1.p1.m1.2"/>
+                      <XMRef idref="Thmtheorem1.p1.m1.3"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok font="upright" role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="upright" name="Omega" role="UNKNOWN" xml:id="Thmtheorem1.p1.m1.1">Ω</XMTok>
+                      <XMTok font="upright" role="PUNCT">,</XMTok>
+                      <XMTok font="script upright" role="UNKNOWN" xml:id="Thmtheorem1.p1.m1.2">F</XMTok>
+                      <XMTok font="upright" role="PUNCT">,</XMTok>
+                      <XMTok role="UNKNOWN" xml:id="Thmtheorem1.p1.m1.3">P</XMTok>
+                      <XMTok font="upright" role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                  <XMTok font="blackboard upright" role="UNKNOWN">R</XMTok>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math> is a sequence of independent identically distributed <Math mode="inline" tex="L^{2}" text="L ^ 2" xml:id="Thmtheorem1.p1.m2">
+            <XMath>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                <XMTok role="UNKNOWN">L</XMTok>
+                <XMTok font="upright" fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+            </XMath>
+          </Math> random variables
+with <Math mode="inline" tex="E(X_{1})=0" text="E * X _ 1 = 0" xml:id="Thmtheorem1.p1.m3">
+            <XMath>
+              <XMApp>
+                <XMTok font="upright" meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok role="UNKNOWN">E</XMTok>
+                  <XMDual>
+                    <XMRef idref="Thmtheorem1.p1.m3.1"/>
+                    <XMWrap>
+                      <XMTok font="upright" role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="Thmtheorem1.p1.m3.1">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                        <XMTok role="UNKNOWN">X</XMTok>
+                        <XMTok font="upright" fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                      <XMTok font="upright" role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMTok font="upright" meaning="0" role="NUMBER">0</XMTok>
+              </XMApp>
+            </XMath>
+          </Math> and <Math mode="inline" tex="\sigma^{2}=\mathrm{Var}(X_{1})=E(X_{1}^{2})" text="sigma ^ 2 = Var * X _ 1 = E * (X _ 1) ^ 2" xml:id="Thmtheorem1.p1.m4">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="multirelation"/>
+                <XMApp>
+                  <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                  <XMTok name="sigma" role="UNKNOWN">σ</XMTok>
+                  <XMTok font="upright" fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                </XMApp>
+                <XMTok font="upright" meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="upright" role="UNKNOWN">Var</XMTok>
+                  <XMDual>
+                    <XMRef idref="Thmtheorem1.p1.m4.1"/>
+                    <XMWrap>
+                      <XMTok font="upright" role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="Thmtheorem1.p1.m4.1">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                        <XMTok role="UNKNOWN">X</XMTok>
+                        <XMTok font="upright" fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                      <XMTok font="upright" role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMTok font="upright" meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok role="UNKNOWN">E</XMTok>
+                  <XMDual>
+                    <XMRef idref="Thmtheorem1.p1.m4.2"/>
+                    <XMWrap>
+                      <XMTok font="upright" role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="Thmtheorem1.p1.m4.2">
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                          <XMTok role="UNKNOWN">X</XMTok>
+                          <XMTok font="upright" fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok font="upright" fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                      </XMApp>
+                      <XMTok font="upright" role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math>. For
+<Math mode="inline" tex="P" text="P" xml:id="Thmtheorem1.p1.m5">
+            <XMath>
+              <XMTok role="UNKNOWN">P</XMTok>
+            </XMath>
+          </Math>-almost all <Math mode="inline" tex="\omega\in\Omega" text="omega element-of Omega" xml:id="Thmtheorem1.p1.m6">
+            <XMath>
+              <XMApp>
+                <XMTok font="upright" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                <XMTok name="omega" role="UNKNOWN">ω</XMTok>
+                <XMTok font="upright" name="Omega" role="UNKNOWN">Ω</XMTok>
+              </XMApp>
+            </XMath>
+          </Math>,
+<!--  %**** LIL.tex Line 75 **** --></text></p>
+      <equation xml:id="S0.Ex4">
+        <Math mode="display" tex="H\left(\frac{S_{n}(\omega)}{\sqrt{2nL(n)}}\right)=[-\sigma,\sigma]," text="H * ((S _ n * omega) / square-root@(2 * n * L * n)) = closed-interval@(- sigma, sigma)" xml:id="S0.Ex4.m1">
+          <XMath>
+            <XMDual>
+              <XMRef idref="S0.Ex4.m1.5"/>
+              <XMWrap>
+                <XMApp xml:id="S0.Ex4.m1.5">
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">H</XMTok>
+                    <XMDual>
+                      <XMRef idref="S0.Ex4.m1.3"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="true">(</XMTok>
+                        <XMApp xml:id="S0.Ex4.m1.3">
+                          <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post3"/>
+                              <XMTok font="italic" role="UNKNOWN">S</XMTok>
+                              <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+                            </XMApp>
+                            <XMDual>
+                              <XMRef idref="S0.Ex4.m1.1"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMTok font="italic" name="omega" role="UNKNOWN" xml:id="S0.Ex4.m1.1">ω</XMTok>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="square-root"/>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">n</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">L</XMTok>
+                              <XMDual>
+                                <XMRef idref="S0.Ex4.m1.2"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex4.m1.2">n</XMTok>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="true">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="closed-interval"/>
+                      <XMRef idref="S0.Ex4.m1.5.1"/>
+                      <XMRef idref="S0.Ex4.m1.4"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">[</XMTok>
+                      <XMApp xml:id="S0.Ex4.m1.5.1">
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                      </XMApp>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMTok font="italic" name="sigma" role="UNKNOWN" xml:id="S0.Ex4.m1.4">σ</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">]</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMTok role="PUNCT">,</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMath>
+        </Math>
+      </equation>
+      <p><text font="italic">where <Math mode="inline" tex="S_{n}=\sum_{k=1}^{n}X_{k}" text="S _ n = ((sum _ (k = 1)) ^ n)@(X _ k)" xml:id="Thmtheorem1.p1.m7">
+            <XMath>
+              <XMApp>
+                <XMTok font="upright" meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                  <XMTok role="UNKNOWN">S</XMTok>
+                  <XMTok fontsize="70%" role="UNKNOWN">n</XMTok>
+                </XMApp>
+                <XMApp>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                      <XMTok font="upright" mathstyle="text" meaning="sum" role="SUMOP" scriptpos="post">∑</XMTok>
+                      <XMApp>
+                        <XMTok font="upright" fontsize="70%" meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok fontsize="70%" role="UNKNOWN">k</XMTok>
+                        <XMTok font="upright" fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok fontsize="70%" role="UNKNOWN">n</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok role="UNKNOWN">X</XMTok>
+                    <XMTok fontsize="70%" role="UNKNOWN">k</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+            </XMath>
+          </Math>.</text></p>
+    </para>
+  </theorem>
+</document>

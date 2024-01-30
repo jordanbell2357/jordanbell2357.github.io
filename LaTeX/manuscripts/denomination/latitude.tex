@@ -1,0 +1,1457 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm,xfrac}
+\usepackage[LGR,T1]{fontenc}
+\newcommand{\textgreek}[1]{\begingroup\fontencoding{LGR}\selectfont#1\endgroup}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\gcm}{\ensuremath\mathrm{gcm}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand*\rfrac[2]{{}^{#1}\!/_{#2}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Latitude, intension, and remission}
+\author{Jordan Bell\\ \texttt{jordan.bell@gmail.com}\\Department of Mathematics, University of Toronto}
+\date{\today}
+
+\maketitle
+
+
+Aristotle, {\em Categories} 2, 1a20 \cite[p.~4]{ackrill}:
+Things can be {\em said of} a subject and {\em said in} a subject. 
+
+Aristotle, {\em Categories} 4, 1b25 \cite[p.~5]{ackrill}:
+
+\begin{quote}
+Of things said without any combination, each signifies
+either substance or quantity or qualification or a relative
+or where or when or being-in-a-position or having or
+doing or being-affected. To give a rough idea, examples
+of substance are man, horse; of quantity: four-foot, five-foot;
+of qualification: white, grammatical; of a relative:
+double, half, larger; of where: in the Lyceum, in the
+market-place; of when: yesterday, last-year; of being-in-a-position:
+is-lying, is-sitting; of having: has-shoes-on, has-armour-on;
+of doing: cutting, burning; of being-affected:
+being-cut, being-burned.
+\end{quote}
+
+substance: \textgreek{o>us'ia}, {\em substantia};
+quantity: \textgreek{poson}, {\em quantitas}; 
+qualification: \textgreek{poi'on}, {\em qualitas}.
+
+Aristotle, {\em Categories} 5, 2a11 \cite[pp.~5--6]{ackrill}:
+
+\begin{quote}
+A {\em substance}--that which is called a substance most
+strictly, primarily, and most of all--is that which is neither
+said of a subject nor in a subject, e.g. the individual man
+or the individual horse. The species in which the things
+primarily called substances are, are called {\em secondary substances},
+as also are the genera of these species. For
+example, the individual man belongs to a species, man,
+and animal is a genus of the species; so these--both man
+and animal--are called secondary substances.
+\end{quote}
+
+Aristotle, {\em Categories} 5, 3b24 \cite[p.~10]{ackrill}:
+
+\begin{quote}
+Another characteristic of substances is that there
+is nothing contrary to them. For what would be contrary
+to a primary substance? For example, there is nothing
+contrary to an individual man, nor yet is there anything
+contrary to man or to animal. This, however is not peculiar
+to substance but holds of many other things also, for
+example, of quantity. For there is nothing contrary to four-foot
+or to ten or to anything of this kind--unless someone
+were to say that many is contrary to few or large to small;
+but still there is nothing contrary to any {\em definite} quantity.
+\end{quote}
+
+Aristotle, {\em Categories} 5, 3b33 \cite[p.~10]{ackrill}:
+
+\begin{quote}
+Substance, it seems, does not admit of a more and
+a less. I do not mean that one substance is not more
+a substance than another (we have said that it is), but
+that any given substance is not called more, or less, that
+which it is. For example, if this substance is a man, it will
+not be more a man or less a man either than itself or than
+another man. For one man is not more a man than
+another, as one pale thing is more pale than another and
+one beautiful thing more beautiful than another. Again,
+a thing is called more, or less, such-and-such than itself;
+for example, the body that is pale is called more pale now
+than before, and the one that is not is called more, or less
+hot. Substance, however, is not spoken of thus. For a man
+is not called more than a man now than before, nor is anything
+else that is a substance. Thus substance does not admit of
+a more and a less.
+\end{quote}
+
+Aristotle, {\em Categories} 5, 4a10 \cite[p.~11]{ackrill}:
+
+\begin{quote}
+It seems most distinctive of substance that what is
+numerically one and the same is able to receive contraries.
+In no other case could one bring forward anything,
+numerically one, which is able to receive contraries. For
+example, a colour which is numerically one and the same
+will not be black and white, nor will numerically one and
+the same action be bad and good; and similarly with
+everything else that is not substance. A substance, however,
+numerically one and the same, is able to receive
+contraries. For example, an individual man--one and
+the same--becomes pale at one time and dark at another,
+and hot and cold, and bad and good. Nothing like this is
+to be sen in any other case.
+\end{quote}
+
+Aristotle, {\em Categories} 5, 4a22 \cite[pp.~11--12]{ackrill}:
+
+\begin{quote}
+For in the case of substances it is by themselves
+changing that they are able to receive contraries.
+For what has become cold instead of hot, or dark instead
+of pale, or good instead of bad, has changed (has altered);
+similarly in other cases too it is by itself undergoing
+change that each thing is able to receive contraries. Statements
+and beliefs on the other hand themselves remain
+completely unchangeable in every way; it is because the
+{\em actual thing} changes that the contrary comes to belong to
+them. For the statement that somebody is sitting remains
+the same; it is because of a change in the actual thing that
+it comes to be true at one time and false at another.
+\end{quote}
+
+Aristotle, {\em Categories} 6, 4b20 \cite[p.~12]{ackrill}:
+
+\begin{quote}
+Of quantities some are discrete, others continuous;
+and some are composed of parts which have position in
+relation to one another, others are not composed of parts
+which have position.
+
+Discrete are number and langue; continuous
+are lines, surfaces, bodies, and also, besides these, time
+and place.
+\end{quote}
+
+Aristotle, {\em Categories} 6, 5a38 \cite[p.~12]{ackrill}:
+
+\begin{quote}
+Only these we have mentioned are called quantities
+strictly, all the others derivatively; for it is to these we
+look when we call the others quantities. For example, we
+speak of a large amount of white because the {\em surface} is
+large, and an action or a change is called long because
+the {\em time} is long. For it is not in its own right that each of
+these others is called a quantity. For example, if one is to
+say how long an action is, one will determine this by the
+time, saying that it is a-year-long or something of that sort;
+and in saying how white white one will determine it by
+the surface--whatever the size of the surface one will say
+that the white too is that size. 
+\end{quote}
+
+Aristotle, {\em Categories} 6, 6a19 \cite[p.~16]{ackrill}:
+
+\begin{quote}
+A quantity does not seem to admit of a more and
+a less. Four-foot for example: one thing is not more four-foot
+than another. Or take number: we do not speak of
+a three as more three than a five, nor of one three as more
+three than another three. Nor yet is one time called more
+a time than another.
+\end{quote}
+
+Aristotle, {\em Categories} 6, 6a26 \cite[pp.~16--17]{ackrill}:
+
+\begin{quote}
+Most distinctive of a quantity is its being called 
+both equal and unequal. For each of the quantities we
+spoke of is called both equal and unequal. For example,
+a body is called both equal and unequal, and a number
+is called both equal and unequal, and so is a time; so also
+with the others we spoke of, each is called both equal
+and unequal. But anything else -- whatever is not a quantity -- is
+certainly not, it would seem, called equal and
+unequal. For example, a condition is certainly not called
+equal and unequal, but, rather, similar; and white is
+certainly not equal and unequal, but similar. Thus most
+distinctive of a quantity would be its being called both
+equal and unequal. 
+\end{quote}
+
+Aristotle, {\em Categories} 6, 6b19 \cite[pp.~16--17]{ackrill}:
+
+\begin{quote}
+Relatives seem also to admit of a more and a less.
+For a thing is called more similar and less similar, and more
+unequal and less unequal; and each of these is relative,
+since what is similar is called similar {\em to} something and
+what is unequal unequal {\em to} something. But not all admit
+of a more and less; for what is double, or anything like
+that, is not called more double or less double.
+\end{quote}
+
+Aristotle, {\em Categories} 8, 8b25 \cite[p.~24]{ackrill}:
+
+\begin{quote}
+By a {\em quality} I mean that in virtue of which things are
+said to be qualified somehow. But quality is one of the
+things spoken of in a number of ways.
+\end{quote}
+
+Aristotle, {\em Categories} 8, 8b26 \cite[p.~24]{ackrill}:
+
+\begin{quote}
+One kind of quality let us call {\em states} and {\em conditions}.
+A state differs from a condition in being more stable and
+lasting longer. Such are the branches of knowledge and
+the virtues. \dots.
+It is what are easily changed and quickly changing we call conditions, e.g. hotness and chill
+and sickness and health and the like.
+\end{quote}
+
+Aristotle, {\em Categories} 8, 10b26 \cite[p.~24]{ackrill}:
+
+\begin{quote}
+Qualifications admit of a more and a less; for
+one thing is called more pale or less pale than another, and
+more just than another. Moreover, it itself sustains increase
+(for what is pale can still become paler)--not in all cases
+though, but in most.
+\end{quote}
+
+Aristotle, {\em Categories} 9, 11b1 \cite[p.~31]{ackrill}:
+
+\begin{quote}
+Doing and being-affected admit of contrariety and
+of a more and a less. For heating is contrary to cooling,
+and being heated to being cooled, and being pleased to
+being pained; so they admit of contrariety. And of a more
+and a less also. For it is possible to heat more and less, and
+to be heated more and less, and to be pained more and less;
+hence doing and being-affected admit of a more and a 
+less.
+\end{quote}
+
+Aristotle, {\em Categories} 10, 11b38 \cite[pp.~32--33]{ackrill}:
+
+\begin{quote}
+But if it is not necessary
+for one or the other to belong, there is something
+intermediate between them. For example, black and white
+naturally occur in bodies, but it is not necessary for one
+or the other of them to belong to a body (for not every
+body is either white or black); again, bad and good are
+predicated both of men and of many other things, but it
+is not necessary for one or the other of them to belong to
+those things they are predicated of (for not all are either
+bad or good). And between these there is certainly something
+intermediate--between white and black are grey
+yellow and all other colours, and between the bad and the
+good the neither bad nor good. In some cases there exist
+names for the intermediates, as with grey and yellow
+between white and black; in some, however, it is not easy
+to find a name for the intermediate, but it is by the negation
+of each of the extremes that the intermediate is
+marked off, as with the neither good nor bad and neither
+just nor unjust.
+\end{quote}
+
+Aristotle, {\em Categories} 14, 15a13 \cite[p.~41]{ackrill}:
+
+\begin{quote}
+There are six kinds of change: generation, destruction,
+increase, diminution, alteration, change of place.
+\end{quote}
+
+Porphyry, {\em Isagoge} 2--3 \cite[pp.~4--5]{isagoge}:
+
+\begin{quote}
+Genera differ from what is predicated of only one item in that they are predicated of several items. Again, they differ from what is predicated of several
+items--from species because species, even if they are predicated of several items, are predicated of items which differ not in species but in number. Thus man, being a species,
+is predicated of Socrates and of Plato, who differ from one another not in species but in number, whereas animal, being a genus, is predicated of man and of cow and of horse,
+which differ from one another not only in number but also in species. Again, a genus differs from a property because a property is predicated of only one species--the
+species of which it is a property--and of the individuals under the species (as laughing is predicated only of man, and of particular men), whereas a genus is predicated not of
+one species but of several which differ. Again, a genus differs from a difference and from common accidents because differences and common accidents,
+even if they are predicated of several items which differ in species, are not predicated of them in answer to `What is it?' but rather to `What sort of so-and-so is it?'.
+Asked what sort of so-and-so a man
+is, we say that he is rational; and asked what sort of so-and-so a raven is, we say that it is black--rational is a difference, black an accident. But when we are asked what a man is,
+we answer an animal--and animal is a genus of man.
+\end{quote}
+
+Porphyry, {\em Isagoge} 12--13 \cite[p.~12]{isagoge}:
+
+\begin{quote}
+Accidents are items which come and go without the destruction of their subjects. They are divided into two: some are separable and some inseparable. Sleeping is a separable accident, whereas being black is an inseparable accident for ravens and Ethiopians--it is possible to think of a white raven and an Ethiopian losing his skin-colour without the destruction of the subjects.
+\end{quote}
+
+Porphyry, {\em Isagoge} 21 \cite[p.~19]{isagoge}:
+
+\begin{quote}
+Participating in species occurs equally, in accidents--even inseparable ones--not equally. For one Ethiopian compared to another may have a skin-colour either diminished or augmented in blackness.
+\end{quote}
+
+Porphyry, {\em in Cat.} 105 \cite[pp.~102--103]{strange}:
+
+\begin{quote}
+Q. What is quantity accidentally?
+
+A. What is said to be a quantity in virtue of something else,
+as white is said to be large in virtue of its surface and a man is
+said to be tall insofar as his size is large. Again, we might say
+that a fever is great if it lasts for a long time -- since if someone were to use `great' not of a protracted fever but of a intense
+one, he would not be using this expression in the strict sense:
+he would be speaking about a qualification rather than about
+a quantity. For `intense' is a characteristic of quality. And if
+we were to say that such-and-such a person has done a great
+deal of running, we would be reckoning his motion ({\em kin\^{e}sis}) by 
+the large amount of time that it had taken, and it would be derivatively from this time that we would say that he had
+done a great deal of running.
+\end{quote}
+
+Porphyry, {\em in Cat.} 110--111 \cite[p.~111]{strange}:
+
+\begin{quote}
+Q. What then will the proprium of quantity be?
+
+A. To be called equal and unequal. For a line will either be equal or unequal to another line, and a body will be either equal or unequal to another body,
+and a surface will be either equal or unequal to another surface.
+
+Q. When some one applies this expression to white, and says `this white is equal to that one', what does he mean?
+
+A. He is not using `equal' in the strict sense, but improperly, in place of `similar'.
+
+Q. How is it that a man is said to be equal to a man, or a tower to a tower, if these are not quantities?
+
+A. It is said accidentally.
+
+Q. Why is it said accidentally?
+
+A. It is used not because the thing in question is a
+substance, but because it has a size. For the primary sorts of quantities that pertain to the substance of our realm
+ are the so-called dimensions ({\em diastaseis}), which are length, width, and breadth.
+\end{quote}
+
+similar: {\em homoios}, equal: {\em isos}.
+
+Porphyry, {\em In Cat.} 137--138 \cite[pp.~152--153]{strange}:
+
+\begin{quote}
+Q. State more clearly and distinctly whether qualities and the qualified things that derive from them admit of more and less.
+
+A. But how can one say anything clear about these matters, when there have been so many different schools of thought about them? For some have claimed that all states of matter and qualified entities becomemore and less intense, since matter itself admits of a more and less. Some Platonists have taken this view. Others have held that some states and the
+{$\langle$}entities capable of having the state{$\rangle$} that are qualified by them do not admit of a more and less, as is the case with the virtues and persons who are qualified by them,
+while other states and qualified entities do admit of intensification and relaxation, as is the case with all intermediate arts and intermediate qualities, and the persons who are qualified by them. The Stoics held this view. But there is a third view, which is the one Aristotle refers to, that holds that states cannot be more intense or more relaxed, but
+that the persons that are qualified by them do admit of a more and less: not all of them, however.
+\end{quote}
+
+Porphyry, {\em In Cat.} 139 \cite[p.~154]{strange}:
+
+\begin{quote}
+Q. But if this is not the proprium of quality either, what will
+its proprium be?
+
+A. Similarity and dissimilarity, for it is only in respect of
+qualities that something is said to be similar to something else, and being similar or dissimilar is predicated only of qualities, so that to be said to be similar and dissimilar will be a proprium of quality.
+\end{quote}
+
+Dexippus, {\em 	In Cat.} 2.30 \cite[pp.~98--99]{dexippus}:
+
+\begin{quote}
+It is a fact of nature that along with each
+form there goes a quality, distinct from the form, but
+dependent upon it; and the form, being a part of the individual
+composite substance, is constitutive of it and never admits of
+more and less, but the qualities which go along with it,
+whether it be rationality, or heat, or dryness, do admit of
+degrees, and so this apparent variation of degree is not a
+function of the form but of the quality, so that when the good
+man ({\em spoudaios}) is said to be more of a man, this increase in
+degree is true of him not {\em qua} man, but {\em qua} man as being in a
+certain condition. But this is a matter not of substance, but of
+quality, so that we are right to accept the doctrine that one
+substance is not more or less so than another.
+\end{quote}
+
+Ammonius, {\em in Cat.} 55 \cite[p.~66]{ammonius}, on 4b20:
+
+\begin{quote}
+Some people say that, properly speaking, there are three
+species of quantity -- number, volume, and power, i.e. weight.
+They argue that (1) statement and time are the same as
+number; (2) line, surface, and body can be reduced to something common -- magnitude;
+(3) place is the same as surface,
+and therefore (4) one kind of quantity is number, another
+magnitude, another power. (For under this last heading they
+place heavy and light, which are weights of quantity, for they
+fall under it.)
+
+Why didn't Aristotle mention change ({\em kin\^esis})? Our response
+is that change is not an actuality ({\em energeia}), but an indefinite
+thing. Therefore he did not mention it, since he was addressing
+his discussion to beginners. For change itself is nothing other
+than the transition ({\em hodos}) from something in potentiality to
+something in actuality.
+\end{quote}
+
+Ammonius, {\em in Cat.} 60--61 \cite[p.~71]{ammonius}, on 5b1:
+
+\begin{quote}
+The scientist's task is not only to investigate things he himself
+proposes, but also to go through in detail and refute those that
+seem to be so but in truth are not. Now white may seem to be a
+quantity. For we speak of white as more and less, which is
+characteristic of quantity; but then we also call an action long.
+So Aristotle says that these are not quantities in the strict
+sense, but only {\em per accidens}. For since white is in a surface,
+and that can be more or less, we say that the white is more or
+less. It is the same with an action; for example, a war is called
+long {\em per accidens}. Thus, since a war goes on for a certain
+period of time -- e.g. for ten years -- and we say that its time is
+long, for this reason we say that the action, as well, is long, {\em per
+accidens}. A change, too, is called large if its time is large. For
+time is the measure of change. Thus, we call a revolution of
+the moon a month, of the sun a year, and of the entire heaven
+a day. So if someone were to ask how long an action is, the
+answer is its time, e.g. ten years. It is the same with a surface;
+one may say that the white is as large as the surface is. For if
+we are asked how much white there is, we say two cubits if
+that is how large the surface containing the white is.
+Therefore, we mean that the surface, not the white itself, is
+more or less. Indeed, the white in a one-cubit surface can be
+whiter than that in a two-cubit surface, and then we do not
+say that there is more white ({\em leukon pleon}) but that one white
+is whiter than another ({\em leukon leukou mallon}).
+\end{quote}
+
+Ammonius, {\em in Cat.} 62 \cite[pp.~72--73]{ammonius}, on 5b18:
+
+\begin{quote}
+If a thing were said to be large or small just in itself, a
+mountain would never be said to be small or a millet seed
+large. But we call a mountain small obviously comparing it to
+another mountain, or a millet seed large obviously because it
+is larger than another. Therefore, a thing is not said to be
+large or small just in itself, but in relation to something else.
+It is the same, Aristotle shows, with many and few, which do
+not belong to number, Le. to the discrete; rather, they are
+relatives.
+\end{quote}
+
+Ammonius, {\em in Cat.} 63 \cite[pp.~73--74]{ammonius}, on 5b30:
+
+\begin{quote}
+What he means is this. Contraries must first exist in their
+own right and have real and independent being. Only so do
+they then meet in battle and declare war, that is, oppose each
+other. This is not possible for relatives, for they do not fight
+each other, but rather they bring each other in together. For
+relatives differ from contraries in that contraries exist first in
+their own right and thereafter join battle and fight, whereas
+relatives produce each other reciprocally. In this way, then,
+even if white didn't exist at all, black would remain, but if the
+father were taken away, the son would be gone. Since large
+and small {$\langle$}exist{$\rangle$} not in their own right but with respect to
+something else, and similarly for many and few, and {$\langle$}since{$\rangle$}
+neither large nor small exists independently in and of itself, it
+is clear that they are not contraries.
+\end{quote}
+
+Ammonius, {\em in Cat.} 65 \cite[pp.~75--76]{ammonius}, on 6a19:
+
+\begin{quote}
+He says that not having a contrary is a {\em proprium} ({\em idion}) of
+quantity, and he shows that it belongs to every {$\langle$}quantity{$\rangle$},
+but he does not mention that it does not belong to {$\langle$}quantity{$\rangle$}
+alone. (Indeed, this {$\langle$}last point{$\rangle$} should be clear from what
+has been said about substance.) Rather, he passed over to
+another {\em proprium} of quantity: not admitting more or less. And
+this is reasonable. For where there is contrariety there is
+more and less, but where there is not, more and less are not
+found. For more and less arise from a mixture of contraries.
+One must realize that Aristotle again rejects this, since it also
+fits substance, and passes over to another {\em proprium},
+something which is indeed called a {\em proprium} in the strict
+sense.
+\end{quote}
+
+Martianus Capella, {\em The Marriage of Philology and Mercury} V (Rhetoric), 370 \cite[p.~124]{capellaII}:
+
+\begin{quote}
+[370] Quality accepts the idea of a more and
+a less, but not in every instance. For nothing square is more square
+than any other square thing; but something can be said to be more
+white than another white thing. And it is a question often discussed,
+whether one person may be said to be more just than another.
+But there appear to be many who have given careful thought to the
+question and say that the qualities themselves cannot accept the idea
+of a more and a less, but only the items named after them. For instance,
+justice is in itself one single perfect concept, so that we
+cannot say {\em This is more justice than that}, but we can say {\em This man
+is more just than that}. Similarly, we cannot say {\em This is more health
+than that}, but we can say {\em This man is more healthy than that}. So it
+happens that substance does not accept the idea of a more and a less,
+but qualities can accept it through substances. 
+\end{quote}
+
+Simplicius, {\em in Cat.} 122--123 \cite[p.~101]{simpliciuscat5}, on 4b20:
+
+\begin{quote}
+Quantity is divided into the continuous ({\em to sunekhes}) and the
+discrete ({\em to di\^{o}rismenon}), since these fall under the genus of Quantity.
+For in their very essence, Quantity is predicated of them -- and
+not as an accident or as a mere name; rather each partakes in
+Quantity equally, since both admit in a similar manner the equal and
+the unequal, and the double and the half. But this division is not
+made into species of Quantity, but into differentiae, since the species
+of Quantity are magnitude ({\em megethos}) and amount ({\em pl\^{e}thos}), and the
+continuous and the discrete are its differentiae. For magnitude is
+continuous quantity, and amount is discrete quantity. Aristotle himself
+made number and speech species of Quantity according to the
+differentia of the discrete, and line, surface and body according to that
+of the continuous -- and also place and time, which is perhaps more
+accurate. For it does not seem correct even to Iamblichus that amount
+should be equated to the discrete, since speech is something discrete,
+like number, but speech is not an amount. For even if speech is
+manifold, even so the `being many' which partakes of amount is one
+thing, just as people are many, and the `being an amount', when
+characterized in this way, is something else.
+\end{quote}
+
+Simplicius, {\em in Cat.} 127--129 \cite[pp.~106--107]{simpliciuscat5}, on 4b20:
+
+\begin{quote}
+The supporters of Lucius and Nicostratus object to the division
+firstly as wrongly calling even magnitude a quantity ({\em poson}). It should
+have been described as `so much' ({\em p\^{e}likon}) and {$\langle$}only{$\rangle$} number as a
+quantity. What is common {$\langle$}to magnitude and number{$\rangle$} should have
+been called either something else, or `quantity' in a sense different
+from that of one of its species. But even if the continuous is in the
+broadest sense magnitude while the discrete is quantity, they are
+often interchanged (at all events we call water, which is continuous,
+a quantity, and not a magnitude -- for it is extensive, not large; and
+we call time too a quantity); for this reason he quite reasonably did
+not make two categories out of quantity and `so much', and did not
+divide (it) according to `so much' and quantity, but according to the
+continuous and the discrete, which are never interchanged.
+
+They criticize also the fact that the division is {$\langle$}only{$\rangle$} into two. For
+as a third species after number and size he should have established
+weight or downward thrust, as Archytas and later Athenodorus
+and Ptolemaeus the mathematician did. But it should be stated that
+weight belongs to the category of Quality, like density and thickness
+and their contraries, which are determined according to their quality,
+not their quantity. But where would the mina and the talent, when
+spoken of as weights, be included? We shall certainly not claim that
+they belong in the category of prior quantities, but in that of {\em per
+accidens} quantities; for they are not {$\langle$}determined{$\rangle$} according to
+number or magnitude in an unqualified sense. But it should be noted
+that perhaps downward thrust is not a {\em per accidens} quantity in the
+way that white is, i.e. because the surface is a quantity, but is a
+quantity {\em per se}, because it admits {\em per se} the particular characteristic
+of Quantity, the equal and the unequal, just as other categories
+admit excess and deficiency. For I think we should pay attention to
+Archytas who also divides quantity in three ways. He writes as
+follows: `There are three differentiae of quantity: one of them consists
+of downward thrust, like the talent; one in magnitude, like a
+length of two cubits; and one in amount, like the number ten.'
+Iamblichus accepts this division, since it becomes the triad according
+to the most perfect measure of quantity, and since it is in harmony
+with realities. He writes: `For quantity in terms of downward thrust
+is not the same as size or amount, but is considered rather in the case
+of change, and possesses quantity in terms of weight or lightness.
+This division is left in the following state: ``Of quantities some have
+downward thrust, others do not''. It is clear that the division is not
+the same as that into the continuous and the discrete, or that into
+what has position and what does not. In the universe at large this
+division seems evident, as being into the four elements which have
+downward thrust, and the heavens which do not. In the case of
+changes movements in a straight line happen with downward
+thrust, having a beginning and an end, and as it takes place are
+marked off at intervals by rest, while circular movement is continuous,
+having no beginning and no end as if it were perpetual, and is
+without downward thrust. Such a difference is evident also in the case
+of bodiless quantities. For if someone were to posit the soul as a {\em per
+se} quantity, it will have downward thrust where it inclines towards
+the body, and upward thrust where it inclines away from the lower
+world towards the intelligible. But intellect is a quantity without
+gravity. Why then do we call the vocal intervals quantities, but the
+degrees of downward thrust not quantities?’
+
+In reply to Cornutus and Porphyry, who claim that downward
+thrust considered in terms of weight and lightness is quality, {$\langle$}Iamblichus{$\rangle$}
+says that downward thrust is not weight or lightness, but
+the measure of weight and lightness. `For by themselves heavy or
+light things would proceed to infinity if they had no boundary from
+within themselves; but when the force of gravity resulting from the
+measures produces a boundary and limit, it is then that they come to
+a good proportion.' These then are the problems concerning quantity
+in general, and their solutions.
+\end{quote}
+
+Simplicius, {\em in Cat.} 176 \cite[p.~31]{simpliciuscat7}:
+
+\begin{quote}
+He says: `it seems that relatives admit more and less', adding,
+`seems' not because they do not in fact admit them but only seem to,
+but because he is explaining an ancient doctrine. They admit more
+and less in terms of similarity; for that which partakes of the same
+form to a greater extent is more similar, and that which does so to a
+lesser extent is less similar. But similarity is among relatives. So
+much is clear. But why, instead of saying `also more and less unequal',
+did he say `more unequal to a greater or lesser extent'? For if `more
+unequal' is [the same as] `unequal' with the addition of `to greater
+extent', why did he say `more unequal to a greater or lesser extent'?
+The answer is that he introduced, on account of the rather unusual
+language, the word `unequal' together with the word `more'. Why then
+did he add `less'? Because the `more unequal' too allows for intension
+and remission, so that [a thing] can be more unequal to a greater
+or lesser degree. For we do say more similar to a greater or lesser
+degree when one thing is more similar than something else, and this
+more similar thing undergoes intension and remission.
+\end{quote}
+
+intension: {\em epitasis}, remission: {\em anesis}, latitude: {\em platos}
+
+Simplicius, {\em in Cat.} 178 \cite[pp.~32--33]{simpliciuscat7}:
+
+\begin{quote}
+`But', they
+would say, `no relationship admits of intension and remission; for [all
+relationships] are [directed] in the same way towards something else'.
+The answer is that they admit more and less not in so far as they are
+relationships or relative to something, but in so far as they are of such
+a kind and quality. `But', they say, `more and less are not observed
+only in the qualities themselves, but also in quantities, as in the equal
+and the unequal, the greater and the smaller'. The answer is that
+these are quantitative qualities, and intension and remission occur
+according to the quality. If anyone thinks that the double admits
+intension and remission because of the increase or decrease of the
+numbers in the same proportion, so as to think that the double in the
+case of $200:100$ is more than that in the case of $4:2$, he fails to realise
+that both in larger and smaller numbers the proportion is considered
+the same, as admitting neither intension and remission.
+\end{quote}
+
+Simplicius, {\em in Cat.} 284 \cite[pp.~145--146]{simpliciuscat7}:
+
+\begin{quote}
+There are four schools of thought concerning the intension and remission of qualities and qualified things. Some, for example Plotinus
+and other Platonists, declare that all qualities and qualified things admit more and less, because everything enmattered does -- so
+matter has more and less because of its connate indeterminacy. There is another doctrine over and against this which states that there is no more or
+less in the qualities themselves (such as justice
+and whiteness) since each is a whole and stands according to a single definition, and for that reason does not admit more and less; intension
+and remission are rather to be found in what participates, since participation involves latitude ({\em platos}) and some participate more, others less;
+that is why states themselves are thought to admit more and less, although it is the qualified thing that admits them. Aristotle seems to hint at this
+doctrine when he says: `one might wonder if
+one justice is said to be more so than another justice', and later: `one justice is in no way said to be more or less a justice than another\dots
+but things that are spoken of as qualified by them indisputably admit more [and less]; for one man is said to more literate, or more
+just, or more healthy, than another.' But when he says `so too with literacy and the other conditions',
+he lumped states and conditions together, just as he did a little earlier with qualities and things qualified.
+\end{quote}
+
+Simplicius, {\em in Cat.} 286 \cite[pp.~147--148]{simpliciuscat7}:
+
+\begin{quote}
+But why, they ask, is there such a difference of doctrine concerning intension and remission in qualities? The answer is that the cause of such a divergence of doctrines is the very account of Quality, what participates in it and what is compounded from it, since these have many differences among themselves and give rise to differing conceptions. For some think that the very account of Quality is fixed according to a single definition, while others think that it is fixed in some cases and not in others, and yet others that it is not fixed at all;
+for they say that it is enmattered and with matter, and is altered together with matter’s indeterminate nature. Others divide it, positing one immaterial account, and another material one. All these are divided over the question of the differentiae of Quality. In another way the difference in doctrine occurs in terms of what participates in
+and admits the account, when we say `partakes of' or `participates in' latitude, and that it participates more and less. A third difference would be the result of a combination of the two. For when two things combine, the predominance of the one over the other causes intension
+and remission; when the form prevails `the more' occurs, and when
+matter prevails, `the less' occurs. And when the form is predominant the account, being defined per se in a single form, is fixed; but when the recipient matter predominates, then there is alteration and internal change; when they are equally balanced, some of the parts are stable, others less stable -- and that is how the divergent doctrines
+emerge. After this overview of the schools it would be wise to examine each in detail.
+\end{quote}
+
+Simplicius, {\em in Cat.} 287 \cite[pp.~148--149]{simpliciuscat7}:
+
+\begin{quote}
+But what sort of conditions does Aristotle see as perfect other than
+those which are had? Does he mean separable forms such as Justice-itself? The answer is that this is not his usual way of thinking, nor is it in keeping with the matters in hand, nor would these be called dispositions. But having considered those that are participated in as
+perfect by reference to them, he wants those that are wanting in some
+way to admit greater and less. The more correct argument is that which in the case of all dispositions views the perfect in terms of the extreme, and the more and less in terms of participation in latitude.
+\end{quote}
+
+Aspasius, {\em in EN} 47--48 \cite[p.~48]{aspasius}:
+
+\begin{quote}
+That vice exists in excess and deficiency, but virtue is in the mean in respect to us, he tries to teach also through other arguments. He says that `erring is [possible] in many ways, but being correct in one only' (1106b28-31). That erring is [possible] in many ways the Pythagoreans too bear witness, when they say that evil is characteristic of the unlimited, `but the good is characteristic of the limited' (1106b30). This is why erring is easier: for it is possible for someone who is shooting to miss the target to the right and to the left and above it and below, but one does it correctly by hitting the target, and it is possible to hit the target in one way only. From this it is evident, then, that `excess and deficiency are characteristic of vice, whereas the mean is characteristic of virtue' (1106b33-4). For the mean is one, but excess and deficiency are two modes of vices. Further, in each excess it is possible to be excessive in many ways, if the excess is intensified and slackened; similarly in each deficiency, if the deficiency is less or more. But it is possible to be correct in one way only, in accord with the mean. For the
+mean is one, as has been said.
+\end{quote}
+
+Aspasius, {\em in EN} 50 \cite[p.~50]{aspasius}:
+
+\begin{quote}
+Arguing for the [proposition] that there is no mean at all in the
+above-mentioned actions, Aristotle moves on to wicked states, demonstrating
+from these what he has proposed. For just as there is no excess,
+deficiency, and mean concerning doing wrong and being dissolute and
+being cowardly, but the entire such state is in error, so too in the
+above-mentioned actions there is no excess, mean, or lack. It is inquired in what sense he said that there is no mean, excess, and deficiency concerning doing wrong and being cowardly. For if there are slackenings and intensifications in vices, there should be intensification and
+slackening in cowardice, and likewise in dissoluteness, and thus nothing prevents there being one excess greater than another excess
+and one deficiency greater than another deficiency. But excess and deficiency in
+vices are spoken of in two ways, one being in the vice itself such that one exceeds more than another and one is less by more than another,
+but excess and deficiency are spoken of in a different way as being in respect to the mean and virtue. According to the former of the ways
+mentioned, then, it is possible for one vice to be exceeded by another vice and to be more intensified or slackened, but to one who considers
+it in respect to the mean there is neither an excess nor a deficiency of an excess.
+`For thus there will be' (1107a20), he says, a kind of mean and virtue in vice itself; but this is impossible. According to this argument, then,
+there will neither be an excess of an excess nor a deficiency of a deficiency, so that there may not be means in vices.
+\end{quote}
+
+David the Invincible, {\em in Isag.} 21.8 \cite[p.~213]{david}:
+
+\begin{quote}
+Now what do we say? We say that one should put it like that: the difference
+means items without any range of variation, like a triangle and a quadrangle,
+for they are without any range of variation and do not admit the more and the
+less. Likewise is an Athenian, who is without range of variation does not admit
+the more and the less. Likewise the rational, being in a like manner always and
+without any range of variation, does not admit the more and the less. And if
+it has a range of variation, then it admits the more and the less. For white can
+also be more and less white; for this reason it admits the more and the less.
+\end{quote}
+
+Averroes, {\em Middle Commentaries on Aristotle's Categories}, para. 40: \cite[p.~47]{butterworth}, on 5a38--5b10:
+
+\begin{quote}
+These primary genera of quantity are the ones which are truly and primarily quantity. Anything other than them ascribed to quantity is only
+accidentally and secondarily said to be quantity--I mean, by means of one of these which we said were truly quantity. For example, we say that this
+designated whiteness is large because it is in a large surface. Similarly, we say that the task is long because of it taking a long time. This becomes
+evident when someone asks ``how extensive is this task,'' for the answer to that would be ``it is a year-long task.'' And if he were to ask ``how long is this white thing,'' it would be said ``three or four cubits long.'' So the task is limited and measured in terms of time, and the white thing is measured in terms of the scope of the plane--which is three or four cubits long.
+If they were quantities essentially, they would be meas?ured in terms of themselves.
+\end{quote}
+
+Averroes, {\em Middle Commentaries on Aristotle's Categories}, para. 70: \cite[pp.~63--64]{butterworth}, on 9a27--35:
+
+\begin{quote}
+He said: there is a third genus of quality, and it is the one which is spoken of as affective qualities and affections. The species of this are tastes--like the sweet and the bitter--and colors--like black and white--and
+tactile things--like heat, cold, moisture, and dryness. With all of these it is evident that they are such as to be qualities, for anything to which one of them is at? tributed may be asked about by using the particle ``how.'' For example, we would say ``how sweet is this honey'' and ``how white is this garment?'' And the reply would be that it is very sweet and very white or not very sweet or white.
+\end{quote}
+
+Averroes, {\em Middle Commentaries on Aristotle's Categories}, para. 71: \cite[p.~64]{butterworth}, on 9a36--9b8:
+
+\begin{quote}
+Now things like these are said to be affective qualities not because they occur in the things to which they are attributed by means of an affection, but be?cause they give rise to an affection in our senses. For example, the sweetness in honey and the bitterness in aloes are said to be affective qualities not because of an affection giving rise to sweetness in honey nor be?cause of an affection giving rise to bitterness in aloes, but because both of them give rise to an affection in the tongue. It is the same for heat and cold with the sense of touch.
+\end{quote}
+
+Averroes, {\em Middle Commentaries on Aristotle's Categories}, para. 78: \cite[pp.~66--67]{butterworth}, on 10a28--10b12:
+
+\begin{quote}
+He said: qualified things are those signified by names which signify the qualities themselves, that is,
+the primary paradigms. In the Greek language that comes about for most of them by means of derivation--like with ``white'' which is derived from the noun ``whiteness,'' ``eloquent''
+which is derived from the noun 	``eloquence,'' and ``just'' which is derived from the noun ``justice.'' For some exceptional ones, that is, those qual?ities taken apart from the subject, there are no names in Greek; so names for those qualities are derived in? sofar as they are in a subject. For example, the names they set down for things falling under what is said to occur by means of a natural faculty or not by means of a natural faculty are not derived from anything--like runner and boxer. For the names which signify these notions for them are not derived from ``running'' nor from ``boxing,'' as they are in the speech of the Arabs. Nor is it unusual to find verbs in the Arabic language which have no verbal nouns. However, in the Greek language it sometimes happens that there will be a name for a quality insofar as it is apart from a subject, and insofar as it is in a subject the name of that quality will be derived from another name. For example, they used to say ``diligent,'' not ``virtuous,'' when referring to virtue.
+\end{quote}
+
+Duns Scotus, {\em Questions on Aristotle's Categories}, Question 24, Art. 15 \cite[p.~205]{scotus}:
+
+\begin{quote}
+To the fourth argument, I say that it is one thing to receive
+greater and less, and another thing to receive more and
+less, since greater and less are said according to quantity; but
+more and less express the intension and remission in the form
+to which they are added. It must be conceded then that quantity
+receives greater and less, but not more {$\langle$}and less{$\rangle$}.
+\end{quote}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+Simplicius, {\em in Phys.} 864.18--23
+
+Plutarch, {\em De primo frigido}, {\em The Principle of Cold} 946d, Loeb LCL406, volume XII of {\em Moralia}, Cherniss and Hembold, pp.~233--235:
+
+\begin{quote}
+Besides, a negation does not permit degrees of
+less or more. Surely nobody will affirm that one blind man is blinder than another, or one dumb man more
+silent than another, or one corpse deader than its fellow ; but among cold things there is a wide range
+of deviation from much to little, from very cold to not
+very, and, generally speaking, in degrees of intensity
+and remission, just as there is in hot things. This
+occurs because the matter involved is in different cases acted upon by the opposing forces with more or less intensity ; it thus exhibits degrees of one or the other,
+and so of hot and cold. There is, in fact, no such
+thing as a blending of positive qualities with negative
+ones, nor may any positive force accept the assault of the negation that corresponds to it or take it into partnership ; instead it gives place to it. Now hot
+things do admit a blending with cold up to a point,
+just as do black with white, high notes with low, sweet
+tastes with sour ; and this harmonious association of colours and sounds, drugs and sauces, produces
+many combinations that are pleasant and grateful
+to the senses.
+\end{quote}
+
+Alexander, {\em in Metaph.} 418.19--22
+
+Avicenna, {\em Sufficientia} \cite{avicenna}
+
+Sextus {\em PH} II.40
+
+Averroes, {\em Middle Commentary on De generatione et corruptione}  \cite{kurland}
+
+Aquinas, {\em Summa Theologica} I-II, Q. 52, ``The increase of habits''.
+
+Aquinas, {\em in Metaph.} Art. 919, Lesson 12, on Aristotle 1018a9--1018b8:
+
+\begin{quote}
+Some things are like, then, for three reasons. (1) First, they undergo or suffer the same thing; for example, two pieces of wood which are consumed by fire can be said to be like. (2) Second, several things are like merely because they are affected or undergo something, whether this be the same or different; for example, two men, one of whom is beaten and the other imprisoned, are said to be like in that they both undergo something or suffer. (3) Third, those things are said to be like which have one quality; for example, two white things are alike in whiteness, and two stars in the heaven are alike in brightness or in power.
+\end{quote}
+
+Aquinas, {\em in Metaph.} Art. 928, Lesson 12, on Aristotle 1018a9--1018b8:
+
+\begin{quote}
+For some things are contraries either because they actually possess contraries, as fire and water are called contraries because one is hot and the other cold; or because they are the potential recipients of contraries, as what is receptive of health and of disease; or because they are potentially causing contraries or undergoing them, as what is capable of heating and of cooling, and what is able to be heated and to be cooled; or because they are actually causing contraries or undergoing them, as what is heating and cooling or being heated and being cooled; or because they are expulsions or rejections or acquisitions of contraries, or even possessions or privations of them. For the privation of white is the opposite of the privation of black, just as the possession of the former is the opposite of that of the latter.
+\end{quote}
+
+Aquinas, {\em in Caelo}, Book I, Lecture 25, Art. 249:
+
+\begin{quote}
+249. To explain the first [180] he says that if a thing is capable of something great, for example, if a man can walk 100 stades or can lift a great weight, we always determine or describe his power in terms of the most he can do. For example, we say that the power of this man is that he can lift a weight of 100 talents or can walk a distance of 100 stades, even though he is capable of all the partial distances included in that quantity, since he can do what exceeds. But his power is not described by these parts -- we do not determine his power as being able to carry 50 talents or walk 50 stades, but by the most he can do. Consequently, the power of each thing is described with respect to the end, i.e., with respect to the ultimate, and to the maximum of which it is capable, and with respect to the strength of its excellence. Thus, too, the size of a thing is determined by what is greatest -- for example, in describing the size of something that is three cubits, we do not say that it is two cubits. Similarly, we assign as the notion of man that he is rational, not that he is sensible, because what is the ultimate and greatest in a thing is what completes it and puts upon it the stamp of its species.
+
+Consequently, it is plain that one who can do what exceeds, necessarily can do what is less. For example, if a person can carry 100 talents, he can also carry two, and if he can walk 100 stades, he can also walk two; yet it is to what is excelling that the virtue of a thing is attributed, i.e., the virtue of a thing is gauged in terms of what is most excellent of all the things that can be done.
+
+This is what is said in another translation, ``the virtue is the limit of a power,'' because, namely, the virtue of a thing is determined according to the ultimate it can do. And this applies also to the virtues of the soul: for a human virtue is that through which a man is capable of what is most excellent in human actions, i.e., in an action which is in accordance with reason.
+
+250. Then at [181] he tells how something is said to be ``impossible'' to a thing. And he says that if some amount is impossible to someone if one takes what excels, it is plain that it will be impossible for him to carry or do more. For example, a person who cannot walk 100 stades clearly cannot walk 101. Hence, it is plain that just as the possibility is determined by the greatest that a thing can do -- which determines its virtue -- so what is impossible is determined by the least that it cannot do, and this determines its weakness. For example, if the most that someone can do is to go 20 stades, the least that he cannot go is 21 -- and it is from this that his weakness is to be determined, and not from his inability to walk 100 or 1,000 stades.
+\end{quote}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Aristotle, {\em Physics} III.6, 206a9--b27 \cite[pp.~105--107]{aristotle}:
+
+\begin{quote}
+On the other hand it is clear that, if an infinite does not exist
+at all, many impossibilities arise: time will have some beginning
+and end, magnitudes will not be divisible into magnitudes, and
+number will not be infinite. If therefore, when the case has been
+set out as above, neither view appears to be admissible, we need an
+arbitrator; clearly there is a sense in which the infinite exists and
+another sense in which it does not.
+
+Being means either being potentially, or being actually, and the
+infinite is possible by way of addition as well as by way of division
+(reading \textgreek{diair\'esei}). Now, as we have explained, magnitude is never
+actually infinite, but it is infinite by way of division -- for it is not
+difficult to refute the theory of indivisible lines -- the alternative
+that remains, therefore, is that the infinite exists potentially. But
+in what sense does it exist potentially? You may say, for example,
+that a given piece of material is potentially a statue, because it will
+(sometime) be a statue. Not so with something potentially infinite:
+you must not suppose that it will be actually infinite. Being has
+many meanings, and we say that the infinite ``is'' in the same sense
+as we say ``it is day'' or ``the games are on'', namely in virtue of
+one thing continually succeeding another. For the distinction 
+between ``potentially'' and ``actually'' applies to these things too:
+there {\em are} Olympian games both in the sense that the contests may
+take place and that they do take place.
+
+It is clear that the infinite takes different forms, as in time, in
+generations of men, and in the division of magnitudes. For, 
+generally speaking, the infinite is so in the sense that it is again and again
+taking on something more, this something being always finite, but
+different every time. In the case of magnitudes, however, what is
+taken on during the process stays there; whereas in the case of time
+and generations of men it passes away, but so that the source of
+supply never gives out.
+
+The infinite by way of addition is in a manner the same as the
+infinite by way of division. Within a finite magnitude the infinite
+by way of addition is realized in an inverse way (to that by way of
+division); for, as we see the magnitude being divided {\em ad infinitum},
+so, in the same way, the sum of the successive fractions when added
+to one another (continually) will be found to tend towards a 
+determinate limit. For if, in a finite magnitude, you take a determinate
+fraction of it and then add to that fraction in the same ratio, and
+so on [i.e. so that each part has to the preceding part the same ratio
+as the part first taken has to the whole], but {\em not} each time including
+(in the part taken) one and the same amount of the original whole,
+you will not traverse (i.e. exhaust) the finite magnitude. But if you
+increase the ratio so that it always includes one and the same
+magnitude, whatever it is, you will traverse it, because any finite
+magnitude can be exhausted by taking away from it continually any
+definite magnitude however small. In no other sense, then, does the
+infinite exist; but it does exist in this sense, namely potentially and
+by way of diminution. In actuality it exists only in the sense
+in which we say ``it is day'' or ``the games are on'', and potentially
+it exists in the same way as matter, but not independently as the
+finite does. Thus we may even have a potentially infinite by way of
+addition of the kind we described, which, as we say, is in a certain
+way the same as the infinite by way of division; it can always take
+on something outside (the total for the time being), but the total
+will never exceed every determinate magnitude (of the same kind)
+in the way that, in the direction of division, it passes every 
+determinate magnitude in smallness, and becomes continually smaller
+and smaller. But in the sense of exceeding every (magnitude) by
+way of addition, the infinite cannot exist even potentially, unless
+there exists something actually infinite, but only incidentally so,
+infinite, that is, in the sense in which natural philosophers declare
+the body outside the universe to be infinite, whether its substance
+be air or anything else of the kind. But if it is not possible that there
+can be a sensible body actually infinite in this sense, it is manifest
+that neither can there be such a body which is even potentially
+infinite by way of addition, save in the sense which we have described
+as the reverse of the infinite by way of division.
+\end{quote}
+
+Aristotle, {\em Physics} III.7, 207a33 \cite[p.~110]{aristotle}:
+
+\begin{quote}
+It is after all only reasonable that it should be thought that by
+way of addition there is not an infinite such as to exceed every
+magnitude but that by way of division there is. For the infinite,
+like the matter (of a thing), is contained inside (what contains it)
+and what contains both is the form.
+
+Reasonable too it is that in number there is a limit in the direction
+of the minimum, while in the direction of increase it may exceed
+any number assigned from time to time, but that in the case of
+magnitudes, on the contrary, it is possible to surpass any magnitude
+in the direction of smallness, while in the direction of increase there
+is no infinite magnitude. The reason is that the One is indivisible
+whatever it may be that is one; for example, a man is one man and
+not many; but a number is several ``ones'' or a certain quantity of
+them. Hence number must stop at the indivisible; two and three
+are derivative words, and so is every other number. But in the
+direction of ``more'' we can always think of a greater number. The
+possible bisections of a magnitude are infinite in number; this
+infinite is potential, not actual, but you can always assume a number
+(of such bisections) exceeding any assigned number. But this number
+is not separable from the process of bisection, and its infinity is not
+a stationary one but it is in process of coming to be, like time and
+the number of time.
+
+With magnitudes the contrary is the case; for the continuous
+magnitude is divisible {\em ad infinitum}, but in the direction of increase
+there is no infinite. Whatever its size potentially, that size it can be
+actually; hence, since there is no sensible magnitude that is infinite, it
+is not possible to have an excess over every determinate magnitude;
+if it were, there would have to be something greater than the universe.
+\end{quote}
+
+Aristotle, {\em Physis} VIII.10, 266a24--b6 \cite[p.~153]{aristotle}:
+
+\begin{quote}
+And the general proposition that a finite magnitude cannot
+possess an infinite force is clear from the following considerations.
+Let us assume that it is always the greater force that produces an
+equal effect in less time, in heating, for example, or sweetening, or
+throwing, or generally in moving anything. Then that which is
+acted on must be affected in some way by the finite magnitude
+which we have supposed to possess infinite force, and that to a
+greater extent than it would be by anything else, for the infinite
+force is greater than any other. In that case the time taken must be
+no time at all. For let $A$ be the time taken by the infinite force in
+warming or thrusting the object acted on, and let $A+B$ be the time
+in which some finite force does the same; then, if I make this finite
+force greater and greater by continually adding another finite force,
+I shall sometime arrive at the point of having completed the motion
+in the time $A$, for if I add continually to a limited magnitude, I shall
+at length exceed any assigned magnitude whatever, and if I 
+continually subtract from it, I shall similarly make it fall short of any
+assigned magnitude. Therefore, the finite force will move the object
+in the same time as the infinite force does. But this is impossible;
+therefore nothing finite can possess infinite force.
+\end{quote}
+
+Aristotle, {\em De caelo} I.1, 268a4--13 \cite[p.~159]{aristotle}:
+
+\begin{quote}
+Of things constituted by nature some are bodies and magnitudes, some possess body and magnitude, and some are the principles of
+ things which possess these.
+That is {\em continuous} which is divisible into parts continually divisible and that which is divisible every way is body. Of magnitude that which (extends)
+one way is a line, that which (extends) two ways a plane, and that which (extends) three ways a body. And there is no magnitude besides these, because
+the three dimensions are all that there are, and thrice extended means extended all ways. For, as the Pythagoreans say, the All and all things
+in it are determined by three things; end, middle, and beginning give the number of the All, and these give the number of the Triad.
+\end{quote}
+
+Aristotle, {\em Posterior Analytics} I.5, 74a16 \cite[p.~41]{aristotle}
+
+\begin{quote}
+And, if there had been no triangle but an isosceles triangle, the
+property that its angles are together equal to two right angles would
+have been thought to belong to it {\em qua} isosceles. Another case is the
+theorem about proportion, that you can take the terms alternately
+(i.e. {\em alternando}); this theorem used at one time to be proved
+separately for numbers, for lines, for solids, and for times, though it
+admitted of proof by one demonstration. But because there was no
+name comprehending all these things as one, I mean numbers,
+lengths, times, and solids, which differ in species from one another,
+they were treated separately. Now, however, the proposition is
+proved universally; for the property did not belong to the subjects
+{\em qua} lines or {\em qua} numbers, but {\em qua} having a particular character
+which they are assumed to possess universally.
+\end{quote}
+
+Heath writes \cite[p.~44]{aristotle}:
+
+\begin{quote}
+Aristotle does not say what general term was used in his time to
+cover the four categories of things; possibly no term had yet been
+definitely agreed upon, for he merely observes that the common
+character was `a certain something which ``they'' assume to inhere
+universally'.
+If he had 
+suggested a term, it would presumably have been \textgreek{pos\'on}, quantity,
+{\em how much}; for in the {\em Categories} he says that quantity may be either
+discrete or continuous, and sometimes it is made up of parts having
+a position relative to one another in space, sometimes of parts having
+no local relation, while, as examples of the discrete, he mentions
+number and ratio, and, as examples of the continuous, line, surface,
+body, and again, besides these, time and space. Philoponus, too,
+speaks of the unknown general term as being possibly \textgreek{pos\'on}
+(`whether it is \textgreek{pos\'on} or anything else whatever'). Themistius in his
+paraphrase suggests no name. Euclid, of course, uses the term
+`magnitudes' (\textgreek{meg\'ejh}); and this may have been his personal 
+contribution to the terminology.
+\end{quote}
+
+Aristotle, {\em Posterior Analytics} I.7, 75b1 \cite[pp.~44--45]{aristotle}
+
+\begin{quote}
+You cannot therefore when proving a thing pass from one genus
+to another; e.g. you cannot prove a geometrical proposition by
+arithmetic. For the things required in demonstrations are three:
+(1) the conclusion that is being demonstrated, (2) the axioms -- it
+is the axioms from which (the proof starts), (3) the underlying genus
+or subject-matter, the properties and essential attributes of which
+are made clear by the demonstration. Now the things from which
+the proof starts (the axioms) may be the same (whatever the subject);
+but where the genus is different, say in arithmetic and geometjy,
+it is not possible to apply the arithmetical demonstration to the
+properties of magnitudes unless the magnitudes are numbers. There
+are, however, cases where such transfer is possible as will be 
+explained hereafter.
+\end{quote}
+
+Heath writes \cite[p.~45]{aristotle}:
+
+\begin{quote}
+When Aristotle says that you cannot use arithmetic to prove
+the properties of magnitudes `unless the magnitudes are numbers'
+he does not express an opinion whether magnitudes can be numbers,
+but the probabilities are that he would not include numbers among
+magnitudes. Magnitude with Aristotle is generally connected with
+{\em body}; it has one, two, or three dimensions, it is `continuous one,
+or two, or three ways'; `all body has depth, this being the third
+(kind of) magnitude'; i.e. a magnitude is a line, a plane, or a body;
+two magnitudes cannot be in the same place; cf. `If it is not possible
+that any magnitude can be invisible, but every magnitude is visible
+at a certain distance'. Magnitude in fact corresponds to one of the
+two divisions of {\em quantity}, \textgreek{pos\'on}, namely the continuous (as a line,
+a surface, or a body), whereas a number is {\em discrete}.
+\end{quote}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Aristoxenus, {\em Elementa Harmonica}. Pitch is a continuum and notes are points on pitch. The relations between notes are ``distances''
+or ``intervals'', {\em diastemata}; Barker 4.
+
+Aristoxenus \cite[p.~127]{GMWII}
+
+{\em Sectio Canonis}, notes are entities one of whose attributes, pitch, varies quantiatively and can be expressed
+in magnitudes. Intervals are ratios of magnitudes or numbers. Barker \cite[p.~7]{GMWII}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Aristotle, {\em Metaphysics} V.13, 1020a \cite{metaphysica}:
+
+\begin{quote}
+`Quantum' means that which is divisible into two or more constituent parts of which each is by nature a `one'
+and a `this' . A quantum is a plurality if it is numerable,
+a magnitude if it is measurable. `Plurality' means that which is divisible potentially into non-continuous parts,
+`magnitude' that which is divisible into continuous parts; of magnitude, that which is continuous in one dimension is length, in two breadth, in three depth. Of these, limited plurality is number, limited length is a line, breadth a surface, depth a solid.
+
+Again, some things are called quanta in virtue of their
+own nature, others incidentally; e.g. the line is a quantum by its own nature, the musical is one incidentally. Of the things that are quanta by their own nature some are so as 
+substances, e.g. the line is a quantum (for a `certain kind of quantum' is present in the definition which states what it is), and others are modifications and states of this kind of substance, e.g. much and little, long and short, broad and 
+narrow, deep and shallow, heavy and light, and all other such attributes. And also great and small, and greater and smaller, both in themselves and when taken relatively to each other, are by their own nature attributes of what is quantitative; but these names are transferred to other things also. Of things that are quanta incidentally, some are so called in
+the sense in which it was said that the musical and the white were quanta, viz. because that to which musicalness and whiteness belong is a quantum, and some are quanta in the way in which movement and time are so; for these also are
+called quanta of a sort and continuous because the things of which these are attributes are divisible. I mean not that which is moved, but the space through which it is moved; for because that is a quantum movement also is a quantum, and because this is a quantum time is one.
+\end{quote}
+
+Aristotle, {\em Metaphysics} IX.1 \cite{metaphysica}:
+
+\begin{quote}
+Obviously, then, in a sense the potency of acting and of being acted on is one (for a thing may be `capable' either because it can itself be acted on or because something else can be acted on by it), but in a sense the potencies are different. For the one is in the thing acted on; it is because it contains a certain originative source, and because even the matter is an originative source, that the thing acted on is acted on, and one thing by one, another by another; for that which is oily can be burnt, and that which yields in a particular way can be crushed; and similarly in all other cases. But the other potency is in the agent, e.g. heat and the art of building are present, one in that which can produce heat and the other in the man who can build. And so, in so far as a thing is an organic unity, it cannot be acted on by itself; for it is one and not two different things. And `impotence'and `impotent' stand for the privation which is contrary to potency of this sort, so that every potency belongs to the same subject and refers to the same process as a corresponding impotence. Privation has several senses; for it means (1) that which has not a certain quality and (2) that which might naturally have it but has not it, either (a) in general or (b) when it might naturally have it, and either (a) in some particular way, e.g. when it has not it completely, or (b) when it has not it at all. And in certain cases if things which naturally have a quality lose it by violence, we say they have suffered privation. 
+\end{quote}
+
+Aristotle, {\em Metaphysics} XI.4, 1061b \cite{metaphysica}:
+
+\begin{quote}
+Since even the mathematician uses the common axioms only in a special application, it must be the business of first philosophy to examine the principles of mathematics also.
+That when equals are taken from equals the remainders are equal, is common to all quantities, but mathematics  studies a part of its proper matter which it has detached, e.g. lines or angles or numbers or some other kind of quantity -- not, however, {\em qua} being but in so far as each of them is continuous in one or two or three dimensions; but 
+philosophy does not inquire about particular subjects in so far as each of them has some attribute or other, but speculates about being, in so far as each particular thing {\em is}.--
+\end{quote}
+
+Aristotle, {\em Metaphysics} XIII.3, 1077b--1078a \cite{metaphysica}:
+
+\begin{quote}
+It has, then, been sufficiently pointed out that the objects of mathematics are not substances in a higher degree than
+bodies are, and that they are not prior to sensibles in being, but only in definition, and that they cannot exist somewhere apart. But since it was not possible for them to exist {\em in} sensibles either, it is plain that they either do not exist at all or exist in a special sense and therefore do not exist without qualification. For `exist' has many
+senses. For just as the universal propositions of mathematics
+deal not with objects which exist separately, apart from extended magnitudes and from numbers, but with magnitudes and numbers, not however {\em qua} such as to have magnitude or
+to be divisible, clearly it is possible that there should also be both propositions and demonstrations about sensible
+magnitudes, not however {\em qua}  sensible but {\em qua}  possessed of certain definite qualities.
+For as there are many propositions about things merely considered as in motion, apart from what each such thing is and from their accidents, and as it is not therefore necessary that there should be either a mobile separate from sensibles, or a distinct mobile entity in the sensibles, so too in the case of mobiles there will be propositions and sciences, which treat them however
+not {\em qua}  mobile but only {\em qua}  bodies, or again only {\em qua}  planes, or only {\em qua}  lines, or {\em qua}  divisibles, or {\em qua}  indivisibles having position, or only {\em qua}  indivisibles. Thus since
+it is true to say without qualification that not only things
+which are separable but also things which are inseparable exist (for instance, that mobiles exist), it is true also to say without qualification that the objects of mathematics exist, and with the character ascribed to them by mathematicians.
+And as it is true to say of the other sciences too, without
+qualification, that they deal with such and such a subject
+not with what is accidental to it (e.g. not with the pale, if
+the healthy thing is pale, and the science has the healthy as its subject), but with that which is the subject of each
+science with the healthy if it treats its object {\em qua} healthy, with man if {\em qua} man :-- so too is it with geometry; if its
+subjects happen to be sensible, though it does not treat them {\em qua} sensible, the mathematical sciences will not for that reason be sciences of sensibles nor, on the other
+hand, of other things separate from sensibles. 
+Many properties attach to things in virtue of their own nature as possessed of each such character; e.g. there are attributes peculiar to the animal  {\em qua} female or  {\em qua} male (yet there is no female nor male separate from animals); so that there are also attributes which belong to things
+merely as lengths or as planes. 
+And in proportion as we
+are dealing with things which are prior in definition and
+simpler, our knowledge has more accuracy, i.e. simplicity. Therefore a science which abstracts from spatial magnitude
+is more precise than one which takes it into account; and a science is most precise if it abstracts from movement, but if it takes account of movement, it is most precise if it deals with the primary movement, for this is the simplest; and of this again uniform movement is the simplest form.
+\end{quote}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Walter of Odington was an English Benedictine active around 1280--1330 who wrote the alchemical work
+{\em Icocedron} (having twenty chapters). In chapter 20 of the {\em Icocedron} \cite[p.~334]{odington}:
+  
+\begin{quote}
+Similar qualities are remitted according to minutes but remain in the degree of the more intense. Contrary qualities are remitted according to degrees and are named by the quality
+which is greater in degree. Weakening qualities hold their more intense powers according to the degree and return to degrees the more remiss according to minutes. Augmenting
+qualities advance the more remiss according to minutes and retain the proper degree. A degree is the excess of any notable quality above the mean by a distance of
+60 minutes. Quantity does not augment the degree intensively but only extensively in similar qualities, for such is the intensive heat in one handful of fire that it is the same in
+ the whole sphere. Nevertheless, in contrary qualities, quantity changes the degree so that two hot to one cold in the same degree makes it hot in the first degree.
+ Four hot to one cold, hot in the second degree. Eight hot to one cold, hot in the third degree. Sixteen hot to 
+ one cold, hot in the fourth degree. And so a notable change always has to be considered according to the thing doubled, so that if it is doubled by the operation to the first 
+ degree it will be quadrupled by comparison to the mean, and so with the others. The calcination of the qualities is evident in the following table of similar remitting
+ qualities, of contrary qualities, of weakening qualities, [and] augmenting qualities.
+ \end{quote}
+
+Skabelund and Thomas \cite[p.~336]{odington}:
+
+\begin{quote}
+In the main body of Odington's text it becomes clear that he regards qualities as `saturating' at four degrees, which is in accord
+with the medico-alchemical tradition. Evidently the idea was that nothing is hotter than elemental fire, dryer than elemental earth, more humid than air (strangely), or colder than water,
+these maxima being set arbitrarily at four degrees.
+\end{quote}
+
+
+
+
+
+
+
+
+
+
+
+
+McVaugh \cite[pp.~89--122]{villanovaII} writes about the significance of medieval pharmacy in
+medieval natural philosophy; 145, 157, 158, 196, 292.
+Arnaldi de Villanova Opera medica omnia: Aphorismi de gradibus
+
+Canonical Medicine: Gentile Da Foligno and Scholasticism, Roger Kenneth French
+
+The Alphabet of Galen: Pharmacy from Antiquity to the Middle Ages, Nicholas Everett
+
+
+
+
+
+
+
+
+Marenbon \cite[p.~153]{marenbon1} quotes Gilbert Crispin's (ca.~1045--1117/18) {\em De anima}, which Marenbon dates as probably from the 1090's:
+
+\begin{quote}
+One and the same soul exists
+entire in the various parts and pieces of the human body. There is not more of it in a large part [of the body] or less of it in a smaller part, because everywhere [in the body]
+it remains one in number.
+\end{quote}
+
+
+
+
+
+
+
+
+
+
+
+Peter Lombard's {\em Sentences} was a theological casebook, and scholastic writings often were commentaries on questions or problems from the {\em Sentences}.
+Lombard, {\em Sentences} book I, distinction 17, chapter 5, question 1 \cite[p.~146]{sentences}, \cite[p.~92]{silano1}:
+
+\begin{quote}
+{\em Utrum concedendum sit quod Spiritus Sanctus augeatur in homine et magis vel minus habeatur vel detur.}
+
+Whether it is to be granted that the Holy Spirit may be increased in a person and be had or given to a greater or lesser degree.
+\end{quote}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Maier \cite[pp.~279--280]{maierIII}
+
+
+
+
+
+
+
+
+
+
+
+
+
+Oresme's commentary on Aristotle's {\em De generatione et corruptione} \cite[p.~63, note~18]{clagett1968}.
+
+
+
+
+
+
+
+
+
+
+
+
+
+In his discussion of chapter V, ``De maximo et minimo'', of  Heytesbury's {\em Regule solvendi sophismata},
+Wilson \cite[p.~83]{wilson} explains:
+
+\begin{quote}
+If the latitude is difformly difform in such manner that each part of it is uniform, then each uniform part of the latitude contributes to the intensity of the whole
+in proportion to the amount of the subject (a body or length of time) over which it extends; for example, if the whiteness which extends over one-third of a body
+has an intensity of 2 degrees, and the whiteness of the remainder an intensity of 6 degrees, the intensity of the whole latitude is $2(1/3)+6(2/3)=\frac{14}{3}$, or four
+and two-thirds.
+\end{quote}
+
+Galen, {\em De differentiis febrium libri II} VII.275
+
+Galen, {\em Tegni} 4, 316K--317K \cite[pp.~173--175]{LCL523}:
+
+\begin{quote}
+And the range of health as a whole will be divided into
+three parts, which themselves have considerable range.
+The first part will be that of healthy bodies, the second
+that of neither, and the third that of diseased bodies.
+\end{quote}
+
+range: {\em platos}
+
+Galen, {\em De Temperamentis} 2.4, K\"uhn I.
+
+Galen talked about whether old age is naturally wet or dry
+and whether children are hotter than adults. 
+Galen asserts that, ``children exude more moist heat, while those in their prime exhibit less of a dry, sharp heat;
+and this can be determined only by long tactile practice'' \cite[p.~221]{hankinson}. Hankinson \cite[pp.~221--222]{hankinson} writes the following:
+\begin{quote}
+Here Galen is groping towards two important distinctions: between temperature and quantity of heat, and between temperature and experienced heat.
+But he lacks the tools, both conceptual and physical, to make them properly rigorous. Here, as elsewhere,
+Galen must rely on qualitative distinctions refined as far as possible by practice. At {\em On the Composition of Drugs according to Places} ({\em Comp.Med.Loc.}) XII 2--4, Galen distinguishes four different, empirically determined degrees of qualitative power, in another domain where absolute precision is unobtainable: the determination of the powers of various drugs. Take heating: the first degree is discovered by reason alone, since it is by definition subperceptible; the second is when the heat is plain to the touch, the third what heats vigorously without burning, and finally there is the heat that actually burns; and the same goes, {\em mutatis mutandis}, for the other properties. Drugs and foodstuffs are categorized according to their potential causal powers rather than their actual tactile properties, just as wood, being inflammable, is potentially hot even when it is not burning.
+\end{quote}
+
+Aetius of Amida, {\em  Libri medicinales}, {\em Preface} to Book I \cite[pp.~224--225]{scarborough}:
+
+\begin{quote}
+The variations of the individual effects of drugs are
+due to each of them being to a certain sufficiency [{\em t\={o}
+epi tosonde}: ``to a certain degree'' is the modern expression]
+hot or cold or dry or wet, or each having fine [or
+``small''] or coarse [or ``large''] particles [or ``parts''].
+The extent/measure of the degree, however, of the attachments
+[lit. ``fastenings-together''] in each of the
+drugs cannot be expressed with truthful accuracy. But
+we have attempted to encompass and characterize them
+with adequately clear terms and definitions for use in
+medical practice [{\em eis t\={e}n cheian t\={e}s techn\={e}s}]. We are
+demonstrating that there is one kind [{\em hen genos}] of drugs
+which is [{\em aphiknoumenon}: lit. ``arriving at'' or ``coming
+into''] a same {\em krasis} as our bodies, when it has received
+some {\em arch\={e}} of both change and alteration [{\em alli\={o}sis}] from
+the hot in this kind of drugs, and, that there is another
+kind of drugs which is hotter. From this, it seems to
+me that four orders [{\em taxeis}] can be made: the first is
+indistinct [{\em asaph\={e}}] to the senses, [and] detecting it necessarily
+comes through pure reason [{\em logos}]; the second
+is distinct and perceivable to the senses; the third is
+rather hot, but not to the point of burning; the fourth
+and last is the corrosive or caustic kind of drugs.
+Likewise also for the cooling kind of drugs, the first
+order must come from pure reason in demonstrating
+its coldness, the second is cooling detectable by the
+senses, the third is rather cold, and the fourth causes
+necrosis. Analogous in these definitions are also the
+wetting and drying drugs.
+\end{quote}
+
+Jabir ibn Hayyan, {\em Kitab Al-Ahjar} \cite{jabir}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{\em De generatione et corruptione} \cite{williams}, II 334b8--16
+
+{\em De caelo} I.11, 273a22--27, 281a1--17, 281a18--27, 311a15--20
+
+{\em Physics}, 5.2 (226b), 6.5, 7.3, 8.8
+
+Philoponus, {\em in GC} 146 \cite[p.~48]{philoponus16}, on 324a14
+
+Philoponus, {\em in Phys.}
+
+Themistius, {\em in Phys.} \cite{themistius58}
+
+Simplicius, {\em in Caelo} \cite[pp.~32--36]{simpliciuscaelo110}
+
+Simplicius, {\em in Phys.}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Peter of Spain, {\em Summaries of Logic} 3.12 \cite[p.~157]{copenhaver}:
+
+\begin{quote}
+Also, substance
+does not take more and less. My point, however, is not that one substance is not more
+underlying than another; my point is that each and every substance, regarding its own
+being, is neither strengthened nor weakened, as when white is sometimes more white
+and sometimes less. But Sortes is not more a man at one times than at another, nor is he
+more a man than Plato.
+\end{quote}
+
+
+
+
+
+
+
+
+
+
+
+Campanus, {\em Elements} I, Definition ii \cite[p.~55]{campanusI}:
+
+\begin{quote}
+Linea est longitudo sine latitudine,
+\end{quote}
+
+
+
+
+
+
+
+\bibliographystyle{amsplain}
+\bibliography{latitude}
+
+\end{document}

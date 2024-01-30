@@ -1,0 +1,337 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\HS}{\ensuremath\mathrm{HS}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}}
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Hilbert transform on $\mathbb{R}$}
+\author{Jordan Bell}
+\date{April 24, 2016}
+
+\maketitle
+
+
+\section{The principal value integral}
+Let $A_\epsilon=\{x \in \mathbb{R}: |x| \geq \epsilon\}$. For $f \in \bigcap_{\epsilon>0} L^1(A_\epsilon)$, 
+if $\int_{A_\epsilon}  f(x) dx$ has a limit as $\epsilon \to 0$, we denote it by
+\[
+PV \int_{\mathbb{R}} f(x) dx = \lim_{\epsilon \to 0} \int_{|x| \geq \epsilon} f(x) dx.
+\]
+
+Let $\mathscr{S}$ be the collection of Schwartz functions $\mathbb{R} \to \mathbb{C}$ and let
+$\mathscr{S}'$ be its dual space, whose elements are called tempered distributions.
+For $\phi \in \mathscr{S}$, for $k>j$,
+\begin{align*}
+\left| \int_{A_{1/j}}  \frac{\phi(x)}{x} dx - \int_{A_{1/k}} \frac{\phi(x)}{x} dx\right|&=\left| \int_{1/k \leq |x| < 1/j} \frac{\phi(x)}{x} dx \right|\\
+&=\left| \int_{1/k \leq |x| < 1/j} \frac{\phi(x)-\phi(0)}{x} dx \right|\\
+&\leq \int_{1/k \leq |x| < 1/j} \norm{\phi'}_b\\
+&=\norm{\phi'}_b\ \cdot \left( \frac{1}{j}-\frac{1}{k} \right)\\
+&=\norm{\phi'}_b\ \cdot \frac{k-j}{kj}\\
+&\leq \frac{\norm{\phi'}_b}{j}.
+\end{align*}
+Therefore $\int_{A_{1/j}} \frac{\phi(x)}{x} dx$ is a Cauchy sequence in $\mathbb{C}$ and hence
+converges.
+Then the following limit exists:
+\[
+\inner{\phi}{W}=PV \int_{\mathbb{R}} \frac{\phi(x)}{x} dx = \lim_{\epsilon \to 0} \int_{|x| \geq \epsilon} \frac{\phi(x)}{x} dx.
+\]
+It is apparent that $W:\mathscr{S} \to \mathbb{C}$ is linear, and
+one proves that
+$W \in \mathscr{S}'$.
+
+
+For $\phi \in \mathscr{S}$,
+by Hadamard's lemma, there is a $C^\infty$ function $\psi:\mathbb{R} \to \mathbb{C}$ such that
+$\phi(x)=\phi(0)+x \psi(x)$ for all $x$. For $\epsilon>0$,
+\begin{align*}
+\int_\epsilon^1 \phi'(x) \log x dx&=x \psi(x) \log x \bigg|_\epsilon^1 - \int_\epsilon^1 (\phi(x)-\phi(0)) \frac{1}{x} dx\\
+&=-\epsilon \psi(\epsilon) \log \epsilon - \int_\epsilon^1 \frac{\phi(x)}{x} dx - \phi(0) \log \epsilon
+\end{align*}
+and
+\begin{align*}
+\int_{-1}^{-\epsilon} \phi'(x) \log|x| dx&=x \psi(x) \log(-x) \bigg|_{-1}^{-\epsilon} - \int_{-1}^{-\epsilon} (\phi(x)-\phi(0)) \frac{1}{x} dx\\
+&=-\epsilon \psi(-\epsilon) \log \epsilon - \int_{-1}^{-\epsilon} \frac{\phi(x)}{x} dx 
++\phi(0) \log \epsilon.
+\end{align*}
+Hence
+\[
+\int_{\epsilon \leq |x| \leq 1} \phi'(x) \log |x| dx = -\epsilon \cdot (\psi(\epsilon)+\psi(-\epsilon)) \cdot \log \epsilon - 
+\int_{\epsilon \leq |x| \leq 1} \frac{\phi(x)}{x} dx.
+\]
+On the other hand,
+\[
+\int_{|x| \geq 1} \phi'(x) \log |x| dx = - \int_{|x| \geq 1} \frac{\phi(x)}{x} dx.
+\]
+Therefore
+\[
+PV  \int_{\mathbb{R}} \phi'(x) \log |x| dx = - PV \int_{\mathbb{R}} \frac{\phi(x)}{x} dx.
+\]
+
+
+
+Let $\mu \phi(x)=\phi(-x)$ and $\tau_y \phi(x)=\phi(x-y)$.
+Then
+\[
+\tau_y \mu \phi(x) = \mu \phi(x-y) = \phi(y-x) = \tau_x \phi(y).
+\]
+Write
+\begin{align*}
+\phi * \psi(x) &= \int_{\mathbb{R}} \phi(y) \psi(x-y) dy\\
+&=\int_{\mathbb{R}} \phi(y) (\tau_y \psi)(x) dy\\
+&=\int_{\mathbb{R}} \phi(y) (\tau_x \mu \psi)(y) dy.
+\end{align*}
+
+For $u \in \mathscr{S}'$
+and for $\phi \in \mathscr{S}$, define
+$\phi * u:\mathbb{R} \to \mathbb{C}$ by
+\[
+(\phi * u)(x) = \inner{\tau_x \mu \phi}{u}.
+\]
+One  proves that $\phi*u$ is a tempered distribution, and satisfies
+\[
+\inner{\psi}{\phi*u} = \inner{(\mu \phi)*\psi}{u}.
+\]
+
+
+Define $\tau_x u \in \mathscr{S}'$ by
+\[
+\inner{\phi}{\tau_x u} = \inner{\tau_{-x} \phi}{u}.
+\]
+
+
+
+
+\section{The Hilbert transform}
+For $\epsilon>0$, for $\phi \in \mathscr{S}$ let
+\begin{align*}
+H_\epsilon \phi(x) &=\frac{1}{\pi} \int_{|y| \geq \epsilon} \frac{\phi(x-y)}{y} dy\\
+&=\frac{1}{\pi} \int_{|y| \geq \epsilon} \frac{\tau_y \phi(x)}{y} dy\\
+&=\frac{1}{\pi} \int_{|y| \geq \epsilon} \frac{\tau_x \mu \phi(y)}{y} dy.
+\end{align*}
+Define
+\begin{align*}
+H\phi(x)&=\lim_{\epsilon \to 0} H_\epsilon \phi(x)\\
+&=\frac{1}{\pi} \cdot PV \int_{\mathbb{R}} \frac{\tau_x \mu \phi(y)}{y} dy\\
+&=\frac{1}{\pi} \cdot PV \int_{\mathbb{R}} \frac{\phi(x-y)}{y} dy\\
+&=\frac{1}{\pi} \cdot PV \int_{\mathbb{R}} \frac{\phi(y)}{x-y} dy.
+\end{align*}
+
+For $x \in \mathbb{R}$,
+\begin{align*}
+\phi*W(x)&=\inner{\tau_x \mu \phi}{W}\\
+&=PV \int_{\mathbb{R}} \frac{\tau_x \mu \phi(y)}{y} dy\\
+&=PV \int_{\mathbb{R}} \frac{\phi(x-y)}{y} dy\\
+&=PV \int_{\mathbb{R}} \frac{\phi(y)}{x-y} dy\\
+&=\lim_{\epsilon \to 0} \int_{|x| \geq \epsilon} \frac{\phi(y)}{x-y} dy.
+\end{align*}
+Thus
+\[
+H \phi = \frac{1}{\pi} \phi*W = \phi*\left( \frac{W}{\pi}\right).
+\]
+
+We calculate
+\begin{align*}
+\inner{\phi}{\widehat{W}}&=\inner{\widehat{\phi}}{W}\\
+&= \lim_{\epsilon \to 0} \int_{\epsilon \leq |\xi| \leq 1/\epsilon} \frac{\widehat{\phi}(\xi)}{\xi} d\xi\\
+&=\lim_{\epsilon \to 0} \int_{|\xi| \geq \epsilon} \left( \int_{\mathbb{R}} \phi(x) e^{-2\pi ix\xi} dx \right) \frac{1}{\xi} d\xi\\
+&=\lim_{\epsilon \to 0}\int_{\mathbb{R}} \phi(x) \left( \int_{\epsilon \leq |\xi| \leq 1/\epsilon} \frac{e^{-2\pi ix\xi}}{\xi} d\xi\right) dx\\
+&=\lim_{\epsilon \to 0}\int_{\mathbb{R}} \phi(x) \left( \int_{\epsilon \leq |\xi| \leq 1/\epsilon} -i \frac{\sin 2\pi x\xi}{\xi} d\xi\right) dx.
+\end{align*}
+Check that
+\[
+\lim_{\epsilon \to 0} \int_{\epsilon \leq |\xi| \leq 1/\epsilon}  \frac{\sin 2\pi x\xi}{\xi} d\xi
+=\pi \cdot \sgn x.
+\]
+Then, using the dominated convergence theorem,
+\[
+\inner{\phi}{\widehat{W}} = \int_{\mathbb{R}} \phi(x) \cdot -i\pi \cdot \sgn x dx.
+\]
+Thus, $\widehat{W} = -\pi i \cdot\sgn$. 
+
+Now,
+\[
+\widehat{\phi*u} = \widehat{\phi} \cdot \widehat{u}.
+\]
+Then
+\[
+\widehat{H\phi}(\xi) = \frac{1}{\pi} \widehat{\phi*W}(\xi) = \frac{1}{\pi} \widehat{\phi}(\xi) \cdot \widehat{W}(\xi)
+=\widehat{\phi}(\xi) \cdot -i \cdot \sgn(\xi).
+\]
+Let
+\[
+m_H(\xi) = - i \cdot \sgn(\xi),
+\]
+with which
+\[
+\widehat{H\phi} = m_H \cdot \widehat{\phi}.
+\]
+Writing $F\phi = \widehat{\phi}$,
+\[
+FH \phi = m_H \cdot F\phi.
+\]
+So
+\[
+H \phi = F^{-1}(m_H \cdot F\phi),
+\]
+and hence
+\[
+H^2 \phi = F^{-1}(m_H \cdot F H\phi)
+=F^{-1}(m_H \cdot m_H F\phi).
+\]
+For $\xi \neq 0$, $m_H(\xi)^2 = -1$, which yields
+\[
+H^2 \phi = F^{-1}(-F\phi) = -\phi.
+\]
+Thus $H^2 = -\id$.
+Therefore $\norm{H\phi}_{L^2}=\norm{\phi}_{L^2}$.
+
+Thus it makes sense to define $H:L^2(\mathbb{R}) \to L^2(\mathbb{R})$. 
+For $f,g \in L^2(\mathbb{R})$, by Plancherel's theorem, and as $\overline{m_H}=-m_H$,
+\begin{align*}
+\inner{Hf}{g}&=\inner{\widehat{Hf}}{\widehat{g}}\\
+&=\int_{\mathbb{R}} \widehat{Hf}(\xi) \cdot \overline{\widehat{g}(\xi)} d\xi\\
+&=\int_{\mathbb{R}} m_H(\xi) \cdot \widehat{f}(\xi) \overline{\widehat{g}(\xi)} d\xi\\
+&=-\int_{\mathbb{R}} \widehat{f}(\xi) \cdot \overline{m_H(\xi) \cdot \widehat{g}(\xi)} d\xi\\
+&=-\int_{\mathbb{R}} \widehat{f}(\xi) \cdot \overline{\widehat{Hg}(\xi)} d\xi\\
+&=-\inner{f}{Hg}.
+\end{align*}
+But $\inner{Hf}{g}=\inner{f}{H^*g}$, so
+\[
+\inner{f}{H^*g} = \inner{f}{-Hg},
+\]
+which implies that $H^*g=-Hg$ and thus $H^*=-H$. Furthermore,
+\[
+\widehat{H^*g}(\xi) = -\widehat{Hg}(\xi) = -m_H(\xi) \cdot \widehat{g}(\xi) = i \cdot \sgn(\xi) \cdot \widehat{g}(\xi).
+\]
+
+
+
+
+
+\section{The Poisson kernel}
+For $y>0$,
+calculate
+\begin{align*}
+\int_{\mathbb{R}}e^{2\pi i\xi x} e^{-2\pi y|\xi|} d\xi&=\frac{1}{2\pi ix+2\pi y} - \frac{1}{2\pi ix-2\pi y}\\
+&=\frac{2\pi ix-2\pi y-2\pi ix-2\pi y}{-4\pi^2 x^2 - 4\pi^2 y^2}\\
+&=\frac{y}{\pi(x^2+y^2)}
+\end{align*}
+and
+\begin{align*}
+-i\int_{\mathbb{R}} e^{2\pi i\xi x} \sgn(\xi) e^{-2\pi y|\xi|} d\xi&=\frac{i}{2\pi ix+2\pi y}
++\frac{i}{2\pi ix-2\pi y}\\
+&=\frac{i(2\pi ix-2\pi y+2\pi ix+2\pi y)}{-4\pi^2 x^2 -4\pi^2 y^2}\\
+&=\frac{-4\pi x}{-4\pi^2 x^2-4\pi^2 y^2}\\
+&=\frac{x}{\pi(x^2+y^2)}.
+\end{align*}
+
+
+
+For $y>0$ let
+\[
+P_y(x) = \frac{1}{\pi} \frac{y}{x^2+y^2} 
+\]
+and
+\[
+Q_y(x) = \frac{1}{\pi} \frac{x}{x^2+y^2}.
+\]
+Then
+\[
+\widehat{P}_y(\xi) = e^{-2\pi y|\xi|}
+\]
+and
+\[
+\widehat{Q}_y(\xi) = -i \cdot \sgn(\xi) e^{-2\pi y|\xi|}.
+\]
+Also,
+\[
+P_y(x)+iQ_y(x) = \frac{1}{\pi} \frac{y+ix}{x^2+y^2} = \frac{1}{\pi} \frac{1}{y-ix}.
+\]
+
+
+For a Borel measurable function $f:\mathbb{R} \to \mathbb{C}$ for which the integral exists,
+\begin{align*}
+(P_y*f)(x) &= \int_{\mathbb{R}} P_y(x-t) f(t) dt\\
+&= \int_{\mathbb{R}}f(t) \frac{y}{\pi((x-t)^2+y^2)}  dt\\
+&=\int_{\mathbb{R}} f(x-t) \frac{y}{\pi(t^2+y^2)} dt
+\end{align*}
+and 
+\begin{align*}
+(Q_y*f)(x) &= \int_{\mathbb{R}} Q_y(x-t) f(t) dt\\
+&= \int_{\mathbb{R}}f(t)  \frac{x-t}{\pi((x-t)^2+y^2)}  dt\\
+&=\int_{\mathbb{R}} f(x-t) \frac{t}{\pi(t^2+y^2)} dt.
+\end{align*}
+Then
+\begin{align*}
+P_y*f(x)+iQ_y*f(x)&=\int_{\mathbb{R}} f(x-t)  \frac{1}{\pi} \frac{1}{y-it} dt\\
+&=\int_{\mathbb{R}} f(t) \frac{1}{\pi} \frac{1}{y-ix+it} dt\\
+&=\frac{i}{\pi} \int_{\mathbb{R}} \frac{f(t)}{x+iy-t} dt.
+\end{align*}
+
+
+
+For $y_1,y_2>0$,
+\begin{align*}
+\widehat{P_{y_1}*P_{y_2}}(\xi)&=\widehat{P_{y_1}}(\xi) \cdot \widehat{P_{y_2}}(\xi)\\
+&= e^{-2\pi y_1 |\xi|} \cdot  e^{-2\pi y_2|\xi|}\\
+&=e^{-2\pi(y_1+y_2) |\xi|}\\
+&=\widehat{P_{y_1+y_2}}(\xi).
+\end{align*}
+Therefore $(P_y)_{y>0}$ is a semigroup using convolution: for $y_1,y_2>0$,
+\[
+P_{y_1} * P_{y_2} = P_{y_1+y_2}.
+\]
+
+
+Let $\mathbb{H} = \{z \in \mathbb{C} : \Im z>0\}$ and for $\phi \in \mathscr{S}$ let
+\[
+F_\phi(z) = \frac{i}{\pi} \int_{\mathbb{R}} \frac{\phi(t)}{z-t} dt,\qquad z \in \mathbb{H},
+\]
+which is a complex analytic function. For
+$z=x+iy \in \mathbb{H}$,
+\[
+P_y *\phi (x) + iQ_y * \phi(x) = \frac{i}{\pi} \int_{\mathbb{R}} \frac{\phi(t)}{x+iy-t} dt
+=F_\phi(z).
+\]
+
+It is proved that for $1 \leq p < \infty$ and $f \in L^p(\mathbb{R})$,
+$Q_\epsilon*f - H_\epsilon f \to 0$ in $L^p$ as $\epsilon \to 0$, and that for almost all $x \in \mathbb{R}$,
+$Q_\epsilon*f(x) - H_\epsilon f(x) \to 0$ as $\epsilon \to 0$.\footnote{Loukas Grafakos,
+{\em Classical Fourier Analysis}, second ed.,
+p.~254, Theorem 4.1.5.}
+
+For $1<p<\infty$, it can be proved that there is some $C_p$ such that 
+\[
+\norm{H\phi}_{L^p} \leq C_p \norm{\phi}_{L^p}
+\]
+for all $\phi \in \mathscr{S}$, with $C_p \leq 2p$ for $2 \leq p < \infty$
+and $C_p \leq \frac{2p}{p-1}$ for $1<p \leq 2$.\footnote{Loukas Grafakos,
+{\em Classical Fourier Analysis}, second ed.,
+p.~255, Theorem 4.1.7.}
+
+
+\end{document}

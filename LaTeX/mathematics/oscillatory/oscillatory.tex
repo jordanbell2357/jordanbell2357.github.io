@@ -1,0 +1,392 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\osc}{\ensuremath\mathrm{osc}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\cco}{\ensuremath\overline{\mathrm{co}}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\ba}{\ensuremath\mathrm{ba}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\Cyl}{\ensuremath\mathrm{Cyl}\,}
+\newcommand{\extreals}{\overline{\mathbb{R}}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Oscillatory integrals}
+\author{Jordan Bell}
+\date{August 4, 2014}
+
+\maketitle
+
+\section{Oscillatory integrals}
+Suppose that $\Phi \in C^\infty(\mathbb{R}^d)$, $\psi \in \mathscr{D}(\mathbb{R}^d)$, and that $\Phi$ is real-valued. Define
+$I:(0,\infty) \to \mathbb{C}$ 
+by
+\[
+I(\lambda) = \int_{\mathbb{R}^d} e^{i\lambda \Phi(x)} \psi(x) dx, \qquad \lambda>0.
+\]
+We call $\Phi$ a \textbf{phase} and $\psi$ an \textbf{amplitude}, and $I(\lambda)$ an \textbf{oscillatory integral}.
+
+The following proof follows Stein and Shakarchi.\footnote{Elias
+M. Stein and Rami Shakarchi, {\em Functional Analysis}, p.~325, Proposition 2.1.}
+
+\begin{theorem}
+If there is some $c>0$ such that $|(\nabla \Phi)(x)| \geq c$ for all $x \in \supp \psi$, then for each nonnegative integer $N$ there is some
+$c_N \geq 0$ such that
+\[
+|I(\lambda)| \leq c_N \lambda^{-N}, \qquad \lambda>0.
+\]
+\end{theorem}
+\begin{proof}
+There is some $h \in \mathscr{D}(\mathbb{R}^d)$, $h \geq 0$, such that $h(x)=1$ for $x \in \supp \psi$.\footnote{Walter Rudin, {\em Functional Analysis},
+second ed., p.~162, Theorem 6.20.}
+Define $a:\mathbb{R}^d \to \mathbb{R}^d$ by
+\[
+a = h \frac{\nabla \Phi}{|\nabla \Phi|^2},
+\]
+whose entries each belong to $\mathscr{D}(\mathbb{R}^d)$,
+and define $L: C^\infty(\mathbb{R}^d) \to \mathscr{D}(\mathbb{R}^d)$ by
+\[ 
+Lf = \frac{1}{i\lambda} \sum_{k=1}^d a_k \partial_k f = \frac{1}{i\lambda} (a\cdot \nabla) f.
+\]
+$L$ satisfies, doing integration by parts and using the fact that $a$ has compact support,
+\[
+\int_{\mathbb{R}^d} (Lf)g dx = \frac{1}{i\lambda}  \sum_{k=1}^d \int_{\mathbb{R}^d} a_k (\partial_k f) g dx
+=\frac{1}{i\lambda}  \sum_{k=1}^d -\int_{\mathbb{R}^d} f \partial_k(ga) dx.
+\]
+Thus the \textbf{transpose} of $L$ is
+\[
+L^t g = -\frac{1}{i\lambda} \sum_{k=1}^d \partial_k(ga) = -\frac{1}{i\lambda} \nabla \cdot (ga).
+\]
+
+Furthermore,  in $\supp \psi$,
+\begin{eqnarray*}
+L(e^{i\lambda \Phi}) &=& e^{i\lambda \Phi} \sum_{k=1}^d a_k (\partial_k \Phi)  \\
+&=&  e^{i\lambda \Phi} \sum_{k=1}^d \frac{\partial_k \Phi}{|\nabla \Phi|^2} \partial_k \Phi\\
+&=& e^{i\lambda \Phi}.
+\end{eqnarray*}
+Thus   for any positive integer $N$ and for $x \in \supp \psi$, $L(e^{i\lambda \Phi})(x) = e^{i\lambda \Phi(x)}$, hence
+\[
+I(\lambda) = \int_{\mathbb{R}^d} L^N(e^{i\lambda \Phi}) \psi dx = \int_{\mathbb{R}^d} e^{i\lambda \Phi} (L^t)^N \psi dx.
+\]
+But
+\[
+\int_{\mathbb{R}^d} |(L^t)^N \psi| dx = \int_{\mathbb{R}^d} | \lambda^{-N} A_N| dx,
+\]
+where  $A_1 = \nabla \cdot (\psi a)$ and $A_n=\nabla \cdot (A_{n-1} a)$. With
+\[
+c_N = \int_{\mathbb{R}^d} |A_N| dx < \infty,
+\]
+we obtain
+\[
+|I(\lambda)|
+=\left|  \int_{\mathbb{R}^d} e^{i\lambda \Phi} (L^t)^N \psi dx \right|
+ \leq \int_{\mathbb{R}^d} |(L^t)^N \psi| dx = c_N \lambda^{-N},
+\]
+completing the proof.
+\end{proof}
+
+The following is an estimate for a one-dimensional oscillatory integral without an amplitude term.\footnote{Elias
+M. Stein and Rami Shakarchi, {\em Functional Analysis}, p.~326, Proposition 2.2.}
+
+
+\begin{lemma}
+Let $a<b$,
+ and suppose that $\Phi \in C^2(\mathbb{R})$ is real-valued, that either $\Phi''(x) \geq 0$ for all $x \in [a,b]$ or $\Phi''(x) \leq 0$ for all $x \in [a,b]$,
+ and   that $\Phi'(x) \geq 1$ for  all $x \in [a,b]$. 
+ Then 
+ \[
+\left| \int_a^b e^{i\lambda \Phi(x)} dx \right| \leq 3 \lambda^{-1}, \qquad \lambda >0.
+ \]
+ \label{22}
+\end{lemma}
+\begin{proof}
+Write
+\[
+L = \frac{1}{i \lambda \Phi'} \frac{d}{dx},
+\]
+which satisfies
+\[
+\int_a^b (Lf)g dx = \int_a^b  \frac{1}{i \lambda \Phi'} f' g dx =  \frac{1}{i \lambda \Phi'} f g \bigg|_a^b 
+-\int_a^b f \left( \frac{g}{i \lambda \Phi'} \right)' dx.
+\]
+With $f=e^{i\lambda \Phi}$ and $g=1$, we have $Lf = e^{i\lambda \Phi}$ and hence
+\begin{eqnarray*}
+\int_a^b e^{i\lambda \Phi} dx &=& \frac{e^{i\lambda \Phi}}{i \lambda \Phi'} \bigg|_a^b - \int_a^b e^{i\lambda \Phi} \left( \frac{1}{i \lambda \Phi'} \right)' dx\\
+&=& \frac{e^{i\lambda \Phi}}{i \lambda \Phi'} \bigg|_a^b  + \frac{1}{i\lambda} \int_a^b e^{i\lambda \Phi} (\Phi')^{-2} \Phi'' dx.
+\end{eqnarray*}
+For $\lambda>0$, using that $\Phi'(x) \geq 1$ for all $x \in [a,b]$ 
+ the boundary terms have absolute value
+ \[
+\left|  \frac{e^{i\lambda \Phi(b)}}{i \lambda \Phi'(b)} -  \frac{e^{i\lambda \Phi(a)}}{i \lambda \Phi'(a)} \right|
+\leq \frac{1}{\lambda |\Phi'(b)|} + \frac{1}{\lambda |\Phi'(a)|}
+\leq \frac{2}{\lambda}.
+\]
+Because $\Phi'' \geq 0$ or $\Phi'' \leq 0$ on $[a,b]$,
+\begin{eqnarray*}
+\frac{1}{\lambda} \left| \int_a^b e^{i\lambda \Phi} (\Phi')^{-2} \Phi'' dx \right| 
+&\leq& \frac{1}{\lambda} \int_a^b |  (\Phi')^{-2} \Phi''| dx\\
+&=&\frac{1}{\lambda} \left| \int_a^b (\Phi')^{-2} \Phi'' dx \right| \\
+&=&\frac{1}{\lambda} \left| \frac{1}{\Phi'(a)}- \frac{1}{\Phi'(b)} \right|\\
+&\leq&\frac{1}{\lambda};
+\end{eqnarray*}
+the final inequality uses the fact that the two terms inside the absolute value are both $\geq 1$, and thus the absolute value can be bounded by the larger
+of them.
+Putting together the two inequalities,
+\[
+\left|\int_a^b e^{i\lambda \Phi} dx\right| \leq \frac{2}{\lambda}+\frac{3}{\lambda}= 3 \lambda^{-1}, \qquad \lambda>0,
+\]
+proving the claim.
+\end{proof}
+
+
+\begin{lemma}
+Let $a<b$,
+ and suppose that $\Phi \in C^2(\mathbb{R})$ is real-valued,  that either $\Phi''(x) \geq 0$ for all $x \in [a,b]$ or $\Phi''(x) \leq 0$ for all $x \in [a,b]$,
+ and that  there is some $\mu > 0$ such that $|\Phi'(x)| \geq \mu$ for  all $x \in [a,b]$. 
+ Then 
+ \[
+\left| \int_a^b e^{i\lambda \Phi(x)} dx\right|  \leq 3 \mu^{-1} \lambda^{-1}, \qquad \lambda >0.
+ \]
+ \label{muinequality}
+\end{lemma}
+\begin{proof}
+$\Phi'$ is continuous on  $[a,b]$, so, by the intermediate value theorem, either
+$\Phi'(x) \geq \mu$ for all $x \in [a,b]$ or $\Phi'(x) \leq -\mu$ for all $x \in [a,b]$. Let $\epsilon=1$ in the first
+case and $\epsilon=-1$ in the second case, and define $\Phi_0=\epsilon \frac{\Phi}{\mu}$.
+Then applying Lemma \ref{22}, for $\lambda>0$ we have, writing $\lambda_0=\mu \lambda$,
+\[
+\left| \int_a^b e^{i \lambda_0 \Phi_0(x)} dx \right| \leq 3\lambda_0^{-1},
+\]
+i.e.
+\[
+\left| \int_a^b e^{i \epsilon \lambda \Phi(x)} dx \right| \leq 3(\mu \lambda)^{-1}.
+\]
+If $\epsilon=1$ this is the claim. If $\epsilon=-1$, then the above integral is the complex conjugate of the integral in the claim, and these have the same
+absolute values.
+\end{proof}
+
+
+\begin{theorem}
+Let $a<b$,
+ and suppose that $\Phi \in C^2(\mathbb{R})$ is real-valued, that either $\Phi''(x) \geq 0$ for all $x \in [a,b]$ or $\Phi''(x) \leq 0$ for all $x \in [a,b]$,
+ and  there is some $\mu > 0$ such that $|\Phi'(x)| \geq \mu$ for  all $x \in [a,b]$.  Suppose also
+ that $\psi \in C^1(\mathbb{R})$.
+ Then with
+ \[
+ c_\psi = 3\left( |\psi(b)| + \int_a^b |\psi'(x)| dx \right),
+ \]
+ we have
+ \[
+ \left| \int_a^b e^{i\lambda \Phi(x)} \psi(x) dx \right| \leq c_\psi \mu^{-1} \lambda^{-1}.
+ \]
+ \label{lambdaamplitude}
+\end{theorem}
+\begin{proof}
+Define $J:[a,b] \to \mathbb{C}$ by
+\[
+J(x) = \int_a^x e^{i\lambda \Phi(u)} du,
+\]
+which satisfies $J'(x)=e^{i\lambda \Phi(x)}$. Integrating by parts, 
+\[
+\int_a^b e^{i\lambda \Phi(x)} \psi(x) dx = \int_a^b J'(x) \psi(x) dx =
+J(x)\psi(x) \bigg|_a^b -\int_a^b J(x) \psi'(x) dx,
+\]
+and as $J(a)=0$ this is equal to
+\[
+J(b)\psi(b)-\int_a^b J(x) \psi'(x) dx.
+\]
+Lemma \ref{muinequality} tells us that $|J(x)| \leq 3\mu^{-1} \lambda^{-1}$ for all $x \in [a,b]$, so
+\[
+\left|J(b)\psi(b)-\int_a^b J(x) \psi'(x) dx\right| \leq 3\mu^{-1} \lambda^{-1} |\psi(b)|
++ 3\mu^{-1} \lambda^{-1} \int_a^b |\psi'(x)| dx,
+\]
+proving the claim.
+\end{proof}
+
+
+The following is \textbf{van der Corput's lemma}.\footnote{Elias M. Stein and Rami Shakarchi, {\em Functional Analysis}, p.~328, Proposition 2.3.}
+
+\begin{lemma}[van der Corput's lemma]
+Let $a<b$ and suppose that $\Phi \in C^2(\mathbb{R})$ is real-valued and satisfies $\Phi''(x) \geq 1$ for all $x \in [a,b]$.  Then
+\[
+\left| \int_a^b e^{i\lambda \Phi(x)} dx\right|  \leq 8 \lambda^{-1/2}, \qquad \lambda>0.
+\]
+\label{vandercorput}
+\end{lemma}
+\begin{proof}
+Because $\Phi'$ is strictly increasing on $[a,b]$, $\Phi'$ has at most one zero in this interval.
+If $\Phi'(x_0)=0$, then for $x \geq x_0+ \lambda^{-1/2}$ we have
+$\Phi'(x) \geq \lambda^{-1/2}$, and  applying Lemma \ref{muinequality} with $\mu=\lambda^{-1/2}$,
+\[
+\left| \int_{[x_0+\lambda^{-1/2},b]} e^{i\lambda \Phi(x)} dx \right| \leq 3\mu^{-1} \lambda^{-1} = 3\lambda^{-1/2}.
+\]
+For $x \leq x_0-\lambda^{-1/2}$ we have $\Phi'(x) \leq - \lambda^{-1/2}$, and  applying Lemma \ref{muinequality} with $\mu=\lambda^{-1/2}$,
+\[
+\left| \int_{[a,x_0-\lambda^{-1/2}]} e^{i\lambda \Phi(x)} dx \right| \leq 3\mu^{-1} \lambda^{-1} = 3\lambda^{-1/2}.
+\]
+But
+\[
+\left| \int_{[x_0-\lambda^{-1/2},x_0+\lambda^{-1/2}] \cap [a,b]} e^{i\lambda \Phi(x)} dx \right| \leq  \int_{[x_0-\lambda^{-1/2},x_0+\lambda^{-1/2}] \cap [a,b]}  dx \leq
+2\lambda^{-1/2},
+\]
+and
+\[
+\int_a^b = \int_{[a,x_0-\lambda^{-1/2}]} +  \int_{[x_0-\lambda^{-1/2},x_0+\lambda^{-1/2}] \cap [a,b]} +  \int_{[x_0+\lambda^{-1/2},b]},
+\]
+so 
+\[
+\left| \int_a^b e^{i\lambda \Phi(x)} dx\right| \leq 3\lambda^{-1/2}+2\lambda^{-1/2}+3\lambda^{-1/2}= 8\lambda^{-1/2}.
+\]
+
+If there is no $x_0 \in [a,b]$ such that $\Phi'(x_0)=0$, then either $\Phi'>0$ on $[a,b]$ or $\Phi'<0$ on $[a,b]$. In the first case, 
+because $\Phi'$ is strictly increasing on $[a,b]$, $\Phi'(x) > \lambda^{-1/2}$ for 
+$x \in [a+\lambda^{-1/2},b]$, and applying Lemma \ref{muinequality} with $\mu=\lambda^{-1/2}$ gives
+\begin{eqnarray*}
+\left| \int_a^b e^{i\lambda \Phi(x)} dx \right| 
+&\leq& \left| \int_{[a,a+\lambda^{-1/2}] \cap [a,b]} e^{i\lambda \Phi(x)} dx \right|
++\left| \int_{[a+\lambda^{-1/2},b]} e^{i\lambda \Phi(x)} dx \right|\\
+&\leq&\lambda^{-1/2} + 3\mu^{-1} \lambda^{-1}\\
+&=&4\lambda^{-1/2}.
+\end{eqnarray*}
+In the second case, $\Phi'(x) < -\lambda^{-1/2}$ for $x \in [a,b-\lambda^{-1/2}]$, and applying Lemma
+\ref{muinequality} with $\mu=\lambda^{-1/2}$ also gives
+\[
+\left| \int_a^b e^{i\lambda \Phi(x)} dx \right|  \leq 4 \lambda^{-1/2}.
+\]
+Therefore, if $\Phi'$ does not have a zero on $[a,b]$ then
+\[
+\left| \int_a^b e^{i\lambda \Phi(x)} dx \right|  \leq 4 \lambda^{-1/2} < 8\lambda^{-1/2}.
+\]
+\end{proof}
+
+
+\begin{lemma}
+Let $a<b$ and suppose that $\Phi \in C^2(\mathbb{R})$ is real-valued and that there is some $\mu>0$ such that
+$|\Phi''(x)| \geq \mu$ for all $x \in [a,b]$.  Then
+\[
+\left| \int_a^b e^{i\lambda \Phi(x)} dx\right|  \leq 8\mu^{-1/2}   \lambda^{-1/2}, \qquad \lambda>0.
+\]
+\label{vandercorputmu}
+\end{lemma}
+\begin{proof}
+$\Phi''$ is continuous on $[a,b]$, so by the intermediate value theorem  either $\Phi''(x) \geq \mu$ for all  $x \in [a,b]$ or $\Phi''(x) \leq -\mu$ for all  $x\in [a,b]$. 
+Let $\epsilon=1$ in the first case and $\epsilon=-1$ in the second case, and define $\Phi_0=\epsilon \frac{\Phi}{\mu}$. 
+Then $\Phi_0''(x) \geq 1$ for all $x \in [a,b]$, and
+applying Lemma \ref{vandercorput},
+\[
+\left| \int_a^b e^{i \mu \lambda \Phi_0(x)} dx \right| \leq 8 (\mu \lambda)^{-1/2}, \qquad \lambda>0,
+\]
+i.e.
+\[
+\left| \int_a^b e^{i\epsilon \lambda \Phi(x)} dx \right| \leq 8(\mu \lambda)^{-1/2}, \qquad \lambda>0.
+\]
+If $\epsilon=1$ this is the inequality in the claim. If $\epsilon=-1$, then the above integral is the complex conjugate of the integral in the claim, and these have the same
+absolute values.
+\end{proof}
+
+
+We use the above  to prove the following estimate which involves an amplitude.\footnote{Elias M. Stein and Rami Shakarchi, {\em Functional Analysis}, p.~328, Corollary 2.4.}
+
+\begin{theorem}
+Let $a<b$ and suppose that $\Phi \in C^2(\mathbb{R})$ is real-valued and that there is some $\mu>0$ such that
+ $|\Phi''(x)| \geq \mu$ for all $x \in [a,b]$.
+Suppose also that $\psi \in C^1(\mathbb{R})$. 
+  Then
+  with
+\[
+c_\psi = 8\left(|\psi(b)|+\int_a^b |\psi'(x)| dx\right),
+\]
+we have
+\[
+\left| \int_a^b e^{i\lambda \Phi(x)} \psi(x) dx \right| \leq c_\psi \mu^{-1/2} \lambda^{-1/2}, \qquad \lambda>0.
+\]
+\label{squarerootamplitude}
+\end{theorem}
+\begin{proof}
+Define $J:[a,b] \to \mathbb{C}$ by 
+\[
+J(x) = \int_a^x e^{i\lambda \Phi(u)} du,
+\]
+which satisfies $J'(x)=e^{i\lambda \Phi(x)}$.
+Integrating by parts,
+\[
+\int_a^b e^{i\lambda \Phi(x)} \psi(x) dx = \int_a^b J'(x) \psi(x) dx =
+J(x)\psi(x) \bigg|_a^b -\int_a^b J(x) \psi'(x) dx.
+\]
+and as $J(a)=0$ this is equal to
+\[
+J(b)\psi(b)-\int_a^b J(x) \psi'(x) dx.
+\]
+But for each $x \in [a,b]$ we have by Lemma \ref{vandercorputmu} that $|J(x)| \leq 8\mu^{-1/2} \lambda^{-1/2}$, so 
+\[
+\left| J(b)\psi(b)-\int_a^b J(x) \psi'(x) dx \right|
+\leq 8\mu^{-1/2}\lambda^{-1/2} |\psi(b)| + 8\mu^{-1/2}\lambda^{-1/2} \int_a^b |\psi'(x)| dx,
+\]
+completing the proof.
+\end{proof}
+
+
+\section{Bessel functions}
+For $n \in \mathbb{Z}$, the \textbf{$n$th Bessel function of the first kind} $J_n:\mathbb{R} \to \mathbb{R}$ is
+\[
+J_n(\lambda) = \frac{1}{2\pi} \int_0^{2\pi} e^{i\lambda \sin x} e^{-inx} dx, \qquad \lambda\in \mathbb{R}.
+\]
+Let
+\[
+I_1 = \left[0,\frac{\pi}{4}\right], \quad I_2 = \left[ \frac{3\pi}{4},\pi \right], \quad  I_3 = \left[\pi,\frac{5\pi}{4}\right], \quad I_4= \left[\frac{7\pi}{4},2\pi\right],
+\]
+on which $|\cos x| \geq \frac{1}{\sqrt{2}}$, and
+\[
+I_5 = \left[\frac{\pi}{4},\frac{3\pi}{4}\right], \quad I_6=\left[\frac{5\pi}{4},\frac{7\pi}{4}\right],
+\]
+on which $|\sin x| \geq \frac{1}{\sqrt{2}}$. 
+Write $\Phi(x)=\sin x$ and $\psi(x)=e^{-inx}$. $\Phi'(x)=\cos(x)$ and $\Phi''(x)=-\sin(x)$, 
+and for $I_1,I_2,I_3,I_4$ we apply Theorem \ref{lambdaamplitude} with $\mu=\frac{1}{\sqrt{2}}$.
+For each of $I_1,I_2,I_3,I_4$ we compute $c_\psi = 3\left(1+\frac{\pi n}{4}\right)$, 
+which gives us
+\[
+\left| \int_{I_k} e^{i\lambda \Phi(x)} \psi(x) dx \right| \leq c_\psi \mu^{-1} \lambda^{-1}
+=3\left(1+\frac{\pi n}{4}\right) \cdot \sqrt{2} \cdot \lambda^{-1}.
+\]
+
+
+For $I_5$ and $I_6$, we apply Theorem \ref{squarerootamplitude} with $\mu=\frac{1}{\sqrt{2}}$. For each of $I_5$ and $I_6$ we compute
+$c_\psi = 8\left(1+\frac{\pi n}{2} \right)$, which gives us
+\[
+\left| \int_{I_k} e^{i\lambda \Phi(x)} \psi(x) dx \right| \leq c_\psi \mu^{-1/2} \lambda^{-1/2} = 
+ 8\left(1+\frac{\pi n}{2} \right) \cdot 2^{1/4} \cdot \lambda^{-1/2}.
+\]
+
+Therefore
+\[
+|J_n(\lambda)| \leq 4\cdot\frac{1}{2\pi} \cdot 3\left(1+\frac{\pi n}{4}\right) \cdot \sqrt{2} \cdot \lambda^{-1}
++ 2 \cdot \frac{1}{2\pi} \cdot 8\left(1+\frac{\pi n}{2} \right) \cdot 2^{1/4} \cdot \lambda^{-1/2},
+\]
+which shows that for each $n \in \mathbb{Z}$,
+\[
+J_n(\lambda) = O_n(\lambda^{-1/2})
+\]
+as $\lambda \to \infty$.
+
+\end{document}

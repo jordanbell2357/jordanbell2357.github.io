@@ -1,0 +1,313 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}}
+\newcommand{\Res}{\ensuremath\mathrm{Res}}  
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\sinc}{\ensuremath\mathrm{sinc}\,} 
+\newcommand{\Si}{\ensuremath\mathrm{Si}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Alternating series}
+\author{Jordan Bell\\ \texttt{jordan.bell@gmail.com}\\Department of Mathematics, University of Toronto}
+\date{\today}
+
+\maketitle
+
+Jahnke, A History of Analysis
+
+Isaac Barrow
+
+H W Turnbull, James Gregory Memorial Volume (London, 1939)
+
+C J Scriba, Gregory's converging double sequence: a new look at the controversy between Huygens and Gregory over the 'analytical' quadrature of the circle, Historia Math. 10 (3) (1983), 274-285.
+
+Montmort, De seriebus infinitis tractatus in Philosophical Transactions of the Royal Society, 30 (1720), 633--675
+
+Henry Briggs (1624) Arithmetica Logarithmica
+
+B Burn, Gregory of St. Vincent and the Rectangular Hyperbola, The Mathematical Gazette 84 (501) (2000), 480-485.
+
+Ch Naux, G de St. Vincent et les propriétés logarithmiques de l'hyperbole \'equilat\`ere, Rev. Questions Sci. 143 (2) (1972), 209-221.
+
+S. J. Riguaud, ed., Correspondence of scientific Men of the seventeenth Century, I (Oxford, 1841)
+
+Joost B\"urgi,
+Arithmetische und geometrische Progress-Tabulen, sambt gr\"undlichem Unterricht, wie solche n\"utzlich in allerley Rechnungen zu gebrauchen, und verstanden werden sol (Prague, 1620)
+
+Christiaan Huygens (1651) Theoremata de quadratura hyperboles, ellipsis et circuli, in Oeuvres Compl\`etes, Tome XI.
+CH. HUYGENS, ¼uvres comple`tes, publie?es par la Socie?te? Hollandaise des Sciences, 19 vol., La Haye (Martinus Nijhoff), 1888-1937: a) Exa- men de ?Vera Circuli et Hyperboles Quadratura . . . ?, ; b) Horologium Oscillatorium, t. XVIII; c) Theoremata de Quadratura Hyperboles, Ellipsis et Circuli . . . , t. XI, p. 271-337; d) De Circuli Magnitudine Inventa . . . , t. XII, p. 91-180.
+
+William Brouncker (1667) The Squaring of the Hyperbola, Philosophical Transactions of the Royal Society of London, abridged edition 1809, v. i, pp 233--6
+
+E. Voellmy, Jost B\"urgi und die Logarithmen, in Beihefte zur Zeitschrift f\"ur Elemente der Mathematik, no. 5 (1948)
+
+Cataldi, {\em Trattato del modo brevissimo di trovare la radice quadra delli numeri}, 1613, Bologna, appresso Bartolomeo Cochi 
+square root series. E. Bortolotti. Le antiche regole empiriche del calcolo approssimato dei radicali quadratici e le prime serie infinite, in Bollettino della mathesis, 11 (1919), 14--29
+
+J. NEPER, Mirifici logarithmorum canonis constructio, Lyon, 1620
+
+B. CAVALIERI: a) Geometria indivisibilibus continuorum quadam ratione promota, Bononiae, 1635 (2e ed., 1653); b) Exercitationes geometricae sex, Bononiae, 1647.
+
+E.TORRICELLI, Opere, 4vol., ed. G. Loria et G.Vassura, Faenza(Montanari), 1919.
+
+E. TORRICELLI, in G. LORIA, Bibl. Mat. (III), t. I, 1900, p. 78-79.
+
+Gregory Saint-Vincent [25, p. 102], book II, part I, scholion to proposition
+LXXXVII. Whiteside VIII.300].
+
+R. DESCARTES, ¼uvres, ed. Ch. Adam et P. Tannery, 11 vol., Paris (L. Cerf), 1897-1909.
+
+P. GREGORII A SANCTO VINCENTIO, Opus Geometricum Quadraturae Circuli et Sectionum Coni . . . , 2 vol., Antverpiae, 1647.
+
+N.MERCATOR,Logarithmotechnia...cuinuncacceditveraquadratura hyperbolae . . . Londini, 1668 (reproduced in F. MASERES, Scriptores, Logarithmici . . . , vol. I, London, 1791, p. 167-196).
+
+LORD BROUNCKER, The Squaring of the Hyperbola by an infinite se- ries of Rational Numbers, together with its Demonstration by the Right Honourable the Lord Viscount Brouncker, Phil. Trans, v. 3 (1668), p. 645-649 (reproduced in F. MASE` RES, Scriptores, Logarithmici . . . , vol. I, London, 1791, p. 213-218).
+
+J. WALLIS, Opera Mathematica, 3 vol., Oxoniae, 1693-95: a) Arith- metica Infinitorum, t. I, p. 355-478.
+
+J. WALLIS, LOGARITHMOTECHNIA NICOLAI MERCATORIS: discoursed in a letter written by Dr. J. Wallis to the Lord Viscount Brouncker, Phil. Trans., v. 3 (1668), p. 753-759 (reproduced in F. MASE` RES, Scriptores Logarithmici . . . , vol. I, London, 1791, p. 219-226).
+
+J. GREGORY: a) Vera Circuli et Hyperbolae Quadratura . . . , Pataviae, 1667; b) Geometriae Pars Universalis, Pataviae, 1668; c) Exercitationes Geometricae, London, 1668.
+
+James Gregory Tercentenary Memorial Volume, containing his corre- spondence with John Collins and his hitherto unpublished mathematical manuscripts . . . , ed. H. W. Turnbull, London (Bell and Sons), 1939.
+
+1684-1691, D. T. Whiteside, p. 33
+
+Westfall [30, p. 33]
+
+Vincent Leotaud, Examen circuli quadraturae, 1654
+
+I point out that Torricelli gave a geometric proof of the sum of a geometric series
+in his De dimensione Parabolae [1644]. For Torricelli's proof, I refer to Panza
+[1992, 307?308].
+
+R. Ayoub, What is a Napierian Logarithm? American Mathematical Monthly,100 (1993) pp. 351-364.
+
+
+
+\section{Gr\'egoire de Saint-Vincent}
+Gregory Saint-Vincent, {\em Opus Geometricum Quadraturae Circuli et Sectionum Coni}, 1647: 51--177.,
+
+
+
+
+
+
+\section{Brouncker}
+The squaring of the hyperbola, by an infinite series of rational numbers, together with its demonstration
+Philosophical Transactions No 34 (13 April 1668), 645-9.
+
+
+\section{Newton}
+I.112-5,134-42
+
+II.166,246
+
+III
+
+
+Collins to Gregory Decembry 1760 on sine,  Gregory to Collins February 1761.
+
+Gregory {\em Vera Circuli} 1667
+
+Gregory, {\em Exercitationes Geometriae}, ``Appendicula ad Veram Circuli et Hyperbole Quadraturam'' 1668
+
+In both the Vera Quadratur aand the ``Appendicuta'' GREGORY was concerned more generally with sectors of central conics. See Vera Quadratura Proposition 20 for 
+the circle and the ellipse, Proposition 25 for the hyperbola and Proposition 29 for the calculation. HUYGENS had already given the result for the circle in Proposition 5
+of his De Circuli Magnitudine Inventa (Leiden, 1654). That GREGORY failed to acknowledge this was the main point of contention in the bitter controversy that ensued 
+between him and HUYGENS. GREGORY's methods are discussed by D. T. WHITESIDE in op. cit. (see especially his pages 226-7 and 266-70).
+
+As well as inscribed figures GREGORY considered circumscribed figures and combinations of both to produce a series of upper and lower bounds for areas of
+sectors in the ``Appendicula'' - twenty three in all. For an analysis of this work see J. E. HOFMANN, ``Uber Gregorys systematische N/iherungen ffir den Sektor
+eines Mittelpunktkegelschnittes'', Centaurus 1 (1950), 24--37.
+
+\section{Wolff}
+October 1674, {\em Schediasma de serierum summis, et seriebus quadraticibus}.
+
+Wolff to Leibniz June 12, 1712 \cite[pp.~143, Letter LXX]{wolf}
+
+Leibniz to Wolff July 13 1712 \cite[pp.~147, Letter LXXI]{wolf}:
+
+\begin{quote}
+Respondissem citius, si prius vacasset elegantissimam tuam
+meditationem considerare attentius, qua ostendere aggrederis, ut
+$1-1+1-1$ etc. in infinit. est $\frac{1}{2}$, ita $1-2+4-8+16-32$ etc.
+esse $\frac{1}{3}$, et $1-3+9-27+81$ etc. esse $\frac{1}{4}$, et ita porro; in quo
+ego haesi, quia summationes serierum infinitarum solent postulare
+descrecentiam terminorum.
+\end{quote}
+
+
+\section{Wallis}
+Wallis, {\em Arithmetica Infinitorum}, Propositions 39--41 \cite[p.~39]{wallis}.
+
+%\begin{quote}
+%
+%\end{quote}
+
+
+\section{Leibniz}
+Leibniz, {\em De vera proportione Circuli ad Quadratum circumscriptum in Numeris rationalibus expressa},
+Acta Erud February 1682, \cite[pp.~118--122]{gerhardtV}
+
+De quadratura arithmetica, Proposition XLIX, p.~657 \cite[p.~657]{LeibnizVII6}.
+
+Leibniz to Hermann, June 26, 1705 \cite[pp.~272--275, Letter VII]{gerhardtIV}
+
+\begin{quote}
+Videtur mihi determinatio limitum pars esse essentialis doctrinae de seriebus infinitis plene tradendae.
+\end{quote}
+
+Leibniz \cite[p.~922]{gerhardtIII}
+
+Leibniz to Johann Bernoulli, January 10, 1714 \cite[pp.~925--927, Letter CCLI]{gerhardtIII}, 
+
+Johann Bernoulli to Leibniz, February 28, 1714 \cite[pp.~927--930, Letter CCLII]{gerhardtIII}.
+
+
+Leibniz, {\em Epistola ad. V. Cl. Christianum Wolfium, Professorem Matheseos Halensem,
+circa Scientiam infiniti}, Acta Eruditorum Supplementa, Volume V, 1713 \cite[pp.~382--386]{gerhardtV}.
+
+
+Leibniz, AE, February 1682, {\em De vera proportione Circuli ad Quadratum circumscriptum in Numeris rationalibus
+expressa} \cite[pp.~118--122]{gerhardtV}.
+
+Grandi, {\em Quadratura circuli et hyperbolae per infinitas hyperbolas geometrice exhibita}, Pisa, 1703
+
+\section{Nicolaus Bernoulli}
+Nicolaus Bernoulli to Leibniz, October 25, 1712 and April 7, 1713.
+
+Leibniz to Nicolaus Bernoulli, June 28, 1713 \cite[p.~983]{gerhardtIII}
+
+
+
+
+
+
+
+\section{Alternating series test}
+\begin{theorem}[Alternating series test]
+Suppose that $0<a_{k+1}<a_k$, $k \geq 1$, and that $a_k \to 0$ as $k \to \infty$. 
+Let $S_m = \sum_{1 \leq k \leq m} (-1)^{k-1} a_k$. 
+Then (i) 
+\[
+S_2<S_4<\cdots<S_3<S_1,
+\]
+and (ii) there is some $S$ such that
+\[
+S_m \to S, \qquad m \to \infty,
+\]
+with
+\[
+S_2<S_4<\cdots<S<\cdots<S_3<S_1,
+\]
+and for $r \geq 1$,
+\[
+S-a_{2r+1} <S_{2r} < S,\qquad S<S_{2r-1}<S+a_{2r}.
+\]
+\end{theorem}
+\begin{proof}
+(i) As $a_{k+1}<a_k$,
+\[
+S_{2r+2}-S_{2r} = -a_{2r+2} + a_{2r+1} > 0
+\]
+and
+\[
+S_{2r+1}-S_{2r-1} = a_{2r+1}-a_{2r} < 0. 
+\]
+Thus for $r \geq 1$,
+\begin{equation}
+S_{2r+2}>S_{2r},\qquad S_{2r+1}<S_{2r-1}.
+\label{S2r}
+\end{equation}
+
+Furthermore, for $r \geq 1$,
+\begin{equation}
+S_{2r}=-a_{2r}+S_{2r-1}<S_{2r-1}
+\label{evenodd}
+\end{equation}
+Fix $r$.
+For $1 \rho \leq r$, by \eqref{S2r} we have $S_{2\rho-1} \geq S_{2r-1}$ and thus by
+\eqref{evenodd} we have
+$S_{2r} < S_{2\rho-1}$. For
+$\rho \geq r$, by \eqref{S2r} we have $S_{2r} \leq S_{2\rho}$ and thus by \eqref{evenodd} we have
+$S_{2r}<S_{2\rho-1}$. Therefore
+$S_{2r}<S_{2\rho-1}$ for all $\rho \geq 1$. That is, if $n$ is even and $m$ is odd then $S_n<S_m$.
+Thus
+\[
+S_2<S_4<\cdots<S_3<S_1.
+\]
+
+
+(ii) From (i) we have
+\[
+S_2<S_4<\cdots<S_3<S_1.
+\]
+In particular, $S_{2r} < S_1$ for all $r \geq 1$ and $S_{2r-1}>S_2$ for all $r \geq 1$. 
+Let
+\[
+A=\sup\{S_{2r}: r \geq 1 \} \leq S_1,\qquad B=\inf\{S_{2r-1}:r \geq 1\} \geq S_2.
+\]
+Then $S_{2r-1}-S_{2r} \to B-A$. But $S_{2r-1}-S_{2r}=-a_{2r}$ and
+$a_{2r+1} \to 0$. Therefore $B-A=0$, i.e. $A=B$. 
+Let
+\[
+S = A = B,
+\]
+so $S_{2r}<S$ and $S_{2r-1}>S$ for all $r \geq 1$. 
+Then
+\[
+S - S_{2r} < S_{2r+1} - S_{2r} = a_{2r+1},
+\]
+giving $S_{2r}>S-a_{2r+1}$,
+and
+\[
+S_{2r-1} - S < S_{2r-1}-S_{2r} = a_{2r},
+\]
+giving $S_{2r-1}<S+a_{2r}$,
+completing the proof.
+\end{proof}
+
+Jakob Bernoulli, 1689 limits
+
+Mengoli, Geometriae Speciosiae 1659
+
+The Mathematical Papers of Isaac Newton:, Volume 4; Volumes 1674-1684, p.~611
+
+Cauchy's Cours d'analyse : An Annotated Translation (2009), page 85-on; p.~125 in original
+
+James Gregory 1668 convergent and divergent
+
+James Gregory letter to Collins, February 15, 1671, $\arctan x$.
+
+Knobloch \cite{knobloch2006}
+
+
+
+\bibliographystyle{amsplain}
+\bibliography{logarithms}
+
+\end{document}

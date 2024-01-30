@@ -1,0 +1,1054 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\point}{\ensuremath\sigma_{\mathrm{point}}} 
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{The singular value decomposition of compact operators on Hilbert spaces}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+\maketitle
+
+\section{Preliminaries}
+The purpose of these notes is to present material about compact operators on Hilbert spaces that is special  to Hilbert spaces, rather than what applies to all Banach spaces. 
+We use statements about compact operators on Banach spaces without proof.  For instance, any compact  operator
+from one Banach space to another has separable image; the set of compact operators from one Banach space to another is a closed subspace of the set of all bounded
+linear operators; a Banach space is reflexive if and only if the closed unit ball is weakly compact (Kakutani's theorem); etc. We do however state precisely each result that we are using for Banach spaces and show that  its hypotheses are satisfied.
+
+Let
+$\mathbb{N}$ be the set of positive integers. We say that a set is countable if it is bijective with a subset of
+$\mathbb{N}$.
+In this note I do not presume unless I say so that any set is countable or that any Hilbert space is separable. A neighborhood of a point in a topological space is a set that contains an open set that
+contains the point; one reason why it can be handy to speak about neighborhoods of a point rather than just open sets that contain the point is that
+the set of all neighborhoods of a point is a filter, whereas it is unlikely that the set of all open sets that contain a point is a filter. If $z \in \mathbb{C}$, we denote $z^* = \overline{z}$.
+
+\section{Bounded linear operators}
+An advantage of working with normed spaces rather than merely topological vector spaces is that continuous linear maps between normed spaces have a
+simple characterization. If $X$ and $Y$ are normed spaces and $T:X \to Y$ is linear, the {\em operator norm} of $T$ is
+\[
+\norm{T} = \sup_{\norm{x} \leq 1} \norm{Tx}.
+\]
+If $\norm{T} < \infty$, then we say that $T$ is {\em bounded}. 
+
+\begin{theorem}
+If $X$ and $Y$ are normed spaces, a linear map $T:X \to Y$ is continuous if and only if it is bounded.
+\end{theorem}
+\begin{proof}
+Suppose that $T$ is continuous. In particular $T$ is continuous at $0$, so there is some $\delta>0$ such that if $\norm{x} \leq \delta$ then
+$\norm{Tx}=\norm{Tx-T0} \leq 1$. If $x \neq 0$ then, as $T$ is linear,
+\[
+\norm{Tx} = \frac{1}{\delta}\norm{x} \norm{T\left( \frac{\delta}{\norm{x}} x \right)}
+\leq  \frac{1}{\delta} \norm{x}.
+\]
+Thus $\norm{T} \leq \frac{1}{\delta}<\infty$, so $T$ is bounded.
+
+Suppose that $T$ is bounded. Let $x_0 \in X$, and let $\epsilon>0$. If $\norm{x-x_0} \leq \frac{\epsilon}{\norm{T}}$,
+then
+\[
+\norm{Tx-Tx_0} = \norm{T(x-x_0)} \leq \norm{T} \norm{x-x_0} \leq \norm{T} \cdot  \frac{\epsilon}{\norm{T}} = \epsilon.
+\]
+Hence $T$ is continuous at $x_0$, and so $T$ is continuous.
+\end{proof}
+
+If $X$ and $Y$ are normed spaces,
+we denote by $\mathscr{B}(X,Y)$ the set of bounded linear maps
+$X \to Y$. It is straightforward to check that $\mathscr{B}(X,Y)$ is a normed space with the operator norm.
+One proves that
+if $Y$ is a Banach space, then $\mathscr{B}(X,Y)$ is a Banach space,\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~92, Theorem 4.1.}
+and if $X$ is a Banach space one then checks that $\mathscr{B}(X)=\mathscr{B}(X,X)$  is a Banach algebra. 
+If $X$ is a normed space, we define $X^*=\mathscr{B}(X,\mathbb{C})$, which is a Banach space,  called the {\em dual space of $X$}.
+
+
+If $X$ and $Y$ are normed spaces and $T:X \to Y$ is linear, we say that $T$ has {\em finite rank} if
+\[
+\rank T = \dim T(X)
+\]
+ is finite. If $X$ is infinite dimensional and $Y \neq \{0\}$,
+let $\mathscr{E}$ be a Hamel basis for $X$, let $\{e_n: n \in \mathbb{N}\}$ be a countable subset of $\mathscr{E}$, and let $y \in Y$ be nonzero.
+If we define
+$T:X \to Y$ by $Te_n=n\norm{e_n}y$ and $Te=0$ if $e \in \mathscr{E} \setminus \{e_n:n \in \mathbb{N}\}$, then $T$ is a linear map with finite rank yet $T$ is unbounded.
+Thus a finite rank linear map is not necessarily bounded. We denote by $\mathscr{B}_{00}(X,Y)$ the set of bounded finite rank linear maps $X \to Y$, and check that
+$\mathscr{B}_{00}(X,Y)$ is a vector space.
+If $X$ is a Banach space, one checks that $\mathscr{B}_{00}(X)$ is an ideal of the algebra $\mathscr{B}(X)$ (if we either pre- or postcompose a linear map with a finite rank
+linear map, the image will be finite dimensional).
+
+If $X$ and $Y$ are Banach spaces, we say that $T:X \to Y$ is {\em compact} if the image of any bounded set under $T$ is precompact (has compact
+closure). One
+checks that if a linear map is compact then it is bounded (unlike a finite rank linear map, which is not necessarily bounded). There are several ways to state that a linear map is compact that one proves are equivalent:
+$T$ is compact if and only if the image of the closed unit ball is precompact;
+$T$ is compact if and only if the image of the open unit ball is precompact;
+$T$ is compact
+if and only if  the image under it of any bounded sequence has a convergent subsequence.
+In a complete metric space, the {\em Heine-Borel theorem} asserts that a set is precompact   if and only if it is {\em totally
+bounded} (for any $\epsilon>0$, the set can be covered by a finite number of balls of radius $\epsilon$).
+We denote by $\mathscr{B}_0(X,Y)$ the set of compact
+linear maps $X \to Y$, and it is straightforward to check that this is a vector space. One proves that if an operator is in the closure of the compact operators then the image of the closed unit
+ball under it is totally bounded, and from this it follows that $\mathscr{B}_0(X,Y)$ is a closed
+subspace of $\mathscr{B}(X,Y)$.
+$\mathscr{B}_0(X)$ is an ideal of the algebra $\mathscr{B}(X)$: if $K \in \mathscr{B}_0(X)$ and $T \in \mathscr{B}(X)$, one checks that $TK \in \mathscr{B}_0(X)$ and 
+$KT \in \mathscr{B}_0(X)$. 
+
+Let $X$ and $Y$ be Banach spaces.
+Using the fact that a bounded set in a finite dimensional normed vector space is precompact,
+we can prove that a bounded finite rank operator is compact: $\mathscr{B}_{00}(X,Y) \subseteq \mathscr{B}_0(X,Y)$.
+Also, it doesn't take long to prove that the image of a compact operator is {\em separable}: if $T \in \mathscr{B}_0(X,Y)$ then $T(X)$ has a countable dense subset. (We can
+prove this
+using the fact that a compact metric space is separable.) 
+
+
+If $H$ is a Hilbert space and $S_i, i \in I$ are  subsets of $H$, we define $\bigvee_{i \in I} S_i$ to be the closure of the span of
+$\bigcup_{i \in I} S_i$. We say that $\mathscr{E}$ is an {\em orthonormal basis} for $H$ if
+$\inner{e}{f}=\delta_{e,f}$ and  $H=\bigvee \mathscr{E}$.
+
+A {\em sesquilinear form} on $H$ is a function
+$f:H \times H \to \mathbb{C}$ that is linear
+in its first argument and  that satisfies $f(x,y)=f(y,x)^*$. If $f$ is a sesquilinear form on $H$, we say that
+$f$ is {\em bounded} if
+\[
+\sup\{|f(x,y)|:\norm{x},\norm{y} \leq 1\} < \infty.
+\]
+The {\em Riesz representation theorem}\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~310, Theorem 12.8.}
+ states that if $f$ is a bounded sesquilinear form on $H$, then there is a unique $B 
+\in \mathscr{B}(H)$ such that
+\[
+f(x,y)=\inner{x}{By}, \qquad x,y \in H,
+\]
+and $\norm{B}=\sup\{|f(x,y)|:\norm{x},\norm{y} \leq 1\}$.
+It follows from the Riesz representation that if $A \in \mathscr{B}(H)$, then there is a unique $A^* \in \mathscr{B}(H)$ such that
+\[
+\inner{Ax}{y}=\inner{x}{A^*y}, \qquad x,y \in H,
+\]
+and  $\norm{A^*}=\norm{A}$.
+$\mathscr{B}(H)$ is a {\em $C^*$-algebra}:
+if $A,B \in \mathscr{B}(H)$ and $\lambda \in \mathbb{C}$ then $A^{**}=A$, $(A+B)^*=A^*+B^*$, $(AB)^*=B^*A^*$, $(\lambda A)^*=\lambda^* A^*$,
+and $\norm{A^*A}=\norm{A}^2$.
+
+We say that $A \in \mathscr{B}(H)$ is {\em normal} if $A^*A=AA^*$, and 
+ {\em self-adjoint} if $A^*=A$. One proves using the parallelogram law that $A \in \mathscr{B}(H)$ is self-adjoint if and only if
+$\inner{Ax}{x} \in \mathbb{R}$ for all $x \in H$. If $A \in \mathscr{B}(H)$ is self-adjoint, we say that $A$
+is {\em positive} if $\inner{Ax}{x} \geq 0$ for all $x \in H$.
+
+
+
+
+\section{Spectrum in Banach spaces}
+If $X$ and $Y$ are Banach spaces and
+$T \in \mathscr{B}(X,Y)$ is a bijection, 
+then its inverse function $T^{-1}:Y \to X$ is linear, since the inverse of a linear bijection is itself linear. Because $T$ is a surjective bounded linear map,
+by the {\em open mapping theorem} it is an open map:
+if $U$ is an open subset of $X$ then $T(U)$ is an open subset of $Y$, and it follows that $T^{-1} \in \mathscr{B}(Y,X)$. That is, if a bounded linear operator from one Banach space to another is bijective then its inverse function is also a bounded linear operator. 
+
+If $X$ is a Banach space and $T \in \mathscr{B}(X)$, the {\em spectrum} $\sigma(T)$ of $T$ is the set of those $\lambda \in \mathbb{C}$ such that the map $T-\lambda \id_X:X \to X$ is not a bijection. One proves that $\sigma(T)$ is nonempty (the proof uses Liouville's theorem, which states that a bounded entire function is constant). One also
+proves that
+if $\lambda \in \sigma(T)$ then $|\lambda| \leq \norm{T}$. We define the {\em spectral radius} of $T$ to be
+\[
+r(T) = \sup_{\lambda \in \sigma(T)} |\lambda|,
+\]
+and so
+$r(T) \leq \norm{T}$.
+Because $\mathscr{B}_0(X)$ is an ideal in the algebra $\mathscr{B}(X)$, if $T \in \mathscr{B}_0(X)$ is invertible then $\id_X$ is compact. One checks that
+if $\id_X$ is compact then $X$ is finite dimensional (a locally compact topological vector space is finite dimensional), and 
+therefore, if $X$ is an infinite dimensional Banach space and $T \in \mathscr{B}_0(X)$, then $0 \in \sigma(T)$. 
+
+The {\em resolvent set} of $T$ is $\rho(T) = \mathbb{C} \setminus \sigma(T)$. One proves that
+$\rho(T)$ is open,\footnote{Gert K. Pedersen, {\em Analysis Now}, revised printing, p.~131, Theorem 4.1.13.} from which it then follows that $\sigma(T)$ is a compact set.
+For $\lambda \in \rho(T)$, we define
+\[
+R(\lambda,T) = (T-\lambda \id_X)^{-1} \in \mathscr{B}(X),
+\]
+called the {\em resolvent} of $T$.
+
+
+If $X$ is a Banach space and  $T \in \mathscr{B}_0(X)$, then
+the {\em point spectrum} $\point(T)$ of $T$ is the set of those $\lambda \in \mathbb{C}$ such that $T-\lambda \id_X$ is not injective. In other words, to say that 
+$\lambda \in \point(T)$ is to say that 
+\[
+\dim \ker(T-\lambda \id_X) >0.
+\]
+If $\lambda \in \point(T)$, we say that $\lambda$ is an {\em eigenvalue} of $T$, and call $\dim \ker(T-\lambda \id_X)$ its {\em geometric multiplicity}.\footnote{There is
+also a notion of {\em algebraic multiplicity} of an eigenvalue: the algebraic multiplicity of $\lambda$ is defined to be
+\[
+\sup_{n \in \mathbb{N}} \dim \ker((A-\lambda \id_H)^n).
+\]
+For self-adjoint operators this is equal to the geometric multiplicity of $\lambda$, while for a operator that is not
+self-adjoint the algebraic multiplicity of an eingevalue may be greater than its geometric multiplicity.
+Nonzero elements of $\ker((A-\lambda \id_H)^n)$ are called {\em generalized eigenvectors} or {\em root vectors}.
+See
+I. C. Gohberg and M. G. Krein, {\em Introduction to the Theory
+of Linear Nonselfadjoint Operators in Hilbert Space}.}
+It is a fact that each nonzero eigenvalue of $T$ has finite geometric multiplicity, and  it is also a fact that if $T \in \mathscr{B}_0(X)$,
+then $\point(T)$ is a bounded countable set and that if $\point(T)$ has a limit point that limit point is $0$.
+The {\em Fredholm alternative} tells us that
+\[
+\sigma(T) \subseteq \point(T) \cup \{0\}.
+\]
+If $X$ is infinite dimensional then $\sigma(T) = \point(T) \cup \{0\}$, and $\point(T)$ might or might not include $0$.
+If $T \in \mathscr{B}_{00}(X)$, check that $\point(T)$ is a finite set. 
+
+
+If $H$ is a Hilbert space, 
+using the fact that a bounded linear
+operator $T \in \mathscr{B}(H)$ is invertible $T$ if and only if both $TT^*$ and $T^*T$ are  bounded below ($S$ is {\em bounded below} if there is some $c>0$ such that
+$\norm{Sx} \geq c\norm{x}$ for all $x \in X$), one can prove that the spectrum of a bounded self-adjoint operator is a set
+of real numbers, and the spectrum
+of a bounded positive operator is a set of nonnegative real numbers.
+
+
+\section{Numerical radius}
+If $H$ is a Hilbert space and
+ $A \in \mathscr{B}(H)$, the {\em numerical range} of $A$ is the set $\{\inner{Ax}{x}:\norm{x}=1\}$.\footnote{The {\em Toeplitz-Hausdorff theorem} states that
+the numerical range of any bounded linear operator is a convex set. See Paul R. Halmos, {\em A Hilbert Space Problem Book}, Problem 166.} 
+The closure of the numerical range contains the spectrum of $A$.\footnote{Paul R. Halmos, {\em A Hilbert Space Problem Book}, Problem 169. If $A$
+is normal, then the closure of its numerical range is the convex hull of the spectrum: Problem 171.}
+The {\em numerical radius} $w(A)$ of $A$ is the supremum of the numerical range of $A$: $w(A)=\sup_{\norm{x}=1} |\inner{Ax}{x}|$.
+If $A \in \mathscr{B}(H)$ is self-adjoint, one can prove that\footnote{John B. Conway,
+{\em A Course in Functional Analysis}, second ed., p.~34, Proposition 2.13.}
+\[
+w(A) = \norm{A}.
+\]
+
+The following theorem asserts that a compact self-adjoint operator $A$ has an eigenvalue whose absolute value is equal to the norm of the operator.
+Thus in particular, the spectral radius of a compact self-adjoint operator is equal to its numerical radius.
+Since a self-adjoint operator has real spectrum, to say that $|\lambda|=\norm{A}$ is to say that either $\lambda=\norm{A}$ or $\lambda=-\norm{A}$.
+A compact operator on a Hilbert space can have empty point spectrum (e.g.  the Volterra operator on $L^2([0,1])$) and a bounded self-adjoint
+operator can have empty point spectrum (e.g. the multiplication operator $T\phi(t)=t\phi(t)$ on
+$L^2([0,1])$), but this theorem shows that if an operator is compact and self-adjoint then its point spectrum is nonempty.
+
+\begin{theorem}
+If $A \in \mathscr{B}(H)$ is compact and self-adjoint then at least one of $-\norm{A},\norm{A}$ is an eigenvalue of $A$.
+\end{theorem}
+\begin{proof}
+Because $A$ is self-adjoint, $\norm{A}=w(A)=\sup_{\norm{x}=1} |\inner{Ax}{x}|$. Also, as $A$ is self-adjoint, $\inner{Ax}{x}$ is a real
+number, and thus either $\norm{A}=\sup_{\norm{x}=1} \inner{Ax}{x}$ or $\norm{A}=-\inf_{\norm{x}} \inner{Ax}{x}$. 
+In the first case, due to $\norm{A}$ being a supremum there is a sequence $x_n$, all with norm $1$, such that
+$\inner{Ax_n}{x_n} \to \norm{A}$.
+Using that $A$ is compact, there is a subsequence $x_{a(n)}$ such that $Ax_{a(n)}$ converges to some $x$, and $\norm{x}=1$
+because each $x_n$ has norm $1$.
+Using $A=A^*$,
+\begin{eqnarray*}
+\inner{Ax_n-\norm{A}x_n}{Ax_n-\norm{A}x_n}&=&\inner{Ax_n}{Ax_n}-\inner{Ax_n}{\norm{A}x_n}\\
+&&-\inner{\norm{A}x_n}{Ax_n}+\inner{\norm{A}x_n}{\norm{A}x_n}\\
+&=&\norm{Ax_n}^2-2\norm{A}\inner{Ax_n}{x_n}+\norm{A}^2 \norm{x_n}^2\\
+&\leq&\norm{A}^2 \norm{x_n}^2 -2\norm{A}\inner{Ax_n}{x_n}+\norm{A}^2 \norm{x_n}^2\\
+&=&2\norm{A}^2 \norm{x_n}^2 -2\norm{A}\inner{Ax_n}{x_n}\\
+&\to&2\norm{A}^2 \norm{x}^2 -2\norm{A}\norm{A}\\
+&=&0.
+\end{eqnarray*}
+Therefore, as $n \to \infty$, the sequence $Ax_n - \norm{A}x_n$ tends to $0$, so $Ax-\norm{A}x=0$, i.e. $x$ is an eigenvector for the eigenvalue
+$\norm{A}$. If $\norm{A}=-\inf_{\norm{x}=1} \inner{Ax}{x}$ the argument goes the same.
+\end{proof}
+
+
+
+
+\section{Polar decomposition}
+If $H$ is a Hilbert space and $P \in \mathscr{B}(H)$ is positive, there is a unique positive element of $\mathscr{B}(H)$, denoted $P^{1/2}$, satisfying
+$(P^{1/2})^2=P$, which we call the {\em positive square root} of $P$.\footnote{Gert K. Pedersen,
+{\em Analysis Now}, revised printing, p.~92, Proposition 3.2.11.} If $A \in \mathscr{B}(H)$ one checks that $A^*A$ is positive, and hence 
+$A^*A$ has a positive square root, which we denote by $|A|$ and call the {\em absolute value} of $A$. One proves that
+$|A|$ is the unique positive operator in $\mathscr{B}(H)$ satisfying
+\[
+\norm{Ax} = \norm{|A|x}, \qquad x \in H.
+\]
+An element $U$ of $\mathscr{B}(H)$ is said to be a {\em partial isometry} if there is a closed subspace $X$ of $H$ such that the restriction of $U$ to $X$ is an isometry
+$X \to U(X)$ and $\ker U = X^\perp$. One proves that $U^*U$ is the orthogonal projection of $H$ onto $X$. It can be proved that if $A \in \mathscr{B}(H)$ then there is a unique partial isometry
+$U$ satisfying both $\ker U= \ker A$ and $A=U|A|$.\footnote{Gert K. Pedersen, {\em Analysis Now}, revised printing, p.~96, Theorem 3.2.17.} This is called the {\em polar decomposition} of $A$. The
+polar decomposition satisfies
+\[
+U^*U|A|=|A|, \quad U^*A=|A|, \quad UU^*A=A.
+\]
+
+
+
+\section{Spectral theorem}
+If $e,f \in H$, we define $e \otimes f:H \to H$ by $e \otimes f (h) = \inner{h}{f}e$. $e \otimes f$ is linear, and
+\[
+\norm{e \otimes f (h)} = \norm{\inner{h}{f}e}= |\inner{h}{f}| \norm{e} \leq \norm{h}\norm{f}\norm{e},
+\]
+so $\norm{e \otimes f} \leq \norm{e} \norm{f}$. Depending on whether $f=0$ the image of $e \otimes f$ is $\{0\}$ or the span
+of $e$,  and in either case $e \otimes f \in \mathscr{B}_{00}(H)$. If either of $e$ or $f$ is $0$ then $e \otimes f$ has rank $0$,
+and otherwise $e \otimes f$ has rank $1$, and it is an orthogonal projection precisely when $f$ is a multiple of $e$. 
+
+If $\mathscr{E}$ is an orthonormal set in a Hilbert space $H$, then $\mathscr{E}$ is an orthonormal basis for $H$ if and only if the unordered sum
+\[
+\sum_{e \in \mathscr{E}} e \otimes e
+\]
+converges strongly to $\id_H$.\footnote{John B. Conway, {\em A Course in Functional Analysis}, second ed., p.~16, Theorem 4.13.}
+
+Let's summarize what we have stated so far about the spectrum and point spectrum of a compact self-adjoint operator on a Hilbert space.
+
+\begin{theorem}[Spectrum of compact self-adjoint operators]
+If $H$ is a Hilbert space and $A \in \mathscr{B}_0(H)$ is self-adjoint, then:
+\begin{itemize}
+\item $\sigma(A)$ is a nonempty compact subset of $\mathbb{R}$.
+\item If $H$ is infinite dimensional,  then $0 \in \sigma(A)$.
+\item $\sigma(A) \subseteq \point(A) \cup \{0\}$.
+\item $\point(A)$ is countable.
+\item If $\lambda \in \mathbb{R}$ is a limit point of $\point(A)$, then $\lambda=0$.
+\item At least one of $\norm{A},-\norm{A}$ is an element of $\point(A)$.
+\item Each nonzero eigenvalue of $A$ has finite geometric multiplicity: If $\lambda \in \point(A)$ and $\lambda \neq 0$, then $\dim \ker(A-\lambda \id_H)<\infty$.
+\item If $A \in \mathscr{B}_{00}(H)$, then $\point(A)$ is a finite set.
+\end{itemize}
+\label{sactheorem}
+\end{theorem}
+
+We say that $A \in \mathscr{B}(H)$ is {\em diagonalizable} if there is an orthonormal basis $\mathscr{E}$ for $H$ and a bounded set $\{\lambda_e \in \mathbb{C}: e \in \mathscr{E}\}$
+such that the unordered sum
+\[
+\sum_{e \in \mathscr{E}} \lambda_e e \otimes e
+\]
+converges  strongly to $A$.
+
+The following is the {\em spectral theorem} for normal compact operators.\footnote{Gert K. Pedersen, {\em Analysis Now}, revised printing,
+p.~108, Theorem 3.3.8.} 
+
+\begin{theorem}[Spectral theorem]
+If $A \in \mathscr{B}_0(H)$ is normal, then $A$ is diagonalizable.
+\end{theorem}
+
+The last assertion of Theorem \ref{sactheorem} is that a bounded  self-adjoint finite rank operator on a Hilbert space has finitely many elements in
+its point spectrum. Using the spectral theorem, we get that if $A \in \mathscr{B}_0(H)$ is self-adjoint and $\point(A)$ is finite, then $A$ is finite rank.
+In the notation we introduce in the following definition, $\nu(A)<\infty$ precisely when $A$ has finite rank.
+
+\begin{definition}
+If $A \in \mathscr{B}_0(H)$ is self-adjoint, define $0 \leq \nu(A) \leq \infty$ to be the sum of the geometric multiplicities of the nonzero eigenvalues of $A$:
+\[
+\nu(A) = \sum_{\lambda \in \point(A) \setminus \{0\}} \dim \ker(A-\lambda \id_H).
+\]
+Define 
+\[
+(\lambda_n(A):n \in \mathbb{N}) \in \mathbb{R}^{\mathbb{N}}
+\]
+to be the sequence whose first term is the element of
+$\point(A) \setminus \{0\}$ with
+largest absolute value repeated as many times as its geometric multiplicity. If $\lambda,-\lambda$ are both  nonzero elements of $\point(A)$, we put the  positive one  first. We
+repeat this for the remaining elements of $\point(A) \setminus \{0\}$.
+If $\nu(A) < \infty$, we define $\lambda_n(A) = 0$ for $n>\nu(A)$.
+\label{nudef}
+\end{definition}
+
+Using the spectral theorem and the notation in the above definition we get the following.
+
+\begin{theorem}
+If $A \in \mathscr{B}_0(H)$ is self-adjoint, then there is an orthonormal set $\{e_n: n \in \mathbb{N}\}$ in $H$ such that
+\[
+\sum_{n \in \mathbb{N}} \lambda_n(A) e_n \otimes e_n
+\]
+converges strongly to $A$.
+\label{spectralsac}
+\end{theorem}
+
+If $A \in \mathscr{B}_0(H)$, then its absolute value $|A|$ is a positive compact operator, and $\lambda_n(|A|) \geq 0$ for all $n \in \mathbb{N}$. 
+
+\begin{definition}
+If $A \in \mathscr{B}_0(H)$ and
+$\lambda$ is an eigenvalue of $|A|$, we call $\lambda$ a {\em singular
+value} of $A$, and we define
+\[
+\sigma_n(A) = \lambda_n(|A|), \qquad n \in \mathbb{N}.
+\]
+\end{definition}
+
+Because the absolute value of the absolute value of an operator is the absolute value of the operator, if $A \in \mathscr{B}_0(H)$ and $n \in \mathbb{N}$ then
+$\sigma_n(|A|)=\sigma_n(A)$.
+If $A \in \mathscr{B}_0(H)$ and
+ $\lambda \neq 0$, one proves that $\lambda$ is an eigenvalue of $AA^*$ if and only if $\lambda$ is an eigenvalue of $A^*A$ and that they
+have the same geometric multiplicity.
+From this we get that $\sigma_n(A) = \sigma_n(A^*)$ for all $n \in \mathbb{N}$.
+
+
+
+\section{Finite rank operators}
+\begin{theorem}[Singular value decomposition]
+If $H$ is a Hilbert space and $A \in \mathscr{B}_{00}(H)$ has $\rank A=N$, then there is an orthonormal set $\{e_n:1 \leq n \leq N\}$ and an orthonormal set 
+$\{f_n:1 \leq n \leq N\}$ such that
+\[
+A = \sum_{n=1}^N \sigma_n(A) e_n \otimes f_n, \qquad Ah=\sum_{n=1}^N \sigma_n(A) \inner{h}{f_n}e_n.
+\]
+\label{finiterankSVD}
+\end{theorem}
+\begin{proof}
+$|A|$ is a positive operator with $\rank |A|=N$, and according to Theorem \ref{spectralsac}, there is an orthonormal set $\{f_n: n \in \mathbb{N}\}$ in $H$
+such that 
+\[
+|A| = \sum_{n \in \mathbb{N}} \lambda_n(|A|) f_n \otimes f_n= \sum_{n \in \mathbb{N}} \sigma_n(A) f_n \otimes f_n.
+\]
+Using the polar decomposition
+$A=U|A|$,
+\[
+A = U|A| = \sum_{n=1}^N \sigma_n(A) (Uf_n) \otimes f_n.
+\]
+Define $e_n=Uf_n$. As $U^*U|A|=|A|$ and as $|A| \frac{f_m}{\sigma_m(A)}=f_m$,
+\begin{eqnarray*}
+\inner{e_n}{e_m}&=&\inner{Uf_n}{Uf_m}\\
+&=&\inner{f_n}{U^*Uf_m}\\
+&=&\inner{f_n}{U^*U |A| \frac{f_m}{\sigma_m(A)}}\\
+&=&\inner{f_n}{|A| \frac{f_m}{\sigma_m(A)}}\\
+&=&\inner{f_n}{f_m}\\
+&=&\delta_{n,m},
+\end{eqnarray*}
+showing that $\{e_n:1 \leq n \leq N\}$ is an orthonormal set.
+\end{proof}
+
+If $e,f,x,y \in H$, then
+\[
+\inner{e \otimes f (x)}{y}
+=\inner{\inner{x}{f}e}{y}
+=\inner{x}{f}\inner{e}{y}
+=\inner{y}{e}^* \inner{x}{f}
+=\inner{x}{\inner{y}{e}f}
+=\inner{x}{f \otimes e (y)},
+\]
+so $(e \otimes f)^*=f \otimes e$.
+
+\begin{theorem}
+If $A \in \mathscr{B}_{00}(H)$ then
+$A^* \in \mathscr{B}_{00}(H)$.
+\end{theorem}
+\begin{proof}
+Let $A$ have the singular value decomposition
+\[
+A=\sum_{n=1}^N \sigma_n(A) e_n \otimes f_n.
+\]
+Taking the adjoint, and because $\sigma_n \in \mathbb{R}$,
+\[
+A^* = \sum_{n=1}^N \sigma_n(A) f_n \otimes e_n.
+\]
+ $A^*$ is a sum of finite rank operators and is therefore itself a finite rank operator.
+\end{proof}
+
+
+
+\section{Compact operators}
+If $X$ and $Y$ are Banach spaces, $\mathscr{B}_{00}(X,Y) \subseteq \mathscr{B}_0(X,Y)$. But if $H$ is a Hilbert space we can say much more:
+$\mathscr{B}_{00}(H)$ is a dense subset of  $\mathscr{B}_0(H)$. In other words, any compact operator on a Hilbert space can be approximated by
+a sequence of bounded finite rank operators.\footnote{John B. Conway, {\em A Course in Functional Analysis}, second ed., p.~41, 
+Theorem 4.4.} As the adjoint $A_n^*$ of each of these finite rank operators $A_n$  is itself a bounded finite rank operator,
+\[
+\norm{A^*-A_n^*} =  \norm{(A-A_n)^*} = \norm{A-A_n} \to 0,
+\]
+so $A_n^* \to A^*$. Because each bounded finite rank operator is compact and $\mathscr{B}_0(H)$ is closed,
+this establishes that  $A^* \in \mathscr{B}_0(H)$. (In fact, it is true that the adjoint of a compact linear operator
+between Banach spaces is itself compact, but there we don't have the tool of showing that the adjoint is the limit of the adjoints  of finite rank operators.)
+
+If $H$ is a Hilbert space, the {\em weak topology} is the topology on $H$ such that a net $x_\alpha$ converges to $x$ weakly if for all $h \in H$ the net $\inner{x_\alpha}{h}$
+converges to $\inner{x}{h}$ in $\mathbb{C}$. Let $\mathfrak{B}$ be the closed unit ball in $H$, and let it be a topological space with the subspace topology inherited from $H$ with the weak
+topology. Thus, a net $x_\alpha \in \mathfrak{B}$ converges to $x \in \mathfrak{B}$ if and only if for all $h \in H$ the net $\inner{x_\alpha}{h}$ converges to $\inner{x}{h}$.
+
+\begin{theorem}
+If $H$ is a Hilbert space,
+$A \in \mathscr{B}(H)$, and $\mathfrak{B}$ is the closed unit ball in $H$ with the subspace topology inherited from $H$ with the weak topology,
+then $A$ is compact if and only if $A|\mathfrak{B}:\mathfrak{B} \to H$ is continuous.
+\end{theorem}
+\begin{proof}
+Suppose that $A$ is compact and let $x_\alpha$ be a net in $\mathfrak{B}$ that converges weakly to some $x \in \mathfrak{B}$. 
+If $\epsilon>0$, then there is some $B \in \mathscr{B}_{00}(H)$ with $\norm{A-B}<\epsilon$.
+Let $B$ have the singular value decomposition
+\[
+B=\sum_{n=1}^N \sigma_n(B) e_n \otimes f_n.
+\]
+We have, using that the $e_n$ are orthonormal,
+\begin{eqnarray*}
+\norm{Bx_\alpha - Bx}^2&=&\norm{ \sum_{n=1}^N \sigma_n(B) \inner{x_\alpha}{f_n}e_n - \sum_{n=1}^N \sigma_n(B) \inner{x}{f_n}e_n}^2\\
+&=&\norm{ \sum_{n=1}^N \sigma_n(B) \inner{x_\alpha - x}{f_n}e_n}^2\\
+&=&\sum_{n=1}^N  \sigma_n(B)^2 |\inner{x_\alpha-x}{f_n}|^2.
+\end{eqnarray*}
+Eventually this is $<\frac{\epsilon}{3}$, and for such $\alpha$,
+\begin{eqnarray*}
+\norm{Ax_\alpha-Ax}&\leq&\norm{Ax_\alpha-Bx_\alpha}+\norm{Bx_\alpha-Bx}+\norm{Bx-Ax}\\
+&\leq&\norm{A-B}\norm{x_\alpha}+\norm{Bx_\alpha-Bx}+\norm{B-A}\norm{x}\\
+&\leq&\norm{A-B}+\norm{Bx_\alpha-Bx}+\norm{B-A}\\
+&<&\frac{\epsilon}{3}+\frac{\epsilon}{3}+\frac{\epsilon}{3}\\
+&=&\epsilon.
+\end{eqnarray*}
+We have shown that $Ax_\alpha \to Ax$ in the no rm of $H$, and this shows that $A|\mathfrak{B}:\mathfrak{B} \to H$ is continuous.
+
+Suppose that $A|\mathfrak{B}:\mathfrak{B} \to H$ is continuous. Kakutani's theorem states that a Banach space is reflexive if and only if the closed unit ball is weakly
+compact. A Hilbert space is reflexive, hence $\mathfrak{B}$, the closed unit ball with the weak topology, is a compact topological
+space.\footnote{cf. Paul R. Halmos, {\em A Hilbert Space Problem Book}, Problem 17.} 
+Since $A|\mathfrak{B}:\mathfrak{B} \to H$
+is continuous and $\mathfrak{B}$ is compact, the image $A(\mathfrak{B})$ is compact (the image of a compact set under a continuous map is a compact set). We have shown that the image of the closed unit ball is a compact subset of $H$, and this
+shows that $A$ is compact; in fact, to have shown that $A$ is compact we merely needed to show that the image of the closed unit ball is precompact, and $H$ is a Hausdorff
+space so a compact set is precompact.
+\end{proof}
+
+
+A compact linear operator on an infinite dimensional Hilbert space $H$ is not invertible, lest $\id_H$ 
+be compact. However, operators of the form $A-\lambda \id_H$ may indeed be invertible.\footnote{Ward
+Cheney, {\em Analysis for Applied Mathematics}, p.~94, Theorem 2.}
+
+\begin{theorem}
+If $A \in \mathscr{B}_0(H)$ is a normal operator with diagonalization
+\[
+A=\sum_{n=1}^\infty \lambda_n e_n \otimes e_n
+\]
+and $0 \neq \lambda \not \in \point(A)$, 
+ then $A-\lambda \id_H$ is invertible and
+\[
+(A-\lambda \id_H)^{-1} = -\frac{1}{\lambda}+\frac{1}{\lambda} \sum_{n=1}^\infty \frac{\lambda_n}{\lambda_n-\lambda} e_n \otimes e_n,
+\]
+where the series converges in the strong operator topology.
+\end{theorem}
+\begin{proof}
+As $\lambda_n \to 0$ we have $\alpha = \sup_n |\lambda_n|<\infty$, and as $\lambda \neq 0$ we have $\beta=\inf_n |\lambda_n-\lambda|>0$.
+Define
+\[
+T_N =-\frac{1}{\lambda}+\frac{1}{\lambda} \sum_{n=1}^N \frac{\lambda_n}{\lambda_n-\lambda} e_n \otimes e_n \in \mathscr{B}_{00}(H),
+\]
+and if $N>M$, then, for any $h \in H$,
+\begin{eqnarray*}
+\norm{T_Nh-T_Mh}^2 &=&\frac{1}{|\lambda|^2} \norm{\sum_{n=M+1}^N  \frac{\lambda_n}{\lambda_n-\lambda} \inner{h}{e_n}e_n}^2\\
+&=&\frac{1}{|\lambda|^2} \sum_{n=M+1}^N  \frac{|\lambda_n|^2}{|\lambda_n-\lambda|^2} |\inner{h}{e_n}|^2\\
+&\leq&\frac{1}{|\lambda|^2} \sum_{n=M+1}^N \frac{\alpha^2 |\inner{h}{e_n}|^2}{\beta^2}\\
+&=&\frac{\alpha^2}{|\lambda|^2 \beta^2} \sum_{n=M+1}^N |\inner{h}{e_n}|^2.
+\end{eqnarray*}
+By Bessel's inequality, $\sum_{n=1}^\infty |\inner{h}{e_n}|^2 \leq \norm{h}^2$, hence $\sum_{n=N}^\infty |\inner{h}{e_n}|^2 \to 0$ as $N \to \infty$; this $N$ depends on $h$,
+and this is why the claim is stated merely for the strong operator topology and not the norm topology. We have shown that $T_N h$ is a Cauchy sequence in $H$ and hence
+$T_N h$ converges. We define $Bh$ to be this limit. 
+For $h \in H$,
+\begin{eqnarray*}
+\norm{\frac{1}{\lambda} \sum_{n=1}^\infty \frac{\lambda_n}{\lambda_n-\lambda} \inner{h}{e_n}e_n}^2&=&\frac{1}{|\lambda|^2} \sum_{n=1}^\infty \frac{|\lambda_n|^2}{|\lambda_n-\lambda|^2} |\inner{h}{e_n}|^2\\
+&\leq&\frac{\alpha^2}{|\lambda|^2 \beta^2} \sum_{n=1}^\infty |\inner{h}{e_n}|^2\\
+&\leq&\frac{\alpha^2}{|\lambda|^2 \beta^2} \norm{h}^2,
+\end{eqnarray*}
+whence
+\begin{eqnarray*}
+\norm{Bh} &\leq& \norm{-\frac{1}{\lambda}h} + \norm{\frac{1}{\lambda} \sum_{n=1}^\infty \frac{\lambda_n}{\lambda_n-\lambda} \inner{h}{e_n}e_n}\\
+&\leq&\frac{1}{|\lambda|} \norm{h} + \frac{\alpha}{|\lambda|\beta} \norm{h},
+\end{eqnarray*}
+showing that $\norm{B} \leq \frac{1}{|\lambda|} + \frac{\alpha}{|\lambda| \beta}$. It is straightforward to check that $B$ is linear, thus
+$B \in \mathscr{B}(H)$. (Thus $B$ is a strong limit of finite rank operators. But if $H$ is infinite dimensional then $B$ is in fact not the norm limit of the sequence: for
+if it were it would be compact, and we will show that $B$ is invertible, which would tell us that $\id_H$ is compact, contradicting $H$ being infinite dimensional.)
+
+For $h \in H$, 
+\begin{eqnarray*}
+(A-\lambda \id_H)Bh&=&-\frac{1}{\lambda}(Ah-\lambda h) + \frac{1}{\lambda} \sum_{n=1}^\infty \frac{\lambda_n}{\lambda_n-\lambda}
+\inner{h}{e_n}(Ae_n-\lambda e_n)\\
+&=&h-\frac{1}{\lambda}Ah + \frac{1}{\lambda} \sum_{n=1}^\infty \frac{\lambda_n}{\lambda_n-\lambda}
+\inner{h}{e_n}(\lambda_n e_n-\lambda e_n)\\
+&=&h-\frac{1}{\lambda} Ah + \frac{1}{\lambda} \sum_{n=1}^\infty \lambda_n \inner{h}{e_n}e_n\\
+&=&h,
+\end{eqnarray*}
+where the final equality is because the series is the diagonalization of $A$. On the other hand,
+\begin{eqnarray*}
+B(A-\lambda \id_H)h&=&-\frac{1}{\lambda}(A-\lambda \id_H)h + \frac{1}{\lambda} \sum_{n=1}^\infty
+ \frac{\lambda_n}{\lambda_n-\lambda} \inner{(A-\lambda \id_H)h}{e_n}e_n\\
+ &=&h-\frac{1}{\lambda}Ah + \frac{1}{\lambda} \sum_{n=1}^\infty
+ \frac{\lambda_n}{\lambda_n-\lambda} \inner{Ah-\lambda h}{e_n}e_n\\
+ &=&h-\frac{1}{\lambda}\sum_{n=1}^\infty \lambda_n \inner{h}{e_n}e_n+\frac{1}{\lambda}\sum_{n=1}^\infty \frac{\lambda_n}{\lambda_n-\lambda}
+ \inner{Ah}{e_n}e_n\\
+ &&-\sum_{n=1}^\infty \frac{\lambda_n}{\lambda_n-\lambda} \inner{h}{e_n}e_n\\
+ &=&h-\frac{1}{\lambda}\sum_{n=1}^\infty \lambda_n \inner{h}{e_n}e_n+\frac{1}{\lambda}\sum_{n=1}^\infty \frac{\lambda_n}{\lambda_n-\lambda}
+\lambda_n \inner{h}{e_n}e_n\\
+ &&-\sum_{n=1}^\infty \frac{\lambda_n}{\lambda_n-\lambda} \inner{h}{e_n}e_n\\
+ &=&h+\frac{1}{\lambda} \sum_{n=1}^\infty \frac{-\lambda_n(\lambda_n-\lambda) +\lambda_n^2-\lambda_n \lambda}{\lambda_n-\lambda}
+ \inner{h}{e_n}e_n\\
+ &=&h,
+\end{eqnarray*}
+showing that $B=(A-\lambda \id_H)^{-1}$.
+\end{proof}
+
+
+
+
+
+We can start with a function and ask what kind of series it can be expanded into, or we can start with a series and ask what kind of function it defines. The following theorem does the latter.
+It shows that if $e_n$ and $f_n$ are each orthonormal sequences and $\lambda_n$ is a sequence of complex numbers whose
+limit of $0$, then the series
+\[
+\sum_{n=1}^\infty \lambda_n e_n \otimes f_n
+\]
+converges and  is an element of $\mathscr{B}_0(H)$.
+
+\begin{theorem}
+If $H$ is a Hilbert space,
+ $\{e_n:n \in \mathbb{N}\}$ is an orthonormal set, $\{f_n: n\in \mathbb{N}\}$ is an orthonormal set, 
+and $\lambda_n \in \mathbb{C}$ is a sequence tending to $0$, then the sequence
+\[
+A_N = \sum_{n=1}^N \lambda_n e_n \otimes f_n \in \mathscr{B}_{00}(H).
+\]
+converges to an element of $\mathscr{B}_0(H)$.
+\label{compactdefine}
+\end{theorem}
+\begin{proof}
+Let $\epsilon>0$ and let $N_0$ be such that if $n \geq N_0$ then $|\lambda_n|<\epsilon$. If $N > M \geq N_0$ and $h \in H$, then, as the $e_n$ are orthonormal,
+\begin{eqnarray*}
+\norm{(A_N-A_M)h}^2=&&\norm{\sum_{n=M+1}^N \lambda_n e_n \otimes f_n (h)}^2\\
+&=&\norm{\sum_{M+1}^N \lambda_n \inner{h}{f_n}e_n}^2\\
+&=&\sum_{n=M+1}^N \norm{\lambda_n \inner{h}{f_n}e_n}^2\\
+&=&\sum_{n=M+1}^N |\lambda_n|^2 |\inner{h}{f_n}|^2\\
+&<&\epsilon^2 \sum_{n=M+1}^N  |\inner{h}{f_n}|^2.
+\end{eqnarray*}
+By Bessel's inequality, $\sum_{n=M+1}^N  |\inner{h}{f_n}|^2 \leq \norm{h}^2$, and hence
+\[
+\norm{(A_N-A_M)h} < \epsilon \norm{h}.
+\]
+As this holds for all $h \in H$, 
+\[
+\norm{A_N-A_M} \leq \epsilon,
+\]
+showing that $A_N$ is a Cauchy sequence, which  therefore converges in $\mathscr{B}(H)$.  As each term in the sequence is finite rank and so compact, the limit is a
+compact operator.
+\end{proof}
+
+Continuing the analogy we used with the above theorem, 
+now we start with a function and ask what kind of series it can be expanded into. This is called the {\em singular value decomposition} of a compact operator.
+Helemskii calls the series in the following theorem the {\em Schmidt series} of 
+the operator.\footnote{A. Ya. Helemskii, {\em Lectures and Exercises on Functional Analysis}, p.~215, Theorem 1.} We have already presented the singular value decomposition
+for finite rank operators in Theorem \ref{finiterankSVD}.
+
+
+\begin{theorem}[Singular value decomposition]
+If $H$ is a Hilbert space and
+\[
+A \in \mathscr{B}_0(H) \setminus \mathscr{B}_{00}(H),
+\]
+then there is an orthonormal set $\{e_n: n \in \mathbb{N}\}$ and
+an orthonormal set $\{f_n: n\in \mathbb{N}\}$ such that
+$A_N \to A$, where
+\[
+A_N = \sum_{n=1}^N \sigma_n(A) e_n \otimes f_n.
+\]
+\end{theorem}
+\begin{proof}
+As $|A|$ is self-adjoint and compact, 
+by Theorem \ref{spectralsac} there is an orthonormal set $\{f_n: n \in \mathbb{N}\}$ such that
+\[
+|A|= \sum_{n=1}^\infty \lambda_n(|A|)  f_n \otimes f_n=\sum_{n=1}^\infty \sigma_n(A) f_n \otimes f_n.
+\]
+That is, with $|A|_N \in \mathscr{B}_{00}(H)$ defined by
+\[
+|A|_N = \sum_{n=1}^N \sigma_n(A) f_n \otimes f_n,
+\]
+we have $|A|_N \to |A|$.
+
+Let $A=U|A|$ be the polar decomposition of $A$, and
+define $e_n=Uf_n$.
+As $U^*U|A|=|A|$ and as $\sigma_m(A) >0$ (because $A$ is not finite rank), we have $|A|\frac{f_m}{\sigma_m(A)}=f_m$, and hence
+\begin{eqnarray*}
+\inner{e_n}{e_m}&=&\inner{Uf_n}{Uf_m}\\
+&=&\inner{f_n}{U^*Uf_m}\\
+&=&\inner{f_n}{U^*U|A|\frac{f_m}{\sigma_m(A)}}\\
+&=&\inner{f_n}{|A|\frac{f_m}{\sigma_m(A)}}\\
+&=&\inner{f_n}{f_m}\\
+&=&\delta_{n,m},
+\end{eqnarray*}
+showing that $\{e_n: n \in \mathbb{N}\}$ is an orthonormal set.
+Define
+\[
+A_N = \sum_{n=1}^N \sigma_n(A) e_n \otimes f_n,
+\]
+and we have $A_N = U|A|_N$. As $A=U|A|$ and $A_N=U|A|_N$, we get
+\[
+\norm{A-A_N} = \norm{U|A|-U|A|_N} \leq \norm{U} \norm{|A|-|A|_N} = \norm{|A|-|A|_N} \to 0,
+\]
+showing that $A_N \to A$.
+\end{proof}
+
+
+
+
+
+\section{Courant min-max theorem}
+\begin{theorem}[Courant min-max theorem]
+Let $H$ be an infinite dimensional Hilbert space and let $A \in \mathscr{B}_0(H)$ be a positive operator.
+If $k \in \mathbb{N}$ then
+\[
+\max_{\dim S = k} \min_{x \in S, \norm{x}=1} \inner{Ax}{x}=\lambda_k(A)=\sigma_k(A)
+\]
+and
+\[
+\min_{\dim S=k-1} \max_{x \in S^\perp, \norm{x}=1} \inner{Ax}{x}=\lambda_k(A)=\sigma_k(A).
+\]
+\end{theorem}
+\begin{proof}
+ $|A|$ is compact and positive, so
+according to Theorem \ref{spectralsac} there is an orthonormal set $\{e_n: n \in \mathbb{N}\}$ such that
+\[
+A=\sum_{n=1}^\infty \sigma_n(A) e_n \otimes e_n.
+\]
+For $k \in \mathbb{N}$,
+ let $S_k=\bigvee_{n=k}^\infty \{e_n\}$. $S_k^\perp=\bigvee_{k=1}^{n-1} \{e_n\}$, so $S_k$ has codimension $k-1$. (The {\em codimension} of a closed subspace
+of a Hilbert space is the dimension of its orthogonal complement.)
+If $S$ is a
+$k$ dimensional subspace of $H$,  then there is some $x \in S_k \cap S$ with $\norm{x}=1$. This is because if $V$ is a closed
+subspace with codimension $k-1$ of a Hilbert space and $W$ is a  $k$ dimensional subspace of the Hilbert space, then their intersection is a subspace of nonzero dimension. 
+As $x \in S_k$, there are $\alpha_n \in \mathbb{C}$, $n \geq k$, with
+\[
+x=\sum_{n=k}^\infty \alpha_n e_n, \qquad \norm{x}^2 =\sum_{n=k}^\infty |\alpha_n|^2.
+\]
+As the sequence $\sigma_n(A)$ is nonincreasing,
+\begin{eqnarray*}
+\inner{Ax}{x}&=&\inner{\sum_{n=1}^\infty \sigma_n(A) \inner{x}{e_n} e_n}{x}\\
+&=&\inner{\sum_{n=1}^\infty \sigma_n(A) \inner{\sum_{m=k}^\infty \alpha_m e_m}{e_n} e_n}{\sum_{m=k}^\infty \alpha_m e_m}\\
+&=&\inner{\sum_{n=1}^\infty \sigma_n(A) \sum_{m=k}^\infty \alpha_m \delta_{m,n} e_n}{\sum_{m=k}^\infty \alpha_m e_m}\\
+&=&\inner{\sum_{n=1}^\infty \sigma_n(A) \alpha_n \chi_{\geq k}(n) e_n}{\sum_{m=k}^\infty \alpha_m e_m}\\
+&=&\inner{\sum_{n=k}^\infty \sigma_n(A) \alpha_n  e_n}{\sum_{m=k}^\infty \alpha_m e_m}\\
+&=&\sum_{n=k}^\infty \sigma_n(A) |\alpha_n|^2\\
+&\leq&\sigma_k(A) \sum_{n=k}^\infty |\alpha_n|^2\\
+&=&\sigma_k(A),
+\end{eqnarray*}
+where we write
+\[
+\chi_{\geq k}(n)=\begin{cases}
+1&n \geq k\\
+0&n<k.
+\end{cases}
+\]
+This shows that if $\dim S=k$ then
+\[
+\inf_{x \in S, \norm{x}=1} \inner{Ax}{x} \leq \sigma_k(A).
+\] 
+Let $M = \inf_{x \in S, \norm{x}=1} \inner{Ax}{x}$, and
+let $x_n \in S$, $\norm{x_n}=1$, with $\inner{Ax_n}{x_n} \to M$.
+As $S$ is a finite dimensional Hilbert space, the unit sphere in it is compact, so there a 
+a subsequence $x_{a(n)}$ that converges to some $z \in S$, $\norm{z}=1$. 
+We have
+\begin{eqnarray*}
+|\inner{Az}{z}-\inner{Ax_n}{x_n}|&\leq&|\inner{Az}{z}-\inner{Ax_n}{z}|+\inner{Ax_n}{z}-\inner{Ax_n}{x_n}|\\
+&=&|\inner{A(z-x_n}{z}| + |\inner{Ax_n}{z-x_n}|\\
+&\leq&\norm{A}\norm{z-x_n} \norm{z} + \norm{A}\norm{x_n}\norm{z-x_n}\\
+&=&2\norm{A} \norm{z-x_n}.
+\end{eqnarray*}
+As $x_{a(n)} \to z$, we get $\inner{Ax_{a(n)}}{x_{a(n)}} \to \inner{Az}{z}$. As $\inner{Ax_n}{Ax_n} \to M$, we get
+\[
+\inner{Az}{z}=M=\inf_{x \in S, \norm{x}=1} \inner{Ax}{x}.
+\]
+As $z \in S$ and $\norm{z}=1$, we have in fact
+\[
+\min_{x \in S, \norm{x}=1}  \inner{Ax}{x}=\inf_{x \in S, \norm{x}=1} \inner{Ax}{x} \leq \sigma_k(A).
+\]
+This is true for any $k$ dimensional subspace of $H$, so
+\[
+\sup_{\dim S = k} \min_{x \in S, \norm{x}=1} \inner{Ax}{x} \leq \sigma_k(A).
+\]
+If $S=S_{k+1}^\perp$ then $e_k \in S$, $\norm{e_k}=1$,  and
+\[
+\inner{Ae_k}{e_k} = \inner{\sigma_k(A) e_k}{e_k} = \sigma_k(A),
+\]
+so in fact
+\[
+\max_{\dim S = k} \min_{x \in S, \norm{x}=1} \inner{Ax}{x} = \sigma_k(A),
+\]
+which is the first of the two formulas that we want to prove.
+
+For $k \geq 1$, let $S_k = \bigvee_{n=1}^k \{e_n\}$. 
+If $S$ is a $k-1$ dimensional subspace of $H$, then $S^\perp$ is a closed subspace with codimension $k-1$, so
+the intersection of $S_k$ and $S^\perp$ has nonzero dimension, and so there is some $x \in S_k \cap S^\perp$ with $\norm{x}=1$.
+As $x \in S_k$ there are $\alpha_1,\ldots,\alpha_k$ with $x=\sum_{n=1}^k \alpha_n e_n$, giving
+\begin{eqnarray*}
+\inner{Ax}{x}&=&\inner{\sum_{n=1}^\infty \sigma_n(A) \inner{x}{e_n} e_n}{x}\\
+&=&\inner{\sum_{n=1}^\infty \sigma_n(A) \inner{\sum_{m=1}^k \alpha_m e_m}{e_n} e_n}{\sum_{m=1}^k \alpha_m e_m}\\
+&=&\inner{\sum_{n=1}^\infty \sigma_n(A) \sum_{m=1}^k \alpha_m \delta_{m,n} e_n}{\sum_{m=1}^k \alpha_m e_m}\\
+&=&\inner{\sum_{n=1}^\infty \sigma_n(A)  \alpha_n \chi_{\leq k}(n)  e_n}{\sum_{m=1}^k \alpha_m e_m}\\
+&=&\inner{\sum_{n=1}^k \sigma_n(A)  \alpha_n  e_n}{\sum_{m=1}^k \alpha_m e_m}\\
+&=&\sum_{n=1}^k \sigma_n(A) |\alpha_n|^2\\
+&\geq&\sigma_k(A) \sum_{n=1}^k  |\alpha_n|^2\\
+&=&\sigma_k(A).
+\end{eqnarray*}
+This shows that
+\[
+\sup_{x \in S^\perp, \norm{x}=1} \inner{Ax}{x} \geq \sigma_k(A).
+\]
+Define $M=\sup_{x \in S^\perp, \norm{x}=1}$. Because $M$ is a supremum,
+there is a sequence $x_n$ on the unit sphere in $S_{k-1}$ such that
+$\inner{Ax_n}{x_n} \to M$.
+The unit sphere in $S_{k-1}$ is compact because $S_{k-1}$ is finite dimensional, so this sequence has a convergent
+subsequence $x_{a(n)} \to z$.
+As
+\[
+|\inner{Az}{z}-\inner{Ax_n}{x_n}| \leq 2\norm{A} \norm{z-x_n}
+\]
+and $x_{a(n)} \to z$, we get
+\[
+\inner{Az}{z}=M=\sup_{x \in S^\perp, \norm{x}=1} \inner{Ax}{x},
+\]
+whence
+\[
+\max_{x \in S^\perp, \norm{x}=1} \inner{Ax}{x}=\sup_{x \in S^\perp, \norm{x}=1} \inner{Ax}{x} \geq \sigma_k(A).
+\]
+As this is true for any $k-1$ dimensional subspace $S$,
+\[
+\inf_{\dim S=k-1} \max_{x \in S^\perp, \norm{x}=1} \inner{Ax}{x} \geq \sigma_k(A).
+\]
+But for $S=S_{k-1}$ we have $e_k \in S^\perp$, $\norm{e_k}=1$, and
+\[
+\inner{Ae_k}{e_k}=\inner{\sigma_k(A) e_k}{e_k} =\sigma_k(A),
+\]
+which implies that
+\[
+\min_{\dim S=k-1} \max_{x \in S^\perp, \norm{x}=1} \inner{Ax}{x} = \sigma_k(A).
+\]
+\end{proof}
+
+If $A \in \mathscr{B}(H)$ is compact, then the eigenvalues of $|A|$ are equal to the singular values of $|A|$. Therefore
+the Courant min-max theorem gives expressions for the singular values of a compact linear operator on a Hilbert space, whether or not the operator
+is itself self-adjoint.
+
+
+Allahverdiev's theorem\footnote{I. C. Gohberg and M. G. Krein, {\em Introduction to the Theory
+of Linear Nonselfadjoint Operators in Hilbert Space}, p.~28, Theorem
+2.1; cf. J. R. Retherford, {\em Hilbert Space: Compact Operators and the Trace Theorem}, p.~75 and
+p.~106.} gives an expression for the singular values of a compact operator that does not involve orthonormal
+sets, unlike Courant's min-max theorem. Thus this formula makes sense for a compact operator from one Banach space to another. 
+
+
+\begin{theorem}[Allahverdiev's theorem]
+Let $H$ be a Hilbert space and let $\mathscr{F}_n(H)$ be the set of bounded finite rank operators of rank $\leq n$. If $A \in \mathscr{B}_0(H)$
+and $n \in \mathbb{N}$, then
+\[
+\sigma_n(A) = \inf_{T \in \mathscr{F}_{n-1}} \norm{A-T}. 
+\]
+\end{theorem}
+
+
+
+
+\section{Schatten class operators}
+If $1 \leq p < \infty$ and
+$A \in \mathscr{B}_0(H)$, we define
+\[
+\norm{A}_p=\left( \sum_{n \in \mathbb{N}} \sigma_n(A)^p \right)^{1/p},
+\]
+and define $\mathscr{B}_p(H)$ to be those $A \in \mathscr{B}_0(H)$ with $\norm{A}_p < \infty$. In other words, an element of $\mathscr{B}_p(H)$ is a 
+compact operator whose sequence of singular values is an element of $\ell^p$. We call an element of $\mathscr{B}_p(H)$ a {\em Schatten class operator}.
+We call elements of $\mathscr{B}_1(H)$ {\em trace class operators} and elements of $\mathscr{B}_2(H)$ {\em Hilbert-Schmidt operators}.
+
+If $A \in \mathscr{B}_0(H)$ is positive, then, according to Theorem \ref{spectralsac}, there is an orthonormal
+set $\{e_n: n \in \mathbb{N}\}$ such that
+\[
+A = \sum_{n \in \mathbb{N}} \lambda_n(A)  e_n \otimes e_n,
+\]
+where the series converges in the strong operator topology. As the $e_n$ are orthonormal, we have
+\[
+A^p = \sum_{n \in \mathbb{N}} \lambda_n(A)^p e_n \otimes e_n,
+\]
+which is itself a positive compact operator, and thus
+$\sigma_n(A^p)=\sigma_n(A)^p$ for $n \in \mathbb{N}$. Therefore, if $A$ is a positive compact operator, then
+$\norm{A}_p = \norm{A^p}_1^{1/p}$.
+
+If $A \in \mathscr{B}_0(H)$ and $n \in \mathbb{N}$, then 
+$\sigma_n(|A|)=\sigma_n(A)$ and $\sigma_n(A^*)=\sigma_n(A)$. Hence, if $1 \leq p < \infty$ then
+\[
+\norm{|A|}_p = \norm{A}_p, \qquad \norm{A^*}_p=\norm{A}_p.
+\]
+
+As $|A|$ is compact and self-adjoint, it has an eigenvalue with absolute value $\norm{A}$, from which it follows that if $1 \leq p < \infty$ then
+$\norm{A} \leq \norm{A}_p$.
+
+
+
+\begin{theorem}
+If $A \in \mathscr{B}_1(H)$, $B \in \mathscr{B}(H)$, and  $k \in \mathbb{N}$, then
+\[
+\sigma_k(BA) \leq \norm{B} \sigma_k(A).
+\]
+\label{singularproduct}
+\end{theorem}
+\begin{proof}
+For all $x \in H$,
+\begin{eqnarray*}
+\inner{(BA)^*BAx}{x}&=&\inner{BAx}{BAx}\\
+&=&\norm{BAx}^2\\
+&\leq&\norm{B}^2 \norm{Ax}^2\\
+&=&\norm{B}^2 \inner{Ax}{Ax}\\
+&=&\norm{B}^2 \inner{A^*Ax}{x}.
+\end{eqnarray*}
+Applying the Courant min-max theorem to the positive operators $(BA)^*BA$ and $A^*A$, if $k \in \mathbb{N}$ then
+\begin{eqnarray*}
+\sigma_k((BA)^*BA)&=&\max_{\dim S=k} \min_{x \in S, \norm{x}=1} \inner{(BA)^*BAx}{x}\\
+&\leq&\norm{B}^2 \max_{\dim S=k} \min_{x \in S, \norm{x}=1} \inner{A^*Ax}{x}\\
+&=&\norm{B}^2 \sigma_k(A^*A).
+\end{eqnarray*}
+But
+\[
+\sigma_k((BA)^*BA)=\sigma_k(|BA|^2)=\sigma_k(|BA|)^2=\sigma_k(BA)^2
+\]
+and
+\[
+\sigma_k(A^*A)=\sigma_k(|A|^2)=\sigma_k(|A|)^2=\sigma_k(A)^2,
+\]
+so taking the square root,
+\[
+\sigma_k(BA) \leq \norm{B} \sigma_k(A).
+\]
+\end{proof}
+
+Using Theorem \ref{singularproduct}, if $1 \leq p < \infty$ then
+\[
+\norm{BA}_p=\left( \sum_{n \in \mathbb{N}} \sigma_n(BA)^p \right)^{1/p}
+\leq \left( \sum_{n \in \mathbb{N}} \norm{B}^p \sigma_k(A)^p \right)^{1/p}
+=\norm{B} \norm{A}_p.
+\]
+
+The following theorem states that the Schatten class operators are Banach spaces.\footnote{Gert K. Pedersen,
+{\em Analysis Now}, revised printing, p.~124, E 3.4.4} 
+
+\begin{theorem}
+If $1 \leq p < \infty$, then $\mathscr{B}_p(H)$ is a Banach space with the norm $\norm{\cdot}_p$.
+\end{theorem}
+
+
+
+
+
+\section{Weyl's inequality}
+Weyl's inequality relates the eigenvalues of a self-adjoint compact operator with its singular values.\footnote{Peter D. Lax,
+{\em Functional Analysis}, p.~336, chapter 30, Lemma 7.} We use the notation from Definition \ref{nudef}. For $N>\nu(A)$ the left hand side is equal to $0$ so the inequality
+is certainly true then.
+
+
+\begin{theorem}[Weyl's inequality]
+If $A \in \mathscr{B}_0(H)$ is self-adjoint and $N \leq \nu(A)$, then
+\[
+\prod_{n=1}^N |\lambda_n(A)| \leq \prod_{n=1}^N \sigma_n(A).
+\]
+\label{weyl}
+\end{theorem}
+\begin{proof}
+Let
+\[
+E_N = \bigvee_{n=1}^N \ker(A-\lambda_n(A) \id_H),
+\]
+which is finite dimensional.
+Check that $E_N$ is an invariant subspace of $A$, and  let
+$A_N:E_N \to E_N$ be the restriction of $A$ to $E_N$. $A_N$ is a positive operator.
+As $E_N$ is spanned by eigenvectors for nonzero eigenvalues of $A$ it follows that $\ker A_N = \{0\}$,
+and as $E_N$ is finite dimensional, we get that $A_N$ is invertible. 
+If $A_N$ has polar decomposition $A_N=U_N|A_N|$, then $U_N$ is invertible; if a partial isometry is invertible then it is
+unitary, so $U_N$ is unitary, and therefore the eigenvalues of $U_N$ all have absolute value $1$. 
+As the determinant of a linear operator on a finite dimensional vector space is the product of its eigenvalues counting algebraic
+multiplicity,
+\begin{equation}
+ \det |A_N|=\frac{1}{|\det U_N|} |\det A_N| = |\det A_N| = \prod_{n=1}^N |\lambda_n(A)|.
+ \label{determinants}
+  \end{equation}
+
+Let $P_N$ be the orthogonal projection onto $E_N$.
+ If $v \in E_N$, then $AP_N v = A_N v$, and if $v \in E_N^\perp$
+then $AP_N v = A(0)=0$. We get that
+\[
+|AP_N|v = \begin{cases}
+|A_N|v&v \in E_N\\
+0&v \in E_N^\perp,
+\end{cases}
+\]
+and it follows that if $1 \leq n \leq N$ then $\sigma_n(A_N) = \sigma_n(AP_N)$. Using Theorem \ref{singularproduct} we get
+\[
+\sigma_n(AP_N) \leq \norm{P} \sigma_n(A) \leq \sigma_n(A);
+\]
+the second inequality is an equality unless $P_N=0$. We have shown that if $1 \leq n \leq N$ then
+$\sigma_n(A_N) \leq \sigma_n(A)$, and  combining this with \eqref{determinants} gives us
+\[
+\prod_{n=1}^N |\lambda_n(A)| = \det |A_N| = \prod_{n=1}^N \sigma_n(A_N) \leq \prod_{n=1}^N \sigma_n(A).
+\]
+\end{proof}
+
+
+\begin{theorem}
+If $0<p<\infty$, $A \in \mathscr{B}_0(H)$ is self-adjoint, and $N \in \mathbb{N}$, then
+\[
+\sum_{n=1}^N |\lambda_n(A)|^p \leq \sum_{n=1}^N \sigma_n(A)^p.
+\]
+\end{theorem}
+\begin{proof}
+{\em Schur's majorization inequality}\footnote{Peter D. Lax,
+{\em Functional Analysis}, p.~337, chapter 30, Lemma 8; cf. J. Michael Steele, {\em The Cauchy-Schwarz Master
+Class}, p.~201, Problem 13.4.}
+ states that if
+ $a_1 \geq a_2 \geq \cdots$ and
+$b_1 \geq b_2 \geq \cdots$ are nonincreasing sequences of real numbers satisfying, for each $N \in \mathbb{N}$,
+\[
+\sum_{n=1}^N a_n \leq \sum_{n=1}^N b_n,
+\]
+and $\phi:\mathbb{R} \to \mathbb{R}$ is a convex function with $\lim_{x \to -\infty} \phi(x)=0$, then for every $N \in \mathbb{N}$,
+\[
+\sum_{n=1}^N \phi(a_n) \leq \sum_{n=1}^N \phi(b_n).
+\]
+With the hypotheses of Theorem \ref{weyl}, for $1 \leq n \leq \nu(A)$, define
+ $a_n = \log |\lambda_n(A)|$ and
+$b_n = \log \sigma_n(A)$ and let $\phi(x)=e^{px}$. By Theorem \ref{weyl} these satisfy the conditions of Schur's majorization inequality,
+which then gives us for $1 \leq N \leq \nu(A)$ that
+\[
+\sum_{n=1}^N |\lambda_n(A)|^p \leq \sum_{n=1}^N \sigma_n(A)^p.
+\]
+If $n>\nu(A)$ then $\lambda_n(A)=0$.
+\end{proof}
+
+
+
+\section{Rayleigh quotients for self-adjoint operators}
+If $A \in \mathscr{B}(H)$ is self-adjoint, we define the {\em Rayleigh quotient} of $A$ by
+\[
+f(x)=\frac{\inner{Ax}{x}}{\inner{x}{x}}, \quad x \in H, x \neq 0, \qquad f:H \setminus \{0\} \to \mathbb{R}.
+\]
+
+Let $X$ and $Y$ be normed spaces, $U$ an open subset of $X$, and $f:U \to Y$ a function.
+If $x \in U$ and there is some $T \in \mathscr{B}(X,Y)$ such that 
+\begin{equation}
+\lim_{h \to 0} \frac{\norm{f(x+h)-f(x)-Th}}{\norm{h}} = 0,
+\label{frechet}
+\end{equation}
+then $f$ is said to be {\em Fr\'echet differentiable at $x$}, and $T$ is called the {\em Fr\'echet derivative of $f$ at $x$};\footnote{Ward
+Cheney, {\em Analysis for Applied Mathematics}, p.~149.} it does not take long to prove that if $T_1,T_2 \in \mathscr{B}(X,Y)$ both satisfy
+\eqref{frechet} then $T_1=T_2$. We denote the Fr\'echet derivative of $f$ at $x$ by $(Df)x$. $Df$ is a map from the set of all points at which
+$f$ is Fr\'echet differentiable to $\mathscr{B}(X,Y)$.
+
+To say that $x$ is a {\em stationary point} of $f$ is to say that
+$f$ is Fr\'echet differentiable at $x$ and that the Fr\'echet derivative of $f$ at $x$ is the zero map. One proves that
+if $T_1,T_2$ are Fr\'echet derivatives of $f$ at $x$ then $T_1=T_2$, and thus speak about {\em the} Fr\'echet derivative
+of $f$ at $x$
+
+\begin{theorem}
+If $A \in \mathscr{B}(H)$ is self-adjoint, then each eigenvector of $A$ is a stationary point
+of the Rayleigh quotient of $A$.
+\end{theorem}
+\begin{proof}
+If $\lambda$ is an eigenvalue of $A$ then, as $A$ is self-adjoint, $\lambda \in \mathbb{R}$. Let $v \neq 0$ satisfy
+$Av=\lambda v$. We have
+\[
+f(v)=\frac{\inner{Av}{v}}{\inner{v}{v}}= \frac{\inner{\lambda v}{v}}{\inner{v}{v}}=\lambda.
+\]
+For $h \neq 0$, using that $A$ is self-adjoint and that $\lambda \in \mathbb{R}$,
+\begin{eqnarray*}
+\frac{|f(v+h)-f(v)-0v|}{\norm{h}}&=&\frac{1}{\norm{h}} \cdot \left| \frac{\inner{A(v+h)}{v+h}}{\inner{v+h}{v+h}} - \lambda \right|\\
+&=&\frac{1}{\norm{h} \norm{v+h}^2} \left| \inner{A(v+h)}{v+h} - \lambda \inner{v+h}{v+h} \right|\\
+&=&\frac{1}{\norm{h} \norm{v+h}^2} \big| \inner{Av}{v}+\inner{Av}{h}+\inner{Ah}{v}+\inner{Ah}{h}\\
+&&-\lambda \inner{v}{v} - \lambda \inner{v}{h}-\lambda \inner{h}{v} - \lambda \inner{h}{h}  \big|\\
+&=&\frac{1}{\norm{h} \norm{v+h}^2} \big| \inner{\lambda v}{v}+\inner{\lambda v}{h}+\inner{ h}{\lambda v}+\inner{A h}{h}\\
+&&-\lambda \inner{v}{v} - \lambda \inner{v}{h}-\lambda \inner{h}{v} - \lambda \inner{h}{h}  \big|\\
+&=&\frac{1}{\norm{h} \norm{v+h}^2} \left| \inner{A h}{h} - \lambda \inner{h}{h} \right|\\
+&=&\frac{1}{\norm{h} \norm{v+h}^2} |\inner{Ah-\lambda h}{h}|.
+\end{eqnarray*}
+Therefore 
+\begin{eqnarray*}
+\frac{|f(v+h)-f(v)-0v|}{\norm{h}}&\leq&\frac{\norm{Ah-\lambda h} \norm{h}}{\norm{h} \norm{v+h}^2}\\
+&=&\frac{\norm{(A-\lambda \id_H)h}}{\norm{v+h}^2}\\
+&=&\frac{\norm{A-\lambda \id_H} \norm{h}}{\norm{v+h}^2}.
+\end{eqnarray*}
+As $h \to 0$ the right-hand side tends to $0$ (one of the terms tends to $0$, one doesn't depend on $h$, and the denominator
+is bounded below in terms just of $v$ for sufficiently small $h$), showing that $0$ is the Fr\'echet derivative of $f$ at $v$.
+\end{proof}
+
+
+
+
+\end{document}

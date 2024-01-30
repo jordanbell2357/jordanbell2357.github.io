@@ -1,0 +1,600 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Vinogradov's estimate for exponential sums over primes}
+\author{Jordan Bell}
+\date{February 23, 2016}
+
+\maketitle
+
+\section{Introduction}
+For $x \in \mathbb{R}$, let $[x]$ be the greatest integer $\leq x$, let $R(x)=x-[x]$, and let
+\[
+\norm{x} = \min\{R(x),1-R(x)\} = \min_{m \in \mathbb{Z}} |x-m|.
+\]
+In this note I work through Chapters 24 and 25 of Harold Davenport, {\em Multiplicative Number Theory}, third ed.\footnote{Many of the manipulations of sums in these chapters are hard to follow, and I greatly expand on the calculations in
+Davenport. The organization of the proof in Davenport seems to be due to Vaughan. I have also used lecture notes by
+Andreas Str\"ombergsson,
+\url{http://www2.math.uu.se/~astrombe/analtalt08/www_notes.pdf}, pp.~245--257. Another set of notes, which I have not used, are \url{http://jonismathnotes.blogspot.ca/2014/11/prime-exponential-sums-and-vaughans.html}}
+
+We end up proving that there is some constant $C$ such that if $\alpha \in \mathbb{R}$ and $\left|\alpha - \frac{a}{q} \right| \leq
+\frac{1}{q^2}$, with $a$ positive and $\gcd(a,q)=1$, then for any $N \geq 2$, 
+
+
+
+
+\section{The von Mangoldt function}
+Let $\Lambda$ be the von Mangoldt function: $\Lambda(n)=\log p$ if $n=p^\alpha$ for some prime $p$ and 
+$\alpha \geq 1$, and $\Lambda(n)=0$ otherwise. For example, $\Lambda(4)=\log 2$, $\Lambda(11)=\log 11$,
+and $\Lambda(12)=0$. This satisfies
+\[
+\log n = \sum_{d \mid n} \Lambda(d),
+\]
+and so by the M\"obius inversion formula,
+\[
+\Lambda(n) = \sum_{d \mid n} \mu(n/d) \log d.
+\]
+For $n>1$ it is a fact that\footnote{G. H. Hardy and E. M. Wright, {\em An Introduction to the Theory of Numbers},
+fifth ed., p.~235, Theorem 263.}
+\[
+\sum_{d \mid n} \mu(d) = 0.
+\]
+Write $\psi(x) = \sum_{n \leq x} \Lambda(n)$. It is a fact that
+$\psi(x) = O(x)$.\footnote{G. H. Hardy and E. M. Wright, {\em An Introduction to the Theory of Numbers},
+fifth ed., p.~341, Theorem 414.} (The \textbf{prime number theorem} states $\psi(x) \sim x$.)
+
+
+The derivative of the Riemann zeta function is
+\[
+\zeta'(s) =- \sum_{n=1}^\infty n^{-s} \log n,\qquad \Re s>1.
+\]
+The Euler product for the Riemann zeta function is 
+\[
+\zeta(s) = \sum_{m=1}^\infty m^{-s} = \prod_p (1-p^{-s})^{-1},\qquad \Re s>1.
+\]
+Then
+\[
+-\log \zeta(s) = \sum_p \log(1-p^{-s}), 
+\]
+so, for $\Re s>1$,
+\begin{align*}
+-\frac{\zeta'(s)}{\zeta(s)} &= \sum_p \frac{p^{-s} \log p}{1-p^{-s}}\\
+&=\sum_p \log p \sum_{l=1}^\infty p^{-ls}\\
+&=\sum_p \sum_{l=1}^\infty   \Lambda(p^l) (p^l)^{-s}\\
+&=\sum_{n=1}^\infty \Lambda(n) n^{-s}.
+\end{align*}
+
+Let $U,V \geq 2$, $UV \leq N$, and
+write
+\[
+F_U(s) = \sum_{j \leq U} \Lambda(j)j^{-s}, \qquad G_V(s) = \sum_{k \leq V} \mu(k) k^{-s}.
+\]
+For $\Re s>1$,
+\[
+\begin{split}
+&-\frac{\zeta'(s)}{\zeta(s)}\\
+=& F_U(s)-\zeta(s) F_U(s) G_V(s) - \zeta'(s) G_V(s)+\left(-\frac{\zeta'(s)}{\zeta(s)} - F_U(s) \right) (1-\zeta(s) G_V(s)).
+\end{split}
+\]
+First,\footnote{Harold Davenport, {\em Multiplicative Number Theory}, third ed., p.~138, Chapter 24.}
+\[
+F_U(s) = \sum_{n=1}^\infty a_1(n) n^{-s}
+\]
+for
+\[
+a_1(n) =\begin{cases}
+\Lambda(n)&n \leq U\\
+a_1(n)=0&n > U.
+\end{cases}
+\]
+Second,
+\[
+-\zeta(s) F_U(s) G_V(s) = \sum_{n=1}^\infty a_2(n) n^{-s}
+\]
+for
+\[
+a_2(n) =- \sum_{m jk=n, m \geq 1, j \leq U, k \leq V} 1 \cdot \Lambda(j) \cdot \mu(k)=
+-\sum_{d \mid n} \sum_{djk=n, j \leq U, k \leq V} \Lambda(j) \mu(k).
+\]
+Third,
+\[
+-\zeta'(s) G_V(s) = \sum_{n=1}^\infty a_3(n) n^{-s}
+\]
+for
+\[
+a_3(n) = \sum_{mk=n, m\geq 1, k \leq V} \log(m) \cdot \mu(k) = \sum_{d \mid n} \log d \sum_{dk=n, k \leq V} \mu(k).
+\]
+Fourth,
+\[
+-\frac{\zeta'(s)}{\zeta(s)} - F_U(s) = \sum_{m>U} \Lambda(m) m^{-s};
+\]
+and
+\[
+\zeta(s) G_V(s) = \sum_{n=1}^\infty \left( \sum_{mk=n, m\geq 1, k \leq V} 1 \cdot \mu(k) \right) n^{-s}
+=\sum_{n=1}^\infty \left( \sum_{d \mid n, d \leq V} \mu(d) \right) n^{-s}
+\]
+whence
+\[
+1-\zeta(s) G_V(s) =- \sum_{h=2}^\infty  \left( \sum_{d \mid h, d \leq V} \mu(d) \right) h^{-s};
+\]
+thus
+\[
+\left(-\frac{\zeta'(s)}{\zeta(s)} - F_U(s) \right) (1-\zeta(s) G_V(s)) = \sum_{n=1}^\infty a_4(n) n^{-s}
+\]
+for
+\[
+a_4(n) = -\sum_{mh=n, m>U, h>1} \Lambda(m)  \left( \sum_{d \mid h, d \leq V} \mu(d) \right).
+\]
+We have
+\[
+\Lambda(n) = a_1(n) + a_2(n) + a_3(n) + a_4(n).
+\]
+
+
+\section{Sums involving the von Mangoldt function}
+Let $f$ be an arithmetical function with $|f| \leq 1$ and 
+write
+\[
+S_i = \sum_{n \leq N} f(n) a_i(n),
+\]
+for which
+\[
+\sum_{n \leq N} f(n) \Lambda(n) = S_1+ S_2 + S_3 + S_4.
+\]
+
+
+\begin{align*}
+S_1&=\sum_{n \leq U} f(n) \Lambda(n)\\
+S_2&= - \sum_{n \leq N} f(n) \sum_{d \mid n} \sum_{djk = n, j \leq U, k \leq V} \Lambda(j) \mu(k)\\
+S_3&= \sum_{n \leq N} f(n) \sum_{d \mid n} \log d \sum_{dk=n, k \leq V} \mu(k)\\
+S_4&=- \sum_{n \leq N}f(n) \sum_{mh=n, m>U, h>1} \Lambda(m) \sum_{d \mid h, d \leq V} \mu(d).
+\end{align*}
+
+
+
+
+
+\begin{lemma}
+$|S_1| = O(U)$.
+\end{lemma}
+\begin{proof}
+As $|f| \leq 1$,
+\[
+|S_1| \leq \sum_{n \leq U} \Lambda(n) = \psi(U) = O(U).
+\]
+\end{proof}
+
+
+
+\begin{lemma}
+\[
+|S_2| \leq \log UV \cdot  \sum_{h \leq UV} \left| \sum_{r \leq N/h} f(rh) \right|.
+\]
+\end{lemma}
+\begin{proof}
+\begin{align*}
+S_2 &=-\sum_{n \leq N} f(n) \sum_{d \mid n} \sum_{djk=n, j \leq U, k \leq V} \Lambda(j) \mu(k)\\
+&=-\sum_{h \leq UV} \left( \sum_{jk=h, j \leq U, k \leq V} \Lambda(j) \mu(k) \right) \sum_{r \leq N/h} f(rh).
+\end{align*}
+For $h \leq UV$, $\sum_{j \mid h} \Lambda(j) = \log h \leq \log UV$, so
+\[
+|S_2| \leq \log UV \cdot  \sum_{h \leq UV} \left| \sum_{r \leq N/h} f(rh) \right|.
+\]
+\end{proof}
+
+
+
+\begin{lemma}
+\[
+|S_3| \leq \log N \cdot \sum_{k \leq V} \max_{1 \leq w \leq N/k} \left|  \sum_{w \leq h \leq N/k} f(kh) \right|.
+\]
+\end{lemma}
+\begin{proof}
+\begin{align*}
+S_3&=\sum_{n \leq N} f(n) \sum_{d \mid n} \log d \sum_{dk=n, k \leq V} \mu(k)\\
+&=\sum_{k \leq V} \mu(k) \sum_{h \leq N/k} f(kh) \log h\\
+&=\sum_{k \leq V} \mu(k) \sum_{h \leq N/k} f(kh) \int_1^h \frac{dw}{w}\\
+&=\sum_{k \leq V} \mu(k) \int_1^{N/k} \sum_{w \leq h \leq N/k} f(kh) \frac{dw}{w}\\
+&=\int_1^N \sum_{k \leq V} \mu(k)  \sum_{w \leq h \leq N/k} f(kh) \frac{dw}{w}.
+\end{align*}
+Then
+\begin{align*}
+|S_3| &\leq \max_{1 \leq w \leq N}  \left| \sum_{k \leq V} \mu(k)  \sum_{w \leq h \leq N/k} f(kh)\right|
+\cdot \int_1^N \frac{dw}{w}\\
+&\leq \log N \cdot \sum_{k \leq V} \max_{1 \leq w \leq N/k} \left|  \sum_{w \leq h \leq N/k} f(kh) \right|.
+\end{align*}
+\end{proof}
+
+
+
+
+\begin{lemma}
+\[
+|S_4| \ll N^{1/2} (\log N)^3  \max_{U \leq M \leq N/V} \Delta,
+\]
+for
+\[
+\Delta = \max_{V<j\leq N/M} \left(  \sum_{V<k \leq N/M} \left|  \sum_{M \leq m \leq 2M, m\leq N/j, m \leq N/k} f(mj) \overline{f(mk)}\right| \right)^{1/2}.
+\]
+\end{lemma}
+\begin{proof}
+For $b_m,c_k \in \mathbb{C}$, using the Cauchy-Schwarz inequality,
+\[
+\begin{split}
+&\left| \sum_{M<m\leq 2M} b_m \sum_{V < k \leq N/m} c_k f(mk) \right|\\
+\leq&\left( \sum_{M \leq m \leq 2M} |b_m|^2 \right)^{1/2} \left( \sum_{M \leq m \leq 2M} \left|  \sum_{V < k \leq N/m} c_k f(mk)\right|^2 \right)^{1/2},
+\end{split}
+\]
+and
+\[
+\begin{split}
+& \sum_{M \leq m \leq 2M} \left|  \sum_{V < k \leq N/m} c_k f(mk)\right|^2\\
+=& \sum_{M \leq m \leq 2M} 
+ \left(\sum_{V < j \leq N/m} c_j f(mj)\right) \left(\sum_{V < k \leq N/m} \overline{c_k f(mk)}\right)\\
+=&\sum_{V<j \leq N/M}  \sum_{V<k \leq N/M}c_j \overline{c_k} \sum_{M \leq m \leq 2M, m\leq N/j, m \leq N/k} f(mj) \overline{f(mk)},
+\end{split}
+\]
+so, using $|c_j c_k| \leq \frac{1}{2}|c_j|^2+\frac{1}{2}|c_k|^2$,
+\[
+\begin{split}
+& \sum_{M \leq m \leq 2M} \left|  \sum_{V < k \leq N/m} c_k f(mk)\right|^2\\
+\leq& \sum_{V<j \leq N/M}  \sum_{V<k \leq N/M} \left(  \frac{1}{2}|c_j|^2+\frac{1}{2}|c_k|^2\right)
+\left|  \sum_{M \leq m \leq 2M, m\leq N/j, m \leq N/k} f(mj) \overline{f(mk)}\right|\\
+=& \sum_{V<j \leq N/M}  |c_j|^2   \sum_{V<k \leq N/M} \left|  \sum_{M \leq m \leq 2M, m\leq N/j, m \leq N/k} f(mj) \overline{f(mk)}\right|\\
+\leq&\left(  \sum_{V<j \leq N/M}  |c_j|^2  \right) \max_{V<j\leq N/M}  \sum_{V<k \leq N/M} \left|  \sum_{M \leq m \leq 2M, m\leq N/j, m \leq N/k} f(mj) \overline{f(mk)}\right|.
+\end{split}
+\]
+Therefore,
+\[
+\left| \sum_{M<m\leq 2M} b_m \sum_{V < k \leq N/m} c_k f(mk) \right|
+\leq
+\Delta \left( \sum_{M \leq m \leq 2M} |b_m|^2 \right)^{1/2} \left(  \sum_{j \leq N/M}  |c_j|^2  \right)^{1/2}
+\]
+for
+\[
+\Delta =\left( \max_{V<j\leq N/M}  \sum_{V<k \leq N/M} \left|  \sum_{M \leq m \leq 2M, m\leq N/j, m \leq N/k} f(mj) \overline{f(mk)}\right| \right)^{1/2}.
+\]
+
+Because $\sum_{d \mid h} \mu(d)=0$ for $h>1$, if $1 < h \leq V$ then $\sum_{d \mid h, d \leq V} \mu(d)=0$. Thus
+\begin{align*}
+S_4&=- \sum_{n \leq N} f(n) \sum_{mh=n, m>U, h>1} \Lambda(m) \sum_{d \mid h, d \leq V} \mu(d)\\
+&=-\sum_{U<m < N/V}  \Lambda(m) \sum_{V<k \leq N/m} f(mk) \sum_{d \mid k, d \leq V} \mu(d)\\
+&=-\sum_{U<m \leq N/V}  \Lambda(m) \sum_{V<k \leq N/m} f(mk) \sum_{d \mid k, d \leq V} \mu(d)\\
+&=-\sum_{M \in \{U,2U,4U,\ldots\}, M<N/V} \sum_{M<m \leq \min(N/V,2M)}  \Lambda(m) \sum_{V<k \leq N/m} f(mk) \sum_{d \mid k, d \leq V} \mu(d),
+\end{align*}
+so
+\[
+|S_4| \leq \left( \log_2 \frac{N}{UV}\right) \max_{U \leq M \leq N/V} \left| \sum_{M<m \leq \min(N/V,2M)}  \Lambda(m) \sum_{V<k \leq N/m} f(mk) \sum_{d \mid k, d \leq V} \mu(d)
+\right|.
+\]
+Define $b_m = \Lambda(m)$ for $m \leq N/V$ and $b_m=0$ for $m>N/V$, 
+and $c_k = \sum_{d \mid k, d\leq V} \mu(d)$. 
+Using the above we get
+\begin{align*}
+|S_4| & \ll ( \log N) \max_{U \leq M \leq N/V} \left| \sum_{M<m \leq 2M} b_m \sum_{V<k \leq N/m} c_k f(mk)\right|\\
+&\ll (\log N) \max_{U \leq M \leq N/V} \Delta \left( \sum_{M \leq m \leq 2M} |b_m|^2 \right)^{1/2} \left(  \sum_{j \leq N/M}  |c_j|^2  \right)^{1/2}\\
+&\ll (\log N) \max_{U \leq M \leq N/V} \Delta \left( \sum_{M \leq m \leq 2M} \Lambda(m)^2 \right)^{1/2} 
+\left( \sum_{j \leq N/M} d(k)^2\right)^{1/2}
+\end{align*}
+
+On the one hand,
+\[
+\sum_{m \leq y} \Lambda(m)^2 \leq (\log y) \sum_{ m\leq y} \Lambda(m) = O(y \log y).
+\]
+On the other hand,
+let $h$ be the multiplicative arithmetic function such that
+for prime $p$ and for nonnegative integer $a$, $h(p^a)=2a+1$. The divisor function satisfies
+$d(p^a)=a+1$, and
+\begin{align*}
+\sum_{d \mid p^a} h(d)&=\sum_{0 \leq b \leq a} h(p^b)\\
+&=\sum_{0 \leq b \leq a} (2b+1)\\
+&=a+1+2\sum_{0 \leq b \leq a} b\\
+&=a+1+2 \cdot \frac{a(a+1)}{2}\\
+&=a+1+a^2+a\\
+&=a^2+2a+1\\
+&=d(p^a)^2.
+\end{align*}
+Hence, as $d \mapsto \frac{h(d)}{d}$ is multiplicative and nonnegative,
+\begin{align*}
+\sum_{k \leq y} d(k)^2&=\sum_{k \leq y} \sum_{d \mid k} h(d)\\
+&=\sum_{d \leq y} h(d) \sum_{kd \leq y} 1\\
+&=\sum_{d \leq y} h(d) \cdot [y/d]\\
+&\leq y \sum_{d \leq y} \frac{h(d)}{d}\\
+&\leq y \prod_{p \leq y} \sum_{a=0}^\infty h(p^a) p^{-a}\\
+&= y \prod_{p \leq y} \sum_{a=0}^\infty (2a+1) p^{-a}.
+\end{align*}
+But, for $0<x<1$,
+\[
+\left(1-x \right)^{-3}=\left( \sum_{a=0}^\infty x^a \right)^3
+=\sum_{a=0}^\infty \frac{1}{2}(a+1)(a+2) x^{a}
+\geq  \sum_{a=0}^\infty (2a+1) x^{a},
+\]
+so
+\[
+\sum_{k \leq y} d(k)^2 \leq y  \left( \sum_{p \leq y} \left(1-p^{-1}\right)^{-1} \right)^{3}.
+\]
+\textbf{Merten's theorem}\footnote{G. H. Hardy and E. M. Wright, {\em An Introduction to the Theory of Numbers},
+fifth ed., p.~351, Theorem 429.} tells us
+\[
+\prod_{p \leq y} \left(1-\frac{1}{p}\right) \sim \frac{e^{-\gamma}}{\log y},
+\]
+where $\gamma$ is Euler's constant, and using this,
+\[
+\sum_{k \leq y} d(k)^2 = O(y (\log y)^3).
+\]
+We have therefore got for $U \leq M \leq N/V$,
+\[
+\begin{split}
+&\left( \sum_{M \leq m \leq 2M} \Lambda(m)^2 \right)^{1/2} \left( \sum_{k \leq N/M} d(k)^2 \right)^{1/2}\\
+\leq& \left( \sum_{m \leq 2M} \Lambda(m)^2 \right)^{1/2} \left( \sum_{k \leq N/M} d(k)^2 \right)^{1/2}\\
+\leq& \left( O(M \log M) \right)^{1/2} \left( O(N/M (\log(N/M))^3 \right)^{1/2}\\
+=&O( N^{1/2} (\log N)^2).
+\end{split}
+\]
+What we now have is 
+\begin{align*}
+|S_4|&\ll (\log N) \cdot N^{1/2} (\log N)^2 \cdot \max_{U \leq M \leq N/V} \Delta,
+\end{align*}
+proving the claim.
+\end{proof}
+
+
+
+Putting together the estimates for $S_1,S_2,S_3,S_4$ gives, for 
+$|f| \leq 1$, and $U,V \geq 2$, $UV \leq N$, 
+\begin{align*}
+\sum_{n \leq N} f(n) \Lambda(n) & \ll U + (\log N) \sum_{h \leq UV} \left| \sum_{r \leq N/h} f(rh) \right|\\
+&+(\log N) \sum_{k \leq V} \max_{1 \leq w \leq N/k} \left| \sum_{w \leq h \leq N/k} f(kh) \right|\\
+&+N^{1/2} (\log N)^3 \max_{U \leq M \leq N/V} \Delta,
+\end{align*}
+for
+\[
+\Delta = \max_{V<j\leq N/M} \left(  \sum_{V<k \leq N/M} \left|  \sum_{M \leq m \leq 2M, m\leq N/j, m \leq N/k} f(mj) \overline{f(mk)}\right| \right)^{1/2}.
+\]
+
+
+
+
+
+\section{Exponential sums}
+For $\beta \in \mathbb{R}$, on the one hand
+\[
+\left| \sum_{N_1 \leq n \leq N_2} e^{2\pi i\beta n} \right| \leq N_2-N_1+1.
+\]
+On the other hand,
+\[
+\sum_{N_1 \leq n \leq N_2} e^{2\pi i\beta n} 
+=\sum_{0 \leq n \leq N_2-N_1} e^{2\pi i\beta n} 
+=\frac{1-e^{2\pi i\beta(N_2-N_1+1)}}{1-e^{2\pi i\beta}} 
+\]
+and hence
+\[
+\left| \sum_{N_1 \leq n \leq N_2} e^{2\pi i\beta n} \right| \leq \frac{2}{|1-e^{2\pi i\beta}|}
+=\frac{1}{|\sin \pi \beta|}
+\leq \frac{1}{2 \norm{\beta}}.
+\]
+Thus
+\[
+\left| \sum_{N_1 \leq n \leq N_2} e^{2\pi i\beta n} \right|
+\ll \min\left\{N_2-N_1,\frac{1}{\norm{\beta}}\right\}.
+\]
+
+Let $\alpha \in \mathbb{R}$ and let $f(n)=e^{2\pi i\alpha n}$.
+Then
+\begin{align*}
+\sum_{h \leq UV} \left| \sum_{r \leq N/h} f(rh)\right|&\leq 
+\sum_{h \leq UV} \min\left\{\frac{N}{h}, \frac{1}{\norm{h\alpha}}\right\}
+\end{align*}
+and
+\begin{align*}
+\sum_{k \leq V} \max_w \left| \sum_{w \leq h \leq N/k} f(rt) \right|
+&\ll \sum_{k \leq V} \max_w \min\left\{\frac{N}{k}-w,\frac{1}{\norm{k\alpha}}\right\}\\
+&\ll \sum_{k \leq V} \min\left\{\frac{N}{k}, \frac{1}{\norm{k\alpha}}\right\}.
+\end{align*}
+
+Let $S_N(\alpha) = \sum_{n \leq N} \Lambda(n) f(n)$. By what we have worked out,
+\begin{align*}
+|S_N(\alpha)|&\ll U + (\log N) \sum_{h \leq UV} \min\left\{\frac{N}{h}, \frac{1}{\norm{h\alpha}}\right\}\\
+&+(\log N) \sum_{k \leq V} \min\left\{\frac{N}{k}, \frac{1}{\norm{k\alpha}}\right\}\\
+&+N^{1/2} (\log N)^3 \max_{U \leq M \leq N/V} \Delta,
+\end{align*}
+for
+\[
+\Delta = \max_{V<j\leq N/M} \left(  \sum_{V<k \leq N/M} \left|  \sum_{M \leq m \leq 2M, m\leq N/j, m \leq N/k} f(mj) \overline{f(mk)}\right| \right)^{1/2}.
+\]
+
+We calculate
+\begin{align*}
+\sum_{M \leq m \leq 2M, m \leq N/j, m \leq N/k}  f(mj) \overline{f(mk)}&=\sum_{M \leq m \leq 2M, m \leq N/j, m \leq N/k} e^{2\pi i \alpha m(j-k)}
+\end{align*}
+so
+\[
+\left| \sum_{M \leq m \leq 2M, m \leq N/j, m \leq N/k}  f(mj) \overline{f(mk)} \right| \ll \min\left\{M, \frac{1}{\norm{(j-k)\alpha}}\right\}. 
+\]
+We now have
+\begin{align*}
+|S_N(\alpha)|&\ll U + (\log N) \sum_{h \leq UV} \min\left\{\frac{N}{h}, \frac{1}{\norm{h\alpha}}\right\}\\
+&+(\log N) \sum_{k \leq V} \min\left\{\frac{N}{k}, \frac{1}{\norm{k\alpha}}\right\}\\
+&+N^{1/2} (\log N)^3 \max_{U \leq M \leq N/V} \max_{V<j\leq N/M}\left(  \sum_{V<k \leq N/M}  \min\left\{M, \frac{1}{\norm{(k-j)\alpha}}\right\}\right)^{1/2}.
+\end{align*}
+But for $V<j \leq N/M$, a fortiori $0 \leq j \leq N/M$, whence
+\begin{align*}
+ \sum_{V<k \leq N/M}  \min\left\{M, \frac{1}{\norm{(k-j)\alpha}}\right\} &\leq
+  \sum_{0 \leq k \leq N/M}  \min\left\{M, \frac{1}{\norm{(k-j)\alpha}}\right\} \\
+&\leq \sum_{|m| \leq N/M} \min\left\{M, \frac{1}{\norm{m\alpha}} \right\}\\
+&=M + 2 \sum_{1 \leq m \leq N/M}  \min\left\{M, \frac{1}{\norm{m\alpha}} \right\}\\
+&\ll M +  \sum_{1 \leq m \leq N/M} \min\left\{\frac{N}{m}, \frac{1}{\norm{m\alpha}} \right\}.
+\end{align*}
+Summarizing, we have the following.
+
+\begin{theorem}
+For $\alpha \in \mathbb{R}$ and $U,V \geq 2, UV \leq N$,
+\begin{align*}
+|S_N(\alpha)|&\ll U + (\log N) \sum_{h \leq UV} \min\left\{\frac{N}{h}, \frac{1}{\norm{h\alpha}}\right\}\\
+&+N^{1/2} (\log N)^3 \max_{U \leq M \leq N/V} \left( M +  \sum_{1 \leq m \leq N/M} \min\left\{\frac{N}{m}, \frac{1}{\norm{m\alpha}} \right\}  \right)^{1/2}.
+\end{align*}
+\label{SN}
+\end{theorem}
+
+
+
+\section{Diophantine approximation}
+\begin{theorem}
+There is some $C$ such that 
+for all $0<\alpha<1$, 
+if $\left| \alpha - \frac{a}{q} \right| \leq \frac{1}{q^2}$, $\gcd(a,q)=1$, and
+ $T \geq 1$, then
+\[
+\sum_{t \leq T} \min\left\{ \frac{N}{t}, \frac{1}{\norm{t\alpha}} \right\} \leq
+C \left(\frac{N}{q}+T+q\right) \log(2qT).
+\]
+\label{diophantine}
+\end{theorem}
+\begin{proof}
+Write $\beta = \alpha - \frac{a}{q}$. Then
+\begin{align*}
+\sum_{t \leq T} \min\left\{ \frac{N}{t}, \frac{1}{\norm{t\alpha}} \right\}&\leq \sum_{0 \leq h \leq T/q} \sum_{1 \leq r \leq q}
+\min\left\{ \frac{N}{hq+r}, \frac{1}{\norm{hq\alpha+r\alpha}} \right\}\\
+&= \sum_{0 \leq h \leq T/q} \sum_{1 \leq r \leq q}
+\min\left\{ \frac{N}{hq+r}, \frac{1}{\norm{\frac{ra}{q}+hq\beta+r\beta}} \right\}.
+\end{align*}
+If $h=0$ and $1 \leq r \leq \frac{q}{2}$, then, using $\norm{x-y} \geq \norm{x}-\norm{y}$ and $|\beta| \leq \frac{1}{q^2}$,
+\[
+ \frac{1}{\norm{\frac{ra}{q}+hq\beta+r\beta}} = \frac{1}{\norm{\frac{ra}{q}+r\beta}}
+\leq \frac{1}{\norm{\frac{ra}{q}} - \norm{r\beta}}
+\leq \frac{1}{\norm{\frac{ra}{q}} - \frac{1}{2q}},
+\]
+and, as $\gcd(a,q)=1$,
+\begin{align*}
+\sum_{1 \leq r \leq \frac{q}{2}} \frac{1}{\norm{\frac{ra}{q}} - \frac{1}{2q}} &\leq
+\sum_{1 \leq m < q} \frac{1}{\norm{\frac{m}{q}}-\frac{1}{2q}}\\
+&\leq 2 \sum_{1 \leq m \leq \frac{q}{2}} \frac{1}{\frac{m}{q}-\frac{1}{2q}}\\
+&= \sum_{1 \leq m \leq \frac{q}{2}} \frac{4q}{2m-1}\\
+&\leq 4q \sum_{1 \leq m \leq q-1} \frac{1}{m}\\
+&\leq 4q \log(2q).
+\end{align*}
+Otherwise, $1 \leq h \leq T/q$ or $\frac{q}{2}<r \leq q$, and then
+$hq+r \geq \frac{1}{2}(h+1)q$, and the sum over these indices is
+\[
+\ll \sum_{0 \leq h \leq T/q} \sum_{1 \leq r \leq q} \min\left\{\frac{N}{(h+1)q},\frac{1}{\norm{\frac{ra}{q}+hq\beta+r\beta}}\right\}.
+\]
+So we have got
+\[
+\sum_{t \leq T} \min\left\{ \frac{N}{t}, \frac{1}{\norm{t\alpha}} \right\} \ll q \log (2q) + \sum_{0 \leq h \leq T/q} \sum_{1 \leq r \leq q} \min\left\{\frac{N}{(h+1)q},\frac{1}{\norm{\frac{ra}{q}+hq\beta+r\beta}}\right\}.
+\]
+
+Let $1 \leq h \leq T/q$, let $I=[A,B]$ be a closed arc in $\mathbb{R} / \mathbb{Z}$ of measure $q^{-1}$, and
+let $J = [A-hq\beta-q^{-1},B-hq\beta+q^{-1}] \subset \mathbb{R} / \mathbb{Z}$.
+For $1 \leq r \leq q$, if $\frac{ra}{q}+hq\beta+r\beta \in I$ then $\frac{ra}{q}+r\beta \in [A-hq\beta,B-hq\beta]$, and
+as $|r\beta| \leq q^{-1}$, then $\frac{ra}{q} \in J$. As $J$ is a closed arc with measure $3q^{-1}$ and
+$\frac{a}{q},\frac{2a}{q},\ldots,\frac{q\cdot a}{q}$ are distinct in $\mathbb{R}/\mathbb{Z}$, due to $\gcd(a,q)=1$, 
+there are at most four $r$, $1 \leq r \leq q$, for which $\frac{ra}{q} \in J$. Therefore there are at most
+four $r$, $1 \leq r \leq q$, for which $\frac{ra}{q}+hq\beta+r\beta \in I$. 
+
+For $0 \leq j \leq q-1$, let $I_j = [jq^{-1},(j+1)q^{-1}]$. 
+If $\frac{ra}{q}+hq\beta+r\beta \in I_j \subset \mathbb{R} / \mathbb{Z}$, then
+\[
+\norm{\frac{ra}{q}+hq\beta+r\beta} \geq \min\{jq^{-1},1-(j+1)q^{-1}\}
+\]
+i.e.
+\[
+\frac{1}{\norm{\frac{ra}{q}+hq\beta+r\beta} } \leq \frac{q}{\min\{j,q-j-1\}}.
+\]
+Therefore, for $1 \leq r \leq q$ with $\frac{ra}{q}+hq\beta+r\beta \in I_j  \subset \mathbb{R} / \mathbb{Z}$,
+\begin{align*}
+ \min\left\{\frac{N}{(h+1)q},\frac{1}{\norm{\frac{ra}{q}+hq\beta+r\beta}}\right\} &\leq
+\min\left\{\frac{N}{(h+1)q}, \frac{q}{\min\{j,q-j-1\}} \right\}\\
+&\leq
+\begin{cases}
+\frac{N}{(h+1)q}&j=0,q-1\\
+\frac{q}{\min\{j,q-j-1\}}&1 \leq j \leq q-2.
+\end{cases}
+\end{align*}
+
+
+We have just established that for each $0 \leq j \leq q-1$ there are at most
+four $1 \leq r \leq q$ such that $\frac{ra}{q}+hq\beta+r\beta \in I_j \subset \mathbb{R} / \mathbb{Z}$, and
+hence
+\[
+\begin{split}
+&\sum_{0 \leq h \leq T/q} \sum_{1 \leq r \leq q} \min\left\{\frac{N}{(h+1)q},\frac{1}{\norm{\frac{ra}{q}+hq\beta+r\beta}}\right\}\\
+\leq&\sum_{0 \leq h \leq T/q} \sum_{0 \leq j \leq q-1} 4 \cdot \begin{cases}
+\frac{N}{(h+1)q}&j=0,q-1\\
+\frac{q}{\min\{j,q-j-1\}}&1 \leq j \leq q-2
+\end{cases}\\
+=&\sum_{0 \leq h \leq T/q} \left(\frac{8N}{(h+1)q} + \sum_{1 \leq j \leq q-2} \frac{q}{\min\{j,q-j-1\}} \right)\\
+\leq&\frac{8N}{q}  \sum_{1 \leq h \leq \frac{T}{q}+1} \frac{1}{h+1} + \left( \frac{T}{q}+1\right) \cdot 2q
+ \sum_{1 \leq j \leq q/2} \frac{1}{j}\\
+ \ll&\frac{N}{q} \log(2T/q) + \left( \frac{T}{q}+1 \right) \cdot q \log q. 
+\end{split}
+\]
+Putting things together,
+\begin{align*}
+\sum_{t \leq T} \min\left\{ \frac{N}{t}, \frac{1}{\norm{t\alpha}} \right\} & \ll q \log(2q)  + \frac{N}{q} \log(2T)
++\left(\frac{T}{q}+1\right) q \log(2q)\\
+&\ll q \log(2qT) + \frac{N}{q} \log(2qT) + T \log(2qT).
+\end{align*}
+\end{proof}
+
+
+We now combine Theorem \ref{SN} and Theorem \ref{diophantine}. For
+$U,V \geq 2, UV \leq N, T \geq 1$, 
+$\left| \alpha - \frac{a}{q} \right| \leq \frac{1}{q^2}$, $\gcd(a,q)=1$, 
+\begin{align*}
+|S_N(\alpha)|&\ll U + (\log N) \left( \frac{N}{q}+UV+q \right) \log(2qUV)\\
+&+N^{1/2} (\log N)^3 \max_{U \leq M \leq N/V} \left(M+\left(\frac{N}{q}+\frac{N}{M}+q\right) \log(2q N/M) \right)^{1/2}\\
+&\ll U + (\log 2qN)^3 \left(\frac{N}{q}+UV+q\right)\\
+&+N^{1/2}(\log qN)^{7/2} \max_{U \leq M \leq N/V} \left(M+\frac{N}{q}+\frac{N}{M}+q\right)^{1/2}\\
+&\ll U + (\log 2qN)^3 \left(\frac{N}{q}+UV+q\right)\\
+&+N^{1/2}(\log qN)^{7/2} \left( \left(U+\frac{N}{q}+\frac{N}{U}+q\right)^{1/2}
++\left(\frac{N}{V} + \frac{N}{q} + V + q\right)^{1/2} \right).
+\end{align*}
+Now take $U=V$, for which
+\begin{align*}
+|S_N(\alpha)|&\ll U + (\log 2qN)^3 \left(\frac{N}{q}+U^2+q\right)\\
+&+N^{1/2}(\log qN)^{7/2}  \left(U+\frac{N}{q}+\frac{N}{U}+q\right)^{1/2}\\
+&\ll U + (\log 2qN)^3 \left(\frac{N}{q}+U^2+q\right)\\
+&+N^{1/2}(\log qN)^{7/2}  (U^{1/2} + N^{1/2} q^{-1/2} + N^{1/2} U^{-1/2} + q^{1/2})\\
+&=U+(\log 2qN)^3 \left(\frac{N}{q}+U^2+q\right)\\
+&+(\log qN)^{7/2} (N^{1/2}U^{1/2}
++Nq^{-1/2} + NU^{-1/2} + N^{1/2} q^{1/2}).
+\end{align*}
+For $U=N^{2/5}$ we get the following.
+
+\begin{theorem}
+There is some $C$ such that if $\alpha \in \mathbb{R}$, $\left|\alpha -\frac{a}{q}\right| \leq \frac{1}{q^2}$, $a \geq 1$, $\gcd(a,q)=1$, then
+for any $N \geq 1$,
+\[
+|S_N(\alpha)| \leq C (Nq^{-1/2} + N^{4/5} + N^{1/2} q^{1/2}) (\log N)^4.
+\]
+\end{theorem}
+
+
+
+\end{document}

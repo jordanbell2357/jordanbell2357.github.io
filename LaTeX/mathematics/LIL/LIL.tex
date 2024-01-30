@@ -1,0 +1,83 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\Sh}{\ensuremath\mathrm{Sh}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}}
+\newcommand{\Var}{\ensuremath\mathrm{Var}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The law of the iterated logarithm}
+\author{Jordan Bell}
+\date{June 3, 2014}
+
+\maketitle
+
+There are surprisingly few books that have complete proofs of the law of the iterated logarithm. This is like
+many theorems that are hard to prove, and which are often given a squalid sketch that might be useful
+to the author as a memory aid but
+which is unlikely to help someone seeing the result for the first time, especially when the result is not even stated with the meticulous
+precision a newcomer needs.
+Indeed, what a serious beginner needs most are as many details as can be given, rather than a presentation that the master imagines
+gets to the point. 
+
+ Aside from some books
+ making assumptions that are not needed for the result to be true, such as having finite third moments, most books
+ present the \textbf{Hartman-Wintner law of the iterated logarithm}, which 
+talks about  the limit superior and limit inferior of a sequence. There is a version due to
+ Strassen that makes  a single assertion  about the set of limit points of a sequence rather than merely its limit inferior and limit superior.
+ For a sequence of real numbers $x_n$, we denote the set of limit points of the sequence by
+ \[
+ H(x_n)
+ \]
+Then,
+  \[
+  \liminf_{n \to \infty} x_n = \inf H(x_n), \qquad \limsup_{n \to \infty} x_n = \sup H(x_n).
+  \]
+ 
+ The following is the statement due to \textbf{Strassen} of the law of the iterated logarithm, given
+in Bauer.\footnote{Heinz
+Bauer, {\em Probability Theory}, p.~283, chapter VII, Theorem 33.1.} The proof indeed involves a lot of machinery, but the machinery is laid out cleanly in Bauer's presentation.
+We write 
+\[
+L(x) = \begin{cases}
+1&\log x \leq e\\
+\log \log x&\log x>e.
+\end{cases}
+\]
+
+\begin{theorem}[Law of the iterated logarithm]
+Suppose that $X_n:(\Omega,\mathscr{F},P) \to \mathbb{R}$ is a sequence of independent identically distributed $L^2$ random variables
+with $E(X_1)=0$ and $\sigma^2=\Var(X_1)=E(X_1^2)$. For 
+$P$-almost all $\omega \in \Omega$,
+\[
+H\left(\frac{S_n(\omega)}{\sqrt{2nL(n)}}\right) = [-\sigma,\sigma],
+\]
+where $S_n=\sum_{k=1}^n X_k$. 
+\end{theorem}
+
+
+
+\end{document}

@@ -1,0 +1,963 @@
+<!DOCTYPE html><html>
+<head>
+<title>The weak topology of locally convex spaces and the weak-* topology of their duals</title>
+<!--Generated on Mon Feb 14 19:11:27 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 3, 2014.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="LaTeXML-navbar-left.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<nav class="ltx_page_navbar">
+<div class="ltx_TOC">
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Introduction ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Introduction</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 Topological vector spaces ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Topological vector spaces</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 Locally convex spaces ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Locally convex spaces</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S4" title="4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Weak-* topology</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S5" title="5 Normed spaces ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Normed spaces</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S6" title="6 Banach spaces ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Banach spaces</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S7" title="7 Hilbert spaces ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Hilbert spaces</span></a></li>
+</ul>
+</div>
+</nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">The weak topology of locally convex spaces and the weak-* topology of their duals</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">April 3, 2014</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">These notes give a summary of results that everyone who does work in functional analysis should know
+about the weak topology on locally convex topological vector spaces and the weak-* topology on their dual spaces.
+The most striking of the results we prove is Theorem <a href="#Thmtheorem9" title="Theorem 9 (Weak boundedness is equivalent to boundedness). ‣ 4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a>, which shows that
+a subset of a locally convex space is bounded if and only if it is weakly bounded. It is straightforward to prove that if a set
+is bounded then it is weakly bounded, but to prove that if a set is weakly bounded then it is bounded we use the Hahn-Banach separation
+theorem, the Banach-Alaoglu theorem, and the uniform boundedness principle.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S1.p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space then we will see that the weak topology on it is coarser than the original topology: any set that is open in the original
+topology is open in the weak topology. From this it follows that it is easier for a sequence to converge in the weak topology than in the original topology:
+for a sequence to converge to a point means
+that it is eventually contained in every neighborhood of the point, and a point has fewer neighborhoods in the weak topology than it does in the original
+topology. The weak topology encodes information we may care about, and we may be able to establish
+that certain sets are compact in the weak topology that are not compact in the original topology.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">In these notes I first define the weak topology on a topological vector space <math id="S1.p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and show that if <math id="S1.p3.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is locally convex then <math id="S1.p3.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> with the weak topology is also a locally convex space.
+Indeed
+a normed space is locally convex, but there are function spaces that we care about that are not normed spaces. For example, the set of holomorphic functions
+on the open unit disc is a Fréchet space<span id="footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
+            <span class="ltx_tag ltx_tag_note">1</span>
+            
+            
+            
+          A <span class="ltx_text ltx_font_italic">Fréchet space</span> is a complete metrizable locally convex space.
+It is a fact that a locally convex
+space is metrizable if and only its topology is induced by countably many of its seminorms. See John B. Conway, <span class="ltx_text ltx_font_italic">A Course
+in Functional Analysis</span>, second ed., p. 105, chapter IV, Proposition 2.1.</span></span></span> that is not normable. If <math id="S1.p3.m4" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is an open subset of <math id="S1.p3.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>, then <math id="S1.p3.m6" class="ltx_Math" alttext="C^{k}(U)" display="inline"><mrow><msup><mi>C</mi><mi>k</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>U</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a Fréchet space that is not normable, and the set of Schwartz functions on <math id="S1.p3.m7" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is also
+a Fréchet space that is not normable. Moreover, none of the theorems stated for topological vector spaces and locally convex spaces is much easier to prove
+in the case of normed spaces, and thus it is not a great waste of time to digest their statements in a larger category
+of spaces.
+</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Except for the results about normed spaces, the hypotheses of all the theorems that we present are satisfied for a separable metrizable locally convex space. The hypotheses of every result in this note are satisfied for separable reflexive Banach spaces, for example, <math id="S1.p4.m1" class="ltx_Math" alttext="L^{p}(\mathbb{R}^{n})" display="inline"><mrow><msup><mi>L</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> for <math id="S1.p4.m2" class="ltx_Math" alttext="1&lt;p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">If every instance of <math id="S1.p5.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> in this text is replaced with <math id="S1.p5.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, the resulting text does not require any further changes to be correct.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Topological vector spaces</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological space and <math id="S2.p1.m2" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> and <math id="S2.p1.m3" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> is a set of open sets, we say that <math id="S2.p1.m4" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> is a <span class="ltx_text ltx_font_italic">local basis at <math id="S2.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></span> if each element of <math id="S2.p1.m6" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> includes <math id="S2.p1.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and if for every open set
+<math id="S2.p1.m8" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> that includes <math id="S2.p1.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> there is some <math id="S2.p1.m10" class="ltx_Math" alttext="V\in\mathcal{B}" display="inline"><mrow><mi>V</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></math> such that <math id="S2.p1.m11" class="ltx_Math" alttext="V\subseteq U" display="inline"><mrow><mi>V</mi><mo>⊆</mo><mi>U</mi></mrow></math>. If for each <math id="S2.p1.m12" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> the set <math id="S2.p1.m13" class="ltx_Math" alttext="\mathcal{B}_{x}" display="inline"><msub><mi class="ltx_font_mathcaligraphic">ℬ</mi><mi>x</mi></msub></math> is a local basis at <math id="S2.p1.m14" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, then <math id="S2.p1.m15" class="ltx_Math" alttext="\bigcup_{x\in X}\mathcal{B}_{x}" display="inline"><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></msub><msub><mi class="ltx_font_mathcaligraphic">ℬ</mi><mi>x</mi></msub></mrow></math> is a basis for the topology of <math id="S2.p1.m16" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.
+If <math id="S2.p1.m17" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a vector space, <math id="S2.p1.m18" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> is a set of subsets of <math id="S2.p1.m19" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and <math id="S2.p1.m20" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>, we define</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="x+\mathcal{B}=\{x+N:N\in\mathcal{B}\},\qquad x+N=\{x+y:y\in N\}." display="block"><mrow><mrow><mrow><mrow><mi>x</mi><mo>+</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>+</mo><mi>N</mi></mrow><mo>:</mo><mrow><mi>N</mi><mo>∈</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>+</mo><mi>N</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo>:</mo><mrow><mi>y</mi><mo>∈</mo><mi>N</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a vector space over <math id="S2.p2.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> with a topology <math id="S2.p2.m3" class="ltx_Math" alttext="\mathcal{O}(X)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S2.p2.m4" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> is Hausdorff and such that
+addition <math id="S2.p2.m5" class="ltx_Math" alttext="X\times X\to X" display="inline"><mrow><mrow><mi>X</mi><mo>×</mo><mi>X</mi></mrow><mo>→</mo><mi>X</mi></mrow></math> and
+scalar multiplication <math id="S2.p2.m6" class="ltx_Math" alttext="\mathbb{C}\times X\to X" display="inline"><mrow><mrow><mi>ℂ</mi><mo>×</mo><mi>X</mi></mrow><mo>→</mo><mi>X</mi></mrow></math> are continuous, we say that <math id="S2.p2.m7" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a <span class="ltx_text ltx_font_italic">topological vector space</span>.
+It is straightforward to prove that if <math id="S2.p2.m8" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> is a local basis at <math id="S2.p2.m9" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> then <math id="S2.p2.m10" class="ltx_Math" alttext="x+\mathcal{B}" display="inline"><mrow><mi>x</mi><mo>+</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow></math> is a local basis at <math id="S2.p2.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, and so
+<math id="S2.p2.m12" class="ltx_Math" alttext="\bigcup_{x\in X}\{x+\mathcal{B}\}" display="inline"><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋃</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></msub><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>+</mo><mi class="ltx_font_mathcaligraphic">ℬ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> is a basis for the topology <math id="S2.p2.m13" class="ltx_Math" alttext="\mathcal{O}(X)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+To specify a topology on a vector space it suffices to specify a local basis at <math id="S2.p2.m14" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>: This gives a basis by taking the union of the translates of the local basis over all <math id="S2.p2.m15" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>, and then this basis generates a topology. However, <math id="S2.p2.m16" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> might not be a topological vector space with the topology thus generated. (That is, if we define a topology on a vector space
+by declaring certain sets including the origin to be open, the vector space need not be a topological vector space with this topology.)</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">A topological vector space <math id="S2.p3.m1" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> is said to be <span class="ltx_text ltx_font_italic">locally convex</span> if there is a local basis at <math id="S2.p3.m2" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> each element of which is convex.
+If <math id="S2.p3.m3" class="ltx_Math" alttext="\nu_{\alpha}" display="inline"><msub><mi>ν</mi><mi>α</mi></msub></math> is a family of seminorms on <math id="S2.p3.m4" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, we define the <span class="ltx_text ltx_font_italic">seminorm topology induced by this family</span> to be
+the coarsest topology on <math id="S2.p3.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> such that for all <math id="S2.p3.m6" class="ltx_Math" alttext="x_{0}\in X" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>X</mi></mrow></math> and <math id="S2.p3.m7" class="ltx_Math" alttext="\alpha\in I" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>I</mi></mrow></math>, the map
+<math id="S2.p3.m8" class="ltx_Math" alttext="x\mapsto\nu_{\alpha}(x-x_{0})" display="inline"><mrow><mi>x</mi><mo>↦</mo><mrow><msub><mi>ν</mi><mi>α</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is continuous.
+We say that a set of seminorms <math id="S2.p3.m9" class="ltx_Math" alttext="\nu_{\alpha}" display="inline"><msub><mi>ν</mi><mi>α</mi></msub></math> is a <span class="ltx_text ltx_font_italic">separating family</span> if <math id="S2.p3.m10" class="ltx_Math" alttext="x\neq 0" display="inline"><mrow><mi>x</mi><mo>≠</mo><mn>0</mn></mrow></math> implies that there is some <math id="S2.p3.m11" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> such that <math id="S2.p3.m12" class="ltx_Math" alttext="\nu_{\alpha}(x)&gt;0" display="inline"><mrow><mrow><msub><mi>ν</mi><mi>α</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>.
+One can prove that a topological vector space is locally convex if and only if its topology is induced by a separating family of seminorms.<span id="footnote2" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>
+            <span class="ltx_tag ltx_tag_note">2</span>
+            
+            
+            
+          Walter Rudin,
+<span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 27, Theorem 1.36 and Theorem 1.37.</span></span></span></p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p4.m1" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> be a topological vector space over <math id="S2.p4.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>. The <span class="ltx_text ltx_font_italic">dual space</span> <math id="S2.p4.m3" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> is the set of all continuous linear maps
+<math id="S2.p4.m4" class="ltx_Math" alttext="(X,\mathcal{O}(X))\to\mathbb{C}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℂ</mi></mrow></math>.
+The <span class="ltx_text ltx_font_italic">weak topology</span> on <math id="S2.p4.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, which we denote by <math id="S2.p4.m6" class="ltx_Math" alttext="\mathcal{O}_{w}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>, is the initial topology for <math id="S2.p4.m7" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>. That is, <math id="S2.p4.m8" class="ltx_Math" alttext="\mathcal{O}_{w}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is the coarsest topology on <math id="S2.p4.m9" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> so that each element of
+<math id="S2.p4.m10" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> is continuous <math id="S2.p4.m11" class="ltx_Math" alttext="(X,\mathcal{O}_{w}(X))\to\mathbb{C}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℂ</mi></mrow></math>.
+Equivalently, the weak topology on <math id="S2.p4.m12" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is the seminorm topology induced by the seminorms <math id="S2.p4.m13" class="ltx_Math" alttext="|\alpha|" display="inline"><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow></math>, <math id="S2.p4.m14" class="ltx_Math" alttext="\alpha\in X^{*}" display="inline"><mrow><mi>α</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math>.
+The topologies <math id="S2.p4.m15" class="ltx_Math" alttext="\mathcal{O}(X)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S2.p4.m16" class="ltx_Math" alttext="\mathcal{O}_{w}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> are comparable, and <math id="S2.p4.m17" class="ltx_Math" alttext="\mathcal{O}(X)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is at least as fine as <math id="S2.p4.m18" class="ltx_Math" alttext="\mathcal{O}_{w}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+That is, <math id="S2.p4.m19" class="ltx_Math" alttext="\mathcal{O}_{w}(X)\subseteq\mathcal{O}(X)" display="inline"><mrow><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+A vague rule is that
+the smaller <math id="S2.p4.m20" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> is compared to the set of all linear maps <math id="S2.p4.m21" class="ltx_Math" alttext="X\to\mathbb{C}" display="inline"><mrow><mi>X</mi><mo>→</mo><mi>ℂ</mi></mrow></math>, the smaller <math id="S2.p4.m22" class="ltx_Math" alttext="\mathcal{O}_{w}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> will be compared to <math id="S2.p4.m23" class="ltx_Math" alttext="\mathcal{O}(X)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+If <math id="S2.p4.m24" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> separates <math id="S2.p4.m25" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>
+then <math id="S2.p4.m26" class="ltx_Math" alttext="(X,\mathcal{O}_{w}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> is a locally convex topological vector space. It is locally convex because <math id="S2.p4.m27" class="ltx_Math" alttext="\mathcal{O}_{w}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is induced by the separating family
+of seminorms <math id="S2.p4.m28" class="ltx_Math" alttext="|\alpha|" display="inline"><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow></math>, <math id="S2.p4.m29" class="ltx_Math" alttext="\alpha\in X^{*}" display="inline"><mrow><mi>α</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math>.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<ul id="S2.I1" class="ltx_itemize">
+<li id="S2.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">We say that <math id="S2.I1.i1.p1.m1" class="ltx_Math" alttext="x_{k}\to x" display="inline"><mrow><msub><mi>x</mi><mi>k</mi></msub><mo>→</mo><mi>x</mi></mrow></math> <span class="ltx_text ltx_font_italic">weakly</span> if <math id="S2.I1.i1.p1.m2" class="ltx_Math" alttext="x_{k}\to x" display="inline"><mrow><msub><mi>x</mi><mi>k</mi></msub><mo>→</mo><mi>x</mi></mrow></math> in <math id="S2.I1.i1.p1.m3" class="ltx_Math" alttext="(X,\mathcal{O}_{w}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>:
+for every neighborhood <math id="S2.I1.i1.p1.m4" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> of <math id="S2.I1.i1.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in <math id="S2.I1.i1.p1.m6" class="ltx_Math" alttext="(X,\mathcal{O}_{w}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, the sequence <math id="S2.I1.i1.p1.m7" class="ltx_Math" alttext="x_{k}" display="inline"><msub><mi>x</mi><mi>k</mi></msub></math> is eventually in <math id="S2.I1.i1.p1.m8" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>.</p>
+</div>
+</li>
+<li id="S2.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S2.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">We say that <math id="S2.I1.i2.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is <span class="ltx_text ltx_font_italic">weakly bounded</span> if <math id="S2.I1.i2.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a bounded subset of <math id="S2.I1.i2.p1.m3" class="ltx_Math" alttext="(X,\mathcal{O}_{w}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>:
+for every neighborhood <math id="S2.I1.i2.p1.m4" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> of <math id="S2.I1.i2.p1.m5" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> in <math id="S2.I1.i2.p1.m6" class="ltx_Math" alttext="(X,\mathcal{O}_{w}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> there is some <math id="S2.I1.i2.p1.m7" class="ltx_Math" alttext="c\geq 0" display="inline"><mrow><mi>c</mi><mo>≥</mo><mn>0</mn></mrow></math> such that <math id="S2.I1.i2.p1.m8" class="ltx_Math" alttext="A\subseteq\{cx:x\in N\}=cN" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mrow><mo stretchy="false">{</mo><mrow><mi>c</mi><mo>⁢</mo><mi>x</mi></mrow><mo>:</mo><mrow><mi>x</mi><mo>∈</mo><mi>N</mi></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><mi>c</mi><mo>⁢</mo><mi>N</mi></mrow></mrow></math>.</p>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Locally convex spaces</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">Hahn-Banach theorem separation theorem</span>
+states the following.<span id="footnote3" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>
+            <span class="ltx_tag ltx_tag_note">3</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 59, Theorem 3.4.</span></span></span></p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1</span></span> (Hahn-Banach separation theorem).</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If</span></p>
+<ul id="S3.I1" class="ltx_itemize">
+<li id="S3.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I1.i1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math><span class="ltx_text ltx_font_italic"> is a locally convex topological vector space over </span><math id="S3.I1.i1.p1.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math><span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</li>
+<li id="S3.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I1.i2.p1.m1" class="ltx_Math" alttext="A,B" display="inline"><mrow><mi>A</mi><mo>,</mo><mi>B</mi></mrow></math><span class="ltx_text ltx_font_italic"> are disjoint, nonempty, closed, convex subsets of </span><math id="S3.I1.i2.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math><span class="ltx_text ltx_font_italic"></span></p>
+</div>
+</li>
+<li id="S3.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S3.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S3.I1.i3.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math><span class="ltx_text ltx_font_italic"> is compact</span></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">then there is some <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">∈</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></mrow></math> and
+<math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="\gamma_{1},\gamma_{2}\in\mathbb{R}" display="inline"><mrow><mrow><msub><mi>γ</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">,</mo><msub><mi>γ</mi><mn mathvariant="normal">2</mn></msub></mrow><mo mathvariant="normal">∈</mo><mi mathvariant="normal">R</mi></mrow></math> such that, for all <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="a\in A" display="inline"><mrow><mi>a</mi><mo mathvariant="normal">∈</mo><mi>A</mi></mrow></math> and <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="b\in B" display="inline"><mrow><mi>b</mi><mo mathvariant="normal">∈</mo><mi>B</mi></mrow></math>,</span></p>
+<table id="S3.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex2.m1" class="ltx_Math" alttext="\mathrm{Re}\,\lambda(a)&lt;\gamma_{1}&lt;\gamma_{2}&lt;\mathrm{Re}\,\lambda(b)." display="block"><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>Re</mi></mpadded><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>a</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><msub><mi>γ</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>γ</mi><mn>2</mn></msub><mo>&lt;</mo><mrow><mpadded width="+1.7pt"><mi>Re</mi></mpadded><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>b</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">It follows that if <math id="S3.p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is locally convex then <math id="S3.p2.m2" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> separates <math id="S3.p2.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>.
+We can also use the Hahn-Banach separation theorem to prove that in a locally
+convex space, the weak closure of a convex set is equal to its original closure.<span id="footnote4" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">4</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">4</sup>
+            <span class="ltx_tag ltx_tag_note">4</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed.,
+p. 66, Theorem 3.12.</span></span></span></p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 2</span></span>.</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is a convex subset of a locally convex space <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal">,</mo><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>, then the closure <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="\overline{E}" display="inline"><mover accent="true"><mi>E</mi><mo mathvariant="normal">¯</mo></mover></math> of <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>
+in <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal">,</mo><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is equal to the closure <math id="Thmtheorem2.p1.m6" class="ltx_Math" alttext="\overline{E}_{w}" display="inline"><msub><mover accent="true"><mi>E</mi><mo mathvariant="normal">¯</mo></mover><mi>w</mi></msub></math> of <math id="Thmtheorem2.p1.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> in <math id="Thmtheorem2.p1.m8" class="ltx_Math" alttext="(X,\mathcal{O}_{w}(X))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal">,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>w</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">For <math id="S3.p3.m1" class="ltx_Math" alttext="A\subseteq X" display="inline"><mrow><mi>A</mi><mo>⊆</mo><mi>X</mi></mrow></math>, denote <math id="S3.p3.m2" class="ltx_Math" alttext="A^{c}=X\setminus A" display="inline"><mrow><msup><mi>A</mi><mi>c</mi></msup><mo>=</mo><mrow><mi>X</mi><mo>∖</mo><mi>A</mi></mrow></mrow></math>. We have, as <math id="S3.p3.m3" class="ltx_Math" alttext="\mathcal{O}_{w}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math> is coarser than <math id="S3.p3.m4" class="ltx_Math" alttext="\mathcal{O}(X)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>,</p>
+<table id="S7.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S3.Ex5">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex3.m1" class="ltx_Math" alttext="\displaystyle\overline{E}" display="inline"><mover accent="true"><mi>E</mi><mo>¯</mo></mover></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex3.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex3.m3" class="ltx_Math" alttext="\displaystyle\left(\bigcup_{U\in\mathcal{O}(X),E\subseteq U^{c}}U\right)^{c}" display="inline"><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mrow><mi>U</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mi>E</mi><mo>⊆</mo><msup><mi>U</mi><mi>c</mi></msup></mrow></mrow></munder></mstyle><mi>U</mi></mrow><mo>)</mo></mrow><mi>c</mi></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex4.m2" class="ltx_Math" alttext="\displaystyle\subseteq" display="inline"><mo>⊆</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex4.m3" class="ltx_Math" alttext="\displaystyle\left(\bigcup_{U\in\mathcal{O}_{w}(X),E\subseteq U^{c}}U\right)^{c}" display="inline"><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mrow><mrow><mi>U</mi><mo>∈</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mi>E</mi><mo>⊆</mo><msup><mi>U</mi><mi>c</mi></msup></mrow></mrow></munder></mstyle><mi>U</mi></mrow><mo>)</mo></mrow><mi>c</mi></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex5.m3" class="ltx_Math" alttext="\displaystyle\overline{E}_{w}." display="inline"><mrow><msub><mover accent="true"><mi>E</mi><mo>¯</mo></mover><mi>w</mi></msub><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">In the other direction, let <math id="S3.p4.m1" class="ltx_Math" alttext="x_{0}\not\in\overline{E}" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∉</mo><mover accent="true"><mi>E</mi><mo>¯</mo></mover></mrow></math>. If we can show that <math id="S3.p4.m2" class="ltx_Math" alttext="x_{0}\not\in\overline{E}_{w}" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∉</mo><msub><mover accent="true"><mi>E</mi><mo>¯</mo></mover><mi>w</mi></msub></mrow></math>,
+this will show that <math id="S3.p4.m3" class="ltx_Math" alttext="\overline{E}_{w}\subseteq\overline{E}" display="inline"><mrow><msub><mover accent="true"><mi>E</mi><mo>¯</mo></mover><mi>w</mi></msub><mo>⊆</mo><mover accent="true"><mi>E</mi><mo>¯</mo></mover></mrow></math> and hence that <math id="S3.p4.m4" class="ltx_Math" alttext="\overline{E}=\overline{E}_{w}" display="inline"><mrow><mover accent="true"><mi>E</mi><mo>¯</mo></mover><mo>=</mo><msub><mover accent="true"><mi>E</mi><mo>¯</mo></mover><mi>w</mi></msub></mrow></math>.
+Let <math id="S3.p4.m5" class="ltx_Math" alttext="A=\{x_{0}\}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">}</mo></mrow></mrow></math> and <math id="S3.p4.m6" class="ltx_Math" alttext="B=\overline{E}" display="inline"><mrow><mi>B</mi><mo>=</mo><mover accent="true"><mi>E</mi><mo>¯</mo></mover></mrow></math>, which satisfy the conditions of the Hahn-Banach theorem. Thus
+there is some <math id="S3.p4.m7" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> and <math id="S3.p4.m8" class="ltx_Math" alttext="\gamma_{1},\gamma_{2}\in\mathbb{R}" display="inline"><mrow><mrow><msub><mi>γ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>γ</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math> such that for all
+<math id="S3.p4.m9" class="ltx_Math" alttext="x\in\overline{E}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mover accent="true"><mi>E</mi><mo>¯</mo></mover></mrow></math>,</p>
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex6.m1" class="ltx_Math" alttext="\mathrm{Re}\,\lambda(x_{0})&lt;\gamma_{1}&lt;\gamma_{2}&lt;\mathrm{Re}\,\lambda(x)." display="block"><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>Re</mi></mpadded><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><msub><mi>γ</mi><mn>1</mn></msub><mo>&lt;</mo><msub><mi>γ</mi><mn>2</mn></msub><mo>&lt;</mo><mrow><mpadded width="+1.7pt"><mi>Re</mi></mpadded><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S3.p4.m10" class="ltx_Math" alttext="U=\{x\in X:\mathrm{Re}\,\lambda(x)&lt;\gamma_{1}\}" display="inline"><mrow><mi>U</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo>:</mo><mrow><mrow><mpadded width="+1.7pt"><mi>Re</mi></mpadded><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><msub><mi>γ</mi><mn>1</mn></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.
+The set <math id="S3.p4.m11" class="ltx_Math" alttext="V=\{z\in\mathbb{C}:\mathrm{Re}\,z&lt;\gamma_{1}\}" display="inline"><mrow><mi>V</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>z</mi><mo>∈</mo><mi>ℂ</mi></mrow><mo>:</mo><mrow><mrow><mpadded width="+1.7pt"><mi>Re</mi></mpadded><mo>⁢</mo><mi>z</mi></mrow><mo>&lt;</mo><msub><mi>γ</mi><mn>1</mn></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></math> is an open subset of <math id="S3.p4.m12" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> and <math id="S3.p4.m13" class="ltx_Math" alttext="U=\lambda^{-1}(V)" display="inline"><mrow><mi>U</mi><mo>=</mo><mrow><msup><mi>λ</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+so <math id="S3.p4.m14" class="ltx_Math" alttext="U\in\mathcal{O}_{w}(X)" display="inline"><mrow><mi>U</mi><mo>∈</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. For every <math id="S3.p4.m15" class="ltx_Math" alttext="x\in\overline{E}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mover accent="true"><mi>E</mi><mo>¯</mo></mover></mrow></math> we have <math id="S3.p4.m16" class="ltx_Math" alttext="\mathrm{Re}\,\lambda(x)&gt;\gamma_{2}&gt;\gamma_{1}" display="inline"><mrow><mrow><mpadded width="+1.7pt"><mi>Re</mi></mpadded><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><msub><mi>γ</mi><mn>2</mn></msub><mo>&gt;</mo><msub><mi>γ</mi><mn>1</mn></msub></mrow></math>, and for every
+<math id="S3.p4.m17" class="ltx_Math" alttext="x\in U" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>U</mi></mrow></math> we have <math id="S3.p4.m18" class="ltx_Math" alttext="\mathrm{Re}\,\lambda(x)&lt;\gamma_{1}" display="inline"><mrow><mrow><mpadded width="+1.7pt"><mi>Re</mi></mpadded><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><msub><mi>γ</mi><mn>1</mn></msub></mrow></math>, so <math id="S3.p4.m19" class="ltx_Math" alttext="\overline{E}\cap U=\emptyset" display="inline"><mrow><mrow><mover accent="true"><mi>E</mi><mo>¯</mo></mover><mo>∩</mo><mi>U</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> and in particular
+<math id="S3.p4.m20" class="ltx_Math" alttext="E\cap U=\emptyset" display="inline"><mrow><mrow><mi>E</mi><mo>∩</mo><mi>U</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math>. The three facts <math id="S3.p4.m21" class="ltx_Math" alttext="x_{0}\in U,U\in\mathcal{O}_{w}(X)" display="inline"><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>U</mi></mrow><mo>,</mo><mrow><mi>U</mi><mo>∈</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, and <math id="S3.p4.m22" class="ltx_Math" alttext="E\cap U=\emptyset" display="inline"><mrow><mrow><mi>E</mi><mo>∩</mo><mi>U</mi></mrow><mo>=</mo><mi mathvariant="normal">∅</mi></mrow></math> imply
+that <math id="S3.p4.m23" class="ltx_Math" alttext="x_{0}\not\in\overline{E}_{w}" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∉</mo><msub><mover accent="true"><mi>E</mi><mo>¯</mo></mover><mi>w</mi></msub></mrow></math>, completing the proof.
+∎</p>
+</div>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">If a sequence converges weakly, it need not converge in the original topology.
+<span class="ltx_text ltx_font_italic">Mazur’s theorem</span> shows that if a sequence in a metrizable locally
+convex space converges weakly then
+there is a sequence in the convex hull of the original sequence that converges to the same limit as the weak limit of the original sequence.<span id="footnote5" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">5</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">5</sup>
+            <span class="ltx_tag ltx_tag_note">5</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 67, Theorem 3.13. </span></span></span></p>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3</span></span> (Mazur’s theorem).</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a metrizable locally convex space. If <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="x_{n}\to x" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo mathvariant="normal">→</mo><mi>x</mi></mrow></math> weakly, then there is a sequence <math id="Thmtheorem3.p1.m3" class="ltx_Math" alttext="y_{i}\in X" display="inline"><mrow><msub><mi>y</mi><mi>i</mi></msub><mo mathvariant="normal">∈</mo><mi>X</mi></mrow></math> such that
+each <math id="Thmtheorem3.p1.m4" class="ltx_Math" alttext="y_{i}" display="inline"><msub><mi>y</mi><mi>i</mi></msub></math> is a convex combination of finitely many <math id="Thmtheorem3.p1.m5" class="ltx_Math" alttext="x_{n}" display="inline"><msub><mi>x</mi><mi>n</mi></msub></math> and such that <math id="Thmtheorem3.p1.m6" class="ltx_Math" alttext="y_{i}\to x" display="inline"><mrow><msub><mi>y</mi><mi>i</mi></msub><mo mathvariant="normal">→</mo><mi>x</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">convex hull</span> of a subset <math id="S3.p6.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> of <math id="S3.p6.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is the set of all convex combinations of finitely many elements of
+<math id="S3.p6.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. The convex hull of a set is convex and contains the set. Let <math id="S3.p6.m4" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> be the convex hull
+of the sequence <math id="S3.p6.m5" class="ltx_Math" alttext="x_{n}" display="inline"><msub><mi>x</mi><mi>n</mi></msub></math>, and let <math id="S3.p6.m6" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> be the weak closure of <math id="S3.p6.m7" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>.
+Since <math id="S3.p6.m8" class="ltx_Math" alttext="x_{n}\to x" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>→</mo><mi>x</mi></mrow></math> weakly and <math id="S3.p6.m9" class="ltx_Math" alttext="x_{n}\in H" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mi>H</mi></mrow></math>,
+it follows that <math id="S3.p6.m10" class="ltx_Math" alttext="x\in K" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>K</mi></mrow></math>. As <math id="S3.p6.m11" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is convex, Theorem <a href="#Thmtheorem2" title="Theorem 2. ‣ 3 Locally convex spaces ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a> tells us that <math id="S3.p6.m12" class="ltx_Math" alttext="K=\overline{H}" display="inline"><mrow><mi>K</mi><mo>=</mo><mover accent="true"><mi>H</mi><mo>¯</mo></mover></mrow></math>, so
+<math id="S3.p6.m13" class="ltx_Math" alttext="x\in\overline{H}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mover accent="true"><mi>H</mi><mo>¯</mo></mover></mrow></math>. But <math id="S3.p6.m14" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is metrizable, so <math id="S3.p6.m15" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> being in the closure of <math id="S3.p6.m16" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> implies that there is a sequence <math id="S3.p6.m17" class="ltx_Math" alttext="y_{i}\in H" display="inline"><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>∈</mo><mi>H</mi></mrow></math> such that
+<math id="S3.p6.m18" class="ltx_Math" alttext="y_{i}\to x" display="inline"><mrow><msub><mi>y</mi><mi>i</mi></msub><mo>→</mo><mi>x</mi></mrow></math>.
+This sequence
+<math id="S3.p6.m19" class="ltx_Math" alttext="y_{i}" display="inline"><msub><mi>y</mi><mi>i</mi></msub></math> satisfies the claim.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Weak-* topology</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S4.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a vector space over <math id="S4.p1.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> and <math id="S4.p1.m3" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math> is a set of linear maps <math id="S4.p1.m4" class="ltx_Math" alttext="X\to\mathbb{C}" display="inline"><mrow><mi>X</mi><mo>→</mo><mi>ℂ</mi></mrow></math>
+that separates <math id="S4.p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and we give <math id="S4.p1.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> the initial topology for <math id="S4.p1.m7" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>,
+then one can prove that with this topology <math id="S4.p1.m8" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a locally convex
+space whose dual space is <math id="S4.p1.m9" class="ltx_Math" alttext="\mathcal{F}" display="inline"><mi class="ltx_font_mathcaligraphic">ℱ</mi></math>.<span id="footnote6" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">6</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">6</sup>
+            <span class="ltx_tag ltx_tag_note">6</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed, p. 64, Theorem 3.10.</span></span></span></p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a topological vector space over <math id="S4.p2.m2" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>, and for <math id="S4.p2.m3" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>, define <math id="S4.p2.m4" class="ltx_Math" alttext="f_{x}:X^{*}\to\mathbb{C}" display="inline"><mrow><msub><mi>f</mi><mi>x</mi></msub><mo>:</mo><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>→</mo><mi>ℂ</mi></mrow></mrow></math>
+by <math id="S4.p2.m5" class="ltx_Math" alttext="f_{x}(\lambda)=\lambda(x)" display="inline"><mrow><mrow><msub><mi>f</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. <math id="S4.p2.m6" class="ltx_Math" alttext="f_{x}" display="inline"><msub><mi>f</mi><mi>x</mi></msub></math> is linear. If <math id="S4.p2.m7" class="ltx_Math" alttext="\lambda_{1},\lambda_{2}\in X^{*}" display="inline"><mrow><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> are distinct, then <math id="S4.p2.m8" class="ltx_Math" alttext="\lambda_{1}-\lambda_{2}\neq 0" display="inline"><mrow><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>-</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow><mo>≠</mo><mn>0</mn></mrow></math> so
+there is some <math id="S4.p2.m9" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> such that <math id="S4.p2.m10" class="ltx_Math" alttext="(\lambda_{1}-\lambda_{2})(x)\neq 0" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>-</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>, which tells us that <math id="S4.p2.m11" class="ltx_Math" alttext="f_{x}(\lambda_{1})\neq f_{x}(\lambda_{2})" display="inline"><mrow><mrow><msub><mi>f</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><msub><mi>f</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Therefore
+the set <math id="S4.p2.m12" class="ltx_Math" alttext="\{f_{x}:x\in X\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mi>x</mi></msub><mo>:</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo stretchy="false">}</mo></mrow></math> separates <math id="S4.p2.m13" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>. Let <math id="S4.p2.m14" class="ltx_Math" alttext="\mathcal{O}_{X}(X^{*})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math> be the initial topology for <math id="S4.p2.m15" class="ltx_Math" alttext="\{f_{x}:x\in X\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mi>x</mi></msub><mo>:</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo stretchy="false">}</mo></mrow></math>, and by the previous paragraph
+we have that <math id="S4.p2.m16" class="ltx_Math" alttext="(X^{*},\mathcal{O}_{X}(X^{*}))" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> is a locally convex space whose dual space is
+<math id="S4.p2.m17" class="ltx_Math" alttext="\{f_{x}:x\in X\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mi>x</mi></msub><mo>:</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo stretchy="false">}</mo></mrow></math>. The topology <math id="S4.p2.m18" class="ltx_Math" alttext="\mathcal{O}_{X}(X^{*})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math> is called the <span class="ltx_text ltx_font_italic">weak-* topology</span>
+on <math id="S4.p2.m19" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>. We record what we’ve just said as a theorem to make it easier to look up.</p>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4</span></span>.</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem4.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space, then its dual
+<math id="Thmtheorem4.p1.m2" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></math> with the weak-* topology <math id="Thmtheorem4.p1.m3" class="ltx_Math" alttext="\mathcal{O}_{X}(X^{*})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>X</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a locally convex space,
+and the dual space of <math id="Thmtheorem4.p1.m4" class="ltx_Math" alttext="(X^{*},\mathcal{O}_{X}(X^{*}))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>X</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is the set of <math id="Thmtheorem4.p1.m5" class="ltx_Math" alttext="f_{x}:X^{*}\to\mathbb{C}" display="inline"><mrow><msub><mi>f</mi><mi>x</mi></msub><mo mathvariant="normal">:</mo><mrow><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">→</mo><mi mathvariant="normal">C</mi></mrow></mrow></math>, where <math id="Thmtheorem4.p1.m6" class="ltx_Math" alttext="f_{x}(\lambda)=\lambda(x)" display="inline"><mrow><mrow><msub><mi>f</mi><mi>x</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>λ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mi>λ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="Thmtheorem4.p1.m7" class="ltx_Math" alttext="x\in X,\lambda\in X^{*}" display="inline"><mrow><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mi>X</mi></mrow><mo mathvariant="normal">,</mo><mrow><mi>λ</mi><mo mathvariant="normal">∈</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">Banach-Alaoglu theorem<span id="footnote7" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">7</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">7</sup>
+              <span class="ltx_tag ltx_tag_note"><span class="ltx_text ltx_font_upright">7</span></span>
+              
+              
+              
+            <span class="ltx_text ltx_font_upright">Walter Rudin, </span>Functional Analysis<span class="ltx_text ltx_font_upright">, second
+ed., p. 68, Theorem 3.15.</span></span></span></span></span> shows that certain subsets of <math id="S4.p3.m1" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> are weak-* compact, i.e. they are compact subsets of <math id="S4.p3.m2" class="ltx_Math" alttext="(X,\mathcal{O}_{X}(X^{*}))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>. The set <math id="S4.p3.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> in the statement of the theorem is called
+the <span class="ltx_text ltx_font_italic">polar</span> of the set <math id="S4.p3.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 5</span></span> (Banach-Alaoglu theorem).</h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem5.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a topological vector space and <math id="Thmtheorem5.p1.m2" class="ltx_Math" alttext="V\subseteq X" display="inline"><mrow><mi>V</mi><mo mathvariant="normal">⊆</mo><mi>X</mi></mrow></math> is a neighborhood of <math id="Thmtheorem5.p1.m3" class="ltx_Math" alttext="0" display="inline"><mn mathvariant="normal">0</mn></math>, then</span></p>
+<table id="S4.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex7.m1" class="ltx_Math" alttext="K=\{\lambda\in X^{*}:\textrm{if $x\in V$ then $|\lambda(x)|\leq 1$}\}" display="block"><mrow><mi>K</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow><mo>:</mo><mrow><mtext mathvariant="italic">if </mtext><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow><mtext mathvariant="italic"> then </mtext><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">is a compact subset of <math id="Thmtheorem5.p1.m4" class="ltx_Math" alttext="(X^{*},\mathcal{O}_{X}(X^{*}))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>X</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>.</span></p>
+</div>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">The following theorem shows that
+in a separable topological vector space, a weak-* compact set is weak-* metrizable.<span id="footnote8" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">8</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">8</sup>
+            <span class="ltx_tag ltx_tag_note">8</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 70, Theorem 3.16.</span></span></span>
+This is useful because if possible we would like to characterize a topology
+by its convergent sequences rather than by its open sets.</p>
+</div>
+<div id="Thmtheorem6" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 6</span></span>.</h6>
+<div id="Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem6.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a separable topological vector space and <math id="Thmtheorem6.p1.m2" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a weak-* compact subset of <math id="Thmtheorem6.p1.m3" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></math>, then
+<math id="Thmtheorem6.p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> with the subspace topology inherited from <math id="Thmtheorem6.p1.m5" class="ltx_Math" alttext="(X^{*},\mathcal{O}_{X}(X^{*}))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>X</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is metrizable.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p5.m1" class="ltx_Math" alttext="\{x_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> be a countable dense set in <math id="S4.p5.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and define <math id="S4.p5.m3" class="ltx_Math" alttext="f_{n}:X^{*}\to\mathbb{C}" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>:</mo><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> by
+<math id="S4.p5.m4" class="ltx_Math" alttext="f_{n}(\lambda)=\lambda(x_{n})" display="inline"><mrow><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. For each <math id="S4.p5.m5" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>, <math id="S4.p5.m6" class="ltx_Math" alttext="f_{n}:(X^{*},\mathcal{O}_{X}(X^{*}))\to\mathbb{C}" display="inline"><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> is linear and continuous.
+For distinct <math id="S4.p5.m7" class="ltx_Math" alttext="\lambda_{1},\lambda_{2}\in X^{*}" display="inline"><mrow><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math>, the set <math id="S4.p5.m8" class="ltx_Math" alttext="U=\{x\in X:\lambda_{1}(x)\neq\lambda_{2}(x)\}" display="inline"><mrow><mi>U</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo>:</mo><mrow><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><msub><mi>λ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></math> is an open subset
+of <math id="S4.p5.m9" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. As <math id="S4.p5.m10" class="ltx_Math" alttext="U" display="inline"><mi>U</mi></math> is a nonempty open set and <math id="S4.p5.m11" class="ltx_Math" alttext="\{x_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>x</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> is a dense subset of <math id="S4.p5.m12" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, there is some <math id="S4.p5.m13" class="ltx_Math" alttext="x_{n}\in U" display="inline"><mrow><msub><mi>x</mi><mi>n</mi></msub><mo>∈</mo><mi>U</mi></mrow></math>, giving <math id="S4.p5.m14" class="ltx_Math" alttext="f_{n}(\lambda_{1})\neq f_{n}(\lambda_{2})" display="inline"><mrow><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><msub><mi>f</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Therefore
+<math id="S4.p5.m15" class="ltx_Math" alttext="\{f_{n}:X^{*}\to\mathbb{C}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>f</mi><mi>n</mi></msub><mo>:</mo><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>→</mo><mi>ℂ</mi></mrow><mo stretchy="false">}</mo></mrow></math> separates <math id="S4.p5.m16" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>. It is a fact that if <math id="S4.p5.m17" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is a compact topological space and there is a countable set of
+continuous functions <math id="S4.p5.m18" class="ltx_Math" alttext="Y\to\mathbb{C}" display="inline"><mrow><mi>Y</mi><mo>→</mo><mi>ℂ</mi></mrow></math> that separates <math id="S4.p5.m19" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> then <math id="S4.p5.m20" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is metrizable.<span id="footnote9" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">9</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">9</sup>
+              <span class="ltx_tag ltx_tag_note">9</span>
+              
+              
+              
+            Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed.,
+p. 63, §3.8, (c). In Rudin it is stated for real valued functions.</span></span></span>
+<math id="S4.p5.m21" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a compact topological space with the subspace topology inherited from <math id="S4.p5.m22" class="ltx_Math" alttext="\mathcal{O}_{X}(X^{*})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math>, and hence this topology on
+<math id="S4.p5.m23" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is metrizable.
+∎</p>
+</div>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">We can combine Theorem <a href="#Thmtheorem5" title="Theorem 5 (Banach-Alaoglu theorem). ‣ 4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a> and Theorem <a href="#Thmtheorem6" title="Theorem 6. ‣ 4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a> to get the following, which states that the
+polar of a neighborhood of <math id="S4.p6.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> in a separable topological vector space is weak-* sequentially compact.<span id="footnote10" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">10</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">10</sup>
+            <span class="ltx_tag ltx_tag_note">10</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed.,
+p. 70, Theorem 3.17.</span></span></span></p>
+</div>
+<div id="Thmtheorem7" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 7</span></span>.</h6>
+<div id="Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem7.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a separable topological vector space. If <math id="Thmtheorem7.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a neighborhood of <math id="Thmtheorem7.p1.m3" class="ltx_Math" alttext="0" display="inline"><mn mathvariant="normal">0</mn></math> and if the sequence <math id="Thmtheorem7.p1.m4" class="ltx_Math" alttext="\lambda_{n}\in X^{*}" display="inline"><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo mathvariant="normal">∈</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></mrow></math> satisfies</span></p>
+<table id="S4.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex8.m1" class="ltx_Math" alttext="|\lambda_{n}(x)|\leq 1,\qquad n\geq 1,x\in V," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>λ</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>n</mi><mo>≥</mo><mn>1</mn></mrow><mo>,</mo><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">then there is a subsequence <math id="Thmtheorem7.p1.m5" class="ltx_Math" alttext="\lambda_{a(n)}" display="inline"><msub><mi>λ</mi><mrow><mi>a</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>n</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></msub></math> and some <math id="Thmtheorem7.p1.m6" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">∈</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></mrow></math> such that for all <math id="Thmtheorem7.p1.m7" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mi>X</mi></mrow></math>,</span></p>
+<table id="S4.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex9.m1" class="ltx_Math" alttext="\lim_{n\to\infty}\lambda_{a(n)}(x)=\lambda(x)." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>n</mi><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></munder><mo>⁡</mo><mrow><msub><mi>λ</mi><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">The Banach-Alaoglu Theorem implies that the polar</p>
+<table id="S4.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex10.m1" class="ltx_Math" alttext="K=\{\lambda\in X^{*}:\textrm{if $x\in V$ then $|\lambda(x)|\leq 1$}\}," display="block"><mrow><mrow><mi>K</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow><mo>:</mo><mrow><mtext>if </mtext><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow><mtext> then </mtext><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is weak-* compact. <math id="S4.p7.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> with the subspace
+topology inherited from <math id="S4.p7.m2" class="ltx_Math" alttext="\mathcal{O}_{X}(X^{*})" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow></math> is compact, hence by Theorem <a href="#Thmtheorem6" title="Theorem 6. ‣ 4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a> it is metrizable.
+Since the sequence <math id="S4.p7.m3" class="ltx_Math" alttext="\lambda_{n}" display="inline"><msub><mi>λ</mi><mi>n</mi></msub></math> is contained in <math id="S4.p7.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, it has a subsequence <math id="S4.p7.m5" class="ltx_Math" alttext="\lambda_{a(n)}" display="inline"><msub><mi>λ</mi><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></msub></math> that converges weakly
+to some <math id="S4.p7.m6" class="ltx_Math" alttext="\lambda\in K" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow></math>.
+For each <math id="S4.p7.m7" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>, the function <math id="S4.p7.m8" class="ltx_Math" alttext="f_{x}:(X^{*},\mathcal{O}_{X}(X^{*}))\to\mathbb{C}" display="inline"><mrow><msub><mi>f</mi><mi>x</mi></msub><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> defined by <math id="S4.p7.m9" class="ltx_Math" alttext="f_{x}(\lambda)=\lambda(x)" display="inline"><mrow><mrow><msub><mi>f</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+is continuous, hence for all <math id="S4.p7.m10" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> we have <math id="S4.p7.m11" class="ltx_Math" alttext="f_{x}(\lambda_{a(n)})\to f_{x}(\lambda)" display="inline"><mrow><mrow><msub><mi>f</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>λ</mi><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>n</mi><mo stretchy="false">)</mo></mrow></mrow></msub><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msub><mi>f</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, which is the claim.
+∎</p>
+</div>
+</div>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p">The following lemma gives a tractable characterization of weakly bounded sets.<span id="footnote11" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">11</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">11</sup>
+            <span class="ltx_tag ltx_tag_note">11</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 66.</span></span></span></p>
+</div>
+<div id="Thmtheorem8" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 8</span></span>.</h6>
+<div id="Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem8.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space and <math id="Thmtheorem8.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is a subset of <math id="Thmtheorem8.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, then <math id="Thmtheorem8.p1.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is weakly bounded if and only if
+for all <math id="Thmtheorem8.p1.m5" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">∈</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></mrow></math> there is some <math id="Thmtheorem8.p1.m6" class="ltx_Math" alttext="\gamma(\lambda)" display="inline"><mrow><mi>γ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>λ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> such that if <math id="Thmtheorem8.p1.m7" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mi>E</mi></mrow></math> then <math id="Thmtheorem8.p1.m8" class="ltx_Math" alttext="|\lambda(x)|\leq\gamma(\lambda)" display="inline"><mrow><mrow><mo mathvariant="normal" stretchy="false">|</mo><mrow><mi>λ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">|</mo></mrow><mo mathvariant="normal">≤</mo><mrow><mi>γ</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>λ</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>.
+
+</span></p>
+</div>
+</div>
+<div id="S4.p9" class="ltx_para">
+<p class="ltx_p">The following theorem<span id="footnote12" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">12</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">12</sup>
+            <span class="ltx_tag ltx_tag_note">12</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed.,
+p. 70, Theorem 3.18.</span></span></span> shows that in a locally convex space, the boundedness of a set is equivalent to its weak boundedness.
+Its proof involves much of what we have talked about so far, and actually
+requires introducing some new terms with which one should probably have at least an acquaintance. The statement of the theorem does not involve
+the weak-* topology on <math id="S4.p9.m1" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>, but the proof uses the Banach-Alaoglu theorem.</p>
+</div>
+<div id="Thmtheorem9" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 9</span></span> (Weak boundedness is equivalent to boundedness).</h6>
+<div id="Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem9.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is locally convex and <math id="Thmtheorem9.p1.m2" class="ltx_Math" alttext="E\subseteq X" display="inline"><mrow><mi>E</mi><mo mathvariant="normal">⊆</mo><mi>X</mi></mrow></math>, then <math id="Thmtheorem9.p1.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is bounded in
+<math id="Thmtheorem9.p1.m4" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal">,</mo><mrow><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> if and only if <math id="Thmtheorem9.p1.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is bounded in <math id="Thmtheorem9.p1.m6" class="ltx_Math" alttext="(X,\mathcal{O}_{w}(X))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal">,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>w</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p10" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S4.p10.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is bounded in <math id="S4.p10.m2" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> (for every neighborhood of <math id="S4.p10.m3" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, the set <math id="S4.p10.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is contained in some dilation of that neighborhood). Let <math id="S4.p10.m5" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> be a neighborhood of <math id="S4.p10.m6" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> in <math id="S4.p10.m7" class="ltx_Math" alttext="\mathcal{O}_{w}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+There is some <math id="S4.p10.m8" class="ltx_Math" alttext="U\in\mathcal{O}_{w}(X)" display="inline"><mrow><mi>U</mi><mo>∈</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> with <math id="S4.p10.m9" class="ltx_Math" alttext="0\in U\subseteq N" display="inline"><mrow><mn>0</mn><mo>∈</mo><mi>U</mi><mo>⊆</mo><mi>N</mi></mrow></math>. Now, <math id="S4.p10.m10" class="ltx_Math" alttext="U\in\mathcal{O}(X)" display="inline"><mrow><mi>U</mi><mo>∈</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so <math id="S4.p10.m11" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> is a neighborhood
+of <math id="S4.p10.m12" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> in <math id="S4.p10.m13" class="ltx_Math" alttext="\mathcal{O}(X)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>. As <math id="S4.p10.m14" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is bounded, there is some <math id="S4.p10.m15" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> such that <math id="S4.p10.m16" class="ltx_Math" alttext="E\subseteq\alpha N=\{\alpha x:x\in N\}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><mrow><mi>α</mi><mo>⁢</mo><mi>N</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>α</mi><mo>⁢</mo><mi>x</mi></mrow><mo>:</mo><mrow><mi>x</mi><mo>∈</mo><mi>N</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>,
+which is what it means for <math id="S4.p10.m17" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> to be bounded in <math id="S4.p10.m18" class="ltx_Math" alttext="(X,\mathcal{O}_{w}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S4.p11" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S4.p11.m1" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is bounded in <math id="S4.p11.m2" class="ltx_Math" alttext="(X,\mathcal{O}_{w}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>. Let <math id="S4.p11.m3" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> be a neighborhood of <math id="S4.p11.m4" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> in
+<math id="S4.p11.m5" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>. We want to show that there is some <math id="S4.p11.m6" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> such that <math id="S4.p11.m7" class="ltx_Math" alttext="E\subseteq\{\alpha x:x\in N\}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><mrow><mo stretchy="false">{</mo><mrow><mi>α</mi><mo>⁢</mo><mi>x</mi></mrow><mo>:</mo><mrow><mi>x</mi><mo>∈</mo><mi>N</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.
+If <math id="S4.p11.m8" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> is a local basis at a point in a topological vector space, then every element of <math id="S4.p11.m9" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math> contains
+the closure of some element of <math id="S4.p11.m10" class="ltx_Math" alttext="\mathcal{B}" display="inline"><mi class="ltx_font_mathcaligraphic">ℬ</mi></math>.<span id="footnote13" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">13</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">13</sup>
+              <span class="ltx_tag ltx_tag_note">13</span>
+              
+              
+              
+            Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 11, Theorem 1.11.</span></span></span>
+A subset <math id="S4.p11.m11" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> of a vector space is said to be <span class="ltx_text ltx_font_italic">balanced</span> if for every <math id="S4.p11.m12" class="ltx_Math" alttext="\alpha\in\mathbb{C}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>ℂ</mi></mrow></math> with <math id="S4.p11.m13" class="ltx_Math" alttext="|\alpha|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math> we have
+<math id="S4.p11.m14" class="ltx_Math" alttext="\alpha A\subseteq A" display="inline"><mrow><mrow><mi>α</mi><mo>⁢</mo><mi>A</mi></mrow><mo>⊆</mo><mi>A</mi></mrow></math>. It is a fact that in a topological vector space, every convex neighborhood of <math id="S4.p11.m15" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> contains a convex balanced neighborhood of <math id="S4.p11.m16" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>.<span id="footnote14" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">14</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">14</sup>
+              <span class="ltx_tag ltx_tag_note">14</span>
+              
+              
+              
+            Walter
+Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 12, Theorem 1.14.</span></span></span> The purpose of having said all of this is the following: since <math id="S4.p11.m17" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> is a neighborhood
+of <math id="S4.p11.m18" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> in <math id="S4.p11.m19" class="ltx_Math" alttext="\mathcal{O}(X)" display="inline"><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow></math>, there is a balanced convex <math id="S4.p11.m20" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> that is a neighborhood of <math id="S4.p11.m21" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> in <math id="S4.p11.m22" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math> such that
+<math id="S4.p11.m23" class="ltx_Math" alttext="\overline{V}\subseteq N" display="inline"><mrow><mover accent="true"><mi>V</mi><mo>¯</mo></mover><mo>⊆</mo><mi>N</mi></mrow></math>, where <math id="S4.p11.m24" class="ltx_Math" alttext="\overline{V}" display="inline"><mover accent="true"><mi>V</mi><mo>¯</mo></mover></math> is the closure of <math id="S4.p11.m25" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> in <math id="S4.p11.m26" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>.
+Moreover, it is a fact that the closure of a balanced set is itself balanced, and the closure of a convex set is itself convex,<span id="footnote15" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">15</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">15</sup>
+              <span class="ltx_tag ltx_tag_note">15</span>
+              
+              
+              
+            Walter
+Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 11, Theorem 1.13.</span></span></span> so <math id="S4.p11.m27" class="ltx_Math" alttext="\overline{V}" display="inline"><mover accent="true"><mi>V</mi><mo>¯</mo></mover></math> is a balanced convex set that is contained in <math id="S4.p11.m28" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>. Thus to prove <math id="S4.p11.m29" class="ltx_Math" alttext="E\subseteq\alpha N" display="inline"><mrow><mi>E</mi><mo>⊆</mo><mrow><mi>α</mi><mo>⁢</mo><mi>N</mi></mrow></mrow></math>
+it suffices to prove that <math id="S4.p11.m30" class="ltx_Math" alttext="E\subseteq\alpha\overline{V}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><mrow><mi>α</mi><mo>⁢</mo><mover accent="true"><mi>V</mi><mo>¯</mo></mover></mrow></mrow></math>, and this is what we will do.</p>
+</div>
+<div id="S4.p12" class="ltx_para">
+<p class="ltx_p">Let</p>
+<table id="S4.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex11.m1" class="ltx_Math" alttext="K=\{\lambda\in X^{*}:\textrm{if $x\in V$ then $|\lambda(x)|\leq 1$}\}," display="block"><mrow><mrow><mi>K</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow><mo>:</mo><mrow><mtext>if </mtext><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow><mtext> then </mtext><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the polar of <math id="S4.p12.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. If <math id="S4.p12.m2" class="ltx_Math" alttext="x\in V" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>V</mi></mrow></math> and <math id="S4.p12.m3" class="ltx_Math" alttext="\lambda\in K" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow></math> then <math id="S4.p12.m4" class="ltx_Math" alttext="|\lambda(x)|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math>, so</p>
+<table id="S4.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex12.m1" class="ltx_Math" alttext="V\subseteq\{x\in X:\textrm{if $\lambda\in K$ then $|\lambda(x)|\leq 1$}\}=%
+\bigcap_{\lambda\in K}\{x\in X:|\lambda(x)|\leq 1\}." display="block"><mrow><mrow><mi>V</mi><mo>⊆</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo>:</mo><mrow><mtext>if </mtext><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow><mtext> then </mtext><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋂</mo><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow></munder><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The right-hand side is an intersection of closed sets in <math id="S4.p12.m5" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, so it is closed. Therefore <math id="S4.p12.m6" class="ltx_Math" alttext="\overline{V}" display="inline"><mover accent="true"><mi>V</mi><mo>¯</mo></mover></math> is contained in the right-hand side.
+Furthermore, it is a consequence of the Hahn-Banach separation theorem<span id="footnote16" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">16</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">16</sup>
+              <span class="ltx_tag ltx_tag_note">16</span>
+              
+              
+              
+            Walter
+Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 61, Theorem 3.7.</span></span></span> that if <math id="S4.p12.m7" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is a convex balanced closed set in a locally
+convex space and <math id="S4.p12.m8" class="ltx_Math" alttext="x_{0}\not\in B" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∉</mo><mi>B</mi></mrow></math>, then there is some <math id="S4.p12.m9" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> such that <math id="S4.p12.m10" class="ltx_Math" alttext="\lambda(x_{0})&gt;1" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>1</mn></mrow></math> and <math id="S4.p12.m11" class="ltx_Math" alttext="|\lambda(x)|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math> for <math id="S4.p12.m12" class="ltx_Math" alttext="x\in B" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>B</mi></mrow></math>.
+Thus, if <math id="S4.p12.m13" class="ltx_Math" alttext="x_{0}\not\in\overline{V}" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∉</mo><mover accent="true"><mi>V</mi><mo>¯</mo></mover></mrow></math>, then
+there is some <math id="S4.p12.m14" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> such that <math id="S4.p12.m15" class="ltx_Math" alttext="\lambda(x_{0})&gt;1" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>1</mn></mrow></math> and if
+<math id="S4.p12.m16" class="ltx_Math" alttext="x\in\overline{V}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mover accent="true"><mi>V</mi><mo>¯</mo></mover></mrow></math>
+then <math id="S4.p12.m17" class="ltx_Math" alttext="|\lambda(x)|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math>. From this it follows that <math id="S4.p12.m18" class="ltx_Math" alttext="\lambda\in K" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow></math>, and then because <math id="S4.p12.m19" class="ltx_Math" alttext="\lambda(x_{0})&gt;1" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mn>1</mn></mrow></math> it follows that</p>
+<table id="S4.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex13.m1" class="ltx_Math" alttext="x_{0}\not\in\{x\in X:\textrm{if $\lambda\in K$ then $|\lambda(x)|\leq 1$}\}." display="block"><mrow><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∉</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo>:</mo><mrow><mtext>if </mtext><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow><mtext> then </mtext><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We have shown that if <math id="S4.p12.m20" class="ltx_Math" alttext="x_{0}\not\in\overline{V}" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∉</mo><mover accent="true"><mi>V</mi><mo>¯</mo></mover></mrow></math> then <math id="S4.p12.m21" class="ltx_Math" alttext="x_{0}" display="inline"><msub><mi>x</mi><mn>0</mn></msub></math> is not an element of the polar of <math id="S4.p12.m22" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math>, and
+therefore</p>
+<table id="S4.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex14.m1" class="ltx_Math" alttext="\overline{V}=\{x\in X:\textrm{if $\lambda\in K$ then $|\lambda(x)|\leq 1$}\}." display="block"><mrow><mrow><mover accent="true"><mi>V</mi><mo>¯</mo></mover><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo>:</mo><mrow><mtext>if </mtext><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow><mtext> then </mtext><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S4.p13" class="ltx_para">
+<p class="ltx_p">By the Banach-Alaoglu theorem, <math id="S4.p13.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a compact set in <math id="S4.p13.m2" class="ltx_Math" alttext="(X^{*},\mathcal{O}_{X}(X^{*}))" display="inline"><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, and one checks that <math id="S4.p13.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is convex.
+The <span class="ltx_text ltx_font_italic">uniform boundedness principle<span id="footnote17" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">17</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">17</sup>
+                <span class="ltx_tag ltx_tag_note"><span class="ltx_text ltx_font_upright">17</span></span>
+                
+                
+                
+              <span class="ltx_text ltx_font_upright">Walter Rudin, </span>Functional Analysis<span class="ltx_text ltx_font_upright">, second ed., p. 46, Theorem 2.9</span></span></span></span></span>
+states that if</p>
+<ul id="S4.I1" class="ltx_itemize">
+<li id="S4.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I1.i1.p1.m1" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> and <math id="S4.I1.i1.p1.m2" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math> are topological vector spaces</p>
+</div>
+</li>
+<li id="S4.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I1.i2.p1.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a compact convex set in <math id="S4.I1.i2.p1.m2" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math></p>
+</div>
+</li>
+<li id="S4.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><math id="S4.I1.i3.p1.m1" class="ltx_Math" alttext="\Gamma" display="inline"><mi mathvariant="normal">Γ</mi></math> is a set of continuous linear maps <math id="S4.I1.i3.p1.m2" class="ltx_Math" alttext="W\to Z" display="inline"><mrow><mi>W</mi><mo>→</mo><mi>Z</mi></mrow></math></p>
+</div>
+</li>
+<li id="S4.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S4.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">For each <math id="S4.I1.i4.p1.m1" class="ltx_Math" alttext="w\in K" display="inline"><mrow><mi>w</mi><mo>∈</mo><mi>K</mi></mrow></math>, the set <math id="S4.I1.i4.p1.m2" class="ltx_Math" alttext="\Gamma(w)=\{g(w):g\in\Gamma\}" display="inline"><mrow><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi>g</mi><mo>∈</mo><mi mathvariant="normal">Γ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math> is a bounded subset of <math id="S4.I1.i4.p1.m3" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math></p>
+</div>
+</li>
+</ul>
+<p class="ltx_p">then there is a bounded set <math id="S4.p13.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> in <math id="S4.p13.m5" class="ltx_Math" alttext="Z" display="inline"><mi>Z</mi></math> such that if <math id="S4.p13.m6" class="ltx_Math" alttext="g\in\Gamma" display="inline"><mrow><mi>g</mi><mo>∈</mo><mi mathvariant="normal">Γ</mi></mrow></math> then <math id="S4.p13.m7" class="ltx_Math" alttext="g(K)\subseteq B" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⊆</mo><mi>B</mi></mrow></math>.
+For <math id="S4.p13.m8" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></math>, define <math id="S4.p13.m9" class="ltx_Math" alttext="g_{x}:X^{*}\to\mathbb{C}" display="inline"><mrow><msub><mi>g</mi><mi>x</mi></msub><mo>:</mo><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> by <math id="S4.p13.m10" class="ltx_Math" alttext="g_{x}(\lambda)=\lambda(x)" display="inline"><mrow><mrow><msub><mi>g</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and define <math id="S4.p13.m11" class="ltx_Math" alttext="\Gamma=\{g_{x}:x\in E\}" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>g</mi><mi>x</mi></msub><mo>:</mo><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.
+Because <math id="S4.p13.m12" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is weakly bounded, for all <math id="S4.p13.m13" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> there is some <math id="S4.p13.m14" class="ltx_Math" alttext="\gamma(\lambda)" display="inline"><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that
+if <math id="S4.p13.m15" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></math> then <math id="S4.p13.m16" class="ltx_Math" alttext="|\lambda(x)|\leq\gamma(\lambda)" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>; this is by Lemma <a href="#Thmtheorem8" title="Lemma 8. ‣ 4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>.
+Hence for all <math id="S4.p13.m17" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> there is some <math id="S4.p13.m18" class="ltx_Math" alttext="\gamma(\lambda)" display="inline"><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that
+the set <math id="S4.p13.m19" class="ltx_Math" alttext="\Gamma(\lambda)" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+is contained in the closed disc in <math id="S4.p13.m20" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> with radius <math id="S4.p13.m21" class="ltx_Math" alttext="\gamma(\lambda)" display="inline"><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+Thus <math id="S4.p13.m22" class="ltx_Math" alttext="\Gamma(\lambda)" display="inline"><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow></math> is bounded in <math id="S4.p13.m23" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>.
+We apply the uniform boundedness principle using <math id="S4.p13.m24" class="ltx_Math" alttext="W=(X^{*},\mathcal{O}_{X}(X^{*}))" display="inline"><mrow><mi>W</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>X</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S4.p13.m25" class="ltx_Math" alttext="Z=\mathbb{C}" display="inline"><mrow><mi>Z</mi><mo>=</mo><mi>ℂ</mi></mrow></math>.
+We thus obtain that there is some
+<math id="S4.p13.m26" class="ltx_Math" alttext="0\leq\gamma&lt;\infty" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>γ</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> such that if <math id="S4.p13.m27" class="ltx_Math" alttext="g\in\Gamma" display="inline"><mrow><mi>g</mi><mo>∈</mo><mi mathvariant="normal">Γ</mi></mrow></math> then <math id="S4.p13.m28" class="ltx_Math" alttext="g(K)" display="inline"><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></math> is contained in the closed disc of radius <math id="S4.p13.m29" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math>. That is,
+for all <math id="S4.p13.m30" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></math> and <math id="S4.p13.m31" class="ltx_Math" alttext="\lambda\in K" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow></math>, we have</p>
+<table id="S4.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex15.m1" class="ltx_Math" alttext="|g_{x}(\lambda)|\leq\gamma," display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>g</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>λ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi>γ</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e. for all <math id="S4.p13.m32" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></math> and <math id="S4.p13.m33" class="ltx_Math" alttext="\lambda\in K" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow></math> we have</p>
+<table id="S4.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex16.m1" class="ltx_Math" alttext="|\lambda(x)|\leq\gamma." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi>γ</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore,
+if <math id="S4.p13.m34" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></math> and <math id="S4.p13.m35" class="ltx_Math" alttext="\lambda\in K" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mi>K</mi></mrow></math>, then</p>
+<table id="S4.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex17.m1" class="ltx_Math" alttext="\left|\lambda\left(\frac{1}{\gamma}\cdot x\right)\right|=\frac{1}{\gamma}|%
+\lambda(x)|\leq 1," display="block"><mrow><mrow><mrow><mo>|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><mn>1</mn><mi>γ</mi></mfrac><mo>⋅</mo><mi>x</mi></mrow><mo>)</mo></mrow></mrow><mo>|</mo></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mi>γ</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>≤</mo><mn>1</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which means that <math id="S4.p13.m36" class="ltx_Math" alttext="\frac{1}{\gamma}\cdot x\in\overline{V}" display="inline"><mrow><mrow><mfrac><mn>1</mn><mi>γ</mi></mfrac><mo>⋅</mo><mi>x</mi></mrow><mo>∈</mo><mover accent="true"><mi>V</mi><mo>¯</mo></mover></mrow></math>. This is true for all <math id="S4.p13.m37" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></math>, so <math id="S4.p13.m38" class="ltx_Math" alttext="\frac{1}{\gamma}\cdot E\subseteq\overline{V}\subseteq N" display="inline"><mrow><mrow><mfrac><mn>1</mn><mi>γ</mi></mfrac><mo>⋅</mo><mi>E</mi></mrow><mo>⊆</mo><mover accent="true"><mi>V</mi><mo>¯</mo></mover><mo>⊆</mo><mi>N</mi></mrow></math>, and
+hence <math id="S4.p13.m39" class="ltx_Math" alttext="E\subseteq\gamma\cdot N" display="inline"><mrow><mi>E</mi><mo>⊆</mo><mrow><mi>γ</mi><mo>⋅</mo><mi>N</mi></mrow></mrow></math>. Since <math id="S4.p13.m40" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> was an arbitrary
+neighborhood of <math id="S4.p13.m41" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> in <math id="S4.p13.m42" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, we have satisfied the definition of the set <math id="S4.p13.m43" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> being bounded in
+<math id="S4.p13.m44" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, completing the proof.
+∎</p>
+</div>
+</div>
+<div id="S4.p14" class="ltx_para">
+<p class="ltx_p">The final result we state in this section gives a condition for the dual of a locally convex space to be weak-* separable.<span id="footnote18" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">18</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">18</sup>
+            <span class="ltx_tag ltx_tag_note">18</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>,
+second ed., p. 90, chapter 3, Exercise 28.</span></span></span> We already stated
+in Theorem <a href="#Thmtheorem4" title="Theorem 4. ‣ 4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">4</span></a> that the dual with the weak-* topology of a topological vector space is itself a locally
+convex space.</p>
+</div>
+<div id="Thmtheorem10" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 10</span></span>.</h6>
+<div id="Thmtheorem10.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem10.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a separable metrizable locally convex space, then <math id="Thmtheorem10.p1.m2" class="ltx_Math" alttext="(X^{*},\mathcal{O}_{X}(X^{*}))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>X</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is a separable locally convex space.</span></p>
+</div>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Normed spaces</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S5.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a normed space with norm <math id="S5.p1.m2" class="ltx_Math" alttext="\left\|\cdot\right\|" display="inline"><mrow><mo>∥</mo><mo>⋅</mo><mo>∥</mo></mrow></math>.
+The topology on <math id="S5.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is the coarsest topology such that for each <math id="S5.p1.m4" class="ltx_Math" alttext="x_{0}\in X" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>X</mi></mrow></math>, the map <math id="S5.p1.m5" class="ltx_Math" alttext="x\mapsto\left\|x-x_{0}\right\|" display="inline"><mrow><mi>x</mi><mo>↦</mo><mrow><mo>∥</mo><mrow><mi>x</mi><mo>-</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>∥</mo></mrow></mrow></math> is continuous.
+A normed vector space is locally convex and is metrizable, with metric <math id="S5.p1.m6" class="ltx_Math" alttext="d(x,y)=\left\|x-y\right\|" display="inline"><mrow><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>∥</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo>∥</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S5.p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S5.p2.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> are topological vector spaces and <math id="S5.p2.m3" class="ltx_Math" alttext="T:X\to Y" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> is a linear map, we say that <math id="S5.p2.m4" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is <span class="ltx_text ltx_font_italic">bounded</span> if <math id="S5.p2.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> being bounded
+in <math id="S5.p2.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> implies that <math id="S5.p2.m7" class="ltx_Math" alttext="T(E)" display="inline"><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>E</mi><mo stretchy="false">)</mo></mrow></mrow></math> is bounded in <math id="S5.p2.m8" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math>.<span id="footnote19" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">19</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">19</sup>
+            <span class="ltx_tag ltx_tag_note">19</span>
+            
+            
+            
+          A statement close to it is proved in Walter Rudin,
+<span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 24, Theorem 1.32.</span></span></span></p>
+</div>
+<div id="Thmtheorem11" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 11</span></span>.</h6>
+<div id="Thmtheorem11.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem11.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="Thmtheorem11.p1.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> be normed vector spaces and let <math id="Thmtheorem11.p1.m3" class="ltx_Math" alttext="T:X\to Y" display="inline"><mrow><mi>T</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mi>Y</mi></mrow></mrow></math> be linear. The following three statements are equivalent:</span></p>
+<ul id="S5.I1" class="ltx_itemize">
+<li id="S5.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i1.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I1.i1.p1.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math><span class="ltx_text ltx_font_italic"> is continuous.</span></p>
+</div>
+</li>
+<li id="S5.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i2.p1" class="ltx_para">
+<p class="ltx_p"><math id="S5.I1.i2.p1.m1" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math><span class="ltx_text ltx_font_italic"> is bounded.</span></p>
+</div>
+</li>
+<li id="S5.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S5.I1.i3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">There is some </span><math id="S5.I1.i3.p1.m1" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math><span class="ltx_text ltx_font_italic"> such that if </span><math id="S5.I1.i3.p1.m2" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math><span class="ltx_text ltx_font_italic"> then </span><math id="S5.I1.i3.p1.m3" class="ltx_Math" alttext="\left\|Tx\right\|\leq\gamma\left\|x\right\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>T</mi><mo>⁢</mo><mi>x</mi></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow></mrow></mrow></math><span class="ltx_text ltx_font_italic">.</span></p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S5.p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S5.p3.m2" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> are normed spaces and <math id="S5.p3.m3" class="ltx_Math" alttext="T:X\to Y" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></mrow></math> is a bounded linear map,
+the <span class="ltx_text ltx_font_italic">operator norm</span> <math id="S5.p3.m4" class="ltx_Math" alttext="\left\|T\right\|" display="inline"><mrow><mo>∥</mo><mi>T</mi><mo>∥</mo></mrow></math> of <math id="S5.p3.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is defined to be the infimum of those <math id="S5.p3.m6" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> such that
+if <math id="S5.p3.m7" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> then <math id="S5.p3.m8" class="ltx_Math" alttext="\left\|Tx\right\|\leq\gamma\left\|x\right\|" display="inline"><mrow><mrow><mo>∥</mo><mrow><mi>T</mi><mo>⁢</mo><mi>x</mi></mrow><mo>∥</mo></mrow><mo>≤</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow></mrow></mrow></math>. <math id="S5.p3.m9" class="ltx_Math" alttext="\left\|T\right\|=\sup_{\left\|x\right\|\leq 1}\left\|Tx\right\|" display="inline"><mrow><mrow><mo>∥</mo><mi>T</mi><mo>∥</mo></mrow><mo>=</mo><mrow><msub><mo>sup</mo><mrow><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mo>≤</mo><mn>1</mn></mrow></msub><mo>⁡</mo><mrow><mo>∥</mo><mrow><mi>T</mi><mo>⁢</mo><mi>x</mi></mrow><mo>∥</mo></mrow></mrow></mrow></math>.
+The set of bounded linear maps <math id="S5.p3.m10" class="ltx_Math" alttext="X\to Y" display="inline"><mrow><mi>X</mi><mo>→</mo><mi>Y</mi></mrow></math> is denoted <math id="S5.p3.m11" class="ltx_Math" alttext="\mathscr{B}(X,Y)" display="inline"><mrow><mi class="ltx_font_mathscript">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+<math id="S5.p3.m12" class="ltx_Math" alttext="\mathscr{B}(X,Y)" display="inline"><mrow><mi class="ltx_font_mathscript">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+is a normed space, and if <math id="S5.p3.m13" class="ltx_Math" alttext="Y" display="inline"><mi>Y</mi></math> is a Banach space then <math id="S5.p3.m14" class="ltx_Math" alttext="\mathscr{B}(X,Y)" display="inline"><mrow><mi class="ltx_font_mathscript">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>Y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a Banach space.<span id="footnote20" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">20</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">20</sup>
+            <span class="ltx_tag ltx_tag_note">20</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 92, Theorem 4.</span></span></span>
+<math id="S5.p3.m15" class="ltx_Math" alttext="X^{*}=\mathscr{B}(X,\mathbb{C})" display="inline"><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>=</mo><mrow><mi class="ltx_font_mathscript">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>ℂ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and since <math id="S5.p3.m16" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> is a Banach space, with the operator
+norm <math id="S5.p3.m17" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> is a Banach space.</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">The following theorem rewrites
+Theorem <a href="#Thmtheorem9" title="Theorem 9 (Weak boundedness is equivalent to boundedness). ‣ 4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a> in the terminology of norms.<span id="footnote21" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">21</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">21</sup>
+            <span class="ltx_tag ltx_tag_note">21</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 71.</span></span></span></p>
+</div>
+<div id="Thmtheorem12" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 12</span></span> (Weak boundedness is equivalent to boundedness).</h6>
+<div id="Thmtheorem12.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem12.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a normed space and <math id="Thmtheorem12.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is a subset of <math id="Thmtheorem12.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, then</span></p>
+<table id="S5.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex18.m1" class="ltx_Math" alttext="\sup_{x\in E}|\lambda(x)|&lt;\infty" display="block"><mrow><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">for all <math id="Thmtheorem12.p1.m4" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo mathvariant="normal">∈</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></mrow></math> if and only if
+there is some <math id="Thmtheorem12.p1.m5" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> such that <math id="Thmtheorem12.p1.m6" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mi>E</mi></mrow></math> implies</span></p>
+<table id="S5.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex19.m1" class="ltx_Math" alttext="\left\|x\right\|\leq\gamma." display="block"><mrow><mrow><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mo>≤</mo><mi>γ</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S5.p5.m1" class="ltx_Math" alttext="\sup_{x\in E}|\lambda(x)|&lt;\infty" display="inline"><mrow><mrow><msub><mo>sup</mo><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> holds for all <math id="S5.p5.m2" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math>. By
+Lemma <a href="#Thmtheorem8" title="Lemma 8. ‣ 4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">8</span></a>,
+this means that the set <math id="S5.p5.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is weakly bounded. But by Theorem <a href="#Thmtheorem9" title="Theorem 9 (Weak boundedness is equivalent to boundedness). ‣ 4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">9</span></a> this implies that <math id="S5.p5.m4" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is bounded.
+The closed unit ball is a neighborhood
+of <math id="S5.p5.m5" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> in <math id="S5.p5.m6" class="ltx_Math" alttext="(X,\mathcal{O}(X))" display="inline"><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mrow><mi class="ltx_font_mathcaligraphic">𝒪</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>, so, as <math id="S5.p5.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is bounded, there is some <math id="S5.p5.m8" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> such that <math id="S5.p5.m9" class="ltx_Math" alttext="E\subseteq\{\gamma x:\left\|x\right\|\leq 1\}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><mrow><mo stretchy="false">{</mo><mrow><mi>γ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>:</mo><mrow><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mo>≤</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.
+Hence, if <math id="S5.p5.m10" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></math> then <math id="S5.p5.m11" class="ltx_Math" alttext="\left\|x\right\|\leq\gamma" display="inline"><mrow><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mo>≤</mo><mi>γ</mi></mrow></math>.</p>
+</div>
+<div id="S5.p6" class="ltx_para">
+<p class="ltx_p">Suppose that there is some <math id="S5.p6.m1" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> such that <math id="S5.p6.m2" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></math> implies that <math id="S5.p6.m3" class="ltx_Math" alttext="\left\|x\right\|\leq\gamma" display="inline"><mrow><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow><mo>≤</mo><mi>γ</mi></mrow></math>, and let
+<math id="S5.p6.m4" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math>. Because <math id="S5.p6.m5" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> is continuous, for <math id="S5.p6.m6" class="ltx_Math" alttext="x\in E" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>E</mi></mrow></math> we have</p>
+<table id="S5.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex20.m1" class="ltx_Math" alttext="|\lambda(x)|\leq\left\|\lambda\right\|\left\|x\right\|\leq\left\|\lambda\right%
+\|\gamma&lt;\infty." display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mrow><mo>∥</mo><mi>λ</mi><mo>∥</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo></mrow></mrow><mo>≤</mo><mrow><mrow><mo>∥</mo><mi>λ</mi><mo>∥</mo></mrow><mo>⁢</mo><mi>γ</mi></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="Thmtheorem13" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 13</span></span> (Banach-Alaoglu theorem).</h6>
+<div id="Thmtheorem13.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem13.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a normed vector space, then <math id="Thmtheorem13.p1.m2" class="ltx_Math" alttext="B=\{\lambda\in X^{*}:\left\|\lambda\right\|\leq 1\}" display="inline"><mrow><mi>B</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mrow><mi>λ</mi><mo mathvariant="normal">∈</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></mrow><mo mathvariant="normal">:</mo><mrow><mrow><mo mathvariant="normal">∥</mo><mi>λ</mi><mo mathvariant="normal">∥</mo></mrow><mo mathvariant="normal">≤</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></math> is a compact
+subset of <math id="Thmtheorem13.p1.m3" class="ltx_Math" alttext="(X,\mathcal{O}_{X}(X^{*}))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal">,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>X</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p7" class="ltx_para">
+<p class="ltx_p">It is a fact<span id="footnote22" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">22</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">22</sup>
+              <span class="ltx_tag ltx_tag_note">22</span>
+              
+              
+              
+            Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 94, Theorem 4.3.</span></span></span> (proved using the Hahn-Banach extension theorem)
+that for every <math id="S5.p7.m1" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>,</p>
+<table id="S5.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex21.m1" class="ltx_Math" alttext="\left\|x\right\|=\sup\{|\lambda(x)|:\lambda\in B\}." display="block"><mrow><mo>∥</mo><mi>x</mi><mo>∥</mo><mo>=</mo><mo movablelimits="false">sup</mo><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><mi>λ</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo><mo>:</mo><mi>λ</mi><mo>∈</mo><mi>B</mi><mo stretchy="false">}</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From this and Theorem <a href="#Thmtheorem5" title="Theorem 5 (Banach-Alaoglu theorem). ‣ 4 Weak-* topology ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a>, it follows that
+<math id="S5.p7.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is weak-* compact in <math id="S5.p7.m3" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>.
+∎</p>
+</div>
+</div>
+<div id="S5.p8" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">Eberlein-Smulian theorem</span> states that a set in a normed space is weakly
+compact if and only if the set is weakly sequentially compact.<span id="footnote23" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">23</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">23</sup>
+            <span class="ltx_tag ltx_tag_note">23</span>
+            
+            
+            
+          Robert E. Megginson,
+<span class="ltx_text ltx_font_italic">An Introduction to Banach Space Theory</span>,
+p. 248, Theorem 2.8.6.</span></span></span></p>
+</div>
+<div id="Thmtheorem14" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 14</span></span> (Eberlein-Smulian theorem).</h6>
+<div id="Thmtheorem14.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem14.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a normed space, then
+a subset <math id="Thmtheorem14.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> of <math id="Thmtheorem14.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is compact in <math id="Thmtheorem14.p1.m4" class="ltx_Math" alttext="\mathcal{O}_{w}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>w</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> if and only if every sequence in <math id="Thmtheorem14.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has a subsequence that
+converges in <math id="Thmtheorem14.p1.m6" class="ltx_Math" alttext="\mathcal{O}_{w}(X)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>w</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>X</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> to an element of <math id="Thmtheorem14.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</span></p>
+</div>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Banach spaces</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">We say that a Banach space <math id="S6.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is <span class="ltx_text ltx_font_italic">reflexive</span> if <math id="S6.p1.m2" class="ltx_Math" alttext="X^{**}=X" display="inline"><mrow><msup><mi>X</mi><mrow><mi></mi><mo>*</mo><mo>*</mo></mrow></msup><mo>=</mo><mi>X</mi></mrow></math>, where <math id="S6.p1.m3" class="ltx_Math" alttext="X^{*}=\mathscr{B}(X,\mathbb{C})" display="inline"><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>=</mo><mrow><mi class="ltx_font_mathscript">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>X</mi><mo>,</mo><mi>ℂ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+and <math id="S6.p1.m4" class="ltx_Math" alttext="X^{**}=\mathscr{B}(X^{*},\mathbb{C})" display="inline"><mrow><msup><mi>X</mi><mrow><mi></mi><mo>*</mo><mo>*</mo></mrow></msup><mo>=</mo><mrow><mi class="ltx_font_mathscript">ℬ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>X</mi><mo>*</mo></msup><mo>,</mo><mi>ℂ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. (Although it makes sense to talk about <math id="S6.p1.m5" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> for a normed space, <math id="S6.p1.m6" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> is itself a Banach space
+and so too is <math id="S6.p1.m7" class="ltx_Math" alttext="X^{**}" display="inline"><msup><mi>X</mi><mrow><mi></mi><mo>*</mo><mo>*</mo></mrow></msup></math>, hence if a normed space were reflexive then it would have to be a Banach space.)</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Kakutani’s theorem</span> relates the property of a Banach space being reflexive with
+weak compactness.<span id="footnote24" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">24</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">24</sup>
+            <span class="ltx_tag ltx_tag_note">24</span>
+            
+            
+            
+          Joseph Diestel,
+<span class="ltx_text ltx_font_italic">Sequences and Series in Banach Spaces</span>, p. 18, chapter III.</span></span></span></p>
+</div>
+<div id="Thmtheorem15" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 15</span></span> (Kakutani’s theorem).</h6>
+<div id="Thmtheorem15.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">The closed unit ball in a Banach space is weakly compact if and only if the space is reflexive.</span></p>
+</div>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">Thus, combining the Eberlein-Smulian theorem and Kakutani’s theorem we get that a Banach space is reflexive if and only if the closed unit ball is weakly
+sequentially compact.</p>
+</div>
+<div id="S6.p4" class="ltx_para">
+<p class="ltx_p">The following theorem states that a Banach space is separable if and only if the closed unit ball in the dual space is weak-* metrizable.<span id="footnote25" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">25</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">25</sup>
+            <span class="ltx_tag ltx_tag_note">25</span>
+            
+            
+            
+          
+John B. Conway, <span class="ltx_text ltx_font_italic">A Course in Functional Analysis</span>, second ed., p. 134, Theorem 5.1.</span></span></span></p>
+</div>
+<div id="Thmtheorem16" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 16</span></span>.</h6>
+<div id="Thmtheorem16.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Let <math id="Thmtheorem16.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a Banach space and let <math id="Thmtheorem16.p1.m2" class="ltx_Math" alttext="B=\{\lambda\in X^{*}:\left\|\lambda\right\|\leq 1\}" display="inline"><mrow><mi>B</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mrow><mi>λ</mi><mo mathvariant="normal">∈</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></mrow><mo mathvariant="normal">:</mo><mrow><mrow><mo mathvariant="normal">∥</mo><mi>λ</mi><mo mathvariant="normal">∥</mo></mrow><mo mathvariant="normal">≤</mo><mn mathvariant="normal">1</mn></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></math>. <math id="Thmtheorem16.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is separable if and only if <math id="Thmtheorem16.p1.m4" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> with the subspace topology inherited
+from <math id="Thmtheorem16.p1.m5" class="ltx_Math" alttext="(X^{*},\mathcal{O}_{X}(X^{*}))" display="inline"><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal">,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic" mathvariant="normal">O</mi><mi>X</mi></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></math> is metrizable.</span></p>
+</div>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Hilbert spaces</h2>
+
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.p1.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> be a Hilbert space with inner product <math id="S7.p1.m2" class="ltx_Math" alttext="\left\langle\cdot,\cdot\right\rangle:H\times H\to\mathbb{C}" display="inline"><mrow><mrow><mo>⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo>⟩</mo></mrow><mo>:</mo><mrow><mrow><mi>H</mi><mo>×</mo><mi>H</mi></mrow><mo>→</mo><mi>ℂ</mi></mrow></mrow></math>, linear in the first argument.
+The <span class="ltx_text ltx_font_italic">Riesz representation theorem<span id="footnote26" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">26</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">26</sup>
+              <span class="ltx_tag ltx_tag_note"><span class="ltx_text ltx_font_upright">26</span></span>
+              
+              
+              
+            <span class="ltx_text ltx_font_upright">John B. Conway, </span>A Course in Functional Analysis<span class="ltx_text ltx_font_upright">, second ed.,
+p. 13, Theorem 3.4.</span></span></span></span></span> states that if <math id="S7.p1.m3" class="ltx_Math" alttext="\lambda\in H^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>H</mi><mo>*</mo></msup></mrow></math>, then there is a unique <math id="S7.p1.m4" class="ltx_Math" alttext="h_{\lambda}\in H" display="inline"><mrow><msub><mi>h</mi><mi>λ</mi></msub><mo>∈</mo><mi>H</mi></mrow></math> such that
+if <math id="S7.p1.m5" class="ltx_Math" alttext="h\in H" display="inline"><mrow><mi>h</mi><mo>∈</mo><mi>H</mi></mrow></math> then</p>
+<table id="S7.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex22.m1" class="ltx_Math" alttext="\lambda(h)=\left\langle h,h_{\lambda}\right\rangle," display="block"><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>⟨</mo><mi>h</mi><mo>,</mo><msub><mi>h</mi><mi>λ</mi></msub><mo>⟩</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and <math id="S7.p1.m6" class="ltx_Math" alttext="\left\|\lambda\right\|=\left\|h_{\lambda}\right\|" display="inline"><mrow><mrow><mo>∥</mo><mi>λ</mi><mo>∥</mo></mrow><mo>=</mo><mrow><mo>∥</mo><msub><mi>h</mi><mi>λ</mi></msub><mo>∥</mo></mrow></mrow></math>.
+On the other hand, if <math id="S7.p1.m7" class="ltx_Math" alttext="h_{0}\in H" display="inline"><mrow><msub><mi>h</mi><mn>0</mn></msub><mo>∈</mo><mi>H</mi></mrow></math> then <math id="S7.p1.m8" class="ltx_Math" alttext="\lambda(h)=\left\langle h,h_{0}\right\rangle" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>⟨</mo><mi>h</mi><mo>,</mo><msub><mi>h</mi><mn>0</mn></msub><mo>⟩</mo></mrow></mrow></math> satisfies, by the Cauchy-Schwarz inequality,</p>
+<table id="S7.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex23.m1" class="ltx_Math" alttext="|\lambda_{h_{0}}(h)|=|\left\langle h,h_{0}\right\rangle|\leq\left\|h\right\|%
+\left\|h_{0}\right\|," display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>λ</mi><msub><mi>h</mi><mn>0</mn></msub></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mo>⟨</mo><mi>h</mi><mo>,</mo><msub><mi>h</mi><mn>0</mn></msub><mo>⟩</mo></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mrow><mo>∥</mo><mi>h</mi><mo>∥</mo></mrow><mo>⁢</mo><mrow><mo>∥</mo><msub><mi>h</mi><mn>0</mn></msub><mo>∥</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">hence, by Theorem <a href="#Thmtheorem11" title="Theorem 11. ‣ 5 Normed spaces ‣ The weak topology of locally convex spaces and the weak-* topology of their duals" class="ltx_ref"><span class="ltx_text ltx_ref_tag">11</span></a>, <math id="S7.p1.m9" class="ltx_Math" alttext="\lambda_{h_{0}}\in H^{*}" display="inline"><mrow><msub><mi>λ</mi><msub><mi>h</mi><mn>0</mn></msub></msub><mo>∈</mo><msup><mi>H</mi><mo>*</mo></msup></mrow></math>. Thus <math id="S7.p1.m10" class="ltx_Math" alttext="H^{*}=\{\lambda_{h_{0}}:h_{0}\in H\}" display="inline"><mrow><msup><mi>H</mi><mo>*</mo></msup><mo>=</mo><mrow><mo stretchy="false">{</mo><msub><mi>λ</mi><msub><mi>h</mi><mn>0</mn></msub></msub><mo>:</mo><mrow><msub><mi>h</mi><mn>0</mn></msub><mo>∈</mo><mi>H</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.
+The weak topology <math id="S7.p1.m11" class="ltx_Math" alttext="\mathcal{O}_{w}(H)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> on <math id="S7.p1.m12" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> is the coarsest topology on <math id="S7.p1.m13" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> such that
+each <math id="S7.p1.m14" class="ltx_Math" alttext="\lambda\in H^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>H</mi><mo>*</mo></msup></mrow></math> is continuous <math id="S7.p1.m15" class="ltx_Math" alttext="(H,\mathcal{O}_{w}(H))\to\mathbb{C}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>H</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℂ</mi></mrow></math>, hence such that
+for each <math id="S7.p1.m16" class="ltx_Math" alttext="h_{0}\in H" display="inline"><mrow><msub><mi>h</mi><mn>0</mn></msub><mo>∈</mo><mi>H</mi></mrow></math>, the funtion <math id="S7.p1.m17" class="ltx_Math" alttext="h\mapsto\left\langle h,h_{0}\right\rangle" display="inline"><mrow><mi>h</mi><mo>↦</mo><mrow><mo>⟨</mo><mi>h</mi><mo>,</mo><msub><mi>h</mi><mn>0</mn></msub><mo>⟩</mo></mrow></mrow></math> is continuous <math id="S7.p1.m18" class="ltx_Math" alttext="(H,\mathcal{O}_{w}(H))\to\mathbb{C}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>H</mi><mo>,</mo><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℂ</mi></mrow></math>.
+Thus, a net <math id="S7.p1.m19" class="ltx_Math" alttext="h_{\alpha}\in H" display="inline"><mrow><msub><mi>h</mi><mi>α</mi></msub><mo>∈</mo><mi>H</mi></mrow></math> converges to <math id="S7.p1.m20" class="ltx_Math" alttext="h\in H" display="inline"><mrow><mi>h</mi><mo>∈</mo><mi>H</mi></mrow></math> in <math id="S7.p1.m21" class="ltx_Math" alttext="\mathcal{O}_{w}(H)" display="inline"><mrow><msub><mi class="ltx_font_mathcaligraphic">𝒪</mi><mi>w</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>H</mi><mo stretchy="false">)</mo></mrow></mrow></math> if and only if for all <math id="S7.p1.m22" class="ltx_Math" alttext="h_{0}\in H" display="inline"><mrow><msub><mi>h</mi><mn>0</mn></msub><mo>∈</mo><mi>H</mi></mrow></math> we have that
+<math id="S7.p1.m23" class="ltx_Math" alttext="\left\langle h_{\alpha},h_{0}\right\rangle\in\mathbb{C}" display="inline"><mrow><mrow><mo>⟨</mo><msub><mi>h</mi><mi>α</mi></msub><mo>,</mo><msub><mi>h</mi><mn>0</mn></msub><mo>⟩</mo></mrow><mo>∈</mo><mi>ℂ</mi></mrow></math> converges to <math id="S7.p1.m24" class="ltx_Math" alttext="\left\langle h,h_{0}\right\rangle\in\mathbb{C}" display="inline"><mrow><mrow><mo>⟨</mo><mi>h</mi><mo>,</mo><msub><mi>h</mi><mn>0</mn></msub><mo>⟩</mo></mrow><mo>∈</mo><mi>ℂ</mi></mrow></math>, and this characterizes the weak topology on <math id="S7.p1.m25" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math>.</p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Mon Feb 14 19:11:27 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

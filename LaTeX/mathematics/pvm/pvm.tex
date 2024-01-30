@@ -1,0 +1,486 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\im}{\textrm{im\,}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\SA}{B_{\textrm{sa}}(H)} 
+\newcommand{\positive}{B_{\textrm{+}}(H)} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Projection-valued measures and spectral integrals}
+\author{Jordan Bell}
+\date{April 16, 2014}
+\maketitle
+
+\section{Introduction}
+The purpose of these notes is to precisely define all the objects one needs to talk about projection-valued measures and the spectral theorem. 
+
+
+
+
+\section{Orthogonal complements}
+Let $H$ be a separable complex Hilbert space. 
+
+If $W$ is a subset of $H$, the {\em span} of $W$ is the set of all finite linear combinations of elements of $W$. 
+If $W_\alpha$, $\alpha \in I$, are subsets of $H$, let 
+\[
+\bigvee_{\alpha \in I} W_\alpha
+\]
+denote the closure of the span of $\bigcup_{\alpha \in I} W_\alpha$. It is straightforward to check that this is the intersection of all closed subspaces of $H$ that contain each of the $W_\alpha$.\footnote{Let $\mathfrak{L}$ be the set of all closed subspaces of $H$. Set inclusion $\subseteq$ is a partial order on $\mathfrak{L}$. $\mathfrak{L}$ is 
+a {\em lattice}: if $M,N \in \mathfrak{L}$, then $M \cap N$ is the greatest element in $\mathfrak{L}$ that is contained both in $M$ and in $N$, and
+$M \vee N$ is the least element in $\mathfrak{L}$ that contains each of $M$ and $N$. $\mathfrak{L}$ is a {\em complete} lattice: if $M_\alpha \in \mathfrak{L}$,
+then $\bigcup_\alpha M_\alpha$ is the greatest element in $\mathfrak{L}$ that is contained in each $M_\alpha$, and 
+$\bigvee_\alpha M_\alpha$ is the least element in $\mathfrak{L}$ that contains each $M_\alpha$. (For comparison, the set of finite dimensional subspaces of an infinite
+dimensional Hilbert space is a lattice but is not a complete lattice.)}
+
+If $V$ is a subspace of $H$, define
+\[
+V^\perp=\{f \in H: \textrm{$\inner{f}{g}=0$ for all $g \in V$}\},
+\]
+called the {\em orthogonal complement} of $V$.
+If $V$ is a subspace of $H$ then $V^\perp$ is a closed subspace of $H$.
+
+
+
+Let $V$ be a closed subspace of $H$ and let $f \in H$. It is a fact that there is a unique $g_0 \in V$ such that 
+\[
+\norm{f-g_0}=\inf_{g \in V} \norm{f-g},
+\]
+and that $f - g_0 \in V^\perp$. 
+Then, $f=g_0+(f-g_0) \in V+V^\perp$. Therefore, if
+$V$ is a closed subspace of $H$ then
+\begin{equation}
+\label{Hdecomp}
+H=V + V^\perp.
+\end{equation}
+
+If $V$ and $W$ are subspaces of $H$, we write $V \perp W$ if $\inner{v}{w}=0$ for all $v \in V, w \in W$. If $V,W$ are closed subspaces of $H$ and
+$V \perp W$, we
+can show that $V+W=V \vee W$, and thus $V+W$ is in particular a closed subspace of $H$.\footnote{If $z_n \in V+W$ and $z_n \to z \in H$, write $z_n=v_n+w_n$,
+$v_n \in V$ and $w_n \in W$. Using $V \perp W$ we get $\norm{z_n-z_m}^2=\norm{v_n-v_m}^2+\norm{w_n-w_m}^2$, which we use to
+prove the claim. On the other hand, there are examples of closed subspaces $V,W$ of a Hilbert space that do not satisfy $V \perp W$ for
+which $V+W$ is not itself closed.}   By induction, we obtain $V_1 + \cdots+V_n = \bigvee_{k=1}^n V_k$. 
+If $V_k$, $k \geq 1$, are mutually orthogonal closed subspaces of $H$, we define
+\[
+\bigoplus_{k=1}^\infty V_k= \bigvee_{k=1}^\infty V_k,
+\]
+called the  {\em orthogonal direct sum} of the subspaces $V_k$. The orthogonal direct sum $\bigoplus_{k=1}^\infty V_k$ is equal
+to the closure of the set of all  finite sums of the form $\sum  v_k$, where $v_k \in V_k$.\footnote{See
+Paul
+Halmos, {\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity}, p.~26, \S 13, Theorem 2.}
+
+If $V$ is a closed subspace of $H$, then \eqref{Hdecomp} is
+\[
+H=V \oplus V^\perp.
+\]
+
+The subobjects of a Hilbert space that we care about are mostly closed subspaces, because they are themselves Hilbert spaces (a closed subset
+of a complete metric space is itself a complete metric space). Generally, when talking about one type of object, we care mostly about those
+subsets of it that are the same type of object, which is why, for example, that we are so glad to know when closed subspaces are mutually orthogonal, because
+then  their sum is itself a closed subspace.\footnote{Paul
+Halmos in his {\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity} uses the term linear manifold to
+refer to what I call a  subspace and subspace to refer to what I call a closed subspace. I think even better terms
+would be {\em linear subspace} and {\em Hilbert subspace}, respectively; this would emphasize the category of objects with  which one is working.}
+
+\section{Projections}
+Let $V$ be a closed subspace of $H$.
+The {\em  projection} onto $V$ is the map $P_V:H \to H$ defined in the following way: if $f \in H=V \oplus V^\perp$, let $f=g+h, g \in V, h \in V^\perp$, and set $P_V(f)=g$. The image of $P_V$ is $V$:
+if $f \in \im P_V$ then there is some $f_0 \in H$ such that $P_V f_0 =f$ and $f_0=g+h$, $g \in V, h \in V^\perp$, so by
+the definition of $P_V$ we get $P_V f_0=g$, giving $f=g \in V$; on the other hand, if $f \in V$ then $P_V f = f$, so $f \in \im P$.
+
+The image of a projection is closed.\footnote{We call $P:H \to H$ a projection if there is some closed subspace $V$ of $H$ such that $P$ is the projection onto $V$, and this $V$ will be the image of $P$. We often talk about a projection in $H$ without specifying what it is a projection onto.}
+Hence if $P$ is a projection, we have
+\[
+H=\im P_V \oplus (\im P_V)^\perp = \im P_V \oplus \ker P_V.
+\]
+
+
+If $P_V$ is a projection onto a closed subspace $V$ of $H$,
+we check that
+$P_V \in B(H)$. If $g \in V, h \in V^\perp$, then, because $\inner{g}{h}=0$,
+\[
+\norm{P_V(g+h)}^2=\norm{g}^2 \leq \norm{g}^2+\norm{h}^2 =\inner{g}{g}+\inner{h}{h}=\inner{g+h}{g+h}=\norm{g+h}^2,
+\] 
+so $\norm{P_V} \leq 1$. If $V \neq \{0\}$, let $g \in V$, $g \neq 0$. Then
+\[
+\norm{\frac{g}{\norm{g}}}=1, \qquad \norm{P_V \left( \frac{g}{\norm{g}} \right)}=\norm{\frac{g}{\norm{g}}}=1.
+\]
+Hence if $P_V$ is a projection and $P_V \neq 0$, then $\norm{P_V}=1$. Of course, if $P_V=0$ then $\norm{P_V}=0$. 
+Using $H=V \oplus V^\perp$, we check that
+if  $f_1,f_2 \in H$ then
+\[
+\inner{P_V f_1}{f_2}=\inner{f_1}{P_V f_2},
+\]
+hence  $P_V$ is self-adjoint.
+
+
+We call $P \in B(H)$  {\em idempotent} if $P^2=P$.\footnote{Often the term projection is used to refer to a thing we would call an idempotent, and the term orthogonal projection is used to refer to a thing   we would call a projection.} The following conditions are each equivalent to a nonzero idempotent $P$ being a  projection:
+\begin{itemize}
+\item $P$ is positive
+\item $P$ is self-adjoint
+\item $P$ is normal
+\item $\ker P=(\im P)^\perp$
+\item $\norm{P}=1$
+\end{itemize}
+
+
+
+
+
+\section{The lattice of projections}
+Two important projections: $\id_H$ is the projection onto $H$, and $0$ is the projection onto $\{0\}$. 
+
+
+If $T \in B(H)$ is self-adjoint, we say that $T$ is  {\em positive}  if, for all $v \in H$,
+\[
+\inner{Tv}{v} \geq 0.
+\]
+If $S,T \in B(H)$ are self-adjoint, we say that $S \geq T$ if, for all $v \in H$,
+\[
+\inner{Sv}{v} \geq \inner{Tv}{v}.
+\]
+This is equivalent to $S-T$ being a positive operator. Thus, $T \in B(H)$ is a positive operator if and only if $T \geq 0$. 
+One checks that $\leq$ is a partial order on the set of bounded self-adjoint operators on $H$. 
+
+
+Let $P \in B(H)$ be a projection. As $H = \im P \oplus (\im P)^\perp=\im P \oplus \ker P$, if $v \in H$ then $v=v_1+v_2$, $v_1 \in \im P, v_2 \in (\im P)^\perp$,
+\[
+\inner{Pv}{v}=\inner{v_1}{v_1+v_2}=\inner{v_1}{v_1}+\inner{v_1}{v_2}=\inner{v_1}{v_1} \geq 0.
+\]
+Hence $P \geq 0$.
+
+Let $P,Q \in B(H)$ be projections. It is a fact that the following statements are equivalent:
+\begin{itemize}
+\item $P \leq Q$
+\item $\im P \subseteq \im Q$
+\item $QP=P$
+\item $PQ=P$
+\item $\norm{Pv} \leq \norm{Qv}$ for all $v \in H$
+\end{itemize}
+
+The set of projections is a complete lattice.\footnote{If $P,Q \in B(H)$ are projections, then the infimum of $P$ and $Q$ is the projection onto
+$\im P \cap \im Q$, and the supremum of $P$ and $Q$ is the projection onto $\im P \vee \im Q$.
+See Problem 96 of  Paul Halmos's {\em Hilbert Space Problem Book}.}
+
+
+
+\section{Sums of projections}
+\label{sums}
+If $P,Q \in B(H)$ are projections, we write $P \perp Q$ if $\im P \perp \im Q$, which is equivalent to $PQ=0$ and $QP=0$; neither one of those by itself is sufficient. It is a
+fact\footnote{See Steven Roman,
+{\em Advanced Linear Algebra}, third ed., p.~78} that $P+Q$ is a projection if and only if
+$P \perp Q$, in which case $P+Q$ is a projection onto $\im P \oplus \im Q$. The product $PQ$ is a projection if and only if
+$PQ=QP$, in which case it is a projection onto $\im P \cap \im Q$. 
+
+
+Paul Halmos shows the following in Question 94 of his {\em Hilbert Space Problem Book}: If $T_n \in B(H)$ are self-adjoint such that
+$T_n \leq T_{n+1}$ for all $n$ and if there is some self-adjoint
+$T' \in B(H)$ such that
+$T_n \leq T'$ for all $n$, then 
+there is some self-adjoint $T \in B(H)$ such that $T_n \to T$ in the {\em strong operator topology}.\footnote{Recall that if $T_n \in B(H)$ and $T \in B(H)$, we say that $T_n \to T$ in the strong
+operator topology if for all $v \in H$ we have $T_n v \to Tv$. (If $T_n \to T$ in $B(H)$ then $T_n \to T$ in the strong operator topology.)} This is analogous to how a nondecreasing
+sequence of real numbers that has an upper bound converges to a real number.
+
+Let $M_n$, $n \geq 1$, be closed subspaces of $H$ such that $M_n \subseteq M_{n+1}$ and let $P_n$ be the projection onto $M_n$. As $M_n \subseteq M_{n+1}$ we have $P_n \leq P_{n+1}$ for all $n$. Also,
+$P_n \leq \id_H$ for all $n$, as $\id_H$ is the projection onto $H$ and $M_n \subseteq H$. Hence by the result from Halmos stated above, there is some self-adjoint $P \in B(H)$ such that
+$P_n \to P$ in the strong operator topology. Let
+\[
+M=\bigvee_{n=1}^\infty M_n.
+\]
+I claim that $P$ is the projection onto $M$.\footnote{cf. Paul Halmos, {\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity},
+p.~46, \S 28, Theorem 1.}
+
+If $P_n \in B(H)$, $n \geq 1$, are projections and $P_i \perp P_j$ for $i \neq j$, 
+let 
+\[
+M_n = \bigoplus_{k=1}^n \im P_k.
+\]
+Define $T_n v=\sum_{k=1}^n P_k v$. As $M_n$ is a closed subspace of $H$, we have
+\[
+H=M_n \oplus M_n^\perp=\im P_1 \oplus \cdots P_n \oplus M_n^\perp.
+\]
+If $v =v_1+\cdots+v_n+v'$, $v_1 \in \im P_1,\ldots, v_n \in \im P_n, v' \in M_n^\perp$, then
+\[
+T_n v=\sum_{k=1}^n  \left(P_k (v_1+\cdots+v_n+v')\right)=\sum_{k=1}^n v_k.
+\]
+Thus $T_n$ is the projection onto $M_n$. Therefore, there is some self-adjoint $P \in B(H)$ such that
+$T_n \to P$ in the strong operator topology, and with
+\[
+M=\bigvee_{n=1}^\infty \bigvee_{k=1}^n \im P_k = \bigvee_{n=1}^\infty \im P_k = \bigoplus_{n=1}^\infty \im P_n,
+\]
+$P$ is the projection onto $M$.
+ $\sum_{k=1}^n P_k \to P$ in the strong operator topology, and we denote $P$
+by $\sum_{k=1}^\infty P_k$.
+
+
+\section{Definition  of projection-valued measures}
+Let $\mathscr{P}(H)$ be the set of projections in $B(H)$. Let $\mathscr{B}(\mathbb{C})$ be the Borel $\sigma$-algebra of $\mathbb{C}$. A {\em projection-valued measure} on
+$\mathbb{C}$ is a map $E:\mathscr{B}(\mathbb{C}) \to \mathscr{P}(H)$ 
+such that
+\begin{itemize}
+\item $E(\emptyset)=0$ and $E(\mathbb{C})=\id_H$
+\item If $B_n \in \mathscr{B}(\mathbb{C})$, $n \geq 1$, are pairwise disjoint, then
+\[
+E\Big(\bigcup_{n \geq 1} B_n\Big)=\sum_{n \geq 1} E(B_n),
+\]
+where $\sum_{n \geq 1} E(B_n)$ is the limit of $\sum_{1 \leq n \leq N} E(B_n)$ in the strong operator topology.
+\end{itemize}
+
+\section{Finite additivity}
+\label{properties}
+If $E:\mathscr{B}(\mathbb{C}) \to \mathscr{P}(H)$ is any function that satisfies
+$E(B_1 \cup B_2)=E(B_1)+E(B_2)$ for disjoint $B_1, B_2 \in \mathscr{B}(\mathbb{C})$, then it satisfies the following
+four properties. In particular, if $E$ is a projection-valued measure it satisfies them.
+
+\begin{enumerate}
+\item $E(\emptyset)=E(\emptyset \cup \emptyset)=E(\emptyset)+E(\emptyset)$, so $E(\emptyset)=0$.
+
+\item  If $B_1,B_2 \in \mathscr{B}(\mathbb{C})$ and $B_1 \subseteq B_2$, then
+\[
+E(B_2)=E(B_2 \setminus B_1 \cup B_1)=E(B_2 \setminus B_1)+E(B_1) \geq E(B_1),
+\]
+since $E(B_2 \setminus B_1)$ is a projection and hence is a positive operator. Therefore, if $B_1 \subseteq B_2$ then
+$E(B_1) \leq E(B_2)$. 
+
+\item Let $B_1, B_2 \in \mathscr{B}(\mathbb{C})$. We have
+\[
+E(B_1)=E(B_1 \cap B_2)+E(B_1 \setminus B_2),
+\]
+and
+\[
+E(B_2)=E(B_1 \cap B_2)+E(B_2 \setminus B_1),
+\]
+and
+\[
+E(B_1 \cup B_2)=E(B_1 \cap B_2) + E(B_1 \setminus B_2) + E(B_2 \setminus B_1), 
+\]
+and combining these gives, for any $B_1, B_2 \in \mathscr{B}(\mathbb{C})$,
+\begin{eqnarray*}
+E(B_1)+E(B_2)&=&E(B_1 \cap B_2)+E(B_1 \cap B_2)+E(B_1 \setminus B_2)+E(B_2 \setminus B_1)\\
+&=&E(B_1 \cap B_2)+E(B_1 \cup B_2).
+\end{eqnarray*}
+
+\item Let $B_1,B_2 \in \mathscr{B}(\mathbb{C})$. Multiplying both sides of the above equation on the left by $E(B_2)$ gives
+\[
+E(B_1)E(B_2)+E(B_2)E(B_2)=E(B_1 \cap B_2)E(B_2)+E(B_1 \cup B_2) E(B_2).
+\]
+As $E(B_1 \cup B_2)$ and $E(B_2)$ are projections and $E(B_1 \cup B_2) \geq E(B_2)$, we have
+\[
+E(B_1 \cup B_2) E(B_2)=E(B_2),
+\]
+which with $E(B_2)E(B_2)=E(B_2)$ gives
+\[
+E(B_1)E(B_2)+E(B_2)=E(B_1 \cap B_2)+E(B_2).
+\]
+Hence, for any $B_1, B_2 \in \mathscr{B}(\mathbb{C})$,
+\[
+E(B_1)E(B_2)=E(B_1 \cap B_2).
+\]
+\end{enumerate}
+
+
+\section{Complex measures}
+Suppose that $E:\mathscr{B}(\mathbb{C}) \to \mathscr{P}(H)$ is a function such that
+$E(\mathbb{C})=\id_H$, and that for all $v, w\in H$, the function
+$E_{v,w}:\mathscr{B}(\mathbb{C}) \to \mathbb{C}$ defined by
+\[
+E_{v,w}(B)=\inner{E(B)v}{w}
+\]
+is a complex measure. I will show  that $E$ is a projection-valued measure. Let $B_n \in \mathscr{B}(\mathbb{C})$, $n \geq 1$, be pairwise disjoint.\footnote{cf. 
+Paul Halmos, {\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity}, p.~59, \S 36, Theorem 3.}
+If $B_1,B_2 \in \mathscr{B}(\mathbb{C})$ are disjoint, then for all $v,w \in H$,
+\begin{eqnarray*}
+\inner{E(B_1 \cup B_2)v}{w}&=&E_{v,w}(B_1 \cup B_2)\\
+&=&E_{v,w}(B_1)+E_{v,w}(B_2)\\
+&=&\inner{E(B_1)v}{w}+\inner{E(B_2)v}{w}\\
+&=&\inner{(E(B_1)+E(B_2))v}{w},
+\end{eqnarray*}
+and since this holds for all $v, w \in H$, we obtain $E(B_1 \cup B_2)=E(B_1)+E(B_2)$. Therefore, from \S \ref{properties},
+if $B_1,B_2 \in \mathscr{B}(\mathbb{C})$ are disjoint then
+\[
+E(B_1)E(B_2)=E(B_1 \cap B_2)=E(\emptyset)=0.
+\]
+
+If $v \in H$ and  $v_n=E(B_n)v$, then, for $m \neq n$,
+\[
+\inner{v_n}{v_m}=\inner{E(B_n)v}{E(B_m)v}=\inner{E(B_m)E(B_n)v}{v}=\inner{0v}{0}=0.
+\]
+For $a_n \in \mathbb{C}$, for the sequence $\sum_{n=1}^N a_n v_n$ to converge
+in $H$ it is equivalent to $\sum_{n=1}^\infty \norm{a_n v_n}^2 < \infty$;\footnote{e.g. Walter Rudin's
+{\em Functional Analysis}, p.~295, Theorem 12.6: if $x_n \in H$ are pairwise orthogonal, not necessarily of unit norm,
+then for $\sum_{n=1}^\infty x_n$ to converge is equivalent to $\sum_{n=1}^\infty \norm{x_n}^2<\infty$.} but
+$\norm{v_n} \leq \norm{v}$, so it suffices to show that $\sum_{n=1}^\infty |a_n|^2<\infty$.
+Using that if $T$ is a projection then $T$ is self-adjoint and $T^2=T$, and that $E_{v,v}$ is a complex measure,
+\begin{eqnarray*}
+\sum_{n=1}^\infty \norm{E(B_n)v}^2&=&\sum_{n=1}^N \inner{E(B_n)v}{E(B_n)v}\\
+&=&\sum_{n=1}^\infty \inner{E(B_n)E(B_n)v}{v}\\
+&=&\sum_{n=1}^\infty \inner{E(B_n)v}{v}\\
+&=&\sum_{n=1}^\infty E_{v,v}(B_n)\\
+&=&E_{v,v}\left(\bigcup_{n=1}^\infty B_n \right)\\
+&=&\inner{E\left(\bigcup_{n=1}^\infty B_n\right)v}{v}\\
+&=&\norm{E\left(\bigcup_{n=1}^\infty B_n\right)v}^2\\
+&\leq&\norm{v}.
+\end{eqnarray*}
+Therefore,  the sequence $\sum_{n=1}^N E(B_n)v$ converges in $H$; namely, $\sum_{n=1}^N E(B_n)$ converges
+in the strong operator topology. Let $P$ be its limit. 
+By \S \ref{sums}, $P$ is the projection onto $\bigoplus_{n=1}^\infty \im E(B_n)$.
+
+
+For $v, w \in H$,
+\begin{eqnarray*}
+\inner{E\left(\bigcup_{n=1}^\infty B_n \right)v}{w}&=&E_{v,w}\left(\bigcup_{n=1}^\infty B_n \right)\\
+&=&\sum_{n=1}^\infty E_{v,w}(B_n)\\
+&=&\sum_{n=1}^\infty \inner{E(B_n)v}{w}\\
+&=&\inner{Pv}{w},
+\end{eqnarray*}
+and since this is true for all $v,w \in H$, we obtain
+\[
+E\left(\bigcup_{n=1}^\infty B_n \right) = P,
+\]
+where $P$ is the limit of $\sum_{n=1}^N E(B_n)$ in the strong operator topology. This completes the proof that $E$ is a 
+projection-valued measure.
+
+On the other hand, if $E:\mathscr{B}(\mathbb{C}) \to \mathscr{P}(H)$ is a projection-valued measure, we can show that
+for each $v,w \in H$ the function $E_{v,w}:\mathscr{B}(\mathbb{C}) \to \mathbb{C}$ defined by
+$E_{v,w}(B)=\inner{E(B)v}{w}$ is a complex measure.
+
+
+
+
+
+
+
+\section{Spectral integrals}
+Let $\mathfrak{B}(\mathbb{C})$ be the set of bounded measurable functions $\mathbb{C} \to \mathbb{C}$.\footnote{This is not
+$L^\infty(\mathbb{C})$, the set of equivalence classes of essentially bounded measurable functions, where two functions
+are equivalent if they are equal almost everywhere. Moreover, it is not even the set $\mathscr{L}^\infty(\mathbb{C})$ of
+essentially bounded measurable functions.
+
+When does one speak about $\mathscr{L}^\infty(\mathbb{C})$? $\mathscr{L}^\infty(\mathbb{C})$ is a vector space; let $\mathscr{N}(\mathbb{C})$
+be the set of those functions that are equal to $0$ almost everywhere in $\mathbb{C}$; $\mathscr{N}(\mathbb{C})$ is a vector space; then $L^\infty(\mathbb{C})$ is the vector space quotient
+$\mathscr{L}^\infty(\mathbb{C})/\mathscr{N}(\mathbb{C})$.} It is a complex vector space, and we define the norm
+$\norm{f}=\sup_{z \in \mathbb{C}} |f(z)|$; one checks that $\mathfrak{B}(\mathbb{C})$ is a Banach space.
+Paul Halmos, {\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity},
+p.~60, \S 37, proves\footnote{The operator $A$ is the operator obtained from the following statement, which
+  itself follows
+from the Riesz representation theorem.
+If $\phi:H \times H \to \mathbb{C}$ is sesquilinear (we take sesquilinear to mean linear in the first entry and conjugate
+linear in the second entry) and 
+\[
+M=\sup_{\norm{v}=\norm{w}=1} |\phi(v,w)|<\infty,
+\]
+then there exists a unique $A \in B(H)$ such that
+\[
+\phi(v,w)=\inner{Av}{w}, \qquad v, w \in H,
+\]
+and $\norm{A}=M$.
+
+One also has to prove that for each $f \in \mathfrak{B}$, $\phi(v,w)=E_{v,w}(f)$ is sesquilinear.} that if $E:\mathscr{B}(\mathbb{C}) \to \mathscr{P}(H)$ is a projection-valued measure
+and $f \in \mathfrak{B}$, then there is a unique $A \in B(H)$ such that, for all $v, w \in H$,
+\[
+\inner{Av}{w}=E_{v,w}(f)=\int f dE_{v,w}=\int_\mathbb{C} f(\lambda) dE_{v,w}(\lambda),
+\]
+and $\norm{A} \leq 2\norm{f}$. 
+We write
+\[
+A=E(f)=\int f dE=\int_\mathbb{C} f(\lambda) dE(\lambda).
+\]
+
+We can  check that $\mathfrak{B}(\mathbb{C})$ is a $C^*$-algebra, with $f^*$ defined by $f^*(z)= \overline{f(z)}$. It is a fact that $B(H)$ is a $C^*$-algebra. If $\alpha \in \mathbb{C}$ and $f,g \in 
+\mathfrak{B}(\mathbb{C})$,  then\footnote{See Paul Halmos, {\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity},
+p.~60, \S 37, Theorem 2.}
+\begin{equation}
+E(\alpha f)=\alpha E(f), \qquad E(f+g)=E(f)+E(g); \qquad E(f^*)=(E(f))^*.
+\label{Efunctions}
+\end{equation}
+The first two of these together with $\norm{E(f)} \leq 2\norm{f}$ show that $E:\mathfrak{B}(\mathbb{C}) \to B(H)$ is a bounded linear map.
+If $f, g \in \mathfrak{B}(\mathbb{C})$, then\footnote{From Paul Halmos, {\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity},
+p.~61, \S 37, Theorem 3. To understand the proof by Halmos (which is symbolically convincing because of our familiarity with the permissible  moves
+one can make when
+integrating functions using complex measures), keep in mind that if $B_1,B_2 \in \mathscr{B}(\mathbb{C})$ then
+\[
+E_{E(B_1)v,w}(B_2)=\inner{E(B_2)E(B_1)v}{w}=\inner{E(B_1 \cap B_2)v}{w}=E_{v,w}(B_1 \cap B_2).
+\]
+}
+\[
+E(f)E(g)=E(fg).
+\]
+This and the third statement in \eqref{Efunctions}
+show that $E:\mathfrak{B}(\mathbb{C}) \to B(H)$ is a homomorphism of $C^*$-algebras:
+
+From the fact that $E:\mathfrak{B}(\mathbb{C}) \to B(H)$ is a homomorphism of $C^*$-algebras, it follows in particular that 
+$E(f)$ is a normal operator for each $f \in \mathfrak{B}(\mathbb{C})$. 
+
+\section{The spectrum of a projection-valued measure}
+If $E:\mathscr{B}(\mathbb{C}) \to \mathscr{P}(H)$ is a projection-valued measure,
+let $U_\alpha, \alpha \in I$, be those open sets $U_\alpha \subseteq \mathbb{C}$ such that $E(U_\alpha)=0$. The
+ {\em spectrum}
+of $E$ is
+\[
+\sigma(E) = \mathbb{C} \setminus \bigcup_{\alpha \in I} U_\alpha;
+\]
+this may also be called the support of $E$, and is analogous to the support of a nonnegative measure. 
+Since $\sigma(E)$ is the complement of a union of open sets, it is closed. 
+
+For each $n \geq 1$, let $D_n=\{|z| \leq n\}$. $D_n$ is compact, so there are $\alpha_{n,1},\ldots,\alpha_{n,N}$ such that 
+\[
+D_n \subseteq \bigcup_{k=1}^N U_{\alpha_{n,k}}.
+\]
+But, using \S \ref{properties} and the fact that $E(U_{\alpha_{n,k}})=0$ for $1 \leq k \leq N$,
+\begin{eqnarray*}
+E\left( \bigcup_{k=1}^N U_{\alpha_{n,k}} \right) &=& E(U_{\alpha_{n,1}})+E\left(\bigcup_{k=2}^N U_{\alpha_{n,k}}\right)
+-E\left(U_{\alpha_{n,1}} \cap \bigcup_{k=2}^N U_{\alpha_{n,k}} \right)\\
+&=&E\left(\bigcup_{k=2}^N U_{\alpha_{n,k}}\right)-E(U_{\alpha_{n,1}} ) E\left(\bigcup_{k=2}^N U_{\alpha_{n,k}} \right)\\
+&=&E\left(\bigcup_{k=2}^N U_{\alpha_{n,k}}\right)\\
+&=&\cdots\\
+&=&0,
+\end{eqnarray*}
+therefore $E(D_n)=0$ (it will be $\leq 0$, and as a projection is a positive operator it must equal $0$). Let $B_n=D_{n+1} \setminus D_n$;
+as $B_n$ is a subset of $D_{n+1}$ we get $E(B_n) = 0$. We have $\bigcup_{n=1}^\infty B_n = \mathbb{C}$, and as the $B_n$ are pairwise
+disjoint we get
+\[
+E(\mathbb{C})=E\left(\bigcup_{n=1}^\infty B_n\right)=\sum_{n=1}^\infty E(B_n)=0,
+\]
+contradicting that $E(\mathbb{C})=\id_H$. Therefore, if $E$ is a projection-valued measure then its spectrum is not empty.
+
+Here are some facts about projection-valued measures.
+$E(\mathbb{C} \setminus \sigma(E))=0$.\footnote{Paul Halmos,
+{\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity},
+p.~62, \S 38, Theorem 1. His statement is about regular measures, but  a projection-valued measure on the Borel
+$\sigma$-algebra of $\mathbb{C}$ is regular, as he shows on the page after that.} 
+
+Let $\mathfrak{B}_E(\mathbb{C})$ be the set of
+bounded measurable functions $\sigma(E) \to \mathbb{C}$, and let $\norm{f}_E = \sup_{z \in \sigma(E)} |f(z)|$. 
+If $E$ is a projection-valued measure with compact spectrum and 
+$f:\mathbb{C} \to \mathbb{C}$ is continuous, then\footnote{Paul Halmos,
+{\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity}, p.~62, \S 38, Theorem 2.}
+\[
+\norm{E(\chi_{\sigma(E)} f)}=\norm{f}_E.
+\]
+(We  often talk about projection-valued measures whose spectrum is compact;
+since their spectrum is closed, to demand that the spectrum of a projection-valued measure is compact is to demand that it is bounded.)
+
+If $E$ is a projection-valued measure with compact spectrum and if $A=E(\chi_{\sigma(E)} \lambda)$, then\footnote{Paul Halmos,
+{\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity}, p.~64, \S 39, Theorem 2. The proof uses the fact that $T \in B(H)$ is invertible if and only if
+there is some $\alpha>0$ such that $\norm{Tv} \geq \alpha \norm{v}$ for all $v \in H$.}
+\[
+\sigma(A)=\sigma(E).
+\]
+
+\section{Statement of the spectral theorem}
+The spectral theorem, proved by in Paul Halmos, {\em Introduction to Hilbert Space and the Theory of Spectral Multiplicity}, p.~69, \S 43, Theorem 1,
+states the following:
+
+If $A \in B(H)$ is self-adjoint, then there exists a unique projection-valued measure $E:\mathscr{B}(\mathbb{C}) \to \mathscr{P}(H)$, with $\sigma(E)$ compact and $\sigma(E) \subset \mathbb{R}$, such that
+\[
+A=E(\chi_{\sigma(E)} \lambda)=\int_{\sigma(E)} \lambda dE(\lambda).
+\]
+Since $\sigma(E) \subset \mathbb{R}$, we can write $E:\mathscr{B}(\mathbb{R}) \to \mathscr{P}(H)$. 
+
+\end{document}

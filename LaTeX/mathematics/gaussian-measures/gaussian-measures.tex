@@ -1,0 +1,1124 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Gaussian measures, Hermite polynomials, and the Ornstein-Uhlenbeck semigroup}
+\author{Jordan Bell}
+\date{June 27, 2015}
+
+\maketitle
+
+\section{Definitions}
+For a topological space $X$, we denote by $\mathscr{B}_X$ the Borel $\sigma$-algebra of $X$.
+
+We write $\overline{\mathbb{R}}  = \mathbb{R} \cup\{-\infty,\infty\}$. With the order topology, $\overline{\mathbb{R}}$ is a compact metrizable
+space, and $\mathbb{R}$ has the subspace topology inherited from $\overline{\mathbb{R}}$, namely the inclusion map
+is an embedding $\mathbb{R} \to \overline{\mathbb{R}}$. It follows that\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~138, Lemma 4.20.}
+\[
+\mathscr{B}_{\mathbb{R}} = \{E \cap \mathbb{R}: E \in \mathscr{B}_{\overline{\mathbb{R}}}\}.
+\]
+
+If $\mathscr{F}$ is a collection of functions $X \to \overline{\mathbb{R}}$ on a  set $X$, we define $\bigvee \mathscr{F}:X \to \overline{\mathbb{R}}$
+and $\bigwedge \mathscr{F}:X \to \overline{\mathbb{R}}$ by
+\[
+\left(\bigvee \mathscr{F} \right)(x) = \sup\{f(x): f \in \mathscr{F}\}, \qquad x \in X
+\]
+and
+\[
+\left(\bigwedge \mathscr{F} \right)(x) = \inf\{f(x): f \in \mathscr{F}\}, \qquad x \in X.
+\]
+If $X$ is a measurable space and $\mathscr{F}$ is a countable collection of measurable functions $X \to \overline{\mathbb{R}}$,
+it is a fact that $\bigwedge \mathscr{F}$ and $\bigvee \mathscr{F}$ are measurable $X \to \overline{\mathbb{R}}$. 
+
+
+
+
+\section{Kolmogorov's inequality}
+\textbf{Kolmogorov's inequality} is the following.\footnote{Gerald B. Folland, {\em Real Analysis: Modern Techniques and Their
+Applications}, second ed., p.~322, Theorem 10.11.}
+
+\begin{theorem}[Kolmogorov's inequality]
+Suppose that $(\Omega,\mathscr{S},P)$ is a probability space, that
+$X_1,\ldots,X_n \in L^2(P)$, that $E(X_1)=0,\ldots,E(X_n)=0$, and that
+$X_1,\ldots,X_n$ are independent. Let
+\[
+S_k(\omega) = \sum_{j=1}^k X_j(\omega), \qquad \omega \in \Omega,
+\]
+for $1 \leq k \leq n$. Then for any $\lambda>0$,
+\[
+P\left(\left\{\omega \in \Omega: \bigvee_{k=1}^n |S_k(\omega)| \geq \lambda \right\}\right) \leq \frac{1}{\lambda^2} \sum_{j=1}^n V(X_j)
+=\frac{1}{\lambda^2} V(S_n).
+\]
+\end{theorem}
+
+\section{Gaussian measures on \textbf{R}}
+For real $a$ and $\sigma>0$, one computes that
+\begin{equation}
+\frac{1}{\sigma \sqrt{2\pi}} \int_{\mathbb{R}} \exp\left( - \frac{(t-a)^2}{2\sigma^2} \right) dt = 1.
+\label{identity}
+\end{equation}
+
+Suppose that $\gamma$ is a Borel probability measure on $\mathbb{R}$. If 
+\[
+\gamma=\delta_a
+\]
+ for some
+$a \in \mathbb{R}$ or has density
+\[
+p(t,a,\sigma^2) = \frac{1}{\sigma\sqrt{2\pi}}  \exp\left( - \frac{(t-a)^2}{2\sigma^2} \right),
+\qquad t \in \mathbb{R},
+\]
+for some $a \in \mathbb{R}$ and some $\sigma>0$,
+with respect to Lebesgue measure on $\mathbb{R}$, we say that $\gamma$ is a \textbf{Gaussian measure}.
+We say that $\delta_a$ is a Gaussian measure with \textbf{mean $a$} and \textbf{variance $0$}, and
+that a Gaussian measure with density $p(\cdot,a,\sigma^2)$ has \textbf{mean $a$} and \textbf{variance $\sigma^2$}.
+A Gaussian measure with mean $0$ and variance $1$ is said to be \textbf{standard}.
+
+One calculates that the \textbf{characteristic function} of a Gaussian measure $\gamma$ with density $p(\cdot,a,\sigma^2)$
+is
+\begin{equation}
+\widetilde{\gamma}(y) = \int_{\mathbb{R}} \exp(i yx) d\gamma(x)
+=\exp\left( iay - \frac{1}{2}\sigma^2 y^2 \right), \qquad y \in \mathbb{R}.
+\label{characteristic}
+\end{equation}
+
+The \textbf{cumulative distribution function} of a standard Gaussian measure  $\gamma$ is, for
+$t \in \mathbb{R}$,
+\[
+\Phi(t) = \gamma(-\infty,t] =\int_{-\infty}^t d\gamma(s) = 
+\int_{-\infty}^t p(s,0,1) ds
+=\int_{-\infty}^t \frac{1}{\sqrt{2\pi}} \exp\left(- \frac{s^2}{2} \right) ds.
+\]
+We define $\Phi(-\infty)=0$ and also define 
+\[
+\Phi(\infty) = \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}} \exp\left(- \frac{s^2}{2} \right) ds = 1,
+\]
+using \eqref{identity}.
+
+$\Phi:\overline{\mathbb{R}} \to [0,1]$ is strictly increasing, thus 
+$\Phi^{-1}:[0,1] \to \overline{\mathbb{R}}$ makes sense, and is itself strictly increasing. Then 
+$1-\Phi$ is strictly decreasing.
+By \eqref{identity},
+\begin{align*}
+1-\Phi(t) &=  \int_{-\infty}^\infty \frac{1}{\sqrt{2\pi}} \exp\left( - \frac{s^2}{2} \right) ds
+-\int_{-\infty}^t \frac{1}{\sqrt{2\pi}} \exp\left(- \frac{s^2}{2} \right) ds\\
+&=\int_t^\infty \frac{1}{\sqrt{2\pi}} \exp\left(- \frac{s^2}{2} \right) ds.
+\end{align*}
+The following lemma gives an estimate for
+$1-\Phi(t)$ that tells us something substantial as $t \to +\infty$, beyond the immediate fact that $(1-\Phi)(\infty)=1-\Phi(\infty)=0$.\footnote{Vladimir I. Bogachev,
+{\em Gaussian Measures}, p.~2, Lemma 1.1.3.}
+
+\begin{lemma}
+For $t>0$,
+\[
+\frac{1}{\sqrt{2\pi}} \left(\frac{1}{t}-\frac{1}{t^3}\right) e^{-t^2/2} \leq 1- \Phi(t) \leq \frac{1}{\sqrt{2\pi}} \frac{1}{t} e^{-t^2/2}.
+\]
+\end{lemma}
+\begin{proof}
+Integrating by parts,
+\begin{align*}
+1-\Phi(t) &= \int_t^\infty \frac{1}{\sqrt{2\pi}} \exp\left(- \frac{s^2}{2} \right) ds\\
+&=\int_t^\infty \frac{1}{s \sqrt{2\pi}} \cdot s\exp\left(- \frac{s^2}{2} \right) ds\\
+&=- \frac{1}{s\sqrt{2\pi}} \exp\left(- \frac{s^2}{2} \right) \bigg|_t^\infty
+-\int_t^\infty \frac{1}{s^2 \sqrt{2\pi}}  \exp\left(- \frac{s^2}{2} \right) ds\\
+&\leq \frac{1}{t\sqrt{2\pi}} \exp\left(-\frac{t^2}{2} \right).
+\end{align*}
+On the other hand, using the above work and again integrating by parts,
+\begin{align*}
+1-\Phi(t) &= \frac{1}{t\sqrt{2\pi}} \exp\left(-\frac{t^2}{2} \right)-\int_t^\infty \frac{1}{s^3 \sqrt{2\pi}} \cdot s  \exp\left(- \frac{s^2}{2} \right) ds\\
+&=\frac{1}{t\sqrt{2\pi}} \exp\left(-\frac{t^2}{2} \right) +
+\frac{1}{s^3 \sqrt{2\pi}} \exp\left(-\frac{s^2}{2} \right) \bigg|_t^\infty\\
+&+\int_t^\infty \frac{3}{s^4\sqrt{2\pi}} \exp\left(-\frac{s^2}{2} \right) ds\\
+&\geq \frac{1}{t\sqrt{2\pi}} \exp\left(-\frac{t^2}{2} \right) - \frac{1}{t^3 \sqrt{2\pi}} \exp\left(-\frac{t^2}{2} \right).
+\end{align*}
+\end{proof}
+
+The following theorem shows that if the variances of a sequence of independent centered random variables
+are summable then the sequence of random variables is summable almost surely.\footnote{Karl R. Stromberg, {\em Probability for Analysts}, p.~58, Theorem 4.6.} 
+
+\begin{theorem}
+Suppose that $\xi_j \in L^2(\Omega,\mathscr{S},P)$, $j \geq 1$, are independent random variables
+each with mean $0$. If $\sum_{j=1}^\infty V(\xi_j)<\infty$,
+then $\sum_{j=1}^\infty \xi_j$ converges almost surely.
+\end{theorem}
+\begin{proof}
+Define $S_n:\Omega \to \mathbb{R}$ by
+\[
+S_n(\omega)=\sum_{j=1}^n \xi_j(\omega),
+\]
+ define
+$Z_n:\Omega \to [0,\infty]$ by
+\[
+Z_n = \bigvee_{j=1}^\infty |S_{n+j}-S_n|,
+\]
+and define $Z:\Omega \to  [0,\infty]$ by
+\[
+Z = \bigwedge_{n=1}^\infty Z_n.
+\]
+If $S_n(\omega)$ converges and $\epsilon>0$,
+there is some $n$ such that for all $j \geq 1$,
+$|S_{n+j}(\omega)-S_n(\omega)|<\epsilon$ and so
+$Z_n(\omega) \leq \epsilon$ and 
+$Z(\omega) \leq \epsilon$. Therefore, if
+$S_n(\omega)$ converges then $Z(\omega)=0$. On the other hand,
+if $Z(\omega)=0$ and $\epsilon>0$, there
+is some $n$ such that
+$Z_n(\omega)<\epsilon$, hence 
+$|S_{n+j}(\omega)-S_n(\omega)| < \epsilon$ for all $j \geq 1$.
+That is, $S_n(\omega)$ is a Cauchy sequence in $\mathbb{R}$,
+and hence converges. Therefore
+\begin{equation}
+\left\{\omega \in \Omega: \textrm{$S_n(\omega)$ converges}\right\}=
+\{\omega \in \Omega: Z(\omega)=0\}.
+\label{Z0}
+\end{equation}
+Let $\epsilon>0$. For any $n$ and $k$, using Kolmogorov's inequality with
+$X_j=\xi_{n+j}$ for $j=1,\ldots,k$,
+\[
+P\left( \bigvee_{j=1}^k |S_{n+j}-S_n| \geq \epsilon \right)
+\leq \frac{1}{\epsilon^2} \sum_{j=1}^k V(X_j)
+\leq \frac{1}{\epsilon^2} \sum_{j=n+1}^\infty V(\xi_j).
+\]
+Because this is true for each $k$, it follows that
+\[
+P(Z_n \geq \epsilon) \leq \frac{1}{\epsilon^2} \sum_{j=n+1}^\infty V(\xi_j),
+\]
+hence, for each $n$,
+\[
+P(Z \geq \epsilon) \leq P(Z_n \geq \epsilon) \leq \frac{1}{\epsilon^2} \sum_{j=n+1}^\infty V(\xi_j).
+\]
+Because $\sum_{j=1}^\infty V(\xi_j)<\infty$, $\sum_{j=n+1}^\infty V(\xi_j) \to 0$ as $n \to \infty$, so
+\[
+P(Z \geq \epsilon)=0.
+\]
+Because this is true for all $\epsilon>0$, we get $P(Z>0)=0$, i.e. $P(Z=0)=1$. By \eqref{Z0},
+this means that $S_n$ converges almost surely.
+\end{proof}
+
+
+The following theorem gives conditions under which the converse of the above theorem
+holds.\footnote{Karl R. Stromberg, {\em Probability for Analysts}, p.~59, Theorem 4.7.}
+
+\begin{theorem}
+Suppose that $\xi_j \in L^2(\Omega,\mathscr{S},P)$, $j \geq 1$, are independent  random variables
+each with mean $0$, and let
+$S_n=\sum_{j=1}^n \xi_j$.
+ If 
+ \begin{equation}
+P\left( \bigvee_{n=1}^\infty |S_n|<\infty \right)>0
+\label{converges}
+\end{equation}
+and
+ there is some $\beta \in [0,\infty)$ such that
+$\bigvee_{j=1}^\infty |\xi_j| \leq \beta$ almost surely, then 
+\[
+\sum_{j=1}^\infty V(\xi_j)<\infty.
+\]
+\end{theorem}
+\begin{proof}
+By \eqref{converges}, there is some $\alpha \in [0,\infty)$ such that $P(A)>0$, for
+\[
+A = \left\{ \omega \in \Omega: \bigvee_{n=1}^\infty |S_n(\omega)| \leq \alpha \right\}.
+\]
+For $p \geq 1$, let
+\[
+A_p = \left\{ \omega \in \Omega: \bigvee_{n=1}^p |S_n(\omega)| \leq \alpha \right\},
+\]
+which satisfies $A_p \downarrow A$ as $p \to \infty$. For each $p$, the random variables
+$\chi_{A_p} S_p$ and $\xi_{p+1}$ are independent and the random variables
+$\chi_{A_p}$ and $\xi_{p+1}^2$ are independent,
+whence
+\begin{align*}
+E(\chi_{A_p} S_{p+1}^2)&=E(\chi_{A_p} (S_p+\xi_{p+1})(S_p+\xi_{p+1}))\\
+&=E(\chi_{A_p} S_p^2+2\chi_{A_p} S_p \xi_{p+1} + \chi_{A_p} \xi_{p+1}^2)\\
+&=E(\chi_{A_p} S_p^2) + 2 E(\chi_{A_p} S_p) E(\xi_{p+1})+E(\chi_{A_p}) E(\xi_{p+1}^2)\\
+&=E(\chi_{A_p} S_p^2) + P(A_p) V(\xi_{p+1})\\
+&\geq E(\chi_{A_p} S_p^2) + P(A) V(\xi_{p+1}).
+\end{align*}
+Set $B_p = A_p \setminus A_{p+1}$. For $\omega \in A_p$, $|S_p(\omega)| \leq \alpha$, and for almost
+all $\omega \in \Omega$, $|\xi_{p+1}(\omega)| \leq \beta$, so for almost all $\omega 
+\in B_p$,
+\[
+|S_{p+1}(\omega)| \leq |S_p(\omega)| + |\xi_{p+1}(\omega) \leq \alpha+\beta,
+\]
+hence
+\begin{align*}
+P(A)V(\xi_{p+1})&\leq E((\chi_{B_p}+\chi_{A_{p+1}}) S_{p+1}^2) - E(\chi_{A_p} S_p^2)\\
+&=E(\chi_{B_p} S_{p+1}^2)+E(\chi_{A_{p+1}}S_{p+1}^2)- E(\chi_{A_p} S_p^2)\\
+&\leq P(B_p) (\alpha+\beta)^2 + E(\chi_{A_{p+1}}S_{p+1}^2)- E(\chi_{A_p} S_p^2).
+\end{align*}
+Adding the inequalities for $p=1,2,\ldots,n-1$, because $B_p$ are pairwise disjoint,
+\begin{align*}
+P(A) \sum_{p=1}^{n-1} V(\xi_{p+1})&= (\alpha+\beta)^2 \sum_{p=1}^{n-1} P(B_p) + E(\chi_{A_n} S_n^2) - 
+E(\chi_{A_1} S_1^2)\\
+&\leq (\alpha+\beta)^2 + E(\chi_{A_n} S_n^2)\\
+&\leq (\alpha+\beta)^2 + \alpha^2.
+\end{align*}
+Because this is true for all $n$ and $P(A)>0$,
+\[
+\sum_{p=1}^\infty V(\xi_{p+1}) < \infty,
+\]
+and with $V(\xi_1)<\infty$ this completes the proof.
+\end{proof}
+
+
+
+\section{\textbf{R}\textsuperscript{n}}
+If $\mu$ is a finite Borel measure on $\mathbb{R}^n$, we define the \textbf{characteristic function of
+$\mu$} by
+\[
+\widetilde{\mu}(y) = \int_{\mathbb{R}^n} e^{i\inner{y}{x}} d\mu(x), \qquad y \in \mathbb{R}^n.
+\]
+
+A Borel probability measure $\gamma$ on $\mathbb{R}^n$ is said to be \textbf{Gaussian} if
+for each $f \in (\mathbb{R}^n)^*$, the pushforward measure
+$f_* \gamma$ on $\mathbb{R}$ is a Gaussian measure on $\mathbb{R}$, where
+\[
+(f_* \gamma)(E)=\gamma(f^{-1}(E))
+\]
+ for $E$ a Borel set in
+$\mathbb{R}$.
+
+We now give a characterization of Gaussian measures on $\mathbb{R}^n$ and their densities.\footnote{Vladimir I. Bogachev,
+{\em Gaussian Measures}, p.~3, Proposition 1.2.2; Michel Simonnet, {\em Measures and Probabilities},
+p.~303, Theorem 14.5.} In the following theorem, the
+vector $a \in \mathbb{R}^n$  is called the \textbf{mean of $\gamma$} and the 
+linear transformation $K \in \mathscr{L}(\mathbb{R}^n)$ 
+ is called the \textbf{covariance  operator of $\gamma$}. When $a=0 \in \mathbb{R}^n$ and $K=\id_{\mathbb{R}^n}$, we
+ say that $\gamma$ is \textbf{standard}.
+
+\begin{theorem}
+A Borel probability measure $\gamma$ on $\mathbb{R}^n$ is Gaussian if and only if there is some
+$a \in \mathbb{R}^n$ and some positive semidefinite  $K \in \mathscr{L}(\mathbb{R}^n)$ such that
+\begin{equation}
+\widetilde{\gamma}(y) = \exp\left(i \inner{y}{a} - \frac{1}{2} \inner{Ky}{y} \right), \qquad
+y \in \mathbb{R}^n.
+\label{GaussianRn}
+\end{equation}
+
+If $\gamma$ is a Gaussian measure whose  covariance operator $K$  is positive definite, then 
+the density of $\gamma$ with respect to Lebesgue measure on $\mathbb{R}^n$ is 
+\[
+x \mapsto \frac{1}{\sqrt{(2\pi)^n \det K}} \exp\left(-\frac{1}{2}\inner{K^{-1}(x-a)}{x-a}\right),
+\qquad x \in \mathbb{R}^n.
+\]
+\label{density}
+\end{theorem}
+\begin{proof}
+Suppose  that
+\eqref{GaussianRn} is satisfied.
+Let $f \in (\mathbb{R}^n)^*$, i.e. a linear map $\mathbb{R}^n \to \mathbb{R}$, and put $\nu = f_* \gamma$. Using the change of variables formula,
+the characteristic function of $\nu$ is
+\begin{align*}
+\widetilde{\nu}(t) = \int_{\mathbb{R}} e^{it s} d\nu(s) = 
+\int_{\mathbb{R}^n} e^{it f(x)} d\gamma(x), \qquad t \in \mathbb{R}.
+\end{align*}
+Let $v$ be the unique element of $\mathbb{R}^n$ such that
+$f(x) = \inner{v}{x}$ for all $x \in \mathbb{R}^n$. Then
+\[
+\widetilde{\nu}(t) = \int_{\mathbb{R}^n} e^{i \inner{tv}{x}} d\gamma(x) = 
+\widetilde{\gamma}(tv).
+\]
+so by  \eqref{GaussianRn},
+\[
+\widetilde{\nu}(t) = \exp\left( i \inner{tv}{a} - \frac{1}{2} \inner{Ktv}{tv} \right)
+=\exp\left(i f(a) t  - \frac{1}{2}  \inner{Kv}{v} t^2 \right).
+\]
+This implies that $\nu$ is a Gaussian measure on $\mathbb{R}$ with mean $f(a)$ and variance
+$\inner{Kv}{v}$: if $\inner{Kv}{v}=0$ then 
+$\nu=\delta_{f(a)}$, and if $\inner{Kv}{v}>0$ then $\nu$ has density
+\[
+\frac{1}{\sqrt{\inner{Kv}{v}} \sqrt{2\pi}} \exp\left(-\frac{(s-f(a))^2}{2 \inner{Kv}{v}} \right), \qquad
+s \in \mathbb{R},
+\]
+with respect to Lebesgue measure on $\mathbb{R}$. That is, for any
+$f \in (\mathbb{R}^n)^*$, the pushforward measure $f_* \gamma$ is a Gaussian measure
+on $\mathbb{R}$, which is what it means for $\gamma$ to be a Gaussian measure on $\mathbb{R}^n$. 
+
+Suppose that  $\gamma$ is Gaussian and let  $f \in (\mathbb{R}^n)^*$.  Then the pushforward
+measure $f_* \gamma$ is a Gaussian measure on $\mathbb{R}$. Let
+$a(f)$ be the mean of $f_* \gamma$ and let $\sigma^2(f)$ be the variance of $f_* \gamma$, and
+ let $v_f$ be the unique element of $\mathbb{R}^n$ such that
+$f(x) = \inner{x}{v_f}$ for all $x \in \mathbb{R}^n$. 
+Using the change of variables formula,
+\[
+a(f) = \int_{\mathbb{R}} t d(f_* \gamma)(t) = 
+\int_{\mathbb{R}^n} f(x) d\gamma(x)
+\]
+and
+\begin{align*}
+\sigma^2(f) &= \int_{\mathbb{R}} (t-a(f))^2 d(f_* \gamma)(t)\\
+&=\int_{\mathbb{R}^n} (f(x)-a(f))^2 d\gamma(x)\\
+&=\int_{\mathbb{R}^n} (f(x)^2-2f(x) a(f) + a(f)^2) d\gamma(x).
+\end{align*}
+Because $f \mapsto a(f)$ is linear $(\mathbb{R}^n)^* \to \mathbb{R}$, there is a unique
+$a \in \mathbb{R}^n = (\mathbb{R}^n)^{**}$ such that
+\[
+a(f) = \inner{v_f}{a}, \qquad f \in (\mathbb{R}^n)^*.
+\]
+For $f,g \in (\mathbb{R}^n)^*$,
+\begin{align*}
+\sigma^2(f+g)&=\int_{\mathbb{R}^n} (f(x)^2+2f(x)g(x)+g(x)^2\\
+&-2f(x)a(f)-2f(x)a(g)-2g(x)a(f)-2g(x)a(g) \\
+&+a(f)^2+2a(f)a(g)+a(g)^2) d\gamma(x),
+\end{align*}
+so
+\begin{align*}
+\sigma^2(f+g)-\sigma^2(f)-\sigma^2(g)&=\int_{\mathbb{R}^n}  (2f(x)g(x)-2f(x)a(g)-2g(x)a(f)\\
+&+2a(f)a(g)) d\gamma(x).
+\end{align*}
+ $B(f,g) = \frac{1}{2}(\sigma^2(f+g)-\sigma^2(f)-\sigma^2(g))$ is a symmetric bilinear form on $\mathbb{R}^n$, and
+ \[
+ B(f,f) = 2 \int_{\mathbb{R}^n} (f(x)-a(f))^2 d\gamma(x) \geq 0,
+ \]
+ namely, $B$ is positive semidefinite. It follows  that there is a unique positive semidefinite $K \in \mathscr{L}(\mathbb{R}^n)$ such that
+ $B(f,g) = \inner{Kv_f}{v_g}$ for all $f,g \in (\mathbb{R}^n)^*$. 
+ For $y \in \mathbb{R}^n$ and for $v_f=y$,  using the change of variables formula, using the fact that
+ $f_* \gamma$ is a Gaussian measure on $\mathbb{R}$ with
+ mean
+\[
+a(f) = \inner{v_f}{a} = \inner{y}{a}
+\]
+and variance
+\[
+\sigma^2(f) = B(f,f) = \inner{Kv_f}{v_f} = \inner{Ky}{y}
+\]
+ and  using \eqref{characteristic},
+ \begin{align*}
+ \widetilde{\gamma}(y)&=\int_{\mathbb{R}^n} e^{if(x)} d\gamma(x)\\
+ &=\int_{\mathbb{R}} e^{it} d(f_*\gamma)(t)\\
+ &=\exp\left(i\inner{y}{a}\cdot 1 - \frac{1}{2} \inner{Ky}{y}\cdot 1^2 \right)\\
+ &=\exp\left(i\inner{y}{a}  - \frac{1}{2} \inner{Ky}{y} \right),
+ \end{align*}
+ which shows that \eqref{GaussianRn} is satisfied.
+ 
+Suppose that $\gamma$ is a Gaussian measure and  further  that the covariance operator $K$ is positive definite. By the spectral theorem,
+there is an orthonormal basis $\{e_1,\ldots,e_n\}$ for $\mathbb{R}^n$ such that $\inner{Ke_j}{e_j}>0$ for each
+$1 \leq j \leq n$. Write $\inner{Ke_j}{e_j}=\sigma_j^2$, and for $y \in \mathbb{R}^n$ set
+$y_j = \inner{y}{e_j}$, with which $y = y_1e_1 + \cdots + y_n e_n$ and then
+\begin{align*}
+\inner{Ky}{y} &= \inner{y_1Ke_1+\cdots+y_nKe_n}{y_1e_1+\cdots+y_ne_n}\\
+&=\inner{y_1\sigma_1^2 e_1+ \cdots + y_n \sigma_n^2 e_n}{y_1e_1+\cdots+y_ne_n}\\
+&=\sigma_1^2 y_1^2  + \cdots +  \sigma_n^2 y_n^2.
+\end{align*}
+And
+\[
+\inner{y}{a} = \inner{y_1e_1+\cdots+y_ne_n}{a_1e_1+\cdots+a_ne_n}
+=a_1 y_1 + \cdots + a_n y_n.
+\]
+Let $\gamma_j$ be the Gaussian measure on $\mathbb{R}$ with mean $a_j$ and variance $\sigma_j^2$.
+Because $\sigma_j^2>0$, the measure $\gamma_j$ has
+density $p(\cdot,a_j,\sigma_j^2)$ with respect to Lebesgue measure on $\mathbb{R}$, and thus
+\begin{align*}
+\widetilde{\gamma}(y)&=\exp\left(i \inner{y}{a} - \frac{1}{2} \inner{Ky}{y} \right)\\
+&= \exp\left(i \sum_{j=1}^n a_j y_j - \frac{1}{2} \sum_{j=1}^n \sigma_j^2 y_j^2 \right)\\
+ &=\prod_{j=1}^n \exp\left(ia_jy_j - \frac{1}{2} \sigma_j^2 y_j^2 \right)\\
+ &=\prod_{j=1}^n \widetilde{\gamma_j}(y_j)\\
+ &=\prod_{j=1}^n \int_{\mathbb{R}} \exp(iy_j t) d\gamma_j(t)\\
+ &=\prod_{j=1}^n \int_{\mathbb{R}} \exp(iy_j t) p(t,a_j,\sigma_j^2) dt\\
+ &=\int_{\mathbb{R}^n} \prod_{j=1}^n \exp(iy_j x_j) p(x_j,a_j,\sigma_j^2) dx\\
+ &=\int_{\mathbb{R}^n} e^{i\inner{y}{x}} \prod_{j=1}^n p(x_j,a_j,\sigma_j^2) dx.
+\end{align*}
+This implies that $\gamma$ has density
+\[
+x \mapsto \prod_{j=1}^n p(x_j,a_j,\sigma_j^2), \qquad x \in \mathbb{R}^n,
+\]
+with respect to Lebesgue measure on $\mathbb{R}^n$.
+Moreover,
+\begin{align*}
+\inner{K^{-1}(x-a)}{x-a}&=\inner{\sum_{j=1}^n \sigma_j^{-2} (x_j-a_j)e_j}{\sum_{j=1}^n (x_j-a_j)e_j}\\
+&=\sum_{j=1}^n  \frac{(x_j-a_j)^2}{\sigma_j^2},
+\end{align*}
+so we have, as $\det K = \prod_{j=1}^n \sigma_j^2$,
+\begin{align*}
+\prod_{j=1}^n p(x_j,a_j,\sigma_j^2) &= 
+\prod_{j=1}^n  \frac{1}{\sigma_j \sqrt{2\pi}}  \exp\left( - \frac{(x_j-a_j)^2}{2\sigma_j^2} \right)\\
+&=\frac{1}{\sqrt{(2\pi)^n \det K}} \exp\left(-\frac{1}{2} \inner{K^{-1}(x-a)}{x-a} \right).
+\end{align*}
+\end{proof}
+
+
+Because $\mathbb{R}$ is a second-countable topological space, the Borel $\sigma$-algebra
+$\mathscr{B}_{\mathbb{R}^n}$ is equal to the product 
+$\sigma$-algebra $\bigotimes_{j=1}^n \mathscr{B}_{\mathbb{R}}$. 
+The density of the standard Gaussian measure $\gamma_n$ with respect to Lebesgue measure on
+$\mathbb{R}^n$ is, by Theorem \ref{density},
+\[
+x \mapsto \frac{1}{\sqrt{(2\pi)^n}} \exp\left(-\frac{1}{2}\inner{x}{x} \right), \qquad x \in \mathbb{R}^n.
+\]
+It follows that $\gamma_n$ is equal to the product measure $\prod_{j=1}^n \gamma_1$, and thus that the probability
+space $(\mathbb{R}^n,\mathscr{B}_{\mathbb{R}^n},\gamma_n)$ is equal to the product $\prod_{j=1}^n (\mathbb{R},\mathscr{B}_{\mathbb{R}},
+\gamma_1)$. 
+
+For $f_1,\ldots,f_n \in L^2(\gamma_1)$, we define $f_1 \otimes \cdots \otimes f_n \in L^2(\gamma_n)$,
+called the \textbf{tensor product of $f_1,\ldots,f_n$}, by
+\[
+(f_1 \otimes \cdots \otimes f_n)(x) = \prod_{j=1}^n f_j(x_j), \qquad x = (x_1,\ldots,x_n) \in \mathbb{R}^n.
+\]
+It is straightforward to check that for $f_1,\ldots,f_n,g_1,\ldots,g_n \in L^2(\gamma_1)$,
+\[
+\inner{f_1\otimes \cdots \otimes f_n}{g_1 \otimes \cdots \otimes g_n}_{L^2(\gamma_n)}
+=\prod_{j=1}^n \inner{f_j}{g_j}_{L^2(\gamma_1)}.
+\]
+One proves that the linear span of the collection of all tensor products is dense in $L^2(\gamma_n)$, and that 
+$\{v_k: k \geq 0\}$ is an orthonormal basis for $L^2(\gamma_1)$, then
+\begin{equation}
+\{v_{k_1} \otimes \cdots \otimes v_{k_n}: (k_1,\ldots,k_n) \in \mathbb{Z}_{\geq 0}^n\}
+\label{tensor}
+\end{equation}
+is an orthonormal basis for $L^2(\gamma_n)$. 
+
+
+We will later use the following statement about  centered Gaussian measures.\footnote{Vladimir I. Bogachev,
+{\em Gaussian Measures}, p.~5, Lemma 1.2.5.}
+
+\begin{theorem}
+Let $\gamma$ be a Gaussian measure on $\mathbb{R}^n$ with mean $0$ and let $\theta \in \mathbb{R}$.
+Then the pushforward of the product measure $\gamma \times \gamma$ on $\mathbb{R}^n \times \mathbb{R}^n$
+under the mapping $(u,v) \mapsto u \sin \theta + v \cos\theta$, $\mathbb{R}^n \times \mathbb{R}^n \to
+\mathbb{R}^n$, is equal to $\gamma$. 
+\label{sincos}
+\end{theorem}
+\begin{proof}
+Let $\mu$ be the pushforward of $\gamma \times \gamma$ under the above mapping. 
+and let $K \in \mathscr{L}(\mathbb{R}^n)$ be the covariance operator of $\gamma$.
+For $y \in \mathbb{R}^n$, using the change of variables formula,
+\begin{align*}
+\int_{\mathbb{R}^n} \exp\left( i \inner{y}{x} \right) d\mu(x)&=\int_{\mathbb{R}^n \times \mathbb{R}^n} \exp\left(i\inner{y}{u \sin \theta + v \cos\theta}\right)
+d(\gamma \times \gamma)(u,v)\\
+&=\left(\int_{\mathbb{R}^n} \exp\left(i  \inner{y \sin \theta}{u} \right) d\gamma(u) \right)\\
+&\cdot \left(\int_{\mathbb{R}^n} \exp\left(i  \inner{y \cos \theta}{v} \right) d\gamma(v) \right)\\
+&=\widetilde{\gamma}(y\sin\theta) \widetilde{\gamma}(y\cos\theta).
+\end{align*}
+By Theorem \ref{GaussianRn},
+\begin{align*}
+\widetilde{\gamma}(y\sin\theta) \widetilde{\gamma}(y\cos\theta)&=\exp\left(-\frac{1}{2}\inner{Ky\sin\theta}{y\sin\theta} \right)
+\exp\left(-\frac{1}{2}\inner{Ky\cos\theta}{y\cos\theta} \right)\\
+&=\exp\left(-\frac{1}{2}\sin^2 (\theta) \inner{Ky}{y}-\frac{1}{2}\cos^2(\theta) \inner{Ky}{y} \right)\\
+&=\exp\left(-\frac{1}{2}\inner{Ky}{y}\right).
+\end{align*}
+Thus, the characteristic function of $\mu$ is
+\[
+\widetilde{\mu}(y) = \exp\left(-\frac{1}{2}\inner{Ky}{y}\right), \qquad y \in \mathbb{R}^n,
+\]
+which implies that $\mu$ is equal to the Gaussian measure with mean $0$ and covariance operator $K$, i.e.,
+$\mu=\gamma$. 
+\end{proof}
+
+
+
+\section{Hermite polynomials}
+For $k \geq 0$, we define the \textbf{Hermite polynomial $H_k$} by
+\[
+H_k(t) = \frac{(-1)^k}{\sqrt{k!}} \exp\left(\frac{t^2}{2}\right) \frac{d^k}{dt^k} \exp\left(-\frac{t^2}{2}\right),
+\qquad t \in \mathbb{R}.
+\]
+It is apparent that $H_k(t)$ is a polynomial of  degree $k$. 
+
+\begin{theorem}
+For real $\lambda$ and $t$,
+\[
+\exp\left(\lambda t-\frac{1}{2}\lambda^2\right) = \sum_{k=0}^\infty  \frac{1}{\sqrt{k!}} H_k(t) \lambda^k.
+\]
+\label{generating}
+\end{theorem}
+\begin{proof}
+For $u \in \mathbb{C}$, let $g(u)=\exp\left(-\frac{1}{2}u^2 \right)$. For $t \in \mathbb{R}$,
+\begin{align*}
+g(u) &= \sum_{k=0}^\infty \frac{g^{(k)}(t)}{k!} (u-t)^k\\
+&= \sum_{k=0}^\infty \frac{\sqrt{k!}}{(-1)^k} \exp\left( - \frac{t^2}{2} \right) H_k(t) \frac{1}{k!} (u-t)^k\\
+&= \exp\left( - \frac{t^2}{2} \right) \sum_{k=0}^\infty \frac{(-1)^k}{\sqrt{k!}} H_k(t) (u-t)^k.
+\end{align*}
+Therefore, for real $\lambda$ and $t$,
+\begin{align*}
+\exp\left(\lambda t-\frac{1}{2}\lambda^2\right)&=\exp\left(\frac{1}{2}t^2 - \frac{1}{2}(\lambda-t)^2 \right)\\
+&=\exp\left(\frac{1}{2}t^2\right) g(\lambda-t)\\
+&=\exp\left(\frac{1}{2}t^2\right) g(t-\lambda)\\
+&=\exp\left(\frac{1}{2}t^2\right)  \exp\left( - \frac{t^2}{2} \right) \sum_{k=0}^\infty \frac{(-1)^k}{\sqrt{k!}} H_k(t) (-\lambda)^k\\
+&=\sum_{k=0}^\infty  \frac{1}{\sqrt{k!}} H_k(t) \lambda^k.
+\end{align*}
+\end{proof}
+
+
+\begin{theorem}
+Let $\gamma_1$ be the standard Gaussian measure on $\mathbb{R}$, with density
+$p(t,0,1)= \frac{1}{\sqrt{2\pi}}  \exp\left( - \frac{t^2}{2} \right)$. Then
+\[
+\{H_k: k \geq 0\}
+\]
+is an orthonormal basis for $L^2(\gamma_1)$.
+\end{theorem}
+\begin{proof}
+For $\lambda,\mu \in \mathbb{R}$, on the one hand, using \eqref{identity} with $a=\lambda+\mu$ and $\sigma=1$,
+\[
+\begin{split}
+&\int_{\mathbb{R}} \exp\left(\lambda t-\frac{1}{2}\lambda^2\right) \exp\left(\mu t-\frac{1}{2}\mu^2\right) d\gamma_1(t)\\
+=&e^{\lambda \mu} \int_{\mathbb{R}} \frac{1}{\sqrt{2\pi}} \exp\left(-\frac{1}{2}(t-(\lambda+\mu))^2 \right) dt\\
+=&e^{\lambda \mu}.
+\end{split}
+\]
+On the other hand,  using Theorem \ref{generating},
+\[
+\begin{split}
+&\int_{\mathbb{R}} \exp\left(\lambda t-\frac{1}{2}\lambda^2\right) \exp\left(\mu t-\frac{1}{2}\mu^2\right) d\gamma_1(t)\\
+=&\int_{\mathbb{R}} \left( \sum_{k=0}^\infty  \frac{1}{\sqrt{k!}} H_k(t) \lambda^k\right)
+\left(\sum_{l=0}^\infty  \frac{1}{\sqrt{l!}} H_l(t) \mu^l\right) d\gamma_1(t)\\
+&=\int_{\mathbb{R}} \sum_{k, l \geq 0} \frac{1}{\sqrt{k! l!}} \lambda^k \mu^l H_k(t) H_l(t) d\gamma_1(t)\\
+&=\sum_{k,l \geq 0} \frac{1}{\sqrt{k! l!}}  \lambda^k \mu^l \inner{H_k}{H_l}_{L^2(\gamma_1)}.
+\end{split}
+\]
+Therefore
+\[
+\sum_{k,l \geq 0} \frac{1}{\sqrt{k! l!}}  \lambda^k \mu^l \inner{H_k}{H_l}_{L^2(\gamma_1)} = \sum_{k=0}^\infty \frac{1}{k!} \lambda^k \mu^k.
+\]
+From this, we get that if $k \neq l$ then 
+$\frac{1}{\sqrt{k! l!}}  \inner{H_k}{H_l}_{L^2(\gamma_1)} = 0$,
+i.e.
+\[
+\inner{H_k}{H_l}_{L^2(\gamma_1)}=0.
+\]
+ If $k=l$, then
+$\frac{1}{\sqrt{k! l!}}  \inner{H_k}{H_l}_{L^2(\gamma_1)} = \frac{1}{k!}$, i.e.
+\[
+\inner{H_k}{H_k}_{L^2(\gamma_1)}=1.
+\]
+Therefore, $\{H_k: k \geq 0\}$ is an orthonormal set in $L^2(\gamma_1)$. 
+
+Suppose that $f \in L^2(\gamma_1)$ satisfies $\inner{f}{H_k}_{L^2(\gamma_1)}=0$ for each
+$k \geq 0$. 
+Because $H_k(t)$ is a polynomial of  degree $k$,  for each $k \geq 0$ we have
+\[
+\Span\{H_0,H_1,H_2,\ldots,H_k\} = \Span\{1,t,t^2,\ldots,t^k\}.
+\]
+Hence for each $k \geq 0$, $\inner{f}{t^k}_{L^2(\gamma_1)}=0$. 
+One then proves that $\Span\{1,t,t^2,\ldots\}$ is dense in $L^2(\gamma_1)$, from which it follows that
+the linear span of the Hermite polynomials is dense in $L^2(\gamma_1)$ and thus that they are an orthonormal basis.
+\end{proof}
+
+
+\begin{lemma}
+For $k \geq 1$,
+\[
+H_k'(t) = \sqrt{k} H_{k-1}(t), \qquad H_k'(t)= tH_k(t) - \sqrt{k+1} H_{k+1}(t).
+\]
+\end{lemma}
+\begin{proof}
+Theorem \ref{generating} says
+\[
+\exp\left(\lambda t-\frac{1}{2}\lambda^2\right) = \sum_{k=0}^\infty  \frac{1}{\sqrt{k!}} H_k(t) \lambda^k.
+\]
+On the one hand,
+\begin{align*}
+\frac{d}{dt} \exp\left(\lambda t-\frac{1}{2}\lambda^2\right) &= \lambda \exp\left(\lambda t-\frac{1}{2}\lambda^2\right)\\
+&=\sum_{k=0}^\infty  \frac{1}{\sqrt{k!}} H_k(t) \lambda^{k+1}\\
+&=\sum_{k=1}^\infty \frac{1}{\sqrt{(k-1)!}} H_{k-1}(t) \lambda^k.
+\end{align*}
+On the other hand,
+\[
+\frac{d}{dt} \exp\left(\lambda t-\frac{1}{2}\lambda^2\right)  = \sum_{k=0}^\infty \frac{1}{\sqrt{k!}} H_k'(t) \lambda^k.
+\]
+Therefore,  $H_0'(t)=0$, and for $k \geq 1$,
+\[
+\frac{1}{\sqrt{(k-1)!}} H_{k-1}(t) =  \frac{1}{\sqrt{k!}} H_k'(t),
+\]
+i.e.,
+\[
+H_k'(t) = \sqrt{k} H_{k-1}(t).
+\]
+\end{proof}
+
+For $\alpha=(k_1,\ldots,k_n) \in \mathbb{Z}_{\geq 0}^n$, we define the \textbf{Hermite polynomial $H_\alpha$} by
+\[
+H_\alpha(x) = H_{k_1}(x_1) \cdots H_{k_n}(x_n), \qquad x = (x_1,\ldots,x_n) \in \mathbb{R}^n.
+\]
+Because the collection of all Hermite polynomials $H_k$ is an orthonormal basis for the Hilbert space $L^2(\gamma_1)$, following
+\eqref{tensor} we have that the collection of all Hermite polynomials $H_\alpha$ is an orthonormal basis for the Hilbert
+space $L^2(\gamma_n)$. 
+
+\begin{theorem}
+For $\gamma_n$ the standard Gaussian measure on $\mathbb{R}^n$, with mean $0 \in \mathbb{R}^n$ and covariance operator
+$\id_{\mathbb{R}^n}$,
+the collection
+\[
+\{H_\alpha: \alpha \in \mathbb{Z}_{\geq 0}^n\}
+\]
+is an orthonormal basis for $L^2(\gamma_n)$.
+\end{theorem}
+
+For $\alpha=(k_1,\ldots,k_n) \in \mathbb{Z}_{\geq 0}^n$, write $|\alpha|=k_1+\cdots+k_n$. 
+For $k \geq 0$, we define
+\[
+\mathcal{X}_k = \Span\{H_\alpha: |\alpha|=k\},
+\]
+which is a subspace of $L^2(\gamma_n)$ of dimension
+\[
+\binom{k+n-1}{k}.
+\]
+As $\mathcal{X}_k$ 
+is a finite dimensional subspace of $L^2(\gamma_n)$, it is closed. 
+$L^2(\gamma_n)$ is equal to the orthogonal direct sum of the $\mathcal{X}_k$:
+\[
+L^2(\gamma_n) = \bigoplus_{k=0}^\infty \mathcal{X}_k.
+\]
+Let 
+\[
+I_k:L^2(\gamma_n) \to \mathcal{X}_k
+\]
+ be the  orthogonal projection onto $\mathcal{X}_k$. 
+
+
+\section{Ornstein-Uhlenbeck semigroup}
+Let $\gamma$ be a Gaussian measure on $\mathbb{R}^n$ with mean $0$ and covariance operator
+$K$. 
+For $t \geq 0$, we define $M_t:\mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}^n$ by
+\[
+M_t(u,v) = e^{-t} u + \sqrt{1-e^{-2t}}v, \qquad (x,y) \in \mathbb{R}^n \times \mathbb{R}^n.
+\]
+By Theorem \ref{sincos}, ${M_t}_*(\gamma \times \gamma)=\gamma$. 
+Therefore, for $p \geq 1$ and $f \in L^p(\gamma)$, using the change of variables formula,
+\[
+\int_{\mathbb{R}^n} |f(x)|^p d\gamma(x)=\int_{\mathbb{R}^n \times \mathbb{R}^n}
+|f(M_t(u,v))|^p d(\gamma \times \gamma)(u,v).
+\]
+Applying Fubini's theorem, the function
+\[
+u \mapsto \int_{\mathbb{R}^n} |f(M_t(u,v))|^p d\gamma(v)
+=\int_{\mathbb{R}^n} |f(e^{-t} u + \sqrt{1-e^{-2t}}v)|^p d\gamma(v)
+\]
+belongs to $L^1(\gamma)$. 
+We define the \textbf{Ornstein-Uhlenbeck semigroup $\{T_t: t \geq 0\}$
+on $L^p(\gamma)$}, $p \geq 1$, by
+\[
+T_t(f)(u) =
+\int_{\mathbb{R}^n} f(M_t(u,v)) d\gamma(v)
+= \int_{\mathbb{R}^n} f\left(e^{-t}u+\sqrt{1-e^{-2t}}v\right) d\gamma(v),
+\]
+for $u \in \mathbb{R}^n$. 
+
+
+\begin{theorem}
+Let $\gamma$ be a Gaussian measure on
+$\mathbb{R}^n$ with mean $0$.
+If $f \in L^1(\gamma)$, then
+\[
+\int_{\mathbb{R}^n} (T_t f)(x) d\gamma(x)
+=\int_{\mathbb{R}^n} f(x) d\gamma(x).
+\]
+\label{invariant}
+\end{theorem}
+\begin{proof}
+Using Fubini's theorem, then
+the change of variables formula, then  Theorem \ref{sincos}, 
+\begin{align*}
+\int_{\mathbb{R}^n} (T_t f)(u) d\gamma(u) &=
+\int_{\mathbb{R}^n} \left(\int_{\mathbb{R}^n} f(M_t(u,v)) d\gamma(v)\right)
+d\gamma(u)\\
+&=\int_{\mathbb{R}^n \times\mathbb{R}^n} f(M_t(u,v)) d(\gamma \times \gamma)(u,v)\\
+&=\int_{\mathbb{R}^n} f(x) d({M_t}_*(\gamma \times \gamma))(x)\\
+&=\int_{\mathbb{R}^n} f(x) d\gamma(x).
+\end{align*}
+\end{proof}
+
+
+\begin{theorem}
+Let $\gamma$ be a Gaussian measure on
+$\mathbb{R}^n$ with mean $0$.
+For $p \geq 1$ and $t \geq 0$, $T_t$ is a bounded linear operator
+$L^p(\gamma) \to L^p(\gamma)$ with operator norm $1$.
+\label{bounded}
+\end{theorem}
+\begin{proof}
+For $f \in L^p(\gamma)$,
+using
+Jensen's  inequality and then Theorem \ref{invariant},
+\begin{align*}
+\norm{T_t f}_{L^p(\gamma)}^p& =
+\int_{\mathbb{R}^n} \left| \int_{\mathbb{R}^n} f(M_t(u,v))
+d\gamma(v) \right|^p d\gamma(u) \\
+&\leq \int_{\mathbb{R}^n} \left( \int_{\mathbb{R}^n} | f(M_t(u,v))|^p d\gamma(v) \right) d\gamma(u)\\
+&=\int_{\mathbb{R}^n} T_t(|f|^p)(u) d\gamma(u)\\
+&=\int_{\mathbb{R}^n} |f|^p(u) d\gamma(u)\\
+&=\norm{f}_{L^p(\gamma)}^p,
+\end{align*}
+i.e. $\norm{T_t f}_{L^p(\mu)} \leq \norm{f}_{L^p(\mu)}$.
+This shows that the operator norm of $T_t$ is $\leq 1$. But, as $\gamma$ is a probability measure,
+\[
+T_t 1 = \int_{\mathbb{R}^n} 1 d\gamma(v)
+=1,
+\]
+so $T_t$ has operator norm $1$. 
+\end{proof}
+
+
+
+For a Banach space $E$, we denote by $\mathscr{B}(E)$ the set of bounded linear operators
+$E \to E$. The \textbf{strong operator topology on $E$} is the coarsest topology on $E$ such that
+for each $x \in E$, the map $A \mapsto Ax$ is continuous $\mathscr{B}(E) \to \mathbb{E}$. 
+To say that a map $Q:[0,\infty) \to \mathscr{B}(E)$ is \textbf{strongly continuous means} that
+for each $t \in [0,\infty)$,
+$Q(s) \to Q_t$ in the strong operator topology as $s \to t$, i.e., for each $x \in E$,
+$Q(s) x \to Q(t) x$ in $E$. 
+
+A \textbf{one-parameter semigroup in $\mathscr{B}(E)$} is a map
+$Q:[0,\infty) \to \mathscr{B}(E)$ such that (i) $Q(0)=\id_E$ and (ii) for $s,t \geq 0$,
+$Q(s+t)=Q(s) \circ Q(t)$. For a one-parameter semigroup to be strongly continuous,
+one proves that it is equivalent that 
+$Q(t) \to \id_E$ in the strong operator topology as $t \downarrow 0$, i.e. 
+for each $x \in E$, $Q(t)x \to x$.\footnote{Walter Rudin, {\em Functional Analysis},
+second ed., p.~376, Theorem 13.35.}
+
+We now establish that the $\{T_t:t \geq 0\}$ is indeed a one-parameter semigroup and that it is strongly continuous.\footnote{Vladimir I. Bogachev,
+{\em Gaussian Measures}, p.~10, Theorem 1.4.1.}
+
+\begin{theorem}
+Suppose $\mu$ is a Gaussian measure on $\mathbb{R}^n$ with mean $0$ and let $p\geq 1$. 
+Then 
+$\{T_t:t \geq 0\}$ is a strongly continuous one-parameter semigroup in $\mathscr{B}(L^p(\gamma))$. 
+\label{semigroup}
+\end{theorem}
+\begin{proof}
+For $f \in L^p(\gamma)$, because $\gamma$ is a probability measure,
+\[
+T_0(f)(u) = 
+ \int_{\mathbb{R}^n} f(u) d\gamma(v)
+=f(u),
+\]
+hence $T_0 = \id_{L^p(\mu)}$. For $s,t \geq 0$,
+define $P:\mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}^n$ by
+\[
+P(u,v) = e^{-s} \frac{\sqrt{1-e^{-2t}}}{\sqrt{1-e^{-2t-2s}}} u + \frac{\sqrt{1-e^{-2s}}}{\sqrt{1-e^{-2t-2s}}}v.
+\]
+By Theorem \ref{sincos}, $P_*(\gamma \times \gamma)=\gamma$, whence
+\[
+\begin{split}
+&(T_t(T_s f))(x)\\
+=&\int_{\mathbb{R}^n} (T_s f)\left(e^{-t}x+\sqrt{1-e^{-2t}}y \right)d\gamma(y)\\
+=&\int_{\mathbb{R}^n} \left( \int_{\mathbb{R}^n} 
+f\left(e^{-s}\left(e^{-t}x+\sqrt{1-e^{-2t}}y\right)+\sqrt{1-e^{-2s}}w\right) d\gamma(w) \right) d\gamma(y)\\
+=&\int_{\mathbb{R}^n \times \mathbb{R}^n} f\left(e^{-s-t}x+\sqrt{1-e^{-2t-2s}} P(y,w) \right)
+d(\gamma \times \gamma)(y,w)\\
+=&\int_{\mathbb{R}^n \times \mathbb{R}^n} (f \circ M_{s+t})(x,P(y,w)) d(\gamma \times \gamma)(y,w)\\
+=&\int_{\mathbb{R}^n} (f \circ M_{s+t})(x,z)  d\gamma(z)\\
+=&T_{s+t}(f)(x),
+\end{split}
+\]
+hence $T_t \circ T_s = T_{s+t}$. This establishes that $\{T_t: t \geq 0\}$ is a semigroup. 
+
+For $f \in C_b(\mathbb{R}^n)$, $u \in \mathbb{R}^n$, and $v \in \mathbb{R}^n$,
+as $t \downarrow 0$ we have 
+\[
+f\left(e^{-t}u+\sqrt{1-e^{-2t}}v\right) - f(u) \to 0,
+\]
+thus by the dominated convergence theorem, since
+\[
+\left| f\left(e^{-t}u+\sqrt{1-e^{-2t}}v\right) - f(u) \right| \leq 2\norm{f}_\infty
+\]
+and $\gamma$ is a probability measure,
+we have
+\[
+ \int_{\mathbb{R}^n} \left(f\left(e^{-t}u+\sqrt{1-e^{-2t}}v\right)  - f(u) \right) d\gamma(v) \to 0,
+\]
+and hence
+\begin{align*}
+(T_t f - T_0 f)(u)& = 
+\int_{\mathbb{R}^n} f\left(e^{-t}u+\sqrt{1-e^{-2t}}v\right) d\gamma(v)-\int_{\mathbb{R}^n} f(u) d\gamma(v)\\
+&= \int_{\mathbb{R}^n} \left(f\left(e^{-t}u+\sqrt{1-e^{-2t}}v\right)  - f(u) \right) d\gamma(v)\\
+&\to 0.
+\end{align*}
+Because this is true for each $u \in \mathbb{R}^n$ and
+\[
+|(T_t f - T_0 f)(u)|  \leq \int_{\mathbb{R}^n} 2\norm{f}_\infty d\gamma(v) = 2\norm{f}_\infty,
+\]
+by the dominated convergence theorem we then have
+\begin{equation}
+\norm{T_t f -T_0 f}_{L^p(\gamma)} \to 0.
+\label{dominated}
+\end{equation}
+Now let $f \in L^p(\gamma)$. There is a sequence $f_j \in C_b(\mathbb{R}^n)$ satisfying
+$\norm{f_j-f}_{L^p(\gamma)} \to 0$, with $\norm{f_j}_{L^p(\gamma)} \leq 2 \norm{f}_{L^p(\gamma)}$ for all $j$.
+For any $t \geq 0$,
+\begin{align*}
+\norm{T_t f - T_0 f}_{L^p(\gamma)}&\leq \norm{T_tf - T_t f_j}_{L^p(\gamma)}
++\norm{T_t f_j - T_0 f_j}_{L^p(\gamma)}
++\norm{T_0 f_j - T_0 f}_{L^p(\gamma)}\\
+&= \norm{T_t (f-f_j)}_{L^p(\gamma)} + \norm{T_tf-T_0 f_j}_{L^p(\gamma)} + \norm{f_j-f}_{L^p(\gamma)}\\
+&\leq  \norm{f-f_j}_{L^p(\gamma)} +  \norm{T_tf-T_0 f_j}_{L^p(\gamma)} +\norm{f_j-f}_{L^p(\gamma)}.
+\end{align*}
+Let $\epsilon>0$ and let $j$ be so large that $\norm{f-f_j}_{L^p(\gamma)}<\epsilon$.
+Because $f_j \in C_b(\mathbb{R}^n)$, by \eqref{dominated} there is some $\delta>0$ such that 
+when $0 < t < \delta$, 
+$\norm{T_t f_j - f_j}_{L^p(\gamma)}<\epsilon$. Then when $0 < t < \delta$,
+\[
+\norm{T_t f - T_0 f}_{L^p(\gamma)} \leq \epsilon+\epsilon+\epsilon,
+\]
+which shows that for each $f \in L^p(\gamma)$, $\norm{T_t f - T_0f}_{L^p(\gamma)}$ as $t \downarrow 0$, which suffices
+to establish that $\{T_t:t \geq 0\}$ is strongly continuous $[0,\infty) \to \mathscr{B}(L^p(\gamma))$. 
+\end{proof}
+
+For $t >0$, we define $L_t \in \mathscr{B}(L^p(\gamma))$ by 
+\[
+L_t f =\frac{1}{t}(T_t f -f), \qquad f \in L^p(\gamma).
+\]
+We define $\mathscr{D}(L)$ to be the set of those $f \in L^p(\gamma)$ such that $L_t f$ converges to
+some element of $L^p(\gamma)$ as $t \downarrow 0$,
+and we define 
+$L:\mathscr{D}(L) \to L^p(\gamma)$. This is the \textbf{infinitesimal generator} of the semigroup $\{T_t: t \geq 0\}$, and the infinitesimal generator $L$ of the 
+Ornstein-Uhlenbeck semigroup is called the \textbf{Ornstein-Uhlenbeck operator}.
+Because the Ornstein-Uhlenbeck semigroup is strongly continuous, we get the following.\footnote{Walter Rudin, {\em Functional Analysis},
+second ed., p.~376, Theorem 13.35.} 
+
+\begin{theorem}
+Suppose $\mu$ is a Gaussian measure on $\mathbb{R}^n$ with mean $0$, let $p\geq 1$, and let 
+$L$ be the infinitesimal generator of the Ornstein-Uhlenbeck semigroup $\{T_t:t \geq 0\}$. Then:
+\begin{enumerate}
+\item $\mathscr{D}(L)$ is a dense linear subspace of $L^p(\gamma)$ and $L:\mathscr{D}(L) \to L^p(\gamma)$ is a closed operator.
+\item For each $f \in \mathscr{D}(L)$ and for each $t \geq 0$,
+\[
+\frac{d}{dt} (T_tf) = (L \circ T_t) f = (T_t \circ L) f.
+\]
+\item For $f \in L^p(\gamma)$ and $K$ a compact subset of $[0,\infty)$, 
+$(\exp(t L_\epsilon)f \to T_t f$ as $\epsilon \downarrow 0$ uniformly for $t \in K$. 
+\item For $\lambda \in \mathbb{C}$ with $\Re \lambda>0$, $R(\lambda):L^p(\gamma) \to L^p(\gamma)$ defined by
+\[
+R(\lambda)f = \int_0^\infty e^{-\lambda t} T_t f dt, \qquad f \in L^p(\gamma),
+\]
+belongs to $\mathscr{B}(L^p(\gamma))$, the range of $R(\lambda)$ is equal to $\mathscr{D}(L)$, and
+\[
+((\lambda I-L) \circ R(\lambda))f = f, \quad f \in L^p(\gamma),
+\qquad (R(\lambda) \circ (\lambda I-L))f = \mathscr{D}(L),
+\]
+where $I$ is the identity operator on $L^p(\gamma)$. 
+\end{enumerate}
+\label{generator}
+\end{theorem}
+
+
+
+We remind ourselves that if $H$ is a Hilbert space with inner product $\inner{\cdot}{\cdot}$,
+an element $A$ of $\mathscr{B}(H)$ is said to be a \textbf{positive operator} when
+$\inner{Ax}{x} \geq 0$ for all $x \in H$.
+We prove that each $T_t$ is a positive operator on the Hilbert space $L^2(\gamma)$.\footnote{Vladimir I. Bogachev,
+{\em Gaussian Measures}, p.~10, Theorem 1.4.1.}
+
+\begin{theorem}
+Suppose $\mu$ is a Gaussian measure on $\mathbb{R}^n$ with mean $0$. 
+For each $t \geq 0$, $T_t \in \mathscr{B}(L^2(\mu))$
+is a positive operator.
+\end{theorem}
+\begin{proof}
+For $t \geq 0$, define $N_t:\mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}^n \times  \mathbb{R}^n$ by
+\[
+O_t(x,y) = \left(e^{-t}x+\sqrt{1-e^{-2t}}y,-\sqrt{1-e^{-2t}}x+e^{-t}y\right), \qquad (x,y) \in \mathbb{R}^n \times \mathbb{R}^n,
+\]
+whose transpose is the linear operator $N_t^*:\mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}^n \times  \mathbb{R}^n$ defined by
+\[
+O_t^*(u,v) = \left(e^{-t}u-\sqrt{1-e^{-2t}}v,\sqrt{1-e^{-2t}}u+e^{-t}v\right), \qquad (u,v) \in \mathbb{R}^n \times \mathbb{R}^n.
+\]
+For $(x,y) \in \mathbb{R}^n \times \mathbb{R}^n$, we calculate 
+\[
+\begin{split}
+&\int_{\mathbb{R}^n \times \mathbb{R}^n} e^{i\inner{(x,y)}{(u,v)}} d({O_t}_*(\gamma \times \gamma))(u,v)\\
+=&\int_{\mathbb{R}^n \times \mathbb{R}^n} e^{i\inner{(x,y)}{O_t(u,v)}} d(\gamma \times \gamma)(u,v)\\
+=&\int_{\mathbb{R}^n \times \mathbb{R}^n}  e^{i\inner{O_t^*(x,y)}{(u,v)}} d(\gamma \times \gamma)(u,v)\\
+=&\widetilde{\gamma \times \gamma}(O_t^*(x,y))\\
+=&\widetilde{\gamma \times \gamma}(e^{-t}x-\sqrt{1-e^{-2t}}y,\sqrt{1-e^{-2t}}x+e^{-t}y)\\
+=&\widetilde{\gamma}(e^{-t}x-\sqrt{1-e^{-2t}}y) \widetilde{\gamma}(\sqrt{1-e^{-2t}}x+e^{-t}y)\\
+=&\exp\left(-\frac{1}{2}\inner{K(e^{-t}x-\sqrt{1-e^{-2t}}y)}{e^{-t}x-\sqrt{1-e^{-2t}}y}\right)\\
+&\cdot \exp\left(-\frac{1}{2}\inner{K(\sqrt{1-e^{-2t}}x+e^{-t}y)}{\sqrt{1-e^{-2t}}x+e^{-t}y} \right)\\
+=&\exp\left(-\frac{1}{2}\inner{Kx}{x}-\frac{1}{2}\inner{Ky}{y}\right)\\
+=&\widetilde{\gamma}(x) \widetilde{\gamma}(y)\\
+=&\widetilde{\gamma \times \gamma}(x,y),
+\end{split}
+\]
+which shows that ${O_t}_*(\gamma \times \gamma)$ and $\gamma \times \gamma$ have equal characteristic functions and hence
+are themselves equal. 
+
+For $f,g \in L^2(\gamma)$ and $t \geq 0$,
+\begin{align*}
+\inner{T_t f}{g}_{L^2(\gamma)}&=\int_{\mathbb{R}^n} (T_t f)(x) g(x) d\mu(x)\\
+&=\int_{\mathbb{R}^n \times \mathbb{R}^n} f\left(e^{-t}x+\sqrt{1-e^{-2t}}y\right) g(x) d(\gamma \times \gamma)(x,y)\\
+&=\int_{\mathbb{R}^n \times \mathbb{R}^n} (f \circ \pi_1 \circ O_t)(x,y) (g \circ \pi_1 \circ O_t^{-1} \circ O_t)(x,y) d(\gamma \times \gamma)(x,y)\\
+&=\int_{\mathbb{R}^n \times \mathbb{R}^n} (f \circ \pi_1)(u,v) (g \circ \pi_1 \circ O_t^{-1})(u,v) d({O_t}_* (\gamma \times \gamma))(u,v)\\
+&=\int_{\mathbb{R}^n \times \mathbb{R}^n} (f \circ \pi_1)(u,v) (g \circ \pi_1 \circ O_t^{-1})(u,v) d(\gamma \times \gamma)(u,v)\\
+&=\int_{\mathbb{R}^n \times \mathbb{R}^n} f(u)g\left(e^{-t}u-\sqrt{1-e^{-2t}}v\right) d(\gamma \times \gamma)(u,v)\\
+&=\int_{\mathbb{R}^n} f(u) \left(\int_{\mathbb{R}^n} g(M_t(u,-v)) d\gamma(v) \right) d\gamma(u)\\
+&=\int_{\mathbb{R}^n} f(u)  \left(\int_{\mathbb{R}^n} g(M_t(u,v)) d\gamma(v) \right) d\gamma(u)\\
+&=\int_{\mathbb{R}^n} f(u) (T_tg)(u) d\gamma(u)\\
+&=\inner{f}{T_tg}_{L^2(\gamma)},
+\end{align*}
+which establishes that $T_t$ is a self-adjoint operator on $L^2(\gamma)$. 
+
+Furthermore, using that $T_t = T_{t/2} \circ T_{t/2}$ and that $T_{t/2}$ is self-adjoint,
+\[
+\inner{T_t f}{f}_{L^2(\gamma)}
+=\inner{T_{t/2} T_{t/2} f}{f}_{L^2(\gamma)}
+=\inner{T_{t/2} f}{T_{t/2}^* f}_{L^2(\gamma)}
+=\inner{T_{t/2} f}{T_{t/2} f}_{L^2(\gamma)},
+\]
+which is $\geq 0$, which establishes that $T_t$ is a positive operator on $L^2(\gamma)$.
+\end{proof}
+
+
+We now write the Ornstein-Uhlenbeck semigroup using the orthogonal projections $I_k:L^2(\gamma_n) \to 
+\mathcal{X}_k$, where $\gamma_n$ is the standard Gaussian measure on $\mathbb{R}^n$.\footnote{Vladimir I. Bogachev,
+{\em Gaussian Measures}, p.~11, Theorem 1.4.4.}
+
+\begin{theorem}
+For each $t \geq 0$ and $f \in L^2(\gamma_n)$,
+\[
+T_t f = \sum_{k=0}^\infty e^{-kt} I_k(f).
+\]
+\label{projections}
+\end{theorem}
+\begin{proof}
+Define $S_t:L^2(\gamma_n) \to L^2(\gamma_n)$ by $S_t f = \sum_{k=0}^\infty e^{-kt} I_k(f)$, which satisfies, using that
+the subspaces $\mathcal{X}_k$ are pairwise orthogonal,
+\[
+\norm{S_t f}_{L^2(\gamma_n)}^2 = \sum_{k=0}^\infty e^{-kt} \norm{I_k(f)}_{L^2(\gamma_n)}^2
+\leq  \sum_{k=0}^\infty \norm{I_k(f)}_{L^2(\gamma_n)}^2
+=\norm{f}_{L^2(\gamma_n)}^2,
+\]
+so $S_t \in \mathscr{B}(L^2(\gamma_n))$. 
+To prove that $T_t = S_t$, it suffices to prove that $T_t H_\alpha= S_t H_\alpha$ for each Hermite polynomial, which are
+an orthonormal basis for $L^2(\gamma_n)$. 
+For $\alpha=(k_1,\ldots,k_n)$ with $k=|\alpha|=k_1+\cdots+k_n$,
+\[
+S_t H_\alpha = e^{-kt} H_\alpha,
+\]
+and
+\begin{align*}
+(T_t H_\alpha)(x)&=\int_{\mathbb{R}^n} H_\alpha\left(e^{-t}x+\sqrt{1-e^{-2t}}y\right)d\gamma_n(y)\\
+&=\int_{\mathbb{R}^n} \prod_{j=1}^n H_{k_j}\left(e^{-t}x_j+\sqrt{1-e^{-2t}}y_j\right) d\gamma_n(y)\\
+&=\prod_{j=1}^n \int_{\mathbb{R}} H_{k_j}\left(e^{-t}x_j+\sqrt{1-e^{-2t}}y_j\right) d\gamma_1(y_j).
+\end{align*}
+To prove that $T_t H_\alpha = e^{-kt} H_\alpha$, it thus suffices to prove that for any 
+$t$, for any $k_j$, and for any $x_j$,
+\begin{equation}
+\int_{\mathbb{R}} H_{k_j}\left(e^{-t}x_j+\sqrt{1-e^{-2t}}y_j\right) d\gamma_1(y_j) = e^{-k_j t} H_{k_j}(x_j).
+\label{kj}
+\end{equation}
+For $k_j=0$, as $H_0=1$ and $\gamma_1$ is a probability measure, \eqref{kj} is true. 
+Suppose that \eqref{kj} is true for  $\leq k_j$. That is, for each $0 \leq h \leq k_j$,
+$T_t H_{h} = e^{-h t} H_{h}$. For any $l$, because the Hermite polynomial $H_l$ is a polynomial of degree
+$l$, one checks that $T_t H_l(x_j)$ is a polynomial of degree $l$: using the binomial formula,
+\[
+\int_{\mathbb{R}} (e^{-t}x_j+\sqrt{1-e^{-2t}}y_j)^l \exp\left(-\frac{y_j^2}{2}\right) d\gamma_1(y_j)
+\]
+is a polynomial in $x_j$ of degree $l$. 
+Hence $T_t H_l$ a linear combination of $H_0,H_1,\ldots,H_l$.  
+For $0 \leq h \leq k_j$,
+\[
+\inner{T_t H_{k_j+1}}{H_h}_{L^2(\gamma_1)}=
+\inner{H_{k_j+1}}{T_t H_h}_{L^2(\gamma_1)}
+=\inner{H_{k_j+1}}{e^{-ht}H_h}_{L^2(\gamma_1)}
+=0.
+\]
+Therefore there is some $c \in \mathbb{R}$ such that
+$T_t H_{k_j+1} = c H_{k_j+1}$. Then check that
+$c=e^{-(k_j+1)t}$. 
+\end{proof}
+
+We now give an explicit expression for the domain $\mathscr{D}(L)$ of the Ornstein-Uhlenbeck operator $L$ and for $L$ applied to an element of
+its domain.\footnote{Vladimir I. Bogachev, {\em Gaussian Measures}, p.~12, Proposition 1.4.5.}
+
+\begin{theorem}
+\[
+\mathscr{D}(L) = \left\{f \in L^2(\gamma_n) : \sum_{k=0}^\infty k^2 \norm{I_k(f)}_{L^2(\gamma_n)}^2<\infty\right\}.
+\]
+For $f \in \mathscr{D}(L)$,
+\[
+Lf = -\sum_{k=0}^\infty k I_f(f).
+\]
+\end{theorem}
+\begin{proof}
+Let $f \in \mathscr{D}(L)$, i.e. $\frac{T_t f - f}{t} \to Lf$ in $L^2(\gamma_n)$ as $t \downarrow 0$. For any $k \geq 0$, using
+Theorem \ref{projections},
+\begin{align*}
+I_k L f&=I_k\left(\lim_{t \downarrow 0} \frac{T_t f-f}{t} \right)\\
+&=\lim_{t \downarrow 0} \frac{I_kT_t f - I_kf}{t}\\
+&=\lim_{t \downarrow 0} \frac{T_t I_k f - I_k f}{t}\\
+&=\lim_{t \downarrow 0}  \frac{e^{-kt} I_k f - I_k f}{t}\\
+&=\left( \lim_{t \downarrow 0} \frac{e^{-kt}-1}{t}\right) I_k f\\
+&=\left(e^{-kt}\right)'\big|_{t=0} I_kf\\
+&=-kI_kf.
+\end{align*}
+Using this, 
+\begin{align*}
+\sum_{k=0}^\infty k^2 \norm{I_k f}_{L^2(\gamma_n)}^2&=\sum_{k=0}^\infty \norm{I_k Lf}_{L^2(\gamma_n)}^2\\
+&=\norm{\sum_{k=0}^\infty I_k Lf}_{L^2(\gamma_n)}^2\\
+&=\norm{Lf}_{L^2(\gamma_n)}^2\\
+&<\infty.
+\end{align*}
+Moreover,
+\[
+Lf = L\left(\sum_{k=0}^\infty I_k f \right)
+=\sum_{k=0}^\infty LI_k f
+=\sum_{k=0}^\infty I_kLf
+=\sum_{k=0}^\infty -kI_f.
+\]
+
+Let $f \in L^2(\gamma_n)$ satisfy 
+\[
+\sum_{k=0}^\infty k^2 \norm{I_k f}_{L^2(\gamma_n)}^2<\infty.
+\]
+For $t>0$,
+\begin{align*}
+\norm{\frac{T_t f-f}{t} + \sum_{k=0}^\infty kI_kf}_{L^2(\gamma_n)}^2&=
+\norm{\sum_{k=0}^\infty \left( \frac{e^{-kt} I_k f - I_k f}{t} + kI_kf\right)}_{L^2(\gamma_n)}^2\\
+&=\sum_{k=0}^\infty \left|\frac{e^{-kt}-1}{t}+k\right|^2 \norm{I_k f}_{L^2(\gamma_n)}^2.
+\end{align*}
+For $t>0$ and $k \geq 0$,
+\[
+|t^{-1}(e^{-kt}-1)| \leq k,
+\]
+and thus
+\[
+\sum_{k=0}^\infty \left|\frac{e^{-kt}-1}{t}+k\right|^2 \norm{I_k f}_{L^2(\gamma_n)}^2
+\leq \sum_{k=0}^\infty (2k)^2  \norm{I_k f}_{L^2(\gamma_n)}^2
+<\infty.
+\]
+For each $k \geq 0$, as $t \downarrow 0$, 
+\[
+\frac{e^{-kt}-1}{t}+k \to 0,
+\]
+thus as $t \downarrow 0$,
+\[
+\sum_{k=0}^\infty \left|\frac{e^{-kt}-1}{t}+k\right|^2 \norm{I_k f}_{L^2(\gamma_n)}^2  \to 0
+\]
+and hence
+\[
+\norm{\frac{T_t f-f}{t} + \sum_{k=0}^\infty kI_kf}_{L^2(\gamma_n)}^2 \to 0.
+\]
+This means that
+$\frac{T_t f -f}{t}$ converges in $L^2(\gamma_n)$ to $-\sum_{k=0}^\infty kI_kf$ as $t \downarrow 0$, and since
+$\frac{T_t f-f}{t}$ converges, $f \in \mathscr{D}(L)$. 
+\end{proof}
+
+\end{document}

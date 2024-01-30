@@ -1,0 +1,555 @@
+<!DOCTYPE html><html>
+<head>
+<title>The Hamilton-Jacobi equation</title>
+<!--Generated on Sun Feb 13 21:07:24 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 16, 2014.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="LaTeXML-navbar-left.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<nav class="ltx_page_navbar">
+<div class="ltx_TOC">
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Example of free particle in one dimension ‣ The Hamilton-Jacobi equation" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Example of free particle in one dimension</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 Motivation for the Hamilton-Jacobi equation ‣ The Hamilton-Jacobi equation" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Motivation for the Hamilton-Jacobi equation</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 Harmonic oscillator ‣ The Hamilton-Jacobi equation" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Harmonic oscillator</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S4" title="4 Schrödinger equation ‣ The Hamilton-Jacobi equation" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Schrödinger equation</span></a></li>
+</ul>
+</div>
+</nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">The Hamilton-Jacobi equation</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">April 16, 2014</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Example of free particle in one dimension</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Define <math id="S1.p1.m1" class="ltx_Math" alttext="L(q,v)=\frac{m}{2}v^{2}" display="inline"><mrow><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mi>m</mi><mn>2</mn></mfrac><mo>⁢</mo><msup><mi>v</mi><mn>2</mn></msup></mrow></mrow></math>, where <math id="S1.p1.m2" class="ltx_Math" alttext="m" display="inline"><mi>m</mi></math> is a nonzero constant. Fixing two times <math id="S1.p1.m3" class="ltx_Math" alttext="t_{0}&lt;t_{1}" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>&lt;</mo><msub><mi>t</mi><mn>1</mn></msub></mrow></math>, we define the action for a path <math id="S1.p1.m4" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> in <math id="S1.p1.m5" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> by</p>
+<table id="S4.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S1.Ex2">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\displaystyle S(\gamma)" display="inline"><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex1.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex1.m3" class="ltx_Math" alttext="\displaystyle\int_{t_{0}}^{t_{1}}L(\gamma(t),\dot{\gamma}(t))dt" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>0</mn></msub><msub><mi>t</mi><mn>1</mn></msub></msubsup></mstyle><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex2.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex2.m3" class="ltx_Math" alttext="\displaystyle\frac{m}{2}\int_{t_{0}}^{t_{1}}(\dot{\gamma}(t))^{2}dt." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mi>m</mi><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>0</mn></msub><msub><mi>t</mi><mn>1</mn></msub></msubsup></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">Suppose that <math id="S1.p1.m6" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> is satisfies the Euler-Lagrange equation for the Lagrangian <math id="S1.p1.m7" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. That is,</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="\frac{d}{dt}\left(\frac{\partial L}{\partial v}(\gamma(t),\dot{\gamma}(t))%
+\right)-\frac{\partial L}{\partial q}(\gamma(t),\dot{\gamma}(t))=0," display="block"><mrow><mrow><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and here <math id="S1.p1.m8" class="ltx_Math" alttext="\frac{\partial L}{\partial v}=mv" display="inline"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></math> and <math id="S1.p1.m9" class="ltx_Math" alttext="\frac{\partial L}{\partial q}=0" display="inline"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow></math>, so</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="\frac{d}{dt}(m\dot{\gamma}(t))=0," display="block"><mrow><mrow><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>m</mi><mo>⁢</mo><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.</p>
+<table id="S1.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex5.m1" class="ltx_Math" alttext="m\ddot{\gamma}(t)=0," display="block"><mrow><mrow><mrow><mi>m</mi><mo>⁢</mo><mover accent="true"><mi>γ</mi><mo>¨</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="S1.p1.m10" class="ltx_Math" alttext="\ddot{\gamma}(t)=0" display="inline"><mrow><mrow><mover accent="true"><mi>γ</mi><mo>¨</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, and hence <math id="S1.p1.m11" class="ltx_Math" alttext="\gamma(t)=at+b" display="inline"><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>t</mi></mrow><mo>+</mo><mi>b</mi></mrow></mrow></math> for some constants <math id="S1.p1.m12" class="ltx_Math" alttext="a,b" display="inline"><mrow><mi>a</mi><mo>,</mo><mi>b</mi></mrow></math>. If we are given the conditions <math id="S1.p1.m13" class="ltx_Math" alttext="\gamma(t_{0})=q_{0}" display="inline"><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>q</mi><mn>0</mn></msub></mrow></math>
+and <math id="S1.p1.m14" class="ltx_Math" alttext="\gamma(t_{1})=q_{1}" display="inline"><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>q</mi><mn>1</mn></msub></mrow></math>, then a solution of the Euler-Lagrange equation that satisfies these conditions must be</p>
+<table id="S1.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex6.m1" class="ltx_Math" alttext="\gamma(t)=q_{0}+\frac{q_{1}-q_{0}}{t_{1}-t_{0}}(t-t_{0})." display="block"><mrow><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>q</mi><mn>0</mn></msub><mo>+</mo><mrow><mfrac><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>-</mo><msub><mi>q</mi><mn>0</mn></msub></mrow><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>-</mo><msub><mi>t</mi><mn>0</mn></msub></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><msub><mi>t</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The action of this path is</p>
+<table id="S1.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex7.m1" class="ltx_Math" alttext="S(\gamma)=\frac{m}{2}\int_{t_{0}}^{t_{1}}\left(\frac{q_{1}-q_{0}}{t_{1}-t_{0}}%
+\right)^{2}dt=\frac{m}{2}\frac{(q_{1}-q_{0})^{2}}{t_{1}-t_{0}}." display="block"><mrow><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mi>m</mi><mn>2</mn></mfrac><mo>⁢</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>0</mn></msub><msub><mi>t</mi><mn>1</mn></msub></msubsup><mrow><msup><mrow><mo>(</mo><mfrac><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>-</mo><msub><mi>q</mi><mn>0</mn></msub></mrow><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>-</mo><msub><mi>t</mi><mn>0</mn></msub></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mi>m</mi><mn>2</mn></mfrac><mo>⁢</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><msub><mi>q</mi><mn>1</mn></msub><mo>-</mo><msub><mi>q</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>-</mo><msub><mi>t</mi><mn>0</mn></msub></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The dimensions of the right hand side are</p>
+<table id="S1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex8.m1" class="ltx_Math" alttext="$\mathrm{k}\mathrm{g}\,\mathrm{m}^{2}\,\mathrm{s}^{-1}$=$\mathrm{k}\mathrm{g}%
+\,\mathrm{m}\,\mathrm{s}^{-2}\,\mathrm{m}\,\mathrm{s}$=$\mathrm{N}\,\mathrm{m}%
+\,\mathrm{s}$=$\mathrm{J}\,\mathrm{s}$," display="block"><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>kg</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi mathvariant="normal">m</mi><mn>2</mn></msup></mpadded><mo>⁢</mo><msup><mi mathvariant="normal">s</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mi>kg</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi mathvariant="normal">m</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><msup><mi mathvariant="normal">s</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi mathvariant="normal">m</mi></mpadded><mo>⁢</mo><mi mathvariant="normal">s</mi></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">N</mi></mpadded><mo>⁢</mo><mpadded width="+1.7pt"><mi mathvariant="normal">m</mi></mpadded><mo>⁢</mo><mi mathvariant="normal">s</mi></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">J</mi></mpadded><mo>⁢</mo><mi mathvariant="normal">s</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which are indeed the dimensions
+that action ought to have.
+If instead of talking about action that is a function of paths we talk about action that is a function of the end point of a motion and the time
+at which the motion ends, taking the time and location at which the motion starts as fixed, then</p>
+<table id="S1.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex9.m1" class="ltx_Math" alttext="S(q,t)=\frac{m}{2}\frac{(q-q_{0})^{2}}{t-t_{0}}," display="block"><mrow><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mi>m</mi><mn>2</mn></mfrac><mo>⁢</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>-</mo><msub><mi>q</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mrow><mi>t</mi><mo>-</mo><msub><mi>t</mi><mn>0</mn></msub></mrow></mfrac></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for which</p>
+<table id="S1.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex10.m1" class="ltx_Math" alttext="\frac{\partial S}{\partial q}=m\frac{q-q_{0}}{t-t_{0}}" display="block"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>=</mo><mrow><mi>m</mi><mo>⁢</mo><mfrac><mrow><mi>q</mi><mo>-</mo><msub><mi>q</mi><mn>0</mn></msub></mrow><mrow><mi>t</mi><mo>-</mo><msub><mi>t</mi><mn>0</mn></msub></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S1.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex11.m1" class="ltx_Math" alttext="\frac{\partial S}{\partial t}=-\frac{m}{2}\frac{(q-q_{0})^{2}}{(t-t_{0})^{2}}." display="block"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mrow><mfrac><mi>m</mi><mn>2</mn></mfrac><mo>⁢</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>q</mi><mo>-</mo><msub><mi>q</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><msup><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>-</mo><msub><mi>t</mi><mn>0</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">These satisfy</p>
+<table id="S1.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex12.m1" class="ltx_Math" alttext="\frac{\partial S}{\partial t}+\frac{1}{2m}\left(\frac{\partial S}{\partial q}%
+\right)^{2}=0." display="block"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If we write</p>
+<table id="S1.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex13.m1" class="ltx_Math" alttext="H(q,p)=\frac{p}{m}\frac{\partial L}{\partial v}\left(q,\frac{p}{m}\right)-L%
+\left(q,\frac{p}{m}\right)=\frac{p}{m}\cdot m\cdot\frac{p}{m}-\frac{m}{2}\left%
+(\frac{p}{m}\right)^{2}=\frac{p^{2}}{2m}." display="block"><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mi>p</mi><mi>m</mi></mfrac><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>v</mi></mrow></mfrac><mo>⁢</mo><mrow><mo>(</mo><mi>q</mi><mo>,</mo><mfrac><mi>p</mi><mi>m</mi></mfrac><mo>)</mo></mrow></mrow><mo>-</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo>(</mo><mi>q</mi><mo>,</mo><mfrac><mi>p</mi><mi>m</mi></mfrac><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><mi>p</mi><mi>m</mi></mfrac><mo>⋅</mo><mi>m</mi><mo>⋅</mo><mfrac><mi>p</mi><mi>m</mi></mfrac></mrow><mo>-</mo><mrow><mfrac><mi>m</mi><mn>2</mn></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mi>p</mi><mi>m</mi></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow></mrow><mo>=</mo><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then,</p>
+<table id="S1.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex14.m1" class="ltx_Math" alttext="\frac{\partial S}{\partial t}(q,t)+H\left(q,\frac{\partial S}{\partial q}(q,t)%
+\right)=0." display="block"><mrow><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo>(</mo><mi>q</mi><mo>,</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Motivation for the Hamilton-Jacobi equation</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S2.p1.m1" class="ltx_Math" alttext="\gamma" display="inline"><mi>γ</mi></math> is a path that satisfies the Euler-Lagrange equation for some Lagrangian <math id="S2.p1.m2" class="ltx_Math" alttext="L" display="inline"><mi>L</mi></math>. If we perturb the path to start at the same position at time <math id="S2.p1.m3" class="ltx_Math" alttext="t_{0}" display="inline"><msub><mi>t</mi><mn>0</mn></msub></math> but to end at
+<math id="S2.p1.m4" class="ltx_Math" alttext="q+\delta q" display="inline"><mrow><mi>q</mi><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></math> instead of at <math id="S2.p1.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math>, then the perturbed path is <math id="S2.p1.m6" class="ltx_Math" alttext="s\mapsto\gamma(s)+(\delta\gamma)(s)" display="inline"><mrow><mi>s</mi><mo>↦</mo><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>γ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, where <math id="S2.p1.m7" class="ltx_Math" alttext="(\delta\gamma)(0)=0" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>γ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="S2.p1.m8" class="ltx_Math" alttext="(\delta\gamma)(t)=\delta q" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>γ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>q</mi></mrow></mrow></math>.
+Then, first doing a Taylor approximation in which we drop all powers of <math id="S2.p1.m9" class="ltx_Math" alttext="\delta\gamma" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mi>γ</mi></mrow></math> or <math id="S2.p1.m10" class="ltx_Math" alttext="\delta\dot{\gamma}" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mover accent="true"><mi>γ</mi><mo>˙</mo></mover></mrow></math> higher than the first and then using the Euler-Lagrange
+equation, and
+using Einstein summation notation,</p>
+<table id="S4.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S2.Ex20">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex15.m1" class="ltx_Math" alttext="\displaystyle S(\gamma+\delta\gamma)-S(\gamma)" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>γ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex15.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex15.m3" class="ltx_Math" alttext="\displaystyle\int_{t_{0}}^{t}L(\gamma+\delta\gamma,\dot{\gamma}+\delta\dot{%
+\gamma})-L(\gamma,\dot{\gamma})ds" display="inline"><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>0</mn></msub><mi>t</mi></msubsup></mstyle><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>γ</mi></mrow></mrow><mo>,</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><mover accent="true"><mi>γ</mi><mo>˙</mo></mover></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>L</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo>,</mo><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex16.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex16.m3" class="ltx_Math" alttext="\displaystyle\int_{t_{0}}^{t}\frac{\partial L}{\partial q_{i}}(\gamma,\dot{%
+\gamma})\delta\gamma_{i}+\frac{\partial L}{\partial v_{i}}(\gamma,\dot{\gamma}%
+)\delta\dot{\gamma_{i}}ds" display="inline"><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>0</mn></msub><mi>t</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>q</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo>,</mo><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><msub><mi>γ</mi><mi>i</mi></msub></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo>,</mo><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><mover accent="true"><msub><mi>γ</mi><mi>i</mi></msub><mo>˙</mo></mover><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex17.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex17.m3" class="ltx_Math" alttext="\displaystyle\int_{t_{0}}^{t}\left(\frac{d}{dt}\frac{\partial L}{\partial v_{i%
+}}(\gamma,\dot{\gamma})\right)\delta\gamma_{i}+\frac{\partial L}{\partial v_{i%
+}}(\gamma,\dot{\gamma})\delta\dot{\gamma_{i}}ds" display="inline"><mrow><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>0</mn></msub><mi>t</mi></msubsup></mstyle><mrow><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo>,</mo><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo stretchy="false">)</mo></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><msub><mi>γ</mi><mi>i</mi></msub></mrow></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo>,</mo><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><mover accent="true"><msub><mi>γ</mi><mi>i</mi></msub><mo>˙</mo></mover><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex18.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex18.m3" class="ltx_Math" alttext="\displaystyle\int_{t_{0}}^{t}\frac{d}{dt}\left(\frac{\partial L}{\partial v_{i%
+}}(\gamma,\dot{\gamma})\delta\gamma_{i}\right)ds" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>t</mi><mn>0</mn></msub><mi>t</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>γ</mi><mo>,</mo><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><msub><mi>γ</mi><mi>i</mi></msub></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>s</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex19.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex19.m3" class="ltx_Math" alttext="\displaystyle\frac{\partial L}{\partial v_{i}}(\gamma(t),\dot{\gamma}(t))(%
+\delta\gamma_{i})(t)-\frac{\partial L}{\partial v_{i}}(\gamma(t_{0}),\dot{%
+\gamma}(t_{0}))(\delta\gamma_{i})(t_{0})" display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>δ</mi><mo>⁢</mo><msub><mi>γ</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>δ</mi><mo>⁢</mo><msub><mi>γ</mi><mi>i</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex20.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex20.m3" class="ltx_Math" alttext="\displaystyle\frac{\partial L}{\partial v_{i}}(\gamma(t),\dot{\gamma}(t))%
+\delta q." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><mi>q</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">We have not been precise about what we mean by perturbing a path, but what we have obtained suggests that if
+we think of <math id="S2.p1.m11" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> as a function of the endpoint of a path and the time at which the path ends rather than as a function of a path
+itself, we have</p>
+<table id="S2.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex21.m1" class="ltx_Math" alttext="\frac{\partial S}{\partial q_{i}}=\frac{\partial L}{\partial v_{i}}(\gamma(t),%
+\dot{\gamma}(t))=p_{i}(t)." display="block"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>q</mi><mi>i</mi></msub></mrow></mfrac><mo>=</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>p</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">If on the other hand we fix the point <math id="S2.p2.m1" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> at which a path ends and change the time at which it arrives at this point
+from <math id="S2.p2.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> to <math id="S2.p2.m3" class="ltx_Math" alttext="t+\delta t" display="inline"><mrow><mi>t</mi><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></math>, then, doing a Taylor expansion and dropping all
+powers of <math id="S2.p2.m4" class="ltx_Math" alttext="\delta t" display="inline"><mrow><mi>δ</mi><mo>⁢</mo><mi>t</mi></mrow></math> higher than the first,</p>
+<table id="S2.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex22.m1" class="ltx_Math" alttext="\gamma(t+\delta t)-\gamma(t)=\dot{\gamma}(t)\delta t." display="block"><mrow><mrow><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But <math id="S2.p2.m5" class="ltx_Math" alttext="\gamma(t+\delta t)=q" display="inline"><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>t</mi><mo>+</mo><mrow><mi>δ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>q</mi></mrow></math>, so</p>
+<table id="S2.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex23.m1" class="ltx_Math" alttext="\gamma(t)=q-\dot{\gamma}(t)\delta t." display="block"><mrow><mrow><mrow><mi>γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>q</mi><mo>-</mo><mrow><mover accent="true"><mi>γ</mi><mo>˙</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then</p>
+<table id="S2.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex24.m1" class="ltx_Math" alttext="\delta S=L\delta t-\frac{\partial L}{\partial v_{i}}v_{i}\delta t." display="block"><mrow><mrow><mrow><mi>δ</mi><mo>⁢</mo><mi>S</mi></mrow><mo>=</mo><mrow><mrow><mi>L</mi><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><mi>t</mi></mrow><mo>-</mo><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub><mo>⁢</mo><mi>δ</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Defining <math id="S2.p2.m6" class="ltx_Math" alttext="H=\frac{\partial L}{\partial v_{i}}v_{i}-L" display="inline"><mrow><mi>H</mi><mo>=</mo><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>L</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>v</mi><mi>i</mi></msub></mrow></mfrac><mo>⁢</mo><msub><mi>v</mi><mi>i</mi></msub></mrow><mo>-</mo><mi>L</mi></mrow></mrow></math>, what we have done suggests that</p>
+<table id="S2.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex25.m1" class="ltx_Math" alttext="\frac{\partial S}{\partial t}=-H." display="block"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mi>H</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Then, using <math id="S2.p3.m1" class="ltx_Math" alttext="\frac{\partial S}{\partial q_{i}}=p_{i}" display="inline"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>q</mi><mi>i</mi></msub></mrow></mfrac><mo>=</mo><msub><mi>p</mi><mi>i</mi></msub></mrow></math>, with which <math id="S2.p3.m2" class="ltx_Math" alttext="H(q,p)=H\left(q,\frac{\partial S}{\partial q}\right)" display="inline"><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo>(</mo><mi>q</mi><mo>,</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>)</mo></mrow></mrow></mrow></math>, and using <math id="S2.p3.m3" class="ltx_Math" alttext="\frac{\partial S}{\partial t}=-H(q,p)" display="inline"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>,
+we have</p>
+<table id="S2.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex26.m1" class="ltx_Math" alttext="\frac{\partial S}{\partial t}+H\left(q,\frac{\partial S}{\partial q}\right)=0." display="block"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>+</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo>(</mo><mi>q</mi><mo>,</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We call this equation the <span class="ltx_text ltx_font_italic">Hamilton-Jacobi equation</span>.
+</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">To precisely sort out where the Hamilton-Jacobi equation comes from and what it means, the only place
+I can imagine that does an adequate job is Abraham and Marsden.<span id="footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
+            <span class="ltx_tag ltx_tag_note">1</span>
+            
+            
+          Abraham and Marsden, <span class="ltx_text ltx_font_italic">Foundations of Mechanics</span>,
+second ed.</span></span></span> Certainly there are other sources that
+present this more precisely than I have presented it, but it is almost universal to thoughtlessly confound
+the variables on which <math id="S2.p4.m1" class="ltx_Math" alttext="H" display="inline"><mi>H</mi></math> or <math id="S2.p4.m2" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> depends with paths; that is, to write things like <math id="S2.p4.m3" class="ltx_Math" alttext="\frac{\partial H}{\partial q}" display="inline"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>H</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac></math> and
+also to think of <math id="S2.p4.m4" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> not as a point but rather as a path which for each time goes through a particular point, in which case
+one has no certain way of knowing whether <math id="S2.p4.m5" class="ltx_Math" alttext="\frac{dq}{dt}=0" display="inline"><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>q</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mn>0</mn></mrow></math>, as is the case for the derivative of any fixed point, or to say
+that <math id="S2.p4.m6" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> is a path and that <math id="S2.p4.m7" class="ltx_Math" alttext="\frac{dq}{dt}" display="inline"><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>q</mi></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></math> is a tangent vector at the point <math id="S2.p4.m8" class="ltx_Math" alttext="q(t)" display="inline"><mrow><mi>q</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> on the path.
+If one plainly states that what one has said is only suggestive of how symbols work together then one does not
+need to apologize for the absence of precision, but there is a foul area between suggestive symbol manipulation and
+actual precision in which
+one tricks oneself into believing that one has given a precise presentation, and this is the path followed by
+some presentations
+of the Hamilton-Jacobi equation.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Harmonic oscillator</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Let</p>
+<table id="S3.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex27.m1" class="ltx_Math" alttext="H=\frac{p^{2}}{2m}+\frac{1}{2}m\omega^{2}q^{2}." display="block"><mrow><mrow><mi>H</mi><mo>=</mo><mrow><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The Hamilton-Jacobi equation for this Hamiltonian is</p>
+<table id="S3.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex28.m1" class="ltx_Math" alttext="\frac{\partial S}{\partial t}+\frac{1}{2m}\left(\frac{\partial S}{\partial q}%
+\right)^{2}+\frac{1}{2}m\omega^{2}q^{2}=0." display="block"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We set <math id="S3.p1.m1" class="ltx_Math" alttext="S(q,t)=S_{0}(q)-Et" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>S</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>E</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mrow></math>; for this to make sense presumes that there is in fact a constant <math id="S3.p1.m2" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and a function <math id="S3.p1.m3" class="ltx_Math" alttext="S_{0}" display="inline"><msub><mi>S</mi><mn>0</mn></msub></math> so that
+<math id="S3.p1.m4" class="ltx_Math" alttext="S(q,t)-S_{0}(q)" display="inline"><mrow><mrow><mi>S</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>S</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> depends just on <math id="S3.p1.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. With this,
+<math id="S3.p1.m6" class="ltx_Math" alttext="\frac{\partial S}{\partial q}=\frac{\partial S_{0}}{\partial q}" display="inline"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>S</mi><mn>0</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac></mrow></math>
+and <math id="S3.p1.m7" class="ltx_Math" alttext="\frac{\partial S}{\partial t}=-E" display="inline"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac><mo>=</mo><mrow><mo>-</mo><mi>E</mi></mrow></mrow></math>,
+and so the Hamilton-Jacobi equation becomes</p>
+<table id="S3.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex29.m1" class="ltx_Math" alttext="-E+\frac{1}{2m}\left(\frac{\partial S_{0}}{\partial q}\right)^{2}+\frac{1}{2}m%
+\omega^{2}q^{2}=0," display="block"><mrow><mrow><mrow><mrow><mo>-</mo><mi>E</mi></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>S</mi><mn>0</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or</p>
+<table id="S3.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex30.m1" class="ltx_Math" alttext="\frac{1}{2m}\left(\frac{\partial S_{0}}{\partial q}\right)^{2}+\frac{1}{2}m%
+\omega^{2}q^{2}=E." display="block"><mrow><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>S</mi><mn>0</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow><mo>=</mo><mi>E</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Supposing that <math id="S3.p1.m8" class="ltx_Math" alttext="S_{0}" display="inline"><msub><mi>S</mi><mn>0</mn></msub></math> is nonnegative we get</p>
+<table id="S3.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex31.m1" class="ltx_Math" alttext="\frac{\partial S_{0}}{\partial q}(q)=\sqrt{2mE-m^{2}\omega^{2}q^{2}}," display="block"><mrow><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>S</mi><mn>0</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msqrt><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow><mo>-</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow></msqrt></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">a primitive of which is</p>
+<table id="S4.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S3.Ex33">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex32.m1" class="ltx_Math" alttext="\displaystyle S_{0}" display="inline"><msub><mi>S</mi><mn>0</mn></msub></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex32.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex32.m3" class="ltx_Math" alttext="\displaystyle\int\sqrt{2mE-m^{2}\omega^{2}q^{2}}dq" display="inline"><mstyle displaystyle="true"><mrow><mo largeop="true" symmetric="true">∫</mo><mrow><msqrt><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow><mo>-</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow></msqrt><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>q</mi></mrow></mrow></mrow></mstyle></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S3.Ex33.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex33.m3" class="ltx_Math" alttext="\displaystyle\frac{E}{\omega}\left(\arcsin\frac{m\omega q}{\sqrt{2mE}}+\frac{m%
+\omega q}{\sqrt{2mE}}\sqrt{1-\left(\frac{m\omega q}{\sqrt{2mE}}\right)^{2}}\right)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi>E</mi><mi>ω</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>arcsin</mi><mo>⁡</mo><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>q</mi></mrow><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow></msqrt></mfrac></mstyle></mrow><mo>+</mo><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>q</mi></mrow><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow></msqrt></mfrac></mstyle><mo>⁢</mo><msqrt><mrow><mn>1</mn><mo>-</mo><msup><mrow><mo>(</mo><mstyle displaystyle="true"><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>q</mi></mrow><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow></msqrt></mfrac></mstyle><mo>)</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">for which</p>
+<table id="S3.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex34.m1" class="ltx_Math" alttext="\frac{\partial S_{0}}{\partial E}=\frac{1}{\omega}\arcsin\frac{m\omega q}{%
+\sqrt{2mE}}." display="block"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>S</mi><mn>0</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>E</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><mn>1</mn><mi>ω</mi></mfrac><mo>⁢</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>q</mi></mrow><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow></msqrt></mfrac></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But <math id="S3.p1.m9" class="ltx_Math" alttext="\frac{\partial S_{0}}{\partial E}=t" display="inline"><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>S</mi><mn>0</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>E</mi></mrow></mfrac><mo>=</mo><mi>t</mi></mrow></math> (using the expression involving <math id="S3.p1.m10" class="ltx_Math" alttext="S" display="inline"><mi>S</mi></math> and <math id="S3.p1.m11" class="ltx_Math" alttext="Et" display="inline"><mrow><mi>E</mi><mo>⁢</mo><mi>t</mi></mrow></math>), so <math id="S3.p1.m12" class="ltx_Math" alttext="\omega t=\arcsin\frac{m\omega q}{\sqrt{2mE}}" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo>=</mo><mrow><mi>arcsin</mi><mo>⁡</mo><mfrac><mrow><mi>m</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>q</mi></mrow><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow></msqrt></mfrac></mrow></mrow></math>,
+hence</p>
+<table id="S3.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex35.m1" class="ltx_Math" alttext="\sin(\omega t)=\frac{\sqrt{m}\omega q}{\sqrt{2E}}," display="block"><mrow><mrow><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><msqrt><mi>m</mi></msqrt><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mi>q</mi></mrow><msqrt><mrow><mn>2</mn><mo>⁢</mo><mi>E</mi></mrow></msqrt></mfrac></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and therefore</p>
+<table id="S3.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex36.m1" class="ltx_Math" alttext="q=\sqrt{\frac{2E}{m\omega^{2}}}\sin(\omega t)." display="block"><mrow><mrow><mi>q</mi><mo>=</mo><mrow><msqrt><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>E</mi></mrow><mrow><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mfrac></msqrt><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As well,</p>
+<table id="S3.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex37.m1" class="ltx_Math" alttext="p=\frac{\partial S}{\partial q}=\frac{\partial S_{0}}{\partial q}=\sqrt{2mE-m^%
+{2}\omega^{2}q^{2}}," display="block"><mrow><mrow><mi>p</mi><mo>=</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>=</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><msub><mi>S</mi><mn>0</mn></msub></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>=</mo><msqrt><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow><mo>-</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow></msqrt></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and using the above expression for <math id="S3.p1.m13" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> this becomes</p>
+<table id="S3.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex38.m1" class="ltx_Math" alttext="p=\sqrt{2mE-m^{2}\omega^{2}\frac{2E}{m\omega^{2}}\sin^{2}(\omega t)}=\sqrt{2mE%
+-2mE\sin^{2}(\omega t)}." display="block"><mrow><mrow><mi>p</mi><mo>=</mo><msqrt><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow><mo>-</mo><mrow><msup><mi>m</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup><mo>⁢</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>E</mi></mrow><mrow><mi>m</mi><mo>⁢</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow></mfrac><mo>⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></msqrt><mo>=</mo><msqrt><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi><mo>⁢</mo><mi>E</mi><mo>⁢</mo><mrow><msup><mi>sin</mi><mn>2</mn></msup><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ω</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></msqrt></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We have thus written <math id="S3.p1.m14" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> and <math id="S3.p1.m15" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> as functions of <math id="S3.p1.m16" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and <math id="S3.p1.m17" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. Since for a particular trajectory the energy is fixed, on a particular
+trajectory the position and momentum have thus been expressed as functions of <math id="S3.p1.m18" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Schrödinger equation</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Write</p>
+<table id="S4.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex39.m1" class="ltx_Math" alttext="i\hbar\frac{\partial\psi}{\partial t}=H\psi," display="block"><mrow><mrow><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>ψ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mi>H</mi><mo>⁢</mo><mi>ψ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">called the <span class="ltx_text ltx_font_italic">Schrödinger equation</span>.
+If <math id="S4.p1.m1" class="ltx_Math" alttext="H(q,p)=\frac{p^{2}}{2m}+V(q)" display="inline"><mrow><mrow><mi>H</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo>,</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><msup><mi>p</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, and <math id="S4.p1.m2" class="ltx_Math" alttext="p=-i\hbar\nabla" display="inline"><mrow><mi>p</mi><mo>=</mo><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mo>∇</mo></mrow></mrow></mrow></math>, then <math id="S4.p1.m3" class="ltx_Math" alttext="p^{2}=-\hbar^{2}\Delta" display="inline"><mrow><msup><mi>p</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><mrow><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mo>⁢</mo><mi mathvariant="normal">Δ</mi></mrow></mrow></mrow></math> and the Schrödinger equation is</p>
+<table id="S4.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex40.m1" class="ltx_Math" alttext="i\hbar\frac{\partial\psi}{\partial t}=-\frac{\hbar^{2}}{2m}\Delta\psi+V(q)\psi." display="block"><mrow><mrow><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>ψ</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mi mathvariant="normal">Δ</mi><mo>⁢</mo><mi>ψ</mi></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ψ</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Supposing that there is a solution <math id="S4.p1.m4" class="ltx_Math" alttext="\psi" display="inline"><mi>ψ</mi></math> of the form <math id="S4.p1.m5" class="ltx_Math" alttext="\psi=e^{i\frac{S}{\hbar}}" display="inline"><mrow><mi>ψ</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mfrac><mi>S</mi><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup></mrow></math>, we get</p>
+<table id="S4.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S4.Ex42">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex41.m1" class="ltx_Math" alttext="\displaystyle i\hbar e^{i\frac{S}{\hbar}}\frac{i}{\hbar}\frac{\partial S}{%
+\partial t}" display="inline"><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mfrac><mi>S</mi><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex41.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex41.m3" class="ltx_Math" alttext="\displaystyle-\frac{\hbar^{2}}{2m}\frac{\partial}{\partial q}\left(e^{i\frac{S%
+}{\hbar}}\frac{i}{\hbar}\frac{\partial S}{\partial q}\right)+V(q)e^{i\frac{S}{%
+\hbar}}" display="inline"><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mo>∂</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mfrac><mi>S</mi><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mfrac><mi>S</mi><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex42.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex42.m3" class="ltx_Math" alttext="\displaystyle-\frac{\hbar^{2}}{2m}\left(e^{i\frac{S}{\hbar}}\left(\frac{i}{%
+\hbar}\frac{\partial S}{\partial q}\right)^{2}+e^{i\frac{S}{\hbar}}\frac{i}{%
+\hbar}\frac{\partial^{2}S}{\partial q^{2}}\right)+V(q)e^{i\frac{S}{\hbar}}." display="inline"><mrow><mrow><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><mfrac><msup><mi mathvariant="normal">ℏ</mi><mn>2</mn></msup><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mfrac><mi>S</mi><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac></mstyle></mrow><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mfrac><mi>S</mi><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>i</mi><mi mathvariant="normal">ℏ</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mfrac></mstyle></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mfrac><mi>S</mi><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">Diving both sides by <math id="S4.p1.m6" class="ltx_Math" alttext="e^{i\frac{S}{\hbar}}" display="inline"><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mfrac><mi>S</mi><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup></math> gives</p>
+<table id="S4.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex43.m1" class="ltx_Math" alttext="-\frac{\partial S}{\partial t}=\frac{1}{2m}\left(\frac{\partial S}{\partial q}%
+\right)^{2}-\frac{i\hbar}{2m}\frac{\partial^{2}S}{\partial q^{2}}+V(q)." display="block"><mrow><mrow><mrow><mo>-</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mrow><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>-</mo><mrow><mfrac><mrow><mi>i</mi><mo>⁢</mo><mi mathvariant="normal">ℏ</mi></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><mfrac><mrow><msup><mo>∂</mo><mn>2</mn></msup><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Taking <math id="S4.p1.m7" class="ltx_Math" alttext="\hbar\to 0" display="inline"><mrow><mi mathvariant="normal">ℏ</mi><mo>→</mo><mn>0</mn></mrow></math> yields the equation</p>
+<table id="S4.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex44.m1" class="ltx_Math" alttext="-\frac{\partial S}{\partial t}=\frac{1}{2m}\left(\frac{\partial S}{\partial q}%
+\right)^{2}+V(q)=H\left(q,\frac{\partial S}{\partial q}\right)," display="block"><mrow><mrow><mrow><mo>-</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>m</mi></mrow></mfrac><mo>⁢</mo><msup><mrow><mo>(</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>)</mo></mrow><mn>2</mn></msup></mrow><mo>+</mo><mrow><mi>V</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mi>H</mi><mo>⁢</mo><mrow><mo>(</mo><mi>q</mi><mo>,</mo><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>S</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is the Hamilton-Jacobi equation.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">The above derivation of the Hamilton-Jacobi equation from the Schrödinger equation is suggestive symbol manipulation. Rather than stating that we assume <math id="S4.p2.m1" class="ltx_Math" alttext="\psi=e^{i\frac{S}{\hbar}}" display="inline"><mrow><mi>ψ</mi><mo>=</mo><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mfrac><mi>S</mi><mi mathvariant="normal">ℏ</mi></mfrac></mrow></msup></mrow></math>,
+I could have written that we “make an Ansatz”; “ein Ansatz” means “an approach”, and is used to mean a guess which may work out.
+Of course, if there is some problem for which one knows there is a unique solution and we find an explicit solution starting from some unjustified assumption,
+then we don’t need to have justified the assumption because we can explicitly check that what we have found is a solution. But this is the only situation where there is precision
+to “making an Ansatz”. Otherwise, to talk about an Ansatz is a sophisticated sounding way of saying “we make an assumption”, and after making this assumption
+we have no guarantee that anything we end up with need make any sense. This does not mean that it is useless to make unjustified assumptions; but it is
+deceitful to smuggle Ansätze into the realm of proved things, and confuses those who later would rely on one’s work.</p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Sun Feb 13 21:07:24 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

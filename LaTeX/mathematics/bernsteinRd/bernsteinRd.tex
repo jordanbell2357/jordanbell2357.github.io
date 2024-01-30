@@ -1,0 +1,612 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\ess}{\ensuremath\mathrm{ess}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Bernstein's inequality and Nikolsky's inequality for $\mathbb{R}^d$}
+\author{Jordan Bell}
+\date{February 16, 2015}
+
+\maketitle
+
+\section{Complex Borel measures and the Fourier transform}
+Let $\mathcal{M}(\mathbb{R}^d)=rca(\mathbb{R}^d)$ be the set of complex Borel measures on $\mathbb{R}^d$.  This is a Banach
+algebra with the total variation norm, with convolution as multiplication; for $\mu \in \mathcal{M}(\mathbb{R}^d)$, we denote by $|\mu|$ the \textbf{total variation of $\mu$}, which
+itself belongs to $\mathcal{M}(\mathbb{R}^d)$, and the \textbf{total variation norm of $\mu$} is $\norm{\mu}=|\mu|(\mathbb{R}^d)$.
+
+
+For $\mu \in \mathcal{M}(\mathbb{R}^d)$, it is a fact that the union $O$ of all open sets $U \subset \mathbb{R}^d$ such that
+$|\mu|(U)=0$ itself satisfies $|\mu|(O)=0$. We define $\supp \mu = \mathbb{R}^d \setminus O$, called the \textbf{support of $\mu$}.
+
+For $\mu \in \mathcal{M}(\mathbb{R}^d)$, we define $\hat{\mu}:\mathbb{R}^d \to \mathbb{C}$ by
+\[
+\hat{\mu}(\xi) = \int_{\mathbb{R}^d} e^{-2\pi i\xi\cdot x} d\mu(x), \qquad
+\xi \in \mathbb{R}^d.
+\]
+It is a fact that  $\hat{\mu}$ belongs to $C_u(\mathbb{R})$, the collection of bounded uniformly continuous functions $\mathbb{R}^d \to \mathbb{C}$.
+For $\xi \in \mathbb{R}^d$,
+\begin{equation}
+|\hat{\mu}(\xi)| \leq \int_{\mathbb{R}^d} |e^{-2\pi i\xi\cdot x}| d|\mu|(x)
+=|\mu|(\mathbb{R}^d) = \norm{\mu}.
+\label{TVnorm}
+\end{equation}
+Let $m_d$ be Lebesgue measure on $\mathbb{R}^d$.
+For $f \in L^1(\mathbb{R}^d)$, let
+\[
+\Lambda_f = f m_d,
+\]
+which belongs to $\mathcal{M}(\mathbb{R}^d)$. We define $\hat{f}:\mathbb{R}^d \to \mathbb{C}$ by
+\[
+\hat{f}(\xi)  = \widehat{\Lambda_f}(\xi) = \int_{\mathbb{R}^d} e^{-2\pi i\xi\cdot x} d\Lambda_f(x)=
+\int_{\mathbb{R}^d} f(x) e^{-2\pi i\xi\cdot x} dm_d(x),
+\quad \xi \in \mathbb{R}^d.
+\]
+
+The following theorem establishes properties of the Fourier transform of a complex Borel measure with compact support.\footnote{Thomas H. Wolff,
+{\em Lectures on Harmonic Analysis}, p.~3, Proposition 1.3.}
+
+\begin{theorem}
+If $\mu \in \mathcal{M}(\mathbb{R}^d)$ and $\supp \mu$ is compact, then $\hat{\mu} \in C^\infty(\mathbb{R}^d)$
+and for any multi-index $\alpha$,
+\[
+D^\alpha \hat{\mu} = \mathscr{F}((-2\pi ix)^\alpha \mu).
+\]
+For $R>0$, if $\supp \mu \subset \overline{B(0,R)}$, then 
+\[
+\norm{D^\alpha \hat{\mu}}_\infty \leq (2\pi R)^{|\alpha|_1} \norm{\mu}.
+\]
+\label{mucompact}
+\end{theorem}
+\begin{proof}
+For $j=1,\ldots,d$, let $e_j$ be the $j$th coordinate vector in $\mathbb{R}^d$, with length 1. 
+Let $\xi \in \mathbb{R}^d$, and define
+\[
+\Delta(h) = \frac{\hat{\mu}(\xi+he_j)-\hat{\mu}(\xi)}{h}, \qquad h \neq 0.
+\]
+We can write this as
+\[
+\Delta(h) = \int_{\mathbb{R}^d} \frac{e^{-2\pi ihx_j}-1}{h} e^{-2\pi i\xi\cdot x} d\mu(x).
+\]
+
+For any $x \in \mathbb{R}^d$,
+\[
+\left|  \frac{e^{-2\pi ihx_j}-1}{h} \right| = \frac{|e^{-2\pi ihx_j}-1|}{|h|} 
+\leq \frac{|-2\pi i hx_j|}{|h|} = 2\pi |x_j|.
+\]
+Because $\mu$ has compact support, $2\pi |x_j| \in L^1(\mu)$. Furthermore,
+for each $x \in \mathbb{R}^d$ we have
+\[
+ \frac{e^{-2\pi ihx_j}-1}{h} \to -2\pi i x_j, \qquad h \to 0.
+\]
+Therefore, the dominated convergence theorem tells us that
+\[
+\lim_{h \to 0} \Delta(h) = \int_{\mathbb{R}^d} -2\pi i x_j e^{-2\pi i\xi \cdot x} d\mu(x).
+\]
+On the other hand, for $\alpha_k=1$ for $k=j$ and $\alpha_k=0$ otherwise,
+\[
+(D^\alpha \hat{\mu}) (\xi) = \lim_{h \to 0} \Delta(h),
+\]
+so
+\[
+(D^\alpha \hat{\mu}) (\xi) =  \int_{\mathbb{R}^d} (-2\pi i x)^\alpha e^{-2\pi i\xi\cdot x} d\mu(x)
+= \mathscr{F}((-2\pi ix)^\alpha \mu)(\xi),
+\]
+and in particular, $\hat{\mu} \in C^1(\mathbb{R}^d)$. (The Fourier transform of a regular complex Borel measure on a locally compact abelian group
+is bounded and uniformly continuous.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~15, Theorem 1.3.3.})
+Because $\mu$ has compact support so does $(-2\pi ix)^\alpha \mu$, hence we can play the above game
+with $(-2\pi ix)^\alpha \mu$, and by induction it follows that for any $\alpha$,
+\[
+D^\alpha \hat{\mu} = \mathscr{F}((-2\pi ix)^\alpha \mu),
+\]
+and in particular, $\hat{\mu} \in C^\infty(\mathbb{R}^d)$. 
+
+Suppose that $\supp \mu \subset \overline{B(0,R)}$. 
+The total variation  of the complex measure $(-2\pi ix)^\alpha \mu$ is the positive measure
+\[
+(2\pi)^{|\alpha|_1} |x_1|^{\alpha_1} \cdots |x_d|^{\alpha_d} |\mu|,
+\]
+hence
+\begin{align*}
+\norm{(-2\pi ix)^\alpha \mu} &=(2\pi)^{|\alpha|_1} \int_{\mathbb{R}^d} |x_1|^{\alpha_1} \cdots |x_d|^{\alpha_d} d|\mu|(x)\\
+&=(2\pi)^{|\alpha|_1} \int_{\overline{B(0,R)}} |x_1|^{\alpha_1} \cdots |x_d|^{\alpha_d} d|\mu|(x)\\
+&\leq (2\pi)^{|\alpha|_1} \int_{\overline{B(0,R)}} R^{\alpha_1} \cdots R^{\alpha_d} d|\mu|(x)\\
+&=(2\pi R)^{|\alpha|_1} \int_{\overline{B(0,R)}} d|\mu|(x)\\
+&=(2\pi R)^{|\alpha|_1} \int_{\mathbb{R}^d} d|\mu|(x)\\
+&=(2\pi R)^{|\alpha|_1} \norm{\mu}.
+\end{align*}
+Then using \eqref{TVnorm}, 
+\[
+\norm{\mathscr{F}((-2\pi ix)^\alpha \mu)}_\infty  \leq \norm{(-2\pi ix)^\alpha \mu} \leq (2\pi R)^{|\alpha|_1} \norm{\mu}.
+\]
+But we have already established that  $D^\alpha \hat{\mu} = \mathscr{F}((-2\pi ix)^\alpha \mu)$, which with the above inequality completes the proof.
+\end{proof}
+
+
+\section{Test functions}
+For an open subset $\Omega$ of $\mathbb{R}^d$,  we denote by $\mathscr{D}(\Omega)$ the set of those
+$\phi \in C^\infty(\Omega)$ such that $\supp \phi$ is a compact set. Elements of $\mathscr{D}(\Omega)$ are called
+\textbf{test functions}.
+
+
+It is a fact that there is a test function $\phi$ satisfying: (i) $\phi(x)=1$ for $|x| \leq 1$, (ii) $\phi(x)=0$ for $|x| \geq 2$,
+(iii) $0 \leq \phi \leq 1$, and (iv) $\phi$ is radial. We write, for $k=1,2,\ldots$,
+\[
+\phi_k(x) = \phi(k^{-1} x), \qquad x \in \mathbb{R}^d.
+\]
+For any multi-index $\alpha$,
+\[
+(D^\alpha \phi_k)(x) = k^{-|\alpha|_1} (D^\alpha \phi)(k^{-1}x), \qquad x \in \mathbb{R}^d,
+\]
+hence 
+\begin{equation}
+\norm{D^\alpha \phi_k}_\infty = k^{-|\alpha|_1} \norm{D^\alpha \phi}_\infty.
+\label{Dalpha}
+\end{equation}
+We use the following lemma to prove the theorem that comes after it.\footnote{Thomas H. Wolff, {\em Lectures on Harmonic Analysis}, p.~4, Lemma 1.5.}
+
+
+\begin{lemma}
+Suppose that $f \in C^N(\mathbb{R}^d)$ and $D^\alpha f \in L^1(\mathbb{R}^d)$ for each $|\alpha| \leq N$.
+Then
+for each $|\alpha| \leq N$, $D^\alpha  (\phi_k f) \to D^\alpha f$ in $L^1(\mathbb{R}^d)$ as $k \to \infty$.
+\label{testfunction}
+\end{lemma}
+\begin{proof}
+Let $|\alpha| \leq N$.
+In the case $\alpha=0$,
+\begin{align*}
+\norm{\phi_k f-f}_1 &= \int_{\mathbb{R}^d} |\phi_k(x) f(x)-f(x)| dx\\
+&=\int_{|x| \geq k} |\phi_k(x)f(x)-f(x)| dx\\
+&\leq \int_{|x| \geq k} |f(x)| dx.
+\end{align*}
+Because $f \in L^1(\mathbb{R}^d)$, this tends to $0$ as $k \to \infty$.
+
+Suppose that $\alpha>0$.
+The Leibniz rule tells us that with $c_\beta =\binom{\alpha}{\beta}$, we have, for each $k$,
+\[
+D^\alpha(\phi_k f) = \phi_k D^\alpha f + \sum_{0<\beta \leq \alpha} c_\beta D^{\alpha-\beta} f D^\beta \phi_k.
+\]
+For $C_1=\max_\beta |c_\beta|$,
+\begin{align*}
+\norm{D^\alpha(\phi_k f)-\phi_k D^\alpha f}_1&\leq \sum_{0<\beta \leq \alpha} \norm{c_\beta D^{\alpha-\beta} f D^\beta \phi_k}_1\\
+&\leq C_1 \sum_{0<\beta \leq \alpha} \norm{D^\beta \phi_k}_\infty \norm{D^{\alpha-\beta} f}_1.
+\end{align*}
+Let $C_2 = \max_{0<\beta \leq \alpha} \norm{D^\beta \phi}_\infty$. By \eqref{Dalpha}, for $0<\beta \leq \alpha$ we have
+\[
+\norm{D^\beta \phi_k}_\infty = k^{-|\beta|_1} \norm{D^\beta \phi}_\infty \leq C_2 k^{-|\beta|_1} \leq C_2 k^{-1}.
+\]
+Thus
+\[
+\norm{D^\alpha(\phi_k f)-\phi_k D^\alpha f}_1 \leq C_1 C_2 k^{-1} \sum_{0<\beta \leq \alpha} \norm{D^{\alpha-\beta}f}_1,
+\]
+which tends to $0$ as $k \to \infty$.
+For any $k$,
+\begin{align*}
+\norm{\phi_k D^\alpha f - D^\alpha f}_1 &=\int_{\mathbb{R}^d} |\phi_k(x) (D^\alpha f)(x)-(D^\alpha f)(x)| dx\\
+&=\int_{|x| \geq k} |\phi_k(x) (D^\alpha f)(x)-(D^\alpha f)(x)| dx\\
+&\leq \int_{|x| \geq k} |(D^\alpha f)(x)| dx,
+\end{align*}
+and because $D^\alpha f \in L^1(\mathbb{R}^d)$, this tends to $0$ as $k \to \infty$.
+But
+\[
+\norm{D^\alpha (\phi_k f)-D^\alpha f}_1 \leq
+\norm{D^\alpha (\phi_k f)-\phi_k D^\alpha f}_1
++\norm{\phi_k D^\alpha f-D^\alpha f}_1,
+\]
+which completes the proof.
+\end{proof}
+
+Now we calculate the Fourier transform of the derivative of a function, and show that
+the smoother a function is the faster its Fourier transform decays.\footnote{Thomas H. Wolff, {\em Lectures on Harmonic Analysis}, p.~4, Proposition 1.4.}
+
+\begin{theorem}
+If $f \in C^N(\mathbb{R}^d)$ and $D^\alpha f \in L^1(\mathbb{R}^d)$ for each
+$|\alpha| \leq N$, then for each $|\alpha| \leq N$,
+\begin{equation}
+\widehat{D^\alpha f}(\xi) = (2\pi i\xi)^\alpha \hat{f}(\xi), \qquad \xi \in \mathbb{R}^d.
+\label{fourierD}
+\end{equation}
+There is a constant $C=C(f,N)$ such that
+\[
+|\hat{f}(\xi)| \leq C(1+|\xi|)^{-N}, \qquad \xi \in \mathbb{R}^d.
+\]
+\end{theorem}
+\begin{proof}
+If $g \in C^1_c(\mathbb{R}^d)$, then for any $1 \leq j \leq d$, integrating by parts,
+\[
+\int_{\mathbb{R}^d} (\partial_j g)(x) e^{-2\pi i\xi \cdot x} dx = 2\pi i \xi_j \int_{\mathbb{R}^d} g(x) e^{-2\pi i\xi\cdot x} dx.
+\]
+It follows by induction that if $g \in C^N_c(\mathbb{R}^d)$, then for each $|\alpha| \leq N$,
+\[
+\widehat{D^\alpha g}(\xi) = (2\pi i\xi)^{\alpha} \hat{g}(\xi), \qquad \xi \in \mathbb{R}^d.
+\]
+
+Let $|\alpha| \leq N$. 
+For $k=1,2,\ldots$, let $f_k = \phi_k f$. For each $k$ we have
+ $f_k \in C^N(\mathbb{R}^d)$, hence
+\[
+\widehat{D^\alpha f_k}(\xi) = (2\pi i\xi)^\alpha \widehat{f_k}(\xi), \qquad \xi \in \mathbb{R}^d.
+\]
+On the one hand,
+\[
+\norm{\widehat{D^\alpha f_k}-\widehat{D^\alpha f}}_\infty 
+=\norm{\mathscr{F}(D^\alpha f_k - D^\alpha f)}_\infty
+\leq \norm{D^\alpha f_k-D^\alpha f}_1,
+\]
+and Lemma \ref{testfunction} tells us that this tends to $0$ as $k \to \infty$. 
+On the other hand, 
+for $\xi \in \mathbb{R}^d$,  
+\begin{align*}
+|\widehat{D^\alpha f_k}(\xi)  - (2\pi i\xi)^\alpha \hat{f}(\xi)|&=
+|(2\pi i\xi)^\alpha \widehat{f_k}(\xi)-(2\pi i\xi)^\alpha \hat{f}(\xi)|\\
+&=|(2\pi i \xi)^\alpha|  |\mathscr{F}(f_k-f)(\xi)|\\
+&\leq |(2\pi i \xi)^\alpha| \norm{f_k-f}_1,
+\end{align*}
+which by Lemma \ref{testfunction} tends to $0$ as $k \to \infty$.
+Therefore, for $\xi \in \mathbb{R}^d$,
+\[
+|\widehat{D^\alpha f}(\xi)-(2\pi i\xi)^\alpha \hat{f}(\xi)| \leq \norm{\widehat{D^\alpha f_k}-\widehat{D^\alpha f}}_\infty 
++|\widehat{D^\alpha f_k}(\xi)  - (2\pi i\xi)^\alpha \hat{f}(\xi)|,
+\]
+and because the right-hand side tends to $0$ as $k \to \infty$, we get
+\[
+\widehat{D^\alpha f}(\xi) = (2\pi i\xi)^\alpha \hat{f}(\xi).
+\]
+
+If $y \in S^{d-1}$ then there is at least one $1 \leq j \leq d$ with $y_j \neq 0$, from which we get
+\[
+\sum_{|\beta|_1 = N} |y^\beta| > 0.
+\]
+The function $y \mapsto \sum_{|\beta|_1 = N} |y^\beta|$ is continuous $S^{d-1} \to \mathbb{R}$, so
+there is some $C_N>0$ such that
+\[
+\frac{1}{C_N} \leq \sum_{|\beta|_1 = N} |y^\beta|, \qquad y \in S^{d-1}.
+\]
+For  nonzero $x \in \mathbb{R}^d$, write $x=|x|y$, with which
+$\sum_{|\beta|_1 = N} |x^\beta| = |x|^N \sum_{|\beta|_1=N} |y^\beta|$.  
+Therefore
+\[
+|x|^N \leq C_N \sum_{|\beta|_1 = N} |x^\beta|, \qquad x \in \mathbb{R}^d.
+\]
+
+For $|\alpha| \leq N$, because the Fourier transform of an element of $L^1$ belongs
+to $C_0$, we have by  \eqref{fourierD} that  $\xi \mapsto \xi^\alpha \hat{f}(\xi)$ belongs to $C_0(\mathbb{R}^d)$, and in 
+particular is bounded. Then for $\xi \in \mathbb{R}^d$,
+\begin{align*}
+|\xi|^N |\hat{f}(\xi)|& \leq C_N \sum_{|\beta|_1 = N} |\xi^\beta| |\hat{f}(\xi)|\\
+&= C_N \sum_{|\beta|_1 = N} |\xi^\beta \hat{f}(\xi)|\\
+&\leq C_N \sum_{|\beta|_1 = N} \norm{\xi^\beta \hat{f}(\xi)}_\infty\\
+&=C'.
+\end{align*}
+On the one hand,
+for $|\xi| \geq 1$ we have
+\[
+1+|\xi| \leq 2|\xi|,
+\]
+hence
+\[
+|\xi|^{-N} \leq \left( \frac{1+|\xi|}{2} \right)^{-N}  = 2^N (1+|\xi|)^{-N},
+\]
+giving
+\[
+|\hat{f}(\xi)| \leq C' |\xi|^{-N} \leq C' 2^N (1+|\xi|)^{-N}.
+\]
+On the other hand, for $|\xi| \leq 1$ we have
+\[
+1+|\xi| \leq 2,
+\]
+and so
+\[
+|\hat{f}(\xi)| \leq \norm{\hat{f}}_\infty 2^N 2^{-N}   \leq 
+  \norm{\hat{f}}_\infty 2^N (1+|\xi|)^{-N} .
+\]
+Thus, for
+\[
+C=\max\left\{2^N C', 2^N \norm{\hat{f}}_\infty\right\}
+\]
+we have 
+\[
+|\hat{f}(\xi)| \leq C(1+|\xi|)^{-N}, \qquad \xi \in \mathbb{R}^d,
+\]
+completing the proof.
+\end{proof}
+
+
+
+
+\section{Bernstein's inequality for {\em L\textsuperscript{2}}}
+For a Borel measurable function $f:\mathbb{R}^d \to \mathbb{C}$, 
+let $O$ be the union of those open subsets $U$ of $\mathbb{R}^d$ such that $f(x)=0$ for almost all
+$x \in U$. In other words, $O$ is the largest open set on which $f=0$ almost everywhere.
+The 
+\textbf{essential support of $f$} is the set
+\[
+\ess \supp f = \mathbb{R}^d \setminus O.
+\]
+
+
+The following is \textbf{Bernstein's inequality for $L^2(\mathbb{R}^d)$}.\footnote{Thomas H. Wolff,
+{\em Lectures on Harmonic Analysis}, p.~31, Proposition 5.1.}
+
+\begin{theorem}
+If $f \in L^2(\mathbb{R}^d)$, $R>0$, and 
+\begin{equation}
+\ess \supp \hat{f} \subset \overline{B(0,R)},
+\label{esssup}
+\end{equation}
+then there is some $f_0 \in C^\infty(\mathbb{R}^d)$ such that $f(x)=f_0(x)$ for almost all $x \in \mathbb{R}^d$,
+and for any multi-index $\alpha$,
+\[
+\norm{D^\alpha f_0}_2 \leq (2\pi R)^{|\alpha|_1} \norm{f}_2.
+\]
+\end{theorem}
+\begin{proof}
+Let $\chi_R$ be the indicator function for  $\overline{B(0,R)}$. By \eqref{esssup}, the Cauchy-Schwarz inequality, and the Parseval identity,
+\[
+\norm{\hat{f}}_1 =  \norm{\chi_R \hat{f}}_1 \leq \norm{\chi_R}_2 \norm{\hat{f}}_2
+=m_d(\overline{B(0,R)})^{1/2} \norm{f}_2
+< \infty,
+\]
+so $\hat{f} \in L^1(\mathbb{R}^d)$.
+The Plancherel theorem\footnote{Walter Rudin, {\em Real and Complex Analysis}, third ed., p.~187, Theorem 9.14.}
+ tells us that if
+$g \in L^2(\mathbb{R}^d)$ and $\hat{g} \in L^1(\mathbb{R}^d)$, then
+\[
+g(x) = \int_{\mathbb{R}^d} \hat{g}(\xi) e^{2\pi ix\cdot \xi} d\xi
+\]
+for almost all $x \in \mathbb{R}^d$. 
+Thus, for
+ $f_0:\mathbb{R}^d \to \mathbb{C}$ defined by
+\[
+f_0(x) = \int_{\mathbb{R}^d} \hat{f}(\xi) e^{2\pi ix \cdot \xi} d\xi=\mathscr{F}(\hat{f})(-x), \qquad
+x \in \mathbb{R}^d,
+\]
+we have $f(x)=f_0(x)$ for almost all $x \in \mathbb{R}^d$. Because $f=f_0$ almost everywhere,
+\[
+\widehat{f_0}=\hat{f}.
+\]
+
+Applying Theorem \ref{mucompact} to $d\mu(\xi)=\widehat{f_0}(-\xi) d\xi$, 
+we have $f_0 \in C^\infty(\mathbb{R}^d)$ and for any multi-index $\alpha$,
+\[
+D^\alpha f_0 = \mathscr{F}((-2\pi i\xi)^\alpha \hat{f}(-\xi)).
+\]
+By Parseval's identity,
+\begin{align*}
+\norm{D^\alpha f_0}_2&=\norm{(-2\pi i\xi)^\alpha \hat{f}(-\xi)}_2\\
+&=\norm{(2\pi i\xi)^\alpha \chi_R(\xi) \hat{f}(\xi)}_2\\
+&\leq \norm{(2\pi i\xi)^\alpha \chi_R(\xi)}_\infty \norm{\hat{f}}_2\\
+&\leq (2\pi R)^{|\alpha|_1} \norm{\hat{f}}_2\\
+&= (2\pi R)^{|\alpha|_1} \norm{f}_2,
+\end{align*}
+proving the claim.
+\end{proof}
+
+
+
+\section{Nikolsky's inequality}
+\textbf{Nikolsky's inequality} tells us that if the Fourier transform of a function is supported on a ball centered at the origin, then
+for $1 \leq p \leq q \leq \infty$, the $L^q$ norm of the function is bounded above in terms of its $L^p$ norm.\footnote{Camil Muscalu and Wilhelm Schlag, {\em Classical and Multilinear
+Harmonic Analysis}, volume I, p.~83, Lemma 4.13.}
+
+\begin{theorem}
+There is a constant $C_d$ such that
+if $f \in \mathscr{S}(\mathbb{R}^d)$, $R>0$, 
+\[
+\supp \hat{f} \subset \overline{B(0,R)},
+\]
+and $1 \leq p \leq q \leq \infty$, then
+\[
+\norm{f}_q \leq C_d R^{d\left(\frac{1}{p}-\frac{1}{q}\right)} \norm{f}_p.
+\]
+\end{theorem}
+\begin{proof}
+Let $g=f_{R}$, i.e. 
+\[
+g(x) = R^{-d} f(R^{-1}x), \qquad x \in \mathbb{R}^d.
+\]
+Then  for $\xi \in \mathbb{R}^d$,
+\[
+\hat{g}(\xi) = \int_{\mathbb{R}^d} g(x) e^{-2\pi i\xi\cdot x} dx
+=\int_{\mathbb{R}^d} R^{-d} f(R^{-1}x) e^{-2\pi i\xi \cdot x} dx
+=\hat{f}(R\xi),
+\]
+showing that $\supp \hat{g} = R^{-1} \supp \hat{f} \subset \overline{B(0,1)}$.
+Let $\chi \in \mathscr{D}(\mathbb{R}^d)$ with $\chi(\xi)=1$ for $|\xi| \leq 1$, with which
+\[
+\hat{g}= \chi \hat{g}.
+\]
+Then $g = (\mathscr{F}^{-1} \chi)*g$, and using Young's inequality, with $1+\frac{1}{q}=\frac{1}{r}+\frac{1}{p}$,
+\begin{equation}
+\norm{g}_q\leq \norm{\mathscr{F}^{-1} \chi}_{r} \norm{g}_q=\norm{\hat{\chi}}_r \norm{g}_q.
+\label{ginequality}
+\end{equation}
+Moreover,
+\begin{align*}
+\norm{g}_a &= \left( \int_{\mathbb{R}^d} |R^{-d} f(R^{-1}x)|^a dx \right)^{1/a}\\
+&=\left( \int_{\mathbb{R}^d} R^{-da+d} |f(y)|^a dy \right)^{1/a}\\
+&=R^{d\left(\frac{1}{a}-1\right)} \norm{f}_a,
+\end{align*}
+so \eqref{ginequality} tells us
+\[
+R^{d\left(\frac{1}{q}-1\right)} \norm{f}_q \leq \norm{\hat{\chi}}_r 
+R^{d\left(\frac{1}{p}-1\right)} \norm{f}_p,
+\]
+i.e.
+\[
+\norm{f}_q \leq \norm{\hat{\chi}}_r R^{d\left(\frac{1}{p}-\frac{1}{q}\right)} \norm{f}_p.
+\]
+Now, $\frac{1}{r}=1+\frac{1}{q}-\frac{1}{p}$, so $0 \leq \frac{1}{r} \leq 1$ because $1 \leq p \leq q \leq \infty$, namely,
+$1 \leq r \leq \infty$. 
+By the log-convexity of $L^r$ norms, for $\frac{1}{r}=1-\theta$ we have
+\[
+\norm{\hat{\chi}}_r \leq \norm{\hat{\chi}}_1^{1-\theta} \norm{\hat{\chi}}_\infty^{\theta}.
+\]
+Thus with
+\[
+C_d = \max\{\norm{\hat{\chi}}_1,\norm{\hat{\chi}}_\infty\}
+\]
+we have proved the claim.
+\end{proof}
+
+
+\section{The Dirichlet kernel and Fej\'er kernel for \textbf{R}}
+The function $D_M \in C_0(\mathbb{R})$ defined by
+\[
+D_M(x)=\frac{\sin 2\pi Mx}{\pi x}, \qquad x \neq 0
+\]
+and $D_M(0)=2M$, is called the \textbf{Dirichlet kernel}.
+Let $\chi_M$ be the indicator function for the set $[-M,M]$. We have, for $x \neq 0$,
+\begin{align*}
+\widehat{\chi_R}(x)& = \int_{\mathbb{R}} \chi_R(\xi) e^{-2\pi ix\xi} d\xi\\
+&=\int_{-M}^M e^{-2\pi ix\xi} d\xi\\
+&=\frac{e^{-2\pi ix\xi}}{-2\pi ix} \bigg|_{-M}^M\\
+&=\frac{e^{-2\pi iMx}}{-2\pi ix} + \frac{e^{2\pi iMx}}{2\pi ix}\\
+&=\frac{1}{\pi x} \frac{e^{2\pi iMx}-e^{-2\pi iMx}}{2i}\\
+&=\frac{\sin 2\pi Mx}{\pi x}.
+\end{align*}
+For $x=0$, $\widehat{\chi_R}(0)=2M=D_M(0)$. Thus,
+\[
+D_M=\widehat{\chi_R}.
+\]
+
+For $f \in L^1(\mathbb{R})$ and $M>0$, we define
+\[
+(S_M f)(x) = \int_{-M}^M \hat{f}(\xi) e^{2\pi i\xi x} d\xi, \qquad x \in \mathbb{R}.
+\]
+It is straightforward to check that
+\[
+(S_M f)(x) = \int_{\mathbb{R}} \frac{\sin 2\pi Mt}{\pi t} f(x-t) dt
+=(D_M*f)(x), \qquad x \in \mathbb{R}.
+\]
+
+
+For $f \in L^1(\mathbb{R})$, $M>0$, and $x \in \mathbb{R}$,
+\begin{align*}
+\frac{1}{M} \int_0^M (S_mf)(x) dm&=\frac{1}{M} \int_0^M \left( \int_{-m}^m \hat{f}(\xi) e^{2\pi i\xi x} d\xi \right) dm\\
+&=\frac{1}{M}  \int_0^M \left( \int_{-m}^m \left( \int_{\mathbb{R}} f(y) e^{-2\pi i\xi y} dy \right) e^{2\pi i\xi x} d\xi \right) dm\\
+&=\frac{1}{M} \int_{\mathbb{R}} f(y) \left( \int_0^M \left( \int_{-m}^m e^{-2\pi i\xi(y-x)} d\xi\right) dm \right) dy\\
+&=\frac{1}{M} \int_{\mathbb{R}} f(y) \left( \int_0^M D_m(y-x) dm \right) dy\\
+&=\frac{1}{M} \int_{\mathbb{R}} f(y)  \left( \int_0^M \frac{\sin 2\pi m(y-x)}{\pi(y-x)} dm \right) dy\\
+&=\frac{1}{M} \int_{\mathbb{R}} f(y) \left( -\frac{\cos 2\pi m(y-x)}{2\pi^2 (y-x)^2} \bigg|_{0}^M \right) dy\\
+&=\frac{1}{M} \int_{\mathbb{R}} f(y) \left(\frac{1}{2\pi^2(y-x)^2} - \frac{\cos 2\pi M(y-x)}{2\pi^2(y-x)^2} \right) dy.
+\end{align*}
+We define the \textbf{Fej\'er kernel} $K_M \in C_0(\mathbb{R})$ by
+\[
+K_M(x) = \frac{1-\cos 2\pi M x}{2M \pi^2 x^2}, \qquad x \neq 0,
+\]
+and $K_M(0)=M$. Thus, because $K_M$ is an even function,
+\[
+\frac{1}{M} \int_0^M (S_m f)(x) dm = (K_M*f)(x).
+\]
+
+One proves that $K_M$ is an \textbf{approximate identity}:  $K_M \geq 0$, 
+\[
+\int_{\mathbb{R}} K_M(x) dx = 1,
+\]
+and for any $\delta>0$,
+\[
+\lim_{M \to \infty} \int_{|x|>\delta} K_M(x) dx =0.
+\]
+The fact that $K_M$ is an approximate identity implies that for any $f \in L^1(\mathbb{R})$,
+$K_M*f \to f$ in $L^1(\mathbb{R})$ as $M \to \infty$. 
+
+
+We shall use the Fej\'er kernel to prove Bernstein's inequality for $\mathbb{R}$.\footnote{Mark A. Pinsky,
+{\em Introduction to Fourier Analysis and Wavelets}, p.~122, Theorem 2.3.17.}
+
+\begin{theorem}
+If $\mu \in \mathcal{M}(\mathbb{R})$, $M>0$, and
+\[
+\supp \mu \subset [-M,M],
+\]
+then
+\[
+\norm{\hat{\mu}'}_\infty \leq 4\pi M \norm{\hat{\mu}}_\infty.
+\]
+\end{theorem}
+\begin{proof}
+For $x_0 \in \mathbb{R}$, let $d\mu_{x_0}(t)=e^{-2\pi i x_0 t} d\mu(t)$. $\mu_{x_0}$ has the same support has $\mu$, and
+\[
+\widehat{\mu_{x_0}}(x) = \int_{\mathbb{R}} e^{-2\pi ix t} d\mu_{x_0}(t)
+=\int_{\mathbb{R}} e^{-2\pi ix t} e^{-2\pi ix_0 t} d\mu(t)
+=\hat{\mu}(x+x_0).
+\]
+It follows that to prove the claim it suffices to prove that $|\hat{\mu}'(0)| \leq 4\pi M \norm{\hat{\mu}}_\infty$. 
+
+Write $f=\hat{\mu} \in C_u(\mathbb{R})$. Define $\Delta_M \in C_c(\mathbb{R})$ by
+\[
+\Delta_M(t)=\begin{cases}
+M-|t|&|t|<M\\
+0&|t| \geq M,
+\end{cases}
+\qquad t \in \mathbb{R}.
+\]
+We calculate, for $x \neq 0$,
+\begin{align*}
+\int_{\mathbb{R}} \Delta_M(t) e^{-2\pi ix t} dt&=-\frac{e^{-2\pi iMx}(-1+e^{2\pi iMx})^2}{4\pi^2 x^2}\\
+&=\frac{(\sin \pi Mx)^2}{\pi^2 x^2}\\
+&=\frac{1-\cos 2\pi Mx}{2\pi^2 x^2}.
+\end{align*}
+so
+\[
+\widehat{\Delta_M}(x) = MK_M(x).
+\]
+Then for $t \in [-M,M]$,
+\begin{align*}
+\int_{\mathbb{R}} (e^{2\pi iM\xi}-e^{-2\pi iM\xi}) K_M(\xi) e^{-2\pi i\xi t} d\xi&=
+\widehat{K_M}(t-M)-\widehat{K_M}(t+M)\\
+&=\frac{\Delta_M(-t+M)-\Delta_M(-t-M)}{M}\\
+&=\frac{t}{M}.
+\end{align*}
+On the one hand, the integral of the left-hand side with respect to $\mu$ is
+\[
+\begin{split}
+&\int_{\mathbb{R}} \int_{\mathbb{R}} (e^{2\pi iM\xi}-e^{-2\pi iM\xi}) K_M(\xi) e^{-2\pi i\xi t} d\xi d\mu(t)\\
+=&\int_{\mathbb{R}}  (e^{2\pi iM\xi}-e^{-2\pi iM\xi}) K_M(\xi) f(\xi) d\xi.
+\end{split}
+\]
+On the other hand, the integral of the right-hand side with respect to $\mu$ is
+\begin{align*}
+\int_{\mathbb{R}} \frac{t}{M} d\mu(t)&=\frac{1}{-2\pi i M} \int_{\mathbb{R}} -2\pi i t d\mu(t)\\
+&=\frac{1}{-2\pi iM} \mathscr{F}((-2\pi it) \mu)(0)\\
+&=\frac{1}{-2\pi iM} f'(0).
+\end{align*}
+Hence
+\[
+\frac{1}{-2\pi iM} f'(0) = \int_{\mathbb{R}}  (e^{2\pi iM\xi}-e^{-2\pi iM\xi}) K_M(\xi) f(\xi) d\xi,
+\]
+giving
+\[
+|f'(0)| \leq 4 \pi M \norm{f}_\infty  \norm{K_M}_1 = 4\pi M \norm{f}_\infty,
+\]
+proving the claim.
+\end{proof}
+
+\end{document}
+

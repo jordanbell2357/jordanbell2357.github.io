@@ -1,0 +1,176 @@
+\documentclass[10pt]{article}
+\usepackage{amsmath,amssymb,mathrsfs,graphicx,amsthm}
+%\usepackage{times}
+%\textwidth 4.5in  \textheight 7.125in
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem*{definition}{Definition}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newcommand{\comment}[1]{}
+\begin{document}
+%\title{A note on  Costas sequences and cyclotomic permutations}
+\title{What is a Costas array?}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+\maketitle
+
+\section{Introduction}
+
+To find the speed and distance
+of a moving object relative to an observer,
+a signal with a known frequency is sent from the observer towards the object.
+It reflects off the object, and the reflected signal has a new frequency,
+due to the Doppler effect. Knowing the frequencies of the emitted and
+reflected signals, the speed
+of the moving object relative to the observer can be determined.
+Knowing the time between emitting the signal and receiving the
+reflected signal, the distance of the moving object to the object
+can be determined. See \cite[p. 74]{levanon}.
+
+Let's say we have a stationary observer, and an object is moving radially
+away from the observer with a constant speed. One wants to find the
+speed $v$ of the moving object and its distance $d$
+from the observer.   
+
+Suppose that at times $t_1,\ldots,t_n$ signals are sent from the observer
+to the moving object and that the $i$th signal takes time $\delta_i$
+to hit the object.
+At times $t_1,\ldots,t_n$ let the corresponding distances of the
+object be $d_1,\ldots,d_n$. We note that
+$d_i=d_1+(t_i-t_1)v$.
+Suppose that the signal speed is $c$.
+The first signal hits the object when $\delta_1 c-d_1=\delta_1 v$, hence when
+\[
+\delta_1=\frac{d_1}{c-v}=\frac{d_1}{c}\frac{1}{1-\frac{v}{c}}=\frac{d_1}{c}
++O(c^{-2}).
+\]
+The $i$th signal hits the object when $\delta_ic-d_i=\delta_iv$, hence when
+\[
+\delta_i=\frac{d_i}{c-v}=\frac{d_i}{c}\frac{1}{1-\frac{c}{v}}
+=\frac{d_i}{c}+O(c^{-2})
+=\frac{d_1}{c}+\frac{(t_i-t_1)v}{c}+O(c^{-2}).
+\]
+Supposing that $(t_i-t_1)v$ is negligible compared to $d_1$,
+we can say that approximately $\delta_1=\cdots=\delta_n$;
+write $\delta=\delta_1=\cdots=\delta_n$.
+
+If the emitted signals have frequencies $e_1,\ldots,e_n$ and
+the reflected signals have frequencies $r_1,\ldots,r_n$, 
+by the Doppler shift we have $r_i=e_i\cdot \frac{1-v/c}{1+v/c}$
+\cite[p. 4]{levanon}. Thus
+the frequency shift for each signal is
+\[
+r_i-e_i=-2v\frac{e_i}{c+v}=-\frac{2ve_i}{c}+O(c^{-2}).
+\]
+We assume that the set of frequencies is narrowband, so that approximately
+$e_1=\cdots=e_n$. Hence the frequency shifts are approximately equal;
+write
+$\xi=-\frac{2ve_1}{c}=\cdots=-\frac{2ve_n}{c}$.
+
+Then the frequency of the signal received at time $t_i+\delta$ 
+will be equal to the sum of $\xi$ and
+the frequency of the signal emitted at time $t_i$.
+Let $e(t)$ be the frequency of the signal emitted at time $t$, and 
+let $r(t)$ be the frequency of the reflected signal received at time $t$.
+So $r(t_i+\delta)=e(t_i)+\xi$ for each $i=1,\ldots,n$.
+
+Let's use units such that the times $t_1,\ldots,t_n$ are integers.
+We define the {\em cross-correlation} of the signals $e$ and $r$
+by
+\[
+C_{e,r}(v,h)=\sum_{i=-\infty}^\infty \delta_{e(i),r(i+v)-h},
+\]
+where $\delta_{i,j}$ here is the Kronecker delta.
+For $t$ other than $t_1,\ldots,t_n$ and $t$ other than
+$t_1+\delta,\ldots,t_n+\delta$,
+it is convenient to take respectively $e(t)$ and $r(t)$ to be undefined
+rather than equal to 0. When either $e(t)$ or $r(t)$ is undefined
+the Kronecker delta will then be 0.
+Then 
+\begin{eqnarray*}
+C_{e,r}(v,h)&=&\sum_{i=-\infty}^\infty \delta_{e(i),r(i+v)-h}\\
+&=&\sum_{i=-\infty}^\infty \delta_{e(i+\delta-v),r(i+\delta)-h}\\
+&=&\sum_{i=-\infty}^\infty \delta_{e(i+\delta-v),e(i)+\xi-h}\\
+&=&\sum_{i=-\infty}^\infty \delta_{e(i),e(i-\delta+v)+\xi-h}\\
+&=&C_{e,e}(v-\delta,h-\xi).
+\end{eqnarray*}
+
+Certainly $C_{e,e}(v,h) \leq C_{e,e}(0,0)=n$ for all $v,h$. 
+Thus
+$C_{e,r}(v,h) \leq C_{e,r}(\delta,\xi)=n$ for all $v,h$.
+
+We wish to find
+\[
+\max_{(v,h) \neq (0,0)} C_{e,e}(v,h).
+\]
+For any $1 \leq j<k \leq n$, let $v=t_k-t_j$ and $h=e(t_k)-e(t_j)$.
+\begin{eqnarray*}
+C_{e,e}(v,h)&=&C_{e,e}(t_k-t_j,e(t_k)-e(t_j))\\
+&=&\sum_{i=-\infty}^\infty \delta_{e(i),e(i+t_k-t_j)-e(t_k)+e(t_j)}\\
+&\geq&\delta_{e(t_j),e(t_j+t_k-t_j)-e(t_k)+e(t_j)}\\
+&=&1,
+\end{eqnarray*}
+so $\max_{(v,h) \neq (0,0)} C_{e,e}(v,h) \geq 1$.
+
+We want to figure out $\delta$ and $\xi$ by knowing $C_{e,r}(v,h)$ for
+all $v,h$.
+If we have that $\max_{(v,h) \neq (0,0)} C_{e,e}(v,h)=1$, then either
+$(v,h)=(\delta,\xi)$ and $C_{e,r}(v,h)=n$,
+or $(v,h) \neq (\delta,\xi)$ and 
+$C_{e,r}(v,h) \leq 1$, that is, the autocorrelation at the pair $(\delta,
+\xi)$ that we wish to find is as sharply distinguished as possible
+from the autocorrelation
+at the other time-frequency pairs $(v,h)$.
+
+\section{Mathematics}
+Define a new sequence $f$ by
+\[
+f(i)=|\{1 \leq j \leq n:e(t_j) \leq e(t_i)\}|, \qquad
+1 \leq i \leq n.
+\]
+The sequence $f$ is a normalization of the sequence $e$. One quickly checks
+that
+$\max_{(v,h) \neq (0,0)} C_{e,e}(v,h)=1$ is equivalent to 
+$\max_{(v,h) \neq (0,0)} C_{f,f}(v,h)=1$.
+
+Let $T=\{(i,f(i)):i=1,\ldots,n\} \subset \mathbb{Z}^2$.
+The condition $\max_{(v,h) \neq (0,0)} C_{f,f}(v,h)=1$
+holds if and only if $|T \cap (T+(v,h))| \leq 1$ for
+all $(v,h) \neq (0,0)$.
+
+\begin{definition}
+A {\em Costas sequence of length $n$} is a sequence $f(1),\ldots,f(n)$
+of length $n$ such that if $T=\{(i,f(i)):i=1,\ldots,n\}$, then
+$|T \cap (T+(v,h))| \leq 1$ for all $(v,h) \neq (0,0)$. We call the set
+$T$ a {\em Costas array}.
+\end{definition}
+
+This can also be said in the following way.
+For $1 \leq i_1 \leq i_2 \leq n$
+and $1 \leq i_3 \leq i_4 \leq n$,
+if $(i_1-i_2,f(i_1)-f(i_2))=
+(i_3-i_4,f(i_3)-f(i_4))$ then $i_1=i_3$ and $i_2=i_4$.
+
+Drakakis \cite{review} 
+gives a survey of Costas arrays.
+
+\section{Generalizations}
+Now that we have detached Costas sequences from the time-frequency setting
+in which they originate, 
+we can investigate them as mathematical objects, and also investigate
+modifications of Costas sequences.
+
+Let $[n]=\{1,\ldots,n\} \subset \mathbb{Z}$.
+A Costas sequence $f$ of length $n$ is a bijection $f:[n] \to [n]$ that satisfies
+the condition on overlapping translates.
+
+Moran \cite{moran}
+
+
+\bibliographystyle{plain}
+\bibliography{costas}
+
+\end{document}

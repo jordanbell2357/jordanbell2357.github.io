@@ -1,0 +1,185 @@
+\documentclass{article}
+\usepackage{amssymb,latexsym,amsmath,amsthm,mathrsfs,amsthm}
+\usepackage{graphicx}
+%\usepackage{setspace}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{construction}[theorem]{Construction}
+\DeclareMathOperator{\Sin}{sin.}
+%\doublespacing
+\begin{document}
+\title{Newton's identities and the pentagonal number theorem}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+
+\section{Introduction}
+The pentagonal number theorem is the identity
+\[
+\prod_{n=1}^\infty (1-x^n)=\sum_{n=-\infty}^\infty (-1)^n x^{\frac{n(3n-1)}{2}}.
+\]
+Euler discovered the pentagonal number theorem in 1740, and finally proved
+the theorem in 1750 \cite{bell}. Euler's proof is the following.
+Let
+\[
+S_N=\sum_{n=1}^\infty x^{N(n-1)}(1-x^N)\cdots(1-x^{n+N-1}).
+\]
+Euler uses the identity $\prod_{n=1}^\infty (1-a_n)=
+1-a_1-\sum_{n=2}^\infty a_n(1-a_1)\cdots(1-a_{n-1})$ to get
+$\prod_{n=1}^\infty (1-x^n)=1-x-\sum_{n=2}^\infty x^n(1-x)\cdots(1-x^{n-1})$
+and so $\prod_{n=1}^\infty (1-x^n)=1-x-x^2S_1$.
+Euler proves that $S_N=1-x^{2N+1}-x^{3N+2}S_{N+1}$, and then iterates this
+to obtain
+the pentagonal number theorem.
+
+In \cite{E542},
+Euler uses Newton's identities together with the pentagonal number theorem
+to prove identities for divergent series.
+Euler says that all the roots of unity of each power will be roots
+of the equation
+\[
+0=1-x^1-x^2+x^5+x^7-x^{12}-x^{15}+x^{22}+x^{26}-\textrm{etc.},
+\]
+and so if we denote the roots by $\alpha,\beta,\gamma,\delta$, etc. then
+\[
+\frac{1}{\alpha}+\frac{1}{\beta}+\frac{1}{\gamma}+\frac{1}{\delta}+\textrm{etc.}=1.
+\]
+By applying Newton's identities, Euler gets
+\[
+\frac{1}{\alpha^2}+\frac{1}{\beta^2}+\frac{1}{\gamma^2}+
+\frac{1}{\delta^2}+\textrm{etc.}=3,
+\]
+and likewise formulas for the sums of the higher powers of the roots.
+Rademacher \cite{MR0262045}
+clarifies these statements.
+
+Euler uses Newton's identities
+in his discovery of the values of $\zeta(2n)$.
+Generally, Euler uses Newton's identities to relate expressions
+for the same thing as sums and products,
+such as the representations of Bessel functions as infinite
+series and infinite products (cf. \cite[pp. 497--503]{watson}).
+
+We denote by $\sigma(n)$ the sum of the positive divisors of $n$.
+In 1747, Euler discovered the following recurrence relation
+for $\sigma(n)$ \cite[pp. 345--356]{bell}.
+Let $\omega_j=\frac{j(3j-1)}{2}$, the $j$th pentagonal number.
+For $n \neq \frac{m(3m-1)}{2}$,
+\[
+\sigma(n)=\sum_{j=1}^\infty (-1)^{j-1}(\sigma(n-\omega_j)+\sigma(n-\omega_{-j})),
+\]
+and for $n=\frac{m(3m-1)}{2}$,
+\[
+\sigma(n)=(-1)^{m-1}n+\sum_{j=1}^\infty (-1)^{j-1}(\sigma(n-\omega_j)+
+\sigma(n-\omega_{-j})).
+\]
+
+In this note we give a proof of Euler's pentagonal number theorem using
+Newton's identities and Euler's recurrence relation for the sum of divisors function
+$\sigma$. This proof draws attention to the connection between the product
+$\prod (1-x^n)$ and roots of unity.
+
+\section{Results}
+Let $\prod_{k=1}^n (1+X_k T)=\sum_{k=0}^n s_k T^k$.
+For $d \geq 1$, let $p_d=\sum_{k=1}^n X_k^d$.
+Newton's identities \cite[IV.65]{MR643362} are
+\begin{equation}
+\label{newton}
+p_d=\sum_{k=1}^{d-1} (-1)^{k-1} s_k p_{d-k} +(-1)^{d+1} ds_d,
+\quad d \geq 1.
+\end{equation}
+
+Now we shall present a proof of the pentagonal number theorem
+using Newton's identities and Euler's recurrence relation for $\sigma(n)$.
+Let $e_k(j)=e^{\frac{2\pi ij}{k}}$. Then
+\[
+1-t^k=\prod_{j=1}^k (1-e_k(j)t).
+\]
+Let $N(n)=\frac{n(n+1)}{2}$.
+
+Define $s_{k,n}$ by
+\[
+\prod_{k=1}^n \prod_{j=1}^k (1-e_k(j)t)
+=\sum_{k=0}^{N(n)} (-1)^k s_{k,n} t^k.
+\]
+
+On the one hand,
+\[
+\prod_{k=1}^{n+1}(1-t^k)=(1-t^{n+1})\prod_{k=1}^n (1-t^k)
+=(1-t^{n+1})\sum_{k=0}^{N(n)} (-1)^k s_{k,n} t^k.
+\]
+On the other hand,
+\[
+\prod_{k=1}^{n+1}(1-t^k)=\sum_{k=0}^{N(n+1)} (-1)^k s_{k,n+1} t^k.
+\]
+Hence for $k \leq n$, $s_{k,n}=s_{k,n+1}$.
+
+Define $s_k$ by
+\[
+(-1)^k s_k=\begin{cases}0,&k \neq \frac{j(3j-1)}{2},\\
+(-1)^j,&k=\frac{j(3j-1)}{2}.
+\end{cases}
+\]
+We want to show that $s_{n,n}=s_n$ for all $n \geq 1$.
+
+First, $1-t=s_{0,1}-s_{1,1}t$ and so $s_{1,1}=1$. By its definition,
+$s_1=1$. Assume now tha
+$s_{n,n}=s_n$, and thus that
+$s_{k,n}=s_n$ for all $k \leq n$. 
+
+By Newton's identities \eqref{newton},
+\[
+p_{n+1,n+1}=(-1)^{n+2}(n+1)s_{n+1,n+1}
++\sum_{k=1}^n (-1)^{k-1} s_{k,n+1}p_{n+1-k,n+1}.
+\]
+
+We note the following.
+\begin{eqnarray*}
+p_{d,n}&=&\sum_{k=1}^n \sum_{j=1}^k e_k(j)^d\\
+&=&\sum_{k=1}^n \begin{cases}
+k,&k|d,\\
+0,&\textrm{otherwise}.
+\end{cases}
+\end{eqnarray*}
+Hence $p_{d,n}=\sigma(d)$ if $d \leq n$.
+Euler studies exponential sums in \cite{E447}.
+
+We use the fact that $p_{k,n}=\sigma(k)$ if $k \leq n$ to get
+\[
+\sigma(n+1)=
+(-1)^{n+2}(n+1)s_{n+1,n+1}
++\sum_{k=1}^n (-1)^{k-1} s_{k,n+1}\sigma(n+1-k).
+\]
+
+But furthermore, by assumption $s_{k,n+1}=s_k$ for $k \leq n$, so
+\[
+\sigma(n+1)=(-1)^{n+2}(n+1)s_{n+1,n+1}
++\sum_{k=1}^n (-1)^{k-1} s_k\sigma(n+1-k).
+\]
+
+Either $n+1 \neq \frac{m(3m-1)}{2}$ or $n+1=\frac{m(3m-1)}{2}$.
+In the first case, the recurrence relation for $\sigma(n+1)$ is
+\[
+\sigma(n+1)=\sum_{j=1}^\infty (-1)^{j-1}(\sigma(n+1-\omega_j)
++\sigma(n+1-\omega_{-j})).
+\]
+This implies that $s_{n+1,n+1}=0$. But $s_{n+1}=0$ also, so $s_{n+1,n+1}=s_{n+1}$.
+
+In the second case, the recurrence relation for $\sigma(n+1)$ is
+\[
+\sigma(n+1)=(-1)^{m-1}(n+1)
++\sum_{j=1}^\infty (-1)^{j-1}(\sigma(n+1-\omega_j)+\sigma(n+1-\omega_{-j})).
+\]
+This implies that $(-1)^{m-1}(n+1)=(-1)^{n+2}(n+1)s_{n+1,n+1}$, and hence
+$(-1)^{n+1}s_{n+1,n+1}=(-1)^m$. But $(-1)^{n+1}s_{n+1}=(-1)^m$, so
+$s_{n+1,n+1}=s_{n+1}$.
+
+This completes the proof by induction that $s_{n,n}=s_n$ for all $n \geq 1$.
+
+
+\bibliographystyle{plain}
+\bibliography{newton-identities}
+\end{document}

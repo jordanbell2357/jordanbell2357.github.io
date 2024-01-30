@@ -1,0 +1,259 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm,siunitx}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\cco}{\ensuremath\overline{\mathrm{co}}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}}
+\newcommand{\epi}{\ensuremath\mathrm{epi}\,}
+\newcommand{\Tr}{\ensuremath\mathrm{Tr}\,}
+\newcommand{\lsc}{\ensuremath\mathrm{lsc}\,}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\LSC}{\ensuremath\mathrm{LSC}}
+\renewcommand{\div}{\ensuremath\mathrm{div}\,}
+\newcommand{\curl}{\ensuremath\mathrm{curl}\,}
+\newcommand{\USC}{\ensuremath\mathrm{USC}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Hamilton-Jacobi equation}
+\author{Jordan Bell}
+\date{April 16, 2014}
+
+\maketitle
+
+\section{Example of free particle in one dimension}
+Define $L(q,v)=\frac{m}{2}v^2$, where $m$ is a nonzero constant. Fixing two times $t_0<t_1$, we define the action for a path $\gamma$ in $\mathbb{R}$ by
+\begin{eqnarray*}
+S(\gamma) &=& \int_{t_0}^{t_1} L(\gamma(t),\dot{\gamma}(t)) dt\\
+&=&\frac{m}{2} \int_{t_0}^{t_1} (\dot{\gamma}(t))^2 dt. 
+\end{eqnarray*}
+Suppose that $\gamma$ is satisfies the Euler-Lagrange equation for the Lagrangian $L$. That is,
+\[
+\frac{d}{dt} \left(\frac{\partial L}{\partial v}(\gamma(t),\dot{\gamma}(t)) \right)  - \frac{\partial L}{\partial q}(\gamma(t),\dot{\gamma}(t)) = 0,
+\]
+and here $\frac{\partial L}{\partial v}=mv$ and $\frac{\partial L}{\partial q}=0$, so
+\[
+\frac{d}{dt} (m \dot{\gamma}(t))=0,
+\]
+i.e.
+\[
+m\ddot{\gamma}(t)=0,
+\]
+so $\ddot{\gamma}(t)=0$, and hence $\gamma(t)=at+b$ for some constants $a,b$. If we are given the conditions $\gamma(t_0)=q_0$
+and $\gamma(t_1)=q_1$, then a solution of the Euler-Lagrange equation that satisfies these conditions must be
+\[
+\gamma(t) = q_0 + \frac{q_1-q_0}{t_1-t_0} ( t-t_0).
+\]
+The action of this path is
+\[
+S(\gamma)=\frac{m}{2} \int_{t_0}^{t_1} \left(\frac{q_1-q_0}{t_1-t_0} \right)^2 dt=
+\frac{m}{2} \frac{(q_1-q_0)^2}{t_1-t_0}.
+\]
+The dimensions of the right hand side are 
+\[
+\si{kg. m^2 . s^{-1}}=\si{kg . m . s^{-2} . m. s}=\si{N . m . s} = \si{J.s},
+\]
+ which are indeed the dimensions
+that action ought to have.
+If instead of talking about action that is a function of paths we talk about action that is a function of the end point of a motion and the time
+at which the motion ends, taking the time and location at which the motion starts as fixed, then
+\[
+S(q,t) = \frac{m}{2} \frac{(q-q_0)^2}{t-t_0},
+\]
+for which
+\[
+\frac{\partial S}{\partial q} = m \frac{q-q_0}{t-t_0}
+\]
+and
+\[
+\frac{\partial S}{\partial t} = - \frac{m}{2} \frac{(q-q_0)^2}{(t-t_0)^2}.
+\]
+These satisfy
+\[
+\frac{\partial S}{\partial t}  + \frac{1}{2m} \left(\frac{\partial S}{\partial q}\right)^2=0.
+\]
+If we write
+\[
+H(q,p) = \frac{p}{m} \frac{\partial L}{\partial v}\left(q,\frac{p}{m} \right)  - L\left(q,\frac{p}{m}\right) = \frac{p}{m} \cdot m \cdot \frac{p}{m} - \frac{m}{2} \left( \frac{p}{m}\right)^2 = 
+\frac{p^2}{2m}.
+\]
+Then,
+\[
+\frac{\partial S}{\partial t}(q,t) + H\left(q,\frac{\partial S}{\partial q}(q,t) \right)=0.
+\]
+
+
+\section{Motivation for the Hamilton-Jacobi equation}
+Suppose that $\gamma$ is a path that satisfies the Euler-Lagrange equation for some Lagrangian $L$. If we perturb the path to start at the same position at time $t_0$ but to end  at
+$q+\delta q$ instead of at $q$, then the perturbed path is $s \mapsto \gamma(s)+(\delta \gamma)(s)$, where $(\delta \gamma)(0)=0$ and $(\delta \gamma)(t)=\delta q$.  
+Then, first doing a Taylor approximation in which we drop all powers of $\delta \gamma$ or $\delta \dot{\gamma}$ higher than the first and then using the Euler-Lagrange
+equation, and
+using Einstein summation notation, 
+\begin{eqnarray*}
+S(\gamma+\delta \gamma)-S(\gamma)&=&\int_{t_0}^t L(\gamma+\delta \gamma,\dot{\gamma}+\delta \dot{\gamma}) - L(\gamma,\dot{\gamma}) ds\\
+&=&\int_{t_0}^t \frac{\partial L}{\partial q_i}(\gamma,\dot{\gamma}) \delta \gamma_i + \frac{\partial L}{\partial v_i}(\gamma,\dot{\gamma}) \delta \dot{\gamma_i} ds\\
+&=&\int_{t_0}^t \left( \frac{d}{dt} \frac{\partial L}{\partial v_i}(\gamma,\dot{\gamma}) \right) \delta \gamma_i + \frac{\partial L}{\partial v_i}(\gamma,\dot{\gamma}) \delta \dot{\gamma_i} ds\\
+&=&\int_{t_0}^t \frac{d}{dt} \left(  \frac{\partial L}{\partial v_i}(\gamma,\dot{\gamma}) \delta \gamma_i \right) ds\\
+&=&\frac{\partial L}{\partial v_i}(\gamma(t),\dot{\gamma}(t)) (\delta \gamma_i)(t) - \frac{\partial L}{\partial v_i}(\gamma(t_0),\dot{\gamma}(t_0)) (\delta \gamma_i)(t_0)\\
+&=&\frac{\partial L}{\partial v_i}(\gamma(t),\dot{\gamma}(t)) \delta q.
+\end{eqnarray*}
+We have not been precise about what we mean by perturbing a path, but what we have obtained suggests that if
+we think of $S$ as a function of the endpoint of a path and the time at which the path ends rather than as a function of a path
+itself, we have
+\[
+\frac{\partial S}{\partial q_i} = \frac{\partial L}{\partial v_i}(\gamma(t),\dot{\gamma}(t)) = p_i(t).
+\]
+
+If on the other hand we fix the point $q$ at which a path ends and change the time at which it arrives at this point 
+from $t$ to $t+\delta t$, then, doing a Taylor expansion and dropping all
+powers of $\delta t$ higher than the first,
+\[
+\gamma(t+\delta t)-\gamma(t) = \dot{\gamma}(t)\delta t.
+\]
+But $\gamma(t+\delta t)=q$, so
+\[
+\gamma(t) = q-  \dot{\gamma}(t)\delta t.
+\]
+Then
+\[
+\delta S = L \delta t -\frac{\partial L}{\partial v_i} v_i \delta t.
+\]
+Defining $H=\frac{\partial L}{\partial v_i} v_i - L$, what we have done suggests that 
+\[
+\frac{\partial S}{\partial t} = -H.
+\]
+
+Then, using $\frac{\partial S}{\partial q_i}=p_i$,  with which $H(q,p)=H\left(q,\frac{\partial S}{\partial q} \right)$, and using $\frac{\partial S}{\partial t}=-H(q,p)$,
+we have
+\[
+\frac{\partial S}{\partial t}+H\left(q,\frac{\partial S}{\partial q}\right)=0.
+\]
+We call this equation the {\em Hamilton-Jacobi equation}.
+
+To precisely sort out where the Hamilton-Jacobi equation comes from and what it means, the only place
+I can imagine that does an adequate job is Abraham and Marsden.\footnote{Abraham and Marsden, {\em Foundations of Mechanics},
+second ed.} Certainly there are other sources that
+present this more precisely than I have presented it, but it is almost universal to thoughtlessly confound 
+the variables on which $H$ or $S$ depends with paths; that is, to write things like $\frac{\partial H}{\partial q}$ and
+also to think of $q$ not as a point but rather as a path which for each time goes through a particular point, in which case
+one has no certain way of knowing whether $\frac{dq}{dt}=0$, as is the case for the derivative of any fixed point, or to say
+that $q$ is a path and that $\frac{dq}{dt}$ is a tangent vector at the point $q(t)$ on the path.
+If one plainly states that what one has said is only suggestive of how symbols work together then one does not
+need to apologize for the absence of precision, but there is a foul area between suggestive symbol manipulation and
+actual precision in which
+one tricks oneself into believing that one has given a precise presentation, and this is the path followed by
+ some presentations
+of the Hamilton-Jacobi equation.
+
+
+\section{Harmonic oscillator}
+Let
+\[
+H=\frac{p^2}{2m}+\frac{1}{2}m\omega^2 q^2.
+\]
+The Hamilton-Jacobi equation for this Hamiltonian is
+\[
+\frac{\partial S}{\partial t}+\frac{1}{2m} \left( \frac{\partial S}{\partial q} \right)^2 + \frac{1}{2}m\omega^2 q^2 =0.
+\]
+We set $S(q,t)=S_0(q)-Et$; for this to make sense presumes that there is in fact a constant $E$ and a function $S_0$ so that
+ $S(q,t)-S_0(q)$ depends just on $t$. With this,
+$\frac{\partial S}{\partial q} = \frac{\partial S_0}{\partial q}$
+and $\frac{\partial S}{\partial t}=-E$,
+and so the Hamilton-Jacobi equation becomes
+\[
+-E+ \frac{1}{2m}  \left( \frac{\partial S_0}{\partial q} \right)^2 + \frac{1}{2}m\omega^2 q^2 = 0 ,
+\]
+or
+\[
+\frac{1}{2m}  \left( \frac{\partial S_0}{\partial q} \right)^2 + \frac{1}{2}m\omega^2 q^2=E.
+\]
+Supposing that $S_0$ is nonnegative we get 
+\[
+\frac{\partial S_0}{\partial q}(q) = \sqrt{2mE-m^2 \omega^2 q^2},
+\]
+a primitive of which is
+\begin{eqnarray*}
+S_0 &=& \int \sqrt{2mE-m^2 \omega^2 q^2} dq\\
+ &=&\frac{E}{\omega} \left( \arcsin \frac{m\omega q}{\sqrt{2mE}} + \frac{m\omega q}{\sqrt{2mE}} \sqrt{1-\left(\frac{m\omega q}{\sqrt{2mE}}\right)^2}\right)
+ \end{eqnarray*}
+for which
+\[
+\frac{\partial S_0}{\partial E} = \frac{1}{\omega} \arcsin \frac{m \omega q}{\sqrt{2mE}}.
+\]
+But $\frac{\partial S_0}{\partial E}=t$ (using the expression involving $S$ and $Et$), so $\omega t =  \arcsin \frac{m \omega q}{\sqrt{2mE}}$,
+hence
+\[
+\sin(\omega t) = \frac{\sqrt{m}\omega q}{\sqrt{2E}},
+\]
+and therefore
+\[
+q=\sqrt{\frac{2E}{m\omega^2}} \sin(\omega t).
+\] 
+As well,
+\[
+p = \frac{\partial S}{\partial q} = \frac{\partial S_0}{\partial q} = \sqrt{2mE-m^2 \omega^2 q^2} ,
+\]
+and using the above expression for $q$ this becomes
+\[
+p= \sqrt{2mE - m^2 \omega^2 \frac{2E}{m\omega^2} \sin^2(\omega t)} = \sqrt{2mE - 2mE\sin^2(\omega t)}.
+\]
+We have thus written $q$ and $p$ as functions of $E$ and $t$. Since for a particular trajectory the energy is fixed, on a particular
+trajectory the position and momentum have thus been expressed as functions of $t$. 
+
+
+\section{Schr\"odinger equation}
+Write 
+\[
+i\hbar \frac{\partial \psi}{\partial t}=H\psi,
+\]
+called the {\em Schr\"odinger equation}. 
+If $H(q,p)=\frac{p^2}{2m}+V(q)$, and $p=-i\hbar \nabla$, then $p^2=- \hbar^2 \Delta$  and the Schr\"odinger equation is
+\[
+i\hbar \frac{\partial \psi}{\partial t} = -\frac{\hbar^2}{2m} \Delta \psi + V(q)\psi.
+\]
+Supposing that there is a solution $\psi$ of the form $\psi=e^{i\frac{S}{\hbar}}$, we get
+\begin{eqnarray*}
+i\hbar e^{i\frac{S}{\hbar}}  \frac{i}{\hbar} \frac{\partial S}{\partial t}&=&-\frac{\hbar^2}{2m} \frac{\partial}{\partial q} \left(e^{i\frac{S}{\hbar}} \frac{i}{\hbar}
+\frac{\partial S}{\partial q} \right)+V(q)e^{i\frac{S}{\hbar}}\\
+&=&-\frac{\hbar^2}{2m}  \left( e^{i\frac{S}{\hbar}} \left(\frac{i}{\hbar}
+\frac{\partial S}{\partial q}  \right)^2 + e^{i\frac{S}{\hbar}} \frac{i}{\hbar} \frac{\partial^2 S}{\partial q^2} \right)+V(q)e^{i\frac{S}{\hbar}}.
+\end{eqnarray*}
+Diving both sides by $e^{i\frac{S}{\hbar}}$ gives
+\[
+- \frac{\partial S}{\partial t} = \frac{1}{2m} \left( \frac{\partial S}{\partial q} \right)^2 -\frac{i\hbar}{2m} \frac{\partial^2 S}{\partial q^2}
++V(q).
+\]
+Taking $\hbar \to 0$ yields the equation
+\[
+-\frac{\partial S}{\partial t} = \frac{1}{2m}\left( \frac{\partial S}{\partial q}\right)^2 + V(q) = H\left(q,\frac{\partial S}{\partial q}\right),
+\]
+which is the Hamilton-Jacobi equation.
+
+The above derivation of the Hamilton-Jacobi equation from the Schr\"odinger equation is suggestive symbol manipulation. Rather than stating that we assume  $\psi=e^{i\frac{S}{\hbar}}$,
+I could have written that we ``make an Ansatz''; ``ein Ansatz'' means ``an approach'', and is used to mean a guess which may work out.
+Of course, if there is some problem for which one knows there is a unique solution and we find an explicit solution starting from some unjustified assumption,
+then we don't need to have justified the assumption because we can explicitly check that what we have found is a solution. But this is the only situation where there is precision
+to ``making an Ansatz''. Otherwise, to talk about an Ansatz is a sophisticated sounding way of saying  ``we make an assumption'', and after making this assumption
+we have no guarantee that anything we end up with need make any sense. This does not mean that it is useless to make unjustified assumptions; but it is
+deceitful to smuggle Ans\"atze into the realm of proved things, and confuses those who later would rely on one's work. 
+
+
+\end{document}

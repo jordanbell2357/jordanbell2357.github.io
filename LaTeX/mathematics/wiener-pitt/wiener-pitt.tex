@@ -1,0 +1,525 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\ev}{\ensuremath\mathrm{ev}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\supnorm}[1]{\left\Vert #1 \right\Vert_{\mathrm{sup}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Wiener-Pitt tauberian theorem}
+\author{Jordan Bell}
+\date{March 10, 2015}
+
+\maketitle
+
+\section{Introduction}
+For $f \in L^1(\mathbb{R}^d)$, we write
+\[
+\hat{f}(\xi) = \int_{\mathbb{R}^d} f(x) e^{-2\pi i\xi\cdot x} dx, \qquad \xi \in \mathbb{R}^d.
+\]
+The Riemann-Lebesgue lemma tells us that $\hat{f} \in C_0(\mathbb{R}^d)$. 
+
+For $f \in C^\infty(\mathbb{R}^d)$ and for multi-indices $\alpha,\beta$, write
+\[
+|f|_{\alpha,\beta} = \sup_{x \in \mathbb{R}^d} |x^\alpha (\partial^\beta f)(x)|.
+\]
+We say that $f$ is a \textbf{Schwartz function} if  for all multi-indices $\alpha$ and $\beta$ we have
+$|f|_{\alpha,\beta}<\infty$. We denote by $\mathscr{S}$ the collection of Schwartz functions. It is a fact that 
+$\mathscr{S}$
+with this family of seminorms is a Fr\'echet space. 
+
+Let $V_d = \frac{\pi^{d/2}}{\Gamma\left( \frac{d}{2}+1 \right)}$, the volume of the unit ball
+in $\mathbb{R}^d$. 
+
+\begin{lemma}
+For $1 \leq p \leq \infty$, let
+$m$ be the least integer $\geq \frac{d+1}{p}$.
+There is some $C_d$ such that for any multi-index $\beta$,
+\[
+\norm{\partial^\beta f}_p \leq V_d^{1/p} |f|_{0,\beta} + C_d V_d^{1/p} \sum_{|\alpha|=m} |f|_{\alpha,\beta}, \qquad
+f \in \mathscr{S}.
+\]
+\label{schwartzLp}
+\end{lemma}
+\begin{proof}
+For $p=\infty$, the claim is true with $C_{d,\infty}=1$. 
+For $1 \leq p < \infty$, let 
+$g = \partial^\beta f$, which satisfies
+\begin{align*}
+\norm{g}_p&=\left( \int_{|x| \leq 1} |g(x)|^p dx + \int_{|x| \geq 1} |x|^{d+1} |g(x)|^p |x|^{-(d+1)} dx \right)^{1/p}\\
+&\leq \left( \norm{g}_\infty^p V_d + \sup_{|x| \geq 1} \left( |x|^{d+1}|g(x)|^p \right) \int_{|x| \geq 1}
+|x|^{-(d+1)} dx \right)^{1/p}\\
+&=\left( \norm{g}_\infty^p V_d + \sup_{|x| \geq 1} \left( |x|^{d+1}|g(x)|^p \right) \int_1^\infty\left( \int_{S^{d-1}} |r\gamma|^{-(d+1)}
+d\sigma(\gamma) \right) r^{d-1} dr \right)^{1/p}\\
+&=\left( \norm{g}_\infty^p V_d + \sup_{|x| \geq 1} \left( |x|^{d+1}|g(x)|^p \right) \cdot V_d \int_1^\infty r^{-2} dr \right)^{1/p}\\
+&=V_d^{1/p} \left( \norm{g}_\infty^p + \sup_{|x| \geq 1}  \left( |x|^{d+1}|g(x)|^p \right) \right)^{1/p}\\
+&\leq V_d^{1/p} \norm{g}_\infty + V_d^{1/p}  \sup_{|x| \geq 1}  \left( |x|^{\frac{d+1}{p}}|g(x)| \right)\\
+&\leq V_d^{1/p} \norm{g}_\infty + V_d^{1/p} \sup_{|x| \geq 1} \left( |x|^m |g(x)| \right).
+\end{align*}
+Using that the function $y \mapsto \sum_{|\alpha|=m} |y^\alpha|$ is continuous $S^{d-1} \to \mathbb{R}$,
+there is some $C_d$ such that
+\[
+|x|^m \leq C_d \sum_{|\alpha|=m} |x^\alpha|, \qquad x \in \mathbb{R}^d.
+\]
+This gives us
+\begin{align*}
+\norm{g}_p& \leq V_d^{1/p} \norm{g}_\infty + V_d^{1/p} \sup_{|x| \geq 1} C_d  \sum_{|\alpha|=m} |x^\alpha| |g(x)|\\
+&= V_d^{1/p} \norm{\partial^\beta f}_\infty  + C_d V_d^{1/p} \sum_{|\alpha|=m} \sup_{|x| \geq 1} |x^\alpha (\partial^\beta f)(x)|\\
+&\leq V_d^{1/p} |f|_{0,\beta} + C_d V_d^{1/p} \sum_{|\alpha|=m} |f|_{\alpha,\beta}.
+\end{align*}
+\end{proof}
+
+The dual space $\mathscr{S}'$ with the weak-*
+topology is  a locally convex space, elements of which are called \textbf{tempered distributions}.
+It is straightforward to check that if $u:\mathscr{S} \to \mathbb{C}$ is linear, then $u \in \mathscr{S}'$ if and only if
+there is some  $C$ and some nonnegative integers $m,n$ such that
+\[
+|u(f)| \leq C \sum_{|\alpha| \leq m, |\beta| \leq n} |f|_{\alpha,\beta}, \qquad f \in \mathscr{S}.
+\]
+For $1 \leq p \leq \infty$ and $g \in L^p(\mathbb{R}^d)$,
+define $u:\mathscr{S} \to \mathbb{C}$ by
+\[
+u(f) = \int_{\mathbb{R}^d} f(x) g(x) dx, \qquad f \in \mathscr{S}.
+\]
+For $\frac{1}{p}+\frac{1}{q}=1$, H\"older's inequality tells us
+\[
+|u(f)| \leq \norm{fg}_1 \leq \norm{g}_p \norm{f}_q.
+\]
+By Lemma \ref{schwartzLp}, with $m$ the least integer $\geq \frac{d+1}{q}$,
+\[
+\norm{f}_q \leq V_d^{1/q} |f|_{0,0} + C_d V_d^{1/q} \sum_{|\alpha|=m} |f_{\alpha,0}|.
+\]
+Therefore, 
+\[
+|u(f)| \leq C_{g,d,q} \sum_{|\alpha| \leq m, |\beta| \leq 0} |f|_{\alpha,\beta},
+\]
+showing that $u$ is continuous. 
+We thus speak of elements of $L^p(\mathbb{R}^d)$ as tempered distributions, and
+speak about the Fourier transform of an element of  $L^p(\mathbb{R}^d)$.
+
+Let $u \in \mathscr{D}'$ be a distribution. For an open set $\omega$,
+we say that \textbf{$u$ vanishes on $\omega$} if 
+$u(\phi)=0$ for every $\phi \in \mathscr{D}(\omega)$. 
+Let $\Gamma$ be the collection of open sets $\omega$ on which $u$ vanishes, and let
+$\Omega = \bigcup_{\omega \in \Gamma} \omega$. 
+$\Gamma$ is an open cover of $\Omega$, and
+ thus there is a locally finite partition of unity $\psi_j$ subordinate to $\Gamma$.\footnote{Walter Rudin, {\em Functional
+ Analysis}, second ed., p.~162, Theorem 6.20.}
+For $\phi \in \mathscr{D}(\Omega)$, because 
+$\supp \phi$ is compact,
+there is some open set $W$, $\supp \phi \subset W \subset \Omega$, and some $m$ such that
+\[
+\psi_1(x)+\cdots+\psi_m(x)=1, \qquad x \in W.
+\]
+Then 
+\[
+u(\phi) = u(\phi(\psi_1+\cdots+\psi_m))
+=u(\psi_1 \phi)+\cdots+u(\psi_m \phi).
+\]
+For each $j$, $1 \leq j \leq m$, there is some $\omega_j \in \Gamma$ such that $\supp \psi_j \subset \omega_j$,
+which implies $\supp \psi_j \phi \subset \omega_j$, i.e.
+$\psi_j \phi \in \mathscr{D}(\omega_j)$. But $\omega_j \in \Gamma$, so
+$u(\psi_j \phi)=0$ and hence $u(\phi)=0$. This shows that $\Omega \in \Gamma$, namely, $\Omega$ is the largest
+open set on which $u$ vanishes.
+The \textbf{support of $u$} is
+\[
+\supp u = \mathbb{R}^d \setminus \Omega.
+\]
+
+For $u \in \mathscr{S}'$ we define $\hat{u}:\mathscr{S} \to \mathbb{C}$ by
+\[
+\hat{u}(\phi) = u(\hat{\phi}), \qquad \phi \in \mathscr{S}.
+\]
+It is a fact that $\hat{u} \in \mathscr{S}'$. 
+
+For $f:\mathbb{R}^d \to \mathbb{C}$, write $\check{f}(x)=f(-x)$. For $\phi \in \mathscr{S}$,
+\[
+\mathscr{F}(\mathscr{F}(\phi))=\check{\phi}.
+\]
+
+
+\section{Tauberian theory}
+\begin{lemma}
+If $f \in L^1(\mathbb{R}^d)$, $\zeta \in \mathbb{R}^d$, and $\epsilon>0$, then there is some $h \in L^1(\mathbb{R}^d)$ with
+$\norm{h}_1 < \epsilon$ and some $r>0$ such that 
+\[
+\hat{h}(\xi) = \hat{f}(\zeta)-\hat{f}(\xi), \qquad \xi \in B_r(\zeta).
+\]
+\label{nbdlemma}
+\end{lemma}
+\begin{proof}
+It is a fact that there is a Schwartz function $g$ such that $\hat{g}(\xi)=1$ for $|\xi|<1$. 
+For $\lambda>0$, let
+\[
+g_\lambda(x) = e^{2\pi i\zeta \cdot x} \lambda^{-d}g(\lambda^{-1}x), \qquad x \in \mathbb{R}^d,
+\]
+which satisfies, for $\xi \in \mathbb{R}^d$,
+\begin{align*}
+\widehat{g_\lambda}(\xi) &= \int_{\mathbb{R}^d} e^{-2\pi i\xi \cdot x} e^{2\pi i\zeta \cdot x} \lambda^{-d}g(\lambda^{-1}x) dx\\
+&=\int_{\mathbb{R}^d} e^{-2\pi i \lambda \xi \cdot y} e^{2\pi i\lambda \zeta \cdot y}  g(y) dy\\
+&=\hat{g}(\lambda \xi-\lambda \zeta).
+\end{align*}
+In particular, for $\xi \in V_\lambda = B_{\lambda^{-1}}(\zeta)$ we have
+$\widehat{g_\lambda}(\xi) = 1$. 
+We also define
+\[
+h_\lambda(x) = \hat{f}(\zeta) g_\lambda(x) - (f*g_\lambda)(x), \qquad
+x \in \mathbb{R}^d,
+\]
+which satisfies, for $\xi \in \mathbb{R}^d$,
+\[
+\widehat{h_\lambda}(\xi)=\hat{f}(\zeta) \widehat{g_\lambda}(\xi)
+-\widehat{f*g_\lambda}(\xi)\\
+=\hat{f}(\zeta) \widehat{g_\lambda}(\xi) - \hat{f}(\xi) \widehat{g_\lambda}(\xi)
+=\widehat{g_\lambda}(\xi)(\hat{f}(\zeta)-\hat{f}(\xi)).
+\]
+Hence, for $\xi \in V_\lambda$ we have $\widehat{h_\lambda}(\xi) = \hat{f}(\zeta)-\hat{f}(\xi)$.
+
+For $x \in \mathbb{R}^d$,
+\begin{align*}
+h_\lambda(x)&=\int_{\mathbb{R}^d} f(y) e^{-2\pi i\zeta \cdot y} g_\lambda(x)
+-\int_{\mathbb{R}^d} f(y) g_\lambda(x-y) dy\\
+&=\int_{\mathbb{R}^d} f(y) \left( e^{-2\pi i\zeta \cdot y} g_\lambda(x)-g_\lambda(x-y) \right) dy,
+\end{align*}
+for which
+\[
+\begin{split}
+&\left| e^{-2\pi i\zeta \cdot y} g_\lambda(x)-g_\lambda(x-y) \right|\\
+=&\left| e^{-2\pi i\zeta \cdot y} e^{2\pi i\zeta \cdot x}
+\lambda^{-d} g(\lambda^{-1} x) - e^{2\pi i\zeta\cdot (x-y)} \lambda^{-d} g(\lambda^{-1}(x-y)) \right|\\
+=&\lambda^{-d} | g(\lambda^{-1}x)-g(\lambda^{-1}(x-y))|.
+\end{split}
+\]
+Then
+\begin{align*}
+\norm{h_\lambda}_1&\leq \int_{\mathbb{R}^d} \left(   \int_{\mathbb{R}^d} |f(y)| \lambda^{-d} | g(\lambda^{-1}x)-g(\lambda^{-1}(x-y))|
+dy \right) dx\\
+&=\int_{\mathbb{R}^d} \left(  \int_{\mathbb{R}^d} |f(y)| |g(u)-g(\lambda^{-1}(\lambda u-y))| dy \right) du\\
+&=\int_{\mathbb{R}^d} |f(y)| \left(  \int_{\mathbb{R}^d} |g(u)-g(u-\lambda^{-1} y))|  du \right) dy.
+\end{align*}
+For each $y \in \mathbb{R}^d$, 
+\[
+|f(y)| \left(  \int_{\mathbb{R}^d} |g(u)-g(u-\lambda^{-1} y))|  du \right) \leq 2 \norm{g}_1 |f(y),
+\]
+and hence by the dominated convergence theorem,
+\[
+\int_{\mathbb{R}^d} |f(y)| \left(  \int_{\mathbb{R}^d} |g(u)-g(u-\lambda^{-1} y))|  du \right) dy \to
+0, \qquad \lambda \to \infty.
+\]
+Thus, there is some $\lambda_\epsilon$ such that $\norm{h_\lambda}_1 < \epsilon$ when
+$\lambda \geq \lambda_\epsilon$.
+For $h=h_{\lambda_\epsilon}$ and $r=\lambda_\epsilon^{-1}$, we have
+$\hat{h}(\xi) = \hat{f}(\zeta)-\hat{f}(\xi)$ for $\xi \in V_{\lambda_\epsilon} = B_r(\zeta)$ and 
+$\norm{h}_1<\epsilon$, proving the claim.
+\end{proof}
+
+We remind ourselves that for $\phi \in L^\infty(\mathbb{R}^d)$ and $f \in L^1(\mathbb{R}^d)$, the convolution
+$f*\phi$ belongs to $C_u(\mathbb{R}^d)$, the collection of bounded uniformly continuous functions $\mathbb{R}^d \to \mathbb{C}$.
+We also remind ourselves that any element of $L^\infty(\mathbb{R}^d)$  is a tempered distribution whose  Fourier
+transform is a tempered distribution.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~228, Theorem 9.3.}
+
+
+\begin{theorem}
+If $\phi \in L^\infty(\mathbb{R}^d)$, $Y$ is a linear subspace of $L^1(\mathbb{R}^d)$, and 
+\[
+f*\phi = 0, \qquad f \in Y,
+\]
+then 
+\[
+Z(Y) =  \bigcap_{f \in Y} \{\xi \in \mathbb{R}^d: \hat{f}(\xi)=0\}
+\]
+contains $\supp \hat{\phi}$. 
+\label{Ytheorem}
+\end{theorem}
+\begin{proof}
+If $Y=\{0\}$, then  $Z(Y)=\mathbb{R}^d$, and the claim is true. If $Y$ has nonzero dimension, 
+let $\zeta \in  \mathbb{R}^d \setminus Z(Y)$ and let  
+$f \in Y$ such that $\hat{f}(\zeta)=1$; that there is such a function $f$ follows from $Y$ being a linear space.
+Thus by Lemma \ref{nbdlemma} there is some $h \in L^1(\mathbb{R}^d)$ with
+$\norm{h}_1 < 1$ and some $r>0$ such that 
+\[
+\hat{h}(\xi) =1-\hat{f}(\xi), \qquad \xi \in B_r(\zeta);
+\]
+because $Z(Y)$ is closed, we may take $r$ such that $B_r(\zeta) \subset \mathbb{R}^d \setminus Z(Y)$. 
+
+Let $\rho \in \mathscr{D}(B_r(\zeta))$, and let $\psi \in \mathscr{S}$ with
+$\hat{\psi}=\rho$. 
+Define $g_0=\psi$ and $g_m = h * g_{m-1}$ for $m \geq 1$.
+By Young's inequality
+\[
+\norm{g_m}_1 \leq  \norm{h}_1^m \norm{\psi}_1,
+\]
+and because $\norm{h}_1<1$, this means that the sequence $\sum_{m=0}^M g_m$ is Cauchy in $L^1(\mathbb{R}^d)$ so
+converges to some $G$, for which, as $|\hat{h}| \leq \norm{h}_1 < 1$,
+\[
+\hat{G} = \sum_{m=0}^\infty \widehat{g_m} = \sum_{m=0}^\infty \hat{\psi}\cdot \hat{h}^m
+=\hat{\psi} \cdot (1-\hat{h})^{-1}.
+\]
+For $\xi \in \supp \hat{\psi} \subset B_r(\zeta)$ we have
+$\hat{h}(\xi)=1-\hat{f}(\xi)$ and so
+\[
+\hat{\psi}(\xi) = \hat{G}(\xi) (1-\hat{h}(\xi)) = \hat{G}(\xi)\hat{f}(\xi);
+\]
+on the other hand, for $\xi \not \in \supp \hat{\psi}$, $\hat{\psi}(\xi)=0=\hat{G}(\xi)\hat{f}(\xi)$, so
+\[
+\hat{\psi} = \hat{G} \cdot \hat{f},
+\]
+which implies that $\psi = G*f$. Then
+\[
+\psi*\phi = G*f*\phi = G*0 = 0,
+\]
+therefore
+\[
+\hat{\phi}(\rho) = \phi(\hat{\rho}) =\phi(\mathscr{F}^2(\psi))= \phi(\check{\psi}) = \int_{\mathbb{R}^d} \psi(-x) \phi(x) dx
+=(\psi*\phi)(0)=0.
+\]
+This is true for all $\rho \in \mathscr{D}(B_r(\zeta))$, which 
+means that $\hat{\phi}$ vanishes on $B_r(\zeta)$. This is true for any $\zeta \in \mathbb{R}^d \setminus Z(Y)$, 
+so with $\Omega$ the union of those open sets on which $\hat{\phi}$ vanishes, 
+$\mathbb{R}^d \setminus Z(Y) \subset \Omega$. Then
+$Z(Y) \subset \mathbb{R}^d \setminus \Omega = \supp \hat{\phi}$. 
+\end{proof}
+
+If $X$ is a Banach space and $M$ is a linear subspace of $X$, we define the \textbf{annihilator of $M$}
+as
+\[
+M^\perp = \{\gamma \in X^*: \textrm{if $x \in M$ then $\inner{x}{\gamma}=0$}\}.
+\]
+It is immediate that $M^\perp$ is a weak-* closed linear subspace of $X^*$. 
+If $N$ is a linear subspace of $X^*$, we define the \textbf{annihilator of $N$} as
+\[
+^\perp N = \{x \in X: \textrm{if $\gamma \in N$ then $\inner{x}{\gamma}=0$}\}.
+\]
+It is immediate that $^\perp N$ is a norm closed linear subspace of the Banach space $X$. One proves using the Hahn-Banach theorem that
+$^\perp(M^\perp)$ is the norm closure of $M$ in $X$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~96, Theorem 4.7.}
+
+We say that a subspace $Y$ of $L^1(\mathbb{R}^d)$ is \textbf{translation-invariant} if $f \in Y$ and $x \in \mathbb{R}^d$ imply
+that $f_x \in Y$, where $f_x(y)=f(y-x)$. The following theorem gives conditions under which a closed translation-invariant
+subspace of $L^1(\mathbb{R}^d)$ is equal to the entire space.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~228, Theorem 9.4.}
+
+\begin{theorem}
+If $Y$ is a closed translation-invariant subspace of $L^1(\mathbb{R}^d)$ and $Z(Y)=\emptyset$, then
+$Y=L^1(\mathbb{R}^d)$. 
+\label{translationinvariant}
+\end{theorem}
+\begin{proof}
+Suppose that $\phi \in L^\infty(\mathbb{R}^d)$ and $\int f \check{\phi}=0$ for each $f \in Y$. 
+Let $f \in Y$ and $x \in \mathbb{R}^d$.
+As $Y$ is translation-invariant, $f_{-x} \in Y$ so $\int_{\mathbb{R}^d} f(y+x) \phi(-y) dy=0$, i.e.
+$(f*\phi)(x)=0$. This is true for all $x \in \mathbb{R}^d$, which means that $f*\phi = 0$. 
+Theorem \ref{Ytheorem} then tells us that $\supp \hat{\phi}$ is contained in
+$Z(Y)$, namely, $\supp \hat{\phi}$ is empty, which  means that the tempered distribution $\hat{\phi}$ vanishes
+on $\mathbb{R}^d$, i.e. $\supp \hat{\phi}$ is the zero element of the locally convex space $\mathscr{S}'$. 
+As the Fourier transform $\mathscr{S}' \to \mathscr{S}'$ is linear and one-to-one, 
+the tempered distribution $\phi$ is the zero element of $\mathscr{S}'$, which implies that $\phi \in
+L^\infty(\mathbb{R}^d)$ is zero.
+As Lebesgue measure on $\mathbb{R}^d$ is $\sigma$-finite, 
+for $X$ the Banach space $L^1(\mathbb{R}^d)$ we have
+$X^*=L^\infty(\mathbb{R}^d)$, with $\inner{f}{\gamma}=\int f \gamma$. Thus $Y^\perp$ is the zero subspace of $L^\infty(\mathbb{R}^d)$, hence
+$^\perp (Y^\perp)=L^1(\mathbb{R}^d)$. This implies that $L^1(\mathbb{R}^d)$ is equal to the closure of $Y$ in $L^1(\mathbb{R}^d)$, and because
+$Y$ is closed this means $Y=L^1(\mathbb{R}^d)$, completing the proof.
+\end{proof}
+
+
+\begin{theorem}
+Suppose that $K \in L^1(\mathbb{R}^d)$ and that $Y$ is the smallest closed translation-invariant  subspace of $L^1(\mathbb{R}^d)$ that includes $K$. $Y=L^1(\mathbb{R}^d)$ if and only
+if 
+\[
+\hat{K}(\xi) \neq 0, \qquad \xi \in \mathbb{R}^d.
+\]
+\label{intersection}
+\end{theorem}
+\begin{proof}
+Suppose that $\hat{K}(\xi) \neq 0$ for all $\xi \in \mathbb{R}^d$. As $K \in Y$, this implies that $Z(Y) = \emptyset$. Thus by
+ Theorem \ref{translationinvariant} we get  $Y=L^1(\mathbb{R}^d)$.
+ 
+ Suppose that $Y=L^1(\mathbb{R}^d)$. Then $f(x)=e^{-\pi |x|^2}$ belongs to $Y$ and $\hat{f}(\xi)=e^{-\pi |\xi|^2}$, which has no zeros,
+ hence $Z(Y)=\emptyset$. For $\xi \in \mathbb{R}^d$, define $\ev_\xi:C_0(\mathbb{R}^d) \to \mathbb{C}$ by $\ev_\xi(g)=g(\xi)$, which
+ is a bounded linear operator. The Fourier transform $\mathscr{F}:L^1(\mathbb{R}^d) \to C_0(\mathbb{R}^d)$ is a bounded linear operator, hence
+ for each $\xi \in \mathbb{R}^d$, $\ev_\xi \circ \mathscr{F}:L^1(\mathbb{R}^d) \to \mathbb{C}$ is a bounded linear operator.
+Hence
+\[
+V_\xi = \{f \in L^1(\mathbb{R}^d): \hat{f}(\xi)=0\} = \ker (\ev_\xi \circ \mathscr{F})
+\]
+ is a closed subspace of $L^1(\mathbb{R}^d)$. 
+ If $f \in V$ and $x \in \mathbb{R}^d$, then
+ \[
+ \widehat{f_x}(\xi)=\int_{\mathbb{R}^d} f(y-x) e^{-2\pi i\xi\cdot y} dy = 
+ e^{-2\pi i\xi \cdot x} \hat{f}(\xi)=0,
+ \]
+ showing that $V_\xi$ is translation-invariant.  
+ Therefore
+ \[
+ V = \bigcap_{\hat{K}(\xi)=0} V_\xi
+ \]
+ is a closed translation-invariant subspace of $L^1(\mathbb{R}^d)$, and because $Y$ is the smallest closed translation-invariant 
+ subspace of $L^1(\mathbb{R}^d)$, $Y \subset V$. $Y \subset V$ implies $Z(V) \subset Z(Y)=\emptyset$,
+ and applying Theorem \ref{translationinvariant} we get that $V=L^1(\mathbb{R}^d)$. But  there
+ is no $\xi$ for which $V_\xi = L^1(\mathbb{R}^d)$, so  $V=L^1(\mathbb{R}^d)$ implies that
+ $\{\xi \in \mathbb{R}^d: \hat{K}(\xi)=0\}=\emptyset$. 
+ \end{proof}
+
+
+\section{Slowly oscillating functions}
+Let $B(\mathbb{R}^d)$ be the collection of bounded functions $\mathbb{R}^d \to \mathbb{C}$, which with the supremum norm 
+$\norm{f}_u = \sup_{x \in \mathbb{R}^d} |f(x)|$ is a Banach algebra.
+
+A function $\phi \in B(\mathbb{R}^d)$ is said to be \textbf{slowly oscillating} if for each $\epsilon>0$ there is some $A$ and some $\delta>0$ such that
+if $|x|,|y|>A$ and $|x-y|<\delta$, then $|\phi(x)-\phi(y)|<\epsilon$. We now prove the \textbf{Wiener-Pitt tauberian theorem}; the statement 
+supposing that a function is slowly oscillating is attributed to Pitt.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~229, Theorem 9.7; Walter Rudin, {\em Fourier Analysis on Groups}, p.~163, Theorem 7.2.7; Gerald B. Folland, {\em A Course in Abstract
+Harmonic Analysis}, p.~116, Theorem 4.72; V. P. Havin and N. K. Nikolski,
+{\em Commutative Harmonic Analysis II}, p.~134; Edwin Hewitt and Kenneth
+A. Ross, {\em Abstract Harmonic Analysis II}, p.~511, Theorem 39.37.}
+
+\begin{theorem}[Wiener-Pitt tauberian theorem]
+If $\phi \in B(\mathbb{R}^d)$, $K \in L^1(\mathbb{R}^d)$, $\hat{K}(\xi) \neq 0$ for all $\xi \in \mathbb{R}^d$, and
+\[
+\lim_{|x| \to \infty} (K*\phi)(x)=a \hat{K}(0),
+\]
+then  for each $f \in L^1(\mathbb{R}^d)$,
+\begin{equation}
+\lim_{|x| \to \infty} (f*\phi)(x) = a\hat{f}(0).
+\label{claim1}
+\end{equation}
+Furthermore, if such $\phi$ is slowly oscillating then
+\begin{equation}
+\lim_{|x| \to \infty} \phi(x) = a.
+\label{claim2}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Define $\psi(x)=\phi(x)-a$. Let $Y$ be the set of those $f \in L^1(\mathbb{R}^d)$ for which
+\[
+\lim_{|x| \to \infty} (f*\psi)(x)=0.
+\]
+It is immediate that $Y$ is a linear subspace of $L^1(\mathbb{R}^d)$. Suppose that $f_i \in Y$ tends to some $f \in L^1(\mathbb{R}^d)$. As $\psi \in B(\mathbb{R}^d)$,
+$f*\psi$ and $f_i*\psi$ belong to $C_u(\mathbb{R}^d)$. 
+Then
+\[
+\norm{f*\psi-f_i*\psi}_u = \norm{(f-f_i)*\psi}_u = \norm{\psi}_u \norm{f-f_i}_1.
+\]
+There is some $i_0$ such that $i \geq i_0$ implies $\norm{f-f_i}_1<\epsilon$, and because $f_{i_0} \in Y$ there is some $M$ such that
+$|x| \geq M$ implies $|(f_{i_0}*\psi)(x)| < \epsilon$. Then for $|x| \geq M$,
+\begin{align*}
+|(f*\psi)(x)| & \leq |(f*\psi)(x)-(f_{i_0}*\psi)(x)|+|(f_{i_0}*\psi)(x)|\\
+&\leq  \norm{\psi}_u \norm{f-f_i}_1 +|(f_{i_0}*\psi)(x)|\\
+&<\epsilon \cdot (\norm{\psi}_u+1),
+\end{align*}
+showing that $f \in Y$, namely, that $Y$ is closed. 
+Let $f \in Y$ and $x \in \mathbb{R}^d$. $f_x \in L^1(\mathbb{R}^d)$, and for $y \in \mathbb{R}^d$,
+\[
+((\tau_x f)*\psi)(y) = (f*\psi)(y-x),
+\]
+and as $|y| \to \infty$ we have $|y-x| \to \infty$ and thus $(f*\psi)(y-x) \to 0$, hence $\tau_x f \in Y$, i.e. $Y$ is translation-invariant.
+Therefore $Y$ is a closed translation-invariant subspace of $L^1(\mathbb{R}^d)$. 
+For $x \in \mathbb{R}^d$,
+\[
+(K*\psi)(x) = \int_{\mathbb{R}^d} K(y)(\phi(x-y)-a) dy = 
+(K*\phi)(x)-a\hat{K}(0),
+\]
+and by hypothesis we get $(K*\psi)(x) \to 0$ as $|x| \to \infty$, i.e. $K \in Y$. 
+
+Let $Y_0$ be the smallest closed translation-invariant subspace of $L^1(\mathbb{R}^d)$ that includes $K$.
+On the one hand, because $Y$ is a closed translation-invariant subspace of $L^1(\mathbb{R}^d)$ and $K \in Y$ we have
+$Y_0 \subset Y$. On the other hand, because $\hat{K}(\xi) \neq 0$ for all $\xi$ we have by 
+Theorem \ref{intersection} 
+that $Y_0 = L^1(\mathbb{R}^d)$. Therefore $Y=L^1(\mathbb{R}^d)$. This means that for each $f \in L^1(\mathbb{R}^d)$,
+$(f*\psi)(x) \to 0$ as $|x| \to \infty$, i.e. $(f*\phi)(x) \to a\hat{f}(0)$ as $|x| \to \infty$, proving \eqref{claim1}
+
+Assume further now that $\phi$ is slowly-oscillating and let $\epsilon>0$. There is some $A$ and some $\delta>0$ such that
+if $|x|,|y|>A$ and $|x-y|<\delta$ then
+\[
+|\phi(x)-\phi(y)|<\epsilon.
+\]
+There is a test function $h$ such that $h \geq 0$, $h(x)=0$ for $|x| \geq \delta$, and $\hat{h}(0)=1$.  By \eqref{claim1}, 
+\[
+\lim_{|x| \to \infty} (h*\phi)(x) = a \hat{h}(0) = a.
+\]
+On the other hand, for $x \in \mathbb{R}^d$,
+\begin{align*}
+\phi(x)-(h*\phi)(x)&= \hat{h}(0) \phi(x) - (h*\phi)(x) \\
+& = \int_{\mathbb{R}^d}  (h(y) \phi(x) -\phi(x-y) h(y)) dy\\
+&=\int_{|y|<\delta} (\phi(x)-\phi(x-y)) h(y) dy,
+\end{align*}
+and so for $|x|>A+\delta$,
+\[
+|\phi(x)-(h*\phi)(x)| \leq \int_{|y| < \delta} \epsilon \cdot  |h(y)| dy= \epsilon \int_{\mathbb{R}^d} h(y) dy = \epsilon \hat{h}(0) = \epsilon.
+\]
+We have thus established that as $|x| \to \infty$, (i) $(h*\phi)(x) = a +o(1)$ and (ii) $\phi(x)=(h*\phi)(x)+o(1)$, which together yield
+$\phi(x)=a+o(1)$, i.e. $\phi(x) \to a$ as $|x| \to \infty$, proving \eqref{claim2}.
+\end{proof}
+
+
+\section{Closed ideals in 𝐿¹(ℝ\textsuperscript{\em d})}
+$L^1(\mathbb{R}^d)$ is a Banach algebra using convolution as the product.\footnote{Eberhard Kaniuth, {\em A Course in Commutative Banach Algebras},
+p.~25, Proposition 1.4.7.}
+
+\begin{theorem}
+Suppose that $I$ is a closed linear subspace of $L^1(\mathbb{R}^d)$. $I$ is translation-invariant if and only if $I$ is an ideal.
+\end{theorem}
+\begin{proof}
+Assume that $I$ is translation-invariant and let $f \in I$ and $g \in L^1(\mathbb{R}^d)$.
+For $\phi \in I^\perp \subset L^\infty(\mathbb{R}^d)$,
+\begin{align*}
+\inner{g*f}{\phi}&=\int_{\mathbb{R}^d} (g*f)(x) \phi(x) dx\\
+&=\int_{\mathbb{R}^d} \phi(x) \left( \int_{\mathbb{R}^d} g(x-y) f(y) dy \right) dx\\
+&=\int_{\mathbb{R}^d} g(z) \left( \int_{\mathbb{R}^d} \phi(x) f_z(x) dx \right) dz\\
+&=\int_{\mathbb{R}^d} g(z) \inner{\phi}{f_z} dz\\
+&=0,
+\end{align*}
+because $f_z \in I$ for each $z \in \mathbb{R}^d$. This shows that $f*g \in ^\perp(I^\perp)$.
+But $^\perp(I^\perp)$ is the closure of $I$ in $L^1(\mathbb{R}^d)$,\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~96, Theorem 4.7.}  and $I$ is closed so
+$f*g \in I$, showing that $I$ is an ideal.
+
+Assume that $I$ is an ideal and let $f \in I$ and $x \in \mathbb{R}^d$. Let $V$ be a
+closed ball centered at $0$, and let $\chi_A$ be the indicator function of a set $A$. We have
+\begin{align*}
+\norm{f_x - \frac{1}{\mu(V)}\chi_{x+V}*f}_1&= \int_{\mathbb{R}^d} \left| f_x(y) - \frac{1}{\mu(V)} (\chi_{x+V}*f)(y) \right| dy\\
+&=\int_{\mathbb{R}^d} \left| \frac{1}{\mu(V)} \int_{V} f_x(y) dz - \frac{1}{\mu(V)} \int_{\mathbb{R}^d} \chi_{x+V}(z) f(y-z) dz \right| dy\\
+&=\frac{1}{\mu(V)} \int_{\mathbb{R}^d} \left| \int_{V} f(y-x) dz - \int_{V} f(y-z-x) dz \right| dy\\
+&=\frac{1}{\mu(V)} \int_{\mathbb{R}^d} \left| \int_{V} (f(y-x) - f(y-z-x)) dz \right| dy\\
+&\leq \frac{1}{\mu(V)} \int_{V} \left( \int_{\mathbb{R}^d} \left| f(y-x) - f(y-z-x) \right| dy \right) dz\\
+&= \frac{1}{\mu(V)} \int_{V} \norm{f_x-f_{z+x}}_1 dz\\
+&=\frac{1}{\mu(V)} \int_{V} \norm{f-f_z}_1 dz\\
+&\leq \sup_{z \in V} \norm{f-f_z}_1.
+\end{align*}
+Let $\epsilon>0$.
+The map $z \mapsto f_z$ is continuous $\mathbb{R}^d \to L^1(\mathbb{R}^d)$, so there is some $\delta>0$ such that if
+$|z|<\delta$ then $\norm{f_z-f_0}_1<\epsilon$, i.e. $\norm{f-f_z}_1<\epsilon$. Then let $V$ be the closed ball of radius $\delta$, with which
+\begin{equation}
+\norm{f_x - \frac{1}{\mu(V)}\chi_{x+V}*f}_1 \leq \sup_{z \in V} \norm{f-f_z}_1 \leq \epsilon.
+\label{epsilonlimit}
+\end{equation}
+As $I$ is an ideal and  $\frac{1}{\mu(V)}\chi_{x+V} \in L^1(\mathbb{R}^d)$ we have $\frac{1}{\mu(V)}\chi_{x+V}*f \in L^1(\mathbb{R}^d)$, and
+then \eqref{epsilonlimit} and the fact that $I$ is closed imply $f_x \in I$. Therefore $I$ is translation-invariant.
+\end{proof}
+
+\end{document}

@@ -1,0 +1,951 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Hilb}{\ensuremath\mathrm{Hilb}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\Ran}{\ensuremath\mathrm{Ran}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\spr}{\ensuremath\mathrm{spr}}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Spectral theory, Volterra integral operators and the Sturm-Liouville theorem}
+\author{Jordan Bell}
+\date{December 5, 2016}
+
+\maketitle
+
+\section{Banach algebras}
+Let $A$ be a complex Banach algebra with unit element $e$. 
+Let $G(A)$ be the set of invertible elements of $A$.
+For $x \in A$, the \textbf{resolvent set of $x$} is
+\[
+\rho(x) = \{\lambda \in \mathbb{C}: \lambda e-x  \in G(A)\}.
+\]
+The 
+\textbf{spectrum of $x$} is
+\[
+\sigma(x) = \mathbb{C} \setminus \rho(x) = \{ \lambda \in \mathbb{C}: \lambda e-x  \not \in G(A)\}.
+\]
+The \textbf{spectral radius of $x$} is
+\[
+r(x) = \sup \{|\lambda| : \lambda \in \sigma(x)\}.
+\]
+One proves that $\sigma(x) \subset \mathbb{C}$ is compact and nonempty and
+\[
+r(x) = \lim_{n \to \infty} \norm{x^n}^{1/n},
+\]
+the \textbf{spectral radius formula}.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~253, Theorem 10.13.}
+If $r(x)=0$ we say that $x$ is \textbf{quasinilpotent}.\footnote{We say that $x \in A$ is \textbf{nilpotent} if there is some $n \geq 1$ such that $x^n=0$,
+and if $x$ is nilpotent then by the spectral radius formula, $x$ is quasinilpotent.}
+$x \in A$ is quasinilpotent if and only if $\sigma(x)=\{0\}$.
+
+
+\begin{lemma}
+If  $x \in A$ is quasinilpotent and $|\lambda|>0$, then
+$S_n = \sum_{j=0}^n \lambda^j x^j \in A$ is a Cauchy sequence, and
+\[
+(e-\lambda x)\sum_{n=0}^\infty \lambda^n x^n = e.
+\]
+\end{lemma}
+\begin{proof}
+Let $0<\epsilon < |\lambda|^{-1}$. There is some
+$n_\epsilon$ such that $\norm{x^n}^{1/n}\leq \epsilon$ for $n \geq n_\epsilon$. 
+For $n>m \geq n_\epsilon$,
+\[
+\norm{S_n-S_m} \leq \sum_{j=m+1}^n |\lambda|^j \norm{x^j}
+\leq \sum_{j=m+1} |\lambda|^j \epsilon^j,
+\]
+and because $|\lambda| \epsilon<1$, it follows that $S_n \in A$ is a Cauchy sequence and so converges to 
+some $S \in A$, $S = \sum_{n=0}^\infty \lambda^k x^k$. 
+Now,
+\begin{align*}
+(e-\lambda x)S &= (e-\lambda x)S_n+(e-\lambda x)(S-S_n)\\
+&=S_n - \lambda x S_n + (e-\lambda x)(S-S_n)\\
+&=S_n - \sum_{j=1}^{n+1} \lambda^j x^j + (e-\lambda x)(S-S_n)\\
+&=e-\lambda^{n+1} x^{n+1}+(e-\lambda x)(S-S_n).
+\end{align*}
+Because $x$ is quasinilpotent it follows that $\norm{(e-\lambda x)S - e} \to 0$. 
+\end{proof}
+
+For $x \in A$ and $\lambda \in \rho(x)$, let
+\[
+R_x(\lambda) = (x-\lambda e)^{-1}.
+\]
+
+\begin{lemma}
+If $x \in A$ is quasinilpotent and $\lambda \in \mathbb{C}$ then
+\[
+(e-\lambda x)^{-1} = \sum_{n=0}^\infty \lambda^n x^n
+\]
+and if $|\lambda|>0$ then
+\[
+R_x(\lambda) = -\lambda^{-1}(e-\lambda^{-1}x)^{-1}
+=-\lambda^{-1}\sum_{n=0}^\infty \lambda^{-n} x^n.
+\]
+\label{quasi}
+\end{lemma}
+
+
+
+
+
+
+
+\section{Volterra integral operators}
+Let $I=[0,1]$ and let
+$\mu$ be Lebesgue measure on $I$.
+$C(I)$ is a Banach space with the
+norm
+\[
+\norm{f}_\infty = \sup_{x \in I} |f(x)|,\qquad f \in C(I).
+\]
+$L^1(I)$ is a Banach space with the norm
+\[
+\norm{f}_{L^1} = \int_I |f(x)| dx,\qquad f \in L^1(I).
+\]
+For $f:I \to \mathbb{C}$,
+let
+\[
+|f|_\Lip = \sup_{x,y \in I, x \neq y} \frac{|f(x)-f(y)|}{|x-y|}.
+\]
+Let $\Lip(I)$ be the set of those $f:I \to \mathbb{C}$ with $|f|_\Lip<\infty$. It is a fact that
+$\Lip(I)$ is a Banach space with the norm $\norm{f}_\Lip=\norm{f}_\infty+|f|_\Lip$.\footnote{Walter Rudin,
+{\em Real and Complex Analysis}, third ed., p.~113, Exercise 11.}
+\[
+\Lip(I) \subset C(I) \subset L^1(I).
+\]
+
+$A=\mathscr{L}(C(I))$ is a Banach algebra with unit element
+$e(f)=f$ and 
+ with the operator norm:
+\[
+\norm{T} = \sup_{f \in C(I), \norm{f}_\infty \leq 1} \norm{Tf}_\infty,
+\qquad T \in A.
+\]
+
+
+
+
+For $K:I \times I \to \mathbb{C}$ and for $x,y \in I$ define
+\[
+K_x(y)=K(x,y),\qquad K^y(x)=K(x,y).
+\]
+
+Let
+$K \in C(I \times I)$.
+For $f \in L^1(I)$ define $V_Kf:I \to \mathbb{C}$ by
+\[
+V_Kf(x) = \int_0^x K(x,y) f(y) dy,
+\qquad x \in I.
+\]
+
+\begin{lemma}
+If $K \in C(I \times I)$ and 
+$f \in C(I)$ then $V_Kf \in C(I)$.
+\end{lemma}
+\begin{proof}
+For $x_1,x_2 \in I$, $x_1>x_2$,
+\begin{align*}
+V_Kf(x_1)-V_Kf(x_2)&=\int_0^{x_1}K(x_1,y)f(y)dy-\int_0^{x_1} K(x_2,y)f(y)dy\\
+&+\int_0^{x_1} K(x_2,y)f(y)dy - \int_0^{x_2} K(x_2,y)f(y)dy\\
+&=\int_0^{x_1} \bigg[K(x_1,y)-K(x_2,y)\bigg]f(y) dy
++\int_{x_2}^{x_1} K(x_2,y) f(y) dy.
+\end{align*}
+Let $\epsilon>0$. 
+Because $K:I \times I \to \mathbb{C}$ is uniformly continuous, there is some
+$\delta_1>0$ such that 
+$|(x_1,y_1)-(x_2,y_2)| \leq \delta_1$ implies
+$|K(x_1,y_1)-K(x_2,y_2)| \leq \epsilon$. 
+By the absolute continuity of the Lebesgue integral, there is some $\delta_2>0$ such that 
+$\mu(E) \leq \delta_2$ implies $\int_E |f| d\mu \leq \epsilon$.\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/L0.pdf},
+p.~8, Theorem 8.}
+Therefore if
+$|x_1-x_2|<\delta=\min(\delta_1,\delta_2)$ then
+\begin{align*}
+|V_Kf(x_1)-V_Kf(x_2)|&\leq \int_0^{x_1} \epsilon |f(y)| dy+\norm{K}_\infty \int_{x_2}^{x_1} |f(y)|dy\\
+&\leq \epsilon \norm{f}_{L^1} +\norm{K}_\infty \epsilon.
+\end{align*}
+It follows that $V_Kf:I \to \mathbb{C}$ is uniformly continuous, so
+$V_Kf \in C(I)$.
+\end{proof}
+
+
+
+
+
+$\norm{V_K f}_\infty \leq \norm{K}_\infty \norm{f}_\infty$ so $\norm{V_K} \leq \norm{K}_\infty$, hence $V_K:C(I) \to C(I)$ 
+is a bounded linear operator, namely $V_K \in A$.
+We call $V_K$ a \textbf{Volterra integral operator}.
+
+
+
+For $x \in I$,
+\[
+V_K^2f(x) = \int_0^x K(x,y_1) V_K f(y_1) dy_1
+=\int_0^x K(x,y_1) \left(\int_0^{y_1} K(y_1,y_2) f(y_2) dy_2\right) dy_1.
+\]
+\begin{align*}
+V_K^3f(x) &=V_K^2 V_Kf(x)\\
+&=\int_0^x K(x,y_1) \int_0^{y_1} K(y_1,y_2) V_Kf(y_2) dy_2 dy_1\\
+&=\int_0^x K(x,y_1) \int_0^{y_1} K(y_1,y_2) \int_0^{y_2} K(y_2,y_3) f(y_3) dy_3 dy_2 dy_1.
+\end{align*}
+For $n \geq 2$,
+\[
+V_K^n f(x)=\int_{y_1=0}^x \int_{y_2=0}^{y_1} \cdots \int_{y_n=0}^{y_{n-1}} 
+K(x,y_1) K(y_1,y_2)\cdots K(y_{n-1},y_n) f(y_n) dy_n \cdots dy_1.
+\]
+
+
+
+We prove that $V_K$ is quasinilpotent.\footnote{Barry Simon, {\em Operator Theory. A Comprehensive Course in Analysis, Part 4},
+p.~53, Example 2.2.13.}
+
+\begin{theorem}
+If $K \in C(I \times I)$ then 
+\[
+\norm{V_K^n} \leq \frac{\norm{K}_\infty^n}{n!},
+\]
+and thus $V_K \in A=\mathscr{L}(C(I))$ is quasinilpotent.
+\label{2213}
+\end{theorem}
+\begin{proof}
+Let
+\begin{align*}
+\Phi_n(x)&=\int_0^x \int_0^{y_1} \cdots \int_0^{y_{n-1}} 
+dy_n \cdots dy_1\\
+&=\int_0^x \int_0^{y_1} \cdots \int_0^{y_{n-2}}
+y_{n-1} dy_{n-1} \cdots dy_1\\
+&=\int_0^x \int_0^{y_1} \cdots \int_0^{y_{n-3}}
+\frac{y_{n-2}^2}{2} dy_{n-2} \cdots dy_1\\
+&=\int_0^x \frac{y_1^{n-1}}{(n-1)!} dy_1\\
+&=\frac{x^n}{n!}.
+\end{align*}
+
+For $x \in I$,
+\begin{align*}
+|V_K^n f(x)|&\leq
+\norm{K}_\infty^n \norm{f}_\infty \int_0^x \int_0^{y_1} \cdots \int_0^{y_{n-1}} dy_n \cdots dy_1\\
+&=\norm{K}_\infty^n \norm{f}_\infty \Phi_n(x)\\
+&=\norm{K}_\infty^n \norm{f}_\infty \frac{x^n}{n!}.
+\end{align*}
+Hence 
+\[
+\norm{V_K^n} \leq \frac{\norm{K}_\infty^n}{n!}. 
+\]
+Then
+\[
+\norm{V_K^n}^{1/n} \leq \frac{\norm{K}_\infty}{(n!)^{1/n}}.
+\]
+Using $(n!)^{1/n} \to \infty$ we get $\norm{V_K^n}^{1/n} \to 0$.
+Thus $V_K \in A$ is quasinilpotent.
+\end{proof}
+
+Theorem \ref{2213} tells us that $V_K$ is quasinilpotent and then
+Lemma \ref{quasi} then tells us that for $\lambda \in \mathbb{C}$,
+\begin{equation}
+(e-\lambda V_K)^{-1}=\sum_{n=0}^\infty \lambda^n V_K^n \in A.
+\label{VKquasi}
+\end{equation}
+
+
+
+
+\section{Sturm-Liouville theory}
+Let $Q \in C(I)$ and for $u \in C^2(I)$ define 
+\[
+L_Q u = -u''+Qu.
+\]
+
+\begin{lemma}
+If $u \in C^2(I)$ and 
+\[
+L_Q u=0,\qquad u(0)=0, \quad u'(0)=1,
+\]
+then 
+\[
+u(x) = x + \int_0^x (x-y)Q(y) u(y)dy,\qquad x \in I.
+\]
+\end{lemma}
+\begin{proof}
+For $y \in I$,
+by the fundamental theorem of calculus\footnote{Walter Rudin, {\em Real and Complex Analysis}, third ed.,
+ p.~149, Theorem 7.21.} and using $u'(0)=1$,
+\[
+\int_0^y u''(t) dt = u'(y)-u'(0) = u'(y)-1.
+\]
+Using $L_Qu=0$,
+\[
+u'(y) = 1 + \int_0^y u''(t) dt = 1 + \int_0^y Q(t) u(t) dt.
+\]
+For $x \in I$, by the fundamental theorem of calculus and using $u(0)=0$,
+\[
+\int_0^x u'(y) dy = u(x)-u(0)=u(x).
+\]
+Thus
+\begin{align*}
+u(x)&=\int_0^x u'(y) dy\\
+&=\int_0^x \left(1 + \int_0^y Q(t) u(t) dt\right) dy\\
+&=x + \int_0^x \left( \int_0^y Q(t) u(t) dt\right) dy.
+\end{align*}
+Applying Fubini's theorem,
+\begin{align*}
+u(x)&=x + \int_0^x Q(t)u(t) \left( \int_t^x  dy \right) dt\\
+&=x + \int_0^x Q(t)u(t) (x-t) dt.
+\end{align*}
+\end{proof}
+
+
+\begin{lemma}
+If $u \in C(I)$ and 
+\[
+u(x) = x + \int_0^x (x-y)Q(y)u(y) dy,\qquad x \in I,
+\]
+then $u \in C^2(I)$ and 
+\[
+L_Q u=0,\qquad u(0)=0, \quad u'(0)=1.
+\]
+\label{ulemma}
+\end{lemma}
+\begin{proof}
+\[
+u(x) = x + \int_0^x (x-y)Q(y)u(y) dy,\qquad x \in I,
+\]
+then
+\[
+ u(x) = x + x \int_0^x Q(y)u(y)dy-\int_0^x yQ(y)u(y)dy,
+ \]
+ and  using the fundamental theorem of calculus,
+\begin{align*}
+u'(x) &= 1 + \int_0^x Q(y) u(y) dy + xQ(x)u(x) - xQ(x) u(x)=1+\int_0^x Q(y)u(y) dy
+\end{align*}
+hence
+\begin{align*}
+u''(x) &= Q(x)u(x),
+\end{align*}
+and so
+\[
+L_Qu=-u''+Qu=-Qu+Qu=0.
+\]
+$u(0)=0$ and $u'(0)=1$, so
+\[
+L_Qu=0,\qquad u(0)=0, \quad u'(0)=1.
+\]
+\end{proof}
+
+
+
+\begin{lemma}
+Let $Q \in C(I)$ and let
+$K(x,y) = (x-y)Q(y)$, $K \in C(I \times I)$. Let $u_0(x)=x$, $u_0 \in C(I)$.
+Then $\sum_{j=0}^n V_K^j$ is a Cauchy sequence in $A=\mathscr{L}(C(I))$, and
+$u=\sum_{n=0}^\infty V_K^n u_0 \in C(I)$ satisfies $u=(e-V_K)^{-1}u_0$.
+\label{inverse}
+\end{lemma}
+\begin{proof}
+$V_K \in C(I)$ is quasinilpotent so applying \eqref{VKquasi} with $\lambda=1$,
+\[
+(e-V_K)^{-1}= \lim_{n \to \infty} \sum_{j=0}^n V_K^j \in A.
+\]
+Then
+\[
+(e-V_K)^{-1}u_0 = \left(\lim_{n \to \infty} \sum_{j=0}^n V_K^j\right)u_0
+=\lim_{n \to \infty} (V_K^j u_0)
+=\sum_{n=0}^\infty V_K^n u_0.
+\]
+Hence $u=(1-V_K)^{-1}u_0$, and so $(1-V_K)u=u_0$, i.e.
+$u = u_0 + V_Ku$,
+i.e. for $x \in I$,
+\begin{align*}
+u(x)&=u_0(x)+ \int_0^x K(x,y) u(y) dy.
+\end{align*}
+\end{proof}
+
+
+\begin{theorem}
+Let $Q \in C(I)$ and let
+$K(x,y) = (x-y)Q(y)$, $K \in C(I \times I)$. Let $u_0(x)=x$, $u_0 \in C(I)$. 
+Then $\sum_{j=0}^n V_K^j$ is a Cauchy sequence in $A=\mathscr{L}(C(I))$, and
+$u=\sum_{n=0}^\infty V_K^n u_0 \in C(I)$ satisfies 
+$u \in C^2(I)$,
+\[
+L_Q u=0,\qquad u(0)=0, \quad u'(0)=1.
+\]
+\label{Qtheorem}
+\end{theorem}
+\begin{proof}
+By Lemma \ref{inverse}, 
+$u=(e-V_K)^{-1}u_0$, i.e. $(e-V_K)u=u_0$, i.e.
+$u-V_Ku=u_0$, i.e. for $x \in I$,
+\[
+u(x) = x + V_Ku(x) = x + \int_0^x K(x,y) u(y) dy
+=x+\int_0^x (x-y)Q(y) u(y) dy.
+\]
+Lemma \ref{ulemma} then tells us that $u \in C^2(I)$ and 
+\[
+L_Q u=0,\qquad u(0)=0, \quad u'(0)=1.
+\]
+\end{proof}
+
+
+
+
+\section{Gronwall's inequality}
+Let $f \in L^1(I)$. We say that $x \in I$ is a \textbf{Lebesgue point of $f$} if 
+\[
+\frac{1}{r} \int_x^{x+r} |f(y)-f(x)| dy \to 0,\qquad r \to 0,
+\]
+which implies
+\[
+\frac{1}{r} \int_x^{x+r} f(y) dy \to f(x),\qquad r \to 0.
+\]
+The \textbf{Lebesgue differentiation theorem}\footnote{Walter Rudin, {\em Real and Complex Analysis},
+third ed., p.~138, Theorem 7.7} states that for almost all $x \in I$, $x$ is a Lebesgue point of $f$.
+Let
+\[
+F(x) = \int_0^x f(y) dy,\qquad x \in I, 
+\]
+so
+\[
+F(x+r)-F(x) = \int_x^{x+r} f(y) dy.
+\]
+If $x$ is a Lebesgue point of $f$ then
+\[
+\frac{F(x+r)-F(x)}{r} = \frac{1}{r}  \int_x^{x+r} f(y) dy \to f(x),
+\]
+which means that if $x$ is a Lebesgue point of $f$ then
+\[
+F'(x)=f(x).
+\] 
+
+
+We now prove \textbf{Gronwall's inequality}.\footnote{Anton Zettl, {\em Sturm-Liouville Theory},
+p.~8, Theorem 1.4.1.}
+
+\begin{theorem}[Gronwall's inequality]
+Let $g \in L^1(I)$, $g \geq 0$ almost everywhere and let $f:I \to \mathbb{R}$ be continuous. If $y:I \to \mathbb{R}$ is continuous and
+\[
+y(t) \leq f(t) + \int_0^t g(s) y(s) ds,\qquad t \in I,
+\]
+then 
+\[
+y(t) \leq f(t) + \int_0^t f(s) g(s) \exp\left(\int_s^t g(u) du\right) ds,\qquad t \in I.
+\]
+
+If $f$ is increasing then 
+\[
+y(t) \leq f(t) \exp\left(\int_0^t g(s) ds\right),\qquad t \in I.
+\]
+\end{theorem}
+\begin{proof}
+Let $z(t)=g(t) y(t)$ and 
+\[
+Z(t) = \int_0^t z(s) ds,\qquad t \in I.
+\]
+By hypothesis,
+$g \geq 0$ almost everywhere, and by the Lebesgue differentiation theorem,
+$Z'(t)=z(t)$ for almost all $t \in I$. Therefore for almost all $t \in I$, 
+\[
+Z'(t) = z(t) = g(t)y(t) \leq g(t)\left(f(t) + \int_0^t g(s) y(s) ds\right)
+=g(t)f(t) + g(t)Z(t).
+\]
+That is, there is a Borel set $E \subset I$, $\mu(E) = 1$, such that for $t \in I$,
+$Z$ is differentiable at $t$ and
+\[
+Z'(t) - g(t)Z(t) \leq g(t) f(t).
+\]
+For $s \in E$, using the product rule,
+\begin{align*}
+\bigg[ \exp\left(-\int_0^s g(u) du\right) Z(s) \bigg]'&=
+\exp\left(-\int_0^s g(u) du\right) \bigg[Z'(s) - g(t)Z(s)\bigg].
+\end{align*}
+For $t \in I$, as $\mu(E)=1$,
+\[
+\begin{split}
+&\int_0^t \bigg[ \exp\left(-\int_0^s g(u) du\right) Z(s) \bigg]' ds\\
+=&\int_{[0,t] \cap E} \bigg[ \exp\left(-\int_0^s g(u) du\right) Z(s) \bigg]' ds\\
+=&\int_{[0,t] \cap E} \exp\left(-\int_0^s g(u) du\right) \bigg[Z'(s) - g(s)Z(s)\bigg] ds\\
+\leq&\int_{[0,t] \cap E}  \exp\left(-\int_0^s g(u) du\right) g(s) f(s) ds\\
+=&\int_0^t g(s) f(s)  \exp\left(-\int_0^s g(u) du\right) ds.
+\end{split}
+\]
+But
+\begin{align*}
+\int_0^t \bigg[ \exp\left(-\int_0^s g(u) du\right) Z(s) \bigg]' ds
+&= \bigg[ \exp\left(-\int_0^s g(u) du\right) Z(s) \bigg]\bigg|_0^t\\
+&=\exp\left(-\int_0^t g(u) du\right) Z(t).
+\end{align*}
+So
+\[
+\exp\left(-\int_0^t g(u) du\right) Z(t) \leq \int_0^t g(s) f(s)  \exp\left(-\int_0^s g(u) du\right) ds.
+\]
+Therefore,
+\begin{align*}
+y(t) &\leq f(t) + \int_0^t g(s) y(s) ds\\
+&=f(t)+Z(t)\\
+&\leq f(t)+ \exp\left(\int_0^t g(u) du\right) \int_0^t g(s) f(s)  \exp\left(-\int_0^s g(u) du\right) ds\\
+&=f(t) + \int_0^t g(s) f(s) \exp\left(\int_0^t g(u) du-\int_0^s g(u) du\right) ds\\
+&=f(t) + \int_0^t g(s) f(s) \exp\left(\int_s^t g(u) du\right) ds.
+\end{align*}
+
+
+Suppose that $f$ is increasing. 
+Let
+\[
+G(s) = \int_0^s g(u) du,\qquad s \in I.
+\] 
+For $t \in I$,
+\begin{align*}
+y(t)&\leq f(t) + \int_0^t g(s) f(s) \exp\left(\int_s^t g(u) du\right) ds\\
+&\leq f(t) + \int_0^t g(s) f(t) \exp\left(\int_s^t g(u) du\right) ds\\
+&=f(t) \bigg[1+\int_0^t g(s) \exp\left(\int_s^t g(u) du\right) ds\bigg]\\
+&=f(t)\bigg[1+\int_0^t g(s) e^{G(t)-G(s)} ds\bigg]\\
+&=f(t)\bigg[1+e^{G(t)} \int_0^t g(s) e^{-G(s)} ds\bigg].
+\end{align*}
+Let $H(s)=e^{-G(s)}$, with which
+\[
+y(t) \leq f(t)\bigg[1+\frac{1}{H(t)} \int_0^t g(s) H(s) ds\bigg].
+\]
+If $s$ is a Lebesgue point of $g$ then
+\[
+H'(s) = -G'(s) e^{-G(s)} = -g(s) H(s).
+\]
+Hence
+\begin{align*}
+y(t) &\leq f(t)\bigg[1-\frac{1}{H(t)} \int_0^t H'(s) ds\bigg]\\
+&=f(t)\bigg[1-\frac{1}{H(t)} \bigg[H(t)-H(0)\bigg] \bigg]\\
+&=f(t)\bigg[1-1 + \frac{H(0)}{H(t)}\bigg]\\
+&=f(t) e^{G(t)}\\
+&=f(t) \exp\left(\int_0^t g(u) du\right).
+\end{align*}
+\end{proof}
+
+Let $K(x,y)=(x-y)Q(y)$. 
+Let $u=\sum_{n=0}^\infty V_K^n u_0 \in C(I)$. Lemma \ref{inverse} tells us that $u=(e-V_K)^{-1}u_0$, i.e.
+$(e-V_K)u=u_0$, i.e. $u=u_0+V_Ku$, i.e. for $x \in I$,
+\[
+u(x) = x + \int_0^x (x-y)Q(y) u(y) dy.
+\]
+Then
+\[
+|u(x)| \leq x + \int_0^x |x-y| |Q(y)| |u(y)| dy
+\leq x+\int_0^x |Q(y)| |u(y)| dy.
+\]
+Applying Gronwall's inequality we get
+\begin{equation}
+|u(x)| \leq x \exp\left(\int_0^x |Q(y)| dy\right),\qquad x \in I.
+\label{gronwall}
+\end{equation}
+
+
+
+\section{The spectral theorem for positive compact operators}
+The following is the \textbf{spectral theorem for positive compact operators}.\footnote{Barry Simon, {\em Operator Theory. A Comprehensive Course in Analysis, Part 4},
+p.~102, Theorem 3.2.1.}
+
+\begin{theorem}[Spectral theorem for positive compact operators]
+Let $H$ be a separable complex Hilbert space and let $T \in \mathscr{L}(H)$ be positive and compact.
+There are countable sets $\Phi, \Psi \subset H$ and $\lambda_\phi>0$ for $\phi \in \Phi$
+such that
+(i) $\Phi \cup \Psi$ is an orthonormal basis for $H$,
+(ii) $T\phi = \lambda_\phi \phi$ for $\phi \in \Phi$,
+(iii) $T\psi = 0$ for $\psi \in \Psi$,
+(iv) if $\Phi$ is infinite then $0$ is a limit point of $\Lambda$ and is the only limit point of $\Lambda$. 
+\end{theorem}
+
+Suppose that $H$ is infinite dimensional and that
+$T$ is a positive compact operator with $\ker(T) = 0$. 
+The spectral theorem for positive compact operators then says that there is a
+a countable set $\Phi \subset H$ and $\lambda_\phi>0$ for $\phi \in \Phi$ such that
+$\Phi$ is an orthonormal basis for $H$, $T\phi = \lambda_\phi \phi$ for $\phi \in \Phi$,
+and the unique limit point of $\{\lambda_\phi:\phi \in \Phi\}$ is $0$.
+Let $\Phi = \{\phi_n: n \geq 1\}$, $\phi_n \neq \phi_m$ for $n \geq m$,
+ such that $n \geq m$ implies $\lambda_{\phi_n} \leq \lambda_{\phi_m}$. 
+Let $\lambda_n=\lambda_{\phi_n}$. Then $\lambda_n \downarrow 0$. 
+Summarizing, there is an orthonormal basis $\{\phi_n: n \geq 1\}$ for $H$ and $\lambda_n>0$ such that
+$T\phi_n=\lambda_n \phi_n$ for $n \geq 1$ and $\lambda_n \downarrow 0$. 
+
+
+
+\section{$Q>0$, Green's function for $L_Q$}
+Suppose $Q \in C(I)$ with $Q(x) > 0$ for $0<x<1$. 
+Let $K(x,y)=(x-y)Q(y)$, $K \in C(I \times I)$, and $u_0(x)=x$, $u_0 \in C(I)$.
+Let
+\[
+u=\sum_{n=0}^\infty V_K^n u_0 \in C(I).
+\]
+By Theorem \ref{Qtheorem}, $u \in C^2(I)$ and
+\[
+L_Qu=0,\qquad u(0)=0, \quad u'(0)=1.
+\]
+
+If $f \in C(I)$ and $f(x)>0$ for $0<x<1$ then 
+\[
+V_Kf(x) = \int_0^x (x-y)Q(y) f(y) dy
+>0.
+\]
+By induction, for $0<x<1$ and for $n \geq 1$ we have $V_K^n f(x)>0$.
+Hence
+for $0<x<1$,
+\[
+u(x)=\sum_{n=0}^\infty (V_K^n u_0)(x)
+> 0.
+\]
+
+For $x \in I$,
+\[
+u(x)=x+\int_0^x (x-y)Q(y) u(y)dy=x+x\int_0^x Q(y) u(y)dy
+-\int_0^x yQ(y)u(y) dy.
+\]
+Using the fundamental theorem of calculus,
+\[
+u'(x)=1+\int_0^x Q(y)u(y) dy.
+\]
+Then because $Q(y)>0$ for $0<y<1$ and $u(y)>0$ for $0 < y < 1$,
+\[
+u'(x)>1,\qquad 0<x<1.
+\]
+
+Using $u(x)=x+\int_0^x (x-y)Q(y) u(y)dy$ and $Q>0$ we get
+\[
+u(x)>x,\qquad 0<x< 1.
+\]
+
+Let $u_1(x)=u(x)$ and $u_2(x)=u(1-x)$.
+Then 
+\[
+L_Qu_1=0,\qquad u_1(0)=0,\qquad u_1'(0)=1
+\]
+and
+\[
+L_Qu_2=0,\qquad u_2(1)=0,\qquad u_2'(1)=-1.
+\]
+A fortiori,
+\[
+u_1(x)>0,\qquad u_1'(x)>0,\qquad 0<x<1,
+\]
+and as $u_2'(x)=-u'(1-x)$,
+\[
+u_2(x)>0,\qquad u_2'(x)<0,\qquad 0<x<1.
+\]
+
+For $0<x<1$ let
+\[
+W(x)=u_1'(x)u_2(x)-u_1(x)u_2'(x).
+\]
+$u_1'>0, u_2>0$ so $u_1'u_2>0$.
+$u_1>0, u_2'<0$ so $-u_1u_2'>0$, hence $W>0$.
+\begin{align*}
+W'&=(u_1'u_2-u_1u_2')'\\
+&=u_1''u_2+u_1'u_2'-u_1'u_2'-u_1u_2''\\
+&=u_1''u_2-u_1u_2''\\
+&=(Qu_1)u_2-u_1(Qu_2)\\
+&=0.
+\end{align*}
+Therefore there is some $W_0>0$ such that $W(x)=W_0$ for all $0<x<1$. 
+
+Define 
+\[
+G(x,y) = \frac{u_1(x \wedge y) u_2(x \vee y)}{W_0},\qquad (x,y) \in I \times I.
+\]
+$x \wedge y=\min(x,y)$, $x \vee y = \max(x,y)$. 
+Because $(x,y) \mapsto x \wedge y$ and $(x,y) \mapsto x \vee y$ are each continuous
+$I \times I \to I$, it follows that $G \in C(I \times I)$. 
+$G(x,y) = G(y,x)$. 
+
+$G$ is
+the \textbf{Green's function for $L_Q$}.
+Let $(x,y) \in I \times I$.
+If $x>y$ then 
+\[
+G^y(x) = \frac{u_1(y) u_2(x)}{W_0}
+\]
+and so
+\[
+L_Q G^y(x) = \frac{u_1(y)}{W_0} L_Q u_2(x) = 0.
+\]
+If $x<y$ then
+\[
+G^y(x) = \frac{u_1(x)u_2(y)}{W_0}
+\]
+and so
+\[
+L_Q G^y(x) = \frac{u_2(y)}{W_0} L_Q u_1(x) = 0.
+\]
+
+
+
+\section{$Q>0$, $L^2(I)$}
+$L^2(I)$ is a separable complex Hilbert space with the inner product
+\[
+\inner{f}{g} = \int_I f \overline{g} d\mu,\qquad f,g \in L^2(I).
+\]
+Define $T_Q:L^2(I) \to L^2(I)$ by
+\[
+(T_Q g)(x) = \int_I G(x,y) g(y) dy.
+\]
+$T_Q:L^2(I) \to L^2(I)$ is a Hilbert-Schmidt operator.\footnote{Barry Simon, {\em Operator Theory. A Comprehensive Course in Analysis, Part 4},
+p.~96, Theorem 3.1.16.}
+
+It is immediate that $G(y,x)=G(x,y)$ and $\overline{G}=G$.
+Then 
+by Fubini's theorem,  for $f,g \in L^2(I)$,
+\begin{align*}
+\inner{T_Qg}{f}&=\int_I (T_Q g)(x) \overline{f(x)} dx\\
+&=\int_I \left( \int_I G(x,y) g(y) dy\right) \overline{f(x)} dx\\
+&=\int_I g(y)\overline{\left(\int_I G(y,x) f(x) dx \right)} dy\\
+&=\int_I g(y) \overline{(T_Q f)(y)}dy\\
+&=\inner{g}{T_Q f}.
+\end{align*}
+Therefore $T_Q:L^2(I) \to L^2(I)$ is self-adjoint.
+
+We now establish properties of $T_Q$.\footnote{Barry Simon, {\em Operator Theory. A Comprehensive Course in Analysis, Part 4},
+p.~106, Proposition 3.2.8.}
+Let
+\[
+N^k(I) = \{f \in C^k(I): f(0)=0, f(1)=0\}.
+\]
+
+\begin{lemma}
+Let $Q \in C(I)$, $Q(x)>0$ for $0<x<1$. 
+Let $g \in L^2(I)$ and let $f=T_Qg$,
+\[
+f(x)=(T_Qg)(x)=\int_I G(x,y) g(y) dy
+=\int_I G_x g d\mu.
+\]
+Then $f \in N^0(I)$.  
+
+If $g \in C(I)$ then $f \in C^2(I)$ and
+\[
+L_Q f=g.
+\]
+\label{proposition328}
+\end{lemma}
+\begin{proof}
+For $x \in I$,
+\begin{align*}
+f(x)&=\int_0^x  \frac{u_1(x \wedge y) u_2(x \vee y)}{W_0} g(y) dy
++\int_x^1  \frac{u_1(x \wedge y) u_2(x \vee y)}{W_0} g(y) dy\\
+&=\int_0^x \frac{u_1(y)u_2(x)}{W_0} g(y) dy
++\int_x^1 \frac{u_1(x)u_2(y)}{W_0}g(y) dy\\
+&=u_2(x)\int_0^x \frac{u_1(y)g(y)}{W_0} dy
++u_1(x) \int_x^1 \frac{u_2(y) g(y)}{W_0} dy.
+\end{align*}
+It follows that $f \in C(I)$.
+
+Suppose $g \in C(I)$. Then by the fundamental theorem of calculus,
+\begin{align*}
+f'(x)&=u_2'(x)\int_0^x \frac{u_1(y)g(y)}{W_0} dy
++u_2(x) \frac{u_1(x) g(x)}{W_0}\\
+&+u_1'(x) \int_x^1 \frac{u_2(y) g(y)}{W_0} dy
+-u_1(x) \frac{u_2(x)g(x)}{W_0}\\
+&=u_2'(x)\int_0^x \frac{u_1(y)g(y)}{W_0} dy+u_1'(x) \int_x^1 \frac{u_2(y) g(y)}{W_0} dy.
+\end{align*}
+Because $u_1',u_2' \in C(I)$ it follows that $f' \in C(I)$, i.e. $f \in C^1(I)$.
+Then
+\begin{align*}
+f''(x)&=u_2''(x)\int_0^x \frac{u_1(y)g(y)}{W_0} dy+u_2'(x) \frac{u_1(x)g(x)}{W_0}\\
+&+u_1''(x)\int_x^1  \frac{u_2(y) g(y)}{W_0} dy
+-u_1'(x) \frac{u_2(x)g(x)}{W_0}\\
+&=u_2''(x)\int_0^x \frac{u_1(y)g(y)}{W_0} dy+u_1''(x)\int_x^1  \frac{u_2(y) g(y)}{W_0} dy-\frac{W(x)g(x)}{W_0}\\
+&=u_2''(x)\int_0^x \frac{u_1(y)g(y)}{W_0} dy+u_1''(x)\int_x^1  \frac{u_2(y) g(y)}{W_0} dy-g(x).
+\end{align*}
+Because $g \in C(I)$ it follows that $f'' \in C(I)$, i.e. $f \in C^2(I)$. Furthermore,
+because $u_1''=Qu_1$ and $u_2''=Qu_2$,
+\begin{align*}
+f''(x) &= Q(x)u_2(x)\int_0^x \frac{u_1(y)g(y)}{W_0} dy+Q(x)u_1(x)\int_x^1  \frac{u_2(y) g(y)}{W_0} dy-g(x)\\
+&=Q(x)f(x)-g(x).
+\end{align*}
+\end{proof}
+
+
+We now establish more facts about $T_Q$.\footnote{Barry Simon, {\em Operator Theory. A Comprehensive Course in Analysis, Part 4},
+p.~107, Proposition 3.2.9.}
+
+
+\begin{lemma}
+Let $Q \in C(I)$, $Q(x)>0$ for $0<x<1$. 
+\begin{enumerate}
+\item If $f_1,f_2 \in N^2(I)$ then
+\[
+\int_I f_1 L_Q f_2dx = \int_I (f_1'f_2'+Qf_1f_2) dx.
+\]
+
+\item If $f \in N^2(I)$  and $L_Qf =0$, then $f=0$.
+
+
+\item If $f \in N^2(I)$ then $f=T_Q L_Qf$.
+
+\item $T_Q \geq 0$.
+
+\item $\ker T_Q=0$.
+\end{enumerate}
+\label{329}
+\end{lemma}
+\begin{proof}
+First, doing integration by parts,
+\begin{align*}
+\int_I f_1(-f_2''+Qf_2)dx&=-\int_{\partial I} f_1f_2'
++\int_I f_1'f_2' dx
++\int_I Qf_1f_2 dx\\
+&=\int_I f_1'f_2' dx
++\int_I Qf_1f_2 dx\\
+&=\int_I (f_1'f_2'+Qf_1f_2) dx.
+\end{align*}
+
+Second, using the above with $f_1=f$ and $f_2=f$, with $f \in C^2(I)$ real-valued,
+\[
+\int_I f(-f''+Qf) dx = \int_I (|f'|^2+Q|f|^2) dx.
+\]
+Using $-f''+Qf=0$,
+\[
+ \int_I (|f'|^2+Q|f|^2) dx=0.
+\]
+Because $Q(x)>0$ for $0<x<1$, it follows that $|f|=0$ almost everywhere.
+But $f$ is continuous so $f=0$. For $f=f_1+if_2$, if
+$-f''+Qf=0$ and $f(0)=0, f(1)=0$ then as $Q$ is real-valued,
+we get $f_1=0$ and $f_2=0$ hence $f=0$.
+
+Third, say $f \in C^2(I)$ is real-valued, $f(0)=0$, $f(1)=0$, and 
+$g=L_Qf=-f''+Qf \in C(I)$.
+Let $h=T_Qg$. By Lemma \ref{proposition328}, $h \in C^2(I)$ and 
+\[
+-h''+Qh=g,\qquad h(0)=0,\qquad h(1)=0.
+\]
+Let $F=f-h$. Then using $-f''+Qf=g$ we get
+\[
+F''=f''-h''=(Qf-g)-(Qh-g)=Q(f-h)=QF.
+\]
+Furthermore,
+\[
+F(0)=f(0)-h(0)=0-0=0,\qquad F(1)=f(1)-h(1)=0-0=0.
+\]
+Because $f$ is real-valued so is $g$, and because $g$ is real-valued
+it follows that $h=T_Q g$ is real-valued. Thus $F$ is real-valued and so by the above,
+$F=0$. That is, 
+$f=h$, i.e.
+$f=T_Qg$. For $f=f_1+if_2$, if $f(0)=0$, $f(1)=0$ and
+$g=-f''+Qf$, let $g=g_1+ig_2$.
+As $Q$ is real-valued we get
+$g_1=-f_1''+Qf_1$ and $g_2=-f_2''+Qf_2$. Then
+$f_1=T_Q g_1$ and $f_2=T_Qg_2$. Thus
+\[
+f=f_1+if_2=T_Qg_1+iT_Qg_2=T_Q(g_1+ig_2)=T_Qg.
+\]
+
+
+Fourth, let $g \in C(I)$ and let $f=T_Qg$. By Lemma \ref{proposition328},
+$f \in C^2(I)$ and
+\[
+-f''+Qf=g,\qquad f(0)=0,\qquad f(1)=0.
+\]
+Then using the above,
+\begin{align*}
+\inner{g}{T_Qg}&=\inner{-f''+Qf}{f}\\
+&=\int_I (-f''+Qf)\overline{f} dx\\
+&=\int_I (\overline{f}'f'+Q\overline{f}f)dx\\
+&=\int_I (|f'|^2+Q|f|^2) dx.
+\end{align*}
+Because $Q \geq 0$ we have $\inner{g}{T_Qg} \geq 0$.
+For $g \in L^2(I)$ let $g_n \in C(I)$ with $\norm{g_n-g}_{L^2} \to 0$. 
+Then $\inner{g_n}{T_Q g_n} \to \inner{g}{T_Q g}$ as $n \to \infty$, and because
+$\inner{g_n}{T_Q g_n} \geq 0$ it follows that $\inner{g}{T_Q g} \geq 0$. 
+Therefore $T_Q \geq 0$, namely $T_Q$ is a positive operator.
+
+Let $f \in N^2$ and
+let $g=-f''+Qf$. Then $f=T_Qg$. This means that 
+$N^2 \subset \Ran(T_Q)$. One checks that $N^2$ is dense in $L^2(I)$, so $\Ran(T_Q)$ is dense in 
+$L^2(I)$. 
+If $f \in \ker(T_Q)$ and $g \in L^2(I)$ then 
+$\inner{f}{T_Q^*g}=\inner{T_Qf}{g}=0$. Hence
+$\ker(T_Q) \perp \Ran(T_Q^*)$. But $T_Q$ is self-adjoint which implies that
+$\ker(T_Q) \perp \Ran(T_Q)$. 
+Because $\Ran(T_Q)$ is dense in $L^2(I)$ it follows that $\ker(T_Q)=0$.
+\end{proof}
+
+We now prove the \textbf{Sturm-Liouville theorem.}\footnote{Barry Simon, {\em Operator Theory. A Comprehensive Course in Analysis, Part 4},
+p.~105, Theorem 3.2.7, p.~110, Exercise 7.}
+
+\begin{theorem}[Sturm-Liouville theorem]
+Let $Q \in C(I)$, $Q(x)>0$ for $0<x<1$. There is an orthonormal basis $\{u_n: n \geq 1\} \subset
+N^2(I)$ for $L^2(I)$ and $\lambda_n >0$, $\lambda_m < \lambda_n$ for $m < n$ and 
+$\lambda_n \to \infty$,
+such that
+\[
+L_Q u_n = \lambda_n u_n,\qquad n \geq 1.
+\]
+\end{theorem}
+\begin{proof}
+We have established that $T_Q$ is a positive compact operator with $\ker T_Q=0$. 
+The spectral theorem for positive compact operators then tells us that 
+there is an orthonormal basis $\{\phi_n: n \geq 1\}$ for $L^2(I)$ and $\gamma_n>0$ such that
+$T_Q \phi_n=\gamma_n \phi_n$ for $n \geq 1$ and $\gamma_n \downarrow 0$. 
+By Lemma \ref{proposition328}, $T_Q \phi_n \in N^0(I)$. Let
+\[
+u_n = \frac{1}{\gamma_n} T_Q \phi_n \in N^0(I).
+\]
+Because $T_Q \phi_n = \gamma_n \phi_n$ we have
+$u_n = \phi_n$ in $L^2(I)$ and so
+\[
+u_n = \frac{1}{\gamma_n} T_Q u_n.
+\]
+Let $v_n = T_Q u_n$. Because $u_n \in C(I)$, 
+Lemma \ref{proposition328} tells us that $v_n \in N^2(I)$ and $L_Q v_n=u_n$. 
+But $u_n = \frac{1}{\gamma_n} v_n$ so $u_n \in N^2(I)$ and 
+\[
+L_Q u_n = \frac{1}{\gamma_n} L_Q v_n = \frac{1}{\gamma_n} u_n.
+\]
+Let $\lambda_n = \frac{1}{\gamma_n}$. Then $\lambda_n>0$, $\lambda_m \leq \lambda_n$ for $m \leq n$,
+$\lambda_n \to \infty$, and
+\[
+L_Q u_n = \lambda_n u_n,\qquad n \geq 1.
+\]
+To prove the claim it remains to show that the sequence $\lambda_n$ is strictly increasing. 
+
+Let $\lambda>0$ and suppose that $f,g \in N^2(I)$ satisfy
+\[
+L_Q f=\lambda f,\qquad L_Q g = \lambda g.
+\] 
+Let $W(x)=f(x)g'(x)-g(x)f'(x)$, the Wronskian of $f$ and $g$.
+Either $W(x)=0$ for all $x \in I$ or $W(x) \neq 0$ for all $x \in I$. 
+Using $f(0)=0$ and $g(0)=0$ we get
+$W(0)=0$. Therefore $W(x)=0$ for all $x \in I$ and $W=0$ implies
+that $f,g$ are linearly dependent.
+
+Suppose by contradiction that $\lambda_n=\lambda_m$ for some $n \neq m$. 
+Applying the above with $\lambda=\lambda_n=\lambda_m$,
+$f=u_n, g=u_m$ we get that 
+$u_n,u_m$ are linearly dependent, contradicting that $\{u_n: n \geq 1\}$ is an orthonormal set.
+Therefore $m \neq n$ implies that $\lambda_m \neq \lambda_n$.  
+\end{proof}
+
+
+
+\section{Other results in Sturm-Liouville theory}
+\footnote{B. M. Levitan and I. S. Sargsjan,
+{\em Spectral Theory: Selfadjoint Ordinary Differential Operators}, p.~11.}
+
+
+
+\end{document}

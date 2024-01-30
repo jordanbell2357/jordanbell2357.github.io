@@ -1,0 +1,306 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\Hilb}{\ensuremath\mathrm{Hilb}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Real reproducing kernel Hilbert spaces}
+\author{Jordan Bell}
+\date{October 22, 2015}
+
+\maketitle
+
+\section{Reproducing kernels}
+We shall often speak about functions $F:X \times X \to \mathbb{R}$, where $X$ is a nonempty set. For $x \in X$, we define
+$F_x:X \to \mathbb{R}$ by $F_x(y)=F(x,y)$ and for $y \in X$ we define $F^y:X \to \mathbb{R}$ by $F^y(x)=F(x,y)$. 
+$F$ is said to be \textbf{symmetric} if
+$F(x,y)=F(y,x)$ for all $x,y \in X$ and \textbf{positive-definite} if for any
+$x_1,\ldots,x_n \in X$ and $c_1,\ldots,c_n \in \mathbb{R}$ it holds that
+\[
+\sum_{1 \leq i,j \leq n} c_i c_j F(x_i,x_j) \geq 0.
+\]
+
+\begin{lemma}
+If $F:X \times X \to \mathbb{R}$ is symmetric and positive-definite then
+\[
+F(x,y)^2 \leq F(x,x) F(y,y),\qquad x,y \in X.
+\]
+\label{CS}
+\end{lemma}
+\begin{proof}
+For $\alpha,\beta \in \mathbb{R}$
+define\footnote{See 
+Alain Berlinet and Christine Thomas-Agnan, {\em Reproducing Kernel Hilbert Spaces
+in Probability and Statistics}, p.~13, Lemma 3.}
+\begin{align*}
+C(\alpha,\beta)&=\alpha^2 F(x,x) + \alpha \beta F(x,y) +  \beta \alpha F(y,x) + \beta^2 F(y,y)\\
+&=\alpha^2 F(x,x) + 2\alpha \beta F(x,y) + \beta^2 F(y,y),
+\end{align*}
+which is $\geq 0$.
+Let
+\begin{align*}
+P(\alpha) &= C(\alpha,F(x,y))\\
+&=\alpha^2 F(x,x)+2\alpha F(x,y)^2 + F(x,y)^2 F(y,y),
+\end{align*}
+which is $\geq 0$. In the case $F(x,x)=0$, the fact that $P \geq 0$ implies that $F(x,y)=0$.
+In the case $F(x,y) \neq 0$, $P(\alpha)$ is a quadratic polynomial and because $P \geq 0$ it follows that the  discriminant of $P$ is $\leq 0$:
+\[
+4F(x,y)^4 - 4\cdot F(x,x) \cdot F(x,y)^2 F(y,y) \leq 0.
+\]
+That is,  $F(x,y)^4 \leq F(x,y)^2 F(x,x) F(y,y)$, and this implies that
+$F(x,y)^2 \leq F(x,x) F(y,y)$.
+\end{proof}
+
+
+
+
+
+A \textbf{real reproducing kernel Hilbert space}
+is a Hilbert space $H$ contained in $\mathbb{R}^X$, where $X$ is a nonempty set, such that for each $x \in X$ the map
+$\Lambda_x f = f(x)$ is continuous $H \to \mathbb{R}$. In this note we speak always about real
+Hilbert spaces.
+
+Let $H \subset \mathbb{R}^X$ be a reproducing kernel Hilbert space. Because $H$ is a Hilbert
+space, the Riesz
+representation theorem states that
+$\Phi:H \to H^*$ defined by
+\[
+(\Phi g)(f)=\inner{f}{g}_H,\qquad g,f \in H
+\]
+is an isometric isomorphism.
+Because $H$ is a reproducing kernel Hilbert space, 
+$\Lambda_x \in H^*$ for each $x \in X$ and we define $T_x=\Phi^{-1}\Lambda_x \in H$, which satisfies
+\[
+f(x) = \Lambda_x(f) = \inner{f}{T_x}_H,\qquad f \in H.
+\]
+In particular, because $T_x \in H$, for $y \in X$ it holds that
+\[
+T_x(y) = \Lambda_y(T_x) = \inner{T_x}{T_y}_H.
+\]
+Define $K:X \times X \to \mathbb{R}$ by
+\[
+K(x,y) = \inner{T_x}{T_y}_H,
+\]
+called  \textbf{the reproducing kernel of $H$}.
+For $x,y \in X$,
+\[
+T_x(y) = \inner{T_x}{T_y}_H = K(x,y) = K_x(y),
+\]
+which means that $T_x = K_x$. 
+
+A reproducing kernel is symmetric and positive-definite:
+\[
+K(x,y) = \inner{T_x}{T_y}_H = \inner{T_y}{T_x}_H = K(y,x)
+\]
+and
+\begin{align*}
+\sum_{1 \leq i,j \leq n} c_i c_j K(x_i,x_j) &= \sum_{1 \leq i,j \leq n}  \inner{c_i T_{x_i}}{c_j T_{x_j}}_H\\
+&=\inner{\sum_{1 \leq i \leq n} c_i T_{x_i}}{\sum_{1 \leq j \leq n} c_j T_{x_j}}_H\\
+&\geq 0.
+\end{align*}
+
+\begin{lemma}
+If $E$ is an orthonormal basis for a reproducing kernel Hilbert space $H \subset \mathbb{R}^X$ with
+reproducing kernel $K:X \times X \to \mathbb{R}$,
+then
+\[
+K(x,y) = \sum_{e \in E} e(x)e(y),\qquad x,y \in X.
+\]
+\end{lemma}
+\begin{proof}
+Because $E$ is an orthonormal basis for $H$,
+Parseval's identity tell us 
+\[
+\inner{T_x}{T_y}_H = \sum_{e \in E} \inner{T_x}{e} \inner{T_y}{e} = \sum_{e \in E} \inner{e}{T_x} \inner{e}{T_y}
+=\sum_{e \in E} e(x) e(y).
+\]
+\end{proof}
+
+
+If $H \subset \mathbb{R}^X$ is a reproducing kernel Hilbert space with reproducing kernel $K:X \times X \to \mathbb{R}$ and
+$V$ is  a closed linear subspace of $H$, then $V$ is itself a reproducing kernel Hilbert space, with some reproducing kernel
+$G:X \times X \to \mathbb{R}$. 
+The following theorem expresses $G$ in terms of $K$.\footnote{Ward Cheney and Will Light, {\em A Course in Approximation Theory}, p.~234, Chapter 31, Theorem 4.}
+
+\begin{theorem}
+Let $H \subset \mathbb{R}^X$ be a reproducing kernel Hilbert space
+with reproducing kernel $K:X \times X \to \mathbb{R}$, let
+$V$ be a closed linear subspace of $H$ with reproducing kernel
+$G:X \times X \to \mathbb{R}$, and let $P_V:H \to V$ be the projection onto $V$. 
+Then
+\[
+G_x = P_V K_x,\qquad x \in X.
+\]
+\end{theorem}
+\begin{proof}
+$H=V \oplus V^\perp$, thus for $f \in H$ there are unique $g \in V, h \in V^\perp$ such that $f=g+h$, and
+$P_V f = g$.\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/pvm.pdf}} Then $f-P_V f \in V^\perp$. 
+Therefore for $y \in X$, as $G_y \in V$ it holds that
+\[
+\inner{f}{G_y}_H = \inner{f-P_Vf + P_Vf}{G_y}_H = 
+\inner{P_Vf}{G_y}_H = (P_V f)(y).
+\]
+In particular, for  $x,y \in X$ and $f=K_x$,
+\[
+(P_V K_x)(y) = \inner{K_x}{G_y}_H = \inner{G_y}{T_x}_H = G_y(x) = G(y,x) = G(x,y)=G_x(y),
+\]
+which means that $P_V K_x=G_x$, proving the claim.
+\end{proof}
+
+
+
+The \textbf{Moore-Aronszajn theorem} states that if
+ $X$ is a nonempty set and  $K:X \times X \to \mathbb{R}$ is a symmetric and positive-definite function, then 
+ there is a unique reproducing
+kernel Hilbert space $H \subset \mathbb{R}^X$ for which $K$ is the reproducing kernel.
+
+We now prove that given a symmetric positive-definite kernel there is a unique reproducing Hilbert space for which it is
+the reproducing kernel.\footnote{Alain Berlinet and Christine Thomas-Agnan, {\em Reproducing Kernel Hilbert Spaces
+in Probability and Statistics}, p.~19, Theorem 3.}
+
+
+
+
+
+\section{Sobolev spaces on $[0,T]$}
+Let $f \in \mathbb{R}^{[0,T]}$. The following are equivalent:\footnote{Elias M. Stein and Rami Shakarchi,
+{\em Real Analysis}, p.~130, Theorem 3.11.}
+\begin{enumerate}
+\item $f$ is absolutely continuous.
+\item $f$ is differentiable at almost all $t \in [0,T]$, $f' \in L^1$, and 
+\[
+f(t)=f(0)+\int_0^t f'(s) ds,\qquad t \in [0,T].
+\]
+\item There is some $g \in L^1$ such that
+\[
+f(t) = f(0) + \int_0^t g(s) ds,\qquad t \in [0,T].
+\]
+\end{enumerate}
+In particular, if $f$ is absolutely continuous and $f'=0$ almost everywhere
+ then $\int_0^t f'(s) ds = 0$  and so $f(t)=f(0)$ for
+all $t \in [0,T]$. That is, if $f$ is absolutely continuous and $f'=0$ almost everywhere then
+$f$ is constant. 
+
+
+Let $H$ be the set of those absolutely continuous functions $f \in \mathbb{R}^{[0,T]}$ such that
+$f(0)=0$ and
+$f' \in L^2$. 
+For $f,g \in H$ define
+\[
+\inner{f}{g}_H = \int_0^T f'(s) g'(s) ds.
+\]
+If $\norm{f}_H=0$ then $\int_0^T f'(s)^2 ds=0$, which implies that
+$f'=0$ almost everywhere and hence that $f$ is constant, and therefore $f=0$. 
+Thus $\inner{\cdot}{\cdot}_H$ is indeed an inner product on $H$. 
+
+If $f_n$ is a Cauchy sequence in $H$ then 
+ $f_n'$ is a Cauchy sequence
+in $L^2$ and hence converges to some $g \in L^2$. 
+Then the function $f \in \mathbb{R}^{[0,T]}$ defined by
+\[
+f(t) =  \int_0^t g(s) ds,\qquad t \in [0,T],
+\]
+is absolutely continuous, $f(0)=0$, and satisfies $f'=g$ almost everywhere, which shows that
+$f \in H$.
+Then $f_n \to f$ in $H$, which proves that $H$ is a Hilbert space. For $t \in [0,T]$, 
+by the Cauchy-Schwarz inequality,
+\[
+|f(t)|^2=\left| \int_0^t f'(s) ds \right|^2
+\leq  \left| \int_0^T f'(s) ds \right|^2
+\leq T \int_0^T f'(s)^2 ds
+=T\norm{f}_H^2,
+\]
+i.e. $|L_t f| \leq T^{1/2} \norm{f}_H$, which shows that $L_t \in H^*$. 
+Therefore $H$ is a reproducing kernel Hilbert space. 
+
+For $a \in [0,T]$ define $h_a:[0,T] \to \mathbb{R}$ by $h_a(s)=1_{[0,a]}(s)$, which belongs to $L^2$, and
+define $g_a:[0,T] \to \mathbb{R}$ by
+\[
+g_a(t) = \int_0^t h_a(s) ds=\min(t,a),
+\]
+which belongs to $H$. For $f \in H$,
+\[
+\inner{f}{g_a}_H = \int_0^T f'(s) g_a'(s) ds = \int_0^T f'(s) 1_{[0,a]}(s) ds = \int_0^a f'(s) ds 
+=f(a).
+\]
+This means that $K_a=g_a$. For $a,b \in [0,T]$, 
+\[
+\inner{K_a}{K_b}_H = \int_0^T g_a'(s) g_b'(s) ds = 
+\int_0^T 1_{[0,a]}(s) 1_{[0,b]}(s) ds
+=\int_0^T 1_{[0,\min(a,b)]}(s) ds.
+\]
+That is, the reproducing kernel of $H$ is $K:[0,T] \times [0,T] \to \mathbb{R}$,
+\[
+K(a,b) = \inner{K_a}{K_b}_H = \min(a,b).
+\]
+
+
+\section{Sobolev spaces on $\mathbb{R}$}
+Let $\lambda$ be Lebesgue measure on $\mathbb{R}$. Let $\mathscr{L}^2(\lambda)$ be the collection of Borel measurable functions $f:\mathbb{R} \to \mathbb{R}$
+such that $|f|^2$ is integrable, and let $L^2(\lambda)$ be the Hilbert space of equivalence classes of elements of $\mathscr{L}^2(\lambda)$ where $f \sim g$ when
+$f=g$ almost everywhere, with
+\[
+\inner{f}{g}_{L^2} = \int_\mathbb{R} fg d\lambda.
+\]
+
+Let $H^1(\mathbb{R})$ be the set of locally absolutely continuous functions
+$f:\mathbb{R} \to \mathbb{R}$ such that 
+$f, f' \in L^2(\lambda)$. This is a Hilbert space with the inner product\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/sobolev1d.pdf}}
+\[
+\inner{f}{g}_{H^1} = \inner{f}{g}_{L^2}+\inner{f'}{g'}_{L^2}.
+\]
+Define $K:\mathbb{R} \times \mathbb{R} \to \mathbb{R}$ by
+\[
+K(x,y) = \frac{1}{2}\exp(-|x-y|),\qquad x,y \in \mathbb{R}.
+\]
+Let $x \in \mathbb{R}$. For $y<x$, $K_x'(y) = K_x(y)$ and for $y>x$, $K_x'(y) = -K_x(y)$, which shows
+that $K_x \in H^1(\mathbb{R})$. For $f \in H^1(\mathbb{R})$, doing integration by parts,
+\begin{align*}
+\inner{f}{K_x}_{H^1}&=\int_{-\infty}^\infty f K_x d\lambda + \int_{-\infty}^x f'(y) K_x(y) d\lambda(y)
+-\int_x^\infty f'(y) K_x(y) d\lambda(y)\\
+&=\int_{-\infty}^\infty f K_x d\lambda + f(x) K_x(x) - \int_{-\infty}^x f(y) K_x'(y) d\lambda(y)\\
+&+f(x)K_x(x) + \int_x^\infty f(y) K_x'(y) d\lambda(y)\\
+&=\int_{-\infty}^\infty f K_x d\lambda + \frac{1}{2} f(x) -\int_{-\infty}^x f(y) K_x(y) d\lambda(y)\\
+&+\frac{1}{2}f(x)-\int_x^\infty f(y) K_x(y) d\lambda(y)\\
+&=f(x)\\
+&=T_x f.
+\end{align*}
+This shows that $H^1(\mathbb{R})$ is a reproducing kernel Hilbert space.
+We calculate, for $x<y$,
+\begin{align*}
+\inner{T_x}{T_y}_{H^1}&=\int_{-\infty}^x K_x K_y d\lambda+ \int_x^y K_xK_y d\lambda
++\int_y^\infty K_x K_y d\lambda\\
+&+\int_{-\infty}^x K_x K_y d\lambda-\int_x^y K_xK_y d\lambda
++\int_y^\infty K_x K_y d\lambda\\
+&=4\cdot \frac{1}{8} \exp(x-y)\\
+&=K(x,y).
+\end{align*}
+This shows that $K(x,y) =  \frac{1}{2}\exp(-|x-y|)$ is the reproducing kernel of $H^1(\mathbb{R})$.\footnote{cf. Alain Berlinet and Christine Thomas-Agnan, {\em Reproducing Kernel Hilbert Spaces
+in Probability and Statistics}, pp.~8--9, Example 5.}
+
+
+\end{document}

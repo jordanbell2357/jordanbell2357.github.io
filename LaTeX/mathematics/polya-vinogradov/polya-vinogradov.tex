@@ -1,0 +1,98 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{The Polya-Vinogradov inequality}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+\maketitle
+
+Let $\chi:\mathbb{Z} \to \mathbb{C}$ be a primitive Dirichlet character modulo $m$. $\chi$ being a {\em Dirichlet character modulo $m$} means that $\chi(kn)=\chi(k)\chi(n)$ for all $k,n$, that
+$\chi(n+m)=\chi(n)$ for all $n$, and that if $\gcd(n,m)>1$ then $\chi(n)=0$. $\chi$ being {\em primitive} means that the conductor of $\chi$ is $m$. The {\em conductor} of
+$\chi$ is the smallest defining modulus of $\chi$. If $m'$ is a divisor of $m$, $m'$ is said to be a {\em defining modulus of $\chi$} if $\gcd(n,m)=1$ and $n \equiv 1 \pmod{m'}$ together imply
+that $\chi(n)=1$. If $n \equiv 1 \pmod{m}$ then $\chi(n)=1$ (sends multiplicative identity to multiplicative identity), so $m$ is a defining modulus, so the conductor of a Dirichlet character modulo $m$ is less than or equal to $m$.
+
+We shall prove the Polya-Vinogradov inequality for primitive Dirchlet characters. The same inequality holds (using an $O$ term rather than a particular constant) for non-primitive Dirichlet
+characters. The proof of that involves the fact \cite[p.~152, Proposition~8]{schoiss} that a divisor $m'$ of $m$ is a defining modulus for a Dirichlet character $\chi$ modulo $m$ if and only if there
+exists a Dirichlet character $\chi'$ modulo $m'$ such that 
+\[
+\chi(n)=\chi_0(n) \cdot \chi'(n) \qquad n \in \mathbb{Z},
+\]
+where $\chi_0$ is the principal Dirichlet character modulo $m$. (The {\em principal Dirichlet character modulo $m$} is that character such that $\chi(n)=0$ if $\gcd(n,m)>1$ and 
+$\chi(n)=1$ otherwise.)
+
+If $\chi$ is a Dirichlet character modulo $m$, define the {\em Gauss sum} $G(\cdot,\chi):\mathbb{Z} \to \mathbb{C}$ corresponding to this character by
+\[
+G(n,\chi)=\sum_{k=0}^{m-1} \chi(k) e^{2\pi ikn/m}, \qquad n \in \mathbb{Z}.
+\]
+
+The {\em Polya-Vinogradov inequality} states that if $\chi$ is a primitive Dirichlet character modulo $m$, then
+\[
+\left| \sum_{n \leq N} \chi(n) \right| < \sqrt{m} \log m.
+\]
+
+We can write $\chi(n)$ using a Fourier series (the Fourier coefficients are defined on the following line, and one proves that any function $\mathbb{Z}/m \to \mathbb{C}$ is
+equal to its Fourier series)
+\[
+\chi(n)=\sum_{k=0}^{m-1} \hat{\chi}(k)e^{2\pi ikn/m}.
+\]
+The coefficients are defined by
+\begin{eqnarray*}
+\hat{\chi}(k)&=&\frac{1}{m}\sum_{n=0}^{m-1} \chi(n) e^{-2\pi ikn/m}\\
+&=&\frac{1}{m}G(-k,\chi).
+\end{eqnarray*}
+
+We use the fact \cite[p.~152, Proposition~9]{schoiss} that for any $n$ we have $G(n,\chi)=\overline{\chi}(n)\cdot G(1,\chi)$. This is straightforward to show if $\gcd(n,m)=1$, but takes some more
+work if $\gcd(n,m)>1$ (to show that $G(n,\chi)=0$ in that case). Using $G(n,\chi)=\overline{\chi}(n)\cdot G(1,\chi)$, we get
+\[
+\chi(n)=\sum_{k=0}^{m-1} \frac{1}{m}\overline{\chi(-k)} \cdot G(1,\chi)e^{2\pi ikn/m}=\frac{G(1,\chi)}{m} \sum_{k=0}^{m-1} \overline{\chi(-k)}e^{2\pi ikn/m}.
+\]
+
+
+Therefore
+\begin{eqnarray*}
+\sum_{n=1}^N \chi(n)&=&\sum_{n=1}^N \frac{G(1,\chi)}{m} \sum_{k=0}^{m-1} \overline{\chi(-k)}e^{2\pi ikn/m}\\
+&=&\frac{G(1,\chi)}{m} \sum_{k=0}^{m-1} \overline{\chi(-k)} \sum_{n=1}^N e^{2\pi ikn/m}\\
+&=&\frac{G(1,\chi)}{m} \sum_{k=1}^{m-1} \overline{\chi(-k)} \sum_{n=1}^N e^{2\pi ikn/m}.
+\end{eqnarray*}
+
+Let $f(k)=\sum_{n=1}^N e^{2\pi ikn/m}$.
+Thus
+\[
+\sum_{n=1}^N \chi(n)=\frac{G(1,\chi)}{m} \sum_{k=1}^{m-1} \overline{\chi(-k)} f(k),
+\]
+and so (because  $|\overline{\chi(-k)}|$ is either $1$ or $0$ and hence is $\leq 1$)
+\[
+\left| \sum_{n=1}^N \chi(n) \right|=\frac{|G(1,\chi)|}{m} \sum_{k=1}^{m-1}|f(k)|.
+\]
+
+We have $f(m-k)=\overline{f(k)}$, so $|f(m-k)|=|f(k)|$. Hence
+\[
+\sum_{k=1}^{m-1} |f(k)| \leq 2 \sum_{1 \leq k \leq m/2} |f(k)|.
+\]
+Moreover, for $1 \leq k \leq m/2$ we have, setting $r=e^{2\pi ik/m}$,
+\[
+|f(k)|=\left|\frac{1-r^{N+1}}{1-r} \right| \leq \frac{2}{|1-r|}=\frac{1}{\sin \frac{\pi k}{m}} \leq \frac{1}{\frac{2}{\pi} \cdot \frac{\pi k}{m}}=\frac{m}{2k}.
+\]
+Therefore,
+\begin{eqnarray*}
+\left| \sum_{n=1}^N \chi(n) \right| &\leq& \frac{|G(1,\chi)|}{m} \cdot 2 \sum_{1 \leq k \leq m/2} |f(k)|\\
+&\leq& \frac{|G(1,\chi)|}{m} \cdot 2 \sum_{1 \leq k \leq m/2} \frac{m}{2k}\\
+&=&|G(1,\chi)| \sum_{1 \leq k \leq m/2} \frac{1}{k}\\
+&<&|G(1,\chi)| \log m.
+\end{eqnarray*}
+(If $m$ is large enough. It's not true that $\sum_{1 \leq k \leq m/2} \frac{1}{k} \leq \log (m/2)$, but it is true for large enough $m$ that $\sum_{1 \leq k \leq m/2} \frac{1}{k} < \log m$.)
+
+It is a fact \cite[p.~154, Proposition~10]{schoiss} that if $\chi$ is a primitive Dirichlet character modulo $m$ and $\gcd(n,m)=1$ then $|G(n,\chi)|=\sqrt{m}$. Thus
+\[
+\left| \sum_{n=1}^N \chi(n) \right|  < \sqrt{m} \log m.
+\]
+
+\bibliographystyle{plain}
+\bibliography{polya-vinogradov}
+
+\end{document}

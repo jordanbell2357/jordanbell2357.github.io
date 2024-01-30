@@ -1,0 +1,265 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\Res}{\textrm{Res}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{The Dirac delta distribution and Green's functions}
+\author{Jordan Bell}
+\date{February 7, 2015}
+
+\maketitle
+
+\section{$u_s(x)=|x|^s$}
+If $s \in \mathbb{C}$ and $\Re s \geq 2$, then $u_s(x)=|x|^s$ is in $C^2_{\textrm{loc}}(\mathbb{R}^n)$.\footnote{This is all an expansion and gloss on Paul Garrett's note {\em Meromorphic continuations of distributions}, which is on his homepage. }  $\Delta:C^2_{\textrm{loc}}(\mathbb{R}^n) \to 
+C^0_{\textrm{loc}}(\mathbb{R}^n)$ and, $\Delta=\sum_{i=1}^n \frac{\partial^2}{\partial x_i^2}$
+and $|x|^2=x_1^2+\cdots+x_n^2$,
+\begin{eqnarray*}
+(\Delta u_s)(x) &=& \Delta |x|^s\\
+&=& \sum_{i=1}^n \frac{\partial}{\partial x_i} \frac{s}{2} \cdot 2x_i \cdot (|x|^2)^{\frac{s}{2}-1}\\
+&=&\sum_{i=1}^n \left( \frac{s}{2}\cdot 2\cdot(|x|^2)^{\frac{s}{2}-1}+ \frac{s}{2}\left(\frac{s}{2}-1\right)\cdot (2x_i)^2 \cdot(|x|^2)^{\frac{s}{2}-2}\right)\\
+&=&ns\cdot |x|^{s-2}+s(s-2)|x|^{s-2}\\
+&=& s(s+n-2) \cdot |x|^{s-2}\\
+&=&s(s+n-2)\cdot u_{s-2}.
+\end{eqnarray*}
+We take $n >2$ in the following. 
+
+Typically we talk about functions $\mathbb{C} \to \mathbb{C}$ that are holomorphic (or meromorphic if they are defined on a subset of $\mathbb{C}$). 
+But we can also talk about functions $\mathbb{C} \to V$ that are holomorphic/meromorphic for certain types of topological vector spaces over $\mathbb{C}$. 
+In particular, we can talk about holomorphic/meromorphic functions that take values in the tempered distributions on $\mathbb{R}^n$. 
+If $\Re s>-n$, then $u_s$ is locally integrable (for any point in $\mathbb{R}^n$, there is a neighborhood of the point on which $u_s$ is $L^1$), and hence
+it is a tempered distribution for $\Re s > -n$.
+Thus for $\Re s >-n$, $\Delta u_s$ is a tempered distribution. 
+
+For $\Re s \geq 2$ we have 
+\[
+u_{s-2} = \frac{\Delta u_s}{s(s+n-2)},
+\]
+and hence for $\Re s \geq 0$ we have
+\[
+u_s = \frac{\Delta u_{s+2}}{(s+2)(s+n)}.
+\]
+As $u_0$ is a constant, $\Delta u_0=0$, and so $s-2$ is a removable singularity of the right-hand side. It follows that $u_s$ is meromorphic and that its only
+possible pole is at $s=-n$. One iterates this argument and obtains that $u_s$ is meromorphic on $\mathbb{C}$, with at most simple poles at $s=-n,-n-2,-n-4,\ldots$. 
+ 
+Let $\gamma=e^{-|x|^2}$ and let $f$ be a Schwartz function on $\mathbb{R}^n$. For $\Re s > -n-1$, we have $u_s \cdot (f-f(0)\gamma) \in L^1(\mathbb{R}^n)$ (the term
+$f-f(0)\gamma$ is certainly integrable at infinity and will still be integrable at infinity after being multiplied by $|x|^s$, and while $|x|^s$ might not be
+integrable at $0$, the term $f-f(0)\gamma$ goes to $0$ like $|x|^2$). The tempered distribution
+$u_s$ maps the Schwartz function $f-f(0)\gamma$ to
+\[
+u_s(f-f(0)\gamma)=\int_{\mathbb{R}^n} |x|^s \cdot (f(x)-f(0)\gamma(x)) dx.
+\]
+In the above equation (for fixed $f$), the right-hand side is holomorphic for $\Re s>-n-1$, thus so is the left. Hence the residue of the left side at $s=-n$ is $0$: 
+\[
+\Res_{s=-n} u_s(f-f(0)\gamma)=0.
+\]
+Thus
+\begin{eqnarray*}
+\Res_{s=-n} u_s(f)&=&\Res_{s=-n} u_s(f-f(0)\gamma)+\Res_{s=-n} u_s(f(0)\gamma)\\
+&=&\Res_{s=-n} u_s(f(0)\gamma)\\
+&=&f(0)\Res_{s=-n} u_s(\gamma)\\
+&=&\delta(f) \Res_{s=-n} u_s(\gamma).
+\end{eqnarray*}
+Using polar coordinates, with $\sigma(S^{n-1})=\frac{2\pi^{n/2}}{\Gamma(n/2)}$,
+\begin{eqnarray*}
+\Res_{s=-n} u_s(\gamma)&=&\Res_{s=-n} \int_{\mathbb{R}^n} |x|^s e^{-|x|^2} dx\\
+&=&\Res_{s=-n} \int_0^\infty \int_{S^{n-1}} |rx'|^s e^{-|rx'|^2} r^{n-1} d\sigma(x') dr\\
+&=&\sigma(S^{n-1}) \Res_{s=-n} \int_0^\infty r^{s+n-1} e^{-r^2} dr\\
+&=&\frac{\sigma(S^{n-1})}{2} \Res_{s=-n} \int_0^\infty t^{\frac{s+n-2}{2}} e^{-t} dt\\
+&=&\frac{\sigma(S^{n-1})}{2} \Res_{s=-n} \Gamma(\frac{s+n}{2}).
+\end{eqnarray*}
+As $\Gamma(z+1)=z\Gamma(z)$,
+\begin{eqnarray*}
+\Res_{s=-n} u_s(\gamma) &=& \frac{\sigma(S^{n-1})}{2} \Res_{s=-n} \frac{2}{s+n}\\
+&=&\frac{\sigma(S^{n-1})}{2} \cdot 2\\
+&=&\sigma(S^{n-1}).
+\end{eqnarray*}
+Therefore for any Schwartz function $f$, we have 
+\[
+\Res_{s=-n} u_s(f)=\sigma(S^{n-1}) \cdot \delta(f),
+\]
+hence
+\[
+\Res_{s=-n} u_s=\sigma(S^{n-1}) \cdot \delta.
+\]
+We know that $u_s$ has poles at most at $s=-n,-n-2,-n-4,\ldots$, and we have just explicitly found its residue at $s=-n$. 
+
+This fact has an important consequence. As $u_s$ has a simple pole at $s=-n$, the value of $(s+n)u_s$ at $s=-n$ is $\Res_{s=-n} u_s$. 
+But 
+\[
+u_s = \frac{\Delta u_{s+2}}{(s+2)(s+n)},
+\]
+so
+\[
+\Delta u_{-n+2}=(-n+2) \cdot \sigma(S^{n-1}) \cdot \delta,
+\]
+i.e.
+\[
+\Delta \frac{1}{|x|^{n-2}} = (-n+2) \cdot \sigma(S^{n-1}) \cdot \delta,
+\]
+with $\sigma(S^{n-1})=\frac{2\pi^{n/2}}{\Gamma(n/2)}$. Recall that we have assumed $n>2$.
+In other words, we have just determined the Green's function of the Laplace operator on $\mathbb{R}^n$, $n>2$.
+
+
+
+\section{$w_s(x)=|x|^s \cdot \log|x|$}
+If $\Re s > 2$, then $w_s(x)=|x|^s \cdot \log|x| \in C^2_{\textrm{loc}}(\mathbb{R}^2)$. Let $u_s(x)=|x|^s$. 
+We have
+\begin{eqnarray*}
+(\Delta w_s)(x)&=&\frac{1}{2}\sum_{i=1}^2 \frac{\partial^2}{\partial x_i^2}\Big( (x_1^2+x_2^2)^{\frac{s}{2}} \log ( x_1^2+x_2^2)\Big)\\
+&=&\frac{1}{2}\sum_{i=1}^2 \frac{\partial}{\partial x_i}\Big( \frac{s}{2}(x_1^2+x_2^2)^{\frac{s}{2}-1} \cdot 2x_i \cdot \log ( x_1^2+x_2^2)\\
+&&+(x_1^2+x_2^2)^{\frac{s}{2}} \cdot \frac{2x_i}{x_1^2+x_2^2} \Big)\\
+&=&\sum_{i=1}^2  \frac{\partial}{\partial x_i}\Big( \frac{s}{2} (x_1^2+x_2^2)^{\frac{s}{2}-1} \cdot x_i \cdot \log ( x_1^2+x_2^2)+(x_1^2+x_2^2)^{\frac{s}{2}-1}\cdot x_i \Big)\\
+&=&\sum_{i=1}^2 \frac{s}{2}\left(\frac{s}{2}-1\right)(x_1^2+x_2^2)^{\frac{s}{2}-2}  \cdot 2x_i^2 \cdot \log ( x_1^2+x_2^2)\\
+&&+\frac{s}{2} (x_1^2+x_2^2)^{\frac{s}{2}-1} \cdot \log ( x_1^2+x_2^2)
++\frac{s}{2} (x_1^2+x_2^2)^{\frac{s}{2}-1} \frac{ 2x_i^2}{x_1^2+x_2^2}\\
+&&+\left(\frac{s}{2}-1\right)(x_1^2+x_2^2)^{\frac{s}{2}-2}\cdot 2x_i^2 + (x_1^2+x_2^2)^{\frac{s}{2}-1}\\
+&=&\sum_{i=1}^2 s(s-2) |x|^{s-4} \cdot x_i^2 \cdot \log |x|+s|x|^{s-2} \cdot \log|x|+s|x|^{s-4} \cdot x_i^2\\
+&&+(s-2)|x|^{s-4}\cdot x_i^2+|x|^{s-2}\\
+&=&s(s-2)|x|^{s-2} \log|x| + 2s|x|^{s-2} \log|x|+s|x|^{s-2}+(s-2)|x|^{s-2}+2|x|^{s-2}\\
+&=&s^2 w_{s-2}(x)+2su_{s-2}(x).
+\end{eqnarray*}
+Hence
+\[
+\Delta w_s = s^2 w_{s-2}+2s u_{s-2},
+\]
+and so
+\[
+(s+2)^2w_s=-2(s+2) u_s + \Delta w_{s+2}.
+\]
+
+We calculate
+\begin{eqnarray*}
+\int_{\mathbb{R}^2} |x|^s \log |x| e^{-|x|^2} dx&=&\int_0^\infty \int_{S^1} |rx'|^s \log |rx'| e^{-|rx'|^2} r d\sigma(x') dr\\
+&=&2\pi \int_0^\infty r^{s+1} \cdot \log r \cdot e^{-r^2} dr\\
+&=&2\pi \cdot \frac{1}{4}\Gamma\left(1+\frac{s}{2} \right) \psi\left(1+\frac{s}{2}\right),
+\end{eqnarray*}
+where $\psi(z)=\frac{\Gamma'(z)}{\Gamma(z)}$, namely the digamma function. 
+Using $\Gamma(z+1)=z\Gamma(z)$ and $\psi(z+1)=\psi(z)+\frac{1}{z}$, with $\gamma(x)=e^{-x^2}$,
+\begin{eqnarray*}
+\Res_{s=-2} (s+2) w_s(\gamma)&=&\frac{\pi}{2} \cdot \Res_{s=-2} (s+2) \frac{1}{1+\frac{s}{2}} \left(\psi\left(1+\frac{s}{2}+1\right)-\frac{1}{1+\frac{s}{2}} \right)\\
+&=&\pi \cdot \Res_{s=-2} \left(-C-\frac{2}{s+2}\right)\\
+&=&-2\pi,
+\end{eqnarray*}
+where $C$ is Euler's constant; it is a fact that $\psi(1)=-C$.\footnote{Historical note: In the papers of Euler's that I've seen where he mentions
+the Euler constant, the notation he uses is either $C$ or $O$, not once the modern $\gamma$.}
+Thus like in the previous section, if $f$ is a Schwartz function then
+\[
+\Res_{s=-2} (s+2) w_s(f)=\delta(f) \Res_{s=-2} (s+2)w_s(\gamma)=-2\pi \cdot \delta(f).
+\]
+
+Because
+\[
+(s+2)^2w_s=-2(s+2) u_s + \Delta w_{s+2},
+\]
+ the value of $(s+2)^2 w_s$ at $s=-2$ is $\Delta w_0 - 2 \cdot \Res_{s=-2} u_{s}$. On the other hand, the value of $(s+2)^2 w_s$ at $s=-2$ is
+$\Res_{s=-2} (s+2) w_s=-2\pi\cdot \delta$, hence
+\[
+\Delta w_0 =-2\pi \cdot \delta +  2 \cdot \Res_{s=-2} u_{s}.
+\]
+We can calculate $\Res_{s=-2} u_s$ just like in the previous section. If $f$ is a Schwartz function and $\gamma=e^{-|x|^2}$, then
+\begin{eqnarray*}
+\Res_{s=-2} u_s(f)&=&\delta(f) \Res_{s=-2} u_s(\gamma)\\
+&=&\delta(f) \Res_{s=-2} \frac{1}{2}\Gamma\left(1+\frac{s}{2}\right)\\
+&=&2\pi \cdot \delta(f).
+\end{eqnarray*}
+Therefore
+\[
+\Delta w_0 = 2\pi \cdot \delta,
+\]
+i.e.,
+\[
+\Delta \log |x| = 2\pi \cdot \delta.
+\]
+Recall that here $n=2$. 
+In other words, we have just determined the Green's function of the Laplace operator on $\mathbb{R}^2$.
+
+
+
+\section{Dirac comb}
+Let $\mathbb{T}=\mathbb{R} / \mathbb{Z}$. 
+On $\mathbb{R}^n$, tempered distributions
+integrate against a larger class of functions than do distributions, so it's stronger to be a tempered distribution. 
+But on $\mathbb{T}$, any Schwartz function has compact support, and moreover, any
+$C^\infty$ function on $\mathbb{T}$ is a Schwartz function. Thus distributions on $\mathbb{T}$ integrate smooth
+functions on $\mathbb{T}$. 
+For $\Re s > 2$, define the following distribution on $\mathbb{T}$: 
+\[
+u_s=\sum_{\stackrel{0 < \frac{p}{q} \leq 1}{\gcd(p,q)=1}} \frac{1}{q^s} \cdot \delta_{p/q}.
+\]
+Why is this in fact a distribution? If $f \in C^\infty(\mathbb{T})$ then $f$ is certainly bounded (indeed,
+$u_s$ can take any continuous function on $\mathbb{T}$ as an argument, not just smooth functions). Let $|f(t)| \leq K$ for
+all $t \in \mathbb{T}$. Then,
+\[
+|u_s(f)| \leq K \sum_{\stackrel{0 < \frac{p}{q} \leq 1}{\gcd(p,q)=1}} \frac{1}{q^{\Re s}}
+<K\sum_{q=1}^\infty \frac{q}{q^{\Re s}}.
+\]
+Since $\Re s>2$, this series converges. 
+
+Doing some series manipulations we get (probably the hardest step to see is that summing over the products of $d$ and $q$ is the same
+as summing over $q$ and then over those $d$ that divide it)
+\begin{eqnarray*}
+\zeta(s)\cdot u_s&=&\sum_{d \geq 1} \frac{1}{d^s} \sum_{q \geq 1} \frac{1}{q^s} \sum_{\stackrel{0<p \leq q}{\gcd(p,q)=1}} \delta_{p/q}\\
+&=&\sum_{d \geq 1} \sum_{q \geq 1} \frac{1}{(qd)^s}  \sum_{\stackrel{0<pd \leq qd}{\gcd(pd,qd)=d}} \delta_{\frac{dp}{dq}}\\
+&=&\sum_{q=1}^\infty \frac{1}{q^s} \sum_{\stackrel{d|q}{d \geq 1}}  \sum_{\stackrel{0<p \leq q}{\gcd(p,q)=d}} \delta_{p/q}\\
+&=&\sum_{q=1}^\infty \frac{1}{q^s} \sum_{0<p \leq q} \delta_{p/q}\\
+&=&v_s.
+\end{eqnarray*}
+(The last equality is a definition.) To summarize: $\zeta(s)\cdot u_s=v_s$.
+
+Supposing we are interested in $u_s$, using the above formula we can instead investigate $v_s$, which for some purposes is more analytically tractable.
+We shall determine the Fourier series of $v_s$.
+For $\Re s>2$ and for $n \in \mathbb{Z}$ (recalling that $v_s$ is a distribution, i.e. it integrates functions)
+\begin{eqnarray*}
+\widehat{v}_s(n)&=&v_s(e^{-2\pi i nx})\\
+&=&\sum_{q=1}^\infty \frac{1}{q^s} \sum_{0 < p \leq q} \delta_{p/q}(e^{-2\pi inx})\\
+&=&\sum_{q=1}^\infty \frac{1}{q^s} \sum_{0 < p \leq q} e^{-2\pi i np/q}.
+\end{eqnarray*}
+
+ $p \mapsto e^{-2\pi inp/q}$, $\mathbb{Z}/q \to \mathbb{C}$, is a character, and, unless it is the trivial character, the sum over $\mathbb{Z}/q$ is equal to $0$.
+So if $q \not | n$ then the inner sum is 0, and if $q | n$ then the inner sum is equal to $q$. (If the language of characters of $\mathbb{Z}/q$ isn't
+familiar, you can check this fact directly; to show the inner sum is 0, you show that the inner sum is equal to itself times something that is nonzero.) Thus
+\[
+\widehat{v}_s(n)=\sum_{\stackrel{q|n}{q \geq 1}} \frac{1}{q^{s-1}}.
+\]
+For $n=0$, we get 
+\[
+\widehat{v}_s(0)=\zeta(s-1).
+\]
+Otherwise,
+the above
+can be written using a standard arithmetic function, the sum of powers of positive divisors. Let $\sigma_\alpha(n)$ denote the sum of the $\alpha$th
+powers of the positive divisors of $n$. Thus for $n \neq 0$ we have
+\[
+\widehat{v}_s(n)=\sigma_{1-s}(n).
+\]
+Using $\zeta(s)\cdot u_s=v_s$ we get
+\[
+\widehat{u}_s(n)=
+\begin{cases}
+\frac{\zeta(s-1)}{\zeta(s)}&n=0,\\
+\frac{\sigma_{1-s}(n)}{\zeta(s)}&n \neq 0.
+\end{cases}
+\]
+The expression on the right-hand side  has poles at $s=2$ and at the zeros of the Riemann zeta function. Otherwise, for a fixed $s$, 
+the right-hand side has at most polynomial growth in $n$, and therefore it is the Fourier series of a distribution on $\mathbb{T}$ (see
+Katznelson, p. 48, Chapter~1, Exercise 7.5), and for $\Re s \leq 2$ we shall define $u_s$ to be this distribution. In summary: $u_s$ is originally defined as a distribution
+for $\Re s > 2$, and now we have defined it to be a distribution for $s \neq 2$ and $\zeta(s) \neq 0$. Thus $u_s$ is a meromorphic distribution valued
+functions
+on $\mathbb{C}$ with poles at $s=2$ and at the zeros of the Riemann zeta function.
+
+Since $\zeta(1)=\infty$, if $n \neq 0$ then $\widehat{u}_1(n)=0$.
+The only pole of the Riemann zeta function is at $s=1$, hence $\zeta(0)/\zeta(1)=0$. Thus $\widehat{u}_1(0)=0$, and it follows that
+as a distribution on $\mathbb{T}$,
+\[
+u_1=0
+\]
+ (although the distribution $u_1$ is $0$, this doesn't mean that we can put $s=1$ into the original definition of $u_s$ and assert that this is $0$, as the original
+ definition of $u_s$ was 
+only for $\Re s > 2$, and we have analytically continued $u_s$ as a meromorphic distribution valued function on $\mathbb{C}$. Likewise, although
+$\zeta(0)=-\frac{1}{2}$, it is incorrect to conclude that $1+1+1+\cdots=-\frac{1}{2}$, although for certain formal arguments this may be a correct interpretation.). 
+
+\end{document}

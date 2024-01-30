@@ -1,0 +1,726 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\point}{\ensuremath\sigma_{\mathrm{point}}} 
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{Fr\'echet derivatives and G\^ateaux derivatives}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+\maketitle
+
+\section{Introduction}
+In this note all vector spaces are real.
+ If $X$ and $Y$ are normed spaces,
+we denote by $\mathscr{B}(X,Y)$ the set of bounded linear maps $X \to Y$, and write $\mathscr{B}(X)=\mathscr{B}(X,X)$.
+$\mathscr{B}(X,Y)$ is a normed space with the operator norm.
+
+
+\section{Remainders}
+If $X$ and $Y$ are normed spaces, let $o(X,Y)$ be the set of all maps $r:X \to Y$ 
+for which there is some map $\alpha:X \to Y$ satisfying:
+\begin{itemize}
+\item $r(x)=\norm{x}\alpha(x)$ for all $x \in X$,
+\item $\alpha(0)=0$,
+\item $\alpha$ is continuous at $0$.
+\end{itemize}
+Following
+Penot,\footnote{Jean-Paul Penot, {\em Calculus Without Derivatives}, p.~133, \S 2.4.} we call elements of $o(X,Y)$ {\em remainders}.
+It is immediate that $o(X,Y)$ is a vector space.
+
+If $X$ and $Y$ are normed spaces, if $f:X \to Y$ is a function, and if $x_0 \in X$, we say that $f$ is {\em stable at $x_0$} if there is some
+$\epsilon>0$ and some $c>0$ such that $\norm{x-x_0} \leq \epsilon$ implies that $\norm{f(x-x_0)} \leq c \norm{x-x_0}$.
+If $T:X \to Y$ is a bounded linear map, then $\norm{Tx} \leq \norm{T} \norm{x}$ for all $x \in X$, and thus a bounded linear map
+is stable at $0$. The following lemma shows that the composition of  a remainder with a function that is stable at $0$ is a remainder.\footnote{Jean-Paul
+Penot, {\em Calculus Without Derivatives}, p.~134, Lemma 2.41.}
+
+\begin{lemma}
+Let $X,Y$ be normed spaces and let $r \in o(X,Y)$. 
+If $W$ is a normed space and $f:W \to X$ is stable at 0, then $r \circ f \in o(W,Y)$. If $Z$ is a normed space
+and $g:Y \to Z$ is stable at 0, then $g \circ r \in o(X,Z)$.
+ \label{stable}
+\end{lemma}
+\begin{proof}
+$r \in o(X,Y)$ means that there is some $\alpha:X \to Y$ satisfying  $r(x)=\norm{x}\alpha(x)$ for all
+$x \in X$, that takes the value $0$ at $0$, and that is continuous at $0$.
+As $f$ is stable at $0$, there is some $\epsilon>0$ and some $c>0$ for which $\norm{w} \leq \epsilon$ implies that
+$\norm{f(w)} \leq c \norm{w}$. 
+Define $\beta:W \to Y$ by
+\[
+\beta(w)=\begin{cases}
+\frac{\norm{f(w)}}{\norm{w}} \alpha(f(w))&w \neq 0\\
+0&w=0,
+\end{cases}
+\]
+for which we have
+\[
+(r \circ f)(w)=\norm{w}\beta(w), \qquad w \in W.
+\]
+If 
+$\norm{w} \leq \epsilon$, then
+$\norm{\beta(w)} \leq c \norm{\alpha(f(w))}$.
+But $f(w) \to 0$ as $w \to 0$, and
+ because $\alpha$ is continuous at $0$ we get that $\alpha(f(w)) \to \alpha(0)=0$ as $w \to 0$.
+So the above inequality gives us $\beta(w) \to 0$ as $w \to 0$. As  $\beta(0)=0$, the function $\beta:W \to Y$ is continuous at $0$, and therefore
+ $r \circ f$ is remainder.
+
+
+As $g$ is stable at $0$, there is some $\epsilon>0$ and some $c>0$ for which $\norm{y} \leq \epsilon$ implies that
+$\norm{g(y)} \leq c \norm{y}$. 
+Define $\gamma:X \to Z$ by
+\[
+\gamma(x)
+=\begin{cases}
+\frac{g(\norm{x}\alpha(x))}{\norm{x}}&x \neq 0\\
+0&x=0.
+\end{cases}
+\]
+For all $x \in X$,
+\[
+(g \circ r)(x) = g(\norm{x}\alpha(x)) = \norm{x} \gamma(x).
+\]
+Since $\alpha(0) = 0$ and $\alpha$ is continuous at $0$, there is some $\delta>0$ such that
+$\norm{x} \leq \delta$ implies that $\norm{\alpha(x)} \leq \epsilon$. Therefore, if
+$\norm{x} \leq \delta \wedge 1$ then
+\[
+\norm{g(\norm{x}\alpha(x))} \leq c \norm{x} \norm{\alpha(x)} \leq c \norm{x} \epsilon,
+\]
+and hence if $\norm{x} \leq \delta \wedge 1$ then $\norm{\gamma(x)} \leq c\epsilon$. This shows that
+$\gamma(x) \to 0$ as $x \to 0$, and since $\gamma(0)=0$  the function $\gamma:X \to Z$ is continuous at $0$, showing that $g \circ r$ is a remainder.
+\end{proof}
+
+
+If $Y_1,\ldots,Y_n$ are normed spaces where $Y_k$ has norm $\norm{\cdot}_k$, then 
+$\norm{(y_1,\ldots,y_n)} = \max_{1 \leq k \leq n} \norm{y_k}_k$ is a norm
+on $\prod_{k=1}^n Y_k$, and one can prove that the topology induced by this norm is the product
+topology.
+
+\begin{lemma}
+If $X$ and $Y_1,\ldots,Y_n$ are normed spaces, then a function
+$r:X \to \prod_{k=1}^n Y_k$ is a remainder
+ if and only if 
+each of $r_k:X \to Y_k$ are remainders, $1 \leq k \leq n$, where
+ $r(x)=(r_1(x),\ldots,r_n(x))$ for all $x \in X$.
+\end{lemma}
+\begin{proof}
+Suppose that there is some function $\alpha:X \to \prod_{k=1}^n Y_k$ such that
+$r(x)=\norm{x} \alpha(x)$ for all $x \in X$. With $\alpha(x)=(\alpha_1(x),\ldots,\alpha_n(x))$, we have
+\[
+r_k(x)=\norm{x} \alpha_k(x), \qquad x \in X.
+\]
+Because $\alpha(x) \to 0$ as $x \to 0$, for each $k$ we have $\alpha_k(x) \to 0$ as $x \to 0$, which shows that
+$r_k$ is a remainder.
+
+Suppose that each $r_k$ is a remainder. Thus, for each $k$ there is a function $\alpha_k:X \to Y_k$
+satisfying $r_k(x)=\norm{x} \alpha_k(x)$ for all $x \in X$ and $\alpha_k(x) \to 0$ as $x \to 0$. Then the function
+$\alpha:X \to \prod_{k=1}^n Y_k$ defined by $\alpha(x)=(\alpha_1(x),\ldots,\alpha_n(x))$ satisfies
+$r(x)=\norm{x} \alpha(x)$. Because $\alpha_k(x) \to 0$ as $x \to 0$ for each of the finitely many $k$, $1 \leq k \leq n$, 
+we have $\alpha(x) \to 0$ as $x \to 0$.
+\end{proof}
+
+
+
+\section{Definition and uniqueness of Fr\'echet derivative}
+Suppose that $X$ and $Y$ are normed spaces, that  $U$ is an open subset of $X$, and  that $x_0 \in U$. A function  $f:U \to Y$
+ is said to be {\em Fr\'echet differentiable at $x_0$} if there is some $L \in \mathscr{B}(X,Y)$
+and some $r \in o(X,Y)$ such that
+\begin{equation}
+f(x) = f(x_0) + L(x-x_0)+r(x-x_0), \qquad x \in U.
+\label{frechet}
+\end{equation}
+Suppose there are bounded linear maps $L_1,L_2$ and remainders $r_1,r_2$ that satisfy the above. 
+Writing $r_1(x)=\norm{x}\alpha_1(x)$ and $r_2(x)=\norm{x}\alpha_2(x)$ for all $x \in X$, we have
+\[
+L_1(x-x_0)+\norm{x-x_0}\alpha_1(x-x_0)=L_2(x-x_0)+\norm{x-x_0}\alpha_2(x-x_0), \qquad x \in U,
+\]
+i.e.,
+\[
+L_1(x-x_0)-L_2(x-x_0) = \norm{x-x_0}(\alpha_2(x-x_0)-\alpha_1(x-x_0)), \qquad x \in U.
+\]
+For $x \in X$, there is some $h>0$ such that for all $|t| \leq h$ we have  $x_0+tx \in U$, and then
+\[
+L_1(tx)-L_2(tx) = \norm{tx}(\alpha_2(tx)-\alpha_1(tx)),
+\]
+hence, for $0<|t| \leq h$,
+\[
+L_1(x)-L_2(x) = \norm{x}(\alpha_2(tx)-\alpha_1(tx)).
+\]
+But $\alpha_2(tx)-\alpha_1(tx) \to 0$ as $t \to 0$, which implies that $L_1(x)-L_2(x)=0$. As this is true for all $x \in X$,
+we have $L_1=L_2$ and then $r_1=r_2$. 
+If $f$ is Fr\'echet differentiable at $x_0$, 
+the bounded linear map $L$ in \eqref{frechet} is called {\em the  Fr\'echet derivative of $f$ at $x_0$}, and we define
+$Df(x_0)=L$. Thus, 
+\[
+f(x)=f(x_0)+Df(x_0)(x-x_0)+r(x-x_0), \qquad x \in U.
+\]
+If $U_0$ is the set of those points in $U$ at which $f$ is Fr\'echet differentiable, then
+$Df:U_0 \to \mathscr{B}(X,Y)$.
+
+
+Suppose that $X$ and $Y$ are normed spaces and that $U$ is an open subset of $X$.
+We denote by $C^1(U,Y)$ the set of functions $f:U \to Y$ that are Fr\'echet differentiable at each point in $U$ and for
+which the function $Df:U \to \mathscr{B}(X,Y)$ is continuous. We say that an element of $C^1(U,Y)$ is {\em continuously
+differentiable}. We denote by $C^2(U,Y)$ those elements $f$ of $C^1(U,Y)$ such that
+\[
+Df \in C^1(U,\mathscr{B}(X,Y));
+\]
+that is, $C^2(U,Y)$ are those $f \in C^1(U,Y)$ such that the function $Df:U \to \mathscr{B}(X,Y)$ is Fr\'echet differentiable at each point in $U$ and such that 
+the function
+\[
+D(Df):U \to \mathscr{B}(X,\mathscr{B}(X,Y))
+\]
+is continuous.\footnote{See Henri Cartan, {\em Differential Calculus}, p.~58, \S 5.1, and Jean Dieudonn\'e, {\em Foundations of Modern Analysis},
+enlarged and corrected printing, p.~179, Chapter VIII, \S 12.}
+
+
+The following theorem characterizes continuously differentiable functions $\mathbb{R}^n \to \mathbb{R}^m$.\footnote{Henri
+Cartan, {\em Differential Calculus}, p.~36, \S 2.7.}
+
+\begin{theorem}
+Suppose that $f:\mathbb{R}^n \to \mathbb{R}^m$ is Fr\'echet differentiable at each point in $\mathbb{R}^n$, and write
+\[
+f=(f_1,\ldots,f_m).
+\]
+$f \in C^1(\mathbb{R}^n,\mathbb{R}^m)$ if and only if for each  $1 \leq i \leq m$ and
+$1 \leq j \leq n$ the function
+\[
+\frac{\partial f_i}{\partial x_j}:\mathbb{R}^n \to \mathbb{R} 
+\]
+is continuous.
+\end{theorem}
+
+
+\section{Properties of the Fr\'echet derivative}
+\label{properties}
+If $f:X \to Y$ is Fr\'echet differentiable at $x_0$, then because a bounded linear map is continuous and in particular
+continuous at $0$, and because a remainder is continuous at $0$, we get that $f$ is continuous
+at $x_0$.
+
+We now prove that Fr\'echet differentiation at a point is linear.
+
+\begin{lemma}[Linearity]
+Let $X$ and $Y$ be normed spaces, let $U$ be an open subset of $X$ and let $x_0 \in U$.  If $f_1,f_2:U \to Y$  are both
+Fr\'echet differentiable at $x_0$ and if $\alpha \in \mathbb{R}$,
+then $\alpha f_1+f_2$ is Fr\'echet differentiable at $x_0$ and
+\[
+D(\alpha f_1+f_2)(x_0)=\alpha Df_1(x_0)+Df_2(x_0).
+\]
+\end{lemma}
+\begin{proof}
+There are remainders $r_1,r_2 \in o(X,Y)$ such that 
+\[
+f_1(x)=f_1(x_0)+Df_1(x_0)(x-x_0)+r_1(x-x_0), \qquad x \in U,
+\]
+and
+\[
+f_2(x)=f_2(x_0)+Df_2(x_0)(x-x_0)+r_2(x-x_0), \qquad x \in U.
+\]
+Then for all $x \in U$,
+\begin{eqnarray*}
+(\alpha f_1+f_2)(x)-(\alpha f_1+f_2)(x_0)&=&\alpha f_1(x)-\alpha f_1(x_0)+f_2(x)-f_2(x_0)\\
+&=&\alpha Df_1(x_0)(x-x_0)+ \alpha r_1(x-x_0)\\
+&&+Df_2(x_0)(x-x_0)+r_2(x-x_0)\\
+&=&(\alpha Df_1(x_0)+Df_2(x_0))(x-x_0)\\
+&&+(\alpha r_1+r_2)(x-x_0),
+\end{eqnarray*}
+and $\alpha r_1+r_2 \in o(X,Y)$.
+\end{proof}
+
+
+The following lemma gives an alternate characterization of a function being Fr\'echet differentiable
+at a point.\footnote{Jean-Paul Penot, {\em Calculus Without Derivatives}, p.~136, Lemma 2.46.}
+
+\begin{lemma}
+Suppose that $X$ and $Y$ are normed space, that $U$ is an open subset of $X$, and that $x_0 \in U$. A function
+$f:U \to Y$ is Fr\'echet differentiable at $x_0$ if and only if there is some function
+$F:U \to \mathscr{B}(X,Y)$ that is continuous at $x_0$ and for which
+\[
+f(x)-f(x_0)=F(x)(x-x_0), \qquad x \in U.
+\]
+\end{lemma}
+\begin{proof}
+Suppose that there is a function $F:U \to \mathscr{B}(X,Y)$ that is continuous at $x_0$ and that satisfies
+$f(x)-f(x_0)=F(x)(x-x_0)$ for all $x \in U$. Then, for $x \in U$,
+\begin{eqnarray*}
+f(x)-f(x_0)&=&F(x)(x-x_0)-F(x_0)(x-x_0)+F(x_0)(x-x_0)\\
+&=&F(x_0)(x-x_0)+r(x-x_0),
+\end{eqnarray*}
+where   $r:X \to Y$ is defined by
+\[
+r(x)=\begin{cases}
+(F(x+x_0)-F(x_0))(x)&x+x_0 \in U\\
+0&x+x_0 \not \in U.
+\end{cases}
+\]
+We further define
+\[
+\alpha(x) = \begin{cases}
+\frac{(F(x+x_0)-F(x_0))(x)}{\norm{x}}&x+x_0 \in U, x \neq 0\\
+0&x+x_0 \not \in U\\
+0&x=0,
+\end{cases}
+\]
+with which $r(x)=\norm{x}\alpha(x)$ for all $x \in X$. To prove that $r$ is a remainder it suffices to prove that
+$\alpha(x) \to 0$ as $x \to 0$. Let $\epsilon>0$.
+That $F:U \to \mathscr{B}(X,Y)$ is continuous at $x_0$ tells us that there is some $\delta>0$ for which
+$\norm{x}<\delta$ implies that $\norm{F(x+x_0)-F(x_0)}<\epsilon$ and hence 
+\[
+\norm{(F(x+x_0)-F(x_0))(x)} \leq \norm{F(x+x_0)-F(x_0)} \norm{x} < \epsilon \norm{x}.
+\]
+Therefore, if $\norm{x}<\delta$ then
+$\norm{\alpha(x)} < \epsilon$, which establishes that $r$ is a remainder and therefore that
+$f$ is Fr\'echet differentiable at $x_0$, with Fr\'echet derivative $Df(x_0)=F(x_0)$.
+
+Suppose that $f$ is Fr\'echet differentiable at $x_0$: there is some $r \in o(X,Y)$ such that
+\[
+f(x)=f(x_0)+Df(x_0)(x-x_0)+r(x-x_0), \qquad x \in U,
+\]
+where $Df(x_0) \in \mathscr{B}(X,Y)$. As $r$ is a remainder, there is some
+$\alpha:X \to Y$ satisfying $r(x)=\norm{x}\alpha(x)$ for all $x \in X$, and such that $\alpha(0)=0$ and $\alpha(x) \to 0$ 
+as $x \to 0$.
+For each $x \in X$, by the Hahn-Banach extension
+theorem\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~59, Corollary to Theorem 3.3.}
+there is some $\lambda_x \in X^*$ such that $\lambda_x x = \norm{x}$ and $|\lambda_x v| \leq \norm{v}$ for all $v \in X$.
+Thus,
+\[
+r(x)=(\lambda_x x)\alpha(x), \qquad x \in X.
+\]
+Define $F:U \to \mathscr{B}(X,Y)$ by
+\[
+F(x)=Df(x_0)+(\lambda_{x-x_0})\alpha(x-x_0),
+\]
+i.e. for $x \in U$ and $v \in X$,
+\[
+F(x)(v)=Df(x_0)(v)+(\lambda_{x-x_0} v) \alpha(x-x_0) \in Y.
+\]
+Then for $x \in U$,
+\[
+r(x-x_0)=(\lambda_{x-x_0}(x-x_0))\alpha(x-x_0)=F(x)(x-x_0)-Df(x_0)(x-x_0),
+\]
+and hence
+\[
+f(x)=f(x_0)+F(x)(x-x_0), \qquad x \in U.
+\]
+To complete the proof  it suffices to prove that $F$ is continuous at $x_0$. But both $\lambda_0=0$ and $\alpha(0)=0$ so
+$F(x_0)=Df(x_0)$, and for  $x \in U$ and $v \in X$,
+\begin{eqnarray*}
+\norm{(F(x)-F(x_0))(v)}&=&\norm{(\lambda_{x-x_0}v)\alpha(x-x_0)}\\
+&=&|\lambda_{x-x_0}v| \norm{\alpha(x-x_0)}\\
+&\leq& \norm{v} \norm{\alpha(x-x_0)},
+\end{eqnarray*}
+so $\norm{F(x)-F(x_0)} \leq \norm{\alpha(x-x_0)}$. From this and the fact that $\alpha(0)=0$ and $\alpha(x) \to 0$ as $x \to 0$
+we get that $F$ is continuous at $x_0$, completing the proof.
+\end{proof}
+
+We now prove the chain rule for Fr\'echet derivatives.\footnote{Jean-Paul Penot,
+{\em Calculus Without Derivatives}, p.~136, Theorem 2.47.}
+
+\begin{theorem}[Chain rule]
+Suppose that $X,Y,Z$ are normed spaces and that $U$ and $V$ are open subsets of $X$ and $Y$ respectively.
+If $f:U \to Y$ satisfies $f(U) \subseteq V$ and is Fr\'echet differentiable at $x_0$ and if  $g:V \to Z$ is Fr\'echet differentiable at $f(x_0)$, then
+$g \circ f:U \to Z$ is Fr\'echet differentiable at $x_0$, and its Fr\'echet derivative at $x_0$ is
+\[
+D(g \circ f)(x_0) = Dg(f(x_0)) \circ Df(x_0).
+\]
+\label{chainrule}
+\end{theorem}
+\begin{proof}
+Write $y_0=f(x_0)$,  $L_1=Df(x_0)$, and $L_2=Dg(y_0)$. Because $f$ is
+Fr\'echet differentiable at $x_0$, there is some $r_1 \in o(X,Y)$
+such that
+\[
+f(x)=f(x_0)+L_1(x-x_0) +r_1(x-x_0), \qquad x\in U,
+\]
+and because $g$ is Fr\'echet differentiable at $y_0$ there is some $r_2 \in o(Y,Z)$ such that
+\[
+g(y)=g(y_0)+L_2(y-y_0)+r_2(y-y_0), \qquad y \in V.
+\]
+For all $x \in U$ we have $f(x) \in V$, and using the above formulas,
+\begin{align*}
+g(f(x)) &= g(y_0) + L_2(f(x)-y_0)+r_2(f(x)-y_0)\\
+&=g(y_0)+L_2\Big(L_1(x-x_0)+r_1(x-x_0)\Big)+r_2\Big(L_1(x-x_0)+r_1(x-x_0)\Big)\\
+&=g(y_0)+L_2(L_1(x-x_0)) + L_2(r_1(x-x_0))  +r_2\Big(L_1(x-x_0)+r_1(x-x_0)\Big).
+\end{align*}
+Define $r_3:X \to Z$ by $r_3(x)=r_2(L_1 x + r_1(x))$, and fix any $c>\norm{L_1}$.
+Writing $r_1(x)=\norm{x}\alpha_1(x)$, the fact that $\alpha(0)=0$ and that
+$\alpha$ is continuous at $0$ gives us that
+there is some $\delta>0$ such that if $\norm{x} < \delta$ then $\norm{\alpha(x)} < c-\norm{L_1}$, and hence if
+$\norm{x} < \delta$ then $\norm{r_1(x)} \leq (c-\norm{L_1})\norm{x}$. Then, $\norm{x}<\delta$ implies that
+\[
+\norm{L_1x + r_1(x)} \leq \norm{L_1x}+\norm{r_1(x)} \leq \norm{L_1}\norm{x}+(c-\norm{L_1})\norm{x}=c\norm{x}.
+\]
+This shows that $x \mapsto L_1x + r_1(x)$ is stable at $0$ and so by Lemma \ref{stable} that $r_3 \in o(X,Z)$. 
+Then, $r:X \to Z$ defined by $r=L_1 \circ r_1+r_3$ is a sum of two remainders and so is itself a remainder, and we have
+\[
+g \circ f(x) = g \circ f(x_0)+L_2 \circ L_1 (x-x_0)+r(x-x_0), \qquad x \in U.
+\]
+But $L_1 \in \mathscr{B}(X,Y)$ and $L_2 \in \mathscr{B}(Y,Z)$, so $L_2 \circ L_1 \in \mathscr{B}(X,Z)$. This shows
+that
+$g \circ f$ is Fr\'echet differentiable at $x_0$ and that its Fr\'echet derivative at $x_0$ is
+\[
+L_2 \circ L_1=Dg(y_0) \circ Df(x_0) = Dg(f(x_0)) \circ Df(x_0).
+\]
+\end{proof}
+
+
+The following is the product rule for Fr\'echet derivatives. By $f_1 \cdot f_2$ we mean the function $x \mapsto f_1(x)f_2(x)$.
+
+\begin{theorem}[Product rule]
+Suppose that $X$ is a normed space, that $U$ is an open subset of $X$, that
+$f_1,f_2:U \to \mathbb{R}$ are functions, and that $x_0 \in U$.
+If $f_1$ and $f_2$ are both Fr\'echet differentiable at $x_0$, then $f_1\cdot f_2$ is Fr\'echet differentiable at $x_0$,
+and its Fr\'echet derivative at $x_0$ is
+\[
+D(f_1\cdot f_2)(x_0)=f_2(x_0)Df_1(x_0)+f_1(x_0)Df_2(x_0).
+\] 
+\end{theorem}
+\begin{proof}
+There are $r_1,r_2 \in o(X,\mathbb{R})$ with which
+\[
+f_1(x)=f_1(x_0)+Df_1(x_0)(x-x_0)+r_1(x-x_0), \qquad x \in U
+\]
+and
+\[
+f_2(x)=f_2(x_0)+Df_2(x_0)(x-x_0)+r_2(x-x_0), \qquad x \in U.
+\]
+Multiplying the above two formulas, 
+\begin{eqnarray*}
+f_1(x)f_2(x)&=&f_1(x_0)f_2(x_0)+f_2(x_0)Df_1(x_0)(x-x_0)+f_1(x_0)Df_2(x_0)(x-x_0)\\
+&&+Df_1(x_0)(x-x_0) Df_2(x_0)(x-x_0)+r_1(x-x_0)r_2(x-x_0)\\
+&&+f_1(x_0)r_2(x-x_0)+r_2(x-x_0) Df_1(x_0)(x-x_0)\\
+&&+f_2(x_0)r_1(x-x_0)+r_1(x-x_0)Df_2(x_0)(x-x_0).
+\end{eqnarray*}
+Define $r:X \to \mathbb{R}$ by
+\begin{eqnarray*}
+r(x)&=&Df_1(x_0)x Df_2(x_0)x + r_1(x)r_2(x)+f_1(x_0)r_2(x)+r_2(x)Df_1(x_0)x\\
+&&+f_2(x_0)r_1(x)+r_1(x)Df_2(x_0)x,
+\end{eqnarray*}
+for which we have, for $x \in U$,
+\[
+f_1(x)f_2(x) = f_1(x_0)f_2(x_0)+f_2(x_0)Df_1(x_0)(x-x_0)+f_1(x_0)Df_2(x_0)(x-x_0) + r(x-x_0).
+\]
+Therefore, to prove the claim it suffices to prove that $r \in o(X,\mathbb{R})$.
+Define $\alpha:X \to \mathbb{R}$ by $\alpha(0)=0$ and $\alpha(x)=\frac{Df_1(x_0)x Df_2(x_0)x}{\norm{x}}$ for $x \neq 0$.
+For $x \neq 0$,
+\begin{eqnarray*}
+|\alpha(x)| &=& \frac{|Df_1(x_0)x| |Df_2(x_0)x|}{\norm{x}}\\
+& \leq& \frac{\norm{Df_1(x_0)} \norm{x} \norm{Df_2(x_0)} \norm{x}}{\norm{x}}\\
+&=&\norm{Df_1(x_0)} \norm{Df_2(x_0)} \norm{x}.
+\end{eqnarray*}
+Thus $\alpha(x) \to 0$ as $x \to 0$, showing that the first term in the expression for $r$ belongs to $o(X,\mathbb{R})$. Likewise,
+each of the other five terms in the expression for $r$ belongs to $o(X,\mathbb{R})$, and hence $r \in o(X,\mathbb{R})$, completing
+the proof.
+\end{proof}
+
+
+
+
+
+\section{Dual spaces}
+If $X$ is a normed space, we denote by $X^*$  the set of bounded linear maps $X \to \mathbb{R}$, i.e. $X^*=\mathscr{B}(X,\mathbb{R})$. $X^*$ is itself a normed
+space with the operator norm.
+ If $X$ is a normed space, the {\em dual pairing} $\inner{\cdot}{\cdot}:X \times X^* \to \mathbb{R}$ is 
+ \[
+ \inner{x}{\psi}=\psi(x), \qquad x \in X, \psi \in X^*.
+ \]
+
+
+If $U$ is an open subset of $X$ and if a function $f:U \to \mathbb{R}$ is Fr\'echet differentiable at $x_0 \in U$, then
+$Df(x_0)$ is a bounded linear map $X \to \mathbb{R}$, and so belongs to $X^*$. 
+If $U_0$ are those points in $U$ at which $f:U \to \mathbb{R}$ is Fr\'echet differentiable, then
+\[
+Df:U_0 \to X^*.
+\]
+
+In the case that $X$ is a Hilbert space with inner product $\inner{\cdot}{\cdot}$,
+ the Riesz representation theorem shows that
+  $R:X \to X^*$ defined by  $R(x)(y)=\inner{y}{x}$ is an isometric isomorphism.
+If $f:U \to \mathbb{R}$ is Fr\'echet differentiable at $x_0 \in U$, then we define
+\[
+\nabla f(x_0) = R^{-1}(Df(x_0)),
+\]
+and call $\nabla f(x_0) \in X$ the {\em gradient of $f$ at $x_0$}. 
+With $U_0$ denoting the set of those points in $U$ at which $f$ is Fr\'echet differentiable,
+\[
+\nabla f:U_0 \to X.
+\]
+(To define the gradient we merely used that $R$ is a bijection,
+but to prove properties of the gradient one uses that $R$ is an isometric isomorphism.)
+
+
+\textbf{Example.} Let $X$ be a  Hilbert space, $A \in \mathscr{B}(X)$, $v \in X$, and define 
+\[
+f(x)=\inner{Ax}{x}-\inner{x}{v}, \qquad x \in X.
+\]
+For all $x_0,x \in X$ we have, because the inner product of a real Hilbert space is symmetric,
+\begin{eqnarray*}
+f(x)-f(x_0)&=&\inner{Ax}{x}-\inner{x}{v}-\inner{Ax_0}{x_0}+\inner{x_0}{v}\\
+&=&\inner{Ax}{x}-\inner{Ax_0}{x}+\inner{Ax_0}{x} -\inner{Ax_0}{x_0}-\inner{x-x_0}{v}\\
+&=&\inner{A(x-x_0)}{x}+\inner{Ax_0}{x-x_0} - \inner{x-x_0}{v}\\
+&=&\inner{x-x_0}{A^*x}+\inner{x-x_0}{Ax_0} -\inner{x-x_0}{v}\\
+&=&\inner{x-x_0}{A^*x+Ax_0-v}\\
+&=&\inner{x-x_0}{A^*x-A^*x_0+A^*x_0+Ax_0-v}\\
+&=&\inner{x-x_0}{(A^*+A)x_0-v}+ \inner{x-x_0}{A^*(x-x_0)}.
+\end{eqnarray*}
+With $Df(x_0)(x-x_0)=\inner{x-x_0}{(A^*+A)x_0-v}$, or $Df(x_0)(x)=\inner{x}{(A^*+A)x_0-v}$,  
+we have that $f$ is Fr\'echet differentiable at each $x_0 \in X$.
+Furthermore, its gradient at $x_0$ is
+\[
+\nabla f(x_0)=(A^*+A)x_0-v.
+\]
+
+For each $x_0 \in X$, the function $f:X \to \mathbb{R}$ is Fr\'echet differentiable at $x_0$, and thus
+\[
+Df:X \to X^*,
+\]
+and we can ask at what points $Df$ has a Fr\'echet derivative. 
+For $x_0,x,y \in X$,
+\begin{align*}
+(Df(x)-Df(x_0))(y)=&\inner{y}{(A^*+A)x-v}-\inner{y}{(A^*+A)x_0-v}\\
+=&\inner{y}{(A^*+A)(x-x_0)}.
+\end{align*}
+For $D(Df)(x_0)(x-x_0)(y)=\inner{y}{(A^*+A)(x-x_0)}$, in other words with
+\[
+D^2f(x_0)(x)(y)=D(Df)(x_0)(x)(y)=\inner{y}{(A^*+A)x},
+\] 
+we have that $Df$ is Fr\'echet differentiable at each $x_0 \in X$.
+Thus
+\[
+D^2 f:X \to \mathscr{B}(X,X^*).
+\]
+Because $D^2 f(x_0)$ does not depend on $x_0$,  it is  Fr\'echet differentiable at each point in $X$, with
+$D^3f(x_0)=0$ for all $x_0 \in X$. Here $D^3f:X \to \mathscr{B}(X,\mathscr{B}(X,X^*))$.
+
+
+
+\section{G\^ateaux derivatives}
+Let $X$ and $Y$ be normed spaces, let $U$ be an open subset of $X$, let $f:U \to Y$ be a function, and let $x_0 \in U$.
+If there is some $T  \in \mathscr{B}(X,Y)$ such that for all $v \in X$ we have
+\begin{equation}
+\lim_{t \to 0} \frac{f(x_0+tv)-f(x_0)}{t}=T v,
+\label{gateaux}
+\end{equation}
+then we say that $f$ is {\em G\^ateaux differentiable at $x_0$} and call $T$ the {\em G\^ateaux derivative of
+$f$ at $x_0$}.\footnote{Our definition of the G\^ateaux derivative follows Jean-Paul Penot,
+{\em Calculus Without Derivatives}, p.~127, Definition 2.23.} It is apparent that there is at most one
+$T \in \mathscr{B}(X,Y)$ that satisfies \eqref{gateaux} for all $v \in X$. We write $f'(x_0)=T$. Thus, $f'$ is a map from the set
+of points in $U$ at which $f$ is G\^ateaux differentiable to $\mathscr{B}(X,Y)$. If $V \subseteq U$ and $f$ is G\^ateaux differentiable
+at each element of $V$, we say that $f$ is {\em G\^ateaux differentiable on $V$}.
+
+
+\textbf{Example.} Define $f:\mathbb{R}^2 \to \mathbb{R}$ by
+$f(x_1,x_2)=\frac{x_1^4x_2}{x_1^6+x_2^3}$ for $(x_1,x_2) \neq (0,0)$ and
+$f(0,0)=0$. For $v=(v_1,v_2) \in \mathbb{R}^2$ and $t \neq 0$,
+\[
+\frac{f(0+tv)-f(0)}{t}=\frac{f(tv_1,tv_2)}{t}=
+\begin{cases}
+\frac{1}{t} \cdot \frac{t^5v_1^4v_2}{t^6v_1^6+t^3v_2^3}&v \neq (0,0)\\
+0&v=(0,0)
+\end{cases}
+=\begin{cases}
+\frac{tv_1^4v_2}{t^3v_1^6+v_2^3}&v \neq (0,0)\\
+0&v=(0,0).
+\end{cases}
+\]
+Hence, for any $v \in \mathbb{R}^2$, we have $\frac{f(0+tv)-f(0)}{t} \to 0$ as $t \to 0$. Therefore, 
+$f$ is G\^ateaux differentiable at $(0,0)$ and $f'(0,0)v = 0 \in \mathbb{R}$ for all $v \in \mathbb{R}^2$, i.e. $f'(0,0)=0$.
+However, for $(x_1,x_2) \neq (0,0)$,
+\[
+f(x_1,x_1^2)=\frac{x_1^6}{x_1^6+x_1^6}=\frac{1}{2},
+\]
+from which it follows that $f$ is not continuous at $(0,0)$. We stated in \S \ref{properties} that if a function is Fr\'echet differentiable
+at a point then it is continuous at that point, and so $f$ is not Fr\'echet differentiable at $(0,0)$. Thus, a function that is 
+G\^ateaux differentiable at a point need not be Fr\'echet differentiable at that point.
+
+We prove that being Fr\'echet differentiable at a point implies being G\^ateaux differentiable at the point, and that in this case the
+G\^ateaux derivative is equal to the Fr\'echet derivative.
+
+\begin{theorem}
+Suppose that $X$ and $Y$ are normed spaces, that $U$ is an open subset of $X$, that $f \in Y^U$, and that
+$x_0 \in U$. If $f$ is Fr\'echet differentiable at $x_0$, then $f$ is G\^ateaux differentiable at $x_0$ and $f'(x_0)=Df(x_0)$.
+\end{theorem}
+\begin{proof}
+Because $f$ is Fr\'echet differentiable at $x_0$, there is some $r \in o(X,Y)$ for which 
+\[
+f(x)=f(x_0)+Df(x_0)(x-x_0)+r(x-x_0), \qquad x \in U.
+\]
+For $v \in X$ and nonzero $t$ small enough that $x_0+tv \in U$,
+\[
+\frac{f(x_0+tv)-f(x_0)}{t} = \frac{Df(x_0)(x_0+tv-x_0)+r(x_0+tv-x_0)}{t} = \frac{tDf(x_0)v+r(tv)}{t}.
+\]
+Writing $r(x)=\norm{x}\alpha(x)$,
+\[
+\frac{f(x_0+tv)-f(x_0)}{t}  = \frac{tDf(x_0)+\norm{tv}\alpha(tv)}{t}= Df(x_0)v + \norm{v}\alpha(tv).
+\]
+Hence, 
+\[
+\lim_{t \to 0} \frac{f(x_0+tv)-f(x_0)}{t} = Df(x_0)v.
+\]
+This holds for all $v \in X$, and as $Df(x_0) \in \mathscr{B}(X,Y)$ we get that $f$ is G\^ateaux differentiable at $x_0$ and that
+$f'(x_0)=Df(x_0)$.
+\end{proof}
+
+
+
+If $X$ is a vector space and $u,v \in X$, let
+\[
+[u,v] = \{(1-t)u+tv: 0 \leq t \leq 1\},
+\]
+namely, the line segment joining $u$ and $v$. 
+The following is a mean value theorem for G\^ateaux derivatives.\footnote{Antonio Ambrosetti and
+Giovanni Prodi, {\em A Primer of Nonlinear Analysis}, p.~13, Theorem 1.8.}
+
+\begin{theorem}[Mean value theorem]
+Let $X$ and $Y$  be  normed spaces, let $U$ be an open subset of $X$, and let $f:U \to Y$ be G\^ateaux differentiable on
+$U$. If $u,v \in U$ and $[u,v] \subset U$, then
+\[
+\norm{f(u)-f(v)} \leq \sup_{w \in [u,v]} \norm{f'(w)} \cdot \norm{u-v}.
+\]
+\label{MVT}
+\end{theorem}
+\begin{proof}
+If $f(u)=f(v)$ then immediately the claim is true. Otherwise, $f(v)-f(u) \neq 0$, and so by the Hahn-Banach extension theorem\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~59, Corollary.} there
+is some $\psi \in Y^*$ satisfying $\psi(f(v)-f(u)) = \norm{f(v)-f(u)}$ and $\norm{\psi}=1$. 
+Define $h:[0,1] \to \mathbb{R}$ by
+\[
+h(t)=\inner{f((1-t)u+tv)}{\psi}.
+\]
+For $0<t<1$ and $\tau \neq 0$ satisfying $t+\tau \in [0,1]$, we have
+\begin{eqnarray*}
+\frac{h(t+\tau)-h(t)}{\tau}&=&\frac{1}{\tau}\inner{f((1-t-\tau)u+(t+\tau)v)}{\psi}-\frac{1}{\tau}\inner{f((1-t)u+tv)}{\psi}\\
+&=&\inner{\frac{f((1-t)u+tv+(v-u)\tau)-f((1-t)u+tv)}{\tau}}{\psi}.
+\end{eqnarray*}
+Because $f$ is G\^ateaux differentiable at $(1-t)u+tv$, 
+\[
+\lim_{\tau \to 0} \frac{f((1-t)u+tv+(v-u)\tau)-f((1-t)u+tv)}{\tau} = f'((1-t)u+tv)(v-u),
+\]
+so because $\psi$ is continuous,
+\[
+\lim_{\tau \to 0} \frac{h(t+\tau)-h(t)}{\tau} = \inner{f'((1-t)u+tv)(v-u)}{\psi},
+\]
+which shows that $h$ is differentiable at $t$ and that
+\[
+h'(t)=\inner{f'((1-t)u+tv)(v-u)}{\psi}.
+\]
+$h:[0,1] \to \mathbb{R}$ is a composition of continuous functions so it is continuous. Applying the mean value theorem, there is some
+$\theta$, $0<\theta<1$, for which
+\[
+h'(\theta)=h(1)-h(0).
+\]
+On the one hand,
+\[
+h'(\theta)=\inner{f'((1-\theta)u+\theta v)(v-u)}{\psi}.
+\]
+On the other hand,
+\[
+h(1)-h(0)=\inner{f(v)}{\psi}-\inner{f(u)}{\psi}=\inner{f(v)-f(u)}{\psi}=\norm{f(v)-f(u)}.
+\]
+Therefore
+\begin{eqnarray*}
+\norm{f(v)-f(u)} &=& |\inner{f'((1-\theta)u+\theta v)(v-u)}{\psi}|\\
+&\leq& \norm{\psi} \norm{f'((1-\theta)u+\theta v)(v-u)}\\
+&=&\norm{f'((1-\theta)u+\theta v)(v-u)}\\
+&\leq&\norm{f'((1-\theta)u+\theta v)}\norm{v-u}\\
+&\leq&\sup_{w \in [u,v]} \norm{f'(w)} \norm{v-u}.
+\end{eqnarray*}
+\end{proof}
+
+
+
+\section{Antiderivatives}
+Suppose that $X$ is a Banach space and that $f:[a,b] \to X$ be continuous. Define $F:[a,b] \to X$ by
+\[
+F(x)=\int_a^x f.
+\]
+Let $x_0 \in (a,b)$. For $x \in (a,b)$, we have
+\[
+F(x)-F(x_0)=\int_a^x f - \int_a^{x_0} f = \int_{x_0}^x f = f(x_0)(x-x_0)+\int_{x_0}^x (f-f(x_0)),
+\]
+from which it follows that $F$ is Fr\'echet differentiable at $x_0$, and that
+\[
+DF(x_0)(x-x_0)=f(x_0)(x-x_0).
+\]
+If we identify $f(x_0) \in X$ with the map $x \mapsto f(x_0)x$, namely if we say that $X=\mathscr{B}(\mathbb{R},X)$, then $DF(x_0)=f(x_0)$. 
+
+Let $X$ be a normed space, let $Y$ be a Banach space,  let $U$ be an open subset of $X$, and let $f \in C^1(U,Y)$.
+Suppose that $u,v \in U$ satisfy $[u,v] \subset U$. Write $I=(0,1)$ 
+and define $\gamma:I \to U$ by $\gamma(t)=(1-t)u+tv$.
+We have
+\[
+D\gamma(t)=v-u, \qquad t \in I,
+\]
+and thus by Theorem \ref{chainrule}, 
+\[
+D(f \circ \gamma)(t) = Df(\gamma(t)) \circ D\gamma(t), \qquad t \in I,
+\]
+that is,
+\[
+D(f \circ \gamma)(t) = Df(\gamma(t)) \circ (v-u), \qquad t \in I,
+\]
+i.e.
+\[
+D(f\circ \gamma)(t) = Df(\gamma(t))(v-u), \qquad t \in I.
+\]
+If $t \in I$ and $t+h \in I$, then
+\begin{eqnarray*}
+D(f\circ \gamma)(t+h)
+-D(f\circ \gamma)(t) &=& Df(\gamma(t+h))(v-u)-
+Df(\gamma(t))(v-u)\\
+&=&\left(Df(\gamma(t+h))-Df(\gamma(t))\right)(v-u),
+\end{eqnarray*}
+and hence
+\[
+\norm{D(f\circ \gamma)(t+h)
+-D(f\circ \gamma)(t)} \leq \norm{Df(\gamma(t+h))-Df(\gamma(t))} \norm{v-u}.
+\]
+Because $Df:U \to \mathscr{B}(X,Y)$ is continuous, it follows that 
+\[
+\norm{D(f\circ \gamma)(t+h)
+-D(f\circ \gamma)(t)} \to 0
+\]
+as $h \to 0$, i.e. that $D(f \circ \gamma)$ is continuous at $t$, and thus that
+\[
+D(f \circ \gamma):I \to \mathscr{B}(\mathbb{R},Y)
+\]
+is continuous. If we identify $\mathscr{B}(\mathbb{R},Y)$ with $Y$, then
+\[
+D(f \circ \gamma):I \to Y.
+\]
+On the one hand,
+\[
+\int_0^1 D(f \circ \gamma) = (f \circ \gamma)(1)-(f \circ \gamma)(0)=f(v)-f(u).
+\]
+On the other hand,
+\[
+\int_0^1 D(f\circ \gamma) = \int_0^1 Df(\gamma(t))(v-u) dt = \left( \int_0^1 Df((1-t)u+tv) dt \right) (v-u);
+\]
+here,
+\[
+\int_0^1 Df((1-t)u+tv) dt  \in \mathscr{B}(X,Y).
+\]
+Therefore
+\[
+f(v)-f(u)=  \left( \int_0^1 Df((1-t)u+tv) dt \right) (v-u).
+\]
+
+\end{document}

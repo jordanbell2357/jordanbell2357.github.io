@@ -1,0 +1,1046 @@
+<!DOCTYPE html><html>
+<head>
+<title>What is the domain of a solution of an ODE?</title>
+<!--Generated on Thu Jan 20 01:13:36 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 16, 2015.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="LaTeXML-navbar-left.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<nav class="ltx_page_navbar">
+<div class="ltx_TOC">
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Introduction</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Maximal interval of existence</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 Two examples ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Two examples</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S4" title="4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>The implicit function theorem and exact differential equations</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S5" title="5 Autonomous ODE ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Autonomous ODE</span></a></li>
+</ul>
+</div>
+</nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">What is the domain of a solution of an ODE?</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">April 16, 2015</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">This paper is about the question: what is the domain of the solution of a differential equation? In other words, what are <span class="ltx_text ltx_font_italic">blow-up conditions</span> for a solution of an ordinary differential equation?</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">We cannot properly speak about a function before knowing its domain. An older notion of function is an “analytical expression” (see <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib16" title="The concept of function up to the middle of the 19th century" class="ltx_ref">28</a>, p. 61]</cite>, <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib15" title="Evolution of the function concept: a brief survey" class="ltx_ref">15</a>]</cite> and <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib17" title="Concepts of modern mathematics" class="ltx_ref">25</a>, Chapter 5]</cite>), in which the rules of the game
+allow us to write an expression like <math id="S1.p2.m1" class="ltx_Math" alttext="\sqrt{\sin x}" display="inline"><msqrt><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></msqrt></math> and then ask what its domain is, rather than letting <math id="S1.p2.m2" class="ltx_Math" alttext="E=[0,\pi]" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mo stretchy="false">[</mo><mn>0</mn><mo>,</mo><mi>π</mi><mo stretchy="false">]</mo></mrow></mrow></math> and defining <math id="S1.p2.m3" class="ltx_Math" alttext="f:E\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> by
+<math id="S1.p2.m4" class="ltx_Math" alttext="f(x)=\sqrt{\sin x}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msqrt><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></msqrt></mrow></math>. But I would like to speak about functions, not analytical expressions, and before we can manipulate a function in order to find an explicit expression for it, we must first know that the function exists, and it must have a
+certain domain, which we may be able to determine explicitly. In other words, one can solve a differential equation by supposing that there is a solution and using the fact
+that it solves the differential equation to show that it must have an explicit form, and then checking that the explicit function you end up with actually does solve the differential equation;
+but in this paper we would like to only talk about the properties of functions we already know exist, and to be guaranteed that the function we end up with is a solution because
+of the correctness of each step we took, not by manually checking that a certain expression we have found actually is a solution. (Indeed, there are places where it is a helpful
+exploratory device to assume that a sequence has a limit, like with a recurrent sequence, to find what the limit would have to be, and then to prove that this is the limit of the sequence.)</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">We can prove that a solution exists on some interval around <math id="S1.p3.m1" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math>, but how big is this interval?
+To get our hands on an expression for <math id="S1.p3.m2" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+we need to talk about <math id="S1.p3.m3" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and how can we talk about <math id="S1.p3.m4" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> before we know the domain of <math id="S1.p3.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>? Of course
+we can check whether an expression given by an oracle is a solution of an initial value problem on some interval. But we would like to
+be certain that each step we take in determining the form of a solution is correct, so that we end up with a function, defined on a certain interval, that solves
+the initial value problem.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">If we know the current state of a system and the way that it changes instantaneously, we would like to know
+its state at any future time. But it can happen that it doesn’t make sense to ask what the state of the system is at some later time.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">The existence and uniqueness theorem is presented and discussed in
+Forsyth <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib29" title="Theory of differential equations" class="ltx_ref">6</a>, pp. 26–41, Chapter II]</cite>, Painlevé <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib35" title="Gewöhnliche Differentialgleichungen; Existenz der Lösungen" class="ltx_ref">21</a>]</cite>, and Ince <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib33" title="Ordinary differential equations" class="ltx_ref">14</a>]</cite>, and is also presented
+in each of the references for Theorem <a href="#Thmtheorem2" title="Theorem 2. ‣ 2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>. See also <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="Why teach existence and uniqueness theorems in the first course in ordinary differential equations?" class="ltx_ref">23</a>]</cite>. The history of differential equations is presented in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib34" title="Differential equations: a historical overview to circa 1900" class="ltx_ref">1</a>]</cite>. Liouville’s
+anticipation of Picard approximations is explained in <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib11" title="Joseph Liouville 1809–1882: master of pure and applied mathematics" class="ltx_ref">18</a>, p. 448, §32]</cite>.
+See also Youschkevitch <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib3" title="Sur les origines de la “méthode de Cauchy-Lipschitz” dans la théorie des équations différentielles ordinaires" class="ltx_ref">29</a>]</cite> and Mawhin <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="Problème de cauchy pour les équations différentielles et théories de l’intégration : influences mutuelles" class="ltx_ref">20</a>]</cite>. See also Tournés <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="Diagrams in the theory of differential equations (eighteenth to nineteenth centuries)" class="ltx_ref">27</a>]</cite>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Maximal interval of existence</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S2.p1.m1" class="ltx_Math" alttext="u\in\mathbb{R}^{2}" display="inline"><mrow><mi>u</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> and <math id="S2.p1.m2" class="ltx_Math" alttext="r&gt;0" display="inline"><mrow><mi>r</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, we define <math id="S2.p1.m3" class="ltx_Math" alttext="B_{r}(u)=\{v\in\mathbb{R}^{2}:|u-v|&lt;r\}" display="inline"><mrow><mrow><msub><mi>B</mi><mi>r</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>v</mi><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>r</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>.
+(For <math id="S2.p1.m4" class="ltx_Math" alttext="u_{1}=(x_{1},t_{1}),u_{2}=(x_{2},t_{2})\in\mathbb{R}^{2}" display="inline"><mrow><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>1</mn></msub><mo>,</mo><msub><mi>t</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>u</mi><mn>2</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>2</mn></msub><mo>,</mo><msub><mi>t</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></mrow></math>, <math id="S2.p1.m5" class="ltx_Math" alttext="|u_{1}-u_{2}|=\sqrt{|x_{1}-x_{2}|^{2}+|t_{1}-t_{2}|^{2}}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><msub><mi>u</mi><mn>1</mn></msub><mo>-</mo><msub><mi>u</mi><mn>2</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><msqrt><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>-</mo><msub><mi>x</mi><mn>2</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mrow><mo stretchy="false">|</mo><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>-</mo><msub><mi>t</mi><mn>2</mn></msub></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow></msqrt></mrow></math>.)
+Let <math id="S2.p1.m6" class="ltx_Math" alttext="E\subseteq\mathbb{R}^{2}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>. We say that <math id="S2.p1.m7" class="ltx_Math" alttext="f:E\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is <span class="ltx_text ltx_font_italic">locally Lipschitz</span> if for each <math id="S2.p1.m8" class="ltx_Math" alttext="u\in E" display="inline"><mrow><mi>u</mi><mo>∈</mo><mi>E</mi></mrow></math>
+there is some <math id="S2.p1.m9" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math> and some <math id="S2.p1.m10" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> such that if <math id="S2.p1.m11" class="ltx_Math" alttext="v,w\in B_{\delta}(u)" display="inline"><mrow><mrow><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><mrow><msub><mi>B</mi><mi>δ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> then <math id="S2.p1.m12" class="ltx_Math" alttext="|f(v)-f(w)|\leq K|v-w|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mi>v</mi><mo>-</mo><mi>w</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">A helpful way to check that a function is locally Lipschitz is the following <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib32" title="Ordinary differential equations" class="ltx_ref">2</a>, p. 218, Theorem]</cite>. If <math id="S2.p2.m1" class="ltx_Math" alttext="E\subseteq\mathbb{R}^{2}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> is open
+and the gradient <math id="S2.p2.m2" class="ltx_Math" alttext="\nabla f:E\to\mathbb{R}^{2}" display="inline"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo>:</mo><mrow><mi>E</mi><mo>→</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></mrow></math> of <math id="S2.p2.m3" class="ltx_Math" alttext="f:E\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is continuous, then for
+any convex compact subset <math id="S2.p2.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> of <math id="S2.p2.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> and with <math id="S2.p2.m6" class="ltx_Math" alttext="K=\max_{u\in A}|(\nabla f)(u)|" display="inline"><mrow><mi>K</mi><mo>=</mo><mrow><msub><mi>max</mi><mrow><mi>u</mi><mo>∈</mo><mi>A</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></math> we have
+<math id="S2.p2.m7" class="ltx_Math" alttext="|f(u)-f(v)|\leq K|u-v|" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>K</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mi>u</mi><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></math> for all <math id="S2.p2.m8" class="ltx_Math" alttext="u,v\in A" display="inline"><mrow><mrow><mi>u</mi><mo>,</mo><mi>v</mi></mrow><mo>∈</mo><mi>A</mi></mrow></math>. It follows that if the gradient of <math id="S2.p2.m9" class="ltx_Math" alttext="f:E\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is continuous, then <math id="S2.p2.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is locally Lipschitz.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">For example, let <math id="S2.p3.m1" class="ltx_Math" alttext="E=\{(x,t)\in\mathbb{R}^{2}:x\neq 0\}" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow><mo>:</mo><mrow><mi>x</mi><mo>≠</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>, and define <math id="S2.p3.m2" class="ltx_Math" alttext="f:E\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> by <math id="S2.p3.m3" class="ltx_Math" alttext="f(x,t)=\frac{t^{2}}{x}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><msup><mi>t</mi><mn>2</mn></msup><mi>x</mi></mfrac></mrow></math>.
+Then <math id="S2.p3.m4" class="ltx_Math" alttext="\nabla f:E\to\mathbb{R}^{2}" display="inline"><mrow><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo>:</mo><mrow><mi>E</mi><mo>→</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></mrow></math>,</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="(\nabla f)(x,t)=\begin{pmatrix}-\frac{t^{2}}{x^{2}}\\
+\frac{2t}{x}\end{pmatrix}," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo>-</mo><mstyle displaystyle="false"><mfrac><msup><mi>t</mi><mn>2</mn></msup><msup><mi>x</mi><mn>2</mn></msup></mfrac></mstyle></mrow></mtd></mtr><mtr><mtd columnalign="center"><mstyle displaystyle="false"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi></mrow><mi>x</mi></mfrac></mstyle></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is continuous, and hence <math id="S2.p3.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is locally Lipschitz. (Indeed, <math id="S2.p3.m6" class="ltx_Math" alttext="\nabla f" display="inline"><mrow><mo>∇</mo><mo>⁡</mo><mi>f</mi></mrow></math> is unbounded on <math id="S2.p3.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>, and thus <math id="S2.p3.m8" class="ltx_Math" alttext="f:E\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is not Lipschitz.)</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p4.m1" class="ltx_Math" alttext="E\subseteq\mathbb{R}^{2}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> be open, let <math id="S2.p4.m2" class="ltx_Math" alttext="f:E\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>, and let
+<math id="S2.p4.m3" class="ltx_Math" alttext="(x_{0},t_{0})\in E" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>E</mi></mrow></math>. A <span class="ltx_text ltx_font_italic">solution of the initial value problem</span></p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="x^{\prime}=f(x,t),\qquad x(t_{0})=x_{0}" display="block"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is an interval <math id="S2.p4.m4" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> with <math id="S2.p4.m5" class="ltx_Math" alttext="t_{0}\in J" display="inline"><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>∈</mo><mi>J</mi></mrow></math> and a function <math id="S2.p4.m6" class="ltx_Math" alttext="x:J\to\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>:</mo><mrow><mi>J</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> satisfying <math id="S2.p4.m7" class="ltx_Math" alttext="x(t_{0})=x_{0}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math> and <math id="S2.p4.m8" class="ltx_Math" alttext="x^{\prime}(t)=f(x(t),t)" display="inline"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S2.p4.m9" class="ltx_Math" alttext="t\in J" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>J</mi></mrow></math>.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">existence and uniqueness theorem for ordinary differential equations</span> is the following.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1</span></span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="E\subseteq\mathbb{R}^{2}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>, let <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="f:E\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> be locally Lipschitz, and let <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="(x_{0},t_{0})\in E" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>E</mi></mrow></math>. There is some
+<math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> such that there is one and only one <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="x:(t_{0}-\epsilon,t_{0}+\epsilon)\to\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>-</mo><mi>ϵ</mi></mrow><mo>,</mo><mrow><msub><mi>t</mi><mn>0</mn></msub><mo>+</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> that is a solution of the initial value problem</p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex3.m1" class="ltx_Math" alttext="x^{\prime}=f(x,t),\qquad x(t_{0})=x_{0}." display="block"><mrow><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">We say that an interval <math id="S2.p6.m1" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> is a <span class="ltx_text ltx_font_italic">maximal interval of existence</span> for an initial value problem if there is a solution
+of the initial value problem defined on <math id="S2.p6.m2" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>, and if for any interval <math id="S2.p6.m3" class="ltx_Math" alttext="J^{\prime}" display="inline"><msup><mi>J</mi><mo>′</mo></msup></math> that strictly includes <math id="S2.p6.m4" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>, there is no solution
+of the initial value problem defined on <math id="S2.p6.m5" class="ltx_Math" alttext="J^{\prime}" display="inline"><msup><mi>J</mi><mo>′</mo></msup></math>. Cf. maximal domain of holomorphic function <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib21" title="Classical topics in complex function theory" class="ltx_ref">22</a>, p. 112, §2]</cite>. Lefschetz <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib14" title="Differential equations: geometric theory" class="ltx_ref">17</a>, p. 35]</cite>: “The analogy with the classical process of
+analytic continuation is obvious.” If we would like to speak about “the” solution of an initial value problem, what we would mean is a solution with a maximal domain.</p>
+</div>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p7.m1" class="ltx_Math" alttext="E\subseteq\mathbb{R}^{2}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> be open, <math id="S2.p7.m2" class="ltx_Math" alttext="f:E\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> be locally Lipschitz, and let
+<math id="S2.p7.m3" class="ltx_Math" alttext="(x_{0},t_{0})\in E" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>E</mi></mrow></math>. There exists <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib30" title="Ordinary differential equations and dynamical systems" class="ltx_ref">26</a>, p. 51, Theorem 2.13]</cite> a maximal interval of existence <math id="S2.p7.m4" class="ltx_Math" alttext="J=(\alpha,\beta)" display="inline"><mrow><mi>J</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="S2.p7.m5" class="ltx_Math" alttext="-\infty\leq\alpha&lt;t_{0}&lt;\beta\leq\infty" display="inline"><mrow><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>≤</mo><mi>α</mi><mo>&lt;</mo><msub><mi>t</mi><mn>0</mn></msub><mo>&lt;</mo><mi>β</mi><mo>≤</mo><mi mathvariant="normal">∞</mi></mrow></math>,
+for the initial value problem</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex4.m1" class="ltx_Math" alttext="x^{\prime}(t)=f(x(t),t),\qquad x(t_{0})=x_{0}." display="block"><mrow><mrow><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">It is useful to talk about the maximal domain of existence for an initial value problem
+because we can say things about the behavior of the solution as <math id="S2.p8.m1" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> approaches the endpoints
+of the interval. There isn’t a simple way of determining the maximal domain of existence of an initial value problem
+other than by explicitly finding the solution. But there are indeed differential equations whose solutions cannot be expressed in terms of elementary functions: Hubbard
+and Lundell <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib28" title="A first look at differential algebra" class="ltx_ref">12</a>]</cite> make precise what it means to be expressed in terms of elementary functions, and
+show that no solution of <math id="S2.p8.m2" class="ltx_Math" alttext="x^{\prime}=t-x^{2}" display="inline"><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>t</mi><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></math> can be thus expressed. And in fact there exist computable <math id="S2.p8.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> such that the maximal interval of existence of
+initial value problem <math id="S2.p8.m4" class="ltx_Math" alttext="x^{\prime}=f(x,t),x(0)=x_{0}" display="inline"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></math>
+is not computable <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib22" title="Computability, noncomputability and undecidability of maximal intervals of IVPs" class="ltx_ref">7</a>]</cite>.</p>
+</div>
+<div id="S2.p9" class="ltx_para">
+<p class="ltx_p">The following theorem is proved in Arnold <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib32" title="Ordinary differential equations" class="ltx_ref">2</a>, p. 53, Corollary 5]</cite>, in which it is called the <span class="ltx_text ltx_font_italic">extension theorem</span>. It is also proved in Graves <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib9" title="The theory of functions of real variables" class="ltx_ref">8</a>]</cite>, Hurewicz <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib36" title="Lectures on ordinary differential equations" class="ltx_ref">13</a>, p. 17, Corollary]</cite>, Bourbaki <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib13" title="Functions of a real variable: elementary theory" class="ltx_ref">3</a>, p. 172, Theorem 2]</cite>, Coddington and Levinson <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib31" title="Theory of ordinary differential equations" class="ltx_ref">4</a>, p. 47, Theorem 1.3]</cite>, Lefschetz <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib14" title="Differential equations: geometric theory" class="ltx_ref">17</a>, p. 35]</cite>, Hartman <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib18" title="Ordinary differential equations" class="ltx_ref">10</a>, p. 12, Theorem 3.1]</cite>, Hale <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib19" title="Ordinary differential equations" class="ltx_ref">9</a>]</cite>, Hirsch, Smale and Devaney <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib4" title="Differential equations, dynamical systems, and an introduction to chaos" class="ltx_ref">11</a>, p. 398, Theorem]</cite>, and Teschl <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib30" title="Ordinary differential equations and dynamical systems" class="ltx_ref">26</a>, p. 53, Corollary 2.16]</cite>, as well as in other books.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 2</span></span>.</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="E\subseteq\mathbb{R}^{n}" display="inline"><mrow><mi>E</mi><mo>⊆</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math> be
+open, let <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="f:E\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>E</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> be locally Lipschitz, and let <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="(x_{0},t_{0})\in E" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>E</mi></mrow></math>. Let
+<math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="J=(\alpha,\beta)" display="inline"><mrow><mi>J</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the maximal interval of existence for the initial value problem</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="x^{\prime}(t)=f(x(t),t),\qquad x(t_{0})=x_{0}." display="block"><mrow><mrow><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> is finite, then for any compact set <math id="Thmtheorem2.p1.m6" class="ltx_Math" alttext="K\subset E" display="inline"><mrow><mi>K</mi><mo>⊂</mo><mi>E</mi></mrow></math> there is some
+<math id="Thmtheorem2.p1.m7" class="ltx_Math" alttext="t\in[t_{0},\beta)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">[</mo><msub><mi>t</mi><mn>0</mn></msub><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="Thmtheorem2.p1.m8" class="ltx_Math" alttext="(x(t),t)\not\in K" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi>K</mi></mrow></math>. If <math id="Thmtheorem2.p1.m9" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> is finite, then for any compact set
+<math id="Thmtheorem2.p1.m10" class="ltx_Math" alttext="K\subset E" display="inline"><mrow><mi>K</mi><mo>⊂</mo><mi>E</mi></mrow></math> there is some <math id="Thmtheorem2.p1.m11" class="ltx_Math" alttext="t\in(\alpha,t_{0}]" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><msub><mi>t</mi><mn>0</mn></msub><mo stretchy="false">]</mo></mrow></mrow></math> such that <math id="Thmtheorem2.p1.m12" class="ltx_Math" alttext="(x(t),t)\not\in K" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>∉</mo><mi>K</mi></mrow></math>.</p>
+</div>
+</div>
+<div id="S2.p10" class="ltx_para">
+<p class="ltx_p">It follows
+that as <math id="S2.p10.m1" class="ltx_Math" alttext="t\to\alpha" display="inline"><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></math> or <math id="S2.p10.m2" class="ltx_Math" alttext="t\to\beta" display="inline"><mrow><mi>t</mi><mo>→</mo><mi>β</mi></mrow></math>,
+either <math id="S2.p10.m3" class="ltx_Math" alttext="|x(t)|\to\infty" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math> or <math id="S2.p10.m4" class="ltx_Math" alttext="(x(t),t)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math> has a limit point on the boundary of <math id="S2.p10.m5" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> (and any limit point of <math id="S2.p10.m6" class="ltx_Math" alttext="(x(t),t)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math> is on the boundary of <math id="S2.p10.m7" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math>).
+In particular, if <math id="S2.p10.m8" class="ltx_Math" alttext="E=\mathbb{R}^{2}" display="inline"><mrow><mi>E</mi><mo>=</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> then <math id="S2.p10.m9" class="ltx_Math" alttext="\lim_{t\to\alpha}|x(t)|=\infty" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="S2.p10.m10" class="ltx_Math" alttext="\lim_{t\to\beta}|x(t)|\to\infty" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>t</mi><mo>→</mo><mi>β</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Two examples</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 1.</span> Consider the initial value problem</p>
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex6.m1" class="ltx_Math" alttext="x^{\prime}=2tx^{2},\qquad x(0)=x_{0}." display="block"><mrow><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let us do this very carefully.
+Let <math id="S3.p1.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> have maximal domain <math id="S3.p1.m2" class="ltx_Math" alttext="(\alpha,\beta)" display="inline"><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></math>. If <math id="S3.p1.m3" class="ltx_Math" alttext="x_{0}=0" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mn>0</mn></mrow></math>, then <math id="S3.p1.m4" class="ltx_Math" alttext="x(t)=0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> is a solution of the initial value problem,
+and the domain of the solution is <math id="S3.p1.m5" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. Otherwise, suppose <math id="S3.p1.m6" class="ltx_Math" alttext="x_{0}\neq 0" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>≠</mo><mn>0</mn></mrow></math>. If there is some <math id="S3.p1.m7" class="ltx_Math" alttext="t\in(\alpha,0)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S3.p1.m8" class="ltx_Math" alttext="x(t)=0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, then let</p>
+<table id="S3.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex7.m1" class="ltx_Math" alttext="A=\sup\{t\in(\alpha,0):x(t)=0\};" display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mo movablelimits="false">sup</mo><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">if there is no <math id="S3.p1.m9" class="ltx_Math" alttext="t\in(\alpha,0)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S3.p1.m10" class="ltx_Math" alttext="x(t)=0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, then let <math id="S3.p1.m11" class="ltx_Math" alttext="A=\alpha" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>α</mi></mrow></math>. Since <math id="S3.p1.m12" class="ltx_Math" alttext="x:(\alpha,\beta)\to\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is continuous, it follows that <math id="S3.p1.m13" class="ltx_Math" alttext="A&lt;0" display="inline"><mrow><mi>A</mi><mo>&lt;</mo><mn>0</mn></mrow></math>.
+Likewise, if there is some <math id="S3.p1.m14" class="ltx_Math" alttext="t\in(0,\beta)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S3.p1.m15" class="ltx_Math" alttext="x(t)=0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, then let</p>
+<table id="S3.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex8.m1" class="ltx_Math" alttext="B=\inf\{t\in(0,\beta):x(t)=0\};" display="block"><mrow><mrow><mi>B</mi><mo>=</mo><mrow><mo movablelimits="false">inf</mo><mo>⁡</mo><mrow><mo stretchy="false">{</mo><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">if there is no <math id="S3.p1.m16" class="ltx_Math" alttext="t\in(0,\beta)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S3.p1.m17" class="ltx_Math" alttext="x(t)=0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, then let <math id="S3.p1.m18" class="ltx_Math" alttext="B=\beta" display="inline"><mrow><mi>B</mi><mo>=</mo><mi>β</mi></mrow></math>. Since <math id="S3.p1.m19" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is continuous, <math id="S3.p1.m20" class="ltx_Math" alttext="B&gt;0" display="inline"><mrow><mi>B</mi><mo>&gt;</mo><mn>0</mn></mrow></math>.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p2.m1" class="ltx_Math" alttext="g(u)=-u^{-1}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><msup><mi>u</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>.
+For <math id="S3.p2.m2" class="ltx_Math" alttext="t\in(A,B)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>, since <math id="S3.p2.m3" class="ltx_Math" alttext="x^{\prime}(t)=2t(x(t))^{2}" display="inline"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow></math> and <math id="S3.p2.m4" class="ltx_Math" alttext="x(t)\neq 0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>, we have</p>
+<table id="S3.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex9.m1" class="ltx_Math" alttext="\frac{d(g\circ x)}{dt}(t)-2t=\frac{x^{\prime}(t)-2t(x(t))^{2}}{(x(t))^{2}}=0." display="block"><mrow><mrow><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi></mrow></mrow><mo>=</mo><mfrac><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>t</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow></mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mfrac><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then, for <math id="S3.p2.m5" class="ltx_Math" alttext="t\in(A,B)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we have</p>
+<table id="S3.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex10.m1" class="ltx_Math" alttext="\int_{0}^{t}\frac{d(g\circ x)}{ds}(s)-2sds=0." display="block"><mrow><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>s</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence,</p>
+<table id="S3.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex11.m1" class="ltx_Math" alttext="g(x(t))-g(x(0))-t^{2}=0," display="block"><mrow><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.</p>
+<table id="S3.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex12.m1" class="ltx_Math" alttext="-\frac{1}{x(t)}+\frac{1}{x_{0}}-t^{2}=0." display="block"><mrow><mrow><mrow><mrow><mrow><mo>-</mo><mfrac><mn>1</mn><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow><mo>+</mo><mfrac><mn>1</mn><msub><mi>x</mi><mn>0</mn></msub></mfrac></mrow><mo>-</mo><msup><mi>t</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, if <math id="S3.p2.m6" class="ltx_Math" alttext="t\in(A,B)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math> then</p>
+<table id="S3.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.E1.m1" class="ltx_Math" alttext="x(t)=\frac{x_{0}}{1-t^{2}x_{0}}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><msub><mi>x</mi><mn>0</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="S3.p2.m7" class="ltx_Math" alttext="A&gt;\alpha" display="inline"><mrow><mi>A</mi><mo>&gt;</mo><mi>α</mi></mrow></math> then there is indeed at least one <math id="S3.p2.m8" class="ltx_Math" alttext="t\in(\alpha,0)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> such that <math id="S3.p2.m9" class="ltx_Math" alttext="x(t)=0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, and in particular <math id="S3.p2.m10" class="ltx_Math" alttext="x(A)=0" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>. So, as <math id="S3.p2.m11" class="ltx_Math" alttext="x:(\alpha,\beta)\to\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is continuous,</p>
+<table id="S3.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex13.m1" class="ltx_Math" alttext="\lim_{t\to A}x(t)=0." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>A</mi></mrow></munder><mo>⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">But it follows from (<a href="#S3.E1" title="(1) ‣ 3 Two examples ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) that</p>
+<table id="S3.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex14.m1" class="ltx_Math" alttext="\lim_{t\to A}x(t)=\frac{x_{0}}{1-A^{2}x_{0}}\neq 0." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>A</mi></mrow></munder><mo>⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mfrac><msub><mi>x</mi><mn>0</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></mfrac><mo>≠</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus <math id="S3.p2.m12" class="ltx_Math" alttext="A=\alpha" display="inline"><mrow><mi>A</mi><mo>=</mo><mi>α</mi></mrow></math>. Likewise,</p>
+<table id="S3.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex15.m1" class="ltx_Math" alttext="\lim_{t\to B}x(t)=\frac{x_{0}}{1-B^{2}x_{0}}\neq 0," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>B</mi></mrow></munder><mo>⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mfrac><msub><mi>x</mi><mn>0</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>B</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></mfrac><mo>≠</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and thus <math id="S3.p2.m13" class="ltx_Math" alttext="B=\beta" display="inline"><mrow><mi>B</mi><mo>=</mo><mi>β</mi></mrow></math>. Therefore <math id="S3.p2.m14" class="ltx_Math" alttext="(A,B)=(\alpha,\beta)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S3.p3.m1" class="ltx_Math" alttext="\alpha\neq-\infty" display="inline"><mrow><mi>α</mi><mo>≠</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>, then</p>
+<table id="S3.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex16.m1" class="ltx_Math" alttext="\lim_{t\to\alpha}|x(t)|=\infty," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and if <math id="S3.p3.m2" class="ltx_Math" alttext="\beta\neq+\infty" display="inline"><mrow><mi>β</mi><mo>≠</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>, then</p>
+<table id="S3.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex17.m1" class="ltx_Math" alttext="\lim_{t\to\beta}|x(t)|=\infty." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>β</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Suppose that <math id="S3.p3.m3" class="ltx_Math" alttext="x_{0}&lt;0" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&lt;</mo><mn>0</mn></mrow></math>. Then</p>
+<table id="S3.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex18.m1" class="ltx_Math" alttext="\lim_{t\to\alpha}|x(t)|=\frac{x_{0}}{1-\alpha^{2}x_{0}}\neq\infty." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mfrac><msub><mi>x</mi><mn>0</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>α</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></mfrac><mo>≠</mo><mi mathvariant="normal">∞</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence <math id="S3.p3.m4" class="ltx_Math" alttext="\alpha=-\infty" display="inline"><mrow><mi>α</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>. And</p>
+<table id="S3.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex19.m1" class="ltx_Math" alttext="\lim_{t\to\beta}|x(t)|=\frac{x_{0}}{1-\beta^{2}x_{0}}\neq\infty," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>β</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mfrac><msub><mi>x</mi><mn>0</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>β</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></mfrac><mo>≠</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">hence <math id="S3.p3.m5" class="ltx_Math" alttext="\beta=+\infty" display="inline"><mrow><mi>β</mi><mo>=</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>. Therefore, if <math id="S3.p3.m6" class="ltx_Math" alttext="x_{0}&lt;0" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&lt;</mo><mn>0</mn></mrow></math>, then <math id="S3.p3.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> has domain <math id="S3.p3.m8" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S3.p4.m1" class="ltx_Math" alttext="x_{0}&gt;0" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&gt;</mo><mn>0</mn></mrow></math>. If <math id="S3.p4.m2" class="ltx_Math" alttext="\alpha&lt;\frac{1}{\sqrt{x_{0}}}" display="inline"><mrow><mi>α</mi><mo>&lt;</mo><mfrac><mn>1</mn><msqrt><msub><mi>x</mi><mn>0</mn></msub></msqrt></mfrac></mrow></math>, then
+</p>
+<table id="S3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex20.m1" class="ltx_Math" alttext="\lim_{t\to\alpha}|x(t)|=\frac{x_{0}}{1-\alpha^{2}x_{0}}\neq\infty," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mfrac><msub><mi>x</mi><mn>0</mn></msub><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>α</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></mfrac><mo>≠</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">as <math id="S3.p4.m3" class="ltx_Math" alttext="1-\alpha^{2}x_{0}&gt;0" display="inline"><mrow><mrow><mn>1</mn><mo>-</mo><mrow><msup><mi>α</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>. Therefore <math id="S3.p4.m4" class="ltx_Math" alttext="\alpha\geq-\frac{1}{\sqrt{x_{0}}}" display="inline"><mrow><mi>α</mi><mo>≥</mo><mrow><mo>-</mo><mfrac><mn>1</mn><msqrt><msub><mi>x</mi><mn>0</mn></msub></msqrt></mfrac></mrow></mrow></math>. Since <math id="S3.p4.m5" class="ltx_Math" alttext="\lim_{t\to-\frac{1}{\sqrt{x_{0}}}}|x(t)|=\infty" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>t</mi><mo>→</mo><mrow><mo>-</mo><mfrac><mn>1</mn><msqrt><msub><mi>x</mi><mn>0</mn></msub></msqrt></mfrac></mrow></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>, it follows that
+<math id="S3.p4.m6" class="ltx_Math" alttext="\alpha=-\frac{1}{\sqrt{x_{0}}}" display="inline"><mrow><mi>α</mi><mo>=</mo><mrow><mo>-</mo><mfrac><mn>1</mn><msqrt><msub><mi>x</mi><mn>0</mn></msub></msqrt></mfrac></mrow></mrow></math>. Likewise,
+<math id="S3.p4.m7" class="ltx_Math" alttext="\beta=\frac{1}{\sqrt{x_{0}}}" display="inline"><mrow><mi>β</mi><mo>=</mo><mfrac><mn>1</mn><msqrt><msub><mi>x</mi><mn>0</mn></msub></msqrt></mfrac></mrow></math>. Therefore, if <math id="S3.p4.m8" class="ltx_Math" alttext="x_{0}&gt;0" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&gt;</mo><mn>0</mn></mrow></math>, then <math id="S3.p4.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> has domain <math id="S3.p4.m10" class="ltx_Math" alttext="\left(-\frac{1}{\sqrt{x_{0}}},\frac{1}{\sqrt{x_{0}}}\right)" display="inline"><mrow><mo>(</mo><mrow><mo>-</mo><mfrac><mn>1</mn><msqrt><msub><mi>x</mi><mn>0</mn></msub></msqrt></mfrac></mrow><mo>,</mo><mfrac><mn>1</mn><msqrt><msub><mi>x</mi><mn>0</mn></msub></msqrt></mfrac><mo>)</mo></mrow></math>.</p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_bold">Example 2.</span> Now let’s do an example of an initial value problem where the domain of the vector field is not <math id="S3.p5.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>.
+Consider the initial value problem</p>
+<table id="S3.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex21.m1" class="ltx_Math" alttext="x^{\prime}=\frac{1}{1-t}\cdot\frac{1}{1-x},\qquad x(0)=x_{0}." display="block"><mrow><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow></mfrac><mo>⋅</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mi>x</mi></mrow></mfrac></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S3.p5.m2" class="ltx_Math" alttext="E=\mathbb{R}^{2}\setminus\{(1,1)\}" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><msup><mi>ℝ</mi><mn>2</mn></msup><mo>∖</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow></math>; the boundary of <math id="S3.p5.m3" class="ltx_Math" alttext="E" display="inline"><mi>E</mi></math> is <math id="S3.p5.m4" class="ltx_Math" alttext="\{(1,1)\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math>.</p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p6.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> have maximal domain <math id="S3.p6.m2" class="ltx_Math" alttext="(\alpha,\beta)" display="inline"><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></math>. Let <math id="S3.p6.m3" class="ltx_Math" alttext="g(u)=u-\frac{u^{2}}{2}" display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>u</mi><mo>-</mo><mfrac><msup><mi>u</mi><mn>2</mn></msup><mn>2</mn></mfrac></mrow></mrow></math>. If <math id="S3.p6.m4" class="ltx_Math" alttext="t\in(\alpha,\beta)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math> then</p>
+<table id="S3.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex22.m1" class="ltx_Math" alttext="\frac{d(g\circ x)}{dt}(t)-\frac{1}{1-t}=x^{\prime}(t)-x(t)x^{\prime}(t)-\frac{%
+1}{1-t}=0." display="block"><mrow><mrow><mrow><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow></mfrac></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus</p>
+<table id="S3.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex23.m1" class="ltx_Math" alttext="\int_{0}^{t}\frac{d(g\circ x)}{ds}(s)-\frac{1}{1-s}ds=0," display="block"><mrow><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mfrac><mrow><mi>d</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>g</mi><mo>∘</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mi>s</mi></mrow></mfrac><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so</p>
+<table id="S3.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex24.m1" class="ltx_Math" alttext="g(x(t))-g(x_{0})+\log(1-t)=0." display="block"><mrow><mrow><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">That is,</p>
+<table id="S3.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex25.m1" class="ltx_Math" alttext="\frac{(x(t))^{2}}{2}-x(t)+g(x_{0})-\log(1-t)=0." display="block"><mrow><mrow><mrow><mrow><mrow><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mn>2</mn></mfrac><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using the quadratic formula, we either have</p>
+<table id="S3.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex26.m1" class="ltx_Math" alttext="x(t)=1+\sqrt{1-2(g(x_{0})-\log(1-t))}" display="block"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msqrt></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or</p>
+<table id="S3.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex27.m1" class="ltx_Math" alttext="x(t)=1-\sqrt{1-2(g(x_{0})-\log(1-t))}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>-</mo><msqrt><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msqrt></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">If <math id="S3.p7.m1" class="ltx_Math" alttext="x_{0}&gt;1" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&gt;</mo><mn>1</mn></mrow></math> then, since <math id="S3.p7.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is continuous and <math id="S3.p7.m3" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> cannot be equal to <math id="S3.p7.m4" class="ltx_Math" alttext="1" display="inline"><mn>1</mn></math>, we have</p>
+<table id="S3.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex28.m1" class="ltx_Math" alttext="x(t)=1+\sqrt{1-2g(x_{0})+\log(1-t)}." display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msqrt></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="S3.p7.m5" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a real number, <math id="S3.p7.m6" class="ltx_Math" alttext="1-2g(x_{0})+\log(1-t)\geq 0" display="inline"><mrow><mrow><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≥</mo><mn>0</mn></mrow></math>, i.e. <math id="S3.p7.m7" class="ltx_Math" alttext="\log(1-t)\geq g(x_{0})-\frac{1}{2}" display="inline"><mrow><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow></mrow></math>, i.e.
+<math id="S3.p7.m8" class="ltx_Math" alttext="1-t\geq\exp(g(x_{0})-\frac{1}{2})" display="inline"><mrow><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo>≥</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, i.e. <math id="S3.p7.m9" class="ltx_Math" alttext="t\leq 1-\exp\left(x_{0}-\frac{x_{0}^{2}}{2}-\frac{1}{2}\right)" display="inline"><mrow><mi>t</mi><mo>≤</mo><mrow><mn>1</mn><mo>-</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>-</mo><mfrac><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math>. Let <math id="S3.p7.m10" class="ltx_Math" alttext="B=1-\exp\left(x_{0}-\frac{x_{0}^{2}}{2}-\frac{1}{2}\right)" display="inline"><mrow><mi>B</mi><mo>=</mo><mrow><mn>1</mn><mo>-</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>-</mo><mfrac><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow></mrow></math>.
+As <math id="S3.p7.m11" class="ltx_Math" alttext="t\to\beta" display="inline"><mrow><mi>t</mi><mo>→</mo><mi>β</mi></mrow></math>, either <math id="S3.p7.m12" class="ltx_Math" alttext="|x(t)|\to\infty" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>→</mo><mi mathvariant="normal">∞</mi></mrow></math> or <math id="S3.p7.m13" class="ltx_Math" alttext="(1,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> is a limit point of <math id="S3.p7.m14" class="ltx_Math" alttext="(x(t),t)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math>. But if <math id="S3.p7.m15" class="ltx_Math" alttext="\beta&lt;B" display="inline"><mrow><mi>β</mi><mo>&lt;</mo><mi>B</mi></mrow></math>, then</p>
+<table id="S3.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex29.m1" class="ltx_Math" alttext="\lim_{t\to\beta}x(t)=1+\sqrt{1-2g(x_{0})+\log(1-\beta)}&gt;0," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>β</mi></mrow></munder><mo>⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msqrt></mrow><mo>&gt;</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">from which we conclude two things:
+<math id="S3.p7.m16" class="ltx_Math" alttext="\lim_{t\to\beta}|x(t)|\neq\infty" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>t</mi><mo>→</mo><mi>β</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∞</mi></mrow></math>, and <math id="S3.p7.m17" class="ltx_Math" alttext="(1,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> is not a limit point of <math id="S3.p7.m18" class="ltx_Math" alttext="(x(t),t)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math> as <math id="S3.p7.m19" class="ltx_Math" alttext="t\to\beta" display="inline"><mrow><mi>t</mi><mo>→</mo><mi>β</mi></mrow></math>. It follows that <math id="S3.p7.m20" class="ltx_Math" alttext="\beta=B" display="inline"><mrow><mi>β</mi><mo>=</mo><mi>B</mi></mrow></math>. On the other hand,
+if <math id="S3.p7.m21" class="ltx_Math" alttext="\alpha\neq-\infty" display="inline"><mrow><mi>α</mi><mo>≠</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>, then <math id="S3.p7.m22" class="ltx_Math" alttext="\lim_{t\to\alpha}|x(t)|=\infty" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> (because <math id="S3.p7.m23" class="ltx_Math" alttext="(1,1)" display="inline"><mrow><mo stretchy="false">(</mo><mn>1</mn><mo>,</mo><mn>1</mn><mo stretchy="false">)</mo></mrow></math> cannot be limit point of <math id="S3.p7.m24" class="ltx_Math" alttext="(x(t),t)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math> as <math id="S3.p7.m25" class="ltx_Math" alttext="t\to\alpha" display="inline"><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></math>, since <math id="S3.p7.m26" class="ltx_Math" alttext="\alpha&lt;0" display="inline"><mrow><mi>α</mi><mo>&lt;</mo><mn>0</mn></mrow></math>).
+But</p>
+<table id="S3.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex30.m1" class="ltx_Math" alttext="\lim_{t\to\alpha}x(t)=1+\sqrt{1-2g(x_{0})+\log(1-\alpha)}," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></munder><mo>⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>α</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></msqrt></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="S3.p7.m27" class="ltx_Math" alttext="\lim_{t\to\alpha}|x(t)|\neq\infty" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∞</mi></mrow></math>. It follows that <math id="S3.p7.m28" class="ltx_Math" alttext="\alpha=-\infty" display="inline"><mrow><mi>α</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>. Therefore, if <math id="S3.p7.m29" class="ltx_Math" alttext="x_{0}&gt;1" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&gt;</mo><mn>1</mn></mrow></math> then</p>
+<table id="S3.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex31.m1" class="ltx_Math" alttext="x(t)=1+\sqrt{1-2x_{0}+\frac{x_{0}^{2}}{2}+2\log(1-t)}," display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo>+</mo><mfrac><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup><mn>2</mn></mfrac><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></msqrt></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the domain of <math id="S3.p7.m30" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is</p>
+<table id="S3.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex32.m1" class="ltx_Math" alttext="\left(-\infty,1-\exp\left(x_{0}-\frac{x_{0}^{2}}{2}-\frac{1}{2}\right)\right)." display="block"><mrow><mrow><mo>(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mrow><mn>1</mn><mo>-</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>-</mo><mfrac><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p8" class="ltx_para">
+<p class="ltx_p">If <math id="S3.p8.m1" class="ltx_Math" alttext="x_{0}&lt;1" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&lt;</mo><mn>1</mn></mrow></math>, then likewise,</p>
+<table id="S3.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex33.m1" class="ltx_Math" alttext="x(t)=1+\sqrt{1-2x_{0}+\frac{x_{0}^{2}}{2}+2\log(1-t)}," display="block"><mrow><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mn>1</mn><mo>+</mo><msqrt><mrow><mrow><mn>1</mn><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo>+</mo><mfrac><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup><mn>2</mn></mfrac><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></msqrt></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the domain of <math id="S3.p8.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is also</p>
+<table id="S3.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex34.m1" class="ltx_Math" alttext="\left(-\infty,1-\exp\left(x_{0}-\frac{x_{0}^{2}}{2}-\frac{1}{2}\right)\right)." display="block"><mrow><mrow><mo>(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mrow><mn>1</mn><mo>-</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo>(</mo><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>-</mo><mfrac><msubsup><mi>x</mi><mn>0</mn><mn>2</mn></msubsup><mn>2</mn></mfrac><mo>-</mo><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><mo>)</mo></mrow></mrow></mrow><mo>)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>The implicit function theorem and exact differential equations</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Exact differential equation. Consider the initial value problem</p>
+<table id="S4.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex35.m1" class="ltx_Math" alttext="x^{\prime}=\frac{\cos x}{t\sin x-x^{2}},\qquad x(0)=x_{0}." display="block"><mrow><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mfrac><mrow><mi>cos</mi><mo>⁡</mo><mi>x</mi></mrow><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S4.p1.m1" class="ltx_Math" alttext="E=\{(x,t)\in\mathbb{R}^{2}:t\sin x-x^{2}\neq 0\}" display="inline"><mrow><mi>E</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow><mo>:</mo><mrow><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>≠</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. Let <math id="S4.p1.m2" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> have maximal domain <math id="S4.p1.m3" class="ltx_Math" alttext="(\alpha,\beta)" display="inline"><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p2.m1" class="ltx_Math" alttext="\psi(x,t)=t\cos x+\frac{x^{3}}{3}" display="inline"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>+</mo><mfrac><msup><mi>x</mi><mn>3</mn></msup><mn>3</mn></mfrac></mrow></mrow></math>. For <math id="S4.p2.m2" class="ltx_Math" alttext="t\in(\alpha,\beta)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math>, we have</p>
+<table id="S5.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S4.Ex38">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex36.m1" class="ltx_Math" alttext="\displaystyle\frac{d}{dt}(\psi(x(t),t))" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex36.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex36.m3" class="ltx_Math" alttext="\displaystyle\psi_{t}(x(t),t)+\psi_{x}(x(t),t)x^{\prime}(t)" display="inline"><mrow><mrow><msub><mi>ψ</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>ψ</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex37.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex37.m3" class="ltx_Math" alttext="\displaystyle\cos(x(t))+(-t\sin(x(t))+(x(t))^{2})x^{\prime}(t)" display="inline"><mrow><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mo>-</mo><mrow><mi>t</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>+</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex38.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex38.m3" class="ltx_Math" alttext="\displaystyle 0." display="inline"><mrow><mn>0</mn><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">Therefore, for <math id="S4.p2.m3" class="ltx_Math" alttext="t\in(\alpha,\beta)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math>,</p>
+<table id="S4.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex39.m1" class="ltx_Math" alttext="\int_{0}^{t}\frac{d}{ds}(\psi(x(s),s))ds=0," display="block"><mrow><mrow><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi>t</mi></msubsup><mrow><mfrac><mi>d</mi><mrow><mi>d</mi><mo>⁢</mo><mi>s</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>s</mi></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and so</p>
+<table id="S4.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex40.m1" class="ltx_Math" alttext="\psi(x(t),t)-\psi(x(s),0)=0," display="block"><mrow><mrow><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>s</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.,</p>
+<table id="S4.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E2.m1" class="ltx_Math" alttext="t\cos(x(t))+\frac{(x(t))^{3}}{3}-\frac{x_{0}^{3}}{3}=0." display="block"><mrow><mrow><mrow><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mfrac><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mn>3</mn></msup><mn>3</mn></mfrac></mrow><mo>-</mo><mfrac><msubsup><mi>x</mi><mn>0</mn><mn>3</mn></msubsup><mn>3</mn></mfrac></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">The implicit function theorem <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib26" title="The implicit function theorem: history, theory, and applications" class="ltx_ref">16</a>, p. 36, Theorem 3.2.1]</cite>: If <math id="S4.p3.m1" class="ltx_Math" alttext="W\subseteq\mathbb{R}^{2}" display="inline"><mrow><mi>W</mi><mo>⊆</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> is open, <math id="S4.p3.m2" class="ltx_Math" alttext="F:W\to\mathbb{R}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><mi>W</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> has a continuous gradient, <math id="S4.p3.m3" class="ltx_Math" alttext="(p_{0},q_{0})\in W" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>0</mn></msub><mo>,</mo><msub><mi>q</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>∈</mo><mi>W</mi></mrow></math>,
+<math id="S4.p3.m4" class="ltx_Math" alttext="F(p_{0},q_{0})=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>0</mn></msub><mo>,</mo><msub><mi>q</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, and <math id="S4.p3.m5" class="ltx_Math" alttext="\frac{\partial F}{\partial q}(p_{0},q_{0})\neq 0" display="inline"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>0</mn></msub><mo>,</mo><msub><mi>q</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mn>0</mn></mrow></math>, then there exists an open interval <math id="S4.p3.m6" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math>, <math id="S4.p3.m7" class="ltx_Math" alttext="p_{0}\in I_{0}" display="inline"><mrow><msub><mi>p</mi><mn>0</mn></msub><mo>∈</mo><msub><mi>I</mi><mn>0</mn></msub></mrow></math>, such that there is one and only
+one <math id="S4.p3.m8" class="ltx_Math" alttext="h:I_{0}\to\mathbb{R}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><msub><mi>I</mi><mn>0</mn></msub><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> whose derivative is continuous and that satisfies <math id="S4.p3.m9" class="ltx_Math" alttext="h(p_{0})=q_{0}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>q</mi><mn>0</mn></msub></mrow></math> and <math id="S4.p3.m10" class="ltx_Math" alttext="F(p,h(p))=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="S4.p3.m11" class="ltx_Math" alttext="p\in I_{0}" display="inline"><mrow><mi>p</mi><mo>∈</mo><msub><mi>I</mi><mn>0</mn></msub></mrow></math>.
+Similar to why there is a maximal interval of existence for an initial value problem with a locally unique solution (cf. <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib30" title="Ordinary differential equations and dynamical systems" class="ltx_ref">26</a>, p. 51, Theorem 2.13]</cite>), there is an
+interval <math id="S4.p3.m12" class="ltx_Math" alttext="I=(A,B)" display="inline"><mrow><mi>I</mi><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="S4.p3.m13" class="ltx_Math" alttext="p_{0}\in I" display="inline"><mrow><msub><mi>p</mi><mn>0</mn></msub><mo>∈</mo><mi>I</mi></mrow></math>, such that there is one and only one <math id="S4.p3.m14" class="ltx_Math" alttext="h:I\to\mathbb{R}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> satisfying <math id="S4.p3.m15" class="ltx_Math" alttext="h(p_{0})=q_{0}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>q</mi><mn>0</mn></msub></mrow></math> and <math id="S4.p3.m16" class="ltx_Math" alttext="F(p,h(p))=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="S4.p3.m17" class="ltx_Math" alttext="p\in I" display="inline"><mrow><mi>p</mi><mo>∈</mo><mi>I</mi></mrow></math>, and for any interval
+<math id="S4.p3.m18" class="ltx_Math" alttext="I^{\prime}" display="inline"><msup><mi>I</mi><mo>′</mo></msup></math> that strictly contains <math id="S4.p3.m19" class="ltx_Math" alttext="I" display="inline"><mi>I</mi></math> there is no <math id="S4.p3.m20" class="ltx_Math" alttext="h:I\to\mathbb{R}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mi>I</mi><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> satisfying <math id="S4.p3.m21" class="ltx_Math" alttext="h(p_{0})=q_{0}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>p</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>q</mi><mn>0</mn></msub></mrow></math> and <math id="S4.p3.m22" class="ltx_Math" alttext="F(p,h(p))=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="S4.p3.m23" class="ltx_Math" alttext="p\in I^{\prime}" display="inline"><mrow><mi>p</mi><mo>∈</mo><msup><mi>I</mi><mo>′</mo></msup></mrow></math>. Moreover, like Theorem
+<a href="#Thmtheorem2" title="Theorem 2. ‣ 2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>, if <math id="S4.p3.m24" class="ltx_Math" alttext="A\neq-\infty" display="inline"><mrow><mi>A</mi><mo>≠</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> then
+<math id="S4.p3.m25" class="ltx_Math" alttext="\frac{\partial F}{\partial q}(p,h(p))\to 0" display="inline"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math> as <math id="S4.p3.m26" class="ltx_Math" alttext="p\to A" display="inline"><mrow><mi>p</mi><mo>→</mo><mi>A</mi></mrow></math>, and if <math id="S4.p3.m27" class="ltx_Math" alttext="B\neq+\infty" display="inline"><mrow><mi>B</mi><mo>≠</mo><mrow><mo>+</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> then <math id="S4.p3.m28" class="ltx_Math" alttext="\frac{\partial F}{\partial q}(p,h(p))\to 0" display="inline"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math> as <math id="S4.p3.m29" class="ltx_Math" alttext="p\to B" display="inline"><mrow><mi>p</mi><mo>→</mo><mi>B</mi></mrow></math>.</p>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">Let’s apply this to our initial value problem. Define <math id="S4.p4.m1" class="ltx_Math" alttext="F:\mathbb{R}^{2}\to\mathbb{R}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> by <math id="S4.p4.m2" class="ltx_Math" alttext="F(p,q)=p\cos(q)+\frac{q^{3}}{3}-\frac{x_{0}^{3}}{3}" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mfrac><msup><mi>q</mi><mn>3</mn></msup><mn>3</mn></mfrac></mrow><mo>-</mo><mfrac><msubsup><mi>x</mi><mn>0</mn><mn>3</mn></msubsup><mn>3</mn></mfrac></mrow></mrow></math>.
+Let <math id="S4.p4.m3" class="ltx_Math" alttext="(A,B)" display="inline"><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></math>, <math id="S4.p4.m4" class="ltx_Math" alttext="A&lt;0&lt;B" display="inline"><mrow><mi>A</mi><mo>&lt;</mo><mn>0</mn><mo>&lt;</mo><mi>B</mi></mrow></math>, be the maximal interval such that there exists <math id="S4.p4.m5" class="ltx_Math" alttext="h:(A,B)\to\mathbb{R}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> satisfying <math id="S4.p4.m6" class="ltx_Math" alttext="h(0)=x_{0}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math> and <math id="S4.p4.m7" class="ltx_Math" alttext="F(p,h(p))=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for
+all <math id="S4.p4.m8" class="ltx_Math" alttext="p\in(A,B)" display="inline"><mrow><mi>p</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>.
+For <math id="S4.p4.m9" class="ltx_Math" alttext="(p,q)\in\mathbb{R}^{2}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math>,
+<math id="S4.p4.m10" class="ltx_Math" alttext="\frac{\partial F}{\partial q}(p,q)=-p\sin q+q^{2}" display="inline"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></mrow><mo>+</mo><msup><mi>q</mi><mn>2</mn></msup></mrow></mrow></math>. Thus, <math id="S4.p4.m11" class="ltx_Math" alttext="F(p,q)=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> and <math id="S4.p4.m12" class="ltx_Math" alttext="\frac{\partial F}{\partial q}(p,q)=0" display="inline"><mrow><mrow><mfrac><mrow><mo>∂</mo><mo>⁡</mo><mi>F</mi></mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>q</mi></mrow></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>p</mi><mo>,</mo><mi>q</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> means</p>
+<table id="S4.E3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E3.m1" class="ltx_Math" alttext="p\cos q+\frac{q^{3}}{3}-\frac{x_{0}^{3}}{3}=0\qquad\textrm{and}\qquad-p\sin q+%
+q^{2}=0." display="block"><mrow><mrow><mrow><mrow><mrow><mrow><mi>p</mi><mo>⁢</mo><mrow><mi>cos</mi><mo>⁡</mo><mi>q</mi></mrow></mrow><mo>+</mo><mfrac><msup><mi>q</mi><mn>3</mn></msup><mn>3</mn></mfrac></mrow><mo>-</mo><mfrac><msubsup><mi>x</mi><mn>0</mn><mn>3</mn></msubsup><mn>3</mn></mfrac></mrow><mo>=</mo><mrow><mn>0</mn><mo mathvariant="italic" separator="true">  </mo><mtext>and</mtext></mrow></mrow><mo mathvariant="italic" separator="true">  </mo><mrow><mrow><mrow><mo>-</mo><mrow><mi>p</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>q</mi></mrow></mrow></mrow><mo>+</mo><msup><mi>q</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>0</mn></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(3)</span></td>
+</tr>
+</table>
+<p class="ltx_p">It follows that <math id="S4.p4.m13" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is the greatest negative <math id="S4.p4.m14" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> for which is a <math id="S4.p4.m15" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> so that <math id="S4.p4.m16" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="S4.p4.m17" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> satisfy (<a href="#S4.E3" title="(3) ‣ 4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>),
+and <math id="S4.p4.m18" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is the least positive <math id="S4.p4.m19" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> for which there is a <math id="S4.p4.m20" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> so that <math id="S4.p4.m21" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="S4.p4.m22" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> satisfiy (<a href="#S4.E3" title="(3) ‣ 4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>).</p>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">But <math id="S4.p5.m1" class="ltx_Math" alttext="x(t)" display="inline"><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> satisfies (<a href="#S4.E2" title="(2) ‣ 4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) for each <math id="S4.p5.m2" class="ltx_Math" alttext="t\in(\alpha,\beta)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo>,</mo><mi>β</mi><mo stretchy="false">)</mo></mrow></mrow></math>, and <math id="S4.p5.m3" class="ltx_Math" alttext="(A,B)" display="inline"><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></math> is the maximal interval for which there is some <math id="S4.p5.m4" class="ltx_Math" alttext="h:(A,B)\to\mathbb{R}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> satisfying <math id="S4.p5.m5" class="ltx_Math" alttext="h(0)=x_{0}" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math> and
+(<a href="#S4.E2" title="(2) ‣ 4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>) for each <math id="S4.p5.m6" class="ltx_Math" alttext="t\in(A,B)" display="inline"><mrow><mi>t</mi><mo>∈</mo><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Hence <math id="S4.p5.m7" class="ltx_Math" alttext="\alpha\geq A" display="inline"><mrow><mi>α</mi><mo>≥</mo><mi>A</mi></mrow></math> and <math id="S4.p5.m8" class="ltx_Math" alttext="\beta\leq B" display="inline"><mrow><mi>β</mi><mo>≤</mo><mi>B</mi></mrow></math>. If <math id="S4.p5.m9" class="ltx_Math" alttext="\alpha&gt;A" display="inline"><mrow><mi>α</mi><mo>&gt;</mo><mi>A</mi></mrow></math> then either <math id="S4.p5.m10" class="ltx_Math" alttext="\lim_{t\to\alpha}|x(t)|=\infty" display="inline"><mrow><mrow><msub><mo>lim</mo><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></msub><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math> or <math id="S4.p5.m11" class="ltx_Math" alttext="(x(t),t)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></math> has a limit point on
+<math id="S4.p5.m12" class="ltx_Math" alttext="\partial E=\{(x,t)\in\mathbb{R}^{2}:t\sin x-x^{2}=0\}" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>E</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow><mo>:</mo><mrow><mrow><mrow><mi>t</mi><mo>⁢</mo><mrow><mi>sin</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo>-</mo><msup><mi>x</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math>; the first of these contradicts</p>
+<table id="S4.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex41.m1" class="ltx_Math" alttext="\lim_{t\to\alpha}|x(t)|=\lim_{t\to\alpha}|h(t)|=|h(\alpha)|," display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>t</mi><mo>→</mo><mi>α</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the second of these contradicts the minimality of <math id="S4.p5.m13" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Thus <math id="S4.p5.m14" class="ltx_Math" alttext="\alpha=A" display="inline"><mrow><mi>α</mi><mo>=</mo><mi>A</mi></mrow></math> and <math id="S4.p5.m15" class="ltx_Math" alttext="\beta=B" display="inline"><mrow><mi>β</mi><mo>=</mo><mi>B</mi></mrow></math>.</p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">Therefore, <math id="S4.p6.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is the unique <math id="S4.p6.m2" class="ltx_Math" alttext="h:(A,B)\to\mathbb{R}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>A</mi><mo>,</mo><mi>B</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> that satisfies (<a href="#S4.E2" title="(2) ‣ 4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>), where <math id="S4.p6.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is the greatest negative <math id="S4.p6.m4" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> for which is a <math id="S4.p6.m5" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> so that <math id="S4.p6.m6" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="S4.p6.m7" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> satisfy (<a href="#S4.E3" title="(3) ‣ 4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>),
+and <math id="S4.p6.m8" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> is the least positive <math id="S4.p6.m9" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> for which there is a <math id="S4.p6.m10" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> so that <math id="S4.p6.m11" class="ltx_Math" alttext="p" display="inline"><mi>p</mi></math> and <math id="S4.p6.m12" class="ltx_Math" alttext="q" display="inline"><mi>q</mi></math> satisfiy (<a href="#S4.E3" title="(3) ‣ 4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">3</span></a>).</p>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">Asking what the domain of the solution of an ODE is is like asking what the domain of an implicit function is. Some historical references
+I have collected about implicit functions are Ulisse Dini’s <span class="ltx_text ltx_font_italic">Lezioni di analisi infinitesimale</span>, vol. 1, pp. 197–241;
+page 155 of Leibniz’ <span class="ltx_text ltx_font_italic">Mathematische Schriften</span>, ed. Gerhardt, vol. I;
+page 241 of Euler’s <span class="ltx_text ltx_font_italic">Institutiones Calculi Differentialis</span>; in a note I have written down Dini 1877-1888, p. 7, but not what the reference is.
+I suppose it’s his <span class="ltx_text ltx_font_italic">Fondamenti per la teorica delle funzioni di variabili reali</span>. Of course, we can also call the inversion of a power series
+with nonzero constant coefficient a case of the implicit function theorem, and certainly Euler and Lagrange could do that; I’m not certain about Newton.
+Three additional references I have written down about the implicit function theorem are <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib8" title="The genesis of point set topology" class="ltx_ref">19</a>]</cite>,
+<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib7" title="Some definitions of the concept of function from Joh. Bernoulli to N. Bourbaki" class="ltx_ref">24</a>]</cite>, and the Russian <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib6" title="The implicit function theorem and its connection with the theory of extremal problems" class="ltx_ref">5</a>]</cite>.</p>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Autonomous ODE</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is positive and does not depend on <math id="S5.p1.m2" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, then we have the following result. Let
+<math id="S5.p1.m3" class="ltx_Math" alttext="x_{0}\in\mathbb{R}" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><mi>ℝ</mi></mrow></math>. If <math id="S5.p1.m4" class="ltx_Math" alttext="f:[x_{0},\infty)\to\mathbb{R}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is positive and continuous, then the maximal interval of existence for the initial
+value problem
+</p>
+<table id="S5.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex42.m1" class="ltx_Math" alttext="x^{\prime}=f(x),\qquad x(0)=x_{0}" display="block"><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is <math id="S5.p1.m5" class="ltx_Math" alttext="(-\infty,T)" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi>T</mi><mo stretchy="false">)</mo></mrow></math>, where</p>
+<table id="S5.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex43.m1" class="ltx_Math" alttext="T=\int_{x_{0}}^{\infty}\frac{du}{f(u)}." display="block"><mrow><mrow><mi>T</mi><mo>=</mo><mrow><msubsup><mo largeop="true" symmetric="true">∫</mo><msub><mi>x</mi><mn>0</mn></msub><mi mathvariant="normal">∞</mi></msubsup><mfrac><mrow><mi>d</mi><mo>⁢</mo><mi>u</mi></mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let’s check this.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">For example, for <math id="S5.p2.m1" class="ltx_Math" alttext="x_{0}&gt;0" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>&gt;</mo><mn>0</mn></mrow></math>, <math id="S5.p2.m2" class="ltx_Math" alttext="p&gt;1" display="inline"><mrow><mi>p</mi><mo>&gt;</mo><mn>1</mn></mrow></math> and <math id="S5.p2.m3" class="ltx_Math" alttext="f(x)=x^{p}" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>x</mi><mi>p</mi></msup></mrow></math>, we have</p>
+<table id="S5.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex44.m1" class="ltx_Math" alttext="T=\frac{1}{(p-1)x_{0}^{p-1}}." display="block"><mrow><mrow><mi>T</mi><mo>=</mo><mfrac><mn>1</mn><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msubsup><mi>x</mi><mn>0</mn><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></msubsup></mrow></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul id="bib.L1" class="ltx_biblist">
+<li id="bib.bib34" class="ltx_bibitem ltx_bib_incollection">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">T. Archibald</span><span class="ltx_text ltx_bib_year"> (2003)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Differential equations: a historical overview to circa 1900</span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">A History of Analysis</span>,  <span class="ltx_text ltx_bib_editor">H. N. Jahnke (Ed.)</span>,
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">History of Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">24</span>, <span class="ltx_text ltx_bib_pages"> pp. 325–353</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p5" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib32" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">V. I. Arnold</span><span class="ltx_text ltx_bib_year"> (1973)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Ordinary differential equations</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">MIT Press</span>, <span class="ltx_text ltx_bib_place">Cambridge, MA</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">Translated from the Russian by Richard A. Silverman</span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p2" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#S2.p9" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib13" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">N. Bourbaki</span><span class="ltx_text ltx_bib_year"> (2004)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Functions of a real variable: elementary theory</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Elements of Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">IV</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">Translated from the French by Philip Spain</span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p9" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib31" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[4]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">E. A. Coddington and N. Levinson</span><span class="ltx_text ltx_bib_year"> (1955)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Theory of ordinary differential equations</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">International Series in Pure and Applied Mathematics</span>,  <span class="ltx_text ltx_bib_publisher">McGraw-Hill</span>, <span class="ltx_text ltx_bib_place">New York</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p9" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib6" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[5]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. V. Dorofeeva</span><span class="ltx_text ltx_bib_year"> (1989)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The implicit function theorem and its connection with the theory of extremal problems</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Istor. Metodol. Estestv. Nauk</span> (<span class="ltx_text ltx_bib_number">36</span>), <span class="ltx_text ltx_bib_pages"> pp. 34–44</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0579-0204</span>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Karl-Heinz Schlote)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.p7" title="4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4</span></a>.
+</span>
+</li>
+<li id="bib.bib29" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[6]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. R. Forsyth</span><span class="ltx_text ltx_bib_year"> (1900)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Theory of differential equations</span>.
+</span>
+<span class="ltx_bibblock">Vol. <span class="ltx_text ltx_bib_volume">II</span>,  <span class="ltx_text ltx_bib_publisher">Cambridge University Press</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p5" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib22" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[7]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. S. Graça, N. Zhong, and J. Buescu</span><span class="ltx_text ltx_bib_year"> (2009)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Computability, noncomputability and undecidability of maximal intervals of IVPs</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Trans. Amer. Math. Soc.</span> <span class="ltx_text ltx_bib_volume">361</span> (<span class="ltx_text ltx_bib_number">6</span>), <span class="ltx_text ltx_bib_pages"> pp. 2913–2927</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0002-9947</span>,
+<a href="http://dx.doi.org/10.1090/S0002-9947-09-04929-0" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="http://dx.doi.org/10.1090/S0002-9947-09-04929-0" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (Klaus Weihrauch)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p8" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib9" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[8]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">L. M. Graves</span><span class="ltx_text ltx_bib_year"> (1946)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The theory of functions of real variables</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">McGraw-Hill</span>, <span class="ltx_text ltx_bib_place">New York</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="http://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (František Wolf)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p9" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib19" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[9]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. K. Hale</span><span class="ltx_text ltx_bib_year"> (1969)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Ordinary differential equations</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">John Wiley &amp; Sons</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p9" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib18" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[10]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">P. Hartman</span><span class="ltx_text ltx_bib_year"> (1964)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Ordinary differential equations</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">John Wiley &amp; Sons</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p9" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib4" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[11]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">M. W. Hirsch, S. Smale, and R. L. Devaney</span><span class="ltx_text ltx_bib_year"> (2013)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Differential equations, dynamical systems, and an introduction to chaos</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">third edition</span>,  <span class="ltx_text ltx_bib_publisher">Academic Press</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p9" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib28" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[12]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. H. Hubbard and B. E. Lundell</span><span class="ltx_text ltx_bib_year"> (2011)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">A first look at differential algebra</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Amer. Math. Monthly</span> <span class="ltx_text ltx_bib_volume">118</span> (<span class="ltx_text ltx_bib_number">3</span>), <span class="ltx_text ltx_bib_pages"> pp. 245–261</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p8" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib36" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[13]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">W. Hurewicz</span><span class="ltx_text ltx_bib_year"> (1958)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Lectures on ordinary differential equations</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">MIT Press</span>, <span class="ltx_text ltx_bib_place">Cambridge, MA</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p9" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib33" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[14]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">E. L. Ince</span><span class="ltx_text ltx_bib_year"> (1956)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Ordinary differential equations</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Dover</span>, <span class="ltx_text ltx_bib_place">New York</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p5" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib15" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[15]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">I. Kleiner</span><span class="ltx_text ltx_bib_year"> (1989)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Evolution of the function concept: a brief survey</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">College Math. J.</span> <span class="ltx_text ltx_bib_volume">20</span> (<span class="ltx_text ltx_bib_number">4</span>), <span class="ltx_text ltx_bib_pages"> pp. 282–300</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p2" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib26" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[16]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">S. G. Krantz and H. R. Parks</span><span class="ltx_text ltx_bib_year"> (2002)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The implicit function theorem: history, theory, and applications</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Birkhäuser</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text isbn ltx_bib_external">ISBN 0-8176-4285-4</span>,
+<a href="http://dx.doi.org/10.1007/978-1-4612-0059-8" title="" class="ltx_ref doi ltx_bib_external">Document</a>,
+<a href="http://dx.doi.org/10.1007/978-1-4612-0059-8" title="" class="ltx_ref ltx_bib_external">Link</a>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (B. Mordukhovich)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.p3" title="4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4</span></a>.
+</span>
+</li>
+<li id="bib.bib14" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[17]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">S. Lefschetz</span><span class="ltx_text ltx_bib_year"> (1962)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Differential equations: geometric theory</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_edition">second edition</span>,  <span class="ltx_text ltx_bib_publisher">John Wiley &amp; Sons</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p6" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#S2.p9" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib11" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[18]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Lützen</span><span class="ltx_text ltx_bib_year"> (1990)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Joseph Liouville 1809–1882: master of pure and applied mathematics</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Studies in the History of Mathematics and Physical Sciences</span>, Vol. <span class="ltx_text ltx_bib_volume">15</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p5" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib8" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[19]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. H. Manheim</span><span class="ltx_text ltx_bib_year"> (1964)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The genesis of point set topology</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Pergamon Press</span>, <span class="ltx_text ltx_bib_place">Oxford</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><a href="http://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (M. Kline)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.p7" title="4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4</span></a>.
+</span>
+</li>
+<li id="bib.bib1" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[20]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">J. Mawhin</span><span class="ltx_text ltx_bib_year"> (1988)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Problème de cauchy pour les équations différentielles et théories de l’intégration : influences mutuelles</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Cahiers du séminaire d’histoire des mathématiques</span> <span class="ltx_text ltx_bib_volume">9</span>, <span class="ltx_text ltx_bib_pages"> pp. 231–246</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p5" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib35" class="ltx_bibitem ltx_bib_incollection">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[21]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">P. Painlevé</span><span class="ltx_text ltx_bib_year"> (1899–1916)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Gewöhnliche Differentialgleichungen; Existenz der Lösungen</span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">Enzyklopädie der Mathematischen Wissenschaften mit Einschluss ihrer Anwendungen. Band II, 1. Teil, 1. Hälfte</span>,  <span class="ltx_text ltx_bib_editor">H. Burkhardt, W. Wirtinger, and R. Fricke (Eds.)</span>,
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_pages"> pp. 189–229</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p5" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib21" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[22]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">R. Remmert</span><span class="ltx_text ltx_bib_year"> (1998)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Classical topics in complex function theory</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Graduate Texts in Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">172</span>,  <span class="ltx_text ltx_bib_publisher">Springer</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">Translated from the German by Leslie Kay</span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p6" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib5" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[23]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">C. E. Roberts Jr.</span><span class="ltx_text ltx_bib_year"> (1976)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Why teach existence and uniqueness theorems in the first course in ordinary differential equations?</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Internat. J. Math. Ed. Sci. Tech.</span> <span class="ltx_text ltx_bib_volume">7</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 41–44</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p5" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib7" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[24]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. Rüthing</span><span class="ltx_text ltx_bib_year"> (1984)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Some definitions of the concept of function from Joh. Bernoulli to N. Bourbaki</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Math. Intelligencer</span> <span class="ltx_text ltx_bib_volume">6</span> (<span class="ltx_text ltx_bib_number">4</span>), <span class="ltx_text ltx_bib_pages"> pp. 72–77</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0343-6993</span>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (F. J. Papp)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S4.p7" title="4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4</span></a>.
+</span>
+</li>
+<li id="bib.bib17" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[25]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">I. Stewart</span><span class="ltx_text ltx_bib_year"> (1995)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Concepts of modern mathematics</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">Dover</span>, <span class="ltx_text ltx_bib_place">New York</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p2" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib30" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[26]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">G. Teschl</span><span class="ltx_text ltx_bib_year"> (2012)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Ordinary differential equations and dynamical systems</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_series">Graduate Studies in Mathematics</span>, Vol. <span class="ltx_text ltx_bib_volume">140</span>,  <span class="ltx_text ltx_bib_publisher">American Mathematical Society</span>, <span class="ltx_text ltx_bib_place">Providence, RI</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p7" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#S2.p9" title="2 Maximal interval of existence ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>,
+<a href="#S4.p3" title="4 The implicit function theorem and exact differential equations ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§4</span></a>.
+</span>
+</li>
+<li id="bib.bib2" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[27]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">D. Tournés</span><span class="ltx_text ltx_bib_year"> (2012)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Diagrams in the theory of differential equations (eighteenth to nineteenth centuries)</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Synthese</span> <span class="ltx_text ltx_bib_volume">186</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 257–288</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p5" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib16" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[28]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. P. Youschkevitch</span><span class="ltx_text ltx_bib_year"> (1976/77)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">The concept of function up to the middle of the 19th century</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Arch. History Exact Sci.</span> <span class="ltx_text ltx_bib_volume">16</span> (<span class="ltx_text ltx_bib_number">1</span>), <span class="ltx_text ltx_bib_pages"> pp. 37–85</span>.
+</span>
+<span class="ltx_bibblock">External Links: <span class="ltx_text ltx_bib_links"><span class="ltx_text issn ltx_bib_external">ISSN 0003-9519</span>,
+<a href="http://www.ams.org/mathscinet-getitem?mr=" title="" class="ltx_ref mr ltx_bib_external">MathReview (E. Neuenschwander)</a></span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p2" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib3" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[29]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">A. P. Youschkevitch</span><span class="ltx_text ltx_bib_year"> (1981)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Sur les origines de la “méthode de Cauchy-Lipschitz” dans la théorie des équations différentielles ordinaires</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">Rev. Histoire Sci. Appl.</span> <span class="ltx_text ltx_bib_volume">34</span> (<span class="ltx_text ltx_bib_number">3-4</span>), <span class="ltx_text ltx_bib_pages"> pp. 209–215</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p5" title="1 Introduction ‣ What is the domain of a solution of an ODE?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Jan 20 01:13:36 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

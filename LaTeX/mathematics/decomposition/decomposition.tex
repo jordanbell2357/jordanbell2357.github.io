@@ -1,0 +1,529 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\im}{\textrm{im\,}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\point}{\sigma_{\textrm{point}}}
+\newcommand{\ap}{\sigma_{\textrm{ap}}}
+\newcommand{\cont}{\sigma_{\textrm{cont}}}
+\newcommand{\residual}{\sigma_{\textrm{res}}}
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Decomposition of the spectrum of a bounded linear operator}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+
+\maketitle
+
+\section{Definitions}
+Let $H$ be a complex Hilbert space. If $\lambda \in \mathbb{C}$, we also write $\lambda$ to denote $\lambda \cdot \id_H \in B(H)$.
+
+For $T \in B(H)$, the {\em spectrum} $\sigma(T)$ of $T$ is the set of those $\lambda \in \mathbb{C}$ such that the map
+$T-\lambda$ is not bijective.\footnote{$\sigma(T)$
+is defined to be the set of $\lambda \in \mathbb{C}$ such that $v \mapsto Tv-\lambda v$ is not a bijection. It is a fact that
+if $T \in B(H)$ and $v \mapsto Tv- \lambda v$ is a bijection then it is an element of $B(H)$. That it is linear
+can be proved quickly. The fact that it is bounded is proved using the {\em open-mapping theorem}, which states
+that a surjective bounded linear map from one Banach space to another is an open map, from which it follows
+that a bijective bounded linear map from one Banach space to another has a bounded inverse.}  It happens that it is  useful for some purposes to write $\sigma(T)$ as a union of three particular
+ disjoint subsets of itself.
+\begin{itemize}
+\item The {\em point spectrum} $\point(T)$ is the set of those $\lambda \in \mathbb{C}$
+such that $T-\lambda$ is not injective. Equivalently, $\lambda \in \point(T)$ if $\lambda$ is an {\em eigenvalue} of $T$.\footnote{The point spectrum is often called the {\em discrete spectrum}. From the definition by itself it is not apparent what $\point(T)$ has to do either with points or discreteness.}
+\item The {\em continuous spectrum} $\cont(T)$ is the set of those $\lambda \in \mathbb{C}$ such that
+$T-\lambda$ is injective, has dense image, and is not surjective.
+\item The {\em residual spectrum} $\residual(T)$ is the set of those $\lambda \in \mathbb{C}$ such that
+$T-\lambda$ is injective and does not have dense image.
+\end{itemize}
+It is apparent that the sets $\point(T)$, $\cont(T)$, and $\residual(T)$ are disjoint, and that
+\[
+\sigma(T)=\point(T) \cup \cont(T) \cup \residual(T).
+\] 
+If $T \in B(H)$ then $\sigma(T) \neq \emptyset$, but any  of the above three sets may
+be empty; they merely can't all be empty for a given operator.
+
+\section{Residual spectrum}
+If $T \in B(H)$ is a normal operator then $\residual(T) = \emptyset$.\footnote{$T \in B(H)$ is {\em normal} if
+$T^*T=TT^*$; in particular, a self-adjoint operator is normal. Equivalently, $T \in B(H)$ is normal if and only if
+$\norm{Tv}=\norm{T^*v}$ for all $v \in H$.} We prove this. Suppose that
+$T-\lambda$ is injective. We have to show that $\im (T-\lambda)$ is dense in $H$, and thus that $\lambda \not \in
+\residual(T)$. ($\lambda$ might be in $\cont(T)$ or might not be in $\sigma(T)$;  we merely want to show that it is not
+in $\residual(T)$.) We have
+\[
+H=\overline{ \im(T-\lambda)} \oplus (\im(T-\lambda))^\perp.
+\]
+Let $w \in (\im(T-\lambda))^\perp$; we have to show that $w=0$. For all $v \in H$,
+\[
+\inner{(T-\lambda)v}{w}=0,
+\]
+so for all $v \in H$ we have $\inner{v}{(T-\lambda)^*w}=0$ and therefore
+$(T-\lambda)^*w=0$, so $w \in \ker (T-\lambda)^*=\ker(T-\lambda)$.\footnote{If $S$ is normal then
+$\ker S=\ker S^*$. Proof: If $v \in \ker S$ then $\inner{Sv}{Sv}=0$, hence $\inner{S^*Sv}{v}=0$, hence
+$\inner{SS^*v}{v}=0$, hence $\inner{S^*v}{S^*v}=0$, hence $S^*v=0$, hence $v \in \ker S^*$.}
+ As $T-\lambda$ is injective, $w=0$, completing the proof.
+
+\section{Point spectrum}
+If $A \in B(H)$ is normal then it is straightforward to show
+that $\ker A=\ker A^*$. Also, if $T \in B(H)$ is normal then for any $z \in \mathbb{C}$, $T-z$ is normal.
+Thus, $\ker (T-z) = \{0\}$ if and only if $\ker ((T-z)^*)=\{0\}$. That is, $\lambda \in \point(T)$ if and only
+if $\overline{\lambda} \in \point(T^*)$. 
+For $X \subseteq \mathbb{C}$ we define
+$X^*=\{\overline{z}:z \in X\}$. We have shown that if $T \in B(H)$ is normal then
+\[
+\point(T)^* = \point(T^*).
+\]
+
+
+\section{Continuous spectrum}
+If $\lambda \in \cont(T)$, then $\im(T-\lambda)$ is dense in $H$. Also,
+\[
+(T-\lambda)^{-1}:\im(T-\lambda) \to H
+\]
+is a surjective linear map (the inverse of a linear map is itself a linear map) that is not continuous. For $\im(T-\lambda)$ is dense in $H$,
+so if $(T-\lambda)^{-1}$ were continuous then it would
+have a unique extension to a continuous, hence bounded, map $H \to H$. Using this and the fact that
+$T-\lambda$ is not surjective will give a contradiction.
+
+
+
+\section{Approximate point spectrum}
+Let $\lambda \in \mathbb{C} \setminus (\point(T) \cup \residual(T))$. I claim that $\lambda \in \cont(T)$  if and only if $\lambda$ is in the {\em approximate
+point spectrum} of $T$, the set of those $\lambda \in \mathbb{C}$ such that there is
+is a sequence
+$v_n \in H$ with  $\norm{v_n}=1$ and $\norm{(T-\lambda)v_n} \to 0$ as $n \to \infty$.
+It is a fact that for $T \in B(H)$,
+$T$ is invertible if and only if $T(H)$ is dense in $H$ and there is some $\alpha>0$ such that $\norm{Tv} \geq \alpha \norm{v}$ for all $v \in H$.\footnote{In words,
+$T \in B(H)$ is invertible if and only if it has dense image and is {\em bounded below}. This result is proved
+in Paul Halmos, {\em Introduction to Hilbert Space and the Theory
+of Spectral Multiplicity}, p.~38, \S 21, Theorem 3.} If $\lambda 
+\in \cont(T)$, then $T-\lambda$ is not invertible but the image of $T-\lambda$ is dense in $H$, then it must therefore be that
+$T-\lambda$ is not bounded below. That is, there is no $\alpha>0$ such that for every $w \in H$ we have $\norm{(T-\lambda)w} \geq \alpha \norm{w}$.
+Then for each $n$ there is some $w \in H$ such that $\norm{(T-\lambda)w_n} < \frac{1}{n} \norm{w_n}$. Let $v_n=\frac{w_n}{\norm{w_n}}$. We  have
+$\norm{v_n}=1$ and $\norm{(T-\lambda)v_n}<\frac{1}{n}$, showing that $\lambda \in \ap(T)$.
+
+On the other hand, if $\lambda \in \ap(T)$ then  there is a sequence $v_n \in H$ such that $\norm{(T-\lambda)v_n} \to 0$ as $n \to \infty$. Then for any $\alpha>0$, there is some $v_n$ such that
+$\norm{(T-\lambda)v_n}<\alpha=\alpha \norm{v_n}$, so $T-\lambda$ is not invertible and hence $\lambda \in \sigma(T)$. Since we assumed that
+$\lambda \in \mathbb{C} \setminus (\point(T) \cup \residual(T))$, we then have $\lambda \in \cont(T)$.
+
+Halmos shows in Problem 62 of his {\em Hilbert Space Problem Book} that
+$\ap(T)$ is a closed subset of $\mathbb{C}$, and proves in Problem 63 that $\partial \sigma(T) \subseteq \ap(T)$: the boundary of the spectrum of $T$
+is contained in the approximate point spectrum of $T$.
+
+\section{Normal operators}
+We showed earlier that if $T \in B(H)$ is normal then $\point(T)^*=\point(T^*)$, where, for
+$X \subseteq \mathbb{C}$, $X^*=\{\overline{z}:z \in X\}$. This is one reason why it can be helpful to know that an operator
+is normal. Using this we can show something more about normal operators. 
+Let $T \in B(H)$ be normal and suppose that $\lambda,\mu \in \point(T)$ are distinct. Then there are nonzero
+$v,w \in H$ with $Tv=\lambda v$ and $Tw=\mu w$. Using $T^*w=\overline{\mu}w$ we get 
+\begin{eqnarray*}
+\lambda \inner{v}{w}&=&\inner{\lambda v}{w}\\
+&=&\inner{Tv}{w}\\
+&=&\inner{v}{T^*w}\\
+&=&\inner{v}{\overline{\mu}w}\\
+&=&\mu \inner{v}{w}.
+\end{eqnarray*}
+As $\lambda \neq \mu$, this means that $\inner{v}{w}=0$. In words, if $T \in B(H)$ is normal, then its
+eigenspaces are mutually orthogonal.
+
+
+\section{Compact operators}
+Let $K(H)$ be the closure in $B(H)$
+of the set of finite-rank operators. We call the elements of $K(H)$ {\em compact operators}. The following are equivalent ways to state that an operator
+is compact.
+\begin{itemize}
+\item $T \in B(H)$ is compact if and only if
+for every bounded subset $S$ of $H$, the closure of the image $T(S)$ is compact.
+\item $T \in B(H)$ is compact if and only if for every sequence $v_n \in H$ with $\norm{v_n}=1$, 
+$T(v_n)$ has a convergent subsequence.
+\item Let $B$ be the closed unit ball in $H$, and let $B$ be a topological space with the {\em weak topology}: a net $v_\alpha \in B$ converges weakly to
+$v \in B$ if for all $w \in H$ we have $\inner{v_\alpha}{w} \to \inner{v}{w}$. If $H$ is separable, then the weak topology on $B$ is metrizable and thus can be characterized
+using merely sequences instead of nets.\footnote{This is proved
+in Paul Halmos, {\em Hilbert Space Problem Book}, Problem 18.} $T \in B(H)$ is compact if and only if the restriction of $T$ to $B$ is continuous
+$B \to H$, where $B$ has the weak topology and $H$ has the norm topology.
+\end{itemize}
+
+If $K \in K(H)$  and $V$ is a closed subspace of $V$ such that $K(V) \subseteq V$, then the restriction of $K$ to $V$ is an element of $K(V)$.
+
+$B(H)$ is a $C^*$-algebra, and $K(H)$ is a $C^*$-subalgebra of $B(H)$. 
+If $T \in K(H)$ and $S \in
+B(H)$, then
+\[
+ST, TS \in K(H).
+\]
+Hence $K(H)$ is an {\em ideal} of the $C^*$-algebra $B(H)$.\footnote{The $C^*$-algebra
+$B(H)/K(H)$ is called the {\em Calkin algebra} of $H$. $T \in B(H)$ is called a {\em Fredholm operator}
+if $T+K(H)$ is an invertible element of the Calkin algebra.
+ In particular, if $T \in K(H)$ then $\id_H-T$ is a Fredholm operator.
+ 
+ $T \in B(H)$ is a Fredholm operator if and only if the following three conditions holds: $\im T$ is closed in $H$, 
+ $\ker T$ is finite dimensional, and $\ker T^*$ is finite dimensional. This equivalence is called {\em Atkinson's theorem}.
+The {\em index} of a Fredholm operator is $\dim \ker T - \dim \ker T^*$. If $T \in K(H)$, then $\id_H -T$ has index $0$.}
+
+Useful facts about compact operators are proved in
+Yuri A. Abramovich and Charalambos D. Aliprantis,
+{\em An Invitation to Operator Theory}, 
+p.~272, \S 7.1.
+
+\section{Fredholm alternative}
+The {\em Fredholm alternative} states that
+if $K \in K(H)$, $\lambda \neq 0$, and  $\ker(K-\lambda) = \{0\}$ then $(K-\lambda)^{-1} \in B(H)$.\footnote{We are following Paul Halmos, {\em Hilbert Space Problem Book}, 
+p.~293, Problem 140.} Equivalently, 
+if $K \in K(H)$, $\lambda \neq 0$, and $\lambda \not \in \point(K)$ then
+$\lambda \not \in \sigma(K)$.
+Equivalently, if
+$K \in K(H)$, then
+\[
+\sigma(K) \subseteq \point(K) \cup \{0\}.
+\]
+The above forms are the ones that we want to use. The following is the one that we want to prove, which is equivalent because
+a nonzero multiple of a compact operator is compact: If $K \in K(H)$ and $\ker(\id_H - K)=\{0\}$ then $(\id_H-K)^{-1} \in B(H)$.
+
+We prove two standalone lemmas that we then use to prove the Fredholm alternative.
+\begin{itemize}
+\item  Let $K \in K(H)$ let $A=\id_H - K \in B(H)$,
+and suppose that $A(H) = H$. Define $K_n=\ker(A^n)$. We have $K_1 \subseteq K_2 \subseteq \cdots$. Assume by contradiction that $K_1 \neq \{0\}$.  Then there is some nonzero $f_1 \in K_1$.
+As $A(H) = H$, there is some $f_2 \in H$ with $Af_2=f_1$; but $A^2 f_2=Af_1=0$ and $Af_2=f_1 \neq 0$, so $f_2 \in K_2 \setminus K_1$. Let $f_{n+1} \in K_{n+1} \setminus 
+K_n$ with $Af_{n+1}=f_n$. Therefore $K_1, K_2, \ldots$ are a strictly increasing sequence of subspaces of $H$. Using Gram-Schmidt, there is an orthonormal
+sequence $e_1,e_2,\ldots$ with $e_n \in K_n$ for all $n$; we caution that we do not necessarily
+have $Ae_{n+1}=e_n$. As $Ae_{n+1} \in K_n$, $\inner{Ae_{n+1}}{e_{n+1}}$, giving 
+\[
+\norm{Ke_{n+1}}^2=\norm{e_{n+1}-Ae_{n+1}}^2=\norm{e_{n+1}}^2+\norm{Ae_{n+1}}^2 \geq 1\norm{e_{n+1}}^2=1.
+\]
+Each $e_n$ is an element of the closed unit ball $B$, and $e_n \to 0$ weakly (this is the case for any orthonormal sequence in $H$, basis or not, and is proved using Bessel's inequality). 
+Since $K$ is compact, it is continuous $B \to H$ where $B$ has the weak topology and $H$ has the norm topology; but $e_n \to 0$, $K(0)=0$,
+and $\norm{Ke_n} \geq 1$, so $Ke_n$ does not converge to $0$ in $H$, a contradiction. Therefore $K_1 = \{0\}$, that is, $\ker A=\{0\}$.
+
+\item Let $K \in K(H)$ and let $A=\id_H - K \in B(H)$.  Suppose by contradiction that $A$ is not bounded below on
+$(\ker A)^\perp$. So for every $\alpha>0$ there is some $w \in (\ker A)^\perp$ such that $\norm{Aw} \geq \alpha \norm{w}$. Then for
+all $n$ there is some $w_n \in (\ker A)^\perp$ with $\norm{Aw_n} < \frac{1}{n} \norm{w_n}$. Let $v_n = \frac{w_n}{\norm{w_n}} \in (\ker A)^\perp$. Then
+\[
+\norm{Av_n} < \frac{1}{n}.
+\]
+As $K$ is compact, there is
+some subsequence $v_{a(n)}$ such that $Kv_{a(n)}$ converges to some
+$v \in H$. 
+$Av_n \to Av$ and $Av_n \to 0$, so $v \in \ker A$.
+On the other hand,
+because $v_n=Av_n+Kv_n \to v$ and $(\ker A)^\perp$ is closed, we have $v \in (\ker A)^\perp$, so
+$v \in \ker A \cap (\ker A)^\perp = \{0\}$.
+But as $\norm{v_n}=1$ for each $n$, we have $\norm{v}=1$, a contradiction.
+Therefore, $A$ is bounded below on $(\ker A)^\perp$.
+\end{itemize}
+
+If $K \in K(H)$ and $A=\id_H - K$, then
+by the second of the two lemmas, we have that $A$ is bounded below on $(\ker A)^\perp$: there is some $\alpha>0$ such that $\norm{Av} \geq \alpha \norm{v}$ for all
+$v \in (\ker A)^\perp$. If
+\[
+w_n \in A(H) = A(\ker A \oplus (\ker A)^\perp) = A((\ker A)^\perp)
+\]
+with $w_n \to w \in H$, then there are $v_n \in (\ker A)^\perp$ such that $Av_n=w_n$. As $w_n$ converges, for all $\epsilon>0$ there is some $N$ such that
+if $n,m \geq N$ then $\norm{w_n-w_m} \leq \epsilon$, so $\norm{A(v_n-v_m)}=\norm{Av_n-Av_m} \leq \epsilon$. But
+\[
+\norm{A(v_n-v_m)} \geq \alpha \norm{v_n-v_m},
+\]
+so
+\[
+\norm{v_n-v_m} \leq \frac{\epsilon}{\alpha},
+\]
+so $v_n$ is a Cauchy sequence and hence converges, say to $v$. $v_n \in (\ker A)^\perp$, which is closed, so $v \in (\ker A)^\perp$. Then $w_n = Av_n \to Av \in A(H)$. Therefore, if $K \in K(H)$ and $A=\id_H -K$, then $A(H)$ is closed in $H$.
+
+Let $K \in K(H)$ and $A=\id_H - K$, and suppose that $\ker A = \{0\}$. By the above paragraph, $A(H)$ is closed in $H$. $K^* \in K(H)$ and $A^*=\id_H - K^*$,\footnote{The
+adjoint of a compact operator is itself a compact operator. This is true even for Banach spaces, and a proof of this is given by
+Paul Garrett in his note {\em Compact operators on Banach spaces: Fredholm-Riesz}.
+A bounded linear map $K:X  \to Y$, where $X$ and $Y$ are Banach spaces, is said to be {\em compact}
+if for every bounded subset $S$ of $X$, the closure of $K(S)$ in $Y$ is  compact.}
+so by the above
+paragraph we also get that $A^*(H)$ is closed in $H$. It is a fact that if $T \in B(H)$ then $\ker T^* = (T(H))^\perp$, so using this with $T=A^*$ we get
+\[
+\ker A = (A^*(H))^\perp;
+\]
+ taking orthogonal complements and using the fact that the double orthogonal complement of a subspace is its closure and that
+ $A^*(H)$ is closed, we obtain
+\[
+(\ker A)^\perp = A^*(H).
+\]
+Since $\ker A=\{0\}$, we have $A^*(H)=H$. Then we can apply the first of the two lemmas: as $A^*=\id_H - K^*$, $K^* \in K(H)$, and $A^*(H)=H$, we have
+$\ker A^*=\{0\}$. 
+We now apply the second of the two lemmas: $A^*$ is bounded below on $(\ker A^*)^\perp=H$. Using the fact that if $T \in B(H)$ is bounded below and has dense image then
+$T^{-1} \in B(H)$, we get $(A^*)^{-1} \in B(H)$ ($A^*(H)=H$ so $A^*$ certainly has dense image). Taking adjoints commutes with taking inverses,
+so $A^{-1} \in B(H)$. This completes the proof of the Fredholm alternative.
+
+
+
+\section{Compact self-adjoint operators}
+It is a fact that
+if $T \in B(H)$ is self-adjoint then\footnote{This is proved in Anthony W. Knapp, {\em Advanced Real Analysis},
+p. ~37, Proposition 2.2.}
+\[
+\norm{T}=\sup_{\norm{v} \leq 1} |\inner{Tv}{v}| = \sup_{\norm{v}=1} |\inner{Tv}{v}|.
+\]
+
+Let $T \in B(H)$ be compact and self-adjoint and $T \neq 0$.
+Since $T$ is self-adjoint, $\inner{Tv}{v} \in \mathbb{R}$, so either $\norm{T}=\sup_{\norm{v}=1} \inner{Tv}{v}$ or
+$\norm{T}=-\inf_{\norm{v}=1} \inner{Tv}{v}$. Say the first is the case. Let $\norm{v_n}=1$ and $\inner{Tv_n}{v_n} \to \norm{T}$ as
+$n \to \infty$. Then, as $T=T^*$,
+\begin{eqnarray*}
+\inner{Tv_n-\norm{T}v_n}{Tv_n-\norm{T}v_n}&=&\inner{Tv_n}{Tv_n}-\inner{Tv_n}{\norm{T}v_n}-\inner{\norm{T}v_n}{Tv_n}\\
+&&+\inner{\norm{T}v_n}{\norm{T}v_n}\\
+&=&\norm{Tv_n}^2-2\norm{T}\inner{Tv_n}{v_n}+\norm{T}^2 \norm{v_n}^2\\
+&\leq&\norm{T}^2 \norm{v_n}^2-2\norm{T}\inner{Tv_n}{v_n}+\norm{T}^2 \norm{v_n}^2\\
+&=&2\norm{T}^2-2\norm{T}\inner{Tv_n}{v_n}.
+\end{eqnarray*}
+Thus $\norm{Tv_n-\norm{T}v_n} \to 0$ as $n \to \infty$, that is, $Tv_n - \norm{T}v_n \to 0$. On the other hand, as $\norm{v_n}=1$ for each $n$, there is some subsequence
+$v_{a(n)}$ such that $Tv_{a(n)}$ converges, say to $v$. Together with $Tv_n -\norm{T}v_n \to 0$ this gives
+$\norm{T}v_{a(n)} \to v$ as $n \to \infty$, from which we get $\norm{v}=\frac{1}{\norm{T}}>0$. Thus $v \neq 0$. And
+\[
+(T-\norm{T})v=(T-\norm{T})\lim_{n \to \infty} v_{a(n)} = \lim_{n \to \infty} (T-\norm{T}) v_{a(n)} = 0,
+\]
+which means that $\norm{T} \in \point(T)$. Likewise, in the case $\norm{T}=-\inf_{\norm{v}=1} \inner{Tv}{v}$ we get
+$-\norm{T} \in \point(T)$.
+
+\section{Multiplication operators}
+Let $(X,\Sigma,\mu)$ be a $\sigma$-finite measure space. $L^2(X)$ is a Hilbert space\footnote{Whether
+ $L^2(X)$ is separable depends on the measure space $(X,\mu)$. Let $\mathscr{S}$ be the set of all measurable subsets
+ of $X$ with finite measure, and let $\rho(A,B)=\mu(A \cup B \setminus A \cap B)$, the measure
+ of the symmetric difference of $A$ and $B$. One shows that $\mathscr{S}$ is a pseudometric space with pseudometric $\rho$. It is a fact
+ that $L^2(X)$ is separable if and only if $\mathscr{S}$ is separable; cf. Paul Halmos, {\em Measure Theory},
+ p. 177, \S 42. For this to be the case, it suffices that $X$ is $\sigma$-finite and that its $\sigma$-algebra
+ is countably generated.} with inner product
+\[
+\inner{f}{g}=\int f g^* d\mu,
+\]
+where $g^*(x)=\overline{g(x)}$.
+
+A {\em multiplication operator} on $L^2(X)$ is an operator $M_\phi:L^2(X) \to L^2(X)$, $\phi \in L^\infty(X)$, of the form
+ \[
+ (M_\phi f)(x)=\phi(x) f(x).
+ \]
+ As 
+ \[
+ \norm{M_\phi f}^2=\int_X \phi(x) f(x) \overline{\phi(x) f(x)} d\mu(x) \leq \norm{\phi}_\infty^2 \norm{f}^2,
+ \]
+ where $\norm{\phi}_\infty$ is the essential supremum of $\phi(x)$ for $x \in X$, we have $\norm{M_\phi} \leq \norm{\phi}$ and so $M_\phi \in B(H)$. $L^\infty(X)$ is a $C^*$-algebra, and so is
+ $B(L^2(X))$. If $X$ is $\sigma$-finite then I claim that
+ \[
+ \phi \mapsto M_\phi, \qquad L^\infty(X) \to B(L^2(X))
+ \]
+ is an injective homomorphism of $C^*$-algebras. It is straightforward to show that this map is a homomorphism of $C^*$-algebras, and this 
+ does not use the assumption that $X$ is $\sigma$-finite.
+For our benefit, we shall show that
+ $\phi \mapsto M_\phi$ is injective. 
+ If $\phi \neq 0$, then
+$\norm{\phi}_\infty>0$, so for  
+\[
+E=\{x \in X:|\phi(x)| \geq \frac{1}{2} \norm{\phi}_\infty\}
+\]
+ we have $0 < \mu(E) \leq \infty$. Because $(X,\mu)$ is $\sigma$-finite, there is
+some subset $F$ of $E$ with $0<\mu(F)<\infty$. As $f=\phi^* \cdot \chi_F \in L^2(X)$, we have
+\begin{eqnarray*}
+M_\phi f &=&\int_F \phi(x) \overline{\phi(x)} d\mu(x)\\
+&\geq&\int_F \frac{1}{4} \norm{\phi}_\infty^2  d\mu(x)\\
+&=& \frac{1}{4} \norm{\phi}_\infty^2 \cdot \mu(F)\\
+&>&0,
+\end{eqnarray*}
+so $M_\phi \neq 0$. 
+ Generally, an injective homomorphism of $C^*$-algebras is an isometry, so $\norm{M_\phi}=\norm{\phi}_\infty$. 
+
+As $M_{\phi \phi^*}=M_\phi M_{\phi^*}=M_\phi M_\phi^*$ and $M_{\phi \phi^*}=M_{\phi^* \phi}$, we have $M_\phi M_\phi^*=M_\phi^* M_\phi$, namely,
+ a multiplication operator is a normal operator.
+Since residual spectrum of a normal operator is empty, the 
+residual spectrum of a multiplication operator is empty.
+
+
+For $\phi \in L^\infty(X)$, we define the {\em essential range} of $\phi$ to be the set 
+\[
+\Big\{z \in \mathbb{C}:\textrm{if $\epsilon>0$ then $\mu(\{x \in X:|f(x)-z|<\epsilon\})>0$}\Big\}.
+\]
+Equivalently, the essential range of $\phi$ is the set of those $z \in \mathbb{C}$ such that for all $\epsilon>0$,
+\[
+\mu(\phi^{-1}(D_\epsilon(z)))>0,
+\]
+in words, those $z \in \mathbb{C}$ such that the inverse image of every $\epsilon$-disc about $z$ has positive measure.
+Equivalently, the essential range of $\phi$ is the intersection of all closed subsets $K$ of $\mathbb{C}$ such that for almost all $x \in X$, $\phi(x) \in K$.
+It is a fact that if $\phi \in L^\infty(X)$ then the essential range of $\phi$ is a compact subset of $\mathbb{C}$.
+
+Let $\phi \in L^\infty(X)$.
+If $\lambda$ is not in the essential range of $\phi$, then there is some $\epsilon>0$ such that $\mu(\phi^{-1}(D_\epsilon(\lambda)))=0$,
+which means that for almost all $x \in X$ we have $|\phi(x)-\lambda| \geq \epsilon$.
+Define $\psi(x)=\frac{1}{\phi(x)-\lambda}$. For almost all $x \in X$,
+\[
+|\psi(x)|=\frac{1}{|\phi(x)-\lambda|} \leq \frac{1}{\epsilon},
+\]
+hence $\psi \in L^\infty(X)$. Then
+\[
+M_{\psi} M_{\phi-\lambda} = M_{\phi-\lambda} M_{\psi}=M_{(\phi-\lambda)\cdot \psi}=M_{1}=\id_{L^2(X)},
+\]
+so $M_{\phi-\lambda}$ is invertible. But $M_{\phi-\lambda}=M_\phi - \lambda$, so $M_\phi-\lambda$ is invertible and hence $\lambda \not \in
+\sigma(M_\phi)$.
+
+If $\lambda$ is in the essential range of $\phi$, then for each $n$ we have $0 < \mu(\phi^{-1}(D_{1/n}(\lambda))) \leq \infty$; 
+since $\Sigma$ is $\sigma$-finite, for each $n$ there is a subset $E_n$ of 
+$\phi^{-1}(D_{1/n}(\lambda))$ with $0 < \mu(E_n) < \infty$, and so $\chi_{E_n} \in L^2(X)$.
+We have, since $|\phi(x)-\lambda|<\frac{1}{n}$ for $x \in E_n$,
+\begin{eqnarray*}
+\norm{(M_\phi-\lambda) \chi_{E_n}}^2&=&\int_X |(\phi(x)-\lambda)\chi_{E_n}(x)|^2 d\mu(x)\\
+&=&\int_{E_n} |\phi(x)-\lambda|^2 d\mu(x)\\
+&\leq&\frac{1}{n^2} \int_{E_n} d\mu(x)\\
+&=&\frac{1}{n^2} \int_X \chi_{E_n} d\mu(x)\\
+&=&\frac{1}{n^2} \norm{\chi_{E_n}}^2,
+\end{eqnarray*}
+so for each $n$,
+\[
+\norm{(M_\phi-\lambda) \chi_{E_n}} \leq \frac{1}{n} \norm{\chi_{E_n}}.
+\]
+It follows that $M_\phi-\lambda$ is not invertible, as it is not bounded below. Therefore $\lambda \in \sigma(M_\phi)$.
+Therefore the essential range of $\phi \in L^\infty(X)$ is equal to the spectrum of $M_\phi \in B(L^2(X))$.
+
+We say that $\phi \in L^\infty(X)$ is {\em invertible} if there is some $\psi \in L^\infty(X)$ such that $\phi(x)\psi(x)=1$ for almost all $x \in X$. (It would not make sense to demand
+that $\phi(x)\psi(x)=1$ for all $x \in X$.) For $\phi \in L^\infty(X)$ to be invertible, it is necessary and sufficient that there is some $\alpha>0$ such that
+$|\phi(x)| \geq \alpha$ for almost all $x \in X$ (lest its inverse not have an essential supremum). 
+
+
+If  $\lambda$ is not just an element of the essential range $\phi$ 
+ but is an isolated element of the essential range, then we can say more
+than just that $\lambda \in \sigma(M_\phi)$. In this case, there is some $\epsilon>0$ such that the intersection
+of
+$D_\epsilon(\lambda)$  and the essential range of $\phi$ is equal to the singleton $\{\lambda\}$. Let $E$ be a subset of $\phi^{-1}(D_\epsilon(\lambda))$ with
+$0<\mu(E)<\infty$.  For almost all $x \in X$, $\phi(x)$ is an element of the essential range of $\phi$, hence for almost all  $x \in E$ we have $\phi(x)=\lambda$. Therefore,
+ for almost all  $x \in X$ we have
+\[
+(M_\phi \chi_E)(x)=\phi(x) \chi_E(x)=\lambda \chi_E(x).
+\]
+Hence $(M_\phi - \lambda)\chi_E=0$, and as $\mu(E)>0$ we have $\chi_E \neq 0$. Therefore, if $\lambda$ is an isolated element of the essential range of $\phi$ then
+$\lambda \in \point(M_\phi)$.\footnote{If $\lambda$ is an isolated element of the essential range of $\phi$ then 
+one finds that the inverse image of the singleton
+$\{\lambda\}$ 
+has positive measure.
+I would be surprised if this were not the origin of the term {\em point spectrum}. Being isolated corresponds to being discrete.}
+
+
+
+
+
+
+\section{Functional calculus}
+Let $T \in B(H)$ be self-adjoint. The spectrum $\sigma(T)$ is a compact
+subset of $\mathbb{R}$, and one checks that the set $C(\sigma(T))$ 
+of continuous functions $\sigma(T) \to \mathbb{C}$ is a $C^*$-algebra, with norm
+$\norm{f}=\sup_{\lambda \in \sigma(T)} |f(\lambda)|$. 
+
+Let $\mathbb{C}[x]$ be the set of polynomials with complex coefficients. For
+$T \in B(H)$ self-adjoint and $p(x)=\sum_{k=0}^n a_k x^k \in \mathbb{C}[x]$, we define 
+\[
+p(T) \in B(H)
+\]
+by
+\[
+p(T)=\sum_{k=0}^n a_k T^k.
+\]
+$T \mapsto p(T)$ is a homomorphism of $C^*$-algebras, where\footnote{If we had not stipulated that $T$ be self-adjoint then
+we would have to define the conjugation of polynomials as conjugation of polynomial functions: for $p$ defined by
+$p(z)=\sum_{k=0}^n a_k z^k$, then
+$p^*$ is defined by $p^*(z)=\sum_{k=0}^n \overline{a_k} (\overline{z})^k$.}
+\[
+\left(\sum_{k=0}^n a_k x^k \right)^*=\sum_{k=0}^n \overline{a_k} x^k.
+\]
+It is a fact that\footnote{See Paul Halmos, {\em Hilbert Space Problem Book}, 
+p. 62, Problem 97.}
+\[
+\sigma(p(T))=p(\sigma(T)),
+\]
+ where for $M \subseteq \mathbb{C}$
+we define
+$p(M)=\{p(z):z \in M\}$. It is also a fact that 
+\[
+\norm{p(T)}=\norm{p}=\sup_{\lambda \in \sigma(T)} |p(\lambda)|;
+\]
+this is proved using the result that the norm of a normal operator $T$ is equal to its {\em spectral radius}, which is given by the two
+following expressions that one proves are equal:
+\[
+r(T)=\lim_{n \to \infty} \norm{T^n}^{1/n}=\max_{\lambda \in \sigma(T)} |\lambda|.
+\]
+
+The above is used to define $f(T)$ for any continuous function $f:\sigma(T) \to \mathbb{C}$. This map
+$C(\sigma(T)) \to B(H)$
+is called the {\em continuous functional calculus}. It is an isometric homomorphism of $C^*$-algebras.
+The continuous functional calculus can be 
+used to prove things about the spectrum of self-adjoint operators that do not obviously have
+to do with making sense of continuous functions applied to these operators.
+
+Let $T \in B(H)$ be
+self-adjoint and let $\lambda \in \sigma(T)$ be an isolated point in $\sigma(T)$. I will show that that $\lambda 
+\in \point(T)$. Since $\lambda$ is isolated in $\sigma(T)$, the function $f:\sigma(T) \to \mathbb{C}$
+defined by 
+\[
+f(z)=\begin{cases}
+1&z=\lambda,\\
+0&z \neq \lambda,
+\end{cases}
+\]
+is continuous. Since $f$ is continuous, $f(T) \in B(H)$, and because $f=f^*$, $f(T)$ is self-adjoint. Let $P=f(T)$. As $\norm{P}=\norm{f}=1$,
+$P \neq 0$. Define $g \in C(\sigma(T))$ by $g(x)=(x-\lambda)f(x)$. Then $g(x)=0$ for all $x \in \sigma(T)$, so
+$g(T)=0$, i.e.
+\[
+(T-\lambda)P=0.
+\]
+Hence $\im P \subseteq \ker(T-\lambda)$. As $P \neq 0$, there is some $v \in H$ with $Pv \neq 0$.
+Then $(T-\lambda)Pv=0$, $Pv \neq 0$, so
+$\lambda \in \point(T)$.
+
+
+\section{Spectral measures}
+It is a fact that if $f \geq 0$ then $f(T) \geq 0$, where, for a self-adjoint operator $T$, $T \geq 0$ means $\inner{Tv}{v} \geq 0$ for all $v \in H$.
+For $T \in B(H)$ self-adjoint and $v \in H$, using the continuous functional calculus talked about in the previous section we
+define $\phi:C(\sigma(T)) \to \mathbb{C}$ by
+\[
+\phi(f)=\inner{v}{f(T)v}.
+\]
+$\phi$ is a  {\em positive linear functional}: if $f$ is real-valued and $f(x) \geq 0$ for all $x \in \sigma(T)$, then 
+$\phi(f) \geq 0$. $\sigma(T)$ is indeed a locally compact Hausdorff space
+and since $\sigma(T)$ is compact the continuous functions of compact support on $\sigma(T)$ are precisely
+the continuous functions on $\sigma(T)$, so we satisfy the conditions
+of  the Riesz-Markov theorem. Thus there exists a 
+unique
+regular Borel measure $\mu$ on the Borel $\sigma$-algebra of $\sigma(T)$ such that, for all 
+$f \in C(\sigma(T))$, 
+\[
+\inner{v}{f(T)v}=\phi(f)=\int_{\sigma(T)} f(x) d\mu(x).
+\]
+ {\em Lebesgue's decomposition theorem} states that
+\[
+\mu=\mu_{\textrm{ac}}+\mu_{\textrm{sing}}+\mu_{\textrm{pp}},
+\]
+where
+\begin{itemize}
+\item $\mu_{\textrm{ac}}$ is absolutely continuous with respect to Lebesuge measure: if $A$ is a measurable
+subset of $\sigma(T)$ and its Lebesgue measure is $0$, then $\mu_{\textrm{ac}}(A)=0$.
+\item $\mu_{\textrm{sing}}$ and Lebesgue measure are mutually
+singular,\footnote{There are disjoint measurable sets $A$ and $B$
+with $A \cup B = \sigma(T)$ such that $\mu_{\textrm{sing}}(A)=0$ and the Lebesgue measure of $B$ is $0$.} and if $\lambda \in \sigma(T)$ then $\mu_{\textrm{sing}}(\{\lambda\})=0$.
+\item  There is a countable subset $J$ of $\sigma(T)$ such that
+\[
+\mu_{\textrm{pp}}=\sum_{\lambda \in J} a_\lambda \delta_\lambda, \qquad a_\lambda \in \mathbb{C}.
+\]
+\end{itemize}
+
+We define $H_{\textrm{ac}}$ to be the set of those $v \in H$ such that $\mu$ is equal to the absolutely
+continuous part of its Lebesgue decomposition, i.e. the other two parts are 0, and we define 
+ $H_{\textrm{sing}}$ and $H_{\textrm{pp}}$ likewise. (Note that we first took $v \in H$ and then defined $\mu$ using $v$.) One proves that 
+ $H_{\textrm{ac}}$, $H_{\textrm{sing}}$ and $H_{\textrm{pp}}$
+  are closed subspaces of $H$ and that
+ they are invariant under $T$, and defines
+the {\em absolutely continuous spectrum} of $T$ to be the spectrum of the restriction of $T$ to $H_{\textrm{ac}}$;
+the {\em singular spectrum} of $T$ to be the spectrum of the restriction of $T$ to $H_{\textrm{sing}}$;
+and the {\em pure point spectrum} of $T$ to be the spectrum of the restriction of $T$ to
+$H_{\textrm{pp}}$. It is a fact that\footnote{See Reed and Simon, {\em Methods of Modern Mathematical Physics. I: Functional Analysis}, revised and enlarged ed.,
+p.~231, \S VII.2.}
+\[
+\sigma(T) =\sigma_{\textrm{ac}}(T) \cup  \sigma_{\textrm{sing}}(T) \cup \overline{\sigma_{\textrm{pp}}(T)},
+\]
+but these three sets might not be disjoint.
+
+
+\end{document}

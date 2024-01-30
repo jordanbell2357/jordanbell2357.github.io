@@ -1,0 +1,498 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Bernstein and Nikolsky inequalities for trigonometric polynomials}
+\author{Jordan Bell}
+\date{January 28, 2015}
+
+\maketitle
+
+\section{Introduction}
+Let $\mathbb{T}=\mathbb{R}/2\pi \mathbb{Z}$. For a function $f:\mathbb{T} \to \mathbb{C}$ and $\tau \in \mathbb{T}$, we define
+$f_\tau:\mathbb{T} \to \mathbb{C}$ by $f_\tau(t)=f(t-\tau)$.
+For measurable $f:\mathbb{T} \to \mathbb{C}$ and $0<r<\infty$, write
+\[
+\norm{f}_r = \left(\frac{1}{2\pi} \int_{\mathbb{T}} |f(t)|^r dt\right)^{1/r}.
+\]
+For $f,g \in L^1(\mathbb{T})$, write
+\[
+(f*g)(x) = \frac{1}{2\pi} \int_{\mathbb{T}} f(t)g(x-t) dt, \qquad x \in \mathbb{T},
+\]
+and for $f \in L^1(\mathbb{T})$, write
+\[
+\hat{f}(k)=\frac{1}{2\pi} \int_{\mathbb{T}} f(t) e^{-ikt} dt, \qquad k \in \mathbb{Z}.
+\]
+This note works out proofs of some inequalities involving the support of  $\hat{f}$ for
+$f \in L^1(\mathbb{T})$.
+
+
+
+Let $\mathscr{T}_n$ be the set of trigonometric polynomials of degree $\leq n$. 
+We define the \textbf{Dirichlet kernel} $D_n:\mathbb{T} \to \mathbb{C}$ by
+\[
+D_n(t) = \sum_{|j| \leq n} e^{ijt}, \qquad t \in \mathbb{T}.
+\]
+It is straightforward to check that if $T \in \mathscr{T}_n$ then 
+\[
+D_n * T = T.
+\]
+
+
+
+\section{Bernstein's inequality for trigonometric polynomials}
+DeVore and Lorentz attribute the following inequality to Szeg\"o.\footnote{Ronald A. DeVore and George G. Lorentz,
+{\em Constructive Approximation}, p.~97, Theorem 1.1.}
+
+
+\begin{theorem}
+If $T \in \mathscr{T}_n$ and $T$ is real valued, then for all $x \in \mathbb{T}$,
+\[
+T'(x)^2+n^2 T(x)^2 \leq n^2 \norm{T}_\infty^2.
+\]
+\label{szego}
+\end{theorem}
+\begin{proof}
+If $T=0$ the result is immediate. Otherwise, take $x \in \mathbb{T}$,
+and for real $c>1$ define 
+\[
+P_c(t)=\frac{T(t+x) \sgn T'(x)}{c \norm{T}_\infty}, \qquad t \in \mathbb{T}.
+\]
+$P_c \in \mathscr{T}_n$, and satisfies
+\[
+P_c'(0) = \frac{T'(x) \sgn T'(x)}{c \norm{T}_\infty} \geq 0
+\]
+and $\norm{P_c}_\infty \leq \frac{1}{c}<1$.
+Since $\norm{P_c}_\infty < 1$, in particular $|P_c(0)|<1$ and so there is some
+$\alpha$, $|\alpha|<\frac{\pi}{2n}$, such that $\sin n\alpha = P_c(0)$. 
+We define $S \in \mathscr{T}_n$ by
+\[
+S(t) = \sin n(t+\alpha)-P_c(t), \qquad t \in \mathbb{T},
+\]
+which satisfies $S(0)=\sin n\alpha-P_c(0)=0$.
+For $k=-n,\ldots,n$, let $t_k=-\alpha+\frac{(2k-1)\pi}{2n}$, for which we have
+\[
+\sin n(t_k+\alpha) = \sin \frac{(2k-1)\pi}{2} = (-1)^{k+1}.
+\]
+Because $\norm{P_c}_\infty<1$, 
+\[
+\sgn S(t_k) =  (-1)^{k+1},
+\]
+so by the intermediate value theorem, for each $k=-n,\ldots,n-1$ there is some $c_k \in (t_k,t_{k+1})$ such that
+$S(c_k)=0$.
+Because
+\[
+t_n-t_{-n} = \frac{(2n-1)\pi}{2n}-\frac{(-2n-1)\pi}{2n}=
+2\pi,
+\]
+it follows that if $j \neq k$ then $c_j$ and $c_k$ are distinct in $\mathbb{T}$.
+It is a fact that a trigonometric polynomial of degree $n$ has $\leq 2n$ distinct roots in $\mathbb{T}$, so if
+$t \in (t_k,t_{k+1})$ and $S(t)=0$, then $t=c_k$. 
+It is the case that $t_1=-\alpha+\frac{\pi}{2n}>0$ and $t_0=-\alpha-\frac{\pi}{2}<0$, so
+$0 \in (t_0,t_1)$. But $S(0)=0$, so $c_0=0$. 
+Using $S(t_1)=1>0$ and the fact that $S$ has no zeros in $(0,t_1)$ we get a contradiction from $S'(0) < 0$, so $S'(0) \geq 0$. 
+This gives
+\[
+0 \leq P_c'(0) = n\cos n\alpha-S'(0) \leq n\cos n\alpha=n\sqrt{1-\sin^2 n\alpha} = n\sqrt{1-P_c(0)^2}.
+\]
+Thus
+\[
+P_c'(0) \leq n\sqrt{1-P_c(0)^2},
+\]
+or
+\[
+n^2 P_c(0)+P_c'(0)^2 \leq n^2.
+\]
+Because
+\[
+P_c(0)^2=\frac{T(x)^2}{c^2 \norm{T}_\infty^2}, \qquad
+P_c'(0)^2 = \frac{T'(x)^2}{c^2\norm{T}_\infty^2}
+\]
+we get
+\[
+n^2 T(x)^2 + T'(x)^2 \leq c^2 n^2 \norm{T}_\infty^2.
+\]
+Because this is true for all $c>1$,
+\[
+n^2 T(x)^2 + T'(x)^2 \leq n^2 \norm{T}_\infty^2,
+\]
+completing the proof.
+\end{proof}
+
+Using the above we now prove Bernstein's inequality.\footnote{Ronald A. DeVore and George G. Lorentz,
+{\em Constructive Approximation}, p.~98.}
+
+\begin{theorem}[Bernstein's inequality]
+If $T \in \mathscr{T}_n$, then
+\[
+\norm{T'}_\infty \leq n \norm{T}_\infty.
+\]
+\label{bernstein}
+\end{theorem}
+\begin{proof}
+There is some $x_0 \in \mathbb{T}$ such that $|T'(x_0)| = \norm{T'}_\infty$. 
+Let $\alpha \in \mathbb{R}$ be such that
+$e^{i\alpha} T'(x_0) = \norm{T'}_\infty$. 
+Define $S(x)=\Re(e^{i\alpha} T(x))$ for $x \in \mathbb{T}$, which
+satisfies $S'(x)=\Re(e^{i\alpha} T'(x))$ and in particular
+\[
+S'(x_0)=\Re(e^{i\alpha} T'(x_0))=
+e^{i\alpha} T'(x_0)=\norm{T'}_\infty.
+\]
+Because $S \in \mathscr{T}_n$ and $S$ is real valued,  
+Theorem \ref{szego} yields
+\[
+S'(x_0)^2+n^2 S(x_0)^2 \leq n^2 \norm{S}_\infty^2.
+\]
+A fortiori,
+\[
+S'(x_0)^2 \leq n^2 \norm{S}_\infty^2,
+\]
+giving, because $S'(x_0)=\norm{T'}_\infty$ and
+$\norm{S}_\infty \leq \norm{T}_\infty$,
+\[
+\norm{T'}_\infty^2 \leq n^2  \norm{T}_\infty^2,
+\]
+proving the claim.
+\end{proof}
+
+
+
+The following is a version of Bernstein's inequality.\footnote{Ronald A. DeVore and George G. Lorentz,
+{\em Constructive Approximation}, p.~101, Theorem 2.4.} 
+
+\begin{theorem}
+If $T \in \mathscr{T}_n$
+and $A \subset \mathbb{T}$ is a Borel set, there is some $x_0 \in \mathbb{T}$ such that
+\[
+\int_A |T'(t)| dt \leq n \int_{A-x_0} |T(t)| dt.
+\]
+\end{theorem}
+\begin{proof}
+Let $A \subset \mathbb{T}$ be a Borel set with indicator function $\chi_A$.
+Define
+$Q:\mathbb{T} \to \mathbb{C}$ by
+\[
+Q(x) = \int_{\mathbb{T}} \chi_A(t) T(t+x) \sgn T'(t) dt, \qquad x \in
+\mathbb{T},
+\]
+which we can write as
+\begin{align*}
+Q(x)&=\int_{\mathbb{T}} \chi_A(t) \sum_j \widehat{T}(j) e^{ij(t+x)} \sgn T'(t) dt\\
+&=\sum_j \widehat{T}(j) \left( \int_{\mathbb{T}} \chi_A(t) e^{ijt} \sgn T'(t) dt \right)   e^{ijx},
+\end{align*}
+showing that $Q \in \mathscr{T}_n$.  Also,
+\[
+Q'(x) = \int_{\mathbb{T}} \chi_A(t) T'(t+x) \sgn T'(t) dt, \qquad x \in \mathbb{T}.
+\]
+ Let
+$x_0 \in \mathbb{T}$ with $|Q(x_0)| = \norm{Q}_\infty$. Applying
+Theorem \ref{bernstein} we get
+\[
+\norm{Q'}_\infty \leq n \norm{Q}_\infty.
+\]
+Using
+\[
+Q'(0) = \int_{\mathbb{T}} \chi_A(t) T'(t) \sgn T'(t) dt
+=\int_{\mathbb{T}} \chi_A(t) |T'(t)| dt,
+\]
+this gives
+\begin{align*}
+\int_{\mathbb{T}} \chi_A(t) |T'(t)| dt&\leq n \norm{Q}_\infty\\
+&=n|Q(t_0)|\\
+&=n\left| \int_{\mathbb{T}} \chi_A(t) T(t+x_0) \sgn T'(t) dt \right|\\
+&\leq n \int_{\mathbb{T}} \chi_A(t) |T(t+x_0)| dt\\
+&=n \int_{\mathbb{T}} \chi_{A-x_0}(t) |T(t)| dt.
+\end{align*}
+\end{proof}
+
+Applying the above with $A=\mathbb{T}$ gives the following version of Bernstein's inequality, for
+the $L^1$ norm.
+
+\begin{theorem}[$L^1$ Bernstein's inequality]
+If $T \in \mathscr{T}_n$, then 
+\[
+\norm{T'}_1 \leq n \norm{T}_1.
+\]
+\end{theorem}
+
+
+\section{Nikolsky's inequality for trigonometric polynomials}
+DeVore and Lorentz attribute the following inequality to Sergey Nikolsky.\footnote{Ronald A. DeVore and George G. Lorentz,
+{\em Constructive Approximation}, p.~102, Theorem 2.6.}
+
+\begin{theorem}[Nikolsky's inequality]
+If $T \in \mathscr{T}_n$ and $0<q \leq p \leq \infty$, then for $r \geq \frac{q}{2}$ an integer,
+\[
+\norm{T}_p \leq (2nr+1)^{\frac{1}{q}-\frac{1}{p}} \norm{T}_q.
+\]
+\end{theorem}
+\begin{proof}
+Let $m=nr$. Then $T^r \in \mathscr{T}_m$, so $T^r * D_m = T^r$, and using this and the Cauchy-Schwarz inequality we have,
+for $x \in \mathbb{T}$,
+\begin{align*}
+|T(x)^r|&= \left| \frac{1}{2\pi} \int_{\mathbb{T}} T(t)^r D_m(x-t)\right|\\
+&\leq  \frac{1}{2\pi} \int_{\mathbb{T}} |T(t)|^r |D_m(x-t)| dt\\
+&\leq  \norm{T}_\infty^{r-\frac{q}{2}}  \cdot \frac{1}{2\pi} \int_{\mathbb{T}}
+|T(t)|^{\frac{q}{2}} |D_m(x-t)| dt\\
+&\leq   \norm{T}_\infty^{r-\frac{q}{2}} \norm{ |T|^{q/2}}_2 \norm{D_m}_2\\
+&= \norm{T}_\infty^{r-\frac{q}{2}} \norm{T}_q^{\frac{q}{2}} \norm{\widehat{D_m}}_{\ell^2(\mathbb{Z})}\\
+&=\sqrt{2m+1}  \norm{T}_\infty^{r-\frac{q}{2}} \norm{T}_q^{\frac{q}{2}}.
+\end{align*}
+Hence
+\[
+\norm{T}_\infty^r \leq \sqrt{2m+1}  \norm{T}_\infty^{r-\frac{q}{2}} \norm{T}_q^{\frac{q}{2}},
+\]
+thus
+\[
+\norm{T}_\infty \leq  (2m+1)^{\frac{1}{q}}  \norm{T}_q.
+\]
+Then, using
+$\norm{T}_p \leq \norm{T}_\infty^{1-\frac{q}{p}} \norm{T}_q^{\frac{q}{p}}$,
+we have
+\[
+\norm{T}_p \leq (2m+1)^{\frac{1}{q}-\frac{1}{p}} \norm{T}_q^{1-\frac{q}{p}}
+\norm{T}_q^{\frac{q}{p}}
+=(2m+1)^{\frac{1}{q}-\frac{1}{p}} \norm{T}_q.
+\]
+\end{proof}
+
+
+\section{The complementary Bernstein inequality}
+We define a \textbf{homogeneous Banach space} to be a linear subspace $B$
+of $L^1(\mathbb{T})$ with a norm $\norm{f}_{L^1(\mathbb{T})} \leq
+\norm{f}_B$ with which $B$ is a Banach space,
+such that if $f \in B$ and $\tau \in \mathbb{T}$ then $f_\tau \in B$ and $\norm{f_\tau}_B = \norm{f}_B$,
+and such that if $f \in B$ then $f_\tau \to f$ in $B$ as $\tau \to 0$. 
+
+ \textbf{Fej\'er's kernel} is, for $n \geq 0$,
+\[
+K_n(t) = \sum_{|j| \leq n} \left(1-\frac{|j|}{n+1} \right) e^{ijt}=
+\sum_{j \in \mathbb{Z}} \chi_n(j) \left(1-\frac{|j|}{n+1} \right) e^{ijt} \qquad t \in \mathbb{T}.
+\]
+One calculates that, for $t \not \in 4\pi \mathbb{Z}$,
+\[
+K_n(t) = \frac{1}{n+1} \left( \frac{\sin \frac{n+1}{2}t}{\sin \frac{1}{2}t} \right)^2.
+\]
+
+Bernstein's inequality is a statement about functions whose Fourier transform is supported only on low frequencies. The following is a statement
+about functions whose Fourier transform is supported only on high frequencies.\footnote{Yitzhak Katznelson, {\em An Introduction to Harmonic
+Analysis}, third ed., p.~55, Theorem 8.4.} In particular, for $1 \leq p < \infty$, $L^p(\mathbb{T})$ is a homogeneous Banach space, and
+so is $C(\mathbb{T})$ with the supremum norm.
+
+\begin{theorem}
+Let $B$ be a homogeneous Banach space and let $m$ be a positive integer.
+Define $C_m$ as $C_m=m+1$ if  $m$ is even and $C_m=12m$ if $m$ is odd.
+If
+\[
+f(t)=\sum_{|j| \geq n} a_j e^{ijt}, \qquad t \in \mathbb{T},
+\]
+is $m$ times differentiable and $f^{(m)} \in B$, then
+$f \in B$ and 
+\[
+\norm{f}_B \leq C_m n^{-m} \norm{f^{(m)}}_B.
+\]
+\end{theorem}
+\begin{proof}
+Suppose that $m$ is even.
+It is a fact that if $a_j,  j\in \mathbb{Z}$, is an even sequence of nonnegative real numbers such that $a_j \to 0$ as $|j| \to \infty$ and 
+such that for each $j>0$,
+\[
+a_{j-1}+a_{j+1}-2a_j \geq 0,
+\]
+then there is a nonnegative function $f \in L^1(\mathbb{T})$ such that
+$\hat{f}(j)=a_j$ for all $j \in \mathbb{Z}$.\footnote{Yitzhak Katznelson, {\em An Introduction to Harmonic
+Analysis}, third ed., p.~24, Theorem 4.1.}
+Define 
+\[
+a_j = \begin{cases}
+j^{-m}&|j| \geq n\\
+n^{-m} + (n-|j|)(n^{-m}-(n+1)^{-m})&|j| \leq n-1.
+\end{cases}
+\]
+It is apparent that $a_j$ is even and tends to $0$ as $|j| \to \infty$. For 
+$1 \leq j \leq n-2$,
+\[
+a_{j-1}+a_{j+1}-2a_j = 0.
+\]
+For $j=n-1$,
+\begin{align*}
+a_{j-1}+a_{j+1}-2a_j &= n^{-m}+(n-(n-2))(n^{-m}-(n+1)^{-m})+n^{-m}\\
+&-2\left(n^{-m} + (n-(n-1))(n^{-m}-(n+1)^{-m})\right)\\
+&=0.
+\end{align*}
+The function $j \mapsto j^{-m}$ is convex on $\{n,n+1,\ldots\}$, as $m \geq 1$, so
+for $j \geq n$ we have $a_{j-1}+a_{j+1}-2a_j \geq 0$. Therefore,
+there is some nonnegative $\phi_{m,n} \in L^1(\mathbb{T})$ such that
+\[
+\widehat{\phi_{m,n}}(j) = a_j, \qquad j \in \mathbb{Z}.
+\]
+Because $\phi_{m,n}$ is nonnegative, and using
+$n^{-m}-(n+1)^{-m} < \frac{m}{n} n^{-m}$,
+\[
+\norm{\phi_{m,n}}_1 = \widehat{\phi_{m,n}}(0) = n^{-m}+n(n^{-m}-(n+1)^{-m})
+<(m+1)n^{-m}.
+\]
+Define $d\mu_{m,n}(t) =\frac{1}{2\pi} \phi_{m,n}(t) dt$. 
+For
+$|j| \geq n$,
+\begin{align*}
+\widehat{f^{(m)}*\mu_{m,n}}(j)&=\widehat{f^{(m)}}(j) \widehat{\mu_{m,n}}(j)\\
+&=(ij)^m \hat{f}(j) \widehat{\phi_{m,n}}(j)\\
+&=(ij)^m \hat{f}(j)  \cdot |j|^{-m}\\
+&=i^m \hat{f}(j).
+\end{align*}
+For $|j|<n$, since $\hat{f}(j)=0$ we have
+\[
+\widehat{f^{(m)}*\mu_{m,n}}(j)=(ij)^m \hat{f}(j) \widehat{\phi_{m,n}}(j)=0=i^m \hat{f}(j),
+\]
+so for all $j \in \mathbb{Z}$,
+\[
+\widehat{f^{(m)}*\mu_{m,n}}(j)=i^m \hat{f}(j).
+\]
+This implies that $f^{(m)}*\mu_{m,n}=i^m f$, which in particular tells us that $f \in B$.
+Then,
+\begin{align*}
+\norm{f}_B &= \norm{i^m f}_B\\
+&=\norm{f^{(m)}*\mu_{m,n}}_B\\
+&\leq \norm{f^{(m)}}_B \norm{\mu_{m,n}}_{M(\mathbb{T})}\\
+&=\norm{\phi_{m,n}}_1 \norm{f^{(m)}}_B\\
+&\leq (m+1)n^{-m}  \norm{f^{(m)}}_B.
+\end{align*}
+This shows what we want in the case that $m$ is even, with $C_m=m+1$.
+
+Suppose that $m$ is odd. For $l$ a positive integer, define $\psi_l:\mathbb{T} \to \mathbb{C}$ by
+\[
+\psi_l(t) = \left(e^{2lit}+\frac{1}{2}e^{3lit} \right) K_{l-1}(t), \qquad  t \in \mathbb{T}.
+\]
+There is a unique  $l_n$ such that $n \in \{2l_n,2l_n+1\}$. For $k \geq 0$ an integer, define
+$\Psi_{n,k}:\mathbb{T} \to \mathbb{C}$ by
+\[
+\Psi_{n,k}(t) = \psi_{l_n 2^k}(t), \qquad t \in \mathbb{T}.
+\]
+$\Psi_{n,k}$ satisfies
+\[
+\norm{\Psi_{n,k}}_1 \leq \frac{3}{2} \norm{K_{k-1}}_1 
+=\frac{3}{2} \cdot \frac{1}{2\pi} \int_{\mathbb{T}} |K_{k-1}(t)| dt
+=\frac{3}{2} \cdot \frac{1}{2\pi}  \int_{\mathbb{T}} K_{k-1}(t) dt=\frac{3}{2}.
+\]
+On the one hand,
+for $j \leq 0$,
+from the definition of $\psi_l$ we have $\widehat{\Psi_{n,k}}(j)=0$, hence
+$\sum_{k=0}^\infty \widehat{\Psi_{n,k}}(j)=0$.
+On the other hand, for $j \geq n$ we assert that
+\[
+\sum_{k=0}^\infty \widehat{\Psi_{n,k}}(j)=1.
+\]
+We define $\Phi_n: \mathbb{T} \to \mathbb{C}$ by
+\[
+\Phi_n(t) =\sum_{k=0}^\infty (\Psi_{n,k}*\phi_{1,n2^k})(t), \qquad t \in \mathbb{T}.
+\]
+We calculate the Fourier coefficients of $\Phi_n$. For $j \geq n$, 
+\[
+\widehat{\Phi_n}(j) = \sum_{k=0}^\infty \widehat{\Phi_{n,k}}(j) \widehat{\phi_{1,n2^k}}(j)
+=\frac{1}{j} \sum_{k=0}^\infty   \widehat{\Phi_{n,k}}(j) 
+=\frac{1}{j}.
+\]
+As well,
+\[
+\norm{\Phi_n}_1 \leq \sum_{k=0}^\infty \norm{\Psi_{n,k}*\phi_{1,n2^k}}_1
+\leq \sum_{k=0}^\infty \norm{\Psi_{n,k}}_1 \norm{\phi_{1,n2^k}}_1
+\leq \frac{3}{2}  \sum_{k=0}^\infty 2 (n2^k)^{-1}
+=\frac{6}{n}
+\]
+We now define
+\[
+d\mu_{1,n}(t) = \frac{1}{2\pi} (\Phi_n(t)-\Phi_n(-t)) dt,
+\]
+which satisfies for $|j| \geq n$,
+\[
+\widehat{\mu_{1,n}}(j)=\widehat{\Phi_n}(j)-\widehat{\Phi_n}(-j)=\frac{1}{j}
+\]
+and hence
+\[
+\widehat{f'*\mu_{1,n}}(j)=\widehat{f'}(j) \widehat{\mu_{1,n}}(j)=ij \hat{f}(j) \cdot \frac{1}{j}=i \hat{f}(j).
+\]
+Because $\hat{f}(j)=0$ for $|j|<n$, 
+$\widehat{f'*\mu_{1,n}}(j) =0$ for $|j|<n$, it follows that for any $j \in \mathbb{Z}$,
+\[
+\widehat{f'*\mu_{1,n}}(j) = i \hat{f}(j),
+\]
+and therefore,
+\[
+f'*\mu_{1,n} = if.
+\]
+Then
+\[
+\norm{f}_B = \norm{if}_B = \norm{f'*\mu_{1,n}}_B \leq 
+\norm{\mu_{1,n}}_{M(\mathbb{T})} \norm{f'}_B
+\leq 2 \norm{\Phi_n}_1 \norm{f'}_B
+\leq \frac{12}{n} \norm{f'}_B.
+\]
+That is, with $C_1=12$ we have
+\[
+\norm{f}_B \leq 12 n^{-1} \norm{f'}_B.
+\]
+For $m=2\nu+1$, we define 
+\[
+\mu_{m,n} = \mu_{1,n}*\mu_{2\nu,n},
+\]
+for which we have, for $|j| \geq n$,
+\[
+\widehat{f^{(m)} *\mu_{m,n}}(j) = 
+(ij)^m \hat{f}(j) \widehat{\mu_{1,n}}(j) \widehat{\mu_{2\nu,n}}(j)
+=(ij)^m \hat{f}(j) \cdot \frac{1}{j} \cdot j^{-2\nu}
+=i^m \hat{f}(j).
+\]
+It follows that 
+\[
+f^{(m)}*\mu_{m,n} = i^m f,
+\]
+whence
+\begin{align*}
+\norm{f}_B &= \norm{i^m f}_B \\
+&= \norm{f^{(m)}*\mu_{m,n}}_B\\
+&\leq \norm{\mu_{m,n}}_{M(\mathbb{T})} \norm{f^{(m)}}_B\\
+&\leq \norm{\mu_{1,n}}_{M(\mathbb{T})}
+\norm{\mu_{2\nu,n}}_{M(\mathbb{T})} 
+\norm{f^{(m)}}_B\\
+&\leq \frac{12}{n} \cdot (2\nu+1)n^{-2\nu} \norm{f^{(m)}}_B\\
+&=12mn^{-m}  \norm{f^{(m)}}_B.
+\end{align*}
+That is, with $C_m=12m$, we have
+\[
+\norm{f}_B \leq C_m n^{-m} \norm{f^{(m)}}_B,
+\]
+completing the proof.
+\end{proof}
+
+
+
+
+\end{document}

@@ -1,0 +1,434 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Unordered sums in Hilbert spaces}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+\maketitle
+
+\section{Preliminaries}
+Let $\mathbb{N}$ be the set of positive integers. We say that a set is countable if it is bijective with a subset of
+$\mathbb{N}$; thus a finite set is countable. 
+In this note I do not presume unless I say so that any set is countable or that any topological space is separable. A neighborhood of a point in a topological space is a set that contains an open set that
+contains the point; one reason why it can be handy to speak about neighborhoods of a point rather than just open sets that contain the point is that
+the set of all neighborhoods of a point is a filter, whereas it is unlikely that the set of all open sets that contain a point is a filter.
+
+
+\section{Unordered sums in normed spaces}
+A {\em partially ordered set} is a set $J$ and a binary relation $\leq$ on $J$ that is reflexive ($\alpha \leq \alpha$),
+antisymmetric (if both $\alpha \leq \beta$ and $\beta \leq \alpha$ then $\alpha=\beta$), and 
+transitive (if both $\alpha \leq \beta$ and $\beta \leq \gamma$ then $\alpha \leq \gamma$).\footnote{Paul R. Halmos, {\em Naive Set Theory}, \S 14.}
+A {\em directed set} is a partially ordered set $(J,\leq)$ such that if $\alpha,\beta \in J$ then there is some $\gamma \in J$ such that
+$\alpha \leq \gamma$ and $\beta \leq \gamma$.
+If $X$ is a topological space, a {\em net} in $X$ is a function from some directed set to $X$. If
+$z:J \to X$ is a net in $X$ and $N$ is a subset of $X$, we say that $z$ is {\em eventually in $N$}
+if there is some $\alpha \in J$ such that  $\alpha \leq \beta$ implies $z(\beta) \in N$. We say that the net $z$ {\em converges}
+to $x \in X$ if for every neighborhood of $x$ the net is eventually in that neighborhood. The importance of the notion
+of a net is that if $X$ and $Y$ are topological spaces and $f$ is a function $X \to Y$ then $f$ is continuous if and only if for every $x \in X$ and for every
+net $z:J \to X$ that converges to $x$, the net $f \circ z:J \to Y$ converges to $f(x)$.\footnote{James R. Munkres,
+{\em Topology}, second ed., p.~188.}
+
+Let $X$ be a normed space, let $I$ be a set, and let $\mathscr{F}$ be the set of all finite subsets of $I$. $\mathscr{F}$ is a directed set ordered by set inclusion.
+Define $S:\mathscr{F} \to X$ by
+\[
+S(F) = \sum_{i \in F} f(i) \in X, \qquad F \in \mathscr{F}.
+\]
+$S$ is a net in $X$, and if the net $S$ converges to $x \in X$, we say that the sum $\sum_{i \in I} f(i)$ {\em converges to $x$},
+and write $\sum_{i \in I} f(i)=x$.
+
+\begin{theorem}
+If $X$ is a normed space, $f:I \to X$ is a function, $x \in X$, and $I_0$ is a subset of $I$ such that if $i \in I \setminus I_0$ then $f(i)=0$,
+then $\sum_{i \in I} f(i)$ converges to $x$ if and only if $\sum_{i \in I_0} f(i)$ converges to $x$.
+\label{subsetsum}
+\end{theorem}
+\begin{proof}
+Let $\mathscr{F}$ be the set of all finite subsets of $I$, let $\mathscr{F}_0$ be the set of all finite subsets of $I_0$, define
+$S:\mathscr{F} \to X$ by $S(F)=\sum_{i \in F} f(i)$,
+and let
+$S_0$ be the restriction of $S$ to $\mathscr{F}_0$.
+Suppose that $\sum_{i \in I} f(i)$ converges to $x$, and let $\epsilon>0$. There is some $F_\epsilon \in \mathscr{F}$
+such that if $F_\epsilon \subseteq F \in \mathscr{F}$ then $\norm{S(F)-x}<\epsilon$. Let $G_\epsilon = F_\epsilon \cap I_0$. If
+$G_\epsilon \subseteq G \in \mathscr{F}_0$, then
+\[
+S_0(G)-x = \sum_{i \in G} f(i) - x = \sum_{i \in F} f(i) - x=S(F)-x,
+\]
+giving $\norm{S_0(G)-x}=\norm{S(F)-x}$. Hence
+ $G_\epsilon \subseteq G \in \mathscr{F}_0$ implies that $\norm{S_0(G)-x}<\epsilon$, showing that the net $S_0$ converges to $x$, i.e. that
+$\sum_{i \in I_0} f(i)$ converges to $x$.
+
+Suppose that $\sum_{i \in I_0} f(i)$ converges to $x$, and let $\epsilon>0$. There is some $G_\epsilon \in \mathscr{F}_0$ such that
+if $G_\epsilon \subseteq G \in \mathscr{F}_0$ then $\norm{S_0(G)-x}<\epsilon$. If $G_\epsilon \subseteq F \in \mathscr{F}$, then,
+with $G = F \cap I_0$,
+\[
+S(F)-x = \sum_{i \in F} f(i) - x = \sum_{i \in G} f(i) - x = S_0(G)-x,
+\]
+so $G_\epsilon \subseteq F \in \mathscr{F}$ implies that $\norm{S(F)-x}<\epsilon$. This shows that $S$ converges to $x$, that is,
+that $\sum_{i \in I} f(i)$ converges to $x$.
+\end{proof}
+
+
+\begin{theorem}
+If $X$ is a   normed space, $f:I \to X$ is a function, and $\sum_{i \in I} f(i)$ converges, then $\{i \in I: f(i) \neq 0\}$ is countable.
+\end{theorem}
+\begin{proof}
+Suppose that $\sum_{i \in I} f(i)$ converges to $x$,
+let $\mathscr{F}$ be the set of all finite subsets of $I$, and let $S(F)=\sum_{i \in I} f(i)$, $F \in \mathscr{F}$.
+For each $n \in \mathbb{N}$, let $F_n \in \mathscr{F}$ be such that if $F_n \subseteq F \in \mathscr{F}$ then
+\[
+\norm{S(F)-x}<\frac{1}{n}.
+\]
+If $G \in \mathscr{F}$ and $G \cap F_n = \emptyset$, then
+\[
+\norm{S(G)} = \norm{S(G \cup F_n) - S(F_n)}
+\leq \norm{S(G \cup F_n) -x} + \norm{S(F_n) - x}<\frac{2}{n}.
+\]
+Let $J=\bigcup_{n \in \mathbb{N}} F_n$. If $i \in I \setminus J$, then for each $n \in \mathbb{N}$,
+we have
+$\{i\} \cap F_n = \emptyset$, whence $\norm{S(\{i\})} < \frac{2}{n}$.
+ That is, if $i \in I \setminus J$ then for each $n \in \mathbb{N}$ we have $\norm{f(i)} < \frac{2}{n}$, which implies that if $i \in I \setminus J$ then
+ $f(i)=0$.
+Therefore $\{i \in I: f(i) \neq 0\} \subseteq J$, and as $J$ is countable, the set $\{i \in I:f(i) \neq 0\}$ is
+countable.
+\end{proof}
+
+However, we already have a notion of infinite sums: a series is the limit of a sequence of partial
+sums. 
+
+\begin{theorem}
+If $X$ is a normed space, $x_n \in X$,  and $\sum_{n \in \mathbb{N}} x_n$ converges to $x$, then
+$\sum_{n=1}^N x_n \to x$ as $N \to \infty$.
+\label{generalizedsum}
+\end{theorem}
+\begin{proof}
+Let $\epsilon>0$,  let $\mathscr{F}$ be the set of all finite subsets of $\mathbb{N}$, and let $S:\mathscr{F} \to X$ be
+$S(F)=\sum_{n \in F} x_n$. The net $S$ converges to $x$, so there is some $F_\epsilon \in \mathscr{F}$ such that if $F_\epsilon \subseteq F$ then
+$\norm{S(F)-x}< \epsilon$. Let $N_\epsilon=\max F_\epsilon$. If $N \geq N_\epsilon$, then for $F=\{1,\ldots,N\}$ we have $F_\epsilon \subseteq F$ and so
+\[
+\norm{\sum_{n=1}^N x_n - x}=\norm{S(F)-x} < \epsilon,
+\]
+showing that $\sum_{n=1}^N x_n \to x$ as $N \to \infty$.
+\end{proof}
+
+When we talk about the sum $\sum_{i \in I} f(i)$, the set of all finite subsets of $I$ is ordered by set inclusion, but we don't care about any
+ordering of the set $I$ itself. If the sum $\sum_{n \in \mathbb{N}} x_n$ converges then for any bijection $\sigma:\mathbb{N} \to \mathbb{N}$,
+$\sum_{n=1}^\infty x_{\sigma(n)}=\sum_{n \in \mathbb{N}} x_n$. If $x_n$ is a sequence in a normed space and for every
+bijection $\sigma:\mathbb{N} \to \mathbb{N}$ the series $\sum_{n=1}^\infty x_{\sigma(n)}$ converges, we say that the sequence
+$x_n$ is {\em unconditionally summable}. If an unordered sum converges, then it is unconditionally summable, and if a countable
+unordered sum is unconditionally summable the unordered sum converges.
+
+\begin{theorem}
+If $X$ is a Banach space, $x_n \in X$, and $\sum_{n=1}^\infty \norm{x_n}<\infty$, then $\sum_{n \in \mathbb{N}} x_n$ converges.
+\label{absoluteconvergence}
+\end{theorem}
+\begin{proof}
+For each $k \in \mathbb{N}$ there is some $K(k)$ such that 
+\[
+\sum_{n=K(k)+1}^\infty \norm{x_n} < \frac{1}{k};
+\]
+suppose that if $j<k$ then $K(j)<K(k)$.
+Define
+\[
+v_k = \sum_{n=1}^{K(k)} x_n.
+\]
+For $\epsilon>0$, let $N>\frac{1}{\epsilon}$. If $k  > j \geq N$, then
+\[
+\norm{v_k-v_j}=\norm{\sum_{n=1}^{K(k)} x_n - \sum_{n=1}^{K(j)} x_n}
+=\norm{\sum_{n=K(j)+1}^{K(k)} x_n}\leq
+\sum_{n=K(j)+1}^{K(k)} \norm{x_n}
+\leq \sum_{n=K(j)+1}^\infty \norm{x_n},
+\]
+hence if $k>j \geq N$, then $\norm{v_k-v_j} < \frac{1}{j} \leq \frac{1}{N}$. This shows that
+ $v_k$ is a Cauchy sequence, and hence $v_k$ converges to some $x \in X$. 
+
+Let $\mathscr{F}$ be the set of all finite subsets of $\mathbb{N}$ and define $S:\mathscr{F} \to X$ by 
+$S(F) = \sum_{n \in F} x_n$.
+Let $\epsilon>0$,  and
+as $v_k \to x$ there is some $N_1$ such that if $k \geq N_1$ then
+$\norm{v_k-x}<\epsilon$. Let $N_2> \frac{1}{\epsilon}$, put $N=\max\{N_1,N_2\}$, and put
+$F_\epsilon=\{1,\ldots,K(N)\}$. If $F_\epsilon \subseteq F \in \mathscr{F}$, then
+\begin{eqnarray*}
+\norm{S(F)-x}&=&\norm{\sum_{n \in F} x_n - x}\\
+&\leq&\norm{\sum_{n \in F} x_n -\sum_{n \in F_\epsilon} x_n} + \norm{\sum_{n \in F_\epsilon} x_n -x}\\
+&=&\norm{\sum_{n \in F \setminus F_\epsilon} x_n} + \norm{v_N-x}\\
+&<&\sum_{n \in F \setminus F_\epsilon} \norm{x_n}+\epsilon\\
+&\leq&\sum_{n=K(N)+1}^\infty \norm{x_n}+\epsilon\\
+&<&\frac{1}{N}+\epsilon\\
+&<&2\epsilon.
+\end{eqnarray*}
+Therefore the net $S$ converges to $x$, i.e. $\sum_{n \in \mathbb{N}} x_n$ converges to $x$.
+\end{proof}
+
+The following theorem shows us in particular that
+the converse of   Theorem \ref{generalizedsum} is false.
+One direction of the following theorem is 
+ Theorem \ref{absoluteconvergence} with $X=\mathbb{C}$. The other direction follows from the Riemann rearrangement theorem.\footnote{Walter Rudin, {\em Principles of Mathematical Analysis}, third ed., p.~76, Theorem 3.54.}
+ 
+\begin{theorem}
+If $\alpha_n \in \mathbb{C}$, then $\sum_{n \in \mathbb{N}} \alpha_n$ converges if and only if
+$\sum_{n=1}^\infty |\alpha_n|< \infty$.
+\end{theorem}
+
+
+Let $X$ be a normed space and $z:J \to X$ a net. We say that $z$ is {\em Cauchy} if for every $\epsilon>0$ there is some
+$\alpha \in J$ such that $\alpha \leq \beta$ and $\alpha \leq \gamma$ together imply that
+$\norm{z(\beta)-z(\gamma)}<\epsilon$.\footnote{Ronald G. Douglas, {\em Banach Algebra Techniques in Operator Theory}, 
+second ed., p.~3, Proposition 1.7.}
+
+\begin{theorem}
+If $X$ is a Banach space and $z:J \to X$ is a Cauchy net, then there is some $x \in X$ such that $z$ converges to $x$.
+\label{cauchynet}
+\end{theorem}
+\begin{proof}
+Let $\alpha_1 \in J$ such that if $\alpha_1 \leq \alpha$ then $\norm{z(\alpha)-z(\alpha_1)}<1$, and for $n>1$ let
+$\alpha_n \in J$ be such that if $\alpha_n \leq \alpha$ then $\norm{z(\alpha)-z(\alpha_n)}<\frac{1}{n}$ and such that
+$\alpha_{n-1} \leq \alpha_n$. Define $x_n=z(\alpha_n)$. 
+For $\epsilon>0$, let $N>\frac{1}{\epsilon}$. If $n \geq m \geq N$, then, as $\alpha_n \geq \alpha_m$,
+\[
+\norm{x_n-x_m} = \norm{z(\alpha_n)-z(\alpha_m)} < \frac{1}{m} \leq \frac{1}{N},
+\]
+showing that $x_n$ is a Cauchy sequence in $X$. Hence there is some $x \in X$ such that $x_n \to x$.
+
+Let $\epsilon>0$, let $N_1>\frac{1}{\epsilon}$,  let $N_2$ be such that if $n \geq N_2$ then $\norm{x_{N_2}-x}<\epsilon$, and set $N=\max\{N_1,N_2\}$. If
+$\alpha_N \leq \alpha$, then, by construction of the sequence $\alpha_n$,
+\begin{eqnarray*}
+\norm{z(\alpha)-x} &\leq& \norm{z(\alpha)-z(\alpha_N)}+\norm{z(\alpha_N)-x}\\
+&=& \norm{z(\alpha)-z(\alpha_N)} + \norm{x_N-x}\\
+&<&\frac{1}{N}+\epsilon\\
+&<&2\epsilon,
+\end{eqnarray*}
+showing that the net
+$z$ converges to $x$.
+\end{proof}
+
+
+
+\begin{theorem}
+If $H$ is an infinite dimensional Hilbert space and $\{e_n: n \in \mathbb{N}\}$ is an orthonormal set in $H$, then
+$\sum_{n \in \mathbb{N}} \frac{1}{n}e_n$ converges.
+\end{theorem}
+\begin{proof}
+Let $\mathscr{F}$ be the set of finite subsets of $\mathbb{N}$ and let $S(F)=\sum_{n \in F} \frac{1}{n}e_n$, $F \in \mathscr{F}$. 
+Define $v_N = \sum_{n=1}^N \frac{1}{n} e_n$. If $N_1 > N_2 \geq N$, then, as $e_n$ are orthonormal,
+\[
+\norm{v_{N_1}-v_{N_2}}^2 = \norm{\sum_{n=N_2+1}^{N_1} \frac{1}{n}e_n}^2 = \sum_{n=N_2+1}^{N_1} \frac{1}{n^2}
+< \sum_{n=N+1}^\infty \frac{1}{n^2}<\sum_{n=N}^\infty \frac{1}{n(n+1)}=\frac{1}{N},
+\]
+so $v_N$ is a Cauchy sequence in $H$ and hence converges to some $h \in H$. For $\epsilon>0$, let $N_1>\frac{1}{\epsilon}$,
+let $\norm{v_{N_2} - h}^2<\epsilon$, put
+$N=\max\{N_1,N_2\}$, and put $F_\epsilon=\{1,\ldots,N\}$. If $F_\epsilon \subseteq F \in \mathscr{F}$, then,
+using that $e_n$ are orthonormal and $0 \leq (a-b)^2 = a^2-2ab+b^2$,
+\begin{eqnarray*}
+\norm{S(F)-h}^2 &\leq& \left( \norm{S(F)-S(F_\epsilon)} + \norm{S(F_\epsilon)-h}\right)^2\\
+&\leq&2\norm{S(F)-S(F_\epsilon)}^2 +2 \norm{S(F_\epsilon)-h}^2\\
+&=&2\norm{\sum_{n \in F \setminus F_\epsilon} \frac{1}{n}e_n}^2+2\norm{v_N-h}^2\\
+&=&2\sum_{n \in F \setminus F_\epsilon} \frac{1}{n^2} + 2\norm{v_N-h}^2\\
+&<&4\epsilon.
+\end{eqnarray*}
+This shows that the net $S$ converges to $h$, that is, that $\sum_{n \in \mathbb{N}} \frac{1}{n}e_n$ converges to $h$.
+\end{proof}
+
+We have proved that if $H$ is an infinite dimensional Hilbert space and $\{e_n:n \in \mathbb{N}\}$ is an orthonormal
+set in $H$, then $\sum_{n \in \mathbb{N}} \frac{1}{n}e_n$
+converges, although $\sum_{n=1}^\infty \norm{\frac{1}{n}e_n} = \sum_{n=1}^\infty \frac{1}{n} = \infty$. This shows that the converse
+of Theorem \ref{absoluteconvergence} is false. In fact, the Dvoretsky-Rogers
+theorem states that if $X$ is an infinite dimensional Banach space then there is some countable subset $\{x_n: n \in \mathbb{N}\}$
+of $X$ such that $\sum_{n \in \mathbb{N}} x_n$ converges but $\sum_{n \in \mathbb{N}} \norm{x_n} = \infty$.\footnote{Joseph
+Diestel, {\em Sequences and Series in Banach Spaces}, p.~59, chapter VI.}
+
+
+
+
+\section{Orthogonal projections}
+If $S_i, i \in I$, are subsets of a Hilbert space $H$, we define $\bigvee_{i \in I} S_i$ to be the closure of the span of $\bigcup_{i \in I} S_i$.
+If $i \neq j$ implies that $S_i \perp S_j$, we say that the sets $S_i$ are {\em mutually orthogonal}. 
+To say that $\{e_i:i \in I\}$ is an orthonormal basis for $H$ is to say that $\{e_i: i \in I\}$ is an orthonormal set and that
+$H = \bigvee_{i \in I} \{e_i\}$.
+
+
+If $M_n, n \in \mathbb{N}$, are mutually orthogonal closed subspaces of $M$, we denote
+\[
+\bigoplus_{n \in \mathbb{N}} M_n = \bigvee_{n \in \mathbb{N}} M_n,
+\]
+which we call an {\em orthogonal direct sum}.
+
+If $H$ is a Hilbert space and $M$ is a closed subspace of $H$, then for every $h \in H$ there is a unique $v_h \in M$ such that
+\[
+\norm{h-v_h} = \inf_{v \in M} \norm{h-v},
+\]
+and $h-v_h \in M^\perp$.\footnote{John
+B. Conway, {\em A Course in Functional Analysis}, second ed., p.~9, Theorem 2.6.}
+This gives
+\[
+H=M \oplus M^\perp.
+\]
+The {\em orthogonal projection of $H$ onto $M$} is the map $P:H \to H$ defined by
+\[
+P(h_1+h_2)=h_1, \qquad h_1 \in M, h_2 \in M^\perp.
+\]
+It is straightforward
+to check that $P$ is linear,  $\norm{P} \leq 1$ ($\norm{P}=1$ if and only if $M$ is nonzero),  $P^2=P$, and $\ker P=M^\perp$ and $P(H) = M$.\footnote{John B. Conway,
+{\em A Course in Functional Analysis}, second ed., p.~10, Theorem 2.7.} Rather than specifying a closed subspace of $H$ and talking about the orthogonal projection
+onto $M$, we can talk about an orthogonal projection in $H$, which is the orthogonal projection onto its image.
+
+Bessel's inequality\footnote{John B. Conway, {\em A Course in Functional Analysis}, second ed., p.~15, Theorem 4.8.} states that if $\{e_n: n \in \mathbb{N}\}$ is an orthonormal set in a Hilbert
+space $H$ and $h \in H$, then
+\begin{equation}
+\sum_{n=1}^\infty |\inner{h}{e_n}|^2 \leq \norm{h}^2.
+\label{countablebessel}
+\end{equation}
+
+\begin{theorem}
+If $H$ is a Hilbert space, $\mathscr{E}$ is an orthonormal set in $H$, and $h \in H$, then  there are only countably many
+$e \in \mathscr{E}$ such that $\inner{h}{e} \neq 0$.
+\label{countable}
+\end{theorem}
+\begin{proof}
+Let
+\[
+\mathscr{E}_n = \left\{ e \in \mathscr{E}: |\inner{h}{e}| \geq \frac{1}{n}\right\}.
+\]
+If $\mathscr{E}_n$ were infinite, let $\{e_j : j \in \mathbb{N}\}$ be a subset of it, and this gives us a contradiction by \eqref{countablebessel}.
+Therefore each $\mathscr{E}_n$ is finite. But if $\inner{h}{e} \neq 0$ then there is some $n$ such that $|\inner{h}{e}| \geq \frac{1}{n}$,
+so
+\[
+\mathscr{E} = \bigcup_{n=1}^\infty \mathscr{E}_n.
+\]
+Therefore $\mathscr{E}$ is countable.
+\end{proof}
+
+Bessel's inequality makes sense for an orthonormal set of any cardinality in a Hilbert space, rather than just for a countable orthonormal set.
+
+
+\begin{theorem}[Bessel's inequality]
+If $H$ is a Hilbert space, $\mathscr{E}$ is an orthonormal set in $H$, and $h \in H$, then
+\[
+\sum_{e \in \mathscr{E}} |\inner{h}{e}|^2 \leq \norm{h}^2.
+\]
+\label{bessel}
+\end{theorem}
+\begin{proof}
+By Theorem \ref{countable}, there are only countably many $e \in \mathscr{E}$ such that $\inner{h}{e} \neq 0$; let them be $\{e_n: n \in \mathbb{N}\}$. 
+$\{e_n: n \in \mathbb{N}\}$ is an orthonormal set, so by \eqref{countablebessel} we have 
+\[
+\sum_{n=1}^\infty |\inner{h}{e_n}|^2 \leq \norm{h}^2.
+\]
+Theorem \ref{absoluteconvergence} states that if $X$ is a Banach space, $x_n \in X, n \in \mathbb{N}$, and
+$\sum_{n=1}^\infty \norm{x_n} < \infty$, then the unordered sum $\sum_{n \in \mathbb{N}} x_n$ converges. Thus, with
+$X=\mathbb{C}$ and $x_n=|\inner{h}{e_n}|^2$, the unordered sum $\sum_{n \in \mathbb{N}} |\inner{h}{e_n}|^2$ converges, say to $S$.
+Because  $\sum_{n \in \mathbb{N}} |\inner{h}{e_n}|^2$ converges  to $S$, by Theorem \ref{generalizedsum} the series
+$\sum_{n=1}^\infty |\inner{h}{e_n}|^2$ converges to $S$. But 
+we already know that this series is $\leq \norm{h}^2$, so
+\[
+\sum_{n \in \mathbb{N}} |\inner{h}{e_n}|^2 \leq \norm{h}^2.
+\]
+By Theorem \ref{subsetsum}, the unordered sum $\sum_{e \in \mathscr{E}} |\inner{h}{e}|^2$ converges if and only if
+the unordered sum  $\sum_{n \in \mathbb{N}} |\inner{h}{e_n}|^2$ converges, and if they converge they have the same value.
+Therefore,  the unordered sum $\sum_{e \in \mathscr{E}} |\inner{h}{e}|^2$ indeed converges, and it is $\leq \norm{h}^2$.
+\end{proof}
+
+
+\section{Convergence of unordered sums in the strong operator topology}
+Let $H$ be a Hilbert space and let $\mathscr{B}(H)$ be the set of bounded linear maps $H \to H$. It is straightforward to check that
+$\mathscr{B}(H)$ is a normed space with
+the operator norm $\norm{T} = \sup_{\norm{h} \leq 1} \norm{Th}$. (In fact it is a Banach space, actually a Banach algebra, actually
+a $C^*$-algebra; each of these statements implies the previous one.) The {\em strong operator topology} on $\mathscr{B}(H)$ can be characterized
+in the following way: a net $f:I \to \mathscr{B}(H)$ converges to $T \in \mathscr{B}(H)$ in the strong operator topology if for all
+$h \in H$ the net $f(i)h$ converges to $Th$ in $H$.\footnote{For the strong operator topology see John B. Conway, {\em A Course in Functional Analysis}, second ed.,
+p.~256.}
+
+If $I$ is a set, $\mathscr{F}$ is the set of all finite subsets of $I$, and $f:I \to \mathscr{B}(H)$ is a function,
+define $S:\mathscr{F} \to \mathscr{B}(H)$ by 
+\[
+S(F) = \sum_{i \in I} f(i) \in \mathscr{B}(H).
+\]
+$S$ is a net in $\mathscr{B}(H)$, and if the net converges to $T \in \mathscr{B}(H)$ in the strong operator topology we say
+that the unordered sum $\sum_{i \in I} f(i)$ {\em converges strongly} to $T$. To say that the net $S$ converges to $T$ in the strong
+operator topology is to say that if $h \in H$ then $\sum_{i \in I} f(i)h$ converges to $Th$ in $H$.
+
+If $f,g \in H$, we define $f \otimes g:H \to H$ by 
+\[
+f \otimes g (h) = \inner{h}{g}f.
+\]
+It is apparent that $f \otimes g$ is linear, and
+\[
+\norm{f \otimes g (h)} = \norm{\inner{h}{g}f} = |\inner{h}{g}| \norm{f} \leq \norm{h} \norm{g} \norm{f},
+\]
+so $\norm{f \otimes g} \leq \norm{f} \norm{g}$, giving $f \otimes g \in \mathscr{B}(H)$. Additionally,
+\[
+\inner{f \otimes g (h_1)}{h_2} = \inner{\inner{h_1}{g}f}{h_2} = \inner{h_1}{g} \inner{f}{h_2} =\inner{h_1}{\inner{h_2}{f}g} 
+=\inner{h_1}{g \otimes f (h_2)},
+\]
+showing that $(f \otimes g)^* = g \otimes f$.
+
+
+\begin{theorem}
+If $H$ is a Hilbert space, $\mathscr{E}$ is an orthonormal set in $H$, and $P$ is the orthogonal projection
+onto $\bigvee \mathscr{E}$, then $\sum_{e \in \mathscr{E}} e \otimes e$ converges strongly to $P$.
+\end{theorem}
+\begin{proof}
+Let $h \in H$. By Theorem \ref{countable} there are only countably many $e \in \mathscr{E}$ such that $\inner{h}{e} \neq 0$, and we denote
+these by $\{e_n: n \in \mathbb{N}\}$. By Bessel's inequality,
+\begin{equation}
+\sum_{e \in \mathscr{E}} |\inner{h}{e}|^2 = \sum_{n \in \mathbb{N}} |\inner{h}{e_n}|^2 = \sum_{n=1}^\infty |\inner{h}{e_n}|^2 \leq 
+\norm{h}^2.
+\label{besselepsilon}
+\end{equation}
+Let $\mathscr{F}$ be the set of all finite subsets of $\mathbb{N}$ and for $F \in \mathscr{F}$ let
+\[
+S(F)=\sum_{n \in F} \inner{h}{e_n}e_n \in H.
+\]
+If $\epsilon>0$, then by \eqref{besselepsilon} there is some $N$ such that $\sum_{n=N+1}^\infty |\inner{h}{e_n}|^2<\epsilon^2$. If
+$F_\epsilon=\{1,\ldots,N\}$ and $F,G \in \mathscr{F}$ both contain $F_\epsilon$, then, because the $e_n$ are orthonormal,
+\begin{eqnarray*}
+\norm{S(F)-S(G)}^2&=&\norm{\sum_{n \in F} \inner{h}{e_n}e_n - \sum_{n \in G} \inner{h}{e_n}e_n}^2\\
+&=&\sum_{n \in (F \cup G) \setminus (F \cap G)} \norm{\inner{h}{e_n}e_n}^2\\
+&=&\sum_{n \in (F \cup G) \setminus (F \cap G)} |\inner{h}{e_n}|^2\\
+&\leq&\sum_{n=N+1}^\infty  |\inner{h}{e_n}|^2\\
+&<&\epsilon^2.
+\end{eqnarray*}
+Therefore, if $F,G \in \mathscr{F}$ both contain $F_\epsilon$ then $\norm{S(F)-S(G)} < \epsilon$. This means that $S$ is a Cauchy net, and hence, by Theorem \ref{cauchynet},
+has a limit $v \in H$. That is, the unordered sum $\sum_{n \in \mathbb{N}} \inner{h}{e_n}e_n$ converges to $v$.
+
+As the unordered sum $\sum_{n \in \mathbb{N}} \inner{h}{e_n}e_n$ converges to $v$ we have
+\[
+\lim_{N \to \infty} \sum_{n=1}^N \inner{h}{e_n}e_n = v.
+\]
+If $m \in \mathbb{N}$ then it follows that 
+\[
+\lim_{N \to \infty} \sum_{n=1}^N \inner{h}{e_n}\inner{e_n}{e_m} = \inner{v}{e_m},
+\]
+which is
+\[
+\inner{h}{e_m}=\inner{v}{e_m}.
+\]
+Let
+ $Q$ be the orthogonal projection onto $\bigvee_{n \in \mathbb{N}} \{e_n\}$. 
+On the one hand, because $\inner{h}{e}=0$ for $e \not \in \{e_n:n \in \mathbb{N}\}$, we check that $Ph=Qh$. On the other hand, we check that $Qh=v$. Therefore, $v=Ph$, i.e.
+\[
+\sum_{e \in \mathscr{E}} e \otimes e(h)= \sum_{e \in \mathscr{E}} \inner{h}{e}e = \sum_{n \in \mathbb{N}} \inner{h}{e_n}e_n=Ph,
+\]
+showing that the unordered sum $\sum_{e \in \mathscr{E}} e \otimes e$ converges strongly to $P$.
+ \end{proof}
+
+
+In particular, if $\mathscr{E}$ is an orthonormal basis for $H$, then $\sum_{e \in \mathscr{E}} e \otimes e$ converges strongly
+to $\id_H$.
+
+\end{document}

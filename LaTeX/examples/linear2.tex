@@ -1,0 +1,111 @@
+\documentclass[12pt,letterpaper]{article}
+\usepackage[lmargin=0.75in,rmargin=0.75in,tmargin=0.75in,bmargin=0.5in]{geometry}
+
+% -------------------
+% Packages
+% -------------------
+\usepackage{
+	amsmath,			% Math Environments
+	amssymb,			% Extended Symbols
+	enumerate,		    % Enumerate Environments
+	graphicx,			% Include Images
+	lastpage,			% Reference Lastpage
+	multicol,			% Use Multi-columns
+	multirow			% Use Multi-rows
+}
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{tikz, tabularx}
+\usepackage{graphics}
+\newcolumntype{W}{>{\centering\arraybackslash}X}%Para agilizar las columnas.
+% -------------------
+% Font
+% -------------------
+\usepackage[T1]{fontenc}
+\usepackage{charter}
+
+
+% -------------------
+% Commands
+% -------------------
+\newcommand{\prob}{\noindent\textbf{Problema. }}
+\newcounter{problema}
+\newcommand{\problem}{
+	\stepcounter{problema}%
+	\noindent \textbf{Problema \theproblem. }%
+}
+\newcommand{\pointproblem}[1]{
+	\stepcounter{problema}%
+	\noindent \textbf{Problema \theproblem.} (#1 points)\,%
+}
+\newcommand{\pspace}{\par\vspace{\baselineskip}}
+\newcommand{\ds}{\displaystyle}
+
+
+% -------------------
+% Theorem Environment
+% -------------------
+\mdfdefinestyle{theoremstyle}{%
+	frametitlerule=true,
+	roundcorner=5pt,
+	linecolor=black,
+	outerlinewidth=0.5pt,
+	middlelinewidth=0.5pt
+}
+\mdtheorem[style=theoremstyle]{exercise}{\textbf{Problem}}
+
+
+% -------------------
+% Header & Footer
+% -------------------
+\usepackage{fancyhdr}
+
+\fancypagestyle{pages}{
+	%Headers
+	\fancyhead[L]{}
+	\fancyhead[C]{}
+	\fancyhead[R]{}
+\renewcommand{\headrulewidth}{0pt}
+	%Footers
+	\fancyfoot[L]{}
+	\fancyfoot[C]{}
+	\fancyfoot[R]{\thepage \,de \pageref{LastPage}}
+\renewcommand{\footrulewidth}{0.0pt}
+}
+\headheight=0pt
+\footskip=14pt
+
+
+
+
+% -------------------
+% Content
+% -------------------
+\begin{document}
+
+
+
+\begin{exercise}
+\centering
+\begin{tabular}{lllllll}
+$x-y$ & $=$ & $7$                    &  & $y$                  & $=$ & $-x+5$                \\
+      &     &                        &  &                      &     &                       \\
+$x$   & $=$ & $\framebox(40,20){}+7$ &  & $y$                  & $=$ & $-x+5$                \\
+      &     &                        &  &                      &     &                       \\
+$y+7$ & $=$ & $x$                    &  & $y$                  & $=$ & $-x+5$                \\
+      &     &                        &  &                      &     &                       \\
+$y$   & $=$ & $x-\framebox(40,20){}$ &  & $y$                  & $=$ & $-x+5$                \\
+      &     &   &  &                      &     &                       \\
+$y$   & $=$ & $x-7$                  &  & $\framebox(60,20){}$ & $=$ & $-x+5$                \\
+      &     &                        &  &                      &     &                       \\
+$y$   & $=$ & $x-7$                  &  & $2x-7$               & $=$ & $5$                   \\
+      &     &                        &  &                      &     &                       \\
+$y$   & $=$ & $x-7$                  &  & $2x$                 & $=$ & $\framebox(40,20){}$  \\
+      &     &                        &  &                      &     &                       \\
+$y$   & $=$ & $x-7$                  &  & $x$                  & $=$ & $\framebox(40,20){}$  \\
+      &     &                        &  &                      &     &                       \\
+$y$   & $=$ & $\framebox(40,20){}-7$ &  & $x$                  & $=$ & $1$                   \\
+      &     &                        &  &                      &     &                       \\
+$y$   & $=$ & $-6$                   &  & $x$                  & $=$ & $1$                  
+\end{tabular}
+\end{exercise}
+\end{document}

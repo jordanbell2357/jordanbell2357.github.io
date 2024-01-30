@@ -1,0 +1,544 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\Var}{\ensuremath\mathrm{Var}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Total variation, absolute continuity, and the Borel $\sigma$-algebra of $C(I)$}
+\author{Jordan Bell}
+\date{March 10, 2015}
+
+\maketitle
+
+\section{Total variation}
+Let $a < b$.
+A \textbf{partition} of $[a,b]$ is a sequence $t_0,t_1,\ldots,t_n$ such that
+\[
+a=t_0 <  t_1 < \cdots < t_n = b.
+\]
+The \textbf{total variation} of a function $f:[a,b] \to \mathbb{C}$ is
+\[
+\Var_f[a,b] = \sup\left\{ \sum_{i=1}^n |f(t_i)-f(t_{i-1})|: \textrm{$t_0,t_1,\ldots,t_n$ is a partition of $[a,b]$}\right\}.
+\]
+If $\Var_f[a,b]<\infty$ then we say that $f$ has \textbf{bounded variation}.
+
+
+\begin{lemma}
+If $a \leq c < e < d \leq b$, then
+\[
+\Var_f[c,d] = \Var_f[c,e]+\Var_f[e,d].
+\]
+\end{lemma}
+
+The following theorem establishes properties of functions of bounded variation.\footnote{Charalambos D. Aliprantis and Owen Burkinshaw, {\em Principles of Real Analysis}, third ed.,
+p.~377, Theorem 39.10.}
+
+
+\begin{theorem}
+Suppose that $f:[a,b] \to \mathbb{R}$ is of bounded variation and define
+\[
+F(x) = \Var_f[a,x], \qquad x \in [a,b].
+\]
+Then:
+\begin{enumerate}
+\item $|f(y)-f(x)| \leq F(y)-F(x)$ for all $a \leq x < y \leq b$.
+\item $F$ is a nondecreasing function.
+\item $F-f$ and $F+f$ are nondecreasing functions.
+\item For $x_0 \in [a,b]$, $f$ is continuous at $x_0$ if and only if $F$ is continuous at $x_0$.
+\end{enumerate}
+\label{nondecreasing}
+\end{theorem}
+\begin{proof}
+If $t_0,\ldots,t_n$ is a partition of $[a,x]$ then
+$t_0,\ldots,t_n,y$ is a partition of $[a,y]$, so
+\[
+\sum_{i=1}^n  |f(t_i)-f(t_{i-1})| +|f(y)-f(x)| \leq F(y).
+\]
+Since this is true for any partition $t_0,\ldots,t_n$ of $[a,x]$,
+\[
+F(x)+|f(y)-f(x)| \leq F(y).
+\]
+This shows in particular that $F(x) \leq F(y)$, and thus that $F$ is nondecreasing.
+
+For $a \leq x < y \leq b$, 
+\[
+f(y)-f(x) \leq |f(y)-f(x)| \leq F(y)-F(x),
+\]
+thus
+\[
+F(x)-f(x) \leq F(y)-f(y),
+\]
+showing that $x \mapsto F(x)-f(x)$ is nondecreasing. Likewise,
+\[
+f(x)-f(y) \leq |f(y)-f(x)| \leq F(y)-F(x),
+\]
+thus
+\[
+f(x)+F(x) \leq f(y)+F(y),
+\]
+showing that $x \mapsto F(x)+f(x)$ is nondecreasing.
+
+Suppose that $F$ is continuous at $x_0$ and let $\epsilon>0$. There is some $\delta>0$ such that
+$|x-x_0|<\delta$ implies that $|F(x)-F(x_0)|<\epsilon$. If $|x-x_0|<\delta$, then
+\[
+|f(x)-f(x_0)| \leq |F(x)-F(x_0)|<\epsilon,
+\]
+showing that $f$ is continuous at $x_0$.
+
+Suppose that $f$ is continuous at $x_0$ and let $\epsilon>0$. 
+Then there is some $\delta>0$ such that
+$|x-x_0|<\delta$ implies that
+$|f(x)-f(x_0)|<\epsilon$, and such that $x_0-\delta>a$. Let 
+$x_0-\delta<s<x_0$, and  let
+$t_0,\ldots,t_n$ be a partition of $[s,b]$ such that
+\[
+\Var_f[s,b] <\sum_{i=1}^n |f(t_i)-f(t_{i-1})| + \epsilon
+\]
+and such that none of $t_0,\ldots,t_n$ is equal to $x_0$.
+Say that $t_k < x_0 < t_{k+1}$. Then
+\[
+t_0,\ldots,t_k,x_0,t_{k+1},\ldots,t_n
+\]
+ is a partition of
+$[s,b]$. For $t_k< x< x_0$ we have $|x-x_0| < \delta$ and therefore
+\begin{align*}
+\Var_f[s,x]+\Var_f[x,b]&=\Var_f[s,b]\\
+&<\sum_{i=1}^n |f(t_i)-f(t_{i-1})| + \epsilon\\
+&\leq \sum_{i=1}^k  |f(t_i)-f(t_{i-1})| + |f(x)-f(t_k)|\\
+&+|f(x_0)-f(x)|\\
+&+|f(t_{k+1})-f(x_0)|
++\sum_{i=k+2}^n |f(t_i)-f(t_{i-1})|+\epsilon\\
+&\leq \Var_f[s,x]+|f(x)-f(x_0)|+\Var_f[x_0,b]+\epsilon\\
+&<\Var_f[s,x]+\Var_f[x_0,b]+2\epsilon,
+\end{align*}
+giving
+\[
+\Var_f[x,b]-\Var_f[x_0,b]<2\epsilon.
+\]
+As  $\Var_f[a,b]=\Var_f[a,x]+\Var_f[x,b]$ and
+also
+$\Var_f[a,b]=\Var_f[a,x_0]+\Var_f[x_0,b]$, we have
+$F(x)+\Var_f[x,b]=F(x_0)+\Var_f[x_0,b]$, and therefore
+\[
+F(x_0)-F(x)<2\epsilon.
+\]
+Thus, if $t_k<x<x_0$ then $|F(x_0)-F(x)|<2\epsilon$, showing that 
+$F$ is left-continuous at $x_0$. It is straightforward to show in the same way that
+$F$ is right-continuous at $x_0$, and thus continuous at $x_0$.
+\end{proof}
+
+If $f:[a,b] \to \mathbb{R}$ is of bounded variation, then Theorem \ref{nondecreasing}
+tells us that $F$ and $F+f$ are nondecreasing functions. A monotone function is
+differentiable almost everywhere,\footnote{Charalambos D. Aliprantis and Owen Burkinshaw, {\em Principles of Real Analysis}, third ed.,
+p.~375, Theorem 39.9.} and it follows that $f=(F+f)-F$ is differentiable almost everywhere.
+
+
+
+
+\section{Absolute continuity}
+Let $a<b$ and let $I=[a,b]$. A function $f:I \to \mathbb{C}$ is said to be \textbf{absolutely continuous} if
+for any $\epsilon>0$ there is some $\delta>0$ such that for any $n$ and any
+collection of pairwise disjoint intervals $(\alpha_1,\beta_1),\ldots,(\alpha_n,\beta_n)$
+satisfying
+\[
+\sum_{i=1}^n (\beta_i-\alpha_i) < \delta,
+\]
+we have
+\[
+\sum_{i=1}^n |f(\beta_i)-f(\alpha_i)|<\epsilon.
+\]
+It is immediate that if $f$ is absolutely continuous then $f$ is uniformly continuous.
+
+\begin{lemma}
+If $f:[a,b] \to \mathbb{C}$ is absolutely continuous then $f$ has bounded variation.
+\label{BV}
+\end{lemma}
+\begin{proof}
+Because $f$ is absolutely continuous, there is some $\delta>0$ such that if $(\alpha_1,\beta_1),\ldots,(\alpha_n,\beta_n)$
+are pairwise disjoint and
+\[
+\sum_{i=1}^n (\beta_i-\alpha_i) < \delta,
+\]
+then
+\[
+\sum_{i=1}^n |f(\beta_i)-f(\alpha_i)|<1.
+\]
+Let $N$ be an integer that is $>\frac{b-a}{\delta}$ and let
+$a=x_0<\cdots<x_N=b$ such that
+$x_i-x_{i-1}<\frac{b-a}{N}$ for each $i=1,\ldots,N$. Then
+\[
+\Var_f[a,b] = \sum_{i=1}^N \Var_f[x_{i-1},x_i]
+\leq N,
+\]
+showing that $f$ has bounded variation.
+\end{proof}
+
+Let $\lambda$ be Lebesgue measure on $\mathbb{R}$ and let $\mathfrak{M}$ be the collection of Lebesgue measurable
+subsets of $\mathbb{R}$. 
+
+The following theorem establishes connections between absolute continuity of a function and Lebesgue measure.\footnote{Walter
+Rudin, {\em Real and Complex Analysis}, third ed., p.~146, Theorem 7.18.} In the following theorem, we extend $f:[a,b] \to \mathbb{R}$
+to $\mathbb{R} \to \mathbb{R}$ by defining $f(x)=f(b)$ for $x>b$ and $f(x)=f(a)$ for $x<a$. In particular, for any $x>b$,
+$f'(x)$ exists and is equal to $0$, and for any $x<a$, $f'(x)$ exists and is equal to $0$.
+
+\begin{theorem}
+Suppose that $I=[a,b]$ and that $f:I \to \mathbb{R}$ is continuous and nondecreasing. Then the following statements are equivalent.
+\begin{enumerate}
+\item $f$ is absolutely continuous.
+\item If $E \subset I$ and $\lambda(E)=0$ then $\lambda(f(E))=0$. (In words: $f$ has the \textbf{Luzin property}.)
+\item $f$ is differentiable $\lambda$-almost everywhere on $I$, $f' \in L^1(\lambda)$, and 
+\[
+f(x)-f(a)=\int_a^x f'(t) d\lambda(t), \qquad a \leq x \leq b.
+\]
+\end{enumerate}
+\label{TFAE}
+\end{theorem}
+\begin{proof}
+Assume that $f$ is absolutely continuous and let $E \subset I$ with $\lambda(E)=0$. Let $E_0=E \setminus \{a,b\}$; to prove that
+$\lambda(f(E))=0$ it suffices to prove that $\lambda(f(E_0))=0$. 
+Let $\epsilon>0$.
+As $f$ is absolutely continuous, there is some $\delta>0$ such that
+for any $n$ and any
+collection of pairwise disjoint intervals $(\alpha_1,\beta_1),\ldots,(\alpha_n,\beta_n)$
+satisfying
+\[
+\sum_{i=1}^n (\beta_i-\alpha_i) < \delta,
+\]
+we have
+\[
+\sum_{i=1}^n |f(\beta_i)-f(\alpha_i)|<\epsilon.
+\]
+There is an open set $V$ such that $E_0 \subset V \subset I$ and such that $\lambda(V)<\delta$. (Lebesgue measure is outer regular.)
+There are countably many pairwise disjoint intervals $(\alpha_i,\beta_i)$ such that
+$V=\bigcup_i (\alpha_i,\beta_i)$. Then
+\[
+\sum_i (\beta_i-\alpha_i) = \lambda(V) < \delta,
+\]
+ so
+for any $n$,
+\[
+\sum_{i=1}^n (\beta_i-\alpha_i) < \delta,
+\]
+and
+because $f$ is absolutely continuous it follows that
+\[
+\sum_{i=1}^n |f(\beta_i)-f(\alpha_i)|<\epsilon.
+\]
+This is true for all $n$, so
+\[
+\sum_i  |f(\beta_i)-f(\alpha_i)| \leq \epsilon.
+\]
+Because $f$ is continuous and nondecreasing, $f(\alpha_i,\beta_i) = (f(\alpha_i),f(\beta_i))$ for each $i$. Therefore
+\[
+f(V) = f\left(\bigcup_i (\alpha_i,\beta_i)\right)=\bigcup_i f(\alpha_i,\beta_i)
+= \bigcup_i  (f(\alpha_i),f(\beta_i)),
+\]
+which gives 
+\[
+\lambda(f(V)) = \sum_i (f(\beta_i)-f(\alpha_i)) = \sum_i |f(\beta_i)-f(\alpha_i)| \leq \epsilon.
+\]
+This is true for all $\epsilon>0$, so 
+$\lambda(f(V))=0$. Because $f(E_0)\subset f(V)$, it follows that $f(E_0) \in \mathfrak{M}$ (Lebesgue measure is complete) and that
+$\lambda(f(E_0))=0$.
+
+Assume that for all $E \subset I$ with $\lambda(E)=0$, $\lambda(f(E))=0$. Define $g:I \to \mathbb{R}$ by
+\[
+g(x)=x+f(x), \qquad x \in I.
+\]
+Because $f$ is continuous and nondecreasing, $g$ is continuous and strictly increasing. Thus if $(\alpha,\beta) \subset I$ then
+$g(\alpha,\beta)=(g(\alpha),g(\beta))$ and so
+\[
+\lambda(g(\alpha,\beta))=g(\beta)-g(\alpha) = \beta+f(\beta)-(\alpha+f(\alpha))
+=\beta-\alpha+f(\beta)-f(\alpha),
+\]
+showing that if $J \subset I$ is an interval then $\lambda(g(J)) = \lambda(J)+\lambda(f(J))$.
+Suppose that $E \subset I$ and $\lambda(E)=0$, and let $\epsilon>0$. There are countably many pairwise disjoint intervals
+$(\alpha_i,\beta_i)$ such that $E \subset \bigcup_i (\alpha_i,\beta_i)$ and $\sum_i (\beta_i-\alpha_i)<\epsilon$,
+and because $\lambda(f(E))=0$, there are countably many pairwise disjoint intervals
+$(\gamma_i,\delta_i)$ such that $f(E) \subset \bigcup_i (\gamma_i,\delta_i)$ and 
+$\sum_i (\delta_i-\gamma_i)<\epsilon$. Let
+\[
+N=f^{-1}\left( \bigcup_i (\gamma_i,\delta_i) \right) \cap \bigcup_i (\alpha_i,\beta_i)
+=\bigcup_{i,j} (f^{-1}(\gamma_i,\delta_i) \cap (\alpha_i,\beta_i)) \in \mathfrak{M}.
+\]
+We check that 
+\[
+\lambda(g(N)) = \lambda(N)+\lambda(f(N)),
+\]
+and because
+\[
+ \lambda(N)+\lambda(f(N)) \leq \sum_i (\beta_i-\alpha_i)+\sum_i (\delta_i-\gamma_i)<2\epsilon
+\]
+we have
+\[
+\lambda(g(N)) < 2\epsilon.
+\]
+Finally, $E \subset N$ so $g(E) \subset g(N)$.
+Therefore, for every $\epsilon>0$ there is some $N \in \mathfrak{M}$ with 
+$g(E) \subset g(N)$ and $\lambda(g(N))<\epsilon$, from which it follows that $\lambda(g(E))=0$.
+
+Suppose that $E \subset I$ belongs to $\mathfrak{M}$. Because
+$E \in \mathfrak{M}$, there are  $E_0,E_1 \in \mathfrak{M}$ such that
+$E=E_0 \cup E_1$, $\lambda(E_0)=0$, and $E_1$ is a countable union of closed sets (namely, an $F_\sigma$-set).
+On the one hand, as $E_1 \subset I$, $E_1$ is a countable union of compact sets, and because
+$g$ is continuous, $g(E_1)$ is a countable union of compact sets, and in particular
+belongs to $\mathfrak{M}$.
+On the other hand, because $\lambda(E_0)=0$, $g(E_0) \in \mathfrak{M}$. Therefore
+$g(E) = g(E_0) \cup g(E_1) \in \mathfrak{M}$.
+Define
+$\mu:\mathfrak{M} \to [0,\infty)$ by
+\[
+\mu(E) = \lambda(g(E \cap I)), \qquad E \in \mathfrak{M}.
+\]
+If $E_i$ are countably many pairwise disjoint elements of $\mathfrak{M}$, then
+$g(E_i \cap I)$ are pairwise disjoint elements of $\mathfrak{M}$, hence
+\begin{align*}
+\mu\left(\bigcup_i E_i \right)& = \lambda\left( g\left( \left(\bigcup_i E_i\right) \cap I \right)\right)\\
+&= \lambda\left(  \bigcup_i g(E_i \cap I) \right)\\
+&= \sum_i \lambda(g(E_i \cap I))\\
+&=\sum_i \mu(E_i),
+\end{align*}
+showing that $\mu$ is a measure. If $\lambda(E)=0$, then 
+$\lambda(E \cap I)=0$ so $\lambda(g(E \cap I))=0$, i.e. 
+$\mu(E)=0$. This shows that $\mu$ is absolutely continuous with respect to $\lambda$. 
+Therefore by the Radon-Nikodym theorem\footnote{Walter Rudin,
+{\em Real and Complex Analysis}, third ed., p.~121, Theorem 6.10.} there is a unique
+$h \in L^1(\lambda)$ such that
+\[
+\mu(E) = \int_E h d\lambda, \qquad E \in \mathfrak{M}.
+\]
+$h(x) \geq 0$ for $\lambda$-almost all $x \in \mathbb{R}$. 
+
+Suppose that $x \in \mathbb{R}$ and let $E=[a,x]$. Then
+$g(E)=[g(a),g(x)]$, and 
+\[
+\mu(E) = \int_E h(t) d\lambda(t) = \int_a^x h(t) d\lambda(t).
+\]
+On the other hand,
+\[
+\mu(E) = \lambda(g(E)) = \lambda([g(a),g(x)]) = g(x)-g(a) = x+f(x)-(a+f(a)).
+\]
+Hence
+\[
+f(x)-f(a) = \int_a^x h(t) d\lambda(t)-(x-a),
+\]
+i.e.,
+\[
+f(x)-f(a) = \int_a^x (h(t)-1) d\lambda(t).
+\]
+By the Lebesgue differentiation theorem,\footnote{Walter Rudin, {\em Real and Complex Analysis},
+third ed., p.~141, Theorem 7.11.} 
+$f'(x) = h(x)-1$ for $\lambda$-almost all $x \in \mathbb{R}$, and it follows that $f' \in L^1(\lambda)$ and
+\[
+f(x)-f(a) = \int_a^x f'(t) d\lambda(t), \qquad  x \in I.
+\]
+
+Assume that $f$ is differentiable $\lambda$-almost everywhere in $I$, $f' \in L^1(\lambda)$, and
+\[
+f(x)-f(a) = \int_a^x f'(t) d\lambda(t), \qquad x \in I.
+\]
+Let $\epsilon>0$ and let $(\alpha_1,\beta_1),\ldots,(\alpha_n,\beta_n)$ be pairwise disjoint intervals satisfying
+\[
+\sum_{i=1}^n (\beta_i-\alpha_i)<\delta.
+\]
+Because $f$ is nondecreasing, for $\lambda$-almost all $x \in I$, $f'(x) \geq 0$, and hence
+the measure $\mu$ defined by $d\mu = f' d\lambda$ is absolutely continuous with respect to $\lambda$.
+It follows\footnote{Walter Rudin, {\em Real and Complex Analysis}, third ed., p.~124, Theorem 6.11.}
+that there is some $\delta>0$ such that for $E \in \mathfrak{M}$,
+$\lambda(E)<\delta$ implies that $\mu(E)<\epsilon$. This gives us
+\[
+\mu\left(\bigcup_{i=1}^n (\alpha_i,\beta_i) \right)
+<\epsilon,
+\]
+and as
+\[
+\mu(\alpha_i,\beta_i)=\int_{\alpha_i}^{\beta_i} f'(t) d\lambda(t)
+=f(\beta_i)-f(\alpha_i),
+\]
+we get
+\[
+\sum_{i=1}^n f(\beta_i)-f(\alpha_i)<\epsilon.
+\]
+This shows that $f$ is absolutely continuous, completing the proof.
+\end{proof}
+
+
+The following lemma establishes properties of the total variation of absolutely continuous functions.\footnote{Walter Rudin,
+{\em Real and Complex Analysis}, third ed., p.~147, Theorem 7.19.}
+
+\begin{lemma}
+Suppose that $I=[a,b]$ and that $f:I \to \mathbb{R}$ is absolutely continuous. Then the function $F:I \to \mathbb{R}$ defined
+by
+\[
+F(x)=\Var_f[a,x], \qquad x \in I
+\]
+is absolutely continuous.
+\label{Fvariation}
+\end{lemma}
+\begin{proof}
+Let $\epsilon>0$. Because $f$ is absolutely continuous,
+there is some $\delta>0$ such that if
+ $(a_1,b_1),\ldots,(a_m,b_m)$ are disjoint intervals
+with $\sum_{k=1}^m (b_k-a_k)<\delta$, then
+\[
+\sum_{k=1}^m |f(b_k)-f(a_k)|<\epsilon.
+\]
+Suppose that $(\alpha_1,\beta_1),\ldots,(\alpha_n,\beta_n)$ are disjoint intervals with
+$\sum_{i=1}^n (\beta_i-\alpha_i)<\delta$. If
+ $\alpha_i=t_{i,0}<\cdots<t_{i,m_i}=\beta_i$ for $i=1,\ldots,n$, then
+ $(t_{i,j-1},t_{i,j})$, $1 \leq i \leq n$, $1 \leq j \leq m_i$, are disjoint intervals
+whose total length is $<\delta$, hence 
+\[
+\sum_{i=1}^n \sum_{j=1}^{m_i} |f(t_{i,j})-f(t_{i,j-1})|<\epsilon.
+\]
+It follows that
+\[
+\sum_{i=1}^n |F(\beta_i)-F(\alpha_i)|
+=\sum_{i=1}^n \Var_f[\alpha_i,\beta_i]
+\leq \epsilon,
+\]
+which shows that $F$ is absolutely continuous.
+\end{proof}
+
+
+We now prove the \textbf{fundamental theorem of calculus} for absolutely continuous functions.\footnote{Walter Rudin, {\em Real and Complex Analysis}, third ed., p.~148, Theorem 7.20.}
+
+\begin{theorem}
+Suppose that $I=[a,b]$ and that $f:I \to \mathbb{R}$ is absolutely continuous. Then
+$f$ is differentiable at almost all $x$ in $I$, $f' \in L^1(\lambda)$, and
+\[
+f(x)-f(a) = \int_a^x f'(t) d\lambda(t), \qquad x \in I.
+\]
+\label{FTOC}
+\end{theorem}
+\begin{proof}
+Define
+$F:I \to \mathbb{R}$  by
+\[
+F(x)=\Var_f[a,x], \qquad x \in I.
+\]
+By Lemma \ref{BV}, $f$ has bounded variation, and then using Theorem \ref{nondecreasing}, $F-f$ and $F+f$ are nondecreasing. 
+Furthermore, by Lemma \ref{Fvariation}, $F$ is absolutely continuous, so $F-f$ and $F+f$ are absolutely continuous.
+Let
+\[
+f_1 = \frac{F+f}{2}, \qquad f_2 = \frac{F-f}{2},
+\]
+which are thus nondecreasing and absolutely continuous.
+Applying Theorem \ref{TFAE}, we get that $f_1,f_2$
+are differentiable at almost all $x \in I$, $f_1',f_2' \in L^1(\lambda)$, and 
+\[
+f_1(x)-f_1(a)=\int_a^x f_1'(t) d\lambda(t), \qquad a \leq x \leq b
+\]
+and
+\[
+f_2(x)-f_2(a)=\int_a^x f_2'(t) d\lambda(t), \qquad a \leq x \leq b.
+\]
+Because $f=f_1-f_2$, $f$ is differentiable at almost all $x \in I$, $f'=f_1'-f_2' \in L^1(\lambda)$,
+and
+\[
+f(x) - f(a) = \int_a^x f'(t) d\lambda(t), \qquad a \leq x \leq b,
+\]
+proving the claim.
+\end{proof}
+
+
+\section{Borel sets}
+Let $I=[a,b]$.
+Denote by $C(I)$ the set of continuous functions $I \to \mathbb{C}$, which with the norm
+\[
+\norm{f}_{C(I)} = \sup_{x \in I} |f(x)|, \qquad f \in C(I),
+\]
+is a Banach space. 
+Denote by  $AC(I)$ the set of absolutely continuous functions $I \to \mathbb{C}$. 
+Let $\mathscr{B}_{C(I)}$ be the Borel $\sigma$-algebra of $C(I)$. We have $AC(I) \subset C(I)$, and in the following
+theorem we prove that $AC(I)$ is a Borel set in $C(I)$. 
+
+\begin{theorem}
+$AC(I) \in \mathscr{B}_{C(I)}$.
+\end{theorem}
+\begin{proof}
+If $X,Y$ are Polish spaces, $f:X \to Y$ is continuous, $A \in \mathscr{B}_X$, and $f|A$ is injective, then
+$f(A) \in \mathscr{B}_Y$.\footnote{Alexander Kechris, {\em Classical Descriptive Set Theory}, p.~89, Theorem 15.1.}
+Let $X=\mathbb{C} \times L^1(I)$,
+which is a Banach space with the norm
+\[
+\norm{(A,g)}_X = |A|+\int_a^b |g| d\lambda, \qquad (A,g) \in X.
+\]
+Furthermore, $\mathbb{C}$ and $L^1(I)$ are separable and thus so is $X$, so $X$ is indeed a Polish space. The Banach space $C(I)$ is separable and thus is a Polish
+space. 
+Define $\Phi:X \to C(I)$ by
+\[
+\Phi(A,g)(x) = A + \int_a^x g(t) d\lambda(t), \qquad (A,g) \in X,  \qquad x \in I.
+\]
+
+For $(A_1,g_1),(A_2,g_2) \in X$,
+\begin{align*}
+\norm{\Phi(A_1,g_1)-\Phi(A_2,g_2)}_{C(I)} &= \norm{(A_1-A_2)+\int_a^x (g_1(t)-g_2(t)) d\lambda(t)}_{C(I)}\\
+&=|A_1-A_2|+\sup_{x \in I} \left| \int_a^x (g_1(t)-g_2(t)) d\lambda(t)\right| \\
+&\leq |A_1-A_2|+\int_a^b |g_1(t)-g_2(t)| d\lambda(t)\\
+&=\norm{(A_1,g_1)-(A_2,g_2)}_X,
+\end{align*}
+which shows that $\Phi:X \to C(I)$ is continuous.
+
+Let $(A,g) \in X$ and $\epsilon>0$. Because $g \in L^1(I)$, there is some
+$\delta>0$ such that
+if $\lambda(E)<\delta$ then $\int_E |g| d\lambda<\epsilon$.\footnote{Walter Rudin, {\em Real and Complex Analysis},
+third ed., p.~32, exercise 1.12.}
+If $(\alpha_1,\beta_1),\ldots,(\alpha_n,\beta_n)$ are disjoint intervals whose total length is $<\delta$,
+then, with $E=\bigcup_{i=1}^n (\alpha_i,\beta_i)$,
+\begin{align*}
+\sum_{i=1}^n |\Phi(A,g)(\beta_i)-\Phi(A,g)(\alpha_i)| &= 
+\sum_{i=1}^n \left| \int_{\alpha_i}^{\beta_i} g(t) d\lambda(t) \right|\\
+&\leq \sum_{i=1}^n \int_{\alpha_i}^{\beta_i} |g(t)| d\lambda(t)\\
+&=\int_E |g| d\lambda\\
+&<\epsilon,
+\end{align*}
+showing that $\Phi(A,g)$ is absolutely continuous. 
+On the other hand, let $f \in AC(I)$. From Theorem \ref{FTOC}, $f$ is differentiable at almost all $x \in I$,
+$f' \in L^1(I)$, and  
+\[
+f(x)-f(a) = \int_a^x f'(t) d\lambda(t), \qquad x \in I.
+\]
+Then $(f(a),f') \in X$, and the above gives us, for all $x \in I$,
+\[
+\Phi(f(a),f')(x) =  f(a)+\int_a^x f'(t) d\lambda(t) = f(x),
+\]
+thus $\Phi(f(a),f')=f$. 
+Therefore
+\[
+\Phi(X) = AC(I).
+\]
+
+If $\Phi(A_1,g_1)=\Phi(A_2,g_2)$, then $\Phi(A_1,g_1)(a)=\Phi(A_2,g_2)(a)$ gives $A_1=A_2$. Using this, and defining
+$G:I \to \mathbb{C}$ by
+$G=\int_a^x (g_1(t)-g_2(t)) d\lambda(t)$, we have
+$G(x)=0$   for all $x \in I$. Then $G'(x)=0$ for all $x \in I$, and by the Lebesgue differentiation theorem\footnote{Walter Rudin,
+{\em Real and Complex Analysis}, third ed., p.~141, Theorem 7.11.} we have $G'(x)=g_1(x)-g_2(x)$ for almost all $x \in I$. That is,
+$g_1(x)=g_2(x)$ for almost all $x \in I$, and thus in $L^1(I)$ we have $g_1=g_2$. 
+Therefore $\Phi:X \to C(I)$ is injective. 
+
+Therefore $\Phi(X) \in \mathscr{B}_{C(I)}$.
+\end{proof}
+
+\end{document}

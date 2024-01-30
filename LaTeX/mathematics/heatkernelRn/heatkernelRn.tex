@@ -1,0 +1,468 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\HSnorm}[1]{\Vert #1 \Vert_{\ensuremath\mathrm{HS}}}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\HS}{B_{\ensuremath\mathrm{HS}}} 
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\renewcommand{\div}{\mathrm{div}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{The heat kernel on $\mathbb{R}^n$}
+\author{Jordan Bell}
+\date{March 28, 2014}
+
+
+\maketitle
+
+\section{Notation}
+For $f \in L^1(\mathbb{R}^n)$, we define $\hat{f}:\mathbb{R}^n \to \mathbb{C}$ by 
+\[
+\hat{f}(\xi) =(\mathscr{F}f)(\xi)= \int_{\mathbb{R}^n} f(x) e^{-2\pi i \xi x} dx, \qquad \xi \in \mathbb{R}^n.
+\]
+The statement of the Riemann-Lebesgue lemma is that $\hat{f} \in C_0(\mathbb{R}^n)$. 
+
+We denote by $\mathscr{S}_n$ the Fr\'echet space of Schwartz functions $\mathbb{R}^n \to \mathbb{C}$.
+
+If $\alpha$ is a multi-index, we define
+\[
+D^\alpha = D_1^{\alpha_1} \cdots D_n^{\alpha_n},
+\]
+\[
+D_\alpha = i^{-|\alpha|} D^\alpha = \left(\frac{1}{i} D_1\right)^{\alpha_1} \cdots \left( \frac{1}{i} D_n\right)^{\alpha_n},
+\]
+and
+\[
+\Delta = D_1^2 + \cdots + D_n^2.
+\]
+
+
+\section{The heat equation}
+Fix $n$, 
+and for $t>0$, $x \in \mathbb{R}^n$, define
+\[
+k_t(x) =k(t,x)= (4\pi t)^{-n/2} \exp\left(-\frac{|x|^2}{4t}\right).
+\]
+We call $k$ the \textbf{heat kernel}.
+It is straightforward to check for any $t>0$ that $k_t \in \mathscr{S}_n$.
+The heat kernel satisfies
+\[
+k_t(x)=(t^{-1/2})^n k_1(t^{-1/2}x), \qquad t>0, x\in \mathbb{R}^n.
+\]
+
+For $a>0$ and $f(x)=e^{-\pi a|x|^2}$, it is a fact that $\hat{f}(\xi)=a^{-n/2} e^{-\pi |\xi|^2/a}$. Using this, for any $t>0$ we
+get
+\[
+\hat{k}_t(\xi)=e^{-4\pi^2 |\xi|^2 t}, \qquad \xi \in \mathbb{R}^n.
+\]
+Thus for any $t>0$,
+\[
+\int_{\mathbb{R}^n} k_t(x) dx = \hat{k}_t(0)=1.
+\]
+Then the heat kernel is an \textbf{approximate identity}: if $f \in L^p(\mathbb{R}^n)$, $1 \leq p < \infty$, then 
+$\norm{f*k_t - f}_p \to 0$ as $t \to 0$, and if $f$ is a function on $\mathbb{R}^n$ that is bounded and continuous, then for every
+$x \in \mathbb{R}^n$, $f*k_t(x) \to f(x)$ as $t \to 0$.\footnote{$k_1$, and any $k_t$, belong merely to $\mathscr{S}_n$ and not to
+$\mathscr{D}(\mathbb{R}^n)$, which is demanded in the definition of an approximate identity in Rudin's {\em Functional Analysis},
+second ed.} For each $t>0$, because $k_t \in \mathscr{S}_n$ we have $f* k_t \in C^\infty(\mathbb{R}^n)$,
+and $D^\alpha(f*k_t)=f*D^\alpha k_t$ for any multi-index $\alpha$.\footnote{Gerald B. Folland, {\em Introduction to Partial Differential Equations}, second ed.,
+p.~11, Theorem 0.14.}
+
+The \textbf{heat operator} is $D_t  - \Delta$ and the \textbf{heat equation} is $(D_t - \Delta)u=0$. It is straightforward
+to check that 
+\[
+(D_t -\Delta)k(t,x) = 0, \qquad t>0, x \in \mathbb{R}^n,
+\]
+that is,  the heat kernel is a solution of the heat equation.
+
+To get some practice proving things about solutions of the heat equation,
+we work out the following theorem
+from Folland.\footnote{Gerald B. Folland, {\em Introduction to Partial Differential Equations}, second ed., p.~144, Theorem 4.4.}
+In Folland's proof it is not apparent how the hypotheses on $u$ and $D_x$ are used, and we make this explicit.
+
+\begin{theorem}
+Suppose that
+$u:[0,\infty) \times \mathbb{R}^n \to \mathbb{C}$ is continuous, that $u$ is $C^2$ on
+$(0,\infty) \times \mathbb{R}^n$,
+that
+\[
+(D_t-\Delta)u(t,x)=0, \qquad t>0, x \in \mathbb{R}^n,
+\]
+and that $u(0,x)=0$ for $x \in \mathbb{R}^n$. If for every $\epsilon>0$ there is some $C$ such that
+\[
+|u(t,x)| \leq Ce^{\epsilon|x|^2}, \qquad |D_x u(t,x)| \leq C e^{\epsilon|x|^2}, \qquad t >0, x \in \mathbb{R}^n,
+\]
+then $u=0$.
+\end{theorem}
+\begin{proof}
+If $f$ and $g$ are $C^2$ functions on some open set in $\mathbb{R} \times \mathbb{R}^n$, such as $(0,\infty) \times \mathbb{R}^n$, then
+\begin{eqnarray*}
+g(\partial_t f - \Delta f) + f(\partial_t g +\Delta g) &= &\partial_t(fg)-g\sum_{j=1}^n \partial_j^2 f + f \sum_{j=1}^n \partial_j^2 g\\
+&=&\partial_t(fg) +\sum_{j=1}^n \partial_j(f\partial_j g-g\partial_j f)\\
+&=&\div_{t,x} F,
+\end{eqnarray*}
+where 
+\[
+F=(fg, f\partial_1 g -g\partial_1 f,\ldots,f\partial_n g-g\partial_n f).
+\]
+
+Take $t_0>0$, $x_0 \in \mathbb{R}^n$, and let $f(t,x)=u(t,x)$ and $g(t,x)=k(t_0-t,x-x_0)$ for
+$t >0$, $x \in \mathbb{R}^n$. Let $0<a<b<t_0$ and $r>0$, and define
+\[
+\Omega = \{(t,x):|x|<r, a<t<b\}.
+\]
+In $\Omega$ we check that $(\partial_t-\Delta)f=0$ and $(\partial_t + \Delta)g=0$, so
+by the divergence theorem,
+\[
+\int_{\partial \Omega} F\cdot \nu = \int_\Omega \div_{t,x} F = \int_\Omega  g(\partial_t f - \Delta f) + f(\partial_t g +\Delta g) = 
+\int_{\Omega} g \cdot 0 + f \cdot 0 = 0.
+\]
+On the other hand,
+as
+\[
+\partial \Omega =  \{(b,x): |x| \leq r\}  \cup \{(a,x): |x| \leq r\} \cup \{(t,x): a<t<b, |x|=r\}, 
+\]
+we have
+\begin{eqnarray*}
+\int_{\partial \Omega} F\cdot \nu&=&\int_{|x| \leq r} F(b,x) \cdot (1,0,\ldots,0) dx +\int_{|x| \leq r} F(a,x) \cdot (-1,0,\ldots,0) dx\\
+&&+\int_a^b \int_{|x|=r} F(t,x)\cdot \frac{x}{r} d\sigma(x) t^{n-1} dt\\
+&=&\int_{|x| \leq r} f(b,x)g(b,x) dx - \int_{|x| \leq r} f(a,x)g(a,x) dx\\
+&&+\int_a^b \int_{|x|=r} \sum_{j=1}^n (f \partial_j g-g \partial_j f)(t,x)\frac{x_j}{r} d\sigma(x) t^{n-1} dt\\
+&=&\int_{|x| \leq r} u(b,x) k(t_0-b,x-x_0) dx - \int_{|x| \leq r} u(a,x) k(t_0-a,x-x_0) dx\\
+&&+\int_a^b \int_{|x|=r} \sum_{j=1}^n \Big(u(t,x) \partial_j k(t_0-t,x-x_0) \\
+&&- k(t_0-t,x-x_0) \partial_j u(t,x)\Big) \frac{x_j}{r} d\sigma(x) t^{n-1} dt,
+\end{eqnarray*}
+where $\sigma$ is surface measure on $\{|x|=r\}=rS^{n-1}$.  As $r \to \infty$, the first two terms tend to
+\[
+\int_{\mathbb{R}^n} u(b,x) k_{t_0-b}(x-x_0) dx = \int_{\mathbb{R}^n} u(b,x) k_{t_0-b}(x_0-x) dx
+=u(b,\cdot)*k_{t_0-b}(x_0)
+\]
+and
+\[
+\int_{\mathbb{R}^n} u(a,x) k_{t_0-a}(x-x_0) dx = \int_{\mathbb{R}^n} u(a,x) k_{t_0-a}(x_0-x) dx
+=u(a,\cdot)*k_{t_0-a}(x_0)
+\]
+respectively. Let $\epsilon<\frac{1}{4(t_0-a)}$, and let $C$ be as given in the statement of the theorem. 
+Using $\partial_j k (t,x) = -\frac{x_j}{2t}k(t,x)$, for any $r>0$ the third term is bounded by
+\[
+n \int_a^b \int_{|x|=r} \Big( Ce^{\epsilon r^2} \frac{|x-x_0|}{2t} k(t_0-t,x-x_0)+k(t_0-t,x-x_0) Ce^{\epsilon r^2}\Big) d\sigma(x) t^{n-1} dt,
+\]
+which is bounded by
+\[
+n\int_a^b \int_{|x|=r} Ce^{\epsilon r^2} \left( \frac{|x_0|+r}{2a}+1 \right) (4\pi(t_0-b))^{-n/2} 
+\exp\left(-\frac{r^2}{4(t_0-a)} \right) d\sigma(x) t^{n-1} dt,
+\]
+and writing $\eta= \frac{1}{4(t_0-a)}-\epsilon$ and 
+$\omega_n=\frac{2\pi^{n/2}}{\Gamma(n/2)}$, the surface area of the sphere of radius $1$ in $\mathbb{R}^n$,
+this is equal to
+\[
+(b-a)^n r^{n-1} \omega_n Ce^{-\eta r^2}  \left( \frac{|x_0|+r}{2a}+1 \right) (4\pi(t_0-b))^{-n/2},
+\]
+which tends to $0$ as $r \to \infty$. 
+Therefore,
+\[
+u(b,\cdot)*k_{t_0-b}(x_0)=u(a,\cdot)*k_{t_0-a}(x_0).
+\]
+One checks that as $b \to t_0$, the left-hand side tends to $u(t_0,x_0)$, and that as $a \to 0$, the right-hand side tends to $u(0,x_0)=0$. 
+Therefore,
+\[
+u(t_0,x_0)=0.
+\]
+This is true for any $t_0>0$, $x_0 \in \mathbb{R}^n$, and as $u:[0,\infty) \times \mathbb{R}^n \to \mathbb{C}$ is continuous, it follows
+that $u$ is identically $0$.
+\end{proof}
+
+
+\section{Fundamental solutions}
+We extend $k$ to $\mathbb{R} \times \mathbb{R}^n$ as
+\[
+k(t,x)=\begin{cases}
+(4\pi t)^{-n/2} \exp\left(-\frac{|x|^2}{4t} \right)&t>0, x \in \mathbb{R}^n\\
+0&t\leq 0, x \in \mathbb{R}^n.
+\end{cases}
+\]
+This function is locally integrable in $\mathbb{R} \times \mathbb{R}^n$, so it makes sense to define
+ $\Lambda_k \in \mathscr{D}'(\mathbb{R} \times \mathbb{R}^n)$ by
+\[
+\Lambda_k \phi =\int_\mathbb{R} \int_{\mathbb{R}^n} \phi(t,x) k(t,x) dx dt, \qquad \phi \in \mathscr{D}(\mathbb{R} \times \mathbb{R}^n).
+\]
+
+Suppose that $P$ is a polynomial in $n$ variables: 
+\[
+P(\xi)=\sum c_\alpha \xi^\alpha=\sum c_\alpha \xi_1^{\alpha_1} \cdots \xi_n^{\alpha_n}.
+\]
+ We say that $E \in \mathscr{D}'(\mathbb{R}^n)$ is a \textbf{fundamental solution} of
+the differential operator
+\[
+P(D) = \sum c_\alpha D_\alpha = \sum c_\alpha i^{-|\alpha|} D^\alpha
+\]
+if $P(D)E=\delta$. If $E=\Lambda_f$ for some locally integrable $f$, $\Lambda_f \phi = \int_{\mathbb{R}^n} \phi(x) f(x) dx$, we also say that the function
+$f$ is a fundamental solution
+of the differential operator $P(D)$. We now prove that the heat kernel extended to $\mathbb{R} \times \mathbb{R}^n$ in the above way
+is a fundamental solution of the heat operator.\footnote{Gerald B. Folland, {\em Introduction to Partial Differential Equations}, second ed.,
+p.~146, Theorem 4.6.}
+
+
+\begin{theorem}
+$\Lambda_k$ is a fundamental solution of $D_t - \Delta$. 
+\end{theorem}
+\begin{proof}
+For $\epsilon>0$, define $K_\epsilon(t,x)=k(t,x)$ if $t>\epsilon$ and $K_\epsilon(t,x)=0$ otherwise. For any $\phi \in \mathscr{D}(\mathbb{R}  \times
+\mathbb{R}^n)$, 
+\begin{eqnarray*}
+\left|\int_{\mathbb{R}} \int_{\mathbb{R}^n} (k(t,x)-K_\epsilon(t,x)) \phi(t,x) dx dt\right|& =& \left|\int_{0}^\epsilon \int_{\mathbb{R}^n} k(t,x) \phi(t,x) dx dt \right|\\
+&\leq&\norm{\phi}_\infty \int_{0}^\epsilon \int_{\mathbb{R}^n} k(t,x) dxdt\\
+&=&\norm{\phi}_\infty \int_0^\epsilon dt\\
+&=&\norm{\phi}_\infty \epsilon.
+\end{eqnarray*}
+This shows that $\Lambda_{K_\epsilon} \to \Lambda_k$ in $\mathscr{D}'(\mathbb{R} \times \mathbb{R}^n)$, with the weak-* topology. It is a fact that for any multi-index,
+$E \mapsto D^\alpha E$ is continuous $\mathscr{D}'(\mathbb{R} \times \mathbb{R}^n) \to \mathscr{D}'(\mathbb{R} \times \mathbb{R}^n)$,
+and hence $(D_t-\Delta)\Lambda_{K_\epsilon} \to (D_t-\Delta)\Lambda_k$ in $\mathscr{D}'(\mathbb{R} \times \mathbb{R}^n)$. Therefore,
+to prove the theorem it suffices to prove that $(D_t-\Delta)\Lambda_{K_\epsilon} \to \delta$ (because $\mathscr{D}'(\mathbb{R} \times \mathbb{R}^n)$ with
+the weak-* topology
+is Hausdorff).
+
+Let $\phi \in \mathscr{D}(\mathbb{R} \times \mathbb{R}^n)$. Doing integration by parts,
+\begin{eqnarray*}
+(D_t-\Delta)\Lambda_{K_\epsilon}(\phi)&=&\Lambda_{K_\epsilon}\left( (D_t-\Delta) \phi\right)\\
+&=&\int_{\mathbb{R}} \int_{\mathbb{R}^n} K_\epsilon(t,x)(D_t \phi(t,x) -\Delta \phi(t,x)) dxtx\\
+&=&\int_\epsilon^\infty \int_{\mathbb{R}^n} k(t,x) D_t \phi(t,x) - k(t,x) \Delta \phi(t,x) dxtx\\
+&=& \int_{\mathbb{R}^n} \left(k(\epsilon,x)\phi(\epsilon,x)- \int_\epsilon^\infty \phi(t,x) D_t k(t,x)  dt \right) dx  \\
+&&+ \int_\epsilon^\infty \int_{\mathbb{R}^n}\phi(t,x) \Delta k(t,x) dx dt\\
+&=&\int_{\mathbb{R}^n} k(\epsilon,x)\phi(\epsilon,x) dx \\
+&&-\int_\epsilon^\infty  \int_{\mathbb{R}^n} \phi(t,x) (D_t-\Delta)k(t,x) dt dx\\
+&=&\int_{\mathbb{R}^n} k(\epsilon,x)\phi(\epsilon,x) dx.
+\end{eqnarray*}
+So, using $k_t(x)=k_t(-x)$ and writing $\phi_t(x)=\phi(t,x)$,
+\begin{eqnarray*}
+(D_t-\Delta)\Lambda_{K_\epsilon}(\phi)&=&\int_{\mathbb{R}^n} k_\epsilon(-x) \phi_\epsilon(x) dx\\
+&=&k_\epsilon * \phi_\epsilon (0)\\
+&=& k_\epsilon * \phi_0 (0) + k_\epsilon*(\phi_\epsilon-\phi_0)(0).
+\end{eqnarray*}
+Using the definition of convolution, the second term is bounded by
+\[
+\sup_{x \in \mathbb{R}^n} |\phi_\epsilon(x)-\phi_0(x)|  \norm{k_\epsilon}_1 = \sup_{x \in \mathbb{R}^n} |\phi_\epsilon(x)-\phi_0(x)|,
+\]
+which tends to $0$ as $\epsilon \to 0$. Because $k$ is an approximate identity, $k_\epsilon * \phi_0 (0) \to \phi_0(0)$ as $\epsilon \to 0$. 
+That is,
+\[
+(D_t-\Delta)\Lambda_{K_\epsilon}(\phi) \to \phi_0(0) = \delta ( \phi)
+\]
+as $\epsilon \to 0$, showing that $(D_t-\Delta)\Lambda_{K_\epsilon} \to \delta$ in $\mathscr{D}'(\mathbb{R} \times \mathbb{R}^n)$ and completing the proof.
+\end{proof}
+
+
+\section{Functions of the Laplacian}
+This section is my working through of material in Folland.\footnote{Gerald B. Folland, {\em Introduction to Partial
+Differential Equations}, second ed., pp.~149--152, \S 4B.}
+For $f \in \mathscr{S}_n$ and for any nonnegative integer $k$, doing integration by parts we get
+\[
+\mathscr{F}((-\Delta)^k f)(\xi) =\int_{\mathbb{R}^n} ((-\Delta)^k f)(x) e^{-2\pi i \xi x} dx= (4\pi^2 |\xi|^2)^k (\mathscr{F}f)(\xi), \qquad \xi \in \mathbb{R}^n.
+\]
+Suppose that $P$ is a polynomial in one variable: $P(x)=\sum c_k x^k$. Then, writing
+$P(-\Delta)=\sum c_k (-\Delta)^k$, we have 
+\begin{eqnarray*}
+\mathscr{F}(P(-\Delta)f)(\xi)& =& \sum c_k \mathscr{F}((-\Delta)^k f)(\xi)\\
+& =& \sum c_k (4\pi^2 |\xi|^2)^k (\mathscr{F} f)(\xi)\\
+&=& (\mathscr{F}f)(\xi) P(4\pi^2 |\xi|^2).
+\end{eqnarray*}
+
+We remind ourselves that \textbf{tempered distributions} are elements of $\mathscr{S}_n'$, i.e. continuous linear maps $\mathscr{S}_n \to \mathbb{C}$.
+The Fourier transform of a tempered distribution $\Lambda$ is defined by $\widehat{\Lambda} f =(\mathscr{F}\Lambda) f= \Lambda \hat{f}$, $f \in \mathscr{S}_n$.
+It is a fact that the Fourier transform is an isomorphism of locally convex spaces $\mathscr{S}_n' \to \mathscr{S}_n'$.\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~192, Theorem 7.15.}
+
+Suppose that $\psi:(0,\infty) \to \mathbb{C}$ is a function such that
+\[
+\Lambda f = \int_{\mathbb{R}^n} f(\xi) \psi(4\pi^2 |\xi|^2) d\xi, \qquad f \in \mathscr{S}_n,
+\]
+ is a tempered
+distribution. We define $\psi(-\Delta):\mathscr{S}_n \to \mathscr{S}_n'$ by
+\[
+\psi(-\Delta) f = \mathscr{F}^{-1}(\hat{f} \Lambda), \qquad f \in \mathscr{S}_n.
+\]
+
+Define $\check{f}(x)=f(-x)$; this is \textbf{not} the inverse Fourier transform of $f$, which we denote by $\mathscr{F}^{-1}$. As well,
+write $\tau_x f(y) = f(y-x)$. For $u \in \mathscr{S}_n'$ and $\phi \in \mathscr{S}_n$, we \textbf{define} the convolution $u*\phi:\mathbb{R}^n \to \mathbb{C}$ by
+\[
+(u*\phi)(x) = u(\tau_x \check{\phi}), \qquad x \in \mathbb{R}^n.
+\]
+One proves that $u*\phi \in C^\infty(\mathbb{R}^n)$, that
+\[
+D^\alpha(u*\phi) = (D^\alpha u)*\phi = u*(D^\alpha \phi)
+\]
+for any multi-index,  that $u*\phi$ is a tempered distribution, that $\mathscr{F}(u*\phi)=\hat{\phi}\hat{u}$, and that
+$\hat{u}*\hat{\phi} = \mathscr{F}(\phi u)$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~195,
+Theorem 7.19.}
+
+We can also write $\psi(-\Delta)$ in the following way. There is a unique $\kappa_\psi \in \mathscr{S}_n'$ such that 
+\[
+\mathscr{F} \kappa_\psi = \Lambda.
+\]
+For $f \in \mathscr{S}_n$, we have
+$\mathscr{F}(\kappa_\psi*f) = \hat{f} \hat{\kappa}_\psi = \hat{f} \Lambda$,
+but, using the definition of $\psi(-\Delta)$ we also have
+$\mathscr{F}(\psi(-\Delta) f)=\mathscr{F} \mathscr{F}^{-1}(\hat{f}\Lambda) = \hat{f}\Lambda$,
+so
+\[
+\kappa_\psi*f = \psi(-\Delta) f.
+\]
+ Moreover, $\kappa_\psi*f \in C^\infty(\mathbb{R}^n)$; this shows that $\psi(-\Delta)f$ can be interpreted as a tempered
+distribution or as a function.  We call $\kappa_\psi$ the \textbf{convolution kernel} of $\psi(-\Delta)$. 
+
+For a fixed $t>0$, define $\psi(s)=e^{-ts}$.  Then $\Lambda:\mathscr{S}_n \to \mathbb{C}$ defined by
+\[
+\Lambda f = \int_{\mathbb{R}^n} f(\xi) \psi(4\pi^2 |\xi|^2) d\xi = \int_{\mathbb{R}^n} f(\xi) \exp\left( -4\pi^2 |\xi|^2 t \right) d\xi = 
+\int_{\mathbb{R}^n} f(\xi) \hat{k}_t(\xi)  d\xi
+\]
+is a tempered distribution. Using the Plancherel theorem, we have
+\[
+\Lambda f = \int_{\mathbb{R}^n} \hat{f}(\xi) k_t(\xi) d\xi.
+\]
+With $\kappa_\psi \in \mathscr{S}_n'$ such that $\mathscr{F} \kappa_\psi = \Lambda$, we have
+\[
+\Lambda f = (\mathscr{F}\kappa_\psi)(f) = \kappa_\psi(\hat{f}).
+\]
+Because $f \mapsto \hat{f}$ is a bijection $\mathscr{S}_n \to \mathscr{S}_n$, this shows that for any $f \in \mathscr{S}_n$ we have
+\[
+\kappa_\psi (f) =\int_{\mathbb{R}^n} f(\xi) k_t(\xi) d\xi.
+\]
+Hence, 
+\begin{equation}
+e^{t \Delta} f = \kappa_\psi *f= k_t*f, \qquad t>0, f \in \mathscr{S}_n.
+\label{heatconv}
+\end{equation}
+
+Suppose that $\phi:(0,\infty) \to \mathbb{C}$ and $\omega:(0,\infty) \to (0,\infty)$ are functions and that 
+\[
+\psi(s) = \int_0^\infty \phi(\tau) e^{-s\omega(\tau)} d\tau, \qquad s>0.
+\]
+Manipulating symbols suggests that it may be true that
+\[
+\psi(-\Delta) = \int_0^\infty \phi(\tau) e^{\omega(\tau) \Delta} d\tau,
+\]
+and then, for $f \in \mathscr{S}_n$,
+\[
+\psi(-\Delta)f = \int_0^\infty \phi(\tau) e^{\omega(\tau) \Delta} f d\tau =  \int_0^\infty \phi(\tau) (k_{\omega(\tau)} * f )d\tau,
+\]
+and hence
+\begin{equation}
+\kappa_\psi(x) = \int_0^\infty \phi(\tau) k_{\omega(\tau)}(x) d\tau, \qquad x \in \mathbb{R}^n.
+\label{convkernel}
+\end{equation}
+
+Take $\psi(s)=s^{-\beta}$ with $0<\Re \beta < \frac{n}{2}$. Because $\Re \beta < \frac{n}{2}$, one checks  that
+\[
+\Lambda f = \int_{\mathbb{R}^n} f(\xi) (4\pi^2 |\xi|^2)^{-\beta} d\xi
+\]
+ is a tempered distribution. As $\Re \beta>0$, we have
+ \[
+ s^{-\beta} = \frac{1}{\Gamma(\beta)} \int_0^\infty \tau^{\beta-1} e^{-s\tau} d\tau
+ \]
+ and writing $\phi(\tau)=\frac{\tau^{\beta-1}}{\Gamma(\beta)}$ and $\omega(\tau)=\tau$,
+we suspect from \eqref{convkernel} that  the convolution kernel of $(-\Delta)^{-\beta}$ is
+\[
+\kappa_\psi(x) = \int_0^\infty \frac{\tau^{\beta-1}}{\Gamma(\beta)} k_\tau(x) d\tau,
+\]
+which one calculates is equal to
+\begin{equation}
+\frac{\Gamma\left(\frac{n}{2}-\beta\right)}{\Gamma(\beta) 4^\beta \pi^{n/2} |x|^{n-2\beta}}.
+\label{betaconv}
+\end{equation}
+What we have written so far does not prove that this is the convolution kernel of $(-\Delta)^{-\beta}$ because it used \eqref{convkernel}, 
+but it is straightforward to calculate that indeed the convolution kernel of $(-\Delta)^{-\beta}$ is \eqref{betaconv}. This calculation is explained in an exercise
+in Folland.\footnote{Gerald B. Folland, {\em Introduction to Partial Differential Equations}, second ed., p.~154,
+Exercise 1.}
+
+Taking $\alpha=2\beta$ and defining
+\[
+R_\alpha(x) = \frac{\Gamma\left(\frac{n-\alpha}{2}\right)}{\Gamma\left(\frac{\alpha}{2}\right) 2^\alpha \pi^{n/2} |x|^{n-\alpha}},
+\qquad 0<\Re \alpha<n, x \in \mathbb{R}^n,
+\]
+we call $R_\alpha$ the \textbf{Riesz potential} of order $\alpha$. Taking as granted that \eqref{betaconv}
+is the convolution kernel of $(-\Delta)^{-\beta}$,  we have
+\[
+(-\Delta)^{-\alpha/2} f = R_\alpha * f, \qquad f \in \mathscr{S}_n.
+\]
+Then, if $n>2$ and $\alpha=2$ satisfies $0<\Re \alpha<n$, 
+we work out that
+\[
+R_2(x)=\frac{1}{(n-2)\omega_n|x|^{n-2}},
+\]
+where $\omega_n=\frac{2\pi^{n/2}}{\Gamma(n/2)}$, and hence
+\[
+(-\Delta)^{-1} f = R_2 * f, \qquad f \in \mathscr{S}_n,
+\]
+and applying $-\Delta$ we obtain
+\[
+f = -\Delta ( R_2 * f) = (-\Delta R_2)*f,
+\]
+hence $-\Delta R_2 = \delta$. That is, $R_2$ is the fundamental solution for $-\Delta$.
+
+Suppose that $\Re \beta>0$. Then, using the definition of $\Gamma(\beta)$ as an integral, with
+$\psi(s)=(1+s)^{-\beta}$, we have
+\[
+\psi(s) = \frac{1}{\Gamma(\beta)} \int_0^\infty \tau^{\beta-1} e^{-(1+s)\tau} d\tau, \qquad s>0.
+\]
+Manipulating symbols suggests that
+\[
+\psi(-\Delta) = \frac{1}{\Gamma(\beta)} \int_0^\infty \tau^{\beta-1} e^{-\tau} e^{\tau \Delta} d\tau,
+\]
+and using \eqref{heatconv}, assuming the above is true we would have for all $f \in \mathscr{S}_n$,
+\[
+\psi(-\Delta) f =  \frac{1}{\Gamma(\beta)} \int_0^\infty \tau^{\beta-1} e^{-\tau} e^{\tau \Delta} f d\tau=
+ \frac{1}{\Gamma(\beta)} \int_0^\infty \tau^{\beta-1} e^{-\tau} (k_\tau * f) d\tau,
+\]
+whose convolution kernel is
+\[
+ \frac{1}{\Gamma(\beta)} \int_0^\infty \tau^{\beta-1} e^{-\tau} k_\tau d\tau.
+\]
+We write $\alpha=2\beta$ and define, for $\Re \alpha>0$,
+\[
+B_\alpha(x) = \frac{1}{\Gamma\left(\frac{\alpha}{2}\right) (4\pi)^{n/2}} \int_0^\infty \tau^{\frac{\alpha-n}{2}-1}
+e^{-\tau-\frac{|x|^2}{4\tau}} d\tau, \qquad x \neq 0.
+\]
+We call $B_\alpha$ the \textbf{Bessel potential} of order $\alpha$. It is straightforward to show, and shown in Folland, that
+$\norm{B_\alpha}_1<\infty$, so $B_\alpha \in L^1(\mathbb{R}^n)$. Therefore we can take the Fourier transform of $B_\alpha$,
+and one calculates that it is
+\[
+\widehat{B}_\alpha(\xi) = (1+4\pi^2 |\xi|^2)^{-\alpha/2}, \qquad \xi \in \mathbb{R}^n,
+\]
+and then
+\[
+\psi(-\Delta) = (1-\Delta)^{-\alpha/2} f = B_\alpha * f, \qquad f \in \mathscr{S}_n.
+\]
+
+
+\section{Gaussian measure}
+If $\mu$ is a measure on $\mathbb{R}^n$ and
+$f:\mathbb{R}^n \to \mathbb{C}$ is a function
+such that for every $x \in \mathbb{R}^n$ the integral $\int_{\mathbb{R}^n} f(x-y) d\mu(y)$ converges,
+we define the \textbf{convolution} $\mu*f:\mathbb{R}^n \to \mathbb{C}$ by
+\[
+(\mu*f)(x) = \mu(\tau_x \check f) = \int_{\mathbb{R}^n} (\tau_x \check{f})(y) d\mu(y) = \int_{\mathbb{R}^n} \check{f}(y-x) d\mu(y)
+=\int_{\mathbb{R}^n} f(x-y) d\mu(y).
+\]
+
+Let $\nu_t$ be the measure on $\mathbb{R}^n$ with density $k_t$. 
+We call $\nu_t$ \textbf{Gaussian measure}.  It satisfies
+\[
+\nu_t * f (x) = \int_{\mathbb{R}^n} f(x-y) d\nu_t(y) = \int_{\mathbb{R}^n} f(x-y) k_t(y) dy = f*k_t(x), \qquad x \in \mathbb{R}^n.
+\]
+
+
+
+
+\end{document}

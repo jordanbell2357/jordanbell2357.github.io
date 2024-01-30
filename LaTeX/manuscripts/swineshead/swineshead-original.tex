@@ -1,0 +1,549 @@
+\documentclass{amsart}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm,enumitem}
+%\usepackage[T1]{fontenc}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{An infinite series in Richard Swineshead's {\em Liber calculationum}}
+\author{Jordan Bell}
+\email{jordan.bell@gmail.com}
+\address{Department of Mathematics, University of Toronto, Toronto, Ontario, Canada}
+\date{\today}
+
+\maketitle
+
+\section{Introduction}
+
+
+
+For $|x|<1$,
+\begin{equation}
+\sum_{n=0}^\infty x^n = \frac{1}{1-x},
+\label{geometric}
+\end{equation}
+and taking the derivative of both sides we have
+\[
+\sum_{n=0}^\infty nx^{n-1} = \frac{1}{(1-x)^2}.
+\]
+Multiplying both sides by $x$ we get
+\[
+\sum_{n=0}^\infty nx^n = \frac{x}{(1-x)^2},
+\]
+equivalently,
+\[
+\sum_{n=1}^\infty nx^n = \frac{x}{(1-x)^2}.
+\]
+For $x=\frac{1}{2}$ this is
+\[
+\sum_{n=1}^\infty \frac{n}{2^n} = \frac{\frac{1}{2}}{\left(\frac{1}{2}\right)^2},
+\]
+i.e.
+\begin{equation}
+\frac{1}{2}+\frac{2}{4}+\frac{3}{8}+\frac{4}{16}+\cdots = 2.
+\label{sum}
+\end{equation}
+But this derivation uses the artifice of taking the derivative of the series \eqref{geometric}, 
+and is analogous to 
+proving the identity 
+$\sin(2x)=2\sin x \cos x$ by taking
+the derivative of both sides of the identity $\cos(2x)=2\cos^2(x)-1$. 
+
+
+In this note we present the derivation of \eqref{sum} that appears in the {\em Liber calculationum} of Richard Swineshead. 
+This is an understandable piece of scholastic writing about the infinite that can be detached from its setting  and talked about by itself.
+It
+may introduce the reader to the large body of medieval writing on natural philosophy and theology with  mathematical content. 
+Murdoch \cite{murdoch1982} gives a reliable survey of medieval discussions of the infinite. 
+
+
+\section{Another derivation}
+Reordering  $\sum_{k=1}^\infty \sum_{m=1}^k$ to $\sum_{m=1}^\infty \sum_{k=m}^\infty$
+and 
+using
+\[
+\sum_{k=m}^\infty \frac{1}{2^k} =\frac{1}{2^{m-1}}, \qquad m \geq 1,
+\]
+we have
+\begin{eqnarray*}
+\sum_{k=1}^\infty k\cdot \frac{1}{2^k}&=&\sum_{k=1}^\infty \sum_{m=1}^k \frac{1}{2^k}\\
+&=&\sum_{m=1}^\infty \sum_{k=m}^\infty \frac{1}{2^k}\\
+&=&\sum_{m=1}^\infty \frac{1}{2^{m-1}}\\
+&=&1+\frac{1}{2}+\frac{1}{4}+\cdots
+\end{eqnarray*}
+which is equal to $2$. That is,
+\[
+\frac{1}{2}+\frac{2}{4}+\frac{3}{8}+\frac{4}{16}+\frac{5}{32}+\cdots = 2.
+\]
+
+
+
+\section{Series in Greek writings}
+From Heath's translation \cite[p.~106]{aristotle}, with comments, of Aristotle's {\em Physics} III.6, 206b:
+  \begin{quote}
+  The infinite by way of addition is in a manner the same as the infinite by way of division. Within a finite magnitude the infinite by
+  way of addition is realized in an inverse way (to that by way of division); for, as we see the magnitude being divided
+  {\em ad infinitum}, so, in the same way, the sum of the sucessive fractions when added to one another (continually) will be found
+  to tend towards a determinate limit. For if, in a finite magnitude, you take a determinate fraction of it and then add to that
+  fraction in the same ratio, and so on [i.e. so that each part has to the preceding part the same ratio as the first part
+  taken has to the whole], but {\em not} each time including (in the part taken) one and the same amount of the original whole, you will
+  not traverse (i.e. exhaust) the finite magnitude. But if you increase the ratio so that it always includes one and the same magnitude, whatever
+  it is, you will traverse it,  because any finite magnitude can be exhausted by taking away from it continually any definite magnitude however
+  small. In no other sense, then, does the infinite exist; but it does exist in this sense, namely potentially and by way of diminution.
+  \end{quote}
+  Heath \cite[pp.~108--109]{aristotle} explains this passage as follows. 
+  We are given a magnitude $a$ and a proportion $\frac{1}{r}$, for  example $r=2$. 
+ We take away from $a$ the proportion $\frac{1}{r}$ of $a$, that is, we take away $\frac{a}{r}$ from $a$.
+We then take away from what remains the proportion $\frac{1}{r}$ of what we just took away, that is,
+we take away $\frac{a}{r^2}$ from what remains. We then take away from what remains the proportion $\frac{1}{r}$ of what we just
+took away, that is, we take away $\frac{a}{r^3}$ from what remains, and so on. At the $n$th step in this process, with $n=1$
+the step at which we remove $\frac{a}{r}$ from $a$, the sum of the parts that have been removed up to and including this step
+is
+\begin{equation}
+\frac{a}{r}+\frac{a}{r^2}+\cdots+\frac{a}{r^n}.
+\label{asum}
+\end{equation}
+Aristotle asserts that there is some limit to which these sums tend, but does not specify the limit.
+ 
+Euclid in his {\em Elements} IX.35 \cite[pp.~420--421]{euclidII} proves the following: If $a_1,a_2,\ldots$ is a sequence of numbers in continued proportion (that is,
+$a_1:a_2 = a_2:a_3$, $a_2:a_3=a_3:a_4$, etc.) then
+\[
+(a_{n+1}-a_1):(a_1+a_2+\cdots+a_n) = (a_2-a_1):a_1.
+\] 
+For $a_k=\frac{a}{r^k}$, this yields
+\[
+\frac{a}{r}+\frac{a}{r^2}+\cdots+\frac{a}{r^n} =\frac{\frac{a}{r}\left(1-\frac{1}{r^n}\right)}{1-\frac{1}{r}}
+\]
+and it is then apparent that \eqref{asum} tends to $\frac{a}{r-1}$. Indeed, it is cumbersome to state the limit to which \eqref{asum} tends without using symbols.
+
+In Proposition 23 of his {\em Quadrature of the Parabola} \cite[p.~249--251]{archimedes}, Archimedes proves that
+if $A,B,C,D,\ldots,Y,Z$ are areas, with $A$ the greatest and $A=4B$, $B=4C$, $C=4D$, etc., then
+\[
+A+B+C+\cdots+Y+Z + \frac{1}{3}Z = \frac{4}{3}A.
+\]
+Archimedes' proof is the following \cite[pp.~xlvii, cxliii, 249--251]{archimedes}. Let $b=\frac{1}{3}B$, $c=\frac{1}{3}C$, $d=\frac{1}{3}D$, etc. The
+two facts $b=\frac{1}{3}B$ and $B=\frac{1}{4}A$ give
+\[
+B+b = \frac{1}{4}A+\frac{1}{12}A = \frac{1}{3}A;
+\]
+the two facts $c=\frac{1}{3}C$ and $C=\frac{1}{4}B$ give
+\[
+C+c = \frac{1}{4}B+\frac{1}{12}B = \frac{1}{3}B;
+\]
+etc. Therefore we obtain
+\begin{align*}
+&B+C+D+\cdots+Y+Z +b+c+d+\cdots+y+z\\
+=&B+b+C+c+D+d+\cdots+Y+y+Z+z\\
+=&\frac{1}{3}A+\frac{1}{3}B+\frac{1}{3}C+\cdots+\frac{1}{3}Y\\
+=&\frac{1}{3}(A+B+C+\cdots+Y).
+\end{align*}
+From this equality we subtract
+\[
+b+c+d+\cdots+y = \frac{1}{3}(B+C+D+\cdots+Y),
+\]
+yielding
+\[
+B+C+D+\cdots+Y+Z+z = \frac{1}{3}A.
+\]
+Adding $A$ to both sides and using $z=\frac{1}{3}Z$,
+\[
+A+B+C+\cdots+Y+Z+ \frac{1}{3}Z = \frac{4}{3}A.
+\]
+
+
+\section{Another derivation}
+Let
+\begin{equation}
+S=\frac{1}{2}+\frac{2}{4}+\frac{3}{8}+\frac{4}{16}+\frac{5}{32}+\cdots.
+\label{S}
+\end{equation}
+Then
+\begin{equation}
+\frac{1}{2}S = \frac{1}{4}+\frac{2}{8}+\frac{3}{16}+\frac{4}{32}+\frac{5}{64}+\cdots.
+\label{halfS}
+\end{equation}
+Subtracting \eqref{halfS} from \eqref{S} we obtain
+\[
+S-\frac{1}{2}S = \frac{1}{2}+\frac{2}{4}+\frac{3}{8}+\frac{4}{16}+\frac{5}{32}+\cdots -\left( \frac{1}{4}+\frac{2}{8}+\frac{3}{16}+\frac{4}{32}+\frac{5}{64}+\cdots\right).
+\]
+Pairing terms with the same denominators ($\frac{1}{2}$ is not paired with any term) we get
+\[
+S-\frac{1}{2}S = \frac{1}{2}+\left(\frac{2}{4}-\frac{1}{4}\right) +\left(\frac{3}{8}-\frac{2}{8}\right)+\left(\frac{4}{16}-\frac{3}{16}\right)+\left(\frac{5}{32}-\frac{4}{32}\right)+\cdots,
+\]
+hence
+\[
+\frac{1}{2}S = \frac{1}{2}+\frac{1}{4}+\frac{1}{8}+\frac{1}{16}+\frac{1}{32}+\cdots.
+\]
+But the sum of the terms on the right-hand side is $1$ so $\frac{1}{2}S=1$, hence
+\[
+S=\frac{1}{2}+\frac{2}{4}+\frac{3}{8}+\frac{4}{16}+\frac{5}{32}+\cdots = 2.
+\]
+
+  
+\section{Intension and remission of forms}
+Kaye \cite[pp.~202--205, 214]{kaye} writes about the notion of ``latitude'' in Taddeo Alderotti's commentary on Galen's {\em Tegni}. 
+
+See Principe \cite[p.~41]{principe} on Geber's {\em Books of Balances}, in which Geber divides each of the four degrees of intensity
+of a quality
+into seven grades.
+
+The history of the concept of temperature and thermometers is presented
+in  \cite{taylor} and \cite[pp.~517--524]{crombieI}. For the work of Santorio Santorio see \cite{grmek}.
+
+
+
+
+
+
+
+
+Jung \cite{jung} gives a summary of the scholastic language of the ``intension and remission of forms''.
+
+
+
+
+
+\section{Denomination}
+Aristotle in his {\em Physics} VI.9, 240a \cite[p.~240]{hardie}, says, ``We call a thing white or not-white not necessarily because it is  wholly either one or the other, but cause most of its parts or the most essential parts of it are so: not being in a certain condition is different from not being wholly in that condition.''
+
+Murdoch \cite[p.~62]{elkana}: ``the measurement involved in saying that a uniformly difformly hot body is as hot as a body uniformly hot in its mean degree is exactly
+parallel to the logical problem of denominating a body by (say) the predicate blue.'' 
+
+On the distinction between intensity and extension in the writings of Galen and Arnald of Villanova, see Kaye \cite[pp.~216--218]{kaye}. Cf. 
+
+
+
+
+
+
+
+
+For chapter VI, ``De tribus predicamentis'', of  Heytesbury's {\em Regule solvendi sophismata},
+Wilson \cite[pp.~117--118]{wilson} explains:
+\begin{quote}
+In all determinations of the velocity and variation of velocity of a body, Heytesbury looks solely to the velocity and variation of the point most
+rapidly moved -- if such there be. This convention is justified by the fact that every magnitude, considered as a categorematic whole, moves as fast as some part
+of it moves, and reaches a given {\em terminus ad quem} as fast as this part. The principle according to which a thing is to be defined by its maximum
+or greatest perfection appears to be in operation here.
+\end{quote}
+
+  
+\section{Richard Swineshead}
+Gerolamo Cardano in book XIV of the 1560  Basel edition of his {\em De subtilitate} gives a ranked list of the 12  people most eminent for their subtlety of thought. 
+{\em De subtilitate}
+was first published in 1550  in Nuremberg and  expanded editions were published in 1554 in Paris and Lyon, and Cardano made changes to the list in each edition \cite[p.~xxxiv]{cardano1}. 
+The 1560 list is \cite[pp.~816--819]{cardano2}:
+Archimedes, Aristotle, Euclid, Duns Scotus, Richard Swineshead,  Apollonius of Perga,
+Archytas of Tarentum, al-Khwarizmi, al-Kindi, Jabir ibn Aflah, Galen of Pergamon, and Vitruvius.
+Cardano writes about Swineshead, ``People say that when he was old, he wept at not understanding his discoveries when reading them.''
+Cardano states that all of these are surpassed by Ptolemy, Hippocrates, and Plotinus, and asserts that these three had superhuman and nearly divine powers of mind.
+
+
+Weisheipl \cite[pp.~80--81]{weisheipl} writes:
+\begin{quote}
+The Mertonian treatises were not commentaries on Aristotle, but highly sophisticated works dealing with logical analysis and the
+``calculations of motion'', including local motion, alteration (intension and remission) and augmentation, which invariably meant
+condensation and rarefaction. These writings of early fourteenth-century Oxford quickly spread throughout Europe; they were read, copied, explained
+in the schools and improved in detail. The Mertonian vocabulary was the basis for the seventeenth-century scientific terminology.
+\end{quote}
+
+Wallace \cite[pp.~27--64, Chapter 2]{wallace} describes the work done on science at the University of Oxford from the time of 
+Robert Grosseteste (died 1253) to the 1360's, especially those writings  somehow having to do with causality and ontology.
+
+The best expositions of scholastic writings on motion are Dijksterhuis \cite{dijksterhuis} and
+Murdoch and Sylla \cite{motion}.
+
+
+Thorndike \cite[pp.~370--385, Chapter XXIII]{magicIII} describes  the {\em Liber calculationum}. Thorndike writes \cite[p.~371]{magicIII}:
+\begin{quote}
+Whether it may be worth while or not to attempt the resuscitation of the details of these forgotten modes of thought, it does seem
+that they constituted a preliminary discussion which was helpful, in its failures as well as its surmises, and probably even essential
+under the circumstances to the further development of scientific thought.
+We would not then wholly pass over this considerable body of later medieval writing and thought, as so many historians of
+philosophy, mathematics, and physics have done, but give it some attention, though inadequate enough, in noting
+one of its earlier and apparently its greatest individual expression, the work of Calculator. 
+\end{quote}
+
+
+
+Murdoch and Sylla \cite{dictionary} date Swineshead's activity as about 1340--1355. His name is often written ``Swyneshed'', ``Suisset'',  ``Suicet'', ``Suiseth'', etc., and he is often
+called ``the Calculator''.  The {\em Liber calculationum} 
+comprises 16 tracts, and is dated as being written about 1340--1350.
+Murdoch and Sylla describe the first four tracts of the work as follows \cite[pp.~187--188]{dictionary}:
+\begin{quote}
+It begins with four treatises dealing with the qualitative degrees of simple and mixed subjects insofar as the degrees of the subjects depend on the degrees in their
+various parts. Treatise I considers measures of intensity (and, conversely, of remissness, that is, of privations of intensity) per se. Treatise II, on difform qualities and difformly
+qualified bodies, considers the effects of variations in two dimensions -- intensity and extension -- on the intensity of a subject taken as a whole. Treatise III again considers
+two variables in examining how the intensities of two qualities, for example, hotness and dryness, are to be combined in determining the intensity of an elemental subject (this, of
+course, being related to the Aristotelian theory that each of the four terrestrial elements -- earth, air, fire, and water -- is qualified in some degree by a combination of two
+of the four basic elemental qualities -- hotness, coldness, wetness, and dryness). Treatise IV then combines the types of variation involved in treatises II and III to consider how both the intensity and extension of two qualities are to be combined in determining the intensity of a compound (mixed) subject. Treatises I--IV, then, steadily increase in
+mathematical complexity.
+\end{quote}
+
+
+Murdoch and Sylla \cite[p.~190]{dictionary}:
+\begin{quote}
+It should be noted that treatise I, in addition to determining the proper measures of intensity of qualities, also introduces many of the basic technical terms of the rest of the work.
+Like the {\em De motibus naturalibus}, it assumes that any physical variable has a continuous range, called a ``latitude,''  within which it can vary. In the case of qualities, this latitude starts from zero degree ({\em non gradus}), zero being considered as an exclusive terminus, and goes up to some determinate maximum degree, the exact number of which is
+usually left vague, but which is commonly assumed to be eight or ten degrees (this number arising out of the previous tradition in which there were, for instance, four degrees of coldness and four degrees of hotness, the two perhaps separated by a mean or temperate mid-degree). Within any latitude there are assumed to be a number of ``degrees,'' these 
+degrees being, so to speak, parts of the latitude rather than indivisibles.
+\end{quote}
+(The {\em De motibus naturalibus}, which Murdoch and Sylla date to around 1335, is a work of another Swineshead, Roger Swineshead, also of Oxford \cite[p.~185]{dictionary}.)
+
+
+They describe tract II as follows \cite[p.~190]{dictionary} (the folio references are to the 1520 Venice edition):
+\begin{quote}
+Thus, treatise II treats the effects of varying intensities of a single quality as these intensities are distributed over a given subject (and hence
+considers the two dimensions of intensity and extension) as they bear upon the overall measure of the intensity of the whole, although it only does so
+for the special cases in which the variation in question is either uniformly difform over the total subject or in which the subject has halves of different, but 
+uniform, intensities. In such cases, Swineshead is in effect asking what measure of intensity is to be assigned the whole. There are, he tells us, two ways
+({\em opiniones} or {\em positiones}) in which this particular question can be answered: (1) the measure -- or as he often calls it, the denomination -- of the whole
+corresponds to the mean degree of the qualified subject (that is, the degree that is equidistant from the initial and final degrees of a uniformly difformly distributed quality
+or -- to take into account the second special case at hand -- from the two degrees had by the uniform, but unequally intense,
+halves of the subject); or (2) the subject should be considered to be just as intense as any of its parts (that is, its overall measure is equivalent to the maximum degree
+of the subject [5rb; 6ra]).
+\end{quote}
+
+
+
+
+
+
+\section{Text}
+The following is a modification of Clagett's translation of part of tract II, ``De difformibus'', of Richard Swineshead's {\em Liber calculationum} \cite[pp.~59--61]{clagett1968}, 
+from 6va--7ra of the 1520 Venice edition \cite{venice1520}. Clagett
+gives a recension of the Latin text based on the 1498 Pavia edition and  manuscripts.
+
+\begin{quote}
+The first opinion regarding a difform quality in which each half is uniform can, however, be sustained, namely that it corresponds to the middle degree between these qualities, and the argument is based on this: A quality extended through the whole subject is twice as productive for the denomination of the whole subject as all the quality extended through one half, which is argued as follows. Let $a$ denote something that has a heat of 4 through the whole: then the whole is hot through the whole as 4; but one half of this does as much for the denomination of the whole subject as the other half. Therefore that whole quality denominates the whole by twice as much as one of its parts or halves denominates the whole, which was to be proved. From this it follows that the denomination of the whole subject by a quality extended only through half of it is half of that quality; it denominates the whole by half as much as that half through which it extends; and it denominates that half by its highest degree. Consequently it denominates the whole by that quality to a degree that is half of that quality. And if it extended only through one quarter of the whole, it would denominate the whole to a degree of one fourth of that quality. And so correspondingly, as it extends proportionally through a smaller part than the whole, thus it denominates the whole to a lesser degree than the part through which it extends.
+\end{quote}
+
+The 1520 Venice edition continues:\footnote{{\it Istis concessis faciliter probatur positio. Sit enim tale uniformiter difforme seu difforme cuius utraque medietas est uniformis una ut .iiii. [sic but should be .viii.] et alia ut .iiii., gratia argumenti. Tunc illa qualitas ut .viii. extenditur per medietatem totius per predicta. Ergo solum denominat totum ut .iiii. Per idem illa qualitas ut .iiii. per aliam medietatem extensa solum facit ut duo ad totius denominationem. Igitur iste due qualitates totum precise denominabunt ut .vi. qui est gradus medius inter illas medietates. Sequitur igitur positio sic in speciali.
+
+Arguitur tamen ad hoc generaliter sic: signato tali difformi. Tunc utraque qualitas in istis medietatibus est dupla ad gradum per quem totum denominatur ab illa qualitate. Et si aliquid fieret ex istis qualitatibus simul existensis, illa qualitas esset dupla ad illas duas denominationes simul aggregatas: que denominationes denominationem totius constituunt: et per consequens cum iste qualitates sint ineque intense patet quod denominatio totius erit media equaliter inter istas duas qualitates, eo quod omne compositum ex duobus inequalibus est precise duplum ad medium inter illa ut est argutum in secunda suppositione conclusionis xxxviii de motu locali et postea de inductione gradus summi. Arguitur scilicet quod omne compositum ex duobus inequalibus erit plus quam duplum ad omne minus medio et minus quam duplum ad omnem maius medio. Patet ergo ex predictis quod denominatio totius est in gradu medio inter illas qualitates. Quod fuit probandum.} \cite[6va]{venice1520}}
+
+\begin{quote}
+Once this is granted, the assertion is easily proved. Let the uniformly difform or difform [quality] be such that each half of it is uniform: for the sake of the argument one as [8],
+the other as 4. Then that quality extends as 8 through half of the whole, by what was said above: therefore, taken alone, it denominates the whole as 4. By the same, that quality which extends as 4 through the other half, taken alone, contributes to the denomination of the whole as 2. Consequently those two quantities will denominate the whole precisely as 6, which is the middle degree between those halves. Therefore the assertion follows in the special case.
+
+But in general one argues for this as follows: when such a difform [quality] is designated, each quality in the halves is double of the degree to which the whole is denominated by that quality; and if something were made from these qualities extended together, that quality would be double of those two denominations joined together, and these denominations make up the denomination of the whole; and consequently, since these qualities are unequally intense, it is clear that the denomination of the whole will be equally intermediate between these two qualities, because any compound of two unequals is precisely the double of the middle [term] between them, as has been argued in the second assumption of Conclusion 38 [of the treatise] on motion, and is argued subsequently on the attainment of the highest degree: i.e., that any compound of two unequals is more than double of anything less than the middle [term] and less than double of anything more than the middle. So it is clear from what has been said that the denomination of the whole is in the middle degree between those qualities, which was to be proved.
+\end{quote}
+
+Clagett's translation continues:
+
+\begin{quote}
+Against this assertion and its foundation it is argued thus: it follows that if the first proportional part of something were intense to a certain degree and the second twice as intense, the third three times, and so on to infinity, the whole would be precisely equally intense as the second proportional part, which however does not seem to be true. For it appears that this quality is infinite; hence if it is without a contrary, it will denominate its subject infinitely.
+\end{quote}
+
+The 1520 Venice edition continues:\footnote{{\it Et quod conclusio sequatur arguitur sic: sint .a. .b. duo equalia et uniformia eodem gradu, et dividatur .a. .b. in partes proportionales proportione dupla: et etiam illa hora ita quod partes maiores terminentur seu incipiant ab hoc instanti, et ponatur quod in prima parte proportionali illius hore intendatur prima pars .b. ad duplum, et similiter in secunda parte proportionali hore intendatur secunda pars proportionalis illius ad duplum, et sic in infinitum, ita quod in fine erit .b. uniforme sub gradu duplo ad gradum nunc habitum. Et ponatur quod .a. in prima parte proportionali illius hore intendatur totum residuum a prima parte proportionali .a. acquirende tantam latitudinem sicut tunc acquirit prima pars proportionalis .b. et in secunda parte proportionali eiusdem hore intendatur totum residuum .a. a prima parte proportionali et secunda illius .a. acquirendo tantam latitudinem sicut tunc acquiret pars proportionalis secunda .b. et in tertia parte proportionali intendatur residuum a prima parte proportionali et secunda et tertia acquirendo tantam latitudinem sicut tunc acquiret tertia pars proportionalis .b. et sic in infinitum sic quod quandocumque aliqua pars proportionalis .b. intendetur, pro tunc intendatur .a. secundum partes proportionales subsequentes partem correspondentem in .a. acquirendo tantam latitudinem sicut acquiret pars illa in .b. et sint .a. et .b. consimilis quantitatis continue. Quo posito sequitur quod .a. et .b. continue equevelociter intendentur quia .a. continue per partem equalem proportionalem intendetur sicut .b. quia residuum a prima parte proportionali .a. est equale prime parti proportionali eiusdem .b..
+
+Cum igitur .b. in prima parte proportionali illius hore continue intendetur per primam partem proportionalem et similiter .a. per totum residuum a prima sua parte proportionali, patet quod .a. in prima parte proportionali equevelociter intendetur cum .b. et sic de omni alia parte eo quod quandocumque .b. intendetur per aliquam partem proportionalem .a. intendetur per totum interceptum inter partes correspondentes sui et extremum ubi partes terminantur, scilict minores. Cum ergo quelibet pars proportionalis cuiuslibet continui sit equalis toti intercepto inter eandem et extremum ubi partes minores terminantur,  sequitur ergo quod .a. continue per partem eque proportionalem sic intendetur sicut .b. Igitur patet quod .a. continue [this was an error in Padua where the compositorÕs eye skipped from one ÔcontinueÕ to the next] equevelociter intendetur cum .b. et nunc est eque intensum cum .b. ut ponitur in casu et hoc ubi partes sint proportionales proportione dupla. Ergo in fine  .a. erit eque intensum cum .b. et .a. tunc est tale cuius prima pars proportionalis erit aliqualiter intensa, et secunda pars proportionalis in duplo intensior, et tertia in triplo intensior et sic in infinitum. Et .b. erit uniforme sub gradu sub quo erit secunda pars proportionalis .a. Ergo sequitur conclusio. Minor sic arguitur que fuit hec: `et .a. tunc erit tale cuius prima proportionalis etc.'  Sit .c. gradus quem nunc habent .a. et .b.. Tunc in fine erit prima pars proportionalis .a. sub .c. gradu, quia non intendetur. Et secunda pars proportionalis .a. tunc erit sub gradu duplo ad .c., quia in omni parte proportionali hore acquiretur tanta latitudo sicut est .c., et secunda pars proportionalis .a. solum intendetur per primam partem proportionalem illius hore. Ergo ille secunde parti proportionali .a. solum acquiretur unum .c. et per consequens, tunc erit sub duplo gradu ad .c. et tertia pars proportionalis .a. solum intendetur per duas partes proportionales hore, quia solum per primam partem et secundam. Et quarta pars proportionalis .a. solum intendetur per tres partes proportionales illius hore, et sic in infinitum, ut satis per casum patet. Ergo tertia pars proportionalis .a. solum acqauiret duo .c. et erit in fine in triplo intensior quam est .c. gradus. Et quarta acquiret tria .c. et sic in infinitum. Igitur patet quod tunc prima pars proportionalis .a. erit aliqualiter intensa, quia uniformis .c. gradui. Et secunda pars in duplo intensior, quia mediantibus duobus .c. gradibus. Et tertia in triplo intensior, quia mediantibus tribus .c. et sic in infinitum. Ergo patet ista minor. et .b. tunc erit eque intensum cum secunda parte proportionali .a. quia uniforme duobus .c. gradibus, quia quelibet eius pars proportionalis solum intendetur ad duplum. Ergo sequitur conclusio que est concedenda.} \cite[6va--6vb]{venice1520}}
+
+\begin{quote}
+And that the conclusion follows is argued thus: let $a$ and $b$ be two equal [things] uniform to the same degree, and let $a$ and $b$ be divided into proportional parts in
+double proportion, and also at that hour, so that the major parts end or begin from this instant; and let it be so that in the first proportional part of that hour the first part of $b$
+intensifies to the double, and similarly in the second proportional part of the hour the second proportional part of it intensifies to the double, and so on to infinity, so that at the end
+$b$ will be uniform by a degree double of that which it has now. And let it be so that in the first proportional part of that hour all the residue left by the first proportional part of $a$ intensifies, acquiring such a latitude as the first proportional part of $b$ then acquires, and in the second proportional part of the same hour the residue left by the first proportional part and the second one of $a$ intensifies, acquiring such a latitude as the second proportional part of $b$ then acquires, and in the third proportional part the residue left by the first proportional part and the second and the third one intensifies, acquiring such a latitude as the third proportional part of $b$ then acquires, and so on to infinity, so that, whenever some proportional part of $b$ intensifies, then also $a$ intensifies according to the proportional parts following the part that corresponds in $a$, acquiring such a latitude as that part of $b$ will acquire, and that $a$ and $b$ are continually of a quantity similar to each other. Once this is settled, it follows that $a$ and $b$ will continually intensify at equal velocity, since $a$ will continually intensify by an equal proportional part as $b$, since the residue left by the first proportional part of $a$ is equal to the first proportional part of $b$.
+
+Consequently, since in the first proportional part of that hour $b$ will continually intensify by the first proportional part and similarly $a $by the whole residue left by its first proportional part, it is clear that in the first proportional part $a$ will intensify at equal velocity with $b$, and so for any other part, because whenever $b$ will intensify by some proportional part,
+$a$ will intensify by the entire interval between the corresponding parts of itself and the terminal point where the parts -- i.e., the minor ones -- end. Therefore, since any proportional part of an arbitrary continuum is equal to all the interval between the same and the terminal point where the minor parts end, it follows that $a$ will continually intensify by an equally proportional part as $b$. Consequently it is clear that $a$ will continually intensify at equal velocity with $b$ and is now equally intense as $b$, as it is also proposed in this case where the parts are proportional in double proportion. Consequently at the end $a$ will be equally intense with $b$, and then $a$ is such that its first proportional part is of some intensity, and the second proportional part doubly more intense, and the third triply more intense, and so on to infinity; and $b$ will be uniform with the degree that the second proportional part of $a$ has. Therefore the conclusion follows. 
+
+	The minor one, which was ``and then $a$ will be such that its first proportional...'', is argued thus: Let $c$ be the degree that $a$ and $b$ now have. Then at the end the first proportional part of $a$ will be at degree $c$, because it will not intensify; and the second proportional part of $a$ will then be at a degree double that of $c$, since in each proportional part of the hour as much latitude will be acquired as $c$ is, and the second proportional part of $a$ will only intensify through the first proportional part of that hour; therefore in that second proportional part $a$ will acquire only one $c$ and consequently it will then be at a degree double that of $c$; and the third proportional part of $a$ will only intensify through two proportional parts of the hour, since only through the first and the second part; and the fourth proportional part of $a$ will only intensify through three proportional parts of that hour, and so on to infinity, as is clear enough by the case. Consequently the third proportional part of $a$ will acquire two $c$'s and will be triply more intense at the end than the degree of $c$ is; and the fourth will acquire three $c$'s and so on to infinity. It is therefore clear that then the first proportional part of $a$ will be intense to some degree, since it is uniform with the degree $c$; and the second part doubly more intense, since two degrees $c$ come in between; and the third part triply more intense, since three $c$'s come between, and so on to infinity. Consequently that minor [conclusion] is clear, and $b$ will then be equally intense as the second proportional part of $a$ since it is uniform with two degrees $c$, because any of its proportional parts intensifies only to the double. Therefore the conclusion which must be admitted follows.
+\end{quote}
+
+Clagett's translation continues:
+
+\begin{quote}
+For an argument in favour of the opposite, the consequences are denied: The quality is infinitely intense, therefore it denominates the whole subject infinitely. This infinite quality produces, if it is extended in this way, something infinitely modest with respect to that subject, in as much as the quality of the fourth proportional part is doubly more intense than the quality of the second proportional part and the subject is four times less, so it produces less by half than the second. Indeed if the fourth proportional part were eight times more intense than the first, just as it is eight times smaller than it [in extension], then it would produce just as much for the denomination of the whole as the first. However Ð as is known Ð the fourth part is actually less intense by half as it would then be. Consequently the fourth proportional part contributes less by half to the whole in comparison than the first proportional part does, and the first contributes only as much to the whole in comparison as the second, as is evident. Consequently the fourth proportional part produces less by half than the second for the intensity of the whole, and yet its quality is twice as intense. And proceeding in this way, any quality extended through a later part contributes less than a quality extended through an earlier part, calling those parts earlier which are closer to the endpoint where the larger parts terminate. And this is true of all the proportional parts of a except for the first and the second, which contribute equally to the denomination of the whole.
+\end{quote}
+
+
+
+
+
+
+
+\section{Commentary}
+Boyer \cite[pp.~69--80]{boyer} discusses Swineshead's {\em Liber calculationum}. Boyer \cite[pp.~77--78]{boyer}
+writes (after explaining that Archimedes did not talk about series of infinitely many terms in his quadrature
+of the parabola):
+\begin{quote}
+The Scholastic discussions of the fourteenth century, on the other hand, referred frequently to the infinite, both
+as actuality and as potentiality, with the result that Suiseth, with perfect confidence, invoked an infinite
+subdivision of the time interval to obtain the equivalent of an infinite series. He did not resolve
+the aporias of Zeno, to show in what sense an infinite series may be said to have a sum -- a problem
+which future mathematicians were to consider at length. Calculator, instead, was more particularly interested
+in infinite magnitudes than in infinite series. Not only is the time interval in his problem infinitely divided,
+but the intensity itself becomes infinite. Now how can a quantity, whose rate of change becomes infinite,
+have a  finite average rate of change? Suiseth admitted that this paradoxical result was in need of
+demonstration and so furnished at great length the equivalent of a proof of the convergence of the infinite
+series. This he did as follows.
+
+Consider two uniform and equal rates of change, $a$ and $b$, operating throughout a given time
+interval, which has been subdivided in the ratios $\frac{1}{2},\frac{1}{4},\frac{1}{8},\ldots$. Now let
+the rate of change $b$ be doubled throughout the interval;
+but in the case of $a$, let it be doubled throughout the interval; tripled in the third; and so  to infinity,
+as given in the problem above. Now the increase in $a$ in the second subinterval, if continued constantly
+throughout this and all following subintervals, would result in an increase in the effect equal to that
+brought about by the change in $b$ during the first half of the time. The tripling of $a$ in the third subinterval,
+if continued constantly throughout this and the ensuing subintervals, would in turn result in a further increase
+in the effect of $a$ equal to that brought about by the change in $b$ in the second subinterval, and so to infinity.
+Hence the increase resulting from the doubling, tripling, and so forth of $a$ is equal to that caused by
+the doubling of $b$; i.e., the average rate of change in the problem considered above is the rate of change during
+the second subinterval, which was to be proved.
+\end{quote}
+
+Murdoch and Sylla \cite[pp.~192--193]{dictionary}:
+\begin{quote}
+Furthermore, in the remaining (and one should note, larger and more impressive) part of treatise II, Swineshead returns to this first ``mean degree'' position and allows its
+application to difformly qualified subjects each half of which is uniform and, more generally, to ``stair-step qualities'' in which the intensities differ, but are uniform, over certain 
+determinate parts of the qualified subjects. This applicability is grounded upon the fact that in a difform subject with uniform halves, a quality extended through a half 
+``denominates the whole only half as much as it denominates the half through which it is extended.'' Swineshead then generalizes this ``new rule'' and states that if a quality is ``extended in a proportionally smaller part of the whole, it denominates the whole with a correspondingly more remiss degree than it does the part through which it is extended'' (6va), thus opening the possibility of considering ``stair-step'' distributions.
+
+After giving proofs for the special and general cases of his new ``rule of denomination,'' Swineshead raises an objection against it: ``If the first proportional part of something be intense in such and such a degree, and the second [proportional part] were twice as intense, the third three times, and so on {\em in infinitum}, then the whole would be just as intense as the second proportional part. However, this does not appear to be true. For it is apparent that the quality is infinite and thus, if it exists without a contrary, it will infinitely denominate its subject'' (6va).
+
+Swineshead shows that this latter inference to infinite denomination does not follow and that it arises because one has ignored the proper denomination criterion he has just set forth (6vb-7ra). As a preliminary, he devotes considerable space to the important task of establishing that a subject with a
+quality distribution as specified by the objection is indeed just as intense as its second proportional part, and he presents in detail just how this is so (6va-6vb). The proportional parts in question are to be taken ``according to a double proportion'' (that is, the succeeding proportional parts of the subject are its half, fourth, eighth, etc.). Now following the arithmetic increase in intensity over the succeeding proportional parts as stipulated by the objection, it follows that the whole will have the intensity of the second proportional part of the subject. Swineshead proves this by taking two subjects -- $A$ and $B$ -- and dividing them both according to the required proportional parts. Now take $B$ and ``let it be assumed that during the first proportional part of an hour the first [proportional] part of $B$ is intended to its double, and similarly in the second proportional part of the hour the second proportional part
+of it is intended to its double, and so on {\em in infinitum} in such a way that at the end [of the hour] $B$ will be uniform in a degree double the degree it now has.'' Turning then to $A$, Swineshead asks us to assume that ``during the first proportional part of the hour the whole of $A$ except its first proportional part grows more intense by acquiring just as much latitude as the first proportional part of $B$ acquires during that period, while in the second proportional part of the same hour all of $A$ except its first and second proportional parts grows more intense by acquiring just as much latitude as the second proportional part of $B$ then acquires... and so on {\em in infinitum}.'' Clearly, then, since the whole of $A$ except its first proportional part is equal in extent to its first proportional part, and since the whole of $A$ except its first and second proportional parts is equal to its second proportional part... and so on {\em in infinitum}, it follows that $A$ acquires just as much, and only as much, as $B$ does throughout the hour; therefore, it is overall just as intense as $B$ is at the end of the hour, which is to say that it is doubly intense or has an intensity equivalent to that of its second proportional part [Q.E.D.].
+
+In thus determining just how intense $A$ is at the end of its specified intensification, Swineshead has correctly seen that in our terms the infinite geometrical series involved is convergent (if we assume the intensity of the whole of $A$ at the outset
+to be 1, then $\frac{1}{2} + \frac{2}{4} + \frac{3}{8} +\cdots + \frac{n}{2^n}+\cdots = 2$). But such
+an interpretation is misleading. Swineshead gives absolutely no consideration to anything becoming arbitrarily small or tending to zero as we move indefinitely over the specified proportional parts.
+Swineshead knows where he is going to end up before he even starts; he has merely redistributed what he already knows to be a given finite increase in the intensity of one subject over another subject, something that is found to be true in most instances of the occurrence of ``convergent infinite series'' in the late Middle Ages. Yet however Swineshead's accomplishment is interpreted, one should note that his major concern was to show that a subject whose quality was distributed in such a manner {\em in infinitum}
+over its parts was in fact consistent with his denomination criterion and did not lead to paradox.
+\end{quote}
+
+
+North \cite[pp.~163--164]{north2} writes the following about Richard Swineshead's {\em Liber calculationum}:
+\begin{quote}
+There is in that work,
+and in related writings by other schoolmen, something equivalent to the summation of infinite series, although it must be said that there
+is a double risk of anachronism here. I have already fallen in, to some extent, with a tendency to examine the Calculator's
+treatment of the variation in intensity of a quality over an extended subject and to relate it to the subsequent development of kinematical
+problems, and hence of methods (especially graphical) of discussing variation.
+This way of looking at history submerges another, looking backwards to what seems to have been the Calculator's
+inspiration, namely what we should regard as a study of summing quantities of heat.
+In a passage, for instance, where he was aiming to show how a quantity might be increased
+extensively without being increased intensively, he used an analogy which I will summarily
+explain as making degree of heat (say temperature, with obvious qualifications) correspond to the length of a rectangle whose 
+width corresponds to the quantity of what it is that has that degree of heat. Heat-content then corresponds to area. Denoting this by
+$Q$, the degree by $T$, and the quantity of the subject by $M$, we may say that the Calculator introduces an example involving
+$M=\frac{1}{2}$ with $T=1$, added to $M 4 \frac{1}{4}$ with $T=2$, added $Q$ equal to $n/2^n$. For the subject as a whole, he maintained,
+with total $M=1$, the degree of $T$ was equal to 2. This seemed paradoxical, of course, in that he had described something that was finitely
+hot (finite $Q$) although part of it was definitely hot (infinite $T$). The summation is accurate and indeed commendable, bearing in mind
+the rhetorical form in which it was presented, although it is clear that a geometrical model was used to achieve it. The question as to whether
+it is anachronistic to speak of `the summation of an infinite series' here can only be resolved when one has laid down mathematical criteria for
+success, and if these are too stringent one will be in danger of ruling out even much seventeenth-century history. There are places
+where the Calculator seems to be showing an intuitive awareness of the importance of convergence, but usually he is effectively relying
+on the acceptability of the summation $\frac{1}{2}+\frac{1}{4}+\cdots+\frac{1}{2^n}+\cdots$, with sum unity. He appreciated the consequences
+of summing infinite series of constant or divergent terms, with `infinite' sums, and when he was discussing such cases he had virtually
+nothing to say about Aristotelian qualms, as regards the actual/potential infinite distinction or its later substitutes.
+\end{quote}
+
+
+
+\section{Gloss}
+If a subject $a$ has a uniform calidity of 4 degrees, then the producitivty of the whole is
+$4$, and the productivity of each half  is $\frac{1}{2}\cdot 4$. Thus the whole is twice as productive as one-half.
+Generally, if a quality is uniform in one-half a subject, say with degree $A$, then the productivity of that half
+is $\frac{1}{2}A$, which is one-half the degree $A$.
+
+If the first half of a subject has degree $A$ and the second half has degree $B$,
+then the whole subject has degree 
+$\frac{1}{2}A+\frac{1}{2}B$. 
+
+On the one hand, if every part of a subject has degree $A$ then the whole subject has degree $A$; in particular,
+the first half has degree $A$ and the second half has degree $A$, so the whole subject has degree
+$\frac{1}{2}A+\frac{1}{2}A$, and each part contributes $\frac{1}{2}A$ to the denomination of the whole subject (and thus each is as productive
+as the other). On the other hand, if 
+one half of a subject has degree $A$ and the second half has degree $0$, then the whole subject has degree
+$\frac{1}{2}A+\frac{1}{2}0=\frac{1}{2}A$.
+
+To say that ``it denominates the whole only half as much as it denominates the half through which it is extended, and it denominates
+the latter by its own degree'' means that the half has degree $A$ (and thus is denominated with its own degree $A$), while
+its contribution to the denomination of the whole subject is $\frac{1}{2}A$.
+
+If the quality occurs solely in a quarter of the subject, say with degree $A$, then that quarter is denominated with degree $A$ (we say that that
+quarter has degree $A$), while the contribution of this quarter to the denomination of the whole subject is $\frac{1}{4}A$.
+
+But, for example, we say that a ball is hot even if not every part of it is hot, and sometimes we follow the practice of denominating something
+according to its most intense part: thus, if one side of a ball had degree $1$ and the other side had degree $2$, we would denominate
+the ball with degree $2$. Swineshead says that if we follow this practice then when 
+the first half of a subject had a certain degree, say $A$, and the next fourth had degree $2A$, and the next
+eighth had degree $3A$, then the whole subject would have infinite intensity (at least if there is not a contrary quality of
+coldness present in the subject that might cancel out the quality of hotness), because there are parts with arbitrarily
+great intensity. Swineshead rejects that in fact the subject has infinite intensity. The fourth proportional part
+has degree $4A$,
+so the fourth proportional part is two times as intense as the second proportional part, while its subject is 
+one-quarter the subject of the second proportional part (the $n$th proportional part is $\frac{1}{2^n}$ of the whole subject). 
+The productivity of a part is the product of what proportion it is of the whole and its intensity, so the productivty of the second proportional part
+is $\frac{1}{4}\cdot 2A=\frac{A}{2}$, and the productivity of the fourth proportional part is $\frac{1}{16}\cdot 4A=\frac{A}{4}$, and indeed
+the fourth proportional part is one-half as productive as the second proportional part. 
+
+Counterfactually, Swineshead says that if the intensity of the fourth proportional part were eight times the intensity of the first proportional part,
+its productivity would be $\frac{1}{16}\cdot 8A=\frac{A}{2}$, thus
+ it would be as productive as the second proportional part, and thus its actual productivity is half of this counterfactual productivity.
+The producitvity of the first proportional part is
+$\frac{1}{2}\cdot A$, and the fourth proportional part is half as producitivty as the first proportional part, while the counterfactual
+producitivty of the fourth proportional part is equal to this producitivity. As well,  
+
+``it is extended in such a way that the infinite quality produces with respect to that subject an infinitely small quantity'':
+the productivity of the $n$th proportional part is $\frac{n}{2^n}$, and it is asserted that this is
+arbitrarily small. That this is true is now argued: the productiveness of the fourth proportional part
+is $\frac{4}{2^4}=\frac{1}{4}$ and the productiveness of the second proportional part is $\frac{2}{2^2}=\frac{1}{2}$,
+so the fourth proportional part is one-half as productive as the second proportional part. 
+It is then asserted that the productiveness of any proportional part is less than the productiveness of any preceding
+proportional part, except for the second proportional part which is just as productive as the first proportional part.
+Indeed it is not asserted that the productiveness tends to $0$, merely that it becomes smaller, but
+it would be unconventional to talk about something tending from above to a nonzero value.
+
+
+
+
+
+
+
+
+
+\section{Conclusion}
+Duhem \cite[pp.~393, 540--543]{duhem} cites instances of this series in  Nicole Oresme's {\em De difformitate qualitatum} and Alvarus Thomas's {\em Liber de triplici motu};
+for Oresme's summation of the series see Clagett \cite[p.~366]{clagett1959}, \cite[pp.~290, 297--302]{singleton} and for Thomas's summation of the series see 
+Wieleitner \cite{wieleitner}.
+Clagett \cite[pp.~495-510]{clagett1968} discusses both Oresme and Thomas,
+and mentions the appearance
+of this series in one copy of the anonymous fourteenth-century tract {\em A est unum calidum}, which he suggests was written by the Benedictine John Bode.
+Later, the series occurs
+in Proposition XIV of Jacob Bernoulli's 1689 {\em  Positiones arithmeticae de seriebus infinitis} \cite[pp.~52--54]{bernoulli}.
+
+
+Maier \cite[pp.~127--128]{maierI}, and \cite[pp.~381--399]{ausgehendesI}: Maier dates the {\em Liber calculationum} to after 1344 and before 1352, because
+Question 2 is cited in a {\em disputatio} of Jean de Casale in Bologna in 1352. 
+
+Celeyrette \cite[p.~61]{celeyrette}
+
+Tanay \cite[p.~232]{tanay}
+
+Juschkewitsch \cite[pp.~402--404]{juschkewitsch}
+
+
+
+
+The publication history of Swineshead's {\em Liber calculation} is detailed in
+\cite[p.~94]{maclean}
+
+Petrarch and later Renaissance criticism of  the Oxford Calculators \cite[p.~14]{boitani}
+
+
+
+
+\section*{Acknowledgments}
+The recension of the Latin text from Swinehead's {\em Liber calculationum} is by Edith Dudley Sylla.
+
+\bibliographystyle{amsplain}
+\bibliography{swineshead}
+
+\end{document}

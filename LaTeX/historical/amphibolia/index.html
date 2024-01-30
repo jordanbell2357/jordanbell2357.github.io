@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jordan Bell" />
+  <meta name="dcterms.date" content="2017-03-04" />
+  <title>Amphibolia</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Amphibolia</h1>
+<p class="author">Jordan Bell</p>
+<p class="date">March 4, 2017</p>
+</header>
+<p>Kneale and Kneale <span class="citation" data-cites="kneale">(<a href="#ref-kneale" role="doc-biblioref">Kneale and Kneale 1962, 224</a>)</span>:</p>
+<blockquote>
+<p>But in literary history, as contrasted with archaeology, the forays of enthusiasts do not destroy the evidence. On the contrary, they may provide the stimulus to research by which their own errors can be corrected. And so iit has proved in this case. For it is now established that apart from the printed texts there exist scores of manuscript treatises on logic from the twelfth and later centuries. Until these have all been edited, or at least analysed and described, by experts in medieval studies, there can be no hope of determining correctly the various strata of the great deposit.</p>
+</blockquote>
+<h1 id="plato">Plato</h1>
+<p>Plural predication in Plato, <span><em>Hippias Major</em></span> 300d–e <span class="citation" data-cites="hippias">(<a href="#ref-hippias" role="doc-biblioref">Waterfield 2005b, 259</a>)</span>:</p>
+<blockquote>
+<p>Hippias: You’ll have finer knowledge than anyone whether or not I’m playing games, Socrates, when you try to describe these notions of yours and are shown to be talking nonsense. It’s quite impossible – you’ll never find an attribute which neither you nor I have, but which both of us have.</p>
+<p>Socrates: Are you sure, Hippias? I suppose you’ve got a point, but <span><em>I</em></span> don’t understand. Let me explain more clearly what I’m getting at: it seems to me that both of us together may possess as an attribute something which neither I have as an attribute nor am (and neither are you); and, to put it the other way round, that neither of us, as individuals, may be something which both of us together have as an attribute.</p>
+</blockquote>
+<p>Subsequently, Socrates ironically says the following, 301d–e <span class="citation" data-cites="hippias">(<a href="#ref-hippias" role="doc-biblioref">Waterfield 2005b, 260</a>)</span>:</p>
+<blockquote>
+<p>You see, before you spoke, my friend, we were so inane as to believe that <span><em>each</em></span> of us – you and I – is one, but that both of us together, being two not one, are not what each individual is. See how stupid we were! But now we know better: you’ve explained that if both together are two, then each individual must be two as well; and if each individual is one, both must be one as well.</p>
+</blockquote>
+<p>Hippias eventually agrees with the following statement of Socrates, 302b <span class="citation" data-cites="hippias">(<a href="#ref-hippias" role="doc-biblioref">Waterfield 2005b, 261</a>)</span>:</p>
+<blockquote>
+<p>There <span><em>can</em></span>, then, contrary to your recent assertion, be no absolute necessity that each of us is what both are, and vice versa.</p>
+</blockquote>
+<p>Alcinous, <span><em>Didaskalikos</em></span> 6.9 <span class="citation" data-cites="alcinous">(<a href="#ref-alcinous" role="doc-biblioref">Dillon 1996, 12</a>)</span>:</p>
+<blockquote>
+<p>As for the practice of sophisms, we will find that sketched out by Plato in the <span><em>Euthydemus</em></span>, if we pay close attention to that book. We will find indicated in it, then, which sophisms are dependent upon words, and which are dependent upon facts, and the solutions to them.</p>
+</blockquote>
+<p>sophisms: sof’ismata</p>
+<p><span><em>Euthydemus</em></span> 298e <span class="citation" data-cites="euthydemus">(<a href="#ref-euthydemus" role="doc-biblioref">Waterfield 2005a</a>)</span>.</p>
+<p>Called <span><em>sophism</em></span> by Aristotle in <span><em>Topics</em></span> VIII.11, 162a14</p>
+<p><span><em>Theaetetus</em></span> 154c <span class="citation" data-cites="theaetetus">(<a href="#ref-theaetetus" role="doc-biblioref">Cornford 2003, 41</a>)</span>: Socrates says, “When you compare six dice with four, we say that the six are more than the four or half as many again; while if you compare them with twelve, the six are fewer–only half as many–and one cannot say anything else. Or do you think you can?” The point here is that without changing, the six dice are both more and fewer.</p>
+<p>Aesopica 421, the sailor and his son</p>
+<p><span><em>Dissoi Logoi</em></span> V.3–4 <span class="citation" data-cites="dissoilogoi">(<a href="#ref-dissoilogoi" role="doc-biblioref">Sprague 1968, 163</a>)</span>:</p>
+<blockquote>
+<p>And, furthermore, the same thing is larger and smaller and more and less and heavier and lighter. Thus all things are the same. A talent is heavier than a mina and lighter than two talents; therefore the same thing is both heavier and lighter.</p>
+</blockquote>
+<p>V.15 <span class="citation" data-cites="dissoilogoi">(<a href="#ref-dissoilogoi" role="doc-biblioref">Sprague 1968, 163–65</a>)</span>:</p>
+<blockquote>
+<p>With respect to the assertion that the same man both is and is not, I put the following question: “Does he exist with respect to some particular thing, or just in general?” Then if someone denies that the man exists, he is mistaken, because he is treating <span><span class="math inline">\langle</span></span>the particular and<span class="math inline">{\rangle}</span> universal senses as being the same. Because everything exists in <span><em>some</em></span> sense.</p>
+</blockquote>
+<p>Plato, <span><em>Parmenides</em></span> 156c–157a</p>
+<p>Aulus Gellius, <span><em>Attic Nights</em></span> 18, 13.7–8 <span class="citation" data-cites="diogenes">(<a href="#ref-diogenes" role="doc-biblioref">Hard 2012, 32</a>)</span>:</p>
+<blockquote>
+<p>It is pleasant to record how wittily Diogenes responded to a sophism of the kind that I mentioned above, when a dialectician from Plato’s school put it forward in the hope of making fun of him. For when the dialectician had asked, ‘That which I am, you are not?’ and Diogenes had assented, and he had then added, ‘Now I am a human being’, and Diogenes had assented to that too, he concluded: ‘So it follows that you are not a human being.’ ‘Now that’, replied Diogenes, ‘is false, but if you want it to become true, start off with me.’</p>
+</blockquote>
+<h1 id="aristotle">Aristotle</h1>
+<p><span><em>kategorein</em></span> is taken by Aristotle from law-courts, meaning “to accuse someone of something”, “to impute something to someone”. Imputation is in accusative, imputee in genitive.</p>
+<p><span><em>Categories</em></span> 2, 1a16 <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 3</a>)</span>:</p>
+<blockquote>
+<p>Of things that are said, some involve combination while others are said without combination. Examples of those involving combination are ‘man runs’, ‘man wins’; and of those without combination ‘man’, ‘ox’, ‘runs’, ‘wins’.</p>
+</blockquote>
+<p><span><em>Categories</em></span> 3, 1b10 <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 4</a>)</span>:</p>
+<blockquote>
+<p>Whenever one thing is predicated of another as of a subject, all things said of what is predicated will be said of the subject also. For example, man is predicated of the individual man, and animal of man; so animal will be predicated of the individual man also – for the individual man is both a man and an animal.</p>
+</blockquote>
+<p><span><em>Categories</em></span> 4, 1b25 <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 5</a>)</span>:</p>
+<blockquote>
+<p>Of things said without any combination, each signifies either substance or qualification or a relative or where or when or being-in-a-position or having or doing or being-affected.</p>
+</blockquote>
+<p><span><em>Categories</em></span> 5, 2a11 <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 5–6</a>)</span>:</p>
+<blockquote>
+<p>A <span><em>substance</em></span> – that which is called a substance most strictly, primarily, and most of all – is that which is neither said of a subject nor in a subject, e.g. the individual man or the individual horse. The species in which the things primarily called substance are, are called <span><em>secondary substances</em></span>, as also are the genera of these species. For example, the individual man belongs in a species, man, and animal is a genus of the species; so these – both man and animal – are called secondary substances.</p>
+</blockquote>
+<p><span><em>Categories</em></span> 5, 2b29 <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 7–8</a>)</span>:</p>
+<blockquote>
+<p>For if one is to say of the individual man what he is, it will be in place to give the species or the genus (though more informative to give man than animal); but to give any of the other things would be out of place – for example, to say ‘white’ or ‘runs’ or anything like that. So it is reasonable that these should be the only things called substances.</p>
+</blockquote>
+<p><span><em>On Interpretation</em></span> 7, 17a38 <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 47–48</a>)</span>:</p>
+<blockquote>
+<p>Now of actual things some are universal, others particular (I call universal that which is by its nature predicated of a number of things, and particular that which is not; man, for instance, is a universal, Callias a particular.) So it must sometimes be of a universal that one states that something holds or does not, sometimes of a particular. Now if one states universally of a universal that something holds or does not, there will be contrary statements (examples of what I mean by ‘stating universally of a universal’ are ‘every man is white’ and ‘no man is white’). But when one states something of a universal but not universally, the statements are not contrary (though what is being revealed may be contrary). Examples of what I mean by ‘stating of a universal not universally’ are ‘a man is white’ and ‘a man is not white’; man is a universal but it is not used universally in the statement (for ‘every’ does not signify the universal but that it is taken universally). It is not true to predicate a universal universally of a subject, for there cannot be an affirmation in which a universal is predicated universally of a subject, for instance ‘every man is every animal’.</p>
+</blockquote>
+<p>10, 20a16: “Is Socrates wise? No. Then Socrates is not-wise.” vs. “Is every man wise? No. Then every man is not-wise.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 56</a>)</span></p>
+<p>Aristotle, <span><em>De sophisticis elenchis</em></span> IV, 165b <span class="citation" data-cites="pickard-cambridge">(<a href="#ref-pickard-cambridge" role="doc-biblioref">Pickard-Cambridge 1928</a>)</span>:</p>
+<blockquote>
+<p>There are two styles of refutation: for some depend on the language used, while some are independent of language. Those ways of producing the false appearance of an argument which depend on language are six in number: they are ambiguity, amphiboly, combination, division of words, accent, form of expression.</p>
+</blockquote>
+<p>Boethius <span class="citation" data-cites="ALVI1to3">(<a href="#ref-ALVI1to3" role="doc-biblioref">Dod 1975, 8</a>)</span>:</p>
+<blockquote>
+<p>Modi autem sunt arguendi quidem quo; nam alii quidem sunt secundum dictionem, alii vero extra dictionem. Sunt autem ea quidem quae secundum dictionem faciunt fantasiam sex numero; sunt autem haec aequivocatio, amphibolia, compositio, divisio, accentus, figura dictionis.</p>
+</blockquote>
+<p>IV, 165b <span class="citation" data-cites="pickard-cambridge">(<a href="#ref-pickard-cambridge" role="doc-biblioref">Pickard-Cambridge 1928</a>)</span>:</p>
+<blockquote>
+<p>Arguments such as the following depend upon ambiguity. ‘Those learn who know: for it is those who know their letters who learn the letters dictated to them’. For to ‘learn’ is ambiguous; it signifies both ‘to understand’ by the use of knowledge, and also ‘to acquire knowledge’.</p>
+</blockquote>
+<p>IV, 166a <span class="citation" data-cites="pickard-cambridge">(<a href="#ref-pickard-cambridge" role="doc-biblioref">Pickard-Cambridge 1928</a>)</span>:</p>
+<blockquote>
+<p>Examples such as the following depend upon amphiboly: ‘I wish that you the enemy may capture’. Also the thesis, ‘There must be knowledge of what one knows’: for it is possible by this phrase to mean that knowledge belongs to both the knower and the known. Also, ‘There must be sight of what one sees: one sees the pillar: <span><em>ergo</em></span> the pillar has sight’. Also, ‘What you profess to-be, that you profess to-be: you profess a stone to-be: <span><em>ergo</em></span> you profess-to-be a stone’. Also, ‘Speaking of the silent is possible’: for ‘speaking of the silent’ also has a double meaning: it may mean that the speaker is silent or that the things of which he speaks are so.<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> There are three varieties of these ambiguities and amphibolies: (1) When either the expression or the name has strictly more than one meaning, e.g. &gt;aet’os and the ‘dog’; (2) when by custom we use them so; (3) when words that have a simple sense taken alone have more than one meaning in combination; e.g. ‘knowing letters’. For each word, both ‘knowing’ and ‘letters’, possibly has a single meaning: but both together have more than one–either that the letters themselves have knowledge or that someone else has it of them.</p>
+</blockquote>
+<p>Boethius <span class="citation" data-cites="ALVI1to3">(<a href="#ref-ALVI1to3" role="doc-biblioref">Dod 1975, 9</a>)</span>:</p>
+<blockquote>
+<p>Secundum amphiboliam autem tales: velle accipere me pugnantes, et ‘putas quod quis scit hoc scit?’ Nam et scientem et scitum contingit ut scientem significari hac oratione. Et ‘putas quod videt quis, hoc videt? Videt autem columnam, quare videt columna’. Et ‘putas quod tu dicis esse, hoc tu dicis esse? Dicis autem lapidem esse; tu ergo dicis lapis esse’. Et ‘putas est tacentem dicere?’ Duplex enim est tacentem dicere, et hunc dicentem tacere et quare dicuntur. Sunt autem tres modi secundum aequivocationem et amphiboliam: unus quidem quando vel oratio vel nomen principaliter significat plura, ut piscis et canis; alius autem quando soliti sumus sic dicere; tertius vero quando compositum plura significat, separatum vero simpliciter, ut ‘scit saeculum’; nam utrumque, si contingit, unum quid significat, et scire et saeculum; ambo autem plura, aut saeculum ipsum scientiam habere aut saeculi alium.</p>
+</blockquote>
+<p>IV, 166a <span class="citation" data-cites="pickard-cambridge">(<a href="#ref-pickard-cambridge" role="doc-biblioref">Pickard-Cambridge 1928</a>)</span>:</p>
+<blockquote>
+<p>Upon the combination of words there depend instances such as the following: ‘A man can walk while sitting, and can write while not writing’. For the meaning is not the same if one divides the words and if one combines them in saying that ‘it is possible to walk-while-sitting’ [and write while not writing]. The same applies to the latter phrase, too, if one combines the words ‘to write-while-not-writing’: for then it means that he has the power to write and not to write at once; whereas if one does not combine them, it means that when he is not writing he has the power to write.</p>
+</blockquote>
+<p>combine: a man can walk-while-sitting, separately: a man while sitting has the power to walk.</p>
+<p>Boethius <span class="citation" data-cites="ALVI1to3">(<a href="#ref-ALVI1to3" role="doc-biblioref">Dod 1975, 9</a>)</span>:</p>
+<blockquote>
+<p>secundum compositionem autem huiusmodi, ut posse sedentem ambulare et non scribentem scribere. Non enim idem significat si dividens quis dicat et componens, quoniam possibile ‘sedentem ambulare’ et ‘non scribentem scribere’. Et hoc similiter si quis componat ‘non scribentem scribere’; significat enim quoniam habet potestatem ut non scribens scribat, si autem non componat, quoniam habet potestatem, quando non scribit, ut scribat.</p>
+</blockquote>
+<p>IV, 166a <span class="citation" data-cites="pickard-cambridge">(<a href="#ref-pickard-cambridge" role="doc-biblioref">Pickard-Cambridge 1928</a>)</span>:</p>
+<blockquote>
+<p>Upon division depend the propositions that 5 is 2 and 3, and odd, and that the greater is equal: for it is that amount and more besides. For the same phrase would not be thought always to have the same meaning when divided and when combined, e.g. ‘I made thee a slave once a free man’, and ‘God-like Achilles left fifty a hundred men’.</p>
+</blockquote>
+<p>Boethius <span class="citation" data-cites="ALVI1to3">(<a href="#ref-ALVI1to3" role="doc-biblioref">Dod 1975, 10</a>)</span>:</p>
+<blockquote>
+<p>Secundum divisionem vero, quoniam quinque sunt et duo et tria, et paria et imparia, et maius aequale; tantundem enim maius et adhuc amplius. Nam eadem oratio divisa et composita non idem semper significare videbitur, ut ‘ego te posui servum entem liberum’ et ‘quinquaginta virorum centum reliquit divus Achilles’.</p>
+</blockquote>
+<p>IV, 166b <span class="citation" data-cites="pickard-cambridge">(<a href="#ref-pickard-cambridge" role="doc-biblioref">Pickard-Cambridge 1928</a>)</span>:</p>
+<blockquote>
+<p>Of fallacies, on the other hand, that are independent of language there are seven kinds: (1) that which depends upon Accident: (2) the use of an expression absolutely or not absolutely but with some qualification of respect or place, or time, or relation: (3) that which depends upon ignorance of what ‘refutation’ is: (4) that which depends upon the consequent: (5) that which depends upon assuming the original conclusion: (6) stating as cause what is not the cause: (7) the making of more than one question into one.</p>
+</blockquote>
+<p>Boethius, <span class="citation" data-cites="ALVI1to3">(<a href="#ref-ALVI1to3" role="doc-biblioref">Dod 1975, 10–11</a>)</span>:</p>
+<blockquote>
+<p>Ergo secundum dictionem redargutiones ex his locis sunt; eorum vero qui extra dictionem sunt paralogismorum species sunt septem; una quidem secundum accidens, secunda autem in eo quod simpliciter vel non simpliciter sed quo aut ubi aut quando aut ad aliquid dicitur, tertia autem secundum elenchi ignorantiam, quarta vero secundum consequens, quinta autem secundum quod in principio est sumere, sexta quod non causa est ut causam ponere, septima vero plures interrogationes unam facere.</p>
+</blockquote>
+<p>V, 166b <span class="citation" data-cites="pickard-cambridge">(<a href="#ref-pickard-cambridge" role="doc-biblioref">Pickard-Cambridge 1928</a>)</span>:</p>
+<blockquote>
+<p>Fallacies, then, that depend on Accident occur whenever any attribute is claimed to belong in like manner to a thing and to its accident. For since the same thing has many accidents there is no necessity that all the same attributes should belong to all of a thing’s predicates and to their subject as well. Thus (e.g.), ‘If Coriscus be different from “man”, he is different from himself: for he is a man’: or ‘If he be different from Socrates, and Socrates be a man, then’, they say, ‘he has admitted that Coriscus is different from a man, because it so happens (<span><em>accidit</em></span>) that the person from whom he said that he (Coriscus) is different is a man’.</p>
+</blockquote>
+<p>V, 166b–167a <span class="citation" data-cites="pickard-cambridge">(<a href="#ref-pickard-cambridge" role="doc-biblioref">Pickard-Cambridge 1928</a>)</span>:</p>
+<blockquote>
+<p>Those that depend on whether an expression is used absolutely or in a certain respect and not strictly, occur whenever an expression used in a particular sense is taken as though it were used absolutely, e.g. in the argument ‘If what is not is the object of an opinion, then what is not is’: for it is not the same thing ‘to be <span class="math inline">x</span>’ and ‘to be’’ absolutely. Or again, ‘What is, is not, if it is not a particular kind of being, e.g. if it is not a man.’ For it is not the same thing ‘not to be <span class="math inline">x</span>’ and ‘not to be’ at all: it looks as if it were, because of the closeness of the expression, i.e. because ‘to be <span class="math inline">x</span>’ is but little different from ‘to be’, and ‘not to be <span class="math inline">x</span>’ from ‘not to be’. Likewise also with any argument that turns upon the point whether an expression is used in a certain respect or used absolutely. Thus e.g. ‘Suppose an Indian to be black all over, but white in respect of his teeth; then he is both white and not white.’ Or if both characters belong in a particular respect, then, they say, ‘contrary attributes belong at the same time’. This kind of thing is in some cases easily seen by any one, e.g. suppose a man were to secure the statement that the Ethiopian is black, and were then to ask whether he is white in respect of his teeth; and then, if he be white in that respect, were to suppose at the conclusion of his questions that therefore he had proved dialectically that he was both white and not white. But in some cases it often passes undetected, viz. in all cases where, whenever a statement is made of something in a certain respect, it would be generally thought that the absolute statement follows as well; and also in all cases where it is not easy to see which of the attributes ought to be rendered strictly. A situation of this kind arises, where both the opposite attributes belong alike: for then there is general support for the view that one must agree absolutely to the assertion of both, or of neither: e.g. if a thing is half white and half black, is it white or black?</p>
+</blockquote>
+<p><span><em>Prior Analytics</em></span> <span class="citation" data-cites="strikerI">(<a href="#ref-strikerI" role="doc-biblioref">Striker 2009</a>)</span>: “that which depends upon the consequent”.</p>
+<h1 id="stoics">Stoics</h1>
+<p>Atherton <span class="citation" data-cites="atherton">(<a href="#ref-atherton" role="doc-biblioref">Atherton 1993</a>)</span></p>
+<p>Diogenes Laertius 7.62, verbal ambiguity</p>
+<p>Galen, <span><em>De sophismatis</em></span> <span class="citation" data-cites="galen20">(<a href="#ref-galen20" role="doc-biblioref">Kühn 1833, 582–98</a>)</span>. <span><em>De sophismatis</em></span> 4 <span class="citation" data-cites="LS1">(<a href="#ref-LS1" role="doc-biblioref">Long and Sedley 1987, 228</a>)</span>:</p>
+<blockquote>
+<p>We must take up their actual divisions of the so-called ‘ambiguities’. The more refined (Stoics) list eight. …. Seventh is the one which fails to indicate what signifying element is construed with what, as in ‘Fifty men having a hundred did Achilles leave.’</p>
+</blockquote>
+<p>Galen, <span><em>De Captionibus</em></span> 1 <span class="citation" data-cites="captionibus">(<a href="#ref-captionibus" role="doc-biblioref">Edlow 1977, 31:89</a>*)</span>:</p>
+<blockquote>
+<p>We have a case of Amphiboly when there is ambiguity in the sentence on account of the sentence as such: for example, in ‘g’enoito katalabe<span>ĩ</span>n t‘on ẽm’e’ (‘May it happen that I catch the wild boar,’ ‘May it happen that the wild boar catches me’). There none of the words is ambiguous. The sentence as such by itself, however, signifies both the catching and the being caught by [the wild board].</p>
+</blockquote>
+<h1 id="rhetoric">Rhetoric</h1>
+<p><span><em>Rhetorica ad Herennium</em></span> 2.11.16 <span class="citation" data-cites="LCL403">(<a href="#ref-LCL403" role="doc-biblioref">Caplan 1954, 85–87</a>)</span>:</p>
+<blockquote>
+<p>If a text is regarded as ambiguous, because it can be interpreted in two or more meanings, the treatment is as follows: first we must examine whether it is indeed ambiguous; then we must show how it would have been written if the writer had wished it to have the meaning which our adversaries give to it; next, that our interpretation is practicable, and practicable in conformity with the Honourable and the Right, with Statute Law, Legal Custom, the Law of Nature, or Equity; of our adversaries’ interpretation the opposite is true; and the text is not ambiguous since one well understands which is the true sense. There are some who think that for the development of this kind of cause a knowledge of amphibolies as taught by the dialecticians is highly useful. I, however, believe that this knowledge is of no help at all, and is, I may even say, a most serious hindrance. In fact these writers are on the lookout for all amphibolies, even for such as yield no sense at all in one of the two interpretations. Accordingly, when some one else speaks, they are his annoying hecklers, and when he writes, they are his boring and also misty interpreters. And when they themselves speak, wishing to do so cautiously and deftly, they prove to be utterly inarticulate. Thus, in their fear to utter some ambiguity while speaking, they cannot even pronounce their own names.</p>
+</blockquote>
+<p>Cicero, <span><em>Topica</em></span> 28 <span class="citation" data-cites="reinhardt">(<a href="#ref-reinhardt" role="doc-biblioref">Reinhardt 2007, 129</a>)</span>:</p>
+<blockquote>
+<p>Further, some definitions consist of partitions, others of divisions; of partitions when the subject at issue is, as it were, dismembered into its parts, e.g. if one were to say the civil law was that which consists of laws, decrees of the senate, previous decisions, the authority of the jurisconsults, the edicts of the magistrates, custom, and equity. A definition based on division, on the other hand, comprises all species which are subordinate to the species which is being defined, in the following way: A legal transfer of property is either transfer with legal obligation or cession at law, of things which can be bought, between parties who can do this in accordance with the civil law.</p>
+</blockquote>
+<p>partitions: <span><em>partitionum</em></span>, division: <span><em>divisionum</em></span>, dismembered: <span><em>discerpitur</em></span>, parts: <span><em>membra</em></span>, consists: <span><em>consistat</em></span>, species: <span><em>forma</em></span>, comprises: <span><em>complectitur</em></span>.</p>
+<p>Cicero, <span><em>Topica</em></span> 31 <span class="citation" data-cites="reinhardt">(<a href="#ref-reinhardt" role="doc-biblioref">Reinhardt 2007, 131</a>)</span>:</p>
+<blockquote>
+<p>They define genus and species in the following way: A genus is a notion applying to several different things; a species is a notion whose difference can be referred back to the genus as its source, as it were. I call notion what the Greeks sometimes call <span><em>ennoia</em></span> and sometimes <span><em>prolepsis</em></span>. This is an ingrained grasp of something, developed through previous perceptions, which requires articulation. Thus species are those things into which a genus may be divided without leaving out anything, e.g. if one were to divide ‘the law’ into the sum of all legal statutes, custom, and equity.</p>
+</blockquote>
+<p>genus: <span><em>genus</em></span>, species: <span><em>formam</em></span>, notion=<span><em>notio</em></span>, divided: <span><em>dividitur</em></span>.</p>
+<p>Cicero, <span><em>Topica</em></span> 33 <span class="citation" data-cites="reinhardt">(<a href="#ref-reinhardt" role="doc-biblioref">Reinhardt 2007, 133</a>)</span>:</p>
+<blockquote>
+<p>Partition is to be used sometimes in such a way that you do not leave out any part; e.g. if you want to make a partition of tutelage, you would act ignorantly if you left out any part. But if you make a partition of stipulations and legal formulae, it is not a fault to leave out something in such a boundless area. In a division on the other hand the same thing is a fault. For there is a definite number of species which are subordinate to each genus; whereas the spread of parts is often more indefinite, in the way several streams come from a single source.</p>
+</blockquote>
+<p>Quintilian, <span><em>Institutio Oratoria</em></span> 7.9.4 <span class="citation" data-cites="LCL126">(<a href="#ref-LCL126" role="doc-biblioref">Russell 2002, 283</a>)</span>:</p>
+<blockquote>
+<p>Groups of words give more scope for ambiguity. It occurs (a) because of cases:</p>
+<blockquote>
+<p>I say that you, O child of Aeacus, the Romans can defeat;</p>
+</blockquote>
+<p>(b) because of the arrangement, when it is doubtful what refers to what, especially when there is a word in the middle of a sentence which may be taken either with what precedes or with what follows. Thus in Vergil’s line about Troilus: <span><em>lora tenens tamen</em></span>, it may be disputed whether he</p>
+</blockquote>
+<p>Ennius, <span><em>Annals</em></span></p>
+<p><span><em>Aeneid</em></span> I.477.</p>
+<p><span><em>Institutio Oratorio</em></span> 7.9.6, 7.9.10, 8.2.16, accusative and infinite.</p>
+<p>Aelius Theon, <span><em>Progymnasmata</em></span> 5, “On narrative”, 81–82 <span class="citation" data-cites="progymnasmata">(<a href="#ref-progymnasmata" role="doc-biblioref">Kennedy 2003, 31</a>)</span>:</p>
+<blockquote>
+<p>What is called an “amphiboly” by the dialecticians makes the expression obscure because of the confusion between an undivided and divided word, as in the phrase “Let an <span><em>aulêtris</em></span> (“flute-girl”) that has fallen be ‘public’.” It means one thing when the word <span><em>aulêtris</em></span> is taken as a whole and undivided, another when divided: “Let an <span><em>aulê tris</em></span> (“a hall thrice”) fallen be public property.” Furthermore, (the expression is ambiguous) when it is unclear what some part of a word belongs to; for example, Heracles fights <span><em>oukentaurois</em></span>. This has two meanings, that Heracles does not at all (<span><em>oukhi</em></span>) fight with centaurs or that he fights not among (<span><em>ouk en</em></span>) bulls. Similarly, an expression becomes unclear when it is not evident to what some signifying portion refers; for example (<span><em>Iliad</em></span> 2.270), “And they though distressed at him sweetly laughed.” For it is ambiguous whether they are distressed at Thersites, which is false, or at the launching of the ships. And again (<span><em>Iliad</em></span> 2.547–48), “The people of great Erechtheus, whom once Athene / Nurtured, Zeus’ daughter, and the grain-giving land bore.” It is unclear whether he is saying the people or Erechtheus were nurtured by Athene and born from the land.</p>
+</blockquote>
+<p>‘public’: regarded as a prostitute</p>
+<p>Aelius Theon, <span><em>Progymnasmata</em></span> 12, “On law”, 129 <span class="citation" data-cites="progymnasmata">(<a href="#ref-progymnasmata" role="doc-biblioref">Kennedy 2003, 62</a>)</span>:</p>
+<blockquote>
+<p>Since our discussion now is about refutation and confirmation of a law, and especially laws that are being introduced, we must describe this. When laws are being introduced we either speak against them and rebut them or we speak for them and supply supporting evidence. After the prooemion we rebut from the following topics: from what is unclear, impossible, unnecessary, contradictory, unjust, unworthy, inexpedient, shameful.</p>
+<p>Some lack of clarity occurs from pronunciation, which certain authorities call “from prosody,” some from the meaning of a word, some from homonymy, some from polyonymy, which others call synonymy, some from syntax, some from compounding and dividing words, some from pleonasm, some from ellipsis, some from inconsistency.</p>
+</blockquote>
+<p>Aelius Theon, <span><em>Progymnasmata</em></span> 12, 130 <span class="citation" data-cites="progymnasmata">(<a href="#ref-progymnasmata" role="doc-biblioref">Kennedy 2003, 63</a>)</span>:</p>
+<blockquote>
+<p>And in syntax; for example, when Pittacus said “to share, father and mother, equally”; for the statement is ambiguous as to whether the children are to share the possessions of the parents or the parents those of the children. And further, when a word in the middle of a sentence creates a different meaning when taken with what precedes or what follows it; for example, “Let a general victorious in war dedicate a statue of Ares, golden with a spear.” Is a golden statue or golden spear meant?</p>
+<p>Concerning combining and dividing–or as some say concerning confusion between the divided and the undivided–; for example, the law ordering brothers and children to come to the settlement (of an estate). If this is taken as “divided” it means that first the brother, and if he is not alive, then the children are to be summoned, but it can be combined to mean they are to be called at the same time. Or again, “The false witness taken three times 1000 (drachmas) let him give”; for either it means that one detected thrice in giving false evidence should pay a 1000 or that if detected once he should give 3000 drachmas.</p>
+</blockquote>
+<h1 id="grammarians">Grammarians</h1>
+<p><span><em>Tekhne Grammatike</em></span> XI <span class="citation" data-cites="tekhne">(<a href="#ref-tekhne" role="doc-biblioref">Kemp 1987, 176</a>)</span>:</p>
+<blockquote>
+<p>A word is the smallest part of a properly constructed sentence.</p>
+<p>A sentence is a combination of words in prose [and poetry] conveying a meaning which is complete in itself.</p>
+<p>There are eight parts of the sentence: noun, verb, participle, article, pronoun, preposition, adverb, conjunction. For the appellative is a subspecies of the noun.</p>
+</blockquote>
+<p><span><em>Tekhne Grammatike</em></span> XII <span class="citation" data-cites="tekhne">(<a href="#ref-tekhne" role="doc-biblioref">Kemp 1987, 176</a>)</span>:</p>
+<blockquote>
+<p>A noun is a part of the sentence which is subject to case inflection, and signifies something corporeal or non-corporeal; by corporeal I mean something like ‘a stone’, and by non-corporeal something like ‘education’; it can be used in a general way, as in ‘man’, ‘horse’, and in a specific way, as in ‘Socrates’.</p>
+</blockquote>
+<p><span><em>Tekhne Grammatike</em></span> XII <span class="citation" data-cites="tekhne">(<a href="#ref-tekhne" role="doc-biblioref">Kemp 1987, 178–79</a>)</span>:</p>
+<blockquote>
+<p>There are the following subtypes of the noun (these also are referred to as ‘species’): proper, appellative, attached, relative, quasi-relative, homonymous, synonymous, dionymous, eponymous, ethnic, interrogative, indefinite, anaphoric (also referred to by the names ‘similative’, ‘demonstrative’, and ‘correlative’), collective, distributive, inclusive, onomatopoeic, generic, specific, ordinal, absolute, participatory.</p>
+<p>1. A proper noun signifies substance that is individual, such as ‘Homer, Socrates’.</p>
+<p>2. An appellative noun signifies substance that is shared, such as ‘man, horse’.</p>
+<p>3. An attached noun is placed next to proper or appellative nouns alike, and conveys praise or blame. It is understood in three ways – as referring to the soul, to the body, or to externals; to the soul as in ‘temperate, licentious’; to the body as in ‘fast, slow’; to externals as in ‘rich, poor’.</p>
+<p>4. A relative noun is exemplified by ‘father, son, friend, right’ [opp. to ‘left’].</p>
+<p>5. A quasi-relative noun is exemplified by ‘night, day, death, life’.</p>
+<p>…</p>
+<p>12. An interrogative noun, also called ‘questioning’, is so called because it makes an enquiry, for example ‘who? what sort of? how much? how great?’</p>
+<p>13. An indefinite noun is one which conveys an opposite sense to that of the interrogative, for instance ‘whoever, whatever sort, however much, however great’.</p>
+<p>14. An anaphoric noun, also called ‘similative’, ‘demonstrative’, and ‘correlative’, is one which signifies a likeness; for instance ‘of such a kind, so much, so great’.</p>
+<p>15. A collective noun is a noun in the singular number which signifies a plurality, such as ‘people, chorus, crowd’.</p>
+<p>16. A distributive is a noun which, when two or more things are involved, refers to one of them, such as <span><em>hekateros</em></span> (each – of two), <span><em>hekastos</em></span> (each – of more than two). …</p>
+</blockquote>
+<p>Marius Plotius Sacerdos, <span><em>Artes</em></span> I.12, “De ceteris vitiis”, GLK 6.455:</p>
+<blockquote>
+<p>De amphibolia. Amphibolia est dictio ambigua dubiam faciens sensuum sententiam, ut ‘aut mixta rubent ubi lilia multa alba rosa’.</p>
+</blockquote>
+<p><span><em>Aeneid</em></span> XII.68: “or when white lilies blush mingled with many a rose”.</p>
+<p>Luhtala <span class="citation" data-cites="luhtala">(<a href="#ref-luhtala" role="doc-biblioref">Luhtala 2005, 107:73</a>)</span>:</p>
+<blockquote>
+<p>Ambiguity is a expression which renders an ambiguous sense, e.g., mixta rubent ubi lilia multa alba rosa.</p>
+</blockquote>
+<p>Servius, <span><em>In Vergilii Aeneidos Libros</em></span> <span class="citation" data-cites="serviusII">(<a href="#ref-serviusII" role="doc-biblioref">Thilo 1884, 582</a>)</span>:</p>
+<blockquote>
+<p>MIXTA RVBENT VBI LILIA MVLTA ALBA ROSA aut ubi multa alba lilia permixta rubent rosa, id est rosae coniunctione: naturaliter enim omnis candor vicinum in se trahit ruborem.</p>
+</blockquote>
+<p>Charisius, <span><em>Ars</em></span> 4.1.13, “De vitiis ceteris”, GLK 1.271 <span class="citation" data-cites="GLKI">(<a href="#ref-GLKI" role="doc-biblioref">Keil 1857, 271</a>)</span>:</p>
+<blockquote>
+<p>De amphibolia. Amphibolia est dictio sententiave dubiae significationis: dictio, ut vadatur Cato; sententia, ut</p>
+<blockquote>
+<p>‘aio te, Aeacida, Romanos vincere posse’.</p>
+</blockquote>
+<p>ambigua enim sors fuit ante eventum utrum Pyrrus a Romanis an Romani a Pyrro vinci possent. fit aliquando et in uno verbo * ut siquis se dicat hominem occidisse, cum appareat eum qui loquitur occisum non esse.</p>
+</blockquote>
+<p>Ennius, <span><em>Annals</em></span> VI.186.</p>
+<p>Diomedes, <span><em>Ars</em></span> II, “De vitiis orationis”, GLK 1.450:</p>
+<blockquote>
+<p>De amphibolia. Amphibolia est vitio compositionis in ambiguo posita sententia, ut</p>
+<blockquote>
+<p>aio te, Aeacida, Romanos vincere posse;</p>
+</blockquote>
+<p>item ‘certum est Antonium praecedere eloquentia Crassum’. hi enim duo sensus vitio ambiguitatis carent proprietate, cum sit incertum ab Aeacida Romanos vinci posse an a Romanis Aeacidam; similiter ab Antonio vinci Crassum eloquentia an <span><em>a</em></span> Crasso Antonium.</p>
+</blockquote>
+<p>is the son of Aeacus able to win the Romans or vice-versa, similarly does Antonius excel Crassus in eloquence or vice-versa.</p>
+<p>Aelius Donatus, <span><em>Ars maior</em></span> 3.3, “De ceteriis vitiis”, GLK 4.395:</p>
+<blockquote>
+<p>Amphibolia est ambiguitas dictionis, quae fit aut per casum accusativum, ut siquis dicat ‘audio secutorem retiarium superasse’; aut per commune verbum, ut siquis dicat ‘criminatur Cato’, ‘vadatur Tullius’ nec addat quem vel a quo; aut per distinctionem, ut ‘vidi statuam auream hastam tenentem’. Fit et per homonyma, ut siquis ‘aciem’ dicat et non addat oculorum aut exercitus aut ferri. Fit praeterea pluribus modis, quos percensere omnes, ne nimis longum sit, non oportet.</p>
+</blockquote>
+<p>Priscian, <span><em>Institutiones grammaticae</em></span></p>
+<p>Cassiodorus, <span><em>Expositio in Psalterium</em></span> XX.12:</p>
+<blockquote>
+<p>Quod schema dicitur amphibologia, id est dictio ambigua, dubiam faciens pendere sententiam.</p>
+</blockquote>
+<p>Isidore of Seville, <span><em>Etymologies</em></span> 1.34.13–14:</p>
+<blockquote>
+<p>amphibolia, ambigua dictio, quae fit aut per casum accusativum, ut illud responsum Apollinis ad Pyrrhum: ‘aio te Aeacida, Romanos vincere posse’. in quo non est certum, quem in ipso versu monstraverit esse victorem.</p>
+</blockquote>
+<p><span class="citation" data-cites="isidore">(<a href="#ref-isidore" role="doc-biblioref">Barney et al. 2006, 57</a>)</span>:</p>
+<blockquote>
+<p>13. Amphibolia is ambiguous speech that occurs with the accusative case, as in this answer of Apollo to Pyrrhus (Ennius, Annals 179):</p>
+<blockquote>
+<p><span><em>Aio <u>te</u>, Aeacida, <u>Romanos</u> vincere posse</em></span><br />
+(I say that you, scion of Aeacus, can conquer the Romans – or – I say that the Romans can conquer you, scion of Aeacus).</p>
+</blockquote>
+<p>In this verse it is not clear whom he has designated as the victor. 14. It can also occur due to a distinction that is not clear, as (Vergil, <span><em>Aen</em></span>. 1.263):</p>
+<blockquote>
+<p><span><em>Bellum ingens geret Italia</em></span><br />
+(Italy will wage an immense war – or – Immense Italy will wage war).</p>
+</blockquote>
+<p>The distinction is unclear, whether it is ‘immense war’ or ‘immense Italy.’</p>
+</blockquote>
+<h1 id="commentators">Commentators</h1>
+<p>Porphyry, <span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003</a>)</span>: explains the five words genus, difference, species, property, accident.</p>
+<p>Porphyry, <span><em>in Cat</em></span> 80.32–81.11 <span class="citation" data-cites="barnes">(<a href="#ref-barnes" role="doc-biblioref">Barnes 2007, 145</a>)</span>, on <span><em>Cat</em></span> 1b10–15:</p>
+<blockquote>
+<p>But how can that be true? After all, man is said of Socrates as of a subject, and of man is predicated not only animal but also species (for man is a species). But they won’t all be predicated of Socrates; rather, animal will be predicated of him but species will not–for Socrates isn’t a species.</p>
+</blockquote>
+<p>Boethius, <span><em>De divisione</em></span></p>
+<p>Boethius, <span><em>De topicis differentiis</em></span> II, 1189A–B <span class="citation" data-cites="topicis">(<a href="#ref-topicis" role="doc-biblioref">Stump 2004, 52</a>)</span>:</p>
+<blockquote>
+<p>One can take parts and whole into account not only in substances but also in mode, times, quantities, and place. What we call <span><em>always</em></span> is a temporal whole; what we call <span><em>sometimes</em></span> is a temporal part. Again, if something is put forth without qualification, it is a whole with regard to mode; if something is put forth with a qualification, it is a part with regard to mode. Similarly, if we talk about <span><em>everything</em></span>, we talk about a whole with regard to quantity; if we pick out <span><em>something</em></span> from quantity, we present a part of quantity. In the same way also with regard to place: that which is <span><em>everywhere</em></span> is a whole; what is <span><em>somewhere</em></span>, a part.</p>
+</blockquote>
+<p>cf. Aristotle, <span><em>Metaphysics</em></span> 1023b26–36.</p>
+<h1 id="scholastic-writers">Scholastic writers</h1>
+<p>Alexander de Villa Dei, <span><em>Doctrinale</em></span>, pars IV, capitulum XI, ll. 2399–2403 <span class="citation" data-cites="doctrinale">(<a href="#ref-doctrinale" role="doc-biblioref">Reichling 1893, 12:159</a>)</span>:</p>
+<blockquote>
+<p>amphibologia [est] constructio non manifestans sensum perfecte: puto te socium superare. hoc fit multotiens, quia non determino plene affectum mentis defectu praepediente, sive duplex sensus ex verbis possit haberi.</p>
+</blockquote>
+<p>Adam of Balsham, <span><em>Ars Disserendi</em></span> <span class="citation" data-cites="modernorum1">(<a href="#ref-modernorum1" role="doc-biblioref">Rijk 1962, 6:64–65</a>)</span>: A: <span><em>principia sophistica sine complexione</em></span>, B: <span><em>principia sophistica secundum complexionem</em></span></p>
+<p>Richard the Sophister, <span><em>Abstractiones</em></span>. no. 1: <span><em>Omnis homo est omnis homo</em></span></p>
+<p>Peter of Spain, <span><em>Summule Logicales</em></span> 7.47 <span class="citation" data-cites="copenhaver">(<a href="#ref-copenhaver" role="doc-biblioref">Copenhaver, Normore, and Parsons 2014, 287</a>)</span>:</p>
+<blockquote>
+<p>The third species of amphiboly arises from the fact that some phrase signifies several things while any one of its parts used by itself signifies only one, like ‘knows the age.’ Now this phrase is ambiguous: it signifies both that someone knows the age and that the age has knowledge of someone. And the reason for this is that the word ‘age’ can be the object of this verb ‘knows’ or its subject. This case is similar: ‘what someone sees, sees this,’ where the word ‘this’ can be the subject of the verb ‘sees’ in its second occurence or its object. This is also similar: ‘what someone knows, knows this,’ where the word ‘this’ can be the subject or object of the verb ‘knows’ in its second occurrence. Also this: ‘I would like me to take the enemy.’ This is ambiguous because the accusative ‘me’ can be the subject of the verb ‘take’ or its object, and the accusative ‘enemy’ can also be the subject or object of the same verb.</p>
+</blockquote>
+<p>‘knows the age’: <span><em>scit seculum</em></span>, ‘what someone sees, sees this’: <span><em>quod quis videt, hoc videt</em></span>, ‘what someone knows, know this’: <span><em>quod quis scit, hoc scit</em></span>, ‘I would like me to take the enemy’: <span><em>vellem me accipere pugnantes</em></span>.</p>
+<p>Thomas Aquinas, <span><em>De fallaciis</em></span>.</p>
+<p>The anonymous <span><em>Summa sophisticorum elencorum</em></span> <span class="citation" data-cites="modernorum1">(<a href="#ref-modernorum1" role="doc-biblioref">Rijk 1962</a>)</span>, of the Abbey of St. Victor, Paris.</p>
+<p><span><em>Fallacie Vindobonenses</em></span> <span class="citation" data-cites="modernorum1">(<a href="#ref-modernorum1" role="doc-biblioref">Rijk 1962</a>)</span></p>
+<p><span><em>Fallacie Parvipontane</em></span> <span class="citation" data-cites="modernorum1">(<a href="#ref-modernorum1" role="doc-biblioref">Rijk 1962</a>)</span></p>
+<p><span><em>Dialectica Monacensis</em></span> <span class="citation" data-cites="modernorum22">(<a href="#ref-modernorum22" role="doc-biblioref">Rijk 1967, 16:565–67</a>)</span></p>
+<p>Peter the Chanter, <span><em>De Tropis Loquendi</em></span> <span class="citation" data-cites="modernorum22">(<a href="#ref-modernorum22" role="doc-biblioref">Rijk 1967</a>)</span></p>
+<p><span><em>Fallacie Magistri Willelmi</em></span> <span class="citation" data-cites="modernorum22">(<a href="#ref-modernorum22" role="doc-biblioref">Rijk 1967</a>)</span></p>
+<p>Walter Burley, <span><em>De puritate</em></span>.</p>
+<p>Lambert of Auxerre, <span><em>Logica</em></span> <span class="citation" data-cites="CTMPT">(<a href="#ref-CTMPT" role="doc-biblioref">Kretzmann and Stump 1989, 102–62</a>)</span></p>
+<p><span><em>Syncategoremata Monacenia</em></span> <span class="citation" data-cites="CTMPT">(<a href="#ref-CTMPT" role="doc-biblioref">Kretzmann and Stump 1989, 163–73</a>)</span></p>
+<p>Nicholas of Paris, <span><em>Syncategoremata</em></span> <span class="citation" data-cites="CTMPT">(<a href="#ref-CTMPT" role="doc-biblioref">Kretzmann and Stump 1989, 174–215</a>)</span></p>
+<p>William of Sherwood, <span><em>Introduction to Logic</em></span></p>
+<p>William of Sherwood, <span><em>Syncategoremata</em></span> <span class="citation" data-cites="syncategorematic">(<a href="#ref-syncategorematic" role="doc-biblioref">Kretzmann 1968</a>)</span></p>
+<p>Richard Kilvington <span class="citation" data-cites="kilvington">(<a href="#ref-kilvington" role="doc-biblioref">Kretzmann and Kretzmann Cambridge University Press</a>)</span></p>
+<p>Peter of Spain, <span><em>Syncategoreumata</em></span>, chapter 4 <span class="citation" data-cites="syncategoreumata">(<a href="#ref-syncategoreumata" role="doc-biblioref">Rijk and Spruyt 1992</a>)</span>:</p>
+<blockquote>
+<p><span><em>Omne animal preter hominem est irrationale.</em></span></p>
+<p>Every animal but man is irrational.</p>
+</blockquote>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-ackrill" class="csl-entry" role="doc-biblioentry">
+Ackrill, J. L. 1975. <em><span class="nocase">Aristotle, Categories and De Interpretatione</span></em>. Clarendon Aristotle Series. Oxford: Clarendon Press.
+</div>
+<div id="ref-atherton" class="csl-entry" role="doc-biblioentry">
+Atherton, Catherine. 1993. <em>The <span>S</span>toics on Ambiguity</em>. Cambridge Classical Studies. Cambridge University Press.
+</div>
+<div id="ref-isagoge" class="csl-entry" role="doc-biblioentry">
+Barnes, Jonathan. 2003. <em><span>Porphyry, <span><em>Introduction</em></span></span></em>. Clarendon Later Ancient Philosophers. Oxford: Clarendon Press.
+</div>
+<div id="ref-barnes" class="csl-entry" role="doc-biblioentry">
+———. 2007. <em>Truth, Etc.: Six Lectures on Ancient Logic</em>. Oxford: Clarendon Press.
+</div>
+<div id="ref-isidore" class="csl-entry" role="doc-biblioentry">
+Barney, Stephen A., W. J. Lewis, J. A. Beach, and Oliver Berghof. 2006. <em><span class="nocase">The <span><em>Etymologies</em></span> of Isidore of Seville</span></em>. Cambridge University Press.
+</div>
+<div id="ref-LCL403" class="csl-entry" role="doc-biblioentry">
+Caplan, Henry. 1954. <em><span class="nocase">[Cicero], Rhetorica ad Herennium</span></em>. Loeb Classical Library 403. Harvard University Press.
+</div>
+<div id="ref-copenhaver" class="csl-entry" role="doc-biblioentry">
+Copenhaver, Brian P., Calvin G. Normore, and Terence Parsons. 2014. <em><span class="nocase">Peter of Spain: <span><em>Summaries of Logic</em></span>. Text, Translation, Introduction, and Notes</span></em>. Oxford University Press.
+</div>
+<div id="ref-theaetetus" class="csl-entry" role="doc-biblioentry">
+Cornford, Francis Macdonald. 2003. <em>Plato’s Theory of Knowledge: The <span><em>Theaetetus</em></span> and the <span><em>Sophist</em></span> Translated, with Commentary</em>. Dover Publications.
+</div>
+<div id="ref-alcinous" class="csl-entry" role="doc-biblioentry">
+Dillon, John. 1996. <em><span>Alcinous, <span><em>The Handbook of Platonism</em></span></span></em>. Clarendon Later Ancient Philosophers. Oxford: Clarendon Press.
+</div>
+<div id="ref-ALVI1to3" class="csl-entry" role="doc-biblioentry">
+Dod, Bernard G., ed. 1975. <em><span class="nocase">Aristoteles Latinus VI 1–3. De sophisticis elenchis. Translatio Boethii, fragmenta translationis Iacobi et recensio Guillelmi de Moerbeke</span></em>. E. J. Brill; Desclée de Brouwer.
+</div>
+<div id="ref-captionibus" class="csl-entry" role="doc-biblioentry">
+Edlow, Robert Blair. 1977. <em>Galen on Language and Ambiguity. An English Translation Galen’s <span>“de Captionibus (on Fallacies)”</span> with Introduction, Text, and Commentary</em>. Vol. 31. Philosophia Antiqua. Leiden: E. J. Brill.
+</div>
+<div id="ref-diogenes" class="csl-entry" role="doc-biblioentry">
+Hard, Robin. 2012. <em><span class="nocase">Diogenes the Cynic, Sayings and Anecdotes, with other popular moralists</span></em>. Oxford World’s Classics. Oxford University Press.
+</div>
+<div id="ref-GLKI" class="csl-entry" role="doc-biblioentry">
+Keil, Heinrich, ed. 1857. <em><span class="nocase">Grammatici latini, vol. I</span></em>. Lipsiae: B. G. Teubner.
+</div>
+<div id="ref-tekhne" class="csl-entry" role="doc-biblioentry">
+Kemp, Alan. 1987. <span>“The <span class="nocase"><span><em>Tekhnē Grammatikē</em></span> of Dionysius Thrax: English</span> Translation with Introduction and Notes.”</span> In <em>The History of Linguistics in the Classical Period</em>, edited by Daniel J. Taylor, 46:169–90. Studies in the History of the Language Sciences. John Benjamins Publishing Company.
+</div>
+<div id="ref-progymnasmata" class="csl-entry" role="doc-biblioentry">
+Kennedy, George A. 2003. <em><span class="nocase">Progymnasmata: Greek Textbooks of Prose Composition and Rhetoric</span></em>. Writings from the Greco-Roman World 10. Atlanta: Society of Biblical Literature.
+</div>
+<div id="ref-kneale" class="csl-entry" role="doc-biblioentry">
+Kneale, William, and Martha Kneale. 1962. <em>The Development of Logic</em>. Oxford: Clarendon Press.
+</div>
+<div id="ref-syncategorematic" class="csl-entry" role="doc-biblioentry">
+Kretzmann, Norman. 1968. <em><span class="nocase">William of Sherwood’s Treatise on Syncategorematic Words</span></em>. University of Minnesota Press.
+</div>
+<div id="ref-kilvington" class="csl-entry" role="doc-biblioentry">
+Kretzmann, Norman, and Barbara Ensign Kretzmann. Cambridge University Press. <em><span class="nocase">The Sophismata of Richard Kilvington: introduction, translation, and commentary</span></em>. 1990.
+</div>
+<div id="ref-CTMPT" class="csl-entry" role="doc-biblioentry">
+Kretzmann, Norman, and Eleonore Stump, eds. 1989. <em><span class="nocase">The Cambridge Translations of Medieval Philosophical Texts, volume one: Logic and the Philosophy of Language</span></em>. Cambridge University Press.
+</div>
+<div id="ref-galen20" class="csl-entry" role="doc-biblioentry">
+Kühn, Karl Gottlob. 1833. <em><span class="nocase">Claudii Galeni Opera Omnia, tom. XX</span></em>. Lipsiae: Car. Cnobloch.
+</div>
+<div id="ref-LS1" class="csl-entry" role="doc-biblioentry">
+Long, A. A., and D. N. Sedley. 1987. <em>The <span>H</span>ellenistic Philosophers. <span>V</span>olume 1: Translations of the Principal Sources, with Philosophical Commentary</em>. Cambridge University Press.
+</div>
+<div id="ref-luhtala" class="csl-entry" role="doc-biblioentry">
+Luhtala, Anneli. 2005. <em>Grammar and Philosophy in Late Antiquity: A Study of Priscian’s Sources</em>. Vol. 107. Studies in the History of the Language Sciences. John Benjamins Publishing Company.
+</div>
+<div id="ref-pickard-cambridge" class="csl-entry" role="doc-biblioentry">
+Pickard-Cambridge, W. A. 1928. <span>“De Sophisticis Elenchis.”</span> In <em>The Works of Aristotle, Volume i</em>, edited by W. D. Ross. Oxford: Clarendon Press.
+</div>
+<div id="ref-doctrinale" class="csl-entry" role="doc-biblioentry">
+Reichling, Dietrich, ed. 1893. <em><span class="nocase">Das Doctrinale des Alexander de Villa-Dei. Kritisch-exegetische Ausgabe</span></em>. Vol. 12. Monumenta Germaniae Paedagogica. Berlin: A. Hofmann &amp; Comp.
+</div>
+<div id="ref-reinhardt" class="csl-entry" role="doc-biblioentry">
+Reinhardt, Tobias. 2007. <em><span class="nocase">Cicero’s <span><em>Topica</em></span></span>, Edited with Translation Introduction, and Commentary</em>. Oxford Classical Monographs. Oxford University Press.
+</div>
+<div id="ref-modernorum1" class="csl-entry" role="doc-biblioentry">
+Rijk, L. M. de. 1962. <em>Logica Modernorum: A Contribution to the History of Early Terminist Logic. <span>Vol. I</span>: On the Twelfth Century Theories of Fallacy</em>. Vol. 6. Wijsgerige Teksten En Studies. Assen: Van Gorcum.
+</div>
+<div id="ref-modernorum22" class="csl-entry" role="doc-biblioentry">
+———. 1967. <em>Logica Modernorum: A Contribution to the History of Early Terminist Logic. <span>Vol. II</span>, Part Two: The Origin and Early Development of the Theory of Supposition</em>. Vol. 16. Wijsgerige Teksten En Studies. Assen: Van Gorcum.
+</div>
+<div id="ref-syncategoreumata" class="csl-entry" role="doc-biblioentry">
+Rijk, L. M. de, and Joke Spruyt. 1992. <em><span class="nocase">Peter of Spain, <span><em>Syncategoreumata</em></span></span></em>. Brill.
+</div>
+<div id="ref-LCL126" class="csl-entry" role="doc-biblioentry">
+Russell, Donald A. 2002. <em><span class="nocase">Quintilian. The Orator’s Education, Volume III: Books 6–8</span></em>. Loeb Classical Library 126. Harvard University Press.
+</div>
+<div id="ref-dissoilogoi" class="csl-entry" role="doc-biblioentry">
+Sprague, Rosamond Kent. 1968. <span>“<span class="nocase">Dissoi Logoi or Dialexeis</span>.”</span> <em>Mind, New Series</em> 77 (306): 155–67.
+</div>
+<div id="ref-strikerI" class="csl-entry" role="doc-biblioentry">
+Striker, Gisela. 2009. <em><span>Aristotle, Prior Analytics Book I</span></em>. Clarendon Aristotle Series. Oxford: Clarendon Press.
+</div>
+<div id="ref-topicis" class="csl-entry" role="doc-biblioentry">
+Stump, Eleonore. 2004. <em><span class="nocase">Boethius’s <span><em>De topicis differentiis</em></span></span></em>. Cornell Classics in Philosophy. Cornell University Press.
+</div>
+<div id="ref-serviusII" class="csl-entry" role="doc-biblioentry">
+Thilo, Georg, ed. 1884. <em><span class="nocase">Servii Grammatici qui feruntur in Vergilii carmina commentarii. Vol. II: Aeneidos librorum VI–XII commentarii</span></em>. Lipsiae: B. G. Teubner.
+</div>
+<div id="ref-euthydemus" class="csl-entry" role="doc-biblioentry">
+Waterfield, Robin. 2005a. <span>“Euthydemus.”</span> In <em><span>Plato, Early Socratic Dialogues</span></em>, edited by Trevor J. Saunders, 295–375. Penguin Classics. Penguin Books.
+</div>
+<div id="ref-hippias" class="csl-entry" role="doc-biblioentry">
+———. 2005b. <span>“<span class="nocase">Hippias Major and Hippias Minor</span>.”</span> In <em><span>Plato, Early Socratic Dialogues</span></em>, edited by Trevor J. Saunders, 211–93. Penguin Classics. Penguin Books.
+</div>
+</div>
+<section class="footnotes footnotes-end-of-document" role="doc-endnotes">
+<hr />
+<ol>
+<li id="fn1" role="doc-endnote"><p>cf. <span><em>Euthydemus</em></span> 300b–c.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section>
+</body>
+</html>

@@ -1,0 +1,280 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+\usepackage[draft]{hyperref}
+%\usepackage{tikz-cd}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\im}{\textrm{im\,}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\point}{\sigma_{\textrm{point}}}
+\newcommand{\ap}{\sigma_{\textrm{ap}}}
+\newcommand{\cont}{\sigma_{\textrm{cont}}}
+\newcommand{\residual}{\sigma_{\textrm{res}}}
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{The spectra of the unilateral shift  and its adjoint}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+\section{Introduction}
+In this note I am writing out some of the material from Paul Halmos, {\em Hilbert Space Problem Book}, on shift operators. The reason I'm doing this is because shift operators are standard objects in operator theory and every analyst should know their
+properties and their spectra. A reference to Problem $n$ of Halmos is a reference to Problem $n$ in this book. 
+An {\em orthonormal basis} for a Hilbert space is an orthonormal set whose span is a dense subset of $H$. The {\em dimension} of a Hilbert space is the cardinality of
+an orthonormal basis for $H$. It is a fact that a Hilbert space is separable if and only if its dimension is countable (Problem 11 of Halmos). 
+Let $\mathbb{N}$ be the set of nonnegative integers.
+
+\section{The Hilbert space ℓ²(𝐼)}
+If $I$ is a set, let $\ell^2(I)$ be the set of functions $x:I \to \mathbb{C}$ such that $x(i)=0$ for all but countably many $i \in I$ and such
+that 
+\[
+\sum_{i \in I} |x(i)|^2 < \infty,
+\]
+and let $\ell^\infty(I)$ be the set of functions $x:I \to \mathbb{C}$ such that $x(i)=0$ for all but countably many $i \in I$ and such that
+\[
+\sup_{i \in I} |x(i)| < \infty.
+\]
+$\ell^\infty(I) \subseteq \ell^2(I)$, and this containment is strict if and only if $I$ is infinite.
+With the inner product
+\[
+\inner{x}{y}=\sum_{i \in I} x(i) \overline{y(i)},
+\]
+$\ell^2(I)$ is a Hilbert space, and $e_i(j)=\delta_{i,j}$ is an orthonormal basis for it. It follows that
+$\ell^2(I)$ is separable if and only if $I$ is countable.
+
+It is often useful that for $x \in \ell^2(I)$ and $i \in I$, we have
+\[
+\inner{x}{e_i}=\sum_{j \in I} x(j) \overline{e_i(j)} = \sum_{j \in I} x(j) \delta_{i,j} = x(i),
+\]
+and thus (this takes time to prove)
+\[
+x=\sum_{i \in I} x(i) e_i.
+\]
+
+We will be interested in countable
+orthonormal bases for a Hilbert space, so in this note we take $H$ to be a separable complex Hilbert space. 
+Let $f_i, i \in I$ be an orthonormal basis for $H$, where $I$ is countable.
+$\ell^2(I)$ is a Hilbert space
+with orthonormal basis $e_i$, $e_i(j)=\delta_{i,j}$. 
+We define a map $U:H \to \ell^2(I)$ in the following way. For $v \in H$,
+define $(Uv)(i)=\inner{v}{f_i}$, and thus by the definition of norm in $\ell^2(I)$ and by 
+Parseval's identity we have
+\[
+\norm{Uv}^2=\sum_{i \in I} |(Uv)(i)|^2 = \sum_{i \in I} |\inner{v}{f_i}|^2 = \norm{v}^2 < \infty,
+\]
+so indeed $Uv \in \ell^2(I)$. One checks that
+  $U$ is a linear map and
+hence, as it is an isometry by the above calculation, $\inner{Uv}{Uw}=\inner{v}{w}$ for all $v,w \in H$.\footnote{It is a fact that if $H,K$ are Hilbert spaces and $V:H \to K$
+is a linear map, then $V$ is an isometry if and only if $\inner{Vf}{Vg}=\inner{f}{g}$ for all $f,g \in H$. This is proved
+using the polarization identity and tinkering with real and imaginary parts. A proof is given in John B. Conway, {\em A Course in Functional Analysis},
+second ed., p. 19, Theorem 5.2.  Equivalently, a linear map $V:H \to K$ is an isometry if and only if $V^*V=\id_H$; if also
+$VV^*=\id_K$, called being a {\em coisometry}, then $V$ is a {\em unitary isomorphism}.}
+Moreover, as $U$ is an isometry it is injective.
+
+The image of an isometry is closed: let $x_n \in \im U$ and say $x_n \to x \in \ell^2(I)$. Then there are $v_n \in H$,
+$Uv_n=x_n$. $x_n$ is a Cauchy sequence, and because $U$ is an isometry it follows that $v_n$ is a Cauchy
+sequence. As $H$ is a complete metric space, $v_n$ converges to some $v \in H$. $U$ is continuous so $Uv_n \to Uv$. And
+$Uv_n=x_n \to x$, so 
+$x=Uv$, showing that $\im U$ is closed in $\ell^2(I)$. But $(Uf_i)(j)=\inner{f_i}{f_j}=\delta_{i,j}$ and
+$e_i(j)=\delta_{i,j}$ so $Uf_i=e_i$.\footnote{Merely defining $U$ by $Uf_i=e_i$ and then extending by linearity would have been inadequate. 
+A {\em Hamel basis} for a vector space is a maximal linearly independent set in the vector space, and it is a fact
+that every vector in the vector space is a finite linear combination of elements of the Hamel basis. We can
+find a Hamel basis for $H$ that includes the orthonormal basis $f_j$. If $H$ is infinite then any Hamel basis will have cardinality larger than that of the orthonormal basis;
+see Problem 5 of Halmos.
+A linear map can be specified uniquely by defining it on elements of a Hamel basis. Thus the values of a linear map on an orthonormal basis do not uniquely the linear map
+determine it. For the values of a linear map on an orthonormal basis to uniquely determine the linear map, 
+one must show that the map is continuous on the span of the orthonormal basis, and then since the span is dense this will determine the map on the entire Hilbert space.} As $\im U$ is closed and it contains an orthonormal basis for $\ell^2(I)$, it follows that
+$\im U=\ell^2(I)$. We already found that $U$ is linear and injective, so $U$ is a linear isomorphism.
+
+We have shown that $U:H \to \ell^2(I)$ is a linear isomorphism and $\inner{Uv}{Uw}=\inner{v}{w}$ for all $v,w \in H$. 
+We call such a map a {\em unitary isomorphism}.
+Unitary isomorphisms are isomorphisms in the category of Hilbert spaces.\footnote{cf. \url{http://math.ucr.edu/home/baez/quantum/node3.html}} Anything we wish to say about the Hilbert space $H$ can be said just as well about the Hilbert
+space $\ell^2(I)$.
+
+Rather than merely saying that $H$ has a basis $v_i,i\in I$ for some countable set $I$, the type of operations that we want to talk about involve ordering $I$ and talking about
+sending a basis element to the next or the previous basis element.
+Depending on our purpose, we will take either $I=\mathbb{N}$ or $I=\mathbb{Z}$. In this note we deal with $I=\mathbb{N}$.
+
+\section{Definition  of the unilateral shift and determination of its adjoint}
+Define $U:\ell^2(\mathbb{N}) \to \ell^2(\mathbb{N})$ 
+in the following way.
+For $x \in \ell^2(\mathbb{N})$, define $Ux$ by
+\[
+(Ux)(n)=\begin{cases}
+x(n-1)&n \geq 1,\\
+0&n=0.
+\end{cases}
+\]
+$U$ shifts a sequence one step to the right. We call $U$ a {\em unilateral shift}. 
+
+$U$ is linear, and
+\[
+\norm{Ux}^2=\sum_{n=0}^\infty |(Ux)(n)|^2 = 0 + \sum_{n=0}^\infty |x(n)|^2 = \norm{x},
+\]
+so $U$ is an isometry. A linear map that is an isometry preserves the inner product, so $U$ preserves the inner product of $\ell^2(\mathbb{N})$, and thus is an isometry.
+But $U$ is not a unitary isomorphism because it is not surjective, as $e_0 \not \in
+\im U$. 
+For $j \geq 0$, we have, because $\delta_{j+1,0}=0$,
+\begin{eqnarray*}
+(Ue_j)(n)&=&
+\begin{cases}
+e_j(n-1)&n \geq 1,\\
+0&n=0
+\end{cases}\\
+&
+=&\begin{cases}
+\delta_{j,n-1}&n \geq 1,\\
+0&n=0.
+\end{cases}\\
+&=&\begin{cases}
+\delta_{j+1,n}&n \geq 0,\\
+0&n=0.
+\end{cases}\\
+&=&\delta_{j+1,n}\\
+&=&e_{j+1}(n).
+\end{eqnarray*}
+Thus for all $j \in \mathbb{N}$ we have $Ue_j=e_{j+1}$.
+
+Whenever we have our hands on a specific operator, we would also like to get a workable expression for its adjoint. $U^*$ satisfies
+\[
+\inner{Ue_i}{e_j}=\inner{e_i}{U^* e_j}.
+\]
+Now, $Ue_i=e_{i+1}$ and $\inner{e_{i+1}}{e_j}=\delta_{i+1,j}$ and
+\[
+\delta_{i+1,j}=\begin{cases}
+\delta_{i,j-1}&j \geq 1,\\
+0&j=0.
+\end{cases}
+\]
+Hence the adjoint satisfies
+\[
+U^* e_j(i)= 
+\begin{cases}
+\delta_{j-1,i}&j \geq 1,\\
+0&j=0.
+\end{cases}
+\]
+If $j \geq 1$ then $U^* e_j=e_{j-1}$, and $U^* e_0=0$. Thus, for $x \in \ell^2(\mathbb{N})$ we define $U^*x$ for all $n \in \mathbb{N}$ by
+$(U^*x)(n)=x(n+1)$ and check that this is indeed the adjoint of $U$.
+The adjoint of the right shift $U$ is the left shift $U^*$.
+
+Since $UU^*e_0=U(0)=0$ and $U^*Ue_0=U^*e_1=e_0$, $U$ is not {\em normal}. 
+
+\section{The spectrum of an operator}
+\label{generalities}
+Here we review general statements about the spectrum of a bounded linear operator. If $H$ is a Hilbert space and $T \in B(H)$, the {\em spectrum} $\sigma(T)$ of
+$T$ is the set of those $\lambda \in \mathbb{C}$ such that the map $T-\lambda$ is not bijective, where by $T-\lambda$ we mean $T-\lambda \id_H$. 
+We are often interested in decomposing the spectrum into three disjoint sets. The {\em point spectrum} $\point(T)$ is the set of those $\lambda \in \mathbb{C}$ such that
+$T-\lambda$ is not injective. The {\em continuous spectrum} $\cont(T)$ is the set of those $\lambda \in \mathbb{C}$ such that $T-\lambda$ is injective, has dense image, but is not surjective.
+The {\em residual spectrum} $\residual(T)$ is the set of those $\lambda \in \mathbb{C}$ such that $T-\lambda$ is injective and does not have dense image.
+
+If $T \in B(H)$, it is a fact that $\sigma(T)$ is a  nonempty compact subset of $\mathbb{C}$; this is not obvious. The {\em spectral radius} of $T$, denoted $r(T)$,
+is defined the be $\sup_{\lambda \in \sigma(T)} |\lambda|$. If $|\lambda| > \norm{T}$ then one can define an inverse for $T-\lambda$ using the geometric series, and it follows that
+$\lambda \not \in \sigma(T)$. Thus if $r(T) \leq \norm{T}$.\footnote{A formula for $r(T)$ is $r(T)=\lim_{n \to \infty} \norm{T^n}^{1/n}$, Problem 74 in Halmos.}
+
+If $X$ is a subset of $\mathbb{C}$, let $X^*=\{\overline{z}:z \in X\}$. If $\lambda \in \sigma(T)$ then it is straightforward to check, as $(T^*-\overline{\lambda})^*=T-\lambda$, that
+\[
+\sigma(T^*)=\sigma(T)^*.
+\]
+
+For any $T \in B(H)$, it is a fact that $\ker T = (\im T^*)^\perp$. 
+If $\lambda \in \point(T)$, then $\ker (T-\lambda) \neq \{0\}$, so $(\im (T^*-\overline{\lambda}))^\perp \neq \{0\}$. Hence
+$\overline{\im (T^*-\overline{\lambda})} \neq H$, that is, $T^*-\overline{\lambda}$ does not have dense image. So either $\overline{\lambda}
+\in \point(T^*)$ or $\overline{\lambda} \in \residual(T^*)$. Therefore
+\[
+\point(T)^* \subseteq \point(T^*) \cup \residual(T^*).
+\]
+
+If $\lambda \in \residual(T)$ then $\overline{\im(T-\lambda)} \neq H$. 
+$\ker(T^*-\overline{\lambda})=(\im (T-\lambda))^\perp$; taking orthogonal complements gives
+$(\ker(T^*-\overline{\lambda}))^\perp = \overline{\im (T-\lambda)}$. Thus $(\ker(T^*-\overline{\lambda}))^\perp \neq H$. But
+\[
+H=\ker(T^*-\overline{\lambda}) \oplus (\ker(T^*-\overline{\lambda}))^\perp,
+\]
+so $\ker(T^*-\overline{\lambda}) \neq \{0\}$, showing that $\overline{\lambda} \in \point(T^*)$. Therefore
+\[
+\residual(T)^* \subseteq \point(T^*).
+\]
+
+
+
+\section{Spectrum of the unilateral shift and its adjoint}
+In this section we are going to compute the three parts of the spectrum for each of $U$ and $U^*$. Our technique
+is to show that $\sigma(U),\sigma(U^*)$ are subsets of the closed unit disc; compute $\point(U)$ and $\point(U^*)$; use \S \ref{generalities} to obtain
+from this $\residual(U)$ and $\residual(U^*)$; and
+use the fact that the spectrum is compact.
+cf. Problems 58 and 67 of Halmos.
+
+ $U$ is an isometry, so $\norm{U}=1$. Hence $\sigma(U)$ is a subset of the closed unit disc $D$,
+and $\sigma(U^*)=\sigma(U)^* \subseteq D^*=D$.
+
+Suppose by contradiction that there is some $\lambda \in \point(U)$. Then there is some nonzero $x \in \ell^2(\mathbb{N})$
+satisfying $(U-\lambda)x=0$. Let $n=\min\{j \in \mathbb{N}: x(j) \neq 0\}$. If $n \geq 1$ then $(Ux)(n)=x(n-1)=0$ because of the minimality of $n$, 
+and $(Ux)(0)=0$ by definition of $U$. Thus in any case $(Ux)(n)=0$. 
+$(Ux)(n)=\lambda x(n)$ and $x(n) \neq 0$, so it follows that $\lambda=0$. Then,
+$x(n)=(Ux)(n+1)=\lambda x(n+1)=0$,
+contradicting  $x(n) \neq 0$. Therefore
+\[
+\point(U) = \emptyset.
+\]
+
+If  $\lambda \in \point(U^*)$, then there is some $x \neq 0$ with $U^*x=\lambda x$. For $n \in \mathbb{N}$, $(U^*x)(n)=x(n+1)$ and
+$(U^*x)(n)=\lambda x(n)$, so $x(n+1)=\lambda x(n)$. Thus $x(n)=\lambda^n x(0)$. Then
+\[
+\norm{x}^2= \sum_{n=0}^\infty |x(n)|^2 = \sum_{n=0}^\infty |\lambda|^{2n} |x(0)|^2=|x(0)|^2 \sum_{n=0}^\infty |\lambda|^{2n}.
+\]
+If $x(0) = 0$ then we'd get $x=0$, so $x(0) \neq 0$. As $\norm{x}^2 < \infty$, it follows that $|\lambda|<1$. On the other hand, if $|\lambda|<1$, then define $x$
+by $x(0)=1$ and, for $n \geq 1$, by $x(n)=\lambda^n$. $x \in \ell^2(\mathbb{N})$, and $(U^* x)(n)=x(n+1)=\lambda^{n+1}=\lambda x(n)$, so $U^*x = \lambda x$. As $x \neq 0$, this 
+means that $\lambda \in \point(U^*)$. Hence
+\[
+\point(U^*) = \{z \in \mathbb{C}: |z|<1\}.
+\]
+
+We have found that $\point(U) = \emptyset$, and, as $\residual(U^*) \subseteq \point(U)^*$, this implies that 
+\[
+\residual(U^*) = \emptyset.
+\]
+
+$\sigma(U^*)$ is a compact set, is contained in the closed unit disc, and contains $\point(U^*)$ which is equal to the open unit disc. Therefore
+$\sigma(U^*)$ is equal to the closed unit disc. Since $\point(U^*)=\{z:|z|<1\}$ and $\residual(U^*)=\emptyset$, it follows that $\cont(U^*)=\{z \in 
+\mathbb{C}: |z|=1\}$.
+
+Now, $\point(U^*) \subseteq \point(U)^* \cup \residual(U)^*=\residual(U)^*$.
+On the other hand, $\residual(U)^* \subseteq \point(U^*)$.
+Hence $\residual(U)^*= \point(U^*)$, from which we get
+\[
+\residual(U)= \{z \in \mathbb{C}: |z|<1\}.
+\]
+
+$\sigma(U)$ is a compact set that is contained in the closed unit disc and contains the open unit disc,
+hence $\sigma(U)$ is equal to the closed unit disc. As $\point(U)=\emptyset$ and $\residual(U)=\{z \in \mathbb{C}: |z|<1\}$,
+it follows that $\cont(U)=\{z \in \mathbb{C}: |z|=1\}$.
+
+We summarize the results of this section in the following.
+\begin{itemize}
+\item The spectrum of the right shift $U$:
+\[
+\point(U)=\emptyset, \qquad \cont(U)=\{z \in \mathbb{C}:|z|=1\}, \qquad \residual(U)=\{z \in \mathbb{C}:|z|<1\}.
+\]
+\item The spectrum of the left shift $U^*$:
+\[
+\point(U^*)=\{z \in \mathbb{C}:|z|<1\}, \qquad \cont(U^*)=\{z \in \mathbb{C}:|z|=1\}, \qquad
+\residual(U^*)=\emptyset.
+\]
+\end{itemize}
+
+
+\section{Cyclic vectors}
+$v \in H$ is said to be a {\em cyclic vector} for $T \in B(H)$ if  the span of
+$\{T^n v: n \geq 0\}$ is a dense subspace of $H$.
+One proves that for $v$ to be a cyclic vector it is equivalent that the set $\{p(T)v: p(x) \in \mathbb{C}[x]\}$ is dense in $H$.
+Certainly $U$ has a cyclic vector: $U^n e_0=e_n$, which is an orthonormal basis for $\ell^2(\mathbb{N})$. 
+It turns out that $U^*$ also has a cyclic vector, but this is not obvious. This is shown in Problem 126 of Halmos.
+
+
+
+\end{document}

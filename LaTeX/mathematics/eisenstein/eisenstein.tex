@@ -1,0 +1,675 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\SL}{\ensuremath\mathrm{SL}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Nonholomorphic Eisenstein series, the Kronecker limit formula, and the hyperbolic Laplacian}
+\author{Jordan Bell\\ \texttt{jordan.bell@gmail.com}\\Department of Mathematics, University of Toronto}
+\date{\today}
+
+\maketitle
+
+
+\section{Nonholomorphic Eisenstein series}
+Let $\mathbb{H} = \{x+iy \in \mathbb{C}: y>0\}$
+For $\tau=x+iy \in \mathbb{H}$ and $s=\sigma+it, \sigma>1$, we define the \textbf{nonholomorphic Eisenstein series}
+\[
+G(\tau,s) = \frac{1}{2} \sum_{(0,0) \neq (m,n) \in \mathbb{Z}^2} \frac{y^s}{|m\tau+n|^{2s}}.
+\]
+The function $(\tau,a,b) \mapsto a\tau+b$ is continuous $\mathbb{H} \times
+S^1 \to \mathbb{C}$, and for all $\tau \in\mathbb{H}$ and $(a,b) \in S^1$ we have $a\tau+b \neq 0$. 
+It follows that if $K$ is a compact subset of $\mathbb{H}$ then there is some $C_K>0$ such that
+$|a\tau+b| \geq C_K$ for all $\tau \in K$, $(a,b) \in S^1$. Then, for all $\tau \in K$ and for all
+$(0,0) \neq (m,n) \in \mathbb{Z}^2$,
+\[
+|m\tau+n|^2=\left| \frac{m}{\sqrt{m^2+n^2}}\tau+\frac{n}{\sqrt{m^2+n^2}}\right|^2 (m^2+n^2) 
+\geq C_K (m^2+n^2),
+\]
+and hence
+\[
+\left|  \frac{y^s}{|m\tau+n|^{2s}} \right|=\frac{y^\sigma}{|m\tau+n|^{2\sigma}}
+\leq \frac{y^\sigma}{(C_K(m^2+n^2))^{\sigma}}.
+\]
+Because $\sigma>1$,
+\[
+\sum_{(0,0) \neq (m,n) \in \mathbb{Z}^2} \frac{1}{(m^2+n^2)^\sigma}<\infty.
+\]
+It follows that for any $s=\sigma+it$ with $\sigma>1$, the function
+$\tau \mapsto G(\tau,s)$ is continuous $\mathbb{H} \to \mathbb{C}$. 
+
+It is sometimes useful to write $G$ in another way. For $\tau=x+iy \in \mathbb{H}$ and $\Re s>1$, define
+\[
+E(\tau,s) = \frac{1}{2} \sum_{(c,d) \in \mathbb{Z}^2, \gcd(c,d)=1} \frac{y^s}{|c\tau+d|^{2s}}.
+\]
+
+\begin{theorem}
+For all $\tau \in \mathbb{H}$ and $\Re s>1$,
+\[
+G(\tau,s)=\zeta(2s) E(\tau,s).
+\]
+\end{theorem}
+\begin{proof}
+First we remark that for $0 \neq a \in \mathbb{Z}$, $\gcd(a,0)=|a|$. For $(0,0) \neq (m,n) \in \mathbb{Z}^2$, with
+$\nu=\gcd(m,n)$,
+\[
+\gcd\left(\frac{m}{\nu},\frac{n}{\nu}\right)=1.
+\]
+Then
+\begin{align*}
+G(\tau,s)&=\frac{1}{2}  \sum_{\nu \geq 1}  \sum_{(m,n) \in \mathbb{Z}^2, \gcd(m,n)=\nu}
+\frac{y^s}{|m\tau+ n|^{2s}}\\
+&=\frac{1}{2}  \sum_{\nu \geq 1}  \sum_{(c,d) \in \mathbb{Z}^2, \gcd(c,d)=1}
+\frac{y^s}{|\nu c\tau+ \nu d|^{2s}}\\
+&=\frac{1}{2}  \sum_{(c,d) \in \mathbb{Z}^2, \gcd(c,d)=1} \frac{y^s}{|c\tau+d|^{2s}}  \sum_{\nu \geq 0} \nu^{-2s}\\
+&=\zeta(2s) E(\tau,s).
+\end{align*}
+\end{proof}
+
+
+
+
+
+\section{Modular functions}
+\begin{theorem}
+For $\begin{pmatrix}a&b\\c&d\end{pmatrix} \in \SL_2(\mathbb{Z})$, $\tau \in \mathbb{H}$, and $\Re s>1$,
+\[
+G\left(\frac{a\tau+b}{c\tau+d},s\right) = G(\tau,s).
+\]
+\end{theorem}
+\begin{proof}
+\[
+\frac{a\tau+b}{c\tau+d} = \frac{a\tau+b}{c\tau+d}
+\cdot \frac{c\overline{\tau}+d}{c\overline{\tau}+d}
+=\frac{ac|\tau|^2+ad\tau+bc\overline{\tau}+bd}{|c\tau+d|^2},
+\]
+so, for $\tau=x+iy$ and $\frac{a\tau+b}{c\tau+d} = u+iv$, using that $ad-bc=1$,
+\[
+u = \frac{ac|\tau|^2+bd+x(ad+bc)}{|c\tau+d|^2},
+\qquad v = \frac{y}{|c\tau+d|^2};
+\]
+we shall only use the expression for $v$. Also, for $(m,n) \in \mathbb{Z}^2$, 
+\[
+m\left(\frac{a\tau+b}{c\tau+d} \right) + n = \frac{(ma+nc)\tau+mb+nd}{c\tau+d}.
+\]
+Then,
+\begin{align*}
+G\left(\frac{a\tau+b}{c\tau+d},s\right)&=\frac{1}{2}\sum_{(0,0) \neq (m,n) \in \mathbb{Z}^2} \left( \frac{y}{|c\tau+d|^2}\right)^s
+ \left| \frac{(ma+nc)\tau+mb+nd}{c\tau+d} \right|^{-2s}\\
+&=\frac{1}{2} \sum_{(0,0) \neq (m,n) \in \mathbb{Z}^2} \frac{y^s}{|(ma+nb)\tau+mb+nd|^{2s}}.
+\end{align*}
+But $\begin{pmatrix}a&b\\c&d\end{pmatrix} \in \SL_2(\mathbb{Z})$ implies that 
+\[
+(m,n) \mapsto (ma+nc,mb+nd)
+\]
+is a bijection $\mathbb{Z}^2 \setminus \{(0,0)\} \to \mathbb{Z}^2 \setminus \{(0,0)\}$, so
+\[
+ \sum_{(0,0) \neq (m,n) \in \mathbb{Z}^2} \frac{1}{|(ma+nb)\tau+mb+nd|^{2s}}
+ = \sum_{(0,0) \neq (\mu,\nu) \in \mathbb{Z}^2} \frac{1}{|\mu\tau+\nu|^{2s}},
+\]
+and thus we get
+\[
+G\left(\frac{a\tau+b}{c\tau+d},s\right) = G(\tau,s),
+\]
+completing the proof.
+\end{proof}
+
+
+
+
+
+
+
+\section{Fourier expansion}
+We now derive the Fourier series of $G(\cdot,s)$.\footnote{Henri Cohen, {\em Number Theory, vol. II: Analytic and Modern Tools}, p.~211, Theorem 10.4.3.}
+$K_{s-\frac{1}{2}}$ denotes the Bessel function. 
+
+\begin{theorem}
+If  $\tau \in \mathbb{H}$ and $\Re s>1$, then
+\begin{align*}
+G(\tau,s)&= \zeta(2s)y^s   +\pi^{\frac{1}{2}} \frac{ \Gamma\left(s-\frac{1}{2}\right)}{\Gamma(s)}  \zeta(2s-1)y^{-s+1}\\
+&+2 \frac{\pi^s}{\Gamma(s)} \sum_{n=1}^\infty n^{s-1} \sigma_{-2s+1}(n) F_{s-\frac{1}{2}}(2\pi ny) \cos(2\pi nx),
+\end{align*}
+where
+\[
+F_{s-\frac{1}{2}}(w)=\left(\frac{2w}{\pi}\right)^{1/2} K_{s-\frac{1}{2}}(w).
+\]
+\label{GFourier}
+\end{theorem}
+\begin{proof}
+Define 
+\[
+S(z,s) = \sum_{n \in \mathbb{Z}} \frac{|y|^s}{|z+n|^{2s}}, \qquad z=x+iy, y\neq 0,
+\quad \Re s >1.
+\]
+We can write $G(\tau,s)$ using this as
+\[
+G(\tau,s)=\frac{1}{2} \sum_{n \neq 0} \frac{y^s}{|n|^{2s}}
++\frac{1}{2} \sum_{m \neq 0} \sum_{n \in \mathbb{Z}} \frac{y^s}{|m\tau+n|^{2s}}
+=y^s \zeta(2s) +\frac{1}{2}\sum_{m \neq 0} \frac{S(m\tau,s)}{|m|^s}.
+\]
+
+The Poisson summation formula\footnote{Henri Cohen, {\em Number Theory, vol. I: Tools and Diophantine Equations}, p.~46, Corollary 2.2.17.}
+states that if $f:\mathbb{R} \to \mathbb{C}$ is continuous and of locally  bounded variation, then
+for all $x \in \mathbb{R}$,
+\[
+\sum_{n \in \mathbb{Z}} f(x+n) = \sum_{k \in \mathbb{Z}} \widehat{f}(k) e^{2\pi ikx},
+\]
+where
+\[
+\widehat{f}(\xi) = \int_\mathbb{R} e^{-2\pi i\xi t} f(t) dt, \qquad \xi \in \mathbb{R}.
+\]
+Let $z=x+iy, y \neq 0$, let $\Re s>1$, and define $f_y:\mathbb{R} \to \mathbb{C}$ by
+\[
+f_y(t)=|t+iy|^{-2s} =((t+iy)(t-iy))^{-s} = (t^2+y^2)^{-s}, \qquad t \in \mathbb{R}.
+\]
+Applying the Poisson summation formula we get
+\[
+\sum_{n \in \mathbb{Z}} |x+n+iy|^{-2s} = \sum_{k \in \mathbb{Z}} \widehat{f}_y(k) e^{2\pi ikx},
+\]
+i.e.,
+\begin{equation}
+S(z,s) = |y|^s \sum_{k \in \mathbb{Z}} \widehat{f}_y(k) e^{2\pi ikx},
+\label{SPoisson}
+\end{equation}
+with
+\[
+\widehat{f}_y(k) = \int_{\mathbb{R}} e^{-2\pi ikt} (t^2+y^2)^{-s} dt.
+\]
+As $y \neq 0$, doing the change of variable $t=yu$ we get
+\begin{align*}
+\widehat{f}_y(k)&=\int_{\mathbb{R}} e^{-2\pi ikyu} (y^2u^2 +y^2)^{-s} |y|du\\
+&=|y|^{-2s+1} \int_{\mathbb{R}} e^{-2\pi ikyu} (u^2+1)^{-s} du\\
+&=2|y|^{-2s+1} \int_0^\infty \cos(2\pi kyu) (u^2+1)^{-s} du;
+\end{align*}
+the final equality is because the function $u \mapsto (u^2+1)^{-s}$ is even. 
+
+We use the following identity:\footnote{Henri Cohen, {\em Number Theory, vol. II: Analytic and Modern Tools}, p.~117, Theorem 9.8.9.}
+for $a>0$ and $\Re s>\frac{1}{2}$,
+\[
+\int_0^\infty \cos(au) (u^2+1)^{-s} du = \pi^{1/2} \cdot \left(\frac{a}{2}\right)^{s-\frac{1}{2}} \cdot \frac{1}{\Gamma(s)} \cdot
+K_{s-\frac{1}{2}}(a).
+\]
+For $k \in \mathbb{Z} \setminus \{0\}$, 
+using this with  $a=2\pi |k y|>0$ gives
+\begin{align*}
+\widehat{f}_y(k) &= 2|y|^{-2s+1} \cdot \pi^{1/2} \cdot ( \pi |k y|)^{s-\frac{1}{2}} \cdot \frac{1}{\Gamma(s)} \cdot K_{s-\frac{1}{2}}(2\pi |k y|)\\
+&=2|y|^{-s+\frac{1}{2}} \pi^s |k|^{s-\frac{1}{2}} \cdot \frac{1}{\Gamma(s)} \cdot K_{s-\frac{1}{2}}(2\pi |k y|).
+\end{align*}
+Therefore \eqref{SPoisson} becomes
+\begin{align*}
+S(z,s) &= |y|^s\widehat{f}_y(0) + |y|^s \sum_{k \neq 0} 
+2|y|^{-s+\frac{1}{2}} \pi^s |k|^{s-\frac{1}{2}} \cdot \frac{1}{\Gamma(s)} \cdot K_{s-\frac{1}{2}}(2\pi |k y|)
+\cdot e^{2\pi ikx}\\
+&=|y|^s \widehat{f}_y(0) + 2|y|^{\frac{1}{2}} \pi^s \cdot \frac{1}{\Gamma(s)}
+\sum_{k \neq 0} |k|^{s-\frac{1}{2}} \cdot K_{s-\frac{1}{2}}(2\pi |k y|)
+\cdot e^{2\pi ikx}\\
+&=|y|^s \widehat{f}_y(0) + 4|y|^{\frac{1}{2}} \pi^s \cdot \frac{1}{\Gamma(s)} \sum_{k=1}^\infty k^{s-\frac{1}{2}} \cdot K_{s-\frac{1}{2}}(2\pi k |y|)
+\cdot \cos(2\pi kx).
+\end{align*}
+We use the following identity for the beta function:\footnote{Henri Cohen, {\em Number Theory, vol. II: Analytic and Modern Tools}, p.~93, Corollary
+9.6.40.}
+For $\Re b>\frac{1}{2}\Re a>0$, 
+\[
+\int_0^\infty u^{a-1} (u^2+1)^{-b} du = \frac{1}{2}B\left(\frac{a}{2},b-\frac{a}{2}\right)
+=\frac{\Gamma\left(\frac{a}{2}\right) \Gamma\left(b-\frac{a}{2}\right)}{2\Gamma(b)}.
+\]
+Using this with $a=1$ and $b=s$, and since $\Gamma\left(\frac{1}{2}\right)=\pi^{\frac{1}{2}}$,
+\[
+\widehat{f}_y(0)=2|y|^{-2s+1} \int_0^\infty (u^2+1)^{-s} du
+=2|y|^{-2s+1} \frac{\pi^{\frac{1}{2}} \Gamma\left(s-\frac{1}{2}\right)}{2\Gamma(s)}.
+\]
+Therefore
+\begin{align*}
+S(z,s)&=\pi^{\frac{1}{2}} \cdot |y|^{-s+1} \cdot  \frac{ \Gamma\left(s-\frac{1}{2}\right)}{\Gamma(s)}\\
+&
++ 4|y|^{\frac{1}{2}} \pi^s \cdot \frac{1}{\Gamma(s)} \sum_{k=1}^\infty k^{s-\frac{1}{2}} \cdot K_{s-\frac{1}{2}}(2\pi k |y|)
+\cdot \cos(2\pi kx)\\
+&=\pi^{\frac{1}{2}} \cdot |y|^{-s+1} \cdot  \frac{ \Gamma\left(s-\frac{1}{2}\right)}{\Gamma(s)}\\
+&+2 \frac{\pi^s}{\Gamma(s)} \sum_{k=1}^\infty k^{s-1} F_{s-\frac{1}{2}}(2\pi k|y|) \cdot \cos(2\pi kx).
+\end{align*}
+
+We now express $G(\tau,s)$ using this formula for $S(z,s)$.
+For $\tau \in \mathbb{H}$
+and $\Re s>1$, since $S(z,s)=S(-z,s)$,
+\begin{align*}
+G(\tau,s)&=y^s \zeta(2s) +\frac{1}{2}\sum_{m \neq 0} \frac{S(m\tau,s)}{|m|^s}\\
+&=y^s \zeta(2s) + \sum_{m=1}^\infty \frac{S(m\tau,s)}{m^s}\\
+&=y^s \zeta(2s) +\pi^{\frac{1}{2}} \frac{ \Gamma\left(s-\frac{1}{2}\right)}{\Gamma(s)} \sum_{m=1}^\infty \frac{(my)^{-s+1}}{m^s}\\
+&+2 \frac{\pi^s}{\Gamma(s)} \sum_{m=1}^\infty \frac{1}{m^s} \sum_{k=1}^\infty k^{s-1} F_{s-\frac{1}{2}}(2\pi kmy) \cdot \cos(2\pi kmx)\\
+&=y^s \zeta(2s)   +\pi^{\frac{1}{2}} \frac{ \Gamma\left(s-\frac{1}{2}\right)}{\Gamma(s)} y^{-s+1} \zeta(2s-1)\\
+&+2 \frac{\pi^s}{\Gamma(s)} \sum_{k,m \geq 1} \frac{k^{s-1}}{m^s} F_{s-\frac{1}{2}}(2\pi kmy) \cdot \cos(2\pi kmx).
+\end{align*}
+As
+\[
+\sum_{km=N} \frac{k^{s-1}}{m^s} = \sum_{km=N} \frac{(km)^{s-1}}{m^{2s-1}} 
+= N^{s-1} \sum_{km=N} m^{-2s+1}
+=N^{s-1} \sigma_{-2s+1}(N),
+\]
+this can be written as
+\begin{align*}
+G(\tau,s)&=y^s \zeta(2s)   +\pi^{\frac{1}{2}} \frac{ \Gamma\left(s-\frac{1}{2}\right)}{\Gamma(s)} y^{-s+1} \zeta(2s-1)\\
+&+2 \frac{\pi^s}{\Gamma(s)} \sum_{N=1}^\infty N^{s-1} \sigma_{-2s+1}(N) F_{s-\frac{1}{2}}(2\pi Ny) \cos(2\pi Nx),
+\end{align*}
+completing the proof.
+\end{proof}
+
+
+
+
+We use the above Fourier expansion to establish that for all $t \in \mathbb{H}$, $G(\tau,s)$ 
+has a meromorphic continuation
+to $\mathbb{C}$ and
+satisfies a certain functional equation.\footnote{Henri Cohen, {\em Number Theory, vol. II: Analytic and Modern Tools}, p.~212, Corollary 10.4.4.}
+The meromorphic continuation and functional equation of $G(\tau,s)$ can also be obtained without using its Fourier expansion.\footnote{Paul Garrett, {\em The simplest Eisenstein series},
+\url{http://www.math.umn.edu/~garrett/m/mfms/notes_c/simplest_eis.pdf}}
+
+\begin{theorem}
+For any $\tau \in \mathbb{H}$, $G(\tau,s)$ has a meromorphic continuation to $\mathbb{C}$ whose only pole is at $s=1$, which is a simple pole with residue
+$\frac{\pi}{2}$. The function
+\[
+\mathcal{G}(\tau,s) = \pi^{-s} \Gamma(s) G(\tau,s)
+\]
+satisfies the functional equation
+\[
+\mathcal{G}(\tau,1-s) = \mathcal{G}(\tau,s).
+\]
+\label{Gfunctional}
+\end{theorem}
+\begin{proof}
+For $\nu \in \mathbb{C}$
+and for $w>0$ we have\footnote{Henri Cohen, {\em Number Theory, vol. II: Analytic and Modern Tools}, p.~113, Proposition 9.8.6.}
+\[
+K_\nu(w) = \int_0^\infty e^{-w\cosh t} \cosh(\nu t) dt
+\]
+and\footnote{Henri Cohen, {\em Number Theory, vol. II: Analytic and Modern Tools}, p.~115, Proposition 9.8.7.}
+\[
+K_\nu(w) \sim \left(\frac{2w}{\pi}\right)^{-\frac{1}{2}} e^{-w}, \qquad w \to +\infty.
+\]
+Using the above identity, one checks that for $w>0$, the function $s \mapsto K_{s-\frac{1}{2}}(w)$ is entire, and that
+for any $s \in \mathbb{C}$, the function $w \mapsto K_{s-\frac{1}{2}}(w)$ belongs to $C^\infty(\mathbb{R}_{>0})$.
+We have a fortiori that for any $s \in \mathbb{C}$,
+\[
+K_{s-\frac{1}{2}}(w) = O(e^{-w}), \qquad w \to +\infty.
+\]
+
+Let $\Lambda(s)=\pi^{-\frac{s}{2}} \Gamma\left(\frac{s}{2}\right) \zeta(s)$. The functional equation for the Riemann zeta function
+states that $\Lambda$ has a meromorphic continuation to $\mathbb{C}$ whose only poles are at $s=0$ and $s=1$, which are simple poles,
+and satisfies, for all $s \neq 0,1$,
+\[
+\Lambda(1-s)=\Lambda(s).
+\]
+Using the Fourier series for $G(\cdot,s)$, we have that for $\tau \in \mathbb{H}$ and $\Re s>1$,
+\begin{align*}
+\mathcal{G}(\tau,s)&= \pi^{-s} \Gamma(s) G(\tau,s)\\
+&=\Lambda(2s) y^s + \Lambda(2s-1) y^{-s+1}\\
+&+2\sum_{n=1}^\infty n^{s-1} \sigma_{-2s+1}(n) F_{s-\frac{1}{2}}(2\pi ny) \cos(2\pi nx).
+\end{align*}
+The residue of $\Lambda(2s)$ at $s=0$ is $-\frac{1}{2}$;
+the residue of $\Lambda(2s)$ at $s=\frac{1}{2}$ is $\frac{1}{2}$;
+the residue of $\Lambda(2s-1)$ at $s=\frac{1}{2}$ is $-\frac{1}{2}$;
+and the residue of $\Lambda(2s-1)$ at $s=1$ is $\frac{1}{2}$. It follows that 
+the residue of $\mathcal{G}(\tau,s)$ at $s=0$ is $-\frac{1}{2}$; the residue of $\mathcal{G}(\tau,s)$ at
+$s=\frac{1}{2}$ is $\frac{1}{2}y^{1/2}-\frac{1}{2}y^{1/2}=0$;
+ the residue of $\mathcal{G}(\tau,s)$ at $s=1$ is $\frac{1}{2}$; and these are no other poles of $\mathcal{G}(\tau,s)$. 
+Because $\Gamma(s)$ has a simple pole at $s=0$, $G(\tau,s)  = \frac{\pi^s}{\Gamma(s)} \mathcal{G}(\tau,s)$
+does not have a pole at $s=0$. The residue of $G(\tau,s)$ at $s=1$ is
+$\frac{\pi}{\Gamma(1)} \cdot \frac{1}{2}=\frac{\pi}{2}$, and this is the only pole of $G(\tau,s)$. 
+
+For $s \in \mathbb{C}$, 
+\begin{align*}
+n^{(1-s)-1}\sigma_{-2(1-s)+1}(n) &= n^{-s} \sigma_{2s-1}(n) \\
+&= \sum_{ef=n} (ef)^{-s} e^{2s-1}\\
+&=\sum_{ef=n}e^{s-1} f^{-s}\\
+&=\sum_{ef=n} (ef)^{s-1} f^{-2s+1}\\
+&=n^{s-1} \sigma_{-2s+1}(n).
+\end{align*}
+Generally, $K_\nu=K_{-\nu}$, so $F_{s-\frac{1}{2}} = F_{(1-s)-\frac{1}{2}}$. 
+Thus each term in the series in the above formula for $\mathcal{G}(\tau,s)$ is unchanged if $s$ is replaced with $1-s$,
+and together with $\Lambda(1-w)=\Lambda(w)$ this yields
+\begin{align*}
+\mathcal{G}(\tau,1-s)&=\Lambda(2-2s)y^{1-s} + \Lambda(2-2s-1)y^{-(1-s)+1}\\
+&+2\sum_{n=1}^\infty n^{s-1} \sigma_{-2s+1}(n) F_{s-\frac{1}{2}}(2\pi ny) \cos(2\pi nx)\\
+&=\Lambda(1-(2s-1)) y^{1-s}+\Lambda(1-2s)y^s\\
+&+2\sum_{n=1}^\infty n^{s-1} \sigma_{-2s+1}(n) F_{s-\frac{1}{2}}(2\pi ny) \cos(2\pi nx)\\
+&=\Lambda(2s-1)y^{1-s}+\Lambda(2s)y^s\\
+&+2\sum_{n=1}^\infty n^{s-1} \sigma_{-2s+1}(n) F_{s-\frac{1}{2}}(2\pi ny) \cos(2\pi nx)\\
+&=\mathcal{G}(\tau,s).
+\end{align*}
+\end{proof}
+
+
+\section{Kronecker limit formula}
+For $\tau \in \mathbb{H}$,
+Theorem \ref{Gfunctional} shows that $G(\tau,s)$ is meromorphic and that its only pole is at $s=1$, which is a simple pole with residue $\frac{\pi}{2}$. It follows that
+$G(\tau,s)$ has the Laurent expansion about $s=1$,
+\[
+G(\tau,s) = \frac{\pi}{2}\cdot \frac{1}{s-1}+a_0(\tau) + a_1(\tau)\cdot (s-1)+\cdots,
+\]
+and so defining $\frac{\pi}{2}C(\tau)=a_0(\tau)$,
+\[
+G(\tau,s) = \frac{\pi}{2}\left(\frac{1}{s-1}+C(\tau)+O(|s-1|)\right), \qquad  s \to 1.
+\]
+
+
+We define the \textbf{Dedekind eta function}  $\eta:\mathbb{H} \to \mathbb{C}$ by
+\[
+\eta(\tau)  = e^{\frac{\pi i\tau}{12}} \prod_{n=1}^\infty (1-q^n), \qquad \tau \in \mathbb{H},
+\]
+where $q=e^{2\pi i\tau} = e^{-2\pi y}e^{2\pi ix}$, for $\tau=x+iy$. We now prove the \textbf{Kronecker limit formula},\footnote{Henri Cohen, {\em Number Theory, vol. II: Analytic and Modern Tools}, p.~213, Theorem 10.4.6.} which expresses $C(\tau)$ in terms of the Dedekind eta function.
+
+
+\begin{theorem}
+For $\tau =x+iy \in \mathbb{H}$,
+\[
+G(\tau,s) = \frac{\pi}{2}\left(\frac{1}{s-1}+C(\tau)+O(|s-1|)\right), \qquad s \to 1,
+\]
+with
+\[
+C(\tau)=2\gamma-2\log 2-\log y - 4 \log|\eta(\tau)|.
+\]
+\end{theorem}
+\begin{proof}
+Define
+\[
+G(s) = \pi^{\frac{1}{2}} \frac{\Gamma\left(s-\frac{1}{2}\right)}{\Gamma(s)} \zeta(2s-1) y^{-s+1}.
+\]
+Then
+\begin{equation}
+\log G(s)=\frac{1}{2}\log \pi+\log \zeta(2s-1)+(-s+1)\log y +\log\left( \frac{\Gamma\left(s-\frac{1}{2}\right)}{\Gamma(s)} \right).
+\label{logG}
+\end{equation}
+We use the asymptotic formula
+\[
+\zeta(s)= \frac{1}{s-1}+\gamma+O(|s-1|), \qquad s \to 1,
+\]
+and with
+\[
+\log(1+w)=w+O(|w|^2), \qquad w \to 1,
+\]
+this gives,
+as $s \to 1$,
+\begin{align*}
+\log \zeta(s) &=  \log\left(\frac{1}{s-1}+\gamma+O(|s-1|)\right)\\
+&=-\log(s-1)+\log(1+\gamma(s-1)+O(|s-1|^2))\\
+&=-\log(s-1)+\gamma(s-1)+O(|s-1|^2),
+\end{align*}
+and hence
+\[
+\log \zeta(2s-1) = -\log(2s-2)+\gamma(2s-2)+O(|s-1|^2), \qquad s \to 1.
+\]
+The Taylor series for $\log \Gamma(z)$ about $z=\frac{1}{2}$ is
+\[
+\log \Gamma(z) = \frac{1}{2} \log \pi - (2\log 2+\gamma)\left(z-\frac{1}{2}\right)
++\sum_{k=2}^\infty (-1)^k (2^k-1) \frac{\zeta(k)}{k} \left(z-\frac{1}{2}\right)^k,
+\]
+for $|z-\frac{1}{2}|<\frac{1}{2}$, and the Taylor series of $\log \Gamma(1+z)$ about $z=0$ is
+\[
+\log \Gamma(1+z) = -\gamma z + \sum_{k=2}^\infty (-1)^k \frac{\zeta(k)}{k} z^k,
+\]
+for $|z|<1$. Using these we have
+\[
+\log \Gamma\left(s-\frac{1}{2}\right) = \frac{1}{2}\log \pi - (2\log 2 +\gamma)(s-1)
++O(|s-1|^2), \qquad s \to 1
+\]
+and
+\[
+\log \Gamma(s) = -\gamma(s-1)+O(|s-1|^2), \qquad s \to 1.
+\]
+Applying these approximations with \eqref{logG} we get, as $s \to 1$,
+\begin{align*}
+\log G(s)&=\frac{1}{2}\log \pi-\log(2s-2)+\gamma(2s-2)+O(|s-1|^2)+(-s+1)\log y\\
+&+\frac{1}{2}\log \pi - (2\log 2 +\gamma)(s-1)
++O(|s-1|^2)\\
+&+\gamma(s-1)+O(|s-1|^2)\\
+&=\log \pi  - \log 2 - \log(s-1) + 2\gamma(s-1)+(-s+1)\log y\\
+&-(2\log 2+\gamma)(s-1)+\gamma(s-1)+O(|s-1|^2)\\
+&=\log \frac{\pi}{2} - \log (s-1) + (2\gamma-2\log 2-\log y)(s-1)+O(|s-1|^2).
+\end{align*}
+Taking the exponential and using
+\[
+e^w = 1+w+O(|w|^2), \qquad w \to 0,
+\]
+ as $s \to 1$ we have
+\begin{align*}
+G(s)&=\frac{\pi}{2} \cdot \frac{1}{s-1} \cdot \left(1+(2\gamma-2\log 2-\log y)(s-1)+O(|s-1|^2)\right)\\
+&=\frac{\pi}{2} \cdot \frac{1}{s-1} + \frac{\pi}{2}\cdot (2\gamma-2\log 2-\log y)+O(|s-1|).
+\end{align*}
+Using this and the fact that
+\[
+\zeta(2s)y^s = \frac{\pi^2}{6}y + O(|s-1|), \qquad s \to 1,
+\]
+Theorem \ref{GFourier}  thus yields that as $s \to 1$,
+\begin{align*}
+G(\tau,s)&=\frac{\pi^2}{6}y+\frac{\pi}{2} \cdot \frac{1}{s-1} + \frac{\pi}{2}\cdot (2\gamma-2\log 2-\log y)+O(|s-1|)\\
+&+2\frac{\pi^s}{\Gamma(s)} \sum_{n=1}^\infty n^{s-1} \sigma_{-2s+1}(n) F_{s-\frac{1}{2}}(2\pi ny) \cos(2\pi nx).
+\end{align*}
+
+We have
+\[
+\frac{\pi^s}{\Gamma(s)} = \pi + O(|s-1|), \qquad s \to 1.
+\]
+As well,
+\[
+n^{s-1} = 1 +O(|s-1|), \qquad s \to 1,
+\]
+and 
+\[
+\sigma_{-2s+1}(n) = \sum_{d|n} d^{-2s+1} = \sum_{d|n} (d^{-1}+O(|s-1|))
+=\sigma_{-1}(n) + O(|s-1|), \qquad s \to 1.
+\]
+Finally,
+we use the fact that
+that for all $t>0$,\footnote{Henri Cohen, {\em Number Theory, vol. II: Analytic and Modern Tools}, p.~112, Theorem 9.8.5.}
+\[
+K_{\frac{1}{2}}(t) = \sqrt{\frac{\pi}{2t}} e^{-t},
+\]
+giving
+\[
+F_{\frac{1}{2}}(t)=\left(\frac{2t}{\pi}\right)^{\frac{1}{2}} K_{\frac{1}{2}}(t) =  e^{-t},
+\]
+and hence
+\[
+F_{s-\frac{1}{2}}(2\pi ny)= e^{-2\pi ny}+O(|s-1|), \qquad s \to 1.
+\]
+Therefore, as $s \to 1$,
+\begin{align*}
+G(\tau,s)&=\frac{\pi^2}{6}y+\frac{\pi}{2} \cdot \frac{1}{s-1} + \frac{\pi}{2}\cdot (2\gamma-2\log 2-\log y)\\
+&+2\pi \sum_{n=1}^\infty  1\cdot \sigma_{-1}(n) e^{-2\pi ny} \cos(2\pi nx)
++O(|s-1|).
+\end{align*}
+This implies that the constant term in the Laurent expansion of $G(\tau,s)$ about $s=1$ is
+\[
+a_0(\tau) = \frac{\pi^2}{6}y + \frac{\pi}{2}\cdot(2\gamma-2\log 2-\log y)
++2\pi \sum_{n=1}^\infty \sigma_{-1}(n) e^{-2\pi ny} \cos(2\pi nx).
+\]
+But, with $q=e^{2\pi i\tau}$,
+\begin{align*}
+\Re\left( \sum_{n=1}^\infty \sigma_{-1}(n) q^n \right)& = 
+\sum_{n=1}^\infty \sigma_{-1}(n) \Re(e^{2\pi in\tau})\\
+&=\sum_{n=1}^\infty \sigma_{-1}(n) \Re(e^{-2\pi ny} e^{2\pi inx})\\
+&=\sum_{n=1}^\infty \sigma_{-1}(n) e^{-2\pi ny} \cos(2\pi nx),
+\end{align*}
+so
+\[
+a_0(\tau) =  \frac{\pi^2}{6}y + \frac{\pi}{2}\cdot(2\gamma-2\log 2-\log y)
++2\pi S(\tau),
+\]
+where
+\[
+S(\tau) = \Re\left( \sum_{n=1}^\infty \sigma_{-1}(n) q^n \right).
+\]
+
+Using the power series for $\log(1+z)$ about $z=0$,
+\begin{align*}
+\log \prod_{n=1}^\infty (1-q^n)&=\sum_{n=1}^\infty \log(1-q^n)\\
+&=-\sum_{n=1}^\infty \sum_{m=1}^\infty \frac{q^{nm}}{m}\\
+&=-\sum_{N=1}^\infty \sum_{d|N} \frac{q^N}{d}\\
+&=-\sum_{N=1}^\infty \sigma_{-1}(N) q^N,
+\end{align*}
+so
+\[
+S(\tau) = -\Re\left( \log \prod_{n=1}^\infty (1-q^n) \right).
+\]
+Then, because
+\[
+\Re \log z = \log |z|
+\]
+ and because
+\[
+|\eta(\tau)| = \left| e^{\frac{\pi i \tau}{12}} \prod_{n=1}^\infty (1-q^n) \right|=
+e^{-\frac{\pi y}{12}} \prod_{n=1}^\infty |1-q^n|,
+\]
+this becomes
+\[
+S(\tau)=-\log \prod_{n=1}^\infty |1-q^n|
+=-\frac{\pi y}{12}-\log |\eta(\tau)|.
+\]
+Thus
+\begin{align*}
+a_0(\tau) &= \frac{\pi^2}{6}y+\frac{\pi}{2}\cdot (2\gamma-2\log 2-\log y)
+-\frac{\pi^2}{6}y-2\pi \log |\eta(\tau)|\\
+&=\frac{\pi}{2}\cdot (2\gamma-2\log 2 -\log y)-2\pi \log |\eta(\tau)|,
+\end{align*}
+so
+\[
+C(\tau) = 2\gamma-2\log 2-\log y - 4 \log|\eta(\tau)|,
+\]
+completing the proof.
+\end{proof}
+
+
+\section{Hyperbolic Laplacian}
+For $f \in C^2(\mathbb{H})$, we define $\Delta_{\mathbb{H}} f:\mathbb{H} \to \mathbb{C}$ by
+\[
+(\Delta_{\mathbb{H}} f)(\tau) = -y^2(\partial_x^2 f + \partial_y^2 f)(\tau), 
+\qquad \tau = x+iy \in \mathbb{H}.
+\]
+For more on $\Delta_{\mathbb{H}}$ see the below references.\footnote{Daniel Bump, {\em Spectral Theory and the Trace Formula},
+\url{http://sporadic.stanford.edu/bump/match/trace.pdf};
+Fredrik Str\"omberg, {\em Spectral theory and Maass waveforms for modular groups--
+from a computational point of view},
+\url{http://www.cams.aub.edu.lb/events/confs/modular2012/files/lecture_notes_spectral_theory.pdf}; cf. Anton Deitmar, {\em Automorphic Forms},
+p.~54, Lemma 2.7.3.}
+
+Let $(0,0) \neq (m,n) \in \mathbb{Z}^2$ and $\Re s>1$, and define $f:\mathbb{H} \to \mathbb{C}$ by
+\[
+f(x,y) = y^s |mx+n+imy|^{-2s} = 
+y^s (mx+n+imy)^{-s}(mx+n-imy)^{-s}.
+\]
+Write
+\[
+g(x,y) = (mx+n+imy)^{-s}(mx+n-imy)^{-s}.
+\]
+We calculate
+\begin{align*}
+(\partial_x g)(x,y)&=
+-s(mx+n+imy)^{-s-1}m(mx+n-imy)^{-s}\\
+&-s(mx+n+imy)^{-s}(mx+n-imy)^{-s-1}m,
+\end{align*}
+and
+\begin{align*}
+(\partial_x^2 g)(x,y)&=s(s+1)(mx+n+imy)^{-s-2}m^2(mx+n-imy)^{-s}\\
+&+s^2(mx+n+imy)^{-s-1} (mx+n-imy)^{-s-1}m^2\\
+&+s^2(mx+n+imy)^{-s-1} m^2 (mx+n-imy)^{-s-1}\\
+&+s(s+1)(mx+n+imy)^{-s}(mx+n-imy)^{-s-2}m^2\\
+&=s(s+1)m^2 (mx+n+imy)^{-2} g(x,y)\\
+&+2s^2m^2(mx+n+imy)^{-1}(mx+n-imy)^{-1} g(x,y)\\
+&+s(s+1)m^2 (mx+n-imy)^{-2} g(x,y),
+\end{align*}
+from which we have
+\begin{align*}
+(\partial_x^2 f)(x,y)&=s(s+1)m^2(mx+n+imy)^{-2} f(x,y)\\
+&+2s^2m^2|m\tau+n|^{-2} f(x,y)\\
+&+s(s+1)m^2(mx+n-imy)^{-2} f(x,y).
+\end{align*}
+We also calculate
+\begin{align*}
+(\partial_y g)(x,y)&=-s(mx+n+imy)^{-s-1} im (mx+n-imy)^{-s}\\
+&-s(mx+n+imy)^{-s} (mx+n-imy)^{-s-1} (-im),
+\end{align*}
+\begin{align*}
+(\partial_y^2 g)(x,y)&=s(s+1)(mx+n+imy)^{-s-2} (-m^2)(mx+n-imy)^{-s}\\
+&+s^2(mx+n+imy)^{-s-1}(mx+n-imy)^{-s-1} m^2\\
+&+s^2(mx+n+imy)^{-s-1}(im)(mx+n-imy)^{-s-1}(-im)\\
+&+s(s+1)(mx+n+imy)^{-s}(mx+n-imy)^{-s-2}(-im)^2\\
+&=-s(s+1)m^2(mx+n+imy)^{-2}g(x,y)\\
+&+2s^2m^2(mx+n+imy)^{-1}(mx+n-imy)^{-1} g(x,y)\\
+&-s(s+1)m^2(mx+n-imy)^{-2} g(x,y).
+\end{align*}
+Now,
+\[
+(\partial_y f)(x,y) = sy^{s-1} g(x,y)+y^s (\partial_y g)(x,y)
+\]
+and
+\begin{align*}
+(\partial_y^2 f)(x,y)&=s(s-1) y^{s-2} g(x,y)+2sy^{s-1} (\partial_y g)(x,y)\\
+&+ y^s (\partial_y^2 g)(x,y),
+\end{align*}
+from which we have
+\begin{align*}
+(\partial_y^2 f)(x,y)&=s(s-1)y^{s-2} g(x,y)\\
+&-2s^2 im y^{s-1}(mx+n+imy)^{-1} g(x,y)\\
+&+2s^2 im y^{s-1} (mx+n-imy)^{-1} g(x,y)\\
+&-s(s+1)m^2 y^s (mx+n+imy)^{-2} g(x,y)\\
+&+2s^2m^2y^s(mx+n+imy)^{-1}(mx+n-imy)^{-1} g(x,y)\\
+&-s(s+1)m^2 y^s(mx+n-imy)^{-2} g(x,y)\\
+&=s(s-1) y^{-2} f(x,y)\\
+&-2s^2imy^{-1} (mx+n+imy)^{-1} f(x,y)\\
+&+2s^2imy^{-1}(mx+n-imy)^{-1} f(x,y)\\
+&-s(s+1)m^2(mx+n+imy)^{-2} f(x,y)\\
+&+2s^2m^2 |m\tau+n|^{-2} f(x,y)\\
+&-s(s+1)m^2 (mx+n-imy)^{-2} f(x,y).
+\end{align*}
+Combining the above expressions we get
+\begin{align*}
+(\partial_x^2 f+\partial_y^2)(x,y)&=m^2 f(x,y) \cdot \bigg(2s^2|m\tau+n|^{-2}
++2s^2|m\tau+n|^{-2}\bigg)\\
+&+s(s-1)y^{-2} f(x,y)\\
+&-2s^2imy^{-1} (mx+n+imy)^{-1} f(x,y)\\
+&+2s^2imy^{-1}(mx+n-imy)^{-1} f(x,y)\\
+&=m^2 f(x,y) \cdot \bigg(2s^2|m\tau+n|^{-2}
++2s^2|m\tau+n|^{-2}\bigg)\\
+&+s(s-1)y^{-2}f(x,y)
+-4s^2m^2|m\tau+n|^{-2} f(x,y)\\
+&=s(s-1)y^{-2}f(x,y).
+\end{align*}
+Thus
+\[
+(\Delta_{\mathbb{H}} f)(x,y) = s(s-1)f(x,y),
+\]
+i.e.,
+\[
+\Delta_{\mathbb{H}} f = s(s-1)f.
+\]
+Thus we immediately get that for $\Re s>1$,
+\begin{align*}
+\Delta_{\mathbb{H}} G(\cdot,s) = s(s-1) G(\cdot,s).
+\end{align*}
+Because the coefficients of the differential operator $L=\Delta_{\mathbb{H}}-s(s-1)$ are real analytic, a function $f:\mathbb{H} \to \mathbb{C}$
+satisfying $Lf=0$ is real analytic.\footnote{Lipman Bers and Martin Schechter, {\em Elliptic Equations}, in
+Lipman Bers, Fritz John, and Martin Schechter, eds., {\em Partial Diferential Equations},
+pp.~207--210, Chapter 4, Appendix.} Therefore, for $\Re s>1$, $G(\cdot,s)$ is real analytic.
+
+
+\end{document}

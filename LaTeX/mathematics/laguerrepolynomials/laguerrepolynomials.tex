@@ -1,0 +1,459 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}}
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Laguerre polynomials and Perron-Frobenius operators}
+\author{Jordan Bell}
+\date{April 19, 2016}
+
+\maketitle
+
+\section{Laguerre polynomials}
+\subsection{Definition and generating functions}
+Let $D=\frac{d}{dx}$. For $\alpha>-1$ and $n \geq 0$ let
+\[
+L_n^\alpha(x) = e^x \frac{x^{-\alpha}}{n!} D^n(e^{-x}x^{n+\alpha}),
+\]
+called the \textbf{Laguerre polynomials}.
+Using the Leibniz rule for $D^n(f \cdot g)$ yields
+\[
+L_n^\alpha(x)=\sum_{k=0}^n \frac{\Gamma(n+\alpha+1)}{\Gamma(k+\alpha+1)} \frac{(-x)^k}{k!(n-k)!}.
+\]
+The generating function for the Laguerre polynomials is\footnote{N. N. Lebedev,
+{\em Special Functions and Their Applications},
+p.~77, \S 4.17.}
+\[
+w(x,z) = (1-z)^{-\alpha-1} e^{-xz/(1-z)} = \sum_{n=0}^\infty L_n^\alpha(x) z^n,\qquad
+|z|<1.
+\]
+Define
+\[
+W(x,y,z) = (1-z)^{-1} e^{-(x+y)z/(1-z)} (xyz)^{-\alpha/2} I_\alpha \left( \frac{2 \sqrt{xyz}}{1-z} \right),
+\qquad |z|<1,
+\]
+where 
+\[
+I_\alpha(x)=i^{-\alpha} J_\alpha(ix) = \sum_{m=0}^\infty \frac{1}{m! \Gamma(m+\alpha+1)} (x/2)^{2m+\alpha}
+\]
+and
+\[
+J_\alpha(x) = \sum_{m=0}^\infty \frac{(-1)^m}{m! \Gamma(m+\alpha+1)} (x/2)^{2m+\alpha}.
+\]
+$W$ satisfies
+\[
+W(x,y,z) = \sum_{n=0}^\infty 
+\frac{n! L_n^\alpha(x) L_n^\alpha(y)}{\Gamma(n+\alpha+1)} z^n.
+\]
+
+
+
+\subsection{Differential equations satisfied by Laguerre polynomials}
+$w$ satisfies the ordinary differential equation
+\[
+(1-z^2) \partial_z w + (x-(1-z)(1+\alpha))w=0.
+\]
+This yields, for $n \geq 1$,
+\begin{equation}
+(n+1)L_{n+1}^\alpha(x)+(x-\alpha-2n-1)L_n^\alpha(x)+(n+\alpha)L_{n-1}^\alpha(x)=0.
+\label{4181}
+\end{equation}
+$w$ also satisfies the ordinary differential equation
+\[
+(1-t)\partial_x w + tw=0,
+\]
+which yields, for $n \geq 1$,
+\begin{equation}
+DL_n^\alpha-DL_{n-1}^\alpha + L_{n-1}^\alpha=0.
+\label{4182}
+\end{equation}
+Using \eqref{4181} and \eqref{4182} gives
+\begin{equation}
+xDL_n^\alpha = n L_n^\alpha-(n+\alpha)L_{n-1}^\alpha,
+\qquad n \geq 1.
+\label{4184}
+\end{equation}
+Using \eqref{4184} and \eqref{4182} we get, for $n \geq 0$,
+\begin{equation}
+x D^2 L_n^\alpha(x)+(\alpha+1-x)DL_n^\alpha(x)+nL_n^\alpha(x)=0.
+\label{4187}
+\end{equation}
+
+
+
+\subsection{Integral formulas for Laguerre polynomials}
+For $\nu>-1$, $a>0$, $b>0$, using the series for $J_\nu$ one calculates\footnote{N. N. Lebedev,
+{\em Special Functions and Their Applications},
+p.~132, \S 5.15, Example 2.}
+\begin{equation}
+\int_0^\infty e^{-a^2x^2} J_\nu(bx)x^{\nu+1} dx=\frac{b^\nu}{(2a^2)^{\nu+1}}e^{-\frac{b^2}{4a^2}}.
+\label{5152}
+\end{equation}
+Applying this with $\nu=n+\alpha$, $a=1$, $b=2\sqrt{x}$, $x=\sqrt{t}$ yields
+\[
+\int_0^\infty e^{-t} J_{n+\alpha}(2\sqrt{xt}) (\sqrt{t})^{n+\alpha+1} \cdot \frac{1}{2\sqrt{t}} dt
+=\frac{(2\sqrt{x})^{n+\alpha}}{2^{n+\alpha+1}} e^{-x},
+\]
+i.e.
+\begin{equation}
+\int_0^\infty e^{-t} J_{n+\alpha}(2\sqrt{xt}) (\sqrt{xt})^{n+\alpha} dt = e^{-x} x^{n+\alpha}.
+\label{4191}
+\end{equation}
+Now, it is a fact that
+\[
+\frac{d}{du} u^{\nu/2} J_\nu(2\sqrt{u}) = u^{(\nu-1)/2} J_{\nu-1}(2\sqrt{u}),
+\]
+and using this and \eqref{4191}, we get that for $\alpha>1$ and $n \geq 0$,
+\begin{equation}
+L_n^\alpha(x) = \frac{e^x x^{-\alpha/2}}{n!} \int_0^\infty t^{n+\alpha/2} J_\alpha(2\sqrt{xt}) e^{-t} dt.
+\label{4193}
+\end{equation}
+
+
+
+We remind ourselves that for $\alpha>-1$ and $|z|<1$,
+\[
+(1-z)^{-\alpha-1} e^{-yt/(1-t)} = \sum_{n=0}^\infty L_n^\alpha(y) z^n.
+\]
+For $|z|<\frac{1}{3}$, using this 
+and $e^{-\frac{yt}{1-t}-\frac{y}{2}} = e^{-\frac{2yt+y-yt}{2(1-t)}}=e^{-\frac{y(1+t)}{2(1-t)}}$
+one checks that
+\[
+\begin{split}
+&(1-z)^{-\alpha-1} \int_0^\infty e^{-\frac{y(1+t)}{2(1-t)}} y^{\alpha/2} J_\alpha(\sqrt{xy}) dy\\
+=&\sum_{n=0}^\infty z^n \int_0^\infty e^{-y/2} y^{\alpha/2} J_\alpha(\sqrt{xy}) L_n^\alpha(y) dy.
+\end{split}
+\]
+Then one gets, for $|z|<1$,
+\[
+2e^{-x/2} x^{\alpha/2} \sum_{n=0}^\infty (-1)^n L_n^\alpha(x) z^n = \sum_{n=0}^\infty z^n \int_0^\infty e^{-y/2}
+y^{\alpha/2} J_\alpha(\sqrt{xy}) L_n^\alpha(y) dy.
+\]
+Therefore for $\alpha>-1$ and $n \geq 0$,
+\begin{equation}
+e^{-x/2} x^{\alpha/2} L_n^\alpha(x) = \frac{(-1)^n}{2} \int_0^\infty J_\alpha(\sqrt{xy}) e^{-y/2} y^{\alpha/2}
+L_n^\alpha(y)dy.
+\label{4203}
+\end{equation}
+
+
+
+\subsection{Orthogonality of Laguerre polynomials}
+Let
+\[
+\rho_\alpha(x)=e^{-x} x^\alpha.
+\]
+Let
+\[
+u_n = \rho_\alpha^{1/2} L_n^\alpha,\qquad n \geq 0.
+\]
+$u_n$ satisfies the differential equation 
+\[
+(xu_n')'+\left(n+\frac{\alpha+1}{2}-\frac{x}{4}-\frac{\alpha^2}{4x}\right) u_n = 0.
+\]
+Using this we get
+\[
+x(u_n'u_m-u_m'u_n)\bigg|_0^\infty + (n-m) \int_0^\infty u_m u_n dx = 0.
+\]
+Then
+\begin{equation}
+(n-m) \int_0^\infty u_m u_n dx = 0.
+\label{4211}
+\end{equation}
+Using \eqref{4181} yields for $n \geq 2$,
+\[
+\begin{split}
+&n (L_n^\alpha)^2 - (n+\alpha)(L_{n-1}^\alpha)^2-(n+1)L_{n+1}^\alpha L_{n-1}^\alpha
++2L_n^\alpha L_{n-1}^\alpha + (n+\alpha-1)L_n^\alpha L_{n-2}^\alpha=0.
+\end{split}
+\]
+Using this and \eqref{4211}, for $n \geq 2$,
+\[
+n\int_0^\infty e^{-x} x^\alpha L_n^\alpha(x)^2 dx = (n+\alpha)\int_0^\infty e^{-x} x^\alpha L_{n-1}^\alpha(x)^2 dx.
+\]
+Iterating this, for $n \geq 2$,
+\begin{align*}
+\int_0^\infty e^{-x} x^\alpha L_n^\alpha(x)^2 dx &=\frac{(n+\alpha)(n+\alpha-1)\cdots(\alpha+2)}{n(n-2)\cdots 3 \cdot 2} 
+\int_0^\infty e^{-x} x^\alpha L_1^\alpha(x)^2 dx\\
+&=\frac{\Gamma(n+\alpha+1)}{n!}.
+\end{align*}
+
+
+
+\subsection{Asymptotics for Laguerre polynomials}
+It can be proved that for $\alpha>-1$, with $N=n+\frac{\alpha+1}{2}$,\footnote{N. N. Lebedev,
+{\em Special Functions and Their Applications}, p.~87, \S 4.22.} for $x \in \mathbb{R}_{\geq 0}$,
+\[
+L_n^\alpha(x) \sim \frac{\Gamma(n+\alpha+1)}{n!} e^{x/2} (Nx)^{-\alpha/2} J_\alpha(2\sqrt{Nx}),
+\qquad n \to \infty.
+\]
+
+
+\subsection{Laguerre expansions}
+Suppose that $f:\mathbb{R}_{>0} \to \mathbb{R}$ is piecewise smooth in every interval
+$[x_1,x_2]$, $0<x_1<x_2<\infty$, and 
+$f \in L^2(d\rho_\alpha)$. 
+Let 
+\[
+c_n(f) = \frac{n!}{\Gamma(n+\alpha+1)} \int_0^\infty f(x) L_n^\alpha(x) \rho_\alpha(x) dx,
+\]
+$\rho_\alpha(x)=e^{-x} x^\alpha$.
+It can be proved that\footnote{N. N. Lebedev,
+{\em Special Functions and Their Applications}, p.~88, \S 4.23, Theorem 3.}
+if $f$ is continuous at $x$ then
+\[
+\sum_{n=0}^N c_n(f) L_n^\alpha(x) \to f(x),\qquad N \to \infty,
+\]
+and if $f$ is not continuous at $x$ then
+\[
+\sum_{n=0}^N c_n(f) L_n^\alpha(x) \to \frac{f(x+0)}{2}+\frac{f(x-0)}{2},\qquad N \to \infty,
+\]
+which makes sense because $f$ is a priori piecewise continuous.
+
+
+
+Let $\nu>-\frac{1}{2}(\alpha+1)$ and $f(x)=x^\nu$. 
+Integrating by parts,
+\begin{align*}
+c_n(f)&=\frac{n!}{\Gamma(n+\alpha+1)} \int_0^\infty x^{\nu+\alpha} L_n^\alpha(x) e^{-x} \\
+&=\frac{1}{\Gamma(n+\alpha+1)} \int_0^\infty x^\nu D^n(e^{-x}x^{n+\alpha}) dx\\
+&=(-1)^n \frac{\Gamma(\nu+\alpha+1)\Gamma(\nu+1)}{\Gamma(n+\alpha+1)\Gamma(\nu-n+1)}.
+\end{align*}
+Thus
+\[
+x^\nu = \Gamma(\nu+\alpha+1)\Gamma(\nu+1) \sum_{n=0}^\infty \frac{(-1)^n L_n^\alpha(x)}{\Gamma(n+\alpha+1)
+\Gamma(\nu-n+1)}.
+\]
+For $p$ a positive integer,
+\[
+x^p = \Gamma(p+\alpha+1) \cdot p! \sum_{n=0}^p \frac{(-1)^n L_n^\alpha(x)}{\Gamma(n+\alpha+1) \cdot (p-n)!}.
+\]
+
+Define
+\[
+f(x)=(ax)^{-\alpha/2} J_\alpha(2\sqrt{ax}),\qquad \alpha>-1,\quad a>0,\quad x>0.
+\]
+Using 
+\[
+(1-z)^{-\alpha-1} e^{-xz/(1-z)} = \sum_{n=0}^\infty L_n^\alpha(x) z^n,\qquad
+|z|<1,
+\]
+we obtain, as $e^{-\frac{xz}{1-z}-x}= e^{-x/(1-z)}$,
+\[
+\begin{split}
+&(1-z)^{-\alpha-1} \int_0^\infty e^{-x/(1-z)} (x/a)^{\alpha/2} J_\alpha(2\sqrt{ax}) dx\\
+=&\int_0^\infty e^{-x} (x/a)^{\alpha/2} J_\alpha(2\sqrt{ax}) \sum_{n=0}^\infty L_n^\alpha(x) z^n dx\\
+=&\sum_{n=0}^\infty \left(\int_0^\infty f(x) L_n^\alpha(x) \rho_\alpha(x) dx\right) z^n.
+\end{split}
+\]
+Doing the change of variable $2\sqrt{ax}=by$ with $b>0$ and then applying \eqref{4191} with
+$A^2=\frac{b^2}{4a(1-z)}$ and $\nu=\alpha$,
+\[
+\begin{split}
+&(1-z)^{-\alpha-1} \int_0^\infty e^{-x/(1-z)} (x/a)^{\alpha/2} J_\alpha(2\sqrt{ax}) dx\\
+=&(1-z)^{-\alpha-1} (2a)^{-\alpha-1} b^{\alpha+2} \int_0^\infty e^{-\frac{b^2 y^2}{4a(1-z)}} 
+J_\alpha(by) y^{\alpha+1} dy\\
+=&(1-z)^{-\alpha-1} (2a)^{-\alpha-1} b^{\alpha+2} \cdot \frac{b^\alpha}{(2A^2)^{\alpha+1}} e^{-\frac{b^2}{4A^2}}\\
+=&(1-z)^{-\alpha-1} (2a)^{-\alpha-1} b^{\alpha+2} \cdot b^{-\alpha-2} (2a(1-z))^{\alpha+1} e^{-a(1-z)}\\
+=& e^{-a(1-z)}\\
+=&e^{-a} \sum_{n=0}^\infty \frac{(az)^n}{n!}.
+\end{split}
+\]
+Therefore
+\begin{align*}
+e^{-a} \sum_{n=0}^\infty \frac{a^n}{n!} z^n&=\sum_{n=0}^\infty \left(\int_0^\infty f(x) L_n^\alpha(x) \rho_\alpha(x) dx\right) z^n,
+\end{align*}
+whence, for $n \geq 0$,
+\[
+c_n(f) = \frac{n!}{\Gamma(n+\alpha+1)} \int_0^\infty f(x) L_n^\alpha(x) \rho_\alpha(x) dx
+=\frac{n!}{\Gamma(n+\alpha+1)} e^{-a} \frac{a^n}{n!}.
+\]
+Therefore, for $\alpha>-1$, $a>0$, $x>0$,
+\[
+(ax)^{-\alpha/2} J_\alpha(2\sqrt{ax}) = \sum_{n=0}^\infty c_n(f) L_n^\alpha(x)
+=e^{-a} \sum_{n=0}^\infty \frac{a^n}{\Gamma(n+\alpha+1)} L_n^\alpha(x).
+\]
+
+
+
+\section{Integral operators}
+We remind ourselves that, for $\alpha=1$,
+\[
+u_n(x)=\rho_1(x)^{1/2} L_n^1(x) = e^{-x/2} x^{1/2} L_n^1(x).
+\]
+$\{u_n: n \geq 0\}$ is an orthonormal basis for $L^2(\mathbb{R}_{\geq 0})$.
+
+
+For $x,y \in \mathbb{R}_{> 0}$ define
+\[
+k(x,y)= k_x(y) = k^x(y) = \frac{J_1(2 \sqrt{xy})}{((e^x-1)(e^y-1))^{1/2}}.
+\]
+For $\phi \in L^2(\mathbb{R}_{\geq 0})$ and $y \in \mathbb{R}_{> 0}$, define
+\begin{align*}
+K\phi(y) &= \int_{\mathbb{R}_{\geq 0}} k_y(x) \phi(x) dx.
+\end{align*}
+We have established, with $\alpha=1$,
+\[
+J_1(2\sqrt{xy}) = (xy)^{1/2} e^{-x} \sum_{n=0}^\infty \frac{x^n}{(n+1)!} L_n^1(y).
+\]
+Hence
+\begin{align*}
+\int_0^\infty k_y(x) \phi(x) dx&=\int_0^\infty \phi(x) (e^x-1)^{-1/2} (e^y-1)^{-1/2} (xy)^{1/2}
+e^{-x}\\
+&\cdot \sum_{n=0}^\infty \frac{x^n}{(n+1)!} L_n^\alpha(y) dx\\
+&=\sum_{n=0}^\infty \frac{(e^y-1)^{-1/2} y^{1/2} L_n^1(y)}{(n+1)!} \int_0^\infty \phi(x) (e^x-1)^{-1/2}
+x^{1/2} e^{-x} x^n dx\\
+&=\sum_{n=0}^\infty q_n(y)  \inner{\phi}{p_n},
+\end{align*}
+for
+\[
+p_n(x)=\frac{1}{(n+1)!} (e^x-1)^{-1/2} e^{-x} x^{n+\frac{1}{2}}
+=\frac{1}{(n+1)!} e^{-x/2} (e^x-1)^{-1/2} x^n u_n(x)
+\]
+and
+\[
+q_n(y)=(e^y-1)^{-1/2} y^{1/2} L_n^1(y) = (1-e^{-y})^{-1/2} u_n(y).
+\]
+Then
+\[
+K\phi = \sum_{n=0}^\infty q_n \inner{\phi}{p_n}.
+\]
+
+
+
+The following states the trace of the operator $K:L^2(\mathbb{R}_{\geq 0}) \to L^2(\mathbb{R}_{\geq 0})$.\footnote{cf.
+A. A. Kirillov, {\em Elements of the Theory of Representations},
+p.~211, \S 13, Theorem 2.}
+
+
+
+\begin{theorem}
+$\tr K=\int_0^\infty k(x,x) dx=\int_0^\infty \frac{J_1(2x)}{(e^x-1)} dx=0.7711\ldots$.
+\end{theorem}
+
+
+
+
+
+
+
+\section{Hardy spaces}
+For $x \in \mathbb{R}$ let $P_x=\{z \in \mathbb{C}: \Re z > x\}$.
+Let $H$ be the collection of holomorphic functions $f:P_{-1/2} \to \mathbb{C}$ such that for
+any $x>-\frac{1}{2}$, $f|P_x$ is bounded and such that
+\[
+\int_{\mathbb{R}} \left| f\left( -\frac{1}{2}+iy\right) \right|^2 dy<\infty.
+\]
+
+
+Define $M:L^2(\mathbb{R}_{\geq 0}) \to H$, for $\phi \in L^2(\mathbb{R}_{\geq 0})$, by
+\[
+M\phi(z) = \int_{\mathbb{R}_{\geq 0}} e^{-zs -s/2} \phi(s) ds.
+\]
+For $f \in H$ define
+\[
+P_\lambda f(z) = \sum_{k \geq 1} \frac{1}{(z+k)^2} f \left( \frac{1}{z+k} \right)\qquad \Re z > -\frac{1}{2},
+\]
+called a \textbf{Perron-Frobenius operator}.
+$\lambda$ denotes Lebesgue measure. 
+
+
+Let 
+\[
+h(s)=\left(\frac{1-e^{-s}}{s} \right)^{1/2}
+\]
+for $s \in \mathbb{R}_{>0}$, with
+$h(0)=1$.
+ Because $h \in L^\infty(\mu)$, it makes sense to define
+ $S:L^2(\mathbb{R}_{\geq 0}) \to L^2(\mathbb{R}_{\geq 0})$ by
+\[
+S \phi(s) = h \phi,\qquad \phi \in L^2(\mathbb{R}_{\geq 0}).
+\]
+
+Define $A:H \to L^2(\mathbb{R}_{\geq 0})$ by 
+\[
+A = S \circ M^{-1}.
+\]
+
+
+We prove that $P_\lambda$ and $K$ are conjugate.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~9, Proposition 1.1.1.}
+
+
+
+\begin{theorem}
+$P_\lambda = A^{-1}KA$.
+\end{theorem}
+\begin{proof}
+Let $\phi \in L^2(\mathbb{R}_{\geq 0})$ and set $f=M\phi$. Then
+\[
+A^{-1}KAf = A^{-1}KS\phi.
+\]
+We calculate
+\begin{align*}
+(S^{-1}KS\phi)(x)&=h(x)^{-1} \int_{\mathbb{R}_{\geq 0}} k_x(y) \cdot h(y) \cdot \phi(y) dy\\
+&=\left(\frac{x}{1-e^{-x}} \right)^{1/2}
+\int_0^\infty 
+ \frac{J_1(2 \sqrt{xy})}{((e^x-1)(e^y-1))^{1/2}}
+ \cdot \left(\frac{1-e^{-y}}{y} \right)^{1/2}
+ \cdot \phi(y) dy\\
+ &=\int_0^\infty \left( \frac{x}{y} \right)^{1/2} \frac{e^{x/2}}{(e^x-1)^{1/2}} \frac{(e^y-1)^{1/2}}{e^{y/2}}  \frac{J_1(2 \sqrt{xy})}{((e^x-1)(e^y-1))^{1/2}}
+ \phi(y) dy\\
+ &=\int_0^\infty  \left( \frac{x}{y} \right)^{1/2} \frac{e^{(x-y)/2}}{e^x-1} J_1(2 \sqrt{xy})\phi(y) dy.
+\end{align*}
+Then
+\[
+\begin{split}
+&(MS^{-1}KS\phi)(z)\\
+=&\int_{\mathbb{R}_{\geq 0}} e^{-zx -x/2} (S^{-1}KS\phi)(x) dx\\
+=&\int_0^\infty e^{-zx-x/2} \left(  \left( \frac{x}{y} \right)^{1/2} \frac{e^{(x-y)/2}}{e^x-1} J_1(2 \sqrt{xy})\phi(y) dy \right) dx\\
+=&
+\end{split}
+\]
+It is a fact that for $\Re z>-1$ and for $t \geq 0$,
+\[
+\sum_{k \geq 0} (z+k)^{-2} \exp\left(-\frac{t}{z+k} \right) = \int_0^\infty (s t^{-1})^{1/2} e^{-zs} \frac{J_1(2\sqrt{st})}{e^s-1} ds.
+\]
+Using this,
+\begin{align*}
+(MS^{-1}KS\phi)(z)&=\int_0^\infty e^{-y/2} \left( \int_0^\infty  (xy^{-1})^{1/2}  e^{-zx} \frac{J_1(2\sqrt{xy})}{e^x-1} dx\right) \phi(y) dy\\
+&=\int_0^\infty e^{-y/2} \sum_{k \geq 1} (z+k)^{-2} \exp\left(-\frac{y}{z+k} \right) \cdot \phi(y) dy\\
+&=\sum_{k \geq 1} (z+k)^{-2} \left( \int_0^\infty  \exp\left(-\frac{y}{z+k}-\frac{y}{2} \right)  \phi(y) dy\right)\\
+&=\sum_{k \geq 1} (z+k)^{-2} \cdot M\phi\left(\frac{1}{z+k}\right).
+\end{align*}
+Thus, as $f=M\phi$,
+\[
+(MS^{-1}KSM^{-1}f)(z) = \sum_{k \geq 1} (z+k)^{-2} f\left(\frac{1}{z+k}\right) = P_\lambda f(z),
+\]
+that is,
+\[
+A^{-1}KAf(z) = P_\lambda f(z).
+\]
+
+\end{proof}
+
+\end{document}

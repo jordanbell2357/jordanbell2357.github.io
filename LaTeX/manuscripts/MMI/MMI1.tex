@@ -1,0 +1,186 @@
+\documentclass{amsart}
+\usepackage{amssymb,latexsym,amsmath,amsthm,mathrsfs}
+%\usepackage{graphicx}
+\newcommand{\Res}{\mathrm{Res}}
+\newcommand{\Ei}{\mathrm{Ei}}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{lemma}[theorem]{Lemma}
+\begin{document}
+\title{Lecture 1}
+\author{Jordan Bell}
+%\email{jordan.bell@gmail.com}
+%\address{Toronto, Ontario, Canada}
+\date{\today}
+\maketitle
+
+\textbf{page 20:} \textbf{(a)} Suppose it is now time $A$ years. At time $A+1$, 
+Mary Beth pays 6500 $A+1$-dollars. At time $A+2$, Mary Beth pays
+6500 $A+2$-dollars. At time $A+3$, Mary Beth pays 6500 $A+3$-dollars.
+
+``What is the total present value of Mary‐Beth’s residence fees if the discount rate (interest rate) is 6 percent per year?''
+
+$r=0.06$
+
+The present value of 6500 $A+1$-dollars is in $A$-dollars (present dollars)
+\[
+PV_1 = \frac{6500}{1+0.06} = 6132.08 
+\]
+Saying this means that if at time $A$ (which we call the present)
+we invest 6132.08 $A$-dollars (present dollars) then at time $A+1$ the value of this is
+in $A+1$-dollars is
+\[
+6132.08(1+0.06) = 6500.
+\]
+The present value of 6500 $A+2$ dollars in $A$-dollars (present dollars) is
+\[
+PV_2 = \frac{6500}{(1+0.06)^2} = 5784.98.
+\]
+This means that if at time $A$ (the present) we invest 5784.98 $A$-dollars (present dollars) then at time $A+2$ the value of this in $A+2$-dollars is
+\[
+5784.98 \cdot (1+0.06)^2 = 6500.
+\]
+Likewise, the present value of 6500 $A+3$ dollars in $A$-dollars (present dollars) is
+\[
+PV_3 = \frac{6500}{(1+0.06)^3} = 5457.53.
+\]
+
+The 6500 $A$-dollars, 6500 $A+1$-dollars, and 6500 $A+2$-dollars are
+the \textbf{cash flows}. Finding the present value (value in $A$-dollars) of these flows is called \textbf{discounting cash flows}.
+
+The total present value (that is, value in $A$-dollars) of the cash flows (this could equivalently be called the
+discounted value of the cash flows) 
+\begin{align*}
+PV &= PV_1+PV_2+PV_3\\
+& = 6132.08 + 5784.98 + 5457.53 \\
+&= 17374.59.
+\end{align*}
+
+\textbf{(b)} ``As an alternative, Mary-Beth is offered the option of paying a lower amount in her first year of \$6,250, and then increasing her payment by 5\% each year. Would she take this option?''
+
+$C=6250$
+
+$r=0.06$
+
+$g=0.05$
+
+The cash flows here are 6250 in $A+1$-dollars, then $(1+g) \cdot 6250 = 6562.50$ in
+$A+2$-dollars, then $(1+g)^2 \cdot 6250=6890.63$ in $A+3$ dollars.
+
+The present value (in $A$-dollars) of the cash flows is
+\begin{align*}
+PV&=\frac{C}{1+r} + \frac{(1+g)C}{(1+r)^2} + \frac{(1+g)^2 C}{(1+r)^3}\\
+&= \frac{C}{1+r} \left( \frac{1+g}{1+r} + \left( \frac{1+g}{1+r} \right)^2 \right)\\
+&= \frac{C}{1+r} \sum_{n=0}^2 \left(\frac{1+g}{1+r} \right)^n
+\end{align*}
+
+\textbf{Sum of geometric progression:}
+\[
+\sum_{n=0}^N x^n = \frac{1-x^{N+1}}{1-x}.
+\]
+
+Therefore
+\begin{align*}
+PV&= \frac{C}{1+r} \sum_{n=0}^2 \left(\frac{1+g}{1+r} \right)^n\\
+&= \frac{C}{1+r} \cdot \frac{1- \left(\frac{1+g}{1+r} \right)^3}{1- \left(\frac{1+g}{1+r} \right)}\\
+&= \frac{C}{1+r} \cdot \frac{1- \left(\frac{1+g}{1+r} \right)^3}{\frac{(1+r)-(1+g)}{1+r}}\\
+&=\frac{C}{1+r} \cdot \frac{1- \left(\frac{1+g}{1+r} \right)^3}{\frac{r-g}{1+r}}\\
+&= \frac{C}{1+r} \cdot \left(1- \left(\frac{1+g}{1+r} \right)^3 \right) \cdot
+\frac{1+r}{r-g}\\
+&=\frac{C}{r-g}\cdot \left(1- \left(\frac{1+g}{1+r} \right)^3 \right)
+\end{align*}
+
+I worked this out in general. For this problem we have the values of the
+variables and we get
+\begin{align*}
+PV &= \frac{6250}{0.06-0.05} \cdot  \left(1- \left(\frac{1+0.05}{1+0.06} \right)^3 \right)\\
+&=\frac{6250}{0.01} \cdot \left(1-\left(\frac{1.05}{1.06} \right)^3 \right)\\
+&=17522.33.
+\end{align*}
+
+That is, the present value of the cash flows in scenario (b) is 
+17522.33 $A$-dollars (present dollars).
+
+The PV of the cash flows in (a) is 17374.59 and the PV of the cash flows
+in (b) is 17522.33, so (b) has greater PV of cash flows. Since
+Mary Beth is paying the cash flows, she chooses (a).
+
+\textbf{In general:} For (b), we determined that for a growing annuity
+with a payment of $C$ at time $A+1$, a payment of $C$ at time $A+2$,
+etc., and a payment of $C$ at time $A+N$, the present value of the growing annuity
+is 
+\begin{equation}
+PV=\frac{C}{r-g} \cdot \left(1-\left(\frac{1+g}{1+r} \right)^N \right).
+\end{equation}
+
+A simple annuity (in other words, an annuity without the adjective ``growing'') is indeed a growing annuity with $g=0$. Therefore the work we
+did can be used to determine the present value of the simple
+annuity in (a):
+\begin{equation}
+PV = \frac{C}{r} \cdot \left(1-\frac{1}{(1+r)^N} \right)
+\end{equation}
+Let us calculate the present value of the simple annuity (a) using this
+formula:
+\begin{align*}
+PV &= \frac{6500}{0.06} \cdot \left(1-\frac{1}{1.06^3} \right)\\
+&=17374.58.
+\end{align*}
+This is off by one cent from the present value we calculated directly already,
+and this difference is from rounding during my calculations doing it
+the first time.
+
+\newpage
+
+\textbf{page 23 (c)}``Using Q30 (Mary-Beth), calculate the following:
+How would the PV of her costs change if she had to make her payments at the beginning of each year? For the annuity. For the growing annuity.''
+
+For the annuity (a), the cash flows are now
+6500 in $A$-dollars, then 6500 in $A+1$ dollars, then 6500 in $A+2$
+dollars. The present value (in $A$-dollars) of these cash flows is
+\begin{align*}
+PV&=6500+\frac{6500}{1+0.06} + \frac{6500}{(1+0.06)^2}\\
+&=6500 + 6132.08 + 5784.98\\
+&=18417.06.
+\end{align*}
+(FYI: The present value of cash flows means the same thing as the discounted
+value of the cash flows.)
+
+For the growing annuity (b), the cash flows are
+now 6250 in $A$-dollars, then $(1+0.05) \cdot 6250$ in $A+1$ dollars,
+then $(1+0.05)^2 \cdot 6250$ in $A+2$ dollars. The present value of these
+cash flows is, for $C=6250$,
+\begin{align*}
+PV&= C + \frac{(1+g)C}{1+r} + \frac{(1+g)^2C}{(1+r)^2}\\
+&=C \sum_{n=0}^2 \left( \frac{1+g}{1+r} \right)^n
+\end{align*}
+Let $x=\frac{1+g}{1+r}$. So
+\begin{align*}
+PV&=C \sum_{n=0}^2 x^n\\
+&= C \cdot \frac{1-x^3}{1-x}\\
+&= C \cdot \frac{1-\left( \frac{1+g}{1+r} \right)^3}{1-\frac{1+g}{1+r}}\\
+&=C \cdot \frac{1+r}{r-g} \cdot \left(1-\left( \frac{1+g}{1+r} \right)^3\right)
+\end{align*}
+
+That is, the present value of the cash flows for the growing annuity (b)
+in $A$-dollars (present dollars) is
+\begin{align*}
+PV&=6250 \cdot \frac{1.06}{0.01} \cdot \left(1- \left( \frac{1.05}{1.06} \right)^3\right)\\
+&=6250 \cdot 106 \cdot 0.0280357\ldots\\
+&=18573.67.
+\end{align*}
+
+The PV of the annuity is 18417.06 in $A$-dollars (present dollars) and the PV of the growing
+annuity is 18573.67 in $A$-dollars (present dollars). Therefore
+Mary Beth will as before choose the annuity not the growing annuity, because she is paying and wants to pay
+less so wants to pay the cash flows with the smaller present value.
+
+\newpage
+
+\textbf{page 26:} ``Find the PV and FV (in 10 years from now) of a growing annuity with payments of 100 in 1 year, growing at 8\% for 9 more years (i.e. 10 payments in total), if the relevant interest rate is 6\% per year. 
+What if the payments were at the beginning of each year?''
+
+
+
+\end{document}

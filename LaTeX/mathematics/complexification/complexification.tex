@@ -1,0 +1,614 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\Tr}{\textrm{Tr}\,} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\SA}{B_{\textrm{sa}}(H)} 
+\newcommand{\positive}{B_{\textrm{+}}(H)} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Complexification, complex structures, and linear ordinary differential equations}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+\section{Motivation}
+The solution of the initial value problem 
+\[
+x'(t)=Ax(t), \qquad x(0)=x_0 \in \mathbb{R}^n,
+\]
+where $A$ is an $n \times n$ matrix over $\mathbb{R}$,
+is $x(t)=\exp(At)x_0$. If we want to compute the solution and if $A$ is diagonalizable, say $A=PDP^{-1}$, we use
+\[
+\exp(At)=\exp((PDP^{-1})t)=P\exp(Dt)P^{-1}.
+\]
+Thus if the matrix $A$ has complex eigenvalues, then although $\exp(At)x_0 \in \mathbb{R}^n$, it may not be the case that $P^{-1}x_0 \in \mathbb{R}^n$. 
+For example, if $A=\begin{pmatrix}0&-1\\1&0\end{pmatrix}$, then
+\[
+D=\begin{pmatrix}-i&0\\0&i\end{pmatrix}, \quad
+P=\begin{pmatrix}-i&i\\1&1\end{pmatrix}, \quad
+P^{-1}=\frac{1}{2}\begin{pmatrix}i&1\\-i&1\end{pmatrix}.
+\]
+For $x_0=\begin{pmatrix}1\\0\end{pmatrix}$, 
+\[
+P^{-1}x_0=\frac{1}{2}\begin{pmatrix}i&1\\-i&1\end{pmatrix} \begin{pmatrix}1\\0\end{pmatrix}
+=\frac{1}{2} \begin{pmatrix}i\\-i\end{pmatrix}.
+\]
+This is similar to how Cardano's formula, which expresses the roots of a real cubic polynomial in terms of its coefficients,
+involves complex numbers and yet the final result may still be real.
+
+In the following, unless I specify the dimension of a vector space, any statement about real vector spaces is about real vector spaces of finite or infinite dimension, and any
+statement about complex vector spaces is about complex vector spaces of finite or infinite dimension. 
+
+
+\section{Direct sums}
+If $V$ is a real vector space, a {\em complex structure} for $V$ is an $\mathbb{R}$-linear map $J:V \to V$ such that $J^2=-\id_V$.
+
+If $V$ is a real vector space and $J:V \to V$ is a complex structure,  define a complex vector space $V_J$ in the following way: let the set of elements of $V_J$ be $V$,
+let addition in $V_J$ be addition in $V$, and define scalar multiplication in $V_J$ by 
+\[
+(a+ib)v=av+bJ(v).
+\]
+One checks that for $\alpha,\beta \in \mathbb{C}$ and $v \in V_J$ we have $(\alpha \beta)v=\alpha (\beta v)$, and thus
+that $V_J$ is indeed a complex vector space with this definition of scalar multiplication.\footnote{One should also
+verify that distributivity holds with this definition of scalar product; the other properties of a vector space are satisfied because $V_J$ has
+the same addition as the real vector space $V$.}
+
+ Let $V$ be a real vector space, and define the $\mathbb{R}$-linear map 
+$J:V \oplus V \to V \oplus V$ by
+\[
+J(v,w)=(-w,v).
+\]
+$J^2=-\id_{V \oplus V}$. $J$ is a complex structure on the real vector space $V \oplus V$. 
+The {\em complexification} of $V$
+is the complex vector space $V^\mathbb{C}=(V \oplus V)_J$. 
+Thus, $V^\mathbb{C}$ has the same set of elements as $V \oplus V$, the same addition as $V \oplus V$, and scalar multiplication
+\[
+(a+ib) (v,w)=a(v,w)+bJ(v,w),
+\]
+which gives
+\[
+(a+ib)(v,w)=a(v,w)+b(-w,v)=(av,aw)+(-bw,bv)=(av-bw,aw+bv).
+\]
+
+If the real vector space $V$ has dimension $n$ and
+if $\{e_1,\ldots,e_n\}$ is a basis for $V$, then
+\[
+\{(e_1,0),\ldots,(e_n,0),(0,e_1),\ldots,(0,e_n)\}
+\]
+is a basis for the real vector space $V \oplus V$. 
+Let $v \in V^\mathbb{C}$. Using the basis for the real vector space $V \oplus V$, there exist 
+\[
+a_1,\ldots,a_n,b_1,\ldots,b_n \in \mathbb{R}
+\]
+such that
+\begin{eqnarray*}
+v&=&a_1(e_1,0)+\cdots a_n(e_n,0)+b_1(0,e_1)+\cdots+b_n(0,e_n)\\
+&=&a_1(e_1,0)+\cdots+a_n(e_n,0)+b_1J(e_1,0)+\cdots+b_n J(e_n,0)\\
+&=&(a_1+ib_1)(e_1,0)+\cdots+(a_n+ib_n)(e_n,0),
+\end{eqnarray*}
+where in the last line we used the definition of scalar multiplication in $V^\mathbb{C}$. One checks that
+the set $\{(e_1,0),\ldots,(e_n,0)\}$ is linearly independent over $\mathbb{C}$, and therefore it is a basis for $V^\mathbb{C}$. 
+Hence
+\[
+\dim_\mathbb{C} V^\mathbb{C} = \dim_\mathbb{R} V.
+\]
+
+\section{Complexification is a functor}
+If $V,W$ are real vector spaces and $T:V \to W$ is an $\mathbb{R}$-linear map, we define 
+\[
+T^\mathbb{C}:V^\mathbb{C} \to W^\mathbb{C}
+\]
+by 
+\[
+T^\mathbb{C}(v_1,v_2)=(Tv_1,Tv_2);
+\]
+this is a $\mathbb{C}$-linear map.
+Setting $\iota_V(v_1,v_2)=(v_1,0)$ and $\iota_W(w_1,w_2)=(w_1,0)$, $T^\mathbb{C}:V^\mathbb{C} \to W^\mathbb{C}$ is
+the unique $\mathbb{C}$-linear map
+such that
+$T^\mathbb{C} \circ \iota_V = \iota_W \circ T$.\footnote{See Keith Conrad's, \url{https://kconrad.math.uconn.edu/blurbs/linmultialg/complexification.pdf}}
+% http://www.math.uconn.edu/$\sim$kconrad/blurbs/linmultialg/complexification.pdf}
+
+
+Complexification is a {\em  functor} from the category of real vector spaces to the category of complex vector spaces: 
+\[
+(\id_V)^\mathbb{C}(v_1,v_2)=(\id_V v_1, \id_V v_2)=(v_1,v_2)=\id_{V^\mathbb{C}}(v_1,v_2),
+\]
+so $(\id_V)^\mathbb{C}=\id_{V^\mathbb{C}}$, and if $S:U \to V$ and $T:V \to S$ are $\mathbb{R}$-linear maps, then 
+\[
+(T \circ S)^\mathbb{C}(v_1,v_2)=(T(Sv_1),T(Sv_2))=
+T^\mathbb{C}(Sv_1,Sv_2)=T^\mathbb{C}(S^\mathbb{C}(v_1,v_2)),
+\]
+so $(T \circ S)^\mathbb{C} =  T^\mathbb{C} \circ
+S^\mathbb{C}$.
+
+
+
+
+\section{Complexifying a complex structure}
+If $V$ is a real vector space and $J:V \to V$ is a complex structure, then
+\begin{eqnarray*}
+(J^\mathbb{C})^2(v_1,v_2)&=&J^\mathbb{C}(Jv_1,Jv_2)\\
+&=&(J^2v_1,J^2v_2)\\
+&=&(-v_1,-v_2)\\
+&=&-(v_1,v_2),
+\end{eqnarray*}
+so $(J^\mathbb{C})^2=-\id_{V^\mathbb{C}}$. 
+Let
+\[
+E_i=\{w \in V^\mathbb{C}:J^\mathbb{C}w=iw\}, \qquad E_{-i}=\{w \in V^\mathbb{C}:
+J^\mathbb{C}w=-iw\}.
+\]
+If $w \in V^\mathbb{C}$, then one checks that
+\[
+w-iJ^\mathbb{C} w \in E_i, \qquad w+iJ^\mathbb{C}w \in E_{-i},
+\]
+and 
+\[
+w=\frac{1}{2}\left(w-iJ^\mathbb{C} w\right)+\frac{1}{2}\left(w+iJ^\mathbb{C}w\right).
+\]
+It follows that
+\[
+V^\mathbb{C}=E_i \oplus E_{-i}.
+\]
+
+
+\section{Complex structures, inner products, and symplectic forms}
+If $V$ is a real vector space of odd dimension, then one can show that there is no linear map $J:V \to V$ satisfying $J^2=-\id_V$, i.e.
+there does not exist a complex structure for it. On the other hand, if $V$ has even dimension,
+let
+\[
+\{e_1,\ldots,e_n,f_1,\ldots,f_n\}
+\]
+be a basis for the real vector space $V$, and define $J:V \to V$ by
+\[
+Je_j = f_j, \qquad Jf_j=-e_j.
+\]
+Then $J:V \to V$ is a complex structure.
+
+If $V$ is a real vector space of dimension $2n$ with a complex structure $J$, let $e_1 \neq 0$. Check that $J e_1 \not \in \Span\{e_1\}$. If $n > 1$, let
+\[
+e_2 \not \in \Span\{e_1,Je_1\}.
+\]
+Check that the set $\{e_1,e_2,Je_1,Je_2\}$ is linearly independent. If $n > 2$, let 
+\[
+e_3 \not \in \Span\{e_1,e_2,Je_1,Je_2\}.
+\]
+Check that the set $\{e_1,e_2,e_3,Je_1,Je_2,Je_3\}$ is linearly independent. If $2i<2n$ then there is some
+\[
+e_{i+1} \not \in \Span\{e_1,\ldots,e_i,Je_1,\ldots,Je_i\}.
+\]
+I assert that 
+\[
+\{e_1,\ldots,e_n,Je_1,\ldots,Je_n\}
+\]
+is a basis for $V$. 
+
+Using the above basis $\{e_1,\ldots,e_n,Je_1,\ldots,Je_n\}$ for $V$, let $f_i=Je_i$, and define $\inner{\cdot}{\cdot}:V \times V \to \mathbb{R}$ by
+\[
+\inner{e_i}{e_j}=\delta_{i,j}, \qquad \inner{f_i}{f_j}=\delta_{i,j},\qquad \inner{e_i}{f_j}=0, \qquad
+\inner{f_i}{e_j}=0.
+\]
+Check that this is an inner product on the real vector space $V$. Moreover, 
+\[
+\inner{Je_i}{Je_j}=\inner{f_i}{f_j}=\delta_{i,j}=\inner{e_i}{e_j},
+\]
+and
+\[
+\inner{Jf_i}{Jf_j}=\inner{J^2 e_i}{J^2 e_j}=\inner{-e_i}{-e_j}=\inner{e_i}{e_j}=\delta_{i,j}=\inner{f_i}{f_j},
+\]
+and
+\[
+\inner{Je_i}{Jf_j}=\inner{f_i}{-e_j}=-\inner{f_i}{e_j}=0=\inner{e_i}{f_j},
+\]
+and
+\[
+\inner{Jf_i}{Je_j}=\inner{-e_i}{f_j}=-\inner{e_i}{f_j}=0=\inner{f_i}{e_j}.
+\]
+Hence for any $v,w \in V$,
+\[
+\inner{Jv}{Jw}=\inner{v}{w}.
+\]
+We say that the complex structure $J$ is {\em compatible} with the inner product $\inner{\cdot}{\cdot}$, i.e.
+$J:(V,\inner{\cdot}{\cdot}) \to (V,\inner{\cdot}{\cdot})$ is an {\em orthogonal transformation}.
+
+A {\em symplectic form} on a real vector space $V$ is a bilinear form $\omega:V \times V \to \mathbb{R}$
+such that $\omega(v,w)=-\omega(w,v)$, and such that if $\omega(v,w)=0$ for all $w$ then
+$v=0$; we say respectively that $\omega$ is {\em skew-symmetric} and {\em non-degenerate}.
+If a real vector space $V$ has a complex structure $J$, and $\inner{\cdot}{\cdot}$ is an inner product on $V$ that is compatible with $J$,
+ define $\omega$ by
+\[
+\omega(v,w)=\inner{v}{J^{-1}w}=\inner{v}{-Jw}=-\inner{v}{Jw},
+\]
+which is equivalent to
+\[
+\omega(v,Jw)=\inner{v}{w}.
+\]
+Using that the inner product is compatible with $J$ and that it is symmetric,
+\[
+\omega(v,w)=-\inner{v}{Jw}=-\inner{Jv}{J^2 w}=-\inner{Jv}{-w}=\inner{w}{Jv}=-\omega(w,v),
+\]
+so $\omega$ is skew-symmetric. If $w \in V$ and $\omega(v,w)=0$ for all $v \in V$, then
+\[
+-\inner{v}{Jw}=0
+\]
+for all $v \in V$, and thus $Jw=0$. Since $J$ is invertible, $w=0$. Thus $\omega$ is nondegenerate. Therefore
+$\omega$ is a symplectic form on $V$.\footnote{Using the basis
+$\{e_1,\ldots,e_n,f_1,\ldots,f_n\}$ for $V$, $f_i=Je_i$, we have 
+\[
+\omega(e_i,f_j)=-\inner{e_i}{Jf_j}=-\inner{e_i}{J^2e_j}=-\inner{e_i}{-e_j}=\inner{e_i}{e_j}=\delta_{i,j},
+\]
+and
+\[
+\omega(e_i,e_j)=-\inner{e_i}{Je_j}=-\inner{e_i}{f_j}=0, \qquad \omega(f_i,f_j)=0.
+\]
+A basis $\{e_1,\ldots,e_n,f_1,\ldots,f_n\}$ for a symplectic vector space that satisfies these three conditions
+is called a {\em Darboux basis}.}
+We have
+\[
+\omega(Jv,Jw)=-\inner{Jv}{J^2w}=-\inner{J^2v}{J^3w}=-\inner{-v}{-Jw}=-\inner{v}{Jw}=\omega(v,w).
+\]
+We say that $J$ is {\em compatible} with the sympletic form $\omega$, namely, $J:(V,\omega) \to (V,\omega)$ is
+a {\em symplectic transformation}.
+
+On the other hand,
+if $V$ is a real vector space with symplectic form $\omega$ and $J$ is a compatible complex structure,
+then $\inner{\cdot}{\cdot}: V \times V \to \mathbb{R}$ defined by
+\[
+\inner{v}{w}=\omega(v,Jw)
+\]
+is an inner product on $V$ that is compatible with the complex structure $J$. 
+
+Suppose $V$ is a real vector space with complex structure $J:V \to V$ and that $h:V_J \times V_J \to \mathbb{C}$ 
+is an inner product on the complex vector space $V_J$. Define $g:V \times V \to \mathbb{R}$ by\footnote{The
+letter $h$ refers to a Hermitian form, i.e. an inner product on a complex vector space, and the letter $g$ refers
+to the usual notation for a metric on a Riemannian manifold.}
+\[
+g(v_1,v_2)=\frac{1}{2}\left(h(v_1,v_2)+\overline{h(v_1,v_2)}\right)=
+\frac{1}{2}\left(h(v_1,v_2)+h(v_2,v_1)\right).
+\]
+It is straightforward to check that $g$ is an inner product on the real vector space $V$. 
+Similarly, define $\omega:V \times V \to \mathbb{R}$ by
+\[
+\omega(v_1,v_2)=\frac{i}{2}\left(h(v_1,v_2)-\overline{h(v_1,v_2)}\right)=\frac{i}{2}\left(h(v_1,v_2)-h(v_2,v_1)\right).
+\]
+It is apparent that $\omega$ is skew-symmetric. If $\omega(v_1,v_2)=0$ for all $v_1$, then in particular
+$\omega(iv_1,v_1)=0$, and so
+\[
+h(iv_1,v_1)-h(v_1,iv_1)=0.
+\]
+As $h$ is a complex inner product,
+\[
+ih(v_1,v_1)-\overline{i}h(v_1,v_1)=0,
+\]
+i.e.
+\[
+2ih(v_1,v_1)=0,
+\]
+and thus $h(v_1,v_1)=0$, which implies that $v_1=0$. Therefore $\omega$ is nondegenerate, and thus
+$\omega$ is a symplectic form on the real vector space $V$. 
+With these definitions of $g$ and $\omega$, for $v_1,v_2 \in V_J$ we have
+\[
+h(v_1,v_2)=g(v_1,v_2)-i\omega(v_1,v_2),
+\]
+which writes the inner product on the complex vector space $V_J$ using an inner product on the real
+vector space $V$ and a symplectic form on the real vector space $V$;
+note that $V_J$ has the same set of elements as $V$. 
+Moreover, for $v_1,v_2 \in V$ we have
+\begin{eqnarray*}
+\omega(v_1,Jv_2)&=&\frac{i}{2}\left(h(v_1,Jv_2)-h(Jv_2,v_1)\right)\\
+&=&\frac{i}{2}\left(h(v_1,iv_2)-h(iv_2,v_1)\right)\\
+&=&\frac{i}{2}\left(-ih(v_1,v_2)-ih(v_2,v_1)\right)\\
+&=&g(v_1,v_2).
+\end{eqnarray*}
+
+
+\subsection{Tensor products}
+Here we give another presentation of the complexification of a real vector space, this time using tensor products
+of real vector spaces. If you were satisfied by the first definition you don't need to read this one; read this either if you are curious
+about another way to define complexification, if you want to see a pleasant application of tensor products, or if you didn't like the first
+definition.
+Let $V$ be a real vector space of dimension $n$. $\mathbb{C}$ is a real vector space of dimension $2$, and
+\[
+V \otimes_{\mathbb{R}} \mathbb{C}
+\]
+is a real vector space of dimension $2n$. If $V$ has basis $\{e_1,\ldots,e_n\}$, then $V \otimes_{\mathbb{R}} \mathbb{C}$
+has basis $\{e_1 \otimes 1, \ldots, e_n \otimes 1, e_1 \otimes i, \ldots, e_n \otimes i\}$.
+Since every element of $V \otimes_{\mathbb{R}} \mathbb{C}$ can be written uniquely in the form
+\[
+v_1 \otimes 1 + v_2 \otimes i, \qquad v_1, v_2 \in V,
+\]
+one often writes
+\[
+V \otimes_{\mathbb{R}} \mathbb{C} \cong V \oplus iV;
+\]
+here $iV$ is a real vector space that is isomorphic to $V$. 
+
+
+The {\em complexification} of $V$ is the
+complex vector space $V^\mathbb{C}$ whose set of elements is $V \otimes_{\mathbb{R}} \mathbb{C}$, with the same addition
+as the real vector space $V \otimes_{\mathbb{R}} \mathbb{C}$, and with scalar multiplication defined by
+\[
+\alpha(v \otimes \beta)=v \otimes (\alpha \beta), \qquad v \in V, \alpha,\beta \in \mathbb{C}.
+\]
+Let $v \in V^\mathbb{C}$. Using the basis of the real vector space $V \otimes_{\mathbb{R}} \mathbb{C}$, there exist some 
+\[
+a_1,\ldots,a_n,b_1,\ldots,b_n \in \mathbb{R}
+\]
+ such that
+\begin{eqnarray*}
+v&=&a_1 e_1 \otimes 1 + \cdots + a_n e_n \otimes 1 + b_1 e_1 \otimes i + \cdots + b_n e_n \otimes i\\
+&=&e_1 \otimes (a_1+ib_1) + \cdots +e_n \otimes (a_n + ib_n)\\
+&=&(a_1+ib_1) e_1 \otimes 1 + \cdots + (a_n+ib_n) e_n \otimes 1,
+\end{eqnarray*}
+where in the last line we used the definition of scalar multiplication in $V^\mathbb{C}$. One checks
+that the 
+$\{e_1 \otimes 1,\ldots, e_n \otimes 1\}$ is linearly independent over $\mathbb{C}$, and hence that it is a basis for the complex vector space $V^\mathbb{C}$,
+so $V^\mathbb{C}$ has dimension $n$ over $\mathbb{C}$.
+
+If $V$ and $W$ are real vector spaces and $T:V \to W$ is a linear map, define $T^\mathbb{C}:V^\mathbb{C} \to W^\mathbb{C}$ by
+\[
+T^\mathbb{C}(v \otimes z)=(Tv) \otimes z.
+\]
+With this definition of $T^\mathbb{C}$, one can check that complexification is a functor from the category of real vector
+spaces to the category of complex vector spaces.
+
+
+\section{Decomplexification}
+If $V$ is a complex vector space, let $V^\mathbb{R}$ be the real vector space whose set of elements is $V$, in which addition is the same as addition
+in $V$, and in which scalar multiplication is defined by
+\[
+av=(a+0i)v, \qquad a \in \mathbb{R}.
+\]
+Because $V$ is a complex vector space, it is apparent that $V^\mathbb{R}$ is  a real vector space with this scalar multiplication.
+We call $V^\mathbb{R}$ the {\em decomplexification} of the complex vector space $V$.
+
+If $V$ has basis $\{e_1,\ldots,e_n\}$ and $v \in V$,
+then there are $a_1+ib_1,\ldots,a_n+ib_n \in \mathbb{C}$ such that
+\[
+v=(a_1+ib_1)e_1+\cdots+(a_n+ib_n)e_n=a_1e_1+\cdots+a_ne_n+b_1(ie_1)+\cdots+
+b_n(ie_n).
+\]
+One checks that 
+\[
+e_1,\ldots,e_n,ie_1,\ldots,ie_n
+\]
+are linearly independent over $\mathbb{R}$, and hence are a basis for the real vector space $V^\mathbb{R}$. Thus, 
+\[
+\dim_\mathbb{R} V^\mathbb{R} = 2\dim_\mathbb{C} V.
+\]
+
+If $V$ is a complex vector space and $T:V \to V$ is a $\mathbb{C}$-linear map, define $T^\mathbb{R}:V^\mathbb{R} \to V^\mathbb{R}$ by
+\[
+T^\mathbb{R}v=Tv.
+\]
+Because $T$ is $\mathbb{C}$-linear it follows that $T^\mathbb{R}$ is $\mathbb{R}$-linear.
+Decomplexification is a functor from the category of complex vector spaces to the category of real vector spaces. Since 
+decomplexification is defined simply by ignoring the fact that $V$ is closed
+under multiplication by complex scalars and only using real scalars,
+decomplexification is called a forgetful functor
+
+\section{Complex conjugation in complexified vector spaces}
+If $V$ is a real vector space, define $\sigma:V^\mathbb{C} \to V^\mathbb{C}$ by
+\[
+\sigma(v_1,v_2)=(v_1,-v_2).
+\]
+We call $\sigma$ {\em complex conjugation} in $V^\mathbb{C}$. We have $\sigma \circ \sigma = \id_{V^\mathbb{C}}$.
+If $T:V^\mathbb{C} \to V^\mathbb{C}$ is a $\mathbb{C}$-linear map, define $T^\sigma:V^\mathbb{C} \to V^\mathbb{C}$
+by
+\[
+T^\sigma(w)=\sigma(T \sigma (w)).
+\]
+$T^\sigma$ is a $\mathbb{C}$-linear map.
+It is a fact that if $T:V^\mathbb{C} \to V^\mathbb{C}$ is $\mathbb{C}$-linear, then $T^\sigma=T$ if and only if there
+is some $\mathbb{R}$-linear $S:V \to V$ such that $T=S^\mathbb{C}$. In words, a linear map on the complexification
+of a real vector space is equal to its own conjugate if and only if it is the complexification of a linear map
+on the real vector space.
+
+The following are true statements:\footnote{These are exercises from V. I. Arnold's {\em Ordinary differential equations},
+p.~122, \S 18.4, in Richard A. Silverman's translation.} ($\mathbb{C}^n=(\mathbb{R}^n)^\mathbb{C}$)
+
+\begin{itemize}
+\item If $T:\mathbb{C}^n \to \mathbb{C}^n$ is a linear map, then
+\[
+\exp(T)^\mathbb{R}=\exp(T^\mathbb{R}),
+\]
+and 
+\[
+\exp(T)^\sigma=\exp(T^\sigma).
+\]
+\item If $T:\mathbb{R}^n \to \mathbb{R}^n$ is a linear map, then
+\[
+\exp(T)^\mathbb{C}=\exp(T^\mathbb{C}).
+\]
+\item If $T:\mathbb{C}^n \to \mathbb{C}^n$ is a linear map, then
+\[
+\det T^\mathbb{R}=|\det T|^2,
+\]
+and 
+\[
+\det T^\sigma=\overline{\det T}.
+\]
+\item If $T:\mathbb{R}^n \to \mathbb{R}^n$ is a linear map, then
+\[
+\det T^\mathbb{C}=\det T.
+\]
+\item If $T:\mathbb{C}^n \to \mathbb{C}^n$ is a linear map, then
+\[
+\Tr (T^\mathbb{R})=\Tr T+\Tr T^\sigma,
+\]
+and 
+\[
+\Tr T^\sigma=\overline{\Tr T}.
+\]
+\item If $T:\mathbb{R}^n \to \mathbb{R}^n$ is a linear map, then
+\[
+\Tr T^\mathbb{C}=\Tr T.
+\]
+\end{itemize}
+
+
+\section{Linear ordinary differential equations over $\mathbb{C}$}
+Let $A$ be an $n \times n$ matrix over $\mathbb{C}$. The solution of the initial value problem
+\[
+z'(t)=Az(t), \qquad z(0)=z_0 \in \mathbb{C}^n,
+\]
+is $z(t)=\exp(At)$. 
+
+If $A$ has $n$ distinct eigenvalues $\lambda_1,\ldots,\lambda_n \in \mathbb{C}$, then, with
+\[
+E_\lambda=\{z \in \mathbb{C}^n: Az=\lambda z\},
+\]
+ we have
+\[
+\mathbb{C}^n = E_{\lambda_1} \oplus + \cdots + \oplus E_{\lambda_n},
+\]
+where each $E_{\lambda_k}$ has dimension 1. For $z \in E_{\lambda_k}$, 
+\[
+\exp(At)z=\sum_{m=0}^\infty t^m \frac{A^m z}{m!} = \sum_{m=0}^\infty t^m \frac{\lambda_k^m z}{m!}=e^{\lambda_k t}z.
+\]
+Let $\xi_k \in E_{\lambda_k}$ be nonzero, $1 \leq k \leq n$. They are a basis for $\mathbb{C}^n$, so there are $c_k \in \mathbb{C}$ such that
+\[
+z_0=\sum_{k=1}^n c_k \xi_k.
+\]
+Then
+\[
+z(t)=\exp(At)z_0=\exp(At)\sum_{k=1}^n c_k \xi_k=\sum_{k=1}^n c_k \exp(At) \xi_k=
+\sum_{k=1}^n c_k e^{\lambda_k t} \xi_k.
+\]
+
+Suppose that $A$ is an $n \times n$ matrix over $\mathbb{C}$, that $z_0 \in \mathbb{C}^n$, that
+$A^\sigma=A$ and that $\sigma(z_0)=z_0$. The solution of the initial value problem 
+\[
+z'(t)=Az(t), \qquad z(0)=z_0,
+\]
+is $z(t)=\exp(At)z_0$. We have, as $\exp(At)^\sigma=\exp((At)^\sigma)=\exp(At)$,
+\[
+\sigma(z(t))=\sigma(\exp(At)z_0)=\sigma(\exp(At)\sigma(z_0))=\exp(At)^\sigma z_0=\exp(At)z_0=z(t).
+\]
+Therefore, if $A^\sigma=A$ and $\sigma(z_0)=z_0$, then $\sigma(z(t))=z(t)$ for all $t$.
+
+\section{Linear ordinary differential equations over $\mathbb{R}$}
+Let $A$ be an $n \times n$ matrix over $\mathbb{R}$ and let $x_0 \in \mathbb{R}^n$. Let $z_0=(x_0,0) \in \mathbb{C}^n=(\mathbb{R}^n)^\mathbb{C}$, and let
+$z(t)=(z_1(t),z_2(t))$ be the solution of the initial value problem
+\[
+z'(t)=A^\mathbb{C} z(t), \qquad z(0)=z_0 \in \mathbb{C}^n.
+\]
+As $A^\mathbb{C}$ is the complexification of a real linear map, $(A^\mathbb{C})^\sigma=A^\mathbb{C}$, and
+\[
+\sigma(z_0)=\sigma(x_0,0)=(x_0,-0)=(x_0,0)=z_0,
+\]
+so $\sigma(z(t))=z(t)$, i.e. $(z_1(t),z_2(t))=(z_1(t),-z_2(t))$, so $z_2(t)=0$ for all $t$.
+But $z'(t)=(z_1'(t),z_2'(t))$ and $A^\mathbb{C} z(t)=(Az_1(t),Az_2(t))$,
+so
+\[
+z_1'(t)=Az_1(t)
+\]
+for all $t$. Also, $z(0)=(z_1(0),z_2(0))$ and $z(0)=z_0=(x_0,0)$, so $z_1(0)=x_0$. Therefore, $x(t)=z_1(t)$ is the solution
+of the initial value problem
+\[
+x'(t)=Ax(t), \qquad x(0)=x_0.
+\]
+Thus, to solve an initial value problem in $\mathbb{R}^n$ we can complexify it, solve the initial value problem in $\mathbb{C}^n$, and take
+the first entry of the solution of the complex initial value problem.
+
+If $A$ is an $n \times n$ matrix over $\mathbb{R}$, let 
+\[
+\det(A-xI)=\sum_{k=0}^n a_k x^k, \qquad a_k \in \mathbb{R},
+\]
+its characteristic polynomial. The Cayley-Hamilton theorem states that
+\[
+\sum_{k=0}^n a_k A^k=0.
+\]
+Taking the complexification of this gives
+\[
+\sum_{k=0}^n a_k (A^\mathbb{C})^k=0.
+\]
+It follows that the roots of $\det(A-xI)$ are the same as the roots of $\det(A^\mathbb{C}-xI^\mathbb{C})$. A complex root 
+of $\det(A-xI)$ is not an eigenvalue of $A:\mathbb{R}^2 \to \mathbb{R}^2$, but is indeed an eigenvalue of $A^\mathbb{C}:\mathbb{C}^2
+\to \mathbb{C}^2$, so the roots of the characteristic polynomial
+of $A$ are the eigenvalues of $A^\mathbb{C}$.
+
+\section{Linear ordinary differential equations in $\mathbb{R}^2$}
+Let $A$ be a $2 \times 2$ matrix over $\mathbb{R}$.\footnote{This section follows Arnold, p.~132, \S 20.3.} Suppose that the roots of
+the characteristic polynomial
+\[
+\det(A-x I)=\det A-x \Tr A + x^2
+\]
+are $\lambda,\overline{\lambda}$, i.e. that the roots of the characteristic polynomial are
+complex conjugate. Let $\lambda=\alpha+i\omega$, $\omega \neq 0$.\footnote{Define $J: \mathbb{R}^2 \to \mathbb{R}^2$ by
+\[
+J=\frac{1}{\omega}(A-\alpha I ).
+\]
+We have $J^2=\frac{1}{\omega^2}(A^2-2\alpha A+\alpha^2 I)$. By the Cayley-Hamilton theorem, 
+\[
+I\det A - A\Tr A + A^2=0,
+\]
+so
+\[
+I \lambda \overline{\lambda}-A(\lambda+\overline{\lambda})+A^2=0,
+\]
+and written using $\lambda=\alpha+i\omega$ this is
+\[
+I(\alpha^2+\omega^2)-2\alpha A+A^2=0.
+\]
+Hence
+\[
+J^2=-I,
+\]
+so $J=\frac{1}{\omega}(A-\alpha I )$ is a complex structure on $\mathbb{R}^2$.}
+$\lambda$ is an eigenvalue for $A^\mathbb{C}$, so
+let $A^\mathbb{C}(v_1,v_2)=\lambda(v_1,v_2)$, $(v_1,v_2) \neq 0$. 
+Furthermore,
+\[
+\sigma(A^\mathbb{C}(v_1,v_2))=\sigma(\lambda(v_1,v_2)),
+\]
+so
+\[
+(A^\mathbb{C})^\sigma \sigma(v_1,v_2)=\overline{\lambda} \sigma(v_1,v_2),
+\]
+hence, as $(A^\mathbb{C})^\sigma=A^\mathbb{C}$,
+\[
+A^\mathbb{C}(v_1,-v_2)=\overline{\lambda} (v_1,-v_2).
+\]
+Therefore $(v_1,-v_2)$ is an eigenvector of $A^\mathbb{C}$ with eigenvalue $\overline{\lambda} \neq \lambda$, so
+$(v_1,-v_2)$ and $(v_1,v_2)$ are linearly independent over $\mathbb{C}$. If $a_1v_1+a_2v_2=0$, $a_1,a_2 \in \mathbb{R}$, then
+\[
+\left(\frac{a_1}{2}-i\frac{a_2}{2}\right)(v_1,v_2)+\left(\frac{a_1}{2}+i\frac{a_2}{2}\right)(v_1,-v_2)=0,
+\]
+from which it follows that $a_1,a_2=0$. Therefore $v_1,v_2 \in \mathbb{R}^2$ are linearly independent over $\mathbb{R}$. 
+
+
+We have
+\[
+(\alpha+i\omega)(v_1,v_2)=(\alpha v_1-\omega v_2,\alpha v_1+\omega v_2),
+\]
+and
+\[
+A^\mathbb{C}(v_1,v_2)=(Av_1,Av_2),
+\]
+so
+\[
+Av_1=\alpha v_1-\omega v_2, \qquad Av_2=\alpha v_1+\omega v_2,
+\]
+and
+hence
+\[
+A\begin{pmatrix}v_1&v_2\end{pmatrix}=\begin{pmatrix}\alpha v_1-\omega v_2&\alpha v_1+\omega v_2\end{pmatrix}
+=\begin{pmatrix}v_1&v_2\end{pmatrix}
+\begin{pmatrix}\alpha&\omega \\ -\omega&\alpha\end{pmatrix}.
+\]
+Therefore
+\[
+A=\begin{pmatrix}v_1&v_2\end{pmatrix}
+\begin{pmatrix}\alpha&\omega \\ -\omega&\alpha\end{pmatrix}\begin{pmatrix}v_1&v_2\end{pmatrix}^{-1}.
+\]
+
+
+\end{document}

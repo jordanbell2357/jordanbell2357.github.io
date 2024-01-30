@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\newcommand{\HSnorm}[1]{\left\Vert #1 \right\Vert_{\textrm{HS}}}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\textrm{HS}}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\jap}[1]{\left\langle #1 \right\rangle}
+\newcommand{\alg}{\otimes_{\textrm{alg}}} 
+\newcommand{\HS}{\otimes_{\textrm{HS}}} 
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\Hom}{\textrm{Hom}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Ramanujan's sum}
+\author{Jordan Bell}
+\date{April 7, 2014}
+
+\maketitle
+
+\section{Definition}
+Let $q$ and $l$ be positive integers.
+Define
+\[
+c_q(l)=\sum_{\stackrel{1 \leq j \leq q}{\gcd(h,q)=1}} e^{-2\pi i  hl/q}
+=\sum_{\stackrel{1 \leq h \leq q}{\gcd(h,q)=1}} e^{2\pi i  hl/q}
+=\sum_{\stackrel{1 \leq h \leq q}{\gcd(h,q)=1}} \cos \frac{2\pi  hl}{q}.
+\]
+$c_q(l)$ is called {\em Ramanujan's sum}.
+
+\section{Fourier transform on $\mathbb{Z}/q$ and the principal Dirichlet character modulo $q$}
+For $F:\mathbb{Z}/q \to \mathbb{C}$, the {\em Fourier transform} $\widehat{F}:\mathbb{Z}/q \to \mathbb{C}$ of $F$ is defined by
+\[
+\widehat{F}(k)=\frac{1}{q} \sum_{j \in \mathbb{Z}/q} F(j) e^{-2\pi i  jk/q}, \qquad k \in \mathbb{Z}/q.
+\]
+
+Define $\chi:\mathbb{Z}/q \to \mathbb{C}$ by $\chi(j)=1$ if $\gcd(j,q)=1$ and $\chi(j)=0$ if $\gcd(j,q)>1$.
+$\chi$ is called the {\em principal Dirichlet character modulo $q$}.
+The Fourier transform of $\chi$ is
+\[
+\widehat{\chi}(k)=\frac{1}{q} \sum_{j \in \mathbb{Z}/q} \chi(j) e^{-2\pi i  jk/q} 
+=\frac{1}{q} \sum_{\stackrel{1 \leq j \leq q}{\gcd(j,q)=1}} e^{-2\pi i  jk/q}.
+\]
+Therefore we can write  Ramanujan's sum $c_q(l)$ as $c_q(l)=q\cdot \widehat{\chi}(l)$, thus $c_q=q\cdot \widehat{\chi}$.
+
+The above gives us an expression for $c_q(l)$ as a multiple of the Fourier transform of the principal Dirichlet character modulo $q$.
+$c_q:\mathbb{Z}/q \to \mathbb{C}$, and we can write the Fourier transform of $c_q$ as
+\begin{eqnarray*}
+\widehat{c_q}(k)&=&\frac{1}{q} \sum_{j \in \mathbb{Z}/q} c_q(j)  e^{-2\pi i  jk/q}\\
+&=&\sum_{j \in \mathbb{Z}/q} \widehat{\chi}(j) e^{-2\pi i  jk/q}.
+\end{eqnarray*}
+
+
+\section{Dirichlet series}
+Here I am following Titchmarsh in \S 1.5 of his {\em The theory of the Riemann zeta-function}, second ed.
+Let $\mu$ be the M\"obius function.
+The M\"obius inversion formula states that if
+\[
+g(q)=\sum_{d|q} f(d)
+\]
+then
+\[
+f(q)=\sum_{d|q} \mu\left(\frac{q}{d} \right) g(d).
+\]
+($\sum_{d|q}$ is a sum over the positive divisors of $q$.)
+
+Define
+\[
+\eta_q(k)=\sum_{j \in \mathbb{Z}/q} e^{-2\pi ijk/q}.
+\]
+
+
+We have (this is not supposed to be obvious)
+\[
+\eta_q(k)=\sum_{d|q} c_d(k).
+\]
+Therefore by the M\"obius inversion formula we have
+\[
+c_q(k)=\sum_{d|q}  \mu\left(\frac{q}{d} \right) \eta_d(k).
+\]
+(Hence $|c_q(k)| \leq \sum_{d|k} d = \sigma_1(k)$, where $\sigma_a(k)=\sum_{d|k} d^a$.)
+
+If $q|k$ then $\eta_q(k)=q$, and if $q \not | k$ then $\eta_q(k)=0$. (To show the second statement: multiply the sum by $e^{-2\pi i k/q}$, and check that this product is equal to the original sum.
+Since we multplied the sum by a number that is not $1$, the sum must be equal to $0$.)
+Thus we can express the M\"obius function using Ramanujan's sum as $\mu(q)=c_q(1)$. 
+
+Because $\eta_d(k)=d$ if $k | d$ and $\eta_d(k)=0$ if $k \not | d$, we have
+\[
+c_q(k)=\sum_{d|q, d|k} \mu\left( \frac{q}{d} \right) d=\sum_{dr=q, d|k} \mu(r) d.
+\] 
+So
+\[
+\frac{c_q(k)}{q^s}=\sum_{dr=q, d|k} \frac{1}{q^s} \mu(r) d = \sum_{dr=q, d|k} \frac{1}{d^s r^s} \mu(r) d =  \sum_{dr=q, d|k} \frac{1}{r^s} \mu(r) d^{1-s}.
+\]
+Therefore
+\[
+\sum_{q=1}^\infty \frac{c_q(k)}{q^s} = \sum_{q=1}^\infty \sum_{dr=q, d|k} \frac{1}{r^s} \mu(r) d^{1-s} = \sum_{r=1}^\infty \sum_{d|k} \frac{1}{r^s} \mu(r) d^{1-s}
+=\sum_{r=1}^\infty  \frac{1}{r^s} \mu(r) \sum_{d|k} d^{1-s}.
+\]
+Then
+\[
+\sum_{q=1}^\infty \frac{c_q(k)}{q^s} = \sigma_{1-s}(k) \sum_{r=1}^\infty  \frac{1}{r^s} \mu(r)= \sigma_{1-s}(k) \frac{1}{\zeta(s)};
+\]
+here we used that 
+\[
+\frac{1}{\zeta(s)}=\sum_{n=1}^\infty \frac{\mu(n)}{n^s}.
+\]
+
+On the other hand, if rather than sum over $q$ we sum over $k$, then we obtain
+\begin{eqnarray*}
+\sum_{k=1}^\infty \frac{c_q(k)}{k^s}&=&\sum_{k=1}^\infty \frac{1}{k^s}\sum_{d|q, d|k} \mu\left( \frac{q}{d} \right) d\\
+&=&\sum_{d|q} \sum_{m=1}^\infty \frac{1}{(md)^s}  \cdot  \mu\left( \frac{q}{d} \right) d\\
+&=&\sum_{d|q} \sum_{m=1}^\infty \frac{1}{m^s} \cdot \frac{1}{d^s}  \cdot \mu\left( \frac{q}{d} \right) d\\
+&=&\sum_{m=1}^\infty \frac{1}{m^s} \sum_{d|q}\frac{1}{d^s}  \mu\left( \frac{q}{d} \right) d\\
+&=&\zeta(s) \cdot \sum_{d|q}  \mu\left( \frac{q}{d} \right) d^{1-s}.
+\end{eqnarray*}
+
+\end{document}

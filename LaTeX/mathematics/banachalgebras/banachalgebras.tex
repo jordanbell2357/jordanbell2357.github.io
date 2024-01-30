@@ -1,0 +1,505 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\co}{\ensuremath\mathrm{co}}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\Ind}{\ensuremath\mathrm{Ind}}
+\newcommand{\cco}{\overline{\ensuremath\mathrm{co}}}
+\newcommand{\point}{\ensuremath\sigma_{\mathrm{point}}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}}
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{remark}[theorem]{Remark}
+\begin{document}
+\title{Banach algebras}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+\maketitle
+
+\section{Introduction}
+This note is a collection of results on Banach algebras whose proofs do not require the machinery of integrating functions that take values in Banach spaces, and that
+do not require the algebra to be commutative.
+
+\section{Banach algebras and ideals}
+Unless we say otherwise, every vector  space we talk about is taken to be over $\mathbb{C}$. A   {\em Banach algebra}  is a  Banach space $\mathfrak{A}$ that is also an algebra satisfying
+ $\norm{AB} \leq \norm{A} \norm{B}$ for $A,B \in \mathfrak{A}$. We say that $\mathfrak{A}$ is {\em unital} if there is 
+ a nonzero element $I \in \mathfrak{A}$ such that $AI=A$ and $IA=A$ for all $A \in \mathfrak{A}$, called a {\em identity element}. 
+If $X$ is a Banach space,
+let $\mathscr{B}(X)$ denote the set of bounded linear operators $X \to X$, and let $\mathscr{B}_0(X)$ denote the set of compact linear operators
+$X \to  X$ (to be compact means that the image of each bounded set is precompact). $\mathscr{B}(X)$ is a unital Banach algebra. $\mathscr{B}_0(X)$ is a Banach algebra,
+but it is unital if and only if $X$ is finite dimensional.
+ 
+An {\em ideal} of a Banach algebra $\mathfrak{A}$ is a vector subspace $\mathfrak{I}$  such that
+\[
+\mathfrak{I}\mathfrak{A} \subseteq \mathfrak{I}, \qquad \mathfrak{A} \mathfrak{I} \subseteq \mathfrak{I}.
+\]
+We define the algebra quotient $\mathfrak{A} / \mathfrak{I}$ by 
+\[
+\mathfrak{A} / \mathfrak{I} = \left\{ A+\mathfrak{I}: A \in \mathfrak{A}\right\},
+\]
+and define
+\[
+(A+\mathfrak{I})(B+\mathfrak{I}) = AB+\mathfrak{I};
+\]
+this makes sense because $\mathfrak{I}$ is an ideal.
+We define a seminorm on $\mathfrak{A}/\mathfrak{I}$ by 
+\[
+\norm{A+\mathfrak{I}} = \inf_{S \in \mathfrak{I}} \norm{A-S};
+\]
+we call this the {\em quotient seminorm}. In the following theorem we show that if the ideal is closed then this seminorm is a norm.
+
+\begin{theorem}
+If $\mathfrak{I}$ is a closed ideal in a Banach algebra $\mathfrak{A}$, then
+$\mathfrak{A} / \mathfrak{I}$ is a Banach algebra with the quotient norm.
+\end{theorem}
+\begin{proof}
+Suppose that $\norm{A+\mathfrak{I}}=0$. This means
+\[
+\inf_{S \in \mathfrak{I}} \norm{A-S} = 0.
+\]
+Let $S_n \in \mathfrak{I}$ with $\norm{A-S_n} \to 0$. That is, $S_n \to A$. Since $\mathfrak{I}$ is closed we get $A \in \mathfrak{I}$, and hence
+$A+\mathfrak{I} = 0 + \mathfrak{I}$, showing that the seminorm on the quotient is in fact a norm.
+
+Let $z_n \in \mathfrak{A} / \mathfrak{I}$ be a Cauchy sequence and let $z_{a(n)}$ be a subsequence with $\norm{z_{a(n+1)}-z_{a(n)}}<2^{-n}$ for all $n \in \mathbb{N}$.
+We shall use the fact that $\mathfrak{A}$ is complete to prove that the sequence $z_n$ converges
+and therefore that $\mathfrak{A}/\mathfrak{I}$ is complete.
+We define a sequence $A_n$ in $\mathfrak{A}$ inductively as follows.
+Let $A_1$ be any element of $z_{a(1)}$. 
+Suppose that $z_{a(n)}=A_n+\mathfrak{I}$, and let $T$ be any element of $z_{a(n+1)}$. We have
+\[
+\norm{z_{a(n+1)}-z_{a(n)}} = \inf_{S \in \mathfrak{I}} \norm{T-A_n-S},
+\]
+hence
+\[
+ \inf_{S \in \mathfrak{I}} \norm{T-A_n-S}<2^{-n}.
+\]
+As this is an infimum and the inequality is strict, there is some $S \in \mathfrak{I}$ for which $\norm{T-A_n-S}< 2^{-n}$, and we define $A_{n+1}=T-S$. Thus defined, the sequence $A_n$ satisfies
+$\norm{A_{n+1}-A_n}<2^{-n}$ for all $n$ and hence is a Cauchy sequence (as the consecutive differences are summable). Thus $A_n$ converges to some $A \in
+\mathfrak{A}$, as $\mathfrak{A}$ is a Banach space. We have
+\[
+\norm{z_{a(n)}-(A+\mathfrak{I})} = \inf_{S \in \mathfrak{I}} \norm{A_n-A-S} \leq \inf_{S \in \mathfrak{I}} \norm{A_n-A} + \inf_{S \in \mathfrak{I}} \norm{S}=
+\norm{A_n-A},
+\]
+which tends to $0$ as $n \to \infty$. Therefore $z_{a(n)} \to A+\mathfrak{I}$. As $z_n$ is a Cauchy sequence a subsequence of which converges
+to $A+\mathfrak{I}$, it follows that $z_n \to A+\mathfrak{I}$. We have shown that each Cauchy sequence in $\mathfrak{A}/\mathfrak{I}$ converges, and hence
+$\mathfrak{A} / \mathfrak{I}$ is complete.
+\end{proof}
+
+If $X$ is a Banach space, then
+ $\mathscr{B}_0(X)$ is a closed ideal of the Banach algebra $\mathscr{B}(X)$.
+Hence with the quotient norm, the  quotient algebra $\mathscr{B}(X) / \mathscr{B}_0(X)$ is a Banach algebra.
+Let $\mathscr{B}_{00}(X)$ denote the set of bounded finite rank linear operators $X \to X$ (to be finite rank means to have a finite dimensional image).
+$\mathscr{B}_{00}(X)$ is an ideal of $\mathscr{B}(X)$, but it is closed if and only if $X$ is finite dimensional. The closure of $\mathscr{B}_{00}(X)$ is contained in 
+$\mathscr{B}_0(X)$. (If the closure is equal to $\mathscr{B}_0(X)$ we say that the Banach space $X$ has the {\em approximation property}.)
+
+
+\section{Left regular representation}
+A Banach algebra $\mathfrak{A}$ is in particular a Banach space, and thus $\mathscr{B}(\mathfrak{A})$
+is itself a Banach algebra with the operator norm. The {\em left regular representation} is the map $L:\mathfrak{A} \to \mathscr{B}(\mathfrak{A})$ defined by
+\[
+L(A)B=AB, \qquad A,B \in \mathfrak{A}.
+\]
+It is apparent that $L$ is an algebra homomorphism, and for $A,B \in \mathfrak{A}$,
+\[
+\norm{L(A)B} = \norm{AB} \leq \norm{A} \norm{B},
+\]
+showing that $\norm{L(A)} \leq \norm{A}$. If $\mathfrak{A}$ has identity element $I$, then
+$\norm{I}=\norm{I\cdot I} \leq \norm{I} \norm{I}$, and as $\norm{I} \neq 0$ we get $\norm{I} \geq 1$.
+We'd like the norm on $\mathfrak{A}$ to satisfy $\norm{I}=1$, and we define 
+\[
+\norm{A}_0=\norm{L(A)}=\sup_{\norm{B} \leq 1} \norm{L(A)B} \leq \norm{A}.
+\]
+Check that $L$ is injective, from which it follows that $\norm{\cdot}_0$ is nondegenerate and is thus a norm on $\mathfrak{A}$. On the other hand,
+\[
+\norm{A} = \norm{L(A)I} \leq \norm{L(A)} \norm{I}=\norm{A}_0 \norm{I}.
+\]
+Therefore,
+\[
+\norm{A}_0 \leq \norm{A} \leq \norm{I} \norm{A}_0,
+\]
+so $\norm{\cdot}$ and $\norm{\cdot}_0$ are equivalent norms on $\mathfrak{A}$, and thus for most purposes anything we say using one can be said just as well using the other.
+We decree that if we are talking about a unital Banach algebra then its norm is such that $\norm{I}=1$. Then, $L$ is an isometry.
+
+
+\section{Invertible elements}
+If $\mathfrak{A}$ is a unital Banach algebra, we say that $A \in \mathfrak{A}$ is {\em invertible} if there is some $B \in \mathfrak{A}$ such that
+$AB=I$ and $BA=I$, and we call $A^{-1}=B$ the {\em inverse} of $A$. We denote by
+ $\GL(\mathfrak{A})$ the set of invertible elements of $\mathfrak{A}$, and we call $\GL(\mathfrak{A})$ the {\em multiplicative group} of the Banach algebra.
+We now prove that a   perturbation of norm $<1$ of the identity element in a unital Banach algebra remains in the multiplicative group.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~249, Theorem 10.7.}
+ 
+ \begin{theorem}
+ If $\mathfrak{A}$ is a unital Banach algebra, $A \in \mathfrak{A}$, and $\norm{A} < 1$, then $I-A \in \GL(\mathfrak{A})$, and
+ \[
+ \norm{(I-A)^{-1}-I-A} \leq \frac{\norm{A}^2}{1-\norm{A}}.
+ \]
+ \label{neumann}
+ \end{theorem}
+ \begin{proof}
+ Define $S_n=\sum_{k=0}^n A^k$. For $n > m$ we have
+ \[
+ \norm{S_n-S_m} \leq \sum_{k=m+1}^n \norm{A}^k = \norm{A}^{m+1} \frac{1-\norm{A}^{n-m}}{1-\norm{A}} \leq \frac{\norm{A}^{m+1}}{1-\norm{A}}.
+ \]
+ Thus $S_n$ is a Cauchy sequence and so has a limit $S \in \mathfrak{A}$. Because
+ $ S_n (I-A) = I-A^{n+1}$,
+ we have
+ \[
+ \norm{S_n(I-A)-I} = \norm{A^{n+1}} \leq \norm{A}^{n+1} \to 0,
+ \]
+ so $S_n(I-A) \to I$. But
+ \[
+ \norm{S_n(I-A) -S(I-A)} \leq \norm{S_n-S}\norm{I-A} \to 0,
+ \]
+ so $S_n(I-A) \to S(I-A)$. Therefore $S(I-A)=I$. One similarly shows that $(I-A)S=I$, and hence that $I-A \in \GL(\mathfrak{A})$,
+ with $(I-A)^{-1}=S$. 
+Furthermore,
+\[
+\norm{S-I-A} = \lim_{n \to \infty} \norm{S_n-I-A} = \lim_{n \to \infty} \norm{\sum_{k=2}^n A^k}
+\leq \lim_{n \to \infty} \sum_{k=2}^n \norm{A}^k
+=\frac{\norm{A}^2}{1-\norm{A}}.
+\]
+ \end{proof}
+ 
+ In the above  theorem we found that if $\norm{A}<1$ then $(I-A)^{-1} = \sum_{n=0}^\infty A^n$. This is an analog of the geometric series, and is called
+ a {\em Neumann series}. 
+ 
+ If $\mathfrak{A}$ is a Banach algebra and $\phi:\mathfrak{A} \to \mathbb{C}$ is a linear map satisfying
+ \[
+ \phi(AB)=\phi(A)\phi(B),\qquad A,B \in \mathfrak{A},
+ \]
+ then $\phi$ is called a {\em complex homomorphism on $\mathfrak{A}$}.
+ That is, a complex homomorphism on $\mathfrak{A}$ is an algebra homomorphism $\mathfrak{A} \to \mathbb{C}$. It is straightforward to prove that if $\mathfrak{A}$ is a unital
+ Banach algebra and $\phi$ is a complex homomorphism on $\mathfrak{A}$, then $\phi(I)=1$ and $\phi(A) \neq 0$ for all $A \in \GL(\mathfrak{A})$. A linear functional
+ on a Banach algebra need not be continuous, but in the following  we prove that a nonzero complex homomorphism has operator norm 1, and in particular is continuous.
+ 
+  \begin{corollary}
+ If $\mathfrak{A}$ is a unital Banach algebra and $\phi$ is a nonzero complex homomorphism on $\mathfrak{A}$, then $\norm{\phi}=1$.
+ \end{corollary}
+ \begin{proof}
+ Let $A \in \mathfrak{A}$ with $\norm{A}<1$. If $\lambda \in \mathbb{C}$ with $|\lambda| \geq 1$ then $\norm{\lambda^{-1}A}=|\lambda|^{-1} \norm{A}<1$, and
+by Theorem \ref{neumann} we have $I-\lambda^{-1}A \in \GL(\mathfrak{A})$. Then,
+\[
+1-\lambda^{-1} \phi(A) = \phi(I)-\phi(\lambda^{-1}A) =\phi(I-\lambda^{-1}A) \neq 0,
+\]
+hence $1 \neq \lambda^{-1} \phi(A)$, i.e. $\phi(A) \neq \lambda$. This shows that $|\phi(A)| < 1$. 
+ \end{proof}
+
+  
+ The {\em Gleason-Kahane-Zelazko theorem}\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~251, Theorem 10.9}
+ states that if $\mathfrak{A}$ is a unital Banach algebra and $\phi$ is a linear functional on $\mathfrak{A}$ satisfying
+ $\phi(I)=1$ and $\phi(A) \neq 0$ for $A \in \GL(\mathfrak{A})$, then $\phi$ is a complex homomorphism.
+
+ 
+ 
+
+ 
+ In Theorem \ref{neumann} we proved that a  perturbation of the identity element remains in the multiplicative group. We
+ now prove that for any element of the multiplicative group, a sufficiently small perturbation of this element remains in the multiplicative
+ group, i.e. that the multiplicative group is an open set.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~253, Theorem 10.11.} 
+ 
+ \begin{theorem}
+ If $\mathfrak{A}$ is a unital Banach algebra, $A \in \GL(\mathfrak{A})$, $h \in \mathfrak{A}$, and $\norm{h}<\frac{1}{2} \norm{A^{-1}}^{-1}$,
+ then $A+h \in \GL(\mathfrak{A})$, and
+ \[
+ \norm{(A+h)^{-1}-A^{-1}+A^{-1}hA^{-1}} < 2 \norm{A^{-1}}^3 \norm{h}^2.
+ \]
+ \label{GLA}
+ \end{theorem}
+ \begin{proof}
+ $\norm{A^{-1}h} \leq \norm{A^{-1}} \norm{h} < \frac{1}{2}$, so by Theorem \ref{neumann} we get $I+A^{-1}h \in \GL(\mathfrak{A})$. Therefore
+\[
+A+h = A(I+A^{-1}h) \in \GL(\mathfrak{A}).
+\]
+Furthermore,
+\[
+(A+h)^{-1}-A^{-1}+A^{-1}hA^{-1} = \big((I+A^{-1}h)^{-1}-I+A^{-1}h\big)A^{-1},
+\]
+and  by Theorem \ref{neumann},
+\begin{align*}
+\norm{\big((I+A^{-1}h)^{-1}-I+A^{-1}h\big)A^{-1}} &\leq \norm{(I+A^{-1}h)^{-1}-I+A^{-1}h} \norm{A^{-1}}\\
+&\leq \frac{\norm{A^{-1}h}^2}{1-\norm{A^{-1}h}} \norm{A^{-1}}\\
+&\leq \frac{\norm{A^{-1}}^3 \norm{h}^2}{1-\norm{A^{-1}h}}\\
+&< 2 \norm{A^{-1}}^3 \norm{h}^2;
+\end{align*}
+the final inequality is because $\norm{A^{-1}h} \leq \norm{A^{-1}}\norm{h} < \frac{1}{2}$ and hence 
+$1-\norm{A^{-1}h} > \frac{1}{2}$.
+ \end{proof}
+
+
+
+ 
+ 
+ \section{Spectrum}
+ If $\mathfrak{A}$ is a unital Banach algebra and $A \in \mathfrak{A}$, the {\em spectrum} of $A$ is the set
+ \[
+ \sigma(A) = \{\lambda \in \mathbb{C}: \lambda I -A\not \in \GL(\mathfrak{A})\},
+ \]
+ and the {\em spectral radius} of $A$ is
+ \[
+ r(A)=\sup_{\lambda \in \sigma(A)} |\lambda|.
+ \]
+ If $|\lambda| > \norm{A}$ then  $\norm{\frac{A}{\lambda}}<1$ and so by Theorem \ref{neumann},
+ \[
+ \lambda I-A = \lambda\left(I-\frac{A}{\lambda}\right) \in \GL(\mathfrak{A}),
+ \]
+ so $\lambda \not \in \sigma(A)$. Therefore, 
+ \[
+ r(A) \leq \norm{A}.
+ \]
+ 
+ 
+For $\lambda \not \in \sigma(A)$, we define the {\em resolvent of $A$} by 
+\[
+R(A,\lambda)=(A-\lambda I)^{-1} \in \GL(\mathfrak{A}).
+\]
+The following is the {\em resolvent identity}.
+
+\begin{theorem}[Resolvent identity]
+If $\mathfrak{A}$ is a unital Banach algebra, $A \in \mathfrak{A}$, and $\lambda,\mu \not \in \sigma(A)$, then
+\[
+R(A,\lambda)-R(A,\mu) = (\lambda-\mu)R(A,\lambda)R(A,\mu).
+\]
+\label{resolvent}
+\end{theorem}
+\begin{proof}
+We have
+\begin{eqnarray*}
+(A-\lambda I)(R(A,\lambda)-R(A,\mu))(A-\mu I)&=&(A-\lambda I)R(A,\lambda)(A-\mu I)\\
+&&-(A-\lambda I)R(A,\mu)(A-\mu I)\\
+&=&(A-\mu I)-(A-\lambda I)\\
+&=&(\lambda -\mu)I.
+\end{eqnarray*}
+\end{proof}
+
+The {\em resolvent set} of $A$ is $\rho(A)=\mathbb{C} \setminus \sigma(A)$.
+The following theorem implies that the resolvent set of $A$ is  open, and therefore that the spectrum
+of $A$ is  closed. Because $r(A) \leq \norm{A}$, it follows that $\sigma(A)$ is a compact set.
+
+\begin{theorem}
+If $\mathfrak{A}$ is a unital Banach algebra, $A \in \mathfrak{A}$, and $\lambda \in \rho(A)$, then $|\mu-\lambda| < \norm{R(A,\lambda)}^{-1}$
+implies that $\mu \in \rho(A)$.
+\label{open}
+\end{theorem}
+
+
+Moreover, $\sigma(A)$ is nonempty, and although $r(A)$ may be strictly less than $\norm{A}$, the spectral
+radius  is equal to a limit of
+norms.\footnote{Gert K. Pedersen, {\em Analysis Now}, revised printing, p.~131, Theorem 4.1.13. This proof does not use the holomorphic functional
+calculus, while Walter Rudin, {\em Functional Analysis}, second ed., p.~253, Theorem 10.13 does. That is, to read Pedersen's proof one does
+not have to make sense of   integrals of functions taking values in a Banach space, while to read Rudin's one does.}
+
+\begin{theorem}
+If $\mathfrak{A}$ is a unital Banach algebra and $A \in \mathfrak{A}$, then
+ $\sigma(A)$ is  nonempty, and
+\[
+r(A) = \lim_{n \to \infty} \norm{A^n}^{1/n}.
+\]
+\end{theorem}
+
+Using the fact that the spectrum of any element of a unital Banach algebra is nonempty, one can prove the
+ {\em Gelfand-Mazur theorem}, which states that if $\mathfrak{A}$ is a unital Banach algebra for which every nonzero element is invertible, then there is an isometric
+algebra isomorphism $\mathfrak{A} \to \mathbb{C}$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~255, Theorem 10.14.}
+
+
+
+The following theorem shows
+that $\lambda \mapsto R(A,\lambda)$ is a continuous function $\rho(A) \to \mathfrak{A}$. From this and the resolvent identity it follows that
+for any $\lambda \in \rho(A)$,
+\[
+\lim_{\mu \to \lambda} \frac{R(A,\mu)-R(A,\lambda)}{\mu-\lambda} = R(A,\lambda)^2,
+\]
+i.e.
+\[
+R'(A,\lambda)=R(A,\lambda)^2.
+\]
+
+\begin{theorem}
+If $\mathfrak{A}$ is a unital Banach algebra and $A \in \mathfrak{A}$, then $\lambda \mapsto R(A,\lambda)$ is a continuous function
+$\rho(A) \to \mathfrak{A}$.
+\label{resolventcont}
+\end{theorem}
+\begin{proof}
+From Theorem \ref{resolvent},
+if $\lambda,\mu  \in \rho(A)$ then
+\begin{equation}
+\norm{R_\mu-R_\lambda} \leq |\mu-\lambda| \norm{R_\lambda} \norm{R_\mu},
+\label{resolventeq}
+\end{equation}
+where we write $R_\lambda=R(A,\lambda)$.
+As
+\[
+\norm{R_\mu-R_\lambda} \geq \norm{R_\mu}-\norm{R_\lambda},
+\]
+we get
+\[
+\norm{R_\mu} \leq |\lambda-\mu| \norm{R_\lambda} \norm{R_\mu} + \norm{R_\lambda},
+\]
+which is
+\begin{equation}
+\norm{R_\mu}(1-|\lambda-\mu| \norm{R_\lambda}) \leq \norm{R_\lambda}.
+\label{Rmu}
+\end{equation}
+
+If $\lambda \in \rho(A)$ and 
+$|\mu-\lambda| \leq \frac{1}{2}\cdot \norm{R_\lambda}^{-1}$, then
+from Theorem \ref{open} we get $\mu \in \rho(A)$, and  combined with \eqref{Rmu} this gives 
+\[
+\norm{R_\mu} \leq 2 \norm{R_\lambda}.
+\]
+Applying this to \eqref{resolventeq} we have that if $\lambda \in \rho(A)$ and $|\mu-\lambda| \leq \frac{1}{2}\cdot \norm{R_\lambda}^{-1}$ then
+\[
+\norm{R_\mu-R_\lambda} \leq 2|\mu-\lambda| \norm{R_\lambda}^2,
+\]
+from which it follows that 
+ $\lambda \mapsto R_\lambda$ is a continuous function $\rho(A) \to \mathfrak{A}$.
+\end{proof}
+
+
+The following theorem tells us that if the spectrum of an element of a unital Banach algebra is contained in an open set,
+ then the spectrum of a sufficiently small perturbation of that element is contained in the same open set.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~257, Theorem 10.20.} 
+ 
+ \begin{theorem}
+ If $\mathfrak{A}$ is a unital Banach algebra, $A \in \mathfrak{A}$, and $\Omega$ is an open subset of $\mathbb{C}$ containing
+ $\sigma(A)$, then there is some $\delta>0$ such that $\norm{h}<\delta$ implies that $\sigma(A+h) \subset \Omega$.
+ \end{theorem}
+ \begin{proof}
+ If $|\lambda|>\norm{A}$, then
+\[
+R(A,\lambda)=\left(A-\lambda I \right)^{-1}= \frac{1}{\lambda} \cdot \left(\frac{A}{\lambda}- I\right)^{-1}=-\frac{1}{\lambda} \cdot \sum_{n=0}^\infty \left( \frac{A}{\lambda} \right)^n,
+\]
+hence
+\[
+\norm{R(A,\lambda)} \leq \frac{1}{|\lambda|} \sum_{n=0}^\infty \left( \frac{\norm{A}}{|\lambda|} \right)^n=\frac{1}{|\lambda|} \cdot \frac{1}{1-\frac{\norm{A}}{|\lambda|}}
+=\frac{1}{|\lambda|-\norm{A}}.
+\]
+Hence $\lim_{|\lambda| \to \infty} \norm{R(A,\lambda)}=0$.
+By Theorem \ref{resolventcont}, $\lambda \mapsto \norm{R(A,\lambda)}$ is a continuous function $\rho(A) \to \mathbb{R}$. 
+It follows that there is some $M>0$ such that $\lambda \not \in \Omega$ implies that $\norm{R(A,\lambda)}<M$.
+If $\norm{h}<\frac{1}{M}$ and $\lambda \not \in \Omega$,
+then
+\[
+\norm{R(A,\lambda)h} \leq \norm{R(A,\lambda)} \norm{h} < 1,
+\]
+which implies that $R(A,\lambda)h+I \in \GL(\mathfrak{A})$. 
+From this we obtain that
+\[
+A+h-\lambda I=(A-\lambda I)(R(A,\lambda)h+I) \in \GL(\mathfrak{A}),
+\]
+which means that $\lambda \not \in \sigma(A+h)$. We have shown that if $\norm{h}<\frac{1}{M}$ then
+$\sigma(A+h) \subset \Omega$.
+ \end{proof}
+ 
+  
+The following theorem gives conditions under which we can evaluate a holomorphic function at an element of a unital Banach algebra, and shows
+that the image of the spectrum is contained in the spectrum of the image.
+
+\begin{theorem}
+If $\mathfrak{A}$ is a unital Banach algebra, $A \in \mathfrak{A}$, $\norm{A} \leq r$, and $f(z)=\sum_{n=0}^\infty \alpha_n z^n$ is holomorphic on a domain that contains the closed disc $\overline{B_r(0)}$,
+then
+\[
+f(A)=\sum_{n=0}^\infty \alpha_n A^n \in \mathfrak{A},
+\]
+and if $\lambda \in \sigma(A)$ then $f(\lambda) \in \sigma(f(A))$.
+\label{mapping}
+\end{theorem}
+\begin{proof}
+For $N>M$,
+\begin{eqnarray*}
+\norm{\sum_{n=0}^N \alpha_n A^n -\sum_{n=0}^M \alpha_n A^n} &=&\norm{ \sum_{n=M+1}^N \alpha_n A^n}\\
+&\leq& \sum_{n=M+1}^N |\alpha_n| \norm{A^n}\\
+&\leq&\sum_{n=M+1}^N |\alpha_n| \norm{A}^n\\
+&\leq&\sum_{n=M+1}^N |\alpha_n| r^n.
+\end{eqnarray*}
+Because the radius of convergence of $\sum_{n=0}^\infty \alpha_n z^n$ is $>r$, it follows that the above sums tend to $0$ as $M \to \infty$, showing that
+$f(A) \in \mathfrak{A}$.
+Define
+\[
+P_n(A,\lambda)=\sum_{k=0}^n \lambda^k A^{n-k},
+\]
+giving
+\[
+(A-\lambda I)P_n(A,\lambda)=\sum_{k=0}^n\Big( \lambda^k A^{n-k+1} -  \lambda^{k+1} A^{n-k}\Big)
+=A^{n+1} - \lambda^{n+1} I.
+\]
+We have
+\[
+f(A)-f(\lambda)I = \sum_{n=1}^\infty \alpha_n(A^n - \lambda^n I) =
+(A-\lambda I) \sum_{n=1}^\infty \alpha_n P_{n-1}(A,\lambda).
+\]
+But  if $|\lambda| \leq r$ then
+\[
+\norm{P_n(A,\lambda)} \leq \sum_{k=0}^n |\lambda|^k \norm{A^{n-k}}
+\leq \sum_{k=0}^n |\lambda|^k \norm{A}^{n-k} \leq \sum_{k=0}^n r^n=(n+1)r^n,
+\]
+and if $N>M$ then
+\begin{eqnarray*}
+\norm{\sum_{n=1}^N \alpha_n P_{n-1}(A,\lambda) - \sum_{n=1}^M \alpha_n P_{n-1}(A,\lambda)}&=&
+\norm{\sum_{n=M+1}^N \alpha_n P_{n-1}(A,\lambda)}\\
+&\leq&\sum_{n=M+1}^N |\alpha_n| \norm{P_{n-1}(A,\lambda)}\\
+&\leq&\sum_{n=M+1}^N |\alpha_n| n r^{n-1},
+\end{eqnarray*}
+and as $\sum_{n=0}^\infty \alpha_n z^n$ has radius of convergence $>r$ this tends to $0$ as $M \to \infty$.
+Therefore
+\[
+\sum_{n=1}^\infty \alpha_n P_{n-1}(A,\lambda) \in \mathfrak{A},
+\]
+and hence
+\[
+f(A)-f(\lambda)I = (A-\lambda I) \sum_{n=1}^\infty \alpha_n P_{n-1}(A,\lambda) \in \mathfrak{A}.
+\]
+If $\lambda \in \sigma(A)$ then $A-\lambda I \not \in \GL(\mathfrak{A})$, and as we have written $f(A)-f(\lambda)I$ as a product of $A-\lambda I$ and another element of $\mathfrak{A}$,
+it follows that $f(A)-f(\lambda)I \not \in \GL(\mathfrak{A})$, and thus $f(\lambda) \in \sigma(f(A))$.
+\end{proof}
+
+\begin{theorem}
+ If $\mathfrak{A}$ is a unital Banach algebra, $A \in \mathfrak{A}$, and $z_0 \in \mathbb{C}$, then
+ \[
+ \sigma(A-z_0I) = \sigma(A)-z_0.
+ \]
+ \label{translation}
+ \end{theorem}
+ \begin{proof}
+Let $f(z)=z-z_0$. If $\lambda \in \sigma(A)$ then by Theorem \ref{mapping},
+\[
+\lambda - z_0=f(\lambda) \in \sigma(f(A))= \sigma(A-z_0 I),
+\]
+so
+\[
+\sigma(A)-z_0 \subseteq \sigma(A-z_0 I).
+\]
+Let $B=A-z_0 I$ and $g(z)=z+z_0$.
+If $\lambda \in \sigma(B)$ then by Theorem \ref{mapping},
+\[
+\lambda + z_0=g(\lambda) \in \sigma(g(B)) = \sigma(A),
+\]
+so
+\[
+\sigma(B)+z_0 \subseteq \sigma(A),
+\]
+i.e.
+\[
+\sigma(A-z_0) \subseteq \sigma(A)-z_0.
+\]
+ \end{proof} 
+
+
+
+
+\end{document}

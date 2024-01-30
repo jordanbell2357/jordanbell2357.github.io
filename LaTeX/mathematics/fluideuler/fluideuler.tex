@@ -1,0 +1,502 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm,siunitx}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\cco}{\ensuremath\overline{\mathrm{co}}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}}
+\newcommand{\epi}{\ensuremath\mathrm{epi}\,}
+\newcommand{\Tr}{\ensuremath\mathrm{Tr}\,}
+\newcommand{\lsc}{\ensuremath\mathrm{lsc}\,}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\LSC}{\ensuremath\mathrm{LSC}}
+\renewcommand{\div}{\ensuremath\mathrm{div}\,}
+\newcommand{\curl}{\ensuremath\mathrm{curl}\,}
+\newcommand{\USC}{\ensuremath\mathrm{USC}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Euler equations in fluid mechanics}
+\author{Jordan Bell}
+\date{April 14, 2014}
+
+\maketitle
+
+\section{Continuity equation}
+Let $\Omega$ be a domain in $\mathbb{R}^n$ and let $\rho \in C^\infty(\Omega \times \mathbb{R})$; perhaps later we will
+care about functions  that are in larger spaces, and to justify making conclusions about those we will
+have to check that what we have said here applies to them. 
+
+Let $U$ be a Lipschitz domain in $\Omega$. Thinking of $\rho$ as a density, the amount of stuff in $U$ at time $t$
+is 
+\[
+\int_U \rho(x,t) dx.
+\]
+Let $q \in C^\infty(\Omega \times \mathbb{R})$ and $F \in C^\infty(\Omega \times \mathbb{R}, \mathbb{R}^n)$. 
+We think about  $q(x,t)$ as the rate at which new stuff appears at point $x$
+at time $t$, and $F$ as the flux  of the stuff.
+A change in the total amount of stuff in $U$ occurs from stuff appearing inside $U$ and from stuff going through the boundary
+of $U$. We formalize this as the statement
+\[
+\frac{d}{dt}\int_U \rho(x,t)dx = \int_U q(x,t) dx - \int_{\partial U} F(s,t) \cdot N(s) ds,
+\]
+where $N(s)$ is the outward pointing unit normal to the surface $\partial U$ at the point $s \in \partial U$. 
+Using the divergence theorem we get
+\[
+\int_{\partial U} F(s,t) \cdot N(s) ds = \int_U (\div F)(x,t) dx,
+\]
+and hence
+\[
+\int_U (\partial_t \rho)(x,t) = \frac{d}{dt} \int_U \rho(x,t)dx = \int_U (q(x,t) - (\div F)(x,t)) dx,
+\]
+or,
+\[
+\int_U (\partial_t \rho - q + \div F)(x,t) dx.
+\]
+Because this is true for any Lipschitz domain $U$ in $\Omega$, it follows that the integrand is $0$: for all $x \in \Omega$ and $t \in \mathbb{R}$, we have
+\[
+(\partial_t \rho - q + \div F)(x,t) = 0,
+\]
+i.e.
+\[
+\partial_t \rho + \div F = q.
+\]
+This is called a {\em continuity equation}.
+
+If $\rho(x,t)$ denotes the density of stuff at the point $x$ at time $t$ and $u$ denotes the velocity of the stuff at the point $x$
+and time $t$, then the flux $F$ (in other words, the  momentum), is $F=\rho u$. If there is no stuff spontaneously appearing, but rather stuff only moves around,
+then $q=0$, and so
+\begin{equation}
+\partial_t \rho + \div(\rho u) = 0.
+\label{continuityequation}
+\end{equation}
+One can describe the statement that stuff is not spontaneously appearing as {\em conservation of mass}, and hence \eqref{continuityequation}
+ can be thought of as a consequence of conservation of mass.
+
+
+
+
+\section{Momentum}
+The integral $\int_U (\rho u)(x,t) dx$ is the total amount of momentum of the stuff at points in $U$ at time $t$.
+We postulate that there is a function $p \in C^\infty(\Omega,\mathbb{R})$, which we call {\em pressure}, such that the 
+ rate of change of the total amount of momentum over a set at time $t$ is equal to 
+  the flow of momentum from outside to inside the set at time $t$ plus 
+ the total amount of inward directed
+ pressure over the boundary of the set at time $t$, which
+ here means
+ \[
+ \frac{d}{dt} \int_U (\rho u)(x,t) dx =-\int_{\partial U} (\rho u)(s,t) u(s,t) \cdot N(s) ds  - \int_{\partial U} p(s,t) N(s) ds,
+ \]
+ where $N(s)$ is the outward pointing unit normal to the surface $\partial U$ at $s \in \partial U$.
+Using the divergence theorem,
+\[
+ \frac{d}{dt} \int_U (\rho u)(x,t) dx=
+ -\int_U \div (\rho u \otimes u)(x,t)
+- \int_U (\nabla p)(x,t) dx.
+\]
+Combined with 
+\[
+\frac{d}{dt} \int_U (\rho u)(x,t) dx=\int_U \partial_t (\rho u)(x,t) dx,
+\]
+this gives
+\[
+\int_U (\partial_t(\rho u) + \div(\rho u \otimes u) + \nabla p)(x,t) dx.
+\]
+Because this is true for any Lipschitz domain $U$ in $\Omega$, we obtain
+\[
+(\partial_t(\rho u) + \div(\rho u \otimes u) + \nabla p)(x,t)=0
+\] 
+for all $x \in \Omega$ and $t \in \mathbb{R}$, or
+\begin{equation}
+\partial_t(\rho u) + \div(\rho u \otimes u) + \nabla p=0.
+\label{momentum}
+\end{equation}
+
+To state that the stuff we are talking about is incompressible means that 
+$\rho$ is constant. For the rest of this note, unless we state otherwise we take $\rho$ to be a nonzero constant, with which   equation \eqref{continuityequation} becomes
+\begin{equation}
+\div (u)=0,
+\label{euler1}
+\end{equation}
+and \eqref{momentum} becomes
+\begin{equation}
+\partial_t u + \div(u \otimes u) + \frac{1}{\rho} \nabla p =0.
+\label{euler2}
+\end{equation}
+The two equations \eqref{euler1} and \eqref{euler2} are called the {\em Euler equations for an incompressible fluid}. 
+
+
+
+
+Taking the divergence of \eqref{euler2} yields
+\[
+\partial_t \div(u) + \div (\div (u \otimes u)) + \frac{1}{\rho}\div(\nabla p)=0.
+\]
+Using \eqref{euler1} and writing $\Delta p = \div(\nabla p)$,
+\begin{equation}
+\div(\div(u \otimes u)) + \frac{1}{\rho} \Delta p =0.
+\label{divergencepressure}
+\end{equation}
+
+As
+\[
+\div(u \otimes u) = \partial_j(u_i u_j)e_i,
+\]
+we have, using \eqref{euler1},
+\begin{eqnarray*}
+\div(\div(u \otimes u))& =& \partial_i \partial_j(u_iu_j) \\
+&=& \partial_i((\partial_ju_i)u_j + u_i \partial_j u_j)\\
+&=&\partial_i((\partial_j u_i)u_j + u_i \div(u))\\
+&=&\partial_i((\partial_j u_i)u_j)\\
+&=&(\partial_i \partial_j u_i)u_j + (\partial_j u_i)\partial_i u_j\\
+&=&(\partial_j (\div(u))) u_j + (\partial_j u_i)\partial_i u_j\\
+&=&(\partial_j u_i)\partial_i u_j.
+\end{eqnarray*}
+Therefore, using this
+with \eqref{divergencepressure} we get
+\begin{equation}
+-\Delta p = \rho (\partial_j u_i)\partial_i u_j.
+\label{ellipticpressure}
+\end{equation}
+The use of this equation is to give us more information about the pressure $p$.
+
+Furthermore,
+with $u=u_i e_i$ and writing
+\[
+\nabla u = (\partial_j u) \otimes e_j = (\partial_j (u_i e_i)) \otimes e_j = \partial_j u_i e_i \otimes e_j,
+\]
+the contraction of the tensor $\nabla u$ with itself is
+\begin{eqnarray*}
+(\nabla u)(\nabla u) &=& (\partial_j u_i e_i \otimes e_j)(\partial_l u_k e_k \otimes e_l)\\
+&=&(\partial_j u_i)(\partial_l u_k) (e_i \otimes e_j)(e_k \otimes e_l)\\
+&=&(\partial_j u_i)(\partial_l u_k) \delta_{j,k} e_i \otimes e_l\\
+&=&(\partial_j u_i)(\partial_l u_j) e_i \otimes e_l,
+\end{eqnarray*}
+for which
+\[
+\Tr((\nabla u)(\nabla u)) = (\partial_j u_i)(\partial_i u_j).
+\]
+With this, equation  \eqref{ellipticpressure} becomes
+\[
+-\Delta p = \rho \Tr((\nabla u)(\nabla u)).
+\]
+
+
+As
+\[
+\div(u \otimes u)=\partial_j(u_i u_j) e_i = (\partial_j u_i)u_je_i + u_i \partial_j u_j e_i = (\partial_j u_i)u_je_i + u_i \div(u) e_i,
+\]
+using \eqref{euler1} we have
+\[
+\div(u \otimes u) 
+=(\partial_j u_i)u_je_i,
+\]
+and hence it follows from \eqref{euler1} that
+\begin{equation}
+\div(u \otimes u) = u \cdot \nabla u.
+\label{materialform}
+\end{equation}
+This expression for $\div(u \otimes u)$ may be easier to work with than the original expression.
+
+\section{Energy}
+If $v=v_i e_i$ is a vector field,
+we write
+\[
+\nabla v = (\partial_j v) \otimes e_j = (\partial_j v_i) e_i \otimes e_j.
+\]
+Then,
+\[
+v\cdot \nabla v = (v_k e_k) \cdot ( (\partial_j v_i) e_i \otimes e_j ) = v_j \partial_j v_i e_i = v_j\partial_j v.
+\]
+
+
+If $u$ (velocity of stuff) and $p$ (pressure of stuff) satisfy \eqref{euler1} and \eqref{euler2}, then
+applying $u \cdot$ to both sides of \eqref{euler2} we get
+\begin{equation}
+u \cdot (\partial_t u ) + u \cdot  \div(u \otimes u ) + \frac{1}{\rho} u \cdot  \nabla p=0.
+\label{udoteuler2}
+\end{equation}
+First,
+\[
+\partial_t (u \cdot u) = \partial_t (u_i u_i) = (\partial_t u_i) u_i + u_i (\partial_t u_i) = 2u_i (\partial_t u_i)= 
+2 u \cdot (\partial_tu).
+\]
+Second,
+\[
+\div(u \otimes u) = \partial_j(u_iu_j)e_i
+\]
+so
+\[
+u \cdot \div(u \otimes u) = u_i \partial_j(u_i u_j) = u_i(\partial_j u_i)u_j + u_i u_i \partial_ju_j;
+\]
+but
+\[
+\div((u \cdot u) u) =  \div(u_i u_i u_j e_j) = \partial_j (u_i u_i u_j) = 2u_i(\partial_j u_i) u_j + u_i u_i \partial_j u_j,
+\]
+hence
+\[
+\div((u\cdot u)u) = 2 u\cdot \div(u \otimes u) - u\cdot u \div(u),
+\]
+and using \eqref{euler1} this is
+\[
+\div((u \cdot u)u) = 2 u\cdot \div(u \otimes u).
+\]
+Third,
+\[
+\div(pu) = (\nabla p) \cdot u + p \div (u),
+\]
+and using \eqref{euler1} this is
+\[
+\div(pu) = (\nabla p) \cdot u.
+\]
+Putting these three results  into \eqref{udoteuler2} gives
+\[
+\frac{1}{2} \partial_t(u\cdot u) + \frac{1}{2} \div((u\cdot u)u) + \frac{1}{\rho} \div(pu) =0,
+\]
+or
+\begin{equation}
+\partial_t \left( \frac{1}{2}\rho u\cdot u \right) + \div\left(\frac{1}{2}\rho (u\cdot u)u + pu \right)=0.
+\label{energyequation}
+\end{equation}
+
+We define
+\[
+E=\frac{1}{2}\rho u\cdot u.
+\]
+If $\rho$ is thought of as mass density, with units of \si{kg/m^3}, and $u$ is thought of as the velocity of stuff, with units of \si{m/s},
+then $E$ has units of 
+$\si{kg.m^{-1}.s^{-2}}=\si{J/m^3}$. We choose to think of  $E$ defined this way as energy density; we say {\em choose} because although $E$ has the right units to be energy density,
+any multiple would have the same units, and it is not apparent from what we have said so far why we care about $\frac{1}{2}\rho u\cdot u$ rather than some other multiple of 
+$\rho u\cdot u$.
+Writing equation \eqref{energyequation} using $E$ gives
+\[
+\partial_t E + \div(E u  + pu) = 0,
+\]
+which is thus a statement about the rate of change of  energy density.
+We call $\frac{E+p}{\rho}$ the {\em total specific enthalpy} of the stuff. To say that a quantity  is specific means that it expresses some quantity per \si{kg}, and the dimensions of
+enthalpy are \si{J}.
+
+
+
+\section{Vorticity}
+In this section, unless we say otherwise we take $n=3$.  For vector fields $v,w$,
+\[
+\nabla(v \cdot w) = v\cdot  \nabla w + w \cdot \nabla v + v \times \curl w + w \times \curl v.
+\]
+Using this identity $v=u$ and $w=u$ gives
+\[
+u \cdot \nabla u = u \times \curl u - \frac{1}{2} \nabla(u \cdot u),
+\]
+and therefore \eqref{materialform} can be written as
+\begin{equation}
+\div(u \otimes u) =\frac{1}{2}\nabla(u \cdot u) - u \times \curl u.
+\label{curlequation}
+\end{equation}
+
+Taking the curl of \eqref{euler2} yields
+\[
+\partial_t \curl u + \curl \div(u \otimes u) =0;
+\]
+we used the fact that
+the curl of the gradient of any scalar field is $0$ and so $\curl \nabla p=0$.
+Using \eqref{curlequation}, this becomes
+\[
+\partial_t \curl(u) + \curl\left( \frac{1}{2} \nabla(u\cdot u) - u \times \curl u \right) = 0,
+\]
+and as the curl of the gradient of a scalar field is $0$, this is
+\[
+\partial_t \curl u = \curl(u \times \curl u).
+\]
+For vector fields $v,w$,
+\[
+\curl(v \times w) = v \div w - w \div v + (\nabla v)(w) - (\nabla w)(v),
+\]
+and with $v=u$ and $w=\curl u$ we obtain
+\[
+\partial_t \curl u = u \div \curl u - \curl(u) \div u + (\nabla u)(\curl u) - (\nabla \curl u)(u).
+\]
+Because the divergence of the curl of a vector field is $0$ and because $\div u=0$ by \eqref{euler1}, this becomes
+\[
+\partial_t \curl u  = (\nabla u)(\curl u) - (\nabla \curl u)(u).
+\]
+We call $\omega=\curl(u)$ the {\em vorticity} of the stuff, and with this notation the above equation can
+be written as
+\begin{equation}
+\partial_t \omega  = (\nabla u)(\omega)-(\nabla \omega)(u).
+\label{vorticity}
+\end{equation}
+
+
+
+\section{Material time derivative}
+One often deals with expressions like $\partial_t \omega + u \cdot \nabla \omega$, and we 
+write
+\[
+\frac{D}{Dt} = \partial_t + u\cdot \nabla,
+\]
+and call $\frac{D}{Dt}$ the {\em material time derivative}; it depends on the velocity $u$
+of the stuff. With this notation, the equation \eqref{vorticity}
+is
+\[
+\frac{D\omega}{Dt} = \omega \cdot \nabla u.
+\]
+Using \eqref{materialform} (which itself supposes \eqref{euler1}), we can write \eqref{euler2} using the material time derivative as
+\[
+\frac{Du}{Dt} + \nabla p=0.
+\]
+
+
+
+\section{Irrotational velocity fields}
+In this section unless we say otherwise we take $n=3$ and we suppose that $\curl u =0$, which we describe as   $u$ being {\em irrotational}.
+We suppose also in this section that $\Omega$ is simply connected,
+which together with $\curl u=0$ implies that there is some 
+ $\phi \in C^\infty(\Omega \times \mathbb{R})$ for which
+\[
+u(x,t) = (\nabla \phi)(x,t)
+\]
+for all $x \in \Omega$ and for all $t \in \mathbb{R}$; cf. the Helmholtz decomposition of a vector field in $\mathbb{R}^3$. We call $\phi$ a {\em potential function for $u$}.
+Combining \eqref{euler2}, \eqref{materialform}, and $u=\nabla \phi$, we obtain
+\begin{equation}
+\partial_t \nabla \phi + (\nabla \phi)\cdot \nabla \nabla \phi + \frac{1}{\rho} \nabla p =0.
+\label{conservativeeuler}
+\end{equation}
+We have
+\begin{eqnarray*}
+(\nabla \phi)\cdot \nabla \nabla \phi&=&(\partial_i \phi e_i) \cdot \nabla (\partial_k \phi e_k)\\
+&=&(\partial_i \phi e_i)  \cdot (\partial_j \partial_k \phi e_k \otimes e_j)\\
+&=&(\partial_i \phi)\partial_i \partial_k \phi e_k\\
+&=&\frac{1}{2}\partial_k (( \partial_i \phi)(\partial_i \phi))e_k\\
+&=&\frac{1}{2}\partial_k (\nabla \phi \cdot \nabla \phi) e_k\\
+&=&\frac{1}{2}\nabla(\nabla \phi \cdot \nabla \phi),
+\end{eqnarray*}
+with which \eqref{conservativeeuler} becomes
+\[
+\partial_t \nabla \phi + \frac{1}{2}\nabla(\nabla \phi \cdot \nabla \phi) + \frac{1}{\rho}\nabla p=0,
+\]
+or
+\[
+\nabla\left( \partial_t \phi+ \frac{1}{2}\nabla\phi \cdot \nabla \phi+\frac{1}{\rho}p\right)=0.
+\]
+Then, defining $P$ to be
+\[
+P =  \partial_t \phi+ \frac{1}{2}\nabla\phi \cdot \nabla \phi+\frac{1}{\rho}p,
+\]
+we have that $P$ depends only on time. We call $P$ the {\em total pressure}, and the statement that the total pressure
+depends only on time if the velocity $u$ is irrotational is called {\em Bernoulli's principle}. 
+
+Furthermore, combining \eqref{euler1} with $u=\nabla \phi$ gives
+\[
+\Delta \phi = 0,
+\]
+i.e., for each $t \in \mathbb{R}$, $x \mapsto \phi(x,t)$ is a harmonic function on $\Omega$. 
+
+
+
+\section{Euler equations in one dimension}
+In this section we take $n=1$ and do not suppose that the pressure $\rho$ is constant. Since we do not take $\rho$ to be constant, we will use \eqref{continuityequation},
+which tells us that
+\[
+\partial_t \rho + \div(\rho u) = 0,
+\]
+and \eqref{momentum}, which tells us that
+\[
+\partial_t(\rho u) + \div(\rho u \otimes u) + \nabla p=0.
+\]
+As $n=1$ here, we can write these two equations as
+\begin{equation}
+\partial_t \rho+ \partial_x(\rho u)=0
+\label{1deuler1}
+\end{equation}
+and
+\begin{equation}
+\partial_t (\rho u)+\partial_x(\rho u^2) + \partial_x p =0.
+\label{1deuler2}
+\end{equation}
+We suppose, giving no justification, that there are some constant $K$  and $\gamma$ for which $p=K\rho^\gamma$.
+With this assumption, equation \eqref{1deuler2} becomes
+\begin{equation}
+\partial_t (\rho u)+\partial_x(\rho u^2) + \gamma  \frac{p}{\rho} \partial_x \rho = 0.
+\label{pressuredensity}
+\end{equation}
+
+We write $\rho=\rho_0+\rho_1$ where $\rho_0$ is a constant, and
+we also write $u=u_0+u_1$ where $u_0$ is a constant. With these definitions, the equation \eqref{1deuler1} becomes
+\[
+\partial_t (\rho_0+\rho_1) + \partial_x(\rho_0u_0+\rho_0u_1+\rho_1 u_0+\rho_1u_1)=0,
+\]
+i.e.
+\[
+\partial_t \rho_1 + \rho_0 \partial_x u_1 + u_0 \partial_x \rho_1 + \partial_x(\rho_1u_1)=0.
+\]
+Supposing that the last term is negligible, an approximation to the above equation is
+\begin{equation}
+\partial_t \rho_1 + \rho_0 \partial_x u_1 + u_0 \partial_x \rho_1=0.
+\label{approx1}
+\end{equation}
+Furthermore, \eqref{pressuredensity} becomes
+\[
+\begin{split}
+&\partial_t(\rho_0u_0+\rho_0u_1+\rho_1 u_0+\rho_1u_1) \\
+&+ \partial_x(\rho_0u_0^2+2\rho_0u_0u_1+\rho_0u_1^2+\rho_1u_0^2+2\rho_1 u_0u_1 + \rho_0u_1^2)\\
+&+\gamma \frac{p}{\rho_0+\rho_1} \partial_x(\rho_0+\rho_1)\\
+=&0.
+\end{split}
+\]
+Using that  $\rho_0$ and $u_0$ are constant and supposing that  $\partial_x(\rho_1 u_1)$ and $\partial_x(u_1^2)$ are negligible gives us the approximation
+\[
+\rho_0 \partial_t u_1 + u_0 \partial_t \rho_1 + 2\rho_0u_0 \partial_x u_1 + u_0^2 \partial_x \rho_1 + \gamma \frac{p}{\rho_0+\rho_1} \partial_x \rho_1.
+\]
+Expressing $\frac{1}{\rho_0+\rho_1}$ as a geometric series in powers of $\frac{\rho_1}{\rho_0}$ and supposing that
+the sum of all the nonconstant terms is negligible, and approximating $p=K\rho^\gamma$ as $p_0=K\rho_0^\gamma$
+gives us the approximation
+\[
+\rho_0 \partial_t u_1 + u_0 \partial_t \rho_1 + 2\rho_0u_0 \partial_x u_1 + u_0^2 \partial_x \rho_1 + \gamma \frac{p_0}{\rho_0} \partial_x \rho_1=0.
+\]
+Combining this equation with \eqref{approx1} multiplied by $u_0$ yields
+\[
+\rho_0\partial_t u_1 + \rho_0 u_0 \partial_x u_1 + \gamma \frac{p_0}{\rho_0}\partial_x \rho_1=0.
+\]
+We define $D_t = \partial_t + u_0 \partial_x$, with which we can write the above equation as
+\begin{equation}
+\rho_0 D_t u_1+\gamma \frac{p_0}{\rho_0} \partial_x \rho_1=0,
+\label{wave1}
+\end{equation}
+and we can write \eqref{approx1} as
+\begin{equation}
+D_t \rho_1 + \rho_0 \partial_x u_1=0.
+\label{wave2}
+\end{equation}
+Applying $D_t$ to \eqref{wave2}  gives
+\[
+D_t^2 \rho_1 + \rho_0 \partial_x D_t u_1 =0,
+\]
+and then using \eqref{wave1} this becomes
+\[
+D_t^2 \rho_1 + \partial_x \left( -\gamma \frac{p_0}{\rho_0} \partial_x \rho_1 \right) =0,
+\]
+or
+\[
+D_t^2 \rho_1 - \gamma \frac{p_0}{\rho_0} \partial_x^2 \rho_1 =0,
+\]
+which is a wave equation satisfied by $\rho_1$. 
+
+
+\end{document}

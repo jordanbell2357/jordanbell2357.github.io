@@ -1,0 +1,454 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\cco}{\ensuremath\overline{\mathrm{co}}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\epi}{\ensuremath\mathrm{epi}\,}
+\newcommand{\lsc}{\ensuremath\mathrm{lsc}\,}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\LSC}{\ensuremath\mathrm{LSC}}
+\newcommand{\USC}{\ensuremath\mathrm{USC}}
+\newcommand{\Cyl}{\ensuremath\mathrm{Cyl}\,}
+\newcommand{\extreals}{\overline{\mathbb{R}}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Test functions, distributions, and Sobolev's lemma}
+\author{Jordan Bell}
+\date{May 22, 2014}
+
+\maketitle
+
+\section{Introduction}
+If $X$ is a topological vector space, we denote by $X^*$ the set of continuous linear functionals on $X$. With the weak-* topology, $X^*$ is a locally convex space, whether or not
+$X$ is a locally convex space. (But in this note, we only talk about locally convex spaces.)
+
+The purpose of this note is to collect the material given in Walter Rudin, {\em Functional Analysis}, second ed., chapters 6 and 7,
+ involved in stating and proving Sobolev's lemma.
+ 
+
+
+\section{Test functions}
+Suppose that $\Omega$ is an open subset of $\mathbb{R}^n$. We denote by $\mathscr{D}(\Omega)$ the set of all $\phi \in C^\infty(\Omega)$ such that
+$\supp \phi$ is a compact subset of $\Omega$. Elements of $\mathscr{D}(\Omega)$ are called {\em test functions}. For $N=0,1,\ldots$ and $\phi \in \mathscr{D}(\Omega)$, write
+\[
+\norm{\phi}_N = \sup\{|(D^\alpha \phi)(x)|: x\in \Omega, |\alpha| \leq N\},
+\]
+where
+\[
+D^\alpha = D_1^{\alpha_1} \cdots D_n^{\alpha_n}, \qquad |\alpha| = \alpha_1 + \cdots + \alpha_n.
+\]
+For each compact
+subset $K$ of $\Omega$, we define
+\[
+\mathscr{D}_K = \{\phi \in \mathscr{D}(\Omega): \supp \phi \subseteq K\},
+\] 
+and define   $\tau_K$ to be the locally convex topology on $\mathscr{D}_K$ determined by the  family of seminorms $\{\norm{\cdot}_N: N \geq 0\}$. One proves that 
+$\mathscr{D}_K$  with the topology $\tau_K$ is a Fr\'echet space. 
+As sets,
+\[
+\mathscr{D}(\Omega)= \bigcup_K \mathscr{D}_K.
+\]
+Define $\beta$ to be the collection of all convex balanced subsets $W$ of $\mathscr{D}(\Omega)$ such that for every compact subset $K$ of $\Omega$ we have
+$W\cap \mathscr{D}_K \in \tau_K$; to say that $W$ is {\em balanced} means that if $c$ is a complex number with $|c| \leq 1$ then
+$cW \subseteq W$. One proves that
+ $\{\phi+W: \phi \in \mathscr{D}(\Omega), W \in \beta\}$ is a basis for a topology $\tau$ on $\mathscr{D}(\Omega)$,  that  
+ $\beta$ is a local basis at $0$ for this topology,
+and that with the topology $\tau$,  $\mathscr{D}(\Omega)$ 
+is a locally convex space.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~152, Theorem 6.4; cf. Helmut H. Schaefer,
+{\em Topological Vector Spaces}, p.~57.} For each compact subset $K$ of $\Omega$,
+ one proves that the topology $\tau_K$ is equal to the subspace topology on $\mathscr{D}_K$ inherited from
+ $\mathscr{D}(\Omega)$.\footnote{Walter
+ Rudin, {\em Functional Analysis}, second ed., p.~153, Theorem 6.5.} 
+
+We write $\mathscr{D}'(\Omega)= (\mathscr{D}(\Omega))^*$, and elements of $\mathscr{D}'(\Omega)$ are called {\em distributions}. 
+With the weak-* topology, $\mathscr{D}'(\Omega)$ is a locally convex space.
+
+It is a fact that a linear functional  $\Lambda$ on $\mathscr{D}(\Omega)$ is continuous if and only if 
+for every compact subset $K$ of $\Omega$ there is a nonnegative integer $N$ and a constant
+$C$ such that $|\Lambda \phi| \leq C \norm{\phi}_N$ for all $\phi \in \mathscr{D}_K$.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~156, Theorem 6.8.}
+
+
+For $\Lambda \in \mathscr{D}'(\Omega)$ and $\alpha$ a multi-index,
+ we define
+\[
+(D^\alpha \Lambda)(\phi) = (-1)^{|\alpha|} \Lambda(D^\alpha \phi), \qquad \phi \in \mathscr{D}(\Omega).
+\]
+Let $K$ be a compact subset of $\Omega$. As $\Lambda$ is continuous, there is a nonnegative integer $N$ and a constant
+$C$ such that $|\Lambda \phi| \leq C \norm{\phi}_N$ for all $\phi \in \mathscr{D}_K$. Then
+\[
+|(D^\alpha \Lambda)(\phi)| = |\Lambda(D^\alpha \phi)| \leq C \norm{D^\alpha \phi}_N \leq C \norm{\phi}_{N+|\alpha|},
+\]
+which shows that $D^\alpha \Lambda \in \mathscr{D}'(\Omega)$. 
+
+
+ The {\em Leibniz formula} is the statement that 
+for all $f,g \in C^\infty(\mathbb{R}^n)$,  
+\[
+D^\alpha(fg) = \sum_{\beta \leq \alpha} \binom{\alpha}{\beta} (D^{\alpha-\beta}f)(D^\beta g),
+\]
+where $\binom{\alpha}{\beta}$ are multinomial coefficients.
+
+For $\Lambda \in \mathscr{D}'(\Omega)$ and $f \in C^\infty(\Omega)$, we define 
+\[
+(f\Lambda)(\phi) = \Lambda(f\phi), \qquad \phi \in \mathscr{D}(\Omega);
+\]
+this makes sense because $f\phi \in \mathscr{D}(\Omega)$ when $\phi \in \mathscr{D}(\Omega)$. It is apparent that $f\Lambda$
+is linear, and in the following lemma we prove that $f\Lambda$ is continuous.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~159, \S 6.15.}
+
+\begin{lemma}
+If $\Lambda \in \mathscr{D}'(\Omega)$ and $f \in C^\infty(\Omega)$, then $f \Lambda \in \mathscr{D}'(\Omega)$.
+\label{module}
+\end{lemma}
+\begin{proof}
+Suppose that $K$ is a compact subset of $\Omega$. Because $\Lambda$ is continuous, 
+there is some nonnegative integer $N$ and some constant $C$ such that
+\[
+|\Lambda \phi| \leq C \norm{\phi}_N, \qquad \phi \in \mathscr{D}_K.
+\]
+
+For $|\alpha| \leq N$, by the Leibniz formula, for all
+$\phi \in \mathscr{D}_K$,
+\[
+D^\alpha(f\phi) = \sum_{\beta \leq \alpha} \binom{\alpha}{\beta} (D^{\alpha-\beta}f)(D^\beta \phi).
+\]
+Because $f \in C^\infty(\Omega)$, there is some $C_{\alpha}$ such that $|(D^{\alpha-\beta}f)(x)| \leq C_{\alpha}$ for $\beta \leq \alpha$ and for $x \in K$. 
+Using $\phi(x)=0$ for $x \not \in K$,  the above statement of the Leibniz formula, and  the inequality
+just obtained,
+it follows that there is some $C_{\alpha}'$ such that $|(D^\alpha(f\phi))(x)| \leq C_{\alpha}' \norm{\phi}_N$ for all $x \in \Omega$.
+This gives
+\[
+\norm{f\phi}_N=\sup_{|\alpha| \leq N} \sup_{x \in \Omega} |(D^\alpha (f\phi))(x)|
+\leq
+\sup_{|\alpha| \leq N} C_{\alpha}' \norm{\phi}_N=C'\norm{\phi}_N;
+\]
+the last equality is how we define $C'$, which is a maximum of finitely many $C_\alpha'$ and so finite.
+Then,
+\[
+|(f\Lambda)(\phi)| = |\Lambda(f\phi)| \leq C \norm{f\phi}_N \leq CC'\norm{\phi}_N, \qquad \phi \in \mathscr{D}_K.
+\]
+This bound shows that $f\Lambda$ is continuous.
+\end{proof}
+
+The above lemma shows that $f \Lambda \in \mathscr{D}'(\Omega)$ when $f \in C^\infty(\Omega)$ and $\Lambda \in \mathscr{D}'(\Omega)$.
+Therefore $D^\alpha(f\Lambda) \in \mathscr{D}(\Omega)$, and the following lemma, proved in Rudin, states that the Leibniz formula can be used with $f\Lambda$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~160, \S 6.15.}
+
+\begin{lemma}
+If $f \in C^\infty(\Omega)$ and $\Lambda \in \mathscr{D}'(\Omega)$, then 
+\[
+D^\alpha(f\Lambda) = \sum_{\beta \leq \alpha} \binom{\alpha}{\beta} (D^{\alpha-\beta}f)(D^\beta \Lambda).
+\]
+\label{leibniz}
+\end{lemma}
+
+
+If $f:\Omega \to \mathbb{C}$ is locally integrable,  define
+\[
+\Lambda \phi =\int_{\Omega} \phi(x) f(x) dx, \qquad \phi \in \mathscr{D}(\Omega).
+\]
+For $\phi \in \mathscr{D}_K$,
+\[
+|\Lambda \phi | \leq \norm{\phi}_0 \int_K |f| dx,
+\]
+from which it follows that $\Lambda$ is continuous. 
+If $\mu$ is a complex Borel measure on $\mathbb{R}^n$ or a positive Borel measure on $\mathbb{R}^n$ that assigns finite measure to compact
+sets,  define
+\[
+\Lambda \phi = \int_{\Omega} \phi d\mu, \qquad \phi \in \mathscr{D}(\Omega).
+\]
+For $\phi \in \mathscr{D}_K$,
+\[
+|\Lambda \phi| \leq \norm{\phi}_0 |\mu|(K),
+\]
+from which it follows that $\Lambda$ is continuous.
+Thus, we can encode certain functions and measures as distributions. I will dare to say that we can encode most functions and measures
+that we  care about as distributions.
+
+
+If $\Lambda_1,\Lambda_2 \in \mathscr{D}'(\Omega)$ and $\omega$ is an open subset of $\Omega$, we say that
+{\em $\Lambda_1 = \Lambda_2$ in $\omega$} if $\Lambda_1 \phi = \Lambda_2 \phi$ for all $\phi \in \mathscr{D}(\omega)$. 
+
+Let $\Lambda \in \mathscr{D}'(\Omega)$ and let  $\omega$ be an open subset of $\Omega$. We say that $\Lambda$
+{\em vanishes on $\omega$} if $\Lambda \phi = 0$ for all $\phi \in \mathscr{D}(\omega)$.
+Taking $W$ to be the union of all open subsets $\omega$ of $\Omega$ on which $\Lambda$ vanishes, we define the {\em support of $\Lambda$} to be the set 
+$\Omega \setminus W$. 
+
+
+
+
+\section{The Fourier transform}
+Let $C_0(\mathbb{R}^n)$ be the set of those continuous functions $f:\mathbb{R}^n \to \mathbb{C}$ such that for every $\epsilon>0$, there is some compact
+set $K$ such that $|f(x)|<\epsilon$ for $x \not \in K$. With the supremum norm $\norm{\cdot}_\infty$, $C_0(\mathbb{R}^n)$ is a Banach space.
+
+Let $m_n$ be {\em normalized Lebesgue measure on $\mathbb{R}^n$}: 
+\[
+dm_n(x) = (2\pi)^{-n/2} dx.
+\]
+Using $m_n$, we define
+\[
+\norm{f}_{L^p} = \left( \int_{\mathbb{R}^n} |f|^p dm_n\right)^{1/p}, \qquad 1 \leq p < \infty
+\]
+and 
+\[
+(f*g)(x) = \int_{\mathbb{R}^n} f(x-y) g(y) dm_n(y).
+\]
+
+
+For $t \in \mathbb{R}^n$, define $e_t:\mathbb{R}^n \to \mathbb{C}$ by
+\[
+e_t(x) = \exp(it\cdot x), \qquad x \in \mathbb{R}^n.
+\]
+The {\em Fourier transform} of $f \in L^1(\mathbb{R}^n)$ is the function $\hat{f}:\mathbb{R}^n \to \mathbb{C}$ defined by
+\[
+(\mathscr{F}f)(t) = \hat{f}(t) = \int_{\mathbb{R}^n} f e_{-t} dm_n, \qquad t \in \mathbb{R}^n.
+\]
+Using the dominated convergence theorem, one shows that $\hat{f}$ is continuous.
+
+
+
+
+
+
+For $f \in C^\infty(\mathbb{R}^n)$ and $N$ a nonnegative integer, write
+\[
+p_N(f) = \sup_{|\alpha| \leq N} \sup_{x \in \mathbb{R}^n} (1+|x|^2)^N |(D^\alpha f)(x)|,
+\]
+and let $\mathscr{S}_n$ be the set of those $f \in C^\infty(\mathbb{R}^n)$ such that for every nonnegative integer $N$, $p_N(f)<\infty$.
+$\mathscr{S}_n$ is a vector space, and with the locally convex topology determined by the family of seminorms
+$\{p_N: N \geq 0\}$ it is a Fr\'echet space.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~184, Theorem 7.4.}
+Further, one proves that $\mathscr{F}:\mathscr{S}_n \to \mathscr{S}_n$ is a continuous linear map.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~184, Theorem 7.4.}
+
+The {\em Riemann-Lebesgue lemma} is the statement that if $f \in L^1(\mathbb{R}^n)$, then $\hat{f} \in C_0(\mathbb{R}^n)$.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~185, Theorem 7.5.}
+
+
+The {\em  inversion theorem}\footnote{Walter Rudin, {\em Functional Analysis},
+second ed., p.~186, Theorem 7.7.} is the statement that if
+ $g \in \mathscr{S}_n$ then
+\[
+g(x) = \int_{\mathbb{R}^n} \hat{g}e_x dm_n, \qquad x \in \mathbb{R}^n,
+\]
+and that if
+$f \in L^1(\mathbb{R}^n)$ and $\hat{f} \in L^1(\mathbb{R}^n)$,  and we define $f_0 \in C_0(\mathbb{R}^n)$  by 
+\[
+f_0(x) = \int_{\mathbb{R}^n} \hat{f} e_x dm_n, \qquad x \in \mathbb{R}^n,
+\]
+then $f(x)=f_0(x)$ for almost all $x \in \mathbb{R}^n$. For $g \in \mathscr{S}_n$,
+as $\hat{g} \in \mathscr{S}_n$, the function
+$f(t)=\hat{g}(-t)$ belongs to $\mathscr{S}_n$. The inversion theorem tells us that for all $x \in \mathbb{R}^n$,
+\[
+g(x) = \int_{\mathbb{R}^n} \hat{g}(t) e_x(t) dm_n(t) = \int_{\mathbb{R}^n} \hat{g}(-t) e_x(-t) dm_n(t) 
+=\int_{\mathbb{R}^n} f(t) e_{-x}(t) dm_n(t),
+\]
+and hence that $g=\hat{f}$. 
+This shows that $\mathscr{F}:\mathscr{S}_n \to \mathscr{S}_n$ is onto.
+Using the inversion theorem, one checks that 
+\[
+\int_{\mathbb{R}^n} f\overline{g} dm_n = \int_{\mathbb{R}^n} \hat{f} \overline{\hat{g}} dm_n,
+\qquad f,g \in \mathscr{S}_n,
+\]
+and so $\norm{f}_{L^2} = \norm{\mathscr{F}f}_{L^2}$ for $f \in \mathscr{S}_n$. It is a fact that
+$\mathscr{S}_n$ is a dense subset of the Hilbert space $L^2(\mathbb{R}^n)$, and it follows that there is a unique bounded
+linear operator $L^2(\mathbb{R}^n) \to L^2(\mathbb{R}^n)$, that is equal to $\mathscr{F}$ on $\mathscr{S}_n$, and that is unitary.
+We denote this  $\mathscr{F}:L^2(\mathbb{R}^n) \to L^2(\mathbb{R}^n)$. 
+
+It is a fact that $\mathscr{D}(\mathbb{R}^n)$ is a dense subset of $\mathscr{S}_n$ and that
+the identity map $i:\mathscr{D}(\mathbb{R}^n) \to \mathscr{S}_n$ is continuous.\footnote{Walter Rudin, {\em Functional Analysis},
+second ed., p.~189, Theorem 7.10.} If $L_1,L_2 \in (\mathscr{S}_n)^*$  are distinct, then there is some $f \in \mathscr{S}_n$ such that
+$L_1 f \neq L_2 f$, and as $\mathscr{D}(\mathbb{R}^n)$ is dense in $\mathscr{S}_n$, there is a sequence $f_j \in \mathscr{D}(\mathbb{R}^n)$
+with $f_j \to f$ in $\mathscr{S}_n$. As
+\[
+(L_1 \circ i)(f_j) - (L_2 \circ i)(f_j) =  L_1 f_j - L_2 f_j \to L_1 f_j -L_2 f_j \neq 0,
+\]
+there is some $f_j$ with $(L_1 \circ i)(f_j) \neq (L_2 \circ i)(f_j)$, and hence $L_1 \circ i \neq L_2 \circ i$. This shows that
+$L \mapsto L \circ i$ is a one-to-one linear map $(\mathscr{S}_n)^* \to \mathscr{D}'(\mathbb{R}^n)$. 
+Elements of $\mathscr{D}'(\mathbb{R}^n)$ of the form $L \circ i$ for $L \in (\mathscr{S}_n)^*$ are called
+{\em tempered distributions}, and we denote the set of tempered distributions by
+$\mathscr{S}_n'$.
+It is a fact that every distribution with compact support is tempered.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~190, Example 7.12 (a).}
+
+
+\section{Sobolev's lemma}
+Suppose that $\Omega$ is an open subset of $\mathbb{R}^n$. We say that a measurable function $f:\Omega \to \mathbb{C}$
+ is {\em locally $L^2$}
+if $\int_K |f|^2 dm_n<\infty$ for every compact subset $K$ of $\Omega$.
+We say that $\Lambda \in \mathscr{D}'(\Omega)$ is {\em locally $L^2$} if there is a function $g$ that is locally $L^2$ in $\Omega$
+such that $\Lambda \phi=\int_{\Omega} \phi g dm_n$ for every $\phi \in \mathscr{D}(\Omega)$.
+
+ The following proof of Sobolev's lemma follows Rudin.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~202, Theorem 7.25.}
+
+\begin{theorem}[Sobolev's lemma]
+Suppose that $n,p,r$ are integers, $n>0$, $p \geq 0$, and 
+\[
+r>p+\frac{n}{2}.
+\]
+Suppose that $\Omega$ is an open subset of $\mathbb{R}^n$, that $f:\Omega \to \mathbb{C}$ is locally $L^2$, and that the distribution derivatives
+$D_j^k f$ are locally $L^2$ for $1 \leq j \leq n$, $1 \leq k \leq r$. Then there is some $f_0 \in C^p(\Omega)$ such that $f_0(x)=f(x)$ for almost all $x \in \Omega$.
+\end{theorem}
+\begin{proof}
+To say that the distribution derivative $D_j^k f$ is locally $L^2$ means that there is some $g_{j,k}:\Omega \to \mathbb{C}$ that is locally $L^2$ such that 
+\[
+D_j^k \Lambda_f = \Lambda_{g_{j,k}}.
+\]
+
+Suppose that  $\omega$ is an open subset of $\Omega$ whose closure $K$ is a compact subset of $\Omega$. There is some $\psi \in \mathscr{D}(\Omega)$
+with $\psi(x)=1$ for $x \in K$, and we define $F:\mathbb{R}^n \to \mathbb{C}$ by
+\[
+F(x) = \begin{cases}
+\psi(x)f(x)&x \in \Omega,\\
+0&x \not \in \Omega;
+\end{cases}
+\]
+in particular, for $x \in K$ we have $F(x)=f(x)$, and for $x \not \in \supp \psi$ we have $F(x)=0$.
+Because $\supp \psi \subset \Omega$ is compact and $f$ is locally $L^2$,
+\[
+\norm{F}_{L^2} = \left( \int_{\supp \psi} |\psi f|^2 dm_n\right)^{1/2} \leq \norm{\psi}_0 \left(\int_{\supp \psi} |f|^2 dm_n \right)^{1/2} < \infty,
+\]
+and using the Cauchy-Schwarz inequality, $\norm{F}_{L^1} \leq \norm{F}_{L^2} m_n(\supp \psi)^{1/2}<\infty$, so
+\[
+F \in L^2(\mathbb{R}^n) \cap L^1(\mathbb{R}^n).
+\]
+Then,
+\begin{equation}
+\int_{\mathbb{R}^n} |\widehat{F}|^2 dm_n < \infty.
+\label{Fhat}
+\end{equation}
+
+Because $\Lambda_F = \psi \Lambda_f$ in $\Omega$,
+ the Leibniz formula tells us that in $\Omega$,
+\[
+D_j^r \Lambda_F =D_j^r(\psi \Lambda_f)
+=\sum_{s=0}^r \binom{r}{s} (D_j^{r-s} \psi)(D_j^s \Lambda_f)
+=\sum_{s=0}^r \binom{r}{s} (D_j^{r-s} \psi)(\Lambda_{g_{j,s}}),
+\]
+hence, defining $H_j:\mathbb{R}^n \to \mathbb{C}$ by
+\[
+H_j(x) = \begin{cases}
+\sum_{s=0}^r \binom{r}{s} (D_j^{r-s} \psi)(x)g_{j,s}(x)&x \in \Omega,\\
+0&x \not \in \Omega,
+\end{cases}
+\]
+we have $D_j^r \Lambda_F = \Lambda_{H_j}$
+in $\Omega$.  It is apparent that $H_j \in L^2(\mathbb{R}^n) \cap L^1(\mathbb{R}^n)$.
+
+Let $\phi \in \mathscr{D}(\mathbb{R}^n)$. There are $\phi_1,\phi_2 \in \mathscr{D}(\mathbb{R}^n)$ with $\phi=\phi_1+\phi_2$ and
+$\supp \phi_1 \subset \Omega$, $\supp \phi_2 \subset \mathbb{R}^n \setminus \supp \psi$.\footnote{$\phi_1$ and $\phi_2$ are constructed
+using a partition of unity. See
+Walter Rudin, {\em Functional Analysis}, second ed., p.~162, Theorem 6.20.} We have just established that
+$(D_j^r \Lambda_F)\phi_1=\Lambda_{H_j} \phi_1$. For $\phi_2$, it is apparent that
+\[
+(D_j^r \Lambda_F)\phi_2 = \Lambda_F(D_j^r \phi_2) = \int_{\mathbb{R}^n} (D_j^r \phi_2)(x) F(x) dm_n(x)=0
+\]
+and
+\[
+\Lambda_{H_j} \phi_2 = \int_{\mathbb{R}^n} \phi_2(x) H_j(x) dm_n(x) = 0.
+\]
+Hence $(D_j^r \Lambda_F)(\phi) = \Lambda_{H_j}\phi$. It is apparent that $\Lambda_{H_j}$ has compact support, 
+so $D_j^r \Lambda_F = \Lambda_{H_j}$ are tempered distributions. Let $\xi \in \mathscr{S}_n$, and take $\phi \in \mathscr{S}_n$ with $\xi=\hat{\phi}$. Then,
+\begin{eqnarray*}
+(D_j^r \Lambda_F)  \phi&=&\Lambda_F D_j^r \phi\\
+& =& \int_{\mathbb{R}^n} (D_j^r \phi)(x) F(x) dm_n(x)\\
+&=&\int_{\mathbb{R}^n} \mathscr{F}(D_j^r \phi)(y) \widehat{F}(y) dm_n(y)\\
+&=&\int_{\mathbb{R}^n} (iy_j)^r \xi(y) \widehat{F}(y) dm_n(y),
+\end{eqnarray*}
+and
+\[
+\Lambda_{H_j} \phi = \int_{\mathbb{R}^n} \phi(x) H_j(x) dm_n(x) = \int_{\mathbb{R}^n} \xi(y) \widehat{H_j}(y) dm_n(y).
+\]
+It follows that  $(iy_j)^r\widehat{F}(y)= \widehat{H_j}(y)$ for all $y \in \mathbb{R}^n$. But $\widehat{H_j} \in L^2(\mathbb{R}^n)$, so
+\begin{equation}
+\int_{\mathbb{R}^n} y_i^{2r} |\widehat{F}(y)|^2 dm_n(y)< \infty, \qquad 1 \leq i \leq n.
+\label{Fhati}
+\end{equation}
+
+Using \eqref{Fhat}, \eqref{Fhati}, and the inequality
+\[
+(1+|y|)^{2r} < (2n+2)^r(1+y_1^{2r} + \cdots + y_n^{2r}), \qquad y \in \mathbb{R}^n,
+\]
+we get
+\[
+J = \int_{\mathbb{R}^n} (1+|y|)^{2r} |\widehat{F}(y)|^2 dm_n(y)<\infty.
+\]
+Let $\sigma_{n-1}$ be surface measure on $S^{n-1}$, with  $\sigma_{n-1}(S^{n-1})=\frac{2\pi^{n/2}}{\Gamma(n/2)}$. 
+Using the Cauchy-Schwarz inequality and the change of variable $y=tu$, $u \in S^{n-1}$, $t \geq 0$,
+\begin{eqnarray*}
+\left( \int_{\mathbb{R}^n} (1+|y|)^p |\widehat{F}(y)| dm_n(y)\right)^2 & =&\left( \int_{\mathbb{R}^n} (1+|y|)^r |\widehat{F}(y)| (1+|y|)^{p-r} dm_n(y)\right)^2\\
+&\leq&J  \int_{\mathbb{R}^n} (1+|y|)^{2p-2r} dm_n(y)\\
+&=&J(2\pi)^{-n/2} \int_{0}^\infty \int_{S^{n-1}} (1+t)^{2p-2r} t^{n-1} d\sigma_{n-1}(u) dt\\
+&=&\frac{2J}{\Gamma(n/2)} \int_{0}^\infty (1+t)^{2p-2r} t^{n-1} dt.
+\end{eqnarray*}
+This integral is finite if and only if $2p-2r+n-1<-1$, and we have assumed that $r>p+\frac{n}{2}$.
+Therefore,
+\[
+ \int_{\mathbb{R}^n} (1+|y|)^p |\widehat{F}(y)| dm_n(y)< \infty,
+\]
+from which we get that $y^\alpha \widehat{F}(y)$ is in $L^1(\mathbb{R}^n)$ for $|\alpha| \leq p$.
+
+Define 
+\[
+F_\omega(x) = \int_{\mathbb{R}^n} \widehat{F} e_x dm_n, \qquad x \in \mathbb{R}^n.
+\]
+(Note that $F$ depends on $\omega$.)
+$F,\widehat{F} \in L^1(\mathbb{R}^n)$ so by the inversion theorem we have $F(x)=F_\omega(x)$ for almost all $x \in \mathbb{R}^n$. 
+$F_\omega \in C_0(\mathbb{R}^n)$. If $p \geq 1$, then we shall show that $F_\omega \in C^p(\Omega)$.
+Take $e_k$ to be the standard basis for $\mathbb{R}^n$. For $1 \leq k_1 \leq n$ and $\epsilon \neq 0$,
+\begin{eqnarray*}
+\frac{F_\omega(x+\epsilon e_{k_1})-F_\omega(x)}{\epsilon}&=&\frac{1}{\epsilon} \int_{\mathbb{R}^n} \widehat{F}(y) \left(\exp(i \epsilon e_{k_1} \cdot y)-1\right)
+\exp(ix\cdot y) dm_n(y)\\
+&=&\int_{\mathbb{R}^n} iy_{k_1} \widehat{F}(y) \frac{e^{i\epsilon y_{k_1}}-1}{i\epsilon y_k} e_x(y) dm_n(y).
+\end{eqnarray*}
+But $\left| iy_{k_1} \widehat{F}(y) \frac{e^{i\epsilon y_{k_1}}-1}{i\epsilon y_{k_1}} e_x(y)\right| \leq |y_{k_1} \widehat{F}(y)|$ and $y_{k_1} \widehat{F}(y)$ belongs to $L^1(\mathbb{R}^n)$ (supposing
+ $p \geq 1$)
+so we can apply the dominated convergence theorem, which gives us
+\[
+(D_{k_1} F_\omega)(x)  = \lim_{\epsilon \to 0} \frac{F_\omega(x+\epsilon e_{k_1})-F_\omega(x)}{\epsilon} = \int_{\mathbb{R}^n} iy_{k_1} \widehat{F}(y) e_x(y) dm_n(y).
+\]
+From the above expression, it is apparent that  $D_{k_1}F_\omega$ is continuous. This is true for all $1 \leq k_1 \leq n$, so 
+$F_\omega \in C^1(\mathbb{R}^n)$. If $p \geq 2$, then $y_{k_1}y_{k_2} \widehat{F}(y)$ is in $L^1(\mathbb{R}^n)$ for any $1 \leq k_2 \leq n$, and repeating the above
+argument we get $F_\omega \in C^2(\mathbb{R}^n)$. In this way, $F_\omega \in C^p(\mathbb{R}^n)$. 
+
+For all $x \in \omega$, $f(x)=F(x)$, so $f(x)=F_\omega(x)$ for almost all $x \in \omega$.
+If $\omega'$ is an open subset of $\Omega$ whose closure is a compact
+subset of $\Omega$ and $\omega \cap \omega' \neq \emptyset$, then $F_\omega,F_{\omega'} \in C^p(\mathbb{R}^n)$ satisfy
+$f(x)=F_\omega(x)$ for almost all $x \in \omega$ and $f(x) = F_{\omega'}(x)$ for almost
+all $x \in \omega'$, so $F_\omega(x)=F_{\omega'}(x)$ for almost all $x \in \omega \cap
+\omega'$. Since $F_\omega,F_{\omega'}$ are continuous, this implies that $F_\omega(x)=
+F_{\omega'}(x)$ for all $x \in \omega \cap \omega'$. Thus, it makes sense to define $f_0(x)=F_\omega(x)$ for $x \in \omega$. 
+Because every point in $\Omega$ has an open neighborhood of the kind $\omega$ and the restriction of $f_0$ to each $\omega$ belongs to
+$C^p(\omega)$, it follows that $f_0 \in C^p(\Omega)$. 
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+\end{document}

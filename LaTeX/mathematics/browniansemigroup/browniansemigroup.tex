@@ -1,0 +1,655 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\grad}{\ensuremath\mathrm{grad}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Convolution semigroups, canonical processes, and Brownian motion}
+\author{Jordan Bell}
+\date{June 16, 2015}
+
+\maketitle
+
+
+\section{Convolution semigroups, projective families, and canonical processes}
+Let
+\[
+E=\mathbb{R}^d
+\]
+and let $\mathscr{E}=\mathscr{B}_{\mathbb{R}^d}$, the Borel $\sigma$-algebra of $\mathbb{R}^d$, and
+let $\mathscr{P}(E)$ be the collection of Borel probability measures on $\mathbb{R}^d$. With the \textbf{narrow
+topology}, $\mathscr{P}(E)$ is a Polish space.
+For a nonempty set $J$, we write
+\[
+\mathscr{E}^J = \bigotimes_{t \in J} \mathscr{E},
+\]
+the product $\sigma$-algebra.
+
+Let $A:E \times E \to E$ be $A(x_1,x_2) = x_1+x_2$. For $\nu_1,\nu_2 \in \mathscr{P}(E)$,
+the \textbf{convolution of $\nu_1$ and $\nu_2$} is the pushforward of the product measure $\nu_1 \times \nu_2$ 
+by $A$:
+\[
+\nu_1 * \nu_2 = A_*(\nu_1 \times \nu_2).
+\]
+The convolution $\nu_1 * \nu_2$ is an element of $\mathscr{P}(E)$. 
+
+
+Let
+\[
+I=\mathbb{R}_{\geq 0}.
+\]
+A \textbf{convolution semigroup} is a family $(\nu_t)_{t \in I}$ of elements of $\mathscr{P}(E)$ such that
+for $s,t \in I$,
+\[
+\nu_{s+t} = \nu_s * \nu_t.
+\]
+From this, it turns out that $\mu_0=\delta_0$.
+A convolution semigroup is called \textbf{continuous} when the map $t \mapsto \nu_t$ is continuous $I \to \mathscr{P}(E)$. 
+
+For $\nu \in \mathscr{P}(E)$ and $x \in E$, and for $B \in \mathscr{E}$,
+\[
+(\nu * \delta_x)(B)
+ =
+\int_{E} \left( \int_{E} 1_B(x_1+x_2) d\delta_x(x_1) \right) d\nu(x_2) 
+=\nu(B-x),
+\]
+and we define  $\nu^x \in \mathscr{P}(E)$ by
+\[
+\nu^x = \nu * \delta_x.
+\] 
+
+For $\nu \in \mathscr{P}(E)$ and for 
+a Borel measurable function $f:E \to [0,\infty]$, write
+\[
+\nu f = \int_E f d\mu.
+\]
+For $x \in E$, using the change of variables formula\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~484, Theorem 13.46.}
+and Fubini's theorem,
+\begin{align*}
+\nu^x f &= \int_E f d(\nu*\delta_x)\\
+&=\int_{E \times E} f \circ A d(\nu \times \delta_x)\\
+&=\int_E \left(\int_E f(x_1+x_2) d\delta_x(x_2) \right) d\nu(x_1)\\
+&=\int_E f(x_1+x) d\nu(x_1).
+\end{align*}
+That is, for $\nu \in \mathscr{P}(E)$, for $f:E \to [0,\infty]$ Borel measurable, and for $x \in E$,
+\begin{equation}
+\nu^x f = \int_E f d\nu^x = \int_E f(x+y) d\nu(y).
+\label{shift}
+\end{equation}
+
+For nonempty subsets $J$ and $K$ of $I$ with $J \subset K$, let
+\[
+\pi_{K,J}:E^K \to E^J
+\]
+be the projection map. 
+Let $\mathscr{K}=\mathscr{K}(I)$ be the collection of finite nonempty subsets of $I$.
+Let $(\Omega,\mathscr{F},P,(X_t)_{t \in I})$ be
+a stochastic process 
+with state space $E$.
+For $J \in \mathscr{K}$, with elements $t_1<\ldots<t_n$, we define
+\[
+X_J = X_{t_1} \otimes \cdots \otimes X_{t_n},
+\]
+which is measurable $\mathscr{F} \to \mathscr{E}^J$. 
+The \textbf{joint distribution} $P_J$ of the family of random variables
+$(X_t)_{t \in J}$ is the distribution of $X_J$, i.e.
+\[
+P_J={X_J}_*P.
+\]
+The \textbf{family of finite-dimensional distributions} of $X$ is the family $(P_J)_{J \in \mathscr{K}}$. 
+For $J,K \in \mathscr{K}$ with $J \subset K$,
+\[
+X_J = \pi_{K,J} \circ X_K,
+\]
+from which
+\begin{equation}
+(\pi_{K,J})_* P_K = P_J.
+\label{projective}
+\end{equation}
+Forgetting the stochastic process $X$, a family of probability measures $P_J$ on $\mathscr{E}^J$, for $J \in \mathscr{K}$,
+is called a \textbf{projective family} when \eqref{projective} is true. The \textbf{Kolmogorov extension theorem}
+tells us that if $(P_J)_{J \in \mathscr{K}}$ is a projective family, then there is a unique probability measure $P_I$
+on $\mathscr{E}^I$ such that for any $J \in \mathscr{K}$,
+\begin{equation}
+(\pi_{I,J})_*P_I = P_J.
+\label{kolmogorov}
+\end{equation}
+Then for $\Omega=E^I$ and $\mathscr{F}=\mathscr{E}^I$, $(\Omega,\mathscr{F},P_I)$ is a probability space, and for
+$t \in I$ we define $X_t:\Omega \to E$ by
+\begin{equation}
+X_t(\omega) =\pi_{I,\{t\}}(\omega)= \omega(t),
+\label{canonical}
+\end{equation}
+which is measurable $\mathscr{F} \to \mathscr{E}$, and thus the family $(X_t)_{t \in I}$ is a stochastic process with state space
+$E$. For $J \in \mathscr{K}$ it is immediate that
+\[
+X_J = \pi_{I,J}.
+\]
+For $B \in \mathscr{E}^J$, applying \eqref{kolmogorov} gives
+\[
+({X_J}_*P_I)(B) = ((\pi_{I,J})_*P_I)(B) =P_J(B), 
+\]
+which means that ${X_J}_*P_I=P_J$, namely, $(P_J)_{J \in \mathscr{K}}$
+is the family of finite-dimensional distributions of the stochastic process $(X_t)_{t \in I}$.
+We call the stochastic process \eqref{canonical} the \textbf{canonical process associated with the projective family
+$(P_J)_{J \in \mathscr{K}}$}.
+
+
+
+Let $(\nu_t)_{t  \in I}$ be a convolution semigroup and let $\mu \in \mathscr{P}(E)$.
+For $J \in \mathscr{K}$, with elements $t_1<\ldots<t_n$, and for $B \in \mathscr{E}^J$,
+define
+\begin{equation}
+\begin{split}
+&P_J(B)\\
+=&\int_E \int_E \cdots \int_E 1_B(x_1,\ldots,x_n)
+d\nu_{t_n-t_{n-1}}^{x_{n-1}}(x_n) \cdots d\nu_{t_1}^{x_0} (x_1) d\mu(x_0).
+\end{split}
+\label{PJ}
+\end{equation}
+We say that \textbf{$(P_J)_{J \in \mathscr{K}}$ is the family of measures induced by the convolution semigroup
+$(\nu_t)_{t \in I}$}.
+It is proved that $(P_J)_{J \in \mathscr{K}}$ is a projective family. Therefore, from the Kolmogorov extension theorem it follows that there is a unique probability measure $P^\mu$ on
+$\mathscr{E}^I$ such that 
+\begin{equation}
+(\pi_{I,J})_* P^\mu = P_J.
+\label{376}
+\end{equation}
+For  $\Omega=E^I$ and $\mathscr{F}=\mathscr{E}^I$, 
+$(\Omega,\mathscr{F},P^\mu)$ is a probability space.
+For $t \in I$ define $X_t:\Omega \to E$ by
+\[
+X_t(\omega)=\pi_{I,\{t\}}(\omega) = \omega(t). 
+\]
+$(X_t)_{t \in I}$ is a stochastic processes whose family of finite-dimensional distributions is
+$(P_J)_{J \in \mathscr{K}}$, i.e.
+for $J \in \mathscr{K}$ with elements $t_1<\cdots<t_n$ and for $B \in \mathscr{E}^J$,
+\[
+\begin{split}
+&((X_{t_1} \otimes \cdots \otimes X_{t_n})_*P^\mu)(B)\\
+=&\int_E \int_E \cdots \int_E 1_B(x_1,\ldots,x_n)
+d\nu_{t_n-t_{n-1}}^{x_{n-1}}(x_n) \cdots d\nu_{t_1}^{x_0} (x_1) d\mu(x_0).
+\end{split}
+\]
+Applying this with $\mu=\delta_x$ yields
+\[
+((X_{t_1} \otimes \cdots \otimes X_{t_n})_*P^{\delta_x})(B)
+=\int_E \cdots \int_E  1_B(x_1,\ldots,x_n) d\nu_{t_n-t_{n-1}}^{x_{n-1}}(x_n) \cdots d\nu_{t_1}^{x} (x_1),
+\]
+and thus, for any $\mu \in \mathscr{P}(E)$,
+\[
+\begin{split}
+&\int_E \int_E \cdots \int_E  1_B(x_1,\ldots,x_n) d\nu_{t_n-t_{n-1}}^{x_{n-1}}(x_n) \cdots d\nu_{t_1}^{x} (x_1) d\mu(x)\\
+=&\int_E ((X_{t_1} \otimes \cdots \otimes X_{t_n})_*P^{\delta_x})(B) d\mu(x).
+\end{split}
+\]
+That is, for $\mu \in \mathscr{P}(E)$,
+for $J \in \mathscr{K}$, and $B \in \mathscr{E}^J$,
+\begin{equation}
+({X_J}_*P^{\mu})(B) = \int_E ({X_J}_*P^{\delta_x})(B)d\mu(x).
+\label{3621}
+\end{equation}
+For $J \in \mathscr{K}$, $A_t \in \mathscr{E}$ for $t \in J$, and $A = \prod_{t \in J} A_t \times \prod_{t \in I \setminus J} E \in \mathscr{F}=\mathscr{E}^I$, namely
+$A$ is a \textbf{cylinder set},
+let $B=\pi_{I,J}(A)=\prod_{t \in J} A_t \in \mathscr{E}^J$,
+\[
+X_J^{-1}(B) = \pi_{I,J}^{-1}(B) = A,
+\]
+so by \eqref{3621},
+\begin{equation}
+P^\mu(A) = \int_E P^{\delta_x}(A) d\mu(x).
+\label{Pmu}
+\end{equation}
+Because this is true for all cylinder sets in the product $\sigma$-algebra $\mathscr{E}^I$ and
+$\mathscr{E}^I$ is generated 
+by the collection of cylinder sets,
+\eqref{Pmu} is true for all $A \in \mathscr{F}$. 
+
+
+Let $J \in \mathscr{K}$, with elements $t_1<\cdots<t_n$, 
+and let $\sigma_n:E^{n+1} \to E^n$ be
+\[
+\sigma_n(x_0,x_1,\ldots,x_n) = (x_0+x_1,x_0+x_1+x_2,\ldots,x_0+x_1+x_2+\cdots+x_n).
+\]
+For $B \in \mathscr{E}^n$ using \eqref{shift} we obtain by induction
+\[
+\begin{split}
+&\int_E \int_E \cdots \int_E 1_B(x_1,\ldots,x_{n-1},x_n) 
+d\nu_{t_n-t_{n-1}}^{x_{n-1}}(x_n) \cdots d\nu_{t_1}^{x_0} (x_1) d\mu(x_0)\\
+=&\int_E \int_E \cdots \int_E 1_B(x_1,\ldots,x_{n-1},x_n+x_{n-1}) d\nu_{t_n-t_{n-1}}(x_n) \cdots d\nu_{t_1}^{x_0} (x_1) d\mu(x_0)\\
+=&\cdots\\
+=&\int_E \int_E \cdots \int_E 1_B \circ \sigma_n d\nu_{t_n-t_{n-1}}(x_n) \cdots d\nu_{t_1}(x_1) d\mu(x_0).
+\end{split}
+\]
+Thus, with $P_J$ the probability measure on $\mathscr{E}^J$ defined in \eqref{PJ},
+\[
+\int_{E^J} 1_B dP_J = P_J(B) = \int_E \int_E \cdots \int_E 1_B \circ \sigma_n d\nu_{t_n-t_{n-1}}(x_n) \cdots d\nu_{t_1}(x_1) d\mu(x_0).
+\]
+For $f:E^n \to [0,\infty]$ a Borel measurable function, there is a sequence of measurable simple functions pointwise increasing to $f$, and applying
+the monotone convergence theorem yields 
+\begin{equation}
+\int_{E^n} f dP_J
+=\int_E \int_E \cdots \int_E f \circ \sigma_n d\nu_{t_n-t_{n-1}}(x_n) \cdots d\nu_{t_1}(x_1) d\mu(x_0).
+\label{373}
+\end{equation}
+
+
+
+
+\section{Increments}
+Let $(\Omega,\mathscr{F},P,(X_t)_{t \in I})$ be a stochastic process 
+with state space $E$. $X$ is said to have \textbf{stationary increments} if 
+there is a family $(\nu_t)_{t \in I}$ of probability measures on $\mathscr{E}$ 
+such that  for all $s,t \in I$ with $s \leq t$,
+\[
+P_*(X_t-X_s) = \nu_{t-s}.
+\]
+In particular, for $s=t$ this implies that $P_*(0)=\nu_0$, hence
+$\nu_0=\delta_0$. 
+
+
+A stochastic process is said to have \textbf{independent increments} if for
+any $J \in \mathscr{K}$, with elements $0=t_0<t_1<\cdots<t_n$,
+the random variables
+\[
+X_{t_0}, \quad X_{t_1}-X_{t_0}, \quad \ldots, X_{t_n} - X_{t_{n-1}}
+\]
+are independent. 
+
+We now prove that the canonical process associated with the projective family of probability measures induced
+by a convolution semigroup and any initial distribution has stationary and independent increments.\footnote{Heinz Bauer,
+{\em Probability Theory}, p.~321, Theorem 37.2.}
+
+\begin{theorem}
+Let $(\nu_t)_{t \in I}$ be a convolution semigroup,
+let $(P_J)_{J \in \mathscr{K}}$ be the family of measures induced by this convolution semigroup,
+let $\mu \in \mathscr{P}(E)$, and let
+$(\Omega,\mathscr{F},P^\mu,(X_t)_{t \in I})$,
+$\Omega=E^I$ and $\mathscr{F}=\mathscr{E}^I$,
+ be the associated canonical process. 
+ $X$ has stationary increments,
+ \begin{equation}
+ (X_t-X_s)_*P^\mu = \nu_{t-s}, \qquad s \leq t,
+ \label{377}
+ \end{equation}
+ and has independent increments.
+ \label{increments}
+\end{theorem}
+\begin{proof}
+$\nu_0=\delta_0$, so \eqref{377} is immediate when $s=t$. When $s<t$,
+let 
+\[
+Y=X_s \otimes X_t=X_{\{s,t\}}=\pi_{I,\{s,t\}},
+\]
+which is measurable $\mathscr{F} \to \mathscr{E} \otimes \mathscr{E}$,
+and let $q:E \times E \to E$ be
+$(x_1,x_2) \mapsto x_2-x_1$, which is continuous and hence Borel measurable.
+Then $q \circ Y$ is measurable $\mathscr{F} \to \mathscr{E}$, and for $B \in \mathscr{E}$, 
+\begin{align*}
+(q \circ Y)^{-1}(B) &= \{\omega \in \Omega: (q \circ Y)(\omega) \in  B\}\\
+&=\{\omega \in \Omega: X_t(\omega)-X_s(\omega) \in B\}\\
+&=(X_t-X_s)^{-1}(B),
+\end{align*}
+and thus
+\begin{equation}
+(q \circ Y)_*P^\mu = (X_t-X_s)_*P^\mu.
+\label{qY}
+\end{equation}
+Now, according to \eqref{376},
+\[
+Y_*P^\mu = (\pi_{I,\{s,t\}})_*P^\mu = P_{\{s,t\}}.
+\]
+Therefore, using that $x_2-x_1 \in B$ if and only if $x_2 \in x_1+B$ and also using
+$\nu_{t-s}^{x_1}(x_1+B)=\nu_{t-s}(B)$,
+\begin{align*}
+(X_t-X_s)_*P^\mu(B)&=(q \circ Y)_*P^\mu(B)\\
+&=Y_*P^\mu(q^{-1}(B))\\
+&={P_{\{s,t\}}}_*(q^{-1}(B))\\
+&=\int_E \int_E \int_E 1_{q^{-1}(B)}(x_1,x_2) d\nu_{t-s}^{x_1}(x_2) d\nu_s^{x}(x_1) d\mu(x)\\
+&=\int_E \int_E \int_E 1_{x_1+B}(x_2)  d\nu_{t-s}^{x_1}(x_2) d\nu_s^{x}(x_1) d\mu(x)\\
+&=\nu_{t-s}(B) \int_E \int_E  d\nu_s^{x}(x_1) d\mu(x)\\
+&=\nu_{t-s}(B) \int_E \nu_s^x(E) d\mu(x)\\
+&=\nu_{t-s}(B) \int_E d\mu(x)\\
+&=\nu_{t-s}(B),
+\end{align*}
+which shows that
+\[
+(X_t-X_s)_*P^\mu = \nu_{t-s},
+\]
+and thus that $X$ has stationary increments.
+
+Let $0=t_0<t_1<\cdots<t_n$, let $J=\{t_0,t_1,\ldots,t_n\} \in \mathscr{K}$, write $X_{t_{-1}}=0$, and let
+\[
+Y_0=X_{t_0}-X_{t_{-1}}, \quad Y_1=X_{t_1}-X_{t_0}, \quad \ldots, \quad Y_n=X_{t_n}-X_{t_{n-1}}.
+\]
+For the random variables $Y_0,\ldots,Y_n$ to be independent means for their joint distribution to be equal to the product of the distributions of each, i.e.
+to prove that $X$ has independent increments, writing
+\[
+Z = Y_0 \otimes \cdots \otimes Y_n = \tau_n \circ (X_{t_0} \otimes \cdots \otimes X_{t_n}) = \tau_n \circ X_J = \tau_n
+\circ \pi_{I,J},
+\]
+with $\tau_n:E^{n+1} \to E^n$ defined by
+\[
+\tau_n(x_0,x_1,\ldots,x_n)=(x_0,x_1-x_0,\ldots,x_n-x_{n-1}),
+\]
+we have to prove that
+\[
+Z_* P^\mu = \prod_{j=0}^n {Y_j}_* P^\mu.
+\]
+To prove this, it suffices (because the collection of cylinder sets generates the product
+$\sigma$-algebra) to prove that for  any
+$A_0,\ldots,A_n \in \mathscr{E}$ and for $A = \prod_{j=0}^n A_j \in \mathscr{E}^{n+1}$,
+\[
+(Z_* P^\mu)(A) = \left( \prod_{j=0}^n {Y_j}_* P^\mu\right)(A),
+\]
+i.e. that 
+\[
+(Z_* P^\mu)(A) = \prod_{j=0}^n (Y_{j_*}P^\mu)(A_j).
+\]
+We now prove this. Using the change of variables theorem and \eqref{376},
+\begin{align*}
+(Z_* P^\mu)(A)&=\int_{E^{n+1}} 1_A d(Z_*P^\mu)\\
+&=\int_\Omega 1_A \circ Z dP^\mu\\
+&=\int_\Omega 1_A \circ \tau_n \circ (X_{t_0} \otimes \cdots \otimes X_{t_n}) dP^\mu\\
+&=\int_{E^J} 1_A \circ \tau_n d({X_J}_*P^\mu)\\
+&=\int_{E^J} 1_A \circ \tau_n dP_J.
+\end{align*}
+Then applying  \eqref{373} with $f=1_A \circ \tau_n$,
+\[
+\begin{split}
+&\int_{E^J} 1_A \circ \tau_n dP_J\\
+=&\int_E \int_E \cdots \int_E 1_A \circ \tau_n \circ \sigma_{n+1} 
+d\nu_{t_n-t_{n-1}}(x_n) \cdots d\nu_{t_0}(x_0) d\mu(x_{-1})\\
+=&\int_E \int_E \cdots \int_E 1_A(x_{-1}+x_0,x_1,\ldots,x_n) d\nu_{t_n-t_{n-1}}(x_n) \cdots d\nu_{t_0}(x_0) d\mu(x_{-1})\\
+=&\int_E \int_E \cdots \int_E 1_{A_0}(x_{-1}+x_0) 1_{A_1}(x_1) \cdots 1_{A_n}(x_n)\\
+&d\nu_{t_n-t_{n-1}}(x_n) \cdots d\nu_{t_0}(x_0) d\mu(x_{-1})\\
+=&\prod_{j=1}^n \nu_{t_j-t_{j-1}}(A_j) \int_E \int_E 1_{A_0}(x_{-1}+x_0) d\nu_{t_0}(x_0) d\mu(x_{-1}),
+\end{split}
+\]
+and because $t_0=0$ and $\nu_0=\delta_0$,
+\begin{align*}
+\int_E \int_E 1_{A_0}(x_{-1}+x_0) d\nu_{t_0}(x_0) d\mu(x_{-1})&=
+\int_E \int_E 1_{A_0}(x_{-1}+x_0) d\delta_0(x_0) d\mu(x_{-1})\\
+&=\int_E 1_{A_0}(x_{-1}) d\mu(x_{-1})\\
+&=\mu(A_0),
+\end{align*}
+and therefore
+\[
+(Z_* P^\mu)(A) = \mu(A_0) \cdot \prod_{j=1}^n \nu_{t_j-t_{j-1}}(A_j).
+\]
+But we have already proved that \eqref{377}, which tells us that for each $j$,
+\[
+{Y_j}_*P^\mu = (X_{t_j}-X_{t_{j-1}})_*P^\mu=\nu_{t_j-t_{j-1}},
+\]
+and thus
+\[
+(Z_* P^\mu)(A)  = \mu(A_0) \cdot \prod_{j=1}^n ({Y_j}_*P^\mu) (A_j).
+\]
+But  ${Y_0}_*P^\mu = {X_0}_*P^\mu$ and from \eqref{3621}  we have
+\[
+({X_0}_*P^\mu)(A_0) = \int_E ({X_0}_*P^{\delta_x})(A_0) d\mu(x) =
+\int_E ({\pi_0}_* P^{\delta_x})(A_0) d\mu(x),
+\]
+and, from \eqref{PJ},
+\begin{align*}
+({\pi_0}_* P^{\delta_x})(A_0)&=\int_E \int_E 1_{A_0}(x_0) d\nu_0^y(x_0) d\delta_x(y)\\
+&=\int_E \int_E 1_{A_0}(x_0) d\delta_y(x_0) d\delta_x(y)\\
+&=\int_E 1_{A_0}(y) d\delta_x (y)\\
+&=1_{A_0}(x),
+\end{align*}
+thus
+\[
+({X_0}_*P^\mu)(A_0)  = \int_E 1_{A_0}(x) d\mu(x) = \mu(A_0).
+\]
+Therefore
+\[
+(Z_* P^\mu)(A) 
+=({X_0}_*P^\mu)(A_0)  \cdot \prod_{j=1}^n ({Y_j}_*P^\mu) (A_j)
+=\prod_{j=0}^n ({Y_j}_*P^\mu) (A_j),
+\]
+which completes the proof that $X$ has independent increments.
+\end{proof}
+
+
+
+
+\section{The Brownian convolution semigroup and Brownian motion}
+For $a \in \mathbb{R}$ and $\sigma>0$,
+let $\gamma_{a,\sigma^2}$ be the \textbf{Gaussian measure} on $\mathbb{R}$, the probability measure on $\mathbb{R}$
+whose density with respect to Lebesgue measure is
+\[
+p(x,a,\sigma^2) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x-a)^2}{2\sigma^2}\right).
+\]
+For $\sigma=0$, let
+\[
+\gamma_{a,0} = \delta_a.
+\]
+Define for $t  \in I$,
+\[
+\nu_t = \prod_{k=1}^d \gamma_{0,t},
+\]
+which is an element of $\mathscr{P}(E)$. 
+For $s,t  \in I$, we calculate
+\[
+\nu_s * \mu_t =  \left(\prod_{k=1}^d \gamma_{0,s}\right) * \left( \prod_{k=1}^d \gamma_{0,t} \right) 
+=\prod_{k=1}^d (\gamma_{0,s} * \gamma_{0,t})
+=\prod_{k=1}^d \gamma_{0,s+t}
+=\nu_{s+t},
+\]
+showing that $(\nu_t)_{t \in I}$ is a convolution semigroup.
+It is proved using L\'evy's continuity theorem that $t \mapsto \nu_t$ is continuous $I \to \mathscr{P}(E)$, showing that
+$(\nu_t)_{t  \in I}$ is a continuous convolution semigroup.
+
+We first prove a lemma (which is made explicit in \textbf{Isserlis's theorem}) about the moments of random variables with Gaussian distributions.\footnote{Heinz Bauer,
+{\em Probability Theory}, p.~341, Lemma 40.2.}
+
+\begin{lemma}
+If $Z:\Omega \to E$ is a random variable with Gaussian distribution $\nu_\tau$, $\tau>0$, then for each $n$ there is some
+$C_n>0$ such that 
+\[
+E(|Z|^{2n})=C_n \tau^n.
+\]
+In particular, $C_2=d$ and $C_4=d(d+2)$. 
+\label{isserlis}
+\end{lemma}
+\begin{proof}
+That $Z$ has distribution $\nu_\tau$ means that
+\[
+Z_*P = \nu_\tau = \prod_{j=1}^d \gamma_{0,\tau}.
+\]
+Write $Z=Z_1 \otimes \cdots \otimes Z_d$, each of which has 
+distribution $\gamma_{0,\tau}$, and
+$Z_*P=\prod_{j=1}^d {Z_j}_*P$, which means that $Z_1,\ldots,Z_d$
+ independent.
+Let $U_j=\tau^{-1/2} Z_j$ for $j=1,\ldots,d$, and then $U_1,\ldots,U_d$ are independent random variables
+each with distribution $\gamma_{0,1}$. Then using the multinomial formula,
+\begin{align*}
+E(|Z|^{2n})&=E((Z_1^2+\cdots+Z_d^2)^n)\\
+&= \tau^n \cdot E((U_1^2+\cdots+U_d^2)^n)\\
+&=\tau^n\cdot E\left( \sum_{k_1+\cdots+k_d=n} \frac{n!}{k_1! \cdots k_d!} \prod_{1 \leq i \leq d} U_j^{2k_i} \right)\\
+&=\tau^n \cdot \sum_{k_1+\cdots+k_d=n} \frac{n!}{k_1! \cdots k_d!} E\left(\prod_{1 \leq i \leq d} U_j^{2k_i} \right).
+\end{align*}
+For $n=2$, since $E(U_i U_j)=E(U_i)E(U_j)=0$ for $i \neq j$,
+\[
+\tau^2\cdot \sum_{k_1+\cdots+k_d=2} \frac{2}{k_1! \cdots k_d!} E\left(\prod_{1 \leq i \leq d} U_i^{2k_i} \right)
+=\tau^2 \cdot \sum_{j=1}^d E(U_j^2)=\tau^2 \cdot \sum_{j=1}^d 1 = d\tau^2,
+\]
+showing that $C_2=d$. 
+\end{proof}
+
+
+A stochastic process 
+$(\Omega,\mathscr{F},P,(X_t)_{t \in I})$
+with state space $E$ is called \textbf{a $d$-dimensional Brownian motion} when:
+\begin{enumerate}
+\item For $s \leq t$,
+\[
+(X_t-X_s)_*P = \nu_{t-s},
+\]
+and thus $X$ has stationary increments.
+\item $X$ has independent increments.
+\item For almost all $\omega \in \Omega$, the path $t \mapsto X_t(\omega)$ is continuous
+$I \to E$. 
+\end{enumerate}
+We call ${X_0}_*P$ the \textbf{initial distribution} of the Brownian motion. When
+${X_0}_*P=\delta_x$ for some $x \in E$, we say that \textbf{$x$ is the starting point of the Brownian motion}.
+We now prove that for any Borel probability measure on $\mathscr{E}$, in particular $\delta_x$, there is a
+$d$-dimensional Brownian
+motion which has this as its initial distribution.\footnote{Heinz Bauer, {\em Probability Theory},
+p.~342, Theorem 40.3.}
+
+\begin{theorem}[Brownian motion]
+For any $\mu \in \mathscr{P}(E)$, there is a $d$-dimensional Brownian motion with initial distribution $\mu$.
+\label{brownian}
+\end{theorem}
+\begin{proof}
+Let $(P_J)_{J \in \mathscr{K}}$ be the family of measures induced by the Brownian convolution semigroup
+\[
+\nu_t = \prod_{k=1}^d \gamma_{0,t}, \qquad t \in I,
+\]
+and let $(\Omega,\mathscr{F},P^\mu,(X_t)_{t \in I})$, $\Omega=E^I$ and $\mathscr{F}=\mathscr{E}^I$,
+be the associated canonical process.
+Theorem \ref{increments} tells us that $X$ has stationary increments,
+\begin{equation}
+(X_t-X_s)_*P^\mu = \nu_{t-s},\qquad s \leq t,
+\label{XtXs}
+\end{equation}
+and has independent increments. 
+For $\tau=t-s>0$, by \eqref{XtXs} and 
+Lemma \ref{isserlis},
+\[
+E(|X_t-X_s|^4) = d(d+2) \tau^2 = d(d+2) |t-s|^2.
+\]
+Because $E(|X_t-X_t|^4)=E(0)=0$, we have that for any $s,t \in I$,
+\[
+E(|X_t-X_s|^4)  = d(d+2)|t-s|^2.
+\]
+The initial distribution of $X$ is ${X_0}_*P^\mu = \mu$.
+For $\alpha=4, \beta=1, c=d(d+2)$, the \textbf{Kolmogorov continuity theorem} tells us that there is a continuous modification $B$ of $X$. That is, there is a stochastic process $(B_t)_{t \in I}$
+such that for each $\omega \in \Omega$, the path $t \mapsto B_t(\omega)$ is continuous 
+$I \to E$, namely, $B$ is a \textbf{continuous stochastic process}, and
+for each $t \in I$, 
+\[
+P(X_t = B_t)=1,
+\]
+namely, $B$ is a \textbf{modification} of $X$. Because $B$ is a modification of $X$, $B$ has the same finite-dimensional distributions as $X$, from which it follows that $B$ satisfies \eqref{XtXs} and has independent increments. 
+For $A \in \mathscr{E}$, because $B$ is a modification of $X$,
+\[
+({B_0}_*P^\mu)(A) = P^\mu(B_0 \in A) = P^\mu(X_0 \in A) = ({X_0}_*P^\mu)(A),
+\]
+thus ${B_0}_*P^\mu = {X_0}_*P^\mu = \mu$, namely, $B$ has initial distribution $\mu$.
+Therefore, $B$ is a Brownian motion (indeed, all the paths of $B$ are continuous, not merely almost all of them) that has initial distribution
+$\mu$, proving the claim.
+\end{proof}
+
+
+For $\mu \in \mathscr{P}(E)$, let
+ $(\Omega,\mathscr{F},P^\mu,(B_t)_{t \in I})$ be
+the $d$-dimensional Brownian motion with initial distribution $\mu$ constructed in Theorem \ref{brownian}; we are not merely speaking about
+some $d$-dimensional Brownian motion but about this construction, for which $\Omega=E^I$, all  whose paths are continuous rather than merely almost all whose paths are continuous. For a measurable space $(A,\mathscr{A})$ and topological spaces $X$ and $Y$, a function
+$f:X \times A \to Y$ is called a \textbf{Carath\'eodory function} if for each $x \in X$, the map
+$a \mapsto f(x,a)$ is measurable $\mathscr{A} \to \mathscr{B}_Y$, and for
+each $a \in A$, the map $x \mapsto f(x,a)$ is continuous $X \to Y$. 
+It is a fact\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., 
+p.~153, Lemma 4.51.} that if $X$ is a separable metrizable space and $Y$ is a metrizable space, then
+any Carath\'eodory function $f:X \times A \to Y$ is measurable
+$\mathscr{B}_X \otimes \mathscr{A} \to \mathscr{B}_Y$, namely it is \textbf{jointly measurable}.
+$B:I \times \Omega \to E$ is a Carath\'eodory function.
+$I=\mathbb{R}_{\geq 0}$, with the subspace topology inherited from $\mathbb{R}$, is a separable metrizable space,
+and $E=\mathbb{R}^d$ is a metrizable space, and therefore the $d$-dimensional Brownian motion $B$ is jointly measurable.
+
+
+The \textbf{Kolmogorov-Chentsov theorem} says that if a stochastic process $(X_t)_{t \in I}$ with state space
+$E$ satisfies, for 
+$\alpha,\beta,c>0$,
+\[
+E(|X_s-X_s|^\alpha) \leq c |t-s|^{1+\beta}, \qquad s,t \in I,
+\]
+and almost every path of $X$ is continuous, then for almost every $\omega \in \Omega$, for every
+$0<\gamma<\frac{\beta}{\alpha}$ the map $t \mapsto X_t(\omega)$ is \textbf{locally
+$\gamma$-H\"older continuous}: for each $t_0 \in I$ there is some $0<\epsilon_{t_0}<1$ and
+some $C_{t_0}$ such that
+\[
+|X_t(\omega)-X_s(\omega)| \leq C_{t_0}|t-s|^\gamma, \qquad |s-t_0|<\epsilon_{t_0}, |t-t_0|<\epsilon_{t_0}.
+\]
+For $\mu \in \mathscr{P}(E)$,
+let $(\Omega,\mathscr{F},P^\mu,(B_t)_{t \in I})$
+be the $d$-dimensional Brownian motion with initial distribution $\mu$ formed in Theorem \ref{brownian}.
+For $s \leq  t$, $(B_t-B_s)_*P^\mu = \nu_{t-s}$, and thus
+Lemma \ref{isserlis}  tells us that for each $n \geq 1$ there is some $C_n$ with which
+ $E(|B_t-B_s|^{2n}) = C_n (t-s)^n$ for all $s<t$. Then $E(|B_t-B_s|^{2n}) \leq C_n|t-s|^n$ for all $s,t \in I$.
+ For $n >1$ and for $\alpha_n=2n$ and $\beta_n=n-1$, 
+ \[
+ \frac{\beta_n}{\alpha_n} = \frac{n-1}{2n} = \frac{1}{2} - \frac{1}{2n},
+ \]
+ and for $n>2$, take some $\frac{\beta_{n-1}}{\alpha_{n-1}}<\gamma_n<\frac{\beta_n}{\alpha_n}$.  
+Let $N_n$ be the set of those $\omega \in \Omega$ for which
+$t \mapsto B_t(\omega)$ is not locally $\gamma_n$-H\"older continuous. Then the Kolmogorov-Chentsov theorem yields
+$P^\mu(N_n)=0$.
+Let $N = \bigcup_{n>2} N_n$, which is a $P^\mu$-null set. For $\omega \in \Omega \setminus N$ and for any 
+$0<\gamma<\frac{1}{2}$, 
+there is some $\gamma_n$ satisfying $\gamma \leq \gamma_n<\frac{1}{2}$, and hence 
+the map $t \mapsto B_t(\omega)$ is 
+locally $\gamma_n$-H\"older continuous, which implies that this map is locally $\gamma$-H\"older continuous.
+We summarize what we have just said in the following theorem. 
+
+\begin{theorem}
+Let $\mu \in \mathscr{P}(E)$ and let
+$(\Omega,\mathscr{F},P^\mu,(B_t)_{t \in I})$ be the $d$-dimensional Brownian motion with initial distribution
+$\mu$ 
+formed in Theorem \ref{brownian}. For almost all $\omega \in \Omega$, for all $0<\gamma<\frac{1}{2}$, the map
+$t \mapsto B_t(\omega)$  is locally $\gamma$-H\"older continuous.
+\end{theorem}
+
+
+\section{L\'evy processes}
+A stochastic process $(X_t)_{t \in I}$ with state space $E$ is called a \textbf{L\'evy process}\footnote{See
+David Applebaum, {\em L\'evy Processes and Stochastic Calculus}, p.~39, \S 1.3.}
+ if
+(i) $X_0=0$ almost surely, (ii) $X$ has stationary and independent increments, and (iii)
+for any $a>0$,
+\[
+\lim_{t \downarrow 0} P(|X_{t}| \geq \epsilon) = 0.
+\]
+Because $X_0=0$ almost surely and $X$ has stationary increments, (iii) yields for
+any $t \in I$,
+\begin{equation}
+\lim_{s \to t} P(|X_s-X_s| \geq \epsilon)=0.
+\label{inmeasure}
+\end{equation}
+In any case, \eqref{inmeasure} is sufficient for (iii) to be true.
+Moreover, (iii) means
+that $X_s \to X_t$ in the \textbf{topology of convergence in probability} as $s \to t$, and 
+if $X_s \to X_t$ almost surely then  $X_s \to X_t$ in the topology of convergence in probability; this is proved
+using Egorov's theorem.
+Thus, a $d$-dimensioanl Brownian motion with starting point $0$ is a L\'evy process; we do not merely assert that the Brownian motion
+formed in Theorem \ref{brownian} is a L\'evy process.
+There is much that can be said generally about L\'evy processes, and thus the fact that any $d$-dimensional Brownian motion with starting point $0$ is a L\'evy
+process lets us work in a more general setting in which some results may be more naturally proved: if we work merely with a L\'evy process we know less about the process and thus have less open moves. 
+
+
+
+\end{document}

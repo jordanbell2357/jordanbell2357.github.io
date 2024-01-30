@@ -1,0 +1,599 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\grad}{\ensuremath\mathrm{grad}\,}
+\newcommand{\ind}{\ensuremath\mathrm{ind}\,}
+\newcommand{\Hess}{\ensuremath\mathrm{Hess}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Gradients and Hessians in Hilbert spaces}
+\author{Jordan Bell}
+\date{July 26, 2015}
+
+\maketitle
+
+\section{Gradients}
+Let $(X,\inner{\cdot}{\cdot})$ be a real Hilbert space. The Riesz representation theorem says that
+the mapping
+\[
+\Phi(x)(y)=\inner{y}{x}, \qquad \Phi:X \to X^*,
+\]
+ is an isometric isomorphism. 
+Let $U$ be a nonempty open subset of $X$ and 
+let $f:U \to \mathbb{R}$ be differentiable, with derivative
+$f':U \to \mathscr{L}(X;\mathbb{R})=X^*$.
+The \textbf{gradient of $f$} is the function $\grad f:U \to X$ defined by
+\[
+\grad f = \Phi^{-1} \circ f'.
+\]  
+Thus, for $x \in U$, $\grad f(x)$ is the unique element of $X$ satisfying
+\begin{equation}
+\inner{\grad f(x)}{y}=f'(x)(y), \qquad y \in X.
+\label{grad}
+\end{equation}
+Because $\Phi^{-1}:X^* \to X$ is continuous,
+if $f \in C^1(U;\mathbb{R})$ then $\grad f \in C(U;X)$, being a composition of two continuous functions.
+
+For example, let $T$ be a bounded self-adjoint operator on $X$ and define $f:X \to \mathbb{R}$ by
+\[
+f(x) = \frac{1}{2}\inner{Tx}{x}, \qquad x \in X.
+\]
+For $x,h \in X$,
+\[
+f(x+h)-f(x) = \frac{1}{2}\inner{Tx}{h}+\frac{1}{2}\inner{Th}{x}+\frac{1}{2}\inner{Th}{h}
+=\inner{Tx}{h}+\frac{1}{2}\inner{Th}{h}.
+\]
+Thus
+\[
+|f(x+h)-f(x)-\inner{Tx}{h}| = \frac{1}{2}|\inner{Th}{h}| \leq \frac{1}{2} \norm{T} \norm{h}^2 = o(\norm{h}),
+\]
+which shows that $f$ is differentiable at $h$, with $f'(x)(y) = \inner{Tx}{y}$. 
+Thus by \eqref{grad}, $\grad f(x) = Tx$. 
+
+For example, let $T \in \mathscr{L}(X;X)$, let $h \in X$, and define $f:X \to \mathbb{R}$ by
+\[
+f(x) = \frac{1}{2} \norm{Tx-h}^2, \qquad  x \in X.
+\]
+We calculate that
+\[
+\grad f(x) = T^*Tx-T^*h, \qquad x \in X.
+\]
+For $x_0 \in X$, define
+\[
+\phi(t) = \exp(-tT^*T)x_0 + \int_0^t \exp(-(t-s)T^*T)T^*h ds, \qquad t \geq 0.
+\]
+It is proved\footnote{cf. J.W. Neuberger, {\em A Sequence of Problems on Semigroups}, p.~51, Problem 195.}
+that $\phi$ satisfies
+\[
+\phi'(t) = -(\grad f)(\phi(t)), \qquad \phi(0)=x_0.
+\]
+
+
+For a function $F:X \to X$, we say that \textbf{$F$ is $L$ Lipschitz} if
+\[
+\norm{F(x)-F(y)} \leq L \norm{x-y}, \qquad x,y \in X.
+\] 
+The following is a useful inequality for functions whose gradients are Lipschitz.\footnote{Juan Peypouquet,
+{\em Convex Optimization in Normed Spaces: Theory, Methods and Examples}, p.~15, Lemma 1.30.}
+
+\begin{lemma}
+If $f:X \to \mathbb{R}$ is differentiable and $\grad f:X \to X$ is $L$ Lipschitz, then
+\[
+f(y) \leq f(x)+\inner{\grad f(x)}{y-x}+\frac{L}{2} \norm{y-x}^2,\qquad x,y \in X.
+\]
+\label{lipschitz}
+\end{lemma}
+\begin{proof}
+Let $h=y-x$ and define $g:[0,1] \to \mathbb{R}$ by $g(t) = f(x+th)$. By the 
+chain rule, for $0<t<1$,
+\[
+g'(t) = f'(x+th)(h) = \inner{\grad f(x+th)}{h}.
+\]
+Thus by the fundamental theorem of calculus,
+\[
+\int_0^1 \inner{\grad f(x+th)}{h} dt = \int_0^1 g'(t) dt = g(1)-g(0) = f(x+h)-f(x)=f(y)-f(x),
+\]
+and so, using the Cauchy-Schwarz inequality and the fact that $\grad f$ is $L$ Lipschitz,
+\begin{align*}
+f(y)-f(x)&= \int_0^1 \inner{\grad f(x+th)-\grad f(x)+\grad f(x)}{h} dt \\
+&= \inner{\grad f(x)}{h} dt + \int_0^1 \inner{\grad f(x+th)-\grad f(x)}{h} dt\\
+&\leq  \inner{\grad f(x)}{h}   +\int_0^1 \norm{\grad f(x+th)-\grad f(x)} \norm{h} dt\\
+&\leq  \inner{\grad f(x)}{h} + \int_0^1 L \norm{th} \norm{h} dt\\
+&=  \inner{\grad f(x)}{y-x} + \frac{L}{2} \norm{y-x}^2,
+\end{align*}
+proving the claim.
+\end{proof}
+
+
+
+
+
+\section{Hessians}
+Let $U$ be a nonempty open subset of $X$. We prove that if a function is $C^2$ then its gradient is $C^1$.\footnote{Rodney Coleman, {\em Calculus on Normed Vector Spaces},
+p.~139, Theorem 6.5.}
+
+\begin{theorem}
+Let $U$ be an open subset of $X$. If $f \in C^2(U;\mathbb{R})$, then $\grad  f \in C^1(U;X)$, and
+\begin{equation}
+f''(x)(u)(v) = \inner{v}{(\grad f)'(x)(u)},\qquad x \in U, \quad u,v \in X.
+\label{hessian}
+\end{equation}
+\end{theorem}
+\begin{proof}
+That $f$ is $C^2$ means that $f':U \to X^*$ is $C^1$. That is, for all $x \in U$, 
+the map $f':U \to X^*$ is continuous at $x$, there is 
+$f''(x) \in \mathscr{L}(X;X^*)$ such that
+\begin{equation}
+\norm{f'(x+h)-f'(x)-f''(x)(h)} = o(\norm{h}),
+\label{f2}
+\end{equation}
+as $h \to 0$, and the map $x \mapsto f''(x)$ is continuous 
+$U \to \mathscr{L}(X;X^*)$. 
+
+Let $x \in U$ and let $h \in X$.
+Define $\phi_h \in X^*$ by
+\[
+\phi_h(v) = f''(x)(h)(v), \qquad v \in X.
+\]
+Define $\nu_x(h) = \Phi^{-1}(\phi_h) \in X$,
+thus
+\[
+f''(x)(h)(v) = \inner{v}{\nu_x(h)}, \qquad v \in X.
+\]
+It is straightforward that $\nu_x$ is linear. Because $\Phi$ is an isometric isomorphism,
+\[
+\norm{\nu_x(h)}=\norm{\phi_h}
+=\sup_{\norm{v} \leq 1} |\phi_h(v)|
+=\sup_{\norm{v} \leq 1} |f''(x)(h)(v)|
+\leq \norm{f''(x)} \norm{h},
+\]
+where $(u,v) \mapsto f''(x)(u)(v)$ is a bilinear form, with
+\[
+\norm{f''(x)} = \sup_{\norm{u} \leq 1, \norm{v} \leq 1} |f''(x)(u)(v)|,
+\]
+showing that $\nu_x:X \to X$ is a bounded linear operator with $\norm{\nu_x} \leq \norm{f''(x)}$. 
+For $h$ such that $x+h \in U$ and for $v \in X$,
+\begin{align*}
+(f'(x+h)-f'(x)-f''(x)(h))(v)&=\inner{v}{\grad f(x+h) - \grad f(x)-\nu_x(h)},
+\end{align*}
+so
+\begin{align*}
+\norm{f'(x+h)-f'(x)-f''(x)(h)}&=\sup_{\norm{v} \leq 1} 
+|\inner{v}{\grad f(x+h) - \grad f(x)-\nu_x(h)}|\\
+&= \norm{\grad f(x+h)-\grad f(x) - \nu_x(h)}.
+\end{align*}
+Thus by \eqref{f2}, 
+\[
+\norm{\grad f(x+h)-\grad f(x) - \nu_x(h)}=o(\norm{h})
+\]
+as $h \to 0$, and because $\nu_x \in \mathscr{L}(X;X)$, this means that
+$\grad f:U \to X$ is differentiable at $x$, with
+$(\grad f)'(x) = \nu_x$. 
+It remains to prove that $x \mapsto \nu_x$ is continuous
+$U \to \mathscr{L}(X;X)$, namely that $(\grad f)'$ is continuous. 
+For $x \in U$ and for $h$ with $x+h \in U$,
+\begin{align*}
+\norm{\nu_{x+h}-\nu_x} &= \sup_{\norm{u} \leq 1} \norm{\nu_{x+h}(u)-\nu_x(u)}\\
+&=\sup_{\norm{u} \leq 1} \sup_{\norm{v} \leq 1} |\inner{v}{\nu_{x+h}(u)-\nu_x(u)}|\\
+&=\sup_{\norm{u} \leq 1} \sup_{\norm{v} \leq 1} |f''(x+h)(u)(v)-f''(x)(u)(v)|\\
+&=\norm{f''(x+h)-f''(x)},
+\end{align*}
+and because $f''$ is continuous on $U$ we get that $x \mapsto \nu_x$ is continuous on $U$, completing
+the proof.
+\end{proof}
+
+If $f \in C^2(U;\mathbb{R})$, we proved in the above theorem that
+$\grad f \in C^1(U;X)$. We call the derivative of $\grad f$ the \textbf{Hessian of $f$},\footnote{cf. 
+R. A. Tapia, {\em The differentiation and integration of nonlinear operators},
+pp.~45--101, in {\em Nonlinear Functional Analysis and Applications} (Louis B. Rall, ed.)}
+\[
+\Hess f  = (\grad f)', \qquad U \to \mathscr{L}(X;X),
+\]
+and \eqref{hessian} then reads
+\[
+f''(x)(u)(v) = \inner{v}{\Hess f(x)(u)}, \qquad x \in U, \quad u,v \in X.
+\]
+
+Furthermore, it is a fact that if $f \in C^2(U;\mathbb{R})$, then for each $x \in U$, the bilinear form
+\[
+(u,v) \mapsto f''(x)(u)(v)
+\]
+is symmetric.\footnote{Serge Lang, {\em Real and Functional Analysis}, third ed.,
+p.~344, Theorem 5.3.}
+Thus, for $x \in U$ and $u,v \in X$,
+\[
+\inner{v}{\Hess f(x)(u)} = \inner{u}{\Hess f(x)(v)}.
+\]
+Now, using that $\inner{\cdot}{\cdot}$ is symmetric as $X$ is a real Hilbert space, $(\Hess f(x))^* \in \mathscr{L}(X;X)$ satisfies
+\[
+ \inner{u}{\Hess f(x)(v)} = \inner{(\Hess f(x))^*u}{v} = \inner{v}{(\Hess f(x))^*u}.
+\]
+so 
+\[
+\inner{v}{\Hess f(x)(u)} =  \inner{v}{(\Hess f(x))^*u}.
+\]
+Because this is true for all $v$ we have $\Hess f(x)(u)=(\Hess f(x))^*u$, and because this is true for all $u$ we have
+$\Hess f(x)=(\Hess f(x))^*$, i.e. $\Hess f(x)$ is self-adjoint.
+
+\begin{theorem}
+If $U$ is an open  subset of $X$ and $f \in C^2(U;\mathbb{R})$, then
+for each $x \in U$ it is the case that $\Hess f(x) \in \mathscr{L}(X;X)$ is self-adjoint.
+\label{selfadjoint}
+\end{theorem}
+
+
+
+\section{Critical points}
+For an open set $U$ in $X$ for $k \geq 1$, and for $f \in C^{k+2}(U;\mathbb{R})$, we say that $x_0 \in U$ is a \textbf{critical point of
+$f$} if $f'(x_0)=0$. If $x_0$ is a critical point of $f$, let we say that $x_0$ is a \textbf{nondegenerate critical point of $f$}
+if $\Hess f(x_0) \in \mathscr{L}(X;X)$ is invertible. 
+The \textbf{Morse-Palais lemma}\footnote{Serge Lang, {\em Differential and Riemannian Manifolds},
+p.~182, chapter VII, Theorem 5.1; Kung-ching Chang, {\em Infinite Dimensional Morse Theory and Multiple
+Solution Problems}, p.~33, Theorem 4.1; 
+Andr\'e Avez, {\em Calcul diff\'erentiel}, p.~87, \S 3;
+N. A. Bobylev, S. V. Emel'yanov, and S. K. Korovin, {\em Geometrical Methods in Variational Problems}, p.~360, Theorem 5.5.2;
+Hajime Urakawa, {\em Calculus of Variations and Harmonic Maps}, p.~87, chapter 3, \S  1, Theorem 1.10;
+Jean-Pierre Aubin and Ivar Ekeland, {\em Applied Nonlinear Analysis}, p.~52, Theorem 8;
+Melvyn S. Berger, {\em Nonlinearity and Functional Analysis: Lectures on Nonlinear Problems in Mathemtical Analysis},
+p.~355, Theorem 6.5.4.}
+states that if
+$f \in C^{k+2}(U;\mathbb{R})$ with $k \geq 1$, $f(0)=0$, and $0$ is a nondegenerate critical point of $f$, then there is some
+open subset $V$ of $U$ with $0 \in V$ and
+a $C^k$ diffeomorphism $\phi:V \to V$, $\phi(0)=0$, such that
+\[
+f(x) = \frac{1}{2}\inner{\Hess f(0)(\phi(x))}{\phi(x)}, \qquad x \in V.
+\]
+
+
+If $x$ is a critical point of a differentiable function $f:U \to \mathbb{R}$, we call $f(x)$ a \textbf{critical value of $f$}.
+If $k \geq n$ and $f \in C^k(\mathbb{R}^n;\mathbb{R})$, \textbf{Sard's theorem} tells us that
+ the set of critical values of $f$ has Lebesgue measure  $0$ and is meager.
+ 
+For Banach spaces $Y$ and $Z$, a \textbf{Fredholm operator}\footnote{Martin Schechter, {\em Principles of Functional Analysis},
+second ed., chapter 5.} is a bounded linear operator $T:Y \to Z$ such that (i) $\alpha(T) = \dim \ker T<\infty$, (ii) $T(Y)$ is a closed subset of $Z$,
+and (iii)
+$\beta(T) = \dim \ker T^*<\infty$. The \textbf{index} of a Fredholm operator $T$ is
+\[
+\ind T = \alpha(T) - \beta(T).
+\]
+For a differentiable function $f:U \to \mathbb{R}$, $U$ an open subset of $X$, and for $x \in U$,
+$f'(x) \in \mathscr{L}(X;\mathbb{R})=X^*$. $f'(x)$ is a Fredholm operator if and only
+if $\dim \ker f'(x) < \infty$. 
+For $U$ a connected open subset of $X$ and for $f \in C^1(U;\mathbb{R})$, we call $f$ a \textbf{Fredholm map} if
+$f'(x)$ is a Fredholm operator for each $x \in U$. It is a fact that $\ind f'(x) = \ind f'(y)$ for all $x,y \in U$, using that $U$ is connected.
+We denote this common value by $\ind f$. 
+A generalization of Sard's theorem by Smale here tells us that if $X$ is separable, $U$ is a connected
+open subset of $X$,
+$f \in C^k(U;\mathbb{R})$ is a Fredholm map, and 
+\[
+k > \max\{\ind f, 0\},
+\]
+then the set of critical values of $f$ is meager.\footnote{Eberhard Zeidler,
+{\em Nonlinear Functional Analysis and its Applications, IV: Applications to Mathematical Physics}, p.~829, Theorem 78.A;
+Melvyn S. Berger, {\em Nonlinearity and Functional Analysis: Lectures on Nonlinear Problems in Mathematical Analysis},
+p.~125, Theorem 3.1.45.}
+
+
+A function $f \in C^1(X;\mathbb{R})$ is said to \textbf{satisfy the Palais-Smale condition} if 
+ $(u_k)$ is a sequence in $X$ such that (i) $\{f(u_k)\}$ is a bounded subset of $\mathbb{R}$ and (ii)
+ $\grad f(u_k) \to 0$, then $\{u_k\}$ is a precompact subset of $X$: every subsequence of $(u_k)$ itself has a Cauchy subsequence. 
+
+Often when speaking about ordinary differential equations in $\mathbb{R}^d$, we deal with differentiable functions whose derivatives
+are locally Lipschitz.  $\mathbb{R}^d$ has the Heine-Borel property: a subset $K$ of $\mathbb{R}^d$ is compact if and only if $K$ is closed
+and bounded.  In fact no infinite dimensional Banach space has the Heine-Borel property.\footnote{Some Fr\'echet spaces have the Heine-Borel property, like the space
+of holomorphic functions on the open unit disc, which is what Montel's theorem says.}
+Thus a locally Lipschitz function need not be Lipschitz on a bounded subset of $X$. (On a compact set, the set is covered by balls on which the function is Lipschitz,
+and then the function is Lipschitz on the compact set with Lipschitz constant equal to the maximum of finitely many Lipschitz constants on the balls.)
+We denote by $\mathcal{C}$ the set of function $f:X \to \mathbb{R}$ that are differentiable and such that for each bounded subset $A$ of $X$, 
+the restriction of $\grad f$ to $A$ is Lipschitz.
+
+The \textbf{mountain pass theorem}\footnote{Lawrence C. Evans, {\em Partial Differential Equations},
+p.~480, Theorem 2;
+Antonio Ambrosetti and David Arcoya Álvarez, {\em An Introduction to Nonlinear Functional Analysis and Elliptic Problems},
+p.~48, \S 5.3.}
+states that if (i) $I \in \mathcal{C}$, (ii) $I$ satisfies the Palais-Smale condition, (iii) $I(0)=0$,
+(iv) there are $r,a>0$ such that $I(u) \geq a$ when $\norm{u}=r$, and (v) there is some $v \in X$ satisfying
+$\norm{v} > r$ and $I(v) \leq 0$, then 
+\[
+\inf_{g \in \Gamma_v} \sup_{0 \leq t \leq 1} (I \circ g)(t)
+\]
+is a critical value of $I$, where
+\[
+\Gamma_v=\{g \in C([0,1];X) : g(0)=0, g(1)=v\}.
+\]
+
+
+
+
+\section{Convexity}
+We prove that a critical point of a  differentiable convex function on an open convex set is a minimum.\footnote{N. A. Bobylev, S. V. Emel'yanov, and S. K. Korovin, {\em Geometrical Methods in Variational Problems}, p.~39, Theorem 2.1.4.}
+
+\begin{theorem}
+If $A$ is an open convex set, $f:A \to \mathbb{R}$ is differentiable and convex, and $x_0 \in A$ is a critical point of $f$, then
+$f(x_0) \leq f(x)$ for all $x \in A$.
+\label{minimum}
+\end{theorem}
+\begin{proof}
+Because $f$ is convex, for $0<t<1$,
+\[
+f(tx+(1-t)x_0) \leq tf(x)+(1-t)f(x_0),
+\]
+i.e.
+\[
+\frac{f(x_0+t(x-x_0)) - f(x_0)}{t} \leq f(x)-f(x_0).
+\]
+Taking $t \to 0$,
+\[
+f'(x_0)(x-x_0) \leq f(x)-f(x_0),
+\]
+and because $x_0$ is a critical point,
+\[
+0 \leq f(x)-f(x_0),
+\]
+i.e. $f(x_0) \leq f(x)$. 
+\end{proof}
+
+
+We establish equivalent conditions for a  differentiable function to be convex.\footnote{Juan Peypouquet,
+{\em Convex Optimization in Normed Spaces: Theory, Methods and Examples}, p.~38, Proposition 3.10.}
+
+\begin{theorem}
+If $A$ is an open convex subset of $X$ and $f:A \to \mathbb{R}$ is  differentiable, then the following are
+equvialent:
+\begin{enumerate}
+\item $f$ is convex.
+\item $f(y) \geq f(x)+\inner{\grad f(x)}{y-x}$, $x,y \in A$.
+\item $\inner{\grad f(x)-\grad f(y)}{x-y} \geq 0$, $x,y \in A$.
+\end{enumerate}
+\label{convex1}
+\end{theorem}
+\begin{proof}
+Suppose (1). For $x,y \in A$ and $0<t<1$, that $f$ is convex means 
+$f(t y + (1-t)x) \leq t f(y)+(1-t)f(x)$, i.e.
+\[
+\frac{f(x+t(y-x))-f(x)}{t} \leq f(y)-f(x),
+\]
+and taking $t \to 0$ yields 
+\[
+f'(x)(y-x) \leq f(y)-f(x),
+\]
+i.e.
+\[
+\inner{\grad f(x)}{y-x} \leq f(y)-f(x).
+\]
+
+Suppose (2) and let $x,y \in A$, for which
+\[
+\inner{\grad f(x)}{y-x} \leq f(y)-f(x), \qquad \inner{\grad f(y)}{x-y} \leq f(x)-f(y).
+\]
+Adding these inequalities,
+\[
+\inner{\grad f(x)}{y-x}- \inner{\grad f(y)}{y-x}\leq 0.
+\]
+
+Suppose (3), let $x,y \in A$, and define $\phi:[0,1] \to \mathbb{R}$ by
+\[
+\phi(t) = f(tx+(1-t)y)-tf(x)-(1-t)f(y).
+\] 
+$\phi(0)=0$ and $\phi(1)=0$, and for $0<t<1$, using the chain rule gives
+\begin{align*}
+\phi'(t) &=  f'(tx+(1-t)y)(x-y)-f(x)+f(y)\\
+&=\inner{\grad f(tx+(1-t)y)}{x-y}-f(x)+f(y).
+\end{align*}
+Let $0<s<t<1$, let $u=sx+(1-s)y$ and $v=tx+(1-t)y$, which both belong to $A$ because $A$ is convex,
+and so the above reads
+\[
+\phi'(s) = \inner{\grad f(u)}{x-y}-f(x)+f(y), \qquad \phi'(t) = \inner{\grad f(v)}{x-y}-f(x)+f(y),
+\]
+so
+\[
+\phi'(s)-\phi'(t) = \inner{\grad f(u)-\grad f(v)}{x-y}.
+\]
+And
+\[
+(s-t)(x-y) =u-y -(v-y) = u-v, 
+\]
+so
+\[
+\phi'(s)-\phi'(t) = \frac{1}{s-t} \inner{\grad f(u)-\grad f(v)}{u-v}.
+\]
+But
+(3) tells us
+\[
+\inner{\grad f(u)-\grad f(v)}{u-v} \geq 0, 
+\]
+so, as $s-t <0$,
+\[
+\phi'(s)-\phi'(t) \leq 0,
+\]
+showing that $\phi'$ is nondecreasing. 
+On the other hand, because $\phi(0)=0$ and $\phi(1)=0$, by the mean value theorem there is some
+$0<t_0<1$ for which $\phi'(t_0)=0$.
+Therefore, because $\phi'$ is nondecreasing it holds that
+\[
+\phi'(t) \leq 0, \qquad 0 \leq t \leq t_0,
+\]
+and 
+\[
+\phi'(t) \geq 0,\qquad t_0 \leq t \leq 1.
+\]
+That is, $\phi$ is nonincreasing on $[0,t_0]$, and with $\phi(0)=0$ this yields 
+$\phi(t) \leq 0$ for $t \in [0,t_0]$, and
+$\phi$ is nondecreasing on $[t_0,1]$, and with $\phi(1)=0$ this yields
+$\phi(t) \leq 0$ for $t \in [t_0,1]$.  Therefore $\phi(t) \leq 0$ for $t \in [0,1]$, which means that
+\[
+f(tx+(1-t)y)-tf(x)-(1-t)f(y) \leq 0, \qquad 0 \leq t \leq 1,
+\]
+showing that $f$ is convex.
+\end{proof}
+
+
+\begin{theorem}
+If $A$ is an open convex subset of $X$ and $f:A \to \mathbb{R}$ is twice differentiable, then the following are equivalent:
+\begin{enumerate}
+\item $f$ is convex.
+\item $\inner{\Hess f(x)(v)}{v} \geq 0$, $x \in A$, $v \in X$. 
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+Suppose (1) and let $x \in A$. From Theorem \ref{convex1}, $v \in X$ and for $t>0$ with which $x+tv \in A$,
+\[
+\inner{\grad f(x+tv)-\grad f(x)}{tv} \geq 0,
+\]
+i.e.
+\[
+\frac{f'(x+tv)(v)- f'(x)(v)}{t} \geq 0.
+\] 
+Taking $t \to 0$,
+\[
+f''(x)(v)(v) \geq 0,
+\]
+i.e.
+\[
+\inner{\Hess f(x)(v)}{v} \geq 0.
+\]
+
+Suppose (2), let $x,y \in A$ and define $\phi:[0,1] \to \mathbb{R}$ by
+\[
+\phi(t) = f(tx+(1-t)y)-tf(x)-(1-t)f(y).
+\] 
+Applying the chain rule, for $0<t<1$,
+\[
+\phi''(t) = f''(tx+(1-t)y)(x-y)(x-y),
+\]
+i.e.
+\[
+\phi''(t) = \inner{\Hess f(tx+(1-t)y)(x-y)}{x-y} \geq 0,
+\]
+showing that $\phi'$ is nondecreasing. 
+In the proof of Theorem \ref{convex1} we deduced from $\phi'$ being nondecreasing and satisfying
+$\phi(0)=0$, $\phi(1)=0$, that $f$ is convex, and the same reasoning yields here that $f$ is convex.
+\end{proof}
+
+
+We call a function $F:X \to X$ \textbf{$\beta$ co-coercive} if 
+\[
+\inner{F(x)-F(y)}{x-y} \geq \beta \norm{F(x)-F(y)}^2.
+\]
+We prove conditions under which the gradient of a  differentiable convex function is co-coercive.\footnote{Juan Peypouquet,
+{\em Convex Optimization in Normed Spaces: Theory, Methods and Examples}, p.~40, Theorem 3.13.}
+
+\begin{theorem}[Baillon-Haddad theorem]
+Let $f:X \to \mathbb{R}$ be differentiable and convex and let $L>0$. 
+Then $\grad f$ is $L$ Lipschitz if and only if $\grad f$ is $\frac{1}{L}$ co-coercive. 
+\end{theorem}
+\begin{proof}
+Suppose that $\grad f$ is $L$ Lipschitz and
+for $x \in X$, define $h_x:X \to \mathbb{R}$ by
+\[
+h_x(y) = f(y)-f'(x)(y) = f(y)-\inner{\grad f(x)}{y}.
+\]
+For $y,z \in X$ and $0<t<1$, because $f$ is convex,
+\begin{align*}
+h_x(tz+(1-t)y)&= f(tz+(1-t)y)-\inner{\grad f(x)}{tz+(1-t)y}\\
+&\leq tf(z)+(1-t)f(y) - \inner{\grad f(x)}{tz+(1-t)y}\\
+&=th_x(z)+(1-t)h_x(y),
+\end{align*}
+showing that $h_x$ is convex. For $y,z \in X$,\footnote{Henri Cartan, {\em Differential Calculus},
+p.~29, Proposition 2.4.2.}
+\[
+h_x'(y)(z)=f'(y)(z)-f'(x)(z),
+\]
+and in particular $\grad h_x(x)=0$. Thus by Theorem \ref{minimum}, 
+\begin{equation}
+h_x(x) \leq h_x(y), \qquad y \in X.
+\label{hx}
+\end{equation}
+
+
+For $x,y,z \in X$,
+by Lemma \ref{lipschitz},
+\[
+f(z) \leq f(x)+\inner{\grad f(x)}{z-x} + \frac{L}{2} \norm{z-x}^2,
+\]
+so
+\[
+h_y(z) \leq f(x)-\inner{\grad f(y)}{z} +\inner{\grad f(x)}{z-x} + \frac{L}{2} \norm{z-x}^2,
+\]
+i.e.
+\[
+h_y(z) \leq h_x(x)+\inner{\grad f(x)-\grad f(y)}{z}+\frac{L}{2}\norm{z-x}^2,
+\]
+and applying \eqref{hx},
+\begin{equation}
+h_y(y) \leq h_x(x) +\inner{\grad f(x)-\grad f(y)}{z}+\frac{L}{2}\norm{z-x}^2.
+\label{hy}
+\end{equation}
+Now,
+\[
+\norm{\grad f(x)-\grad f(y)} = \sup_{\norm{v} \leq 1} \inner{\grad f(x)-\grad f(y)}{v}
+\]
+so for each $\epsilon>0$ there is some $v_\epsilon \in X$ with $\norm{v_\epsilon} \leq 1$ and
+\[
+ \inner{\grad f(x)-\grad f(y)}{v_\epsilon} \geq 
+\norm{\grad f(x)-\grad f(y)} -\epsilon.
+\]
+Let $R=\frac{\norm{\grad f(x)-\grad f(y)}}{L}$, and applying \eqref{hy} with  $z=x-Rv_\epsilon$  yields
+\begin{align*}
+h_y(y) &\leq h_x(x) + \inner{\grad f(x)-\grad f(y)}{x-Rv_\epsilon} +\frac{L}{2}\norm{Rv_\epsilon}^2\\
+&=h_x(x)+\inner{\grad f(x)-\grad f(y)}{x} - R \inner{\grad f(x)-\grad f(y)}{v_\epsilon}\\
+&+\frac{1}{2L} \norm{\grad f(x)-\grad f(y)}^2 \norm{v_\epsilon}^2\\
+&\leq h_x(x)+\inner{\grad f(x)-\grad f(y)}{x} -R\norm{\grad f(x)-\grad f(y)} + R\epsilon\\
+&+\frac{1}{2L} \norm{\grad f(x)-\grad f(y)}^2\\
+&=h_x(x)+\inner{\grad f(x)-\grad f(y)}{x}  - \frac{1}{2L} \norm{\grad f(x)-\grad f(y)}^2 + R\epsilon.
+\end{align*}
+Likewise, because $R$ does not change when $x$ and $y$ are switched,
+\[
+h_x(x) \leq h_y(y)+\inner{\grad f(y)-\grad f(x)}{y}  - \frac{1}{2L} \norm{\grad f(y)-\grad f(x)}^2 + R\epsilon.
+\]
+Adding these inequalities,
+\begin{align*}
+0 &\leq \inner{\grad f(x)-\grad f(y)}{x} + \inner{\grad f(y)-\grad f(x)}{y} \\
+&- \frac{1}{L} \norm{\grad f(x)-\grad f(y)}^2+2R\epsilon,
+\end{align*}
+i.e.
+\[
+\frac{1}{L} \norm{\grad f(x)-\grad f(y)}^2 \leq  \inner{\grad f(x)-\grad f(y)}{x-y} +2R\epsilon.
+\]
+This is true for all $\epsilon>0$, so
+\[
+\frac{1}{L} \norm{\grad f(x)-\grad f(y)}^2 \leq  \inner{\grad f(x)-\grad f(y)}{x-y},
+\]
+showing that $\grad f$ is $\frac{1}{L}$ co-coercive.
+
+Suppose that $\grad f$ is $\frac{1}{L}$ co-coercive and let $x,y \in X$. Then applying the Cauchy-Schwarz inequality,
+\begin{align*}
+\norm{\grad f(x)-\grad f(y)}^2 &\leq L \inner{\grad f(x)-\grad f(y)}{x-y}\\
+&\leq L \norm{\grad f(x)-\grad f(y)} \norm{x-y}.
+\end{align*}
+If $\norm{\grad f(x)-\grad f(y)}=0$ then certainly $\norm{\grad f(x)-\grad f(y)} \leq L \norm{x-y}$. Otherwise, dividing by
+$\norm{\grad f(x)-\grad f(y)}$ gives
+\[
+\norm{\grad f(x)-\grad f(y)} \leq L \norm{x-y},
+\]
+showing that $\grad f$ is $L$ Lipschitz.
+\end{proof}
+
+
+\end{document}

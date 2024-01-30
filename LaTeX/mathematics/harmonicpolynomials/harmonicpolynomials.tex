@@ -1,0 +1,972 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\arcsinh}{\ensuremath\mathrm{arcsinh}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\Vol}{\ensuremath\mathrm{Vol}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_{\mathrm{HS}}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Harmonic polynomials and the spherical Laplacian}
+\author{Jordan Bell}
+\date{August 17, 2015}
+
+\maketitle
+
+\section{Topological groups}
+\label{topologicalgroups}
+Let $G$ be a topological group: $(x,y)  \mapsto xy$ is continuous $G \times G \to G$ and $x \mapsto x^{-1}$ is continuous $G \to G$.
+For $g \in G$, the maps $L_g(x)=gx$ and $R_g(x)=xg$ are homeomorphisms. 
+If $U$ is an open subset of $G$ and  $X$ is a subset of $G$, for each $x \in X$ the set $Ux=\{ux:u \in U\}$ is open because $U$ is
+open and $u \mapsto ux$ is a homeomorphism. Therefore
+\[
+UX =\{ux: u\in U, x \in X\}= \bigcup_{x \in X} Ux
+\]
+is open, being a union of open sets. 
+
+For a subgroup $H$ of $G$, not necessarily a normal subgroup, define 
+$q:G \to G/H$ by 
+\[
+q(g) = gH,\qquad g \in G,
+\]
+and assign $G/H$ the final topology for $q$,
+the finest topology on $G/H$ such that $q:G \to G/H$ is continuous (namely, the quotient
+topology). 
+If $U$ is an open subset of $G$, then $UH$ is open, and we check that
+$q^{-1}(q(U)) = UH$. Because 
+$G/H$ has the final topology for $q$, 
+this means that $q(U)$ is an open set in $G/H$. Therefore, $q:G \to G/H$ is an \textbf{open map}. 
+
+\begin{theorem}
+If $G$ is a topological group and $H$ is a closed subgroup, then $G/H$ is a Hausdorff space.
+\end{theorem}
+\begin{proof}
+For  a topological space $X$,  define $\Delta:X \to X \times X$ by $\Delta(x)=(x,x)$. 
+It is a fact that $X$ is Hausdorff if and only if $\Delta(X)$ is a closed subset of $X \times X$. Thus
+the quotient space $G/H$ is Hausdorff if and only if 
+the image of $\Delta:G/H \to G/H \times G/H$ is closed. The complement of $\Delta(G/H)$ is
+\[
+(G/H \times G/H) - \Delta(G/H)
+=\{(xH,yH) : xH \neq yH\}
+=\{(q(x),q(y))  : x^{-1}y \not \in H\}.
+\]
+Call this set $U$ and let $p=q \times q$, which is a product of open maps and thus is itself open $G \times G 
+\to G/H \times G/H$ and likewise is surjective. 
+We check that 
+\[
+p^{-1}(U) = \{(x,y) \in G \times G: x^{-1} y \not \in H\}.
+\]
+The map $f:G \times G \to G$ defined by $f(x,y) = x^{-1}y$ is continuous and $G - H$ is open in $G$, so $f^{-1}(G - H)$
+is open in $G \times G$. But
+\[
+f^{-1}(G - H) = \{(x,y) \in G \times G: x^{-1}y \not \in H\} = p^{-1}(U),
+\]
+thus $p^{-1}(U)$ is open. 
+As $p$ is surjective, $p(p^{-1}(U))=U$, and because $p$ is an open map and $p^{-1}(U)$ is an open
+set, $U$ is an open set. Because $U$ is the complement of $\Delta(G \times H)$, that set is closed and it follows
+that $G/H$ is Hausdorff. 
+\end{proof}
+
+
+
+Let $G$ be a compact  group, let $K$ be a compact Hausdorff space. A \textbf{left action} of $G$ on $K$ is a continuous map
+$\alpha:G \times K \to K$, denoted
+\[
+\alpha(g,k)=g\cdot k,
+\]
+ satisfying $e\cdot k = k$ and 
+$(g_1g_2) \cdot k = g_1 \cdot (g_2 \cdot k)$. The action is called \textbf{transitive} if for $k_1,k_2 \in K$ there is some $g \in G$ such that
+$g\cdot k_1=k_2$. 
+
+
+
+Let $H$ be a closed subgroup of $G$ and let $q:G \to G/H$ be the quotient map.
+We have established that $q$ is open and that $G/H$ is Hausdorff. 
+Because
+$G$ is compact and $q$ is surjective and continuous, $q(G)=G/H$ is a compact space. 
+We define $\beta:G \times G/H \to G/H$ by
+\[
+\beta(g,xH) = g\cdot (xH) = (gx)H,\qquad g \in G,\quad xH \in G/H.
+\]
+If $xH=yH$, then $(gx)H=(gy)H$, so indeed this makes sense.\footnote{cf. 
+Mamoru Mimura and Hiroshi Toda, {\em Topology of Lie Groups, I and II},
+Chapter I.}
+
+
+\begin{lemma}
+$\beta:G \times G/H \to G/H$
+is a transitive left action. 
+\label{homogeneous}
+\end{lemma}
+\begin{proof}
+Write $\mu(x,y)=xy$. 
+For an open subset $V$ in $G/H$, we check that
+\[
+(L_e \times q)^{-1}(\beta^{-1}(V)) = \mu^{-1} (q^{-1}(V)),
+\]
+hence $(L_e \times q)^{-1}(\beta^{-1}(V))$ is open in $G$. 
+Because $L_e:G \to G$ and $q:G \to G/H$ are surjective open maps, the product
+$L_e \times q:G \times G \to G \times G/H$ is a surjective open map, so
+\[
+(L_e \times q)((L_e \times q)^{-1}(\beta^{-1}(V))) = \beta^{-1}(V)
+\]
+is open in $G \times G/H$, showing that $\beta$ is continuous. 
+
+For $xH \in G/H$,  $e\cdot (xH) = (ex)H = xH$, and for $g_1,g_2 \in G$,
+\[
+(g_1 g_2) \cdot (xH) = (g_1g_2 xH) = g_1 \cdot (g_2 xH)
+=g_1 \cdot (g_2 \cdot (xH)).
+\]
+Therefore $\beta$ is a left action. 
+
+For $xH,yH \in G/H$, 
+\[
+(yx^{-1}) \cdot xH = (yx^{-1}xH) = yH,
+\]
+showing that $\beta$ is transitive.
+\end{proof}
+
+
+Let $G$ be a compact group and let $\alpha$ be a transitive action of $G$ on a
+compact Hausdorff space $K$. For any $k_0 \in K$, let $H=\{g \in G: \alpha(g,k_0)=k_0\}$, the
+\textbf{isotropy group of $k_0$}, which is a closed subgroup of $G$.
+A theorem of Weil\footnote{Joe Diestel and Angela Spalsbury, {\em The Joys of Haar Measure},
+p.~148, Theorem 6.1.} states that
+$\phi:G/H \to K$ defined by
+\[
+\phi(xH) = \alpha(x,k_0),\qquad xH \in G/H
+\]
+is a homeomorphism that satisfies
+\[
+\phi ( \beta(g,xH)) = \alpha(g,\phi(xH)),\qquad g \in G,\quad xH \in G/H,
+\]
+called an \textbf{isomorphism of $G$-spaces}.
+
+
+A Borel measure $m$ on $G$ is called \textbf{left-invariant} if $m(gE)=m(E)$ for all Borel sets $E$ and 
+\textbf{right-invariant} if $m(Eg)=m(E)$ for all Borel sets $E$. 
+It is proved that there is a unique regular Borel probability measure $m$ on $G$ 
+that is left-invariant.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~130, Theorem 5.14.}
+This measure is right-invariant, and satisfies
+\[
+\int_G f(x) dm(x) = \int_G f(x^{-1}) dm(x),\qquad f \in C(G).
+\]
+We call $m$ the \textbf{Haar probability measure}  on the compact group $G$.
+
+Let $H$ be the above isotropy group, and
+define $m_{G/H}$ on the Borel $\sigma$-algebra of $G/H$ by 
+\[
+m_{G/H} = m \circ q^{-1}.
+\]
+This is a regular Borel probability measure on $G/H$, and satisfies
+\[
+m_{G/H}(g\cdot E) = m_{G/H}(E)
+\]
+ for Borel sets $E$ in $G/H$ and
+for $g \in G$; we say that $m_{G/H}$ is \textbf{$G$-invariant}.
+A theorem attributed to Weil states that this is the unique $G$-invariant regular Borel probability measure on $G/H$.\footnote{Joe Diestel and Angela Spalsbury, {\em The Joys of Haar Measure},
+p.~149, Theorem 6.2.}
+Then define $m_K$ on the Borel $\sigma$-algebra of $K$ by 
+\[
+m_K = m_{G/H} \circ \phi^{-1} = m\circ q^{-1} \circ \phi^{-1}.
+\]
+This is the unique $G$-invariant regular Borel probability measure on $K$.
+
+
+\section{Spherical surface measure}
+$SO(n)$ is a compact Lie group.
+$S^{n-1}$ is a topological group, and
+it is a fact that $\alpha:SO(n) \times S^{n-1} \to S^{n-1}$ defined by
+\[
+\alpha(g,k) = gk,\qquad g \in SO(n),\quad k \in S^{n-1},
+\]
+is a transitive left-action. We check that the isotropy group of $e_n$ is $SO(n-1)$. Let $q:SO(n) \to SO(n)/SO(n-1)$ be the projection
+map and define $\phi:SO(n)/SO(n-1) \to S^{n-1}$ by
+\[
+\phi(x SO(n-1)) = \alpha(x,e_n) = xe_n,\qquad xSO(n-1) \in SO(n)/SO(n-1).
+\]
+Then for $m$ the Borel probability measure on $SO(n)$,\footnote{$SO(n)$ is a compact Lie group, and 
+more than merely a compact group, it has a natural volume, rather than merely volume $1$. It is
+\[
+\Vol(SO(n)) = \frac{2^{n-1} \pi^{\frac{(n-1)(n+2)}{4}}}{\prod_{d=2}^n \Gamma(d/2)}.
+\]
+See
+Luis J. Boya,  E. C. G. Sudarshan, and Todd Tilma,
+{\em Volumes of compact manifolds},
+ \url{http://repository.ias.ac.in/51021/}.}
+ the unique $SO(n)$-invariant regular Borel probability
+measure on $S^{n-1}$ is
+\begin{equation}
+m_{S^{n-1}} = m \circ q^{-1} \circ \phi^{-1}.
+\label{mSn}
+\end{equation}
+
+
+It is a fact that  the volume of the unit ball in $\mathbb{R}^n$ is
+\[
+\omega_n = \frac{\pi^{n/2}}{\Gamma\left(\frac{n}{2}+1\right)},
+\]
+and that 
+the surface area of $S^{n-1}$ in $\mathbb{R}^n$ is
+\[
+A_{n-1}= n \omega_n = n \frac{\pi^{n/2}}{\Gamma\left(\frac{n}{2}+1\right)} 
+=\frac{2\pi^{n/2}}{\Gamma(n/2)}.
+\]
+For $E$ a Borel set in $S^{n-1}$, define
+\[
+\sigma(E) = A_{n-1} m_{S^{n-1}}(E).
+\]
+Then $\sigma$ is a $SO(n)$-invariant regular Borel measure on $S^{n-1}$, with total measure
+\[
+\sigma(S^{n-1}) = A_{n-1} m_{S^{n-1}}(S^{n-1}) = 
+A_{n-1} = \frac{2\pi^{n/2}}{\Gamma(n/2)}.
+\]
+We call $\sigma$ the \textbf{spherical surface measure}.\footnote{cf. Jacques Faraut, 
+{\em Analysis on Lie Groups: An Introduction}, p.~186, \S 9.1 
+and Claus M\"uller, 
+{\em Analysis of Spherical Symmetries in Euclidean Spaces},
+Chapter 1.}
+
+
+For $\gamma \in SO(n)$ and $f \in C(S^{n-1})$, define
+\[
+(\gamma \cdot f)(x) = f(\gamma^{-1} x)=(f \circ \gamma^{-1})(x),\qquad x \in S^{n-1}.
+\]
+Let $\gamma_n(x) = (2\pi)^{-n/2} e^{-|x|^2/2}$, which satisfies
+\[
+\int_{\mathbb{R}^n} \gamma_n(x) dx = 1,
+\]
+and define $I:C(S^{n-1}) \to \mathbb{C}$ by
+\[
+I(f)= \int_{\mathbb{R}^n} f(x/|x|) \gamma_n(x) dx, \qquad f \in C(S^{n-1}),
+\]
+which is a positive linear functional.
+$S^{n-1}$ is a compact Hausdorff space, so by the Riesz representation theorem there is a unique regular Borel measure
+$\mu$ on $S^{n-1}$ such that 
+\[
+I(f) = \int_{S^{n-1}} f d\mu,\qquad f \in C(S^{n-1}).
+\]
+Because $I(f) = \int_{\mathbb{R}^n} \gamma_n(x) dx = 1$, $\mu$ is a probability measure. For $\gamma \in SO(n)$,
+write
+$g= \gamma \cdot f$, for which 
+$g(x/|x|) = f(\gamma^{-1} (x/|x|))$, and because $|\gamma^{-1} x|=|x|$ for $x \in \mathbb{R}^n$ and because Lebesgue measure on $\mathbb{R}^n$
+is invariant under $SO(n)$, by the change of variables
+theorem we have
+\[
+I(\gamma \cdot f) = I(g) = \int_{\mathbb{R}^n} f\left(\frac{1}{|x|} \gamma^{-1} x\right)  (2\pi)^{-n/2} e^{-|x|^2/2} dx
+=I(f).
+\]
+Now define $\nu(E) = \mu(\gamma(E))=((\gamma)^{-1}_* \mu)(E)$, the pushforward of $\mu$ by $\gamma^{-1}$.  This is a regular Borel probability measure on $S^{n-1}$, and by the
+change of variables theorem,
+\[
+\int_{S^{n-1}} f d\nu = \int_{S^{n-1}} f \circ \gamma^{-1} d\mu = 
+\int_{S^{n-1}} \gamma \cdot f d\mu
+=I(\gamma \cdot f) = I(f).
+\]
+Because $I(f) = \int_{S^{n-1}} f d\nu$ for all $f \in C(S^{n-1})$, it follows that $\nu = \mu$. 
+Because $\gamma \in SO(n)$ is arbitrary, this measn that $\mu$ is $SO(n)$-invariant. 
+But $m_{S^{n-1}}$ in \eqref{mSn} is the unique $SO(n)$-invariant regular Borel probability measure on $S^{n-1}$, so
+$\mu = m_{S^{n-1}}$, so
+\[
+\int_{S^{n-1}} f d\sigma = A_{n-1} \int_{S^{n-1}} f d\mu
+=A_{n-1} \int_{\mathbb{R}^n} f(x/|x|) (2\pi)^{-n/2} e^{-|x|^2/2} dx,
+\]
+where $A_{n-1} = \frac{2\pi^{n/2}}{\Gamma(n/2)}$.
+
+
+
+\section{{\em L\textsuperscript{2}(S\textsuperscript{n-1})} and the spherical Laplacian}
+For $f,g \in C(S^{n-1})$, let
+\[
+\inner{f}{g}= \int_{S^{n-1}} f \overline{g} d\sigma,
+\]
+and let $L^2(S^1)$ be the completion of $C(S^{n-1})$ with respect to this inner product.
+
+For $\gamma \in SO(n)$ and $f \in C(S^{n-1})$ we have defined
+\[
+(\gamma \cdot f)(x) = f(\gamma^{-1} x)=(f \circ \gamma^{-1})(x),\qquad x \in S^{n-1}.
+\]
+Because $\sigma$ is $SO(n)$-invariant,
+\begin{align*}
+\inner{\gamma \cdot f}{\gamma\cdot g}&=\int_{S^{n-1}} f(\gamma^{-1}x) \overline{g}(\gamma^{-1}x) d\sigma(x)\\
+&=\int_{S^{n-1}} f(x) \overline{g}(x) d((\gamma^{-1})_* \sigma)(x)\\
+&=\int_{S^{n-1}} f(x) \overline{g}(x) d\sigma(x)\\
+&=\inner{f}{g}.
+\end{align*}
+
+
+For $f:S^{n-1} \to \mathbb{C}$, define $F:\mathbb{R}^n - \{0\} \to \mathbb{C}$ by
+\[
+F(x) = f(x/|x|).
+\]
+We take $f$ to belong to $C^k(S^{n-1})$ when $F \in C^k(\mathbb{R}^n - \{0\})$, $0 \leq k \leq \infty$, and
+we define
+$\Delta_{S^{n-1}} f$ be the restriction of $\Delta F$ to $S^{n-1}$.  We call $\Delta_{S^{n-1}}$ the \textbf{spherical
+Laplacian}.\footnote{cf. N. J. Vilenkin, {\em Special Functions and the Theory of Group
+Representations}, Chapter IX, \S 1.}
+
+
+\begin{theorem}
+Let $F:\mathbb{R}^n \to \mathbb{C}$ be positive-homogeneous of degree $s$ and harmonic and let $f$ be the restriction of $F$ to $S^{n-1}$. Then
+\[
+\Delta_{S^{n-1}} f = -s(n+s-2)f.
+\]
+\label{Seigenvalue}
+\end{theorem}
+\begin{proof}
+Let $H(x)=F(x/|x|)=|x|^{-s}F(x)$ and let $r(x)=|x|=(x_1^2+\cdots+x_n^2)^{1/2}$.
+We calculate
+\begin{align*}
+\Delta H&=\sum_{i=1}^n \partial_i^2 ((r^2)^{-\frac{s}{2}} F)\\
+&=\sum_{i=1}^n \partial_i\left(-s x_i (r^2)^{-\frac{s}{2}-1} F + (r^2)^{-\frac{s}{2}} \partial_i F\right)\\
+&=\sum_{i=1}^n -s(r^2)^{-\frac{s}{2}-1} F  -  sx_i(2x_i)\left(-\frac{s}{2}-1\right) (r^2)^{-\frac{s}{2}-2} F
+-sx_i(r^2)^{\frac{s}{2}-1} \partial_i F\\
+&-sx_i (r^2)^{-\frac{s}{2}-1}\partial_i F
++(r^2)^{-\frac{s}{2}} \partial_i^2 F\\
+&=-ns(r^2)^{-\frac{s}{2}-1} F +(r^2)^{-\frac{s}{2}-2} \sum_{i=1}^n \left( -s(-s-2)x_i^2F- sx_ir^2 \partial_i F
+-sx_i r^2 \partial_i F\right)\\
+&+(r^2)^{-\frac{s}{2}} \Delta F\\
+&=-ns(r^2)^{-\frac{s}{2}-1} F+(r^2)^{-\frac{s}{2}-2} \sum_{i=1}^n (s^2 x_i^2 F+2sx_i^2 F - 2sx_ir^2 \partial_i F).
+\end{align*}
+Euler's identity for positive-homogeneous functions\footnote{cf. John L. Greenberg,
+{\em Alexis Fontaine's `Fluxio-differential
+Method' and the Origins of the Calculus
+of Several Variables}, Annals of Science \textbf{38} (1981), 251--290.}
+states that if  $G:\mathbb{R}^n - \{0\} \to \mathbb{C}$ is positive-homogeneous
+of degree $s$ then $x \cdot (\nabla G)(x)=s G(x)$ for all $x$. Therefore
+\begin{align*}
+\Delta H&=-ns(r^2)^{-\frac{s}{2}-1} F + (r^2)^{-\frac{s}{2}-2} (s^2+2s)|x|^2 F 
+- (r^2)^{-\frac{s}{2}-2} \cdot 2sr^2 \cdot s F\\
+&=-ns(r^2)^{-\frac{s}{2}-1} F  + (r^2)^{-\frac{s}{2}-1} (s^2+2s) F - (r^2)^{-\frac{s}{2}-1} \cdot 2s^2F\\
+&=-sr^{-s-2}(n+s-2)F.
+\end{align*}
+For $x \in \mathbb{R}^n - \{0\}$,
+\[
+f(x/|x|) = F(x/|x|) = H(x).
+\]
+Then $\Delta_{S^{n-1}} f$ is equal to the restriction of $\Delta H$ to $S$, thus for $x \in S$, for which $|r|=1$,
+\[
+(\Delta_{S^{n-1}} f)(x) = -sr^{-s-2}(n+s-2)F(x) = 
+-s(n+s-2)f(x).
+\]
+\end{proof}
+
+
+
+
+\begin{theorem}
+If $f \in C^2(S^{n-1})$ satisfies $\Delta_{S^{n-1}}f = \lambda f$, then $\lambda \leq 0$.
+
+If $g \in C^2(S^{n-1})$ satisfies
+$\Delta_{S^{n-1}} g = \mu g$ with $\lambda \neq \mu$, then
+$\inner{f}{g} = 0$.
+\label{orthogonal}
+\end{theorem}
+\begin{proof}
+Say $\lambda \neq 0$. Then
+\begin{align*}
+\inner{f}{f} &= \frac{1}{\lambda} \inner{\Delta_{S^{n-1}}f}{f}\\
+&= \frac{1}{\lambda} \int_{S^{n-1}} (\Delta_{S^{n-1}}f) \overline{f} d\sigma\\
+&=\frac{1}{\lambda} \int_{S^{n-1}} f \Delta_{S^{n-1}} \overline{f} d\sigma\\
+&=\frac{1}{\lambda} \int_{S^{n-1}} f \overline{\Delta_{S^{n-1}} f} d\sigma\\
+&=\frac{1}{\lambda} \int_{S^{n-1}} f \overline{\lambda f} d\sigma\\
+&=\frac{\overline{\lambda}}{\lambda} \inner{f}{f}.
+\end{align*}
+Because $\lambda \neq 0$, it is not the case that $f =0$, hence $\inner{f}{f}>0$. Hence
+$\frac{\overline{\lambda}}{\lambda}=1$, which means that $\lambda \in \mathbb{R}$.
+Furthermore,
+\[
+\lambda \inner{f}{f} = \inner{\lambda f}{f} = \inner{\Delta_{S^{n-1}} f}{f}
+=\int_{S^{n-1}} (\Delta_{S^{n-1}} f) \overline{f} d\sigma <0,
+\]
+which implies that $\lambda<0$. 
+\end{proof}
+
+
+We now prove that $\Delta_{S^{n-1}}$ is invariant under the action of $SO(n)$.
+
+\begin{theorem}
+If $f \in C^2(S^{n-1})$ and $\gamma \in SO(n)$ then
+\[
+\Delta_{S^{n-1}} (\gamma \cdot f) = \gamma \cdot (\Delta_{S^{n-1}} f).
+\]
+\end{theorem}
+\begin{proof}
+Let $F(x)=f(x/|x|)$, let $g = \gamma \cdot f$, and let $G(x) =g(x/|x|)= f(\gamma^{-1}x/|\gamma^{-1}x|)$.
+For $x \in \mathbb{R}^n - \{0\}$,
+\[
+(\gamma \cdot F)(x) = F(\gamma^{-1}x) = f(\gamma^{-1}x/|\gamma^{-1}x|) = 
+G(x),
+\]
+so $\gamma \cdot F = G$. 
+It is a fact that $\Delta (\gamma \cdot F) = \gamma \cdot (\Delta F)$.\footnote{Gerald
+B. Folland, {\em Introduction to Partial Differential Equations}, second ed., p.~67, Theorem 2.1.}
+Thus for $x \in S^{n-1}$,
+\[
+(\Delta_{S^{n-1}} g)(x)=
+(\Delta G)(x)= (\gamma \cdot (\Delta F))(x)
+=(\Delta F)(\gamma^{-1}x)
+=(\Delta_{S^{n-1}} f)(\gamma^{-1}x),
+\]
+namely $\Delta_{S^{n-1}}(\gamma \cdot f) = \gamma \cdot (\Delta_{S^{n-1}} f)$.
+\end{proof}
+
+
+
+We now prove that $\Delta_{S^{n-1}}$ is symmetric and negative-definite.\footnote{\url{http://www.math.umn.edu/~garrett/m/mfms/notes_2013-14/09_spheres.pdf},
+p.~9, Proposition 4.0.1.}
+
+\begin{theorem}
+For $f,g \in C^2(S^{n-1})$,
+\[
+\int_{S^{n-1}} (\Delta_{S^{n-1}} f) \cdot g d\sigma
+=\int_{S^{n-1}} f \cdot \Delta_{S^{n-1}} g d\sigma.
+\]
+$\Delta_{S^{n-1}}$ is negative-definite:
+\[
+\int_{S^{n-1}} (\Delta_{S^{n-1}} f) \cdot \overline{f} \leq 0,
+\]
+and this is equal to $0$ only when $f$ is constant.
+\end{theorem}
+\begin{proof}
+It is a fact that if $F$ is positive-homogeneous of degree $s$ then $\Delta F$ is positive-homogeneous of degree $s-2$. 
+Let $F(x)=f(x/|x|)$ and $G(x)=g(x/|x|)$, with which
+\[
+(\Delta_{S^{n-1}} f)(x) = (\Delta F)(x),\qquad
+(\Delta_{S^{n-1}} g)(x) = (\Delta G)(x),\qquad x \in S^{n-1}
+\]
+and, because $F$ and $G$ are positive-homogeneous of degree $0$,
+\begin{align*}
+\int_{S^{n-1}} (\Delta_{S^{n-1}} f)(x) \cdot g(x)d\sigma(x)&=\int_{S^{n-1}} (\Delta F)(x) \cdot G(x) d\sigma(x)\\
+&=A_{n-1} \int_{\mathbb{R}^n} 
+(\Delta F)(x/|x|) \cdot G(x/|x|) \gamma_n(x) dx\\
+&=A_{n-1} \int_{\mathbb{R}^n} |x|^2 (\Delta F)(x) \cdot G(x) \gamma_n(x) dx.
+\end{align*}
+Because
+\[
+\partial_i(|x|^2 G \gamma_n) 
+=2x_i G\gamma_n + |x|^2 \gamma_n \partial_i G +|x|^2 G (-x_i \gamma_n),
+\]
+integrating by parts and using 
+Euler's identity for positive-homogeneous functions gives us
+\[
+\begin{split}
+&\int_{\mathbb{R}^n}(\Delta F)(x) \cdot  |x|^2 G(x) \gamma_n(x) dx\\
+=&-\int_{\mathbb{R}^n} \sum_{i=1}^n (\partial_i F)(x) \partial_i( |x|^2 G(x) \gamma_n(x)) dx\\
+=&-\int_{\mathbb{R}^n} \sum_{i=1}^n ((2G\gamma_n-|x|^2 G\gamma_n) \cdot x_i \partial_i F
++|x|^2 \gamma_n \partial_i F \partial_i G) dx\\
+=&-\int_{\mathbb{R}^n} \sum_{i=1}^n |x|^2 \gamma_n \partial_i F \cdot \partial_i G dx.
+\end{split}
+\]
+Because the above expression is the same when $F$ and $G$ are switched, this establishes 
+\[
+\int_{S^{n-1}} (\Delta_{S^{n-1}} f) \cdot g d\sigma
+=\int_{S^{n-1}} f \cdot \Delta_{S^{n-1}} g d\sigma.
+\]
+
+For $g = \overline{f}$ we have $G=\overline{F}$ and 
+\[
+\int_{S^{n-1}} (\Delta_{S^{n-1}} f) \cdot \overline{f} d\sigma
+=-A_{n-1} \int_{\mathbb{R}^n} \sum_{i=1}^n |x|^2 \gamma_n |\partial_i F|^2 dx,
+\]
+which is $\leq 0$. If it is equal to $0$ then $(\partial_i F)(x)=0$ for all $x \in \mathbb{R}^n$, 
+which means that $F$ is constant and hence that $f$ is constant.
+\end{proof}
+
+
+
+\section{Homogeneous polynomials}
+For $P(x_1,\ldots,x_n) = \sum a_\alpha x^\alpha \in \mathbb{C}[x_1,\ldots,x_n]$ write
+\[
+P(\partial) = \sum a_\alpha \partial^\alpha,\qquad \overline{P}(x_1,\ldots,x_n) = \sum \overline{a_\alpha} x^\alpha,
+\qquad \overline{P}(\partial) = \sum \overline{a_\alpha} \partial^\alpha.
+\]
+For $P,Q \in \mathbb{C}[x_1,\ldots,x_n]$, define\footnote{cf. 
+John E. Gilbert and Margaret A. M. Murray, 
+{\em Clifford Algebras and Dirac Operators in Harmonic Analysis},
+p.~164, Chapter 3, \S 3.}
+\[
+(P,Q) = (\overline{Q}(\partial P) \Big|_{x=0}.
+\]
+For $P=\sum a_\alpha x^\alpha$ and $Q=\sum b_\beta x^\beta$,
+\begin{equation}
+(P,Q)=
+\left( \sum_\beta \overline{b_\beta} \partial^\beta \sum_\alpha a_\alpha x^\alpha\right) \Big|_{x=0}
+=\sum_\beta \overline{b_\beta} a_\beta \cdot \beta!.
+\label{PQ}
+\end{equation}
+
+\begin{lemma}
+$(\cdot,\cdot)$ is a positive-definite Hermitian form on $\mathbb{C}[x_1,\ldots,x_n]$.
+\end{lemma}
+\begin{proof}
+It is apparent that $(\cdot,\cdot)$ is $\mathbb{C}$-linear in its first argument and conjugate linear in its
+second argument. From \eqref{PQ}, it satisfies $(P,Q)=\overline{(Q,P)}$, namely, $(\cdot,\cdot)$ is a 
+Hermitian form.
+For $P \in \mathbb{C}[x_1,\ldots,x_n]$,
+\[
+(P,P) = \sum_\alpha a_\alpha \overline{a_\alpha} \cdot \alpha! = \sum_\alpha |a_\alpha|^2 \cdot \alpha!
+\geq 0,
+\]
+and if $(P,P)=0$ then each $a_\alpha$ is equal to $0$, showing that $(\cdot,\cdot)$ is postive-definite.
+\end{proof}
+
+For $P=\sum_\alpha a_\alpha x^\alpha$ and $Q=\sum_\beta b_\beta x^\beta$,
+\[
+(\Delta P)(x)=\sum_\alpha a_\alpha \sum_{i=1}^n \partial_i^2 x^\alpha
+=\sum_\alpha a_\alpha \sum_{i=1}^n \frac{\alpha!}{(\alpha-2e_i)!} x^{\alpha-2e_i},
+\]
+and we calculate
+\[
+(\Delta P,Q) = \sum_{\beta} \overline{b_\beta} \sum_{i=1}^n a_{\beta+2e_i} (\beta+2e_i)!.
+\]
+On the other hand,
+\[
+r^2Q(x_1,\ldots,x_n) = \sum_\beta b_\beta x^\beta \sum_{i=1}^n x_i^2
+= \sum_\beta b_\beta \sum_{i=1}^n x^{\beta+2e_i},
+\]
+and we calculate
+\[
+(P,r^2Q)=\sum_\beta \overline{b_\beta} \sum_{i=1}^n a_{\beta+2e_i}.
+\]
+
+\begin{lemma}
+For $P,Q \in \mathbb{C}[x_1,\ldots,x_n]$, 
+\[
+(\Delta P,Q) = (P,r^2Q).
+\]
+\label{rQ}
+\end{lemma}
+
+Let $\mathscr{P}_d$ be  the set of homogeneous polynomials of degree $d$ in $\mathbb{C}[x_1,\ldots,x_n]$, 
+i.e. those 
+$P(x_1,\ldots,x_n) \in \mathbb{C}[x_1,\ldots,x_n]$
+of the form
+\[
+P(x_1,\ldots,x_n) = \sum_{|\alpha|=d} a_\alpha x^\alpha.
+\]
+We include the polynomial $P=0$, and $\mathscr{P}_d$ is a complex vector space. We calculate\footnote{cf. Arthur T. Benjamin and Jennifer J. Quinn,
+{\em Proofs that Really Count: The Art of Combinatorial Proof}, p.~71, Identity 143 and p.~74, Identity 149.}
+\begin{equation}
+\dim_\mathbb{C} \mathscr{P}_d = \{\alpha: |\alpha| = d\} = \binom{n+d-1}{d}.
+\label{Pdimension}
+\end{equation}
+Let $\mathscr{A}_d$ be the set of those $P \in \mathscr{P}_d$ satisfying $\Delta P=0$, i.e. the homogeneous harmonic polynomials of degree $d$. 
+
+
+
+We prove that $\Delta:\mathscr{P}_d \to \mathscr{P}_{d-2}$ is surjective.\footnote{\url{http://www.math.umn.edu/~garrett/m/mfms/notes_2013-14/09_spheres.pdf},
+p.~8, Claim 3.0.3.}
+
+\begin{theorem}
+The map $\Delta:\mathscr{P}_d \to \mathscr{P}_{d-2}$ is surjective. Its kernel is
+$\mathscr{A}_d$, and 
+\[
+\mathscr{A}_d^\perp = r^2 \mathscr{P}_{d-2}.
+\]
+\label{surjective}
+\end{theorem}
+\begin{proof}
+By Lemma \ref{rQ},
+\[
+0=(\Delta P,Q) = (P,r^2Q).
+\]
+In particular, $(r^2Q,r^2Q)=0$, and because $(\cdot,\cdot)$ is nondegenerate this means that
+$r^2Q=0$, and therefore $Q=0$. Because $\mathscr{P}_{d-2}$ is a finite-dimensional Hilbert space
+and the orthogonal complement of the image $\Delta \mathscr{P}_d$ is equal to $\{0\}$, it follows
+that $\Delta \mathscr{P}_d=\mathscr{P}_{d-2}$. 
+
+If $P \in (r^2 \mathscr{P}_{d-2})^\perp$ then $(P,r^2Q)=0$ for all $Q \in \mathscr{P}_{d-2}$, hence
+$(\Delta P,Q)=0$. In particular $(\Delta P,\Delta P)=0$ and so
+$\Delta P=0$, which means that $P \in \mathscr{A}_d$.
+ On the other hand if
+ $P \in \mathscr{A}_d$ then 
+$(P,r^2Q)=(\Delta P,Q)=0$, so we get that $(r^2 \mathscr{P}_{d-2})^\perp = \mathscr{A}_d$. 
+Because $\mathscr{P}_d$ is a finite-dimensional Hilbert space, this implies that
+$\mathscr{A}_d^\perp = (r^2 \mathscr{P}_{d-2})^{\perp \perp}=r^2 \mathscr{P}_{d-2}$. 
+\end{proof}
+
+The above theorem tells us that
+\[
+\mathscr{P}_d = \mathscr{A}_d \oplus \mathscr{A}_d^\perp 
+= \mathscr{A}_d \oplus r^2 \mathscr{P}_{d-2}.
+\]
+Then,
+\[
+\mathscr{P}_{d-2} = \mathscr{A}_{d-2} \oplus r^2 \mathscr{P}_{d-4},
+\]
+and by induction,
+\[
+\mathscr{P}_d = \mathscr{A}_d \oplus r^2 \mathscr{A}_{d-2}
+\oplus r^2 \mathscr{A}_{d-4} \oplus \cdots.
+\]
+For $P \in \mathscr{P}_d$, there are unique $F_0 \in \mathscr{A}_d$, $F_2 \in
+\mathscr{A}_{d-2}$, $F_4 \in \mathscr{A}_{d-4}$, etc., such that
+\[
+P=F_0+r^2F_2+r^4F_4+\cdots. 
+\]
+Let $p$ be the restriction of $P$ to $S^{n-1}$ and let $f_i$ be the restriction of $F_i$ to $S^{n-1}$.
+Since $r^2=1$ for $x \in S^{n-1}$,
+\[
+p = f_0 + f_2 + f_4 + \cdots.
+\]
+We have established the following.
+
+\begin{theorem}
+The restriction of a homogeneous polynomial to $S^{n-1}$ is equal to a sum of the restrictions of homogeneous 
+harmonic polynomials to $S^{n-1}$. 
+\label{homogeneoussum}
+\end{theorem}
+
+Using $\mathscr{P}_d = \mathscr{A}_d \oplus r^2 \mathscr{P}_{d-2}$, we
+have $\dim_\mathbb{C} \mathscr{P}_d = \dim_{\mathbb{C}} \mathscr{A}_d + \dim_{\mathbb{C}} \mathscr{P}_{d-2}$, and then using
+the  \eqref{Pdimension} for $\dim_\mathbb{C} \mathscr{P}_d$ we get the following.
+
+\begin{theorem}
+\[
+\dim_\mathbb{C} \mathscr{A}_d = \binom{n+d-1}{d}-\binom{n+d-3}{d-2}
+=\binom{n+d-2}{n-2}+\binom{n+d-3}{n-2}.
+\]
+\label{dimension}
+\end{theorem}
+
+With $n$ fixed, using the asymptotic formula
+\[
+\binom{z+k}{k} = \frac{k^z}{\Gamma(z+1)} \left(1+\frac{z(z+1)}{2k}+O(k^{-2})\right),\qquad k \to \infty,
+\]
+we get from the above lemma 
+\[
+\dim_\mathbb{C} \mathscr{A}_d  \sim \frac{2}{(n-2)!} d^{n-2}.
+\]
+
+Let $\mathscr{H}_d$ be the restrictions of $P \in \mathscr{A}_d$ to $S^{n-1}$. 
+We get the following from  Theorem \ref{Seigenvalue}.
+
+\begin{lemma}
+For $Y \in \mathscr{H}_d$,
+\[
+\Delta_{S^{n-1}} Y =\lambda_d Y
+\]
+where
+\[
+\lambda_d = 
+ -d(d+n-2)
+ =
+-\left(d+\frac{n-2}{2}\right)^2+\left(\frac{n-2}{2}\right)^2.
+\]
+$\lambda_d=0$ if and only if $d=0$; if $d_1<d_2$ then $\lambda_{d_2}<\lambda_{d_1} \leq 0$; and $\lambda_d \to -\infty$ as $d \to \infty$. 
+\label{lambdad}
+\end{lemma}
+
+
+\section{The Hilbert space {\em L\textsuperscript{2}(S\textsuperscript{n-1})}} 
+We prove that when $d_1 \neq d_2$, the subspaces
+$\mathscr{H}_{d_1}$ and $\mathscr{H}_{d_2}$ of $L^2(S^{n-1})$
+are mutually orthogonal.
+
+\begin{theorem}
+For $d_1 \neq d_2$, for $Y_1 \in \mathscr{H}_{d_1}$ and for $Y_2 \in \mathscr{H}_{d_2}$, 
+\[
+\inner{Y_1}{Y_2}=0.
+\]
+\label{Hdorthogonal}
+\end{theorem}
+\begin{proof}
+From Lemma \ref{lambdad},
+\[
+\Delta_{S^{n-1}} Y_1 =\lambda_{d_1}Y_1,
+\qquad
+\Delta_{S^{n-1}} Y_2 =\lambda_{d_2}Y_2.
+\]
+where $\lambda_d =  -d(d+n-2)$. Because $d_1 \neq d_2$ it follows that
+$\lambda_{d_1} \neq \lambda_{d_2}$ and then by Theorem \ref{orthogonal},
+$\inner{Y_1}{Y_2}=0$.
+\end{proof}
+
+
+For $\phi \in C(S^{n-1})$, write
+\[
+\norm{\phi}_{C^0} = \sup_{x \in S^{n-1}} |\phi(x)|.
+\]
+
+Let $A$ be the set of restrictions of all $P \in \mathbb{C}[x_1,\ldots,x_n]$ to
+$S^{n-1}$. $A$ is a \textbf{self-adjoint algebra}: it is a linear subspace of 
+$C(S^{n-1})$; for $p,q \in A$, with $P,Q \in \mathbb{C}[x_1,\ldots,x_n]$ such that
+$p$ is the restriction of $P$ to $S^{n-1}$ and $q$ is the restriction of $Q$ to $S^{n-1}$,
+the product $PQ$ belongs to $\mathbb{C}[x_1,\ldots,x_n]$ and $pq$ is equal
+to the restriction of $PQ$ to $S^{n-1}$, showing that $A$ is an algebra; and $\overline{p}$
+is the restriction of $\overline{P} \in \mathbb{C}[x_1,\ldots,x_n]$ to $S^{n-1}$, showing
+that $A$ is self-adjoint. 
+For distinct $u=(u_1,\ldots,u_n), v = (v_1,\ldots,v_n)$ in $S^{n-1}$, say with $u_k \neq v_k$,
+let $P(x_1,\ldots,x_n)=x_k$ and let $p$ be the restriction of $P$ to $S^{n-1}$. 
+Then $p(u) = u_k$ and $p(v)=v_k$, showing that $A$ \textbf{separates points}.
+For $u \in S^{n-1}$, let $P(x_1,\ldots,x_n) = 1$ and let
+$p$ be the restriction of $P$ to $S^{n-1}$. Then $p(u) = 1$, showing that
+$A$ is \textbf{nowhere vanishing}. Because
+$S^{n-1}$ is a compact Hausdorff space,
+we obtain from the
+\textbf{Stone-Weierstrass theorem}\footnote{Walter Rudin, {\em Functional
+Analysis}, second ed., p.~122, Theorem 5.7.} that $A$ is dense in the Banach
+space $C(S^{n-1})$: for any $\phi \in C(S^{n-1})$ and for $\epsilon>0$, there is some
+$p \in A$ such that $\norm{p-\phi}_{C^0} \leq \epsilon$. 
+
+$L^2(S^{n-1})$ is the completion of $C(S^{n-1})$ with respect to the inner product
+\[
+\inner{f}{g} = \int_{S^{n-1}} f \cdot \overline{g} d\sigma.
+\]
+For $f \in L^2(S^{n-1})$ and for $\epsilon>0$, there is some $\phi \in C(S^{n-1})$ with
+$\norm{\phi-f}_{L^2}\leq \epsilon$, and there is some $p \in A$ with
+$\norm{p-\phi}_{C^0}\leq \epsilon$.
+But for $\psi \in C(S^{n-1})$,
+\[
+\norm{\psi}_{L^2} = \left( \int_{S^{n-1}} |\psi|^2 d\sigma \right)^{1/2}
+\leq \norm{\psi}_{C^0} \cdot \sqrt{\sigma(S^{n-1})}.
+\]
+Then
+\begin{align*}
+\norm{p-f}_{L^2} &\leq \norm{p-\phi}_{L^2} + \norm{\phi-f}_{L^2}\\
+&\leq \norm{p-\phi}_{C^0} \cdot \sqrt{\sigma(S^{n-1})} + 
+\epsilon\\
+&\leq \epsilon \cdot \sqrt{\sigma(S^{n-1})}+\epsilon.
+\end{align*}
+This shows that $A$ is dense in $L^2(S^{n-1})$ with respect to the norm $\norm{\cdot}_{L^2}$. 
+
+An element of $\mathbb{C}[x_1,\ldots,x_n]$ can be written as a finite linear combination of homogeneous polynomials.
+By Theorem \ref{homogeneoussum}, the restriction to $S^{n-1}$ of each of these homogeneous polynomials
+is itself equal to a finite linear combination of homogeneous harmonic polynomials. 
+Thus for $p \in A$ there are $Y_1 \in \mathscr{H}_{d_1}, \ldots, Y_m \in \mathscr{H}_{d_m}$ with
+$p = Y_1 + \cdots + Y_m$. Therefore, the collection of all finite linear combinations of restrictions to $S^{n-1}$
+of homogeneous harmonic
+polynomials is dense in $L^2(S^{n-1})$.
+Now, Theorem \ref{Hdorthogonal} says that for $d_1 \neq d_2$, the subspaces
+$\mathscr{H}_{d_1}$ and $\mathscr{H}_{d_2}$ are mutually orthogonal. 
+Putting the above together gives the following.
+
+\begin{theorem}
+$L^2(S^{n-1}) = \bigoplus_{d \geq 0} \mathscr{H}_d$.
+\end{theorem}
+
+
+For $\phi \in C(S^{n-1})$,  
+\[
+\norm{\phi}_{L^2} \leq \sqrt{\sigma(S^{n-1})} \cdot \norm{\phi}_{C^0}.
+\]
+Similar to Nikolsky's inequality for the Fourier transform,
+for $Y \in \mathscr{H}_d$,
+the norm $\norm{Y}_{C^0}$ is upper bounded by a  multiple of the norm $\norm{Y}_{L^2}$ that depends on $d$.\footnote{\url{http://www.math.umn.edu/~garrett/m/mfms/notes_2013-14/09_spheres.pdf},
+p.~12, Proposition 6.0.1.}
+
+\begin{theorem}
+For $Y \in \mathscr{H}_d$,
+\[
+\norm{Y}_{C^0} \leq \sqrt{\frac{\dim_{\mathbb{C}} \mathscr{H}_d}{\sigma(S^{n-1})}} \cdot \norm{Y}_{L^2}.
+\]
+\label{nikolsky}
+\end{theorem}
+
+
+
+\section{Sobolev embedding}
+Let $P_d:L^2(S^{n-1}) \to \mathscr{H}_d$  the projection operator.
+Thus
+\[
+f = \sum_{d \geq 0} P_d f
+\]
+in $L^2(S^{n-1})$.
+
+We prove the \textbf{Sobolev embedding} for $S^{n-1}$.\footnote{\url{http://www.math.umn.edu/~garrett/m/mfms/notes_2013-14/09_spheres.pdf},
+p.~14, Corollary 7.0.1;
+cf. Kendall Atkinson and Weimin Han, {\em Spherical Harmonics and Approximations on the Unit Sphere: An Introduction},
+p.~119, \S 3.8}
+
+\begin{theorem}[Sobolev embedding]
+For $f \in L^2(S^{n-1})$, if $s>n-1$ and
+\[
+\sum_{d \geq 0} (1+d)^s \cdot \norm{P_d f}_{L^2}^2 < \infty
+\]
+then there is some $\phi \in C(S^{n-1})$ such that  $\phi=\sum_{d \geq 0} P_j f$ in $C(S^{n-1})$, and
+$f=\phi$ almost everywhere.
+\end{theorem}
+\begin{proof}
+By Theorem \ref{dimension} there is some $C_n$ such that
+\[
+\dim_\mathbb{C} \mathscr{H}_d \leq C_n (1+d)^{n-2}.
+\]
+Then
+by Theorem \ref{nikolsky} and the Cauchy-Schwarz inequality,
+\begin{align*}
+\sum_{d \geq 0} \norm{P_d f}_{C^0}&\leq \sum_{d \geq 0} \sqrt{\frac{\dim_{\mathbb{C}} \mathscr{H}_d}{\sigma(S^{n-1})}} \cdot \norm{P_d f}_{L^2}\\
+&\leq \sqrt{\frac{C_n}{\sigma(S^{n-1})}}
+\sum_{d \geq 0}  (1+d)^{\frac{n-2}{2}} \cdot \norm{P_d f}_{L^2}\\
+&= \sqrt{\frac{C_n}{\sigma(S^{n-1})}}
+\sum_{d \geq 0} (1+d)^{\frac{s}{2}} \norm{P_d f}_{L^2} \cdot (1+d)^{-\frac{s-n+2}{2}}\\
+&\leq  \sqrt{\frac{C_n}{\sigma(S^{n-1})}} \left(\sum_{d \geq 0} (1+d)^s \norm{P_d f}_{L^2}^2 \right) \left(
+\sum_{d \geq 0} (1+d)^{-(s-n+2)}\right)\\
+&=   \sqrt{\frac{C_n}{\sigma(S^{n-1})}}  \cdot \zeta(s-n+2) \cdot \sum_{d \geq 0} (1+d)^s \norm{P_d}_{L^2}^2\\
+&<\infty.
+\end{align*}
+Therefore  $\sum_{d=0}^m P_d f$ is a Cauchy sequence in the Banach space $C(S^{n-1})$, 
+and hence converges to some $\phi \in C(S^{n-1})$. Because 
+\[
+\norm{\sum_{d=0}^m P_d f - \phi}_{L^2} \leq 
+\sqrt{\sigma(S^{n-1})} \cdot \norm{\sum_{d=0}^m P_d f -\phi}_{C^0},
+\]
+the partial sums converge to $\phi$ in $L^2(S^{n-1})$, and hence $\phi = f$ in $L^2(S^{n-1})$, which implies that
+$\phi=f$ almost everywhere.
+\end{proof}
+
+
+
+
+\section{Hecke's identity}
+\textbf{Hecke's identity} 
+tells us the Fourier transform of a product of an element of
+$\mathscr{A}_d$ and a Gaussian.\footnote{Elias M. Stein and Guido Weiss, {\em Introduction to Fourier Analysis on Euclidean Spaces},
+p.~155, Theorem 3.4; 
+\url{http://www.math.umn.edu/~garrett/m/mfms/notes_2013-14/09_spheres.pdf}, p.~17, Theorem 9.0.1.}
+
+\begin{theorem}[Hecke's identity]
+For $f(u) = e^{-\pi |u|^2} P(u)$ with $P \in \mathscr{A}_d$,
+\[
+\widehat{f}(v) = (-i)^{d} f(v),\qquad v \in \mathbb{R}^n.
+\]
+\end{theorem}
+\begin{proof}
+Let $v \in \mathbb{R}^n$. The map
+$z \mapsto e^{-\pi z \cdot z} P(z-iv)$ is a holomorphic separately in $z_1,\ldots,z_n$, and applying Cauchy's integral theorem separately
+for $z_1,\ldots,z_n$,
+\[
+\int_{\mathbb{R}^n} e^{-\pi(u+iv)\cdot (u+iv)} P(u) du 
+=\int_{\mathbb{R}^n} e^{-\pi u\cdot u} P(u-iv) du.
+\]
+Define $Q:\mathbb{C}^n \to \mathbb{C}$ by 
+\[
+Q(z) = \int_{\mathbb{R}^n} e^{-\pi |u|^2} P(z+u) du,\qquad z \in \mathbb{C}^n,
+\]
+and thus
+\begin{align*}
+Q(-iv)& = \int_{\mathbb{R}^n} e^{-\pi (u+iv)\cdot(u+iv)} P(u) du\\
+&=\int_{\mathbb{R}^n} e^{-\pi |u|^2 + \pi|v|^2 - 2\pi i u\cdot v} P(u) du\\
+&=e^{\pi |v|^2} \widehat{f}(v).
+\end{align*}
+
+On the other hand, for $t \in \mathbb{R}^n$, using spherical coordinates, using the mean value property for the harmonic function $P$,
+and then using spherical coordinates again,
+\begin{align*}
+Q(t)&=\int_0^\infty e^{-\pi r^2} \left( \int_{S^{n-1}} P(t+w) d\sigma(w) \right) r^{n-1} dr\\
+&=\int_0^\infty e^{-\pi r^2} \sigma(S^{n-1}) P(t) \cdot r^{n-1} dr\\
+&=P(t) \int_0^\infty e^{-\pi r^2}  \left( \int_{S^{n-1}} d\sigma \right) r^{n-1} dr\\
+&=P(t) \int_{\mathbb{R}^n} e^{-\pi |x|^2} dx\\
+&=P(t).
+\end{align*}
+Because $P \in \mathbb{C}[x_1,\ldots,x_n]$, $P$ has an analytic continuation to $\mathbb{C}^n$, and then
+$P(z) = Q(z)$ for all $z \in \mathbb{C}^n$. 
+Therefore
+\[
+P(-iv) = Q(-iv) = e^{\pi |v|^2} \widehat{f}(v).
+\]
+But because $P$ is a homogeneous polynomial of degree $d$, $P(-iv) = (-i)^d P(v)$, so
+\[
+(-i)^d P(v) =  e^{\pi |v|^2} \widehat{f}(v),
+\]
+i.e.
+\[
+\widehat{f}(v) = (-i)^d e^{-\pi |v|^2} P(v) = (-i)^d f(v),
+\]
+proving the claim.
+\end{proof}
+
+
+\section{Representation theory}
+Let a complex Hilbert space $H$ with $\inner{\cdot}{\cdot}$, let $\mathscr{U}(H)$ be the group of
+unitary operators $H \to H$. 
+For a Lie group $G$, 
+a \textbf{unitary representation of $G$ on $H$} is a 
+group homomorphism $\pi:G \to \mathscr{U}(H)$ such that for each $f \in H$ the map
+$\gamma \mapsto \pi(\gamma)(f)$ is continuous $G \to H$. 
+
+
+We have defined $\sigma$ as a unique $SO(n)$-invariant regular Borel measure on $S^{n-1}$.
+It does not follow a priori that $\sigma$ is $O(n)$-invariant. But in fact, using that
+$|\gamma x|=|x|$ for $x \in \mathbb{R}^n$ and that Lebesgue measure on $\mathbb{R}^n$ is $O(n)$-invariant,
+we check that
+ $\sigma$ is $O(n)$-invariant:
+for $\gamma \in O(n)$ and a Borel set $E$ in $S^{n-1}$, 
+$\sigma(\gamma E)=\sigma(E)$, i.e. ${\gamma}^{-1}_* \sigma = \sigma$. 
+
+For $\gamma \in O(n)$ and $f \in L^2(S^{n-1})$, define
+\[
+\pi(\gamma)(f) = f \circ \gamma^{-1}.
+\]
+$\pi(\gamma)$ is linear. For $f,g \in L^2(\gamma)$,
+\begin{align*}
+\inner{\pi(\gamma)(f)}{\pi(\gamma)(g)}&=\int_{S^{n-1}} f \circ \gamma^{-1} \cdot \overline{g \circ \gamma^{-1}} d\sigma\\
+&=\int_{S^{n-1}} f \cdot \overline{g} d(\gamma^{-1})_* \sigma\\
+&=\int_{S^{n-1}} f \cdot \overline{g} d\sigma\\
+&=\inner{f}{g}.
+\end{align*}
+For $f \in L^2(S^{n-1})$, let $g = f \circ \gamma$, for which
+\[
+\pi(\gamma)(g) = g \circ \gamma^{-1} = f \circ \gamma \circ \gamma^{-1} = f,
+\]
+showing that $\pi(\gamma)$ is surjective. Hence $\pi(\gamma) \in \mathscr{U}(L^2(S^{n-1}))$.
+
+For $\gamma_1,\gamma \in O(n)$ and $f \in L^2(S^{n-1})$,
+\begin{align*}
+\pi(\gamma_1 \gamma_2)(f) &= f \circ (\gamma_1 \gamma_2)^{-1}\\
+&=f \circ (\gamma_2^{-1} \gamma_1^{-1})\\
+&=(f \circ \gamma_2^{-1}) \circ \gamma_1^{-1}\\
+&=\pi(\gamma_1)(\pi(\gamma_2^{-1}(f))),
+\end{align*}
+which means that $\pi(\gamma_1 \gamma_2) = \pi(\gamma_1)  \pi(\gamma_2)$, namely
+$\pi:O(n) \to \mathscr{U}(L^2(S^{n-1}))$ is a group homomorphism. 
+
+For $\phi \in C(S^{n-1})$ and for $\gamma_0,  \gamma \in O(n)$, 
+\[
+\norm{\pi(\gamma)(\phi)-\pi(\gamma_0)(\phi)}_{L^2}^2=\norm{\pi(\gamma_0^{-1}\gamma)(\phi) - \phi}_{L^2}^2
+\leq \sigma(S^{n-1}) \cdot \norm{\pi(\gamma_0^{-1}\gamma)(\phi) - \phi}_{C^0}^2.
+\]
+We take as given that $\norm{\pi(\gamma_0^{-1}\gamma)(\phi) - \phi}_{C^0} \to 0$ as $\gamma \to \gamma_0$ 
+in $O(n)$. 
+Using that $C(S^{n-1})$ is dense in $L^2(S^{n-1})$, one then proves that for each $f \in L^2(S^{n-1})$, the map
+$\gamma \mapsto \pi(\gamma)(f)$ is continuous $O(n) \to L^2(S^{n-1})$. 
+
+\begin{lemma}
+$\pi$ is a unitary representation of the compact Lie group $O(n)$ on the complex Hilbert space $L^2(S^{n-1})$. 
+\end{lemma}
+
+It is a fact that if $\gamma \in O(n)$ and $P \in \mathscr{P}_d$ then $\gamma \cdot P \in \mathscr{P}_d$. 
+Furthermore, for $\phi \in C^2(S^{n-1})$, $\Delta (\gamma\cdot \phi) = \gamma \cdot (\Delta \phi)$, hence
+if $P \in \mathscr{A}_d$ then $\gamma \cdot P \in \mathscr{A}_d$. 
+Then for $Y \in \mathscr{H}_d$, $\pi(\gamma)(Y)  \in \mathscr{H}_d$. This means that
+each $\mathscr{H}_d$ is a $\pi$-invariant subspace.\footnote{cf. Feng Dai and Yuan Xu,
+{\em Approximation Theory and Harmonic Analysis on Spheres and Balls},
+Chapter 1.}
+
+
+
+\end{document}

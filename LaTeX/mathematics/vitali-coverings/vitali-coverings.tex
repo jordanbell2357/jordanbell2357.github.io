@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Vitali coverings on the real line}
+\author{Jordan Bell}
+\date{March 10, 2016}
+
+\maketitle
+
+For $x \in \mathbb{R}$ and $r>0$ write
+\[
+B(x,r) = \{y \in \mathbb{R}: |y-x|<r\}.
+\]
+
+Let
+$\lambda$ be Lebesgue measure on the Borel $\sigma$-algebra of $\mathbb{R}$ and
+let $\lambda^*$ be Lebesgue outer measure on $\mathbb{R}$. 
+
+A \textbf{Vitali covering} of a set $E \subset \mathbb{R}$ is a collection $\mathcal{V}$ 
+of  closed intervals such that for $\epsilon>0$ and for $x \in E$ there is some $I \in \mathcal{V}$ 
+with $x \in I$ and
+$0<\lambda(I)<\epsilon$.
+
+The following is the \textbf{Vitali covering theorem}.\footnote{Klaus Bichteler, {\em Integration -- A Functional Approach},
+p.~161, Lemma 10.5;
+John J. Benedetto and Wojciech Czaja, {\em Integration and Modern Analysis}, p.~179, Theorem 4.3.1;
+Russell A. Gordon, {\em The Integrals of Lebesgue, Denjoy, Perron, and Henstock}, p.~52, Lemma 4.6.}
+
+
+
+\begin{theorem}[Vitali covering theorem]
+Let $U$ be an open set in $\mathbb{R}$ with $\lambda(U)<\infty$, let $E \subset U$, and let $\mathcal{V}$ be a Vitali covering of $E$
+each interval of which is contained in $U$. Then for any $\epsilon>0$, there are disjoint $I_1,\ldots,I_n \in \mathcal{V}$ such that
+\[
+\lambda^*\left(E \setminus \bigcup_{j=1}^n I_j \right)<\epsilon.
+\]
+\end{theorem}
+\begin{proof}
+Suppose that $I_1,\ldots,I_n \in \mathcal{V}$ are pairwise disjoint. If $E \subset \bigcup_{j=1}^n I_j$ then $I_1,\ldots,I_n$ satisfy the claim, and 
+otherwise,
+let 
+\[
+U_n = U \setminus \bigcup_{j=1}^n I_j,
+\]
+and there exists some $x \in E \cap U_n$. As $x \in U_n$ and $U_n$ is open, there is some $\eta>0$ such that $B(x,\eta) \subset U_n$ and then
+as $\mathcal{V}$ is a Vitali covering of $E$ there is some $I \in \mathcal{V}$ with $x \in I \subset B(x,\eta) \subset U_n$. 
+Thus $\delta_n>0$ for
+\[
+\delta_n = \sup\left\{ \lambda(I): I \in \mathcal{V}, I \subset U_n\right\},
+\]
+and there is some $I_{n+1} \in \mathcal{V}$ with $I_{n+1} \subset U_n$ and  $\lambda(I_{n+1}) > \frac{\delta_n}{2}$.
+
+For $j \geq 1$ write  $I_j=[x_j-r_j,x_j+r_j]$ and let $J_j = [x_j-5r_j,x_j+5r_j]$, namely
+$J_j$ is concentric with $I_j$ and $\lambda(J_j) = 5 \lambda(I_j)$. 
+Then, as the intervals $I_1,I_2,\ldots$ are pairwise disjoint
+Borel sets each contained in $U$,
+\[
+ \sum_{j=1}^\infty \lambda(J_j)
+= 5 \sum_{j=1}^\infty \lambda(I_j)
+= 5 \lambda\left( \bigcup_{j=1}^\infty I_j\right)
+\leq 5 \lambda(U)
+<\infty
+\]
+and it follows from $\sum_{j=1}^\infty \lambda(J_j)<\infty$  that $\sum_{j=M}^\infty \lambda(J_j) \to 0$ as $M \to \infty$,
+which with
+\[
+\lambda\left(\bigcup_{j=M}^\infty J_j \right) \leq \sum_{j=M}^\infty \lambda(J_j)
+\]
+yields $\lambda\left( \bigcup_{j=M}^\infty J_j\right) \to 0$ as $M \to \infty$. 
+
+Let $M \geq 1$. 
+If $x \in E \setminus \bigcup_{j=1}^\infty I_j$ then $x \in E \setminus \bigcup_{j=1}^M I_j$ and so
+$x \in U_M$, and as $U_M$ is open there is some $\eta>0$ with $B(x,\eta) \subset U_M$. But
+$x \in E$ and $\mathcal{V}$ is a Vitali covering of $E$, so there is some $I \in \mathcal{V}$ with
+$x \in I$ and $I \subset B(x,\eta) \subset U_M$. Now,
+$\lambda(I_{j+1}) > \frac{\delta_j}{2}$ and $\sum_{j=1}^\infty \lambda(I_j)<\infty$ together imply 
+ $\delta_n \to 0$ as $n \to \infty$, so there is some $n$ for which $\delta_n<\lambda(I)$. By the definition of
+$\delta_n$ as a supremum, this means that $I \not \subset U_n$ and so it makes sense to define $N$ to be a minimal
+positive integer such that $I \not \subset U_N$. $M<N$: if $M \geq N$ then
+$I \subset U_M \subset U_N$, contradicting $I \not \subset U_N$. (We shall merely use that $M \leq N$.)
+The fact that $I \not \subset U_N$ and $I \subset U_{N-1}$ means that $I \cap I_N \neq \emptyset$ and also,
+by the definition of $\delta_{N-1}$, $\lambda(I) \leq \delta_{N-1} < 2 \lambda(I_N)$. 
+Write $I=[y-r,y+r]$. $I \cap I_N \neq \emptyset$ tells us $y-r \leq x_N+r_N$ and $y+r \geq x_N-r_N$, and 
+$\lambda(I) < 2\lambda(I_N)$ tells us
+$2r < 4r_N$, hence
+\[
+y+r \leq x_N+r_N+2r \leq x_N + 5r_N,\qquad y-r \geq x_N-r_N-2r \geq x_N-5r_N,
+\]
+showing that
+\[
+x \in I=[y-r,y+r] \subset J_N \subset \bigcup_{j=M}^\infty J_j.
+\] 
+This is true for each $x \in E \setminus \bigcup_{j=1}^\infty I_j$, which means that
+\[
+E \setminus \bigcup_{j=1}^\infty I_j \subset \bigcup_{j=M}^\infty J_j.
+\]
+Because $\lambda( \bigcup_{j=M}^\infty J_j) \to 0$ as $M \to \infty$, this yields 
+\[
+\lambda^*\left(E \setminus \bigcup_{j=1}^\infty I_j\right) = 0.
+\]
+But $E \setminus \bigcup_{j=1}^n I_j$ is an increasing sequence of sets tending to
+$E \setminus \bigcup_{j=1}^\infty I_j$, therefore
+\[
+\lambda^*\left(E \setminus \bigcup_{j=1}^n I_j\right) \to \lambda^*\left(E \setminus \bigcup_{j=1}^\infty I_j\right) = 0,
+\qquad  n \to \infty,
+\]
+so there is some $n$ such that $\lambda^*\left(E \setminus \bigcup_{j=1}^n I_j\right) < \epsilon$ and then
+$I_1,\ldots,I_n$ satisfy the claim.
+\end{proof}
+
+\end{document}

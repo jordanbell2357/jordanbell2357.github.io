@@ -1,0 +1,354 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\HSnorm}[1]{\Vert #1 \Vert_{\ensuremath\mathrm{HS}}}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\HS}{B_{\ensuremath\mathrm{HS}}} 
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\renewcommand{\div}{\mathrm{div}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{The heat kernel on the torus}
+\author{Jordan Bell}
+\date{October 7, 2014}
+\maketitle
+
+\section{Heat kernel on 𝕋}
+For $t>0$, define $k_t:\mathbb{R} \to (0,\infty)$ by\footnote{Most of this note is my working through of notes by Patrick Maheux. \url{http://www.univ-orleans.fr/mapmo/membres/maheux/InfiniteTorusV2.pdf}}
+\[
+k_t(x) = (4\pi t)^{-1/2} \exp \left( - \frac{x^2}{4t} \right), \qquad x \in \mathbb{R}.
+\]
+For $t>0$, define $g_t:\mathbb{R} \to (0,\infty)$ by
+\[
+g_t(x) = 2\pi \sum_{k \in \mathbb{Z}} k_t(x+2\pi k), \qquad x \in \mathbb{R},
+\]
+which one checks indeed converges for all $x \in \mathbb{R}$. Of course, $g_t(x+2\pi k)=g_t(x)$ for any $k \in \mathbb{Z}$, 
+so we can interpret $g_t$ as a function on $\mathbb{T}$, where $\mathbb{T} = \mathbb{R}/2\pi\mathbb{Z}$. 
+
+Let $m$ be Haar measure on $\mathbb{T}$: $dm(x)=(2\pi)^{-1} dx$, and so $m(\mathbb{T})=1$.
+With $\norm{f}_1 = \int_{\mathbb{T}} |f| dm$ for $f:\mathbb{T} \to \mathbb{C}$, we have, because $g_t>0$,
+\[
+\norm{g_t}_1=\sum_{k \in \mathbb{Z}} \int_{\mathbb{T}} k_t(x+2\pi k) dx=\int_{\mathbb{R}} k_t(x) dx = 1.
+\]
+Hence $g_t \in L^1(\mathbb{T})$. For $\xi \in \mathbb{Z}$, we compute
+\begin{eqnarray*}
+\hat{g}_t(\xi)&=&\int_{\mathbb{T}} g_t(x) e^{-i\xi x} dm(x)\\
+&=&\sum_{k \in \mathbb{Z}} \int_{\mathbb{T}} k_t(x+2\pi k) e^{-i\xi  x} dx\\
+&=&\sum_{k \in \mathbb{Z}} \int_{\mathbb{T}} k_t(x+2\pi k) e^{-i\xi  (x+2\pi k)} dx\\
+&=&\int_{\mathbb{R}} k_t(x) e^{-i\xi x} dx\\
+&=&\hat{k}_t\left(\frac{\xi}{2\pi} \right)\\
+&=&e^{-\xi^2 t}.
+\end{eqnarray*}
+
+
+\begin{lemma}
+For $t>0$ and $x \in \mathbb{R}$,
+\[
+g_t(x)=\sqrt{\frac{\pi}{t}} \exp\left(-\frac{x^2}{4t} \right) \left(1+2\sum_{k \geq 1} \exp\left(-\frac{\pi^2 k^2}{t}\right) \cosh\left(\frac{\pi k x}{t} \right) \right).
+\]
+\label{coshlemma}
+\end{lemma}
+\begin{proof}
+Using the definition of $g_t$,
+\begin{eqnarray*}
+g_t(x)&=&2\pi \sum_{k \in \mathbb{Z}} k_t(x+2\pi k)\\
+&=&2\pi \sum_{k \in \mathbb{Z}} (4\pi t)^{-1/2} \exp\left(-\frac{(x+2\pi k)^2}{4t}\right)\\
+&=&\sqrt{\frac{\pi}{t}} \exp\left(-\frac{x^2}{4t} \right) \sum_{k \in \mathbb{Z}} \exp\left(-\frac{\pi k x}{t}\right) \exp\left(-\frac{\pi^2 k^2}{t}\right)\\
+&=&\sqrt{\frac{\pi}{t}} \exp\left(-\frac{x^2}{4t} \right)\\
+&&\left( 1+ \sum_{k \geq 1} \left( \exp\left(\frac{\pi k x}{t}\right) + \exp\left(-\frac{\pi k x}{t}\right)\right)  \exp\left(-\frac{\pi^2 k^2}{t}\right)   \right),
+\end{eqnarray*}
+which gives the claim, using $\cosh y = \frac{e^y + e^{-y}}{2}$.
+\end{proof}
+
+\begin{definition}
+For $x \in \mathbb{R}$, let $\norm{x}=\inf\{|x-2\pi k|:k \in \mathbb{Z}\}$.
+\end{definition}
+
+ For $k \in \mathbb{Z}$, $\norm{x+2\pi k}=\norm{x}$, so
+it makes sense to talk about $\norm{x}$ for $x \in \mathbb{T}$. 
+
+\begin{theorem}
+For $t>0$ and $x \in \mathbb{R}$,
+\[
+\exp\left(-\frac{\norm{x}^2}{4t}\right)  g_t(0)  \leq g_t(x) \leq \exp\left(-\frac{\norm{x}^2}{4t}\right) \left( \sqrt{\frac{\pi}{t}} + g_t(0) \right).
+\]
+\label{gt0}
+\end{theorem}
+\begin{proof}
+Let $x=2\pi m+\theta$ with $|\theta| \leq \pi$, so that $\norm{x}=\norm{\theta}=|\theta|$, and $g_t(x)=g_t(\theta)$.
+Using Lemma \ref{coshlemma} and the fact that $\cosh y \geq 1$, we get
+\[
+g_t(\theta) \geq \exp\left(-\frac{\theta^2}{4t} \right) \sqrt{\frac{\pi}{t}} \left(1+2\sum_{k \geq 1} \exp\left(-\frac{\pi^2 k^2}{t}\right)  \right)
+=\exp\left(-\frac{\theta^2}{4t} \right) g_t(0),
+\]
+hence 
+\[
+g_t(x) \geq \exp\left(-\frac{\norm{x}^2}{4t} \right) g_t(0),
+\]
+the lower bound we wanted to prove.
+
+Write
+\[
+S=1+2\sum_{k \geq 1} \exp\left(-\frac{\pi^2 k^2}{t}\right) \cosh \left( \frac{\pi k \theta}{t} \right).
+\]
+For any $k \geq 1$, using $|\theta| \leq \pi$,
+\[
+2\cosh\left(\frac{\pi k \theta}{t} \right) \leq 2\cosh\left( \frac{\pi^2 k}{t} \right) = \exp\left(\frac{\pi^2 k}{t}\right) + \exp\left(-\frac{\pi^2 k}{t} \right)
+\leq 1+ \exp\left(\frac{\pi^2 k}{t}\right).
+\]
+Hence
+\begin{eqnarray*}
+S&\leq&1+\sum_{k \geq 1} \exp\left(-\frac{\pi^2 k^2}{t}\right) \left(1+ \exp\left(\frac{\pi^2 k}{t}\right) \right)\\
+&=&1+\sum_{k \geq 1} \exp\left(-\frac{\pi^2 k^2}{t}\right) + \exp\left(- \frac{\pi^2 k (k-1)}{t} \right)\\
+&\leq&1+\sum_{k \geq 1} \exp\left(-\frac{\pi^2 k^2}{t}\right) + \exp\left(- \frac{\pi^2(k-1)^2}{t} \right)\\
+&=&2+2\sum_{k \geq 1}  \exp\left(-\frac{\pi^2 k^2}{t}\right)\\
+&=&1+\sqrt{\frac{t}{\pi}} g_t(0).
+\end{eqnarray*}
+But $g_t(\theta)=\sqrt{\frac{\pi}{t}} \exp\left(-\frac{\theta^2}{4t}\right) S$, so
+\[
+g_t(\theta) \leq \exp\left(-\frac{\theta^2}{4t}\right) \left( \sqrt{\frac{\pi}{t}} + g_t(0) \right)=
+\exp\left(-\frac{\norm{x}^2}{4t}\right) \left( \sqrt{\frac{\pi}{t}} + g_t(0) \right),
+\]
+the upper bound we wanted to prove.
+\end{proof}
+
+Applying Lemma \ref{coshlemma} with $x=0$ gives
+$g_t(0) \geq \sqrt{\frac{\pi}{t}}$, and using this with the above theorem we obtain
+\begin{equation}
+g_t(x) \leq 2  \exp\left(-\frac{\norm{x}^2}{4t}\right) g_t(0).
+\label{2bound}
+\end{equation}
+
+
+\begin{theorem}
+For $t>0$, 
+\[
+\sqrt{\frac{\pi}{t}} \leq g_t(0) \leq 1+ \sqrt{\frac{\pi}{t}}
+\]
+and
+\[
+2e^{-t} \leq g_t(0) - 1 \leq \frac{2e^{-t}}{1-e^{-t}}.
+\]
+\label{0inequality}
+\end{theorem}
+\begin{proof}
+Using Lemma \ref{coshlemma} we have
+\[
+g_t(0) \geq \sqrt{\frac{\pi}{t}}.
+\]
+For each $x \in \mathbb{R}$ we have
+\[
+g_t(x)= \sum_{k \in \mathbb{Z}} \hat{g}_t(k) e^{ikx} = \sum_{k \in \mathbb{Z}} e^{-k^2t} e^{ikx} = 
+1+2\sum_{k \geq 1} e^{-k^2t} \cos(kx).
+\]
+Writing $\phi(t)=\sum_{k \geq 1} e^{-k^2t}$, we then have
+\[
+g_t(0) = 1 + 2\phi(t).
+\]
+But as $e^{-x^2 t}$ is positive and decreasing, bounding a sum by an integral we get
+\[
+\phi(t) \leq \int_0^\infty e^{-x^2 t} dx =\frac{1}{\sqrt{t}} \int_0^\infty e^{-x^2} dx = \frac{1}{2} \sqrt{\frac{\pi}{t}},
+\]
+hence
+\[
+g_t(0)=1+2\phi(t) \leq 1 + \sqrt{\frac{\pi}{t}}.
+\]
+Moreover, because $\phi(t) \geq e^{-t}$ (lower bounding the sum by the first term), we have
+\[
+g_t(0) =1+2\phi(t) \geq 1+2e^{-t}.
+\]
+Finally, because $e^{-tk^2} \leq e^{-tk}$ for $k \geq 1$,
+\[
+\phi(t) \leq \sum_{k \geq 1} e^{-tk} = e^{-t} \frac{1}{1-e^{-t}},
+\]
+thus
+\[
+g_t(0) \leq 1 + \frac{2e^{-t}}{1-e^{-t}}.
+\]
+\end{proof}
+
+Taking $t \to 0$ and $t \to \infty$ in the above theorem gives the following asymptotics.
+
+\begin{corollary}
+\[
+g_t(0) \sim \sqrt{\frac{\pi}{t}}, \qquad t \to 0
+\]
+and
+\[
+g_t(0) -1 \sim 2e^{-t}, \qquad t \to \infty.
+\]
+\end{corollary}
+
+
+\section{Heat kernel on 𝕋\textsuperscript{{\em n}}}
+Fix $n \geq 1$, and let $\mathscr{A}=(a_1,\ldots,a_n)$, $a_i$ positive real numbers. We define
+$g_t^\mathscr{A}:\mathbb{R}^n \to (0,\infty)$ by 
+\[
+g_t^\mathscr{A}(x) = \prod_{k=1}^n g_{a_k t}(x_k), \qquad x =(x_1,\ldots,x_n) \in \mathbb{R}^n.
+\]
+For $x \in \mathbb{R}^n$ and $\xi \in \mathbb{Z}^n$ we have
+\[
+g_t^\mathscr{A}(x+2\pi \xi)= \prod_{k=1}^n g_{a_k t}(x_k+2\pi \xi_k)
+=\prod_{k=1}^n g_{a_k t}(x_k)=
+ g_t^\mathscr{A}(x),
+\]
+so $g_t^\mathscr{A}$ can be interpreted as a function on $\mathbb{T}^n$.
+
+Let $m_n$ be Haar measure on $\mathbb{T}^n$:
+\[
+dm_n(x) = \prod_{k=1}^n dm(x_k) = \prod_{k=1}^n (2\pi)^{-1} dx_k = (2\pi)^{-n} dx,
+\] 
+which satisfies $m_n(\mathbb{T}^n)=1$.
+Define $\mu_t^\mathscr{A}$ to be the measure on $\mathbb{T}^n$ whose density with respect to $m_n$
+is $g_t^\mathscr{A}$:
+\[
+d\mu_t^{\mathscr{A}} = g_t^{\mathscr{A}} dm_n.
+\]
+
+We now calculate the Fourier coefficients of $g_t^\mathscr{A}$. For $\xi \in \mathbb{Z}^n$,
+\begin{eqnarray*}
+\mathscr{F}(g_t^\mathscr{A})(\xi)&=&\int_{\mathbb{T}^n} g_t^\mathscr{A}(x) e^{-i\xi \cdot x} dm_n(x)\\
+&=&\int_{\mathbb{T}^n} \prod_{k=1}^n g_{a_k t}(x_k) e^{-i\xi_1 x_1 - \cdots -i\xi_n x_n} dm_n(x)\\
+&=& \prod_{k=1}^n \int_{\mathbb{T}} g_{a_k t}(x_k) e^{-i\xi_k x_k} dm(x_k)\\
+&=&\prod_{k=1}^n \hat{g}_{a_kt}(\xi_k)\\
+&=&\prod_{k=1}^n e^{-\xi_k^2 a_k t}\\
+&=&e^{-tq(\xi)},
+\end{eqnarray*}
+where
+\[
+q(\xi) = \sum_{k=1}^n a_k \xi_k^2, \qquad \xi \in \mathbb{Z}^n.
+\]
+
+\begin{definition}
+For $x=(x_1,\ldots,x_n) \in \mathbb{R}^n$ we define
+\[
+\norm{x}_\mathscr{A}^2 = \frac{1}{a_1} \norm{x_1}^2 + \cdots + \frac{1}{a_n} \norm{x_n}^2,
+\]
+with $\mathscr{A}=(a_1,\ldots,a_n)$.
+\end{definition}
+
+
+For $\xi =(\xi_1,\ldots,\xi_n) \in \mathbb{Z}^n$, because $\norm{x_k+2\pi \xi_k}=\norm{x_k}$, we have $\norm{x+2\pi \xi}_\mathscr{A}=
+\norm{x}_\mathscr{A}$, so it makes sense to talk about $\norm{\cdot}_\mathscr{A}$ on $\mathbb{T}^n$.
+
+Using Theorem \ref{gt0} and \eqref{2bound} we get the following.
+
+\begin{theorem}
+For $t>0$ and $x \in \mathbb{R}^n$,
+\[
+\exp\left(-\frac{\norm{x}_\mathscr{A}^2}{4t} \right) g_t^\mathscr{A}(0) \leq
+g_t^\mathscr{A}(x) \leq 2^n \exp \left(-\frac{\norm{x}_\mathscr{A}^2}{4t} \right) g_t^\mathscr{A}(0).
+\]
+\end{theorem}
+
+Combining this with Theorem \ref{0inequality} we obtain the following. The first
+inequality is appropriate for $t \to 0^+$ and the second inequality for $t \to \infty$.
+
+\begin{theorem}
+For $t>0$ and $x \in \mathbb{R}^n$,
+\[
+\exp\left(-\frac{\norm{x}_\mathscr{A}^2}{4t} \right) \prod_{k=1}^n \sqrt{\frac{\pi}{a_k t}} 
+\leq g_t^\mathscr{A}(x)
+\leq
+2^n
+\exp\left(-\frac{\norm{x}_\mathscr{A}^2}{4t} \right) 
+\prod_{k=1}^n\left(1+ \sqrt{\frac{\pi}{a_k t}}\right)
+\]
+and
+\[
+\exp\left(-\frac{\norm{x}_\mathscr{A}^2}{4t} \right) \prod_{k=1}^n \left( 1+2e^{-a_k t}\right) \leq
+g_t^\mathscr{A}(x)
+\leq
+2^n
+\exp\left(-\frac{\norm{x}_\mathscr{A}^2}{4t} \right) 
+\prod_{k=1}^n \left(1+\frac{2e^{-a_kt}}{1-e^{-a_kt}} \right).
+\]
+\label{productinequality}
+\end{theorem}
+
+
+
+\section{The infinite-dimensional torus}
+$\mathbb{T}^\infty$ with the product topology is a compact abelian group. Let $m_\infty$ be Haar measure on $\mathbb{T}^\infty$:
+\[
+dm_\infty(x) = \prod_{k=1}^\infty dm(x_k),\qquad x=(x_1,x_2,\ldots) \in \mathbb{T}^\infty,
+\]
+where $m$ is Haar measure on $\mathbb{T}$.
+
+For $t>0$, let $\mu_t$ be the measure on $\mathbb{T}$ whose density with respect to Haar measure $m$
+is $g_t$:
+\[
+d\mu_t = g_t  dm.
+\]
+This is a probability measure on $\mathbb{T}$.
+
+Let $\mathscr{A}=(a_1,a_2,\ldots) \in \mathbb{N}^\infty$. For $t>0$ we define
+\[
+\mu_t^{\mathscr{A}} = \prod_{k=1}^\infty \mu_{a_k t}.
+\]
+This is a probability measure on $\mathbb{T}^\infty$.\footnote{Christian Berg
+determines conditions on $\mathscr{A}$ and $t$ so that 
+$\mu_t^{\mathscr{A}}$ is absolutely continuous with respect to 
+Haar measure $m_\infty$ on $\mathbb{T}^\infty$:
+{\em Potential theory on the infinite dimensional torus}, Invent. Math. \textbf{32} (1976), no. 1, 49--100.}
+
+
+The Pontryagin dual of $\mathbb{T}^\infty$ is the direct sum $\bigoplus_{k=1}^\infty \mathbb{Z}$, which we denote
+by $\mathbb{Z}^{(\infty)}$, which is a discrete abelian group. For $\xi \in \mathbb{Z}^{(\infty)}$ and $x \in \mathbb{T}^\infty$, we write
+\[
+e_\xi(x) = \exp\left(i\sum_{k=1}^\infty \xi_k x_k \right).
+\]
+
+The Fourier transform of $\mu_t^{\mathscr{A}}$ is
+$\mathscr{F}(\mu_t^{\mathscr{A}}):\mathbb{Z}^{(\infty)} \to \mathbb{C}$
+defined by
+\[
+\mathscr{F}(\mu_t^{\mathscr{A}})(\xi)
+=\int_{\mathbb{T}^\infty} e_{-\xi}(x) dm_\infty(x), \qquad
+\xi \in \mathbb{Z}^{(\infty)},
+\]
+which is
+\begin{align*}
+\int_{\mathbb{T}^\infty} e_{-\xi}(x) dm_\infty(x)&=
+\int_{\mathbb{T}^\infty} \exp\left(-i\sum_{k=1}^\infty \xi_k x_k \right) d\mu_t^{\mathscr{A}}(x)\\
+&=\int_{\mathbb{T}^\infty} \prod_{k=1}^\infty \exp(-i\xi_k x_k) d\mu_t^{\mathscr{A}}(x)\\
+&=\prod_{k=1}^\infty \int_{\mathbb{T}}  \exp(-i\xi_k x_k) g_{a_k t}(x_k) dm(x_k)\\
+&=\prod_{k=1}^\infty \hat{g}_{a_k t}(\xi_k)\\
+&=\prod_{k=1}^\infty \exp(-\xi_k^2 a_k t)\\
+&=\exp\left( -t \sum_{k=1}^\infty a_k \xi_k^2 \right).
+\end{align*}
+
+
+
+\section{Convergence of infinite products}
+If $c_k \geq 0$, then for any $n$,
+\[
+1+\sum_{k=1}^n c_k \leq \prod_{k=1}^n (1+c_k) \leq \exp\left(\sum_{k=1}^n c_k \right).
+\]
+Thus, the limit of $\prod_{k=1}^n (1+c_k)$ as $n \to \infty$ exists if and only if
+\[
+\sum_{k=1}^\infty c_k<\infty.
+\]
+ For the second inequality in Theorem \ref{productinequality}, 
+the limit of $\prod_{k=1}^n \left(1+2e^{-a_kt}\right)$ as $n \to \infty$ exists if and only if
+\[
+\sum_{k=1}^\infty 2e^{-a_kt}<\infty.
+\]
+
+
+
+
+\end{document}

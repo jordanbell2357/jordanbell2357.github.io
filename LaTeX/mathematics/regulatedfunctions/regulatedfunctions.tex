@@ -1,0 +1,378 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\point}{\ensuremath\sigma_{\mathrm{point}}} 
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{Regulated functions and the regulated integral}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+\maketitle
+
+\section{Regulated functions and step functions}
+Let $I=[a,b]$ and let $X$ be a normed space. A function $f:I \to X$ is said to be {\em regulated} if for all
+$t \in [a,b)$ the limit $\lim_{s \to t^+} f(s)$ exists and for all $t \in (a,b]$ the limit $\lim_{s \to t^-} f(s)$ exists. 
+We denote these limits respectively by $f(t^+)$ and $f(t^-)$.
+We define $R(I,X)$ to be the set of regulated functions $I \to X$. It is apparent that $R(I,X)$ is a vector space. One checks that a regulated function is bounded,
+and that $R(I,X)$ is a normed space with the norm
+$\norm{f}_\infty=\sup_{t \in [a,b]} \norm{f(t)}$.
+
+\begin{theorem}
+If $I$ is a compact interval in $\mathbb{R}$ and $X$ is a normed algebra, then $R(I,X)$ is a normed algebra.
+\end{theorem}
+\begin{proof}
+If $f,g \in R(I,X)$, then $fg \in R(I,X)$ because the limit of a product is equal to a product of limits. 
+For $t \in I$ we have
+\[
+\norm{(fg)(t)} = \norm{f(t)g(t)} \leq \norm{f(t)}  \norm{g(t)} \leq \norm{f}_\infty \norm{g}_\infty,
+\]
+so $\norm{fg}_\infty \leq \norm{f}_\infty \norm{g}_\infty$. 
+\end{proof}
+
+A function $f:I \to X$, where $I=[a,b]$, is said to be a {\em step function} if there are $a=s_0<s_1<\cdots<s_k=b$ for which
+$f$ is constant on each open interval $(s_{i-1},s_i)$.  
+We denote the set of step functions $I \to X$ by $S(I,X)$. 
+It is apparent that $S(I,X)$ is contained in $R(I,X)$ and is a vector subspace, and the following theorem states that if $X$ is a Banach space then $S(I,X)$ is dense in $R(I,X)$.\footnote{Jean Dieudonn\'e, {\em Foundations of Modern Analysis}, enlarged and corrected printing, p.~145, Theorem 7.6.1;
+Rodney Coleman, {\em Calculus on Normed Vector Spaces}, p.~70, Proposition 3.3; 
+cf. Robert G. Bartle, {\em A Modern Theory of
+Integration}, p.~49, Theorem 3.17.}
+
+\begin{theorem}
+Let $I$ be a compact interval in $\mathbb{R}$, let $X$ be a Banach space, and let $f \in X^I$. $f \in R(I,X)$ 
+if and only if for all $\epsilon>0$ there is some $g \in S(I,X)$ such that $\norm{f-g}_\infty<\epsilon$.
+\label{stepdense}
+\end{theorem}
+
+
+
+We prove  in the following theorem that the set of regulated functions from a compact interval to a Banach space is itself a Banach space.
+
+\begin{theorem}
+If $I$ is a compact interval in $\mathbb{R}$ and $X$ is a Banach space, then $R(I,X)$ is a Banach space.
+\end{theorem}
+\begin{proof}
+Let $f_n \in R(I,X)$ be a Cauchy sequence. For each $t \in I$ we have
+\[
+\norm{f_n(t)-f_m(t)} \leq \norm{f_n-f_m}_\infty,
+\] 
+hence $f_n(t)$ is a Cauchy sequence in $X$. As $X$ is a Banach space, this Cauchy sequence converges to some limit, and we define
+$f(t)$ to be this limit. Thus $f \in X^I$ and $\norm{f-f_n}_\infty \to 0$. We have to prove that $f \in R(I,X)$.
+Let $\epsilon>0$. There is some $N$ for which $n \geq N$ implies that $\norm{f-f_n}_\infty < \epsilon$; in particular,
+$\norm{f-f_N}_\infty<\epsilon$.
+By Theorem \ref{stepdense}, there is some $g_N \in S(I,X)$ with $\norm{f_N-g_N}_\infty<\epsilon$. Then,
+\[
+\norm{f-g_N}_\infty \leq \norm{f-f_N}_\infty+\norm{f_N-g_N}_\infty < 2\epsilon,
+\]
+and by Theorem \ref{stepdense} this implies that $f \in R(I,X)$.
+\end{proof}
+
+
+The following lemma shows that the set of points of discontinuity of a regulated function taking values in a Banach space is countable.
+
+\begin{lemma}
+If $I$ is a compact interval in $\mathbb{R}$,  $X$ is a Banach space, and  $f \in R(I,X)$, then 
+\[
+\{t \in I: \textrm{$f$ is discontinuous at $t$}\}
+\]
+is countable.
+\label{countable}
+\end{lemma}
+\begin{proof}
+For each $n$ let $g_n \in S(I,X)$ satisfy $\norm{f-g_n} \leq \frac{1}{n}$, and let
+\[
+D_n=\{t \in I: \textrm{$g_n$ is discontinuous at $t$}\}.
+\]
+$g_n$ is a step function so $D_n$ is finite, and hence $D=\bigcup_{n=1}^\infty D_n$ is countable.
+It need not be true that
+$f$ is discontinuous at each point in $D$, but we shall prove that
+if $t \in I \setminus D$ then $f$ is continuous at $t$, which will prove the claim.
+
+Suppose that $t \in I \setminus D$,  let $\epsilon>0$, and take $N>\frac{1}{\epsilon}$. 
+As $t \not \in D_N$, the step function $g_N$ is continuous at $t$, and hence there is some
+$\delta>0$ for which $|s-t|<\delta$ implies that $\norm{g_N(s)-g_N(t)}<\epsilon$.
+If $|s-t| < \delta$, then
+\begin{eqnarray*}
+\norm{f(s)-f(t)} &\leq& \norm{f(s)-g_N(s)}+\norm{g_N(s)-g_N(t)}+\norm{g_N(t)-f(t)}\\
+&\leq&2\norm{f-g_N}_\infty + \norm{g_N(s)-g_N(t)}\\
+&<&\frac{2}{N} + \epsilon\\
+&<&3\epsilon,
+\end{eqnarray*}
+showing that $f$ is continuous at $t$. 
+\end{proof}
+
+
+
+\section{Integrals of step functions}
+Let $I=[a,b]$ and let $X$ be a normed space. If $f \in S(I,X)$ then there is a subdivision $a=s_0<s_1<\cdots<s_k=b$ of $[a,b]$ and there are
+$c_i \in X$ such that $f$ takes the value $c_i$ on the open interval $(s_{i-1},s_i)$. Suppose that there is a subdivision $a=t_0<t_1<\cdots<t_l=b$ of $[a,b]$ and 
+$d_i \in X$ such that $f$ takes the value $d_i$ on the open interval $(t_{i-1},t_i)$. 
+One checks that
+\[
+\sum_{i=1}^k (s_i-s_{i-1})c_i = \sum_{i=1}^l (t_i-t_{i-1})d_i.
+\]
+We define the {\em integral}  of $f$ to be the above element of $X$, and denote this element of $X$ by $\int_I f=\int_a^b f$.
+
+\begin{lemma}
+If $I$ is a compact interval in $\mathbb{R}$ and $X$ is a normed space, then $\int_I:S(I,X) \to X$ is linear.
+\end{lemma}
+
+\begin{lemma}
+If $I=[a,b]$ and $X$ is a normed space, then $\int_I:S(I,X) \to X$ is a bounded linear map with operator norm $b-a$.
+\label{operatornorm}
+\end{lemma}
+\begin{proof}
+If $f \in S(I,X)$, let $a=s_0<s_1<\cdots<s_k=b$ be a subdivision of $[a,b]$ and let $c_i \in X$ such that $f$ takes the value 
+$c_i$ on the open interval $(s_{i-1},s_i)$. Then,
+\[
+\norm{\int_I f} \leq \sum_{i=1}^k (s_i-s_{i-1}) \norm{c_i} \leq
+\sum_{i=1}^k (s_i-s_{i-1}) \norm{f}_\infty 
+=(b-a)\norm{f}_\infty.
+\]
+This shows that $\norm{\int_I} \leq b-a$, and if $f$ is constant, say $f(t)=c \in X$ for all $t \in I$, then $\int_I f = (b-a)c$ and 
+$\norm{\int_I f}=(b-a)\norm{c}=(b-a)\norm{f}_\infty$, showing that $\norm{\int_I}=b-a$.
+\end{proof}
+
+\begin{lemma}
+If $a \leq b \leq c$, if $X$ is a normed space, and if $g \in S([a,c],X)$, then
+\[
+\int_a^c g = \int_a^b g + \int_b^c g.
+\]
+\label{chaslesstep}
+\end{lemma}
+
+
+
+\section{The regulated integral}
+Let $I$ be a compact interval in $\mathbb{R}$ and let $X$ be a Banach space.
+Theorem \ref{stepdense} shows that $S(I,X)$ is a dense subspace of $R(I,X)$, and therefore
+if $T_0 \in \mathscr{B}(S(I,X), X)$ then there is one and only one 
+$T \in \mathscr{B}(R(I,X), X)$ whose restriction to $S(I,X)$ is equal to $T_0$, and this operator satisfies $\norm{T}=\norm{T_0}$. 
+ Lemma \ref{operatornorm}
+ shows that $\int_I:S(I,X) \to X$ is a bounded linear operator, thus there is one and only one bounded linear
+ operator
+ $R(I,X) \to X$ whose restriction to $S(I,X)$ is equal to $\int_I$, and we denote this operator $R(I,X) \to X$ also by $\int_I$. 
+ With $I=[a,b]$, we have $\norm{\int_I}=b-a$. We call $\int_I:R(I,X) \to X$ the {\em regulated integral}.
+ 
+\begin{lemma}
+If $a \leq b \leq c$, if $X$ is a Banach space, and if $f \in R([a,c],X)$, then
+\[
+\int_a^c f = \int_a^b f + \int_b^c f.
+\]
+\label{chaslesregulated}
+\end{lemma}
+\begin{proof}
+Let $I_1=[a,b]$, $I_2=[b,c]$, $I=[a,c]$, and let $f_1$ and $f_2$ be the restriction of $f$ to $I_1$ and $I_2$ respectively. 
+From the definition of regulated functions, $f_1 \in R(I_1,X)$ and $f_2 \in R(I_2,X)$.
+By Theorem \ref{stepdense},
+for any $\epsilon>0$ there is
+some $g \in S(I,X)$ satisfying $\norm{f-g}_\infty<\epsilon$. Taking $g_1$ and $g_2$ to be the restriction of $g$
+to $I_1$ and $I_2$, we check that $g_1 \in S(I_1,X)$ and $g_2 \in S(I_2,X)$. Then by Lemma \ref{chaslesstep}, 
+\begin{eqnarray*}
+\norm{\int_I f - \int_{I_1}f_1 -\int_{I_2}f_2}_\infty&\leq&\norm{\int_I f - \int_I g}_\infty + \norm{\int_I g -\int_{I_1} g_1 - \int_{I_2} g_2}_\infty\\
+&&+\norm{\int_{I_1} g_1 + \int_{I_2} g_2 - \int_{I_1}f_1 -\int_{I_2}f_2}_\infty\\
+&=&\norm{\int_I (f-g)}_\infty + 0\\
+&&+\norm{\int_{I_1}(g_1-f_1)}_\infty + \norm{\int_{I_2}(g_2-f_2)}_\infty\\
+&\leq&(c-a)\norm{f-g}_\infty + (b-a)\norm{g_1-f_2}_\infty \\
+&&+ (c-b)\norm{g_2-f_2}_\infty.
+\end{eqnarray*}
+But $\norm{g_1-f_1}_\infty \leq \norm{g-f}_\infty$ and $\norm{g_2-f_2}_\infty \leq \norm{g-f}_\infty$, hence we obtain
+\[
+\norm{\int_I f - \int_{I_1}f_1 -\int_{I_2}f_2}_\infty < (c-a)\epsilon+(b-a)\epsilon+(c-b)\epsilon = 2(c-a)\epsilon.
+\]
+Since $\epsilon>0$ was arbitrary, we get
+\[
+\norm{\int_I f - \int_{I_1}f_1 -\int_{I_2}f_2}_\infty = 0,
+\]
+so
+\[
+\int_I f = \int_{I_1}f_1 + \int_{I_2}f_2,
+\]
+proving the claim.
+\end{proof}
+
+We prove that applying a bounded linear map and taking the regulated integral commute.\footnote{Jean-Paul Penot, {\em Calculus Without Derivatives}, p.~124, Proposition 2.18.}
+
+\begin{lemma}
+Suppose that $I$ is a compact interval in $\mathbb{R}$ and that $X$ and $Y$ are Banach spaces.
+If $f \in R(I,X)$ and $T \in \mathscr{B}(X,Y)$, then $T \circ f \in R(I,Y)$ and 
+\[
+\int_I T \circ f = T \int_I f.
+\]
+\end{lemma}
+\begin{proof}
+Because $T$ is continuous we have $T \circ f \in R(I,Y)$. For $\epsilon>0$, there is some
+$g \in S(I,X)$ satisfying $\norm{f - g}_\infty<\epsilon$. Write $I=[a,b]$.
+Because $g$ is a step function, there is a subdivision $a=s_0<s_1<\cdots<s_k=b$ of $I$
+and there are $c_i \in X$ such that $g$ takes the value $c_i$ on the open interval $(s_{i-1},s_i)$.
+Furthermore, $T \circ g$ takes the value $Tc_i$ on the open interval $(s_{i-1},s_i)$ so $T \circ g \in
+S(I,Y)$, and then because $T$ is linear,
+\[
+\int_I T \circ g = \sum_{i=1}^k (s_i-s_{i-1}) Tc_i =
+T \sum_{i=1}^k (s_i-s_{i-1})c_i = T \int_I g.  
+\]
+Using this,
+\begin{eqnarray*}
+\norm{\int_I T \circ f - T \int_I f} &\leq& \norm{\int_I T \circ f - \int_I T \circ g} + \norm{\int_I T \circ g - T \int_I g}\\
+&&+\norm{T \int_I g - T \int_I f}\\
+&=&\norm{\int_I T \circ (f-g) } + \norm{T \int_I (f-g)}\\
+&\leq&(b-a) \norm{T \circ (f-g) }_\infty + \norm{T} \norm{\int_I (f-g)}\\
+&\leq&(b-a) \norm{T} \norm{f-g}_\infty + \norm{T} (b-a) \norm{f-g}_\infty\\
+&<&2(b-a)\norm{T} \epsilon.
+\end{eqnarray*}
+As $\epsilon>0$ is arbitrary, this means that
+\[
+\norm{\int_I T \circ f - T \int_I f} = 0,
+\]
+and so
+\[
+\int_I T \circ f = T \int_I f.
+\]
+\end{proof}
+
+
+\section{Left and right derivatives}
+Suppose that $I$ is an open interval in $\mathbb{R}$, $X$ is a normed space,
+$f \in X^I$, and $t \in I$. We say that $f$ is {\em right-differentiable at $t$} if
+$\frac{f(t+h)-f(t)}{h}$ has a limit as $h \to 0^+$, and that $f$ is {\em left-differentiable at $t$} if
+$\frac{f(t+h)-f(t)}{h}$ has a limit as $h \to 0^-$. 
+We call these limits respectively the {\em right derivative of $f$ at $t$} and the {\em left derivative of $f$ at $t$},
+denoted respectively by
+$f_+'(t)$ and $f_-'(t)$. For $f$ to be differentiable at $t$ means that $f_+'(t)$ and $f_-'(t)$ exist and are equal.
+
+
+The following is the mean value theorem for functions taking values in a Banach space.\footnote{Henri Cartan, {\em Differential Calculus}, p.~39, Theorem 3.1.3.}
+
+\begin{theorem}[Mean value theorem]
+Suppose that $I=[a,b]$, that $X$ is a Banach space, and that $f:I \to X$ and $g:I \to \mathbb{R}$ are continuous
+functions. If there is a countable set $D \subset I$ such that $t \in I \setminus D$ implies that
+$f_+'(t)$ and $g_+'(t)$ exist and satisfy $\norm{f_+'(t)} \leq g_+'(t)$, then 
+\[
+\norm{f(b)-f(a)} \leq g(b)-g(a).
+\]
+\label{meanvalue}
+\end{theorem}
+
+\begin{corollary}
+Suppose that $I=[a,b]$, that $X$ is a Banach space, and that $f:I \to X$ is continuous. If there is a countable set
+$D \subset I$ such that $t \in I \setminus D$ implies that $f_+'(t)=0$, then $f$ is constant on $I$.
+\label{constant}
+\end{corollary}
+
+
+\section{Primitives}
+Let $I=[a,b]$, let $X$ be a normed space,  and let $f,g \in X^I$. We say that $g$ is a {\em primitive of $f$} if
+$g$ is continuous and 
+if there is a countable set $D \subset I$ such that $t \in I \setminus D$ implies
+that $g$ is differentiable at $t$ and $g'(t)=f(t)$.
+
+\begin{lemma}
+Suppose that $I$ is a compact interval in $\mathbb{R}$, that $X$ is a Banach space, and that
+$f:I \to X$ is a function. If $g_1,g_2:I \to X$ are primitives of $f$, then $g_1-g_2$ is constant on $I$.
+\label{primitivedifference}
+\end{lemma}
+\begin{proof}
+For $i=1,2$, as $g_i$ is a primitive of $f$ there is a countable set $D_i \subset I$ such that $t \in I \setminus D_i$
+implies that
+$g_i$ is differentiable at $t$ and $g_i'(t) = f(t)$.
+Let $D=D_1 \cup D_2$, which is a countable set. Both $g_1$ and $g_2$ are continuous so $g=g_1-g_2:I \to X$ is continuous, and if $t \in I \setminus D$
+then $g$ is differentiable at $t$ and $g'(t)=g_1'(t)-g_2'(t)=f(t)-f(t)=0$. Then Corollary \ref{constant} shows that $g$ is constant on
+$I$, i.e., that $g_1-g_2$ is constant on $I$.\end{proof}
+
+We now give a construction of primitives of regulated functions.\footnote{Jean-Paul Penot, {\em Calculus Without Derivatives}, p.~124, Theorem 2.19.}
+
+\begin{theorem}
+If $I=[a,b]$, $X$ is a Banach space,  and $f \in R(I,X)$, then
+the map $g:I \to X$ defined by $g(t)=\int_a^t f$ is a primitive of $f$ on $I$.
+\label{primitive}
+\end{theorem}
+\begin{proof}
+For $t \in [a,b)$ and $\epsilon>0$, because $f$ is regulated there is some $0<\delta<b-t$ such that
+$0<r \leq \delta$ implies that $\norm{f(t+r)-f(t^+)} \leq \epsilon$. For $0<r \leq \delta$ and for
+any $0<\eta<r$,
+using Lemma \ref{chaslesregulated} we have
+\begin{eqnarray*}
+\norm{\int_a^{t+r} f - \int_a^t f - \int_t^{t+r} f(t^+)}&=&\norm{\int_t^{t+r}f - \int_t^{t+r} f(t^+)}\\
+&=&\norm{\int_t^{t+\eta} (f-f(t^+))+\int_{t+\eta}^{t+r} (f-f(t^+))}\\
+&\leq&\eta \sup_{t \leq s \leq t+\eta} \norm{f(s)-f(t^+)}\\
+&&+ (r-\eta)\sup_{t+\eta \leq s \leq t+r} \norm{f(s)-f(t^+)}\\
+&\leq& 2 \norm{f}_\infty \eta + (r-\eta)\epsilon.
+\end{eqnarray*}
+This is true for all $0<\eta<r$, so
+\[
+\norm{\int_a^{t+r} f - \int_a^t f - \int_t^{t+r} f(t^+)} \leq r\epsilon,
+\]
+i.e.
+\[
+\norm{\frac{g(t+r)- g(t)}{r} - f(t^+)} \leq \epsilon.
+\]
+This shows that
+\[
+g_+'(t)=f(t^+).
+\]
+Similarly, 
+\[
+g_-'(t)=f(t^-).
+\]
+Because $f$ is regulated, Lemma \ref{countable} shows that there is a countable set $D \subset I$ such that
+$t \in I \setminus D$ implies that $f$ is continuous at $t$. Therefore, if $t \in I \setminus D$ then
+$f(t^+)=f(t^-)=f(t)$, so $g_+'(t)=g_-'(t)$, which means that if $t \in I \setminus D$ then $g$
+is differentiable at $t$, with $g'(t)=f(t)$. To prove that $g$ is a primitive of $f$ on $I$ it suffices now to show that
+$g$ is continuous. For $\epsilon>0$ and $t \in I$, let $\delta=\frac{\epsilon}{\norm{f}_\infty}$, and then
+for $|s-t| < \delta$ we have by Lemma \ref{chaslesregulated} that
+\[
+\norm{g(s)-g(t)} =\norm{\int_a^s f - \int_a^t f} = \norm{\int_s^t f} \leq |t-s| \norm{f}_\infty < \delta \norm{f}_\infty=\epsilon,
+\]
+showing that $g$ is continuous at $t$, completing the proof.
+\end{proof}
+
+Suppose that   $X$ is a Banach space and that $f:[a,b] \to X$ is a primitive of a regulated function $h:[a,b] \to X$.
+Because $h$ is regulated, 
+by Theorem \ref{primitive} the function $g:[a,b] \to X$ defined by
+$g(t)=\int_a^t f$ is a primitive of $f$ on $[a,b]$. Then applying Lemma \ref{primitivedifference}, there is some $c \in X$ such that
+$f(t)-g(t)=c$ for all $t \in [a,b]$. But $f(a)-g(a)=f(a)$, so $c=f(a)$. Hence, for all $t \in [a,b]$,
+\[
+f(t) = f(a) + \int_a^t h.
+\]
+But 
+\[
+\int_a^t h = \int_a^{a+\eta_1} h + \int_{a+\eta_1}^{t-\eta_2} h + \int_{t-\eta_2}^t h
+=\int_a^{a+\eta_1} h + \int_{a+\eta_1}^{t-\eta_2} f' + \int_{t-\eta_2}^t h
+\]
+and
+\[
+\norm{\int_a^{a+\eta_1} h} \leq \eta_1 \norm{h}_\infty, \qquad \norm{\int_{t-\eta_2}^t h} \leq \eta_2 \norm{h}_\infty,
+\]
+hence as $\eta_1 \to 0^+$ and $\eta_2 \to 0^+$,
+\[
+ \int_{a+\eta_1}^{t-\eta_2} f'  \to \int_a^t h,
+\]
+and so it makes sense to write
+\[
+ \int_a^t f'  = \int_a^t h,
+\]
+and thus for all $t \in [a,b]$,
+\[
+f(t)=f(a)+\int_a^t f'.
+\]
+
+
+
+\end{document}

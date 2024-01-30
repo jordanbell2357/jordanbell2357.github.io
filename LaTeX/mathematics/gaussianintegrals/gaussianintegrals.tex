@@ -1,0 +1,427 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\Hess}{\ensuremath\mathrm{Hess}\,} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Gaussian integrals}
+\author{Jordan Bell}
+\date{August 29, 2015}
+
+\maketitle
+
+\section{One dimensional Gaussian integrals}
+For $p \in \mathbb{C}$, let\footnote{Eberhard Zeidler,
+{\em Quantum Field Theory I: Basics in Mathematics and Physics},
+p.~493, Problem 7.1.}
+\[
+h(p) = \int_{\mathbb{R}} e^{-x^2/2} e^{-ipx} dx.
+\]
+Then we check that
+\[
+h'(p) = -i \int_{\mathbb{R}} x e^{-x^2/2} e^{-ipx} dx = i\int_{\mathbb{R}} \frac{d}{dx} \left( e^{-x^2/2} \right)
+e^{-ipx} dx.
+\]
+Integrating by parts yields
+\[
+h'(p) = -p \int_{\mathbb{R}} e^{-x^2/2} e^{-ipx} dx = -p h(p).
+\]
+Since $h'(p)=-p h(p)$,\footnote{cf. Einar Hille, {\em Ordinary Differential Equations in the Complex Domain}.}
+\[
+h(p) = h(0) e^{-p^2/2}.
+\]
+Now, using Fubini's theorem and then polar coordinates,
+\begin{align*}
+h(0)^2 &= \int_{\mathbb{R}} \left( \int_{\mathbb{R}} e^{-x^2/2} dx\right) e^{-y^2/2} dy\\
+&=\int_{\mathbb{R}^2} e^{-(x^2+y^2)/2} dxdy\\
+&=\int_0^\infty \left( \int_{S^1} e^{-r^2/2} e^{-r^2/2} d\sigma(\theta) \right) r dr\\
+&=2\pi \int_0^\infty r e^{-r^2/2} dr\\
+&=2\pi,
+\end{align*}
+so
+\[
+h(p) = (2\pi)^{1/2} e^{-p^2/2}.
+\]
+For $a>0$ and $p \in \mathbb{C}$, doing the change of variable $y = a^{1/2} x$,
+\begin{align*}
+(2\pi)^{-1/2} \int_{\mathbb{R}} e^{-ax^2/2} e^{-ipx} dx&=(2\pi)^{-1/2} a^{-1/2} \int_{\mathbb{R}} e^{-y^2/2} e^{-ipa^{-1/2} y} dy\\
+&=(2\pi)^{-1/2} a^{-1/2} h(pa^{-1/2})\\
+&=a^{-1/2} e^{-a^{-1} p^2 /2}.
+\end{align*}
+
+For $t>0$ and $m \in \mathbb{R}$, doing the change of variable $y=x-m$, and using the above with $a=t^{-2}$ and $p=0$,
+\begin{align*}
+(2\pi t^2)^{-1/2} \int_{\mathbb{R}} \exp\left(-\frac{(x-m)^2}{2t^2}\right) dx&=(2\pi)^{-1/2}  t^{-1} \int_{\mathbb{R}} e^{-ay^2/2} dx\\
+&=t^{-1} \cdot a^{-1/2}\\
+&=1.
+\end{align*}
+
+\begin{theorem}
+For $a > 0$ and $p \in \mathbb{C}$,
+\[
+(2\pi)^{-1/2} \int_{\mathbb{R}} e^{-ax^2/2} e^{-ipx} dx = a^{-1/2} e^{-a^{-1} p^2 /2}.
+\]
+For $t>0$ and $m \in \mathbb{R}$,
+\[
+(2\pi t^2)^{-1/2} \int_{\mathbb{R}} \exp\left(-\frac{(x-m)^2}{2t^2}\right) dx = 1.
+\]
+\label{gaussian1d}
+\end{theorem}
+
+For $t>0$ and $x \in \mathbb{R}$, let
+\[
+p_t(x) = (2\pi t^2)^{-1/2} \exp\left( - \frac{x^2}{2t^2}\right).
+\]
+For $\phi \in \mathscr{S}(\mathbb{R})$,
+doing the change of variable $x=ty$,
+\[
+\int_{\mathbb{R}} \phi(x) p_t(x) dx = (2\pi)^{-1/2} \int_{\mathbb{R}} \phi(ty) e^{-y^2/2} dy
+=\int_{\mathbb{R}} \phi(tx) p_1(x) dx.
+\]
+Then as $t \downarrow 0$, using the dominated convergence theorem,
+\[
+\int_{\mathbb{R}} \phi(x) p_t(x) dx \to \int_{\mathbb{R}} \phi(0) p_1(x) dx = \phi(0).
+\]
+
+For $\phi \in L^1(\mathbb{R}^N)$, let
+\[
+\widehat{\phi}(\xi) = (2\pi)^{-N/2} \int_{\mathbb{R}^N} e^{-i\inner{\xi}{x}} \phi(x) dx,\qquad
+\xi \in \mathbb{R}^N.
+\]
+By Theorem \ref{gaussian1d}, with $a=t^{-2}$,
+\begin{align*}
+\widehat{p}_t(\xi) &= (2\pi t^2)^{-1/2} \cdot (2\pi)^{-1/2}  \int_{\mathbb{R}} e^{-ax^2/2} e^{-i\xi x}  dx\\
+&=(2\pi t^2)^{-1/2} a^{-1/2} e^{-a^{-1} \xi^2/2}\\
+&=(2\pi)^{-1/2} e^{-t^2 \xi^2/2}.
+\end{align*}
+
+
+
+\section{Moments}
+For $a>0$, define for $Z \in \mathbb{C}$,
+\[
+Z(J) = a^{1/2} (2\pi)^{-1/2} \int_{\mathbb{R}} e^{-ax^2/2} e^{iJx} dx.
+\]
+By Theorem \ref{gaussian1d},
+\begin{equation}
+Z(J) = e^{-a^{-1} J^2/2}.
+\label{ZJ}
+\end{equation}
+By the dominated convergence theorem,
+\[
+Z^{(n)}(J) = a^{1/2} (2\pi)^{-1/2} i^n  \int_{\mathbb{R}} x^n e^{-ax^2/2} e^{iJx} dx,
+\]
+and so 
+\[
+a^{1/2} (2\pi)^{-1/2} \int_{\mathbb{R}} x^n e^{-ax^2/2} dx = i^{-n} \frac{dZ}{dJ}(0).
+\]
+From \eqref{ZJ} 
+we calculate
+\[
+Z'(J) = -a^{-1}J Z(J),
+\quad Z''(J) = -a^{-1} Z(J) + a^{-2} J^2 Z(J),
+\]
+so $Z''(0)=-a^{-1} Z(0) = -a^{-1}$, and thus for $t>0$ and $a=t^{-1}$,
+\[
+(2\pi t)^{-1/2} \int_{\mathbb{R}} x^2 e^{-t^{-2} x^2/2} dx = t,
+\]
+i.e.
+\[
+\int_{\mathbb{R}} x^2 p_t(x) dx = t.
+\]
+
+
+\section{{\em N}-dimensional Gaussian integrals}
+Let $S(x) = \frac{\inner{x}{x}}{2}$ for $x \in \mathbb{R}^N$. 
+For $\chi \in \mathscr{D}(\mathbb{R}^N)$ and $t>0$,
+\textbf{Laplace's method}
+tells us that 
+\[
+\int_{\mathbb{R}^N} e^{-tS(x)} \chi(x) dx 
+= (2\pi t^{-1})^{N/2} (\det \Hess S(0))^{-1/2} e^{-tS(0)} \chi(0) (1+O(t^{-1}))
+\]
+as $t \to \infty$. 
+Here, $\Hess S(x) = I$ for all $x$ and $S(0)=0$, so
+\[
+\int_{\mathbb{R}^N} e^{-t \frac{\inner{x}{x}}{2}} \chi(x) dx = (2\pi t^{-1})^{N/2} \chi(0) (1+O(t^{-1}))
+\]
+as $t \to \infty$. 
+
+For $A$ an $N \times N$ matrix, we write $A>0$ if $A$ is symmetric and has positive eigenvalues.
+ It
+ is proved that
+\[
+\begin{split}
+&\int_{\mathbb{R}^N} \exp\left(-\frac{1}{2} \inner{Ax}{x} - i\inner{\xi}{x} \right) dx\\
+=&(\det A)^{-1/2} (2\pi)^{N/2} \exp\left( -\frac{1}{2} \inner{A^{-1} \xi}{\xi} \right)
+\end{split}
+\]
+for all $\xi \in \mathbb{R}^N$, and 
+\[
+\int_{\mathbb{R}^N} \exp\left(-\frac{1}{2}\inner{Ax}{x}+\inner{b}{x}\right) dx = (\det A)^{-1/2} (2\pi)^{N/2}
+\exp\left(\frac{1}{2}\inner{A^{-1}b}{b}\right).
+\]
+for all $b \in \mathbb{R}^N$. 
+Let
+\[
+Z_A = \int_{\mathbb{R}^N} e^{-\frac{1}{2}\inner{Ax}{x}} dx
+=(\det A)^{-1/2} (2\pi)^{N/2}.
+\]
+Let $\lambda_N$ be Lebesgue measure on $\mathbb{R}^N$ and
+let $\mu_A$ be the following Borel probability measure on $\mathbb{R}^N$:
+\[
+d\mu_A(x) = \frac{1}{Z_A} e^{-\frac{1}{2}\inner{Ax}{x}} d\lambda_N(x)
+=(\det A)^{1/2} (2\pi)^{-N/2} e^{-\frac{1}{2}\inner{Ax}{x}} d\lambda_N(x).
+\]
+For $\xi \in \mathbb{R}^N$, 
+\begin{align*}
+\int_{\mathbb{R}^N} e^{-i\inner{\xi}{x}} d\mu_A(x)&=
+(\det A)^{1/2} (2\pi)^{-N/2} \int_{\mathbb{R}^N} e^{-\frac{1}{2}\inner{Ax}{x}} e^{-i\inner{\xi}{x}} d\lambda_N(x)\\
+&=(\det A)^{1/2} (2\pi)^{-N/2}  \cdot (\det A)^{-1/2} (2\pi)^{N/2} e^{-\frac{1}{2}\inner{A^{-1}\xi}{\xi}}\\
+&=e^{-\frac{1}{2}\inner{A^{-1}\xi}{\xi}},
+\end{align*}
+and for $b \in \mathbb{R}^N$,
+\begin{align*}
+\int_{\mathbb{R}^N} e^{\inner{b}{x}} d\mu_A(x)&=
+(\det A)^{1/2} (2\pi)^{-N/2}  \int_{\mathbb{R}^N} e^{\inner{b}{x}}
+e^{-\frac{1}{2}\inner{Ax}{x}} d\lambda_N(x)\\
+&=(\det A)^{1/2} (2\pi)^{-N/2}   \cdot
+(\det A)^{-1/2} (2\pi)^{N/2}
+e^{\frac{1}{2}\inner{A^{-1}b}{b}}\\
+&=e^{\frac{1}{2}\inner{A^{-1}b}{b}}.
+\end{align*}
+
+\begin{theorem}
+For $\xi \in \mathbb{R}^N$,
+\[
+\int_{\mathbb{R}^N} e^{-i\inner{\xi}{x}} d\mu_A(x) = e^{-\frac{1}{2}\inner{A^{-1}\xi}{\xi}},
+\]
+and for $b \in \mathbb{R}^N$,
+\[
+\int_{\mathbb{R}^N} e^{\inner{b}{x}} d\mu_A(x) = e^{\frac{1}{2}\inner{A^{-1}b}{b}}.
+\]
+\label{gaussianRd}
+\end{theorem}
+
+
+Let\footnote{See \url{http://www.math.ucsd.edu/~bdriver/247A-Winter2012/}}
+\[
+L=L^A = \sum_{j,k=1}^N A_{j,k}^{-1} \partial_j \partial_k.
+\]
+We work out the semigroup whose infinitesimal generator is $L/2$.
+
+\begin{theorem}
+For $f \in C^1(\mathbb{R}^N)$ that is $\mu_A$-integrable and for $t>0$,
+\[
+(e^{t L/2} f)(x) = \int_{\mathbb{R}^N} f(x-t^{1/2} y) d\mu_A(y),
+\qquad x \in \mathbb{R}^N.
+\]
+\end{theorem}
+\begin{proof}
+For $\xi \in \mathbb{R}^N$ define
+ $f(x) = e^{\inner{\xi}{x}}=e^{\xi_1 x_1 + \cdots + \xi_N x_N}$. On the one hand,
+\[
+Lf=\sum_{j,k=1}^n A_{j,k}^{-1} \xi_j \xi_k f
+= \inner{A^{-1}\xi}{\xi} f.
+\]
+Then
+\[
+\exp(tL/2) f = \exp\left( \frac{1}{2}t \inner{A^{-1}\xi}{\xi} \right) f.
+\]
+On the other hand, for $x \in \mathbb{R}^N$, applying Theorem \ref{gaussianRd},
+\begin{align*}
+\int_{\mathbb{R}^N} f(x-t^{1/2}y) d\mu_A(y)&=\int_{\mathbb{R}^N}
+e^{\inner{\xi}{x-t^{1/2}y}} d\mu_A(y)\\
+&=e^{\inner{\lambda}{x}} \int_{\mathbb{R}^N} e^{\inner{-t^{1/2}\xi}{y}} d\mu_A(y)\\
+&=e^{\inner{\lambda}{x}} e^{\frac{1}{2}\inner{A^{-1} (-t^{1/2} \xi)}{(-t^{1/2}\xi)}}\\
+&= e^{\frac{1}{2}t\inner{A^{-1}\xi}{\xi}} f.
+\end{align*}
+Therefore
+\[
+\int_{\mathbb{R}^N} f(x-t^{1/2}y) d\mu_A(y) = e^{tL/2} f.
+\]
+\end{proof}
+
+
+
+\section{Concentration of measure}
+Let $\gamma_N$ be the Borel probability measure on $\mathbb{R}^N$ defined by
+\[
+d\gamma_N(x) = (2\pi)^{-N/2} e^{-\frac{1}{2} \inner{x}{x}} d\lambda_N(x).
+\]
+We estimate the mass $\gamma_N$ assigns to a spherical shell about the sphere of radius $N^{1/2}$.\footnote{Alexander
+Barvinok, {\em Measure Concentration}, \url{http://www.math.lsa.umich.edu/~barvinok/total710.pdf},
+p.~5, Proposition 2.2.}
+
+
+\begin{theorem}
+For $\delta \geq 0$,
+\[
+\gamma_N\{x \in \mathbb{R}^N: \norm{x}^2 \geq N+\delta \} \leq \left( \frac{N}{N+\delta} \right)^{-N/2} e^{-\delta/2},
+\]
+and for $0<\delta \leq N$,
+\[
+\gamma_N\{x \in \mathbb{R}^N: \norm{x}^2 \leq N-\delta\} \leq \left(\frac{N}{N-\delta} \right)^{-N/2} e^{\delta/2}.
+\]
+\end{theorem}
+\begin{proof}
+For $0<\lambda<1$, if $\norm{x}^2 \geq N+\delta$ then $\lambda \norm{x}^2/2 \geq \lambda(N+\delta)/2$
+and then $e^{\lambda \norm{x}^2/2} \geq e^{\lambda(N+\delta)/2}$.
+Hence
+\begin{align*}
+\gamma_N\{x \in \mathbb{R}^N: \norm{x}^2 \geq N+\delta\}&=e^{-\lambda(N+\delta)/2} \int_{\norm{x}^2 \geq N+\delta} e^{\lambda(N+\delta)/2} d\gamma_N(x)\\
+&\leq e^{-\lambda(N+\delta)/2} \int_{\norm{x}^2 \geq N+\delta} e^{\lambda \norm{x}^2/2} d\gamma_N(x)\\
+&\leq e^{-\lambda(N+\delta)/2} \int_{\mathbb{R}^N} e^{\lambda \norm{x}^2/2} d\gamma_N(x)\\
+&=  e^{-\lambda(N+\delta)/2} 
+\cdot  (2\pi)^{-N/2}
+\int_{\mathbb{R}^N} e^{\lambda \norm{x}^2/2}    e^{-\frac{1}{2}\norm{x}^2} d\lambda_N(x)\\
+&=  e^{-\lambda(N+\delta)/2}  \cdot \prod_{k=1}^N (2\pi)^{-1/2} \int_{\mathbb{R}} e^{(\lambda-1) u^2/2} du.
+\end{align*}
+For $a=-\lambda+1>0$, we have by Theorem \ref{gaussian1d}
+\[
+(2\pi)^{-1/2} \int_{\mathbb{R}}  e^{-au^2/2} du = a^{-1/2},
+\]
+so
+\[
+\gamma_N\{x \in \mathbb{R}^N: \norm{x}^2 \geq N+\delta\} \leq
+e^{-\lambda(N+\delta)/2}  a^{-N/2} = e^{-\lambda(N+\delta)/2}   (1-\lambda)^{-N/2}.
+\]
+For $\lambda=\frac{\delta}{N+\delta}$ this is
+\[
+\gamma_N\{x \in \mathbb{R}^N: \norm{x}^2 \geq N+\delta\} \leq e^{-\delta/2} \left( \frac{N}{N+\delta} \right)^{-N/2}.
+\]
+\end{proof}
+
+
+Let $\Sigma_N=\{x \in \mathbb{R}^N: \norm{x} = N^{1/2}\}$, and let $\mu_N$ be the unique
+$SO(N)$-invariant  Borel probability measure on $S^{N-1}$ (any Borel probability measure on a metric space is regular so we need not explicitly demand this to ensure uniqueness).
+Let $\pi_N:\Sigma_N \to \mathbb{R}$ be the projection 
+\[
+\pi_N(x) = \pi_N(x_1,\ldots,x_N) = x_1,
+\]
+and let $\nu_N=(\pi_N)_* \mu_N$, the pushforward measure which is itself a Borel probability measure on $\mathbb{R}$. 
+The following theorem states that the measures $\nu_N$ converges strongly to the standard Gaussian measure $\gamma_1$.\footnote{Alexander
+Barvinok, {\em Measure Concentration}, \url{http://www.math.lsa.umich.edu/~barvinok/total710.pdf},
+p.~54, Theorem 13.2.}
+
+\begin{theorem}
+For $A$ a Borel set in $\mathbb{R}$,
+\[
+\nu_N(A) \to \gamma_1(A)
+\]
+as $N \to \infty$. 
+\end{theorem}
+
+
+
+
+
+
+\section{Zeta functions}
+Let $A>0$, with eigenvalues
+ $\lambda_1,
+\ldots,\lambda_N$, counted according to multiplicity.
+For $s \in \mathbb{C}$, define\footnote{Eberhard Zeidler,
+{\em Quantum Field Theory I: Basics in Mathematics and Physics},
+p.~434, \S 7.23.3.}
+\[
+\zeta_A(s) = \sum_{k=1}^N \lambda_k^{-s} = \sum_{k=1}^N e^{-s \log \lambda_k}.
+\]
+The derivative of $\zeta_A$ is
+\[
+\zeta_A'(s) = \sum_{k=1}^N -\log \lambda_k \cdot \lambda_k^{-s},
+\]
+so
+\[
+\zeta_A'(0) = - \sum_{k=1}^N \log \lambda_k,
+\]
+hence
+\[
+e^{-\zeta_A'(0)} = \prod_{k=1}^N \lambda_k = \det A.
+\]
+
+\begin{theorem}
+For $\xi \in \mathbb{R}^N$,
+\[
+(2\pi)^{-N/2} \int_{\mathbb{R}^N}  \exp\left(-\frac{1}{2} \inner{Ax}{x} - i\inner{\xi}{x} \right) dx
+=e^{\zeta_A'(0)/2}  \exp\left( -\frac{1}{2} \inner{A^{-1} \xi}{\xi} \right).
+\]
+\end{theorem}
+
+Let $\lambda_k>0$, $k \geq 1$, and
+let $Ae_k = \lambda_k e_k$, and if it makes sense let
+\[
+\det A = \prod_{k=1}^\infty \lambda_k.
+\]
+For those complex $s$ for which the expression makes sense,
+let
+\[
+\zeta_A(s) = \sum_{k=1}^\infty \lambda_k^{-s} = \sum_{k=1}^\infty e^{-s \log \lambda_k}.
+\]
+Then, if the above makes sense in a neighborhood of $s=0$,
+\[
+\zeta_A'(0) =  - \sum_{k=1}^\infty \log \lambda_k,
+\]
+so
+\[
+e^{-\zeta_A'(0)} = \det A.
+\]
+
+We calculate, doing the change of variables $t=\lambda_k u$,
+\begin{align*}
+\Gamma(s) \zeta_A(s)&=\int_0^\infty t^{s-1} e^{-t} dt \cdot \sum_{k=1}^\infty \lambda_k^{-s}\\
+&=\sum_{k=1}^\infty  \lambda_k^{-s}  \int_0^\infty t^{s-1} e^{-t}dt\\
+&=\sum_{k=1}^\infty \lambda_k^{-s} \int_0^\infty (\lambda_k u)^{s-1} e^{-\lambda_k u} \lambda_k du\\
+&=\sum_{k=1}^\infty \int_0^\infty u^{s-1} e^{-\lambda_k u} du.
+\end{align*}
+Thus
+\[
+\zeta_A(s) = \frac{1}{\Gamma(s)} \int_0^\infty u^{s-1} \sum_{k=1}^\infty e^{-\lambda_k u} du.
+\]
+For $\gamma>0$, the eigenvalues of $\gamma A$ are $\gamma \lambda_k$, and doing the change of variables
+$v=\gamma u$,
+\begin{align*}
+\zeta_{\gamma A}(s) &=\frac{1}{\Gamma(s)} \int_0^\infty u^{s-1} \sum_{k=1}^\infty e^{-\gamma \lambda_k u} du\\
+&= \frac{1}{\Gamma(s)} \int_0^\infty \gamma^{-s} v^{s-1} \sum_{k=1}^\infty e^{-\lambda_k v} dv\\
+&=\gamma^{-s} \zeta_A(s).
+\end{align*}
+Taking the derivative,
+\[
+\zeta_{\gamma A}'(s) = -\log \gamma \cdot \gamma^{-s} \cdot \zeta_A(s) + \gamma^{-s} \gamma_A'(s),
+\]
+and then
+\[
+\zeta_{\gamma A}'(0) = -\log \gamma \cdot \zeta_A(0) + \zeta_A'(0). 
+\]
+Then
+\[
+\det (\gamma A) = e^{-\zeta_{\gamma A}'(0)} = e^{\log \gamma \cdot \zeta_A(0) - \zeta_A'(0)}
+=\gamma^{\zeta_A(0)} \det A.
+\]
+
+\end{document}

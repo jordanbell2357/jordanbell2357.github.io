@@ -1,0 +1,404 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}}
+\newcommand{\Res}{\ensuremath\mathrm{Res}}  
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Bernoulli polynomials}
+\author{Jordan Bell}
+\date{March 9, 2016}
+
+\maketitle
+
+\section{Bernoulli polynomials}
+For $k \geq 0$, the \textbf{Bernoulli polynomial} $B_k(x)$ is defined by
+\begin{equation}
+\frac{ze^{xz}}{e^z-1} = \sum_{k=0}^\infty B_k(x) \frac{z^k}{k!},\qquad |z|<2\pi.
+\label{bernoullipolynomials}
+\end{equation}
+The \textbf{Bernoulli numbers} are $B_k = B_k(0)$, the constant terms of the Bernoulli polynomials.
+For any $x$, using L'Hospital's rule the left-hand side of \eqref{bernoullipolynomials} tends to $1$ as $z \to 0$, and the right-hand side
+tends to $B_0(x)$, hence $B_0(x)=1$. 
+Differentiating \eqref{bernoullipolynomials} with respect to $x$,
+\[
+\sum_{k=0}^\infty B_k'(x) \frac{z^k}{k!} = \frac{z^2 e^{xz}}{e^z-1} = \sum_{k=0}^\infty B_k(x) \frac{z^{k+1}}{k!}
+=\sum_{k=1}^\infty B_{k-1}(x) \frac{z^k}{(k-1)!},
+\]
+so $B_0'(x) = 0$ and for $k \geq 1$ we have $\frac{B_k'(x)}{k!} = \frac{B_{k-1}(x)}{(k-1)!}$, i.e.
+$B_k'(x)=k B_{k-1}(x)$. Furthermore, for $k \geq 1$, integrating \eqref{bernoullipolynomials} with respect
+to $x$ on $[0,1]$ produces
+\[
+1 = \sum_{k=0}^\infty \left( \int_0^1 B_k(x) dx \right) \frac{z^k}{k!},\qquad |z|<2\pi,
+\]
+hence $\int_0^1 B_0(x) dx =1$ and for $k \geq 1$,
+\[
+\int_0^1 B_k(x) dx = 0.
+\] 
+The first few Bernoulli polynomials are
+\[
+B_0(x)=1,\quad B_1(x) = x-\frac{1}{2},\quad B_2(x) = x^2-x+\frac{1}{6},
+\quad B_3(x)=x^3-\frac{3}{2}x^2+\frac{1}{2}x.
+\]
+
+
+The Bernoulli polynomials  satisfy the following:
+\begin{align*}
+\sum_{k=0}^\infty B_k(x+1) \frac{z^k}{k!}&=\frac{ze^{(x+1)z}}{e^z-1}\\
+&=\frac{ze^{xz} (e^z-1+1)}{e^z-1}\\
+&=ze^{xz}+\frac{ze^{xz}}{e^z-1}\\
+&=\sum_{k=0}^\infty \frac{x^k z^{k+1}}{k!} + \sum_{k=0}^\infty B_k(x) \frac{z^k}{k!}\\
+&=\sum_{k=1}^\infty \frac{x^{k-1} z^k}{(k-1)!} +  \sum_{k=0}^\infty B_k(x) \frac{z^k}{k!},
+\end{align*}
+hence for $k \geq 1$ it holds that $B_k(x+1) = kx^{k-1} + B_k(x)$. In particular, for $k \geq 2$,
+$B_k(1)=B_k(0)$.
+
+Using \eqref{bernoullipolynomials},
+\begin{align*}
+\sum_{k=0}^\infty B_k(1-x) \frac{z^k}{k!} &= \frac{ze^{(1-x)z}}{e^z-1}\\
+&=\frac{ze^z e^{-xz}}{e^z-1}\\
+&=\frac{ze^{-xz}}{1-e^{-z}}\\
+&=\frac{-ze^{-xz}}{e^{-z}-1}\\
+&=\sum_{k=0}^\infty B_k(x) \frac{(-z)^k}{k!},
+\end{align*}
+hence for $k \geq 0$,
+\[
+B_k(1-x) = (-1)^k B_k(x).
+\]
+
+Finally, it is a fact that for $k \geq 2$,
+\begin{equation}
+\sup_{0 \leq x \leq 1} |B_k(x)| \leq \frac{2\zeta(k) k!}{(2\pi)^k}.
+\label{supremum}
+\end{equation}
+
+
+\section{Periodic Bernoulli functions}
+For $x \in \mathbb{R}$, let $[ x ]$ be the greatest integer $\leq x$, and let $R(x)=x-[x]$, called the fractional part of $x$.
+Write $\mathbb{T}=\mathbb{R}/\mathbb{Z}$ and define the 
+\textbf{periodic Bernoulli functions} $P_k:\mathbb{T} \to \mathbb{R}$ by
+\[
+P_k(t) = B_k(R(t)),\qquad t \in \mathbb{T}.
+\] 
+For $k \geq 2$, because $B_k(1)=B_k(0)$, the function $P_k$ is continuous. 
+For $f:\mathbb{T} \to \mathbb{C}$ define its \textbf{Fourier transform} $\widehat{f}:\mathbb{Z} \to \mathbb{C}$ by
+\[
+\widehat{f}(n) = \int_\mathbb{T} f(t) e^{-2\pi int} dt,\qquad n \in \mathbb{Z}.
+\]
+For $k \geq 1$, one calculates $\widehat{P}_k(0)=0$ and using integration by parts,
+\[
+\widehat{P}_k(n)= - \frac{1}{(2\pi in)^k}
+\]
+for
+$n \neq 0$.
+Thus for $k \geq 1$, the Fourier series of $P_k$ is\footnote{cf. \url{http://www.math.umn.edu/~garrett/m/mfms/notes_c/bernoulli.pdf}}
+\[
+P_k(t) \sim \sum_{n \in \mathbb{Z}} \widehat{P}_k(n) e^{2\pi int} = -\frac{1}{(2\pi i)^k} \sum_{n \neq 0} n^{-k} e^{2\pi int}.
+\]
+For $k \geq 2$, $\sum_{n \in \mathbb{Z}} |\widehat{P}_k(n)|<\infty$, from which it follows that $\sum_{|n| \leq N}  \widehat{P}_k(n) e^{2\pi int}$
+converges to $P_k(t)$ uniformly for $t \in \mathbb{T}$.
+Furthermore, for $t \not \in \mathbb{Z}$,\footnote{Hugh L. Montgomery and Robert C. Vaughan,
+{\em Multiplicative Number Theory I: Classical Theory}, p.~499, Theorem B.2.}
+\[
+P_1(t) = - \frac{1}{\pi} \sum_{n=1}^\infty \frac{1}{n} \sin 2\pi nt.
+\]
+
+For $f,g \in L^1(\mathbb{T})$ and $n \in \mathbb{Z}$,
+\begin{align*}
+\widehat{f*g}(n)&=\int_{\mathbb{T}} \left( \int_{\mathbb{T}} f(x-y) g(y) dy \right) e^{-2\pi inx} dx\\
+&=\int_{\mathbb{T}} g(y) \left( \int_{\mathbb{T}} f(x-y) e^{-2\pi inx} dx \right) dy\\
+&=\int_{\mathbb{T}} g(y) \left( \int_{\mathbb{T}} f(x) e^{-2\pi inx} e^{-2\pi iny} dx\right) dy\\
+&=\widehat{f}(n) \widehat{g}(n).
+\end{align*}
+For $k,l \geq 1$ and for $n \neq 0$,
+\begin{align*}
+\widehat{P_k * P_l}(n)&=\widehat{P_k}(n) \widehat{P_l}(n)\\
+&= - (2\pi in)^{-k} \cdot  - (2\pi in)^{-l}\\
+&=(2\pi in)^{-k-l}\\
+&=-\widehat{P_{k+l}}(n),
+\end{align*}
+and $\widehat{P_k * P_l}(0) = 0 = -\widehat{P_{k+l}}(0)$, so
+$P_k * P_l = - P_{k+l}$. 
+
+
+
+\section{Euler-Maclaurin summation formula}
+The \textbf{Euler-Maclaurin summation formula} is the following.\footnote{Hugh L. Montgomery and Robert C. Vaughan,
+{\em Multiplicative Number Theory I: Classical Theory}, p.~500, Theorem B.5.} If $a<b$ are real numbers,
+$K$ is a positive integer, and $f$ is a $C^K$ function on an open set that contains $[a,b]$, then 
+\begin{align*}
+\sum_{a<m \leq b} f(m)&=\int_a^b f(x) dx + \sum_{k=1}^K \frac{(-1)^k}{k!} (P_k(b) f^{(k-1)}(b)-P_k(a) f^{(k-1)}(a))\\
+&-\frac{(-1)^K}{K!} \int_a^b P_K(x)  f^{(K)}(x) dx.
+\end{align*}
+
+Applying the Euler-Maclaurin summation formula with $a=1, b=n, K=2, f(x)=\log x$ yields\footnote{Hugh L. Montgomery and Robert C. Vaughan,
+{\em Multiplicative Number Theory I: Classical Theory}, p.~503, Eq. B.25.}
+\[
+\sum_{1 \leq m \leq n} \log n = n \log n - n  + \frac{1}{2} \log n + \frac{1}{2} \log 2\pi + O(n^{-1}).
+\]
+Since $e^{1+O(n^{-1})} = 1+O(n^{-1})$,
+\[
+n! = n^n e^{-n} \sqrt{2\pi n} (1+O(n^{-1})),
+\]
+\textbf{Stirling's approximation}. 
+
+Write $a_n  = - \log n+ \sum_{1 \leq m \leq n} \frac{1}{m}$. Because $\log(1-x)$ is concave,
+\[
+a_n - a_{n-1} = \frac{1}{n} + \log\left(1-\frac{1}{n} \right) \leq 1 + 1 - \frac{1}{n}=0,
+\] 
+which means that the sequence $a_n$ is nonincreasing. For $f(x)=\frac{1}{x}$, because
+$f$ is positive and nonincreasing,
+\[
+\sum_{1 \leq m \leq n} f(m) \geq \int_1^{n+1} f(x) dx = \log(n+1) > \log n,
+\]
+hence $a_n>0$. Because $a_n$ is positive and nonincreasing, there exists some nonnegative limit,
+$\gamma$, called \textbf{Euler's constant}. 
+Using the Euler-Maclaurin summation formula with $a=1, b=n, K=1, f(x)=\frac{1}{x}$, as $P_1(x) = [x]-\frac{1}{2}$,
+\[
+\sum_{1 < m \leq n} \frac{1}{m} = \log n + \frac{1}{2n} - \frac{1}{2} + \frac{1}{2} \int_1^n \frac{1}{x^2} dx - \int_1^n R(x) \frac{1}{x^2} dx,
+\]
+which is
+\[
+\sum_{1<m \leq n} \frac{1}{m} = \log n - \int_1^\infty \frac{R(x)}{x^2} dx + \int_n^\infty \frac{R(x)}{x^2} dx;
+\]
+as $0 \leq R(x) x^{-2} \leq x^{-2}$, the function $x \mapsto R(x)x^{-2}$ is integrable
+on $[1,\infty)$. Since $0 \leq \int_n^\infty R(x)x^{-2} dx \leq \int_n^\infty x^{-2} dx = n^{-1}$, 
+\[
+\sum_{1 \leq m \leq n} \frac{1}{m} = \log n + C + O(n^{-1})
+\]
+for $C=1-\int_1^\infty R(x)x^{-2}$. But $-\log n + \sum_{1 \leq m \leq n} \frac{1}{m} \to \gamma$ as $n \to \infty$, from which it follows that
+$C=\gamma$, and thus
+\[
+\sum_{1 \leq m \leq n} \frac{1}{m} = \log n + \gamma + O(n^{-1}).
+\]
+
+
+
+\section{Hurwitz zeta function}
+For $0<\alpha \leq 1$ and $\Re s>1$, define the \textbf{Hurwitz zeta function} by
+\[
+\zeta(s,\alpha) = \sum_{n \geq 0} (n+\alpha)^{-s}.
+\]
+For $\Re s>0$,
+\[
+\Gamma(s) = \int_0^\infty t^{s-1} e^{-t} dt,
+\]
+and for $n \geq 0$ do the change of variable $t = (n+\alpha) u$,
+\begin{align*}
+\Gamma(s) &= \int_0^\infty (n+\alpha)^{s-1} u^{s-1} e^{-(n+\alpha)u} (n+\alpha) du\\
+&=(n+\alpha)^s \int_0^\infty u^{s-1} e^{-nu} e^{-\alpha u} du.
+\end{align*}
+For real $s>1$,
+\[
+(n+\alpha)^{-s} \Gamma(s) = \int_0^\infty u^{s-1} e^{-nu} e^{-\alpha u} du.
+\]
+Then
+\[
+\sum_{0 \leq n \leq N} (n+\alpha)^{-s} \Gamma(s) = \sum_{0 \leq n \leq N}\int_0^\infty u^{s-1} e^{-nu} e^{-\alpha u} du=\int_0^\infty f_N(s,u) du,
+\]
+where
+\[
+f_N(s,u) = \begin{cases}
+u^{s-1} e^{-\alpha u} \frac{1-e^{-(N+1)u}}{1-e^{-u}} &u>0\\
+0&u=0.
+\end{cases}
+\]
+$f_N(s,u) \geq 0$ and the sequence $f_N(s,u)$ is pointwise nondecreasing, and
+\[
+\lim_{N \to \infty} f_N(s,u) =  f(s,u) = \begin{cases}
+u^{s-1} e^{-\alpha u} \frac{1}{1-e^{-u}} &u>0\\
+0&u=0.
+\end{cases}
+\]
+By the \textbf{monotone convergence theorem},
+\[
+\int_0^\infty f_N(s,u) du \to \int_0^\infty f(s,u)du,
+\]
+which means that, for real $s>1$,
+\[
+\zeta(s,\alpha) \Gamma(s) = \int_0^\infty f(s,u) du.
+\]
+
+Write
+\[
+\int_0^\infty f(s,u) du = \int_0^1 f(s,u) du + \int_1^\infty f(s,u) du.
+\]
+Now, by \eqref{bernoullipolynomials}, for $0<u<2\pi$,
+\begin{align*}
+f(s,u) &= u^{s-1} e^{-\alpha u} \frac{1}{1-e^{-u}}\\
+&= u^{s-2} \cdot \frac{-u e^{-\alpha u}}{e^{-u}-1}\\
+&=u^{s-2} \sum_{k=0}^\infty B_k(\alpha) \frac{(-u)^k}{k!}\\
+&=\sum_{k=0}^\infty (-1)^k B_k(\alpha) \frac{u^{k+s-2}}{k!}.
+\end{align*}
+For $k \geq 2$, real $s>1$, and $0<u<2\pi$, by \eqref{supremum},
+\[
+\left| B_k(\alpha) \frac{u^{k+s-2}}{k!} \right| \leq \frac{2\zeta(k) k!}{(2\pi)^k} \cdot u^{k+s-2} \cdot
+\frac{1}{k!}
+=2\zeta(k)\left( \frac{u}{2\pi} \right)^k u^{s-2},
+\]
+which is summable,
+and thus by the dominated convergence theorem,
+\begin{align*}
+\int_0^1 f(s,u) du &= \int_0^1 \sum_{k=0}^\infty (-1)^k B_k(\alpha) \frac{u^{k+s-2}}{k!} du\\
+&=\sum_{k=0}^\infty (-1)^k B_k(\alpha) \frac{1}{k!} \frac{1}{k+s-1}.
+\end{align*}
+Check that $s \mapsto \sum_{k=0}^\infty (-1)^k B_k(\alpha) \frac{1}{k!} \frac{1}{k+s-1}$ is meromorphic
+on $\mathbb{C}$, with poles of order 0 or 1 at $s=-k+1$, $k \geq 0$ (the order of the pole is $0$ if
+$B_k(\alpha)=0$), at which the residue is
+$(-1)^k B_k(\alpha) \frac{1}{k!}$.\footnote{Kazuya Kato, Nobushige Kurokawa, 
+and Takeshi Saito, {\em Number Theory 1: Fermat's Dream}, p.~96.}
+On the other hand, check that $s \mapsto \int_1^\infty f(s,u) du$ is entire. 
+Therefore $\zeta(s,\alpha) \Gamma(s)$ is meromorphic on $\mathbb{C}$, with  poles of order 0 or 1 at
+$s=-k+1$, $k \geq 0$ and the residue of $\zeta(s,\alpha) \Gamma(s)$ at $s=-k+1$ is $(-1)^k B_k(\alpha) 
+\frac{1}{k!}$.
+But it is a fact that 
+$\Gamma(s)$ has poles of order $1$ at $s=-n$, $n \geq 0$, with residue $\frac{(-1)^n}{n!}$.  
+Hence the only pole of $\zeta(s,\alpha)$ is at $s=1$, at which the residue is $1$. 
+
+\begin{theorem}
+For $n \geq 1$ and for $0<\alpha \leq 1$,
+\[
+\zeta(1-n,\alpha) = -\frac{B_n(\alpha)}{n}.
+\]
+\end{theorem}
+\begin{proof}
+For $n \geq 1$,  because $\zeta(s,\alpha)$ does not have a pole at $s=1-n$ and because $\Gamma(s)$ has a pole
+of order $1$ at $s=1-n$ with residue $\frac{(-1)^{n-1}}{(n-1)!}$,
+\begin{align*}
+\lim_{s \to 1-n} (s-(1-n)) \Gamma(s) \zeta(s,\alpha) &= \zeta(1-n,\alpha) \cdot \lim_{s \to 1-n} (s-(1-n)) \Gamma(s)\\
+&=\zeta(1-n,\alpha) \cdot \Res_{s=1-n} \Gamma(s)\\
+&=\zeta(1-n,\alpha) \cdot \frac{(-1)^{n-1}}{(n-1)!}.
+\end{align*}
+On the other hand, $\zeta(s,\alpha) \Gamma(s)$ has a pole of order $1$ at $s=1-n$ with residue
+$(-1)^n B_n(\alpha) \frac{1}{n!}$. Therefore
+\[
+\zeta(1-n,\alpha) \cdot \frac{(-1)^{n-1}}{(n-1)!} = (-1)^n B_n(\alpha) \frac{1}{n!},
+\]
+i.e. for $n \geq 1$ and $0<\alpha \leq 1$,
+\[
+\zeta(1-n,\alpha) = -\frac{B_n(\alpha)}{n}.
+\]
+\end{proof}
+
+
+\section{Sobolev spaces}
+For real $s \geq 0$, we define the \textbf{Sobolev space} $H^s(\mathbb{T})$ as the set of those
+ $f \in L^2(\mathbb{T})$ such that
+\[
+|\widehat{f}(0)|^2  + \sum_{n \in \mathbb{Z} \setminus \{0\}} |\widehat{f}(n)|^2 |n|^{2s} < \infty.
+\]
+For $f,g \in H^s(\mathbb{T})$, define
+\[
+\inner{f}{g}_{H^s(\mathbb{T})} = \widehat{f}(0) \overline{\widehat{g}(0)} + \sum_{n \in \mathbb{Z} \setminus \{0\}} \widehat{f}(n)
+\overline{\widehat{g}(n)} |n|^{2s}.
+\]
+This is an inner product, with which $H^s(\mathbb{T})$ is a Hilbert space.\footnote{See \url{http://www.math.umn.edu/~garrett/m/mfms/notes/09_sobolev.pdf}}
+
+For $c \in \mathbb{C}^\mathbb{Z}$, if  $s>r+\frac{1}{2}$,
+\[
+\begin{split}
+&\norm{ \sum_{|n| \leq N} c_n e^{2\pi inx}}_{C^r(\mathbb{T})}\\
+=&\sup_{0 \leq j \leq r} \sup_{x \in \mathbb{T}} \left| \sum_{|n| \leq N}  c_n (2\pi in)^j e^{2\pi inx}\right|\\
+\leq& |c_0|^2+\sup_{0 \leq j \leq r} \sup_{x \in \mathbb{T}} \left| \sum_{1 \leq |n| \leq N}  c_n (2\pi in)^j e^{2\pi inx}\right|\\
+\leq&|c_0|^2 + (2\pi)^r \sum_{1 \leq |n| \leq N} |c_n|  |n|^r\\
+=&|c_0|^2 + (2\pi)^r \sum_{1 \leq |n| \leq N} |c_n| |n|^s  |n|^{-(r-s)}\\
+\leq&|c_0|^2 + (2\pi)^r \left( \sum_{1 \leq |n| \leq N} |c_n|^2 |n|^{2s}\right)^{1/2}
+\left( \sum_{1 \leq |n| \leq N} |n|^{-(2s-2r)} \right)^{1/2}\\
+\leq&|c_0|^2  + (2\pi)^r \cdot (2\cdot \zeta(2s-2r))^{1/2} \cdot \left( \sum_{1 \leq |n| \leq N} |c_n|^2 |n|^{2s}\right)^{1/2}.
+\end{split}
+\]
+For $f \in H^s(\mathbb{T})$, the partial sums $\sum_{|n| \leq N} \widehat{f}(n) e^{2\pi inx}$ are a Cauchy sequence in $H^s(\mathbb{T})$
+and by the above are a Cauchy sequence in the Banach space $C^r(\mathbb{T})$ and so converge to some $g \in C^r(\mathbb{T})$.
+Then $\widehat{g} = \widehat{f}$, which implies that $g=f$ almost everywhere.
+
+For $k \geq 1$, $\widehat{P}_k(0) = 0$ and $\widehat{P}_k(n) = -(2\pi in)^{-k}$ for $n \neq 0$. For $k,l > s + \frac{1}{2}$,
+\begin{align*}
+\inner{P_k}{P_l}_{H^s(\mathbb{T})}&=\sum_{n \in \mathbb{Z} \setminus \{0\}} -(2\pi in)^{-k} \overline{-(2\pi in)^{-l}}\\
+&=\sum_{n \in \mathbb{Z} \setminus \{0\}} i^{-k+l} (2\pi n)^{-k-l}\\
+&=i^{-k+l} (2\pi)^{-k-l} \cdot 2 \cdot \zeta(k+l).
+\end{align*}
+Thus if $k>s+\frac{1}{2}$ then $P_k \in H^s(\mathbb{T})$, and in particular
+$P_k \in H^{k-1}(\mathbb{T})$ for $k \geq 1$.
+
+For $s>r+\frac{1}{2}$, if $f \in H^s(\mathbb{T})$ then there is some $g \in C^r(\mathbb{T})$ such that $g=f$ almost everywhere.
+Thus if $r+\frac{1}{2}<s<k-\frac{1}{2}$, i.e. $k>r+1$, then there is some $g \in C^r(\mathbb{T})$ such that $g=P_k$ almost everywhere. But
+for $k \neq 1$, $P_k$ is continuous, so in fact $g=P_k$.  In particular,
+$P_k \in C^{k-2}(\mathbb{T})$ for $k \geq 2$.
+
+
+
+
+\section{Reproducing kernel Hilbert spaces}
+For $x \in \mathbb{T}$ and $f:\mathbb{T} \to \mathbb{C}$, define $(\tau_x f)(y)=f(y-x)$. 
+We calculate
+\begin{align*}
+\widehat{\tau_x f}(n)&=\int_{\mathbb{T}} f(y-x) e^{-2\pi in y} dy\\
+&=e^{-2\pi inx}  \int_{\mathbb{T}} f(y) e^{-2\pi iny} dy\\
+&=e^{-2\pi inx} \widehat{f}(n).
+\end{align*}
+
+Let $r \geq 1$. For $x \in \mathbb{T}$, define $F_x:\mathbb{T} \to \mathbb{R}$ by
+\[
+F_x = 1 + (-1)^{r-1} (2\pi)^{2r} \tau_x P_{2r}.
+\] 
+For $n \in \mathbb{Z}$,
+\begin{align*}
+\widehat{F_x}(n)&=\delta_0(n) + (-1)^{r-1} (2\pi)^{2r} \cdot e^{-2\pi inx} \widehat{P}_{2r}(n).
+\end{align*}
+$\widehat{F_x}(0) = 1$, and for $n \neq 0$,
+\[
+\widehat{F_x}(n) = (-1)^{r-1} (2\pi)^{2r} \cdot e^{-2\pi inx} \cdot -(2\pi in)^{-2r}
+= |n|^{-2r} e^{-2\pi inx}.
+\]
+For $f \in H^r(\mathbb{T})$,
+\begin{align*}
+\inner{f}{F_x}_{H^r(\mathbb{T})}&=\widehat{f}(0) \overline{\widehat{F_x}(0)}
++\sum_{n \in \mathbb{Z} \setminus \{0\}} \widehat{f}(n) \overline{\widehat{F_x}(n)} |n|^{2r}\\
+&=\widehat{f}(0) + \sum_{n \in \mathbb{Z} \setminus \{0\}} \widehat{f}(n) |n|^{-2r} e^{2\pi inx} |n|^{2r}\\
+&=\widehat{f}(0) + \sum_{n \in \mathbb{Z} \setminus \{0\}} \widehat{f}(n) e^{2\pi inx}\\
+&=f(x).
+\end{align*}
+This shows that $H^r(\mathbb{T})$ is a \textbf{reproducing kernel Hilbert space}.
+
+Define $F:\mathbb{T} \times \mathbb{T} \to \mathbb{R}$ by
+\begin{align*}
+F(x,y)&=\inner{F_x}{F_y}_{H^r(\mathbb{T})}\\
+&=F_x(y)\\
+&=1+(-1)^{r-1}(2\pi)^{2r} P_{2r}(y-x).
+\end{align*}
+Thus the \textbf{reproducing kernel} of $H^r(\mathbb{T})$ is\footnote{cf. Alain Berlinet and Christine Thomas-Agnan, {\em Reproducing Kernel Hilbert Spaces
+in Probability and Statistics}, p.~318, who use a different inner product on $H^r(\mathbb{T})$ and consequently have a different expression
+for the reproducing kernel.}
+\[
+F(x,y)=1+(-1)^{r-1}(2\pi)^{2r} P_{2r}(y-x).
+\]
+
+
+
+
+
+\end{document}

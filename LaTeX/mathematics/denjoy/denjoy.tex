@@ -1,0 +1,114 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,amsthm,mathrsfs}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newcommand{\Var}[0]{\operatorname{Var}}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\begin{document}
+\title{Denjoy's theorem on circle diffeomorphisms}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+In this note I'm just presenting the proof of Denjoy's theorem in Michael Brin and Garrett Stuck's {\em Introduction
+to dynamical systems}, Cambridge University Press, 2002. 
+
+Let $S^1=\mathbb{R}/\mathbb{Z}$. For $\alpha \in \mathbb{R}$, define $R_\alpha:S^1 \to S^1$ by $R_\alpha(x)=x+\alpha
++\mathbb{Z}$.
+
+We say that a homeomorphism $f:S^1 \to S^1$ is {\em orientation preserving} if it lifts to an increasing homeomorphism
+$F:\mathbb{R} \to \mathbb{R}$: $\pi \circ F=f \circ \pi$.
+
+The {\em rotation number} of an orientation preserving homeomorphism $f$ is defined by
+\[
+\rho(f)=\lim_{n \to \infty} \frac{F^n(x)-x}{n}.
+\]
+One proves that this is independent both of the lift $F$ of $f$ and the point $x \in \mathbb{R}$.
+Some facts about the rotation number: it is an invariant of topological conjugacy, and $\rho(f)$ is rational if and only
+if $f$ has a periodic point. A periodic point is $x \in S^1$ such that $f^n(x)=x$ for some $n \geq 1$.
+
+There are some lemmas in Chapter 7 that I don't want to write out. The important theorem that
+we're going to use without proof
+is that if $f:S^1 \to S^1$ is an orientation preserving homeomorphism that is topologically
+transitive with irrational rotation
+number $\rho(f)$, then $f$ is topologically conjugate to $R_{\rho(f)}$. 
+This reduces our problem to showing that a map is topologically transitive.
+
+We will use the following lemma in the proof of Denjoy's theorem.
+
+\begin{lemma}
+Let $f:S^1 \to S^1$ be a $C^1$ diffeomorphism and
+let $J$ be an interval in $S^1$. Let $g=\log f'$. If the interiors of $J,f(J),\ldots,f^{n-1}(J)$ are pairwise
+disjoint, then for any $x, y \in J$ and any $n \in \mathbb{Z}$ we have
+\[
+\Var(g) \geq |\log((f^n)'(x))-\log((f^n)'(y))|.
+\]
+\end{lemma}
+\begin{proof}
+The intervals $[x,y], [f(x),f(y)], \ldots, [f^{n-1}(x),f^{n-1}(y)]$ are pairwise disjoint, so
+they are part of a partition of $[0,1]$. The total variation of $g$ is defined as a supremum
+over all partitions, so in particular it will be $\geq$ the sum coming from any particular
+partition or a subset of that partition.
+
+\begin{eqnarray*}
+\Var(g)&\geq&\sum_{k=0}^{n-1} |g(f^k(y))-g(f^k(x))|\\
+&\geq&\Big| \sum_{k=0}^{n-1} g(f^k(y))-g(f^k(x)) \Big|\\
+&=&\Big| \log \prod_{k=0}^{n-1} f'(f^k(y))-\log \prod_{k=0}^{n-1} f'(f^k(x)) \Big|\\
+&=&|\log((f^n)'(x))-\log((f^n)'(y))|.
+\end{eqnarray*}
+\end{proof}
+
+Now we can prove Denjoy's theorem.
+
+\begin{theorem}
+If $f:S^1 \to S^1$ is a $C^1$ diffeomorphism that is orientation preserving, that has irrational rotation
+number $\rho(f)$, and whose derivative $f':S^1 \to \mathbb{R}$ has bounded variation, then $f$ is topologically
+conjugate to $R_{\rho(f)}$.
+\end{theorem}
+\begin{proof}
+Suppose by contradiction that $f$ is not topologically transitive. It's a fact proved in Chapter 7
+of Brin and Stuck that this implies that $\omega(x)$ is perfect and nowhere dense, and is independent
+of the point $x$. (Recall that $\omega(x)=\bigcap_{n \geq 1} \overline{\bigcup_{i \geq n} f^i(x)}$.)
+It follows that
+ there is an interval $I=(a,b)$
+in its complement.
+
+The intervals $f^n(I)$, $n \in \mathbb{Z}$, are pairwise disjoint, for otherwise
+$f$ would have a periodic point. Let $\mu$ be Haar measure on $S^1$. Then
+\[
+\sum_{n \in \mathbb{Z}} \mu(f^n(I)) \leq 1.
+\]
+
+Let $x \in S^1$. Suppose for the moment that there are infinitely $n \geq 1$ such that
+the intervals $(x,f^{-n}(x)), (f(x),f^{1-n}(x)),\ldots, (f^n(x),x)$ are pairwise disjoint;
+we shall prove that this is true later.
+By applying the lemma we proved with
+$y=f^{-n}(x)$ we get 
+\[
+\Var(g) \geq \Big| \log \frac{(f^n)'(x)}{(f^n)'(y)} \Big|=
+|\log((f^n)'(x) (f^{-n})'(x)|. 
+\]
+To see the equality in the above line it helps to write out what $(f^{-n})'(x)$ is.
+
+Then for infinitely many $n$ we have
+\begin{eqnarray*}
+\mu(f^n(I))+\mu(f^{-n}(I))&=&\int_I (f^n)'(x) dx +\int_I (f^{-n})'(x) dx\\
+&=&\int_I ((f^n)'(x)+(f^{-n})'(x)) dx\\
+&\geq&\int_I \sqrt{(f^n)'(x) (f^{-n})'(x)}dx\\
+&=&\int_I \sqrt{\exp \log((f^n)'(x) (f^{-n})'(x))} dx\\
+&\geq&\int_I \sqrt{\exp(-| \log((f^n)'(x) (f^{-n})'(x)) |)} dx\\
+&\geq&\int_I \sqrt{\exp(-\Var(g))} dx\\
+&=&\exp\Big( -\frac{1}{2}\Var(g) \Big) \mu(I).
+\end{eqnarray*}
+Since $\mu(I)>0$ this implies that $\sum_{n \in \mathbb{Z}} \mu(f^n(I))=\infty$, a contradiction. Therefore
+$f$ is topologically transitive, and so it is topologically conjugate
+to the $R_{\rho(f)}$.
+\end{proof}
+
+It is indeed necessary that $f'$ has bounded variation. Brin and Stuck give an example on p. 161 that they attribute to Denjoy: for any irrational number $\rho \in (0,1)$, there is a nontransitive orientation preserving $C^1$
+diffeomorphism of $S^1$ with rotation number $\rho$. The only condition of Denjoy's theorem that isn't
+satisfied here is that $f'$ have bounded variation.
+
+\end{document}

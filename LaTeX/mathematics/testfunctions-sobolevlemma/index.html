@@ -1,0 +1,870 @@
+<!DOCTYPE html><html>
+<head>
+<title>Test functions, distributions, and Sobolev’s lemma</title>
+<!--Generated on Mon Feb 14 10:41:49 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on May 22, 2014.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="LaTeXML-navbar-left.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<nav class="ltx_page_navbar">
+<div class="ltx_TOC">
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Introduction ‣ Test functions, distributions, and Sobolev’s lemma" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Introduction</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 Test functions ‣ Test functions, distributions, and Sobolev’s lemma" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Test functions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 The Fourier transform ‣ Test functions, distributions, and Sobolev’s lemma" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Fourier transform</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S4" title="4 Sobolev’s lemma ‣ Test functions, distributions, and Sobolev’s lemma" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Sobolev’s lemma</span></a></li>
+</ul>
+</div>
+</nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Test functions, distributions, and Sobolev’s lemma</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">May 22, 2014</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space, we denote by <math id="S1.p1.m2" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> the set of continuous linear functionals on <math id="S1.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>. With the weak-* topology, <math id="S1.p1.m4" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> is a locally convex space, whether or not
+<math id="S1.p1.m5" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a locally convex space. (But in this note, we only talk about locally convex spaces.)</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">The purpose of this note is to collect the material given in Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., chapters 6 and 7,
+involved in stating and proving Sobolev’s lemma.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Test functions</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S2.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> is an open subset of <math id="S2.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. We denote by <math id="S2.p1.m3" class="ltx_Math" alttext="\mathscr{D}(\Omega)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> the set of all <math id="S2.p1.m4" class="ltx_Math" alttext="\phi\in C^{\infty}(\Omega)" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> such that
+<math id="S2.p1.m5" class="ltx_Math" alttext="\mathrm{supp}\,\phi" display="inline"><mrow><mpadded width="+1.7pt"><mi>supp</mi></mpadded><mo>⁢</mo><mi>ϕ</mi></mrow></math> is a compact subset of <math id="S2.p1.m6" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. Elements of <math id="S2.p1.m7" class="ltx_Math" alttext="\mathscr{D}(\Omega)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> are called <span class="ltx_text ltx_font_italic">test functions</span>. For <math id="S2.p1.m8" class="ltx_Math" alttext="N=0,1,\ldots" display="inline"><mrow><mi>N</mi><mo>=</mo><mrow><mn>0</mn><mo>,</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi></mrow></mrow></math> and <math id="S2.p1.m9" class="ltx_Math" alttext="\phi\in\mathscr{D}(\Omega)" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, write</p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="\left\|\phi\right\|_{N}=\sup\{|(D^{\alpha}\phi)(x)|:x\in\Omega,|\alpha|\leq N\}," display="block"><mrow><mo>∥</mo><mi>ϕ</mi><msub><mo>∥</mo><mi>N</mi></msub><mo>=</mo><mo movablelimits="false">sup</mo><mrow><mo stretchy="false">{</mo><mo stretchy="false">|</mo><mrow><mo stretchy="false">(</mo><msup><mi>D</mi><mi>α</mi></msup><mi>ϕ</mi><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">|</mo><mo>:</mo><mi>x</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi><mo>,</mo><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo><mo>≤</mo><mi>N</mi><mo stretchy="false">}</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="D^{\alpha}=D_{1}^{\alpha_{1}}\cdots D_{n}^{\alpha_{n}},\qquad|\alpha|=\alpha_{%
+1}+\cdots+\alpha_{n}." display="block"><mrow><mrow><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>=</mo><mrow><msubsup><mi>D</mi><mn>1</mn><msub><mi>α</mi><mn>1</mn></msub></msubsup><mo>⁢</mo><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msubsup><mi>D</mi><mi>n</mi><msub><mi>α</mi><mi>n</mi></msub></msubsup></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><msub><mi>α</mi><mn>1</mn></msub><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msub><mi>α</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For each compact
+subset <math id="S2.p1.m10" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> of <math id="S2.p1.m11" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, we define</p>
+<table id="S2.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex3.m1" class="ltx_Math" alttext="\mathscr{D}_{K}=\{\phi\in\mathscr{D}(\Omega):\mathrm{supp}\,\phi\subseteq K\}," display="block"><mrow><mrow><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>:</mo><mrow><mrow><mpadded width="+1.7pt"><mi>supp</mi></mpadded><mo>⁢</mo><mi>ϕ</mi></mrow><mo>⊆</mo><mi>K</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and define <math id="S2.p1.m12" class="ltx_Math" alttext="\tau_{K}" display="inline"><msub><mi>τ</mi><mi>K</mi></msub></math> to be the locally convex topology on <math id="S2.p1.m13" class="ltx_Math" alttext="\mathscr{D}_{K}" display="inline"><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></math> determined by the family of seminorms <math id="S2.p1.m14" class="ltx_Math" alttext="\{\left\|\cdot\right\|_{N}:N\geq 0\}" display="inline"><mrow><mo stretchy="false">{</mo><mo>∥</mo><mo>⋅</mo><msub><mo>∥</mo><mi>N</mi></msub><mo>:</mo><mi>N</mi><mo>≥</mo><mn>0</mn><mo stretchy="false">}</mo></mrow></math>. One proves that
+<math id="S2.p1.m15" class="ltx_Math" alttext="\mathscr{D}_{K}" display="inline"><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></math> with the topology <math id="S2.p1.m16" class="ltx_Math" alttext="\tau_{K}" display="inline"><msub><mi>τ</mi><mi>K</mi></msub></math> is a Fréchet space.
+As sets,</p>
+<table id="S2.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex4.m1" class="ltx_Math" alttext="\mathscr{D}(\Omega)=\bigcup_{K}\mathscr{D}_{K}." display="block"><mrow><mrow><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋃</mo><mi>K</mi></munder><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Define <math id="S2.p1.m17" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> to be the collection of all convex balanced subsets <math id="S2.p1.m18" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> of <math id="S2.p1.m19" class="ltx_Math" alttext="\mathscr{D}(\Omega)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> such that for every compact subset <math id="S2.p1.m20" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> of <math id="S2.p1.m21" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> we have
+<math id="S2.p1.m22" class="ltx_Math" alttext="W\cap\mathscr{D}_{K}\in\tau_{K}" display="inline"><mrow><mrow><mi>W</mi><mo>∩</mo><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></mrow><mo>∈</mo><msub><mi>τ</mi><mi>K</mi></msub></mrow></math>; to say that <math id="S2.p1.m23" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> is <span class="ltx_text ltx_font_italic">balanced</span> means that if <math id="S2.p1.m24" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math> is a complex number with <math id="S2.p1.m25" class="ltx_Math" alttext="|c|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>c</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math> then
+<math id="S2.p1.m26" class="ltx_Math" alttext="cW\subseteq W" display="inline"><mrow><mrow><mi>c</mi><mo>⁢</mo><mi>W</mi></mrow><mo>⊆</mo><mi>W</mi></mrow></math>. One proves that
+<math id="S2.p1.m27" class="ltx_Math" alttext="\{\phi+W:\phi\in\mathscr{D}(\Omega),W\in\beta\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>ϕ</mi><mo>+</mo><mi>W</mi></mrow><mo>:</mo><mrow><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo><mrow><mi>W</mi><mo>∈</mo><mi>β</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></math> is a basis for a topology <math id="S2.p1.m28" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math> on <math id="S2.p1.m29" class="ltx_Math" alttext="\mathscr{D}(\Omega)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, that
+<math id="S2.p1.m30" class="ltx_Math" alttext="\beta" display="inline"><mi>β</mi></math> is a local basis at <math id="S2.p1.m31" class="ltx_Math" alttext="0" display="inline"><mn>0</mn></math> for this topology,
+and that with the topology <math id="S2.p1.m32" class="ltx_Math" alttext="\tau" display="inline"><mi>τ</mi></math>, <math id="S2.p1.m33" class="ltx_Math" alttext="\mathscr{D}(\Omega)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>
+is a locally convex space.<span id="footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
+            <span class="ltx_tag ltx_tag_note">1</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 152, Theorem 6.4; cf. Helmut H. Schaefer,
+<span class="ltx_text ltx_font_italic">Topological Vector Spaces</span>, p. 57.</span></span></span> For each compact subset <math id="S2.p1.m34" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> of <math id="S2.p1.m35" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>,
+one proves that the topology <math id="S2.p1.m36" class="ltx_Math" alttext="\tau_{K}" display="inline"><msub><mi>τ</mi><mi>K</mi></msub></math> is equal to the subspace topology on <math id="S2.p1.m37" class="ltx_Math" alttext="\mathscr{D}_{K}" display="inline"><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></math> inherited from
+<math id="S2.p1.m38" class="ltx_Math" alttext="\mathscr{D}(\Omega)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>.<span id="footnote2" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>
+            <span class="ltx_tag ltx_tag_note">2</span>
+            
+            
+            
+          Walter
+Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 153, Theorem 6.5.</span></span></span></p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">We write <math id="S2.p2.m1" class="ltx_Math" alttext="\mathscr{D}^{\prime}(\Omega)=(\mathscr{D}(\Omega))^{*}" display="inline"><mrow><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mrow></math>, and elements of <math id="S2.p2.m2" class="ltx_Math" alttext="\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> are called <span class="ltx_text ltx_font_italic">distributions</span>.
+With the weak-* topology, <math id="S2.p2.m3" class="ltx_Math" alttext="\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a locally convex space.</p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">It is a fact that a linear functional <math id="S2.p3.m1" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> on <math id="S2.p3.m2" class="ltx_Math" alttext="\mathscr{D}(\Omega)" display="inline"><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></math> is continuous if and only if
+for every compact subset <math id="S2.p3.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> of <math id="S2.p3.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> there is a nonnegative integer <math id="S2.p3.m5" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> and a constant
+<math id="S2.p3.m6" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> such that <math id="S2.p3.m7" class="ltx_Math" alttext="|\Lambda\phi|\leq C\left\|\phi\right\|_{N}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>C</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><mi>N</mi></msub></mrow></mrow></math> for all <math id="S2.p3.m8" class="ltx_Math" alttext="\phi\in\mathscr{D}_{K}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></mrow></math>.<span id="footnote3" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>
+            <span class="ltx_tag ltx_tag_note">3</span>
+            
+            
+            
+          Walter
+Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 156, Theorem 6.8.</span></span></span></p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">For <math id="S2.p4.m1" class="ltx_Math" alttext="\Lambda\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>∈</mo><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S2.p4.m2" class="ltx_Math" alttext="\alpha" display="inline"><mi>α</mi></math> a multi-index,
+we define</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="(D^{\alpha}\Lambda)(\phi)=(-1)^{|\alpha|}\Lambda(D^{\alpha}\phi),\qquad\phi\in%
+\mathscr{D}(\Omega)." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mn>1</mn></mrow><mo stretchy="false">)</mo></mrow><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow></msup><mo>⁢</mo><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S2.p4.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> be a compact subset of <math id="S2.p4.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. As <math id="S2.p4.m5" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is continuous, there is a nonnegative integer <math id="S2.p4.m6" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> and a constant
+<math id="S2.p4.m7" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> such that <math id="S2.p4.m8" class="ltx_Math" alttext="|\Lambda\phi|\leq C\left\|\phi\right\|_{N}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>C</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><mi>N</mi></msub></mrow></mrow></math> for all <math id="S2.p4.m9" class="ltx_Math" alttext="\phi\in\mathscr{D}_{K}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></mrow></math>. Then
+</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="|(D^{\alpha}\Lambda)(\phi)|=|\Lambda(D^{\alpha}\phi)|\leq C\left\|D^{\alpha}%
+\phi\right\|_{N}\leq C\left\|\phi\right\|_{N+|\alpha|}," display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>C</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mi>ϕ</mi></mrow><mo>∥</mo></mrow><mi>N</mi></msub></mrow><mo>≤</mo><mrow><mi>C</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><mrow><mi>N</mi><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which shows that <math id="S2.p4.m10" class="ltx_Math" alttext="D^{\alpha}\Lambda\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo>∈</mo><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">Leibniz formula</span> is the statement that
+for all <math id="S2.p5.m1" class="ltx_Math" alttext="f,g\in C^{\infty}(\mathbb{R}^{n})" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="D^{\alpha}(fg)=\sum_{\beta\leq\alpha}\binom{\alpha}{\beta}(D^{\alpha-\beta}f)(%
+D^{\beta}g)," display="block"><mrow><mrow><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>β</mi><mo>≤</mo><mi>α</mi></mrow></munder><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>α</mi><mi>β</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mrow><mi>α</mi><mo>-</mo><mi>β</mi></mrow></msup><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>β</mi></msup><mo>⁢</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S2.p5.m2" class="ltx_Math" alttext="\binom{\alpha}{\beta}" display="inline"><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>α</mi><mi>β</mi></mfrac><mo>)</mo></mrow></math> are multinomial coefficients.</p>
+</div>
+<div id="S2.p6" class="ltx_para">
+<p class="ltx_p">For <math id="S2.p6.m1" class="ltx_Math" alttext="\Lambda\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>∈</mo><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S2.p6.m2" class="ltx_Math" alttext="f\in C^{\infty}(\Omega)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, we define</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="(f\Lambda)(\phi)=\Lambda(f\phi),\qquad\phi\in\mathscr{D}(\Omega);" display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">this makes sense because <math id="S2.p6.m3" class="ltx_Math" alttext="f\phi\in\mathscr{D}(\Omega)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> when <math id="S2.p6.m4" class="ltx_Math" alttext="\phi\in\mathscr{D}(\Omega)" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. It is apparent that <math id="S2.p6.m5" class="ltx_Math" alttext="f\Lambda" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow></math>
+is linear, and in the following lemma we prove that <math id="S2.p6.m6" class="ltx_Math" alttext="f\Lambda" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow></math> is continuous.<span id="footnote4" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">4</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">4</sup>
+            <span class="ltx_tag ltx_tag_note">4</span>
+            
+            
+            
+          Walter
+Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 159, §6.15.</span></span></span></p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 1</span></span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="\Lambda\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi class="ltx_font_mathscript" mathvariant="normal">D</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="f\in C^{\infty}(\Omega)" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="f\Lambda\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo mathvariant="normal">∈</mo><mrow><msup><mi class="ltx_font_mathscript" mathvariant="normal">D</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S2.p7" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S2.p7.m1" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a compact subset of <math id="S2.p7.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. Because <math id="S2.p7.m3" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is continuous,
+there is some nonnegative integer <math id="S2.p7.m4" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> and some constant <math id="S2.p7.m5" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> such that</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="|\Lambda\phi|\leq C\left\|\phi\right\|_{N},\qquad\phi\in\mathscr{D}_{K}." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>C</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><mi>N</mi></msub></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>ϕ</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p8" class="ltx_para">
+<p class="ltx_p">For <math id="S2.p8.m1" class="ltx_Math" alttext="|\alpha|\leq N" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi>N</mi></mrow></math>, by the Leibniz formula, for all
+<math id="S2.p8.m2" class="ltx_Math" alttext="\phi\in\mathscr{D}_{K}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></mrow></math>,</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="D^{\alpha}(f\phi)=\sum_{\beta\leq\alpha}\binom{\alpha}{\beta}(D^{\alpha-\beta}%
+f)(D^{\beta}\phi)." display="block"><mrow><mrow><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>β</mi><mo>≤</mo><mi>α</mi></mrow></munder><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>α</mi><mi>β</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mrow><mi>α</mi><mo>-</mo><mi>β</mi></mrow></msup><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>β</mi></msup><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because <math id="S2.p8.m3" class="ltx_Math" alttext="f\in C^{\infty}(\Omega)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, there is some <math id="S2.p8.m4" class="ltx_Math" alttext="C_{\alpha}" display="inline"><msub><mi>C</mi><mi>α</mi></msub></math> such that <math id="S2.p8.m5" class="ltx_Math" alttext="|(D^{\alpha-\beta}f)(x)|\leq C_{\alpha}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mrow><mi>α</mi><mo>-</mo><mi>β</mi></mrow></msup><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><msub><mi>C</mi><mi>α</mi></msub></mrow></math> for <math id="S2.p8.m6" class="ltx_Math" alttext="\beta\leq\alpha" display="inline"><mrow><mi>β</mi><mo>≤</mo><mi>α</mi></mrow></math> and for <math id="S2.p8.m7" class="ltx_Math" alttext="x\in K" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>K</mi></mrow></math>.
+Using <math id="S2.p8.m8" class="ltx_Math" alttext="\phi(x)=0" display="inline"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for <math id="S2.p8.m9" class="ltx_Math" alttext="x\not\in K" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>K</mi></mrow></math>, the above statement of the Leibniz formula, and the inequality
+just obtained,
+it follows that there is some <math id="S2.p8.m10" class="ltx_Math" alttext="C_{\alpha}^{\prime}" display="inline"><msubsup><mi>C</mi><mi>α</mi><mo>′</mo></msubsup></math> such that <math id="S2.p8.m11" class="ltx_Math" alttext="|(D^{\alpha}(f\phi))(x)|\leq C_{\alpha}^{\prime}\left\|\phi\right\|_{N}" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><msubsup><mi>C</mi><mi>α</mi><mo>′</mo></msubsup><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><mi>N</mi></msub></mrow></mrow></math> for all <math id="S2.p8.m12" class="ltx_Math" alttext="x\in\Omega" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>.
+This gives</p>
+<table id="S2.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex11.m1" class="ltx_Math" alttext="\left\|f\phi\right\|_{N}=\sup_{|\alpha|\leq N}\sup_{x\in\Omega}|(D^{\alpha}(f%
+\phi))(x)|\leq\sup_{|\alpha|\leq N}C_{\alpha}^{\prime}\left\|\phi\right\|_{N}=%
+C^{\prime}\left\|\phi\right\|_{N};" display="block"><mrow><mrow><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>∥</mo></mrow><mi>N</mi></msub><mo>=</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi>N</mi></mrow></munder><mo>⁡</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>x</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow></munder><mo>⁡</mo><mrow><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow><mo>≤</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi>N</mi></mrow></munder><mo>⁡</mo><mrow><msubsup><mi>C</mi><mi>α</mi><mo>′</mo></msubsup><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><mi>N</mi></msub></mrow></mrow><mo>=</mo><mrow><msup><mi>C</mi><mo>′</mo></msup><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><mi>N</mi></msub></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">the last equality is how we define <math id="S2.p8.m13" class="ltx_Math" alttext="C^{\prime}" display="inline"><msup><mi>C</mi><mo>′</mo></msup></math>, which is a maximum of finitely many <math id="S2.p8.m14" class="ltx_Math" alttext="C_{\alpha}^{\prime}" display="inline"><msubsup><mi>C</mi><mi>α</mi><mo>′</mo></msubsup></math> and so finite.
+Then,</p>
+<table id="S2.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex12.m1" class="ltx_Math" alttext="|(f\Lambda)(\phi)|=|\Lambda(f\phi)|\leq C\left\|f\phi\right\|_{N}\leq CC^{%
+\prime}\left\|\phi\right\|_{N},\qquad\phi\in\mathscr{D}_{K}." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mi>C</mi><mo>⁢</mo><msub><mrow><mo>∥</mo><mrow><mi>f</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>∥</mo></mrow><mi>N</mi></msub></mrow><mo>≤</mo><mrow><mi>C</mi><mo>⁢</mo><msup><mi>C</mi><mo>′</mo></msup><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><mi>N</mi></msub></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>ϕ</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This bound shows that <math id="S2.p8.m15" class="ltx_Math" alttext="f\Lambda" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow></math> is continuous.
+∎</p>
+</div>
+</div>
+<div id="S2.p9" class="ltx_para">
+<p class="ltx_p">The above lemma shows that <math id="S2.p9.m1" class="ltx_Math" alttext="f\Lambda\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo>∈</mo><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> when <math id="S2.p9.m2" class="ltx_Math" alttext="f\in C^{\infty}(\Omega)" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S2.p9.m3" class="ltx_Math" alttext="\Lambda\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>∈</mo><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Therefore <math id="S2.p9.m4" class="ltx_Math" alttext="D^{\alpha}(f\Lambda)\in\mathscr{D}(\Omega)" display="inline"><mrow><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and the following lemma, proved in Rudin, states that the Leibniz formula can be used with <math id="S2.p9.m5" class="ltx_Math" alttext="f\Lambda" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow></math>.<span id="footnote5" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">5</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">5</sup>
+            <span class="ltx_tag ltx_tag_note">5</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed.,
+p. 160, §6.15.</span></span></span></p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 2</span></span>.</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="f\in C^{\infty}(\Omega)" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="\Lambda\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo mathvariant="normal">∈</mo><mrow><msup><mi class="ltx_font_mathscript" mathvariant="normal">D</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>, then</span></p>
+<table id="S2.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex13.m1" class="ltx_Math" alttext="D^{\alpha}(f\Lambda)=\sum_{\beta\leq\alpha}\binom{\alpha}{\beta}(D^{\alpha-%
+\beta}f)(D^{\beta}\Lambda)." display="block"><mrow><mrow><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>β</mi><mo>≤</mo><mi>α</mi></mrow></munder><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>α</mi><mi>β</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mrow><mi>α</mi><mo>-</mo><mi>β</mi></mrow></msup><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>β</mi></msup><mo>⁢</mo><mi mathvariant="normal">Λ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div id="S2.p10" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p10.m1" class="ltx_Math" alttext="f:\Omega\to\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> is locally integrable, define</p>
+<table id="S2.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex14.m1" class="ltx_Math" alttext="\Lambda\phi=\int_{\Omega}\phi(x)f(x)dx,\qquad\phi\in\mathscr{D}(\Omega)." display="block"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi mathvariant="normal">Ω</mi></msub><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For <math id="S2.p10.m2" class="ltx_Math" alttext="\phi\in\mathscr{D}_{K}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></mrow></math>,</p>
+<table id="S2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex15.m1" class="ltx_Math" alttext="|\Lambda\phi|\leq\left\|\phi\right\|_{0}\int_{K}|f|dx," display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><mn>0</mn></msub><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>K</mi></msub><mrow><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">from which it follows that <math id="S2.p10.m3" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is continuous.
+If <math id="S2.p10.m4" class="ltx_Math" alttext="\mu" display="inline"><mi>μ</mi></math> is a complex Borel measure on <math id="S2.p10.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> or a positive Borel measure on <math id="S2.p10.m6" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> that assigns finite measure to compact
+sets, define</p>
+<table id="S2.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex16.m1" class="ltx_Math" alttext="\Lambda\phi=\int_{\Omega}\phi d\mu,\qquad\phi\in\mathscr{D}(\Omega)." display="block"><mrow><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi mathvariant="normal">Ω</mi></msub><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>μ</mi></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For <math id="S2.p10.m7" class="ltx_Math" alttext="\phi\in\mathscr{D}_{K}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒟</mi><mi>K</mi></msub></mrow></math>,</p>
+<table id="S2.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex17.m1" class="ltx_Math" alttext="|\Lambda\phi|\leq\left\|\phi\right\|_{0}|\mu|(K)," display="block"><mrow><mrow><mrow><mo stretchy="false">|</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>μ</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>K</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">from which it follows that <math id="S2.p10.m8" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> is continuous.
+Thus, we can encode certain functions and measures as distributions. I will dare to say that we can encode most functions and measures
+that we care about as distributions.</p>
+</div>
+<div id="S2.p11" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p11.m1" class="ltx_Math" alttext="\Lambda_{1},\Lambda_{2}\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mrow><msub><mi mathvariant="normal">Λ</mi><mn>1</mn></msub><mo>,</mo><msub><mi mathvariant="normal">Λ</mi><mn>2</mn></msub></mrow><mo>∈</mo><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S2.p11.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is an open subset of <math id="S2.p11.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>, we say that
+<math id="S2.p11.m4" class="ltx_Math" alttext="\Lambda_{1}=\Lambda_{2}" display="inline"><mrow><msub><mi mathvariant="normal">Λ</mi><mn>1</mn></msub><mo>=</mo><msub><mi mathvariant="normal">Λ</mi><mn>2</mn></msub></mrow></math><span class="ltx_text ltx_font_italic"> in <math id="S2.p11.m5" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math></span> if <math id="S2.p11.m6" class="ltx_Math" alttext="\Lambda_{1}\phi=\Lambda_{2}\phi" display="inline"><mrow><mrow><msub><mi mathvariant="normal">Λ</mi><mn>1</mn></msub><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><msub><mi mathvariant="normal">Λ</mi><mn>2</mn></msub><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></math> for all <math id="S2.p11.m7" class="ltx_Math" alttext="\phi\in\mathscr{D}(\omega)" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p12" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p12.m1" class="ltx_Math" alttext="\Lambda\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>∈</mo><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and let <math id="S2.p12.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> be an open subset of <math id="S2.p12.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. We say that <math id="S2.p12.m4" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math>
+<span class="ltx_text ltx_font_italic">vanishes on <math id="S2.p12.m5" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math></span> if <math id="S2.p12.m6" class="ltx_Math" alttext="\Lambda\phi=0" display="inline"><mrow><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="S2.p12.m7" class="ltx_Math" alttext="\phi\in\mathscr{D}(\omega)" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Taking <math id="S2.p12.m8" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> to be the union of all open subsets <math id="S2.p12.m9" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> of <math id="S2.p12.m10" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> on which <math id="S2.p12.m11" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math> vanishes, we define the <span class="ltx_text ltx_font_italic">support of <math id="S2.p12.m12" class="ltx_Math" alttext="\Lambda" display="inline"><mi mathvariant="normal">Λ</mi></math></span> to be the set
+<math id="S2.p12.m13" class="ltx_Math" alttext="\Omega\setminus W" display="inline"><mrow><mi mathvariant="normal">Ω</mi><mo>∖</mo><mi>W</mi></mrow></math>.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>The Fourier transform</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p1.m1" class="ltx_Math" alttext="C_{0}(\mathbb{R}^{n})" display="inline"><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> be the set of those continuous functions <math id="S3.p1.m2" class="ltx_Math" alttext="f:\mathbb{R}^{n}\to\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> such that for every <math id="S3.p1.m3" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, there is some compact
+set <math id="S3.p1.m4" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> such that <math id="S3.p1.m5" class="ltx_Math" alttext="|f(x)|&lt;\epsilon" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mi>ϵ</mi></mrow></math> for <math id="S3.p1.m6" class="ltx_Math" alttext="x\not\in K" display="inline"><mrow><mi>x</mi><mo>∉</mo><mi>K</mi></mrow></math>. With the supremum norm <math id="S3.p1.m7" class="ltx_Math" alttext="\left\|\cdot\right\|_{\infty}" display="inline"><mrow><mo>∥</mo><mo>⋅</mo><msub><mo>∥</mo><mi mathvariant="normal">∞</mi></msub></mrow></math>, <math id="S3.p1.m8" class="ltx_Math" alttext="C_{0}(\mathbb{R}^{n})" display="inline"><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> is a Banach space.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p2.m1" class="ltx_Math" alttext="m_{n}" display="inline"><msub><mi>m</mi><mi>n</mi></msub></math> be <span class="ltx_text ltx_font_italic">normalized Lebesgue measure on <math id="S3.p2.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></math></span>:</p>
+<table id="S3.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex18.m1" class="ltx_Math" alttext="dm_{n}(x)=(2\pi)^{-n/2}dx." display="block"><mrow><mrow><mrow><mi>d</mi><mo>⁢</mo><msub><mi>m</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow></mrow></msup><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using <math id="S3.p2.m3" class="ltx_Math" alttext="m_{n}" display="inline"><msub><mi>m</mi><mi>n</mi></msub></math>, we define</p>
+<table id="S3.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex19.m1" class="ltx_Math" alttext="\left\|f\right\|_{L^{p}}=\left(\int_{\mathbb{R}^{n}}|f|^{p}dm_{n}\right)^{1/p}%
+,\qquad 1\leq p&lt;\infty" display="block"><mrow><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><msup><mi>L</mi><mi>p</mi></msup></msub><mo>=</mo><msup><mrow><mo>(</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mi>p</mi></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mi>p</mi></mrow></msup></mrow><mo rspace="22.5pt">,</mo><mrow><mn>1</mn><mo>≤</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S3.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex20.m1" class="ltx_Math" alttext="(f*g)(x)=\int_{\mathbb{R}^{n}}f(x-y)g(y)dm_{n}(y)." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>f</mi><mo>*</mo><mi>g</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">For <math id="S3.p3.m1" class="ltx_Math" alttext="t\in\mathbb{R}^{n}" display="inline"><mrow><mi>t</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>, define <math id="S3.p3.m2" class="ltx_Math" alttext="e_{t}:\mathbb{R}^{n}\to\mathbb{C}" display="inline"><mrow><msub><mi>e</mi><mi>t</mi></msub><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> by</p>
+<table id="S3.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex21.m1" class="ltx_Math" alttext="e_{t}(x)=\exp(it\cdot x),\qquad x\in\mathbb{R}^{n}." display="block"><mrow><mrow><mrow><mrow><msub><mi>e</mi><mi>t</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>t</mi></mrow><mo>⋅</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">Fourier transform</span> of <math id="S3.p3.m3" class="ltx_Math" alttext="f\in L^{1}(\mathbb{R}^{n})" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is the function <math id="S3.p3.m4" class="ltx_Math" alttext="\hat{f}:\mathbb{R}^{n}\to\mathbb{C}" display="inline"><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> defined by
+</p>
+<table id="S3.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex22.m1" class="ltx_Math" alttext="(\mathscr{F}f)(t)=\hat{f}(t)=\int_{\mathbb{R}^{n}}fe_{-t}dm_{n},\qquad t\in%
+\mathbb{R}^{n}." display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi class="ltx_font_mathscript">ℱ</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mi>f</mi><mo>⁢</mo><msub><mi>e</mi><mrow><mo>-</mo><mi>t</mi></mrow></msub><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>t</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using the dominated convergence theorem, one shows that <math id="S3.p3.m5" class="ltx_Math" alttext="\hat{f}" display="inline"><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover></math> is continuous.</p>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">For <math id="S3.p4.m1" class="ltx_Math" alttext="f\in C^{\infty}(\mathbb{R}^{n})" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.p4.m2" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math> a nonnegative integer, write</p>
+<table id="S3.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex23.m1" class="ltx_Math" alttext="p_{N}(f)=\sup_{|\alpha|\leq N}\sup_{x\in\mathbb{R}^{n}}(1+|x|^{2})^{N}|(D^{%
+\alpha}f)(x)|," display="block"><mrow><mrow><mrow><msub><mi>p</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi>N</mi></mrow></munder><mo>⁡</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></munder><mo>⁡</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msup><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow><mi>N</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msup><mi>D</mi><mi>α</mi></msup><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and let <math id="S3.p4.m3" class="ltx_Math" alttext="\mathscr{S}_{n}" display="inline"><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></math> be the set of those <math id="S3.p4.m4" class="ltx_Math" alttext="f\in C^{\infty}(\mathbb{R}^{n})" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> such that for every nonnegative integer <math id="S3.p4.m5" class="ltx_Math" alttext="N" display="inline"><mi>N</mi></math>, <math id="S3.p4.m6" class="ltx_Math" alttext="p_{N}(f)&lt;\infty" display="inline"><mrow><mrow><msub><mi>p</mi><mi>N</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+<math id="S3.p4.m7" class="ltx_Math" alttext="\mathscr{S}_{n}" display="inline"><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></math> is a vector space, and with the locally convex topology determined by the family of seminorms
+<math id="S3.p4.m8" class="ltx_Math" alttext="\{p_{N}:N\geq 0\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>p</mi><mi>N</mi></msub><mo>:</mo><mrow><mi>N</mi><mo>≥</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></math> it is a Fréchet space.<span id="footnote6" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">6</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">6</sup>
+            <span class="ltx_tag ltx_tag_note">6</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 184, Theorem 7.4.</span></span></span>
+Further, one proves that <math id="S3.p4.m9" class="ltx_Math" alttext="\mathscr{F}:\mathscr{S}_{n}\to\mathscr{S}_{n}" display="inline"><mrow><mi class="ltx_font_mathscript">ℱ</mi><mo>:</mo><mrow><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub><mo>→</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></mrow></math> is a continuous linear map.<span id="footnote7" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">7</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">7</sup>
+            <span class="ltx_tag ltx_tag_note">7</span>
+            
+            
+            
+          Walter
+Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 184, Theorem 7.4.</span></span></span></p>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">Riemann-Lebesgue lemma</span> is the statement that if <math id="S3.p5.m1" class="ltx_Math" alttext="f\in L^{1}(\mathbb{R}^{n})" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then <math id="S3.p5.m2" class="ltx_Math" alttext="\hat{f}\in C_{0}(\mathbb{R}^{n})" display="inline"><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mo>∈</mo><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.<span id="footnote8" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">8</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">8</sup>
+            <span class="ltx_tag ltx_tag_note">8</span>
+            
+            
+            
+          Walter
+Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 185, Theorem 7.5.</span></span></span></p>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">inversion theorem<span id="footnote9" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">9</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">9</sup>
+              <span class="ltx_tag ltx_tag_note"><span class="ltx_text ltx_font_upright">9</span></span>
+              
+              
+              
+            <span class="ltx_text ltx_font_upright">Walter Rudin, </span>Functional Analysis<span class="ltx_text ltx_font_upright">,
+second ed., p. 186, Theorem 7.7.</span></span></span></span></span> is the statement that if
+<math id="S3.p6.m1" class="ltx_Math" alttext="g\in\mathscr{S}_{n}" display="inline"><mrow><mi>g</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></math> then</p>
+<table id="S3.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex24.m1" class="ltx_Math" alttext="g(x)=\int_{\mathbb{R}^{n}}\hat{g}e_{x}dm_{n},\qquad x\in\mathbb{R}^{n}," display="block"><mrow><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and that if
+<math id="S3.p6.m2" class="ltx_Math" alttext="f\in L^{1}(\mathbb{R}^{n})" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S3.p6.m3" class="ltx_Math" alttext="\hat{f}\in L^{1}(\mathbb{R}^{n})" display="inline"><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mo>∈</mo><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and we define <math id="S3.p6.m4" class="ltx_Math" alttext="f_{0}\in C_{0}(\mathbb{R}^{n})" display="inline"><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>∈</mo><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> by</p>
+<table id="S3.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex25.m1" class="ltx_Math" alttext="f_{0}(x)=\int_{\mathbb{R}^{n}}\hat{f}e_{x}dm_{n},\qquad x\in\mathbb{R}^{n}," display="block"><mrow><mrow><mrow><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">then <math id="S3.p6.m5" class="ltx_Math" alttext="f(x)=f_{0}(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for almost all <math id="S3.p6.m6" class="ltx_Math" alttext="x\in\mathbb{R}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>. For <math id="S3.p6.m7" class="ltx_Math" alttext="g\in\mathscr{S}_{n}" display="inline"><mrow><mi>g</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></math>,
+as <math id="S3.p6.m8" class="ltx_Math" alttext="\hat{g}\in\mathscr{S}_{n}" display="inline"><mrow><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></math>, the function
+<math id="S3.p6.m9" class="ltx_Math" alttext="f(t)=\hat{g}(-t)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> belongs to <math id="S3.p6.m10" class="ltx_Math" alttext="\mathscr{S}_{n}" display="inline"><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></math>. The inversion theorem tells us that for all <math id="S3.p6.m11" class="ltx_Math" alttext="x\in\mathbb{R}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>,</p>
+<table id="S3.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex26.m1" class="ltx_Math" alttext="g(x)=\int_{\mathbb{R}^{n}}\hat{g}(t)e_{x}(t)dm_{n}(t)=\int_{\mathbb{R}^{n}}%
+\hat{g}(-t)e_{x}(-t)dm_{n}(t)=\int_{\mathbb{R}^{n}}f(t)e_{-x}(t)dm_{n}(t)," display="block"><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mrow><mo>-</mo><mi>x</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and hence that <math id="S3.p6.m12" class="ltx_Math" alttext="g=\hat{f}" display="inline"><mrow><mi>g</mi><mo>=</mo><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover></mrow></math>.
+This shows that <math id="S3.p6.m13" class="ltx_Math" alttext="\mathscr{F}:\mathscr{S}_{n}\to\mathscr{S}_{n}" display="inline"><mrow><mi class="ltx_font_mathscript">ℱ</mi><mo>:</mo><mrow><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub><mo>→</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></mrow></math> is onto.
+Using the inversion theorem, one checks that</p>
+<table id="S3.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex27.m1" class="ltx_Math" alttext="\int_{\mathbb{R}^{n}}f\overline{g}dm_{n}=\int_{\mathbb{R}^{n}}\hat{f}\overline%
+{\hat{g}}dm_{n},\qquad f,g\in\mathscr{S}_{n}," display="block"><mrow><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mi>f</mi><mo>⁢</mo><mover accent="true"><mi>g</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mover accent="true"><mi>f</mi><mo stretchy="false">^</mo></mover><mo>⁢</mo><mover accent="true"><mover accent="true"><mi>g</mi><mo stretchy="false">^</mo></mover><mo>¯</mo></mover><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mi>f</mi></mrow></mrow><mo>,</mo><mrow><mi>g</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and so <math id="S3.p6.m14" class="ltx_Math" alttext="\left\|f\right\|_{L^{2}}=\left\|\mathscr{F}f\right\|_{L^{2}}" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>f</mi><mo>∥</mo></mrow><msup><mi>L</mi><mn>2</mn></msup></msub><mo>=</mo><msub><mrow><mo>∥</mo><mrow><mi class="ltx_font_mathscript">ℱ</mi><mo>⁢</mo><mi>f</mi></mrow><mo>∥</mo></mrow><msup><mi>L</mi><mn>2</mn></msup></msub></mrow></math> for <math id="S3.p6.m15" class="ltx_Math" alttext="f\in\mathscr{S}_{n}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></math>. It is a fact that
+<math id="S3.p6.m16" class="ltx_Math" alttext="\mathscr{S}_{n}" display="inline"><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></math> is a dense subset of the Hilbert space <math id="S3.p6.m17" class="ltx_Math" alttext="L^{2}(\mathbb{R}^{n})" display="inline"><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math>, and it follows that there is a unique bounded
+linear operator <math id="S3.p6.m18" class="ltx_Math" alttext="L^{2}(\mathbb{R}^{n})\to L^{2}(\mathbb{R}^{n})" display="inline"><mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, that is equal to <math id="S3.p6.m19" class="ltx_Math" alttext="\mathscr{F}" display="inline"><mi class="ltx_font_mathscript">ℱ</mi></math> on <math id="S3.p6.m20" class="ltx_Math" alttext="\mathscr{S}_{n}" display="inline"><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></math>, and that is unitary.
+We denote this <math id="S3.p6.m21" class="ltx_Math" alttext="\mathscr{F}:L^{2}(\mathbb{R}^{n})\to L^{2}(\mathbb{R}^{n})" display="inline"><mrow><mi class="ltx_font_mathscript">ℱ</mi><mo>:</mo><mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">It is a fact that <math id="S3.p7.m1" class="ltx_Math" alttext="\mathscr{D}(\mathbb{R}^{n})" display="inline"><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> is a dense subset of <math id="S3.p7.m2" class="ltx_Math" alttext="\mathscr{S}_{n}" display="inline"><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></math> and that
+the identity map <math id="S3.p7.m3" class="ltx_Math" alttext="i:\mathscr{D}(\mathbb{R}^{n})\to\mathscr{S}_{n}" display="inline"><mrow><mi>i</mi><mo>:</mo><mrow><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></mrow></math> is continuous.<span id="footnote10" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">10</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">10</sup>
+            <span class="ltx_tag ltx_tag_note">10</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>,
+second ed., p. 189, Theorem 7.10.</span></span></span> If <math id="S3.p7.m4" class="ltx_Math" alttext="L_{1},L_{2}\in(\mathscr{S}_{n})^{*}" display="inline"><mrow><mrow><msub><mi>L</mi><mn>1</mn></msub><mo>,</mo><msub><mi>L</mi><mn>2</mn></msub></mrow><mo>∈</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mrow></math> are distinct, then there is some <math id="S3.p7.m5" class="ltx_Math" alttext="f\in\mathscr{S}_{n}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></math> such that
+<math id="S3.p7.m6" class="ltx_Math" alttext="L_{1}f\neq L_{2}f" display="inline"><mrow><mrow><msub><mi>L</mi><mn>1</mn></msub><mo>⁢</mo><mi>f</mi></mrow><mo>≠</mo><mrow><msub><mi>L</mi><mn>2</mn></msub><mo>⁢</mo><mi>f</mi></mrow></mrow></math>, and as <math id="S3.p7.m7" class="ltx_Math" alttext="\mathscr{D}(\mathbb{R}^{n})" display="inline"><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> is dense in <math id="S3.p7.m8" class="ltx_Math" alttext="\mathscr{S}_{n}" display="inline"><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></math>, there is a sequence <math id="S3.p7.m9" class="ltx_Math" alttext="f_{j}\in\mathscr{D}(\mathbb{R}^{n})" display="inline"><mrow><msub><mi>f</mi><mi>j</mi></msub><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+with <math id="S3.p7.m10" class="ltx_Math" alttext="f_{j}\to f" display="inline"><mrow><msub><mi>f</mi><mi>j</mi></msub><mo>→</mo><mi>f</mi></mrow></math> in <math id="S3.p7.m11" class="ltx_Math" alttext="\mathscr{S}_{n}" display="inline"><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></math>. As</p>
+<table id="S3.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex28.m1" class="ltx_Math" alttext="(L_{1}\circ i)(f_{j})-(L_{2}\circ i)(f_{j})=L_{1}f_{j}-L_{2}f_{j}\to L_{1}f_{j%
+}-L_{2}f_{j}\neq 0," display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>L</mi><mn>1</mn></msub><mo>∘</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>L</mi><mn>2</mn></msub><mo>∘</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>L</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>f</mi><mi>j</mi></msub></mrow><mo>-</mo><mrow><msub><mi>L</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>f</mi><mi>j</mi></msub></mrow></mrow><mo>→</mo><mrow><mrow><msub><mi>L</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>f</mi><mi>j</mi></msub></mrow><mo>-</mo><mrow><msub><mi>L</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>f</mi><mi>j</mi></msub></mrow></mrow><mo>≠</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">there is some <math id="S3.p7.m12" class="ltx_Math" alttext="f_{j}" display="inline"><msub><mi>f</mi><mi>j</mi></msub></math> with <math id="S3.p7.m13" class="ltx_Math" alttext="(L_{1}\circ i)(f_{j})\neq(L_{2}\circ i)(f_{j})" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>L</mi><mn>1</mn></msub><mo>∘</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>L</mi><mn>2</mn></msub><mo>∘</mo><mi>i</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and hence <math id="S3.p7.m14" class="ltx_Math" alttext="L_{1}\circ i\neq L_{2}\circ i" display="inline"><mrow><mrow><msub><mi>L</mi><mn>1</mn></msub><mo>∘</mo><mi>i</mi></mrow><mo>≠</mo><mrow><msub><mi>L</mi><mn>2</mn></msub><mo>∘</mo><mi>i</mi></mrow></mrow></math>. This shows that
+<math id="S3.p7.m15" class="ltx_Math" alttext="L\mapsto L\circ i" display="inline"><mrow><mi>L</mi><mo>↦</mo><mrow><mi>L</mi><mo>∘</mo><mi>i</mi></mrow></mrow></math> is a one-to-one linear map <math id="S3.p7.m16" class="ltx_Math" alttext="(\mathscr{S}_{n})^{*}\to\mathscr{D}^{\prime}(\mathbb{R}^{n})" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>*</mo></msup><mo>→</mo><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Elements of <math id="S3.p7.m17" class="ltx_Math" alttext="\mathscr{D}^{\prime}(\mathbb{R}^{n})" display="inline"><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> of the form <math id="S3.p7.m18" class="ltx_Math" alttext="L\circ i" display="inline"><mrow><mi>L</mi><mo>∘</mo><mi>i</mi></mrow></math> for <math id="S3.p7.m19" class="ltx_Math" alttext="L\in(\mathscr{S}_{n})^{*}" display="inline"><mrow><mi>L</mi><mo>∈</mo><msup><mrow><mo stretchy="false">(</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mrow></math> are called
+<span class="ltx_text ltx_font_italic">tempered distributions</span>, and we denote the set of tempered distributions by
+<math id="S3.p7.m20" class="ltx_Math" alttext="\mathscr{S}_{n}^{\prime}" display="inline"><msubsup><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi><mo>′</mo></msubsup></math>.
+It is a fact that every distribution with compact support is tempered.<span id="footnote11" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">11</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">11</sup>
+            <span class="ltx_tag ltx_tag_note">11</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 190, Example 7.12 (a).</span></span></span></p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Sobolev’s lemma</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S4.p1.m1" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> is an open subset of <math id="S4.p1.m2" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. We say that a measurable function <math id="S4.p1.m3" class="ltx_Math" alttext="f:\Omega\to\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>→</mo><mi>ℂ</mi></mrow></mrow></math>
+is <span class="ltx_text ltx_font_italic">locally <math id="S4.p1.m4" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn mathvariant="normal">2</mn></msup></math></span>
+if <math id="S4.p1.m5" class="ltx_Math" alttext="\int_{K}|f|^{2}dm_{n}&lt;\infty" display="inline"><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>K</mi></msub><mrow><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> for every compact subset <math id="S4.p1.m6" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> of <math id="S4.p1.m7" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>.
+We say that <math id="S4.p1.m8" class="ltx_Math" alttext="\Lambda\in\mathscr{D}^{\prime}(\Omega)" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>∈</mo><mrow><msup><mi class="ltx_font_mathscript">𝒟</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is <span class="ltx_text ltx_font_italic">locally <math id="S4.p1.m9" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn mathvariant="normal">2</mn></msup></math></span> if there is a function <math id="S4.p1.m10" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> that is locally <math id="S4.p1.m11" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math> in <math id="S4.p1.m12" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>
+such that <math id="S4.p1.m13" class="ltx_Math" alttext="\Lambda\phi=\int_{\Omega}\phi gdm_{n}" display="inline"><mrow><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi mathvariant="normal">Ω</mi></msub><mrow><mi>ϕ</mi><mo>⁢</mo><mi>g</mi><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow></mrow></math> for every <math id="S4.p1.m14" class="ltx_Math" alttext="\phi\in\mathscr{D}(\Omega)" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">The following proof of Sobolev’s lemma follows Rudin.<span id="footnote12" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">12</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">12</sup>
+            <span class="ltx_tag ltx_tag_note">12</span>
+            
+            
+            
+          Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 202, Theorem 7.25.</span></span></span></p>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 3</span></span> (Sobolev’s lemma).</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="n,p,r" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">,</mo><mi>p</mi><mo mathvariant="normal">,</mo><mi>r</mi></mrow></math> are integers, <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="n&gt;0" display="inline"><mrow><mi>n</mi><mo mathvariant="normal">&gt;</mo><mn mathvariant="normal">0</mn></mrow></math>, <math id="Thmtheorem3.p1.m3" class="ltx_Math" alttext="p\geq 0" display="inline"><mrow><mi>p</mi><mo mathvariant="normal">≥</mo><mn mathvariant="normal">0</mn></mrow></math>, and</span></p>
+<table id="S4.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex29.m1" class="ltx_Math" alttext="r&gt;p+\frac{n}{2}." display="block"><mrow><mrow><mi>r</mi><mo>&gt;</mo><mrow><mi>p</mi><mo>+</mo><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">Suppose that <math id="Thmtheorem3.p1.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> is an open subset of <math id="Thmtheorem3.p1.m5" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>n</mi></msup></math>, that <math id="Thmtheorem3.p1.m6" class="ltx_Math" alttext="f:\Omega\to\mathbb{C}" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi mathvariant="normal">Ω</mi><mo mathvariant="normal">→</mo><mi mathvariant="normal">C</mi></mrow></mrow></math> is locally <math id="Thmtheorem3.p1.m7" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn mathvariant="normal">2</mn></msup></math>, and that the distribution derivatives
+<math id="Thmtheorem3.p1.m8" class="ltx_Math" alttext="D_{j}^{k}f" display="inline"><mrow><msubsup><mi>D</mi><mi>j</mi><mi>k</mi></msubsup><mo mathvariant="italic">⁢</mo><mi>f</mi></mrow></math> are locally <math id="Thmtheorem3.p1.m9" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn mathvariant="normal">2</mn></msup></math> for <math id="Thmtheorem3.p1.m10" class="ltx_Math" alttext="1\leq j\leq n" display="inline"><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>j</mi><mo mathvariant="normal">≤</mo><mi>n</mi></mrow></math>, <math id="Thmtheorem3.p1.m11" class="ltx_Math" alttext="1\leq k\leq r" display="inline"><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">≤</mo><mi>k</mi><mo mathvariant="normal">≤</mo><mi>r</mi></mrow></math>. Then there is some <math id="Thmtheorem3.p1.m12" class="ltx_Math" alttext="f_{0}\in C^{p}(\Omega)" display="inline"><mrow><msub><mi>f</mi><mn mathvariant="normal">0</mn></msub><mo mathvariant="normal">∈</mo><mrow><msup><mi>C</mi><mi>p</mi></msup><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> such that <math id="Thmtheorem3.p1.m13" class="ltx_Math" alttext="f_{0}(x)=f(x)" display="inline"><mrow><mrow><msub><mi>f</mi><mn mathvariant="normal">0</mn></msub><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">=</mo><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math> for almost all <math id="Thmtheorem3.p1.m14" class="ltx_Math" alttext="x\in\Omega" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mi mathvariant="normal">Ω</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">To say that the distribution derivative <math id="S4.p3.m1" class="ltx_Math" alttext="D_{j}^{k}f" display="inline"><mrow><msubsup><mi>D</mi><mi>j</mi><mi>k</mi></msubsup><mo>⁢</mo><mi>f</mi></mrow></math> is locally <math id="S4.p3.m2" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math> means that there is some <math id="S4.p3.m3" class="ltx_Math" alttext="g_{j,k}:\Omega\to\mathbb{C}" display="inline"><mrow><msub><mi>g</mi><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></msub><mo>:</mo><mrow><mi mathvariant="normal">Ω</mi><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> that is locally <math id="S4.p3.m4" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math> such that</p>
+<table id="S4.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex30.m1" class="ltx_Math" alttext="D_{j}^{k}\Lambda_{f}=\Lambda_{g_{j,k}}." display="block"><mrow><mrow><mrow><msubsup><mi>D</mi><mi>j</mi><mi>k</mi></msubsup><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>f</mi></msub></mrow><mo>=</mo><msub><mi mathvariant="normal">Λ</mi><msub><mi>g</mi><mrow><mi>j</mi><mo>,</mo><mi>k</mi></mrow></msub></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S4.p4.m1" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is an open subset of <math id="S4.p4.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> whose closure <math id="S4.p4.m3" class="ltx_Math" alttext="K" display="inline"><mi>K</mi></math> is a compact subset of <math id="S4.p4.m4" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. There is some <math id="S4.p4.m5" class="ltx_Math" alttext="\psi\in\mathscr{D}(\Omega)" display="inline"><mrow><mi>ψ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>
+with <math id="S4.p4.m6" class="ltx_Math" alttext="\psi(x)=1" display="inline"><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> for <math id="S4.p4.m7" class="ltx_Math" alttext="x\in K" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>K</mi></mrow></math>, and we define <math id="S4.p4.m8" class="ltx_Math" alttext="F:\mathbb{R}^{n}\to\mathbb{C}" display="inline"><mrow><mi>F</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> by</p>
+<table id="S4.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex31.m1" class="ltx_Math" alttext="F(x)=\begin{cases}\psi(x)f(x)&amp;x\in\Omega,\\
+0&amp;x\not\in\Omega;\end{cases}" display="block"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mi>x</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mi>x</mi><mo>∉</mo><mi mathvariant="normal">Ω</mi></mrow><mo>;</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">in particular, for <math id="S4.p4.m9" class="ltx_Math" alttext="x\in K" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>K</mi></mrow></math> we have <math id="S4.p4.m10" class="ltx_Math" alttext="F(x)=f(x)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and for <math id="S4.p4.m11" class="ltx_Math" alttext="x\not\in\mathrm{supp}\,\psi" display="inline"><mrow><mi>x</mi><mo>∉</mo><mrow><mpadded width="+1.7pt"><mi>supp</mi></mpadded><mo>⁢</mo><mi>ψ</mi></mrow></mrow></math> we have <math id="S4.p4.m12" class="ltx_Math" alttext="F(x)=0" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>.
+Because <math id="S4.p4.m13" class="ltx_Math" alttext="\mathrm{supp}\,\psi\subset\Omega" display="inline"><mrow><mrow><mpadded width="+1.7pt"><mi>supp</mi></mpadded><mo>⁢</mo><mi>ψ</mi></mrow><mo>⊂</mo><mi mathvariant="normal">Ω</mi></mrow></math> is compact and <math id="S4.p4.m14" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is locally <math id="S4.p4.m15" class="ltx_Math" alttext="L^{2}" display="inline"><msup><mi>L</mi><mn>2</mn></msup></math>,</p>
+<table id="S4.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex32.m1" class="ltx_Math" alttext="\left\|F\right\|_{L^{2}}=\left(\int_{\mathrm{supp}\,\psi}|\psi f|^{2}dm_{n}%
+\right)^{1/2}\leq\left\|\psi\right\|_{0}\left(\int_{\mathrm{supp}\,\psi}|f|^{2%
+}dm_{n}\right)^{1/2}&lt;\infty," display="block"><mrow><mrow><msub><mrow><mo>∥</mo><mi>F</mi><mo>∥</mo></mrow><msup><mi>L</mi><mn>2</mn></msup></msub><mo>=</mo><msup><mrow><mo>(</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>supp</mi></mpadded><mo>⁢</mo><mi>ψ</mi></mrow></msub><mrow><msup><mrow><mo stretchy="false">|</mo><mrow><mi>ψ</mi><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><mi>ψ</mi><mo>∥</mo></mrow><mn>0</mn></msub><mo>⁢</mo><msup><mrow><mo>(</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mpadded width="+1.7pt"><mi>supp</mi></mpadded><mo>⁢</mo><mi>ψ</mi></mrow></msub><mrow><msup><mrow><mo stretchy="false">|</mo><mi>f</mi><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and using the Cauchy-Schwarz inequality, <math id="S4.p4.m16" class="ltx_Math" alttext="\left\|F\right\|_{L^{1}}\leq\left\|F\right\|_{L^{2}}m_{n}(\mathrm{supp}\,\psi)%
+^{1/2}&lt;\infty" display="inline"><mrow><msub><mrow><mo>∥</mo><mi>F</mi><mo>∥</mo></mrow><msup><mi>L</mi><mn>1</mn></msup></msub><mo>≤</mo><mrow><msub><mrow><mo>∥</mo><mi>F</mi><mo>∥</mo></mrow><msup><mi>L</mi><mn>2</mn></msup></msub><mo>⁢</mo><msub><mi>m</mi><mi>n</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi>supp</mi></mpadded><mo>⁢</mo><mi>ψ</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>1</mn><mo>/</mo><mn>2</mn></mrow></msup></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>, so</p>
+<table id="S4.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex33.m1" class="ltx_Math" alttext="F\in L^{2}(\mathbb{R}^{n})\cap L^{1}(\mathbb{R}^{n})." display="block"><mrow><mrow><mi>F</mi><mo>∈</mo><mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then,</p>
+<table id="S4.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E1.m1" class="ltx_Math" alttext="\int_{\mathbb{R}^{n}}|\widehat{F}|^{2}dm_{n}&lt;\infty." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><msup><mrow><mo stretchy="false">|</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+</div>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">Because <math id="S4.p5.m1" class="ltx_Math" alttext="\Lambda_{F}=\psi\Lambda_{f}" display="inline"><mrow><msub><mi mathvariant="normal">Λ</mi><mi>F</mi></msub><mo>=</mo><mrow><mi>ψ</mi><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>f</mi></msub></mrow></mrow></math> in <math id="S4.p5.m2" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>,
+the Leibniz formula tells us that in <math id="S4.p5.m3" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>,</p>
+<table id="S4.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex34.m1" class="ltx_Math" alttext="D_{j}^{r}\Lambda_{F}=D_{j}^{r}(\psi\Lambda_{f})=\sum_{s=0}^{r}\binom{r}{s}(D_{%
+j}^{r-s}\psi)(D_{j}^{s}\Lambda_{f})=\sum_{s=0}^{r}\binom{r}{s}(D_{j}^{r-s}\psi%
+)(\Lambda_{g_{j,s}})," display="block"><mrow><mrow><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>F</mi></msub></mrow><mo>=</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>ψ</mi><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>f</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>s</mi><mo>=</mo><mn>0</mn></mrow><mi>r</mi></munderover><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>r</mi><mi>s</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mrow><mi>r</mi><mo>-</mo><mi>s</mi></mrow></msubsup><mo>⁢</mo><mi>ψ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mi>s</mi></msubsup><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>f</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>s</mi><mo>=</mo><mn>0</mn></mrow><mi>r</mi></munderover><mrow><mrow><mo>(</mo><mfrac linethickness="0pt"><mi>r</mi><mi>s</mi></mfrac><mo>)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mrow><mi>r</mi><mo>-</mo><mi>s</mi></mrow></msubsup><mo>⁢</mo><mi>ψ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi mathvariant="normal">Λ</mi><msub><mi>g</mi><mrow><mi>j</mi><mo>,</mo><mi>s</mi></mrow></msub></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">hence, defining <math id="S4.p5.m4" class="ltx_Math" alttext="H_{j}:\mathbb{R}^{n}\to\mathbb{C}" display="inline"><mrow><msub><mi>H</mi><mi>j</mi></msub><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> by</p>
+<table id="S4.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex35.m1" class="ltx_Math" alttext="H_{j}(x)=\begin{cases}\sum_{s=0}^{r}\binom{r}{s}(D_{j}^{r-s}\psi)(x)g_{j,s}(x)%
+&amp;x\in\Omega,\\
+0&amp;x\not\in\Omega,\end{cases}" display="block"><mrow><mrow><msub><mi>H</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><mrow><mstyle displaystyle="false"><msubsup><mo largeop="true" symmetric="true">∑</mo><mrow><mi>s</mi><mo>=</mo><mn>0</mn></mrow><mi>r</mi></msubsup></mstyle><mrow><mrow><mo>(</mo><mstyle displaystyle="false"><mfrac linethickness="0pt"><mi>r</mi><mi>s</mi></mfrac></mstyle><mo>)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mrow><mi>r</mi><mo>-</mo><mi>s</mi></mrow></msubsup><mo>⁢</mo><mi>ψ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>g</mi><mrow><mi>j</mi><mo>,</mo><mi>s</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mtd><mtd columnalign="left"><mrow><mrow><mi>x</mi><mo>∈</mo><mi mathvariant="normal">Ω</mi></mrow><mo>,</mo></mrow></mtd></mtr><mtr><mtd columnalign="left"><mn>0</mn></mtd><mtd columnalign="left"><mrow><mrow><mi>x</mi><mo>∉</mo><mi mathvariant="normal">Ω</mi></mrow><mo>,</mo></mrow></mtd></mtr></mtable></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we have <math id="S4.p5.m5" class="ltx_Math" alttext="D_{j}^{r}\Lambda_{F}=\Lambda_{H_{j}}" display="inline"><mrow><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>F</mi></msub></mrow><mo>=</mo><msub><mi mathvariant="normal">Λ</mi><msub><mi>H</mi><mi>j</mi></msub></msub></mrow></math>
+in <math id="S4.p5.m6" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math>. It is apparent that <math id="S4.p5.m7" class="ltx_Math" alttext="H_{j}\in L^{2}(\mathbb{R}^{n})\cap L^{1}(\mathbb{R}^{n})" display="inline"><mrow><msub><mi>H</mi><mi>j</mi></msub><mo>∈</mo><mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>∩</mo><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p6.m1" class="ltx_Math" alttext="\phi\in\mathscr{D}(\mathbb{R}^{n})" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. There are <math id="S4.p6.m2" class="ltx_Math" alttext="\phi_{1},\phi_{2}\in\mathscr{D}(\mathbb{R}^{n})" display="inline"><mrow><mrow><msub><mi>ϕ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo>∈</mo><mrow><mi class="ltx_font_mathscript">𝒟</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> with <math id="S4.p6.m3" class="ltx_Math" alttext="\phi=\phi_{1}+\phi_{2}" display="inline"><mrow><mi>ϕ</mi><mo>=</mo><mrow><msub><mi>ϕ</mi><mn>1</mn></msub><mo>+</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow></mrow></math> and
+<math id="S4.p6.m4" class="ltx_Math" alttext="\mathrm{supp}\,\phi_{1}\subset\Omega" display="inline"><mrow><mrow><mpadded width="+1.7pt"><mi>supp</mi></mpadded><mo>⁢</mo><msub><mi>ϕ</mi><mn>1</mn></msub></mrow><mo>⊂</mo><mi mathvariant="normal">Ω</mi></mrow></math>, <math id="S4.p6.m5" class="ltx_Math" alttext="\mathrm{supp}\,\phi_{2}\subset\mathbb{R}^{n}\setminus\mathrm{supp}\,\psi" display="inline"><mrow><mrow><mpadded width="+1.7pt"><mi>supp</mi></mpadded><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo>⊂</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>∖</mo><mrow><mpadded width="+1.7pt"><mi>supp</mi></mpadded><mo>⁢</mo><mi>ψ</mi></mrow></mrow></mrow></math>.<span id="footnote13" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">13</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">13</sup>
+              <span class="ltx_tag ltx_tag_note">13</span>
+              
+              
+              
+            <math id="footnote13.m1" class="ltx_Math" alttext="\phi_{1}" display="inline"><msub><mi>ϕ</mi><mn>1</mn></msub></math> and <math id="footnote13.m2" class="ltx_Math" alttext="\phi_{2}" display="inline"><msub><mi>ϕ</mi><mn>2</mn></msub></math> are constructed
+using a partition of unity. See
+Walter Rudin, <span class="ltx_text ltx_font_italic">Functional Analysis</span>, second ed., p. 162, Theorem 6.20.</span></span></span> We have just established that
+<math id="S4.p6.m6" class="ltx_Math" alttext="(D_{j}^{r}\Lambda_{F})\phi_{1}=\Lambda_{H_{j}}\phi_{1}" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>F</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>ϕ</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><msub><mi mathvariant="normal">Λ</mi><msub><mi>H</mi><mi>j</mi></msub></msub><mo>⁢</mo><msub><mi>ϕ</mi><mn>1</mn></msub></mrow></mrow></math>. For <math id="S4.p6.m7" class="ltx_Math" alttext="\phi_{2}" display="inline"><msub><mi>ϕ</mi><mn>2</mn></msub></math>, it is apparent that</p>
+<table id="S4.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex36.m1" class="ltx_Math" alttext="(D_{j}^{r}\Lambda_{F})\phi_{2}=\Lambda_{F}(D_{j}^{r}\phi_{2})=\int_{\mathbb{R}%
+^{n}}(D_{j}^{r}\phi_{2})(x)F(x)dm_{n}(x)=0" display="block"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>F</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><msub><mi mathvariant="normal">Λ</mi><mi>F</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S4.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex37.m1" class="ltx_Math" alttext="\Lambda_{H_{j}}\phi_{2}=\int_{\mathbb{R}^{n}}\phi_{2}(x)H_{j}(x)dm_{n}(x)=0." display="block"><mrow><mrow><mrow><msub><mi mathvariant="normal">Λ</mi><msub><mi>H</mi><mi>j</mi></msub></msub><mo>⁢</mo><msub><mi>ϕ</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><msub><mi>ϕ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>H</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence <math id="S4.p6.m8" class="ltx_Math" alttext="(D_{j}^{r}\Lambda_{F})(\phi)=\Lambda_{H_{j}}\phi" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>F</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϕ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi mathvariant="normal">Λ</mi><msub><mi>H</mi><mi>j</mi></msub></msub><mo>⁢</mo><mi>ϕ</mi></mrow></mrow></math>. It is apparent that <math id="S4.p6.m9" class="ltx_Math" alttext="\Lambda_{H_{j}}" display="inline"><msub><mi mathvariant="normal">Λ</mi><msub><mi>H</mi><mi>j</mi></msub></msub></math> has compact support,
+so <math id="S4.p6.m10" class="ltx_Math" alttext="D_{j}^{r}\Lambda_{F}=\Lambda_{H_{j}}" display="inline"><mrow><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>F</mi></msub></mrow><mo>=</mo><msub><mi mathvariant="normal">Λ</mi><msub><mi>H</mi><mi>j</mi></msub></msub></mrow></math> are tempered distributions. Let <math id="S4.p6.m11" class="ltx_Math" alttext="\xi\in\mathscr{S}_{n}" display="inline"><mrow><mi>ξ</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></math>, and take <math id="S4.p6.m12" class="ltx_Math" alttext="\phi\in\mathscr{S}_{n}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><msub><mi class="ltx_font_mathscript">𝒮</mi><mi>n</mi></msub></mrow></math> with <math id="S4.p6.m13" class="ltx_Math" alttext="\xi=\hat{\phi}" display="inline"><mrow><mi>ξ</mi><mo>=</mo><mover accent="true"><mi>ϕ</mi><mo stretchy="false">^</mo></mover></mrow></math>. Then,</p>
+<table id="S4.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S4.Ex41">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex38.m1" class="ltx_Math" alttext="\displaystyle(D_{j}^{r}\Lambda_{F})\phi" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><msub><mi mathvariant="normal">Λ</mi><mi>F</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ϕ</mi></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex38.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex38.m3" class="ltx_Math" alttext="\displaystyle\Lambda_{F}D_{j}^{r}\phi" display="inline"><mrow><msub><mi mathvariant="normal">Λ</mi><mi>F</mi></msub><mo>⁢</mo><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><mi>ϕ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex39.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex39.m3" class="ltx_Math" alttext="\displaystyle\int_{\mathbb{R}^{n}}(D_{j}^{r}\phi)(x)F(x)dm_{n}(x)" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex40.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex40.m3" class="ltx_Math" alttext="\displaystyle\int_{\mathbb{R}^{n}}\mathscr{F}(D_{j}^{r}\phi)(y)\widehat{F}(y)%
+dm_{n}(y)" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><mi class="ltx_font_mathscript">ℱ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>D</mi><mi>j</mi><mi>r</mi></msubsup><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex41.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex41.m3" class="ltx_Math" alttext="\displaystyle\int_{\mathbb{R}^{n}}(iy_{j})^{r}\xi(y)\widehat{F}(y)dm_{n}(y)," display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>y</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mi>ξ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">and</p>
+<table id="S4.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex42.m1" class="ltx_Math" alttext="\Lambda_{H_{j}}\phi=\int_{\mathbb{R}^{n}}\phi(x)H_{j}(x)dm_{n}(x)=\int_{%
+\mathbb{R}^{n}}\xi(y)\widehat{H_{j}}(y)dm_{n}(y)." display="block"><mrow><mrow><mrow><msub><mi mathvariant="normal">Λ</mi><msub><mi>H</mi><mi>j</mi></msub></msub><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>H</mi><mi>j</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mi>ξ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><msub><mi>H</mi><mi>j</mi></msub><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It follows that <math id="S4.p6.m14" class="ltx_Math" alttext="(iy_{j})^{r}\widehat{F}(y)=\widehat{H_{j}}(y)" display="inline"><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>y</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><msub><mi>H</mi><mi>j</mi></msub><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S4.p6.m15" class="ltx_Math" alttext="y\in\mathbb{R}^{n}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>. But <math id="S4.p6.m16" class="ltx_Math" alttext="\widehat{H_{j}}\in L^{2}(\mathbb{R}^{n})" display="inline"><mrow><mover accent="true"><msub><mi>H</mi><mi>j</mi></msub><mo>^</mo></mover><mo>∈</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so</p>
+<table id="S4.E2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E2.m1" class="ltx_Math" alttext="\int_{\mathbb{R}^{n}}y_{i}^{2r}|\widehat{F}(y)|^{2}dm_{n}(y)&lt;\infty,\qquad 1%
+\leq i\leq n." display="block"><mrow><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><msubsup><mi>y</mi><mi>i</mi><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow></msubsup><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo rspace="22.5pt">,</mo><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(2)</span></td>
+</tr>
+</table>
+</div>
+<div id="S4.p7" class="ltx_para">
+<p class="ltx_p">Using (<a href="#S4.E1" title="(1) ‣ 4 Sobolev’s lemma ‣ Test functions, distributions, and Sobolev’s lemma" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>), (<a href="#S4.E2" title="(2) ‣ 4 Sobolev’s lemma ‣ Test functions, distributions, and Sobolev’s lemma" class="ltx_ref"><span class="ltx_text ltx_ref_tag">2</span></a>), and the inequality</p>
+<table id="S4.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex43.m1" class="ltx_Math" alttext="(1+|y|)^{2r}&lt;(2n+2)^{r}(1+y_{1}^{2r}+\cdots+y_{n}^{2r}),\qquad y\in\mathbb{R}^%
+{n}," display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow></msup><mo>&lt;</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow><mo>+</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><msubsup><mi>y</mi><mn>1</mn><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow></msubsup><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><msubsup><mi>y</mi><mi>n</mi><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow></msubsup></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>y</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we get</p>
+<table id="S4.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex44.m1" class="ltx_Math" alttext="J=\int_{\mathbb{R}^{n}}(1+|y|)^{2r}|\widehat{F}(y)|^{2}dm_{n}(y)&lt;\infty." display="block"><mrow><mrow><mi>J</mi><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow></msup><mo>⁢</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S4.p7.m1" class="ltx_Math" alttext="\sigma_{n-1}" display="inline"><msub><mi>σ</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></math> be surface measure on <math id="S4.p7.m2" class="ltx_Math" alttext="S^{n-1}" display="inline"><msup><mi>S</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></math>, with <math id="S4.p7.m3" class="ltx_Math" alttext="\sigma_{n-1}(S^{n-1})=\frac{2\pi^{n/2}}{\Gamma(n/2)}" display="inline"><mrow><mrow><msub><mi>σ</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>S</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><msup><mi>π</mi><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow></msup></mrow><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mrow></math>.
+Using the Cauchy-Schwarz inequality and the change of variable <math id="S4.p7.m4" class="ltx_Math" alttext="y=tu" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>t</mi><mo>⁢</mo><mi>u</mi></mrow></mrow></math>, <math id="S4.p7.m5" class="ltx_Math" alttext="u\in S^{n-1}" display="inline"><mrow><mi>u</mi><mo>∈</mo><msup><mi>S</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></mrow></math>, <math id="S4.p7.m6" class="ltx_Math" alttext="t\geq 0" display="inline"><mrow><mi>t</mi><mo>≥</mo><mn>0</mn></mrow></math>,</p>
+<table id="S4.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S4.Ex48">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex45.m1" class="ltx_Math" alttext="\displaystyle\left(\int_{\mathbb{R}^{n}}(1+|y|)^{p}|\widehat{F}(y)|dm_{n}(y)%
+\right)^{2}" display="inline"><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex45.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex45.m3" class="ltx_Math" alttext="\displaystyle\left(\int_{\mathbb{R}^{n}}(1+|y|)^{r}|\widehat{F}(y)|(1+|y|)^{p-%
+r}dm_{n}(y)\right)^{2}" display="inline"><msup><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>r</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mrow><mi>p</mi><mo>-</mo><mi>r</mi></mrow></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow><mn>2</mn></msup></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex46.m2" class="ltx_Math" alttext="\displaystyle\leq" display="inline"><mo>≤</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex46.m3" class="ltx_Math" alttext="\displaystyle J\int_{\mathbb{R}^{n}}(1+|y|)^{2p-2r}dm_{n}(y)" display="inline"><mrow><mi>J</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex47.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex47.m3" class="ltx_Math" alttext="\displaystyle J(2\pi)^{-n/2}\int_{0}^{\infty}\int_{S^{n-1}}(1+t)^{2p-2r}t^{n-1%
+}d\sigma_{n-1}(u)dt" display="inline"><mrow><mi>J</mi><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mo>-</mo><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow></mrow></msup><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>S</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup></msub></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>σ</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>u</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex48.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex48.m3" class="ltx_Math" alttext="\displaystyle\frac{2J}{\Gamma(n/2)}\int_{0}^{\infty}(1+t)^{2p-2r}t^{n-1}dt." display="inline"><mrow><mrow><mstyle displaystyle="true"><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>J</mi></mrow><mrow><mi mathvariant="normal">Γ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>n</mi><mo>/</mo><mn>2</mn></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mn>0</mn><mi mathvariant="normal">∞</mi></msubsup></mstyle><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow></mrow></msup><mo>⁢</mo><msup><mi>t</mi><mrow><mi>n</mi><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">This integral is finite if and only if <math id="S4.p7.m7" class="ltx_Math" alttext="2p-2r+n-1&lt;-1" display="inline"><mrow><mrow><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>r</mi></mrow></mrow><mo>+</mo><mi>n</mi></mrow><mo>-</mo><mn>1</mn></mrow><mo>&lt;</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>, and we have assumed that <math id="S4.p7.m8" class="ltx_Math" alttext="r&gt;p+\frac{n}{2}" display="inline"><mrow><mi>r</mi><mo>&gt;</mo><mrow><mi>p</mi><mo>+</mo><mfrac><mi>n</mi><mn>2</mn></mfrac></mrow></mrow></math>.
+Therefore,</p>
+<table id="S4.Ex49" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex49.m1" class="ltx_Math" alttext="\int_{\mathbb{R}^{n}}(1+|y|)^{p}|\widehat{F}(y)|dm_{n}(y)&lt;\infty," display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>+</mo><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mrow><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">from which we get that <math id="S4.p7.m9" class="ltx_Math" alttext="y^{\alpha}\widehat{F}(y)" display="inline"><mrow><msup><mi>y</mi><mi>α</mi></msup><mo>⁢</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is in <math id="S4.p7.m10" class="ltx_Math" alttext="L^{1}(\mathbb{R}^{n})" display="inline"><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> for <math id="S4.p7.m11" class="ltx_Math" alttext="|\alpha|\leq p" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mi>α</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mi>p</mi></mrow></math>.</p>
+</div>
+<div id="S4.p8" class="ltx_para">
+<p class="ltx_p">Define</p>
+<table id="S4.Ex50" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex50.m1" class="ltx_Math" alttext="F_{\omega}(x)=\int_{\mathbb{R}^{n}}\widehat{F}e_{x}dm_{n},\qquad x\in\mathbb{R%
+}^{n}." display="block"><mrow><mrow><mrow><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">(Note that <math id="S4.p8.m1" class="ltx_Math" alttext="F" display="inline"><mi>F</mi></math> depends on <math id="S4.p8.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>.)
+<math id="S4.p8.m3" class="ltx_Math" alttext="F,\widehat{F}\in L^{1}(\mathbb{R}^{n})" display="inline"><mrow><mrow><mi>F</mi><mo>,</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover></mrow><mo>∈</mo><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> so by the inversion theorem we have <math id="S4.p8.m4" class="ltx_Math" alttext="F(x)=F_{\omega}(x)" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for almost all <math id="S4.p8.m5" class="ltx_Math" alttext="x\in\mathbb{R}^{n}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>.
+<math id="S4.p8.m6" class="ltx_Math" alttext="F_{\omega}\in C_{0}(\mathbb{R}^{n})" display="inline"><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>∈</mo><mrow><msub><mi>C</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. If <math id="S4.p8.m7" class="ltx_Math" alttext="p\geq 1" display="inline"><mrow><mi>p</mi><mo>≥</mo><mn>1</mn></mrow></math>, then we shall show that <math id="S4.p8.m8" class="ltx_Math" alttext="F_{\omega}\in C^{p}(\Omega)" display="inline"><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>∈</mo><mrow><msup><mi>C</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Take <math id="S4.p8.m9" class="ltx_Math" alttext="e_{k}" display="inline"><msub><mi>e</mi><mi>k</mi></msub></math> to be the standard basis for <math id="S4.p8.m10" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math>. For <math id="S4.p8.m11" class="ltx_Math" alttext="1\leq k_{1}\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><msub><mi>k</mi><mn>1</mn></msub><mo>≤</mo><mi>n</mi></mrow></math> and <math id="S4.p8.m12" class="ltx_Math" alttext="\epsilon\neq 0" display="inline"><mrow><mi>ϵ</mi><mo>≠</mo><mn>0</mn></mrow></math>,</p>
+<table id="S4.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S4.Ex52">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex51.m1" class="ltx_Math" alttext="\displaystyle\frac{F_{\omega}(x+\epsilon e_{k_{1}})-F_{\omega}(x)}{\epsilon}" display="inline"><mstyle displaystyle="true"><mfrac><mrow><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>ϵ</mi><mo>⁢</mo><msub><mi>e</mi><msub><mi>k</mi><mn>1</mn></msub></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>ϵ</mi></mfrac></mstyle></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex51.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex51.m3" class="ltx_Math" alttext="\displaystyle\frac{1}{\epsilon}\int_{\mathbb{R}^{n}}\widehat{F}(y)\left(\exp(i%
+\epsilon e_{k_{1}}\cdot y)-1\right)\exp(ix\cdot y)dm_{n}(y)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>ϵ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>ϵ</mi><mo>⁢</mo><msub><mi>e</mi><msub><mi>k</mi><mn>1</mn></msub></msub></mrow><mo>⋅</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mn>1</mn></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow><mo>⋅</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex52.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex52.m3" class="ltx_Math" alttext="\displaystyle\int_{\mathbb{R}^{n}}iy_{k_{1}}\widehat{F}(y)\frac{e^{i\epsilon y%
+_{k_{1}}}-1}{i\epsilon y_{k}}e_{x}(y)dm_{n}(y)." display="inline"><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub></mstyle><mrow><mi>i</mi><mo>⁢</mo><msub><mi>y</mi><msub><mi>k</mi><mn>1</mn></msub></msub><mo>⁢</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>ϵ</mi><mo>⁢</mo><msub><mi>y</mi><msub><mi>k</mi><mn>1</mn></msub></msub></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><mi>i</mi><mo>⁢</mo><mi>ϵ</mi><mo>⁢</mo><msub><mi>y</mi><mi>k</mi></msub></mrow></mfrac></mstyle><mo>⁢</mo><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">But <math id="S4.p8.m13" class="ltx_Math" alttext="\left|iy_{k_{1}}\widehat{F}(y)\frac{e^{i\epsilon y_{k_{1}}}-1}{i\epsilon y_{k_%
+{1}}}e_{x}(y)\right|\leq|y_{k_{1}}\widehat{F}(y)|" display="inline"><mrow><mrow><mo>|</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>y</mi><msub><mi>k</mi><mn>1</mn></msub></msub><mo>⁢</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mfrac><mrow><msup><mi>e</mi><mrow><mi>i</mi><mo>⁢</mo><mi>ϵ</mi><mo>⁢</mo><msub><mi>y</mi><msub><mi>k</mi><mn>1</mn></msub></msub></mrow></msup><mo>-</mo><mn>1</mn></mrow><mrow><mi>i</mi><mo>⁢</mo><mi>ϵ</mi><mo>⁢</mo><msub><mi>y</mi><msub><mi>k</mi><mn>1</mn></msub></msub></mrow></mfrac><mo>⁢</mo><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>|</mo></mrow><mo>≤</mo><mrow><mo stretchy="false">|</mo><mrow><msub><mi>y</mi><msub><mi>k</mi><mn>1</mn></msub></msub><mo>⁢</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow></mrow></math> and <math id="S4.p8.m14" class="ltx_Math" alttext="y_{k_{1}}\widehat{F}(y)" display="inline"><mrow><msub><mi>y</mi><msub><mi>k</mi><mn>1</mn></msub></msub><mo>⁢</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> belongs to <math id="S4.p8.m15" class="ltx_Math" alttext="L^{1}(\mathbb{R}^{n})" display="inline"><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> (supposing
+<math id="S4.p8.m16" class="ltx_Math" alttext="p\geq 1" display="inline"><mrow><mi>p</mi><mo>≥</mo><mn>1</mn></mrow></math>)
+so we can apply the dominated convergence theorem, which gives us</p>
+<table id="S4.Ex53" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex53.m1" class="ltx_Math" alttext="(D_{k_{1}}F_{\omega})(x)=\lim_{\epsilon\to 0}\frac{F_{\omega}(x+\epsilon e_{k_%
+{1}})-F_{\omega}(x)}{\epsilon}=\int_{\mathbb{R}^{n}}iy_{k_{1}}\widehat{F}(y)e_%
+{x}(y)dm_{n}(y)." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>D</mi><msub><mi>k</mi><mn>1</mn></msub></msub><mo>⁢</mo><msub><mi>F</mi><mi>ω</mi></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mfrac><mrow><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>ϵ</mi><mo>⁢</mo><msub><mi>e</mi><msub><mi>k</mi><mn>1</mn></msub></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>ϵ</mi></mfrac></mrow><mo>=</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msup><mi>ℝ</mi><mi>n</mi></msup></msub><mrow><mi>i</mi><mo>⁢</mo><msub><mi>y</mi><msub><mi>k</mi><mn>1</mn></msub></msub><mo>⁢</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><msub><mi>m</mi><mi>n</mi></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">From the above expression, it is apparent that <math id="S4.p8.m17" class="ltx_Math" alttext="D_{k_{1}}F_{\omega}" display="inline"><mrow><msub><mi>D</mi><msub><mi>k</mi><mn>1</mn></msub></msub><mo>⁢</mo><msub><mi>F</mi><mi>ω</mi></msub></mrow></math> is continuous. This is true for all <math id="S4.p8.m18" class="ltx_Math" alttext="1\leq k_{1}\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><msub><mi>k</mi><mn>1</mn></msub><mo>≤</mo><mi>n</mi></mrow></math>, so
+<math id="S4.p8.m19" class="ltx_Math" alttext="F_{\omega}\in C^{1}(\mathbb{R}^{n})" display="inline"><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>∈</mo><mrow><msup><mi>C</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. If <math id="S4.p8.m20" class="ltx_Math" alttext="p\geq 2" display="inline"><mrow><mi>p</mi><mo>≥</mo><mn>2</mn></mrow></math>, then <math id="S4.p8.m21" class="ltx_Math" alttext="y_{k_{1}}y_{k_{2}}\widehat{F}(y)" display="inline"><mrow><msub><mi>y</mi><msub><mi>k</mi><mn>1</mn></msub></msub><mo>⁢</mo><msub><mi>y</mi><msub><mi>k</mi><mn>2</mn></msub></msub><mo>⁢</mo><mover accent="true"><mi>F</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math> is in <math id="S4.p8.m22" class="ltx_Math" alttext="L^{1}(\mathbb{R}^{n})" display="inline"><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></math> for any <math id="S4.p8.m23" class="ltx_Math" alttext="1\leq k_{2}\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><msub><mi>k</mi><mn>2</mn></msub><mo>≤</mo><mi>n</mi></mrow></math>, and repeating the above
+argument we get <math id="S4.p8.m24" class="ltx_Math" alttext="F_{\omega}\in C^{2}(\mathbb{R}^{n})" display="inline"><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>∈</mo><mrow><msup><mi>C</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. In this way, <math id="S4.p8.m25" class="ltx_Math" alttext="F_{\omega}\in C^{p}(\mathbb{R}^{n})" display="inline"><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>∈</mo><mrow><msup><mi>C</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S4.p9" class="ltx_para">
+<p class="ltx_p">For all <math id="S4.p9.m1" class="ltx_Math" alttext="x\in\omega" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ω</mi></mrow></math>, <math id="S4.p9.m2" class="ltx_Math" alttext="f(x)=F(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>F</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, so <math id="S4.p9.m3" class="ltx_Math" alttext="f(x)=F_{\omega}(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for almost all <math id="S4.p9.m4" class="ltx_Math" alttext="x\in\omega" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ω</mi></mrow></math>.
+If <math id="S4.p9.m5" class="ltx_Math" alttext="\omega^{\prime}" display="inline"><msup><mi>ω</mi><mo>′</mo></msup></math> is an open subset of <math id="S4.p9.m6" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> whose closure is a compact
+subset of <math id="S4.p9.m7" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> and <math id="S4.p9.m8" class="ltx_Math" alttext="\omega\cap\omega^{\prime}\neq\emptyset" display="inline"><mrow><mrow><mi>ω</mi><mo>∩</mo><msup><mi>ω</mi><mo>′</mo></msup></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, then <math id="S4.p9.m9" class="ltx_Math" alttext="F_{\omega},F_{\omega^{\prime}}\in C^{p}(\mathbb{R}^{n})" display="inline"><mrow><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>,</mo><msub><mi>F</mi><msup><mi>ω</mi><mo>′</mo></msup></msub></mrow><mo>∈</mo><mrow><msup><mi>C</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></math> satisfy
+<math id="S4.p9.m10" class="ltx_Math" alttext="f(x)=F_{\omega}(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for almost all <math id="S4.p9.m11" class="ltx_Math" alttext="x\in\omega" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ω</mi></mrow></math> and <math id="S4.p9.m12" class="ltx_Math" alttext="f(x)=F_{\omega^{\prime}}(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><msup><mi>ω</mi><mo>′</mo></msup></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for almost
+all <math id="S4.p9.m13" class="ltx_Math" alttext="x\in\omega^{\prime}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mi>ω</mi><mo>′</mo></msup></mrow></math>, so <math id="S4.p9.m14" class="ltx_Math" alttext="F_{\omega}(x)=F_{\omega^{\prime}}(x)" display="inline"><mrow><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><msup><mi>ω</mi><mo>′</mo></msup></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for almost all <math id="S4.p9.m15" class="ltx_Math" alttext="x\in\omega\cap\omega^{\prime}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>ω</mi><mo>∩</mo><msup><mi>ω</mi><mo>′</mo></msup></mrow></mrow></math>. Since <math id="S4.p9.m16" class="ltx_Math" alttext="F_{\omega},F_{\omega^{\prime}}" display="inline"><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>,</mo><msub><mi>F</mi><msup><mi>ω</mi><mo>′</mo></msup></msub></mrow></math> are continuous, this implies that <math id="S4.p9.m17" class="ltx_Math" alttext="F_{\omega}(x)=F_{\omega^{\prime}}(x)" display="inline"><mrow><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><msup><mi>ω</mi><mo>′</mo></msup></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S4.p9.m18" class="ltx_Math" alttext="x\in\omega\cap\omega^{\prime}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mi>ω</mi><mo>∩</mo><msup><mi>ω</mi><mo>′</mo></msup></mrow></mrow></math>. Thus, it makes sense to define <math id="S4.p9.m19" class="ltx_Math" alttext="f_{0}(x)=F_{\omega}(x)" display="inline"><mrow><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><mi>ω</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for <math id="S4.p9.m20" class="ltx_Math" alttext="x\in\omega" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ω</mi></mrow></math>.
+Because every point in <math id="S4.p9.m21" class="ltx_Math" alttext="\Omega" display="inline"><mi mathvariant="normal">Ω</mi></math> has an open neighborhood of the kind <math id="S4.p9.m22" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> and the restriction of <math id="S4.p9.m23" class="ltx_Math" alttext="f_{0}" display="inline"><msub><mi>f</mi><mn>0</mn></msub></math> to each <math id="S4.p9.m24" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> belongs to
+<math id="S4.p9.m25" class="ltx_Math" alttext="C^{p}(\omega)" display="inline"><mrow><msup><mi>C</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></math>, it follows that <math id="S4.p9.m26" class="ltx_Math" alttext="f_{0}\in C^{p}(\Omega)" display="inline"><mrow><msub><mi>f</mi><mn>0</mn></msub><mo>∈</mo><mrow><msup><mi>C</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi mathvariant="normal">Ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Mon Feb 14 10:41:49 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

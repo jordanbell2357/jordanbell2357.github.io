@@ -1,0 +1,631 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm,mathabx}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\arcsinh}{\ensuremath\mathrm{arcsinh}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_{\mathrm{HS}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Singular integral operators and the Riesz transform}
+\author{Jordan Bell}
+\date{November 17, 2017}
+
+\maketitle
+
+\section{Calder\'on-Zygmund kernels}
+Let $\omega_{n-1}$ be the measure of $S^{n-1}$. It is 
+\[
+\omega_{n-1} = \frac{2\pi^{n/2}}{\Gamma(n/2)}.
+\]
+Let $v_n$ be the measure
+of the unit ball in $\mathbb{R}^n$. It is
+\[
+v_n = \frac{\omega_{n-1}}{n} = \frac{2\pi^{n/2}}{n\Gamma(n/2)}.
+\]
+
+For $k,N \geq 0$ and $\phi \in C^\infty(\mathbb{R}^n)$ let
+\[
+p_{k,N}(\phi) = \max_{|\alpha| \leq k} \sup_{x \in \mathbb{R}^n} 
+(1+|x|)^{N} |(\partial^\alpha \phi)(x)|.
+\]
+ 
+
+A Borel measurable function $K:\mathbb{R}^n \setminus \{0\} \to \mathbb{C}$ is called a 
+\textbf{Calder\'on-Zygmund kernel} if there is some $B$ such that
+\begin{enumerate}
+\item $|K(x)| \leq B|x|^{-n}$, $x \neq 0$ \label{cond1}
+\item $\int_{|x| \geq 2|y|} |K(x-y)-K(x)| dx \leq B$, $y \neq 0$ \label{cond2}
+\item $\int_{R_1<|x|<R_2} K(x) dx = 0$, $0<R_1<R_2<\infty$. \label{cond3}
+\end{enumerate}
+
+The following lemma gives a tractable condition under which 
+Condition \ref{cond2} is satisfied.\footnote{Camil Muscalu and Wilhelm Schlag, {\em Classical
+and Multilinear Harmonic Analysis}, volume I, p.~167, Lemma 7.2.}
+
+\begin{lemma}
+If $|(\nabla K)(x)| \leq C |x|^{-n-1}$ for all $x \neq 0$ then for $y \neq 0$,
+\[
+\int_{|x| \geq 2|y|} |K(x-y)-K(x)| dx \leq v_n 2^n C.
+\]
+\end{lemma}
+\begin{proof}
+For $|x|>2|y|>0$, if $0 \leq t \leq 1$ then
+\[
+|x-ty| \geq |x| - t|y|  \geq |x| - |y| > |x|-\frac{|x|}{2} = \frac{|x|}{2}.
+\]
+Write $f(t) = K(x-ty)$, for which $f'(t) = -(\nabla K)(x-ty) \cdot y$. By the fundamental theorem of calculus,
+\[
+K(x-y)-K(x) = f(1)-f(0) = \int_0^1 f'(t) dt = -\int_0^1 (\nabla K)(x-ty) \cdot y dt,
+\]
+thus
+\[
+|K(x-y)-K(x)| \leq \int_0^1 |(\nabla K)(x-ty)| |y| dt
+\leq C |y| \int_0^1 |x-ty|^{-n-1} dt.
+\]
+Then using $|x-ty| > \frac{|x|}{2}$,
+\[
+|K(x-y)-K(x)| \leq C|y| \left( \frac{|x|}{2} \right)^{-n-1} 
+=2^{n+1} C |y| |x|^{-n-1}.
+\]
+For $|y|>0$, using spherical coordinates,\footnote{See \url{http://individual.utoronto.ca/jordanbell/notes/sphericalmeasure.pdf}}
+\begin{align*}
+\int_{|x| \geq 2|y|} |K(x-y)-K(x)| dx&\leq \int_{|x| \geq 2|y|} 2^{n+1} C |y| |x|^{-n-1} dx\\
+&=2^{n+1} C |y| \int_{2|y|}^\infty \left( \int_{S^{n-1}} |r\gamma|^{-n-1}  d\sigma(\gamma) \right) r^{n-1} dr\\
+&=v_n 2^{n+1} C|y| \int_{2|y|}^\infty r^{-2} dr\\
+&=v_n 2^{n+1} C |y| \cdot \frac{1}{2|y|}\\
+&=v_n 2^n C.
+\end{align*}
+\end{proof}
+
+
+For a Calder\'on-Zygmund kernel $K$, for $f \in \mathscr{S}(\mathbb{R}^n)$,  for $x \in \mathbb{R}^n$, and for $\epsilon>0$,
+using Condition \ref{cond3} with $R_1=\epsilon$ and $R_2=1$,\footnote{\url{https://math.aalto.fi/~parissi1/notes/harmonic.pdf},
+p.~115, Lemma 6.15.}
+\[
+\begin{split}
+&\int_{|x-y| \geq \epsilon} K(x-y) f(y) dy\\
+=&\int_{\epsilon \leq |x-y| \leq 1} K(x-y) (f(y)-f(x)) dy + \int_{|x-y| \geq 1} K(x-y) f(y) dy.
+\end{split}
+\]
+By Condition \ref{cond1} there is some $B$ such that 
+$|K(x)| \leq B|x|^{-n}$, and combining this with $|f(y)-f(x)| \leq \norm{\nabla f}_{\infty} |y-x|$,
+\[
+|K(x-y)(f(y)-f(x))| \leq B\norm{\nabla f}_\infty  |y-x|^{-n+1},
+\]
+which is integrable on $\{|x-y| \leq 1\}$. Then by the dominated convergence theorem,
+\[
+\lim_{\epsilon \to 0} \int_{\epsilon \leq |x-y| \leq 1} K(x-y) (f(y)-f(x)) dy 
+=\int_{|x-y| \leq 1} K(x-y) (f(y)-f(x)) dy.
+\]
+
+\begin{lemma}
+For a Calder\'on-Zygmund kernel $K$, for $f \in \mathscr{S}(\mathbb{R}^n)$,  and for $x \in \mathbb{R}^n$, 
+the limit
+\[
+\lim_{\epsilon \to 0} \int_{|x-y| \geq \epsilon} K(x-y) f(y) dy
+\]
+exists.
+\label{CZK}
+\end{lemma}
+
+
+
+\section{Singular integral operators}
+For a Calder\'on-Zygmund kernel $K$ on $\mathbb{R}^n$, for $f \in \mathscr{S}(\mathbb{R}^n)$, and for $x \in \mathbb{R}^n$, let
+\[
+(Tf)(x) = \lim_{\epsilon \to 0} \int_{|x-y| \geq \epsilon} K(x-y) f(y) dy.
+\]
+We call $T$ a \textbf{singular integral operator}. By Lemma \ref{CZK} this makes sense.
+
+We prove that singular integral operators are $L^2 \to L^2$ bounded.\footnote{Camil Muscalu and Wilhelm Schlag, {\em Classical
+and Multilinear Harmonic Analysis}, volume I, p.~168, Proposition 7.3;
+Elias M. Stein, {\em Singular Integrals and Differentiability Properties of Functions},
+p.~35, \S 3.2, Theorem 2; \url{http://math.uchicago.edu/~may/REU2013/REUPapers/Talbut.pdf}}
+
+\begin{theorem}
+There is some $C_n$ such that for any Calder\'on-Zygmund kernel $K$
+and any $f \in \mathscr{S}(\mathbb{R}^n)$,
+\[
+\norm{Tf}_2 \leq C_n B\norm{f}_2.
+\]
+\end{theorem}
+\begin{proof}
+For $0<r<s<\infty$  and
+for $\xi \in \mathbb{R}^n$ define
+\begin{align*}
+m_{r,s}(\xi) &= \int_{\mathbb{R}^n} e^{-2\pi ix\cdot \xi}  1_{r<|x|<s}(x)  K(x) dx.
+\end{align*}
+Take $r<|\xi|^{-1}<s$, for which
+\[
+m_{r,s}(\xi) = \int_{r<|x|<|\xi|^{-1}} e^{-2\pi ix\cdot \xi} K(x) dx 
++ \int_{|\xi|^{-1}<|x|<s} e^{-2\pi ix\cdot \xi} K(x) dx.
+\]
+For the first integral, using Condition \ref{cond3} with $R_1=r$ and $R_2=|\xi|^{-1}$ and then using Condition \ref{cond1},
+\begin{align*}
+\left|\int_{r<|x|<|\xi|^{-1}} e^{-2\pi ix\cdot \xi} K(x) dx\right| &
+= \left|\int_{r<|x|<|\xi|^{-1}} (e^{-2\pi ix\cdot \xi}-1) K(x) dx\right|\\
+&\leq \int_{|x|<|\xi|^{-1}} |e^{-2\pi ix\cdot \xi}-1| |K(x)| dx\\
+&\leq  \int_{|x|<|\xi|^{-1}} 2\pi |x| |\xi| |K(x)| dx\\
+&\leq 2\pi |\xi| \int_{|x|<|\xi|^{-1}} B |x|^{-n+1} dx\\
+&=2\pi |\xi| \cdot v_n |\xi|^{-1}.
+\end{align*}
+For the second integral, let $z=\frac{\xi}{2|\xi|^2}$, and 
+\begin{align*}
+\int_{|\xi|^{-1} < |x|<s} e^{-2\pi ix\cdot \xi} K(x) dx&= -\int_{|\xi|^{-1}<|x|<s}e^{-2\pi i(x+z) \cdot \xi} K(x) dx\\
+&=-\int_{|\xi|^{-1}<|x-z|<s} e^{-2\pi ix\cdot \xi} K(x-z) dx.
+\end{align*}
+Let
+\begin{align*}
+R &= \int_{|\xi|^{-1}<|x|<s} e^{-2\pi ix\cdot \xi}K(x-z) dx - \int_{|\xi|^{-1}<|x-z|<s} e^{-2\pi ix\cdot \xi} K(x-z) dx\\
+&=-\int_{|\xi|^{-1}<|x+z|<s} e^{-2\pi ix\cdot \xi} K(x) dx + \int_{|\xi|^{-1}<|x|<s} e^{-2\pi ix\cdot \xi} K(x) dx,
+\end{align*}
+with which
+\[
+\int_{|\xi|^{-1} < |x|<s} e^{-2\pi ix\cdot \xi} K(x) dx = \frac{1}{2} \int_{|\xi|^{-1}<|x|<s} e^{-2\pi ix\cdot \xi} (K(x)-K(x-z)) dx
++\frac{R}{2}.
+\]
+On the one hand, applying Condition \ref{cond2}, as $|z| = \frac{1}{2|\xi|}$,
+\begin{align*}
+\left| \int_{|\xi|^{-1}<|x|<s} e^{-2\pi ix\cdot \xi} (K(x)-K(x-z)) dx \right|&\leq \int_{|x|>|\xi|^{-1}} |K(x)-K(x-z)| dx\\
+&=\int_{|x|>2|z|} |K(x)-K(x-z)| dx\\
+&\leq B.
+\end{align*}
+On the other hand, let
+\[
+D =D_1 \triangle D_2=  \{x:|\xi|^{-1}<|x+z|<s\} \triangle \{x:|\xi|^{-1}<|x|<s\}.
+\]
+For $x \in D_1$ we have
+\[
+|x| \geq |x+z| - |z| > \frac{1}{|\xi|} - \frac{1}{2|\xi|}= \frac{1}{2|\xi|},
+\]
+and for $x \in D_2$ we have
+$|x| > \frac{1}{|\xi|}$, so for $x \in D$,
+\[
+|x| > \frac{1}{2|\xi|}.
+\]
+Applying Condition \ref{cond1},
+\[
+|K(x)| \leq B|x|^{-n} < 2^nB|\xi|^n. 
+\]
+Furthermore, for $x \in D_1 \setminus D_2$ we have $|x| \leq |\xi|^{-1}$, and for $x \in D_2 \setminus D_1$ we have
+\[
+|x| \leq |x+z|+|z| = |x+z| + \frac{1}{2|\xi|} \leq \frac{1}{|\xi|}+\frac{1}{2|\xi|}
+=\frac{3}{2|\xi|}.
+\]
+Hence
+\[
+D \subset \left\{x: \frac{1}{2|\xi|} < |x| \leq \frac{3}{2|\xi|}\right\},
+\]
+so
+\[
+\lambda(D) \leq \left(\frac{3}{2|\xi|}\right)^n v_n =  \left(\frac{3}{2}\right)^n |\xi|^{-n} v_n.
+\]
+Therefore
+\[
+|R| \leq 2^nB|\xi|^n \cdot  \left(\frac{3}{2}\right)^n |\xi|^{-n} v_n
+=3^n v_n B
+\]
+and then
+\[
+\left| \int_{|\xi|^{-1} < |x|<s} e^{-2\pi ix\cdot \xi} K(x) dx  \right| \leq \frac{1}{2}B + \frac{1}{2} \cdot 3^n v_n B,
+\]
+and finally\footnote{The way I organize the argument, I want to use $\norm{m_{r,s}}_\infty \leq C_nB$, while
+we have only obtained this bound for $r<|\xi|^{-1}<s$. To make the argument correct I may need to 
+do things in a different order, e.g. apply Fatou's lemma and then use an inequality instead of using an inequality
+and then apply Fatou's lemma.}
+\[
+|m_{r,s}(\xi)| \leq 2\pi  v_n+\frac{1}{2}B + \frac{1}{2} \cdot 3^n v_n B=C_nB.
+\]
+
+Define
+\[
+(T_{r,s}f)(x) = \int_{\mathbb{R}^n} 1_{r<|y|<s}(y)  K(y) f(x-y) dy,\qquad x \in \mathbb{R}^n.
+\]
+Then
+\begin{align*}
+\widehat{T_{r,s}f}(\xi)&=\int_{\mathbb{R}^n} e^{-2\pi ix\cdot \xi} \left( \int_{\mathbb{R}^n} 1_{r<|y|<s}(y)  K(y) f(x-y) dy\right) dx\\
+&=\int_{\mathbb{R}^n} 1_{r<|y|<s}(y)  K(y) \left( \int_{\mathbb{R}^n} e^{-2\pi ix\cdot \xi} f(x-y) dx \right) dy\\
+&=\int_{\mathbb{R}^n} 1_{r<|y|<s}(y)  K(y) e^{-2\pi iy\cdot \xi} \widehat{f}(\xi) dy\\
+&=m_{r,s}(\xi) \widehat{f}(\xi),
+\end{align*}
+and so
+\[
+\norm{\widehat{T_{r,s}f}}_2^2=\int_{\mathbb{R}^n} |\widehat{T_{r,s}f}(\xi)|^2 d\xi
+=\int_{\mathbb{R}^n} |m_{r,s}(\xi) \widehat{f}(\xi)|^2 d\xi
+\leq \norm{m_{r,s}}_\infty^2 \norm{\widehat{f}}_2^2,
+\]
+by Plancherel's theorem and the inequality we got for $|m_{r,s}(\xi)|$,
+\[
+\norm{T_{r,s}f}_2^2 \leq \norm{m_{r,s}}_\infty^2 \norm{f}_2^2 \leq (C_nB)^2 \norm{f}_2^2.
+\]
+For each $x \in \mathbb{R}^n$, 
+$(T_{r,s}f)(x) \to (Tf)(x)$ as $r \to 0$ and $s \to \infty$, and thus using Fatou's lemma,
+\[
+\int_{\mathbb{R}^n} |(Tf)(x)|^2 dx \leq
+\liminf_{r \to 0, s \to \infty} \int_{\mathbb{R}^n} |(T_{r,s}f)(x)|^2 dx
+=(C_nB)^2 \norm{f}_2^2.
+\]
+That is,
+\[
+\norm{Tf}_2 \leq C_nB \norm{f}_2.
+\]
+\end{proof}
+
+
+
+
+
+\section{The Riesz transform}
+Let
+\[
+c_n = \frac{1}{\pi v_{n-1}} = \frac{\Gamma\left(\frac{n+1}{2}\right)}{\pi^{(n+1)/2}}.
+\]
+For $1 \leq j \leq n$, let
+\[
+K_j(x) = c_n \frac{x_j}{|x|^{n+1}}.
+\]
+This is a Calder\'on-Zygmund kernel. 
+For $\phi \in \mathscr{S}(\mathbb{R}^n)$ define
+\[
+(R_j \phi)(x) = \lim_{\epsilon \to 0} \int_{|y-x| \geq \epsilon} K_j(x-y) \phi(y) dy
+=\lim_{\epsilon \to 0} \int_{|y| \geq \epsilon} K_j(y) \phi(x-y) dy.
+\]
+We call each $R_j$, $1 \leq j \leq n$, a \textbf{Riesz transform}. 
+
+
+
+
+
+For $1 \leq j \leq n$ define $W_j:\mathscr{S}(\mathbb{R}^n) \to \mathbb{C}$ by
+\begin{equation}
+\inner{W_j}{\phi} = \frac{\Gamma\left(\frac{n+1}{2}\right)}{\pi^{\frac{n+1}{2}}} \lim_{\epsilon \to 0} \int_{|y| \geq \epsilon} K_j(y) \phi(y) dy.
+\label{Wj}
+\end{equation}
+For $\epsilon>0$, 
+\begin{align*}
+\left| \int_{\epsilon \leq |y| \leq 1} K_j(y) \phi(y) dy \right|&=\left| \int_{\epsilon \leq |y| \leq 1} K_j(y)(\phi(y)-\phi(0)) dy \right|\\
+&\leq \int_{\epsilon \leq |y| \leq 1} c_n |y|^{-n} \cdot \norm{\nabla \phi}_\infty |y| dy\\
+&= c_n \norm{\nabla \phi}_\infty \omega_{n-1} \int_\epsilon^1 r^{-n+1} \cdot r^{n-1} dr\\
+&=c_n \norm{\nabla \phi}_\infty \omega_{n-1} (1-\epsilon).
+\end{align*}
+For $|y| \geq 1$,
+\begin{align*}
+\int_{|y| \geq 1} |K_j(y) \phi(y)| dy &\leq c_n \int_{|y| \geq 1} |y|^{-n} (1+|y|^2)^{-1/2} p_{0,1}(\phi) dy\\
+&=c_n \omega_n \int_1^\infty r^{-n} (1+r)^{-1} \cdot r^{n-1} dr\\
+&=c_n \omega_n \log 2.
+\end{align*}
+It then follows from the dominated convergence theorem that the limit
+\[
+\lim_{\epsilon \to 0} \int_{|y| \geq \epsilon} K_j(y) \phi(y) dy
+\]
+exists, which shows that the definition \eqref{Wj} makes sense.
+It is apparent that $W_j$ is linear.
+Then prove that if $\phi_k \to \phi$ in $\mathscr{S}(\mathbb{R}^n)$ then
+$\inner{W_j}{\phi_k} \to \inner{W_j}{\phi}$. This being true means that $W_j \in \mathscr{S}'(\mathbb{R}^n)$, namely
+that each $W_j$ is a tempered distribution. 
+
+For a function $f:\mathbb{R}^n \to \mathbb{C}$, write
+\[
+\widetilde{f}(x) = f(-x), \qquad (\tau_yf)(x)=f(x-y).
+\]
+For $u \in \mathscr{S}'(\mathbb{R}^n)$ and $h \in \mathscr{S}(\mathbb{R}^n)$, define
+\[
+\inner{h*u}{\phi} = \inner{u}{\widetilde{h}*\phi},\qquad \phi \in \mathscr{S}(\mathbb{R}^n).
+\]
+It is a fact that $h*u \in \mathscr{S}'(\mathbb{R}^n)$, and this tempered distribution is induced by the $C^\infty$ function
+$x \mapsto \inner{u}{\tau_x \widetilde{h}}$.\footnote{Loukas Grafakos, {\em Classical Fourier Analysis}, second ed.,
+p.~116, Theorem 2.3.20.}
+The Fourier transform of a tempered distribution $u$ is defined by
+\[
+\inner{\widehat{u}}{\phi} = \inner{u}{\widehat{\phi}},\qquad \phi \in \mathscr{S}(\mathbb{R}^n),
+\]
+where
+\[
+\widehat{\phi}(\xi) = \int_{\mathbb{R}^n} e^{-2\pi ix\cdot \xi} \phi(x) dx,\qquad \xi \in \mathbb{R}^n.
+\]
+It is a fact that $\widehat{u}$ is itself a tempered distribution.
+Finally, for a tempered distribution $u$ and a Schwartz function $h$, we define
+\[
+\inner{hu}{\phi} = \inner{u}{h\phi},\qquad \phi \in \mathscr{S}(\mathbb{R}^n).
+\]
+It is a fact that $hu$ is itself a tempered distribution.
+It is proved that\footnote{Loukas Grafakos, {\em Classical Fourier Analysis}, second ed.,
+p.~120, Proposition 2.3.22.}
+\[
+\widehat{\phi*u} = \widehat{\phi} \widehat{u}.
+\]
+The left-hand side is the Fourier transform of the tempered distribution $\phi*u$, and the right-hand side is the product
+of the Schwartz function $\widehat{\phi}$ and the tempered distribution $\widehat{u}$. 
+
+\begin{lemma}
+For $1 \leq j \leq n$, for $\phi \in \mathscr{S}(\mathbb{R}^n)$, and for $x \in \mathbb{R}^n$,
+\[
+(R_j \phi)(x) = (\phi*W_j)(x).
+\]
+\end{lemma}
+
+We will use the following identity for integrals over $S^{n-1}$.\footnote{Loukas Grafakos, {\em Classical Fourier Analysis}, second ed.,
+p.~261, Lemma 4.1.15.}
+
+\begin{lemma}
+For $\xi \neq 0$ and for $1 \leq j \leq n$,
+\[
+\int_{S^{n-1}} \sgn(\xi \cdot \theta) \theta_j d\sigma(\theta)    =\frac{2\omega_{n-2}}{n-1}
+\frac{\xi_j}{|\xi|}.
+\]
+\label{spherical}
+\end{lemma}
+\begin{proof}
+It is a fact that
+\begin{equation}
+\int_{S^{n-1}} \sgn(\theta_k)\theta_j d\sigma(\theta)=
+\begin{cases}
+0&k \neq j\\
+\int_{S^{n-1}} |\theta_j| d\sigma(\theta)&k = j.
+\end{cases}
+\label{cancellation}
+\end{equation}
+
+It suffices to prove the claim when $\xi \in S^{n-1}$. For $1 \leq j \leq n$ there is 
+$A_j=(a_{i,k})_{i,k} \in SO_n(\mathbb{R})$ such that\footnote{\url{http://www.math.umn.edu/~garrett/m/mfms/notes/08_homogeneous.pdf}}
+\[
+A_j e_j = \xi,
+\]
+for which $a_{i,j}=\xi_i$.
+Using that $A_j^T=A_j^{-1}$ and that 
+$\sigma$ is invariant under $O(n)$
+ we calculate
+\begin{align*}
+\int_{S^{n-1}} \sgn(\xi\cdot \theta) \theta_j d\sigma(\theta)&=
+\int_{S^{n-1}} \sgn(A_j e_j \cdot \theta) (AA^{-1} \theta)_j d\sigma(\theta)\\
+&=\int_{S^{n-1}} \sgn(e_j \cdot A_j^{-1} \theta) (AA^{-1} \theta)_j d\sigma(\theta)\\
+&=\int_{S^{n-1}} \sgn(e_j \cdot \theta) (A\theta)_j d({A_j^{-1}}_*\sigma)(\theta)\\
+&=\int_{S^{n-1}} \sgn(e_j \cdot \theta) (A\theta)_j d\sigma(\theta)\\
+&=\int_{S^{n-1}} \sgn(\theta_j)  \sum_{k=1}^n a_{j,k} \theta_k d\theta.
+\end{align*}
+Applying Lemma \ref{cancellation} and $a_{j,j}=\xi_j$, this becomes
+\[
+\int_{S^{n-1}} \sgn(\xi\cdot \theta) \theta_j d\sigma(\theta)=
+\int_{S^{n-1}} \xi_j |\theta_j| d\sigma(\theta)
+=\frac{\xi_j}{|\xi|} \int_{S^{n-1}} |\theta_j| d\sigma(\theta).
+\]
+Hence for each $1 \leq j \leq n$,
+\[
+\int_{S^{n-1}} \sgn(\xi\cdot \theta) \theta_j d\sigma(\theta)=
+\frac{\xi_j}{|\xi|} \int_{S^{n-1}} |\theta_1| d\sigma(\theta).
+\]
+It is a fact that\footnote{Loukas Grafakos, {\em Classical Fourier Analysis}, second ed.,
+p.~441, Appendix D.2.}
+\[
+\int_{RS^{n-1}} f(\theta) d\sigma(\theta) = 
+\int_{-R}^R \int_{\sqrt{R^2-s^2} S^{n-2}} f(s,\phi) d\phi \frac{Rds}{\sqrt{R^2-s^2}}.
+\]
+Using this with $f(\theta)=f(\theta_1,\ldots,\theta_n)=|\theta_1|$ 
+and using that the measure of $RS^{n-2}$ is
+$R^{n-2} \omega_{n-1}$,
+we calculate
+\begin{align*}
+\int_{S^{n-1}} |\theta_1| d\sigma(\theta)&=\int_{-1}^1 \int_{\sqrt{1-s^2}S^{n-2}} |s| d\phi \frac{ds}{\sqrt{1-s^2}}\\
+&=\int_{-1}^1 (1-s^2)^{\frac{n-2}{2}-\frac{1}{2}} \omega_{n-2} |s| d\phi\\
+&=2\omega_{n-2} \int_{0}^1 (1-s^2)^{\frac{n-3}{2}}s ds\\
+&=\omega_{n-2} \int_0^1 u^{\frac{n-3}{2}} du\\
+&=\frac{2\omega_{n-2}}{n-1}.
+\end{align*}
+\end{proof}
+
+
+We now calculate the Fourier transform
+of the $W_j$.
+We show that the Fourier transform of the tempered distribution $W_j$
+is  induced by the function $\xi \mapsto -i \frac{\xi_j}{|\xi|}$.\footnote{Loukas Grafakos, {\em Classical Fourier Analysis}, second ed.,
+p.~260, Proposition 4.1.14.}
+
+\begin{theorem}
+For $1 \leq j \leq n$ and for $\phi \in \mathscr{S}(\mathbb{R}^n)$,
+\[
+\inner{\widehat{W}_j}{\phi} = \int_{\mathbb{R}^n} -i \phi(x) \frac{x_j}{|x|} dx.
+\]
+\label{Wjtheorem}
+\end{theorem}
+\begin{proof}
+We calculate
+\begin{align*}
+\inner{W_j}{\widehat{\phi}}&= \frac{\Gamma\left(\frac{n+1}{2}\right)}{\pi^{\frac{n+1}{2}}} \lim_{\epsilon \to 0}
+\int_{|\xi| \geq \epsilon}K_j(\xi) \widehat{\phi}(\xi)  d\xi\\
+&= \frac{\Gamma\left(\frac{n+1}{2}\right)}{\pi^{\frac{n+1}{2}}} \lim_{\epsilon \to 0}
+\int_{\epsilon \leq |\xi| \leq 1/\epsilon}K_j(\xi) \widehat{\phi}(\xi)  d\xi\\
+&=\frac{\Gamma\left(\frac{n+1}{2}\right)}{\pi^{\frac{n+1}{2}}} \lim_{\epsilon \to 0}
+\int_{\epsilon \leq |\xi| \leq 1/\epsilon} \left(\int_{\mathbb{R}^n} e^{-2\pi ix\cdot \xi} \phi(x) dx\right)
+\frac{\xi_j}{|\xi|^{n+1}} d\xi\\
+&=\frac{\Gamma\left(\frac{n+1}{2}\right)}{\pi^{\frac{n+1}{2}}} \lim_{\epsilon \to 0} \int_{\mathbb{R}^n}
+\phi(x) \left( \int_{\epsilon \leq |\xi| \leq 1/\epsilon} e^{-2\pi ix\cdot \xi} \frac{\xi_j}{|\xi|^{n+1}} d\xi \right) dx.
+\end{align*}
+For the inside integral, because $\theta \mapsto \cos(-2\pi rx_j \theta_j) \theta_j$  is an odd function,
+\begin{align*}
+ \int_{\epsilon \leq |\xi| \leq 1/\epsilon} e^{-2\pi ix\cdot \xi} \frac{\xi_j}{|\xi|^{n+1}} d\xi&=
+ \int_{\epsilon \leq r \leq 1/\epsilon} \left( \int_{S^{n-1}} e^{-2\pi ix\cdot (r\theta)} 
+\frac{r\theta_j}{r^{n+1}} d\sigma(\theta) \right) r^{n-1} dr \\
+&=
+ \int_{\epsilon \leq r \leq 1/\epsilon} \left( \int_{S^{n-1}} e^{-2\pi ir x\cdot \theta} 
+\theta_j d\sigma(\theta) \right) r^{-1} dr \\
+&= \int_{\epsilon \leq r \leq 1/\epsilon} \left( \int_{S^{n-1}} i\sin(-2\pi rx\cdot \theta) \theta_j d\sigma(\theta) \right)
+r^{-1} dr\\
+&= -i \int_{\epsilon \leq r \leq 1/\epsilon}\left( \int_{S^{n-1}} \sin(2\pi rx\cdot\theta) \theta_j d\sigma(\theta) \right)
+r^{-1} dr\\
+&=-i \int_{S^{n-1}} \left( \int_{\epsilon \leq r \leq 1/\epsilon} \sin(2\pi rx\cdot \theta) r^{-1} dr \right) \theta_j
+d\sigma(\theta). 
+\end{align*}
+Call the whole last expression $f_\epsilon(x)$.
+It is a fact that
+for $0<a<b<\infty$,
+\[
+\left| \int_a^b \frac{\sin t}{t} dt \right| \leq 4,
+\]
+thus for $x \neq 0$,
+\[
+|f_\epsilon(x)| \leq 4\omega_{n-1}.
+\]
+As\footnote{Loukas Grafakos, {\em Classical Fourier Analysis}, second ed.,
+p.~263, Exercise 4.1.1.}
+\[
+\lim_{\epsilon \to 0}f_\epsilon(x)=- i\int_{S^{n-1}} \sgn(x\cdot \theta) \frac{\pi}{2} \theta_j d\sigma(\theta),
+\]
+applying the dominated convergence theorem yields
+\[
+\begin{split}
+& \lim_{\epsilon \to 0} \int_{\mathbb{R}^n}
+\phi(x) \left( \int_{\epsilon \leq |\xi| \leq 1/\epsilon} e^{-2\pi ix\cdot \xi} \frac{\xi_j}{|\xi|^{n+1}} d\xi \right) dx\\
+=&\int_{\mathbb{R}^n} \phi(x) \left(- i\int_{S^{n-1}} \sgn(x\cdot \theta) \frac{\pi}{2} \theta_j d\sigma(\theta)\right) dx\\
+=&-i\frac{\pi}{2} \int_{\mathbb{R}^n}\phi(x) \left( \int_{S^{n-1}} \sgn(x\cdot \theta) \theta_j d\sigma(\theta) \right) dx.
+\end{split}
+\]
+Then using Lemma \ref{spherical} and putting the above together we get
+\begin{align*}
+\inner{W_j}{\widehat{\phi}}&=\frac{\Gamma\left(\frac{n+1}{2}\right)}{\pi^{\frac{n+1}{2}}}
+\cdot -i\frac{\pi}{2} \int_{\mathbb{R}^n} \phi(x) \left( \int_{S^{n-1}} \sgn(x\cdot \theta) \theta_j d\sigma(\theta) \right) dx\\
+&=-i\frac{\pi}{2} \frac{\Gamma\left(\frac{n+1}{2}\right)}{\pi^{\frac{n+1}{2}}} 
+\int_{\mathbb{R}^n}\phi(x) \frac{2\omega_{n-2}}{n-1} \frac{x_j}{|x|} dx.
+\end{align*}
+We work out that
+\[
+\frac{\pi}{2} \frac{\Gamma\left(\frac{n+1}{2}\right)}{\pi^{\frac{n+1}{2}}} \cdot \frac{2\omega_{n-2}}{n-1} = 1,
+\]
+and therefore
+\[
+\inner{W_j}{\widehat{\phi}} = -i \int_{\mathbb{R}^n} \phi(x) \frac{x_j}{|x|} dx,
+\]
+completing the proof.
+\end{proof}
+
+Because $R_j h = h*W_j$, 
+\[
+\inner{\widehat{R_j h}}{\phi}=
+\inner{\widehat{h} \widehat{W}_j}{\phi}
+=\inner{\widehat{W}_j}{\widehat{h} \phi}
+=\int_{\mathbb{R}^n} -i \widehat{h}(\xi) \phi(\xi) \frac{\xi_j}{|\xi|} d\xi.
+\]
+
+\begin{theorem}
+For $1 \leq j \leq n$ and for $h \in \mathscr{S}(\mathbb{R}^n)$,
+\[
+\widehat{R_j h}(\xi) = -i\frac{\xi_j}{|\xi|} \widehat{h}(\xi),\qquad \xi \in \mathbb{R}^n.
+\]
+\label{rieszfourier}
+\end{theorem}
+
+In other words, the \textbf{multiplier} of the Riesz transform $R_j$ is $m_j(\xi) =  -i\frac{\xi_j}{|\xi|}$. 
+
+
+\section{Properties of the Riesz transform}
+\begin{theorem}
+\[
+-I = \sum_{j=1}^n R_j^2,
+\]
+where $I(h)  = h$ for $h \in \mathscr{S}(\mathbb{R}^n)$.
+\end{theorem}
+\begin{proof}
+For $h \in \mathscr{S}(\mathbb{R}^n)$,
+\begin{align*}
+\widehat{R_j^2 h}(\xi) = -i\frac{\xi_j}{|\xi|} \widehat{R_j h}(\xi)
+=-i\frac{\xi_j}{|\xi|} \cdot -i\frac{\xi_j}{|\xi|} \widehat{h}(\xi)
+=-\frac{\xi_j^2}{|\xi|^2} \widehat{h}(\xi),
+\end{align*}
+hence
+\[
+\sum_{j=1}^n \widehat{R_j^2 h}  = -\widehat{h}.
+\]
+Taking the inverse Fourier transform,
+\[
+\sum_{j=1}^n R_j^2 h  = -h,
+\]
+i.e.
+\[
+\sum_{j=1}^n R_j^2 = -I.
+\]
+\end{proof}
+
+
+For a tempered distribution $u$, for $1 \leq j \leq n$, we define
+\[
+\inner{\partial_j u}{\phi} = (-1) \inner{u}{\partial_j \phi},\qquad \phi \in \mathscr{S}(\mathbb{R}^n).
+\]
+It is a fact that $\partial_j u$ is itself a tempered distribution. 
+One proves that
+\[
+\widehat{\partial_j u} = (2\pi i\xi_j) \widehat{u}.
+\]
+Each side of the above equation is a tempered distribution. Then
+\[
+\widehat{\Delta u} = \sum_{j=1}^n \widehat{\partial_j^2 u}
+=\sum_{j=1}^n (2\pi i\xi_j)^2 \widehat{u}
+=-4\pi^2  \sum_{j=1}^n \xi_j^2 \widehat{u}
+=-4\pi^2 |\xi|^2 \widehat{u}.
+\]
+
+Suppose that $f$ is a Schwartz function and that $u$ is a tempered distribution satisfying
+\[
+\Delta u = f,
+\]
+called \textbf{Poisson's equation}.
+Then
+\[
+-4\pi^2 |\xi|^2 \widehat{u} = \widehat{f}.
+\]
+For $1 \leq j,k \leq n$,
+\begin{align*}
+\partial_j \partial_k u&=\mathscr{F}^{-1}(\mathscr{F}(\partial_j\partial_k u))\\
+&=\mathscr{F}^{-1}((2\pi i\xi_j)(2\pi i\xi_k) \widehat{u})\\
+&=\mathscr{F}^{-1}\left( -4\pi^2 \xi_j \xi_k \cdot \frac{\widehat{f}}{-4\pi^2 |\xi|^2}\right)\\
+&=\mathscr{F}^{-1}\left(\frac{\xi_j \xi_k}{|\xi|^2} \widehat{f}\right).
+\end{align*}
+Using Theorem \ref{rieszfourier},
+\begin{align*}
+R_j R_k f &= \mathscr{F}^{-1} \mathscr{F}(R_j R_k f)\\
+&=\mathscr{F}^{-1}\left( -i\frac{\xi_j}{|\xi|} \widehat{R_k f}\right)\\
+&=\mathscr{F}^{-1}\left( -i\frac{\xi_j}{|\xi|} \cdot -i\frac{\xi_k}{|\xi|} \widehat{f}\right)\\
+&=\mathscr{F}^{-1}\left(-\frac{\xi_j \xi_k}{|\xi|^2} \widehat{f}\right).
+\end{align*}
+Therefore
+\[
+\partial_j \partial_k u = -R_j R_k f.
+\]
+
+\begin{theorem}
+If $f$ is a Schwartz function and $u$ is a tempered distribution satisfying
+\[
+\Delta u =f,
+\]
+then for $1 \leq j,k \leq n$,
+\[
+\partial_j \partial_k u = -R_j R_k f.
+\]
+\end{theorem}
+
+
+
+
+
+\end{document}

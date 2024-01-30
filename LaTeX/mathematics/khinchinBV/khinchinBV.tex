@@ -1,0 +1,127 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Functions of bounded variation and a theorem of Khinchin}
+\author{Jordan Bell}
+\date{March 12, 2016}
+
+\maketitle
+
+For $q \geq 1$ let
+\[
+\mathscr{A}_q = \left\{\frac{a}{q}: 0 \leq a \leq q, \gcd(a,q)=1\right\}.
+\]
+The sets $\mathscr{A}_q$ are pairwise disjoint. In particular $0 \in \mathscr{A}_1$ and $0 \not \in \mathscr{A}_q$ for $q>1$.
+We have
+\[
+[0,1] \cap \mathbb{Q} = \bigcup_{q \geq 1} \mathscr{A}_q.
+\]
+Write $\mu$ for Lebesgue measure on $[0,1]$. 
+
+
+The following is a version of a theorem of Khinchin about continued fractions.\footnote{John J. Benedetto and Wojciech Czaja, {\em Integration and Modern Analysis}, p.~183, Theorem 4.3.3.} In the literature on Diophantine approximation it is usually proved with the Borel-Cantelli lemma, rather than the machinery of bounded variation and 
+almost everywhere differentiability.
+
+\begin{theorem}[Khinchin]
+Let $F:\mathbb{Z}_{\geq 1} \to \mathbb{R}_{>0}$ and let $A$ be the set of those $x \in [0,1] \setminus \mathbb{Q}$ such that there are infinitely many 
+$q$ for which there is some $\frac{a}{q} \in \mathscr{A}_q$ satisfying
+\[
+\left|\alpha - \frac{a}{q} \right| < \frac{1}{qF(q)}.
+\]
+If 
+\[
+\sum_{q=1}^\infty \frac{1}{F(q)} < \infty,
+\]
+then $\mu(A)=0$. 
+\end{theorem}
+\begin{proof}
+Define $f:[0,1] \to  \mathbb{R}_{>0}$ by
+\[
+f(x) = \begin{cases}
+\frac{1}{q F(q)}& x \in \mathscr{A}_q\\
+0&x  \in [0,1] \setminus \mathbb{Q}.
+\end{cases}
+\]
+
+Let $N \geq 1$. If
+\[
+0=t_0<t_1<\cdots<t_N=1,
+\]
+then
+\begin{align*}
+\sum_{j=0}^N f(t_j) &= \sum_{q=1}^\infty \sum_{j=0}^N f(t_j) \cdot 1_{\mathscr{A}_q}(t_j)\\
+&=\sum_{q=1}^\infty \sum_{j=0}^N \frac{1}{qF(q)} \cdot 1_{\mathscr{A}_q}(t_j)\\
+&\leq \sum_{q=1}^\infty \frac{1}{F(q)},
+\end{align*}
+and so
+\[
+\sum_{j=1}^N |f(t_j)-f(t_{j-1})| \leq 2 \sum_{j=1}^N f(t_j) \leq 2  \sum_{q=1}^\infty \frac{1}{F(q)}.
+\]
+Therefore
+\[
+V(f) \leq  2  \sum_{q=1}^\infty \frac{1}{F(q)}<\infty
+\]
+by  hypothesis,
+where $V(f)$ denotes the variation of $f$ on $[0,1]$.
+The set $D_f$ of points at which $f$ is differentiable is a Borel set,\footnote{V. I. Bogachev,
+{\em Measure Theory}, volume 1, p.~371, Theorem 5.8.12.}
+and because $f$ has bounded variation,
+ $\mu(D_f)=1$.\footnote{V. I. Bogachev, {\em Measure Theory}, volume 1, p.~335, Theorem 5.2.6.}
+ Let $E = D_f \setminus \mathbb{Q}$, whose measure is $\mu(E)=1$. 
+Now let $x \in E$. There are $x_n \in [0,1] \setminus \mathbb{Q}$, $x_n \neq x$, $x_n \to x$, with which
+\[
+f'(x) = \lim_{n \to \infty} \frac{f(x_n)-f(x)}{x_n-x} = \lim_{n \to \infty} \frac{0-0}{x_n-x} = 0.
+\] 
+
+If
+$\frac{a_n}{q_n} \to x$ with $\frac{a_n}{q_n} \in \mathscr{A}_{q_n}$, then
+\[
+\frac{f(a_n/q_n) - f(x)}{\frac{a_n}{q_n}-x} = \frac{1}{q_n F(q_n)\left(\frac{a_n}{q_n}-x\right)} \to f'(x) = 0,
+\]
+so $q_n F(q_n)\left|\frac{a_n}{q_n}-x\right| \to \infty$.
+There is thus some $N$ such that if $n \geq N$ then
+\[
+q_n F(q_n)\left|\frac{a_n}{q_n}-x\right| \geq 1,
+\]
+i.e. if $n \geq N$ then 
+\[
+\left|x- \frac{a_n}{q_n}\right| \geq \frac{1}{q_n F(q_n)}.
+\]
+Assume by contradiction that $x \in A$, so there are $\frac{a_n}{q_n} \in \mathscr{A}_{q_n}$, $\frac{a_n}{q_n} \neq \frac{a_m}{q_m}$ for $n \neq m$, with 
+\[
+\left| x- \frac{a_n}{q_n} \right| < \frac{1}{q_n F(q_n)},
+\]
+and because $\sum_{q=1}^\infty \frac{1}{F(q)}<\infty$ it holds that $F(q) \to \infty$ and thus
+$\frac{1}{q_n F(q_n)} \to 0$. This means that $x - \frac{a_n}{q_n} \to 0$, which implies 
+that $x \notin E$. We have shown that if $x \in A$ then $x \notin E$, so $A \subset [0,1] \setminus E$ and hence
+$\mu(A) \leq 1-\mu(E)=0$. 
+\end{proof}
+
+
+\end{document}

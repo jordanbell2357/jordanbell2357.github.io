@@ -1,0 +1,528 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+\usepackage[draft]{hyperref}
+%\usepackage{tikz-cd}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\abs}{\textrm{abs}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\Hol}{\textrm{Hol}} 
+\newcommand{\SA}{B_{\textrm{sa}}(H)} 
+\newcommand{\positive}{B_{\textrm{+}}(H)} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{The weak topology of locally convex spaces and the weak-* topology of their duals}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+\section{Introduction}
+These notes  give a summary of results that everyone who does work in functional analysis should know
+about the weak topology on locally convex topological vector spaces and the weak-* topology on their dual spaces.
+The most striking of the results we prove is Theorem \ref{weakbounded}, which shows that
+a subset of a locally convex space is bounded if and only if it is weakly bounded. It is straightforward to prove that if a set
+is bounded then it is weakly bounded, but to prove that if a set is weakly bounded then it is bounded we use the Hahn-Banach separation
+theorem, the Banach-Alaoglu theorem, and the uniform boundedness principle.
+
+If $X$ is a topological vector space then we will see that the weak topology on it is coarser than the original topology: any set that is open in the original
+topology is open in the weak topology. From this it follows that it is easier for a sequence to converge in the weak topology than in the original topology:
+ for a sequence to converge to a point means
+that it is eventually contained in every neighborhood of the point, and a point has fewer neighborhoods in the weak topology than it does in the original
+topology. The weak topology encodes information we may care about, and we may be able to establish
+that certain sets are compact in the weak topology that are not compact in the original topology.
+
+
+In these notes I first define the weak topology on a topological vector space $X$, and show that if $X$ is locally convex then $X$ with the weak topology is also a locally convex space.
+ Indeed
+a normed space is locally convex, but there are function spaces that we care about that are not normed spaces. For example, the set of holomorphic functions
+on the open unit disc is a Fr\'echet space\footnote{A {\em Fr\'echet space} is a complete metrizable locally convex space.
+It is a fact that a locally convex
+ space is metrizable if and only its topology is induced by countably many of its seminorms. See John B. Conway, {\em A Course
+ in Functional Analysis}, second ed., p.~105, chapter IV, Proposition 2.1.}  that is not normable. If $U$ is an open subset of $\mathbb{R}^n$, then $C^k(U)$ is a Fr\'echet space that is not normable, and the set of Schwartz functions on $U$ is also
+a Fr\'echet space that is not normable. Moreover, none of the theorems stated for topological vector spaces and locally convex spaces is much easier to prove
+in the case of normed spaces, and thus it is not a great waste of time to digest their statements in a larger category
+of spaces.
+
+Except for the results about normed spaces, the hypotheses of all the theorems that we present are satisfied for a separable metrizable locally convex space. The hypotheses of every result in this note are satisfied for separable reflexive Banach spaces, for example, $L^p(\mathbb{R}^n)$ for $1<p<\infty$.
+
+If every instance of $\mathbb{C}$ in this text is replaced with $\mathbb{R}$, the resulting text does not require any further changes to be correct.
+
+
+
+\section{Topological vector spaces}
+\label{TVS}
+If $X$ is a topological space and $x \in X$ and $\mathcal{B}$ is a set of open sets, we say that $\mathcal{B}$ is a {\em local basis at $x$} if each element of $\mathcal{B}$ includes $x$ and if for every open set
+$U$ that includes $x$ there is some $V \in \mathcal{B}$ such that $V \subseteq U$. If for each $x \in X$ the set $\mathcal{B}_x$ is a local basis at $x$, then $\bigcup_{x \in X} \mathcal{B}_x$ is a basis for the topology of $X$.
+If $X$ is a vector space, $\mathcal{B}$ is a set of subsets of $X$, and $x \in X$, we define
+\[
+x+\mathcal{B} = \{x+N: N \in \mathcal{B}\}, \qquad x+N = \{x+y : y \in N\}.
+\]
+
+If $X$ is a vector space over $\mathbb{C}$ with a topology $\mathcal{O}(X)$ such that $(X,\mathcal{O}(X))$ is Hausdorff and such that
+addition $X \times X \to X$ and
+scalar multiplication $\mathbb{C} \times X \to X$ are continuous, we say that $X$ is a {\em topological vector space}.
+It is straightforward to prove that if $\mathcal{B}$ is a local basis at $0$ then $x+\mathcal{B}$ is a local basis at $x$, and so 
+$\bigcup_{x \in X} \{x+\mathcal{B}\}$ is a basis for the topology $\mathcal{O}(X)$.
+To specify a topology on a vector space it suffices to specify a local basis at $0$: This gives a basis by taking the union of the translates of the local basis over all $x \in X$, and then this basis generates a topology. However, $X$ might not be a topological vector space with the topology thus generated. (That is, if we define a topology on a vector space
+by declaring certain sets including the origin to be open, the vector space need not be a topological vector space with this topology.)
+
+
+A topological vector space $(X,\mathcal{O}(X))$ is said to be {\em locally convex} if there is a local basis at $0$ each element of which is convex.
+ If $\nu_\alpha$ is a  family of seminorms on $X$, we define the {\em seminorm  topology  induced by this family} to be
+ the coarsest topology on $X$ such that for all $x_0 \in X$ and $\alpha \in I$, the map
+$x \mapsto \nu_\alpha(x-x_0)$ is continuous.
+We say that a set of seminorms $\nu_\alpha$ is a {\em separating family} if $x \neq 0$ implies that there is some $\alpha$ such that $\nu_\alpha(x)>0$.
+ One can prove that a topological vector space is locally convex if and only if its topology is induced by a separating family of  seminorms.\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~27, Theorem 1.36 and Theorem 1.37.}
+
+
+Let $(X,\mathcal{O}(X))$ be a topological vector space over $\mathbb{C}$. The {\em dual space} $X^*$ is the set of all continuous linear maps
+$(X,\mathcal{O}(X)) \to \mathbb{C}$. 
+The {\em weak topology} on $X$, which we denote by $\mathcal{O}_w(X)$, is the initial topology for $X^*$. That is, $\mathcal{O}_w(X)$ is the coarsest topology on $X$ so that each element of
+$X^*$ is continuous $(X,\mathcal{O}_w(X)) \to \mathbb{C}$. 
+Equivalently, the weak topology on $X$ is the seminorm topology induced by the seminorms $|\alpha|$, $\alpha \in X^*$.
+The topologies $\mathcal{O}(X)$ and $\mathcal{O}_w(X)$ are comparable, and $\mathcal{O}(X)$ is at least as fine as $\mathcal{O}_w(X)$. 
+That is, $\mathcal{O}_w(X) \subseteq \mathcal{O}(X)$. 
+A vague rule is that
+the smaller $X^*$ is compared to the set of all linear maps $X \to \mathbb{C}$, the smaller $\mathcal{O}_w(X)$ will be compared to $\mathcal{O}(X)$.
+If $X^*$ separates $X$
+ then $(X,\mathcal{O}_w(X))$ is a locally convex topological vector space. It is locally convex because $\mathcal{O}_w(X)$ is induced by the separating family
+of seminorms $|\alpha|$, $\alpha  \in X^*$.
+
+
+\begin{itemize}
+\item We say that $x_k \to x$ {\em weakly} if $x_k \to x$ in $(X,\mathcal{O}_w(X))$: 
+for every  neighborhood $N$ of $x$ in $(X,\mathcal{O}_w(X))$, the sequence $x_k$ is eventually in $N$.
+\item We say that $A$ is {\em weakly bounded} if $A$ is a bounded subset of $(X,\mathcal{O}_w(X))$:
+for every neighborhood $N$ of $0$ in $(X,\mathcal{O}_w(X))$ there is some $c \geq 0$ such that $A \subseteq \{c x: x \in N\}=c
+N$.
+\end{itemize}
+
+
+\section{Locally convex spaces}
+The {\em Hahn-Banach theorem separation theorem}
+ states the following.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~59, Theorem 3.4.}
+ 
+ \begin{theorem}[Hahn-Banach separation theorem]
+ If
+ \begin{itemize}
+ \item $X$ is a locally convex topological vector space over $\mathbb{C}$
+ \item $A,B$ are disjoint, nonempty, closed, convex subsets of $X$
+ \item $A$ is compact
+ \end{itemize}
+ then there is some $\lambda \in X^*$ and
+$\gamma_1,\gamma_2 \in \mathbb{R}$ such that, for all $a \in A$ and $b \in B$,
+\[
+\Re \lambda(a) < \gamma_1<\gamma_2 < \Re \lambda(b).
+\]
+\label{hahnbanach}
+\end{theorem}
+
+It follows that if $X$ is locally convex then $X^*$ separates $X$.
+We can also use the Hahn-Banach separation theorem to prove that in a locally
+convex space, the weak closure of a convex set is equal to its original closure.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~66, Theorem 3.12.}
+
+\begin{theorem}
+If $E$ is a convex subset of a locally convex space $(X,\mathcal{O}(X))$, then the closure $\overline{E}$ of $E$
+in $(X,\mathcal{O}(X))$ is equal to the closure $\overline{E}_w$ of $E$ in $(X,\mathcal{O}_w(X))$.
+\label{weakclosure}
+\end{theorem}
+\begin{proof}
+For $A \subseteq X$, denote $A^c = X \setminus A$. We have, as $\mathcal{O}_w(X)$ is coarser than $\mathcal{O}(X)$,
+\begin{eqnarray*}
+\overline{E}&=&\left( \bigcup_{U \in \mathcal{O}(X), E \subseteq U^c} U \right)^c\\
+&\subseteq&\left( \bigcup_{U \in \mathcal{O}_w(X), E \subseteq U^c} U \right)^c\\
+&=&\overline{E}_w.
+\end{eqnarray*}
+
+In the other direction, let $x_0 \not \in \overline{E}$. If we can show that $x_0 \not \in \overline{E}_w$,
+this will show that $\overline{E}_w \subseteq \overline{E}$ and hence that $\overline{E}=\overline{E}_w$.
+Let $A=\{x_0\}$ and $B=\overline{E}$, which satisfy the conditions of the Hahn-Banach theorem. Thus
+there is some $\lambda \in X^*$ and $\gamma_1,\gamma_2 \in \mathbb{R}$ such that for all
+$x \in \overline{E}$,
+\[
+\Re \lambda(x_0) < \gamma_1 < \gamma_2 < \Re \lambda(x).
+\]
+Let $U=\{x \in X: \Re \lambda(x)<\gamma_1\}$.
+The set $V=\{z \in \mathbb{C}: \Re z < \gamma_1\}$ is an open subset of $\mathbb{C}$ and $U = \lambda^{-1}(V)$, 
+so $U \in \mathcal{O}_w(X)$. For every $x \in \overline{E}$ we have $\Re \lambda(x) > \gamma_2>\gamma_1$, and for every
+$x \in U$ we have $\Re \lambda(x)<\gamma_1$, so $\overline{E} \cap U = \emptyset$ and in particular
+$E \cap U =\emptyset$. The three facts $x_0 \in U, U \in \mathcal{O}_w(X)$, and $E \cap U=\emptyset$ imply
+that $x_0 \not \in \overline{E}_w$, completing the proof.
+\end{proof}
+
+
+If a sequence converges weakly, it  need not converge in the original topology.
+{\em Mazur's theorem} shows that if a sequence in a metrizable locally
+convex space converges weakly then 
+there is a sequence in the convex hull of the original sequence that converges to the same limit as the weak limit of the original sequence.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~67, Theorem 3.13. } 
+
+
+\begin{theorem}[Mazur's theorem]
+Let $X$ be a metrizable locally convex space. If $x_n \to x$ weakly, then there is a sequence $y_i \in X$ such that
+each $y_i$ is a convex combination of finitely many $x_n$ and such that $y_i \to x$. 
+\end{theorem}
+\begin{proof}
+The {\em convex hull} of a subset $A$ of $X$ is the set of all convex combinations of finitely many elements of
+$A$. The  convex hull of a set is convex and contains the set. Let $H$ be the convex hull
+of the sequence $x_n$, and let $K$ be the weak closure of $H$.  
+Since $x_n \to x$ weakly and $x_n \in H$,
+it follows that $x \in K$. As $H$ is convex, Theorem \ref{weakclosure} tells us that $K= \overline{H}$, so
+$x \in \overline{H}$. But $X$ is metrizable, so $x$ being in the closure of $H$ implies that there is a sequence $y_i \in H$ such that
+$y_i \to x$.
+This sequence
+$y_i$ satisfies the claim.
+\end{proof}
+
+
+
+\section{Weak-* topology}
+If $X$ is a vector space over $\mathbb{C}$ and $\mathcal{F}$ is a set of linear maps $X \to \mathbb{C}$
+that separates $X$, and we give $X$ the initial topology for $\mathcal{F}$,
+then one can prove that with this topology $X$ is a locally convex
+space whose dual space is $\mathcal{F}$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed, p.~64, Theorem 3.10.} 
+
+Let $X$ be a topological vector space over $\mathbb{C}$, and for $x \in X$, define $f_x:X^* \to \mathbb{C}$
+by $f_x(\lambda) = \lambda(x)$. $f_x$ is linear. If $\lambda_1,\lambda_2 \in X^*$ are distinct, then $\lambda_1-\lambda_2 \neq 0$ so
+there is some $x \in X$ such that $(\lambda_1-\lambda_2)(x) \neq 0$, which tells us that $f_x(\lambda_1) \neq f_x(\lambda_2)$. Therefore
+the set $\{f_x : x\in X\}$ separates $X^*$. Let $\mathcal{O}_X(X^*)$ be the initial topology for $\{f_x: x\in X\}$, and by the previous paragraph
+we have that $(X^*,\mathcal{O}_X(X^*))$ is a locally convex space whose dual space is
+$\{f_x:x \in X\}$. The topology $\mathcal{O}_X(X^*)$ is called the {\em weak-* topology}
+on $X^*$.  We record what we've just said as a theorem to make it easier to look up.
+
+\begin{theorem}
+If $X$ is a topological vector space,  then its dual
+$X^*$ with the weak-* topology $\mathcal{O}_X(X^*)$ is a locally convex space,
+and the dual space of $(X^*,\mathcal{O}_X(X^*))$ is the set of $f_x:X^* \to \mathbb{C}$, where $f_x(\lambda)=\lambda(x)$, $x \in X, \lambda \in X^*$.
+\label{weakstar}
+\end{theorem}
+
+The {\em Banach-Alaoglu theorem}\footnote{Walter Rudin, {\em Functional Analysis}, second
+ed., p.~68, Theorem 3.15.} shows that certain subsets of $X^*$ are weak-* compact, i.e. they are compact subsets of $(X,\mathcal{O}_X(X^*))$. The set $K$ in the statement of the theorem is called
+the {\em polar} of the set $V$.
+
+\begin{theorem}[Banach-Alaoglu theorem]
+If $X$ be a topological vector space and  $V \subseteq X$ is a neighborhood of $0$, then
+\[
+K=\{\lambda \in X^*:\textrm{if $x \in V$ then $|\lambda(x)| \leq 1$}\}
+\]
+ is a compact subset of $(X^*,\mathcal{O}_X(X^*))$.
+\label{alaoglu}
+\end{theorem}
+
+The following theorem shows that
+in a separable topological vector space, a weak-* compact set is weak-* metrizable.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~70, Theorem 3.16.}
+This is useful because if possible we would like to characterize a topology
+by its convergent sequences rather than by its open sets.
+
+\begin{theorem}
+If $X$ is a separable topological vector space and $K$ is a weak-* compact subset of $X^*$, then
+$K$ with the subspace topology inherited from  $(X^*,\mathcal{O}_X(X^*))$ is metrizable.
+\label{metrizable}
+\end{theorem}
+\begin{proof}
+Let $\{x_n\}$ be a countable dense set in $X$, and define $f_n:X^* \to \mathbb{C}$ by
+$f_n(\lambda)=\lambda (x_n)$. For each $n$,   $f_n:(X^*,\mathcal{O}_X(X^*)) \to \mathbb{C}$ is linear and continuous.
+For distinct $\lambda_1,\lambda_2 \in X^*$, the set $U=\{x \in X: \lambda_1(x) \neq \lambda_2(x)\}$ is an open subset
+of $X$.  As $U$ is a nonempty open set and $\{x_n\}$ is a dense subset of $X$, there is some $x_n \in U$, giving $f_n(\lambda_1) \neq f_n(\lambda_2)$. Therefore
+$\{f_n:X^* \to \mathbb{C}\}$ separates $X^*$. It is a fact that if $Y$ is a compact topological space and there is a countable set of
+continuous functions $Y \to \mathbb{C}$ that separates $Y$ then $Y$ is metrizable.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~63, \S 3.8, (c). In Rudin it is stated for real valued functions.}
+ $K$ is a compact topological space with the subspace topology inherited from $\mathcal{O}_X(X^*)$, and hence this topology on
+$K$ is metrizable.
+\end{proof}
+
+We can combine Theorem \ref{alaoglu} and Theorem \ref{metrizable} to get the following, which  states that the
+polar of a neighborhood of $0$ in a separable topological vector space is weak-* sequentially compact.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~70, Theorem 3.17.}
+
+\begin{theorem}
+Let $X$ is a separable topological vector space. If $V$ is a neighborhood of $0$ and if the sequence $\lambda_n \in X^*$ satisfies
+\[
+|\lambda_n(x)| \leq 1, \qquad n \geq 1, x \in V,
+\]
+then there is a subsequence $\lambda_{a(n)}$ and some $\lambda \in X^*$ such that for all $x \in X$,
+\[
+\lim_{n \to \infty} \lambda_{a(n)}(x)= \lambda(x).
+\]
+\end{theorem}
+\begin{proof}
+The Banach-Alaoglu Theorem implies that the polar
+\[
+K=\{\lambda \in X^*:\textrm{if $x \in V$ then $|\lambda(x)| \leq 1$}\},
+\]
+is weak-* compact. $K$ with the subspace 
+topology inherited from $\mathcal{O}_X(X^*)$ is compact, hence by Theorem \ref{metrizable} it is metrizable. 
+Since the sequence $\lambda_n$ is contained in $K$, it has a  subsequence $\lambda_{a(n)}$ that converges weakly 
+to some $\lambda \in K$. 
+For each $x \in X$, the function $f_x:(X^*,\mathcal{O}_X(X^*)) \to \mathbb{C}$ defined by $f_x(\lambda)=\lambda(x)$
+is continuous, hence for all $x \in X$ we have $f_x(\lambda_{a(n)}) \to f_x(\lambda)$, which is the claim.
+\end{proof}
+
+The following lemma gives a tractable characterization of weakly bounded sets.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~66.}
+
+
+\begin{lemma}
+If $X$ is a topological vector space and $E$ is a subset of $X$, then $E$ is weakly bounded if and only if 
+for all $\lambda \in X^*$ there is some $\gamma(\lambda)$ such that if $x \in E$ then $|\lambda(x)| \leq \gamma(\lambda)$.
+\label{weakboundedlemma}
+\end{lemma}
+
+The following theorem\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~70, Theorem 3.18.} shows that in  a locally convex space, the boundedness of a set is equivalent to its weak boundedness.
+Its proof involves much of what we have talked about so far, and actually
+requires introducing some new terms with which one should probably have at least an  acquaintance. The statement of the theorem does not involve
+the weak-* topology on $X^*$, but the proof uses the Banach-Alaoglu theorem.
+
+\begin{theorem}[Weak boundedness is equivalent to boundedness]
+If $X$ is locally convex and $E \subseteq X$, then $E$ is bounded in
+$(X,\mathcal{O}(X))$ if and only if $E$ is bounded in $(X,\mathcal{O}_w(X))$.
+\label{weakbounded}
+\end{theorem}
+\begin{proof}
+Suppose that $E$ is bounded in $(X,\mathcal{O}(X))$ (for every neighborhood of $0$, the set $E$ is contained in some dilation of that neighborhood). Let $N$ be a neighborhood of $0$ in $\mathcal{O}_w(X)$. 
+There is some $U \in \mathcal{O}_w(X)$ with $0 \in U \subseteq N$. Now, $U \in \mathcal{O}(X)$, so $N$ is a neighborhood
+of $x$ in $\mathcal{O}(X)$. As $E$ is bounded, there is some $\alpha$ such that $E \subseteq \alpha N =  \{\alpha x:x \in N\}$,
+which is what it means for  $E$ to be bounded in $(X,\mathcal{O}_w(X))$. 
+
+Suppose that $E$ is bounded in $(X,\mathcal{O}_w(X))$. Let $N$ be a neighborhood of $0$ in 
+$(X,\mathcal{O}(X))$. We want to show that there is some $\alpha$ such that $E \subseteq \{\alpha x: x \in N\}$. 
+If $\mathcal{B}$ is a local basis at a point in a topological vector space, then every element of $\mathcal{B}$ contains
+the closure of some element of $\mathcal{B}$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~11, Theorem 1.11.}
+A subset $A$ of a vector space is said to be {\em balanced} if for every $\alpha \in \mathbb{C}$ with $|\alpha|\leq 1$ we have
+$\alpha A \subseteq A$. It is a fact that in a topological vector space, every convex neighborhood of $0$ contains a convex balanced neighborhood of $0$.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~12, Theorem 1.14.} The purpose of having said all of this is the following: since $N$ is a neighborhood
+of $0$ in  $\mathcal{O}(X)$, there is a balanced convex $V$ that is a neighborhood of $0$ in $(X,\mathcal{O}(X))$ such that
+$\overline{V} \subseteq N$, where $\overline{V}$ is the closure of $V$ in $(X,\mathcal{O}(X))$.
+Moreover, it is a fact that the closure of a balanced set is itself balanced, and the closure of a convex set is itself convex,\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~11, Theorem 1.13.} so $\overline{V}$ is a balanced convex set that is contained in $N$. Thus to prove $E \subseteq \alpha N$
+it suffices to prove that $E \subseteq \alpha \overline{V}$, and this is what we will do.
+
+Let
+\[
+K=\{\lambda \in X^*:\textrm{if $x \in V$ then $|\lambda(x)| \leq 1$}\},
+\]
+ the polar of $V$. If $x \in V$ and $\lambda \in K$ then $|\lambda(x)| \leq 1$, so 
+\[
+V \subseteq \{x \in X: \textrm{if $\lambda \in K$ then $|\lambda(x)| \leq 1$}\}=\bigcap_{\lambda \in K} \{x \in X: |\lambda(x)| \leq 1\}.
+\]
+The right-hand side is an intersection of closed sets in $(X,\mathcal{O}(X))$, so it is closed. Therefore $\overline{V}$ is contained in the right-hand side.
+Furthermore, it is a consequence of the Hahn-Banach separation theorem\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~61, Theorem 3.7.}  that if $B$ is a convex balanced closed set in a locally
+convex space and $x_0 \not \in B$, then there is some $\lambda \in X^*$ such that $\lambda (x_0) > 1$ and $|\lambda(x)| \leq 1$ for $x \in B$.
+Thus, if $x_0 \not \in \overline{V}$, then
+there is some $\lambda \in X^*$ such that $\lambda (x_0)>1$ and if 
+$x \in \overline{V}$
+then $|\lambda(x)| \leq 1$. From this it follows that $\lambda \in K$, and then because $\lambda(x_0)>1$ it follows that
+\[
+x_0 \not \in \{x \in X: \textrm{if $\lambda \in K$ then $|\lambda(x)| \leq 1$}\}.
+\]
+We have shown that if $x_0 \not \in \overline{V}$ then $x_0$ is not an element of the polar of $K$, and
+therefore 
+\[
+\overline{V}= \{x \in X: \textrm{if $\lambda \in K$ then $|\lambda(x)| \leq 1$}\}.
+\]
+
+By the Banach-Alaoglu theorem, $K$ is a compact set in $(X^*,\mathcal{O}_X(X^*))$, and one checks that $K$ is convex.
+The {\em uniform boundedness principle}\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~46, Theorem 2.9}
+states that if 
+\begin{itemize}
+\item $W$ and $Z$ are topological vector spaces
+\item $K$ is a compact convex set in $W$
+\item $\Gamma$ is a set of continuous linear maps $W \to Z$
+\item For each $w \in K$, the set $\Gamma(w)=\{g(w):g \in \Gamma\}$ is a bounded subset of $Z$
+\end{itemize}
+then there is a bounded set $B$ in $Z$ such that if $g \in \Gamma$ then $g(K) \subseteq
+B$.
+For $x \in E$, define $g_x:X^* \to \mathbb{C}$ by $g_x(\lambda)=\lambda(x)$, and define $\Gamma=\{g_x:x \in E\}$.
+Because $E$ is weakly bounded,  for all $\lambda \in X^*$ there is some $\gamma(\lambda)$ such that
+if $x \in E$ then $|\lambda(x)| \leq \gamma(\lambda)$; this is by  Lemma \ref{weakboundedlemma}.
+Hence for all $\lambda \in X^*$ there is some $\gamma(\lambda)$ such that
+ the set $\Gamma(\lambda)$
+is contained in the closed disc in $\mathbb{C}$ with radius $\gamma(\lambda)$. 
+Thus  $\Gamma(\lambda)$ is bounded in $\mathbb{C}$.
+We apply the uniform boundedness principle using $W=(X^*,\mathcal{O}_X(X^*))$ and $Z=\mathbb{C}$. 
+We thus obtain that there is some
+$0 \leq \gamma<\infty$ such that if $g \in \Gamma$ then $g(K)$ is contained in the closed disc of radius $\gamma$. That is,
+for all $x \in E$ and $\lambda \in K$, we have
+\[
+|g_x(\lambda)| \leq \gamma,
+\] 
+i.e. for all $x \in E$ and $\lambda \in K$ we have
+\[
+|\lambda(x)| \leq \gamma.
+\]
+Therefore,
+if $x \in E$ and $\lambda \in K$, then 
+\[
+\left| \lambda\left( \frac{1}{\gamma} \cdot x\right) \right| = \frac{1}{\gamma} |\lambda(x)| \leq 1,
+\]
+which means that $\frac{1}{\gamma}\cdot x \in \overline{V}$. This is true for all $x \in E$, so $\frac{1}{\gamma}\cdot E \subseteq \overline{V} \subseteq N$, and
+hence $E \subseteq \gamma\cdot N$. Since $N$ was an arbitrary
+neighborhood of $0$ in $(X,\mathcal{O}(X))$, we have satisfied  the definition of the set $E$ being bounded in
+$(X,\mathcal{O}(X))$, completing the proof.
+\end{proof}
+
+The final result we state in this section gives a condition for the dual of a locally convex space to be weak-* separable.\footnote{Walter Rudin, {\em Functional Analysis},
+second ed., p.~90, chapter 3, Exercise 28.} We already stated
+in Theorem \ref{weakstar} that the dual with the weak-* topology of a topological vector space is itself a locally
+convex space.
+
+\begin{theorem}
+If $X$ is a separable metrizable locally convex space, then $(X^*,\mathcal{O}_X(X^*))$ is a separable locally convex space.
+\end{theorem}
+
+
+
+\section{Normed spaces}
+Let $X$ be a normed space with norm $\norm{\cdot}$.
+The topology on $X$ is the coarsest topology such that for each $x_0 \in X$, the map $x \mapsto \norm{x-x_0}$ is continuous.
+A normed vector space is locally convex and is metrizable, with metric $d(x,y)=\norm{x-y}$.
+
+
+If $X$ and $Y$ are topological vector spaces and $T:X \to Y$ is a linear map, we say that $T$ is {\em bounded} if $E$ being bounded
+in $X$ implies that $T(E)$ is bounded in $Y$.\footnote{A statement close to it is proved in Walter Rudin,
+{\em Functional Analysis}, second ed., p.~24, Theorem 1.32.}
+
+\begin{theorem}
+Let $X$ and $Y$ be normed vector spaces and let $T:X \to Y$ be linear. The following three statements are equivalent:
+\begin{itemize}
+\item $T$ is continuous.
+\item $T$ is bounded.
+\item  There is some $\gamma$ such that if $x \in X$ then $\norm{Tx} \leq \gamma \norm{x}$.
+\end{itemize}
+\label{bounded}
+\end{theorem}
+
+If $X$ and $Y$ are normed spaces and $T:X \to Y$ is a bounded linear map,
+the {\em operator norm} $\norm{T}$ of $T$ is defined to be the infimum of those $\gamma$ such that
+if $x \in X$ then $\norm{Tx} \leq \gamma \norm{x}$. $\norm{T}=\sup_{\norm{x} \leq 1} \norm{Tx}$. 
+The set of bounded linear maps $X \to Y$ is denoted $\mathscr{B}(X,Y)$.
+ $\mathscr{B}(X,Y)$
+is a normed space, and  if $Y$ is a Banach space then $\mathscr{B}(X,Y)$ is a Banach space.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~92, Theorem 4.}
+$X^*=\mathscr{B}(X,\mathbb{C})$, and since $\mathbb{C}$ is a Banach space, with the operator
+norm $X^*$ is a Banach space.
+
+
+The following theorem rewrites 
+ Theorem \ref{weakbounded} in the terminology of norms.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~71.}
+
+\begin{theorem}[Weak boundedness is equivalent to boundedness]
+If $X$ is a normed space and $E$ is a subset of $X$, then
+\[
+\sup_{x \in E} |\lambda(x)| < \infty
+\]
+for all $\lambda \in X^*$  if and only if
+ there is some $\gamma$ such that  $x \in E$ implies
+\[
+\norm{x} \leq \gamma.
+\]
+\label{normbound}
+\end{theorem}
+\begin{proof}
+Suppose that $\sup_{x \in E} |\lambda(x)| < \infty$ holds for all $\lambda \in X^*$. By 
+ Lemma \ref{weakboundedlemma}, 
+ this means that the set $E$ is weakly bounded. But by Theorem \ref{weakbounded} this implies that $E$ is bounded. 
+The closed unit ball is a neighborhood
+of $0$ in $(X,\mathcal{O}(X))$, so, as $E$ is bounded, there is some $\gamma$ such that $E \subseteq \{\gamma x: \norm{x} \leq 1\}$.
+Hence, if $x \in E$ then $\norm{x} \leq \gamma$.
+
+Suppose that there is some $\gamma$ such that $x \in E$ implies that $\norm{x} \leq \gamma$, and let
+$\lambda \in X^*$. Because $\lambda$ is continuous, for $x \in E$ we have
+\[
+|\lambda(x)| \leq \norm{\lambda} \norm{x} \leq \norm{\lambda} \gamma<\infty.
+\]
+\end{proof}
+
+
+
+
+
+
+\begin{theorem}[Banach-Alaoglu theorem]
+If $X$ be a normed vector space, then  $B=\{\lambda \in X^*: \norm{\lambda} \leq 1\}$  is a compact
+subset of $(X,\mathcal{O}_X(X^*))$.
+\end{theorem}
+\begin{proof}
+It is a fact\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~94, Theorem 4.3.} (proved using the Hahn-Banach extension theorem)
+that for every $x \in X$,
+\[
+\norm{x}=\sup \{|\lambda(x)|: \lambda \in B\}.
+\]
+From this and Theorem \ref{alaoglu}, it follows that
+$B$ is weak-* compact in $X^*$.
+\end{proof}
+
+The {\em Eberlein-Smulian theorem} states that a set in a normed space is weakly
+compact if and only if the set is weakly sequentially compact.\footnote{Robert E. Megginson,
+{\em An Introduction to Banach Space Theory},
+p.~248, Theorem 2.8.6.}
+
+\begin{theorem}[Eberlein-Smulian theorem]
+If $X$ is a normed space, then
+a subset $A$ of $X$ is compact in $\mathcal{O}_w(X)$ if and only if every sequence in $A$ has a subsequence that
+converges in $\mathcal{O}_w(X)$ to an element of $A$. 
+\end{theorem}
+
+
+\section{Banach spaces}
+We say that a Banach   space $X$ is {\em reflexive} if $X^{**}=X$, where $X^*=\mathscr{B}(X,\mathbb{C})$
+and $X^{**}=\mathscr{B}(X^*, \mathbb{C})$. (Although it makes sense to talk about $X^*$ for a normed space, $X^*$ is itself a Banach space
+and so too is $X^{**}$, hence if a normed space were reflexive then it would have to be a Banach space.)
+
+
+ {\em Kakutani's theorem} relates the property of a Banach space being reflexive with
+weak compactness.\footnote{Joseph Diestel,
+{\em Sequences and Series in Banach Spaces}, p.~18, chapter III.}
+
+
+\begin{theorem}[Kakutani's theorem]
+The closed unit ball in a Banach space is weakly compact if and only if the space is reflexive.
+\end{theorem}
+
+Thus, combining the Eberlein-Smulian theorem and Kakutani's theorem we get that a Banach space is reflexive if and only if the closed unit ball is weakly
+sequentially compact.
+
+
+The following theorem states that a Banach space is separable if and only if the closed unit ball in the dual space is weak-* metrizable.\footnote{
+John B. Conway, {\em A Course in Functional Analysis}, second ed., p.~134, Theorem 5.1.}
+ 
+ \begin{theorem}
+ Let $X$ be a Banach space and let $B=\{\lambda \in X^*: \norm{\lambda} \leq 1\}$. $X$ is separable if and only if $B$ with the subspace topology inherited
+ from $(X^*,\mathcal{O}_X(X^*))$ is metrizable.
+ \end{theorem}
+
+
+
+
+\section{Hilbert spaces}
+Let $H$ be a Hilbert space with inner product $\inner{\cdot}{\cdot}:H \times H \to \mathbb{C}$, linear in the first argument.  
+The {\em Riesz representation theorem}\footnote{John B. Conway, {\em A Course in Functional Analysis}, second ed.,
+p.~13, Theorem 3.4.} states that if $\lambda \in H^*$, then there is a unique $h_\lambda \in H$ such that
+if $h \in H$ then 
+\[
+\lambda(h)=\inner{h}{h_\lambda},
+\]
+and $\norm{\lambda}=\norm{h_\lambda}$.
+On the other hand, if $h_0 \in H$ then $\lambda(h)=\inner{h}{h_0}$ satisfies, by the Cauchy-Schwarz inequality,
+\[
+|\lambda_{h_0}(h)| = |\inner{h}{h_0}| \leq \norm{h} \norm{h_0}, 
+\]
+hence, by Theorem \ref{bounded}, $\lambda_{h_0} \in H^*$. Thus $H^*=\{\lambda_{h_0}: h_0 \in H\}$.
+The weak topology $\mathcal{O}_w(H)$ on $H$ is the coarsest topology on $H$ such that
+each $\lambda \in H^*$ is continuous $(H,\mathcal{O}_w(H)) \to \mathbb{C}$, hence such that
+for each $h_0 \in H$,  the funtion $h \mapsto \inner{h}{h_0}$ is continuous $(H,\mathcal{O}_w(H)) \to \mathbb{C}$.
+Thus, a net $h_\alpha \in H$ converges to $h \in H$ in $\mathcal{O}_w(H)$ if and only if for all $h_0 \in H$ we have that
+ $\inner{h_\alpha}{h_0} \in \mathbb{C}$ converges to  $\inner{h}{h_0} \in \mathbb{C}$, and this characterizes the weak topology on $H$.
+
+
+
+
+
+\end{document}

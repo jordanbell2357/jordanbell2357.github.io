@@ -1,0 +1,578 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_{\mathrm{HS}}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Schwartz functions, Hermite functions, and the Hermite operator}
+\author{Jordan Bell}
+\date{July 17, 2015}
+
+\maketitle
+
+
+\section{Schwartz functions}
+For $\phi \in C^\infty(\mathbb{R},\mathbb{C})$ and $p \geq 0$,
+let 
+\[
+|\phi|_p =\sup_{0 \leq k \leq p} \sup_{u \in \mathbb{R}} (1+u^2)^{p/2} |\phi^{(k)}(u)|.
+\]
+We define $\mathscr{S}$ to be the set of those 
+$\phi \in C^\infty(\mathbb{R},\mathbb{C})$ such that $|\phi|_p<\infty$ for all $p \geq 0$. 
+$\mathscr{S}$ is a complex vector space 
+and each $|\cdot|_p$ is a norm, and
+because each $|\cdot|_p$ is a norm, a fortiori $\{|\cdot|_p:  p \geq 0\}$ is a separating family of seminorms.
+With the topology induced by this family of seminorms, $\mathscr{S}$ is a Fr\'echet space.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~184, Theorem 7.4.}
+Furthermore, $D:\mathscr{S} \to \mathscr{S}$ defined by
+\[
+(D\phi)(x) = \phi'(x),\qquad x \in \mathbb{R}
+\]
+and $M:\mathscr{S} \to \mathscr{S}$ defined by
+\[
+(M\phi)(x) = x\phi(x),\qquad x \in \mathbb{R}
+\]
+are continuous linear maps. 
+
+Let $\mathscr{S}'$ be the collection of continuous linear maps $\mathscr{S}
+\to \mathbb{C}$.
+For $\phi \in \mathscr{S}$, define $e_\phi:\mathscr{S}' \to \mathbb{C}$ by
+\[
+e_\phi(\omega) = \omega(\phi), \qquad \omega \in \mathscr{S}'.
+\]
+The initial topology for the collection
+$\{e_\phi: \phi \in \mathscr{S}\}$ is called the \textbf{weak-* topology} on $\mathscr{S}'$. 
+With this topology, $\mathscr{S}'$ is a locally convex space whose dual space
+is $\{e_\phi: \phi \in \mathscr{S}\}$.
+
+
+
+\section{{\em L\textsuperscript{2}} norms}
+\label{L2norms}
+For $p \geq 0$ and $\phi,\psi \in \mathscr{S}$, let 
+\[
+[\phi,\psi]_p = \sum_{k=0}^p \int_{\mathbb{R}} (1+u^2)^{p} \phi^{(k)}(u)  \overline{\psi^{(k)}(u)} du,
+\]
+and let
+\[
+[\phi]_p^2 = [\phi,\phi]_p=  \sum_{k=0}^p \int_{\mathbb{R}} (1+u^2)^p |\phi^{(k)}(u)|^2 du.
+\]
+Because $(1+u^2)^p \leq (1+u^2)^q$ when $p \leq q$, it is immediate that
+$[\phi]_p \leq [\phi]_q$ when $p \leq q$. 
+
+
+We relate the norms $|\cdot|_p$ and the norms $[\cdot]_p$.\footnote{Takeyuki Hida,
+{\em Brownian Motion}, p.~305, Lemma A.1.}
+
+\begin{lemma}
+For each $p \geq 1$, for all
+$\phi \in \mathscr{S}$,
+\[
+\frac{1}{p\sqrt{\pi}} |\phi|_{p-1} \leq [\phi]_p \leq  \sqrt{(p+1)\pi} |\phi|_{p+1}.
+\]
+\label{L2equiv}
+\end{lemma}
+\begin{proof}
+For $0 \leq k \leq p$,
+\begin{align*}
+\int_{\mathbb{R}} (1+u^2)^p |\phi^{(k)}(u)|^2 du &\leq \sup_{u \in \mathbb{R}} ((1+u^2)^{p+1} |\phi^{(k)}(u)|^2) 
+\int_{\mathbb{R}} (1+u^2)^{-1} du\\
+&=  \sup_{u \in \mathbb{R}} ((1+u^2)^{p+1} |\phi^{(k)}(u)|^2)  \cdot \pi\\
+&\leq \pi |\phi|_{p+1}^2,
+\end{align*}
+hence
+\begin{align*}
+[\phi]_p^2&=  \sum_{k=0}^p \int_{\mathbb{R}} (1+u^2)^p |\phi^{(k)}(u)|^2 du\\
+&\leq \sum_{k=0}^p \pi |\phi|_{p+1}^2\\
+&=(p+1)\pi  |\phi|_{p+1}^2.
+\end{align*}
+
+
+For $0 \leq k \leq p-1$ and $u \in \mathbb{R}$, using the fundamental theorem of calculus and the Cauchy-Schwarz inequality,
+\begin{align*}
+|(1+u^2)^{(p-1)/2}\phi^{(k)}(u)|&=\left| \int_{-\infty}^u ((1+t^2)^{(p-1)/2} \phi^{(k)}(t))' dt\right|\\
+&\leq \int_{\mathbb{R}} |(p-1)t (1+t^2)^{(p-1)/2-1} \phi^{(k)}(t)| dt\\
+&+\int_{\mathbb{R}} |(1+t^2)^{(p-1)/2} \phi^{(k+1)}(t)| dt\\
+&\leq (p-1) \int_{\mathbb{R}} (1+t^2)^{-1/2} (1+t^2)^{(p-1)/2} |\phi^{(k)}(t)| dt\\
+&+\int_{\mathbb{R}} (1+t^2)^{-1/2} (1+t^2)^{p/2} |\phi^{(k+1)}(t)| dt\\
+&\leq (p-1) \left(\int_{\mathbb{R}} (1+t^2)^{-1} dt \right)^{1/2} \left( \int_{\mathbb{R}} (1+t^2)^{p-1} |\phi^{(k)}(t)|^2 dt\right)^{1/2}\\
+&+\left(\int_{\mathbb{R}} (1+t^2)^{-1} dt\right)^{1/2} \left(\int_{\mathbb{R}} (1+t^2)^p |\phi^{(k+1)}(t)|^2 dt \right)^{1/2}\\
+&\leq (p-1)\sqrt{\pi} [\phi]_{p-1} + \sqrt{\pi} [\phi]_p\\
+&\leq p\sqrt{\pi} [\phi]_p,
+\end{align*}
+which shows that
+\[
+|\phi|_{p-1} \leq p\sqrt{\pi} [\phi]_p.
+\]
+\end{proof}
+
+ 
+
+
+\section{Hermite functions}
+Let $\lambda$ be Lebesgue measure on $\mathbb{R}$,
+and let 
+\[
+(f,g)_{L^2} = \int_{\mathbb{R}} f \overline{g} d\lambda.
+\]
+$L^2(\lambda)$ with the inner product $(\cdot,\cdot)_{L^2}$ is a separable Hilbert space. 
+For $n \geq 0$, let
+\[
+h_n(x) = (-1)^n(2^n n! \sqrt{\pi})^{-1/2} e^{x^2/2} D^n e^{-x^2},
+\]
+the \textbf{Hermite functions}, the set of which is an orthonormal basis for $L^2(\lambda)$.
+We remark that the Hermite functions belong to $\mathscr{S}$.
+For $n<0$ we define
+\[
+h_n=0,
+\]
+to write some expressions in a uniform way.
+
+We calculate that for $n \geq 0$,
+\[
+Dh_n = \sqrt{\frac{n}{2}} h_{n-1}-\sqrt{\frac{n+1}{2}} h_{n+1}.
+\]
+
+
+We define the \textbf{Hermite operator} $A:\mathscr{S} \to \mathscr{S}$ by
+\[
+A=-D^2+M^2+1.
+\]
+$A$ is a densely defined operator in $L^2(\lambda)$ that is symmetric and positive, and  satisfies
+\[
+Ah_n = (2n+2)h_n.
+\]
+There is a unique bounded linear operator $T:L^2(\lambda) \to L^2(\lambda)$ satisfying
+\[
+Th_n=A^{-1}h_n = (2n+2)^{-1} h_n,\qquad n \geq 0.
+\]
+The operator norm of $T$ is $\norm{T}=\frac{1}{2}$, and $T$ is self-adjoint. For $p \geq 1$, 
+$T^p$ is a Hilbert-Schmidt operator with Hilbert-Schmidt norm $\HS{T^p}=2^{-p} \sqrt{\zeta(2p)}$. 
+
+We define the \textbf{creation operator} $B:\mathscr{S} \to \mathscr{S}$ by
+\[
+B=D+M
+\]
+and we define the \textbf{annihilation operator} $C:\mathscr{S} \to \mathscr{S}$ by
+\[
+C=-D+M,
+\]
+which are continuous linear maps. They satisfy, for $n \geq 0$,
+\[
+Bh_n = (2n)^{1/2}h_{n-1},\qquad Ch_n=(2n+2)^{1/2}h_{n+1}.
+\]
+(We remind ourselves that we have defined $h_{-1}=0$.)
+It is immediate that $BC=A$ and that $B-C=2D$. 
+Using the creation operator, we can write the Hermite functions as
+\[
+h_n=(2^n n!)^{-1/2} C^n h_0 = \pi^{-1/4} (2^n n!)^{-1/2} C^n(e^{-x^2/2}).
+\]
+
+For $\phi,\psi \in \mathscr{S}$, using integration by parts,
+\[
+(D\phi,\psi)_{L^2}=\int_{\mathbb{R}} \phi'(x) \overline{\psi(x)} dx
+=-\int_{\mathbb{R}} \phi(x) \overline{\psi'(x)} dx
+=(\phi,(-D)\psi)_{L^2},
+\]
+and 
+\[
+(M\phi,\psi)_{L^2}=\int_{\mathbb{R}} x \phi(x) \overline{\psi(x)} dx
+=(\phi,M\psi)_{L^2}.
+\]
+Thus,
+\begin{align*}
+(B\phi,\psi)_{L^2}&=(D\phi,\psi)_{L^2} + (M\phi,\psi)_{L^2}\\
+&=(\phi,(-D)\psi)_{L^2}+(\phi,M\psi)_{L^2}\\
+&=(\phi,C\psi)_{L^2}
+\end{align*}
+and
+\[
+(C\phi,\psi)_{L^2}=(\phi,B\psi)_{L^2}.
+\]
+We shall use these calculations to obtain the following lemma.
+
+
+\begin{lemma}
+For $p \geq 0$ and for $\phi \in \mathscr{S}$,
+\[
+B^p \phi = 2^{p/2}\sum_{n=0}^\infty \left( \frac{(n+p)!}{n!} \right)^{1/2} (\phi,h_{n+p})_{L^2}   h_n
+\]
+and
+\[
+C^p \phi =2^{p/2} \sum_{n=0}^\infty (\phi,h_{n-p})_{L^2}  \left( \frac{n!}{(n-p)!} \right)^{1/2} h_n.
+\]
+\end{lemma}
+\begin{proof}
+Because $Ch_n=(2n+2)^{1/2}h_{n+1}$,
+\[
+(\phi,C^p h_n)_{L^2}
+=(\phi,h_{n+p})_{L^2} \prod_{j=n}^{n+p-1}(2j+2)^{1/2} 
+=(\phi,h_{n+p})_{L^2} 2^{p/2}  \left( \frac{(n+p)!}{n!} \right)^{1/2}.
+\]
+With
+\[
+\phi = \sum_{n=0}^\infty (\phi,h_n)_{L^2} h_n,
+\]
+and because $(B\phi,\psi)_{L^2}=(\phi,C\psi)_{L^2}$, we have
+\begin{align*}
+B^p \phi &= \sum_{n=0}^\infty (B^p \phi,h_n)_{L^2} h_n\\
+&=\sum_{n=0}^\infty  (\phi,C^p h_n)_{L^2} h_n\\
+&=\sum_{n=0}^\infty (\phi,h_{n+p})_{L^2} 2^{p/2} \left( \frac{(n+p)!}{n!} \right)^{1/2} h_n.
+\end{align*}
+
+Because $Bh_n=(2n)^{1/2}h_{n-1}$, and reminding ourselves that we define $h_n=0$ for $n<0$,
+\[
+(\phi,B^ph_n)_{L^2}=(\phi,h_{n-p})_{L^2} \prod_{j=n-p+1}^n (2j)^{1/2}
+=(\phi,h_{n-p})_{L^2} 2^{p/2} \left( \frac{n!}{(n-p)!} \right)^{1/2}.
+\]
+Because $(C\phi,\psi)_{L^2}=(\phi,B\psi)_{L^2}$, we have
+\begin{align*}
+C^p\phi&=\sum_{n=0}^\infty (C^p\phi,\psi)_{L^2} h_n\\
+&=\sum_{n=0}^\infty (\phi,B^p\psi)_{L^2} h_n\\
+&=\sum_{n=0}^\infty (\phi,h_{n-p})_{L^2} 2^{p/2} \left( \frac{n!}{(n-p)!} \right)^{1/2} h_n.
+\end{align*}
+\end{proof}
+
+We define the Fourier transform $\mathscr{F}:\mathscr{S} \to \mathscr{S}$ by
+\[
+(\mathscr{F}\phi)(\xi) = \int_{\mathbb{R}} \phi(x) e^{-i\xi x} \frac{dx}{(2\pi)^{1/2}},\qquad \xi \in \mathbb{R}.
+\]
+$\mathscr{F}:\mathscr{S} \to \mathscr{S}$ is a continuous linear map, and satisfies
+\[
+\mathscr{F}M = iD\mathscr{F},\qquad \mathscr{F}D = iM\mathscr{F}. 
+\]
+From these we obtain
+\[
+\mathscr{F}A=A\mathscr{F},\qquad \mathscr{F}B=iB\mathscr{F},\qquad \mathscr{F}C=-iC\mathscr{F},
+\]
+and one proves the following using the above.
+
+\begin{lemma}
+For $n \geq 0$,
+\[
+\mathscr{F}h_n = (-i)^n h_n.
+\] 
+\end{lemma}
+
+We further remark that for $\phi \in \mathscr{S}$,
+\begin{equation}
+\norm{\phi}_{\infty} \leq 2^{-1/2}(\norm{\phi}_{L^2}^2+\norm{\phi'}_{L^2}^2).
+\label{supremum}
+\end{equation}
+
+Finally, there is a unique Hilbert space isomorphism $\mathscr{F}:L^2(\lambda) \to L^2(\lambda)$ whose
+restriction to $\mathscr{S}$ is equal to $\mathscr{F}$ as already defined. Thus for $f \in L^2(\lambda)$, as
+\[
+f=\sum_{n=0}^\infty (f,h_n)_{L^2} h_n,
+\]
+we get
+\[
+\mathscr{F}f = \sum_{n=0}^\infty (f,h_n)_{L^2} (-i)^n h_n.
+\]
+
+
+\section{Hermite operator}
+For $p \geq 0$ and $f \in L^2(\lambda)$, we define
+\[
+\norm{f}_p^2 = \sum_{n=0}^\infty (2n+2)^{2p} |(f,h_n)_{L^2}|^2.
+\]
+We define 
+\[
+\mathscr{S}_p = \{f \in L^2(\lambda): \norm{f}_p < \infty\},
+\]
+and for $f,g \in \mathscr{S}_p$ we define
+\[
+(f,g)_p = \sum_{n=0}^\infty (2n+2)^{2p} (f,h_n)_{L^2} \overline{(g,h_n)_{L^2}},
+\]
+for which
+\[
+\norm{f}_p^2 = (f,f)_p. 
+\]
+
+\begin{lemma}
+For $\phi \in \mathscr{S}$, for each $p \geq 0$, $\phi \in \mathscr{S}_p$,
+and 
+\[
+\norm{\phi}_p = \norm{A^p \phi}_{L^2}.
+\]
+\label{phermite}
+\end{lemma}
+\begin{proof}
+$A^p \phi \in \mathscr{S}$, so
+$\norm{A^p \phi}_{L^2}<\infty$. 
+Because $A$ is a symmetric operator and
+as $Ah_n=(2n+2) h_n$,
+\begin{align*}
+\norm{A^p\phi}_{L^2}^2&=\sum_{n=0}^\infty |(A^p\phi,h_n)_{L^2}|^2\\
+&=\sum_{n=0}^\infty |(\phi,A^ph_n)_{L^2}|^2\\
+&=\sum_{n=0}^\infty (2n+2)^{2p} |(\phi,h_n)_{L^2}|^2\\
+&=\norm{\phi}_p^2.
+\end{align*}
+\end{proof}
+
+For $f,g \in L^2(\lambda)$, because $T$ is self-adjoint,
+\begin{align*}
+(T^p f,T^p g)_p &=\sum_{n=0}^\infty (2n+2)^{2p} (T^p f,h_n)_{L^2} \overline{(T^p f,h_n)_{L^2}}\\
+&=\sum_{n=0}^\infty (2n+2)^{2p} (f,T^p h_n)_{L^2} \overline{(g,T^p h_n)_{L^2}}\\
+&=\sum_{n=0}^\infty (2n+2)^{2p} (f,(2n+2)^{-p} h_n)_{L^2} \overline{(g,(2n+2)^{-p} h_n)_{L^2}} \\
+&=\sum_{n=0}^\infty (f,h_n)_{L^2} \overline{(g,h_n)_{L^2}}\\
+&=(f,g)_{L^2},
+\end{align*}
+and so $\norm{T^p f}_p = \norm{f}_{L^2}$, which shows that 
+\[
+T^p L^2(\lambda) = \mathscr{S}_p.
+\]
+If $f_i \in \mathscr{S}_p$ is a Cauchy sequence in the norm $\norm{\cdot}_p$, 
+then as $\norm{T^{-p} f_i-T^{-p} f_j}_{L^2}=\norm{f_i-f_j}_p$, 
+$T^{-p}f_i$ is a Cauchy sequence in the norm $\norm{\cdot}_{L^2}$ and so there is  some
+$g \in L^2(\lambda)$ for which $\norm{T^{-p}f_i-g}_{L^2} \to 0$. We have $T^p g \in \mathscr{S}_p$, and
+\[
+\norm{f_i-T^p g}_p = \norm{T^{-p} f_i-g}_{L^2} \to 0,
+\]
+thus $f_i \to T^p g$ in the norm $\norm{\cdot}_p$, showing that 
+$(\mathscr{S}_p,(\cdot,\cdot)_p)$ is a Hilbert space. 
+Furthermore, $T^p:L^2(\lambda) \to \mathscr{S}_p$ is an isomorphism of Hilbert spaces, and thus
+$\{T^p h_n: n \geq 0\}$ is an orthonormal basis for $(\mathscr{S}_p,(\cdot,\cdot)_p)$. 
+
+
+
+For $p \leq q$,
+\[
+\norm{f}_p \leq \norm{f}_q,
+\]
+so $\mathscr{S}_q \subset \mathscr{S}_p$. 
+For $p \geq q$, let $i_{q,p}:\mathscr{S}_q \to \mathscr{S}_p$ be the inclusion
+map.\footnote{Hui-Hsiung Kuo, {\em White Noise Distribution Theory}, p.~18, Lemma 3.3.}
+
+\begin{theorem}
+For $p < q$, the inclusion map $i_{q,p}:\mathscr{S}_q \to \mathscr{S}_p$ is
+a Hilbert-Schmidt operator, with Hilbert-Schmidt norm
+\[
+\HS{i_{q,p}} = 2^{-q+p} \sqrt{\zeta(2q-2p)}.
+\]
+\end{theorem}
+\begin{proof}
+$\{T^q h_n: n \geq 0\}$ is an orthonormal basis for $(\mathscr{S}_q,(\cdot,\cdot)_q)$, and
+\begin{align*}
+\HS{i_{q,p}}^2&=\sum_{n=0}^\infty \norm{i_{q,p} T^q h_n}_p^2\\
+&=\sum_{n=0}^\infty \norm{T^q h_n}_p^2\\
+&=\sum_{n=0}^\infty \norm{(2n+2)^{-q} h_n}_p^2\\
+&=\sum_{n=0}^\infty (2n+2)^{-2q} (2n+2)^{2p}\\
+&=2^{-2q+2p} \zeta(2q-2p).
+\end{align*}
+\end{proof}
+
+
+
+
+\section{The Hilbert spaces {\em S\textsubscript{p}}}
+For $f \in L^2(\lambda)$,
+\[
+f = \sum_{n=0}^\infty (f,h_n)_{L^2}h_n,
+\]
+and for $N \geq 0$  we define $f_N:\mathbb{R} \to \mathbb{C}$ by
+\[
+f_N(x) = \sum_{n=0}^N (f,h_n)_{L^2}h_n(x),\qquad x \in \mathbb{R},
+\]
+which belongs to $\mathscr{S}$. 
+
+For $k \geq 0$, we define $C_b^k(\mathbb{R})$ to be the set of those functions
+$\mathbb{R} \to \mathbb{C}$ that are $k$-times differentiable and
+ such that for each $0 \leq j \leq k$, $f^{(j)}$  is continuous and bounded. With the norm
+\[
+\norm{f}_{C_b^k} = \sum_{j=0}^k \norm{f^{(j)}}_\infty
+\]
+this is a Banach space. 
+Because the Hermite functions belong to $\mathscr{S}$, for $f \in L^2(\lambda)$ and for any $k$ 
+and $N$, the function $f_N$ belongs to $C_b^k(\mathbb{R})$.  
+
+\begin{lemma}
+If $p \geq 1$ and $f \in \mathscr{S}_p$, then there is some $F \in C_b^{p-1}(\mathbb{R})$ such that
+$f$ is equal almost everywhere to $F$.
+\label{cramer}
+\end{lemma}
+\begin{proof}
+\textbf{Cram\'er's inequality} states that there is a constant $K_0$ such that for all
+$n$, $\norm{h_n}_\infty \leq K_0$. 
+For $M < N$, using this and the Cauchy-Schwarz inequality,
+\begin{align*}
+\norm{f_N-f_M}_{C_b^0}&=\norm{ \sum_{n=M+1}^N (f,h_n)_{L^2} h_n}_\infty\\
+&\leq K_0 \sum_{n=M+1}^N |(f,h_n)_{L^2}|\\
+&= K_0 \sum_{n=M+1}^N (2n+2)^{-1} (2n+2)  |(f,h_n)_{L^2}|\\
+&\leq \left( \sum_{n=M+1}^N (2n+2)^{-2}\right)^{1/2} 
+\left( \sum_{n=M+1}^N (2n+2)^2   |(f,h_n)_{L^2}|^2 \right)^{1/2}\\
+&= \left( \sum_{n=M+1}^N (2n+2)^{-2}\right)^{1/2} \norm{f_N-f_M}_1.
+\end{align*}
+Because $f \in \mathscr{S}_p \subset \mathscr{S}_1$, $f_N$ is a Cauchy sequence in $\mathscr{S}_1$, hence
+$f_N$ is a Cauchy sequence in $C_b^0(\mathbb{R})$, so there is some $F \in C_b^0(\mathbb{R})$ such that
+$f_N$ converges to $F$ in $C_b^0(\mathbb{R})$. 
+We assert that $F=f$ as elements of $L^2(\lambda)$.
+
+Using
+\[
+Dh_n= \sqrt{\frac{n}{2}} h_{n-1}-\sqrt{\frac{n+1}{2}} h_{n+1},
+\]
+we calculate
+\begin{align*}
+f_N' &= -\sqrt{\frac{N}{2}} (f,h_{N-1})_{L^2} h_N - \sqrt{\frac{N+1}{2}} (f,h_N)_{L^2} h_{N+1}\\
+&+\sum_{n=0}^{N-1} \left( \sqrt{\frac{n+1}{2}} (f,h_{n+1})_{L^2}  - \sqrt{\frac{n}{2}} (f,h_{n-1})_{L^2}\right)h_n,
+\end{align*}
+hence for $M<N$,
+\begin{align*}
+f_N'-f_M'&= -\sqrt{\frac{N}{2}} (f,h_{N-1})_{L^2} h_N - \sqrt{\frac{N+1}{2}} (f,h_N)_{L^2} h_{N+1}\\
+& +\sqrt{\frac{M}{2}} (f,h_{M-1})_{L^2} h_M + \sqrt{\frac{M+1}{2}} (f,h_M)_{L^2} h_{M+1}\\
+&+\sum_{n=M}^{N-1} \left( \sqrt{\frac{n+1}{2}} (f,h_{n+1})_{L^2}  - \sqrt{\frac{n}{2}} (f,h_{n-1})_{L^2}\right)h_n,
+\end{align*}
+and for $N \geq M+2$,
+\begin{align*}
+\norm{f_N'-f_M'}_{1}&=(2N+2)^2 \frac{N}{2} |(f,h_{N-1})|_{L^2}^2 +(2N+4)^2 \frac{N+1}{2} |(f,h_{N-1})|_{L^2}^2\\
+&(2M+2)^2 \frac{M+1}{2} |(f,h_{M+1})|_{L^2}^2+(2M+4)^2 \frac{M+2}{2} |(f,h_{M+1})|_{L^2}^2\\
+&+\sum_{n=M+2}^{N-1} (2n+2)^2 \left| \sqrt{\frac{n+1}{2}} (f,h_{n+1})_{L^2}  - \sqrt{\frac{n}{2}} (f,h_{n-1})_{L^2}\right|^2\\
+&=O(\norm{f_N-f_M}_2),
+\end{align*}
+whence
+$f_N'$ is a Cauchy sequence in $C_b^0(\mathbb{R})$, and so $f_N$ is a Cauchy sequence in $C_b^1(\mathbb{R})$. 
+\end{proof}
+
+
+
+
+We prove that for $p \geq 1$ the derivatives of the partial sums $f_N$ are a Cauchy sequence
+in $L^2(\lambda)$.\footnote{Jeremy J. Becnel and Ambar N. Sengupta,
+{\em The Schwartz space: a background to white noise analysis},
+\url{https://www.math.lsu.edu/~preprint/2004/as20041.pdf}, Lemma 7.1.}
+
+\begin{lemma}
+For $p \geq 1$ and $f \in \mathscr{S}_p$, $f_N'$ is a Cauchy sequence in $L^2(\lambda)$.
+\label{cauchyL2}
+\end{lemma}
+\begin{proof}
+Because $f_N \in \mathscr{S}$,
+\[
+f_N' =Df_N= \frac{B-C}{2}f_N.
+\]
+Then
+\[
+\norm{f_N'-f_M'}_{L^2} \leq \frac{1}{2}\norm{Bf_N-Bf_M}_{L^2} + \frac{1}{2}\norm{Cf_N-Cf_M}_{L^2}.
+\]
+For $M<N$, as $Bh_n=(2n)^{1/2}h_{n-1}$,
+\begin{align*}
+\norm{Bf_N-Bf_M}_{L^2}^2&=\norm{B \sum_{n=M+1}^N (f,h_n)_{L^2} h_n}_{L^2}^2\\
+&=\norm{ \sum_{n=M+1}^N (f,h_n)_{L^2} (2n)^{1/2} h_{n-1}}_{L^2}^2\\
+&=\sum_{n=M+1}^N |(f,h_n)_{L^2}|^2 (2n)\\
+&\leq \sum_{n=M+1}^N (2n+2)^2 |(f,h_n)_{L^2}|^2,
+\end{align*}
+and as $Ch_n=(2n+2)^{1/2}h_{n+1}$,
+\begin{align*}
+\norm{Cf_N-Cf_M}_{L^2}^2&=\norm{C \sum_{n=M+1}^N (f,h_n)_{L^2} h_n}_{L^2}^2\\
+&=\norm{ \sum_{n=M+1}^N (f,h_n)_{L^2}(2n+2)^{1/2}h_{n+1}}_{L^2}^2\\
+&=\sum_{n=M+1}^N |(f,h_n)_{L^2}|^2 (2n+2)\\
+&\leq \sum_{n=M+1}^N (2n+2)^2 |(f,h_n)_{L^2}|^2.
+\end{align*}
+Thus
+\[
+\norm{f_N'-f_M'}_{L^2} \leq \frac{1}{2}\norm{f_N-f_M}_1 +  \frac{1}{2}\norm{f_N-f_M}_1
+= \norm{f_N-f_M}_1.
+\]
+Because $f \in \mathscr{S}_p$ and $p \geq 1$, 
+the series $\sum_{n=0}^\infty (2n+2)^2 |(f,h_n)_{L^2}|^2$ converges, from
+which the claim follows.
+\end{proof}
+
+
+
+Now we establish that if
+$p \geq 1$ and $f \in \mathscr{S}_p$ then there is some $F \in C_b^0(\mathbb{R})$ such that $f$ is equal almost everywhere to $F$,
+$F$ is differentiable almost everywhere,
+and $F'  \in \mathscr{S}_{p-1}$.\footnote{Jeremy J. Becnel and Ambar N. Sengupta,
+{\em The Schwartz space: a background to white noise analysis},
+\url{https://www.math.lsu.edu/~preprint/2004/as20041.pdf}, Theorem 7.3.}
+
+\begin{theorem}
+For $p \geq 1$ and $f \in \mathscr{S}_p$,
+there is some $F \in C_b^0(\mathbb{R})$
+such that $f$ is equal almost everywhere to $F$, 
+$F$ is differentiable almost everywhere,
+$f_N'$ converges to $F'$ in the norm
+$\norm{\cdot}_{L^2}$, and    
+ $F' \in \mathscr{S}_{p-1}$. 
+\end{theorem}
+\begin{proof}
+Lemma \ref{cauchyL2} tells us that $f_N'$ is a Cauchy sequence in the norm $\norm{\cdot}_{L^2}$, and
+hence there is some $g \in L^2(\lambda)$ to which $f_N'$ converges in
+ the norm $\norm{\cdot}_{L^2}$. 
+For $x \leq y$, by the fundamental theorem of calculus,
+\[
+f_N(y) = f_N(x) + \int_0^1 f_N'(x+t(y-x))\cdot (y-x) dt.
+\]
+By the Cauchy-Schwarz inequality,
+\[
+\begin{split}
+&\int_0^1|f_N'(x+t(y-x))\cdot (y-x)-g(x+t(y-x))\cdot (y-x)| dt\\
+=&\int_x^y |f_N'(u)-g(u)| du\\
+\leq&\sqrt{y-x} \norm{f_N'-g}_{L^2}.
+\end{split}
+\]
+Because $\norm{f_N'-g}_{L^2} \to 0$ as $N \to \infty$,
+\[
+\int_0^1f_N'(x+t(y-x))\cdot (y-x) dt
+\to \int_0^1 g(x+t(y-x))\cdot (y-x) dt.
+\]
+Then by Lemma \ref{cramer}, taking $N \to \infty$, for any $y>x$ we have
+\[
+F(y)=F(x)+\int_0^1 g(x+t(y-x))\cdot (y-x) dt = F(x) + \frac{1}{y-x} \int_x^y g(s) ds.
+\]
+By the \textbf{Lebesgue differentiation theorem},
+for almost all $x \in \mathbb{R}$,
+\[
+\frac{1}{y-x} \int_x^y g(s) ds \to g(x),\qquad y \to x.
+\]
+Therefore for almost all $x \in \mathbb{R}$,
+\[
+F'(x) = g(x).
+\]
+Thus $F'=g$ in $L^2(\lambda)$,
+and as $f_N' \to g$ in $L^2(\lambda)$,
+\begin{align*}
+F' &= \lim_{N \to \infty} f_N' \\
+&= \lim_{N \to \infty} \left(\frac{B-C}{2}\right)
+\sum_{n=0}^N (f,h_n)_{L^2} h_n\\
+&= \frac{1}{2}\sum_{n=0}^\infty  (f,h_n)_{L^2} ((2n)^{1/2}h_{n-1}-(2n+2)^{1/2}h_{n+1})\\
+&= \frac{1}{2}\sum_{n=0}^\infty \bigg( (2n+2)^{1/2} (f,h_n)_{L^2}-(2n)^{1/2} (f,h_{n-1})_{L^2}\bigg) h_n,
+\end{align*}
+for which
+\begin{align*}
+\norm{F'}_{p-1}^2&=\frac{1}{4} \sum_{n=0}^\infty (2n+2)^{2p-2} \bigg| (2n+2)^{1/2} (f,h_n)_{L^2}-(2n)^{1/2} (f,h_{n-1})_{L^2}\bigg|^2\\
+&\leq \frac{1}{2} \sum_{n=0}^\infty (2n+2)^{2p-2}\bigg((2n+2) |(f,h_n)_{L^2}|^2+2n |(f,h_{n-1})_{L^2}|^2\bigg),
+\end{align*}
+which is finite because $f \in \mathscr{S}_p$. Therefore $F' \in \mathscr{S}_{p-1}$. 
+\end{proof}
+
+
+\end{document}
+

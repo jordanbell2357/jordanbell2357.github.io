@@ -1,0 +1,546 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Compact operators on Banach spaces}
+\author{Jordan Bell}
+\date{November 12, 2017}
+
+\maketitle
+
+\section{Introduction}
+In this note I prove several things about compact linear operators from one Banach space to another,  especially from a Banach space to itself.
+Some of these may things be simpler to prove for compact  operators on a Hilbert space, but since often in analysis we deal with compact 
+operators from one Banach space to another, such as from a Sobolev space to an $L^p$ space, and since the proofs here are not absurdly long,
+I think it's worth the extra time to prove all of this for Banach spaces. The proofs that I  give are completely detailed, and one should be able to read them
+without using a pencil and paper. When I want to use a fact that is not obvious but that I do not wish to prove, I give a precise statement of it, and
+ I verify that its hypotheses are satisfied.
+
+\section{Preliminaries}
+If $X$ and $Y$ are normed spaces, let $\mathscr{B}(X,Y)$ be the set of bounded linear maps $X \to Y$. It is straightforward to check that $\mathscr{B}(X,Y)$ is a normed space with the operator
+norm
+\[
+\norm{T} = \sup_{\norm{x} \leq 1} \norm{Tx}.
+\]
+If $X$ is a normed space and $Y$ is a Banach space, one proves that $\mathscr{B}(X,Y)$ is a Banach space.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~92, Theorem 4.1.} Let $\mathscr{B}(X)=\mathscr{B}(X,X)$. If $X$ is a Banach space then so is $\mathscr{B}(X)$, and it is straightforward to verify that $\mathscr{B}(X)$ is a Banach algebra.
+
+To say $T \in \mathscr{B}(X)$ is \textbf{invertible} means that there is some $S \in \mathscr{B}(X)$ such that $ST=\id_X$ and
+ $TS = \id_X$, and we write $T^{-1}=S$. It follows from the \textbf{open
+mapping theorem} that if $T \in \mathscr{B}(X)$, $\ker T = \{0\}$, and $T(X)=X$, then $T$ is invertible (i.e. if a bounded linear map is bijective then
+its inverse is also a bounded linear map, where we use the open mapping theorem to show that the inverse is continuous).
+
+The \textbf{spectrum} $\sigma(T)$ of $T\in \mathscr{B}(X)$ is the set of all $\lambda \in \mathbb{C}$ such that $T-\lambda \id_X$ is not invertible.
+If $T-\lambda \id_X$ is not injective, we say that $\lambda$ is an \textbf{eigenvalue} of $T$, and then there is some
+nonzero $x \in \ker(T-\lambda \id_X)$, which thus satisfies  $Tx=\lambda x$; we call any nonzero element of $\ker(T-\lambda \id_X)$ an \textbf{eigenvector}
+of $T$. The \textbf{point spectrum} of $T$ is the set of eigenvalues of $T$.
+
+We say that a subset of a topological space is \textbf{precompact}  if its closure is compact. The \textbf{Heine-Borel theorem} states that a subset $S$ of a complete
+metric space $M$ is precompact if and only if it is \textbf{totally bounded}: to be totally bounded 
+means that for every $\epsilon>0$ there are finitely many points $x_1,\ldots,x_r \in S$ such that $S \subseteq \bigcup_{k=1}^r B_\epsilon(x_i)$,
+where $B_\epsilon(x)$ is the open ball of radius $\epsilon$ and center $x$.
+
+If $X$ and $Y$ are Banach spaces and $B_1(0)$ is the open unit ball in $X$, a linear map $T:X \to Y$ is said to be \textbf{compact}
+if $T(B_1(0))$ is precompact; equivalently, if $T(B_1(0))$ is totally bounded. Check that
+a linear map $T:X \to Y$ is compact if and only if the image of {\em every} bounded set is precompact. Thus, if we want to prove that a linear map is compact we can
+show that the image of the open unit ball is precompact, while if we know that a linear map is compact we can use that the image of every bounded set is precompact.
+It is straightforward to prove that a compact linear map is bounded. Let $\mathscr{B}_0(X,Y)$ denote the set of compact linear maps
+$X \to Y$. It does not take long to prove that $\mathscr{B}_0(X)$ is an ideal in the algebra $\mathscr{B}(X)$.
+
+
+
+\section{Basic facts about compact operators}
+\begin{theorem}
+Let $X$ and $Y$ be Banach spaces.
+If $T:X \to Y$ is linear, then $T$ is compact if and only if $x_n \in X$ being a bounded sequence implies that there
+is a subsequence $x_{a(n)}$ such that $Tx_{a(n)}$ converges in $Y$.
+\end{theorem}
+\begin{proof}
+Suppose that $T$ is compact and let $x_n \in X$ be bounded, with
+\[
+M = \sup_n \norm{x_n}<\infty.
+\] 
+Let $V$ be the closed ball in $X$ of radius $M$ and center $0$. $V$ is bounded in $X$,
+so $N=\overline{T(V)}$ is compact in $Y$.
+As $Tx_n \in N$, there is some convergent subsequence $Tx_{a(n)}$ that converges to some $y \in N$.
+
+Suppose that if $x_n$ is a bounded sequence in $X$ then there is a subsequence such that $Tx_{a(n)}$ is convergent,  let $U$ be the open unit ball in $X$,
+and let $y_n \in T(U)$ be a sequence. It is a fact that a subset of a metric space is precompact if and only if every sequence has a subsequence that converges to some
+element in the space; this is not obvious, but at least we are only taking as given a fact about metric spaces. (What we have asserted is that a set in a metric space
+is precompact if and only if it is \textbf{sequentially precompact}.) As $y_n$ are in the image of $T$, there is a subsequence such that $y_{a(n)}$ is convergent and
+this implies that $T(U)$ is precompact, and so $T$ is a compact operator.
+\end{proof}
+
+
+\begin{theorem}
+Let $X$ and $Y$ be Banach spaces. If $T \in \mathscr{B}_0(X,Y)$, then $T(X)$ is separable.
+\end{theorem}
+\begin{proof}
+Let $U_n$ be the closed ball of radius $n$ in $X$. As $\overline{T(U_n)}$ is a compact metric space it is separable, and hence $T(U_n)$, a subset of it, is separable too, say with dense subset $L_n$. 
+We have
+\[
+T(X) = \bigcup_{n=1}^\infty T(U_n),
+\]
+and one checks that $\bigcup_{n=1}^\infty L_n$ is a dense subset of the right-hand side, showing that $T(X)$ is separable.
+\end{proof}
+
+
+The following theorem gathers some important results about compact operators.\footnote{Walter Rudin, {\em Functional Analysis},
+second ed., p.~104, Theorem 4.18.}
+
+\begin{theorem}
+Let $X$ and $Y$ be Banach spaces.
+\begin{itemize}
+\item If $T \in \mathscr{B}(X,Y)$, $T$ is compact, and $T(X)$ is a closed subset of $Y$, then $\dim T(X)<\infty$.
+\item $\mathscr{B}_0(X,Y)$ is a closed subspace of $\mathscr{B}(X,Y)$.
+\item If $T \in \mathscr{B}(X)$, $T$ is compact, and $\lambda \neq 0$, then $\dim \ker(T-\lambda \id_X) < \infty$.
+\item If $\dim X=\infty$, $T \in \mathscr{B}(X)$, and $T$ is compact, then $0 \in \sigma(T)$.
+\end{itemize}
+\label{bigtheorem}
+\end{theorem}
+\begin{proof}
+If $T \in \mathscr{B}(X,Y)$ is compact and $T(X)$ is closed then as a closed subspace of a Banach space, $T(X)$ is itself a Banach space. 
+Of course $T:X \to T(X)$ is surjective, and $X$ is a Banach space so by the open mapping theorem $T:X \to T(X)$ is an open map.
+Let $Tx \in T(X)$. As $T$ is an open map, $T(B_1(x))$ is open, and hence $\overline{T(B_1(x))}$ is a  neighborhood
+of $Tx$. But because $T$ is compact and $B_1(x)$ is bounded, $\overline{T(B_1(x))}$ is compact. Hence $\overline{T(B_1(x))}$ is a compact
+neighborhood of $Tx$. As every element of $T(X)$ has a compact neighborhood, $T(X)$ is locally compact.
+But a locally compact topological vector space is finite dimensional, so $\dim T(X) < \infty$.
+
+
+It is straightforward to check that $\mathscr{B}_0(X,Y)$ is linear subspace of $\mathscr{B}(X,Y)$. 
+Let $T$ be in the closure of $\mathscr{B}_0(X,Y)$ and let $U$ be the open unit ball in $X$. We wish to show that $T(U)$ is totally bounded.
+Let $\epsilon>0$. As $T$ is in the closure of $\mathscr{B}_0(X,Y)$, there is some $S \in \mathscr{B}_0(X,Y)$ with $\norm{S-T} < \epsilon$. As $S$ is compact, its image
+$S(U)$ is totally bounded, so there are finitely many $Sx_1,\ldots,Sx_r \in S(U)$, with $x_1,\ldots,x_r \in U$, such that $S(U) \subseteq \bigcup_{k=1}^r B_\epsilon(Sx_k)$.
+If $x \in U$, then
+\[
+\norm{Sx-Tx}=\norm{(S-T)x} \leq \norm{S-T} \norm{x} < \norm{S-T}<\epsilon.
+\]
+Let $x \in U$. Then there is some $k$ such that $Sx \in B_\epsilon(Sx_k)$, and
+\[
+\norm{Tx-Tx_k} \leq \norm{Tx-Sx} + \norm{Sx-Sx_k}+\norm{Sx_k-Tx_k}<3\epsilon,
+\]
+so $T(U) \subseteq \bigcup_{k=1}^r B_{3\epsilon}(Tx_k)$, showing that $T(U)$ is totally bounded and hence that $T$ is a compact operator.
+
+If $T \in \mathscr{B}(X)$ is compact and $\lambda \neq 0$, let $Y = \ker (T-\lambda \id_X)$.
+(If $\lambda$ is not an eigenvalue of $T$, then $Y=\{0\}$.)
+$Y$ is a closed subspace of $X$, and hence is itself a Banach space.
+If $y \in Y$ then $Ty=\lambda y \in Y$. Define $S:Y \to Y$ by $Sy=Ty=\lambda y$, and as $T$ is compact so is $S$.
+Now we use the hypothesis that $\lambda \neq 0$:
+if $y \in Y$, then $S(\frac{1}{\lambda}y)=y$, so $S:Y \to Y$ is surjective. We have shown that
+ $S:Y \to Y$ is compact and that $S(Y)$ is a closed subset of $Y$ (as it is equal to $Y$), and as a closed image of a compact operator
+ is finite dimensional, we obtain
+$\dim S(Y) <\infty$, i.e. $\dim Y< \infty$.
+
+If $\dim X=\infty$ and $T \in \mathscr{B}(X)$ is compact, suppose by contradiction that $0 \not \in \sigma(T)$. So
+$T$ is invertible, with $TT^{-1}=\id_X$. As $\mathscr{B}_0(X)$ is an ideal in the algebra $\mathscr{B}(X)$, $\id_X$ is compact. 
+Of course $\id_X(X)=X$ is a closed subset of $X$. But we proved that if the image of a compact linear operator is closed then that image
+is finite dimensional, contradicting $\dim X=\infty$.
+\end{proof}
+
+
+
+\section{Dual spaces}
+If $X$ is a normed space, let $X^*=\mathscr{B}(X,\mathbb{C})$,  the set of bounded linear maps $X \to \mathbb{C}$. $X^*$ is called the \textbf{dual space} of $X$, and is a Banach space
+since $\mathbb{C}$ is a Banach space. Define $\inner{\cdot}{\cdot}:X \times X^* \to \mathbb{C}$ by 
+\[
+\inner{x}{\lambda}=\lambda(x), \qquad x \in X, \lambda \in X^*.
+\]
+This is called the \textbf{dual pairing} of $X$ and $X^*$. 
+
+The following theorem gives an expression for the norm of an element of the dual space.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~94, Theorem 4.3 (b).} 
+
+
+\begin{theorem}
+If $X$ is a normed space and $V$ is the closed unit ball in $X^*$, then
+\[
+\norm{x}=\sup_{\lambda \in V} |\inner{x}{\lambda}|, \qquad x \in X.
+\]
+\label{normexpression1}
+\end{theorem}
+\begin{proof}
+It follows from the Hahn-Banach extension theorem that if $x_0 \in X$, then there is some $\lambda_0 \in X^*$ such that $\lambda_0(x_0)=\norm{x_0}$
+and such that if $x \in X$ then $|\lambda_0(x)| \leq \norm{x}$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., 
+p.~58, Theorem 3.3.} That is, that there is some $\lambda_0 \in V$ such that $\lambda_0(x_0)=\norm{x_0}$.
+Hence
+\[
+\sup_{\lambda \in V} |\inner{x_0}{\lambda}| \geq |\inner{x_0}{\lambda_0}| = |\lambda_0(x_0)|= \norm{x_0}.
+\]
+If $\lambda \in V$, then
+\[
+|\inner{x_0}{\lambda}| = |\lambda(x_0)| \leq \norm{\lambda} \norm{x_0} \leq \norm{x_0},
+\]
+so
+\[
+\sup_{\lambda \in V} |\inner{x_0}{\lambda}| \leq \norm{x_0}.
+\]
+\end{proof}
+
+
+Let $X$ be a Banach space.
+For $x \in X$, it is apparent that $\lambda \mapsto \lambda(x)$ is a linear
+map $X^* \to \mathbb{C}$. From Theorem \ref{normexpression1}, it is bounded, with norm $\norm{x}$.
+Define $\phi:X \to X^{**}$ by
+\[
+(\phi x)(\lambda)=\inner{x}{\lambda}, \qquad x \in X, \lambda \in X^*.
+\]
+It is apparent that $\phi$ is a linear map. By Theorem \ref{normexpression1}, if $x \in X$ then $\norm{\phi x}=\norm{x}$, so
+$\phi$ is an isometry. 
+Let $\phi x_n \in \phi(X)$ be a Cauchy sequence. $\phi^{-1}:\phi(X) \to X$ is an isometry, so
+$\phi^{-1} \phi x_n$ is a Cauchy sequence, i.e. $x_n$ is a Cauchy sequence, and so, as $X$ is a Banach space, $x_n$ converges to some $x$. Then
+$\phi x_n$ converges to $\phi x$, and thus $\phi(X)$ is a complete metric space. But a subset of a complete metric space is closed if and only if it is complete, so
+$\phi(X)$ is a closed subspace of $X^{**}$. Hence, $\phi(X)$ is a Banach space and $\phi:X \to \phi(X)$ is an isometric isomorphism.
+A Banach space is said to be \textbf{reflexive} if $\phi(X) = X^{**}$, i.e. if every bounded linear map $X^* \to \mathbb{C}$ is of the form $\phi(x)$ for some $x \in X$.
+
+
+
+\section{Adjoints}
+If $X$ and $Y$ are normed spaces and $T \in \mathscr{B}(X,Y)$, 
+define $T^*:Y^* \to X^*$ by $T^* \lambda=\lambda \circ T$; as $T^*\lambda$ is the composition of two bounded linear
+maps it is indeed a bounded linear map $X \to \mathbb{C}$. $T^*$ is called the \textbf{adjoint} of $T$.
+It is straightforward to check that $T^*$ is linear and that it satisfies, for $S=T^*$,
+\begin{equation}
+\inner{Tx}{\lambda}=\inner{x}{S\lambda}, \qquad x \in X, \lambda \in Y^*.
+\label{adjointcondition}
+\end{equation}
+On the other hand, suppose that $S:Y^* \to X^*$ is a function that satisfies \eqref{adjointcondition}. Let $\lambda \in Y^*$, and let
+$x \in X$. Then
+\[
+(S\lambda)(x) = \lambda(Tx)= (T^*\lambda)(x).
+\]
+This is true for all $x$, so $S\lambda=T^*\lambda$, and that is true for all $\lambda$, so $S=T^*$. Thus $T^*\lambda=
+\lambda \circ T$ is the unique function $Y^* \to X^*$ that satisfies \eqref{adjointcondition}, not just the unique bounded linear
+map that does. (That is, satisfying \eqref{adjointcondition} completely determines a function.)
+
+Using Theorem \ref{normexpression1}, 
+\begin{eqnarray*}
+\norm{T}&=&\sup_{\norm{x} \leq 1} \norm{Tx}\\
+&=&\sup_{\norm{x} \leq 1} \sup_{\norm{\lambda} \leq 1} |\inner{Tx}{\lambda}|\\
+&=&\sup_{\norm{x} \leq 1} \sup_{\norm{\lambda} \leq 1} |\inner{x}{T^*\lambda}|\\
+&=&\sup_{\norm{\lambda} \leq 1} \sup_{\norm{x} \leq 1} |T^*\lambda(x)|\\
+&=&\sup_{\norm{\lambda} \leq 1} \norm{T^*\lambda}\\
+&=&\norm{T^*}.
+\end{eqnarray*}
+In particular, $T^* \in \mathscr{B}(Y^*,X^*)$.
+
+
+In the following we prove that the adjoint $T^*$ of a compact operator $T$ is itself a compact operator,
+and that if the adjoint of a bounded linear operator is compact then the original operator  is compact.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~105, Theorem 4.19.}
+In the proof we only show that if we take any sequence $\lambda_n$ in the closed unit ball then it has a subsequence such that
+$T\lambda_{a(n)}$ converges. Check that it suffices merely to do this rather than showing that this happens for any bounded sequence.
+
+\begin{theorem}
+If $X$ and $Y$ are Banach spaces and $T \in \mathscr{B}(X,Y)$, then $T$ is compact if and only if
+$T^*$ is compact.
+\label{adjointcompact}
+\end{theorem}
+\begin{proof}
+Suppose that $T \in \mathscr{B}(X,Y)$ is compact, and let $\lambda_n \in Y^*$, $n \geq 1$, be a sequence in the closed unit ball in $Y^*$.
+
+If $M$ is a metric space with metric $\rho$ and $\mathcal{F}$ is a set of functions $M \to \mathbb{C}$,
+we say that $\mathcal{F}$ is \textbf{equicontinuous} if for every $\epsilon>0$ there exists a $\delta>0$ such that
+if $f \in \mathcal{F}$ and $\rho(x,y)<\delta$ then $|f(x)-f(y)|<\epsilon$.
+We say that $\mathcal{F}$ is \textbf{pointwise bounded} if for every $x \in M$ there is some $m(x)<\infty$ such that
+if $f \in \mathcal{F}$ and $x \in M$ then $|f(x)| \leq m(x)$.
+The \textbf{Arzel\`a-Ascoli theorem}\footnote{Walter Rudin, {\em Real and Complex Analysis}, third ed., p.~245, Theorem 11.28.}
+ states that if $(M,\rho)$ is a separable metric space and $\mathcal{F}$ is a set of functions $M \to \mathbb{C}$ that is equicontinuous and pointwise bounded,
+then for every sequence $f_n \in \mathcal{F}$ there is a subsequence that converges uniformly on every compact subset of $M$.
+
+Let $V$ be the closed unit ball in $X$.
+As $T$ is a compact operator, $\overline{T(V)}$ is compact and therefore separable, because any compact
+metric space is separable. 
+Define $f_n:\overline{T(V)} \to \mathbb{C}$ by 
+\[
+f_n(y) = \inner{y}{\lambda_n} = \lambda_n(y).
+\]
+For $y_1,y_2 \in \overline{T(V)}$ we have
+\[
+|f_n(y_1)-f_n(y_2)| = |\lambda_n(y_1-y_2)| \leq \norm{\lambda_n} \norm{y_1-y_2} \leq \norm{y_1-y_2}.
+\]
+Hence for $\epsilon>0$, if $n \geq 1$ and $\norm{y_1-y_2} < \epsilon$ then $|f_n(y_1)-f_n(y_2)|<\epsilon$. This shows
+that $\{f_n\}$ is equicontinuous. If $y \in \overline{T(V)}$, then, for any $n \geq 1$,
+\[
+|f_n(y)| = |\lambda_n(y)| \leq \norm{\lambda_n} \norm{y} \leq \norm{y},
+\]
+showing that $\{f_n\}$ is pointwise bounded. Therefore we can apply the Arzel\`a-Ascoli theorem: there is a subsequence
+$f_{a(n)}$ such that $f_{a(n)}$ converges uniformly on every compact subset of $\overline{T(V)}$, in particular on
+$\overline{T(V)}$ itself and therefore on any subset of it, in particular $T(V)$. We are done using the Arzel\`a-Ascoli theorem: we used it to prove that there is a subsequence
+$f_{a(n)}$ that converges uniformly on $T(V)$.
+
+Let $\epsilon>0$. As $f_{a(n)}$ converges uniformly on $T(V)$, there is some $N$ such that if $n,m \geq N$ and $y \in T(V)$, then
+$|f_{a(n)}(y)-f_{a(m)}(y)|<\epsilon$. Thus, if $n,m \geq N$,
+\begin{eqnarray*}
+\norm{T^* \lambda_{a(n)} -T^* \lambda_{a(m)}}&=&\norm{\lambda_{a(n)} \circ T - \lambda_{a(m)} \circ T}\\
+&=&\sup_{x \in V} |\lambda_{a(n)}(Tx) - \lambda_{a(m)}(Tx)|\\
+&=&\sup_{x \in V} |\lambda_{a(n)}(Tx) - \lambda_{a(m)}(Tx)|\\
+&=&\sup_{x \in V} |f_{a(n)}(Tx) - f_{a(m)}(Tx)|\\
+&<&\epsilon.
+\end{eqnarray*}
+This means that $T^*\lambda_{a(n)} \in X^*$ is a Cauchy sequence. As $X^*$ is a Banach space, this sequence converges, and therefore
+ $T^*$ is a compact operator. 
+
+Suppose that $T^* \in \mathscr{B}(Y^*,X^*)$ is compact. 
+Therefore, by what we showed in the first half of the proof we have that $T^{**}:X^{**} \to Y^{**}$ is compact.
+If $V$ be the closed unit ball in $X^{**}$, then $T^{**}(V)$ is totally bounded.
+
+We have seen that $\phi:X \to X^{**}$ defined by
+$(\phi x)\lambda=\lambda(x)$, $x \in X$, $\lambda \in X^*$, is an isometric isomorphism $X \to \phi(X)$. Let
+$\psi:Y \to Y^{**}$ be the same for $Y$, and 
+let $U$ be the closed unit ball in $X$.
+If $x \in X$ and $\lambda \in Y^*$ then
+\[
+\inner{\lambda}{\psi Tx} = \inner{Tx}{\lambda} = \inner{x}{T^* \lambda} = \inner{T^* \lambda}{\phi x}
+= \inner{\lambda}{T^{**} \phi x}.
+\]
+Therefore $\psi T = T^{**} \phi$. If $x \in U$ then $\phi x \in V$, as $\phi$ is an isometry.
+Hence if $x \in U$ then  $\psi T x = T^{**} \phi x \in T^{**}(V)$, thus
+\[
+\psi T(U) \subseteq T^{**}(V).
+\]
+As $\psi T(U)$ is contained in a totally bounded set it is itself totally bounded, and as $\psi$ is an isometry,
+it follows that $T(U)$ is totally bounded. Hence $T$ is a compact operator.
+\end{proof}
+
+
+\section{Complemented subspaces}
+If $M$ is a closed subspace of a topological vector space $X$ and there exists a closed subspace $N$ of $X$
+such that 
+\[
+X= M+N, \qquad M \cap N =\{0\},
+\]
+we say that \textbf{$M$ is complemented in $X$} and that $X$ is the \textbf{direct sum} of $M$ and $N$, which we
+write as $X = M \oplus N$.
+
+We are going to use the following lemma to prove the theorem that comes after it.\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~106, Lemma 4.21.} 
+
+\begin{lemma}
+If $X$ is a locally convex topological vector space and $M$ is a  subspace of $X$ with
+$\dim X < \infty$, then $M$ is complemented in $X$.
+\label{complementlemma}
+\end{lemma}
+
+In particular, a normed space is locally convex so the lemma applies to normed spaces. In the following theorem we prove
+that 
+if $T \in \mathscr{B}(X)$ is compact and $\lambda \neq 0$ then $T-\lambda \id_X$ has closed image.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~107, Theorem 4.23.}
+
+\begin{theorem}
+If $X$ is a Banach space, $T \in \mathscr{B}(X)$ is compact, and $\lambda \neq 0$, then the image of 
+$T-\lambda \id_X$ is closed.
+\label{closedimage}
+\end{theorem}
+\begin{proof}
+According to Theorem \ref{bigtheorem}, $\dim \ker(T-\lambda \id_X)< \infty$, and we can then  use
+Lemma \ref{complementlemma}: $\ker(T-\lambda \id_X)$ is a finite dimensional subspace of the locally convex space
+$X$, so there is a closed subspace $N$ of $X$ such that $X = \ker(T-\lambda \id_X) \oplus N$.
+
+Define $S:N \to X$ by $Sx = Tx-\lambda x$, so $S \in \mathscr{B}(N,X)$.
+It is apparent that $T(X)=S(N)$ and that $S$ is injective, and we shall prove that $S(N)$ is closed.
+To show that $S(N)$ is closed, check that it suffices to prove that $S$ is \textbf{bounded below}: that there is some $r>0$
+such that if $x \in N$ then $\norm{Sx} \geq r\norm{x}$.\footnote{A common way of proving that a linear operator is invertible is by
+proving that it has dense image and that it is bounded below: bounded below implies injective and bounded below
+and dense image imply surjective.} 
+ 
+Suppose by contradiction that for every $r>0$ there is some $x \in N$ such that $\norm{Sx}<r\norm{x}$. 
+So for each $n \geq 1$, let $x_n \in N$ with $\norm{Sx_n}< \frac{1}{n} \norm{x_n}$, and put
+$v_n = \frac{x_n}{\norm{x_n}}$, so that $\norm{v_n}=1$ and $\norm{Sv_n}<\frac{1}{n}$.
+As $T$ is compact, there is some subsequence such that $Tv_{a(n)}$ converges, say to $v$.
+Combining this with $Sv_n \to 0$ we get $\lambda v_{a(n)} \to v$.
+On the one hand, $\norm{\lambda v_{a(n)}} = |\lambda| \norm{v_{a(n)}} = |\lambda|$, so $\norm{v} = |\lambda|$.
+On the other hand,
+since $\lambda v_{a(n)} \in N$ and $N$ is closed,
+we get $v \in N$. $S$ is continuous and $\lambda v_{a(n)} \to 0$, so
+\[
+Sv = \lim_{n \to \infty} S(\lambda v_{a(n)}) = \lambda \lim_{n \to \infty} Sv_{a(n)} = 0.
+\]
+Because $S$ is injective and $Sv=0$, we get $v=0$, contradicting $\norm{v}=|\lambda|>0$. Therefore $S$
+is bounded below, and hence has closed image, completing the proof.
+\end{proof}
+
+
+
+The following theorem states  that the point spectrum of a compact operator is countable and bounded, and that if there is a limit point of the point spectrum
+it is $0$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~107, Theorem 4.24.} By countable we mean bijective with a subset
+of the integers.
+
+\begin{theorem}
+If $X$ is a Banach space, $T \in \mathscr{B}(X)$ is compact, and $r>0$, then there are only finitely many eigenvalues $\lambda$ of $T$ such that $|\lambda| > r$.
+\end{theorem}
+
+
+
+The following theorem shows that if $T \in \mathscr{B}(X)$ is compact and $\lambda \neq 0$, then the operator
+$T-\lambda \id_X$ is injective if and only if it is surjective.\footnote{Paul Garrett, {\em Compact operators on Banach spaces: Fredholm-Riesz}, \url{http://www.math.umn.edu/~garrett/m/fun/fredholm-riesz.pdf}} This tells us that if $\lambda \neq 0$ is not an eigenvalue of $T$, then $T - \lambda \id_X$ is both injective and surjective, and hence is invertible, which means that if $\lambda \neq 0$ is not an eigenvalue of $T$ then $\lambda \not \in \sigma(T)$.
+This is an instance of the \textbf{Fredholm alternative}.
+
+\begin{theorem}[Fredholm alternative]
+Let $X$ be a Banach space, $T \in \mathscr{B}(X)$ be compact, and $\lambda \neq 0$. $T- \lambda \id_X$ is injective if and only if it is surjective.
+\end{theorem}
+\begin{proof}
+Suppose that $T-\lambda \id_X$ is injective and let $V_n = (T-\lambda \id_X)^n X$, $n \geq 1$.
+If $(T-\lambda \id_X)^n x \in V_n$, then, as $(T-\lambda \id_X)x \in X$, we have
+\[
+(T-\lambda \id_X)^{n-1}(T-\lambda \id_X)x \in V_{n-1},
+\]
+so $V_n \supseteq V_{n-1}$. Thus
+\[
+V_1 \supseteq V_2 \supseteq \cdots
+\]
+Certainly $V_n$ is a normed vector space. Define $T_n \in \mathscr{B}(V_n)$ by $T_nx =Tx$, namely, $T_n$ is the restriction of $T$ to $V_n$.
+
+As $T$ is a compact operator, by Theorem \ref{closedimage} we get that
+$V_1=(T-\lambda \id_X)(X)$ is closed. Hence $V_1$ is a Banach space, being a closed subspace of a Banach space.
+Assume as induction hypothesis that $V_n$ is a closed subset of $X$. Thus $V_n$ is a Banach space, and $T_n \in \mathscr{B}(V_n)$ is a compact operator, as it is
+the restriction of the compact operator $T$ to $V_n$. Therefore by Theorem \ref{closedimage}, the image of $T_n-\lambda \id_X$ is closed, but this image is precisely
+$V_{n+1}$. Therefore, if $n \geq 1$ then $V_n$ is a closed subspace of $X$. 
+ 
+Suppose by contradiction that there is some $x  \not \in (T-\lambda \id_X)X=V_1$.  If $y \in X$ then
+\[
+(T-\lambda \id_X)^nx - (T-\lambda \id_X)^{n+1}y = (T-\lambda \id_X)^n ( x-(T-\lambda \id_X)y).
+\]
+As $x \not \in (T-\lambda \id_X)X$, we have $x - (T-\lambda \id_X)y \neq 0$.
+As we have supposed that $T-\lambda \id_X$ is injective, any positive power of it is injective, and hence
+the right hand side of the above equation is not $0$. Thus 
+$(T-\lambda \id_X)^nx \neq (T-\lambda \id_X)^{n+1}y$, and as $y \in X$ was arbitrary,
+\[
+(T-\lambda \id_X)^n x  \not \in (T-\lambda \id_X)^{n+1}X.
+\]
+However, of course $(T-\lambda \id_X)^nx \in V_n$, so if $n \geq 1$ then $V_n$ strictly contains
+$V_{n+1}$.
+
+\textbf{Riesz's lemma} states that if $M$ is a normed space, $N$ is a proper closed subspace of $M$, and
+$0<r<1$, then there is some $x \in M$ with $\norm{x}=1$ and $\inf_{y \in X} \norm{x-y} \geq r$.\footnote{Paul
+Garrett, {\em Riesz's lemma},
+\url{http://www.math.umn.edu/~garrett/m/fun/riesz_lemma.pdf} In this
+reference, Riesz's lemma is stated for Banach spaces, but the proof in fact works for normed spaces with no modifications.
+}
+For each $n \geq 1$, using Riesz's lemma there is some $v_n \in V_n$, $\norm{v_n}=1$, such that
+\[
+\inf_{y \in V_{n+1}} \norm{v_n-y} \geq \frac{1}{2};
+\]
+we proved that each $V_n$ is closed and that  $V_n$ is a strictly decreasing sequence to allow us to use Riesz's lemma.
+
+If $n,m \geq 1$, then $(T-\lambda \id_X)v_m \in V_{m+1}$ and check that $Tv_{m+n} \subseteq V_{m+n}$, so
+\[
+Tv_m-Tv_{m+n} = \lambda v_m + (T-\lambda \id_X)v_m - Tv_{m+n} \in \lambda v_m + V_{m+1}.
+\]
+From this and the definition of the sequence $v_m$, we get
+\[
+\norm{Tv_m - Tv_{m+n}} \geq |\lambda| \cdot \frac{1}{2}.
+\]
+That is, the distance between any two terms in $Tv_m$ is $\geq \frac{|\lambda|}{2}$, which is a fixed positive constant, hence $Tv_m$
+has no convergent subsequence. But $\norm{v_m}=1$, so $v_m$ is bounded and therefore, as $T$ is compact, the sequence
+$Tv_m$ has a convergent subsequence, a contradiction. Therefore $T-\lambda \id_X$ is surjective.
+
+Suppose that $T-\lambda \id_X$ is surjective. One checks that if a bounded linear operator
+is surjective then its adjoint is injective. For $x \in X$ and $\mu \in X^*$, 
+$\inner{\lambda \id_X x}{\mu}=\mu(\lambda x)=\lambda \mu(x)=\inner{x}{\lambda \id_{X^*} \mu}$, so
+$(\lambda \id_X)^* = \lambda \id_{X^*}$. Hence $(T-\lambda \id_X)^* = T^* - \lambda \id_{X^*}$. $T$ is compact
+so $T^*$ is compact. As $T^* - \lambda \id_{X^*}$ is injective and $T^*$ is compact, $T^*-\lambda \id_{X^*}$ is surjective,
+whence its adjoint $T^{**} - \lambda \id_{X^{**}}:X^{**} \to X^{**}$ is injective. One  checks that if $S \in \mathscr{B}(X)$ and 
+$S^{**}:X^{**} \to X^{**}$ is injective then $S$ is injective; this is proved using the fact that
+$\phi:X \to X^{**}$ defined by $(\phi x)(\lambda)=\lambda(x)$ is an isometric isomorphism
+$X \to \phi(X)$. Using this, $T-\lambda \id_X$ is injective, completing the proof.
+\end{proof}
+
+
+
+\section{Compact metric spaces}
+In the proof of Theorem \ref{adjointcompact} we stated the Arzel\`a-Ascoli theorem. 
+First we state definitions again. If $M$ is a metric space with metric $\rho$ and $\mathcal{F}$ is a set of functions
+$M \to \mathbb{C}$, we say that $\mathcal{F}$ is \textbf{equicontinuous} if for all $\epsilon>0$ there is some $\delta>0$
+such that $f \in \mathcal{F}$ and $\rho(x,y)<\delta$ imply that $|f(x)-f(y)|<\epsilon$. We say that $\mathcal{F}$ is \textbf{pointwise bounded}
+if for all $x \in M$ there is some $m(x)$ such that if $f \in \mathcal{F}$ then $|f(x)| \leq m(x)$. The \textbf{Arzel\`a-Ascoli theorem} states that
+if $M$ is a separable metric space and $\mathcal{F}$ is  equicontinuous and pointwise bounded, then every sequence in $\mathcal{F}$ has a sequence
+that converges uniformly on every compact subset of $M$.\footnote{Walter Rudin, {\em Real and Complex Analysis}, third ed., p.~245, Theorem 11.28.}
+
+
+We are going to use a converse of
+the Arzel\`a-Ascoli theorem in the case of a compact metric space.\footnote{John B. Conway, {\em A Course in Functional Analysis}, second ed.,
+p.~175, Theorem 3.8.}
+Let $M$ be a compact metric space and let $C(M)$ be the set of continuous functions $M \to \mathbb{C}$.
+It does not take long to prove that with the norm $\norm{f} = \sup_{x \in M} |f(x)|$, $C(M)$ is a Banach space. 
+
+\begin{theorem}
+Let $(M,\rho)$ be a compact metric space and let $\mathcal{F} \subseteq C(M)$. $\mathcal{F}$ is precompact
+in $C(M)$ if and only if $\mathcal{F}$ is bounded and equicontinuous.
+\label{ascoli}
+\end{theorem}
+\begin{proof}
+Suppose that $\mathcal{F}$ is bounded and equicontinuous. To say that $\mathcal{F}$ is bounded is to say that there is some $C$ such that if $f \in \mathcal{F}$ then $\norm{f} \leq C$, and this implies that
+$\mathcal{F}$ is pointwise bounded. As $M$ is compact it is separable, so the Arzel\`a-Ascoli theorem tells us that every sequence in $\mathcal{F}$ has a subsequence
+that converges on every compact subset of $M$.
+To say that a sequence of functions $M \to \mathbb{C}$ converges uniformly on the compact subsets of $M$ is to say that
+the sequence converges in the norm of the Banach space $C(M)$, and thus if $\mathcal{F}$ is a subset of $C(M)$, then to say that every sequence in
+$\mathcal{F}$ has a subsequence that converges uniformly on every compact subset of $M$ is to say that $\mathcal{F}$ is precompact in $C(M)$.
+
+In the other direction,
+suppose that $\mathcal{F}$ is precompact. Hence it is totally bounded in $C(M)$. It is straightforward to verify that $\mathcal{F}$ is bounded.
+We have
+to show that $\mathcal{F}$ is equicontinuous. Let $\epsilon>0$. As $\mathcal{F}$ is totally bounded, there are $f_1,\ldots,f_n \in \mathcal{F}$ such that
+$\mathcal{F} \subseteq \bigcup_{k=1}^n B_{\epsilon/3}(f_k)$. 
+As each $f_k:M \to \mathbb{C}$ is continuous and $M$ is compact, there is some $\delta_k>0$ such that if $\rho(x,y)<\delta_k$ then $|f_k(x)-f_k(y)|<\frac{\epsilon}{3}$.
+Let $\delta=\min_{1 \leq k \leq n} \delta_k$.
+If $f \in \mathcal{F}$ and $\rho(x,y)<\delta$, then, taking $k$ such that $\norm{f-f_k} < \frac{\epsilon}{3}$,
+\begin{eqnarray*}
+|f(x)-f(y)| &\leq& |f(x)-f_k(x)| + |f_k(x)-f_k(y)| + |f_k(y)-f(y)\\
+&<&\norm{f-f_k} + \frac{\epsilon}{3} + \norm{f_k-f}\\
+&<&\frac{\epsilon}{3} + \frac{\epsilon}{3} + \frac{\epsilon}{3}\\
+&=&\epsilon,
+\end{eqnarray*}
+showing that $\mathcal{F}$ is equicontinuous.
+\end{proof}
+
+
+We now show that if $M$ is a compact metric space then the Banach space $C(M)$ has the \textbf{approximation property}: every compact linear operator 
+$C(M) \to C(M)$ is the limit of a sequence of bounded finite
+rank operators.\footnote{John B. Conway, {\em A Course in Functional Analysis}, second ed., p.~176, Theorem 3.11.}
+
+
+
+\begin{theorem}
+If $(M,\rho)$ is a compact metric space, then $\mathscr{B}_{00}(C(M))$ is a dense subset of $\mathscr{B}_0(C(M))$.
+\end{theorem}
+\begin{proof}
+Let $T \in \mathscr{B}_0(C(M))$,  let $V$ be the closed unit ball in $C(M)$, and let $\epsilon>0$. Because $T(V)$ is precompact in $C(M)$, by Theorem \ref{ascoli} it is bounded and equicontinuous. Then there is some $\delta>0$ such that if $Tf \in T(V)$ and $\rho(x,y)<\delta$ then
+$|(Tf)(x)-(Tf)(y)|<\epsilon$. $M$ is compact, so there are $x_1,\ldots,x_n \in M$ such that $M = \bigcup_{j=1}^n B_\delta(x_j)$.
+It is a fact that there is a \textbf{partition of unity} that is \textbf{subordinate} to this open covering of $M$: there are continuous functions
+$\phi_1,\ldots,\phi_n:M \to [0,1]$ such that if $x \in M$ then $\sum_{j=1}^n \phi_j(x)=1$, and $\phi_j(x)=0$ if $x \not \in B_\delta(x_j)$.\footnote{John 
+B. Conway, {\em Functional Analysis}, second ed., p.~139, Theorem 6.5.}
+Define $T_\epsilon:C(M) \to C(M)$ by
+\[
+T_\epsilon f = \sum_{j=1}^n (Tf)(x_j) \phi_j.
+\]
+It is apparent that $T_\epsilon$ is linear. $\norm{T_\epsilon f} \leq \sum_{j=1}^n \norm{T} \norm{f}=n \norm{T} \norm{f}$, so $\norm{T_e} \leq n\norm{T}$.
+And the image of $T_\epsilon$ is contained in the span of $\{\phi_1,\ldots,\phi_n\}$. Therefore $T_\epsilon \in \mathscr{B}_{00}(C(M))$.
+
+If $f \in V$ and $x \in M$, then for each $j$ either $x \in B_\delta(x_j)$, in which case $|(Tf)(x)-(Tf)(x_j)|<\epsilon$, or $x \not \in B_\delta(x_j)$,
+in which case $\phi_j(x)=0$. This gives us
+\begin{eqnarray*}
+|((Tf)(x)-(T_\epsilon f)(x)|&=& \left|  (Tf)(x)\cdot \sum_{j=1}^n \phi_j(x) - \sum_{j=1}^n (Tf)(x_j) \phi_j(x) \right|\\
+&=&\left| \sum_{j=1}^n \left( (Tf)(x) - (Tf)(x_j) \right) \phi_j(x) \right|\\
+&\leq&\sum_{j=1}^n \left|  (Tf)(x) - (Tf)(x_j) \right| \phi_j(x) \\
+&<&\sum_{j=1}^n \epsilon \phi_j(x)\\
+&=&\epsilon,
+\end{eqnarray*}
+showing that $\norm{Tf - T_\epsilon f} < \epsilon$, and as this is true for all $f \in V$ we get  $\norm{T-T_\epsilon}<\epsilon$.
+\end{proof}
+
+
+\end{document}

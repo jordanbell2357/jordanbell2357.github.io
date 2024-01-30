@@ -1,0 +1,603 @@
+\documentclass{article}
+\usepackage{amssymb,mathrsfs,amsmath,amsthm}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\spanning}{\operatorname{span}}
+\begin{document}
+\title{The Poincar\'e-Dulac normal form theorem for formal vector fields}
+\author{Jordan Bell}
+
+\date{April 3, 2014}       
+\maketitle       
+
+
+\section{Introduction}
+In this note we present proofs of the Poincar\'e normal form theorem and the Poincar\'e-Dulac normal form theorem for
+formal vector fields. Other accounts in the literature do not explicitly work out the proofs by induction of these theorems. 
+Our presentation is a more precise and detailed version of the presentation in \cite[\S \S 3--5]{analytic}. These topics are also covered in \cite[\S I.3]{encyclopedia}, \cite[Chapter 5]{arnold1988}, and \cite[\S A.5]{poisson}.
+The history of the problem
+of normalization of vector fields is presented by Yakovenko in review 96a:34021 in Mathematical Reviews. The computation of normal forms is discussed in \cite{scheurle} and \cite[Chapter 19]{wiggins}.
+
+The Poincar\'e-Dulac normal form has recently been used in \cite{unconditional}, which proves the
+unconditional uniqueness of solutions of the periodic one-dimensional cubic nonlinear Schr\"odinger equation.
+
+In \S 6 we give detailed examples where we explicitly compute the leading terms of the formal maps which conjugate formal
+vector fields to their Poincar\'e normal form and Poincar\'e-Dulac normal form.
+
+\section{Formal vector fields}
+Let $\mathbb{C}[[x]]=\mathbb{C}[[x_1,\ldots,x_n]]$ be the algebra of  formal power series in the variables $x_1,\ldots,x_n$: 
+\[
+\mathbb{C}[[x]]=\bigg \{\sum_{|\alpha| \geq 0} c_\alpha x^\alpha : c_\alpha \in \mathbb{C} \bigg\},
+\]
+where $\alpha=(\alpha_1,\ldots,\alpha_n) \in \mathbb{Z}^n_{\geq 0}$, $|\alpha|=\alpha_1 + \ldots +\alpha_n$, and
+$x^\alpha=x_1^{\alpha_1} \cdots x_n^{\alpha_n}$.
+
+A {\em formal vector field} is an element of $\mathfrak{g}=\mathbb{C}[[x]]^n$, that is, an $n$-tuple of formal power series.
+$\mathfrak{g}$ is a Lie algebra with the vector field commutator as its Lie bracket, defined for $F,G \in \mathfrak{g}$ by
+\[
+[F,G](x)=\frac{\partial G}{\partial x}(x) F(x)-\frac{\partial F}{\partial x}(x) G(x).
+\]
+For $F \in \mathfrak{g}$, we define $\ad_F:\mathfrak{g} \to \mathfrak{g}$ by $\ad_F(G)=[F,G]$ for $G \in \mathfrak{g}$. 
+
+
+Let $\mathfrak{m} \subset \mathbb{C}[[x]]$ be the set of formal power series with constant term $0$. 
+An element of $\mathfrak{m}^n$ (an $n$-tuple of elements of $\mathfrak{m}$) is said to be a {\em formal map}. If $H=(h_1,\ldots,h_n)$ is a formal map and $f(x)=\sum_{|\alpha| \geq 0} c_\alpha x^\alpha$ is a formal power series, then
+\[
+f(H(x))=\sum_{|\alpha| \geq 0} c_\alpha h_1(x)^{\alpha_1} \cdots h_n(x)^{\alpha_n}
+\] 
+is a formal power series. We call elements of $\mathfrak{m}^n$ formal maps because we can compose
+formal power series with them. On the other hand, $f(x)=\sum_{k=0}^\infty x^k$ is a formal power series, but 
+for $H(x)=1+x$ (which has nonzero constant coefficient),
+\[
+f(H(x))=\sum_{k=0}^\infty (1+x)^k= \sum_{k=0}^\infty \sum_{j=0}^k \binom{k}{j} x^j
+\]
+is not a formal power series because, for instance, the constant coefficient is infinite (indeed, each coefficient is infinite).
+
+Two formal vector fields $F,F'$ are said to be {\em equivalent} if there is a
+formal map $H$ such that 
+\[
+\frac{\partial H}{\partial x}(x)F(x)=F'(H(x)).
+\]
+It is clear that if $F(0)=0$ and $F$ is equivalent to $F'$, then $F'(0)=0$.
+
+Let $\mathscr{H}_m \subset \mathbb{C}[[x]]$ be the vector space whose elements are homogeneous polynomials of degree $m$ 
+in the variables $x_1,\ldots,x_n$, and $0$, and let $\mathscr{D}_m=
+\mathscr{H}_m^n \subset \mathfrak{g}$.
+
+For a formal vector field $F$, the {\em linearization} of $F$ is the $n \times n$ matrix $A$ defined by $A_{i,j}=\frac{\partial F_i}{\partial x_j}(0)$, i.e., $A=\frac{\partial F}{\partial x}(0)$. A formal vector field
+$F$ with $F(0)=0$ and with linearization $A$ can be written as 
+\[
+F(x)=Ax+\sum_{j=2}^\infty V^j(x)
+\]
+for some $V^j \in \mathscr{D}_j$.
+
+The following theorem is the inverse function theorem for formal maps \cite[pp. 32--33]{analytic}.
+
+\begin{theorem}
+If $H$ is a formal map and $\frac{\partial H}{\partial x}(0)$ is invertible, then there is a formal map $H^{-1}$ such that $H(H^{-1}(x))=x$ and $H^{-1}(H(x))=x$.
+\end{theorem}
+
+The following theorem shows that any formal vector field is equivalent to a formal vector field whose linearization is in Jordan normal form.
+
+\begin{theorem}
+\label{jordanform}
+If a formal vector field $F$ has linearization $A$ and $A=QBQ^{-1}$, then
+$F$ is equivalent to a formal vector field with linearization $B$.
+\end{theorem}
+\begin{proof}
+Let $H(x)=Q^{-1}x$, and
+define $F'$ by $F'(x)=Q^{-1} F(Qx)$. $F'$ has linearization
+\[
+\frac{\partial F'}{\partial x}(0)=Q^{-1}\frac{\partial F}{\partial x}(0) Q=Q^{-1}AQ=B,
+\]
+and
+\[
+\frac{\partial H}{\partial x}(x)F(x)=Q^{-1}F(x)=F'(H(x)),
+\]
+so $F$ is equivalent to $F'$.
+\end{proof}
+
+A vector $\lambda \in \mathbb{C}^n$ is said to be {\em resonant} if there is some $\alpha \in \mathbb{Z}^n_{\geq 0}$ with
+$|\alpha| \geq 2$ and some $1 \leq k \leq n$ such that $\lambda_k = \langle \alpha, \lambda \rangle$.
+We define $\langle \alpha,\lambda \rangle=\sum_{j=1}^n \alpha_j \lambda_j$.
+An $n \times n$ matrix $A$ is said to be resonant if the vector of its eigenvalues 
+is resonant, and a formal vector field is said to be resonant if its linearization is resonant. $|\alpha|$ is the {\em order} of the resonance.
+
+\section{Poincar\'e normal form theorem for formal vector fields}
+The following theorem is the {\em Poincar\'e normal form theorem}, which states that a nonresonant formal vector field with constant term $0$ whose linearization is in Jordan normal form is equivalent to its linearization. By Theorem \ref{jordanform} any formal vector field is equivalent to a formal vector field whose linearization is in Jordan normal form,
+so it follows that any nonresonant formal vector field with constant term $0$ can be linearized.
+
+\begin{theorem}
+If $F$ is a nonresonant formal vector field with constant term $0$  and the linearization $A$ of $F$ is in Jordan normal form, then $F$ is equivalent to the formal vector field $F'$ defined by $F'x=Ax$.
+\end{theorem}
+\begin{proof}
+We prove the claim by induction.
+Let $F_2=F$. We can write
+\[
+F_2(x)=Ax+\sum_{j=2}^\infty V_2^j(x)
+\]
+where $V_2^j \in \mathscr{D}_j$. Let $H_1(x)=x$. Then $\frac{\partial H_1}{\partial x} F(x)=F_2(H_1(x))$, and thus $F$ is equivalent to the formal vector field $F_2$. Assume that for some 
+$m$ there are $V_m^j \in \mathscr{D}_j$, $j=m,\ldots$, such that $F$ is equivalent to
+\[
+F_m(x)=Ax+\sum_{j=m}^\infty V_m^j(x).
+\]
+We want to show that there are $V_{m+1}^j \in \mathscr{D}_j$, $j=m+1,\ldots$, such that $F_m$ is equivalent to
+\begin{equation}
+\label{Fm1}
+F_{m+1}(x)=Ax+\sum_{j=m+1}^\infty V_{m+1}^j(x).
+\end{equation}
+That is, we want to show that there exists a formal map $H_m$ and
+$V_{m+1}^j \in \mathscr{D}_j$ so that if $F_{m+1}$ is defined by \eqref{Fm1} then 
+\begin{equation}
+\label{conjugate}
+\frac{\partial H_m}{\partial x}(x) F_m(x)=F_{m+1}(H_m(x)).
+\end{equation}
+
+If there exists a formal map $H_m$ and $V_{m+1}^j \in \mathscr{D}_j$ that satisfy \eqref{conjugate} and
+$H_m$ is of the form
+$H_m(x)=x+P_m(x)$ for some $P_m \in \mathscr{D}_m$, 
+then
+\begin{equation}
+\label{determing}
+(I+\frac{\partial P_m}{\partial x}(x))(Ax+\sum_{j=m}^\infty V^j_m(x))
+=Ax+AP_m(x)+\sum_{j=m+1}^\infty V_{m+1}^j(H_m(x)).
+\end{equation}
+Comparing terms of degree $m$ we get
+\[
+V^m_m(x)+\frac{\partial P_m}{\partial x}(x)Ax=AP_m(x)
+\]
+or
+\[
+-V^m_m=\ad_A(P_m).
+\]
+This equation is called the {\em homological equation}. 
+
+By Corollary \ref{invertible}, $\ad_A|_{\mathscr{D}_m}:\mathscr{D}_m \to \mathscr{D}_m$ is a linear isomorphism, and hence we can define $P_m$ by
+$P_m=(\ad_A)^{-1}(-V^m_m)$. 
+Then the terms $V^j_{m+1}$, $j=m+1,\ldots$ are determined by setting
+\[
+\sum_{j=m+1}^\infty V^j_m(x)
++
+\frac{\partial P_m}{\partial x}(x)
+\sum_{j=m}^\infty V^j_m(x)
+=\sum_{j=m+1}^\infty V_{m+1}^j(H_m(x)).
+\]
+Therefore if we define $F_{m+1}$ by \eqref{Fm1}, the formal vector fields
+$F_m,F_{m+1}$ are equivalent.
+
+Then 
+$H^{(m)}(x)=H_m \circ \cdots \circ H_1(x)$ is a formal map such that
+$\frac{\partial H^{(m)}}{\partial x}(x) F(x)=F_{m+1}(H^{(m)}(x))$.
+Since $H^{(m+1)}=H_{m+1} \circ H^{(m)}$ and $H^{(m)}$ have the same terms of
+degree $\leq m$,  $\lim_{m \to \infty} H^{(m)}(x)$ exists in $\mathfrak{m}^n$; let $H$ be this limit. Then
+we can check that $H$ is a formal map such that 
+$\frac{\partial H}{\partial x}(x) F(x)=F'(H(x))$, and so
+$F$ is equivalent to $F'$.
+\end{proof}
+
+For any $n \times n$ matrix $A$ (resonant or nonresonant) and for $P \in \mathscr{D}_m$, we have $\ad_A(P)(x)=\frac{\partial P}{\partial x}(x) Ax-AP(x) \in \mathscr{D}_m$, hence $\mathscr{D}_m$ is an invariant subspace
+of $\ad_A$.
+
+A basis for $\mathscr{D}_m$ consists of $F_{k,\alpha}(x)=x^\alpha e_k$, $k=1,\ldots,n$, $|\alpha|=m$.
+Let $w_j=\sqrt{p_{n-j+1}}$, where $p_j$ is the $j$th prime; these are real numbers $w_1>\cdots>w_n>0$ that are independent over $\mathbb{Q}$. Assign the weight $w_k$ to $x_k$ and the weight $-w_k$ to $e_k$. Each element in the basis thus has a weight, and we can check that the only distinct elements with the same weights are $x^\alpha x_j e_j$ and $x^\alpha x_k e_k$ for $j \neq k$. If we order the basis decreasing in weight and decree that $x^\alpha x_j e_j$ is
+before $x^\alpha x_{j+1} e_{j+1}$, then the basis is well-ordered. In the second example in \S \ref{examples}, we write out the ordered bases for
+$\mathscr{D}_2$ and $\mathscr{D}_3$.
+
+\begin{lemma}
+\label{monomialbasis}
+If $A$ is in Jordan normal form, then in the ordered basis $F_{k,\alpha}$ of $\mathscr{D}_m$, $\ad_A|_{\mathscr{D}_m}$ is a lower triangular matrix with diagonal entries
+$\langle \lambda,\alpha \rangle -\lambda_k$, and if $A$ if diagonal then $\ad_A|_{\mathscr{D}_m}$ is diagonal.
+\end{lemma}
+\begin{proof}
+Let $A$ have eigenvalues $\lambda_1,\ldots,\lambda_n$ (not necessarily distinct), and let $\Lambda=\diag(\lambda_1,\ldots,\lambda_n)$. Let $J_j$ be the $n \times n$ matrix whose $(j,j+1)$ entry is $1$ and all whose
+other entries are $0$. For some index set $J \subseteq \{1,\ldots,n-1\}$,
+\[
+A=\Lambda+\sum_{j \in J} J_j.
+\]
+
+The $i$th row of $F_{k,\alpha}(x)$ is $\delta_{i,k} x^\alpha$, 
+hence $\Lambda F_{k,\alpha}=
+\lambda_k F_{k,\alpha}$. The entry in
+row $i$ and column $j$ of the matrix $\frac{\partial F_{k,\alpha}}{\partial x}(x)$
+is $\delta_{i,k} x^\alpha \frac{\alpha_j}{x_j}$,
+hence
+\[
+\frac{\partial F_{k,\alpha}}{\partial x}(x) \Lambda x
+=x^\alpha \begin{bmatrix}0&\cdots&0\\
+\vdots&\ddots&\vdots\\
+\frac{\lambda_1 \alpha_1}{x_1}&\cdots&\frac{\lambda_n \alpha_n}{x_n}\\
+\vdots&\ddots&\vdots\\
+0&\cdots&0
+\end{bmatrix}x
+=x^\alpha \begin{bmatrix}0\\ \vdots \\ \langle \lambda,\alpha \rangle \\ \vdots \\ 0 \end{bmatrix}
+=
+\langle \lambda,\alpha \rangle F_{k,\alpha}(x).
+\]
+Then $\ad_\Lambda F_{k,\alpha}(x)=\frac{\partial F_{k,\alpha}}{\partial x}(x)Ax
+-AF_{k,\alpha}(x)=(\langle \lambda,\alpha \rangle -\lambda_k) F_{k,\alpha}(x)$. Thus the basis vectors $F_{k,\alpha}$ are eigenvectors of $\ad_\Lambda$ with  eigenvalues $\langle \lambda,\alpha \rangle -\lambda_k$.
+
+We shall now show that $\ad_A|_{\mathscr{D}_m}$ is a lower-triangular matrix whose diagonal
+is $\ad_\Lambda|_{\mathscr{D}_m}$. Note that
+\[
+\ad_{J_j}(F_{k,\alpha})(x)=[J_j,F_{k,\alpha}](x)=\frac{\partial F_{k,\alpha}}{\partial x}(x) J_jx-\frac{\partial J_j}{\partial x}F_{k,\alpha}
+=x^\alpha \frac{\alpha_j x_j}{x_{j+1}} e_k-\delta_{j+1,k} x^\alpha e_{j+1}.
+\]
+If $\alpha_{j+1} \neq 0$ then the first term has weight $\sum_{i=1}^n \alpha_i w_i+ w_{j+1} -w_j -w_k$, which is greater
+than the weight of $F_{k,\alpha}$. If $j=k+1$, then the second term has weight $\sum_{i=1}^n \alpha_i w_i -w_{j+1}$, which is also greater than the weight of $F_{k,\alpha}$. Therefore written in the ordered basis $F_{k,\alpha}$, the matrix
+$\ad_{J_j}|_{\mathscr{D}_m}$ is strictly lower triangular. 
+
+But $\ad_A=\ad_\Lambda+\sum_{j \in J} \ad_{J_j}$, completing the proof.
+\end{proof}
+
+\begin{corollary}
+\label{invertible}
+If $A$ is in Jordan normal form and $A$ is nonresonant, then $\ad_A|_{\mathscr{D}_m}:\mathscr{D}_m \to \mathscr{D}_m$ is a linear isomorphism.
+\end{corollary}
+
+\section{Poincar\'e-Dulac normal form theorem for formal vector fields}
+Say that $A$ is in Jordan normal form and that $A$ has a resonance of order $m$. Then in the basis $F_{k,\alpha}$ for $\mathscr{D}_m$,
+the matrix $\ad_A|_{\mathscr{D}_m}$ will be lower triangular with a zero on the diagonal, and hence will not be invertible. For each $m$, let $\mathscr{N}_m$ be a subspace of $\mathscr{D}_m$ such that
+\[
+\mathscr{D}_m=\mathscr{N}_m + \ad_A(\mathscr{D}_m);
+\]
+we do not suppose here that $\mathscr{N}_m \cap  \ad_A(\mathscr{D}_m)=\{0\}$.
+
+\begin{lemma}
+\label{paradigm}
+Let $F$ be a formal vector field with constant term $0$ whose linearization $A$ is in Jordan normal form
+and let $\mathscr{N}_m$ satisfy 
+$\mathscr{D}_m=\mathscr{N}_m + \ad_A(\mathscr{D}_m)$. Then $F$ is equivalent to a formal vector
+field with constant term $0$ and linearization $A$ whose  nonlinear terms of degree $m$ belong to $\mathscr{N}_m$.
+\end{lemma}
+\begin{proof}
+Let $F_2=F$, and write
+\[
+F_2(x)=Ax+\sum_{j=2}^\infty V^j_2(x)
+\]
+for $V^j_2 \in \mathscr{D}_j$. For $H_1(x)=x$, we have $\frac{\partial H_1}{\partial x}F(x)=
+F_2(H_1(x))$, and hence $F$ is equivalent to the formal vector field $F_2$. Assume that for some $m$ there are $V^j_m \in \mathscr{N}_j$, $j=2,
+\dots,m-1$ and $V^j_m \in \mathscr{D}_j$, $j=m,\ldots$, such that $F$ is equivalent to
+\[
+F_m(x)=Ax+\sum_{j=2}^\infty V^j_m(x).
+\]
+Since $V_m^m \in \mathscr{D}_m$, there are $P_m \in \mathscr{D}_m$ and $V^m_{m+1} \in
+\mathscr{N}_m$ such that $\ad_A(P_m)=V^m_{m+1}-V_m^m$. Let $H_m(x)=x+P_m(x)$, and let
+$V^j_{m+1}=V_j^m$ for $j=2,\ldots,m-1$.
+
+Let $U^j_{m+1} \in \mathscr{D}_j$, $j=m+1,\ldots$ be determined by
+\[
+\sum_{j=m+1}^\infty V^j_m(x) + \frac{\partial P_m}{\partial x}(x)\sum_{j=2}^\infty V^j_m(x)
+=\sum_{j=m+1}^\infty U^j_{m+1}(x),
+\]
+and then let $V^j_{m+1} \in \mathscr{D}_j$, $j=m+1,\ldots$ be determined by
+\[
+\sum_{j=2}^\infty V^j_{m+1}(x+P_m(x))=\sum_{j=2}^m V^j_{m+1}(x)
++ \sum_{j=m+1}^\infty U^j_{m+1}(x);
+\]
+we can check that indeed this determines $V^j_{m+1}$.
+
+Let $F_{m+1}(x)=Ax+\sum_{j=2}^\infty V^j_{m+1}(x)$. Then
+$\frac{\partial H_m}{\partial x}(x)F_m(x)=F_{m+1}(H_m(x))$, and hence $F_m$ is equivalent to the formal vector field $F_{m+1}$, where $V^j_{m+1} \in \mathscr{N}_j$ for $j=2,\ldots,m$, and $V^j_{m+1} \in \mathscr{D}_j$
+for $j=m+1,\ldots$. 
+
+Then 
+$H^{(m)}(x)=H_m \circ \cdots \circ H_1(x)$ is a formal map such that
+$\frac{\partial H^{(m)}}{\partial x}(x) F(x)=F_{m+1}(H^{(m)}(x))$.
+Since $H^{(m+1)}=H_{m+1} \circ H^{(m)}$ and $H^{(m)}$ have the same terms of
+degree $\leq m$,  $\lim_{m \to \infty} H^{(m)}(x)$ exists in $\mathfrak{m}^n$; let $H$ be this limit. Then
+we can check that $H$ is a formal map such that 
+$\frac{\partial H}{\partial x}(x) F(x)=F'(H(x))$, and so
+$F$ is equivalent to $F'$.
+\end{proof}
+
+If $\lambda_k=\langle \lambda,\alpha \rangle$, where $\lambda=(\lambda_1,\ldots,\lambda_n)$ and $\lambda_1,\ldots,\lambda_n$ are the eigenvalues of $A$, then
+ $F_{k,\alpha}=x^\alpha e_k$ is said to be a {\em resonant monomial vector} (with respect to $A$). For $m=|\alpha|$
+ and $\Lambda=\diag(\lambda_1,\ldots,\lambda_n)$, the resonant monomial vectors are a basis for $\ker \ad_\Lambda|_{\mathscr{D}_m}$.
+ 
+ The following theorem is the {\em Poincar\'e-Dulac normal form theorem}, which states that a resonant formal vector field with constant term $0$ whose linearization is in Jordan normal form is equivalent to a formal vector field with
+constant term $0$ and the same linear term whose nonlinear terms are the resonant monomial vectors. We say that a formal vector field with constant term $0$ and linearization $A$ is in {\em Poincar\'e-Dulac normal form} if its nonlinear terms
+are resonant monomial vectors with respect to $A$.
+
+\begin{theorem}
+A formal vector field with constant term $0$  whose linearization is in Jordan normal form is equivalent to a formal vector field with constant term $0$ and the same linearization whose nonlinear terms are resonant monomial vectors.
+\end{theorem}
+\begin{proof}
+Let $F$ be a formal vector field with constant term $0$ and linearization $A$ in Jordan normal form. Say
+that $A$ has eigenvalues $\lambda_1,\ldots,\lambda_n$ (not necessarily distinct) and let $\Lambda=\diag(\lambda_1,\ldots,\lambda_n)$.
+
+For $m=2,\ldots$, let 
+\[
+\mathscr{N}_m = \bigoplus_{\stackrel{|\alpha|=m}{\lambda_k=\langle \lambda,\alpha \rangle}}
+F_{k,\alpha} \mathbb{C}.
+\]
+Then $\mathscr{N}_m=\ker \ad_\Lambda|_{\mathscr{D}_m}$.
+It follows from Lemma \ref{monomialbasis} that $\ker \ad_A|_{\mathscr{D}_m} \subseteq \ker \ad_\Lambda|_{\mathscr{D}_m}$. But $\mathscr{D}_m=\ker \ad_A|_{\mathscr{D}_m}+\ad_A(\mathscr{D}_m)$, hence $\mathscr{D}_m=\ker \ad_\Lambda|_{\mathscr{D}_m}+\ad_A(\mathscr{D}_m)$.
+Therefore $\mathscr{D}_m=\mathscr{N}_m+\ad_A(\mathscr{D}_m)$, and so by Lemma \ref{paradigm}, $F$ is equivalent to a formal vector field with constant term $0$ and linearization $A$ whose nonlinear terms of degree $m$ belong to
+$\mathscr{N}_m$, which is the set of resonant monomial vectors of degree $m$, completing the proof.
+\end{proof}
+
+\section{Polynomial vector fields}
+The {\em Poincar\'e domain} is the set $\mathfrak{P} \subset \mathbb{C}^n$ of all $n$-tuples $\lambda=(\lambda_1,\ldots,\lambda_n) \in \mathbb{C}^n$ such that the convex hull of the points $\lambda_1,\ldots,\lambda_n$  in $\mathbb{C}$  does not include the origin. (The complement of the Poincar\'e domain in $\mathbb{C}^n$ is called the {\em Siegel domain}
+$\mathfrak{S}$.)
+
+\begin{theorem}
+If $\lambda \in \mathfrak{P}$, then for all $M>0$ there are  only finitely many $\alpha \in \mathbb{Z}^n_{\geq 0}$
+and $1 \leq k \leq n$ such that $|\lambda_k-\langle \alpha,\lambda \rangle| \leq M$.  
+\end{theorem}
+\begin{proof}
+Since the convex hull of the points $\lambda_1,\ldots,\lambda_n$ does not include the origin,
+there is a line through the origin that does not intersect the convex hull. It follows that there is
+an $\mathbb{R}$-linear map $\ell:\mathbb{C} \to \mathbb{R}$ and some $r>0$ such that 
+$\ell(\lambda_k) \leq -r$ for all $k$. 
+
+Then
+\[
+\ell(\langle \alpha, \lambda \rangle)=\sum_{k=1}^n \alpha_k \ell(\lambda_k) \leq 
+\sum_{k=1}^n \alpha_k (-r) = -r|\alpha|.
+\]
+Let $-R=\min_{1 \leq k \leq n} \ell(\lambda_k)$, and let
+$\norm{\ell}=\max_{|z|=1} |\ell(z)|$. For all $\alpha \in \mathbb{Z}^n_{\geq 0}$ and all
+$k$,
+\[
+\norm{\ell}|\lambda_k-\langle \alpha,\lambda \rangle| \geq |\ell(\lambda_k-\langle \alpha,\lambda \rangle)| \geq \ell(\lambda_k-\langle \alpha,\lambda \rangle) \geq \ell(\lambda_k)+r|\alpha| \geq -R+r|\alpha|.  
+\]
+
+
+There are only finitely many $\alpha \in \mathbb{Z}^n_{\geq 0}$ such that
+$\frac{-R+r|\alpha|}{\norm{\ell}} \leq M$. Therefore there are only finitely many $\alpha \in \mathbb{Z}^n_{\geq 0}$
+and $1 \leq k \leq n$ such that
+$|\lambda_k-\langle \alpha,\lambda \rangle)| \leq M$.
+\end{proof}
+
+In particular, if $\lambda \in \mathfrak{P}$ then  there are only finitely many $\alpha \in \mathbb{Z}^n_{\geq 0}$
+and $1 \leq k \leq n$
+such that $\lambda_k=\langle \alpha,\lambda \rangle$. Thus we have the following
+corollary to the above theorem.
+
+\begin{corollary}
+Let $F$ be a formal vector field with constant term $0$ whose linearization $A$ is in Jordan normal form, let $\lambda_1,\ldots,\lambda_n$ be the eigenvalues of $A$, and let $\lambda=(\lambda_1,\ldots,\lambda_n)$. If $\lambda \in \mathfrak{P}$, then there are only finitely many nonlinear terms in the Poincar\'e-Dulac normal form of $F$.
+\end{corollary}
+
+
+\section{Examples}
+\label{examples}
+\textbf{First example.} Let 
+\[
+F(x)=\begin{bmatrix}1&0\\0&1\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}
++\begin{bmatrix}x_1^2\\x_2^2\end{bmatrix}. 
+\]
+This formal vector field has linearization
+$A=\begin{bmatrix}1&0\\0&1\end{bmatrix}$, which is nonresonant. For all $m \geq 2$, $\ad_A|_{\mathscr{D}_m}=\id_{\mathscr{D}_m}$, and hence for all $m \geq 2$, $P_m(x)=-V_m^m(x)$.
+$H_1(x)=x$. We shall find $H_m(x)$ for $m=2,\ldots,5$. This will determine the terms in $H(x)$
+of degree $\leq 5$.
+
+\begin{equation}
+\label{determinedby}
+\sum_{j=m+1}^\infty V^j_m(x)
++
+\frac{\partial P_m}{\partial x}(x)
+\sum_{j=m}^\infty V^j_m(x)
+=\sum_{j=m+1}^\infty V_{m+1}^j(H_m(x)).
+\end{equation}
+
+$m=2$:
+$V_2^2(x)=\begin{bmatrix}x_1^2\\x_2^2\end{bmatrix}$, so $P_2(x)=-V_2^2(x)=\begin{bmatrix}
+-x_1^2\\-x_2^2\end{bmatrix}$ and $H_2(x)=\begin{bmatrix}x_1-x_1^2\\x_2-x_2^2\end{bmatrix}$.
+For $j \geq 3$, $V_2^j(x)=0$. Then \eqref{determinedby} is
+\[
+\frac{\partial P_2}{\partial x}(x)V_2^2(x)=V_3^3(H_2(x))+V_3^4(H_2(x))+V_3^5(H_2(x))+
+V_3^6(H_2(x))+\cdots
+\]
+which is
+\begin{eqnarray*}
+\begin{bmatrix}-2x_1&0\\0&-2x_2\end{bmatrix}\begin{bmatrix}x_1^2\\x_2^2\end{bmatrix}
+&=&V_3^3\Big( \begin{bmatrix}x_1-x_1^2\\x_2-x_2^2\end{bmatrix}\Big)
++V_3^4\Big( \begin{bmatrix}x_1-x_1^2\\x_2-x_2^2\end{bmatrix}\Big)
++V_3^5\Big( \begin{bmatrix}x_1-x_1^2\\x_2-x_2^2\end{bmatrix}\Big)\\
+&&
++V_3^6\Big( \begin{bmatrix}x_1-x_1^2\\x_2-x_2^2\end{bmatrix}\Big)
++\cdots
+\end{eqnarray*}
+It follows that $V_3^3(x)=\begin{bmatrix}-2x_1^3\\-2x_2^3\end{bmatrix}$. So
+\[
+V_3^3\Big( \begin{bmatrix}x_1-x_1^2\\x_2-x_2^2\end{bmatrix}\Big)
+=\begin{bmatrix}-2x_1^3+6x_1^4-6x_1^5+2x_1^6\\-2x_2^3+6x_2^4-6x_2^5+2x_2^6\end{bmatrix}.
+\]
+It follows that $V_3^4(x)=\begin{bmatrix}-6x_1^4\\-6x_2^4\end{bmatrix}$. So
+\[
+V_3^4\Big( \begin{bmatrix}x_1-x_1^2\\x_2-x_2^2\end{bmatrix}\Big)=
+\begin{bmatrix}
+-6x_1^4+24x_1^5-36x_1^6+24x_1^7-6x_1^8\\
+-6x_2^4+24x_2^5-36x_2^6+24x_2^7-6x_2^8
+\end{bmatrix}.
+\]
+It follows that $V_3^5(x)=\begin{bmatrix}-18x_1^5\\-18x_2^5\end{bmatrix}$. So
+\[
+V_3^5\Big( \begin{bmatrix}x_1-x_1^2\\x_2-x_2^2\end{bmatrix}\Big)=
+\begin{bmatrix}
+-18x_1^5+90x_1^6-180x_1^7+180x_1^8-90x_1^9+18x_1^{10}\\
+-18x_2^5+90x_2^6-180x_2^7+180x_2^8-90x_2^9+18x_2^{10}
+\end{bmatrix}.
+\]
+It follows that $V_3^6(x)=\begin{bmatrix}-56x_1^6\\-56x_2^6\end{bmatrix}$.
+
+$m=3$: $V_3^3(x)=\begin{bmatrix}-2x_1^3\\-2x_2^3\end{bmatrix}$, so
+$P_3(x)=\begin{bmatrix}2x_1^3\\2x_2^3\end{bmatrix}$ and
+$H_3(x)=\begin{bmatrix}x_1+2x_1^3\\x_2+2x_2^3\end{bmatrix}$.
+Then \eqref{determinedby} is
+\[
+\begin{split}
+&V_3^4(x)+V_3^5(x)+V_3^6(x)+\cdots+\begin{bmatrix}6x_1^2&0\\0&6x_2^2\end{bmatrix}\bigg( V_3^3(x)+V_3^4(x)+
+\cdots\bigg)\\
+=&V_4^4(x+P_3(x))+V_4^5(x+P_3(x))+V_4^6(x+P_3(x))+\cdots
+\end{split}
+\]
+which is
+\[
+\begin{split}
+&\begin{bmatrix}-6x_1^4\\-6x_2^4\end{bmatrix}+\begin{bmatrix}-18x_1^5\\-18x_2^5\end{bmatrix}
++\begin{bmatrix}-56x_1^6\\-56x_2^6\end{bmatrix}+\cdots
++\begin{bmatrix}-12x_1^5\\-12x_2^5\end{bmatrix}
++\begin{bmatrix}-36x_1^6\\-36x_2^6\end{bmatrix}+\cdots\\
+=&V_4^4(x+P_3(x))+V_4^5(x+P_3(x))+V_4^6(x+P_3(x))+\cdots
+\end{split}
+\]
+It follows that $V_4^4(x)=\begin{bmatrix}-6x_1^4\\-6x_2^4\end{bmatrix}$. 
+So
+\[
+V_4^4\Big( \begin{bmatrix}x_1+2x_1^3\\x_2+2x_2^3\end{bmatrix}\Big)
+=
+\begin{bmatrix}
+-6x_1^4-48x_1^6-144x_1^8-192x_1^{10}-96x_1^{12}\\
+-6x_2^4-48x_2^6-144x_2^8-192x_2^{10}-96x_1^{12}
+\end{bmatrix}.
+\]
+It follows that $V_4^5(x)=\begin{bmatrix}-30x_1^5\\-30x_2^5\end{bmatrix}$.
+In $V_4^5\Big( \begin{bmatrix}x_1+2x_1^3\\x_2+2x_2^3\end{bmatrix}\Big)$ there are no terms
+of degree $6$, so it follows that $V_4^6(x)=\begin{bmatrix}-44x_1^6\\-44x_2^6\end{bmatrix}$.
+
+$m=4$: $V_4^4(x)=\begin{bmatrix}-6x_1^4\\-6x_2^4\end{bmatrix}$, so $P_4(x)=
+\begin{bmatrix}6x_1^4\\6x_2^4\end{bmatrix}$ and $H_4(x)=
+\begin{bmatrix}x_1+6x_1^4\\x_2+6x_2^4\end{bmatrix}$.
+Then \eqref{determinedby} is
+\[
+V_4^5(x)+\cdots+\begin{bmatrix}24x_1^3&0\\0&24x_2^3\end{bmatrix}\bigg(V_4^4(x)+\cdots\bigg)
+=V_5^5(H_4(x))+\cdots
+\]
+It follows that $V_5^5(x)=V_4^5(x)=\begin{bmatrix}-30x_1^5\\-30x_2^5\end{bmatrix}$.
+
+Because 
+$V_5^5(x)=\begin{bmatrix}-30x_1^5\\-30x_2^5\end{bmatrix}$, we have
+$P_5(x)=\begin{bmatrix}30x_1^5\\30x_2^5\end{bmatrix}$
+and $H_5(x)=\begin{bmatrix}x_1+30x_1^5\\x_2+30x_2^5\end{bmatrix}$.
+
+Let us figure out $H^{(5)}(x)=H_5\circ H_4 \circ H_3 \circ H_2 \circ H_1 (x)$. $H_1(x)=x$,
+$H_2(x)=\begin{bmatrix}x_1-x_1^2\\x_2-x_2^2\end{bmatrix}$,
+$H_3(x)=\begin{bmatrix}x_1+2x_1^3\\x_2+2x_2^3\end{bmatrix}$,
+$H_4(x)=
+\begin{bmatrix}x_1+6x_1^4\\x_2+6x_2^4\end{bmatrix}$,
+and $H_5(x)=\begin{bmatrix}x_1+30x_1^5\\x_2+30x_2^5\end{bmatrix}$.
+Then
+\[
+H^{(3)}(x)=H_3 \circ H_2 \circ H_1(x)=H_3\Big(\begin{bmatrix}x_1-x_1^2\\x_2-x_2^2\end{bmatrix}\Big)=
+\begin{bmatrix}
+x_1-x_1^2+2x_1^3-6x_1^4+6x_1^5-2x_1^6\\
+x_2-x_2^2+2x_2^3-6x_2^4+6x_2^6-2x_2^6
+\end{bmatrix}.
+\]
+We can compute $H^{(4)}(x)$ and then $H^{(5)}(x)$. Each component of $H^{(5)}(x)$ is polynomial
+of degree $120$, and
+\[
+H^{(5)}(x)=\begin{bmatrix}
+x_1 - x_1^2 + 2 x_1^3 + 12 x_1^5 - 68 x_1^6 + 288 x_1^7 - 630 x_1^8 - 1662 x_1^9\\
+x_2 - x_2^2 + 2 x_2^3 + 12 x_2^5 - 68 x_2^6 + 288 x_2^7 - 630 x_2^8 - 1662 x_2^9
+\end{bmatrix}
++
+\begin{bmatrix}
+O(x_1^{10})\\
+O(x_2^{10})
+\end{bmatrix},
+\]
+and thus
+\[
+H(x)=\lim_{m \to \infty} H^{(m)}(x)=
+\begin{bmatrix}
+x_1 - x_1^2 + 2 x_1^3 + 12 x_1^5\\
+x_2 - x_2^2 + 2 x_2^3 + 12 x_2^5
+\end{bmatrix}
++
+\begin{bmatrix}
+O(x_1^6)\\
+O(x_2^6)
+\end{bmatrix}.
+\]
+
+\textbf{Second example.} We will determine the Poincar\'e-Dulac normal form for the formal vector field
+\[
+F(x)=\begin{bmatrix}3&0\\0&1\end{bmatrix}\begin{bmatrix}x_1\\x_2\end{bmatrix}+\begin{bmatrix}x_1^2\\x_2^2\end{bmatrix},
+\]
+and find $H_m(x)$ for $m=2,3,4$, which will determine the terms in $H(x)$ of degree $\leq 4$.
+
+The formal vector field $F(x)$ has linearization $A=\begin{bmatrix}3&0\\0&1\end{bmatrix}$. Let $\lambda_1=3,\lambda_2=1$.
+
+The monomial basis vectors for $\mathscr{D}_2$ are
+\[
+\begin{split}
+&F_{1,(2,0)}=\begin{bmatrix}x_1^2\\0\end{bmatrix},
+F_{1,(1,1)}=\begin{bmatrix}x_1 x_2\\0\end{bmatrix},
+F_{1,(0,2)}=\begin{bmatrix}x_2^2\\0\end{bmatrix},\\
+&F_{2,(2,0)}=\begin{bmatrix}0\\ x_1^2\end{bmatrix},
+F_{2,(1,1)}=\begin{bmatrix}0\\ x_1 x_2\end{bmatrix},
+F_{2,(0,2)}=\begin{bmatrix}0\\ x_2^2\end{bmatrix}.
+\end{split}
+\]
+The weights of these basis vectors are respectively
+\[
+\begin{split}
+&2w_1-w_1=w_1=1.73\ldots, w_1+w_2-w_1=w_2=1.41\ldots,
+2w_2-w_1=1.09\ldots,\\
+&2w_1-w_2=2.04\ldots,
+w_1+w_2-w_2=w_1=1.73\ldots,
+2w_2-w_2=w_2=1.41\ldots.
+\end{split}
+\]
+The basis vectors are ordered such that $F_{1,(2,0)}$ is before $F_{2,(1,1)}$
+and $F_{1,(1,1)}$ is before $F_{2,(0,2)}$. Therefore the ordering of the basis vectors for $\mathscr{D}_2$
+is
+\begin{equation}
+\label{orderedbasisD2}
+F_{2,(2,0)}>F_{1,(2,0)}>F_{2,(1,1)}>F_{1,(1,1)}>F_{2,(0,2)}>F_{1,(0,2)}.
+\end{equation}
+
+The monomial basis vectors for $\mathscr{D}_3$ are
+\[
+\begin{split}
+&F_{1,(3,0)}=\begin{bmatrix}x_1^3\\0\end{bmatrix},
+F_{1,(2,1)}=\begin{bmatrix}x_1^2 x_2\\0\end{bmatrix},
+F_{1,(1,2)}=\begin{bmatrix}x_1 x_2^2\\0\end{bmatrix},
+F_{1,(0,3)}=\begin{bmatrix}x_2^3\\0\end{bmatrix},\\
+&F_{2,(3,0)}=\begin{bmatrix}0\\x_1^3\end{bmatrix},
+F_{2,(2,1)}=\begin{bmatrix}0\\x_1^2 x_2\end{bmatrix},
+F_{2,(1,2)}=\begin{bmatrix}0\\x_1 x_2^2\end{bmatrix},
+F_{2,(0,3)}=\begin{bmatrix}0\\x_2^3\end{bmatrix}.
+\end{split}
+\]
+The weights of these basis vectors are respectively
+\[
+\begin{split}
+&2w_1=3.46\ldots, w_1+w_2=3.14\ldots, 2w_2=2.82\ldots,3w_2-w_1=2.51\ldots,\\
+&3w_1-w_2=3.78\ldots, 2w_1=3.46\ldots, w_1+w_2=3.14\ldots, 2w_2=2.82\ldots.
+\end{split}
+\]
+The basis vectors are ordered such that $F_{1,(3,0)}$ is before $F_{2,(2,1)}$,
+$F_{1,(2,1)}$ is before $F_{2,(1,2)}$, and $F_{1,(1,2)}$ is before $F_{2,(0,3)}$.
+Therefore the ordering of the basis vectors for $\mathscr{D}_3$ is
+\begin{equation}
+\label{orderedbasisD3}
+F_{2,(3,0)}>F_{1,(3,0)}>F_{2,(2,1)}>F_{1,(2,1)}>
+F_{2,(1,2)}>F_{1,(1,2)}>F_{2,(0,3)}>F_{1,(0,3)}.
+\end{equation}
+
+We calculate that $\ad_A|_{\mathscr{D}_2}$ written in the ordered basis
+\eqref{orderedbasisD2} is $\diag(3,1,-1,5,3,1)$, and
+we calculate that
+$\ad_A|_{\mathscr{D}_3}$ written in the ordered basis \eqref{orderedbasisD3} is $\diag(8,6,6,4,4,2,2,0)$.
+Thus $\ker \ad_A|_{\mathscr{D}_3}=\spanning_{\mathbb{C}}\{F_{1,(0,3)}\}$.
+
+\section{Conclusion}
+This paper is useful for people who want fully worked proofs of the Poincar\'e normal form theorem and the Poincar\'e-Dulac normal form theorem for formal vector fields, and examples that explicitly follow the constructions in the proofs.
+
+
+\bibliographystyle{plain}
+\bibliography{poincaredulac}
+
+\end{document}

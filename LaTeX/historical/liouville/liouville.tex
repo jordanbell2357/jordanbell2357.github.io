@@ -1,0 +1,329 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\HSnorm}[1]{\Vert #1 \Vert_{\ensuremath\mathrm{HS}}}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\supp}{\mathrm{supp}\,} 
+\newcommand{\adj}{\mathrm{adj}\,} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\HS}{B_{\ensuremath\mathrm{HS}}} 
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\renewcommand{\div}{\mathrm{div}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{Notes on the history of Liouville's theorem}
+\author{Jordan Bell}
+\date{April 10, 2015}
+
+\maketitle
+
+\section{Introduction}
+We denote by $\mathscr{B}(\mathbb{R}^n)$ the set of all linear maps $\mathbb{R}^n \to \mathbb{R}^n$. We take it as known
+that with the operator norm
+\[
+\norm{A} = \sup \{\norm{Av}: v\in \mathbb{R}^n, \norm{v} \leq 1\}, \qquad A \in \mathscr{B}(\mathbb{R}^n),
+\]
+$\mathscr{B}(\mathbb{R}^n)$ is a Banach space.
+
+
+\section{Autonomous differential equations}
+\begin{lemma}
+If $A \in \mathscr{B}(\mathbb{R}^n)$, then 
+\[
+ \det (I+\epsilon A+o(\epsilon))=1+\epsilon \tr A +o(\epsilon)
+\]
+as $\epsilon \to 0$.
+\label{detlemma}
+\end{lemma}
+\begin{proof}
+Let $\lambda_1,\ldots,\lambda_n$ be the eigenvalues of $A$, repeated according
+to algebraic multiplicity. For $\epsilon>0$, the eigenvalues of $I+\epsilon A+o(\epsilon)$  repeated according to algebraic multiplicity are
+\[
+1+\epsilon \lambda_1+o(\epsilon),\ldots,
+1+\epsilon \lambda_n+o(\epsilon),
+\]
+as $\epsilon \to 0$. The determinant of a linear map $\mathbb{R}^n \to \mathbb{R}^n$ is the product of its eigenvalues according to algebraic
+ multiplicity, so
+ \[
+ \det (I+\epsilon A+o(\epsilon)) = \prod_{k=1}^n (1+\epsilon \lambda_k+o(\epsilon)),
+ \]
+ as $\epsilon \to 0$.
+ But
+ \[
+ \prod_{k=1}^n (1+\epsilon \lambda_k + o(\epsilon)) = 1 + \epsilon \sum_{k=1}^n \lambda_k +o(\epsilon) = 1+\epsilon \tr A +o(\epsilon)
+ \]
+ as $\epsilon \to 0$.
+ \end{proof}
+ 
+ 
+
+\begin{theorem}
+If $A \in \mathscr{B}(\mathbb{R}^n)$, then
+\[
+\det e^A = e^{\tr A}
+\]
+\label{dettheorem}
+\end{theorem}
+\begin{proof}
+We have
+\[
+e^A=\lim_{m \to \infty} \left(I+\frac{A}{m}\right)^m.
+\]
+As $\det:\mathscr{B}(\mathbb{R}^n) \to \mathbb{R}$ is continuous, we have
+\[
+\det e^A = \lim_{m \to \infty} \det  \left(I+\frac{A}{m}\right)^m.
+\]
+Then, using Lemma \ref{detlemma},
+\begin{eqnarray*}
+\det e^A&=&\lim_{m \to \infty} \left(\det  \left(I+\frac{A}{m}\right) \right)^m\\
+&=&\lim_{m \to \infty} \left( 1+ \frac{1}{m}\tr A + o\left(\frac{1}{m}\right) \right)^m\\
+&=&e^{\tr A}.
+\end{eqnarray*}
+\end{proof}
+
+If $A \in \mathscr{B}(\mathbb{R}^n)$, then the flow of the vector field $A$ is 
+\[
+(t,x) \mapsto e^{tA}x.
+\]
+For each $t$ we have $e^{tA} \in \mathscr{B}(\mathbb{R}^n)$, and by Theorem \ref{dettheorem} we have
+\[
+\det(e^{tA})= e^{\tr (tA)} = e^{t\tr A}.
+\]
+Let $\lambda$ be Lebesgue measure on $\mathbb{R}^n$. If $U$ is an open subset of $\mathbb{R}^n$, then
+\[
+\lambda(e^{tA}U) = \int_{e^{tA}U} dy= \int_U |\det(De^{tA})(x)| dx = \int_U |\det(e^{tA})| dx  = e^{t\tr A} \lambda(U).
+\]
+Therefore,  $\lambda$ is an invariant measure for the flow if and only if $\tr A=0$, namely, if and only if $A$ is skew-symmetric.
+
+
+\section{Nonautonomous differential equations}
+Suppose that $I$ is an open interval and $A \in C(I, \mathscr{B}(\mathbb{R}^n))$.
+The set $X$ of all functions $x:I \to \mathbb{R}^n$ that satisfy   the differential equation
+\[
+\dot{x}(t)=A(t)x(t)
+\]
+is a vector space.
+For each $t \in I$ we define $B_t:X \to \mathbb{R}^n$ by $B_t(x)=x(t)$. It is apparent that
+for each $t \in I$ the map $B_t$ is linear.
+For each $x_0 \in \mathbb{R}^n$, by the existence and uniqueness theorem for ordinary differential equations there is a unique $x \in X$ for
+which $B_0(x)=x_0$, hence for each $t \in I$ we get that $B_t$ is a bijection, and hence a linear isomorphism.
+
+Suppose that $\phi_1,\ldots,\phi_n \in X$, 
+and for each $t \in I$ let $\Phi(t) \in \mathscr{B}(\mathbb{R}^n)$ be defined by $\Phi(t)e_i = \phi_i(t)$. Then
+\[
+\dot{\Phi}(t)e_i = \frac{d}{dt}(\Phi(t)e_i) = \dot{\phi_i}(t) = A(t)\phi_i(t), \qquad t \in I,
+\]
+and hence 
+\begin{equation}
+\dot{\Phi}(t) = A(t) \Phi(t), \qquad t \in I.
+\label{Phidot}
+\end{equation}
+The {\em Wronskian} $W=W(\phi_1,\ldots\phi_n)$ of the ordered set $\phi_1,\ldots,\phi_n$
+is the function that assigns to each $t \in I$ the  oriented volume of the parallelepiped spanned by $\phi_1(t),\ldots,\phi_n(t)$. That is,
+\[
+W(t)=\det \Phi(t), \qquad t \in I.
+\]
+
+
+
+\begin{theorem}
+Suppose that $I$ is an open interval and that $A \in C(I, \mathscr{B}(\mathbb{R}^n))$.
+If $\phi_1,\ldots,\phi_n \in X$,
+then the Wronskian $W=W(\phi_1,\ldots,\phi_n)$ satisfies
+\[
+\dot{W}(t)=(\tr A(t)) W(t) , \qquad t \in I.
+\]
+\label{abelsformula}
+\end{theorem}
+\begin{proof}
+By \eqref{Phidot}, for each $t \in I$ we have
+\begin{eqnarray*}
+\Phi(t+\Delta) &=& \Phi(t) + \dot{\Phi}(t) \Delta + o(\Delta)\\
+&=&\Phi(t)+A(t)\Phi(t)\Delta + o(\Delta)\\
+&=&\Phi(t)+A(t)\Phi(t) \Delta + o(\Phi(t) \Delta)\\
+&=&\Phi(t) (I+ A(t) \Delta + o(\Delta))\\
+&=&\Phi(t) (I+ A(t) \Delta + o(\Delta) )
+\end{eqnarray*}
+as $\Delta \to 0$. Using Lemma \ref{detlemma} we get
+\begin{eqnarray*}
+W(t+\Delta)&=&\det \Phi(t+\Delta)\\
+&=&\det \Phi(t) \det (I+A(t)\Delta+o(\Delta))\\
+&=&\det \Phi(t)(1+ \tr A(t)  \Delta + o(\Delta))\\
+&=&\det \Phi(t) + \det \Phi(t) \tr A(t)\Delta + o\left( \det \Phi(t) \Delta \right)\\
+&=&\det \Phi(t) + \det \Phi(t) \tr A(t)\Delta + o(\Delta)
+\end{eqnarray*}
+as $\Delta \to 0$, i.e.,
+\[
+W(t+\Delta) = W(t) +W(t) \tr A(t) \Delta + o(\Delta),
+\]
+which gives us
+\[
+\dot{W}(t) = (\tr A(t)) W(t).
+\]
+\end{proof}
+
+One checks that for any $t_0 \in I$, 
+\[
+t \mapsto W(t_0) \exp\left( \int_{t_0}^t \tr A(\tau) d\tau \right), \qquad t \in I
+\]
+is a solution of the differential equation in Theorem \ref{abelsformula}. For each $t \in I$ we have that $v \mapsto (\tr A(t))v$ is linear, and in particular
+is locally Lipschitz, so by the existence and uniqueness theorem it follows that
+\[
+W(t) =W(t_0)  \exp\left( \int_{t_0}^t \tr A(\tau) d\tau \right) , \qquad t \in I.
+\]
+
+
+
+\section{Jacobi's formula}
+Let $\Omega$ be the volume form on $\mathbb{R}^n$, and let $A \in \mathscr{B}(\mathbb{R}^n)$.  One checks that
+\begin{equation}
+\Omega(x_1,\ldots,x_n) \det A = \Omega(Ax_1,\ldots,Ax_n), \qquad x_1,\ldots,x_n \in \mathbb{R}^n.
+\label{Adet}
+\end{equation}
+
+If $\omega$ is an $(n-1)$-form on $\mathbb{R}^n$, then there is a unique $x_\omega \in \mathbb{R}^n$ such that for all
+$x_1,\ldots,x_{n-1} \in \mathbb{R}^n$,
+\[
+\omega(x_1,\ldots,x_{n-1}) = \Omega(x_\omega,x_1,\ldots,x_{n-1}).
+\]
+Thus, if $x_0 \in \mathbb{R}^n$ and we define an $(n-1)$-form $\omega$ by
+\[
+\omega(x_1,\ldots,x_{n-1}) = \Omega(x_0,Ax_1,\ldots,Ax_n),
+\]
+then there is some $x_\omega$ with which
+\[
+\Omega(x_0,Ax_1,\ldots,Ax_n)=\Omega(x_\omega,x_1,\ldots,x_{n-1}).
+\]
+We define $\adj A \in \mathscr{B}(\mathbb{R}^n)$ by $(\adj A)(x_0)=x_\omega$.
+Thus, for $x_1,\ldots,x_n \in \mathbb{R}^n$, we have
+\begin{equation}
+\Omega(x_1,Ax_2,\ldots,Ax_n)=\Omega((\adj A)x_1,x_2,\ldots,x_n).
+\label{Avolume}
+\end{equation}
+Hence
+\[
+\Omega(Ax_1,Ax_2,\ldots,Ax_n) = \Omega((\adj A)Ax_1,x_2,\ldots,x_n),
+\]
+ therefore
+\[
+\Omega((\adj A)Ax_1,x_2,\ldots,x_n) = \Omega(x_1,\ldots,x_n) \det A,
+\]
+and because this holds for all $x_1,\ldots,x_n \in \mathbb{R}^n$, it follows that
+\[
+(\adj A) A = (\det A)I.
+\]
+
+Furthermore, if $A \in \mathscr{B}(\mathbb{R}^n)$, then one checks that for all $x_1,\ldots,x_n \in \mathbb{R}^n$,
+\begin{equation}
+\Omega(x_1,\ldots,x_n) \tr A = \sum_{i=1}^n \Omega(x_1,\ldots,Ax_i,\ldots,x_n).
+\label{Atrace}
+\end{equation}
+
+If $I$ is an open interval and $A \in C^1(I,\mathscr{B}(\mathbb{R}^n))$, we have, using \eqref{Adet} for the first equality,
+ \eqref{Avolume} for the third equality, and \eqref{Atrace} for the fourth
+equality,
+\begin{eqnarray*}
+\frac{d}{dt}\Big( \Omega(e_1,\ldots,e_n) \det A(t) \Big)&=&\frac{d}{dt}\Omega(A(t)e_1,\ldots,A(t)e_n)\\
+&=&\sum_{i=1}^n \Omega(A(t)e_1,\ldots,\dot{A}(t)e_i,\ldots,A(t)e_n)\\
+&=&\sum_{i=1}^n \Omega(e_1,\ldots,(\adj A(t))\dot{A}(t)e_i,\ldots,e_n)\\
+&=&\Omega(e_1,\ldots,e_n) \tr( (\adj A(t)) \dot{A}(t)),
+\end{eqnarray*}
+that is,
+\[
+\frac{d}{dt} \det A(t) =  \tr( (\adj A(t)) \dot{A}(t)).
+\]
+
+
+Kline p.~798, Jacobi \cite{jacobi1841a}, \cite[\S 17]{jacobi1845}, Felix Klein, {\em 19th century}, chapter V
+
+
+
+
+\section{Reynolds transport theorem}
+If $V$ is a vector field with flow $\phi$ and $U$ is a bounded open subset of $\mathbb{R}^n$ with piecewise smooth boundary and $f:\mathbb{R}^n \times \mathbb{R} \to 
+\mathbb{R}^n$ is smooth, then with $U_t=\phi_t(U)$,
+\[
+\int_{U_t} f(y,t) dy = \int_U f(\phi_t(x),t) \det (D\phi_t)(x) dx;
+\]
+this presumes that $\det (D\phi_t)(x)>0$. Write $\frac{D}{Dt} = \frac{\partial}{\partial t} + V \cdot D$. 
+We then have
+\begin{eqnarray*}
+\frac{d}{dt} \int_{U_t} f(y,t) dy& =& \frac{d}{dt}   \int_U f(\phi_t(x),t) \det (D\phi_t)(x) dx\\
+& =&
+\int_U (D f)(\phi_t(x),t) \dot{\phi}_t(x) \det (D\phi_t)(x) \\
+&&+ \frac{\partial f}{\partial t}(\phi_t(x),t) \det (D\phi_t)(x)+f(\phi_t(x),t) \frac{d}{dt} \det(D\phi_t)(x) dx\\
+&=&\int_U \frac{Df}{Dt}(\phi_t(x),t)  \det (D\phi_t)(x) +f(\phi_t(x),t) \frac{d}{dt} \det(D\phi_t)(x) dx.
+\end{eqnarray*}
+Writing $J_t(x) = \det (D\phi_t)(x)$, we have
+\begin{eqnarray*}
+\frac{d}{dt} \int_{U_t} f(y,t) dy&=&\int_U \frac{Df}{Dt}(\phi_t(x),t) J_t(x) +f(\phi_t(x),t) \frac{d}{dt}J_t(x) dx\\
+&=&\int_U \frac{D(f J)}{Dt} 
+\end{eqnarray*}
+
+
+Reynolds \cite[pp.~12--13, art. 14]{reynolds}
+
+
+
+Amann and Escher \cite[p.~425, Theorem 2.11]{amann}
+
+
+
+\section{Symplectic geometry}
+
+
+
+\section{Geodesic flow}
+Invariance of a kinematic measure on the unit tangent bundle.
+
+
+\section{References}
+Jacobi \cite[p.~93]{jacobi}
+
+Truesdell \cite[pp.~101, 105, 351]{continuum}
+
+Whittaker \cite[p.~323, \S 148]{whittaker}
+
+Hartman \cite[p.~91]{hartman}
+
+Barrow-Green \cite[p.~83]{threebody}
+
+Goroff \cite[p.~I79]{goroff1}
+
+Gray \cite[p.~380]{gray}
+
+Ostrogradskii \cite[pp.~122--123]{kolmogorov3}
+
+Cajori \cite[vol. II, p.~101, \S 464]{cajori}
+
+Gibbs \cite[Chapter XII]{gibbs1902}
+
+Sklar \cite[p.~130]{sklar2013} on phase space
+
+Boltzmann \cite[pp.~274--290, 443]{boltzmann}
+
+Jeans \cite[p.~258, \S 206]{jeans}
+
+Kac \cite[p.~63]{kac}
+
+Lenzen \cite[p.~129]{lenzen}
+
+\nocite{*}
+
+\bibliographystyle{amsplain}
+\bibliography{liouville}
+
+\end{document}

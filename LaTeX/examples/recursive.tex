@@ -1,0 +1,177 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathrsfs}
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\newtheorem{theorem}{Theorem}
+
+
+\title{Induction}
+\author{Jordan Bell}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+Let $\mathbb{N} = \{0,1,2,\ldots\}$
+
+\begin{theorem}
+For all $n \in \mathbb{N}$, $6^n-1$ is a multiple of 5.
+\end{theorem}
+\begin{proof}
+\textbf{Base case} For $n=0$, $6^n-1=6^0-1=0$. $0$ is a multiple of 5: $0 = 0\cdot 5$. The claim is true for $n=0$.
+
+\textbf{Inductive step} Assume the claim is true for some $n \geq 0$. That is, suppose that $6^n-1$ is a multiple of 5. Being a multiple of 5 means that
+there is some $a \in \mathbb{N}$ such that $6^n-1=5a$.
+
+\begin{align*}
+6^{n+1}-1&=6(6^n)-1\\
+&=6(6^n-1+1)-1\\
+&=6(6^n-1) + 6 - 1\\
+&=6(6^n-1) + 5\\
+&=6(5a) + 5\\
+&=(6a)5+5\\
+&=(6a+1)5
+\end{align*}
+$6a+1 \in \mathbb{N}$, so the above shows that $6^{n+1}-1$ is a multiple of 5, completing the inductive step.
+
+\textbf{Conclusion} By induction, for all $n \in \mathbb{N}$ it is true that $6^n-1$ is a multiple of 5.
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+For $n \geq 5$, $2n+1 < 2^n$.
+\end{theorem}
+\begin{proof}
+\textbf{Base case} For $n=5$, $2n+1 = 11$ and $2^n=32$, and it is true that $11<32$. The claim is true when $n=5$.
+
+\textbf{Inductive step} Assume the claim is true for some $n \geq 5$. That is, suppose $2n+1 < 2^n$.
+
+$$2(n+1) + 1 = (2n+1)+2< 2^n + 2$$.
+
+$2^n+2 < 2^n+2^n$ for $n \geq 1$, and here $n \geq 5$ so this is true.
+
+Then we have
+
+$2(n+1)+1 < 2^n + 2^n$, and $2^n+2^n = 2(2^n) = 2^{n+1}$, so
+
+$$2(n+1)+1 < 2^{n+1}$$
+
+This shows that the claim is true for $n+1$, completing the inductive step.
+
+\textbf{Conclusion}  By induction, for all $n \geq 5$ it is true that $2n+1 < 2^n$.
+\end{proof}
+
+\newpage
+
+\begin{theorem}
+For $n \geq 5$, $n^2 < 2^n$.
+\end{theorem}
+\begin{proof}
+\textbf{Base case} Let $n=5$. $n^2 = 25$ and $2^n=32$, and it is true that $25<32$. The claim is true when $n=5$.
+
+\textbf{Inductive step} Assume the claim is true for some $n \geq 5$. That is, suppose that $n^2<2^n$
+
+\begin{align*}
+(n+1)^2&=n^2+2n+1 \quad \text{expanding}\\
+&< 2^n + 2n+1 \quad \text{because } n^2<2^n
+&< 2^n + 2n + 1
+\end{align*}
+
+We proved in the previous theorem that for $n \geq 5$, $2n+1 < 2^n$. Therefore
+,
+$$2^n+2n+1  = 2^n + (2n+1) <2^n + 2^n = 2(2^n)=2^{n+1}$$ 
+
+This show that the claim is true for $n+1$, completing the inductive step.
+
+\textbf{Conclusion} By induction, for $n \geq 5$ it is true that $n^2 < 2^n$.
+\end{proof}
+
+\begin{theorem}
+For $n \geq 1$, $n^3-n+3$ is a multiple of 3
+\end{theorem}
+\begin{proof}
+
+\end{proof}
+
+\begin{theorem}
+For $n \in \mathbb{N}$, $2^{2n}-1$ is a multiple of 3
+\end{theorem}
+\begin{proof}
+Let $n=0$. $2^{2n}-1 = 2^0 - 1 = 1-1=0$, and $0 = 0 \cdot 3$, so indeed $2^{2n}-1$ is a multiple of 3. Thus the claim is true when $n=0$.
+
+Assume the claim is true for some $n \geq 0$. That is, $2^{2n}-1$ is a multiple of 3; say, $2^{2n}-1 = 3a$ for $a \in \mathbb{N}$. Then
+rearranging, $2^{2n} = 3a+1$.
+
+\begin{align*}
+2^{2(n+1)} - 1&=2^{2n+2} - 1\\
+&=(2^{2n}) (2^2) - 1\\
+&=(3a+1)(4) - 1\\
+&=12a+4-1\\
+&=12a+3\\
+&=3(4a+1)
+\end{align*}
+Since $4a +1 \in \mathbb{N}$, this shows that $2^{2(n+1)}-1$ is a multiple of 3. This completes the inductive step.
+
+Therefore for all $n \in \mathbb{N}$, it is true that $2^{2n}-1$ is a multiple of 3.
+\end{proof}
+  
+
+\end{document}

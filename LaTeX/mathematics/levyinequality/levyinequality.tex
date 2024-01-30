@@ -1,0 +1,536 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\Sh}{\ensuremath\mathrm{Sh}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Lévy's inequality, Rademacher sums,  and Kahane's inequality}
+\author{Jordan Bell}
+\date{May 21, 2015}
+
+\maketitle
+
+\section{Lévy's inequality}
+Let $(\Omega,\mathscr{A},P)$ be a probability space.
+A \textbf{random variable} is a Borel measurable function $\Omega \to \mathbb{R}$. 
+For a random variable $X$, we denote by 
+$X_*P$ the pushforward measure of $P$ by $X$. $X_*P$ is a Borel probability measure on $\mathbb{R}$, called
+the \textbf{distribution of $X$}.
+A random variable $X$ is called \textbf{symmetric} when
+the distribution of $X$ is equal to the distribution of $-X$.
+Because the collection $\{(-\infty,a]: a \in \mathbb{R}\}$ generates the Borel $\sigma$-algebra of $\mathbb{R}$,
+the statement that $X_*P=(-X)_*P$ is equivalent to the statement that for all $a \in \mathbb{R}$,
+\[
+P(\{\omega \in \Omega: X(\omega) \leq a\})=P(\omega \in \Omega: -X(\omega) \leq a\}).
+\]
+
+The following is \textbf{L\'evy's inequality}.\footnote{Joe Diestel, Hans Jarchow, and Andrew Tonge, {\em Absolutely Summing Operators},
+p.~213, Theorem 11.3.}
+
+\begin{theorem}[L\'evy's inequality]
+Suppose that $\chi_k$, $k \geq 1$, are independent symmetric random variables, that $U$ is a real or complex Banach space, and that
+$u_k \in U$, $k \geq 1$. Then for each $a>0$ and for each $n \geq 1$,
+\[
+P\left(\max_{1 \leq k \leq n} \norm{\sum_{1 \leq j \leq k} \chi_j u_j} \geq a\right) \leq 2\cdot P\left(\norm{\sum_{1 \leq j \leq n} \chi_j u_j}
+\geq a\right).
+\]
+\label{levy}
+\end{theorem}
+\begin{proof}
+Let $S_0=0$ and for $1 \leq k \leq n$,
+\[
+S_k(\omega) = \sum_{j=1}^k \chi_j(\omega) u_j, \qquad \omega \in \Omega.
+\]
+For $1 \leq k \leq n$, the function $\omega \mapsto (\chi_1(\omega),\ldots,\chi_k(\omega))$ is Borel measurable
+$\Omega \to \mathbb{R}^k$.\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~152, Lemma 4.49.}
+The function $(t_1,\ldots,t_k) \mapsto \sum_{j=1}^k t_j u_j$ is continuous $\mathbb{R}^k \to U$. And the function
+$u \mapsto \norm{u}$ is continuous $U \to \mathbb{R}$. Therefore $\omega \mapsto 
+\norm{S_k(\omega)}$, the composition of these functions, is Borel measurable $\Omega \to \mathbb{R}$. 
+This then implies that $\omega \mapsto \max_{1 \leq k \leq n} \norm{S_k(\omega)}$ is Borel measurable $\Omega \to \mathbb{R}$. 
+Let 
+\[
+A = \{\omega \in \Omega: \max_{1 \leq k \leq n} \norm{S_k(\omega)} \geq a\},
+\quad B = \{\omega \in \Omega: \norm{S_n(\omega)} \geq a\},
+\]
+for which $B \subset A$.
+For $1 \leq k \leq n$, let
+\[
+A_k = \bigcap_{0 \leq j < k} \{\omega \in \Omega: \textrm{$\norm{S_j(\omega)}<a$ and $\norm{S_k(\omega)} \geq a$}\}.
+\]
+It is apparent that 
+that
+$A_1,\ldots,A_n$ are pairwise disjoint and that $A = \bigcup_{k=1}^n A_k$. 
+
+For $1 \leq k \leq n$, let
+\[
+T_{n,k}(\omega) = S_k(\omega) - \sum_{j=k+1}^n \chi_j(\omega) u_j
+=\sum_{j=1}^k \chi_j(\omega) u_j - \sum_{j=k+1}^n \chi_j(\omega)u_j, \qquad \omega \in \Omega,
+\]
+in other words, $S_n+T_{n,k}=2S_k$. 
+Let 
+\[
+U_k  = A_k \cap B,\qquad 
+V_k = A_k \cap \{\omega \in \Omega: \norm{T_{n,k}(\omega)} \geq a\}.
+\]
+If $\omega \in A_k$, then 
+\[
+\norm{S_n(\omega)+T_{n,k}(\omega)} = 2\norm{S_k(\omega)}
+\geq 2a,
+\]
+which implies that at least one of the inequalities $\norm{S_n(\omega)} \geq a$ or $\norm{T_{n,k}(\omega)} \geq a$ is true. Therefore
+\[
+A_k = U_k \cup V_k.
+\]
+
+Because $\chi_1,\ldots,\chi_n$  are independent,
+the random vector $X=(\chi_1,\ldots,\chi_n):\Omega \to \mathbb{R}^n$ has the pushforward measure
+\[	
+X_*P = {\chi_1}_*P \times \cdots  \times {\chi_n}_*P,
+\]
+ and for each $1 \leq k \leq n$, the random vector
+$X_k=(\chi_1,\ldots,\chi_k,-\chi_{k+1},\ldots,-\chi_n):\Omega \to \mathbb{R}^n$ has the pushforward measure
+\[
+{X_k}_*P={\chi_1}_*P \times \cdots {\chi_k}_*P \times {(-\chi_{k+1})}_*P \times \cdots {(-\chi_n)}_*P,
+\]
+and because each $\chi_j$ is symmetric, these pushforward measures are equal. 
+Define $\sigma_k:\mathbb{R}^k \to \mathbb{R}$ by
+\[
+\sigma_k(t_1,\ldots,t_k) = \norm{\sum_{j=1}^k t_j u_j}, \qquad (t_1,\ldots,t_k) \in \mathbb{R}^k,
+\]
+define $\sigma_0=0$,
+and set
+\begin{align*}
+H_k& = \left( \bigcap_{0 \leq j < k} \{(t_1,\ldots,t_n) \in \mathbb{R}^n: \sigma_j(t_1,\ldots,t_j)<a\} \right)\\
+& \cap \{(t_1,\ldots,t_n) \in \mathbb{R}^n:
+\sigma_k(t_1,\ldots,t_k) \geq a, \sigma_n(t_1,\ldots,t_n) \geq a\}.
+\end{align*}
+Because each $\sigma_j$ is continuous, $H_k$ is a Borel set in $\mathbb{R}^n$.
+Then we have
+\begin{align*}
+P(U_k)&=P(A_k \cap B)\\
+&=P(X^{-1}(H_k))\\
+&=(X_*P)(H_k)\\
+&=({X_k}_*P)(H_k)\\
+&=P(X_k^{-1}(H_k))\\
+&=P(A_k \cap \{\omega \in \Omega: \norm{T_{n,k}(\omega)} \geq a\})\\
+&=P(V_k);
+\end{align*}
+among the above equalities, the two equalities that deserve chewing on are
+\[
+P(A_k \cap B) = P(X^{-1}(H_k)) \quad \textrm{and} \quad P(X_k^{-1}(H_k)) = P(A_k \cap \{\omega \in \Omega: \norm{T_{n,k}(\omega)} \geq a\}).
+\]
+
+Thus we have
+\[
+P(A_k) = P(U_k \cup V_k) \leq P(U_k)+P(V_k) = 2P(U_k) = 2P(A_k \cap B).
+\]
+Therefore
+\begin{align*}
+P(A)&=\sum_{k=1}^n P(A_k)\\
+&\leq \sum_{k=1}^n 2P(A_k \cap B)\\
+&=2 P(A \cap B)\\
+&= 2P(B),
+\end{align*}
+proving the claim.
+\end{proof}
+
+
+
+
+\section{Rademacher sums}
+Suppose that 
+$\epsilon_n:(\Omega,\mathscr{A},P) \to (\mathbb{R},\mathscr{B}_{\mathbb{R}},\lambda)$, $n \geq 1$, are independent random variables each with the \textbf{Rademacher distribution}: for each $n$,
+\[
+{\epsilon_n}_*P = \frac{1}{2}\delta_{-1}+\frac{1}{2}\delta_1,
+\]
+in other words, $P(\epsilon_n=1)=\frac{1}{2}$ and $P(\epsilon_n=-1)=\frac{1}{2}$. 
+
+
+We now use L\'evy's inequality
+to prove the following for independent random variables with the Rademacher
+distribution.\footnote{Joe Diestel, Hans Jarchow, and Andrew Tonge, {\em Absolutely Summing Operators},
+p.~214, Lemma 11.4.}
+
+
+\begin{theorem}
+Suppose that 
+$X$ is a real or complex Banach space, and that
+$x_k \in X$, $k \geq 1$.
+Then for each $a>0$ and for each
+$n \geq 1$,
+\[
+P\left( \norm{\sum_{k=1}^n \epsilon_k x_k} \geq 2a \right)
+\leq 4\left(P\left( \norm{\sum_{k=1}^n \epsilon_k x_k} \geq a \right)\right)^2.
+\]
+\label{rademacher}
+\end{theorem}
+\begin{proof}
+Let $S_0=0$ and for $1 \leq k \leq n$, define 
+\[
+S_k(\omega) = \sum_{1 \leq j \leq k} \epsilon_j(\omega) x_j, \qquad \omega \in \Omega.
+\]
+Let
+\[
+A = \left\{ \max_{1 \leq k \leq n} \norm{S_k} \geq a\right\},
+\quad B = \{\norm{S_n} \geq a\}, \quad C=\{\norm{S_n} \geq 2a\}.
+\]
+L\'evy's inequality tells us that $P(A) \leq 2P(B)$.
+
+For $1 \leq k \leq n$, let
+\[
+A_k = \bigcap_{0 \leq j < k} \{\norm{S_j} < a\} \cap \{\norm{S_k} \geq a\}
+\]
+and
+\[
+C_k = \{\norm{S_n-S_{k-1}} \geq a\}.
+\]
+If $\omega \in A_k \cap C$, then
+\[
+\norm{S_n(\omega)-S_{k-1}(\omega)} \geq \norm{S_n(\omega)} - \norm{S_{k-1}(\omega)}
+\geq 2a - a = a,
+\]
+hence $A_k \cap C \subset C_k$. 
+Then because $C \subset A$ and because $A$ is the disjoint union of $A_1,\ldots,A_n$,
+\[
+P(C)=P(A \cap C)
+=P\left( \bigcup_{k=1}^n (A_k \cap C) \right)
+=\sum_{k=1}^n P(A_k \cap C)
+\leq \sum_{k=1}^n P(A_k \cap C_k).
+\]
+
+Let $1 \leq k \leq n$. $P(\epsilon_k^2=1)=1$, so for almost all $\omega \in \Omega$,
+\[
+\norm{\sum_{j=k}^n \epsilon_j(\omega) x_j} =
+\norm{\epsilon_k(\omega) \sum_{j=k}^n \epsilon_j(\omega) x_j}
+=\norm{x_k+\sum_{j=k+1}^n \epsilon_k(\omega) \epsilon_j(\omega) x_j}.
+\]
+Thus, for
+\[
+D_k = \left\{\norm{x_k+\sum_{j=k+1}^n \epsilon_k \epsilon_j x_j} \geq a\right\},
+\]
+we have
+\[
+P(C_k \triangle D_k)=0.
+\]
+Let $(\delta_1,\ldots,\delta_n) \in \{+1,-1\}^n$. On the one hand,
+because $\delta_j^2=1$ and using that $\epsilon_1,\ldots,\epsilon_n$ are independent,
+\[
+\begin{split}
+&P(\epsilon_1=\delta_1,\ldots,\epsilon_k=\delta_k,\epsilon_k
+\epsilon_{k+1}=\delta_{k+1},\ldots,
+\epsilon_k \epsilon_n=\delta_n)\\
+=&P(\epsilon_1=\delta_1,\ldots,\epsilon_k=\delta_k,\epsilon_{k+1}=\delta_k
+\delta_{k+1},\ldots,\epsilon_n=\delta_k \delta_n)\\
+=&P(\epsilon_1=\delta_1)\cdots P(\epsilon_k=\delta_k)
+P(\epsilon_{k+1}=\delta_k \delta_{k+1})
+\cdots P(\epsilon_n=\delta_k \delta_n)\\
+=&2^{-n}.
+\end{split}
+\]
+On the other hand, 
+for $k+1 \leq j \leq n$ we have
+\[
+\begin{split}
+&P(\epsilon_k \epsilon_j = \delta_j)\\
+=&P(\epsilon_k \epsilon_j = \delta_j | \epsilon_k=1)P(\epsilon_k=1)
++P(\epsilon_k \epsilon_j = \delta_j | \epsilon_k=-1) P(\epsilon_k=-1)\\
+=&\frac{1}{2}P(\epsilon_j=\delta_j)+\frac{1}{2}P(\epsilon_j=-\delta_j)\\
+=&\frac{1}{2}\cdot \frac{1}{2}+\frac{1}{2}\cdot \frac{1}{2}\\
+=&\frac{1}{2},
+\end{split}
+\]
+and hence
+\[
+P(\epsilon_1=\delta_1)\cdots P(\epsilon_k=\delta_k)
+P(\epsilon_k \epsilon_{k+1}=\delta_{k+1})
+\cdots P(\epsilon_k \epsilon_n = \delta_n)
+=2^{-n}.
+\]
+Therefore, for each $1 \leq k \leq n$ and for each $(\delta_1,\ldots,\delta_n) \in \{+1,-1\}^n$,
+\[
+\begin{split}
+&P(\epsilon_1=\delta_1,\ldots,\epsilon_k=\delta_k,\epsilon_k
+\epsilon_{k+1}=\delta_{k+1},\ldots,
+\epsilon_k \epsilon_n=\delta_n)\\
+=&P(\epsilon_1=\delta_1)\cdots P(\epsilon_k=\delta_k)
+P(\epsilon_k \epsilon_{k+1}=\delta_{k+1})
+\cdots P(\epsilon_k \epsilon_n = \delta_n).
+\end{split}
+\]
+But for almost all $\omega \in \Omega$,
+\[
+(\epsilon_1(\omega),\ldots,\epsilon_k(\omega),\epsilon_k(\omega) \epsilon_{k+1}(\omega),
+\ldots,\epsilon_k(\omega) \epsilon_n(\omega)) \in \{+1,-1\}^n,
+\]
+so it follows that
+\[
+\epsilon_1,\ldots,\epsilon_k,
+\epsilon_k \epsilon_{k+1},
+\ldots,\epsilon_k \epsilon_n
+\]
+are independent random variables.
+We check that $A_k \in \sigma(\epsilon_1,\ldots,\epsilon_k)$ and
+$D_k \in \sigma(\sigma_k \sigma_{k+1},\ldots,\sigma_k \sigma_n)$, and what we have just established
+means that these  $\sigma$-algebras are
+independent, so 
+\[
+P(A_k \cap D_k) = P(A_k) P(D_k).
+\]
+But
+\[
+A_k \cap (C_k \triangle D_k) = (A_k \cap C_k) \triangle (A_k \cap D_k),
+\]
+so, because $P(C_k \triangle D_k)=0$,
+\[
+P(A_k \cap C_k) = P(A_k \cap D_k) = P(A_k) P(D_k) = P(A_k) P(C_k).
+\]
+We had already established that $P(C) \leq \sum_{k=1}^n P(A_k \cap C_k)$. Using this with the above, and the fact that $A$ is the disjoint
+union of $A_1,\ldots,A_n$, we obtain
+\begin{align*}
+P(C)&\leq \sum_{k=1}^n P(A_k \cap C_k)\\
+&=\sum_{k=1}^n P(A_k) P(C_k)\\
+&\leq \left(\sum_{k=1}^n P(A_k) \right) \max_{1 \leq k \leq n} P(C_k)\\
+&=P\left(\bigcup_{k=1}^n A_k \right)  \max_{1 \leq k \leq n} P(C_k)\\
+&=P(A)  \max_{1 \leq k \leq n} P(C_k).
+\end{align*}
+As we stated before, we have from L\'evy's inequality that $P(A) \leq 2P(B)$, with which
+\[
+P(C) \leq 2P(B) \max_{1 \leq k \leq n} P(C_k).
+\]
+To prove the claim it thus suffices to show that
+\[
+\max_{1 \leq k \leq n} P(C_k) \leq 2P(B).
+\]
+
+Let $1 \leq k \leq n$. For $\delta=(\delta_1,\ldots,\delta_{k-1}) \in \{+1,-1\}^{k-1}$, let
+let $H_{k,\delta,+}$ be those
+$(t_1,\ldots,t_n) \in \mathbb{R}^n$ such that (i) for each $1 \leq j \leq k-1$, $t_j=\delta_j$, (ii)
+$\norm{\sum_{j=k}^n t_j x_j} \geq a$,
+and (iii) 
+\[
+\norm{\sum_{j=1}^n t_j x_j} \geq a,
+\]
+and let $H_{k,\delta,-}$ be those $(t_1,\ldots,t_n) \in \mathbb{R}^n$ satisfying (i) and (ii) and 
+\[
+\norm{\sum_{j=1}^{k-1} t_j x_j - \sum_{j=k}^n t_j x_j} \geq a.
+\]
+Let
+\[
+X=(\epsilon_1,\ldots,\epsilon_n):\Omega \to \mathbb{R}^n
+\] 
+and let
+\[
+X_k=(\epsilon_1,\ldots,\epsilon_{k-1},-\epsilon_k,\ldots,-\epsilon_n):\Omega \to \mathbb{R}^n,
+\]
+which have the same distribution because $\epsilon_1,\ldots,\epsilon_n$ are independent and symmetric. 
+Then
+\begin{align*}
+P(X^{-1}(H_{k,\delta,+}))&=(X_*P)(H_{k,\delta,+})\\
+&=({X_k}_*P)(H_{k,\delta,+})\\
+&=P(X_k^{-1}(H_{k,\delta,+}))\\
+&=P(X^{-1}(H_{k,\delta,-})).
+\end{align*}
+Set
+\[
+C_{k,\delta,+} = \{X \in H_{k,\delta,+}\}, \qquad C_{k,\delta,-} = \{X \in H_{k,\delta,-}\},
+\]
+for which we thus have
+\[
+P(C_{k,\delta,+})=P(C_{k,\delta,-}).
+\]
+We can write $C_{k,\delta,+}$ and $C_{k,\delta,-}$ as
+\[
+C_{k,\delta,+} = \left( \bigcap_{0 \leq j < k} \{\epsilon_j=\delta_j\}\right) 
+\cap C_k 
+\cap \{\norm{S_n} \geq a\}
+\]
+and
+\[
+C_{k,\delta,-} = \left( \bigcap_{0 \leq j < k} \{\epsilon_j=\delta_j\}\right) 
+\cap C_k 
+\cap \{\norm{S_n-2S_{k-1}} \geq a\}.
+\]
+If $\omega \in C_k$ then, because $\norm{S_n(\omega)-S_{k-1}(\omega)} \geq a$, 
+\begin{align*}
+2a &\leq 2\norm{S_n(\omega)-S_{k-1}(\omega)}\\
+&=\norm{S_n(\omega) + (S_n(\omega)-2S_{k-1}(\omega))}\\
+&\leq \norm{S_n(\omega)}+\norm{S_n(\omega)-2S_{k-1}(\omega)},
+\end{align*}
+so at least one of the inequalities $\norm{S_n(\omega)} \geq a$ and $\norm{S_n(\omega)-2S_{k-1}(\omega)} \geq a$ is true, and hence
+\[
+C_k \subset \{\norm{S_n} \geq a\} \cup \{\norm{S_n-2S_{k-1}} \geq a\}.
+\]
+It follows that
+\[
+C_k \cap  \left( \bigcap_{0 \leq j < k} \{\epsilon_j=\delta_j\}\right)  = C_{k,\delta,+}
+\cup C_{k,\delta,-}.
+\]
+Therefore,
+using the fact that for almost all $\omega \in \Omega$,
+\[
+(\epsilon_1(\omega),\ldots,\epsilon_{k-1}(\omega)) \in \{+1,-1\}^{k-1},
+\]
+and
+\[
+C_{k,\delta,+} = \left(\bigcap_{0 \leq j < k} \{\epsilon_j=\delta_j\}\right)
+\cap C_k \cap B,
+\]
+we get
+\begin{align*}
+P(C_k)&=\sum_\delta P\left(C_k \cap \bigcap_{0 \leq j < k} \{\epsilon_j=\delta_j\}\right)\\
+&=\sum_\delta P(C_{k,\delta,+} \cup C_{k,\delta,-})\\
+&=2\sum_\delta P(C_{k,\delta,+})\\
+&\leq 2\sum_\delta P\left( B \cap \bigcap_{0 \leq j< k} \{\epsilon_j=\delta_j\}\right)\\
+&=2P(B),
+\end{align*}
+and thus
+\[
+\max_{1 \leq k \leq n} P(C_k) \leq 2 P(B),
+\]
+which proves the claim.
+\end{proof}
+
+
+
+
+
+
+
+\section{Kahane's inequality}
+By $E(X)^r$ we mean $(E(X))^r$. 
+The following is \textbf{Kahane's inequality}.\footnote{Joe Diestel, Hans Jarchow, and Andrew Tonge, {\em Absolutely Summing Operators},
+p.~211, Theorem 11.1.}
+
+\begin{theorem}[Kahane's inequality]
+For   $0<p,q<\infty$, there is some $K_{p,q}>0$ such that if $X$ is a real or complex Banach
+space and $x_k \in X$, $k \geq 1$, then for each $n$,
+\[
+E\left(\norm{\sum_{k=1}^n \epsilon_k x_k}^q\right)^{1/q}
+\leq K_{p,q}   \cdot E\left(\norm{\sum_{k=1}^n \epsilon_k x_k}^p\right)^{1/p}.
+\]
+\end{theorem}
+\begin{proof}
+Suppose that $0<p<q<\infty$; when $p \geq q$ the claim is immediate with $K_{p,q}=1$. Let
+\[
+M = E\left(\norm{\sum_{k=1}^n \epsilon_k x_k}^p\right)^{1/p};
+\]
+if $M=0$ we check that the claim is $0 \leq K_{p,q}\cdot 0$, which is true for, say, $K_{p,q}=1$. Otherwise, $M>0$,
+and
+let $u_k=\frac{x_k}{M}$, $1 \leq k \leq n$, for which
+\begin{equation}
+E\left(\norm{\sum_{k=1}^n \epsilon_k u_k}^p \right) = 
+E\left(\norm{\sum_{k=1}^n \epsilon_k \frac{x_k}{M}}^p \right) 
+= 1.
+\label{normalized}
+\end{equation}
+Using Chebyshev's inequality,
+\[
+P\left( \norm{\sum_{k=1}^n \epsilon_k u_k} \geq 8^{1/p} \right)
+=P\left( \norm{\sum_{k=1}^n \epsilon_k u_k}^p \geq 8 \right)
+\leq \frac{1}{8} E\left(\norm{\sum_{k=1}^n \epsilon_k u_k}^p\right)
+= \frac{1}{8}.
+\]
+Assume for induction that for some $l \geq 0$ we have 
+\begin{equation}
+P\left( \norm{\sum_{k=1}^n \epsilon_k u_k} \geq 2^l \cdot 8^{1/p} \right) 
+\leq \frac{1}{4} \cdot 2^{-2^l};
+\label{assumption}
+\end{equation}
+the above shows that this is true for $l=0$. Applying Theorem \ref{rademacher} and then \eqref{assumption},
+\[
+P\left( \norm{\sum_{k=1}^n \epsilon_k u_k} \geq 2^{l+1} \cdot 8^{1/p} \right) 
+\leq 4\left(P\left( \norm{\sum_{k=1}^n \epsilon_k u_k} \geq 2^l \cdot 8^{1/p} \right)\right)^2
+\leq \frac{1}{4} \cdot 2^{-2^{l+1}},
+\]
+which shows that \eqref{assumption} is true for all $l \geq 0$. 
+
+Generally, for $0<q<\infty$, if $X:\Omega \to \mathbb{R}$ is a random variable for which
+$P(X \geq 0)=1$, then
+\[
+E(X^q) = \int_0^\infty q s^{q-1} P(X \geq s) ds;
+\]
+the right-hand side is finite if and only if $X \in L^q(P)$. 
+Using this,
+\begin{equation}
+E\left(\norm{\sum_{k=1}^n \epsilon_k u_k}^q\right) = 
+\int_0^\infty qs^{q-1} P\left(\norm{\sum_{k=1}^n \epsilon_k u_k} \geq s\right) ds.
+\label{parts}
+\end{equation}
+Let $\alpha_0=$ and for $l \geq 1$ let $\alpha_l=2^{l-1} \cdot 8^{1/p}$, and define
+\[
+f(s) = q s^{q-1} P\left(\norm{\sum_{k=1}^n \epsilon_k u_k} \geq s\right), \qquad s \geq 0.
+\]
+Using \eqref{parts} and then \eqref{assumption},
+\begin{align*}
+E\left(\norm{\sum_{k=1}^n \epsilon_k u_k}^q\right)&=\int_0^\infty f(s) ds\\
+&=\int_0^{\alpha_1} f(s) ds
++
+\sum_{l=0}^\infty 
+\int_{\alpha_{l+1}}^{\alpha_{l+2}} f(s) ds\\
+&\leq \int_0^{\alpha_1} qs^{q-1} ds + \sum_{l=0}^\infty \int_{\alpha_{l+1}}^{\alpha_{l+2}} qs^{q-1} P\left(\norm{\sum_{k=1}^n \epsilon_k u_k} \geq 
+\alpha_{l+1}\right) ds\\
+&\leq \alpha_1^q  +  \sum_{l=0}^\infty \int_{\alpha_{l+1}}^{\alpha_{l+2}} qs^{q-1} \frac{1}{4} \cdot 2^{-2^l} ds\\
+&=8^{q/p} + \frac{1}{4} \sum_{l=0}^\infty 2^{-2^l} (\alpha_{l+2}^q-\alpha_{l+1}^q),
+\end{align*}
+and we define $K_{p,q}$ by taking $K_{p,q}^q$ to be equal to the above.
+Thus
+\[
+E\left(\norm{\sum_{k=1}^n \epsilon_k u_k}^q\right)^{1/q} \leq K_{p,q},
+\]
+and therefore, by \eqref{normalized},
+\[
+E\left(\norm{\sum_{k=1}^n \epsilon_k u_k}^q\right)^{1/q} \leq K_{p,q} \cdot
+E\left(\norm{\sum_{k=1}^n \epsilon_k u_k}^p \right)^{1/p}.
+\]
+Finally, as $u_k = \frac{x_k}{M}$,
+\[
+E\left(\norm{\sum_{k=1}^n \epsilon_k x_k}^q\right)^{1/q} \leq K_{p,q} \cdot
+E\left(\norm{\sum_{k=1}^n \epsilon_k x_k}^p \right)^{1/p},
+\]
+which proves the claim.
+\end{proof}
+
+In the above proof of Kahane's inequality, for $p=1$ and $q=2$ we have
+\begin{align*}
+K_{1,2}^2 &= 8^2 + \frac{1}{4} \sum_{l=0}^\infty 2^{-2^l}(\alpha_{l+2}^2-\alpha_{l+1}^2)\\
+&=64+16\sum_{l=0}^\infty 2^{-2^l} (2^{2l+2}-2^{2l})\\
+&=64+48\sum_{l=0}^\infty 2^{-2^l} 2^{2l},
+\end{align*}
+for which 
+\[
+K_{1,2} = 14.006\ldots.
+\]
+In fact, the inequality is true with $K_{1,2}=\sqrt{2}=1.414\ldots$.\footnote{R. Lata\l{}a and 
+K. Oleszkiewicz, 
+{\em On the best constant in the Khinchin-Kahane inequality}, Studia Math. \textbf{109} (1994), no. 1,
+101--104.}
+
+
+
+
+\end{document}

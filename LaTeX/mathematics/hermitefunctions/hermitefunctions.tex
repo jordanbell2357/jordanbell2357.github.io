@@ -1,0 +1,643 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_{\mathrm{HS}}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Hermite functions}
+\author{Jordan Bell}
+\date{September 9, 2015}
+
+\maketitle
+
+
+\section{Locally convex spaces}
+If $V$ is a vector space and $\{p_\alpha: \alpha \in A\}$ is a separating family of seminorms on $V$,
+then there is a unique  topology
+with which $V$  is a locally convex space and such that the collection of
+finite intersections of  sets of the form
+\[
+\{v \in V: p_\alpha(v)<\epsilon\},\qquad \alpha \in A,\quad \epsilon>0
+\]
+is a local base at $0$.\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/holomorphic.pdf},
+Theorem 1 and Theorem 4.}  We call this the \textbf{topology induced by the family of seminorms}.
+If $\{p_n: n \geq 0\}$ is a separating family of seminorms, then 
+\[
+d(v,w) = \sum_{n=0}^\infty 2^{-n} \frac{p_n(v-w)}{1+p_n(v-w)}, \qquad v,w \in V,
+\]
+is a metric on $V$ that induces the same topology as the family of seminorms. 
+If $d$ is a complete metric, then $V$ is called a \textbf{Fr\'echet space}. 
+
+
+
+
+\section{Schwartz functions}
+For $\phi \in C^\infty(\mathbb{R},\mathbb{C})$ and $n \geq 0$,
+let 
+\[
+p_n(\phi) =\sup_{0 \leq k \leq n} \sup_{u \in \mathbb{R}} (1+u^2)^{n/2} |\phi^{(k)}(u)|.
+\]
+We define $\mathscr{S}$ to be the set of those 
+$\phi \in C^\infty(\mathbb{R},\mathbb{C})$ such that $p_n(\phi)<\infty$ for all $n \geq 0$. 
+$\mathscr{S}$ is a complex vector space 
+and each $p_n$ is a norm, and
+because each $p_n$ is a norm, a fortiori $\{p_n:  n \geq 0\}$ is a separating family of seminorms.
+With the topology induced by this family of seminorms, $\mathscr{S}$ is a Fr\'echet space.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~184, Theorem 7.4.}
+As well, $D:\mathscr{S} \to \mathscr{S}$ defined by
+\[
+(D\phi)(x) = \phi'(x),\qquad x \in \mathbb{R}
+\]
+and
+$M:\mathscr{S} \to \mathscr{S}$ defined by
+\[
+(M\phi)(x) = x \phi(x),\qquad x \in \mathbb{R}
+\]
+are continuous linear maps.
+
+
+\section{Hermite functions}
+Let $\lambda$ be Lebesgue measure on $\mathbb{R}$ and let
+\[
+(f,g)_{L^2} = \int_{\mathbb{R}} f\overline{g} d\lambda.
+\]
+With this inner product, $L^2(\lambda)$ is a  separable Hilbert space. We write
+\[
+|f|_{L^2}^2 = (f,f)_{L^2} = \int_{\mathbb{R}} |f|^2 d\lambda.
+\]
+
+
+For $n \geq 0$, define $H_n:\mathbb{R} \to \mathbb{R}$ by
+\[
+H_n(x) = (-1)^n e^{x^2} D^n e^{-x^2},
+\]
+which is a polynomial of degree $n$. $H_n$ are called \textbf{Hermite
+polynomials}.
+It can be shown that
+\begin{equation}
+\exp(2zx-z^2)=\sum_{n=0}^\infty \frac{1}{n!} H_n(x) z^n,\qquad z \in \mathbb{C}.
+\label{generating}
+\end{equation}
+For $m, n \geq 0$,
+\[
+\int_{\mathbb{R}} H_m(x) H_n(x) e^{-x^2} d\lambda(x) =2^n n! \sqrt{\pi}   \delta_{m,n}.
+\]
+For $n \geq 0$, define  $h_n:\mathbb{R} \to \mathbb{R}$ by
+\[
+h_n(x) = 
+(2^n n! \sqrt{\pi})^{-1/2} e^{-x^2/2}H_n(x)=
+(-1)^n (2^n n! \sqrt{\pi})^{-1/2} e^{x^2/2} D^n e^{-x^2}.
+\]
+$h_n$ are called \textbf{Hermite functions}.
+Then for $m,n \geq 0$,
+\[
+(h_m,h_n)_{L^2} = \int_{\mathbb{R}} h_m(x) h_n(x) d\lambda(x) = \delta_{m,n}.
+\]
+One proves that $\{h_n: n \geq 0\}$ is an orthonormal basis for $(L^2(\lambda),(\cdot,\cdot)_{L^2})$.\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/gaussian.pdf},
+Theorem 8.}
+
+
+We remind ourselves that for $x \in \mathbb{R}$,\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/completelymonotone.pdf},
+Lemma 5.}
+\[
+e^{-x^2} = 2^{-1} \pi^{-1/2} \int_{\mathbb{R}} e^{-y^2/4} e^{-i xy} dy,
+\]
+and by the dominated convergence theorem this yields
+\[
+D^n e^{-x^2} = 2^{-1} \pi^{-1/2} \int_{\mathbb{R}} (-iy)^n e^{-y^2/4} e^{-ixy} dy,
+\]
+and so
+\begin{equation}
+h_n(x) = (2^n n! \sqrt{\pi})^{-1/2} e^{x^2/2} \cdot  2^{-1} \pi^{-1/2}  \int_{\mathbb{R}} (iy)^n e^{-y^2/4} e^{-ixy} dy.
+\label{gaussian}
+\end{equation}
+
+
+\section{Mehler's formula}
+We now prove \textbf{Mehler's formula} for the Hermite functions.\footnote{Sundaram Thangavelu,
+{\em An Introduction to the
+Uncertainty Principle: Hardy's Theorem on Lie Groups}, p.~8, Proposition 1.2.1.}
+
+\begin{theorem}[Mehler's formula]
+For $z \in \mathbb{C}$ with $|z|<1$ and for $x,y \in \mathbb{R}$,
+\[
+\sum_{n=0}^\infty h_n(x) h_n(y) z^n = \pi^{-1/2} (1-z^2)^{-1/2} \exp\left(-\frac{1}{2} \cdot \frac{1+z^2}{1-z^2}(x^2+y^2) + \frac{2z}{1-z^2} xy\right).
+\]
+\end{theorem}
+\begin{proof}
+Using \eqref{gaussian},
+\[
+\begin{split}
+&\sum_{n=0}^\infty h_n(x) h_n(y) z^n\\
+=&\sum_{n=0}^\infty 
+\frac{\sqrt{\pi}}{2^n n!} e^{(x^2+y^2)/2} z^n \left(\int_{\mathbb{R}} (2\pi i\xi)^n e^{-\pi^2 \xi^2} e^{-2\pi ix\xi} d\xi\right)
+\left(\int_{\mathbb{R}} (2\pi i\zeta)^n e^{-\pi^2 \zeta^2} e^{-2\pi iy\zeta} d\zeta\right)\\
+&=\sqrt{\pi} e^{(x^2+y^2)/2} \int_{\mathbb{R}} \int_{\mathbb{R}} e^{-\pi^2\xi^2-\pi^2\zeta^2-2\pi ix\xi - 2\pi i\zeta y}
+\sum_{n=0}^\infty \frac{(-2\pi^2 \xi \zeta z)^n}{n!} d\xi d\zeta\\
+&=\sqrt{\pi} e^{(x^2+y^2)/2}  \int_{\mathbb{R}} \int_{\mathbb{R}}  e^{-\pi^2\xi^2-\pi^2\zeta^2-2\pi ix\xi - 2\pi i\zeta y}
+e^{-2\pi^2 \xi \zeta z} d\xi d\zeta.
+\end{split}
+\]
+Now, writing $a=\frac{iy}{\pi}+\xi z$, we calculate
+\begin{align*}
+\int_{\mathbb{R}} e^{-\pi^2 \zeta^2 - 2\pi i\zeta y-2\pi^2 \xi \zeta z} d\zeta& = \int_{\mathbb{R}}
+e^{-\pi^2(\zeta+a)^2+\pi^2 a^2} d\zeta\\
+&=\frac{1}{\sqrt{\pi}} e^{\pi^2 a^2}\\
+& = \frac{1}{\sqrt{\pi}} \exp\left(-y^2+2\pi iy\xi z +\pi^2 \xi^2 z^2\right).
+\end{align*}
+Then, for $\alpha=(1-z^2)\pi^2$,
+\[
+\begin{split}
+&\sum_{n=0}^\infty h_n(x) h_n(y) z^n\\
+=&e^{(x^2+y^2)/2} \int_{\mathbb{R}} e^{-\pi^2 \xi^2-2\pi ix\xi-y^2+2\pi i y\xi z + \pi^2 \xi^2 z^2} d\xi\\
+=&e^{(x^2-y^2)/2} \int_{\mathbb{R}}  e^{-\alpha \xi^2-2\pi i(x-yz) \xi} d\xi\\
+=&e^{(x^2-y^2)/2} \sqrt{\frac{\pi}{\alpha}} \exp\left(-\frac{\pi^2}{\alpha} (x-yz)^2\right)\\
+=&\pi^{-1/2} e^{(x^2-y^2)/2} (1-z^2)^{-1/2} \exp\left(-\frac{(x-yz)^2}{1-z^2}\right)\\
+=&\pi^{-1/2} (1-z^2)^{-1/2} \exp\left(-\frac{x^2}{1-z^2}+\frac{2xyz}{1-z^2}-\frac{y^2z^2}{1-z^2}+\frac{x^2}{2}-\frac{y^2}{2}\right)\\
+=&\pi^{-1/2} (1-z^2)^{-1/2} \exp\left(-\frac{1}{2} \frac{1+z^2}{1-z^2}(x^2+y^2) + \frac{2z}{1-z^2} xy\right).
+\end{split}
+\]
+\end{proof}
+
+
+
+
+\section{The Hermite operator}
+We define
+$A:\mathscr{S}\to \mathscr{S}$ by
+\[
+(A\phi)(x) =-\phi''(x)+(x^2+1) \phi(x),\qquad x \in \mathbb{R},
+\]
+i.e.,
+\[
+A = -D^2 +M^2+1,
+\]
+which is a continuous linear map $\mathscr{S} \to \mathscr{S}$, which we call the \textbf{Hermite operator}. 
+$\mathscr{S}$ is a dense linear subspace of the Hilbert space $L^2(\lambda)$, and $A:\mathscr{S} \to \mathscr{S}$ is a linear map, so
+$A$ is a densely defined operator in $L^2(\lambda)$.
+For $\phi,\psi \in \mathscr{S}$, integrating by parts,
+\begin{align*}
+(A\phi,\psi)_{L^2}&=\int_{\mathbb{R}} (-\phi''(x)+(x^2+1) \phi(x))\overline{\psi(x)} d\lambda(x)\\
+&=\int_{\mathbb{R}} -\phi''(x) \overline{\psi(x)} d\lambda(x)+
+\int_{\mathbb{R}} (x^2+1)\phi(x) \overline{\psi(x)} d\lambda(x)\\
+&=\int_{\mathbb{R}} -\phi(x) \overline{\psi''(x)} d\lambda(x)+\int_{\mathbb{R}}
+(x^2+1)\phi(x)\overline{\psi(x)} d\lambda(x)\\
+&=(\phi,A\psi)_{L^2},
+\end{align*}
+showing that $A:\mathscr{S} \to \mathscr{S}$ is symmetric. 
+Furthermore, also integrating by parts,
+\[
+(A\phi,\phi)_{L^2} = \int_{\mathbb{R}} (\phi'(x)\overline{\phi'(x)}+(x^2+1)\phi(x)\overline{\phi(x)}) d\lambda(x)
+\geq 0,
+\]
+so $A$ is a positive operator.
+
+
+It is straightforward to check that each $h_n$ belongs to $\mathscr{S}$.
+For $n \geq 0$, we calculate that
+\[
+h_n''(x)+(2n+1-x^2)h_n(x)=0,
+\]
+and hence
+\[
+(Ah_n)(x) = (2n+1-x^2)h_n(x)+x^2h_n(x)+h_n(x)=(2n+2)h_n(x),
+\]
+i.e.
+\[
+Ah_n=(2n+2)h_n.
+\]
+Therefore, for each $h_n$, $A^{-1}h_n=\frac{1}{2n+2}h_n$, and it follows that there is
+a unique bounded linear
+operator
+$T:L^2(\lambda) \to L^2(\lambda)$ 
+ such that\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/traceclass.pdf},
+Theorem 11.}
+\begin{equation}
+ Th_n=A^{-1}h_n=(2n+2)^{-1}h_n,\qquad n \geq 0.
+ \label{Ainverse}
+\end{equation}
+The operator norm of $T$ is
+\[
+\norm{T} = \sup_{n \geq 0} \frac{1}{2n+2} = \frac{1}{2}.
+\]
+The Hermite functions are an orthonormal basis for $L^2(\lambda)$, so for $f \in L^2(\lambda)$,
+\[
+f = \sum_{n=0}^\infty (f,h_n)_{L^2} h_n.
+\]
+For $f,g \in L^2(\lambda)$, 
+\begin{align*}
+(Tf,g)_{L^2}&=\left( \sum_{n=0}^\infty (f,h_n)_{L^2} Th_n, \sum_{n=0}^\infty (g,h_n)_{L^2} h_n\right)_{L^2}\\
+&=\left( \sum_{n=0}^\infty (f,h_n)_{L^2} (2n+2)^{-1} h_n, \sum_{n=0}^\infty (g,h_n)_{L^2} h_n\right)_{L^2}\\
+&=\sum_{n=0}^\infty (2n+2)^{-1} (f,h_n)_{L^2} \overline{(g,h_n)_{L^2}},
+\end{align*}
+from which it is immediate that $T$ is self-adjoint. 
+
+For $p \geq 0$, 
+\[
+|T^p h_n|_{L^2}^2= |(2n+2)^{-p}h_n|_{L^2}^2
+=(2n+2)^{-2p} |h_n|_{L^2}^2
+=(2n+2)^{-2p}.
+\]
+Therefore for $p \geq 1$,
+\[
+\sum_{n=0}^\infty |T^p h_n|_{L^2}^2 
+=\sum_{n=0}^\infty (2n+2)^{-2p}
+=2^{-2p} \sum_{m=1}^\infty m^{-2p}
+=2^{-2p} \zeta(2p).
+\]
+This means that for $p \geq 1$, $T^p$ is a \textbf{Hilbert-Schmidt operator} with \textbf{Hilbert-Schmidt norm}\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/traceclass.pdf},
+\S 7.}
+\[
+\HS{T^p} = 2^{-p} \sqrt{\zeta(2p)}.
+\]
+
+
+
+\section{Creation and annihilation operators}
+Taking the derivative of \eqref{generating} with respect to $x$ gives
+\[
+2\sum_{n=0}^\infty \frac{1}{n!} H_n(x) z^{n+1} = \sum_{n=0}^\infty \frac{1}{n!} H_n'(x) z^n,
+\]
+so $H_0'=0$ and for $n \geq 1$, $\frac{1}{n!} H_n'(x) = \frac{1}{(n-1)!} 2H_{n-1}(x)$, i.e.
+\[
+H_n' = 2nH_{n-1},
+\]
+and so
+\[
+h_n'(x) = (2n)^{1/2} h_{n-1}(x)-xh_n(x),
+\]
+i.e.
+\[
+Dh_n=(2n)^{1/2}h_{n-1}-Mh_n.
+\]
+Furthermore, from its definition we calculate
+\[
+h_n'(x) = xh_n(x)-(2n+2)^{1/2} h_{n+1}(x),
+\]
+i.e.
+\[
+Dh_n=Mh_n-(2n+2)^{1/2}h_{n+1}.
+\]
+
+
+We define $B:\mathscr{S} \to \mathscr{S}$, called the \textbf{annihilation operator}, by
+\[
+(B\phi)(x) = \phi'(x)+x\phi(x),\qquad x \in \mathbb{R},
+\]
+i.e.
+\[
+B = D+M,
+\]
+which is a continuous linear map $\mathscr{S} \to \mathscr{S}$.
+For $n \geq 1$, we calculate
+\[
+Bh_n = (2n)^{1/2} h_{n-1},
+\]
+and $h_0(x)=\pi^{-1/4} e^{-x^2/2}$, so $Bh_0=0$. 
+
+
+
+We define $C:\mathscr{S} \to \mathscr{S}$, called the \textbf{creation operator}, by
+\[
+(C\phi)(x) = -\phi'(x)+x\phi(x),\qquad x \in \mathbb{R},
+\]
+i.e.
+\[
+C = -D+M,
+\]
+which is a continuous linear map $\mathscr{S} \to \mathscr{S}$.
+For $n \geq 0$, we calculate
+\[
+Ch_n = (2n+2)^{1/2}h_{n+1}.
+\]
+Thus,
+\begin{equation}
+h_n=(2^nn!)^{-1/2} C^n h_0 =\pi^{-1/4} (2^nn!)^{-1/2} C^n (e^{-x^2/2}).
+\label{creation}
+\end{equation}
+
+For $\phi \in \mathscr{S}$,
+\[
+B-C=2D.
+\]
+Furthermore,
+\[
+BC = -D^2+M^2+1=A
+\]
+and
+\[
+CB = -D^2+M^2-1=A-2.
+\]
+
+
+
+\section{The Fourier transform}
+Define $\mathscr{F}:\mathscr{S} \to \mathscr{S}$, for $\phi \in \mathscr{S}$, by
+\[
+(\mathscr{F}\phi)(\xi)=\hat{\phi}(\xi)= \int_{\mathbb{R}} \phi(x) e^{-i\xi x} \frac{dx}{(2\pi)^{1/2}},
+\qquad \xi \in \mathbb{R}.
+\]
+For $\xi \in \mathbb{R}$, by the dominated convergence theorem we have
+\[
+\lim_{h \to 0} \frac{\hat{\phi}(\xi+h)-\hat{\phi}(\xi)}{h} = \int_{\mathbb{R}} (-ix) \phi(x) e^{-i\xi x}  \frac{dx}{(2\pi)^{1/2}},,
+\]
+i.e.
+\[
+\widehat{x\phi(x)}(\xi) =-i^{-1} D \hat{\phi}(\xi) = iD \hat{\phi}(\xi),
+\]
+in other words,
+\begin{equation}
+\mathscr{F}(M\phi) = iD(\mathscr{F}\phi).
+\label{xphi}
+\end{equation}
+Also, by the dominated convergence theorem we obtain
+\[
+\widehat{D \phi}(\xi) = i\xi \hat{\phi}(\xi),
+\]
+in other words,
+\begin{equation}
+\mathscr{F}(D\phi) = iM(\mathscr{F}\phi).
+\label{phiderivative}
+\end{equation}
+For $\phi \in \mathscr{S}$,
+\begin{equation}
+\phi(x) = \int_{\mathbb{R}} \hat{\phi}(\xi) e^{ix \xi} \frac{d\xi}{(2\pi)^{1/2}},\qquad
+x \in \mathbb{R}.
+\label{inversion}
+\end{equation}
+$\phi \mapsto \hat{\phi}$ is an isomorphism of locally convex spaces
+$\mathscr{S} \to \mathscr{S}$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~186, Theorem 7.7.}
+Using \eqref{inversion} and the Cauchy-Schwarz inequality
+\begin{align*}
+\norm{\phi}_\infty& \leq \int_{\mathbb{R}} (1+\xi^2)^{1/2} (1+\xi^2)^{-1/2} |\hat{\phi}(\xi)| \frac{d\xi}{(2\pi)^{1/2}}\\
+&\leq (2\pi)^{-1/2} \left(\int_{\mathbb{R}} (1+\xi^2)^{-1} d\xi\right)^{1/2} 
+\left( \int_{\mathbb{R}} (1+\xi^2) |\hat{\phi}(\xi)|^2 d\xi \right)^{1/2}\\
+&=2^{-1/2} \left( \int_{\mathbb{R}} (1+\xi^2) |\hat{\phi}(\xi)|^2 d\xi \right)^{1/2},
+\end{align*}
+and using  \eqref{phiderivative} and the fact that $|\hat{\phi}|_{L^2}=|\phi|_{L^2}$,
+\begin{align*}
+\norm{\phi}_\infty^2&\leq 2^{-1}  \int_{\mathbb{R}}  |\hat{\phi}(\xi)|^2 d\xi
++ 2^{-1} \int_{\mathbb{R}} \xi^2 |\hat{\phi}(\xi)|^2 d\xi\\
+&=2^{-1}  \int_{\mathbb{R}}  |\hat{\phi}(\xi)|^2 d\xi
++2^{-1} \int_{\mathbb{R}} |(\mathscr{F}\phi')(\xi)|^2 d\xi\\
+&=2^{-1} |\phi|_{L^2}^2 + 2^{-1} |\phi'|_{L^2}^2,
+\end{align*}
+and therefore
+\begin{equation}
+\norm{\phi}_{\infty} \leq 2^{-1/2}(|\phi|_{L^2} + |\phi'|_{L^2}).
+\label{supremum}
+\end{equation}
+
+We remind ourselves that 
+\[
+A=-D^2+M^2+1, \qquad B=D+M,\qquad C=-D+M.
+\]
+Using 
+\[
+\mathscr{F}D = iM\mathscr{F},\qquad D\mathscr{F}=\frac{1}{i}\mathscr{F}M,
+\]
+we get
+\begin{align*}
+\mathscr{F}A&=\mathscr{F}(-D^2+M^2+1)\\
+&=-(iM\mathscr{F})D+(iD\mathscr{F})M+\mathscr{F}\\
+&=-iM(iM\mathscr{F})+iD(iD\mathscr{F})+\mathscr{F}\\
+&=M^2\mathscr{F}-D^2\mathscr{F}+\mathscr{F}\\
+&=A\mathscr{F},
+\end{align*}
+and
+\[
+\mathscr{F}B=\mathscr{F}(D+M)=iM\mathscr{F}+iD\mathscr{F}=iB\mathscr{F}
+\]
+and
+\[
+\mathscr{F}C=\mathscr{F}(-D+M)=-iM\mathscr{F}+iD\mathscr{F}=
+-iC\mathscr{F}.
+\]
+
+We now determine the Fourier transform of the Hermite functions.
+
+\begin{theorem}
+For $n \geq 0$,
+\[
+\mathscr{F}h_n= (-i)^n h_n.
+\]
+\end{theorem}
+\begin{proof}
+For $n \geq 0$, by induction,  from $\mathscr{F}C = -iC\mathscr{F}$ we get
+\[
+\mathscr{F}C^n = (-iC)^n \mathscr{F}.
+\]
+From \eqref{creation},
+\[
+h_n=\pi^{-1/4}(2^n n!)^{-1/2} C^n(e^{-x^2/2}).
+\]
+Writing $g(x)=e^{-x^2/2}$, it is a fact that
+\[
+\mathscr{F}g = g,
+\]
+and using this with the above yields
+\begin{align*}
+\mathscr{F}h_n&=\pi^{-1/4}(2^n n!)^{-1/2} \mathscr{F} C^n g\\
+&=\pi^{-1/4}(2^n n!)^{-1/2} (-iC)^n  \mathscr{F}g\\
+&=\pi^{-1/4}(2^n n!)^{-1/2} (-iC)^ng\\
+&=\pi^{-1/4}(2^n n!)^{-1/2} (-i)^n \cdot \pi^{1/4} (2^n n!)^{1/2} h_n\\
+&=(-i)^n h_n.
+\end{align*}
+\end{proof}
+
+
+
+There is a unique Hilbert space isomorphism $\mathscr{F}:L^2(\lambda) \to L^2(\lambda)$
+such that $\mathscr{F}f=\hat{f}$ for all $f \in \mathscr{S}$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~188, Theorem 7.9.}
+For $f \in L^2(\lambda)$, 
+\[
+f = \sum_{n=0}^\infty (f,h_n)_{L^2} h_n,
+\]
+and then
+\[
+\mathscr{F} f = \sum_{n=0}^\infty (f,h_n)_{L^2} \mathscr{F}h_n
+= \sum_{n=0}^\infty (f,h_n)_{L^2} (-i)^n h_n.
+\]
+
+
+\section{Asymptotics}
+For $x=0$, \eqref{generating} reads
+\[
+\sum_{n=0}^\infty \frac{1}{n!} H_n(0)z^n = \exp(-z^2) = \sum_{n=0}^\infty \frac{(-z^2)^n}{n!},
+\]
+thus
+\[
+H_{2n}(0) = (-1)^n \frac{(2n)!}{n!},\qquad H_{2n+1}(0)=0.
+\]
+Similarly, taking the derivative of \eqref{generating} with respect to $x$ yields
+\[
+H_{2n}'(0)=0,\qquad H_{2n+1}'(0) = 2(-1)^n \frac{(2n+1)!}{n!}.
+\]
+
+For $u(x) = e^{-x^2/2} H_n(x)$,\footnote{N. N. Lebedev, {\em Special Functions and Their Applications},
+p.~66, \S 4.14.}
+\[
+u'(x) = -xu +e^{-x^2/2} H_n'(x),\qquad u''(x) = -u-xu'-xe^{-x^2/2} H_n'(x)+e^{-x^2/2} H_n''(x).
+\]
+Using
+\[
+H_n'(x)=2xH_n(x)-H_{n+1}(x),\qquad H_n'(x)=2nH_{n-1}(x)
+\]
+we get
+\[
+H_n''(x)  - 2xH_n'(x) + 2nH_n(x) = 0,
+\]
+and thence
+\[
+u''= -u+x^2 u - 2nu.
+\]
+Thus, writing $f(x)=x^2 u(x)$, $u$ satisfies the initial value problem
+\begin{equation}
+v'' + (2n+1) v = f,\qquad v(0)=H_n(0),\qquad v'(0)=H_n'(0).
+\label{IVP}
+\end{equation}
+
+Now, for $\lambda>0$, two linearly independent solutions of
+$v'' + \lambda v = 0$
+are $v_1(x) =\cos(\lambda^{1/2} x)$ and $v_2(x) = \sin(\lambda^{1/2}x)$. 
+The Wronskian of $(v_1,v_2)$ is $W=\lambda^{1/2}$, and using variation of parameters, 
+if $v$ satisfies $v''+\lambda v = g$ then
+there are $c_1,c_2$ such that 
+\[
+v(x) = c_1v_1 + c_2v_2 + Av_1 + Bv_2,
+\]
+where
+\[
+A(x) = -\int_0^x \frac{1}{W} v_2(t) g(t) dt,\qquad B(x) = \int_0^x \frac{1}{W} v_1(t) g(t) dt.
+\]
+We calculate that the unique solution 
+of the initial value problem $v''+\lambda v = g$, $v(0)=a$, $v'(0)=b$, is
+\begin{align*}
+v(x)& =  a v_1(x) +b \lambda^{-1/2} v_2(x)\\
+&- \lambda^{-1/2} v_1(x) \int_0^x v_2(t) g(t) dt
++ \lambda^{-1/2} v_2(x) \int_0^x v_1(t) g(t) dt\\
+&=a\cos(\lambda^{1/2} x) + b\lambda^{-1/2} \sin(\lambda^{1/2}x)\\
+&+
+\lambda^{-1/2} \int_0^x ( \cos(\lambda^{1/2} t) \sin(\lambda^{1/2} x) 
+-\sin(\lambda^{1/2} t)\cos(\lambda^{1/2} x)) g(t) dt\\
+&=a\cos(\lambda^{1/2} x) + b\lambda^{-1/2} \sin(\lambda^{1/2}x)+\lambda^{-1/2} \int_0^x \sin(\lambda^{1/2}(x-t)) g(t) dt.
+\end{align*}
+Therefore the unique solution of the initial value problem \eqref{IVP} is 
+\begin{align*}
+v(x) &= H_n(0) \cos((2n+1)^{1/2} x)+H_n'(0) (2n+1)^{-1/2} \sin((2n+1)^{1/2} x) \\
+&+ (2n+1)^{-1/2} \int_0^x \sin((2n+1)^{1/2}(x-t)) \cdot t^2 u(t) dt,
+\end{align*}
+where $u(x) = e^{-x^2/2} H_n(x)$. 
+If $n=2k$ then
+\begin{align*}
+v(x) &= (-1)^k \frac{(2k)!}{k!} \cos((4k+1)^{1/2}x)\\
+&+(4k+1)^{-1/2} \int_0^x \sin((4k+1)^{1/2}(x-t))\cdot t^2 u(t) dt\\
+&= (-1)^k \frac{(2k)!}{k!} \cos((4k+1)^{1/2}x) +(4k+1)^{-1/2}r_{2k}(x).
+\end{align*}
+We calculate
+\begin{align*}
+|r_{2k}(x)|^2&\leq \left(\int_0^{|x|} t^4 dt \right) \left( \int_0^{|x|} |u(t)|^2 dt \right)\\
+&\leq \frac{|x|^5}{10} \cdot \int_{\mathbb{R}} e^{-t^2}  |H_{2k}(t)|^2 dt\\
+&=  \frac{|x|^5}{10} \cdot 2^{2k} (2k)! \sqrt{\pi},
+\end{align*}
+i.e.
+\[
+|r_{2k}(x)| \leq \pi^{1/4} \frac{|x|^{5/2}}{\sqrt{10}} 2^k \sqrt{(2k)!}.
+\]
+By Stirling's approximation,
+\begin{align*}
+\frac{2^k \sqrt{(2k)!}}{\frac{(2k)!}{k!}}&=  \frac{2^k k!}{\sqrt{(2k)!}}
+\sim \frac{2^k (2\pi k)^{1/2} k^k e^{-k}}{((4\pi k)^{1/2} (2k)^{2k} e^{-2k})^{1/2}}
+=\pi^{1/4} k^{1/4}.
+\end{align*}
+Thus for $\alpha_{2k} = \frac{(2k)!}{k!}$, 
+\[
+\frac{|r_{2k}(x)|}{\alpha_{2k}}  = O(|x|^{5/2} \cdot k^{1/4} \cdot k^{-1/2})
+=O(|x|^{5/2} k^{-1/4}). 
+\]
+
+Thangavelu states the following inequality and asymptotics without proof, and refers to
+Szeg\H{o} and Muckenhoupt.\footnote{Sundaram Thangavelu, {\em Lectures on Hermite and Laguerre Expansions},
+pp.~26--27, Lemma 1.5.1 and Lemma 1.5.2;
+G\'abor Szeg\H{o}, {\em Orthogonal Polynomials};
+Benjamin Muckenhoupt, {\em Mean convergence of Hermite and Laguerre series. II},
+Trans. Amer. Math. Soc. \textbf{147} (1970), 433--470, Lemma 15.}
+
+\begin{lemma}
+There are $\gamma,C,\epsilon>0$ such that
+for $N=2n+1$,
+\begin{align*}
+|h_n(x)|&\leq C(N^{1/3} + |x^2-N|)^{-1/4},\qquad x^2 \leq 2N\\
+&\leq Ce^{-\gamma x^2},\qquad x^2>2N,
+\end{align*}
+and
+\[
+|h_n(x)| \leq N^{-1/8} (x-N^{1/2})^{-1/4} e^{-\epsilon N^{1/4}(x-N^{1/2})^{3/2}}
+\]
+for $N^{1/2}+N^{-1/6} \leq x \leq (2N)^{1/2}$. 
+\end{lemma}
+
+
+\begin{lemma}
+For $N=2n+1$,
+$0 \leq x \leq N^{\frac{1}{2}}-N^{-\frac{1}{6}}$, and $\theta=\arccos(xN^{-\frac{1}{2}})$,
+\[
+h_n(x) = \left(\frac{2}{\pi}\right)^{1/2} (N-x^2)^{-1/4} \cos \left( \frac{N(2\theta-\sin\theta)-\pi}{4}\right)
++O(N^{1/2}(N-x^2)^{-7/4}).
+\]
+\end{lemma}
+
+\begin{theorem}
+\begin{enumerate}
+\item $\norm{h_n}_p \asymp n^{\frac{1}{2p}-\frac{1}{4}}$ for $1 \leq p < 4$.
+\item $\norm{h_n}_p \asymp n^{-\frac{1}{8}} \log n$ for $p=4$.
+\item $\norm{h_n}_p \asymp n^{-\frac{1}{6p}-\frac{1}{12}}$ for $4<p \leq \infty$. 
+\end{enumerate}
+\end{theorem}
+
+
+Rather than taking the $p$th power of $h_n$, one can instead take the $p$th power of $H_n$ and integrate this with respect to Gaussian measure. Writing
+$d\gamma(x) = (2\pi)^{-1/2} e^{-x^2/2}dx$ and taking $H_n$ to be the Hermite polynomial that is monic, now write
+\[
+\norm{H_n}_p^p = \int_{\mathbb{R}} |H_n|^p d\gamma.
+\]
+Larsson-Cohn\footnote{Lars Larsson-Cohn, {\em $L^p$-norms of Hermite polynomials and an extremal problem on Wiener chaos},
+Ark. Mat. \textbf{40} (2002), 134--144.} proves that for $0<p<2$ there is an explicit $c(p)$ such that 
+\[
+\norm{H_n}_p = \frac{c(p)}{n^{1/4}} \sqrt{n!} (1+O(n^{-1})),
+\]
+and for $2<p<\infty$ there is an explicit $c(p)$ such that
+\[
+\norm{H_n}_p = \frac{c(p)}{n^{1/4}} \sqrt{n!} (p-1)^{n/2} (1+O(n^{-1})).
+\]
+This uses the asymptotic expansion of Plancherel and Rotach.\footnote{M. Plancherel and W. Rotach, {\em Sur les valeurs asymptotiques des polynomes d'Hermite},
+{\em Commentarii mathematici Helvetici} \textbf{1} (1929), 227--254.}
+
+
+\end{document}

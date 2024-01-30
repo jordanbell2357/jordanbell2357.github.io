@@ -1,0 +1,3174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/mnt/c/Users/Jordan/Documents/GitHub/LaTeX/LaTeXML/ising"?>
+<?latexml class="article"?>
+<?latexml package="amsmath,amssymb,graphicx,subfig"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>Gibbs measures and the Ising model</title>
+  <creator role="author">
+    <personname>Jordan Bell</personname>
+  </creator>
+  <date role="creation">July 1, 2014</date>
+  <para xml:id="p1">
+    <p>Let <Math mode="inline" tex="\Lambda" text="Lambda" xml:id="p1.m1">
+        <XMath>
+          <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+        </XMath>
+      </Math> be a finite subset of <Math mode="inline" tex="\mathbb{Z}^{2}" text="Z ^ 2" xml:id="p1.m2">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="blackboard" role="UNKNOWN">Z</XMTok>
+            <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and let <Math mode="inline" tex="\Lambda^{\prime}=\mathbb{Z}^{2}\setminus\Lambda" text="Lambda ^ prime = Z ^ 2 set-minus Lambda" xml:id="p1.m3">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+              <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+            </XMApp>
+            <XMApp>
+              <XMTok meaning="set-minus" name="setminus" role="ADDOP">∖</XMTok>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="blackboard" role="UNKNOWN">Z</XMTok>
+                <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+              <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. Let <Math mode="inline" tex="\sigma^{\prime}\in\{-1,+1\}^{\Lambda^{\prime}}" text="sigma ^ prime element-of (set@(- 1, + 1)) ^ Lambda ^ prime" xml:id="p1.m4">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+              <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+            </XMApp>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMDual>
+                <XMApp>
+                  <XMTok meaning="set"/>
+                  <XMRef idref="p1.m4.1"/>
+                  <XMRef idref="p1.m4.2"/>
+                </XMApp>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">{</XMTok>
+                  <XMApp xml:id="p1.m4.1">
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMTok role="PUNCT">,</XMTok>
+                  <XMApp xml:id="p1.m4.2">
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">}</XMTok>
+                </XMWrap>
+              </XMDual>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+                <XMTok fontsize="50%" name="prime" role="SUPOP">′</XMTok>
+              </XMApp>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, a fixed configuration of spins
+outside <Math mode="inline" tex="\Lambda" text="Lambda" xml:id="p1.m5">
+        <XMath>
+          <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+        </XMath>
+      </Math>. Let <Math mode="inline" tex="\Omega=\{-1,+1\}^{\Lambda}" text="Omega = (set@(- 1, + 1)) ^ Lambda" xml:id="p1.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMTok name="Omega" role="UNKNOWN">Ω</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMDual>
+                <XMApp>
+                  <XMTok meaning="set"/>
+                  <XMRef idref="p1.m6.1"/>
+                  <XMRef idref="p1.m6.2"/>
+                </XMApp>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">{</XMTok>
+                  <XMApp xml:id="p1.m6.1">
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMTok role="PUNCT">,</XMTok>
+                  <XMApp xml:id="p1.m6.2">
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">}</XMTok>
+                </XMWrap>
+              </XMDual>
+              <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>; <Math mode="inline" tex="\Omega" text="Omega" xml:id="p1.m7">
+        <XMath>
+          <XMTok name="Omega" role="UNKNOWN">Ω</XMTok>
+        </XMath>
+      </Math> is the space of all configurations of spins on <Math mode="inline" tex="\Lambda" text="Lambda" xml:id="p1.m8">
+        <XMath>
+          <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+        </XMath>
+      </Math>. We define a Hamiltonian <Math mode="inline" tex="H_{\Lambda}(\cdot|\sigma^{\prime}):\Omega\to\mathbb{R}" xml:id="p1.m9">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">H</XMTok>
+            <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+          </XMApp>
+          <XMWrap>
+            <XMTok role="OPEN" stretchy="false">(</XMTok>
+            <XMTok name="cdot" role="MULOP">⋅</XMTok>
+            <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+              <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+            </XMApp>
+            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+          </XMWrap>
+          <XMTok name="colon" role="METARELOP">:</XMTok>
+          <XMTok name="Omega" role="UNKNOWN">Ω</XMTok>
+          <XMTok name="to" role="ARROW">→</XMTok>
+          <XMTok font="blackboard" role="UNKNOWN">R</XMTok>
+        </XMath>
+      </Math> (depending on the fixed external configuration <Math mode="inline" tex="\sigma^{\prime}" text="sigma ^ prime" xml:id="p1.m10">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>) by</p>
+    <equation xml:id="S0.Ex1">
+      <Math mode="display" tex="H_{\Lambda}(\sigma|\sigma^{\prime})=-\sum_{\stackrel{{\scriptstyle x,y\in%&#10;\Lambda}}{{|x-y|=1}}}\sigma(x)\sigma(y)-\sum_{\stackrel{{\scriptstyle x\in%&#10;\Lambda,y\in\Lambda^{\prime}}}{{|x-y|=1}}}\sigma(x)\sigma^{\prime}(y)." text="H _ Lambda * conditional@(sigma, sigma ^ prime) = - (sum _ ((absolute-value@(x - y) = 1) ^ (list@(x, y) element-of Lambda)))@(sigma * x * sigma * y) - (sum _ ((absolute-value@(x - y) = 1) ^ (formulae@(x element-of Lambda, y element-of Lambda ^ prime))))@(sigma * x * sigma ^ prime * y)" xml:id="S0.Ex1.m1">
+        <XMath>
+          <XMDual>
+            <XMRef idref="S0.Ex1.m1.11"/>
+            <XMWrap>
+              <XMApp xml:id="S0.Ex1.m1.11">
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">H</XMTok>
+                    <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+                  </XMApp>
+                  <XMDual>
+                    <XMRef idref="S0.Ex1.m1.11.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="S0.Ex1.m1.11.1">
+                        <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                          <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                          <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMApp>
+                      <XMApp scriptpos="mid">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                        <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                        <XMApp role="RELOP">
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="mid2"/>
+                          <XMApp>
+                            <XMTok fontsize="70%" meaning="equals" role="RELOP">=</XMTok>
+                            <XMDual>
+                              <XMApp>
+                                <XMTok meaning="absolute-value"/>
+                                <XMRef idref="S0.Ex1.m1.1"/>
+                              </XMApp>
+                              <XMWrap>
+                                <XMTok fontsize="70%" role="VERTBAR" stretchy="false">|</XMTok>
+                                <XMApp xml:id="S0.Ex1.m1.1">
+                                  <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+                                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+                                </XMApp>
+                                <XMTok fontsize="70%" role="VERTBAR" stretchy="false">|</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                            <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                            <XMDual>
+                              <XMApp>
+                                <XMTok meaning="list"/>
+                                <XMRef idref="S0.Ex1.m1.2"/>
+                                <XMRef idref="S0.Ex1.m1.3"/>
+                              </XMApp>
+                              <XMWrap>
+                                <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="S0.Ex1.m1.2">x</XMTok>
+                                <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                                <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="S0.Ex1.m1.3">y</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                            <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                        <XMDual>
+                          <XMRef idref="S0.Ex1.m1.7"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex1.m1.7">x</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                        <XMDual>
+                          <XMRef idref="S0.Ex1.m1.8"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex1.m1.8">y</XMTok>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMApp>
+                  </XMApp>
+                  <XMApp>
+                    <XMApp scriptpos="mid">
+                      <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                      <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                      <XMApp role="RELOP">
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="mid2"/>
+                        <XMApp>
+                          <XMTok fontsize="70%" meaning="equals" role="RELOP">=</XMTok>
+                          <XMDual>
+                            <XMApp>
+                              <XMTok meaning="absolute-value"/>
+                              <XMRef idref="S0.Ex1.m1.4"/>
+                            </XMApp>
+                            <XMWrap>
+                              <XMTok fontsize="70%" role="VERTBAR" stretchy="false">|</XMTok>
+                              <XMApp xml:id="S0.Ex1.m1.4">
+                                <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+                                <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+                              </XMApp>
+                              <XMTok fontsize="70%" role="VERTBAR" stretchy="false">|</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                          <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="formulae"/>
+                            <XMRef idref="S0.Ex1.m1.5"/>
+                            <XMRef idref="S0.Ex1.m1.6"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMApp xml:id="S0.Ex1.m1.5">
+                              <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                              <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+                              <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+                            </XMApp>
+                            <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                            <XMApp xml:id="S0.Ex1.m1.6">
+                              <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                              <XMTok font="italic" fontsize="70%" role="UNKNOWN">y</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                                <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+                                <XMTok fontsize="50%" name="prime" role="SUPOP">′</XMTok>
+                              </XMApp>
+                            </XMApp>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                      <XMDual>
+                        <XMRef idref="S0.Ex1.m1.9"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex1.m1.9">x</XMTok>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                      <XMApp>
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                        <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                      </XMApp>
+                      <XMDual>
+                        <XMRef idref="S0.Ex1.m1.10"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex1.m1.10">y</XMTok>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMTok role="PERIOD">.</XMTok>
+            </XMWrap>
+          </XMDual>
+        </XMath>
+      </Math>
+    </equation>
+    <p><Math mode="inline" tex="H_{\Lambda}(\cdot|\sigma^{\prime})" xml:id="p1.m11">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">H</XMTok>
+            <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+          </XMApp>
+          <XMWrap>
+            <XMTok role="OPEN" stretchy="false">(</XMTok>
+            <XMTok name="cdot" role="MULOP">⋅</XMTok>
+            <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+              <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+            </XMApp>
+            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+          </XMWrap>
+        </XMath>
+      </Math> gives the energy of a configuration <Math mode="inline" tex="\sigma\in\Omega" text="sigma element-of Omega" xml:id="p1.m12">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMTok name="Omega" role="UNKNOWN">Ω</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, conditioned on the external configuration <Math mode="inline" tex="\sigma^{\prime}" text="sigma ^ prime" xml:id="p1.m13">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>.</p>
+  </para>
+  <para xml:id="p2">
+    <p>For a parameter <Math mode="inline" tex="\beta&gt;0" text="beta &gt; 0" xml:id="p2.m1">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="greater-than" role="RELOP">&gt;</XMTok>
+            <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+            <XMTok meaning="0" role="NUMBER">0</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> (called the <text font="italic">inverse temperature</text>), we define the <text font="italic">partition function</text> by</p>
+    <equation xml:id="S0.Ex2">
+      <Math mode="display" tex="Z(\beta,\Lambda,\sigma^{\prime})=\sum_{\sigma\in\Omega}\exp(-\beta H_{\Lambda}%&#10;(\sigma|\sigma^{\prime}))." text="Z * vector@(beta, Lambda, sigma ^ prime) = (sum _ (sigma element-of Omega))@(exponential@(- beta * H _ Lambda * conditional@(sigma, sigma ^ prime)))" xml:id="S0.Ex2.m1">
+        <XMath>
+          <XMDual>
+            <XMRef idref="S0.Ex2.m1.4"/>
+            <XMWrap>
+              <XMApp xml:id="S0.Ex2.m1.4">
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">Z</XMTok>
+                  <XMDual>
+                    <XMApp>
+                      <XMTok meaning="vector"/>
+                      <XMRef idref="S0.Ex2.m1.1"/>
+                      <XMRef idref="S0.Ex2.m1.2"/>
+                      <XMRef idref="S0.Ex2.m1.4.1"/>
+                    </XMApp>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" name="beta" role="UNKNOWN" xml:id="S0.Ex2.m1.1">β</XMTok>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMTok name="Lambda" role="UNKNOWN" xml:id="S0.Ex2.m1.2">Λ</XMTok>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMApp xml:id="S0.Ex2.m1.4.1">
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                        <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMApp scriptpos="mid">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                    <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                    <XMApp>
+                      <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                      <XMTok font="italic" fontsize="70%" name="sigma" role="UNKNOWN">σ</XMTok>
+                      <XMTok fontsize="70%" name="Omega" role="UNKNOWN">Ω</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMDual>
+                    <XMApp>
+                      <XMRef idref="S0.Ex2.m1.3"/>
+                      <XMRef idref="S0.Ex2.m1.4.2"/>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="exponential" role="OPFUNCTION" xml:id="S0.Ex2.m1.3">exp</XMTok>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S0.Ex2.m1.4.2">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                              <XMTok font="italic" role="UNKNOWN">H</XMTok>
+                              <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+                            </XMApp>
+                            <XMDual>
+                              <XMRef idref="S0.Ex2.m1.4.2.1"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMApp xml:id="S0.Ex2.m1.4.2.1">
+                                  <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                                  <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                                  <XMApp>
+                                    <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                                    <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMApp>
+                  </XMDual>
+                </XMApp>
+              </XMApp>
+              <XMTok role="PERIOD">.</XMTok>
+            </XMWrap>
+          </XMDual>
+        </XMath>
+      </Math>
+    </equation>
+<!--  %**** ising.tex Line 25 **** -->    <p>Then we define the <text font="italic">Gibbs distribution</text> for the configuration space <Math mode="inline" tex="\Omega" text="Omega" xml:id="p2.m2">
+        <XMath>
+          <XMTok name="Omega" role="UNKNOWN">Ω</XMTok>
+        </XMath>
+      </Math>, depending on the external configuration <Math mode="inline" tex="\sigma^{\prime}" text="sigma ^ prime" xml:id="p2.m3">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, by</p>
+    <equation xml:id="S0.Ex3">
+      <Math mode="display" tex="P_{\beta,\Lambda}(\sigma|\sigma^{\prime})=\frac{1}{Z(\beta,\Lambda,\sigma^{%&#10;\prime})}\exp(-\beta H(\sigma|\sigma^{\prime}))." text="P _ (list@(beta, Lambda)) * conditional@(sigma, sigma ^ prime) = (1 / (Z * vector@(beta, Lambda, sigma ^ prime))) * exponential@(- beta * H * conditional@(sigma, sigma ^ prime))" xml:id="S0.Ex3.m1">
+        <XMath>
+          <XMDual>
+            <XMRef idref="S0.Ex3.m1.7"/>
+            <XMWrap>
+              <XMApp xml:id="S0.Ex3.m1.7">
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="list"/>
+                        <XMRef idref="S0.Ex3.m1.1"/>
+                        <XMRef idref="S0.Ex3.m1.2"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok font="italic" fontsize="70%" name="beta" role="UNKNOWN" xml:id="S0.Ex3.m1.1">β</XMTok>
+                        <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                        <XMTok fontsize="70%" name="Lambda" role="UNKNOWN" xml:id="S0.Ex3.m1.2">Λ</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMDual>
+                    <XMRef idref="S0.Ex3.m1.7.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="S0.Ex3.m1.7.1">
+                        <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                          <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                          <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">Z</XMTok>
+                      <XMDual>
+                        <XMApp>
+                          <XMTok meaning="vector"/>
+                          <XMRef idref="S0.Ex3.m1.3"/>
+                          <XMRef idref="S0.Ex3.m1.4"/>
+                          <XMRef idref="S0.Ex3.m1.5"/>
+                        </XMApp>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" name="beta" role="UNKNOWN" xml:id="S0.Ex3.m1.3">β</XMTok>
+                          <XMTok role="PUNCT">,</XMTok>
+                          <XMTok name="Lambda" role="UNKNOWN" xml:id="S0.Ex3.m1.4">Λ</XMTok>
+                          <XMTok role="PUNCT">,</XMTok>
+                          <XMApp xml:id="S0.Ex3.m1.5">
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMApp>
+                  <XMDual>
+                    <XMApp>
+                      <XMRef idref="S0.Ex3.m1.6"/>
+                      <XMRef idref="S0.Ex3.m1.7.2"/>
+                    </XMApp>
+                    <XMApp>
+                      <XMTok meaning="exponential" role="OPFUNCTION" xml:id="S0.Ex3.m1.6">exp</XMTok>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S0.Ex3.m1.7.2">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+                            <XMTok font="italic" role="UNKNOWN">H</XMTok>
+                            <XMDual>
+                              <XMRef idref="S0.Ex3.m1.7.2.1"/>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMApp xml:id="S0.Ex3.m1.7.2.1">
+                                  <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                                  <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                                  <XMApp>
+                                    <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                                    <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                                  </XMApp>
+                                </XMApp>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMApp>
+                  </XMDual>
+                </XMApp>
+              </XMApp>
+              <XMTok role="PERIOD">.</XMTok>
+            </XMWrap>
+          </XMDual>
+        </XMath>
+      </Math>
+    </equation>
+    <p>The purpose of the partition function is to normalize the above expression to be a probability measure on the configuration space <Math mode="inline" tex="\Omega" text="Omega" xml:id="p2.m4">
+        <XMath>
+          <XMTok name="Omega" role="UNKNOWN">Ω</XMTok>
+        </XMath>
+      </Math>.</p>
+  </para>
+  <para xml:id="p3">
+    <p>For example, let <Math mode="inline" tex="\Lambda" text="Lambda" xml:id="p3.m1">
+        <XMath>
+          <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+        </XMath>
+      </Math> be a square of side length <Math mode="inline" tex="3" text="3" xml:id="p3.m2">
+        <XMath>
+          <XMTok meaning="3" role="NUMBER">3</XMTok>
+        </XMath>
+      </Math> centred at the origin, and take <Math mode="inline" tex="\sigma^{\prime}" text="sigma ^ prime" xml:id="p3.m3">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> to be an external configuration of all negative spins. Define <Math mode="inline" tex="\sigma\in\Omega" text="sigma element-of Omega" xml:id="p3.m4">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMTok name="Omega" role="UNKNOWN">Ω</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> by</p>
+    <equation xml:id="S0.Ex4">
+      <Math mode="display" tex="\begin{array}[]{lll}\sigma(-1,1)=+1&amp;\sigma(0,1)=+1&amp;\sigma(1,1)=-1\\&#10;\sigma(-1,0)=-1&amp;\sigma(0,0)=+1&amp;\sigma(1,0)=-1\\&#10;\sigma(-1,-1)=-1&amp;\sigma(0,-1)=-1&amp;\sigma(1,-1)=+1.\end{array}" text="Array[[sigma * open-interval@(- 1, 1) = + 1, sigma * open-interval@(0, 1) = + 1, sigma * open-interval@(1, 1) = - 1], [sigma * open-interval@(- 1, 0) = - 1, sigma * open-interval@(0, 0) = + 1, sigma * open-interval@(1, 0) = - 1], [sigma * open-interval@(- 1, - 1) = - 1, sigma * open-interval@(0, - 1) = - 1, sigma * open-interval@(1, - 1) = + 1]]" xml:id="S0.Ex4.m1">
+        <XMath>
+          <XMArray role="ARRAY" vattach="middle">
+            <XMRow>
+              <XMCell align="left">
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="open-interval"/>
+                        <XMRef idref="S0.Ex4.m1.2"/>
+                        <XMRef idref="S0.Ex4.m1.1"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S0.Ex4.m1.2">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok meaning="1" role="NUMBER" xml:id="S0.Ex4.m1.1">1</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMCell>
+              <XMCell align="left">
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="open-interval"/>
+                        <XMRef idref="S0.Ex4.m1.3"/>
+                        <XMRef idref="S0.Ex4.m1.4"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok meaning="0" role="NUMBER" xml:id="S0.Ex4.m1.3">0</XMTok>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok meaning="1" role="NUMBER" xml:id="S0.Ex4.m1.4">1</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMCell>
+              <XMCell align="left">
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="open-interval"/>
+                        <XMRef idref="S0.Ex4.m1.5"/>
+                        <XMRef idref="S0.Ex4.m1.6"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok meaning="1" role="NUMBER" xml:id="S0.Ex4.m1.5">1</XMTok>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok meaning="1" role="NUMBER" xml:id="S0.Ex4.m1.6">1</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMCell>
+            </XMRow>
+            <XMRow>
+              <XMCell align="left">
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="open-interval"/>
+                        <XMRef idref="S0.Ex4.m1.8"/>
+                        <XMRef idref="S0.Ex4.m1.7"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S0.Ex4.m1.8">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok meaning="0" role="NUMBER" xml:id="S0.Ex4.m1.7">0</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMCell>
+              <XMCell align="left">
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="open-interval"/>
+                        <XMRef idref="S0.Ex4.m1.9"/>
+                        <XMRef idref="S0.Ex4.m1.10"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok meaning="0" role="NUMBER" xml:id="S0.Ex4.m1.9">0</XMTok>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok meaning="0" role="NUMBER" xml:id="S0.Ex4.m1.10">0</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMCell>
+              <XMCell align="left">
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="open-interval"/>
+                        <XMRef idref="S0.Ex4.m1.11"/>
+                        <XMRef idref="S0.Ex4.m1.12"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok meaning="1" role="NUMBER" xml:id="S0.Ex4.m1.11">1</XMTok>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMTok meaning="0" role="NUMBER" xml:id="S0.Ex4.m1.12">0</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMCell>
+            </XMRow>
+            <XMRow>
+              <XMCell align="left">
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="open-interval"/>
+                        <XMRef idref="S0.Ex4.m1.13"/>
+                        <XMRef idref="S0.Ex4.m1.14"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMApp xml:id="S0.Ex4.m1.13">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMApp xml:id="S0.Ex4.m1.14">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMCell>
+              <XMCell align="left">
+                <XMApp>
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="open-interval"/>
+                        <XMRef idref="S0.Ex4.m1.15"/>
+                        <XMRef idref="S0.Ex4.m1.16"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok meaning="0" role="NUMBER" xml:id="S0.Ex4.m1.15">0</XMTok>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMApp xml:id="S0.Ex4.m1.16">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+              </XMCell>
+              <XMCell align="left">
+                <XMDual>
+                  <XMRef idref="S0.Ex4.m1.18"/>
+                  <XMWrap>
+                    <XMApp xml:id="S0.Ex4.m1.18">
+                      <XMTok meaning="equals" role="RELOP">=</XMTok>
+                      <XMApp>
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="open-interval"/>
+                            <XMRef idref="S0.Ex4.m1.17"/>
+                            <XMRef idref="S0.Ex4.m1.18.1"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMTok meaning="1" role="NUMBER" xml:id="S0.Ex4.m1.17">1</XMTok>
+                            <XMTok role="PUNCT">,</XMTok>
+                            <XMApp xml:id="S0.Ex4.m1.18.1">
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok meaning="1" role="NUMBER">1</XMTok>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMTok meaning="1" role="NUMBER">1</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok role="PERIOD">.</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMCell>
+            </XMRow>
+          </XMArray>
+        </XMath>
+      </Math>
+    </equation>
+    <p>We show this configuration in Figure <ref labelref="LABEL:figure1"/>. We calculate that the energy of this configuration is <Math mode="inline" tex="H_{\Lambda}(\sigma|\sigma^{\prime})=0" text="H _ Lambda * conditional@(sigma, sigma ^ prime) = 0" xml:id="p3.m5">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">H</XMTok>
+                <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="p3.m5.1"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p3.m5.1">
+                    <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                      <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                      <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMTok meaning="0" role="NUMBER">0</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. We can calculate the energy of this configuration in a different way, using line segments separating lattice points with different spins, as follows. For an <Math mode="inline" tex="n\times n" text="n * n" xml:id="p3.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">×</XMTok>
+            <XMTok font="italic" role="UNKNOWN">n</XMTok>
+            <XMTok font="italic" role="UNKNOWN">n</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> square, there are <Math mode="inline" tex="2n(n+1)" text="2 * n * (n + 1)" xml:id="p3.m7">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+            <XMTok meaning="2" role="NUMBER">2</XMTok>
+            <XMTok font="italic" role="UNKNOWN">n</XMTok>
+            <XMDual>
+              <XMRef idref="p3.m7.1"/>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                <XMApp xml:id="p3.m7.1">
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">n</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math> nearest neighbor interactions. Put a line segment between every two
+lattice points with different spins; let <Math mode="inline" tex="B(\sigma|\sigma^{\prime})" text="B * conditional@(sigma, sigma ^ prime)" xml:id="p3.m8">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+            <XMTok font="italic" role="UNKNOWN">B</XMTok>
+            <XMDual>
+              <XMRef idref="p3.m8.1"/>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                <XMApp xml:id="p3.m8.1">
+                  <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                  <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math> be the set of these line segments. We show this in Figure <ref labelref="LABEL:figure2"/>.</p>
+  </para>
+  <figure inlist="lof" labels="LABEL:figure1" xml:id="S0.F1">
+    <tags>
+      <tag>Figure 1</tag>
+      <tag role="refnum">1</tag>
+      <tag role="typerefnum">Figure 1</tag>
+    </tags>
+    <graphics candidates="config1.eps,config1.pdf" class="ltx_centering" graphic="config1" options="width=216.81pt" xml:id="S0.F1.g1"/>
+    <toccaption><tag close=" ">1</tag>An example of a configuration (and negative external spins)</toccaption>
+    <caption><tag close=": ">Figure 1</tag>An example of a configuration (and negative external spins)</caption>
+  </figure>
+  <figure inlist="lof" labels="LABEL:figure2" xml:id="S0.F2">
+    <tags>
+      <tag>Figure 2</tag>
+      <tag role="refnum">2</tag>
+      <tag role="typerefnum">Figure 2</tag>
+    </tags>
+    <graphics candidates="config2.eps,config2.pdf" class="ltx_centering" graphic="config2" options="width=216.81pt" xml:id="S0.F2.g1"/>
+    <toccaption><tag close=" ">2</tag>Calculating energy using contours</toccaption>
+    <caption><tag close=": ">Figure 2</tag>Calculating energy using contours</caption>
+  </figure>
+  <para xml:id="p4">
+    <p>Generally, if <Math mode="inline" tex="\Lambda" text="Lambda" xml:id="p4.m1">
+        <XMath>
+          <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+        </XMath>
+      </Math> is an <Math mode="inline" tex="n\times n" text="n * n" xml:id="p4.m2">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">×</XMTok>
+            <XMTok font="italic" role="UNKNOWN">n</XMTok>
+            <XMTok font="italic" role="UNKNOWN">n</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> square then we have</p>
+    <equation xml:id="S0.Ex5">
+      <Math mode="display" tex="H_{\Lambda}(\sigma|\sigma^{\prime})=-2n(n+1)+2|B(\sigma|\sigma^{\prime})|." xml:id="S0.Ex5.m1">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">H</XMTok>
+            <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+          </XMApp>
+          <XMWrap>
+            <XMTok role="OPEN" stretchy="false">(</XMTok>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+              <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+            </XMApp>
+            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+          </XMWrap>
+          <XMTok meaning="equals" role="RELOP">=</XMTok>
+          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+          <XMTok meaning="2" role="NUMBER">2</XMTok>
+          <XMTok font="italic" role="UNKNOWN">n</XMTok>
+          <XMWrap>
+            <XMTok role="OPEN" stretchy="false">(</XMTok>
+            <XMTok font="italic" role="UNKNOWN">n</XMTok>
+            <XMTok meaning="plus" role="ADDOP">+</XMTok>
+            <XMTok meaning="1" role="NUMBER">1</XMTok>
+            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+          </XMWrap>
+          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+          <XMTok meaning="2" role="NUMBER">2</XMTok>
+          <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+          <XMTok font="italic" role="UNKNOWN">B</XMTok>
+          <XMWrap>
+            <XMTok role="OPEN" stretchy="false">(</XMTok>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+              <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+            </XMApp>
+            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+          </XMWrap>
+          <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+          <XMTok role="PERIOD">.</XMTok>
+        </XMath>
+      </Math>
+    </equation>
+    <p>Indeed, in our above example, <Math mode="inline" tex="n=3" text="n = 3" xml:id="p4.m3">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMTok font="italic" role="UNKNOWN">n</XMTok>
+            <XMTok meaning="3" role="NUMBER">3</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="|B(\sigma|\sigma^{\prime})|=12" xml:id="p4.m4">
+        <XMath>
+          <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+          <XMTok font="italic" role="UNKNOWN">B</XMTok>
+          <XMWrap>
+            <XMTok role="OPEN" stretchy="false">(</XMTok>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+              <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+            </XMApp>
+            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+          </XMWrap>
+          <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+          <XMTok meaning="equals" role="RELOP">=</XMTok>
+          <XMTok meaning="12" role="NUMBER">12</XMTok>
+        </XMath>
+      </Math>, so the above expression is <Math mode="inline" tex="-24+2\cdot 12=0" text="(- 24) + 2 cdot 12 = 0" xml:id="p4.m5">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok meaning="plus" role="ADDOP">+</XMTok>
+              <XMApp>
+                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                <XMTok meaning="24" role="NUMBER">24</XMTok>
+              </XMApp>
+              <XMApp>
+                <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                <XMTok meaning="12" role="NUMBER">12</XMTok>
+              </XMApp>
+            </XMApp>
+            <XMTok meaning="0" role="NUMBER">0</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, and we have already calculated that <Math mode="inline" tex="H_{\Lambda}(\sigma|\sigma^{\prime})=0" text="H _ Lambda * conditional@(sigma, sigma ^ prime) = 0" xml:id="p4.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">H</XMTok>
+                <XMTok fontsize="70%" name="Lambda" role="UNKNOWN">Λ</XMTok>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="p4.m6.1"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p4.m6.1">
+                    <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                      <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                      <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMTok meaning="0" role="NUMBER">0</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. What matters is that if we know the external configuration, then to describe the configuration inside a region <Math mode="inline" tex="\Lambda" text="Lambda" xml:id="p4.m7">
+        <XMath>
+          <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+        </XMath>
+      </Math> it suffices to know the edges that separate opposite spins. And since the energy of any configuration has the term <Math mode="inline" tex="-2n(n+1)" text="- 2 * n * (n + 1)" xml:id="p4.m8">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMTok meaning="2" role="NUMBER">2</XMTok>
+              <XMTok font="italic" role="UNKNOWN">n</XMTok>
+              <XMDual>
+                <XMRef idref="p4.m8.1"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p4.m8.1">
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok font="italic" role="UNKNOWN">n</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> and this appears in the numerator and denominator of the expression for the Gibbs distribution, we can omit it to calculate the Gibbs distribution. By a <text font="italic">contour</text> we mean a closed path of edges that does not intersect itself. We can express the Gibbs distribution in terms of contours as</p>
+    <equation xml:id="S0.Ex6">
+      <Math mode="display" tex="P_{\beta,\Lambda}(\sigma|\sigma^{\prime})=\frac{\prod_{\gamma\in\Gamma(\sigma,%&#10;\sigma^{\prime})}\exp(-2|\gamma|)}{\sum_{\Gamma}\prod_{\gamma\in\Gamma}\exp(-2%&#10;\beta|\gamma|)};" text="P _ (list@(beta, Lambda)) * conditional@(sigma, sigma ^ prime) = (product _ (gamma element-of Gamma * open-interval@(sigma, sigma ^ prime)))@(exponential@(- 2 * absolute-value@(gamma))) / (sum _ Gamma)@((product _ (gamma element-of Gamma))@(exponential@(- 2 * beta * absolute-value@(gamma))))" xml:id="S0.Ex6.m1">
+        <XMath>
+          <XMDual>
+            <XMRef idref="S0.Ex6.m1.11"/>
+            <XMWrap>
+              <XMApp xml:id="S0.Ex6.m1.11">
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="list"/>
+                        <XMRef idref="S0.Ex6.m1.1"/>
+                        <XMRef idref="S0.Ex6.m1.2"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok font="italic" fontsize="70%" name="beta" role="UNKNOWN" xml:id="S0.Ex6.m1.1">β</XMTok>
+                        <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                        <XMTok fontsize="70%" name="Lambda" role="UNKNOWN" xml:id="S0.Ex6.m1.2">Λ</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMDual>
+                    <XMRef idref="S0.Ex6.m1.11.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="S0.Ex6.m1.11.1">
+                        <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                          <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                          <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                  <XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok mathstyle="text" meaning="product" name="prod" role="SUMOP" scriptpos="post">∏</XMTok>
+                      <XMApp>
+                        <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                        <XMTok font="italic" fontsize="70%" name="gamma" role="UNKNOWN">γ</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok fontsize="70%" name="Gamma" role="UNKNOWN">Γ</XMTok>
+                          <XMDual>
+                            <XMApp>
+                              <XMTok meaning="open-interval"/>
+                              <XMRef idref="S0.Ex6.m1.3"/>
+                              <XMRef idref="S0.Ex6.m1.4"/>
+                            </XMApp>
+                            <XMWrap>
+                              <XMTok fontsize="70%" role="OPEN" stretchy="false">(</XMTok>
+                              <XMTok font="italic" fontsize="70%" name="sigma" role="UNKNOWN" xml:id="S0.Ex6.m1.3">σ</XMTok>
+                              <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                              <XMApp xml:id="S0.Ex6.m1.4">
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                                <XMTok font="italic" fontsize="70%" name="sigma" role="UNKNOWN">σ</XMTok>
+                                <XMTok fontsize="50%" name="prime" role="SUPOP">′</XMTok>
+                              </XMApp>
+                              <XMTok fontsize="70%" role="CLOSE" stretchy="false">)</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                      </XMApp>
+                    </XMApp>
+                    <XMDual>
+                      <XMApp>
+                        <XMRef idref="S0.Ex6.m1.6"/>
+                        <XMRef idref="S0.Ex6.m1.7"/>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="exponential" role="OPFUNCTION" xml:id="S0.Ex6.m1.6">exp</XMTok>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp xml:id="S0.Ex6.m1.7">
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              <XMDual>
+                                <XMApp>
+                                  <XMTok meaning="absolute-value"/>
+                                  <XMRef idref="S0.Ex6.m1.5"/>
+                                </XMApp>
+                                <XMWrap>
+                                  <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                                  <XMTok font="italic" name="gamma" role="UNKNOWN" xml:id="S0.Ex6.m1.5">γ</XMTok>
+                                  <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMApp>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMApp>
+                      <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                      <XMTok mathstyle="text" meaning="sum" role="SUMOP" scriptpos="post">∑</XMTok>
+                      <XMTok fontsize="70%" name="Gamma" role="UNKNOWN">Γ</XMTok>
+                    </XMApp>
+                    <XMApp>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMTok mathstyle="text" meaning="product" name="prod" role="SUMOP" scriptpos="post">∏</XMTok>
+                        <XMApp>
+                          <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                          <XMTok font="italic" fontsize="70%" name="gamma" role="UNKNOWN">γ</XMTok>
+                          <XMTok fontsize="70%" name="Gamma" role="UNKNOWN">Γ</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMDual>
+                        <XMApp>
+                          <XMRef idref="S0.Ex6.m1.9"/>
+                          <XMRef idref="S0.Ex6.m1.10"/>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok meaning="exponential" role="OPFUNCTION" xml:id="S0.Ex6.m1.9">exp</XMTok>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMApp xml:id="S0.Ex6.m1.10">
+                              <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                              <XMApp>
+                                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+                                <XMDual>
+                                  <XMApp>
+                                    <XMTok meaning="absolute-value"/>
+                                    <XMRef idref="S0.Ex6.m1.8"/>
+                                  </XMApp>
+                                  <XMWrap>
+                                    <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                                    <XMTok font="italic" name="gamma" role="UNKNOWN" xml:id="S0.Ex6.m1.8">γ</XMTok>
+                                    <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                                  </XMWrap>
+                                </XMDual>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMApp>
+                      </XMDual>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMTok role="PUNCT">;</XMTok>
+            </XMWrap>
+          </XMDual>
+        </XMath>
+      </Math>
+    </equation>
+    <p><Math mode="inline" tex="\Gamma(\sigma,\sigma^{\prime})" text="Gamma * open-interval@(sigma, sigma ^ prime)" xml:id="p4.m9">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+            <XMTok name="Gamma" role="UNKNOWN">Γ</XMTok>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="open-interval"/>
+                <XMRef idref="p4.m9.1"/>
+                <XMRef idref="p4.m9.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                <XMTok font="italic" name="sigma" role="UNKNOWN" xml:id="p4.m9.1">σ</XMTok>
+                <XMTok role="PUNCT">,</XMTok>
+                <XMApp xml:id="p4.m9.2">
+                  <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                  <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                  <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math> is the set of contours corresponding to the configuration <Math mode="inline" tex="\sigma" text="sigma" xml:id="p4.m10">
+        <XMath>
+          <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+        </XMath>
+      </Math> with the external configuration <Math mode="inline" tex="\sigma^{\prime}" text="sigma ^ prime" xml:id="p4.m11">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, and the summation is over all sets <Math mode="inline" tex="\Gamma" text="Gamma" xml:id="p4.m12">
+        <XMath>
+          <XMTok name="Gamma" role="UNKNOWN">Γ</XMTok>
+        </XMath>
+      </Math> of nonintersecting contours.</p>
+  </para>
+  <para xml:id="p5">
+    <p>We are not in fact interested in the Gibbs distribution on the configurations on a finite subset <Math mode="inline" tex="\Lambda" text="Lambda" xml:id="p5.m1">
+        <XMath>
+          <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+        </XMath>
+      </Math> of <Math mode="inline" tex="\mathbb{Z}^{2}" text="Z ^ 2" xml:id="p5.m2">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="blackboard" role="UNKNOWN">Z</XMTok>
+            <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, but instead limits of Gibbs distributions with
+<Math mode="inline" tex="\Lambda_{n}\to\mathbb{Z}^{2}" text="Lambda _ n to Z ^ 2" xml:id="p5.m3">
+        <XMath>
+          <XMApp>
+            <XMTok name="to" role="ARROW">→</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+            </XMApp>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="blackboard" role="UNKNOWN">Z</XMTok>
+              <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. A Gibbs distribution <Math mode="inline" tex="P_{\beta,\Lambda}(\cdot|\sigma^{\prime})" xml:id="p5.m4">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="list"/>
+                <XMRef idref="p5.m4.1"/>
+                <XMRef idref="p5.m4.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok font="italic" fontsize="70%" name="beta" role="UNKNOWN" xml:id="p5.m4.1">β</XMTok>
+                <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                <XMTok fontsize="70%" name="Lambda" role="UNKNOWN" xml:id="p5.m4.2">Λ</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+          <XMWrap>
+            <XMTok role="OPEN" stretchy="false">(</XMTok>
+            <XMTok name="cdot" role="MULOP">⋅</XMTok>
+            <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+              <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+            </XMApp>
+            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+          </XMWrap>
+        </XMath>
+      </Math> on <Math mode="inline" tex="\Omega" text="Omega" xml:id="p5.m5">
+        <XMath>
+          <XMTok name="Omega" role="UNKNOWN">Ω</XMTok>
+        </XMath>
+      </Math> is in fact a probability measure on <Math mode="inline" tex="\{+1,-1\}^{\mathbb{Z}^{2}}" text="(set@(+ 1, - 1)) ^ Z ^ 2" xml:id="p5.m6">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="set"/>
+                <XMRef idref="p5.m6.1"/>
+                <XMRef idref="p5.m6.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">{</XMTok>
+                <XMApp xml:id="p5.m6.1">
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMTok role="PUNCT">,</XMTok>
+                <XMApp xml:id="p5.m6.2">
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">}</XMTok>
+              </XMWrap>
+            </XMDual>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+              <XMTok font="blackboard" fontsize="70%" role="UNKNOWN">Z</XMTok>
+              <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>: for <Math mode="inline" tex="\sigma\in\{+1,-1\}^{\mathbb{Z}^{2}}" text="sigma element-of (set@(+ 1, - 1)) ^ Z ^ 2" xml:id="p5.m7">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+            <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMDual>
+                <XMApp>
+                  <XMTok meaning="set"/>
+                  <XMRef idref="p5.m7.1"/>
+                  <XMRef idref="p5.m7.2"/>
+                </XMApp>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">{</XMTok>
+                  <XMApp xml:id="p5.m7.1">
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMTok role="PUNCT">,</XMTok>
+                  <XMApp xml:id="p5.m7.2">
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">}</XMTok>
+                </XMWrap>
+              </XMDual>
+              <XMApp>
+                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                <XMTok font="blackboard" fontsize="70%" role="UNKNOWN">Z</XMTok>
+                <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+              </XMApp>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, a configuration on the plane, we define
+<!--  %**** ising.tex Line 75 **** --></p>
+    <equation xml:id="S0.Ex7">
+      <Math mode="display" tex="\widetilde{P}_{\beta,\Lambda}(\sigma|\sigma^{\prime})=\begin{cases}0&amp;\sigma|%&#10;\Lambda^{\prime}\neq\sigma^{\prime}\\&#10;P_{\beta,\Lambda}((\sigma|\Lambda)|\sigma^{\prime})&amp;\sigma|\Lambda^{\prime}=%&#10;\sigma^{\prime}.\end{cases}" text="(widetilde@(P)) _ (list@(beta, Lambda)) * conditional@(sigma, sigma ^ prime) = cases@(0, conditional@(sigma, Lambda ^ prime) not-equals sigma ^ prime, P _ (list@(beta, Lambda)) * conditional@(conditional@(sigma, Lambda), sigma ^ prime), conditional@(sigma, Lambda ^ prime) = sigma ^ prime)" xml:id="S0.Ex7.m1">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMApp>
+                  <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="list"/>
+                    <XMRef idref="S0.Ex7.m1.5"/>
+                    <XMRef idref="S0.Ex7.m1.6"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok font="italic" fontsize="70%" name="beta" role="UNKNOWN" xml:id="S0.Ex7.m1.5">β</XMTok>
+                    <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                    <XMTok fontsize="70%" name="Lambda" role="UNKNOWN" xml:id="S0.Ex7.m1.6">Λ</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="S0.Ex7.m1.7"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="S0.Ex7.m1.7">
+                    <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                      <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                      <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="cases"/>
+                <XMRef idref="S0.Ex7.m1.1"/>
+                <XMRef idref="S0.Ex7.m1.2"/>
+                <XMRef idref="S0.Ex7.m1.3"/>
+                <XMRef idref="S0.Ex7.m1.4"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="true">{</XMTok>
+                <XMArray>
+                  <XMRow>
+                    <XMCell align="left">
+                      <XMTok meaning="0" role="NUMBER" xml:id="S0.Ex7.m1.1">0</XMTok>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMApp xml:id="S0.Ex7.m1.2">
+                        <XMTok meaning="not-equals" name="neq" role="RELOP">≠</XMTok>
+                        <XMApp>
+                          <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                          <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post6"/>
+                            <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+                            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post6"/>
+                          <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                          <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                        </XMApp>
+                      </XMApp>
+                    </XMCell>
+                  </XMRow>
+                  <XMRow>
+                    <XMCell align="left">
+                      <XMApp xml:id="S0.Ex7.m1.3">
+                        <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                        <XMApp>
+                          <XMTok role="SUBSCRIPTOP" scriptpos="post6"/>
+                          <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                          <XMDual>
+                            <XMApp>
+                              <XMTok meaning="list"/>
+                              <XMRef idref="S0.Ex7.m1.3.1"/>
+                              <XMRef idref="S0.Ex7.m1.3.2"/>
+                            </XMApp>
+                            <XMWrap>
+                              <XMTok font="italic" fontsize="70%" name="beta" role="UNKNOWN" xml:id="S0.Ex7.m1.3.1">β</XMTok>
+                              <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                              <XMTok fontsize="70%" name="Lambda" role="UNKNOWN" xml:id="S0.Ex7.m1.3.2">Λ</XMTok>
+                            </XMWrap>
+                          </XMDual>
+                        </XMApp>
+                        <XMDual>
+                          <XMRef idref="S0.Ex7.m1.3.3"/>
+                          <XMWrap>
+                            <XMTok role="OPEN" stretchy="false">(</XMTok>
+                            <XMApp xml:id="S0.Ex7.m1.3.3">
+                              <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                              <XMDual>
+                                <XMRef idref="S0.Ex7.m1.3.3.1"/>
+                                <XMWrap>
+                                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                  <XMApp xml:id="S0.Ex7.m1.3.3.1">
+                                    <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                                    <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+                                  </XMApp>
+                                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                                </XMWrap>
+                              </XMDual>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post6"/>
+                                <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                                <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                    </XMCell>
+                    <XMCell align="left">
+                      <XMDual xml:id="S0.Ex7.m1.4">
+                        <XMRef idref="S0.Ex7.m1.4.1"/>
+                        <XMWrap>
+                          <XMApp xml:id="S0.Ex7.m1.4.1">
+                            <XMTok meaning="equals" role="RELOP">=</XMTok>
+                            <XMApp>
+                              <XMTok meaning="conditional" role="MODIFIEROP" stretchy="false">|</XMTok>
+                              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post6"/>
+                                <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+                                <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="post6"/>
+                              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                              <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok role="PERIOD">.</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMCell>
+                  </XMRow>
+                </XMArray>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math>
+    </equation>
+  </para>
+  <para xml:id="p6">
+    <p>Fix some <Math mode="inline" tex="\beta" text="beta" xml:id="p6.m1">
+        <XMath>
+          <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+        </XMath>
+      </Math>.
+Let <Math mode="inline" tex="\Lambda_{n}" text="Lambda _ n" xml:id="p6.m2">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> be a sequence of <Math mode="inline" tex="n\times n" text="n * n" xml:id="p6.m3">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">×</XMTok>
+            <XMTok font="italic" role="UNKNOWN">n</XMTok>
+            <XMTok font="italic" role="UNKNOWN">n</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> squares centred at the origin, let <Math mode="inline" tex="\sigma_{n,+}^{\prime}" text="(sigma _ (list@(n, +))) ^ prime" xml:id="p6.m4">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+              <XMDual>
+                <XMApp>
+                  <XMTok meaning="list"/>
+                  <XMRef idref="p6.m4.1"/>
+                  <XMRef idref="p6.m4.2"/>
+                </XMApp>
+                <XMWrap>
+                  <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p6.m4.1">n</XMTok>
+                  <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                  <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="p6.m4.2">+</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> be a sequence of external configurations where all lattice points outside <Math mode="inline" tex="\Lambda_{n}" text="Lambda _ n" xml:id="p6.m5">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>
+have positive spins, and let <Math mode="inline" tex="\sigma_{n,-}^{\prime}" text="(sigma _ (list@(n, -))) ^ prime" xml:id="p6.m6">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+              <XMDual>
+                <XMApp>
+                  <XMTok meaning="list"/>
+                  <XMRef idref="p6.m6.1"/>
+                  <XMRef idref="p6.m6.2"/>
+                </XMApp>
+                <XMWrap>
+                  <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p6.m6.1">n</XMTok>
+                  <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                  <XMTok fontsize="70%" meaning="minus" role="ADDOP" xml:id="p6.m6.2">-</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> be a sequence of external configurations where all lattice points outside <Math mode="inline" tex="\Lambda_{n}" text="Lambda _ n" xml:id="p6.m7">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok name="Lambda" role="UNKNOWN">Λ</XMTok>
+            <XMTok font="italic" fontsize="70%" role="UNKNOWN">n</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> have negative spins.
+Let <Math mode="inline" tex="P_{n,+}" text="P _ (list@(n, +))" xml:id="p6.m8">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="list"/>
+                <XMRef idref="p6.m8.1"/>
+                <XMRef idref="p6.m8.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p6.m8.1">n</XMTok>
+                <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="p6.m8.2">+</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math> be the sequence of Gibbs distributions corresponding to the positive external spins, and let <Math mode="inline" tex="P_{n,-}" text="P _ (list@(n, -))" xml:id="p6.m9">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="list"/>
+                <XMRef idref="p6.m9.1"/>
+                <XMRef idref="p6.m9.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p6.m9.1">n</XMTok>
+                <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                <XMTok fontsize="70%" meaning="minus" role="ADDOP" xml:id="p6.m9.2">-</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math> be the sequence of Gibbs distributions corresponding to the negative external spins. These extend to probability measures <Math mode="inline" tex="\widetilde{P}_{n,+}" text="(widetilde@(P)) _ (list@(n, +))" xml:id="p6.m10">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMApp>
+              <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+              <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            </XMApp>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="list"/>
+                <XMRef idref="p6.m10.1"/>
+                <XMRef idref="p6.m10.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p6.m10.1">n</XMTok>
+                <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="p6.m10.2">+</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="\widetilde{P}_{n,-}" text="(widetilde@(P)) _ (list@(n, -))" xml:id="p6.m11">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMApp>
+              <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+              <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            </XMApp>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="list"/>
+                <XMRef idref="p6.m11.1"/>
+                <XMRef idref="p6.m11.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p6.m11.1">n</XMTok>
+                <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                <XMTok fontsize="70%" meaning="minus" role="ADDOP" xml:id="p6.m11.2">-</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math> on <Math mode="inline" tex="\{+1,-1\}^{\mathbb{Z}^{2}}" text="(set@(+ 1, - 1)) ^ Z ^ 2" xml:id="p6.m12">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="set"/>
+                <XMRef idref="p6.m12.1"/>
+                <XMRef idref="p6.m12.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">{</XMTok>
+                <XMApp xml:id="p6.m12.1">
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMTok role="PUNCT">,</XMTok>
+                <XMApp xml:id="p6.m12.2">
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">}</XMTok>
+              </XMWrap>
+            </XMDual>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+              <XMTok font="blackboard" fontsize="70%" role="UNKNOWN">Z</XMTok>
+              <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. Since <Math mode="inline" tex="\{+1,-1\}" text="set@(+ 1, - 1)" xml:id="p6.m13">
+        <XMath>
+          <XMDual>
+            <XMApp>
+              <XMTok meaning="set"/>
+              <XMRef idref="p6.m13.1"/>
+              <XMRef idref="p6.m13.2"/>
+            </XMApp>
+            <XMWrap>
+              <XMTok role="OPEN" stretchy="false">{</XMTok>
+              <XMApp xml:id="p6.m13.1">
+                <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                <XMTok meaning="1" role="NUMBER">1</XMTok>
+              </XMApp>
+              <XMTok role="PUNCT">,</XMTok>
+              <XMApp xml:id="p6.m13.2">
+                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                <XMTok meaning="1" role="NUMBER">1</XMTok>
+              </XMApp>
+              <XMTok role="CLOSE" stretchy="false">}</XMTok>
+            </XMWrap>
+          </XMDual>
+        </XMath>
+      </Math> is a compact metrizable space, the product <Math mode="inline" tex="\{+1,-1\}^{\mathbb{Z}^{2}}" text="(set@(+ 1, - 1)) ^ Z ^ 2" xml:id="p6.m14">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="set"/>
+                <XMRef idref="p6.m14.1"/>
+                <XMRef idref="p6.m14.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">{</XMTok>
+                <XMApp xml:id="p6.m14.1">
+                  <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMTok role="PUNCT">,</XMTok>
+                <XMApp xml:id="p6.m14.2">
+                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                  <XMTok meaning="1" role="NUMBER">1</XMTok>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">}</XMTok>
+              </XMWrap>
+            </XMDual>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+              <XMTok font="blackboard" fontsize="70%" role="UNKNOWN">Z</XMTok>
+              <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> is a compact metrizable space and thus the space of probability measures on it is compact. Hence the sequence <Math mode="inline" tex="\widetilde{P}_{n,+}" text="(widetilde@(P)) _ (list@(n, +))" xml:id="p6.m15">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMApp>
+              <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+              <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            </XMApp>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="list"/>
+                <XMRef idref="p6.m15.1"/>
+                <XMRef idref="p6.m15.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p6.m15.1">n</XMTok>
+                <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="p6.m15.2">+</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math>
+has at least one limit point, say <Math mode="inline" tex="P_{+}" text="P _ +" xml:id="p6.m16">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, and the sequence <Math mode="inline" tex="\widetilde{P}_{n,-}" text="(widetilde@(P)) _ (list@(n, -))" xml:id="p6.m17">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMApp>
+              <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+              <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            </XMApp>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="list"/>
+                <XMRef idref="p6.m17.1"/>
+                <XMRef idref="p6.m17.2"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p6.m17.1">n</XMTok>
+                <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                <XMTok fontsize="70%" meaning="minus" role="ADDOP" xml:id="p6.m17.2">-</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math> has at least one limit point, say <Math mode="inline" tex="P_{-}" text="P _ -" xml:id="p6.m18">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. We shall show that <Math mode="inline" tex="P_{+}\neq P_{-}" text="P _ + not-equals P _ -" xml:id="p6.m19">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="not-equals" name="neq" role="RELOP">≠</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">P</XMTok>
+              <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+            </XMApp>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">P</XMTok>
+              <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, namely that there is not a unique limit Gibbs measure on the set of all configurations on <Math mode="inline" tex="\mathbb{Z}^{2}" text="Z ^ 2" xml:id="p6.m20">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="blackboard" role="UNKNOWN">Z</XMTok>
+            <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>.</p>
+  </para>
+  <para xml:id="p7">
+    <p>Let <Math mode="inline" tex="V_{+}=\{\sigma\in\{+1,-1\}^{\mathbb{Z}^{2}}:\sigma(0)=+1\}" text="V _ + = conditional-set@(sigma element-of (set@(+ 1, - 1)) ^ Z ^ 2, sigma * 0 = + 1)" xml:id="p7.m1">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">V</XMTok>
+              <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+            </XMApp>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="conditional-set"/>
+                <XMRef idref="p7.m1.2"/>
+                <XMRef idref="p7.m1.3"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">{</XMTok>
+                <XMApp xml:id="p7.m1.2">
+                  <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                  <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="set"/>
+                        <XMRef idref="p7.m1.2.1"/>
+                        <XMRef idref="p7.m1.2.2"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">{</XMTok>
+                        <XMApp xml:id="p7.m1.2.1">
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMApp xml:id="p7.m1.2.2">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">}</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                      <XMTok font="blackboard" fontsize="70%" role="UNKNOWN">Z</XMTok>
+                      <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+                <XMTok name="colon" role="METARELOP">:</XMTok>
+                <XMApp xml:id="p7.m1.3">
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMDual>
+                      <XMRef idref="p7.m1.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok meaning="0" role="NUMBER" xml:id="p7.m1.1">0</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">}</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="V_{-}=\{\sigma\in\{+1,-1\}^{\mathbb{Z}^{2}}:\sigma(0)=-1\}" text="V _ - = conditional-set@(sigma element-of (set@(+ 1, - 1)) ^ Z ^ 2, sigma * 0 = - 1)" xml:id="p7.m2">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" role="UNKNOWN">V</XMTok>
+              <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+            </XMApp>
+            <XMDual>
+              <XMApp>
+                <XMTok meaning="conditional-set"/>
+                <XMRef idref="p7.m2.2"/>
+                <XMRef idref="p7.m2.3"/>
+              </XMApp>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">{</XMTok>
+                <XMApp xml:id="p7.m2.2">
+                  <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                  <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="set"/>
+                        <XMRef idref="p7.m2.2.1"/>
+                        <XMRef idref="p7.m2.2.2"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">{</XMTok>
+                        <XMApp xml:id="p7.m2.2.1">
+                          <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok role="PUNCT">,</XMTok>
+                        <XMApp xml:id="p7.m2.2.2">
+                          <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                          <XMTok meaning="1" role="NUMBER">1</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">}</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                    <XMApp>
+                      <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                      <XMTok font="blackboard" fontsize="70%" role="UNKNOWN">Z</XMTok>
+                      <XMTok fontsize="50%" meaning="2" role="NUMBER">2</XMTok>
+                    </XMApp>
+                  </XMApp>
+                </XMApp>
+                <XMTok name="colon" role="METARELOP">:</XMTok>
+                <XMApp xml:id="p7.m2.3">
+                  <XMTok meaning="equals" role="RELOP">=</XMTok>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMDual>
+                      <XMRef idref="p7.m2.1"/>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok meaning="0" role="NUMBER" xml:id="p7.m2.1">0</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                    <XMTok meaning="1" role="NUMBER">1</XMTok>
+                  </XMApp>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">}</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math>. Suppose that for all <Math mode="inline" tex="n" text="n" xml:id="p7.m3">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">n</XMTok>
+        </XMath>
+      </Math> we had
+<Math mode="inline" tex="\widetilde{P}_{n,+}(V_{-})&lt;\frac{1}{3}" text="(widetilde@(P)) _ (list@(n, +)) * V _ - less 1 / 3" xml:id="p7.m4">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="less-than" role="RELOP">&lt;</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMApp>
+                  <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="list"/>
+                    <XMRef idref="p7.m4.1"/>
+                    <XMRef idref="p7.m4.2"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p7.m4.1">n</XMTok>
+                    <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                    <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="p7.m4.2">+</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="p7.m4.3"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p7.m4.3">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                    <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMApp>
+              <XMTok mathstyle="text" meaning="divide" role="FRACOP"/>
+              <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. Taking limits we have that <Math mode="inline" tex="P_{+}(V_{-})\leq\frac{1}{3}" text="P _ + * V _ - less= 1 / 3" xml:id="p7.m5">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="p7.m5.1"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p7.m5.1">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                    <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMApp>
+              <XMTok mathstyle="text" meaning="divide" role="FRACOP"/>
+              <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> and so <Math mode="inline" tex="P_{+}(V_{+})\geq\frac{2}{3}" text="P _ + * V _ + &gt;= 2 / 3" xml:id="p7.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="p7.m6.1"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p7.m6.1">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                    <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMApp>
+              <XMTok mathstyle="text" meaning="divide" role="FRACOP"/>
+              <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> (since the events <Math mode="inline" tex="V_{+}" text="V _ +" xml:id="p7.m7">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+            <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="V_{-}" text="V _ -" xml:id="p7.m8">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+            <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> are disjoint and their union is the set of all configurations on <Math mode="inline" tex="\mathbb{Z}^{2}" text="Z ^ 2" xml:id="p7.m9">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="blackboard" role="UNKNOWN">Z</XMTok>
+            <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>). But <Math mode="inline" tex="\widetilde{P}_{n,+}(V_{-})=\widetilde{P}_{n,-}(V_{+})" text="(widetilde@(P)) _ (list@(n, +)) * V _ - = (widetilde@(P)) _ (list@(n, -)) * V _ +" xml:id="p7.m10">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="equals" role="RELOP">=</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMApp>
+                  <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="list"/>
+                    <XMRef idref="p7.m10.1"/>
+                    <XMRef idref="p7.m10.2"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p7.m10.1">n</XMTok>
+                    <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                    <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="p7.m10.2">+</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="p7.m10.5"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p7.m10.5">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                    <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMApp>
+                  <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="list"/>
+                    <XMRef idref="p7.m10.3"/>
+                    <XMRef idref="p7.m10.4"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p7.m10.3">n</XMTok>
+                    <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                    <XMTok fontsize="70%" meaning="minus" role="ADDOP" xml:id="p7.m10.4">-</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="p7.m10.6"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p7.m10.6">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                    <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>, so taking limits we also get <Math mode="inline" tex="P_{-}(V_{+})\leq\frac{1}{3}" text="P _ - * V _ + less= 1 / 3" xml:id="p7.m11">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="p7.m11.1"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p7.m11.1">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                    <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMApp>
+              <XMTok mathstyle="text" meaning="divide" role="FRACOP"/>
+              <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. Therefore the measures <Math mode="inline" tex="P_{+}" text="P _ +" xml:id="p7.m12">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="P_{-}" text="P _ -" xml:id="p7.m13">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> give different measures to the set <Math mode="inline" tex="V_{+}" text="V _ +" xml:id="p7.m14">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+            <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, so they are distinct. Thus to show that the measures <Math mode="inline" tex="P_{+}" text="P _ +" xml:id="p7.m15">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> and <Math mode="inline" tex="P_{-}" text="P _ -" xml:id="p7.m16">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">P</XMTok>
+            <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> are distinct it suffices to show that for all <Math mode="inline" tex="n" text="n" xml:id="p7.m17">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">n</XMTok>
+        </XMath>
+      </Math> we have <Math mode="inline" tex="\widetilde{P}_{n,+}(V_{-})&lt;\frac{1}{3}" text="(widetilde@(P)) _ (list@(n, +)) * V _ - less 1 / 3" xml:id="p7.m18">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="less-than" role="RELOP">&lt;</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMApp>
+                  <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="list"/>
+                    <XMRef idref="p7.m18.1"/>
+                    <XMRef idref="p7.m18.2"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p7.m18.1">n</XMTok>
+                    <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                    <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="p7.m18.2">+</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="p7.m18.3"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p7.m18.3">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                    <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMApp>
+              <XMTok mathstyle="text" meaning="divide" role="FRACOP"/>
+              <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>.</p>
+  </para>
+  <para xml:id="p8">
+    <p>We have</p>
+    <equationgroup class="ltx_eqn_eqnarray" xml:id="Sx1.EGx1">
+      <equation xml:id="S0.Ex10">
+        <MathFork>
+          <Math tex="\displaystyle\widetilde{P}_{n,+}(V_{-})\leq\text{Prob}\left(\textrm{there %&#10;exists a contour}\,\gamma\subset B(\sigma|\sigma^{\prime}),0\in\text{Int}(%&#10;\gamma)\right)\leq\sum_{\stackrel{{\scriptstyle\gamma}}{{0\in\text{Int}(\gamma%&#10;)}}}\text{Prob}(\gamma\subset B(\sigma|\sigma^{\prime}))\leq\sum_{\stackrel{{%&#10;\scriptstyle\gamma}}{{0\in\text{Int}(\gamma)}}}\exp(-2\beta|\gamma|)." xml:id="S0.Ex10.m4">
+            <XMath>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                <XMApp>
+                  <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="list"/>
+                    <XMRef idref="S0.Ex10.m4.1"/>
+                    <XMRef idref="S0.Ex10.m4.2"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="S0.Ex10.m4.1">n</XMTok>
+                    <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                    <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="S0.Ex10.m4.2">+</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                <XMApp>
+                  <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                  <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                  <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                </XMApp>
+                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+              </XMWrap>
+              <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+              <XMText>Prob</XMText>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="true">(</XMTok>
+                <XMText rpadding="1.7pt">there exists a contour</XMText>
+                <XMTok font="italic" name="gamma" role="UNKNOWN">γ</XMTok>
+                <XMTok meaning="subset-of" name="subset" role="RELOP">⊂</XMTok>
+                <XMTok font="italic" role="UNKNOWN">B</XMTok>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                  <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+                <XMTok role="PUNCT">,</XMTok>
+                <XMTok meaning="0" role="NUMBER">0</XMTok>
+                <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                <XMText>Int</XMText>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMTok font="italic" name="gamma" role="UNKNOWN">γ</XMTok>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+                <XMTok role="CLOSE" stretchy="true">)</XMTok>
+              </XMWrap>
+              <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+              <XMApp scriptpos="mid">
+                <XMTok role="SUBSCRIPTOP" scriptpos="mid2"/>
+                <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                <XMApp role="RELOP">
+                  <XMTok role="SUPERSCRIPTOP" scriptpos="mid3"/>
+                  <XMApp>
+                    <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                    <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMText><text fontsize="70%">Int</text></XMText>
+                      <XMDual>
+                        <XMRef idref="S0.Ex10.m4.3"/>
+                        <XMWrap>
+                          <XMTok fontsize="70%" role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" fontsize="70%" name="gamma" role="UNKNOWN" xml:id="S0.Ex10.m4.3">γ</XMTok>
+                          <XMTok fontsize="70%" role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok font="italic" fontsize="70%" name="gamma" role="UNKNOWN">γ</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMText>Prob</XMText>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                <XMTok font="italic" name="gamma" role="UNKNOWN">γ</XMTok>
+                <XMTok meaning="subset-of" name="subset" role="RELOP">⊂</XMTok>
+                <XMTok font="italic" role="UNKNOWN">B</XMTok>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                  <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                  <XMApp>
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                    <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                    <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+              </XMWrap>
+              <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+              <XMApp scriptpos="mid">
+                <XMTok role="SUBSCRIPTOP" scriptpos="mid2"/>
+                <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                <XMApp role="RELOP">
+                  <XMTok role="SUPERSCRIPTOP" scriptpos="mid3"/>
+                  <XMApp>
+                    <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                    <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMText><text fontsize="70%">Int</text></XMText>
+                      <XMDual>
+                        <XMRef idref="S0.Ex10.m4.4"/>
+                        <XMWrap>
+                          <XMTok fontsize="70%" role="OPEN" stretchy="false">(</XMTok>
+                          <XMTok font="italic" fontsize="70%" name="gamma" role="UNKNOWN" xml:id="S0.Ex10.m4.4">γ</XMTok>
+                          <XMTok fontsize="70%" role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMApp>
+                  <XMTok font="italic" fontsize="70%" name="gamma" role="UNKNOWN">γ</XMTok>
+                </XMApp>
+              </XMApp>
+              <XMTok meaning="exponential" role="OPFUNCTION">exp</XMTok>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                <XMTok meaning="2" role="NUMBER">2</XMTok>
+                <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+                <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                <XMTok font="italic" name="gamma" role="UNKNOWN">γ</XMTok>
+                <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+              </XMWrap>
+              <XMTok role="PERIOD">.</XMTok>
+            </XMath>
+          </Math>
+          <MathBranch>
+            <tr>
+              <td align="right"><Math mode="inline" tex="\displaystyle\widetilde{P}_{n,+}(V_{-})" text="(widetilde@(P)) _ (list@(n, +)) * V _ -" xml:id="S0.Ex8.m1">
+                  <XMath>
+                    <XMApp>
+                      <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                      <XMApp>
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                        <XMApp>
+                          <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+                          <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                        </XMApp>
+                        <XMDual>
+                          <XMApp>
+                            <XMTok meaning="list"/>
+                            <XMRef idref="S0.Ex8.m1.1"/>
+                            <XMRef idref="S0.Ex8.m1.2"/>
+                          </XMApp>
+                          <XMWrap>
+                            <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="S0.Ex8.m1.1">n</XMTok>
+                            <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                            <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="S0.Ex8.m1.2">+</XMTok>
+                          </XMWrap>
+                        </XMDual>
+                      </XMApp>
+                      <XMDual>
+                        <XMRef idref="S0.Ex8.m1.3"/>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp xml:id="S0.Ex8.m1.3">
+                            <XMTok role="SUBSCRIPTOP" scriptpos="post2"/>
+                            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                            <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMDual>
+                    </XMApp>
+                  </XMath>
+                </Math></td>
+              <td align="center"><Math mode="inline" tex="\displaystyle\leq" text="less=" xml:id="S0.Ex8.m2">
+                  <XMath>
+                    <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                  </XMath>
+                </Math></td>
+              <td align="left"><Math mode="inline" tex="\displaystyle\text{Prob}\left(\textrm{there exists a contour}\,\gamma\subset B%&#10;(\sigma|\sigma^{\prime}),0\in\text{Int}(\gamma)\right)" xml:id="S0.Ex8.m3">
+                  <XMath>
+                    <XMText>Prob</XMText>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="true">(</XMTok>
+                      <XMText rpadding="1.7pt">there exists a contour</XMText>
+                      <XMTok font="italic" name="gamma" role="UNKNOWN">γ</XMTok>
+                      <XMTok meaning="subset-of" name="subset" role="RELOP">⊂</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">B</XMTok>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                        <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post3"/>
+                          <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                          <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                      <XMTok role="PUNCT">,</XMTok>
+                      <XMTok meaning="0" role="NUMBER">0</XMTok>
+                      <XMTok meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                      <XMText>Int</XMText>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok font="italic" name="gamma" role="UNKNOWN">γ</XMTok>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                      <XMTok role="CLOSE" stretchy="true">)</XMTok>
+                    </XMWrap>
+                  </XMath>
+                </Math></td>
+            </tr>
+            <tr>
+              <td align="right"/>
+              <td align="center"><Math mode="inline" tex="\displaystyle\leq" text="less=" xml:id="S0.Ex9.m2">
+                  <XMath>
+                    <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                  </XMath>
+                </Math></td>
+              <td align="left"><Math mode="inline" tex="\displaystyle\sum_{\stackrel{{\scriptstyle\gamma}}{{0\in\text{Int}(\gamma)}}}%&#10;\text{Prob}(\gamma\subset B(\sigma|\sigma^{\prime}))" xml:id="S0.Ex9.m3">
+                  <XMath>
+                    <XMApp scriptpos="mid">
+                      <XMTok role="SUBSCRIPTOP" scriptpos="mid2"/>
+                      <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                      <XMApp role="RELOP">
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="mid3"/>
+                        <XMApp>
+                          <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                          <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMText><text fontsize="70%">Int</text></XMText>
+                            <XMDual>
+                              <XMRef idref="S0.Ex9.m3.1"/>
+                              <XMWrap>
+                                <XMTok fontsize="70%" role="OPEN" stretchy="false">(</XMTok>
+                                <XMTok font="italic" fontsize="70%" name="gamma" role="UNKNOWN" xml:id="S0.Ex9.m3.1">γ</XMTok>
+                                <XMTok fontsize="70%" role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMDual>
+                          </XMApp>
+                        </XMApp>
+                        <XMTok font="italic" fontsize="70%" name="gamma" role="UNKNOWN">γ</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMText>Prob</XMText>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" name="gamma" role="UNKNOWN">γ</XMTok>
+                      <XMTok meaning="subset-of" name="subset" role="RELOP">⊂</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">B</XMTok>
+                      <XMWrap>
+                        <XMTok role="OPEN" stretchy="false">(</XMTok>
+                        <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                        <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                          <XMTok font="italic" name="sigma" role="UNKNOWN">σ</XMTok>
+                          <XMTok fontsize="70%" name="prime" role="SUPOP">′</XMTok>
+                        </XMApp>
+                        <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                      </XMWrap>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMath>
+                </Math></td>
+            </tr>
+            <tr>
+              <td align="right"/>
+              <td align="center"><Math mode="inline" tex="\displaystyle\leq" text="less=" xml:id="S0.Ex10.m2">
+                  <XMath>
+                    <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                  </XMath>
+                </Math></td>
+              <td align="left"><Math mode="inline" tex="\displaystyle\sum_{\stackrel{{\scriptstyle\gamma}}{{0\in\text{Int}(\gamma)}}}%&#10;\exp(-2\beta|\gamma|)." text="(sum _ ((0 element-of [Int] * gamma) ^ gamma))@(exponential@(- 2 * beta * absolute-value@(gamma)))" xml:id="S0.Ex10.m3">
+                  <XMath>
+                    <XMDual>
+                      <XMRef idref="S0.Ex10.m3.4"/>
+                      <XMWrap>
+                        <XMApp xml:id="S0.Ex10.m3.4">
+                          <XMApp scriptpos="mid">
+                            <XMTok role="SUBSCRIPTOP" scriptpos="mid2"/>
+                            <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                            <XMApp role="RELOP">
+                              <XMTok role="SUPERSCRIPTOP" scriptpos="mid3"/>
+                              <XMApp>
+                                <XMTok fontsize="70%" meaning="element-of" name="in" role="RELOP">∈</XMTok>
+                                <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                                <XMApp>
+                                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                  <XMText><text fontsize="70%">Int</text></XMText>
+                                  <XMDual>
+                                    <XMRef idref="S0.Ex10.m3.1"/>
+                                    <XMWrap>
+                                      <XMTok fontsize="70%" role="OPEN" stretchy="false">(</XMTok>
+                                      <XMTok font="italic" fontsize="70%" name="gamma" role="UNKNOWN" xml:id="S0.Ex10.m3.1">γ</XMTok>
+                                      <XMTok fontsize="70%" role="CLOSE" stretchy="false">)</XMTok>
+                                    </XMWrap>
+                                  </XMDual>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok font="italic" fontsize="70%" name="gamma" role="UNKNOWN">γ</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMDual>
+                            <XMApp>
+                              <XMRef idref="S0.Ex10.m3.3"/>
+                              <XMRef idref="S0.Ex10.m3.4.1"/>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="exponential" role="OPFUNCTION" xml:id="S0.Ex10.m3.3">exp</XMTok>
+                              <XMWrap>
+                                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                                <XMApp xml:id="S0.Ex10.m3.4.1">
+                                  <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMApp>
+                                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                                    <XMTok meaning="2" role="NUMBER">2</XMTok>
+                                    <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+                                    <XMDual>
+                                      <XMApp>
+                                        <XMTok meaning="absolute-value"/>
+                                        <XMRef idref="S0.Ex10.m3.2"/>
+                                      </XMApp>
+                                      <XMWrap>
+                                        <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                                        <XMTok font="italic" name="gamma" role="UNKNOWN" xml:id="S0.Ex10.m3.2">γ</XMTok>
+                                        <XMTok role="VERTBAR" stretchy="false">|</XMTok>
+                                      </XMWrap>
+                                    </XMDual>
+                                  </XMApp>
+                                </XMApp>
+                                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                              </XMWrap>
+                            </XMApp>
+                          </XMDual>
+                        </XMApp>
+                        <XMTok role="PERIOD">.</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMath>
+                </Math></td>
+            </tr>
+          </MathBranch>
+        </MathFork>
+      </equation>
+    </equationgroup>
+    <p>The above sum is over all contours such that the origin lies in their interior. We can write the set of all contours around the origin as a union of the set of all contours of length <Math mode="inline" tex="k" text="k" xml:id="p8.m1">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">k</XMTok>
+        </XMath>
+      </Math> around the origin, <Math mode="inline" tex="k\geq 4" text="k &gt;= 4" xml:id="p8.m2">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok>
+            <XMTok font="italic" role="UNKNOWN">k</XMTok>
+            <XMTok meaning="4" role="NUMBER">4</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>. There are at most <Math mode="inline" tex="\left(\frac{k}{4}\right)^{2}4^{k}" text="(k / 4) ^ 2 * 4 ^ k" xml:id="p8.m3">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMDual>
+                <XMRef idref="p8.m3.1"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="true">(</XMTok>
+                  <XMApp xml:id="p8.m3.1">
+                    <XMTok mathstyle="text" meaning="divide" role="FRACOP"/>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN">k</XMTok>
+                    <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="true">)</XMTok>
+                </XMWrap>
+              </XMDual>
+              <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+            </XMApp>
+            <XMApp>
+              <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+              <XMTok meaning="4" role="NUMBER">4</XMTok>
+              <XMTok font="italic" fontsize="70%" role="UNKNOWN">k</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> contours of length <Math mode="inline" tex="k" text="k" xml:id="p8.m4">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">k</XMTok>
+        </XMath>
+      </Math> around the origin. Therefore</p>
+    <equation xml:id="S0.Ex11">
+      <Math mode="display" tex="\widetilde{P}_{n,+}(V_{-})\leq\sum_{k=4}^{\infty}\frac{k^{2}}{16}\cdot 4^{k}%&#10;\exp(-2\beta k)." text="(widetilde@(P)) _ (list@(n, +)) * V _ - less= ((sum _ (k = 4)) ^ infinity)@(((k ^ 2 / 16) cdot 4 ^ k) * exponential@(- 2 * beta * k))" xml:id="S0.Ex11.m1">
+        <XMath>
+          <XMDual>
+            <XMRef idref="S0.Ex11.m1.4"/>
+            <XMWrap>
+              <XMApp xml:id="S0.Ex11.m1.4">
+                <XMTok meaning="less-than-or-equals" name="leq" role="RELOP">≤</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMApp>
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+<!--  %**** ising.tex Line 100 **** -->                    <XMApp>
+                      <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+                      <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                    </XMApp>
+                    <XMDual>
+                      <XMApp>
+                        <XMTok meaning="list"/>
+                        <XMRef idref="S0.Ex11.m1.1"/>
+                        <XMRef idref="S0.Ex11.m1.2"/>
+                      </XMApp>
+                      <XMWrap>
+                        <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="S0.Ex11.m1.1">n</XMTok>
+                        <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                        <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="S0.Ex11.m1.2">+</XMTok>
+                      </XMWrap>
+                    </XMDual>
+                  </XMApp>
+                  <XMDual>
+                    <XMRef idref="S0.Ex11.m1.4.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="S0.Ex11.m1.4.1">
+                        <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                        <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                        <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMApp scriptpos="mid">
+                    <XMTok role="SUPERSCRIPTOP" scriptpos="mid1"/>
+                    <XMApp scriptpos="mid">
+                      <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                      <XMTok mathstyle="display" meaning="sum" role="SUMOP" scriptpos="mid">∑</XMTok>
+                      <XMApp>
+                        <XMTok fontsize="70%" meaning="equals" role="RELOP">=</XMTok>
+                        <XMTok font="italic" fontsize="70%" role="UNKNOWN">k</XMTok>
+                        <XMTok fontsize="70%" meaning="4" role="NUMBER">4</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMTok fontsize="70%" meaning="infinity" name="infty" role="ID">∞</XMTok>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                    <XMApp>
+                      <XMTok name="cdot" role="MULOP">⋅</XMTok>
+                      <XMApp>
+                        <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                        <XMApp>
+                          <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                          <XMTok font="italic" role="UNKNOWN">k</XMTok>
+                          <XMTok fontsize="70%" meaning="2" role="NUMBER">2</XMTok>
+                        </XMApp>
+                        <XMTok meaning="16" role="NUMBER">16</XMTok>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                        <XMTok meaning="4" role="NUMBER">4</XMTok>
+                        <XMTok font="italic" fontsize="70%" role="UNKNOWN">k</XMTok>
+                      </XMApp>
+                    </XMApp>
+                    <XMDual>
+                      <XMApp>
+                        <XMRef idref="S0.Ex11.m1.3"/>
+                        <XMRef idref="S0.Ex11.m1.4.2"/>
+                      </XMApp>
+                      <XMApp>
+                        <XMTok meaning="exponential" role="OPFUNCTION" xml:id="S0.Ex11.m1.3">exp</XMTok>
+                        <XMWrap>
+                          <XMTok role="OPEN" stretchy="false">(</XMTok>
+                          <XMApp xml:id="S0.Ex11.m1.4.2">
+                            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok meaning="2" role="NUMBER">2</XMTok>
+                              <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">k</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                        </XMWrap>
+                      </XMApp>
+                    </XMDual>
+                  </XMApp>
+                </XMApp>
+              </XMApp>
+              <XMTok role="PERIOD">.</XMTok>
+            </XMWrap>
+          </XMDual>
+        </XMath>
+      </Math>
+    </equation>
+    <p>As <Math mode="inline" tex="\beta\to\infty" text="beta to infinity" xml:id="p8.m5">
+        <XMath>
+          <XMApp>
+            <XMTok name="to" role="ARROW">→</XMTok>
+            <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+            <XMTok meaning="infinity" name="infty" role="ID">∞</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, this is <Math mode="inline" tex="O(\exp(-8\beta))" text="O * exponential@(- 8 * beta)" xml:id="p8.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+            <XMTok font="italic" role="UNKNOWN">O</XMTok>
+            <XMDual>
+              <XMRef idref="p8.m6.2"/>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                <XMDual xml:id="p8.m6.2">
+                  <XMApp>
+                    <XMRef idref="p8.m6.1"/>
+                    <XMRef idref="p8.m6.2.1"/>
+                  </XMApp>
+                  <XMApp>
+                    <XMTok meaning="exponential" role="OPFUNCTION" xml:id="p8.m6.1">exp</XMTok>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="p8.m6.2.1">
+                        <XMTok meaning="minus" role="ADDOP">-</XMTok>
+                        <XMApp>
+                          <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                          <XMTok meaning="8" role="NUMBER">8</XMTok>
+                          <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMApp>
+                </XMDual>
+                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math>. In particular there is some <Math mode="inline" tex="\beta_{0}" text="beta _ 0" xml:id="p8.m7">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+            <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> such that if <Math mode="inline" tex="\beta\geq\beta_{0}" text="beta &gt;= beta _ 0" xml:id="p8.m8">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="greater-than-or-equals" name="geq" role="RELOP">≥</XMTok>
+            <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+            <XMApp>
+              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+              <XMTok font="italic" name="beta" role="UNKNOWN">β</XMTok>
+              <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math> then for all <Math mode="inline" tex="n" text="n" xml:id="p8.m9">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">n</XMTok>
+        </XMath>
+      </Math> we have <Math mode="inline" tex="\widetilde{P}_{n,+}(V_{-})&lt;\frac{1}{3}" text="(widetilde@(P)) _ (list@(n, +)) * V _ - less 1 / 3" xml:id="p8.m10">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="less-than" role="RELOP">&lt;</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMApp>
+                <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                <XMApp>
+                  <XMTok name="widetilde" role="OVERACCENT">~</XMTok>
+                  <XMTok font="italic" role="UNKNOWN">P</XMTok>
+                </XMApp>
+                <XMDual>
+                  <XMApp>
+                    <XMTok meaning="list"/>
+                    <XMRef idref="p8.m10.1"/>
+                    <XMRef idref="p8.m10.2"/>
+                  </XMApp>
+                  <XMWrap>
+                    <XMTok font="italic" fontsize="70%" role="UNKNOWN" xml:id="p8.m10.1">n</XMTok>
+                    <XMTok fontsize="70%" role="PUNCT">,</XMTok>
+                    <XMTok fontsize="70%" meaning="plus" role="ADDOP" xml:id="p8.m10.2">+</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+              <XMDual>
+                <XMRef idref="p8.m10.3"/>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMApp xml:id="p8.m10.3">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                    <XMTok font="italic" role="UNKNOWN">V</XMTok>
+                    <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                  </XMApp>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMDual>
+            </XMApp>
+            <XMApp>
+              <XMTok mathstyle="text" meaning="divide" role="FRACOP"/>
+              <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+              <XMTok fontsize="70%" meaning="3" role="NUMBER">3</XMTok>
+            </XMApp>
+          </XMApp>
+        </XMath>
+      </Math>. This shows
+that the limit Gibbs measures gives different measures to the set <Math mode="inline" tex="V_{+}" text="V _ +" xml:id="p8.m11">
+        <XMath>
+          <XMApp>
+            <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+            <XMTok font="italic" role="UNKNOWN">V</XMTok>
+            <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>, hence they are distinct.</p>
+  </para>
+  <section xml:id="Sx1">
+    <title>Further reading</title>
+    <para xml:id="Sx1.p1">
+      <p>Minlos <cite class="ltx_citemacro_cite">[<bibref bibrefs="minlos" separator="," yyseparator=","/>]</cite>, Sinai <cite class="ltx_citemacro_cite">[<bibref bibrefs="MR691854" separator="," yyseparator=","/>]</cite>, Cipra <cite class="ltx_citemacro_cite">[<bibref bibrefs="MR936054" separator="," yyseparator=","/>]</cite>, Simon <cite class="ltx_citemacro_cite">[<bibref bibrefs="simon" separator="," yyseparator=","/>]</cite>, Le Ny <cite class="ltx_citemacro_cite">[<bibref bibrefs="ny" separator="," yyseparator=","/>]</cite>, Kadanoff <cite class="ltx_citemacro_cite">[<bibref bibrefs="kadanoff" separator="," yyseparator=","/>]</cite>.</p>
+    </para>
+  </section>
+  <bibliography bibstyle="plain" citestyle="numbers" files="ising" xml:id="bib">
+    <title>References</title>
+  </bibliography>
+</document>

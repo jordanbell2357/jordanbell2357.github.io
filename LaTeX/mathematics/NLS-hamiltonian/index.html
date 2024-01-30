@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jordan Bell" />
+  <meta name="dcterms.date" content="2014-04-03" />
+  <title>The nonlinear Schrödinger equation is Hamiltonian</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      word-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.js"></script>
+  <script>document.addEventListener("DOMContentLoaded", function () {
+   var mathElements = document.getElementsByClassName("math");
+   var macros = [];
+   for (var i = 0; i < mathElements.length; i++) {
+    var texText = mathElements[i].firstChild;
+    if (mathElements[i].tagName == "SPAN") {
+     katex.render(texText.data, mathElements[i], {
+      displayMode: mathElements[i].classList.contains('display'),
+      throwOnError: false,
+      macros: macros,
+      fleqn: false
+     });
+  }}});
+  </script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.11.1/katex.min.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">The nonlinear Schrödinger equation is Hamiltonian</h1>
+<p class="author">Jordan Bell</p>
+<p class="date">April 3, 2014</p>
+</header>
+<p>Let <span class="math display">H(u)=\int \frac{1}{2}|\nabla u|^2+\frac{2\mu}{p+1}|u|^{p+1}dx.</span> We have <span class="math display">H(u+\epsilon v)=
+\int \frac{1}{2} \nabla (u+\epsilon v) \nabla (\overline{u}+\epsilon \overline{v})+
+\frac{2\mu}{p+1} (u+\epsilon v)^{\frac{p+1}{2}} (\overline{u}+\epsilon \overline{v})^{\frac{p+1}{2}}.</span> We have, for <span class="math inline">v \in T_u</span>, <span class="math display">\begin{aligned}
+dH(u)v&amp;=&amp;\frac{d}{d\epsilon}|_{\epsilon=0} H(u+\epsilon v)\\
+&amp;=&amp;\int \frac{1}{2}\left( \nabla v \nabla \overline{u}+\nabla u \nabla \overline{v} \right)\\
+&amp;&amp;+\frac{2\mu}{p+1}\left( \frac{p+1}{2} u^{\frac{p-1}{2}}v \overline{u}^{\frac{p+1}{2}}
++\frac{p+1}{2}u^{\frac{p+1}{2}} \overline{u}^{\frac{p-1}{2}}\overline{v} \right) dx\\
+&amp;=&amp;\Re\int \nabla \overline{v} \nabla u+2\mu|u|^{p-1} u \overline{v} dx\\
+&amp;=&amp;\Re \int \left(-\Delta u+2\mu|u|^{p-1} u\right) \overline{v} dx.\end{aligned}</span></p>
+<p>Define <span class="math display">\omega(v_1,v_2)=-2 \Im \int v_1 \overline{v_2} dx.</span> The Hamiltonian vector field <span class="math inline">X_H</span> of <span class="math inline">H</span> is defined, for <span class="math inline">v \in T_u</span>, by <span class="math display">\omega(X_H(u),v)=dH(u)v.</span> Therefore we have for <span class="math inline">v \in T_u</span> that <span class="math display">\begin{aligned}
+-2\Im \int X_H(u) \overline{v} dx&amp;=&amp;\Re \int \left(-\Delta u+2\mu|u|^{p-1} u\right) \overline{v} dx\\
+&amp;=&amp;\Im \int \left(-i\Delta u+2i\mu |u|^{p-1} u\right) \overline{v} dx.\end{aligned}</span> It follows that <span class="math display">-2X_H(u)=-i\Delta u+2i\mu |u|^{p-1} u,</span> i.e., <span class="math display">X_H(u)=\frac{i}{2}\Delta u-i\mu  |u|^{p-1} u.</span></p>
+<p>The flow <span class="math inline">S(t)</span> of the Hamiltonian vector field <span class="math inline">X_H</span> satisfies, for any <span class="math inline">u_0</span> and for <span class="math inline">u(t)=S(t)u_0</span>, <span class="math display">u_t(t) = X_H(u(t))=\frac{i}{2}\Delta u(t)-i\mu  |u(t)|^{p-1} u(t).</span> This equation can be written as <span class="math display">iu_t(t)+\frac{1}{2} \Delta u(t)=\mu  |u(t)|^{p-1} u(t).</span></p>
+</body>
+</html>

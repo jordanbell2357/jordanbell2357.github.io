@@ -1,0 +1,303 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\point}{\ensuremath\sigma_{\mathrm{point}}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}}
+\newcommand{\diam}{\ensuremath\mathrm{diam}}
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}}
+\newcommand{\LSC}{\ensuremath\mathrm{LSC}}
+\newcommand{\USC}{\ensuremath\mathrm{USC}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The uniform metric on product spaces}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+\maketitle
+
+\section{Metric topology}
+If $(X,d)$ is a metric space, $a \in X$, and $r>0$, then the {\em open ball with center $a$ and radius $r$} is 
+\[
+B_r^d(a)=\{x \in X: d(x,a)<r\}.
+\]
+The set of all open balls is a basis for 
+the {\em metric topology induced by $d$}.
+
+If $(X,d)$ is a metric space,  define
+\[
+\overline{d}(a,b)=d(a,b) \wedge 1, \qquad a,b \in X,
+\]
+where $x \wedge y = \min\{x,y\}$.
+It is straightforward to check that $\overline{d}$ is a metric on $X$, and one proves that $d$ and $\overline{d}$ induce the same metric
+topologies.\footnote{James Munkres, {\em Topology}, second ed., p.~121, Theorem 20.1.}
+The {\em diameter} of a subset $S$ of a metric space $(X,d)$ is
+\[
+\diam (S,d)=\sup_{a,b \in S} d(a,b).
+\]
+The subset $S$ is said to be {\em bounded} if its diameter is finite. 
+The metric space $(X,d)$ might  be unbounded, but the diameter of the metric space
+$(X,\overline{d})$ is 
+\[
+\diam(X,\overline{d})= \sup_{a,b \in X} \overline{d}(a,b)= \diam(X,d) \wedge 1,
+\]
+and thus the metric space $(X,\overline{d})$ is bounded.
+
+\section{Product topology}
+If $J$ is a set and $X_j$ are topological spaces for each $j \in J$, let $X=\prod_{j \in J} X_j$ and let $\pi_j:X \to X_j$ be the projection maps.
+A basis for the {\em product topology} on $X$ are those sets of the form $\bigcap_{j \in J_0} \pi_j^{-1}(U_j)$, where $J_0$ is a finite subset
+of $J$ and $U_j$ is an open subset of $X_j$, $j \in J_0$.
+Equivalently, the product topology is the initial topology for the projection maps $\pi_j:X \to X_j$, $j \in J$, i.e. the coarsest topology on $X$ such that
+each projection map is continuous. Each of the projection maps is open.\footnote{John L. Kelley, {\em General Topology},
+p.~90, Theorem 2.}  The following theorem characterizes convergent nets in the product topology.\footnote{John L. Kelley, {\em General Topology}, p.~91, Theorem 4.}
+
+\begin{theorem}
+Let $J$ be a set and for each $j \in J$ let $X_j$ be a topological space. If $X=\prod_{j \in J} X_j$ has the product topology
+and $(x_\alpha)_{\alpha \in I}$ is a net in $X$, then $x_\alpha \to x$ if and only if $\pi_j(x_\alpha) \to \pi_j(x)$ for each $j \in J$.
+\end{theorem}
+\begin{proof}
+Let $(x_\alpha)_{\alpha \in I}$ be a net that converges to $x \in X$. Because each projection map is continuous, if $j \in J$ then
+$\pi_j(x_\alpha) \to \pi_j(x)$. On the other hand, suppose that $(x_\alpha)_{\alpha \in I}$ is a net, that $x \in X$,
+ and that $\pi_j(x_\alpha) \to \pi_j(x)$
+for each $j \in J$. Let $\mathscr{O}_j$ be the set of open neighborhoods of $\pi_j(x) \in X_j$. 
+For $j \in J$ and $U \in \mathscr{O}_j$, because 
+$\pi_j(x_\alpha) \to \pi_j(x)$ we have that
+$\pi_j(x_\alpha)$ is eventually in $U$. It follows that
+if $j \in J$ and $U \in \mathscr{O}_j$ then  $x_\alpha$ is eventually in $\pi_j^{-1}(U)$.
+Therefore, if $J_0$ is a finite subset of $J$ and $U_j \in \mathscr{O}_j$ for each $j \in J_0$, then 
+$x_\alpha$ is eventually in $\bigcap_{j \in J_0} \pi_j^{-1}(U_j)$. This means that the net $(x_\alpha)_{\alpha \in I}$ is eventually
+in every basic open neighborhood of $x$, which implies that $x_\alpha \to x$.
+\end{proof}
+
+The following theorem states that 
+if $J$ is a countable set and $(X,d)$ is a metric space, then the product topology on $X^J$ is metrizable.\footnote{James
+Munkres, {\em Topology}, second ed., p.~125, Theorem 20.5.}
+
+\begin{theorem}
+If $J$ is a countable set and $(X,d)$ is a metric space, then
+\[
+\rho(x,y)=\sup_{j \in J} \frac{\overline{d}(x_j,y_j)}{j} = \sup_{j \in J} \frac{d(x_j,y_j) \wedge 1}{j}
+\]
+is a metric on $X^J$ that induces the product topology.
+\end{theorem}
+
+A topological space is {\em first-countable} if every point has a countable
+local basis; a {\em local basis} at a point $p$ is a set $\mathscr{B}$ of open sets each of which contains $p$  such that each open set
+containing $p$ contains an element of $\mathscr{B}$. 
+It is a fact that a metrizable topological space is first-countable. In the following theorem we prove that the product topology on 
+an uncountable product
+of Hausdorff spaces each of which has at least two points is not first-countable.\footnote{cf. John L. Kelley,
+{\em General Topology}, p.~92, Theorem 6.} From this it follows that if $(X,d)$ is a metric space  with
+at least two points and $J$
+is an uncountable set, then the product topology on $X^J$ is not metrizable.
+
+\begin{theorem}
+If $J$ is an uncountable set and for each $j \in J$ we have that $X_j$ is  a Hausdorff space with at least two points, then the product topology on $\prod_{j \in J} X_j$
+is not first-countable.
+\end{theorem}
+\begin{proof}
+Write $X=\prod_{j \in J} X_j$,
+and suppose that $x \in X$ and   that $U_n, n\in \mathbb{N}$,
+are open subsets of $X$ containing $x$. 
+Since $U_n$ is an open subset of $X$ containing $x$, there is a basic open set $B_n$ satisfying $x \in B_n \subseteq U_n$:
+by saying that $B_n$ is a basic open set we mean that
+  there is a finite subset $F_n$ of $J$ and open subsets $U_{n,j}$ of $X_j$, $j \in F_n$, such that
+\[
+B_n = \bigcap_{j \in F_n} \pi_j^{-1} (U_{n,j}).
+\]
+Let $F=\bigcup_{n \in \mathbb{N}} F_n$, and because $J$ is uncountable there is some $k \in 
+J \setminus F$; this is the only place in the proof at which we use that $J$ is uncountable. As $X_k$ has at least two points and $x(k) \in X_k$, there is some $a \in X_k$ with $x(k) \neq a$.
+Since $X_k$ is a Hausdorff space, there are disjoint open subsets $N_1, N_2$ of $X_k$ with $x(k) \in N_1$ and $a \in N_2$.
+Define
+\[
+V_j = \begin{cases}
+N_1&j = k\\
+X_j&j \neq k
+\end{cases}
+\]
+and let $V=\prod_{j \in J} V_j$. We have $x \in V$. But for each $n \in \mathbb{N}$, there is some $y_n \in B_n$ with
+$y_n(k)=a \in N_2$, hence $y_n(k) \not \in N_1$ and so $y_n \not \in V$. Thus none of the  sets $B_n$
+is contained in $V$, and hence none of the sets
+$U_n$ is contained in $V$. Therefore $\{U_n: n \in \mathbb{N}\}$  is not a local basis at $x$,
+and as this was an arbitrary countable set of open sets containing $x$, there is no  countable local
+basis at $x$, showing that  $X$ is not first-countable. (In fact, we have proved there is no countable local basis at any point in $X$; not
+to be first-countable merely requires that there be at least one point at which there is no countable local basis.)
+\end{proof}
+
+
+
+
+\section{Uniform metric}
+If $J$ is a set and $(X,d)$ is a metric space, we define the {\em uniform metric} on $X^J$ by 
+\[
+d_J(x,y) =\sup_{j \in J} \overline{d}(x_j,y_j) =  \sup_{j \in J} d(x_j,y_j) \wedge 1.
+\]
+It is apparent that $d_J(x,y)=0$ if and only if $x=y$ and that $d_J(x,y)=d_J(y,x)$. If $x,y,z \in X$
+then,
+\begin{eqnarray*}
+d_J(x,z)&=&\sup_{j \in J} \overline{d}(x_j,z_j)\\
+&\leq&\sup_{j \in J} \overline{d}(x_j,y_j)+\overline{d}(y_j,z_j)\\
+&\leq&\sup_{j \in J} \overline{d}(x_j,y_j) + \sup_{j \in J} \overline{d}(y_j,z_j)\\
+&=&d_J(x,y)+d_J(y,z),
+\end{eqnarray*}
+showing that $d_J$ satisfies the triangle inequality and thus that it is indeed a metric on $X^J$.
+The {\em uniform topology} on $X^J$ is the metric topology induced by the uniform metric.
+
+
+
+If $(X,d)$ is a metric space, then $X$ is a topological space with the metric topology, and  thus 
+$X^J=\prod_{j \in J} X$ is a topological space with the product topology. The following theorem
+shows that the uniform topology on $X^J$ is finer than the product topology on $X^J$.\footnote{James
+Munkres, {\em Topology}, second ed., p.~124, Theorem 20.4.}
+
+\begin{theorem}
+If $J$ is a set and $(X,d)$ is a metric space, then the uniform topology on $X^J$  is finer than
+the product topology on $X^J$.
+\label{finer}
+\end{theorem}
+\begin{proof}
+If $x \in X^J$, let $U=\prod_{j \in J} U_j$ be a basic open set in the product topology with $x \in U$. Thus, there is a finite 
+subset $J_0$ of $J$ such that if $j \in J \setminus J_0$ then $U_j = X$.
+If $j \in J_0$, then because $U_j$ is an open subset of $(X,d)$ with the metric topology and $x_j \in U_j$,
+there is some $0<\epsilon_j<1$ such that $B^d_{\epsilon_j}(x_j) \subseteq U_j$. Let $\epsilon=\min_{j \in J_0} \epsilon_j$.
+If $d_J(x,y)<\epsilon$ then $d(x_j,y_j)<\epsilon$ for all $j \in J$ and hence $d(x_j,y_j)<\epsilon_j$ for all
+$j \in J_0$, which implies that $y_j \in B^d_{\epsilon_j}(x_j) \subseteq U_j$ for all $j \in J_0$. If $j \in J \setminus J_0$ then $U_j=X$ and 
+of course
+$y_j \in U_j$. Therefore, if $y \in B_\epsilon^{d_J}(x)$ then $y \in U$, i.e.
+$B_\epsilon^{d_J}(x) \subseteq U$. It follows  that the uniform topology on $X^J$
+is finer than the product topology on $X^J$.
+\end{proof}
+
+The following theorem shows that if we take the product of a complete metric space with itself, then the uniform metric on this product
+space is complete.\footnote{James Munkres, {\em Topology}, second ed., p.~267, Theorem 43.5.}
+
+\begin{theorem}
+If $J$ is a set and $(X,d)$ is a complete metric space, then $X^J$ with the uniform metric is a complete metric space.
+\label{completefunctions}
+\end{theorem}
+\begin{proof}
+It is straightforward to check that $(X,d)$ being a complete metric space implies that
+$(X,\overline{d})$ is a complete metric space. Let $f_n$ be a Cauchy sequence in $(X^J,d_J)$: if $\epsilon>0$
+then there is some $N$ such that $n,m \geq N$ implies that
+\[
+d_J(f_n,f_m)<\epsilon.
+\]
+Thus, if $\epsilon>0$, then there is some $N$ such that $n,m \geq N$ and $j \in J$ implies that
+$\overline{d}(f_n(j),f_m(j)) \leq d_J(f_n,f_m)<\epsilon$.
+Thus, if $j \in J$ then $f_n(j)$ is a Cauchy sequence in $(X,\overline{d})$, which therefore converges to some $f(j) \in X$,
+and thus $f \in X^J$. 
+If $n,m \geq N$ and $j \in J$, then
+\begin{align*}
+\overline{d}(f_n(j),f(j)) &\leq \overline{d}(f_n(j),f_m(j)) + \overline{d}(f_m(j),f(j))\\
+&\leq d_J(f_n,f_m)+\overline{d}(f_m(j),f(j))\\
+&<\epsilon+\overline{d}(f_m(j),f(j)).
+\end{align*}
+As the left-hand side does not depend on $m$ and $\overline{d}(f_m(j),f(j)) \to 0$, we get that if $n \geq N$ and $j \in J$
+then
+\[
+\overline{d}(f_n(j),f(j)) \leq \epsilon.
+\]
+Therefore, if $n \geq N$ then 
+\[
+d_J(f_n,f) \leq \epsilon.
+\]
+This means that $f_n$ converges to $f$ in the uniform metric, showing that $(X^J,d_J)$ is a complete metric space.
+\end{proof}
+
+
+\section{Bounded functions and continuous functions}
+If $J$ is a set and $(X,d)$ is a metric space,
+a function $f:J \to X$ is said to be {\em bounded} if its image is a bounded subset of $X$, i.e. $f(J)$ has a finite diameter. 
+Let $B(J,X)$ be the set of bounded functions $J \to (X,d)$; $B(J,X)$ is a subset of $X^J$.
+Since the diameter
+of $(X,\overline{d})$ is $\leq 1$, any function $J \to (X,\overline{d})$ is bounded, but there might be unbounded functions
+$J \to (X,d)$.
+We prove in the following theorem that $B(J,X)$ is a closed subset of $X^J$ with the uniform topology.\footnote{James Munkres,
+{\em Topology}, second ed., p.~267, Theorem 43.6.} 
+
+\begin{theorem}
+If $J$ is a set and $(X,d)$ is a metric space, then $B(J,X)$ is a closed subset of $X^J$ with the uniform topology.
+\end{theorem}
+\begin{proof}
+If $f_n \in B(J,Y)$ and $f_n$ converges to $f \in X^J$ in the uniform topology, then there is some $N$ such that 
+$d_J(f_N,f)<\frac{1}{2}$. Thus, for all $j \in J$ we have $\overline{d}(f_N(j),f(j))<\frac{1}{2}$, which implies
+that
+\[
+d(f_N(j),f(j))=\overline{d}(f_N(j),f(j))<\frac{1}{2}.
+\] If $i,j \in J$, then 
+\begin{align*}
+d(f(i),f(j))& \leq d(f(i),f_N(i)) + d(f_N(i),f_N(j)) + d(f_N(j),f(j))\\
+&\leq \frac{1}{2} + \diam (f_N(J),d) + \frac{1}{2}.
+\end{align*}
+ $f_N \in B(J,X)$ means that  $\diam (f_N(J),d)<\infty$, and it follows that
+$\diam (f(J),d) \leq \diam(f_N(J),d)+1<\infty$, showing that $f \in B(J,X)$.
+Therefore if a sequence of elements in $B(J,X)$ converges to an element of $X^J$, that limit  is contained in $B(J,X)$. This implies that $B(J,X)$ is a
+closed subset of $X^J$ in the uniform topology, as in a metrizable space the closure of a set is the set of limits of sequences
+of points in the set.
+\end{proof}
+
+
+
+If $J$ is a set and $Y$ is a complete metric space, we have shown in Theorem \ref{completefunctions} that
+$Y^J$ is a complete metric space with the uniform metric.
+If $X$ and $Y$ are topological spaces, we denote by $C(X,Y)$ the set of continuous functions $X \to Y$.
+$C(X,Y)$ is a subset of $Y^X$, and we show in the following theorem that if $Y$ is a  metric space then
+$C(X,Y)$ is a closed subset of $Y^X$ in the uniform topology.\footnote{James Munkres,
+{\em Topology}, second ed., p.~267, Theorem 43.6.} Thus, if $Y$ is a complete metric space then $C(X,Y)$ is a closed subset
+of the complete metric space $Y^X$, and is therefore itself a complete metric space with the uniform metric.
+
+\begin{theorem}
+If $X$ is a topological space and let $(Y,d)$ is a metric space, then $C(X,Y)$ is a closed subset of $Y^X$ with the uniform topology.
+\end{theorem}
+\begin{proof}
+Suppose that $f_n \in C(X,Y)$ and $f_n \to f \in Y^X$ in the uniform topology. 
+Thus, if $\epsilon>0$ then there is some $N$ such that  $n \geq N$ implies that $d_J(f_n,f)<\epsilon$,
+and so if $n \geq N$ and $x \in X$ then
+\[
+\overline{d}(f_n(x),f(x)) \leq d_J(f_n,f) < \epsilon.
+\]
+This means that the sequence $f_n$ converges uniformly in $X$ to $f$ in the uniform metric, and as each $f_n$ is continuous this implies
+that $f$ is continuous.\footnote{See James Munkres, {\em Topology}, second ed., p.~132, Theorem 21.6.} We have shown that if
+$f_n \in C(X,Y)$ and $f_n \to f \in Y^X$ in the uniform topology then $f \in C(X,Y)$, and therefore $C(X,Y)$ is a closed subset of $Y^X$ in the uniform topology.
+\end{proof}
+
+
+\section{Topology of compact convergence}
+Let $X$ be a topological space and $(Y,d)$ be a metric space. If $f \in Y^X$,
+ $C$ is a compact subset of $X$, and $\epsilon>0$, we denote by $B_C(f,\epsilon)$ the set of those $g \in Y^X$ such that
+ \[
+ \sup \{d(f(x),g(x)):x \in C\} <\epsilon.
+ \]
+ A basis for the {\em topology of compact convergence} on $Y^X$ are those sets of the form $B_C(f,\epsilon)$,
+ $f \in Y^X$, $C$ a compact subset of $X$, and $\epsilon>0$. It can be proved
+ that the uniform topology on $Y^X$ is finer than the topology of compact convergence on $Y^X$, and that
+ the topology of compact convergence on $Y^X$ is finer than the product topology on $Y^X$.\footnote{James Munkres,
+ {\em Topology}, second ed., p.~285, Theorem 46.7.} Indeed, we have already shown 
+ in Theorem \ref{finer}
+ that the uniform topology on $Y^X$ is finer than the product topology on $Y^X$.
+ The significance of the topology of compact convergence on $Y^X$ is that a sequence of functions $f_n:X \to Y$ converges
+ in the topology of compact convergence to a function $f:X \to Y$ if and only if for each compact subset $C$ of $X$ the sequence of
+ functions
+ $f_n|C:C \to Y$ converges uniformly in $C$ to the function $f|C:C \to Y$.
+
+
+\end{document}

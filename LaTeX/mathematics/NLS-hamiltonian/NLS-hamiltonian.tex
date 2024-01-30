@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{The nonlinear Schr\"odinger equation is Hamiltonian}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+Let
+\[
+H(u)=\int \frac{1}{2}|\nabla u|^2+\frac{2\mu}{p+1}|u|^{p+1}dx.
+\]
+We have
+\[
+H(u+\epsilon v)=
+\int \frac{1}{2} \nabla (u+\epsilon v) \nabla (\overline{u}+\epsilon \overline{v})+
+\frac{2\mu}{p+1} (u+\epsilon v)^{\frac{p+1}{2}} (\overline{u}+\epsilon \overline{v})^{\frac{p+1}{2}}.
+\]
+We have, for $v \in T_u$,
+\begin{eqnarray*}
+dH(u)v&=&\frac{d}{d\epsilon}|_{\epsilon=0} H(u+\epsilon v)\\
+&=&\int \frac{1}{2}\left( \nabla v \nabla \overline{u}+\nabla u \nabla \overline{v} \right)\\
+&&+\frac{2\mu}{p+1}\left( \frac{p+1}{2} u^{\frac{p-1}{2}}v \overline{u}^{\frac{p+1}{2}}
++\frac{p+1}{2}u^{\frac{p+1}{2}} \overline{u}^{\frac{p-1}{2}}\overline{v} \right) dx\\
+&=&\Re\int \nabla \overline{v} \nabla u+2\mu|u|^{p-1} u \overline{v} dx\\
+&=&\Re \int \left(-\Delta u+2\mu|u|^{p-1} u\right) \overline{v} dx.
+\end{eqnarray*}
+
+Define
+\[
+\omega(v_1,v_2)=-2 \Im \int v_1 \overline{v_2} dx.
+\]
+The Hamiltonian vector field $X_H$ of $H$ is defined, for $v \in T_u$, by
+\[
+\omega(X_H(u),v)=dH(u)v.
+\]
+Therefore we have  for $v \in T_u$ that
+\begin{eqnarray*}
+-2\Im \int X_H(u) \overline{v} dx&=&\Re \int \left(-\Delta u+2\mu|u|^{p-1} u\right) \overline{v} dx\\
+&=&\Im \int \left(-i\Delta u+2i\mu |u|^{p-1} u\right) \overline{v} dx.
+\end{eqnarray*}
+It follows that
+\[
+-2X_H(u)=-i\Delta u+2i\mu |u|^{p-1} u,
+\]
+i.e.,
+\[
+X_H(u)=\frac{i}{2}\Delta u-i\mu  |u|^{p-1} u.
+\]
+
+The flow $S(t)$ of the Hamiltonian vector field $X_H$ satisfies, for any $u_0$ and for $u(t)=S(t)u_0$,
+\[
+u_t(t) = X_H(u(t))=\frac{i}{2}\Delta u(t)-i\mu  |u(t)|^{p-1} u(t).
+\] 
+This equation can be written as
+\[
+iu_t(t)+\frac{1}{2} \Delta u(t)=\mu  |u(t)|^{p-1} u(t).
+\]
+
+\end{document}

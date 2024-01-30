@@ -1,0 +1,744 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\HSnorm}[1]{\Vert #1 \Vert_{\ensuremath\mathrm{HS}}}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\supp}{\mathrm{supp}\,} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\HS}{B_{\ensuremath\mathrm{HS}}} 
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\renewcommand{\div}{\mathrm{div}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{The infinite-dimensional torus}
+\author{Jordan Bell}
+\date{September 9, 2015}
+\maketitle
+
+\section{Locally compact abelian groups}
+Let $\mathbb{N}$ denote the positive integers.
+
+If $G_i$, $i \in I$, are compact abelian groups, we define their \textbf{direct product} to be the cartesian product
+\[
+\prod_{i \in I} G_i
+\]
+with the coarsest topology such that the projection maps $\pi_i:\prod_{j \in I} G_j \to G_i$ are continuous (namely the product topology), with which 
+the direct product is a compact abelian group. We write
+\[
+G^\omega = \prod_{\mathbb{N}} G.
+\]
+We shall be interested especially in the compact abelian group $\mathbb{T}=S^1$, and we call $\mathbb{T}^\omega$ the
+\textbf{infinite-dimensional torus}.
+
+
+If $\Gamma_i$, $i \in I$, are discrete abelian groups, their 
+ \textbf{direct sum}, denoted by
+ \[
+\bigoplus_{i \in I} \Gamma_i,
+\]
+ consists of those elements $x$ of the cartesian product $\prod_{i \in I} \Gamma_i$  such that 
+ the set $\{i \in I: \pi_i(x) \neq 0\}$ is finite. Let $p_i:\bigoplus_{j \in I} \Gamma_j \to \Gamma_i$ be the restriction of $\pi_i$ to $\bigoplus_{j \in I} \Gamma_j$.
+   We give the direct sum the finest topology such that the inclusion maps
+$q_i: \Gamma_i \to \bigoplus_{j \in I} \Gamma_j$, defined by
+\[
+(p_j \circ q_i)(x)=\begin{cases}
+x&j=i\\
+0&j \neq i
+\end{cases}, \qquad x\in \Gamma_i,
+\]
+ are continuous. With this topology, the direct sum is a discrete abelian group. We write 
+ \[
+ \Gamma^\infty = \bigoplus_{\mathbb{N}} \Gamma.
+ \]
+ We shall be interested especially in the discrete abelian group $\mathbb{Z}$, and in the infinite direct sum $\mathbb{Z}^\infty$.
+ (I don't know how significant an object it is, but I mention that the abelian group $\prod_{\mathbb{N}} \mathbb{Z}$ is
+ called the Baer-Specker group.)
+ 
+When speaking about $0$ or $1$ in a locally compact abelian group, it is unambiguous that this symbol denotes the identity element of the group,
+because  there is only one distinguished element in a locally compact abelian group.
+Often we denote the identity element of a compact abelian group by $1$
+and the identity element of a discrete abelian group by $0$.
+
+If $G_1,\ldots,G_n$ are locally compact abelian groups, it is straightforward to check that the cartesian product
+\[
+\prod_{k=1}^n G_k
+\]
+with the product topology is a locally compact abelian group. We call this both the direct product and the direct sum
+and write
+\[
+G_1 \oplus \cdots \oplus G_n = \bigoplus_{k=1}^n G_k = \prod_{k=1}^n G_k = G_1 \times \cdots \times G_n.
+\]
+
+
+\section{Dual groups}
+If $G$ is a locally compact abelian group, denote by $\widehat{G}$ its \textbf{dual group}, that is, the set of continuous group homomorphisms $G \to S^1$.
+For $g \in G$ and $\phi \in \widehat{G}$we write
+\[
+\inner{x}{\phi} = \phi(x).
+\]
+$\widehat{G}$ has the initial topology induced by $\{\phi \mapsto \inner{x}{\phi}: x \in G\}$, with which it is a locally compact abelian group. If $G$ is compact then
+$\widehat{G}$ is discrete, and if $G$ is discrete then $\widehat{G}$ is compact.
+
+
+\begin{theorem}
+Suppose that $G_1,\ldots,G_n$ are locally compact abelian groups. Then the dual
+group of  $G_1 \oplus \cdots \oplus G_n$ is
+isomorphic as a topological group to  $\widehat{G}_1 \oplus \cdots \oplus \widehat{G}_n$.
+\end{theorem}
+
+We prove in the following theorem that for discrete abelian groups, the dual group of a direct sum is the direct product of the dual groups.\footnote{Karl H. Hofmann and Sidney A. Morris, {\em The Structure of Compact Groups}, second ed., p.~12, Proposition 1.17. Cf. Walter Rudin, {\em Fourier Analysis on Groups}, p.~37, \S 2.2.3.}
+In particular, this shows that the dual group of $\mathbb{Z}^\infty$ is $\mathbb{T}^\omega$. Then by the \textbf{Pontryagin duality theorem}\footnote{Walter
+Rudin, {\em Fourier Analysis on Groups}, p.~28, Theorem 1.7.2.}
+we get that the dual group of $\mathbb{T}^\omega$ is $\mathbb{Z}^\infty$.
+
+\begin{theorem}
+Suppose that $\Gamma_i$, $i \in I$, are discrete abelian groups
+and let
+\[
+ \Gamma = \bigoplus_{i \in I} \Gamma_i, \qquad G= \prod_{i \in I} \widehat{\Gamma}_i.
+\]
+Then $\Phi:G \to \widehat{\Gamma}$, defined by
+\[
+(\Phi g)(\gamma) = \prod_{i \in I} \inner{p_i(\gamma)}{\pi_i(g)}, \qquad g \in G, \gamma \in \Gamma,
+\]
+is an isomorphism of topological groups. Here, $\pi_i:G \to \widehat{\Gamma}_i$   and $p_i:\Gamma  \to \Gamma_i$  
+are the projection maps.
+\end{theorem}
+\begin{proof}
+The definition of $(\Phi g)(\gamma)$ makes sense because $\{i \in I: p_i(\gamma) \neq 0\}$ is finite and hence
+$\{i \in I:  \inner{p_i(\gamma)}{\pi_i(g)} \neq 1\}$ is finite. For $g,h \in G$ and $\gamma \in \Gamma$,
+\begin{eqnarray*}
+(\Phi (gh))(\gamma)& =& \prod_{i \in I}\inner{p_i(\gamma)}{\pi_i(gh)}\\
+& =& \prod_{i \in I}\inner{p_i(\gamma)}{\pi_i(g)}\inner{p_i(\gamma)}{\pi_i(h)}\\
+& =& (\Phi g)(\gamma) (\Phi h)(\gamma)\\
+& =& ((\Phi g)(\Phi h))(\gamma),
+\end{eqnarray*}
+showing that $\Phi(gh)=\Phi(g)\Phi(h)$ and 
+hence that $\Phi$ is a homomorphism. Suppose that $g \in \ker \Phi$. 
+For each $i \in I$ and each $\gamma \in \Gamma_i$,
+\[
+((\Phi g) \circ q_i )(\gamma) = (\Phi g)(q_i(\gamma))=1,
+\]
+where $q_i:\Gamma_i \to \\Gamma$ is the inclusion map.
+ This is true for all $\gamma \in \Gamma_i$, so $(\Phi g) \circ q_i$ is the identity element of $\widehat{\Gamma}_i$. And this is true for all
+$i \in I$, so $\Phi g$ is the identity element of $G$. Therefore $\Phi$ is one-to-one. Suppose that
+$\alpha \in \widehat{\Gamma}$.  Define $g \in G$ as follows: for each $i \in I$, take $\pi_i(g) = \alpha \circ q_i \in \widehat{\Gamma}_i$. Then $g$
+satisfies  
+$\Phi g = \alpha$, hence $\Phi$ is onto and is therefore a group isomorphism.
+
+A continuous bijection from a compact topological space to a Hausdorff space is a homeomorphism, so to prove
+that $\Phi$ is a homeomorphism it suffices to prove that $\Phi$ is continuous. $\widehat{\Gamma}$ has the initial topology induced by
+$\{\alpha \mapsto  \inner{\gamma}{\alpha}: \gamma \in \Gamma\}$, which are  maps $\widehat{\Gamma} \to S^1$, so by the \textbf{universal property} of the initial topology, to prove that
+$\Phi$ is continuous it suffices to prove  that for each $\gamma \in \Gamma$,
+\[
+g \mapsto \inner{\gamma}{\Phi g}
+\]
+ is continuous
+$G \to S^1$. For $\gamma \in \Gamma$, let $J_\gamma=\{i \in I: p_i(\gamma) \neq 0\}$, which is a finite set. 
+For each $i \in J_\gamma$,  it is straightforward to check that the map $g \mapsto \inner{p_i( \gamma)}{\pi_i(g)}$  is continuous $G \to S^1$.
+Hence the map
+\[
+g \mapsto (\Phi g)(\gamma) = \prod_{i \in J_\gamma} \inner{p_i(\gamma)}{\pi_i(g)} 
+\]
+is continuous $G \to S^1$, being a product of finitely many continuous functions $G \to S^1$, and this completes the proof.
+\end{proof}
+
+Let $G$ be a locally compact abelian group.
+If $\Gamma_0$ is a finite subset of $\widehat{G}$ and $a_\gamma \in \mathbb{C}$ for each $\gamma \in \Gamma_0$,
+we call the function $G \to \mathbb{C}$ defined by
+\[
+x \mapsto \sum_{\gamma \in \Gamma_0} a_\gamma \inner{x}{\gamma}
+\]
+a \textbf{trigonometric polynomial} on $G$.
+Suppose that $G$ is a compact abelian group.  Its dual group $\widehat{G}$ separates points in $G$; this is not immediate and is proved using the inversion
+theorem for the Fourier transform.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~24, \S 1.5.2.}
+The set of trigonometric polynomials on $G$ is a self-adjoint algebra that contains the constant functions,
+so the Stone-Weierstrass theorem then tells us that it is dense in the Banach algebra $C(G)$. 
+Because $\mathbb{C}$ is separable, it follows that if $\widehat{G}$ is countable then $C(G)$ is separable. 
+In particular, any closed subgroup $G$ of $\mathbb{T}^\omega$ is a compact abelian group whose dual group one checks to be countable, so
+$C(G)$ is separable.
+
+A compact Hausdorff space $X$ is metrizable if and only if the Banach algebra $C(X)$ is separable.\footnote{Charalambos D. Aliprantis and Kim C. Border,
+{\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~353, Theorem 9.14.} 
+We established in the previous paragraph that if $G$ is a compact abelian group with countable dual group then the trigonometric polynomials are dense in the Banach
+algebra $C(G)$. Therefore, every compact abelian group with countable dual group is metrizable. In particular, $\mathbb{T}^\omega$ and all its closed subgroups
+are metrizable. In fact, it is proved in Rudin that for a compact abelian group, (i) being metrizable, (ii) having a countable dual group, and (iii) being isomorphic as a topological group
+to a closed subgroup of $\mathbb{T}^\omega$ are equivalent.\footnote{Walter Rudin, {\em Fourier Analysis on Groups},
+p.~38, \S 2.2.6.}
+
+
+
+\section{$\mathbb{T}^\omega$ and $\mathbb{Z}^\infty$}
+Let $\pi_n:\mathbb{T}^\omega \to S^1$ and
+$p_n:\mathbb{Z}^\infty \to \mathbb{Z}$ be the projection maps and let $q_n:\mathbb{Z} \to \mathbb{Z}^\infty$ be the inclusion map.
+
+For $x \in \mathbb{T}^\omega$
+and $\gamma \in \mathbb{Z}^\infty$,
+\[
+\inner{x}{\gamma} = \prod_{n \in \mathbb{N}} \inner{\pi_n(x)}{p_n(\gamma)} = \prod_{n \in \mathbb{N}} \pi_n(x)^{p_n(\gamma)},
+\]
+where for each $n$, $\pi_n(x) \in S^1$ and $p_n(\gamma) \in \mathbb{Z}$. 
+
+
+
+
+Let $m$ be the Haar measure on $\mathbb{T}^\omega$ such that $m(\mathbb{T}^\omega)=1$. 
+Because the dual group of $\mathbb{T}^\omega$ is $\mathbb{Z}^\infty$, for any $f \in L^1(m)$ the Fourier transform of $f$ is
+the function $\hat{f} \in C_0(\mathbb{Z}^\infty)$ defined by
+\[
+\hat{f}(\gamma) = \int_{\mathbb{T}^\omega} f(x) \inner{-x}{\gamma} dm(x)
+=\int_{\mathbb{T}^\omega} f(x) \prod_{n \in \mathbb{N}} \pi_n(\gamma)^{-p_n(x)} dm(x),\qquad \gamma \in \mathbb{Z}^\infty.
+\]
+
+
+
+
+
+
+\section{Kronecker sets}
+Suppose that $G$ is a locally compact abelian group and that $E$ is a subset of $G$, which we give the subspace
+topology.
+$E$ is called a \textbf{Kronecker set} if
+for every continuous $f:E \to S^1$ and every $\epsilon>0$, there is some $\gamma \in \widehat{G}$ such that
+\[
+\sup_{x \in E} |f(x)-\inner{x}{\gamma}|<\epsilon.
+\] 
+
+We first prove the following lemma from Rudin.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~104, Lemma 5.2.8.}
+
+\begin{lemma}
+If $0<\alpha<\beta<1$, then
+the set of polynomials with integer coefficients and $0$ constant term is dense in the real Banach algebra $C([\alpha,\beta])$ of continuous functions $[\alpha,\beta] \to 
+\mathbb{R}$.
+\label{integerpoly}
+\end{lemma}
+\begin{proof}
+Let $R$ be the closure in $C([\alpha,\beta])$ of the set of polynomials with integer coefficients and $0$ constant term. Because $x \in R$, $R$ separates points
+in $[\alpha,\beta]$ and  for every $a \in [\alpha,\beta]$ there is some $f \in R$ such that $f(a) \neq 0$. It is straightforward
+to check that $R$ is closed under addition and multiplication. If we show that $\mathbb{R} \subset R$, it will follow that $R$ is an algebra over $\mathbb{R}$,
+and then by the Stone-Weierstrass theorem we will get that $R$ is dense in $C([\alpha,\beta])$, and hence equal to $C([\alpha,\beta])$ as $R$ is closed.
+
+Let $c \in \mathbb{R}$, let $p$ be prime, and define
+\[
+S_p(x) = \frac{1-x^p-(1-x)^p}{p}, \qquad x \in [\alpha,\beta].
+\]
+Using that $p$ is prime, by the binomial theorem it follows that $S_p$ is a polynomial with integer coefficients and $0$ constant term.
+Partitioning $\mathbb{R}$ into intervals of length $p$, $c$ lies in one of these intervals and hence there is some integer $q_p$ such that
+$\left|c-\frac{q_p}{p}\right|<\frac{1}{p}$. 
+For $x \in [\alpha,\beta]$,
+\begin{eqnarray*}
+|q_p S_p(x)-c| &\leq& \left|c-\frac{q_p}{p}\right| +   \frac{|q_p|}{p} (\beta^p+(1-\alpha)^p)\\
+& <& \frac{1}{p}+
+\left(|c|+\frac{1}{p} \right)(\beta^p+(1-\alpha)^p).
+\end{eqnarray*}
+Hence $\norm{q_pS_p - c}_\infty \to 0$ as $p \to \infty$. $q_p$ is an integer so for each $p$, $q_pS_p$ is a polynomial with integer coefficients and $0$ constant term, so this shows
+that $c \in R$, completing the proof.
+\end{proof}
+
+An \textbf{arc} in a topological space is a homeomorphic image of a  compact subset of $\mathbb{R}$ of nonzero length. The following theorem shows that
+there is an arc in $\mathbb{T}^\omega$ that is a Kronecker set.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~103, Theorem 5.2.7.}
+
+\begin{theorem}
+$\mathbb{T}^\omega$ contains an arc that is a Kronecker set.
+\end{theorem}
+\begin{proof}
+Let $0<\alpha<\beta<1$, define $x:[\alpha,\beta] \to \mathbb{T}^\omega$ by
+\[
+(\pi_n \circ x)(t) =\exp\left(2\pi i t^n \right), \qquad t \in [\alpha,\beta], \quad n \in \mathbb{N},
+\]
+and let $L$ be the image of $[\alpha,\beta]$ under $x$. Assign $L$ the subspace topology inherited from $\mathbb{T}^\omega$,
+and suppose that $f:L \to S^1$ is continuous.
+One proves that there is a continuous function $h:[\alpha,\beta] \to \mathbb{R}$  that satisfies
+\[
+(f \circ x)(t) = \exp(2\pi i h(t)), \qquad \alpha \leq t \leq \beta.
+\]
+Let $\epsilon>0$, and by Lemma \ref{integerpoly}, let $S_m(x)=\sum_{j=1}^m a_j x^j$ be a polynomial with integer coefficients such that $\norm{S_m-h}_\infty < \epsilon$.
+Define $\gamma \in \mathbb{Z}^\infty$ by $p_j(\gamma) = a_j$ for $1 \leq j \leq m$ and $p_j(\gamma)=0$ otherwise. For $t \in [\alpha,\beta]$,
+\begin{eqnarray*}
+|f(x(t))-\inner{x(t)}{\gamma}| &=& \left| \exp(2\pi i h(t)) - \prod_{n \in \mathbb{N}} \inner{\pi_n(x(t))}{p_n(\gamma)} \right|\\
+&=& \left| \exp(2\pi i h(t)) - \prod_{n=1}^m  \inner{\pi_n(x(t))}{a_n}  \right|\\
+&=& \left| \exp(2\pi i h(t)) - \prod_{n=1}^m \exp(2\pi ia_n t^n) \right|\\
+&=&\left| \exp(2\pi i h(t)) - \exp\left( \sum_{n=1}^m 2\pi ia_n t^n \right) \right| \\
+&\leq&\left|2\pi h(t) -  \sum_{n=1}^m  2\pi a_n t^n \right|\\
+&=&2\pi |h(t)-S_m(t)|\\
+&<&2\pi \epsilon,
+\end{eqnarray*}
+using the fact that $|\exp(i A)-\exp(i B)| \leq |A-B|$ for $A,B \in \mathbb{R}$. Hence, for every $\epsilon>0$ there is some $\gamma \in \mathbb{Z}^\infty$ such
+that
+\[
+\sup_{y \in L} |f(y)-\inner{y}{\gamma}|<\epsilon,
+\]
+showing that $L$ is a Kronecker set.
+\end{proof}
+
+
+
+
+\section{Subgroups}
+Suppose that $G$ is a locally compact abelian group. For each $x \in G$, let $t_x:G \to G$ be defined by $t_x(y)=x+y$, which is a homeomorphism,
+and let $\sigma:G \to G$ be defined by $\sigma(x)=-x$, which is also a homeomorphism.
+If $A$ is an open set in $G$ and $B$ is a subset of $G$, 
+then
+\[
+A+B = \bigcup_{x \in B} t_x(A),
+\]
+which is open because $t_x(A)$ is open for each $x \in B$. 
+Furthermore, if $A$ and $B$ are both compact sets in $G$ then $A \times B$ is compact in $G \times G$ and $A+B$ is the image of $A \times B$
+under the continuous map $(x,y) \mapsto x+y$ hence is compact. 
+
+By a \textbf{neighborhood} of a point $x$ in a topological space we mean a set such that $x$ lies in the interior of the set, in other words, a set that contains an open neighborhood of the point.
+The collection of all neighborhoods of a point $x$ is a filter, and a \textbf{neighborhood base at $x$} is a filter base for the neighborhood filter of $x$.
+In a locally compact Hausdorff space, every point $x$ has a neighborhood base  consisting of 
+compact neighborhoods of $x$. 
+
+Let $A:G \times A \to G$ be $A(x,y)=x+y$, which is continuous. 
+If $W$ is a neighborhood of $0$ in $G$, then $A^{-1}(W)$ is a neighborhood of $(0,0)$ in $G \times G$. A base for the product
+topology on $G \times G$ consists of sets of the form $U_1 \times U_2$ where $U_1,U_2$ are open sets in $G$, so there are open sets $U_1,U_2$ in $G$ such that
+$(0,0) \in U_1 \times U_2 \subset A^{-1}(W)$. Each of $U_1$ and $U_2$ are then open neighborhoods of $0$ in $G$, so $V=U_1 \cap U_2$ is also an open neighborhood
+of $0$ in $G$, and then $V \times V$ is open in $G \times G$ and
+\[
+(0,0) \in V \times V \subset U_1 \times U_2 \subset A^{-1}(W).
+\]
+Hence $A(0,0) \subset A(V \times V) \subset W$, i.e. $0 \in V+V \subset W$, and $V+V$ is open because $V$ is open. Therefore, for every neighborhood $W$ of $0$ in a locally
+compact abelian group, there is some $V$ that is an open neigborhood of $0$ and that satisfies $V+V \subset W$. 
+
+Suppose that $G$ is a locally compact abelian group.
+A subset $E$ of $G$ is called \textbf{symmetric} if $E=-E$. 
+If $N$ is a compact neighborhood of $0$ then $N$ contains an open neighborhood $U$ of $0$.
+The set $U \cap \sigma(U)$ is an open neighborhood of
+$0$ and the set $N \cap \sigma(N)$ is compact (an intersection of compact sets in a Hausdorff space is compact) and contains
+$U \cap \sigma(U)$, hence $N \cap \sigma(N)$ is a compact symmetric neighborhood of $0$ that is contained in $N$. It follows that in a locally compact abelian group, there is a neighborhood base at $0$  consisting of compact symmetric neighborhoods of $0$.
+
+Suppose that $G$ is an abelian group and that $H$ is a  subgroup of $G$. We define the \textbf{quotient group}
+ $G/H$ be the collection of cosets of $H$,
+which is an abelian group where we define
+\[
+(x+H)+(y+H) = (x+y) + H, \qquad x,y \in G.
+\]
+Let $\pi:G \to G/H$ be the projection map, which is a homomorphism with $\ker \pi = H$.
+
+We are now equipped to define quotient groups in the category of locally compact abelian groups. 
+Suppose that $G$ is a locally compact abelian group and that $H$ is a closed subgroup of $G$. 
+We assign $G /H$ the final topology induced by the
+projection map $\pi$ (namely, the quotient topology).  For  $x+ H \in G/H$, there is a compact neighborhood $N$ of $x$ in $G$; that is,
+there is a compact set $N$ and an open set $U$ such that $x \in U \subset N$. Because $\pi$ is continuous, $\pi(N)$ is compact,
+and because $\pi$ is open, $\pi(U)$ is open, so $\pi(N)$ is a compact neighborhood of $x+H$ in $G/H$. Therefore $G/H$ is locally compact.
+It remains to prove that $G/H$ is Hausdorff and that addition and negation are continuous to prove that $G/H$ is  a locally compact
+abelian group. Suppose that $x+H,y+H$ are distinct elements of $G/H$, i.e. $x-y \not \in H$. The set $y+H = t_y(H)$ is closed because $H$ is closed,
+and $x \not \in y+H$ so $G \setminus  t_y(H)$ is an open neighborhood of $x$, and hence $W=t_{-x}(G \setminus t_y(H))$ is an open neighborhood of $0$ such that
+$x+W$ is disjoint from $y+H$. Because $W$ is an open neighborhood of $0$ there is an open  neighborhood $V$ of $0$ such that $V+V \subset W$. Furthermore,
+there is a compact symmetric neighborhood of $0$, $N$, contained in $V$. 
+If $(x+H +N) \cap (y+H+N) \neq \emptyset$ then there are $h_1,h_2 \in H$ and $n_1,n_2 \in N$ such that
+$x+h_1+n_1 = y+h_2+n_2$, and then $x+(n_1-n_2) = y + (h_2-h_1)$. But $-n_2 \in N$ because $N$ is symmetric and so
+$n_1-n_2 \in N + N \subset V+V \subset W$, so $x+(n_1-n_2) \in x+W$,  and $h_2-h_1 \in H$, so $y+(h_2-h_1) \in y+H$, contradicting that $x+W$ and
+$y+H$ are disjoint. Therefore $x+H+N$ and $y+H+N$ are disjoint, and their images under $\pi$ are then disjoint neighborhoods of $x+H$ and $y+H$ in $G/H$, showing that
+$G/H$ is Hausdorff. It is straightforward to prove that addition and negation are continuous in $G/H$, and therefore $G/H$
+is a locally compact abelian group. 
+
+If $H$ is a closed subgroup of a locally compact abelian group $G$, the \textbf{annihilator of $H$}, denoted $\Lambda_H$, is the set
+of all $\gamma \in \widehat{G}$ such that
+\[
+\inner{x}{\gamma}=1, \qquad x \in H.
+\]
+ For each $x \in H$, the map $\gamma \mapsto \inner{x}{\gamma}$ is continuous
+$\widehat{G} \to S^1$ so the inverse image of $\{1\}$ under this map is closed. $\Lambda_H$ is the intersection of all these inverse images hence is closed, and is a closed
+subgroup because it is apparent that $\Lambda_H$ is a subgroup of $\widehat{G}$. 
+It can be proved that $\Lambda_H$ is the dual of the quotient group $G/H$ and that the quotient group $\widehat{G}/\Lambda_H$ is the dual of
+ $H$.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~35, Theorem 2.1.2.}
+
+The following lemma shows that we can extend continuous characters on a closed subgroup to the entire group.\footnote{Walter
+Rudin, {\em Fourier Analysis on Groups}, p.~36, Theorem 2.1.4.}
+
+\begin{lemma}
+Suppose that $H$ is a closed subgroup of a locally compact abelian group $G$. If $\phi \in \widehat{H}$, then there is some $\gamma \in \widehat{G}$ whose restriction to
+$H$ is equal to $\phi$.
+\end{lemma}
+\begin{proof}
+$\phi \in \widehat{H} = \widehat{G} / \Lambda_H$, so there is some $\gamma \in \widehat{G}$ such that
+for all $x \in H$, $\gamma(x)=\phi(x)$.
+\end{proof}
+
+Suppose that $G$ is a locally compact abelian group. It can be proved that if $E$ is a compact open set in $G$ and $0 \in
+E$, then $E$ contains a compact open subgroup of $G$.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~41,
+Lemma 2.4.3.}
+
+We are now equipped to prove the following theorem.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~47, Theorem 2.5.6.}
+
+\begin{theorem}
+Suppose that $G$ is a compact group. $G$ is connected if and only if $\gamma \in \widehat{G}$ having finite order implies that $\gamma=0$.
+\end{theorem}
+\begin{proof}
+Assume that $G$ is not connected. Then there is a clopen subset $A$ that is neither $G$ nor $\emptyset$. Because $G$ is compact,
+both $A$ and $G \setminus A$ are compact and open, and one of them, call it $E$, contains $0$. 
+Because $E$ is a compact open set containing $0$, $E$ contains a compact open subgroup $H$ of $G$, and $H \neq G$ because $E \neq G$.
+Because $H$ is open, the singleton $\{0+H\}$ in the quotient group $G/H$ is an open set, and therefore $G/H$ is discrete. But
+$G$ is compact and $G/H$ is the image of $G$ under the projection map, so $G/H$ is compact. Hence $G/H$ is finite. 
+The dual of $G/H$ is $\Lambda_H$, which is a   subgroup of $\widehat{G}$. Because $G/H$
+contains more than one element (as $H \neq G$), $\Lambda_H$ contains some $\gamma \neq 0$, and $\gamma$ has finite order because it is contained in the finite
+subgroup $\Lambda_H$.
+
+Assume that $\gamma \in \widehat{G}$ has order finite order and that $\gamma \neq 0$. Every element of $\gamma(G)$ has finite order and $\gamma(G) \neq \{1\}$,
+so $\gamma(G)$ is not connected. But if $G$ were connected then $\gamma(G)$, a continuous image of $G$, would be connected, hence $G$ is not connected.
+\end{proof}
+
+
+
+\begin{lemma}
+Suppose that $G$ is a locally compact abelian group. If $A$ is an open subgroup of $G$, then $A$ is closed.
+\end{lemma}
+\begin{proof}
+$A$ is a subgroup of $G$, which gives us 
+\[
+A = G \setminus \bigcup_{x \in G \setminus A} (x+A).
+\]
+Because each set $x+A$ is open, this shows that $A$ is closed.
+\end{proof}
+
+
+\section{Measures}
+Suppose that $\mathscr{M}$ is a $\sigma$-algebra on a set $X$.
+If $\mu$ is a complex measure on $\mathscr{M}$ we denote by $|\mu|$ its \textbf{total variation}, which is a finite positive
+measure on $\mathscr{M}$.\footnote{Walter Rudin, {\em Real and Complex Analysis}, third ed., p.~117, Theorem 6.2 and p.~118, Theorem 6.4.} The \textbf{total variation norm} of $\mu$ is $\norm{\mu}=|\mu|(X)$. 
+
+Suppose that $X$ is a Hausdorff space with Borel $\sigma$-algebra $\mathscr{B}_X$ and that $\mu$ is a complex Borel measure on $X$. 
+We say that $\mu$ is
+\textbf{outer regular} if for each $E \in \mathscr{B}_X$,
+\[
+|\mu|(E) = \inf\{|\mu|(V): \textrm{$E \subset V$ and $V$ is open}\}
+\]
+\textbf{inner regular} if for each $E \in \mathscr{B}_X$,
+\[
+|\mu|(E) = \sup\{|\mu|(F): \textrm{$F \subset E$ and $F$ is closed}\},
+\]
+and \textbf{tight} if  for each $E \in \mathscr{B}_X$,
+\[
+|\mu|(E) = \sup\{|\mu|(K): \textrm{$K \subset E$ and $K$ is compact}\}.
+\]
+(Because we demand that $X$ be Hausdorff, a compact set is closed and hence belongs to the Borel
+$\sigma$-algebra of $X$; compact sets need not belong to the Borel $\sigma$-algebra of a topological space that is not Hausdorff.)
+We remark that the words ``inner regular'' often means what we call tight. We say that $\mu$ is \textbf{regular} if it is both outer
+regular and tight, and we also remark that calling a measure regular often means being outer regular
+and what we call inner regular. What we call a regular complex Borel measure means precisely what Rudin means by these
+words in  {\em Fourier Analysis on Groups}, and using Rudin's notation we define
+\[
+M(X) = \{\mu: \textrm{$\mu$ is a regular complex Borel measure on $X$}\}.
+\]
+
+ It is a fact that a complex Borel measure on a metrizable space
+is outer regular and inner regular,\footnote{Charalambos D. Aliprantis and Kim C. Border,
+{\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~436, Theorem 12.5.} and that a complex Borel measure on a Polish
+space is regular.\footnote{Charalambos D. Aliprantis and Kim C. Border,
+{\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~438, Theorem 12.7.} 
+
+Suppose that $X$ and $Y$ are locally compact Hausdorff spaces and that $\mu \in M(X)$ and $\lambda \in M(Y)$. It is a fact that there
+is a unique element of $M(X \times Y)$, denoted $\mu \times \lambda$, such that for any $A \in \mathscr{B}_X$ and $B \in \mathscr{B}_Y$,
+\[
+(\mu \times \lambda)(A \times B) = \mu(A) \lambda(B).
+\]
+We call $\mu \times \lambda$ the \textbf{product measure} of $\mu$ and $\lambda$. 
+
+Suppose that $G$ is a locally compact abelian group with addition $A:G \times G \to G$. For $\mu,\lambda \in M(G)$,
+we define the \textbf{convolution} of $\mu$ and $\lambda$ to be the pushforward of the product $\mu \times \lambda$ by
+$A$,
+\[
+\mu * \lambda = A_*(\mu \times \lambda),
+\]
+and it can be proved that $\mu * \lambda \in M(G)$, that convolution is commutative and associative, and that
+$\norm{\mu * \lambda} \leq \norm{\mu} \norm{\lambda}$.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~13,
+Theorem 1.3.2; Karl Stromberg, {\em A note on the convolution of regular measures}, Math. Scand. \textbf{7} (1959), 347--352.} Then, with convolution as multiplication and using the total variation norm,
+$M(G)$ is a unital commutative Banach algebra, with unity $\delta_0$.
+
+For $\mu \in M(G)$, the \textbf{Fourier transform of $\mu$}
+is the function $\hat{\mu}:\widehat{G} \to \mathbb{C}$ defined by
+\[
+\hat{\mu}(\gamma) = \int_G \inner{-x}{\gamma} d\mu(x), \qquad \gamma \in \widehat{G}.
+\]
+One proves that $\hat{\mu}$ is bounded and uniformly continuous, and we define 
+\[
+B(\widehat{G}) = \{\hat{\mu}: \mu \in M(G)\}.
+\]
+
+
+\section{Idempotent measures}
+If $G$ is a locally compact abelian group and $\mu \in M(G)$, we say that $\mu$ is \textbf{idempotent} if $\mu * \mu=\mu$,
+and we denote the set of idempotent elements of $M(G)$ by $J(G)$. 
+Because the Fourier transform of a convolution is the product of the Fourier transforms, 
+for $\mu \in M(G)$ we have $\mu*\mu=\mu$ if and only if $\hat{\mu}^2 = \hat{\mu}$. But $\hat{\mu}^2 = \hat{\mu}$ is equivalent to $\hat{\mu}$
+having range contained in $\{0,1\}$, so for $\mu \in M(G)$, we have that
+$\mu \in J(G)$ if and only if $\hat{\mu}$ is the characteristic function of some subset of $\widehat{G}$. 
+For $\mu \in J(G)$, we write
+\[
+S(\mu) = \{\gamma \in \widehat{G}: \hat{\mu}(\gamma)=1\}.
+\]
+
+Suppose that $\Lambda$ is an open subgroup of $\widehat{G}$. Then $\Lambda$ is closed,  and
+the fact that $\Lambda$ is open implies that the singleton containing the identity in $\widehat{G}/\Lambda$ is open and hence that
+$\widehat{G}/\Lambda$ is a discrete abelian group. 
+Denoting the annihilator of $\Lambda$ by $H$, which is a closed subgroup of $G$, 
+the quotient group $\widehat{G}/\Lambda$ is the dual group of $H$ and hence $H$ is compact. 
+Let $m_H$ be the Haar measure on $H$ such that $m_H(H)=1$. Taking $m_H(E) = m_H(E \cap H)$, $m_H \in M(G)$.
+ If $\gamma \in \Lambda$ then
+\[
+\hat{m}_H(\gamma) = \int_G \inner{-x}{\gamma} dm_H(x) = \int_H \inner{-x}{\gamma} dm_H(x) = \int_H dm_H(x) = m_H(H)=1.
+\]
+If $\gamma \in \widehat{G} \setminus \Lambda$ then there is some $x_0 \in H$ such that $\inner{x_0}{\gamma} \neq 1$,
+and then
+\[
+\int_H \inner{-x}{\gamma} dm_H(x) = \inner{x_0}{\gamma} \int_H \inner{-x_0-x}{\gamma} dm_H(x) = \inner{x_0}{\gamma} \int_H \inner{-x}{\gamma} dm_H(x),
+\]
+showing that $\hat{m}_H(\gamma) = \inner{x_0}{\gamma} \hat{m}_H(\gamma)$, and because $\inner{x_0}{\gamma} \neq 1$ this implies that $\hat{m}_H(\gamma)=0$.
+Therefore, $\Lambda = S(m_H)$. 
+
+If $E=\gamma_0+\Lambda$, then with 
+\[
+d\mu(x)=\inner{x}{\gamma_0}dm_(H)
+\]
+we have $\mu \in J(G)$ and $E=S(\mu)$. 
+
+
+\section{Sidon sets}
+Let $G$ be a compact abelian group and let $E \subset \widehat{G}$. A function $f \in L^1(G)$ is called an \textbf{$E$-function} if
+$\gamma \in \widehat{G} \setminus E$ implies that $\hat{f}(\gamma)=0$. An \textbf{$E$-polynomial} is a trigonometric polynomial
+$f$ on $G$ that is an $E$-function.
+
+We call a subset $E$ of $\widehat{G}$ a \textbf{Sidon set} if there is some $B_E \geq 0$ such that
+for every $E$-polynomial $f$ on $G$,
+\[
+\sum_{\gamma \in E} |\hat{f}(\gamma)| \leq B_E \norm{f}_\infty. 
+\]
+
+We shall use the following lemma later.\footnote{Walter
+Rudin, {\em Fourier Analysis on Groups}, p.~121, Theorem 5.7.3.}
+
+\begin{lemma}
+Suppose that $\Gamma$ is a discrete abelian group that is the dual group of a compact abelian group $G$. If $E \subset \Gamma$ is a Sidon set with constant
+$B_E$, then  every bounded $E$-function $f$ on $G$ satisfies
+\[
+\sum_{\gamma \in E} |\hat{f}(\gamma)| \leq B_E \norm{f}_\infty.
+\]
+\label{sidon}
+\end{lemma}
+
+
+\section{Dirichlet series}
+Define $\sigma:\mathbb{Z}^\infty \to \mathbb{Z}$ by $\sigma(\gamma) = \sum_{n \in \mathbb{N}} p_n(\gamma)$, i.e. the sum of the entries of $\gamma$, which makes
+sense because any element of $\mathbb{Z}^\infty$ has only finitely many nonzero entries. 
+
+Let $Y$ be those $\gamma\in \mathbb{Z}^\infty$ such that $p_n(\gamma) \geq 0$ for all $n \in \mathbb{N}$,
+and let $E = Y \cap \sigma^{-1}(1)$. 
+ In other words, the elements of $E$ are those $\gamma \in \mathbb{Z}^\infty$ one coordinate of which is $1$ and all other coordinates of which are $0$.
+The proof of the following theorem is from Rudin.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~224, Theorem 8.7.9.}
+
+\begin{theorem}
+If $f \in L^\infty(\mathbb{T}^\omega)$ and $\hat{f}(\gamma)=0$ for all $\gamma \in X \setminus Y$, then 
+\[
+\sum_{\gamma \in E} |\hat{f}(\gamma)| \leq \norm{f}_\infty.
+\]
+\label{infinitySidon}
+\end{theorem}
+\begin{proof}
+$\sigma:\mathbb{Z}^\infty \to \mathbb{Z}$ is a continuous group homomorphism, and $\ker \sigma$ is an open subgroup of
+$\mathbb{Z}^\infty$, because $\mathbb{Z}^\infty$ is discrete. Because $\sigma^{-1}(1)$ is a coset of this open subgroup,
+there is some $\mu \in J(\mathbb{T}^\omega)$ such that $\hat{\mu}$ is the characteristic function of $\sigma^{-1}(1)$, and this $\mu$ satisfies
+$\norm{\mu}=1$. Define $g:\mathbb{T}^\omega \to \mathbb{C}$ by 
+\[
+g(x)=(f*\mu)(x) = \int_{\mathbb{T}^\omega} f(x-y) d\mu(y), \qquad x \in \mathbb{T}^\omega,
+\]
+whose Fourier transform is $\hat{g}(\gamma)=\hat{f}(\gamma) \hat{\mu}(\gamma)$. 
+If $\gamma \not \in E$ then $\gamma \not \in Y$ or $\gamma \not \in \sigma^{-1}(1)$. In the first case
+$\hat{f}(\gamma)=0$ and in the second case $\hat{\mu}(\gamma) =0$, and hence $\gamma \not \in E$ implies that
+$\hat{g}(\gamma)=0$, namely, $g$ is an $E$-function. Also, it is apparent from the definition of $g$ that $\norm{g}_\infty 
+\leq \norm{f}_\infty$. 
+
+Suppose that $P$ is an $E$-polynomial. Hence there is a finite subset $E_0$ of $E$ such that
+$\gamma \not \in E_0$ implies that $\hat{P}(\gamma)=0$, and thus there are $c_\gamma \in \mathbb{C}$, $\gamma \in E_0$, such that 
+\[
+P(x) = \sum_{\gamma \in E_0} c_\gamma \inner{x}{\gamma}
+=\sum_{\gamma \in E_0} c_\gamma \prod_{n \in \mathbb{N}} \inner{\pi_n(x)}{p_n(\gamma)}, \qquad
+x \in \mathbb{T}^\omega.
+\]
+$E_0 \subset E$, so any element of $E_0$ has one entry $1$, say $p_{n_\gamma}(\gamma)=1$, and all other entries $0$, so
+\[
+P(x) = \sum_{\gamma \in E_0} c_\gamma \pi_{n_\gamma}(x).
+\]
+Define $x \in \mathbb{T}^\omega$ by taking $c_\gamma \cdot  \pi_{n_\gamma}(x)=|c_\gamma|$ for each $\gamma \in E_0$, and all
+other entries of $x$ to be $1 \in S^1$; this makes sense because if $\gamma_1,\gamma_2 \in E_0$ and $n_{\gamma_1}= n_{\gamma_2}$ then
+$\gamma_1=\gamma_2$. For this $x$, $P(x)=\sum_{\gamma \in E_0} |c_\gamma|$. But  it is apparent that
+$\norm{P}_\infty \leq \sum_{\gamma \in E_0} |c_\gamma|$, so
+\[
+\norm{P}_\infty = \sum_{\gamma \in E_0} |c_\gamma|.
+\]
+This shows that $E$ is a Sidon set with $B_E=1$. Therefore by Lemma \ref{sidon}, because $g$ is a bounded $E$-function on $\mathbb{T}^\omega$ we
+get
+$\sum_{\gamma \in E} |\hat{g}(\gamma)| \leq \norm{g}_\infty$.
+But $\hat{\mu}$ is the characteristic function of $\sigma^{-1}(1)$ and $E=Y \cap \sigma^{-1}(1)$, so
+\[
+\sum_{\gamma \in E} \hat{f}(\gamma) 
+= \sum_{\gamma \in E} \hat{f}(\gamma) \hat{\mu}(\gamma)
+= \sum_{\gamma \in E} \hat{g}(\gamma) \leq \norm{g}_\infty \leq \norm{f}_\infty,
+\]
+proving the claim.
+\end{proof}
+
+
+Following Rudin, we use the above theorem to prove a theorem about Dirichlet series
+due to Bohr.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, pp.~224--225. See also 
+Maxime Bailleul and Pascal Lef\`evre,
+{\em Some Banach spaces of Dirichlet series},
+\url{arxiv.org/abs/1311.3845}} 
+
+\begin{theorem}[Bohr]
+If
+\[
+\phi(s) = \sum_{k=1}^\infty \frac{c_k}{k^s}
+\]
+and $|\phi(s)| \leq 1$ for all $s$ such that $\Re s>0$, then
+\[
+\sum_p |c_p| \leq 1.
+\]
+\end{theorem}
+\begin{proof}
+For $k \in \mathbb{N}$, let $\gamma(k) \in Y$ such that $k=\prod_{n=1}^\infty p_n^{h_n (\gamma(k))}$, where $p_n$ are the primes and
+where $h_n:\mathbb{Z}^\infty \to \mathbb{Z}$ are the projection maps; so far we have denoted these projection maps by $p_n$, rather than using $h_n$,
+but the symbol $p_n$ has such a strong association with the primes that we change notation here. The map $k \mapsto \gamma(k)$ is a bijection
+$\mathbb{N} \to Y$, and we write $c_\gamma=c_k$. We shall use the fact that the image of the primes under this bijection is $E$.
+
+Let $s$ be a complex number in the half-plane of  convergence of $\phi$ and write $z_n(s)=p_n^{-s}=\exp(-s \log p_n)$. Then,
+\begin{eqnarray*}
+\phi(s) &=&\sum_{k =1}^\infty c_k k^{-s} \\
+&=&\sum_{\gamma \in Y} c_\gamma \left(\prod_{n=1}^\infty p_n^{h_n (\gamma)} \right)^{-s}\\
+&=&\sum_{\gamma \in Y} c_\gamma \prod_{n=1}^\infty p_n^{-s h_n(\gamma)}\\
+&=&\sum_{\gamma \in Y} c_\gamma \prod_{n=1}^\infty z_n(s)^{h_n(\gamma)}
+\end{eqnarray*}
+Defining
+ $T:\mathbb{R} \to \mathbb{T}^\omega$ by
+\[
+(\pi_n \circ T)(\sigma)=\exp(-i \sigma \log p_n), \qquad n \in \mathbb{N}, \sigma \in \mathbb{R}, 
+\]
+we have, as $z_n(i\sigma)=\exp(-i\sigma \log p_n)$,
+\[
+\phi(i\sigma) 
+=\sum_{\gamma \in Y} c_\gamma \prod_{n=1}^\infty \inner{\pi_n(T(\sigma))}{h_n(\gamma)}
+=\sum_{\gamma \in Y} c_\gamma \inner{T(\sigma)}{\gamma}.
+\]
+One checks that the function $f:\mathbb{T}^\omega \to \mathbb{C}$ defined by $f(x) = \sum_{\gamma \in Y} c_\gamma \inner{x}{\gamma}$
+satisfies the conditions of
+ Theorem \ref{infinitySidon}, and thus gets
+ \[
+\sum_p |c_p| = \sum_{\gamma \in E} |c_\gamma| =  \sum_{\gamma \in E} |\hat{f}(\gamma)| \leq \norm{f}_\infty 
+ \]
+ I do not see why $\norm{f}_\infty \leq 1$. However, granted this, the claim follows.
+\end{proof}
+
+
+
+
+
+
+
+
+\section{Descriptive set theory}
+If $(X,d)$ is a compact metric space, 
+$C(X,X)$ is a Polish space with the \textbf{uniform metric} $(f,g) \mapsto \sup_{x \in X} d(f(x),g(x))$. 
+We denote by $H(X)$ the group of homeomorphisms of $X$, which one proves is a $G_\delta$ set in $C(X,X)$.  
+Because $H(X)$ is a $G_\delta$ set in a Polish space, it is a Polish space with the subspace topology. 
+A homeomorphism $h$ of $X$ is said to be \textbf{minimal} if there is no proper closed subset of $X$ that is invariant under $h$, and is called
+\textbf{distal} if $x \neq y$ implies that there is some $\epsilon>0$ such that for all $n \in \mathbb{N}$, $d(h^n(x),h^n(y))>\epsilon$. 
+It has been proved (Beleznay-Foreman) that the collection of minimal distal homeomorphisms of $\mathbb{T}^\omega$ is a Borel $\mathbf{\Sigma}_1^1$-complete
+set in $H(\mathbb{T}^\omega)$.\footnote{Alexander S. Kechris, {\em Classical Descriptive Set Theory}, p~262, Theorem 33.22.}
+
+
+
+\section{Further reading}
+Albeverio, Sergio, Daletskii, Alexei and Kondratiev, Yuri, {\em Stochastic analysis on (infinite-dimensional) product manifolds},
+Stochastic dynamics (Bremen, 1997), 339--369, Springer, New York, 1999. 
+
+Aoki, Nobuo and Totoki, Haruo, {\em Ergodic automorphisms of $T^\infty$ are Bernoulli automorphisms},
+Publ. RIMS, Kyoto Univ. \textbf{10} (1975), 535--544.
+
+Balasubramanian, R., Calado, B. and Queff\'elec, H.,
+{\em The Bohr inequality for ordinary Dirichlet series},
+Studia Math. \textbf{175} (2006), no. 3, 285--304. 
+
+Bendikov, A. and Saloff-Coste, L., {\em On the sample paths of diagonal Brownian motions on the infinite dimensional torus},
+Ann. Inst. H. Poincar\'e Probab. Statist. \textbf{40} (2004), no. 2, 227--254. 
+
+Bendikov, A., {\em L\'evy measures for symmetric stable semigroups on torus $\mathbb{T}^\infty$}. Functional analysis, 173--181, Narosa, New Delhi, 1998. 
+
+Bendikov, A. and Saloff-Coste, L., {\em Spaces of smooth functions and distributions on infinite-dimensional compact groups}, 
+J. Funct. Anal. \textbf{218} (2005), no. 1, 168--218. 
+
+Bendikov, A. D., {\em Symmetric stable semigroups on the infinite-dimensional torus},
+Exposition. Math. \textbf{13} (1995), no. 1, 39--79. 
+
+Berg, Christian, {\em On Brownian and Poissonian convolution semigroups on the infinite dimensional torus},
+Invent. Math. \textbf{38} (1976/77), no. 3, 227--235.
+
+Berg, Christian, {\em Potential theory on the infinite dimensional torus}, Invent. Math. \textbf{32} (1976), no. 1, 49--100. 
+
+Biroli, Marco and Maheux, Patrick, {\em Logarithmic Sobolev inequalities and Nash-type inequalities for sub-markovian symmetric semigroups},
+\url{https://hal.inria.fr/hal-00465177v1/document}
+
+Fournier, John, {\em Extensions of a Fourier multiplier theorem of Paley}, Pacific J. Math. \textbf{30} (1969), 415--431. 
+
+Haezendonck, J., 
+{\em Les groupes commutatifs de Lebesgue-Rohlin},
+Acad. Roy. Belg. Bull. Cl. Sci. (5) \textbf{58} (1972), 344--353. 
+
+Hastings, H. M., {\em On expansive homeomorphisms of the infinite torus}, The structure of
+attractors in dynamical systems (Proc. Conf., North Dakota State Univ.)
+
+Hedenmalm, H{\aa}kan and Saksman, Eero, {\em Carleson's convergence theorem for Dirichlet series},
+Pacific Journal of Mathematics \textbf{208} (2003), no.~1, 85--109.
+
+Helson, Henry, {\em Hankel forms and sums of random variables},  Studia Math. \textbf{176} (2006), no. 1, 85--92. 
+
+Holley, R. and Stroock, D., {\em Diffusions on an infinite-dimensional torus}, J. Funct. Anal. \textbf{42} (1981), no. 1, 29--63. 
+
+Jessen, B., {\em The theory of integration in a space of an infinite number of dimensions}, Acta Math. \textbf{63} (1934), no. 1,
+249--323.
+
+Kholshchevnikova, N. N., {\em Uniqueness for trigonometric series with respect to an increasing number of variables},
+Proc. Steklov Inst. Math. 2005, Function Theory, suppl. 2, S160--S166. 
+
+Lind, D. A., {\em Ergodic automorphisms of the infinite torus are Bernoulli},
+Israel J. Math. \textbf{17} (1974), 162--168. 
+
+Olsen, Jan-Fredrik, {\em Local properties of Hilbert spaces of Dirichlet series},
+J. Funct. Anal. \textbf{261} (2011), no. 9, 2669--2696. 
+
+Saksman, Eero and Seip, Kristian, {\em Integral means and boundary limits of Dirichlet series},
+Bull. Lond. Math. Soc. \textbf{41} (2009), no. 3, 411--422. 
+
+Saloff-Coste, Laurent, {\em Probability on groups: random walks and invariant diffusions}, 
+Notices Amer. Math. Soc. \textbf{48} (2001), no. 9, 968--977. 
+
+Skorikov, A. V., {\em Bessel potentials in spaces with a mixed norm on the group $\mathbb{T}^\infty$},
+Moscow Univ. Math. Bull. \textbf{48} (1993), no. 6, 1--4 
+
+Stackelberg, Olaf P., {\em Metric theorems related to the Kronecker-Weyl theorem mod $m$}, 
+Monatsh. Math. \textbf{82} (1976), no. 1, 57--69. 
+
+Sugita, Hiroshi and Takanobu, Satoshi,
+{\em A limit theorem for Weyl transformation in infinite-dimensional torus and central limit theorem for correlated multiple Wiener integrals},
+J. Math. Sci. Univ. Tokyo \textbf{7} (2000), no. 1, 99--146. 
+
+Tanaka, Jun-ichi, {\em Dirichlet series induced by the Riemann zeta-function}, Studia Math. \textbf{187} (2008), no. 2, 157--184. 
+
+Taylor, Thomas J. S., {\em Applications of harmonic analysis on the infinite-dimensional torus to the theory of the Feynman integral},
+Functional integration with emphasis on the Feynman integral (Sherbrooke, PQ, 1986),
+Rend. Circ. Mat. Palermo (2) Suppl. No. 17 (1987), 349--362 (1988). 
+
+\end{document}

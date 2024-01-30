@@ -1,0 +1,721 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\ca}{\ensuremath\mathrm{ca}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_{\mathrm{HS}}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{$C[0,1]$: the Faber-Schauder basis,  the Riesz representation theorem, and the  Borel $\sigma$-algebra}
+\author{Jordan Bell}
+\date{July 24, 2015}
+
+\maketitle
+
+\section{Introduction}
+In this note I work out some results about the space of continuous functions $[0,1] \to \mathbb{R}$. 
+In some cases these are instances of general results about continuous functions on compact Hausdorff spaces or compact metrizable
+spaces. 
+
+
+\section{$C(K)$}
+Let $K$ be a compact topological space (not necessarily Hausdorff) and let $C(K)$ be the collection of continuous functions $K \to \mathbb{R}$.
+With the norm
+\[
+\norm{f} = \sup_{t \in K} |f(t)|,\qquad f \in C(K),
+\]
+this is a real Banach algebra, with unity $1:K \to \mathbb{R}$ defined by $1(t)=1$ for all $t \in K$.\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~124, Lemma 3.97.}
+Generally, if $X$ is a compact metrizable space and 
+$Y$ is a separable metrizable space then $C(X,Y)$ is separable.\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~125, Lemma 3.99.}
+Thus, when $K$ is a compact metrizable space, $C(K)$ is a separable unital Banach algebra. 
+
+
+\section{Schauder bases}
+If $X$ is a real normed space, a \textbf{Schauder basis for $X$} is a 
+sequence $(h_k)$ in $X$ such that for each $x \in X$ there is a unique sequence of real numbers $(c_k(x))$ such that 
+$\sum_{k=1}^n c_k(x) h_k \to x$. A sequence $(h_k)$ in $X$ is called a \textbf{basic sequence} if it is a Schauder basis for the closure of
+its linear span.\footnote{Because Schauder bases are not as familiar objects as orthonormal bases (Hilbert space
+bases) or vector space
+bases (Hamel bases), it is worth explicitly checking their properties to make ourselves familiar with how they work.}
+
+If $(h_k)$ is a Schauder basis, then
+$c_k(0)=0$ for all $k$. Suppose that for some real numbers $a_1,\ldots,a_n$ we have
+  $\sum_{k=1}^n a_k h_k=0$. Then $a_k=c_k(0)=0$ for $1 \leq k \leq n$, which means that the set $\{h_1,\ldots,h_n\}$ is linearly independent. 
+Therefore a Schauder basis is linearly independent. 
+It is immediate that the linear span of a Schauder basis is a dense linear subspace of $X$. 
+The following shows that a normed space with a Schauder basis is separable.\footnote{In particular, a Banach
+space with a Schauder basis is separable. There is a celebrated counterexample found by Per Enflo of a separable
+Banach space for which there does not exist a Schauder basis.}
+
+\begin{lemma}
+If $(h_k)$ is a Schauder basis for a normed space $X$ then
+\[
+\left\{\sum_{k=1}^n a_k h_k: n \geq 1, a_1,\ldots,a_n \in \mathbb{Q}\right\}
+\]
+is dense in $X$. 
+\end{lemma}
+\begin{proof}
+Let $x \in X$ and let $\epsilon>0$. There is some $n$ for which 
+\[
+\norm{\sum_{k=1}^n c_k(x) h_k - x} \leq \epsilon.
+\]
+For each $1 \leq k \leq n$, let $a_k \in \mathbb{Q}$ satisfy $|a_k-c_k(x)| \leq \frac{\epsilon}{n \norm{h_k}}$. Then
+\begin{align*}
+\norm{\sum_{k=1}^n a_k h_k -x} &\leq 
+\norm{\sum_{k=1}^n (a_k-c_k(x))h_k} + \epsilon\\
+&\leq \sum_{k=1}^n |a_k-c_k(x)| \norm{h_k} + \epsilon\\
+&\leq 2\epsilon,
+\end{align*}
+which proves the claim.
+\end{proof}
+
+
+For each $k$ we define $h_k^*:X \to \mathbb{R}$ by $h_k^*(x)=c_k(x)$. 
+For $x,y \in X$, $\sum_{k=1}^n h_k^*(x)h_k \to x$ and $\sum_{k=1}^n h_k^*(y)h_k \to y$,
+so $\sum_{k=1}^n (h_k^*(x)+h_k^*(y))h_k \to x+y$ and therefore $h_k^*(x+y)=h_k^*(x)+h_k^*(y)$, and for $\alpha \in \mathbb{R}$,
+$\sum_{k=1}^n \alpha h_k^*(x) h_k \to \alpha x$ and therefore $h_k^*(\alpha x)=\alpha h_k^*(x)$.
+This shows that $h_k^*:X \to \mathbb{R}$ is linear. 
+It is apparent that $h_k^*(h_j)=\delta_{j,k}$. 
+
+We define $P_n:X \to X$ by
+\[
+P_n x=\sum_{k=1}^n h_k^*(x) h_k,
+\]
+ and it is immediate that $P_n$ is linear and that
+for each $x \in X$, $P_nx \to x$ as $n \to \infty$. It is also immediate that $P_n$ is a \textbf{finite-rank operator}: $P_n(X)$ is a finite-dimensional linear subspace
+of $X$.
+For $m,n \geq 1$,
+\begin{align*}
+P_n P_m x &= P_n \sum_{k=1}^m h_k^*(x) h_k\\
+& = \sum_{k=1}^m h_k^*(x) P_n h_k\\
+&=\sum_{k=1}^m h_k^*(x) \sum_{j=1}^n h_j^*(h_k) h_j\\
+&=\sum_{k=1}^m h_k^*(x) \sum_{j=1}^n \delta_{j,k} h_j\\
+&=P_{\min(m,n)} x,
+\end{align*}
+showing that 
+\[
+P_n P_m = P_{\min(m,n)}.
+\]
+In particular, $P_n^2 = P_n$, namely, $P_n$ is a \textbf{projection operator}. 
+We prove that when $X$ is a Banach space, $P_n$ is continuous.\footnote{N. L. Carothers, {\em A Short Course
+in Banach Space Theory}, p.~26, Theorem 3.1.} We indicate explicitly in the proof
+when we use that $X$ is a Banach space rather than merely a normed space. 
+
+\begin{theorem}
+If $X$ is a Banach space and $(h_n)$ is a Schauder basis for $X$, then each $P_n$ is continuous, and 
+$\sup_{n \geq 1} \norm{P_n}<\infty$.  Furthermore, each $h_k^*$ is continuous.
+\label{projections}
+\end{theorem}
+\begin{proof}
+For $x \in X$, $P_n x \to x$, so $\norm{P_n x} \to \norm{x}$, which implies that $\sup_{n \geq 1} \norm{P_n x}<\infty$.
+It thus makes sense to define
+\[
+p(x) = \sup_{n \geq 1} \norm{P_n x}.
+\]
+It is immediate that $p(\alpha x) = |\alpha| p(x)$ and that $p(x+y) \leq p(x) + p(y)$. If $p(x)=0$, then $P_nx=0$ for all $n$, 
+which implies that $x=0$. Therefore $p$ is a norm on $X$. 
+
+For $n \geq 1$ and $x \in X$,
+\[
+\norm{P_n x} \leq
+p(x),
+\]
+showing that $P_n:(X,p) \to (X,\norm{\cdot})$ is a bounded linear operator with operator norm $\leq 1$. 
+Suppose that $(x_k)$ is a Cauchy sequence in the norm $p$. Then we have for each $n$  that 
+$P_n x_k$ is a Cauchy sequence in the norm
+$\norm{\cdot}$, and because $(X,\norm{\cdot})$ is a Banach space, there is some
+$y_n \in X$ such that $P_n x_k \to y_n$ in the norm $\norm{\cdot}$ as $k \to \infty$. 
+For $\epsilon>0$ there is some $k_\epsilon$ such that when
+$j,k \geq k_\epsilon$, $p(x_j-x_k) \leq \epsilon$, and thus for
+$k \geq k_\epsilon$ and for any $n$,
+\begin{equation}
+\norm{P_n x_k-y_n} =  \lim_{j \to \infty} \norm{P_n x_k-P_n x_j}
+\leq \limsup_{j \to \infty} p(x_k-x_j)
+\leq \epsilon.
+\label{Pnxk}
+\end{equation}
+Now, for any $m,n$ and any $k$,
+\[
+\norm{y_n-y_m} \leq \norm{y_n - P_n x_k}
++\norm{P_n x_k-x_k}+ \norm{P_m x_k-x_k} + \norm{P_m x_k- y_m},
+\]
+so using the above, for $k \geq k_\epsilon$, 
+\[
+\norm{y_n-y_m}  \leq 2\epsilon+\norm{P_n x_k-x_k}+ \norm{P_m x_k-x_k}.
+\]
+Because $P_n x_k \to x_k$ as $n \to \infty$, there is some  $n_\epsilon$ such that
+$\norm{P_n x_k-x_k} \leq \epsilon$ when $n \geq n_\epsilon$, and in this case
+for $n,m \geq n_\epsilon$,
+\[
+\norm{y_n-y_m}  \leq 4\epsilon,
+\]
+which shows that $y_n$ is a Cauchy sequence in the norm $\norm{\cdot}$, and because
+$(X,\norm{\cdot})$ is a Banach space there is some $y \in X$ such that
+$y_n \to y$ in the norm $\norm{\cdot}$. 
+
+For any $n,m$, the restriction of the linear map $P_n:X \to X$ to the finite-dimensional linear subspace $P_m(X)$ is
+continuous in the norm $\norm{\cdot}$,
+thus
+\begin{align*}
+P_n y_m &=P_n\left( \lim_{k \to \infty} P_m x_k\right)\\
+&=\lim_{k \to \infty} P_n P_m x_k\\
+&=\lim_{k \to \infty} P_{\min(m,n)} x_k\\
+&=y_{\min(m,n)}.
+\end{align*}
+Using this, we find by induction that for each $n$,
+\[
+y_n = \sum_{k=1}^n h_k^*(y_k) h_k,
+\]
+and because $y_n \to y$ in the norm $\norm{\cdot}$ as $n \to \infty$ and $(h_k)$ is a Schauder basis,
+this implies that $h_k^*(y)=h_k^*(y_k)$ for all $k$, and thus $P_n y=y_n$. 
+Therefore
+\[
+p(x_k-y) = \sup_{n \geq 1} \norm{P_n(x_k-y)}
+= \sup_{n \geq 1} \norm{P_n x_k-y_n}.
+\]
+For $\epsilon>0$ and $k \geq k_\epsilon$, by \eqref{Pnxk} we have $\norm{P_n x_k-y_n} \leq \epsilon$
+and therefore
+$p(x_k-y) \leq \epsilon$, which shows that $x_k \to y$ in the norm $p$ as $k \to \infty$. Thus,
+$(X,p)$ is a Banach space. 
+
+The identity map $\id_X:X \to X$ is a linear isomorphism, and
+for $x \in X$,
+\[
+\norm{\id_X x} = \norm{x} = \lim_{n \to \infty} \norm{P_n x}
+\leq p(x),
+\]
+showing that $\id_X$ is continuous $(X,p) \to (X,\norm{\cdot})$. 
+Because $(X,p)$ and $(X,\norm{\cdot})$ are Banach spaces and
+$\id_X$ is a continuous linear isomorphism, by the open mapping theorem\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~49, Corollary 2.12c.}
+there is some $a>0$ such that
+\[
+\norm{x}=\norm{\id_X} \geq ap(x),\qquad x \in X.
+\]
+Then
+\[
+\norm{P_n x} \leq p(x) \leq \frac{1}{a} \norm{x},
+\]
+which means that $P_n:(X,\norm{\cdot}) \to (X,\norm{\cdot})$ is a bounded linear operator with
+operator norm $\leq \frac{1}{a}$. 
+\end{proof}
+
+Each $P_n$ is a bounded linear operator on $X$, and for each $x \in X$, $P_nx \to x$, which means
+that $P_n \to \id_X$ in the \textbf{strong operator topology}. 
+The fact that the functions $h_k^*:X \to \mathbb{R}$ are linear and continuous means that they belong to the dual
+space
+$X^*$. 
+
+In Theorem \ref{projections}, if $\sup_{n \geq 1} \norm{P_n}=1$, we call the Schauder basis $(x_k)$  \textbf{monotone}. 
+
+
+
+The following theorem gives sufficient and necessary conditions under which a sequence in a Banach space $X$ is a basic sequence.\footnote{Joseph Diestel, {\em Sequences and Series in Banach Spaces}, p.~36, Chapter V, Theorem 1.} Thus if a sequence satisfies this condition and its linear span is dense in $X$
+space, then it is a Schauder basis.
+
+\begin{theorem}
+Suppose that $X$ is a Banach space and that $(x_k)$ is a sequence of nonzero elements of $X$. 
+There is some $K$ such that for any sequence of real numbers $(a_k)$ and any $n<N$,
+\begin{equation}
+\norm{\sum_{k=1}^n a_k x_k} \leq K \norm{\sum_{k=1}^N a_k x_k}
+\label{Kinequality}
+\end{equation}
+if and only if $(x_k)$ is a basic sequence.
+\end{theorem}
+\begin{proof}
+It is apparent that $K \geq 1$.
+Let $S$ be the linear span of $(x_k)$, and let $S_n$ be the linear span of $\{x_1,\ldots,x_n\}$.
+For $n<N$, 
+\begin{equation}
+|a_n| \norm{x_n} \leq
+\norm{\sum_{k=1}^{n-1} a_k x_k}
++\norm{\sum_{k=1}^n a_k x_k}
+\leq 2K \norm{\sum_{k=1}^N a_k x_k}.
+\label{2K}
+\end{equation}
+Thus if $\sum_{k=1}^N a_k x_k=0$ then using the above with
+$a_{N+1}=0$, for $1 \leq n \leq N$ we get $a_n=0$, showing that
+$(x_k)$ is linearly independent. 
+Because $(x_k)$ is linearly independent, it makes sense to define a linear map $Q_n:S \to S_n$ by
+\[
+Q_n x_k = \begin{cases}
+x_k&k \leq n\\
+0&k > n.
+\end{cases}
+\]
+For $x=\sum_{k=1}^N a_k x_k \in S$, if $n<N$ then by \eqref{Kinequality},
+$\norm{Q_n x} \leq K \norm{x}$, and if $n \geq N$ then $Q_n x = x$. Thus 
+for each $n$, $Q_n:S \to S_n$ is a bounded linear operator with operator norm $\leq 
+K$, and because $X$ is a Banach space and $\overline{S}_n=S_n$,
+there is a unique bounded linear operator $P_n:\overline{S} \to S_n$ whose restriction to $S$ is equal
+to $Q_n$, which satisfies  $\norm{P_n}=\norm{Q_n} \leq K$.\footnote{Gert K. Pedersen, {\em Analysis Now}, revised
+printing, p.~47, Proposition 2.1.11.}
+For $s \in S$, $Q_n Q_m  s = Q_{\min(m,n)} s$, and
+for $x \in \overline{S}$, there is a sequence $s_k \in S$ 
+that tends to $x$, thus
+\begin{equation}
+P_nP_m x = \lim_{k \to \infty} P_n P_m s_k = 
+\lim_{k \to \infty} P_{\min(m,n)} s_k
+=P_{\min(m,n)} x.
+\label{Pmin}
+\end{equation}
+
+
+For $x \in \overline{S}$ and $\epsilon>0$, there is 
+some $s \in S$ with $\norm{s-x} \leq \epsilon$. 
+Then there are some $a_1,\ldots,a_m \in \mathbb{R}$ for which $s = \sum_{i=1}^m a_i x_i$, and for $n>m$,
+\begin{align*}
+\norm{x-P_n x}&\leq \norm{x-s}+\norm{s-P_n s}+\norm{P_n s-  P_n x}\\
+&=  \norm{x-s} +\norm{P_n s -P_n x}\\
+&\leq \epsilon+K \norm{s-x}\\
+&\leq (K+1)\epsilon,
+\end{align*}
+showing that $P_n x \to x$. It follows from this and \eqref{Pmin} that for each $x \in \overline{S}$ there is a sequence
+of real numbers $(c_k)$ such that $\sum_{k=1}^n c_k x_k \to x$. 
+If $(b_k)$ is another such sequence, let $a_k=c_k-b_k$, and then we obtain from \eqref{2K}
+that $a_k=0$ for each $k$. Therefore, $(c_k)$ is the unique sequence of real numbers such that
+$\sum_{k=1}^n c_k x_k \to x$, which establishes that $(x_k)$ is a Schauder basis for $\overline{S}$.
+\end{proof}
+
+
+
+\section{Haar system and Faber-Schauder system}
+For $k \geq 0$, for $1 \leq i \leq 2^k$, and for $n=2^k+i$, write
+\[
+\Delta_n = \Delta_k^i = \left( \frac{i-1}{2^k},\frac{i}{2^k}\right),
+\]
+and we write $\Delta_1 = \Delta_0^0 = (0,1)$.\footnote{We are partly following the presentation in
+B. S. Kashin and A. A. Saakyan, {\em Orthogonal Series}, p.~61, Chapter III.}
+Thus
+\[
+\Delta_1 = \Delta_0^0 = (0,1),\; \Delta_2 = \Delta_0^1 = (0,1),
+\; \Delta_3 = \Delta_1^1 = \Big(0,\frac{1}{2}\Big),
+\; \Delta_4 = \Delta_1^2 = \Big(\frac{1}{2},
+1\Big). 
+\]
+If $(a,b) \subset [0,1]$, let $(a,b)^- = \left(a,\frac{a+b}{2}\right)$ and $(a,b)^+=\left(\frac{a+b}{2},b\right)$. 
+Thus
+\[
+\Delta_n^-=(\Delta_k^i)^-=\left(\frac{i-1}{2^k}, \frac{2i-1}{2^{k+1}}\right) 
+=\left(\frac{2i-2}{2^{k+1}},  \frac{2i-1}{2^{k+1}}\right) 
+=\Delta_{k+1}^{2i-1}
+\]
+and
+\[
+\Delta_n^+=(\Delta_k^i)^+=\left(\frac{2i-1}{2^{k+1}}, \frac{i}{2^{k}}\right) 
+=\left(\frac{2i-1}{2^{k+1}},  \frac{2i}{2^{k+1}}\right) 
+=\Delta_{k+1}^{2i}.
+\]
+
+
+\begin{lemma}
+If $n \geq m$ then either $\Delta_n \subset \Delta_m$ or $\Delta_n \cap \Delta_m = \emptyset$.
+\end{lemma}
+\begin{proof}
+Let
+$n=2^k+i$ and $m=2^l+j$, with $k \geq l$.
+Then
+\[
+\Delta_l^j = \left(\frac{j-1}{2^l},\frac{j}{2^l}\right)
+=\left(\frac{2^{k-l}(j-1)}{2^k},\frac{2^{k-l}j}{2^k}\right).
+\] 
+There are three cases: 
+(i) $i \leq 2^{k-l}(j-1)$,
+(ii) $2^{k-l}(j-1)<i \leq 2^{k-l}j$,
+(iii) $i>2^{k-l}j$. In the first
+case, $\Delta_k^i \cap \Delta_l^j = \emptyset$,
+i.e. $\Delta_n \cap \Delta_m = \emptyset$. 
+ In the second case,
+$i-1 \geq 2^{k-l}(j-1)$ and $i \leq 2^{k-l}$, so $\Delta_k^i \subset \Delta_l^j$, i.e.
+$\Delta_n \subset \Delta_m$. 
+In the third case, $i-1 \geq 2^{k-l}j$ so $\Delta_k^i \cap \Delta_l^j = \emptyset$, i.e. $\Delta_n \cap \Delta_m = \emptyset$. 
+\end{proof}
+
+We define $\chi_1=1$,
+and for $k \geq 0$,  $1 \leq i \leq 2^k$, and  $n=2^k+i$, we define
+\[
+\chi_n(t)=\begin{cases}
+1&t \in \Delta_n^- =  \left(\frac{2i-2}{2^{k+1}},\frac{2i-1}{2^{k+1}}\right)\\
+-1&t \in \Delta_n^+ = \left(\frac{2i-1}{2^{k+1}},  \frac{2i}{2^{k+1}}\right)\\
+0&\textrm{otherwise}.
+\end{cases}
+\]
+For example,
+\[
+\chi_2(t) = 
+\begin{cases}
+1&t \in \left(0,\frac{1}{2}\right)\\
+-1&t \in \left(\frac{1}{2},1\right)\\
+0&\textrm{otherwise}
+\end{cases}
+\]
+and
+\[
+\chi_3(t)
+=\begin{cases}
+1&t \in \left(0,\frac{1}{4}\right)\\
+-1&t \in \left(\frac{1}{4},\frac{1}{2}\right)\\
+0&\textrm{otherwise}
+\end{cases}
+\]
+and
+\[
+\chi_4(t)
+=\begin{cases}
+1&t \in \left(\frac{1}{2},\frac{3}{4}\right)\\
+-1&t \in \left(\frac{3}{4},1\right)\\
+0&\textrm{otherwise}.
+\end{cases}
+\]
+We call $(\chi_n)$ the \textbf{Haar system}. It is a fact that $(\chi_n)$ is a monotone Schauder basis for the Banach space
+$L^1[0,1]$ with the norm $\norm{f}_{L^1}=\int_0^1 |f(t)| dt$.\footnote{Joram Lindenstrauss and Lior
+Tzafriri, {\em Classical Banach Spaces I and II}, p.~3.}
+
+
+
+Now we define $\phi_1=1$ and for $n>1$ we define $\phi_n:[0,1] \to \mathbb{R}$ by
+\[
+\phi_n(t) = \int_0^t \chi_{n-1}(u) du.
+\]
+Each $\phi_n$ belongs to $C[0,1]$, and we call $(\phi_n)$ the \textbf{Faber-Schauder system}. 
+For example,
+\[
+\phi_2(t) = \int_0^t \chi_1(u) du = t,
+\]
+ and
+\[
+ \phi_3(t) = \begin{cases}
+\int_0^t 1du&t \in \left[0,\frac{1}{2}\right]\\
+ \int_0^{1/2} 1du + \int_{1/2}^t -1 du&t \in \left[\frac{1}{2},1\right]
+ \end{cases}
+ =\begin{cases}
+t &t \in \left[0,\frac{1}{2}\right]\\
+-t+1 &t \in \left[\frac{1}{2},1\right]
+ \end{cases}
+\]
+and
+\[
+ \phi_4(t) = \begin{cases}
+\int_0^t 1du&t \in \left[0,\frac{1}{4}\right]\\
+ \int_0^{1/4} 1du + \int_{1/4}^t -1 du&t \in \left[\frac{1}{4},\frac{1}{2} \right]\\
+ 0&t \in \left[\frac{1}{2},1\right]
+ \end{cases}
+ =\begin{cases}
+t &t \in \left[0,\frac{1}{4}\right]\\
+-t+\frac{1}{2} &t \in \left[\frac{1}{4},\frac{1}{2} \right]\\
+ 0&t \in \left[\frac{1}{2},1\right]
+ \end{cases}
+\]
+and
+\[
+ \phi_5(t) = \begin{cases}
+ 0&t \in \left[0,\frac{1}{2}\right]\\
+\int_{1/2}^t 1du&t \in \left[\frac{1}{2},\frac{3}{4}\right]\\
+ \int_{1/2}^{3/4} 1du + \int_{3/4}^t -1 du&t \in \left[\frac{3}{4},1 \right]
+  \end{cases}
+ =\begin{cases}
+  0&t \in \left[0,\frac{1}{2}\right]\\
+t -\frac{1}{2}&t \in\left[\frac{1}{2},\frac{3}{4}\right]\\
+-t+1 &t \in \left[\frac{3}{4},1 \right].
+ \end{cases}
+\]
+Generally  for $k \geq 0$, for $1 \leq i \leq 2^k$, and for $n=2^k+i$,
+\[
+\phi_{n+1}(t) = \begin{cases}
+t-\frac{i-1}{2^k}&t \in \Delta_{n}^-=\left(\frac{i-1}{2^k}, \frac{2i-1}{2^{k+1}}\right)\\
+-t+ \frac{i}{2^{k}}&t \in \Delta_{n}^+=\left(\frac{2i-1}{2^{k+1}}, \frac{i}{2^{k}}\right)\\
+0&\textrm{otherwise}.
+\end{cases}
+\]
+We remark that 
+\[
+\norm{\phi_{n+1}} = \frac{2i-1}{2^{k+1}}-\frac{i-1}{2^k} = 2^{-k-1}.
+\]
+
+
+\section{Riesz representation theorem}
+Let $(X,\mathfrak{M})$ be a measurable space. 
+A \textbf{signed measure} is a function $\mu:\mathfrak{M} \to [-\infty,\infty]$ such that
+(i) $\mu(\emptyset)=0$, (ii) $\mu$ assumes at most one of the values $-\infty,\infty$, and (iii)
+ if $(E_j)$ is a sequence of disjoint elements of $\mathfrak{M}$
+then $\mu\left(\bigcup E_j\right) = \sum \mu(E_j)$. 
+A \textbf{finite signed measure} is a signed measure whose image is contained in $\mathbb{R}$. 
+We denote by 
+$\ca(\mathfrak{M})$ 
+the collection of all finite signed measures on $\mathfrak{M}$. 
+For $\mu,\lambda \in \ca(\mathfrak{M})$ and for $c \in \mathbb{R}$, define
+\[
+(\mu+\lambda)(E) = \mu(E)+\lambda(E),
+\qquad (c\mu)(E) = c \mu(E)
+\]
+for $E \in \mathfrak{M}$, and we check that with addition and scalar multiplication thus defined $\ca(\mathfrak{M})$ is a real vector space.
+A \textbf{positive measure} is a 
+signed measure whose imaged is contained in $[0,\infty]$. For $\mu,\lambda \in \ca(\mathfrak{M})$, we write 
+\[
+\mu \geq \lambda
+\]
+if $\mu-\lambda$ is a positive measure; in any case $\mu-\lambda \in \ca(\mathfrak{M})$. We check that $\leq$ is a partial order
+on $\ca(\mathfrak{M})$ with which $\ca(\mathfrak{M})$ is an \textbf{ordered vector space}.
+Finally, a \textbf{probability measure} is a positive measure satisfying $\mu(X)=1$, which in
+particular belongs to $\ca(\mathfrak{M})$. 
+
+For $E \in \mathfrak{M}$, a \textbf{partition of $E$} is a countable subset $\{E_i\}$
+of $\mathfrak{M}$ whose members are pairwise disjoint. 
+For $\mu \in \ca(\mathfrak{M})$ and $E \in \mathfrak{M}$ we define
+\[
+|\mu|(E) = \sup \left\{\sum_{i=1}^\infty |\mu(E_i)|: \textrm{$\{E_i\}$ is a partition of $E$}\right\}.
+\]
+It is immediate that $|\mu(E)| \leq |\mu|(E)$. 
+It is proved that $|\mu|$ is a finite positive measure on $\mathfrak{M}$,
+called the \textbf{total variation measure of $\mu$}.\footnote{Walter Rudin, {\em Real
+and Complex Analysis}, third ed., pp.~117--118, Theorem 6.2 and Theorem 6.4.}
+For $\mu \in \ca(\mathfrak{M})$, define
+\[
+\mu^+ = \frac{1}{2}(|\mu|+\mu),\qquad
+\mu^-=\frac{1}{2}(|\mu|-\mu).
+\]
+Because $|\mu|$ is a finite positive measure and $|\mu(E)| \leq |\mu(E)|$, 
+$\mu^+$ and $\mu^-$ are finite positive measures, called the \textbf{positive and
+negative variations of $\mu$}. Then $\mu=\mu^+ -\mu^-$, called the \textbf{Jordan
+decomposition of $\mu$}. 
+
+
+For $\mu \in \ca(\mathfrak{M})$,
+ define
+\[
+\norm{\mu} = |\mu|(X) = \mu^+(X) + \mu^-(X).
+\]
+One checks that $\norm{\cdot}$ is a norm on $\ca(\mathfrak{M})$.
+
+For a compact Hausdorff space $K$ and
+for $f,g \in C(K)$, write $g \geq f$ when $(g-f)(t) \geq 0$ for all $t \in K$. A \textbf{positive linear functional} is a linear map $\phi:C(K) \to \mathbb{R}$ such that
+$\phi(f) \geq 0$ when $f \geq 0$. In this case, because $\norm{f}\cdot 1+f \geq 0$,
+\[
+\norm{f}\phi(1)+\phi(f) = \phi(\norm{f}\cdot 1 + f) \geq 0
+\]
+i.e. $-\phi(f) \leq \phi(1) \norm{f}$,
+and 
+because $\norm{f} \cdot 1 - f \geq 0$,
+\[
+\norm{f}\phi(1)-\phi(f) = \phi(\norm{f}\cdot 1 - f) \geq 0,
+\]
+i.e. $\phi(f) \leq \phi(1) \norm{f}$, showing because $\norm{1}=1$ that the operator norm of $\phi$ is
+$\norm{\phi} = \phi(1)$, and in particular that $\phi \in C(K)^*$. 
+ 
+ For normed spaces $(V,\norm{\cdot}_V)$ and $(W,\norm{\cdot}_W)$, an \textbf{isometric
+ isomorphism} from $V$ to $W$ is a linear isomorphism $T:V \to W$ satisfying $\norm{Tv}_W = 
+ \norm{v}_V$ for all $v \in V$. The simplest version of the Riesz representation theorem is for compact
+ metrizable spaces, for which we do not need to speak about regular Borel measures or continuous functions vanishing at infinity.\footnote{Walter
+ Rudin, {\em Real and Complex Analysis}, third ed., p.~130, Theorem 6.19.}
+
+
+\begin{theorem}[Riesz representation theorem for compact metrizable spaces]
+Let $K$ be a compact metrizable space and define $\Lambda:\ca(\mathscr{B}_K) \to C(K)^*$ by 
+\[
+\Lambda(\mu)(f) = \int_K f d\mu,\qquad \mu \in \ca(\mathscr{B}_K),\quad f \in C(K).
+\]
+$\Lambda$ is an isometric isomorphism, and is order preserving: if $\mu \geq 0$ then $\Lambda(\mu) \in C(K)^*$ is a positive linear functional, and thus
+if $\mu \geq \lambda$ then $\Lambda(\mu) \geq \Lambda(\lambda)$. 
+\end{theorem}
+
+
+
+
+\section{The Borel $\sigma$-algebra of $C[0,1]$}
+Let $I=[0,1]$, with the relative topology inherited from $\mathbb{R}$, with which $I$ is a compact metric space.
+For $t_1,\ldots,t_n \in I$, we define $\pi_{t_1,\ldots,t_n}:C(I) \to \mathbb{R}^n$ by
+\[
+\pi_{t_1,\ldots,t_n}(x)=(x(t_1),\ldots,x(t_n)), \qquad x \in C(I),
+\]
+which is continuous.
+
+
+
+For a set $X$ and a collection of functions $f_t:X \to \mathbb{R}$,
+the coarsest $\sigma$-algebra on $X$ such that each $f_t$ is measurable
+$X \to \mathbb{R}$, where $\mathbb{R}$ has the Borel $\sigma$-algebra, is called
+the \textbf{$\sigma$-algebra generated by $\{f_t:t \in I\}$}, and is
+denoted
+by $\sigma(\{f_t: t \in I\})$. 
+We show that the Borel $\sigma$-algebra of $C(I)$ is equal to the $\sigma$-algebra generated by the family
+of projection maps $C(I) \to \mathbb{R}$.\footnote{K. R. Parthasarathy, {\em Probability Measures on
+Metric Spaces}, p.~212, Theorem 2.1.}
+
+
+\begin{theorem}
+Let $\mathscr{A}$ be the $\sigma$-algebra generated by the family $\{\pi_t:t \in [0,1]\}$. Then
+$\mathscr{B}_{C[0,1]}=\mathscr{A}$.
+\end{theorem}
+\begin{proof}
+Because $C(I)$ is a separable metric space it is second-countable, and so if $U$ is an open subset of $C(I)$ then $U$ is equal to the union of countably many open balls. Each open ball
+is equal to the union of countably many closed balls: $B(x,r)=\bigcup \overline{B(x,r-1/n)}$. Therefore each open subset of $C(I)$ is equal to
+the union of countably many closed balls, and
+ to prove that $\mathscr{B}_{C(I)} \subset \mathscr{A}$ it suffices to prove that all closed balls belong to $\mathscr{A}$. 
+To this end, 
+let $q_1,q_2,\ldots$ be an enumeration of $[0,1] \cap \mathbb{Q}$, 
+let $x \in C(I)$, and let $r>0$.  
+Suppose that $|y(q_n)-x(q_n)| \leq r$ for all $n$, and take $t \in [0,1]$. Then there is a subsequence
+$q_{a_n}$ of $q_n$ that tends to $t$, 
+and because $y-x:[0,1] \to \mathbb{R}$ is continuous, 
+$|y(q_{a_n})-x(q_{a_n})| \to |y(t)-x(t)|$, and then because for each $n$ we have
+$|y(q_{a_n})-x(q_{a_n})| \leq r$ it follows that $|y(t)-x(t)| \leq r$. 
+This establishes
+\[
+\{y \in C(I): \norm{y-x} \leq r\}
+=\bigcap_{n=1}^\infty \{y \in C(I): |y(q_n)-x(q_n)| \leq r\}.
+\]
+But
+\[
+\{y \in C(I): |y(q_n)-x(q_n)| \leq r\} = \pi_{q_n}^{-1}([\pi_{q_n}(x)-r,\pi_{q_n}(x)+r]),
+\]
+which belongs to $\mathscr{A}$. Thus $\overline{B(x,r)}$ 
+is a countable intersection of elements of $\mathscr{A}$ and so belongs to $\mathscr{A}$, which shows
+that $\mathscr{B}_{C(I)} \subset \mathscr{A}$.
+
+On the other hand, for each $t \in I$ the map $\pi_t:C(I) \to \mathbb{R}$ is continuous and hence is
+measurable $\mathscr{B}_{C(I)} \to \mathscr{B}_{\mathbb{R}}$.\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~140, Corollary 4.26.}
+Therefore  $\mathscr{A} \subset \mathscr{B}_{C(I)}$.
+\end{proof}
+
+
+
+
+
+\section{Relatively compact subsets of $C[0,1]$}
+If $(M,d)$ is a metric space, a subset $A$ of $M$ is called \textbf{totally bounded} if for 
+each $\epsilon>0$ there are finitely many points $x_1,\ldots,x_n \in M$ such that for any 
+point $x \in M$ there is some $i$ for which $d(x,x_i)<\epsilon$. 
+It is immediate that a compact metric space is totally bounded, and the \textbf{Heine-Borel theorem} states that
+a metric space is compact if and only if it is complete and totally bounded.\footnote{Charalambos D. Aliprantis
+and Kim C. Border, {\em Infinite Dimensional Analysis: A Hitchhiker's Guide}, third ed., p.~86, Theorem 3.28.}
+On the other hand, one checks that if $(M,d)$ is a metric space and $A$ is a totally bounded subset of $M$, then
+the closure $\overline{A}$ is a totally bounded subset of $M$. 
+Thus, if $A$ is a totally bounded subset of a complete metric space $(M,d)$, then 
+the closure $\overline{A}$ is itself a complete metric space (because $(M,d)$ is a complete metric space), and because $\overline{A}$ is complete and totally bounded, by the Heine-Borel
+theorem it is compact.
+
+If $X$ is a topological space and $\mathscr{F}$ is a subset of $C(X)$, we say that
+$\mathscr{F}$ is \textbf{equicontinuous at $x \in X$} if for each $\epsilon>0$ there
+is a neighborhood $U_{x,\epsilon}$ of $x$ such that $|f(x)-f(y)|<\epsilon$ for all $f \in \mathscr{F}$ and for all
+$y \in U_{x,\epsilon}$, and we call $\mathscr{F}$ \textbf{equicontinuous} if it is equicontinuous at each $x \in X$.  
+We call $\mathscr{F}$ \textbf{pointwise bounded} if for each $x \in X$, $\{f(x): f \in \mathscr{F}\}$ is a bounded subset
+of $\mathbb{R}$. 
+The \textbf{Arzel\`a-Ascoli theorem} states that for a compact Hausdorff space $X$ and for $\mathscr{F} \subset C(X)$,
+$\mathscr{F}$ is equicontinuous and pointwise bounded if and only if $\mathscr{F}$ is totally bounded.\footnote{Gerald B. Folland, {\em Real
+Analysis: Modern Techniques and Their Applications}, second ed., p.~137, Theorem 4.43.}
+Then the closure $\overline{\mathscr{F}}$ is totally bounded and is itself a complete metric space, and hence
+is a compact metric space. That is, for a compact Hausdorff space $X$, $\mathscr{F}$ is equicontinuous and pointwise bounded if and only if  $\mathscr{F}$ is relatively compact  in $C(X)$.
+
+For $x \in C[0,1]$ and $\delta>0$, define
+\[
+\omega_x(\delta) = \sup_{s,t \in I, |s-t| \leq \delta} |x(s)-x(t)|.
+\]
+For $x \in C[0,1]$ because $x:I \to \mathbb{R}$ is continuous and $I$ is compact,
+$x$ is uniformly continuous on $I$. Thus
+for $\epsilon>0$ there is some $\delta_\epsilon>0$ such that when $|s-t| \leq \delta_\epsilon$,
+$|x(s)-x(t)| \leq \epsilon$, hence
+if $\delta \leq \delta_\epsilon$ then $\omega_x(\delta) \leq \epsilon$, i.e.
+$\omega_x(\delta) \to 0$ as $\delta \to 0$.  We give sufficient and necessary conditions for a subset of $C[0,1]$ to be relatively compact.
+
+
+\begin{lemma}
+Let $A \subset C[0,1]$. $A$ is relatively compact if and only if 
+\begin{equation}
+\sup_{x \in A} |x(0)|<\infty
+\label{x0}
+\end{equation}
+and
+\begin{equation}
+\lim_{\delta \downarrow 0} \sup_{x \in A} \omega_x(\delta)=0.
+\label{delta0}
+\end{equation}
+\end{lemma}
+\begin{proof}
+For $t \in I$ and for $r>0$, let
+\[
+B_r(t) = \{s \in I: |s-t|<r\},
+\]
+which is an open neighborhood of $t$.
+The Arzel\`a-Ascoli theorem tells us that $A$ is relatively compact
+if and only if $A$ is equicontinuous and pointwise bounded. If $A$ is relatively compact, then being pointwise bounded
+yields \eqref{x0}. Let $\epsilon>0$. Because $A$ is equicontinuous, for each $t \in I$ there is some $\delta_t>0$ 
+such that for all
+$x \in A$ and for all
+$s \in B_{\delta_t}(t)$ we have 
+$|x(s)-x(t)|<\epsilon/2$. 
+Then because $I$ is compact, 
+there are $t_1,\ldots,t_n \in I$ such that $I = \bigcup_{i=1}^n B_{\delta_{t_i}}(t_i)$.
+Let $\delta_\epsilon>0$ be the \textbf{Lebesgue number} for this open cover: for each $t \in I$ there is some
+$i$ for which $B_{\delta_\epsilon}(t) \subset B_{\delta_{t_i}}(t_i)$.
+For $0<\delta \leq \delta_\epsilon$, for $x \in A$,  and for $|s-t| \leq \delta/2$, 
+there is some $i$ for which $B_\delta(t) \subset B_{\delta_{t_i}}(t_i)$, so $s,t \in B_{\delta_{t_i}}(t_i)$, which means that
+$|x(s)-x(t_i)|<\epsilon/2$ and $|x(t)-x(t_i)|<\epsilon/2$, and thus
+$|x(s)-x(t)| \leq |x(s)-x(t_i)|+|x(t_i)-x(t)| < \epsilon$. 
+Therefore $\omega_{\delta/2}(x) \leq \epsilon$, and this is true for all $x \in A$ which proves \eqref{delta0}.
+
+Suppose now that \eqref{x0} and \eqref{delta0} are true. 
+By \eqref{delta0}, there is some $m \geq 1$ such that
+$\sup_{x \in A} \omega_x(1/m) \leq 1$, and therefore
+for $x \in A$, $\norm{x} \leq |x(0)|+m$.
+With \eqref{x0} this yields
+$\sup_{x \in A} \norm{x}<\infty$, whence $A$ is pointwise bounded. 
+Let $t \in I$ and let $\epsilon>0$. By \eqref{delta0} there is some $\delta>0$ such that
+$\sup_{x \in A} \omega_x(\delta) < \epsilon$. Thus for 
+$x \in A$ and for $|s-t| \leq \delta$, $|x(s)-x(t)|<\epsilon$, which shows that $A$ is equicontinuous at $t$. 
+This is true for all $t \in I$, so $A$ is equicontinuous and by the Arzel\`a-Ascoli theorem we get that
+$A$ is relatively compact in $C[0,1]$.
+\end{proof}
+
+
+
+
+
+
+\section{Continuously differentiable functions}
+Let $f:[0,1] \to \mathbb{R}$ be a function. We say that $f$ is \textbf{differentiable at $t \in [0,1]$}
+if  there is some $f'(t) \in \mathbb{R}$ such that\footnote{cf.
+Nicolas Bourbaki, {\em Elements of Mathematics. Functions of a Real Variable: Elementary Theory},
+p.~3, Chapter I, \S 1, no.~1, Definition 1.}
+\[
+\lim_{s \to t, s \in [0,1] \setminus \{t\}} \frac{f(s)-f(t)}{s-t} = f'(t).
+\]
+If $f$ is differentiable at each $t \in [0,1]$, we say that $f$ is \textbf{differentiable on $[0,1]$}
+and define $f':[0,1] \to \mathbb{R}$ by $t \mapsto f'(t)$. 
+We define $C^1[0,1]$ to be the collection of those $f:[0,1] \to \mathbb{R}$ such that
+$f$ is differentiable on $[0,1]$ and $f':[0,1] \to \mathbb{R}$ is continuous.
+$C^1[0,1]$ is contained in $C[0,1]$, and it turns out that $C^1[0,1]$ is a Borel set in $C[0,1]$.\footnote{Alexander S. Kechris, {\em Classical
+Descriptive Set Theory}, p.~70, \S 11.B, Example 2.}
+On the other hand, the collection differentiable functions $[0,1] \to \mathbb{R}$, which is a subset of $C[0,1]$,
+ is not a Borel set in $C[0,1]$.\footnote{S. M. Srivastava, {\em A Course on Borel Sets}, p.~139, Proposition 4.2.7.}
+
+
+
+
+\end{document}

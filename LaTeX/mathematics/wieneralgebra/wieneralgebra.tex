@@ -1,0 +1,553 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Wiener algebra and Wiener's lemma}
+\author{Jordan Bell}
+\date{January 17, 2015}
+
+\maketitle
+
+\section{Introduction}
+Let $\mathbb{T}=\mathbb{R} / 2\pi \mathbb{Z}$.
+For $f \in L^1(\mathbb{T})$ we define
+\[
+\norm{f}_{L^1(\mathbb{T})} = \frac{1}{2\pi} \int_\mathbb{T} |f(t)| dt.
+\]
+For $f,g \in L^1(\mathbb{T})$, we define
+\[
+(f*g)(t) = \frac{1}{2\pi} \int_{\mathbb{T}} f(\tau)g(t-\tau) d\tau, \qquad t \in \mathbb{T}.
+\]
+$f*g \in L^1(\mathbb{T})$, and  satisfies Young's inequality
+\[
+\norm{f*g}_{L^1(\mathbb{T})} \leq \norm{f}_{L^1(\mathbb{T})}
+\norm{g}_{L^1(\mathbb{T})}.
+\]
+With convolution as the operation, $L^1(\mathbb{T})$ is a commutative Banach algebra.
+
+
+For $f \in L^1(\mathbb{T})$, we define $\hat{f}:\mathbb{Z} \to \mathbb{C}$ by
+\[
+\hat{f}(k) = \frac{1}{2\pi} \int_{\mathbb{T}} f(t)  e^{-ikt} dt, \qquad k \in \mathbb{Z}.
+\]
+We define $c_0(\mathbb{Z})$ to be the collection of those $F:\mathbb{Z} \to \mathbb{C}$ such that
+$|F(k)| \to 0$ as $|k| \to \infty$. For $f \in L^1(\mathbb{T})$, the Riemann-Lebesgue lemma tells us that
+ $\hat{f} \in c_0(\mathbb{Z})$.
+
+We define $\ell^1(\mathbb{Z})$ to be the set of functions $F:\mathbb{Z} \to \mathbb{C}$ such that
+\[
+\norm{F}_{\ell^1(\mathbb{Z})} = \sum_{k \in \mathbb{Z}} |F(k)|.
+\]
+For $F,G \in \ell^1(\mathbb{Z})$, we define
+\[
+(F*G)(k) = \sum_{j \in \mathbb{Z}} F(j)G(k-j).
+\]
+$F*G \in \ell^1(\mathbb{Z})$, and  satisfies Young's inequality
+\[
+\norm{F*G}_{\ell^1(\mathbb{Z})} \leq \norm{F}_{\ell^1(\mathbb{Z})}
+\norm{G}_{\ell^1(\mathbb{Z})}.
+\]
+$\ell^1(\mathbb{Z})$ is a commutative Banach algebra, with unity
+\[
+F(k) = \begin{cases}
+1&k=0,\\
+0&k \neq 0.
+\end{cases}
+\]
+
+
+For $f \in L^1(\mathbb{T})$ and $n \geq 0$ we define $S_n(f) \in C(\mathbb{T})$ by
+\[
+S_n(f)(t) = \sum_{|k| \leq n} \hat{f}(k) e^{ikt}, \qquad t \in \mathbb{T}.
+\]
+
+For $0<\alpha<1$, we define $\Lip_\alpha(\mathbb{T})$ to be the collection of those functions
+$f:\mathbb{T} \to \mathbb{C}$ such that
+\[
+\sup_{t \in \mathbb{T}, h \neq 0} \frac{|f(t+h)-f(t)|}{|h|^\alpha}<\infty.
+\] 
+For $f \in \Lip_\alpha(\mathbb{T})$, we define
+\[
+\norm{f}_{\Lip_\alpha(\mathbb{T})} = \norm{f}_{C(\mathbb{T})}+
+\sup_{t \in \mathbb{T}, h \neq 0} \frac{|f(t+h)-f(t)|}{|h|^\alpha}.
+\]
+
+
+
+\section{Total variation}
+For $f:\mathbb{T} \to \mathbb{C}$, we define
+\[
+\var(f) = \sup \left\{ \sum_{i=1}^n |f(t_i)-f(t_{i-1})|:
+n \geq 1, 0=t_0<\cdots<t_n=2\pi \right\}.
+\]
+If $\var(f)<\infty$ then we say that $f$ is of \textbf{bounded variation}, and we define $BV(\mathbb{T})$ to be the set of functions
+$\mathbb{T} \to \mathbb{C}$ of bounded variation. We define
+\[
+\norm{f}_{BV(\mathbb{T})} =\sup_{t \in \mathbb{T}} |f(t)|+\var(f).
+\]
+This is a norm on $BV(\mathbb{T})$, with which $BV(\mathbb{T})$ is a Banach algebra.\footnote{N. L. Carothers, {\em Real Analysis},
+p.~206, Theorem 13.4.}
+
+\begin{theorem}
+If $f \in BV(\mathbb{T})$, then 
+\[
+|\hat{f}(n)| \leq \frac{\var(f)}{2\pi|n|}, \qquad n \in \mathbb{Z}, n \neq 0.
+\]
+\end{theorem}
+\begin{proof}
+Integrating by parts,
+\[
+\hat{f}(n)=\frac{1}{2\pi} \int_{\mathbb{T}} f(t) e^{-int} dt
+=- \frac{1}{2\pi} \int_{\mathbb{T}} \frac{e^{-int}}{-in} df(t)
+=\frac{1}{2\pi in} \int_{\mathbb{T}} e^{-int} df(t),
+\]
+hence
+\[
+|\hat{f}(n)| \leq \frac{1}{2\pi |n|} \var(f).
+\]
+\end{proof}
+
+
+\section{Absolutely convergent Fourier series}
+Suppose that $f \in L^1(\mathbb{T})$ and that $\hat{f} \in \ell^1(\mathbb{Z})$.
+For $n \geq m$,
+\[
+\norm{S_n(f)-S_m(f)}_{C(\mathbb{T})} = 
+\sup_{t \in \mathbb{T}} \left| \sum_{m < |k| \leq n} \hat{f}(k) e^{ikt} \right|
+\leq \sum_{m < |k| \leq n} |\hat{f}(k)|,
+\]
+and because $\hat{f} \in \ell^1(\mathbb{Z})$ it follows that $S_n(f)$ converges to some 
+$g \in C(\mathbb{T})$.
+We check that $f(t)=g(t)$ for almost all $t \in \mathbb{T}$.
+
+We define $A(\mathbb{T})$ to be the collection of those $f \in C(\mathbb{T})$ such that
+$\hat{f} \in \ell^1(\mathbb{Z})$, and we define
+\[
+\norm{f}_{A(\mathbb{T})} = \norm{\hat{f}}_{\ell^1(\mathbb{Z})}.
+\]
+$A(\mathbb{T})$ is a commutative Banach algebra, with unity $t \mapsto 1$, and
+the Fourier transform is an isomorphism of Banach algebras
+$\mathscr{F}:A(\mathbb{T}) \to \ell^1(\mathbb{Z})$. 
+We call $A(\mathbb{T})$ the \textbf{Wiener algebra}. The inclusion map $A(\mathbb{T}) \subset C(\mathbb{T})$
+has  norm $1$. 
+
+\begin{theorem}
+If $f:\mathbb{T} \to \mathbb{C}$ is absolutely continuous, then
+\[
+\hat{f}(k) = o(k^{-1}), \qquad |k| \to \infty.
+\]
+\end{theorem}
+\begin{proof}
+Because $f$ is absolutely continuous, the fundamental theorem of calculus tells us that
+$f' \in L^1(\mathbb{T})$.
+Doing integration by parts, for  $k \in \mathbb{Z}$ we have
+\begin{align*}
+\mathscr{F}(f')(k)& = \frac{1}{2\pi} \int_{\mathbb{T}} f'(t) e^{-ikt} dt\\
+&=\frac{1}{2\pi} f(t) e^{-ikt} \Big|_0^{2\pi} - \frac{1}{2\pi} \int_{\mathbb{T}} f(t) (-ik e^{-ikt}) dt\\
+&=ik \mathscr{F}(f)(k).
+\end{align*}
+The Riemann-Lebesgue lemma tells us that $\mathscr{F}(f')(k)=o(1)$, so
+\[
+\mathscr{F}(f)(k) = o\left(\frac{1}{k}\right), \qquad |k| \to \infty.
+\]
+\end{proof}
+
+
+\begin{theorem}
+If $f:\mathbb{T} \to \mathbb{C}$ is absolutely continuous and $f' \in L^2(\mathbb{T})$,
+then
+\[
+\norm{f}_{A(\mathbb{T})} \leq \norm{f}_{L^1(\mathbb{T})} +
+\left(2 \sum_{k=1}^\infty k^{-2} \right)^{1/2} \norm{f'}_{L^2(\mathbb{T})}.
+\]
+\end{theorem}
+\begin{proof}
+First,
+\[
+|\hat{f}(0)| = \left| \frac{1}{2\pi} \int_{\mathbb{T}} f(t) dt \right|
+\leq \norm{f}_{L^1(\mathbb{T})}.
+\]
+Next, because $f$ is absolutely continuous, by the fundamental theorem of calculus we have
+$f' \in L^1(\mathbb{T})$, and  for $k \in \mathbb{Z}$,
+\[
+\mathscr{F}(f')(k)=ik \mathscr{F}(f)(k).
+\]
+Using the Cauchy-Schwarz inequality, and since $\mathscr{F}(f')(0)=0$,
+\begin{align*}
+\norm{f}_{A(\mathbb{T})}&=|\hat{f}(0)|+\sum_{k \neq 0} |\hat{f}(k)|\\
+&=|\hat{f}(0)|+\sum_{k \neq 0} |k|^{-1} |\mathscr{F}(f')(k)|\\
+&\leq \norm{f}_{L^1(\mathbb{T})} + \left( \sum_{k \neq 0} |k|^{-2} \right)^{1/2} \left( \sum_{k \neq 0} |\mathscr{F}(f')(k)|^2 \right)^{1/2}\\
+&=  \norm{f}_{L^1(\mathbb{T})} + \left( 2 \sum_{k=1}^\infty k^{-2} \right)^{1/2}
+\norm{\mathscr{F}(f')}_{\ell^2(\mathbb{Z})}.
+\end{align*}
+By Parseval's theorem we have
+$\norm{\mathscr{F}(f')}_{\ell^2(\mathbb{Z})}=\norm{f'}_{L^2(\mathbb{T})}$, completing the proof.
+\end{proof}
+
+We now prove that if $\alpha>\frac{1}{2}$, then 
+$\Lip_\alpha(\mathbb{T}) \subset A(\mathbb{T})$, and the inclusion map is a bounded linear operator.\footnote{Yitzhak Katznelson, {\em An Introduction to Harmonic Analysis}, third ed., p.~34, Theorem 6.3.}
+
+\begin{theorem}
+If $\alpha>\frac{1}{2}$, 
+then $\Lip_\alpha(\mathbb{T}) \subset A(\mathbb{T})$, and
+for any $f \in \Lip_\alpha(\mathbb{T})$ we have
+\[
+\norm{f}_{A(\mathbb{T})} \leq c_\alpha \norm{f}_{\Lip_\alpha(\mathbb{T})},
+\]
+with
+\[
+c_\alpha = 1+ 2^{1/2} \left( \frac{2\pi}{3} \right)^\alpha  \frac{1}{1-2^{\frac{1}{2}-\alpha}}.
+\]
+\end{theorem}
+\begin{proof}
+For $f:\mathbb{T} \to \mathbb{C}$ and $h \in \mathbb{R}$, we define
+\[
+f_h(t)=f(t-h), \qquad t \in \mathbb{T},
+\]
+which satisfies, for $n \in \mathbb{Z}$,
+\begin{align*}
+\mathscr{F}(f_h)(n)&=\frac{1}{2\pi} \int_{\mathbb{T}} f(t-h) e^{-int} dt\\
+&=\frac{1}{2\pi} \int_{\mathbb{T}} f(t) e^{-in(t+h)} dt\\
+&=e^{-inh} \mathscr{F}(f)(n).
+\end{align*}
+Thus
+\begin{equation}
+\mathscr{F}(f_h-f)(n) = (e^{-inh}-1)\hat{f}(n), \qquad n \in \mathbb{Z}.
+\label{translation}
+\end{equation}
+
+
+For $m \geq 0$ and 
+for $n \in \mathbb{Z}$ such that
+$2^m \leq |n| < 2^{m+1}$, let 
+\[
+h_m = \frac{2\pi}{3}\cdot 2^{-m}.
+\]
+Then
+\[
+\frac{2\pi}{3} =2^m \cdot  \frac{2\pi}{3}\cdot 2^{-m}   \leq |nh_m| < 2^{m+1} \cdot \frac{2\pi}{3}\cdot 2^{-m} = \frac{4\pi}{3}.
+\]
+If $n>0$  this implies that
+\[
+\frac{\pi}{3} \leq \frac{nh_m}{2} < \frac{2\pi}{3} 
+\]
+and so
+\[
+|e^{-inh_m}-1| = 2 \sin \frac{nh_m}{2} \geq 2 \sin \frac{\pi}{3} = \sqrt{3},
+\]
+and if $n<0$ this implies that
+\[
+-\frac{2\pi}{3} < \frac{nh_m}{2} \leq -\frac{\pi}{3}
+\]
+and so
+\[
+|e^{-inh_m}-1| \geq \sqrt{3}.
+\]
+This gives us
+\begin{align*}
+\sum_{2^m \leq |n| < 2^{m+1}} |\hat{f}(n)|^2 &\leq \sum_{2^m \leq |n| < 2^{m+1}} 3|\hat{f}(n)|^2\\
+&\leq \sum_{2^m \leq |n| < 2^{m+1}}  |e^{-inh_m}-1|^2 |\hat{f}(n)|^2\\
+&\leq \sum_{n \in \mathbb{Z}}  |e^{-inh_m}-1|^2 |\hat{f}(n)|^2.
+\end{align*}
+Using \eqref{translation} and Parseval's theorem we  have
+\[
+\sum_{n \in \mathbb{Z}}  |e^{-inh_m}-1|^2 |\hat{f}(n)|^2=\norm{\mathscr{F}(f_{h_m}-f)}_{\ell^2(\mathbb{Z})}^2
+=\norm{f_{h_m}-f}_{L^2(\mathbb{T})}^2,
+\]
+and thus
+\[
+\sum_{2^m \leq |n| < 2^{m+1}} |\hat{f}(n)|^2 \leq \norm{f_{h_m}-f}_{L^2(\mathbb{T})}^2.
+\]
+Furthermore, for $g \in L^\infty(\mathbb{T})$ we have $\norm{g}_{L^2(\mathbb{T})} \leq \norm{g}_{L^\infty(\mathbb{T})}$, so 
+\begin{align*}
+\sum_{2^m \leq |n| < 2^{m+1}} |\hat{f}(n)|^2 & \leq \norm{f_{h_m}-f}_{L^\infty(\mathbb{T})}^2\\
+&\leq \norm{f}_{\Lip_\alpha(\mathbb{T})}^2 \cdot h_m^{2\alpha}\\
+&=\left( \frac{2\pi}{3\cdot 2^m} \right)^{2\alpha} \norm{f}_{\Lip_\alpha(\mathbb{T})}^2.
+\end{align*}
+By the Cauchy-Schwarz inequality, because there are $\leq 2^{m+1}$ nonzero
+terms in $\sum_{2^m \leq |n| < 2^{m+1}} |\hat{f}(n)|$, 
+\begin{align*}
+\sum_{2^m \leq |n| < 2^{m+1}} |\hat{f}(n)|& \leq (2^{m+1})^{1/2} 
+\left( \sum_{2^m \leq |n| < 2^{m+1}} |\hat{f}(n)|^2 \right)^{1/2}\\
+&\leq 2^{\frac{m+1}{2}} \left( \frac{2\pi}{3\cdot 2^m} \right)^{\alpha} \norm{f}_{\Lip_\alpha(\mathbb{T})}\\
+&=2^{m\left(\frac{1}{2}-\alpha\right)} \cdot 2^{1/2} \left( \frac{2\pi}{3} \right)^\alpha \cdot  \norm{f}_{\Lip_\alpha(\mathbb{T})}.
+\end{align*}
+Then, since $\alpha>\frac{1}{2}$,
+\begin{align*}
+\sum_{n \in \mathbb{Z}} |\hat{f}(n)|&=|\hat{f}(0)|+\sum_{m=0}^\infty \sum_{2^m \leq |n| < 2^{m+1}} |\hat{f}(n)|\\
+&\leq |\hat{f}(0)|+ \sum_{m=0}^\infty 2^{m\left(\frac{1}{2}-\alpha\right)} \cdot 2^{1/2} \left( \frac{2\pi}{3} \right)^\alpha \cdot  \norm{f}_{\Lip_\alpha(\mathbb{T})}\\
+&= |\hat{f}(0)|+2^{1/2} \left( \frac{2\pi}{3} \right)^\alpha   \norm{f}_{\Lip_\alpha(\mathbb{T})} \sum_{m=0}^\infty 2^{m\left(\frac{1}{2}-\alpha\right)}\\
+&= |\hat{f}(0)|+2^{1/2} \left( \frac{2\pi}{3} \right)^\alpha   \norm{f}_{\Lip_\alpha(\mathbb{T})} \frac{1}{1-2^{\frac{1}{2}-\alpha}}
+\end{align*}
+As
+\[
+|\hat{f}(0)| \leq \norm{f}_{L^1(\mathbb{T})} \leq \norm{f}_{L^\infty(\mathbb{T})} \leq \norm{f}_{\Lip_\alpha(\mathbb{T})},
+\]
+we have for all $f \in \Lip_\alpha(\mathbb{T})$ that
+\[
+\sum_{n \in \mathbb{Z}} |\hat{f}(n)| \leq c_\alpha \norm{f}_{\Lip_\alpha(\mathbb{T})},
+\]
+completing the proof.
+\end{proof}
+
+We now prove that if $\alpha>0$, then  $BV(\mathbb{T}) \cap \Lip_\alpha(\mathbb{T}) \subset A(\mathbb{T})$.\footnote{Yitzhak Katznelson, {\em An Introduction to Harmonic Analysis}, third ed., p.~35, Theorem 6.4.}
+
+\begin{theorem}
+If $\alpha>0$ and $f \in BV(\mathbb{T}) \cap \Lip_\alpha(\mathbb{T})$, then
+\[
+\norm{f_h-f}_{L^2(\mathbb{T})}^2 \leq \frac{1}{2\pi} h^{1+\alpha} \norm{f}_{\Lip_\alpha(\mathbb{T})} \var(f), \qquad h > 0.
+\]
+and $f \in A(\mathbb{T})$.
+\end{theorem}
+\begin{proof}
+For $N \geq 1$ and $h=\frac{2\pi}{N}$,
+\begin{align*}
+\norm{f_h-f}_{L^2(\mathbb{T})}^2&=\frac{1}{2\pi} \int_0^{2\pi} |f_h(t)-f(t)|^2 dt\\
+&=\frac{1}{2\pi} \sum_{j=1}^N \int_{(j-1)h}^{jh} |f_h(t)-f(t)|^2 dt\\
+&=\frac{1}{2\pi} \sum_{j=1}^N \int_0^h |f_{jh}(t)-f_{(j-1)h}(t)|^2 dt\\
+&=\frac{1}{2\pi} \int_0^h \sum_{j=1}^N |f_{jh}(t)-f_{(j-1)h}(t)|^2 dt\\
+&\leq \frac{1}{2\pi} \norm{f_h-f}_{L^\infty(\mathbb{T})} \int_0^h \sum_{j=1}^N |f_{jh}(t)-f_{(j-1)h}(t)| dt\\
+&\leq \frac{1}{2\pi}  \norm{f_h-f}_{L^\infty(\mathbb{T})} \int_0^h  \var(f) dt.
+\end{align*}
+As $f \in \Lip_\alpha(\mathbb{T})$, $\norm{f_h-f}_{L^\infty(\mathbb{T})} \leq h^\alpha \norm{f}_{\Lip_\alpha(\mathbb{T})}$, hence
+\[
+\norm{f_h-f}_{L^2(\mathbb{T})}^2 \leq \frac{1}{2\pi} h^{1+\alpha} \norm{f}_{\Lip_\alpha(\mathbb{T})} \var(f).
+\]
+\end{proof}
+
+
+
+\section{Wiener's lemma}
+For $k \geq 1$, 
+using the product rule $(fg)'=f'g+fg'$ we check that $C^k(\mathbb{T})$ is a Banach algebra with the norm
+\[
+\norm{f}_{C^k(\mathbb{T})} = \sum_{j=0}^k \norm{f^{(j)}}_{C(\mathbb{T})}.
+\]
+If $f \in C^k(\mathbb{T})$ and $f(t) \neq 0$ for all $t \in \mathbb{T}$, then the quotient rule tells us that
+\[
+\left(f^{-1} \right)'(t)  = -\frac{f'(t)}{f(t)^2},
+\]
+using which we get $\frac{1}{f} \in C^k(\mathbb{T})$. That is, if $f \in C^k(\mathbb{T})$ does not vanish then
+$f^{-1}=\frac{1}{f} \in C^k(\mathbb{T})$.
+
+If $B$ is a commutative unital Banach algebra, a \textbf{multiplicative linear functional} on
+$B$ is a nonzero algebra homomorphism $B \to \mathbb{C}$, and the collection $\Delta_B$
+of multiplicative
+linear functionals on $B$ is called the \textbf{maximal ideal space} of $B$. 
+The \textbf{Gelfand transform}  of $f \in B$ is $\Gamma(f):\Delta_B \to \mathbb{C}$ defined by
+\[
+\Gamma(f)(h) = h(f), \qquad h \in \Delta_B.
+\] 
+It is a fact that $f \in B$ is invertible if and only if $h(f) \neq 0$ for all $h \in \Delta_B$, i.e.,
+$f \in B$ is invertible if and only if $\Gamma(f)$ does not vanish.
+
+We now prove that if $f \in A(\mathbb{T})$ and does not vanish, then $f$ is invertible in $A(\mathbb{T})$. We call this statement \textbf{Wiener's
+lemma}.\footnote{Yitzhak Katznelson, {\em An Introduction to Harmonic Analysis}, third ed., p.~239, Theorem 2.9.}
+
+\begin{theorem}[Wiener's lemma]
+If $f \in A(\mathbb{T})$ and $f(t) \neq 0$ for all $t \in \mathbb{T}$, then $1/f \in A(\mathbb{T})$.
+\label{wienerlemma}
+\end{theorem}
+\begin{proof}
+Let $w:A(\mathbb{T}) \to \mathbb{C}$ be a multiplicative linear functional. The fact that
+$w$ is a multiplicative linear functional implies that $\norm{w} = 1$.  
+Define $u(t)=e^{it}$,
+$t \in \mathbb{T}$, for which $\norm{u}_{A(\mathbb{T})}=1$. 
+We  define $\lambda = w(u)$, which satisfies
+\[
+|\lambda| \leq \norm{w} \norm{u}_{A(\mathbb{T})} = 1
+\]
+and because $\norm{u^{-1}}_{A(\mathbb{T})}=1$ we have $\lambda^{-1}=w(u^{-1})$ and 
+\[
+|\lambda^{-1}| \leq \norm{w} \norm{u^{-1}}_{A(\mathbb{T})} = 1,
+\]
+hence $|\lambda|=1$. Then there is some $t_w \in \mathbb{T}$ such that
+$\lambda=e^{it_w}$.
+For $n \in \mathbb{Z}$,
+\[
+w(u^n) = \lambda^n = e^{int_w}.
+\]
+If $P(t)=\sum_{|n| \leq N} a_n e^{int}$ is a trigonometric polynomial, then
+\begin{equation}
+w(P) = w\left( \sum_{|n| \leq N} a_n u^n\right) = \sum_{|n| \leq N} a_n w(u)^n = 
+\sum_{|n| \leq N} a_n e^{int_w}=P(t_w).
+\label{polynomial}
+\end{equation}
+For $g \in A(\mathbb{T})$,
+if $\epsilon>0$, then there is some $N$ such that $\norm{g-S_N(g)}_{A(\mathbb{T})}<\epsilon$. Using \eqref{polynomial} and the fact
+that $\norm{g}_{C(\mathbb{T})} \leq \norm{g}_{A(\mathbb{T})}$,
+\begin{align*}
+|w(g)-g(t_w)| &\leq |w(g)-w(S_N(g))|+|w(S_N(g))-S_N(g)(t_w)|\\
+&+|S_N(g)(t_w)-g(t_w)|\\
+&=|w(g-S_N(g))|+|S_N(g)(t_w)-f(t_w)|\\
+&\leq \norm{w} \norm{g-S_N(g)}_{A(\mathbb{T})} + \norm{S_N(g)-g}_{C(\mathbb{T})}\\
+&\leq \norm{w} \norm{g-S_N(g)}_{A(\mathbb{T})} +\norm{g-S_N(g)}_{A(\mathbb{T})}\\
+&<2\epsilon.
+\end{align*}
+Because this is true for all $\epsilon>0$, it follows that $w(g)=g(t_w)$. 
+
+
+Let $\Delta$ be the maximal ideal space of $A(\mathbb{T})$.
+Then for $w \in \Delta$ there is some $t_w \in \mathbb{T}$ such that $w(f)=f(t_w)$, hence, because $f(t) \neq 0$ for all
+$t \in \mathbb{T}$,
+\[
+\Gamma(f)(w)=w(f)=f(t_w) \neq 0.
+\]
+That is, $\Gamma(f)$ does not vanish, and therefore $f$ is invertible in $A(\mathbb{T})$. It is then immediate that
+$f^{-1}(t)=\frac{1}{f(t)}$ for all $t \in \mathbb{T}$, completing the proof.
+\end{proof}
+
+The above proof of Wiener's lemma uses the theory of the commutative Banach algebras.
+The following is a proof of the theorem that does not use the Gelfand transform.\footnote{Karlheinz Gr\"ochenig,
+{\em Wiener's Lemma: Theme and Variations. An Introduction to
+Spectral Invariance and Its Applications}, p.~180, \S 5.2.4, in Brigitte Forster and Peter Massopust, eds., {\em Four Short Courses on Harmonic Analysis}, pp.~175--234.}
+
+\begin{proof}
+Because $f \in A(\mathbb{T})$, $f^*$ defined by $f^*(t)=\overline{f(t)}$, $t \in \mathbb{T}$, belongs to $A(\mathbb{T})$.
+Let
+\[
+g=\frac{|f|^2}{\norm{f}_{C(\mathbb{T})}^2}=\frac{ff^*}{\norm{f}_{C(\mathbb{T})}^2} \in A(\mathbb{T}),
+\]
+which satisfies $0 < g(t) \leq 1$ for all $t \in \mathbb{T}$.
+As $\frac{1}{f}=\frac{f^*}{|f|^2}=\frac{f^*}{\norm{f}_{C(\mathbb{T})}^2 g}$, to show that $1/f \in A(\mathbb{T})$ it suffices to show that $\frac{1}{g} \in A(\mathbb{T})$. 
+
+Because $g$ is continuous and $g(t) \neq 0$ for all $t \in \mathbb{T}$,
+\[
+\delta=\inf_{t \in \mathbb{T}} g(t)>0;
+\]
+if $\delta=1$ then $g=1$, and indeed $\frac{1}{g} \in A(\mathbb{T})$. Otherwise,
+$\norm{g-1}_{C(\mathbb{T})} = 1-\delta<1$.  This implies that $g$ is invertible in the Banach algebra
+$C(\mathbb{T})$ and that $g^{-1}=\sum_{j=0}^\infty (1-g)^j$ in $C(\mathbb{T})$. Let
+$h=1-g \in A(\mathbb{T})$. 
+
+For $\epsilon>0$, there is some $N$ such that
+$\norm{h-S_N(h)}_{A(\mathbb{T})}<\epsilon$. 
+Now, if $P$ is a trigonometric polynomial of degree $M$ then using the Cauchy-Schwarz
+inequality and Parseval's theorem, 
+\begin{align*}
+\norm{P}_{A(\mathbb{T})}&=\norm{\hat{P}}_{\ell^1(\mathbb{Z})}\\
+&\leq (2M+1)^{1/2} \norm{\hat{P}}_{\ell^2(\mathbb{Z})}\\
+&= (2M+1)^{1/2} \norm{P}_{L^2(\mathbb{T})}\\
+&\leq (2M+1)^{1/2} \norm{P}_{L^\infty(\mathbb{T})}.
+\end{align*}
+Furthermore, for $j \geq 1$, $P^j$ is a trigonometric polynomial of degree $jM$. 
+The binomial theorem tells us, with $P=S_N(h)$ and $r=h-P$,
+\[
+h^k=(P+r)^k = \sum_{j=0}^k \binom{k}{j} P^j r^{k-j},
+\]
+and using this and $\norm{P^j}_{A(\mathbb{T})} \leq
+(2jN+1)^{1/2} \norm{P^j}_{L^\infty(\mathbb{T})}$,
+\begin{align*}
+\norm{h^k}_{A(\mathbb{T})}&\leq  \sum_{j=0}^k \binom{k}{j} \norm{P^j}_{A(\mathbb{T})}
+\norm{r^{k-j}}_{A(\mathbb{T})}\\
+&\leq  \sum_{j=0}^k \binom{k}{j} \norm{P^j}_{A(\mathbb{T})}
+\norm{h-S_N(h)}_{A(\mathbb{T})}^{k-j}\\
+&\leq  \sum_{j=0}^k \binom{k}{j} (2jN+1)^{1/2} \norm{P^j}_{L^\infty(\mathbb{T})} \epsilon^{k-j}\\
+&\leq (2kN+1)^{1/2} \sum_{j=0}^k \binom{k}{j}  \norm{P}_{L^\infty(\mathbb{T})}^j \epsilon^{k-j}\\
+&= (2kN+1)^{1/2} (\norm{P}_{L^\infty(\mathbb{T})}+\epsilon)^k.
+\end{align*}
+Because
+\begin{align*}
+\norm{P}_{L^\infty(\mathbb{T})} & \leq \norm{h-S_N(h)}_{L^\infty(\mathbb{T})}
++\norm{h}_{L^\infty(\mathbb{T})}\\
+&\leq \norm{h-S_N(h)}_{A(\mathbb{T})}
++\norm{h}_{L^\infty(\mathbb{T})}\\
+&<\epsilon+\norm{h}_{L^\infty(\mathbb{T})},
+\end{align*}
+we have
+\[
+\norm{h^k}_{A(\mathbb{T})} \leq  (2kN+1)^{1/2} (\norm{h}_{L^\infty(\mathbb{T})}+2\epsilon)^k
+= (2kN+1)^{1/2} (1-\delta+2\epsilon)^k.
+\]
+Take some $\epsilon<\frac{\delta}{2}$, so that $1-\delta+2\epsilon<1$. Then with $N=N(\epsilon)$,
+\[
+\sum_{k=0}^\infty \norm{h^k}_{A(\mathbb{T})} \leq \sum_{k=0}^\infty
+ (2kN+1)^{1/2} (1-\delta+2\epsilon)^k
+ =\sqrt{2N} \Phi\left(1-\delta+2\epsilon,-\frac{1}{2},\frac{1}{2N}\right)<\infty,
+  \]
+  where $\Phi$ is the Lerch transcendent. This implies that the 
+  the series $\sum_{k=0}^\infty h^k$ converges in $A(\mathbb{T})$. We check that
+  $\sum_{k=0}^\infty h^k$ is the inverse of $1-h$, namely, $g=1-h$ is invertible in
+  $A(\mathbb{T})$, proving the claim.
+\end{proof}
+
+
+
+
+\section{Spectral theory}
+Suppose that $A$ is a commutative Banach algebra with unity $1$. We define $U(A)$ to be the collection of 
+those $f \in A$ such that $f$ is invertible in $A$. It is a fact that $U(A)$ is an open subset of $A$.  We define
+\[
+\sigma_A(f) = \{\lambda \in \mathbb{C}: f-\lambda \not \in U(A) \},
+\]
+called the \textbf{spectrum of $f$}. It is a fact that $\sigma_A(f)$ is a nonempty compact subset of $\mathbb{C}$.
+
+If $A \subset B$ are Banach algebras with unity $1$, we say that \textbf{$A$ is inverse-closed in $B$} if
+$f \in A$ and $f^{-1} \in B$ together imply that $f^{-1} \in A$.\footnote{Karlheinz Gr\"ochenig,
+{\em Wiener's Lemma: Theme and Variations. An Introduction to
+Spectral Invariance and Its Applications}, p.~183, \S 5.2.5, in Brigitte Forster and Peter Massopust, eds., {\em Four Short Courses on Harmonic Analysis}, pp.~175--234.}
+
+\begin{lemma}
+Suppose that $A \subset B$ are Banach algebras with unity $1$. The following are equivalent:
+\begin{enumerate}
+\item $A$ is inverse-closed in $B$.
+\item $\sigma_A(f)=\sigma_B(f)$ for all $f \in A$. 
+\end{enumerate}
+\label{inverseclosed}
+\end{lemma}
+\begin{proof}
+Assume that $A$ is inverse-closed in $B$ and let $f \in A$. If $\lambda \not \in \sigma_A(f)$ then
+$f-\lambda  \in U(A) \subset U(B)$, hence $\lambda \not \in \sigma_B(f)$. Therefore
+$\sigma_B(f) \subset \sigma_A(f)$. If $\lambda \not \in \sigma_B(f)$ then
+$f-\lambda \in U(B)$. That is, $(f-\lambda)^{-1} \in B$. Because $A$ is inverse-closed in $B$
+and $f-\lambda \in A$, we get $(f-\lambda)^{-1} \in A$. Thus $\lambda \not \in \sigma_A(f)$, and therefore
+$\sigma_A(f) \subset \sigma_B(f)$. We thus have obtained $\sigma_A(f)=\sigma_B(f)$.
+
+Assume that for all $f \in A$, $\sigma_A(f)=\sigma_B(f)$. Suppose that
+$f \in A$ and $f^{-1} \in B$. That is, $f \in U(B)$, so $0 \not \in \sigma_B(f)$.
+Then $0 \not \in \sigma_A(f)$, meaning that $f \in U(A)$.
+\end{proof}
+
+$A(\mathbb{T}) \subset C(\mathbb{T})$ are Banach algebras with unity $1$. 
+Wiener's lemma states that $A(\mathbb{T})$ is inverse-closed in $C(\mathbb{T})$. 
+It is apparent that for $f \in C(\mathbb{T})$, $\sigma_{C(\mathbb{T})}(f)=f(\mathbb{T}) \subset \mathbb{C}$.
+Therefore, Lemma \ref{inverseclosed} tells us for $f \in A(\mathbb{T})$ that
+$\sigma_{A(\mathbb{T})}(f)=f(\mathbb{T})$.
+
+The \textbf{Wiener-L\'evy theorem} states that if $f \in A(\mathbb{T})$,
+$\Omega \subset \mathbb{C}$ is an open set containing $f(\mathbb{T})$, and $F:\Omega \to \mathbb{C}$
+is holomorphic, then $F \circ f \in A(\mathbb{T})$.\footnote{Karlheinz Gr\"ochenig,
+{\em Wiener's Lemma: Theme and Variations. An Introduction to
+Spectral Invariance and Its Applications}, p.~187, Theorem 5.16, in Brigitte Forster and Peter Massopust, eds., {\em Four Short Courses on Harmonic Analysis}, pp.~175--234;
+Walter Rudin, {\em Fourier Analysis on Groups}, Chapter 6; N. K. Nikolski (ed.), {\em Functional Analysis I}, p.~235;
+V. P. Havin and N. K. Nikolski (eds.), {\em Commutative Harmonic Analysis II}, p.~240, \S 7.7.}
+In particular, if $f \in A(\mathbb{T})$ does not vanish, then $\Omega=\mathbb{C} \setminus \{0\}$ is an open set
+containing $f(\mathbb{T})$ and $F(z)=\frac{1}{z}$ is a holomorphic function on $\Omega$, and hence
+$F \circ f(t)=\frac{1}{f(t)}$ belongs to $A(\mathbb{T})$, which is the statement of Wiener's lemma.
+
+\end{document}

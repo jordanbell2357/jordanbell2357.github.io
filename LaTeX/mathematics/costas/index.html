@@ -1,0 +1,356 @@
+<!DOCTYPE html><html>
+<head>
+<title>What is a Costas array?</title>
+<!--Generated on Mon Feb 14 19:26:27 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 3, 2014.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="LaTeXML-navbar-left.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<nav class="ltx_page_navbar">
+<div class="ltx_TOC">
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Introduction ‣ What is a Costas array?" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Introduction</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 Mathematics ‣ What is a Costas array?" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Mathematics</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 Generalizations ‣ What is a Costas array?" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Generalizations</span></a></li>
+</ul>
+</div>
+</nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">What is a Costas array?</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">April 3, 2014</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">To find the speed and distance
+of a moving object relative to an observer,
+a signal with a known frequency is sent from the observer towards the object.
+It reflects off the object, and the reflected signal has a new frequency,
+due to the Doppler effect. Knowing the frequencies of the emitted and
+reflected signals, the speed
+of the moving object relative to the observer can be determined.
+Knowing the time between emitting the signal and receiving the
+reflected signal, the distance of the moving object to the object
+can be determined. See <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="Radar signals" class="ltx_ref">2</a>, p. 74]</cite>.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Let’s say we have a stationary observer, and an object is moving radially
+away from the observer with a constant speed. One wants to find the
+speed <math id="S1.p2.m1" class="ltx_Math" alttext="v" display="inline"><mi>v</mi></math> of the moving object and its distance <math id="S1.p2.m2" class="ltx_Math" alttext="d" display="inline"><mi>d</mi></math>
+from the observer.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">Suppose that at times <math id="S1.p3.m1" class="ltx_Math" alttext="t_{1},\ldots,t_{n}" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>n</mi></msub></mrow></math> signals are sent from the observer
+to the moving object and that the <math id="S1.p3.m2" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th signal takes time <math id="S1.p3.m3" class="ltx_Math" alttext="\delta_{i}" display="inline"><msub><mi>δ</mi><mi>i</mi></msub></math>
+to hit the object.
+At times <math id="S1.p3.m4" class="ltx_Math" alttext="t_{1},\ldots,t_{n}" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>n</mi></msub></mrow></math> let the corresponding distances of the
+object be <math id="S1.p3.m5" class="ltx_Math" alttext="d_{1},\ldots,d_{n}" display="inline"><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>d</mi><mi>n</mi></msub></mrow></math>. We note that
+<math id="S1.p3.m6" class="ltx_Math" alttext="d_{i}=d_{1}+(t_{i}-t_{1})v" display="inline"><mrow><msub><mi>d</mi><mi>i</mi></msub><mo>=</mo><mrow><msub><mi>d</mi><mn>1</mn></msub><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>t</mi><mi>i</mi></msub><mo>-</mo><msub><mi>t</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow></math>.
+Suppose that the signal speed is <math id="S1.p3.m7" class="ltx_Math" alttext="c" display="inline"><mi>c</mi></math>.
+The first signal hits the object when <math id="S1.p3.m8" class="ltx_Math" alttext="\delta_{1}c-d_{1}=\delta_{1}v" display="inline"><mrow><mrow><mrow><msub><mi>δ</mi><mn>1</mn></msub><mo>⁢</mo><mi>c</mi></mrow><mo>-</mo><msub><mi>d</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><msub><mi>δ</mi><mn>1</mn></msub><mo>⁢</mo><mi>v</mi></mrow></mrow></math>, hence when</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="\delta_{1}=\frac{d_{1}}{c-v}=\frac{d_{1}}{c}\frac{1}{1-\frac{v}{c}}=\frac{d_{1%
+}}{c}+O(c^{-2})." display="block"><mrow><mrow><msub><mi>δ</mi><mn>1</mn></msub><mo>=</mo><mfrac><msub><mi>d</mi><mn>1</mn></msub><mrow><mi>c</mi><mo>-</mo><mi>v</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><msub><mi>d</mi><mn>1</mn></msub><mi>c</mi></mfrac><mo>⁢</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mfrac><mi>v</mi><mi>c</mi></mfrac></mrow></mfrac></mrow><mo>=</mo><mrow><mfrac><msub><mi>d</mi><mn>1</mn></msub><mi>c</mi></mfrac><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>c</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The <math id="S1.p3.m9" class="ltx_Math" alttext="i" display="inline"><mi>i</mi></math>th signal hits the object when <math id="S1.p3.m10" class="ltx_Math" alttext="\delta_{i}c-d_{i}=\delta_{i}v" display="inline"><mrow><mrow><mrow><msub><mi>δ</mi><mi>i</mi></msub><mo>⁢</mo><mi>c</mi></mrow><mo>-</mo><msub><mi>d</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><msub><mi>δ</mi><mi>i</mi></msub><mo>⁢</mo><mi>v</mi></mrow></mrow></math>, hence when</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\delta_{i}=\frac{d_{i}}{c-v}=\frac{d_{i}}{c}\frac{1}{1-\frac{c}{v}}=\frac{d_{i%
+}}{c}+O(c^{-2})=\frac{d_{1}}{c}+\frac{(t_{i}-t_{1})v}{c}+O(c^{-2})." display="block"><mrow><mrow><msub><mi>δ</mi><mi>i</mi></msub><mo>=</mo><mfrac><msub><mi>d</mi><mi>i</mi></msub><mrow><mi>c</mi><mo>-</mo><mi>v</mi></mrow></mfrac><mo>=</mo><mrow><mfrac><msub><mi>d</mi><mi>i</mi></msub><mi>c</mi></mfrac><mo>⁢</mo><mfrac><mn>1</mn><mrow><mn>1</mn><mo>-</mo><mfrac><mi>c</mi><mi>v</mi></mfrac></mrow></mfrac></mrow><mo>=</mo><mrow><mfrac><msub><mi>d</mi><mi>i</mi></msub><mi>c</mi></mfrac><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>c</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><msub><mi>d</mi><mn>1</mn></msub><mi>c</mi></mfrac><mo>+</mo><mfrac><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>t</mi><mi>i</mi></msub><mo>-</mo><msub><mi>t</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mi>c</mi></mfrac><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>c</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Supposing that <math id="S1.p3.m11" class="ltx_Math" alttext="(t_{i}-t_{1})v" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>t</mi><mi>i</mi></msub><mo>-</mo><msub><mi>t</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow></math> is negligible compared to <math id="S1.p3.m12" class="ltx_Math" alttext="d_{1}" display="inline"><msub><mi>d</mi><mn>1</mn></msub></math>,
+we can say that approximately <math id="S1.p3.m13" class="ltx_Math" alttext="\delta_{1}=\cdots=\delta_{n}" display="inline"><mrow><msub><mi>δ</mi><mn>1</mn></msub><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><msub><mi>δ</mi><mi>n</mi></msub></mrow></math>;
+write <math id="S1.p3.m14" class="ltx_Math" alttext="\delta=\delta_{1}=\cdots=\delta_{n}" display="inline"><mrow><mi>δ</mi><mo>=</mo><msub><mi>δ</mi><mn>1</mn></msub><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><msub><mi>δ</mi><mi>n</mi></msub></mrow></math>.</p>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">If the emitted signals have frequencies <math id="S1.p4.m1" class="ltx_Math" alttext="e_{1},\ldots,e_{n}" display="inline"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub></mrow></math> and
+the reflected signals have frequencies <math id="S1.p4.m2" class="ltx_Math" alttext="r_{1},\ldots,r_{n}" display="inline"><mrow><msub><mi>r</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>r</mi><mi>n</mi></msub></mrow></math>,
+by the Doppler shift we have <math id="S1.p4.m3" class="ltx_Math" alttext="r_{i}=e_{i}\cdot\frac{1-v/c}{1+v/c}" display="inline"><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>=</mo><mrow><msub><mi>e</mi><mi>i</mi></msub><mo>⋅</mo><mfrac><mrow><mn>1</mn><mo>-</mo><mrow><mi>v</mi><mo>/</mo><mi>c</mi></mrow></mrow><mrow><mn>1</mn><mo>+</mo><mrow><mi>v</mi><mo>/</mo><mi>c</mi></mrow></mrow></mfrac></mrow></mrow></math>
+<cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib2" title="Radar signals" class="ltx_ref">2</a>, p. 4]</cite>. Thus
+the frequency shift for each signal is</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="r_{i}-e_{i}=-2v\frac{e_{i}}{c+v}=-\frac{2ve_{i}}{c}+O(c^{-2})." display="block"><mrow><mrow><mrow><msub><mi>r</mi><mi>i</mi></msub><mo>-</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>v</mi><mo>⁢</mo><mfrac><msub><mi>e</mi><mi>i</mi></msub><mrow><mi>c</mi><mo>+</mo><mi>v</mi></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>v</mi><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mi>c</mi></mfrac></mrow><mo>+</mo><mrow><mi>O</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>c</mi><mrow><mo>-</mo><mn>2</mn></mrow></msup><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We assume that the set of frequencies is narrowband, so that approximately
+<math id="S1.p4.m4" class="ltx_Math" alttext="e_{1}=\cdots=e_{n}" display="inline"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><msub><mi>e</mi><mi>n</mi></msub></mrow></math>. Hence the frequency shifts are approximately equal;
+write
+<math id="S1.p4.m5" class="ltx_Math" alttext="\xi=-\frac{2ve_{1}}{c}=\cdots=-\frac{2ve_{n}}{c}" display="inline"><mrow><mi>ξ</mi><mo>=</mo><mrow><mo>-</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>v</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mi>c</mi></mfrac></mrow><mo>=</mo><mi mathvariant="normal">⋯</mi><mo>=</mo><mrow><mo>-</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>v</mi><mo>⁢</mo><msub><mi>e</mi><mi>n</mi></msub></mrow><mi>c</mi></mfrac></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">Then the frequency of the signal received at time <math id="S1.p5.m1" class="ltx_Math" alttext="t_{i}+\delta" display="inline"><mrow><msub><mi>t</mi><mi>i</mi></msub><mo>+</mo><mi>δ</mi></mrow></math>
+will be equal to the sum of <math id="S1.p5.m2" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math> and
+the frequency of the signal emitted at time <math id="S1.p5.m3" class="ltx_Math" alttext="t_{i}" display="inline"><msub><mi>t</mi><mi>i</mi></msub></math>.
+Let <math id="S1.p5.m4" class="ltx_Math" alttext="e(t)" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the frequency of the signal emitted at time <math id="S1.p5.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>, and
+let <math id="S1.p5.m6" class="ltx_Math" alttext="r(t)" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> be the frequency of the reflected signal received at time <math id="S1.p5.m7" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.
+So <math id="S1.p5.m8" class="ltx_Math" alttext="r(t_{i}+\delta)=e(t_{i})+\xi" display="inline"><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>t</mi><mi>i</mi></msub><mo>+</mo><mi>δ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>ξ</mi></mrow></mrow></math> for each <math id="S1.p5.m9" class="ltx_Math" alttext="i=1,\ldots,n" display="inline"><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">Let’s use units such that the times <math id="S1.p6.m1" class="ltx_Math" alttext="t_{1},\ldots,t_{n}" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>n</mi></msub></mrow></math> are integers.
+We define the <span class="ltx_text ltx_font_italic">cross-correlation</span> of the signals <math id="S1.p6.m2" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math> and <math id="S1.p6.m3" class="ltx_Math" alttext="r" display="inline"><mi>r</mi></math>
+by</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="C_{e,r}(v,h)=\sum_{i=-\infty}^{\infty}\delta_{e(i),r(i+v)-h}," display="block"><mrow><mrow><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover><msub><mi>δ</mi><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>h</mi></mrow></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p6.m4" class="ltx_Math" alttext="\delta_{i,j}" display="inline"><msub><mi>δ</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></math> here is the Kronecker delta.
+For <math id="S1.p6.m5" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> other than <math id="S1.p6.m6" class="ltx_Math" alttext="t_{1},\ldots,t_{n}" display="inline"><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>t</mi><mi>n</mi></msub></mrow></math> and <math id="S1.p6.m7" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math> other than
+<math id="S1.p6.m8" class="ltx_Math" alttext="t_{1}+\delta,\ldots,t_{n}+\delta" display="inline"><mrow><mrow><msub><mi>t</mi><mn>1</mn></msub><mo>+</mo><mi>δ</mi></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>t</mi><mi>n</mi></msub><mo>+</mo><mi>δ</mi></mrow></mrow></math>,
+it is convenient to take respectively <math id="S1.p6.m9" class="ltx_Math" alttext="e(t)" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S1.p6.m10" class="ltx_Math" alttext="r(t)" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> to be undefined
+rather than equal to 0. When either <math id="S1.p6.m11" class="ltx_Math" alttext="e(t)" display="inline"><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> or <math id="S1.p6.m12" class="ltx_Math" alttext="r(t)" display="inline"><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math> is undefined
+the Kronecker delta will then be 0.
+Then</p>
+<table id="S3.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S1.Ex9">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex5.m1" class="ltx_Math" alttext="\displaystyle C_{e,r}(v,h)" display="inline"><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex5.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex5.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=-\infty}^{\infty}\delta_{e(i),r(i+v)-h}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msub><mi>δ</mi><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>h</mi></mrow></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex6.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex6.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=-\infty}^{\infty}\delta_{e(i+\delta-v),r(i+\delta)-h}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msub><mi>δ</mi><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>i</mi><mo>+</mo><mi>δ</mi></mrow><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><mi>r</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>+</mo><mi>δ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>h</mi></mrow></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex7.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex7.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=-\infty}^{\infty}\delta_{e(i+\delta-v),e(i)+\xi-h}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msub><mi>δ</mi><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>i</mi><mo>+</mo><mi>δ</mi></mrow><mo>-</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>ξ</mi></mrow><mo>-</mo><mi>h</mi></mrow></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex8.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex8.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=-\infty}^{\infty}\delta_{e(i),e(i-\delta+v)+\xi-h}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msub><mi>δ</mi><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>i</mi><mo>-</mo><mi>δ</mi></mrow><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi>ξ</mi></mrow><mo>-</mo><mi>h</mi></mrow></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex9.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex9.m3" class="ltx_Math" alttext="\displaystyle C_{e,e}(v-\delta,h-\xi)." display="inline"><mrow><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>e</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>-</mo><mi>δ</mi></mrow><mo>,</mo><mrow><mi>h</mi><mo>-</mo><mi>ξ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<div id="S1.p7" class="ltx_para">
+<p class="ltx_p">Certainly <math id="S1.p7.m1" class="ltx_Math" alttext="C_{e,e}(v,h)\leq C_{e,e}(0,0)=n" display="inline"><mrow><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>e</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>e</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>n</mi></mrow></math> for all <math id="S1.p7.m2" class="ltx_Math" alttext="v,h" display="inline"><mrow><mi>v</mi><mo>,</mo><mi>h</mi></mrow></math>.
+Thus
+<math id="S1.p7.m3" class="ltx_Math" alttext="C_{e,r}(v,h)\leq C_{e,r}(\delta,\xi)=n" display="inline"><mrow><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>δ</mi><mo>,</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>n</mi></mrow></math> for all <math id="S1.p7.m4" class="ltx_Math" alttext="v,h" display="inline"><mrow><mi>v</mi><mo>,</mo><mi>h</mi></mrow></math>.</p>
+</div>
+<div id="S1.p8" class="ltx_para">
+<p class="ltx_p">We wish to find</p>
+<table id="S1.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex10.m1" class="ltx_Math" alttext="\max_{(v,h)\neq(0,0)}C_{e,e}(v,h)." display="block"><mrow><mrow><mrow><munder><mi>max</mi><mrow><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></munder><mo>⁡</mo><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>e</mi></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For any <math id="S1.p8.m1" class="ltx_Math" alttext="1\leq j&lt;k\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>j</mi><mo>&lt;</mo><mi>k</mi><mo>≤</mo><mi>n</mi></mrow></math>, let <math id="S1.p8.m2" class="ltx_Math" alttext="v=t_{k}-t_{j}" display="inline"><mrow><mi>v</mi><mo>=</mo><mrow><msub><mi>t</mi><mi>k</mi></msub><mo>-</mo><msub><mi>t</mi><mi>j</mi></msub></mrow></mrow></math> and <math id="S1.p8.m3" class="ltx_Math" alttext="h=e(t_{k})-e(t_{j})" display="inline"><mrow><mi>h</mi><mo>=</mo><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.</p>
+<table id="S3.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S1.Ex14">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex11.m1" class="ltx_Math" alttext="\displaystyle C_{e,e}(v,h)" display="inline"><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>e</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex11.m3" class="ltx_Math" alttext="\displaystyle C_{e,e}(t_{k}-t_{j},e(t_{k})-e(t_{j}))" display="inline"><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>e</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>t</mi><mi>k</mi></msub><mo>-</mo><msub><mi>t</mi><mi>j</mi></msub></mrow><mo>,</mo><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex12.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex12.m3" class="ltx_Math" alttext="\displaystyle\sum_{i=-\infty}^{\infty}\delta_{e(i),e(i+t_{k}-t_{j})-e(t_{k})+e%
+(t_{j})}" display="inline"><mrow><mstyle displaystyle="true"><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>i</mi><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow><mi mathvariant="normal">∞</mi></munderover></mstyle><msub><mi>δ</mi><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>i</mi><mo>+</mo><msub><mi>t</mi><mi>k</mi></msub></mrow><mo>-</mo><msub><mi>t</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></msub></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex13.m2" class="ltx_Math" alttext="\displaystyle\geq" display="inline"><mo>≥</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex13.m3" class="ltx_Math" alttext="\displaystyle\delta_{e(t_{j}),e(t_{j}+t_{k}-t_{j})-e(t_{k})+e(t_{j})}" display="inline"><msub><mi>δ</mi><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>t</mi><mi>j</mi></msub><mo>+</mo><msub><mi>t</mi><mi>k</mi></msub></mrow><mo>-</mo><msub><mi>t</mi><mi>j</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></msub></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S1.Ex14.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex14.m3" class="ltx_Math" alttext="\displaystyle 1," display="inline"><mrow><mn>1</mn><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">so <math id="S1.p8.m4" class="ltx_Math" alttext="\max_{(v,h)\neq(0,0)}C_{e,e}(v,h)\geq 1" display="inline"><mrow><mrow><mrow><msub><mi>max</mi><mrow><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁡</mo><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>e</mi></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="S1.p9" class="ltx_para">
+<p class="ltx_p">We want to figure out <math id="S1.p9.m1" class="ltx_Math" alttext="\delta" display="inline"><mi>δ</mi></math> and <math id="S1.p9.m2" class="ltx_Math" alttext="\xi" display="inline"><mi>ξ</mi></math> by knowing <math id="S1.p9.m3" class="ltx_Math" alttext="C_{e,r}(v,h)" display="inline"><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow></math> for
+all <math id="S1.p9.m4" class="ltx_Math" alttext="v,h" display="inline"><mrow><mi>v</mi><mo>,</mo><mi>h</mi></mrow></math>.
+If we have that <math id="S1.p9.m5" class="ltx_Math" alttext="\max_{(v,h)\neq(0,0)}C_{e,e}(v,h)=1" display="inline"><mrow><mrow><mrow><msub><mi>max</mi><mrow><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁡</mo><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>e</mi></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>, then either
+<math id="S1.p9.m6" class="ltx_Math" alttext="(v,h)=(\delta,\xi)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mi>δ</mi><mo>,</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S1.p9.m7" class="ltx_Math" alttext="C_{e,r}(v,h)=n" display="inline"><mrow><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi>n</mi></mrow></math>,
+or <math id="S1.p9.m8" class="ltx_Math" alttext="(v,h)\neq(\delta,\xi)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">(</mo><mi>δ</mi><mo>,</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></math> and
+<math id="S1.p9.m9" class="ltx_Math" alttext="C_{e,r}(v,h)\leq 1" display="inline"><mrow><mrow><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>r</mi></mrow></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mn>1</mn></mrow></math>, that is, the autocorrelation at the pair <math id="S1.p9.m10" class="ltx_Math" alttext="(\delta,\xi)" display="inline"><mrow><mo stretchy="false">(</mo><mi>δ</mi><mo>,</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></math> that we wish to find is as sharply distinguished as possible
+from the autocorrelation
+at the other time-frequency pairs <math id="S1.p9.m11" class="ltx_Math" alttext="(v,h)" display="inline"><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></math>.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Mathematics</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">Define a new sequence <math id="S2.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> by</p>
+<table id="S2.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex15.m1" class="ltx_Math" alttext="f(i)=|\{1\leq j\leq n:e(t_{j})\leq e(t_{i})\}|,\qquad 1\leq i\leq n." display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">|</mo><mrow><mo stretchy="false">{</mo><mrow><mn>1</mn><mo>≤</mo><mi>j</mi><mo>≤</mo><mi>n</mi></mrow><mo>:</mo><mrow><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mi>e</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>t</mi><mi>i</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow><mo stretchy="false">|</mo></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mn>1</mn><mo>≤</mo><mi>i</mi><mo>≤</mo><mi>n</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The sequence <math id="S2.p1.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a normalization of the sequence <math id="S2.p1.m3" class="ltx_Math" alttext="e" display="inline"><mi>e</mi></math>. One quickly checks
+that
+<math id="S2.p1.m4" class="ltx_Math" alttext="\max_{(v,h)\neq(0,0)}C_{e,e}(v,h)=1" display="inline"><mrow><mrow><mrow><msub><mi>max</mi><mrow><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁡</mo><msub><mi>C</mi><mrow><mi>e</mi><mo>,</mo><mi>e</mi></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math> is equivalent to
+<math id="S2.p1.m5" class="ltx_Math" alttext="\max_{(v,h)\neq(0,0)}C_{f,f}(v,h)=1" display="inline"><mrow><mrow><mrow><msub><mi>max</mi><mrow><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁡</mo><msub><mi>C</mi><mrow><mi>f</mi><mo>,</mo><mi>f</mi></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p2.m1" class="ltx_Math" alttext="T=\{(i,f(i)):i=1,\ldots,n\}\subset\mathbb{Z}^{2}" display="inline"><mrow><mi>T</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>:</mo><mrow><mi>i</mi><mo>=</mo><mrow><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi></mrow></mrow><mo stretchy="false">}</mo></mrow><mo>⊂</mo><msup><mi>ℤ</mi><mn>2</mn></msup></mrow></math>.
+The condition <math id="S2.p2.m2" class="ltx_Math" alttext="\max_{(v,h)\neq(0,0)}C_{f,f}(v,h)=1" display="inline"><mrow><mrow><mrow><msub><mi>max</mi><mrow><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></msub><mo>⁡</mo><msub><mi>C</mi><mrow><mi>f</mi><mo>,</mo><mi>f</mi></mrow></msub></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>1</mn></mrow></math>
+holds if and only if <math id="S2.p2.m3" class="ltx_Math" alttext="|T\cap(T+(v,h))|\leq 1" display="inline"><mrow><mrow><mo stretchy="false">|</mo><mrow><mi>T</mi><mo>∩</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>+</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></math> for
+all <math id="S2.p2.m4" class="ltx_Math" alttext="(v,h)\neq(0,0)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>h</mi><mo stretchy="false">)</mo></mrow><mo>≠</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>.</p>
+</div>
+<div id="Thmdefinitionx1" class="ltx_theorem ltx_theorem_definition">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Definition</span></span>.</h6>
+<div id="Thmdefinitionx1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">A <span class="ltx_text ltx_font_normal">Costas sequence of length <math id="Thmdefinitionx1.p1.m1" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math></span> is a sequence <math id="Thmdefinitionx1.p1.m2" class="ltx_Math" alttext="f(1),\ldots,f(n)" display="inline"><mrow><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">1</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>n</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>
+of length <math id="Thmdefinitionx1.p1.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> such that if <math id="Thmdefinitionx1.p1.m4" class="ltx_Math" alttext="T=\{(i,f(i)):i=1,\ldots,n\}" display="inline"><mrow><mi>T</mi><mo mathvariant="normal">=</mo><mrow><mo mathvariant="normal" stretchy="false">{</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>i</mi><mo mathvariant="normal">,</mo><mrow><mi>f</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>i</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">:</mo><mrow><mi>i</mi><mo mathvariant="normal">=</mo><mrow><mn mathvariant="normal">1</mn><mo mathvariant="normal">,</mo><mi mathvariant="normal">…</mi><mo mathvariant="normal">,</mo><mi>n</mi></mrow></mrow><mo mathvariant="normal" stretchy="false">}</mo></mrow></mrow></math>, then
+<math id="Thmdefinitionx1.p1.m5" class="ltx_Math" alttext="|T\cap(T+(v,h))|\leq 1" display="inline"><mrow><mrow><mo mathvariant="normal" stretchy="false">|</mo><mrow><mi>T</mi><mo mathvariant="normal">∩</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mi>T</mi><mo mathvariant="normal">+</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>v</mi><mo mathvariant="normal">,</mo><mi>h</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow><mo mathvariant="normal" stretchy="false">|</mo></mrow><mo mathvariant="normal">≤</mo><mn mathvariant="normal">1</mn></mrow></math> for all <math id="Thmdefinitionx1.p1.m6" class="ltx_Math" alttext="(v,h)\neq(0,0)" display="inline"><mrow><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>v</mi><mo mathvariant="normal">,</mo><mi>h</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">≠</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal">,</mo><mn mathvariant="normal">0</mn><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math>. We call the set
+<math id="Thmdefinitionx1.p1.m7" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> a <span class="ltx_text ltx_font_normal">Costas array</span>.</span></p>
+</div>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">This can also be said in the following way.
+For <math id="S2.p3.m1" class="ltx_Math" alttext="1\leq i_{1}\leq i_{2}\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><msub><mi>i</mi><mn>1</mn></msub><mo>≤</mo><msub><mi>i</mi><mn>2</mn></msub><mo>≤</mo><mi>n</mi></mrow></math>
+and <math id="S2.p3.m2" class="ltx_Math" alttext="1\leq i_{3}\leq i_{4}\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><msub><mi>i</mi><mn>3</mn></msub><mo>≤</mo><msub><mi>i</mi><mn>4</mn></msub><mo>≤</mo><mi>n</mi></mrow></math>,
+if <math id="S2.p3.m3" class="ltx_Math" alttext="(i_{1}-i_{2},f(i_{1})-f(i_{2}))=(i_{3}-i_{4},f(i_{3})-f(i_{4}))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>-</mo><msub><mi>i</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>i</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>i</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>i</mi><mn>3</mn></msub><mo>-</mo><msub><mi>i</mi><mn>4</mn></msub></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>i</mi><mn>3</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>i</mi><mn>4</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> then <math id="S2.p3.m4" class="ltx_Math" alttext="i_{1}=i_{3}" display="inline"><mrow><msub><mi>i</mi><mn>1</mn></msub><mo>=</mo><msub><mi>i</mi><mn>3</mn></msub></mrow></math> and <math id="S2.p3.m5" class="ltx_Math" alttext="i_{2}=i_{4}" display="inline"><mrow><msub><mi>i</mi><mn>2</mn></msub><mo>=</mo><msub><mi>i</mi><mn>4</mn></msub></mrow></math>.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Drakakis <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib5" title="A review of Costas arrays" class="ltx_ref">1</a>]</cite>
+gives a survey of Costas arrays.</p>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Generalizations</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">Now that we have detached Costas sequences from the time-frequency setting
+in which they originate,
+we can investigate them as mathematical objects, and also investigate
+modifications of Costas sequences.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p2.m1" class="ltx_Math" alttext="[n]=\{1,\ldots,n\}\subset\mathbb{Z}" display="inline"><mrow><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mn>1</mn><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mi>n</mi><mo stretchy="false">}</mo></mrow><mo>⊂</mo><mi>ℤ</mi></mrow></math>.
+A Costas sequence <math id="S3.p2.m2" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> of length <math id="S3.p2.m3" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> is a bijection <math id="S3.p2.m4" class="ltx_Math" alttext="f:[n]\to[n]" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow><mo>→</mo><mrow><mo stretchy="false">[</mo><mi>n</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> that satisfies
+the condition on overlapping translates.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">Moran <cite class="ltx_cite ltx_citemacro_cite">[<a href="#bib.bib1" title="Mathematics of radar" class="ltx_ref">3</a>]</cite></p>
+</div>
+</section>
+<section id="bib" class="ltx_bibliography">
+<h2 class="ltx_title ltx_title_bibliography">References</h2>
+
+<ul id="bib.L1" class="ltx_biblist">
+<li id="bib.bib5" class="ltx_bibitem ltx_bib_article">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[1]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">K. Drakakis</span><span class="ltx_text ltx_bib_year"> (2006)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">A review of Costas arrays</span>.
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_journal">J. Appl. Math.</span> <span class="ltx_text ltx_bib_volume">2006</span>, <span class="ltx_text ltx_bib_pages"> pp. 1–32</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">Article ID 26385</span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S2.p4" title="2 Mathematics ‣ What is a Costas array?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§2</span></a>.
+</span>
+</li>
+<li id="bib.bib2" class="ltx_bibitem ltx_bib_book">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[2]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">N. Levanon and E. Mozeson</span><span class="ltx_text ltx_bib_year"> (2004)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Radar signals</span>.
+</span>
+<span class="ltx_bibblock"> <span class="ltx_text ltx_bib_publisher">John Wiley &amp; Sons</span>.
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S1.p1" title="1 Introduction ‣ What is a Costas array?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>,
+<a href="#S1.p4" title="1 Introduction ‣ What is a Costas array?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§1</span></a>.
+</span>
+</li>
+<li id="bib.bib1" class="ltx_bibitem ltx_bib_incollection">
+<span class="ltx_tag ltx_bib_key ltx_role_refnum ltx_tag_bibitem">[3]</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_author">B. Moran</span><span class="ltx_text ltx_bib_year"> (2001)</span>
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_title">Mathematics of radar</span>.
+</span>
+<span class="ltx_bibblock">In <span class="ltx_text ltx_bib_inbook">Twentieth Century Harmonic Analysis - A Celebration</span>,  <span class="ltx_text ltx_bib_editor">J. S. Byrnes (Ed.)</span>,
+</span>
+<span class="ltx_bibblock"><span class="ltx_text ltx_bib_pages"> pp. 295–328</span>.
+</span>
+<span class="ltx_bibblock">Note: <span class="ltx_text ltx_bib_note">NATO Science Series, II. Mathematics, Physics and Chemistry - Vol. 33</span>
+</span>
+<span class="ltx_bibblock ltx_bib_cited">Cited by: <a href="#S3.p3" title="3 Generalizations ‣ What is a Costas array?" class="ltx_ref"><span class="ltx_text ltx_ref_tag">§3</span></a>.
+</span>
+</li>
+</ul>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Mon Feb 14 19:26:27 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

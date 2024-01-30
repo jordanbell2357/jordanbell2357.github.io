@@ -1,0 +1,137 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The symmetric difference metric}
+\author{Jordan Bell}
+\date{April 12, 2015}
+
+\maketitle
+
+Let $(\Omega,\Sigma,\mu)$ be a probability space. 
+For $A,B \in \Sigma$, define 
+\[
+d_\mu(A,B) = \mu(A \triangle B).
+\]
+This is a pseduometric on $\Sigma$: 
+\begin{align*}
+d_\mu(A,C)&=\mu( A \triangle C)\\
+&=\mu((A \triangle B) \triangle (B \triangle C))\\
+&\leq \mu((A \triangle B) \cup (B \triangle C))\\
+&\leq \mu(A \triangle B) + \mu(B \triangle C)\\
+&=d_\mu(A,B)+d_\mu(B,C).
+\end{align*}
+The relation $A \sim B$ if and only if
+$d_\mu(A,B)=0$ is an equivalence relation on $\Sigma$, and
+$d_\mu([A],[B])=d_\mu(A,B)$ is a metric on the collection $\Sigma_\mu$ of equivalence classes.
+We call $d_\mu$ the \textbf{symmetric difference metric}.
+
+The following theorem shows that
+$(\Sigma_\mu,d_\mu)$ is a complete metric space.\footnote{V. I. Bogachev, {\em Measure Theory}, volume I,
+p.~54, Theorem 1.12.16.}
+
+\begin{theorem}
+If $(\Omega,\Sigma,\mu)$ is a probability space, then 
+$(\Sigma_\mu, d_\mu)$ is a complete metric space.
+\end{theorem}
+\begin{proof}
+Suppose that $[B_n]$ is a Cauchy sequence in 
+$(\Sigma_\mu, d_\mu)$. As for any Cauchy sequence in a metric space, there is a subsequence $[A_n]$ of
+$[B_n]$
+such that $d_\mu([A_k],[A_n]) < 2^{-n}$ for $k \geq n$. 
+Define
+\[
+E_n = \bigcup_{k \geq n} A_k.
+\]
+We have
+\begin{align*}
+E_n \setminus A_n &=\bigcup_{k=n+1}^\infty (A_k \setminus A_n)\\
+&=\bigcup_{k=n+1} \left(A_k \setminus \bigcup_{j=n}^{k-1} A_j \right)\\
+&\subset \bigcup_{k=n+1} (A_k \setminus A_{k-1})\\
+&= \bigcup_{k=n}^\infty (A_{k+1} \setminus A_k),
+\end{align*}
+hence
+\begin{equation}
+\mu(E_n \triangle A_n)= \mu(E_n \setminus A_n)
+\leq \sum_{k=n}^\infty \mu(A_{k+1} \setminus A_k)
+<\sum_{k=n}^\infty 2^{-k}
+=2^{-n+1}.
+\label{En}
+\end{equation}
+Now, define
+\[
+A = \limsup_{n \to \infty} A_n = \bigcap_{n=1}^\infty \bigcup_{k=n}^\infty A_k =
+\bigcap_{n=1}^\infty E_n,
+\]
+for which
+\begin{align*}
+\mu(A_n \triangle A)&=\mu(A_n \setminus A)\\
+&=\mu\left(A_n \cap \left( \bigcap_{k=1}^\infty E_k \right)^c \right)\\
+&=\mu\left( A_n \cap \bigcup_{k=1}^\infty E_k^c \right)\\
+&=\mu\left( \bigcup_{k=1}^\infty (A_n \cap E_k^c) \right)\\
+&= \lim_{k \to \infty} \mu(A_n \cap E_k^c)\\
+&=\lim_{k \to \infty} \mu\left( \bigcap_{j \geq k} (A_n \setminus A_j) \right)\\
+&\leq \lim_{k \to \infty} \mu(A_n \setminus A_k)\\
+&<2^{-n}.
+\end{align*}
+Using \eqref{En},
+\[
+d_\mu(A_n,A) \leq 
+\mu(E_n \triangle A_n) + \mu(A_n \triangle A) 
+< 2^{-n+1}+2^{-n}=3 \cdot 2^{-n},
+\]
+showing that $[A_n]$ converges to $[A]$ 
+as $n \to \infty$, and because $[A_n]$ is a subsequence of the Cauchy
+sequence $[B_n]$, it follows that $[B_n]$ converges to $[A]$ and therefore
+that $(\Sigma_\mu,d_\mu)$ is a complete metric space.
+\end{proof}
+
+\begin{lemma}
+For $A, B \in \Sigma$,
+\[
+|\mu(A)-\mu(B)| \leq \mu(A \triangle B).
+\]
+\end{lemma}
+\begin{proof}
+\begin{align*}
+|\mu(A)-\mu(B)|&=|(\mu(A \setminus B) + \mu(A \cap B)) - 
+(\mu(B \setminus A) + \mu(B \cap B))|\\
+&=|\mu(A \setminus B)-\mu(B \setminus A)|\\
+&\leq \mu(A \setminus B)+\mu(B \setminus A)\\
+&=\mu((A \setminus B) \cup (B \setminus A))\\
+&\leq \mu(A \triangle B).
+\end{align*}
+\end{proof}
+
+
+The following theorem connects the metric space $(\Sigma_\mu,d_\mu)$ with the Banach space
+$L^1(\mu)$.\footnote{John B. Conway, {\em A Course in Abstract Analysis}, p.~90, Proposition 2.7.13.}
+
+\begin{theorem}
+If $(\Sigma_\mu,d_\mu)$ is separable then $L^1(\mu)$ is separable.
+\end{theorem}
+
+
+
+\end{document}

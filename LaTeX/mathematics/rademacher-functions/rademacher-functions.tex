@@ -1,0 +1,646 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\osc}{\ensuremath\mathrm{osc}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\cco}{\ensuremath\overline{\mathrm{co}}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\ba}{\ensuremath\mathrm{ba}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\Cyl}{\ensuremath\mathrm{Cyl}\,}
+\newcommand{\extreals}{\overline{\mathbb{R}}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Rademacher functions}
+\author{Jordan Bell}
+\date{July 16, 2014}
+
+\maketitle
+
+
+\section{Binary expansions}
+Define $S:\{0,1\}^\mathbb{N} \to [0,1]$ by
+\[
+S(\sigma) = \sum_{k=1}^\infty \frac{\sigma_k}{2^k}, \qquad \sigma \in \{0,1\}^\mathbb{N}.
+\]
+For example, for $\sigma_1=0$ and $\sigma_2=1,\sigma_3=1,\ldots$, 
+\[
+S(\sigma) = \frac{0}{2}+\frac{1}{4}+\frac{1}{8}+\cdots = \frac{1}{2};
+\]
+  for $\sigma_1=1$ and $\sigma_2=0$, $\sigma_3=0, \ldots$,
+\[
+S(\sigma) = \frac{1}{2}+\frac{0}{4}+\frac{0}{8} + \cdots = \frac{1}{2}.
+\]
+Let $\sigma \in \{0,1\}^\mathbb{N}$. If there is some $n  \in \mathbb{N}$ such that $\sigma_n=0$ and $\sigma_k=1$ for all $k \geq n+1$, then
+defining
+\[
+\tau_k = \begin{cases}
+\sigma_k&k \leq n-1\\
+1&k=n\\
+0&k \geq n,
+\end{cases}
+\]
+we have
+\[
+S(\sigma) = \sum_{k=1}^{n-1} \frac{\sigma_k}{2^k} + \sum_{k=n+1}^\infty \frac{1}{2^k} = 
+ \sum_{k=1}^{n-1} \frac{\sigma_k}{2^k} + \frac{1}{2^n}
+ =S(\tau).
+\]
+One proves that if either (i) there is some $n \in \mathbb{N}$ such that
+$\sigma_n=0$ and $\sigma_k=1$ for all $k \geq n+1$ or (ii) there is some $n \in \mathbb{N}$
+such that $\sigma_n=1$ and $\sigma_k=0$ for all $k \geq n+1$, then $S^{-1}(S(\sigma))$ contains exactly two elements, and that
+otherwise $S^{-1}(S(\sigma))$ contains exactly one element. 
+
+In words, except for the sequence whose terms are only 0 or the sequence whose terms are only 1, $S^{-1}(S(\sigma))$ contains
+exactly two elements when $\sigma$ is eventually $0$ or eventually $1$, and $S^{-1}(S(\sigma))$ contains exactly
+one element otherwise.
+
+We define $\epsilon:[0,1] \to \{0,1\}^\mathbb{N}$ by taking $\epsilon(t)$
+to be  the unique element of $S^{-1}(t)$ if $S^{-1}(t)$ contains exactly one element, and to be the element of $S^{-1}(t)$
+that is eventually $0$ if $S^{-1}(t)$ contains exactly two elements.
+For $k \in \mathbb{N}$ we define $\epsilon_k:[0,1] \to \{0,1\}$ by
+\[
+\epsilon_k(t) = \epsilon(t)_k, \qquad t \in [0,1].
+\]
+Then, for all $t \in [0,1]$,
+\begin{equation}
+t =S(\epsilon(t))= \sum_{k=1}^\infty \frac{\epsilon_k(t)}{2^k},
+\label{binexpansion}
+\end{equation}
+which we call \textbf{the binary expansion of $t$}.
+
+
+\section{Rademacher functions}
+For $k \in \mathbb{N}$, the \textbf{$k$th Rademacher function} $r_k:[0,1] \to \{-1,+1\}$ is defined by
+\[
+r_k(t) = 1-2\epsilon_k(t), \qquad t \in [0,1].
+\]
+We can rewrite the binary expansion of $t \in [0,1]$ in \eqref{binexpansion} as
+\begin{equation}
+\sum_{k=1}^\infty \frac{r_k(t)}{2^k} = \sum_{k=1}^\infty \left(\frac{1}{2^k} - 2\cdot \frac{\epsilon_k(t)}{2^k} \right)
+=1-2\sum_{k=1}^\infty \frac{\epsilon_k(t)}{2^k}=1-2t.
+\label{binary}
+\end{equation}
+
+
+Define $r:\mathbb{R} \to \{-1,+1\}$ by 
+\[
+r(x) = (-1)^{[x]},
+\]
+where $[x]$ denotes the greatest integer $\leq x$. Thus, for $0 \leq x <1$ we have $r(x)=1$, for $1 \leq x < 2$ we have
+$r(x)=-1$, and $r$ has period $2$. 
+
+\begin{lemma}
+For any $n \in \mathbb{N}$,
+\[
+r_n(t) =(-1)^{[2^nt]}= r(2^n t), \qquad t \in [0,1]
+\]
+\label{rformula}
+\end{lemma}
+
+
+
+In the following theorem we use the Rademacher functions to prove an identity for trigonometric functions.\footnote{Mark Kac, {\em Statistical Independence in Probability, Analysis and Number Theory}, p.~4, \S 3.}
+
+\begin{theorem} For any nonzero real $x$,
+\[
+ \prod_{k=1}^\infty \cos \frac{x}{2^k} = \frac{\sin x}{x}.
+\]
+\end{theorem}
+\begin{proof}
+Let $n \in \mathbb{N}$ and let $c_1,\ldots,c_n \in \mathbb{R}$. 
+The function
+\[
+\sum_{k=1}^n c_k r_k
+\]
+is constant on each of the intervals
+ \begin{equation}
+ \left[\frac{s}{2^n},\frac{s+1}{2^n} \right), \qquad 0 \leq s \leq 2^n-1.
+ \label{sintervals}
+ \end{equation}
+ There is a bijection between  $\Delta_n=\{-1,+1\}^n$
+ and 
+the collection of intervals \eqref{sintervals}. Without explicitly describing this bijection,
+we have
+\begin{eqnarray*}
+\int_0^1 \exp\left(i\sum_{k=1}^n c_k r_k(t) \right) dt &=& 
+\sum_{s=0}^{2^n-1} \int_{s\cdot 2^{-n}}^{(s+1)\cdot 2^{-n}} 
+\exp\left(i\sum_{k=1}^n c_k r_k(t) \right) dt\\
+&=&\sum_{\delta \in \Delta_n} \frac{1}{2^n}  \exp\left(i\sum_{k=1}^n \delta_k c_k \right)\\
+&=&\sum_{\delta \in \Delta_n} \prod_{k=1}^n \frac{e^{i\delta_kc_k}}{2}\\
+&=&\prod_{k=1}^n \frac{e^{ic_k}+e^{-ic_k}}{2},
+\end{eqnarray*}
+giving
+\begin{equation}
+\int_0^1 \exp\left(i\sum_{k=1}^n c_k r_k(t) \right) dt =\prod_{k=1}^n \cos c_k.
+\label{cosformula}
+\end{equation}
+
+We have
+\begin{equation}
+\int_0^1 e^{ix(1-2t)} dt  = e^{ix} \frac{e^{-2ixt}}{-2ix} \bigg|_0^1
+ = e^{ix} \left(\frac{e^{-2ix}}{-2ix} + \frac{1}{2ix} \right)
+ =\frac{\sin x}{x}.
+ \label{sinformula}
+\end{equation}
+Using \eqref{binary} we check that
+the sequence of functions $\sum_{k=1}^n \frac{r_k(t)}{2^k}$ converges uniformly on $[0,1]$
+to $1-2t$, and hence using \eqref{sinformula} we get
+\[
+\int_0^1 \exp\left(ix \sum_{k=1}^n  \frac{r_k(t)}{2^k} \right) dt \to \int_0^1 e^{ix(1-2t}) dt
+=\frac{\sin x}{x}
+\]
+as $n \to \infty$. Combining this with \eqref{cosformula}, which we apply with $c_k=\frac{x}{2^k}$,  we get
+\[
+ \prod_{k=1}^n \cos \frac{x}{2^k} \to \frac{\sin x}{x}
+\]
+as $n \to \infty$, proving the claim.
+\end{proof}
+
+We now give an explicit formula for the measure of those $t$ for which exactly $l$ of $r_1(t),\ldots,r_n(t)$ are equal to $1$.\footnote{Mark Kac, {\em Statistical Independence in Probability, Analysis and Number Theory}, pp.~8--9.}
+We denote by $\mu$ Lebesgue measure on $\mathbb{R}$. We can interpret the following formula as stating the probability that out of $n$
+tosses of a coin, exactly $l$ of the outcomes are heads. 
+
+\begin{theorem}
+For $n \in \mathbb{N}$ and $0 \leq l \leq n$,
+\[
+\mu\{t \in [0,1]: r_1(t)+\cdots+r_n(t)=2l-n\} = \frac{1}{2^n} \binom{n}{l}.
+\]
+\label{numberheads}
+\end{theorem}
+\begin{proof}
+Define $\phi:[0,1] \to \mathbb{R}$ by
+\[
+\phi(t) = \frac{1}{2\pi} \int_0^{2\pi} e^{ix\left(-(2l-n)+\sum_{k=1}^n r_k(t)\right)} dx
+\]
+But for $m \in \mathbb{Z}$,
+\begin{equation}
+\frac{1}{2\pi} \int_0^{2\pi} e^{imx} dx =\delta_{m,0}= \begin{cases}
+1&m=0\\
+0&m \neq0,
+\end{cases}
+\label{orthogonality}
+\end{equation}
+hence
+\[
+\phi(t)=
+\begin{cases}
+1&\sum_{k=1}^n r_k(t)=2l-n\\
+0&\sum_{k=1}^n r_k(t) \neq 2l-n.
+\end{cases}
+\]
+Therefore
+\begin{eqnarray*}
+\mu \bigg\{ t \in [0,1]: \sum_{k=1}^n r_k(t) = 2l-n\bigg\} & = & \int_0^1 \phi(t) dt\\
+&=&\int_0^1  \frac{1}{2\pi} \int_0^{2\pi} e^{ix\left(-(2l-n)+\sum_{k=1}^n r_k(t)\right)} dx dt\\
+&=&\frac{1}{2\pi}  \int_0^{2\pi} e^{-ix(2l-n)} \int_0^1  e^{ix\sum_{k=1}^n r_k(t)} dt dx\\
+&=&\frac{1}{2\pi}  \int_0^{2\pi} e^{-ix(2l-n)} \cos^n x dx;
+\end{eqnarray*}
+the last equality uses \eqref{cosformula} with $c_1=x,\ldots,c_n=x$. 
+Furthermore, writing
+\[
+\cos^n x = 2^{-n} (e^{ix}+e^{-ix}) = 2^{-n} \sum_{k=0}^n \binom{n}{k} e^{ix(2k-n)},
+\]
+we calculate using \eqref{orthogonality} that
+\begin{eqnarray*}
+\frac{1}{2\pi} \int_0^{2\pi} e^{-ix(2l-n)} \cos^n x dx&=&2^{-n} \sum_{k=0}^n \binom{n}{k}  \frac{1}{2\pi}\int_0^1 e^{-ix(2l-n)} e^{ix(2k-n)} dx\\
+ &=&2^{-n}  \sum_{k=0}^n \binom{n}{k} \frac{1}{2\pi} \int_0^1 e^{ix(2k-2l)} dx\\
+ &=&2^{-n}  \sum_{k=0}^n \binom{n}{k} \delta_{2k-2l,0}\\
+ &=&2^{-n}  \sum_{k=0}^n \binom{n}{k} \delta_{k,l}\\
+ &=&2^{-n} \binom{n}{l},
+\end{eqnarray*}
+proving the claim.
+\end{proof}
+
+
+
+We now prove that the expected value of a product of distinct Rademacher functions is equal to the product of their
+expected values.\footnote{Masayoshi Hata, {\em Problems and Solutions in Real
+Analysis}, p.~185, Solution 13.2.}
+
+\begin{theorem}
+If $k_1,\ldots,k_n$ are positive integers and $k_1<\cdots<k_n$, then
+\[
+\int_0^1 r_{k_1}(t) \cdots r_{k_n}(t) dt = 0.
+\]
+\label{independent}
+\end{theorem}
+\begin{proof}
+Write $J=\int_0^1 r_{k_1}(t) \cdots r_{k_n}(t) dt$ and define
+\[
+\phi(x) = \prod_{s=2}^n r(2^{k_s-k_1}x), \qquad x \in \mathbb{R},
+\]
+which satisfies
+\[
+\phi(x+1)=\prod_{s=2}^n r(2^{k_s-k_1}x+2^{k_s-k_1})
+=\prod_{s=2}^n r(2^{k_s-k_1}x)=\phi(x).
+\]
+Hence, as $\phi$ has period $1$ and $r$ has period $2$,
+\begin{eqnarray*}
+J &=& \int_0^1 r_{k_1}(t) \phi(2^{k_1}t) dt\\
+& =& \int_0^1 r(2^{k_1}t) \phi(2^{k_1}t) dt \\
+&=& \frac{1}{2^{k_1}} \int_0^{2^{k_1}} r(x) \phi(x) dx\\
+&=&\frac{1}{2^{k_1}} \sum_{j=0}^{2^{k_1-1}-1} \int_{2j}^{2j+2} r(x) \phi(x) dx\\
+&=&\frac{1}{2^{k_1}} \sum_{j=0}^{2^{k_1-1}-1} \int_0^2 r(x) \phi(x) dx\\
+&=&\frac{1}{2} \int_0^2 r(x) \phi(x) dx.
+\end{eqnarray*}
+But, as $\phi$ has period $1$,
+\[
+ \int_0^2 r(x) \phi(x) dx = \int_0^1 \phi(x) dx - \int_1^2 \phi(x) dx =  \int_0^1 \phi(x) dx - \int_0^1 \phi(x) dx =0,
+\]
+hence  
+$J=0$,
+proving the claim.
+\end{proof}
+
+For each $n \in \mathbb{N}$, if $f$ is a function defined on the integers we define
+\[
+I_n(f) = \int_0^1 f\left( \sum_{k=1}^n r_k(t) \right) dt.
+\]
+
+\begin{lemma}
+For any $n \in \mathbb{N}$,
+\[
+I_n(x^2)=n, \qquad I_n(x^4)=3n^2-2n.
+\]
+\end{lemma}
+\begin{proof}
+Using Theorem \ref{independent} we get
+\begin{eqnarray*}
+I_n(x^2)&=&\int_0^1 \left(\sum_{k=1}^n r_k(t) \right)^2 dt\\
+&=&\int_0^1 \sum_{k=1}^n r_k(t)^2 + \sum_{j \neq k} r_j(t) r_k(t) dt\\
+&=&\int_0^1 \sum_{k=1}^n r_k(t)^2 dt\\
+&=&n.
+\end{eqnarray*}
+
+Using Theorem \ref{independent} we get, since $r_j(t)^4=r_j(t)^2=1$ and $r_j(t)^3=r_j(t)$,
+\begin{eqnarray*}
+I_n(x^4)&=&\int_0^1 \left(\sum_{k=1}^n r_k(t) \right)^4 dt\\
+&=&\int_0^1 \sum_{k=1}^n r_k(t)^4 +\binom{4}{3} \sum_{j=1}^n \sum_{k \neq j} r_j(t)^3 r_k(t)+
+\binom{4}{2} \sum_{j=1}^n \sum_{k \neq j} r_j(t)^2 r_k(t)^2\\
+&&+\binom{4}{2}\sum_{j=1}^n \sum_{\textrm{$j,k,l$ all distinct}} r_j(t)^2 r_k(t) r_l(t)\\
+&&+\sum_{\textrm{$j,k,l,m$ all distinct}} r_j(t) r_k(t) r_l(t) r_m(t) dt\\
+&=& n+\binom{4}{2}n(n-1).
+\end{eqnarray*}
+\end{proof}
+
+
+Our proof of the next identity follows Hata.\footnote{Masayoshi Hata, {\em Problems and Solutions in Real Analysis}, p.~188, Solution 13.6.}
+
+\begin{lemma}
+For any $n \in \mathbb{N}$,
+\[
+I_n(|x|) = \frac{2}{\pi} \int_0^\infty \frac{1-\cos^n x}{x^2} dx.
+\]
+\label{absoluteformula}
+\end{lemma}
+\begin{proof}
+For $n \in \mathbb{N}$ and $c_1,\ldots,c_n \in \mathbb{R}$,
+\[
+\int_0^1 \exp\left(i\sum_{k=1}^n c_k r_k(t) \right) dt = 
+\int_0^1 \cos \left(\sum_{k=1}^n c_k r_k(t) \right) dt
++i\int_0^1 \sin\left(\sum_{k=1}^n c_k r_k(t) \right) dt,
+\]
+and since \eqref{cosformula} tells us that the left-hand side of the above is real, it follows that we can
+write \eqref{cosformula} as
+\begin{equation}
+\int_0^1 \cos \left(\sum_{k=1}^n c_k r_k(t) \right) dt =\prod_{k=1}^n \cos c_k.
+\label{cosproduct}
+\end{equation}
+
+Suppose that $\xi$ is a positive real number. Using $t=x\xi$ and doing integration by parts,
+\begin{eqnarray*}
+\int_0^\infty \frac{1-\cos x\xi}{x^2} dx&=&\xi\int_0^\infty \frac{1-\cos t}{t^2} dt\\
+&=&\xi\frac{1-\cos t}{-t} \bigg|_0^\infty  
++\xi\int_0^\infty \frac{\sin t}{t} dt \\
+&=&\xi\int_0^\infty \frac{\sin t}{t} dt\\
+&=&\xi \frac{\pi}{2}.
+\end{eqnarray*}
+It is thus apparent that for any real $\xi$,
+\[
+\int_0^\infty \frac{1-\cos x\xi}{x^2} dx = |\xi| \frac{\pi}{2}.
+\]
+For any $n \in \mathbb{N}$, applying the above with $\xi=\sum_{k=1}^n r_k(t)$ we get
+\begin{eqnarray*}
+I_n(|x|)&=&\frac{2}{\pi} \int_0^1 \left| \sum_{k=1}^n r_k(t) \right|\frac{\pi}{2} dt\\
+&=&\frac{2}{\pi} \int_0^1 \int_0^\infty \frac{1-\cos\left(x \sum_{k=1}^n r_k(t) \right)}{x^2} dx dt\\
+&=&\frac{2}{\pi} \int_0^\infty \frac{1}{x^2} \int_0^1 1-\cos\left(x \sum_{k=1}^n r_k(t) \right) dt dx\\
+&=&\frac{2}{\pi} \int_0^\infty \frac{1}{x^2} \left( 1- I_n(\cos x\cdot) \right) dx.
+\end{eqnarray*}
+Applying \eqref{cosproduct} with $c_k=x$ for each $k$, this is equal to
+\[
+\frac{2}{\pi}\int_0^\infty \frac{1}{x^2}\left(1-\prod_{k=1}^n \cos x\right) dx
+=\frac{2}{\pi} \int_0^\infty \frac{1-\cos^n x}{x^2} dx,
+\]
+completing the proof.
+\end{proof}
+
+We use the above formula for $I_n(|x|)$  to obtain an asymptotic formula for $I_n(|x|)$.\footnote{Mark Kac, {\em Statistical Independence in Probability, Analysis and Number Theory}, p.~12, Masayoshi Hata, {\em Problems and Solutions in Real Analysis}, p.~188, Solution 13.6.}
+
+\begin{theorem}
+\[
+I_n(|x|) \sim \sqrt{\frac{2}{\pi}} \sqrt{n}.
+\]
+\end{theorem}
+\begin{proof}
+By Lemma \ref{absoluteformula},
+\[
+I_n(|x|) = \frac{2}{\pi} \int_0^\infty \frac{1-\cos^n x}{x^2} dx.
+\]
+For $0 \leq \epsilon <1$, define $\phi_\epsilon:\left[0,\frac{\pi}{2} \right) \to \mathbb{R}$ by
+\[
+\phi_\epsilon(x) = \frac{x^2}{2(1-\epsilon)}+\log \cos x.
+\]
+We also define
+\[
+\alpha_\epsilon = \arccos \sqrt{1-\epsilon}, \qquad \beta_\epsilon = \int_{\alpha_\epsilon}^\infty \frac{1-\cos^n x}{x^2} dx,
+\]
+and for $\sigma>0$,
+\[
+K_{\epsilon,\sigma} = \int_0^{\alpha_\epsilon} \frac{1-\exp\left(-\frac{nx^2}{\sigma} \right)}{x^2} dx.
+\]
+
+Let $0<\epsilon<1$. Until the end of the proof, at which point we take $\epsilon \to 0$, we shall keep $\epsilon$ fixed.
+For $0<x<\alpha_\epsilon$ we have, using $\arccos\sqrt{1-\epsilon} \leq \sqrt{\epsilon}$,
+\[
+\phi_0(x) = \frac{x^2}{2}+\log \cos x < \frac{\epsilon}{2}+ \log \sqrt{1-\epsilon}
+= \frac{\epsilon}{2}+ \frac{1}{2} \log(1-\epsilon)<0,
+\]
+hence 
+\[
+\cos x < \exp\left(-\frac{x^2}{2}\right).
+\]
+On the other hand, 
+\[
+\phi_\epsilon'(x) = \frac{x}{1-\epsilon}-\tan x, \qquad \phi_\epsilon''(x) = \frac{1}{1-\epsilon}-\sec^2 x,
+\]
+so $\phi_\epsilon(0)=\phi_\epsilon'(0)=0$ and $\phi_\epsilon''(t)> 0$ for all $0 \leq t<\alpha_\epsilon$,
+giving
+\[
+\phi_\epsilon(x)>0,
+\]
+and hence
+\[
+\exp\left(-\frac{x^2}{2(1-\epsilon)}\right)<\cos x.
+\]
+Collecting what we have established so far, for $0<x<\alpha_\epsilon$ we have
+\[
+\exp\left(-\frac{x^2}{2(1-\epsilon)}\right)<\cos x < \exp\left(-\frac{x^2}{2}\right).
+\]
+This shows that
+\[
+K_{\epsilon,2(1-\epsilon)} = \int_0^{\alpha_\epsilon}  \frac{1-\exp\left(-\frac{nx^2}{2(1-\epsilon)} \right)}{x^2} dx
+\geq \int_0^{\alpha_\epsilon} \frac{1-\cos^n x}{x^2} dx,
+\]
+and therefore
+\[
+K_{\epsilon,2(1-\epsilon)}  + \beta_\epsilon \geq \frac{\pi}{2} I_n(|x|).
+\]
+On the other hand,
+\[
+K_{\epsilon,2} = \int_0^{\alpha_\epsilon} \frac{1-\exp\left(-\frac{nx^2}{2} \right)}{x^2} dx
+\leq \int_0^{\alpha_\epsilon} \frac{1-\cos^n x}{x^2} dx,
+\]
+so
+\[
+K_{\epsilon,2}  + \beta_\epsilon \leq \frac{\pi}{2} I_n(|x|).
+\]
+Now summarizing what we have obtained, we have
+\begin{equation}
+K_{\epsilon,2}  + \beta_\epsilon \leq 
+\frac{\pi}{2} I_n(|x|) \leq K_{\epsilon,2(1-\epsilon)}  + \beta_\epsilon.
+\label{Kinequality}
+\end{equation}
+
+For $\sigma>0$, doing the change of variable $t=\sqrt{\frac{n}{\sigma}} x$,
+\[
+K_{\epsilon,\sigma} = \int_0^{\alpha_\epsilon} \frac{1-\exp\left(-\frac{nx^2}{\sigma} \right)}{x^2} dx
+=\sqrt{\frac{n}{\sigma}} \int_0^{\sqrt{\frac{n}{\sigma}} \alpha_\epsilon} \frac{1-e^{-t^2}}{t^2} dt.
+\]
+As $n \to \infty$,
+the right-hand side of this is asymptotic to
+\[
+\sqrt{\frac{n}{\sigma}} \int_0^{\infty} \frac{1-e^{-t^2}}{t^2} dt = \sqrt{\frac{n}{\sigma}} \sqrt{\pi}.
+\]
+Dividing  \eqref{Kinequality} by $\sqrt{n}$ and taking the limsup then gives 
+\[
+\limsup_{n \to \infty} \frac{\pi}{2} \frac{I_n(|x|)}{\sqrt{n}} \leq \sqrt{\frac{\pi}{2(1-\epsilon)}},
+\]
+or
+\[
+\limsup_{n \to \infty} \frac{I_n(|x|)}{\sqrt{n}} \leq \sqrt{\frac{2}{\pi(1-\epsilon)}};
+\]
+indeed $\beta_\epsilon$ depends on $n$, but $\beta_\epsilon < \frac{2}{\alpha_\epsilon}$, which does not depend on $n$.
+Taking $\epsilon \to 0$ yields
+\[
+\limsup_{n \to \infty} \frac{I_n(|x|)}{\sqrt{n}} \leq \sqrt{\frac{2}{\pi}}.
+\]
+On the other hand, taking the liminf of \eqref{Kinequality} divided by $\sqrt{n}$ gives
+\[
+\liminf_{n \to \infty} \frac{\pi}{2} \frac{I_n(|x|)}{\sqrt{n}} \geq \sqrt{\frac{\pi}{2}},
+\]
+or
+\[
+\liminf_{n \to \infty}\frac{I_n(|x|)}{\sqrt{n}} \geq \sqrt{\frac{2}{\pi}}.
+\]
+Combining the limsup and the liminf inequalities proves the claim.
+\end{proof}
+
+
+\begin{lemma}
+For any $\xi \in \mathbb{R}$  and $n \in \mathbb{N}$,
+\[
+I_n(e^{\xi|x|}) <I_n(e^{\xi x})+I_n(e^{-\xi x})= 2 (\cosh \xi)^n.
+\]
+\label{coshestimate}
+\end{lemma}
+
+
+
+
+We will use the following theorem to establish an estimate similar to but weaker than the \textbf{law of the iterated logarithm}.\footnote{Masayoshi Hata, {\em Problems and Solutions in Real Analysis}, p.~189, Solution 13.7.}
+
+
+\begin{theorem}
+For any $\epsilon>0$, for almost all $t \in [0,1]$,
+\[
+\sum_{n=1}^\infty \frac{1}{n^{2+\epsilon}} \exp\left(\sqrt{\frac{2\log n}{n}} \left| \sum_{k=1}^n r_k(t) \right| \right) dt<\infty.
+\]
+\label{seriesaa}
+\end{theorem}
+\begin{proof}
+Define $f_n:[0,1] \to (0,\infty)$ by
+\[
+f_n(t) = \frac{1}{n^{2+\epsilon}} \exp\left( \sqrt{\frac{2\log n}{n}} \left| \sum_{k=1}^n r_k(t) \right| \right).
+\]
+Applying Lemma \ref{coshestimate} with $\xi =  \sqrt{\frac{2\log n}{n}}$,
+\[
+\int_0^1 f_n(t) dt \leq \frac{1}{n^{2+\epsilon}} \cdot 2 \cdot \left( \cosh  \sqrt{\frac{2\log n}{n}} \right)^n.
+\]
+It is not obvious, but we take as given the asymptotic expansion
+\[
+ \left( \cosh  \sqrt{\frac{2\log n}{n}} \right)^n = n-\frac{1}{3} (\log n)^2 +
+ \frac{\frac{8}{45} (\log n)^3+\frac{1}{18} (\log n)^4}{n} + O(n^{-3/2}),
+\]
+and using this,
+\[
+\frac{1}{n^{2+\epsilon}} \cdot 2 \cdot \left( \cosh  \sqrt{\frac{2\log n}{n}} \right)^n = 
+\frac{2}{n^{1+\epsilon}}+O\left( \frac{(\log n)^2}{n^{2+\epsilon}}\right)
+=\frac{2}{n^{1+\epsilon}}+O(n^{-2}).
+\]
+Thus 
+\[
+\sum_{n=1}^\infty \int_0^1 f_n(t) dt  = \sum_{n=1}^\infty\left( \frac{2}{n^{1+\epsilon}}+O(n^{-2}) \right)
+<\infty.
+\]
+Because each $f_n$ is nonnegative, using this with the \textbf{monotone convergence theorem} gives the claim.
+\end{proof}
+
+
+\begin{theorem}
+For almost all $t \in [0,1]$,
+\[
+\limsup_{n \to \infty} \frac{\left| \sum_{k=1}^n r_k(t) \right|}{\sqrt{n \log n}} \leq \sqrt{2}.
+\]
+\end{theorem}
+\begin{proof}
+Let $\epsilon>0$.
+By Theorem \ref{seriesaa}, for almost all $t \in [0,1]$ there is some $n_t$ such that $n \geq n_t$ implies that $f_n(t)<1$, where we are talking about the functions
+$f_n$ defined in the proof of that theorem; certainly the terms of a convergent series are eventually less than $1$. 
+That is, for almost all $t \in [0,1]$ there is some $n_t$ such that $n \geq n_t$ implies that (taking logarithms),
+\[
+(-2-\epsilon) \log n +  \sqrt{\frac{2\log n}{n}} \left| \sum_{k=1}^n r_k(t) \right|<0,
+\]
+and rearranging,
+\[
+\frac{\left| \sum_{k=1}^n r_k(t) \right|}{\sqrt{n \log n}} < \sqrt{2}+\frac{\epsilon}{\sqrt{2}}=\sqrt{2}+\epsilon'.
+\]
+
+For each $s \in \mathbb{N}$, let $E_s$ be those $t \in [0,1]$ such that
+\[
+\limsup_{n \to \infty} \frac{\left| \sum_{k=1}^n r_k(t) \right|}{\sqrt{n \log n}} > \sqrt{2}+\frac{1}{s}.
+\]
+For each $s$, taking $0<\epsilon'<\frac{1}{s}$ we get that almost all $t \in [0,1]$ do not belong to $E_s$. That is, for each
+$s$, the set $E_s$ has measure $0$. Therefore
+\[
+E = \bigcup_{s=1}^\infty E_s
+\]
+has measure $0$. 
+That is, for almost all $t \in [0,1]$, for all  $s \in \mathbb{N}$ we have
+$t \not \in E_s$, i.e.
+\[
+\limsup_{n \to \infty} \frac{\left| \sum_{k=1}^n r_k(t) \right|}{\sqrt{n \log n}} \leq \sqrt{2}+\frac{1}{s},
+\]
+and this holding for all $s \in \mathbb{N}$ yields
+\[
+\limsup_{n \to \infty} \frac{\left| \sum_{k=1}^n r_k(t) \right|}{\sqrt{n \log n}} \leq \sqrt{2},
+\]
+completing the proof.
+\end{proof}
+
+
+\section{Hypercubes}
+Let $m_n$ be Lebesgue measure on $\mathbb{R}^n$, and let $Q_n=[0,1]^n$.\footnote{Masayoshi Hata, {\em Problems and Solutions in Real
+Analysis}, p.~161, Solution 11.1.}
+
+\begin{theorem}
+If $f \in C([0,1])$, then
+\[
+\lim_{n \to \infty} \int_{Q_n} f\left(\frac{x_1+\cdots+x_n}{n}\right) dm_n(x) = f\left(\frac{1}{2}\right).
+\]
+\end{theorem}
+\begin{proof}
+Define $X_n:Q_n \to \mathbb{R}$ by 
+\[
+X_n = \frac{x_1+\cdots+x_n}{n}, \qquad x \in Q_n.
+\]
+We have
+\[
+\int_{Q_n} X_n dm_n(x)=\frac{1}{n} \sum_{k=1}^n \int_0^1 x_k \cdot 1 dx_k
+=\frac{1}{n} \sum_{k=1}^n \frac{1}{2}
+=\frac{1}{2},
+\]
+and we define
+\begin{eqnarray*}
+V_n&=&\int_{Q_n} \left(X_n-\frac{1}{2} \right)^2 dm_n(x)\\
+&=&\int_{Q_n} \sum_{k=1}^n \frac{x_k^2}{n^2} + \sum_{j \neq k} \frac{x_j x_k}{n^2} - X_n + \frac{1}{4} dm_n(x)\\
+&=&\frac{1}{n^2} \sum_{k=1}^n \int_0^1 x_k^2 dx_k +  \frac{1}{n^2} \sum_{j=1}^n \sum_{k \neq j} \int_0^1 x_j dx_j  \int_0^1 x_k dx_k
+-\frac{1}{2}+\frac{1}{4}\\
+&=&\frac{1}{n^2} \sum_{k=1}^n \frac{1}{3} + \frac{1}{n^2} \sum_{j=1}^n \sum_{k \neq j} \frac{1}{4} -\frac{1}{4}\\
+&=&\frac{1}{3n}+\frac{n-1}{4n} - \frac{1}{4}\\
+&=&\frac{n^{-1}}{12}.
+\end{eqnarray*}
+
+Suppose that $c_n$ is a sequence of positive real numbers tending to $0$, and define $J_n=J_n(c)$ to be those $x \in Q_n$ such that
+\[
+\left|X_n(x)-\frac{1}{2} \right| \geq c_n.
+\]
+Then
+\begin{eqnarray*}
+V_n &=& \int_{Q_n} \left(X_n-\frac{1}{2} \right)^2 dm_n(x)\\
+&\geq& \int_{J_n} \left(X_n-\frac{1}{2} \right)^2 dm_n(x)\\
+&\geq& \int_{J_n} c_n^2 dm_n(x)\\
+&=&c_n^2 m_n(J_n),
+\end{eqnarray*}
+so
+\[
+m_n(J_n) \leq \frac{V_n}{c_n^2} = \frac{n^{-1}}{12c_n^2}. 
+\]
+Take $c_n=n^{-1/3}$, giving
+\[
+m_n(J_n) \leq \frac{n^{-1/3}}{12}.
+\]
+Let $\epsilon>0$.
+Because $f$ is continuous, there is some $\delta>0$ such that $|t-\frac{1}{2}|<\delta$ implies that
+$|f(t)-f(\frac{1}{2})|<\epsilon$; furthermore, we take $\delta$ such that
+\[
+\frac{\norm{f}_\infty \delta}{6}<\epsilon.
+\]
+Set $N>\delta^{-3}$. For $n \geq N$ and $x \in Q_n \setminus J_n$,
+\[
+\left|X_n(x)-\frac{1}{2}\right| < c_n=n^{-1/3} \leq N^{-1/3} < \delta,
+\]
+and so
+\[
+\left|(f(X_n(x))-f\left(\frac{1}{2}\right)\right|<\epsilon.
+\]
+This gives us
+\begin{eqnarray*}
+\left| \int_{Q_n} f(X_n(x))  dm_n(x)- f\left(\frac{1}{2}\right) \right|&=&
+\left|   \int_{Q_n} f(X_n(x)) - f\left(\frac{1}{2}\right) dm_n(x) \right|\\
+&\leq& \int_{J_n} \left|f(X_n(x)) - f\left(\frac{1}{2}\right)\right| dm_n(x)\\
+&&+\int_{Q_n \setminus J_n}  \left|f(X_n(x)) - f\left(\frac{1}{2}\right)\right| dm_n(x)\\
+&\leq& \int_{J_n}2\norm{f}_\infty dm_n(x)
++\int_{Q_n \setminus J_n} \epsilon dm_n(x)\\
+&\leq&2\norm{f}_\infty m_n(J_n)+\epsilon\\
+&\leq&2\norm{f}_\infty  \frac{n^{-1/3}}{12} + \epsilon\\
+&<&\frac{\norm{f}_\infty \delta}{6}+\epsilon\\
+&<&2\epsilon,
+\end{eqnarray*}
+which proves the claim.
+\end{proof}
+
+
+
+
+\end{document}

@@ -1,0 +1,508 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\Res}{\mathrm{Res}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{The Voronoi summation formula}
+\author{Jordan Bell}
+\date{September 16, 2015}
+
+\maketitle
+
+
+
+
+\section{Mellin transform}
+The \textbf{Mellin transform} of $f:(0,\infty) \to \mathbb{C}$ is defined by
+\[
+\mathscr{M}(f)(s) = \int_0^\infty x^{s-1} f(x) dx.
+\]
+For example, $s \mapsto \Gamma(s)$ is the Mellin transform of $x \mapsto e^{-x}$.
+
+
+Suppose that $f$ continuous on $(0,\infty)$, that  there is some $\alpha \in \mathbb{R}$ such that
+$f(x)=O(x^{-\alpha})$ as $x \to 0$, and that for any $n \geq 1$, $\frac{f(x)}{x^n} \to 0$ as $x \to \infty$. 
+Then \cite[p.~107, Proposition 9.7.7]{cohen}
+$\mathscr{M}(f)(s)$ is holomorphic on $\Re(s)>\alpha$, and
+for $\sigma>\alpha$ and $x>0$,
+\[
+f(x)=\frac{1}{2\pi i}\int_{\Re(s)=\sigma} x^{-s} \mathscr{M}(f)(s) ds.
+\] 
+(The \textbf{Mellin inversion formula}.)
+
+
+
+\section{Generalized Poisson summation formula}
+Cohen \cite[pp.~177--182, \S 10.2.5]{cohen} presents a ``generalized Poisson summation formula'' which yields both the Poisson summation formula and the Voronoi
+summation formula.
+
+We denote by $\mathscr{S}(\mathbb{R})$ the Fr\'echet space of Schwartz functions $\mathbb{R} \to \mathbb{C}$.
+
+\begin{theorem}
+Let $a$ be arithmetic function and define
+\[
+L(a,s) = \sum_{n=1}^\infty a(n) n^{-s}, \qquad \Re(s)>1.
+\]
+Suppose that $L(a,s)$ has an analytic continuation to $\mathbb{C}$ whose only possible pole
+is at $s=1$. 
+Suppose also that there are $A,a_1,\ldots,a_g>0$ such that
+for
+\[
+\gamma(s) = A^s \prod_{j=1}^g \Gamma(a_j s),
+\]
+$L(a,s)$
+satisfies the functional equation
+\[
+\gamma(s)L(a,s) = \gamma(1-s)L(a,1-s).
+\]
+Let  $f \in \mathscr{S}(\mathbb{R})$ and define for $x>0$,
+\[
+K(x) = \frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} \frac{\gamma(s)}{\gamma(1-s)} x^{-s} ds,
+\qquad g(x) = \int_0^\infty f(y) K(xy) dy.
+\]
+Then,
+\[
+\sum_{n=1}^\infty a(n) f(n) = f(0)L(a,0) + \Res_{s=1} \mathscr{M}(f)(s) L(a,s)
++  \sum_{n=1}^\infty a(n) g(n).
+\]
+\label{generalized}
+\end{theorem}
+\begin{proof}
+Since $f$ is a Schwartz function, $\mathscr{M}(f)$ is holomorphic on $\Re(s)>0$. 
+Futhermore, for $\Re(s)>0$, integrating by parts,
+\[
+\mathscr{M}(f)(s)=\int_0^\infty x^{s-1} f(x) dx
+=f(x) \frac{x^s}{s} \bigg|_0^\infty - 
+\int_0^\infty f'(x) \frac{x^s}{s} dx
+=-\frac{1}{s}\mathscr{M}(f')(s+1).
+\]
+It follows that $\mathscr{M}(f)$ has an analytic continuation to $\mathbb{C}$ possibly with poles
+at $0,-1,-2,-3,\ldots$.
+Write $F=\mathscr{M}(f)$. By the Mellin inversion formula we get
+\begin{align*}
+\sum_{n=1}^\infty a(n) f(n)&=\sum_{n=1}^\infty a(n) 
+\frac{1}{2\pi i}\int_{\Re(s)=\frac{3}{2}} n^{-s} F(s) ds\\
+&=\frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} F(s) \sum_{n=1}^\infty a_n n^{-s} ds\\
+&=\frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}}F(s) L(a,s) ds.
+\end{align*}
+The only possible pole of $L(a,s)$ is at $s=1$. From 
+\[
+\mathscr{M}(f)(s)=-\frac{1}{s}\mathscr{M}(f')(s+1),
+\]
+the only possible pole of $F(s)$ in the half-plane $\Re(s)>-1$ is at $s=0$,
+and the residue of $F(s)L(a,s)$ at $s=0$ is
+\[
+-\mathscr{M}(f')(1)=-\int_0^\infty f'(x) dx = -(f(\infty)-f(0)) = f(0),
+\]
+so the residue of $F(s)L(a,s)$ at $s=0$ is
+\[
+f(0)L(a,0).
+\]
+Therefore, by the residue theorem, taking as given  that $F(s)L(a,s) \to 0$ uniformly in $-\frac{1}{2} \leq \Re(s) \leq \frac{3}{2}$ as $|\Im(s)| \to \infty$,
+\begin{align*}
+\sum_{n=1}^\infty a(n) f(n)&=f(0)L(a,0)+\Res_{s=1} F(s)L(a,s)
++ \frac{1}{2\pi i} \int_{\Re(s)=-\frac{1}{2}} F(s)L(a,s) ds.
+\end{align*}
+
+
+Define
+\[
+G(s)=F(1-s) \frac{\gamma(s)}{\gamma(1-s)}.
+\]
+Using the functional equation for $L(a,s)$,
+\begin{align*}
+ \frac{1}{2\pi i} \int_{\Re(s)=-\frac{1}{2}} F(s)L(a,s) ds&=
+  \frac{1}{2\pi i} \int_{\Re(s)=-\frac{1}{2}} F(s)\frac{\gamma(1-s)}{\gamma(s)} L(a,1-s) ds\\
+ &=\frac{1}{2\pi i}  \int_{\Re(s)=\frac{3}{2}} F(1-s) \frac{\gamma(s)}{\gamma(1-s)}
+ L(a,s) ds\\
+ &=\frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} G(s) L(a,s) ds.
+\end{align*}
+
+Furthermore, define
+\[
+J(x) = \frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} \frac{1}{1-s} \frac{\gamma(s)}{\gamma(1-s)} x^{1-s} ds,
+\]
+which satisfies
+\[
+J'(x) = K(x).
+\]
+We have
+\begin{align*}
+\frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} x^{-s} G(s) ds&=\frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} x^{-s} F(1-s) \frac{\gamma(s)}{\gamma(1-s)} ds\\
+&=\frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} x^{-s} \left(-\frac{1}{1-s} \mathscr{M}(f')(2-s)\right) \frac{\gamma(s)}{\gamma(1-s)} ds\\
+&=\frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} x^{-s} 
+\left(-\frac{1}{1-s} \int_0^\infty y^{1-s} f'(y) dy\right)  \frac{\gamma(s)}{\gamma(1-s)}  ds\\
+&=-\frac{1}{x} \int_0^\infty f'(y)   \frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} \frac{1}{1-s}  \frac{\gamma(s)}{\gamma(1-s)}   (xy)^{1-s} ds\\
+&=-\frac{1}{x} \int_0^\infty f'(y) J(xy) dy\\
+&=-\frac{1}{x}f(y) J(xy) \bigg|_0^\infty + \frac{1}{x} \int_0^\infty f(y) J'(xy) x dy\\
+&=0+\int_0^\infty f(y) J'(xy) dy\\
+&=\int_0^\infty f(y) K(xy) dy\\
+&=g(x).
+\end{align*}
+Therefore,
+\begin{align*}
+\sum_{n=1}^\infty a(n) g(n)&=\sum_{n=1}^\infty a(n) \frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} n^{-s} G(s) ds\\
+&=\frac{1}{2\pi i} \int_{\Re (s)=\frac{3}{2}} G(s) \sum_{n=1}^\infty a(n) n^{-s} ds\\
+&=\frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} G(s) L(a,s) ds.
+\end{align*}
+Thus we have
+\[
+\sum_{n=1}^\infty a(n) f(n)=f(0)L(a,0)+\Res_{s=1} F(s)L(a,s)
++ \sum_{n=1}^\infty a(n) g(n)
+\]
+\end{proof}
+
+Take $a(n)=1$ for all $n$. Then,
+\[
+L(a,s)=\sum_{n=1}^\infty n^{-s} = \zeta(s).
+\]
+The Riemann zeta function satisfies the functional equation
+\[
+\pi^{-s/2} \Gamma\left( \frac{s}{2} \right) \zeta(s)
+=\pi^{-(1-s)/2} \Gamma\left( \frac{1-s}{2} \right) \zeta(1-s).
+\]
+So with
+\[
+\gamma(s) = \pi^{-s/2} \Gamma\left( \frac{s}{2} \right),
+\]
+we have
+\[
+\gamma(s) \zeta(s) = \gamma(1-s) \zeta(1-s).
+\]
+Using 
+\[
+\Gamma(1-z)\Gamma(z) = \frac{\pi}{\sin \pi z}
+\]
+and
+\[
+\Gamma(z)\Gamma\left(z+\frac{1}{2}\right) = 2^{1-2z} \sqrt{\pi} \Gamma(2z),
+\]
+we have
+\begin{align*}
+\Gamma\left(\frac{1-s}{2}\right)
+&=\Gamma\left(1-\frac{s+1}{2}\right)\\
+&=\frac{\pi}{\sin \frac{\pi(s+1)}{2} \Gamma\left(\frac{s+1}{2}\right)}\\
+&=\frac{\pi}{\sin \frac{\pi(s+1)}{2} \Gamma\left(\frac{s}{2}+\frac{1}{2}\right)}\\
+&=\frac{\pi \Gamma\left(\frac{s}{2}\right)}{\sin \frac{\pi(s+1)}{2} 2^{1-s}\sqrt{\pi} \Gamma(s)},
+\end{align*}
+and so
+\begin{align*}
+\frac{\pi^{-s/2} \Gamma\left( \frac{s}{2} \right)}{\pi^{-(1-s)/2} \Gamma\left( \frac{1-s}{2} \right)}&=
+\pi^{-s+\frac{1}{2}} \Gamma\left( \frac{s}{2} \right) \cdot \frac{\sin \frac{\pi(s+1)}{2} 2^{1-s}\sqrt{\pi} \Gamma(s)}{\pi \Gamma\left(\frac{s}{2}\right)}\\
+&=\sin \frac{\pi(s+1)}{2} \cdot 2 (2\pi)^{-s} \Gamma(s)\\
+&=\cos \frac{\pi s}{2} \cdot 2 (2\pi)^{-s} \Gamma(s).
+\end{align*}
+Therefore
+\[
+K(x) = \frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} \frac{\gamma(s)}{\gamma(1-s)} x^{-s} ds
+= \frac{1}{2\pi i} \int_{\Re(s)=\frac{3}{2}} \cos \frac{\pi s}{2} \cdot 2 (2\pi)^{-s} \Gamma(s) x^{-s} ds
+\]
+But, taking as known
+\[
+\int_0^\infty \cos(2\pi x) x^{s-1} dx = (2\pi)^{-s} \cos\frac{\pi s}{2} \Gamma(s),
+\]
+it follows that
+\[
+K(x) = 2 \cos 2\pi x.
+\]
+Thus Theorem \ref{generalized} tells us that for $f \in \mathscr{S}(\mathbb{R})$,
+\[
+\sum_{n=1}^\infty f(n) = f(0)\zeta(0) +\Res_{s=1} \mathscr{M}(f)(s) \zeta(s)
++ 2 \sum_{n=1}^\infty \int_0^\infty f(y) \cos(2\pi ny) dy,
+\]
+i.e.,
+\[
+\sum_{n=1}^\infty f(n) = -\frac{1}{2}f(0) + \int_0^\infty f(x) dx 
++ 2 \sum_{n=1}^\infty \int_0^\infty f(y) \cos(2\pi ny) dy.
+\]
+If $f:\mathbb{R} \to \mathbb{C}$ is even, this is the 
+ \textbf{Poisson summation formula}.
+
+
+Take $a(n)=d(n)$ for all $n$. Then,
+\[
+L(d,s) = \sum_{n=1}^\infty d(n) n^{-s} =  \zeta^2(s).
+\]
+For
+\[
+\gamma(s) = \pi^{-s} \Gamma\left( \frac{s}{2} \right)^2,
+\]
+it follows from the functional equation for the Riemann zeta function that
+$L(d,s)$ satisfies the functional equation
+\[
+\gamma(s) L(d,s) = \gamma(1-s)L(d,1-s).
+\]
+We worked out above that
+\[
+\frac{\pi^{-s/2} \Gamma\left( \frac{s}{2} \right)}{\pi^{-(1-s)/2} \Gamma\left( \frac{1-s}{2} \right)} = \cos \frac{\pi s}{2} \cdot 2 (2\pi)^{-s} \Gamma(s),
+\]
+whence
+\begin{align*}
+\frac{\gamma(s)}{\gamma(1-s)} &=  (2\pi)^{-2s} 4\cos^2 \frac{\pi s}{2}  \Gamma(s)^2\\
+&=(2\pi)^{-2s}(2+2\cos \pi s) \Gamma(s)^2.
+\end{align*}
+Taking as given two identities for Bessel functions
+\[
+\int_0^\infty x^{s-1} K_0(4\pi x^{1/2}) dx = \frac{1}{2}(2\pi)^{-2s} \Gamma(s)^2
+\]
+and
+\[
+\int_0^\infty x^{s-1} Y_0(4\pi x^{1/2}) dx = -\frac{1}{\pi} (2\pi)^{-2s} \cos \pi s \Gamma(s)^2,
+\]
+it follows that
+\[
+K(x) = 4K_0(4\pi x^{1/2}) - 2\pi Y_0(4\pi x^{1/2}).
+\]
+Thus Theorem \ref{generalized} tells us that for $f \in \mathscr{S}(\mathbb{R})$,
+\begin{align*}
+\sum_{n=1}^\infty d(n) f(n)&=f(0) \zeta^2(0) +
+\Res_{s=1}  \mathscr{M}(f)(s)\zeta^2(s)\\
+&+ \sum_{n=1}^\infty d(n) \int_0^\infty f(y) 
+\left( 4K_0(4\pi (ny)^{1/2}) - 2\pi Y_0(4\pi (ny)^{1/2}) \right) dy.
+\end{align*}
+Using
+\[
+\zeta^2(s) = \frac{1}{(s-1)^2}+\frac{2\gamma}{s-1}+O(1), \qquad s \to 1,
+\]
+and
+\[
+x^{s-1} = 1+ (s-1) \log x + O(|s-1|^2),
+\]
+we have 
+\[
+\Res_{s=1} \mathscr{M}(f)(s)\zeta^2(s)=2\gamma+\log x,
+\]
+and so
+\begin{align*}
+\sum_{n=1}^\infty d(n) f(n)&=\frac{1}{4} f(0) +
+\int_0^\infty f(x)(2\gamma+\log x) dx
+\\
+&+ \sum_{n=1}^\infty d(n) \int_0^\infty f(y) 
+\left( 4K_0(4\pi (ny)^{1/2}) - 2\pi Y_0(4\pi (ny)^{1/2}) \right) dy.
+\end{align*}
+
+
+
+\section{Bernoulli numbers}
+The \textbf{Bernoulli polynomials} are defined by
+\[
+\frac{te^{tx}}{e^t-1} = \sum_{m=0}^\infty B_m(x) \frac{t^m}{m!}.
+\]
+The \textbf{Bernoulli numbers} are defined by $B_m=B_m(0)$. 
+
+We denote by $[x]$ the greatest integer $\leq x$, and we define $\{x\}=x-[x]$, namely, the fractional part of $x$.
+We define $P_m(x)=B_m(\{x\})$, the \textbf{Bernoulli functions}.
+
+
+\section{Wigert}
+The following result is proved by Wigert \cite{wigert}. Our proof follows Titchmarsh \cite[p.~163, Theorem 7.15]{zeta}. Cf. Landau \cite{landau}.
+
+
+\begin{theorem}
+For $\lambda<\frac{1}{2}\pi$ and $N \geq 1$,
+\[
+\sum_{n=1}^\infty d(n) e^{-nz} = \frac{\gamma}{z}-\frac{\log z}{z}+\frac{1}{4}- \sum_{n=0}^{N-1} \frac{B_{2n+2}^2}{(2n+2)!(2n+2)} z^{2n+1}
++O(|z|^{2N})
+\]
+as $z \to 0$ in any angle $|\arg z| \leq \lambda$.
+\label{wigert}
+\end{theorem}
+\begin{proof}
+For $\sigma>1$, $s=\sigma+it$,
+\[
+\zeta^2(s) = \sum_{n=1}^\infty \frac{d(n)}{n^s}.
+\]
+Using this, for
+ $\Re z>0$ we have
+\begin{align}
+\frac{1}{2\pi i}\int_{2-i\infty}^{2+i\infty}
+\Gamma(s) \zeta^2(s) z^{-s} ds & = \sum_{n=1}^\infty d(n) \frac{1}{2\pi i} \int_{2-i\infty}^{2+i\infty}
+\Gamma(s) (nz)^{-s} ds
+\nonumber \\
+& = \sum_{n=1}^\infty d(n) e^{-nz}.
+\label{mellin}
+\end{align}
+
+Define $F(s) = \Gamma(s) \zeta^s(s) z^{-s}$. $F$ has poles at
+$1,0$, and the negative odd integers. (At each negative even integer, $\Gamma$ has a first order pole but $\zeta^2$ has a second order
+zero.) First we determine the residue of $F$ at $1$.
+We use the asymptotic formula
+\[
+\zeta(s) = \frac{1}{s-1}+\gamma+O(|s-1|), \qquad s \to 1,
+\]
+the asymptotic formula
+\[
+\Gamma(s)=1-\gamma(s-1)+O(|s-1|^2), \qquad s \to 1,
+\]
+and  the asymptotic formula
+\[
+z^{-s} = \frac{1}{z}-\frac{\log z}{z} (s-1)+O(|s-1|^2), \qquad  s \to 1,
+\]
+to obtain
+\begin{align*}
+ \Gamma(s) \zeta^s(s) z^{-s} &=(1-\gamma(s-1)+O(|s-1|^2)  )
+\cdot \left(\frac{1}{(s-1)^2}+\frac{2\gamma}{s-1}+O(|s-1|^2)\right)\\
+&\cdot \left( \frac{1}{z}-\frac{\log z}{z} (s-1)+O(|s-1|^2) \right)\\
+&=\frac{1}{z(s-1)^2}
+-\frac{\gamma}{z(s-1)}+\frac{2\gamma}{z(s-1)}-\frac{\log z}{z(s-1)}+O(1)\\
+&=\frac{1}{z(s-1)^2}+\frac{\gamma}{z(s-1)}-\frac{\log z}{z(s-1)}+O(1).
+\end{align*}
+Hence the residue of $F$ at $1$ is 
+\[
+\frac{\gamma}{z}-\frac{\log z}{z}.
+\]
+
+Now we determine the residue of $F$ at $0$. The residue of $\Gamma$ at $0$ is $1$, and 
+hence the residue of $F$ at $0$ is 
+\[
+1 \cdot \zeta^2(0) \cdot z^0 = \zeta^2(0) = \left( -\frac{1}{2} \right)^2 = \frac{1}{4}.
+\]
+
+Finally, for $n \geq 0$ we determine the residue of $F$ at $-(2n+1)$. The residue of $\Gamma$ at $-(2n+1)$ is
+$\frac{(-1)^{2n+1}}{(2n+1)!}$, hence the residue of $F$ at $-(2n+1)$ is
+\[
+\frac{(-1)^{2n+1}}{(2n+1)!} \cdot \zeta^2(2n+1) \cdot z^{2n+1} = 
+-\frac{B_{2n+2}^2}{(2n+2)!(2n+2)} z^{2n+1}
+\]  
+using 
+\[
+\zeta(-m) = -\frac{B_{m+1}}{m+1}, \qquad m \geq 1.
+\]
+
+
+Let $M>0$,
+and let $C$ be the rectangular path  starting at $2-iM$, then going to $2+iM$, then going to $-2N+iM$,  then going to $-2N-iM$, and then ending 
+at $2-iM$. 
+By the residue theorem,
+\begin{equation}
+\int_C F(s) ds = 2\pi i\left(\frac{\gamma}{z}-\frac{\log z}{z}+\frac{1}{4} + \sum_{n=0}^{N-1}  -\frac{B_{2n+2}^2}{(2n+2)!(2n+2)} z^{2n+1}
+\right).
+\label{residue}
+\end{equation}
+Denote the right-hand sideof \eqref{residue}  by $2\pi i R$.
+We have
+\[
+\int_C F(s) ds = 
+\int_{2-iM}^{2+iM} F(s) ds + \int_{2+iM}^{-2N+iM} F(s) ds
++ \int_{-2N+iM}^{-2N-iM} F(s) ds +
+\int_{-2N-iM}^{2-iM} F(s) ds.
+\]
+We shall show that the second and fourth integrals tend to $0$ as $M \to \infty$.
+For $s=\sigma+it$ with $-2N \leq \sigma \leq 2$, Stirling's formula \cite[p.~151]{functions}  tells us that
+\[
+|\Gamma(s)| \sim \sqrt{2\pi} e^{-\frac{\pi}{2} |t|} |t|^{\sigma-\frac{1}{2}}, \qquad |t| \to \infty.
+\]
+As well \cite[p.~95]{zeta},
+there is some $K>0$  such that in the half-plane $\sigma \geq -2N$,
+\[
+\zeta(s)=O(|t|^K).
+\]
+Also,
+\begin{align*}
+z^{-s} &= e^{-s \log z}\\
+& = e^{-(\sigma+it)(\log |z|+i\arg z)} \\
+&= e^{-\sigma \log|z| + t \arg z - i(\sigma \arg z+t \log|z|)},
+\end{align*}
+and so for $|\arg z| \leq \lambda$,
+\[
+|z^{-s}| = e^{-\sigma \log|z| + t \arg z}  \leq e^{-\sigma \log |z|+\lambda |t|} = |z|^{-\sigma} e^{\lambda |t|}.
+\]
+Therefore
+\[
+\left| \int_{2+iM}^{-2N+iM} F(s) ds \right| 
+\leq (2+2N) \sup_{-2N \leq \sigma \leq 2} |F(\sigma+iM)|
+=O(e^{-\frac{\pi}{2} M} M^{\sigma-\frac{1}{2}} M^{2K}  |z|^{-\sigma} e^{\lambda M}),
+\]
+and because $\lambda<\frac{\pi}{2}$ this tends to $0$ as $M \to \infty$.
+Likewise,
+\[
+\left|\int_{-2N-iM}^{2-iM} F(s) ds \right| \to 0
+\]
+as $M \to \infty$. It follows that
+\[
+\int_{2-i\infty}^{2+i\infty} F(s) ds +\int_{-2N+i\infty}^{-2N-i\infty} F(s) ds
+=2\pi i R.
+\]
+Hence,
+\[
+\int_{2-i\infty}^{2+i\infty} F(s) ds = 2\pi i R + \int_{-2N-i\infty}^{-2N+i\infty} F(s) ds.
+\]
+We bound the integral on the right-hand side. We have
+\[
+ \int_{-2N-i\infty}^{-2N+i\infty} F(s) ds = 
+  \int_{\sigma=-2N, |t| \leq 1} F(s) ds+
+    \int_{\sigma=-2N, |t| > 1} F(s)ds.
+\]
+The first integral satisfies
+\[
+\left|   \int_{\sigma=-2N, |t| \leq 1} F(s) ds \right|
+\leq  \int_{\sigma=-2N, |t| \leq 1} |\Gamma(s) \zeta^2(s)|  |z|^{-\sigma} e^{\lambda |t|}
+ds
+= |z|^{2N} \cdot O(1) = O(|z|^{2N}),
+\]
+because $\Gamma(s) \zeta^2(s)$ is continuous on the path of integration.
+The second integral satisfies
+\begin{align*}
+\left| \int_{\sigma=-2N, |t|>1} F(s) ds \right| &
+\leq
+ \int_{\sigma=-2N, |t|>1}
+e^{-\frac{\pi}{2} |t|} |t|^{\sigma-\frac{1}{2}} |t|^K |z|^{-\sigma} e^{\lambda |t|}  ds\\
+&=|z|^{2N}  \int_{\sigma=-2N, |t|>1} e^{-\frac{\pi}{2} |t|} |t|^{-2N-\frac{1}{2}} |t|^K  e^{\lambda |t|}  dt\\
+&=|z|^{2N} \cdot O(1)\\
+&=O(|z|^{2N}),
+\end{align*}
+because $\lambda<\frac{\pi}{2}$. This establishes
+\[
+\frac{1}{2\pi i} \int_{2-i\infty}^{2+i\infty} F(s) ds = R +O(|z|^{2N}).
+\]
+Using \eqref{mellin} and \eqref{residue}, this becomes
+\[
+\sum_{n=1}^\infty d(n) e^{-nz} = 
+\frac{\gamma}{z}-\frac{\log z}{z}+\frac{1}{4} - \sum_{n=0}^{N-1}  \frac{B_{2n+2}^2}{(2n+2)!(2n+2)} z^{2n+1}
++O(|z|^{-2N}),
+\]
+completing the proof.
+\end{proof}
+
+For example,
+as $B_2=\frac{1}{6},B_4=-\frac{1}{30},B_6=\frac{1}{42}$, the above theorem tells us that
+\[
+\sum_{n=1}^\infty d(n)e^{-nz} =  \frac{\gamma}{z}-\frac{\log z}{z}+\frac{1}{4}
+-\frac{z}{144}
+-\frac{z^3}{86400}
+-\frac{z^5}{7620480}+
+O(|z|^6).
+\]
+
+
+\section{Other works on the Voronoi summation formula}
+Voronoi's papers on the Voronoi summation formula are \cite{voronoi1903} and \cite{voronoiI} and \cite{voronoiII}. 
+
+Iwaniec and Kowalski \cite[Chaper 4]{iwaniec}
+
+Stein and Shakarchi \cite[p.~392, Theorem 8.11]{stein}.
+
+Ivic \cite[pp.~83ff., Chapter 3]{ivic} and \cite{laplace}
+
+Miller and Schmid \cite{miller}
+
+Hejhal \cite{hejhal}
+
+Flajolet, Gourdon and Dumas \cite{flajolet}
+
+Bettin and Conrey \cite{bettin}
+
+Chandrasekharan  and Narasimhan \cite{hecke}
+
+Chandrasekharan \cite[Chapter VIII]{chandra}
+
+
+\bibliographystyle{plain}
+\bibliography{voronoi}
+
+\end{document}

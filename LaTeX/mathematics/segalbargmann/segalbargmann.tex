@@ -1,0 +1,234 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\ev}{\ensuremath\mathrm{ev}} 
+\newcommand{\ca}{\ensuremath\mathrm{ca}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_{\mathrm{HS}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Segal-Bargmann transform and the Segal-Bargmann space}
+\author{Jordan Bell}
+\date{July 31, 2015}
+
+\maketitle
+
+\section{The Fourier transform}
+Let $dm_n(x) = (2\pi)^{-n/2} dx$. 
+For Borel measurable functions $f,g:\mathbb{R}^n \to \mathbb{C}$, when $y \mapsto f(x-y) g(y)$ is integrable we define
+\[
+(f*g)(x) = \int_{\mathbb{R}^n} f(x-y) g(y) dm_n(y).
+\]
+For $f \in L^1$,
+\[
+\hat{f}(\xi) = (\mathscr{F}f)(\xi) = \int_{\mathbb{R}^n} f(x) e^{-i\inner{\xi}{x}} dm_n(x),
+\qquad \xi \in \mathbb{R}^n.
+\]
+For $f,g \in L^1$, for almost all $x \in \mathbb{R}^n$, $y \mapsto f(x-y) g(y)$ is integrable,\footnote{Walter Rudin,
+{\em Real and Complex Analysis}, third ed., p.~170, Theorem 8.14.}
+and using Fubini's theorem one checks that
+\[
+\widehat{f*g}=\widehat{f} \widehat{g}.
+\]
+
+Let $\mathscr{S}$ be the Schwartz functions 
+$\mathbb{R}^n \to \mathbb{C}$. 
+For a multi-index $\alpha$ and $\phi \in \mathscr{S}$
+define $X^\alpha \phi:\mathbb{R}^n \to \mathbb{C}$ by
+\[
+(X^\alpha \phi)(x) = x^\alpha \phi(x).
+\]
+Define $\Delta \phi:\mathbb{R}^n \to \mathbb{C}$ by
+\[
+(\Delta \phi)(x) = \sum_{j=1}^n (\partial_j^2 \phi)(x).
+\]
+One proves that 
+\[
+\mathscr{F} D^\alpha = i^{|\alpha|} X^\alpha \mathscr{F},
+\qquad D^\alpha \mathscr{F} = (-i)^{|\alpha|} \mathscr{F} X^\alpha
+\]
+and
+\[
+\mathscr{F}(\Delta \phi)(\xi) = -|\xi|^2 (\mathscr{F}\phi)(\xi).
+\]
+Parseval's formula states that for $f,g \in L^2$,
+\[
+\inner{f}{g}_{L^2}=\int_{\mathbb{R}^n} f \overline{g} dm_n = \int_{\mathbb{R}^n} (\mathscr{F} f)\overline{(\mathscr{F}g)} dm_n=
+\inner{\mathscr{F}f}{\mathscr{F}g}_{L^2},
+\]
+thus
+\[
+\norm{f}_{L^2}^2 = \int_{\mathbb{R}^n} |f|^2 dm_n
+=\int_{\mathbb{R}^n} |\mathscr{F} f|^2 dm_n = \norm{\mathscr{F}f}_{L^2}^2.
+\]
+
+
+For $z \in \mathbb{C}^n$, using Cauchy's integral theorem we obtain
+\begin{equation}
+\int_{\mathbb{R}^n} F(x+iy) e^{-i\inner{\xi}{x}} dx=
+e^{-\inner{\xi}{y}} \int_{\mathbb{R}^n} F(x) e^{-i\inner{\xi}{x}} dx.
+\label{contours}
+\end{equation}
+
+
+\section{The heat kernel}
+For $t \geq 0$ and $f \in L^2$, define $H_t f:\mathbb{R}^n \to \mathbb{C}$ by
+\[
+(H_t f)(x)  = (2\pi)^{-n/2} \int_{\mathbb{R}^n} \widehat{f}(\xi) e^{-t |\xi|^2} e^{i\inner{\xi}{x}} dm_n(\xi).
+\]
+For $t \in \mathbb{R}_{>0}$ let
+\[
+h_t(x) = (4\pi t)^{-n/2} e^{-\frac{|x|^2}{4t}},\qquad x \in \mathbb{R}^n,
+\]
+and we calculate
+\[
+\partial_t h_t = (4\pi t)^{-n/2} e^{-\frac{|x|^2}{4t}} \left( -\frac{n}{2t}+\frac{|x|^2}{4t^2}\right)
+=\Delta h_t,
+\]
+which yields
+\[
+\partial_t ( f* h_t) = f*(\partial_t h_t) = f*(\Delta h_t)
+=\Delta (f*h_t).
+\]
+
+The Fourier transform of $h_t$ is\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/stationaryphase.pdf}, 
+Theorem 2.}
+\begin{align*}
+\widehat{h}_t(\xi)&= \int_{\mathbb{R}^n} (4\pi t)^{-n/2}
+e^{-\frac{|x|^2}{4t}} e^{-i\inner{\xi}{x}} dm_n(x)\\
+&=(4\pi t)^{-n/2} \cdot (2\pi)^{-n/2} (4\pi t)^{n/2} \exp(-t|\xi|^2)\\
+&=(2\pi)^{-n/2} \exp(-t|\xi|^2).
+\end{align*}
+Using $\widehat{h_t*f}= \widehat{p}_t \cdot \widehat{f}$ and the Fourier inversion theorem,
+\begin{align*}
+(h_t*f)(x)&= \int_{\mathbb{R}^n} \widehat{h_t*f}(\xi)e^{i\inner{\xi}{x}} dm_n(\xi)\\
+&=\int_{\mathbb{R}^n} \widehat{p}_t(\xi) \widehat{f}(\xi) e^{i\inner{\xi}{x}} dm_n(\xi)\\
+&=\int_{\mathbb{R}^n} (2\pi)^{-n/2} \exp(-t|\xi|^2) \widehat{f}(\xi) e^{i\inner{\xi}{x}} dm_n(\xi)\\
+&=(H_t f)(x).
+\end{align*}
+
+For $t>0$ and for $z \in \mathbb{C}^n$,
+\[
+(H_t f)(z) = (2\pi)^{-n/2} \int_{\mathbb{R}^n} \widehat{f}(\xi) e^{-t|\xi|^2} e^{i\inner{\xi}{z}} dm_n(\xi)
+\]
+and
+\[
+h_t(z) = (4\pi t)^{-n/2} \exp\left(-\frac{z_1^2+\cdots+z_n^2}{4t}\right).
+\]
+It is apparent that $h_t:\mathbb{C}^n \to \mathbb{C}$ is holomorphic. 
+By the dominated convergence theorem,
+\[
+\frac{d H_t f}{dz_j} (z) = (2\pi)^{-n/2} \int_{\mathbb{R}^n} \widehat{f}(\xi) e^{-t|\xi|^2} i\xi_j e^{i\inner{\xi}{z}} dm_n(\xi),
+\]
+and $H_t f:\mathbb{C}^n \to \mathbb{C}$ is holomorphic. 
+
+
+
+
+\section{The Segal-Bargmann transform and the Segal-Bargmann space}
+Let $\lambda_n$ be Lebesgue measure on $\mathbb{R}^n$,  
+for $t>0$
+let
+\[
+\omega_t(y) = t^{-n/2} e^{-\frac{|y|^2}{2t}},
+\]
+and
+let $\mu_t$ be the Borel measure on $\mathbb{C}^n=\mathbb{R}^n \times \mathbb{R}^n$ whose density with respect to $\lambda_n \times \lambda_n$ is
+$x+iy \mapsto \omega_t(y)$. 
+We define $\mathcal{H}_t(\mathbb{C}^n)$ to be the set of those holomorphic functions $F:\mathbb{C}^n \to \mathbb{C}$ satisfying
+\[
+\norm{F}_{\mathcal{H}_t}^2 = \int_{\mathbb{C}^n} |F|^2 d\mu_t<\infty,
+\]
+and for $G,H \in \mathcal{H}_t$ we define
+\[
+\inner{F}{G}_{\mathcal{H}_t} = \int_{\mathbb{C}^n} F \overline{G} d\mu_t
+=\int_{\mathbb{R}^n} \left( \int_{\mathbb{R}^n} F(x+iy) \overline{G(x+iy)} \omega_t(y) dy \right) dx.
+\]
+We call $\mathcal{H}_t$ the \textbf{Segal-Bargmann space}. It can be proved that it is a Hilbert space.
+
+
+For $y \in \mathbb{R}^n$ write $g(x)=(H_t f)(x+iy)$, and  
+ applying Parseval's formula and
+\eqref{contours} yields
+\begin{align*}
+\int_{\mathbb{R}^n} |(H_t f)(x+iy)|^2 dm_n(x)&= \int_{\mathbb{R}^n} |g(x)|^2 dm_n(x)\\
+&=\int_{\mathbb{R}^n} |\widehat{g}(\xi)|^2 dm_n(\xi)\\
+&=\int_{\mathbb{R}^n} |e^{-\inner{\xi}{y}} \widehat{H_t f}(\xi)|^2 dm_n(\xi).
+\end{align*}
+Using this with $\widehat{H_t f} = \widehat{h}_t \widehat{f}$ and then using Fubini's
+theorem and an identity for Gaussian integrals\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/stationaryphase.pdf},
+Theorem 3.} we get
+\begin{align*}
+\norm{H_t f}_{\mathcal{H}_t}^2&=\int_{\mathbb{R}^n} \left( \int_{\mathbb{R}^n}
+ |(H_t f)(x+iy)|^2 \omega_t dy \right) dx\\
+ &=(2\pi)^n \int_{\mathbb{R}^n} \left( \int_{\mathbb{R}^n} |(H_t f)(x+iy)|^2 dm_n(x) \right) \omega_t(y)
+ dm_n(y)\\
+ &=(2\pi)^n \int_{\mathbb{R}^n} \left( \int_{\mathbb{R}^n}
+ e^{-2\inner{\xi}{y}} |\widehat{H_t f}(\xi)|^2 dm_n(\xi)\right) \omega_t(y) dm_n(y)\\
+ &=(2\pi)^n \int_{\mathbb{R}^n} \left( \int_{\mathbb{R}^n} e^{-2\inner{\xi}{y}} (2\pi)^{-n} \exp(-2t|\xi|^2)
+ |\widehat{f}(\xi)|^2 dm_n(\xi)\right) \omega_t(y) dm_n(y)\\
+ &=\int_{\mathbb{R}^n}   |\widehat{f}(\xi)|^2 \exp(-2t|\xi|^2)  \left(t^{-n/2} \int_{\mathbb{R}^n} 
+ e^{-2\inner{\xi}{y}}  e^{-\frac{|y|^2}{2t}}dm_n(y) \right)dm_n(x)\\
+ &=\int_{\mathbb{R}^n}   |\widehat{f}(\xi)|^2 \exp(-2t|\xi|^2) \cdot  \exp(2t|\xi|^2) dm_n(x)\\
+ &=\norm{\mathscr{F}f}_{L^2}^2\\
+ &=\norm{f}_{L^2}^2.
+\end{align*}
+Therefore $H_t:L^2(\mathbb{R}^n) \to \mathcal{H}_t(\mathbb{C}^n)$ is a linear
+isometry. 
+We call $H_t$ the \textbf{Segal-Bargmann transform}. It can be proved that $H_t$ is a Hilbert space isomorphism.\footnote{cf.
+\url{https://www.math.lsu.edu/~olafsson/pdf_files/ht.pdf}}
+
+
+For $F \in \mathcal{H}_t$ and $z \in \mathbb{C}^n$, write
+\[
+\ev_z(F) = F(z)
+\]
+and 
+\[
+(T_w F)(z)=F(z-w).
+\]
+For $f \in L^2(\mathbb{R}^n)$ and $t>0$ let $F=H_t f \in \mathcal{H}_t(\mathbb{C}^n)$, and for $w \in \mathbb{C}^n$,
+using 
+\[
+\overline{h_t(w-x)} = \overline{h_t(x-w)} =  h_t(x-\overline{w}) = (T_{\overline{w}}h_t)(x),
+\]
+we get
+\begin{align*}
+\ev_w(F)&=(f*h_t)(w)\\
+&=\int_{\mathbb{R}^n} f(x) \overline{(T_{\overline{w}}h_t)(x)} dm_n(x)\\
+&=\inner{f}{T_{\overline{w}}h_t}_{L^2}\\
+&=\inner{H_t f}{H_t T_{\overline{w}}h_t}_{L^2}\\
+&=\inner{F}{H_t T_{\overline{w}}h_t}_{L^2}.
+\end{align*}
+Then $(w,z) \mapsto (H_t T_{\overline{w}}h_t)(z)$ is a \textbf{reproducing kernel} for the Hilbert space
+$\mathcal{H}_t$. 
+
+
+
+
+
+
+\end{document}

@@ -1,0 +1,458 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}\,} 
+\newcommand{\osc}{\ensuremath\mathrm{osc}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\cco}{\ensuremath\overline{\mathrm{co}}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\ba}{\ensuremath\mathrm{ba}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\Cyl}{\ensuremath\mathrm{Cyl}\,}
+\newcommand{\extreals}{\overline{\mathbb{R}}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Hausdorff measure}
+\author{Jordan Bell}
+\date{October 29, 2014}
+
+\maketitle
+
+\section{Outer measures and metric outer measures}
+Suppose that $X$ is a set. A function $\nu:\mathscr{P}(X) \to [0,\infty]$ is said to be an \textbf{outer measure} if (i) $\nu(\emptyset)=0$, 
+(ii) $\nu(A) \leq \nu(B)$ when
+$A \subset B$, and, (iii) for any countable collection $\{A_j\} \subset \mathscr{P}(X)$,
+\[
+\nu\left(\bigcup_{j=1}^\infty A_j \right) \leq \sum_{j=1}^\infty \nu(A_j).
+\]
+We say that a subset $A$ of $X$ is \textbf{$\nu$-measurable} if 
+\begin{equation}
+\nu(E) = \nu(E \cap A)+ \nu(E \cap A^c), \qquad E \in \mathscr{P}(X).
+\label{numeasurable}
+\end{equation}
+Here, instead of taking a $\sigma$-algebra as given and then defining a measure on this $\sigma$-algebra (namely, on the measurable sets), we take an outer
+measure as given and then define measurable sets using this outer measure. \textbf{Carath\'eodory's theorem}\footnote{Gerald
+B. Folland, {\em Real Analysis}, second ed., p.~29, Theorem 1.11.} states that the collection $\mathscr{M}$ of $\nu$-measurable sets is a
+$\sigma$-algebra and that the restriction of $\nu$ to $\mathscr{M}$ is a complete measure. 
+
+Suppose that $(X,\rho)$ is a metric space.  An outer measure $\nu$ on $X$ is said to be a \textbf{metric outer measure} if
+\[
+\rho(A,B)=\inf\{\rho(a,b):a \in A, b \in B\}>0
+\]
+ implies that 
+\[
+\nu(A \cup B) = \nu(A) + \nu(B).
+\]
+We prove
+that the Borel sets are $\nu$-measurable.\footnote{Gerald B. Folland, {\em Real Analysis}, second ed., p.~349, Proposition 11.16.}
+That is, we prove that the Borel $\sigma$-algebra is contained in the $\sigma$-algebra of $\nu$-measurable
+sets.
+
+\begin{theorem}
+If $\nu$ is a metric outer measure on a metric space $(X,\rho)$, then every Borel set is $\nu$-measurable.
+\label{sigmaalgebra}
+\end{theorem}
+\begin{proof}
+Because $\nu$ is an outer measure, by Carath\'eodory's theorem the collection $\mathscr{M}$ of $\nu$-measurable sets is a $\sigma$-algebra, and hence
+to prove that $\mathscr{M}$ contains the Borel $\sigma$-algebra it suffices to prove that $\mathscr{M}$
+contains all the closed sets.
+Let $F$ be a closed set in $X$, and let $E$ be a subset of $X$. Because $\nu$ is an outer measure, 
+\[
+\nu(E) = \nu((E \cap F) \cup (E \cap F^c)) \leq \nu(E \cap F) + \nu(E \cap F^c).
+\]
+In the case $\nu(E) = \infty$, certainly $\nu(E) \geq  \nu(E \cap F) + \nu(E \cap F^c)$. In the case $\nu(E) < \infty$, 
+for each $n$ let 
+\[
+E_n = \{x \in E \setminus F : \rho(x,F) \geq n^{-1} \},
+\]
+which satisfies
+$\rho(E_n,F) \geq n^{-1}$.
+Because $\rho(E_n,E \cap F) \geq \rho(E_n,F) \geq n^{-1}$, the fact that $\nu$ is a metric outer measure tells us that
+\begin{equation}
+\nu((E \cap F) \cup E_n) = \nu(E\cap F) + \nu(E_n).
+\label{outermeasureinequality}
+\end{equation}
+Because $F$ is closed, for any $x \in E \setminus F$ we have $\rho(x,F)>0$, and hence
+\begin{equation}
+E \setminus F = \bigcup_{n=1}^\infty E_n.
+\label{union}
+\end{equation}
+Therefore
+\[
+E = (E \cap F) \cup (E \cap F^c) = (E \cap F) \cup  \bigcup_{n=1}^\infty E_n = \bigcup_{n=1}^\infty ((E \cap F) \cup E_n),
+\]
+hence for each $n$, using this and \eqref{outermeasureinequality} we have
+\[
+\nu(E) \geq \nu((E \cap F) \cup E_n)  =   \nu(E\cap F) + \nu(E_n).
+\]
+To prove that $\nu(E) \geq \nu(E \cap F) + \nu(E \cap F^c)$, it now suffices to prove that
+\[
+\lim_{n \to \infty} \nu(E_n) = \nu(E \cap F^c).
+\] 
+
+Let $D_n = E_{n+1} \setminus E_n$. For $x \in D_{n+1}$ and  $y \in X$ satisfying $\rho(x,y) < ((n+1)n)^{-1}$, we have
+\[
+\rho(y,F) \leq \rho(x,y) + \rho(x,F) < \frac{1}{n(n+1)} + \frac{1}{n+1} = \frac{1}{n},
+\]
+which implies that $y \not \in E_n$. Thus,
+\begin{equation}
+\rho(D_{n+1},E_n) \geq \frac{1}{n(n+1)}.
+\label{DEdistance}
+\end{equation}
+For any $n$, using \eqref{DEdistance} and the fact that $\nu$ is a metric outer measure,
+\begin{eqnarray*}
+\nu(E_{2n+1})&=&\nu(D_{2n} \cup E_{2n})\\
+&\geq&\nu(D_{2n} \cup E_{2n-1})\\
+&=&\nu(D_{2n})+\nu(E_{2n-1})\\
+&\geq&\cdots\\
+&=&\nu(D_{2n})+\nu(D_{2n-2})+\cdots+\nu(D_2)+\nu(E_1)\\
+&\geq&\sum_{j=1}^n \nu(D_{2j}),
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+\nu(E_{2n})&=&\nu(D_{2n-1} \cup E_{2n-1})\\
+&\geq&\nu(D_{2n-1} \cup E_{2n-2})\\
+&=&\nu(D_{2n-1})+\nu(E_{2n-2})\\
+&\geq&\cdots\\
+&=&\nu(D_{2n-1})+\nu(D_{2n-3})+\cdots+\nu(D_3)+\nu(D_1)+\nu(E_0)\\
+&=&\sum_{j=1}^n \nu(D_{2j-1}).
+\end{eqnarray*}
+But $E_n \subset E$ so $\nu(E_n) \leq \nu(E)$, and hence each of the series 
+$\sum_{j=1}^\infty \nu(D_{2j})$ and $\sum_{j=1}^\infty \nu(D_{2j-1})$ converges to
+a value $\leq \nu(E)$. Thus the series $\sum_{j=1}^\infty \nu(D_j)$ converges to a value $\leq 2\nu(E)$.
+But for any $n$, 
+\[
+\nu(E \setminus F) = \nu\left( E_n \cup \bigcup_{j=n}^\infty D_j \right)
+\leq \nu(E_n) + \sum_{j=n}^\infty \nu(D_j).
+\]
+Because the series $\sum_{j=1}^\infty \nu(D_j)$ converges, the sum on the right-hand side of the above
+tends to $0$ as $n \to \infty$, so
+\[
+\nu(E \setminus F) \leq \liminf_{n \to \infty} \nu(E_n) \leq \limsup_{n \to \infty} \nu(E_n) \leq  \nu(E \setminus F);
+\]
+the last inequality is due to \eqref{union}, which tells us $\nu(E_n) \leq \nu(E \setminus F)$.
+Therefore, 
+\[
+\lim_{n \to \infty} \nu(E_n) = \nu(E \setminus F) = \nu(E \cap F^c),
+\]
+which completes the proof.
+\end{proof}
+
+
+We shall use the following.\footnote{Gerald B. Folland, {\em Real Analysis}, second ed., p.~29, Proposition 1.10.}
+
+\begin{lemma}
+Let $(X,\rho)$ be a metric space.
+Suppose that $\mathscr{E} \subset \mathscr{P}(X)$ satisfies $\emptyset, X \in \mathscr{E}$ and that
+$d:\mathscr{E} \to [0,\infty]$ satisfies $d(\emptyset)=0$. Then the function $\nu:\mathscr{P}(X) \to [0,\infty]$ defined by
+\[
+\nu(A) = \inf\left\{\sum_{j=1}^\infty d(E_j): E_j \in \mathscr{E} \textrm{ and } A \subset \bigcup_{j=1}^\infty E_j \right\},
+\qquad A \in \mathscr{P}(X)
+\]
+is an outer measure.
+\label{outermeasure}
+\end{lemma}
+
+We remark that if there is no covering of a set $A$ by countably many elements of $\mathscr{E}$ then $\nu(A)$ is an infinimum of an empty
+set and is thus equal to $\infty$.
+
+ 
+
+
+
+
+
+\section{Hausdorff measure}
+Suppose that $(X,\rho)$ is a metric space and let $p \geq 0$, $\delta>0$.
+Let $\mathscr{E}$ be the collection of those subsets of $X$ with diameter $\leq \delta$ together with the set $X$,
+and define $d(A)=(\diam A)^p$. By Lemma \ref{outermeasure}, the function $H_{p,\delta}:\mathscr{P}(X) \to [0,\infty]$ defined by
+\[
+H_{p,\delta}(A) = \inf\left\{ \sum_{j=1}^\infty d(E_j): \textrm{$E_j \in \mathscr{E}$ and $A \subset \bigcup_{j=1}^\infty E_j$} \right\},
+\qquad A \in \mathscr{P}(X)
+\]
+is an outer measure.
+If $\delta_1 \leq \delta_2$ then $H_{p,\delta_1}(A) \geq H_{p,\delta_2}(A)$, from which it follows that  for each $A \in \mathscr{P}(X)$,
+as $\delta$ tends to $0$,
+$H_{p,\delta}(A)$ tends to some element of  $[0,\infty]$. We define $H_p=\lim_{\delta \to 0} H_{p,\delta}$ and show that this is a metric
+outer measure.\footnote{Gerald B. Folland, {\em Real Analysis}, second ed., p.~350, Proposition 11.17.}
+
+\begin{theorem}
+Suppose that $(X,\rho)$ is a metric space and let $p \geq 0$. Then $H_p:\mathscr{P}(X) \to [0,\infty]$
+defined by
+\[
+H_p(A) = \lim_{\delta \to 0} H_{p,\delta}(A), \qquad A \in \mathscr{P}(X).
+\]
+ is a metric outer measure.
+\end{theorem}
+\begin{proof}
+First we establish that $H_p$ is an outer measure. It is apparent that $H_p(\emptyset)=0$. If $A \subset B$, then, using that $H_{p,\delta}$ is a metric outer measure,
+\[
+H_p(A)=\lim_{\delta \to 0} H_{p,\delta}(A)
+\leq \lim_{\delta \to 0} H_{p,\delta}(B)=H_p(B).
+\]
+If $\{A_j\} \subset \mathscr{P}(X)$ is countable then, using that $H_{p,\delta}$ is a metric outer measure,
+\begin{align*}
+H_p\left(\bigcup_{j=1}^\infty A_j \right) &= 
+\lim_{\delta \to 0} H_{p,\delta} \left(\bigcup_{j=1}^\infty A_j \right) \\
+&\leq \lim_{\delta \to 0} \sum_{j=1}^\infty H_{p,\delta}(A_j)\\
+&=\sum_{j=1}^\infty \lim_{\delta \to 0} H_{p,\delta}(A_j)\\
+&=\sum_{j=1}^\infty H_p(A_j).
+\end{align*}
+Hence $H_p$ is an outer measure.
+
+To obtain that $H_p$ is a metric outer measure, we must 
+show that if   $\rho(A,B)>0$ then $H_p(A \cup B) \geq H_p(A) + H_p(B)$. 
+Let $0<\delta<\rho(A,B)$ and let $\mathscr{E}$ be the collection of those subsets of $X$ with diameter $\leq \delta$ together with the set $X$.
+If there is no covering of $A \cup B$ by countably many elements of $\mathscr{E}$, then  
+$H_p(A \cup B) \geq H_{p,\delta}(A \cup B) =\infty$. Otherwise, let $\{E_j\} \subset \mathscr{E}$ be a covering of $A \cup B$.
+For each $j$, because $\diam E_j \leq \delta < \rho(A,B)$, it follows that $E_j$ does not intersect both $A$ and $B$.
+Write
+\[
+\mathscr{E} = \{E_{a_j}\} \cup \{E_{b_j}\},
+\]
+where $E_{a_j} \cap B = \emptyset$ and $E_{b_j} \cap A = \emptyset$. Then $A \subset \bigcup E_{a_j}$ and 
+$B \subset \bigcup E_{b_j}$, so
+\[
+\sum_{j=1}^\infty (\diam E_j)^p
+= \sum_{j=1}^\infty (\diam E_{a_j})^p + \sum_{j=1}^\infty (\diam E_{j_b})^p
+\geq H_{p,\delta}(A)+H_{p,\delta}(B).
+\]
+This is true for any covering of $A \cup B$ by countably many element of $\mathscr{E}$, so
+\[
+H_{p,\delta}(A \cup B) \geq H_{p,\delta}(A) + H_{p,\delta}(B).
+\]
+The above inequality is true for any $0<\delta<\rho(A,B)$, and taking $\delta \to 0$ yields
+\[
+H_p(A \cup B) \geq H_p(A) + H_p(B),
+\]
+completing the proof.
+\end{proof}
+
+We call the metric outer measure $H_p:\mathscr{P}(X) \to [0,\infty]$ in the above theorem the \textbf{$p$-dimensional Hausdorff outer measure}.
+From Theorem \ref{sigmaalgebra} it follows that the restriction of $H_p$ to the Borel $\sigma$-algebra $\mathscr{B}_X$ of a metric space is a meausure. We call
+this restriction the \textbf{$p$-dimensional Hausdorff measure}, and denote it also by $H_p$. 
+
+It is straightforward to verify that 
+if $T:X \to X$ is an isometric isomorphism then $H_p \circ T=H_p$. 
+In particular, for $X=\mathbb{R}^n$, $H_p$ is invariant under translations. 
+
+We will use the following inequality when talking about Hausdorff measure on $\mathbb{R}^n$.\footnote{Gerald B. Folland, {\em Real Analysis}, second ed., p.~350,
+Proposition 11.18.}
+
+\begin{lemma}
+Let $Y$ be a set and $(X,\rho)$ be a metric space. If $f,g:Y \to X$ satisfy
+\[
+\rho(f(y),f(z)) \leq C \rho(g(y),g(z)), \qquad y,z \in Y,
+\]
+then for any $A \in \mathscr{P}(Y)$,
+\[
+H_p(f(A)) \leq C^p H_p(g(A)).
+\]
+\label{dilation}
+\end{lemma}
+\begin{proof}
+Take $\delta>0$ and $\epsilon>0$. There are countably many sets $E_j$ that cover $g(A)$ each with diameter $\leq C^{-1}\delta$ and such that
+\[
+\sum (\diam E_j)^p \leq H_p(g(A))+\epsilon.
+\]
+Let $a \in A$. There is some $j$ with $g(a) \in E_j$, so $a \in g^{-1}(E_j)$ and then $f(a) \in f(g^{-1}(E_j))$. Therefore
+the sets $f(g^{-1}(E_j))$ cover $f(A)$. For $u,v \in f(g^{-1}(E_j))$, there are $y,z \in g^{-1}(E_j)$ with
+$u=f(y), v=f(z)$. Because $g(y),g(z) \in E_j$,
+\[
+\rho(u,v) = \rho(f(y),f(z)) \leq C \rho(g(y),g(z)) \leq C \diam E_j,
+\]
+hence
+\[
+\diam f(g^{-1}(E_j)) \leq C \diam E_j.
+\]
+Since the sets $f(g^{-1}(E_j))$ cover $f(A)$ and each has diameter $\leq C \diam E_j \leq \delta$, 
+\[
+H_{p,\delta}(f(A)) \leq \sum (\diam f(g^{-1}(E_j)))^p
+\leq \sum C^p (\diam E_j)^p
+\leq C^p (H_p(g(A))+\epsilon).
+\]
+This is true for all $\delta>0$, so taking $\delta \to 0$,
+\[
+H_p(f(A)) \leq C^p(H_p(g(A))+\epsilon).
+\]
+This is true for all $\epsilon>0$, so taking $\epsilon \to 0$,
+\[
+H_p(f(A)) \leq C^p H_p(g(A)).
+\]
+\end{proof}
+
+
+\section{Hausdorff dimension}
+\begin{theorem}
+If $H_p(A)<\infty$ then $H_q(A)=0$ for all $q>p$.
+\end{theorem}
+\begin{proof}
+Let $\delta>0$. Then
+$H_{p,\delta}(A) \leq H_p(A)<\infty$
+Let $\{E_j\}$ be countably many sets each with diameter $\leq \delta$ such that
+$A \subset \bigcup E_j$ and
+\[
+\sum (\diam E_j)^p \leq H_{p,\delta}(A)+1 \leq H_p(A)+1.
+\]
+This gives us
+\begin{align*}
+H_{q.\delta}(A) \leq \sum (\diam E_j)^q &= \sum (\diam E_j)^{q-p} (\diam E_j)^p\\
+&\leq \delta^{q-p} \sum (\diam E_j)^p\\
+&\leq \delta^{q-p} (H_p(A)+1).
+\end{align*}
+This is true for any $\delta>0$ and $q-p>0$, so taking $\delta \to 0$ we obtain $H_q(A)=0$.
+\end{proof}
+
+For $A \in \mathscr{P}(X)$, we define the \textbf{Hausdorff dimension of $A$} to be 
+\[
+\inf\{q \geq 0: H_q(A) = 0\}.
+\]
+If the set whose infimum we are taking is empty, then the Hausdorff dimension of $A$ is $\infty$.
+
+
+
+\section{Radon measures and Haar measures}
+Before speaking about Hausdorff measure on $\mathbb{R}^n$, we remind ourselves of some material about Radon measures
+and  Haar measures.
+Let $X$ be a locally compact Hausdorff space. A Borel measure $\mu$ on $X$ is said to be a \textbf{Radon measure} if (i) it is finite
+on each compact set, (ii) for any Borel set $E$,
+\[
+\mu(E) = \inf\{\mu(U): \textrm{$U$ open and $E \subset U$}\},
+\]
+and (iii) for any open set $E$,
+\[
+\mu(E) = \sup\{\mu(K): \textrm{$K$ compact and $K \subset E$}\}.
+\]
+It is a fact that if $X$ is a locally compact Hausdorff space in which every open set is $\sigma$-compact, then every Borel measure on $X$ that
+is finite on compact sets
+is a Radon measure.\footnote{Gerald B. Folland, {\em Real Analysis}, second ed., p.~217, Theorem 7.8.}
+
+Suppose that $G$ is a locally compact group.
+A Borel measure $\mu$ on $G$ is said to be \textbf{left-invariant} if for all $x \in G$ and $E \in \mathscr{B}_G$,
+\[
+\mu(xE)=\mu(E).
+\]
+A \textbf{left Haar measure on $G$} is a nonzero left-invariant Radon measure on $G$. 
+It is a fact that if $\mu$ and $\nu$ are left Haar measures on $G$ then there is some $c>0$ such that 
+$\mu=c\nu$.\footnote{Gerald B. Folland, {\em Real Analysis}, second ed., p.~344, Theorem 11.9.} 
+
+\section{Hausdorff measure in \textbf{R}\textsuperscript{n}}
+Let $m_n$ denote Lebesgue measure on $\mathbb{R}^n$. 
+
+\begin{lemma}
+If $E$ is a Borel set in $\mathbb{R}^n$, then
+\[
+H_n(E) \geq 2^n m_n(E).
+\]
+\label{Hnmn}
+\end{lemma}
+\begin{proof}
+Let $\epsilon>0$ and let $\{E_j\}$ be countably many closed sets 
+that cover $E$ and such that
+\[
+\sum (\diam E_j)^n \leq H_n(E)+\epsilon.
+\]
+The \textbf{isodiametric inequality} (which one proves using the Brunn-Minkowski inequality)
+states that if $A$ is a Borel set in $\mathbb{R}^n$, then
+\[
+m_n(A) \leq \left( \frac{\diam A}{2} \right)^n.
+\]
+Using this gives
+\[
+\sum 2^n m_n(E_j) \leq H_n(E)+\epsilon.
+\]
+But
+because the sets $E_j$ cover $E$ we have
+$m_n(E) \leq m_n(\bigcup E_j) \leq \sum m_n(E_j)$, so we get
+\[
+m_n(E) \leq \frac{H_n(E)+\epsilon}{2^n}.
+\]
+This expression does not involve the sets $E_j$ (which depend on $\epsilon$), and since this expression is true for any
+$\epsilon>0$, taking $\epsilon \to 0$ yields
+\[
+m_n(E) \leq \frac{H_n(E)}{2^n}.
+\]
+\end{proof}
+
+
+Let
+\[
+Q=\left\{x \in \mathbb{R}^n: |x_1| \leq \frac{1}{2}, \ldots, |x_n| \leq \frac{1}{2}\right\}.
+\]
+
+\begin{lemma}
+$0<H_n(Q)<\infty$.
+\label{finitemeasure}
+\end{lemma}
+\begin{proof}
+For any $m \geq 1$, the cube $Q$ can be covered by $m^n$ cubes $q_1,\ldots,q_{m^n}$ of side length $\frac{1}{m}$. 
+Let $0<\delta<1$ and let $m>\frac{1}{\delta}$. 
+The distance from the center of $q_j$ to one of the vertices of $q_j$ is 
+\[
+r = \sqrt{\left(\frac{1}{2m}\right)^2+\cdots+\left(\frac{1}{2m}\right)^2}
+=\frac{\sqrt{n}}{2m}.
+\]
+Inscribe $q_j$ in a closed ball $b_j$ with the same center as $q_j$ and radius $r$. 
+These balls cover $Q$. Hence
+\[
+H_{p,\delta}(Q) \leq 
+\sum_{j=1}^{m^n} (\diam b_j)^n
+=\sum_{j=1}^{m^n} (2r)^n
+=(2r)^n \cdot m^n
+=n^{n/2}.
+\]
+Taking $\delta \to 0$ gives $H_p(Q) \leq n^{n/2} < \infty$.
+
+On the other hand, by Lemma \ref{Hnmn},
+\[
+H_n(Q) \geq 2^n m_n(Q) = 2^n>0.
+\]
+\end{proof}
+
+\begin{theorem}
+There is some constant $c_n>0$ such that 
+\[
+H_n = c_n m_n.
+\]
+\end{theorem}
+\begin{proof}
+$\mathbb{R}^n$ is a locally compact Hausdorff space in which
+every open set in $\mathbb{R}^n$ is $\sigma$-compact. Therefore, to show that $H_n$ is a Radon measure it suffices to show that
+$H_n$ is finite on every compact set.
+If $K$ is a compact subset of $\mathbb{R}^n$, there is some $r>0$ such that $K \subset rQ$. By
+Lemma \ref{dilation} and Lemma \ref{finitemeasure} we get
+$H_n(rQ)<\infty$, so $H_n(K)<\infty$. Therefore $H_n$ is a Radon measure.
+
+Because $H_n(Q)>0$, $H_n$ is not the zero measure. 
+Any translation is an isometric isomorphism $\mathbb{R}^n \to \mathbb{R}^n$, so $H_n$ is invariant under translations.
+Thus $H_n$ is a  left Haar measure on $\mathbb{R}^n$. But Lebesgue measure $m_n$ is also a left Haar measure on $\mathbb{R}^n$,
+so there is some $c_n>0$ such that
+\[
+H_n = c_n m_n,
+\]
+proving the claim.
+\end{proof}
+
+
+
+\end{document}

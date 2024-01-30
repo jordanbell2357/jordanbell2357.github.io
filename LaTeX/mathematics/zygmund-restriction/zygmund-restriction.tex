@@ -1,0 +1,351 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Zygmund's Fourier restriction theorem and Bernstein's inequality}
+\author{Jordan Bell}
+\date{February 13, 2015}
+
+\maketitle
+
+\section{Zygmund's restriction theorem}
+Write $\mathbb{T}^d = \mathbb{R}^d / \mathbb{Z}^d$.
+Write $\lambda_d$ for  the Haar measure on $\mathbb{T}^d$ for which $\lambda_d(\mathbb{T}^d)=1$. 
+For $\xi \in \mathbb{Z}^d$, we define $e_\xi:\mathbb{T}^d \to S^1$ by
+\[
+e_\xi(x) = e^{2\pi i\xi\cdot x}, \qquad x \in \mathbb{T}^d.
+\]
+For
+$f \in L^1(\mathbb{T}^d)$, we define its \textbf{Fourier transform} $\hat{f}:\mathbb{Z}^d \to \mathbb{C}$
+by
+\[
+\hat{f}(\xi) =\int_{\mathbb{T}^d} f \overline{e_\xi} d\lambda_d=  \int_{\mathbb{T}^d} f(x) e^{-2\pi i\xi\cdot x} dx, \qquad \xi\in\mathbb{Z}^d.
+\]
+For $x \in \mathbb{R}^d$, we write $|x|=|x|_2=\sqrt{x_1^2+\cdots+x_d^2}$,
+$|x|_1 = |x_1|+\cdots+|x_d|$, and
+$|x|_\infty=\max \{|x_j|: 1 \leq j \leq d\}$.
+
+
+
+For $1 \leq p < \infty$, we write
+\[
+\norm{f}_p  = \left( \int_{\mathbb{T}^d} |f(x)|^p dx \right)^{1/p}.
+\]
+For $1 \leq p \leq q \leq \infty$, $\norm{f}_p \leq \norm{f}_q$.
+
+Parseval's identity tells us that for $f \in L^2(\mathbb{T}^d)$,
+\[
+\norm{\hat{f}}_{\ell^2} = \left( \sum_{\xi \in \mathbb{Z}^d} |\hat{f}(\xi)|^2 \right)^{1/2} = \norm{f}_2,
+\]
+and the Hausdorff-Young inequality tells us that for $1 \leq p \leq 2$ and $f \in L^p(\mathbb{T}^d)$, 
+\[
+\norm{\hat{f}}_{\ell^q} = \left( \sum_{\xi \in \mathbb{Z}^d} |\hat{f}(\xi)|^q \right)^{1/q} \leq 
+\norm{f}_p,
+\]
+where $\frac{1}{p}+\frac{1}{q}=1$; $\norm{\hat{f}}_{\ell^\infty}=\sup_{\xi \in \mathbb{Z}^d} |\hat{f}(\xi)|$.
+
+
+\textbf{Zygmund's theorem} is the following.\footnote{Mark A. Pinsky, {\em Introduction to Fourier Analysis and Wavelets}, p.~236, Theorem 4.3.11.}
+
+\begin{theorem}[Zygmund's theorem]
+For $f \in L^{4/3}(\mathbb{T}^2)$ and $r>0$,
+\begin{equation}
+\left( \sum_{|\xi|=r} |\hat{f}(\xi)|^2 \right)^{1/2} \leq 5^{1/4} \norm{f}_{4/3}.
+\label{zygmund}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Suppose that 
+\[
+S=\left( \sum_{|\xi|=r} |\hat{f}(\xi)|^2 \right)^{1/2} > 0.
+\]
+For $\xi \in \mathbb{Z}^2$, we define 
+\[
+c_\xi = \frac{\overline{\hat{f}(\xi)}}{S} \chi_{|\zeta|=r}.
+\]
+Then
+\begin{equation}
+\sum_{|\xi|=r} |c_\xi|^2 = \sum_{|\xi|=r}
+\frac{|\hat{f}(\xi)|^2}{|S|^2}
+=1.
+\label{rsum}
+\end{equation}
+We have
+\begin{align*}
+S^2&=\sum_{|\xi|=r} |\hat{f}(\xi)|^2\\
+&=\sum_{|\xi|=r} \hat{f}(\xi) \overline{\hat{f}(\xi)}\\
+&=\left(\sum_{|\xi|=r} \hat{f}(\xi) c_\xi\right) S,
+\end{align*}
+hence, defining $c:\mathbb{T}^2 \to \mathbb{C}$ by
+\[
+c(x)=\sum_{\xi \in \mathbb{Z}^d} c_\xi e^{2\pi i\xi\cdot x}=
+\sum_{|\xi|=r} c_\xi e^{2\pi i\xi\cdot x}, \qquad x \in \mathbb{T}^2,
+\]
+we have, applying Parseval's identity,
+\[
+S=\sum_{|\xi|=r} \hat{f}(\xi) c_\xi
+=\int_{\mathbb{T}^2} f(x) \overline{c(x)} dx.
+\]
+For $p=\frac{4}{3}$, let $\frac{1}{p}+\frac{1}{q}=1$, i.e.
+$q=4$. 
+H\"older's inequality
+tells us
+\[
+\int_{\mathbb{T}^2} |f(x) \overline{c(x)}| dx 
+\leq \norm{f}_{4/3} \norm{c}_4.
+\]
+
+For $\rho \in \mathbb{Z}^2$, we define
+\[
+\gamma_\rho = \sum_{\mu-\nu=\rho} c_\mu \overline{c_\nu}.
+\]
+Then  define 
+$\Gamma(x) = |c(x)|^2$,
+which satisfies
+\[
+\Gamma(x) = c(x) \overline{c(x)}=
+\sum_{\xi \in \mathbb{Z}^2} \sum_{\zeta \in \mathbb{Z}^2} c_\xi \overline{c_\zeta} e^{2\pi i(\xi-\zeta)\cdot x}
+=\sum_{\rho \in \mathbb{Z}^2} \gamma_\rho e^{2\pi i\rho \cdot x}.
+\]
+Parseval's identity tells us
+\[
+\norm{c}_4^4 = \norm{\Gamma}_2^2 = \sum_{\rho \in \mathbb{Z}^2} |\gamma_\rho|^2.
+\]
+First,
+\[
+\gamma_0 = \sum_{\mu \in \mathbb{Z}^2} c_\mu \overline{c_\mu}
+=\sum_{\mu \in \mathbb{Z}^2} |c_\mu|^2
+=1.
+\]
+Second, suppose that $\rho \in \mathbb{Z}^2, |\rho|=2r$. If $\rho/2 \in \mathbb{Z}^2$, then $\gamma_\rho = c_{\rho/2} \overline{c_{-\rho/2}}$, 
+and if $\rho/2 \not \in \mathbb{Z}^2$ then $\gamma_\rho=0$. It follows that
+\begin{equation}
+\sum_{|\rho|=2r} |\gamma_\rho|^2 = \sum_{|\mu|=r} |\gamma_{2\mu}|^2 = 
+\sum_{|\mu|=r} |c_\mu|^2 |c_{-\mu}|^2.
+\label{2r}
+\end{equation}
+Third, suppose that $\rho \in \mathbb{Z}^2, 0<|\rho|<2r$. Then, for
+\[
+C_\rho=\{\mu \in \mathbb{Z}^2: |\mu|=r, |\mu-\rho|=|\rho|\},
+\] 
+we have $|C_\rho| \leq 2$. If $|C_\rho|=0$ then $\gamma_\rho=0$. If $|C_\rho|=1$ and $C_\rho=\{\mu\}$, then
+$\gamma_\rho = c_\mu \overline{c_{\mu-\rho}}$ and so
+$|\gamma_\rho|^2 = |c_\mu|^2 |c_{\mu-\rho}|^2$.
+If $|C_\rho|=2$ and $C_\rho=\{\mu,m\}$, then
+$\gamma_\rho=c_\mu \overline{c_{\mu-\rho}}+c_m \overline{c_{m-\rho}}$ and so
+\[
+|\gamma_\rho|^2 \leq 2 |c_\mu|^2 |c_{\mu-\rho}|^2+2|c_m|^2 |c_{m-\rho}|^2.
+\]
+It follows that
+\[
+\sum_{0<|\rho|<2r} |\gamma_\rho|^2 \leq 4\sum_{|\mu|=r, |\nu|=r, 0<|\mu-\nu|<2r} |c_\mu|^2 |c_\nu|^2.
+\]
+Using \eqref{2r} and then \eqref{rsum},
+\begin{align*}
+\sum_{0<|\rho| \leq 2r} |\gamma_\rho|^2&  \leq 4\sum_{|\mu|=r, |\nu|=r, 0<|\mu-\nu|<2r} |c_\mu|^2 |c_\nu|^2+
+\sum_{|\mu|=r} |c_\mu|^2 |c_{-\mu}|^2\\
+&\leq 4\sum_{|\mu|=r, |\nu|=r, 0<|\mu-\nu|<2r} |c_\mu|^2 |c_\nu|^2+4\sum_{|\mu|=r} |c_\mu|^2 |c_{-\mu}|^2\\
+&\leq 4\sum_{|\mu|=r, |\nu|=r}|c_\mu|^2 |c_\nu|^2\\
+&=4\left( \sum_{|\mu|=r} |c_\mu|^2 \right)^2\\
+&=4.
+\end{align*}
+Fourth, if $\rho \in \mathbb{Z}^2, |\rho|>2r$ then $\gamma_\rho=0$. Putting the above together,
+we have
+\[
+\sum_{\rho \in \mathbb{Z}^2} |\gamma_\rho|^2 \leq 1+4=5.
+\]
+Hence $\norm{c}_4^4\leq 5$, and therefore 
+\[
+|S|=\left| \int_{\mathbb{T}^2} f(x) \overline{c(x)} dx \right| 
+\leq \int_{\mathbb{T}^2} |f(x) \overline{c(x)}| dx
+\leq \norm{f}_{4/3} \norm{c}_4
+\leq \norm{f}_{4/3} 5^{1/4},
+\]
+proving the claim.
+\end{proof}
+
+
+\section{Tensor products of functions}
+For $f_1:X_1 \to \mathbb{C}$ and $f_2:X_2 \to \mathbb{C}$, we define
+$f_1 \otimes f_2:X_1 \times X_2 \to \mathbb{C}$ by
+\[
+f_1 \otimes f_2(x_1,x_2) = f_1(x_1)f_2(x_2), \qquad (x_1,x_2) \in X_1 \times X_2.
+\]
+For $f_1 \in L^1(\mathbb{T}^{d_1})$ and $f_2 \in L^1(\mathbb{T}^{d_2})$, it follows from Fubini's theorem that
+$f_1 \otimes f_2 \in L^1(\mathbb{T}^{d_1+d_2})$. 
+
+For $\xi_1 \in \mathbb{Z}^{d_1}$ and $\xi_2 \in \mathbb{Z}^{d_2}$, Fubini's theorem gives us
+\begin{align*}
+\widehat{f_1 \otimes f_2}(\xi_1,\xi_2)&=\int_{\mathbb{T}^{d_1+d_2}} f_1 \otimes f_2 (x_1,x_2) e^{-2\pi i(\xi_1,\xi_2)\cdot (x_1,x_2)} d\lambda_{d_1+d_2}(x_1,x_2)\\
+&=\int_{\mathbb{T}^{d_1}} \left( \int_{\mathbb{T}^{d_2}}  f_1 \otimes f_2 (x_1,x_2) e^{-2\pi i(\xi_1,\xi_2)\cdot (x_1,x_2)} d\lambda_{d_2}(x_2) \right) d\lambda_{d_1}(x_1)\\
+&=\int_{\mathbb{T}^{d_1}} f_1(x_1) e^{-2\pi i\xi_1 \cdot x_1} \left( \int_{\mathbb{T}^{d_2}} f_2(x_2) e^{-2\pi i\xi_2 \cdot x_2} d\lambda_{d_2}(x_2) \right)
+d\lambda_{d_1}(x_1)\\
+&=\hat{f_1}(\xi_1) \hat{f_2}(\xi_2)\\
+&=\hat{f_1} \otimes \hat{f_2}(\xi_1,\xi_2),
+\end{align*}
+showing that the Fourier transform of a tensor product is the tensor product of the Fourier transforms.
+
+
+
+
+\section{Approximate identities and Bernstein's inequality  for 𝕋}
+An \textbf{approximate identity} is a sequence $k_N$ in $L^\infty(\mathbb{T}^d)$ such that
+(i) $\sup_N \norm{k_N}_1 < \infty$,  (ii) for each $N$,
+\[
+\int_{\mathbb{T}^d} k_N(x) d\lambda_d(x)=1,
+\]
+and 
+(iii) for each $0<\delta<\frac{1}{2}$,
+\[
+\lim_{n \to \infty} \int_{\delta\leq x \leq 1-\delta} |k_N(x)| d\lambda_d(x)=0.
+\]
+Suppose that $k_N$ is an approximate identity.
+It is a fact that if $f \in C(\mathbb{T}^d)$ then $k_N * f \to f$ in $C(\mathbb{T}^d)$,
+if $1 \leq p < \infty$ and $f \in L^p(\mathbb{T}^d)$ then
+$k_N*f \to f$ in $L^p(\mathbb{T}^d)$, and if $\mu$ is a complex Borel measure on $\mathbb{T}^d$ then
+$k_N * \mu$ weak-* converges to $\mu$.\footnote{Camil Muscalu and Wilhelm Schlag, {\em Classical and Multilinear Harmonic
+Analysis}, volume I, p.~10, Proposition 1.5.} (The Riesz representation theorem tells us that the 
+Banach space $\mathcal{M}(\mathbb{T}^d)=rca(\mathbb{T}^d)$ of complex Borel measures on $\mathbb{T}^d$, with the total variation norm, is the dual space
+of the Banach space $C(\mathbb{T}^d)$.)
+
+A \textbf{trigonometric polynomial} is a function $P:\mathbb{T}^d \to \mathbb{C}$ of the form
+\[
+P(x) = \sum_{\xi \in \mathbb{Z}^d} a_\xi e^{2\pi i\xi \cdot x}, \qquad x \in \mathbb{T}^d
+\]
+for which there is some $N \geq 0$ such that $a_\xi=0$ whenever $|\xi|_\infty>N$. We say that $P$ has \textbf{degree} $N$; thus,
+if $P$ is a trigonometric polynomial of degree $N$ then $P$ is a trigonometric polynomial of degree $M$ for each $M \geq N$.
+
+For $f \in L^1(\mathbb{T})$, we define $S_N f \in C(\mathbb{T})$ by
+\[
+(S_N f)(x) = \sum_{|j| \leq N} \hat{f}(j) e^{2\pi ijx}, \qquad x \in \mathbb{T}.
+\]
+We define the \textbf{Dirichlet kernel} $D_N:\mathbb{T} \to \mathbb{C}$ by
+\[
+D_N(x) = \sum_{|j| \leq N}  e^{2\pi ijx}, \qquad x \in \mathbb{T},
+\]
+which satisfies, for $f \in L^1(\mathbb{T})$,
+\[
+D_N * f = S_N f.
+\]
+We define the \textbf{Fej\'er kernel} $F_N \in C(\mathbb{T})$ by
+\[
+F_N = \frac{1}{N+1} \sum_{n=0}^N D_n,
+\]
+We can write the Fej\'er kernel as 
+\[
+F_N (x) = \sum_{|j| \leq N} \left(1-\frac{|j|}{N+1}\right) e^{2\pi ijx}
+=\sum_{j \in \mathbb{Z}} \chi_{[-N,N]}(j) \left(1-\frac{|j|}{N+1}\right) e^{2\pi ijx},
+\]
+where $\chi_A$ is the indicator function of the set $A$.
+It is straightforward to prove that $F_N$ is an approximate identity.
+
+ We define the \textbf{$d$-dimensional Fej\'er kernel} $F_{N,d} \in C(\mathbb{T}^d)$ by
+ \[
+ F_{N,d} = \underbrace{F_N \otimes \cdots \otimes F_N}_{d}.
+ \]
+ We can write $F_{N,d}$ as
+ \[
+ F_{N,d}(x) = \sum_{|\xi|_\infty \leq N} \left(1-\frac{|\xi_1|}{N+1}\right)\cdots
+ \left(1-\frac{|\xi_d|}{N+1}\right) e^{2\pi i\xi \cdot x},\qquad x \in \mathbb{T}^d.
+ \]
+ Using the fact that $F_N$ is an approximate identity on $\mathbb{T}$, one proves that
+ $F_{N,d}$ is an approximate identity on $\mathbb{T}^d$. 
+  
+
+
+The following is \textbf{Bernstein's inequality for
+$\mathbb{T}$}.
+
+\begin{theorem}[Bernstein's inequality]
+If $P$ is a trigonometric polynomial of degree $N$, then
+\[
+\norm{P'}_\infty \leq 4\pi N\norm{P}_\infty.
+\]
+\end{theorem}
+\begin{proof}
+Define
+\[
+Q=((e_{-N}P)*F_{N-1})e_N-((e_NP)*F_{N-1})e_{-N}.
+\]
+The Fourier transform of the first term on the right-hand side is, for $j \in \mathbb{Z}$,
+\begin{align*}
+(\widehat{e_{-N}P * F_{N-1}})*\widehat{e_N}(j)&=\sum_{k \in \mathbb{Z}} \widehat{e_{-N}P}(j-k) \widehat{F_{N-1}}(j-k)\widehat{e_N}(k)\\
+&=\widehat{e_{-N}P}(j-N) \widehat{F_{N-1}}(j-N)\\
+&=\widehat{P}(j) \widehat{F_{N-1}}(j-N),
+\end{align*}
+and the Fourier transform of the second term is
+\[
+\widehat{P}(j) \widehat{F_{N-1}}(j+N).
+\]
+Therefore, for $j \in \mathbb{Z}$, using $\widehat{P}= \chi_{[-N,N]} \widehat{P}$,
+\begin{align*}
+\widehat{Q}(j)&=\widehat{P}(j)\left(\widehat{F_{N-1}}(j-N)-\widehat{F_{N-1}}(j+N)\right)\\
+&=\widehat{P}(j)\left( \chi_{[-N+1,N-1]}(j-N) \left(1-\frac{|j-N|}{N}\right)
+-\chi_{[-N+1,N-1]} \left(1-\frac{|j+N|}{N}\right) \right)\\
+&=\widehat{P}(j)\bigg(\chi_{[1,N]}(j)\left(1+\frac{j-N}{N}\right)
++\chi_{[N,2N-1]}(j)\left(1-\frac{j-N}{N}\right)\\
+&-\chi_{[-2N+1,-N]}(j)\left(1+\frac{j+N}{N}\right)
+-\chi_{[-N,-1]}(j)\left(1-\frac{j+N}{N}\right) \bigg)\\
+&=\widehat{P}(j)\left(\chi_{[1,N]}(j)\left(1+\frac{j-N}{N}\right)-
+\chi_{[-N,-1]}(j)\left(1-\frac{j+N}{N}\right)\right)\\
+&=\widehat{P}(j)\left(\frac{j}{N} \chi_{[1,N]}(j)+
+\frac{j}{N} \chi_{[-N,-1]}(j)\right)\\
+&=\frac{j}{N} \widehat{P}(j).
+\end{align*}
+On the other hand,
+\[
+\widehat{P'}(j) = 2\pi i j \widehat{P}(j),
+\]
+so that
+\[
+P'=2\pi iNQ,
+\]
+i.e.
+\[
+P'=2\pi iN( ((e_{-N}P)*F_{N-1})e_N-((e_NP)*F_{N-1})e_{-N}).
+\]
+Then, by Young's inequality,
+\begin{align*}
+\norm{P'}_\infty&=2\pi N \norm{((e_{-N}P)*F_{N-1})e_N-((e_NP)*F_{N-1})e_{-N}}_\infty\\
+&\leq 2\pi N \norm{((e_{-N}P)*F_{N-1})e_N}_\infty
++2\pi N\norm{((e_NP)*F_{N-1})e_{-N}}_\infty\\
+&= 2\pi N \norm{(e_{-N}P)*F_{N-1}}_\infty
++2\pi N \norm{(e_NP)*F_{N-1}}_\infty\\
+&\leq 2\pi N \norm{e_{-N} P}_\infty \norm{F_{N-1}}_1 + 2\pi N \norm{e_NP}_\infty \norm{F_{N-1}}_1\\
+&=4\pi N \norm{P}_\infty.
+\end{align*}
+\end{proof}
+
+
+
+
+
+
+ 
+ 
+\end{document}

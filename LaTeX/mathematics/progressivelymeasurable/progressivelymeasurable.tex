@@ -1,0 +1,351 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\Prog}{\ensuremath\mathrm{Prog}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\grad}{\ensuremath\mathrm{grad}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Jointly measurable and progressively measurable stochastic processes}
+\author{Jordan Bell}
+\date{June 18, 2015}
+
+\maketitle
+
+\section{Jointly measurable stochastic processes}
+Let $E=\mathbb{R}^d$  with Borel $\mathscr{E}$, 
+let $I = \mathbb{R}_{\geq 0}$, which is a topological  space with the subspace topology inherited from $\mathbb{R}$,
+and let
+$(\Omega,\mathscr{F},P)$ be a probability space.
+For a stochastic process $(X_t)_{t \in I}$ with state space $E$,
+we say that
+$X$ is \textbf{jointly measurable} if the map
+$(t,\omega) \mapsto X_t(\omega)$ is measurable $\mathscr{B}_I \otimes \mathscr{F} \to \mathscr{E}$. 
+
+For $\omega \in \Omega$, the path $t \mapsto X_t(\omega)$ is called
+\textbf{left-continuous} if 
+for each $t \in I$,
+\[
+X_s(\omega) \to X_t(\omega),\qquad s \uparrow t.
+\] 
+We prove that if the paths of a stochastic process are left-continuous then the stochastic process
+is jointly measurable.\footnote{cf. Charalambos D. Aliprantis and Kim C. Border, {\em Infinite Dimensional Analysis:
+A Hitchhiker's Guide}, third ed., p.~153, Lemma 4.51.}
+
+\begin{theorem}
+If $X$ is a stochastic process with state space $E$ and  all the paths of $X$ are left-continuous, then $X$ is
+jointly measurable.
+\end{theorem}
+\begin{proof}
+For $n \geq 1$, $t \in I$, and  $\omega \in \Omega$, let 
+\[
+X^n_t(\omega) = \sum_{k=0}^\infty 1_{[k2^{-n}, (k+1)2^{-n})}(t) X_{k 2^{-n}}(\omega).
+\]
+Each $X^n$ is measurable $\mathscr{B}_I \otimes \mathscr{F} \to \mathscr{E}$:
+for $B \in \mathscr{E}$,
+\[
+\{(t,\omega) \in I \times \Omega: X^n_t(\omega) \in B\}
+=\bigcup_{k=0}^\infty [k2^{-n},(k+1)2^{-n}) \times \{X_{k2^{-n}} \in B\}.
+\]
+Let $t \in I$.
+For each $n$ there is a unique $k_n$ for which $t \in [k_n2^{-n},(k_n+1)2^{-n})$, and 
+thus $X_t^n(\omega) = X_{k_n 2^{-n}}(\omega)$. Furthermore, $k_n2^{-n} \uparrow t$, and because 
+ $s \mapsto X_s(\omega)$ is left-continuous,  $X_{k_n 2^{-n}}(\omega) \to X_t(\omega)$.
+That is, 
+$X^n \to X$ pointwise on $I \times \Omega$, 
+and because each $X_n$ is measurable 
+$\mathscr{B}_I \otimes \mathscr{F} \to \mathscr{E}$ this implies that
+$X$ is measurable $\mathscr{B}_I \otimes \mathscr{F} \to \mathscr{E}$.\footnote{Charalambos D. Aliprantis and Kim C. Border, {\em Infinite Dimensional Analysis:
+A Hitchhiker's Guide}, third ed., p.~142, Lemma 4.29.} Namely, the stochastic process $(X_t)_{t \in I}$ is jointly measurable, proving the claim.
+\end{proof}
+
+
+
+\section{Adapted stochastic processes}
+Let $\mathscr{F}_I = (\mathscr{F}_t)_{t \in I}$ be a filtration of $\mathscr{F}$. 
+A stochastic process $X$ is said to be \textbf{adapted to the filtration $\mathscr{F}_I$}
+if for each $t \in I$ the map
+\[
+\omega \mapsto X_t(\omega), \qquad \Omega \to E,
+\]
+is measurable $\mathscr{F}_t \to \mathscr{E}$, in other words, for each $t \in I$,
+\[
+\sigma(X_t) \subset \mathscr{F}_t.
+\]
+ For a stochastic process $(X_t)_{t \in I}$, the \textbf{natural filtration of $X$} is 
+\[
+\sigma(X_s: s \leq t).
+\]
+It is immediate that this is a filtration and that $X$ is adapted to it.
+
+
+\section{Progressively measurable stochastic processes}
+Let $\mathscr{F}_I=(\mathscr{F}_t)_{t \in I}$ be a filtration of $\mathscr{F}$.
+A function $X:I \times \Omega \to E$ 
+is called \textbf{progressively measurable with respect to the filtration $\mathscr{F}_I$} if for each $t \in I$,
+the map
+\[
+(s,\omega) \mapsto X(s,\omega),\qquad [0,t] \times \Omega \to E,
+\]
+is measurable $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t \to \mathscr{E}$.
+We denote by $\mathscr{M}^0(\mathscr{F}_I)$ the set of functions
+$I \times \Omega \to E$ that are
+progressively measurable with respect to the filtration $\mathscr{F}_I$.
+We shall  speak about a stochastic process $(X_t)_{t \in I}$ being progressively measurable, by which we mean
+that the map $(t,\omega) \mapsto X_t(\omega)$ is progressively measurable.
+
+
+We denote by $\Prog(\mathscr{F}_I)$ the collection of those subsets $A$ of $I \times \Omega$ such that
+for each $t \in I$,
+\[
+([0,t] \times \Omega) \cap A \in \mathscr{B}_{[0,t]} \otimes \mathscr{F}_t.
+\] 
+We prove in the following  that this is a $\sigma$-subalgebra of $\mathscr{B}_I \otimes \mathscr{F}$ and that
+it is the coarsest $\sigma$-algebra with which all progressively measurable functions are measurable.
+
+
+\begin{theorem}
+Let $\mathscr{F}_I=(\mathscr{F}_t)_{t \in I}$ be a filtration of $\mathscr{F}$.
+\begin{enumerate}
+\item $\Prog(\mathscr{F}_I)$ is a $\sigma$-subalgebra of $\mathscr{B}_I \otimes \mathscr{F}$, and  is the
+$\sigma$-algebra generated by the collection of functions $I \times \Omega \to E$ that 
+are progressively measurable with respect to the filtration $\mathscr{F}_I$:
+\[
+\Prog(\mathscr{F}_I)=\sigma(\mathscr{M}^0(\mathscr{F}_I)).
+\]
+\item If $X:I \times \Omega \to E$ is progressively measurable with respect to the filtration
+$\mathscr{F}_I$, then the stochastic process $(X_t)_{t \in I}$ is jointly measurable and is adapted to the filtration.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+If $A_1,A_2,\ldots \in \Prog(\mathscr{F}_I)$ and $t \in I$ then
+\[
+([0,t] \times \Omega) \cap \bigcup_{n \geq 1} A_n = \bigcup_{n \geq 1} (([0,t] \times \Omega) \cap A_n),
+\]
+which is a countable union of elements of the $\sigma$-algebra  $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t$ and hence
+belongs to $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t$, showing that
+$\bigcup_{n \geq 1} A_n \in \Prog(\mathscr{F}_I)$.
+If $A_1,A_2 \in  \Prog(\mathscr{F}_I)$ and $t \in I$ then
+\[
+([0,t] \times \Omega) \cap (A_1 \cap A_2) = (([0,t] \times \Omega) \cap A_1) \cap (([0,t] \times \Omega) \cap A_2),
+\]
+which is an intersection of two elements of $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t$ and hence belongs to
+$\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t$, showing that
+$A_1 \cap A_2 \in \Prog(\mathscr{F}_I)$.
+Thus $\Prog((\mathscr{F}_t)_{t \in I})$ is a $\sigma$-algebra.
+
+
+If $X:I \times \Omega \to E$ is progressively measurable, $B \in \mathscr{E}$, and $t \in I$, then
+\[
+([0,t] \times \Omega) \cap X^{-1}(B) = \{(s,\omega) \in [0,t] \times \Omega: X(s,\omega) \in B\}.
+\]
+Because $X$ is progressively measurable, this belongs to $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t$. This is true for all $t$, hence
+$X^{-1}(B) \in \Prog(\mathscr{F}_I)$, which means that
+$X$ is measurable $\Prog(\mathscr{F}_I) \to \mathscr{E}$. 
+
+If $X:I \times \Omega \to E$ is measurable $\Prog(\mathscr{F}_I) \to \mathscr{E}$,
+$t \in I$, and
+$B \in \mathscr{E}$, then
+because $X^{-1}(B) \in  \Prog(\mathscr{F}_I)$, we have
+$([0,t] \times \Omega) \cap X^{-1}(B) \in \mathscr{B}_{[0,t]} \otimes \mathscr{F}_t$. This is true for all $B \in \mathscr{E}$,
+which means that $(s,\omega) \mapsto X(s,\omega)$, $[0,t] \times \Omega \to E$, is measurable
+$\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t$, and because this is true for all $t$, $X$ is progressively measurable.
+Therefore a function $I \times \Omega \to E$ is progressively measurable if and only if it is measurable
+$\Prog(\mathscr{F}_I) \to \mathscr{E}$, which 
+shows that $\Prog(\mathscr{F}_I)$  is the coarsest $\sigma$-algebra with which all progressively
+measurable functions are measurable.
+
+If $X:I \times \Omega \to E$ is a progressively measurable function and $B \in \mathscr{E}$, 
+\[
+X^{-1}(B) = \bigcup_{k \geq 1} (([0,k] \times \Omega) \cap X^{-1}(B)).
+\]
+Because $X$ is progressively measurable,
+\[
+([0,k] \times \Omega) \cap X^{-1}(B) \in \mathscr{B}_{[0,k]} \otimes
+\mathscr{F}_k \subset \mathscr{B}_I \otimes \mathscr{F},
+\]
+thus $X^{-1}(B)$ is equal to a countable union of elements of $\mathscr{B}_I \otimes \mathscr{F}$ and so itself belongs to
+$\mathscr{B}_I \otimes \mathscr{F}$. Therefore $X$ is measurable $\mathscr{B}_I \otimes \mathscr{F} \to \mathscr{E}$, namely $X$ is jointly
+measurable.
+
+Because $\Prog(\mathscr{F}_I)$ is the $\sigma$-algebra generated by the collection
+of progressively measurable functions and each progressively measurable function is measurable
+$\mathscr{B}_I \otimes \mathscr{F}$, 
+\[
+\Prog(\mathscr{F}_I) \subset \mathscr{B}_I \otimes \mathscr{F},
+\]
+and so $\Prog(\mathscr{F}_I)$ is indeed a $\sigma$-subalgebra of $\mathscr{B}_I \otimes \mathscr{F}$. 
+
+Let $t \in I$. That $X$ is progressively measurable means that 
+\[
+(s,\omega) \mapsto X(s,\omega), \qquad [0,t] \times \Omega
+\]
+is measurable $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t \to \mathscr{E}$. This implies that for each $s \in [0,t]$ the map
+$\omega \mapsto X(s,\omega)$ is measurable $\mathscr{F}_t \to \mathscr{E}$.\footnote{Charalambos D. Aliprantis and Kim C. Border, {\em Infinite Dimensional Analysis:
+A Hitchhiker's Guide}, third ed., p.~152, Theorem 4.48.} (Generally, if a function is jointly measurable then it is separately measurable in each argument.)
+In particular, $\omega \mapsto X(t,\omega)$ is measurable $\mathscr{F}_t \to \mathscr{E}$, which means that the stochastic process $(X_t)_{t \in I}$ is adapted
+to the filtration, completing the proof.
+\end{proof}
+
+
+We now prove that if a stochastic process is adapted and left-continuous then it is progressively
+measurable.\footnote{cf. Daniel W. Stroock, {\em Probability Theory: An Analytic View}, second ed.,
+p.~267, Lemma 7.1.2.}
+
+\begin{theorem}
+Let $(\mathscr{F}_t)_{t \in I}$ be a filtration of $\mathscr{F}$. If $(X_t)_{t \in I}$ is a stochastic
+process that is adapted to this filtration and all its paths are left-continuous, then $X$ is progressively measurable with respect to this filtration.
+\end{theorem}
+\begin{proof}
+Write $X(t,\omega)=X_t(\omega)$. 
+For $t \in I$,
+let $Y$ be the restriction of $X$ to $[0,t] \times \Omega$. We wish to prove that $Y$ is measurable
+$\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t \to \mathscr{E}$. 
+For $n \geq 1$, define
+\[
+Y_n(s,\omega) = \sum_{k=0}^{2^n-1} 1_{[kt2^{-n},(k+1)t2^{-n})}(s) Y(kt2^{-n},\omega)
++1_{\{t\}}(s) Y(t,\omega).
+\]
+Because $X$ is adapted to the filtration,
+each $Y_n$ is measurable $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t \to \mathscr{E}$.
+Because $X$ has left-continuous paths, for $(s,\omega) \in [0,t] \times \Omega$,
+\[
+Y_n(s,\omega) \to Y(s,\omega). 
+\]
+Since $Y$ is the pointwise limit of $Y_n$, it follows that $Y$ is measurable $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t \to \mathscr{E}$,
+and so $X$ is progressively measurable.
+\end{proof}
+
+
+\section{Stopping times}
+Let $\mathscr{F}_I =(\mathscr{F}_t)_{t \in I}$ be a filtration of $\mathscr{F}$. A function $T:\Omega \to [0,\infty]$ is called a \textbf{stopping time with
+respect to the filtration $\mathscr{F}_I$} if
+\[
+\{T \leq t\} \in \mathscr{F}_t, \qquad t \in I.
+\]
+It is straightforward to prove that a stopping time is measurable $\mathscr{F} \to \mathscr{B}_{ [0,\infty]}$. 
+Let
+\[
+\mathscr{F}_\infty = \sigma(\mathscr{F}_t: t \in I).
+\]
+We define
+\[
+\mathscr{F}_T = \{A \in \mathscr{F}_\infty: \textrm{if $t \in I$ then $A \cap \{T \leq t\} \in \mathscr{F}_t$}\}.
+\]
+It is straightforward to check that $T$ is measurable $\mathscr{F}_T \to \mathscr{B}_{[0,\infty]}$, and in particular
+$\{T<\infty\}  \in \mathscr{F}_T$.
+
+For a stochastic process $(X_t)_{t \in I}$ with state space $E$, we define $X_T:\Omega \to E$ by 
+\[
+X_T(\omega) = 1_{\{T<\infty\}}(\omega) X_{T(\omega)}(\omega). 
+\]
+We prove that if  $X$ is progressively measurable then $X_T$ is measurable
+$\mathscr{F}_T \to \mathscr{E}$.\footnote{Sheng-wu He and Jia-gang Wang and Jia-An Yan,
+{\em Semimartingale Theory and Stochastic Calculus}, p.~86, Theorem 3.12.}
+
+\begin{theorem}
+If $\mathscr{F}_I  =(\mathscr{F}_t)_{t \in I}$ is a filtration of $\mathscr{F}$,
+$(X_t)_{t \in I}$ is a stochastic process that is progressively measurable with respect to $\mathscr{F}_I$,
+and $T$ is a stopping time with respect to $\mathscr{F}_I$, then $X_T$ is measurable $\mathscr{F}_T \to \mathscr{E}$.
+\label{XT}
+\end{theorem}
+\begin{proof}
+For $t \in I$, using that $T$ is a stopping time we check that $\omega \mapsto T(\omega) \wedge t$ is measurable $\mathscr{F}_t
+\to \mathscr{B}_{[0,t]}$, and then $\omega \mapsto (T(\omega) \wedge t,\omega)$,
+$\Omega \to [0,t] \times \Omega$,
+ is measurable $\mathscr{F}_t \to \mathscr{B}_{[0,t]} \otimes \mathscr{F}_t$.\footnote{Charalambos D. Aliprantis and Kim C. Border, {\em Infinite Dimensional Analysis:
+A Hitchhiker's Guide}, third ed., p.~152, Lemma 4.49.}
+Because $X$ is progressively
+ measurable, $(s,\omega) \mapsto X_s(\omega)$ is measurable
+ $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t \to \mathscr{E}$. Therefore the composition
+ \[
+ \omega \mapsto X_{T(\omega) \wedge t}(\omega), \qquad \Omega \to E,
+ \]
+ is measurable $\mathscr{F}_t \to \mathscr{E}$, and a fortiori it is measurable
+ $\mathscr{F}_\infty \to \mathscr{E}$.
+ We have
+ \[
+ X_T(\omega) = \lim_{n \to \infty} 1_{\{T \leq n\}}(\omega) X_{T(\omega) \wedge n}(\omega),
+ \]
+ and because 
+ $\omega \mapsto 1_{\{T \leq n\}}(\omega) X_{T(\omega) \wedge n}(\omega)$ is measurable
+ $\mathscr{F}_\infty \to \mathscr{E}$, 
+ it follows that $\omega \mapsto  X_T(\omega)$  is measurable $\mathscr{F}_\infty \to \mathscr{E}$.
+ For $B \in \mathscr{E}$,
+ \[
+\{X_T \in B\} \cap \{T \leq t\} = \{\omega \in \Omega: X_{T(\omega) \wedge t}(\omega) \in B\} \cap \{T \leq t\} \in \mathscr{F}_t,
+ \]
+therefore $\{X_T \in B\} \in \mathscr{F}_T$. This means that
+$X_T$ is measurable $\mathscr{F}_T \to \mathscr{E}$.
+\end{proof}
+
+
+For a stochastic process $(X_t)_{t \in I}$, a filtration $\mathscr{F}_I =(\mathscr{F}_t)_{t \in I}$, and a stopping time
+$T$ with respect to the filtration, we define 
+\[
+X^T_t(\omega) = X_{T(\omega) \wedge t}(\omega),
+\]
+and $(X^T_t)_{t \in I}$ is a stochastic process.
+We prove that if $X$ is progressively measurable with respect to  $\mathscr{F}_I$ then
+the stochastic proces $X^T$ is progressively measurable with respect to $\mathscr{F}_I$.\footnote{Ioannis Karatzas and Steven Shreve,
+{\em Brownian Motion and Stochastic Calculus}, 
+p.~9, Proposition 2.18.}
+
+\begin{theorem}
+If $(X_t)_{t \in I}$ is a stochastic process  that is progressively measurable with respect
+to a filtration $\mathscr{F}_I = (\mathscr{F}_t)_{t \in I}$ and 
+ $T$ is a stopping time with respect
+to $\mathscr{F}_I$, then
+$X^T$ is  progressively measurable with respect to $\mathscr{F}_I$.
+\end{theorem}
+\begin{proof}
+Let $t \in I$. 
+Because $T$ is a stopping time, for each $s \in [0,t]$ the map $\omega \mapsto T(\omega) \wedge s$ 
+is measurable $\mathscr{F}_s \to \mathscr{B}_{[0,t]}$ and a fortiori is measurable $\mathscr{F}_t \to  \mathscr{B}_{[0,t]}$. 
+Therefore  $(s,\omega) \mapsto T(\omega) \wedge s$
+is measurable $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t \to \mathscr{B}_{[0,t]}$,\footnote{Charalambos D. Aliprantis and Kim C. Border, {\em Infinite Dimensional Analysis:
+A Hitchhiker's Guide}, third ed., p.~152, Theorem 4.48.} and 
+$(s,\omega) \mapsto \omega$ is measurable $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t \to \mathscr{F}_t$. 
+This implies that
+\[
+(s,\omega) \mapsto (T(\omega) \wedge s,\omega), \qquad [0,t] \times \Omega \to [0,t] \times \Omega,
+\]
+is measurable 
+$\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t \to \mathscr{B}_{[0,t]} \otimes \mathscr{F}_t$.\footnote{Charalambos D. Aliprantis and Kim C. Border, {\em Infinite Dimensional Analysis:
+A Hitchhiker's Guide}, third ed., p.~152, Lemma 4.49.}
+Because $X$ is progressively measurable,
+\[
+(s,\omega) \mapsto X_s(\omega), \qquad [0,t] \times \Omega \to E,
+\]
+is measurable $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t \to \mathscr{E}$.  Therefore
+the composition 
+\[
+(s,\omega) \mapsto X_{T(\omega) \wedge s}(\omega), \qquad [0,t] \times \Omega \to E,
+\]
+is measurable $\mathscr{B}_{[0,t]} \otimes \mathscr{F}_t  \to \mathscr{E}$, which shows that
+$X^T$ is progressively measurable.
+\end{proof}
+
+
+
+\end{document}

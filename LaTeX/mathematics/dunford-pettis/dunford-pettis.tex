@@ -1,0 +1,270 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Dunford-Pettis theorem}
+\author{Jordan Bell}
+\date{April 19, 2015}
+
+\maketitle
+
+\section{Weak topology and weak-* topology}
+If $(E,\tau)$ is a topological vector space, we denote by $E^*$ the set of continuous linear maps $E \to \mathbb{C}$, 
+the \textbf{dual space of $E$}. 
+The \textbf{weak topology on $E$}, denoted $\sigma(E,E^*)$, is the coarsest topology on $E$ with which
+each function $x \mapsto \lambda x$, $\lambda \in E^*$, is continuous $E \to \mathbb{C}$.
+Thus, $\sigma(E,E^*) \subset \tau$. 
+If $(E,\tau)$ is a locally convex space, it follows by the Hahn-Banach separation theorem that $E^*$ separates $X$, and hence 
+$|\lambda|, \lambda \in E^*$, is a separating family of seminorms on $E$ that induce the topology $\sigma(E,E^*)$. Therefore,
+if $(E,\tau)$ is a locally convex space, then $(E,\sigma(E,E^*))$ is a locally convex space. 
+
+If $(E,\tau)$ is a topological vector space, the \textbf{weak-* topology on $E^*$}, denoted
+$\sigma(E^*,E)$, is the coarsest topology on $E^*$ with which each function
+$\lambda \mapsto \lambda x$, $x \in E$, is continuous $E^* \to \mathbb{C}$. It is a fact that  $E^*$ with the topology
+$\sigma(E^*,E)$ is a locally convex space.
+
+If $E$ is a normed space, then $\norm{\lambda}_{op} = \sup_{\norm{x} \leq 1} |\lambda x|$ is a norm on the dual
+space $E^*$, and that $E^*$ with this norm is a Banach space. The \textbf{Banach-Alaoglu theorem} states that $\{\lambda \in E^*: \norm{\lambda}_{op} \leq 1\}$
+is a compact subset of $(E^*, \sigma(E^*,E))$.
+
+
+If $(X,\Sigma,\mu)$ is a $\sigma$-finite measure space, for
+$g \in L^\infty(\mu)$ define $\phi_g \in (L^1(\mu))^*$ by
+$\phi_g(f) = \int_X fg d\mu$. The map
+$g \mapsto \phi_g$ is an isometric isomorphism
+$L^\infty(\mu) \to  (L^1(\mu))^*$.\footnote{Gerald B. Folland, {\em Real Analysis: Modern Techniques and Their Applications},
+second ed., p.~190, Theorem 6.15.} 
+
+
+
+
+
+Let $(X,\Sigma,\mu)$ be a probability space. If $\Psi \in (L^\infty(\mu))^*$ and $A \mapsto \Psi(\chi_A)$ is countably
+additive on $\Sigma$, then there is some $f \in L^1(\mu)$ such that
+\[
+\Psi(g) = \int_X g f d\mu, \qquad g \in L^\infty(\mu),
+\]
+and $\norm{\Psi}_{op} = \norm{f}_1$.\footnote{V. I. Bogachev, {\em Measure Theory}, volume I,
+p.~263, Proposition 4.2.2.}
+Also, an additive  function $F$ on an algebra of sets $\mathscr{A}$ is countably additive
+if and only if whenever $A_n$ is a decreasing sequence of elements of $\mathscr{A}$ with
+$\bigcap_{n=1}^\infty A_n = \emptyset$, we have $\lim_{n\to \infty} F(A_n) = 0$.\footnote{V. I. Bogachev, {\em Measure Theory}, volume I,
+p.~9, Proposition 1.3.3.} 
+Using that $\mu$ is countably additive we get the following.
+
+\begin{theorem}
+Suppose that $(X,\Sigma,\mu)$ be a probability space and that $\Psi \in (L^\infty(\mu))^*$, and suppose that
+ for each $\epsilon>0$ there
+is some $\delta>0$ such that $E \in \Sigma$ and $\mu(E) \leq \delta$ imply that
+$|\Psi(\chi_A)| \leq \epsilon$.
+Then there is some $f \in L^1(\mu)$ such that
+\[
+\Psi(g) = \int_X gf d\mu, \qquad g \in L^\infty(\mu).
+\]
+\label{Linfinity}
+\end{theorem}
+
+
+\section{Normed spaces}
+If $E$ is a normed space, its dual space $E^*$ with the operator norm is a Banach space, and  $E^{**}=(X^*)^*$ with the operator
+norm is a Banach space. Define $i:E \to E^{**}$ by
+\[
+i(x)(\lambda)=\lambda(x), \qquad x \in E, \quad \lambda \in E^*.
+\]
+It follows from the Hahn-Banach extension theorem that $i:E \to E^{**}$ is an isometric linear map. 
+
+If $E$ and $F$ are normed spaces and $T:E \to F$ is a bounded linear map, we define the \textbf{transpose} $T^*:F^* \to E^*$ by
+$T^* \lambda = \lambda \circ T$ for $\lambda \in F^*$. If $T$ is an isometric isomorphism, then $T^*:F^* \to E^*$ is an isometric isomorphism, where
+$E^*$ and $F^*$ are each Banach spaces with the operator norm. In particular, we have said that when $(X,\Sigma,\mu)$ is a 
+$\sigma$-finite measure space, then the map $\phi:L^\infty(\mu) \to (L^1(\mu))^*$ defined for $g \in L^\infty(\mu)$ by
+\[
+\phi_g(f) = \int_X fg d\mu, \qquad f \in L^1(\mu),
+\]
+is an isometric isomorphism, and hence $\phi^*:(L^1(\mu))^{**} \to (L^\infty(\mu))^*$ is an isometric isomorphism.
+Therefore, for $E=L^1(\mu)$ we have that
+\begin{equation}
+\phi^* \circ i:L^1(\mu) \to (L^\infty(\mu))^*
+\label{isometric}
+\end{equation}
+is an isometric linear map. For $f \in L^1(\mu)$ and $g \in L^\infty(\mu)$,
+\begin{align*}
+(\phi^* \circ i)(f)(g)&=(\phi^*(i(f)))(g)\\
+&=(i(f) \circ \phi)(g)\\
+&=i(f)(\phi_g)\\
+&=\phi_g(f).
+\end{align*}
+
+The \textbf{Eberlein-Smulian theorem} states that if $E$ is a normed space and $A$ is a subset of $E$, then $A$ is weakly
+compact if and only if $A$ is weakly sequentially compact.\footnote{Robert E. Megginson, {\em An Introduction to Banach
+Space Theory}, p.~248, Theorem 2.8.6.}
+
+
+\section{Equi-integrability}
+Let $(X,\Sigma,\mu)$ be a probability space and let $\mathscr{F}$ be a subset of $L^1(\mu)$. We say that $\mathscr{F}$
+is \textbf{equi-integrable} if for every $\epsilon>0$ there is some $\delta>0$ such that for any
+$A \in \Sigma$ with $\mu(A) \leq \delta$ and for all $f \in \mathscr{F}$,
+\[
+\int_A |f| d\mu \leq \epsilon.
+\]
+If $\mathscr{F}$ is a bounded subset of $L^1(\mu)$, it is a fact that $\mathscr{F}$ being equi-integrable is equivalent to 
+\begin{equation}
+\lim_{C \to \infty} \sup_{f \in \mathscr{F}} \int_{\{|f|>C\}} |f| d\mu  = 0.
+\label{Climit}
+\end{equation}
+
+The following theorem gives a condition under which a sequence of integrable functions is bounded and
+equi-integrable.\footnote{V. I. Bogachev, {\em Measure Theory}, volume I, p.~269, Theorem 4.5.6.}
+
+\begin{theorem}
+Let $(X,\Sigma,\mu)$ be a probability space and let $f_n$ be a sequence in $L^1(\mu)$. If for each $A \in \Sigma$ the
+sequence $\int_A f_n d\mu$ has a finite limit, then $\{f_n\}$ is bounded in $L^1(\mu)$ and is equi-integrable.
+\label{Alimit}
+\end{theorem}
+
+
+\section{The Dunford-Pettis theorem}
+A subset $A$ of a topological space $X$ is said to be \textbf{relatively compact} if $A$ is contained in some compact subset of $X$. When $X$ is a Hausdorff
+space, this is equivalent to the closure of $A$ being a compact subset of $X$. 
+
+
+The following is the \textbf{Dunford-Pettis theorem}.\footnote{V. I. Bogachev, {\em Measure Theory}, volume I,
+p.~285, Theorem 4.7.18; Fernando Albiac and
+Nigel J. Kalton, {\em Topics in Banach Space Theory}, p.~109, Theorem 5.2.9;
+R. E. Edwards, {\em Functional Analysis: Theory and Applications}, p.~274, Theorem 4.21.2;
+P. Wojtaszczyk, {\em Banach Spaces for Analysts},
+p.~137, Theorem 12; Joseph Diestel, {\em Sequences and Series in Banach Spaces}, p.~93; Fran\c{c}ois Tr\`eves, {\em Topological Vector Spaces, Distributions and Kernels}, p.~471, Theorem 46.1.}
+
+\begin{theorem}[Dunford-Pettis theorem]
+Suppose that $(X,\Sigma,\mu)$ is a probability space and that
+  $\mathscr{F}$ is a bounded subset of $L^1(\mu)$. $\mathscr{F}$ is equi-integrable if and only if
+$\mathscr{F}$ is a relatively compact subset of $L^1(\mu)$ with the weak topology.
+\end{theorem}
+\begin{proof}
+Suppose that $\mathscr{F}$ is equi-integrable, and let
+$T=\phi^* \circ i:L^1(\mu) \to (L^\infty(\mu))^*$ be the isometric linear map  in \eqref{isometric}, for which
+\[
+T(f)(g) = \int_X f g d\mu, \qquad f \in L^1(\mu), \quad g \in L^\infty(\mu).
+\]
+Then $T(\mathscr{F})$ is a bounded subset of $(L^\infty(\mu))^*$, so is contained in some closed
+ball $B$ in $(L^\infty(\mu))^*$. By the Banach-Alaoglu theorem, $B$ is weak-* compact, and therefore the weak-* closure
+$\mathscr{H}$ of $T(\mathscr{F})$ is weak-* compact. Let $F \in \mathscr{H}$. There is a net $F_\alpha=T(f_\alpha)$ in $T(\mathscr{F})$,
+$\alpha \in I$, 
+such that  for each $g \in L^\infty(\mu)$, $F_\alpha(g) \to F(g)$, i.e.,
+\begin{equation}
+\int_X f_\alpha g d\mu \to F(g), \qquad g \in L^\infty(\mu).
+\label{falpha}
+\end{equation}
+Let  $\epsilon>0$. Because $\mathscr{F}$ is equi-integrable,
+there is some $\delta>0$ such that when $A \in \Sigma$ and $\mu(A) \leq \delta$,
+\[
+\sup_{\alpha \in I} \int_A |f_\alpha| d\mu \leq \epsilon,
+\]
+which gives
+\[
+|F(\chi_A)| = \lim_\alpha  \left| \int_X f_\alpha \chi_A d\mu \right|
+= \lim_\alpha \left| \int_A f_\alpha d\mu \right|
+\leq \sup_{\alpha \in I} \int_A |f_\alpha| d\mu 
+\leq \epsilon.
+\]
+By Theorem \ref{Linfinity}, this tells us that there is some $f \in L^1(\mu)$ for which
+\[
+F(g) = \int_X gf d\mu, \qquad g \in L^\infty(\mu),
+\]
+and hence $F=T(f)$.  This shows that $\mathscr{H} \subset T(L^1(\mu))$, and
+\[
+\int_X f_\alpha g d\mu \to \int_X f g d\mu, \qquad g \in L^\infty(\mu)
+\]
+tells us that $f_\alpha \to f$ in $\sigma(L^1(\mu),(L^1(\mu))^*)$, in other words $T^{-1}(F_\alpha)$ converges weakly to $T(F)$.
+Thus $T^{-1}:\mathscr{H} \to L^1(\mu)$ is continuous, where $\mathscr{H}$ has the subspace topology $\tau_{\mathscr{H}}$ inherited from
+$(L^\infty(\mu))^*$ with the weak-* topology and $L^1(\mu)$ has the weak topology. $(\mathscr{H},\tau_{\mathscr{H}})$ is a compact topological space,
+so $T^{-1}(\mathscr{H})$ is a weakly compact subset of $L^1(\mu)$. But $\mathscr{F} \subset T^{-1}(\mathscr{H})$, which establishes that
+$\mathscr{F}$ is a relatively weakly compact subset of $L^1(\mu)$.
+
+
+Suppose that $\mathscr{F}$ is a relatively compact subset of $L^1(\mu)$ with the weak topology and suppose
+by contradiction that $\mathscr{F}$ is not equi-integrable. 
+Then by \eqref{Climit}, there is some $\eta >0$  such that for all $C_0$ there is some $C \geq C_0$ such that
+\[
+\sup_{f \in \mathscr{F}} \int_{\{|f| > C\}} |f| d\mu > \eta,
+\]
+whence for each $n$ there is some $f_n \in \mathscr{F}$ with
+\begin{equation}
+\int_{\{|f_n|>n\}} |f_n| d\mu \geq \eta,
+\label{etainequality}
+\end{equation}
+On the other hand, because $\mathscr{F}$ is relatively weakly compact, the Eberlein-Smulian theorem tells us that
+$\mathscr{F}$ is relatively weakly sequentially compact, and so there is a subsequence $f_{a(n)}$ of $f_n$ and some
+$f \in L^1(\mu)$ such that $f_{a(n)}$ converges weakly to $f$. 
+For  $A \in \Sigma$, as $\chi_A \in L^\infty(\mu)$ we have
+\[
+\lim_{n \to \infty} \int_A f_{a(n)} d\mu = \int_A f d\mu,
+\]
+and thus Theorem \ref{Alimit}  tells us that the collection $\{f_{a(n)}\}$ is equi-integrable, contradicting \eqref{etainequality}.
+Therefore, $\mathscr{F}$ is equi-integrable.
+\end{proof}
+
+
+\begin{corollary}
+Suppose that $(X,\Sigma,\mu)$ is a probability space. If $\{f_n\} \subset L^1(\mu)$ is
+bounded and equi-integrable, then there is a subsequence $f_{a(n)}$ of $f_n$ and some $f \in L^1(\mu)$ such that
+\[
+\int_X f_{a(n)} g d\mu \to \int_X f g d\mu, \qquad g \in L^\infty(\mu).
+\]
+\end{corollary}
+\begin{proof}
+The Dunford-Pettis theorem tells us that $\{f_n\}$ is relatively weakly compact, so by the Eberlein-Smulian theorem,
+$\{f_n\}$ is relatively weakly sequentially compact, which yields the claim.
+\end{proof}
+
+
+
+\section{Separable topological spaces}
+It is a fact that if $E$ is a separable topological vector space and $K$ is a compact subset of
+$(E^*,\sigma(E^*,E))$, then $K$ with the subspace topology inherited from
+$(E^*,\sigma(E^*,E))$ is metrizable. Using this and the Banach-Alaoglu theorem, if
+$E$ is a separable normed space it follows that
+$\{\lambda \in E^*: \norm{\lambda}_{op} \leq 1\}$
+with the subspace topology inherited from
+$(E,\sigma(E^*,E))$ is compact and metrizable, 
+and hence is sequentially compact.\footnote{A second-countable $T_1$ space is compact if and only if it is
+sequentially compact: Stephen Willard, {\em General Topology}, p.~125, 17G.}
+In particular, when $E$ is a separable normed space, a bounded sequence in $E^*$ has a weak-* convergent subsequence.
+
+If $X$ is a separable metrizable space and $\mu$ is a $\sigma$-finite Borel measure on $X$, then
+the Banach space $L^p(\mu)$ is separable for each $1 \leq p < \infty$.\footnote{Ren\'e L. Schilling,
+{\em Measures, Integrals and Martingales}, p.~270, Corollary 23.20.} 
+
+\begin{theorem}
+Suppose that $X$ is a separable metrizable space and $\mu$ is a $\sigma$-finite Borel measure on $X$.
+ If $\{g_n\}$ is a bounded subset of $L^\infty(\mu)$, then there is a subsequence $g_{a(n)}$ of $g_n$ and some
+$g \in L^\infty(\mu)$ such that
+\[
+\int_X f g_{a(n)} d\mu \to \int_X f g d\mu, \qquad f \in L^1(\mu).
+\] 
+\label{subsequence}
+\end{theorem}
+
+
+\end{document}

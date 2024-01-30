@@ -1,0 +1,1239 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Trace class operators and Hilbert-Schmidt operators}
+\author{Jordan Bell}
+\date{April 18, 2016}
+
+\maketitle
+
+\section{Introduction}
+If $X,Y$ are normed spaces, let $\mathscr{B}(X,Y)$ be the set of all bounded linear maps $X \to Y$. If $T:X \to Y$ is a linear map,
+I take it as known that $T$ is bounded if and only if it is continuous if and only if $E \subseteq X$ being bounded implies that $T(E) \subseteq Y$ is bounded.
+I also take it as known that $\mathscr{B}(X,Y)$ is a normed space with the operator norm,
+ that if $Y$ is a Banach space then $\mathscr{B}(X,Y)$ is a Banach space,  that if $X$ is a Banach space then $\mathscr{B}(X)=\mathscr{B}(X,X)$ is a Banach algebra, and that if $H$ is a Hilbert space then $\mathscr{B}(H)$ is a 
+ $C^*$-algebra. An {\em ideal} $I$ of a Banach algebra is an ideal of the algebra: to say that $I$ is an ideal does not demand that $I$ is  a Banach subalgebra, i.e. does not demand
+ that $I$ is a closed subset of the Banach algebra. $I$ is a  {\em $*$-ideal} of a $C^*$-algebra if $I$ is an ideal of the algebra and if $A \in I$ implies that $A^* \in I$.
+
+If $X$ and $Y$ are normed spaces, we take as known that the {\em strong operator topology} on $\mathscr{B}(X,Y)$ is coarser than the norm topology on $\mathscr{B}(X,Y)$, and thus if $T_n \to T$
+in the operator norm, then $T_n \to T$ in the strong operator topology.
+
+If $X$ is a normed space, $M$ is a dense subspace of $X$, $Y$ is a Banach space and $T:M \to Y$ is a bounded linear operator, then there is a unique element of $\mathscr{B}(X,Y)$
+whose restriction to $M$ is equal to $T$, and we also denote this  by $T$.\footnote{This is an instance of a result about topological vector spaces and
+Fr\'echet spaces. See Walter Rudin, {\em Functional Analysis}, second ed., p.~40, chapter 1, ex. 19.} 
+
+If $X$ is a normed space, define $\inner{\cdot}{\cdot}:X \times X^* \to \mathbb{C}$ by 
+\[
+\inner{x}{\lambda}=\lambda(x), \qquad x \in X, \lambda \in X^*.
+\]
+This is called the {\em dual pairing}. If $X$ and $Y$ are normed spaces and $T \in \mathscr{B}(X,Y)$, it can be proved that there is a unique $T^* \in \mathscr{B}(Y^*,X^*)$ such that
+\[
+\inner{Tx}{\lambda}=\inner{x}{T^*\lambda}, \qquad x \in X, \lambda \in Y^*,
+\]
+called the {\em adjoint} of $T$, and that the adjoint satisfies $\norm{T}=\norm{T^*}$.\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~ 98, Theorem 4.10.}
+
+I give precise statements of any statement that I want to use without proof. If a fact is not straightforward to prove and is not easy to look up (perhaps because it
+does not have a standardized name), I give a citation to a statement that is the precise version  I use.
+I am making a point to write out full proofs of some tedious but essential arguments about Hilbert-Schmidt operators and trace class operators.\footnote{Many of the proofs that I give are vastly expanded from what is written in the references I used; I simply decided to write down every step that I did, and thus a reader should
+be able to read this note without needing having to work out calculations on paper or without realizing partway through that I was tacitly identifying  things or that
+what I said is true only under conditions I left unstated because I thought them too obvious.  Indeed there is no royal road through mathematics, but we do not need to break up
+the asphalt and destroy the signage to make travelling what roads there are a trial of one's skill.}
+
+
+
+
+\section{Finite rank operators}
+In this section, $X$ and $Y$ denote Banach spaces.
+We say that a linear map $T:X \to Y$ has {\em finite rank} if $T(X)$ is a finite dimensional subspace of $Y$. 
+A finite rank operator need not be bounded:
+If $X$ is infinite dimensional, let $\mathscr{E}$ be a Hamel basis for $X$ and  let $\{e_n:n \in \mathbb{N}\}$ be a subset of this basis. Defining a linear
+map on a Hamel basis determines it on the vector space. Define $T:X \to \mathbb{C}$ by $Te_n=n \norm{e_n}$ and $Te=0$ if $e$ is not in the countable subset. Then $T$ is not bounded; but its range has dimension 1, so $T$ has finite rank. 
+We define $\mathscr{B}_{00}(X,Y)$ to be the set of $T \in \mathscr{B}(X,Y)$ that have finite rank. It is apparent that $\mathscr{B}_{00}(X,Y)$ is a vector space.
+
+If $f\in X^*$ and $y \in Y$, we define
+$y \otimes f:X \to Y$ by
+\[
+y \otimes f(x)=f(x)y.
+\]
+$y \otimes f:X \to Y$ is linear, and
+\[
+\norm{y \otimes f} = \sup_{\norm{x} \leq 1} \norm{(y \otimes f)(x)} =
+\sup_{\norm{x} \leq 1} \norm{f(x)y} = \norm{y} \sup_{\norm{x} \leq 1} |f(x)| \leq
+\norm{y} \sup_{\norm{x} \leq 1} \norm{f} \norm{x},
+\]
+so $\norm{y \otimes f} \leq \norm{f} \norm{y}$, so $y \otimes f$ is bounded. $(y \otimes f)(H) \subseteq \Span\{y\}$, so $y \otimes f$ has finite rank.
+Therefore $y \otimes f \in \mathscr{B}_{00}(X,Y)$.
+
+The following theorem gives a representation for bounded finite rank operators.\footnote{Y. A. Abramovich and C. D. Aliprantis,
+{\em An Invitation to Operator Theory}, p.~124, Lemma 4.2. In this reference, what we write as $y \otimes f$ they write as $f \otimes y$.} 
+
+\begin{theorem}
+If $T \in \mathscr{B}_{00}(X,Y)$ and $w_1,\ldots,w_k$ is a basis for $T(X)$, then there are unique $f_1,\ldots,f_k \in X^*$ such that
+\[
+T = \sum_{j=1}^k w_j \otimes f_j.
+\]
+\label{finiteranksum}
+\end{theorem}
+
+
+For $y \in Y$, define $F_y:Y^* \to \mathbb{C}$ by $F_y(\lambda)=\lambda(y)$. One checks that $F_y \in (Y^*)^*$. 
+Often one writes 
+$y=F_y$, which is fine as long as we keep in mind whether we are using $y$ as an element of $Y$ or as an element of $(Y^*)^*$. 
+
+\begin{theorem}
+If there are $w_1,\ldots,w_k \in Y$ and $f_1,\ldots,f_k \in X^*$ such that
+\[
+T = \sum_{j=1}^k w_j \otimes f_j,
+\]
+then
+\[
+T^* = \sum_{j=1}^k f_j \otimes w_j.
+\]
+\label{finiterankadjoint}
+\end{theorem}
+\begin{proof}
+Let $y \in Y$ and $f \in X^*$. If $x \in X$ and $g \in Y^*$, then
+\[
+\inner{(y \otimes f)x}{g}=\inner{f(x)y}{g}=f(x)\inner{y}{g}=f(x)g(y),
+\]
+where $\inner{\cdot}{\cdot}:Y \times Y^* \to \mathbb{C}$  is the dual pairing. But
+\[
+f(x)g(y)=\inner{x}{g(y)f} = \inner{x}{F_y(g)f} = \inner{x}{(F_y \otimes f)(g)}.
+\]
+where $\inner{\cdot}{\cdot}:X \times X^* \to \mathbb{C}$  is the dual pairing. We have $F_y \otimes f \in \mathscr{B}(Y^*,X^*)$, and hence
+\[
+(y \otimes f)^*=F_y \otimes f=y \otimes f.
+\]
+This shows that the adjoint of each term $w_j \otimes f_j$ in $T$ is $f_j \otimes w_j$, and the adjoint of a sum is the sum of the adjoints of the terms, completing the proof.
+\end{proof}
+
+The above two theorems together show that if $T \in \mathscr{B}_{00}(X,Y)$ then $T^* \in \mathscr{B}_{00}(Y^*,X^*)$.
+
+
+\begin{theorem}
+If $X$ is a Banach space, then $\mathscr{B}_{00}(X)$ is a two sided ideal in the Banach algebra $\mathscr{B}(X)$. 
+\end{theorem}
+\begin{proof}
+We have stated already that $\mathscr{B}_{00}(X,Y)$ is a vector space, and here $Y=X$. If $A \in \mathscr{B}_{00}(X)$ and $T \in \mathscr{B}(X)$, then $AT \in \mathscr{B}(X)$, and 
+\[
+A(T(X)) \subseteq A(X),
+\]
+which is finite dimensional, so $AT \in \mathscr{B}_{00}(X)$. $TA \in \mathscr{B}(X)$, and $T(A(X))$ is the image of a finite dimensional subspace under $T$, and so is itself finite dimensional. Hence $TA \in \mathscr{B}_{00}(X)$. 
+\end{proof}
+
+
+
+
+
+
+\section{Compact operators}
+We say that a metric space $M$ is {\em totally bounded} if for every $\epsilon$ there are finitely many balls of radius $\epsilon$ whose union equals $M$.
+The Heine-Borel theorem states that a metric space is compact if and only if it is complete and totally bounded. If $S$ is a subset of a complete metric space $M$ and
+$\overline{S}$ is compact, then by the Heine-Borel theorem it is totally bounded, and any subset of a totally bounded metric space is itself a totally bounded metric space,
+so $S$ is totally bounded. On the other hand, if $S \subseteq M$ is totally bounded, then one proves that $\overline{S}$ is also totally bounded. As $\overline{S}$ is a closed
+subset of the complete metric space $M$, $\overline{S}$ is a complete metric space, and hence by the Heine-Borel theorem it is compact. 
+ We say that a subset of a metric space is {\em precompact} if its closure is compact, and thus
+a subset of a complete metric
+space is precompact if and only if it is totally bounded.
+
+Let $X$ and $Y$ be Banach spaces. If $T:X \to Y$ is a linear map and $U$ is the open unit ball in $X$, we say that $T$ is {\em compact} if the closure
+of $T(U)$ in $Y$ is compact.
+Therefore, to say that a linear map $T:X \to Y$ is compact is to say that $T(U)$ is totally bounded.
+
+It doesn't take long to show that if $T:X \to Y$ is linear and compact then it is bounded, so there is no difference between stating that something is a bounded
+compact operator and stating that it is a compact operator.
+The following is often a convenient characterization of a compact operator.
+
+\begin{theorem}
+A linear map $T:X \to Y$ is compact if and only if for every bounded sequence $x_n \in X$ there is a subsequence
+$x_{a(n)}$ such that $Tx_{a(n)}$ converges in $Y$.
+\end{theorem}
+
+We denote the set of compact operators $X \to Y$ by $\mathscr{B}_0(X,Y)$. It is apparent that $\mathscr{B}_0(X,Y)$ is a vector space.
+For $T \in \mathscr{B}(X,Y)$, it is a fact that $T \in \mathscr{B}_0(X,Y)$  if and only if $T^* \in \mathscr{B}_0(Y^*,X^*)$.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~105, Theorem 4.19.} 
+
+The following theorem states if a sequence of compact operators converges to a bounded operator, then that operator is compact.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~104, Theorem 4.18 (c).} Since $\mathscr{B}(X,Y)$ is a Banach space, this implies that $\mathscr{B}_0(X,Y)$ is a Banach space with the operator
+norm.
+
+\begin{theorem}
+If $X$ and $Y$ are Banach spaces, then
+$\mathscr{B}_0(X,Y)$ is a closed subspace of the Banach space $\mathscr{B}(X,Y)$.
+\end{theorem} 
+
+
+
+The following theorem shows that a bounded finite rank operator is a compact operator. Since a limit of compact operators is a compact operator, it follows from this that
+a limit of bounded finite rank operators is a compact operator.
+
+
+\begin{theorem}
+If $T \in \mathscr{B}_{00}(X,Y)$ then $T \in \mathscr{B}_0(X,Y)$. 
+\label{finiterankdensecompact}
+\end{theorem}
+\begin{proof}
+Let $U$ be the open unit ball in $X$. Since $T$ is bounded  and $U$ is a bounded set in $X$, $T(U)$ is a bounded set in $Y$. But $T(X)$
+is finite dimensional, so $T(U)$ is a bounded set in a finite dimensional vector space and hence by the Heine-Borel theorem,
+ the closure of $T(U)$ in $T(X)$ is a compact subset of $T(X)$. $T(X)$ is finite
+dimensional so is a closed subset of $Y$, and hence the closure of $T(U)$ in $T(X)$ is equal to the  closure  of $T(U)$ in $Y$. Hence the closure of $T(U)$ in $Y$
+is a compact subset
+of $Y$. (If $E$ is a topological space and $C \subseteq D \subseteq E$, then the subspace topology $C$ inherits from $E$ is the same as the subspace
+topology it inherits from $D$, so if $K \subseteq T(X) \subseteq Y$ then to say that $K$ is compact in $T(X)$ is equivalent to saying that $K$ is compact in $Y$.)
+\end{proof}
+
+\begin{theorem}
+If $X$ is a Banach space, then $\mathscr{B}_0(X)$ is a  two sided ideal in the Banach algebra $\mathscr{B}(X)$.
+\end{theorem}
+\begin{proof}
+We have stated already that $\mathscr{B}_0(X,Y)$ is a closed subspace of $\mathscr{B}(X,Y)$, and here $Y=X$.
+Let $K \in \mathscr{B}_0(X)$ and $T \in \mathscr{B}(X)$. On the one hand, if $x_n$ is a bounded sequence in $X$, then $\norm{Tx_n} \leq \norm{T} \norm{x_n}$, so
+$Tx_n$ is a bounded sequence in $X$. Hence there is a subsequence $Tx_{a(n)}$ such that $K(Tx_{a(n)})=(KT)x_{a(n)}$ converges, showing that
+$KT$ is compact.
+
+On the other hand, if $x_n$ is a bounded sequence in $X$, then there is a subsequence $x_{a(n)}$ such that
+$Kx_{a(n)}$ converges to some $x$. $T$ is continuous, so $T(Kx_{a(n)})$ converges  to $Tx$,
+showing that $TK$ is compact.
+\end{proof}
+
+If $X$ is not separable, then
+the image of the identity map $\id_X$ is not separable, so the image of a bounded linear operator need not be separable. However, the following theorem shows that the  image of a compact operator is separable. Check that if a subset of a metric space is separable then its closure
+is separable. From this and Theorem \ref{separable}  we get that the closure of the image of a compact operator is separable.
+
+\begin{theorem}
+If $K \in \mathscr{B}_0(X,Y)$, then $K(X)$ with the subspace topology from $Y$ is separable.
+\label{separable}
+\end{theorem}
+\begin{proof}
+Let $U_n=\{x \in X: \norm{x} < n\}$. Then $\overline{K(U_n)}$ is compact. 
+It is a fact that a compact metric space is separable, hence $\overline{K(U_n)}$ is separable. A subset of a separable metric space is itself separable with 
+the subspace topology, so
+ let $L_n$ be a countable dense subset of $K(U_n)$. 
+Let $L=\bigcup_{n=1}^\infty L_n$, which is countable. It is straightforward to verify that $L$ is a dense subset of
+\[
+K(X) = \bigcup_{n=1}^\infty K(U_n).
+\]
+Therefore, $K(X)$ is separable.
+\end{proof}
+
+
+
+
+
+
+\section{Hilbert spaces}
+We showed that if $X$ is a Banach space then both $\mathscr{B}_{00}(X)$ and $\mathscr{B}_0(X)$ are  two sided ideals in the Banach algebra $\mathscr{B}(X)$. We also showed
+that if $A \in \mathscr{B}_{00}(X)$ then $A^* \in \mathscr{B}_{00}(X^*)$, and that if $A \in \mathscr{B}_0(X)$ then $A^* \in \mathscr{B}_0(X^*)$. If $H$ is a Hilbert space then $\mathscr{B}(H)$ is a $C^*$-algebra (as the adjoint
+of $A \in \mathscr{B}(H)$ is not just an element of $\mathscr{B}(H^*)$, but can be identified with an element of $\mathscr{B}(H)$)
+and what we have shown implies that $\mathscr{B}_{00}(H)$ and $\mathscr{B}_0(H)$ are two sided $*$-ideals in the $C^*$-algebra $\mathscr{B}(H)$.
+
+
+If $S_\alpha, \alpha \in I$ are subsets of a Hilbert space $H$, we denote by $\bigvee_{\alpha \in I} S_\alpha$ the closure of the span
+of $\bigcup_{\alpha \in I} S_\alpha$.
+If $S_1,S_2$ are subsets of $H$, we write $S_1 \perp S_2$ if for every $s_1 \in S_1$ and
+$s_2 \in S_2$ we have $\inner{s_1}{s_2}=0$.
+If $V$ is a closed subspace of $H$, then $H = V \oplus V^\perp$, and the {\em orthogonal projection} onto $V$ is the map
+$P:H \to H$ defined by $P(v+w)=v$ for $v \in V, w\in V^\perp$. $P(H)=V$, so rather than first fixing a closed subspace and then
+talking about the orthogonal projection onto that subspace, one often speaks about an orthogonal projection, which is the orthogonal projection onto its image.
+It is straightforward to check that if an orthogonal projection is nonzero then it has norm $1$, and
+that an orthogonal projection is a positive operator.
+
+The following theorem is an explicit version of Theorem \ref{finiteranksum} for orthogonal projections.
+
+\begin{theorem}
+Let $\{e_1,\ldots,e_n\}$ be orthonormal in $H$ and let $M=\bigvee_{k=1}^n \{e_j\}$. If $P$ is the orthogonal projection onto $M$, then
+\[
+P = \sum_{k=1}^n e_k \otimes e_k, \qquad Ph = \sum_{k=1}^n \inner{h}{e_k} e_k, \quad h \in H.
+\]
+\label{projectionsum}
+\end{theorem}
+\begin{proof}
+ As $M$ is finite dimensional it is closed, and hence $H=M \oplus M^\perp$. Let $h = h_1 + h_2$, $h_1 \in M, h_2 \in M^\perp$; as
+ $P$ is the orthogonal projection onto $M$, we have $Ph=h_1$.
+
+Let $Qh = \sum_{k=1}^n \inner{h}{e_k}e_k$. We have to show that $Qh =Ph$. For each $1 \leq  j \leq n$, using that $\inner{e_k}{e_j}=\delta_{k,j}$ we get
+\[
+\inner{Qh}{e_j} = \sum_{k=1}^n \inner{h}{e_k}\inner{e_k}{e_j} = \inner{h}{e_j}. 
+\]
+Hence, if $1 \leq j \leq n$ then $\inner{h-Qh}{e_j}=0$. As $\{e_j\}$ are an orthonormal basis for $M$, this implies that
+$h-Qh \perp M$, and so $h-Qh \in M^\perp$. That is,
+\[
+h_1+h_2-Qh \in M^\perp,
+\]
+and as $h_2 \in M^\perp$ it follows that $h_1 - Qh \in M^\perp$. But $h_1-Qh \in M$ ($h_1 \in M$ by definition, and $Qh$ is a sum of elements
+in $M$), so $h_1-Qh=0$. As $Ph=h_1$, this means that $Ph=Qh$, completing the proof.
+\end{proof}
+
+
+
+We say that a Banach space $X$ has the {\em approximation property} if for each $A \in \mathscr{B}_0(X)$ there is a sequence $A_n \in \mathscr{B}_{00}(X)$ such that
+$A_n \to A$. A result of Per Enflo shows that there are Banach spaces that do not have the approximation property. However, in the following theorem we show that
+every Hilbert space has the approximation property.
+
+\begin{theorem}
+If $H$ is a Hilbert space and $A \in \mathscr{B}_0(H)$, then there is a sequence $A_n \in \mathscr{B}_{00}(H)$ such that $A_n \to A$.
+\label{finiteranklimit}
+\end{theorem}
+\begin{proof}
+By Theorem \ref{separable}, $V=\overline{A(H)}$ is separable. $V$ is a closed subspace of the Hilbert space $H$, so is itself a Hilbert space. If $V$ has finite dimension
+then $A$ is itself finite rank. Otherwise,
+let $\{e_n: n \geq 1\}$ be an orthonormal basis for $V$, and let $P_n$ be the orthogonal projection onto $\bigvee_{j=1}^n \{e_j\}$. 
+ $P_n \in \mathscr{B}_{00}(H)$, and define $A_n=P_nA \in \mathscr{B}_{00}(H)$. 
+
+
+In any Hilbert space, if $v_\alpha$ is an orthonormal basis then $\id_H = \sum_{\alpha} v_\alpha \otimes v_\alpha$, where the series converges in the strong operator
+topology (see \S \ref{diagonalizable}). Thus, for any $h \in V$ we have
+\[
+Ah = \sum_{k=1}^\infty \inner{Ah}{e_k}e_k,
+\]
+where the series converges in $H$. By Theorem \ref{projectionsum},
+\[
+A_n h = P_nAh = \sum_{k=1}^n \inner{Ah}{e_k}e_k, 
+\]
+and therefore $\norm{A_n h -Ah} \to 0$ as $n \to \infty$. What we have shown is that $A_n \to A$ in the strong operator topology.
+
+Let $B$ be the closed unit ball in $H$.
+Because $A$ is a compact operator, by the Heine-Borel theorem $A(B)$ is totally bounded:  If $\epsilon>0$, then
+  there is some $m$ and $h_1,\ldots,h_m \in
+H$ such that
+\[
+A(B) \subseteq \bigcup_{j=1}^m B_{\epsilon}(Ah_j).
+\]
+If $h \in B$, there is some $1 \leq j \leq m$ with $Ah \in B_\epsilon(Ah_j)$, i.e. $\norm{Ah-Ah_j}<\epsilon$. If $n \geq 1$, then, as
+$\norm{P_n} \leq 1$,
+\begin{eqnarray*}
+\norm{Ah-A_nh}&\leq&\norm{Ah-Ah_j}+\norm{Ah_j-A_nh_j}+\norm{A_nh_j-A_nh}\\
+&=&\norm{Ah-Ah_j}+\norm{Ah_j-A_nh_j}+\norm{P_n(Ah_j-Ah)}\\
+&\leq&2\norm{Ah-Ah_j}+\norm{Ah_j-A_nh_j}\\
+&\leq&2\epsilon+\norm{Ah_j-A_nh_j}.
+\end{eqnarray*}
+As $A_n \to A$ in the strong operator topology, for each $1 \leq j \leq m$ there is some $N(j)$ such that if $n \geq N(j)$ then
+$\norm{Ah_j-A_nh_j}<\epsilon$ and so, if $n \geq N(j)$,
+\[
+\norm{Ah-A_nh}<3\epsilon.
+\]
+Let $N=\max_{1 \leq j \leq m} N(j)$, whence for all $h \in B$, if $n \geq N$ then
+\[
+\norm{Ah-A_nh}<3\epsilon.
+\]
+But
+\[
+\norm{A-A_n}=\sup_{\norm{h} \leq 1} \norm{(A-A_n)h},
+\]
+so if $n \geq N$ then
+\[
+\norm{A-A_n} < 3\epsilon,
+\]
+showing that $A_n \to A$.
+\end{proof}
+
+
+
+
+\section{Diagonalizable operators}
+\label{diagonalizable}
+If $\mathscr{E}$ is an orthonormal set in a Hilbert space $H$, which  we do not demand  be separable, then $\mathscr{E}$ is an orthonormal basis for $H$ if and only if for every $h \in H$ we have 
+$h=\sum_{e \in \mathscr{E}} \inner{h}{e}e$.\footnote{John B. Conway, {\em A Course in Functional Analysis}, second ed., p.~16, Theorem 4.13.}
+In other words, if $\mathscr{E}$ is an orthonormal set in $H$, then $\mathscr{E}$ is an orthonormal basis for $H$ if and only if
+\[
+\id_H = \sum_{e \in \mathscr{E}} e \otimes e,
+\]
+where the series converges in the strong operator topology. 
+
+
+We say that a linear map $A:H \to H$ is {\em diagonalizable} if there is an orthonormal basis of $H$ each element of which is an eigenvector of $A$. 
+If $A$ is a bounded linear operator on $H$, $A$ is diagonalizable if and only
+if there is an orthonormal basis $e_i, i \in I$, of $H$ and
+$\lambda_i \in \mathbb{C}$ such that the series
+\[
+\sum_{i \in I} \lambda_i e_i \otimes e_i
+\]
+converges to $A$ in the strong operator topology.  One checks that the series $\sum_{i \in I} \overline{\lambda_i} e_i \otimes e_i$ converges to $A^*$ in the strong
+operator topology.
+
+If
+$A \in \mathscr{B}(H)$ is diagonalizable with eigenvalues $\{\lambda_i: i \in I\}$, it is a fact that
+\begin{equation}
+\norm{A}=\sup_{i \in I} |\lambda_i|.
+\label{diagonalnorm}
+\end{equation}
+
+\begin{theorem}
+Let  $H$ be a Hilbert space with orthonormal basis $\{e_i: i \in I\}$, let $\lambda_i \in \mathbb{C}$,
+and define a linear map  $A:\Span\{e_i: i \in I\} \to \Span\{e_i: i \in I\}$ by $Ae_i = \lambda_i e_i$.  
+If $\sup_{i \in I} |\lambda_i| < \infty$, then $A$ extends to a unique element of $\mathscr{B}(H)$.
+\end{theorem}
+\begin{proof}
+Let $M=\sup_{i \in I} |\lambda_i| < \infty$.
+If $J$ is a finite subset of $I$ and $x=\sum_{i \in J} \alpha_i e_i$, then, as the $e_i$ are orthonormal,
+\[
+\norm{Ax}^2=\norm{\sum_{i \in J} \alpha_i Ae_i}^2 = \norm{\sum_{i \in J} \alpha_i \lambda_i e_i}^2
+=\sum_{i \in J} \norm{\alpha_i \lambda_i e_i}^2 \leq M^2 \sum_{i \in J} |\alpha_i|^2.
+\]
+But
+\[
+\norm{x}^2 = \norm{\sum_{i \in J} \alpha_i e_i}^2 =\sum_{i \in J} \norm{\alpha_i e_i}^2= \sum_{i \in J} |\alpha_i|^2.
+\]
+So
+\[
+\norm{Ax} \leq M \norm{x}.
+\]
+It follows that $A$ is a bounded operator on $\Span\{e_i:i \in I\}$,
+which is dense in $H$. Then there is a unique element of $\mathscr{B}(H)$ whose
+restriction to $\Span\{e_i: i \in I\}$ is equal to $A$, and we denote this element of $\mathscr{B}(H)$ by $A$.
+\end{proof}
+
+
+
+
+In Theorem \ref{separable} we proved that the image of a compact operator is separable. Hence if a compact operator is diagonalizable then it has only countably many nonzero eigenvalues.
+
+\begin{theorem}
+If $H$ is a separable Hilbert space with orthonormal basis $e_n, n \geq 1$, and if $A:H \to H$ is linear and
+$Ae_n=\lambda_n e_n$ for all $n$,
+then $A \in \mathscr{B}_0(H)$ if and only if $\lambda_n \to 0$ as $n \to \infty$.
+\end{theorem}
+\begin{proof}
+Suppose that $A$ is compact. Then $A^*$ is compact, and as $A$ is diagonalizable so is $A^*$. The proof of Theorem \ref{finiteranklimit} wasn't generally useful enough to be worth putting
+into a lemma, but to understand the following it will be necessary to read that proof.
+Let $\lambda_{a(n)}$ be the nonzero eigenvalues of $A$, and let $\mu_n=\lambda_{a(n)}$, $f_n=e_{a(n)}$. Check that $f_n, n \geq 1$ is an orthonormal basis for $\overline{A^*(H)}$,
+ $P_n$ be the projection onto $\bigvee_{j=1}^n \{f_j\}$.
+ Then using the argument in the proof of Theorem \ref{finiteranklimit} we get $P_n A^* \to A^*$; this completes our trip back to that proof.  
+Let $A_n = A-AP_n$. As $\norm{P_nA^*-A^*} \to 0$ as $n \to \infty$,
+\begin{eqnarray*}
+\norm{A_n}&=&\norm{(A-AP_n)^*}\\
+&=&\norm{A^*-P_n^*A^*}\\
+&=&\norm{A^*-P_n A^*}\\
+&\to&0.
+\end{eqnarray*}
+If $1 \leq j \leq n$ then $A_n f_j = Af_j-Af_j = 0$, and if $j > n$ then
+$A_n f_j = Af_j=\mu_j f_j$. Hence $A_n$ is a diagonalizable operator, and by \eqref{diagonalnorm} we get $\norm{A_n}=\sup_{j>n} |\mu_j|$. 
+Together with $\norm{A_n} \to 0$ as $n \to \infty$, this means that $\limsup_{n \to \infty} |\mu_n| = 0$. As $\mu_n$ are precisely the nonzero $\lambda_n$, we obtain from this
+that
+$\lim_{n \to \infty} |\lambda_n|=0$.
+
+On the other hand, suppose that $\lambda_n \to 0$ as $n \to \infty$.
+Because $\lambda_n \to 0$, the absolute values of the eigenvalues of $A$ are bounded and hence 
+$A \in \mathscr{B}(H)$. 
+Let $P_n$ be the projection onto
+$\bigvee_{j=1}^n \{e_j\}$. If $1 \leq j \leq n$ then $AP_n e_j =Ae_j=\lambda_j e_j$, and if
+$j>n$ then $AP_n e_j = 0$. Therefore $AP_n \in \mathscr{B}_{00}(H)$. For $A_n=A-AP_n$, we have
+$\norm{A_n} = \sup_{j>n} |\lambda_j|$, from which it follows that
+\[
+\lim_{n \to \infty} \norm{A_n} =0.
+\]
+Hence $AP_n \to A$, and as $AP_n$ are bounded finite rank operators, $A$ is a compact operator.
+\end{proof}
+
+
+
+If $A \in \mathscr{B}(H)$ is diagonalizable, say $Ae_i = \lambda_i e_i$, $i \in I$, then $A^*e_i = \overline{\lambda_i} e_i$, $i \in I$, and for $j \in I$,
+\[
+AA^*e_j=A\sum_{i \in I} \overline{\lambda_i} \inner{e_j}{e_i} e_i
+=A \left( \overline{\lambda_j} e_j \right)= \overline{\lambda_j} \lambda_j e_j = |\lambda_j|^2 e_j.
+\]
+Likewise we get $A^*Ae_j=|\lambda_j|^2 e_j$, so $AA^*=A^*A$, that is, a bounded diagonalizable operator is  {\em normal}.
+The following theorem states an implication in the other direction.\footnote{Gert K. Pedersen, {\em Analysis Now}, revised printing, p.~108, Theorem 3.3.8.}
+This is an instance of the {\em spectral theorem}.
+
+\begin{theorem}
+If $H$ is a Hilbert space over $\mathbb{C}$ and $T$ is a normal compact operator on $H$, then $T$ is diagonalizable.
+\label{spectraltheorem}
+\end{theorem}
+
+
+
+
+
+\section{Polar decomposition}
+It is a fact that
+$A \in \mathscr{B}(H)$ is self-adjoint if and only if
+ $\inner{Ax}{x} \in \mathbb{R}$ for all $x \in H$.
+$A \in \mathscr{B}(H)$ is said to be {\em positive} if $A$ is self-adjoint and $\inner{Ax}{x} \geq 0$ for all $x \in H$.
+It is a fact that if $A \in \mathscr{B}(H)$ is positive then there is a unique positive element of $\mathscr{B}(H)$, call it $A^{1/2}$, such that
+$(A^{1/2})^2=A$; namely, a bounded positive operator has a unique positive square root in $\mathscr{B}(H)$.\footnote{Gert K. Pedersen, {\em Analysis Now}, revised printing, p.~92, Proposition 3.2.11.}
+It is straightforward to check that if $A \in \mathscr{B}(H)$ then $A^*A$  is positive, and hence has a square root $(A^*A)^{1/2} \in \mathscr{B}(H)$, which we denote
+by $|A|$. $|A|$ satisfies $\norm{Ax}=\norm{|A|x}$ for all $x \in H$. 
+
+
+An {\em isometry} from one Hilbert space to another is a linear map $A:H_1 \to H_2$ such that if $x \in H_1$ then $\norm{Ax}=\norm{x}$. 
+If $A:H \to H $ is linear and the restriction of $A$ to $(\ker A)^\perp$ is an isometry, then we say that $A$ is a {\em partial isometry}.
+One checks that a partial isometry is an element
+of $\mathscr{B}(H)$,  if it is not the zero map then it has norm $1$, and that its image is closed.
+We call
+$(\ker A)^\perp$ the {\em initial space} of $A$, and $A(H)$ the {\em final space} of $A$. We can prove that
+if $A$ is a partial isometry then $A^*$ is a partial isometry whose initial space is the final space
+of $A$ and whose final space is the initial space of $A$.
+For example, an orthogonal projection is a partial isometry whose initial space is the image of the orthogonal projection and whose final
+space is equal to its initial space.
+
+
+It is a fact that if $A \in \mathscr{B}(H)$ then there is a partial isometry $U$
+with $\ker U = \ker A$ satisfying $A=U|A|$, and that if $V$ is a partial isometry with $\ker V = \ker A$ that satisfies
+$A=V|A|$, then $V=U$.\footnote{Gert K. Pedersen, {\em Analysis Now}, revised printing, p.~96, Theorem 3.2.17.} $A=U|A|$ is called the {\em polar decomposition} of $A$. The polar decomposition satisfies
+\begin{equation}
+U^*U|A|=|A|, \quad U^*A=|A|, \quad UU^*A=A, \quad A^*=|A|U^*, \quad |A^*|=U|A|U^*.
+\label{polardecomposition}
+\end{equation}
+We will use these formulas repeatedly when we are working with trace class operators, and we have numbered the above
+equation to refer to it and also to draw the eye to it.
+
+
+If $I$ is an ideal of $\mathscr{B}(H)$ and $A \in I$ then $|A|=U^*A \in I$. In particular, if $A \in \mathscr{B}_{00}(H)$ then $|A| \in \mathscr{B}_{00}(H)$ and if
+$A \in \mathscr{B}_0(H)$ then $|A| \in \mathscr{B}_0(H)$.
+
+
+
+
+\section{Hilbert-Schmidt operators}
+Let $H$ be a Hilbert space, and $\{e_i: i \in I\}$ an orthonormal basis of $H$. We say that $A \in \mathscr{B}(H)$ is a {\em Hilbert-Schmidt}
+operator if 
+\[
+\sum_{i \in I} \norm{Ae_i}^2 < \infty.
+\]
+The following theorem shows that if $A \in \mathscr{B}(H)$ is a Hilbert-Schmidt operator using one basis it will also be one using any other basis, that  if $A$ is not a Hilbert-Schmidt operator using one basis it will not be one using
+any other basis, and that $A$ is Hilbert-Schmidt if and only if its adjoint $A^*$ is Hilbert-Schmidt.
+
+\begin{theorem}
+Let $H$ be a  Hilbert space. If $\{e_\alpha: \alpha \in I\}$ and $\{f_\alpha: \alpha \in J\}$ are orthonormal bases for $H$ and $A \in \mathscr{B}(H)$, then
+\[
+ \sum_{\alpha \in I} \norm{Ae_\alpha}^2 = \sum_{\alpha \in J} \norm{A^*f_\alpha}^2= \sum_{\alpha \in J} \norm{Af_\alpha}^2.
+ \]
+ \label{basisindependent}
+\end{theorem}
+\begin{proof}
+For each $\beta \in J$, using Parseval's identity we have
+\[
+Af_\beta = \sum_{\alpha \in J} \inner{Af_\beta}{f_\alpha}f_\alpha, \qquad \norm{Af_\beta}^2=\sum_{\alpha \in J} |\inner{Af_\beta}{f_\alpha}|^2.
+\]
+Using this we get 
+\begin{eqnarray*}
+\sum_{\beta \in J} \norm{Af_\beta}^2&=&\sum_{\beta \in J} \sum_{\alpha \in J} |\inner{Af_\beta}{f_\alpha}|^2\\
+&=&\sum_{\alpha \in J} \sum_{\beta \in J} |\inner{Af_\beta}{f_\alpha}|^2\\
+&=&\sum_{\alpha \in J} \sum_{\beta \in J} |\inner{f_\beta}{A^*f_\alpha}|^2\\
+&=&\sum_{\alpha \in J} \sum_{\beta \in J} |\inner{A^*f_\alpha}{f_\beta}|^2\\
+&=&\sum_{\alpha \in J} \norm{A^* f_\alpha}^2.
+\end{eqnarray*}
+
+For each $\beta \in I$, Parseval's identity gives us
+\[
+\norm{Ae_\beta}^2=\sum_{\alpha \in J} |\inner{Ae_\beta}{f_\alpha}|^2,
+\]
+and using this we obtain
+\begin{eqnarray*}
+\sum_{\beta \in I} \norm{Ae_\beta}^2&=&\sum_{\beta \in I} \sum_{\alpha \in J} |\inner{Ae_\beta}{f_\alpha}|^2\\
+&=&\sum_{\alpha \in J} \sum_{\beta \in I} |\inner{Ae_\beta}{f_\alpha}|^2\\
+&=&\sum_{\alpha \in J} \sum_{\beta \in I}|\inner{e_\beta}{A^*f_\alpha}|^2\\
+&=&\sum_{\alpha \in J} \sum_{\beta \in I}|\inner{A^*f_\alpha}{e_\beta}|^2\\
+&=&\sum_{\alpha \in J} \norm{A^* f_\alpha}^2.
+\end{eqnarray*}
+\end{proof}
+
+
+Let $\mathscr{B}_2(H)$ be the set of Hilbert-Schmidt operators in $\mathscr{B}(H)$.
+If $\{e_i:i \in I\}$ is an orthonormal basis for $H$ and $A \in \mathscr{B}(H)$, we define
+\[
+\norm{A}_2 = \left( \sum_{ i \in I} \norm{Ae_i}^2\right)^{1/2}.
+\]
+To say that $A \in \mathscr{B}_2(H)$ is to say that $A \in \mathscr{B}(H)$ and $\norm{A}_2 < \infty$. 
+Using the triangle inequality in $\ell^2(I)$,
+one checks that $\mathscr{B}_2(H)$ is a vector space and that $\norm{\cdot}_2$ is a norm on $\mathscr{B}_2(H)$, which we call
+the {\em Hilbert-Schmidt norm}.
+
+Because $\norm{|A|x}=\norm{Ax}$ for all $x \in H$, $A$ is Hilbert-Schmidt if and only if $|A|$ is Hilbert-Schmidt, and
+$\norm{A}_2 = \norm{|A|}_2$.
+From Theorem \ref{basisindependent} we obtain that if $A \in \mathscr{B}_2(H)$ then $A^* \in \mathscr{B}_2(H)$, and 
+$\norm{A}_2 = \norm{A^*}_2$.
+
+
+\begin{theorem}
+$B_2(H)$ is a two sided $*$-ideal in the $C^*$-algebra $\mathscr{B}(H)$, and if $A \in \mathscr{B}_2(H)$ and $T \in \mathscr{B}(H)$ then
+\[
+\norm{AT}_2 \leq \norm{A}_2 \cdot \norm{T}, \qquad \norm{TA}_2 \leq \norm{T} \cdot \norm{A}_2.
+\]
+\label{HSideal}
+\end{theorem}
+\begin{proof}
+Let $\mathscr{E}$ be an orthonormal basis for $H$.
+If $A \in \mathscr{B}_2(H)$ and $T \in \mathscr{B}(H)$, then
+\[
+\norm{TA}_2^2=\sum_{e \in \mathscr{E}} \norm{TAe}^2 \leq \sum_{e \in \mathscr{E}} \left( \norm{T} \norm{Ae}\right)^2 = \norm{T}^2\norm{A}_2^2 < \infty.
+\]
+On the other hand, using the above and the fact that if $A$ is Hilbert-Schmidt then $A^*$ is Hilbert-Schmidt,
+\[
+\norm{AT}_2^2 = \norm{(AT)^*}_2^2 = \norm{T^*A^*}_2^2 = \norm{T^*}^2 \norm{A^*}_2^2 < \infty.
+\]
+\end{proof}
+
+
+The following theorem shows that the operator norm is dominated by the Hilbert-Schmidt norm, and therefore that the topology on the normed space
+$\mathscr{B}_2(H)$ with the Hilbert-Schmidt norm is finer than the subspace topology it inherits from $\mathscr{B}(H)$ (i.e. its topology as a normed space with the operator norm).
+
+
+\begin{theorem}
+If $A \in \mathscr{B}_2(H)$ then $\norm{A} \leq \norm{A}_2$.
+\label{HSdominated}
+\end{theorem}
+\begin{proof}
+Let $\epsilon>0$. We have
+\[
+\norm{A} = \sup_{\norm{v} = 1} \norm{Av}.
+\]
+Take $v \in H$, $\norm{v}=1$, with $\norm{Av}^2+\epsilon>\norm{A}^2$. There
+ is an orthonormal basis $\{e_\alpha: \alpha \in I\}$ for $H$ that includes
+$v$; one proves this using Zorn's lemma. Then
+\[
+\norm{A}^2 <\epsilon+ \norm{Av}^2 \leq \epsilon + \norm{Av}^2 + \sum_{e_\alpha \neq v} \norm{Ae_\alpha}^2
+=\epsilon+\sum_{\alpha \in I} \norm{Ae_\alpha}^2 = \epsilon + \norm{A}_2^2.
+\]
+As this is true for all $\epsilon>0$, it follows that $\norm{A} \leq \norm{A}_2$.
+\end{proof}
+
+
+The following theorem states that every bounded finite rank operator is a bounded Hilbert-Schmidt operator, and that every bounded Hilbert-Schmidt operator
+is the limit in the Hilbert-Schmidt norm  of a sequence of bounded finite rank operators.
+
+\begin{theorem}
+$\mathscr{B}_{00}(H)$ is a dense subset of the normed space $\mathscr{B}_2(H)$ with the Hilbert-Schmidt norm.
+\end{theorem}
+\begin{proof}
+If $A \in \mathscr{B}_{00}(H)$, then there is an orthonormal basis $\{e_i: i \in I\}$  for $H$ and a finite subset $J$ of $I$
+such that if $i \in I \setminus J$ then
+$Ae_i=0$.
+From this it follows that $\norm{A}_2<\infty$, and thus $A \in \mathscr{B}_2(H)$, so $\mathscr{B}_{00}(H)$ is a subset of $\mathscr{B}_2(H)$.
+
+Let $\{e_i:i \in I\}$ be an orthonormal basis for $H$, let 
+$A \in \mathscr{B}_2(H)$, and let $\epsilon>0$.   As $\sum_{i \in I} \norm{Ae_i}^2 < \infty$,
+there is some finite subset $J$ of $I$ such that 
+\[
+\sum_{i \in I \setminus J} \norm{Ae_i}^2 < \epsilon.
+\] 
+Let $P$ be the orthogonal projection onto $\Span\{e_i: i \in J\}$ (which is finite dimensional and hence closed), and define
+$B \in \mathscr{B}_{00}(H)$ by $B=AP$.
+We have
+\[
+\norm{A-B}_2^2 = \sum_{i \in I \setminus J} \norm{Ae_i}^2 < \epsilon,
+\]
+showing that $\mathscr{B}_{00}(H)$ is dense in $\mathscr{B}_2(H)$.
+\end{proof}
+
+
+If $A \in \mathscr{B}_2(H)$, then by the above theorem there is a sequence of bounded finite rank operators $A_n$ such that
+$\norm{A_n-A}_2 \to 0$ as $n \to \infty$. But by Theorem \ref{HSdominated}, $\norm{A_n-A} \leq \norm{A_n-A}_2$,
+and by Theorem \ref{finiterankdensecompact}, a limit of bounded finite rank operators is a compact operator, so $A$ is compact.
+Thus, a bounded Hilbert-Schmidt operator is a compact operator.
+
+
+We are going to define an inner product on $\mathscr{B}_2(H)$ and we will show that with this inner product $\mathscr{B}_2(H)$ is a Hilbert space. However
+the cleanest way I know to do this is by defining the trace of an operator. Moreover, we care just as much about trace class operators as we do Hilbert-Schmidt operators.
+
+
+
+\section{Trace class operators}
+ If $\{e_\alpha: \alpha \in I\}$ and $\{f_\alpha: \alpha \in J\}$ are orthonormal bases for $H$
+and $A \in \mathscr{B}(H)$, then using Theorem \ref{basisindependent} we have
+\begin{eqnarray*}
+\sum_{\alpha \in I} \inner{|A|e_\alpha}{e_\alpha}&=&\sum_{\alpha \in I} \inner{|A|^{1/2}e_\alpha}{|A|^{1/2}e_\alpha}\\
+&=&\sum_{\alpha \in I} \norm{|A|^{1/2} e_\alpha}^2\\
+&=&\sum_{\alpha \in J} \norm{|A|^{1/2} f_\alpha}^2\\
+&=&\sum_{\alpha \in J} \inner{|A|^{1/2} f_\alpha}{|A|^{1/2} f_\alpha}\\
+&=&\sum_{\alpha \in J} \inner{|A|f_\alpha}{f_\alpha}.
+\end{eqnarray*}
+If $\{e_i: i \in I\}$ is an orthonormal basis for $H$, we say that $A \in \mathscr{B}(H)$ is {\em trace class} if
+\[
+\sum_{i \in I} \inner{|A|e_i}{e_i} < \infty.
+\]
+We denote the set of trace class operators in $\mathscr{B}(H)$ by $\mathscr{B}_1(H)$. For $A \in \mathscr{B}(H)$, define
+\[
+\norm{A}_1 =\sum_{i \in I} \inner{|A|e_i}{e_i}.
+\]
+To say that $A \in \mathscr{B}_1(H)$ is to say that $A \in \mathscr{B}(H)$ and that $\norm{A}_1 < \infty$. 
+As $|A|^{1/2}$ is self-adjoint,
+it is apparent that $\norm{A}_1 = \norm{|A|^{1/2}}_2^2$.
+We
+will prove that $\mathscr{B}_1(H)$ is a vector space and that $\norm{\cdot}_1$ is a norm on this vector space, but this takes a surprising amount of work and we will not do this yet.
+
+
+
+
+The following theorem gives different characterizations of bounded trace class operators.\footnote{John B. Conway,
+{\em A Course in Operator Theory}, p.~88, Proposition 18.8.} This theorem shows in particular that if $A \in \mathscr{B}_1(H)$ then
+$A$ is the product of two bounded Hilbert-Schmidt operators, and thus, as $\mathscr{B}_2(H)$ is an ideal in $\mathscr{B}(H)$,  that $A \in \mathscr{B}_2(H)$.
+In particular, as a consequence Theorem \ref{HSdominated}, every bounded Hilbert-Schmidt operator is compact, so every bounded trace
+class operator is compact.
+
+
+\begin{theorem}
+If $A \in \mathscr{B}(H)$, then the following are equivalent.
+\begin{itemize}
+\item $A \in \mathscr{B}_1(H)$.
+\item $|A|^{1/2} \in \mathscr{B}_2(H)$.
+\item $A$ is the product of two elements of $\mathscr{B}_2(H)$.
+\item $|A|$ is the product of two elements of $\mathscr{B}_2(H)$.
+\end{itemize}
+\label{traceTFAE}
+\end{theorem}
+\begin{proof}
+Let $e_i, i \in I$ be an orthonormal basis for $H$.
+Suppose that $A \in \mathscr{B}_1(H)$. We have
+\[
+\norm{|A|^{1/2}}_2^2=\sum_{i \in I} \norm{|A|^{1/2}e_i}^2 = \sum_{i \in I} \inner{|A|^{1/2}e_i}{|A|^{1/2}e_i}=\sum_{i \in I} \inner{|A|e_i}{e_i} = \norm{A}_1,
+\]
+so $|A|^{1/2} \in \mathscr{B}_2(H)$.
+
+Suppose that $|A|^{1/2} \in \mathscr{B}_2(H)$. $A=U|A|=(U|A|^{1/2}) |A|^{1/2}$. As $\mathscr{B}_2(H)$ is an ideal,
+we get $U|A|^{1/2} \in \mathscr{B}_2(H)$, hence $A$ is the product of two elements of $\mathscr{B}_2(H)$.
+
+Suppose that $A=BC$, with $B,C \in \mathscr{B}_2(H)$. Let $A=U|A|$ be the polar decomposition of $A$. By 
+\eqref{polardecomposition}, the polar decomposition satisfies $U^*U|A|=|A|$. 
+But $U|A|=BC$ implies that $U^*U|A|=U^*BC$, hence $|A|=U^*BC=(U^*B)C$. As $\mathscr{B}_2(H)$ is an ideal, we have $U^*B \in \mathscr{B}_2(H)$, so we have written $|A|$ as a product of two elements of
+$\mathscr{B}_2(H)$.
+
+Suppose that $|A|=BC$, with  $B,C \in \mathscr{B}_2(H)$; so $B^* \in \mathscr{B}_2(H)$ too. We have, using the Cauchy-Schwarz inequality first in $H$ and next in $\ell^2(I)$,
+\begin{eqnarray*}
+\norm{A}_1&=&\sum_{i \in I} \inner{|A|e_i}{e_i}\\
+&=&\sum_{i \in I} \inner{BCe_i}{e_i}\\
+&=&\sum_{i \in I} \inner{Ce_i}{B^*e_i}\\
+&\leq&\sum_{i \in I} \norm{Ce_i}\norm{B^*e_i}\\
+&\leq&\left( \sum_{i \in I} \norm{Ce_i}^2 \right)^{1/2} \left( \sum_{i \in I} \norm{B^*e_i}^2 \right)^{1/2}\\
+&=&\norm{C}_2 \norm{B^*}_2\\
+&<&\infty.
+\end{eqnarray*}
+Hence $A \in \mathscr{B}_1(H)$, completing the proof.
+\end{proof}
+
+
+The following theorem shows that if $A \in \mathscr{B}_1(H)$ then  sums similar to $\norm{A}_1$ are also finite, and
+ that the series $\sum_{e \in \mathscr{E}} \inner{Ae}{e}$ does not depend on the orthonormal basis $\mathscr{E}$.\footnote{John 
+B. Conway, {\em A Course in Operator Theory}, p.~88, Proposition 18.9.}
+
+\begin{theorem}
+If $A \in \mathscr{B}_1(H)$ and $\mathscr{E}$ is an orthonormal basis for $H$, then
+\[
+\sum_{e \in \mathscr{E}} |\inner{Ae}{e}|< \infty,
+\]
+and if $\mathscr{F}$ is an orthonormal basis for $H$ then
+\[
+\sum_{e \in \mathscr{E}} \inner{Ae}{e} = \sum_{f \in \mathscr{F}} \inner{Af}{f}.
+\]
+\label{absconvergent}
+\end{theorem}
+\begin{proof}
+By Theorem \ref{traceTFAE}, there are $B,C \in \mathscr{B}_2(H)$ such that $A=C^*B$. If $\lambda \in \mathbb{C}$ and $e \in \mathscr{E}$ then
+\begin{eqnarray*}
+\norm{(B-\lambda C)e}^2 &=& \inner{(B-\lambda C)e}{(B-\lambda C)e}\\
+&=&\inner{Be}{Be}-\inner{Be}{\lambda Ce}-\inner{\lambda Ce}{Be}+
+\inner{\lambda Ce}{\lambda Ce}\\
+&=&\norm{Be}^2-\inner{Be}{\lambda Ce}-\overline{\inner{Be}{\lambda Ce}}+|\lambda|^2 \norm{Ce}^2\\
+&=&\norm{Be}^2 - 2 \Re \inner{Be}{\lambda Ce} +|\lambda|^2 \norm{Ce}^2.
+\end{eqnarray*}
+As $\norm{(B-\lambda C)e}^2 \geq 0$, 
+\[
+2 \Re \inner{Be}{\lambda Ce} \leq \norm{Be}^2+|\lambda|^2 \norm{Ce}^2,
+\]
+so
+\[
+2 \Re\left(\overline{\lambda} \inner{Be}{ Ce}\right) \leq \norm{Be}^2+|\lambda|^2 \norm{Ce}^2.
+\]
+This is true for any $\lambda \in \mathbb{C}$ and $e \in \mathscr{E}$. Take $|\lambda|=1$, depending on $e$, such that
+\[
+\overline{\lambda}\inner{Be}{Ce}=|\inner{Be}{Ce}|,
+\]
+which gives
+\[
+2\Re |\inner{Be}{Ce}| \leq \norm{Be}^2+\norm{Ce}^2,
+\]
+i.e.,
+\[
+|\inner{Be}{Ce}| \leq \frac{1}{2}\left( \norm{Be}^2+\norm{Ce}^2 \right).
+\]
+Since this inequality doesn't involve $\lambda$, the fact that we chose $\lambda$ depending on $e$ doesn't matter, and the above inequality holds
+for any $e \in \mathscr{E}$. Therefore
+\[
+\sum_{e \in \mathscr{E}} |\inner{Ae}{e}| = \sum_{e \in \mathscr{E}} |\inner{C^*Be}{e}| = \sum_{e \in \mathscr{E}} |\inner{Be}{Ce}|
+\leq \frac{1}{2} \norm{B}_2^2 + \frac{1}{2} \norm{C}_2^2 < \infty,
+\]
+which is the first statement we wanted to prove and which was necessary to prove even to make sense of the second statement.
+
+Because $\sum_{e \in \mathscr{E}} |\inner{Ae}{e}|<\infty$, the series
+$\sum_{e \in \mathscr{E}} \inner{Ae}{e}$ converges. We have to show that its value does not depend on the orthonormal basis $\mathscr{E}$.
+If $e \in \mathscr{E}$, then
+\begin{eqnarray*}
+\norm{(B+C)e}^2 - \norm{(B-C)e}^2&=&\norm{Be}^2 + \inner{Be}{Ce}+\inner{Ce}{Be}+\norm{Ce}^2\\
+&&-\left( \norm{Be}^2 - \inner{Be}{Ce}-\inner{Ce}{Be}+\norm{Ce}^2 \right)\\
+&=&2\inner{Be}{Ce} + 2\inner{Ce}{Be}\\
+&=&4\Re \inner{Be}{Ce},
+\end{eqnarray*}
+which gives us
+\begin{eqnarray*}
+\sum_{e \in \mathscr{E}} \Re \inner{Ae}{e}  &=& \sum_{e \in \mathscr{E}}\Re \inner{Be}{Ce}\\
+&=&\frac{1}{4} \sum_{e \in \mathscr{E}} \norm{(B+C)e}^2 - \norm{(B-C)e}^2\\
+&=&\frac{1}{4} \norm{B+C}_2^2 - \frac{1}{4} \norm{B-C}_2^2.
+\end{eqnarray*}
+Applying this to $iA=iC^*B$ gives us, as $(iC^*)^*=-iC$,
+\[
+\sum_{e \in \mathscr{E}} \Re \inner{iAe}{e} = \frac{1}{4} \norm{B-iC}_2^2 - \frac{1}{4} \norm{B+iC}_2^2.
+\]
+But $\Re \inner{iAe}{e} = \Re (i \inner{Ae}{e}) = - \Im \inner{Ae}{e}$, as $\Re (i(a+ib))=\Re (ia-b)=-b$. Therefore
+\[
+\sum_{e \in \mathscr{E}} -\Im \inner{Ae}{e}= \frac{1}{4} \norm{B-iC}_2^2 - \frac{1}{4} \norm{B+iC}_2^2,
+\]
+i.e.
+\[
+\sum_{e \in \mathscr{E}} \Im \inner{Ae}{e} = \frac{1}{4} \norm{B+iC}_2^2 -  \frac{1}{4} \norm{B-iC}_2^2.
+\]
+Thus
+\[
+\sum_{e \in \mathscr{E}} \inner{Ae}{e} = \frac{1}{4} \norm{B+C}_2^2 - \frac{1}{4} \norm{B-C}_2^2 + \frac{i}{4} \norm{B+iC}_2^2
+ -  \frac{i}{4} \norm{B-iC}_2^2,
+\]
+and the right-hand side does not depend on the orthonormal basis $\mathscr{E}$, completing the proof.
+\end{proof}
+
+
+
+If $A \in \mathscr{B}_1(H)$ and $\mathscr{E}$ is an orthonormal basis for $H$, we define the {\em trace} of $A$, written $\tr A$, to be
+\[
+\tr A = \sum_{e \in \mathscr{E}} \inner{Ae}{e}.
+\]
+It is apparent that $\tr:\mathscr{B}_1(H) \to \mathbb{C}$ is a  {\em positive linear functional}: $\tr$ is a  linear functional $\mathscr{B}_1(H) \to \mathbb{C}$, and if $A \in \mathscr{B}_1(H)$ is a positive operator, then
+$\tr A$ is real and $\geq 0$. If $A \in \mathscr{B}_1(H)$ is a positive operator then it is diagonalizable (being a bounded trace class operator implies that it is compact): there is an orthonormal
+basis $\{e_i: i \in I\}$ for $H$ such that
+\[
+A=\sum_{i \in I} \inner{Ae_i}{e_i} e_i \otimes e_i,
+\] 
+where the series converges in the strong operator topology. 
+Since $A$ is positive, $\inner{Ae_i}{e_i}$ is a real nonnegative number for each $i \in I$. $\tr A=0$ means that
+\[
+\sum_{i \in I} \inner{Ae_i}{e_i}=0,
+\]
+and as this is a series of nonnegative terms they must all be $0$. Putting these into the expression for $A$ gives us $A=0$, showing that
+$\tr:\mathscr{B}_1(H) \to \mathbb{C}$ is a {\em positive definite} linear functional. We haven't yet proved that $\tr$ is a bounded linear functional. This follows
+from Theorem \ref{tracesymmetric}, which we prove later in this section.
+
+
+
+
+In the following we show that the set of bounded trace class operators is a normed vector space with norm $\norm{\cdot}_1$,
+which we call the {\em trace norm}.\footnote{John
+B. Conway, {\em A Course in Operator Theory}, p.~89, Theorem 18.11 (a).}
+
+\begin{theorem}
+$\mathscr{B}_1(H)$ is a normed vector space with the norm $\norm{\cdot}_1$.
+\end{theorem}
+\begin{proof}
+Let $A,B \in \mathscr{B}_1(H)$, and let their polar decompositions be $A=U|A|, B=V|B|$, and $A+B = W|A+B|$. 
+As bounded trace class operators are compact and as the compact operators are a vector space,
+$A+B$ is a compact operator. We have already stated that if $T$ is compact then $|T|$ is compact, which follows
+from the polar decomposition of $T$ and the fact that the compact operators are an ideal. Thus
+$|A+B|$ is a compact operator. 
+$|A+B|$ is a positive operator, so  by the spectral theorem for normal compact operators that we stated as Theorem \ref{spectraltheorem},
+$|A+B|$ is diagonalizable: there is a countable subset $\{e_n: n \geq 1\}$ of an orthonormal basis $\mathscr{E}$ for $H$,
+and $\lambda_n \in \mathbb{C}$, such that
+$|A+B|e_n = \lambda_n e_n$ and $|A+B|e=0$ if $e \in \mathscr{E}$ is not a member of this countable subset.
+As $|A+B|$ is a positive operator, the eigenvalues $\lambda_n$ are real and nonnegative. 
+We have, in the strong operator topology,
+\[
+|A+B| = \sum_{n=1}^\infty \lambda_n e_n \otimes e_n.
+\]
+
+First,
+as $|A+B|=W^*(A+B)$ and using the Cauchy-Schwarz inequality in $H$,
+\begin{eqnarray*}
+\norm{A+B}_1&=&\sum_{e \in \mathscr{E}} \inner{|A+B|e}{e}\\
+&=&\sum_{n \geq 1} \inner{|A+B|e_n}{e_n}\\
+&=&\sum_{n \geq 1} \inner{(A+B)e_n}{We_n}\\
+&=&\sum_{n \geq 1} \inner{U|A|e_n}{We_n}+\inner{V|B|e_n}{We_n}\\
+&=&\sum_{n \geq 1} \inner{|A|e_n}{U^*We_n}+\inner{|B|e_n}{V^*We_n}\\
+&=&\sum_{n \geq 1} \inner{|A|^{1/2}e_n}{|A|^{1/2}U^*We_n}+\inner{|B|^{1/2}e_n}{|B|^{1/2}V^*We_n}\\
+&\leq&\sum_{n \geq 1} \norm{|A|^{1/2}e_n} \cdot \norm{|A|^{1/2}U^*We_n} + \norm{|B|^{1/2}e_n} \cdot \norm{|B|^{1/2}V^*We_n}.
+\end{eqnarray*}
+Applying the Cauchy-Schwarz inequality in $\ell^2$ to this gives
+\begin{eqnarray*}
+\cdots&\leq&\left( \sum_{n \geq 1}  \norm{|A|^{1/2}e_n}^2 \right)^{1/2} \left( \sum_{n \geq 1} \norm{|A|^{1/2}U^*We_n}^2 \right)^{1/2}\\
+&&+\left(\sum_{n \geq 1} \norm{|B|^{1/2}e_n}^2 \right)^{1/2} \left(  \sum_{n \geq 1}  \norm{|B|^{1/2}V^*We_n}^2 \right)^{1/2}.\\
+&\leq&\left( \sum_{e \in \mathscr{E}}  \norm{|A|^{1/2}e}^2 \right)^{1/2} \left( \sum_{e \in \mathscr{E}} \norm{|A|^{1/2}U^*We}^2 \right)^{1/2}\\
+&&+\left(\sum_{e \in \mathscr{E}} \norm{|B|^{1/2}e}^2 \right)^{1/2} \left(  \sum_{e \in \mathscr{E}}  \norm{|B|^{1/2}V^*We}^2 \right)^{1/2}.
+\end{eqnarray*}
+So we have
+\[
+\norm{A+B}_1 \leq \norm{|A|^{1/2}}_2 \cdot \norm{|A|^{1/2} U^* W}_2 + \norm{|B|^{1/2}}_2 \cdot \norm{|B|^{1/2}V^*W}_2.
+\]
+By Theorem \ref{traceTFAE}, $|A|^{1/2}, |B|^{1/2} \in \mathscr{B}_2(H)$, and then using
+ the inequality in Theorem \ref{HSideal} gives us
+\[
+\norm{|A|^{1/2} U^* W}_2 \leq \norm{|A|^{1/2}}_2 \cdot \norm{U^*} \cdot \norm{W} \leq \norm{|A|^{1/2}}_2,
+\]
+where we used the fact that $U^*$ and $W$ are partial isometries and hence either have norm 1 or 0, depending on whether they are the zero map.
+Likewise,
+\[
+\norm{|B|^{1/2}V^*W}_2 \leq \norm{|B|^{1/2}}_2.
+\]
+Therefore we have obtained
+\[
+\norm{A+B}_1 \leq \norm{|A|^{1/2}}_2^2 + \norm{|B|^{1/2}}_2^2 = \norm{A}_1 + \norm{B}_1.
+\]
+so $A+B \in \mathscr{B}_1(H)$, and $\norm{\cdot}_1$ 
+satisfies the triangle inequality.
+
+If $A \in \mathscr{B}(H)$ and $\alpha \in \mathbb{C}$ then $|\alpha A|^{1/2} = |\alpha|^{1/2} |A|^{1/2}$, and from this it follows
+that if $A \in \mathscr{B}_1(H)$ and $\alpha \in \mathbb{C}$ then $\norm{\alpha A}_1 = |\alpha| \norm{A}_1$ and so $\alpha A \in \mathscr{B}_1(H)$. 
+Therefore $\mathscr{B}_1(H)$ is a vector space.
+
+If $\norm{A}_1 = 0$, then $\tr|A|=0$. We have shown that $\tr$ is a positive definite linear functional: hence $|A|=0$, and so $A=0$. This completes the proof
+that $\norm{\cdot}_1$ is a norm on $\mathscr{B}_1(H)$.
+\end{proof}
+
+
+We have shown that $\mathscr{B}_1(H)$ with the trace norm $\norm{\cdot}_1$ is a normed space. In the following theorem we show that
+a bounded finite rank operator is a bounded trace class operator, and that $\mathscr{B}_{00}(H)$ is a dense subset of $\mathscr{B}_1(H)$. 
+
+
+\begin{theorem}
+$\mathscr{B}_{00}(H)$ is a dense subset of the normed space $\mathscr{B}_1(H)$ with the trace norm.
+\end{theorem}
+\begin{proof}
+If $A \in \mathscr{B}_{00}(H)$, then there is an 
+orthonormal basis  $\{e_i: i \in I\}$ for $H$ and a finite subset $J$ of $I$ such that
+such that if $i \in I \setminus J$ then $Ae_i=0$, and so $|A|e_i=0$. This gives $\norm{A}_1<\infty$, so $A \in \mathscr{B}_1(H)$.
+
+Let $\{e_i:i \in I\}$ be an orthonormal basis for $H$.
+We've shown that the bounded finite rank operators are contained in the bounded trace class operators, and now we have to show that
+if $A \in \mathscr{B}_1(H)$ and $\epsilon>0$ then there is some $B \in \mathscr{B}_{00}(H)$ satisfying $\norm{A-B}_1 < \epsilon$.
+As $\sum_{i \in I} \inner{|A|e_i}{e_i}<\infty$, there is a finite subset $J$ of $I$ such that
+\[
+\sum_{i \in I \setminus J} \inner{|A|e_i}{e_i}<\epsilon.
+\]
+Let $P$ be the orthogonal projection onto $\Span \{e_i:i \in J\}$, and define $B \in \mathscr{B}_{00}(H)$ by $B=AP$, which gives us
+\[
+\norm{A-B}_1 = \sum_{i \in I} \inner{|A-B|e_i}{e_i} = \sum_{i \in I \setminus J} \inner{|A|e_i}{e_i} < \epsilon.
+\]
+\end{proof}
+
+
+Taking an adjoint of an operator on a Hilbert space and taking the complex conjugate of a complex number ought to be interchangeable where it makes sense. We show
+in the following theorem that the adjoint of an element of $\mathscr{B}_1(H)$ is also an element of $\mathscr{B}_1(H)$ and that the trace of the adjoint is the complex conjugate of the trace.
+
+\begin{theorem}
+If $A \in \mathscr{B}_1(H)$ then $A^* \in \mathscr{B}_1(H)$ and 
+\[
+\tr A^* = \overline{\tr A}.
+\]
+\label{traceadjoint}
+\end{theorem}
+\begin{proof}
+As $A \in \mathscr{B}_1(H)$, by Theorem \ref{traceTFAE}  there are
+$B,C \in \mathscr{B}_2(H)$ such that $A=C^*B$. Then $A^*=B^*C$ is
+ a product of two bounded Hilbert-Schmidt operators, and so by the same theorem is itself an element of $\mathscr{B}_1(H)$.
+
+We're going to extract something from our proof of Theorem \ref{absconvergent}, which showed that the trace of an
+operator does not depend on the orthonormal basis that we use:
+We proved that, with $A=C^*B$,
+\[
+\tr(A)= \frac{1}{4} \norm{B+C}_2^2 - \frac{1}{4} \norm{B-C}_2^2 + \frac{i}{4} \norm{B+iC}_2^2
+ -  \frac{i}{4} \norm{B-iC}_2^2,
+\]
+Applying this to the adjoint $A^*=B^*C$, and as $i(C+iB)=iC-B$,
+\begin{eqnarray*}
+\tr A^*&=& \frac{1}{4} \norm{C+B}_2^2 - \frac{1}{4} \norm{C-B}_2^2 + \frac{i}{4} \norm{C+iB}_2^2
+ -  \frac{i}{4} \norm{B-iC}_2^2\\
+ &=&\frac{1}{4} \norm{B+C}_2^2 - \frac{1}{4} \norm{B-C}_2^2 + \frac{i}{4} \norm{iC-B}_2^2
+ -  \frac{i}{4} \norm{iB+C}_2^2\\
+ &=&\overline{\tr A}.
+\end{eqnarray*}
+\end{proof}
+
+
+
+It is familiar to us that if $A$ and $B$ are matrices then $\tr(AB)=\tr(BA)$. In the next theorem we show that this is true for bounded linear operators providing one
+of the two is a bounded
+trace class operator.\footnote{John
+B. Conway, {\em A Course in Operator Theory}, p.~89, Theorem 18.11 (e).} The first thing we prove in this theorem is that $\mathscr{B}_1(H)$ is an ideal of the
+algebra $\mathscr{B}(H)$, so that it makes sense to talk about the trace of a product of two bounded linear operators only one of which is a bounded
+trace class operator. The theorem also shows that $\tr:\mathscr{B}_1(H) \to \mathbb{C}$, which we have already shown is a positive definite linear functional, is bounded.
+
+
+\begin{theorem}
+If $A \in \mathscr{B}_1(H)$ and $T \in \mathscr{B}(H)$, then $AT, TA \in \mathscr{B}_1(H)$, and $\tr(AT)=\tr(TA)$, and $|\tr(TA)| \leq \norm{T} \norm{A}_1$.
+\label{tracesymmetric}
+\end{theorem}
+\begin{proof}
+$A$ is the product of two bounded Hilbert-Schmidt operators, say $A=C^*B$ (we write it this way because this will be handy later in the proof). Hence
+$AT=C^*(BT)$. As $\mathscr{B}_2(H)$ is an ideal of $\mathscr{B}(H)$, we have $BT \in \mathscr{B}_2(H)$, showing that
+$AT$ is a product of two bounded Hilbert-Schmidt operators, which implies that $AT \in \mathscr{B}_1(H)$.
+Similarly, $TA \in \mathscr{B}_1(H)$.
+We use from the proof of Theorem \ref{absconvergent} the following: (we wrote $A=C^*B$ to match the way we wrote $A$ in that theorem) 
+\[
+\tr(C^*B)= \frac{1}{4} \norm{B+C}_2^2 - \frac{1}{4} \norm{B-C}_2^2 + \frac{i}{4} \norm{B+iC}_2^2
+ -  \frac{i}{4} \norm{B-iC}_2^2.
+\] 
+Applying this to $CB^*$, and using that the norm of the adjoint of an operator is equal to the norm of the operator itself and that
+$(iC^*)^*=-iC$,
+\begin{eqnarray*}
+\tr(CB^*)&=&  \frac{1}{4} \norm{B^*+C^*}_2^2 - \frac{1}{4} \norm{B^*-C^*}_2^2 + \frac{i}{4} \norm{B^*+iC^*}_2^2
+ -  \frac{i}{4} \norm{B^*-iC^*}_2^2\\
+ &=&\frac{1}{4} \norm{B+C}_2^2 - \frac{1}{4} \norm{B-C}_2^2 + \frac{i}{4} \norm{B-iC}_2^2
+ -  \frac{i}{4} \norm{B+iC}_2^2\\
+ &=&\overline{\tr(C^*B)}.
+\end{eqnarray*}
+Using this we obtain
+\begin{eqnarray*}
+\tr(TA)&=&\tr((TC^*)B)\\
+&=&\overline{\tr((TC^*)^* B^*)}\\
+&=&\overline{\tr(CT^*B^*)}\\
+&=&\overline{\tr(C(BT)^*)}\\
+&=&\tr(C^*(BT))\\
+&=&\tr(AT),
+\end{eqnarray*}
+which we wanted to show.
+
+We still have to prove that $|\tr(TA)| \leq \norm{T} \norm{A}_1$. 
+Let $A=U|A|$ be the polar decomposition of $A$, and let $\mathscr{E}$ be an orthonormal basis for $H$.
+By Theorem \ref{traceTFAE}, $|A|^{1/2} \in \mathscr{B}_2(H)$. (We mention this  to justify talking about the Hilbert-Schmidt norm of $|A|^{1/2}$.)
+We have, using the Cauchy-Schwarz inequality in $H$ and in $\ell^2$,
+\begin{eqnarray*}
+|\tr(TA)|&=&\left| \sum_{e \in \mathscr{E}} \inner{TU|A|e}{e} \right|\\
+&=&\left| \sum_{e \in \mathscr{E}} \inner{|A|^{1/2}e}{|A|^{1/2}U^*T^*e} \right|\\
+&\leq&\sum_{e \in \mathscr{E}} |  \inner{|A|^{1/2}e}{|A|^{1/2}U^*T^*e}  |\\
+&\leq&\sum_{e \in \mathscr{E}}   \norm{|A|^{1/2}e} \cdot \norm{|A|^{1/2}U^*T^*e}\\
+&\leq&\left( \sum_{e \in \mathscr{E}}   \norm{|A|^{1/2}e}^2 \right)^{1/2} \left( \sum_{e \in \mathscr{E}}  \norm{|A|^{1/2}U^*T^*e}^2 \right)^{1/2}\\
+&=&\norm{|A|^{1/2}}_2 \cdot \norm{|A|^{1/2}U^* T^*}_2.
+\end{eqnarray*}
+By Theorem \ref{HSideal}, and as $U^*$ is a partial isometry,
+\[
+ \norm{|A|^{1/2}U^* T^*}_2 \leq \norm{|A|^{1/2}}_2 \cdot \norm{U^*} \cdot \norm{T^*} \leq \norm{|A|^{1/2}}_2 \cdot \norm{T^*}.
+\]
+Therefore
+\[
+|\tr(TA)| \leq \norm{|A|^{1/2}}_2^2 \cdot \norm{T^*}=\norm{|A|^{1/2}}_2^2 \cdot \norm{T}= \norm{A}_1 \cdot \norm{T},
+\]
+completing the proof.
+\end{proof}
+
+
+
+In Theorem \ref{traceadjoint} we proved that the adjoint of a bounded trace class operator is itself trace class, and we now prove that they have the same trace norm.
+
+\begin{theorem}
+If $A \in \mathscr{B}_1(H)$ then 
+\[
+\norm{A^*}_1 = \norm{A}_1.
+\]
+\label{adjointtracenorm}
+\end{theorem}
+\begin{proof}
+The polar decomposition $A=U|A|$ satisfies
+$|A^*|=U|A|U^*$ and $U^*U|A|=|A|$, as we stated in \eqref{polardecomposition}. 
+We have, using this and Theorem \ref{tracesymmetric},
+\[
+\norm{A^*}_1 = \tr |A^*| = \tr ((U|A|)U^*) = \tr(U^*(U|A|)) = \tr |A| = \norm{A}_1.
+\]
+\end{proof}
+
+
+
+
+\begin{theorem}
+If $A \in \mathscr{B}_1(H)$ and $T \in \mathscr{B}(H)$, then
+\[
+\norm{AT}_1 \leq \norm{A}_1 \cdot \norm{T}, \qquad \norm{TA}_1 \leq \norm{T} \cdot \norm{A}_1.
+\]
+\end{theorem}
+\begin{proof}
+Let $A$ have the polar decomposition $A=U|A|$ and let $TA$ have the polar decomposition
+$TA=W|TA|$. We have, from \eqref{polardecomposition},
+\[
+|TA|=W^*(TA)=W^*TU|A|.
+\]
+It follows from Theorem \ref{tracesymmetric} that, putting $S=W^*TU$,
+\[
+\norm{TA}_1 = \tr(|TA|) = \tr(S|A|) \leq \norm{S}\cdot \norm{A}_1.
+\]
+As $W^*$ and $U$ are partial isometries, $\norm{S} \leq \norm{T}$, thus
+\begin{equation}
+\norm{TA}_1 \leq \norm{T} \cdot \norm{A}_1.
+\label{internalinequality}
+\end{equation}
+
+On the other hand, Theorem \ref{adjointtracenorm} tells us
+\[
+\norm{AT}_1 = \norm{T^*A^*}_1.
+\]
+As $A^* \in \mathscr{B}_1(H)$, by \eqref{internalinequality} we get 
+\[
+\norm{T^*A^*}_1 \leq \norm{T^*} \cdot \norm{A^*}_1 = \norm{T} \cdot \norm{A}_1,
+\]
+ using Theorem \ref{adjointtracenorm} again.
+\end{proof}
+
+
+In Theorem \ref{HSdominated} we proved that if $A \in \mathscr{B}_2(H)$ then $\norm{A} \leq \norm{A}_2$. Now we prove that the trace norm also dominates the operator norm, so
+that the topology on the normed space $\mathscr{B}_1(H)$ with the trace norm is finer than its topology as a subspace of $\mathscr{B}(H)$.
+
+\begin{theorem}
+If $A \in \mathscr{B}_1(H)$, then 
+\[
+\norm{A} \leq \norm{A}_1.
+\]
+\label{tracedominates}
+\end{theorem}
+\begin{proof}
+Let $A$ have polar decomposition $A=U|A|$. As $|A|$ is a compact positive, it is diagonalizable: there is an orthonormal basis
+$\{e_i : i \in I\}$ for $H$ and $\lambda_i \in \mathbb{C}$ such that $|A|e_i = \lambda_i e_i$. On the one hand, the operator norm of a diagonalizable operator
+is the supremum of the absolute values of its eigenvalues, as we  stated  in \eqref{diagonalnorm}.
+On the other hand,
+\[
+\norm{|A|}_1= \sum_{i \in I} |\lambda_i|.
+\]
+Certainly then $\norm{|A|} \leq \norm{|A|}_1$. But
+\[
+\norm{A} \leq \norm{U} \cdot \norm{|A|} \leq \norm{|A|} \leq \norm{|A|}_1 = \norm{A}_1,
+\]
+which is what we wanted to prove.
+\end{proof}
+
+We have already shown that the trace class operators with the trace norm are a normed space. We now prove that they are a Banach space. We do this by showing that there is an
+isometric isomorphism $\rho:\mathscr{B}_1(H) \to \mathscr{B}_0(H)^*$.\footnote{John B. Conway, {\em A Course in Operator Theory}, p.~93, Theorem 19.1.}  The latter space is a Banach space, so if $A_n \in \mathscr{B}_1(H)$ is a Cauchy sequence, its image
+$\rho(A_n)$ is a Cauchy sequence in $\mathscr{B}_0(H)^*$ and hence has a limit, call it $B$. Since $\rho$ is surjective, there is some $A \in \mathscr{B}_1(H)$ such that
+$\rho(A) = B$, and one checks that $A_n \to A$. 
+
+For $A \in \mathscr{B}_1(H)$ and $C \in \mathscr{B}_0(H)$, define 
+\[
+\Phi_A(C)=\tr(CA).
+\]
+
+\begin{theorem}
+The map $\rho:\mathscr{B}_1(H) \to \mathscr{B}_0(H)^*$ defined by
+\[
+\rho(A)=\Phi_A, \qquad A \in \mathscr{B}_1(H),
+\]
+is an isometric isomorphism.
+\end{theorem}
+\begin{proof}
+Let $A \in \mathscr{B}_1(H)$. It is apparent that $\Phi_A:\mathscr{B}_0(H) \to \mathbb{C}$ is a linear map. Using Theorem \ref{tracesymmetric}, its operator norm is
+\[
+\norm{\Phi_A} = \sup_{\norm{C} \leq 1} |\Phi_A(C)| = \sup_{\norm{C} \leq 1} |\tr(CA)| \leq \sup_{\norm{C} \leq 1} \norm{C} \norm{A}_1
+=\norm{A}_1,
+\]
+where the supremum is taken
+over compact operators. Hence $\Phi_A \in \mathscr{B}_0(H)^*$ (if $H=\{0\}$ then the final equality is $\leq$). We have $\norm{\Phi_A} \leq \norm{A}_1$, so to show that $\rho$ is an isometric isomorphism, we have to show
+that if $A \in \mathscr{B}_1(H)$ then $\norm{\Phi_A} \geq \norm{A}_1$, and that $\rho$ is surjective (as being injective is implied by being an isometry).
+
+Let $\Phi \in \mathscr{B}_0(H)^*$. For $g,h \in H$, define
+\[
+B(g,h)=\Phi(g \otimes h), \qquad B(g,h)v=g \otimes h (v)=\inner{v}{h}g.
+\]
+It is apparent from this that $B$ is a sesquilinear form on $H$. A sesquilinear form $B$ is said to be {\em bounded} if
+$M = \sup_{\norm{g}, \norm{h} =1} |B(g,h)| < \infty$.
+For $\norm{g}=\norm{h}=1$,
+\[
+|B(g,h)| = |\Phi(g \otimes h)| \leq \norm{\Phi} \norm{g \otimes h} \leq \norm{\Phi} \norm{g} \norm{h}=\norm{\Phi}.
+\]
+Thus $B$ is a bounded sesquilinear form on $H$, and we can therefore apply
+the {\em Riesz representation theorem},\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~310, Theorem 12.8.} which states that there is a unique $T \in \mathscr{B}(H)$ such that 
+\[
+B(g,h)=\inner{g}{Th}, \qquad g,h \in H,
+\]
+and that this $T$ satisfies $\norm{T}=M$.
+
+Let $A=T^*$,  let
+ $A=U|A|$ be the polar decomposition of $A$, and let $\mathscr{E}$ be an orthonormal basis for $H$. If $\mathscr{E}_0$ is a finite subset of $\mathscr{E}$,
+define
+\[
+C_{\mathscr{E}_0} = \left( \sum_{e \in \mathscr{E}_0} e \otimes e \right) U^*= \sum_{e \in \mathscr{E}_0} e \otimes Ue.
+\]
+It is apparent that $C_{\mathscr{E}_0} \in \mathscr{B}_{00}(H)$, and one checks that $\norm{C_{\mathscr{E}_0}} \leq 1$. 
+We have
+\begin{eqnarray*}
+\sum_{e \in \mathscr{E}_0} \inner{|A|e}{e}&=&\left| \sum_{e \in \mathscr{E}_0} \inner{|A|e}{e} \right|\\
+&=&\left| \sum_{e \in \mathscr{E}_0} \inner{U^*Ae}{e} \right|\\
+&=&\left| \sum_{e \in \mathscr{E}_0} \inner{e}{TUe} \right|\\
+&=&\left| \sum_{e \in \mathscr{E}_0} B(e,Ue) \right|\\
+&=&\left| \sum_{e \in \mathscr{E}_0} \Phi(e \otimes Ue) \right|\\
+&=&\left| \Phi (C_{\mathscr{E}_0}) \right|.
+\end{eqnarray*}
+Then
+\[
+\sum_{e \in \mathscr{E}_0} \inner{|A|e}{e} \leq \norm{\Phi} \norm{C_{\mathscr{E}_0}} \leq \norm{\Phi}.
+\]
+This is true for any finite subset $\mathscr{E}_0$ of $\mathscr{E}$, and it follows that
+\begin{equation}
+\norm{A}_1 \leq \norm{\Phi},
+\label{norminequality}
+\end{equation}
+and thus $A \in \mathscr{B}_1(H)$.
+
+Let $C \in \mathscr{B}_{00}(H)$. Then there are some $g_1,\ldots,g_n$, $h_1,\ldots,h_n \in H$ such that (cf. Theorem \ref{finiteranksum})
+\[
+C = \sum_{k=1}^n g_k \otimes h_k.
+\]
+We have
+\begin{eqnarray*}
+\Phi(C)&=&\sum_{k=1}^n \Phi( g_k \otimes h_k)\\
+&=&\sum_{k=1}^n B(g_k,h_k)\\
+&=&\sum_{k=1}^n \inner{Ag_k}{h_k}\\
+&=&\sum_{k=1}^n \tr (A(g_k \otimes h_k))\\
+&=&\tr(AC)\\
+&=&\Phi_A(C).
+\end{eqnarray*}
+Since the bounded linear functionals $\Phi$ and $\Phi_A$ agree on $\mathscr{B}_{00}(H)$,  a dense subset of $\mathscr{B}_1(H)$ with the
+trace norm, they are equal. Therefore, $\rho$ is surjective. Moreover, we showed in \eqref{norminequality} that
+$\norm{A}_1 \leq \norm{\Phi}$, so $\norm{\Phi_A} \geq \norm{A}_1$, so  $\rho$ is an isometry, which  completes the proof.
+\end{proof}
+
+
+
+
+We have shown that the $\mathscr{B}_1(H)$ is the dual of $\mathscr{B}_0(H)$. It can further be shown that
+$\mathscr{B}(H)$ is the dual of $\mathscr{B}_1(H)$. For 
+$T \in \mathscr{B}(H)$ we define $\Psi_T:\mathscr{B}_1(H) \to \mathbb{C}$ by 
+$\Psi_T(A)=\tr(TA)$, $A \in \mathscr{B}_1(H)$.
+Then the map $T \mapsto \Psi_T$ is an isometric isomorphism $\mathscr{B}(H) \to \mathscr{B}_1(H)^*$.\footnote{John B. Conway, {\em A Course in Operator Theory}, p.~94, Theorem 19.2.} 
+
+
+
+
+
+
+\section{The Hilbert-Schmidt inner product}
+If $A,B \in \mathscr{B}_2(H)$, we define
+\[
+\inner{A}{B} = \tr(B^*A),
+\]
+which makes sense because, by Theorem \ref{traceTFAE}, $AB \in \mathscr{B}_1(H)$.
+As $\tr:\mathscr{B}_1(H) \to \mathbb{C}$ is a positive definite linear functional, we get that $\inner{\cdot}{\cdot}:\mathscr{B}_2(H) \times \mathscr{B}_2(H) \to \mathbb{C}$
+is an inner product. 
+We call this the {\em Hilbert-Schmidt inner product}. Check that $\inner{A}{A}=\norm{A}_2^2$.
+It is a fact that $\mathscr{B}_2(H)$ is a complete metric space with the Hilbert-Schmidt norm,\footnote{Gert K. Pedersen,
+{\em Analysis Now}, revised printing, p.~119, Theorem 3.4.9.} and hence $\mathscr{B}_2(H)$ with the Hilbert-Schmidt inner product
+is a Hilbert space.
+
+
+
+\begin{theorem}
+$\mathscr{B}_2(H)$ with the Hilbert-Schmidt inner product is a Hilbert space.
+\end{theorem}
+
+
+
+
+
+\end{document}

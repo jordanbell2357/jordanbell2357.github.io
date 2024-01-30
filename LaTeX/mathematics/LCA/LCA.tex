@@ -1,0 +1,953 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\HSnorm}[1]{\Vert #1 \Vert_{\ensuremath\mathrm{HS}}}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\supp}{\mathrm{supp}\,} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\HS}{B_{\ensuremath\mathrm{HS}}} 
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\renewcommand{\div}{\mathrm{div}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{Locally compact abelian groups}
+\author{Jordan Bell}
+\date{June 4, 2014}
+\maketitle
+
+\section{Introduction}
+These notes are a gloss on the first chapter of Walter Rudin's {\em Fourier Analysis on Groups}, and 
+may be helpful to someone reading Rudin. The results I do prove are proved in more detail than they are in Rudin.
+I caution that before reading the first chapter of that book 
+it is know about the Gelfand transform on commutative Banach algebras
+ because results from that are used without even stating them by Rudin. I at least state them.
+
+\section{Locally compact abelian groups}
+Let $G$ be a locally compact abelian (LCA) group. There is a Haar measure $m$ on $G$. 
+It is a fact that if $m$ and $m'$ are Haar measures on $G$, then there is a positive constant $\lambda$ such that 
+$m'=\lambda m$.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~2, \S 1.1.3.}
+If $G$ is compact
+then there is a unique Haar measure with $m(G)=1$, and if $G$ is discrete then there is a unique Haar measure
+with $m(\{x\})=1$ for each $x \in G$.
+
+
+
+
+Because Haar measures on $G$ are positive multiples of each other,
+the elements of $L^p(G)$ do not depend on the Haar measure we use, but the value of
+$\norm{f}_p$ will, where   $f:G \to \mathbb{C}$ is a  Borel function.
+
+If $X$ is a normed vector space and $f:G \to X$ is a function, we say that $f$ is \textbf{uniformly continuous}
+if for every $\epsilon>0$ there is a neighborhood $V$ of $0$ in $G$ such that $x-y \in V$ implies that
+$\norm{f(x)-f(y)}_X < \epsilon$.
+
+If $f:G \to \mathbb{C}$ is a function and $x \in G$, we define $f_x:G \to \mathbb{C}$ by 
+\[
+f_x(y)=f(y-x), \qquad y \in G.
+\]
+
+\begin{theorem}
+If $1 \leq p < \infty$ and $f \in L^p(G)$, then
+\[
+x \mapsto f_x
+\]
+is uniformly continuous $G \to L^p(G)$.
+\end{theorem}
+\begin{proof}
+Let $\epsilon>0$. Because $C_c(G)$ is dense in $L^p(G)$, there is some $g \in C_c(G)$ such that 
+$\norm{g-f}_p < \epsilon$. Let $K = \supp g$, and because $K$ is compact, $m(K)<\infty$. $g \in C_c(G)$ implies that $g$ is uniformly continuous on $G$, so there
+is a neighborhood $V$ of $0$ in $G$ such that if $x-y \in V$ then $|g(x)-g(y)|<\epsilon (2m(K))^{-1/p}$. Then, for all $x \in V$ and $y \in G$, as $y-(y-x) \in V$ we have
+$|g(y-x)-g(y)|<\epsilon (2m(K))^{-1/p}$. That is, for all $x \in V$ we have
+\[
+\norm{g_x-g}_\infty < \epsilon (2m(K))^{-1/p}.
+\]
+For $x \in V$, $\supp (g_x-g) \subset (K+x) \cup K$ and $m(K+x)=m(K)$, so for all $x \in V$,
+\begin{eqnarray*}
+\norm{g_x-g}_p &=& \left( \int_{\supp(g_x-g)} |g_x-g|^p dm \right)^{1/p}\\
+& \leq& \left( \int_{\supp(g_x-g)}  \epsilon^p (2m(K))^{-1} dm\right)^{1/p}\\
+&\leq&\epsilon.
+\end{eqnarray*}
+Because $\norm{f_x-g_x}_p=\norm{f-g}_p$, for all $x \in V$ we have
+\[
+\norm{f_x-f}_p \leq \norm{f_x-g_x}_p+\norm{g_x-g}_p+\norm{g-f}_p < 3\epsilon.
+\]
+Then, let $x,y \in G$ with $y-x \in V$. The above inequality tells us
+\[
+\norm{f_{y-x}-f}_p < 3\epsilon.
+\]
+But $f_x-f_y = (f-f_{y-x})_x$ and $\norm{h_x}_p=\norm{h}_p$, so
+\[
+\norm{f_x-f_y}_p =\norm{f-f_{y-x}}_p < 3\epsilon,
+\]
+showing that $x \mapsto f_x$ is uniformly continuous.
+\end{proof}
+
+If $f$ and $g$ are  Borel functions on $G$, for $x \in G$ such that the integral exists we define
+\[
+(f*g)(x) = \int_G f(x-y) g(y) dm(y).
+\]
+The operation of taking the convolution of functions is particularly suitable for functions that belong
+to $L^1(G)$, because if $f,g \in L^1(G)$, then $(f*g)(x)$ is defined for almost all $x \in G$, and satisfies
+\[
+\norm{f*g}_1 \leq \norm{f}_1 \norm{g}_1;
+\]
+this is proved in Rudin, together with other properties of the convolution.\footnote{Walter
+Rudin, {\em Fourier Analysis on Groups}, p.~4, \S 1.1.6.} From the above inequality, it follows that $L^1(G)$ with convolution as multiplication
+is a commutative Banach algebra. The map $^*:L^1(G) \to L^1(G)$ defined by $f^*(x)=\overline{f(-x)}$ for $f \in L^1(G)$, $x \in G$,
+is an isometric involution.
+
+If $G$ is discrete, define $e$ on $G$ by $e(0)=1$ and $e(x)=0$ for $x \neq 0$. Then $\norm{e}_1 = \int_G e(x) dm(x) = \sum_{x \in G} e(x)=1$, so
+$e \in L^1(G)$. For $f \in L^1(G)$ and $x \in G$,
+\[
+(f*e)(x) = \sum_{y \in G} f(x-y)e(y) = f(x)e(0)=f(x),
+\]
+showing that $f*e=f$. Hence $e$ is unity in $L^1(G)$.  It turns out that if $G$ is not discrete then $L^1(G)$ does not have a unity.\footnote{Walter
+Rudin, {\em Fourier Analysis on Groups}, p.~30, \S 1.7.3.}
+
+
+\section{Dual groups}
+Let $\mathbb{T}=\{z \in \mathbb{C}: |z| =1\}$ with the subspace topology inherited from $\mathbb{C}$. If $G$ is a locally compact abelian group, we denote by
+$\Gamma$ the set of continuous homomorphisms $G \to \mathbb{T}$. For $\gamma \in \Gamma$ and $x \in G$, we write
+\[
+\inner{x}{\gamma} = \gamma(x).
+\]
+We call a homomorphism $G \to \mathbb{T}$ a \textbf{character} of $G$, so elements of $\Gamma$ are the continuous characters of $G$.
+
+If $A$ is a Banach algebra and $\Delta$ is the set of algebra homomorphisms $h:A \to \mathbb{C}$ that are not identically zero,
+the \textbf{Gelfand transform} of $x \in A$ is the map $\hat{x}:\Delta \to \mathbb{C}$ defined by
+\[
+\hat{x}(h)=h(x), \qquad h \in \Delta.
+\]
+$\Delta$ is called the \textbf{maximal ideal space} of $A$. 
+
+
+If $f \in L^1(G)$, we define $\hat{f}:\Gamma \to \mathbb{C}$ by
+\[
+\hat{f}(\gamma) = \int_G f(x) \inner{-x}{\gamma} dm(x), \qquad \gamma \in \Gamma,
+\]
+and call $\hat{f}$ the \textbf{Fourier transform} of $f$. 
+
+The following theorem 
+is from Rudin.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~7, \S 1.2.2.} It establishes a bijection between the dual
+group $\Gamma$  of $G$ and the maximal ideal space $\Delta$
+of $L^1(G)$, and shows, if $\Gamma$ and $\Delta$ are identified, that the Fourier transform is the same as the Gelfand transform. 
+
+\begin{theorem}
+For each $\gamma \in \Gamma$, the map 
+$h:L^1(G) \to \mathbb{C}$ defined by
+$h(f) =  \hat{f}(\gamma)$ belongs to $\Delta$. If $h \in \Delta$, then there is 
+a unique $\gamma \in \Gamma$ such that $h(f)=\hat{f}(\gamma)$ for all $f \in L^1(G)$.
+\label{maxideal}
+\end{theorem}
+\begin{proof}
+For $f,g \in L^1(G)$ and $k=f*g$, then for any $\gamma \in \Gamma$, using $\inner{-x}{\gamma}=
+\inner{-x+y}{\gamma} \inner{-y}{\gamma}$,
+\begin{eqnarray*}
+\hat{k}(\gamma)&=&\int_G (f*g)(x) \inner{-x}{\gamma} dm(x)\\
+&=&\int_G \inner{-x}{\gamma} \left( \int_G f(x-y) g(y) dm(y) \right) dm(x)\\
+&=&\int_G g(y) \inner{-y}{\gamma} \left(\int_G f(x-y) \inner{-x+y}{\gamma} dm(x) \right) dm(y)\\
+&=&\int_G g(y) \inner{-y}{\gamma} \hat{f}(x) dm(y)\\
+&=&\hat{f}(\gamma) \hat{g}(\gamma),
+\end{eqnarray*}
+showing that $f \mapsto \hat{f}(\gamma)$ is an algebra homomorphism. By Urysohn's lemma, for every  neighborhood
+$V$ of $0 \in G$, there is some $f \in C_c(G)$ with $f(0)=1$, $0 \leq f \leq 1$, and $\supp f \subset V$. 
+As $\inner{0}{\gamma}=1$ and because $x \mapsto \inner{-x}{\gamma}$ is continuous, it follows that there is some neighborhood $V$ of $0$ and some $f$ as above such that
+$\hat{f}(\gamma) = \int_G f(x) \inner{-x}{\gamma} dm(x) \neq 0$, showing that $f \mapsto \hat{f}(\gamma)$ is nonzero. 
+
+Now let $h:L^1(G) \to \mathbb{C}$ be a nonzero algebra homomorphism. 
+A homomorphism from a Banach algebra to $\mathbb{C}$ is linear functional with norm $1$.
+It is a fact that for every bounded linear functional $\Lambda$ on $L^1(G)$ there is some $\phi \in
+L^\infty(G)$ such that $\Lambda(f)=\int_G f\phi dm$ for all $f \in L^1(G)$, and $\norm{\phi}_\infty= \norm{\Lambda}$.\footnote{Walter Rudin, {\em Fourier Analysis
+on Groups}, p.~268, E10.} Therefore, there is some $\phi \in L^\infty(G)$, $\norm{\phi}_\infty=1$, such that
+\[
+h(f) = \int_G f \phi dm, \qquad f \in L^1(G).
+\]
+Then for $f,g \in L^1(G)$ we have
+\begin{eqnarray*}
+h(f) \int_G g \phi dm&=&h(f) h(g)\\
+&=&h(f*g)\\
+&=&\int_G (f*g) \phi dm\\
+&=&\int_G \left( \int_G f(x-y) g(y) dm(y) \right) \phi(x) dm(x)\\
+&=&\int_G g(y) \left(\int_G f(x-y) \phi(x) dm(x) \right) dm(y)\\
+&=&\int_G g(y) h(f_y) dm(y),
+\end{eqnarray*}
+i.e.
+\[
+\int_G (h(f)\phi(y)-h(f_y))g(y) dm(y) = 0.
+\]
+Because this is true for all $g \in L^1(G)$, it follows that for all $f \in L^1(G)$ and for almost all $y \in G$, 
+\[
+h(f)\phi(y)=h(f_y).
+\] 
+Because $h \neq 0$, there is some $g \in L^1(G)$ with
+$h(g) \neq 0$.
+Then for almost all $(x,y) \in G \times G$,
+\[
+h(g)\phi(x+y) = h(g_{x+y}) = h((g_x)_y) = h(g_{x})\phi(y) = h(g)\phi(x) \phi(y),
+\]
+and as $h(g) \neq 0$, for almost all $(x,y) \in G \times G$,
+\[
+\phi(x+y)=\phi(x)\phi(y).
+\]
+We define 
+$\phi_1:G \to \mathbb{C}$ by $\phi_1(y)=\frac{h(g_{y})}{h(g)}$, which is continuous because
+$y \mapsto g_{y}$ is continuous and $h$ is continuous.
+The function $\phi_1$ satisfies $\phi(y)=\phi_1(y)$  for almost all $y \in G$, so for almost all $(x,y) \in G \times G$,
+\[
+\phi_1(x+y)=\phi_1(x)\phi_1(y).
+\]
+$(x,y) \mapsto \phi_1(x+y)$ and $(x,y) \mapsto \phi_1(x)\phi_1(y)$ are continuous and the above equality
+holds for almost all $(x,y) \in G \times G$, so the above equality in fact holds for all $(x,y) \in G \times G$.
+Hence $\phi_1 \in \Gamma$.
+Define $\gamma:G \to \mathbb{C}$ by $\gamma(x)=\phi_1(-x)$. Then $\gamma \in \Gamma$, and $\gamma(x)=\phi(-x)$ for almost all $x \in G$, so
+for all $f \in L^1(G)$,
+\begin{eqnarray*}
+\hat{f}(\gamma) &=& \int_G f(x)\inner{-x}{\gamma} dm(x) \\
+&=& \int_G f(x) \gamma(-x) dm(x)\\
+ &=& \int_G f(x) \phi(x) dm(x)\\
+ &=&h(f).
+\end{eqnarray*}
+
+Suppose that $\gamma_1,\gamma_2 \in \Gamma$ satisfy $\hat{f}(\gamma_1)=\hat{f}(\gamma_2)$ for all $f \in L^1(G)$. Then
+$\inner{-x}{\gamma_1}=\inner{-x}{\gamma_2}$ for almost all $x \in G$, and because these are continuous they are in fact equal for all $x \in G$, i.e.
+$\gamma_1=\gamma_2$.
+\end{proof}
+
+
+
+Let $A(\Gamma)=\{\hat{f}:f \in L^1(G)\}$. Elements of $A(\Gamma)$ are functions $\Gamma \to \mathbb{C}$. So far
+$\Gamma$ has not been given  a topology. We shall be interested in the initial topology on $\Gamma$ with respect to
+the family of functions $A(\Gamma)$. That is, the topology on $\Gamma$ is the coarsest topology so that each element of
+$A(\Gamma)$ is continuous. 
+Furthermore, it is a fact that the topology on $\Gamma$ is equal to the subspace topology on $\Gamma$ inherited
+from $L^1(G)^*$ with the weak-* topology. Finally,
+let the maximal ideal space $\Delta$ of $L^1(G)$ have the subspace topology inherited from
+$L^1(G)^*$ with the weak-* topology. In Theorem \ref{maxideal} we presented a bijection 
+$\Gamma \to \Delta$, and can be proved that this bijection is a homeomorphism.
+
+It is proved in Rudin\footnote{Walter
+Rudin, {\em Fourier Analysis on Groups}, p.~10, \S 1.2.6.} that with this topology, $\Gamma$ is a locally compact abelian group. 
+The proof constructs a basis for the topology of $\Gamma$, and because we will use this basis later it will be useful to write out the proof.
+
+\begin{theorem}
+\begin{enumerate}
+\item $(x,\gamma) \mapsto \inner{x}{\gamma}$ is continuous $G \times \Gamma \to \mathbb{C}$.
+\item For $r>0$ let $U_r = \{z \in \mathbb{C}: |1-z|<r\}$. If $K$ is a compact subset of $G$ then
+\[
+W(K,r) = \{\gamma \in \Gamma: \textrm{$\inner{x}{\gamma} \in U_r$ for all $x \in K$}\}
+\]
+is an open subset of $\Gamma$, and if $C$ is a compact subset of $\Gamma$ then
+\[
+V(C,r) = \{x \in G: \textrm{$\inner{x}{\gamma} \in U_r$ for all $\gamma \in C$}\}
+\]
+is an open subset of $G$.
+\item $\{\gamma_0+W(K,r): \textrm{$\gamma_0 \in \Gamma$, $K$ is a compact subset of $\Gamma$, $r>0$}\}$ is a basis for the topology of $\Gamma$.
+\item $\Gamma$ is a locally compact abelian group.
+\end{enumerate}
+\label{topologybasis}
+\end{theorem}
+\begin{proof}
+Let $f \in L^1(G)$. 
+For $x_0\in G$, $\gamma_0 \in \Gamma$ and $\epsilon>0$, because $x \mapsto f_x$ is  continuous there is a neighborhood
+$V$ of $x_0$ such that $\norm{f_x-f_{x_0}}_1<\epsilon$ for all $x \in V$, and because $\hat{f}_{x_0}$ is continuous there is 
+a neighborhood $W$ of $\gamma_0$ such that $|\hat{f}_{x_0}(\gamma)-\hat{f}_{x_0}(\gamma_0)|<\epsilon$ for all $\gamma \in W$. If
+$(x,\gamma) \in V \times W$, then
+\begin{eqnarray*}
+|\hat{f}_x(\gamma)-\hat{f}_{x_0}(\gamma_0)|& \leq& |\hat{f}_x(\gamma)-\hat{f}_{x_0}(\gamma)| + |\hat{f}_{x_0}(\gamma)-\hat{f}_{x_0}(\gamma_0)|\\
+&<&\norm{f_x-f_{x_0}}_1 + \epsilon\\
+&<&2\epsilon,
+\end{eqnarray*}
+showing that $(x,\gamma) \mapsto \hat{f}_x(\gamma)$ is continuous. But
+\[
+\inner{x}{\gamma} \hat{f}(\gamma) = \hat{f}_x(\gamma), \qquad x \in G, \gamma \in \Gamma,
+\]
+and it follows that $(x,\gamma) \mapsto \inner{x}{\gamma}$ is continuous.
+
+Let $K$ be a compact subset of $G$, $r>0$, and $\gamma_0 \in W(K,r)$. For $x_0 \in K$, 
+$|\inner{x_0}{\gamma_0}-1|=\delta<r$. 
+Because $(x,\gamma) \mapsto
+\inner{x}{\gamma}$ is continuous there is a neighborhood $V_{x_0}$ of $x_0$ and a neighborhood $W_{x_0}$ of $\gamma_0$ such that
+$|\inner{x}{\gamma}-\inner{x_0}{\gamma_0}|<r-\delta$ for $(x,\gamma) \in V_{x_0} \times W_{x_0}$, and then
+$\inner{x}{\gamma} \in U_r$ for $(x,\gamma) \in V_{x_0} \times W_{x_0}$. As $K \subset \bigcup_{x_0 \in K} V_{x_0}$ and $K$ is compact, there are 
+$x_1,\ldots,x_n \in K$ such that $K \subset \bigcup V_{x_i}$. Let $W = \bigcap W_{x_i}$, which is a finite intersection of neighborhoods of 
+$\gamma_0$ and hence itself a neighborhood of $\gamma_0$. It is apparent that $W \subset W(K,r)$, showing
+that $W(K,r)$ is open.
+
+Let $C$ be a compact subset of $G$, $r>0$, and $x_0 \in V(C,r)$. For $\gamma_0 \in C$, $|\inner{x_0}{\gamma_0}-1|=\delta<r$,
+so there is a neighborhood $V_{\gamma_0}$ of $x_0$ and a neighborhood $W_{\gamma_0}$ of
+$\gamma_0$ such that $|\inner{x}{\gamma}-\inner{x_0}{\gamma_0}|<r-\delta$ for
+$(x,\gamma) \in V_{\gamma_0} \times W_{\gamma_0}$, therefore $\inner{x}{\gamma} \in U_r$ for
+$(x,\gamma) \in V_{\gamma_0} \times W_{\gamma_0}$. There are $\gamma_1,\ldots,\gamma_n \in C$ such that
+$C \subset \bigcup W_{\gamma_i}$, and  $V = \bigcap V_{\gamma_i}$ is a neighborhood of $x_0$ that is contained in $V(C,r)$, showing that $V(C,r)$ is open.
+
+Let $\gamma_0 \in \Gamma$ and let
+ $W$ be a neighborhood of $\gamma_0$. Because $\Gamma$ has the initial topology for $A(\Gamma)$, 
+a local subbasis at $\gamma_0$ is given by sets of the form $\{\gamma \in \Gamma: |\hat{f}(\gamma)-\hat{f}(\gamma_0)|<\epsilon\}$, $f \in L^1(G)$ and $\epsilon>0$.
+Therefore, there are $f_1,\ldots,f_n \in L^1(G)$ and $\epsilon_1,\ldots,\epsilon_n>0$ such that
+\begin{equation}
+\bigcap \{\gamma \in \Gamma: |\hat{f}_i(\gamma)-\hat{f}_i(\gamma_0)|<\epsilon_i\} \subset W.
+\label{localbasis}
+\end{equation}
+Let $\epsilon$ be the minimum of the $\epsilon_i$,  let $g_i \in C_0(G)$ with $\norm{f_i-g_i}_1 < \frac{\epsilon}{3}$,  let
+$K$ be the union of the supports of $g_i$, and let $M$ be the maximum of $\norm{g_i}_1$. With
+$r<\frac{\epsilon}{3M}$, for $\gamma \in \gamma_0+W(K,r)$ we have 
+\begin{eqnarray*}
+|\hat{f}_i(\gamma)-\hat{f}_i(\gamma_0)|&\leq&|\hat{f}_i(\gamma)-\hat{g}_i(\gamma)| + |\hat{g}_i(\gamma)-\hat{g}_i(\gamma_0)|
++|\hat{g}_i(\gamma_0)-\hat{f}_i(\gamma_0)|\\
+&\leq&\norm{f_i-g_i}_1 +  \left| \int_K g_i(x)(\inner{-x}{\gamma}-\inner{-x}{\gamma_0}) dm(x) \right| + \norm{f_i-g_i}_1\\
+&<&\frac{2}{3}\epsilon+\int_K |g_i(x)| |1-\inner{-x}{\gamma-\gamma_0}| dm(x)\\
+&\leq&\frac{2}{3}\epsilon+r\norm{g_i}_1\\
+&<&\epsilon.
+\end{eqnarray*}
+Thus, if $\gamma \in \gamma_0 + W(K,r)$ then $\gamma$ belongs to the intersection \eqref{localbasis}, and this shows
+that $\gamma_0+W(K,r) \subset W$. This establishes that the collection of those sets of the form $\gamma_0+W(K,r)$, for
+$\gamma_0 \in \Gamma$, $K$ a compact subset of $\Gamma$, and $r>0$, is a basis for the topology of $\Gamma$. 
+
+Let $\gamma_1,\gamma_2 \in \Gamma$, let $K$ be a compact subset of $\Gamma$, and let $r>0$. Because
+\[
+(\gamma_1+W(K,r/2))-(\gamma_2+W(K,r/2)) \subset \gamma_1-\gamma_2 +W(K,r),
+\]
+for $(\gamma',\gamma'') \in (\gamma_1+W(K,r/2)) \times (\gamma_2 + W(K,r/2))$ we have
+$\gamma'-\gamma'' \in \gamma_1-\gamma_2 + W(K,r)$, and this shows that $(\gamma',\gamma'') \mapsto
+\gamma'-\gamma''$ is continuous, which shows that $\Gamma$ is a topological group. 
+$\Gamma$ is locally compact because it is homeomorphic to the maximal ideal space $\Delta$ of $L^1(G)$, and it is a fact that
+the maximal ideal space of any commutative Banach algebra is a locally compact Hausdorff space. This completes the proof.
+\end{proof}
+
+
+A fact that Rudin uses but merely asserts is the following (he refers to it being true for the Gelfand transform, and 
+then merely asserts its truth there).
+
+\begin{theorem}
+$A(\Gamma) \subset C_0(\Gamma)$.
+\end{theorem}
+\begin{proof}
+Let $\Gamma'$ be the weak-* closure of $\Gamma$ in $L^1(G)^*$. For $\Lambda \in \Gamma'$, there is a net
+$\gamma_i \in \Gamma$ that weak-* converges to $\Lambda$. For $x,y \in G$,
+\[
+\Lambda(ab)=\lim_i \gamma_i(ab) = \lim_i \gamma_i(a)\gamma_i(b) = \left( \lim_i \gamma_i(a) \right) \left( \lim_i \gamma_i(b) \right)=
+\Lambda(a)\Lambda(b).
+\]
+Similarly, $\Lambda$ is linear, so $\Lambda$ is an algebra homomorphism $G \to \mathbb{C}$. Hence
+taking the closure of $\Gamma$ in $L^1(G)^*$ has added precisely the map that is identically $0$:
+\[
+\Gamma' = \Gamma \cup \{0\}.
+\]
+With $K = \{\Lambda \in L^1(G)^*: \norm{\Lambda} \leq 1\}$,  the Banach-Alaoglu theorem tells us that
+$K$ is a weak-* compact subset of $L^1(G)^*$. 
+It is apparent that $\Gamma' \subset K$, so $\Gamma'$ is a weak-* compact subset of $L^1(G)^*$. 
+
+
+If $f \in L^1(G)$ and $\epsilon>0$, then because $\hat{f}:\Gamma \to \mathbb{C}$ is continuous,
+\[
+K_0=\{\gamma \in \Gamma: |\hat{f}(\gamma)| \geq \epsilon\}
+\]
+is a closed subset of $\Gamma$. The only way $K_0$ would fail to be a weak-* closed subset of $\Gamma'$
+is if $0$ belonged to its weak-* closure, and it is straightforward to see that this is not the case. So $K_0$ is in fact
+a weak-* closed subset of the weak-* compact set $\Gamma'$, and hence is itself weak-* compact. It follows that $K_0$
+is a compact subset of $\Gamma$, and this shows that $\hat{f} \in C_0(\Gamma)$.
+\end{proof}
+
+Now that we know that $A(\Gamma) \subset C_0(\Gamma)$, it does not take long to verify
+that the conditions of the Stone-Weierstrass theorem are satisfied (for distinct $\gamma_1,\gamma_2 \in \Gamma$
+there is some $f \in L^1(G)$ with $\hat{f}(\gamma_1) \neq \hat{f}(\gamma_2)$; $A(\Gamma)$ is self-adjoint;
+for each $\gamma \in \Gamma$ there is some $f \in L^1(G)$ with $\hat{f}(\gamma) \neq 0$), and hence
+that $A(\Gamma)$ is dense in $C_0(\Gamma)$. 
+
+
+\begin{theorem}
+If $G$ is discrete then $\Gamma$ is compact, and if $G$ is compact then $\Gamma$ is discrete.
+\end{theorem}
+\begin{proof}
+We remarked earlier that the bijection $\Gamma \to \Delta$ is a homeomorphism, where $\Delta$
+is the maximal ideal space of $L^1(G)$ and has the subspace topology inherited from $L^1(G)^*$ with the weak-*
+topology. If $G$ is discrete, then $L^1(G)$ is unital, and it is a fact that the maximal ideal space of a unital commutative
+Banach algebra is compact, so $\Gamma$ is compact.
+
+Suppose that $G$ is compact, with Haar measure $m$ satisfing $m(G)=1$. If $\gamma \in \Gamma$ and there
+is some $x_0 \in G$ with $\gamma(x_0) \neq 1$ (i.e. $\gamma$ is not the $0$ homomorphism), then
+\[
+\int_G \inner{x}{\gamma} dm(x) = \inner{x_0}{\gamma} \int_G \inner{x-x_0}{\gamma} dm(x) = 
+\inner{x_0}{\gamma} \int_G \inner{x}{\gamma} dm(x).
+\] 
+As $\inner{x_0}{\gamma} \neq 1$, this means that $\int_G \inner{x}{\gamma} dm(x) =0$. Therefore,
+\[
+\int_G \inner{x}{\gamma} dm(x) =\begin{cases}
+1&\gamma =0,\\
+0&\gamma \neq 0.
+\end{cases}
+\]
+As $G$ is compact, $\chi_G \in L^1(G)$, and 
+\[
+\hat{\chi}_G(\gamma)=
+\int_G  \chi_G(x) \inner{-x}{\gamma} dm(x)
+=\int_G \inner{-x}{\gamma} dm(x)
+=\begin{cases}
+1&\gamma =0,\\
+0&\gamma \neq 0.
+\end{cases}
+\]
+$\hat{\chi}_G$ is continuous, so $\{\gamma \in \Gamma: \hat{\chi}_G(\gamma) =0\}$
+is a closed subset of $\Gamma$, hence its complement $\{\gamma \in \Gamma: \hat{\chi}_G(\gamma) \neq  0\}$ is an open subset
+of $\Gamma$. But by the above this complement is $\{0\}$, and $\Gamma$ is a topological group  so  this implies that
+each singleton is open, meaning
+that $\Gamma$ is discrete.
+\end{proof}
+
+
+
+\section{Regular complex Borel measures on $G$}
+Let $M(G)$ be the set of regular complex Borel measures on $G$. If $E$ is a Borel set in $G$, define $E_n = \{(x_1,\ldots,x_n): x_1+\cdots+x_n \in E\}$,
+which is a Borel set in $G^n$. For $\mu_1,\ldots,\mu_n \in M(G)$, we define
+\[
+(\mu_1 * \cdots * \mu_n) (E)  = (\mu_1 \times \cdots \times \mu_n)(E_n).
+\]
+It is proved in Rudin\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~13, \S 1.3.1.} that $\mu_1 * \cdots * \mu_n \in
+M(G)$, and that with convolution as multiplication
+and norm $\norm{\mu}=|\mu|(G)$ (the
+\textbf{total variation norm}),
+ $M(G)$ is a commutative Banach algebra with unity $\delta_0$. 
+
+The \textbf{Fourier transform} of $\mu \in M(G)$ is the function $\hat{\mu}:\Gamma \to \mathbb{C}$ defined by
+\[
+\hat{\mu}(\gamma) = \int_G \inner{-x}{\gamma} d\mu(x), \qquad \gamma \in \Gamma.
+\]
+We write $B(\Gamma)=\{\hat{\mu}:\mu \in M(G)\}$.
+For $f \in L^1(G)$ we have proved that $\hat{f} \in C_0(G)$. We prove now that for $\mu \in M(G)$, $\hat{\mu}$ is bounded and uniformly continuous
+on $\Gamma$. However, $\delta_0 \in M(G)$, and for $\gamma \in \Gamma$,
+\[
+\hat{\delta}_0(\gamma) = \int_G \inner{-x}{\gamma} d\delta_0(x) = \inner{0}{\gamma} = \gamma(0) = 1,
+\] 
+so $\hat{\delta}_0 \not \in C_0(\Gamma)$. The proof is from Rudin.\footnote{Walter Rudin, {\em Fourier Analysis on Groups},
+p.~15, \S 1.3.3.}
+
+\begin{theorem}
+If $\mu \in M(G)$, then $\hat{\mu}:\Gamma \to \mathbb{C}$ is bounded and uniformly continuous.
+\end{theorem}
+\begin{proof}
+For any $\gamma \in \Gamma$, 
+\[
+|\hat{\mu}(\gamma)| \leq \int_G |\inner{-x}{\gamma}| d|\mu|(x) = \int_G d|\mu|(x) = |\mu|(G)<\infty,
+\]
+where $|\mu|$ is the variation of $\mu$. Hence $\hat{\mu}$ is bounded.
+
+$|\mu|$ is regular, so for any $\delta>0$ there is some compact set $K$ such that $|\mu|(K')<\delta$, where $K'=G \setminus K$.
+For $\gamma_1,\gamma_2 \in \Gamma$,  $\inner{x}{\gamma_1-\gamma_2}=\inner{x}{\gamma_1} \inner{x}{\gamma_2}^{-1}$ and hence
+\[
+|\inner{x}{\gamma_1}-\inner{x}{\gamma_2}| = |1- \inner{x}{\gamma_1-\gamma_2}|,
+\]
+with which we get
+\[
+|\hat{\mu}(\gamma_1)-\hat{\mu}(\gamma_2)| \leq \int_G |1- \inner{x}{\gamma_1-\gamma_2}| d|\mu|(x).
+\]
+We know that $W(K,\delta)$ defined in Theorem \ref{topologybasis} is an open neighborhood of $0$. If $\gamma_1-\gamma_2 \in
+W(K,\delta)$, then by the definition of $W(K,\delta)$, for all $x \in K$ we have $|1-\inner{x}{\gamma_1-\gamma_2}|<\delta$, giving
+\[
+\int_G |1- \inner{x}{\gamma_1-\gamma_2}| d|\mu|(x) \leq \int_K \delta d|\mu|(x) + \int_{K'} 2 d|\mu|(x)<\delta \norm{\mu} + 2\delta,
+\]
+showing that $\hat{\mu}$ is uniformly continuous.
+
+
+\end{proof}
+
+If $f \in L^1(G)$, we define $\mu_f \in M(G)$ by
+\[
+\mu_f(E) = \int_E f(x) dm(x),
+\]
+for Borel subsets $E$ of $G$, where $m$ is Haar measure on $G$. Thus, $\mu_f$ is absolutely continuous with respect
+to $m$ and has density $f$. Then, for $\gamma \in \Gamma$,
+\[
+\hat{\mu}_f(\gamma) = \int_G \inner{-x}{\gamma} d\mu_f(x) = \int_G \inner{-x}{\gamma} f(x) dm(x) = \hat{f}(\gamma),
+\]
+showing that $A(\Gamma) \subset B(\Gamma)$. Furthermore, $\norm{f}_1 = \norm{\mu_f}$, hence it makes sense to
+identify $L^1(G)$ with its image in $M(G)$ under the map $f \mapsto \mu_f$. 
+To talk about a function that belongs to $M(G)$ is to speak about $\mu_f$ for some $f \in L^1(G)$.  It is proved in Rudin
+that $L^1(G)$ is a closed ideal in the Banach algebra $M(G)$.\footnote{Walter Rudin, {\em Fourier Analysis on Groups},
+p.~16, \S 1.3.4.}
+
+Rudin calls the following theorem the \textbf{uniqueness theorem}.\footnote{Walter
+Rudin, {\em Fourier Analysis on Groups}, p.~17, \S 1.3.6.}
+
+\begin{theorem}
+If $\mu \in M(\Gamma)$ and 
+\[
+\int_\Gamma \inner{x}{\gamma} d\mu(\gamma)=0
+\]
+for all $x \in G$, then $\mu=0$.
+\label{uniqueness}
+\end{theorem}
+\begin{proof}
+Let $f \in L^1(G)$.
+\begin{eqnarray*}
+\int_\Gamma \hat{f}(\gamma) d\mu(\gamma)&=&\int_\Gamma \int_G f(x) \inner{-x}{\gamma} dm(x) d\mu(\gamma)\\
+&=&\int_G f(x) \int_\Gamma \inner{-x}{\gamma} d\mu(\gamma) dm(x)\\
+&=&0.
+\end{eqnarray*}
+Because $A(\Gamma)$ is dense in $C_0(\Gamma)$, it follows that for all $\phi \in C_0(\Gamma)$, 
+\[
+\int_\Gamma \phi d\mu=0,
+\]
+and this implies that $\mu=0$. 
+\end{proof}
+
+
+\section{Positive-definite functions}
+A function $\phi:G \to \mathbb{C}$ is called \textbf{positive-definite} if for every $N$ and every $x_1,\ldots,x_N \in G$, $c_1,\ldots,c_N \in \mathbb{C}$, we have
+\begin{equation}
+\sum_{n,m=1}^N c_n \overline{c_m} \phi(x_n-x_m) \geq 0.
+\label{posdef}
+\end{equation}
+In particular, the left-hand side of the above inequality is real. 
+
+Let $\phi$ be a character of $G$, which we do not assume to be continuous. Then,
+\[
+\sum_{n,m=1}^N c_n \overline{c_m} \phi(x_n-x_m) = \sum_{n,m=1}^N c_n \overline{c_m} \phi(x_n) \overline{\phi(x_m)} 
+=\left| \sum_{n=1}^N c_n \phi(x_n)  \right|^2 \geq 0,
+\]
+so any character of $G$, whether or not it is continuous, is positive-definite.
+
+\begin{lemma}
+If $\phi:G \to \mathbb{C}$ is positive-definite, then
+\[
+\phi(0) \geq 0,
+\]
+\[
+\phi(-x)=\overline{\phi(x)}, \quad |\phi(x)| \leq \phi(0), \qquad x \in G,
+\]
+and
+\[
+|\phi(x)-\phi(y)|^2 \leq 2\phi(0) \Re(\phi(0)-\phi(x-y)), \qquad x,y \in G.
+\]
+\label{posdeflemma}
+\end{lemma}
+\begin{proof}
+Take $N=1$, $c_1=1$, $x_1=0$. Then \eqref{posdef} is
+\[
+\phi(0) \geq 0.
+\]
+
+Take $N=2$, $x_1=0, x_2=x, c_1=1,c_2=c$. Then \eqref{posdef} is
+\begin{equation}
+\phi(0)+\overline{c}\phi(-x)+c\phi(x)+|c|^2 \phi(0) \geq 0.
+\label{eq5}
+\end{equation}
+Because $\phi(0)$ is real, this means that $c\phi(x)+\overline{c}\phi(-x)$ is real, hence is equal to its own complex conjugate.
+Writing $\phi(x)=A+iB$ and $\phi(-x)=C+iD$, for $c=1$ this implies that
+\[
+A+iB + C+iD = A-iB + C - iD
+\]
+and for $c=i$ this is
+\[
+iA-B -iC + D = -iA -B+iC +D.
+\]
+The first equation tells us $B+D=0$, and the second equation tells us $A-C=0$. Thus
+\[
+\phi(-x) = C+iD = A -iB = \overline{\phi(x)}.
+\]
+
+Use \eqref{eq5} with $c$ chosen so that $c\phi(x)=-|\phi(x)|$.  $|c|=1$, and using $\phi(-x)=\overline{\phi(x)}$,
+\[
+2\phi(0) + 2|\phi(x)| \geq 0.
+\]
+
+Take $N=3$, $x_1=0, x_2=x, x_3=y$, $c_1=1$, $\lambda \in \mathbb{R}$,
+\[
+c_2 = \frac{\lambda |\phi(x)-\phi(y)|}{\phi(x)-\phi(y)},
+\]
+$c_3=-c_2$; since $\phi(0) \geq 0$, the claim is obviously true for the case $x=y$, which we discard. Then \eqref{posdef} is
+\[
+(1+2|c_2|^2)\phi(0) +\overline{c_2}(\phi(-x)-\phi(-y))+c_2(\phi(x)-\phi(y))-|c_2|^2( \phi(x-y)+ \phi(y-x)) \geq 0.
+\]
+Using the definition of $c_2$ and the fact that $\overline{\phi(z)}=\phi(-z)$,
+\[
+(1+2\lambda^2) \phi(0) +2\lambda  |\phi(x)-\phi(y)| -\lambda^2 ( \phi(x-y)+ \overline{\phi(x-y)}) \geq 0,
+\]
+or
+\[
+\lambda^2(2\phi(0)- 2\Re \phi(x-y))  +2\lambda |\phi(x)-\phi(y)| +\phi(0) \geq 0.
+\]
+The fact that this quadratic polynomial does not take negative values implies that it has either 0 or 1 real roots, and hence that its discriminant
+is $\leq 0$:
+\[
+4|\phi(x)-\phi(y)|^2  - 4(2\phi(0)- 2\Re \phi(x-y)) \phi(0) \leq 0,
+\]
+which is the claim.
+\end{proof}
+
+We remind ourselves that $f^*(x)=\overline{f(-x)}$.
+
+\begin{theorem}
+If $f \in L^2(G)$, then $\phi = f* f^*$ is positive-definite and belongs to $C_0(G)$.
+\label{selfconv}
+\end{theorem}
+\begin{proof}
+\begin{eqnarray*}
+\sum_{n,m=1}^N c_n \overline{c_m} \phi(x_n-x_m)&=&\sum_{n,m=1}^Nc_n\overline{c_m} \int_G f(x_n-x_m - y) \overline{f(-y)} dy\\
+&=&\sum_{n,m=1}^Nc_n\overline{c_m} \int_G f(x_n - y) \overline{f(x_m-y)} dy\\
+&=&\int_G \left| \sum_{n=1}^N c_n f(x_n-y)\right|^2 dy\\
+&\geq&0.
+\end{eqnarray*}
+
+It is a fact that if $1<p<\infty$, $\frac{1}{p}+\frac{1}{q}=1$ and $f \in L^p(G)$, $g \in L^q(G)$, then $f*g \in C_0(G)$.\footnote{Walter
+Rudin, {\em Fourier Analysis on Groups}, p.~4, \S 1.1.6.}
+\end{proof}
+
+
+The following theorem is from Rudin.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~19, \S 1.4.2.}
+
+\begin{theorem}
+If $\mu \in M(\Gamma)$, $\mu \geq 0$ (i.e. $\mu=|\mu|$), and 
+\[
+\phi(x)=\int_\Gamma \inner{x}{\gamma} d\mu(\gamma), \qquad x \in G,
+\]
+then $\phi$ is uniformly continuous and positive-definite.
+\end{theorem}
+\begin{proof}
+\begin{eqnarray*}
+\sum_{n,m=1}^N c_n \overline{c_m} \phi(x_n-x_m)&=&\int_\Gamma \sum_{n,m=1}^N c_n \overline{c_m} \inner{x_n-x_m}{\gamma} d\mu(\gamma)\\
+&=&\int_\Gamma \sum_{n,m=1}^N c_n \overline{c_m} \inner{x_n}{\gamma} \overline{\inner{x_m}{\gamma}} d\mu(\gamma)\\
+&=&\int_\Gamma \left| \sum_{n=1}^N c_n \inner{x_n}{\gamma} \right|^2 d\mu(\gamma)\\
+&\geq&0,
+\end{eqnarray*}
+showing that $\phi$ is positive-definite.
+
+$\mu$ is regular, so for any $\delta>0$ there is a compact set $C$ such that $\mu(C')<\delta$, where $C'=\Gamma \setminus C$. 
+We know $V(C,\delta)$ defined in Theorem \ref{topologybasis} is an open neighborhood of $0$. If $x_1-x_2 \in V(C,\delta)$, then 
+by the definition of $V(C,\delta)$, for all $\gamma \in C$ we have $|1-\inner{x_1-x_2}{\gamma}|<\delta$, and so
+\begin{eqnarray*}
+|\phi(x_1)-\phi(x_2)|&\leq&\int_\Gamma |1-\inner{x_1-x_2}{\gamma}| d\mu(\gamma)\\
+&=&\int_C |1-\inner{x_1-x_2}{\gamma}| d\mu(\gamma) + \int_{C'} |1-\inner{x_1-x_2}{\gamma}| d\mu(\gamma)\\
+&\leq&\int_C \delta d\mu(\gamma) + \int_{C'} 2 d\mu(\gamma)\\
+&<& \delta \norm{\mu} + 2\delta.
+\end{eqnarray*}
+\end{proof}
+
+
+The above theorem shows that the inverse Fourier transform of a nonnegative measure on $\Gamma$ is a uniformly continuous positive-definite function
+on $G$. The following theorem shows that any continuous positive-definite function on $G$ has this form. We remind ourselves
+that if a positive-definite function is continuous then it is uniformly continuous, by
+Lemma \ref{posdeflemma}. 
+We are following the proof given in Rudin.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~19, \S 1.4.3.}
+
+\begin{theorem}[Bochner's theorem]
+If $\phi:G \to \mathbb{C}$ is uniformly continuous and positive-definite, then there is some nonnegative measure $\mu \in M(\Gamma)$ such that
+\[
+\phi(x) = \int_\Gamma \inner{x}{\gamma} d\mu(\gamma), \qquad x \in G.
+\]
+\end{theorem}
+\begin{proof}
+As $\phi$ is positive-definite, $\phi(0)$ is a nonnegative real number, and $|\phi(x)| \leq \phi(0)$ for all $x \in G$. If $\phi(0)=0$ then
+use $\mu=0$. Otherwise, it makes sense to divide $\phi$ by $\phi(0)$ and the resulting function is also continuous and positive-definite. 
+Thus without loss of generality we suppose that $\phi(0)=1$. 
+
+Using the fact that $\phi$ is positive-definite one shows that for any $f \in C_c(G)$,
+$\int_G \int_G f(x) \overline{f(y)} \phi(x-y) dm(x) dm(y)$ is nonnegative
+by approximating this integral with finite sums. Then as $C_c(G)$ is dense in $L^1(G)$, the previous integral is nonnegative for any
+$f\in L^1(G)$. We define $T_\phi:L^1(G) \to \mathbb{C}$ by
+\[
+T_\phi(f) = \int_G f \phi dm, \qquad f \in L^1(G),
+\]
+and define, for $f,g \in L^1(G)$,
+\begin{eqnarray*}
+[f,g] &=& T_\phi(f* g^*)\\
+& =& \int_G (f*g^*)(x) \phi(x) dm(x)\\
+&=&\int_G \int_G f(x-y) \overline{g(-y)} \phi(x) dm(y) dm(x)\\
+&=&\int_G \int_G f(x) \overline{g(y)} \phi(x-y) dm(x) dm(y).
+\end{eqnarray*}
+Therefore, $[f,f] \geq 0$, and thus  $[\cdot,\cdot]$ is an inner product on $L^1(G)$ and hence satisfies the Cauchy-Schwarz inequality:
+\[
+|[f,g]|^2 \leq [f,f] [g,g], \qquad f,g \in L^1(G).
+\]
+
+Suppose that $V$ is a symmetric neighborhood of $0$ in $G$ and define $g = \frac{\chi_V}{m(V)}$. 
+\begin{eqnarray*}
+[f,g]-T_\phi(f)&=&\int_G \int_G f(x) \overline{g(y)} \phi(x-y) dm(x)dm(y) - \int_G f(x) \phi(x) dm(x)\\
+&=&\int_G \frac{1}{m(V)} \int_V f(x) \phi(x-y) dm(y)dm(x) \\
+&&- \int_G \frac{1}{m(V)} \int_V f(x) \phi(x) dm(y) dm(x)\\
+&=&\int_G f(x) \frac{1}{m(V)} \int_V (\phi(x-y)-\phi(x)) dm(y) dm(x)
+\end{eqnarray*}
+and
+\[
+[g,g]-1 = \frac{1}{m(V)^2} \int_V \int_V (\phi(x-y)-1) dm(x)dm(y).
+\]
+Because $\phi$ is uniformly continuous, for any $\delta>0$ there is some $V$ such that both these integrals have absolute value $<\delta$,
+and then using the Cauchy-Schwarz inequality we get
+\begin{equation}
+|T_\phi(f)|^2 \leq [f,f], \qquad f \in L^1(G).
+\label{Tphi}
+\end{equation}
+
+Let $f \in L^1(G)$ 
+and define $h=f*f^*$ and $h^n=h^{n-1}*h$ for $n \geq 2$. $|\phi(x)| \leq \phi(0)=1$ tells us $\norm{\phi}_\infty=1$ and so
+$\norm{T_\phi} \leq 1$. In fact, one checks that $\norm{T_\phi}=1$. Applying \eqref{Tphi} to $h, h^2, h^4, \ldots$ we obtain
+\[
+|T_\phi(f)|^2 \leq T_\phi(f*f^*) = T_\phi(h) \leq (T_\phi (h*h^*))^{1/2} = (T_\phi(h^2))^{1/2} \leq \ldots,
+\]
+so for any $n \geq 1$, because $\norm{T_\phi} = 1$,
+\[
+|T_\phi(f)|^2 \leq (T_\phi(h^{2^n}))^{2^{-n}} \leq \norm{h^{2^n}}_1^{2^{-n}}. 
+\]
+The spectral radius formula tells us that 
+\[
+\lim_{n \to \infty} \norm{h^{2^n}}_1^{2^{-n}} = \norm{\hat{h}}_\infty.
+\]
+But $\hat{h} = \hat{f} \widehat{f^*}=|\hat{f}|^2$, so 
+$|T_\phi(f)|^2 \leq \norm{ \hat{f}}_\infty^2$, i.e.
+\[
+|T_\phi(f)| \leq \norm{\hat{f}}_\infty, \qquad f \in L^1(G).
+\]
+We define $S_\phi$ on $A(\Gamma)$ by $S_\phi(\hat{f}) = T_\phi(f)$; this makes sense because if $\hat{f_1}=\hat{f_2}$ then
+$|T_\phi(f_1-f_2)| \leq \norm{\hat{f_1}-\hat{f_2}}_\infty = 0$, so $T_\phi(f_1)=T_\phi(f_2)$. 
+The above inequality means that
+\[
+|S_\phi(\hat{f})| \leq \norm{\hat{f}}_\infty, \qquad \hat{f} \in A(\Gamma).
+\]
+Therefore $S_\phi$ is a bounded linear functional on $A(\Gamma)$, and because $A(\Gamma)$ is dense in $C_0(\Gamma)$, 
+$S_\phi$ can be extended to a bounded linear functional on $C_0(\Gamma)$ with norm $\norm{T_\phi} = 1$. 
+But $\Gamma$ is a locally compact Hausdorff space, so by the Riesz representation theorem there is a unique measure
+$\mu \in M(\Gamma)$ such that
+\[
+S_\phi(g) = \int_\Gamma g(-\gamma) d\mu(\gamma), \qquad g \in C_0(\Gamma),
+\]
+and $\norm{\mu}=\norm{S_\phi} = 1$; we state the above with $g(-\gamma)$ rather than $g(\gamma)$ for later convenience.
+For $f \in L^1(G)$, 
+\begin{eqnarray*}
+T_\phi(f) &=& S_\phi(\hat{f})\\
+&=& \int_\Gamma \hat{f}(-\gamma) d\mu(\gamma) \\
+&=& \int_\Gamma \int_G f(x) \inner{-x}{-\gamma} dm(x) d\mu(\gamma)\\
+&=&\int_G f(x) \left(\int_\Gamma \inner{x}{\gamma} d\mu(\gamma) \right) dm(x).
+\end{eqnarray*}
+But the definition of $T_\phi$ states
+\[
+T_\phi(f) = \int_G f(x) \phi(x) dm(x).
+\]
+Since these two expressions for $T_\phi(f)$ are equal for all $f \in L^1(G)$, we get that
+\[
+\int_\Gamma \inner{x}{\gamma} d\mu(\gamma)  = \phi(x)
+\]
+for almost all $x \in G$. Since both sides of the above equality are continuous, they are equal for all $x \in G$. 
+For $x=0$, 
+\[
+1=\phi(0) = \int_\Gamma \inner{0}{\gamma} d\mu(\gamma) = \int_\Gamma d\mu(\gamma) \leq \int_\Gamma d|\mu|(\gamma)
+\leq \norm{\mu}=1.
+\]
+Hence $\int_\Gamma d\mu(\gamma) = \int_\Gamma d|\mu|(\gamma)$, from which it follows that $\mu=|\mu|$, and therefore
+$\mu$ is a nonnegative measure.
+\end{proof}
+
+
+
+\section{The inversion theorem}
+Define $B(G)$ to be the set of those $f:G \to \mathbb{C}$ for which there is some $\mu_f \in M(\Gamma)$ such that
+\[
+f(x) = \int_\Gamma \inner{x}{\gamma} d\mu_f(\gamma), \qquad x \in G.
+\]
+It is apparent from Theorem \ref{uniqueness} that there is at most one $\mu_f \in M(\Gamma)$ such that the above holds.
+
+The following proof is from Rudin.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~22, \S 1.5.1.}
+
+\begin{theorem}[Inversion theorem]
+If $f \in L^1(G) \cap B(G)$, then $\hat{f} \in L^1(\Gamma)$.
+
+If the Haar measure $m$ on $G$ is fixed, then there is a Haar measure $m_\Gamma$ on $\Gamma$ such that for all $f \in
+L^1(G) \cap B(G)$,
+\[
+f(x) = \int_\Gamma \hat{f}(\gamma) \inner{x}{\gamma} dm_\Gamma(\gamma), \qquad x \in G.
+\]
+\end{theorem}
+\begin{proof}
+Write $B^1 = L^1(G) \cap B(G)$. For $f \in B^1$ and $h \in L^1(G)$,
+\begin{eqnarray*}
+(h*f)(0)&=&\int_G h(x) f(-x) dm(x)\\
+&=&\int_G h(x) \int_\Gamma \inner{-x}{\gamma} d\mu_f(\gamma) dm(x)\\
+&=&\int_\Gamma \hat{h}(\gamma) d\mu_f(\gamma).
+\end{eqnarray*}
+For $g \in B^1$, we have $h*g \in L^1(G)$ and $h*f \in L^1(G)$, and so using the above equality,
+\[
+\int_\Gamma \widehat{h*g} d\mu_f = ((h*g)*f)(0) = ((h*f)*g)(0) = \int_\Gamma \widehat{h*f} d\mu_g,
+\]
+hence 
+\[
+\int_\Gamma \hat{h} \hat{g} d\mu_f = \int_\Gamma \hat{h} \hat{f} d\mu_g, \qquad f,g \in B^1, h \in L^1(G).
+\]
+Because $A(\Gamma)$ is dense in $C_0(\Gamma)$ and the above holds for all $h \in L^1(G)$, it follows that
+\begin{equation}
+\hat{g} d\mu_f = \hat{f} d\mu_g, \qquad f,g \in B^1.
+\label{swappy}
+\end{equation}
+
+We define $T:C_c(\Gamma) \to \mathbb{C}$ as follows. Let $\psi \in C_c(\Gamma)$, $K=\supp \psi$. 
+For $\gamma_0 \in K$, there is some $\phi \in C_0(\Gamma)$ such that $\phi(\gamma_0) \neq 0$, and because $A(\Gamma)$
+is dense in $C_0(\Gamma)$ there is therefore some $f \in L^1(G)$ such that $\hat{f}(\gamma_0) \neq 0$. With
+$\delta=|\hat{f}(\gamma_0)|$, there is some $u \in C_c(G)$ with $\norm{u-f}_1<\delta$, and 
+\[
+|\hat{u}(\gamma_0)-\hat{f}(\gamma_0)| \leq \norm{u-f}_1 < \delta,
+\]
+which shows that $\hat{u}(\gamma_0) \neq 0$. $\widehat{u*u^*}=|\hat{u}|^2 \geq 0$, so there is some open neighborhood
+$U$ of $\gamma_0$ on which $\widehat{u*u^*}$ is positive, as it is a continuous function. Since $K$ is compact, it is covered
+by finitely many of these open neighborhoods. Call the corresponding functions $u_1,\ldots,u_n \in C_c(G)$, and write
+\[
+g=u_1*u_1^* + \cdots + u_n*u_n^*.
+\]
+$g$ satisfies $\hat{g}(\gamma)>0$ for all $\gamma \in K$. Because each $u_n$ belongs to $C_c(G)$, 
+$u_n*u_n^*$ belongs to $C_c(G)$ and so $g \in C_c(G)$. Moreover, by Theorem \ref{selfconv}, each $u_n*u_n^*$ is positive-definite,
+and one checks that as $g$ is a linear combination of positive-definite functions with nonnegative coefficients it is itself
+positive-definite. Because $g$ is positive-definite, by Bochner's theorem it belongs to $B(G)$, and because $g \in C_c(G)$, $g$
+belongs to $L^1(G)$. Hence $g \in B^1$. 
+We have now proved that there is at least one element of $B^1$ whose Fourier transform does not vanish on $K$. Suppose that
+$f$ is any such function. Then using \eqref{swappy},
+\[
+\int_\Gamma \frac{\psi}{\hat{f}} d\mu_f = \int_\Gamma \frac{\psi}{\hat{f}\hat{g}} \hat{g} d\mu_f = 
+\int_\Gamma \frac{\psi}{\hat{f} \hat{g}} \hat{f} d\mu_g = \int_G \frac{\psi}{\hat{g}} d \mu_g.
+\]
+Thus, it makes sense to define
+\begin{equation}
+T\psi = \int_\Gamma \frac{\psi}{\hat{g}} d\mu_g.
+\label{Tpsi}
+\end{equation}
+One checks that $T$ is linear.
+Because $g$ is positive-definite, the measure $\mu_g$ supplied by Bochner's theorem is nonnegative, and hence if
+$\psi \geq 0$ then $T\psi \geq 0$, namely, $T$ is positive. There are $f \in B^1$ and $\psi \in C_c(G)$ such that
+$\int_\Gamma \psi d\mu_f \neq 0$, and $\psi \hat{f} \in C_c(G)$, so there is some $g \in B^1$ satisfying 
+\[
+T(\psi \hat{f}) = \int_\Gamma \frac{\psi \hat{f}}{\hat{g}} d\mu_g = \int_\Gamma \psi d\mu_f \neq 0,
+\]
+showing that $T \neq 0$. 
+
+Let $\psi \in C_c(\Gamma)$ and $\gamma_0 \in \Gamma$. There is some $g \in B^1$ such that $\hat{g}$ is positive
+on both $K$ and $K+\gamma_0$. For $f(x)=\inner{-x}{\gamma_0} g(x)$, $x \in G$, we have
+$\hat{f}(\gamma)=\hat{g}(\gamma+\gamma_0)$, $\gamma \in \Gamma$, and $\mu_f(E) = \mu_g(E-\gamma_0)$. 
+For $\psi_0 \in C_c(\Gamma)$ defined by $\psi_0(\gamma)=\psi(\gamma-\gamma_0)$,
+\[
+T\psi_0 = \int_\Gamma \frac{\psi(\gamma-\gamma_0)}{\hat{g}(\gamma)} d\mu_g(\gamma) = 
+\int_\Gamma \frac{\psi(\gamma)}{\hat{f}(\gamma)} d\mu_f(\gamma) =T\psi,
+\]
+showing that $T$ is translation invariant. Then by the Riesz representation theorem, there is some
+nonnegative regular  measure $m_\Gamma$ on $\Gamma$ satisfying
+\[
+T\psi = \int_\Gamma \psi dm_\Gamma, \qquad \psi \in C_c(\Gamma).
+\]
+This measure $m_\Gamma$ is translation invariant and not the zero measure because $T$ has these properties,
+and this means 
+that it is a Haar measure on $\Gamma$. 
+
+For $f \in B^1$,
+\[
+\int_\Gamma \psi d\mu_f = T(\psi \hat{f}) = \int_\Gamma \psi \hat{f} dm_\Gamma,  \qquad \psi \in C_c(\Gamma),
+\]
+which implies that
+\[
+d\mu_f = \hat{f} dm_\Gamma, \qquad f \in B^1.
+\]
+Because $\norm{\mu_f}<\infty$ (as $\mu_f \in M(\Gamma)$), the above equality implies that $\hat{f} \in L^1(\Gamma)$. 
+Moreover,  by the definition of $\mu_f$, for any $x \in G$ we have
+\[
+f(x) = \int_\Gamma \inner{x}{\gamma} d\mu_f(\gamma) = \int_\Gamma \inner{x}{\gamma} \hat{f} dm_\Gamma(\gamma).
+\]
+
+\end{proof}
+
+
+Using the inversion theorem, we prove the following lemma.\footnote{Walter Rudin, {\em Fourier Analysis on Groups},
+p.~23, \S 1.5.2.}
+
+\begin{lemma}
+$\{x_0+V(C,r): \textrm{$x_0 \in G$, $C$ is a compact subset of $G$, $r>0$}\}$ is a basis for the topology of $G$.
+
+$\Gamma$ separates points in $G$.
+\label{VCr}
+\end{lemma}
+\begin{proof}
+Let $m_\Gamma$ be the Haar measure on $\Gamma$ specified in the inversion theorem.
+Suppose that $V$ is a neighborhood of $0$ in $G$. Let $W$ be a compact neighborhood of $0$ in $G$ satisfying $W-W \subset V$. (One proves
+that there are such $W$.) Define $f=\frac{\chi_W}{\sqrt{m(W)}}$ and $g=f*f^*$. $g$ is continuous and positive-definite,
+and $\supp g \subset  W - W$. Because $g$ is continuous and positive-definite, by Bochner's theorem it belongs to $B(G)$,
+and because $\supp g \subset W-W$ it belongs to $L^1(G)$, so we can apply the inversion theorem to get $\hat{g} \in L^1(\Gamma)$ and
+\[
+\int_\Gamma \hat{g} dm_\Gamma(\gamma) = g(0) = \int_G f(-y) \overline{f(-y)} dm(y) = \int_G |f(y)|^2 dm(y) = 1.
+\]
+Because $\hat{g}=|\hat{f}|^2 \geq 0$, there is a compact set $C$ in $\Gamma$ such that
+\[
+\int_C \hat{g}(\gamma) dm_\Gamma(\gamma) > \frac{2}{3}.
+\]
+To say that $x \in V(C,1/3)$ means $|1-\inner{x}{\gamma}|<\frac{1}{3}$ for all $\gamma \in  C$ and hence $\Re \inner{x}{\gamma}>\frac{2}{3}$,
+and satisfies
+\[
+g(x) = \Re \int_C \hat{g}(\gamma) \inner{x}{\gamma} dm_\Gamma(\gamma) + \Re \int_{C'} \hat{g}(\gamma) \inner{x}{\gamma} dm_\Gamma(\gamma).
+\]
+The first term is $>\frac{4}{9}$ and the second term has absolute value $<\frac{1}{3}$, so $g(x)>\frac{1}{9}$ for $x \in V(C,1/3)$. 
+But $g(x)>\frac{1}{9}$ means that $x \in \supp g = W-W \subset V$, so
+\[
+V(C,1/3) \subset V,
+\]
+from which it follows that $V(C,r)$, $C$ compact and $r>0$, is a local basis at $0$.
+
+For $x_0 \in G$, $x_0 \neq 0$, let $V$ be a neighborhood of $0$ that does not include $x_0$,
+and the above gives $x \not \in V(C,1/3)$, i.e., there is some $\gamma \in \Gamma$ such that $|1-\inner{x}{\gamma}| \geq \frac{1}{3}$,
+and hence $\inner{x}{\gamma} \neq 1$. Therefore, if $x_1 \neq x_2$, there is some $\gamma \in \Gamma$ such that $\inner{x_1-x_2}{\gamma} \neq 1$,
+and hence $\inner{x_1}{\gamma} \neq \inner{x_2}{\gamma}$, which is what it means to say that $\Gamma$ separates points in $G$.
+\end{proof}
+
+
+\section{Pontryagin duality theorem}
+The dual group $\Gamma$ of $G$ is itself a locally compact abelian group and so has a dual group $\widehat{\Gamma}$.
+We proved in Theorem \ref{topologybasis} that $(x,\gamma) \mapsto \inner{x}{\gamma}$ is continuous,
+and therefore for any $x \in G$, the function $\alpha(x):\Gamma \to \mathbb{C}$ defined by
+\[
+\inner{\gamma}{\alpha(x)} = \inner{x}{\gamma}, \qquad \gamma \in \Gamma, 
+\]
+belongs to $\widehat{\Gamma}$. For $x,y \in G$, $\alpha(xy) \in \widehat{\Gamma}$ satisfies
+\[
+\inner{\gamma}{\alpha(xy)} = \inner{xy}{\gamma} = \inner{x}{\gamma} \inner{y}{\gamma} = \inner{\gamma}{\alpha(x)}
+\inner{\gamma}{\alpha(y)},
+\]
+showing that $\alpha:G \to \widehat{\Gamma}$ is a homomorphism. The following theorem, proved in Rudin,\footnote{Walter Rudin, {\em Fourier Analysis on Groups},
+p.~28, \S 1.7.2.} shows that $\alpha$ is an isomorphism
+of topological groups. That is, it states that a locally compact abelian group is isomorphic as a topological group to
+its double dual. Let $\textbf{LCA}$ denote the category of locally compact abelian groups, where morphisms are continuous group
+homomorphisms. Taking the double dual of an element of \textbf{LCA} is a functor, and it can be proved that there is a natural
+isomorphism between the identity functor in \textbf{LCA} and the double dual functor.\footnote{For more, see the nLab page:
+\url{http://ncatlab.org/nlab/show/Pontrjagin+dual}}
+
+\begin{theorem}[Pontryagin duality theorem]
+$\alpha:G \to \widehat{\Gamma}$ defined by
+\[
+\inner{\gamma}{\alpha(x)} = \inner{x}{\gamma}, \qquad \gamma \in \Gamma, 
+\]
+is an isomorphism of topological groups.
+\end{theorem}
+
+
+We proved earlier that if $G$ is discrete then $\Gamma$ is compact and that if $G$ is compact then $\Gamma$ is discrete, but had not
+established that if $\Gamma$ is compact then $G$ is discrete or if $\Gamma$ is discrete then $G$ is compact, but we obtain these conclusions
+ from
+the Pontryagin 
+duality theorem: if $\Gamma$ is compact then $\widehat{\Gamma}$ is discrete, and $G$ is isomorphic as a topological group
+to $\widehat{\Gamma}$ so $G$ is discrete, and likewise if $\Gamma$ is discrete then $G$ is compact.
+
+
+
+
+
+
+
+\section{Further reading}
+Keith Conrad, \url{http://www.math.uconn.edu/~kconrad/blurbs/gradnumthy/characterQ.pdf} works out explicitly the form of all characters of $\mathbb{Q}$, and
+shows that the group of all characters of $\mathbb{Q}$ (namely, the dual group of $\mathbb{Q}$ when $\mathbb{Q}$ has the discrete topology), is isomorphic
+as a group to the quotient
+group
+$\mathbb{A}_\mathbb{Q}/\mathbb{Q}$. This gives a satisfying reason for caring about the $p$-adic numbers $\mathbb{Q}_p$ and the adeles $\mathbb{A}_\mathbb{Q}$.
+
+\end{document}

@@ -1,0 +1,277 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\ca}{\ensuremath\mathrm{ca}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\ind}{\ensuremath\mathrm{ind}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\diag}{\ensuremath\mathrm{diag}} 
+\newcommand{\grad}{\ensuremath\mathrm{grad}\,}
+\newcommand{\Hess}{\ensuremath\mathrm{Hess}\,}
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_{\mathrm{HS}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Stationary phase,  Laplace's method, and the Fourier transform for Gaussian integrals}
+\author{Jordan Bell}
+\date{July 28, 2015}
+
+\maketitle
+
+\section{Critical points}
+Let $U$ be a nonempty open subset of $\mathbb{R}^n$ and let
+ $\phi:U \to \mathbb{R}$ be smooth. Then $\phi':U \to \mathscr{L}(\mathbb{R}^n;\mathbb{R})
+=(\mathbb{R}^n)^*$. 
+For each $x \in U$, $\grad \phi(x)$ is the unique element of $\mathbb{R}^n$ satisfying\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/gradienthilbert.pdf}}
+\[
+\inner{\grad \phi(x)}{y} = \phi'(x)(y),\qquad y\in \mathbb{R}^n,
+\]
+and $\grad \phi:U \to \mathbb{R}^n$ is itself smooth. 
+$\Hess \phi:U \to \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$ is the derivative of $\grad \phi$. One checks that
+\[
+\phi''(x)(u)(v) = \inner{\Hess \phi(x)(u)}{v},\qquad x \in U,\quad u,v \in \mathbb{R}^n,
+\]
+and $(\Hess \phi (x))^*=\Hess \phi (x)$. 
+
+We call $p \in U$ a \textbf{critical point of $\phi$} when $\grad \phi(p)=0$, and we denote the
+set of critical points of $\phi$ by $C_\phi$. 
+For $p \in C_\phi$ and $\lambda \in \mathbb{R}$ let 
+$v(p,\lambda)$ denote the dimension of the kernel of
+$\Hess \phi(p) - \lambda$, and we then define the \textbf{Morse index of $p$} to be
+\[
+m_\phi(p) = \sum_{\lambda<0} v(p,\lambda).
+\]
+In other words, $m_\phi(p)$ is the number of negative eigenvalues of $\Hess \phi(p)$ counted according
+to geometric multiplicity. 
+We say that $p \in C_\phi$ is
+nondegenerate when
+$\Hess \phi(p) \in \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$ is invertible.
+
+For $A \in \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$  self-adjoint and for $\lambda \in \mathbb{R}$,
+let
+$v(\lambda)$ be the dimension of
+the kernel of $A-\lambda$. Let $\nu_+=\sum_{\lambda>0} v(\lambda)$,  let
+$\nu_-=\sum_{\lambda<0} v(\lambda)$, and  let $\nu_0=v(0)$. 
+Because $A$ is self-adjoint,
+$\nu_+ + \nu_- + \nu_0=n$. 
+We define
+the \textbf{signature of $A$} as  $\sgn(A)=\nu_+-\nu_-$. In other words, 
+$\sgn(A)$ is the number of positive eigenvalues of $A$ counted according to geometric
+ multiplicity minus the number of negative
+eigenvalues of $A$ counted according to geometric multiplicity.\footnote{cf. Sylvester's law of inertia, \url{http://individual.utoronto.ca/jordanbell/notes/principalaxis.pdf}}
+
+We can  connect the notions of Morse index and signature. For
+$p \in C_\phi$, write $A=\Hess \phi(p)$. For $p$ to be a nondegenerate critical point means that $A$ is invertible and
+ because $\mathbb{R}^n$ is finite-dimensional this is equivalent to
+$\nu_0=0$. Then $\nu_+=n-\nu_-$ which yields $\sgn(A) = n-2\nu_-=n-2m_\phi(p)$. 
+
+
+The \textbf{Morse lemma}\footnote{Serge Lang, {\em Differential and Riemannian Manifolds}, p.~182,
+chapter VII, Theorem 5.1.} states that if $0$ is a nondegenerate critical point of $\phi$
+then there is an open subset $V$ of $U$ with $0 \in V$ and a 
+$C^\infty$-diffeomorphism $\Phi:V \to V$, $\Phi(0)=0$, such that 
+\[
+\phi(x) = \phi(0)+\frac{1}{2}\inner{\Hess \phi(0)(\Phi(x))}{\Phi(x)},\qquad x \in V.
+\]
+
+
+
+\section{Stationary phase}
+Let $U$ be a nonempty connected open subset of $\mathbb{R}^n$, and
+let $a,\phi:U \to \mathbb{R}$ be smooth functions such that $a$ has compact support. 
+Suppose
+that each $p \in C_\phi \cap \supp a$ is nondegenerate.\footnote{In particular, $\phi$ is called a Morse function if it has
+no degenerate critical points, and in this case of course each $p \in C_\phi \cap \supp a$ is nondegenerate.} 
+The \textbf{stationary phase approximation} states that
+\begin{align*}
+\int_U a(x) e^{it\phi(x)} dx &= \sum_{p \in C_\phi \cap \supp a} 
+\left( \frac{2\pi}{t}\right)^{n/2} \frac{e^{\frac{i\pi \sgn(\Hess \phi(p))}{4}}}{|\det \Hess \phi(p)|^{1/2}}
+e^{it\phi(p)} a(p)\\
+&+ O(t^{-\frac{n}{2}-1})
+\end{align*}
+as $t \to \infty$.\footnote{Liviu Nicolaescu, {\em An Invitation to Morse Theory}, second ed.,
+p.~183, Proposition 3.88.}
+
+
+Let $A \in \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$ be self-adjoint and invertible and define
+\[
+\phi(x) = \frac{1}{2}\inner{Ax}{x},\qquad x \in U.
+\]
+We calculate $\grad \phi(x) = Ax$,
+so $C_\phi = \{0\}$. 
+The Hessian of $\phi$ is
+ $\Hess \phi(x) = A$, and because $A$ is invertible, $0$ is indeed a nondegenerate critical point of $\phi$. 
+Thus we have the following.
+
+\begin{theorem}
+For a nonempty connected open subset of $\mathbb{R}^n$ and for smooth functions $a,\phi:U \to \mathbb{R}$
+such that $a$ has compact support and such that each $p \in C_\phi$ is nondegenerate,
+\[
+\int_U a(x) e^{\frac{1}{2}\inner{Ax}{x}} dx = \left( \frac{2\pi}{t}\right)^{n/2} 
+\frac{e^{\frac{i\pi\sgn(A)}{4}}}{|\det A|^{1/2}}
+e^{\frac{1}{2}it\inner{Ap}{p}} a(p) + O(t^{-\frac{n}{2}-1})
+\]
+as $t \to \infty$. 
+\end{theorem}
+
+
+\section{The Fourier transform}
+For $A \in \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$ self-adjoint, 
+the spectral theorem tells us that
+are $\lambda_1,\ldots,\lambda_n \in \mathbb{R}$ and
+an orthonormal basis $\{v_1,\ldots,v_n\}$ for $\mathbb{R}^n$ such that
+$A v_j = \lambda_j v_j$.  
+
+
+We call $A \in \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$ \textbf{positive}
+when it is self-adjoint and satisfies
+ $\inner{Ax}{x} \geq 0$ for all $x \in \mathbb{R}^n$. 
+In this case, the eigenvalues of $A$ are nonnegative, thus the signature of
+$A$ is $\sigma(A)=n$. 
+Suppose furthermore that $A$ is invertible, and
+let $P=(v_1,\ldots,v_n)$ and $\Lambda=\diag(\lambda_1,\ldots,\lambda_n)$. 
+Then
+\[
+P^T A P = \Lambda,\qquad \Lambda^{1/2} = \diag(\lambda_1^{1/2},\ldots,\lambda_n^{1/2}),
+\qquad A^{1/2} = P\Lambda^{1/2}P^T.
+\]
+For $\xi \in \mathbb{R}^n$ and $t>0$, using the change of variables formula with the fact that 
+$|\det P|=1$ and then using Fubini's theorem,
+\[
+\begin{split}
+&\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}t \inner{Ax}{x}-i\inner{P\xi}{x}\right) dx\\
+=&\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}t \inner{\Lambda^{1/2}P^Tx}{\Lambda^{1/2}P^Tx} -i \inner{P\xi}{x}\right) dx\\
+=&\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}t \inner{\Lambda^{1/2}P^T Py}{\Lambda^{1/2}P^T Py}-i\inner{P\xi}{Py}\right)  |\det P| dy\\
+=&\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}t
+\norm{\Lambda^{1/2} y}^2 -i \inner{\xi}{y} \right) dy\\
+=&\prod_{j=1}^n \int_{\mathbb{R}} \exp\left(-\frac{1}{2} t \lambda_j y_j^2 -i \xi_j y_j \right) dy_j.
+\end{split}
+\]
+Using\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/bochnertheorem.pdf}} 
+\[
+\int_{\mathbb{R}} e^{-ax^2+bx+c} dx = \sqrt{\frac{\pi}{a}} \exp\left(\frac{b^2}{4a}+c\right),
+\qquad \Re a>0, b,c \in \mathbb{C},
+\]
+gives
+\[
+\int_{\mathbb{R}} \exp\left(-\frac{1}{2} t \lambda_j y_j^2 -i \xi_j y_j \right) dy_j
+=\frac{1}{\lambda_j^{1/2}} \left( \frac{2\pi}{t}\right)^{1/2} \exp\left(-\frac{\xi_j^2}{2t\lambda_j}\right),
+\]
+and using $\det A = \prod_{j=1}^n \lambda_j$ 
+we have
+\[
+\begin{split}
+&\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}t \inner{Ax}{x}-i\inner{P\xi}{x}\right) dx\\
+=&\prod_{j=1}^n\frac{1}{\lambda_j^{1/2}} \left( \frac{2\pi}{t}\right)^{1/2} \exp\left(-\frac{\xi_j^2}{2t\lambda_j}\right)\\
+=&(\det A)^{-1/2} \left(\frac{2\pi}{t}\right)^{n/2} \exp\left(-\frac{1}{2t}\sum_{j=1}^n \frac{\xi_j^2}{\lambda_j} \right),
+\end{split}
+\]
+and because
+\[
+\Lambda^{-1} \xi = \sum_{j=1}^n \frac{\xi_j}{\lambda_j} e_j,\qquad
+\inner{\Lambda^{-1} \xi}{\xi}=\sum_{j=1}^n \frac{\xi_j^2}{\lambda_j}
+\]
+this becomes
+\[
+\begin{split}
+&\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}t \inner{Ax}{x}-i\inner{P\xi}{x}\right) dx\\
+=&(\det A)^{-1/2} \left(\frac{2\pi}{t}\right)^{n/2} \exp\left(-\frac{1}{2t} \inner{\Lambda^{-1}\xi}{\xi} \right)\\
+=&(\det A)^{-1/2} \left(\frac{2\pi}{t}\right)^{n/2} \exp\left(-\frac{1}{2t}\inner{A^{-1}P\xi}{P\xi}\right),
+\end{split}
+\]
+and so, as $P$ is invertible we get the following.
+
+\begin{theorem}
+When $A \in \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$ is positive and invertible,
+for $t>0$ and $\xi \in \mathbb{R}^n$   we have
+\[
+\begin{split}
+&\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}t \inner{Ax}{x}-i\inner{\xi}{x}\right) dx\\
+=&(\det A)^{-1/2} \left(2\pi t^{-1}\right)^{n/2} \exp\left(-\frac{1}{2t}\inner{A^{-1}\xi}{\xi}\right).
+\end{split}
+\]
+\end{theorem}
+
+
+\section{Gaussian integrals}
+Let $A \in \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$ be positive and invertible and let
+$b \in \mathbb{R}^n$. 
+As above,
+\begin{align*}
+\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}\inner{Ax}{x}+\inner{P b}{x} \right)dx&=\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}\norm{\Lambda^{1/2}}^2
++\inner{b}{y}\right) dy\\
+&=\prod_{j=1}^n \int_{\mathbb{R}} \exp\left(-\frac{1}{2}\lambda_j y_j^2 + b_j y_j\right)
+dy_j\\
+&=\prod_{j=1}^n \frac{(2\pi)^{1/2}}{\lambda_j^{1/2}} \exp\left(\frac{b_j^2}{2\lambda_j}\right)\\
+&=(\det A)^{-1/2} (2\pi)^{n/2} \exp\left(\frac{1}{2} \sum_{j=1}^n \frac{b_j^2}{\lambda_j} \right)\\
+&=(\det A)^{-1/2} (2\pi)^{n/2} \exp\left(\frac{1}{2} \inner{A^{-1}Pb}{Pb}\right),
+\end{align*}
+which gives the following.\footnote{cf. Gaussian measures on $\mathbb{R}^n$:
+\url{http://individual.utoronto.ca/jordanbell/notes/gaussian.pdf}}
+
+\begin{theorem}
+If $A \in \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$ is positive and invertible, then for $b \in \mathbb{R}^n$,
+\[
+\int_{\mathbb{R}^n} \exp\left(-\frac{1}{2}\inner{Ax}{x}+\inner{b}{x} \right)dx
+=(\det A)^{-1/2} (2\pi)^{n/2} \exp\left(\frac{1}{2} \inner{A^{-1}b}{b}\right).
+\]
+\end{theorem}
+
+
+\section{Laplace's method}
+Let $D$ be the open ball in $\mathbb{R}^n$ with center $0$ and radius $1$ and let
+$S:D \to \mathbb{R}$ be smooth, attain its minimum value only at $0$, and satisfy 
+$\det \Hess S(x) >0$ for all $x \in D$.
+Let $g:D \to \mathbb{R}$ be smooth and for $t>0$ let
+\[
+J(t) = \int_D e^{-t S(x)} g(x) dx.
+\]
+\textbf{Laplace's method}\footnote{Peter D. Miller, {\em Applied Asymptotic Analysis},
+p.~92, Exercise 3.16 and 
+R. Wong, {\em Asymptotic Approximations of Integrals}, p.~495, Theorem 3.} tells us
+\[
+J(t) = (2\pi t^{-1})^{n/2} (\det \Hess S(0))^{-1/2} e^{-tS(0)} g(0) (1+O(t^{-1}))
+\]
+as $t \to \infty$. 
+
+Let $A \in \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$ be positive and invertible. 
+Define $S:D \to \mathbb{R}$ by
+\[
+S(x) = \frac{1}{2} \inner{Ax}{x}.
+\]
+Then as above $P^T A P =\Lambda$, with which
+$S(x) = \frac{1}{2}\inner{P\Lambda P^Tx}{x}
+=\frac{1}{2} \norm{\Lambda^{1/2} P^T x}^2$.  We get the following from  according  Laplace's method.
+
+\begin{theorem}
+Let $A \in \mathscr{L}(\mathbb{R}^n;\mathbb{R}^n)$ be positive and invertible and let $g:D \to \mathbb{R}$ be smooth.
+Then
+\[
+J(t) = (2\pi t^{-1})^{n/2} (\det A)^{-1/2} g(0)(1+O(t^{-1})),
+\]
+as $t \to \infty$. 
+\end{theorem}
+
+
+\end{document}

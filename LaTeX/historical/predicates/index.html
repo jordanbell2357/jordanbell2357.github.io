@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Jordan Bell" />
+  <meta name="dcterms.date" content="2017-03-04" />
+  <title>Predicates</title>
+  <style>
+    html {
+      line-height: 1.5;
+      font-family: Georgia, serif;
+      font-size: 20px;
+      color: #1a1a1a;
+      background-color: #fdfdfd;
+    }
+    body {
+      margin: 0 auto;
+      max-width: 36em;
+      padding-left: 50px;
+      padding-right: 50px;
+      padding-top: 50px;
+      padding-bottom: 50px;
+      hyphens: auto;
+      overflow-wrap: break-word;
+      text-rendering: optimizeLegibility;
+      font-kerning: normal;
+    }
+    @media (max-width: 600px) {
+      body {
+        font-size: 0.9em;
+        padding: 1em;
+      }
+    }
+    @media print {
+      body {
+        background-color: transparent;
+        color: black;
+        font-size: 12pt;
+      }
+      p, h2, h3 {
+        orphans: 3;
+        widows: 3;
+      }
+      h2, h3, h4 {
+        page-break-after: avoid;
+      }
+    }
+    p {
+      margin: 1em 0;
+    }
+    a {
+      color: #1a1a1a;
+    }
+    a:visited {
+      color: #1a1a1a;
+    }
+    img {
+      max-width: 100%;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      margin-top: 1.4em;
+    }
+    h5, h6 {
+      font-size: 1em;
+      font-style: italic;
+    }
+    h6 {
+      font-weight: normal;
+    }
+    ol, ul {
+      padding-left: 1.7em;
+      margin-top: 1em;
+    }
+    li > ol, li > ul {
+      margin-top: 0;
+    }
+    blockquote {
+      margin: 1em 0 1em 1.7em;
+      padding-left: 1em;
+      border-left: 2px solid #e6e6e6;
+      color: #606060;
+    }
+    code {
+      font-family: Menlo, Monaco, 'Lucida Console', Consolas, monospace;
+      font-size: 85%;
+      margin: 0;
+    }
+    pre {
+      margin: 1em 0;
+      overflow: auto;
+    }
+    pre code {
+      padding: 0;
+      overflow: visible;
+      overflow-wrap: normal;
+    }
+    .sourceCode {
+     background-color: transparent;
+     overflow: visible;
+    }
+    hr {
+      background-color: #1a1a1a;
+      border: none;
+      height: 1px;
+      margin: 1em 0;
+    }
+    table {
+      margin: 1em 0;
+      border-collapse: collapse;
+      width: 100%;
+      overflow-x: auto;
+      display: block;
+      font-variant-numeric: lining-nums tabular-nums;
+    }
+    table caption {
+      margin-bottom: 0.75em;
+    }
+    tbody {
+      margin-top: 0.5em;
+      border-top: 1px solid #1a1a1a;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    th {
+      border-top: 1px solid #1a1a1a;
+      padding: 0.25em 0.5em 0.25em 0.5em;
+    }
+    td {
+      padding: 0.125em 0.5em 0.25em 0.5em;
+    }
+    header {
+      margin-bottom: 4em;
+      text-align: center;
+    }
+    #TOC li {
+      list-style: none;
+    }
+    #TOC a:not(:hover) {
+      text-decoration: none;
+    }
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    div.csl-bib-body { }
+    div.csl-entry {
+      clear: both;
+    }
+    .hanging div.csl-entry {
+      margin-left:2em;
+      text-indent:-2em;
+    }
+    div.csl-left-margin {
+      min-width:2em;
+      float:left;
+    }
+    div.csl-right-inline {
+      margin-left:2em;
+      padding-left:1em;
+    }
+    div.csl-indent {
+      margin-left: 2em;
+    }
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Predicates</h1>
+<p class="author">Jordan Bell</p>
+<p class="date">March 4, 2017</p>
+</header>
+<p><span><em>totus</em></span>: whole, <span><em>omnis</em></span>: all, <span><em>quisque</em></span>: every/each, <span><em>quisquam</em></span>: any, <span><em>cuncta</em></span>, <span><em>singulis</em></span></p>
+<p>Latin, Spevak <span class="citation" data-cites="spevak">(<a href="#ref-spevak" role="doc-biblioref">Spevak 2014</a>)</span></p>
+<p>Bourbaki style the folloiwng are equivalent</p>
+<p>Fréchet space defined as such, or as limit of Banach spaces. Fréchet space: genus topological vector space, difference topology is induced by countably family of seminorms and with induced metric it is a complete metric space.</p>
+<p>Porphyry, <span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003</a>)</span>: genus, difference, species, property, accident. Three uses of the word genus: first, “The genus of the Heraclids is so called in this meaning, from their relation to some one item–I mean, to Hercules–, the plurality of people somehow related to one another taking their name, in contradistinction to the other genera, from the affinity derived from him.” <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 3</a>, §1)</span> Second, “Again, in another sense we call a genus the origin of anyone’s birth, whether from his progenitor or from the place in which he was born.” Third, “Again, in another sense we call a genus that under which a species is ordered, no doubt in virtue of a similarity with the former cases; for such a genus is a sort of origin for the items under it, and a plurality is held to contain everything under it.” <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 4</a>, §1)</span></p>
+<p>X is predicated of a genus as a genus if and only if it is true of every member of the genus.</p>
+<p>“Thus genera are so called in three ways; and it is the third which is of account to philosophers. Delineating it, they present it by saying that a genus is what is predicated, in answer to ‘What is it?’, of several items which differ in species; for example, animal.” <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 4</a>, §1)</span></p>
+<p>delineate=upographein</p>
+<p>“differ in number”: items differ in number if they are distinct, <span><em>Met</em></span> 1016b31–35</p>
+<p>Porphyry, <span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 4–5</a>, §2)</span>:</p>
+<blockquote>
+<p>Genera differ from what is predicated of only one item in that they are predicated of several items. Again, they differ from what is predicated of several items–from species because species, even if they are predicated of several items, are predicated of items which differ not in species but in number. Thus man, being a species, is predicated of Socrates and of Plato, who differ from one another not in species but in number, whereas animal, being a genus, is predicated of man and of cow and of horse, which differ from one another not only in number but also in species. Again, a genus differs from a property because a property is predicated of only one species–the species of which it is a property– and of the individuals under the species (as laughing is predicated only of man, and of particular men), whereas a genus is predicated not of one species but of several which differ. Again, a genus differs from a difference and from common accidents because differences and common accidents, even if they are predicated of several items which differ in species, are not predicated of them in answer to ‘What is it?’ but rather to ‘What sort of so-and-so is it?’. Asked what sort of so-and-so a man is, we say that he is rational; and asked what sort of so-and-so a raven is, we say that it is black–rational is a difference, black an accident. But when we are asked what a man is, we answer an animal–and animal is a genus of man.</p>
+</blockquote>
+<p><span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 6</a>, §2)</span>:</p>
+<blockquote>
+<p>What I mean should become clear in the case of a single type of predication. Substance is itself a genus. Under it is body, and under body animate body, under which is animal; under animal is rational animal, under which is man; and under man are Socrates and Plato and particular men. Of these items, substance is the most general and is only a genus, while man is the most special and is only a species. Body is a species of substance and a genus of animate body. Animate body is a species of body and a genus of animal. Again, animal is a species of animate body and a genus of rational animal. Rational animal is a species of animal and a genus of man. Man is a species of rational animal, but not a genus of particular men–only a species.</p>
+</blockquote>
+<p>Porphyry, <span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 7</a>, §2)</span>:</p>
+<blockquote>
+<p>The most general items, then, are ten; the most special are of a certain number, but not an infinite one; the individuals–that is to say, the items after the most special items–are infinite. That is why Plato advised those who descend from the most general items to the most special to stop there, and to descend through the intermediates, dividing them by the specific differences; and he tells us to leave the infinites alone, for there will be no knowledge of them. So, when we are descending to the most special items, it is necessary to divide and to proceed through a plurality, and when we are ascending to the most general items, it is necessary to bring the plurality together. For species–and still more, genera–gather the many items into a single nature; whereas the particulars or singulars, in contrary fashion, always divide the one into a plurality. For by sharing in the species the many men are one man, and by the particulars the one and common man is several–for the singular is always divisive whereas the common is collective and unificatory.</p>
+</blockquote>
+<p><span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 7–8</a>, §2)</span>:</p>
+<blockquote>
+<p>Genera and species–what each of them is–having been presented, and the genus being one whereas the species are several (for the splitting of a genus always yields several species), the genus is always predicated of the species (and all the upper items of the lower items), but a species is predicated neither of its proximate genus nor of the upper items–for it does not convert. For it must be the case that either equals are predicated of equals (as neighing of horse) or the larger of the smaller (as animal of man); but not the smaller of the larger–you will not say that animal is a man as you will say that man is an animal.</p>
+</blockquote>
+<p><span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 8</a>, §2)</span>:</p>
+<blockquote>
+<p>Of whatever a species is predicated, of those items, by necessity, will the genus of the species also be predicated–and the genus of the genus as far as the most general item. For if it is true to say that Socrates is a man, man is an animal, and animal is a substance, then it is also true to say that Socrates is an animal and a substance. For, the upper items being always predicated of the lower, a species will be predicated of the individual, a genus both of the species and of the individual, and a most general item both of the genus (or of the genera, should there be several intermediate and subaltern items) and of the species and of the individual. For a most general item is said of everything under it–genera and species and individuals; a genus which comes before a most special item is said of all the most special items and of the individuals; an item which is only a species is said of all the individuals; and an individual is said of one only of the particulars.</p>
+<p>Socrates is said to be an individual, and so are this white thing, and this person approaching, and the son of Sophroniscus (should Socrates be his only son). Such items are called individuals because each is constituted of proper features the assemblage of which will never be found the same in anything else–the proper features of Socrates will never be found in any other of the particulars. On the other hand, the proper features of man (I mean, of the common man) will be found the same in several items–or rather, in all particular men in so far as they are men.</p>
+<p>Thus an individual is contained by the species and a species by the genus. For a genus is a sort of whole, an individual a part, and a species both a whole and a part–but a part of one thing and a whole (not of another item but) in other items (for a whole is in the parts).</p>
+</blockquote>
+<p><span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 8–9</a>, §3)</span>:</p>
+<blockquote>
+<p>Let differences be so called commonly, properly, and most properly. For one item is said to differ commonly from a diverse item when it is distinguished in any fashion by a diversity either in relation to itself or in relation to another item–Socrates differs from Plato by diversity, and indeed from himself as a boy and as a grown man, and as being active in some way or having stopped, and always in respect of diversities in what he is like. One item is said to differ properly from a diverse item when it differs from it by an inseparable accident–inseparable accidents are, for example, blue-eyedness or hook-nosedness or even a hardened scar from a wound. One item is said to differ most properly from a diverse item when it is distinguished by a specific difference–as man differs from horse by a specific difference, that of rational.</p>
+</blockquote>
+<p><span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 12</a>, §4)</span>:</p>
+<blockquote>
+<p>For even if man does not always laugh, he is said to be laughing not in that he always laughs but in that he is of such a nature as to laugh–and this holds of him always, being connatural, like neighing of horses. And they say that these are properties in the strict sense, because they convert: if horse, neighing; and if neighing, horse.</p>
+</blockquote>
+<p><span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 15</a>, §9)</span>:</p>
+<blockquote>
+<p>Again, if properties are removed they do not co-remove the genera; but if genera are removed, they co-remove the species to which the properties belong, so that, that of which they are properties being removed, the properties themselves are also co-removed.</p>
+</blockquote>
+<p><span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 16</a>, §11)</span>:</p>
+<blockquote>
+<p>Common to difference and species is the fact that they are participated in equally: particular men participate equally in man and also in the difference of rational.</p>
+<p>Also common to them is the fact that they are always present in what participates in them; for Socrates is always rational and Socrates is always a man.</p>
+</blockquote>
+<p><span><em>Metaphysics</em></span> 1076a32–37, problem of universals</p>
+<p>Macrobius IV 361 <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 68</a>)</span>:</p>
+<blockquote>
+<p>A subject is a primary substance…e.g. Cicero–not the name but what is signified by the name.</p>
+</blockquote>
+<p><span><em>Topics</em></span> 102a31–35 <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 65</a>)</span>:</p>
+<blockquote>
+<p>A genus is what is predicated, in answer to ‘What is it?’, of several items which differ in species. Let things be said to be predicated in answer to ‘What is it?’ if it is appropriate to present them when asked what the item before us is–e.g. in the case of man it is appropriate, when asked what the item in question is, to say that it is an animal.</p>
+</blockquote>
+<p>2a19: “It is clear from what has been said that if something is said of a subject both its name and its definition are necessarily predicated of the subject. For example, man is said of a subject, the individual man, and the name is of course predicated (since you will be predicating man of the individual man), and also the definition of man will be predicated of the individual man (since the individual man is also a man). Thus both the name and the definition will be predicated of the subject.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 6</a>)</span></p>
+<p>“But as the primary substances stand to the other things, so the species stands to the genus: the species is a subject for the genus (for the genera are predicated of the species but the species are not predicated reciprocally of the genera).” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 7</a>)</span></p>
+<p>Simplicius, <span><em>in Cat</em></span> 119.26–30 <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 60</a>)</span>:</p>
+<blockquote>
+<p>It should also be realized that it is not possible to give accurate definitions of the highest genera; rather, accounts of such items are more like reminders or delineations, and more must not be asked from them than they can supply. Hence for these items it is enough to give some property, from which it is possible to know what they are.</p>
+</blockquote>
+<p><span><em>On Interpretation</em></span> 1, 16a1: “name”, “verb” (<span><em>verbum</em></span>), “negation” (<span><em>negatio</em></span>), “affirmation” (<span><em>affirmation</em></span>), “statement” (<span><em>enuntiatio</em></span>), “sentence” (<span><em>oratio</em></span>).</p>
+<p>“affection in/of the soul” (<span><em>anima passionum</em></span>), “likeness of”, “actual things”, “symbol of”, “spoken sound”, “written mark”. “Now spoken sounds are symbols of affections in the soul, and written marks symbols of spoken sounds. And just as written marks are not the same for all men, neither are spoken sounds. But what these are in the first place signs of – affections of the soul – are the same for all; and what these affections are likenesses of – actual things – are also the same.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 43</a>)</span></p>
+<p>“Just as some thoughts in the soul are neither true nor false while some are necessarily one or the other, so also with spoken sounds. For falsity and truth have to do with combination and separation. Thus names and verbs by themselves – for instance ‘man’ or ‘white’ when nothing further is added – are like the thoughts that are without combination and separation; for so far they are neither true nor false. A sign of this is that even ‘goat-stag’ signifies something but not, as yet, anything true or false – unless ‘is’ or ‘is not’ is added (either simply or with reference to time).” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 43</a>)</span></p>
+<p>2, 16a19: “A <span><em>name</em></span> is a spoken sound significant by convention, without time, none of whose parts is significant in separation.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 43</a>)</span></p>
+<p>3, 16b6: “A <span><em>verb</em></span> is what additionally signifies time, no part of it being significant separately; and it is a sign of things said of something else.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 44</a>)</span></p>
+<p>16b8: “It additionally signifies time: ‘recovery’ is a name, but ‘recovers’ is a verb, because it additionally signifies something’s holding <span><em>now</em></span>. And it is always a sign of what holds, that is, holds of a subject.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 44</a>)</span></p>
+<p>4, 16b26: “A <span><em>sentence</em></span> is a significant spoken sound some part of which is significant in separation – as an expression, not as an affirmation.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 45</a>)</span></p>
+<p>16b33: “Every sentence is significant (not as a tool, but, as we said, by convention), but not every sentence is a statement-making sentence, but only those in which there is truth or falsity.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 45</a>)</span></p>
+<p>17a2–3 <span class="citation" data-cites="barnes">(<a href="#ref-barnes" role="doc-biblioref">Barnes 2007, 3</a>)</span>:</p>
+<blockquote>
+<p>not every saying is assertoric – only those in which being true or being false holds.</p>
+</blockquote>
+<p>5, 17a23: “The simple statement is a significant spoke sound about whether something does or does not hold (in one of the divisions of time).” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 46</a>)</span></p>
+<p>6, 17a25: “An <span><em>affirmation</em></span> is a statement affirming something of something, a <span><em>negation</em></span> is a statement denying something of something.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 47</a>)</span></p>
+<p>7, 17a38: <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 47</a>)</span> “stating universally of a universal”, e.g. “every man is white” and “no man is white”; “stating of a universal not universally”, e.g. “a man is white” and “a man is not white”. “for ‘every’ does not signify the universal but that it is taken universally” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 48</a>)</span>. “It is not true to predicate a universal universally of a subject, for there cannot be an affirmation in which a universal is predicated universally of a subject, for instance ‘every man is every animal’.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 48</a>)</span> “every man is white” and “not every man is white”, affirmation and negation with one signifies universally and the other signifies not universally, called <span><em>contradictory opposites</em></span>; universal affirmation and universal negation are <span><em>contrary opposites</em></span>, e.g. “every man is just” and “no man is just”. <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 48</a>)</span></p>
+<p>9, 19a23: “I mean, for example: it is necessary for there to be or not to be a sea-battle tomorrow; but it is not necessary for a sea-battle to take place tomorrow, nor for one not to take place – though it is necessary for one to take place or not to take place.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 53</a>)</span></p>
+<p>20a3–6: gallop vs. are gallopers</p>
+<p>14, 24a6–9: “For if in the belief about the good that it is good ‘the good’ is taken universally, it is the same as the belief that whatever is good is good.” <span class="citation" data-cites="ackrill">(<a href="#ref-ackrill" role="doc-biblioref">Ackrill 1975, 67</a>)</span></p>
+<p>Dexippus <span><em>in Cat</em></span> 10.25–32 <span class="citation" data-cites="barnes">(<a href="#ref-barnes" role="doc-biblioref">Barnes 2007, 116</a>)</span>:</p>
+<blockquote>
+<p>The predicates are not the entities themselves but the expressions which signify the thoughts and the objects. When they say</p>
+<p>Animal is predicated of man</p>
+<p>they say that the expression significant of animal – which is the name animal – is predicated of the thought signified by the expression man and of the object which is subject to that thought; for being predicated is a property of significant utterances which signify thoughts and objects.</p>
+</blockquote>
+<blockquote>
+<p>Animals are not predicated, nor are thoughts of animals or the concept of an animal: what is predicated is the word ‘animal’. But not every word can be predicated: not the word ‘blityri’, for example, because though it is a word, it has no sense; not the words ‘often’ or ‘and’ or ‘through’, for example, because although they are words endowed with senses, they do not signify anything.</p>
+</blockquote>
+<p>Barnes <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 69</a>)</span>:</p>
+<blockquote>
+<p>The late commentators rehearse three simple answers to the question ‘What is a predicate?’: a predicate is an expression; a predicate is a concept; a predicate is an object. All three answers are then rejected in favour of a composite reply: Predicates are expressions insofar as they designate objects by way of concepts.</p>
+</blockquote>
+<p>Barnes <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 70</a>)</span>:</p>
+<blockquote>
+<p>The late commentators are wrong in thinking that this is a combination of their three simple views: it is the first of the three, construed in a particular way.</p>
+</blockquote>
+<p>Dexippus, <span><em>in Cat</em></span> 14.27 <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 76</a>)</span>:</p>
+<blockquote>
+<p>the predicates are words, the genera are natures</p>
+</blockquote>
+<p>Cicero, <span><em>de orat</em></span> I xlii 189 <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 63</a>)</span>:</p>
+<blockquote>
+<p>A genus is something which embraces two or more parts, similar by a certain commonality but different in species; parts are what are subordinate to the genera from which they derive.</p>
+</blockquote>
+<p>Dionysius Thrax, <span><em>Art</em></span> 11 [22.4-23.1] <span class="citation" data-cites="barnes">(<a href="#ref-barnes" role="doc-biblioref">Barnes 2007, 207</a>)</span>:</p>
+<blockquote>
+<p>An expression is a smallest part of a constructed saying. A saying is a combination of prose expressions which indicates a complete thought.</p>
+</blockquote>
+<p>Dionysius Thrax 12, 24.2–6 <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 315</a>)</span>:</p>
+<blockquote>
+<p>A name [<span><em>onoma</em></span>] is a part of speech which has cases and which signifies a body or an object (a body, e.g. stone; an object, e.g. education), and which is used both commonly and properly (commonly, e.g. man, horse; properly, e.g. Socrates).</p>
+</blockquote>
+<p>33.6–34.2:</p>
+<blockquote>
+<p>A name in the strict sense is one which signifies a proper substance, e.g. Homer, Socrates; an appellative name is one which signifies a common substance, e.g. man, horse.</p>
+</blockquote>
+<p>Dionysius Thrax 12, 43.1–44.1 <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 64</a>)</span>:</p>
+<blockquote>
+<p>A general name is one which can be divided into several species, e.g. animal, plant. A special name is one which is divided from a genus, e.g. ox, horse, vine, olive-tree.</p>
+</blockquote>
+<p>Barnes <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003, 319–20</a>)</span>: Greeks did not have inverted commas, used definite article, e.g. <span><em>to lege</em></span> means “the verb <span><em>lege</em></span>”.</p>
+<p>Priscian, <span><em>Institutiones Grammaticae</em></span> ii iv 15 [ii 53.28-29] <span class="citation" data-cites="barnes">(<a href="#ref-barnes" role="doc-biblioref">Barnes 2007</a>)</span>:</p>
+<blockquote>
+<p>A saying is a sequence of expressions which is well formed and which indicates a complete thought.</p>
+</blockquote>
+<p>Apollonius Dyscolus, <span><em>Syntax</em></span> i 1 [1.1-2.2] <span class="citation" data-cites="barnes">(<a href="#ref-barnes" role="doc-biblioref">Barnes 2007, 208</a>)</span>:</p>
+<blockquote>
+<p>In the lectures which we have already made public an account of utterances was laid out as the matter demanded. The publication which is now to be presented will contain the construction of utterances into well-formed and complete sayings, a matter which I have decided to set out with all exactitude inasmuch as it is indispensable for the interpretation of poetry.</p>
+</blockquote>
+<p>Apollonius Dyscolus, <span><em>On Conjunctions</em></span> 225.9–10 <span class="citation" data-cites="barnes">(<a href="#ref-barnes" role="doc-biblioref">Barnes 2007, 208</a>)</span>:</p>
+<blockquote>
+<p>‘It is day’ is complete, but ‘Either it is day’ is not complete.</p>
+</blockquote>
+<p>saying=complete saying=sentence</p>
+<p>Donatus, <span><em>Ars minor</em></span></p>
+<p>Priscian, <span><em>Institutiones grammaticae</em></span></p>
+<p>Martianus Capella, <span><em>The Marriage of Philology and Mercury</em></span> IV (Dialectic) <span class="citation" data-cites="capellaII">(<a href="#ref-capellaII" role="doc-biblioref">Stahl, Johnson, and Burge 1977, 112</a>)</span>: [344] “<span><em>Genus</em></span> is the embracing of many forms by means of a single name”. For example, <span><em>animal</em></span>, which has the forms <span><em>man</em></span>, <span><em>horse</em></span>, <span><em>lion</em></span>, etc. And the genus <span><em>man</em></span> is a form in relation to <span><em>animal</em></span> and a genus to <span><em>barbarian</em></span> and <span><em>Roman</em></span>. “Genus can extend right down to the point where on dividing it into its forms you reach the individual.” For example, divide <span><em>men</em></span> into <span><em>males</em></span> and <span><em>females</em></span>; divide <span><em>males</em></span> into <span><em>boys</em></span>, <span><em>youths</em></span>, and <span><em>old men</em></span>; divide <span><em>boys</em></span> into <span><em>infants</em></span> and <span><em>those who can speak</em></span>. “If you wished to divide <span><em>boy</em></span> into <span><em>Ganymede</em></span> or some other particular boy, that is not a genus, because you have arrived at the individual.” “We ought to use the genus which is closest to the matter in hand, so that if we are discussing <span><em>man</em></span>, we ought to take <span><em>animal</em></span> as the genus because it is closest to our subject. For if we take as our genus <span><em>substance</em></span>, that is true in logic but is too wide for our needs.”</p>
+<p>Sections 344–54 correspond to Porphyry, <span><em>Isagoge</em></span>, on the <span><em>quinque voces</em></span>, “five terms”, “five predicables”.</p>
+<p><span><em>logica vetus</em></span>: <span><em>Categories</em></span> and <span><em>On Interpretation</em></span>; Porphyry, <span><em>Isagoge</em></span> <span class="citation" data-cites="isagoge">(<a href="#ref-isagoge" role="doc-biblioref">Barnes 2003</a>)</span>; Boethius, <span><em>De topicis differentiis</em></span>, <span><em>De divisione</em></span>, <span><em>De syllogismis categoricis</em></span>, <span><em>De syllogismis hypotheticis</em></span>; <span><em>Liber sex principiorum</em></span>; Cicero, <span><em>Topica</em></span> <span class="citation" data-cites="reinhardt">(<a href="#ref-reinhardt" role="doc-biblioref">Reinhardt 2007</a>)</span>.</p>
+<p><span><em>logica nova</em></span>: <span><em>Prior Analytics</em></span>, <span><em>Posterior Analytics</em></span>, <span><em>Topics</em></span>, <span><em>Sophistical Refutations</em></span></p>
+<p><span><em>logica moderna</em></span>: terminist logic, categorematic and syncategorematic terms, supposition (material, personal, simple),</p>
+<p>Peter Abelard</p>
+<p>token, type</p>
+<p><span><em>Topicaa</em></span></p>
+<p>Abelard, <span><em>Dialectica</em></span> <span class="citation" data-cites="dialectica">(<a href="#ref-dialectica" role="doc-biblioref">Rijk 1956, 153</a>)</span>, <span><em>propositio</em></span> (propositional sign) is an <span><em>oratio verum falsumve significans</em></span></p>
+<p>Sextus Empiricus, <span><em>Adversus Mathematicos</em></span> 8.11–12, SVF 2.166:</p>
+<blockquote>
+<p>The Stoics say that these three are connected: the significate (shmain’omenon), the sign (shmaĩnon) and the thing (tugq’anon). The sign is the sound itself, e.g. the (sound) ‘Dion’, the significate is the entity manifested by (this sign) and which we apprehend as co-existing with our thought, (but) which foreigners do not comprehend, although they hear the sound; the thing is the external existent, e.g. Dion himself. Of these, two are bodies, viz. the sound and the thing, and one immaterial, viz. the entity signified, the <span><em>lecton</em></span>, which (further) is true or false.</p>
+</blockquote>
+<p>Peter of Spain, <span><em>Tractatus</em></span> <span class="citation" data-cites="CTMPT">(<a href="#ref-CTMPT" role="doc-biblioref">Kretzmann and Stump 1989, 79–101</a>)</span>. “predicable” <span class="citation" data-cites="CTMPT">(<a href="#ref-CTMPT" role="doc-biblioref">Kretzmann and Stump 1989, 80–81</a>)</span>:</p>
+<blockquote>
+<p>1. Sometimes ‘predicable’ is used strictly, and in this way only what is predicated of more than one thing is called a predicable. Sometimes it is used broadly, and in this way what is predicated of one or of more than one is called a predicable. Hence, ‘predicable’ taken in its strict sense and ‘universal’ are the same, but they differ in that a predicable is defined in terms of saying and a universal in terms of being. For a predicable is what is naturally suited to be said of more than one, but a universal is what is naturally suited to be in more than one.</p>
+<p>Predicables or universals are divided into genus, differentia, species, proprium, and accident; and our subject here is just these five.</p>
+</blockquote>
+<p>predicable: genus, specific difference, species, property, accident.</p>
+<p>Lambert of Auxerre, <span><em>Logica</em></span> <span class="citation" data-cites="CTMPT">(<a href="#ref-CTMPT" role="doc-biblioref">Kretzmann and Stump 1989, 102–62</a>)</span></p>
+<p><span><em>Syncategoremata Monacenia</em></span> <span class="citation" data-cites="CTMPT">(<a href="#ref-CTMPT" role="doc-biblioref">Kretzmann and Stump 1989, 163–73</a>)</span></p>
+<p>Nicholas of Paris, <span><em>Syncategoremata</em></span> <span class="citation" data-cites="CTMPT">(<a href="#ref-CTMPT" role="doc-biblioref">Kretzmann and Stump 1989, 174–215</a>)</span></p>
+<p>William of Heytesbury, <span><em>De sensu composito et divido</em></span> <span class="citation" data-cites="CTMPT">(<a href="#ref-CTMPT" role="doc-biblioref">Kretzmann and Stump 1989, 413–34</a>)</span></p>
+<p>William of Ockham <span class="citation" data-cites="grant">(<a href="#ref-grant" role="doc-biblioref">Grant 1974, 79</a>)</span></p>
+<div id="refs" class="references csl-bib-body hanging-indent" role="doc-bibliography">
+<div id="ref-ackrill" class="csl-entry" role="doc-biblioentry">
+Ackrill, J. L. 1975. <em><span class="nocase">Aristotle, Categories and De Interpretatione</span></em>. Clarendon Aristotle Series. Oxford: Clarendon Press.
+</div>
+<div id="ref-isagoge" class="csl-entry" role="doc-biblioentry">
+Barnes, Jonathan. 2003. <em><span>Porphyry, <span><em>Introduction</em></span></span></em>. Clarendon Later Ancient Philosophers. Oxford: Clarendon Press.
+</div>
+<div id="ref-barnes" class="csl-entry" role="doc-biblioentry">
+———. 2007. <em>Truth, Etc.: Six Lectures on Ancient Logic</em>. Oxford: Clarendon Press.
+</div>
+<div id="ref-grant" class="csl-entry" role="doc-biblioentry">
+Grant, Edward, ed. 1974. <em>A Source Book in Medieval Science</em>. Harvard University Press.
+</div>
+<div id="ref-CTMPT" class="csl-entry" role="doc-biblioentry">
+Kretzmann, Norman, and Eleonore Stump, eds. 1989. <em><span class="nocase">The Cambridge Translations of Medieval Philosophical Texts, volume one: Logic and the Philosophy of Language</span></em>. Cambridge University Press.
+</div>
+<div id="ref-reinhardt" class="csl-entry" role="doc-biblioentry">
+Reinhardt, Tobias. 2007. <em><span class="nocase">Cicero’s <span><em>Topica</em></span></span>, Edited with Translation Introduction, and Commentary</em>. Oxford Classical Monographs. Oxford University Press.
+</div>
+<div id="ref-dialectica" class="csl-entry" role="doc-biblioentry">
+Rijk, L. M. de. 1956. <em><span>Petrus Abaelardus, Dialectica</span></em>. Assen: Van Gorcum.
+</div>
+<div id="ref-spevak" class="csl-entry" role="doc-biblioentry">
+Spevak, Olga. 2014. <em>The Noun Phrase in Classical <span>L</span>atin Prose</em>. Vol. 21. Amsterdam Studies in Classical Philology. Brill.
+</div>
+<div id="ref-capellaII" class="csl-entry" role="doc-biblioentry">
+Stahl, William Harris, Richard Johnson, and E. L. Burge. 1977. <em><span class="nocase">Martianus Capella and the Seven Liberal Arts, volume II. The Marriage of Philology and Mercury</span></em>. Records of Civilization: Sources and Studies 84. Columbia University Press.
+</div>
+</div>
+</body>
+</html>

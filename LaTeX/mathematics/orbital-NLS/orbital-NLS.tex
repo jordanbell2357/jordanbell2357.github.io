@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage{amssymb,mathrsfs,amsmath,amsthm}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\diag}{\operatorname{diag}}
+\newcommand{\Der}{\operatorname{Der}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\ad}{\operatorname{ad}}
+\newcommand{\id}{\operatorname{id}}
+\newcommand{\spanning}{\operatorname{span}}
+\begin{document}
+\title{Orbital stability for NLS}
+\author{Jordan Bell}
+\date{April 3, 2014}     
+\maketitle
+
+Let $n=3$, and take $p<\frac{4}{3}$. Some of the material we will present for general $n$ when it doesn't simplify our work to use $n=3$.
+
+The (defocusing) nonlinear Schr\"odinger equation is
+\[
+i\phi_t + \Delta \phi + |\phi|^{p-1}\phi=0.
+\]
+$\phi(x,0)=\phi_0 \in H^1$.
+
+For a function $\psi$ on $\mathbb{R}^n$, the {\em orbit} of the function under the symmetries of NLS is
+\[
+\mathscr{G}_\psi=\{\psi(\cdot+x_0)e^{i\gamma}:(x_0,\gamma) \in \mathbb{R}^n \times \mathbb{T}\}.
+\]
+
+We say that $\psi$ is {\em orbitally stable} if initial data being near it implies that the solution of NLS is near it always.
+
+We define
+\[
+\rho(\phi(t),\mathscr{G}_\psi)=\inf_{(x_0,\gamma) \in \mathbb{R}^n \times \mathbb{T}} \norm{\phi(\cdot+x_0,t)e^{i\gamma}-\psi}_{H^1}.
+\]
+
+The {\em ground state equation} is
+\[
+\Delta u-u+|u|^{p-1}u=0.
+\]
+The ground state equation comes from the solution $\phi(x,t)=e^{it}u(x)$ of NLS. It is a fact that there is a positive bounded solution $R$ of the ground state equation, which we call a ground state.
+
+\begin{theorem}
+The ground state $R$ is orbitally stable: for any $\epsilon>0$ there is a $\delta(\epsilon)>0$ such that if
+\[
+\rho(\phi_0,\mathscr{G}_R) < \delta(\epsilon)
+\]
+then for all $t>0$
+\[
+\rho(\phi(t),\mathscr{G}_R)<\epsilon.
+\]
+\end{theorem}
+
+We define the energy functional $\mathscr{E}$ by
+\[
+\mathscr{E}[\phi]=\int |\nabla \phi|^2+|\phi|^2-\frac{2}{p+1}|\phi|^{p+1}dx,
+\]
+so $\mathscr{E}[\phi]$ is a function of time but not of space.
+
+It is a fact that for each $t$ there are $x_0=x_0(t)$ and $\gamma=\gamma(t)$ such that
+\[
+\norm{\phi(\cdot+x_0,t)e^{i\gamma}-R}_{H^1}=\rho(\phi(t),\mathscr{G}_R).
+\]
+Let $w=\phi(\cdot+x_0,t)e^{i\gamma}-R$; so $\norm{w(t)}_{H^1}=\rho(\phi(t),\mathscr{G}_R)$.
+ 
+ Let $\Delta \mathscr{E}=\mathscr{E}[\phi_0]-\mathscr{E}[R]$. We have
+ \begin{eqnarray*}
+ \Delta \mathscr{E}&=&\mathscr{E}[\phi(\cdot,t]-\mathscr{E}[R]\\
+ &=&\mathscr{E}[\phi(\cdot+x_0,t)e^{i\gamma}]-\mathscr{E}[R]\\
+ &=&\mathscr{E}[R+w]-\mathscr{E}[R].
+ \end{eqnarray*}
+ 
+ We shall express $\mathscr{E}[R+w]$ as a Taylor expansion about $R$. We compute the first variation as follows:
+\begin{eqnarray*}
+d\mathscr{E}[R]w&=&\int \nabla w \nabla \overline{R}+\nabla R \nabla \overline{w}+w\overline{R}+
+R\overline{w}-|R|^{p-1}(w\overline{R}+R\overline{w})\\
+&=&2\Re \int \nabla w \nabla R+wR-w|R|^{p-1}R\\
+&=&2\Re \int w(-\Delta R+R-|R|^{p-1}R)\\
+&=&0,
+\end{eqnarray*}
+where we used the fact that $R$ is real valued, integration by parts, and the fact that $R$ is a solution
+of the ground state equation.
+So the first variation of $\mathscr{E}$ at $R$ is $0$.
+
+We now compute the second variation of $\mathscr{E}$. 
+\begin{eqnarray*}
+d^2 \mathscr{E}[R][w]&=&2\Re\int -w\Delta \overline{w}+|w|^2-\frac{p-1}{2}R^{p-1}w^2
+-\frac{p-1}{2}R^{p-1}|w|^2\\
+&&-R^{p-1}|w|^2\\
+&=&2\Re\int -w\Delta \overline{w}+|w|^2-\frac{p-1}{2}R^{p-1}w^2
+-\frac{p+1}{2}R^{p-1}|w|^2\\
+\end{eqnarray*}
+
+Write $w=u+iv$. Then we have
+\begin{eqnarray*}
+d^2 \mathscr{E}[R][w]&=&2\int -u\Delta u -v\Delta v + u^2 +v^2 -R^{p-1}(pu^2+v^2)
+\end{eqnarray*}
+
+Define
+\[
+L_+=-\Delta+1-pR^{p-1} \qquad L_-=-\Delta+1-R^{p-1},
+\]
+which gives
+\[
+(L_+ u,u)_{L^2}=\int -u\Delta u + u^2 -pu^2 R^{p-1}
+\]
+and
+\[
+(L_-v,v)_{L^2}=\int -v\Delta v +v^2 - v^2 R^{p-1}.
+\]
+Thus
+\[
+d^2 \mathscr{E}[R][w]=2(L_+ u,u)_{L^2}+2(L_-v,v)_{L^2}.
+\]
+
+And we assert that the remainder term of the Taylor series is $O(\int |w|^3)$, because $R$ is bounded. Therefore
+\[
+\Delta \mathscr{E}=(L_+ u,u)_{L^2}+(L_-v,v)_{L^2}+O\Big(\int |w|^3\Big).
+\]
+
+We can bound $\int |w|^3$ using the Gagliardo-Nirenberg inequality, which gives us (for
+$n=3$)
+\[
+\norm{w}_{L^3}^3 \leq C_0 \norm{\nabla w}_{L^2}^{3/2} \norm{w}_{L^2}^{3/2}
+\leq C_0 \norm{w}_{H^1}^3,
+\]
+for some $C_0$ that doesn't depend on $w$.
+Therefore
+\[
+\Delta \mathscr{E}=(L_+ u,u)_{L^2}+(L_-v,v)_{L^2}+O(\norm{w}_{H^1}^3),
+\]
+so there is some $C$ such that
+\[
+\Delta \mathscr{E} \geq (L_+ u,u)_{L^2}+(L_-v,v)_{L^2}-C\norm{w}_{H^1}^3.
+\]
+
+
+\end{document}

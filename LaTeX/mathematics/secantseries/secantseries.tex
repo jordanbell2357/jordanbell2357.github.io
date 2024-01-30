@@ -1,0 +1,371 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\Res}{\ensuremath\mathrm{Res}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\sech}{\ensuremath\mathrm{sech}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{A series of  secants}
+\author{Jordan Bell}
+\date{November 3, 2014}
+
+\maketitle
+
+Let $\mathfrak{H}=\{\tau \in \mathbb{C}: \Im \tau >0\}$. Define $C:\mathfrak{H} \to \mathbb{C}$ by
+\[
+C(\tau) = 2 \sum_{n=-\infty}^\infty \frac{1}{e^{\pi i n\tau}+q^{-\pi i n\tau}}
+=\sum_{n=-\infty}^\infty \sec \pi n \tau, \qquad \tau \in \mathfrak{H}.
+\]
+We take as granted that $C$ is holomorphic on $\mathfrak{H}$. 
+
+
+First we calculate the Fourier transform of $x \mapsto \sech \pi x$.\footnote{Elias M. Stein and Rami Shakarchi, {\em Complex Analysis},
+p.~81, Example 3.}
+
+\begin{lemma}
+For $\xi \in \mathbb{R}$,
+\[
+\int_{-\infty}^\infty e^{-2\pi i\xi x} \sech \pi x dx = \sech \pi \xi.
+\]
+\end{lemma}
+\begin{proof}
+Let $\xi \in \mathbb{R}$ and define
+\[
+f(z)=\frac{e^{-2\pi iz\xi}}{\cosh \pi z}.
+\]
+The poles of $f$ are those $z$ at which $\cosh \pi z=0$, thus $z=n i+\frac{i}{2}$, $n \in \mathbb{Z}$.  
+Taking $\gamma_R$ to be the contour going from $-R$ to $R$, from $R$ to $R+2i$, from $R+2i$ to $-R+2i$, and from
+$-R+2i$ to $-R$, the poles of $f$ inside $\gamma_R$ are $\frac{i}{2}$ and $\frac{3i}{2}$. 
+Because $(\cosh \pi z)'=\pi \sinh \pi z$, we work out
+\[
+\Res_{z=i/2} f(z) = \frac{e^{-2\pi i \cdot \frac{i}{2} \xi}}{\pi \sinh \pi \frac{i}{2}}
+=\frac{e^{\pi \xi}}{\pi i \sin \frac{\pi}{2}}
+=\frac{e^{\pi \xi}}{\pi i}
+\]
+and
+\[
+\Res_{z=3i/2} f(z) = \frac{e^{-2\pi i\cdot \frac{3i}{2} \xi}}{\pi \sinh \pi \frac{3i}{2}}
+=\frac{e^{3\pi \xi}}{\pi i \sin \frac{3\pi}{2}}
+=\frac{e^{3\pi \xi}}{-\pi i}.
+\]
+
+We bound the integrals on the vertical sides as follows.
+For $z=-R+iy$,
+\[
+| \cosh \pi z| = \frac{|e^{\pi z}+e^{-\pi z}|}{2}
+\geq \frac{||e^{\pi z}|-|e^{-\pi z}||}{2}
+=\frac{|e^{-R\pi} - e^{R\pi}|}{2}
+=\frac{e^{R\pi}-e^{-R\pi}}{2},
+\]
+and, for $0 \leq y \leq 2$,
+\[
+|e^{-2\pi iz\xi}| = e^{2\pi y\xi} = e^{4\pi \xi}.
+\]
+For $z=R+iy$,
+\[
+| \cosh \pi z| = \frac{|e^{\pi z}+e^{-\pi z}|}{2}
+\geq \frac{||e^{\pi z}|-|e^{-\pi z}||}{2}
+=\frac{|e^{R\pi} - e^{-R\pi}|}{2}
+=\frac{e^{R\pi}-e^{-R\pi}}{2},
+\]
+and, for $0 \leq y \leq 2$,
+\[
+|e^{-2\pi iz\xi}| = e^{2\pi y\xi} = e^{4\pi \xi}.
+\]
+Therefore
+\[
+\left| \int_{-R}^{-R+2i} f(z) dz \right|
+\leq \int_{-R}^{-R+2i} |f(z)| dz
+\leq 2\cdot  e^{4\pi \xi} \cdot \frac{2}{e^{R\pi}-e^{-R\pi}}
+=\frac{e^{4\pi \xi}}{e^{R\pi}-e^{-R\pi}}
+\]
+and likewise
+\[
+\left| \int_{R}^{R+2i} f(z) dz \right| \leq \frac{e^{4\pi \xi}}{e^{R\pi}-e^{-R\pi}}.
+\]
+As $R \to \infty$, each of these tends to $0$.
+Therefore,
+\[
+\int_{-\infty}^\infty f(z) dz + \int_{\infty+2i}^{-\infty+2i} f(z)dz 
+=2\pi i \left(\frac{e^{\pi \xi}}{\pi i}+\frac{e^{3\pi \xi}}{-\pi i}\right)
+=-2 e^{2\pi \xi}(e^{\pi \xi}-e^{-\pi \xi}),
+\]
+i.e.,
+\[
+\int_{-\infty}^\infty f(z) dz = 
+ \int_{-\infty+2i}^{\infty+2i} f(z)dz 
+ -2 e^{2\pi \xi}(e^{\pi \xi}-e^{-\pi \xi}).
+\]
+For the top horizontal side, 
+\begin{align*}
+\int_{-R+2i}^{R+2i} f(z) dz 
+&=\int_{-R}^R \frac{e^{-2\pi i(x+2i)\xi}}{\cosh (\pi x+2\pi i)} dx\\
+&=\int_{-R}^R \frac{e^{-2\pi ix\xi} e^{4\pi \xi}}{\cosh (\pi x)\cosh(2\pi i)+\sinh(\pi x)\sinh(2\pi i)} dx\\
+&=e^{4\pi \xi} \int_{-R}^R \frac{e^{-2\pi ix\xi}}{\cosh \pi x} dx\\
+&=e^{4\pi \xi} \int_{-R}^R f(x) dx.
+\end{align*}
+Writing
+\[
+I=\int_{-\infty}^\infty f(z) dz,
+\]
+this gives us
+\[
+I = e^{4\pi \xi} I  -2 e^{2\pi \xi}(e^{\pi \xi}-e^{-\pi \xi}),
+\]
+and so
+\[
+I=-2 e^{2\pi \xi} \frac{e^{\pi \xi}-e^{-\pi \xi}}{1-e^{4\pi \xi}}
+=2 \frac{e^{\pi \xi}-e^{-\pi \xi}}{e^{2\pi \xi}-e^{-2\pi \xi}}
+=2 \frac{e^{\pi \xi}-e^{-\pi \xi}}{(e^{\pi \xi}-e^{-\pi \xi})(e^{\pi \xi}+e^{-\pi \xi})}
+=\sech \pi \xi,
+\]
+which is what we wanted to show.
+\end{proof}
+
+
+\begin{corollary}
+For $t>0$ and $a \in \mathbb{R}$,
+\[
+\int_{-\infty}^\infty e^{-2\pi i\xi x} e^{-2\pi iax} \sech \frac{\pi x}{t} dx = t \sech (\pi(\xi+a)t),
+\qquad \xi \in \mathbb{R}.
+\]
+\label{sechfourier}
+\end{corollary}
+\begin{proof}
+\begin{align*}
+\int_{-\infty}^\infty e^{-2\pi ix\xi} e^{-2\pi iax} \sech \frac{\pi x}{t} dx
+&=\int_{-\infty}^\infty e^{-2\pi i(\xi+a)x} \sech \frac{\pi x}{t} dx\\
+&=t \int_{-\infty}^\infty e^{-2\pi i(\xi +a) tx} \sech \pi x dx\\
+&=t \sech (\pi(\xi+a)t).
+\end{align*}
+\end{proof}
+
+
+
+\begin{theorem}
+For all $\tau \in \mathfrak{H}$,
+\[
+C(\tau) = \frac{i}{\tau} C\left( -\frac{1}{\tau} \right).
+\]
+\end{theorem}
+\begin{proof}
+For $f \in L^1(\mathbb{R})$, we define $\widehat{f}:\mathbb{R} \to \mathbb{C}$ by
+\[
+\widehat{f}(\xi) = \int_{\mathbb{R}} e^{-2\pi i \xi x} f(x) dx, \qquad \xi \in \mathbb{R}.
+\]
+
+Following Stein and Shakarchi, for $a>0$,  define $\mathfrak{F}_a$ to be the set of those functions
+$f$ defined on some neighborhood of $\mathbb{R}$ in $\mathbb{C}$ such that $f$
+is holomorphic on the set $\{z \in \mathbb{C}: |\Im z| < a\}$ and for which there is some $A>0$ such that
+\[
+|f(x+iy)| \leq \frac{A}{1+x^2}, \qquad x \in \mathbb{R}, \quad |y|<a,
+\]
+and we set $\mathfrak{F} = \bigcup_{a>0} \mathfrak{F}_a$. 
+The \textbf{Poisson summation formula}\footnote{Elias M. Stein and Rami Shakarchi, {\em Complex Analysis},
+p.~118, Theorem 2.4.} states that for $f \in \mathfrak{F}$,
+\[
+\sum_{n \in \mathbb{Z}} f(n) = \sum_{n \in \mathbb{Z}} \widehat{f}(n).
+\]
+
+For $z=x+iy$ with
+$|y|<\frac{1}{2}$, 
+\begin{align*}
+|\sech \frac{\pi z}{t}|&=\frac{2}{|e^{\pi (x+iy)}-e^{-\pi(x+iy)}|}\\
+&\leq \frac{2}{||e^{\pi(x+iy)}|-|e^{-\pi(x+iy)}||}\\
+&=\frac{2}{|e^{\pi x}-e^{-\pi x}|}\\
+&=\sech \pi |x|.
+\end{align*}
+Let $t>0$. 
+Because the zeros of $\cosh \pi z$ are $ni+\frac{i}{2}$, $n \in \mathbb{Z}$,
+the function $f(z)=\sech \frac{\pi z}{t}$ belongs to $\mathfrak{F}_{\frac{t}{2}}$. 
+ Corollary \ref{sechfourier} with $a=0$ gives us
+\[
+\widehat{f}(\xi) 
+=t \sech \pi \xi t,
+\]
+so applying the Poisson summation formula we get
+\[
+\sum_{n \in \mathbb{Z}} \sech \frac{\pi n}{t}
+=
+t\sum_{n \in \mathbb{Z}} \sech \pi nt,
+\]
+or,
+\[
+\sum_{n \in \mathbb{Z}} \sec \frac{\pi i n}{t} = t \sum_{n \in \mathbb{Z}}
+\sec \pi int,
+\]
+i.e.,
+\[
+C\left( \frac{i}{t} \right) = t C(it).
+\]
+For $\tau=it$ this reads
+\[
+C(\tau) = \frac{i}{\tau} C\left( -\frac{1}{\tau} \right).
+\]
+But $\tau \mapsto C(\tau)$ and $\tau \mapsto \frac{i}{\tau} C\left( -\frac{1}{\tau} \right)$ are holomorphic
+on $\mathfrak{H}$, so by analytic continuation this identity is true for all $\tau \in \mathfrak{H}$.
+\end{proof}
+
+
+\begin{theorem}
+\[
+C\left(1-\frac{1}{\tau}\right) \sim \frac{4\tau}{i} e^{\frac{\pi i \tau}{2}}, \qquad \Im \tau \to +\infty.
+\]
+\end{theorem}
+\begin{proof}
+Let $t>0$ and define $f(z)=e^{-\pi iz} \sech \frac{\pi z}{t}$, which we check belongs to $\mathfrak{F}_{\frac{t}{2}}$. 
+Corollary \ref{sechfourier} with $a=\frac{1}{2}$ tells us that for $t>0$,
+\[
+\widehat{f}(\xi)=\int_{-\infty}^\infty e^{-2\pi i\xi x} e^{-\pi ix} \sech \frac{\pi x}{t} dx = t \sech \left(\pi\left(\xi+\frac{1}{2} \right)t\right),
+\qquad \xi \in \mathbb{R}.
+\]
+Thus the Poisson summation formula gives, as $(-1)^n = e^{-i\pi n}$,
+\[
+\sum_{n \in \mathbb{Z}} (-1)^n \sech \frac{\pi n}{t}
+=t \sum_{n \in \mathbb{Z}} \sech\left(\pi\left(n+\frac{1}{2}\right)t\right),
+\]
+or
+\[
+\sum_{n \in \mathbb{Z}} (-1)^n \sec \frac{\pi i n}{t} = t \sum_{n \in \mathbb{Z}} \sec \left(\pi i \left(n+\frac{1}{2}\right) t\right).
+\]
+For $\tau=it$ this reads
+\[
+\sum_{n \in \mathbb{Z}} (-1)^n \sec \frac{\pi n}{\tau}
+=\frac{\tau}{i} \sum_{n \in \mathbb{Z}} \sec \left(\pi\left(n+\frac{1}{2}\right) \tau\right).
+\]
+Now,
+\[
+\sec \left(\pi n \left(1-\frac{1}{\tau}\right)\right) = 
+\frac{1}{\cos \pi n \cos \frac{-\pi n}{\tau}
+-\sin \pi n \sin \frac{-\pi n}{\tau}}
+=(-1)^n \sec \frac{\pi n}{\tau},
+\]
+so the above states that for $\tau=it$, $t>0$,
+\begin{equation}
+C\left(1-\frac{1}{\tau}\right)=
+\frac{\tau}{i} \sum_{n \in \mathbb{Z}} \sec \left(\pi\left(n+\frac{1}{2}\right) \tau\right).
+\label{overtau}
+\end{equation}
+We assert that both sides of \eqref{overtau} are holomorphic on $\mathfrak{H}$, and thus by analytic continuation that \eqref{overtau} is true for all
+$\tau \in \mathfrak{H}$.
+
+Write $\tau=\sigma+it$.
+For $\nu>0$,
+\[
+\sec \pi \nu \tau =
+\frac{2}{e^{i\pi \nu \tau}+e^{-i\pi \nu \tau}}
+=\frac{2}{e^{-i\pi \nu \tau}(e^{2\pi i\nu \tau}+1)}
+=2e^{i\pi \nu \tau}(1+O(|e^{2\pi i\nu \tau}|)),
+\]
+or,
+\[
+\sec \pi \nu \tau = 2e^{i\pi \nu \tau} + O(|e^{3\pi i\nu \tau}|).
+\]
+Now, 
+\[
+|e^{\frac{3\pi i \tau}{2}}| = e^{\frac{-3\pi t}{2}},
+\]
+so,
+\[
+\sec \pi \nu \tau = 2e^{i\pi \nu \tau} + O(e^{\frac{-3\pi t}{2}}).
+\]
+For $\nu<0$,
+\[
+\sec \pi \nu \tau = \sec (-\pi \nu \tau)
+=2e^{- i\pi \nu \tau} + O(e^{\frac{-3\pi t}{2}}).
+\]
+For $\nu=\frac{1}{2}$,
+\[
+\sec \pi \nu \tau = 2e^{\frac{i\pi  \tau}{2}} + O(e^{\frac{-3\pi t}{2}}),
+\]
+and for $\nu=-\frac{1}{2}$,
+\[
+\sec \pi \nu \tau  = 2e^{\frac{i\pi  \tau}{2}} + O(e^{\frac{-3\pi t}{2}}).
+\]
+It follows that
+\[
+ \sum_{n \in \mathbb{Z}} \sec \left(\pi\left(n+\frac{1}{2}\right) \tau\right)
+ =2e^{\frac{i\pi  \tau}{2}}+2e^{\frac{i\pi  \tau}{2}} + O(e^{\frac{-3\pi t}{2}})
+ =4e^{\frac{i\pi  \tau}{2}} + O(e^{\frac{-3\pi t}{2}}).
+\]
+Using this with \eqref{overtau} yields
+\[
+C\left(1-\frac{1}{\tau}\right)=\frac{4\tau}{i}e^{\frac{i\pi  \tau}{2}} +
+O(|\tau|e^{\frac{-3\pi t}{2}}),
+\qquad \tau = \sigma+it,
+\]
+proving the claim.
+\end{proof}
+
+
+Define $\theta:\mathfrak{H} \to \mathbb{C}$
+by
+\[
+\theta(\tau) = \sum_{n \in \mathbb{Z}} e^{\pi in^2 \tau}, \qquad \tau \in \mathfrak{H}.
+\]
+By proving that $\frac{C}{\theta^2}$ is a modular form of weight $0$, it follows that it is constant, and one thus
+finds that $C=\theta^2$.\footnote{Elias M. Stein and Rami Shakarchi, {\em Complex Analysis},
+p.~304.}
+One reason that $\theta$ is significant is that, for $q=e^{i\pi \tau}$,
+\begin{align*}
+\theta(\tau)^2 &= \left(\sum_{n_1 \in \mathbb{Z}} q^{n_1^2} \right)
+\left(\sum_{n_2 \in \mathbb{Z}} q^{n_2^2} \right)\\
+&=\sum_{(n_1,n_2) \in \mathbb{Z} \times \mathbb{Z}}
+q^{n_1^2+n_2^2}\\
+&=\sum_{n=0}^\infty r_2(n) q^n,
+\end{align*}
+where $r_2(n)$ denotes the number of ways that $n$ can be expressed as a sum of two squares. 
+We can write $C(\tau)$ as
+\begin{align*}
+C(\tau) &= 2\sum_{n =-\infty}^\infty \frac{1}{q^n+q^{-n}}\\
+&=2\sum_{n=-\infty}^\infty \frac{q^n}{1+q^{2n}}\\
+&=1+4\sum_{n=1}^\infty \frac{q^n}{1+q^{2n}}\\
+&=1+4 \sum_{n=1}^\infty q^n \frac{1-q^{2n}}{1-q^{4n}}\\
+&=1+4 \sum_{n=1}^\infty \left( \frac{q^n}{1-q^{4n}}
+-\frac{q^{3n}}{1-q^{4n}}\right).
+\end{align*}
+Therefore the identity $\theta(\tau)^2 = C(\tau)$ can be written as
+\[
+\sum_{n=0}^\infty r_2(n) q^n =1+4 \sum_{n=1}^\infty \left( \frac{q^n}{1-q^{4n}}
+-\frac{q^{3n}}{1-q^{4n}}\right).
+\]
+We write
+\[
+\sum_{n=1}^\infty \frac{q^n}{1-q^{4n}} =\sum_{n=1}^\infty q^n \sum_{m=0}^\infty (q^{4n})^m
+=\sum_{n=1}^\infty \sum_{m=0}^\infty q^{n(4m+1)}
+=\sum_{k=1}^\infty a(k) q^k,
+\]
+where $a(k)$ denotes the number of divisors of $k$ of the form $4m+1$,
+and
+\[
+\sum_{n=1}^\infty \frac{q^{3n}}{1-q^{4n}} =\sum_{n=1}^\infty q^{3n} \sum_{m=0}^\infty (q^{4n})^m
+=\sum_{n=1}^\infty \sum_{m=0}^\infty q^{n(4m+3)}
+=\sum_{k=1}^\infty b(k) q^k,
+\]
+where $b(k)$ denotes the number of divisors of $k$ of the form $4m+3$. Thus for $n \geq 1$,
+\[
+r_2(n) = 4(a(n)-b(n)).
+\]
+
+
+\end{document}

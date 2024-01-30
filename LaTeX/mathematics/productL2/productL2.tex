@@ -1,0 +1,458 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\ran}{\ensuremath\mathrm{ran}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_\ensuremath\mathrm{HS}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Orthonormal bases for product measures}
+\author{Jordan Bell}
+\date{October 22, 2015}
+
+\maketitle
+
+\section{Measure and integration theory}
+Let $\mathscr{B}$ be the Borel $\sigma$-algebra of $\mathbb{R}$, and let
+$\overline{\mathscr{B}}$ be the Borel $\sigma$-algebra of $[-\infty,\infty]=\mathbb{R} \cup \{-\infty,\infty\}$:
+the elements of $\overline{\mathscr{B}}$ are those subsets of $\overline{\mathbb{R}}$ of
+the form
+$B,B \cup \{-\infty\},B \cup \{\infty\}, B \cup \{-\infty,\infty\}$, with $B \in \mathscr{B}$. 
+
+Let $(X,\mathscr{A},\mu)$ be a measure space.
+It is a fact that if $f_n$ is a sequence of $\mathscr{A} \to \overline{\mathscr{B}}$ measurable functions then
+$\sup_n f_n$ and $\inf_n f_n$ are $\mathscr{A} \to \overline{\mathscr{B}}$ measurable, and thus  if
+$f_n$ is a sequence of $\mathscr{A} \to \overline{\mathscr{B}}$ measurable functions
+that converge pointwise to a function $f:X \to \overline{\mathbb{R}}$, then
+$f$ is $\mathscr{A}\to \overline{\mathscr{B}}$ measurable.\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, p.~52, Corollary 9.7.} If $f_1,\ldots,f_n$ are $\mathscr{A} \to \overline{\mathscr{B}}$ measurable,
+then so are $f_1 \vee \cdots \vee  f_n$ and $f_1 \wedge \cdots \wedge f_n$, and
+a function $f:X \to \overline{\mathbb{R}}$ is $\mathscr{A} \to \overline{\mathscr{B}}$ measurable
+if and only if both
+$f^+=f \vee 0$ and $f^-=-(f \wedge 0)$ are $\mathscr{A} \to \overline{\mathscr{B}}$ measurable. In particular,
+if $f$ is $\mathscr{A} \to \overline{\mathscr{B}}$ measurable then so is $|f|=f^++f^-$. 
+
+A \textbf{simple function} is a function $f:X \to \mathbb{R}$ that is 
+$\mathscr{A} \to \mathscr{B}$ measurable and whose range is finite. 
+Let $E=E(\mathscr{A})$ be the collection of nonnegative simple functions. It is straightforward to prove that
+\[
+u,v \in E,\; \alpha \geq 0\quad \Rightarrow \quad \alpha u, \; u+v, \; u\cdot v, \; u\vee v, \; u\wedge v \in E.
+\]
+Define $I_\mu:E \to [0,\infty]$ by
+\[
+I_\mu u =  \sum_{i=1}^n a_i \mu(A_i),
+\]
+where $u$ has
+ range $\{a_1,\ldots,a_n\}$ and 
+$A_i = u^{-1}(a_i)$.
+One proves that $I_\mu:E \to [0,\infty]$ is positive homogeneous, additive, and order preserving.\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, pp.~55--56, \S 10.} 
+
+It is a fact\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, p.~57, Theorem 11.1.} that if $u_n$ is a  nondecreasing sequence in $E$ and $u \in E$ then
+\[
+u \leq \sup_n u_n \quad \Rightarrow  \quad I_\mu u \leq \sup_n I_\mu u_n.
+\]
+It follows that if $u_n$ and $v_n$ are sequences 
+in $E$ then
+\begin{equation}
+\sup_n u_n = \sup_n v_n \quad \Rightarrow \quad
+\sup_n I_\mu u_n = \sup_n I_\mu v_n.
+\label{sups}
+\end{equation}
+
+Define $E^*=E^*(\mathscr{A})$ to be the set of all functions $f:X \to [0,\infty]$ for which there is 
+a nondecreasing sequence $u_n$ in $E$ satisfying $\sup_n u_n = f$, in other words, there is a sequence
+$u_n$ in $E$ satisfying $u_n \uparrow f$. 
+From \eqref{sups}, for $f \in E^*$ and sequences $u_n,v_n \in E$ with $\sup_n u_n = f$ and
+$\sup_n v_n=f$, it holds that $\sup_n I_\mu u_n = \sup_n I_\mu v_n$. Also,
+if $u \in E$ then $u_n=u$ is a nondecreasing sequence in $E$ with
+$u=\sup_n u_n$, so $u \in E^*$.
+Then it makes sense to extend $I_\mu$ from $E \to [0,\infty]$ to $E^* \to [0,\infty]$ by defining
+$I_\mu f = \sup_n I_\mu u_n$. 
+One proves\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, pp.~58--59, \S 11.} that
+\[
+f,g \in E^*,\; \alpha \geq 0 \quad \Rightarrow\quad \alpha f, \; f+g,\; f\cdot g,\; f \vee g, \; f\wedge g \in E^*
+\]
+and that $I_\mu:E^* \to [0,\infty]$ is positive homogeneous, additive, and order preserving. 
+
+
+
+
+
+The \textbf{monotone convergence theorem}\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, p.~59, Theorem 11.4.}
+states that if $f_n$ is a sequence in $E^*$ then $\sup_n f_n \in E^*$ and
+\[
+I_\mu \left( \sup_n f_n \right) = \sup_n I_\mu f_n.
+\]
+We now prove a characterization of $E^*$.\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, p.~61, Theorem 11.6.}
+
+\begin{theorem}
+$E^*$ is equal to the set of   functions $X \to [0,\infty]$ that are $\mathscr{A} \to \overline{\mathscr{B}}$ measurable.
+\label{Estar}
+\end{theorem}
+\begin{proof}
+If $f \in E^*$, then  there is a sequence $u_n$ in $E$ with $u_n \uparrow f$. Because each $u_n$ is measurable $\mathscr{A} \to \overline{\mathscr{B}}$,
+so is $f$.
+
+Now suppose that $f:X \to [0,\infty]$ is  $\mathscr{A} \to \overline{\mathscr{B}}$ measurable.
+For $n \geq 1$ and $0 \leq i \leq n2^n-1$ let
+\[
+A_{i,n} = \{f \geq i2^{-n}\} \cap \{f<(i+1)2^{-n}\} = \{i2^{-n} \leq f < (i+1)2^{-n}\},
+\]
+and for $i=n2^n$ let
+\[
+A_{i,n} = \{f \geq n\}.
+\]
+Because $f$ is $\mathscr{A} \to \overline{\mathscr{B}}$ measurable, the sets $A_{i,n}$ belong to $\mathscr{A}$. For each
+$n$, the sets $A_{0,n},\ldots A_{n2^n-1,n},A_{n2^n,n}$ are pairwise disjoint and their union is equal to $X$. 
+It is apparent that
+\begin{equation}
+A_{i,n} = A_{2i,n+1} \cup A_{2i+1,n+1},\qquad 0 \leq i \leq n2^n-1.
+\label{A2i}
+\end{equation}
+Define
+\[
+u_n = \sum_{i=0}^{n2^n} i2^{-n} 1_{A_{i,n}},
+\]
+which belongs to $E$. For $x \in X$, either $f(x)=\infty$ or $0 \leq f(x) < \infty$. In the first case,
+$u_n(x)=n$ for all $n \geq 1$. In the second case,
+$u_n(x) \leq f(x) < u_n(x)+2^{-n}$ for all $n>f(x)$. Therefore
+$u_n(x) \uparrow f(x)$ as $n \to \infty$, and because this is true for each $x \in X$, this means
+$u_n \uparrow f$ and so $f \in E^*$.
+\end{proof}
+
+
+So far we have defined $I_\mu:E^* \to [0,\infty]$. 
+Suppose that $f:X \to \overline{\mathbb{R}}$ is $\mathscr{A} \to \overline{\mathscr{B}}$
+measurable.
+Then $f^+,f^-:X \to [0,\infty]$ are  $\mathscr{A} \to \overline{\mathscr{B}}$
+measurable so by Theorem \ref{Estar}, 
+$f^+,f^- \in E^*$. Then  
+$I_\mu f^+, I_\mu f^- \in [0,\infty]$.
+We say that a function $f:X \to \overline{\mathbb{R}}$ is \textbf{$\mu$-integrable} if it is $\mathscr{A} \to \overline{\mathscr{B}}$
+measurable and 
+$I_\mu f^+<\infty$ and $I_\mu f^-<\infty$. 
+One checks that a function $f:X \to \overline{\mathbb{R}}$ is $\mu$-integrable if and only if it
+is $\mathscr{A} \to \overline{\mathscr{B}}$ measurable and $I_\mu |f| < \infty$.
+If $f:X \to \overline{\mathbb{R}}$ is $\mu$-integrable, we now define $I_\mu f \in \mathbb{R}$ by
+\[
+I_\mu f = I_\mu f^+ - I_\mu f^-.
+\]
+
+For example, if  $\mu(X)<\infty$ and   $S$ is a subset of $X$ that does not belong to $\mathscr{A}$, define $f:X \to \mathbb{R}$
+by $f = 1_S - 1_{X \setminus S}$. Then  $f^+=1_S$ and $f^-=1_{X \setminus S}$, and thus $f$ is not $\mathscr{A} \to \overline{\mathscr{B}}$
+measurable, so it is not $\mu$-integrable. But $|f|=1$ belongs to $E$, and $I_\mu |f| = \mu(X)<\infty$ by hypothesis, showing
+that $|f|$ is $\mu$-integrable while $f$ is not. 
+
+One proves that if $f,g:X \to \overline{\mathbb{R}}$ are $\mu$-integrable and $\alpha \in \mathbb{R}$ then 
+$\alpha f$ is $\mu$-integrable and
+\[
+I_\mu (\alpha f) = \alpha I_\mu f,
+\]
+if $f+g$ is defined on all $X$ then $f+g$ is $\mu$-integrable and 
+\[
+I_\mu(f+g) = I_\mu f+ I_\mu g,
+\]
+and $f \vee g, f \wedge g$ are $\mu$-integrable.\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, p.~65, Theorem 12.3.}
+Furthermore, $I_\mu$ is order preserving.
+
+Let $f:X \to \mathbb{C}$ be a function and write $f=u+iv$. One proves that $f$ is Borel measurable (i.e.
+$\mathscr{A} \to \mathscr{B}_\mathbb{C}$ measurable), if and only if $u$ and $v$ are measurable $\mathscr{A} \to \mathscr{B}$. 
+We define $f$ to be $\mu$-integrable if both $u$ and $v$ are $\mu$-integrable, and define 
+\[
+I_\mu f = I_\mu u + i I_\mu v.
+\]
+
+
+
+
+
+
+
+\section{ℒ²}
+Let $(X,\mathscr{A},\mu)$ be a measure space and
+for $1 \leq p < \infty$ let $\mathscr{L}^p(\mu)$ be the collection
+of Borel measurable functions $f:X \to \mathbb{C}$ such that $|f|^p$ is $\mu$-integrable. 
+For  complex $a,b$, because
+$x \mapsto x^p$ is convex we have by Jensen's inequality
+\[
+\left| \frac{a+b}{2} \right|^p \leq \left( \frac{1}{2}|a| + \frac{1}{2}|b| \right)^p
+\leq \frac{1}{2} |a|^p + \frac{1}{2}|b|^p=\frac{1}{2}(|a|^p+|b|^p),
+\]
+so $|a+b|^p \leq 2^{p-1} (|a|^p+|b|^p)$. Thus if $f,g \in \mathscr{L}^p(\mu)$ then
+\[
+|f+g|^p \leq 2^{p-1}(|f|^p+|g|^p),
+\]
+ which implies that $\mathscr{L}^p(\mu)$ is a linear space. 
+
+For Borel measurable $f:X \to \mathbb{C}$ define
+\[
+\norm{f}_{L^p} = \left( \int_X |f|^p d\mu \right)^{1/p}.
+\]
+For $f,g \in \mathscr{L}^p(\mu)$, by H\"older's inequality, with $\frac{1}{p}+\frac{1}{p'}=1$ (for which $p'=\frac{p}{p-1}$),
+\begin{align*}
+\norm{f+g}_{L^p}^p& \leq \int_X |f| |f+g|^{p-1} d\mu
++\int_X |g| |f+g|^{p-1} d\mu\\
+&\leq \norm{f}_{L^p} \norm{|f+g|^{p-1}}_{L^{p'}} + \norm{g}_{L^p} \norm{|f+g|^{p-1}}_{L^{p'}}\\
+&= \norm{f}_{L^p} \norm{f+g}_{L^p}^{p-1} + \norm{g}_{L^p} \norm{f+g}_{L^p}^{p-1},
+\end{align*}
+which implies that $\norm{f+g}_{L^p} \leq \norm{f}_{L^p} + \norm{g}_{L^p}$, and hence $\norm{\cdot}_{L^p}$ is
+a seminorm on $\mathscr{L}^p(\mu)$. 
+
+Let $\mathscr{N}^p(\mu)$ be the set of those $f \in \mathscr{L}^p(\mu)$ such that $\norm{f}_{L^p}=0$. 
+$\mathscr{N}^p(\mu)$ is a linear subspace of $\mathscr{L}^p(\mu)$, and we define
+\[
+L^p(\mu)=\mathscr{L}^p(\mu)/\mathscr{N}^p(\mu) = \{f+\mathscr{N}^p(\mu): f \in \mathscr{L}^p(\mu)\}.
+\]
+$L^p(\mu)$ is a normed linear space with the norm $\norm{\cdot}_{L^p}$.
+
+
+
+It is a fact that if $V$ is a normed linear space then $V$ is complete if and only if
+each absolutely convergent series in $V$ converges in $V$.
+Suppose that $f_k$ is a sequence in $\mathscr{L}^p(\mu)$ with $\sum_{k=1}^\infty \norm{f}_{L^p} < \infty$.
+For $n \geq 1$ let $g_n(x) = \left( \sum_{k=1}^n |f_k(x)| \right)^p$ and 
+define $g:X \to [0,\infty]$ by
+\[
+g(x) = \left( \sum_{k=1}^\infty |f_k(x)| \right)^p = \lim_{n \to \infty} g_n(x),
+\]
+which is $\mathscr{A} \to \overline{\mathscr{B}}$ measurable, being the pointwise limit of a sequence of functions each
+of which is $\mathscr{A} \to \overline{\mathscr{B}}$ measurable.
+Because $g_1 \leq g_2 \leq \cdots$, 
+by the monotone convergence theorem,
+\[
+\int_X g d\mu = \lim_{n \to \infty} \int_X g_n d\mu.
+\]
+But
+\[
+\left( \int_X g_n d\mu \right)^{1/p} = \norm{\sum_{k=1}^n |f_k|}_{L^p} \leq 
+\sum_{k=1}^n \norm{f_k}_{L^p} \leq \sum_{k=1}^\infty \norm{f_k}_{L^p},
+\]
+which implies that 
+$\int_X g d\mu < \infty$, meaning that
+$g:X \to [0,\infty]$ is integrable. The fact that $g$ is integrable implies $\mu(E)=0$, where
+$E=\{x \in X: g(x)=\infty\} \in \mathscr{A}$. For $x \in X \setminus E$, $\sum_{k=1}^\infty |f_k(x)| < \infty$ and because
+$\mathbb{C}$ is complete this implies that $\sum_{k=1}^\infty f_k(x) \in \mathbb{C}$, and so it makes sense to define 
+ $f:X \to \mathbb{C}$ by
+\[
+f(x) = 1_{X \setminus E}(x) \sum_{k=1}^\infty f_k(x),
+\]
+which is Borel measurable. Furthermore, $|f|^p \leq g$, and because $g$ is integrable this implies that
+$f \in \mathscr{L}^p(\mu)$. 
+For $x \in X \setminus E$,
+\[
+\lim_{n \to \infty} \left| \sum_{k=1}^n f_k(x) - f(x) \right|^p = 0
+\]
+and
+\[
+\left| \sum_{k=1}^n f_k(x)-f(x) \right|^p \leq g(x),
+\]
+so by the dominated convergence theorem,\footnote{Heinz Bauer, {\em Measure and Integration Theory},
+p.~83, Theorem 15.6.}
+\[
+\lim_{n \to \infty} \int_X \left| \sum_{k=1}^n f_k(x)-f(x) \right|^p d\mu = 0.
+\]
+Because $x \mapsto x^{1/p}$ is continuous this implies
+\[
+\lim_{n \to \infty} \norm{ \sum_{k=1}^n f_k - f}_{L^p} = 0.
+\]
+Hence, if $f_k$ is a sequence in $L^p(\mu)$ such that $\sum_{k=1}^\infty \norm{f_k}_{L^p}<\infty$ then there is
+some $f \in L^p(\mu)$ such that $\sum_{k=1}^n f_k \to f$ in the norm $\norm{\cdot}_{L^p}$. This implies that $L^p(\mu)$ is a Banach space.
+
+
+We say that the $\sigma$-algebra $\mathscr{A}$ is \textbf{countably generated} if there is a countable subset $\mathscr{C}$ of $\mathscr{A}$
+such that $\mathscr{A}=\sigma(\mathscr{C})$ and we say that a topological space is \textbf{separable} if there exists a countable dense subset of it.
+It can be proved that
+if $\mathscr{A}$ is countably generated and $\mu$ is $\sigma$-finite, 
+then for $1 \leq p < \infty$ there is a countable collection of simple functions that is dense in 
+$L^p(\mu)$, showing that $L^p(\mu)$ is separable.\footnote{Donald L. Cohn,
+{\em Measure Theory}, second ed., p.~102, Proposition 3.4.5.}
+
+\begin{theorem}
+Let $(X,\mathscr{A},\mu)$ be a measure space and let $1 \leq p < \infty$. $L^p(\mu)$ with the norm $\norm{\cdot}_{L^p}$ is a Banach space, and if $\mathscr{A}$ is countably generated
+and $\mu$ is $\sigma$-finite then $L^p(\mu)$ is separable. 
+\end{theorem}
+
+For $f,g \in \mathscr{L}^2(\mu)$, let
+\[
+\inner{f}{g}_{L^2(\mu)} = \int_X f \cdot \overline{g} d\mu.
+\]
+This is an inner product on $L^2(\mu)$, and thus $L^2(\mu)$ is a Hilbert space. 
+
+
+\section{Product measures}
+Let $(X_1,\mathscr{A}_1,\mu_1)$ and $(X_1,\mathscr{A}_1,\mu_1)$ be measure spaces and let
+$\mathscr{A}_1 \otimes \mathscr{A}_2$ be the product $\sigma$-algebra.
+For $Q \subset X_1 \times X_2$, write
+\[
+Q_{x_1} = \{x_2 \in X_2: (x_1,x_2) \in Q\},
+\qquad Q_{x_2} = \{x_1 \in X_1: (x_1,x_2) \in Q\}.
+\]
+One proves that if $\mu_1$ and $\mu_2$ are $\sigma$-finite, then
+for each $Q \in \mathscr{A}_1 \otimes \mathscr{A}_2$ the function
+$x_1 \mapsto \mu_2(Q_{x_1})$ is $\mathscr{A}_1 \to \overline{\mathscr{B}}$ measurable
+and the function $x_2 \mapsto \mu_1(Q_{x_2})$ is $\mathscr{A}_2 \to \overline{\mathscr{B}}$ measurable.\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, p.~135, Lemma 23.2.}
+If $\mu_1$ and $\mu_2$ are $\sigma$-finite, one proves\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, p.~136, Theorem 23.3.}  that
+there is a unique measure 
+$\mu:\mathscr{A}_1 \otimes \mathscr{A}_2 \to [0,\infty]$ that satisfies
+\[
+\mu(A_1 \times A_2) = \mu_1(A_1) \mu_2(A_2),\qquad A_1 \in \mathscr{A}_1, A_2 \in \mathscr{A}_2.
+\]
+The measure $\mu$ satisfies
+\[
+\mu(Q) = \int_{X_1} \mu_2(Q_{x_1}) d\mu_1(x_1) = \int_{X_2} \mu_1(Q_{x_2}) d\mu_2(x_2)
+\]
+for $Q \in \mathscr{A}_1 \otimes \mathscr{A}_2$,
+and is itself $\sigma$-finite.
+We write $\mu=\mu_1 \otimes \mu_2$, and call $\mu$ the \textbf{product measure of $\mu_1$ and $\mu_2$}.
+
+Let $X'$ be a set and let $f:X_1 \times X_2 \to X'$ be a function. For $x_1 \in X_1$, define
+$f_{x_1}:X_2 \to X'$ by
+\[
+f_{x_1}(x_2) = f(x_1,x_2),\qquad x_2 \in X_2
+\]
+and for $x_2 \in X_2$, define $f_{x_2}:X_1 \to X'$ by
+\[
+f_{x_2}(x_1) = f(x_1,x_2),\qquad x_1 \in X_1.
+\]
+For $Q \subset X_1 \times X_2$,
+\[
+(1_Q)_{x_1} = 1_{Q_{x_1}},\qquad (1_Q)_{x_2}=1_{Q_{x_2}}.
+\]
+It is straightforward to prove that if $(X',\mathscr{A}')$ is a measurable space and
+$f:(X_1 \times X_2,\mathscr{A}_1 \otimes \mathscr{A}_2) \to (X',\mathscr{A}')$ is measurable,
+then for each $x_1 \in X_1$ the function $f_{x_1}:X_2 \to X'$ is measurable
+$\mathscr{A}_2 \to \mathscr{A}'$ and for each $x_2 \in X_2$ the function
+$f_{x_2}:X_1 \to X'$ is measurable
+$\mathscr{A}_1 \to \mathscr{A}'$.\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, p.~138, Lemma 23.5.} 
+
+\textbf{Tonelli's theorem}\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, p.~138, Theorem 23.6.}  states that
+if $(X_1,\mathscr{A}_1,\mu_1)$ and $(X_1,\mathscr{A}_1,\mu_1)$ are $\sigma$-finite measure spaces and
+$f:X_1 \times X_2 \to [0,\infty]$ is $\mathscr{A}_1 \otimes \mathscr{A}_2 \to \overline{\mathscr{B}}$ measurable, then
+the functions
+\[
+x_2 \mapsto \int_{X_1} f_{x_2} d\mu_1,\qquad x_1 \mapsto \int_{X_2} f_{x_1} d\mu_2
+\]
+are $\mathscr{A}_2 \to \overline{\mathscr{B}}$ measurable
+and $\mathscr{A}_1 \to \overline{\mathscr{B}}$ measurable respectively, and
+\begin{equation}
+\begin{split}
+&\int_{X_1 \times X_2} f d(\mu_1 \otimes \mu_2)\\
+=& \int_{X_2} \left( \int_{X_1} f_{x_2} d\mu_1 \right) d\mu_2(x_2)\\
+=&\int_{X_1} \left( \int_{X_2} f_{x_1} d\mu_2 \right) d\mu_1(x_1).
+\end{split}
+\label{tonelli}
+\end{equation}
+
+\textbf{Fubini's theorem}\footnote{Heinz Bauer,
+{\em Measure and Integration Theory}, p.~139, Corollary 23.7.} states that if
+$(X_1,\mathscr{A}_1,\mu_1)$ and $(X_2,\mathscr{A}_2,\mu_2)$ are $\sigma$-finite measure spaces
+and $f:X_1 \times X_2 \to \overline{\mathbb{R}}$ is $\mu_1 \otimes \mu_2$-integrable then
+there is some $A_1 \in \mathscr{A}_1$ with $\mu_1(A_1)=0$ such that
+for $x_1 \in X_1 \setminus A_1$ the function $f_{x_1}:X_2 \to \overline{\mathbb{R}}$ is $\mu_2$-integrable,
+and there is some $A_2 \in \mathscr{A}_2$ with $\mu_2(A_2)=0$ such that for $x_2 \in X_2 \setminus A_2$ the function
+$f_{x_2}:X_1 \to \overline{\mathbb{R}}$ is $\mu_1$-integrable. Furthermore, define
+$F_1:X_1 \to \mathbb{R}$ by $F_1(x_1) = \int_{X_2} f_{x_1} d\mu_2$ for $x_1 \in X_1 \setminus A_1$ and $F_1(x_1)=0$ for $x_1 \in A_1$,
+and define $F_2:X_2 \to \mathbb{R}$ by $F_2(x_2) = \int_{X_1} f_{x_2} d\mu_1$ for $x_2 \in X_2 \setminus A_2$ and $F_2(x_2)=0$ for $x_2 \in A_2$.
+The functions $F_1$ and $F_2$ are $\mu_1$-integrable and $\mu_2$-integrable respectively, and 
+\[
+\int_{X_1 \times X_2} f d(\mu_1 \otimes \mu_2) = \int_{X_1} F_1 d\mu_1 = \int_{X_2} F_2 d\mu_2.
+\]
+
+
+
+
+Suppose that $(X_1,\mathscr{A}_1,\mu_1)$ and $(X_2,\mathscr{A}_2,\mu_2)$ are 
+$\sigma$-finite measure spaces.
+For $e:X_1 \to \mathbb{C}$ and $f:X_2 \to \mathbb{C}$, define $e \otimes f:X_1 \times X_2 \to \mathbb{C}$ by
+\[
+(e \otimes f)(x_1,x_2) = e(x_1) f(x_2),
+\]
+ which is Borel measurable $X_1 \times X_2 \to \mathbb{C}$ if $e$
+and $f$ are Borel measurable.
+If $e \in \mathscr{L}^2(\mu_1)$ and $f \in \mathscr{L}^2(\mu_2)$, then by
+Tonelli's theorem $e \otimes f:X_1 \times X_2 \to \mathbb{C}$ belongs to
+$\mathscr{L}^2(\mu_1 \otimes \mu_2)$. 
+For $e,e' \in \mathscr{L}^2(\mu_1)$ and $f,f' \in \mathscr{L}^2(\mu_2)$, by Fubini's theorem,
+\[
+\begin{split}
+&\inner{e \otimes f}{e' \otimes f'}_{L^2(\mu_1 \otimes \mu_2)}\\
+=&\int_{X_1 \times X_2} e(x_1) f(x_2) \overline{e'(x_1) f'(x_2)} d(\mu_1 \otimes \mu_2)(x_1,x_2)\\
+=&\int_{X_2} \left( \int_{X_1} e(x_1) \overline{e'(x_1)} d\mu_1(x_1) \right)  f(x_2) \overline{f'(x_2)}   d\mu_2(x_2)\\
+=&\inner{e}{e'}_{L^2(\mu_1)} \cdot \inner{f}{f'}_{L^2(\mu_2)}.
+\end{split}
+\]
+Therefore, if 
+$E \subset \mathscr{L}^2(\mu_1)$ is an orthonormal set in $L^2(\mu_1)$
+and $F \subset \mathscr{L}^2(\mu_2)$ is an orthonormal set in $L^2(\mu_2)$, then
+$\{e \otimes f: e \in E, f \in F\} \subset \mathscr{L}^2(\mu_1 \otimes \mu_2)$ is an orthonormal set
+in $L^2(\mu_1 \otimes \mu_2)$. 
+
+\begin{theorem}
+Let  $(X_1,\mathscr{A}_1,\mu_1)$ and $(X_2,\mathscr{A}_2,\mu_2)$ be
+$\sigma$-finite measure spaces and suppose that
+$L^2(\mu_1)$ and $L^2(\mu_2)$ are separable. If
+$E \subset \mathscr{L}^2(\mu_1)$ is an orthonormal basis for $L^2(\mu_1)$ and $F \subset \mathscr{L}^2(\mu_2)$ is an orthonormal basis for $L^2(\mu_2)$,
+then  $\Phi=\{e \otimes f: e \in E, f \in F\} \subset \mathscr{L}^2(\mu_1 \otimes \mu_2)$ is an orthonormal basis for $L^2(\mu_1 \otimes \mu_2)$. 
+\end{theorem}
+\begin{proof}
+To show that $\Phi$ is an orthonormal basis for $L^2(\mu_1 \otimes \mu_2)$ it suffices to prove that if
+$h \in \mathscr{L}^2(\mu_1 \otimes \mu_2)$ belongs to the orthogonal  complement  of $\Phi$ then
+$h \in \mathscr{N}^2(\mu_1 \otimes \mu_2)$. 
+Thus, suppose that $h \in \mathscr{L}^2(\mu_1 \otimes \mu_2)$ and that 
+$\inner{h}{e \otimes f}_{L^2(\mu_1 \otimes \mu_2)}=0$ for all $e \in E, f \in F$. Using Fubini's theorem,
+\[
+\int_{X_1} e(x_1) \left( \int_{X_2} h_{x_1}(x_2)  f(x_2) d\mu_2(x_2) \right) d\mu_1(x_1)=0.
+\]
+Because this is true for all $e \in E$ and $E$ is dense in $L^2(\mu_1)$, it follows that there is some
+$A_f \in \mathscr{A}_1$ with $\mu_1(A_f)=0$ such that 
+$\int_{X_2} h_{x_1} f d\mu_2=0$ for $x_1 \not \in A_f$.  
+Let $A_1=\bigcup_{f \in F} A_f$, for which $\mu_1(A_1)=0$. If $x_1 \not \in A_1$ then 
+$\int_{X_2} h_{x_1} f d\mu_2=0$ for all $f \in F$, and because $F$ is dense in $L^2(\mu_2)$ this implies that
+$h_{x_1}=0$ $\mu_2$-almost everywhere. Then 
+\begin{align*}
+\int_{X_1 \times X_2} |h|^2 d(\mu_1 \otimes \mu_2) &= 
+\int_{X_1} \left( \int_{X_2} |h_{x_1}|^2 d\mu_2 \right) d\mu_1(x_1)\\
+&=\int_{X_1 \setminus A_1} \left( \int_{X_2} |h_{x_1}|^2 d\mu_2 \right) d\mu_1(x_1)\\
+&=0,
+\end{align*}
+which implies that $h=0$ $\mu_1 \otimes \mu_2$-almost everywhere.
+\end{proof}
+
+
+
+
+
+\end{document}

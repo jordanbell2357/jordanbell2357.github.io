@@ -1,0 +1,610 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,subfig,mathrsfs,amsthm}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\Res}{\textrm{Res}} 
+\newcommand{\SO}{\textrm{SO}} 
+\newcommand{\Diff}{\textrm{Diff}} 
+\newcommand{\Sympl}{\textrm{Sympl}} 
+\newcommand{\Lie}{\textrm{Lie}} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\Ad}{\textrm{Ad}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Summable series and the Riemann rearrangement theorem}
+\author{Jordan Bell}
+\date{May 20, 2015}
+
+\maketitle
+
+\section{Introduction}
+Let $\mathbb{N}$ be the set of positive integers. A function from $\mathbb{N}$ to a set is called a {\em sequence}. If $X$ is a topological space 
+and $x \in X$, a sequence $a:\mathbb{N} \to X$ is said to {\em converge to $x$} if for every open neighborhood $U$ of $x$ there is some
+$N_U$ such that $n \geq N_U$ implies that $a_n \in U$. 
+If there is no $x \in X$ for which  $a$ converges to $x$, we say that $a$ {\em diverges}.
+
+Let $a:\mathbb{N} \to \mathbb{R}$.
+We define $s(a):\mathbb{N} \to \mathbb{R}$ by $s_n(a)=\sum_{k=1}^n a_k$. We call $s_n(a)$  the {\em $n$th partial sum of the sequence $a$}, and we call
+the sequence $s(a)$ a {\em series}. 
+If there is some $\sigma \in \mathbb{R}$ such that $s(a)$ converges to $\sigma$, we write
+\[
+\sum_{k=1}^\infty a_k = \sigma.
+\]
+
+\section{Goldbach}
+Euler \cite[\S 110]{E212}:
+``If, as is commonly the case, we take the sum of a series to be the aggregate
+of all of its terms, actually taken together, then there is no doubt that only
+infinite series that converge continually closer to some value, the more
+terms we actually add, can have sums''.
+
+
+Euler Goldbach correspondence nos. 55, 161, 162.
+
+
+
+\section{Dirichlet}
+In 1837 Dirichlet proved that one can rearrange terms in an absolutely convergent series and not change the sum,
+and gave examples to show that this was not the case for conditionally
+convergent series.
+
+If $a$ is a sequence and the series $s(|a|)$ converges, we say that the series $s(a)$ is {\em absolutely convergent}.
+Because $\mathbb{R}$ is a complete metric space, a series being absolutely convergent implies that it is convergent.
+
+Dirichlet \cite{dirichlet} and \cite[p.~176, \S 101]{dedekind}
+
+
+Elstrodt \cite{elstrodt} and \cite{MR1613384}
+
+In the following theorem we prove that if a series converges absolutely, then every rearrangement of it converges to the same
+value. Our proof follows Landau \cite[p.~157, Theorem 216]{landau}.
+
+\begin{theorem}
+If $a$ is a sequence for which $s(a)$ converges absolutely and 
+\[
+\sum_{n=1}^\infty a_n = \sigma,
+\]
+then for any bijection $\lambda:\mathbb{N} \to \mathbb{N}$, the series $s(a \circ \lambda)$ converges to
+$\sigma$.
+\end{theorem}
+\begin{proof}
+Let $\epsilon>0$, and let $M$ be large enough so that
+\[
+\sum_{n=M}^\infty |a_n|<\epsilon.
+\]
+Let $r$ be large enough so that
+\[
+\{n: 1 \leq n <M\} \subseteq \{\lambda_n: 1 \leq n \leq r\}.
+\]
+Fix $m \geq r$, and
+let $h:\mathbb{N} \to \mathbb{N}$ be the sequence whose terms are the elements of
+\[
+\mathbb{N} \setminus \{\lambda_n: 1 \leq n \leq m\}
+\]
+arranged in ascending order. If $t+m \geq \max_{1 \leq n \leq m} \lambda_n$ then 
+\[
+\{\lambda_n: 1 \leq n \leq m\} \cup \{h_n: 1 \leq n \leq t\} = \{n: 1 \leq n \leq t+m\},
+\]
+and hence
+\[
+\sum_{n=1}^m a_{\lambda_n} + \sum_{n=1}^t a_{h_n} = \sum_{n=1}^{t+m} a_n.
+\]
+Taking $t \to \infty$, we get
+\[
+\sum_{n=1}^m a_{\lambda_n} + \sum_{n=1}^\infty a_{h_n} = \sigma;
+\]
+the series $s(a \circ h)$ converges because for sufficiently large $n$, $h_n=n$.
+Hence, for every $m \geq r$,
+\[
+\left| \sum_{n=1}^m a_{\lambda_n} - \sigma \right| = \left| \sum_{n=1}^\infty a_{h_n} \right|
+\leq \sum_{n=1}^\infty |a_{h_n}| \leq \sum_{n=M}^\infty |a_n| < \delta,
+\]
+which shows that $s(a \circ \lambda)$ converges to $\sigma$.
+\end{proof}
+
+
+\section{Riemann rearrangement theorem}
+If $a:\mathbb{N} \to \mathbb{R}$ and $\lambda:\mathbb{N} \to \mathbb{N}$ is a bijection,
+we call the sequence $a \circ \lambda:\mathbb{N} \to \mathbb{R}$ a {\em rearrangement} of the sequence $a$.
+
+Because $\mathbb{N}$ is a well-ordered set, if there are at least $n$ elements in the set $\{k \in \mathbb{N}: a_k \geq 0\}$ then it makes
+sense to talk about the $n$th nonnegative term in the sequence $a$. If $a$ were not a function from $\mathbb{N}$ to $\mathbb{R}$ but merely
+a function from a countable set to $\mathbb{R}$, it would not make sense to talk about the $n$th nonnegative term in $a$ or the $n$th negative
+term in $a$.
+
+
+Riemann \cite[pp.~96-97]{riemann}
+
+Our proof follows Landau \cite[p.~158, Theorem 217]{landau}.
+
+
+
+\begin{theorem}[Riemann rearrangement theorem]
+If $a:\mathbb{N} \to \mathbb{R}$ and $s(a)$ converges but $s(|a|)$ diverges, then
+ for any nonnegative real number $\sigma$ there is some rearrangement $b$ of $a$ such that $s(b) \to \sigma$.
+\end{theorem}
+\begin{proof}
+Define $p,q:\mathbb{N} \to \mathbb{R}$ by
+\[
+p_n = \frac{|a_n|+a_n}{2}, \qquad q_n = \frac{|a_n|-a_n}{2}.
+\]
+$p_n$ and $q_n$ are nonnegative, and satisfy $p_n-q_n = a_n$, $p_n+q_n=|a_n|$. 
+If one of $s(p)$ or $s(q)$ converges and the other diverges, we obtain a contradiction from
+\[
+s_n(a)=\sum_{k=1}^n a_k = \sum_{k=1}^n (p_k-q_k) = \sum_{k=1}^n p_k - \sum_{k=1}^n q_k=s_n(p)-s_n(q)
+\]
+and the fact that $s(a)$ converges.
+If both $s(p)$ and $s(q)$ converge, then we obtain a contradiction from
+\[
+s_n(|a|)=\sum_{k=1}^n |a_k| = \sum_{k=1}^n (p_k+q_k) = \sum_{k=1}^n p_k + \sum_{k=1}^n q_k = s_n(p)+s_n(q)
+\] 
+and the fact that $s(|a|)$ diverges. Therefore, both $s(p)$ and $s(q)$ diverge.
+
+Because $s(a)$ converges and $s(|a|)$ diverges, there are infinitely many $n$ with $a_n>0$ and there are infinitely many $n$ with
+$a_n<0$. Let $P_n$ be the $n$th nonnegative term in the sequence $a$, and let $Q_n$ be the absolute value of the $n$th negative term
+in the sequence $a$. 
+The fact that $s(p)$ diverges  implies that  $s(P)$ diverges, and the fact that $s(q)$ diverges implies that $s(Q)$ diverges.
+
+Let $\sigma\geq 0$. We define sequences $\mu,\nu:\mathbb{N} \to \mathbb{N}$ by induction
+as follows.
+Let $\mu_1$ be  the least element of $\mathbb{N}$ such that
+\[
+s_{\mu_1}(P) >\sigma,
+\]
+and with $\mu_1$ chosen, let $\nu_1$ be the least element of $\mathbb{N}$ such that 
+\[
+s_{\mu_1}(P)-s_{\nu_1}(Q)<\sigma.
+\]
+Let $m_2$ be the least element of $\mathbb{N}$ such that
+\[
+s_{\mu_2}(P)-s_{\nu_1}(Q)>\sigma,
+\]
+and with $\mu_2$ chosen, let $\nu_2$ be the least element of $\mathbb{N}$ such that
+\[
+s_{\mu_2}(P)-s_{\nu_2}(Q)<\sigma.
+\]
+It is straightforward to check that $\mu_2>\mu_1$ and $\nu_2>\nu_1$.
+
+Suppose that $\mu_1,\ldots,\mu_n$ and $\nu_1,\ldots,\nu_n$ have been chosen,
+that $\mu_n$ is the least element of $\mathbb{N}$ such that
+\[
+s_{\mu_n}(P)-s_{\nu_{n-1}}(Q)>\sigma,
+\]
+that $\nu_n$ it the least element of $\mathbb{N}$ such that
+\[
+s_{\mu_n}(P)-s_{\nu_n}(Q)<\sigma
+\]
+and that
+$\mu_n>\mu_{n-1}$ and $\nu_n>\nu_{n-1}$. 
+Let $\mu_{n+1}$ be the least element of $\mathbb{N}$ such that
+\[
+s_{\mu_{n+1}}(P)-s_{\nu_n}(Q)>\sigma,
+\]
+and with $\mu_{n+1}$ chosen, let $\nu_{n+1}$ be the least element of $\mathbb{N}$ such that
+\[
+s_{\mu_{n+1}}(P)-s_{\nu_{n+1}}(Q)<\sigma.
+\]
+It is straightforward to check that $\mu_{n+1} > \mu_n$ and
+$\nu_{n+1}>\nu_n$.
+
+Define $b:\mathbb{N} \to \mathbb{R}$ by taking $b_n$ to be the $n$th term in 
+\[
+P_1,\ldots,P_{\mu_1},-Q_1,\ldots,-Q_{\nu_1},P_{\mu_1+1},\ldots,P_{\mu_2},-Q_{\nu_1+1},\ldots,-Q_{\nu_2},\ldots,
+\]
+which, because the sequences $\mu$ and $\nu$ are strictly increasing, is a rearrangement of the sequence $a$.
+
+
+\end{proof}
+
+
+\section{Symmetry}
+Don't use order where it is accidental.
+
+
+\section{Nets}
+A {\em directed set} is a set $D$ and a binary relation $\preceq$ satisfying
+\begin{itemize}
+\item if $m,n,p \in D$, $m \preceq n$, and $n\preceq p$, then $m \preceq p$
+\item if $m \in D$, then $m \preceq m$
+\item if $m,n \in D$, then there is some $p \in D$ such that $m \preceq p$ and $n \preceq p$.
+\end{itemize}
+For example, let $A$ be a set, let $D$  be the set of all subsets of $A$, and say that  $F \preceq G$ when $F \subseteq G$. Check that 
+$(D,\preceq)$ is a directed set: for $F,G \in D$, we have $F \cup G \in D$,
+and $F \cup G$  is an upper bound for both $F$ and $G$. 
+
+A {\em net} is a function from a directed set $(D,\preceq)$ to a set $X$. 
+Let $(X,\tau)$ be a topological space, let $S:(D,\preceq) \to (X,\tau)$ be a net, and let $x \in X$. We say that $S$ {\em converges to $x$} if for every $U \in \tau$ with $x \in U$
+ there is some $N_U \in D$ such that $N_U \preceq i$ implies that $S(i) \in U$. One proves that a topological space is Hausdorff if and only if every net in this space converges to at most one
+point  \cite[p.~67, Theorem 3]{kelley}.
+
+A net $S:(D,\preceq) \to \mathbb{R}$ is said to be {\em increasing} if $m \preceq n$ implies that $S(m) \leq S(n)$.
+
+\begin{lemma}
+If $S:(D,\preceq) \to \mathbb{R}$ is an increasing net and the range $R$ of $S$ has an upper bound, then $S$ converges to the supremum  of $R$.
+\label{monotone}
+\end{lemma}
+\begin{proof}
+Because $R$ is a subset of $\mathbb{R}$ that has an upper bound, it has a supremum, call it $\sigma$. To say that $\sigma$ is the supremum of $R$ means that
+for all $r \in R$ we have $r \leq \sigma$ ($\sigma$ is an upper bound) and that for all $\epsilon>0$ there is some $r_\epsilon \in R$ with $\sigma-\epsilon<r_\epsilon$ (nothing less than 
+$\sigma$ is an upper bound).
+Take $\epsilon>0$. There is some $r_\epsilon \in R$ with $\sigma-\epsilon<r_\epsilon$.  As $r_\epsilon \in R$,
+there is some $n_\epsilon \in D$ with $S(n_\epsilon) = r_\epsilon$. If $n_\epsilon \preceq n$, then because $S$ is increasing,
+$S(n_\epsilon) \leq S(n)$, and hence
+\[
+\sigma-\epsilon < r_\epsilon = S(n_\epsilon) \leq S(n).
+\]
+But $S(n) \in R$, so $S(n) \leq \sigma$. Hence $n_\epsilon \preceq n$ implies that $|S(n)-\sigma|<\epsilon$, showing that $S$
+converges to $\sigma$.
+\end{proof}
+
+
+\section{Unordered sums}
+Let $A$ be a set, and let $\mathscr{P}_0(A)$ be the set of all finite subsets of $A$. 
+Check that $(\mathscr{P}_0(A),\subseteq)$ is a directed set:
+if $F,G \in \mathscr{P}_0(A)$  then
+$F \cup G \in \mathscr{P}_0(A)$ and $F \cup G$ is an upper bound for both $F$ and $G$. Let $f:A \to \mathbb{R}$ be a function, and define $S_f:\mathscr{P}_0(A) \to \mathbb{R}$ by
+\[
+S_f(F) =\sum_{a \in F} f(a), \qquad F \in \mathscr{P}_0(A).
+\]
+If the net $S_f$ converges, we say that the function $f$ is {\em summable}, and we call the element of $\mathbb{R}$ to which $S_f$ converges the {\em unordered sum of $f$},
+denoted by
+\[
+\sum_{a \in A} f(a).
+\]
+If $B$ is a subset of $A$, we say that $f$ is {\em summable over $B$} if the restriction of $f$ to $B$ is summable. If $f_B$ is the restriction of $f$ to $B$
+and $f$ is summable over $B$ (i.e. $f_B$ is summable), by 
+\[
+\sum_{a \in B} f(a) 
+\]
+we mean
+\[
+\sum_{a \in B} f_B(a).
+\]
+
+
+\begin{lemma}
+Suppose that $f,g:A \to \mathbb{R}$ are functions and  $\alpha,\beta \in \mathbb{R}$. If $f$ and $g$ are summable,
+then $\alpha f+  \beta g$ is summable and
+\[
+\sum_{a \in A} (\alpha f(a)+ g(a)) = \alpha \sum_{a \in A} f(a) + \beta  \sum_{a \in A} g(a).
+\]
+\label{linearity}
+\end{lemma}
+\begin{proof}
+Let $\sigma_1=\sum_{a \in A} f(a)$ and $\sigma_2=\sum_{a \in A} g(a)$, and set $h = \alpha f+ \beta g$.
+For $\epsilon>0$, there is some $F_\epsilon \in \mathscr{P}_0(A)$ such that $F_\epsilon \subseteq F \in \mathscr{P}_0(A)$ implies
+that $|S_f(F)-\sigma_1|<\epsilon$, and there is some $G_\epsilon \in \mathscr{P}_0(A)$ such that
+$G_\epsilon \subseteq G \in \mathscr{P}_0(A)$ implies that $|S_g(G)-\sigma_2|<\epsilon$. Let $H_\epsilon = F_\epsilon \cup G_\epsilon
+ \in \mathscr{P}_0(A)$. If $H_\epsilon \subseteq H \in \mathscr{P}_0(A)$, then, as $F_\epsilon \subseteq H$ and $G_\epsilon \subseteq H$,
+\begin{eqnarray*}
+|S_h(H)- (\alpha \sigma_1 + \beta \sigma_2)|&=&\left|\sum_{a \in H} (\alpha f(a)+\beta g(a)) - \alpha \sigma_1 - \beta \sigma_2 \right|\\
+&=&| \alpha S_f(H)+\beta S_g(H) - \alpha \sigma_1 -\beta  \sigma_2|\\
+&\leq&|\alpha| |S_f(H) - \sigma_1| +|\beta| |S_g(H)-\sigma_2|\\
+&\leq&|\alpha| \epsilon +|\beta| \epsilon;
+\end{eqnarray*}
+we write $\leq$ rather than $<$ in the last inequality to cover the case where $\alpha=\beta=0$. 
+It follows that $S_h$ converges to $\alpha \sigma_1 + \beta \sigma_2$. 
+\end{proof}
+
+The following lemma is simple to prove and ought to be true, but should not to be called obvious. 
+For example, the Ces\`aro sum of the sequence $1,-1,1,-1,\ldots$ is $\frac{1}{2}$, while the Ces\`aro sum of the sequence
+$1,-1,0,1,-1,0,\ldots$ is $\frac{1}{3}$.
+
+\begin{lemma}
+If $f:A \to \mathbb{R}$ is summable, then for any set $C$ that contains $A$, the function $g:C \to \mathbb{R}$ defined by
+\[
+g(c) = \begin{cases}
+f(c)&c \in A\\
+0&\textrm{otherwise}
+\end{cases}
+\]
+is summable, and
+\[
+\sum_{a \in A} f(a) = \sum_{c \in C} g(c).
+\]
+\label{nullsets}
+\end{lemma}
+\begin{proof}
+Let $\sigma=\sum_{a \in A} f(a)$. For $\epsilon>0$, there is some $F_\epsilon \in \mathscr{P}_0(A)$ such that 
+$F_\epsilon \subseteq F \in \mathscr{P}_0(A)$ implies that $|S_f(F)-\sigma|<\epsilon$. If $F_\epsilon \subseteq H \in \mathscr{P}_0(C)$,
+then, as $F_\epsilon \subseteq H \cap A \in \mathscr{P}_0(A)$,
+\begin{eqnarray*}
+|S_g(H)-\sigma|&=&\left| \sum_{c \in H} g(c) - \sigma\right|\\
+& =& \left| \sum_{c \in H \cap A} g(c) + \sum_{c \in H \setminus A} g(c) - \sigma\right|\\
+&=&\left| \sum_{a \in H \cap A} f(a) + \sum_{c \in H \setminus A} 0 - \sigma\right|\\
+&=&|S_f(H \cap A) - \sigma|\\
+&<&\epsilon.
+\end{eqnarray*}
+This shows that $S_g$ converges to $\sigma$.
+\end{proof}
+
+The previous two lemmas are useful, and also convince us that unordered summation works similarly to finite sums. 
+We now establish conditions under which a function is summable.
+
+\begin{lemma}
+If $f:A \to \mathbb{R}$ is nonnegative and there is some $M \in \mathbb{R}$ such that
+$F \in \mathscr{P}_0(A)$ for all
+$S_f(F) \leq M$, then $f$ is summable. If $f:A \to \mathbb{R}$ is nonnegative and  summable, then $S_f(F) \leq \sum_{a \in A} f(a)$ for all $F \in \mathscr{P}_0(A)$.
+\label{bounded}
+\end{lemma}
+\begin{proof}
+Suppose there is some $M \in \mathbb{R}$ such that if $F \in \mathscr{P}_0(A)$ then $S_f(F) \leq M$. That is, $M$ is an upper bound for the range of $S_f$.
+Because $f$ is nonnegative, the net $S_f$ is increasing. We apply Lemma \ref{monotone}, which tells us that $S_f$ converges to the supremum of its
+range. That $S_f$ converges means that $f$ is summable.
+
+Suppose that $f$ is summable, and let $\sigma=\sum_{a \in A} f(a)$. Suppose by contradiction that there is some $F_0 \in \mathscr{P}_0(A)$ such that
+$S_f(F_0)>\sigma$, and let $\epsilon = S_f(F_0) - \sigma$. Then there is some $F_\epsilon \in \mathscr{P}_0(A)$ such that
+$F_\epsilon \subseteq F \in \mathscr{P}_0(A)$ implies that $|S_f(F) -\sigma| <\epsilon$. As $F_\epsilon \subseteq F_0 \cup F_\epsilon
+\in\mathscr{P}_0(A)$, we have 
+$|S_f(F_0 \cup F_\epsilon) - \sigma|<\epsilon$, and hence
+\[
+S_f(F_0 \cup F_\epsilon) < \sigma+\epsilon =  S_f(F_0).
+\]
+But $F_0$ is contained in $F_0 \cup F_\epsilon$ and $f$ is nonnegative, so
+\[
+S_f(F_0) \leq S_f(F_0 \cup F_\epsilon),
+\]
+which gives $S_f(F_0) < S_f(F_0)$, a contradiction. Therefore, there is no $F \in \mathscr{P}_0(A)$ for which $S_f(F_0) > \sigma$.
+\end{proof}
+
+
+
+
+
+
+\begin{lemma}
+Suppose that $f:A \to \mathbb{R}$ is a function and that $A_+ = \{a \in A: f(a) \geq 0\}$ and $A_-=\{a \in A: f(a) \leq 0\}$. Then,
+$f$ is summable if and only if $f$ is summable over both $A_+$ and $A_-$. If $f$ is summable, then
+\[
+\sum_{a \in A} f(a) = \sum_{a \in A_+} f(a) + \sum_{a \in A_-} f(a).
+\]
+\label{positivenegative}
+\end{lemma}
+\begin{proof}
+Suppose that $f$ is summable.
+Because $f$ is summable, there is  some $E \in \mathscr{P}_0(A)$ such that $E \subseteq F \in \mathscr{P}_0(A)$ implies that
+$|S_f(F)-\sigma|<1$.
+Define
+\[
+E_+ = \{a \in E: f(a) \geq 0\} \in \mathscr{P}_0(A_+), \qquad E_-=\{a \in E: f(a) \leq 0\} \in \mathscr{P}_0(A_-).
+\]
+ If $G \in \mathscr{P}_0(A_+)$ then
+$E \subseteq G \cup E  \in \mathscr{P}_0(A)$, and 
+hence 
+$|S_f(G \cup E) - \sigma|<1$.
+We have
+\[
+S_{f_+}(G) = \sum_{a \in G} f(a) \leq \sum_{a \in G \cup E_+} f(a) = \sum_{a\in G \cup E} f(a) - \sum_{a \in E_-} f(a),
+\]
+and hence
+\[
+S_{f_+}(G) \leq S_f(G \cup E) - S_f(E_-) < \sigma + 1 - S_f(E_-).
+\]
+That is, $\sigma+1-S_f(E_-)$ is an upper bound for the range of $S_{f_+}$. The net $S_{f_+}$ is increasing, hence applying Lemma \ref{monotone} we get that
+$S_{f_+}$ converges. That is, $f_+$ is summable. 
+If $H \in \mathscr{P}_0(A_-)$, then $E \subseteq H \cup E \in \mathscr{P}_0(A)$, and hence $|S_f(H \cup E)-\sigma|<1$. We have
+\[
+S_{f_-}(H) = \sum_{a \in H} f(a) \geq \sum_{a \in H \cup E_-} f(a) = \sum_{a \in H \cup E} f(a) - \sum_{a \in E_+} f(a),
+\]
+and then
+\[
+S_{f_-}(H) \geq S_f(H \cup E) - S_f(E_+) > \sigma-1 - S_f(E_+),
+\]
+showing that $-\sigma+1+S_f(E_+)$ is an upper bound for the net $-S_{f_-}$. As $-S_{f_-}$ is increasing, by Lemma \ref{monotone} it
+converges, and it follows that $S_{f_-}$ converges. That is, $f_-$ is summable.
+
+Suppose that $f$ is summable over both $A_+$ and $A_-$.
+Let $f_+$ be the restriction of $f$ to $A_+$ and let $f_+$ be the restriction of $f$ to $A_+$, and define
+$g_+,g_-:A \to \mathbb{R}$ by
+\[
+g_+(a)=
+\begin{cases}
+f(a)&a \in A_+\\
+0&a \in A_-,
+\end{cases}
+\qquad
+g_-(a)=\begin{cases}
+0&a \in A_+\\
+f(a)&a \in A_-.
+\end{cases}
+\]
+By Lemma \ref{nullsets}, $f_+$ being summable implies that $g_+$ is summable, with
+\[
+\sum_{a \in A_+} f_+(a) = \sum_{a \in A} g_+(a),
+\]
+ and $f_-$ being summable implies that $g_-$ is summable, with
+ \[
+ \sum_{a \in A_-} f_-(a) = \sum_{a \in A} g_-(a).
+ \]
+But $f=g_++g_-$, so by Lemma \ref{linearity} we get that $f$ is summable, with
+\[
+\sum_{a \in A} f(a) = \sum_{a \in A} g_+(a) + \sum_{a \in A} g_-(a) = \sum_{a \in A_+} f_+(a)  + \sum_{a \in A_-} f_-(a).
+\]
+\end{proof}
+
+If $f:A \to \mathbb{R}$ is a function, we define $|f|:A \to \mathbb{R}$ by $|f|(a)=|f(a)|$.
+
+\begin{theorem}
+If $f:A \to \mathbb{R}$ is a function, then $f$ is summable if and only if $|f|$ is summable.
+\label{absolute}
+\end{theorem}
+\begin{proof}
+Let $A_+=\{a \in A: f(a) \geq 0\}$ and $A_-=\{a \in A: f(a) \leq 0\}$, and let $f_+$ and $f_-$ be the restrictions of $f$ to $A_+$ and $A_-$
+respectively. 
+Suppose that $f$ is summable. Then by Lemma \ref{positivenegative} we get that $f_+$ is summable and $f_-$ is summable. 
+Let $F \in \mathscr{P}_0(A)$ and write $F_+=\{a \in F: f(a) \geq 0\}$, $F_-=\{a \in F: f(a) \leq 0\}$. We have
+\[
+S_{|f|}(F) = \sum_{a \in F} |f(a)| = \sum_{a \in F_+} f(a) - \sum_{a \in F_-} f(a) = S_{f_+}(F_+) - S_{f_-}(F_-).
+\]
+But
+by  Lemma \ref{bounded}, because the net $S_{f_+}$ is increasing we have
+$S_{f_+}(F_+) \leq \sum_{a \in A_+} f_+(a)$, and because the net $-S_{f_-}$ is increasing we have
+$-S_{f_-}(F_-) \leq - \sum_{a \in A_-}f_-(a)$.
+Therefore, $ \sum_{a \in A_+} f_+(a)- \sum_{a \in A_-}f_-(a)$ is an upper bound for the range of $S_{|f|}$. 
+Moreover, $S_{|f|}$ is increasing, so by Lemma \ref{bounded} it follows that $S_{|f|}$ converges, i.e. that $|f|$ is summable.
+
+Suppose that $|f|$ is summable. By Lemma \ref{bounded}, for any $F \in \mathscr{P}_0(A_+)$ we have
+\[
+S_{f_+}(F) = S_{|f|}(F) \leq \sum_{a \in A} |f|(a),
+\]
+i.e., $\sum_{a \in A} |f|(a)$ is an upper bound for the range of $S_{f_+}$. As $S_{f_+}$ is increasing, by Lemma \ref{bounded} it follows
+that $S_{f_+}$ converges, i.e., that $f_+$ is summable. Because $-S_{f_-}$ is increasing, we likewise get that $-S_{f_-}$ converges and hence
+that $S_{f_-}$ converges, i.e. that $f_-$ is summable. Now applying Lemma \ref{positivenegative}, we get that $f$ is summable.
+\end{proof}
+
+
+
+\begin{theorem}
+If $f:A \to \mathbb{R}$ is summable,
+then $\{a \in A: f(a) \neq 0\}$ is countable.
+\end{theorem}
+\begin{proof}
+Suppose by contradiction that $\{a \in A: f(a) \neq 0\}$ is uncountable. We have
+\[
+\{a \in A: f(a) \neq 0\}= \{a \in A: |f(a)|>0\} = \bigcup_{n \in \mathbb{N}} \left\{a \in A: |f(a)| \geq \frac{1}{n} \right\}.
+\]
+Since this is a countable union, there is some $n \in \mathbb{N}$ such that $\left\{ a \in A: |f(a)| \geq \frac{1}{n} \right\}$ is uncountable; in particular,
+this set is infinite.
+Because $f$ is summable, by Theorem \ref{absolute} we have that $|f|$ is summable, with unordered sum $\sigma$. Hence, there is 
+some $F_1 \in \mathscr{P}_0(A)$ such that $F_1 \subseteq F \in \mathscr{P}_0(A)$ implies that $|S_{|f|}(F)-\sigma|<1$.
+Let $F$ be a finite subset of $\left\{a \in A: |f(a)| \geq \frac{1}{n} \right\}$ with at least $n(\sigma+1)$ elements. Then
+\[
+S_{|f|}(F \cup F_1) = \sum_{a \in F \cup F_1} |f(a)| \geq \sum_{a \in F} |f(a)| \geq n(\sigma+1) \cdot \frac{1}{n}=\sigma+1.
+\]
+But $F_1 \subseteq F \cup F_1 \in \mathscr{P}_0(A)$, so $S_{|f|}(F \cup F_1) < \sigma+1$,  a contradiction. Therefore, 
+$\{a \in A: f(a) \neq 0\}$ is countable. 
+\end{proof}
+
+
+
+
+\section{References}
+McArthur \cite{MR0235336}
+
+Schaefer \cite[p.~120]{schaefer}
+
+Roytvarf \cite[p.~282]{roytvarf}
+
+McShane \cite{mcshane}
+
+Diestel, Jarchow and Tonge \cite{diestel}
+
+Remmert \cite[p.~29]{remmert}
+
+Sorenson \cite{MR2640720}
+
+Lattice sums \cite{MR2807930}
+
+Kadets and Kadets \cite{kadets}
+
+Manning \cite{manning}
+
+Bottazini \cite{bottazini}
+
+Boyer \cite{boyer}
+
+Weil \cite{weil}
+
+Smithies \cite{MR863341}
+
+Dugac \cite{dugac}
+
+Grattan-Guinness \cite{MR0497690} and \cite{MR1263061} and \cite{gg} and \cite{bolzano}
+
+Whiteside \cite{whiteside}
+
+Schaefer \cite{schaefer1986}
+
+Cauchy \cite{cours}
+
+Polya \cite{polyaI}
+
+Lakatos \cite{lakatos}
+
+Krantz \cite{MR2026311}
+
+Cunha \cite{cunha}
+
+Youschkevitch \cite{youschkevitch}
+
+Tweddle \cite{tweddle} and \cite{MR1996414}
+
+Bromwich \cite[p.~74, Art. 28]{bromwich}
+
+Laugwitz \cite{laugwitz1989}, \cite{laugwitz2000}, \cite{laugwitz2008}
+
+Tucciarone \cite{tucciarone}
+
+Fraser \cite{fraser}
+
+Cowen \cite{MR602844}
+
+Spence \cite{spence}
+
+Jahnke \cite{jahnke}
+
+Epple \cite{epple}
+
+Mascr\'e \cite{mascre}
+
+Rosenthal \cite{MR883287}
+
+Freniche \cite{MR2663251}
+
+Goursat \cite[p.~348]{goursat}
+
+\section{Probability}
+Baker \cite{baker}
+
+Nathan \cite{nathan}
+
+Nover and Harris \cite{nover}
+
+Colyvan \cite{colyvan}
+
+Liouville \cite[pp.~74--75]{lutzen}
+
+Chrystal \cite[p.~118]{chrystal}
+
+Jordan \cite[p.~277, Theorem 291]{jordan}
+
+Cayley \cite[a]{cayley}
+
+Harkness and Morley \cite[p.~66]{harkness}
+
+Hofmann \cite{hofmann}
+
+Ferreir\'os \cite{ferreiros}
+
+Ferraro \cite{MR2368303} and \cite{ferraro} and \cite{leibniz}
+
+Brouncker \cite{brouncker}
+
+Roy \cite{roy}
+
+Wallis \cite{wallis}
+
+Bourbaki \cite[p.~261, chapter III, \S 5.1]{bourbaki}
+
+Pringsheim \cite{pringsheim}
+
+Dutka \cite{dutka}
+
+Gr\"unbaum \cite{grunbaum}
+
+Hinton and Martin \cite{achilles}
+
+Gersonides \cite{gersonides}
+
+Watling \cite{watling}
+
+Moore \cite{moore}
+
+Wojtaszczyk \cite[Chapter 7]{wojtaszczyk}
+
+\bibliographystyle{amsplain}
+\bibliography{summable}
+
+\end{document}

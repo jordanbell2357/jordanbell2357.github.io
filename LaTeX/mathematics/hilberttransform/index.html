@@ -1,0 +1,834 @@
+<!DOCTYPE html><html>
+<head>
+<title>The Hilbert transform on ℝ</title>
+<!--Generated on Thu Jan 20 01:37:49 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 24, 2016.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="LaTeXML-navbar-left.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<nav class="ltx_page_navbar">
+<div class="ltx_TOC">
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 The principal value integral ‣ The Hilbert transform on R" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>The principal value integral</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 The Hilbert transform ‣ The Hilbert transform on R" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>The Hilbert transform</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 The Poisson kernel ‣ The Hilbert transform on R" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>The Poisson kernel</span></a></li>
+</ul>
+</div>
+</nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">The Hilbert transform on <math id="m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>
+</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">April 24, 2016</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>The principal value integral</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p1.m1" class="ltx_Math" alttext="A_{\epsilon}=\{x\in\mathbb{R}:|x|\geq\epsilon\}" display="inline"><mrow><msub><mi>A</mi><mi>ϵ</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow><mo>:</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow><mo stretchy="false">}</mo></mrow></mrow></math>. For <math id="S1.p1.m2" class="ltx_Math" alttext="f\in\bigcap_{\epsilon&gt;0}L^{1}(A_{\epsilon})" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msub><mo largeop="true" mathsize="160%" stretchy="false" symmetric="true">⋂</mo><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></msub><mrow><msup><mi>L</mi><mn>1</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>A</mi><mi>ϵ</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>,
+if <math id="S1.p1.m3" class="ltx_Math" alttext="\int_{A_{\epsilon}}f(x)dx" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>A</mi><mi>ϵ</mi></msub></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></math> has a limit as <math id="S1.p1.m4" class="ltx_Math" alttext="\epsilon\to 0" display="inline"><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></math>, we denote it by</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="PV\int_{\mathbb{R}}f(x)dx=\lim_{\epsilon\to 0}\int_{|x|\geq\epsilon}f(x)dx." display="block"><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow></msub><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p2.m1" class="ltx_Math" alttext="\mathscr{S}" display="inline"><mi class="ltx_font_mathscript">𝒮</mi></math> be the collection of Schwartz functions <math id="S1.p2.m2" class="ltx_Math" alttext="\mathbb{R}\to\mathbb{C}" display="inline"><mrow><mi>ℝ</mi><mo>→</mo><mi>ℂ</mi></mrow></math> and let
+<math id="S1.p2.m3" class="ltx_Math" alttext="\mathscr{S}^{\prime}" display="inline"><msup><mi class="ltx_font_mathscript">𝒮</mi><mo>′</mo></msup></math> be its dual space, whose elements are called tempered distributions.
+For <math id="S1.p2.m4" class="ltx_Math" alttext="\phi\in\mathscr{S}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mi class="ltx_font_mathscript">𝒮</mi></mrow></math>, for <math id="S1.p2.m5" class="ltx_Math" alttext="k&gt;j" display="inline"><mrow><mi>k</mi><mo>&gt;</mo><mi>j</mi></mrow></math>,</p>
+<table id="S3.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S1.Ex2"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\displaystyle\left|\int_{A_{1/j}}\frac{\phi(x)}{x}dx-\int_{A_{1/k}}\frac{\phi(%
+x)}{x}dx\right|" display="inline"><mrow><mo>|</mo><mrow><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>A</mi><mrow><mn>1</mn><mo>/</mo><mi>j</mi></mrow></msub></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>A</mi><mrow><mn>1</mn><mo>/</mo><mi>k</mi></mrow></msub></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>|</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex2.m2" class="ltx_Math" alttext="\displaystyle=\left|\int_{1/k\leq|x|&lt;1/j}\frac{\phi(x)}{x}dx\right|" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>|</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mn>1</mn><mo>/</mo><mi>k</mi></mrow><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mn>1</mn><mo>/</mo><mi>j</mi></mrow></mrow></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex3.m2" class="ltx_Math" alttext="\displaystyle=\left|\int_{1/k\leq|x|&lt;1/j}\frac{\phi(x)-\phi(0)}{x}dx\right|" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>|</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mn>1</mn><mo>/</mo><mi>k</mi></mrow><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mn>1</mn><mo>/</mo><mi>j</mi></mrow></mrow></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>|</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex4.m2" class="ltx_Math" alttext="\displaystyle\leq\int_{1/k\leq|x|&lt;1/j}\left\|\phi^{\prime}\right\|_{b}" display="inline"><mrow><mi></mi><mo>≤</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mn>1</mn><mo>/</mo><mi>k</mi></mrow><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>&lt;</mo><mrow><mn>1</mn><mo>/</mo><mi>j</mi></mrow></mrow></msub></mstyle><msub><mrow><mo>∥</mo><msup><mi>ϕ</mi><mo>′</mo></msup><mo>∥</mo></mrow><mi>b</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex5.m2" class="ltx_Math" alttext="\displaystyle=\left\|\phi^{\prime}\right\|_{b}\ \cdot\left(\frac{1}{j}-\frac{1%
+}{k}\right)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mpadded width="+5pt"><msub><mrow><mo>∥</mo><msup><mi>ϕ</mi><mo>′</mo></msup><mo>∥</mo></mrow><mi>b</mi></msub></mpadded><mo>⋅</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>j</mi></mfrac></mstyle><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>k</mi></mfrac></mstyle></mrow><mo>)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex6"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex6.m2" class="ltx_Math" alttext="\displaystyle=\left\|\phi^{\prime}\right\|_{b}\ \cdot\frac{k-j}{kj}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mpadded width="+5pt"><msub><mrow><mo>∥</mo><msup><mi>ϕ</mi><mo>′</mo></msup><mo>∥</mo></mrow><mi>b</mi></msub></mpadded><mo>⋅</mo><mstyle displaystyle="true"><mfrac><mrow><mi>k</mi><mo>-</mo><mi>j</mi></mrow><mrow><mi>k</mi><mo>⁢</mo><mi>j</mi></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex7"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex7.m2" class="ltx_Math" alttext="\displaystyle\leq\frac{\left\|\phi^{\prime}\right\|_{b}}{j}." display="inline"><mrow><mrow><mi></mi><mo>≤</mo><mstyle displaystyle="true"><mfrac><msub><mrow><mo>∥</mo><msup><mi>ϕ</mi><mo>′</mo></msup><mo>∥</mo></mrow><mi>b</mi></msub><mi>j</mi></mfrac></mstyle></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Therefore <math id="S1.p2.m6" class="ltx_Math" alttext="\int_{A_{1/j}}\frac{\phi(x)}{x}dx" display="inline"><mrow><msub><mo largeop="true" symmetric="true">∫</mo><msub><mi>A</mi><mrow><mn>1</mn><mo>/</mo><mi>j</mi></mrow></msub></msub><mrow><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></math> is a Cauchy sequence in <math id="S1.p2.m7" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> and hence
+converges.
+Then the following limit exists:</p>
+<table id="S1.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex8.m1" class="ltx_Math" alttext="\left\langle\phi,W\right\rangle=PV\int_{\mathbb{R}}\frac{\phi(x)}{x}dx=\lim_{%
+\epsilon\to 0}\int_{|x|\geq\epsilon}\frac{\phi(x)}{x}dx." display="block"><mrow><mrow><mrow><mo>⟨</mo><mi>ϕ</mi><mo>,</mo><mi>W</mi><mo>⟩</mo></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub><mrow><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow></msub><mrow><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is apparent that <math id="S1.p2.m8" class="ltx_Math" alttext="W:\mathscr{S}\to\mathbb{C}" display="inline"><mrow><mi>W</mi><mo>:</mo><mrow><mi class="ltx_font_mathscript">𝒮</mi><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> is linear, and
+one proves that
+<math id="S1.p2.m9" class="ltx_Math" alttext="W\in\mathscr{S}^{\prime}" display="inline"><mrow><mi>W</mi><mo>∈</mo><msup><mi class="ltx_font_mathscript">𝒮</mi><mo>′</mo></msup></mrow></math>.</p>
+</div>
+<div id="S1.p3" class="ltx_para">
+<p class="ltx_p">For <math id="S1.p3.m1" class="ltx_Math" alttext="\phi\in\mathscr{S}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mi class="ltx_font_mathscript">𝒮</mi></mrow></math>,
+by Hadamard’s lemma, there is a <math id="S1.p3.m2" class="ltx_Math" alttext="C^{\infty}" display="inline"><msup><mi>C</mi><mi mathvariant="normal">∞</mi></msup></math> function <math id="S1.p3.m3" class="ltx_Math" alttext="\psi:\mathbb{R}\to\mathbb{C}" display="inline"><mrow><mi>ψ</mi><mo>:</mo><mrow><mi>ℝ</mi><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> such that
+<math id="S1.p3.m4" class="ltx_Math" alttext="\phi(x)=\phi(0)+x\psi(x)" display="inline"><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>x</mi><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for all <math id="S1.p3.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>. For <math id="S1.p3.m6" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,</p>
+<table id="S3.EGx2" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S1.Ex9"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex9.m1" class="ltx_Math" alttext="\displaystyle\int_{\epsilon}^{1}\phi^{\prime}(x)\log xdx" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>ϵ</mi><mn>1</mn></msubsup></mstyle><mrow><msup><mi>ϕ</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mi>x</mi><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex9.m2" class="ltx_Math" alttext="\displaystyle=x\psi(x)\log x\bigg{|}_{\epsilon}^{1}-\int_{\epsilon}^{1}(\phi(x%
+)-\phi(0))\frac{1}{x}dx" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msubsup><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>x</mi></mrow></mrow><mo fence="true" maxsize="210%" minsize="210%">|</mo></mrow><mi>ϵ</mi><mn>1</mn></msubsup><mo>-</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>ϵ</mi><mn>1</mn></msubsup></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex10"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex10.m2" class="ltx_Math" alttext="\displaystyle=-\epsilon\psi(\epsilon)\log\epsilon-\int_{\epsilon}^{1}\frac{%
+\phi(x)}{x}dx-\phi(0)\log\epsilon" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>ϵ</mi><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>ϵ</mi></mrow></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mi>ϵ</mi><mn>1</mn></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>-</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>ϵ</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and
+</p>
+<table id="S3.EGx3" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S1.Ex11"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex11.m1" class="ltx_Math" alttext="\displaystyle\int_{-1}^{-\epsilon}\phi^{\prime}(x)\log|x|dx" display="inline"><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mn>1</mn></mrow><mrow><mo>-</mo><mi>ϵ</mi></mrow></msubsup></mstyle><mrow><msup><mi>ϕ</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex11.m2" class="ltx_Math" alttext="\displaystyle=x\psi(x)\log(-x)\bigg{|}_{-1}^{-\epsilon}-\int_{-1}^{-\epsilon}(%
+\phi(x)-\phi(0))\frac{1}{x}dx" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msubsup><mrow><mrow><mi>x</mi><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo fence="true" maxsize="210%" minsize="210%">|</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow><mrow><mo>-</mo><mi>ϵ</mi></mrow></msubsup><mo>-</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mn>1</mn></mrow><mrow><mo>-</mo><mi>ϵ</mi></mrow></msubsup></mstyle><mrow><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex12"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex12.m2" class="ltx_Math" alttext="\displaystyle=-\epsilon\psi(-\epsilon)\log\epsilon-\int_{-1}^{-\epsilon}\frac{%
+\phi(x)}{x}dx+\phi(0)\log\epsilon." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo>-</mo><mrow><mi>ϵ</mi><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>ϵ</mi></mrow></mrow></mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msubsup><mo largeop="true" symmetric="true">∫</mo><mrow><mo>-</mo><mn>1</mn></mrow><mrow><mo>-</mo><mi>ϵ</mi></mrow></msubsup></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>+</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mi>ϵ</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Hence</p>
+<table id="S1.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex13.m1" class="ltx_Math" alttext="\int_{\epsilon\leq|x|\leq 1}\phi^{\prime}(x)\log|x|dx=-\epsilon\cdot(\psi(%
+\epsilon)+\psi(-\epsilon))\cdot\log\epsilon-\int_{\epsilon\leq|x|\leq 1}\frac{%
+\phi(x)}{x}dx." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>ϵ</mi><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></msub><mrow><msup><mi>ϕ</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo>-</mo><mrow><mi>ϵ</mi><mo>⋅</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ϵ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mrow><mi>log</mi><mo>⁡</mo><mi>ϵ</mi></mrow></mrow></mrow><mo>-</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>ϵ</mi><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mn>1</mn></mrow></msub><mrow><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">On the other hand,</p>
+<table id="S1.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex14.m1" class="ltx_Math" alttext="\int_{|x|\geq 1}\phi^{\prime}(x)\log|x|dx=-\int_{|x|\geq 1}\frac{\phi(x)}{x}dx." display="block"><mrow><mrow><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mn>1</mn></mrow></msub><mrow><msup><mi>ϕ</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mn>1</mn></mrow></msub><mrow><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore</p>
+<table id="S1.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex15.m1" class="ltx_Math" alttext="PV\int_{\mathbb{R}}\phi^{\prime}(x)\log|x|dx=-PV\int_{\mathbb{R}}\frac{\phi(x)%
+}{x}dx." display="block"><mrow><mrow><mrow><mi>P</mi><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub><mrow><msup><mi>ϕ</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mi>log</mi><mo>⁡</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>P</mi><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub><mrow><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>x</mi></mfrac><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="S1.p4.m1" class="ltx_Math" alttext="\mu\phi(x)=\phi(-x)" display="inline"><mrow><mrow><mi>μ</mi><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S1.p4.m2" class="ltx_Math" alttext="\tau_{y}\phi(x)=\phi(x-y)" display="inline"><mrow><mrow><msub><mi>τ</mi><mi>y</mi></msub><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.
+Then</p>
+<table id="S1.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex16.m1" class="ltx_Math" alttext="\tau_{y}\mu\phi(x)=\mu\phi(x-y)=\phi(y-x)=\tau_{x}\phi(y)." display="block"><mrow><mrow><mrow><msub><mi>τ</mi><mi>y</mi></msub><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>μ</mi><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>τ</mi><mi>x</mi></msub><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Write</p>
+<table id="S3.EGx4" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S1.Ex17"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S1.Ex17.m1" class="ltx_Math" alttext="\displaystyle\phi*\psi(x)" display="inline"><mrow><mrow><mi>ϕ</mi><mo>*</mo><mi>ψ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex17.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}\phi(y)\psi(x-y)dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>ψ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex18"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex18.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}\phi(y)(\tau_{y}\psi)(x)dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>τ</mi><mi>y</mi></msub><mo>⁢</mo><mi>ψ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S1.Ex19"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S1.Ex19.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}\phi(y)(\tau_{x}\mu\psi)(y)dy." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>τ</mi><mi>x</mi></msub><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mi>ψ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S1.p5" class="ltx_para">
+<p class="ltx_p">For <math id="S1.p5.m1" class="ltx_Math" alttext="u\in\mathscr{S}^{\prime}" display="inline"><mrow><mi>u</mi><mo>∈</mo><msup><mi class="ltx_font_mathscript">𝒮</mi><mo>′</mo></msup></mrow></math>
+and for <math id="S1.p5.m2" class="ltx_Math" alttext="\phi\in\mathscr{S}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mi class="ltx_font_mathscript">𝒮</mi></mrow></math>, define
+<math id="S1.p5.m3" class="ltx_Math" alttext="\phi*u:\mathbb{R}\to\mathbb{C}" display="inline"><mrow><mrow><mi>ϕ</mi><mo>*</mo><mi>u</mi></mrow><mo>:</mo><mrow><mi>ℝ</mi><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> by</p>
+<table id="S1.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex20.m1" class="ltx_Math" alttext="(\phi*u)(x)=\left\langle\tau_{x}\mu\phi,u\right\rangle." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>ϕ</mi><mo>*</mo><mi>u</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>⟨</mo><mrow><msub><mi>τ</mi><mi>x</mi></msub><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>,</mo><mi>u</mi><mo>⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">One proves that <math id="S1.p5.m4" class="ltx_Math" alttext="\phi*u" display="inline"><mrow><mi>ϕ</mi><mo>*</mo><mi>u</mi></mrow></math> is a tempered distribution, and satisfies</p>
+<table id="S1.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex21.m1" class="ltx_Math" alttext="\left\langle\psi,\phi*u\right\rangle=\left\langle(\mu\phi)*\psi,u\right\rangle." display="block"><mrow><mrow><mrow><mo>⟨</mo><mi>ψ</mi><mo>,</mo><mrow><mi>ϕ</mi><mo>*</mo><mi>u</mi></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>μ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo><mi>ψ</mi></mrow><mo>,</mo><mi>u</mi><mo>⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S1.p6" class="ltx_para">
+<p class="ltx_p">Define <math id="S1.p6.m1" class="ltx_Math" alttext="\tau_{x}u\in\mathscr{S}^{\prime}" display="inline"><mrow><mrow><msub><mi>τ</mi><mi>x</mi></msub><mo>⁢</mo><mi>u</mi></mrow><mo>∈</mo><msup><mi class="ltx_font_mathscript">𝒮</mi><mo>′</mo></msup></mrow></math> by</p>
+<table id="S1.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex22.m1" class="ltx_Math" alttext="\left\langle\phi,\tau_{x}u\right\rangle=\left\langle\tau_{-x}\phi,u\right\rangle." display="block"><mrow><mrow><mrow><mo>⟨</mo><mi>ϕ</mi><mo>,</mo><mrow><msub><mi>τ</mi><mi>x</mi></msub><mo>⁢</mo><mi>u</mi></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><mrow><msub><mi>τ</mi><mrow><mo>-</mo><mi>x</mi></mrow></msub><mo>⁢</mo><mi>ϕ</mi></mrow><mo>,</mo><mi>u</mi><mo>⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>The Hilbert transform</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S2.p1.m1" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math>, for <math id="S2.p1.m2" class="ltx_Math" alttext="\phi\in\mathscr{S}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mi class="ltx_font_mathscript">𝒮</mi></mrow></math> let</p>
+<table id="S3.EGx5" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex23"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex23.m1" class="ltx_Math" alttext="\displaystyle H_{\epsilon}\phi(x)" display="inline"><mrow><msub><mi>H</mi><mi>ϵ</mi></msub><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex23.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\pi}\int_{|y|\geq\epsilon}\frac{\phi(x-y)}{y}dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>π</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>y</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex24"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex24.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\pi}\int_{|y|\geq\epsilon}\frac{\tau_{y}\phi(x)}{y}dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>π</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>τ</mi><mi>y</mi></msub><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mi>y</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex25"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex25.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\pi}\int_{|y|\geq\epsilon}\frac{\tau_{x}\mu\phi(y)}{y}dy." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>π</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>y</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>τ</mi><mi>x</mi></msub><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mi>y</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Define</p>
+<table id="S3.EGx6" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex26"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex26.m1" class="ltx_Math" alttext="\displaystyle H\phi(x)" display="inline"><mrow><mi>H</mi><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex26.m2" class="ltx_Math" alttext="\displaystyle=\lim_{\epsilon\to 0}H_{\epsilon}\phi(x)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><msub><mi>H</mi><mi>ϵ</mi></msub><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex27"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex27.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\pi}\cdot PV\int_{\mathbb{R}}\frac{\tau_{x}\mu\phi(y)}{%
+y}dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>π</mi></mfrac></mstyle><mo>⋅</mo><mi>P</mi></mrow><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>τ</mi><mi>x</mi></msub><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mi>y</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex28"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex28.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\pi}\cdot PV\int_{\mathbb{R}}\frac{\phi(x-y)}{y}dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>π</mi></mfrac></mstyle><mo>⋅</mo><mi>P</mi></mrow><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>y</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex29"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex29.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{\pi}\cdot PV\int_{\mathbb{R}}\frac{\phi(y)}{x-y}dy." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>π</mi></mfrac></mstyle><mo>⋅</mo><mi>P</mi></mrow><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S2.p2.m1" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>,</p>
+<table id="S3.EGx7" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex30"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex30.m1" class="ltx_Math" alttext="\displaystyle\phi*W(x)" display="inline"><mrow><mrow><mi>ϕ</mi><mo>*</mo><mi>W</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex30.m2" class="ltx_Math" alttext="\displaystyle=\left\langle\tau_{x}\mu\phi,W\right\rangle" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>⟨</mo><mrow><msub><mi>τ</mi><mi>x</mi></msub><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>,</mo><mi>W</mi><mo>⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex31"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex31.m2" class="ltx_Math" alttext="\displaystyle=PV\int_{\mathbb{R}}\frac{\tau_{x}\mu\phi(y)}{y}dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><msub><mi>τ</mi><mi>x</mi></msub><mo>⁢</mo><mi>μ</mi><mo>⁢</mo><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mi>y</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex32"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex32.m2" class="ltx_Math" alttext="\displaystyle=PV\int_{\mathbb{R}}\frac{\phi(x-y)}{y}dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mi>y</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex33"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex33.m2" class="ltx_Math" alttext="\displaystyle=PV\int_{\mathbb{R}}\frac{\phi(y)}{x-y}dy" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mi>V</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex34"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex34.m2" class="ltx_Math" alttext="\displaystyle=\lim_{\epsilon\to 0}\int_{|x|\geq\epsilon}\frac{\phi(y)}{x-y}dy." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>x</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>x</mi><mo>-</mo><mi>y</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>y</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Thus</p>
+<table id="S2.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex35.m1" class="ltx_Math" alttext="H\phi=\frac{1}{\pi}\phi*W=\phi*\left(\frac{W}{\pi}\right)." display="block"><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mi>π</mi></mfrac><mo>⁢</mo><mi>ϕ</mi></mrow><mo>*</mo><mi>W</mi></mrow><mo>=</mo><mrow><mi>ϕ</mi><mo>*</mo><mrow><mo>(</mo><mfrac><mi>W</mi><mi>π</mi></mfrac><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">We calculate</p>
+<table id="S3.EGx8" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex36"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex36.m1" class="ltx_Math" alttext="\displaystyle\left\langle\phi,\widehat{W}\right\rangle" display="inline"><mrow><mo>⟨</mo><mi>ϕ</mi><mo>,</mo><mover accent="true"><mi>W</mi><mo>^</mo></mover><mo>⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex36.m2" class="ltx_Math" alttext="\displaystyle=\left\langle\widehat{\phi},W\right\rangle" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>⟨</mo><mover accent="true"><mi>ϕ</mi><mo>^</mo></mover><mo>,</mo><mi>W</mi><mo>⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex37"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex37.m2" class="ltx_Math" alttext="\displaystyle=\lim_{\epsilon\to 0}\int_{\epsilon\leq|\xi|\leq 1/\epsilon}\frac%
+{\widehat{\phi}(\xi)}{\xi}d\xi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>ϵ</mi><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mn>1</mn><mo>/</mo><mi>ϵ</mi></mrow></mrow></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mover accent="true"><mi>ϕ</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mi>ξ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>ξ</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex38"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex38.m2" class="ltx_Math" alttext="\displaystyle=\lim_{\epsilon\to 0}\int_{|\xi|\geq\epsilon}\left(\int_{\mathbb{%
+R}}\phi(x)e^{-2\pi ix\xi}dx\right)\frac{1}{\xi}d\xi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow><mo>≥</mo><mi>ϵ</mi></mrow></msub></mstyle><mrow><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>ξ</mi></mrow></mrow></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>ξ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>ξ</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex39"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex39.m2" class="ltx_Math" alttext="\displaystyle=\lim_{\epsilon\to 0}\int_{\mathbb{R}}\phi(x)\left(\int_{\epsilon%
+\leq|\xi|\leq 1/\epsilon}\frac{e^{-2\pi ix\xi}}{\xi}d\xi\right)dx" display="inline"><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>ϵ</mi><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mn>1</mn><mo>/</mo><mi>ϵ</mi></mrow></mrow></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>ξ</mi></mrow></mrow></msup><mi>ξ</mi></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>ξ</mi></mrow></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex40"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex40.m2" class="ltx_Math" alttext="\displaystyle=\lim_{\epsilon\to 0}\int_{\mathbb{R}}\phi(x)\left(\int_{\epsilon%
+\leq|\xi|\leq 1/\epsilon}-i\frac{\sin 2\pi x\xi}{\xi}d\xi\right)dx." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>ϵ</mi><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mn>1</mn><mo>/</mo><mi>ϵ</mi></mrow></mrow></msub></mstyle><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>ξ</mi></mrow></mrow><mi>ξ</mi></mfrac></mstyle><mo>⁢</mo><mi>d</mi><mo>⁢</mo><mi>ξ</mi></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>x</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Check that</p>
+<table id="S2.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex41.m1" class="ltx_Math" alttext="\lim_{\epsilon\to 0}\int_{\epsilon\leq|\xi|\leq 1/\epsilon}\frac{\sin 2\pi x%
+\xi}{\xi}d\xi=\pi\cdot\mathrm{sgn}\,x." display="block"><mrow><mrow><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></munder><mo>⁡</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mrow><mi>ϵ</mi><mo>≤</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow><mo>≤</mo><mrow><mn>1</mn><mo>/</mo><mi>ϵ</mi></mrow></mrow></msub><mrow><mfrac><mrow><mi>sin</mi><mo>⁡</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mi>ξ</mi></mrow></mrow><mi>ξ</mi></mfrac><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>ξ</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mi>π</mi><mo>⋅</mo><mpadded width="+1.7pt"><mi>sgn</mi></mpadded></mrow><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then, using the dominated convergence theorem,</p>
+<table id="S2.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex42.m1" class="ltx_Math" alttext="\left\langle\phi,\widehat{W}\right\rangle=\int_{\mathbb{R}}\phi(x)\cdot-i\pi%
+\cdot\mathrm{sgn}\,xdx." display="block"><mrow><mrow><mo>⟨</mo><mi>ϕ</mi><mo>,</mo><mover accent="true"><mi>W</mi><mo>^</mo></mover><mo>⟩</mo></mrow><mo>=</mo><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub><mi>ϕ</mi><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mo>-</mo><mi>i</mi><mi>π</mi><mo>⋅</mo><mpadded width="+1.7pt"><mi>sgn</mi></mpadded><mi>x</mi><mi>d</mi><mi>x</mi><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, <math id="S2.p3.m1" class="ltx_Math" alttext="\widehat{W}=-\pi i\cdot\mathrm{sgn}\," display="inline"><mrow><mover accent="true"><mi>W</mi><mo>^</mo></mover><mo>=</mo><mrow><mo>-</mo><mrow><mrow><mi>π</mi><mo>⁢</mo><mi>i</mi></mrow><mo>⋅</mo><mpadded width="+1.7pt"><mi>sgn</mi></mpadded></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">Now,</p>
+<table id="S2.Ex43" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex43.m1" class="ltx_Math" alttext="\widehat{\phi*u}=\widehat{\phi}\cdot\widehat{u}." display="block"><mrow><mrow><mover accent="true"><mrow><mi>ϕ</mi><mo>*</mo><mi>u</mi></mrow><mo>^</mo></mover><mo>=</mo><mrow><mover accent="true"><mi>ϕ</mi><mo>^</mo></mover><mo>⋅</mo><mover accent="true"><mi>u</mi><mo>^</mo></mover></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then</p>
+<table id="S2.Ex44" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex44.m1" class="ltx_Math" alttext="\widehat{H\phi}(\xi)=\frac{1}{\pi}\widehat{\phi*W}(\xi)=\frac{1}{\pi}\widehat{%
+\phi}(\xi)\cdot\widehat{W}(\xi)=\widehat{\phi}(\xi)\cdot-i\cdot\mathrm{sgn}\,(%
+\xi)." display="block"><mrow><mover accent="true"><mrow><mi>H</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>π</mi></mfrac><mover accent="true"><mrow><mi>ϕ</mi><mo>*</mo><mi>W</mi></mrow><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mfrac><mn>1</mn><mi>π</mi></mfrac><mover accent="true"><mi>ϕ</mi><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mover accent="true"><mi>W</mi><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>=</mo><mover accent="true"><mi>ϕ</mi><mo>^</mo></mover><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>⋅</mo><mo>-</mo><mi>i</mi><mo>⋅</mo><mpadded width="+1.7pt"><mi>sgn</mi></mpadded><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let</p>
+<table id="S2.Ex45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex45.m1" class="ltx_Math" alttext="m_{H}(\xi)=-i\cdot\mathrm{sgn}\,(\xi)," display="block"><mrow><mrow><mrow><msub><mi>m</mi><mi>H</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mrow><mi>i</mi><mo>⋅</mo><mpadded width="+1.7pt"><mi>sgn</mi></mpadded></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">with which</p>
+<table id="S2.Ex46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex46.m1" class="ltx_Math" alttext="\widehat{H\phi}=m_{H}\cdot\widehat{\phi}." display="block"><mrow><mrow><mover accent="true"><mrow><mi>H</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>^</mo></mover><mo>=</mo><mrow><msub><mi>m</mi><mi>H</mi></msub><mo>⋅</mo><mover accent="true"><mi>ϕ</mi><mo>^</mo></mover></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Writing <math id="S2.p4.m1" class="ltx_Math" alttext="F\phi=\widehat{\phi}" display="inline"><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mover accent="true"><mi>ϕ</mi><mo>^</mo></mover></mrow></math>,</p>
+<table id="S2.Ex47" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex47.m1" class="ltx_Math" alttext="FH\phi=m_{H}\cdot F\phi." display="block"><mrow><mrow><mrow><mi>F</mi><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><mrow><msub><mi>m</mi><mi>H</mi></msub><mo>⋅</mo><mi>F</mi></mrow><mo>⁢</mo><mi>ϕ</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">So</p>
+<table id="S2.Ex48" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex48.m1" class="ltx_Math" alttext="H\phi=F^{-1}(m_{H}\cdot F\phi)," display="block"><mrow><mrow><mrow><mi>H</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>m</mi><mi>H</mi></msub><mo>⋅</mo><mi>F</mi></mrow><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and hence</p>
+<table id="S2.Ex49" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex49.m1" class="ltx_Math" alttext="H^{2}\phi=F^{-1}(m_{H}\cdot FH\phi)=F^{-1}(m_{H}\cdot m_{H}F\phi)." display="block"><mrow><mrow><mrow><msup><mi>H</mi><mn>2</mn></msup><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>m</mi><mi>H</mi></msub><mo>⋅</mo><mi>F</mi></mrow><mo>⁢</mo><mi>H</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msub><mi>m</mi><mi>H</mi></msub><mo>⋅</mo><msub><mi>m</mi><mi>H</mi></msub></mrow><mo>⁢</mo><mi>F</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For <math id="S2.p4.m2" class="ltx_Math" alttext="\xi\neq 0" display="inline"><mrow><mi>ξ</mi><mo>≠</mo><mn>0</mn></mrow></math>, <math id="S2.p4.m3" class="ltx_Math" alttext="m_{H}(\xi)^{2}=-1" display="inline"><mrow><mrow><msub><mi>m</mi><mi>H</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mn>2</mn></msup></mrow><mo>=</mo><mrow><mo>-</mo><mn>1</mn></mrow></mrow></math>, which yields</p>
+<table id="S2.Ex50" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex50.m1" class="ltx_Math" alttext="H^{2}\phi=F^{-1}(-F\phi)=-\phi." display="block"><mrow><mrow><mrow><msup><mi>H</mi><mn>2</mn></msup><mo>⁢</mo><mi>ϕ</mi></mrow><mo>=</mo><mrow><msup><mi>F</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mrow><mi>F</mi><mo>⁢</mo><mi>ϕ</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mi>ϕ</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus <math id="S2.p4.m4" class="ltx_Math" alttext="H^{2}=-\mathrm{id}" display="inline"><mrow><msup><mi>H</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><mi>id</mi></mrow></mrow></math>.
+Therefore <math id="S2.p4.m5" class="ltx_Math" alttext="\left\|H\phi\right\|_{L^{2}}=\left\|\phi\right\|_{L^{2}}" display="inline"><mrow><msub><mrow><mo>∥</mo><mrow><mi>H</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>∥</mo></mrow><msup><mi>L</mi><mn>2</mn></msup></msub><mo>=</mo><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><msup><mi>L</mi><mn>2</mn></msup></msub></mrow></math>.</p>
+</div>
+<div id="S2.p5" class="ltx_para">
+<p class="ltx_p">Thus it makes sense to define <math id="S2.p5.m1" class="ltx_Math" alttext="H:L^{2}(\mathbb{R})\to L^{2}(\mathbb{R})" display="inline"><mrow><mi>H</mi><mo>:</mo><mrow><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
+For <math id="S2.p5.m2" class="ltx_Math" alttext="f,g\in L^{2}(\mathbb{R})" display="inline"><mrow><mrow><mi>f</mi><mo>,</mo><mi>g</mi></mrow><mo>∈</mo><mrow><msup><mi>L</mi><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, by Plancherel’s theorem, and as <math id="S2.p5.m3" class="ltx_Math" alttext="\overline{m_{H}}=-m_{H}" display="inline"><mrow><mover accent="true"><msub><mi>m</mi><mi>H</mi></msub><mo>¯</mo></mover><mo>=</mo><mrow><mo>-</mo><msub><mi>m</mi><mi>H</mi></msub></mrow></mrow></math>,</p>
+<table id="S3.EGx9" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex51"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex51.m1" class="ltx_Math" alttext="\displaystyle\left\langle Hf,g\right\rangle" display="inline"><mrow><mo>⟨</mo><mrow><mi>H</mi><mo>⁢</mo><mi>f</mi></mrow><mo>,</mo><mi>g</mi><mo>⟩</mo></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex51.m2" class="ltx_Math" alttext="\displaystyle=\left\langle\widehat{Hf},\widehat{g}\right\rangle" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>⟨</mo><mover accent="true"><mrow><mi>H</mi><mo>⁢</mo><mi>f</mi></mrow><mo>^</mo></mover><mo>,</mo><mover accent="true"><mi>g</mi><mo>^</mo></mover><mo>⟩</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex52"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex52.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}\widehat{Hf}(\xi)\cdot\overline{\widehat{g}(\xi%
+)}d\xi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mrow><mrow><mover accent="true"><mrow><mi>H</mi><mo>⁢</mo><mi>f</mi></mrow><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mover accent="true"><mrow><mover accent="true"><mi>g</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>ξ</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex53"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex53.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}m_{H}(\xi)\cdot\widehat{f}(\xi)\overline{%
+\widehat{g}(\xi)}d\xi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mrow><mrow><msub><mi>m</mi><mi>H</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mover accent="true"><mi>f</mi><mo>^</mo></mover></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mover accent="true"><mrow><mover accent="true"><mi>g</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>ξ</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex54"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex54.m2" class="ltx_Math" alttext="\displaystyle=-\int_{\mathbb{R}}\widehat{f}(\xi)\cdot\overline{m_{H}(\xi)\cdot%
+\widehat{g}(\xi)}d\xi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mrow><mrow><mover accent="true"><mi>f</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mover accent="true"><mrow><mrow><mrow><msub><mi>m</mi><mi>H</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mover accent="true"><mi>g</mi><mo>^</mo></mover></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>ξ</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex55"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex55.m2" class="ltx_Math" alttext="\displaystyle=-\int_{\mathbb{R}}\widehat{f}(\xi)\cdot\overline{\widehat{Hg}(%
+\xi)}d\xi" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mrow><mrow><mover accent="true"><mi>f</mi><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mover accent="true"><mrow><mover accent="true"><mrow><mi>H</mi><mo>⁢</mo><mi>g</mi></mrow><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>ξ</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex56"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex56.m2" class="ltx_Math" alttext="\displaystyle=-\left\langle f,Hg\right\rangle." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><mi>f</mi><mo>,</mo><mrow><mi>H</mi><mo>⁢</mo><mi>g</mi></mrow><mo>⟩</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">But <math id="S2.p5.m4" class="ltx_Math" alttext="\left\langle Hf,g\right\rangle=\left\langle f,H^{*}g\right\rangle" display="inline"><mrow><mrow><mo>⟨</mo><mrow><mi>H</mi><mo>⁢</mo><mi>f</mi></mrow><mo>,</mo><mi>g</mi><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><mi>f</mi><mo>,</mo><mrow><msup><mi>H</mi><mo>*</mo></msup><mo>⁢</mo><mi>g</mi></mrow><mo>⟩</mo></mrow></mrow></math>, so</p>
+<table id="S2.Ex57" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex57.m1" class="ltx_Math" alttext="\left\langle f,H^{*}g\right\rangle=\left\langle f,-Hg\right\rangle," display="block"><mrow><mrow><mrow><mo>⟨</mo><mi>f</mi><mo>,</mo><mrow><msup><mi>H</mi><mo>*</mo></msup><mo>⁢</mo><mi>g</mi></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><mi>f</mi><mo>,</mo><mrow><mo>-</mo><mrow><mi>H</mi><mo>⁢</mo><mi>g</mi></mrow></mrow><mo>⟩</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which implies that <math id="S2.p5.m5" class="ltx_Math" alttext="H^{*}g=-Hg" display="inline"><mrow><mrow><msup><mi>H</mi><mo>*</mo></msup><mo>⁢</mo><mi>g</mi></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>H</mi><mo>⁢</mo><mi>g</mi></mrow></mrow></mrow></math> and thus <math id="S2.p5.m6" class="ltx_Math" alttext="H^{*}=-H" display="inline"><mrow><msup><mi>H</mi><mo>*</mo></msup><mo>=</mo><mrow><mo>-</mo><mi>H</mi></mrow></mrow></math>. Furthermore,</p>
+<table id="S2.Ex58" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex58.m1" class="ltx_Math" alttext="\widehat{H^{*}g}(\xi)=-\widehat{Hg}(\xi)=-m_{H}(\xi)\cdot\widehat{g}(\xi)=i%
+\cdot\mathrm{sgn}\,(\xi)\cdot\widehat{g}(\xi)." display="block"><mrow><mrow><mrow><mover accent="true"><mrow><msup><mi>H</mi><mo>*</mo></msup><mo>⁢</mo><mi>g</mi></mrow><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mover accent="true"><mrow><mi>H</mi><mo>⁢</mo><mi>g</mi></mrow><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mrow><mrow><msub><mi>m</mi><mi>H</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mover accent="true"><mi>g</mi><mo>^</mo></mover></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mrow><mi>i</mi><mo>⋅</mo><mpadded width="+1.7pt"><mi>sgn</mi></mpadded></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mover accent="true"><mi>g</mi><mo>^</mo></mover></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>The Poisson kernel</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">For <math id="S3.p1.m1" class="ltx_Math" alttext="y&gt;0" display="inline"><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,
+calculate</p>
+<table id="S3.EGx10" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex59"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex59.m1" class="ltx_Math" alttext="\displaystyle\int_{\mathbb{R}}e^{2\pi i\xi x}e^{-2\pi y|\xi|}d\xi" display="inline"><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>ξ</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>ξ</mi></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex59.m2" class="ltx_Math" alttext="\displaystyle=\frac{1}{2\pi ix+2\pi y}-\frac{1}{2\pi ix-2\pi y}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mfrac></mstyle><mo>-</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex60"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex60.m2" class="ltx_Math" alttext="\displaystyle=\frac{2\pi ix-2\pi y-2\pi ix-2\pi y}{-4\pi^{2}x^{2}-4\pi^{2}y^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mrow><mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex61"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex61.m2" class="ltx_Math" alttext="\displaystyle=\frac{y}{\pi(x^{2}+y^{2})}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>y</mi><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and</p>
+<table id="S3.EGx11" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex62"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex62.m1" class="ltx_Math" alttext="\displaystyle-i\int_{\mathbb{R}}e^{2\pi i\xi x}\mathrm{sgn}\,(\xi)e^{-2\pi y|%
+\xi|}d\xi" display="inline"><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><msup><mi>e</mi><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>ξ</mi><mo>⁢</mo><mi>x</mi></mrow></msup><mo>⁢</mo><mpadded width="+1.7pt"><mi>sgn</mi></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></msup><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>ξ</mi></mrow></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex62.m2" class="ltx_Math" alttext="\displaystyle=\frac{i}{2\pi ix+2\pi y}+\frac{i}{2\pi ix-2\pi y}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi>i</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mfrac></mstyle><mo>+</mo><mstyle displaystyle="true"><mfrac><mi>i</mi><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mfrac></mstyle></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex63"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex63.m2" class="ltx_Math" alttext="\displaystyle=\frac{i(2\pi ix-2\pi y+2\pi ix+2\pi y)}{-4\pi^{2}x^{2}-4\pi^{2}y%
+^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mi>i</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex64"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex64.m2" class="ltx_Math" alttext="\displaystyle=\frac{-4\pi x}{-4\pi^{2}x^{2}-4\pi^{2}y^{2}}" display="inline"><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mrow><mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow><mo>-</mo><mrow><mn>4</mn><mo>⁢</mo><msup><mi>π</mi><mn>2</mn></msup><mo>⁢</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mrow></mfrac></mstyle></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex65"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex65.m2" class="ltx_Math" alttext="\displaystyle=\frac{x}{\pi(x^{2}+y^{2})}." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mstyle displaystyle="true"><mfrac><mi>x</mi><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">For <math id="S3.p2.m1" class="ltx_Math" alttext="y&gt;0" display="inline"><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></math> let</p>
+<table id="S3.Ex66" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex66.m1" class="ltx_Math" alttext="P_{y}(x)=\frac{1}{\pi}\frac{y}{x^{2}+y^{2}}" display="block"><mrow><mrow><msub><mi>P</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mi>π</mi></mfrac><mo>⁢</mo><mfrac><mi>y</mi><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S3.Ex67" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex67.m1" class="ltx_Math" alttext="Q_{y}(x)=\frac{1}{\pi}\frac{x}{x^{2}+y^{2}}." display="block"><mrow><mrow><mrow><msub><mi>Q</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mi>π</mi></mfrac><mo>⁢</mo><mfrac><mi>x</mi><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then</p>
+<table id="S3.Ex68" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex68.m1" class="ltx_Math" alttext="\widehat{P}_{y}(\xi)=e^{-2\pi y|\xi|}" display="block"><mrow><mrow><msub><mover accent="true"><mi>P</mi><mo>^</mo></mover><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S3.Ex69" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex69.m1" class="ltx_Math" alttext="\widehat{Q}_{y}(\xi)=-i\cdot\mathrm{sgn}\,(\xi)e^{-2\pi y|\xi|}." display="block"><mrow><mrow><mrow><msub><mover accent="true"><mi>Q</mi><mo>^</mo></mover><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mrow><mi>i</mi><mo>⋅</mo><mpadded width="+1.7pt"><mi>sgn</mi></mpadded></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mi>y</mi><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></msup></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Also,</p>
+<table id="S3.Ex70" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex70.m1" class="ltx_Math" alttext="P_{y}(x)+iQ_{y}(x)=\frac{1}{\pi}\frac{y+ix}{x^{2}+y^{2}}=\frac{1}{\pi}\frac{1}%
+{y-ix}." display="block"><mrow><mrow><mrow><mrow><msub><mi>P</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>Q</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mi>π</mi></mfrac><mo>⁢</mo><mfrac><mrow><mi>y</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mrow><msup><mi>x</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow></mfrac></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mi>π</mi></mfrac><mo>⁢</mo><mfrac><mn>1</mn><mrow><mi>y</mi><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></mfrac></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">For a Borel measurable function <math id="S3.p3.m1" class="ltx_Math" alttext="f:\mathbb{R}\to\mathbb{C}" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>ℝ</mi><mo>→</mo><mi>ℂ</mi></mrow></mrow></math> for which the integral exists,</p>
+<table id="S3.EGx12" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex71"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex71.m1" class="ltx_Math" alttext="\displaystyle(P_{y}*f)(x)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>P</mi><mi>y</mi></msub><mo>*</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex71.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}P_{y}(x-t)f(t)dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><msub><mi>P</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex72"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex72.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}f(t)\frac{y}{\pi((x-t)^{2}+y^{2})}dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>y</mi><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex73"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex73.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}f(x-t)\frac{y}{\pi(t^{2}+y^{2})}dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>y</mi><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">and</p>
+<table id="S3.EGx13" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex74"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex74.m1" class="ltx_Math" alttext="\displaystyle(Q_{y}*f)(x)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>Q</mi><mi>y</mi></msub><mo>*</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex74.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}Q_{y}(x-t)f(t)dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><msub><mi>Q</mi><mi>y</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex75"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex75.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}f(t)\frac{x-t}{\pi((x-t)^{2}+y^{2})}dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mrow><mi>x</mi><mo>-</mo><mi>t</mi></mrow><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex76"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex76.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}f(x-t)\frac{t}{\pi(t^{2}+y^{2})}dt." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mi>t</mi><mrow><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>t</mi><mn>2</mn></msup><mo>+</mo><msup><mi>y</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Then</p>
+<table id="S3.EGx14" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex77"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex77.m1" class="ltx_Math" alttext="\displaystyle P_{y}*f(x)+iQ_{y}*f(x)" display="inline"><mrow><mrow><mrow><msub><mi>P</mi><mi>y</mi></msub><mo>*</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mrow><mi>i</mi><mo>⁢</mo><msub><mi>Q</mi><mi>y</mi></msub></mrow><mo>*</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex77.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}f(x-t)\frac{1}{\pi}\frac{1}{y-it}dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>π</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mi>y</mi><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex78"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex78.m2" class="ltx_Math" alttext="\displaystyle=\int_{\mathbb{R}}f(t)\frac{1}{\pi}\frac{1}{y-ix+it}dt" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mi>π</mi></mfrac></mstyle><mo>⁢</mo><mstyle displaystyle="true"><mfrac><mn>1</mn><mrow><mrow><mi>y</mi><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>t</mi></mrow></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex79"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex79.m2" class="ltx_Math" alttext="\displaystyle=\frac{i}{\pi}\int_{\mathbb{R}}\frac{f(t)}{x+iy-t}dt." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mstyle displaystyle="true"><mfrac><mi>i</mi><mi>π</mi></mfrac></mstyle><mo>⁢</mo><mrow><mstyle displaystyle="true"><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub></mstyle><mrow><mstyle displaystyle="true"><mfrac><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mi>t</mi></mrow></mfrac></mstyle><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+</div>
+<div id="S3.p4" class="ltx_para">
+<p class="ltx_p">For <math id="S3.p4.m1" class="ltx_Math" alttext="y_{1},y_{2}&gt;0" display="inline"><mrow><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>,</p>
+<table id="S3.EGx15" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S3.Ex80"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S3.Ex80.m1" class="ltx_Math" alttext="\displaystyle\widehat{P_{y_{1}}*P_{y_{2}}}(\xi)" display="inline"><mrow><mover accent="true"><mrow><msub><mi>P</mi><msub><mi>y</mi><mn>1</mn></msub></msub><mo>*</mo><msub><mi>P</mi><msub><mi>y</mi><mn>2</mn></msub></msub></mrow><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex80.m2" class="ltx_Math" alttext="\displaystyle=\widehat{P_{y_{1}}}(\xi)\cdot\widehat{P_{y_{2}}}(\xi)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mover accent="true"><msub><mi>P</mi><msub><mi>y</mi><mn>1</mn></msub></msub><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow><mo>⋅</mo><mover accent="true"><msub><mi>P</mi><msub><mi>y</mi><mn>2</mn></msub></msub><mo>^</mo></mover></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex81"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex81.m2" class="ltx_Math" alttext="\displaystyle=e^{-2\pi y_{1}|\xi|}\cdot e^{-2\pi y_{2}|\xi|}" display="inline"><mrow><mi></mi><mo>=</mo><mrow><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>y</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></msup><mo>⋅</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><msub><mi>y</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex82"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex82.m2" class="ltx_Math" alttext="\displaystyle=e^{-2\pi(y_{1}+y_{2})|\xi|}" display="inline"><mrow><mi></mi><mo>=</mo><msup><mi>e</mi><mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>π</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>+</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">|</mo><mi>ξ</mi><mo stretchy="false">|</mo></mrow></mrow></mrow></msup></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S3.Ex83"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S3.Ex83.m2" class="ltx_Math" alttext="\displaystyle=\widehat{P_{y_{1}+y_{2}}}(\xi)." display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mover accent="true"><msub><mi>P</mi><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>+</mo><msub><mi>y</mi><mn>2</mn></msub></mrow></msub><mo>^</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ξ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">Therefore <math id="S3.p4.m2" class="ltx_Math" alttext="(P_{y})_{y&gt;0}" display="inline"><msub><mrow><mo stretchy="false">(</mo><msub><mi>P</mi><mi>y</mi></msub><mo stretchy="false">)</mo></mrow><mrow><mi>y</mi><mo>&gt;</mo><mn>0</mn></mrow></msub></math> is a semigroup using convolution: for <math id="S3.p4.m3" class="ltx_Math" alttext="y_{1},y_{2}&gt;0" display="inline"><mrow><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>,</mo><msub><mi>y</mi><mn>2</mn></msub></mrow><mo>&gt;</mo><mn>0</mn></mrow></math>,</p>
+<table id="S3.Ex84" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex84.m1" class="ltx_Math" alttext="P_{y_{1}}*P_{y_{2}}=P_{y_{1}+y_{2}}." display="block"><mrow><mrow><mrow><msub><mi>P</mi><msub><mi>y</mi><mn>1</mn></msub></msub><mo>*</mo><msub><mi>P</mi><msub><mi>y</mi><mn>2</mn></msub></msub></mrow><mo>=</mo><msub><mi>P</mi><mrow><msub><mi>y</mi><mn>1</mn></msub><mo>+</mo><msub><mi>y</mi><mn>2</mn></msub></mrow></msub></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p5" class="ltx_para">
+<p class="ltx_p">Let <math id="S3.p5.m1" class="ltx_Math" alttext="\mathbb{H}=\{z\in\mathbb{C}:\mathrm{Im}\,z&gt;0\}" display="inline"><mrow><mi>ℍ</mi><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>z</mi><mo>∈</mo><mi>ℂ</mi></mrow><mo>:</mo><mrow><mrow><mpadded width="+1.7pt"><mi>Im</mi></mpadded><mo>⁢</mo><mi>z</mi></mrow><mo>&gt;</mo><mn>0</mn></mrow><mo stretchy="false">}</mo></mrow></mrow></math> and for <math id="S3.p5.m2" class="ltx_Math" alttext="\phi\in\mathscr{S}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mi class="ltx_font_mathscript">𝒮</mi></mrow></math> let</p>
+<table id="S3.Ex85" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex85.m1" class="ltx_Math" alttext="F_{\phi}(z)=\frac{i}{\pi}\int_{\mathbb{R}}\frac{\phi(t)}{z-t}dt,\qquad z\in%
+\mathbb{H}," display="block"><mrow><mrow><mrow><mrow><msub><mi>F</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mi>i</mi><mi>π</mi></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub><mrow><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mi>z</mi><mo>-</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>z</mi><mo>∈</mo><mi>ℍ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is a complex analytic function. For
+<math id="S3.p5.m3" class="ltx_Math" alttext="z=x+iy\in\mathbb{H}" display="inline"><mrow><mi>z</mi><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>∈</mo><mi>ℍ</mi></mrow></math>,</p>
+<table id="S3.Ex86" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex86.m1" class="ltx_Math" alttext="P_{y}*\phi(x)+iQ_{y}*\phi(x)=\frac{i}{\pi}\int_{\mathbb{R}}\frac{\phi(t)}{x+iy%
+-t}dt=F_{\phi}(z)." display="block"><mrow><mrow><mrow><mrow><mrow><msub><mi>P</mi><mi>y</mi></msub><mo>*</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mrow><mi>i</mi><mo>⁢</mo><msub><mi>Q</mi><mi>y</mi></msub></mrow><mo>*</mo><mi>ϕ</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mfrac><mi>i</mi><mi>π</mi></mfrac><mo>⁢</mo><mrow><msub><mo largeop="true" symmetric="true">∫</mo><mi>ℝ</mi></msub><mrow><mfrac><mrow><mi>ϕ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>-</mo><mi>t</mi></mrow></mfrac><mo>⁢</mo><mrow><mo rspace="0pt">𝑑</mo><mi>t</mi></mrow></mrow></mrow></mrow><mo>=</mo><mrow><msub><mi>F</mi><mi>ϕ</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>z</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S3.p6" class="ltx_para">
+<p class="ltx_p">It is proved that for <math id="S3.p6.m1" class="ltx_Math" alttext="1\leq p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> and <math id="S3.p6.m2" class="ltx_Math" alttext="f\in L^{p}(\mathbb{R})" display="inline"><mrow><mi>f</mi><mo>∈</mo><mrow><msup><mi>L</mi><mi>p</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>ℝ</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>,
+<math id="S3.p6.m3" class="ltx_Math" alttext="Q_{\epsilon}*f-H_{\epsilon}f\to 0" display="inline"><mrow><mrow><mrow><msub><mi>Q</mi><mi>ϵ</mi></msub><mo>*</mo><mi>f</mi></mrow><mo>-</mo><mrow><msub><mi>H</mi><mi>ϵ</mi></msub><mo>⁢</mo><mi>f</mi></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math> in <math id="S3.p6.m4" class="ltx_Math" alttext="L^{p}" display="inline"><msup><mi>L</mi><mi>p</mi></msup></math> as <math id="S3.p6.m5" class="ltx_Math" alttext="\epsilon\to 0" display="inline"><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></math>, and that for almost all <math id="S3.p6.m6" class="ltx_Math" alttext="x\in\mathbb{R}" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>,
+<math id="S3.p6.m7" class="ltx_Math" alttext="Q_{\epsilon}*f(x)-H_{\epsilon}f(x)\to 0" display="inline"><mrow><mrow><mrow><mrow><msub><mi>Q</mi><mi>ϵ</mi></msub><mo>*</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><msub><mi>H</mi><mi>ϵ</mi></msub><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>→</mo><mn>0</mn></mrow></math> as <math id="S3.p6.m8" class="ltx_Math" alttext="\epsilon\to 0" display="inline"><mrow><mi>ϵ</mi><mo>→</mo><mn>0</mn></mrow></math>.<span id="footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
+            <span class="ltx_tag ltx_tag_note">1</span>
+            
+            
+          Loukas Grafakos,
+<span class="ltx_text ltx_font_italic">Classical Fourier Analysis</span>, second ed.,
+p. 254, Theorem 4.1.5.</span></span></span></p>
+</div>
+<div id="S3.p7" class="ltx_para">
+<p class="ltx_p">For <math id="S3.p7.m1" class="ltx_Math" alttext="1&lt;p&lt;\infty" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>, it can be proved that there is some <math id="S3.p7.m2" class="ltx_Math" alttext="C_{p}" display="inline"><msub><mi>C</mi><mi>p</mi></msub></math> such that</p>
+<table id="S3.Ex87" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex87.m1" class="ltx_Math" alttext="\left\|H\phi\right\|_{L^{p}}\leq C_{p}\left\|\phi\right\|_{L^{p}}" display="block"><mrow><msub><mrow><mo>∥</mo><mrow><mi>H</mi><mo>⁢</mo><mi>ϕ</mi></mrow><mo>∥</mo></mrow><msup><mi>L</mi><mi>p</mi></msup></msub><mo>≤</mo><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>⁢</mo><msub><mrow><mo>∥</mo><mi>ϕ</mi><mo>∥</mo></mrow><msup><mi>L</mi><mi>p</mi></msup></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="S3.p7.m3" class="ltx_Math" alttext="\phi\in\mathscr{S}" display="inline"><mrow><mi>ϕ</mi><mo>∈</mo><mi class="ltx_font_mathscript">𝒮</mi></mrow></math>, with <math id="S3.p7.m4" class="ltx_Math" alttext="C_{p}\leq 2p" display="inline"><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>≤</mo><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow></mrow></math> for <math id="S3.p7.m5" class="ltx_Math" alttext="2\leq p&lt;\infty" display="inline"><mrow><mn>2</mn><mo>≤</mo><mi>p</mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>
+and <math id="S3.p7.m6" class="ltx_Math" alttext="C_{p}\leq\frac{2p}{p-1}" display="inline"><mrow><msub><mi>C</mi><mi>p</mi></msub><mo>≤</mo><mfrac><mrow><mn>2</mn><mo>⁢</mo><mi>p</mi></mrow><mrow><mi>p</mi><mo>-</mo><mn>1</mn></mrow></mfrac></mrow></math> for <math id="S3.p7.m7" class="ltx_Math" alttext="1&lt;p\leq 2" display="inline"><mrow><mn>1</mn><mo>&lt;</mo><mi>p</mi><mo>≤</mo><mn>2</mn></mrow></math>.<span id="footnote2" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>
+            <span class="ltx_tag ltx_tag_note">2</span>
+            
+            
+          Loukas Grafakos,
+<span class="ltx_text ltx_font_italic">Classical Fourier Analysis</span>, second ed.,
+p. 255, Theorem 4.1.7.</span></span></span></p>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Thu Jan 20 01:37:49 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

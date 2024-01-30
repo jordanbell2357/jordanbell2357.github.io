@@ -1,0 +1,286 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm,siunitx}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\osc}{\ensuremath\mathrm{osc}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\cco}{\ensuremath\overline{\mathrm{co}}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\ba}{\ensuremath\mathrm{ba}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\Cyl}{\ensuremath\mathrm{Cyl}\,}
+\newcommand{\extreals}{\overline{\mathbb{R}}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Watson's lemma and Laplace's method}
+\author{Jordan Bell}
+\date{June 17, 2014}
+
+\maketitle
+
+
+\section{Watson's lemma}
+Our proof of \textbf{Watson's lemma} follows Miller.\footnote{Peter D. Miller, {\em Applied Asymptotic Analysis}, p.~53, Proposition 2.1.}
+
+\begin{theorem}[Watson's lemma]
+Suppose that $T>0$, that $\phi:\mathbb{R} \to \mathbb{C}$ belongs to 
+$L^1([0,T])$, 
+that $\sigma>-1$, and that  $g(t)=t^{-\sigma} \phi(t)$ is $C^\infty$ on some neighborhood of $0$.
+Then $F:(0,\infty) \to \mathbb{C}$ defined by
+\[
+F(\lambda) = \int_0^T e^{-\lambda t} \phi(t) dt
+\]
+satisfies
+\[
+F(\lambda) \sim \sum_{n =0}^\infty \frac{g^{(n)}(0) \Gamma(\sigma+n+1)}{n! \lambda^{\sigma+n+1}}, \qquad \lambda \to \infty.
+\]
+\end{theorem}
+\begin{proof}
+Take $g$ to be $C^\infty$ on some interval with left endpoint $<0$ and right endpoint $s$, $0<s<T$. 
+For $p$ a nonnegative integer and $\lambda>1$, define
+\[
+F_p(\lambda)=\int_0^s e^{-\lambda t} t^{\sigma+p} dt,
+\]
+which satisfies, doing the change of variable $\tau=\lambda t$,
+\begin{eqnarray*}
+F_p(\lambda)&=&\int_0^\infty e^{-\lambda t} t^{\sigma+p} dt - \int_s^\infty e^{-\lambda t} t^{\sigma+p} dt\\
+&=&\lambda^{-(\sigma+p+1)} \int_0^\infty e^{-\tau} \tau^{\sigma+p} d\tau
+-\int_s^\infty e^{-\lambda t} t^{\sigma+p} dt\\
+&=&\lambda^{-(\sigma+p+1)}  \Gamma(\sigma+p+1) -\int_s^\infty e^{-\lambda t}  t^{\sigma+p} dt.
+\end{eqnarray*}
+Using the Cauchy-Schwarz inequality,
+\begin{eqnarray*}
+\int_s^\infty e^{-\lambda t}  t^{\sigma+p} dt&=&\int_s^\infty e^{-\lambda t/2}   e^{-\lambda t/2} t^{\sigma+p} dt\\
+&\leq&\left(\int_s^\infty e^{-\lambda t}  dt\right)^{1/2} \left( \int_s^\infty e^{-\lambda t} t^{2\sigma+2p} dt\right)^{1/2}\\
+&=&e^{-\lambda s/2} \lambda^{-1/2}  \left( \int_s^\infty e^{-\lambda t} t^{2\sigma+2p} dt\right)^{1/2}\\
+&<&e^{-\lambda s/2}  \left( \int_0^\infty e^{- t} t^{2\sigma+2p} dt\right)^{1/2}\\
+&=&e^{-\lambda s/2}  \Gamma(2\sigma+2p+1)^{1/2}.
+\end{eqnarray*}
+For any nonnegative integer $m$ we have $e^{-\lambda s/2} = o_m(\lambda^{-(\sigma+m+1)})$ as $\lambda \to \infty$, hence, dealing with
+$\Gamma(2\sigma+2p+1)$ merely as a constant depending on $p$,
+\begin{equation}
+F_p(\lambda) = \lambda^{-(\sigma+p+1)}  \Gamma(\sigma+p+1) + o_{m,p}(\lambda^{-(\sigma+m+1)})
+\label{Fpinequality}
+\end{equation}
+as $\lambda \to \infty$.
+
+
+Write
+\[
+F(\lambda) = \int_0^s e^{-\lambda t} \phi(t) dt + \int_s^T e^{-\lambda t} \phi(t) dt.
+\]
+One the one hand,
+\[
+\left|  \int_s^T e^{-\lambda t} \phi(t) dt \right| \leq \int_s^T e^{-\lambda t} |\phi(t)| dt
+\leq e^{-\lambda s} \int_s^T |\phi(t)| dt
+\leq e^{-\lambda s} \norm{\phi}_{L^1},
+\]
+which shows that
+for any nonnegative integer $n$,
+\[
+ \int_s^T e^{-\lambda t} \phi(t) dt = o_n(\lambda^{-(\sigma+n+1)})
+\]
+as $\lambda \to \infty$.
+
+One the other hand, for each nonnegative integer $N$, \textbf{Taylor's theorem} tells us  that the function $r_N:(r,s) \to \mathbb{C}$ defined 
+by
+\[
+r_N(t) = g(t) - \sum_{n=0}^N \frac{g^{(n)}(0)}{n!}t^n, \qquad t \in (r,s),
+\]
+satisfies
+\[
+|r_N(t)| \leq \sup |g^{(N+1)}(\tau)| \cdot \frac{|t|^{N+1}}{(N+1)!},
+\]
+where the supremum is over those $\tau$ strictly between $0$ and $t$.  
+Then for $t \in (0,s)$,
+\[
+|r_N(t)| \leq \sup_{0 < \tau <s } |g^{(N+1)}(\tau)| \cdot \frac{t^{N+1}}{(N+1)!}.
+\]
+Using the definition of $r_N$,
+\begin{eqnarray*}
+ \int_0^s e^{-\lambda t} \phi(t) dt &=& \int_0^s e^{-\lambda t} t^\sigma  \sum_{n=0}^N \frac{g^{(n)}(0)}{n!}t^n dt
++\int_0^s e^{-\lambda t} t^\sigma r_N(t) dt\\
+&=& \sum_{n=0}^N \frac{g^{(n)}(0)}{n!}
+F_n(\lambda)
++\int_0^s e^{-\lambda t} t^\sigma r_N(t) dt
+\end{eqnarray*}
+and using the inequality for $r_N(t)$,
+\begin{eqnarray*}
+\left| \int_0^s e^{-\lambda t} t^\sigma r_N(t) dt \right| & \leq & \int_0^s e^{-\lambda t} t^\sigma |r_N(t)| dt\\
+&\leq& \sup_{0 < \tau < s} |g^{(N+1)}(\tau)| \cdot \frac{1}{(N+1)!} \int_0^s e^{-\lambda t} t^{\sigma+N+1} dt\\
+&=& \sup_{0 < \tau < s} |g^{(N+1)}(\tau)| \cdot \frac{1}{(N+1)!} F_{N+1}(\lambda) dt.
+\end{eqnarray*}
+Using this and \eqref{Fpinequality}, 
+\[
+\int_0^s e^{-\lambda t} t^\sigma r_N(t) dt = O_N ( \lambda^{-(\sigma+N+2)}).
+\]
+
+Putting together what we have shown,  for any nonnegative integer $N$, as $\lambda \to \infty$,
+\begin{eqnarray*}
+F(\lambda)&=& \sum_{n=0}^N \frac{g^{(n)}(0)}{n!}
+F_n(\lambda)
++O_N ( \lambda^{-(\sigma+N+2)})
++O_N(\lambda^{-(\sigma+N+2)})\\
+&=& \sum_{n=0}^N \frac{g^{(n)}(0)}{n!}
+\lambda^{-(\sigma+n+1)}  \Gamma(\sigma+n+1)
++\sum_{n=0}^N 
+ \frac{g^{(n)}(0)}{n!}
+\cdot o_{N,n}(\lambda^{-(\sigma+N+1)})\\
+&&+O_N(\lambda^{-(\sigma+N+2)})\\
+&=& \sum_{n=0}^N \frac{g^{(n)}(0)}{n!}
+\lambda^{-(\sigma+n+1)}  \Gamma(\sigma+n+1) + o_N(\lambda^{-(\sigma+N+1)}),
+\end{eqnarray*}
+which proves the claim.
+\end{proof}
+
+
+
+\section{Laplace's method for an interval}
+\begin{theorem}
+Suppose that $a<b$, that $f \in C^2([a,b],\mathbb{R})$, and that
+there is a unique $x_0 \in [a,b]$ at which $f$ is equal to its supremum over $[a,b]$. Suppose also that
+$a<x_0<b$ and 
+that $f''(x_0)<0$. Then
+\[
+\int_a^b e^{Mf(x)} dx \sim e^{Mf(x_0)} \sqrt{\frac{2\pi}{-Mf''(x_0)}}.
+\]
+as $M \to \infty$.
+\end{theorem}
+\begin{proof}
+We remark first that $f'(x_0)=0$ because $f$ is equal to its supremum over $[a,b]$ at this point, which is not a boundary point.
+The claim says that a ratio has limit $1$ as $M \to \infty$. We shall prove that
+the liminf and the limsup of this ratio are both 1, which will prove the claim.
+Let $\epsilon>0$. Because $f'':[a,b] \to \mathbb{R}$ is continuous,
+ there is some $\delta>0$ such that $|x-x_0|<\delta$ implies
+ $f''(x) \geq f''(x_0)-\epsilon$; we take $\delta$ small enough that $(x_0-\delta,x_0+\delta) \subset [a,b]$. Writing
+ \[
+ f(x)=f(x_0)+f'(x_0)(x-x_0)+R_1(x)
+ =f(x_0)+R_1(x), \qquad x \in [a,b],
+ \]
+ Taylor's theorem tells us that for each $x \in [a,b]$  there is some $\xi_x$ strictly between $x_0$ and $x$ such that
+\[
+R_1(x) = \frac{f''(\xi_x)}{2}(x-x_0)^2.
+\]
+Thus for $|x-x_0|<\delta$ we have $|\xi_x-x_0|<\delta$, so 
+\[
+f(x)  \geq f(x_0)+\frac{f''(x_0)-\epsilon}{2}(x-x_0)^2.
+\]
+Using this inequality, which applies for any $x \in (x_0-\delta,x_0+\delta)$, and because the integrand in the following integral is positive,
+\begin{eqnarray*}
+\int_a^b e^{Mf(x)} dx &\geq& \int_{x_0-\delta}^{x_0+\delta} e^{Mf(x)} dx\\
+&\geq& \int_{x_0-\delta}^{x_0+\delta} e^{M\left(f(x_0)+\frac{f''(x_0)-\epsilon}{2}(x-x_0)^2\right)} dx\\
+&=&e^{Mf(x_0)}  \int_{x_0-\delta}^{x_0+\delta}  e^{-M\frac{-f''(x_0)+\epsilon}{2}(x-x_0)^2} dx.
+\end{eqnarray*}
+Changing variables, keeping in mind that $f''(x_0)<0$,
+\[
+\int_{x_0-\delta}^{x_0+\delta}  e^{-M\frac{-f''(x_0)+\epsilon}{2}(x-x_0)^2} dx = 
+\int_{-\delta \sqrt{M\frac{-f''(x_0)+\epsilon}{2}}}^{\delta \sqrt{M\frac{-f''(x_0)+\epsilon}{2}}}
+e^{-y^2} \left(M\frac{-f''(x_0)+\epsilon}{2}\right)^{-1/2} dy.
+\]
+Thus 
+\begin{equation}
+\frac{\int_a^b e^{Mf(x)} dx}{e^{Mf(x_0)} \left(\frac{-Mf''(x_0)}{2}\right)^{-1/2}}
+\label{minorize}
+\end{equation}
+is lower bounded by
+\[
+\left( \frac{-f''(x_0)+\epsilon}{-f''(x_0)}\right)^{-1/2} \int_{-\delta \sqrt{M\frac{-f''(x_0)+\epsilon}{2}}}^{\delta \sqrt{M\frac{-f''(x_0)+\epsilon}{2}}}
+e^{-y^2} dy,
+\]
+so we get that the liminf of \eqref{minorize} as $M \to \infty$ is lower bounded by
+\[
+\left( \frac{-f''(x_0)+\epsilon}{-f''(x_0)}\right)^{-1/2} \sqrt{\pi}.
+\]
+But this is true for all $\epsilon>0$ and \eqref{minorize} and its liminf do not depend on $\epsilon$, so the liminf
+of \eqref{minorize} as $M \to \infty$ is lower bounded by $\sqrt{\pi}$. In other words,
+\[
+\liminf_{M \to \infty} \frac{\int_a^b e^{Mf(x)} dx}{e^{Mf(x_0)} \left(\frac{-Mf''(x_0)}{2 \pi}\right)^{-1/2}} \geq 1.
+\]
+
+Let $\epsilon>0$ with $f''(x_0)+\epsilon<0$; this is possible because $f''(x_0)<0$. Because $f'':[a,b] \to \mathbb{R}$ is continuous
+there is some $\delta>0$ such that $|x-x_0|<\delta$ implies that $f''(x) \leq f''(x_0)+\epsilon$;
+we take $(x_0-\delta,x_0+\delta) \subset [a,b]$. Taylor's theorem tells us that for any $x \in [a,b]$ there is some $\xi_x$ strictly between $x_0$ and $x$ such that
+\[
+f(x)=f(x_0)+\frac{f''(\xi_x)}{2}(x-x_0)^2.
+\]
+Therefore, as  $|x-x_0|<\delta$ implies that $|\xi_x-x_0|<\delta$,
+\begin{equation}
+f(x) \leq f(x_0) + \frac{f''(x_0)+\epsilon}{2}(x-x_0)^2.
+\label{fupper}
+\end{equation}
+Furthermore, $f:[a,b] \to \mathbb{R}$ is continuous, 
+so it makes sense to define
+\[
+C = \sup_{x \in [a,x_0-\delta] \cup [x_0+\delta,b]} f(x).
+\]
+Because $x_0$ is not
+in this union of intervals, by hypothesis we know
+that $C<f(x_0)$, and we define $\eta=f(x_0)-C>0$. This means that for all $x \in [a,x_0-\delta] \cup [x_0+\delta,b]$, $f(x) \leq f(x_0)-\eta$. 
+Then
+\begin{eqnarray*}
+\int_a^b e^{Mf(x)} dx&=&\int_a^{x_0-\delta} e^{Mf(x)} dx + \int_{x_0-\delta}^{x_0+\delta}
+e^{Mf(x)} dx + \int_{x_0+\delta}^b e^{Mf(x)} dx\\
+&\leq&\int_a^{x_0-\delta} e^{MC} dx  + \int_{x_0-\delta}^{x_0+\delta}
+e^{Mf(x)} dx + \int_{x_0+\delta}^b e^{MC} dx\\
+&=&(b-a-2\delta) e^{MC} + \int_{x_0-\delta}^{x_0+\delta}
+e^{Mf(x)} dx\\
+&<&(b-a) e^{MC} + \int_{x_0-\delta}^{x_0+\delta}
+e^{Mf(x)} dx.
+\end{eqnarray*}
+For the integral over $(x_0-\delta,x_0+\delta)$,
+\begin{eqnarray*}
+\int_{x_0-\delta}^{x_0+\delta} e^{Mf(x)} dx&\leq&\int_{x_0-\delta}^{x_0+\delta}
+e^{M\left(f(x_0) + \frac{f''(x_0)+\epsilon}{2}(x-x_0)^2\right)} dx\\
+&=&e^{Mf(x_0)} \int_{x_0-\delta}^{x_0+\delta} e^{M\frac{f''(x_0)+\epsilon}{2}(x-x_0)^2} dx\\
+&<&e^{Mf(x_0)} \int_{-\infty}^{\infty} e^{M\frac{f''(x_0)+\epsilon}{2}(x-x_0)^2} dx.
+\end{eqnarray*}
+Changing variables, and keeping in mind that $f''(x_0)+\epsilon<0$,
+\begin{eqnarray*}
+ \int_{-\infty}^{\infty} e^{M\frac{f''(x_0)+\epsilon}{2}(x-x_0)^2} dx&=&
+ \int_{-\infty}^\infty e^{-y^2} \left(-\frac{M}{2}(f''(x_0)+\epsilon)\right)^{-1/2} dy\\
+ &=& \left(-\frac{M}{2\pi}(f''(x_0)+\epsilon)\right)^{-1/2}.
+\end{eqnarray*}
+Therefore 
+\[
+\int_a^b e^{Mf(x)} dx < (b-a) e^{MC}  + e^{Mf(x_0)} \left(-\frac{M}{2\pi}(f''(x_0)+\epsilon)\right)^{-1/2},
+\]
+which we rearrange as
+\[
+\frac{\int_a^b e^{Mf(x)} dx}{e^{Mf(x_0)}  \left(-\frac{M}{2\pi}(f''(x_0)+\epsilon)\right)^{-1/2}}
+< (b-a) e^{-M\eta}  \left(-\frac{M}{2\pi}(f''(x_0)+\epsilon)\right)^{1/2}
++1.
+\]
+As $M \to \infty$ the first term on the right-hand side tends to $0$, because $\eta>0$. Therefore,
+\[
+\limsup_{M \to \infty} \frac{\int_a^b e^{Mf(x)} dx}{e^{Mf(x_0)}  \left(-\frac{M}{2\pi}(f''(x_0)+\epsilon)\right)^{-1/2}} \leq 1.
+\]
+This is true for all $\epsilon>0$, so it holds that
+\[
+\limsup_{M \to \infty} \frac{\int_a^b e^{Mf(x)} dx}{e^{Mf(x_0)}  \left(\frac{-Mf''(x_0)}{2\pi} \right)^{-1/2}} \leq 1,
+\]
+completing the proof.
+\end{proof}
+
+
+
+
+\end{document}

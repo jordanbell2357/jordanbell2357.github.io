@@ -1,0 +1,682 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Markov kernels, convolution semigroups, and projective families of probability measures}
+\author{Jordan Bell}
+\date{June 12, 2015}
+
+\maketitle
+
+
+\section{Transition kernels}
+For a measurable space $(E,\mathscr{E})$, we denote by $\mathscr{E}_+$ the set of functions $E \to [0,\infty]$
+that are $\mathscr{E} \to \mathscr{B}_{[0,\infty]}$ measurable. 
+It can be proved that if $I:\mathscr{E}_+ \to [0,\infty]$ is a function such that
+(i) $f=0$ implies that $I(f)=0$, (ii) if $f,g \in \mathscr{E}_+$ and $a,b \geq 0$ then
+$I(af+bg)=aI(f)+bI(g)$, and (iii)
+if $f_n$ is a sequence in $\mathscr{E}_+$ that increases pointwise to an element $f$ of $\mathscr{E}_+$ then
+$I(f_n)$ increases to $I(f)$,
+then there a unique measure $\mu$ on $\mathscr{E}$ such that
+$I(f)=\mu f$ for each $f \in \mathscr{E}_+$.\footnote{Erhan \c{C}inlar, {\em Probability and Stochastics}, p.~28, Theorem 4.21.}
+
+
+Let $(E,\mathscr{E})$ and $(F,\mathscr{F})$ be a measurable space. A \textbf{transition kernel} is a function
+\[
+K:E \times \mathscr{F} \to [0,\infty]
+\]
+such that 
+(i) for each $x \in E$, the function $K_x:\mathscr{F} \to [0,\infty]$ defined by
+\[
+B \mapsto K(x,B)
+\]
+is a   measure on $\mathscr{F}$, and (ii)
+for each $B \in \mathscr{F}$,   the map
+\[
+x \mapsto K(x,B)
+\]
+is measurable $\mathscr{E} \to \mathscr{B}_{[0,\infty]}$.
+
+If $\mu$ is a  measure on $\mathscr{E}$, define
+\[
+(K_* \mu)(B) = \int_E K(x,B) d\mu(x), \qquad B \in \mathscr{F}.
+\]
+If $B_n$ are pairwise disjoint elements of $\mathscr{F}$, then using that
+$B \mapsto K(x,B)$ is a  measure and the monotone convergence theorem,
+\begin{align*}
+(K_* \mu)\left(\bigcup_n B_n \right)&=\int_E K\left(x, \bigcup_n B_n \right) d\mu(x)\\
+&=\int_E \sum_n K(x,B_n) d\mu(x)\\
+&=\sum_n \int_E K(x,B_n) d\mu(x)\\
+&=\sum_n (K_* \mu)(B_n),
+\end{align*}
+showing that $K_*\mu$ is a  measure on $\mathscr{F}$.
+
+If $f \in \mathscr{F}_+$, define $K^*f:E \to [0,\infty]$ by
+\begin{equation}
+(K^* f)(x) = \int_F f(y) dK_x(y), \qquad x \in E.
+\label{Kxdef}
+\end{equation}
+For  $\phi=\sum_{j=1}^k b_j 1_{B_j}$ with $b_j \geq 0$ and $B_j \in \mathscr{F}$,
+because $x \mapsto K(x,B_j)$ is measurable $\mathscr{E} \to \mathscr{B}_{[0,\infty]}$ for each $j$,
+\[
+(K^*\phi)(x) = \int_F \sum_{j=1}^k b_j 1_{B_j}(y) dK_x(y) = \sum_{j=1}^k b_j K_x(B_j)
+=\sum_{j=1} b_j K(x,B_j),
+\]
+is measurable $\mathscr{E} \to \mathscr{B}_{[0,\infty]}$. 
+For $f \in \mathscr{F}_+$, there is a sequence
+of simple functions $\phi_n$ with $0\leq \phi_1 \leq \phi_2 \leq \cdots$ that converges pointwise to $f$,\footnote{Gerald B. Folland,
+{\em Real Analysis: Modern Techniques and Their Applications}, second ed., p.~47, Theorem 2.10.} and then
+by the monotone convergence theorem, for each $x \in E$ we have
+\[
+(K^*\phi_n)(x) =  \int_F \phi_n(y) dK_x(y) \to \int_F f(y) dK_x(y) = (K^*f)(x),
+\]
+showing $K^* \phi_n$ converges pointwise to $K^* f$, and because each $K^* \phi_n$ is measurable $\mathscr{E} \to \mathscr{B}_{[0,\infty]}$,
+$K^* f$ is measurable $\mathscr{E} \to \mathscr{B}_{[0,\infty]}$.\footnote{Gerald B. Folland,
+{\em Real Analysis: Modern Techniques and Their Applications}, second ed., p.~45, Proposition 2.7.}
+Therefore, if $f \in \mathscr{F}_+$ then $K^* f \in \mathscr{E}_+$.
+In particular, if $K$ is a transition kernel from $(E,\mathscr{E})$ to $(F,\mathscr{F})$,
+\begin{equation}
+(K^* 1_B)(x) = \int_F 1_B(y) dK_x(y) = K_x(B) = K(x,B), \qquad x \in E, \quad B \in \mathscr{F}.
+\label{Kfunction}
+\end{equation}
+
+
+
+The following  gives conditions under which 
+\eqref{Kfunction} defines a transition kernel.\footnote{Heinz Bauer, {\em Probability Theory},
+p.~308, Lemma 36.2.}
+
+\begin{lemma}
+Suppose that $N:\mathscr{F}_+ \to \mathscr{E}_+$ satisfies the following properties:
+\begin{enumerate}
+\item $N(0)=0$.
+\item $N(af+bg)=aN(f)+bN(g)$ for $f,g \in \mathscr{F}_+$ and $a,b \geq 0$.
+\item If $f_n$ is a sequence in $\mathscr{F}_+$ increasing to $f \in \mathscr{F}_+$, then 
+$N(f_n) \uparrow N(f)$.
+\end{enumerate}
+Then 
+\[
+K(x,B) = (N(1_B))(x), \qquad x \in E, \quad B \in \mathscr{F},
+\]
+is a transition kernel
+from $(E,\mathscr{E})$ to $(F,\mathscr{F})$. $K$ is the unique transition kernel satisfying
+\[
+K^* f = N(f), \qquad f \in \mathscr{F}_+.
+\]
+\label{kernel}
+\end{lemma}
+
+If $K$ is a transition kernel from $(E,\mathscr{E})$ to $(F,\mathscr{F})$ and
+$L$ is a transition kernel from
+$(F,\mathscr{F})$ to $(G,\mathscr{G})$, 
+the function $K^* \circ L^*:\mathscr{G}_+ \to \mathscr{E}_+$ satisfies 
+(i) $(K^* \circ L^*)(0)=K^*(0)=0$,
+(ii) if $f,g \in \mathscr{G}_+$ and $a,b \geq 0$,
+\begin{align*}
+(K^* \circ L^*)(af+bg) &= K^*(aL^*(f)+bL^*(g))\\
+&= aK^*(L^*(f))+K^*(L^*(g))\\
+&=a(K^* \circ L^*)(f)+b(K^* \circ L^*)(g),
+\end{align*}
+and (iii) if $f_n \uparrow f$ in $\mathscr{G}_+$,
+then by the monotone convergence theorem, $L^*(f_n) \uparrow L^*(f)$, and then
+again applying the monotone convergence theorem, $K^*(L^*(f_n)) \uparrow K^*(L^*(f))$,
+i.e. 
+\[
+(K^* \circ L^*)(f_n) \uparrow (K^* \circ L^*)(f).
+\]
+Therefore, from Lemma \ref{kernel} we get that there is a unique transition kernel
+from $(E,\mathscr{E})$ to $(G,\mathscr{G})$,
+denoted $KL$ and called the \textbf{product of $K$ and $L$},
+ such that
+\[
+(KL)^* f  = (K^* \circ L^*)(f), \qquad f \in \mathscr{G}_+.
+\]
+For $f \in \mathscr{G}_+$ and $x \in E$,
+\begin{align*}
+(KL)^*(f)(x)&=(K^*(L^* f))(x)\\
+&=\int_F (L^*f)(y) dK_x(y)\\
+&=\int_F \left( \int_G f(z) dL_y(z) \right) dK_x(y).
+\end{align*}
+In particular, for $C \in \mathscr{G}$,
+\begin{equation}
+(KL)^*(1_C)(x) = \int_F L_y(C) dK_x(y)
+=\int_F L(y,C) dK_x(y).
+\label{indicator}
+\end{equation}
+
+
+\section{Markov kernels}
+A \textbf{Markov kernel} from $(E,\mathscr{E})$ to $(F,\mathscr{F})$ is a transition kernel $K$ such that
+for each $x \in E$, $K_x$ is a probability measure on $\mathscr{F}$. 
+The \textbf{unit kernel} from $(E,\mathscr{E})$ to $(E,\mathscr{E})$ is
+\begin{equation}
+I(x,A) = \delta_x(A).
+\label{unitkernel}
+\end{equation}
+It is apparent that the unit kernel is a Markov kernel.
+
+If $K$ is a Markov kernel from $(E,\mathscr{E})$ to $(F,\mathscr{F})$ and
+$L$ is a Markov kernel from
+$(F,\mathscr{F})$ to $(G,\mathscr{G})$, then
+for $x \in E$, by \eqref{indicator} we have
+\[
+(KL)^*(1_G)(x) = \int_F dK_x(y) = K_x(F) = K(x,F) = 1,
+\]
+and thus by \eqref{Kfunction},
+\[
+(KL)_x(G) = (KL)(x,G) = 1,
+\]
+showing that for each $x \in E$, $(KL)_x$ is a probability measure. Therefore,
+the product of two Markov kernels is a Markov kernel.
+
+
+Let $(E,\mathscr{E})$ be a measurable space and let
+\[
+B_b(\mathscr{E})
+\]
+ be the set of bounded  functions
+$E \to \mathbb{R}$ that are measurable $\mathscr{E} \to \mathscr{B}_{\mathbb{R}}$. $B_b(\mathscr{E})$ is a Banach space with the \textbf{uniform norm}
+\[
+\norm{f}_u = \sup_{x \in E} |f(x)|. 
+\]
+For $K$ a Markov kernel from $(E,\mathscr{E})$ to $(F,\mathscr{F})$
+and for $f \in B_b(\mathscr{F})$, define
+$K^*f:E \to \mathbb{R}$ by
+\[
+(K^*f)(x) = \int_F f(y) dK_x(y), \qquad x \in E,
+\]
+for which
+\[
+|(K^*f)(x)| \leq \int_F |f(y)| dK_x(y) \leq \norm{f}_u K_x(F) = \norm{f}_u,
+\]
+showing that $\norm{K^*f}_u \leq \norm{f}_u$. Furthermore,
+there is a sequence of simple functions
+$\phi_n \in B_b(\mathscr{F})$ that converges 
+to $f$ in the norm $\norm{\cdot}_u$.\footnote{V. I. Bogachev, {\em Measure Theory}, p.~108, Lemma 2.1.8.}
+For $x \in E$, by the dominated convergence theorem we get that
+\[
+(K^*\phi_n)(x) = \int_F \phi_n(y) dK_x(y) \to \int_F f(y) dK_x(y) = (K^*f)(x).
+\]
+Each $K^*\phi_n$ is measurable $\mathscr{E} \to \mathscr{B}_{\mathbb{R}}$, hence
+$K^*f$ is measurable $\mathscr{E} \to \mathscr{B}_{\mathbb{R}}$ and so belongs to $B_b(\mathscr{E})$. 
+
+
+
+\section{Markov semigroups}
+Let $(E,\mathscr{E})$ be a measurable space 
+and for each $t \geq 0$, let $P_t$ be a Markov kernel from
+$(E,\mathscr{E})$ to $(E,\mathscr{E})$. We say
+that the family $(P_t)_{t \in \mathbb{R}_{\geq 0}}$ is a \textbf{Markov semigroup}
+if 
+\[
+P_{s+t} = P_s P_t, \qquad s, t \in \mathbb{R}_{\geq 0}.
+\]
+For $x \in E$ and $A \in \mathscr{E}$ and for $s,t \geq 0$, by  \eqref{Kfunction} and
+\eqref{indicator},
+\[
+(P_s P_t)(x,A) = ((P_s P_t)^*1_A)(x)= \int_E P_t(y,A) d(P_s)_x(y)
+\]
+Thus
+\begin{equation}
+P_{s+t}(x,A) = \int_E P_t(y,A) d(P_s)_x(y),
+\label{chapman}
+\end{equation}
+called the \textbf{Chapman-Kolmogorov equation}.
+
+
+
+\section{Infinitely divisible distributions}
+Let $\mathscr{P}(\mathbb{R}^d)$ be the collection of Borel probability measures on $\mathbb{R}^d$. 
+For $\mu \in \mathscr{P}(\mathbb{R}^d)$, its \textbf{characteristic function} $\tilde{\mu}:\mathbb{R}^d \to \mathbb{C}$
+is defined
+by
+\[
+\tilde{\mu}(x) = \int_{\mathbb{R}^d} e^{i\inner{x}{y}} d\mu(y).
+\]
+$\tilde{\mu}$ is uniformly continuous on $\mathbb{R}^d$ and $|\tilde{\mu}(x)| \leq \tilde{\mu}(0)=1$ for all
+$x \in \mathbb{R}^d$.\footnote{Heinz Bauer, {\em Probability Theory}, p.~183, Theorem 22.3.}
+For $\mu_1,\ldots,\mu_n \in \mathscr{P}(\mathbb{R}^d)$, let $\mu$ be their \textbf{convolution}:
+\[
+\mu = \mu_1* \cdots * \mu_n,
+\]
+which for $A$ a Borel set in $\mathbb{R}^d$ is defined by
+\[
+\mu(A) = \int_{(\mathbb{R}^d)^n} 1_A(x_1+\cdots+x_n) d(\mu_1 \times \cdots
+\times \mu_n)(x_1,\ldots,x_n).
+\]
+One computes that\footnote{Heinz Bauer, {\em Probability Theory}, p.~184, Theorem 22.4.}
+\[
+\tilde{\mu} = \tilde{\mu}_1 \cdots \tilde{\mu}_n.
+\]
+
+An element $\mu$ of $\mathscr{P}(\mathbb{R}^d)$ is called \textbf{infinitely divisible} if
+for each $n \geq 1$, there is some $\mu_n \in \mathscr{P}(\mathbb{R}^d)$ such that
+\begin{equation}
+\mu = \underbrace{\mu_n * \cdots * \mu_n}_{n}.
+\label{convolution}
+\end{equation}
+Thus,
+\begin{equation}
+\tilde{\mu} = (\tilde{\mu}_n)^n.
+\label{product}
+\end{equation}
+On the other hand, if $\mu_n \in \mathscr{P}(\mathbb{R}^d)$ is such that
+\eqref{product} is true, then
+because the characteristic function of $\mu_n*\cdots*\mu_n$ is 
+$(\tilde{\mu}_n)^n$ and the characteristic function of $\mu$ is $\tilde{\mu}$ and these are equal,
+it follows that $\mu_n*\cdots*\mu_n$ and $\mu$ are equal. 
+
+The following theorem is useful for doing calculations with the characteristic function of an infinitely
+divisible distribution.\footnote{Heinz Bauer, {\em Probability Theory},
+p.~246, Theorem 29.2.}
+
+\begin{theorem}
+Suppose that $\mu$ is an infinitely divisible distribution on $\mathbb{R}^d$. First,
+\[
+\tilde{\mu}(x) \neq 0, \qquad x \in \mathbb{R}^d.
+\]
+Second, there is a unqiue continuous function $\phi:\mathbb{R}^d \to \mathbb{R}$ satisfying
+$\phi(0)=0$ and
+\[
+\tilde{\mu} = |\tilde{\mu}| e^{i\phi}.
+\]
+Third, for each $n \geq 1$, there is a unique $\mu_n \in \mathscr{P}(\mathbb{R}^d)$ for which
+$\mu = \mu_n * \cdots * \mu_n$. The characteristic function of this unique $\mu_n$ is
+\[
+\tilde{\mu}_n = |\tilde{\mu}|^{\frac{1}{n}} e^{i\frac{\phi}{n}}.
+\]
+\label{nonzero}
+\end{theorem}
+
+A \textbf{convolution semigroup} is a family $(\mu_t)_{t \in \mathbb{R}_{\geq 0}}$ of elements
+of $\mathscr{P}(\mathbb{R}^d)$ such that 
+for $s,t \in \mathbb{R}_{\geq 0}$,
+\[
+\mu_{s+t} = \mu_s * \mu_t.
+\]
+The convolution semigroup is called \textbf{continuous} when $t \mapsto \mu_t$
+is continuous $\mathbb{R}_{\geq 0} \to \mathscr{P}(\mathbb{R}^d)$, where $\mathscr{P}(\mathbb{R}^d)$
+has the \textbf{narrow topology}.
+
+The following theorem connects convolution semigroups and infinitely divisible distributions.\footnote{Heinz
+Bauer, {\em Probability Theory}, p.~248, Theorem 29.6.}
+
+\begin{theorem}
+If $(\mu_t)_{t \in \mathbb{R}_{\geq 0}}$ is a convolution semigroup on
+$\mathscr{B}_{\mathbb{R}^d}$, then for each
+$t$, the measure $\mu_t$ is infinitely divisible. 
+
+If $\mu \in \mathscr{P}(\mathbb{R}^d)$ is infinitely divisible and $t_0>0$, then there is a unique continuous convolution
+semigroup $(\mu_t)_{t \in \mathbb{R}_{\geq 0}}$ such that $\mu_{t_0}=\mu$. 
+\end{theorem}
+
+It follows from the above theorem that for a convolution semigroup $(\mu_t)_{t \in \mathbb{R}_{\geq 0}}$
+on $\mathscr{B}_{\mathbb{R}^d}$,
+$\mu_1$ is infinitely divisible and therefore by Theorem \ref{nonzero}, $\tilde{\mu}_1(x) \neq 0$ for all $x$.
+But $\mu_0 * \mu_1 = \mu_1$, so $\tilde{\mu}_0 \tilde{\mu}_1 = \tilde{\mu}_1$, and $\tilde{\mu}_0(x)=1$ for each
+$x$. But $\tilde{\delta}_0(x)=1$ for all $x$, so
+\begin{equation}
+\mu_0=\delta_0.
+\label{delta0}
+\end{equation}
+
+
+\section{Translation-invariant semigroups}
+Let $(P_t)_{t \in \mathbb{R}_{\geq 0}}$ be a Markov semigroup on $(\mathbb{R}^d,\mathscr{B}_{\mathbb{R}^d})$.
+We say that $(P_t)_{t \in \mathbb{R}}$ is \textbf{translation-invariant} if for all
+$x,y \in \mathbb{R}^d$, $A \in \mathscr{B}_{\mathbb{R}^d}$, and $t \in \mathbb{R}_{\geq 0}$,
+\[
+P_t(x,A) = P_t(x+y,A+y).
+\]
+In this case, for $t \geq 0$ and for $A \in \mathscr{B}_{\mathbb{R}^d}$, define
+\[
+\mu_t(A) = P_t(0,A).
+\]
+Each $\mu_t$ is a probability measure on $\mathscr{B}_{\mathbb{R}^d}$, and
+\[
+\mu_t(A-x) = P_t(0,A-x) = P_t(x,(A-x)+x) = P_t(x,A).
+\]
+Using that the Chapman-Kolmogorov equation \eqref{chapman} and as
+$(P_s)_0(B)=P_s(0,B)=\mu_s(B)$,
+\begin{align*}
+\mu_{s+t}(A)&=P_{s+t}(0,A)\\
+&=\int_{\mathbb{R}^d} P_t(y,A) d(P_s)_0(y)\\
+&=\int_{\mathbb{R}^d} \mu_t(A-y) d\mu_s(y)\\
+&=(\mu_t * \mu_s)(A),
+\end{align*}
+showing that $(\mu_t)_{t \in \mathbb{R}_{\geq 0}}$ is a convolution semigroup on $\mathscr{B}_{\mathbb{R}^d}$.
+
+
+On the other hand, if  $(\mu_t)_{t \in \mathbb{R}_{\geq 0}}$ is a convolution semigroup of probability measures
+on $\mathscr{B}_{\mathbb{R}^d}$,
+for $t \geq 0$, $x \in \mathbb{R}^d$, and $A \in \mathscr{B}_{\mathbb{R}^d}$ define
+\[
+P_t(x,A) = \mu_t(A-x).
+\]
+Let $t \geq 0$. For $x \in \mathbb{R}^d$,
+the map $A \mapsto P_t(x,A) = \mu_t(A-x)$ is a probability measure on  $\mathscr{B}_{\mathbb{R}^d}$.
+The map
+$(x,y) \mapsto x+y$ is continuous $\mathbb{R}^d \times \mathbb{R}^d \to \mathbb{R}^d$,
+and for $A \in \mathscr{B}_{\mathbb{R}^d}$, 
+the map
+$1_A:\mathbb{R}^d \to \mathbb{R}$ is 
+measurable $\mathscr{B}_{\mathbb{R}^d} \to \mathscr{B}_{\mathbb{R}}$. Hence,
+as $\mathscr{B}_{\mathbb{R}^d \times \mathbb{R}^d}=\mathscr{B}_{\mathbb{R}^d}
+\otimes \mathscr{B}_{\mathbb{R}^d}$, the map
+$(x,y) \mapsto 1_A(x+y)$ is measurable $\mathscr{B}_{\mathbb{R}^d}
+\otimes \mathscr{B}_{\mathbb{R}^d}  \to \mathscr{B}_{\mathbb{R}}$. 
+Thus by Fubini's theorem,
+\[
+x \mapsto 
+\int_{\mathbb{R}^d} 1_A(x+y) d\mu_t(y)
+= \int_{\mathbb{R}^d} 1_{A-x}(y) d\mu_t(y)
+=\mu_t(A-x) 
+\]
+is measurable $\mathscr{B}_{\mathbb{R}^d} \to \mathscr{B}_{\mathbb{R}}$. 
+Hence $P_t$ is a Markov kernel, and thus
+$(P_t)_{t \in \mathbb{R}_{\geq 0}}$ is a translation-invariant Markov semigroup.
+
+Define $S:\mathbb{R}^d \to \mathbb{R}^d$ by $S(x)=-x$.
+For $\mu,\nu \in \mathscr{P}(\mathbb{R}^d)$,
+\begin{align*}
+S_*(\mu*\nu)(A)&=(\mu*\nu)(-A)\\
+&=\int_{\mathbb{R}^d} \mu(-A-y) d\nu(y)\\
+&= \int_{\mathbb{R}^d} \mu(-A+y) d\overline{\nu}(y)\\
+&=\int_{\mathbb{R}^d} \overline{\mu}(A-y) d\overline{\nu}(y)\\
+&=(\overline{\mu}*\overline{\nu})(A),
+\end{align*}
+thus
+\begin{equation}
+S_*(\mu*\nu)=(S_*\mu)*(S_*\nu).
+\label{pushforward}
+\end{equation}
+For $\mu \in \mathscr{P}(\mathbb{R}^d)$, write
+\[
+\overline{\mu} = S_*\mu \in \mathscr{P}(\mathbb{R}^d),
+\]
+i.e.,
+\[
+\overline{\mu}(A) = \mu(S^{-1}(A)) = \mu(S(A)) = \mu(-A).
+\]
+We calculate
+\[
+(P_t^* 1_A)(x) = P_t(x,A)= \mu_t(A-x) = \int_{\mathbb{R}^d} 1_A(x+y)d\mu_t(y).
+\]
+Then if $f$ is a simple function, $f=\sum_k a_k 1_{A_k}$,
+\[
+(P_t^* f)(x) = \sum_k a_k \int_{\mathbb{R}^d} 1_{A_k}(x+y) d\mu_t(y)
+=\int_{\mathbb{R}^d} f(x+y) d\mu_t(y).
+\]
+For $f \in B_b(\mathscr{B}_{\mathbb{R}^d})$, there is a sequence of simple functions
+$f_n$ that converge to $f$ in the uniform norm, and then by the dominated convergence theorem we get
+\[
+(P_t^*f)(x) = \int_{\mathbb{R}^d} f(x+y) d\mu_t(y).
+\]
+But
+\begin{align*}
+ \int_{\mathbb{R}^d} f(x+y) d\mu_t(y) &= \int_{\mathbb{R}^d} f(x+S(S(y))) d\mu_t(y)\\
+& = \int_{\mathbb{R}^d} f(x+S(y)) d(S_*\mu_t)(y)\\
+& = \int_{\mathbb{R}^d} f(x-y) d\overline{\mu}_t(y)\\
+&= (f*\overline{\mu}_t)(x).
+\end{align*}
+Therefore for $t \geq 0$ and $f \in B_b(\mathscr{B}_{\mathbb{R}^d})$,
+\begin{equation}
+P_t^* f=  f*\overline{\mu}_t.
+\label{convolutionkernel}
+\end{equation}
+For $s,t \geq 0$ and $f \in B_b(\mathscr{B}_{\mathbb{R}^d})$, by \eqref{convolutionkernel}, the fact that $(\mu_t)_{t \in \mathbb{R}_{\geq 0}}$ is a convolution
+semigroup, and \eqref{pushforward}, we get
+\begin{align*}
+P_{s+t}^*f&=f*(S_*\mu_{s+t})\\
+&=f*(S_*(\mu_s*\mu_t))\\
+&=f*((S_*\mu_s)*(S_*\mu_t))\\
+&=(f*(S_*\mu_s))*(S_*\mu_t)\\
+&=(P_s^* f)*(S_*\mu_t)\\
+&=P_t^* (P_s^*f).
+\end{align*}
+This shows that $(P_t)_{t \in \mathbb{R}_{\geq 0}}$ is a Markov semigroup. 
+Moreover, by \eqref{delta0} it holds that $\mu_0=\delta_0$, and hence
+\[
+P_0(x,A) = \mu_0(A-x) = \delta_0(A-x) = \delta_x(A).
+\]
+Namely, $P_0$ is the unit kernel \eqref{unitkernel}. 
+
+If $(\mu_t)_{t \in \mathbb{R}_{\geq 0}}$ is a convolution semigroup and
+some  $\mu_t$ has density $q_t$ with respect to Lebesgue measure $\lambda_d$ on $\mathbb{R}^d$,
+\[
+\mu_t = q_t \lambda_d,
+\]
+then writing $\overline{q}_t(x) = q_t(-x)$, for $f \in B_b(\mathscr{B}_{\mathbb{R}^d})$ by \eqref{convolutionkernel} we have
+\[
+(P_t^*f)(x) = (f*\overline{\mu}_t)(x) = \int_{\mathbb{R}^d} f(x-y) d\overline{\mu}_t(y)
+=\int_{\mathbb{R}^d} f(x+y) q_t(y) d\lambda_d(y)
+\]
+so
+\begin{equation}
+P_t*f = f*\overline{q}_t.
+\label{qt}
+\end{equation}
+
+\section{The Brownian semigroup}
+For $a \in \mathbb{R}$ and $\sigma>0$,
+let $\gamma_{a,\sigma^2}$ be the Gaussian measure on $\mathbb{R}$, the probability measure on $\mathbb{R}$
+whose density with respect to Lebesgue measure is
+\[
+p(x,a,\sigma^2) = \frac{1}{\sqrt{2\pi \sigma^2}} \exp\left(-\frac{(x-a)^2}{2\sigma^2}\right).
+\]
+For $\sigma=0$, let
+\[
+\gamma_{a,0} = \delta_a.
+\]
+Define for $t \in \mathbb{R}_{\geq 0}$,
+\[
+\mu_t = \prod_{k=1}^d \gamma_{0,t},
+\]
+which is an element of $\mathscr{P}(\mathbb{R}^d)$. 
+For $s,t  \in \mathbb{R}_{\geq 0}$, we calculate
+\[
+\mu_s * \mu_t =  \left(\prod_{k=1}^d \gamma_{0,s}\right) * \left( \prod_{k=1}^d \gamma_{0,t} \right) 
+=\prod_{k=1}^d (\gamma_{0,s} * \gamma_{0,t})
+=\prod_{k=1}^d \gamma_{0,s+t}
+=\mu_{s+t}.
+\]
+\textbf{L\'evy's continuity theorem} states that if $\nu_n$ is a sequence in $\mathscr{P}(\mathbb{R}^d)$
+and there is some $\phi:\mathbb{R}^d \to \mathbb{C}$ that is continuous at $0$
+and  to which $\tilde{\nu}_n$ converges pointwise, then there is some $\nu \in \mathscr{P}(\mathbb{R}^d)$ such that
+$\phi = \tilde{\nu}$ and such that $\nu_n \to \nu$ narrowly.
+But for $t \in \mathbb{R}_{\geq 0}$ and $x \in \mathbb{R}^d$, we calculate 
+\begin{equation}
+\tilde{\mu}_t(x) = \int_{\mathbb{R}^d} e^{i\inner{x}{y}} d\mu_t(y)
+=\exp\left(-\frac{t|x|^2}{2}\right).
+\label{limit}
+\end{equation}
+Let $\phi(x)=1$ for all $x$, for which $\tilde{\delta}_0=\phi$.
+For $t_n \in \mathbb{R}_{\geq 0}$ tending to $0$, let
+$\nu_n = \mu_{t_n}$. Then by \eqref{limit}, $\tilde{\nu}_n$ converges pointwise to $\phi$, so  by L\'evy's continuity theorem,
+$\nu_n$ converges narrowly to $\delta_0$. 
+Moreover, because $\mathbb{R}^d$ is a Polish space, $\mathscr{P}(\mathbb{R}^d)$ is a Polish space, and in particular
+is metrizable. It thus follows that
+$\mu_t$ converges narrowly to $\delta_0$ as $t \to 0$.
+It then follows   that $t \mapsto \mu_t$ is continuous $\mathbb{R}_{\geq 0} \to \mathscr{P}(\mathbb{R}^d)$. 
+Summarizing, $(\mu_t)_{t \in \mathbb{R}_{\geq 0}}$ is a continuous convolution semigroup.
+
+
+For $t>0$, $\mu_t$ has density
+\[
+g_t(x) = \prod_{j=1}^d (2\pi t)^{-1/2} e^{-\frac{x_j^2}{2t}}
+=(2\pi t)^{-d/2} e^{-\frac{|x|^2}{2t}}
+\]
+with respect to Lebesgue measure $\lambda_d$ on $\mathbb{R}^d$. 
+For $t \geq 0$,
+let
+\[
+P_t(x,A) = \mu_t(A-x).
+\]
+We have established that $(P_t)_{t \in \mathbb{R}_{\geq 0}}$ is a translation-invariant Markov semigroup
+for which $P_0(x,A)=\delta_x(A)$. We call $(P_t)_{t \in \mathbb{R}_{\geq 0}}$ the \textbf{Brownian semigroup}.
+For $t>0$ and $f \in B_b(\mathscr{B}_{\mathbb{R}^d})$,
+because $\overline{g}_t=g_t$ we have by \eqref{qt},
+\[
+(P_t f)(x) = (f*g_t)(x) = 
+(2\pi t)^{-d/2} \int_{\mathbb{R}^d} f(x-y) e^{-\frac{|y|^2}{2t}} d\lambda_d(y).
+\]
+
+
+\section{Projective families}
+For a nonempty set $I$, let $\mathscr{K}(I)$ denote the family of finite nonempty subsets of $I$. 
+We speak in this section about \textbf{projective families} of probability measures.
+
+
+The following theorem shows how to construct a projective family from   a Markov semigroup on a measurable space and a probability measure
+on this measurable space.\footnote{Heinz Bauer, {\em Probability Theory},
+p.~314, Theorem 36.4.}
+
+\begin{theorem}
+Let $I=\mathbb{R}_{\geq 0}$,
+let $(E,\mathscr{E})$ be a measurable space, let $(P_t)_{t \in I}$ be a Markov semigroup 
+on $\mathscr{E}$, and let $\mu$ be a probability measure on $\mathscr{E}$. For 
+$J \in \mathscr{K}(I)$, with elements $t_1<\cdots<t_n$, and for $A \in \mathscr{E}^J$,
+let
+\[
+P_J(A) = \underbrace{\int_E \int_E \cdots \int_E}_{n+1} 1_A(x_1,\ldots,x_n) d(P_{t_n-t_{n-1}})_{x_{n-1}}(x_n)
+\cdots d(P_{t_1})_{x_0}(x_1) d\mu(x_0).
+\]
+Then $(P_J)_{J \in \mathscr{K}(I)}$ is a projective family of probability measures.
+\label{projective}
+\end{theorem}
+\begin{proof}
+Let $A_k$ be pairwise disjoint elements of $\mathscr{E}^J$, and call their union $A$. 
+Then $1_A = \sum_k 1_{A_k}$,
+and applying the monotone convergence theorem $n+1$ times,
+\[
+\begin{split}
+& \underbrace{\int_E \int_E \cdots \int_E}_{n+1} 1_A(x_1,\ldots,x_n) d(P_{t_n-t_{n-1}})_{x_{n-1}}(x_n)
+\cdots d(P_{t_1})_{x_0}(x_1) d\mu(x_0)\\
+=&\sum_k  \underbrace{\int_E \int_E \cdots \int_E}_{n+1}  1_{A_k}(x_1,\ldots,x_n) d(P_{t_n-t_{n-1}})_{x_{n-1}}(x_n)
+\cdots d(P_{t_1})_{x_0}(x_1) d\mu(x_0),
+\end{split}
+\]
+i.e.
+\[
+P_J(A) = \sum_k P_J(A_k).
+\]
+Furthermore, because $(P_t)_x$ is a probability measure for each $t$ and for each $x$ and $\mu$ is a probability measure, we calculate that
+\[
+P_J(E^J) = 1.
+\]
+Thus, $P_J$ is a probability measure on $\mathscr{E}^J$. 
+
+To prove that $(P_J)_{J \in \mathscr{K}(I)}$ is a projective family, it suffices to prove that when $J,K \in \mathscr{K}(I)$,
+$J \subset K$, and $K \setminus J$ is a singleton, then $(\pi_{K,J})_* P_K = P_J$. Moreover, 
+because (i) the product $\sigma$-algebra $\mathscr{E}^J$ is generated by the collection of \textbf{cylinder sets}, i.e. sets
+of the form $\prod_{t \in J} A_t$ for $A_t \in \mathscr{E}$, and (ii)  the intersection of finitely many cylinder sets is a cylinder sets,
+it is proved using  the monotone class theorem that if two probability measures on $\mathscr{E}^J$  coincide on the cylinder
+sets, then they are equal.\footnote{V. I. Bogachev, {\em Measure Theory}, volume I, p.~35, Lemma 1.9.4.}
+Let $t_1<\cdots<t_n$ be the elements of $J$. To prove that 
+$(\pi_{K,J})_* P_K$ and
+$P_J$ are equal, it suffices to prove that
+for any $A_1,\ldots,A_n \in \mathscr{E}$,
+\[
+(\pi_{K,J})_* P_K\left(\prod_{j=1}^n A_j\right) = P_J\left(\prod_{j=1}^n A_j\right).
+\]
+Moreover, for $A=\prod_{j=1}^n A_j$,
+\[
+1_A = 1_{A_1} \otimes \cdots \otimes 1_{A_n}, 
+\]
+thus
+\[
+\begin{split}
+&P_J\left(\prod_{j=1}^n A_j\right)\\
+=& \underbrace{\int_E \int_E \cdots \int_E}_{n+1} 1_{A_1}(x_1)\cdots 1_{A_n}(x_n) d(P_{t_n-t_{n-1}})_{x_{n-1}}(x_n)
+\cdots d(P_{t_1})_{x_0}(x_1) d\mu(x_0)\\
+=&\int_E \int_{A_1} \cdots \int_{A_n}
+d(P_{t_n-t_{n-1}})_{x_{n-1}}(x_n)
+\cdots d(P_{t_1})_{x_0}(x_1) d\mu(x_0).
+\end{split}
+\]
+
+Let $K \setminus J = \{t'\}$. Either $t'<t_1$, or $t'>t_n$, or there is some $1 \leq j \leq n-1$
+for which $t_j<t'<t_{j+1}$. Take the case $t'<t_1$. 
+Then
+\[
+\pi_{K,J}^{-1}\left(\prod_{j=1}^n A_j\right) = \prod_{k=0}^n B_k,
+\]
+where $B_0=E$ and $B_j=A_j$ for $1 \leq j \leq n$. Then
+\[
+\begin{split}
+&(\pi_{K,J})_* P_K\left(\prod_{j=1}^n A_j\right)\\
+=&P_K\left(\prod_{k=0}^n B_k\right)\\
+=&\int_E \int_E \int_{A_1} \cdots \int_{A_n} d(P_{t_n-t_{n-1}})_{x_{n-1}}(x_n)
+\cdots d(P_{t_1-t'})_{x'}(x_1)
+d(P_{t'})_{x_0}(x')
+d\mu(x_0)\\
+=&\int_E \int_E \int_{A_1} f(x_1) d(P_{t_1-t'})_{x'}(x_1) d(P_{t'})_{x_0}(x') d\mu(x_0),
+\end{split}
+\]
+for
+\[
+f(x_1) = \int_{A_2} \cdots \int_{A_n} d(P_{t_n-t_{n-1}})_{x_{n-1}}(x_n)
+\cdots d(P_{t_2-t_1})_{x_1}(x_2).
+\]
+By \eqref{Kxdef} and because $(P_t)_{t \in I}$ is a Markov semigroup,
+\[
+\begin{split}
+&\int_E \int_{A_1} f(x_1) d(P_{t_1-t'})_{x'}(x_1) d(P_{t'})_{x_0}(x')\\
+=&\int_E \int_E f(x_1) 1_{A_1}(x_1) d(P_{t_1-t'})_{x'}(x_1) d(P_{t'})_{x_0}(x')\\
+=&\int_E P_{t_1-t'}^* (f 1_{A_1})(x') d(P_{t'})_{x_0}(x')\\
+=&P_{t'}^*(P_{t_1-t'}^* (f 1_{A_1}))(x_0)\\
+=&P_{t_1}(f 1_{A_1})(x_0)\\
+=&\int_E f(x_1) 1_{A_1}(x_1) d(P_{t_1})_{x_0}(x_1)\\
+=&\int_{A_1} f(x_1)  d(P_{t_1})_{x_0}(x_1)\\
+=&\int_{A_1}  \int_{A_2} \cdots \int_{A_n} d(P_{t_n-t_{n-1}})_{x_{n-1}}(x_n)
+\cdots d(P_{t_2-t_1})_{x_1}(x_2)d(P_{t_1})_{x_0}(x_1).
+\end{split}
+\]
+Thus
+\[
+\begin{split}
+&(\pi_{K,J})_* P_K\left(\prod_{j=1}^n A_j\right)\\
+=&\int_E \int_{A_1}  \int_{A_2} \cdots \int_{A_n} d(P_{t_n-t_{n-1}})_{x_{n-1}}(x_n)
+\cdots d(P_{t_2-t_1})_{x_1}(x_2)d(P_{t_1})_{x_0}(x_1) d\mu(x_0)\\
+=&P_J\left(\prod_{j=1}^n A_j\right).
+\end{split}
+\]
+This shows that the claim is true in the case $t'<t_1$.
+\end{proof}
+
+Thus, if $E$ is a Polish space with Borel $\sigma$-algebra $\mathscr{E}$,
+let $I=\mathbb{R}_{\geq 0}$,
+let $(P_t)_{t \in I}$ be a Markov semigroup 
+on $\mathscr{E}$, and let $\mu$ be a probability measure on $\mathscr{E}$.
+The above theorem tells us that $(P_J)_{\mathscr{K}(I)}$ is a projective family, and then
+the \textbf{Kolmogorov extension theorem}
+tells us that there is a probability measure\footnote{We write $P^\mu$ to indicate that this measure
+involves $\mu$; it also involves the Markov semigroup, which we do not indicate.} $P^\mu$ on $\mathscr{E}^I$ such that 
+for any $J \in \mathscr{K}(I)$, ${\pi_J}_* P^\mu = P^\mu_J$. This implies that
+there is a stochastic process 
+$(X_t)_{t \in I}$ whose finite-dimensional distributions are equal 
+to the probability measures $P_J$ defined in Theorem \ref{projective} using the Markov semigroup $(P_t)_{t \in I}$ and the probability
+measure $\mu$. 
+\end{document}

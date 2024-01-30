@@ -1,0 +1,1237 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\cco}{\ensuremath\overline{\mathrm{co}}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}}
+\newcommand{\epi}{\ensuremath\mathrm{epi}\,}
+\newcommand{\lsc}{\ensuremath\mathrm{lsc}\,}
+\newcommand{\im}{\ensuremath\mathrm{im}\,}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\rad}{\ensuremath\mathrm{rad}\,}
+\newcommand{\LSC}{\ensuremath\mathrm{LSC}}
+\newcommand{\USC}{\ensuremath\mathrm{USC}}
+\newcommand{\extreals}{\overline{\mathbb{R}}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Gelfand transform,  positive linear functionals, and positive-definite functions}
+\author{Jordan Bell}
+\date{June 24, 2015}
+
+\maketitle
+
+\section{Introduction}
+In this note, unless we say otherwise every vector space or algebra we speak about is over $\mathbb{C}$.
+
+If $A$ is a Banach algebra and $e \in A$ satisfies $xe=x$ and $ex=x$ for all $x \in A$, and also $\norm{e}=1$, we say that $e$ is {\em unity} and  that
+$A$ is {\em unital}.
+
+If $A$ is a unital Banach algebra  and $x \in A$, the {\em spectrum of $x$} is the set $\sigma(x)$ of those $\lambda \in \mathbb{C}$
+for which $\lambda e-x$ is not invertible. It is a fact that if $A$ is a unital Banach algebra and $x \in A$, then $\sigma(x) \neq \emptyset$.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~253, Theorem 10.13.}
+
+
+If $A$ and $B$ are Banach algebras and
+$T:A \to B$ is a map, we say that $T$ is an {\em isomorphism of Banach algebras} if $T$ is an algebra isomorphism and an isometry.
+
+
+
+\begin{theorem}[Gelfand-Mazur]
+If $A$ is a Banach algebra and every nonzero element of $A$   is invertible, then there is an isomorphism of Banach algebras $A \to \mathbb{C}$.
+\end{theorem}
+\begin{proof}
+Let $x \in A$. $\sigma(x) \neq \emptyset$.
+If $\lambda_1,\lambda_2 \in \sigma(x)$, then neither
+$\lambda_1 e -x$ nor $\lambda_2 e -x$ is  invertible, so they are both $0$: $x = \lambda_1 e$ and $x = \lambda_2 e$, whence
+$\lambda_1 = \lambda_2$. Therefore $\sigma(x)$ has precisely one element, which we denote by $\lambda(x)$, and which satisfies
+\[
+x= \lambda(x) e.
+\]
+
+If $x,y \in A$, then
+$x+y=\lambda(x)e+\lambda(y)e = (\lambda(x)+\lambda(y))e$
+and also $x+y = \lambda(x+y)e$, so
+$\lambda(x+y)=\lambda(x)+\lambda(y)$. If $x \in A$ and $\alpha \in \mathbb{C}$, then
+$\alpha x = \alpha \lambda(x)e$ and also $\alpha x = \lambda(\alpha x)e$, so $\lambda(\alpha x)=\alpha \lambda(x)$. Hence
+$x \mapsto \lambda(x)$ is linear. If $\lambda_0 \in \mathbb{C}$, then $\lambda(\lambda_0 e)=\lambda_0$, showing that $x \mapsto \lambda(x)$
+is  onto. If $\lambda(x)=\lambda(y)$ then $x=\lambda(x)e = \lambda(y)e = y$, showing that $x \mapsto \lambda(x)$ is one-to-one. Therefore
+$x \mapsto \lambda(x)$ is a linear isomorphism $A \to \mathbb{C}$.
+
+If $x \in A$, then $x = \lambda(x)e$ gives
+\[
+\norm{x} = \norm{\lambda(x) e} = |\lambda(x)| \norm{e} = |\lambda(x)|,
+\]
+showing that the map $x \mapsto \lambda(x)$ is an isometry $A \to \mathbb{C}$.
+\end{proof}
+
+
+\section{Complex homomorphisms}
+An ideal $J$ of an algebra $A$ is said to be {\em proper} if $J \neq A$. An ideal is called {\em maximal} if it is a maximal element
+in the collection of proper ideals of $A$ ordered by set inclusion.
+
+The following theorem, which is proved using the fact  that a maximal
+ideal is closed, the fact that a quotient of a Banach algebra with a closed ideal is a Banach algebra, and the Gelfand-Mazur theorem, states some basic facts about algebra
+homomorphisms from a Banach algebra to $\mathbb{C}$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~277, Theorem 11.5.}
+
+\begin{theorem}
+If $A$ is a commutative unital Banach algebra and $\Delta$ is the set of all nonzero
+algebra homomorphisms $A \to \mathbb{C}$, then:
+\begin{enumerate}
+\item If $M$ is a maximal ideal of $A$ then there is some $h \in \Delta$ for which $M=\ker h$.
+\item If $h \in \Delta$ then $\ker h$ is a maximal ideal of $A$.
+\item $x \in A$ is invertible if and only if  $h(x) \neq 0$ for all $h \in \Delta$.
+\item $x \in A$ is invertible if and only if $x$ does not belong to any proper ideal of $A$.
+\item  $\lambda \in \sigma(x)$ if and only if there is some $h \in \Delta$ for which $h(x)=\lambda$.
+\end{enumerate}
+\label{homotheorem}
+\end{theorem} 
+
+
+
+\section{The Gelfand transform and maximal ideals}
+Suppose that $A$ is a commutative unital Banach algebra and that $\Delta$ is the set of all nonzero algebra homomorphisms $A \to \mathbb{C}$. 
+For each $x \in A$, we define $\hat{x}:\Delta \to \mathbb{C}$ by
+\[
+\hat{x}(h)=h(x), \qquad h \in \Delta.
+\]
+We call $\hat{x}$ the {\em Gelfand transform of $x$}, and
+we call the map $\Gamma:A \to \mathbb{C}^\Delta$ defined by $\Gamma(x) = \hat{x}$ the {\em Gelfand transform}.
+
+
+We define $\widehat{A}=\{\hat{x}:x \in A\}$, and we call the set $\Delta$ with the initial topology for $\widehat{A}$ the {\em maximal ideal space of $A$}. That is,
+the topology of $\Delta$ is the coarsest topology on $\Delta$ such that each $\hat{x}:\Delta \to \mathbb{C}$ is continuous. 
+If $X$ is a topological space, we denote by $C(X)$ the set of all continuous functions $X \to \mathbb{C}$. $C(X)$ is a commutative unital algebra, although it need not be a Banach algebra.
+
+The {\em radical of $A$}, denoted $\rad A$, is the intersection of all maximal ideals of $A$. If $\rad A= \{0\}$, we say that $A$ is {\em semisimple}.
+
+
+The following theorem establishes some basic facts about the Gelfand transform and the maximal ideal space.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~280, Theorem 11.9.}
+
+\begin{theorem}
+If $A$ is a commutative unital Banach algebra and $\Delta$ is the maximal ideal space of $A$, then:
+\begin{enumerate}
+\item $\Gamma:A \to C(\Delta)$ is an algebra homomorphism with $\ker \Gamma=\rad A$.
+\item If $x \in A$, then $\im \hat{x}=\sigma(x)$.
+\item $\Delta$ is a compact Hausdorff space.
+\end{enumerate}
+\label{gelfand}
+\end{theorem}
+\begin{proof}
+Let $x,y \in A$ and $\alpha \in \mathbb{C}$. For $h \in \Delta$,
+\[
+\Gamma(\alpha x+y)(h) = h(\alpha x+y) = \alpha h(x)+h(y) =\alpha \Gamma(x)(h)+\Gamma(y)(h)= (\Gamma(x)+\Gamma(y)(h),
+\]
+showing that $\Gamma(\alpha x+y)=\alpha\Gamma(x)+\Gamma(y)$, and
+\[
+\Gamma(xy)(h)=h(xy)=h(x)h(y)=\Gamma(x)(h) \Gamma(y)(h) = (\Gamma(x)\Gamma(y))(h),
+\]
+showing that $\Gamma(xy)=\Gamma(x)\Gamma(y)$. Therefore $\Gamma:A \to C(\Delta)$ is an algebra homomorphism.
+$x \in \ker \Gamma$ is equivalent to $h(x)=0$ for all $h \in \Delta$, which is equivalent to $x \in \ker h$ for all $h \in \Delta$. But by Theorem \ref{homotheorem}, $\{\ker h: h \in \Delta\}$
+is equal to the set of all maximal ideals of $A$, so $x \in \ker \Gamma$ is equivalent to $x \in \rad A$, i.e. $\ker \Gamma=\rad A$.
+
+Let $x \in A$.
+If $\lambda \in \im \hat{x}$ then there is some $h \in \Delta$ for which $\hat{x}(h)=\lambda$, and by 
+Theorem \ref{homotheorem}, 
+this yields $\lambda \in \sigma(x)$. Hence $\im \hat{x} \subseteq \sigma(x)$. If $\lambda \in \sigma(x)$, then by Theorem \ref{homotheorem}
+there is some $h \in \Delta$ for which $h(x)=\lambda$, i.e. there is some $h \in \Delta$ for which $\hat{x}(h)=\lambda$, i.e. $\lambda \in \im \hat{x}$. Hence
+$\sigma(x) \subseteq \im \hat{x}$. Therefore, $\im \hat{x} = \sigma(x)$.
+
+It is straightforward to check that the topology of $\Delta$ is the subspace topology inherited from $A^*$ with the weak-* topology;
+in particular, the topology of $\Delta$ is Hausdorff.
+Therefore, to prove that $\Delta$ is compact it suffices to prove that $\Delta$ is a weak-* compact subset of $A^*$.
+Let
+\[
+K=\{\lambda \in A^*: \norm{\lambda} \leq 1\}.
+\]
+By the Banach-Alaoglu theorem, $K$ is a weak-* compact subset of $A^*$. 
+If $h \in \Delta$, then because $h$ is an algebra homomorphism $A \to \mathbb{C}$ it follows that $\norm{h} \leq 1$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~249, Theorem 10.7.} Thus, $\Delta \subset K$. Therefore, to prove that $\Delta$ is compact it suffices to prove that $\Delta$ is a weak-*
+closed subset of $A^*$.
+
+Suppose that $h_i \in \Delta$ is a net that weak-* converges to $\lambda \in A^*$. Then $h_i(e) \to \lambda(e)$, i.e. $1 \to \lambda(e)$, so $\lambda(e)=1$. Thus $\lambda \neq 0$.
+Let $x,y \in A$. On the one hand,
+$h_i(xy) \to \lambda(xy)$, and on the other hand,
+$h_i(x) \to \lambda(x)$ and $h_i(y) \to \lambda(y)$, 
+so $h_i(x)h_i(y) \to \lambda(x)\lambda(y)$ and hence $h_i(xy)=h_i(x)h_i(y) \to \lambda(x)\lambda(y)$.
+Therefore, $\lambda(xy)=\lambda(x)\lambda(y)$, and because $\lambda \in A^*$ is linear,
+this shows that $\lambda:A \to \mathbb{C}$ is an algebra homomorphism, and hence that
+$\lambda \in \Delta$. Therefore $\Delta$ is a weak-* closed subset of $A^*$.
+\end{proof}
+
+If $A$ is a commutative unital Banach algebra, the 
+above theorem shows that 
+$\Gamma:A \to \widehat{A}$ is an algebra isomorphism if and only if $\rad A=\{0\}$, i.e., $\Gamma$ is an algebra isomorphism if and only if 
+$A$ is semisimple.
+
+The above theorem tells us that if $A$ is a commutative unital Banach algebra and $x \in A$, then $\im \hat{x} = \sigma(x)$. This gives us 
+\begin{equation}
+\norm{\hat{x}}_\infty = \rho(x),
+\label{spectralradius}
+\end{equation}
+where $\rho(x)$ is the {\em spectral radius of $x$}, defined by
+\[
+\rho(x) = \sup \{ |\lambda|: \lambda \in \sigma(x)\}.
+\]
+Therefore, $\hat{x}=0$ is equivalent to $\rho(x)=0$, and so by the above theorem,
+$x \in \rad A$ is equivalent to $\rho(x)=0$.
+Moreover, it is a fact that $\rho(x) \leq \norm{x}$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~253, Theorem 10.13.} Therefore, 
+\begin{equation}
+\norm{\hat{x}}_\infty \leq \norm{x}.
+\label{xhatnorm}
+\end{equation}
+
+In the proof of Theorem \ref{gelfand} we
+used the fact\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~249, Theorem 10.7.} that
+the norm of any algebra homomorphism from a Banach algebra to $\mathbb{C}$ is $\leq 1$. In particular, this means that
+any algebra homomorphism from a Banach algebra to $\mathbb{C}$ is continuous. The following theorem shows that
+any algebra homomorphism from a Banach algebra to a commutative unital semisimple
+Banach algebra is continuous.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~281, Theorem 11.10.}
+
+\begin{theorem}
+Suppose that $A$ is a Banach algebra and that $B$ is a commutative unital semisimple Banach algebra. If $\psi:A \to B$
+is an algebra homomorphism, then $\psi$ is continuous.
+\end{theorem}
+\begin{proof}
+Because $\psi:A \to B$ is linear, to prove that $\psi$ is continuous,  by
+the closed graph theorem\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~51, Theorem 2.15.}
+it suffices to prove that
+\[
+G = \{(x,\psi (x)): x \in A\}
+\]
+is closed in $A \times B$. To prove that $G$ is closed in $A \times B$, it suffices to prove that
+if  $(x_n,y_n) \in G$ converges to $(x,y) \in A \times B$ then $(x,y) \in G$. 
+
+Let $h \in \Delta_B$. Then $\phi = h \circ \psi:A \to \mathbb{C}$ is an algebra homomorphism. Because $h:B \to \mathbb{C}$ and
+$\phi:A \to \mathbb{C}$ are algebra homomorphisms with codomain $\mathbb{C}$, they are both continuous. Therefore, 
+$h(y_n) \to h(y)$ and $\phi(x_n) \to \phi(x)$. Therefore,
+\[
+h(y) = \lim h(y_n) = \lim h(\psi(x_n)) = \lim (h \circ \psi)(x_n) = \lim \phi(x_n) = \phi(x) = h(\psi(x)),
+\]
+so $h(y-\psi(x))=0$. This is true for all $h \in \Delta_B$, hence $y-\psi(x) \in \rad B$. But $B$ is semisimple, so $y-\psi(x)=0$, i.e. 
+$y=\psi(x)$, so $(x,y) \in G$.
+\end{proof}
+
+If $A$ is a commutative unital Banach algebra and $x \in A$, we recorded in \eqref{xhatnorm} that
+$\norm{\hat{x}}_\infty \leq \norm{x}$. The following lemma\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~282, Lemma 11.11.}  shows that if $\norm{x^2} = \norm{x}^2$ and $x \neq 0$, then
+$\inf \frac{\norm{\hat{x}}_\infty}{\norm{x}} \geq 1$, hence that $\norm{\hat{x}}_\infty = \norm{x}$. Therefore, if $\norm{x^2}=\norm{x}^2$ for all $x \in A$,
+then $\Gamma:A \to C(\Delta)$ is an isometry.
+
+\begin{lemma}
+Let $A$ be a commutative unital Banach algebra. If
+\[
+r= \inf_{x \neq 0} \frac{\norm{x^2}}{\norm{x}^2}, \qquad s = \inf_{x \neq 0} \frac{\norm{\hat{x}}_\infty}{\norm{x}},
+\]
+then $s^2 \leq r \leq s$.
+\label{normlemma}
+\end{lemma}
+
+Theorem \ref{gelfand} shows that if $A$ is a commutative unital Banach algebra, then $\Gamma:A \to C(\Delta)$ is an algebra homomorphism.
+Therefore $\Gamma(A)=\widehat{A}$ is a subalgebra of $C(\Delta)$.
+Moreover,
+Theorem \ref{gelfand} also shows  that $\Delta$ is a compact
+Hausdorff space. Therefore, $C(\Delta)$ is  a unital Banach algebra with the supremum norm. (If $X$ is a topological space then $C(X)$ is an algebra, but need not
+be a Banach algebra.) For $\widehat{A}$ to be a Banach subalgebra of $C(\Delta)$ it is necessary and sufficient that $\widehat{A}$ be a closed
+subset of the Banach algebra $C(\Delta)$. The following theorem gives conditions under which this occurs.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~282, Theorem 11.12.}
+
+\begin{theorem}
+If $A$ is a commutative unital Banach algebra, then
+$A$ is semisimple and $\widehat{A}$ is a closed subset of $C(\Delta)$ if and only if there exists some $K<\infty$ such that 
+$\norm{x}^2 \leq K \norm{x^2}$ for all $x \in A$.
+\end{theorem}
+\begin{proof}
+Suppose that there is some $0<K<\infty$ such that $x \in A$ implies that $\norm{x}^2 \leq K \norm{x^2}$.
+Then
+\[
+r=\inf_{x \neq 0} \frac{\norm{x^2}}{\norm{x}^2} \geq \inf_{x \neq 0} \frac{\norm{x^2}}{K\norm{x^2}} = \frac{1}{K}.
+\]
+By Lemma \ref{normlemma}, with $s=\inf_{x \neq 0} \frac{\norm{\hat{x}}_\infty}{\norm{x}}$ we have
+\[
+\frac{1}{K} \leq s,
+\]
+hence $\norm{\hat{x}}_\infty \geq \frac{1}{K} \norm{x}$.
+Thus, if $x \in A$ then $\norm{\hat{x}}_\infty \geq \frac{1}{K}\norm{x}$, from which it follows that 
+$\Gamma:A \to C(\Delta)$ is one-to-one. Since $\Gamma$ is one-to-one, by Theorem \ref{gelfand} we get that $A$ is semisimple.
+Suppose that $\hat{x}_n \in \widehat{A}$ converges to $\hat{x} \in \widehat{A}$, i.e. $\norm{\hat{x}_n - \hat{x}}_\infty \to 0$, i.e.
+$\norm{\Gamma(x_n-x)}_\infty \to 0$. But
+$\norm{\Gamma(x_n-x)}_\infty \geq \frac{1}{K} \norm{x_n-x}$, so $\norm{x_n-x} \to 0$, showing that
+$\Gamma^{-1}:\widehat{A} \to A$ is bounded. Therefore $\Gamma:A \to \widehat{A}$ is bilipschitz,
+and so $\widehat{A}$ is a complete metric space, from which it follows that  $\widehat{A}$ is a closed subset of $C(\Delta)$.
+
+Suppose that $A$ is semisimple and that $\widehat{A}$ is a closed subset of $C(\Delta)$.
+The fact that $A$ is semisimple gives us by Theorem \ref{gelfand} that $\Gamma:A \to \widehat{A}$  is a bijection.
+The fact that $\widehat{A}$ is closed means that $\widehat{A}$ is a Banach algebra.
+Because $\Gamma:A \to \widehat{A}$ is continuous, linear, and a bijection, by the open mapping theorem\footnote{Walter Rudin, {\em Functional Analysis},
+second ed., p.~49, Corollary 2.12.}  it follows that there are positive real numbers $a,b$ such that if $x \in A$ then
+\[
+a \norm{x} \leq \norm{\Gamma x}_\infty \leq b \norm{x}.
+\]
+Then $\inf_{x \neq 0} \frac{\norm{\hat{x}}_\infty}{\norm{x}} \geq a$. By Lemma \ref{normlemma}, it follows that
+$\inf_{x \neq 0} \frac{\norm{x^2}}{\norm{x}^2} \geq a^2$. Hence, for all $x \neq 0$ we have $\norm{x}^2 \leq K \norm{x^2}$, with
+$K=\frac{1}{a^2}$.
+\end{proof}
+
+
+\section{L\textsuperscript{1}}
+\label{convolvesection}
+Let $M(\mathbb{R}^n)$ denote the set of all complex Borel measures on $\mathbb{R}^n$, 
+and let $S:\mathbb{R}^n \times \mathbb{R}^n \to \mathbb{R}^n$ be defined by $S(x,y)=x+y$.
+For $\mu_1, \mu_2 \in M(\mathbb{R}^n)$, we denote by $\mu_1 \times \mu_2$ the product measure on
+$\mathbb{R}^n \times \mathbb{R}^n$, and we define
+the {\em convolution of $\mu_1$ and $\mu_2$} to be $\mu_1 * \mu_2 = S_*(\mu_1 \times \mu_2)$, the pushforward of
+$\mu_1 \times \mu_2$ with respect to $S$. That is,
+if $E$ is a Borel subset of $\mathbb{R}^n$, then
+\begin{eqnarray*}
+(\mu_1 * \mu_2)(E) &=& (S_*(\mu_1 \times \mu_2))(E)\\
+&=& (\mu_1 \times \mu_2)(S^{-1}(E))\\
+& =& \int_{\mathbb{R}^n} \int_{\mathbb{R}^n} \chi_E(x+y) d\mu_1(x) d\mu_2(y).
+\end{eqnarray*}
+With convolution as multiplication, $M(\mathbb{R}^n)$ is an algebra.
+
+If $\mu \in M(\mathbb{R}^n)$, the {\em variation} of $\mu$ is the measure $|\mu| \in M(\mathbb{R}^n)$, where for a Borel subset $E$ of $\mathbb{R}^n$,
+we define $|\mu|(E)$ to be the supremum of $\sum_{A \in \pi} |\mu(A)|$ over all partitions $\pi$ of $E$ into finitely many disjoint Borel subsets.
+The {\em total variation of $\mu$} is $\norm{\mu}=|\mu|(\mathbb{R}^n)$. One proves that $\norm{\cdot}$ is a norm on $M(\mathbb{R}^n)$ and that
+with this norm, $M(\mathbb{R}^n)$ is a Banach algebra.\footnote{See
+Walter Rudin, {\em Real and Complex Analysis}, third ed., chapter 6.}
+ 
+
+Let $m_n$ be Lebesgue measure on $\mathbb{R}^n$,  let $\delta$ be the Dirac  measure on $\mathbb{R}^n$,
+and let $A$ be the set of those $\mu \in M(\mathbb{R}^n)$ for which there is some $f \in L^1(\mathbb{R}^n)$ and some $\alpha \in \mathbb{C}$
+with which
+\[
+d\mu = fdm_n + \alpha d\delta.
+\]
+One proves that $A$ is a Banach subalgebra of $M(\mathbb{R}^n)$. $A$ is a unital Banach algebra, with unity $\delta$.
+In particular, $A$ is a unital Banach algebra that contains
+the Banach algebra $L^1(\mathbb{R}^n)$.
+
+If $f+\alpha \delta, g+\beta \delta \in A$ (identifying $f \in L^1(\mathbb{R}^n)$ with the complex Borel measure whose
+Radon-Nikodym derivative with respect to $m_n$ is $f$), then
+\begin{equation}
+(f+\alpha \delta)*(g+\beta \delta) = (f*g+\beta f + \alpha g) + \alpha \beta \delta,
+\label{convolveproduct}
+\end{equation}
+where 
+\[
+(f*g)(x) = \int_{\mathbb{R}^n} f(y)g(x-y) dm_n(y).
+\]
+
+
+If $t \in \mathbb{R}^n$, let $e_t(x) = \exp(it\cdot x)$, and if $f \in L^1(\mathbb{R}^n)$, define $\hat{f}:\mathbb{R}^n \to \mathbb{C}$, 
+the {\em Fourier transform of $f$}, by
+\[
+\hat{f}(t) = \int_{\mathbb{R}^n} fe_{-t} dm_n, \qquad t \in \mathbb{R}^n.
+\]
+
+If $t \in \mathbb{R}^n$, define $h_t:A \to \mathbb{C}$ by 
+\[
+h_t(f+\alpha \delta) = \hat{f}(t)+\alpha, \qquad f+\alpha \delta \in A,
+\]
+and  define $h_\infty:A \to \mathbb{C}$ by
+\[
+h_\infty(f+\alpha \delta)=\alpha, \qquad f+\alpha \delta \in A.
+\]
+By \eqref{convolveproduct} it is apparent that  for each $t \in \mathbb{R}^n \cup \{\infty\}$, the map $h_t$ is a homomorphism of algebras.
+It can be proved that $\Delta=\{h_t: t \in \mathbb{R}^n\} \cup \{h_\infty\}$.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~285.}
+Let $\mathbb{R}^n \cup \{\infty\}$  be the one-point compactification of $\mathbb{R}^n$, and
+define $T:\mathbb{R}^n \cup \{\infty\} \to \Delta$ by $T(t)=h_t$, which is  a bijection.
+
+Suppose that $t_k \to t$ in $\mathbb{R}^n$. If $f+\alpha \delta \in A$, then because
+ $\hat{f}:\mathbb{R}^n \to \mathbb{C}$ is continuous, we have
+ \[
+ T(t_k)(f+\alpha \delta) = h_{t_k}(f+\alpha \delta) = \hat{f}(t_k)+\alpha \to \hat{f}(t)+\alpha = T(t)(f+\alpha \delta).
+ \]
+ Suppose that $t_k \to \infty$. If $f+\alpha \delta \in A$, then by the Riemann-Lebesgue lemma we have $\hat{f}(t_k) \to 0$, and hence
+ \[
+ T(t_k)(f+\alpha \delta) =  \hat{f}(t_k) + \alpha \to \alpha = h_\infty(f+\alpha \delta) = T(\infty)(f+\alpha \delta).
+ \]
+Therefore, $T:\mathbb{R}^n \cup \{\infty\} \to \Delta$ is continuous. 
+
+Suppose that $h_{t_k} \to h_t$ in $\Delta$, $t_k, t \in \mathbb{R}^n$. If $f+\alpha \delta \in A$, then
+$h_{t_k}(f+\alpha \delta) \to h_t(f+\alpha \delta)$. But $h_{t_k}(f+\alpha \delta)=\hat{f}(t_k) + \alpha$
+and $h_t(f+\alpha \delta)=\hat{f}(t)+\alpha$, so $\hat{f}(t_k) \to \hat{f}(t)$. Because this is true for all $f \in L^1(\mathbb{R}^n)$, it follows that
+$t_k \to t$.
+Suppose that $h_{t_k} \to h_\infty$ in $\Delta$, $t_k \in \mathbb{R}^n$. If $f+\alpha \delta \in A$, then
+$h_{t_k}(f+\alpha \delta) \to h_\infty(f+\alpha \delta)$, i.e.
+$\hat{f}(t_k)+\alpha \to \alpha$, i.e. $\hat{f}(t_k) \to 0$. Because this is true for all $f \in L^1(\mathbb{R}^n)$, it follows that $t_k \to \infty$.
+Therefore, $T^{-1}:\Delta \to \mathbb{R}^n \cup \{\infty\}$ is continuous, and so $\Delta$ is homeomorphic
+to the one-point compactification of $\mathbb{R}^n$.
+
+
+\section{Involutions}
+If $A$ is an algebra, an {\em involution of $A$} is a map $^*:A \to A$ satisfying
+\begin{enumerate}
+\item $(x+y)^* = x^*+y^*$
+\item $(\alpha x)^*=\overline{\alpha} x^*$
+\item $(xy)^*=y^*x^*$
+\item $x^{**}=x$.
+\end{enumerate}
+We say that $x$ is {\em self-adjoint} if $x^*=x$.
+
+Following Rudin, if $A$ is a Banach algebra with an involution $^*:A \to A$ satisfying 
+\[
+\norm{xx^*}=\norm{x}^2, \qquad x \in A,
+\]
+we say that $A$ is a {\em $B^*$-algebra}.
+
+The following theorem shows that a commutative unital $B^*$-algebra with maximal ideal space $\Delta$ is isomorphic as a $B^*$-algebra
+to $C(\Delta)$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~289, Theorem 11.18.} (An
+{\em isomorphism of $B^*$-algebras} is an isomorphism of Banach algebras that preserves the involution;
+the involution on $C(\Delta)$ is $(x \mapsto f(x)) \mapsto (x \mapsto \overline{f(x)})$.)
+
+
+\begin{theorem}[Gelfand-Naimark]
+If $A$ is a commutative unital $B^*$-algebra, then $\Gamma:A \to C(\Delta)$ is an isomorphism of Banach algebras, and if $x \in A$ then
+$\Gamma(x^*)=\overline{\Gamma(x)}$.
+\label{naimark}
+\end{theorem}
+\begin{proof}
+Let $u \in A$ be self-adjoint, let $h \in \Delta$, and let $h(u)=\alpha + i\beta$. For $t \in \mathbb{R}$, put $z=u+ite$. 
+We have
+\[
+h(z) = h(u)+h(ite) = \alpha+ i\beta + it = \alpha+i(\beta+t),
+\]
+and
+\[
+zz^*=(u+ite)(u-ite) = u^2+t^2 e,
+\]
+hence
+\[
+\alpha^2+(\beta+t)^2 = |h(z)|^2 \leq \norm{z}^2 = \norm{zz^*} =\norm{u^2+t^2e} \leq \norm{u}^2 + t^2,
+\]
+i.e.
+\[
+\alpha^2 + \beta^2 + 2 \beta t \leq \norm{u}^2.
+\]
+Because this is true for all $t \in \mathbb{R}$, it follows that $\beta=0$. Therefore, if $u \in A$ is self-adjoint then $h(u) \in \mathbb{R}$.
+
+Furthermore, if $x \in A$ then with $2u=x+x^*$ and $2v=i(x^*-x)$ we have $x=u+iv$ with $u$ and $v$ self-adjoint. Then
+$x^*=u-iv$, and so
+\[
+h(x^*)=h(u-iv)=h(u)-ih(v) = \overline{h(x)}.
+\]
+This shows that if $x \in A$ then $\Gamma(x^*)=\overline{\Gamma(x)}$.
+In particular, $\widehat{A}$ is closed under complex conjugation. If $h_1 \neq h_2$, then there is some $x \in A$ for which
+$h_1(x) \neq h_2(x)$, i.e. $\hat{x}(h_1) \neq \hat{x}(h_2)$, so $\widehat{A}$ separates points in $\Delta$. 
+Because $\widehat{A}$ is a  unital Banach algebra, it follows from
+the Stone-Weierstrass theorem that $\widehat{A}$ is dense in $C(\Delta)$. 
+
+Let $x \in A$. With $y=xx^*$, we have $y^*=(xx^*)^*=x^{**}x^*=xx^*=y$, from which it follows that $\norm{y^2}=\norm{y}^2$. 
+Assume by induction that $\norm{y^m}=\norm{y}^m$, for $m=2^n$. Then, as $(y^m)^*=y^m$,
+\[
+\norm{y^{2m}} = \norm{y^m y^m}= \norm{y^m (y^m)^*} = \norm{y^m}^2 = (\norm{y}^m)^2 = \norm{y}^{2m}.
+\]
+The spectral radius formula\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~253, Theorem 10.13.}
+gives
+\[
+\rho(y) = \lim \norm{y^n}^{1/n},
+\]
+and because $\norm{y^m}=\norm{y}^m$ for $m=2^n$, we have $\lim \norm{y^m}^{1/m} = \norm{y}$. Because the limit of this subsequence
+is $\norm{y}$, the limit of $\norm{y^n}^{1/n}$ is also $\norm{y}$, so we obtain
+\[
+\rho(y)=\norm{y}.
+\]
+But \eqref{spectralradius} tells us $\norm{\hat{y}}_\infty=\rho(y)$, so we have
+$\norm{\hat{y}}_\infty=\norm{y}$.
+Because $y=xx^*$, using $\Gamma(x^*)=\overline{\Gamma(x)}$ and the fact that $\Gamma$ is an algebra homomorphism, we get 
+\[
+\Gamma(y)=\Gamma(xx^*)=\Gamma(x)\Gamma(x^*)=\Gamma(x)\overline{\Gamma(x)}=|\Gamma(x)|^2.
+\]
+That is, $\hat{y}=|\hat{x}|^2$ and with $\norm{\hat{y}}_\infty=\norm{y}$ we obtain
+\[
+\norm{\hat{x}}_\infty^2 = \norm{\hat{y}}_\infty = \norm{y} = \norm{xx^*} = \norm{x}^2,
+\] 
+i.e.
+\[
+\norm{\hat{x}}_\infty = \norm{x}.
+\]
+ This shows that
+$\Gamma:A \to C(\Delta)$ is an isometry. In particular, $\Gamma$ maps closed sets to closed sets,
+so $\widehat{A}=\Gamma(A)$ is a closed subset of $C(\Delta)$. We have already established that
+$\widehat{A}$ is dense in $C(\Delta)$, so $\widehat{A}=C(\Delta)$. The fact that 
+$\Gamma$ is an isometry yields that $\Gamma$ is one-to-one, and the fact that
+$\widehat{A}=C(\Delta)$ means that
+that $\Gamma$ is onto, hence $\Gamma$ is a bijection, and therefore it is an isomorphism of algebras. Because
+$\Gamma$ is an isometry, it is an isomorphism of Banach algebras.
+\end{proof}
+
+
+The following theorem states conditions under which a self-adjoint element of a  
+unital Banach algebra with an involution has a square root.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~294, Theorem 11.26.}
+
+
+\begin{theorem}
+Let $A$ be a  unital Banach algebra with an involution $^*:A \to A$. If $x \in A$ is self-adjoint
+and $\sigma(x)$ contains no real $\lambda$ with $\lambda \leq 0$, then there is some self-adjoint $y \in A$ satisfying
+$y^2=x$.
+\label{squareroot}
+\end{theorem}
+
+If $A$ is a Banach algebra and $x \in A$, we say that $x \in A$ is {\em normal} if $xx^*=x^*x$. If $A$ is a Banach algebra with involution $^*:A \to A$, 
+by $x \geq 0$ we mean that $x$ is self-adjoint and $\sigma(x) \subseteq [0,\infty)$, and we say that $x$ is {\em positive}.
+The following theorem states basic facts about the spectrum of elements of a unital $B^*$-algebra.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~294, Theorem 11.28.}
+
+\begin{theorem}
+If $A$ is a unital $B^*$-algebra, then:
+\begin{enumerate}
+\item If $x$ is self-adjoint, then $\sigma(x) \subseteq \mathbb{R}$.
+\item If $x$ is normal, then $\rho(x)=\norm{x}$.
+\item If $x \in A$, then $\rho(xx^*)=\norm{x}^2$.
+\item If $x \geq 0$ and $y \geq 0$, then $x+y \geq 0$.
+\item If $x \in A$, then $xx^* \geq 0$.
+\item If $x \in A$, then $e+xx^*$ is invertible.
+\end{enumerate}
+\label{Balgebra}
+\end{theorem}
+
+
+\section{Positive linear functionals}
+Suppose that $A$ is a Banach algebra with an involution $^*:A \to A$. If $F:A \to \mathbb{C}$ is a linear map such that $F(xx^*)$ is real and  $\geq 0$ for all $x \in A$,
+we say that $F$ is a {\em positive linear functional}. In particular, if $h \in \Delta$ and $x \in A$, then from Theorem \ref{naimark} we have
+$h(x^*)=\overline{h(x)}$, and so $h(xx^*)=h(x)h(x^*)=h(x)\overline{h(x)}=|h(x)|^2 \geq 0$. Thus, the elements of $\Delta$ are positive linear functionals.
+
+
+We shall use the following theorem to prove the theorem after it.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~137, Theorem 5.20.}
+
+\begin{theorem}
+If $X$ is a real or complex Banach space, $X_1$ and $X_2$ are closed subspaces of $X$, and $X=X_1+X_2$, then there is some
+$\gamma<\infty$ such that for every $x \in X$ there are $x_1 \in X_1, x_2 \in X_2$ satisfying $x=x_1+x_2$ and
+\[
+\norm{x_1}+\norm{x_2} \leq \gamma\norm{x}.
+\]
+\label{520}
+\end{theorem}
+
+The following theorem establishes some basic properties of 
+positive linear functionals on a unital Banach algebra with an involution.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~296, Theorem 11.31.}
+
+\begin{theorem}
+Suppose that $A$ is a unital Banach algebra with an involution $^*:A \to A$. 
+If $F:A \to \mathbb{C}$ is a positive linear functional, then:
+\begin{enumerate}
+\item $F(x^*)=\overline{F(x)}$.
+\item $|F(xy^*)|^2 \leq F(xx^*)F(yy^*)$.
+\item $|F(x)|^2 \leq F(e)F(xx^*) \leq F(e)^2 \rho(xx^*)$.
+\item If $x$ is normal, then $|F(x)| \leq F(e)\rho(x)$.
+\item If $A$ is commutative, then $\norm{F}=F(e)$. 
+\item If there is some $\beta$ such that $\norm{x^*} \leq 
+\beta \norm{x}$ for all $x \in A$, then $\norm{F} \leq \beta^{1/2} F(e)$.
+\item $F$ is a bounded linear map. 
+\end{enumerate}
+\label{positivefunctional}
+\end{theorem}
+\begin{proof}
+Suppose that $x,y \in A$.
+For any $\alpha \in \mathbb{C}$, we have on the one hand $F((x+\alpha y)(x+\alpha y)^*) \geq 0$, and on the other hand
+\[
+F((x+\alpha y)(x+\alpha y)^*) = F((x+\alpha y)(x^*+\overline{\alpha}y^*))  = 
+F(xx^*+\overline{\alpha}xy^*+\alpha yx^*+|\alpha|^2 yy^*).
+\]
+Therefore,
+\begin{equation}
+F(xx^*) + \overline{\alpha}F(xy^*)+\alpha F(yx^*)+|\alpha|^2 F(yy^*) \geq 0.
+\label{alpha}
+\end{equation}
+Applying \eqref{alpha} with $\alpha=1$ gives
+\[
+F(xx^*) + F(xy^*)+F(yx^*)+F(yy^*) \geq 0.
+\]
+In particular, this expression is real, and because $F(xx^*)$ and $F(yy^*)$ are real we get that
+$F(xy^*)+F(yx^*)$ is real, so $\Im F(yx^*)=-\Im F(xy^*)$.
+Applying \eqref{alpha} with $\alpha=i$ gives
+\[
+F(xx^*) -iF(xy^*)+iF(yx^*)+F(yy^*) \geq 0.
+\]
+In particular, this expression is real, and so $-iF(xy^*)+iF(yx^*)$ is real, i.e. $F(xy^*)-F(yx^*)$ is imaginary, so $\Re F(yx^*)=\Re F(xy^*)$. Therefore
+$F(yx^*)=\overline{F(xy^*)}$. Using $y=e$ yields
+\[
+F(x^*)=\overline{F(x)}.
+\]
+
+Suppose that $x,y \in A$ and that $F(xy^*) \neq 0$. For any $t \in \mathbb{R}$, using \eqref{alpha} with $\alpha = \frac{t}{|F(xy^*)|} F(xy^*)$ gives
+\[
+F(xx^*) +  \frac{t}{|F(xy^*)|}  \overline{F(xy^*)} F(xy^*) +  \frac{t}{|F(xy^*)|} F(xy^*) F(yx^*)+ t^2 F(yy^*) \geq 0,
+\]
+i.e.
+\[
+F(xx^*) + t |F(xy^*)| +   \frac{t}{|F(xy^*)|} F(xy^*) F(yx^*) + t^2 F(yy^*) \geq 0,
+\]
+and as $F(yx^*)=F((xy^*)^*) = \overline{F(xy^*)}$, we have
+\[
+F(xx^*)+2t|F(xy^*)| + t^2F(yy^*) \geq 0.
+\]
+For $t=-\frac{|F(xy^*)|}{F(yy^*)}$ this is
+\[
+F(xx^*)-2\frac{|F(xy^*)|^2}{F(yy^*)} + \frac{|F(xy^*)|^2}{F(yy^*)} \geq 0,
+\]
+i.e.
+\[
+|F(xy^*)|^2 \leq F(xx^*)F(yy^*).
+\]
+
+Suppose that $x \in A$. Because $xe^*=x$ and $ee^*=e$, we have 
+\[
+|F(x)|^2 \leq F(e)F(xx^*).
+\]
+We shall prove that $F(xx^*) \leq F(e) \rho(xx^*)$.
+Let $t>\rho(xx^*)$. It then follows  that $\sigma(te-xx^*)$ is contained in the open right 
+half-plane, and thus by Theorem \ref{squareroot} there is some self-adjoint $u \in A$ satisfying $u^2=te-xx^*$. Then
+\[
+F(te-xx^*) = F(u^2) = F(uu^*) \geq 0,
+\]
+so
+\[
+F(xx^*) \leq t F(e).
+\]
+Because this is true for all $t>\rho(xx^*)$, we obtain
+\[
+F(xx^*) \leq F(e) \rho(xx^*).
+\]
+
+Suppose that $x$ is normal. It is a fact that if $x$ and $y$ belong to a unital Banach algebra and $xy=yx$, then $\sigma(xy)
+\subseteq \sigma(x)\sigma(y)$.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~293, Theorem 11.23.}
+Thus $\sigma(xx^*) \subseteq \sigma(x)\sigma(x^*)$, from which we get 
+\[
+\rho(xx^*) \leq \rho(x) \rho(x^*).
+\]
+It is a fact that $\sigma(x^*)=\overline{\sigma(x)}$,\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~288, Theorem 11.15.}, so we have $\rho(x)=\rho(x^*)$, and thus
+\[
+\rho(xx^*) \leq \rho(x)^2.
+\]
+But $|F(x)|^2 \leq F(e)^2 \rho(xx^*)$, so we have $|F(x)|^2 \leq F(e)^2 \rho(x)^2$, i.e.
+\[
+|F(x)| \leq F(e) \rho(x).
+\] 
+
+Suppose that $A$ is commutative, and let $x \in A$. Since $A$ is commutative, $x$ is normal and hence
+we have $|F(x)| \leq F(e) \rho(x)$, and as always we have $\rho(x) \leq \norm{x}$.
+Therefore, for every $x \in A$ we have
+\[
+|F(x)| \leq F(e) \norm{x}.
+\]
+This implies that $\norm{F} \leq F(e)$, and because the above inequality is an equality for $x=e$, we have
+$\norm{F}=F(e)$. 
+
+Suppose that there is some $\beta$ such that $\norm{x^*} \leq \beta \norm{x}$ for all $x \in A$. We have
+$\rho(xx^*) \leq \norm{xx^*} \leq  \norm{x} \norm{x^*} \leq \beta \norm{x}^2$. (We merely stipulated that $A$ is a  unital Banach algebra
+with an involution; if we had demanded that $A$ be a $B^*$-algebra, then we would have $\norm{xx^*}=\norm{x}\norm{x^*}=\norm{x}^2$.)
+Using $|F(x)|^2 \leq F(e)^2 \rho(xx^*)$ then gives us $|F(x)|^2 \leq \beta F(e)^2 \norm{x}^2$, hence
+\[
+|F(x)| \leq \beta^{1/2} F(e) \norm{x}.
+\]
+
+If $F(e)=0$, then $|F(x)|^2 \leq 0$ for all $x \in A$, and hence $F=0$, which indeed is bounded.
+Otherwise, $F(e)>0$, and $F$ is bounded if and only if $\frac{1}{F(e)}F$ is bounded.
+Therefore, to prove that $F$ is bounded it suffices to prove that $F$ is bounded in the case where
+$F(e)=1$.
+
+Let $H$ be the set of all self-adjoint elements of $A$. $H$ and $iH$ are real vector spaces.
+For any $x \in A$, defining $2u=x+x^*$ and $2v=i(x^*-x)$, we have $x=u+iv$, and $u,v$ are self-adjoint. It follows that
+\[
+A=H+iH.
+\]
+Because the elements
+of $H$ are self-adjoint, the restriction of $F$ to $H$ is a real-linear map $H \to \mathbb{R}$.
+For $u \in H$, because $u$ is self-adjoint it is in particular normal, and so $|F(x)| \leq F(e) \rho(x) \leq F(e) \norm{x} = \norm{x}$, because $F(e)=1$.  Hence
+the restriction of $F$ to $H$ is a real-linear map $H \to \mathbb{R}$ with norm $1$, and therefore there is a unique bounded real-linear map $\Phi:\overline{H} \to \mathbb{R}$ whose restriction to $H$ is equal to the restriction of $F$ to $H$, and $\norm{\Phi}=1$.
+
+Suppose that $y \in \overline{H} \cap i\overline{H}$. There are $u_n \in H$ with $u_n \to y$ and there are $v_n \in H$ with
+$iv_n \to y$. Then $u_n^2 \to y^2$ and $-v_n^2 \to y$, or $v_n^2 \to -y^2$. Because $|F(u_n)|^2 \leq F(e)F(u_nu_n^*)=
+F(u_n^2)$, we have 
+\[
+|F(u_n)|^2 \leq F(u_n^2) \leq F(u_n^2+v_n^2).
+\]
+Because $u_n$ and $v_n$ are self-adjoint, $u_n^2+v_n^2$ is normal and hence
+\[
+|F(u_n^2+v_n^2)| \leq F(e)\rho(u_n^2+v_n^2) = \rho(u_n^2+v_n^2) \leq \norm{u_n^2+v_n^2},
+\]
+and so we have
+\[
+|F(u_n)|^2 \leq \norm{u_n^2+v_n^2}.
+\]
+But $u_n^2 \to y$ and $v_n^2 \to -y$, so $\norm{u_n^2+v_n^2} \to \norm{y-y}=0$. Therefore, $F(u_n) \to 0$, and so
+\[
+\Phi(y) = \lim F(u_n) \to 0.
+\]
+That is, if $y \in \overline{H} \cap i\overline{H}$, then $F(y)=0$.
+
+Because $A=H+iH$, certainly $A=\overline{H}+i\overline{H}$, so by Theorem \ref{520} there is some $\gamma<\infty$ such
+that for all $x \in A$, there are $x_1 \in \overline{H}$ and $x_2 \in \overline{H}$  satisfying
+\[
+x=x_1+ ix_2, \qquad \norm{x_1}+\norm{x_2} \leq \gamma \norm{x}.
+\]
+Let $x \in A$ and let $x=x_1+ix_2$, where $x_1,x_2$ satisfy the above, and let
+$x=u+iv$ with $u,v \in H$, namely  $2u=x+x^*$ and $2v=i(x^*-x)$.
+Supposing that $x_1-u$ and $x_2-v \in \overline{H} \cap i\overline{H}$, which Rudin asserts but whose truth is not apparent to me,
+we obtain $F(x_1-u)=0$ and $F(x_2-v)=0$, or $F(x_1)=F(u)$ and $F(x_2)=F(v)$.
+Then,
+\[
+F(x)=F(u+iv)=F(u)+iF(v) = F(x_1)+iF(x_2) = \Phi(x_1)+i\Phi(x_2),
+\]
+and therefore, because $\norm{\Phi}=1$ and because $\norm{x_1}+\norm{x_2} \leq \gamma\norm{x}$,
+\[
+|F(x)| \leq |\Phi(x_1)+i\Phi(x_2)| \leq |\Phi(x_1)|+|\Phi(x_2)| \leq \norm{x_1}+\norm{x_2}  \leq \gamma \norm{x},
+\]
+showing that $\norm{F} \leq \gamma$, and in particular that $F$ is bounded.
+\end{proof}
+
+
+
+
+\section{The Riesz-Markov theorem and extreme points}
+We say that a positive Borel measure $\mu$ on a compact Hausdorff space $X$ is {\em regular} if
+for every Borel subset $E$ of $X$ we have
+\[
+\mu(E) = \sup \{\mu(F): \textrm{$F$ is compact and $F \subseteq E$}\}
+\]
+and
+\[
+\mu(E) = \inf\{ \mu(G): \textrm{$G$ is open and $E \subseteq G$}\}.
+\]
+We say that a complex Borel measure $\mu$ on a compact Hausdorff space is regular if the positive Borel measure
+$|\mu|$ is regular, and we write $\norm{\mu}=|\mu|(X)$.
+The following is the Riesz-Markov theorem, stated for complex Borel measures on a compact Hausdorff space.\footnote{Walter Rudin, {\em Real and Complex
+Analysis}, third ed., p.~130, Theorem 6.19.}
+
+\begin{theorem}[Riesz-Markov]
+Suppose that $X$ is a compact Hausdorff space. If $\Lambda$ is a bounded linear functional on $C(X)$, then there is one and only one regular complex Borel measure
+$\mu$ on $X$ satisfying
+\[
+\Lambda f = \int_X f d\mu, \qquad f \in C(X).
+\]
+This measure $\mu$ satisfies $\norm{\mu}=\norm{\Lambda}$.
+\label{riesz}
+\end{theorem}
+
+The following theorem uses the Riesz-Markov theorem to define a correspondence
+between positive linear functionals on a commutative unital Banach algebra with a symmetric involution
+and regular positive  Borel measures on its maximal ideal space.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~299, Theorem 11.33.}
+
+
+\begin{theorem}
+Suppose that $A$ is a commutative unital Banach algebra with an involution $^*:A \to A$ satisfying 
+\begin{equation}
+h(x^*)=\overline{h(x)}, \qquad x \in A, h \in \Delta.
+\label{symmetric}
+\end{equation}
+Let $K$ be the set of all positive linear functionals $F:A \to \mathbb{C}$ satisfying $F(e) \leq 1$, and let
+$M$ be the set of all regular positive  Borel measures $\mu$ on $\Delta$ satisfying $\mu(\Delta) \leq 1$. 
+$K$ and $M$ are convex sets.
+If $\mu \in M$, then $F:A \to \mathbb{C}$ defined by
+\[
+F_\mu(x) = \int_\Delta \hat{x} d\mu, \qquad x \in A,
+\]
+belongs to $K$, and this map $\mu \mapsto F_\mu$ is an isometric bijection $M \to K$.
+\label{bijection}
+\end{theorem}
+\begin{proof}
+If $F_1,F_2 \in K$ and $0 \leq t \leq 1$, then $(1-t)F_1+tF_2$ is linear, and it is straightforward to check that it is positive. Moreover,
+$((1-t)F_1+tF_2)(e) = (1-t)F_1(e)+tF_2(e) \leq (1-t)+t =1$, so $(1-t)F_1+tF_2 \in K$. Therefore $K$ is a convex set. 
+
+Suppose that $\mu_1,\mu_2 \in M$, that $a_1,a_2$ are nonnegative real numbers, and let $\mu=a_1\mu_1+a_2\mu_2$.
+If $E$ is a Borel subset of $\Delta$, then for any $\epsilon>0$ 
+there are compact
+subsets $F_1,F_2$ of $\Delta$ such that $\mu_1(E) < \mu_1(F_1)-\epsilon$ and $\mu_2(E)<\mu_2(F_2)-\epsilon$.
+With $F=F_1 \cup F_2$, we have
+\begin{eqnarray*}
+\mu(F) &=&a_1\mu_1(F)+a_2\mu_2(F)\\
+&\geq&a_1\mu_1(F_1)+a_2\mu_2(F_2)\\
+&\geq&a_1(\mu_1(E)+\epsilon)+a_2(\mu_2(E)+\epsilon)\\
+&=&\mu(E)+(a_1+a_2)\epsilon.
+\end{eqnarray*}
+It follows that $\mu(E) = \sup\{\mu(F): \textrm{$F$ is compact and $F \subseteq E$}\}$. If $E$ is a Borel subset of $\Delta$, then for any $\epsilon>0$ there
+are open subsets $G_1,G_2$ of $\Delta$ such that $\mu_1(E)>\mu_1(G_1)-\epsilon$ and $\mu_2(E)>\mu_2(G_2)-\epsilon$.
+With $G=G_1 \cap G_2$, we have
+\begin{eqnarray*}
+\mu(G)&=&a_1\mu_1(G)+a_2\mu_2(G)\\
+&\leq&a_1\mu_1(G_1)+a_2\mu_2(G_2)\\
+&<&a_1(\mu_1(E)+\epsilon)+a_2(\mu_2(E)+\epsilon)\\
+&=&\mu(E)+(a_1+a_2)\epsilon.
+\end{eqnarray*}
+It follows that $\mu(E)=\inf\{\mu(G): \textrm{$G$ is open and $E \subseteq G$}\}$. 
+Therefore, $\mu=a_1\mu_1+a_2\mu_2$ is a regular positive Borel
+measure. In particular, if $0 \leq t \leq 1$ and $a_1=1-t$, $a_2=t$, then $\mu$ is a regular positive Borel measure.
+Finally, for $\mu=(1-t)\mu_1+t\mu_2$, $0 \leq t \leq 1$, we have, because $\mu_1(\Delta) \leq 1$ and $\mu_2(\Delta) \leq 1$, 
+\[
+\mu(\Delta) = (1-t)\mu_1(\Delta)+t\mu_2(\Delta) \leq (1-t) +t =1,
+\]
+so $\mu \in M$, showing that $M$ is a convex set.
+
+
+Let $\mu \in M$. It is apparent that $F_\mu:A \to \mathbb{C}$ is linear. For $x \in A$, we have $\Gamma(xx^*)=\Gamma(x)\Gamma(x^*)$, and as $\Gamma(x^*)=\overline{\Gamma(x)}$ by \eqref{symmetric}, we get
+$\Gamma(xx^*)=|\Gamma(x)|^2$. As $|\Gamma(x)|^2(h) \geq 0$ for all $h \in \Delta$, we have
+\[
+F_\mu(xx^*) = \int_\Delta \Gamma(xx^*) d\mu = \int_\Delta |\Gamma(x)|^2 d\mu \geq 0,
+\]
+showing that $F_\mu$ is a positive linear functional. Furthermore, $\hat{e}(h)=h(e)=1$ for all $h \in \Delta$, so
+\[
+F_\mu(e)=\mu(\Delta) \leq 1,
+\]
+showing that $F_\mu \in K$.
+
+If $x \in \rad A$, then $\rho(x)=0$ by \eqref{spectralradius}, and so $F(x)=0$ by Theorem \ref{positivefunctional}. We define $\widehat{F}:\widehat{A} \to \mathbb{C}$
+\[
+\widehat{F}(\hat{x})=F(x);
+\]
+this makes sense because if $\hat{x}=\hat{y}$ then $\Gamma(x-y)=0$, and so by Theorem \ref{gelfand} we have $x-y \in \rad A$ and hence $F(x-y)=0$, i.e.
+so $F(x)=F(y)$. For $x \in A$, $x$ is normal because $A$ is commutative so we have by Theorem \ref{positivefunctional} that
+\[
+|\widehat{F}(\hat{x})| = |F(x)| \leq F(e)\rho(x)
+\]
+and by \eqref{spectralradius} we have $\rho(x)=\norm{\hat{x}}_\infty$, so 
+\[
+|\widehat{F}(\hat{x})| \leq F(e) \norm{\hat{x}}_\infty.
+\]
+As $\widehat{F}(\hat{e}) = F(e)$, it follows that $\norm{\widehat{F}}=F(e)$.
+By \eqref{symmetric} and because $\widehat{A}$ separates points in $\Delta$,
+applying the Stone-Weierstrass we obtain that $\widehat{A}$ is dense in $C(\Delta)$. 
+Because $\widehat{F}$ is a continuous linear
+functional on the dense subspace $\widehat{A}$ of $C(\Delta)$, there is a unique continuous linear functional
+$\Lambda$ on $C(\Delta)$ such that 
+$\Lambda=\widehat{F}$ on $\widehat{A}$, and $\norm{\Lambda}=\norm{\widehat{F}}$.
+Applying Theorem \ref{riesz}, there is one and only one regular complex Borel measure $\mu$ on $X$ that satisfies
+\begin{equation}
+\Lambda f = \int_\Delta f d\mu, \qquad f \in C(\Delta),
+\label{rieszformula}
+\end{equation}
+and $\norm{\mu}=\norm{\Lambda}=\norm{\widehat{F}}=F(e)$. It follows that $\mu \mapsto F_\mu$ is one-to-one. 
+Because $\hat{e}(h)=1$ for all $h \in \Delta$,
+\[
+\mu(\Delta) = \int_\Delta \chi_\Delta d\mu = \int_\Delta \hat{e} d\mu = \Lambda \hat{e} = \widehat{F}(\hat{e}) = F(e) = \norm{\mu} = |\mu|(\Delta).
+\]
+The fact that $\mu(\Delta)=|\mu|(\Delta)$ implies that $\mu$ is a positive measure. The above equalities also state $\mu(\Delta)=F(e)$, and
+since $F \in K$ we have $F(e) \leq 1$, hence $\mu(\Delta) \leq 1$. Therefore, $\mu \in M$. For $x \in A$, as $\hat{x} \in C(\Delta)$ we have
+ by \eqref{rieszformula} that
+\[
+F_\mu(x) = \int_\Delta \hat{x} d\mu = \Lambda \hat{x} =\widehat{F}(\hat{x}) = F(x),
+\]
+showing that $F=F_\mu$. This shows that $\mu \mapsto F_\mu$ is onto, and therefore $\mu \mapsto F_\mu$ is a bijection
+$M \to K$.
+\end{proof}
+
+Because the map $\mu \mapsto F_\mu$ in the above theorem is an isometric bijection $M \to K$, it follows that that $\mu$ is an extreme point of $M$ if and only if
+$F_\mu$ is an extreme point of $K$. 
+
+It is a fact that the set of extreme points of the set of regular Borel probability measures on a compact Hausdorff space $X$
+is $\{\delta_x: x \in X\}$.\footnote{Barry Simon, {\em Convexity: An Analytic Viewpoint}, p.~128, Example 8.16.} Given this, one proves that the set of extreme points
+of $M$ is $\{0\} \cup \{\delta_h: h\in \Delta\}$. For $x \in A$, $F_0(x)=0$, i.e. $F_0=0$. For $h \in \Delta$ and $x \in A$,
+\[
+F_{\delta_h}(x) = \int_\Delta \hat{x} d\delta_h = \hat{x}(h) = h(x),
+\]
+so $F_{\delta_h}=h$. Therefore, the extreme points of $K$ are $\{0\} \cup \Delta$, that is, the set of algebra homomorphisms $A \to \mathbb{C}$.
+
+\begin{corollary}
+Suppose that $A$ is a commutative unital Banach algebra with involution $^*:A \to A$ satisfying 
+\[
+h(x^*)=\overline{h(x)}, \qquad x \in A, h \in \Delta.
+\]
+If $K$ is the set of all positive linear functionals $F:A \to \mathbb{C}$ satisfying $F(e) \leq 1$, then
+\[
+\ext K=\{0\} \cup \Delta.
+\]
+\end{corollary}
+
+Moreover, it is straightforward to check that the set $K$ in the above corollary is a weak-* closed subset of $A^*$: if $F_i \in K$ is a net that weak-* converges
+to $\Lambda \in A^*$, one checks that $\Lambda (xx^*) \geq 0$ for all $x \in A$ and that $\Lambda e \leq 1$. By the Banach-Alaoglu theorem, the set
+$B=\{\Lambda \in A^*: \norm{\Lambda} \leq 1\}$ is weak-* compact, and if $F \in K$ then $\norm{F} = F(e)$ by Theorem \ref{positivefunctional} and
+$F(e) \leq 1$, so $K \subseteq B$. Hence, $K$ is a weak-* compact subset of $A^*$. Therefore, the Krein-Milman
+theorem\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~75, Theorem 3.23.} tells us that $K$ is equal to the weak-* closure of the convex
+hull of the set of its extreme points, and by the above corollary this means that $K$ is equal to the weak-* closure of
+the convex hull of $\{0\} \cup \Delta$. 
+
+
+
+\section{Positive definite functions}
+A function $\phi:\mathbb{R}^n \to \mathbb{C}$ is said to be {\em positive-definite} if $r \geq 1$, $x_1,\ldots,x_r \in \mathbb{R}^n,c_1,\ldots,c_r \in \mathbb{C}$ imply
+that
+\[
+\sum_{i,j=1}^r c_i \overline{c_j} \phi(x_i-x_j) \geq 0;
+\]
+in particular, for $\phi$ to be positive-definite demands that the left-hand side of this inequality is real.
+
+A positive-definite function need not be measurable. For example, $\mathbb{R}$ is a vector space over $\mathbb{Q}$,
+and if $\psi:\mathbb{R} \to \mathbb{R}$ is a vector space automorphism of $\mathbb{R}$ over $\mathbb{Q}$, one proves that
+$x \mapsto e^{i\psi(x)}$ is a positive-definite function $\mathbb{R} \to \mathbb{C}$, and that there are $\psi$
+for which $x \mapsto e^{i\psi(x)}$  is not measurable.
+
+The following theorem states some basic facts about positive-definite functions.    
+More material on positive-definite functions is presented in Bogachev; for example, 
+if $\phi:\mathbb{R}^n \to \mathbb{C}$ is a measurable positive-definite function, then there is a continuous
+positive-definite function $\mathbb{R}^n \to \mathbb{C}$ that is equal to $\phi$ almost everywhere.\footnote{Vladimir I. Bogachev, {\em Measure Theory}, vol. 1, p.~221, Theorem 3.10.20. See also Anthony W. Knapp, {\em Basic Real Analysis}, p.~406.}
+
+
+\begin{theorem}
+If $\phi:\mathbb{R}^n \to \mathbb{C}$ is positive-definite, then
+\begin{equation}
+\phi(0) \geq 0,
+\label{phi0}
+\end{equation}
+and for all $x \in \mathbb{R}^n$ we have
+\begin{equation}
+\overline{\phi(x)}=\phi(-x)
+\label{conjugatephi}
+\end{equation}
+and
+\begin{equation}
+|\phi(x)| \leq \phi(0).
+\label{phix}
+\end{equation}
+\end{theorem}
+\begin{proof}
+Using $r=1$ and $c_1=1$, we have for all $x_1 \in \mathbb{R}^n$ that
+$\phi(x_1-x_1) \geq 0$,
+i.e. $\phi(0) \geq 0$.
+
+Using $r=2$,
+for $x_1,x_2 \in \mathbb{R}^n$
+and $c_1,c_2 \in \mathbb{C}$ we have
+\[
+c_1\overline{c_1}\phi(x_1-x_1)+c_1\overline{c_2}\phi(x_1-x_2)+c_2\overline{c_1}\phi(x_2-x_1)
++c_2\overline{c_2} \phi(x_2-x_2) \geq 0.
+\]
+Take $x_1=x$ and $x_2=0$, with which
+\[
+|c_1|^2 \phi(0) + c_1\overline{c_2} \phi(x)+c_2\overline{c_1}\phi(-x)+|c_2|^2 \phi(0) \geq 0;
+\]
+in particular, the left-hand side is real, and because $\phi(0)$ is real by \eqref{phi0}, this implies that
+$c_1\overline{c_2} \phi(x)+c_2\overline{c_1}\phi(-x)$ is real. That is, it is equal to its complex conjugate:
+\[
+c_1\overline{c_2} \phi(x)+c_2\overline{c_1}\phi(-x) = \overline{c_1}c_2 \overline{\phi(x)}+\overline{c_2}c_1\overline{\phi(-x)}.
+\]
+The fact that this holds  every $c_1,c_2 \in \mathbb{C}$ implies that $\overline{\phi(x)} = \phi(-x)$. 
+
+Again using that 
+\[
+c_1\overline{c_1}\phi(x_1-x_1)+c_1\overline{c_2}\phi(x_1-x_2)+c_2\overline{c_1}\phi(x_2-x_1)
++c_2\overline{c_2} \phi(x_2-x_2) \geq 0,
+\]
+ with $x_1=x,x_2=0$ and $c_2=1$ we get
+\[
+|c_1|^2\phi(0) +c_1\phi(x)+\overline{c_1}\phi(-x)+\phi(0) \geq 0.
+\]
+Applying \eqref{conjugatephi} gives
+\[
+|c_1|^2 \phi(0)+c_1\phi(x)+\overline{c_1 \phi(x)} + \phi(0) \geq 0.
+\]
+For $c_1 \in \mathbb{C}$ such that $|c_1|=1$,
+\[
+2\phi(0) + 2\Re \left( c_1 \phi(x) \right) \geq 0,
+\]
+or
+\[
+-\Re \left( c_1 \phi(x) \right) \leq \phi(0).
+\]
+Thus, taking $c_1 \in \mathbb{C}$ such that $|c_1|=1$ and for which $-\Re \left( c_1 \phi(x) \right) = |\phi(x)|$,
+we get $|\phi(x)| \leq \phi(0)$. 
+\end{proof}
+
+
+The following lemma about positive-definite functions follows a proof in Bogachev.\footnote{Vladimir I. Bogachev, {\em Measure Theory}, vol. 1, p.~221, Lemma 3.10.19.}
+
+\begin{lemma}
+If $\phi:\mathbb{R}^n \to \mathbb{C}$ is a measurable positive-definite function and $f \in L^1(\mathbb{R}^n)$ is nonnegative, then
+\[
+\int_{\mathbb{R}^n} \int_{\mathbb{R}^n} \phi(x-y) f(x)f(y)dm_n(x)dm_n(y) \geq 0.
+\]
+\label{rlemma}
+\end{lemma}
+\begin{proof}
+For  $r \geq 2$ and for any $x_1,\ldots,x_r$ and  $c_1=1,\ldots,c_r=1$, we have
+\[
+\sum_{j,k=1}^r \phi(x_j-x_k) \geq 0,
+\]
+or
+\[
+r\phi(0) + \sum_{j \neq k} \phi(x_j-x_k) \geq 0.
+\]
+By \eqref{phix}, $\phi$ is bounded. It follows that we can integrate both sides of the above inequality over $(\mathbb{R}^n)^r$ with respect to the positive measure
+\[
+f(x_1)\cdots f(x_r) dm_n(x_1) \cdots dm_n(x_r).
+\]
+ Writing 
+\[
+I=\int_{\mathbb{R}^n} f(x) dm_n(x),
+\]
+we obtain
+\[
+r\phi(0) I^r  + \sum_{j \neq k} \int_{\mathbb{R}^n} \cdots \int_{\mathbb{R}^n} \phi(x_j-x_k) f(x_1)\cdots
+f(x_r) dm_n(x_1)\cdots dm_n(x_r) \geq 0,
+\]
+and so, writing
+\[
+J=\int_{\mathbb{R}^n} \int_{\mathbb{R}^n} \phi(x-y) f(x)f(y) dm_n(x)dm_n(y),
+\]
+we have
+\[
+r\phi(0)I^r +\sum_{j \neq k} JI^{r-2} \geq 0,
+\]
+or
+\[
+r\phi(0)I^r +r(r-1) JI^{r-2} \geq 0.
+\]
+If $I=0$, then because $f$ is nonnegative it follows that $f$ is $0$ almost everywhere, in which case $J=0$, so the claim is true. If $I>0$, then dividing by $r(r-1) I^{r-2}$ we obtain
+\[
+\frac{1}{r-1} \phi(0)I^2 +J \geq 0.
+\]
+This inequality holds for all $r \geq 2$, so taking $r \to \infty$ yields
+\[
+J \geq 0,
+\]
+which is the claim.
+\end{proof}
+
+For $f,g \in L^1(\mathbb{R}^n)$,
+\[
+(f*g)(x) = \int_{\mathbb{R}^n} f(y)g(x-y) dm_n(y).
+\]
+The {\em support} of a function $f:\mathbb{R}^n \to \mathbb{C}$, denoted $\supp f$, is the closure of the set $\{x \in \mathbb{R}^n: f(x) \neq 0\}$.
+We denote by $C_c(\mathbb{R}^n)$ the set of all continuous functions $f:\mathbb{R}^n \to \mathbb{C}$ such that
+$\supp f$ is a compact set. It is straightforward to check that an element of $C_c(\mathbb{R}^n)$ is uniformly continuous on
+$\mathbb{R}^n$. The following theorem is similar to the previous lemma, but applies to functions that need not be
+nonnegative.\footnote{Gerald B. Folland, {\em A Course in Abstract Harmonic Analysis}, p.~85, Proposition 3.35.}
+
+\begin{theorem}
+For $f:\mathbb{R}^n \to \mathbb{C}$, define $\widetilde{f}:\mathbb{R}^n \to \mathbb{C}$ by $\widetilde{f}(x)=\overline{f(-x)}$. 
+If $\phi:\mathbb{R}^n \to \mathbb{C}$ is a continuous positive-definite function, then for all $f \in C_c(\mathbb{R}^n)$, we have
+\[
+\int_{\mathbb{R}^n} (f*\widetilde{f})\psi \geq 0.
+\]
+\label{integralinequality}
+\end{theorem}
+
+
+If $\mu$ is a complex Borel measure on $\mathbb{R}^n$, the {\em Fourier transform of $\mu$} is the function
+$\hat{\mu}:\mathbb{R}^n \to \mathbb{C}$ defined by
+\[
+\hat{\mu}(\xi) = \int_{\mathbb{R}^n} e_{-\xi} d\mu, \qquad \xi \in \mathbb{R}^n.
+\]
+One proves using the dominated convergence theorem that $\hat{\mu}$ is continuous.
+
+\begin{theorem}
+If $\mu$ is a finite positive Borel measure on $\mathbb{R}^n$, then $\hat{\mu}:\mathbb{R}^n \to \mathbb{C}$ is positive-definite.
+\end{theorem}
+\begin{proof}
+For $\xi_1,\ldots,\xi_r \in \mathbb{R}^n$ and $c_1,\ldots,c_r \in \mathbb{C}$, we have
+\begin{eqnarray*}
+\sum_{j,k=1}^r c_j \overline{c_k} \hat{\mu}(\xi_j-\xi_k)&=&\sum_{j,k=1}^r c_j \overline{c_k} \int_{\mathbb{R}^n}
+e^{-i(\xi_j-\xi_k)\cdot x} d\mu(x)\\
+&=&\int_{\mathbb{R}^n} \sum_{j,k=1}^r c_j e^{-i\xi_j\cdot x} \overline{c_k e^{-i \xi_k \cdot x}} d\mu(x)\\
+&=&\int_{\mathbb{R}^n} \left( \sum_{j=1}^r c_j e^{-i\xi_j\cdot x} \right)
+\overline{\left( \sum_{k=1}^r c_k e^{-i\xi_k\cdot x} \right)}
+ d\mu(x)\\
+ &=&\int_{\mathbb{R}^n} \left| \sum_{j=1}^r c_j e^{-i\xi_j\cdot x} \right|^2 d\mu(x)\\
+ &\geq&0.
+\end{eqnarray*}
+\end{proof}
+
+
+
+
+The following proof of Bochner's theorem follows an exercise in Rudin.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~303, Exercise 14.
+Other references on Bochner's theorem are the following:  Barry Simon, {\em Convexity: An Analytic Viewpoint}, p.~153, Theorem 9.17;
+Edwin Hewitt and Kenneth A. Ross, {\em Abstract Harmonic Analysis}, vol. II, p.~293, Theorem 33.3; 
+Mark A. Pinsky, {\em Introduction to Fourier Analysis and Wavelets}, p.~220, Theorem 3.9.16; Walter Rudin, {\em Fourier Analysis on Groups}, p.~19, Theorem 1.4.3;
+Yitzhak Katznelson, {\em An Introduction to Harmonic Analysis}, third ed., p.~170; Vladimir I. Bogachev, {\em Measure Theory},
+vol. II, p.~121, Theorem 7.13.1; Gerald B. Folland, {\em A Course in Abstract Harmonic Analysis}, p.~95,
+Theorem 4.18.}
+
+
+\begin{theorem}[Bochner]
+If $\phi:\mathbb{R}^n \to \mathbb{C}$ is continuous and positive-definite, then there is some finite
+positive Borel measure $\nu$ on $\mathbb{R}^n$ for which $\phi=\hat{\nu}$.
+\end{theorem}
+\begin{proof}
+Let $A$ be the Banach algebra defined in \S \ref{convolvesection}, whose elements  are those complex Borel measures $\mu$
+on $\mathbb{R}^n$ for which there is some $f \in L^1(\mathbb{R}^n)$ and some $\alpha \in \mathbb{C}$ such that
+\[
+d\mu = f dm_n + \alpha d\delta,
+\]
+where $m_n$ is Lebesgue measure on $\mathbb{R}^n$. For $f+\alpha \delta, g+\beta \delta \in A$, we have
+\[
+(f+\alpha \delta) * (g+\beta \delta) = (f *g + \beta f + \alpha g) + \alpha \beta \delta;
+\]
+we are identifying $f \in L^1(\mathbb{R}^n)$ with the complex Borel measure whose Radon-Nikodym
+derivative with respect to $m_n$ is $f$. The norm on $A$ is the total variation norm of a complex measure; one checks that for $f+\alpha \delta$ this is
+\[
+\norm{f+\alpha \delta}=\norm{f}+|\alpha|,
+\]
+ where $\norm{f}=\int_{\mathbb{R}^n} |f(x)| dm_n(x)$.
+
+For $f \in L^1(\mathbb{R}^n)$, we define $\widetilde{f} \in L^1(\mathbb{R}^n)$ by $\widetilde{f}(x)=\overline{f(-x)}$, 
+and we define $^*:A \to A$ by 
+\[
+(f+\alpha \delta)^* = \widetilde{f}+\overline{\alpha}\delta, \qquad f+\alpha \delta \in A.
+\]
+On the one hand,
+\begin{eqnarray*}
+((f+\alpha\delta)*(g+\beta \delta))^*&=&( (f *g + \beta f + \alpha g) + \alpha \beta \delta)^*\\
+&=&\widetilde{f*g} + \overline{\beta} \widetilde{f} + \overline{\alpha} \widetilde{g} + \overline{\alpha \beta} \delta\\
+&=&\widetilde{f*g} +  \overline{\beta} \widetilde{f} + \overline{\alpha} \widetilde{g} + \overline{\alpha \beta} \delta,
+\end{eqnarray*}
+and
+\[
+\widetilde{f*g}(x) = \overline{\int_{\mathbb{R}^n} f(y)g(-x-y) dm_n(y)}.
+\]
+On the other hand,
+\begin{eqnarray*}
+(g+\beta \delta)^* *(f+\alpha \delta)^* &=&(\widetilde{g}+\overline{\beta}\delta)*(\widetilde{f}+\overline{\alpha}\delta)\\
+&=&(\widetilde{g}*\widetilde{f} +\overline{\alpha} \widetilde{g}+\overline{\beta} \widetilde{f}) +\overline{\beta \alpha}
+\delta,
+\end{eqnarray*}
+and
+\begin{eqnarray*}
+(\widetilde{g}*\widetilde{f})(x)&=&\int_{\mathbb{R}^n} \widetilde{g}(y) \widetilde{f}(x-y) dm_n(y)\\
+&=&\int_{\mathbb{R}^n} \overline{g(-y)} \overline{f(-x+y)} dm_n(y)\\
+&=&\overline{\int_{\mathbb{R}^n} g(-y-x) f(y) dm_n(y)}.
+\end{eqnarray*}
+Therefore we have
+\[
+((f+\alpha\delta)*(g+\beta \delta))^* = (g+\beta \delta)^* *(f+\alpha \delta)^*.
+\]
+Thus $^*:A \to A$ is an involution (the other properties demanded of an involution are immediate).
+
+We define  $F:A \to \mathbb{C}$ by
+\[
+F(f+\alpha \delta) = \int_{\mathbb{R}^n} f \phi dm_n + \alpha \phi(0), \qquad f+\alpha \delta \in A.
+\]
+It is apparent that $F$ is linear, and because $|\phi(x)|\leq \phi(0)$ for all $x$,
+\begin{eqnarray*}
+|F(f+\alpha \delta)|&\leq&\left| \int_{\mathbb{R}^n} f\phi dm_n\right| + |\alpha| \phi(0)\\
+&\leq&\int_{\mathbb{R}^n} |f| |\phi| dm_n + |\alpha| \phi(0)\\
+&\leq&\phi(0) \int_{\mathbb{R}^n} |f| dm_n + |\alpha| \phi(0)\\
+&=&\phi(0) \norm{f+\alpha \delta},
+\end{eqnarray*}
+from which it follows that $\norm{F} = \phi(0)$, and in particular that $F$ is bounded.
+Let $A_0=\{f+\alpha \delta \in A: f \in C_c(\mathbb{R}^n)\}$. Because $F:A \to \mathbb{C}$ is bounded and $A_0$ is a dense subset
+of $A$, to prove that $F$ is a positive linear functional it suffices to prove that for all $f+\alpha \delta \in A_0$ we have
+$F((f+\alpha \delta)*(f+\alpha\delta)^*) \geq 0$.
+
+For $g \in C_c(\mathbb{R}^n)$, by Theorem \ref{integralinequality} we obtain
+\begin{equation}
+F(g*g^*)=F(g*\widetilde{g})=\int_{\mathbb{R}^n} (g*\widetilde{g}) \phi dm_n \geq 0.
+\label{ginequality}
+\end{equation}
+Define  $\eta:\mathbb{R}^n \to \mathbb{R}$ by
+\[
+\eta(x) = \begin{cases}
+\exp\left(-\frac{1}{1-|x|^2}\right)&|x|<1\\
+0&|x| \geq 1,
+\end{cases}
+\]
+and for $\epsilon>0$, define $\eta_\epsilon:\mathbb{R}^n \to \mathbb{R}$ by $\eta_\epsilon(x) = \epsilon^{-n} \eta\left(\frac{x}{\epsilon}\right)$.
+Let $f+\alpha \delta \in A_0$ and define
+$g_\epsilon = f+\alpha \eta_\epsilon \in C_c(\mathbb{R}^n)$. 
+From \eqref{ginequality} we have $F(g_\epsilon*g_\epsilon^*) \geq 0$ for any $\epsilon>0$. 
+On the other hand,
+\begin{eqnarray*}
+F(g_\epsilon*g_\epsilon^*)&=&F((f+\alpha \eta_\epsilon)*(\widetilde{f}+\overline{\alpha}\eta_\epsilon))\\
+&=&F(f*\widetilde{f}+\overline{\alpha} f*\eta_\epsilon+\alpha \eta_\epsilon*\widetilde{f}+|\alpha|^2 \eta_\epsilon*\eta_\epsilon)\\
+&=&F(f*\widetilde{f})+\overline{\alpha} \int_{\mathbb{R}^n} (f*\eta_\epsilon)\phi dm_n + \alpha \int_{\mathbb{R}^n} (\eta_\epsilon*\widetilde{f})\phi dm_n\\
+&&+|\alpha|^2 \int_{\mathbb{R}^n} (\eta_\epsilon*\eta_\epsilon)\phi dm_n.
+\end{eqnarray*}
+We take as granted that
+\[
+\int_{\mathbb{R}^n} (f*\eta_\epsilon)\phi dm_n \to \int_{\mathbb{R}^n} f\phi dm_n
+\]
+as $\epsilon \to 0$,
+ that
+\[
+\int_{\mathbb{R}^n} (\eta_\epsilon * \widetilde{f})\phi dm_n \to \int_{\mathbb{R}^n} \widetilde{f} \phi dm_n
+\]
+as $\epsilon \to 0$, and that
+\[
+\int_{\mathbb{R}^n} (\eta_\epsilon*\eta_\epsilon)\phi dm_n \to \phi(0)
+\]
+as $\epsilon \to 0$.
+Furthermore, 
+\begin{eqnarray*}
+F((f+\alpha \delta)*(f+\alpha \delta)^*)&=&F((f+\alpha \delta)*(\widetilde{f}+\overline{\alpha}\delta))\\
+&=&F(f*\widetilde{f}+\overline{\alpha}f+\alpha \widetilde{f}+|\alpha|^2)
+\end{eqnarray*}
+Thus
+\[
+F(g_\epsilon*g_\epsilon^*) \to F((f+\alpha \delta)*(f+\alpha \delta)^*)
+\]
+as $\epsilon \to 0$. Since $F(g_\epsilon * g_\epsilon^*) \geq 0$ for all $\epsilon>0$, it follows that
+\[
+F((f+\alpha \delta)*(f+\alpha \delta)^*) \geq 0.
+\]
+Therefore, $F:A \to \mathbb{C}$ is a positive linear functional.
+
+Because $F$ is a positive linear functional and $F(e)=F(\delta)=1$, we can apply Theorem \ref{riesz}, according to which there is a regular
+positive Borel measure $\mu$ on $\Delta$ satisfying
+\[
+F(f+\alpha \delta) = \int_\Delta \Gamma(f+\alpha \delta) d\mu, \qquad f+\alpha \delta \in A,
+\]
+and hence, from the definition of $F$,
+\[
+\int_{\mathbb{R}^n} f\phi dm_n + \alpha \phi(0) = \int_\Delta \Gamma(f+\alpha \delta) d\mu,\qquad f+\alpha \in A.
+\]
+
+We state the following again from \S \ref{convolvesection} for easy access. 
+If $t \in \mathbb{R}^n$, define $h_t:A \to \mathbb{C}$ by 
+\[
+h_t(f+\alpha \delta) = \hat{f}(t)+\alpha, \qquad f+\alpha \delta \in A,
+\]
+and also define $h_\infty:A \to \mathbb{C}$ by
+\[
+h_\infty(f+\alpha \delta)=\alpha, \qquad f+\alpha \delta \in A.
+\]
+Let $\mathbb{R}^n \cup \{\infty\}$ be the one-point compactification of $\mathbb{R}^n$. We proved in \S \ref{convolvesection} that the map
+$T:\mathbb{R}^n \cup \{\infty\} \to \Delta$  defined by $T(t)=h_t$ is a homeomorphism. With $\nu=(T^{-1})_* \mu$ we have $\mu=T_* \nu$,
+and then
+\begin{eqnarray*}
+\int_\Delta \Gamma(f+\alpha \delta) d\mu&=&\int_\Delta \Gamma(f) d\mu + \alpha \int_\Delta \Gamma(\delta) d\mu\\
+&=&\int_\Delta \Gamma(f) d(T_*\nu)+\alpha \int_{\Delta} \chi_\Delta d\mu\\
+&=&\int_{\mathbb{R}^n \cup \{\infty\}} \Gamma(f) \circ T d\nu + \alpha \mu(\Delta)\\
+&=&\int_{\mathbb{R}^n \cup \{\infty\}} \Gamma(f) \circ T(t) d\nu(t) + \alpha F(\delta)\\
+&=&\int_{\mathbb{R}^n \cup \{\infty\}} h_t(f) d\nu(t)+\alpha \phi(0)\\
+&=&\int_{\mathbb{R}^n} \hat{f}(t) d\nu(t) +\alpha\phi(0).
+\end{eqnarray*}
+Therefore
+\[
+\int_{\mathbb{R}^n} f\phi dm_n + \alpha \phi(0)  = \int_{\mathbb{R}^n} \hat{f}(t) d\nu(t) +\alpha\phi(0),
+\]
+i.e.
+\[
+\int_{\mathbb{R}^n} f\phi dm_n = \int_{\mathbb{R}^n} \hat{f}(t) d\nu(t).
+\]
+As
+\begin{eqnarray*}
+\int_{\mathbb{R}^n} \hat{f}(t) d\nu(t) &=& \int_{\mathbb{R}^n}\left( \int_{\mathbb{R}^n}  e^{-it\cdot x} f(x) dm_n(x)\right) d\nu(t)\\
+&=&\int_{\mathbb{R}^n} f(x) \int_{\mathbb{R}^n} e^{-ix\cdot t} d\nu(t) dm_n(x)\\
+&=&\int_{\mathbb{R}^n} f(x) \hat{\nu}(x) dm_n(x),
+\end{eqnarray*}
+we have
+\[
+\int_{\mathbb{R}^n} f\phi dm_n = \int_{\mathbb{R}^n} f \hat{\nu} dm_n.
+\]
+This is true for all $f\in L^1(\mathbb{R}^n)$, from which it follows that $\phi=\hat{\nu}$.
+\end{proof}
+
+
+\end{document}

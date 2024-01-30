@@ -1,0 +1,587 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Functions of bounded variation and differentiability}
+\author{Jordan Bell}
+\date{March 11, 2016}
+
+\maketitle
+
+\section{Functions of bounded variation}
+We say that a function $f:A \to \mathbb{R} \cup \{\infty\}$, $A \subset \mathbb{R}$,
+is 
+increasing if $x \leq y$ implies $F(x) \leq F(y)$, namely if $f$ is order preserving. 
+
+Let $a<b$ be real. For a function $F:[a,b] \to \mathbb{R}$, define $V_F:[a,b] \to [0,\infty]$ by
+\[
+V_F(x) = \sup_{N, a=t_0<t_1<\cdots<t_N=b} \sum_j |F(t_j)-F(t_{j-1})|,
+\]
+called the \textbf{variation of $F$}.
+It is apparent that $V_F$ is increasing. If $V_F$ is bounded, we say that $F$ has \textbf{bounded variation}.  $V_F$
+being bounded is equivalent to $V_F(b)<\infty$. If $F$ is increasing then
+\[
+V_F(x) = F(x)-F(a),
+\]
+so in particular an increasing function has bounded variation.
+
+
+Define $P_F:[a,b] \to [0,\infty]$ by
+\[
+P_F(x) = \sup_{N, a=t_0<t_1<\cdots<t_N=b} \sum_{F(t_j) \geq F(t_{j-1})} F(t_j)-F(t_{j-1}),
+\]
+called the \textbf{positive variation of $F$}, and define
+$N_F:[a,b] \to [0,\infty]$ by
+\[
+N_F(x) = \sup_{N, a=t_0<t_1<\cdots<t_N=b} \sum_{F(t_j) \leq F(t_{j-1})} -(F(t_j)-F(t_{j-1})),
+\]
+called the \textbf{negative variation of $F$}. It is apparent that $P_F$ and $N_F$ are increasing.
+
+We now prove the \textbf{Jordan decomposition theorem}. It shows in particular that if $F$ has bounded variation then
+$P_F$ and $N_F$ are bounded.
+
+\begin{theorem}[Jordan decomposition theorem]
+If $F:[a,b] \to \mathbb{R}$ has bounded variation, then for all $x \in [a,b]$,
+\[
+V_F(x)=P_F(x)+N_F(x).
+\]
+and
+\[
+F(x)-F(a) = P_F(x)-N_F(x).
+\]
+\end{theorem}
+\begin{proof}
+For $\epsilon>0$ there is some $L$ and some $a=r_0<t_1<\cdots<r_L=x$ for which
+\[
+ \sum_{F(r_j) \geq F(r_{j-1})} F(r_j)-F(r_{j-1})>P_F(x)-\epsilon,
+\]
+and there is some $M$ and some $a=s_0<s_1<\cdots<s_M=x$ for which
+\[
+\sum_{F(s_j) \leq F(s_{j-1})} -(F(s_j)-F(s_{j-1}))>N_F(x)-\epsilon.
+\]
+Let $a = t_0<t_1<\cdots<t_N=x$ with $\{t_0,\ldots,t_N\} = \{r_0,\ldots,r_L\}
+\cup \{s_0,\ldots,s_M\}$.
+As $\{r_0,\ldots,r_L\} \subset \{t_0,\ldots,t_N\}$,
+\[
+ \sum_{F(t_j) \geq F(t_{j-1})} F(t_j)-F(t_{j-1}) \geq  \sum_{F(r_j) \geq F(r_{j-1})} F(r_j)-F(r_{j-1})
+\]
+and as $\{s_0,\ldots,s_M\} \subset \{t_0,\ldots,t_N\}$,
+\[
+\sum_{F(t_j) \leq F(t_{j-1})} -(F(t_j)-F(t_{j-1})) \geq \sum_{F(s_j) \leq F(s_{j-1})} -(F(s_j)-F(s_{j-1})).
+\]
+Hence
+\[
+V_F(x) \geq \sum_j |F(t_j) - F(t_{j-1})| >  P_F(x)+N_F(x) - 2\epsilon,
+\]
+and as this is true for all $\epsilon>0$ it follows that  $V_F(x) \geq P_F(x)+N_F(x)$. And $\sup (f+g) \leq \sup f + \sup g$, so
+$V_F(x) \leq P_F(x)+N_F(x)$ and therefore $V_F(x)=P_F(x)+N_F(x)$.
+Now,
+\begin{align*}
+F(x)-F(a) &= \sum_j F(t_j)-F(t_{j-1})\\
+& = \sum_{F(t_j) \geq F(t_{j-1})} F(t_j)-F(t_{j-1})
+-\sum_{F(t_j) \leq  F(t_{j-1})} -(F(t_j)-F(t_{j-1})),
+\end{align*}
+which implies
+\[
+|F(x)-F(a)-P_F(x)+N_F(x)| < 2\epsilon,
+\]
+whence $F(x)-F(a) - P_F(x) + N_F(x)=0$. 
+\end{proof}
+
+The Jordan decomposition theorem tells us that if $F$ has bounded variation then
+\[
+F(x) = (P_F(x)-F(a)) - N_F(x),
+\]
+and as $x \mapsto P_F(x)-F(a)$ and $x \mapsto N_F(x)$ are increasing, this shows that
+$F$ is the difference of two increasing functions. 
+
+
+The following says that a function of bounded variation is continuous at a point
+if and only if its variation is continuous at that point.\footnote{V. I. Bogachev, {\em Measure Theory}, volume 1, p.~333, Proposition 5.2.2.}
+
+\begin{theorem}
+If $F:[a,b] \to \mathbb{R}$ has bounded variation, then $F$ is continuous at $x$ if and
+only if $V_F$ is continuous at $x$. 
+\label{continuity}
+\end{theorem}
+
+
+
+\begin{theorem}
+If $F:[a,b] \to \mathbb{R}$ has bounded variation then there are at most  countably
+many $x \in [a,b]$ at which $F$ is not continuous.
+\end{theorem}
+\begin{proof}
+According to the Jordan decomposition theorem, $V_F = P_F+N_F$, so it suffices to prove that
+if $f:[a,b] \to \mathbb{R}$ is increasing then there are at most countably many $x \in [a,b]$ at which
+$f$ is not continuous. 
+Let $f(a^-)=f(a)$ and for $a<x \leq b$ let
+\[
+f(x^-) = \lim_{y \to x, y<x}f(y),
+\]
+and let $f(b^+)=f(b)$ and for $a \leq x < b$ let
+\[
+f(x^+) = \lim_{y \to x, y>x} f(y);
+\]
+this makes sense because $f$ is increasing, and also because $f$ is increasing we have
+$f(x^-) \leq f(x) \leq f(x^+)$. 
+Let $E$ be the set of those $x \in [a,b]$ at which $f$ is not continuous. 
+If $x \in E$,  then $f(x^-)<f(x^+)$ and hence
+there is some $r_x \in (f(x^-),f(x^+)) \cap \mathbb{Q}$. If $x,y \in E$, $x<y$, then 
+as $x<y$ we have $f(x^+) \leq f(y^-)$, and as $x,y \in E$, $f(x^-)<r_x<f(x^+)$ and
+$f(y^-)<r_y<f(y^+)$, so  $r_x<r_y$. Therefore $x \mapsto r_x$ is one-to-one $E \to \mathbb{Q}$, showing
+that $E$ is countable.
+\end{proof}
+
+
+
+
+\section{Coverings}
+The following is the \textbf{rising sum lemma}, due to F. Riesz.\footnote{Elias M. Stein and Rami Shakarchi,
+{\em Real Analysis}, p.~118, Lemma 3.2.} (We don't use the rising sun lemma elsewhere in these notes, and instead use the
+Vitali covering theorem, stated next.)
+
+\begin{lemma}[Rising sun lemma]
+Let $G:[a,b] \to \mathbb{R}$ be continuous and let $E$ be the set of those $x \in (a,b)$ for which there is some
+$x<y \leq b$ satisfying $G(y)>G(x)$. $G$ is open, and if $G$ is nonempty then $G$ is the union of countably many disjoint 
+$(a_k,b_k) \subset [a,b]$. If $a_k>a$ then $G(b_k)=G(a_k)$, and if $a_k=a$ then $G(b_k) \geq G(a_k)$.   
+\end{lemma}
+\begin{proof}
+If $x_0 \in E$, there is some $x_0<y_0 \leq b$ with $G(y_0)>G(x_0)$.
+Writing $\epsilon=G(y_0)-G(x_0)$,  as $G$ is continuous there is some
+$\delta>0$,
+$(x_0-\delta,x_0+\delta) \subset [a,b]$,
+ such that if $|x-x_0|<\delta$ then $|G(x)-G(x_0)| < \epsilon$, so
+\begin{align*}
+G(y_0)-G(x)&=\epsilon+G(x_0)-G(x)\\
+&\geq \epsilon - |G(x)-G(x_0)|\\
+&>0.
+\end{align*}
+Thus if $x \in (x_0-\delta,x_0+\delta)$ then $G(y_0)>G(x)$, which shows that $E$ is open.
+
+Suppose now that $E$ is nonempty, and for $x \in E$ let
+\[
+A_x = \inf\{ t \in \mathbb{R}: (t,x) \subset E\},\quad
+B_x = \sup\{ t \in \mathbb{R}: (x,t) \subset E\}.
+\]
+As $E$ is open, there is some $\delta_x>0$ such that $(x-\delta_x,x+\delta_x) \subset E$,
+so $A_x \leq x-\delta_x<x$ and $B_x \geq x+\delta_x>x$. 
+Furthermore, as $E$ is open it follows that $A_x \not \in E$ and $B_x \not \in E$. 
+For $x,y \in E$, either $(A_x,B_x) \cap (A_y,B_y) =  \emptyset$ or $(A_x,B_x)=(A_y,B_y)$, and as $(A_x,B_x)$ contains
+at least one rational number,
+\[
+E = \bigcup_{x \in E \cap \mathbb{Q}} (A_x,B_x).
+\]
+As $E \cap \mathbb{Q}$ is countable, there are pairwise disjoint $(a_k,b_k) \subset [a,b]$, $a_k \not \in E, b_k \not \in E$, $k \in I$, such that
+\[
+E = \bigcup_{k \in I} (a_k,b_k).
+\] 
+For $k \in I$, suppose by contradiction that $G(b_k)<G(a_k)$. Let
+\[
+C_k=\left\{c \in (a_k,b_k) : G(c) = \frac{G(a_k)+G(b_k)}{2}\right\},
+\]
+which is nonempty by the intermediate value theorem.
+ Let $c_k = \sup C_k$,
+ and  because $G$ is continuous, $c_k \in C_k$. 
+$c_k = b_k$ would imply $G(b_k) = \frac{G(a_k)+G(b_k)}{2}$, contradicting  $G(b_k)<G(a_k)$; hence
+$c_k \in (a_k,b_k) \subset  E$. 
+Then because $c_k \in E$, there is some $c_k<d \leq b$ satisfying $G(d)>G(c_k)$. If $d>b_k$ then as
+$b_k \in (a,b) \setminus E$ it holds that $G(d) \leq G(b_k)<G(c_k)<G(d)$, a contradiction, and if $d = b_k$ then
+$G(d) = G(b_k) < G(c_k) < G(d)$, a contradiction; hence 
+$d < b_k$. As $G(d)>G(c_k)>G(b_k)$, by the intermediate value theorem there is some
+$c \in (d,b_k)$ such that $G(c)=G(c_k)$. But then we have $c \in C_k$ and $c>c_k$, contradicting
+$c_k = \sup C_k$. Therefore, 
+\[
+G(b_k) \geq G(a_k).
+\]
+
+If $a_k \neq a$ then $a_k \in (a,b) \setminus E$, which means that there is no $a_k<y \leq b$ satisfying
+$G(y)>G(a_k)$. Hence $G(b_k) \leq G(a_k)$, which shows that for $a_k \neq a$, we have
+$G(b_k)=G(a_k)$. 
+\end{proof}
+
+
+
+Let
+$\lambda$ be Lebesgue measure on the Borel $\sigma$-algebra of $\mathbb{R}$ and
+let $\lambda^*$ be Lebesgue outer measure on $\mathbb{R}$.
+
+A \textbf{Vitali covering} of a set $E \subset \mathbb{R}$ is a collection $\mathcal{V}$ 
+of  closed intervals such that for $\epsilon>0$ and for $x \in E$ there is some $I \in \mathcal{V}$ 
+with $x \in I$ and
+$0<\lambda(I)<\epsilon$. The following is the \textbf{Vitali covering theorem}.
+
+\begin{theorem}[Vitali covering theorem]
+Let $U$ be an open set in $\mathbb{R}$ with $\lambda(U)<\infty$, let
+$E \subset U$, and let $\mathcal{V}$ be a Vitali covering of $E$ each interval of which is contained in $U$. Then for any $\epsilon>0$ there
+are pairwise disjoint $I_1,\ldots,I_n \in \mathcal{V}$ such that 
+\[
+\lambda^*\left(E \setminus \bigcup_{j=1}^n I_j \right)< \epsilon.
+\]
+\end{theorem}
+
+
+
+
+
+
+
+
+
+\section{Differentiability}
+Let $F:[a,b]  \to \mathbb{R}$ be a function.
+The \textbf{Dini derivatives} of $F$ are the following. 
+ $D^- F(x):(a,b] \to \mathbb{R} \cup \{\infty\}$ is defined by
+\[
+D^-F(x) = \limsup_{h \to 0, h<0} \frac{F(x+h)-F(x)}{h},
+\]
+ $D_-F(x):(a,b] \to \mathbb{R} \cup \{-\infty\}$ is defined by
+\[
+D_-F(x) = \liminf_{h \to 0, h<0} \frac{F(x+h)-F(x)}{h},
+\]
+$D^+F(x):[a,b) \to \mathbb{R} \cup \{\infty\}$ is defined by
+\[
+D^+F(x) = \limsup_{h \to 0, h>0}  \frac{F(x+h)-F(x)}{h},
+\]
+$D_+F(x):[a,b) \to \mathbb{R} \cup \{-\infty\}$ is defined by
+\[
+D_+F(x) = \liminf_{h \to 0, h>0}\frac{F(x+h)-F(x)}{h}.
+\]
+
+
+For $x \in [a,b]$, the \textbf{upper derivative of $F$ at $x$} is
+\[
+\overline{D}F(x) = \limsup_{h \to 0, h \neq 0} \frac{F(x+h)-F(x)}{h},
+\]
+and  the \textbf{lower derivative of $F$ at $x$} is 
+\[
+\underline{D}F(x) = \liminf_{h \to 0, h \neq 0} \frac{F(x+h)-F(x)}{h}.
+\]
+
+
+Let
+\[
+\mathscr{L}=\{x \in (a,b]: D^-F(x)=D_-F(x)\},
+\]
+\[
+\mathscr{R}=\{x \in [a,b): D^+F(x)=D_+F(x)\}.
+\]
+For $x \in \mathscr{L}$, the \textbf{left-derivative of $F$ at $x$} is
+\[
+F'_-(x)=D^-F(x)=D_-F(x),
+\]
+and for $x \in \mathscr{R}$, the  \textbf{right-derivative of $F$ at $x$} is
+\[
+F'_+(x)=D^+F(x)=D_+F(x).
+\]
+
+For $x \in (a,b)$, for $F$ to be \textbf{differentiable at $x$} means that
+\[
+-\infty<D_-F(x) = D^-F(x) = D_+F(x) = D^+F(x) <\infty.
+\]
+
+
+We prove that the set of points at which $F$ is  left-differentiable and right-differentiable
+but $F'_-(x) \neq F'_+(x)$ is countable.\footnote{V. I. Bogachev, {\em Measure Theory}, volume 1, p.~332, Lemma 5.1.3.}
+
+\begin{lemma}
+$\{x \in \mathscr{L} \cap \mathscr{R}: F'_-(x) \neq F'_+(x)\}$ is countable.
+\end{lemma}
+\begin{proof}
+Let $\mathbb{Q}=\{r_k: k \geq 1\}$, $r_k \neq r_j$ for $k \neq j$, and
+let
+\[
+E=\{x \in \mathscr{L} \cap \mathscr{R}: F'_-(x)<F'_+(x)\},
+\]
+For $x \in E$, as $F'_-(x)<F'_+(x)$ there is a minimal $k$ with $F'_-(x)<r_k<F'_+(x)$. 
+As $r_k > F'_-(x)$, there is a minimal $m$ such that $r_m<x$ and for all
+$t \in (r_m,x)$, $\frac{F(t)-F(x)}{t-x}<r_k$
+and hence $F(t)-F(x)>r_k(t-x)$. 
+ Likewise,
+as $r_k<F'_+(x)$, there is a minimal $n$ such that $r_n>x$ and for all
+$t \in (x,r_n)$, $\frac{F(t)-F(x)}{t-x}>r_k$ and hence $F(t)-F(x)>r_k(t-x)$. 
+Hence
+\begin{equation}
+F(t)-F(x)>r_k(t-x),\qquad  t \in (r_m,r_n), t \neq x.
+\label{512} 
+\end{equation}
+Now for distinct $x,y \in E$ suppose by contradiction 
+that $(k(x),m(x),n(x)) = (k(y),m(y),n(y))$. 
+As $x,y \in (r_m,r_n)$, using \eqref{512} with $t=y$ and $t=x$ we get
+\[
+F(y)-F(x)>r_k(y-x),\qquad F(x)-F(y)>r_k(x-y),
+\]
+yielding $r_k(x-y)<F(x)-F(y)<r_k(x-y)$, a contradiction. 
+Therefore $x \mapsto (k(x),m(x),n(x))$ is one-to-one
+$E \to \mathbb{N}^3$, for $\mathbb{N}$ the positive integers, which shows
+that $E$ is countable.
+
+
+We similarly prove that
+\[
+\{x \in \mathscr{L} \cap \mathscr{R}: F'_-(x)>F'_+(x)\}
+\]
+is countable. 
+\end{proof}
+
+
+
+
+\section{Differentiability of increasing functions}
+We now use the Vitali covering lemma to prove that the Dini derivatives of an increasing function are finite almost everywhere.\footnote{Russell A. Gordon, {\em The Integrals of Lebesgue, Denjoy, Perron, and Henstock}, p.~55, Lemma 4.8.}
+
+
+\begin{lemma}
+Let $F:[a,b] \to \mathbb{R}$ be an increasing function and let
+\[
+A^- = \{x \in (a,b]: D^-F(x) =\infty\},
+\; A_-=\{x \in (a,b]: D_-F(x)=-\infty\},
+\]
+\[
+A^+=\{x \in [a,b):D^+F(x)=\infty\},
+\; A_+=\{x \in [a,b): D_+F(x)=-\infty\}.
+\] 
+Then
+\[
+\lambda^*(A^-)=0, \lambda^*(A_-)=0, \lambda^*(A^+)=0, \lambda^*(A_-)=0.
+\]
+\end{lemma}
+\begin{proof}
+Because $F$ is increasing, for any $h \neq 0$, $\frac{F(x+h)-F(x)}{h} \geq 0$, and therefore
+$A_-=\emptyset$ and $A_+=\emptyset$. 
+Suppose by contradiction that 
+\[
+\lambda^*(A^-) = \alpha>0.
+\]
+As $\alpha>0$, there is some $r>0$ satisfying
+\[
+\frac{r\alpha}{2} > F(b)-F(a).
+\]
+For $x^-$, because $D^-F(x)=\infty$ there is an increasing sequence
+$t_{x,k} \in [a,b]$ that tends to $x$ such that for each $k \geq 1$,
+\begin{equation}
+\frac{F(x)-F(t_{x,k})}{x-t_{x,k}} \geq r.
+\label{Ftxminus}
+\end{equation}
+Let
+\[
+\mathcal{V} = \{[t_{x,k},x]: x \in A^-, k \geq 1\},
+\]
+which is a Vitali covering of $A^-$, and so by the Vitali covering theorem there are pairwise
+disjoint $[t_{x_j,k_j}, x_j] \in \mathcal{V}$, $1 \leq j \leq n$, such that
+\[
+\lambda^*\left(A^- \setminus \bigcup_{j=1}^n [t_{x_j,k_j},x_j]\right) < \frac{\alpha}{2}
+\]
+and then
+\[
+\lambda^*(A^-) \leq \lambda^*\left(A^- \setminus \bigcup_{j=1}^n [t_{x_j,k_j},x_j]\right)
++\lambda\left( \bigcup_{j=1}^n [t_{x_j,k_j},x_j]\right),
+\]
+hence
+\begin{align*}
+\sum_{j=1}^n \lambda( [t_{x_j,k_j},x_j])&=\lambda\left( \bigcup_{j=1}^n [t_{x_j,k_j},x_j]\right)\\
+&\geq  \lambda^*(A^-)  -  \lambda^*\left(A^- \setminus \bigcup_{j=1}^n [t_{x_j,k_j},x_j]\right)\\
+&>\alpha - \frac{\alpha}{2}.
+\end{align*}
+That is,
+\[
+\sum_{j=1}^n (x_j-t_{x_j,k_j}) > \frac{\alpha}{2}.
+\]
+Now, by \eqref{Ftxminus}, $F(x_j)-F(t_{x_j,k_j}) \geq r(x_j-t_{x_j,k_j})$, so
+\[
+\sum_{j=1}^n (F(x_j)-F(t_{x_j,k_j})) \geq
+\sum_{j=1}^n r(x_j-t_{x_j,k_j}) > \frac{r\alpha}{2}>F(b)-F(a).
+\]
+But because the intervals $[t_{x_j,k_j},x_j]$ are pairwise disjoint and $F$ is increasing,
+$\sum_{j=1}^n (F(x_j)-F(t_{x_j,k_j})) \leq F(b)-F(a)$, contradicting the above inequality.
+Therefore $\lambda^*(A^-)=0$. 
+
+Suppose by contradiction that
+\[
+\lambda^*(A^+)=\alpha>0.
+\]
+As $\alpha>0$, there is some
+$r>0$ satisfying
+\[
+\frac{r\alpha}{2}>F(b)-F(a).
+\]
+For $x \in A^+$, because $D^+F(x)=\infty$ there is a decreasing sequence
+$t_{x,k} \in [a,b]$ that tends to $x$ such that for each $k \geq 1$,
+\begin{equation}
+\frac{F(t_{x,k})-F(x)}{t_{x,k}-x} \geq r.
+\label{Ftxplus}
+\end{equation}
+Let
+\[
+\mathcal{V} = \{[x,t_{x,k}]: x \in A^+, k \geq 1\},
+\]
+which is a Vitali covering of $A^+$, and so by the Vitali covering theorem there are
+pairwise disjoint $[x_j,t_{x_j,k_j}] \in  \mathcal{V}$, $1 \leq j \leq n$, such that 
+\[
+\lambda^*\left(A^+ \setminus \bigcup_{j=1}^n [x_j,t_{x_j,k_j}]\right) < \frac{\alpha}{2}
+\]
+and then
+\[
+\lambda^*(A^+) \leq \lambda^*\left(A^+ \setminus \bigcup_{j=1}^n [x_j,t_{x_j,k_j}]\right)
++\lambda\left( \bigcup_{j=1}^n [x_j,t_{x_j,k_j}]\right),
+\]
+hence
+\begin{align*}
+\sum_{j=1}^n \lambda( [x_j,t_{x_j,k_j}])&=\lambda\left( \bigcup_{j=1}^n [x_j,t_{x_j,k_j}]\right)\\
+&\geq  \lambda^*(A^+)  -  \lambda^*\left(A^+ \setminus \bigcup_{j=1}^n [x_j,t_{x_j,k_j}]\right)\\
+&>\alpha - \frac{\alpha}{2}.
+\end{align*}
+That is,
+\[
+\sum_{j=1}^n (t_{x_j,k_j} - x_j) > \frac{\alpha}{2}.
+\]
+Now, by \eqref{Ftxplus}, $F(t_{x_j,k_j})-F(x_j) \geq r(t_{x_j,k_j}-x_j)$, so
+\[
+\sum_{j=1}^n (F(t_{x_j,k_j})-F(x_j)) \geq
+\sum_{j=1}^n r(t_{x_j,k_j} - x_j) > \frac{r\alpha}{2}>F(b)-F(a).
+\]
+But because the intervals $[x_j,t_{x_j,k_j}]$ are pairwise disjoint and $F$ is increasing,
+$\sum_{j=1}^n (F(t_{x_j,k_j})-F(x_j)) \leq F(b)-F(a)$, contradicting the above inequality.
+Therefore $\lambda^*(A^+)=0$. 
+\end{proof}
+
+
+
+
+We now prove that an increasing function is differentiable almost everywhere.\footnote{Russell A. Gordon, {\em The Integrals of Lebesgue, Denjoy, Perron, and Henstock}, p.~55, Theorem 4.9.}
+
+\begin{theorem}
+Let $F:[a,b] \to \mathbb{R}$ be increasing and let
+\[
+E = \{x \in (a,b) : -\infty<D_-F(x) = D^-F(x) = D_+F(x) = D^+F(x) <\infty\}.
+\]
+Then $\lambda^*([a,b] \setminus E) = 0$.
+\end{theorem}
+\begin{proof}
+Let
+\[
+A = \{x \in (a,b) : D_+F(x) < D^+F(x)\},
+\]
+and suppose by contradiction that $\lambda^*(A)>0$. Since
+\[
+A = \bigcup_{p,q \in \mathbb{Q}, p<q}  \{x \in (a,b) : D_+F(x) <p<q< D^+F(x)\},
+\]
+which is a union of countably many sets, there are some $p,q \in \mathbb{Q}$, $p<q$, such that $\lambda^*(B)=\beta>0$, 
+\[
+B = \{x \in (a,b) : D_+F(x) <p<q< D^+F(x)\}.
+\]
+Let $\epsilon>0$. There is an open set $U \subset (a,b)$ with $B \subset U$ and $\lambda(U) < \lambda^*(B)+\epsilon=
+\beta+\epsilon$. 
+For $x \in B$, because $D_+F(x)<p$ and because $x$ belongs to the open set $U$, there is a sequence
+$t_{x,k} \in (x,x+1/k)$, $[x,t_{x,k}] \subset U$, such that for each $k \geq 1$,
+\[
+\frac{F(t_{x,k})-F(x)}{t_{x,k}-x} < p.
+\]
+Then
+\[
+\mathcal{V} = \{[x,t_{x,k}]:x \in B, k \geq 1\}
+\]
+is a Vitali covering of $B$, so by the Vitali covering theorem there are 
+pairwise disjoint $[x_j,t_{x_j,k_j}] \in \mathcal{V}$, $1 \leq j \leq m$, such that
+\[
+\lambda^* \left( B \setminus \bigcup_{j=1}^m [x_j,t_{x_j,k_j}] \right)<\epsilon,
+\]
+and then, as the intervals $[x_j,t_{x_j,k_j}]$ are pairwise disjoint and are all contained in $U$,
+\begin{align*}
+\sum_{j=1}^m (F(t_{x_j,k_j})-F(x_j)) &< \sum_{j=1}^m p(t_{x_j,k_j}-x_j)\\
+&=p\sum_{j=1}^m \lambda([x_j,t_{x_j,k_j}]]\\
+&=p\lambda\left( \bigcup_{j=1}^m [x_j,t_{x_j,k_j}]\right)\\
+&\leq p \lambda(U)\\
+&< p(\beta+\epsilon).
+\end{align*}
+Let $C=B \cap \bigcup_{j=1}^n (x_j,t_{x_j,k_j})$, for which
+\[
+\beta=\lambda^*(B) \leq \lambda^*(C) + \lambda^* \left( B \setminus \bigcup_{j=1}^n [x_j,t_{x_j,k_j}] \right)
+< \lambda^*(C) + \epsilon,
+\]
+so
+\[
+\lambda^*(C)>\beta-\epsilon.
+\] 
+For $y \in C$ there is some  $i$ for which $y \in (x_i,t_{x_i,k_i})$, and 
+because $D^+F(y)>q$ there is a sequence $u_{y,l} \in (y,y+1/l)$,
+$[y,u_{y,l}] \subset (x_i,t_{x_i,k_i})$, such that for each $l \geq 1$,
+\[
+\frac{F(u_{y,l})-F(y)}{u_{y,l}-y} > q.
+\]
+Then
+\[
+\mathcal{W} = \{[y,u_{y,l}]: y \in B, l \geq 1\}
+\]
+is a Vitali covering of $C$, so by the Vitali covering theorem there are
+pairwise disjoint $[y_j,u_{y_j,l_j}] \in \mathcal{W}$, $1 \leq j \leq n$, such that
+\[
+\lambda^*\left( C \setminus \bigcup_{j=1}^n [y_j,u_{y_j,l_j}]\right) < \epsilon,
+\]
+so
+\[
+\lambda^*(C) \leq  \lambda^*\left( C \setminus \bigcup_{j=1}^n [y_j,u_{y_j,l_j}]\right)+ \lambda\left( \bigcup_{j=1}^n [y_j,u_{y_j,l_j}]\right) 
+<\epsilon+ \sum_{j=1}^n \lambda( [y_j,u_{y_j,l_j}]),
+\]
+and then
+\[
+\sum_{j=1}^n (F(u_{y_j,l_j})-F(y_j)) > \sum_{j=1}^n q (u_{y_j,l_j}-y_j)
+>q(\lambda^*(C)-\epsilon)
+>q(\beta-2\epsilon).
+\]
+Now for $1 \leq i \leq m$ let $\pi_i = \{1 \leq j \leq n: [y_j,u_{y_j,l_j}] \subset (x_i,t_{x_i,k_i})\}$.
+Because $F$ is increasing, if $j \in \pi_i$ then $F(u_{y_j,l_j})-F(y_j) \leq F(t_{x_i,k_i})-F(x_i)$, and because
+each $[y_j,u_{y_j,l_j}]$ is contained in some $(x_i,t_{x_i,k_i})$,
+\begin{align*}
+q(\beta-2\epsilon)&<\sum_{j=1}^n (F(u_{y_j,l_j})-F(y_j))\\
+&=\sum_{i=1}^m \sum_{j \in \pi_i}  (F(u_{y_j,l_j})-F(y_j))\\
+&\leq\sum_{i=1}^m   (F(t_{x_i,k_i})-F(x_i));
+\end{align*}
+the last inequality also uses that the intervals $[y_j,u_{y_j,l_j}]$ are pairwise disjoint.
+But we have found $\sum_{i=1}^m   (F(t_{x_i,k_i})-F(x_i)) < p(\beta+\epsilon)$, so
+$q(\beta-2\epsilon) < p(\beta+\epsilon)$. As this is true for all $\epsilon>0$, it holds that
+$q\beta \leq p\beta$, and as $\beta>0$ we get $q \leq p$, contradicting that $p<q$. Therefore $\lambda^*(A)=0$.
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}

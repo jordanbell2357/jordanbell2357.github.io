@@ -1,0 +1,46 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,amsthm}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}[theorem]{Remark}
+\begin{document}
+\title{Proof of the pentagonal number theorem}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+Let $A_0=\prod_{k=1}^\infty (1-z^k)$. We will use the identity
+\[
+\prod_{k=1}^N (1-a_k) = 1- a_1 - \sum_{k=2}^N a_k(1-a_1)\cdots(1-a_{k-1}),
+\]
+which 
+is straightforward to prove by induction. We apply the identity with $a_k=z^k$ and $N=\infty$, which gives
+\begin{eqnarray*}
+A_0&=&1-z-\sum_{k=2}^\infty z^k(1-z)\cdots(1-z^{k-1})\\
+&=&1-z-\sum_{k=0}^\infty z^{k+2}(1-z)\cdots(1-z^{k+1}).
+\end{eqnarray*}
+For $n \geq 1$ let
+$A_n=\sum_{k=0}^\infty z^{nk}(1-z^n)\cdots (1-z^{n+k})$. We have
+$A_0=1-z-z^2A_1$, and for $n \geq 1$ we have
+\begin{eqnarray*}
+A_n&=&1-z^n+\sum_{k=1}^\infty z^{nk}(1-z^n)\cdots(1-z^{n+k})\\
+&=&1-z^n+\sum_{k=1}^\infty z^{nk}(1-z^{n+1})\cdots(1-z^{n+k})\\
+&&-\sum_{k=1}^\infty z^{n(k+1)}(1-z^{n+1})\cdots(1-z^{n+k})\\
+&=&1-z^n+z^n(1-z^{n+1})+\sum_{k=2}^\infty z^{nk}(1-z^{n+1})\cdots(1-z^{n+k})\\
+&&-\sum_{k=1}^\infty z^{n(k+1)}(1-z^{n+1})\cdots(1-z^{n+k})\\
+&=&1-z^{2n+1}+\sum_{k=0}^\infty z^{n(k+2)}(1-z^{n+1})\cdots(1-z^{n+k+2})\\
+&&-\sum_{k=0}^\infty z^{n(k+2)}(1-z^{n+1})\cdots(1-z^{n+k+1})\\
+&=&1-z^{2n+1}-\sum_{k=0}^\infty z^{n(k+2)+n+k+2} (1-z^{n+1})\cdots (1-z^{n+k+1})\\
+&=&1-z^{2n+1}-z^{3n+2}\sum_{k=0}^\infty z^{(n+1)k}(1-z^{n+1})\cdots(1-z^{n+k+1})\\
+&=&1-z^{2n+1}-z^{3n+2}A_{n+1}.
+\end{eqnarray*}
+Therefore $A_n=1-z^{2n+1}-z^{3n+2}A_{n+1}$ for all $n \geq 0$.
+
+We then check by induction that for all $M$
+\begin{eqnarray*}
+A_0&=&1-z+\sum_{n=1}^M (-1)^n \Big( z^{n(3n+1)/2}-z^{(n+1)(3n+2)/2} \Big)\\
+&&+(-1)^{M+1} z^{(M+1)(3M+2)/2}A_{M+1},
+\end{eqnarray*}
+and taking $M=\infty$ gives the pentagonal number theorem.
+
+\end{document}

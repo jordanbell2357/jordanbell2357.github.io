@@ -1,0 +1,326 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\HSnorm}[1]{\Vert #1 \Vert_{\ensuremath\mathrm{HS}}}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\HS}{B_{\ensuremath\mathrm{HS}}} 
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\renewcommand{\div}{\mathrm{div}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{Tauber's theorem and Karamata's proof of the Hardy-Littlewood tauberian theorem}
+\author{Jordan Bell}
+\date{November 11, 2017}
+\maketitle
+
+The following lemma is attributed to Kronecker by Knopp.\footnote{Konrad Knopp, {\em Theory and Application of Infinite Series}, p.~129, Theorem 3.}
+
+\begin{lemma}[Kronecker's lemma]
+If $b_n \to 0$ then
+\[
+\frac{b_0+b_1+\cdots+b_n}{n+1} \to 0.
+\]
+\label{limitlemma}
+\end{lemma}
+\begin{proof}
+Suppose that $|b_n| \leq K$ for all $n$, and let $\epsilon>0$. As $b_n \to 0$ there is some $n_0$ such that $n \geq n_0$ implies that
+$|b_n|<\epsilon$. If $n \geq \frac{(n_0+1)K}{\epsilon}$, then
+\begin{align*}
+\left| \frac{b_0+b_1+\cdots+b_n}{n+1} \right| &\leq 
+\left| \frac{b_0+b_1+\cdots+b_{n_0}}{n+1} \right| 
++\left| \frac{b_{n_0}+\cdots+b_n}{n+1} \right|\\
+&\leq \frac{(n_0+1)K}{n+1}+\frac{(n-n_0)\epsilon}{n+1}\\
+&\leq \epsilon+\epsilon.
+\end{align*}
+\end{proof}
+
+We now use the above lemma to prove Tauber's theorem.\footnote{cf. E. C. Titchmarsh, {\em The Theory of Functions}, second ed., p.~10, \S 1.23.}
+
+\begin{theorem}[Tauber's theorem]
+If $a_n = o(1/n)$ and $\sum_{n=0}^\infty a_n x^n \to s$ as $x \to 1^-$, then 
+\[
+\sum_{n=0}^\infty a_n = s.
+\]
+\end{theorem}
+\begin{proof}
+Let $\epsilon>0$. 
+Because $\sum_{n=0}^\infty a_n x^n \to s$ as $x \to 1^-$, there is some $\delta>0$ such that
+$x>1-\delta$ implies that
+\[
+\left| \sum_{n=0}^\infty a_n x^n-s\right|<\epsilon.
+\]
+Next,
+because $n|a_n| \to 0$,
+there is some $N>\frac{1}{\delta}$ such that  (i) if $n \geq N$ then $n|a_n|<\epsilon$ and by Lemma \ref{limitlemma},
+ (ii) 
+$\frac{1}{N+1}  \sum_{n=0}^N n |a_n|  < \epsilon$.
+ 
+
+Take $x=1-\frac{1}{N}$, so  $N=\frac{1}{1-x}$ and
+$1-x = \frac{1}{N}$.
+We have
+\begin{align*}
+\left| \sum_{n=N+1}^\infty a_n x^n \right| & = \left| \sum_{n=N+1}^\infty na_n \cdot \frac{x^n}{n} \right| \\
+&< \sum_{n=N+1}^\infty \epsilon \cdot \frac{x^n}{N+1}\\
+&< \frac{\epsilon}{N+1} \cdot \frac{1}{1-x}\\
+&=\epsilon \cdot \frac{N}{N+1}\\
+&<\epsilon.
+\end{align*}
+Also, using
+\[
+1-x^n = (1-x)(1+x+\cdots+x^{n-1}) < (1-x)n
+\]
+we have
+\begin{align*}
+\left| \sum_{n=0}^N a_n (1-x^n) \right|&\leq \sum_{n=0}^N |a_n| (1-x^n)\\
+&< \sum_{n=0}^N |a_n| (1-x)n\\
+&= \sum_{n=0}^N \frac{|a_n|n}{N}\\
+&=\frac{N+1}{N} \cdot \frac{1}{N+1} \sum_{n=0}^N n|a_n|\\
+&<\frac{N+1}{N} \cdot \epsilon\\
+&<2\epsilon.
+\end{align*}
+
+Now,
+\begin{align*}
+\sum_{n=0}^N a_n - s&=\sum_{n=0}^N a_n - \sum_{n=0}^N a_n x^n + \sum_{n=0}^N a_nx^n - s\\
+&=\sum_{n=0}^N a_n (1-x^n) + \sum_{n=0}^N a_nx^n -s\\
+&=\sum_{n=0}^N a_n(1-x^n) + \sum_{n=0}^N a_nx^n + \sum_{n=N+1}^\infty a_nx^n
+-\sum_{n=N+1}^\infty a_nx^n -s\\
+&=\sum_{n=0}^N a_n(1-x^n) + \sum_{n=0}^\infty a_n x^n - s - \sum_{n=N+1}^\infty a_nx^n
+\end{align*}
+and then
+\begin{align*}
+\left|\sum_{n=0}^N a_n - s\right| &\leq \left| \sum_{n=0}^N a_n(1-x^n) \right|
++\left| \sum_{n=0}^\infty a_n x^n - s \right| + \left| \sum_{n=N+1}^\infty a_nx^n \right|\\
+&< 2 \epsilon + \epsilon +  \epsilon,
+\end{align*}
+proving the claim.
+\end{proof}
+
+
+\begin{lemma}
+Let $g:[0,1] \to \mathbb{R}$ and $0<c<1$. Suppose that the restrictions of
+$g$ to $[0,c)$ and $[c,1]$ are continuous and that
+\[
+g(c-0)=\lim_{x \to c^-} g(x) \leq g(c).
+\]
+For $\epsilon>0$, there are
+are polynomials $p(x)$ and $P(x)$ such that
+\[
+p(x) \leq g(x) \leq P(x), \qquad 0 \leq x \leq 1
+\]
+and
+\[
+\norm{g-p}_1 \leq \epsilon, \quad \norm{g-P}_1 \leq \epsilon.
+\]
+\label{weierstrass}
+\end{lemma}
+\begin{proof}
+There is some $\delta>0$ such that
+ $c-\delta \leq x<c$ implies that
+\[
+g(c-0)-\frac{\epsilon}{2} \leq g(x) \leq g(c-0)+\frac{\epsilon}{2};
+\]
+further, take $\delta<\frac{\epsilon}{g(c)-g(c-0)}$ and $\delta<\frac{1}{2}$.
+
+Take $L$ to be the linear function satisfying
+\[
+L(c-\delta) = g(c-\delta)+\frac{\epsilon}{2}, \qquad L(c)=g(c)+\frac{\epsilon}{2}.
+\]
+For $c-\delta \leq x < c$,
+\begin{align*}
+L(x)-g(x)&=L(x)-g(c-\delta)+g(c-\delta)-g(c-0)+g(c-0)-g(x)\\
+&=L(x)-L(c-\delta)+\frac{\epsilon}{2}+g(c-\delta)-g(c-0)+g(c-0)-g(x)\\
+&\leq L(c)-L(c-\delta) +\frac{\epsilon}{2} +\frac{\epsilon}{2}+\frac{\epsilon}{2}\\
+&=g(c)-g(c-\delta)+\frac{3\epsilon}{2}\\
+&= g(c)-g(c-0)+g(c-0)-g(c-\delta)+\frac{3\epsilon}{2}\\
+&<\frac{\epsilon}{\delta}+\frac{\epsilon}{2}+\frac{3\epsilon}{2}\\
+&<\frac{2\epsilon}{\delta}.
+\end{align*}
+Define $\Phi:[0,1] \to \mathbb{R}$ by
+\[
+\Phi(x)=\begin{cases}
+g(x)+\frac{\epsilon}{2}&0 \leq x < c-\delta\\
+\max\{L(x),g(x)+\frac{\epsilon}{2}\}&c-\delta \leq x \leq c\\
+g(x)+\frac{\epsilon}{2}&c<x \leq 1.
+\end{cases}
+\]
+$\Phi$ is continuous and $\Phi \geq g + \frac{\epsilon}{2}$. 
+We have
+\begin{align*}
+\norm{g-\Phi}_1&=\int_0^1(\Phi(x)-g(x)) dx\\
+&=\int_0^{c-\delta} \frac{\epsilon}{2} dx + \int_{c-\delta}^c (\Phi(x)-g(x)) dx
++\int_c^1 \frac{\epsilon}{2} dx\\
+&< \frac{\epsilon}{2} + \int_{c-\delta}^c (\Phi(x)-g(x)) dx\\
+&\leq \frac{\epsilon}{2}+\int_{c-\delta}^c \max\left\{L(x)-g(x),\frac{\epsilon}{2}\right\} dx\\
+&\leq  \frac{\epsilon}{2}+\int_{c-\delta}^c \max\left\{\frac{2\epsilon}{\delta},\frac{\epsilon}{2}\right\} dx\\
+&= \frac{\epsilon}{2}+\delta \cdot \frac{2\epsilon}{\delta}\\
+&=\frac{5\epsilon}{2}.
+\end{align*}
+Because $\Phi$ is continuous, by the Weierstrass approximation theorem there is a polynomial $P(x)$
+such that $\norm{\Phi-P}_\infty \leq \frac{\epsilon}{2}$. Then,
+\[
+g(x) \leq P(x), \qquad 0 \leq x \leq 1,
+\]
+and
+\[
+\norm{g-P}_1 \leq \norm{g-\Phi}_1 + \norm{\Phi-P}_1
+< \frac{5\epsilon}{2}+\norm{\Phi-P}_\infty\\
+\leq \frac{5\epsilon}{2}+\frac{\epsilon}{2}
+=3\epsilon.
+\]
+
+On the other hand, take $l$ to be the linear function satisfying
+\[
+l(c-\delta)=g(c-\delta) - \frac{\epsilon}{2}, \qquad l(c)=g(c)-\frac{\epsilon}{2}.
+\]
+One checks that for $c-\delta \leq x < c$.
+\[
+g(x)-l(x) < \frac{2\epsilon}{\delta},
+\] 
+Define $\phi:[0,1] \to \mathbb{R}$ by
+\[
+\phi(x)=\begin{cases}
+g(x)-\frac{\epsilon}{2}&0 \leq x < c-\delta\\
+\min\{l(x),g(x)-\frac{\epsilon}{2}\}&c-\delta \leq x \leq c\\
+g(x)-\frac{\epsilon}{2}&c<x\leq 1,
+\end{cases}
+\]
+which is continuous and satisfies $\phi \leq g-\frac{\epsilon}{2}$.
+One checks that
+\[
+\norm{g-\phi}_1  < \frac{5\epsilon}{2}.
+\]
+Because $\phi$ is continuous, there is a polynomial $p(x)$ such that
+$\norm{\phi-p}_\infty \leq \frac{\epsilon}{2}$. Then,
+\[
+p(x) \leq g(x), \qquad 0 \leq x \leq 1,
+\]
+and
+\[
+\norm{g-p}_1 \leq \norm{g-\phi}_1 + \norm{\phi-p}_1
+<\frac{5\epsilon}{2}+\norm{\phi-p}_\infty
+\leq \frac{5\epsilon}{2}+\frac{\epsilon}{2}
+=3\epsilon. 
+\]
+\end{proof}
+
+
+The following is the Hardy-Littlewood tauberian theorem.\footnote{E. C. Titchmarsh, {\em The Theory of Functions}, second ed., p.~227, \S 7.53, attributed to Karamata.}
+
+\begin{theorem}[Hardy-Littlewood tauberian theorem]
+If $a_n \geq 0$ for all $n$ and 
+\[
+\sum_{n=0}^\infty a_n x^n \sim \frac{1}{1-x}, \qquad x \to 1^-,
+\]
+then
+\[
+s_n = \sum_{\nu=0}^n a_\nu \sim n.
+\]
+\end{theorem}
+\begin{proof}
+For any $k \geq 0$,
+\begin{align*}
+(1-x)\sum_{n=0}^\infty a_n x^n (x^n)^k&=\frac{1-x}{1-x^{k+1}} (1-x^{k+1}) \sum_{n=0}^\infty a_n (x^{k+1})^n\\
+&= \frac{1}{1+x+\cdots+x^k} (1-x^{k+1}) \sum_{n=0}^\infty a_n (x^{k+1})^n\\
+&\to \frac{1}{k+1} \cdot 1\\
+&= \int_0^1 t^k dt,
+\end{align*}
+as $x \to 1^-$. Hence if $P(x)$ is a polynomial, then
+\begin{equation}
+\lim_{x \to 1^-} (1-x) \sum_{n=0}^\infty a_n x^n P(x^n) = \int_0^1 P(t) dt.
+\label{polynomial}
+\end{equation}
+
+
+
+Define $g:[0,1] \to \mathbb{R}$ by
+\[
+g(t) = 
+\begin{cases}
+0&0 \leq t <e^{-1}\\
+t^{-1}&e^{-1} \leq t \leq 1.
+\end{cases}
+\]
+Let $\epsilon>0$.
+By Lemma \ref{weierstrass}, there are polynomials $p(x), P(x)$ such that 
+\[
+p(x) \leq g(x) \leq P(x), \qquad 0 \leq x \leq 1
+\]
+and
+\[
+\norm{g-p}_1 \leq \epsilon, \qquad \norm{P-g}_1 \leq \epsilon.
+\]
+Because the coefficients $a_n$ are nonnegative, taking upper limits and then using \eqref{polynomial} we obtain
+\begin{align*}
+\limsup_{x \to 1^-} (1-x)\sum_{n=0}^\infty a_n x^n g(x^n)&\leq
+\limsup_{x \to 1^-} (1-x)\sum_{n=0}^\infty a_n x^n P(x^n)\\
+&=\lim_{x \to 1^-} (1-x)\sum_{n=0}^\infty a_n x^n P(x^n)\\
+&=\int_0^1 P(t) dt\\
+&<\int_0^1 g(t) dt + \epsilon.
+\end{align*}
+Taking lower limits and then using \eqref{polynomial} we obtain
+\begin{align*}
+\liminf_{x \to 1^-} (1-x)\sum_{n=0}^\infty a_n x^n g(x^n)&\geq
+\liminf_{x \to 1^-} (1-x)\sum_{n=0}^\infty a_n x^n p(x^n)\\
+&=\lim_{x \to 1^-} (1-x)\sum_{n=0}^\infty a_n x^n p(x^n)\\
+&=\int_0^1 p(t) dt\\
+&>\int_0^1 g(t) dt - \epsilon.
+\end{align*}
+The above two inequalities do not depend on the polynomials $p(x),P(x)$ but only on $\epsilon$, and
+taking $\epsilon \to 0$ yields
+\[
+\limsup_{x \to 1^-} (1-x)\sum_{n=0}^\infty a_n x^n g(x^n) \leq \int_0^1 g(t) dt
+\]
+and
+\[
+\liminf_{x \to 1^-} (1-x)\sum_{n=0}^\infty a_n x^n g(x^n) \geq \int_0^1 g(t) dt.
+\]
+Thus
+\begin{equation}
+\lim_{x \to 1^-} (1-x)\sum_{n=0}^\infty a_n x^n g(x^n) = \int_0^1 g(t) dt
+= \int_{e^{-1}}^1 t^{-1} dt = 1.
+\label{glimit}
+\end{equation}
+
+For $x=e^{-1/N}$ we have
+\begin{align*}
+\sum_{n=0}^\infty a_n x^n g(x^n) &= \sum_{n=0}^\infty 
+a_n e^{-n/N} g(e^{-n/N})\\
+&=\sum_{n=0}^N a_n e^{-n/N} e^{n/N}\\
+&=s_N.
+\end{align*}
+Thus, \eqref{glimit}  tells us that
+\[
+\lim_{N \to \infty} (1-e^{-1/N}) s_N = 1.
+\]
+That is,
+\[
+s_N \sim \frac{1}{1-e^{-1/N}},
+\]
+and using
+\[
+\frac{1}{1-e^{-1/N}} = N+\frac{1}{2}+O(N^{-1})
+\]
+we get
+\[
+s_N \sim N,
+\]
+completing the proof.
+\end{proof}
+
+\end{document}

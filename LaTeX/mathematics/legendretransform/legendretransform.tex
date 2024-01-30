@@ -1,0 +1,549 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm,siunitx}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\cco}{\ensuremath\overline{\mathrm{co}}\,}
+\newcommand{\supp}{\ensuremath\mathrm{supp}}
+\newcommand{\epi}{\ensuremath\mathrm{epi}\,}
+\newcommand{\lsc}{\ensuremath\mathrm{lsc}\,}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\LSC}{\ensuremath\mathrm{LSC}}
+\newcommand{\USC}{\ensuremath\mathrm{USC}}
+\newcommand{\extreals}{\overline{\mathbb{R}}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Legendre transform}
+\author{Jordan Bell}
+\date{April 25, 2014}
+
+\maketitle
+
+
+
+\section{Convexity}
+Write $\extreals=[-\infty,\infty]$. 
+We define $\infty+\infty=\infty$, $-\infty-\infty=-\infty$, and $\infty-\infty$ is nonsense. If $a \in \mathbb{R}$, we define $a+\infty=\infty$ and
+$a-\infty=-\infty$.
+
+If $X$ is a vector space and $f:X \to \extreals$ is a function, we define the {\em epigraph of $f$} to be the set
+\[
+\epi f = \{(x,\alpha) \in X \times \mathbb{R}: \alpha \geq f(x)\},
+\]
+and
+if $\epi f$ is a convex subset of the vector space $X \times \mathbb{R}$, we say that $f$ is {\em convex}. We
+define the {\em effective domain} of a convex function $f$ to be
+\[
+\dom f = \{x \in X: f(x)<\infty\}.
+\]
+We say that a convex function $f:X \to \extreals$ is {\em proper} if $\dom f  \neq \emptyset$ and $f$ does not take the value $-\infty$.
+If $C$ is a  convex subset of $X$ and $f:C \to \mathbb{R}$ is a function, we extend 
+$f$ to $X$ by defining $f(x)=\infty$ for $x \in X \setminus C$. 
+
+\begin{lemma}
+If $X$ is a vector space, $C$ is a convex subset of $X$, and $f:C \to \mathbb{R}$ satisfies
+\[
+f((1-t)x_1+tx_2) \leq (1-t)f(x_1)+tf(x_2), \qquad x_1,x_2 \in C, \quad 0 \leq t \leq 1,
+\]
+then $f:X \to \extreals$ is convex.
+\end{lemma}
+\begin{proof}
+Let $(x_1,\alpha_1),(x_2,\alpha_2) \in \epi f$ and $0 \leq t \leq 1$. The fact that the pairs
+ $(x_i,\alpha_i)$ belong to $\epi f$ means in particular
+that $f(x_i)<\infty$, and hence that $x_i \in C$, as otherwise we would have $f(x_i)=\infty$. 
+But
+\[
+(1-t)(x_1,\alpha_1)+t(x_2,\alpha_2)=((1-t)x_1+tx_2,(1-t)\alpha_1+t\alpha_2),
+\]
+and, as $x_1,x_2 \in C$,
+\[
+f((1-t)x_1+tx_2) \leq (1-t)f(x_1)+tf(x_2) \leq (1-t)\alpha_1+t\alpha_2,
+\]
+showing that $(1-t)(x_1,\alpha_1)+t(x_2,\alpha_2) \in \epi f$, and hence that $f:X \to \extreals$ is convex.
+\end{proof}
+
+
+\section{Definition of the Legendre transform}
+Let $V$ be a locally convex space and let $V^*$ be the dual space of $V$, i.e. the set of all continuous linear maps
+$V \to \mathbb{R}$. With the weak-* topology, $V^*$ is itself a locally convex space and $V=(V^*)^*$, with the  isomorphism
+of locally convex spaces $x \mapsto (\lambda \mapsto \lambda x)$.
+If $f:V \to \extreals$ is a function, the {\em Legendre transform}  or  {\em convex conjugate} of $f$
+is the function $f^*:V^* \to \extreals$ defined by
+\[
+f^*(\lambda) = \sup \{\lambda v - f(v):v \in V\} = \sup\{\lambda v-f(v):v \in \dom f\}.
+\]
+Like how the Fourier transform of a function from a locally compact abelian group to $\mathbb{C}$ is itself a function
+from the Pontryagin dual of the group to $\mathbb{C}$, the Legendre transform of a function from a locally convex space to $\extreals$ is
+itself a function from the dual space to $\extreals$.
+
+
+
+
+\begin{theorem}
+If $V$ is a locally convex space and $f:V \to \extreals$ is convex, then its Legendre transform
+$f^*:V^* \to \extreals$ is convex.
+\label{legendreconvex}
+\end{theorem}
+\begin{proof}
+Let $(\lambda_1,\alpha_1),(\lambda_2,\alpha_2) \in \epi f^*$, and let $0 \leq t \leq 1$. 
+We have
+ \begin{eqnarray*}
+f^*((1-t)\lambda_1+t\lambda_2)&=&\sup\{((1-t)\lambda_1+t\lambda_2)v-f(v):v \in \dom f\}\\
+&=&\sup\{(1-t)(\lambda_1 v-f(v))+t(\lambda_2 v-f(v)):v \in \dom f\}\\
+&\leq&\sup\{(1-t)(\lambda_1 v-f(v)): v\in \dom f\}\\
+&&+\sup\{t(\lambda_2 v-f(v)):v \in \dom f\}\\
+&=&(1-t)f^*(\lambda_1)+tf^*(\lambda_2)\\
+&\leq&(1-t)\alpha_1+t\alpha_2,
+ \end{eqnarray*}
+ which means that $(1-t)(\lambda_1,\alpha_1)+t(\lambda_2,\alpha_2) \in \epi f^*$, and hence that $f^*$ is convex.
+\end{proof}
+
+
+\section{Lower semicontinuity}
+If $X$ is a topological vector space and $f:X \to \extreals$ is a function, we say that $f$ is {\em lower semicontinuous} if $\epi f$ is a closed subset
+of $X \times \mathbb{R}$. 
+
+Theorem \ref{legendreconvex} shows that the Legendre transform of a convex function is itself convex. The following
+lemma states that if a proper convex function is lower semicontinuous, then its Legendre transform is proper; one
+proves the lemma using the Hahn-Banach separation theorem.\footnote{Viorel Barbu and Teodor Precupanu, {\em Convexity and Optimization in Banach Spaces},
+fourth ed., p.~78, Corollary 2.21.}
+ We
+use this lemma in the proof of the theorem that comes after.
+
+\begin{lemma}
+If $V$ is a locally convex space and $f:V \to \extreals$ is a lower semicontinuous proper convex function, then its Legendre
+transform $f^*:V^* \to \extreals$ is proper.
+\label{properlemma}
+\end{lemma}
+
+
+\begin{theorem}
+If $V$ is a locally convex space and $f:V \to \extreals$ is a lower semicontinuous proper convex convex, then $f^{**}=f$.
+\end{theorem}
+\begin{proof}
+For any $\lambda \in V^*$ we have $f^*(\lambda)=\sup\{\lambda v  - f(v): v\in V\}$, and hence
+for any $v \in V$ we have
+$f^*(\lambda) \geq \lambda v - f(v)$.
+Thus, for any $v \in V$ and $\lambda \in V^*$ we have
+\[
+\lambda v -f^*(\lambda) \leq f(v).
+\]
+Using this, for any $v \in V$ we have
+\[
+f^{**}(v)=\sup\{v\lambda - f^*(\lambda): \lambda \in \dom f^*\}
+=\sup\{\lambda v-f^*(\lambda):\lambda \in \dom f^*\}
+ \leq f(v).
+\]
+
+Suppose by contradiction that there were some $v_0 \in V$ for which $f^{**}(v_0)<f(v_0)$. First,  
+by Lemma \ref{properlemma} we have that $f^*$ is proper, so in particular $\dom f^* \neq \emptyset$,
+and this tells us that $f^{**}$ does not take the value $-\infty$. Hence $-\infty<f^{**}(v_0)<f(v_0)$, which tells us that $(v_0,f^{**}(v_0)) \in V \times \mathbb{R} \setminus  \epi f$.
+Therefore, $\epi f$ and the singleton $\{(v_0,f^{**}(v_0))\}$ are disjoint closed convex sets ($\epi f$ is closed because
+$f$ is lower semicontinuous), and so we can apply the Hahn-Banach separation
+theorem: there is some $\Lambda \in (V \times \mathbb{R})^*$ and some $\gamma \in \mathbb{R}$ for which
+\[
+\Lambda (v,\alpha) < \gamma < \Lambda (v_0,f^{**}(v_0)), \qquad (v,\alpha) \in \epi f.
+\]
+As $\Lambda \in (V \times \mathbb{R})^*$, there is some $\lambda \in V^*$ and some $\beta \in \mathbb{R}^*=\mathbb{R}$ for which
+$\Lambda (v,\alpha) = \lambda v + \beta \alpha$, and so 
+\begin{equation}
+\lambda v + \beta \alpha < \gamma < \lambda v_0 + \beta f^{**}(v_0), \qquad (v,\alpha) \in \epi f.
+\label{beta}
+\end{equation}
+If $\beta>0$ then we get a contradiction because for a fixed $v \in \dom f$ there are arbitrarily large positive $\alpha$ for which
+$(v,\alpha) \in \epi f$. Hence, $\beta \leq 0$. Assume by contradiction that $\beta=0$, and hence that
+\begin{equation}
+\lambda v < \gamma <\lambda v_0, \qquad v \in \dom f.
+\label{beta0}
+\end{equation}
+ If $v_0 \in \dom f$ then we get
+$\lambda v_0 < \gamma<\lambda v_0$, a contradiction. If $v_0 \not \in \dom f$, we shall still obtain a contradiction.
+Let $\mu \in \dom f^*$. For any $h>0$,
+\begin{eqnarray*}
+f^*(\mu+h\lambda)&=&\sup\{(\mu+h\lambda)v-f(v):v \in \dom f\}\\
+&=&\sup\{\mu v -f(v) + h\lambda v:v \in \dom f\}\\
+&\leq&\sup\{\mu v-f(v): v\in \dom f\} + \sup\{h\lambda v: v \in \dom f\}\\
+&=&f^*(\mu)+h \sup\{\lambda v: v \in \dom f\}.
+\end{eqnarray*}
+Therefore,
+\begin{eqnarray*}
+f^{**}(v_0)&\geq&(\mu+h\lambda)v_0-f^*(\mu+h\lambda)\\
+&\geq&(\mu+h\lambda)v_0-f^*(\mu)-h \sup\{\lambda v: v \in \dom f\}\\
+&=&\mu v_0 - f^*(\mu) + h\big(\lambda v_0 - \sup\{\lambda v: v \in \dom f\}\big).
+\end{eqnarray*}
+But by  \eqref{beta0} we have $\lambda v_0 - \sup\{\lambda v: v \in \dom f\}>0$, and
+therefore the right-hand side of 
+\[
+f^{**}(v_0) \geq \mu v_0 - f^*(\mu) + h\big(\lambda v_0 - \sup\{\lambda v: v \in \dom f\}\big)
+\]
+can be  an arbitrarily large positive number (as $f^*(\mu) < \infty$), contradicting
+that $f^{**}(v_0)<\infty$. Therefore, $\beta<0$, and dividing \eqref{beta} by $\beta$  then yields
+\[
+\frac{1}{\beta} \lambda v + \alpha> \frac{\gamma}{\beta} > \frac{1}{\beta} \lambda v_0 + f^{**}(v_0), \qquad
+(v,\alpha) \in \epi f.
+\]
+Hence,
+\begin{eqnarray*}
+\left(-\frac{1}{\beta}\lambda\right)v_0-f^{**}(v_0)&>&\sup\left\{-\frac{1}{\beta}\lambda v -\alpha: (v,\alpha) \in \epi f\right\}\\
+&=&\sup\left\{ -\frac{1}{\beta} \lambda v - f(v): v\in \dom f \right\}\\
+&=&f^*\left(-\frac{1}{\beta} \lambda \right),
+\end{eqnarray*}
+which contradicts 
+\[
+\left(-\frac{1}{\beta}\lambda\right)v_0 -f^{**}(v_0) \leq f^*\left(-\frac{1}{\beta} \lambda \right).
+\]
+Therefore, there is no $v_0 \in V$ for which $f^{**}(v_0)<f(v_0)$, i.e., for all $v \in V$ we have
+\[
+f(v_0) \leq f^{**}(v_0).
+\]
+ \end{proof}
+ 
+\section{Example in \textbf{R}\textsuperscript{{\em n}}}
+Let $V:\mathbb{R}^n \to \mathbb{R}$ be a function,
+ let $A$ be an $n \times n$ symmetric positive definite matrix, 
+and define $L:T\mathbb{R}^n \to \mathbb{R}$ by
+\[
+L(q,v) = \frac{1}{2}\inner{v}{Av} - V(q).
+\]
+Fix any $q \in \mathbb{R}^n$,  let $X = T_q \mathbb{R}^n = \mathbb{R}^n$, 
+and write $L_q(v)=L(q,v)$, for which $L_q:X \to \mathbb{R}$. The Legendre transform of $L_q$ is
+$L_q^*:X^* \to \extreals$, defined by
+\[
+L_q^*(\lambda) = \sup\{\lambda v - L_q(v): v \in X\}.
+\]
+Because $A$ is symmetric, for any $v \in X$ we obtain
+\[
+D(\lambda  -L_q)(v) = \lambda - Av.
+\]
+Hence, $D(\lambda - L_q)(v)=0$ is equivalent to 
+\[
+v = A^{-1} \lambda,
+\]
+and  with this,
+\[
+L_q(A^{-1}\lambda) = \frac{1}{2}\inner{A^{-1}\lambda}{AA^{-1}\lambda}-V(q) = \frac{1}{2}\inner{A^{-1}\lambda}{\lambda}-V(q),
+\]
+and therefore
+\[
+L_q^*(\lambda) = \lambda(A^{-1}\lambda)- \frac{1}{2}\inner{A^{-1}\lambda}{\lambda}+V(q) = \frac{1}{2}\inner{A^{-1}\lambda}{\lambda}+V(q).
+\]
+
+
+
+\section{Derivatives}
+Let $\Omega$ be a domain in $\mathbb{R}^n$ and let $f \in C^s(\Omega)$ for some $s \geq 2$. 
+We define $\phi:\Omega \to \mathbb{R}^n$ by $\phi(x)=(D f)(x)$; we have $\phi \in C^{s-1}(\Omega,\mathbb{R}^n)$.
+Following Giaquinta and Hildebrandt,\footnote{Mariano
+Giaquinta and Stefan Hildebrandt, {\em Calculus of Variations II}, p.~6.} we call $\phi$ a {\em gradient mapping}. The following theorem gives conditions under which $\phi:\Omega \to \phi(\Omega)$ is 
+  invertible.\footnote{Mariano
+Giaquinta and Stefan Hildebrandt, {\em Calculus of Variations II}, p.~6, Lemma 1.} (To be {\em locally invertible}
+means that for each point there is an open neighborhood such that the restriction of $\phi$ to that neighborhood is invertible.)
+
+\begin{theorem}
+If 
+\[
+\det (D^2 f)(x) \neq 0, \qquad x \in \Omega,
+\]
+then $\phi$ is locally invertible on $\Omega$. If $\Omega$ is convex and for all $x \in \Omega$ the matrix $(D^2 f)(x)$ is positive definite,
+then $\phi:\Omega \to \phi(\Omega)$ is a $C^{s-1}$ diffeomorphism.
+\end{theorem}
+\begin{proof}
+Because $\phi \in C^{s-1}(\Omega,\mathbb{R}^n)$ and $\det (D\phi)(x) = \det (D^2 f)(x) \neq 0$ for all $x \in \Omega$, by the inverse function theorem\footnote{Jerrold E.
+Marsden and Michael J. Hoffman, {\em Elementary Classical Analysis}, second ed., p.~393, Theorem 7.1.1.} we have that
+$\phi:\Omega \to \phi(\Omega)$ is a local $C^{s-1}$ diffeomorphism. 
+
+Suppose that $\phi(x_1)=\phi(x_2)$ for some distinct $x_1,x_2 \in \Omega$. Put $x=x_2-x_1$.
+Because $x_1,x_1+x=x_2 \in \Omega$ and $\Omega$ is convex, for any $0 \leq t \leq 1$ we have $x_1+tx \in \Omega$. Now define
+\[
+A(t) = (D^2 f) (x_1+tx),\qquad 0 \leq t \leq 1;
+\]
+because $f\in C^s(\Omega)$ with $s \geq 2$, we have that $A$ is continuous. Because
+\[
+\frac{d}{dt}\phi(x_1+tx) = (D\phi) (x_1+tx)x =(D^2 f)(x_1+tx)x= A(t)x,
+\]
+ we have
+\begin{eqnarray*}
+\inner{x}{\phi(x_2)-\phi(x_1)}&=&\inner{x}{\int_0^1 \frac{d}{dt}\phi(x_1+tx) dt}\\
+&=&\inner{x}{\int_0^1 A(t) dt}\\
+&=&\int_0^1 \inner{x}{A(t)x} dt.
+\end{eqnarray*}
+For each $0 \leq t \leq 1$ we have that $A(t)$ is a positive definite matrix, and because $x \neq 0$, this gives us that
+$\inner{x}{A(t)x} > 0$. Moreover, $t \mapsto \inner{x}{A(t)x}$ is continuous, so it follows that
+\[
+\int_0^1 \inner{x}{A(t)x} dt > 0.
+\]
+But $\inner{x}{\phi(x_2)-\phi(x_1)}=0$, a contradiction. Therefore, $\phi$ is one-to-one.
+It is a fact that a local diffeomorphism that is one-to-one is a diffeomorphism, thus $\phi:\Omega \to \phi(\Omega)$ is a $C^{s-1}$
+diffeomorphism.
+\end{proof}
+
+Suppose that the gradient mapping $\phi:\Omega \to \phi(\Omega)$ is a $C^{s-1}$ diffeomorphism. We write $\psi=\phi^{-1}$, so $\psi:\phi(\Omega) \to \Omega$
+is a $C^{s-1}$ diffeomorphism.
+The following theorem gives an explicit expression for the Legendre transform of certain functions.\footnote{Mariano
+Giaquinta and Stefan Hildebrandt, {\em Calculus of Variations II}, p.~9.}
+
+\begin{theorem}
+If $\Omega$ is a convex domain in $\mathbb{R}^n$, $f \in C^2(\Omega)$, 
+and for all $x \in \Omega$ the matrix $(D^2 f)(x)$ is positive definite,
+then
+\[
+f^*(\xi) = \xi  \psi(\xi) -f(\psi(\xi)), \qquad \xi \in \phi(\Omega).
+\]
+\label{legendreformula}
+\end{theorem}
+\begin{proof}
+Fix $\xi \in \phi(\Omega)$ and define $g:\Omega \to \mathbb{R}$ by 
+\[
+g(x) = \xi x - f(x).
+\]
+We have $g \in C^2(\Omega)$, and we have $(Dg)(x) = \xi-(Df)(x)$ and $(D^2 g)(x) = -(D^2 f)(x)$. Thus, for each $x \in
+\Omega$, the matrix
+$(D^2 g)(x)$ is negative definite. It follows that if there is a point $x_0 \in \Omega$ at which
+$(Dg)(x_0)=0$, then for all other $x \in \Omega$ we have $g(x) < g(x_0)$. To have $(Dg)(x_0)=0$ is equivalent
+$(Df)(x_0)=\xi$, and because $\phi:\Omega \to \phi(\Omega)$ is a bijection, there is indeed a unique
+$x_0 \in \Omega$ for which $(Df)(x_0)=\phi(x_0)=\xi$. Therefore,
+\begin{eqnarray*}
+f^*(\xi) &=& \sup\{\xi x-f(x): x \in \Omega\} \\
+&=&\sup\{g(x):x \in \Omega\} \\
+&=& g(x_0)\\
+&=&\xi x_0-f(x_0)\\
+&=&\xi \psi(\xi) - f(\psi(\xi)).
+\end{eqnarray*}
+\end{proof}
+
+
+
+Using the above expression for the Legendre transform of a $C^2$ function with positive definite Hessian,
+we show in the following theorem that the Legendre transform of a $C^s$ function with positive definite Hessian is itself a $C^2$ function.\footnote{Mariano
+Giaquinta and Stefan Hildebrandt, {\em Calculus of Variations II}, p.~7, Lemma 2.}
+
+
+\begin{theorem}
+If $\Omega$ is a convex domain in $\mathbb{R}^n$, $f \in C^s(\Omega)$ with $s \geq 2$, and for all $x \in \Omega$ the matrix
+$(D^2 f)(x)$ is positive definite, then $Df^*=\psi$ and $f^* \in C^s(\phi(\Omega))$.
+\end{theorem}
+\begin{proof}
+For all $\xi \in \phi(\Omega)$ we have by Theorem \ref{legendreformula},
+\[
+f^*(\xi) = \xi  \psi(\xi) -f(\psi(\xi)).
+\]
+Thus,
+\begin{eqnarray*}
+(D f^*)(\xi) &=& \psi(\xi) +\xi (D \psi)(\xi) -(Df)(\psi(\xi)) (D\psi)(\xi)\\
+&=&\psi(\xi) + \xi (D\psi)(\xi) - \phi(\psi(\xi)) (D\psi)(\xi)\\
+&=&\psi(\xi) + \xi (D\psi)(\xi) -\xi(D\psi)(\xi)\\
+&=&\psi(\xi).
+\end{eqnarray*}
+Hence $Df^*=\psi$. Because $\psi \in C^{s-1}(\phi(\Omega))$, it follows that $f \in C^s(\phi(\Omega))$.
+\end{proof}
+
+For all $x \in \Omega$, because $\psi(\phi(x))=x$ we have $(D\psi)(\phi(x)) (D\phi)(x) = I$, i.e. $(D^2 f^*)(\phi(x)) (D^2 f)(x) = I$, so
+\[
+(D^2f)(x)=((D^2 f^*)(\phi(x)))^{-1}.
+\]
+For all $\xi \in \phi(\Omega)$, because $\phi(\psi(\xi))=\xi$, we have $(D\phi)(\psi(\xi)) (D\psi)(\xi)=I$, i.e. $(D^2 f)(\psi(\xi)) (D^2 f^*)(\xi)=I$, so
+\[
+(D^2 f^*)(\xi) = ((D^2 f)(\psi(\xi)))^{-1}.
+\]
+
+
+
+\section{Example in \textbf{R}\textsuperscript{2}}
+Suppose that $\Omega$ is a convex domain in $\mathbb{R}^2$, that $f \in C^2(\Omega)$, and that for all $x \in \Omega$, the matrix $(D^2 f)(x)$ is positive definite.
+Write $\rho(x)=\det (D^2 f)(x)$; $\rho(x)>0$ for all $x \in \Omega$.  
+Because $(D^2 f)(x) = ((D^2 f^*)(\phi(x)))^{-1}$ for all $x \in \Omega$, we have
+\begin{eqnarray*}
+\begin{pmatrix}
+f_{11}(x)&f_{12}(x)\\
+f_{21}(x)&f_{22}(x)
+\end{pmatrix}
+&=&\begin{pmatrix}
+f^*_{11}(\phi(x))&f^*_{12}(\phi(x))\\
+f^*_{21}(\phi(x))&f^*_{22}(\phi(x))
+\end{pmatrix}^{-1}\\
+&=&
+\frac{1}{\det (D^2 f^*)(\phi(x))} \begin{pmatrix}f^*_{22}(\phi(x))&-f^*_{12}(\phi(x))\\
+-f^*_{21}(\phi(x))&f^*_{11}(\phi(x))
+\end{pmatrix}\\
+&=&
+\rho(x) \begin{pmatrix}f^*_{22}(\phi(x))&-f^*_{12}(\phi(x))\\
+-f^*_{21}(\phi(x))&f^*_{11}(\phi(x)).
+\end{pmatrix}
+\end{eqnarray*}
+
+Giaquinta and Hildebrandt\footnote{Mariano
+Giaquinta and Stefan Hildebrandt, {\em Calculus of Variations II}, p.~14.} give the following consequence of what we have just written out.
+If $f$ satisfies the above conditions and satisfies  the equation
+\[
+(1+f_2^2)f_{11} - 2f_1 f_2 f_{12} + (1+f_1^2)f_{22} = 2H(1+f_1^2+f_2^2)^{3/2},
+\]
+on $\Omega$, where $H$ is some constant, then 
+\[
+\begin{split}
+&(1+f_2(x)^2) \rho(x) f^*_{22}(\phi(x))+2f_1(x)f_2(x)\rho(x)f^*_{12}(\phi(x))\\
+&+(1+f_1(x)^2)\rho(x)f^*_{11}(\phi(x))\\
+=&2H(1+f_1(x)^2+f_2(x)^2)^{3/2}
+\end{split}
+\]
+for all $x \in \Omega$. Therefore,
+\[
+\begin{split}
+&(1+\xi_2^2) \rho(\psi(\xi)) f^*_{22}(\xi) + 2\xi_1\xi_2 \rho(\psi(\xi)) f^*_{12}(\xi) +(1+\xi_1^2)\rho(\psi(\xi)) f^*_{11}(\xi)\\
+=&2H(1+\xi_1^2+\xi_2^2)^{3/2}
+\end{split}
+\]
+for all $\xi \in \phi(\Omega)$, $\xi=(\xi_1,\xi_2)$. In the case where $H=0$, then, dividing by $\rho(\psi(\xi))$, which is $>0$, we obtain
+\[
+(1+\xi_2^2) f^*_{22}(\xi) + 2\xi_1\xi_2  f^*_{12}(\xi) +(1+\xi_1^2) f^*_{11}(\xi)=0.
+\]
+In the case $H=0$, the equation satisfied by $f$ is called the {\em minimal surface equation}, and we have thus found a partial
+differential equation satisfied by 
+the Legendre transform of a solution of the minimal surface equation that satisfies the conditions we imposed at the start of the example.
+Writing the equation satisfied by $f^*$ in the form
+\[
+A f^*_{11} + 2Bf^*_{12}+Cf^*_{22}=0,
+\]
+we have $A=(1+\xi_1^2)$, $B=\xi_1\xi_2$, $C=(1+\xi_2^2)$, with which
+\[
+B^2-AC = \xi_1^2\xi_2^2-(1+\xi_1^2)(1+\xi_2^2)=-1-\xi_1^2-\xi_2^2 \leq -1,
+\]
+which means that partial differential equation satisfied by $f^*$ is elliptic.
+
+
+\section{Lagrangians and Hamiltonians}
+Theorem \ref{legendreformula} states that if 
+$\Omega$ is a convex domain in $\mathbb{R}^n$, $f \in C^2(\Omega)$, 
+and for all $x \in \Omega$ the matrix $(D^2 f)(x)$ is positive definite, then
+\[
+f^*(\xi) = \xi  \psi(\xi) -f(\psi(\xi)), \qquad \xi \in \phi(\Omega).
+\]
+Suppose that $L:\mathbb{R}^n \times \mathbb{R}^n \times \mathbb{R}$ is a function
+such that for each $q \in \mathbb{R}^n$ and $t \in \mathbb{R}$, the function $v \mapsto
+L(q,v,t)$ satisfies the above conditions. Fix $q \in \mathbb{R}^n$ and $t \in \mathbb{R}$. 
+With $DL=(\frac{\partial L}{\partial q},\frac{\partial L}{\partial v},\frac{\partial L}{\partial t})$ and
+ $\phi(v) = \frac{\partial L}{\partial v} (q,v,t)$, $\psi=\phi^{-1}$, we have
+ \[
+ L^*(q,p,t) = p \psi(p)-L(q,\psi(p),t), \qquad p \in \phi(\mathbb{R}^n),
+ \]
+ or with $H=L^*$,
+ \[
+ H(q,p,t) = p\psi(p)-L(q,\psi(p),t), \qquad p \in \phi(\mathbb{R}^n).
+ \]
+We have
+\[
+\frac{\partial H}{\partial q}(q,p,t) = -\frac{\partial L}{\partial q}(q,\psi(p),t),
+\]
+and
+\begin{eqnarray*}
+\frac{\partial H}{\partial p}(q,p,t) &=& \psi(p)+p(D\psi)(p) - \frac{\partial L}{\partial v}(q,\psi(p),t) (D\psi)(p)\\
+&=&\psi(p)+p(D\psi)(p)-\phi(\psi(p)) (D\psi)(p)\\
+&=&\psi(p)+p(D\psi)(p)-p(D\psi)(p)\\
+&=&\psi(p),
+\end{eqnarray*}
+and
+\[
+\frac{\partial H}{\partial t}(q,p,t) = -\frac{\partial L}{\partial t}(q,\psi(p),t).
+\]
+
+For a path $(q(t),v(t),t)$ to satisfy the
+ {\em Euler-Lagrange equation} means that 
+\[
+\frac{d}{dt}\left( \frac{\partial L}{\partial v} (q(t),v(t),t) \right)  = \frac{\partial L}{\partial q} (q(t),v(t),t).
+\]
+With $p(t)=\phi(v(t))$, this yields
+\[
+\frac{dp}{dt}(t) = \frac{\partial L}{\partial q} (q(t),\psi(p(t)),t),
+\]
+and hence
+\[
+\frac{dp}{dt}(t) = -\frac{\partial H}{\partial q}(q(t),p(t),t).
+\]
+
+
+
+
+
+\section{Physical units}
+First, if a Lagrangian $L$, $L(q,v,t)$, has units \si{J}, then the Hamiltonian $H=L^*$, $H(q,p,t)$, has the same units \si{J}, and it follows
+that $p\psi(p)$ has units \si{J}.  Second, $[\psi(p)]=[v]$, and so $[H]=[p][\psi(p)]=[p][v]$. Therefore, $[p][v]=\si{J}$. If we take $[v]=\si{m/s}$, then
+this implies that $[p]=\si{kg.m/s}$.
+
+\section{More books}
+V. I. Arnold,
+{\em Mathematical Methods of Classical Mechanics}, second ed., p.~61, \S 14; 
+Ralph Abraham and Jerrold E. Marsden, {\em Foundations of Mechanics}, second ed., p.~218, \S 3.6;
+Jerrold E. Marsden and Tudor S. Ratiu, {\em Introduction to Mechanics and Symmetry}, second ed., p.~183, \S 7.2; 
+J\"urgen Jost and Xianqing Li-Jost, {\em Calculus of Variations}, chapter 4; David Yang Gao, {\em Duality Principles in Nonconvex Systems: Theory, Methods and Applications}.
+
+
+
+\section{History}
+As best as I can tell, the thing we call the Legendre transform is named after Legendre because of the following paper:
+Adrien-Marie Legendre, {\em M\'emoire sur l'int\'egration de quelques 
+\'Equations aux diff\'erences partielles}, 
+Histoire de l'Acad\'emie royale des sciences (1787), 309--351.
+The following is a partial bibliography of works that refer to this paper of Legendre's. No
+historical summary of the Legendre transform exists in the literature, and the following is presented as an aid to the preparation of one.
+To properly  tell the story of the Legendre transform, one would be well served by 
+carefully digging through
+sources and attentively reading Legendre's original paper, and also by making oneself comfortable with how it appears in 
+convex analysis, minimal surfaces, contact geometry, thermodynamics, etc.
+Such a comprehensive history would require meticulously scanning through 
+Legendre's monumental {\em Traite} on elliptic integrals lest
+relevant material is included there. The best biography of Legendre that exists
+is the one by Itard in the {\em Dictionary of Scientific Biography},
+who mentions that something relevant to the Legendre transform appears in volume II
+of the 1826 {\em Traite}, concerning arc lengths. One should also scan through the work of Lagrange, including
+his  1788 {\em M\'echanique analitique}, and the work of Euler on the calculus of variations.
+
+{\em Correspondance de Leonhard Euler avec A. C. Clairaut, J. d'Alembert et J. L. Lagrange},
+pp.~440--441, Note 6; 
+S. S. Demidov, {\em The study of partial differential equations of the first order in the 18th and 19th centuries},
+Arch. Hist. Exact Sci. \textbf{26} (1982), no. 4, 325--350; Erwin Kreyszig, {\em On the Theory of Minimal Surfaces}, 
+The Problem of Plateau (Themistocles M. Rassias, ed.), 1992, 138--164, p.~145;
+Julian Lowell Coolidge, {\em A History of Geometrical Methods}, p.~377; Alfred Enneper,
+{\em Bemerkungen \"uber einige Fl\"achen von constantem Kr\"ummungsmaa\ss}, Nachrichten von der K\"onigl. Gesellschaft der Wissenschaften und der Georg-Augusts-Universit\"at zu
+G\"ottingen (1876), 597--619, p.~614; Alfred Enneper, {\em Ueber Fl\"achen mit besonderen Meridiancurven}, Abhandlungen der K\"oniglichen Gesellschaft der Wissenschaften in
+G\"ottingen \textbf{29} (1882), 3--87, p.~6; Gaston Darboux, {\em Le\c{c}ons sur la th\'eorie g\'en\'erale des surfaces}, vol. 1, p.~271, \S 177;  \'Edouard Goursat,
+{\em Le\c{c}ons sur l'int\'egration des \'equations aux d\'eriv\'ees partielles du second ordre, \`a deux variables ind\'ependantes}, tome 2, p.~32, chapter V, \S 113;
+Ren\'e Taton, {\em L'{\oe}uvre scientifique de Monge}, p.~262; 
+Karin Reich,
+{\em Die Geschichte der Differentialgeometrie von Gau{\ss} bis Riemann (1828--1868)},
+Arch. Hist. Exact Sci. \textbf{11} (1973), no.~4, 273--376, p.~315;
+Ivor Grattan-Guinness, {\em Convolutions in French Mathematics, 1800-1840}, vol. I, p.~152; 
+Morris Kline, {\em Mathematical Thought From Ancient to Modern Times},
+chapter 22; Jo\~{a}o Caramalho Domingues, {\em Lacroix and the Calculus}, p.~223;
+Ernst Hairer,
+Syvert Paul N{\o}rsett and Gerhard Wanner,
+{\em Solving Ordinary Differential Equations I: Nonstiff Problems}, p.~32;
+Paul Mansion, {\em Th\'eorie des \'equations aux d\'eriv\'ees partielles du premier ordre}, p.~76; 
+A. R. Forsyth, 
+{\em A Treatise on Differential Equations}, sixth ed., pp.~418, 476; Lagrange, {\em M\'echanique analitique} (1788),
+tome 1, partie 2, \S IV; Ernesto Pascal, {\em Die Variationsrechnung}, p.~125; Bernhard Riemann,
+{\em Ueber die Fl\"ache vom kleinsten Inhalt bei gegebener Begrenzung}; Courant and Hilbert, vol. II; Cornelius Lanczos, {\em The Variational Principles of Mechanics},
+fourth ed., \S VI.1; Ed. Combescure, {\em Remarques sur un M\'emoire de
+Legendre}, Comptes rendus
+hebdomadaires des s\'eances de l'Acad\'emie des sciences \textbf{74} (1872), 798--802;
+Johannes C. C. Nitsche,
+{\em Vorlesungen über Minimalflächen}, p.~147; 
+A. W. Conway and J. L. Synge (ed.), {\em The Mathematical Papers of Sir William Rowan Hamilton}, vol. I, (1931), p.~474.
+
+\end{document}

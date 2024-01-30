@@ -1,0 +1,330 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\Sh}{\ensuremath\mathrm{Sh}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Khinchin's inequality and Etemadi's inequality}
+\author{Jordan Bell}
+\date{September 4, 2015}
+
+\maketitle
+
+
+
+\section{Khinchin's inequality}
+We will use the following to prove Khinchin's inequality.\footnote{Camil Muscalu and Wilhelm Schlag, {\em Classical and Multilinear Harmonic Analysis}, volume I,
+p.~113, Lemma 5.4.}
+
+\begin{lemma}
+Let $X_1,\ldots,X_n$ be independent random variables each with the Rademacher distribution. For $a_1,\ldots,a_n \in \mathbb{R}$ and $\lambda>0$,
+\[
+P\left(\left|S_n \right| > \lambda \left(\sum_{k=1}^n a_k^2 \right)^{1/2}\right) \leq 2e^{-\lambda^2/2},
+\]
+where
+\[
+S_n=\sum_{k=1}^n a_k X_k.
+\]
+\end{lemma}
+\begin{proof}
+For $t \in \mathbb{R}$,
+\[
+E(e^{ta_k X_k}) = \int_\mathbb{R} e^{ta_kx} d\left(\frac{1}{2}\delta_{-1}+\frac{1}{2}\delta_1\right)(x)
+=\frac{1}{2}(e^{-ta_k}+e^{ta_k})
+=\cosh (ta_k).
+\]
+Because
+the $X_k$ are independent,
+\[
+E(e^{tS_n}) = \prod_{k=1}^n E(e^{ta_k X_k})= \prod_{k=1}^n \cosh(ta_k),
+\]
+and because $\cosh x\leq e^{x^2/2}$ for all $x \in \mathbb{R}$, we have
+\[
+E(e^{tS_n}) \leq \prod_{k=1}^n e^{\frac{t^2 a_k^2}{2}}
+=\exp\left(\frac{t^2}{2} \sum_{k=1}^n a_k^2\right).
+\]
+Let $\sigma^2=\sum_{k=1}^n a_k^2$, with which
+\[
+E(e^{tS_n})  \leq \exp\left(\frac{t^2 \sigma^2}{2}\right).
+\]
+
+Because $t \mapsto e^{\lambda \sigma t}$ is nonnegative and nondecreasing, for $t>0$ we have
+\[
+1_{S_n>\lambda \sigma} e^{\lambda \sigma t} < e^{t S_n},
+\]
+which yields $P(S_n>\lambda \sigma) \leq e^{-\lambda \sigma t} E(e^{tS_n})$, and
+hence 
+\[
+P(S_n>\lambda \sigma) \leq e^{-\lambda \sigma t}  \exp\left(\frac{t^2 \sigma^2}{2}\right)
+=\exp\left(-\lambda \sigma t  + \frac{t^2 \sigma^2}{2}\right).
+\]
+The minimum of the right-hand side occurs when $\lambda \sigma = t \sigma^2$, i.e. $t = \frac{\lambda}{\sigma}$, at which
+\[
+P(S_n>\lambda \sigma) \leq \exp\left(-\lambda^2 + \frac{\lambda^2}{2}\right)
+=e^{-\lambda^2/2}.
+\]
+For $t>0$,
+\[
+1_{S_n<-\lambda \sigma} e^{\lambda \sigma t} < e^{-tS_n},
+\]
+which yields $P(S_n<-\lambda \sigma) \leq e^{-\lambda \sigma t} E(e^{-tS_n})$, and hence
+\[
+P(S_n<-\lambda \sigma) \leq
+e^{-\lambda \sigma t} \exp\left( \frac{(-t)^2 \sigma^2}{2}\right)=
+ \exp\left(-\lambda \sigma t  + \frac{t^2 \sigma^2}{2} \right),
+\]
+whence
+\[
+P(S_n<-\lambda \sigma) \leq e^{-\lambda^2/2}.
+\]
+Therefore
+\[
+P(|S_n|>\lambda \sigma) = P(S_n > \lambda \sigma)
++P(S_n<-\lambda \sigma)
+\leq 2 e^{-\lambda^2/2},
+\]
+proving the claim.
+\end{proof}
+
+\begin{corollary}
+Let $X_1,\ldots,X_n$ be independent random variables each with the Rademacher distribution. For
+$\alpha_1,\ldots,\alpha_n \in \mathbb{C}$ and $\lambda>0$,
+\[
+P\left(\left|S_n \right| > \lambda \left(\sum_{k=1}^n |\alpha_k|^2 \right)^{1/2}\right) \leq 4e^{-\lambda^2/2},
+\]
+where
+\[
+S_n = \sum_{k=1}^n \alpha_k X_k.
+\]
+\label{complex}
+\end{corollary}
+\begin{proof}
+Write $\alpha_k = a_k+ib_k$. If
+\[
+\left|S_n(\omega) \right| > \lambda \left(\sum_{k=1}^n |\alpha_k|^2\right)^{1/2},
+\]
+then 
+\[
+|S_n(\omega)|^2 > \lambda^2 \sum_{k=1}^n (a_k^2+b_k^2).
+\]
+But
+\[
+|S_n(\omega)|^2 
+=\left( \sum_{k=1}^n a_kX_k(\omega) \right)^2 + \left(\sum_{k=1}^n b_k X_k(\omega) \right)^2,
+\]
+so at least one of the following is true:
+\[
+ \left|\sum_{k=1}^n a_kX_k(\omega)\right|  > \lambda \left(\sum_{k=1}^n a_k^2\right)^{1/2},
+ \qquad  \left|\sum_{k=1}^n b_kX_k(\omega)\right|  > \lambda \left(\sum_{k=1}^n b_k^2\right)^{1/2}.
+\]
+By Lemma \ref{subgaussian},
+\[
+P\left(\left|S_n \right| > \lambda \left(\sum_{k=1}^n a_k^2 \right)^{1/2}\right) \leq 2e^{-\lambda^2/2}
+\]
+and
+\[
+P\left(\left|S_n \right| > \lambda \left(\sum_{k=1}^n b_k^2 \right)^{1/2}\right) \leq 2e^{-\lambda^2/2},
+\]
+thus
+\begin{align*}
+P\left(\left|S_n \right| > \lambda \left(\sum_{k=1}^n |\alpha_k|^2 \right)^{1/2}\right)&\leq 
+P\left(\left|S_n \right| > \lambda \left(\sum_{k=1}^n a_k^2 \right)^{1/2}\right)\\
+&+P\left(\left|S_n \right| > \lambda \left(\sum_{k=1}^n b_k^2 \right)^{1/2}\right)\\
+&\leq 4e^{-\lambda^2/2},
+\end{align*}
+proving the claim.
+\end{proof}
+
+
+We now prove \textbf{Khinchin's inequality}.\footnote{Camil Muscalu and Wilhelm Schlag, {\em Classical and Multilinear Harmonic Analysis}, volume I,
+p.~114, Lemma 5.5;
+Thomas H. Wolff, {\em Lectures on Harmonic Analysis}, p.~28, Proposition 4.5.}
+
+\begin{theorem}[Khinchin's inequality]
+For $1 \leq p < \infty$,
+let 
+\[
+C(p)= \left(2^{1+\frac{p}{2}}  \cdot p \cdot \Gamma\left(\frac{p}{2}\right)\right)^{1/p},
+\]
+and let $\frac{1}{p}+\frac{1}{q}=1$.
+If
+$X_1,\ldots,X_n$ are independent random variables each with the Rademacher distribution
+and $a_1,\ldots,a_n \in \mathbb{C}$, then
+\[
+C(q)^{-1} \left( \sum_{k=1}^n |a_k|^2 \right)^{1/2} \leq E\left( \left| \sum_{k=1}^n a_k X_k \right|^p \right)^{1/p}
+\leq C(p) \left( \sum_{k=1}^n |a_k|^2 \right)^{1/2}.
+\]
+\end{theorem}
+\begin{proof}
+First we remark that it can be computed that
+\[
+\left( \int_0^\infty pt^{p-1} \cdot 4e^{-t^2/2} dt\right)^{1/p} = 
+ \left(2^{1+\frac{p}{2}}  \cdot p \cdot \Gamma\left(\frac{p}{2}\right)\right)^{1/p} = C(p).
+\]
+
+Let $\sigma^2 = \sum_{k=1}^n |a_k|^2$ and let
+$\alpha_k = \frac{a_k}{\sigma}$; if $\sigma=0$ then the claim is immediate. 
+To prove the claim it is equivalent to prove that 
+\[
+C(q)^{-1} \leq  E\left( \left| \sum_{k=1}^n \alpha_k X_k \right|^p\right)^{1/p}
+\leq C(p).
+\]
+Write $S_n=\sum_{k=1}^n \alpha_k X_k$. Using the fact that for a random variable $X$ with $P(X \geq 0)=1$,
+\[
+E(X^p) = \int_0^\infty p t^{p-1} P(X \geq t) dt,
+\]
+we obtain, applying Lemma \ref{complex},
+\[
+E(|S_n|^p)=\int_0^\infty pt^{p-1} P(|S_n| \geq t) dt
+\leq \int_0^\infty pt^{p-1} \cdot 4e^{-t^2/2} dt,
+\]
+and thus
+\begin{equation}
+E(|S_n|^p)^{1/p} \leq C(p).
+\label{upperbound}
+\end{equation}
+
+Using H\"older's inequality,
+because the $X_k$ are independent and $E(X_k)=0$ and
+$E(|X_k|^2)=1$,
+\[
+\sum_{k=1}^n |\alpha_k|^2=E\left( \left| \sum_{k=1}^n \alpha_k X_k\right|^2 \right)
+\leq E\left( \left| \sum_{k=1}^n \alpha_k X_k\right|^p\right)^{1/p}
+E\left( \left| \sum_{k=1}^n \alpha_k X_k\right|^q\right)^{1/q}.
+\]
+Applying \eqref{upperbound},
+\[
+E\left( \left| \sum_{k=1}^n \alpha_k X_k\right|^q\right)^{1/q}  \leq C(q),
+\]
+and as $\sum_{k=1}^n |\alpha_k|^2=1$ we obtain
+\[
+1 \leq C(q) E\left( \left| \sum_{k=1}^n \alpha_k X_k\right|^p\right)^{1/p}.
+\]
+Thus we have
+\[
+C(q)^{-1} \leq   E(|S_n|^p)^{1/p} \leq C(p),
+\]
+which proves the claim.
+\end{proof}
+
+
+
+\section{Etemadi's inequality}
+The following is \textbf{Etemadi's inequality}.\footnote{Allan Gut, {\em Probability: A Graduate Course}, p.~143, Theorem 7.6.}
+
+\begin{theorem}[Etemadi's inequality]
+If $X_1,\ldots,X_n$ are independent random variables, then for any $x>0$,
+\[
+P\left(\max_{1 \leq k \leq n} |S_k|  \geq 3x\right) \leq 
+2P(|S_n| \geq x) + \max_{1 \leq k \leq n} P(|S_k| \geq x)
+\leq
+3 \max_{1 \leq k \leq n} P(|S_k| \geq x),
+\]
+where $S_k=\sum_{j=1}^k X_j$.
+\label{subgaussian}
+\end{theorem}
+\begin{proof}
+For $k=1,\ldots,n$, let
+\[
+A_k = \left\{\max_{1 \leq j \leq k-1} |S_j| < 3x\right\} \cap \{ |S_k| \geq 3x\},
+\]
+with $A_1=\{|S_1| \geq 3x\}$. $A_1,\ldots,A_n$ are disjoint, and
+\[
+A = \bigcup_{k=1}^n A_k = \left\{ \max_{1 \leq k \leq n} |S_k| \geq 3x\right\}.
+\]
+For each $1 \leq k \leq n$,
+\[
+A_k \cap  \{|S_n| < x\} \subset A_k \cap \{|S_n-S_k| > 2x\},
+\]
+and  also, the events $A_k$ and $\{|S_n-S_k|>2x\}$ are independent,
+and thus
+\begin{align*}
+P(A)&=P(A \cap \{|S_n| \geq x\})+ P(A \cap \{|S_n| < x\})\\
+&\leq P(|S_n| \geq x) +P(A \cap \{|S_n| < x\})\\
+&\leq P(|S_n| \geq x) + \sum_{k=1}^n P(A_k \cap \{|S_n-S_k| > 2x\})\\
+&= P(|S_n| \geq x) + \sum_{k=1}^n P(A_k) P(|S_n-S_k|>2x)\\
+&\leq P(|S_n| \geq x) + \max_{1 \leq k \leq n} P(|S_n-S_k|>2x) \cdot
+P(A).
+\end{align*}
+Then, because $|a-b| > 2x$ implies  that $|a| > x$ or $|b| > x$,
+\begin{align*}
+P(A)&\leq  P(|S_n| \geq x)  +  \max_{1 \leq k \leq n} P(|S_n-S_k|>2x)\\
+&\leq P(|S_n| \geq x) + \max_{1 \leq k \leq n} \left(P(|S_n| > x)+P(|S_k| > x)\right).
+\end{align*}
+\end{proof}
+
+
+The following inequality is similar enough to Etemadi's inequality to be placed in this note.\footnote{K. R.
+Parthasarathy, {\em Probability Measures on Metric Spaces}, p.~219, Chapter VII, Lemma 4.1.}
+
+\begin{lemma}
+Let $\xi_1,\ldots,\xi_n$ be independent random variables with sample space $(\Omega,\mathscr{F},P)$. 
+Let $\zeta_0=0$ and for $1 \leq k \leq n$ let $\xi_k = \sum_{i=1}^k \xi_i$. If $P(|\zeta_n-\zeta_k| \leq t) \geq \alpha$ for
+$0 \leq k \leq n$ then
+\[
+P\left( \max_{1 \leq k \leq n} |\zeta_k| > 2t\right) \leq \alpha^{-1} P(|\zeta_n| > t).
+\]
+\label{Pmax}
+\end{lemma}
+\begin{proof}
+For $0 \leq k \leq n$ let
+\[
+A_k = \{|\zeta_1| \leq 2t, \ldots, |\zeta_{k-1}| \leq 2t, |\zeta_k| > 2t\},
+\qquad B_k = \{|\zeta_n-\zeta_k| \leq t\},
+\]
+where $A_0 = \Omega$.
+Because $|\zeta_n| \geq |\zeta_k| - |\zeta_n-\zeta_k|$,
+\[
+A_k \cap B_k \subset \{ |\zeta_n| > t\},
+\]
+and so
+\[
+\bigcup_{k=1}^n (A_k \cap B_k) \subset  \{ |\zeta_n| > t\}.
+\]
+It is apparent that for $j \neq k$ the events $A_j$ and $A_k$ are disjoint, so the sets
+$A_1 \cap B_1, \ldots, A_k \cap B_k$ are pairwise disjoint, hence
+\[
+P(  |\zeta_n| > t) \geq P\left( \bigcup_{k=1}^n (A_k \cap B_k) \right)
+=\sum_{k=1}^n P(A_k \cap B_k).
+\]
+For each $k$, using that $\xi_1,\ldots,\xi_n$ are independent one checks that the events
+$A_k$ and $B_k$ are independent, and using this,
+\[
+P(  |\zeta_n| > t)  \geq \sum_{k=1}^n P(A_k) P(B_k) \geq \alpha \sum_{k=1}^n P(A_k)
+=\alpha P \left( \bigcup_{k=1}^n A_k \right),
+\]
+that is,
+\[
+P(|\zeta_n| > t) \geq \alpha P\left( \max_{1 \leq k \leq n} |\zeta_k| > 2t\right),
+\]
+proving the claim.
+\end{proof}
+
+
+
+
+\end{document}

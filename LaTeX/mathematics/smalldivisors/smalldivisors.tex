@@ -1,0 +1,335 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\rank}{\ensuremath\mathrm{rank\,}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\osc}{\ensuremath\mathrm{osc}} 
+\newcommand{\co}{\ensuremath\mathrm{co}\,} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}}
+\newcommand{\ext}{\ensuremath\mathrm{ext}\,}
+\newcommand{\ba}{\ensuremath\mathrm{ba}\,}
+\newcommand{\cl}{\ensuremath\mathrm{cl}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\Cyl}{\ensuremath\mathrm{Cyl}\,}
+\newcommand{\extreals}{\overline{\mathbb{R}}}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Gottschalk-Hedlund theorem, cocycles, and small divisors}
+\author{Jordan Bell}
+\date{July 23, 2014}
+
+\maketitle
+
+\section{Introduction}
+This note consists of my working through details in the paper {\em Resonances and small divisors} by \'Etienne Ghys.\footnote{\url{http://perso.ens-lyon.fr/ghys/articles/resonancesmall.pdf}} Aside from containing mathematics, Ghys makes thoughtful remarks about the history of physics, unlike the typically thoughtless statements 
+people make about the Ptolemaic system. He insightfully states ``Kepler's zeroth law'': ``If the orbit of a planet is bounded, then it is
+periodic.'' I can certainly draw a three dimensional bounded curve that is not closed, but that curve is not the orbit of a planet. It is also intellectually lazy to scorn Kepler's correspondence between
+orbits and the Platonic solids (``Kepler's fourth law'').
+
+\section{Almost periodic functions}
+Suppose that $f:\mathbb{R} \to \mathbb{C}$ is continuous. For $\epsilon>0$, we call $T \in \mathbb{R}$ an \textbf{$\epsilon$-period of $f$} if 
+\[
+|f(t+T)-f(t)|<\epsilon, \qquad t \in \mathbb{R}.
+\]
+$T$ is a period of $f$ if and only if it is an $\epsilon$-period for all $\epsilon>0$.
+
+We say that $f$ is \textbf{almost periodic} if for every $\epsilon>0$ there is some $M_\epsilon>0$ such that if $I$ is an interval 
+of length $>M_\epsilon$ then there is an $\epsilon$-period in $I$.
+
+If $f$ is periodic, then there is some $M>0$ such that if $I$ an interval of length $>M$ then at least one multiple $T$ of $M$ lies in $I$, and hence
+for any $t \in \mathbb{R}$ we have $f(t+T) - f(t)=f(t)-f(t)=0$. Thus, for every $\epsilon>0$, if $I$ is an interval of length $>M$ then there is an
+$\epsilon$-period in $I$. Therefore, with a periodic function, the length of the intervals $I$ need not depend on $\epsilon$, while for an almost
+periodic function they may.
+
+
+\section{The Gottschalk-Hedlund theorem}
+The \textbf{Gottschalk-Hedlund theorem} is stated and proved in Katok and Hasselblatt.\footnote{Anatole Katok and Boris Hasselblat, {\em Introduction to the Modern Theory of Dynamical Systems},
+p.~102, Theorem 2.9.4.} The following case of the Gottschalk-Hedlund theorem is from Ghys. We denote by
+\[
+\pi_1:\mathbb{R}/\mathbb{Z} \times \mathbb{R} \to 
+\mathbb{R} / \mathbb{Z}, \qquad \pi_2:\mathbb{R}/\mathbb{Z} \times \mathbb{R} \to 
+\mathbb{R} 
+\]
+ the projection maps. 
+
+\begin{theorem}[Gottschalk-Hedlund theorem]
+Suppose that $u:\mathbb{R}/\mathbb{Z} \to \mathbb{R}$ is continuous, that 
+\[
+\int_0^1 u(x) dx =0,
+\]
+that $x_0 \in \mathbb{R} / \mathbb{Z}$, and that $\alpha$ is irrational. If there is some $C$ such that
+\begin{equation}
+\left| \sum_{k=0}^n u(x_0+k\alpha) \right| \leq C, \qquad n \geq 0,
+\label{Cinequality}
+\end{equation}
+then there is  a continuous function  $v:\mathbb{R}/\mathbb{Z} \to \mathbb{R}$ such that
+\[
+u(x)=v(x+\alpha)-v(x), \qquad x \in \mathbb{R}/\mathbb{Z}.
+\]
+\end{theorem}
+\begin{proof}
+Say there is some $C>0$ satisfying \eqref{Cinequality}. Define $g:\mathbb{R}/\mathbb{Z} \times \mathbb{R} \to \mathbb{R}/\mathbb{Z} \times \mathbb{R}$
+by 
+\[
+g(x,y) = (x+\alpha,y+u(x)), \qquad x \in \mathbb{R} / \mathbb{Z}.
+\]
+For $n \geq 0$,
+\[
+g^n(x_0,0)=\Big(x_0+n\alpha,\sum_{k=0}^n u(x_0+k\alpha) \Big)
+\]
+The set $\{g^n(x_0,0): n \geq 0\}$, namely the orbit of $(x_0,0)$ under $g$, is contained in $\mathbb{R} / \mathbb{Z} \times [-C,C]$. 
+Let $K$ be the closure of this orbit. 
+Because $K$ is a metrizable topological space, for $(x,y) \in K$  there is a sequence $a(n)$ such that $g^{a(n)}(x_0,0) \to (x,y)$. As $g$ is continuous we get 
+$g^{a(n)+1}(x_0,0) \to g(x,y)$, which implies that $g(x,y) \in K$. This shows that $K$ is invariant under $g$. Let $\mathscr{K}$ be the collection of nonempty compact
+sets contained in $K$ and invariant under $g$. Thus $K \in \mathscr{K}$, so $\mathscr{K}$ is nonempty. We order $\mathscr{K}$ by $A \prec B$ when
+$A \subset B$. If $\mathscr{C} \subset \mathscr{K}$ is a chain, let $C_0=\bigcap_{C \in \mathscr{C}} C$. It follows from $K$ being compact that $C_0$ is nonempty,
+hence $C_0 \in \mathscr{K}$ and is a lower bound for the chain $\mathscr{C}$. Since every chain in $\mathscr{K}$ has a lower bound in $\mathscr{K}$,
+by Zorn's lemma there exists a minimal element $M$ in $\mathscr{K}$: for every $A \in \mathscr{K}$ we have $M \prec A$, i.e. $M \subset A$. 
+To say that $M$ is invariant under $g$ means that $g(M) \subset M$, and $M$ being a nonempty compact set contained in $K$ implies that
+$g(M)$ is a nonempty compact set contained in $K$, hence by the minimality of $M$ we obtain $g(M)=M$.
+
+
+The set $M$ is nonempty, so take $(x,y) \in M$. Because
+$M$ is invariant under $g$,
+$\{g^n(x,y): n \geq 0\} \subset M$.
+The set
+\[
+\pi_1 \{g^n(x,y): n \geq 0\} = \{ x+n\alpha: n \geq 0\}
+\]
+ is dense in $\mathbb{R} / \mathbb{Z}$, hence $\pi_1(M)$ is dense in $\mathbb{R} / \mathbb{Z}$. Moreover,
+  $M$ being compact implies that $\pi_1(M)$ is closed, so $\pi_1(M)=\mathbb{R}/\mathbb{Z}$. 
+ 
+ For $t \in \mathbb{R}$, define $\tau_t:\mathbb{R} / \mathbb{Z} \times \mathbb{R} \to \mathbb{R} / \mathbb{Z} \times \mathbb{R}$
+ by $\tau_t(x,y)=(x,y+t)$. For any $t$,
+ \[
+ \tau_t \circ g(x,y) = \tau_t  (x+\alpha,y+u(x)) = (x+\alpha,y+u(x)+t) = g(x,y+t) = g \circ \tau_t (x,y),
+ \]
+ so $\tau_t \circ g = g \circ \tau_t$. Hence, if $A \subset \mathbb{R} / \mathbb{Z} \times \mathbb{R}$
+and $g(A) \subset A$, then $g(\tau_t (A)) = \tau_t \circ g(A) \subset \tau_t (A)$, namely, if $A$ is invariant under $g$ then $\tau_t(A)$ is invariant under $g$.
+Therefore $\tau_t(M)$ is invariant under $g$, and so $M \cap \tau_t(M)$ is invariant under $g$. 
+This intersection is compact and is contained in $K$, so either $M \cap \tau_t(M) = \emptyset$ or by the minimality of $M$, $M \cap \tau_t(M)=M$.
+Suppose by contradiction that for some nonzero $t$, $M \cap \tau_t(M)=M$. Then using $g(M)=M$ we get 
+ $\tau_t(M)=M$, and hence for any positive integer $k$ we have 
+ $\tau_{kt}(M)=\tau_t^k(M) = M$. But because $M$ is compact, $\pi_2(M)$ is contained in some compact interval $I$, and then there is some 
+ positive integer $k$ such that $\pi_2(\tau_{kt}(M))$ is not contained in $I$, a contradiction. Therefore, when $t \neq 0$ we have $M \cap \tau_t(M) = \emptyset$. 
+ Let $x \in \mathbb{R} / \mathbb{Z}$. If there were 
+  distinct $y_1,y_2 \in \mathbb{R}$ such that
+ $(x,y_1),(x,y_2) \in M$, then with $t=y_2-y_1 \neq 0$ we get $\tau_t(x,y_1)=(x,y_2) \in M$, contradicting 
+ $M \cap \tau_t(M) = \emptyset$. This shows that for each $x \in \mathbb{R} / \mathbb{Z}$ there is a unique 
+ $y \in \mathbb{R}$ such that
+ $(x,y) \in M$, and we denote this $y$ by $v(x)$, thus defining a function $v:\mathbb{R} / \mathbb{Z} \to \mathbb{R}$. 
+ Then $M$ is the graph of $v$, and because $M$ is compact, it follows that the function $v$ is continuous. 
+Let $(x,v(x)) \in M$. As $M$ is invariant under $g$,
+\[
+ (x+\alpha,v(x)+u(x)) = g(x,v(x)) \in M,
+\]
+and as $M$ is the graph of $v$ we get $v(x)+u(x)=v(x+\alpha)$ and hence
+$v(x+\alpha)-v(x)=u(x)$, completing the proof.
+\end{proof}
+
+
+
+\section{Cohomology}
+In this section I am following Tao.\footnote{Terence Tao, {\em Cohomology for dynamical systems}, \url{http://terrytao.wordpress.com/2008/12/21/cohomology-for-dynamical-systems/}}
+Suppose that a group $(G,\cdot)$ acts on a set $X$ and that $(A,+)$ is an abelian group. A \textbf{cocycle} is a function
+$\rho:G \times X \to A$ such that 
+\begin{equation}
+\rho(gh,x)=\rho(h,x)+\rho(g,hx), \qquad g,h \in G, \quad x \in X.
+\label{cocycle}
+\end{equation}
+If $F:X \to A$ is a function, we call the function $\rho(g,x)=F(gx)-F(x)$ a \textbf{coboundary}. This satisfies
+\[
+\rho(gh,x)-\rho(g,hx)=F((gh)x)-F(x)-F(g(hx))+F(hx)=F(hx)-F(x)=\rho(h,x),
+\]
+showing that a coboundary is a cocycle.
+We now show how to fit the notions of cocycle and coboundary into a general sitting of cohomology. We show that
+they correspond respectively to a $1$-cocycle and a $1$-coboundary. 
+
+
+For $n \geq 0$, an \textbf{$n$-simplex}
+is an element of $G^n \times X$, i.e., 
+a thing of the form $(g_1,\ldots,g_n,x)$, for $g_1,\ldots,g_n \in G$ and $x \in X$. 
+We denote by $C_n(G,X)$  the free abelian group generated by the collection of all $n$-simplices, and an element of $C_n(G,X)$ is called an
+\textbf{$n$-chain}.
+In particular, the elements of $C_0(G,X)$ are formal $\mathbb{Z}$-linear combinations of elements 
+of
+$X$. For $n<0$, we define $C_n(G,X)$ to be the trivial group.
+
+For $n>0$, we define the \textbf{boundary map} $\partial:C_n(G,X) \to C_{n-1}(G,X)$ by
+\begin{eqnarray*}
+\partial (g_1,\ldots,g_n,x) &=& (g_1,\ldots,g_{n-1},g_n x)\\
+&&
++\sum_{k=1}^{n-1} (-1)^{n-k} (g_1,\ldots,g_{k-1},g_k g_{k+1},g_{k+2},\ldots,g_n,x)\\
+&&+(-1)^n (g_2,\ldots,g_n,x).
+\end{eqnarray*}
+For $n \leq 0$ we define $\partial:C_n(G,X) \to C_{n-1}(G,X)$ to be the trivial map. If $n \leq 1$ then 
+of course $\partial^2=0$. If $n \geq 2$,
+ one writes out $\partial^2 (g_1,\ldots,g_n,x)$ and checks that it is equal to $0$, and hence that $\partial^2=0$.
+Thus the sequence of abelian groups $C_n(G,X)$ and the boundary maps 
+$\partial:C_n(G,X) \to C_{n-1}(G,X)$ are a \textbf{chain complex}. 
+
+We denote the kernel of $\partial:C_n(G,X) \to C_{n-1}(G,X)$ by $Z_n(G,X)$, and elements of
+$Z_n(G,X)$ are called \textbf{$n$-cycles}. We denote the image of $\partial:C_{n+1}(G,X) \to C_n(G,X)$
+by $B_n(G,X)$, and elements of $B_n(G,X)$ are called \textbf{$n$-boundaries}. Because
+$\partial^2=0$, an $n$-boundary is an $n$-cycle. 
+$Z_n(G,X)$ and $B_n(G,X)$ are abelian groups and $B_n(G,X)$ is contained in $Z_n(G,X)$, and we write
+\[
+H_n(G,X) = Z_n(G,X) / B_n(G,X),
+\]
+and call $H_n(G,X)$ the \textbf{$n$th homology group}. 
+
+We define $C^n(G,X,A) = \Hom(C_n(G,X),A)$, which is an abelian group.
+ Elements of $C^n(G,X,A)$ are called 
+ \textbf{$n$-cochains}.
+ That is, an $n$-cochain is a group homomorphism
+$C_n(G,X) \to A$. Because $C_n(G,X)$ is a free abelian group
+generated by the collection of all $n$-simplices, an $n$-cochain is determined by the values it assigns to $n$-simplices. 
+We thus identity $n$-cochains with functions $G^n \times X \to A$. 
+
+We define the \textbf{coboundary map} $\delta:C^{n-1}(G,X,A) \to C^n(G,X,A)$ by
+\[
+(\delta F)(c) = F(\partial c), \qquad F \in C^{n-1}(G,X,A), c \in C_n(G,X).
+\]
+Explicitly, for $F \in C^{n-1}(G,X,A)$ and for an $n$-simplex  $(g_1,\ldots,g_n,x)$,
+\begin{eqnarray*}
+(\delta F)(g_1,\ldots,g_n,x)&=&F(\partial (g_1,\ldots,g_n,x))\\
+&=&F(g_1,\ldots,g_{n-1},g_n x)\\
+&&+\sum_{k=1}^{n-1}(-1)^{n-k} F (g_1,\ldots,g_{k-1},g_k g_{k+1},g_{k+2},\ldots,g_n,x)\\
+&&+(-1)^n F (g_2,\ldots,g_n,x).
+\end{eqnarray*}
+For $F \in C^{n-2}(G,X,A)$, write $G=\delta F$ and take and $c \in C_n(G,X)$. Then,
+\[
+(\delta^2 F)(c) = (\delta G)(c) = G(\partial c) = (\delta F)(\partial c) = F(\partial^2 c)=F(0)=0,
+\]
+showing that $\delta^2=0$. Thus the sequence of abelian groups $C^n(G,X,A)$ and the coboundary maps
+$\delta:C^{n-1}(G,X,A) \to C^n(G,X,A)$ are  a \textbf{cochain complex}.
+
+We denote the kernel of $\delta:C^n(G,X,A) \to C^{n+1}(G,X,A)$ by 
+$Z^n(G,X,A)$, and elements of $Z^n(G,X,A)$ are called \textbf{$n$-cocycles}. We denote
+the image of $\delta:C^{n-1}(G,X,A) \to C^n(G,X,A)$ by $B^n(G,X,A)$, and elements of $B^n(G,X,A)$ are called
+\textbf{$n$-coboundaries}. Because $\delta^2=0$, an $n$-coboundary is an $n$-cocycle.
+$Z^n(G,X,A)$ and $B^n(G,X,A)$ are abelian groups and $B^n(G,X,A)$ is contained in $Z^n(G,X,A)$, and we write
+\[
+H^n(G,X,A) = Z^n(G,X,A) / B^n(G,X,A),
+\]
+which we call the \textbf{$n$th cohomology group}.
+
+Take $n=1$. We identify $C^1(G,X,A)$, the group of $1$-chains, with functions $G \times X \to A$. 
+For $\rho \in C^1(G,X,A)$, to say that
+$\rho$ is a $1$-cocycle is equivalent to saying that for any $(g,h,x) \in G^2 \times X$,
+$(\delta \rho)(g,h,x)=0$, i.e.
+$\rho(g,hx)-\rho(gh,x)+\rho(h,x)=0$, i.e.
+\[
+\rho(gh,x)=\rho(h,x)+\rho(g,hx).
+\]
+To say that $\rho$ is a $1$-coboundary is equivalent to saying that there is a $0$-chain $F$ (a function $X \to A$)
+such that $\rho = \delta F$, i.e., for any $(g,x) \in G \times X$,
+\[
+\rho(g,x) = (\delta F)(g,x) = F(gx)-F(x).
+\]
+
+
+\section{Small divisors}
+Suppose that $u:\mathbb{R} / \mathbb{Z} \to \mathbb{R}$ be $C^\infty$ and satisfies
+\[
+\int_0^1 u(x) dx=0.
+\]
+For each $n \in \mathbb{Z}$, let
+\[
+\widehat{u}(n) = \int_0^1 e^{-2\pi i nx} u(x) dx.
+\]
+We have $\widehat{u}(0)=0$. For any $x \in \mathbb{R} / \mathbb{Z}$,
+\[
+u(x) = \sum_{n \in \mathbb{Z}} \widehat{u}(n) e^{2\pi i nx},
+\]
+and $\sum_{n \in \mathbb{Z}} |\widehat{u}(n)|<\infty$; for these statements to be true it suffices merely that
+$u$ be $C^\beta$ for some $\beta>\frac{1}{2}$. 
+
+Let $\alpha$ be irrational.
+We shall find conditions under which there exists a continuous function $v:\mathbb{R} / \mathbb{Z} \to \mathbb{R}$ such that
+\begin{equation}
+u(x)=v(x+\alpha)-v(x), \qquad x \in \mathbb{R} / \mathbb{Z}.
+\label{uvformula}
+\end{equation}
+Supposing that for each $x$, $v(x)$ is equal to its Fourier series evaluated at $x$ and that its Fourier series converges absolutely,
+\[
+v(x) = \sum_{n \in \mathbb{Z}} \widehat{v}(n) e^{2\pi i nx},
+\]
+then for each $x \in \mathbb{R} / \mathbb{Z}$,
+\[
+v(x+\alpha)-v(x) = \sum_{n \in \mathbb{Z}} \widehat{v}(n)\left( e^{2\pi in(x+\alpha)}-e^{2\pi i nx}\right)
+= \sum_{n \in \mathbb{Z}} \widehat{v}(n)( e^{2\pi in\alpha}-1)e^{2\pi i nx}.
+\]
+Then using $u(x)=v(x+\alpha)-v(x)$ we obtain
+\[
+\widehat{u}(n) =  \widehat{v}(n)( e^{2\pi in\alpha}-1), \qquad n \in \mathbb{Z},
+\]
+or,
+\begin{equation}
+\widehat{v}(n) = \frac{\widehat{u}(n)}{e^{2\pi in\alpha}-1}, \qquad n \neq 0;
+\label{vfourier}
+\end{equation}
+because $\alpha$ is irrational, the denominator of the right-hand side is indeed nonzero for $n \neq 0$. The value of $\widehat{v}(0)$
+is not determined so far. 
+We shall find conditions under which the continuous function $v$ we desire can be defined using \eqref{vfourier}.
+
+
+A real number $\beta$ is said to be \textbf{Diophantine} if there is some $r \geq 2$ and some $C>0$ such that for all
+$q>0$ and $p \in \mathbb{Z}$,
+\begin{equation}
+\left|\beta - \frac{p}{q} \right| > C q^{-r}.
+\label{Diophantine}
+\end{equation}
+It is immediate that a Diophantine number is irrational. Suppose that  $\alpha$ satisfies \eqref{Diophantine}. 
+Let $n \neq 0$ and let $p_n$ be the integer nearest $n\alpha$. Then
+\begin{eqnarray*}
+|e^{2\pi i n\alpha}-1|& =& |e^{2\pi i (n\alpha-p_n)}-1| \\
+&\geq& \frac{2}{\pi} |2\pi(n\alpha-p_n)|\\
+&=& 4|n\alpha-p_n|\\
+&=&4|n|\left|\alpha-\frac{p_n}{n}\right|\\
+&>&4|n|\cdot C|n|^{-r}\\
+&=&4C |n|^{-r+1}.
+\end{eqnarray*}
+Because $u \in C^\infty$, it is straightforward to prove that for each nonnegative integer $k$ there is some $C_k >0$ such that 
+\[
+|\widehat{u}(n)| \leq C_k |n|^{-k}, \qquad n \neq 0.
+\]
+Therefore, for each nonnegative integer $k$, using \eqref{vfourier} we have
+\begin{equation}
+|\widehat{v}(n)| = \frac{|\widehat{u}(n)|}{|e^{2\pi in\alpha}-1|} < C_k |n|^{-k} \cdot \frac{1}{4C |n|^{-r+1}}
+=\frac{C_k}{4C} |n|^{r-k-1}, \qquad n \neq 0.
+\label{vinequality}
+\end{equation}
+One can prove that if $h_n$ are complex numbers satisfying 
+\eqref{vinequality} then the function
+defined by
+\[
+h(x) = \sum_{n \in \mathbb{Z}} h_n e^{2\pi i nx}, \qquad x \in \mathbb{R} / \mathbb{Z}
+\]
+is $C^\infty$. Therefore, we have established that if $\alpha$ is Diophantine then there is some $v:\mathbb{R} / \mathbb{Z} 
+\to \mathbb{R}$ that is $C^\infty$ and that satisfies \eqref{uvformula}.
+
+On the other hand,  for $\alpha=\sum_{n=1}^\infty 10^{-n!}$, Ghys constructs a $C^\infty$ function $u:\mathbb{R} / \mathbb{Z}
+\to \mathbb{R}$ such that there is no continuous function $v:\mathbb{R} / \mathbb{Z} \to \mathbb{R}$ satisfying
+$u(x)=v(x+\alpha)-v(x)$ for all $x \in \mathbb{R} / \mathbb{Z}$. 
+
+
+
+\end{document}

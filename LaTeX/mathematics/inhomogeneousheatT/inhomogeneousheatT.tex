@@ -1,0 +1,328 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\jap}[1]{\left\langle #1 \right\rangle}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\Hom}{\textrm{Hom}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{The inhomogeneous heat equation on $\mathbb{T}$}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+\maketitle
+\section{Introduction}
+In this note I am working out some material following Steve Shkoller's {\em MAT218: Lecture Notes on Partial Differential Equations}. However, I have written out a number of details that were not in the original notes, and may thus have introduced errors that were not in the notes on which this is
+based.
+
+Write
+$\mathbb{T}=\mathbb{R}/2\pi \mathbb{Z}$, and
+for $1 \leq p < \infty$,
+\[
+\norm{f}_{L^p}=\left( \frac{1}{2\pi} \int_\mathbb{T} |f(t)|^p dt \right)^{1/p}.
+\]
+Define
+\[
+\norm{f}_{H^k}=\left( \sum_{0 \leq j \leq k} \norm{\partial_x^j f}_{L^2}^2 \right)^{1/2}.
+\]
+If $u$ is a distribution on $\mathbb{T}$, $\partial_x u$ is also a distribution on $\mathbb{T}$, and in particular, if $u \in L^2(\mathbb{T})$ then
+$\partial_x u$ is a distribution on $\mathbb{T}$. But if $u \in H^2(\mathbb{T})$, for example, then $\partial_x^2 u$ is an element of  $L^2(\mathbb{T})$, rather than
+merely being a distribution.
+
+Fix $T>0$. Let $f \in L^2(0,T;L^2(\mathbb{T}))$ and $g \in H^1(\mathbb{T})$; as $H^1(\mathbb{T}) \subset C^0(\mathbb{T})$, we can
+speak about the value of $g$ at every point rather than merely almost all points.
+
+For almost all $t$ and for all $x$, define $f_n$ by
+\[
+f_n(x,t)=\sum_{k=-n}^n \hat{f}(k,t) e^{ikx},
+\]
+and for all $x$ define $g_n$ by
+\[
+g_n(x)=\sum_{k=-n}^n \hat{g}(k) e^{ikx}.
+\]
+In other words, if $D_n(x)=\sum_{k=-n}^n e^{ikx}$, then
+\[
+f_n(x,t)=(D_n * f(\cdot,t))(x), \qquad g_n(x)=(D_n * g)(x),
+\]
+where
+\[
+(\phi * \psi)(x)=\frac{1}{2\pi} \int_\mathbb{T} \phi(y)\psi(x-y)dy.
+\]
+
+\section{Truncation}
+For each $n$, assume that there is some $u_n \in C^\infty(0,T; C^\infty(\mathbb{T}))$ such that for almost all $t$ and for  all
+$x \in \mathbb{T}$,
+\begin{equation}
+u_{nt}(x,t)-u_{nxx}(x,t)=f_n(x,t),
+\label{npde}
+\end{equation}
+and for all $x \in \mathbb{T}$,
+\[
+u_n(x,0)=g_n(x).
+\]
+We will thus obtain a formula for $u_n$. In fact we will not necessarily have  $u_n \in C^\infty(0,T; C^\infty(\mathbb{T}))$, but once we have
+an expression for $u_n$ we can determine the function space of which it is an element. We will then show that there is some $u$ in a certain function
+space such that $u_n(x,t)=(D_n * u(\cdot, t))(x)$ for all $x$ and $t$.
+
+For all $t$ and $x$,
+\[
+u_n(x,t)=\sum_{k \in \mathbb{Z}} \widehat{u_n}(k,t) e^{ikx}.
+\]
+Then \eqref{npde} becomes the statement that for almost all $t$ and for all $x$,
+\[
+\sum_{k \in \mathbb{Z}} \widehat{u_n}'(k,t) e^{ikx} + \sum_{k \in \mathbb{Z}} k^2 \widehat{u_n}(k,t) e^{ikx}
+=\sum_{k=-n}^n \hat{f}(k,t) e^{ikx}.
+\]
+If $|k| >n$, then $\widehat{u_n}'(k,t) + k^2 \widehat{u_n}(k,t) = 0$, which  is a linear ordinary differential equation,  whose
+solution satisfies $\widehat{u_n}(k,t)=e^{-k^2 t} \widehat{u_n}(k,0)$. Since $u_n(x,0)=g_n(x)$, $\widehat{u_n}(k,0)=0$. Hence
+if $|k|>n$ then $\widehat{u_n}(k,t)=0$. If $|k| \leq n$, then for almost all $t$, $\widehat{u_n}'(k,t) + k^2 \widehat{u_n}(k,t) = \hat{f}(k,t)$.
+The solution of this is, for all $t$ and for all $x$,
+\[
+\widehat{u_n}(k,t)=e^{-k^2 t} \widehat{g_n}(k) + e^{-k^2 t}  \int_0^t e^{k^2 s} \widehat{f_n}(k,s) ds.
+\]
+Hence, for  all $t$ and for all $x$,
+\[
+u_n(x,t)=\sum_{k=-n}^n \left(e^{-k^2 t} \widehat{g_n}(k) + e^{-k^2 t}  \int_0^t e^{k^2 s} \widehat{f_n}(k,s) ds\right) e^{ikx}.
+\]
+We merely know
+that $\widehat{f_n}(k,t)$ is defined for almost all $t$, thus we only know 
+for almost all $t_0 \in (0,T)$ and for all $x$ that $u_{nt}(x,t_0)$ exists. We do have that 
+\[
+u_n \in C^0(0,T;C^\infty(\mathbb{T})).
+\]
+
+\section{𝐻¹}
+For almost all $t$, multiply \eqref{npde} by $u_n(x,t)$ and integrate over $\mathbb{T}$. This is,
+\[
+\int_\mathbb{T} u_{nt}(x,t)u_n(x,t) dx- \int_\mathbb{T} u_{nxx}(x,t) u_n(x,t) dx = \int_\mathbb{T} f_n(x,t) u_n(x,t) dx.
+\]
+Integrating by parts this becomes
+\[
+\int_\mathbb{T} u_{nt}(x,t) u_n(x,t) dx + \int_\mathbb{T} u_{nx}(x,t) u_{nx}(x,t) dx = \int_\mathbb{T} f_n(x,t) u_n(x,t) dx,
+\]
+which is
+\[
+\pi \cdot \partial_t \frac{1}{2\pi} \int_\mathbb{T} u_n(x,t)^2 dx + 2\pi \cdot \frac{1}{2\pi} \int_\mathbb{T} u_{nx}(x,t)^2 dx = \int_\mathbb{T} f_n(x,t) u_n(x,t) dx.
+\]
+Writing this using norms,
+\[
+\pi \cdot \partial_t \norm{u_n(\cdot,t)}_{L^2}^2 + 2\pi \cdot \norm{u_{nx}(\cdot,t)}_{L^2}^2 =  \int_\mathbb{T} f_n(x,t) u_n(x,t) dx.
+\]
+Integrating from $0$ to $t$, for any $t$,
+\[
+\pi \cdot \norm{u_n(\cdot,t)}_{L^2}^2 - \pi \cdot \norm{u_n(\cdot,0)}_{L^2}^2
++ 2\pi \int_0^t \norm{u_{nx}(\cdot,s)}_{L^2}^2 ds = \int_0^t  \int_\mathbb{T} f_n(x,s) u_n(x,s) dx ds.
+\]
+
+For almost all $s$,
+\begin{eqnarray*}
+ \int_\mathbb{T} |f_n(x,s) u_n(x,s)| dx &=& 
+ 2\pi \cdot \frac{1}{2\pi}  \int_\mathbb{T} |f_n(x,s) u_n(x,s)| dx\\
+ & \leq& 
+ 2\pi \cdot \norm{f_n(\cdot,s)}_{L^2} \norm{u_n(\cdot,s)}_{L^2}\\
+ &\leq&2\pi \left( \frac{ \norm{f_n(\cdot,s)}_{L^2}^2}{2} + \frac{\norm{u_n(\cdot,s)}_{L^2}^2}{2} \right)\\
+ &=&\pi \cdot  \norm{f_n(\cdot,s)}_{L^2}^2 + \pi\cdot \norm{u_n(\cdot,s)}_{L^2}^2.
+\end{eqnarray*}
+It follows that for all $t$ (not just almost all $t$)
+\[
+\begin{split}
+&\pi \cdot \norm{u_n(\cdot,t)}_{L^2}^2 - \pi \cdot \norm{u_n(\cdot,0)}_{L^2}^2
++ 2\pi \int_0^t \norm{u_{nx}(\cdot,s)}_{L^2}^2 ds\\
+ \leq& \int_0^t \pi \cdot  \norm{f_n(\cdot,s)}_{L^2}^2 + \pi\cdot \norm{u_n(\cdot,s)}_{L^2}^2 ds,
+ \end{split},
+\]
+so, as $u_n(x,0)=g_n(x)$,
+\[
+ \norm{u_n(\cdot,t)}_{L^2}^2+2 \int_0^t \norm{u_{nx}(\cdot,s)}_{L^2}^2 ds \leq  \norm{g_n}_{L^2}^2 +  \int_0^t  \norm{f_n(\cdot,s)}_{L^2}^2  + \norm{u_n(\cdot,s)}_{L^2}^2 ds.
+\]
+Let
+\[
+y(t)= \norm{u_n(\cdot,t)}_{L^2}^2+2 \int_0^t \norm{u_{nx}(\cdot,s)}_{L^2}^2 ds.
+\]
+By the inequality we just established we have, for all $t$,
+\begin{eqnarray*}
+y(t)& \leq&   \norm{g_n}_{L^2}^2 +  \int_0^t  \norm{f_n(\cdot,s)}_{L^2}^2 ds +\int_0^t \norm{u_n(\cdot,s)}_{L^2}^2 ds\\
+&\leq&   \norm{g_n}_{L^2}^2 +  \int_0^t  \norm{f_n(\cdot,s)}_{L^2}^2 ds + \int_0^t y(s) ds.
+\end{eqnarray*}
+By Gronwall's inequality, we get
+\[
+ y(t) \leq \left(\norm{g_n}_{L^2}^2 + \int_0^t  \norm{f_n(\cdot,s)}_{L^2}^2 ds \right) e^t.
+\]
+As $\norm{g_n}_{L^2} \leq \norm{g}_{L^2}$ and $\norm{f_n(\cdot,s)}_{L^2} \leq \norm{f(\cdot,s)}_{L^2}$ (these two
+facts follow from Parseval's identity), it follows that
+\[
+ y(t) \leq \left(\norm{g}_{L^2}^2 + \int_0^t  \norm{f(\cdot,s)}_{L^2}^2 ds \right) e^t.
+\]
+Therefore,  if $0 \leq t \leq T$ then
+\begin{eqnarray*}
+\norm{u_n(\cdot,t)}_{L^2}^2+2 \int_0^t \norm{u_{nx}(\cdot,s)}_{L^2}^2 ds& \leq&  \left(\norm{g}_{L^2}^2 + \int_0^t  \norm{f(\cdot,s)}_{L^2}^2 ds \right) e^T\\
+&\leq&\left(\norm{g}_{L^2}^2+ \norm{f}_{L^2(0,T;L^2(\mathbb{T})}^2 \right) e^T\\
+&=&M.
+\end{eqnarray*}
+By Parseval's identity,
+\[
+\sum_{k \in \mathbb{Z}} |\widehat{u_n}(k,t)|^2+2\int_0^t \sum_{k \in \mathbb{Z}} |\widehat{u_{nx}}(k,s)|^2 ds \leq M,
+\] 
+hence for all $t$,
+\[
+\sum_{k \in \mathbb{Z}} |\widehat{u_n}(k,t)|^2+2\int_0^t \sum_{k \in \mathbb{Z}} k^2 |\widehat{u_n}(k,s)|^2 ds \leq M.
+\]
+
+If $k \leq n \leq m$, then $\widehat{u_n}(k,t)=\widehat{u_m}(k,t)$ for all $t$. Define $\hat{u}(k,t)$ by 
+\[
+\hat{u}(k,t)
+=\lim_{n \to \infty} \widehat{u_n}(k,t)=\widehat{u_k}(k,t).
+\]
+Thus, for all $t$,
+\begin{equation}
+\sum_{k \in \mathbb{Z}} |\hat{u}(k,t)|^2+2\int_0^t \sum_{k \in \mathbb{Z}} k^2 |\hat{u}(k,s)|^2 ds \leq M.
+\label{k0}
+\end{equation}
+Then, for some $M'=M'(f,g,T)$,
+\[
+\int_0^T \sum_{k \in \mathbb{Z}} |\hat{u}(k,t)|^2+ \sum_{k \in \mathbb{Z}} k^2 |\hat{u}(k,t)|^2 dt \leq M'.
+\]
+It follows that for almost all $t$, there is some $u \in H^1(\mathbb{T})$ whose Fourier coefficients are $\hat{u}(k,t)$, and that we have
+\[
+\int_0^T \norm{u(\cdot,t)}_{H^1}^2 dt \leq M'.
+\]
+We have
+\[
+\lim_{n \to \infty} \int_0^T \norm{u_n(\cdot,t)-u(\cdot,t)}_{H^1}^2 dt=0,
+\]
+i.e.
+\[
+\lim_{n \to \infty} \norm{u_n -u}_{L^2(0,T;H^1(\mathbb{T}))}^2 = 0.
+\]
+
+
+
+
+
+
+\section{𝐻²}
+Multiply \eqref{npde} by $u_{nxx}(x,t)$ and integrate over $\mathbb{T}$. We get, for almost all $t$,
+\[
+\int_\mathbb{T} u_{nt}(x,t)u_{nxx}(x,t) dx- \int_\mathbb{T} u_{nxx}(x,t) u_{nxx}(x,t) dx = \int_\mathbb{T} f_n(x,t) u_{nxx}(x,t) dx.
+\]
+As
+\[
+\int_\mathbb{T} u_{nt}(x,t)u_{nxx}(x,t) dx = -\int_\mathbb{T} u_{ntx}(x,t) u_{nx}(x,t)dx
+=-\frac{1}{2} \frac{d}{dt} \int_\mathbb{T} u_{nx}(x,t)^2 dx,
+\]
+we have
+\[
+-\pi \frac{d}{dt} \norm{u_{nx}(\cdot,t)}_{L^2}^2-2\pi \norm{u_{nxx}(\cdot,t)}_{L^2}^2=\int_\mathbb{T} f_n(x,t) u_{nxx}(x,t) dx.
+\]
+Integrating from $0$ to $t$,
+\[
+\begin{split}
+&-\pi \norm{u_{nx}(\cdot,t)}_{L^2}^2+\pi \norm{u_{nx}(\cdot,0)}_{L^2}^2-2\pi \int_0^t \norm{u_{nxx}(\cdot,s)}_{L^2}^2 ds\\
+=&
+\int_0^t \int_\mathbb{T} f_n(x,s) u_{nxx}(x,s) dx.
+\end{split}
+\]
+For almost all $s$,
+\begin{eqnarray*}
+\int_\mathbb{T} |f_n(x,s) u_{nxx}(x,s)| dx &\leq&
+2\pi \norm{f_n(\cdot,s)}_{L^2} \norm{u_{nxx}(\cdot,s)}_{L^2}\\
+&\leq& 2\pi \left(\frac{\norm{f_n(\cdot,s)}_{L^2}^2}{2}+ \frac{\norm{u_{nxx}(\cdot,s)}_{L^2}^2}{2} \right)\\
+&=&\pi \norm{f_n(\cdot,s)}_{L^2}^2 + \pi \norm{u_{nxx}(\cdot,s)}_{L^2}^2.
+\end{eqnarray*}
+It follows that, for all $t$,
+\[
+\begin{split}
+&\pi \norm{u_{nx}(\cdot,t)}_{L^2}^2x  + 2\pi \int_0^t \norm{u_{nxx}(\cdot,s)}_{L^2}^2 ds\\
+\leq&\pi \norm{g_n'}_{L^2}^2+\pi \int_0^t \norm{f_n(\cdot,s)}_{L^2}^2 + \norm{u_{nxx}(\cdot,s)}_{L^2}^2 ds.
+\end{split}
+\]
+Hence
+\begin{eqnarray*}
+\norm{u_{nx}(\cdot,t)}_{L^2}^2 +  \int_0^t \norm{u_{nxx}(\cdot,s)}_{L^2}^2 ds& \leq& \norm{g_n'}_{L^2}^2 + \int_0^t \norm{f_n(\cdot,s)}_{L^2}^2 ds\\
+&\leq&\norm{g}_{H^1}^2 +  \int_0^t \norm{f(\cdot,s)}_{L^2}^2 ds\\
+&\leq&\norm{g}_{H^1}^2 +  \int_0^T \norm{f(\cdot,s)}_{L^2}^2 ds.
+\end{eqnarray*}
+Using Parseval's identity we have, for  all $t$,
+\[
+\sum_{k \in \mathbb{Z}} | \widehat{u_{nx}}(k,t)|^2 + \int_0^t \sum_{k \in \mathbb{Z}} |\widehat{u_{nxx}}(k,s)|^2 ds\leq \norm{g}_{H^1}^2 +  \int_0^T \norm{f(\cdot,s)}_{L^2}^2 ds,
+\]
+hence
+\[
+\sum_{k \in \mathbb{Z}} k^2 |\widehat{u_n}(k,t)|^2 + \int_0^t \sum_{k \in \mathbb{Z}} k^4 |\widehat{u_n}(k,s)|^2 ds\leq \norm{g}_{H^1}^2 +  \int_0^T \norm{f(\cdot,s)}_{L^2}^2 ds,
+\]
+so
+\[
+\sum_{k \in \mathbb{Z}}  k^2| \widehat{u}(k,t)|^2 + \int_0^t \sum_{k \in \mathbb{Z}} k^4 |\widehat{u}(k,s)|^2 ds\leq \norm{g}_{H^1}^2 +  \int_0^T \norm{f(\cdot,s)}_{L^2}^2 ds.
+\]
+It follows that, for almost all $t$,\footnote{The reason I see that this follows involves the fact that the intersection of two sets of full measure is itself a set of full measure.}
+\[
+\sum_{k \in \mathbb{Z}}  k^2| \widehat{u}(k,t)|^2 + \sum_{k \in \mathbb{Z}} k^4 |\widehat{u}(k,t)|^2<\infty,
+\]
+thus $u(\cdot,t) \in H^2(\mathbb{T})$.
+
+We have
+\[
+\lim_{n \to \infty} \int_0^T \norm{u_n(\cdot,t)-u(\cdot,t)}_{H^2}^2 dt=0,
+\]
+i.e.
+\[
+\lim_{n \to \infty} \norm{u_n -u}_{L^2(0,T;H^2(\mathbb{T}))}^2 = 0.
+\]
+
+\section{Solution}
+For all $t$ we have $u(\cdot,t) \in H^1(\mathbb{T})$, and $H^1(\mathbb{T}) \subset C^0(\mathbb{T})$, so for all $t$ and all $x$, $u(x,t)$ is defined.
+The Sobolev embedding tells us that if $k>\alpha+\frac{1}{2}$ then $H^k(\mathbb{T}) \subset C^\alpha(\mathbb{T})$. So, being
+specific, we have $H^1(\mathbb{T}) \subset C^{1/4}(\mathbb{T})$. It is a fact that if $h \in C^\alpha(\mathbb{T})$, $\alpha>0$,
+then the partial sums of the Fourier series of $h$ converge to $h$ in the supremum norm.
+
+For all $t$ and for each $k$, 
+\[
+\hat{u}(k,t)=e^{-k^2 t} \widehat{g}(k) + e^{-k^2 t}  \int_0^t e^{k^2 s} \widehat{f}(k,s) ds.
+\]
+It follows that, for all $x$,
+\[
+u(x,0)=\lim_{N \to \infty} \sum_{|k| \leq N} \widehat{g}(k)  e^{ikx}.
+\]
+On the other hand,
+\[
+g(x)=\lim_{N \to \infty} \sum_{|k| \leq N} \widehat{g}(k)  e^{ikx}.
+\]
+Thus for all $x$, $u(x,0)=g(x)$. 
+
+We have
+\begin{eqnarray*}
+\norm{u_t-u_{xx}-f}_{L^2(0,T;L^2(\mathbb{T}))}&\leq&\norm{u_t-u_{nt}}_{L^2(0,T;L^2(\mathbb{T}))}\\
+&&+\norm{u_{xx}-u_{nxx}}_{L^2(0,T;L^2(\mathbb{T}))}\\
+&&+\norm{f-f_n}_{L^2(0,T;L^2(\mathbb{T}))}\\
+&&+\norm{u_{nt}-u_{nxx}-f_n}_{L^2(0,T;L^2(\mathbb{T}))}.
+\end{eqnarray*}
+Each of the four norms has limit $0$ as $n \to \infty$. Let me work out the first one.
+For almost all $t$,
+\begin{eqnarray*}
+\widehat{u_t}(k,t)-\widehat{u_{nt}}(k,t)&=&\sum_{|k|>n} -k^2 e^{-k^2 t}\hat{g}(k)-k^2 e^{-k^2 t}\int_0^t e^{k^2 s}\hat{f}(k,s) ds\\
+&&+e^{-k^2 t} e^{k^2 t} \hat{f}(k,t)\\
+&=&\sum_{|k|>n} -k^2 \hat{u}(k,t) + \hat{f}(k,t).
+\end{eqnarray*}
+Then using Parseval's identity,
+\begin{eqnarray*}
+\norm{u_t-u_{nt}}_{L^2(0,T;L^2(\mathbb{T}))}^2&=&\int_0^T \sum_{|k|>n} | -k^2 \hat{u}(k,t) + \hat{f}(k,t)|^2 dt \\
+&\leq&2\int_0^T \sum_{|k|>n} k^2 |\hat{u}(k,t)|^2 + |\hat{f}(k,t)|^2 dt.
+\end{eqnarray*}
+
+
+ Then,
+\[
+\norm{u_t-u_{xx}-f}_{L^2(0,T;L^2(\mathbb{T}))}^2=0.
+\]
+So, for almost all $t$ and for almost all $x$,
+\[
+u_t(x,t)-u_{xx}(x,t)=f(x,t).
+\]
+
+\end{document}

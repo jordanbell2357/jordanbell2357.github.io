@@ -1,0 +1,530 @@
+% !TEX TS-program = pdflatex
+% !TEX encoding = UTF-8 Unicode
+
+% This is a simple template for a LaTeX document using the "article" class.
+% See "book", "report", "letter" for other types of document.
+
+\documentclass[11pt]{article} % use larger type; default would be 10pt
+
+\usepackage[utf8]{inputenc} % set input encoding (not needed with XeLaTeX)
+\usepackage{hyperref}
+\usepackage{amsmath,amssymb}
+\usepackage{mathrsfs}
+
+%%% Examples of Article customizations
+% These packages are optional, depending whether you want the features they provide.
+% See the LaTeX Companion or other references for full information.
+
+%%% PAGE DIMENSIONS
+\usepackage{geometry} % to change the page dimensions
+\geometry{a4paper} % or letterpaper (US) or a5paper or....
+% \geometry{margin=2in} % for example, change the margins to 2 inches all round
+% \geometry{landscape} % set up the page for landscape
+%   read geometry.pdf for detailed page layout information
+
+\usepackage{graphicx} % support the \includegraphics command and options
+
+% \usepackage[parfill]{parskip} % Activate to begin paragraphs with an empty line rather than an indent
+
+%%% PACKAGES
+\usepackage{booktabs} % for much better looking tables
+\usepackage{array} % for better arrays (eg matrices) in maths
+\usepackage{paralist} % very flexible & customisable lists (eg. enumerate/itemize, etc.)
+\usepackage{verbatim} % adds environment for commenting out blocks of text & for better verbatim
+\usepackage{subfig} % make it possible to include more than one captioned figure/table in a single float
+% These packages are all incorporated in the memoir class to one degree or another...
+
+%%% HEADERS & FOOTERS
+\usepackage{fancyhdr} % This should be set AFTER setting up the page geometry
+\pagestyle{fancy} % options: empty , plain , fancy
+\renewcommand{\headrulewidth}{0pt} % customise the layout...
+\lhead{}\chead{}\rhead{}
+\lfoot{}\cfoot{\thepage}\rfoot{}
+
+%%% SECTION TITLE APPEARANCE
+\usepackage{sectsty}
+\allsectionsfont{\sffamily\mdseries\upshape} % (See the fntguide.pdf for font help)
+% (This matches ConTeXt defaults)
+
+%%% ToC (table of contents) APPEARANCE
+\usepackage[nottoc,notlof,notlot]{tocbibind} % Put the bibliography in the ToC
+\usepackage[titles,subfigure]{tocloft} % Alter the style of the Table of Contents
+\renewcommand{\cftsecfont}{\rmfamily\mdseries\upshape}
+\renewcommand{\cftsecpagefont}{\rmfamily\mdseries\upshape} % No bold!
+
+%%% END Article customizations
+
+%%% The "real" document content comes below...
+
+\title{Pontryagin Duality and the Fourier Transform}
+\author{Jordan Bell}
+%\date{} % Activate to display a given date or no date (if empty),
+         % otherwise the current date is printed 
+
+\begin{document}
+\maketitle
+
+\tableofcontents
+
+\section{Introduction}
+We follow Rudin \cite{rudin} and Terras \cite{terras}, and refer to \texttt{sp4comm} \cite{sp4comm} and  Folland \cite{folland}.
+
+\section{$\mathbb{Z}/n\mathbb{Z}$}
+
+Let $n$ be a positive integer.
+
+$$
+\mathbb{Z}/n\mathbb{Z} = \{k + n\mathbb{Z} : k \in \mathbb{Z}\} = \{ k + n \mathbb{Z}: 0 \leq k \leq n-1\}
+$$
+
+$Z_n=\mathbb{Z}/n\mathbb{Z}$ is a ring. $|Z_n|=n$. We focus on the additive group $(Z_n,+)$.
+
+\section{Haar measure}
+
+Let
+
+$$\mathbb{C}^{Z_n}$$
+
+be the set of functions $Z_n \to \mathbb{C}$.
+
+We use counting measure on the group $Z_n$ as Haar measure (which is discrete and compact) with total volume $n$, and  Since $Z_n$ has finite Haar measure (being a compact group) and every function $Z_n \to \mathbb{C}$ is continuous (being a discrete group), we have
+
+$$\mathbb{C}^{Z_n}=L^1(Z_n)=L^2(Z_n).$$
+
+We specify function space for emphasis.
+
+For $f,g \in L^2(Z_n)$, define
+
+$$
+(f,g)_{L^2(Z_n)} = \sum_{x \in Z_n} f(x) \overline{g(x)} 
+$$
+
+Define
+
+$$|f|_{L^2(Z_n)} = \sqrt{(f,f)_{L^2(Z_n)}}=\sqrt{\sum_{x \in Z_n} f(x) \overline{f(x)}}.$$
+
+Define
+
+$$
+|f|_{L^1(Z_n)} = \sum_{x \in Z_n} |f(x)|.
+$$
+
+\section{$\delta_a$}
+
+For $a \in Z_n$, define $\delta_a:Z_n \to \mathbb{C}$ by
+
+$$
+\delta_a(x) = \begin{cases}
+1&x=a\\
+0&x \neq a
+\end{cases}
+$$
+
+For $a,b \in Z_n$,
+
+\begin{align*}
+(\delta_a, \delta_b)_{L^2(Z_n)} &=\sum_{x \in Z_n} \delta_a(x) \overline{\delta_b(x)} \\
+&=\sum_{x \in Z_n} \delta_a(x) \delta_b(x)\\
+&= \begin{cases}
+1&a = b\\
+0&a \neq b
+\end{cases}
+\end{align*}
+
+For $f \in L^2(Z_n)$,
+
+$$
+f(x) =\sum_{a \in Z_n} f(a) \delta_a(x) = \sum_{a=0}^{n-1} f(a) \delta_a(x),\qquad x \in Z_n.
+$$
+
+Indeed, $\{\delta_0,\ldots,\delta_{n-1}\}$ is an orthonormal basis of $L^2(Z_n)$.
+
+\section{Convolution}
+
+For $f,g \in L^1(Z_n)$, define the {\textbf convolution} $f*g \in L^1(Z_n)$ by
+
+$$
+(f*g)(x) = \sum_{y \in Z_n} f(y)g(x-y),\qquad x \in Z_n.
+$$
+
+$$
+f*g = g*f,\qquad f,g \in L^1(Z_n).
+$$
+
+$$
+f*(g*h) = (f*g)*h,\qquad f,g,h \in L^1(Z_n).
+$$
+
+For $f \in L^1(Z_n)$ and for $a \in Z_n$,
+
+$$
+(f*\delta_a)(x) = f(x-a),\qquad x \in Z_n.
+$$
+
+For $a,b \in Z_n$, and for $x \in Z_n$,
+
+$$
+(\delta_a*\delta_b)(x)=\delta_a(x-b)=\delta_{a+b}(x).
+$$
+
+\subsection{Example}
+
+Take $n=15$. Define $f=\delta_0+\delta_1+\delta_2$. For $x \in Z_{15}$,
+
+\begin{align*}
+(f*f)(x)&=(\delta_0+\delta_1+\delta_2)*(\delta_0+\delta_1+\delta_2)\\
+&=\delta_0 * \delta_0 + \delta_1*\delta_1 + \delta_2 * \delta_2\\
+& + 2\delta_0 * \delta_1 + 2\delta_0 * \delta_2 + 2\delta_1*\delta_2\\
+&=\delta_0 + \delta_2 + \delta_4\\
+&+2\delta_1 + 2\delta_2 + 2 \delta_3\\
+&=\delta_0 + 2\delta_1 + 3\delta_2 + 2\delta_3 + \delta_4
+\end{align*}
+
+
+\section{Dual group}
+
+Let $S^1=\{z \in \mathbb{C} : |z| = 1\}$, which is a multiplicative group.
+
+Let $\widehat{Z_n}$ be the set of group homomorphisms $Z_n \to S^1$.
+
+We use normalized counting measure on the group $\widehat{Z_n}$ as Haar measure (which is discrete and compact) with total volume 1.
+
+For $a \in Z_n$, define $e_a:Z_n \to S^1$ by
+
+$$
+e_a(x) = \exp\left(2\pi i \dfrac{ax}{n}\right), \qquad x \in Z_n.
+$$
+
+$e_a$ is an element of $\widehat{Z_n}$.
+
+Define $\psi:Z_n \to \widehat{Z_n}$ by $\psi(a)=e_a$. 
+
+\begin{align*}
+\widehat{Z_n} &= \{e_a : a \in Z_n\}\\
+&= \{\psi(a): a \in Z_n\}\\
+&= \psi(Z_n)
+\end{align*}
+
+$\psi:Z_n \to \widehat{Z_n}$ is an isomorphism of groups.
+
+\section{Fourier transform}
+
+Define the {\textbf Fourier transform} $\mathscr{F}_n:L^2(Z_n) \to L^2(\widehat{Z_n)}$ by
+
+$$
+(\mathscr{F}_n f)(e_a) = \sum_{x \in Z_n} f(x) e_a(-x), \qquad e_a \in \widehat{Z_n}.
+$$
+
+
+\section{Pullback}
+
+We introduce the operator $F_n: L^2(Z_n) \to L^2(Z_n)$, which is defined via composition with the Fourier transform $\mathscr{F}_n$ and the function $\psi$ as
+
+$$
+F_n f = (\mathscr{F}_nf) \circ \psi.
+$$
+
+We pullback  $\mathscr{F}_nf:\widehat{Z_n} \to \mathbb{C}$ to a function $Z_n \to \mathbb{C}$.
+
+We remind ourselves (a) that for $a \in Z_n$, the function $e_a:Z_n \to S^1$ is defined by
+
+$$
+e_a(x) = \exp\left(2\pi i \dfrac{ax}{n}\right), \qquad x \in Z_n,
+$$
+
+(b) that $\psi:Z_n \to \widehat{Z_n}$ is defined by $\psi(a)=e_a$,
+
+and (c) that $\psi:Z_n \to \widehat{Z_n}$ is an isomorphism of groups, by
+
+\begin{align*}
+\widehat{Z_n} &= \{e_a : a \in Z_n\}\\
+&= \{\psi(a): a \in Z_n\}\\
+&= \psi(Z_n)
+\end{align*}
+
+
+\begin{align*}
+(\mathscr{F}_nf)(\psi(a))&=\sum_{x \in Z_n} f(x) e_a(-x)\\
+&=\sum_{x \in Z_n} f(x) \overline{e_a(x)}\\
+&=(f,e_a)_{L^2(Z_n)}
+\end{align*}
+
+Thus
+
+$$
+(F_n f)(x) = (f,e_x)_{L^2(Z_n)}, \qquad x \in Z_n.
+$$
+
+In the sequel, we use the term Fourier transform to refer both to $\mathscr{F}_n$ and to $F_n$, but preserve the distinction for calculations.
+
+
+\subsection{Example: $n=7$ and $f=\delta_3$}
+
+By
+
+$$
+(F_n f)(x) = (f,e_x)_{L^2(Z_n)}, \qquad x \in Z_n
+$$
+
+we have
+
+$$
+(F_7 \delta_3)(x) = (\delta_3,e_x)_{L^2(Z_7)}, \qquad x \in Z_7.
+$$
+
+The inner product $(\delta_3,e_x)_{L^2(Z_7)}$ is given by
+
+\begin{align*}
+(\delta_3,e_x)_{L^2(Z_7)} &= \sum_{y \in Z_7} \delta_3(y) \overline{e_x(y)}\\
+&= \sum_{y=0}^{6} \delta_3(y) \overline{\exp\left(2\pi i \frac{xy}{7}\right)}.
+\end{align*}
+
+Since $\delta_3(y) = 1$ only when $y = 3$ and $0$ otherwise, the sum collapses to a single term:
+
+\begin{align*}
+(\delta_3,e_x)_{L^2(Z_7)} &= \overline{\exp\left(2\pi i \frac{3x}{7}\right)}\\
+&= \exp\left(-2\pi i \frac{3x}{7}\right)\\
+&= e_{-3}(x)
+\end{align*}
+
+Thus,
+
+$$
+(F_7 \delta_3)(x) = e_{-3}(x), \qquad x \in Z_7,
+$$
+
+namely,
+
+$$
+F_7 \delta_3 = e_{-3}.
+$$
+
+\section{$\widehat{Z_n}$}
+
+$\widehat{Z_n}$ is the set of group homomorphisms $Z_n \to S^1$.
+
+$\widehat{Z_n}$ is a group using pointwise multiplication of functions $Z_n \to S^1$, the {\textbf Pontryagin dual group} of $Z_n$.
+
+For $a \in Z_n$, define $e_a \in \widehat{Z_n}$  by
+
+$$
+e_a(x) = \exp\left(2\pi i \dfrac{ax}{n}\right), \qquad x \in Z_n,
+$$
+
+Define $\psi:Z_n \to \widehat{Z_n}$ by
+
+$$\psi(a)=e_a, \qquad a\in Z_n.$$
+
+We have
+
+\begin{align*}
+\widehat{Z_n} &= \{e_a : a \in Z_n\}\\
+&= \{\psi(a): a \in Z_n\}\\
+&= \psi(Z_n)
+\end{align*}
+
+Thus, $\psi:Z_n \to \widehat{Z_n}$ is an isomorphism of groups.
+
+\section{Haar measure}
+
+Let $G$ be a locally compact abelian group.
+
+$\widehat{G}$ is the set of
+continuous group homomorphisms $G \to S^1$. It is a group with operation
+$(\phi_1 \phi_2)(x)=\phi_1(x)\phi_2(x)$, $\phi_1,\phi_2 \in \widehat{G}$, $x \in G$ (namely, pointwise multiplication).
+
+We assign $\widehat{G}$ the coarsest topology such that for each $x \in G$, the map $\phi \mapsto \phi(x)$ is continuous $\widehat{G} \to S^1$ (namely, the {\textbf final topology} on $\widehat{G}$).
+
+One proves that $\widehat{G}$ is a locally compact abelian group.
+
+If $G$ is a discrete LCA group, then $\widehat{G}$ is a compact LCA group.
+
+\subsection{Finite LCA groups}
+
+Let $G$ be a finite locally compact abelian group. $G$ must have the discrete topology. Hence the Borel $\sigma$-algebra of $G$ is equal to the power set of $G$, denoted $\mathscr{P}(G)$.
+
+Because $G$ has the discrete topology, $\widehat{G}$ is equal to the set of group homomorphisms $G \to S^1$.
+
+Assign $G$ the Haar measure $m_G$ defined by $m_G(A)=|A|$ for $A \in \mathscr{P}(G)$. One checks that $m_G$ indeed is a Haar measure. (Counting measure.)
+
+Assign $\widehat{G}$ the Haar measure $m_{\widehat{G}}$ defined by
+$m_{\widehat{G}}(A)=\frac{1}{|\widehat{G}|} \cdot |A|$ for $A \in \mathscr{P}(\widehat{G})$. (Normalized counting measure.)
+
+$L^2(G)$ is equal to the set of functions $G \to \mathbb{C}$ and $L^2(\widehat{G})$ is equal to the set of functions $\widehat{G} \to \mathbb{C}$.
+
+\section{$L^2(Z_n)$}
+
+For $f,g \in L^2(Z_n)$, define
+
+$$
+(f,g)_{L^2(Z_n)} = \sum_{x \in Z_n} f(x) \overline{g(x)} 
+$$
+
+Define
+
+$$|f|_{L^2(Z_n)} = \sqrt{(f,f)_{L^2(Z_n)}}=\sqrt{\sum_{x \in Z_n} f(x) \overline{f(x)}}.$$
+
+For $a \in Z_n$, define $\delta_a:Z_n \to \mathbb{C}$ by
+
+$$
+\delta_a(x) = \begin{cases}
+1&x=a\\
+0&x \neq a
+\end{cases}
+$$
+
+For $a,b \in Z_n$,
+
+\begin{align*}
+(\delta_a, \delta_b)_{L^2(Z_n)} &=\sum_{x \in Z_n} \delta_a(x) \overline{\delta_b(x)} \\
+&=\sum_{x \in Z_n} \delta_a(x) \delta_b(x)\\
+&= \begin{cases}
+1&a = b\\
+0&a \neq b
+\end{cases}
+\end{align*}
+
+For $f \in L^2(Z_n)$,
+
+$$
+f(x) =\sum_{a \in Z_n} f(a) \delta_a(x) = \sum_{a=0}^{n-1} f(a) \delta_a(x),\qquad x \in Z_n.
+$$
+
+\section{Fourier transform}
+
+Define the \textbf{Fourier transform} $\mathscr{F}_n:L^2(Z_n) \to L^2(\widehat{Z_n)}$ by
+
+$$
+(\mathscr{F}_n f)(e_a) =\sum_{x \in Z_n} f(x) \overline{e_a(x)} =  \sum_{x \in Z_n} f(x) e_a(-x), \qquad e_a \in \widehat{Z_n}.
+$$
+
+\section{Pullback}
+
+We introduce the operator $F_n: L^2(Z_n) \to L^2(Z_n)$, which is defined via composition with the Fourier transform $\mathscr{F}_n$ and the function $\psi$ as
+
+$$
+F_n f = (\mathscr{F}_nf) \circ \psi.
+$$
+
+That is, for $a \in Z_n$,
+
+$$
+(F_n f)(a) = (\mathscr{F}_nf)(e_a).
+$$
+
+We pullback  $\mathscr{F}_nf:\widehat{Z_n} \to \mathbb{C}$ to a function $F_n f: Z_n \to \mathbb{C}$.
+
+We have
+
+\begin{align*}
+(\mathscr{F}_nf)(\psi(a))&=\sum_{x \in Z_n} f(x) e_a(-x)\\
+&=\sum_{x \in Z_n} f(x) \overline{e_a(x)}\\
+&=(f,e_a)_{L^2(Z_n)}
+\end{align*}
+
+Thus
+
+$$
+(F_n f)(x) = (f,e_x)_{L^2(Z_n)}, \qquad x \in Z_n.
+$$
+
+\section{Inverse Fourier transform}
+
+Define the Haar measure $m_{\widehat{Z_n}}$ on $\widehat{Z_n}$ by
+$m_{\widehat{Z_n}}(A)=\frac{1}{n} \cdot |A|$ for $A \in \mathscr{P}(\widehat{Z_n})$.
+
+Let $f \in L^2(Z_n)$ and let $x \in Z_n$.
+
+\begin{align*}
+\int_{\widehat{Z_n}} (\mathscr{F}_nf)(\gamma) \gamma(x) dm_{\widehat{Z_n}}(\gamma)&=\frac{1}{n} \sum_{\gamma \in \widehat{Z_n}} (\mathscr{F}_nf)(\gamma)\gamma(x)\\
+&=\frac{1}{n} \sum_{a \in Z_n} (\mathscr{F}_nf)(e_a)e_a(x)\\
+&=\frac{1}{n} \sum_{a \in Z_n} \left(\sum_{y \in Z_n} f(y)\overline{e_a(y)}\right)e_a(x)\\
+&=\frac{1}{n} \sum_{a \in Z_n} \sum_{y \in Z_n} f(y) \overline{e_a(y)}e_a(x)\\
+&=\frac{1}{n} \sum_{y \in Z_n} f(y) \left(\sum_{a \in Z_n} e_a(x)\overline{e_a(y)}\right)
+\end{align*}
+
+We use  the orthogonality relations for characters of finite abelian groups. For $a,b \in Z_n$ we have $e_a,e_b \in \widehat{Z_n}$, and
+
+$$\sum_{x \in Z_n} e_a(x)\overline{e_{b}(x)}= n \delta_{a,b}.$$
+
+Then, as $e_a(x)=e_x(a)$ and $e_a(y)=e_y(a)$,
+
+\begin{align*}
+\frac{1}{n} \sum_{y \in Z_n} f(y) \left(\sum_{a \in Z_n} e_a(x)\overline{e_a(y)}\right)&=\frac{1}{n} \sum_{y \in Z_n} f(y) \left(\sum_{a \in Z_n} e_x(a)\overline{e_y(a)}\right)\\
+&=\frac{1}{n} \sum_{y \in Z_n} f(y) \cdot n \delta_{x,y}\\
+&=\sum_{y \in Z_n} f(y)  \delta_{x,y}\\
+&=\sum_{y \in Z_n} f(y)  \delta_x(y)\\
+&=f(x).
+\end{align*}
+
+We have established that for $f \in L^2(Z_n)$ and for $x \in Z_n$,
+
+$$
+\int_{\widehat{Z_n}} (\mathscr{F}_nf)(\gamma) \gamma(x) dm_{\widehat{Z_n}}(\gamma)
+= \frac{1}{n} \sum_{a \in Z_n} (\mathscr{F}_nf)(e_a)e_a(x)
+=f(x).
+$$
+
+Also,
+
+$$
+ \frac{1}{n} \sum_{a \in Z_n} (F_n f)(a) e_a(x)
+ = \frac{1}{n} \sum_{a \in Z_n} (\mathscr{F}_nf)(e_a)e_a(x)
+= f(x).
+$$
+
+We have established the \textbf{Fourier inversion formula} for $f \in L^2(Z_n)$:
+
+$$
+f(x) = \frac{1}{n} \sum_{a \in Z_n} (F_n f)(a) e_a(x),
+\qquad x \in Z_n.
+$$
+
+\section{$\ell^1(\mathbb{Z})$}
+Let $\mathbb{C}^{\mathbb{Z}}$ be the set of functions $\mathbb{Z} \to \mathbb{C}$.
+
+Let $x \in \ell^1(\mathbb{Z})$ be the set of those $x \in \mathbb{C}^{\mathbb{Z}}$ such that
+
+$$
+\sum_{n \in \mathbb{Z}} |x[n]| < \infty
+$$
+
+and define
+
+$$
+|x|_{\ell^1(\mathbb{Z})} = \sum_{n \in \mathbb{Z}} |x[n]|.
+$$
+
+Let $\ell^2(\mathbb{Z})$ be the set of those $x \in \mathbb{C}^{\mathbb{Z}}$ such that
+
+$$
+\sum_{n \in \mathbb{Z}} |x[n]|^2 < \infty.
+$$
+
+\section{$\ell^2(\mathbb{Z})$}
+
+For $x \in \ell^2(\mathbb{Z})$, define
+
+$$
+|x|_{\ell^2(\mathbb{Z})} = \sqrt{\sum_{n \in \mathbb{Z}} |x[n]|^2},
+$$
+
+and for $x,y \in \ell^2(\mathbb{Z})$, define
+
+$$
+(x,y)_{\ell^2(\mathbb{Z})} = \sum_{n \in \mathbb{Z}} x[n] \overline{y[n]}.
+$$
+
+For $k \in \mathbb{Z}$, define $T_k:\mathbb{C}^{\mathbb{Z}} \to \mathbb{C}^{\mathbb{Z}}$ by
+
+$$
+(T_kx)[n] = x[n-k],\qquad n \in \mathbb{Z}.
+$$
+
+
+
+
+\bibliographystyle{plain}
+\bibliography{pontryagin}
+
+\end{document}

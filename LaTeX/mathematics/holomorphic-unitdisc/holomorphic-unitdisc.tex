@@ -1,0 +1,791 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,subfig,mathrsfs,amsthm}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\SA}{B_{\textrm{sa}}(H)} 
+\newcommand{\positive}{B_{\textrm{+}}(H)} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{The  Fr\'echet space of holomorphic functions on the unit disc}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+\section{Introduction}
+The goal of this note is to develop all the machinery necessary to understand what it means to say that the set $H(D)$ of holomorphic
+functions on the unit disc is a separable and reflexive Fr\'echet space that has the Heine-Borel property and is not normable.
+
+
+
+\section{Topological vector spaces}
+If $X$ is a topological space and $p \in X$, a {\em local basis at $p$} is a set $\mathscr{B}$ of open neighborhoods of $p$ such that if $U$ is an open neighborhood of 
+$p$ then there is some $U_0 \in \mathscr{B}$ that is contained in $U$. 
+We emphasize that to say that a topological vector space $(X,\tau)$ is normable is to say not just that there
+is a norm on the vector space $X$, but moreover that the topology $\tau$ is induced by the norm.
+
+A {\em topological vector space} over $\mathbb{C}$ is a vector space $X$  over $\mathbb{C}$ that is a  topological space such that singletons are closed sets and such that
+vector addition $X \times X \to X$ and scalar multiplication $\mathbb{C} \times X \to X$ are continuous. It is not true that a topological space in which singletons are closed need be
+Hausdorff, but one can prove that every topological vector space is a Hausdorff space.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~11, Theorem 1.12.}
+For any $a \in X$, we check that the map $x \mapsto a+x$ is a homeomorphism. Therefore, a subset $U$ of $X$ is open if and only if 
+$a+U$ is open for all $a \in X$. 
+It follows that if $X$ is a vector space and $\mathscr{B}$ is a set of subsets of $X$ each of which contains $0$, then there is at most
+one topology for $X$ such that $X$ is a topological vector space for which $\mathscr{B}$ is a local basis at $0$. In other words, the topology of a topological vector space
+is determined by specifying a local basis at $0$.
+A topological vector space $X$ is said to be {\em locally convex} if there is a local basis at $0$ whose elements are convex sets.
+
+If $X$ is a vector space and $\mathscr{F}$ is a set of seminorms on $X$, 
+we say that $\mathscr{F}$ is a {\em separating family} if $x \neq 0$ implies that
+there is some $m \in \mathscr{F}$ with $m(x) \neq 0$. (Thus, if $m$ is a seminorm on $X$, the singleton $\{m\}$ 
+is a separating family if and only if $m$ is a norm.)  The following theorem presents a local basis at $0$ for a topology and shows that there is a topology
+for which the vector space is a locally convex space and for which this is a local basis at $0$.\footnote{Paul Garrett, {\em Seminorms and locally convex spaces}, \url{http://www.math.umn.edu/~garrett/m/fun/notes_2012-13/07b_seminorms.pdf}} We call  this topology  the {\em seminorm topology induced by $\mathscr{F}$}.
+
+
+\begin{theorem}[Seminorm topology]
+If $X$ is a vector space and  $\mathscr{F}$ is a separating family of seminorms on $X$, then there is 
+a topology $\tau$ on $X$ such that $(X,\tau)$ is a locally convex space and  the collection $\mathscr{B}$ of finite intersections of sets of the form
+\[
+B_{m,\epsilon}=\{x\in X: m(x)<\epsilon\}, \qquad m\in \mathscr{F}, \epsilon>0
+\]
+is a local basis at $0$.
+\label{seminormtopology}
+\end{theorem}
+\begin{proof}
+We define $\tau$ to be those subsets $U$ of $X$ such that for all $x \in U$  there is some 
+$N \in \mathscr{B}$ satisfying $x+N \subseteq U$. If $\mathscr{U}$ is a subset of $\tau$ and 
+$x \in \bigcup_{U \in \mathscr{U}} U$, then 
+there is some $U_0 \in \mathscr{U}$ with $x \in U_0$, and there is some $N_0 \in \mathscr{B}$ satisfying
+$x+N_0 \subseteq U_0$. We have
+\[
+x+N_0 \subseteq U_0 \subseteq \bigcup_{U \in \mathscr{U}} U,
+\]
+which tells us that $\bigcup_{U \in \mathscr{U}}  U \in \tau$. If $U_1,\ldots,U_n \in \tau$ and
+$x \in \bigcap_{k=1}^n U_k$, then there are $N_1,\ldots,N_n \in \mathscr{B}$ satisfying
+$x + N_k \in U_k$ for $1 \leq k \leq n$. But the intersection of finitely many elements of $\mathscr{B}$ is itself an element
+of $\mathscr{B}$, so $N=\bigcap_{k=1}^n N_k \in \mathscr{B}$, and 
+\[
+x+N \subseteq \bigcap_{k=1}^n U_k,
+\]
+showing that $\bigcap_{k=1}^n U_k \in \tau$. Therefore, $\tau$ is a topology.
+
+Suppose that $x \in X$. For $y \neq x$, let $m_y \in \mathscr{F}$ with $\epsilon_y=m_y(x-y) \neq 0$; there is such a seminorm because $\mathscr{F}$ is
+a separating family.
+Then
+$U_y=y+B_{m_y,\epsilon_y}$ is an open set that contains $y$ and does not contain $x$. Therefore $X \setminus U_y$ is a closed set that contains $x$ and does not contain $y$, 
+and 
+\[
+\bigcap_{y \neq x} X \setminus U_y = \{x\}
+\]
+is a closed set, showing that singletons are closed.
+
+
+Let $x,y \in X$ and $N \in \mathscr{B}$. There are  $m_k \in \mathscr{F}$ and $\epsilon_k>0$, $1 \leq k \leq n$, such that
+$N = \bigcap_{k=1}^n B_{m_k,\epsilon_k}$. Let $U = \bigcap_{k=1}^n B_{m_k,\epsilon_k/2}$. If $v \in (x+U) + (y+U)$ and
+$1 \leq k \leq n$, then there are $x_k \in B_{m_k,\epsilon_k/2}$ and $y_k \in B_{m_k,\epsilon_k/2}$ such that
+$v = x+x_k + y + y_k$, and
+\[
+m_k(v-(x+y)) = m_k(x_k+y_k) \leq m_k(x_k)+ m_k(y_k) < \frac{\epsilon_k}{2}+\frac{\epsilon_k}{2} = \epsilon_k,
+\]
+so $v \in x+y+B_{m_k,\epsilon_k}$. This is true for each $k$, $1 \leq k \leq n$, so $v \in x+y+N$. Hence
+\[
+(x+U)+(y+U) \subseteq x+y+N,
+\]
+showing that vector addition is continuous at $(x,y) \in X \times X$: for every basic open neighborhood $x+y+N$ of the image $x+y$, there
+is an open neighborhood $(x+U) \times (y+U)$ of $(x,y)$ whose image under vector addition is contained in $x+y+N$. 
+
+Let $\alpha \in \mathbb{C}$, $x \in X$, and $N \in \mathscr{B}$, say $N = \bigcap_{k=1}^n B_{m_k,\epsilon_k}$. Let
+$\epsilon=\min \{\epsilon_k: 1 \leq k \leq n\}$, 
+let $\delta>0$ be small enough so that $\delta(\delta+|\alpha|+m_k(x))<\epsilon$ for each $1 \leq k \leq n$,
+let $\Delta=\{\beta \in \mathbb{C}: |\beta-\alpha|<\delta\}$, and
+let $U=\bigcap_{k=1}^n B_{m_k,\delta}$.
+If $(\beta,v) \in \Delta \times (x+U)$ and $1 \leq k \leq n$, then
+\begin{align*}
+m_k(\beta v - \alpha x)&=m_k(\beta v - \beta x + \beta x - \alpha x)\\
+&\leq m_k(\beta (v-x)) +m_k((\beta-\alpha) x)\\
+&=|\beta| m_k(v-x) + |\beta-\alpha| m_k(x)\\
+&< (\delta+|\alpha|) \delta+\delta m_k(x)\\
+&=\delta(\delta+|\alpha|+m_k(x))\\
+&<\epsilon\\
+&\leq \epsilon_k,
+\end{align*}
+showing that $\beta v \in \alpha x + B_{m_k,\epsilon_k}$. This is true for each $k$, so $\beta v \in N$, which shows
+that scalar multiplication is continuous at $(\alpha,x)$: for every basic open neighborhood $\alpha x +N$ of the image $\alpha x$,
+there is an open neighborhood $\Delta \times (x+U)$ of $(\alpha,x)$ whose image under scalar multiplication
+is contained in $\alpha x+N$.
+
+
+We have shown that $X$ with the topology $\tau$ is a topological vector space. To show that $X$ is a locally convex space it
+suffices to prove that each element of the local basis $\mathscr{B}$ is convex. An intersection of convex sets is a convex set,
+so to prove that each element of $\mathscr{B}$ is convex it suffices to prove that each $B_{m,\epsilon}$ is convex, 
+$m \in \mathscr{F}$ and $\epsilon>0$. If $0 \leq t \leq 1$ and $x,y \in B_{m,\epsilon}$, then
+\[
+m(tx+(1-t)y) \leq m(tx)+m((1-t)y) = tm(x)+(1-t)m(y)<t\epsilon+(1-t)\epsilon=\epsilon,
+\]
+showing that $tx+(1-t)y \in B_{m,\epsilon}$ and thus that $B_{m,\epsilon}$ is a convex set. Therefore, $(X,\tau)$ is a locally
+convex space. 
+\end{proof}
+
+
+In the other direction, we will now explain how the topology of a locally convex space is induced by a separating family of seminorms.
+We say that a subset $S$ of a vector space $X$ is {\em absorbing} if $x \in X$ implies that there is some $t > 0$ such that $x \in tS$. 
+The {\em Minkowski functional} $\mu_S:X \to [0,\infty)$ of an absorbing set $S$ is defined by
+\[
+\mu_S(x)=\inf\{t  \geq 0: x \in tS\}, \qquad x \in X.
+\]
+If $U$ is an open set containing $0$ and $x \in X$, then $0\cdot x=0 \in U$, and because scalar multiplication is continuous there is some $t > 0$ such that $tx \in U$. Thus an open set
+containing $0$ is absorbing.
+We say that  a subset $S$ of a vector space $X$ is {\em balanced} if $|\alpha| \leq 1$ implies that $\alpha S \subseteq S$.
+One proves that in a topological vector space, every convex open neighborhood of $0$ contains a balanced convex open neighhborhood of $0$.\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~12, Theorem 1.14.} It follows that a locally convex space has a local basis at $0$ whose elements are balanced convex open sets. 
+The following lemma shows that the Minkowski functional of each member of this local basis is a seminorm.
+
+\begin{lemma}
+If $X$ is a topological vector space and 
+ $U$ is a balanced convex open neighborhood of  $0$, then the Minkowski functional of $U$ is a seminorm on $X$.
+\end{lemma}
+\begin{proof}
+Let $\alpha \in \mathbb{C}$ and $x \in X$. If $\alpha = 0$, then
+\[
+\mu_U(\alpha x)= \mu_U(0)=0  = |\alpha| \mu_U(x).
+\]
+Otherwise, write $\alpha = ru$ with $r>0$ and $|u|=1$. 
+Because $U$ is balanced and $|u^{-1}|=1$, we have
+\begin{align*}
+\mu_U(\alpha x)& = \inf\{t \geq 0: \alpha x \in tU\}\\
+&=\inf\{t \geq 0: rux \in tU\}\\
+&=\inf\{t \geq 0: x \in r^{-1}t u^{-1} U\}\\
+&=\inf\{t \geq 0: x \in r^{-1}t U\}\\
+&=\inf\{rs \geq 0: x \in sU\}\\
+&=r \inf\{s \geq 0: x \in sU\}\\
+&=r\mu_U(x).
+\end{align*}
+Therefore, if $\alpha \in \mathbb{C}$ and $x \in X$, then $\mu_U(\alpha x)=|\alpha| \mu_U(x)$.
+
+Let $x,y \in X$. $U$ is absorbing, so let $s=\mu_U(x)$ and $t = \mu_U(y)$. If $\epsilon>0$ then
+$x \in (s+\epsilon)U$ and $y \in (t+\epsilon)U$. 
+We have
+\[
+x+y \in (s+\epsilon)U + (t+\epsilon)U = \{(s+\epsilon)u + (t+\epsilon)v: u,v \in U\},
+\]
+and for $u,v \in U$, because $U$ is convex we have
+\[
+s'u+t'v = (s'+t') \left( \frac{s'}{s'+t'}u + \frac{t'}{s'+t'}v \right)  \in (s'+t')U,
+\]
+where $s'=s+\epsilon$ and $t' = t+\epsilon$,
+so
+\[
+x+y \in (s+t+2\epsilon)U.
+\]
+This is true for every $\epsilon>0$, which means that $\mu_U(x+y) \leq s+t$. Therefore
+\[
+\mu_U(x+y) \leq s+t = \mu_U(x)+\mu_U(y),
+\]
+showing that $\mu_U$ satisfies the triangle inequality and hence that $\mu_U$ is a seminorm on $X$.
+\end{proof}
+
+
+We  proved above that the Minkowski functional of a balanced convex open neighborhood of $0$ is a seminorm. 
+The following lemma shows  that the collection of Minkowski functionals corresponding to a balanced convex local basis at $0$ are a separating family.\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~27, Theorem 1.36.}
+
+\begin{lemma}
+If $X$ is a topological vector space and $U$ is a balanced convex open neighborhood of $0$, then 
+\[
+U = \{x \in X: \mu_U(x)<1\}.
+\]
+If  $\mathscr{B}$ is a local basis at $0$ whose elements are balanced and convex, then
+\[
+\{\mu_U: U \in \mathscr{B}\}
+\]
+ is a separating family of seminorms on $X$.
+ \label{minkowski}
+\end{lemma}
+\begin{proof}
+Let $U \in \mathscr{B}$.  If $x \in U$, then
+because $1 \cdot x \in U$ and scalar multiplication
+is continuous, there is some $\delta>0$ and some open neighborhood $N$ of $x$ such that the image of $[1-\delta,1+\delta] \times N$ under scalar multiplication
+is contained in $U$. In particular, if $(1+\delta)x \in U$ and so $x \in \frac{1}{1+\delta}U$. 
+Thus we have
+\[
+\mu_U(x)=\inf \{t \geq 0: x \in tU\} \leq \frac{1}{1+\delta}<1.
+\]
+Therefore, if $x \in U$ then $\mu_U(x)<1$.  On the other hand,
+if $x \in X$ and $\mu_U(x)<1$, then there is some $t<1$ such that $x \in tU$. As $U$ is balanced, we have $x \in U$. Therefore,
+if $\mu_U(x)<1$ then $x \in U$. This establishes that if $U \in \mathscr{B}$ then
+\[
+U = \{x \in X: \mu_U(x)<1\}.
+\]
+
+If $x \neq 0$, then because singletons are closed, the set $X \setminus \{x\}$ is  open and contains $0$, and thus
+there is some $U \in \mathscr{B}$ with $U \subseteq X \setminus \{x\}$.  Hence $x \not \in U$, which implies by the first claim that
+ $\mu_U(x) \geq 1$. In particular, $\mu_U(x) \neq 0$, proving the second claim.
+\end{proof}
+
+If $X$ is a locally convex space then there is a local basis at $0$, call it $\mathscr{B}$, whose elements are balanced and convex, and we have established that $\mathscr{F}=\{\mu_U:U \in \mathscr{B}\}$ is a separating family of seminorms on $X$. Therefore by Theorem \ref{seminormtopology}, $X$ with the seminorm topology induced by $\mathscr{F}$ 
+is a locally convex space. The following theorem states that the seminorm topology is equal to the original topology of the space.\footnote{Paul Garrett, {\em Seminorms and locally convex spaces}, \url{http://www.math.umn.edu/~garrett/m/fun/notes_2012-13/07b_seminorms.pdf}}
+
+\begin{theorem}
+If $(X,\tau)$ is a locally convex space, then there is a separating family of seminorms on $X$ such that $\tau$ is equal to the seminorm topology.
+\end{theorem}
+\begin{proof}
+Let $\mathscr{B}$ be a local basis at $0$ whose elements are balanced and convex and let $\mathscr{F} = \{\mu_U: U \in \mathscr{B}\}$. If $U \in \mathscr{B}$, then 
+$U=\{x \in X: \mu_U(x)<1\}$, which is an open neighborhood of $0$ in the seminorm topology induced by $\mathscr{F}$, and this implies
+that the seminorm topology is at least as fine as $\tau$. 
+
+If $U \in \mathscr{B}$ and $\epsilon>0$, then
+\[
+\{x \in X:\mu_U(x)<\epsilon\} = \left\{x \in X: \mu_U\left(\frac{x}{\epsilon}\right)<1\right\}=\{\epsilon x \in X: \mu_U(x)<1\}=\epsilon U.
+\]
+$\epsilon U \in \tau$ and $0 \in \epsilon U$, and it follows that $\tau$ is at least as fine as the seminorm topology. Therefore $\tau$ is equal to the seminorm topology
+induced by $\mathscr{F}$. 
+\end{proof}
+
+We have shown that if $X$ is a vector space and $\mathscr{F}$ is a separating family of seminorms on $X$, then $X$ with the seminorm topology induced by $\mathscr{F}$
+ is a locally convex space. Furthermore, we have shown that if $X$ is a locally convex space then there is a separating family $\mathscr{F}$ of seminorms on $X$ such that
+the topology of $X$ is equal to the seminorm topology induced by $\mathscr{F}$. In other words, the topology of any locally convex space is the seminorm topology induced by some
+separating family of seminorms on the space.
+
+
+A subset $E$ of a topological vector space $X$ is said to be {\em bounded} if for every open neighborhood $N$ of $0$ there is some $s>0$
+such that $t>s$ implies that $E \subseteq tN$. 
+
+\begin{lemma}
+If $X$ is a locally convex space with the seminorm topology induced by a separating family $\mathscr{F}$ of seminorms on $X$, then a 
+subset $E$ of $X$ is bounded if and only if each $m \in \mathscr{F}$ is a bounded function on $E$.
+\label{boundedset}
+\end{lemma}
+\begin{proof}
+Suppose that $E$ is bounded and  $m \in \mathscr{F}$. The set $U=\{x \in X: m(x)<1\}$ is an open neighborhood of $0$, so there is some $t>0$ such that 
+$E \subseteq tU$. Hence if $x \in E$ then $m(x)<t$, so $m$ is a bounded function on $E$.
+
+Suppose that for each $m \in \mathscr{F}$ there is some $M_m$ such that $x \in E$ implies that $m(x) \leq M_m$.
+If $U$ is an open neighborhood of $0$, then there are $m_1,\ldots,m_n \in \mathscr{F}$ and $\epsilon_1,\ldots,\epsilon_n>0$
+such that 
+\[
+\bigcap_{k=1}^n \{x \in X: m_k(x)<\epsilon_k\} \subseteq U.
+\]
+Let $M=\max \left\{ \frac{M_{m_k}}{\epsilon_k}: 1 \leq k \leq n\right\}$. For $t>M$,
+\[
+\bigcap_{k=1}^n \{tx \in X: m_k(x) < \epsilon_k\} \subseteq tU,
+\]
+i.e.,
+\[
+\bigcap_{k=1}^n \{x \in X: m_k(x) < \epsilon_k t\} \subseteq tU.
+\]
+But if $x \in E$ and $1 \leq k \leq n$ then
+\[
+m_k(x) \leq M_{m_k} \leq \epsilon_k M < \epsilon_k t,
+\]
+hence $x$ is in the above intersection and thus is in $tU$. Therefore $E \subseteq tU$, showing that $E$ is bounded.
+\end{proof}
+
+
+We now prove that if the topology of a locally convex space is induced by a countable separating family of seminorms then the topology is metrizable.
+
+\begin{theorem}
+If $(X,\tau)$ is a locally convex space with the seminorm topology induced by a countable separating family of seminorms $\{m_n:n \in \mathbb{N}\}$
+and $c_n$ is a summable nonincreasing sequence of positive numbers,
+then 
+\[
+d(x,y) =\sum_{n=1}^\infty c_n \frac{m_n(x-y)}{1+m_n(x-y)}, \qquad x,y \in X,
+\]
+is a translation invariant metric on $X$, $\tau$ is equal to the metric topology for $d$, and with this metric the open balls centered at $0$  are balanced.
+\label{metrizable}
+\end{theorem}
+\begin{proof}
+For any $x,y \in X$ we have
+\[
+d(x,y) < \sum_{n=1}^\infty c_n < \infty,
+\]
+because the sequence $c_n$ is summable. It is apparent that $d(x,y)=d(y,x)$. 
+
+If $m$ is any seminorm on $X$, then
+\[
+\frac{m(x)+m(y)}{1+m(x)+m(y)}-\frac{m(x+y)}{1+m(x+y)}=\frac{m(x)+m(y)-m(x+y)}{(1+m(x)+m(y))(1+m(x+y))} \geq 0,
+\]
+so
+\[
+\frac{m(x+y)}{1+m(x+y)} \leq \frac{m(x)+m(y)}{1+m(x)+m(y)}.
+\]
+Also, it is straightforward to check that the function $f:[0,\infty) \to [0,\infty)$ defined by $f(a)=\frac{a}{1+a}$ satisfies $f(a+b) \leq f(a)+f(b)$. 
+Define $d_0(x)=d(x,0)$. If $x,y \in X$, then
+\begin{align*}
+d_0(x+y)&=\sum_{n=1}^\infty c_n \frac{m_n(x+y)}{1+m_n(x+y)}\\
+&\leq \sum_{n=1}^\infty c_n \frac{m_n(x)+m_n(y)}{1+m_n(x)+m_n(y)}\\
+&\leq \sum_{n=1}^\infty c_n \frac{m_n(x)}{1+m_n(x)} + c_n \frac{m_n(y)}{1+m_n(y)}\\
+&=d_0(x)+d_0(y).
+\end{align*}
+Hence, for $x,y \in X$,
+\[
+d(x,z) = d_0(x-y+y-z) \leq d_0(x-y)+d_0(y-z) = d(x,y)+d(y,z),
+\]
+showing that $d$ satisfies the triangle inequality.
+
+If $d(x,y)=0$, then 
+\[
+\sum_{n=1}^\infty c_n \frac{m_n(x-y)}{1+m_n(x-y)}=0.
+\]
+As each term is nonnegative, each term must be equal to $0$. As each $c_n$ is positive, this implies that each $m_n(x-y)$ is equal to $0$.
+But $\{m_n: n \in \mathbb{N}\}$ is a separating family so if $x-y \neq 0$ then there is some $m_n$ with $m_n(x-y) \neq 0$, and this shows that
+$x-y=0$, i.e. $x=y$. Therefore $d$ is a metric on $X$.
+
+If $x_0 \in X$, then $d(x+x_0,y+x_0)=d(x,y)$: the metric $d$ is translation invariant.
+
+If $|\alpha| \leq 1$ and $x \in X$, then
+\begin{align*}
+d_0(\alpha x)&=\sum_{n=1}^\infty c_n \frac{m_n(\alpha x)}{1+m_n(\alpha x)}\\
+&=\sum_{n=1}^\infty c_n \frac{|\alpha| m_n(x)}{1+|\alpha| m_n(x)}\\
+&=\sum_{n=1}^\infty c_n \frac{m_n(x)}{\frac{1}{|\alpha|} + m_n(x)}\\
+&\leq \sum_{n=1}^\infty c_n \frac{m_n(x)}{1+m_n(x)}\\
+&=d_0(x).
+\end{align*}
+Thus, if $d(x,0)<\epsilon$ and $|\alpha| \leq 1$ then $d(\alpha x,0)<\epsilon$, so the open ball
+\[
+\{x \in X: d(x,0)<\epsilon\}
+\]
+ is balanced.
+ 
+ $(X,\tau)$ has a local basis at $0$ whose elements are finite intersections of sets of the form $\{x \in X: m_n(x)<\epsilon\}$. 
+ Suppose that $\epsilon>0$,
+  let $N$ be large enough so that $\sum_{n=N+1}^\infty c_n<\frac{\epsilon}{2}$, and let
+  $M$ be large enough so that $\frac{1}{M} \sum_{n=1}^N c_n<\frac{1}{2}$. 
+ If $x \in \bigcap_{n=1}^N \{y \in X: m_n(y)<\frac{\epsilon}{M}\}$, then 
+ \begin{align*}
+ d(x,0) &= \sum_{n=1}^N c_n \frac{m_n(x)}{1+m_n(x)} + \sum_{n=N+1}^\infty c_n \frac{m_n(x)}{1+m_n(x)}\\
+ &< \sum_{n=1}^N c_n m_n(x) + \sum_{n=N+1}^\infty c_n\\
+ &< \sum_{n=1}^N c_n \frac{\epsilon}{M} + \frac{\epsilon}{2}\\
+ &<\frac{\epsilon}{2}+\frac{\epsilon}{2}\\
+ &=\epsilon.
+ \end{align*}
+ This shows that 
+ \[
+ \bigcap_{n=1}^N \left\{x \in X: m_n(x)<\frac{\epsilon}{M}\right\} \subseteq \{x \in X: d(x,0)<\epsilon\},
+ \]
+ and this entails that $\tau$ is at least as fine as the metric topology induced by $d$.
+ 
+Suppose that $0<\epsilon<\frac{1}{2}$ and  $N \in \mathbb{N}$. If $d(x,0) < c_N \epsilon$, then  of course
+for each $n$  we have
+\[
+c_n \frac{m_n(x)}{1+m_n(x)} <c_N \epsilon,
+\]
+and hence if $1 \leq n \leq N$ then
+\[
+\frac{m_n(x)}{1+m_n(x)} < \frac{c_N}{c_n} \epsilon \leq \epsilon,
+\]
+and hence if $1 \leq n \leq N$ then
+\[
+m_n(x) < \frac{\epsilon}{1-\epsilon} < 2\epsilon.
+\]
+Therefore,
+\[
+\{x \in X: d(x,0)< c_N \epsilon\} \subseteq \bigcap_{n=1}^N \{x \in X: m_n(x)<2\epsilon\}.
+\]
+It follows from this that the metric topology induced by $d$ is at least as fine as $\tau$.
+\end{proof}
+
+If a locally convex space is metrizable with a complete metric, then it is called a {\em Fr\'echet space}.
+
+We now prove conditions under which a topological vector space is
+normable. 
+
+\begin{theorem}
+A topological vector space $(X,\tau)$ is normable if and only if there is a convex bounded open neighborhood of the origin.
+\label{normable}
+\end{theorem}
+\begin{proof}
+Suppose that $V$ is a convex bounded open neighborhood of $0$. $V$ contains a 
+balanced convex open neighborhood $U$ of $0$,\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~12, Theorem 1.14.} and because $V$ is bounded so is $U$. We define
+$\norm{x}=\mu_U(x)$, where $\mu_U$ is the Minkowski functional of $U$.  If $x \neq 0$,
+then because $N=X \setminus \{x\}$ is an open neighborhood of $0$ and $U$ is bounded, there is some $t>0$ such that $U \subseteq tN$. Hence
+$x \not \in \frac{1}{t}U$, i.e., $tx \not \in U$. As $U$ is balanced, 
+by Lemma \ref{minkowski} we get $\mu_U(tx) \geq 1$. $\mu_U$ is a seminorm, so $\mu_U(x) \geq \frac{1}{t}>0$, showing that if $x \neq 0$ then $\mu_U(x) >0$, and hence
+that $\norm{\cdot}$ is a norm on $X$. 
+Also, we check that
+\[
+\{x \in X: \norm{x} < r\} = rU.
+\]
+Because $U$ is bounded, for any open neighborhood $N$ of $0$ there is some $t>0$ such that $U \subseteq tN$, hence
+\[
+\left\{x \in X: \norm{x} < \frac{1}{t} \right\} \subseteq N.
+\]
+This implies that the norm topology for $\norm{\cdot}$ is at least as fine as $\tau$.
+And $\{x \in X: \norm{x} < r\}=rU$ is an open set because scalar multiplication is continuous, so $\tau$ is at least as fine as the norm topology for $\norm{\cdot}$. Therefore
+that $(X,\tau)$ is normable with the norm $\norm{\cdot}$.
+
+In the other direction, 
+if $\tau$ is the norm topology for some norm $\norm{\cdot}$ on $X$, then 
+\[
+U=\{x \in X: \norm{x} < 1\}
+\]
+is indeed a convex open neighborhood of the origin. Suppose that $N$ is an open neighborhood of $0$. There is some
+$r>0$ such that
+\[
+\{x \in X: \norm{x}<r\} \subseteq N,
+\] 
+and thus such that $U \subseteq \frac{1}{r}N$, and hence $U$ is bounded, showing that there exists a convex bounded open neighborhood of the origin.
+\end{proof}
+
+
+A topological vector space is called {\em locally bounded} if there is a bounded open neighborhood of the origin. A topological vector
+space is said to have the {\em Heine-Borel property} if every closed and bounded subset of it is compact. 
+
+\begin{theorem}
+If $X$ is a topological vector space that is locally bounded and has the Heine-Borel property, then $X$ has finite dimension.
+\label{finitedim}
+\end{theorem}
+\begin{proof}
+Let $V$ be a bounded neighborhood of $0$. It is a fact that the closure of a bounded set is itself bounded,\footnote{Walter Rudin,
+{\em Functional Analysis}, second ed., p.~11, Theorem 1.13(f).} and therefore $\overline{V}$ is compact. 
+For any $x \in X$, the set $x+\overline{V}$ is a compact neighborhood of $x$, hence $X$ is locally compact. 
+But a locally compact topological vector space is finite dimensional,\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~17, Theorem 1.22.} so $X$ is finite dimensional.
+\end{proof}
+
+
+
+
+\section{Continuous functions on the unit disc}
+Let $D=\{z \in \mathbb{C}:|z|<1\}$, the open unit disc.
+Let $C(D)$ be the set of continuous functions $D \to \mathbb{C}$.  $C(D)$ is a complex vector space.
+If $K$ is a compact subset of $D$, define
+\[
+\nu_K(f)=\sup \{ | f(z)|: z \in K\}, \qquad f \in C(D).
+\]
+It is straightforward to check that $\nu_K$ is a seminorm on $C(D)$.
+If $f \in C(D)$ is nonzero then there is some $z \in D$ with $f(z) \neq 0$, and hence
+$\nu_{\{z\}}(f) =|f(z)| >0$, so the set of all $\nu_K$ is a separating family of seminorms on $C(D)$. Thus, $C(D)$ with the seminorm topology induced by
+the set of all $\nu_K$ is a locally convex space.
+
+
+
+Define $K_n=\{z \in \mathbb{C}: |z| \leq 1-\frac{1}{n}\}$, $n \geq 1$. If $K$ is a compact subset of $D$, then there is some $n$ with $K \subseteq K_n$,
+so $\nu_K(f) \leq \nu_{K_n}(f)$, and hence
+\[
+\{f \in C(D): \nu_{K_n}(f)<\epsilon\} \subseteq \{f \in C(D): \nu_K(f) < \epsilon\}. 
+\]
+It follows that the seminorm topology induced by $\{\nu_{K_n}:n \in \mathbb{N}\}$ is at least as fine as the seminorm topology
+induced by $\{\nu_K: \textrm{$K$ is compact}\}$, thus the topologies are equal. 
+Because the topology of $C(D)$ is induced by the countable family $\{\nu_{K_n}: n \in \mathbb{N} \}$,  by Theorem \ref{metrizable} it is metrizable:  for any summable nonincreasing sequence of positive real numbers $c_n$, the topology is induced by the metric
+\begin{equation}
+d(f,g) = \sum_{n=1}^\infty c_n \frac{\nu_{K_n}(f-g)}{1+\nu_{K_n}(f-g)}, \qquad f,g \in C(D).
+\label{Cmetric}
+\end{equation}
+Suppose that $f_i \in C(D)$ is a Cauchy sequence. For $n \in \mathbb{N}$,  the fact that $f_i$ is a Cauchy sequence in $C(D)$ implies that
+$\nu_{K_n}(f_i-f_j) \to 0$ as $i,j \to \infty$. $C(K_n)$ is a Banach space with the norm $\nu_{K_n}$, and hence there is some $f_{K_n} \in C(K_n)$ satisfying
+$\nu_{K_n}(f_i-f_{K_n}) \to 0$ as $i \to \infty$. We define $f:D \to \mathbb{C}$ to be $f_{K_n}(z)$, for $z \in K_n$; this makes sense because the restriction of
+$f_{K_n}$ to $K_m$ is $f_{K_m}$ if $n \geq m$. 
+$f$ is continuous at each point in $D$ because for each point in $D$ there is some $K_n$ containing an open neighborhood of the point, and $f_{K_n}$ is continuous.
+Hence $f \in C(D)$. Therefore $C(D)$ with the metric \eqref{Cmetric} is a complete metric space, which means that it is a Fr\'echet space.
+
+\begin{theorem}
+The topology of $C(D)$  is not induced by a  norm.
+\end{theorem}
+\begin{proof}
+Because the topology of $C(D)$ is the seminorm topology induced by the separating family of seminorms $\{\nu_{K_n}: n \in \mathbb{N}\}$,
+by Lemma \ref{boundedset} a subset $E$ of $C(D)$ is bounded if and only if each $\nu_{K_n}$ is a bounded function
+on $E$, i.e., for each $n \in \mathbb{N}$ there is some $M_n$ such that $f \in E$ implies $\nu_{K_n}(f) \leq M_n$.
+
+Suppose by contradiction that there is a  bounded convex open neighborhood $V$ of the origin. Because $\nu_{K_n}(f) \leq \nu_{K_{n+1}}(f)$ for any $f \in C(D)$, there is
+some $N \in \mathbb{N}$ and some $\epsilon>0$ such that
+\[
+U=\{f \in C(D): \nu_{K_N}(f)<\epsilon\} \subseteq V.
+\]
+$V$ being bounded implies that $U$ is bounded. Let 
+\[
+\Delta_1 = \left\{z \in \mathbb{C}: |z|<1-\frac{1}{N}+\frac{1}{N(N+1)} \right\}, \quad \Delta_2 = \left\{z \in \mathbb{C}: 1-\frac{1}{N} < |z| < 1 \right\},
+\]
+and let $\phi_1,\phi_2$ be a partition of unity subordinate to this open cover of $D$. For any constant $M>0$, the restriction of $M\phi_2$ to $K_N$ is $0$ and
+hence  belongs to $U$. But $\nu_{K_{N+1}}(M\phi_2)=M$, so $\nu_{K_{N+1}}$ is not a bounded function on $U$, contradicting that $U$ is bounded. Therefore, there is no bounded convex
+open neighborhood of $0$. 
+By Theorem \ref{normable},  this tells us that $C(D)$ is not normable.
+\end{proof}
+
+
+
+For each $n$, the set $C(K_n)$ is a Banach space with norm $\nu_{K_n}$. 
+If $n \geq m$ and $f \in C(K_n)$, let $r_{n,m}(f)$ be the restriction of $f$ 
+to $K_m$. For $n \geq m$, the function $r_{n,m}$ is a continuous linear map $C(K_n) \to C(K_m)$, and  if $n \geq m \geq l$ then $r_{n,l} = r_{m,l} \circ r_{n,m}$. Thus the Banach spaces $C(K_n)$ and the maps
+$r_{n,m}$ are a {\em projective system} in the category of locally convex spaces, and it is a fact that any projective system in this category has a projective limit  that is unique up to unique isomorphism. 
+
+
+\begin{theorem}
+$C(D)=\varprojlim C(K_n)$.
+\end{theorem}
+\begin{proof}
+Define $r_n:C(D) \to C(K_n)$ by taking $r_n(f)$ to be the restriction of $f$ to $K_n$. Each $r_n$ is continuous and linear. Certainly, if $n \geq m$ then $r_m = r_{n,m} \circ r_n$. 
+Suppose the $Y$ is a locally convex space, that $\phi_n:Y \to C(K_n)$ are continuous linear maps, and that if $n \geq m$ then
+\begin{equation}
+\phi_m = r_{n,m} \circ \phi_n.
+\label{Yspace}
+\end{equation}
+If $z \in K_m$ and $n \geq m$, then by \eqref{Yspace} we have $\phi_n(y)(z)=\phi_m(y)(z)$.
+For $z \in D$, eventually $z \in K_n$, and 
+define $\phi(y)(z)$ to be $\phi_n(y)(z)$ for any $n$ such that $z \in K_n$. For each $z \in D$ there is some $n$ such that $z$ is in the interior of $K_n$,
+and the restriction of $\phi(y)$ to $K_n$ is equal to $\phi_n(y)$, hence $\phi(y)$ is continuous at $z$. Therefore $\phi(y)
+\in C(D)$, so $\phi:Y \to C(D)$. 
+
+Suppose that $y_1,y_2 \in Y$ and $\alpha \in \mathbb{C}$. If $z \in D$, 
+then there is some $n$ with $z \in K_n$, and because $\phi_n$ is linear,
+\[
+\phi(\alpha y_1+y_2)(z) = \phi_n(\alpha y_1+y_2)(z)=\alpha \phi_n(y_1)(z)+\phi_n(y_2)(z) = \alpha \phi(y_1)(z)+\phi(y_2)(z).
+\]
+Therefore $\phi$ is linear. 
+
+Suppose that $y_\alpha \in Y$ is a net with limit $y \in Y$. For $\phi(y_\alpha)$ to converge to $\phi(y)$ means that
+for each $n \in \mathbb{N}$ we have $\nu_{K_n}(\phi(y_\alpha)-\phi(y)) \to 0$.  But
+\[
+\nu_{K_n}(\phi(y_\alpha)-\phi(y)) = \nu_{K_n}(\phi_n(y_\alpha)-\phi_n(y)),
+\]
+and $\phi_n(y_\alpha) \to \phi_n(y)$ because $\phi_n$ is continuous. Therefore, for each $n \in \mathbb{N}$ we have
+$\nu_{K_n}(\phi(y_\alpha)-\phi(y)) \to 0$, so $\phi$ is continuous.
+\end{proof}
+
+
+We proved in the above theorem that the Fr\'echet space $C(D)$ is the projective limit of the Banach spaces $C(K_n)$. It is a fact that 
+the projective limit of any projective system of Banach spaces is a Fr\'echet space.\footnote{J. L .Taylor, {\em Notes on locally convex topological vector spaces},
+\url{http://www.math.utah.edu/~taylor/LCS.pdf}, p.~8, Proposition 2.6, and
+cf. Paul Garret,
+{\em Functions on circles: Fourier series, I}, \url{http://www.math.umn.edu/~garrett/m/fun/notes_2012-13/04_blevi_sobolev.pdf}, p.~37, \S 13.}
+ 
+
+A topological space is said to be {\em separable} if it has a countable subset that is dense.
+
+\begin{theorem}
+$C(D)$ is separable.
+\label{separable}
+\end{theorem}
+\begin{proof}
+One proves using the Stone-Weierstrass theorem that the Banach
+space $C(K_n)$ is separable.
+The product of at most continuum many separable Hausdorff spaces each with at least two points is itself  separable
+ with the product topology.\footnote{Stephen Willard, {\em General Topology}, p.~109, Theorem 16.4.} Therefore, $\prod_{n=1}^\infty C(K_n)$ is separable. 
+Because each $C(K_n)$ is a metric space, this countable product $\prod_{n=1}^\infty C(K_n)$ is metrizable, and any subset of a separable metric space is itself separable with the subspace
+topology.
+The projective limit of a projective system of topological vector spaces is a closed subspace
+of the product of the spaces; thus, using merely that the projective limit is a subset of the product $\prod_{n=1}^\infty C(K_n)$ and has the subspace topology inherited from the direct
+product, 
+we get that $C(D)$ is separable.
+\end{proof}
+
+
+
+
+
+\section{Holomorphic functions on the unit disc}
+Let $H(D)$ be the set of holomorphic functions $D \to \mathbb{C}$. $H(D)$ is a linear subspace of $C(D)$. 
+Let $H(D)$ have the subspace topology inherited from $C(D)$. One proves that this topology is equal to the seminorm topology induced 
+by $\{\nu_{K_n}: n \in \mathbb{N}\}$.  Any subset of a separable metric space with the subspace topology is separable. By Theorem \ref{separable} the Fr\'echet space
+$C(D)$ is separable, and thus $H(D)$ is separable too.
+
+We now prove that $H(D)$ is a closed subspace of $C(D)$.\footnote{Paul Garrett, {\em Holomorphic vector-valued functions}, \url{http://www.math.umn.edu/~garrett/m/fun/notes_2012-13/08b_vv_holo.pdf}} A closed linear subspace of a Fr\'echet space is itself a Fr\'echet space, hence this theorem shows that $H(D)$ is a Fr\'echet space.
+
+\begin{theorem}
+$H(D)$ is a closed subset of $C(D)$.
+\end{theorem}
+\begin{proof}
+Suppose that $f_j \in H(D)$ is a net and that $f_j \to f \in C(D)$. We shall show that $f \in H(D)$. (In fact it suffices to prove this for a sequence of elements in $H(D)$ because
+we have shown that $C(D)$ is metrizable, but that will not simplify this argument.) To show this we have to prove that if $z \in D$ then $\frac{f(z+h)-f(z)}{h}$ has a limit as $h \to 0$,
+$h \in \mathbb{C}$. Let $\gamma$ be a counterclockwise oriented circle contained in $D$ with center $z$, say of radius $r=\frac{1-|z|}{2}>0$. For each $j$ the function $f_j$ is holomorphic on $D$,  and so
+Cauchy's integral formula gives
+\[
+f_j(w)=\frac{1}{2\pi i} \int_\gamma \frac{f_j(\zeta)}{\zeta-w} d\zeta, \qquad w \in B_r(z).
+\]
+Therefore
+\begin{eqnarray*}
+f(w)-\frac{1}{2\pi i} \int_\gamma \frac{f(\zeta)}{\zeta-w} d\zeta&=&f(w)-f_j(w)+\frac{1}{2\pi i} \int_\gamma \frac{f_j(\zeta)}{\zeta-w} d\zeta-\frac{1}{2\pi i} \int_\gamma \frac{f(\zeta)}{\zeta-w} d\zeta\\
+&=&f(w)-f_j(w)+\frac{1}{2\pi i} \int_\gamma \frac{f_j(w)-f(w)}{\zeta-w} d\zeta.
+\end{eqnarray*}
+As $\gamma$ is a compact subset of $D$ this gives us
+\[
+\left| f(w)-\frac{1}{2\pi i} \int_\gamma \frac{f(\zeta)}{\zeta-w} d\zeta \right| \leq |f(w)-f_j(w)|+ \frac{1}{2\pi}\cdot 2\pi r \cdot \frac{\nu_\gamma(f_j-f)}{r-|w-z|}.
+\]
+The right-hand side tends to 0, while the left-hand side does not depend on $j$. Hence 
+\begin{equation}
+f(w)=\frac{1}{2\pi i} \int_\gamma \frac{f(\zeta)}{\zeta-w} d\zeta, \qquad w \in B_r(z).
+\label{cauchy}
+\end{equation}
+Applying \eqref{cauchy}, we have for $0 \leq |h|<r$,
+\[
+f(z+h)=\frac{1}{2\pi i} \int_\gamma \frac{f(\zeta)}{\zeta-(z+h)} d\zeta,
+\]
+hence
+\begin{eqnarray*}
+f(z+h)-f(z)&=&\frac{1}{2\pi i} \int_\gamma \frac{f(\zeta)}{\zeta-(z+h)} d\zeta- \frac{1}{2\pi i} \int_\gamma \frac{f(\zeta)}{\zeta-z} d\zeta\\
+&=&\frac{1}{2\pi i} \int_\gamma f(\zeta)\left( \frac{1}{\zeta-(z+h)} - \frac{1}{\zeta-z} \right) d\zeta\\
+&=&\frac{1}{2\pi i}\int_\gamma f(\zeta) \cdot \frac{h}{(\zeta-(z+h))(\zeta-z)} d\zeta,
+\end{eqnarray*}
+thus
+\[
+\frac{f(z+h)-f(z)}{h} = \frac{1}{2\pi i} \int_\gamma \frac{f(\zeta)}{(\zeta-(z+h))(\zeta-z)} d\zeta.
+\]
+For $\zeta \in \gamma$ we have $\left| \frac{f(\zeta)}{(\zeta-(z+h))(\zeta-z)} \right| \leq \frac{\nu_\gamma(f)}{(r-|h|)r}$, and so by the dominated convergence theorem we get
+\[
+\lim_{h \to 0} \frac{f(z+h)-f(z)}{h} = \frac{1}{2\pi i} \int_\gamma \frac{f(\zeta)}{(\zeta-z)^2} d\zeta.
+\]
+Thus, for every $z \in D$, the function $f$ is complex differentiable at $z$. Hence $f \in H(D)$, and therefore $H(D)$ is  a closed subset of $C(D)$. 
+\end{proof}
+
+
+We remind ourselves that a topological vector space is said to have the {\em Heine-Borel property} if every closed and bounded subset of it is compact. 
+ Lemma \ref{boundedset} tells us that a subset $E$ of $H(D)$ is bounded if and only if each seminorm $\nu_{K_n}$ is a bounded function on $E$. 
+ The following theorem states that $H(D)$ has the Heine-Borel property.\footnote{Henri Cartan, {\em Elementary Theory of Analytic Functions of One or Several Complex Variables},
+pp.~162--167, chapter V, \S 4.} An equivalent statement is called {\em Montel's theorem}.
+
+\begin{theorem}[Heine-Borel property]
+The Fr\'echet space $H(D)$ has the Heine-Borel property.
+\end{theorem}
+
+That $H(D)$ has the Heine-Borel property is a useful tool, and lets us prove that the topology of $H(D)$ is not induced by a norm.
+
+\begin{theorem}
+$H(D)$ is not normable.
+\end{theorem}
+\begin{proof}
+If $H(D)$ were normable then by Theorem \ref{normable} there would be a convex bounded open neighborhood of the origin. This would
+imply that $H(D)$ is locally bounded (has a bounded open neighborhood of the origin). But $H(D)$ has the Heine-Borel property, and a topological
+vector space that is locally bounded and has the Heine-Borel property is finite dimensional by Theorem \ref{finitedim}. It is straightforward to
+check that $H(D)$ is not finite dimensional, and hence $H(D)$ is not normable.
+\end{proof}
+
+
+
+
+For $f \in H(D)$, let $(d f)(z)=\lim_{h \to 0} \frac{f(z+h)-f(z)}{h}$.
+First, if $f \in H(D)$ then one proves that $df \in H(D)$.  Then,
+the following theorem states that $d: H(D) \to H(D)$ is a morphism in the category of locally convex spaces.\footnote{Henri
+Cartan,  {\em Elementary Theory of Analytic Functions of One or Several Complex Variables}, p.~143, chapter V, \S 1.}
+
+
+\begin{theorem}
+Differentiation $H(D) \to H(D)$ is a continuous linear map.
+\end{theorem}
+
+If $K$ is a compact subset of $D$ and $f \in H(D)$, let $r_K(f)$ be the restriction of $f$ to $K$, and let $\overline{H}(K)$ be the closure
+in  $C(K)$ of the set $\{r_K(f):f \in H(D)\}$. Each element of $\overline{H}(K)$ is holomorphic on the interior of $K$.
+$C(K)$ is a Banach space with the norm  $\nu_K$, and hence $\overline{H}(K)$ is a Banach space with the same norm, because it is indeed a linear subspace.
+If $n \geq m$ and $f \in \overline{H}(K_n)$, let $r_{n,m}(f)=r_{K_m}(f) \in \overline{H}(K_m)$.
+The $r_{n,m}$ are continuous and linear, and if $n \geq m \geq l$ then $r_{n,l} = r_{m,l} \circ r_{n,m}$. Thus the Banach spaces $\overline{H}(K_n)$ and the continuous linear
+maps
+$r_{n,m}$ are a projective system in the category of locally convex spaces, and this projective system has a projective limit $\varprojlim \overline{H}(K_n)$.
+The following theorem states that this projective limit is equal to the Fr\'echet space $H(D)$.\footnote{J. L .Taylor, {\em Notes on locally convex topological vector spaces},
+\url{http://www.math.utah.edu/~taylor/LCS.pdf}, p.~8} 
+
+
+\begin{theorem}
+$H(D)=\varprojlim \overline{H}(K_n)$.
+\end{theorem}
+
+
+\section{Dual spaces}
+The {\em dual  of a topological vector space $X$} is the set $X^*$ of continuous linear maps $X \to \mathbb{C}$. 
+If $E$ is a bounded subset of $X$ and $\lambda \in X^*$, then $\lambda(E)$ is a bounded subset of $\mathbb{C}$ (the image of a bounded set under a continuous linear map is a bounded set).
+Hence
+\[
+p_E(\lambda) = \sup \{ |\lambda x| : x \in E\} < \infty.
+\]
+The function $p_E$ is a seminorm on $X^*$, and if $\lambda \neq 0$ then there is some $x \in X$ with $\lambda x \neq 0$,
+ hence $p_{\{x\}}(\lambda) >0$. 
+The {\em strong dual  topology on $X^*$} is the seminorm topology induced by the separating family
+\[
+\{p_E: \textrm{$E$ is a bounded subset of $X$}\}.
+\]
+(To add to our vocabulary: the set of all bounded subsets of a topological vector space is called the {\em bornology of the space}. Similar
+to how one can define a topology as a collection of sets satisfying certain properties, one can also define a bornology on a set
+ without first having the structure of a topological vector space.)
+We denote by $X_\beta^*$ the dual space $X^*$ with the strong dual topology. $X_\beta^*$ is a locally convex space.
+If $X$ is a normed space, one can prove\footnote{K. Yosida,
+{\em Functional Analysis}, sixth ed., p.~111,  Theorem 1.} that $X_\beta^*$ is normable with the operator norm
+\[
+\norm{\lambda} = \sup \{ |\lambda x| : \norm{x} \leq 1\}.
+\]
+We say that a topological vector space $X$ is {\em reflexive} if $(X_\beta^*)_\beta^*=X$; since the strong dual
+of a topological vector space is locally convex, for a topological vector space to be reflexive it is necessary
+that it be locally convex.
+
+Let $X$ be a locally convex space. The Hahn-Banach separation theorem\footnote{Walter Rudin, {\em Functional Analysis}, second ed., p.~59, Theorem 3.4.}
+yields that $X^*$ separates $X$: if $x \neq 0$ then there is some $\lambda \in X^*$ with $\lambda x \neq 0$. If $\lambda \in X^*$, then $|\lambda|$ is a seminorm
+on $X$ and $\{|\lambda|: \lambda \in X^*\}$ is therefore a separating family of seminorms on $X$. We call the seminorm topology induced by this separating family
+the {\em weak topology on $X$}, and $X$ with the weak topology is a locally convex space.
+The original topology on $X$ is at least as fine as the weak topology on $X$: any set that is open using
+the weak topology is open using the original topology.
+
+ 
+ The following lemma shows that a Fr\'echet space with the Heine-Borel property is reflexive, and therefore that $H(D)$ is reflexive.
+ 
+ \begin{lemma}
+ If a Fr\'echet space has the Heine-Borel property, then it is reflexive.
+ \end{lemma}
+ \begin{proof}
+A subset of a locally convex space is called a {\em barrel} if it is closed, convex, balanced, and absorbing.
+A locally convex space is said to be {\em barreled} if each barrel is a neighborhood of $0$. It is a fact that every Fr\'echet space is barreled.\footnote{K. Yosida,
+{\em Functional Analysis}, sixth ed., p.~138, Corollary 1.}
+A locally convex space is reflexive if and only if it is barreled and 
+if every set that is closed, convex, balanced, and bounded is weakly compact.\footnote{K. Yosida,
+{\em Functional Analysis}, sixth ed., p.~140, Theorem 2.} Therefore, for a Fr\'echet space with the Heine-Borel property
+ to be reflexive it is necessary and sufficient that every set that is compact, convex, and balanced be weakly compact.
+But if a subset of a locally convex space is compact then it is weakly compact, because the original topology is at least as fine as the weak topology and hence
+any cover of a set by elements of the weak topology is also a cover of the set by elements of the original topology. Therefore, any Fr\'echet space with the Heine-Borel property
+is reflexive.
+\end{proof}
+
+
+Morphisms in the category of locally convex spaces are continuous linear maps. If $X$ and $Y$ are locally convex spaces and 
+$\phi:X \to Y$ is a morphism, the {\em dual of $\phi$} is the morphism
+\[
+\phi^*:Y_\beta^* \to X_\beta^*
+\]
+defined by
+\[
+\phi^*(\lambda)=\lambda \circ \phi, \qquad \lambda \in Y_\beta^*.
+\]
+One verifies that $\phi^*$ is in fact a morphism.
+If the spaces $X_j$ and the morphisms $\phi_{i,j}:X_i \to X_j$, $i \geq j$, are a projective system
+in the category of locally convex spaces, then the dual spaces $(X_j)_\beta^*$ and the morphisms $\phi_{i,j}^*:(X_j)_\beta^* 
+\to (X_i)^*_\beta$, $i \geq j$, are a {\em direct system} in this category.
+It is a fact that the dual of a projective limit of Banach spaces is isomorphic  to the direct limit
+of the duals of the Banach spaces.\footnote{Paul Garrett, {\em Functions on circles: Fourier series, I},  \url{http://www.math.umn.edu/~garrett/m/fun/notes_2012-13/04_blevi_sobolev.pdf}, p.~15, Theorem 5.1.1.}
+Thus, as $H(D)$ is the projective limit of the Banach spaces $\overline{H}(K_n)$, its dual space $H^*(D)=(H(D))_\beta^*$ is isomorphic to the direct limit of the duals 
+of these Banach spaces:
+\[
+H^*(D)=\varinjlim (\overline{H}(K_n))_\beta^*.
+\]
+
+Cooper\footnote{J. B. Cooper, {\em Functional analysis-- spaces of holomorphic functions and their duality}, \url{http://www.dynamics-approx.jku.at/lena/Cooper/holloc.pdf}, p.~11, \S 5.}
+shows that $H^*(D)$ is isomorphic to the space of germs of functions on the complement of $D$ in the extended complex plane that vanish at infinity. 
+Let $\mathfrak{A}$ be those sequences $a \in \mathbb{C}^\mathbb{N}$ satisfying
+\[
+\limsup |a_n|^{1/n} \leq 1.
+\]
+By Hadamard's formula for the radius of convergence of a power series, these are precisely the sequences of coefficients of power series with
+radius of convergence $\geq 1$, and $\mathfrak{A}$ is a complex vector space. The map
+\[
+a \mapsto \sum_{n=0}^\infty a_n z^n
+\]
+is linear and has the linear inverse
+\[
+f \mapsto \left( \frac{f^{(n)}(0)}{n!} \right),
+\]
+so $H(D)$ and $\mathfrak{A}$ are linearly isomorphic. 
+For $0<r<1$, define 
+\[
+q_r(a) = \max \{|a_n| r^n : n \in \mathbb{N}\}.
+\]
+Each $q_r$ is a norm, yet we do not give $\mathfrak{A}$ the norm topology. Rather, we give $\mathfrak{A}$ the seminorm topology induced by 
+the family $\{ q_r : 0<r<1 \}$, and with this topology $\mathfrak{A}$ is a  locally convex space. 
+One proves that the above two linear maps are continuous, and hence that $H(D)$ is isomorphic as a locally
+convex space to $\mathfrak{A}$. Then, one proves that the dual space of $\mathfrak{A}$ are those
+sequences $b \in \mathbb{C}^\mathbb{N}$ such that
+\[
+\limsup |b_n|^{1/n}<1,
+\]
+and $b$ corresponds to
+\[
+\sum_{n=0}^\infty b_n \left( \frac{1}{z} \right)^{n+1}.
+\]
+
+\end{document}

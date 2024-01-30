@@ -1,0 +1,334 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,} 
+\newcommand{\Hom}{\ensuremath\mathrm{Hom}}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{$C^k$ spaces and spaces of test functions}
+\author{Jordan Bell}
+\date{April 10, 2014}
+
+\maketitle
+
+\section{Notation}
+Let $\mathbb{N}$ denote the set of nonnegative integers. For $\alpha \in \mathbb{N}^n$, we write
+\[
+|\alpha| = \alpha_1+\cdots+\alpha_n,
+\]
+and
+\[
+\partial^\alpha=\partial_1^{\alpha_1} \cdots \partial_n^{\alpha_n}.
+\]
+We denote by $B_r(x)$ the open ball with center $x$ and radius $r$.
+
+\section{Open sets}
+Let $\Omega$ be an open subset of $\mathbb{R}^n$ and let $k$ be either a nonnegative integer or $\infty$.
+We define $C^k(\Omega)$ to be the set of those functions $f:\Omega \to \mathbb{C}$ such that for each $\alpha \in \mathbb{N}^n$ with $|\alpha| \leq k$, the derivative $\partial^\alpha f$ exists and is continuous. We write $C(\Omega)=C^0(\Omega)$.
+
+One proves that there is a sequence of compact sets $K_j$
+such that each $K_j$ is contained in the interior of $K_{j+1}$ and $\Omega=\bigcup_{j=1}^\infty K_j$;
+ we call this an {\em exhaustion of $\Omega$ by compact sets}.
+For $f \in C^k(\Omega)$, we define
+\[
+p_{k,N}(f)= \sup_{|\alpha| \leq \min(k,N)} \sup_{x \in K_N} |(\partial^\alpha f)(x)|;
+\]
+this definition makes sense for $k=\infty$.
+ If $f$ is a nonzero element of $C^k(\Omega)$, then there is some $x \in \Omega$ for which $f(x) \neq 0$ and then
+  there is some $N$ for which $x \in K_N$, and hence 
+$p_{k,N}(f) \geq \sup_{y \in K_N} |f(y)| \geq |f(x)| > 0$.
+Thus, $p_{k,N}$ is a separating family of seminorms on $C^k(\Omega)$.
+Those sets of the form
+\[
+V_{k,N} = \left\{ f \in C^k(\Omega): p_{k,N}(f)<\frac{1}{N} \right\}
+\]
+form a local basis at $0$ for a topology on $C^k(\Omega)$, and because $p_{k,N}$ is a separating family of seminorms, with
+this topology $C^k(\Omega)$ is a locally convex space.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~27, Theorem 1.37.} Because $p_{k,N}$ is a countable separating family of
+seminorms, this topology is metrizable.
+We prove in the following theorem that 
+$C(\Omega)$ is a Fr\'echet space.\footnote{Walter Rudin, {\em Functional Analysis}, second ed.,
+p.~33, Example 1.44.} 
+
+
+
+\begin{theorem}
+If $\Omega$ is an open subset of $\mathbb{R}^n$, then $C(\Omega)$ is a Fr\'echet space.
+\label{continuous}
+\end{theorem}
+\begin{proof}
+Let $f_i \in C(\Omega)$ be a Cauchy sequence. That is, for every $N$ there is some $i_N$ such that if $i,j \geq i_N$ then
+\[
+f_i-f_j \in V_{0,N} = \left\{f \in C(\Omega): \sup_{x \in K_N}|f(x)|<\frac{1}{N} \right\}.
+\]
+ For each $x \in \Omega$, eventually $x \in K_N$.
+If $x \in K_N$ and $i,j \geq i_N$, then
+\[
+|f_i(x)-f_j(x)| <\frac{1}{N}.
+\]
+Therefore, $f_i(x)$ is a Cauchy sequence in $\mathbb{C}$ and hence converges to some $f(x) \in \mathbb{C}$. We have thus defined a function
+$f:\Omega \to \mathbb{C}$. We shall prove that $f \in C(\Omega)$ and that $f_i \to f$ in $C(\Omega)$.
+
+
+Let $K$ be a compact subset of $\Omega$, let
+$\epsilon >0$, and let
+$N$ be large enough both so that $K \subseteq K_N$ and so that $N \geq \frac{1}{\epsilon}$. 
+For $i,j \geq i_{N}$,
+\[
+\sup_{x \in K_{N}} |f_i(x)-f_j(x)| < \frac{1}{N} \leq \epsilon.
+\]
+Let $i \geq i_{N}$ and  $x \in K_{N}$. There is some $j_x$ such that $j \geq j_x$ implies that $|f_j(x)-f(x)|<\epsilon$, and hence for $j \geq \max(i_{N},j_x)$,
+\begin{eqnarray*}
+|f_i(x)-f(x)|&\leq&|f_i(x)-f_j(x)|+|f_j(x)-f(x)|\\
+&<&\epsilon+\epsilon.
+\end{eqnarray*}
+This shows that for $i \geq i_{N}$,
+\[
+\sup_{x \in K} |f_i(x)-f(x)| \leq \sup_{x \in K_{N}} |f_i(x)-f(x)| \leq 2\epsilon.
+\]
+We have proved that for any compact subset $K$ of $\Omega$,  we have $\sup_{x \in K} |f_i(x)-f(x)| \to 0$ as $i \to \infty$.
+
+Let $x \in \Omega$, let $\epsilon>0$, and  let $N$ be large enough both  so that $x$ lies in the interior of $K_N$ and so that $N \geq \frac{1}{\epsilon}$.
+Because $\sup_{x \in K_N} |f_i(x)-f(x)| \to 0$ as $i \to \infty$, there is some $i_0$ so that $i \geq i_0$ implies 
+\[
+\sup_{x \in K_N} |f_i(x)-f(x)| < \epsilon.
+\]
+Let $i = \max(i_0,i_N)$. Because $f_i$ is continuous, there is some $\delta>0$ so that $|x-y|<\delta$ implies that $|f_i(x)-f_i(y)|<\epsilon$;
+take $\delta$ small enough so that the open ball with center $x$ and radius $\delta$ is contained in $K_N$.
+For $|y-x|<\delta$,
+\begin{eqnarray*}
+|f(x)-f(y)|&\leq&|f(x)-f_i(x)|+|f_i(x)-f_i(y)|+|f_i(y)-f(y)|\\
+&\leq&\sup_{z \in K_N} |f(z)-f_i(z)| + \frac{1}{N} + \sup_{z \in K_N} |f(z)-f_i(z)|\\
+&<&\epsilon+\epsilon+\epsilon.
+\end{eqnarray*}
+This shows that $f$ is continuous at $x$ and $x$ was an arbitrary point in $\Omega$, hence $f \in C(\Omega)$.
+
+We have already established that for any compact subset $K$ of $\Omega$, we have $\sup_{x \in K} |f_i(x)-f(x)| \to 0$ as $i \to \infty$. 
+Thus, for any $N$, there is some $j_N$ so that if $i \geq j_N$ then  $\sup_{x \in K_N} |f_i(x)-f(x)| < \frac{1}{N}$. In other words, if
+$i \geq j_N$, then $p_{0,N}(f_i-f) < \frac{1}{N}$, i.e. $f_i -f \in V_{0,N}$, showing that $f_i \to f$ in $C(\Omega)$.
+\end{proof}
+
+
+
+
+\begin{theorem}
+If $\Omega$ is an open subset of $\mathbb{R}^n$ and $k$ is a positive integer, then $C^k(\Omega)$ is a Fr\'echet space.
+\label{Ckfrechet}
+\end{theorem}
+\begin{proof}
+We have proved in  Theorem \ref{continuous}  that $C(\Omega)=C^0(\Omega)$ is a Fr\'echet space. We
+ assume  that $C^{k-1}(\Omega)$ is a Fr\'echet space, and using this induction hypothesis we shall prove that $C^k(\Omega)$ is a Fr\'echet space.
+
+Let $f_i \in C^k(\Omega)$ be a Cauchy sequence in $C^k(\Omega)$. $f_i$ is in particular a Cauchy sequence in the Fr\'echet space $C(\Omega)$, hence there is some $g \in C(\Omega)$ such that
+$f_i \to g$ in $C(\Omega)$. We shall prove that $g \in C^k(\Omega)$ and that $f_i \to g$ in $C^k(\Omega)$. 
+
+For each $1 \leq p \leq n$ we have $\partial_p f_i \in C^{k-1}(\Omega)$, and $\partial_p f_i$  is a Cauchy sequence in $C^{k-1}(\Omega)$. Because $C^{k-1}(\Omega)$
+is a Fr\'echet space, for each $p$ there is some $g_p \in C^{k-1}(\Omega)$ such that $\partial_p f_i \to g_p$ in $C^{k-1}(\Omega)$. Fix $p$, and let $\alpha \in \mathbb{N}^n$ have
+$p$th entry $1$ and all other entries $0$. Then, fix $x \in \Omega$, and take $N$ large enough so that $x$ lies in the interior of $K_N$.
+For each $i$, define $F_i(t)=f(x+t\alpha)$, for which
+\[
+F_i'(t)=(\nabla f)(x+t\alpha) \cdot \alpha = (\partial_p f_i)(x+t\alpha).
+\]
+For nonzero $\tau$ small enough so that the line segment from $x$ to $x+\tau\alpha$ is contained in $K_N$,
+\[
+F_i(\tau)-F_i(0) = \int_0^\tau F_i'(t) dt,
+\]
+i.e.
+\[
+f_i(x+\tau\alpha)-f_i(x) = \int_0^\tau (\partial_p f_i)(x+t\alpha) dt.
+\]
+Because $f_i \to g$ in $C(\Omega)$ and $\partial_p f_i \to g_p$ in $C(\Omega)$, we have 
+$\sup_{y \in K_N} |f_i(y)-g(y)| \to 0$ and $\sup_{y \in K_N} |(\partial^p f_i)(y)-g_p(y)| \to 0$, from which it follows that
+\[
+g(x+\tau\alpha)-g(x) = \int_0^\tau g_p(x+t\alpha) dt,
+\]
+or
+\[
+\frac{g(x+\tau\alpha)-g(x)}{\tau} = \frac{1}{\tau} \int_0^\tau g_p(x+t\alpha) dt.
+\]
+As $\tau$ tends to $0$, the right hand side tends to $g_\alpha(x)$, showing that $(\partial_p g)(x)=g_p(x)$. 
+But $x$ was an arbitrary point in $\Omega$, so $\partial_p g = g_p \in C^{k-1}(\Omega)$. Thus, for each $1 \leq p \leq n$ we have
+$\partial_p g \in C^{k-1}(\Omega)$, from which it follows that $g \in C^k(\Omega)$.
+\end{proof}
+
+
+\begin{theorem}
+If $\Omega$ is an open subset of $\mathbb{R}^n$, then $C^\infty(\Omega)$ is a Fr\'echet space.
+\label{Cinfinity}
+\end{theorem}
+\begin{proof}
+Let $f_i \in C^\infty(\Omega)$ be a Cauchy sequence in $C^\infty(\Omega)$. Thus, for each $k$, $f_i$ is a Cauchy sequence in $C^k(\Omega)$, and so by Theorem \ref{Ckfrechet} there is some
+$g_k \in C^k(\Omega)$ for which $f_i \to g_k$ in $C^k(\Omega)$. Define $g=g_0$, and check that $g_0=g_1=g_2=\cdots$, and hence that
+$g \in C^\infty(\Omega)$.
+\end{proof}
+
+
+
+
+
+\section{Closed sets}
+Let $\Omega$ be an open subset of $\mathbb{R}^n$ such that $\overline{\Omega}$ is compact, i.e. $\Omega$ is a bounded open subset of $\mathbb{R}^n$. If $k$
+is a nonnegative integer,  let $C^k(\overline{\Omega})$ be those elements $f$ of $C^k(\Omega)$
+such that for each $\alpha \in \mathbb{N}^n$ with $|\alpha| \leq k$, the function $\partial^\alpha f$ is continuous $\Omega \to \mathbb{C}$ and can be extended to a continuous function $\overline{\Omega} \to \mathbb{C}$;
+if there is such a continuous function $\overline{\Omega} \to \mathbb{C}$ it is unique, and  it thus makes sense to talk about the value of $\partial^\alpha f$ at points in
+$\partial \Omega$, and thus to write $\partial^\alpha f: \overline{\Omega} \to \mathbb{C}$. We write $C(\overline{\Omega})=C^0(\overline{\Omega})$. For $f \in C^k(\overline{\Omega})$, we define
+\[
+\norm{f}_k = \sup_{|\alpha| \leq k} \sup_{x \in \overline{\Omega}} |(\partial^\alpha f) (x)|.
+\]
+It is straightforward to check that this is a norm on $C^k(\overline{\Omega})$.
+
+
+\begin{theorem}
+If $\Omega$ is a bounded open subset of $\mathbb{R}^n$, then $C(\overline{\Omega})$ is a Banach space.
+\label{closedC0}
+\end{theorem}
+\begin{proof}
+Let $f_i \in C(\overline{\Omega})$ be a Cauchy sequence. Thus, $f_i:\overline{\Omega} \to \mathbb{C}$ are continuous, and 
+for any $\epsilon>0$ there is some $i_\epsilon$ such that if $i, j \geq i_\epsilon$ then
+\[
+\sup_{x \in \overline{\Omega}} |f_i(x)-f_j(x)|<\epsilon.
+\]
+Then, for each $x \in \overline{\Omega}$ we have that  $f_i(x)$ is a Cauchy sequence in $\mathbb{C}$ and hence converges to some
+$f(x) \in \mathbb{C}$, thus defining a function $f:\overline{\Omega} \to \mathbb{C}$.
+For $x \in \overline{\Omega}$ and $\epsilon>0$,
+ because $f_i(x) \to f(x)$, there is some $j_x$ such that $j \geq j_x$ implies that $|f_j(x)-f(x)|<\epsilon$. For $i \geq i_\epsilon$ and $j \geq
+ \max(i_\epsilon,j_x)$,
+ \[
+ |f_i(x)-f(x)| \leq |f_i(x)-f_j(x)| + |f_j(x)-f(x)| < \epsilon+\epsilon.
+ \]
+ This shows that $\sup_{x \in \overline{\Omega}}|f_i(x)-f(x)| \to 0$ as $i \to \infty$.
+
+Fix $x \in \Omega$ and let $\epsilon>0$.
+What we just proved shows that there is some $i_0$ for which $i \geq i_0$ implies that
+$\sup_{z \in \overline{\Omega}} |f_i(z)-f(z)|<\epsilon$.
+As $f_{i_0}: \overline{\Omega} \to \mathbb{C}$ is continuous, there is some $\delta>0$ such that
+for $y \in B_\delta(x) \cap \overline{\Omega}$, we have $|f_{i_0}(x)-f_{i_0}(y)|<\epsilon$. Then, for $y \in
+B_\delta(x) \cap \overline{\Omega}$,
+\begin{eqnarray*}
+|f(x)-f(y)| &\leq& |f(x)-f_{i_0}(x)|+|f_{i_0}(x)-f_{i_0}(y)| + |f_{i_0}(y)-f(y)|\\
+&<&\epsilon+\epsilon+\epsilon.
+\end{eqnarray*}
+This proves that $f$ is continuous at $x$, and because $x$ was an arbitrary point in $\overline{\Omega}$, we have that
+$f \in C(\overline{\Omega})$.
+\end{proof}
+
+
+\begin{theorem}
+If $\Omega$ is a bounded open subset of $\mathbb{R}^n$ and $k$ is a positive integer, then
+$C^k(\overline{\Omega})$ is a Banach space.
+\end{theorem}
+\begin{proof}
+We proved in Theorem \ref{closedC0} that $C(\overline{\Omega})=C^0(\overline{\Omega})$ is a Banach space. We assume
+that $C^{k-1}(\overline{\Omega})$ is a Banach space, and using this induction hypothesis we shall prove that $C^k(\overline{\Omega})$
+is a Banach space.
+
+Let $f_i \in C^k(\overline{\Omega})$ be a Cauchy sequence. In particular, 
+$f_i$ is a Cauchy sequence in $C(\overline{\Omega})$, and because $C(\overline{\Omega})$ is a Banach space,
+ there is some $g \in C(\overline{\Omega})$ for which
+$\norm{f_i - g}_0 \to 0$.
+For each $1 \leq p \leq n$ we have $\partial_p f_i \in C^{k-1}(\overline{\Omega})$. 
+Because $C^{k-1}(\overline{\Omega})$ is a Banach space, for each $p$ there is some $g_p \in C^{k-1}(\overline{\Omega})$ for which
+$\norm{\partial_p f_i - g_p}_{k-1} \to 0$.
+
+Let $\alpha \in \mathbb{N}^n$ have $p$th entry $1$ and all other entries $0$, and let  $x \in \Omega$.
+For nonzero $\tau$ small enough so that the line segment from $x$ to $x+\tau \alpha$ is contained in $\Omega$, 
+\[
+f_i(x+\tau \alpha)-f_i(x)=\int_0^\tau (\partial_p f_i)(x+t\alpha)dt.
+\]
+Because $\norm{f_i-g}_0 \to 0$ and $\norm{\partial_p f_i - g_p}_0 \to 0$ (the latter because $\norm{\partial_p f_i-g_p}_{k-1} \to 0$), we obtain
+\[
+g(x+\tau \alpha)-g(x) = \int_0^\tau g_p(x+t\alpha)dt,
+\]
+or
+\[
+\frac{g(x+\tau\alpha)-g(x)}{\tau} = \frac{1}{\tau} \int_0^\tau g_p(x+t\alpha)dt.
+\]
+As $\tau$ tends to $0$ the right hand side tends to $g_p(x)$, which shows that $(\partial_p g)(x)=g_p(x)$. We did this for all $x \in \Omega$,
+and so $\partial_p g =g_p \in C^{k-1}(\overline{\Omega})$.
+Because this is true for each $1 \leq p \leq n$, we obtain $g \in C^k(\overline{\Omega})$.
+\end{proof}
+
+If $\Omega$ is a bounded open subset of $\mathbb{R}^n$, then 
+\[
+C^\infty(\overline{\Omega}) = \bigcap_{k=0}^\infty C^k(\overline{\Omega}).
+\]
+It can be proved that $C^\infty(\overline{\Omega})$ is the projective limit of the Banach spaces $C^k(\overline{\Omega})$, $k=0,1,\ldots$.\footnote{See Paul Garrett, {\em Banach and Fr\'echet spaces of functions},  \url{http://www.math.umn.edu/~garrett/m/fun/notes_2012-13/02_spaces_fcns.pdf}} A projective limit of a countable projective system of Banach spaces is a Fr\'echet
+space, and thus $C^\infty(\overline{\Omega})$ is a Fr\'echet space. 
+
+
+\section{Test functions}
+Let $\Omega$ be an open subset of $\mathbb{R}^n$. If $f:\Omega \to \mathbb{C}$ is a function, the {\em support of $f$} is the closure of the set
+$\{x \in \Omega: f(x) \neq 0\}$. We denote the support of $f$ by $\supp f$. If $\supp f$ is a compact set, we say that $f$ has {\em compact support}, and
+we denote by $C_c^\infty(\Omega)$ the set of all elements of $C^\infty(\Omega)$ with compact support.
+We  write $\mathscr{D}(\Omega)=C_c^\infty(\Omega)$.
+
+For $f \in \mathscr{D}(\Omega)$, we define
+\[
+\norm{f}_N = \sup_{|\alpha| \leq N} \sup_{x \in \Omega} |(\partial^\alpha f)(x)|.
+\]
+If $K$ is a compact subset of $\Omega$, we define
+\[
+\mathscr{D}(K) = \{f \in C_c^\infty(\Omega): \supp f \subseteq K\}.
+\]
+The restriction of these norms to $\mathscr{D}(K)$ are norms, in particular seminorms.
+Hence,
+with the topology for which a local basis at $0$ is the collection of
+ sets of the form $\{f \in \mathscr{D}(K): \norm{f}_N <\frac{1}{N}\}$, we have that $\mathscr{D}(K)$ is a locally convex space, and because
+ there are countably many seminorms $\norm{\cdot}_N$, the space is metrizable.
+ One checks that the topology on $\mathscr{D}(K)$ is equal to the subspace topology it inherits from $C^\infty(\Omega)$.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~151.}
+ Theorem \ref{Cinfinity} tells us that $C^\infty(\Omega)$ is a Fr\'echet space, and in the following
+ theorem we show that $\mathscr{D}(K)$ is a closed subspace of this Fr\'echet space, and hence is a Fr\'echet space itself.
+ 
+ \begin{theorem}
+ If $\Omega$ is an open subset of $\mathbb{R}^n$ and $K$ is a compact subset of $\Omega$, then $\mathscr{D}(K)$ is a closed subspace of the Fr\'echet
+ space $C^\infty(\Omega)$.
+ \end{theorem}
+ \begin{proof}
+ Let $f_i \in \mathscr{D}(K)$, $f \in C^\infty(\Omega)$, and suppose that $f_i \to f$ in $C^\infty(\Omega)$.
+ If $x \in \Omega \setminus K$, then $f_i(x)=0$.
+ There is some $K_N$ that contains $K$, and the fact
+ that $f_i \to f$ gives us in particular that
+ \[
+|f(x)| = |0-f(x)|=|f_i(x)-f(x)| \leq  \sup_{y \in K_N}|f_i(y)-f(y)| \to 0,
+ \]
+hence $f(x)=0$. This shows that $\supp f \subseteq K$, and hence that $f \in \mathscr{D}(K)$.
+ \end{proof}
+ 
+
+Let $K_j$ be an exhaustion of $\Omega$ by compact sets. 
+Check that
+$\mathscr{D}(K_j)$ is a closed subspace of $\mathscr{D}(K_{j+1})$ and that the inclusion $\mathscr{D}(K_j) \hookrightarrow \mathscr{D}(K_{j+1})$ is a 
+homeomorphism onto its image. 
+ We define the following topology on the set $\mathscr{D}(\Omega)$. Let $\mathscr{B}$ be 
+the collection of all convex balanced 
+subsets $V$ of $\mathscr{D}(U)$ such that
+for all $j$, the set $V \cap \mathscr{D}(K_j)$ is open in $\mathscr{D}(K_j)$.
+  (To be {\em balanced} means that 
+$\alpha V \subseteq V$ if $|\alpha| \leq 1$.) We define $\mathscr{T}$ be the collection of all subsets $U$ of
+$\mathscr{D}(\Omega)$ such that $x_0 \in U$ implies that there is some $V \in \mathscr{B}$ for which
+$x_0+V \subseteq U$. We check that $\mathscr{T}$ is a topology on $\mathscr{D}(\Omega)$, which we call the {\em strict inductive
+limit topology}. One proves\footnote{John B. Conway, {\em A Course in Functional Analysis}, second ed., pp.~116--123, chap. IV, \S 5; this is presented without
+using the language of inductive limits in Walter Rudin, {\em Functional Analysis}, second ed., p.~152, Theorem 6.4.} that with this topology, $\mathscr{D}(\Omega)$ is a locally convex space. With the strict inductive limit topology, we call the locally convex space
+$\mathscr{D}(\Omega)$ the {\em strict inductive limit} of the Fr\'echet spaces
+$\mathscr{D}(K_1) \hookrightarrow \mathscr{D}(K_2) \hookrightarrow \cdots$, and write
+\[
+\mathscr{D}(\Omega)=\varinjlim \mathscr{D}(K_j).
+\]
+
+
+
+\end{document}

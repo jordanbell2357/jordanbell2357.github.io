@@ -1,0 +1,665 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?latexml searchpaths="/mnt/c/Users/Jordan/Documents/GitHub/LaTeX/historical/li"?>
+<?latexml class="article"?>
+<?latexml package="amsmath,amssymb"?>
+<?latexml RelaxNGSchema="LaTeXML"?>
+<document xmlns="http://dlmf.nist.gov/LaTeXML" class="ltx_authors_1line">
+  <resource src="LaTeXML.css" type="text/css"/>
+  <resource src="ltx-article.css" type="text/css"/>
+  <title>The logarithmic integral</title>
+  <creator role="author">
+    <personname>Jordan Bell</personname>
+  </creator>
+  <date role="creation">August 17, 2016</date>
+  <para xml:id="p1">
+    <p>It is an important mathematical object in the theory of
+prime numbers and its use in number theory seems to first arise with Gauss.
+But it is also
+one of the first transcendental functions one runs into after the
+trigonometric and logarithmic functions: having classified the
+trigonometric and logarithmic functions as known, we then take
+integrals involving them and want to know whether those can be
+expressed as a “closed expression” involving just them. If we take the
+integral of <Math mode="inline" tex="\log(t)" text="logarithm@(t)" xml:id="p1.m1">
+        <XMath>
+          <XMDual>
+            <XMApp>
+              <XMRef idref="p1.m1.1"/>
+              <XMRef idref="p1.m1.2"/>
+            </XMApp>
+            <XMApp>
+              <XMTok meaning="logarithm" role="OPFUNCTION" xml:id="p1.m1.1">log</XMTok>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                <XMTok font="italic" role="UNKNOWN" xml:id="p1.m1.2">t</XMTok>
+                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+              </XMWrap>
+            </XMApp>
+          </XMDual>
+        </XMath>
+      </Math> from 1 to <Math mode="inline" tex="x" text="x" xml:id="p1.m2">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math> we find that it is equal to
+<Math mode="inline" tex="x\log(x)-x" text="x * logarithm@(x) - x" xml:id="p1.m3">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="minus" role="ADDOP">-</XMTok>
+            <XMApp>
+              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+              <XMTok font="italic" role="UNKNOWN">x</XMTok>
+              <XMDual>
+                <XMApp>
+                  <XMRef idref="p1.m3.1"/>
+                  <XMRef idref="p1.m3.2"/>
+                </XMApp>
+                <XMApp>
+                  <XMTok meaning="logarithm" role="OPFUNCTION" xml:id="p1.m3.1">log</XMTok>
+                  <XMWrap>
+                    <XMTok role="OPEN" stretchy="false">(</XMTok>
+                    <XMTok font="italic" role="UNKNOWN" xml:id="p1.m3.2">x</XMTok>
+                    <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                  </XMWrap>
+                </XMApp>
+              </XMDual>
+            </XMApp>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math>,
+while if we take the integral of <Math mode="inline" tex="1/\log(t)" text="1 / logarithm@(t)" xml:id="p1.m4">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="divide" role="MULOP">/</XMTok>
+            <XMTok meaning="1" role="NUMBER">1</XMTok>
+            <XMDual>
+              <XMApp>
+                <XMRef idref="p1.m4.1"/>
+                <XMRef idref="p1.m4.2"/>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="logarithm" role="OPFUNCTION" xml:id="p1.m4.1">log</XMTok>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMTok font="italic" role="UNKNOWN" xml:id="p1.m4.2">t</XMTok>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMApp>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math> say from 0 to <Math mode="inline" tex="x" text="x" xml:id="p1.m5">
+        <XMath>
+          <XMTok font="italic" role="UNKNOWN">x</XMTok>
+        </XMath>
+      </Math> we are not
+able to find any expression for it, and we may be led to call it
+<Math mode="inline" tex="\mathrm{li}(x)" text="li * x" xml:id="p1.m6">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+            <XMTok role="UNKNOWN">li</XMTok>
+            <XMDual>
+              <XMRef idref="p1.m6.1"/>
+              <XMWrap>
+                <XMTok role="OPEN" stretchy="false">(</XMTok>
+                <XMTok font="italic" role="UNKNOWN" xml:id="p1.m6.1">x</XMTok>
+                <XMTok role="CLOSE" stretchy="false">)</XMTok>
+              </XMWrap>
+            </XMDual>
+          </XMApp>
+        </XMath>
+      </Math>.
+<!--  %**** li.tex Line 25 **** --></p>
+  </para>
+  <para xml:id="p2">
+    <p>There is no paper in the literature that gives the history of the introduction
+of the logarithmic integral to analysis. Indeed it’s well known that Gauss
+conjectured the prime number theorem which is stated in terms of the logarithmic
+integral, but what were the first publications in which the logarithmic integral
+appeared? What it a known object of analysis when Gauss made his conjecture?
+When I was reading on the history of the prime number theorem this is a
+question to which I couldn’t find a single paper that gave a reliable answer.</p>
+  </para>
+  <para xml:id="p3">
+    <p>The logarithmic integral is defined as</p>
+    <equation xml:id="S0.Ex1">
+      <Math mode="display" tex="\mathrm{li}(x)=\lim_{\epsilon\to 0}\Big{(}\int_{0}^{1-\epsilon}\frac{dt}{\log t%&#10;}+\int_{1+\epsilon}^{x}\frac{dt}{\log t}\Big{)}." text="li * x = (limit _ (epsilon to 0))@(((integral _ 0) ^ (1 - epsilon))@((d * t) / logarithm@(t)) + ((integral _ (1 + epsilon)) ^ x)@((d * t) / logarithm@(t)))" xml:id="S0.Ex1.m1">
+        <XMath>
+          <XMDual>
+            <XMRef idref="S0.Ex1.m1.2"/>
+            <XMWrap>
+              <XMApp xml:id="S0.Ex1.m1.2">
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok role="UNKNOWN">li</XMTok>
+                  <XMDual>
+                    <XMRef idref="S0.Ex1.m1.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex1.m1.1">x</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMApp scriptpos="mid">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                    <XMTok meaning="limit" role="LIMITOP" scriptpos="mid">lim</XMTok>
+                    <XMApp>
+                      <XMTok fontsize="70%" name="to" role="ARROW">→</XMTok>
+                      <XMTok font="italic" fontsize="70%" name="epsilon" role="UNKNOWN">ϵ</XMTok>
+                      <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMDual>
+                    <XMRef idref="S0.Ex1.m1.2.1"/>
+                    <XMWrap>
+                      <XMTok fontsize="160%" role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="S0.Ex1.m1.2.1">
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                              <XMTok mathstyle="display" meaning="integral" name="int" role="INTOP">∫</XMTok>
+                              <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+                              <XMTok font="italic" fontsize="70%" name="epsilon" role="UNKNOWN">ϵ</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">t</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="logarithm" role="OPFUNCTION">log</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">t</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                              <XMTok mathstyle="display" meaning="integral" name="int" role="INTOP">∫</XMTok>
+                              <XMApp>
+                                <XMTok fontsize="70%" meaning="plus" role="ADDOP">+</XMTok>
+                                <XMTok fontsize="70%" meaning="1" role="NUMBER">1</XMTok>
+                                <XMTok font="italic" fontsize="70%" name="epsilon" role="UNKNOWN">ϵ</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                            <XMApp>
+                              <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">d</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">t</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok meaning="logarithm" role="OPFUNCTION">log</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">t</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok fontsize="160%" role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMApp>
+              <XMTok role="PERIOD">.</XMTok>
+            </XMWrap>
+          </XMDual>
+        </XMath>
+      </Math>
+    </equation>
+  </para>
+  <para xml:id="p4">
+    <p>The exponential integral is defined as</p>
+    <equation xml:id="S0.Ex2">
+      <Math mode="display" tex="\mathrm{Ei}(x)=\lim_{\epsilon\to 0}\Big{(}\int_{-\infty}^{-\epsilon}\frac{e^{-%&#10;t}}{t}dt+\int_{\epsilon}^{x}\frac{e^{-t}}{t}dt\Big{)}." text="Ei * x = (limit _ (epsilon to 0))@(((integral _ (- infinity)) ^ (- epsilon))@((e ^ (- t) / t) * differential-d@(t)) + ((integral _ epsilon) ^ x)@((e ^ (- t) / t) * differential-d@(t)))" xml:id="S0.Ex2.m1">
+        <XMath>
+          <XMDual>
+            <XMRef idref="S0.Ex2.m1.2"/>
+            <XMWrap>
+              <XMApp xml:id="S0.Ex2.m1.2">
+                <XMTok meaning="equals" role="RELOP">=</XMTok>
+                <XMApp>
+                  <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                  <XMTok role="UNKNOWN">Ei</XMTok>
+                  <XMDual>
+                    <XMRef idref="S0.Ex2.m1.1"/>
+                    <XMWrap>
+                      <XMTok role="OPEN" stretchy="false">(</XMTok>
+                      <XMTok font="italic" role="UNKNOWN" xml:id="S0.Ex2.m1.1">x</XMTok>
+                      <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+                <XMApp>
+                  <XMApp scriptpos="mid">
+                    <XMTok role="SUBSCRIPTOP" scriptpos="mid1"/>
+                    <XMTok meaning="limit" role="LIMITOP" scriptpos="mid">lim</XMTok>
+                    <XMApp>
+                      <XMTok fontsize="70%" name="to" role="ARROW">→</XMTok>
+                      <XMTok font="italic" fontsize="70%" name="epsilon" role="UNKNOWN">ϵ</XMTok>
+                      <XMTok fontsize="70%" meaning="0" role="NUMBER">0</XMTok>
+                    </XMApp>
+                  </XMApp>
+                  <XMDual>
+                    <XMRef idref="S0.Ex2.m1.2.1"/>
+                    <XMWrap>
+                      <XMTok fontsize="160%" role="OPEN" stretchy="false">(</XMTok>
+                      <XMApp xml:id="S0.Ex2.m1.2.1">
+                        <XMTok meaning="plus" role="ADDOP">+</XMTok>
+                        <XMApp>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                              <XMTok mathstyle="display" meaning="integral" name="int" role="INTOP">∫</XMTok>
+                              <XMApp>
+                                <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                                <XMTok fontsize="70%" meaning="infinity" name="infty" role="ID">∞</XMTok>
+                              </XMApp>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                              <XMTok font="italic" fontsize="70%" name="epsilon" role="UNKNOWN">ϵ</XMTok>
+                            </XMApp>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                <XMTok font="italic" role="UNKNOWN">e</XMTok>
+                                <XMApp>
+                                  <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">t</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok font="italic" role="UNKNOWN">t</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok font="italic" meaning="differential-d" role="DIFFOP">d</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">t</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                        <XMApp>
+                          <XMApp>
+                            <XMTok role="SUPERSCRIPTOP" scriptpos="post1"/>
+                            <XMApp>
+                              <XMTok role="SUBSCRIPTOP" scriptpos="post1"/>
+                              <XMTok mathstyle="display" meaning="integral" name="int" role="INTOP">∫</XMTok>
+                              <XMTok font="italic" fontsize="70%" name="epsilon" role="UNKNOWN">ϵ</XMTok>
+                            </XMApp>
+                            <XMTok font="italic" fontsize="70%" role="UNKNOWN">x</XMTok>
+                          </XMApp>
+                          <XMApp>
+                            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                            <XMApp>
+                              <XMTok mathstyle="display" meaning="divide" role="FRACOP"/>
+                              <XMApp>
+                                <XMTok role="SUPERSCRIPTOP" scriptpos="post2"/>
+                                <XMTok font="italic" role="UNKNOWN">e</XMTok>
+                                <XMApp>
+                                  <XMTok fontsize="70%" meaning="minus" role="ADDOP">-</XMTok>
+                                  <XMTok font="italic" fontsize="70%" role="UNKNOWN">t</XMTok>
+                                </XMApp>
+                              </XMApp>
+                              <XMTok font="italic" role="UNKNOWN">t</XMTok>
+                            </XMApp>
+                            <XMApp>
+                              <XMTok font="italic" meaning="differential-d" role="DIFFOP">d</XMTok>
+                              <XMTok font="italic" role="UNKNOWN">t</XMTok>
+                            </XMApp>
+                          </XMApp>
+                        </XMApp>
+                      </XMApp>
+                      <XMTok fontsize="160%" role="CLOSE" stretchy="false">)</XMTok>
+                    </XMWrap>
+                  </XMDual>
+                </XMApp>
+              </XMApp>
+              <XMTok role="PERIOD">.</XMTok>
+            </XMWrap>
+          </XMDual>
+        </XMath>
+      </Math>
+    </equation>
+  </para>
+  <section inlist="toc" xml:id="S1">
+    <tags>
+      <tag>1</tag>
+      <tag role="refnum">1</tag>
+      <tag role="typerefnum">§1</tag>
+    </tags>
+    <title><tag close=" ">1</tag>Why is <Math mode="inline" tex="\sin x" text="sine@(x)" xml:id="S1.m1">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="sine" role="TRIGFUNCTION">sin</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> an elementary function and <Math mode="inline" tex="\mathrm{li}x" text="li * x" xml:id="S1.m2">
+        <XMath>
+          <XMApp>
+            <XMTok meaning="times" role="MULOP">⁢</XMTok>
+            <XMTok role="UNKNOWN">li</XMTok>
+            <XMTok font="italic" role="UNKNOWN">x</XMTok>
+          </XMApp>
+        </XMath>
+      </Math> isn’t?</title>
+    <para xml:id="S1.p1">
+      <p>N. N. Lebedev, <text font="italic">Special functions and their applications</text>, 1972.</p>
+    </para>
+<!--  %**** li.tex Line 50 **** -->    <para xml:id="S1.p2">
+      <p>Rüdiger Thiele, <text font="italic">What is a function?</text></p>
+    </para>
+    <para xml:id="S1.p3">
+      <p>D. T. Whiteside, <text font="italic">Patterns of Mathematical Thought
+in the later Seventeenth Century</text></p>
+    </para>
+    <para xml:id="S1.p4">
+      <p>Computation of values of functions in tables. History of mathematical tables.</p>
+    </para>
+    <para xml:id="S1.p5">
+      <p>Cajori on notations for functions.</p>
+    </para>
+    <para xml:id="S1.p6">
+      <p><text font="italic">Companion encyclopedia of the history and philosophy of the Mathematical Sciences</text>, volume 1, sect. 4.4.</p>
+    </para>
+    <para xml:id="S1.p7">
+      <p><text font="italic">Encyclopaedia Britannica</text>, Thomas Spencer Baynes, p. 39, “function sui generis”. I don’t remember which edition.</p>
+    </para>
+    <para xml:id="S1.p8">
+      <p>Cayley’s review of J. W. L. Glaisher’s <text font="italic">Tables of the Numerical Values of the
+Sine-integral, Cosine-integral, and Exponential Integral</text>, p. 262 in the
+Proceedings of the Royal Society of London, From June 17, 1869 to June 16, 1870,
+vol. XVIII, 1870.</p>
+    </para>
+    <para xml:id="S1.p9">
+      <p>Are some functions more transcendental than others? For example, is
+some unclassified power series more transcendental than the power
+series for <Math mode="inline" tex="\sin(x)" text="sine@(x)" xml:id="S1.p9.m1">
+          <XMath>
+            <XMDual>
+              <XMApp>
+                <XMRef idref="S1.p9.m1.1"/>
+                <XMRef idref="S1.p9.m1.2"/>
+              </XMApp>
+              <XMApp>
+                <XMTok meaning="sine" role="TRIGFUNCTION" xml:id="S1.p9.m1.1">sin</XMTok>
+                <XMWrap>
+                  <XMTok role="OPEN" stretchy="false">(</XMTok>
+                  <XMTok font="italic" role="UNKNOWN" xml:id="S1.p9.m1.2">x</XMTok>
+                  <XMTok role="CLOSE" stretchy="false">)</XMTok>
+                </XMWrap>
+              </XMApp>
+            </XMDual>
+          </XMath>
+        </Math>? What about Bessel functions?</p>
+    </para>
+  </section>
+  <section inlist="toc" xml:id="S2">
+    <tags>
+      <tag>2</tag>
+      <tag role="refnum">2</tag>
+      <tag role="typerefnum">§2</tag>
+    </tags>
+    <title><tag close=" ">2</tag>Euler and his contemporaries</title>
+    <para xml:id="S2.p1">
+      <p>E421, E464, E475, E500, E521, E583, E620, E621, E629, E662.</p>
+    </para>
+<!--  %**** li.tex Line 75 **** -->    <para xml:id="S2.p2">
+      <p>Institutiones calculi integralis</p>
+    </para>
+    <para xml:id="S2.p3">
+      <p>Pietro Ferroni,
+<text font="italic">Magnitudinum exponentialium Logarithmorum</text>,
+1782.</p>
+    </para>
+    <para xml:id="S2.p4">
+      <p>P. Mako S. J., 1768,
+Calculi differentialis et integralis institutio,
+p. 149</p>
+    </para>
+    <para xml:id="S2.p5">
+      <p>Lorenzo Mascheroni,
+<text font="italic">Adnotationes ad calculum integralem Euleri</text>,
+1790, pp. 42ff.</p>
+    </para>
+    <para xml:id="S2.p6">
+      <p>P. Mako, S.J.,
+<text font="italic">Calculi differentialis et integralis institutio</text>, 1768,
+p. 149.</p>
+    </para>
+    <para xml:id="S2.p7">
+      <p>Silvestre François Lacroix,
+<text font="italic">An elementary treatise on the differential and integral calculus</text>,
+(translated from the French),
+1816, p. 239.</p>
+    </para>
+    <para xml:id="S2.p8">
+      <p>Other books that may discuss the logarithmic integral:
+Disqvisitiones analyticae maxime ad calcvlvm integralem et doctrinam …
+<!--  %**** li.tex Line 100 **** -->By Johann Friedrich Pfaff,
+Principiorum calculi differentialis et integralis expositio elementaris
+By Simon Antoine J. L’Huilier,</p>
+    </para>
+  </section>
+  <section inlist="toc" xml:id="S3">
+    <tags>
+      <tag>3</tag>
+      <tag role="refnum">3</tag>
+      <tag role="typerefnum">§3</tag>
+    </tags>
+    <title><tag close=" ">3</tag>Gauss and the prime number theorem</title>
+    <para xml:id="S3.p1">
+      <p><text font="italic">Gauss Werke</text>, Band 8, pp. 90–92.</p>
+    </para>
+    <para xml:id="S3.p2">
+      <p>See Ingham, <text font="italic">The distribution of prime numbers</text></p>
+    </para>
+    <para xml:id="S3.p3">
+      <p>Charles James Hargreave,
+<text font="italic">Analytical Researches concerning Numbers</text>,
+The London, Edinburgh and Dublin Philosophical Magazine and Journal of Science,
+Third Series, Vol. 35, No. 233, July 1849,
+p. 45.</p>
+    </para>
+    <para xml:id="S3.p4">
+      <p>Factor table for the sixth million: containing the least factor of every … By James Glaisher, Introduction, p. 93</p>
+    </para>
+    <para xml:id="S3.p5">
+      <p>Augustus De Morgan,
+Library of Useful Knowledge,
+<text font="italic">The Differential and Integral Calculus</text>,
+Society for the Diffusion of Useful Knowledge, Baldwin and Cradock,
+London, 1842, p. 660.</p>
+    </para>
+    <para xml:id="S3.p6">
+      <p>Edmund Landau,
+<text font="italic">Der Integgrallogarithmus und die Zahlentheorie</text>,
+<!--  %**** li.tex Line 125 **** -->Rend. Circ. Matem. Palermo, t. XXIII, 1907, p. 126</p>
+    </para>
+  </section>
+  <section inlist="toc" xml:id="S4">
+    <tags>
+      <tag>4</tag>
+      <tag role="refnum">4</tag>
+      <tag role="typerefnum">§4</tag>
+    </tags>
+    <title><tag close=" ">4</tag>Later authors in the mid 19th century century</title>
+    <para xml:id="S4.p1">
+      <p>Charles Brooke,
+<text font="italic">A synopsis of the principal formulae and results of pure mathematics</text>,
+1829,
+p. 224. Cites LCD 427-37, Tr. L. 181-91, Hrsch, Int. Tab.
+LCD=Lacroix, Traitè du Calcul Differentiel,
+Tr. L.=Translation of Lacroix,
+Hirsch=Meyer Hirsch Integral tables.</p>
+    </para>
+    <para xml:id="S4.p2">
+      <p>T. G. Hall,
+<text font="italic">Treatise on the Differential and Integral Calculus</text>,
+1837, p. 338.</p>
+    </para>
+    <para xml:id="S4.p3">
+      <p><text font="italic">Auszüge aus einigen Briefen an der Professor Gilbert, aus mehreren Schreiben
+des Prof. Soldner zu München</text>,
+Annalen der Physik, Neue Folge, Neunter Band, 1811, (old series
+Neun und Dreissigster Band),
+p. 239.</p>
+    </para>
+    <para xml:id="S4.p4">
+      <p>Johann Georg von Soldner,
+<text font="italic">Theorie et tables d’une nouvelle fonction transcendante</text>,
+1809, Lindauer, München, p. 6.</p>
+    </para>
+<!--  %**** li.tex Line 150 **** -->    <para xml:id="S4.p5">
+      <p>Andreas von Ettingshausen, <text font="italic">Vorlesungen über die höhere Mathematik</text>,
+Erster Band,
+Carl Gerold, Wien, 1827, p. 365.</p>
+    </para>
+    <para xml:id="S4.p6">
+      <p>J. J. Littrow,
+<text font="italic">Anleitung zur höheren Mathematik</text>,
+Carl Gerold, Wien, 1836, p. 301.</p>
+    </para>
+    <para xml:id="S4.p7">
+      <p>R. Beez,
+<text font="italic">Beiträge zur Theorie des Integrallogarithmus</text>,
+pp. 419–441, Archiv der Mathematik und Physik, Neunzehnter Theil, 1852.</p>
+    </para>
+    <para xml:id="S4.p8">
+      <p>Rudolf Engelmann (ed.),
+<text font="italic">Abhandlungen von Friedrich Wilhelm Bessel</text>,
+Zweiter Band, Wilhelm Engelmann, Leipzig, 1876.
+Several contributions, starting p. 326.</p>
+    </para>
+    <para xml:id="S4.p9">
+      <p>Johann August Grunert, <text font="italic">Mathematisches Wörterbuch oder Erklärung der
+Begriffe,
+Lehrstätze, Aufgaben und Methoden der Mathematik</text>, Erste Abtheilung,
+Fünfter Theil, Erster Band, E. B. Schwickert, Leipzig, 1831, p. 138.</p>
+    </para>
+    <para xml:id="S4.p10">
+      <p>Johann August Grunert,
+<text font="italic">Elemente der Differential- und Integralrechnung zum Gebrauche
+bei Vorlesungen</text>, Zweiter Theil, E. B. Schwickert, Leipzig, 1837,
+<!--  %**** li.tex Line 175 **** -->p. 126</p>
+    </para>
+    <para xml:id="S4.p11">
+      <p>Oskar Schlömilch, <text font="italic">Beiträge zur Theorie bestimmter Integrale</text>,
+Friedrich Frommann, Jena, 1843, p. 70.</p>
+    </para>
+    <para xml:id="S4.p12">
+      <p>Oskar Schlömilch, <text font="italic">Zur Theorie des Integrallogarithmus</text>,
+Archiv der Mathematik und Physik,
+Neunter Theil, 1847, p. 5 and 307.</p>
+    </para>
+    <para xml:id="S4.p13">
+      <p>Hardy, <text font="italic">Divergent series</text>, p. 40.</p>
+    </para>
+    <para xml:id="S4.p14">
+      <p>Ferdinand Minding (ed.), <text font="italic">Handbuch der differential- und Integralrechnung
+und ihrer Anwendungen auf Geometrie zunächst zum Gebrauche in Vorlesungen</text>,
+F. Dümmler, Berlin, 1836, p. 100.</p>
+    </para>
+    <para xml:id="S4.p15">
+      <p>Car. Ant. Bretschneider, <text font="italic">Theoriae logarithmi integralis lineamenta nova</text>,
+p. 257,
+Journal für die reine und angewandte Mathematik,
+Siebenzehnter Band, 1837.</p>
+    </para>
+  </section>
+  <section inlist="toc" xml:id="S5">
+    <tags>
+      <tag>5</tag>
+      <tag role="refnum">5</tag>
+      <tag role="typerefnum">§5</tag>
+    </tags>
+    <title><tag close=" ">5</tag>Liouville’s theorem on integration in terms of elementary functions</title>
+    <para xml:id="S5.p1">
+      <p>Liouville’s theorem in differential algebra.</p>
+    </para>
+    <para xml:id="S5.p2">
+      <p>Manuel Bronstein, <text font="italic">Symbolic integration I: transcendental functions</text>.</p>
+    </para>
+<!--  %**** li.tex Line 200 **** -->    <para xml:id="S5.p3">
+      <p>Brian Conrad, <text font="italic">Impossibility theorems for elementary integration</text></p>
+    </para>
+  </section>
+  <section inlist="toc" xml:id="S6">
+    <tags>
+      <tag>6</tag>
+      <tag role="refnum">6</tag>
+      <tag role="typerefnum">§6</tag>
+    </tags>
+    <title><tag close=" ">6</tag>Later history</title>
+    <para xml:id="S6.p1">
+      <p>Niels Nielsen, <text font="italic">Theorie des Integrallogarithmus und verwandter
+Transzendenten</text>, B. G. Teubner, Leipzig, 1906.</p>
+    </para>
+    <para xml:id="S6.p2">
+      <p>Detlef Laugwitz, <text font="italic">Bernhard Riemann 1826-1866: turning points in the
+conception of mathematics</text>.</p>
+    </para>
+    <para xml:id="S6.p3">
+      <p>Jos. E. Hofmann, <text font="italic">Gesichte der Mathematik</text>, p. 59.</p>
+    </para>
+    <para xml:id="S6.p4">
+      <p>Friedrich L. Bauer, <text font="italic">Why Legendre made a wrong guess about <Math mode="inline" tex="\pi(x)" text="pi * x" xml:id="S6.p4.m1">
+            <XMath>
+              <XMApp>
+                <XMTok meaning="times" role="MULOP">⁢</XMTok>
+                <XMTok name="pi" role="UNKNOWN">π</XMTok>
+                <XMDual>
+                  <XMRef idref="S6.p4.m1.1"/>
+                  <XMWrap>
+                    <XMTok font="upright" role="OPEN" stretchy="false">(</XMTok>
+                    <XMTok role="UNKNOWN" xml:id="S6.p4.m1.1">x</XMTok>
+                    <XMTok font="upright" role="CLOSE" stretchy="false">)</XMTok>
+                  </XMWrap>
+                </XMDual>
+              </XMApp>
+            </XMath>
+          </Math>, and
+how Laguerre’s continued fraction for the logarithmic integral improved it</text>,
+Math. Intelligencer, volume 25, number 3, 2003, pp. 7-11.</p>
+    </para>
+    <para xml:id="S6.p5">
+      <p>Julian Havil, <text font="italic">Gamma: exploring Euler’s constant</text>, p. 106.</p>
+    </para>
+    <para xml:id="S6.p6">
+      <p>Bromwich,
+<text font="italic">An introduction to the theory of infinite series</text>
+p. 334, Ch. XXI, sect. 109.</p>
+    </para>
+    <para xml:id="S6.p7">
+      <p>Whittaker and Watson, <text font="italic">A course of modern analysis</text>, p. 341.</p>
+    </para>
+    <para xml:id="S6.p8">
+      <p>G. H. Hardy,
+<text font="italic">The integration of functions of a single variable</text>,
+<!--  %**** li.tex Line 225 **** -->2nd ed., Cambridge University Press, 1928.</p>
+    </para>
+  </section>
+</document>

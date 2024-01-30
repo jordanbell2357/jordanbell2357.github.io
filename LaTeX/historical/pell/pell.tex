@@ -1,0 +1,1161 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,subfig,mathrsfs,amsthm,enumitem,xfrac,flexisym}
+\newcommand{\textoverline}[1]{$\overline{\mbox{#1}}$}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Pell's equation and side and diagonal numbers}
+\author{Jordan Bell}
+\date{October 30, 2016}
+\maketitle
+
+
+\section{Side and diagonal numbers}
+Heath \cite[pp.~117--118]{diophantus}:
+\[
+a_1=1, \qquad d_1=1.
+\]
+\[
+a_n=a_{n-1}+d_{n-1},\qquad d_n=2a_{n+1}+d_{n+1}.
+\]
+\begin{align*}
+d_n^2-2a_n^2&=4a_{n-1}^2+4a_{n-1}d_{n-1}+d_{n-1}^2
+-2(a_{n-1}^2+2a_{n-1}d_{n-1}+d_{n-1}^2)\\
+&=4a_{n+1}^2+4a_{n+1}d_{n+1}+d_{n+1}^2-2a_{n-1}^2
+-4a_{n-1}d_{n-1}-2d_{n-1}^2\\
+&=2a_{n-1}^2-d_{n-1}^2\\
+&=-(d_{n-1}^2-2a_{n-1}^2).
+\end{align*}
+As $d_1^2-2a_1^2=-1$,
+\[
+d_n^2-2a_n^2 = (-1)^n.
+\]
+
+\[
+\begin{pmatrix}a_n\\d_n\end{pmatrix}
+=\begin{pmatrix}1&1\\2&1\end{pmatrix}
+\begin{pmatrix}
+a_{n-1}\\
+d_{n-1}
+\end{pmatrix}
+=A\begin{pmatrix}
+a_{n-1}\\
+d_{n-1}
+\end{pmatrix}.
+\]
+\[
+\begin{pmatrix}a_{n+1}\\d_{n+1}\end{pmatrix} = A^n \begin{pmatrix}1\\1\end{pmatrix}.
+\]
+
+$A=PDP^{-1}$.
+\[
+D=\begin{pmatrix}1-\sqrt{2}&0\\0&1+\sqrt{2}\end{pmatrix},
+\quad 
+P=\begin{pmatrix}-\frac{1}{\sqrt{2}}&\frac{1}{\sqrt{2}}\\
+1&1\end{pmatrix},
+\qquad 
+P^{-1} = \begin{pmatrix}-\frac{1}{\sqrt{2}}&\frac{1}{2}\\
+\frac{1}{\sqrt{2}}&\frac{1}{2}
+\end{pmatrix}.
+\]
+\[
+A^n = \begin{pmatrix}\frac{(1-\sqrt{2})^n}{2}+\frac{(1+\sqrt{2})^n}{2}&-\frac{(1-\sqrt{2})^n}{2\sqrt{2}}
++\frac{(1+\sqrt{2})^n}{2\sqrt{2}}\\
+-\frac{(1-\sqrt{2})^n}{\sqrt{2}}+\frac{(1+\sqrt{2})^n}{\sqrt{2}}&
+\frac{(1-\sqrt{2})^n}{2}+\frac{(1+\sqrt{2})^n}{2}.
+\end{pmatrix}.
+\]
+\[
+\begin{pmatrix}
+a_{n+1}\\
+d_{n+1}
+\end{pmatrix}
+=\begin{pmatrix}
+\frac{1}{2} \left(1-\sqrt{2}\right)^n-\frac{\left(1-\sqrt{2}\right)^n}{2 \sqrt{2}}+\frac{1}{2} \left(1+\sqrt{2}\right)^n+\frac{\left(1+\sqrt{2}\right)^n}{2 \sqrt{2}}\\
+\frac{1}{2} \left(1-\sqrt{2}\right)^n-\frac{\left(1-\sqrt{2}\right)^n}{\sqrt{2}}+\frac{1}{2} \left(1+\sqrt{2}\right)^n+\frac{\left(1+\sqrt{2}\right)^n}{\sqrt{2}}
+\end{pmatrix}.
+\]
+Thus
+\[
+\begin{pmatrix}a_2\\d_2\end{pmatrix}
+=\begin{pmatrix}
+2\\3
+\end{pmatrix},
+\qquad
+\begin{pmatrix}a_3\\d_3\end{pmatrix}
+=\begin{pmatrix}
+5\\7
+\end{pmatrix},
+\qquad
+\begin{pmatrix}a_4\\d_4\end{pmatrix}
+=\begin{pmatrix}
+12\\17
+\end{pmatrix},
+\qquad
+\begin{pmatrix}a_5\\d_5\end{pmatrix}
+=\begin{pmatrix}
+29\\41
+\end{pmatrix}.
+\]
+
+
+
+\section{Diophantus}
+If 
+$x^2-Ay^2=1$ and 
+$y=m(x+1)$ for rational $m$, then
+$y^2=m^2(x^2+2x+1)$, then
+$x^2-Am^2(x^2+2x+1)=1$, then
+$(Am^2-1)x^2+2Am^2x+Am^2+1=0$.
+ Write $(x+1)(px+q)=(Am^2-1)x^2+2Am^2x+Am^2+1$. Then
+ $px^2+(p+q)x+q = (Am^2-1)x^2+2Am^2x+Am^2+1$.
+ Then $p=Am^2-1$, $q=Am^2+1$,
+ and so $p+q=Am^2-1+Am^2+1=2Am^2$. 
+ Thus if $x \neq -1$ then $px+q=0$ and hence
+ $(Am^2-1)x+Am^2+1=0$. Hence
+ $(Am^2-1)x = -(Am^2+1)$ and so
+ $x= - \frac{Am^2+1}{Am^2-1}$. Thus
+ \[
+ y=m(x+1) = m\left(- \frac{Am^2+1}{Am^2-1}+1\right)
+ \frac{m}{Am^2-1}(-Am^2-1+Am^2-1)
+ =\frac{-2m}{Am^2-1}.
+\]
+Therefore for rational $m$, 
+\[
+x=- \frac{Am^2+1}{Am^2-1},\qquad y = \frac{-2m}{Am^2-1}
+\]
+satisfy $x^2-Ay^2=1$.
+cf. Heath \cite[pp.~68--69]{diophantus},
+Nesselmann \cite[p.~331]{nesselmann}.
+
+Diophantus V.11: $30x^2+1=y^2$.
+Say $y=5x+1$. $y^2=25x^2+10x+1$. Then
+$5x^2-10x=0$, so $x=0$ or $5x-10=0$, i.e. $x=0$ or $x=2$.
+Hence $x=0,y=1$ and $x=2,y=11$ satisfy $30x^2+1=y^2$.
+
+Diophantus V.14 \cite[pp.~211--212]{diophantus}.
+$34y^2+1=x^2$.
+Say $x=6y-1$. $x^2=36y^2-12y+1$. Then
+$2y^2-12y=0$, i.e. $y(y-6)=0$ so $y=0$ or $y=6$. Then
+$x=-1, y=0$ and $x=35, y=6$ satisfy $34y^2+1=x^2$.
+
+
+
+
+
+\section{Fermat}
+Fermat, February 1657 \cite[p.~29]{struik}:
+
+\begin{quote}
+Given any number not a square, then there are an infinite number of squares
+which, when multiplied by the given number, make a square when unity is
+added.
+
+Example. Given 3, a nonsquare number; this number multiplied by the
+square number 1, and 1 being added, produces 4, which is a square.
+
+Moreover, the same 3 multiplied by the square 16, with 1 added makes 49,
+which is a square.
+
+And instead of 1 and 16, an infinite number of squares may be found showing
+the same property; I demand, however, a general rule, any number being given
+which is not a square.
+
+It is sought, for example, to find a square which when multiplied into 149,
+109, 433, etc., becomes a square when unity is added.
+\end{quote}
+
+
+
+
+
+\section{Wallis}
+Wallis \cite[p.~546]{wallisII}.
+
+Stedall \cite{stedall}
+
+
+
+\section{Brouncker}
+Weil \cite[pp.~92--99]{weil}.
+
+
+
+
+
+
+\section{Ozanam}
+Ozanam \cite[pp.~503--516]{ozanam}, Liv. III, Quest. XXVI.
+
+
+
+\section{Continued fractions}
+Let
+\[
+[a_0,a_1] = a_0 + \frac{1}{a_1}
+\]
+and
+\[
+[a_0,\ldots,a_{n-1},a_n] = \left[a_0,\ldots,a_{n-2},a_{n-1}+\frac{1}{a_n}\right].
+\]
+
+Then for $1 \leq m < n$,
+\[
+[a_0,\ldots,a_n] = [a_0,\ldots,a_{m-1},[a_m,\ldots,a_n]].
+\]
+
+Define
+\[
+p_0=a_0,\qquad q_0=1,
+\qquad p_1=a_1a_0+1,\qquad q_1=a_1
+\]
+and for $n \geq 2$,
+\[
+p_n=a_np_{n-1}+p_{n-2},\qquad q_n=a_nq_{n-1}+q_{n-2}.
+\]
+
+Hardy and Wright \cite[p.~130, Theorem 149]{HW}. For $n \geq 0$,
+\[
+[a_0,\ldots,a_n] = \frac{p_n}{q_n}.
+\]
+
+For $n \geq 1$,
+\[
+p_n q_{n-1} - p_{n-1}q_n = (-1)^{n-1}.
+\]
+For $n \geq 2$,
+\[
+p_nq_{n-2} - p_{n-2}q_n = (-1)^n a_n.
+\]
+
+For $n \geq 0$ let
+\[
+a_n' = [a_n,a_{n+1},\ldots].
+\]
+
+For $x = [a_0,a_1,\ldots]$,
+\[
+x = \frac{a_n'p_{n-1}+p_{n-2}}{a_n'q_{n-1}+q_{n-2}},\qquad n \geq 2.
+\]
+
+Hardy and Wright \cite[p.~144, Theorem 176]{HW}.
+A continued fraction $[a_0,a_1,\ldots]$ is said to be \textbf{periodic} if there is some
+$L \geq 0$ and some $k \geq 1$ such that 
+$a_{l+k}=a_l$ for all $l \geq L$.
+
+\begin{theorem}
+If $x=[a_0,a_1,\ldots]$ is a periodic continued fraction, then $x$ is a quadratic surd.
+\end{theorem}
+\begin{proof}
+Let
+\[
+\overline{a_L,\ldots,a_{L+k-1}} = [a_L,a_{L+1},\ldots] = a_L'.
+\]
+Thus
+\begin{align*}
+[a_0,\ldots,a_{L-1},a_L,a_{L+1},\ldots]
+&=[a_0,\ldots,a_{L-1},a_L']\\
+&=[a_0,\ldots,a_{L-1},\overline{a_L,\ldots,a_{L+k-1}}].
+\end{align*}
+As $a_{L+k}=a_L,a_{L+k+1}=a_{L+1},\ldots$, 
+\begin{align*}
+a_L'& = [a_L,a_{L+1},\ldots]\\
+&=  [a_L,a_{L+1},\ldots,a_{L+k-1},a_L,a_{L+1},\ldots]\\
+&=[a_L,a_{L+1},\ldots,a_{L+k-1},a_L'].
+\end{align*}
+Let
+\[
+\frac{p'}{q'} = [a_L,a_{L+1},\ldots,a_{L+k-1}],
+\qquad 
+\frac{p''}{q''} = [a_L,a_{L+1},\ldots,a_{L+k-2}].
+\]
+For $t=[a_L,a_{L+1},\ldots,a_{L+k-1},a_L']$, 
+\[
+t = \frac{a_L'p'+p''}{a_L'q'+q''} = \frac{p't+p''}{q't+q''}.
+\]
+Hence $q't^2+q''t=p't+p''$, so $q't^2 + (q''-p')t - p''=0$.
+For $x=[a_0,a_1,\ldots]$,
+\[
+x = \frac{a_L'p_{L-1}+p_{L-2}}{a_L'q_{L-1}+q_{L-2}}.
+\]
+Then
+\[
+a_L' = \frac{p_{L-2}-q_{L-2}x}{q_{L-1}x-p_{L-1}}.
+\]
+Thus, with $t=a_L'$,
+\[
+q' \left(\frac{p_{L-2}-q_{L-2}x}{q_{L-1}x-p_{L-1}}\right)^2 + (q''-p') \frac{p_{L-2}-q_{L-2}x}{q_{L-1}x-p_{L-1}}
+-p''=0.
+\]
+Then
+\[
+q'(p_{L-2}-q_{L-2}x)^2 + (q''-p') (p_{L-2}-q_{L-2}x)(q_{L-1}x-p_{L-1})
+-p''(q_{L-1}x-p_{L-1})^2=0.
+\]
+Therefore there are integers $a,b,c$ such that
+\[
+ax^2+bx+c=0.
+\]
+This means that $x$ is a quadratic surd, as $x$ is irrational.
+\end{proof}
+
+
+\textbf{Example.} Say $x=[3,2,7,4,\overline{5,1,12}]$.
+$L=4, k=3$. 
+\[
+\frac{p'}{q'} = [5,1,12] = \frac{77}{13},
+\qquad \frac{p''}{q''} = [5,1] = \frac{6}{1}.
+\]
+\[
+\frac{p_{L-1}}{q_{L-1}}=\frac{p_3}{q_3} =[3,2,7,4] =\frac{215}{62},
+\qquad 
+\frac{p_{L-2}}{q_{L-2}} = \frac{p_2}{q_2} = [3,2,7] = \frac{52}{15}.
+\]
+Then
+\begin{align*}
+&q'(p_{L-2}-q_{L-2}x)^2 + (q''-p') (p_{L-2}-q_{L-2}x)(q_{L-1}x-p_{L-1})
+-p''(q_{L-1}x-p_{L-1})^2\\
+=&13(52 - 15x)^2+(1-77)(52-15x)(62x-215)-6(62x-215)^2\\
+=&50541x^2-350444x+607482.
+\end{align*}
+Hence $x=[3,2,7,4,\overline{5,1,12}]$ satisfies
+\[
+50541x^2-350444x+607482=0.
+\]
+In fact, 
+\[
+x=\frac{175222+\sqrt{1522}}{50541}.
+\]
+
+
+
+Hardy and Wright \cite[p.~144, Theorem 177]{HW}.
+
+\begin{theorem}
+If $x$ is a quadratic surd, then the continued fraction of $x$ is periodic.
+\end{theorem}
+
+
+
+\textbf{Example.} Say $x^2=218$. $14^2=196$. 
+\[
+\sqrt{218}=14+\sqrt{218}-14
+=14+\cfrac{1}{\cfrac{1}{\sqrt{218}-14}}.
+\]
+\[
+(\sqrt{218}-14)(\sqrt{218}+14) = 218 - 196=22,
+\qquad
+\frac{1}{\sqrt{218}-14} = \frac{\sqrt{218}+14}{22}.
+\]
+We do not need to compute the decimal expansion of $\sqrt{218}$; we merely
+have to calculate $\lfloor \frac{\sqrt{218}+14}{22}\rfloor$. 
+Using $14<\sqrt{218}<15$, 
+\[
+\frac{1}{\sqrt{218}-14} = 1 + \frac{\sqrt{218}+14}{22} - 1
+=1 + \frac{\sqrt{218}-8}{22}.
+\]
+Then
+\[
+\sqrt{218} = 
+14+\cfrac{1}{1 + \cfrac{\sqrt{218}-8}{22}}
+=
+14+\cfrac{1}{1 + \cfrac{1}{\cfrac{22}{\sqrt{218}-8}}}
+\]
+\[
+(\sqrt{218}-8)(\sqrt{218}+8) = 218 - 64 = 154,
+\qquad \frac{1}{\sqrt{218}-8} = \frac{\sqrt{218}+8}{154}.
+\]
+Then 
+\[
+\frac{22}{\sqrt{218}-8} = \frac{22\sqrt{218}+176}{154}.
+\]
+Using that $14<\sqrt{218}<15$,
+\[
+\frac{22}{\sqrt{218}-8}  = 3+  \frac{22\sqrt{218}+176}{154} -3
+=3 + \cfrac{22\sqrt{218}-286}{154}.
+\]
+Then
+\[
+\sqrt{218}
+=14+\cfrac{1}{1 + \cfrac{1}{3 + \cfrac{22\sqrt{218}-286}{154}}}
+=14+\cfrac{1}{1 + \cfrac{1}{3 + \cfrac{1}{\cfrac{154}{22\sqrt{218}-286}}}}.
+\]
+\[
+(22\sqrt{218}-286)(22\sqrt{218}+286)
+=22^2 \cdot 218 - 286^2 = 23716,
+\]
+\[
+\cfrac{1}{22\sqrt{218}-286} = \frac{22\sqrt{218}+286}{23716}.
+\]
+\[
+\cfrac{154}{22\sqrt{218}-286}
+=\frac{3388\sqrt{218}+44044}{23716}.
+\]
+Using $14<\sqrt{218}<15$,
+\[
+\cfrac{154}{22\sqrt{218}-286} = 3 + \frac{3388\sqrt{218}+44044}{23716} - 3
+=3+\cfrac{3388\sqrt{218}-27104}{23716}.
+\]
+Then
+\[
+\sqrt{218}
+=
+14+\cfrac{1}{1 + \cfrac{1}{3 + \cfrac{1}{3+\cfrac{3388\sqrt{218}-27104}{23716}}}}
+=
+14+\cfrac{1}{1 + \cfrac{1}{3 + \cfrac{1}{3+\cfrac{1}{\cfrac{23716}{3388\sqrt{218}-27104}}}}}.
+\]
+\[
+(3388\sqrt{218}-27104)(3388\sqrt{218}+27104)
+=3388^2 \cdot 218 - 27104^2
+=1767695776,
+\]
+\[
+\cfrac{1}{3388\sqrt{218}-27104} = \cfrac{3388\sqrt{218}+27104}{1767695776}.
+\]
+\[
+\cfrac{23716}{3388\sqrt{218}-27104}= 23716 \cdot \cfrac{3388\sqrt{218}+27104}{1767695776}.
+\]
+Using $14<\sqrt{218}<15$,
+\begin{align*}
+\cfrac{23716}{3388\sqrt{218}-27104} &= 1 +23716 \cdot \cfrac{3388\sqrt{218}+27104}{1767695776} - 1\\
+&=1
++\cfrac{80349808 \sqrt{218} -1124897312}{1767695776}.
+\end{align*}
+Then
+\begin{align*}
+\sqrt{218} &= 
+14+\cfrac{1}{1 + \cfrac{1}{3 + \cfrac{1}{3+\cfrac{1}{1
++\cfrac{80349808 \sqrt{218} -1124897312}{1767695776}}}}}\\
+&=14+\cfrac{1}{1 + \cfrac{1}{3 + \cfrac{1}{3+\cfrac{1}{1
++\cfrac{1}{\cfrac{1767695776}{80349808 \sqrt{218} -1124897312}}}}}}.
+\end{align*}
+\[
+(80349808 \sqrt{218} -1124897312)(80349808 \sqrt{218} +1124897312)=142034016204011008.
+\]
+\[
+\cfrac{1767695776}{80349808 \sqrt{218} -1124897312} = 1767695776 \cdot \cfrac{80349808 \sqrt{218} +1124897312}{142034016204011008}.
+\]
+Using $14<\sqrt{218}<15$, the floor of the above quantity is 28. Hence
+\begin{align*}
+\cfrac{1767695776}{80349808 \sqrt{218} -1124897312}&=28 + \cfrac{142034016204011008 \sqrt{218} -1988476226856154112}{142034016204011008}\\
+&=28+\sqrt{218}-14.
+\end{align*}
+Then
+\begin{align*}
+\sqrt{218}&=14+\cfrac{1}{1 + \cfrac{1}{3 + \cfrac{1}{3+\cfrac{1}{1
++\cfrac{1}{28+\sqrt{218}-14}}}}}
+\end{align*}
+Thus for $x=\sqrt{218}$,
+\[
+x-14 = \cfrac{1}{1 + \cfrac{1}{3 + \cfrac{1}{3+\cfrac{1}{1
++\cfrac{1}{28+x-14}}}}}.
+\]
+Thus for $t=x-14$,
+\[
+t = \cfrac{1}{1 + \cfrac{1}{3 + \cfrac{1}{3+\cfrac{1}{1
++\cfrac{1}{28+t}}}}}.
+\]
+Therefore $t=[0,\overline{1,3,3,1,28}]$.
+Hence $x=14+t=[14,\overline{1,3,3,1,28}]$:
+\[
+\sqrt{218} = [14,\overline{1,3,3,1,28}].
+\]
+
+
+
+
+\section{Euler}
+Euler, {\em Algebra} \cite{algebra}, Part II, Chapter VII.
+
+
+
+\section{Lagrange}
+Konen \cite[pp.~75--77]{konen}.
+
+
+
+
+
+
+
+\section{Chakravala}
+Hankel \cite[pp.~200--203]{hankel}
+
+Strachey \cite[pp.~36--53]{strachey}. Dickson \cite[pp.~349--350]{dicksonII}.
+
+Colebrooke \cite[pp.~170--184]{colebrooke}
+
+Colebrooke \cite[pp.~363--372]{colebrooke}
+
+Datta and Singh \cite[II, pp.~93--99]{datta}
+
+Datta and Singh \cite[II, pp.~146--161]{datta}
+
+Datta and Singh \cite[II, pp.~161--172]{datta}
+
+Suppose that $p_n,q_n$ are relatively prime and
+\[
+Aq_n^2+s_n=p_n^2.
+\]
+If $d$ is a common factor of $q_n$ and $s_n$ then $d \mid p_n^2$, so
+$d$ is a common factor of $p_n^2$ and $q_n^2$,
+which implies that $p_n$ and $q_n$ have a common factor, a contradiction.
+Therefore $q_n$ and $s_n$ are relatively prime. 
+Because $q_n$ and $s_n$ are relatively prime, 
+by the Kuttaka algorithm
+there are some $\rho_n,\rho_n'$ satisfying 
+$-q_n \rho_n + s_n \rho_n' = p_n$.
+For $r_n=\rho_n+k_n s_n$, $r_n'=\rho_n'+k_nq_n$,
+\begin{align*}
+-q_nr_n+s_nr_n'&=-q_n(\rho_n+k_ns_n)+s_n(\rho_n'+k_nq_n)\\
+&= -q_n\rho_n-k_nq_ns_n+s_n\rho_n'+k_nq_ns_n\\
+&=-q_n\rho_n+s_n\rho_n'\\
+&=p_n.
+\end{align*}
+Take
+$r_n<\sqrt{A}<r_n+|s_n|$.
+$r_n' = \frac{p_n+q_nr_n}{s_n}$.
+Let
+\[
+q_{n+1}=r_n', \qquad p_{n+1}=\frac{p_nq_{n+1}-1}{q_n},
+\qquad
+s_{n+1}=p_{n+1}^2-Aq_{n+1}^2.
+\] 
+
+
+
+
+
+
+
+\textbf{Example.}
+$69y^2+1=x^2$.
+$A=69$. 
+
+$Aq_0^2+s_0=p_0^2$: $p_0=8, q_0=1, s_0=-5$. 
+
+$p_0+q_0\rho_0=\rho_0's_0$ is equivalent to
+$8+\rho_0=-5\rho_0'$. It is satisfied by 
+$\rho_0=-8, \rho_0'=0$.
+Take
+$r_0=-8-5k_0= 7$.
+$r_0'= \frac{p_0+q_0r_0}{s_0}
+=\frac{8 +1 \cdot 7}{-5} = -3$. 
+
+$q_1=-3$. 
+\[
+p_1 =\frac{p_0q_1-1}{q_0} = \frac{8 \cdot -3 - 1}{1} = -25.
+\]
+\[
+s_1=p_1^2 - Aq_1^2 = 4.
+\] 
+
+$p_1+q_1\rho_1=\rho_1's_1$ is equivalent to
+$-25 -3\rho_1 = 4\rho_1'$. This is satisfied
+by $\rho_1=1, \rho_1'=-7$.
+Take $r_1 =1+4k_1 = 5$.
+Then
+$r_1'=\frac{p_1+q_1r_1}{s_1} = \frac{-25 -3 \cdot 5}{4} = -10$. 
+
+$q_2=-10$.
+\[
+p_2 = \frac{p_1q_2-1}{q_1} = \frac{-25 \cdot -10 - 1}{-3} = 
+-83.
+\]
+\[
+s_2 = p_2^2-Aq_2^2 = -11.
+\]
+
+$p_2+q_2\rho_2=\rho_2's_2$ is equivalent to
+$-83 -10\rho_2 = -11\rho_2'$. This is satisfied by
+$\rho_2=6, \rho_2'=13$. 
+Take $r_2=6-11k_2 = 6$.
+Then
+$r_2'=\frac{p_2+q_2r_2}{s_2}=\frac{-83-10\cdot 6}{-11}=13$.
+
+$q_3=13$. 
+\[
+p_3 = \frac{p_2q_3-1}{q_2} = \frac{-83 \cdot 13 - 1}{-10} = 108.
+\]
+\[
+s_3 = p_3^2-Aq_3^2 = 3.
+\]
+
+$p_3+q_3\rho_3=\rho_3's_3$ is equivalent to
+$108+13\rho_3=3\rho_3'$. This is satisfied by 
+$\rho_3=0, \rho_3'=36$.
+Take $r_3=36+3k_3=6$. 
+Then $r_3'=\frac{p_3+q_3r_3}{s_3} = \frac{108+13\cdot 6}{3} = 62$.
+
+$q_4=62$.
+\[
+p_4 = \frac{p_3q_4-1}{q_3} = \frac{108 \cdot 62 - 1}{13} = 515.
+\]
+\[
+s_4 = p_4^2-Aq_4^2 = -11.
+\]
+
+$p_4+q_4\rho_4=\rho_4's_4$ is equivalent to
+$515 + 62\rho_4 = -11\rho_4'$.
+This is satisfied by
+$\rho_4= 5, \rho_4'=-75$. 
+Take $r_4 = 5  - 11k_4= 5$. 
+Then $r_4' = \frac{p_4+q_4r_4}{s_4} = \frac{515 + 62 \cdot 5}{-11} = -75$.
+
+$q_5=-75$.
+\[
+p_5 = \frac{p_4q_5-1}{q_4} = \frac{515\cdot -75 - 1}{62} = -623.
+\]
+\[
+s_5 = p_5^2-Aq_5^2 = 4.
+\]
+
+$p_5+q_5\rho_5=\rho_5's_5$ is equivalent to
+$-623 -75\rho_5 = 4\rho_5'$.
+This is satisfied by $\rho_5=3, \rho_5'=-212$. 
+Take $r_5 = 3 + 4k_5 = 7$.
+Then $r_5' = \frac{p_5+q_5r_5}{s_5} = \frac{-623 - 75 \cdot 7}{4}
+=-287$. 
+
+$q_6=-287$.
+\[
+p_6 = \frac{p_5q_6-1}{q_5} = \frac{-623 \cdot -287-1}{-75} = -2384.
+\]
+\[
+s_6 = p_6^2-Aq_6^2 = -5.
+\]
+
+$p_6+q_6\rho_6=\rho_6's_6$ is equivalent to
+$-2384 -287 \rho_6 = -5\rho_6'$. 
+This is satisfied by $\rho_6=3, \rho_6'=649$.
+Take $r_6 = 3 - 5k=8$.
+Then $r_6' = \frac{p_6+q_6r_6}{s_6}
+=\frac{-2384 - 287 \cdot 8}{-5} = 936$.
+
+$q_7 = 936$.
+\[
+p_7 = \frac{p_6q_7-1}{q_6} = \frac{-2384 \cdot 936-1}{-287} = 7775.
+\]
+\[
+s_7 = p_7^2-Aq_7^2 =  1.
+\]
+
+Therefore
+\[
+7775^2 - 69 \cdot 936^2 = 1.
+\]
+Thus $\sqrt{69} \sim \frac{7775}{936}$. 
+
+
+
+
+\textbf{Example.} $91y^2+1=x^2$. 
+$A=91$.
+
+$Aq_0^2+s_0=p_0^2$:
+$p_0=10$, $q_0=1$, $s_0=9$. 
+
+$p_0+q_0\rho_0 = \rho_0's_0$ is equivalent to
+$10 +\rho_0=9\rho_0'$. This is satisfied by
+$\rho_0=-10$, $\rho_0'=0$.
+Take $r_0 = -10 + 9k_0 = 8$. 
+Then $r_0'= \frac{p_0+q_0r_0}{s_0}=
+\frac{10+1 \cdot 8}{9} = 2$.
+
+$q_1=2$.
+\[
+p_1 = \frac{p_0q_1-1}{q_0} = \frac{10 \cdot 2 - 1}{1} = 19.
+\]
+\[
+s_1 = p_1^2 - Aq_1^2 = -3.
+\]
+
+$p_1+q_1\rho_1=\rho_1's_1$ is equivalent with
+$19+2\rho_1=-3\rho_1'$. This is satisfied by
+$\rho_1=1, \rho_1'=-7$.
+Take $r_1 = 1 - 3k_1 = 7$. 
+Then $r_1' = \frac{p_1+q_1r_1}{s_1}
+=\frac{19 + 2 \cdot 7}{-3} = -11$.
+
+$q_2=-11$.
+\[
+p_2 = \frac{p_1q_2-1}{q_1} = \frac{19 \cdot -11-1}{2} = -105.
+\]
+\[
+s_2 = p_2^2 - Aq_2^2 = 14.
+\]
+
+$p_2+q_2\rho_2=\rho_2's_2$
+is equivalent with 
+$-105-11\rho_2 = 14 \rho_2'$.  
+This is satisfied by
+$\rho_2=7, \rho_2'=-13$.
+Take $r_2=7, r_2'=-13$.
+
+$q_3=-13$.
+\[
+p_3 = \frac{p_2q_3-1}{q_2} = \frac{-105 \cdot -13 - 1}{-11} = -124.
+\]
+\[
+s_3 = p_3^2-Aq_3^2 = -3.
+\]
+
+$p_3+q_3\rho_3=\rho_3's_3$ 
+is equivalent with
+$-124-13\rho_3 = -3\rho_3'$.
+This is satisfied by $\rho_3=2, \rho_3'=50$.
+Take 
+$r_3 = 2 - 3k_3 = 8$. Then
+$r_3'=\frac{p_3+q_3r_3}{s_3} = \frac{-124 - 13 \cdot 8}{-3} = 76$.
+
+$q_4=76$.
+\[
+p_4 = \frac{p_3q_4-1}{q_3}
+=\frac{-124 \cdot 76-1}{-13} = 725.
+\]
+\[
+s_4 = p_4^2-Aq_4^2 = 9.
+\]
+
+$p_4+q_4\rho_4=\rho_4's_4$ 
+is equivalent with
+$725 + 76\rho_4 = 9\rho_4'$.
+This is satisfied by $\rho_4=1, \rho_4'=89$.
+Take $r_4 = 1$, $r_4'=89$.
+
+$q_5=89$.
+\[
+p_5 =  \frac{p_4q_5-1}{q_4}
+=\frac{725 \cdot 89 -1}{76} = 849.
+\]
+\[
+s_5 = p_5^2 - Aq_5^2 = -10.
+\]
+
+$p_5+q_5\rho_5=\rho_5's_5$ 
+is equivalent with
+$849+89\rho_5 = -10\rho_5'$.
+This is satisfied by 
+$\rho_5=9, \rho_5'=-165$.
+Take $r_5=9, r_5'=-165$.
+
+$q_6=-165$.
+\[
+p_6 =  \frac{p_5q_6-1}{q_5} = \frac{849 \cdot -165-1}{89} = -1574.
+\]
+\[
+s_6 = p_6^2 - Aq_6^2 = 1.
+\]
+
+Therefore
+\[
+1574^2 - 91 \cdot 165^2 = 1.
+\]
+Thus $\sqrt{91} \sim \frac{1574}{165}$. 
+
+
+
+
+\textbf{Example.} $109y^2+1=x^2$.
+$A=109$.
+
+$Ay_0^2+s_0=x_0^2$:
+$x_0=10$, $y_0=1$, $s_0=-9$. 
+
+$x_0+y_0 \rho_0 = s_0 \rho_0'$ is equivalent to
+$10 +\rho_0= - 9\rho_0'$. This is satisfied by
+$\rho_0=-10$, $\rho_0'=0$.
+Take $r_0 = -10 + 9k_0 = 8$. 
+Then $r_0'= \frac{x_0+y_0r_0}{s_0}=
+\frac{10+1 \cdot 8}{-9} = -2$.
+
+$y_1=-2$.
+\[
+x_1 = \frac{x_0y_1-1}{y_0} = \frac{10 \cdot -2 - 1}{1} = -21.
+\]
+\[
+s_1 = x_1^2 - Ay_1^2 = 5.
+\]
+
+$x_1+y_1\rho_1=\rho_1's_1$ is equivalent with
+$-21-2\rho_1=5\rho_1'$. This is satisfied by
+$\rho_1=2, \rho_1'=-5$.
+Take $r_1 = 2 +5k_1 = 7$. 
+Then $r_1' = \frac{x_1+y_1r_1}{s_1}
+=\frac{-21 - 2 \cdot 7}{5} = -7$.
+
+$y_2=-7$.
+\[
+x_2 = \frac{x_1y_2-1}{y_1} = \frac{-21 \cdot -7 - 1}{-2} = -73.
+\]
+\[
+s_2 = x_2^2 - Ay_2^2 = -12.
+\]
+
+$x_2+y_2\rho_2=\rho_2's_2$ is equivalent with
+$-73-7\rho_2=-12\rho_1'$. This is satisfied by
+$\rho_2=5, \rho_2'=9$.
+Take $r_2=5, r_2'=9$.
+
+$y_3=9$.
+\[
+x_3 = \frac{x_2y_3-1}{y_2} = \frac{-73 \cdot 9 - 1}{-7} = 94.
+\]
+\[
+s_3 = x_3^2 - Ay_3^2 = 7.
+\]
+
+$x_3+y_3\rho_3=\rho_3's_3$ is equivalent with
+$94+9\rho_3=7\rho_3'$. This is satisfied by
+$\rho_3=2, \rho_3'=16$.
+Take $r_3=2+7k_3=9$.
+Then $r_3'=\frac{x_3+y_3r_3}{s_3}
+=\frac{94+9\cdot 9}{7} = 25$.
+
+$y_4=25$.
+\[
+x_4 = \frac{x_3y_4-1}{y_3} = \frac{94\cdot 25-1}{9} = 261.
+\]
+\[
+s_4 = x_4^2 - Ay_4^2 = -4.
+\]
+
+$x_4+y_4\rho_4=\rho_4's_4$ is equivalent with
+$261+25\rho_4=-4\rho_4'$. This is satisfied by
+$\rho_4=3, \rho_4'=-84$.
+Take $r_4=3-4k_4=7$. 
+Then $r_4' = \frac{x_4+y_4r_4}{s_4} =
+\frac{261+25 \cdot 7}{-4}=-109$.
+
+$y_5=-109$.
+\[
+x_5 = \frac{x_4y_5-1}{y_4} = \frac{261 \cdot -109-1}{25} = -1138.
+\]
+\[
+s_5 = x_5^2 - Ay_5^2 = 15.
+\]
+
+$x_5+y_5\rho_5=\rho_5's_5$ is equivalent with
+$-1138-109\rho_5=15\rho_5'$. This is satisfied by
+$\rho_5=8, \rho_5'=-134$.
+Take $r_5=8, r_5'=-134$.
+
+$y_6=-134$.
+\[
+x_6 = \frac{x_5y_6-1}{y_5} = \frac{-1138 \cdot -134 - 1}{-109} = -1399.
+\]
+\[
+s_6 = x_6^2 - Ay_6^2 = -3.
+\]
+
+$x_6+y_6\rho_6=\rho_6's_6$ is equivalent with
+$-1399-134\rho_6=-3\rho_6'$. This is satisfied by
+$\rho_6=1, \rho_6'=511$.
+Take $r_6=1-3k_6 = 10$.
+Then $r_6'=\frac{x_6+y_6r_6}{s_6}
+=\frac{-1399 -134 \cdot 10}{-3}
+=913$.
+
+$y_7=913$.
+\[
+x_7 = \frac{x_6y_7-1}{y_6} = \frac{-1399 \cdot 913-1}{-134} = 9532.
+\]
+\[
+s_7 = x_7^2 - Ay_7^2 = 3.
+\]
+
+$x_7+y_7\rho_7=\rho_7's_7$ is equivalent with
+$9532+913\rho_7=3\rho_7'$. This is satisfied by
+$\rho_7=2, \rho_7'=3786$.
+Take $r_7=2+3k_7 = 8$.
+Then $r_7'=\frac{x_7+y_7r_7}{s_7}
+=\frac{9532 + 913 \cdot 8}{3}
+=5612$.
+
+$y_8=5612$.
+\[
+x_8 = \frac{x_7y_8-1}{y_7} = \frac{9532 \cdot 5612-1}{913} = 58591.
+\]
+\[
+s_8 = x_8^2 - Ay_8^2 = -15.
+\]
+
+$x_8+y_8\rho_8=\rho_8's_8$ is equivalent with
+$58591+5612\rho_8=-15\rho_8'$. This is satisfied by
+$\rho_8=7, \rho_7'=-6525$.
+Take $r_8=7, r_8'=-6525$.
+
+$y_9=-6525$.
+\[
+x_9 = \frac{x_8y_9-1}{y_8} = \frac{58591 \cdot -6525-1}{5612} = -68123.
+\]
+\[
+s_9 = x_9^2 - Ay_9^2 = 4.
+\]
+
+
+$x_9+y_9\rho_9=\rho_9's_9$ is equivalent with
+$-68123 - 6525\rho_9=4 \rho_9'$. This is satisfied by
+$\rho_9=1, \rho_9'=-18662$.
+Take $r_9=1+4k_9 = 9$. Then
+$r_9' = \frac{x_9+y_9r_9}{s_9} = \frac{-68123 - 6525 \cdot 9}{4} =  -31712$.
+
+$y_{10}=-31712$.
+\[
+x_{10} = \frac{x_9y_{10}-1}{y_9} = \frac{-68123 \cdot (-31712)-1}{-6525} = -331083.
+\]
+\[
+s_{10} = x_{10}^2 - Ay_{10}^2 =  -7.
+\]
+
+$x_{10}+y_{10} \rho_{10} =\rho_{10}'s_{10}$ is equivalent with
+$-331083 - 31712\rho_{10}= - 7 \rho_{10}'$. This is satisfied by
+$\rho_{10}=5, \rho_{10}'=69949$.
+Take $r_{10}=5, r_{10}'=69949$.
+
+$y_{11}=69949$.
+\[
+x_{11} = \frac{x_{10}y_{11}-1}{y_{10}} = \frac{-331083 \cdot 69949-1}{-31712} = 730289.
+\]
+\[
+s_{11} = x_{11}^2 - Ay_{11}^2 =  12.
+\]
+
+$x_{11}+y_{11} \rho_{11} =\rho_{11}'s_{11}$ is equivalent with
+$730289 +69949\rho_{11}= 12 \rho_{11}'$. This is satisfied by
+$\rho_{11}=7, \rho_{11}'=101661$.
+Take $r_{11}=5, r_{10}'=101661$.
+
+$y_{12}=101661$.
+\[
+x_{12} = \frac{x_{11}y_{12}-1}{y_{11}} = \frac{730289 \cdot 101661-1}{69949} = 1061372.
+\]
+\[
+s_{12} = x_{12}^2 - Ay_{12}^2 =  -5.
+\]
+
+
+
+
+
+$x_{12}+y_{12} \rho_{12} =\rho_{12}'s_{12}$ is equivalent with
+$1061372 +101661\rho_{12}= -5 \rho_{12}'$. This is satisfied by
+$\rho_{12}=3, \rho_{12}'=-273271$.
+Take $r_{12}=3-5k_{12} = 8$.
+Then $r_{12}'= \frac{x_{12}+y_{12}r_{12}}{s_{12}}
+=\frac{1061372 + 101661 \cdot 8}{-5}=-374932$.
+
+$y_{13}=-374932$.
+\[
+x_{13} = \frac{x_{12}y_{13}-1}{y_{12}} = \frac{1061372 \cdot (-374932)-1}{101661} = -3914405.
+\]
+\[
+s_{13} = x_{13}^2 - Ay_{13}^2 =  9.
+\]
+
+$x_{13}+y_{13} \rho_{13} =\rho_{13}'s_{13}$ is equivalent with
+$-3914405-374932\rho_{13}= 9 \rho_{13}'$. This is satisfied by
+$\rho_{13}=1, \rho_{13}'=-476593$.
+Take $r_{13}=1+9k_{13} = 10$.
+Then $r_{13}'= \frac{x_{13}+y_{13}r_{13}}{s_{13}}
+=\frac{-3914405 -374932 \cdot 10}{9}=-851525$.
+
+$y_{14}=-851525$.
+\[
+x_{14} = \frac{x_{13}y_{14}-1}{y_{13}} = \frac{-3914405 \cdot (-851525)-1}{-374932} = -8890182.
+\]
+\[
+s_{14} = x_{14}^2 - Ay_{14}^2 =  -1.
+\]
+
+$x_{14}+y_{14} \rho_{14} =\rho_{14}'s_{14}$ is equivalent with
+$-8890182-851525\rho_{14}= - \rho_{14}'$. This is satisfied by
+$\rho_{14}=0, \rho_{14}'=8890182$.
+Take $r_{14}=-k_{14} = 10$.
+Then $r_{14}'= \frac{x_{14}+y_{14}r_{14}}{s_{14}}
+=\frac{-8890182 -851525 \cdot 10}{-1}=17405432$.
+
+$y_{15}=17405432$.
+\[
+x_{15} = \frac{x_{14}y_{15}-1}{y_{14}} =\frac{-8890182 \cdot 17405432-1}{-851525} = 181718045.
+\]
+\[
+s_{15} = x_{15}^2 - Ay_{15}^2 =  9.
+\]
+
+$r_{15}=8, r_{15}'=35662389$.
+
+$y_{16}=35662389$.
+\[
+x_{16} = \frac{x_{15}y_{16}-1}{y_{15}} =\frac{35662389 \cdot 35662389-1}{17405432} = 372326272.
+\]
+\[
+s_{16} = x_{16}^2 - Ay_{16}^2 =  -5.
+\]
+
+$\rho_{16}=2, \rho_2'=-88730210$. 
+$r_{16}=2-5k_{16} = 7$. Then $r_{16}'=-124392599$.
+
+$y_{17}=-124392599$.
+\[
+x_{17} = -1298696861.
+\]
+\[
+s_{17} = 12.
+\]
+
+$r_{18}=5, r_{18}'=-160054988$.
+
+$y_{18}=-160054988$.
+\[
+x_{18} = -1671023133.
+\]
+\[
+s_{18} = -7.
+\]
+
+$\rho_{19}=2, \rho_{19}'=284447587$. 
+Take $r_{19}=2-7k_{19} = 9$.
+Then $r_{19}'=444502575$.
+
+$y_{19}=444502575$.
+\[
+x_{19} = 4640743127.
+\]
+\[
+s_{19} = 4.
+\]
+
+$\rho_{20}=3, \rho_{20}'=1493562713$. Take
+$r_{20} = 3+4k_{20} = 7$. Then
+$r_{20}' = 1938065288$.
+
+
+$y_{20}=1938065288$.
+\[
+x_{20} = 20233995641.
+\]
+\[
+s_{20} = -15.
+\]
+
+$r_{21}=8, r_{21}'=-2382567863$. 
+
+$y_{21}=-2382567863$.
+\[
+x_{21} = -24874738768.
+\]
+\[
+s_{21} = 3.
+\]
+
+$\rho_{22}=1, \rho_{22}'=-9085768877$.
+Take $r_{22}=1+3k_{22} = 10$.  Then
+$r_{22}'=-16233472466$.
+
+$y_{22}=-16233472466$.
+\[
+x_{22} = .-169482428249.
+\]
+\[
+s_{22} = -3.
+\]
+
+$\rho_{23}=2, \rho_{23}'=67316457727$.
+Take $r_{23}=2-3k_{23}=8$. Then
+$r_{23}'=99783402659$.
+
+$y_{23}=99783402659$.
+\[
+x_{23} = 1041769308262.
+\]
+\[
+s_{23} = 15.
+\]
+
+$r_{24}=7, r_{24}'=116016875125$.
+
+$y_{24}=116016875125$.
+\[
+x_{24} = 1211251736511.
+\]
+\[
+s_{24} = -4.
+\]
+
+$\rho_{25}=1, \rho_{25}'=-331817152909$.
+Take $r_{25}=1-4k_{25}=9$. Then
+$r_{25}'=-563850903159$.
+
+$y_{25}=-563850903159$.
+\[
+x_{25} = .-5886776254306.
+\]
+\[
+s_{25} = 7.
+\]
+
+$r_{26}=5, r_{26}'=-1243718681443$.
+
+$y_{26}=-1243718681443$.
+\[
+x_{26} = -12984804245123.
+\]
+\[
+s_{26} = .-12.
+\]
+
+$r_{27}=7, r_{27}'=1807569584602$.
+
+$y_{27}=1807569584602$.
+\[
+x_{27} = 18871580499429.
+\]
+\[
+s_{27} = 5.
+\]
+
+$\rho_{28}=3, \rho_{28}'=4858857850647$.
+Take $r_{28}=3+5k_{28}=8$. Then
+$r_{28}'=6666427435249$.
+
+$y_{28}=6666427435249$.
+\[
+x_{28} = 69599545743410.
+\]
+\[
+s_{28} = -9.
+\]
+
+$\rho_{29}=1, \rho_{29}'=-8473997019851$.
+Take $r_{29}=1+9k_{29}=10$.
+Then $r_{29}'=-15140424455100$.
+
+$y_{29}=-15140424455100$.
+\[
+x_{29} = -158070671986249.
+\]
+\[
+s_{29} = 1.
+\]
+
+Therefore
+\[
+158070671986249^2 - 109 \cdot 15140424455100^2 = 1.
+\]
+Thus $\sqrt{109} \sim \frac{158070671986249}{15140424455100}$. 
+
+
+
+\nocite{*}
+
+\bibliographystyle{plain}
+\bibliography{pell}
+
+\end{document}

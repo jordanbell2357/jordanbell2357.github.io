@@ -1,0 +1,548 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{hyperref}
+%\usepackage{tikz-cd}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\dist}{\textrm{dist}} 
+\newcommand{\sgn}{\textrm{sgn}} 
+\newcommand{\SA}{B_{\textrm{sa}}(H)} 
+\newcommand{\positive}{B_{\textrm{+}}(H)} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{Fatou's theorem, Bergman  spaces, and Hardy spaces on the  circle}
+\author{Jordan Bell}
+\date{April 3, 2014}
+\maketitle
+
+\section{Introduction}
+In this note I am writing out proofs of some facts about Fourier series, Bergman spaces, and Hardy spaces. \S \S 1--3 follow the presentation in
+Stein and Shakarchi's {\em Real Analysis}
+and {\em Fourier Analysis}. The questions in Halmos's {\em Hilbert Space Problem Book} that deal with Hardy spaces are: \S \S 24--35,  67, 116--117,
+124--125, 127, 193--199, and I present solutions to some of these in \S \S 4--5, on Bergman spaces, and \S 6, on Hardy spaces.
+
+
+\section{Poisson kernel}
+\label{poissonsection}
+Let $\mathbb{T}=\mathbb{R} / 2\pi \mathbb{Z}$.  
+Let 
+\[
+\norm{f}_{L^p} = \left( \frac{1}{2\pi} \int_0^{2\pi} |f(t)|^p dt \right)^{1/p}.
+\]
+If $f \in L^1(\mathbb{T})$, let
+\[
+\hat{f}(k)=\frac{1}{2\pi}\int_0^{2\pi} f(t) e^{-ikt}dt.
+\] 
+
+
+
+Define
+\[
+P_r(t)=\sum_{n \in \mathbb{Z}} r^{|n|} e^{int}=\frac{1-r^2}{1-2r\cos t + r^2}, \qquad 0 \leq r < 1, t \in \mathbb{T}.
+\]
+One checks that $P_r$ is an {\em approximation to the identity}, which implies that for $f \in L^1(\mathbb{T})$, for almost
+all $\theta \in \mathbb{T}$ we have $(f * P_r)(\theta) \to f(\theta)$ as $r \to 1^-$.\footnote{If $f$ is continuous, then $f*P_r$ converges to $f$ uniformly on
+$\mathbb{T}$ as $r \to 1^-$. This is proved for example in Lang's {\em Complex Analysis}, fourth ed., chapter VIII, \S 5.}
+
+For $f \in L^1(\mathbb{T})$, for any $\theta$ we have
+\[
+\norm{f(t) \sum_{|n| \leq N} r^{|n|} e^{in(\theta-t)}}_{L^1} \leq \frac{1+r}{1-r} \norm{f}_{L^1},
+\]
+hence by the dominated convergence theorem we have
+\begin{eqnarray*}
+\lim_{N \to \infty} \sum_{|n| \leq N}  r^{|n|} \int_0^{2\pi} f(t)  e^{in(\theta-t)} dt 
+&=&
+\lim_{N \to \infty}  \int_0^{2\pi} f(t) \sum_{|n| \leq N} r^{|n|} e^{in(\theta-t)} dt\\
+&=&\int_0^{2\pi} f(t) \sum_{n \in \mathbb{Z}} r^{|n|} e^{in(\theta-t)} dt,
+\end{eqnarray*}
+and so
+\begin{eqnarray*}
+(f*P_r)(\theta)&=&\frac{1}{2\pi}\int_0^{2\pi} f(t) P_r(\theta-t) dt\\
+&=&\frac{1}{2\pi}\int_0^{2\pi} f(t)  \sum_{n \in \mathbb{Z}}  r^{|n|} e^{in(\theta-t)} dt\\
+&=&\sum_{n \in \mathbb{Z}}  r^{|n|} \frac{1}{2\pi}\int_0^{2\pi} f(t)  e^{in(\theta-t)} dt\\
+&=&\sum_{n \in \mathbb{Z}}  r^{|n|} e^{in\theta} \hat{f}(n).
+\end{eqnarray*}
+
+
+\section{Harmonic functions}
+For $f \in L^1(\mathbb{T})$, define $u_f$ on $|z|<1$ by
+\[
+u_f(re^{i\theta})=(f*P_r)(\theta).
+\]
+In polar coordinates, the Laplacian is
+\[
+\Delta=\frac{\partial^2}{\partial r^2}+\frac{1}{r}\frac{\partial}{\partial r}+\frac{1}{r^2}\frac{\partial^2}{\partial 
+\theta^2}.
+\]
+Then
+\begin{eqnarray*}
+(\Delta u_f)(re^{i\theta})&=&\Delta \left( \sum_{n<0} r^{-n} e^{in\theta} \hat{f}(n) + \sum_{n \geq 0} r^n e^{in\theta} \hat{f}(n) \right)\\
+&=&\sum_{n<0} \hat{f}(n) \Delta\left(r^{-n} e^{in\theta}\right) + \sum_{n \geq 0} \hat{f}(n)\Delta\left(  r^n e^{in\theta} \right)\\
+&=&\sum_{n<0} \hat{f}(n) \cdot 0 + \sum_{n \geq 0} \hat{f}(n) \cdot 0\\
+&=&0.
+\end{eqnarray*}
+Hence $u_f$ is harmonic on the open unit disc.
+
+\section{Fatou's theorem}
+\label{fatou}
+Let $D=\{z:|z|<1\}$. 
+If $F:D \to \mathbb{C}$ is holomorphic, let it have the power series
+\[
+F(z)=\sum_{n \geq 0} a_n z^n, \qquad a_n \in \mathbb{C}.
+\]
+By the Cauchy integral formula, for $n \geq 0$ and for any $0<r<1$,  $\gamma_r(\theta)=re^{i\theta}$,  we have
+\begin{eqnarray*}
+F^{(n)}(0)&=&\frac{n!}{2\pi i} \int_{\gamma_r} \frac{F(\zeta)}{\zeta^{n+1}} d\zeta\\
+&=&\frac{n!}{2\pi i} \int_0^{2\pi} \frac{F(re^{i\theta})}{(re^{i\theta})^{n+1}} rie^{i\theta} d\theta\\
+&=&\frac{n!}{2\pi r^n} \int_0^{2\pi} F(re^{i\theta}) e^{-in\theta} d\theta.
+\end{eqnarray*}
+Hence, for $n \geq 0$ and for $0<r<1$,
+\[
+\frac{1}{2\pi} \int_0^{2\pi} F(re^{i\theta}) e^{-in\theta} d\theta=a_n r^n.
+\]
+On the other hand, for $n<0$, we have
+\[
+\frac{n!}{2\pi r^n} \int_0^{2\pi} F(re^{i\theta}) e^{-in\theta} d\theta=\frac{n!}{2\pi i} \int_{\gamma_r} \frac{F(\zeta)}{\zeta^{n+1}} d\zeta,
+\]
+and because $\frac{F(\zeta)}{ z^{n+1}}$ is holomorphic on $D$ for $n<0$, by the residue theorem the right-hand side of the above equation is equal to $0$. Hence,
+for $n < 0$ and for $0<r<1$,
+\[
+\frac{1}{2\pi} \int_0^{2\pi} F(re^{i\theta}) e^{-in\theta} d\theta=0.
+\]
+
+
+Let $F:D \to \mathbb{C}$ be holomorphic, and suppose there is some $M$ such that $|F(z)| \leq M$ for all $z \in D$. 
+For $0<r<1$, define $f_r:\mathbb{T} \to \mathbb{C}$ by $f_r(\theta)=F(re^{i\theta})$. 
+From our above work, we have 
+\[
+\widehat{f_r}(n)=\begin{cases}
+a_n r^n&n \geq 0,\\
+0&n<0.
+\end{cases}
+\]
+For $0<r<1$, note that $\norm{f_r}_{L^2} \leq \norm{f_r}_{L^\infty} \leq M$, so, by Parseval's identity,
+\[
+\sum_{n \in \mathbb{Z}} |\widehat{f_r}(n)|^2  \leq M^2.
+\]
+On the other hand,
+\[
+\sum_{n \in \mathbb{Z}} |\widehat{f_r}(n)|^2= \sum_{n \geq 0} |a_n|^2 r^{2n}.
+\]
+It follows that
+\[
+\sum_{n \geq 0} |a_n|^2 \leq M^2.
+\]
+Define $f \in L^2(\mathbb{T})$ by
+\[
+\hat{f}(n)=\begin{cases}
+a_n&n \geq 0,\\
+0&n<0;
+\end{cases}
+\]
+ this  defines an element of $L^2(\mathbb{T})$ if and only if $\sum_{n \in \mathbb{Z}} |\hat{f}(n)|^2< \infty$, and indeed
+ \[
+ \sum_{n \in \mathbb{Z}} |\hat{f}(n)|^2 \leq M^2.
+ \]
+ As $f \in L^2(\mathbb{T})$, $f \in L^1(\mathbb{T})$.  Then
+ by our work in \S \ref{poissonsection}, for almost all $\theta \in \mathbb{T}$ we have
+ \[
+ \lim_{r \to 1^-} \sum_{n \in \mathbb{Z}}  r^{|n|} e^{in\theta}\hat{f}(n) = f(\theta),
+ \]
+ which  means here that for almost all $\theta \in \mathbb{T}$,
+ \[
+ \lim_{r \to 1^-} \sum_{n \geq 0} a_n r^n e^{in\theta} = f(\theta).
+ \]
+Thus, for almost all $\theta \in \mathbb{T}$,
+\[
+\lim_{r \to 1^-} F(re^{i\theta}) = f(\theta).
+\]
+In words, we have proved that if $F$ is a bounded holomorphic function on the unit disc, then it has radial limits at almost every angle.
+This is {\em Fatou's theorem}.
+
+
+\section{Bergman spaces}
+This section somewhat follows Problem 24 of Halmos.
+Let $\mu$ be Lebesgue measure on $D$. $d\mu(z)=dx \wedge dy = \frac{dz \wedge d\overline{z}}{-2i}$.
+
+If $U$ is a  nonempty bounded open subset of $\mathbb{C}$ and $1 \leq p < \infty$, let $A^p(U)$ denote the set of functions $f:U \to \mathbb{C}$ that are holomorphic and
+that satisfy
+\[
+\norm{f}_{A^p(U)}  = \left( \int_U |f(z)|^p d\mu(z) \right)^{1/p} < \infty,
+\]
+and let $A^\infty(U)$ denote the set of functions $f:U \to \mathbb{C}$ that are holomorphic and that satisfy
+\[
+\norm{f}_{A^\infty(U)} = \sup_{z \in U} |f(z)| < \infty.
+\]
+It is apparent that $A^p(U)$ is a vector space over $\mathbb{C}$.
+By Minkowski's inequality, $\norm{\cdot}_{A^p(U)}$  is a norm, and thus $A^p(U)$ is a normed space.
+If $p \leq q$ then by Jensen's inequality we have 
+\[
+\norm{f}_{A^p(U)} \leq \mu(D)^{\frac{1}{p}-\frac{1}{q}} \norm{f}_{A^q(U)},
+\]
+and so
+\[
+A^q(U) \subseteq A^p(U).
+\]
+$A^p(U)$ is called a {\em Bergman space}. It is not apparent that it is a complete metric space. We show this using the following lemmas.
+We use the following lemma to prove the lemma after it, and use that lemma to prove the theorem.
+
+
+\begin{lemma}
+If $z_0 \in \mathbb{C}$, $R>0$, and $f \in A^1(D(z_0,R))$, then
+\[
+f(z_0)=\frac{1}{\pi R^2} \int_{D(z_0,R)} f(z) d\mu(z).
+\]
+\label{meanvalue}
+\end{lemma}
+\begin{proof}
+Put $F_n(z)=\sum_{k=0}^n a_k (z-z_0)^k$, with $a_k=\frac{f^{(k)}(z_0)}{k!}$. For $0<r<R$,
+define
+\[
+\norm{g}_r=\sup_{|z-z_0| \leq r} |g(z)|.
+\]
+We have $\norm{F_n - f}_r \to 0$ as $n \to \infty$. Then,
+\begin{eqnarray*}
+\left| \int_{D(z_0,r)} f(z) d\mu(z) - \int_{D(z_0,r)} F_n(z) d\mu(z) \right|&=&
+\left| \int_{D(z_0,r)} f(z)-F_n(z) d\mu(z) \right|\\
+&\leq&\int_{D(z_0,r)} |f(z)-F_n(z)| d\mu(z)\\
+&\leq&\int_{D(z_0,r)} \norm{f-F_n}_r d\mu(z)\\
+&=&\norm{f-F_n}_r \cdot \pi r^2,
+\end{eqnarray*}
+which tends to $0$ as $n \to \infty$. Thus
+\begin{eqnarray*}
+\int_{D(z_0,r)} f(z) d\mu(z)&=&\lim_{n \to \infty} \int_{D(z_0,r)} F_n(z) d\mu(z)\\
+&=&\lim_{n \to \infty}  \int_{D(z_0,r)} \sum_{k=0}^n a_k  (z-z_0)^k d\mu(z)\\
+&=&\lim_{n \to \infty} \sum_{k=0}^n a_k \int_{D(z_0,r)} (z-z_0)^k d\mu(z)\\
+&=&\lim_{n \to \infty} \sum_{k=0}^n a_k \int_{D(0,r)} z^k d\mu(z).
+\end{eqnarray*}
+For $k \geq 1$, using polar coordinates we have
+\begin{eqnarray*}
+\int_{D(0,r)} z^k d\mu(z)&=&\int_0^r \int_0^{2\pi} (\rho e^{i\theta})^k \rho d\theta d\rho\\
+&=&\int_0^r \int_0^{2\pi} \rho^{k+1} e^{ik\theta} d\theta d\rho\\
+&=&\int_0^r \rho^{k+1} \cdot \frac{0}{k} d\rho\\
+&=&0.
+\end{eqnarray*}
+Therefore
+\begin{eqnarray*}
+\int_{D(z_0,r)} f(z) d\mu(z)&=& \lim_{n \to \infty} a_0 \cdot \pi r^2\\
+&=&a_0\cdot \pi r^2.
+\end{eqnarray*}
+That is, for each $0<r<R$ we have
+\begin{equation}
+f(z_0)=\frac{1}{\pi r^2} \int_{D(z_0,r)} f(z) d\mu(z).
+\label{eachr}
+\end{equation}
+Because $f \in L^1(D(z_0,R))$, 
+\[
+\lim_{r \to R} \int_{D(z_0,r)} f(z) d\mu(z) = \int_{D(z_0,R)} f(z) d\mu(z).
+\]
+Thus, taking the limit as $r \to R$ of \eqref{eachr}, we obtain
+\[
+f(z_0)=\frac{1}{\pi R^2} \int_{D(z_0,R)} f(z) d\mu(z).
+\]
+\end{proof}
+
+If $z_0 \in \mathbb{C}$ and $S \subseteq \mathbb{C}$, denote
+\[
+d(z_0,S)=\inf_{z \in S} |z_0-z|,
+\]
+and for $z_0 \in U$, let
+\[
+r(z_0)=d(z_0,\partial U).
+\]
+This is the radius of the largest open disc centered at $z_0$ that is contained in $U$ (it is equal to the union of all open discs centered
+at $z_0$ that are contained in $U$, and thus makes sense). As $U$ is open, $r(z_0)>0$, and as $U$ is bounded, $r(z_0)<\infty$.
+
+\begin{lemma}
+If $1 \leq p\leq \infty$,
+$z_0 \in U$, and $f \in A^p(U)$, then
+\[
+|f(z_0)| \leq \left(\frac{1}{\pi r(z_0)^2}\right)^{1/p} \norm{f}_{A^p(U)}.
+\]
+\label{discinequality}
+\end{lemma}
+\begin{proof}
+As $f \in A^p(U)$ we have $f \in A^p(D(z_0,r(z_0))) \subseteq A^1(D(z_0,r(z_0)))$.
+Using Lemma \ref{meanvalue} and H\"older's inequality, we get, with $\frac{1}{p}+\frac{1}{q}=1$ ($q$ is infinite if $p=1$),
+\begin{eqnarray*}
+|f(z_0)|&=&\left| \frac{1}{\pi r(z_0)^2} \int_{D(z_0,r(z_0))} f(z) d\mu(z) \right|\\
+&\leq& \frac{1}{\pi r(z_0)^2} \int_{D(z_0,r(z_0))} |f(z)| d\mu(z)\\
+&\leq& \frac{1}{\pi r(z_0)^2} \mu(D(z_0,r(z_0)))^{1/q} \norm{f}_{A^p(D(z_0,r(z_0)))}\\
+&=&\frac{1}{\pi r(z_0)^2} (\pi r(z_0)^2)^{1/q} \norm{f}_{A^p(D(z_0,r(z_0)))}\\
+&\leq&\frac{1}{\pi r(z_0)^2} (\pi r(z_0)^2)^{1/q} \norm{f}_{A^p(U)}\\
+&=&\frac{1}{\pi r(z_0)^2} (\pi r(z_0)^2)^{1-\frac{1}{p}} \norm{f}_{A^p(U)}\\
+&=&\left(\frac{1}{\pi r(z_0)^2}\right)^{1/p} \norm{f}_{A^p(U)}.
+\end{eqnarray*}
+\end{proof}
+
+Now we prove that $A^p(U)$ is a complete metric space, showing that it is a Banach space.
+
+\begin{theorem}
+If $1 \leq p \leq \infty$, then $A^p(U)$ is a Banach space.
+\label{bergmanbanach}
+\end{theorem}
+\begin{proof}
+Suppose that $f_n \in A^p(U)$ is a Cauchy sequence. We have to show that there is some $f \in A^p(U)$ such that $f_n \to f$ in $A^p(U)$. The space $H(U)$ of holomorphic functions
+on $U$ is a Fr\'echet space: there is an increasing sequence of compact sets $K_i \subset U$ whose union is $U$, and the $p_{K_i}$ seminorms on $H(U)$ are the supremum of a function
+on $K_i$. (See Henri Cartan, {\em Elementary Theory of Analytic Functions of One or Several Complex Variables}, \S V.1.3.) For each of these compact sets $K_i$, 
+let $r_i$ be the distance between $K_i$ and $\partial U$, which are both compact sets. If $z_0 \in K_i$ then
+$r(z_0) \geq r_i$. Thus if  $z_0 \in K_i$ and  $g \in A^p(U)$, using Lemma \ref{discinequality} we get
+\[
+|g(z_0)| \leq \left(\frac{1}{\pi r(z_0)^2}\right)^{1/p} \norm{g}_{A^p(U)} \leq  \left(\frac{1}{\pi r_i^2}\right)^{1/p} \norm{g}_{A^p(U)}.
+\]
+From this and the fact that $\norm{f_n-f_m}_{A^p(U)} \to 0$ as $m,n \to \infty$, we get that
+\[
+p_{K_i}(f_n-f_m) \to 0, \qquad m,n \to \infty.
+\]
+That is, $f_n$ is a Cauchy sequence in each of the seminorms $p_{K_i}$, and as $H(U)$ is a Fr\'echet space it follows that there is some $f \in H(U)$ such that
+$f_n \to f$ in $H(U)$. In particular, for all $z_0 \in U$ we have $f_n(z_0) \to f(z_0)$ as $n \to \infty$ (because each $z_0$ is included in one of the compact sets $K_i$, on which
+the $f_n$ converge uniformly to $f$ and hence pointwise to $f$).
+
+On the other hand, $L^p(U)$ is a Banach space, and hence there is some $g \in L^p(U)$ such that $\norm{f_n-g}_{L^p(U)} \to 0$ as $n \to \infty$.
+This implies that there is some subsequence $f_{a(n)}$ such that 
+for almost all $z_0 \in U$, $f_{a(n)}(z_0) \to g(z_0)$. Thus, for almost all $z_0 \in U$ we have $f(z_0)=g(z_0)$. Therefore, in $L^p(U)$ we have $f=g$ and so 
+\[
+\norm{f_n-f}_{A^p(U)} = \norm{f_n-f}_{L^p(U)} \to 0, \qquad n \to \infty.
+\]
+\end{proof}
+
+
+
+\section{Inner products}
+In this section we follow Problem 25 of Halmos.
+In this section we restrict our attention to the Bergman space $A^2(D)$, where $D$ is the open unit disc,
+on which we define the inner product
+\[
+\inner{f}{g}=\int_D f g^* d\mu = \int_D f(z) \overline{g(z)} d\mu(z).
+\]
+As $\inner{f}{f}=\norm{f}_{A^2(D)}^2$, it follows that $A^2(D)$ is a Hilbert space with this inner product. If we have a Hilbert space we would like to find an explicit orthonormal basis.
+
+\begin{theorem}
+If $n \geq 0$ and $z \in D$, define $e_n:D \to \mathbb{C}$ by 
+\[
+e_n(z)=\sqrt{\frac{n+1}{\pi}} \cdot z^n.
+\]
+Then $e_n$ are an orthonormal basis for $A^2(D)$.
+\end{theorem}
+\begin{proof}
+If $E$ is a subset of a Hilbert space and $v \in H$, we write $v \perp E$ if $\inner{v}{e}=0$ for all $e \in E$. If $E$ is an orthonormal set in $H$, $E$ is an orthonormal basis
+if and only if $v \perp E$ implies that $v=0$. This is proved in John B. Conway, {\em A Course in Functional Analysis}, second ed., p.~16, Theorem 4.13.
+For $n \neq m$,
+\begin{eqnarray*}
+\inner{e_n}{e_m}&=&\int_D \sqrt{\frac{n+1}{\pi}} z^n \sqrt{\frac{m+1}{\pi}} \overline{z}^m d\mu(z)\\
+&=&\frac{ \sqrt{(n+1)(m+1)}}{\pi} \int_D z^n \overline{z}^m d\mu(z)\\
+&=&\frac{ \sqrt{(n+1)(m+1)}}{\pi} \int_0^1 \int_0^{2\pi}  (re^{i\theta})^n (re^{-i\theta})^m r d\theta dr\\
+&=&\frac{ \sqrt{(n+1)(m+1)}}{\pi} \int_0^1 \int_0^{2\pi}  r^{n+m+1} e^{i\theta(n-m)} d\theta dr\\
+&=&\frac{ \sqrt{(n+1)(m+1)}}{\pi} \int_0^1 \int_0^{2\pi}  r^{n+m+1} e^{i\theta(n-m)} d\theta dr\\
+&=&0,
+\end{eqnarray*}
+while
+\begin{eqnarray*}
+\inner{e_n}{e_n}&=&\frac{n+1}{\pi} \int_0^1 \int_0^{2\pi}  r^{2n+1} d\theta dr\\
+&=&2(n+1)\int_0^1 r^{2n+1} dr\\
+&=&1.
+\end{eqnarray*}
+Therefore $e_n$ is an orthonormal set. Hence, to show that it is an orthonormal basis for $A^2(D)$ we have to show that if $\inner{f}{e_n}=0$ for all $n \geq 0$ then
+$f=0$.
+
+For $0<r<1$, let $D_r$ be the open disc centered at $0$ of radius $r$, and let $\norm{g}_r=\sup_{|z| \leq r} |g(z)|$. 
+Let $f(z)=\sum_{n=0}^\infty a_n z^n$, and for each $0<r<1$ this power series converges uniformly in $D_r$. Then
+\begin{eqnarray*}
+\int_{D_r} f e_m^* d\mu&=&\int_{D_r} \sum_{n=0}^\infty a_n z^n \overline{z}^m d\mu(z)\\
+&=&\sum_{n=0}^\infty a_n \int_{D_r} z^n \overline{z}^m d\mu(z)\\
+&=&\sum_{n=0}^\infty a_n \int_0^r \int_0^{2\pi} \rho^{n+m+1} e^{i\theta(n-m)} d\theta d\rho\\
+&=&\sum_{n=0}^\infty a_n \int_0^r \rho^{n+m+1} \cdot 2\pi \cdot \delta_{n,m} d\rho\\
+&=&2\pi a_m \int_0^r \rho^{2m+1} d\rho \\
+&=&2\pi a_m \frac{r^{2m+2}}{2m+2}
+\end{eqnarray*}
+One checks that $f e_m^* \in A^1(D)$, and hence 
+\[
+\lim_{r \to 1} \int_{D_r} f e_m^* d\mu(z) = \int_D f e_m^* d\mu(z).
+\]
+Therefore
+\[
+\inner{f}{e_m}= \pi a_m \frac{1}{m+1}.
+\]
+As $\inner{f}{e_m}=0$ for each $m$, this gives us that $a_m=0$ for all $m$ and hence $f=0$. This shows that $e_n$ is an orthonormal basis for $A^2(D)$.
+\end{proof}
+
+Steven G. Krantz, {\em Geometric Function Theory: Explorations in Complex Analysis},
+p. 9, \S 1.2, writes about the Bergman space $A^2(\Omega)$, where $\Omega$ is a connected
+open subset of $\mathbb{C}$, not necessarily bounded.
+
+
+
+
+
+\section{Hardy spaces}
+In a Hilbert  space $H$, if $S_\alpha, \alpha \in I$ are subsets of $H$, let $\bigvee_{\alpha \in I} S_\alpha$ denote the closure in $H$ of
+$\bigcup_{\alpha \in I} S_\alpha$. Thus, to say that a set $\{v_\alpha\}$ is an orthonormal basis for a Hilbert space $H$ is to say that $\{v_\alpha\}$ is orthonormal
+and that $\bigvee_{\alpha \in I} \{v_\alpha\}=H$.
+
+Let $S^1=\{z \in \mathbb{C}: |z|=1\}$, and let $\mu$ be normalized arc length, so that $\mu(S^1)=1$. Define $e_n:S^1 \to \mathbb{C}$ by $e_n(z)=z^n$, for
+$n \in \mathbb{Z}$. 
+It is a fact that $e_n, n \in \mathbb{Z}$ are an orthonormal basis for the Hilbert space
+$L^2(S^1)$, with inner product
+\[
+\inner{f}{g}=\int_{S^1} f g^* d\mu.
+\]
+We define the {\em Hardy space} $H^2(S^1)$ to be $\bigvee_{n \geq 0} \{e_n\}$.
+As it is a closed subspace of the Hilbert space $L^2(S^1)$, it is itself a Hilbert space. 
+For $f \in L^2(S^1)$, we denote $f^*(z)=\overline{f(z)}$.
+
+The following is Problem 26 of Halmos. Note $f^*(z)=\overline{f(z)}$.
+
+\begin{theorem}
+If $f \in H^2(S^1)$ and $f^*=f$, then $f$ is constant.
+\end{theorem}
+\begin{proof}
+If $g_n \in L^2(S^1)$ and $g_n \to g \in L^2(S^1)$, then
+\[
+\norm{g_n^*-g^*}=\norm{g_n-g} \to 0.
+\]
+Thus $g \mapsto g^*$ is continuous $L^2(S^1) \to L^2(S^1)$.
+
+If $g \in L^2(S^1)$, then, as $e_n, n \in \mathbb{Z}$ is an orthonormal basis for $L^2(S^1)$, we have
+ $g=\lim_{N \to \infty} \sum_{|n| \leq N} \inner{g}{e_n} e_n$, and so, as $e_n^*=e_{-n}$,
+\[
+g^* = \lim_{N \to \infty} \sum_{|n| \leq N} (\inner{g}{e_n} e_n)^* = \lim_{N \to \infty} \sum_{|n| \leq N} \overline{\inner{g}{e_n}} e_{-n} 
+= \lim_{N \to \infty} \sum_{|n| \leq N} \overline{\inner{g}{e_{-n}}} e_n.
+\]
+Therefore if $n \in \mathbb{Z}$ then
+\begin{equation}
+\inner{g^*}{e_n}=\overline{\inner{g}{e_{-n}}}.
+\label{gstar}
+\end{equation}
+
+For
+$n>0$,
+\[
+\inner{f}{e_n}=\inner{f^*}{e_n}=\overline{\inner{f}{e_{-n}}}=0;
+\]
+the first equality is because $f^*=f$, the second equality is by what we showed for any element of $L^2(S^1)$, and the third equality
+is because $f \in H^2(S^1)$. It follows that $f \in \Span\{e_0\}$, and thus that $f$ is constant.
+\end{proof}
+
+If $g \in L^2(S^1)$, define $\Re g \in L^2(S^1)$ by
+\[
+\Re g = \frac{g+g^*}{2}
+\]
+and $\Re g \in L^2(S^1)$ by
+\[
+\Im g = \frac{g-g^*}{2i}.
+\]
+$g = \sum_{n \in \mathbb{Z}} \inner{g}{e_n} e_n$ and, by \eqref{gstar}, $g^*=\sum_{n \in \mathbb{Z}} \inner{g^*}{e_n}e_n=\sum_{n \in \mathbb{Z}} \overline{\inner{g}{e_{-n}}} e_n$, so
+\[
+\Re g = \frac{1}{2} \left( \sum_{n \in \mathbb{Z}}  \inner{g}{e_n} e_n + \sum_{n \in \mathbb{Z}} \overline{\inner{g}{e_n}} e_n^* \right)
+=\frac{1}{2} \sum_{n \in \mathbb{Z}} \left(  \inner{g}{e_n} +  \overline{\inner{g}{e_{-n}}} \right) e_n,
+\]
+and
+\begin{equation}
+\Im g = \frac{1}{2i} \left(  \sum_{n \in \mathbb{Z}} \inner{g}{e_n} e_n  -\sum_{n \in \mathbb{Z}} \overline{\inner{g}{e_{-n}}} e_n\right)
+=\frac{1}{2i} \sum_{n \in \mathbb{Z}} \left(  \inner{g}{e_n} -  \overline{\inner{g}{e_{-n}}}\right) e_n.
+\label{imfourier}
+\end{equation}
+$g = \Re g + i \Im g$, and we have $(\Re g)^*=\Re g$ and $(\Im g)^*=\Im g$; that is, both $\Re g$ and $\Im g$ are real valued, like how the real and imaginary parts of a complex number are both real numbers.
+
+
+The following is Problem 35 of Halmos. In words, it states that a real valued $L^2$ function $u$ has a corresponding real valued $L^2$ function  $v$
+(made unique by demanding that $v$ have $0$ constant term) such that the sum $u+iv$ is an element of the Hardy space $H^2$. This $v$ is called
+the {\em Hilbert transform} of $u$. This is analogous to how if $u$ is
+harmonic on an open subset $\Omega$ of $\mathbb{R}^2$, then $g(x+iy)=u_x(x,y)-iu_y(x,y)$ satisfies the Cauchy-Riemann equations at every point in $\Omega$ 
+and hence is holomorphic on $\Omega$. Since $g$ is holomorphic on $\Omega$, for every $z_0 \in \Omega$ there is some open neighborhood of $z$ on which $g$ has a primitive
+$f$ ($g$ might not have a primitive defined on $\Omega$, e.g. $g(z)=\frac{1}{z}$ on $\Omega=\mathbb{C} \setminus \{0\}$), and there is a constant $c$ such that $u(x,y)=\Re f(x+iy)+c$
+for
+all $(x,y)$ in this neighborhood. $u$ and $v(x,y)=\Im f(x+iy)+c$ are called {\em harmonic conjugates}.
+
+
+
+\begin{theorem}
+If $u \in L^2(S^1)$ and $u^*=u$, then there is a unique $v \in L^2(S^1)$ such that $v^*=v$, $\inner{v}{e_0}=0$, and $u+iv \in H^2(S^1)$.
+\end{theorem}
+\begin{proof}
+Define $D:\{u \in L^2(S^1): u^*=u\} \to H^2(D)$ by 
+\[
+\inner{Du}{e_n}=\begin{cases}
+\inner{u}{e_0}&n=0,\\
+\inner{u}{e_n}+\overline{\inner{u}{e_{-n}}}&n>0,\\
+0&n<0.
+\end{cases}
+\]
+As $|a+b|^2 \leq 2|a|^2  + 2|b|^2$, and using Parseval's identity,
+\begin{eqnarray*}
+\sum_{n \geq 0} |\inner{Du}{e_n}|^2&=&|\inner{u}{e_0}|^2 + \sum_{n>0} |\inner{u}{e_n}+\overline{\inner{u}{e_{-n}}}|^2\\
+&\leq&|\inner{u}{e_0}|^2 + 2 \sum_{n>0} |\inner{u}{e_n}|^2 + |\overline{\inner{u}{e_{-n}}}|^2\\
+&=&|\inner{u}{e_0}|^2 + 2\sum_{n \neq 0}  |\inner{u}{e_n}|^2\\
+&\leq&2\norm{u}^2.
+\end{eqnarray*}
+This is finite, hence $Du \in H^2(S^1)$.
+
+For any $g \in L^2(S^1)$ and $n \in \mathbb{Z}$, by \eqref{gstar} we have $\inner{g^*}{e_n}=\overline{\inner{g}{e_{-n}}}$. As $u^*=u$,
+if $n \in \mathbb{Z}$ then $\inner{u}{e_n}=\overline{\inner{u}{e_{-n}}}$. Using this, we check that $\Re Du=u$.
+
+Put $v = \Im Du$, hence $Du=u+iv$. $\inner{u}{e_0}=\overline{\inner{u}{e_0}}$ gives
+ $\inner{Du}{e_0}=\overline{\inner{Du}{e_0}}$, and applying this and  
+ \eqref{imfourier} we get $\inner{v}{e_0}=0$. Thus $v$ satisfies the conditions $v^*=v$, $\inner{v}{e_0}=0$, and $u+iv \in H^2(S^1)$.
+We are not obliged to do so, but let's write out the Fourier coefficients of $v$. 
+If $n \in \mathbb{Z}$ then, using $\inner{u}{e_n}=\overline{\inner{u}{e_{-n}}}$,
+\begin{eqnarray*}
+\inner{v}{e_n}&=& \inner{\Im Du}{e_n}\\
+&=&\frac{1}{2i}  \left(  \inner{Du}{e_n} -  \overline{\inner{Du}{e_{-n}}}\right)\\
+&=&\begin{cases}
+0&n=0\\
+\frac{1}{2i}\left( \inner{u}{e_n}+\overline{\inner{u}{e_{-n}}} \right)&n>0\\
+-\frac{1}{2i} \overline{\left( \inner{u}{e_{-n}}+\overline{\inner{u}{e_n}} \right)}&n<0 
+\end{cases}\\
+&=&\begin{cases}
+0&n=0\\
+\frac{1}{2i}\left( \inner{u}{e_n}+\overline{\inner{u}{e_{-n}}} \right)&n>0\\
+-\frac{1}{2i}\left( \inner{u}{e_n}+\overline{\inner{u}{e_{-n}}} \right)&n<0
+\end{cases}\\
+&=&\begin{cases}
+0&n=0\\
+\frac{1}{i} \inner{u}{e_n}&n>0\\
+-\frac{1}{i} \inner{u}{e_n}&n<0.
+\end{cases}
+\end{eqnarray*}
+Thus $\inner{v}{e_n}=-i\sgn(n) \inner{u}{e_n}$.
+
+If $f \in H^2(S^1)$, then, as $\inner{\Re f}{e_n}=\frac{\inner{f}{e_n} +\overline{\inner{f}{e_{-n}}}}{2}$,
+\begin{eqnarray*}
+\inner{D\Re f}{e_n} & =&
+\begin{cases}
+\frac{ \inner{f}{e_0} +\overline{\inner{f}{e_0}}}{2}&n=0\\
+\frac{\inner{f}{e_n} +\overline{\inner{f}{e_{-n}}}}{2}+\frac{\overline{\inner{f}{e_{-n}}} +\inner{f}{e_n}}{2}&n>0\\
+0&n<0.
+\end{cases}\\
+&=&\begin{cases}
+\frac{ \inner{f}{e_0} +\overline{\inner{f}{e_0}}}{2}&n=0\\
+\inner{f}{e_n}&n>0\\
+0&n<0
+\end{cases}\\
+&=&\begin{cases}
+\frac{ \inner{f}{e_0} +\overline{\inner{f}{e_0}}}{2}&n=0\\
+\inner{f}{e_n}&n \neq 0
+\end{cases}
+\end{eqnarray*}
+Thus 
+\begin{eqnarray*}
+\inner{f-D\Re f}{e_n}&=&\begin{cases}
+\frac{ \inner{f}{e_0} - \overline{\inner{f}{e_0}}}{2}&n=0\\
+0&n \neq 0
+\end{cases}\\
+&=&\begin{cases}
+i\cdot \inner{\Im f}{e_0}&n=0\\
+0&n \neq 0
+\end{cases}
+\end{eqnarray*}
+\end{proof}
+
+\end{document}

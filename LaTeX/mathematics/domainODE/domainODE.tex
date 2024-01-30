@@ -1,0 +1,367 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\begin{document}
+\title{What is the domain of a solution of an ODE?}
+\author{Jordan Bell}
+\date{April 16, 2015}
+
+\maketitle
+
+\section{Introduction}
+This paper is about the question: what is the domain of the solution of a differential equation? In other words, what are {\em blow-up conditions} for a solution of an ordinary differential equation?
+
+
+We cannot properly speak about a function before knowing its domain. An older notion of function is an ``analytical expression'' (see \cite[p.~61]{MR0497639}, \cite{kleiner} and \cite[Chapter 5]{stewart}), in which the rules of the game
+allow us to write an expression like $\sqrt{\sin x}$ and then ask what its domain is, rather than letting $E=[0,\pi]$ and defining $f:E \to \mathbb{R}$ by
+$f(x)=\sqrt{\sin x}$. But I would like to speak about functions, not analytical expressions, and before we can manipulate a function in order to find an explicit expression for it, we must first know that the function exists, and it must have a 
+certain domain, which we may be able to  determine explicitly. In other words, one can solve a differential equation by supposing that there is a solution and using the fact
+that it solves the differential equation to show that it must have an explicit form, and then checking that the explicit function you end up with actually does solve the differential equation;
+but in this paper we would like to only talk about the properties of functions we already know exist, and to be guaranteed that the function we end up with is a solution because
+of the correctness of each step we took, not by manually checking that a certain expression we have found actually is a solution. (Indeed, there are places where it is a helpful
+exploratory device to assume that a sequence has a limit, like with a recurrent sequence, to find what the limit would have to be, and then to prove that this is the limit of the sequence.)
+
+
+
+We can prove that a solution exists on some interval around $0$, but how big is this interval? 
+To get our hands on an expression for $x(t)$
+we need to talk about $x(t)$, and how can we talk about $x(t)$ before we know the domain of $x$? Of course
+we can check whether an expression given by an oracle is a solution of an initial value problem on some interval. But we would like to
+be certain that each step we take in determining the form of a solution is correct, so that we end up with a function, defined on a certain interval, that solves
+the initial value problem.
+
+If we know the current state of a system and the way that it changes instantaneously, we would like to know
+its state at any future time. But it can happen that it doesn't make sense to ask what  the state of the system is at some later time. 
+
+
+The existence and uniqueness theorem is presented and discussed in 
+ Forsyth \cite[pp. 26--41, Chapter II]{forsyth}, Painlev\'e \cite{painleve}, and Ince \cite{ince}, and is also presented
+in each of the references for Theorem \ref{extension}. See also \cite{roberts}. The history of differential equations is presented in \cite{archibald}. Liouville's
+anticipation of Picard approximations is explained in \cite[p.~448, \S 32]{lutzen}.
+See also Youschkevitch \cite{MR661918} and Mawhin \cite{mawhin}. See also Tourn\'es \cite{tournes}.
+
+
+\section{Maximal interval of existence}
+For $u \in \mathbb{R}^2$ and $r>0$, we define $B_r(u)=\{v \in \mathbb{R}^2: |u-v| < r\}$.
+(For $u_1=(x_1,t_1), u_2=(x_2,t_2) \in \mathbb{R}^2$, $|u_1-u_2|=\sqrt{|x_1-x_2|^2+|t_1-t_2|^2}$.)
+Let $E \subseteq \mathbb{R}^2$. We say that $f:E \to \mathbb{R}$ is {\em locally Lipschitz} if for each $u \in E$
+there is some $\delta$ and some $K$  such that if $v,w \in B_\delta(u)$ then $|f(v)-f(w)| \leq K|v-w|$. 
+
+A helpful way to check that a function is locally Lipschitz is the following \cite[p.~218, Theorem]{arnold}. If $E \subseteq \mathbb{R}^2$ is open
+and the gradient $\nabla f:E \to \mathbb{R}^2$ of $f:E \to \mathbb{R}$ is continuous, then for
+any convex compact subset $A$ of $E$ and  with $K=\max_{u \in A} |(\nabla f)(u)|$ we have
+$|f(u)-f(v)| \leq K|u-v|$ for all $u,v \in A$. It follows that if the gradient of $f:E \to \mathbb{R}$ is continuous, then $f$ is locally Lipschitz.
+
+For example, let $E=\{(x,t) \in \mathbb{R}^2: x \neq 0\}$, and define $f:E \to \mathbb{R}$ by $f(x,t)=\frac{t^2}{x}$. 
+Then $\nabla f:E \to \mathbb{R}^2$,
+\[
+(\nabla f)(x,t)=\begin{pmatrix}-\frac{t^2}{x^2}\\ \frac{2t}{x} \end{pmatrix},
+\]
+is continuous, and hence $f$ is locally Lipschitz. (Indeed, $\nabla f$ is  unbounded on $E$, and thus $f:E \to \mathbb{R}$ is not Lipschitz.)
+
+
+
+Let $E \subseteq \mathbb{R}^2$ be open, let $f:E \to \mathbb{R}$, and let
+$(x_0,t_0) \in E$. A {\em solution of the initial value problem}
+\[
+x'=f(x,t), \qquad x(t_0)=x_0
+\]
+is an interval $J$ with $t_0 \in J$ and a function $x:J \to \mathbb{R}$ satisfying $x(t_0)=x_0$ and $x'(t)=f(x(t),t)$ for all $t \in J$.
+
+The {\em existence and uniqueness theorem for ordinary differential equations} is the following.
+
+\begin{theorem}
+Let $E \subseteq \mathbb{R}^2$, let $f:E \to \mathbb{R}$ be locally Lipschitz, and let $(x_0,t_0) \in E$. There is some
+$\epsilon>0$ such that there is one and only one $x:(t_0-\epsilon,t_0+\epsilon) \to \mathbb{R}$ that is a solution of the initial value problem
+\[
+x'=f(x,t), \qquad x(t_0)=x_0.
+\]
+\end{theorem}
+
+We say that an interval $J$ is a {\em maximal interval of existence} for an initial value problem if there is a solution
+of the initial value problem defined on $J$, and if for any interval $J'$ that strictly includes $J$, there is no solution
+of the initial value problem defined on $J'$. Cf. maximal domain of holomorphic function \cite[p.~112, \S 2]{remmert}. Lefschetz  \cite[p.~35]{lefschetz}: ``The analogy with the classical process of
+analytic continuation is obvious.'' If we would like to speak about ``the'' solution of an initial value problem, what we would mean is a solution with a maximal domain.
+
+Let $E \subseteq \mathbb{R}^2$ be open, $f:E \to \mathbb{R}$ be locally Lipschitz, and let
+$(x_0,t_0) \in E$. There exists \cite[p.~51, Theorem 2.13]{teschl} a maximal interval of existence $J=(\alpha,\beta)$, $-\infty \leq \alpha< t_0 <\beta \leq \infty$,
+for the initial value problem
+\[
+x'(t)=f(x(t),t), \qquad x(t_0)=x_0.
+\]
+
+It is useful to talk about the maximal domain of existence for an initial value problem
+because we can say things about the behavior of the solution as $t$ approaches the endpoints
+of the interval. There isn't a simple way of determining the maximal domain of existence of an initial value problem
+other than by explicitly finding the solution. But there are indeed differential equations whose solutions cannot be expressed in terms of elementary functions: Hubbard 
+and Lundell \cite{hubbard} make precise what it means to be expressed in terms of elementary functions, and
+show that no solution of $x'=t-x^2$ can be thus expressed. And in fact there exist computable $f$ such that the maximal interval of existence of
+initial value problem $x'=f(x,t), x(0)=x_0$
+is not computable \cite{MR2485412}.
+
+The following theorem is proved in Arnold \cite[p.~53, Corollary 5]{arnold}, in which it is called the {\em extension theorem}. It is also proved in Graves \cite{graves}, Hurewicz \cite[p.~17, Corollary]{hurewicz}, Bourbaki \cite[p.~172, Theorem 2]{bourbaki}, Coddington and Levinson \cite[p.~47, Theorem 1.3]{coddington}, Lefschetz \cite[p.~35]{lefschetz}, Hartman \cite[p.~12, Theorem 3.1]{hartman}, Hale \cite{hale}, Hirsch, Smale and Devaney \cite[p.~398, Theorem]{hirsch}, and Teschl \cite[p.~53, Corollary 2.16]{teschl}, as well as in other books.
+
+\begin{theorem}
+\label{extension}
+Let $E \subseteq \mathbb{R}^n$ be
+open, let $f:E \to \mathbb{R}$ be locally Lipschitz, and let $(x_0,t_0) \in E$. Let
+$J=(\alpha,\beta)$ be the maximal interval of existence for the initial value problem
+\[
+x'(t)=f(x(t),t), \qquad x(t_0)=x_0.
+\]
+If $\beta$ is finite, then for any compact set $K \subset E$ there is some
+$t \in [t_0,\beta)$ such that $(x(t),t) \not \in K$. If $\alpha$ is finite, then for any compact set
+$K \subset E$ there is some $t \in (\alpha,t_0]$ such that $(x(t),t) \not \in K$.
+\end{theorem}
+
+It follows
+that as $t \to \alpha$ or $t \to \beta$,
+either $|x(t)| \to \infty$ or $(x(t),t)$ has a limit point on the boundary of $E$ (and any limit point of $(x(t),t)$ is on the boundary of $E$). 
+In particular, if $E=\mathbb{R}^2$ then $\lim_{t \to \alpha} |x(t)|=\infty$ and $\lim_{t \to \beta} |x(t)| \to \infty$.
+
+
+\section{Two examples}
+\textbf{Example 1.} Consider the initial value problem
+\[
+x'=2t x^2, \qquad x(0)=x_0.
+\]
+Let us do this very carefully.
+Let $x$ have maximal domain $(\alpha,\beta)$. If $x_0=0$, then $x(t)=0$ is a solution of the initial value problem,
+and the domain of the solution is $\mathbb{R}$. Otherwise, suppose $x_0 \neq 0$. If there is some $t \in (\alpha,0)$ such that $x(t)=0$, then let
+\[
+A=\sup \{t \in (\alpha,0): x(t)=0\};
+\]
+if there is no $t \in (\alpha,0)$ such that $x(t)=0$, then let $A=\alpha$. Since $x:(\alpha,\beta) \to \mathbb{R}$ is continuous, it follows that $A < 0$.
+Likewise, if there is some $t \in (0,\beta)$ such that $x(t)=0$, then let
+\[
+B=\inf \{t \in (0,\beta): x(t)=0\};
+\]
+if there is no $t \in (0,\beta)$ such that $x(t)=0$, then let $B=\beta$. Since $x$ is continuous, $B > 0$.
+
+Let $g(u)=-u^{-1}$.
+For $t \in (A,B)$, since $x'(t)=2t (x(t))^2$ and $x(t) \neq 0$, we have
+\[
+\frac{d (g \circ x)}{dt}(t)-2t=\frac{x'(t)-2t(x(t))^2}{(x(t))^2}=0.
+\]
+Then, for $t \in (A,B)$, we have
+\[
+\int_0^t \frac{d (g \circ x)}{ds}(s)-2s ds = 0.
+\]
+Hence,
+\[
+g(x(t))-g(x(0))-t^2=0,
+\]
+i.e.
+\[
+-\frac{1}{x(t)}+\frac{1}{x_0}-t^2=0.
+\]
+Therefore, if $t \in (A,B)$ then
+\begin{equation}
+x(t)=\frac{x_0}{1-t^2x_0}.
+\label{explicit1}
+\end{equation}
+If $A > \alpha$ then there is indeed at least one $t \in (\alpha,0)$ such that $x(t)=0$, and in particular $x(A)=0$. So, as $x:(\alpha,\beta) \to \mathbb{R}$ is continuous,
+\[
+\lim_{t \to A} x(t) = 0.
+\]
+But it follows from \eqref{explicit1} that
+\[
+\lim_{t \to A} x(t) = \frac{x_0}{1-A^2 x_0} \neq 0.
+\]
+Thus $A = \alpha$. Likewise, 
+\[
+\lim_{t \to B} x(t) = \frac{x_0}{1-B^2 x_0} \neq 0,
+\]
+and thus $B=\beta$. Therefore $(A,B)=(\alpha,\beta)$. 
+
+If $\alpha \neq -\infty$, then 
+\[
+\lim_{t \to \alpha} |x(t)| = \infty,
+\]
+and if $\beta \neq +\infty$, then
+\[
+\lim_{t \to \beta} |x(t)| = \infty.
+\]
+Suppose that $x_0<0$. Then
+\[
+\lim_{t \to \alpha} |x(t)| = \frac{x_0}{1-\alpha^2 x_0} \neq \infty.
+\]
+Hence $\alpha=-\infty$. And 
+\[
+\lim_{t \to \beta} |x(t)| = \frac{x_0}{1-\beta^2 x_0} \neq \infty,
+\]
+hence $\beta=+\infty$. Therefore, if $x_0<0$, then $x$ has domain $\mathbb{R}$.
+
+Suppose that $x_0>0$. If $\alpha < \frac{1}{\sqrt{x_0}}$, then
+\[
+\lim_{t \to \alpha} |x(t)| = \frac{x_0}{1-\alpha^2 x_0} \neq \infty,
+\]
+as $1-\alpha^2 x_0>0$. Therefore $\alpha \geq -\frac{1}{\sqrt{x_0}}$. Since $\lim_{t \to  -\frac{1}{\sqrt{x_0}}}  |x(t)|=\infty$, it follows that
+$\alpha=-\frac{1}{\sqrt{x_0}}$. Likewise,
+$\beta=\frac{1}{\sqrt{x_0}}$. Therefore, if $x_0>0$, then $x$ has domain $\left(- \frac{1}{\sqrt{x_0}},\frac{1}{\sqrt{x_0}} \right)$.
+
+
+\textbf{Example 2.} Now let's do an example of an initial value problem where the domain of the vector field is not $\mathbb{R}^2$. 
+Consider the initial value problem
+\[
+x'=\frac{1}{1-t}\cdot \frac{1}{1-x}, \qquad x(0)=x_0.
+\]
+Let $E=\mathbb{R}^2 \setminus \{(1,1)\}$; the boundary of $E$ is $\{(1,1)\}$. 
+
+Let $x$ have maximal domain $(\alpha,\beta)$. Let $g(u)=u-\frac{u^2}{2}$. If $t \in (\alpha,\beta)$ then
+\[
+\frac{d (g \circ x)}{dt}(t)-\frac{1}{1-t}=x'(t)-x(t)x'(t)-\frac{1}{1-t}=0.
+\]
+Thus
+\[
+\int_0^t \frac{d (g \circ x)}{ds}(s)-\frac{1}{1-s} ds=0,
+\]
+so
+\[
+g(x(t))-g(x_0)+\log(1-t)=0.
+\]
+That is,
+\[
+\frac{(x(t))^2}{2}-x(t)+g(x_0)-\log(1-t)=0.
+\]
+Using the quadratic formula, we either have
+\[
+x(t)=1+\sqrt{1-2(g(x_0)-\log(1-t))}
+\]
+or
+\[
+x(t)=1-\sqrt{1-2(g(x_0)-\log(1-t))}.
+\]
+
+If $x_0>1$ then, since $x$ is continuous and $x(t)$ cannot be equal to $1$, we have
+\[
+x(t)=1+\sqrt{1-2g(x_0)+\log(1-t)}.
+\]
+As $x(t)$ is a real number,  $1-2g(x_0)+\log(1-t) \geq 0$, i.e. $\log(1-t) \geq g(x_0)-\frac{1}{2}$, i.e.
+$1-t \geq \exp(g(x_0)-\frac{1}{2})$, i.e. $t \leq 1-\exp\left(x_0 - \frac{x_0^2}{2}-\frac{1}{2}\right)$. Let $B=1-\exp\left(x_0 - \frac{x_0^2}{2}-\frac{1}{2}\right)$. 
+As $t \to \beta$, either $|x(t)| \to \infty$ or $(1,1)$ is a limit point of $(x(t),t)$. But if $\beta < B$, then
+\[
+\lim_{t \to \beta} x(t)=1+\sqrt{1-2g(x_0)+\log(1-\beta)}>0,
+\]
+from which we conclude two things:
+$\lim_{t \to \beta} |x(t)| \neq \infty$, and $(1,1)$ is not a limit point of $(x(t),t)$ as $t \to \beta$. It follows that $\beta=B$. On the other hand, 
+if $\alpha \neq -\infty$, then $\lim_{t \to \alpha} |x(t)|=\infty$ (because $(1,1)$ cannot be limit point of $(x(t),t)$ as $t \to \alpha$, since $\alpha<0$). 
+But 
+\[
+\lim_{t \to \alpha} x(t)=1+\sqrt{1-2g(x_0)+\log(1-\alpha)},
+\]
+so $\lim_{t \to \alpha} |x(t)| \neq \infty$. It follows that $\alpha=-\infty$. Therefore, if $x_0>1$ then
+\[
+x(t)=1+\sqrt{1-2x_0+\frac{x_0^2}{2}+2\log(1-t)},
+\]
+and the domain of $x$ is
+\[
+\left( -\infty, 1-\exp\left(x_0 - \frac{x_0^2}{2}-\frac{1}{2}\right) \right).
+\]
+
+If $x_0<1$, then likewise,
+\[
+x(t)=1+\sqrt{1-2x_0+\frac{x_0^2}{2}+2\log(1-t)},
+\]
+and the domain of $x$ is also
+\[
+\left( -\infty, 1-\exp\left(x_0 - \frac{x_0^2}{2}-\frac{1}{2}\right) \right).
+\]
+
+\section{The implicit function theorem and exact differential equations}
+Exact differential equation. Consider the initial value problem
+\[
+x'=\frac{\cos x}{t\sin x-x^2}, \qquad x(0)=x_0.
+\]
+Let $E=\{(x,t) \in \mathbb{R}^2: t\sin x-x^2 \neq 0\}$.  Let $x$ have maximal domain $(\alpha,\beta)$.
+
+Let $\psi(x,t)=t\cos x+\frac{x^3}{3}$. For $t \in (\alpha,\beta)$, we have
+\begin{eqnarray*}
+\frac{d}{dt} (\psi(x(t),t))&=&\psi_t(x(t),t)+\psi_x(x(t),t)x'(t)\\
+&=&\cos(x(t))+(-t\sin(x(t))+(x(t))^2)x'(t)\\
+&=&0.
+\end{eqnarray*}
+Therefore, for $t \in (\alpha,\beta)$,
+\[
+\int_0^t \frac{d}{ds} (\psi(x(s),s))  ds=0,
+\]
+and so
+\[
+\psi(x(t),t)-\psi(x(s),0)=0,
+\]
+i.e.,
+\begin{equation}
+t\cos(x(t))+\frac{(x(t))^3}{3}-\frac{x_0^3}{3}=0.
+\label{curve}
+\end{equation}
+
+
+The implicit function theorem \cite[p.~36, Theorem 3.2.1]{MR1894435}: If $W \subseteq \mathbb{R}^2$ is open, $F:W \to \mathbb{R}$ has a continuous gradient, $(p_0,q_0) \in W$,
+$F(p_0,q_0)=0$, and $\frac{\partial F}{\partial q}(p_0,q_0) \neq 0$, then there exists an open interval $I$, $p_0 \in I_0$, such that there is one and only
+one $h:I_0 \to \mathbb{R}$ whose derivative is continuous and that satisfies $h(p_0)=q_0$ and $F(p,h(p))=0$ for all $p \in I_0$.
+Similar to why there is a maximal interval of existence for an initial value problem with a locally unique solution (cf. \cite[p.~51, Theorem 2.13]{teschl}), there is an
+interval $I=(A,B)$, $p_0 \in I$, such that there is one and only one $h:I \to \mathbb{R}$ satisfying $h(p_0)=q_0$ and $F(p,h(p))=0$ for all $p \in I$, and for any interval
+$I'$ that strictly contains $I$ there is no $h:I \to \mathbb{R}$ satisfying $h(p_0)=q_0$ and $F(p,h(p))=0$ for all $p \in I'$. Moreover, like Theorem
+\ref{extension}, if $A \neq -\infty$ then
+$\frac{\partial F}{\partial q}(p,h(p)) \to 0$ as $p \to A$, and if $B \neq +\infty$ then $\frac{\partial F}{\partial q}(p,h(p)) \to 0$ as $p \to B$.
+
+Let's apply this to our initial value problem. Define $F:\mathbb{R}^2 \to \mathbb{R}$ by $F(p,q)=p\cos(q)+\frac{q^3}{3}-\frac{x_0^3}{3}$.
+Let $(A,B)$, $A<0<B$, be the maximal interval such that there exists $h:(A,B) \to \mathbb{R}$ satisfying $h(0)=x_0$ and $F(p,h(p))=0$ for
+all $p \in (A,B)$. 
+For $(p,q) \in \mathbb{R}^2$,
+$\frac{\partial F}{\partial q}(p,q)=-p\sin q+q^2$. Thus, $F(p,q)=0$ and $\frac{\partial F}{\partial q}(p,q)=0$ means
+\begin{equation}
+p\cos q+\frac{q^3}{3}-\frac{x_0^3}{3}=0 \qquad \textrm{and}  \qquad -p\sin q+q^2=0.
+\label{locus}
+\end{equation}
+It follows that $A$ is the greatest negative $p$ for which is a $q$ so that $p$ and $q$ satisfy \eqref{locus},
+and  $B$ is the least positive $p$ for which there is a $q$ so that $p$ and $q$ satisfiy \eqref{locus}.
+
+But $x(t)$ satisfies \eqref{curve} for each $t \in (\alpha,\beta)$, and $(A,B)$ is the maximal interval for which there is some $h:(A,B) \to \mathbb{R}$ satisfying $h(0)=x_0$ and
+\eqref{curve} for each $t \in (A,B)$. Hence $\alpha \geq A$ and $\beta \leq B$.  If $\alpha>A$ then either $\lim_{t \to \alpha}|x(t)|=\infty$ or $(x(t),t)$ has a limit point on 
+$\partial E=\{(x,t) \in \mathbb{R}^2: t\sin x-x^2 = 0\}$; the first of these contradicts
+\[
+\lim_{t \to \alpha}|x(t)|=\lim_{t \to \alpha} |h(t)|=|h(\alpha)|,
+\]
+and the second of these contradicts the minimality of $A$. Thus $\alpha=A$ and $\beta=B$.
+
+Therefore, $x$ is the unique $h:(A,B) \to \mathbb{R}$ that satisfies  \eqref{curve}, where $A$ is the greatest negative $p$ for which is a $q$ so that $p$ and $q$ satisfy \eqref{locus},
+and  $B$ is the least positive $p$ for which there is a $q$ so that $p$ and $q$ satisfiy \eqref{locus}.
+
+Asking what the domain of the solution of an ODE is is like asking what the domain of an implicit function is. Some historical references
+I have collected about implicit functions are Ulisse Dini's {\em Lezioni di analisi infinitesimale}, vol. 1, pp.~197--241;
+page 155 of Leibniz'  {\em Mathematische Schriften}, ed. Gerhardt, vol. I;
+page 241 of Euler's {\em Institutiones Calculi Differentialis}; in a note I have written down Dini 1877-1888, p. 7, but not what the reference is.
+I suppose it's his {\em Fondamenti per la teorica delle funzioni di variabili reali}. Of course, we can also call the inversion of a power series
+with nonzero constant coefficient a case of the implicit function theorem, and certainly Euler and Lagrange could do that; I'm not certain about Newton.
+Three additional references I have written down about the implicit function theorem are \cite{MR0226976}, 
+\cite{MR762062}, and the Russian \cite{MR1046939}.
+
+
+
+\section{Autonomous ODE}
+If $f$ is positive and does not depend on $t$, then we have the following result. Let
+$x_0 \in \mathbb{R}$. If $f:[x_0,\infty) \to \mathbb{R}$ is positive and continuous, then the maximal interval of existence for the initial
+value problem
+\[
+x'=f(x), \qquad x(0)=x_0
+\]
+is $(-\infty,T)$, where
+\[
+T=\int_{x_0}^\infty \frac{du}{f(u)}.
+\]
+Let's check this. 
+
+For example, for $x_0>0$, $p>1$ and $f(x)=x^p$, we have 
+\[
+T=\frac{1}{(p-1)x_0^{p-1}}.
+\]
+
+
+\bibliographystyle{plain}
+\bibliography{domainODE}
+\end{document}

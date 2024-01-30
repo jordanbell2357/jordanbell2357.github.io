@@ -1,0 +1,574 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Banach algebra of functions of bounded variation and the pointwise Helly selection theorem}
+\author{Jordan Bell}
+\date{January 22, 2015}
+
+\maketitle
+
+\section{$BV[a,b]$}
+Let $a<b$. For $f:[a,b] \to \mathbb{R}$, we define\footnote{In this note we speak about functions that take values in $\mathbb{R}$, because
+this makes it simpler to talk about monotone functions. Once the machinery is established we can
+then apply it to the real and imaginary parts of a function that takes values in $\mathbb{C}$.}
+\[
+\norm{f}_\infty = \sup_{t \in [a,b]} |f(t)|,
+\]
+and if $\norm{f}_\infty<\infty$ we say that $f$ is \textbf{bounded}. We define
+$B[a,b]$ to be the set of bounded functions $[a,b] \to \mathbb{R}$, which with the norm $\norm{\cdot}_\infty$ is a Banach algebra.
+
+
+
+A \textbf{partition of $[a,b]$} is a set
+$P=\{t_0,\ldots,t_n\}$ such that $a=t_0<\cdots<t_n=b$. For example, $P=\{a,b\}$ is a partition of $[a,b]$.
+If $Q$ is a partition of $[a,b]$ and $P \subset Q$, we say that $Q$ is a \textbf{refinement} of $P$.
+For $f:[a,b] \to \mathbb{R}$,
+ we define
+\[
+V(f,P) = \sum_{i=1}^n |f(t_i)-f(t_{i-1})|.
+\]
+It is straightforward to show using the triangle inequality that if $Q$ is a refinement of $P$ then
+\[
+V(f,P) \leq V(f,Q).
+\]
+In particular, any partition $P$ is a refinement of $\{a,b\}$, so
+\[
+|f(b)-f(a)| \leq V(f,P).
+\]
+
+
+The \textbf{total variation} of $f:[a,b] \to \mathbb{R}$ is 
+\[
+V_a^b f = \sup \{V(f,P): \textrm{$P$ is a partition of $[a,b]$}\},
+\]
+and if $V_a^b f <\infty$ we say that $f$ is of \textbf{bounded variation}. We denote by $BV[a,b]$ the set of functions $[a,b] \to \mathbb{R}$ of bounded
+variation. 
+For a function $f \in BV[a,b]$, we define 
+$v:[a,b] \to \mathbb{R}$ by $v(x)=V_a^x f$ for $x \in [a,b]$, called
+the \textbf{variation of $f$}.
+
+If $f:[a,b] \to \mathbb{R}$ is monotone, it is straightforward to check that
+$V_a^b f =|f(b)-f(a)|$,
+ hence that $f$
+is of bounded variation.
+
+
+We first show that $BV[a,b] \subset B[a,b]$.
+
+\begin{lemma}
+If $f:[a,b] \to \mathbb{R}$ is of bounded variation, then
+\[
+\norm{f}_\infty \leq |f(a)|+V_a^b f.
+\]
+\label{supremum}
+\end{lemma}
+\begin{proof}
+Let $x \in [a,b]$ If $x=a$ the result is immediate. If $x=b$, then
+\[
+|f(b)| \leq |f(a)|+|f(b)-f(a)| \leq |f(a)|+V_a^b f.
+\]
+Otherwise, $P=\{a,x,b\}$ is a partition of $[a,b]$ and
+\[
+|f(x)-f(a)| \leq V(f,P) \leq V_a^b f.
+\]
+\end{proof}
+
+The total variation of functions has several properties. The following
+lemma and that fact that functions of bounded variation are bounded imply that $BV[a,b]$ is an algebra.\footnote{N. L. Carothers, {\em Real Analysis}, p.~204, Lemma 13.3.} 
+
+\begin{lemma}
+If $f,g \in BV[a,b]$ and $c \in \mathbb{R}$, then the following statements are true.
+\begin{enumerate}
+\item $V_a^b f=0$ if and only if $f$ is constant.
+\item $V_a^b(cf)=|c| V_a^b(f)$.
+\item $V_a^b(f+g) \leq V_a^b f+V_a^b g$.
+\item $V_a^b(fg) \leq \norm{f}_\infty V_a^b g+\norm{g}_\infty V_a^b f$.
+\item $V_a^b |f| \leq V_a^b f$.
+\item $V_a^b f = V_a^x f + V_x^b$ for $a \leq x \leq b$.
+\end{enumerate}
+\label{norm}
+\end{lemma}
+
+
+\begin{lemma}
+If $f:[a,b] \to \mathbb{R}$ is differentiable on $(a,b)$ and $\norm{f'}_\infty < \infty$, then
+\[
+V_a^b f \leq \norm{f'}_\infty (b-a).
+\]
+\end{lemma}
+\begin{proof}
+Suppose that $P=\{a=t_0<\cdots<t_n=b\}$ is a partition of $[a,b]$. 
+By the mean value theorem, 
+for each $j=1,\ldots,n$ there is some $x_j \in (t_{j-1},t_j)$ at which
+\[
+f'(x_j)=\frac{f(t_j)-f(t_{j-1})}{t_j-t_{j-1}}.
+\]
+Then
+\begin{align*}
+V(f,P)&=\sum_{j=1}^n |f(t_j)-f(t_{j-1})|\\
+&=\sum_{j=1}^n (t_j-t_{j-1})|f'(x_j)|\\
+&\leq \norm{f'}_\infty \sum_{j=1}^n (t_j-t_{j-1})\\
+&=\norm{f'}_\infty (b-a).
+\end{align*}
+\end{proof}
+
+
+
+\begin{lemma}
+If $f \in C^1[a,b]$, then
+\[
+V_a^b f \leq \int_a^b |f'(t)| dt.
+\]
+\label{Vupperbound}
+\end{lemma}
+\begin{proof}
+Let $P=\{t_0,\ldots,t_n\}$ be a partition of $[a,b]$. Then, by the fundamental theorem of calculus,
+  \begin{align*}
+  V(f,P)  &=\sum_{j=1}^n |f(t_j)-f(t_{j-1})|\\
+  &\leq \sum_{j=1}^n \left| \int_{t_{j-1}}^{t_j} f'(t) \right|\\
+  & \leq  \sum_{j=1}^n  \int_{t_{j-1}}^{t_j} |f'(t)| dt\\
+  &=\int_a^b |f'(t)| dt.
+  \end{align*}
+  Therefore
+  \[
+  V_a^b f = \sup_P V(f,P) \leq \int_a^b |f'(t)| dt.
+  \]
+\end{proof}
+
+
+\begin{lemma}
+If $f:[a,b] \to \mathbb{R}$ is a polynomial, then 
+\[
+V_a^b f = \int_a^b |f'(t)| dt.
+\]
+\end{lemma}
+\begin{proof}
+Because $f$ is a polynomial, $f$ is also, so $f'$ is piecewise monotone, say
+$f'=c_j|f'|$ on $(t_{j-1},t_j)$ for $j=1,\ldots,n$, for some $c_j \in \{+1,-1\}$ and
+$a=t_0<\cdots<t_n=b$. 
+Then 
+\[
+\int_{t_{j-1}}^{t_j} |f'(t)| dt
+= c_j \int_{t_{j-1}}^{t_j} f'(t) dt
+= c_j(f(t_j)-f(t_{j-1})),
+\]
+giving, because $t_0<\cdots<t_n$ is a partition of $[a,b]$,
+\begin{align*}
+\int_a^b |f'(t)| dt&=\sum_{j=1}^n \int_{t_{j-1}}^{t_j} |f'(t)| dt\\
+&=\sum_{j=1}^n c_j(f(t_j)-f(t_{j-1}))\\
+&\leq \sum_{j=1}^n |f(t_j)-f(t_{j-1})|\\
+&\leq V_a^b f.
+\end{align*}
+\end{proof}
+
+
+
+
+
+\begin{lemma}
+If $f_m$ is a sequence of functions $[a,b] \to \mathbb{R}$ that converges pointwise to some
+$f:[a,b] \to \mathbb{R}$ and $P$ is some partition of $[a,b]$, then
+\[
+V(f_m,P) \to V(f,P).
+\]
+
+If $f_m$ is a sequence in $BV[a,b]$ that converges pointwise to some $f:[a,b] \to \mathbb{R}$, then
+\[
+V_a^b f \leq \liminf_{m \to \infty} V_a^b f_m.
+\]
+\label{pointwise}
+\end{lemma}
+\begin{proof}
+Say $P=\{t_0,\ldots,t_n\}$. Then, because taking the limit of convergent sequences is linear,
+\begin{align*}
+\lim_{m \to \infty} V(f_m,P)&=\lim_{m \to \infty} \sum_{j=1}^n |f_m(t_j)-f_m(t_{j-1})|\\
+&=\sum_{j=1}^n \lim_{m \to \infty}    |f_m(t_j)-f_m(t_{j-1})|\\
+&=\sum_{j=1}^n |f(t_j)-f(t_{j-1})|\\
+&=V(f,P).
+\end{align*}
+
+Let $P=\{t_0,\ldots,t_n\}$ be a partition of $[a,b]$.  Then
+\begin{align*}
+V(f,P)&=\sum_{j=1}^n |f(t_j)-f(t_{j-1})|\\
+&= \sum_{j=1}^n \lim_{m \to \infty} |f_m(t_j)-f_m(t_{j-1})|\\
+&= \lim_{m \to \infty} V(f_m,P)\\
+&\leq \liminf_{m \to \infty} V_a^b f_m.
+\end{align*}
+This is true for any partition $P$ of $[a,b]$, which yields
+\[
+V_a^b f \leq \liminf_{m \to \infty} V_a^b f_m.
+\]
+\end{proof}
+
+We now prove that $BV[a,b]$ is a Banach space.\footnote{N. L. Carothers, {\em Real Analysis}, p.~206, Theorem 13.4.}
+
+\begin{theorem}
+With the norm
+\[
+\norm{f}_{BV} = |f(a)| + V_a^b f.
+\]
+$BV[a,b]$ is a Banach space.
+\end{theorem}
+\begin{proof}
+Using Lemma \ref{norm}, it is straightforward to check that $BV[a,b]$ is a normed linear space.
+Suppose that $f_m$ is a Cauchy sequence
+in $BV[a,b]$. By Lemma \ref{supremum} it follows that $f_m$ is a Cauchy sequence in $B[a,b]$, and thus converges
+in $B[a,b]$ to some $f \in B[a,b]$.  
+
+Let $P$ be a partition of $[a,b]$ and let $\epsilon>0$. Because $f_n$ is a Cauchy sequence in $BV[a,b]$, there is some
+$N$ such that if $n,m \geq N$ then $\norm{f_m-f_n}_{BV} < \epsilon$. 
+For $n \geq N$, Lemma \ref{pointwise} yields
+\begin{align*}
+\norm{f-f_n}_{BV}&\leq |f(a)-f_n(a)|+V(f-f_n,P)\\
+&=\lim_{m \to \infty} \left( |f_m(a)-f_n(a)|+V(f_m-f_n,P)\right)\\
+&\leq \sup_{m \geq N}  \left( |f_m(a)-f_n(a)|+V(f_m-f_n,P)\right)\\
+&=\sup_{m \geq N} \norm{f_m-f_n}_{BV}\\
+&\leq \epsilon.
+\end{align*}
+Because $f-f_N \in BV[a,b]$ and $f_N \in BV[a,b]$ and
+$BV[a,b]$ is an algebra, $f=(f-f_N)+f_N \in BV[a,b]$. That is, the Cauchy sequence $f_n$ converges
+in $BV[a,b]$ to $f \in BV[a,b]$, showing that $BV[a,b]$ is a complete metric space and thus a Banach space.
+\end{proof}
+
+
+The following theorem shows that a function of bounded of variation can be written as the difference
+of nondecreasing functions.\footnote{N. L. Carothers, {\em Real Analysis}, p.~207, Theorem 13.5.}
+
+\begin{theorem}
+Let $f \in BV[a,b]$ and let $v$ be the variation of $f$.
+Then $v-f$ and $v$ are nondecreasing.
+\label{vnondecreasing}
+\end{theorem}
+\begin{proof}
+If $x,y \in [a,b]$, $x<y$, then, using Lemma \ref{norm},
+\begin{align*}
+v(y)-v(x)&=V_a^y f - V_a^x f\\
+&=V_x^y f\\
+&\geq |f(y)-f(x)|\\
+&\geq f(y)-f(x).
+\end{align*}
+That is, $v(y)-f(y) \geq v(x)-f(x)$, showing that $v-f$ is nondecreasing, and
+because $f$ is nondecreasing we have $f(y) - f(x) \geq 0$ and so $v(y) - v(x) \geq 0$.
+\end{proof}
+
+
+
+
+The following theorem tells us that a function of bounded variation is right or left continuous at a point if and only if its variation is respectively right or left continuous at the point.\footnote{N. L. Carothers, {\em Real Analysis}, p.~207, Theorem 13.9.}
+
+\begin{theorem}
+Let $f \in BV[a,b]$ and let $v$ be the variation of $f$. For $x \in [a,b]$,
+ $f$ is right (respectively left) continuous  at $x$ if and only if $v$ is right (respectively left) continuous at $x$.
+\end{theorem}
+\begin{proof}
+Assume that $v$ is right continuous at $x$. If $\epsilon>0$, there is some $\delta>0$ such that
+$x\leq y<x+\delta$ implies that  $v(y)-v(x) = |v(y)-v(x)| < \epsilon$. If $x\leq y<x+\delta$, then
+\[
+|f(y)-f(x)| \leq v(y)-v(x) < \epsilon,
+\]
+showing that $f$ is right continuous at $x$.
+
+Assume that $f$ is right continuous at $x$, with $a \leq x < b$. Let $\epsilon>0$. There is some
+$\delta>0$ such that $x \leq y<x+\delta$ implies that $|f(y)-f(x)| < \frac{\epsilon}{2}$.
+Because $V_x^b f$ is a supremum over partitions of $[x,b]$, there is some partition $P=\{t_0,t_1,\ldots,t_n\}$ of $[x,b]$ such that
+$V_x^b f - \frac{\epsilon}{2} \leq V(f,P)$.
+Let $x \leq y < \min\{\delta, t_1-x\}$. Then
+$Q=\{t_0,y,t_1,\ldots,t_n\}$ is a refinement of $P$, so
+\begin{align*}
+V_x^b f -\frac{\epsilon}{2}&\leq V(f,P)\\
+&\leq V(f,Q)\\
+&=|f(y)-f(t_0)|+V(f,\{y,t_1,\ldots,t_n\})\\
+&< \frac{\epsilon}{2}+V_y^b f.
+\end{align*}
+Hence
+\[
+\epsilon>V_x^b f - V_y^b f = V_x^y f  = v(y)-v(x) = |v(y)-v(x)|,
+\]
+showing that $v$ is right continuous at $x$.
+\end{proof}
+
+
+
+For $f \in BV[a,b]$ and for $v$ the variation of $f$, we define the \textbf{positive variation of $f$} as
+\[
+p(x)=\frac{v(x)+f(x)-f(a)}{2}, \qquad x \in [a,b],
+\]
+and the \textbf{negative variation of $f$} as
+\[
+n(x)=\frac{v(x)-f(x)+f(a)}{2}, \qquad x \in [a,b].
+\]
+We can write the variation as $v=p+n$. We now establish properties of the positive and negative variations.\footnote{N. L. Carothers, {\em Real Analysis}, p.~209, Proposition 13.11.}
+
+
+\begin{theorem}
+Let $f \in BV[a,b]$, let $v$ be its variation, let $p$ be its positive variation, and let $n$ be its negative variation.
+Then $0 \leq p \leq v$ and $0 \leq n \leq v$, and
+$p$ and $n$ are nondecreasing.
+\end{theorem}
+\begin{proof}
+For $x \in [a,b]$, $v(x)=V_a^x f \geq |f(x)-f(a)|$. Because $v(x) \geq -(f(x)-f(a))$, we have
+$p(x) \geq 0$, and because $v(x) \geq f(x)-f(a)$ we have $n(x) \geq 0$. And then $v=p+n$ implies that
+$p \leq v$ and $n \leq v$.
+
+For $x<y$,
+\begin{align*}
+p(y)-p(x)&=\frac{v(y)+f(y)-v(x)-f(x)}{2}\\
+&=\frac{1}{2}\left(V_x^y f + (f(y)-f(x)) \right)\\
+&\geq \frac{1}{2}\left( |f(y)-f(x)| + (f(y)-f(x))\right)\\
+&\geq 0
+\end{align*}
+and
+\begin{align*}
+n(y)-n(x)&=\frac{v(y)-f(y)-v(x)+f(x)}{2}\\
+&=\frac{1}{2}\left( V_x^y f - (f(y)-f(x)) \right)\\
+&\geq \frac{1}{2}\left( |f(y)-f(x)| - (f(y)-f(x)) \right)\\
+&\geq 0.
+\end{align*}
+\end{proof}
+
+
+
+We now prove that $BV[a,b]$ is a Banach algebra.\footnote{N. L. Carothers, {\em Real Analysis}, p.~209, Proposition 13.12.}
+
+
+\begin{theorem}
+$BV[a,b]$ is a Banach algebra.
+\end{theorem}
+\begin{proof}
+For $f_1,f_2 \in BV[a,b]$, let $v_1,v_2$, $p_1,p_2$, $n_1,n_2$  be their variations, positive variations, and negative
+variations, respectively. Then
+\begin{align*}
+f_1f_2&=(f_1(a)+p_1-n_1)(f_2(a)+p_2-n_2)\\
+&=f_1(a)f_2(a)+p_1p_2 + n_1n_2 -n_1p_2-n_2p_1\\
+&+ f_1(a)p_2+f_2(a)p_1-f_1(a)n_2-f_2(a)n_1.
+\end{align*}
+Using this and the fact that if $f$ is nondecreasing then $V_a^b f = f(b)-f(a)$,
+\begin{align*}
+\norm{f_1f_2}_{BV}&=|f_1(a)||f_2(a)|+V_a^b (f_1f_2)\\
+&\leq |f_1(a)||f_2(a)|+V_a^b(p_1p_2)+V_a^b(n_1n_2)+ V_a^b(n_1p_2)+V_a^b (n_2p_1)\\
+&+|f_1(a)| V_a^b p_2 + |f_2(a)| V_a^b p_1 + |f_1(a)| V_a^b n_2 + |f_2(a)| V_a^b n_1\\
+&=|f_1(a)| |f_2(a)| + p_1(b) p_2(b) + n_1(b)n_2(b)+n_1(b)p_2(b)+n_2(b)p_1(b)\\
+&+|f_1(a)| p_2(b) + |f_2(a)| p_1(b)+|f_1(a)| n_2(b)+ |f_2(a)| n_1(b)\\
+&=(|f_1(a)|+p_1(b)+n_1(b))(|f_2(a)|+p_2(b)+n_2(b))\\
+&=(|f_1(a)+v_1(b))(|f_2(a)|+v_2(b))\\
+&=\norm{f_1}_{BV} \norm{f_2}_{BV},
+\end{align*}
+which shows that $BV[a,b]$ is a normed algebra. And $BV[a,b]$ is a Banach space, so  $BV[a,b]$ is a Banach algebra.
+\end{proof}
+
+
+
+\begin{theorem}
+If $f \in C^1[a,b]$, then 
+\[
+V_a^b f = \int_a^b |f'(t)| dt.
+\]
+
+Let $(f')^+$ and $(f')^-$ be the positive and negative parts of $f'$ and let
+$p$ and $n$ be the positive and negative variations of $f$. Then, for $x \in [a,b]$,
+\[
+p(x) = \int_a^x (f')^+(t) dt, \qquad n(x) = \int_a^x (f')^-(t) dt.
+\]
+\end{theorem}
+\begin{proof}
+Lemma \ref{Vupperbound} states that $V_a^b \leq \int_a^b |f'(t)| dt$. 
+Because $f'$ is continuous it is Riemann integrable, hence for any $\epsilon>0$ there is some partition $P=\{t_0,\ldots,t_n\}$
+of $[a,b]$ such that if $x_j \in [t_{j-1},t_j]$ for $j=1,\ldots,n$ then
+\[
+\left| \int_a^b |f'(t)| dt - \sum_{j=1}^n |f'(x_j)|(t_j-t_{j-1}) \right| < \epsilon.
+\]
+By the mean value theorem,  for each $j=1,\ldots,n$ there is some
+$x_j \in (t_{j-1},t_j)$ such that $f'(x_j)=\frac{f(t_j)-f(t_{j-1})}{t_j-t_{j-1}}$. Then
+\[
+V(f,P) = \sum_{j=1}^n |f(t_j)-f(t_{j-1})|
+=\sum_{j=1}^n |f'(x_j)| (t_j-t_{j-1}),
+\]
+so
+\[
+\left| \int_a^b |f'(t)| dt - V(f,P) \right| < \epsilon,
+\]
+and thus
+\[
+\int_a^b |f'(t)| dt < V(f,P)+\epsilon \leq V_a^b f + \epsilon.
+\]
+This is true for all $\epsilon>0$, therefore
+\[
+\int_a^b |f'(t)| dt \leq V_a^b f,
+\]
+which is what we wanted to show.
+
+Write
+\[
+g(t)=(f')^+(t) = \max\{f'(t),0\}, \qquad
+h(t)=(f')^-(t) = -\min\{f'(t),0\}.
+\]
+These satisfy $g+h=|f'|$ and $g-h = f'$. Using the fundamental theorem of calculus,
+\begin{align*}
+p(x)&=\frac{1}{2}\left( v(x) + f(x)-f(a) \right)\\
+&=\frac{1}{2}\left( V_a^x f + \int_a^x f'(t) dt \right)\\
+&=\frac{1}{2}\left( \int_a^b |f'(t)| dt + \int_a^b f'(t) dt\right)\\
+&=\int_a^b  g(t) dt
+\end{align*}
+and
+\begin{align*}
+n(x)&=\frac{1}{2}\left(v(x)-f(x)+f(a)\right)\\
+&=\frac{1}{2}\left(V_a^x f - \int_a^x f'(t) dt \right)\\
+&=\frac{1}{2}\left( \int_a^x |f'(t)| dt - \int_a^x f'(t) dt \right)\\
+&=\int_a^x h(t) dt.
+\end{align*}
+\end{proof}
+
+
+\section{Helly's selection theorem}
+We will use the following lemmas in the proof of the Helly selection theorem.\footnote{N. L. Carothers, {\em Real Analysis}, p.~210, Theorem 13.13;
+p.~211, Lemma 13.14; p.~211, Lemma 13.15.}
+
+\begin{lemma}
+Suppose that $X$ is a set, that $f_n:X \to \mathbb{R}$ is a sequence of functions, and that there is some
+$K$ such that $\norm{f_n}_\infty \leq K$ for all $n$. If $D$ is a countable subset of $X$, then there is a subsequence of $f_n$
+that converges pointwise on $D$ to some $\phi:D \to \mathbb{R}$, which satisfies $\norm{\phi}_\infty \leq K$.
+\label{diagonal}
+\end{lemma}
+\begin{proof}
+Say $D=\{x_k: k \geq 1\}$. Write 
+$f_n^0=f_n$.
+The sequence of real numbers $f_n^0(x_1)$ satisfies $f_n^0(x_1) \in [-K,K]$ for all $n$, and since
+the set $[-K,K]$ is compact there is a  subsequence $f^1_n(x_1)$ of $f_n^0(x_1)$ that converges, say to
+$\phi(x_1) \in [-K,K]$. Suppose that $f_n^m(x_m)$ is a subsequence of $f_n^{m-1}(x_m)$ that converges to $\phi(x_m) \in [-K,K]$.
+Then the sequence of real numbers $f_n^m(x_{m+1})$ satisfies $f_n^m(x_{m+1}) \in [-K,K]$ for all $n$, and so
+there is a subsequence $f_n^{m+1}(x_{m+1})$ of $f_n^m(x_{m+1})$ that converges, say to $\phi(x_{m+1}) \in [-K,K]$.
+Let $k \geq 1$. Then one checks that $f_n^n(x_k) \to \phi(x_k)$ as $n \to \infty$, namely, $f_n^n$ is a subsequence of $f_n$
+that converges pointwise on $D$ to $\phi$, and for each $k$ we have $\phi(x_k) \in [-K,K]$.
+\end{proof}
+
+
+\begin{lemma}
+Let $D \subset [a,b]$ with $a \in D$ and $b=\sup D$. If $\phi:D \to \mathbb{R}$ is nondecreasing, then $\Phi:[a,b] \to \mathbb{R}$ defined by
+\[
+\Phi(x)=\sup\{\phi(t): t \in [a,x] \cap D\}
+\]
+is nondecreasing and the restriction of $\Phi$ to $D$ is equal to $\phi$.
+\label{extension}
+\end{lemma}
+
+
+
+\begin{lemma}
+If $f_n:[a,b] \to \mathbb{R}$ is a sequence of nondecreasing functions and there is some $K$ such that
+$\norm{f_n}_\infty \leq K$ for all $n$, then there is a nondecreasing function $f:[a,b] \to \mathbb{R}$, satisfying $\norm{f}_\infty \leq K$,
+and a subsequence of $f_n$ that converges pointwise to $f$.
+\label{pointwiselemma}
+\end{lemma}
+\begin{proof}
+Let $D=(\mathbb{Q} \cap [a,b]) \cup \{a\}$.  By Lemma \ref{diagonal}, there is a function $\phi:D \to \mathbb{R}$ and a subsequence
+$f_{a_n}$ of $f_n$ that converges pointwise on $D$ to $\phi$, and $\norm{\phi}_\infty \leq K$. Because each $f_n$ is nondecreasing,
+if $x,y \in D$ and $x<y$ then
+\[
+\phi(x)=\lim_{n \to \infty} f_{a_n}(x) \leq \lim_{n \to \infty} f_{a_n}(y) = \phi(y),
+\]
+namely, $\phi$ is nondecreasing. $D$ is a dense subset of $[a,b]$ and $a \in D$, so applying Lemma \ref{extension},
+there is a nondecreasing function $\Phi:[a,b] \to \mathbb{R}$ such that for $x \in D$,
+\[
+\Phi(x) =\phi(x)= \lim_{n \to \infty} f_{a_n}(x).
+\]
+
+Suppose that $\Phi$ is continuous at $x \in [a,b]$ and let $\epsilon>0$.
+Using the fact that $\Phi$ is continuous at $x$, there are $p,q \in \mathbb{Q} \cap [a,b]$ such that $p<x<q$ and
+$\Phi(q)-\Phi(p)=|\Phi(q)-\Phi(p)|<\frac{\epsilon}{2}$. Because $p,q \in D$, $f_{a_n}(p) \to \Phi(p)$ and $f_{a_n}(q) \to \Phi(q)$, so there
+is some $N$ such that $n \geq N$ implies that both $|f_{a_n}(p)-\Phi(p)|<\frac{\epsilon}{2}$ and $|f_{a_n}(q)-\Phi(q)| < \frac{\epsilon}{2}$. Then for $n \geq N$, because each function
+$f_{a_n}$ is nondecreasing,
+\begin{align*}
+f_{a_n}(x)&\geq f_{a_n}(p)\\
+&\geq \Phi(p)-\frac{\epsilon}{2}\\
+&\geq \Phi(q)-\epsilon\\
+&\geq \Phi(x)-\epsilon.
+\end{align*}
+Likewise, for $n \geq N$,
+\begin{align*}
+f_{a_n}(x)&\leq f_{a_n}(q)\\
+&\leq \Phi(q)+\frac{\epsilon}{2}\\
+&< \Phi(p)+\epsilon\\
+&\leq \Phi(x)+\epsilon.
+\end{align*}
+This shows that if $\Phi$ is continuous at $x \in [a,b]$ then $f_{a_n}(x) \to \Phi(x)$. 
+
+Let $D(\Phi)$ be the collection of those $x \in [a,b]$ such that $\Phi$ is not continuous at $x$. Because $\Phi$ is monotone, $D(\Phi)$ is countable. 
+So we have established that if $x \in [a,b] \setminus D(\Phi)$ then $f_{a_n}(x) \to \Phi(x)$. 
+Because  $f_{a_n}:[a,b] \to \mathbb{R}$ satisfies $\norm{f_{a_n}}_\infty \leq K$ and $D(\Phi)$ is countable,
+Lemma \ref{diagonal} tells us that there is a function $F:D \to \mathbb{R}$ and a subsequence
+$f_{b_n}$ of $f_{a_n}$ such that $f_{b_n}$ converges pointwise on $D$ to $F$, and $\norm{F}_\infty \leq K$. 
+We define $f:[a,b] \to \mathbb{R}$ by $f(x)=\Phi(x)$ for $x \not \in D(\Phi)$ and $f(x)=F(x)$ for $x \in D(\Phi)$. $\norm{f}_\infty \leq K$. For $x \not \in
+D(\Phi)$, $f_{a_n}(x)$ converges to $\Phi(x)=f(x)$, and $f_{b_n}(x)$ is a subsequence of $f_{a_n}(x)$ so $f_{b_n}(x)$ converges to
+$f(x)$. For $x \in D(\Phi)$, $f_{b_n}(x)$ converges to $F(x)=f(x)$.  Therefore, for any $x \in [a,b]$ we have that
+$f_{b_n}(x) \to f(x)$, namely, $f_{b_n}$ converges pointwise to $f$. Because each function $f_{b_n}$ is nondecreasing, it follows that $f$ is nondecreasing.
+\end{proof}
+
+
+Finally we prove the \textbf{pointwise Helly selection theorem}.\footnote{N. L. Carothers, {\em Real Analysis}, p.~212, Theorem 13.16.}
+
+\begin{theorem}
+Let $f_n$ be a sequence in $BV[a,b]$ and suppose there is some $K$ with
+$\norm{f_n}_{BV} \leq K$ for all $n$. There is some subsequence of $f_n$ that converges
+pointwise to some $f \in BV[a,b]$, satisfying $\norm{f}_{BV} \leq K$.
+\end{theorem}
+\begin{proof}
+Let $v_n$ be the variation of $f_n$. This satisfies, for any $n$,
+\[
+\norm{v_n}_\infty = V_a^b f_n \leq K
+\]
+and
+\[
+\norm{v_n-f_n}_\infty \leq \norm{v_n}_\infty + \norm{f_n}_\infty \leq 
+K+\norm{f_n}_{BV}
+\leq 2K.
+\]
+Theorem \ref{vnondecreasing} tells us that $v_n-f_n$ and $v_n$ are nondecreasing, so we can apply Lemma \ref{pointwiselemma}
+to get that there is a nondecreasing function $g:[a,b] \to \mathbb{R}$ and a subsequence
+$v_{a_n}-f_{a_n}$ of $v_n-f_n$ that converges pointwise to $g$. Then we use Lemma \ref{pointwiselemma} again to get
+that there is a nondecreasing function $h:[a,b] \to \mathbb{R}$ and a subsequence $v_{b_n}$ of $v_{a_n}$ that converges
+pointwise to $h$. Because $g$ and $h$ are pointwise limits of nondecreasing functions, they are each nondecreasing and so belong
+to $BV[a,b]$. 
+We define $f=h-g \in BV[a,b]$. For $x \in [a,b]$,
+\begin{align*}
+\lim_{n \to \infty} f_{b_n}(x)& = \lim_{n \to \infty} v_{b_n}(x)-\lim_{n \to \infty} (v_{b_n}(x)-f_{b_n}(x))\\
+&=h(x)-g(x)\\
+&=f(x),
+\end{align*}
+namely the subsequence $f_{b_n}$ of $f_n$ converges pointwise to $f$. 
+By Lemma \ref{pointwise}, because $f_{b_n}$ is a sequence in $BV[a,b]$ that converges pointwise to $f$ we have
+\begin{align*}
+\norm{f}_{BV}&=|f(a)|+V_a^b f \\
+&\leq |f(a)|+\liminf_{n \to \infty}  V_a^b f_{b_n}\\
+&=\liminf_{n \to \infty} \left( |f_{b_n}(a)|+V_a^b f_{b_n} \right)\\
+&=\liminf_{n \to \infty} \norm{f_{b_n}}_{BV}\\
+&\leq K,
+\end{align*}
+completing the proof.
+\end{proof}
+
+\end{document}

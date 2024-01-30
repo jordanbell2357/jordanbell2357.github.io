@@ -1,0 +1,346 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\ca}{\ensuremath\mathrm{ca}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_{\mathrm{HS}}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Schwartz space and the Fourier transform}
+\author{Jordan Bell}
+\date{August 17, 2015}
+
+\maketitle
+
+\section{Schwartz functions}
+Let $\mathscr{S}(\mathbb{R}^n)$ be the collection of Schwartz functions $\mathbb{R}^n \to \mathbb{C}$.
+For $p \geq 0$ and $\phi \in \mathscr{S}$, write
+\[
+\norm{\phi}_p^2 = \sum_{|\nu| \leq p} \int_{\mathbb{R}^n} (1+|x|^2)^p |(D^\nu \phi)(x)|^2 dx.
+\]
+With the metric
+\[
+d(\phi,\psi) = \sum_{p \geq 0} 2^{-p} \frac{\norm{\phi-\psi}_p}{1+\norm{\phi-\psi}_p},
+\]
+$\mathscr{S}$ is a Fr\'echet space. 
+
+For a multi-index $\alpha$ and for $\phi \in \mathscr{S}$, 
+$x \mapsto x^\alpha \phi(x)$ belongs to $\mathscr{S}$ and we define
+$X^\alpha:\mathscr{S} \to \mathscr{S}$ by $(X^\alpha \phi)(x) = x^\alpha \phi(x)$. 
+$D^\alpha \phi \in \mathscr{S}$ and
+\[
+\norm{D^\alpha \phi}_p^2 = \sum_{|\nu| \leq p} \int_{\mathbb{R}} (1+|x|^2)^p 
+|(D^{\nu+\alpha} \phi)(x)|^2 dx
+\leq \norm{\phi}_{p+|\alpha|}^2.
+\]
+Because $|\{\mu: |\mu| = k\}|=\binom{n+k-1}{k}$,\footnote{Arthur T. Benjamin and Jennifer J. Quinn,
+{\em Proofs that Really Count: The Art of Combinatorial Proof}, p.~71, Identity 143 and p.~74, Identity 149.}
+\[
+|\{\mu: \mu \leq \nu\}| \leq |\{\mu: |\mu| \leq |\nu|\}| \leq \binom{n+|\nu|}{|\nu|}.
+\]
+The product rule states
+\[
+D^\nu (fg) = \sum_{\mu \leq \nu} \binom{\nu}{\mu} (D^\mu f) (D^{\nu-\mu}g),
+\]
+and with the Cauchy-Schwarz inequality we obtain for $|\nu| \leq p$,
+\begin{align*}
+|D^\nu (X^\alpha \phi)|^2&=\left| \sum_{\mu \leq \nu} \binom{\nu}{\mu}  (D^\mu \phi) 
+(D^{\nu-\mu} X^\alpha) \right|^2\\
+&\leq \binom{n+p}{p} \sum_{|\mu| \leq p} \binom{\nu}{\mu}^2 
+ |D^\mu \phi|^2
+|D^{\nu-\mu} X^\alpha|^2,
+\end{align*}
+and with this
+\begin{align*}
+\norm{X^\alpha \phi}_p^2& = \sum_{|\nu| \leq p} \int_{\mathbb{R}^n} (1+|x|^2)^p |(D^\nu (X^\alpha \phi))(x)|^2 dx\\
+&\leq\sum_{|\nu| \leq p} \int_{\mathbb{R}^n} (1+|x|^2)^p 
+\binom{n+p}{p} \sum_{|\mu| \leq p} \binom{\nu}{\mu}^2 
+ |D^\mu \phi|^2
+|D^{\nu-\mu} X^\alpha|^2 dx\\
+&\leq C_p \norm{\phi}_{p+|\alpha|}^2.
+\end{align*}
+For $g,\phi \in \mathscr{S}$ we have $g \phi \in \mathscr{S}$, and using the product rule we get
+\[
+\norm{g \phi}_p^2 \leq C_{p,g} \norm{\phi}_p^2.
+\]
+Therefore, 
+\[
+\phi \mapsto D^\alpha \phi,\qquad \phi \mapsto X^\alpha \phi,\qquad \phi \mapsto g \phi
+\]
+are continuous linear maps $\mathscr{S} \to \mathscr{S}$.
+
+
+
+
+\section{Tempered distributions}
+For $u:\mathscr{S} \to \mathbb{C}$, we write
+\[
+\inner{\phi}{u}=u(\phi).
+\]
+$\mathscr{S}'$ denotes the dual space of $\mathscr{S}$, and the elements of $\mathscr{S}'$ are called \textbf{tempered distributions}.
+We assign $\mathscr{S}'$ the weak-* topology, the coarsest topology on $\mathscr{S}'$ such that  for
+each $\phi \in \mathscr{S}$ the map $u \mapsto \inner{\phi}{u}$ is continuous $\mathscr{S}' \to \mathbb{C}$. 
+
+For $\psi \in \mathscr{S}$, we define $\Lambda_\psi:\mathscr{S} \to \mathbb{C}$ by
+\[
+\inner{\phi}{\Lambda_\psi} = \int_{\mathbb{R}^n} \phi(x) \psi(x) dx,\qquad \phi \in \mathscr{S},
+\]
+and by the Cauchy-Schwarz inequality,
+\[
+|\inner{\phi}{\Lambda_\psi}|
+\leq \left( \int_{\mathbb{R}^n}  |\phi(x)|^2 dx\right)^{1/2}  \left(\int_{\mathbb{R}^n}  |\psi(x)|^2 dx\right)^{1/2}
+=\norm{\psi}_0 \norm{\phi}_0,
+\]
+whence $\Lambda_\psi \in \mathscr{S}'$. 
+It is apparent that $\psi \mapsto \Lambda_\psi$ is linear.
+Suppose that $\psi_i \to \psi$ in $\mathscr{S}$, and let $\phi \in \mathscr{S}$. Then
+\[
+|\inner{\phi}{\Lambda_{\psi_i}} - \inner{\phi}{\Lambda_\psi}| = 
+|\inner{\phi}{\Lambda_{\psi_i - \psi}}|
+\leq \norm{\psi_i-\psi}_0 \norm{\phi}_0 \to 0,
+\]
+which shows that  $\psi \mapsto \Lambda_\psi$ is continuous. 
+If $\Lambda_\psi = 0$, then
+in particular $\Lambda_\psi \overline{\psi}=0$, i.e. $\int_{\mathbb{R}^n} |\psi(x)|^2 dx=0$, which implies that $\psi(x)=0$
+for almost all $x$ and because $\psi$ is continuous, $\psi=0$. Therefore,
+$\psi \mapsto \Lambda_\psi$ is a continuous linear injection  $\mathscr{S} \to \mathscr{S}'$.
+It can be proved that $\Lambda(\mathscr{S})$ is dense in $\mathscr{S}'$.\footnote{Michael Reed and Barry Simon,
+{\em Methods of Modern Mathematical Physics, volume I: Functional Analysis}, revised and enlarged edition,
+p.~144, Corollary 1 to Theorem V.14.}
+
+
+For a multi-index $\alpha$ and $u \in \mathscr{S}'$, we define
+$D^\alpha u:\mathscr{S} \to \mathbb{C}$ by
+\[
+\inner{\phi}{D^\alpha u} = (-1)^{|\alpha|} \inner{D^\alpha \phi}{u},\qquad \phi \in \mathscr{S}.
+\]
+For $\phi_i \to \phi$ in $\mathscr{S}$, because $D^\alpha:\mathscr{S} \to \mathscr{S}$  and $u:\mathscr{S}
+\to \mathbb{C}$ are continuous,
+\[
+\inner{\phi_i}{D^\alpha u}
+=(-1)^{|\alpha|} \inner{D^\alpha \phi_i}{u}
+\to (-1)^{|\alpha|} \inner{D^\alpha \phi}{u}
+=\inner{\phi}{D^\alpha u},
+\]
+and therefore $D^\alpha u \in \mathscr{S}'$. 
+
+We define $X^\alpha u:\mathscr{S} \to \mathbb{C}$ by
+\[
+\inner{\phi}{X^\alpha u} = \inner{X^\alpha \phi}{u},\qquad \phi \in \mathscr{S}.
+\]
+For $\phi_i \to \phi$ in $\mathscr{S}$,
+\[
+\inner{\phi_i}{X^\alpha u} = \inner{X^\alpha \phi_i}{u} \to 
+\inner{X^\alpha \phi}{u}
+=\inner{\phi}{X^\alpha u},
+\]
+and therefore $X^\alpha u \in \mathscr{S}'$. 
+
+For $g \in \mathscr{S}$, we define $g u:\mathscr{S} \to \mathbb{C}$ by
+\[
+\inner{\phi}{g u} = \inner{g \phi}{u},\qquad \phi \in \mathscr{S}.
+\]
+For $\phi_i \to \phi$ in $\mathscr{S}$,
+\[
+\inner{\phi_i}{g u}
+=\inner{g \phi_i}{u}
+\to \inner{g \phi}{u}
+=\inner{\phi}{g u},
+\]
+and therefore $g u \in \mathscr{S}'$. 
+
+
+ For $\psi \in \mathscr{S}$,
+integrating by parts yields
+\begin{align*}
+\inner{\phi}{D^\alpha \Lambda_\psi}
+&=
+(-1)^{|\alpha|} \inner{D^\alpha \phi}{\Lambda_\psi}\\
+&=(-1)^{|\alpha|} \int_{\mathbb{R}^n} (D^\alpha \phi)(x) \psi(x) dx\\
+&=\int_{\mathbb{R}^n} \phi(x) (D^\alpha \psi)(x) dx\\
+&=\inner{\phi}{\Lambda_{D^\alpha \psi}},
+\end{align*}
+which implies that $D^\alpha \Lambda_\psi = \Lambda_{D^\alpha \psi}$.
+
+\[
+\inner{\phi}{X^\alpha \Lambda_\psi}
+=\inner{X^\alpha \phi}{\Lambda_\psi}
+=\int_{\mathbb{R}^n} x^\alpha \phi(x) \psi(x) dx
+=\inner{\phi}{\Lambda_{X^\alpha \psi}},
+\]
+which implies that $X^\alpha \Lambda_\psi = \Lambda_{X^\alpha \psi}$. 
+
+
+\[
+\inner{\phi}{g \Lambda_\psi}
+=\inner{g\phi}{\Lambda_\psi}
+=\int_{\mathbb{R}^n} g(x) \phi(x) \psi(x) dx
+=\inner{\phi}{\Lambda_{g \psi}},
+\]
+which implies that $g\Lambda_\psi = \Lambda_{g \psi}$. 
+
+Because $\phi \mapsto D^\alpha \phi$, $\phi \mapsto X^\alpha \phi$, and $\phi \mapsto g\phi$ are continuous
+linear maps
+$\mathscr{S} \to \mathscr{S}$ and because $\Lambda:\mathscr{S} \to \mathscr{S}'$
+is a continuous linear map with dense image, using the above it is proved that
+\[
+u \mapsto D^\alpha u,\qquad u \mapsto X^\alpha u,\qquad u \mapsto gu
+\]
+are continuous linear maps $\mathscr{S}' \to \mathscr{S}'$.\footnote{Richard Melrose,
+{\em Introduction to Microlocal Analysis},
+\url{http://math.mit.edu/~rbm/iml/Chapter1.pdf},
+p.~17.}
+
+
+
+
+
+\section{The Fourier transform}
+For Borel measurable functions $f,g:\mathbb{R}^n \to \mathbb{C}$, for
+those $x$ for which the integral exists we write
+\[
+(f*g)(x) = \int_{\mathbb{R}^n} f(x-y) g(y) dy
+=\int_{\mathbb{R}^n} f(y) g(x-y)dy,\qquad x \in \mathbb{R}^n,
+\]
+and for those Borel measurable $f,g:\mathbb{R}^n \to \mathbb{C}$ for which the integral
+exists we write
+\[
+\inner{f}{g}_{L^2} = \int_{\mathbb{R}^n} f(x) \overline{g(x)} dx.
+\]
+For $\xi \in \mathbb{R}^n$ we define
+\[
+e_\xi(x) = e^{2\pi i\xi\cdot x},\qquad x \in \mathbb{R}^n,
+\]
+and for $\phi \in \mathscr{S}$ 
+we calculate, integrating by parts,
+\[
+(D^\alpha \phi)*e_\xi = (2\pi i\xi)^{\alpha} \phi*e_\xi.
+\]
+We define $\mathscr{F} \phi:\mathbb{R}^n \to \mathbb{C}$ by
+\[
+(\mathscr{F} \phi)(\xi) =
+\inner{\phi}{e_\xi}_{L^2}=
+ \int_{\mathbb{R}^n} \phi(x) \overline{e_\xi(x)} dx
+=\int_{\mathbb{R}^n}  e^{-2\pi ix \cdot \xi} \phi(x)  dx,
+\qquad \xi \in \mathbb{R}^n,
+\]
+which we can write as
+\[
+(\phi*e_\xi)(0)=\int_{\mathbb{R}^n} \phi(y) e_\xi(-y) dy
+=\int_{\mathbb{R}^n} \phi(y) \overline{e_\xi(y)} dy
+=(\mathscr{F} \phi)(\xi).
+\]
+By Fubini's theorem,
+\begin{align*}
+\mathscr{F}(\phi*\psi)(\xi)&=
+\int_{\mathbb{R}^n} \psi(y) \left( \int_{\mathbb{R}^n} \phi(x-y) \overline{e_\xi(x)} dx
+\right) dy\\
+&=\int_{\mathbb{R}^n} \psi(y) \left( \int_{\mathbb{R}^n} \phi(x) \overline{e_\xi(x+y)} dx\right)
+dy,
+\end{align*}
+whence
+\[
+\mathscr{F}(\phi*\psi)=(\mathscr{F}\phi)(\mathscr{F}\psi).
+\]
+ We calculate
+\[
+\mathscr{F}(D^\alpha \phi)(\xi)=((D^\alpha \phi)*e_\xi)(0)
+=((2\pi i\xi)^{\alpha} \phi*e_\xi)(0)
+=(2\pi i\xi)^{\alpha} (\mathscr{F}\phi)(\xi),
+\]
+whence 
+\[
+\mathscr{F}(D^\alpha \phi) = (2\pi i)^{|\alpha|} X^\alpha \mathscr{F}\phi.
+\]
+It follows from the dominated convergence theorem 
+\begin{align*}
+(D^\alpha \mathscr{F}\phi)(\xi) &= \int_{\mathbb{R}^n} (-2\pi ix)^\alpha e^{-2\pi ix\cdot \xi} \phi(x) dx\\
+&=(-2\pi i)^{|\alpha|} \int_{\mathbb{R}^n} e^{-2\pi ix\cdot \xi} x^\alpha \phi(x) dx\\
+&=(-2\pi i)^{|\alpha|} \mathscr{F}(X^\alpha \phi)(\xi).
+\end{align*}
+Therefore
+\begin{equation}
+\mathscr{F} D^\alpha = (2\pi i)^{|\alpha|} X^\alpha \mathscr{F},
+\qquad D^\alpha \mathscr{F} = (-2\pi i)^{|\alpha|} \mathscr{F} X^\alpha.
+\label{identities}
+\end{equation}
+
+
+Using the multinomial theorem,
+\begin{align*}
+(1+|\xi|^2)^p |(D^\nu \mathscr{F} \phi)(\xi)|^2&=\sum_{k=0}^p \binom{p}{k} |\xi|^{2k} |(D^\nu \mathscr{F} \phi)(\xi)|^2\\
+&=\sum_{k=0}^p \binom{p}{k}  \sum_{|\alpha|=k} \binom{k}{\alpha} \xi^{2\alpha} |(D^\nu \mathscr{F} \phi)(\xi)|^2\\
+&=\sum_{k=0}^p \binom{p}{k} \sum_{|\alpha|=k} \binom{k}{\alpha} 
+|(\xi^\alpha D^\nu \mathscr{F} \phi)(\xi)|^2.
+\end{align*}
+Applying \eqref{identities},
+\[
+|(\xi^\alpha D^\nu \mathscr{F} \phi)(\xi)| = (2\pi)^{|\nu|} (2\pi)^{-|\alpha|} |(\mathscr{F} D^\alpha X^\nu \phi)(\xi)|.
+\]
+Then 
+\begin{align*}
+\norm{\mathscr{F} \phi}_p^2 &= \sum_{|\nu| \leq p} \int_{\mathbb{R}^n}
+(1+|\xi|^2)^p |(D^\nu \mathscr{F} \phi)(\xi)|^2 d\xi\\
+&=\sum_{|\nu| \leq p} \int_{\mathbb{R}^n} \sum_{k=0}^p \binom{p}{k} \sum_{|\alpha|=k} \binom{k}{\alpha}
+|(\xi^\alpha D^\nu \mathscr{F}\phi)(\xi)|^2 d\xi\\
+&=\sum_{|\nu| \leq p} (2\pi)^{2|\nu|} \sum_{k=0}^p \binom{p}{k} (2\pi)^{-2k} \sum_{|\alpha|=k} \binom{k}{\alpha}
+\int_{\mathbb{R}^n} |(\mathscr{F} D^\alpha X^\nu \phi)(\xi)|^2 d\xi.
+\end{align*}
+Applying the Plancherel theorem, the product rule, and the Cauchy-Schwarz inequality yields
+\begin{align*}
+\int_{\mathbb{R}^n} |(\mathscr{F} D^\alpha X^\nu \phi)(\xi)|^2 d\xi&=
+\int_{\mathbb{R}^n} |(D^\alpha X^\nu \phi)(\xi)|^2 d\xi\\
+&=\int_{\mathbb{R}^n} \left| \sum_{\beta \leq \alpha} (D^\beta X^\nu)(D^{\alpha-\beta}\phi) \right|^2 d\xi\\
+&\leq \int_{\mathbb{R}^n} \sum_{\beta \leq \alpha}
+|(D^\beta X^\nu)(\xi)|^2 
+\cdot \sum_{\beta \leq \alpha} |(D^{\alpha-\beta}\phi)(\xi)|^2. 
+\end{align*}
+This yields
+\[
+\norm{\mathscr{F} \phi}_p \leq C_p \norm{\phi}_p,
+\]
+whence $\mathscr{F}:\mathscr{S} \to \mathscr{S}$ is continuous. 
+
+
+For $p>n/2$, using the Cauchy-Schwarz inequality and spherical coordinates\footnote{\url{http://individual.utoronto.ca/jordanbell/notes/sphericalmeasure.pdf}} we calculate
+\begin{align*}
+|(\mathscr{F} \phi)(\xi)|&
+\leq \int_{\mathbb{R}^n} (1+|x|^2)^{-p/2} (1+|x|^2)^{p/2}  |\phi(x)| dx\\
+&\leq \left( \int_{\mathbb{R}^n} (1+|x|^2)^{-p} dx \right)^{1/2} \left( \int_{\mathbb{R}^n}
+(1+|x|^2)^{p}  |\phi(x)|^2 dx \right)^{1/2}\\
+ &=\left( \int_0^\infty \int_{S^{n-1}} (1+r^2)^{-p} d\sigma r^{n-1} dr\right)^{1/2} 
+ \left( \int_{\mathbb{R}^n}
+(1+|x|^2)^{p}  |\phi(x)|^2 dx \right)^{1/2}\\
+ &=\left( \frac{\pi^{n/2} \Gamma\left(p-\frac{n}{2}\right)}{\Gamma(p)} \right)^{1/2} \left( \int_{\mathbb{R}^n}
+(1+|x|^2)^{p}  |\phi(x)|^2 dx \right)^{1/2}\\
+&\leq \left( \frac{\pi^{n/2} \Gamma\left(p-\frac{n}{2}\right)}{\Gamma(p)} \right)^{1/2} 
+\norm{\phi}_p.
+\end{align*}
+
+
+
+
+\end{document}

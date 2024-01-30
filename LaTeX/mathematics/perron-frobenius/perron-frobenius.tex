@@ -1,0 +1,973 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}}
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Measure theory and Perron-Frobenius operators for continued fractions}
+\author{Jordan Bell}
+\date{April 18, 2016}
+
+\maketitle
+
+
+\section{The continued fraction transformation}
+For $\xi \in \mathbb{R}$ let $[x]$ be the greatest integer $\leq \xi$, let $R(\xi)=\xi-[\xi]$, and let $\norm{\xi} = \min(R(\xi),1-R(\xi))$, the distance from $\xi$ to a nearest integer.
+Let $I=[0,1]$ and define the \textbf{continued fraction transformation} $\tau:I \to I$ by
+\[
+\tau(x)=\begin{cases}
+x^{-1}-[x^{-1}]&x \neq 0\\
+0&x=0.
+\end{cases}
+\]
+It is immediate that for $x \in I$, $x \in I \setminus \mathbb{Q}$ if and only if $\tau(x) \in I \setminus \mathbb{Q}$.
+For $x \in \mathbb{R}$,
+define $a_0(x) = [x]$, and for $n \geq 1$ define $a_n(x) \in \mathbb{Z}_{\geq 1} \cup \{\infty\}$ by
+\[
+a_n(x) = \left[ \frac{1}{\tau^{n-1}(x-a_0(x))} \right].
+\]
+
+For example, let $x=\frac{13}{71}$.
+\[
+\tau(x) = \frac{71}{13} - \left[\frac{71}{13} \right] = \frac{71}{13} - 5 = \frac{6}{13}.
+\]
+\[
+\tau^2(x) = \frac{13}{6} - \left[\frac{13}{6}\right] = \frac{13}{6}-2= \frac{1}{6}.
+\]
+\[
+\tau^3(x) = \frac{6}{1}-\left[\frac{6}{1}\right] = 0.
+\]
+Then $\tau^n(x)=0$ for $n \geq 3$. Thus, with $x=\frac{13}{71}$,
+\[
+a_0(x)=0,\quad a_1(x) =  \left[\frac{71}{13} \right] = 5.
+\]
+\[
+a_2(x) = \left[\frac{1}{\tau(x)}\right] = \left[\frac{13}{6}\right]=2,\quad
+a_3(x) = \left[\frac{1}{\tau^2(x)} \right] = \left[\frac{6}{1}\right]=6.
+\]
+\[
+a_4(x)=\left[\frac{1}{\tau^3(x)}\right] = \infty, \qquad a_5(x) = \infty, \qquad \ldots.
+\]
+
+
+
+\section{Convergents}
+For $x \in \Omega = I \setminus \mathbb{Q}$ write $a_n=a_n(x)$, and define
+\[
+q_{-1}=0,\quad p_{-1}=1,\quad q_0=1,\quad p_0=0,
+\]
+and for $n \geq 1$,
+\[
+q_n=a_n q_{n-1}+q_{n-2},\qquad p_n=a_np_{n-1}+p_{n-2}.
+\]
+Thus
+\[
+q_1 = a_1 q_0+q_{-1} = a_1,\qquad p_1 = a_1 p_0+p_{-1} = 1.
+\]
+One proves
+\[
+p_nq_{n-1}-p_{n-1}q_n=(-1)^{n+1},\qquad n \geq 0.
+\]
+Also,\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~9, Proposition 1.1.1.}
+\[
+x = \frac{p_n+\tau^n(x) p_{n-1}}{q_n+\tau^n(x) q_{n-1}},\qquad x \in \Omega,\quad n \geq 0.
+\]
+From this,
+\[
+x - \frac{p_n}{q_n} = \frac{(-1)^n \tau^n(x)}{q_n(q_n+\tau^n(x) q_{n-1})}.
+\]
+Now,
+\[
+a_{n+1} + \tau^{n+1}(x) = \left[\frac{1}{\tau^n(x)} \right] + \frac{1}{\tau^n(x)} - \left[\frac{1}{\tau^n(x)} \right]
+=\frac{1}{\tau^n(x)},
+\]
+and using this,
+\begin{align*}
+ \frac{\tau^n(x)}{q_n(q_n+\tau^n(x) q_{n-1})}&= \frac{1}{q_n(q_n \cdot (a_{n+1} + \tau^{n+1}(x))+q_{n-1})}\\
+ &=\frac{1}{q_n(q_{n+1}+\tau^{n+1}(x) q_n)}.
+\end{align*}
+Thus
+\[
+\frac{1}{q_n(q_n+q_{n-1})} < \left| x - \frac{p_n}{q_n} \right| < \frac{1}{q_n q_{n+1}}.
+\]
+
+For $n \geq 1$ let 
+\[
+r_n(x) = \frac{1}{\tau^{n-1}(x)}=a_n+\tau^n(x)
+\]
+and
+\[
+s_n = \frac{q_{n-1}}{q_n},\qquad y_n=\frac{1}{s_n}
+\]
+and
+\begin{align*}
+u_n &= q_{n-1}^{-2} \left|x-\frac{p_{n-1}}{q_{n-1}}\right|^{-1}\\
+&=\frac{1}{q_{n-1}^2} \cdot \frac{q_{n-1}(q_{n-1}+\tau^{n-1}(x) q_{n-2})}{\tau^{n-1}(x)}\\
+&=\frac{q_{n-1}+\tau^{n-1}(x)q_{n-2}}{\tau^{n-1}(x) q_{n-1}}\\
+&=\frac{q_{n-1} \cdot (a_n+\tau^n(x)) + q_{n-2}}{q_{n-1}}\\
+&=a_n+\tau^n(x) + \frac{q_{n-2}}{q_{n-1}}.
+\end{align*}
+Let $s_0=0$.
+It is worth noting that
+\[
+y_1 \cdots y_n = \frac{q_1}{q_0} \cdots \frac{q_n}{q_{n-1}} = \frac{q_n}{q_0} = q_n.
+\]
+\[
+\frac{1}{s_n} = \frac{q_n}{q_{n-1}} = a_n + \frac{q_{n-2}}{q_{n-1}} = a_n + s_{n-1}.
+\]
+\[
+u_n = a_n+\tau^n(x) + \frac{q_{n-2}}{q_{n-1}} = r_n + s_{n-1}.
+\]
+
+
+
+\section{Measure theory}
+Suppose that $(X,\mathscr{A})$ is a measurable space and $\mu,\nu$ are probability measures on $\mathscr{A}$.
+Let
+$\mathscr{D} = \{A \in \mathscr{A}: \mu(A)=\nu(A)\}$. 
+First, $X \in \mathscr{D}$.  Second, if $A,B \in \mathscr{D}$ and $A \subset B$ then
+\[
+\mu(B \setminus A) = \mu(B)-\mu(A) = \nu(B)-\nu(A) = \nu(B \setminus A),
+\]
+so $B \setminus A \in \mathscr{D}$. Third,
+suppose that $A_n \in \mathscr{D}$, $n \geq 1$, and $A_n \uparrow A$. Because $\mathscr{A}$ is a $\sigma$-algebra, $A \in \mathscr{A}$,
+and then, setting $A_0 = \emptyset$,
+\[
+\mu(A) = \mu\left( \bigcup_{n \geq 1} (A_n \setminus A_{n-1}) \right) = \sum_{n \geq 1} (\mu(A_n)-\mu(A_{n-1})),
+\]
+whence $\mu(A)=\nu(A)$. Therefore $\mathscr{D}$ is a Dynkin system. 
+\textbf{Dynkin's theorem} says that if $\mathscr{D}$ is a Dynkin system and
+$\mathscr{C} \subset \mathscr{D}$ where $\mathscr{C}$ is a $\pi$-system (nonempty and closed under finite intersections),
+then $\sigma(\mathscr{C}) \subset \mathscr{D}$.\footnote{Charalambos D. Aliprantis and Kim C. Border,
+{\em Infinite Dimensional Analysis: A Hitchhiker's Guide},
+third ed., p.~136, Lemma 4.11.}
+
+
+Suppose now that $\sigma(\mathscr{C})=\mathscr{A}$, that
+$\mathscr{C}$ is closed under finite intersections,
+and that $\mu(A)=\nu(A)$ for all $A \in \mathscr{C}$.
+Then $\mathscr{C} \subset \mathscr{D}$, so by Dynkin's theorem,
+$\mathscr{A} =\sigma(\mathscr{C}) \subset \mathscr{D}$, hence
+$\mathscr{D}=\mathscr{A}$. That is, for any $A \in \mathscr{A}$, $\mu(A)=\nu(A)$, meaning $\mu=\nu$. 
+
+We shall apply the above  with $(I,\mathscr{B}_I)$, $I=[0,1]$. For
+\[
+\mathscr{C} = \{(0,u]: 0<u \leq 1\},
+\]
+it is a fact that
+$\sigma(\mathscr{C})=\mathscr{B}_I$. Therefore if $\mu$ and $\nu$ are probability measures on
+$\mathscr{B}_I$ such that $\mu((0,u])=\nu((0,u])$ for every $0<u \leq 1$, then
+$\mu=\nu$. 
+
+
+Let $\lambda$ be Lebesgue measure on $I=[0,1]$. Define
+\[
+d\gamma(x) = \frac{1}{(1+x)\log 2} d\lambda(x),
+\]
+called the \textbf{Gauss measure}. 
+If $\mu$ is a Borel probability measure on $I$,
+for measurable $T:I \to I$ and
+for $A \in \mathscr{B}_I$ let
+\[
+T_* \mu (A) = \mu(T^{-1}(A)).
+\]
+$T_*\mu$, called the \textbf{pushforward of $\mu$ by $T$}, is itself a Borel probability measure on $I$. 
+We prove that $\gamma$ is an invariant measure for $\tau$.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~17, Theorem 1.2.1;
+Manfred Einsiedler and Thomas Ward, {\em Ergodic Theory with a view towards Number Theory}, 
+p.~77, Lemma 3.5.}
+
+
+\begin{theorem}
+$\tau_*\gamma=\gamma$.
+\end{theorem}
+\begin{proof}
+Let $0<u \leq 1$. For $x \in I$, $0<\tau(x) \leq u$ if and only if
+$0<\frac{1}{x}-\left[\frac{1}{x}\right] \leq u$ if and only if
+$\left[\frac{1}{x}\right] < \frac{1}{x} \leq u + \left[\frac{1}{x}\right]$ if
+and only if
+$\frac{1}{u + \left[\frac{1}{x}\right]} \leq x < \frac{1}{\left[\frac{1}{x}\right]}$. 
+Then, as $0 \not \in \tau^{-1}((0,u])$, 
+\[
+\tau^{-1}((0,u]) = \bigcup_{i \geq 1} \left[ \frac{1}{u+i},\frac{1}{i}\right).
+\]
+We calculate
+\begin{align*}
+\gamma(\tau^{-1}((0,u]))&=\sum_{i \geq 1} \gamma\left( \left[ \frac{1}{u+i},\frac{1}{i}\right)\right)\\
+&=\sum_{i \geq 1} \int_{\left[ \frac{1}{u+i},\frac{1}{i}\right)} \frac{1}{(1+x) \log 2} d\lambda(x)\\
+&= \frac{1}{\log 2}  \sum_{i \geq 1}\left(\log\left(1+\frac{1}{i}\right)-\log\left(1+\frac{1}{u+i}\right)\right).
+\end{align*}
+Using
+\[
+\frac{1+\frac{1}{i}}{1+\frac{1}{u+i}} = \frac{1+\frac{u}{i}}{1+\frac{u}{i+1}},
+\]
+this is
+\begin{align*}
+\gamma(\tau^{-1}((0,u]))&= \frac{1}{\log 2}  \sum_{i \geq 1} \left( \log\left(1+\frac{u}{i}\right)-\log\left(1+\frac{u}{i+1}\right) \right)\\
+&=\frac{1}{\log 2}  \sum_{i \geq 1} \int_{\frac{u}{i+1}}^{\frac{u}{i}} \frac{1}{1+x} d\lambda(x)\\
+&=\gamma((0,u]).
+\end{align*}
+Because $\gamma(\tau^{-1}((0,u]))=\gamma((0,u])$ for every $0<u \leq 1$, it follows that $\tau_*\gamma=\gamma$.
+\end{proof}
+
+
+We remark that for a set $X$, $X^0$ is a singleton.
+For $i \in \mathbb{Z}_{\geq 1}^0$ let $I_0(i)=\Omega$. 
+For $n \geq 1$ and $i \in \mathbb{Z}_{\geq 1}^n$, 
+let 
+\[
+I_n(i) = \{\omega \in \Omega: a_k(x) = i_k, 1 \leq k \leq n\}.
+\]
+For $n \geq 1$ and for $i \in \mathbb{Z}_{\geq 1}^n$, define
+\[
+[i_1,\ldots,i_n]=\cfrac{1}{i_1+\cfrac{1}{\cdots+\cfrac{1}{i_{n-1}+\cfrac{1}{i_n}}}}.
+\]
+For $x \in I_n(i)$, 
+\[
+\frac{p_n(x)}{q_n(x)} = [i_1,\ldots,i_n],
+\qquad \frac{p_{n-1}(x)}{q_{n-1}(x)} = [i_1,\ldots,i_{n-1}].
+\]
+
+
+The following is an expression for the sets $I_n(i)$.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~18, Theorem 1.2.2.}
+
+\begin{theorem}
+Let $n \geq 1$, $i \in \mathbb{Z}_{\geq 1}^n$,
+and define
+\[
+u_n(i) = \begin{cases}
+\frac{p_n+p_{n-1}}{q_n+q_{n-1}}&\textrm{$n$ odd}\\
+\frac{p_n}{q_n}&\textrm{$n$ even}
+\end{cases}
+\]
+and
+\[
+v_n(i) = \begin{cases}
+\frac{p_n}{q_n}&\textrm{$n$ odd}\\
+\frac{p_n+p_{n-1}}{q_n+q_{n-1}}&\textrm{$n$ even}.
+\end{cases}
+\]
+Then
+\[
+I_n(i) = \Omega \cap (u_n(i),v_n(i)).
+\]
+\label{cylinder}
+\end{theorem}
+
+From the above, if $n$ is odd and $i \in \mathbb{Z}_{\geq 1}$ then 
+\begin{align*}
+\lambda(I_n(i)) &= v_n(i)-u_n(i)\\
+&= \frac{p_n}{q_n}-\frac{p_n+p_{n-1}}{q_n+q_{n-1}}\\
+&=\frac{p_nq_{n-1}-p_{n-1}q_n}{q_n(q_n+q_{n-1})}\\
+&=\frac{(-1)^{n+1}}{q_n(q_n+q_{n-1})}\\
+&=\frac{1}{q_n(q_n+q_{n-1})},
+\end{align*}
+and if $n$ is even then  likewise
+\[
+\lambda(I_n(i))=\frac{1}{q_n(q_n+q_{n-1})}.
+\]
+
+
+Kraaikamp and Iosifescu attribute the following to Torsten Brod\'en, in a 1900 paper.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~21, Corollary 1.2.6.}
+
+\begin{theorem}
+For $n \geq 1$, $i \in \mathbb{N}^n$, $x \in I$,
+\[
+\lambda(\tau^n<x| i) = \frac{x(s_n+1)}{s_nx+1}.
+\]
+\label{broden}
+\end{theorem}
+\begin{proof}
+We have
+\[
+\lambda(\tau^n<x| i)=\frac{\lambda((\tau^n<x) \cap I_n(i))}{\lambda(I_n(i))}.
+\]
+Using
+\[
+\omega = \frac{p_n+\tau^n(\omega) p_{n-1}}{q_n+\tau^n(\omega) q_{n-1}},\qquad \omega \in \Omega,\quad n \geq 0,
+\]
+if $n$ is odd then
+\begin{align*}
+(\tau^n<x) \cap I_n(i) &= \left\{\omega \in \Omega: \frac{p_n+p_{n-1}}{q_n+q_{n-1}}<\omega<\frac{p_n}{q_n},
+\tau^n(\omega)<x\right\}\\
+&=\left\{ \omega \in \Omega: \frac{p_n+xp_{n-1}}{q_n+xq_{n-1}}<\omega<\frac{p_n}{q_n} \right\}
+\end{align*}
+and if $n$ is even then
+\[
+(\tau^n<x) \cap I_n(i) =\left\{ \omega \in \Omega: \frac{p_n}{q_n}<\omega< \frac{p_n+xp_{n-1}}{q_n+xq_{n-1}} \right\}.
+\]
+Therefore if $n$ is odd,
+\begin{align*}
+\lambda((\tau^n<x) \cap I_n(i) )&=\frac{p_n}{q_n}-\frac{p_n+xp_{n-1}}{q_n+xq_{n-1}}\\
+&=\frac{xp_nq_{n-1}-xp_{n-1}q_n}{q_n(q_n+xq_{n-1})}\\
+&=\frac{x}{q_n(q_n+xq_{n-1})}
+\end{align*}
+and likewise if $n$ is even then
+\[
+\lambda((\tau^n<x) \cap I_n(i) ) = \frac{x}{q_n(q_n+xq_{n-1})}.
+\]
+Therefore for $n \geq 1$,
+\begin{align*}
+\lambda(\tau^n<x| i)&=\frac{x}{q_n(q_n+xq_{n-1})} \cdot q_n(q_n+q_{n-1})\\
+&=\frac{x(q_n+q_{n-1})}{q_n+xq_{n-1}}.
+\end{align*}
+Using $s_n+1 = \frac{q_n+q_{n-1}}{q_n}$ and $s_n x+1=
+\frac{xq_{n-1}+q_n}{q_n}$,
+\begin{align*}
+\lambda(\tau^n<x| i)&=\frac{x q_n(s_n+1)}{q_n(s_nx+1)}\\
+&=\frac{x(s_n+1)}{s_nx+1}.
+\end{align*}
+\end{proof}
+
+For $j \geq 1$ and $s \in I$ define
+\[
+P_j(s)=\frac{s+1}{(s+j)(s+j+1)}.
+\]
+We now apply Theorem \ref{broden} to prove the following.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~22, Proposition 1.2.7.}
+
+\begin{theorem}
+For $j \geq 1$,
+\[
+\lambda(a_1=j) = \frac{1}{j(j+1)}.
+\]
+For $n \geq 1$ and $i \in \mathbb{N}^n$,
+\[
+\lambda(a_{n+1}=j | i) = P_j(s_n).
+\]
+\end{theorem}
+\begin{proof}
+By Theorem \ref{cylinder},
+\[
+\{\omega \in \Omega: a_1(\omega)=j\} = I_1(j) = \Omega \cap (u_1(j), v_1(j)).
+\]
+In this case, $q_1=j$, so $u_1(j) = \frac{p_1+p_0}{q_1+q_0}=\frac{1+0}{j+1}
+=\frac{1}{j+1}$ and
+$v_1(j) = \frac{p_1}{q_1} = \frac{1}{j}$, so 
+\[
+\{\omega \in \Omega: a_1(\omega)=j\} = \Omega \cap \left(\frac{1}{j+1}, \frac{1}{j} \right).
+\]
+
+Now,
+\[
+a_{n+1}(\omega) = \left[ \frac{1}{\tau^n(\omega)} \right]
+=a_1(\tau^n(\omega)).
+\]
+Thus
+\[
+\{\omega \in \Omega: a_{n+1}(\omega)=j\}
+=\left\{\omega \in \Omega: \tau^n(\omega) \in \left(\frac{1}{j+1},\frac{1}{j}\right)\right\}.
+\]
+Then using Theorem \ref{broden},
+\begin{align*}
+\lambda(a_{n+1}=j|i)& = \lambda\left( \tau^n < \frac{1}{j} \big| i \right)-\lambda\left( \tau^n < \frac{1}{j+1} \big| i \right)\\
+&=\frac{\frac{1}{j}(s_n+1)}{s_n \frac{1}{j} + 1}-\frac{\frac{1}{j+1}(s_n+1)}{s_n \frac{1}{j+1} + 1}\\
+&=\frac{s_n+1}{(s_n+1)(s_n+j+1)}.
+\end{align*}
+\end{proof}
+
+
+
+\section{Perron-Frobenius operators}
+For a probability measure $\mu$ on $\mathscr{B}_I$ and for $f \in L^1(\mu)$ let
+$d\mu_f = f d\mu$. 
+If $\tau_*\mu$ is
+absolutely continuous with respect to $\mu$, check that
+$\tau_* \mu_f$ is itself absolutely continuous with respect to $\mu$. Then
+applying the Radon-Nikodym theorem, let
+\[
+P_\mu f = \frac{d(\tau_* \mu_f)}{d\mu}.
+\]
+For $g \in L^\infty(\mu)$,
+\[
+\int_I g \cdot P_\mu f d\mu=\int_I g d(\tau_* \mu_f)
+=\int_I g \circ \tau d\mu_f
+=\int_I (g \circ \tau) \cdot f d\mu.
+\]
+In particular, for $g = 1_A$, $A \in \mathscr{B}_I$,
+\[
+\int_I 1_A \cdot P_\mu f d\mu = \int_I 1_{\tau^{-1}(A)} \cdot f d\mu.
+\]
+
+
+For $g \in L^\infty(\mu)$,
+\[
+\int_I g \cdot P_\gamma 1 d\gamma = \int_I g \circ \tau d\gamma
+=\int_I g d(\tau_* \gamma),
+\]
+hence $P_\gamma 1 = 1$ if and only if $\tau_* \gamma$. 
+
+We shall be especially interested in
+\[
+U=P_\gamma,
+\]
+where $\gamma$ is the Gauss measure on $I$. We establish almost everywhere an expression for $Uf(x)$.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~59, Proposition 2.1.2.}
+
+\begin{theorem}
+For $f \in L^1(\gamma)$, for $\gamma$-almost all $x \in I$,
+\[
+Uf(x) = \sum_{i \geq 1} P_i(x) f \left( \frac{1}{x+i} \right).
+\]
+\end{theorem}
+\begin{proof}
+Let $I_i = \left(\frac{1}{i+1},\frac{1}{i}\right]$ and let $\tau_i$ be the restriction of $\tau:I \to I$ to $I_i$.
+For $u \in I_i$, $i \leq \frac{1}{u} < i+1$, hence $\tau_i(u)=\tau(u) = \frac{1}{u}-i$,
+i.e. $u=\frac{1}{\tau_i(u)+i}$, i.e. $\tau_i^{-1}(x) = \frac{1}{x+i}$.
+
+
+For $A \in \mathscr{B}_I$, if $0 \not \in A$ then 
+\[
+\tau^{-1}(A) = \tau^{-1}\left(\bigcup_{i \geq 1} (A \cap I_i) \right)
+=\bigcup_{i \geq 1} \tau^{-1}(A \cap I_i),
+\]
+and the sets $\tau^{-1}(A \cap I_i)$ are pairwise disjoint, hence
+\[
+\int_{\tau^{-1}(A)} f d\gamma=\sum_{i \geq 1} \int_{\tau^{-1}(A \cap I_i)}  f d\gamma
+=\sum_{i \geq 1} \int_{\tau_i^{-1}(A)}  f d\gamma.
+\]
+Applying the change of variables formula, as $\frac{d}{dx} \tau_i^{-1}(x) = -(x+i)^{-2}$,
+\begin{align*}
+\int_{\tau_i^{-1}(A)}  f d\gamma&=\frac{1}{\log 2} \int_{\tau_i^{-1}(A)} \frac{f(u)}{u+1} d\lambda(u)\\
+&=\frac{1}{\log 2} \int_A \frac{f \circ \tau_i^{-1}(x)}{\tau_i^{-1}(x)+1} \cdot (x+i)^{-2} d\lambda(x)\\
+&=\frac{1}{\log 2} \int_A f\left(\frac{1}{x+i}\right) \cdot \frac{1}{(x+i+1)(x+i)} d\lambda(x)\\
+&=\frac{1}{\log 2} \int_A  f\left(\frac{1}{x+i}\right) \cdot P_i(x) \cdot \frac{1}{x+1} d\lambda(x)\\
+&=\int_A    f\left(\frac{1}{x+i}\right) \cdot P_i(x) d\gamma(x).
+\end{align*}
+Therefore
+\begin{align*}
+\int_{\tau^{-1}(A)} f d\gamma&=\sum_{i \geq 1} \int_A    f\left(\frac{1}{x+i}\right) \cdot P_i(x) d\gamma(x)\\
+&= \int_A \sum_{i \geq 1}  f\left(\frac{1}{x+i}\right) \cdot P_i(x) d\gamma(x).
+\end{align*}
+Then
+\[
+\int_A P_\gamma f d\gamma =  \int_A \sum_{i \geq 1}  f\left(\frac{1}{x+i}\right) \cdot P_i(x) d\gamma(x).
+\]
+Because this is true for any $A \in \mathscr{B}_I$ with $0 \not \in A$, it follows that
+for $\gamma$-almost all $x \in I$,
+\[
+P_\gamma f(x) =  \sum_{i \geq 1}  f\left(\frac{1}{x+i}\right) \cdot P_i(x).
+\]
+\end{proof}
+
+
+The following gives an expression for $P_\mu f(x)$ under some hypotheses.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~60, Proposition 2.1.3.}
+
+\begin{theorem}
+Let $\mu$ be a probability measure on $\mathscr{B}_I$ that is absolutely continuous with respect
+to $\lambda$ and suppose that $d\mu = h d\lambda$ with $h(x)>0$ for $\mu$-almost all $x \in I$. Let
+$f \in L^1(\mu)$ and define $g(x)=(x+1)h(x)f(x)$. 
+For $\mu$-almost all $x \in I$,
+\[
+P_\mu f(x) = \frac{1}{h(x)} \sum_{i \geq 1} \frac{h((x+i)^{-1})}{(x+i)^2} f\left(\frac{1}{x+i}\right)
+=\frac{Ug(x)}{(x+1)h(x)}.
+\]
+For $n \geq 1$, for $\mu$-almost all $x \in I$,
+\[
+P_\mu^n f(x) = \frac{U^n g(x)}{(x+1)h(x)}.
+\]
+\label{Pmu}
+\end{theorem}
+
+
+
+We prove an expression for $\mu(\tau^{-n}(A))$.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~61, Proposition 2.1.5.}
+
+\begin{theorem}
+Let $\mu$ be a probability measure on $\mathscr{B}_I$ that is absolutely continuous with respect
+to $\lambda$. Let $h = \frac{d\mu}{d\lambda}$ and let $f(x)=(x+1)h(x)$. For $A \in \mathscr{B}_I$
+and $n \geq 1$,
+\[
+\mu(\tau^{-n}(A)) = \int_A \frac{U^n f(x)}{x+1} d\lambda(x).
+\]
+\end{theorem}
+\begin{proof}
+For $n=0$, 
+\[
+\mu(A) =  \int_A d\mu = 
+ \int_A h d\lambda =
+\int_A \frac{f(x)}{x+1} d\lambda(x)=\int_A \frac{U^0 f(x)}{x+1} d\lambda(x).
+\]
+Suppose by hypothesis that the claim is true for some $n \geq 0$.
+Then 
+\begin{align*}
+\mu(\tau^{-n-1}(A))&=\mu(\tau^{-n}(\tau^{-1}(A)))\\
+&=\int_{\tau^{-1}(A)} \frac{U^n f(x)}{x+1} d\lambda(x)\\
+&=\log 2\cdot \int_{\tau^{-1}(A)} U^n f(x) d\gamma(x)\\
+&=\log 2\cdot \int_A U^{n+1}f(x) d\gamma(x)\\
+&=\log 2\cdot \int_A \frac{U^{n+1} f(x)}{x+1} d\lambda(x).
+\end{align*}
+\end{proof}
+
+
+For $f(x)=\frac{1}{x+1}$ and $A \in \mathscr{B}_I$,
+\begin{align*}
+\int_A P_\lambda f d\lambda&=\int_{\tau^{-1}(A)} \frac{1}{x+1} d\lambda(x)\\
+&=\log 2 \cdot \int_{\tau^{-1}(A)} d\gamma\\
+&=\log 2 \cdot \int_A d\gamma\\
+&= \int_A f d\lambda.
+\end{align*}
+Because this is true for all Borel sets $A$,
+\[
+P_\lambda \frac{1}{x+1} = \frac{1}{x+1}.
+\]
+
+For $f \in L^1(\lambda)$ and $x \in I$, let
+\[
+\Pi_1 f(x) = \frac{1}{(x+1) \log 2} \int_I f d\lambda.
+\]
+Define
+\[
+T_0 = P_\lambda - \Pi_1.
+\]
+For $n \geq 1$, $\Pi_1^n = \Pi_1$. For $f \in L^1(\lambda)$,
+\[
+P_\lambda \Pi_1 f =  \frac{1}{\log 2} \int_I f d\lambda\cdot P_\lambda \frac{1}{x+1}
+= \frac{1}{\log 2} \int_I f d\lambda\cdot\frac{1}{x+1}
+=\Pi_1 f(x)
+\]
+and
+\[
+\Pi_1 P_\lambda f=\frac{1}{(x+1)\log 2} \int_I P_\lambda f d\lambda
+=\frac{1}{(x+1)\log 2} \int_I f d\lambda=\Pi_1 f(x),
+\]
+hence
+\[
+P_\lambda \Pi_1 = \Pi_1 = \Pi_1 P_\lambda.
+\]
+Moreover,
+\[
+T_0 \Pi_1 = (P_\lambda-\Pi_1) \Pi_1 = P_\lambda \Pi_1 - \Pi_1^2
+=0
+\]
+and
+\[
+\Pi_1 T_0 = \Pi_1(P_\lambda-\Pi_1) = \Pi_1 P_\lambda - \Pi_1^2
+=0.
+\]
+Because $P_\lambda=\Pi_1+T_0$, using $\Pi_1^2=\Pi_1$,
+$T_0 \Pi_1 = 0$, and
+$\Pi_1 T_0 = 0$, we have
+\[
+P_\lambda^n = \Pi_1+T_0^n,\qquad n \geq 1.
+\]
+
+Theorem \ref{Pmu} tells us that for $f \in L^1(\lambda)$, 
+for $\lambda$-almost all $x \in I$,
+\[
+P_\lambda f(x) = \sum_{i \geq 1} \frac{1}{(x+i)^2} f\left(\frac{1}{x+i}\right).
+\]
+With $h(x)=x+1$ and $g=hf$, for $n \geq 1$, for $\lambda$-almost all $x \in I$,
+\[
+P_\lambda^n f(x) = \frac{U^n g(x)}{x+1}.
+\]
+Thus
+\begin{align*}
+U^n g &= h P_\lambda^n f\\
+&= h \Pi_1 f + h T_0^n f\\
+&= \frac{1}{\log 2} \int_I f d\lambda + h T_0^n f\\
+&=\int_I g d\gamma + h T_0^n(g/h).
+\end{align*}
+
+Define $I_\gamma:L^1(\gamma) \to L^1(\gamma)$ by 
+\[
+I_\gamma f = 1 \cdot \int_I f d\gamma.
+\]
+We have
+\[
+I_\gamma U f = \int_I P_\gamma f d\gamma = \int_I f d\gamma = I_\gamma f,
+\]
+meaning $I_\gamma U = I_\gamma$. Furthermore, because
+$\tau_* \gamma = \gamma$ we have $P_\gamma 1 = 1$, so
+\[
+U I_\gamma f =  \int_I f d\gamma \cdot U 1 = \int_I f d\gamma \cdot 1 = I_\gamma f ,
+\]
+meaning $U I_\gamma = I_\gamma$. 
+
+Let $h(x)=x+1$. $h, \frac{1}{h} \in L^\infty(\gamma)$.
+Now define $T:L^1(\gamma) \to L^1(\gamma)$ by
+\[
+T g = h \cdot T_0(g/h),
+\]
+which makes sense because $\frac{1}{h} \in L^\infty(\gamma)$. 
+Then
+\begin{align*}
+T^2 g& = T(h \cdot T_0(g/h))\\
+&= h \cdot T_0\left(\frac{h \cdot T_0(g/h)}{h}\right)\\
+&=h \cdot T_0^2(g/h).
+\end{align*}
+For $n \geq 1$,
+\[
+T^n g = h \cdot T_0^n(g/h).
+\]
+Recapitulating the above, for $n \geq 1$ and $g \in L^1(\gamma)$, 
+\[
+U^n g = I_\gamma g + h T_0^n(g/h) = I_\gamma g + T^n g,
+\]
+meaning
+\[
+U^n = I_\gamma + T^n,\qquad n \geq 1.
+\]
+
+
+It is a fact that $T^n$ converges to $0$ in the strong operator topology on $\mathscr{L}(L^1(\gamma))$, the bounded linear operators
+$L^1(\gamma) \to L^1(\gamma)$, that is,
+for each $f \in L^1(\gamma)$, $T^n f \to 0$ in $L^1(\gamma)$, i.e.
+$\norm{T^n f}_{L^1} \to 0$.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~63, Proposition 2.1.7.}
+Then $U^n \to I_\gamma$ in the strong operator topology: for $f \in L^1(\gamma)$,
+\[
+\int_I \left| U^n f(x) - \int_I f d\gamma \right| d\lambda \to 0.
+\]
+Iosifescu and Kraaikamp state that has not been determined whether for $\gamma$-almost all $x \in I$,
+$U_n f (x) \to I_\gamma f$. 
+
+
+Let $B(I)$ be the set of bounded Borel measurable functions $f:I \to \mathbb{C}$ and write $\norm{f}_\infty = \sup_{x \in I} |f(x)|$.
+For $f \in B(I)$, define for $x \in I$,
+\[
+U f(x) = \sum_{i \geq 1} P_i(x) f\left(\frac{1}{x+i}\right)
+= \sum_{i \geq 1} \frac{x+1}{(x+i)(x+i+1)} f\left(\frac{1}{x+i}\right).
+\]
+$1 \in B(I)$, and
+for $x \in I$,
+\[
+\sum_{1 \leq i \leq m}  \frac{x+1}{(x+i)(x+i+1)} = \frac{m}{m+x+1},
+\]
+hence
+\[
+U1(x) = \sum_{i \geq 1}  \frac{x+1}{(x+i)(x+i+1)} = 1.
+\]
+For $f \in B(I)$ and $x \in I$,
+\[
+|Uf(x)| \leq \norm{f}_\infty \cdot U1(x),
+\]
+hence
+\[
+\norm{U}_{B(I) \to B(I)} = 1.
+\]
+
+Say that $f:I \to \mathbb{R}$ is increasing if $x \leq y$ implies $f(x) \leq f(y)$. 
+An increasing function $f:I \to \mathbb{R}$ belongs to $B(I)$. We prove that 
+if $f$ is increasing then $Uf$ is decreasing.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~65, Proposition 2.1.11.}
+
+\begin{theorem}
+If $f:I \to \mathbb{R}$ is increasing then $Uf$ is decreasing.
+\end{theorem}
+\begin{proof}
+Take $x<y$ and let
+\[
+S_1 = \sum_{i \geq 1} P_i(y) \left( f\left( \frac{1}{y+i}\right)-f\left(\frac{1}{x+i}\right)\right)
+\]
+and 
+\[
+S_2 = \sum_{i \geq 1} (P_i(y)-P_i(x)) f\left(\frac{1}{x+i}\right).
+\]
+Then
+\begin{align*}
+Uf(y)-Uf(x) &= \sum_{i \geq 1} \left( P_i(y) f \left(\frac{1}{y+i}\right) - P_i(x) f\left(\frac{1}{x+i}\right)\right)\\
+&=S_1+S_2.
+\end{align*}
+Because $f$ is increasing, $S_1 \leq 0$. 
+Using $\sum_{i \geq 1} P_i(u) = 1$ for any $u \in I$, 
+\[
+\sum_{i \geq 1}(P_i(y)-P_i(x)) f \left(\frac{1}{x+1}\right)  
+=0,
+\]
+and therefore
+\begin{align*}
+S_2 &= \sum_{i \geq 1} \left(f \left(\frac{1}{x+i} \right) - f \left(\frac{1}{x+1}\right)  \right)(P_i(y)-P_i(x))\\
+&=  \left(f \left(\frac{1}{x+2} \right) - f \left(\frac{1}{x+1}\right)  \right)(P_2(y)-P_2(x))\\
+&+\sum_{i \geq 3} \left(f \left(\frac{1}{x+i} \right) - f \left(\frac{1}{x+1}\right)  \right)(P_i(y)-P_i(x)).
+\end{align*}
+
+
+For $i \geq 2$, using that $f$ is increasing,
+\[
+f \left(\frac{1}{x+i} \right) - f \left(\frac{1}{x+1}\right)  \leq  f \left(\frac{1}{x+2} \right) -  f \left(\frac{1}{x+1}\right) \leq 0.
+\]
+We calculate
+\[
+P_i'(u) = - \frac{-i^2+i+(u+1)^2}{(u+i)^2(u+i+1)^2}.
+\]
+The roots of the above rational function are $u=-\sqrt{(i-1)i}-1,\sqrt{(i-1)i}-1$. Thus, $P_i'(u)=0$ if and only if
+$u=\sqrt{(i-1)i}-1$. But $\sqrt{(i-1)i}-1 \in I$ if and only if  $i^2-i-1 \geq 0$ and $i^2-i-4 \leq 0$. This is possible if and only
+if $i=2$. And
+\[
+P_i'(0) = \frac{i^2-i-1}{i^2(i+1)^2},
+\]
+so $P_1'(u) \leq 0$ for all $u \in I$ and for $i \geq 3$, $P_i'(u) \geq 0$ for all $u \in I$. 
+For $i=2$, check that if $0 \leq u \leq \sqrt{2}-1$ then
+$P_2'(u) \geq 0$ and if $\sqrt{2}-1 \leq u \leq 1$ then $P_2'(u) \leq 0$. 
+Then
+\begin{align*}
+S_2&\leq  \left(f \left(\frac{1}{x+2} \right) - f \left(\frac{1}{x+1}\right)  \right)(P_2(y)-P_2(x))\\
+&+\sum_{i \geq 3} \left(f \left(\frac{1}{x+2} \right) - f \left(\frac{1}{x+1}\right)  \right)(P_i(y)-P_i(x))\\
+&= \left(f \left(\frac{1}{x+2} \right) - f \left(\frac{1}{x+1}\right)  \right)(P_2(y)-P_2(x))\\
+&+\left(f \left(\frac{1}{x+2} \right) - f \left(\frac{1}{x+1}\right)  \right)(-P_1(y)-P_2(y) - (-P_1(x)-P_2(x)))\\
+&= \left(f \left(\frac{1}{x+2} \right) - f \left(\frac{1}{x+1}\right)\right)(P_1(x)-P_1(y))\\
+&\leq 0.
+\end{align*}
+We have shown that $S_1 \leq 0$ and $S_2 \leq 0$, so
+\[
+Uf(y)-Uf(x) = S_1+S_2 \leq 0,
+\]
+which means that $Uf:I \to \mathbb{R}$ is decreasing.
+\end{proof}
+
+
+For $J=[a,b] \subset I$, 
+a \textbf{partition} of $J$ is a sequence $P=(t_0,\ldots,t_n)$ such that $a=t_0<\cdots<t_n=b$. 
+For $f:I \to \mathbb{R}$ define
+\[
+V(f,P) = \sum_{1 \leq i \leq n} |f(t_i)-f(t_{i-1})|.
+\]
+Define
+\[
+V_J f = \sup\{V(f,P): \textrm{$P$ is a partition of $J$}\}.
+\]
+Let $v_f(x) = V_{[0,x]} f$, the \textbf{variation of $f$}. $v_f(1)=V_{[0,1]} f$. 
+We say that $f$ has \textbf{bounded variation} if $v_f(1)< \infty$, and denote by $BV(I)$ the set of
+functions $f:I \to \mathbb{R}$ with bounded variation. It is a fact that
+with the norm
+\[
+\norm{f}_{BV} = |f(0)| + V_I f,
+\]
+$BV(I)$ is a Banach algebra.
+
+If $f$ is increasing then $V_I f = f(1)-f(0)$. We will use the following to prove the theorem coming after it.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~66, Proposition 2.1.12.}
+
+\begin{lemma}
+If $f:I \to \mathbb{R}$ is increasing then 
+\[
+V_I (Uf) \leq \frac{1}{2} V_I f.
+\]
+\end{lemma}
+\begin{proof}
+Because $Uf$ is decreasing, 
+\[
+V_I(Uf) = Uf(0)-Uf(1) = \sum_{i \geq 1} \left( P_i(0)f\left(\frac{1}{i}\right) - P_i(1) f\left(\frac{1}{1+i}\right)\right).
+\]
+As $P_i(u)=\frac{u+1}{(u+i)(u+i+1)}$,
+\[
+P_i(1) = \frac{2}{(i+1)(i+2)} = 2P_{i+1}(0),
+\]
+hence 
+\begin{align*}
+V_I(Uf)&=\sum_{i \geq 1} \left( P_i(0)f\left(\frac{1}{i}\right) - P_i(1) f\left(\frac{1}{1+i}\right)\right)\\
+&=\sum_{i \geq 1}  \left( P_i(0)f\left(\frac{1}{i}\right) - P_{i+1}(0) f\left(\frac{1}{1+i}\right)\right)\\
+&-\sum_{i \geq 1} P_{i+1}(0) f\left(\frac{1}{1+i}\right)\\
+&=P_1(0)f(1) -\sum_{i \geq 1} P_{i+1}(0) f\left(\frac{1}{1+i}\right)\\
+&=\frac{1}{2}f(1) - \sum_{i \geq 1} P_{i+1}(0) f\left(\frac{1}{1+i}\right).
+\end{align*}
+Because $ f\left(\frac{1}{1+i}\right) \geq f(0)$ we have  $- f\left(\frac{1}{1+i}\right) \leq - f(0)$, hence 
+\[
+V_I(Uf) \leq \frac{1}{2}f(1) -f(0) \sum_{i \geq 1} P_{i+1}(0) = \frac{1}{2}f(1)  - \frac{1}{2}f(0),
+\]
+using $\sum_{i \geq 1} P_i(0) = 1$ and $P_1(0)=\frac{1}{2}$. 
+As $f$ is increasing this means
+\[
+V_I(Uf) \leq \frac{1}{2}(f(1)-f(0)) = \frac{1}{2} V_I f.
+\]
+\end{proof}
+
+
+
+
+
+\begin{theorem}
+If $f \in BV(I)$ then
+\[
+V_I (Uf) \leq \frac{1}{2} V_I f.
+\]
+\end{theorem}
+\begin{proof}
+Let 
+\[
+p_f(x) = \frac{v_f(x)+f(x)-f(0)}{2},\qquad n_f(x) = \frac{v_f(x)-f(x)+f(0)}{2},
+\]
+the \textbf{positive variation} of $f$ and the \textbf{negative variation} of $f$.
+It is a fact that $0 \leq p_f \leq v_f$, $0 \leq n_f \leq v_f$, 
+and $p_f$ and $n_f$ are increasing.
+Using this,
+\begin{align*}
+V_I (Uf)&=V_I(Up_f+Un_f)\\
+&\leq \frac{1}{2}V_I p_f + \frac{1}{2} V_I n_f\\
+&=\frac{1}{2}(p_f(1)-p_f(0)) + \frac{1}{2}(n_f(1)-n_f(0))\\
+&=\frac{1}{2}(v_f(1)-v_f(0))\\
+&=\frac{1}{2}V_I f.
+\end{align*}
+\end{proof}
+
+
+For $f:I \to \mathbb{C}$,  let
+\[
+s(f) = \sup_{x,y \in I, x \neq y} \frac{|f(x)-f(y)|}{|x-y|}.
+\]
+We denote by $\Lip(I)$ the set of $f:I \to \mathbb{C}$ such that $s(f)<\infty$.\footnote{Marius Iosifescu and Cor Kraaikamp,
+{\em Metrical Theory of Continued Fractions}, p.~67, Proposition 2.1.14.}
+
+\begin{theorem}
+For $f \in \Lip(I)$,
+\[
+s(Uf) \leq (2\zeta(3)-\zeta(2)) s(f).
+\]
+\end{theorem}
+\begin{proof}
+Suppose $x,y \in I$, $x > y$. We calculate
+\[
+\begin{split}
+&\frac{Uf(y)-Uf(x)}{y-x}\\
+=&\frac{1}{y-x} \sum_{i \geq 1} \left(P_i(y) f\left(\frac{1}{y+i}\right) -P_i(y) f\left(\frac{1}{x+i}\right)\right)\\
+& +\frac{1}{y-x} \sum_{i \geq 1} \left( P_i(y) f\left(\frac{1}{x+i}\right) -  P_i(x) f\left(\frac{1}{x+i}\right)\right)\\
+=&\sum_{i \geq 1} P_i(y) \cdot \frac{f\left(\frac{1}{y+i}\right) - f\left(\frac{1}{x+i} \right)}{y-x}\\
+&+\sum_{i \geq 1} \frac{P_i(y)-P_i(x)}{y-x} f\left(\frac{1}{x+i}\right).
+\end{split}
+\]
+Calculating further,
+\begin{align*}
+\frac{Uf(y)-Uf(x)}{y-x}&=-\sum_{i \geq 1} P_i(y) \cdot \frac{f\left(\frac{1}{y+i}\right) - f\left(\frac{1}{x+i} \right)}{\frac{1}{y+i}-\frac{1}{x+i}}
+\cdot \frac{1}{(x+i)(y+i)}\\
+&+\sum_{i \geq 1} \frac{P_i(y)-P_i(x)}{y-x} f\left(\frac{1}{x+i}\right).
+\end{align*}
+Now, 
+\[
+P_i(u) =\frac{u+1}{(u+i)(u+i+1)}= \frac{i}{u+i+1}-\frac{i-1}{u+i},
+\]
+whence 
+\[
+P_i(y)-P_i(x)=\frac{(x-y)i}{(x+i+1)(y+i+1)} + \frac{(y-x)(i-1)}{(x+i)(y+i)},
+\]
+therefore
+\[
+\begin{split}
+&\sum_{i \geq 1} \frac{P_i(y)-P_i(x)}{y-x} f\left(\frac{1}{x+i}\right)\\
+=&\sum_{i \geq 1} \left(\frac{i-1}{(x+i)(y+i)}
+-\frac{i}{(x+i+1)(y+i+1)}\right)f\left(\frac{1}{x+i}\right).
+\end{split}
+\]
+Summation by parts tells us
+\[
+\sum_{i \geq 1} f_i(g_{i+1}-g_i) = - f_1 g_1 - \sum_{i \geq 1} g_{i+1}(f_{i+1}-f_i),
+\]
+and here this yields, for $g_i=\frac{i-1}{(x+i)(y+i)}$ and $f_i = f\left(\frac{1}{x+i}\right)$,
+\[
+\begin{split}
+&\sum_{i \geq 1} \left(\frac{i-1}{(x+i)(y+i)}
+-\frac{i}{(x+i+1)(y+i+1)}\right)f\left(\frac{1}{x+i}\right)\\
+=&\sum_{i \geq 1} g_{i+1}(f_{i+1}-f_i)\\
+=&\sum_{i \geq 1} \frac{i}{(x+i+1)(y+i+1)} \left( f \left(\frac{1}{x+i+1}\right) - f \left( \frac{1}{x+i} \right) \right)\\
+=&\sum_{i \geq 1} \frac{i}{(x+i+1)(y+i+1)} \cdot \frac{ f \left(\frac{1}{x+i+1}\right) - f \left( \frac{1}{x+i} \right)}{\frac{1}{x+i+1}-\frac{1}{x+i}}
+\cdot \frac{-1}{(x+i)(x+i+1)}.
+\end{split}
+\]
+Recapitulating the above,
+\[
+\begin{split}
+&\frac{Uf(y)-Uf(x)}{y-x}\\
+=&-\sum_{i \geq 1} P_i(y) \cdot \frac{f\left(\frac{1}{y+i}\right) - f\left(\frac{1}{x+i} \right)}{\frac{1}{y+i}-\frac{1}{x+i}}
+\cdot \frac{1}{(x+i)(y+i)}\\
+&-\sum_{i \geq 1} \frac{i}{(x+i)(x+i+1)^2 (y+i+1)} \cdot \frac{ f \left(\frac{1}{x+i+1}\right) - f \left( \frac{1}{x+i} \right)}{\frac{1}{x+i+1}-\frac{1}{x+i}}.
+\end{split}
+\]
+Then
+\begin{align*}
+\left| \frac{Uf(y)-Uf(x)}{y-x} \right|&\leq s(f) \sum_{i \geq 1} P_i(y) \frac{1}{(x+i)(y+i)}\\
+&+s(f) \sum_{i \geq 1}  \frac{i}{(x+i)(x+i+1)^2 (y+i+1)}.
+\end{align*}
+Then, using that $x>y$,
+\[
+\left| \frac{Uf(y)-Uf(x)}{y-x} \right| \leq s(f) \sum_{i \geq 1} \left( P_i(y) \frac{1}{(y+i)^2} + \frac{i}{(y+i)(y+i+1)^3} \right).
+\]
+Because $y \in I = [0,1]$, $y \geq 0$ so 
+\[
+\sum_{i \geq 1} \frac{i}{(y+i)(y+i+1)^3} \leq \sum_{i \geq 1} \frac{1}{(i+1)^3} = -1+\zeta(3).
+\]
+Let $h(u) = u^2$, with which
+\[
+\sum_{i \geq 1} P_i(y) \frac{1}{(y+i)^2} = Uh(y).
+\]
+$h:I \to \mathbb{R}$ is increasing, so $Uh$ is decreasing. 
+Because $P_i(0) = \frac{1}{i(i+1)}$,
+\[
+\sum_{i \geq 1} P_i(y) \frac{1}{(y+i)^2} = Uh(y) \leq Uh(0) = \sum_{i \geq 1} P_i(0) \frac{1}{i^2}
+=\sum_{i \geq 1} \frac{1}{i^3(i+1)}.
+\]
+Doing partial fractions, 
+\[
+\frac{1}{i^3(i+1)} = \frac{1}{i^3} - \frac{1}{i^2} + \frac{1}{i} - \frac{1}{1+i},
+\]
+so
+\[
+\sum_{i \geq 1} \frac{1}{i^3(i+1)} = \zeta(3) - \zeta(2) + 1.
+\]
+Therefore
+\[
+\left| \frac{Uf(y)-Uf(x)}{y-x} \right| \leq s(f)  \left(  \zeta(3) - \zeta(2) + 1 - 1 + \zeta(3) \right)
+=s(f) (2\zeta(3)-\zeta(2)).
+\]
+\end{proof}
+
+For example, let 
+$f(x)=x$, for which $s(f)=1$. Now,
+\[
+Uf(x) = \sum_{i \geq 1} P_i(x) \frac{1}{x+i}.
+\]
+We remind ourselves that
+\[
+P_i(x) = \frac{x+1}{(x+i)(x+i+1)},\quad P_i'(x) =  \frac{i^2-i-(x+1)^2}{(x+i)^2(x+i+1)^2}.
+\]
+Then
+\begin{align*}
+(Uf)'(x)&=\sum_{i \geq 1} \left( P_i'(x) \frac{1}{x+i} - P_i(x) \frac{1}{(x+i)^2} \right)\\
+&=\sum_{i \geq 1} \left( \frac{i^2-i-(x+1)^2}{(x+i)^3(x+i+1)^2} - \frac{x+1}{(x+i)^3(x+i+1)}\right)\\
+&=\sum_{i \geq 1} \frac{i^2-i-(x+1)^2-(x+1)(x+i+1)}{(x+i)^3(x+i+1)^2}\\
+&=\sum_{i \geq 1} \frac{-2x^2-ix-4x+i^2-2i-2}{(x+i)^3(x+i+1)^2}.
+\end{align*}
+Check that $x \mapsto (Uf)'(x)$ is increasing and negative. Then
+$\norm{(Uf)'} \leq |(Uf)'(0)|$, with
+\[
+(Uf)'(0) = \sum_{i \geq 1} \frac{i^2-2i-2}{i^3(i+1)^2} = -2\zeta(3) + \zeta(2).
+\]
+Therefore for $f(x)=x$,
+\[
+s(f) = \norm{(Uf)'}_\infty = 2 \zeta(3)-\zeta(2),
+\]
+which shows that the above theorem is sharp.
+
+
+
+
+
+\end{document}

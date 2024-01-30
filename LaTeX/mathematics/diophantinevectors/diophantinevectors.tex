@@ -1,0 +1,330 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Diophantine vectors}
+\author{Jordan Bell}
+\date{March 31, 2016}
+
+\maketitle
+
+
+\section{Dirichlet's approximation theorem}
+Let $m \geq 1$, and
+for $v \in \mathbb{R}^m$ write
+\[
+|v|_\infty = \max \{|v_j|:1 \leq j \leq m\}.
+\]
+For a positive integer $r$, let
+\[
+V_r = \{k \in \mathbb{Z}^m: 0 < |k|_\infty \leq r\},
+\] 
+which has $N_r=(2r+1)^m-1$ elements. 
+For any $k \in V_r$,
+\[
+|\inner{v}{k}| \leq m |k|_\infty |v|_\infty \leq m r |v|_\infty,
+\]
+Let $I_1,\ldots,I_{N_r-1}$ be consecutive closed intervals with
+\[
+[0,mr|v|_\infty] = \bigcup_{j=1}^{N_r-1} I_j.
+\]
+Then there is some $j$ and some $k',k'' \in V_r$, $k' \neq k''$, with $|\inner{v}{k'}|,|\inner{v}{k''}| \in I_j$.
+If $\inner{v}{k'}, \inner{v}{k''}$ have the same sign, then $k=k'-k''$ satisfies
+$|\inner{v}{k}| \leq |I_j|$, and if
+$\inner{v}{k'},\inner{v}{k''}$ have different signs then
+$k=k'+k''$ satisfies $|\inner{v}{k}| \leq |I_j|$.
+In either case, $k \in V_{2r}$, and $k$ satisfies
+\[
+|\inner{v}{k}| \leq |I_j| =  \frac{mr|v|_\infty}{N_r-1} = \frac{mr|v|_\infty}{(2r+1)^m-2}.
+\]
+
+
+
+
+\section{Diophantine vectors}
+For real $\tau,\gamma>0$,
+let
+$D(\tau,\gamma)$ be the set of those $v \in \mathbb{R}^m$ such that for any nonzero $k \in \mathbb{Z}^m$,
+\[
+|\inner{v}{k}| \geq \gamma |k|_\infty^{-\tau}.
+\]
+In other words, 
+\[
+D(\tau,\gamma) =  \bigcap_{k \in \mathbb{Z}^m \setminus \{0\}} \{v \in \mathbb{R}^m: |\inner{v}{k}| \geq \gamma |k|_\infty^{-\tau}\}
+= \bigcap_{k \in \mathbb{Z}^m \setminus \{0\}} D(\tau,\gamma,k).
+\]
+Each $D(\tau,\gamma,k)$ is closed, so $D(\tau,\gamma)$ is closed. 
+Let 
+\[
+D(\tau) = \bigcup_{\gamma>0} D(\tau,\gamma).
+\]
+If $\gamma_1 \geq \gamma_2$ and $v \in D(\tau,\gamma_1)$, let $k \in \mathbb{Z}^m \setminus \{0\}$. Then
+$|\inner{v}{k}| \geq \gamma_1 |k|_\infty^{-\tau} \geq \gamma_2 |k|_\infty^{-\tau}$, so
+$v \in D(\tau,\gamma_2)$, i.e. 
+\[
+D(\tau,\gamma_1) \subset D(\tau,\gamma_2),\qquad \gamma_1 \geq \gamma_2.
+\] 
+Therefore
+\[
+D(\tau,N_1^{-1}) \subset D(\tau,N_2^{-1})\qquad N_1 \leq N_2,
+\]
+and
+\[
+D(\tau) = \bigcup_{N \geq 1} D(\tau,N^{-1}),
+\]
+showing that $D(\tau)$ is an $F_\sigma$ set.
+
+
+
+
+If $0 \leq \tau<m-1$ and $\gamma>0$,
+suppose by contradiction that there is some $v \in D(\tau,\gamma)$.
+Now, by Dirichlet's theorem, for each positive integer $r$ there is some
+$k_r \in V_{2r}$ satisfying $|\inner{v}{k_r}| \leq m |v|_\infty 2^{-m} r^{-m+1}$. 
+Then, as $|k_r|_\infty \leq 2r$,
+\[
+m |v|_\infty 2^{-m} r^{-m+1} \geq |\inner{v}{k_r}| \geq  \gamma |k_r|_\infty^{-\tau}
+\geq\gamma (2r)^{-\tau}
+=\gamma (2r)^{\tau-m+1} (2r)^{m-1},
+\]
+hence
+\[
+(2r)^{-\tau+m-1} \geq \frac{2}{cm|v|_\infty}.
+\]
+As $\tau<m-1$, taking $r \to \infty$ yields a contradiction. Therefore
+\[
+D(\tau) = \emptyset, \qquad 0 \leq \tau<m-1.
+\]
+
+
+
+\section{Measures of sets}
+Denote by $\mu$ Lebesgue measure on $\mathbb{R}^m$.
+Let $e_1,\ldots,e_m$ be the standard basis for $\mathbb{R}^m$, so
+\[
+|v|_1 = \sum_{j=1}^m |v_j| = \sum_{j=1}^m |\inner{v}{e_j}|.
+\]
+Let $C=\{v \in \mathbb{R}^m: |v|_\infty \leq 1\}$. 
+Let $A_m$ be the supremum of the  $(m-1)$-dimensional Hausdorff measure of
+the intersection of an $(n-1)$-dimensional affine subspace of $\mathbb{R}^m$ and $C$.
+
+We calculate the following.\footnote{Dmitry Treschev and Oleg Zubelevich, {\em Introduction
+to the Perturbation Theory of Hamiltonian Systems},
+p.~166, Theorem 9.3.}
+
+\begin{theorem}
+For $\tau>m-1$ and $\gamma>0$,
+\[
+\mu(C \setminus D(\tau,\gamma)) \leq 4\gamma m A_m  3^{m-1} \zeta(\tau+2-m).
+\]
+\label{Dtaugamma}
+\end{theorem}
+\begin{proof}
+Let $k \in \mathbb{Z}^m \setminus \{0\}$, and
+for $t \in \mathbb{R}$, let 
+\[
+P_{k,t} = \{x \in \mathbb{R}^m: \inner{x}{k} = t\},
+\]
+and let
+\[
+U_k = \left\{ x \in \mathbb{R}^m : |\inner{x}{k}| < \gamma |k|_\infty^{-\tau}  \right\}.
+\]
+$U$ is the set of points between the hyperplanes $P_{k,- \gamma |k|_\infty^{-\tau} }$ and $P_{k,\gamma |k|_\infty^{-\tau} }$.
+The distance between the hyperplanes $P_{k,s}$ and $P_{k,s}$ is $\frac{|s-t|}{|k|_2}$, so
+the distance between the hyperplanes $P_{k,- \gamma |k|_\infty^{-\tau} }$ and $P_{ k,\gamma |k|_\infty^{-\tau} }$ is
+$d_k=\frac{2\gamma |k|_\infty^{-\tau}}{|k|_2}$. And $|x|_2 \geq |x|_\infty$, so
+$d_k \leq 2\gamma |k|_\infty^{-\tau-1}$. 
+But $\mu(C \cap U_k) \leq d A_m$, so
+\[
+\mu(C \cap U) \leq 2\gamma |k|_\infty^{-\tau-1} A_m.
+\]
+Now, $U_k = \mathbb{R}^m \setminus D(\tau,\gamma,k)$, so 
+\[
+C \setminus D(\tau,\gamma) = C \setminus \bigcap_{k \in \mathbb{Z}^m \setminus \{0\}} D(\tau,\gamma,k)
+=\bigcup_{k \in \mathbb{Z}^m \setminus \{0\}} (C \cap U_k).
+\]
+We remind ourselves that for $r$ a positive integer,
+the set $V_r = \{k \in \mathbb{Z}^m: 0 < |k|_\infty \leq r\}$ has 
+$N_r=(2r+1)^m-1$ elements. 
+Therefore 
+\[
+\{k \in \mathbb{Z}^m \setminus \{0\}: |k|_\infty = r\} = V_r \setminus V_{r-1}
+\]
+has
+\[
+N_r-N_{r-1}=(2r+1)^m - (2r-1)^m \leq 2m (2r+3)^{m-1}
+\]
+elements,
+using $a^m-b^m=(a-b)(a^{m-1}+a^{m-2}b + \cdots + ab^{m-2}+b^{m-1})$. Therefore
+\begin{align*}
+\mu(C \setminus D(\tau,\gamma))&\leq \sum_{k \in  \mathbb{Z}^m \setminus \{0\}} \mu(C \cap U_k)\\
+&\leq \sum_{k \in \mathbb{Z}^m \setminus \{0\}} 2\gamma |k|_\infty^{-\tau-1} A_m\\
+&=2\gamma A_m \sum_{r=1}^\infty \sum_{\{k \in \mathbb{Z}^m \setminus \{0\}: |k|_\infty = r\}}  r^{-\tau-1}\\
+&\leq 2\gamma A_m \sum_{r=1}^\infty 2m (2r+1)^{m-1} \cdot  r^{-\tau-1}\\
+&=4\gamma m A_m \sum_{r=1}^\infty (2r+1)^{m-1} r^{-\tau-1}.
+\end{align*}
+We estimate
+\[
+\sum_{r=1}^\infty (2r+1)^{m-1} r^{-\tau-1} \leq \sum_{r=1}^\infty (3r)^{m-1} r^{-\tau-1}
+=3^{m-1} \sum_{r=1}^\infty r^{m-\tau-2},
+\]
+and therefore
+\[
+\mu(C \setminus D(\tau,\gamma)) \leq 4\gamma m A_m \cdot 3^{m-1} \zeta(\tau+2-m).
+\]
+\end{proof}
+
+But
+\[
+C \setminus D(\tau) =  \bigcap_{N \geq 1} (C \setminus D(\tau,N^{-1})),
+\]
+and by Theorem \ref{Dtaugamma}, if $\tau>m-1$ then $\mu(C \setminus D(\tau,N^{-1})) \to 0$ as $N \to \infty$. 
+Therefore 
+\[
+\mu(C \cap D(\tau)) = 0,\qquad \tau>m-1.
+\]
+
+
+
+\section{Cohomological equation}
+Let $\mathbb{T}^m = \{z \in \mathbb{C}^m: |z_1|=1,\ldots,|z_m|=1\}$
+and write $\nu$ for the Haar measure on $\mathbb{T}^m$ for which $\nu(\mathbb{T}^m)=1$.
+For $k \in \mathbb{Z}^m$ let $\chi_k(z) = \prod_{j=1}^m z_j^{k_j}$. 
+Let
+$\Delta(\tau,\gamma)$ be the set of those
+$z \in \mathbb{T}^m$ such that
+\[
+|\chi_k(z)-1| \geq \gamma |k|_1^{-\tau},\qquad k \in \mathbb{Z}^m \setminus \{0\}.
+\]
+Let 
+\[
+\Delta(\tau) = \bigcup_{\gamma>0} \Delta(\tau,\gamma),
+\]
+and then
+\[
+\Delta = \bigcup_{\tau>0} \Delta(\tau).
+\]
+For $\lambda \in \mathbb{T}^m$ define $R_\lambda:\mathbb{T}^m \to \mathbb{T}^m$ by
+\[
+R_\lambda(z) = \lambda \cdot z= (\lambda_1 z_1,\ldots,\lambda_m z_m).
+\]
+
+
+In the following theorem, \eqref{cohomology} is called a \textbf{cohomological equation}.\footnote{Anatole Katok, {\em Combinatorial Constructions in Ergodic Theory and Dynamics}, p.~71, Theorem 11.5.}
+
+
+\begin{theorem}
+For $\lambda \in \mathbb{T}^m$,
+$\lambda \in \Delta$ if and only if for any
+$h \in C^\infty(\mathbb{T}^m)$ there is some $\psi \in C^\infty(\mathbb{T}^m)$ such that
+\begin{equation}
+h(z) - \int_{\mathbb{T}^m} h d\nu = \psi(R_\lambda z) - \psi(z),\qquad z \in \mathbb{T}^m.
+\label{cohomology}
+\end{equation}
+\end{theorem}
+\begin{proof}
+It is a fact that $\chi_k \in \widehat{\mathbb{T}}^m$ and that
+$k \mapsto \chi_k$ is an isomorphism of topological groups $\mathbb{Z}^d \to \widehat{\mathbb{T}}^m$. 
+For $f \in L^1(\nu)$,
+$\widehat{f}:\mathbb{Z}^m \to \mathbb{C}$ is defined by
+\[
+\widehat{f}(k) = \int_{\mathbb{T}^m} f(z) \overline{\chi_k(z)} d\nu(z)
+= \int_{\mathbb{T}^m} f(z) \chi_k(z)^{-1} d\nu(z).
+\] 
+If the Fourier series of $f$ converges pointwise,
+\[
+f(z) = \sum_{k \in \mathbb{Z}^m} \widehat{f}(k) \chi_k(z),\qquad z \in \mathbb{T}^m.
+\]
+It is a fact that $f \in C^\infty(\mathbb{T}^m)$ if and only if
+for any $R>0$ there is some $C_R$ such that 
+\[
+|\widehat{f}(k)| \leq C_R |k|_1^{-R},\qquad k \in \mathbb{Z}^m \setminus \{0\}.
+\]
+For $\psi \in L^1(\mathbb{T}^m)$ and $k \in \mathbb{T}^m$,
+because $\nu$ is invariant under multiplication in $\mathbb{T}^m$,
+\begin{align*}
+\widehat{\psi \circ R_\lambda}(k)
+&=\int_{\mathbb{T}^m} \psi(\lambda z)  \overline{\chi_k(z)} d\nu(z)\\
+&=\int_{\mathbb{T}^m} \psi(z) \overline{\chi_k(\lambda^{-1}x)} d\nu(z)\\
+&=\chi_k(\lambda) \widehat{\psi}(k).
+\end{align*}
+
+
+Suppose that for every $h$ is $C^\infty$ that there is some $\psi \in C^\infty(\mathbb{T}^m)$ satisfying \eqref{cohomology}.
+Taking the Fourier transform of \eqref{cohomology},
+\[
+\widehat{h}(k) - \delta_0(k) \cdot \int_{\mathbb{T}^m} h d\nu = \chi_k(\lambda) \widehat{\psi}(k) - \widehat{\psi}(k),\qquad
+k \in \mathbb{Z}^m,
+\]
+then, if $\chi_k(\lambda) \neq 1$,
+\[
+\widehat{\psi}(k) = \frac{\widehat{h}(k)}{\chi_k(\lambda)-1}.
+\]
+Now suppose by contradiction that
+$\lambda \not \in \Delta$. 
+This means that there are $\tau_N \to \infty$ such that for each $N$, there is some
+$\gamma_N>0$ and some $k_N \in \mathbb{Z}^m \setminus \{0\}$ such that
+$|\chi_{k_N}(\lambda)-1| < \gamma_N |k_N|_1^{-\tau_N}$. 
+Define 
+\[
+\widehat{h}(k) = |\chi_k(\lambda)-1|^{1/2} \cdot 1_{\{k_N\}}(k).
+\]
+For $R>0$ let $\tau_N \geq 2R$. Then for $k \in \mathbb{Z}^m$, 
+ either $\widehat{h}(k)=0$ or if $k=k_N$ then
+\[
+|\widehat{h}(k)| = |\chi_{k_N}(\lambda)-1|^{1/2} <\gamma_N^{1/2} |k_N|_1^{-\tau_N/2}
+\leq \gamma_N^{1/2} |k_N|_1^{-R}
+=\gamma_N^{1/2} |k|_1^{-R},
+\]
+which shows that $h$ is $C^\infty$. 
+There is some $\psi \in C^\infty(\mathbb{T}^m)$ satisfying \eqref{cohomology}, according
+to which, for $\chi_k(\lambda) \neq 1$,
+\[
+\widehat{\psi}(k) = \frac{\widehat{h}(k)}{\chi_k(\lambda)-1}.
+\]
+But  $|\widehat{\psi}(k)|$ is either $0$ or if $k=k_N$ then 
+$|\chi_{k_N}(\lambda)-1|^{-1/2} > \gamma_N^{-1/2} |k_N|_1^{\tau_N/2}$. 
+Thus the Fourier coefficients of $\psi$ are unbounded, which contradicts that
+$\psi$ is $C^\infty$. Therefore $\lambda \in \Delta$. 
+
+Now suppose that $\lambda \in D$ and let $h \in C^\infty(\mathbb{T}^m)$. 
+Define $\psi$ by
+\[
+\widehat{\psi}(k) =\begin{cases}
+\frac{\widehat{h}(k)}{\chi_k(\lambda)-1}&\chi_k(\lambda) \neq 1\\
+0&\chi_k(\lambda)=1.
+\end{cases}
+\]
+The facts that $\lambda \in D$ and that $h$ is $C^\infty$ yield that $\psi$ is $C^\infty$. It is straightforward
+from the definition of $\widehat{\psi}(k)$ that $\psi$ satisfies \eqref{cohomology}.
+\end{proof}
+
+
+
+
+\end{document}

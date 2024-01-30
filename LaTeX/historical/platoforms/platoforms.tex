@@ -1,0 +1,465 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm,enumitem}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Plato's theory of forms and the axiom of foundation}
+\author{Jordan Bell}
+
+\date{January 27, 2017}
+
+\maketitle
+
+
+\section{Axiom of foundation}
+By $y \subset x$ we mean that $z \in y$ implies that $z \in x$. 
+
+
+If $x$ is a set, we say that an element $y$ of $x$ is \textbf{epsilon-minimal} if
+$y \cap x = \emptyset$. 
+The \textbf{axiom of foundation} states that if $x \neq \emptyset$ then $x$ has an epsilon-minimal element. 
+See Jech  \cite[p.~63, Chapter 6]{jech}.
+
+Zermelo \cite{zermelo1930}. Translated and glossed in \cite[pp.~1208--1233]{ewaldII}. Kanamori \cite{kanamori}
+
+Ebbinghaus: \cite{ebbinghaus} 
+
+Forster \cite{forster}
+
+Von Neumann universe, cumulative hierarchy, $\epsilon$-induction, well-founded induction.
+
+The following theorem shows in particular that $x \not \in x$. 
+
+
+\begin{theorem}
+For all  $x_1,\ldots,x_n$,
+\[
+\neg ((x_1 \in x_2) \wedge (x_2 \in x_3) \wedge \cdots \wedge (x_{n-1} \in x_n) \wedge (x_n \in x_1)).
+\] 
+\end{theorem}
+\begin{proof}
+Suppose that
+\begin{equation}
+(x_1 \in x_2) \wedge (x_2 \in x_3) \wedge \cdots \wedge (x_{n-1} \in x_n) \wedge (x_n \in  x_1).
+\label{cyclic}
+\end{equation}
+Let $x=\{x_1,\ldots,x_n\}$. The axiom of foundation asserts that $x$ has an epsilon-minimal element, say $x_i$, for which
+$x_i \cap x = \emptyset$. This means that for each $j=1,\ldots,n$ we have $x_j \not \in x_i$. If $1<i \leq n$, then with
+$j=i-1$ we have $x_{i-1} \not \in x_i$, contradicting \eqref{cyclic}. If $i=1$, then with $j=n$ we have $x_n \not \in x_1$, contradicting
+\eqref{cyclic}. Therefore \eqref{cyclic} is false, proving the claim.
+\end{proof}
+
+
+
+\begin{theorem}
+There is no function $f$ with domain $\omega$ such that for each $i \in \omega$, 
+$f(i+1) \in f(i)$.
+\end{theorem}
+\begin{proof}
+Suppose there is such a function $f$. 
+Let $x = \{f(i): i \in \omega\}$. 
+The axiom of foundation asserts that $x$ has an epsilon-minimal element, say $f(i)$, for which $f(i) \cap x = \emptyset$. 
+This means that for each $j \in \omega$ we have $f(j) \not \in f(i)$. In particular, with $j=i+1$ we have
+$f(i+1) \not \in f(i)$, a contradiction. 
+\end{proof}
+
+Kunen \cite{kunen}
+
+
+\section{Ordinal numbers}
+Suppose that $<$ is a linear order on a set $X$. A subset $I$ of $X$ is said to be an \textbf{initial segment of $X$}
+if $t \in I$, $x \in X$ and $x<t$ imply that $x \in I$. For $x \in X$ we define
+\[
+s_X(x) = \{t \in X: t < x\}.
+\] 
+If $t \in s_X(x)$, $y \in X$ and $y<t$, then from $t<x$ and $y<t$ we have $y<x$ and hence
+$y \in s_X(x)$. Therefore $s_X(x)$ is an initial segment of $X$.
+
+\begin{theorem}
+If $<$ is a well-order on a set $X$ and $I$ is an initial segment of $X$ with $I \neq X$, then there is some $x \in X$ such that
+$I=s_X(x)$.
+\end{theorem}
+\begin{proof}
+Because $I \neq X$,
+$X \setminus I$ is nonempty, and because $<$ is a well-order, there is a minimum element $x$ of $X \setminus I$. On the one hand, suppose that
+$t \in I$. If $x \leq t$ then because $I$ is an initial segment and $t \in I$ we get $x \in I$, contradicting that $x \in X \setminus I$.
+Therefore $t<x$, i.e. $t \in s_X(x)$, showing that $I \subset s_X(x)$. 
+On the other hand, suppose that $t \in s_X(x)$. That is, $t < x$.
+If $t \in X \setminus I$ then because $x$ is a minimum element of $X \setminus I$ we have 
+$x \leq t$, contradicting $t<x$. Therefore $t \in I$, showing that $s_X(x) \subset I$.
+\end{proof}
+
+A set $x$ is said to be \textbf{transitive} if $y \in x$ and $z \in y$ imply that $z \in x$. 
+A set $\alpha$ is called an \textbf{ordinal number} if $\alpha$ is transitive and $\in$ is a well-order on $\alpha$. 
+We denote the class of all ordinal numbers by 
+$\mathbf{Ord}$. 
+
+Jech \cite[p.~19, Lemma 2.11]{jech}
+
+\begin{theorem}
+\begin{enumerate}
+\item $\emptyset \in \mathbf{Ord}$.
+\item If $\alpha \in \mathbf{Ord}$ and $\beta \in \alpha$ then $\beta \in \mathbf{Ord}$.
+\item If $\alpha,\beta \in \mathbf{Ord}$, $\alpha \subset \beta$, and $\alpha \neq \beta$, then
+$\alpha \in \beta$.
+\item If $\alpha,\beta \in \mathbf{Ord}$ then $\alpha \subset \beta$ or $\beta \subset \alpha$.
+\end{enumerate}
+\end{theorem}
+\begin{proof}
+It is immediate that $\emptyset \in \mathbf{Ord}$. Suppose that $\alpha \in \mathbf{Ord}$ and $\beta \in \alpha$. 
+Suppose that $\gamma \in \beta$ and $\delta \in \gamma$. Because $\alpha$ is transitive, $\beta \in \alpha$ and
+$\gamma \in \beta$ yield $\gamma \in \alpha$. Again, because $\alpha$ is transitive, $\delta \in \gamma$ and
+$\gamma \in \alpha$ yield $\delta \in \alpha$. 
+Let $x=\{\beta,\delta\}$. Because $\in$ is a well-order on $\alpha$ and $x \subset \alpha$, $x$ has a minimum element:
+(i) $\beta \in \delta$, (ii) $\beta=\delta$, or (iii) $\delta \in \beta$. 
+For (i), $\beta \in \delta \in \gamma \in \beta$, which by Theorem
+\ref{cyclic} contradicts the axiom of foundation. For (ii), $\gamma \in \beta = \delta \in \gamma$, 
+and likewise by Theorem
+\ref{cyclic} this contradicts the axiom of foundation. Therefore (iii) $\delta \in \beta$, which shows that $\beta$ is transitive.
+Because $\beta$ is a subset of $\alpha$ and $\epsilon$ is a well-order on $\alpha$, it is immediate that $\in$ is a well-order on $\beta$. Therefore
+$\beta \in \mathbf{Ord}$.
+
+Suppose that $\alpha,\beta \in \mathbf{Ord}$, $\beta \subset \alpha$, and $\beta \neq \alpha$. 
+The subset $\alpha \setminus \beta$ of $\alpha$ is nonempty, and because $\epsilon$ is a well-order on $\alpha$
+there is a minimum element $\gamma$ of $\alpha \setminus \beta$. Because $\alpha$ is transitive and
+$\gamma$ is an element of $\alpha$ we have $\gamma \subset \alpha$. 
+Also, because $\gamma$ is a minimum element of $\alpha \setminus \beta$, for any $\delta \in \alpha \setminus \beta$
+we have $\delta \not \in \gamma$. Hence $(\alpha \setminus \beta) \cap \gamma = \emptyset$, which
+is equivalent to $(\alpha \cap \gamma) \setminus \beta = \emptyset$, and because $\gamma \subset \alpha$ this implies
+$\gamma \setminus \beta = \emptyset$. And $\gamma \setminus \beta = \emptyset$ means
+that
+$\gamma \subset \beta$. 
+\end{proof}
+
+
+\section{Plato}
+{\em First Alcibiades}
+
+{\em Laches}: ``What is courage?'' 191e: ``So what actually is each of these attributes, courage and cowardice?
+That's what I wanted to find out. Let's take courage first, then, and could you please try again to tell me what it is
+that's the same in all these situations.'' \cite[p.~53]{waterfieldmeno}
+
+{\em Charmides}: ``What is self-control?''
+Critias says at 166e, ``I maintain that it's the only kind of knowledge which knows itself and all other cases of knowledge.'' \cite[p.~21]{waterfieldmeno}
+Socrates soon responds in 167c, ``But we're committing ourselves here to an extraordinary assertion, my friend. If you try to find the same phenomenon elsewhere,
+you'll see how impossible it is, I think.'' For example, 167d--e, ``Is there a kind of hearing that doesn't hear any sound, but hears itself and all other cases of hearing
+and not hearing?'', and ``And would you say that there was a kind of love which is such that it isn't love of anything beautiful, but of itself and all other cases of loving?''
+
+
+{\em Protagoras}, 330--331 \cite[pp.~27--28]{taylorprotagoras}:
+\begin{quote}
+``So then,'' I said, ``none of the other parts of excellence is like knowledge, none is like justice, none like courage, none like soundness of mind, and none like
+holiness.''
+
+``No.''
+
+``Well now,'' I said, ``let's consider together what sort of thing each one
+is. Here's the first question: is justice something, or not a thing at all? It seems to me that it is something; what do you think?''.
+
+``I think so too.''
+
+``Well, then, suppose someone asked us, `Tell me, is that thing that you have just mentioned,
+justice, itself just or unjust?' I should reply that it is just. How would you cast your vote? The same as mine, or different?''
+
+``The same.''
+
+``So my reply to the question would be that justice is such as to be just; would you give the same answer?''
+
+``Yes.''
+
+``Suppose he went on to ask us, `Do you think that there is also such a thing as holiness?' we whould, I think, say that we do.''
+
+``Yes.''
+
+`` `And do you say that that too is something?' We should say so, don't you agree?''
+
+``I agree there too.''
+
+`` `And do you say that this thing is itself such as to be unholy, or such as to be holy?' I should be annoyed at the question, and say, `Watch what you say,
+sir; how could anything else be holy, if holiness itself is not to be holy?' What about you? Wouldn't you give the same answer?''
+
+``Certainly,'' he said.
+
+``Suppose he carried on with his questioning: `Well, what was it that you were saying a moment ago. Didn't I hear you correctly? You seemed to me to be saying that the 
+parts of excellence are related to one another in such a way that none of them is like any other.' I should say, `Yes, you heard the rest correctly, but you must have misheard if you think
+that I said that. It was Protagoras who said it in answer to a question of mine.' Suppose he said, `Is that right, Protagoras? Do you say that none of the parts of excellence
+is like any of the others? Is that your opinion?' What would you say?''
+
+``I think have to agree, Socrates,'' he said.
+
+``Well, once we've agreed to that, Protagoras, how shall we deal with his next question? `So holiness is not such as to be something just, nor justice such as to be holy,
+but rather such as to be not holy; and holiness such as to be not just, and so unjust, and justice unholy?' What shall we reply? For my own part I should say both that
+justice is holy and holiness just; and, if you let me, I should give the same answer on your behalf too, that justness is either the same thing as holiness or very similar,
+and above all that justice is like holiness and holiness like justice. Is that your view too, or had you rather that I didn't give that answer?''
+\end{quote}
+
+332c \cite[p.~30]{taylorprotagoras}:
+\begin{quote}
+``Well now,'' I said, ``is there such a thing as the beautiful?''
+
+``Yes, there is.''
+
+``And does it have any opposite except the ugly?''
+
+``No, none.''
+
+``Is there such a thing as the good?''
+
+``There is.''
+
+``Does it have any opposite apart from the bad?''
+
+``No.''
+
+``Is there such a thing as the high-pitched in sound?''
+
+``Yes.''
+
+``And that has no opposite apart from the low-pitched?''
+
+``None.''
+
+``So,'' I said, ``each member of an opposition has only one opposite, not many.''
+\end{quote}
+
+349b \cite[p.~50]{taylorprotagoras}:
+\begin{quote}
+``The question, I think, was this: are `wisdom', `soundness of mind', `courage', `justice', and `holiness' five names for the one thing, or does there correspond to
+each of these names some separate thing or entity with its own particular power, unlike any of the others?''
+\end{quote}
+
+
+{\em Hippias Major}.  292e, 300a--b, 303: two different beautiful things have something identical which makes them beautiful and this
+common thing is present in them.
+
+{\em Gorgias}: good, 497e.
+
+{\em Meno}. In this  dialogue Socrates asks ``what is excellence?''  72: Socrates: ``Suppose I asked what it is to be a bee and you said that there were many
+bees, of many varieties. What answer would you give me if I then asked: `Are you saying that these bees are many,
+and of many different varieties, in that they are bees? Or do they not differ from one another at all in that they are bees, but differ from
+one another in some other respect -- in beauty, for example, or size or something like that?' Tell me: what answer would you give to this
+question?'' Meno: ``I'd say that they don't differ from another at all, in so far as they are bees.'' Socrates: ``So what if I went
+on to say: `Here's the crucial question, then, Meno: what, in your opinion, is it that makes them all no different from one another, but 
+the same?' I imagine you'd be able to tell me, wouldn't you?'' Meno: ``Yes, I would.'' Socrates: ``So do the same
+for excellence as well, please. Even if there are many aspects of that excellence, of different kinds, they all share a single
+characteristic, thanks to which they are aspects of excellence, and it's this single characteristic which a person should look to when he's replying
+to someone who has asked him to explain what excellence actually is. But perhaps you're not following what I'm saying.'' Meno: ``No,
+I think I understand, but I'm not quite as clear as I'd like to be about the point of the present inquiry.''
+Socrates: ``Well, Meno, is it only excellence that seems to you to be like that -- to be different for a man and for a woman and so on
+-- or does the same go, in your opinion, for health and height and strength? Do you think that health is different in a man and in a woman? Or is
+it the same characteristic wherever there's health, whether it's in a man or a woman or anything else?'' Meno: ``As far as health is
+concerned, I think it's the same for a man and for a woman.'' Socrates: ``And height and strength, too? If a woman is strong, will she
+be strong thanks to the same characteristic, the same strength? By `the same' I mean that, in so far as it's strength, strength is no different
+whether it's in a man or in a woman. Or do you think there's a difference?''
+Socrates then gets Meno to agree in 73 that everyone's excellence is the same. \cite[pp.~101--103]{waterfieldmeno}
+
+
+
+{\em Euthyphro} \cite{euthyphro} 5--7: ``Isn't the holy itself the same as itself in every action? And conversely, isn't the unholy the exact opposite of the holy, in itself
+similar to itself, or possessed of a single character, in anything at all that is going to be unholy?'' Maybe it makes sense to read this as saying that the only predicate satisfied by
+``the holy'' is ``$x$ is holy'', in other words, ``the holy'' does not belong to any class of things except ``the holy''. ``And do you recall that I wasn't urging you to teach me about one or two
+of those many things that are holy, but rather about the form itself whereby all holy things are holy? Because you said, I think, that it was by virtue of a single character that unholy
+things are unholy, and holy things are holy. Don't you remember?'' ``Then teach me about that character, about what it might be, so that by fixing my eye upon it and using it as a model, I may call
+holy any action of yours or another's, which conforms to it, and may den to be holy whatever does not.'' 12, 13: shame is contained in fear, the even numbers are contained
+in the numbers.
+
+{\em Symposium} 210--212. 210e: beauty is beautiful
+
+{\em Phaedrus}. 247: When the gods go to one of their banquets, they ``journey skyward to the rim of the heavenly vault.'' Then,
+``When the souls we call `immortal' reach the rim, they make their way to the outside and stand on the outer edge of heaven,
+and as they stand there the revolution carries them around, while they gaze outward from the heaven. The region beyond heaven has never
+yet been adequately described in any of our earthly poets' compositions, nor will it ever be. But since one has to make a courageous
+attempt to speak the truth, especially when it is truth that one is speaking about, here is a description. This region is filled with true being.
+True being has no colour or form; it is intangible, and visible only to intelligence, the soul's guide. True being is the province
+of everything that counts as true knowledge. So since the mind of god is nourished by intelligence and pure knowledge
+(as is the mind of every soul which is concerned to receive its proper food), it is pleased to be at last in a position to see true being,
+and in gazing on the truth it is fed and feels comfortable, until the revolution carries it around to the same place again. In the course of its
+circuit it observes justice as it really is, self-control, knowledge -- not the kind of knowledge that is involved with change and differs
+according to  which of the various existing things (to use the term `existence' in its everyday sense) it makes its object, but the kind of knowledge
+whose object is things as they really are. And once it has feasted its gaze in the same way on everything else that really is, it sinks
+back into the inside of heaven and returns home. Once back home, the soul's charioteer reins in his horses by their manger,
+throws them ambrosia to eat, and gives them nectar to wash the ambrosia down.'' \cite[pp.~29--30]{waterfieldphaedrus}
+
+In Socrates' palinode, 249: ``For a soul which has never seen the truth cannot enter into human form, because a man must understand the impressions he receives
+by reference to classes: he draws on the plurality of perceptions to combine them by reasoning into a single class. This is recollection of the things which our souls once
+saw during their journey as companions to a god, when they saw beyond the things we now say `exist' and poked their heads up into true reality.'' \cite[p.~32]{waterfieldphaedrus}
+
+
+{\em Republic}:
+``That since beauty and ugliness are opposite, they are two things; and consequently each of them is one. The same holds
+of justice and injustice, good and bad, and all the essential Forms: each in itself is one; but they manifest themselves in a great variety
+of combinations, with actions, with material things, and with one another, and so each seems to be
+many.''\cite[p.~183, 475--476]{cornfordrepublic}
+
+``On these assumptions, then, I shall call for an answer from our friend who denies the existence of Beauty itself
+or of anything that can be called an essential Form of Beauty remaining unchangeably in the same state for ever, though he does
+recognize the existence of beautiful things as a plurality-- that lover of things seen who will not listen to anyone who says that Beauty
+is one, Justice is one, and so on. I shall say to him, Be so good as to tell us: of all these many beautiful things is there one which will
+not appear ugly? Or of these many  just or righteous actions, is there one that will not appear unjust or unrighteous?'' ``No, replied
+Glaucon, they must inevitably appear to be in some way both beautiful and ugly; and so with all the other terms your question
+refers to.'' \cite[p.~187, 478--479]{cornfordrepublic} This seems to deny that it is possible for a Form to participate in itself,
+unless it is not counted as a ``thing''.
+
+ ``Let me remind you of the distinction we drew earlier and have often drawn on other
+occasions, between the multiplicity of things that we call good or beautiful or whatever it may be and, on the other hand,
+Goodness itself or Beauty itself and so on. Corresponding to each of these sets of many things, we postulate a single Form
+or real essence, as we call it.'' ``Further, the many things, we say, can be seen, but are not objects of rational thought; whereas
+the Forms are objects of thought, but invisible.'' \cite[pp.~217--218, 506--507]{cornfordrepublic}
+
+Knowledge is about Forms: ``never making use of any sensible object, but only of Forms, moving through
+Forms from one to another, and ending with Forms.'' \cite[p.~226, 511--512]{cornfordrepublic}.
+
+The Form of Bed is more real than any given bed: ``If so, what he makes is not the reality, but only something that resembles it. It would
+not be right to call the work of a carpenter or of any other handicraftsman a perfectly real thing, would it?'' \cite[p.~326, 596--597]{cornfordrepublic}
+
+{\em Phaedo} 65d: there is a thing that is ``the just itself'' and there is a thing that is ``the beautiful itself'' and there is a thing that is ``the good itself'', and these are
+known most closely by thought alone. 78. 100c: beauty is beautiful. 73--80, 109--111.
+
+{\em Cratylus}: 389--390: a craftsman uses an archetype. 439--440, knowing forms. The Form of a weaver's shuttle. 439c, there is a ``beautiful itself'' and a ``good itself''. 
+
+{\em Euthydemus} 301b
+
+{\em Parmenides} \cite{cornfordparmenides} 129--135. Alexander of Aphrodisias see \cite[p.~88]{cornfordparmenides} on ``man walks''.
+
+{\em Theaetetus} \cite[p.~162]{cornfordtheaetetus}: 184--186. 208: ``image of thought in speech'', go through element by element,
+``being able to state some mark by which the thing one is asked for differs from everything else''
+
+{\em Sophist} \cite{cornfordtheaetetus} 246--248, 251--259.
+
+{\em Philebus} 14--18. 
+
+{\em Timaeus} \cite{cornfordtimaeus} 27d-28a  \cite[pp.~21--22]{cornfordtimaeus}, 51a--52a \cite[pp.~188--193]{cornfordtimaeus}
+
+{\em Lysis} 217d.
+
+{\em Seventh Letter} 341--345
+
+
+
+
+
+
+
+
+\section{Testimonia}
+Antisthenes: ``Plato, I see a horse; I don't see horseness.'' Plato: ``That's because you have the eye
+that sees horses, but you haven't acquired the one that's needed to think about horseness.'' \cite[p.~296, 11.6]{socratics}.
+
+Diogenes the Cynic: ``When Plato was once talking about hs Ideas and used the terms `tableness' and `cupness', Diogenes remarked, `I can see a table and a cup, but in no way
+this tableness and cupness.' `Of course not,' replied Plato, `because you have the eyes that are needed to see a cup and table, but lack the intellect through which tableness
+and cupness can alone be beheld.'' \cite[pp.~32--33, no. 121]{cynic}.
+
+
+Plutarch, {\em Platonic Questions}, Question III, 1001E--1002A \cite[pp.~37--39]{LCL427}:
+
+\begin{quote}
+Moreover, just as each of the perceptibles themselves
+has a multiplicity of semblances and shadows
+and images and as generally both in nature and in
+art it is possible for numerous copies to come from a
+single pattern, so the things of this world must surpass
+in number the things of that world according to
+Plato's supposition that the intelligibles are patterns,
+that is ideas, of which the perceptibles are as semblances
+or reflections. Moreover, the ideas are the
+objects of intellection {$\langle$}; and intellection{$\rangle$} he introduces
+as a result of abstraction or lopping away
+of body when in the order of studies he leads down
+from arithmetic to geometry and then after this to
+astronomy and crowns all with the theory of harmony,
+for the objects of geometry are the result
+when quantity has taken on extension, the solids
+when extension has taken on depth, the objects of
+astronomy when solid body has taken on motion, 
+and the objects of harmonics when sound has been
+added to the body in motion. Hence by abstracting
+sound from the things in motion and motion from the
+solids and depth from the planes and extension from
+the quantities we shall arrive at intelligible ideas
+themselves, which do not differ from one another
+at all when conceived in respect of their singularity 
+and unity.
+\end{quote}
+
+Eusebius, {\em Praeparatio Evangelica}, 11.23.3--4, ``On the Ideas in Plato''.
+
+Aristotle, {\em Metaphysics}
+
+Aristotle, {\em Eudemian Ethics} I.8
+
+
+\section{Philosophy}
+Klein \cite{klein}
+
+Coxon \cite{coxon}
+
+Moore \cite{moore}
+
+Kneale and Kneale \cite{kneale}
+
+Graeser \cite{graeser}
+
+Cherniss \cite{cherniss}
+
+Stillwell \cite{stillwell}
+
+Grube \cite{grube}
+
+Zalta \cite{zalta}
+
+Edwards \cite{edwards}
+
+Heinaman \cite{heinaman}
+
+Barnes \cite{barnes} and \cite{barnes2009}
+
+Clegg \cite{clegg}
+
+Meinwald \cite{meinwald}
+
+Ellerman \cite{ellerman}
+
+Horky \cite{horky}
+
+Allen \cite{allen1960}
+
+Black \cite{black}
+
+Ross \cite{ross}
+
+Cohen \cite{cohen}
+
+Dauben \cite{dauben}
+
+Malcolm \cite{malcolm}
+
+Nehamas \cite{nehamas} and \cite{nehamas1982}
+
+Plato self-predication: Vlastos \cite{vlastos1981}
+
+Rickless \cite{rickless}
+
+Sedley \cite{sedley}
+
+Sayre \cite{sayre}
+
+Mates \cite{mates}
+
+Harte \cite{harte}
+
+Taylor \cite{taylor}
+
+Russell \cite{russell}
+
+Kr\"amer \cite{kramer}
+
+
+\bibliographystyle{plain}
+\bibliography{platoforms}
+
+\end{document}

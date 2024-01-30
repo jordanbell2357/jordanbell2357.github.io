@@ -1,0 +1,638 @@
+<!DOCTYPE html><html>
+<head>
+<title>Subdifferentials of convex functions</title>
+<!--Generated on Mon Feb 14 10:35:50 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 21, 2014.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<link rel="stylesheet" href="LaTeXML-navbar-left.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<nav class="ltx_page_navbar">
+<div class="ltx_TOC">
+<ul class="ltx_toclist">
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S1" title="1 Introduction ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">1 </span>Introduction</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S2" title="2 Definition of subdifferential ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">2 </span>Definition of subdifferential</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S3" title="3 Convex functions ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">3 </span>Convex functions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S4" title="4 Weak-* topology ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">4 </span>Weak-* topology</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S5" title="5 Support points ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">5 </span>Support points</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S6" title="6 Subdifferentials of convex functions ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">6 </span>Subdifferentials of convex functions</span></a></li>
+<li class="ltx_tocentry ltx_tocentry_section"><a href="#S7" title="7 Directional derivatives ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_title"><span class="ltx_tag ltx_tag_ref">7 </span>Directional derivatives</span></a></li>
+</ul>
+</div>
+</nav>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Subdifferentials of convex functions</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">April 21, 2014</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Introduction</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">Whenever we speak about a vector space in this note we mean a vector space over <math id="S1.p1.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>. If <math id="S1.p1.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space then
+we denote by <math id="S1.p1.m3" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> the set of all continuous linear maps <math id="S1.p1.m4" class="ltx_Math" alttext="X\to\mathbb{R}" display="inline"><mrow><mi>X</mi><mo>→</mo><mi>ℝ</mi></mrow></math>. <math id="S1.p1.m5" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> is called the <span class="ltx_text ltx_font_italic">dual space of <math id="S1.p1.m6" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math></span>, and is itself a vector space.<span id="footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
+            <span class="ltx_tag ltx_tag_note">1</span>
+            
+            
+          In this note,
+we are
+following the presentation of some results in Charalambos D. Aliprantis and Kim C. Border, <span class="ltx_text ltx_font_italic">Infinite Dimensional Analysis: A Hitchhiker’s Guide</span>, third ed., chapter 7. Three other sources
+for material on subdifferentials are: Jean-Paul Penot, <span class="ltx_text ltx_font_italic">Calulus Without Derivatives</span>, chapter 3; Viorel Barbu and Teodor Precupanu, <span class="ltx_text ltx_font_italic">Convexity and Optimization in Banach Spaces</span>, fourth ed., §2.2, pp. 82–125;
+and Jean-Pierre Aubin, <span class="ltx_text ltx_font_italic">Optima and Equilibria: An Introduction to Nonlinear Analysis</span>, second ed., chapter 4, pp. 57–73.</span></span></span></p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Definition of subdifferential</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space, <math id="S2.p1.m2" class="ltx_Math" alttext="f:X\to[-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is a function, <math id="S2.p1.m3" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>, and <math id="S2.p1.m4" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math>, then we say that <math id="S2.p1.m5" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> is a
+<span class="ltx_text ltx_font_italic">subgradient of <math id="S2.p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="S2.p1.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></span> if<span id="footnote2" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>
+            <span class="ltx_tag ltx_tag_note">2</span>
+            
+            
+          <math id="footnote2.m1" class="ltx_Math" alttext="\infty+\infty=\infty" display="inline"><mrow><mrow><mi mathvariant="normal">∞</mi><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>, <math id="footnote2.m2" class="ltx_Math" alttext="-\infty-\infty=-\infty" display="inline"><mrow><mrow><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>, and <math id="footnote2.m3" class="ltx_Math" alttext="\infty-\infty" display="inline"><mrow><mi mathvariant="normal">∞</mi><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></math> is nonsense; if <math id="footnote2.m4" class="ltx_Math" alttext="a\in\mathbb{R}" display="inline"><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow></math>, then <math id="footnote2.m5" class="ltx_Math" alttext="a-\infty=-\infty" display="inline"><mrow><mrow><mi>a</mi><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> and <math id="footnote2.m6" class="ltx_Math" alttext="a+\infty=\infty" display="inline"><mrow><mrow><mi>a</mi><mo>+</mo><mi mathvariant="normal">∞</mi></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>.</span></span></span></p>
+<table id="S2.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex1.m1" class="ltx_Math" alttext="f(y)\geq f(x)+\lambda(y-x),\qquad y\in X." display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">subdifferential of <math id="S2.p1.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="S2.p1.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></span> is the set of all subgradients of <math id="S2.p1.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="S2.p1.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> and is denoted by <math id="S2.p1.m12" class="ltx_Math" alttext="\partial f(x)" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math>. Thus
+<math id="S2.p1.m13" class="ltx_Math" alttext="\partial f" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow></math> is a function from <math id="S2.p1.m14" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> to the power set of <math id="S2.p1.m15" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>, i.e. <math id="S2.p1.m16" class="ltx_Math" alttext="\partial f:X\to 2^{X^{*}}" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>:</mo><mrow><mi>X</mi><mo>→</mo><msup><mn>2</mn><msup><mi>X</mi><mo>*</mo></msup></msup></mrow></mrow></math>. If <math id="S2.p1.m17" class="ltx_Math" alttext="\partial f(x)\neq\emptyset" display="inline"><mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≠</mo><mi mathvariant="normal">∅</mi></mrow></math>, we say that <math id="S2.p1.m18" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is <span class="ltx_text ltx_font_italic">subdifferentiable at <math id="S2.p1.m19" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></span>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">It is immediate that if there is some <math id="S2.p2.m1" class="ltx_Math" alttext="y" display="inline"><mi>y</mi></math> such that <math id="S2.p2.m2" class="ltx_Math" alttext="f(y)=-\infty" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>, then</p>
+<table id="S2.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex2.m1" class="ltx_Math" alttext="\partial f(x)=\begin{cases}X^{*}&amp;f(x)=-\infty\\
+\emptyset&amp;f(x)&gt;-\infty\end{cases},\qquad x\in X." display="block"><mrow><mrow><mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>{</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="left"><msup><mi>X</mi><mo>*</mo></msup></mtd><mtd columnalign="left"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></mtd></mtr><mtr><mtd columnalign="left"><mi mathvariant="normal">∅</mi></mtd><mtd columnalign="left"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></mtd></mtr></mtable></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, little is lost if we prove statements about subdifferentials of functions that do not take the value <math id="S2.p2.m3" class="ltx_Math" alttext="-\infty" display="inline"><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="Thmtheorem1" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 1</span></span>.</h6>
+<div id="Thmtheorem1.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem1.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space, <math id="Thmtheorem1.p1.m2" class="ltx_Math" alttext="f:X\to[-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mrow><mo mathvariant="normal">-</mo><mi mathvariant="normal">∞</mi></mrow><mo mathvariant="normal">,</mo><mi mathvariant="normal">∞</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></mrow></math> is a function and <math id="Thmtheorem1.p1.m3" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mi>X</mi></mrow></math>, then <math id="Thmtheorem1.p1.m4" class="ltx_Math" alttext="\partial f(x)" display="inline"><mrow><mrow><mo mathvariant="normal">∂</mo><mo mathvariant="italic">⁡</mo><mi>f</mi></mrow><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a convex subset of <math id="Thmtheorem1.p1.m5" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p3.m1" class="ltx_Math" alttext="\lambda_{1},\lambda_{2}\in\partial f(x)" display="inline"><mrow><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow><mo>∈</mo><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and <math id="S2.p3.m2" class="ltx_Math" alttext="0\leq t\leq 1" display="inline"><mrow><mn>0</mn><mo>≤</mo><mi>t</mi><mo>≤</mo><mn>1</mn></mrow></math>, then of course <math id="S2.p3.m3" class="ltx_Math" alttext="(1-t)\lambda_{1}+t\lambda_{2}\in X^{*}" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>λ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow></mrow><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math>. For any <math id="S2.p3.m4" class="ltx_Math" alttext="y\in X" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow></math> we have</p>
+<table id="S7.EGx1" class="ltx_equationgroup ltx_eqn_align ltx_eqn_table">
+
+<tbody id="S2.Ex3"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex3.m1" class="ltx_Math" alttext="\displaystyle f(y)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex3.m2" class="ltx_Math" alttext="\displaystyle=(1-t)f(y)+tf(y)" display="inline"><mrow><mi></mi><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex4"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex4.m2" class="ltx_Math" alttext="\displaystyle\geq(1-t)f(x)+(1-t)\lambda_{1}(y-x)+tf(x)+t\lambda_{2}(y-x)" display="inline"><mrow><mi></mi><mo>≥</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>λ</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi>λ</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+<tbody id="S2.Ex5"><tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex5.m2" class="ltx_Math" alttext="\displaystyle=f(x)+\big{(}(1-t)\lambda_{1}+t\lambda_{2}\big{)}(y-x)," display="inline"><mrow><mrow><mi></mi><mo>=</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo maxsize="120%" minsize="120%">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>λ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow></mrow><mo maxsize="120%" minsize="120%">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr></tbody>
+</table>
+<p class="ltx_p">showing that <math id="S2.p3.m5" class="ltx_Math" alttext="(1-t)\lambda_{1}+t\lambda_{2}\in\partial f(x)" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>λ</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><msub><mi>λ</mi><mn>2</mn></msub></mrow></mrow><mo>∈</mo><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> and thus that <math id="S2.p3.m6" class="ltx_Math" alttext="\partial f(x)" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is convex.
+∎</p>
+</div>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">To say that <math id="S2.p4.m1" class="ltx_Math" alttext="0\in\partial f(x)" display="inline"><mrow><mn>0</mn><mo>∈</mo><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is equivalent to saying that <math id="S2.p4.m2" class="ltx_Math" alttext="f(y)\geq f(x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S2.p4.m3" class="ltx_Math" alttext="y\in X" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow></math> and so <math id="S2.p4.m4" class="ltx_Math" alttext="f(x)=\inf_{y\in X}f(y)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mo>inf</mo><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow></msub><mo>⁡</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>. This can be said in the following way.</p>
+</div>
+<div id="Thmtheorem2" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 2</span></span>.</h6>
+<div id="Thmtheorem2.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem2.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space and <math id="Thmtheorem2.p1.m2" class="ltx_Math" alttext="f:X\to[-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mrow><mo mathvariant="normal" stretchy="false">[</mo><mrow><mo mathvariant="normal">-</mo><mi mathvariant="normal">∞</mi></mrow><mo mathvariant="normal">,</mo><mi mathvariant="normal">∞</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></mrow></math> is a function, then <math id="Thmtheorem2.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a minimizer of <math id="Thmtheorem2.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> if and only if <math id="Thmtheorem2.p1.m5" class="ltx_Math" alttext="0\in\partial f(x)" display="inline"><mrow><mn mathvariant="normal">0</mn><mo mathvariant="normal">∈</mo><mrow><mrow><mo mathvariant="normal">∂</mo><mo mathvariant="italic">⁡</mo><mi>f</mi></mrow><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></mrow></math>.</span></p>
+</div>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Convex functions</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a set and <math id="S3.p1.m2" class="ltx_Math" alttext="f:X\to[-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is a function, then the <span class="ltx_text ltx_font_italic">epigraph of <math id="S3.p1.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math></span> is the set</p>
+<table id="S3.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex6.m1" class="ltx_Math" alttext="\mathrm{epi}\,f=\{(x,\alpha)\in X\times\mathbb{R}:\alpha\geq f(x)\}," display="block"><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>X</mi><mo>×</mo><mi>ℝ</mi></mrow></mrow><mo>:</mo><mrow><mi>α</mi><mo>≥</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and the <span class="ltx_text ltx_font_italic">effective domain of <math id="S3.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math></span> is the set</p>
+<table id="S3.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex7.m1" class="ltx_Math" alttext="\mathrm{dom}\,f=\{x\in X:f(x)&lt;\infty\}." display="block"><mrow><mrow><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo>:</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">To say that <math id="S3.p1.m5" class="ltx_Math" alttext="x\in\mathrm{dom}\,f" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></math> is equivalent to saying that there is some <math id="S3.p1.m6" class="ltx_Math" alttext="\alpha\in\mathbb{R}" display="inline"><mrow><mi>α</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that <math id="S3.p1.m7" class="ltx_Math" alttext="(x,\alpha)\in\mathrm{epi}\,f" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></math>.
+We say that <math id="S3.p1.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is <span class="ltx_text ltx_font_italic">finite</span> if <math id="S3.p1.m9" class="ltx_Math" alttext="-\infty&lt;f(x)&lt;\infty" display="inline"><mrow><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>&lt;</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> for all <math id="S3.p1.m10" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>.</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S3.p2.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a vector space and <math id="S3.p2.m2" class="ltx_Math" alttext="f:X\to[-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is a function, then we say that <math id="S3.p2.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is <span class="ltx_text ltx_font_italic">convex</span> if
+<math id="S3.p2.m4" class="ltx_Math" alttext="\mathrm{epi}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></math> is a convex subset of the vector space <math id="S3.p2.m5" class="ltx_Math" alttext="X\times\mathbb{R}" display="inline"><mrow><mi>X</mi><mo>×</mo><mi>ℝ</mi></mrow></math>.</p>
+</div>
+<div id="S3.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S3.p3.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a set and <math id="S3.p3.m2" class="ltx_Math" alttext="f:X\to[-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is a function, we say that <math id="S3.p3.m3" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is
+<span class="ltx_text ltx_font_italic">proper</span> if it does not take only
+the value <math id="S3.p3.m4" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> and never takes the value <math id="S3.p3.m5" class="ltx_Math" alttext="-\infty" display="inline"><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></math>. It is unusual to talk merely
+about proper functions rather than proper convex functions; we do so to make clear how convexity is used in the results we prove.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Weak-* topology</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> be a topological vector space and for <math id="S4.p1.m2" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> define <math id="S4.p1.m3" class="ltx_Math" alttext="e_{x}:X^{*}\to\mathbb{R}" display="inline"><mrow><msub><mi>e</mi><mi>x</mi></msub><mo>:</mo><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> by <math id="S4.p1.m4" class="ltx_Math" alttext="e_{x}\lambda=\lambda x" display="inline"><mrow><mrow><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mi>λ</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>.
+The <span class="ltx_text ltx_font_italic">weak-* topology</span> on <math id="S4.p1.m5" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> is the initial topology
+for the set of functions <math id="S4.p1.m6" class="ltx_Math" alttext="\{e_{x}:x\in X\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mi>x</mi></msub><mo>:</mo><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow><mo stretchy="false">}</mo></mrow></math>, that is, the coarsest topology on <math id="S4.p1.m7" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> such that for each <math id="S4.p1.m8" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>, the function
+<math id="S4.p1.m9" class="ltx_Math" alttext="e_{x}:X^{*}\to\mathbb{R}" display="inline"><mrow><msub><mi>e</mi><mi>x</mi></msub><mo>:</mo><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is continuous.</p>
+</div>
+<div id="Thmtheorem3" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 3</span></span>.</h6>
+<div id="Thmtheorem3.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem3.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space, <math id="Thmtheorem3.p1.m2" class="ltx_Math" alttext="\tau_{1}" display="inline"><msub><mi>τ</mi><mn mathvariant="normal">1</mn></msub></math> is the weak-* topology on <math id="Thmtheorem3.p1.m3" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></math>, and <math id="Thmtheorem3.p1.m4" class="ltx_Math" alttext="\tau_{2}" display="inline"><msub><mi>τ</mi><mn mathvariant="normal">2</mn></msub></math> is the subspace topology on <math id="Thmtheorem3.p1.m5" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></math> inherited from <math id="Thmtheorem3.p1.m6" class="ltx_Math" alttext="\mathbb{R}^{X}" display="inline"><msup><mi mathvariant="normal">R</mi><mi>X</mi></msup></math> with the product
+topology, then <math id="Thmtheorem3.p1.m7" class="ltx_Math" alttext="\tau_{1}=\tau_{2}" display="inline"><mrow><msub><mi>τ</mi><mn mathvariant="normal">1</mn></msub><mo mathvariant="normal">=</mo><msub><mi>τ</mi><mn mathvariant="normal">2</mn></msub></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p2" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p2.m1" class="ltx_Math" alttext="\lambda_{i}\in X^{*}" display="inline"><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> converge in <math id="S4.p2.m2" class="ltx_Math" alttext="\tau_{1}" display="inline"><msub><mi>τ</mi><mn>1</mn></msub></math> to <math id="S4.p2.m3" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math>. For each <math id="S4.p2.m4" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>, the function <math id="S4.p2.m5" class="ltx_Math" alttext="e_{x}:X^{*}\to\mathbb{R}" display="inline"><mrow><msub><mi>e</mi><mi>x</mi></msub><mo>:</mo><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> is <math id="S4.p2.m6" class="ltx_Math" alttext="\tau_{1}" display="inline"><msub><mi>τ</mi><mn>1</mn></msub></math> continuous, so
+<math id="S4.p2.m7" class="ltx_Math" alttext="e_{x}\lambda_{i}\to e_{x}\lambda" display="inline"><mrow><mrow><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>λ</mi><mi>i</mi></msub></mrow><mo>→</mo><mrow><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mi>λ</mi></mrow></mrow></math>, i.e. <math id="S4.p2.m8" class="ltx_Math" alttext="\lambda_{i}x\to\lambda x" display="inline"><mrow><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>⁢</mo><mi>x</mi></mrow><mo>→</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>. But for <math id="S4.p2.m9" class="ltx_Math" alttext="f_{i}\in\mathbb{R}^{X}" display="inline"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>∈</mo><msup><mi>ℝ</mi><mi>X</mi></msup></mrow></math> to converge to <math id="S4.p2.m10" class="ltx_Math" alttext="f\in\mathbb{R}^{X}" display="inline"><mrow><mi>f</mi><mo>∈</mo><msup><mi>ℝ</mi><mi>X</mi></msup></mrow></math> means that for each <math id="S4.p2.m11" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, we have
+<math id="S4.p2.m12" class="ltx_Math" alttext="f_{i}(x)\to f(x)" display="inline"><mrow><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>→</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Thus <math id="S4.p2.m13" class="ltx_Math" alttext="\lambda_{i}" display="inline"><msub><mi>λ</mi><mi>i</mi></msub></math> converges to <math id="S4.p2.m14" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> in <math id="S4.p2.m15" class="ltx_Math" alttext="\tau_{2}" display="inline"><msub><mi>τ</mi><mn>2</mn></msub></math>. This shows that <math id="S4.p2.m16" class="ltx_Math" alttext="\tau_{2}\subseteq\tau_{1}" display="inline"><mrow><msub><mi>τ</mi><mn>2</mn></msub><mo>⊆</mo><msub><mi>τ</mi><mn>1</mn></msub></mrow></math>.</p>
+</div>
+<div id="S4.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S4.p3.m1" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>, and
+let <math id="S4.p3.m2" class="ltx_Math" alttext="\lambda_{i}\in X^{*}" display="inline"><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> converge in <math id="S4.p3.m3" class="ltx_Math" alttext="\tau_{2}" display="inline"><msub><mi>τ</mi><mn>2</mn></msub></math> to <math id="S4.p3.m4" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math>.
+We then have <math id="S4.p3.m5" class="ltx_Math" alttext="e_{x}\lambda_{i}=\lambda_{i}x\to\lambda x=e_{x}\lambda" display="inline"><mrow><mrow><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><msub><mi>λ</mi><mi>i</mi></msub></mrow><mo>=</mo><mrow><msub><mi>λ</mi><mi>i</mi></msub><mo>⁢</mo><mi>x</mi></mrow><mo>→</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><msub><mi>e</mi><mi>x</mi></msub><mo>⁢</mo><mi>λ</mi></mrow></mrow></math>; since <math id="S4.p3.m6" class="ltx_Math" alttext="\lambda_{i}" display="inline"><msub><mi>λ</mi><mi>i</mi></msub></math> was an arbitrary net that
+converges in <math id="S4.p3.m7" class="ltx_Math" alttext="\tau_{2}" display="inline"><msub><mi>τ</mi><mn>2</mn></msub></math>, this shows that <math id="S4.p3.m8" class="ltx_Math" alttext="e_{x}" display="inline"><msub><mi>e</mi><mi>x</mi></msub></math> is <math id="S4.p3.m9" class="ltx_Math" alttext="\tau_{2}" display="inline"><msub><mi>τ</mi><mn>2</mn></msub></math> continuous. Thus, we have shown that for each <math id="S4.p3.m10" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>, the function
+<math id="S4.p3.m11" class="ltx_Math" alttext="e_{x}" display="inline"><msub><mi>e</mi><mi>x</mi></msub></math> is <math id="S4.p3.m12" class="ltx_Math" alttext="\tau_{2}" display="inline"><msub><mi>τ</mi><mn>2</mn></msub></math> continuous. But <math id="S4.p3.m13" class="ltx_Math" alttext="\tau_{1}" display="inline"><msub><mi>τ</mi><mn>1</mn></msub></math> is the coarsest topology for which <math id="S4.p3.m14" class="ltx_Math" alttext="e_{x}" display="inline"><msub><mi>e</mi><mi>x</mi></msub></math> is continuous for all <math id="S4.p3.m15" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math>, so
+we obtain <math id="S4.p3.m16" class="ltx_Math" alttext="\tau_{1}\subseteq\tau_{2}" display="inline"><mrow><msub><mi>τ</mi><mn>1</mn></msub><mo>⊆</mo><msub><mi>τ</mi><mn>2</mn></msub></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="S4.p4" class="ltx_para">
+<p class="ltx_p">In other words, the weak-* topology on <math id="S4.p4.m1" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> is the topology of pointwise convergence.
+We now prove that
+at each point in the effective domain of a proper function on a topological vector space,
+the subdifferential is a weak-* closed subset of the dual space.<span id="footnote3" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>
+            <span class="ltx_tag ltx_tag_note">3</span>
+            
+            
+          cf. Charalambos D. Aliprantis and Kim C. Border, <span class="ltx_text ltx_font_italic">Infinite Dimensional Analysis: A Hitchhiker’s Guide</span>, third ed., p. 265, Theorem 7.13.</span></span></span></p>
+</div>
+<div id="Thmtheorem4" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 4</span></span>.</h6>
+<div id="Thmtheorem4.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem4.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space, <math id="Thmtheorem4.p1.m2" class="ltx_Math" alttext="f:X\to(-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mo mathvariant="normal">-</mo><mi mathvariant="normal">∞</mi></mrow><mo mathvariant="normal">,</mo><mi mathvariant="normal">∞</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></mrow></math> is a proper function, and <math id="Thmtheorem4.p1.m3" class="ltx_Math" alttext="x\in\mathrm{dom}\,f" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">dom</mi></mpadded><mo mathvariant="italic">⁢</mo><mi>f</mi></mrow></mrow></math>, then
+<math id="Thmtheorem4.p1.m4" class="ltx_Math" alttext="\partial f(x)" display="inline"><mrow><mrow><mo mathvariant="normal">∂</mo><mo mathvariant="italic">⁡</mo><mi>f</mi></mrow><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow></mrow></math> is a weak-* closed subset of <math id="Thmtheorem4.p1.m5" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo mathvariant="normal">*</mo></msup></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S4.p5" class="ltx_para">
+<p class="ltx_p">If <math id="S4.p5.m1" class="ltx_Math" alttext="\lambda\in\partial f(x)" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, then for all <math id="S4.p5.m2" class="ltx_Math" alttext="y\in X" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow></math> we have</p>
+<table id="S4.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex8.m1" class="ltx_Math" alttext="f(y)\geq f(x)+\lambda(y-x)," display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so, for any <math id="S4.p5.m3" class="ltx_Math" alttext="v\in X" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>X</mi></mrow></math>, using <math id="S4.p5.m4" class="ltx_Math" alttext="y=v+x" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>v</mi><mo>+</mo><mi>x</mi></mrow></mrow></math>,</p>
+<table id="S4.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex9.m1" class="ltx_Math" alttext="f(v+x)\geq f(x)+\lambda v," display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>+</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">or,</p>
+<table id="S4.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex10.m1" class="ltx_Math" alttext="\lambda v\leq f(x+v)-f(x);" display="block"><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow><mo>≤</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">this makes sense because <math id="S4.p5.m5" class="ltx_Math" alttext="f(x)" display="inline"><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is finite.
+On the other hand, let <math id="S4.p5.m6" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math>. If <math id="S4.p5.m7" class="ltx_Math" alttext="\lambda v\leq f(x+v)-f(x)" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow><mo>≤</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for all <math id="S4.p5.m8" class="ltx_Math" alttext="v\in X" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>X</mi></mrow></math>, then <math id="S4.p5.m9" class="ltx_Math" alttext="\lambda(v-x)\leq f(v)-f(x)" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, i.e.
+<math id="S4.p5.m10" class="ltx_Math" alttext="f(v)\geq f(x)+\lambda(v-x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, and so <math id="S4.p5.m11" class="ltx_Math" alttext="\lambda\in\partial f(x)" display="inline"><mrow><mi>λ</mi><mo>∈</mo><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Therefore</p>
+<table id="S4.E1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.E1.m1" class="ltx_Math" alttext="\partial f(x)=\bigcap_{v\in X}\{\lambda\in X^{*}:\lambda v\leq f(x+v)-f(x)\}." display="block"><mrow><mrow><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo largeop="true" mathsize="160%" movablelimits="false" stretchy="false" symmetric="true">⋂</mo><mrow><mi>v</mi><mo>∈</mo><mi>X</mi></mrow></munder><mrow><mo stretchy="false">{</mo><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow><mo>:</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow><mo>≤</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+<td rowspan="1" class="ltx_eqn_cell ltx_eqn_eqno ltx_align_middle ltx_align_right"><span class="ltx_tag ltx_tag_equation ltx_align_right">(1)</span></td>
+</tr>
+</table>
+</div>
+<div id="S4.p6" class="ltx_para">
+<p class="ltx_p">Defining <math id="S4.p6.m1" class="ltx_Math" alttext="e_{v}:X^{*}\to\mathbb{R}" display="inline"><mrow><msub><mi>e</mi><mi>v</mi></msub><mo>:</mo><mrow><msup><mi>X</mi><mo>*</mo></msup><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> for <math id="S4.p6.m2" class="ltx_Math" alttext="v\in X" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>X</mi></mrow></math> by <math id="S4.p6.m3" class="ltx_Math" alttext="e_{v}\lambda=\lambda v" display="inline"><mrow><mrow><msub><mi>e</mi><mi>v</mi></msub><mo>⁢</mo><mi>λ</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></math>,
+for each <math id="S4.p6.m4" class="ltx_Math" alttext="v\in X" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>X</mi></mrow></math> we have</p>
+<table id="S4.Ex11" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex11.m1" class="ltx_Math" alttext="e_{v}^{-1}(-\infty,f(x+v)-f(x)]=\{\lambda\in X^{*}:\lambda v\leq f(x+v)-f(x)\}." display="block"><mrow><mrow><mrow><msubsup><mi>e</mi><mi>v</mi><mrow><mo>-</mo><mn>1</mn></mrow></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">]</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow><mo>:</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow><mo>≤</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because <math id="S4.p6.m5" class="ltx_Math" alttext="e_{v}" display="inline"><msub><mi>e</mi><mi>v</mi></msub></math> is continuous, this inverse image is a closed subset of <math id="S4.p6.m6" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>. Therefore, each of the sets in the intersection (<a href="#S4.E1" title="(1) ‣ 4 Weak-* topology ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_tag">1</span></a>) is a closed subset of
+<math id="S4.p6.m7" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>, and so
+<math id="S4.p6.m8" class="ltx_Math" alttext="\partial f(x)" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is a closed subset of <math id="S4.p6.m9" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math>.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Support points</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is set, <math id="S5.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a subset of <math id="S5.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and <math id="S5.p1.m4" class="ltx_Math" alttext="f:X\to[-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is a function, we say that <math id="S5.p1.m5" class="ltx_Math" alttext="x\in X" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>X</mi></mrow></math> is a <span class="ltx_text ltx_font_italic">minimizer of <math id="S5.p1.m6" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> over <math id="S5.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></span> if</p>
+<table id="S5.Ex12" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex12.m1" class="ltx_Math" alttext="f(x)=\inf_{y\in A}f(y)," display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">inf</mo><mrow><mi>y</mi><mo>∈</mo><mi>A</mi></mrow></munder><mo>⁡</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and that <math id="S5.p1.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a <span class="ltx_text ltx_font_italic">maximizer of <math id="S5.p1.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> over <math id="S5.p1.m10" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></span> if</p>
+<table id="S5.Ex13" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex13.m1" class="ltx_Math" alttext="f(x)=\sup_{y\in A}f(y)." display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>y</mi><mo>∈</mo><mi>A</mi></mrow></munder><mo>⁡</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S5.p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a nonempty subset of a topological vector space <math id="S5.p2.m2" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S5.p2.m3" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>,
+we say that <math id="S5.p2.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a <span class="ltx_text ltx_font_italic">support point of <math id="S5.p2.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math></span> if there is some nonzero
+<math id="S5.p2.m6" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> for which <math id="S5.p2.m7" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a minimizer or a maximizer of <math id="S5.p2.m8" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> over <math id="S5.p2.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>. Moreover,
+<math id="S5.p2.m10" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a minimizer of <math id="S5.p2.m11" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> over <math id="S5.p2.m12" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> if and only if <math id="S5.p2.m13" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a maximizer of <math id="S5.p2.m14" class="ltx_Math" alttext="-\lambda" display="inline"><mrow><mo>-</mo><mi>λ</mi></mrow></math> over <math id="S5.p2.m15" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.
+Thus, if we know that <math id="S5.p2.m16" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a support point of a set <math id="S5.p2.m17" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then we have at our disposal both that <math id="S5.p2.m18" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a minimizer of some nonzero element of <math id="S5.p2.m19" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> over <math id="S5.p2.m20" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and that <math id="S5.p2.m21" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a maximizer
+of some nonzero element of <math id="S5.p2.m22" class="ltx_Math" alttext="X^{*}" display="inline"><msup><mi>X</mi><mo>*</mo></msup></math> over <math id="S5.p2.m23" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>.</p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S5.p3.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a support point of <math id="S5.p3.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>
+and <math id="S5.p3.m3" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is not contained in the hyperplane <math id="S5.p3.m4" class="ltx_Math" alttext="\{y\in X:\lambda y=\lambda x\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow><mo>:</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></math>, we say that <math id="S5.p3.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is <span class="ltx_text ltx_font_italic">properly supported at <math id="S5.p3.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></span>.
+To say that <math id="S5.p3.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is not contained in the set <math id="S5.p3.m8" class="ltx_Math" alttext="\{y\in X:\lambda y=\lambda x\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow><mo>:</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></math> is equivalent to saying that there is some <math id="S5.p3.m9" class="ltx_Math" alttext="y\in A" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>A</mi></mrow></math> such that
+<math id="S5.p3.m10" class="ltx_Math" alttext="\lambda y\neq\lambda x" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow><mo>≠</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>.</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">In the following lemma, we show that the support points of a set <math id="S5.p4.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> are contained in the boundary <math id="S5.p4.m2" class="ltx_Math" alttext="\partial A" display="inline"><mrow><mo>∂</mo><mo>⁡</mo><mi>A</mi></mrow></math> of the set.</p>
+</div>
+<div id="Thmtheorem5" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 5</span></span>.</h6>
+<div id="Thmtheorem5.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem5.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space, <math id="Thmtheorem5.p1.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is a subset of <math id="Thmtheorem5.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math>, and <math id="Thmtheorem5.p1.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a support point of <math id="Thmtheorem5.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>, then <math id="Thmtheorem5.p1.m6" class="ltx_Math" alttext="x\in\partial A" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mrow><mo mathvariant="normal">∂</mo><mo mathvariant="italic">⁡</mo><mi>A</mi></mrow></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">Because <math id="S5.p5.m1" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a support point of <math id="S5.p5.m2" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> there is some nonzero <math id="S5.p5.m3" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> for which <math id="S5.p5.m4" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a maximizer of <math id="S5.p5.m5" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> over <math id="S5.p5.m6" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math>:</p>
+<table id="S5.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex14.m1" class="ltx_Math" alttext="\lambda x=\sup_{y\in A}\lambda y." display="block"><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mi>y</mi><mo>∈</mo><mi>A</mi></mrow></munder><mo>⁡</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="S5.p5.m7" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> is nonzero there is some <math id="S5.p5.m8" class="ltx_Math" alttext="y\in X" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow></math> with <math id="S5.p5.m9" class="ltx_Math" alttext="\lambda y&gt;\lambda x" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow><mo>&gt;</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math>. For any <math id="S5.p5.m10" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math>,</p>
+<table id="S5.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex15.m1" class="ltx_Math" alttext="(1-t)\lambda x+t\lambda y=\lambda((1-t)x+ty)=(1-t)\lambda x+t\lambda y&gt;(1-t)%
+\lambda x+t\lambda x=\lambda x," display="block"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>&gt;</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">hence if <math id="S5.p5.m11" class="ltx_Math" alttext="t&gt;0" display="inline"><mrow><mi>t</mi><mo>&gt;</mo><mn>0</mn></mrow></math> then <math id="S5.p5.m12" class="ltx_Math" alttext="(1-t)\lambda x+ty\not\in A" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>∉</mo><mi>A</mi></mrow></math>. But <math id="S5.p5.m13" class="ltx_Math" alttext="(1-t)x+ty\to x" display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mn>1</mn><mo>-</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>t</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>→</mo><mi>x</mi></mrow></math> as <math id="S5.p5.m14" class="ltx_Math" alttext="t\to 0" display="inline"><mrow><mi>t</mi><mo>→</mo><mn>0</mn></mrow></math> and <math id="S5.p5.m15" class="ltx_Math" alttext="x\in A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>A</mi></mrow></math>, showing that <math id="S5.p5.m16" class="ltx_Math" alttext="x\in\partial A" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo>∂</mo><mo>⁡</mo><mi>A</mi></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+<div id="S5.p6" class="ltx_para">
+<p class="ltx_p">The following lemma gives conditions under which a boundary point of a set is a proper support point of the set.<span id="footnote4" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">4</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">4</sup>
+            <span class="ltx_tag ltx_tag_note">4</span>
+            
+            
+          Charalambos D. Aliprantis and Kim C. Border, <span class="ltx_text ltx_font_italic">Infinite Dimensional Analysis: A Hitchhiker’s Guide</span>, third ed., p. 259, Lemma 7.7.</span></span></span></p>
+</div>
+<div id="Thmtheorem6" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 6</span></span>.</h6>
+<div id="Thmtheorem6.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem6.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space, <math id="Thmtheorem6.p1.m2" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is a convex subset of <math id="Thmtheorem6.p1.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> that has nonempty interior, and <math id="Thmtheorem6.p1.m4" class="ltx_Math" alttext="x\in C\cap\partial C" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mrow><mi>C</mi><mo mathvariant="normal">∩</mo><mrow><mo mathvariant="normal">∂</mo><mo mathvariant="italic">⁡</mo><mi>C</mi></mrow></mrow></mrow></math>,
+then <math id="Thmtheorem6.p1.m5" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> is properly supported at <math id="Thmtheorem6.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S5.p7" class="ltx_para">
+<p class="ltx_p">The Hahn-Banach separation theorem<span id="footnote5" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">5</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">5</sup>
+              <span class="ltx_tag ltx_tag_note">5</span>
+              
+              
+            Gert K. Pedersen, <span class="ltx_text ltx_font_italic">Analysis Now</span>, revised printing, p. 65, Theorem 2.4.7.</span></span></span> tells us that if
+<math id="S5.p7.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> and <math id="S5.p7.m2" class="ltx_Math" alttext="B" display="inline"><mi>B</mi></math> are disjoint nonempty convex subsets of <math id="S5.p7.m3" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> and <math id="S5.p7.m4" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is open then there is some <math id="S5.p7.m5" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> and some <math id="S5.p7.m6" class="ltx_Math" alttext="t\in\mathbb{R}" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that</p>
+<table id="S5.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex16.m1" class="ltx_Math" alttext="\lambda a&lt;t\leq\lambda b,\qquad a\in A,b\in B." display="block"><mrow><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>a</mi></mrow><mo>&lt;</mo><mi>t</mi><mo>≤</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>a</mi><mo>∈</mo><mi>A</mi></mrow><mo>,</mo><mrow><mi>b</mi><mo>∈</mo><mi>B</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Check that the interior of a convex set in a topological vector space is convex, and hence that we can apply the Hahn-Banach separation theorem
+to <math id="S5.p7.m7" class="ltx_Math" alttext="\{x\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></math> and <math id="S5.p7.m8" class="ltx_Math" alttext="C^{\circ}" display="inline"><msup><mi>C</mi><mo>∘</mo></msup></math>: as <math id="S5.p7.m9" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> belongs to the boundary of <math id="S5.p7.m10" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math> it does not belong to the interior of <math id="S5.p7.m11" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, so
+<math id="S5.p7.m12" class="ltx_Math" alttext="\{x\}" display="inline"><mrow><mo stretchy="false">{</mo><mi>x</mi><mo stretchy="false">}</mo></mrow></math> and <math id="S5.p7.m13" class="ltx_Math" alttext="C^{\circ}" display="inline"><msup><mi>C</mi><mo>∘</mo></msup></math> are disjoint nonempty convex sets. Thus, there is some <math id="S5.p7.m14" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> and some <math id="S5.p7.m15" class="ltx_Math" alttext="t\in\mathbb{R}" display="inline"><mrow><mi>t</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that
+<math id="S5.p7.m16" class="ltx_Math" alttext="\lambda y&lt;t\leq\lambda x" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow><mo>&lt;</mo><mi>t</mi><mo>≤</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow></mrow></math> for all <math id="S5.p7.m17" class="ltx_Math" alttext="y\in C^{\circ}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msup><mi>C</mi><mo>∘</mo></msup></mrow></math>, from which it follows that <math id="S5.p7.m18" class="ltx_Math" alttext="\lambda x\leq\lambda y" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>≤</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math> for all <math id="S5.p7.m19" class="ltx_Math" alttext="y\in C" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>C</mi></mrow></math>, and <math id="S5.p7.m20" class="ltx_Math" alttext="\lambda\neq 0" display="inline"><mrow><mi>λ</mi><mo>≠</mo><mn>0</mn></mrow></math> because
+of the strict inequality for the interior. As <math id="S5.p7.m21" class="ltx_Math" alttext="x\in C" display="inline"><mrow><mi>x</mi><mo>∈</mo><mi>C</mi></mrow></math>, this means that <math id="S5.p7.m22" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a maximizer of <math id="S5.p7.m23" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> over <math id="S5.p7.m24" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>, and as <math id="S5.p7.m25" class="ltx_Math" alttext="\lambda\neq 0" display="inline"><mrow><mi>λ</mi><mo>≠</mo><mn>0</mn></mrow></math> this means that <math id="S5.p7.m26" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is
+a support point of <math id="S5.p7.m27" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>. But <math id="S5.p7.m28" class="ltx_Math" alttext="C^{\circ}" display="inline"><msup><mi>C</mi><mo>∘</mo></msup></math> is nonempty and if <math id="S5.p7.m29" class="ltx_Math" alttext="y\in C^{\circ}" display="inline"><mrow><mi>y</mi><mo>∈</mo><msup><mi>C</mi><mo>∘</mo></msup></mrow></math> then <math id="S5.p7.m30" class="ltx_Math" alttext="\lambda x&lt;\lambda y" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>&lt;</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math>, hence <math id="S5.p7.m31" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a proper support point of <math id="S5.p7.m32" class="ltx_Math" alttext="C" display="inline"><mi>C</mi></math>.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Subdifferentials of convex functions</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S6.p1.m1" class="ltx_Math" alttext="f:X\to(-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is a proper function then there is some <math id="S6.p1.m2" class="ltx_Math" alttext="y\in X" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow></math> for which <math id="S6.p1.m3" class="ltx_Math" alttext="f(y)&lt;\infty" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>, and for <math id="S6.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> to have a subgradient
+<math id="S6.p1.m5" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> at <math id="S6.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> demands that <math id="S6.p1.m7" class="ltx_Math" alttext="f(y)\geq f(x)+\lambda(y-x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, and hence that <math id="S6.p1.m8" class="ltx_Math" alttext="f(x)&lt;\infty" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>. Therefore, if <math id="S6.p1.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is a proper function
+then the set of <math id="S6.p1.m10" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> at which <math id="S6.p1.m11" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is subdifferentiable is a subset of <math id="S6.p1.m12" class="ltx_Math" alttext="\mathrm{dom}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></math>.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">We now prove conditions under which a function is subdifferentiable at a point, i.e., under which the subdifferential at that point is nonempty.<span id="footnote6" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">6</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">6</sup>
+            <span class="ltx_tag ltx_tag_note">6</span>
+            
+            
+          Charalambos D. Aliprantis and Kim C. Border, <span class="ltx_text ltx_font_italic">Infinite Dimensional Analysis: A Hitchhiker’s Guide</span>, third ed., p. 265, Theorem 7.12.</span></span></span></p>
+</div>
+<div id="Thmtheorem7" class="ltx_theorem ltx_theorem_theorem">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Theorem 7</span></span>.</h6>
+<div id="Thmtheorem7.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem7.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space, <math id="Thmtheorem7.p1.m2" class="ltx_Math" alttext="f:X\to(-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mo mathvariant="normal">-</mo><mi mathvariant="normal">∞</mi></mrow><mo mathvariant="normal">,</mo><mi mathvariant="normal">∞</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></mrow></math> is a proper convex function, <math id="Thmtheorem7.p1.m3" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is an interior point of <math id="Thmtheorem7.p1.m4" class="ltx_Math" alttext="\mathrm{dom}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">dom</mi></mpadded><mo mathvariant="italic">⁢</mo><mi>f</mi></mrow></math>, and
+<math id="Thmtheorem7.p1.m5" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous at <math id="Thmtheorem7.p1.m6" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>, then <math id="Thmtheorem7.p1.m7" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> has a subgradient at <math id="Thmtheorem7.p1.m8" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">Because <math id="S6.p3.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is convex, the set <math id="S6.p3.m2" class="ltx_Math" alttext="\mathrm{dom}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></math> is convex, and the interior of a convex set in a topological vector space is convex so <math id="S6.p3.m3" class="ltx_Math" alttext="(\mathrm{dom}\,f)^{\circ}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></math> is convex.
+<math id="S6.p3.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is proper so it does not take the value <math id="S6.p3.m5" class="ltx_Math" alttext="-\infty" display="inline"><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></math>, and on <math id="S6.p3.m6" class="ltx_Math" alttext="\mathrm{dom}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></math> it does not take the value <math id="S6.p3.m7" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math>, hence <math id="S6.p3.m8" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is finite on <math id="S6.p3.m9" class="ltx_Math" alttext="\mathrm{dom}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></math>.
+But for a finite convex function on an open convex set in a topological vector space, being continuous at a point
+is equivalent to being continuous on the set, and is also equivalent to being bounded above on an open neighborhood of the point.<span id="footnote7" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">7</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">7</sup>
+              <span class="ltx_tag ltx_tag_note">7</span>
+              
+              
+            Charalambos D. Aliprantis and Kim C. Border, <span class="ltx_text ltx_font_italic">Infinite Dimensional Analysis: A Hitchhiker’s Guide</span>, third ed., p. 188, Theorem 5.43.</span></span></span>
+Therefore, <math id="S6.p3.m10" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous on <math id="S6.p3.m11" class="ltx_Math" alttext="(\mathrm{dom}\,f)^{\circ}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></math> and is bounded above on some open neighborhood <math id="S6.p3.m12" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> of <math id="S6.p3.m13" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> contained in <math id="S6.p3.m14" class="ltx_Math" alttext="(\mathrm{dom}\,f)^{\circ}" display="inline"><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></math>, say <math id="S6.p3.m15" class="ltx_Math" alttext="f(y)\leq M" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mi>M</mi></mrow></math> for all <math id="S6.p3.m16" class="ltx_Math" alttext="y\in V" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>V</mi></mrow></math>.
+<math id="S6.p3.m17" class="ltx_Math" alttext="V\times(M,\infty)" display="inline"><mrow><mi>V</mi><mo>×</mo><mrow><mo stretchy="false">(</mo><mi>M</mi><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow></mrow></math> is an open subset of <math id="S6.p3.m18" class="ltx_Math" alttext="X\times\mathbb{R}" display="inline"><mrow><mi>X</mi><mo>×</mo><mi>ℝ</mi></mrow></math>, and is contained in <math id="S6.p3.m19" class="ltx_Math" alttext="\mathrm{epi}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></math>. This shows that <math id="S6.p3.m20" class="ltx_Math" alttext="\mathrm{epi}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></math> has nonempty interior.
+Since <math id="S6.p3.m21" class="ltx_Math" alttext="f(x)&lt;\infty" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>, if <math id="S6.p3.m22" class="ltx_Math" alttext="\epsilon&gt;0" display="inline"><mrow><mi>ϵ</mi><mo>&gt;</mo><mn>0</mn></mrow></math> then <math id="S6.p3.m23" class="ltx_Math" alttext="(x,f(x)-\epsilon)\not\in\mathrm{epi}\,f" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mi>ϵ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∉</mo><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></math>, and since <math id="S6.p3.m24" class="ltx_Math" alttext="f(x)&gt;-\infty" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math> we have <math id="S6.p3.m25" class="ltx_Math" alttext="(x,f(x))\in\mathrm{epi}\,f" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></math>, and therefore
+<math id="S6.p3.m26" class="ltx_Math" alttext="(x,f(x))\in\mathrm{epi}\,f\cap\partial(\mathrm{epi}\,f)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo>∩</mo><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>.
+We can now apply Lemma <a href="#Thmtheorem6" title="Lemma 6. ‣ 5 Support points ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a>: <math id="S6.p3.m27" class="ltx_Math" alttext="\mathrm{epi}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></math> is a convex subset of the topological vector space <math id="S6.p3.m28" class="ltx_Math" alttext="X\times\mathbb{R}" display="inline"><mrow><mi>X</mi><mo>×</mo><mi>ℝ</mi></mrow></math> with nonempty interior and <math id="S6.p3.m29" class="ltx_Math" alttext="(x,f(x))\in\mathrm{epi}\,f\cap\partial(\mathrm{epi}\,f)" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo>∩</mo><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, so <math id="S6.p3.m30" class="ltx_Math" alttext="\mathrm{epi}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></math> is properly supported at <math id="S6.p3.m31" class="ltx_Math" alttext="(x,f(x))" display="inline"><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></math>. That is, Lemma <a href="#Thmtheorem6" title="Lemma 6. ‣ 5 Support points ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_tag">6</span></a> shows that
+there is some <math id="S6.p3.m32" class="ltx_Math" alttext="\Lambda\in(X\times\mathbb{R})^{*}" display="inline"><mrow><mi mathvariant="normal">Λ</mi><mo>∈</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mi>X</mi><mo>×</mo><mi>ℝ</mi></mrow><mo stretchy="false">)</mo></mrow><mo>*</mo></msup></mrow></math> such that</p>
+<table id="S6.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex17.m1" class="ltx_Math" alttext="\Lambda(x,f(x))=\sup_{(y,\alpha)\in\mathrm{epi}\,f}\Lambda(y,\alpha)," display="block"><mrow><mrow><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">sup</mo><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></munder><mo>⁡</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and there is some <math id="S6.p3.m33" class="ltx_Math" alttext="(y,\alpha)\in\mathrm{epi}\,f" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></math> for which <math id="S6.p3.m34" class="ltx_Math" alttext="\Lambda(x,f(x))&gt;\Lambda(y,\alpha)" display="inline"><mrow><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo>,</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&gt;</mo><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. Now, there is some <math id="S6.p3.m35" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> and some
+<math id="S6.p3.m36" class="ltx_Math" alttext="\beta\in\mathbb{R}^{*}=\mathbb{R}" display="inline"><mrow><mi>β</mi><mo>∈</mo><msup><mi>ℝ</mi><mo>*</mo></msup><mo>=</mo><mi>ℝ</mi></mrow></math> such that <math id="S6.p3.m37" class="ltx_Math" alttext="\Lambda(y,\alpha)=\lambda y+\beta\alpha" display="inline"><mrow><mrow><mi mathvariant="normal">Λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>β</mi><mo>⁢</mo><mi>α</mi></mrow></mrow></mrow></math> for all <math id="S6.p3.m38" class="ltx_Math" alttext="(y,\alpha)\in X\times\mathbb{R}" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mi>X</mi><mo>×</mo><mi>ℝ</mi></mrow></mrow></math>.
+Thus, there is some nonzero <math id="S6.p3.m39" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> and some <math id="S6.p3.m40" class="ltx_Math" alttext="\beta\in\mathbb{R}" display="inline"><mrow><mi>β</mi><mo>∈</mo><mi>ℝ</mi></mrow></math> such that</p>
+<table id="S6.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex18.m1" class="ltx_Math" alttext="\lambda x+\beta f(x)=\sup_{(y,\alpha)\in\mathrm{epi}\,f}\lambda y+\beta\alpha." display="block"><mrow><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>β</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><munder><mo movablelimits="false">sup</mo><mrow><mrow><mo stretchy="false">(</mo><mi>y</mi><mo>,</mo><mi>α</mi><mo stretchy="false">)</mo></mrow><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>epi</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></munder><mo>⁡</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow></mrow><mo>+</mo><mrow><mi>β</mi><mo>⁢</mo><mi>α</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="S6.p3.m41" class="ltx_Math" alttext="\beta&gt;0" display="inline"><mrow><mi>β</mi><mo>&gt;</mo><mn>0</mn></mrow></math> then the right-hand side
+would be <math id="S6.p3.m42" class="ltx_Math" alttext="\infty" display="inline"><mi mathvariant="normal">∞</mi></math> while the left-hand side is constant and <math id="S6.p3.m43" class="ltx_Math" alttext="&lt;\infty" display="inline"><mrow><mi></mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>, so <math id="S6.p3.m44" class="ltx_Math" alttext="\beta\leq 0" display="inline"><mrow><mi>β</mi><mo>≤</mo><mn>0</mn></mrow></math>.
+Suppose by contradiction that <math id="S6.p3.m45" class="ltx_Math" alttext="\beta=0" display="inline"><mrow><mi>β</mi><mo>=</mo><mn>0</mn></mrow></math>. Then <math id="S6.p3.m46" class="ltx_Math" alttext="\lambda x\geq\lambda y" display="inline"><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>≥</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow></mrow></math> for all <math id="S6.p3.m47" class="ltx_Math" alttext="y\in\mathrm{dom}\,f" display="inline"><mrow><mi>y</mi><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></math>, and as <math id="S6.p3.m48" class="ltx_Math" alttext="\lambda\neq 0" display="inline"><mrow><mi>λ</mi><mo>≠</mo><mn>0</mn></mrow></math> this means that <math id="S6.p3.m49" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math> is a support point of <math id="S6.p3.m50" class="ltx_Math" alttext="\mathrm{dom}\,f" display="inline"><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></math>, and then
+by Lemma <a href="#Thmtheorem5" title="Lemma 5. ‣ 5 Support points ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_tag">5</span></a> we have that
+<math id="S6.p3.m51" class="ltx_Math" alttext="x\in\partial(\mathrm{dom}\,f)" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mo>∂</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, contradicting <math id="S6.p3.m52" class="ltx_Math" alttext="x\in(\mathrm{dom}\,f)^{\circ}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow></math>. Hence <math id="S6.p3.m53" class="ltx_Math" alttext="\beta&lt;0" display="inline"><mrow><mi>β</mi><mo>&lt;</mo><mn>0</mn></mrow></math>, so</p>
+<table id="S6.Ex19" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex19.m1" class="ltx_Math" alttext="\lambda x+\beta f(x)\geq\lambda y+\beta f(y),\qquad y\in\mathrm{dom}\,f," display="block"><mrow><mrow><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>x</mi></mrow><mo>+</mo><mrow><mi>β</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≥</mo><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>y</mi></mrow><mo>+</mo><mrow><mi>β</mi><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>y</mi><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.,</p>
+<table id="S6.Ex20" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex20.m1" class="ltx_Math" alttext="f(y)\geq f(x)-\frac{\lambda}{\beta}(y-x),\qquad y\in\mathrm{dom}\,f." display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mfrac><mi>λ</mi><mi>β</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>y</mi><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Furthermore, if <math id="S6.p3.m54" class="ltx_Math" alttext="y\not\in\mathrm{dom}\,f" display="inline"><mrow><mi>y</mi><mo>∉</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></math> then <math id="S6.p3.m55" class="ltx_Math" alttext="f(y)=\infty" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mi mathvariant="normal">∞</mi></mrow></math>, for which the above inequality is true. Therefore,
+<math id="S6.p3.m56" class="ltx_Math" alttext="f(y)\geq f(x)-\frac{\lambda}{\beta}(y-x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mfrac><mi>λ</mi><mi>β</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for all <math id="S6.p3.m57" class="ltx_Math" alttext="y\in X" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow></math>, showing that <math id="S6.p3.m58" class="ltx_Math" alttext="-\frac{\lambda}{\beta}" display="inline"><mrow><mo>-</mo><mfrac><mi>λ</mi><mi>β</mi></mfrac></mrow></math> is a subgradient of <math id="S6.p3.m59" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="S6.p3.m60" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>.
+∎</p>
+</div>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Directional derivatives</h2>
+
+<div id="Thmtheorem8" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 8</span></span>.</h6>
+<div id="Thmtheorem8.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem8.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a vector space, <math id="Thmtheorem8.p1.m2" class="ltx_Math" alttext="f:X\to(-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mo mathvariant="normal">-</mo><mi mathvariant="normal">∞</mi></mrow><mo mathvariant="normal">,</mo><mi mathvariant="normal">∞</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></mrow></math> is a proper convex function, <math id="Thmtheorem8.p1.m3" class="ltx_Math" alttext="x\in\mathrm{dom}\,f" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">dom</mi></mpadded><mo mathvariant="italic">⁢</mo><mi>f</mi></mrow></mrow></math>, <math id="Thmtheorem8.p1.m4" class="ltx_Math" alttext="v\in X" display="inline"><mrow><mi>v</mi><mo mathvariant="normal">∈</mo><mi>X</mi></mrow></math>,
+and <math id="Thmtheorem8.p1.m5" class="ltx_Math" alttext="0&lt;h^{\prime}&lt;h" display="inline"><mrow><mn mathvariant="normal">0</mn><mo mathvariant="normal">&lt;</mo><msup><mi>h</mi><mo mathvariant="normal">′</mo></msup><mo mathvariant="normal">&lt;</mo><mi>h</mi></mrow></math>, then</span></p>
+<table id="S7.Ex21" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex21.m1" class="ltx_Math" alttext="\frac{f(x+h^{\prime}v)-f(x)}{h^{\prime}}\leq\frac{f(x+hv)-f(x)}{h}." display="block"><mrow><mrow><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><msup><mi>h</mi><mo>′</mo></msup><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><msup><mi>h</mi><mo>′</mo></msup></mfrac><mo>≤</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">We have</p>
+<table id="S7.Ex22" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex22.m1" class="ltx_Math" alttext="x+h^{\prime}v=\frac{h^{\prime}}{h}(x+hv)+\frac{h-h^{\prime}}{h}x," display="block"><mrow><mrow><mrow><mi>x</mi><mo>+</mo><mrow><msup><mi>h</mi><mo>′</mo></msup><mo>⁢</mo><mi>v</mi></mrow></mrow><mo>=</mo><mrow><mrow><mfrac><msup><mi>h</mi><mo>′</mo></msup><mi>h</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><mi>h</mi><mo>-</mo><msup><mi>h</mi><mo>′</mo></msup></mrow><mi>h</mi></mfrac><mo>⁢</mo><mi>x</mi></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and because <math id="S7.p1.m1" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is convex this gives</p>
+<table id="S7.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex23.m1" class="ltx_Math" alttext="f(x+h^{\prime}v)\leq\frac{h^{\prime}}{h}f(x+hv)+\frac{h-h^{\prime}}{h}f(x)," display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><msup><mi>h</mi><mo>′</mo></msup><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≤</mo><mrow><mrow><mfrac><msup><mi>h</mi><mo>′</mo></msup><mi>h</mi></mfrac><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mrow><mi>h</mi><mo>-</mo><msup><mi>h</mi><mo>′</mo></msup></mrow><mi>h</mi></mfrac><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.</p>
+<table id="S7.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex24.m1" class="ltx_Math" alttext="f(x+h^{\prime}v)-f(x)\leq\frac{h^{\prime}}{h}(f(x+hv)-f(x))." display="block"><mrow><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><msup><mi>h</mi><mo>′</mo></msup><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>≤</mo><mrow><mfrac><msup><mi>h</mi><mo>′</mo></msup><mi>h</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Dividing by <math id="S7.p1.m2" class="ltx_Math" alttext="h^{\prime}" display="inline"><msup><mi>h</mi><mo>′</mo></msup></math>,</p>
+<table id="S7.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex25.m1" class="ltx_Math" alttext="\frac{f(x+h^{\prime}v)-f(x)}{h^{\prime}}\leq\frac{f(x+hv)-f(x)}{h}." display="block"><mrow><mrow><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><msup><mi>h</mi><mo>′</mo></msup><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><msup><mi>h</mi><mo>′</mo></msup></mfrac><mo>≤</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">∎</p>
+</div>
+</div>
+<div id="S7.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S7.p2.m1" class="ltx_Math" alttext="f:X\to(-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> is a proper convex function, <math id="S7.p2.m2" class="ltx_Math" alttext="x\in\mathrm{dom}\,f" display="inline"><mrow><mi>x</mi><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></math>, and <math id="S7.p2.m3" class="ltx_Math" alttext="v\in X" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>X</mi></mrow></math>, then the above lemma shows that</p>
+<table id="S7.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex26.m1" class="ltx_Math" alttext="h\mapsto\frac{f(x+hv)-f(x)}{h}" display="block"><mrow><mi>h</mi><mo>↦</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is an increasing function <math id="S7.p2.m4" class="ltx_Math" alttext="(0,\infty)\to(-\infty,\infty]" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></math>, and therefore that</p>
+<table id="S7.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex27.m1" class="ltx_Math" alttext="\lim_{h\to 0^{+}}\frac{f(x+hv)-f(x)}{h}" display="block"><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></munder><mo>⁡</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">exists; it belongs to <math id="S7.p2.m5" class="ltx_Math" alttext="[-\infty,\infty]" display="inline"><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></math>, and if there is at least one <math id="S7.p2.m6" class="ltx_Math" alttext="h&gt;0" display="inline"><mrow><mi>h</mi><mo>&gt;</mo><mn>0</mn></mrow></math> for which <math id="S7.p2.m7" class="ltx_Math" alttext="f(x+hv)&lt;\infty" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math> then the limit will be <math id="S7.p2.m8" class="ltx_Math" alttext="&lt;\infty" display="inline"><mrow><mi></mi><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+We define the <span class="ltx_text ltx_font_italic">one-sided directional derivative of <math id="S7.p2.m9" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> at <math id="S7.p2.m10" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math></span> to be
+the function <math id="S7.p2.m11" class="ltx_Math" alttext="d^{+}f(x):X\to[-\infty,\infty]" display="inline"><mrow><mrow><msup><mi>d</mi><mo>+</mo></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>:</mo><mrow><mi>X</mi><mo>→</mo><mrow><mo stretchy="false">[</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow><mo>,</mo><mi mathvariant="normal">∞</mi><mo stretchy="false">]</mo></mrow></mrow></mrow></math> defined by<span id="footnote8" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">8</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">8</sup>
+            <span class="ltx_tag ltx_tag_note">8</span>
+            
+            
+          We are following the notation of
+Charalambos D. Aliprantis and Kim C. Border, <span class="ltx_text ltx_font_italic">Infinite Dimensional Analysis: A Hitchhiker’s Guide</span>, third ed., p. 266.</span></span></span></p>
+<table id="S7.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex28.m1" class="ltx_Math" alttext="d^{+}f(x)v=\lim_{h\to 0^{+}}\frac{f(x+hv)-f(x)}{h},\qquad v\in X." display="block"><mrow><mrow><mrow><mrow><msup><mi>d</mi><mo>+</mo></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><munder><mo movablelimits="false">lim</mo><mrow><mi>h</mi><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></munder><mo>⁡</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>v</mi><mo>∈</mo><mi>X</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="Thmtheorem9" class="ltx_theorem ltx_theorem_lemma">
+<h6 class="ltx_title ltx_runin ltx_title_theorem">
+<span class="ltx_tag ltx_tag_theorem"><span class="ltx_text ltx_font_bold">Lemma 9</span></span>.</h6>
+<div id="Thmtheorem9.p1" class="ltx_para">
+<p class="ltx_p"><span class="ltx_text ltx_font_italic">If <math id="Thmtheorem9.p1.m1" class="ltx_Math" alttext="X" display="inline"><mi>X</mi></math> is a topological vector space, <math id="Thmtheorem9.p1.m2" class="ltx_Math" alttext="f:X\to(-\infty,\infty]" display="inline"><mrow><mi>f</mi><mo mathvariant="normal">:</mo><mrow><mi>X</mi><mo mathvariant="normal">→</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mo mathvariant="normal">-</mo><mi mathvariant="normal">∞</mi></mrow><mo mathvariant="normal">,</mo><mi mathvariant="normal">∞</mi><mo mathvariant="normal" stretchy="false">]</mo></mrow></mrow></mrow></math> is a proper convex function, <math id="Thmtheorem9.p1.m3" class="ltx_Math" alttext="x\in(\mathrm{dom}\,f)^{\circ}" display="inline"><mrow><mi>x</mi><mo mathvariant="normal">∈</mo><msup><mrow><mo mathvariant="normal" stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi mathvariant="normal">dom</mi></mpadded><mo mathvariant="italic">⁢</mo><mi>f</mi></mrow><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="normal">∘</mo></msup></mrow></math>, <math id="Thmtheorem9.p1.m4" class="ltx_Math" alttext="f" display="inline"><mi>f</mi></math> is continuous at <math id="Thmtheorem9.p1.m5" class="ltx_Math" alttext="x" display="inline"><mi>x</mi></math>,
+and <math id="Thmtheorem9.p1.m6" class="ltx_Math" alttext="v\in X" display="inline"><mrow><mi>v</mi><mo mathvariant="normal">∈</mo><mi>X</mi></mrow></math>, then
+<math id="Thmtheorem9.p1.m7" class="ltx_Math" alttext="-\infty&lt;d^{+}f(x)v&lt;\infty" display="inline"><mrow><mrow><mo mathvariant="normal">-</mo><mi mathvariant="normal">∞</mi></mrow><mo mathvariant="normal">&lt;</mo><mrow><msup><mi>d</mi><mo mathvariant="normal">+</mo></msup><mo mathvariant="italic">⁢</mo><mi>f</mi><mo mathvariant="italic">⁢</mo><mrow><mo mathvariant="normal" stretchy="false">(</mo><mi>x</mi><mo mathvariant="normal" stretchy="false">)</mo></mrow><mo mathvariant="italic">⁢</mo><mi>v</mi></mrow><mo mathvariant="normal">&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.</span></p>
+</div>
+</div>
+<div class="ltx_proof">
+<h6 class="ltx_title ltx_runin ltx_font_italic ltx_title_proof">Proof.</h6>
+<div id="S7.p3" class="ltx_para">
+<p class="ltx_p">Because <math id="S7.p3.m1" class="ltx_Math" alttext="x\in(\mathrm{dom}\,f)^{\circ}" display="inline"><mrow><mi>x</mi><mo>∈</mo><msup><mrow><mo stretchy="false">(</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow><mo stretchy="false">)</mo></mrow><mo>∘</mo></msup></mrow></math>, there is some <math id="S7.p3.m2" class="ltx_Math" alttext="h&gt;0" display="inline"><mrow><mi>h</mi><mo>&gt;</mo><mn>0</mn></mrow></math> for which <math id="S7.p3.m3" class="ltx_Math" alttext="x+hv\in\mathrm{dom}\,f" display="inline"><mrow><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo>∈</mo><mrow><mpadded width="+1.7pt"><mi>dom</mi></mpadded><mo>⁢</mo><mi>f</mi></mrow></mrow></math> and hence for which <math id="S7.p3.m4" class="ltx_Math" alttext="f(x+hv)&lt;\infty" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.
+This implies that <math id="S7.p3.m5" class="ltx_Math" alttext="d^{+}f(x)v&lt;\infty" display="inline"><mrow><mrow><msup><mi>d</mi><mo>+</mo></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>&lt;</mo><mi mathvariant="normal">∞</mi></mrow></math>.</p>
+</div>
+<div id="S7.p4" class="ltx_para">
+<p class="ltx_p">Let <math id="S7.p4.m1" class="ltx_Math" alttext="h&gt;0" display="inline"><mrow><mi>h</mi><mo>&gt;</mo><mn>0</mn></mrow></math>. By Theorem <a href="#Thmtheorem7" title="Theorem 7. ‣ 6 Subdifferentials of convex functions ‣ Subdifferentials of convex functions" class="ltx_ref"><span class="ltx_text ltx_ref_tag">7</span></a>, the subdifferential <math id="S7.p4.m2" class="ltx_Math" alttext="\partial f(x)" display="inline"><mrow><mrow><mo>∂</mo><mo>⁡</mo><mi>f</mi></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></math> is nonempty, i.e.
+there is some <math id="S7.p4.m3" class="ltx_Math" alttext="\lambda\in X^{*}" display="inline"><mrow><mi>λ</mi><mo>∈</mo><msup><mi>X</mi><mo>*</mo></msup></mrow></math> for which <math id="S7.p4.m4" class="ltx_Math" alttext="f(y)\geq f(x)+\lambda(y-x)" display="inline"><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>y</mi><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>y</mi><mo>-</mo><mi>x</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math> for all <math id="S7.p4.m5" class="ltx_Math" alttext="y\in X" display="inline"><mrow><mi>y</mi><mo>∈</mo><mi>X</mi></mrow></math>. Thus, for all <math id="S7.p4.m6" class="ltx_Math" alttext="v\in X" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>X</mi></mrow></math> we have, with <math id="S7.p4.m7" class="ltx_Math" alttext="y=x+hv" display="inline"><mrow><mi>y</mi><mo>=</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow></mrow></math>,</p>
+<table id="S7.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex29.m1" class="ltx_Math" alttext="f(x+hv)\geq f(x)+\lambda(hv)," display="block"><mrow><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>≥</mo><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.,</p>
+<table id="S7.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex30.m1" class="ltx_Math" alttext="\lambda v\leq\frac{f(x+hv)-f(x)}{h}." display="block"><mrow><mrow><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow><mo>≤</mo><mfrac><mrow><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>x</mi><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mi>h</mi></mfrac></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Since this difference quotient is bounded below by <math id="S7.p4.m8" class="ltx_Math" alttext="\lambda v" display="inline"><mrow><mi>λ</mi><mo>⁢</mo><mi>v</mi></mrow></math>, its limit as <math id="S7.p4.m9" class="ltx_Math" alttext="h\to 0^{+}" display="inline"><mrow><mi>h</mi><mo>→</mo><msup><mn>0</mn><mo>+</mo></msup></mrow></math> is <math id="S7.p4.m10" class="ltx_Math" alttext="&gt;-\infty" display="inline"><mrow><mi></mi><mo>&gt;</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>, and therefore
+<math id="S7.p4.m11" class="ltx_Math" alttext="d^{+}f(x)v&gt;-\infty" display="inline"><mrow><mrow><msup><mi>d</mi><mo>+</mo></msup><mo>⁢</mo><mi>f</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>x</mi><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>&gt;</mo><mrow><mo>-</mo><mi mathvariant="normal">∞</mi></mrow></mrow></math>.
+∎</p>
+</div>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Mon Feb 14 10:35:50 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

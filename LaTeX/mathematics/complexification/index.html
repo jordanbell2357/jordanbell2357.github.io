@@ -1,0 +1,1371 @@
+<!DOCTYPE html><html>
+<head>
+<title>Complexification, complex structures, and linear ordinary differential equations</title>
+<!--Generated on Fri Jan 21 00:00:13 2022 by LaTeXML (version 0.8.4) http://dlmf.nist.gov/LaTeXML/.-->
+<!--Document created on April 3, 2014.-->
+
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="LaTeXML.css" type="text/css">
+<link rel="stylesheet" href="ltx-article.css" type="text/css">
+<script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js?config=MML_HTMLorMML" type="text/javascript"></script>
+</head>
+<body>
+<div class="ltx_page_main">
+<div class="ltx_page_content">
+<article class="ltx_document ltx_authors_1line">
+<h1 class="ltx_title ltx_title_document">Complexification, complex structures, and linear ordinary differential equations</h1>
+<div class="ltx_authors">
+<span class="ltx_creator ltx_role_author">
+<span class="ltx_personname">Jordan Bell
+</span></span>
+</div>
+<div class="ltx_date ltx_role_creation">April 3, 2014</div>
+
+<section id="S1" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">1 </span>Motivation</h2>
+
+<div id="S1.p1" class="ltx_para">
+<p class="ltx_p">The solution of the initial value problem</p>
+<table id="S1.Ex1" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex1.m1" class="ltx_Math" alttext="x^{\prime}(t)=Ax(t),\qquad x(0)=x_{0}\in\mathbb{R}^{n}," display="block"><mrow><mrow><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where <math id="S1.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an <math id="S1.p1.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix over <math id="S1.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>,
+is <math id="S1.p1.m4" class="ltx_Math" alttext="x(t)=\exp(At)x_{0}" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow></math>. If we want to compute the solution and if <math id="S1.p1.m5" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is diagonalizable, say <math id="S1.p1.m6" class="ltx_Math" alttext="A=PDP^{-1}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow></math>, we use</p>
+<table id="S1.Ex2" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex2.m1" class="ltx_Math" alttext="\exp(At)=\exp((PDP^{-1})t)=P\exp(Dt)P^{-1}." display="block"><mrow><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>P</mi><mo>⁢</mo><mi>D</mi><mo>⁢</mo><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>P</mi><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>D</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus if the matrix <math id="S1.p1.m7" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has complex eigenvalues, then although <math id="S1.p1.m8" class="ltx_Math" alttext="\exp(At)x_{0}\in\mathbb{R}^{n}" display="inline"><mrow><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>, it may not be the case that <math id="S1.p1.m9" class="ltx_Math" alttext="P^{-1}x_{0}\in\mathbb{R}^{n}" display="inline"><mrow><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>.
+For example, if <math id="S1.p1.m10" class="ltx_Math" alttext="A=\begin{pmatrix}0&amp;-1\\
+1&amp;0\end{pmatrix}" display="inline"><mrow><mi>A</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mrow><mo>-</mo><mn>1</mn></mrow></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>, then</p>
+<table id="S1.Ex3" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex3.m1" class="ltx_Math" alttext="D=\begin{pmatrix}-i&amp;0\\
+0&amp;i\end{pmatrix},\quad P=\begin{pmatrix}-i&amp;i\\
+1&amp;1\end{pmatrix},\quad P^{-1}=\frac{1}{2}\begin{pmatrix}i&amp;1\\
+-i&amp;1\end{pmatrix}." display="block"><mrow><mrow><mrow><mi>D</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>i</mi></mrow></mtd><mtd columnalign="center"><mn>0</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd><mtd columnalign="center"><mi>i</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><mrow><mi>P</mi><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>i</mi></mrow></mtd><mtd columnalign="center"><mi>i</mi></mtd></mtr><mtr><mtd columnalign="center"><mn>1</mn></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo rspace="12.5pt">,</mo><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>i</mi></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>i</mi></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">For <math id="S1.p1.m11" class="ltx_Math" alttext="x_{0}=\begin{pmatrix}1\\
+0\end{pmatrix}" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>=</mo><mrow><mo>(</mo><mtable rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow></math>,</p>
+<table id="S1.Ex4" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S1.Ex4.m1" class="ltx_Math" alttext="P^{-1}x_{0}=\frac{1}{2}\begin{pmatrix}i&amp;1\\
+-i&amp;1\end{pmatrix}\begin{pmatrix}1\\
+0\end{pmatrix}=\frac{1}{2}\begin{pmatrix}i\\
+-i\end{pmatrix}." display="block"><mrow><mrow><mrow><msup><mi>P</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><msub><mi>x</mi><mn>0</mn></msub></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>i</mi></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>i</mi></mrow></mtd><mtd columnalign="center"><mn>1</mn></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mn>1</mn></mtd></mtr><mtr><mtd columnalign="center"><mn>0</mn></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mtable displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>i</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>i</mi></mrow></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">This is similar to how Cardano’s formula, which expresses the roots of a real cubic polynomial in terms of its coefficients,
+involves complex numbers and yet the final result may still be real.</p>
+</div>
+<div id="S1.p2" class="ltx_para">
+<p class="ltx_p">In the following, unless I specify the dimension of a vector space, any statement about real vector spaces is about real vector spaces of finite or infinite dimension, and any
+statement about complex vector spaces is about complex vector spaces of finite or infinite dimension.</p>
+</div>
+</section>
+<section id="S2" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">2 </span>Direct sums</h2>
+
+<div id="S2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a real vector space, a <span class="ltx_text ltx_font_italic">complex structure</span> for <math id="S2.p1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is an <math id="S2.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>-linear map <math id="S2.p1.m4" class="ltx_Math" alttext="J:V\to V" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> such that <math id="S2.p1.m5" class="ltx_Math" alttext="J^{2}=-\textrm{id}_{V}" display="inline"><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><msub><mtext>id</mtext><mi>V</mi></msub></mrow></mrow></math>.</p>
+</div>
+<div id="S2.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S2.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a real vector space and <math id="S2.p2.m2" class="ltx_Math" alttext="J:V\to V" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> is a complex structure, define a complex vector space <math id="S2.p2.m3" class="ltx_Math" alttext="V_{J}" display="inline"><msub><mi>V</mi><mi>J</mi></msub></math> in the following way: let the set of elements of <math id="S2.p2.m4" class="ltx_Math" alttext="V_{J}" display="inline"><msub><mi>V</mi><mi>J</mi></msub></math> be <math id="S2.p2.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>,
+let addition in <math id="S2.p2.m6" class="ltx_Math" alttext="V_{J}" display="inline"><msub><mi>V</mi><mi>J</mi></msub></math> be addition in <math id="S2.p2.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, and define scalar multiplication in <math id="S2.p2.m8" class="ltx_Math" alttext="V_{J}" display="inline"><msub><mi>V</mi><mi>J</mi></msub></math> by</p>
+<table id="S2.Ex5" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex5.m1" class="ltx_Math" alttext="(a+ib)v=av+bJ(v)." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>v</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>J</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">One checks that for <math id="S2.p2.m9" class="ltx_Math" alttext="\alpha,\beta\in\mathbb{C}" display="inline"><mrow><mrow><mi>α</mi><mo>,</mo><mi>β</mi></mrow><mo>∈</mo><mi>ℂ</mi></mrow></math> and <math id="S2.p2.m10" class="ltx_Math" alttext="v\in V_{J}" display="inline"><mrow><mi>v</mi><mo>∈</mo><msub><mi>V</mi><mi>J</mi></msub></mrow></math> we have <math id="S2.p2.m11" class="ltx_Math" alttext="(\alpha\beta)v=\alpha(\beta v)" display="inline"><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>β</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, and thus
+that <math id="S2.p2.m12" class="ltx_Math" alttext="V_{J}" display="inline"><msub><mi>V</mi><mi>J</mi></msub></math> is indeed a complex vector space with this definition of scalar multiplication.<span id="footnote1" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">1</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">1</sup>
+            <span class="ltx_tag ltx_tag_note">1</span>
+            
+            
+            
+          One should also
+verify that distributivity holds with this definition of scalar product; the other properties of a vector space are satisfied because <math id="footnote1.m1" class="ltx_Math" alttext="V_{J}" display="inline"><msub><mi>V</mi><mi>J</mi></msub></math> has
+the same addition as the real vector space <math id="footnote1.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</span></span></span></p>
+</div>
+<div id="S2.p3" class="ltx_para">
+<p class="ltx_p">Let <math id="S2.p3.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be a real vector space, and define the <math id="S2.p3.m2" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>-linear map
+<math id="S2.p3.m3" class="ltx_Math" alttext="J:V\oplus V\to V\oplus V" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><mrow><mi>V</mi><mo>⊕</mo><mi>V</mi></mrow><mo>→</mo><mrow><mi>V</mi><mo>⊕</mo><mi>V</mi></mrow></mrow></mrow></math> by</p>
+<table id="S2.Ex6" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex6.m1" class="ltx_Math" alttext="J(v,w)=(-w,v)." display="block"><mrow><mrow><mrow><mi>J</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>w</mi></mrow><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><math id="S2.p3.m4" class="ltx_Math" alttext="J^{2}=-\textrm{id}_{V\oplus V}" display="inline"><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><msub><mtext>id</mtext><mrow><mi>V</mi><mo>⊕</mo><mi>V</mi></mrow></msub></mrow></mrow></math>. <math id="S2.p3.m5" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> is a complex structure on the real vector space <math id="S2.p3.m6" class="ltx_Math" alttext="V\oplus V" display="inline"><mrow><mi>V</mi><mo>⊕</mo><mi>V</mi></mrow></math>.
+The <span class="ltx_text ltx_font_italic">complexification</span> of <math id="S2.p3.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>
+is the complex vector space <math id="S2.p3.m8" class="ltx_Math" alttext="V^{\mathbb{C}}=(V\oplus V)_{J}" display="inline"><mrow><msup><mi>V</mi><mi>ℂ</mi></msup><mo>=</mo><msub><mrow><mo stretchy="false">(</mo><mrow><mi>V</mi><mo>⊕</mo><mi>V</mi></mrow><mo stretchy="false">)</mo></mrow><mi>J</mi></msub></mrow></math>.
+Thus, <math id="S2.p3.m9" class="ltx_Math" alttext="V^{\mathbb{C}}" display="inline"><msup><mi>V</mi><mi>ℂ</mi></msup></math> has the same set of elements as <math id="S2.p3.m10" class="ltx_Math" alttext="V\oplus V" display="inline"><mrow><mi>V</mi><mo>⊕</mo><mi>V</mi></mrow></math>, the same addition as <math id="S2.p3.m11" class="ltx_Math" alttext="V\oplus V" display="inline"><mrow><mi>V</mi><mo>⊕</mo><mi>V</mi></mrow></math>, and scalar multiplication</p>
+<table id="S2.Ex7" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex7.m1" class="ltx_Math" alttext="(a+ib)(v,w)=a(v,w)+bJ(v,w)," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>J</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which gives
+</p>
+<table id="S2.Ex8" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex8.m1" class="ltx_Math" alttext="(a+ib)(v,w)=a(v,w)+b(-w,v)=(av,aw)+(-bw,bv)=(av-bw,aw+bv)." display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>b</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mi>w</mi></mrow><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>⁢</mo><mi>v</mi></mrow><mo>,</mo><mrow><mi>a</mi><mo>⁢</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow><mo>+</mo><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>,</mo><mrow><mi>b</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>v</mi></mrow><mo>-</mo><mrow><mi>b</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>,</mo><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>w</mi></mrow><mo>+</mo><mrow><mi>b</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S2.p4" class="ltx_para">
+<p class="ltx_p">If the real vector space <math id="S2.p4.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> has dimension <math id="S2.p4.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> and
+if <math id="S2.p4.m3" class="ltx_Math" alttext="\{e_{1},\ldots,e_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> is a basis for <math id="S2.p4.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, then</p>
+<table id="S2.Ex9" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex9.m1" class="ltx_Math" alttext="\{(e_{1},0),\ldots,(e_{n},0),(0,e_{1}),\ldots,(0,e_{n})\}" display="block"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a basis for the real vector space <math id="S2.p4.m5" class="ltx_Math" alttext="V\oplus V" display="inline"><mrow><mi>V</mi><mo>⊕</mo><mi>V</mi></mrow></math>.
+Let <math id="S2.p4.m6" class="ltx_Math" alttext="v\in V^{\mathbb{C}}" display="inline"><mrow><mi>v</mi><mo>∈</mo><msup><mi>V</mi><mi>ℂ</mi></msup></mrow></math>. Using the basis for the real vector space <math id="S2.p4.m7" class="ltx_Math" alttext="V\oplus V" display="inline"><mrow><mi>V</mi><mo>⊕</mo><mi>V</mi></mrow></math>, there exist</p>
+<table id="S2.Ex10" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex10.m1" class="ltx_Math" alttext="a_{1},\ldots,a_{n},b_{1},\ldots,b_{n}\in\mathbb{R}" display="block"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">such that</p>
+<table id="S10.EGx1" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S2.Ex13">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S2.Ex11.m1" class="ltx_Math" alttext="\displaystyle v" display="inline"><mi>v</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex11.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex11.m3" class="ltx_Math" alttext="\displaystyle a_{1}(e_{1},0)+\cdots a_{n}(e_{n},0)+b_{1}(0,e_{1})+\cdots+b_{n}%
+(0,e_{n})" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi mathvariant="normal">⋯</mi><mo>⁢</mo><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex12.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex12.m3" class="ltx_Math" alttext="\displaystyle a_{1}(e_{1},0)+\cdots+a_{n}(e_{n},0)+b_{1}J(e_{1},0)+\cdots+b_{n%
+}J(e_{n},0)" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mi>J</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>⁢</mo><mi>J</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S2.Ex13.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S2.Ex13.m3" class="ltx_Math" alttext="\displaystyle(a_{1}+ib_{1})(e_{1},0)+\cdots+(a_{n}+ib_{n})(e_{n},0)," display="inline"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">where in the last line we used the definition of scalar multiplication in <math id="S2.p4.m8" class="ltx_Math" alttext="V^{\mathbb{C}}" display="inline"><msup><mi>V</mi><mi>ℂ</mi></msup></math>. One checks that
+the set <math id="S2.p4.m9" class="ltx_Math" alttext="\{(e_{1},0),\ldots,(e_{n},0)\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo stretchy="false">}</mo></mrow></math> is linearly independent over <math id="S2.p4.m10" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>, and therefore it is a basis for <math id="S2.p4.m11" class="ltx_Math" alttext="V^{\mathbb{C}}" display="inline"><msup><mi>V</mi><mi>ℂ</mi></msup></math>.
+Hence</p>
+<table id="S2.Ex14" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S2.Ex14.m1" class="ltx_Math" alttext="\dim_{\mathbb{C}}V^{\mathbb{C}}=\dim_{\mathbb{R}}V." display="block"><mrow><mrow><mrow><msub><mo>dim</mo><mi>ℂ</mi></msub><mo>⁡</mo><msup><mi>V</mi><mi>ℂ</mi></msup></mrow><mo>=</mo><mrow><msub><mo>dim</mo><mi>ℝ</mi></msub><mo>⁡</mo><mi>V</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S3" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">3 </span>Complexification is a functor</h2>
+
+<div id="S3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S3.p1.m1" class="ltx_Math" alttext="V,W" display="inline"><mrow><mi>V</mi><mo>,</mo><mi>W</mi></mrow></math> are real vector spaces and <math id="S3.p1.m2" class="ltx_Math" alttext="T:V\to W" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>W</mi></mrow></mrow></math> is an <math id="S3.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>-linear map, we define</p>
+<table id="S3.Ex15" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex15.m1" class="ltx_Math" alttext="T^{\mathbb{C}}:V^{\mathbb{C}}\to W^{\mathbb{C}}" display="block"><mrow><msup><mi>T</mi><mi>ℂ</mi></msup><mo>:</mo><mrow><msup><mi>V</mi><mi>ℂ</mi></msup><mo>→</mo><msup><mi>W</mi><mi>ℂ</mi></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">by</p>
+<table id="S3.Ex16" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex16.m1" class="ltx_Math" alttext="T^{\mathbb{C}}(v_{1},v_{2})=(Tv_{1},Tv_{2});" display="block"><mrow><mrow><mrow><msup><mi>T</mi><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mi>T</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">this is a <math id="S3.p1.m4" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>-linear map.
+Setting <math id="S3.p1.m5" class="ltx_Math" alttext="\iota_{V}(v_{1},v_{2})=(v_{1},0)" display="inline"><mrow><mrow><msub><mi>ι</mi><mi>V</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S3.p1.m6" class="ltx_Math" alttext="\iota_{W}(w_{1},w_{2})=(w_{1},0)" display="inline"><mrow><mrow><msub><mi>ι</mi><mi>W</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><msub><mi>w</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>w</mi><mn>1</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>, <math id="S3.p1.m7" class="ltx_Math" alttext="T^{\mathbb{C}}:V^{\mathbb{C}}\to W^{\mathbb{C}}" display="inline"><mrow><msup><mi>T</mi><mi>ℂ</mi></msup><mo>:</mo><mrow><msup><mi>V</mi><mi>ℂ</mi></msup><mo>→</mo><msup><mi>W</mi><mi>ℂ</mi></msup></mrow></mrow></math> is
+the unique <math id="S3.p1.m8" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>-linear map
+such that
+<math id="S3.p1.m9" class="ltx_Math" alttext="T^{\mathbb{C}}\circ\iota_{V}=\iota_{W}\circ T" display="inline"><mrow><mrow><msup><mi>T</mi><mi>ℂ</mi></msup><mo>∘</mo><msub><mi>ι</mi><mi>V</mi></msub></mrow><mo>=</mo><mrow><msub><mi>ι</mi><mi>W</mi></msub><mo>∘</mo><mi>T</mi></mrow></mrow></math>.<span id="footnote2" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">2</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">2</sup>
+            <span class="ltx_tag ltx_tag_note">2</span>
+            
+            
+            
+          See Keith Conrad’s, <a href="https://kconrad.math.uconn.edu/blurbs/linmultialg/complexification.pdf" title="" class="ltx_ref ltx_url ltx_font_typewriter">https://kconrad.math.uconn.edu/blurbs/linmultialg/complexification.pdf</a></span></span></span>
+</p>
+</div>
+<div id="S3.p2" class="ltx_para">
+<p class="ltx_p">Complexification is a <span class="ltx_text ltx_font_italic">functor</span> from the category of real vector spaces to the category of complex vector spaces:</p>
+<table id="S3.Ex17" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex17.m1" class="ltx_Math" alttext="(\textrm{id}_{V})^{\mathbb{C}}(v_{1},v_{2})=(\textrm{id}_{V}v_{1},\textrm{id}_%
+{V}v_{2})=(v_{1},v_{2})=\textrm{id}_{V^{\mathbb{C}}}(v_{1},v_{2})," display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mtext>id</mtext><mi>V</mi></msub><mo stretchy="false">)</mo></mrow><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mtext>id</mtext><mi>V</mi></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><msub><mtext>id</mtext><mi>V</mi></msub><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><msub><mtext>id</mtext><msup><mi>V</mi><mi>ℂ</mi></msup></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="S3.p2.m1" class="ltx_Math" alttext="(\textrm{id}_{V})^{\mathbb{C}}=\textrm{id}_{V^{\mathbb{C}}}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msub><mtext>id</mtext><mi>V</mi></msub><mo stretchy="false">)</mo></mrow><mi>ℂ</mi></msup><mo>=</mo><msub><mtext>id</mtext><msup><mi>V</mi><mi>ℂ</mi></msup></msub></mrow></math>, and if <math id="S3.p2.m2" class="ltx_Math" alttext="S:U\to V" display="inline"><mrow><mi>S</mi><mo>:</mo><mrow><mi>U</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> and <math id="S3.p2.m3" class="ltx_Math" alttext="T:V\to S" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>S</mi></mrow></mrow></math> are <math id="S3.p2.m4" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>-linear maps, then</p>
+<table id="S3.Ex18" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S3.Ex18.m1" class="ltx_Math" alttext="(T\circ S)^{\mathbb{C}}(v_{1},v_{2})=(T(Sv_{1}),T(Sv_{2}))=T^{\mathbb{C}}(Sv_{%
+1},Sv_{2})=T^{\mathbb{C}}(S^{\mathbb{C}}(v_{1},v_{2}))," display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>∘</mo><mi>S</mi></mrow><mo stretchy="false">)</mo></mrow><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>T</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><msup><mi>T</mi><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>S</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mi>S</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>T</mi><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>S</mi><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="S3.p2.m5" class="ltx_Math" alttext="(T\circ S)^{\mathbb{C}}=T^{\mathbb{C}}\circ S^{\mathbb{C}}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>∘</mo><mi>S</mi></mrow><mo stretchy="false">)</mo></mrow><mi>ℂ</mi></msup><mo>=</mo><mrow><msup><mi>T</mi><mi>ℂ</mi></msup><mo>∘</mo><msup><mi>S</mi><mi>ℂ</mi></msup></mrow></mrow></math>.</p>
+</div>
+</section>
+<section id="S4" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">4 </span>Complexifying a complex structure</h2>
+
+<div id="S4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S4.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a real vector space and <math id="S4.p1.m2" class="ltx_Math" alttext="J:V\to V" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> is a complex structure, then</p>
+<table id="S10.EGx2" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S4.Ex22">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S4.Ex19.m1" class="ltx_Math" alttext="\displaystyle(J^{\mathbb{C}})^{2}(v_{1},v_{2})" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>J</mi><mi>ℂ</mi></msup><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex19.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex19.m3" class="ltx_Math" alttext="\displaystyle J^{\mathbb{C}}(Jv_{1},Jv_{2})" display="inline"><mrow><msup><mi>J</mi><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex20.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex20.m3" class="ltx_Math" alttext="\displaystyle(J^{2}v_{1},J^{2}v_{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex21.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex21.m3" class="ltx_Math" alttext="\displaystyle(-v_{1},-v_{2})" display="inline"><mrow><mo stretchy="false">(</mo><mrow><mo>-</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mo>-</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S4.Ex22.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S4.Ex22.m3" class="ltx_Math" alttext="\displaystyle-(v_{1},v_{2})," display="inline"><mrow><mrow><mo>-</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">so <math id="S4.p1.m3" class="ltx_Math" alttext="(J^{\mathbb{C}})^{2}=-\textrm{id}_{V^{\mathbb{C}}}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>J</mi><mi>ℂ</mi></msup><mo stretchy="false">)</mo></mrow><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><msub><mtext>id</mtext><msup><mi>V</mi><mi>ℂ</mi></msup></msub></mrow></mrow></math>.
+Let</p>
+<table id="S4.Ex23" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex23.m1" class="ltx_Math" alttext="E_{i}=\{w\in V^{\mathbb{C}}:J^{\mathbb{C}}w=iw\},\qquad E_{-i}=\{w\in V^{%
+\mathbb{C}}:J^{\mathbb{C}}w=-iw\}." display="block"><mrow><mrow><mrow><msub><mi>E</mi><mi>i</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>w</mi><mo>∈</mo><msup><mi>V</mi><mi>ℂ</mi></msup></mrow><mo>:</mo><mrow><mrow><msup><mi>J</mi><mi>ℂ</mi></msup><mo>⁢</mo><mi>w</mi></mrow><mo>=</mo><mrow><mi>i</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msub><mi>E</mi><mrow><mo>-</mo><mi>i</mi></mrow></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>w</mi><mo>∈</mo><msup><mi>V</mi><mi>ℂ</mi></msup></mrow><mo>:</mo><mrow><mrow><msup><mi>J</mi><mi>ℂ</mi></msup><mo>⁢</mo><mi>w</mi></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>w</mi></mrow></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">If <math id="S4.p1.m4" class="ltx_Math" alttext="w\in V^{\mathbb{C}}" display="inline"><mrow><mi>w</mi><mo>∈</mo><msup><mi>V</mi><mi>ℂ</mi></msup></mrow></math>, then one checks that</p>
+<table id="S4.Ex24" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex24.m1" class="ltx_Math" alttext="w-iJ^{\mathbb{C}}w\in E_{i},\qquad w+iJ^{\mathbb{C}}w\in E_{-i}," display="block"><mrow><mrow><mrow><mrow><mi>w</mi><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><msup><mi>J</mi><mi>ℂ</mi></msup><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>∈</mo><msub><mi>E</mi><mi>i</mi></msub></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>w</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msup><mi>J</mi><mi>ℂ</mi></msup><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>∈</mo><msub><mi>E</mi><mrow><mo>-</mo><mi>i</mi></mrow></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S4.Ex25" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex25.m1" class="ltx_Math" alttext="w=\frac{1}{2}\left(w-iJ^{\mathbb{C}}w\right)+\frac{1}{2}\left(w+iJ^{\mathbb{C}%
+}w\right)." display="block"><mrow><mrow><mi>w</mi><mo>=</mo><mrow><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>w</mi><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><msup><mi>J</mi><mi>ℂ</mi></msup><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>)</mo></mrow></mrow><mo>+</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mi>w</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msup><mi>J</mi><mi>ℂ</mi></msup><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It follows that</p>
+<table id="S4.Ex26" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S4.Ex26.m1" class="ltx_Math" alttext="V^{\mathbb{C}}=E_{i}\oplus E_{-i}." display="block"><mrow><mrow><msup><mi>V</mi><mi>ℂ</mi></msup><mo>=</mo><mrow><msub><mi>E</mi><mi>i</mi></msub><mo>⊕</mo><msub><mi>E</mi><mrow><mo>-</mo><mi>i</mi></mrow></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+<section id="S5" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">5 </span>Complex structures, inner products, and symplectic forms</h2>
+
+<div id="S5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S5.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a real vector space of odd dimension, then one can show that there is no linear map <math id="S5.p1.m2" class="ltx_Math" alttext="J:V\to V" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> satisfying <math id="S5.p1.m3" class="ltx_Math" alttext="J^{2}=-\textrm{id}_{V}" display="inline"><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><msub><mtext>id</mtext><mi>V</mi></msub></mrow></mrow></math>, i.e.
+there does not exist a complex structure for it. On the other hand, if <math id="S5.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> has even dimension,
+let</p>
+<table id="S5.Ex27" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex27.m1" class="ltx_Math" alttext="\{e_{1},\ldots,e_{n},f_{1},\ldots,f_{n}\}" display="block"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">be a basis for the real vector space <math id="S5.p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, and define <math id="S5.p1.m6" class="ltx_Math" alttext="J:V\to V" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> by</p>
+<table id="S5.Ex28" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex28.m1" class="ltx_Math" alttext="Je_{j}=f_{j},\qquad Jf_{j}=-e_{j}." display="block"><mrow><mrow><mrow><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>j</mi></msub></mrow><mo>=</mo><msub><mi>f</mi><mi>j</mi></msub></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>J</mi><mo>⁢</mo><msub><mi>f</mi><mi>j</mi></msub></mrow><mo>=</mo><mrow><mo>-</mo><msub><mi>e</mi><mi>j</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then <math id="S5.p1.m7" class="ltx_Math" alttext="J:V\to V" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> is a complex structure.</p>
+</div>
+<div id="S5.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S5.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a real vector space of dimension <math id="S5.p2.m2" class="ltx_Math" alttext="2n" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></math> with a complex structure <math id="S5.p2.m3" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>, let <math id="S5.p2.m4" class="ltx_Math" alttext="e_{1}\neq 0" display="inline"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>≠</mo><mn>0</mn></mrow></math>. Check that <math id="S5.p2.m5" class="ltx_Math" alttext="Je_{1}\not\in\textrm{span}\{e_{1}\}" display="inline"><mrow><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>∉</mo><mrow><mtext>span</mtext><mo>⁢</mo><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo stretchy="false">}</mo></mrow></mrow></mrow></math>. If <math id="S5.p2.m6" class="ltx_Math" alttext="n&gt;1" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>1</mn></mrow></math>, let</p>
+<table id="S5.Ex29" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex29.m1" class="ltx_Math" alttext="e_{2}\not\in\textrm{span}\{e_{1},Je_{1}\}." display="block"><mrow><mrow><msub><mi>e</mi><mn>2</mn></msub><mo>∉</mo><mrow><mtext>span</mtext><mo>⁢</mo><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Check that the set <math id="S5.p2.m7" class="ltx_Math" alttext="\{e_{1},e_{2},Je_{1},Je_{2}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><msub><mi>e</mi><mn>2</mn></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>2</mn></msub></mrow><mo stretchy="false">}</mo></mrow></math> is linearly independent. If <math id="S5.p2.m8" class="ltx_Math" alttext="n&gt;2" display="inline"><mrow><mi>n</mi><mo>&gt;</mo><mn>2</mn></mrow></math>, let</p>
+<table id="S5.Ex30" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex30.m1" class="ltx_Math" alttext="e_{3}\not\in\textrm{span}\{e_{1},e_{2},Je_{1},Je_{2}\}." display="block"><mrow><mrow><msub><mi>e</mi><mn>3</mn></msub><mo>∉</mo><mrow><mtext>span</mtext><mo>⁢</mo><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><msub><mi>e</mi><mn>2</mn></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>2</mn></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Check that the set <math id="S5.p2.m9" class="ltx_Math" alttext="\{e_{1},e_{2},e_{3},Je_{1},Je_{2},Je_{3}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><msub><mi>e</mi><mn>2</mn></msub><mo>,</mo><msub><mi>e</mi><mn>3</mn></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>2</mn></msub></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>3</mn></msub></mrow><mo stretchy="false">}</mo></mrow></math> is linearly independent. If <math id="S5.p2.m10" class="ltx_Math" alttext="2i&lt;2n" display="inline"><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi></mrow><mo>&lt;</mo><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></mrow></math> then there is some</p>
+<table id="S5.Ex31" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex31.m1" class="ltx_Math" alttext="e_{i+1}\not\in\textrm{span}\{e_{1},\ldots,e_{i},Je_{1},\ldots,Je_{i}\}." display="block"><mrow><mrow><msub><mi>e</mi><mrow><mi>i</mi><mo>+</mo><mn>1</mn></mrow></msub><mo>∉</mo><mrow><mtext>span</mtext><mo>⁢</mo><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo stretchy="false">}</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">I assert that</p>
+<table id="S5.Ex32" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex32.m1" class="ltx_Math" alttext="\{e_{1},\ldots,e_{n},Je_{1},\ldots,Je_{n}\}" display="block"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>n</mi></msub></mrow><mo stretchy="false">}</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a basis for <math id="S5.p2.m11" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="S5.p3" class="ltx_para">
+<p class="ltx_p">Using the above basis <math id="S5.p3.m1" class="ltx_Math" alttext="\{e_{1},\ldots,e_{n},Je_{1},\ldots,Je_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>n</mi></msub></mrow><mo stretchy="false">}</mo></mrow></math> for <math id="S5.p3.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, let <math id="S5.p3.m3" class="ltx_Math" alttext="f_{i}=Je_{i}" display="inline"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></mrow></math>, and define <math id="S5.p3.m4" class="ltx_Math" alttext="\left\langle\cdot,\cdot\right\rangle:V\times V\to\mathbb{R}" display="inline"><mrow><mrow><mo>⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo>⟩</mo></mrow><mo>:</mo><mrow><mrow><mi>V</mi><mo>×</mo><mi>V</mi></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> by</p>
+<table id="S5.Ex33" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex33.m1" class="ltx_Math" alttext="\left\langle e_{i},e_{j}\right\rangle=\delta_{i,j},\qquad\left\langle f_{i},f_%
+{j}\right\rangle=\delta_{i,j},\qquad\left\langle e_{i},f_{j}\right\rangle=0,%
+\qquad\left\langle f_{i},e_{j}\right\rangle=0." display="block"><mrow><mrow><mrow><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><msub><mi>e</mi><mi>j</mi></msub><mo>⟩</mo></mrow><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mrow><mo>⟨</mo><msub><mi>f</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo>⟩</mo></mrow><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo>⟩</mo></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mo>⟨</mo><msub><mi>f</mi><mi>i</mi></msub><mo>,</mo><msub><mi>e</mi><mi>j</mi></msub><mo>⟩</mo></mrow><mo>=</mo><mn>0</mn></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Check that this is an inner product on the real vector space <math id="S5.p3.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>. Moreover,</p>
+<table id="S5.Ex34" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex34.m1" class="ltx_Math" alttext="\left\langle Je_{i},Je_{j}\right\rangle=\left\langle f_{i},f_{j}\right\rangle=%
+\delta_{i,j}=\left\langle e_{i},e_{j}\right\rangle," display="block"><mrow><mrow><mrow><mo>⟨</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><msub><mi>f</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo>⟩</mo></mrow><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><msub><mi>e</mi><mi>j</mi></msub><mo>⟩</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S5.Ex35" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex35.m1" class="ltx_Math" alttext="\left\langle Jf_{i},Jf_{j}\right\rangle=\left\langle J^{2}e_{i},J^{2}e_{j}%
+\right\rangle=\left\langle-e_{i},-e_{j}\right\rangle=\left\langle e_{i},e_{j}%
+\right\rangle=\delta_{i,j}=\left\langle f_{i},f_{j}\right\rangle," display="block"><mrow><mrow><mrow><mo>⟨</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>f</mi><mi>i</mi></msub></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>f</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>,</mo><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>e</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><mrow><mo>-</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>,</mo><mrow><mo>-</mo><msub><mi>e</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><msub><mi>e</mi><mi>j</mi></msub><mo>⟩</mo></mrow><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub><mo>=</mo><mrow><mo>⟨</mo><msub><mi>f</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo>⟩</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S5.Ex36" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex36.m1" class="ltx_Math" alttext="\left\langle Je_{i},Jf_{j}\right\rangle=\left\langle f_{i},-e_{j}\right\rangle%
+=-\left\langle f_{i},e_{j}\right\rangle=0=\left\langle e_{i},f_{j}\right\rangle," display="block"><mrow><mrow><mrow><mo>⟨</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>f</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><msub><mi>f</mi><mi>i</mi></msub><mo>,</mo><mrow><mo>-</mo><msub><mi>e</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><msub><mi>f</mi><mi>i</mi></msub><mo>,</mo><msub><mi>e</mi><mi>j</mi></msub><mo>⟩</mo></mrow></mrow><mo>=</mo><mn>0</mn><mo>=</mo><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo>⟩</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S5.Ex37" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex37.m1" class="ltx_Math" alttext="\left\langle Jf_{i},Je_{j}\right\rangle=\left\langle-e_{i},f_{j}\right\rangle=%
+-\left\langle e_{i},f_{j}\right\rangle=0=\left\langle f_{i},e_{j}\right\rangle." display="block"><mrow><mrow><mrow><mo>⟨</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>f</mi><mi>i</mi></msub></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><mrow><mo>-</mo><msub><mi>e</mi><mi>i</mi></msub></mrow><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo>⟩</mo></mrow></mrow><mo>=</mo><mn>0</mn><mo>=</mo><mrow><mo>⟨</mo><msub><mi>f</mi><mi>i</mi></msub><mo>,</mo><msub><mi>e</mi><mi>j</mi></msub><mo>⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Hence for any <math id="S5.p3.m6" class="ltx_Math" alttext="v,w\in V" display="inline"><mrow><mrow><mi>v</mi><mo>,</mo><mi>w</mi></mrow><mo>∈</mo><mi>V</mi></mrow></math>,</p>
+<table id="S5.Ex38" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex38.m1" class="ltx_Math" alttext="\left\langle Jv,Jw\right\rangle=\left\langle v,w\right\rangle." display="block"><mrow><mrow><mrow><mo>⟨</mo><mrow><mi>J</mi><mo>⁢</mo><mi>v</mi></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo>⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We say that the complex structure <math id="S5.p3.m7" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> is <span class="ltx_text ltx_font_italic">compatible</span> with the inner product <math id="S5.p3.m8" class="ltx_Math" alttext="\left\langle\cdot,\cdot\right\rangle" display="inline"><mrow><mo>⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo>⟩</mo></mrow></math>, i.e.
+<math id="S5.p3.m9" class="ltx_Math" alttext="J:(V,\left\langle\cdot,\cdot\right\rangle)\to(V,\left\langle\cdot,\cdot\right\rangle)" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mrow><mo>⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo>⟩</mo></mrow><mo stretchy="false">)</mo></mrow><mo>→</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mrow><mo>⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo>⟩</mo></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is an <span class="ltx_text ltx_font_italic">orthogonal transformation</span>.</p>
+</div>
+<div id="S5.p4" class="ltx_para">
+<p class="ltx_p">A <span class="ltx_text ltx_font_italic">symplectic form</span> on a real vector space <math id="S5.p4.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a bilinear form <math id="S5.p4.m2" class="ltx_Math" alttext="\omega:V\times V\to\mathbb{R}" display="inline"><mrow><mi>ω</mi><mo>:</mo><mrow><mrow><mi>V</mi><mo>×</mo><mi>V</mi></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math>
+such that <math id="S5.p4.m3" class="ltx_Math" alttext="\omega(v,w)=-\omega(w,v)" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow></math>, and such that if <math id="S5.p4.m4" class="ltx_Math" alttext="\omega(v,w)=0" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="S5.p4.m5" class="ltx_Math" alttext="w" display="inline"><mi>w</mi></math> then
+<math id="S5.p4.m6" class="ltx_Math" alttext="v=0" display="inline"><mrow><mi>v</mi><mo>=</mo><mn>0</mn></mrow></math>; we say respectively that <math id="S5.p4.m7" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is <span class="ltx_text ltx_font_italic">skew-symmetric</span> and <span class="ltx_text ltx_font_italic">non-degenerate</span>.
+If a real vector space <math id="S5.p4.m8" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> has a complex structure <math id="S5.p4.m9" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>, and <math id="S5.p4.m10" class="ltx_Math" alttext="\left\langle\cdot,\cdot\right\rangle" display="inline"><mrow><mo>⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo>⟩</mo></mrow></math> is an inner product on <math id="S5.p4.m11" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> that is compatible with <math id="S5.p4.m12" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>,
+define <math id="S5.p4.m13" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> by</p>
+<table id="S5.Ex39" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex39.m1" class="ltx_Math" alttext="\omega(v,w)=\left\langle v,J^{-1}w\right\rangle=\left\langle v,-Jw\right%
+\rangle=-\left\langle v,Jw\right\rangle," display="block"><mrow><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>⟨</mo><mi>v</mi><mo>,</mo><mrow><msup><mi>J</mi><mrow><mo>-</mo><mn>1</mn></mrow></msup><mo>⁢</mo><mi>w</mi></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>⟨</mo><mi>v</mi><mo>,</mo><mrow><mo>-</mo><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><mi>v</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow><mo>⟩</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which is equivalent to</p>
+<table id="S5.Ex40" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex40.m1" class="ltx_Math" alttext="\omega(v,Jw)=\left\langle v,w\right\rangle." display="block"><mrow><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>⟨</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo>⟩</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Using that the inner product is compatible with <math id="S5.p4.m14" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> and that it is symmetric,</p>
+<table id="S5.Ex41" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex41.m1" class="ltx_Math" alttext="\omega(v,w)=-\left\langle v,Jw\right\rangle=-\left\langle Jv,J^{2}w\right%
+\rangle=-\left\langle Jv,-w\right\rangle=\left\langle w,Jv\right\rangle=-%
+\omega(w,v)," display="block"><mrow><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><mi>v</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><mrow><mi>J</mi><mo>⁢</mo><mi>v</mi></mrow><mo>,</mo><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>⁢</mo><mi>w</mi></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><mrow><mi>J</mi><mo>⁢</mo><mi>v</mi></mrow><mo>,</mo><mrow><mo>-</mo><mi>w</mi></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mo>⟨</mo><mi>w</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><mi>v</mi></mrow><mo>⟩</mo></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo>,</mo><mi>v</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="S5.p4.m15" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is skew-symmetric. If <math id="S5.p4.m16" class="ltx_Math" alttext="w\in V" display="inline"><mrow><mi>w</mi><mo>∈</mo><mi>V</mi></mrow></math> and <math id="S5.p4.m17" class="ltx_Math" alttext="\omega(v,w)=0" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="S5.p4.m18" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>, then</p>
+<table id="S5.Ex42" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex42.m1" class="ltx_Math" alttext="-\left\langle v,Jw\right\rangle=0" display="block"><mrow><mrow><mo>-</mo><mrow><mo>⟨</mo><mi>v</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="S5.p4.m19" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>, and thus <math id="S5.p4.m20" class="ltx_Math" alttext="Jw=0" display="inline"><mrow><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow><mo>=</mo><mn>0</mn></mrow></math>. Since <math id="S5.p4.m21" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> is invertible, <math id="S5.p4.m22" class="ltx_Math" alttext="w=0" display="inline"><mrow><mi>w</mi><mo>=</mo><mn>0</mn></mrow></math>. Thus <math id="S5.p4.m23" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is nondegenerate. Therefore
+<math id="S5.p4.m24" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is a symplectic form on <math id="S5.p4.m25" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.<span id="footnote3" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">3</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">3</sup>
+            <span class="ltx_tag ltx_tag_note">3</span>
+            
+            
+            
+          Using the basis
+<math id="footnote3.m1" class="ltx_Math" alttext="\{e_{1},\ldots,e_{n},f_{1},\ldots,f_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> for <math id="footnote3.m2" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, <math id="footnote3.m3" class="ltx_Math" alttext="f_{i}=Je_{i}" display="inline"><mrow><msub><mi>f</mi><mi>i</mi></msub><mo>=</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>i</mi></msub></mrow></mrow></math>, we have
+
+<span id="S5.Ex43" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex43.m1" class="ltx_Math" alttext="\omega(e_{i},f_{j})=-\left\langle e_{i},Jf_{j}\right\rangle=-\left\langle e_{i%
+},J^{2}e_{j}\right\rangle=-\left\langle e_{i},-e_{j}\right\rangle=\left\langle
+e%
+_{i},e_{j}\right\rangle=\delta_{i,j}," display="block"><mrow><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>f</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>⁢</mo><msub><mi>e</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><mrow><mo>-</mo><msub><mi>e</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><msub><mi>e</mi><mi>j</mi></msub><mo>⟩</mo></mrow><mo>=</mo><msub><mi>δ</mi><mrow><mi>i</mi><mo>,</mo><mi>j</mi></mrow></msub></mrow><mo>,</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+and
+
+<span id="S5.Ex44" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex44.m1" class="ltx_Math" alttext="\omega(e_{i},e_{j})=-\left\langle e_{i},Je_{j}\right\rangle=-\left\langle e_{i%
+},f_{j}\right\rangle=0,\qquad\omega(f_{i},f_{j})=0." display="block"><mrow><mrow><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><msub><mi>e</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>e</mi><mi>j</mi></msub></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><msub><mi>e</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo>⟩</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>f</mi><mi>i</mi></msub><mo>,</mo><msub><mi>f</mi><mi>j</mi></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></mrow><mo>.</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+A basis <math id="footnote3.m4" class="ltx_Math" alttext="\{e_{1},\ldots,e_{n},f_{1},\ldots,f_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><msub><mi>f</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>f</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> for a symplectic vector space that satisfies these three conditions
+is called a <span class="ltx_text ltx_font_italic">Darboux basis</span>.</span></span></span>
+We have</p>
+<table id="S5.Ex45" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex45.m1" class="ltx_Math" alttext="\omega(Jv,Jw)=-\left\langle Jv,J^{2}w\right\rangle=-\left\langle J^{2}v,J^{3}w%
+\right\rangle=-\left\langle-v,-Jw\right\rangle=-\left\langle v,Jw\right\rangle%
+=\omega(v,w)." display="block"><mrow><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>J</mi><mo>⁢</mo><mi>v</mi></mrow><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><mrow><mi>J</mi><mo>⁢</mo><mi>v</mi></mrow><mo>,</mo><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>⁢</mo><mi>w</mi></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>⁢</mo><mi>v</mi></mrow><mo>,</mo><mrow><msup><mi>J</mi><mn>3</mn></msup><mo>⁢</mo><mi>w</mi></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><mrow><mo>-</mo><mi>v</mi></mrow><mo>,</mo><mrow><mo>-</mo><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mo>-</mo><mrow><mo>⟨</mo><mi>v</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow><mo>⟩</mo></mrow></mrow><mo>=</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We say that <math id="S5.p4.m26" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> is <span class="ltx_text ltx_font_italic">compatible</span> with the sympletic form <math id="S5.p4.m27" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, namely, <math id="S5.p4.m28" class="ltx_Math" alttext="J:(V,\omega)\to(V,\omega)" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow><mo>→</mo><mrow><mo stretchy="false">(</mo><mi>V</mi><mo>,</mo><mi>ω</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is
+a <span class="ltx_text ltx_font_italic">symplectic transformation</span>.</p>
+</div>
+<div id="S5.p5" class="ltx_para">
+<p class="ltx_p">On the other hand,
+if <math id="S5.p5.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a real vector space with symplectic form <math id="S5.p5.m2" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> and <math id="S5.p5.m3" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math> is a compatible complex structure,
+then <math id="S5.p5.m4" class="ltx_Math" alttext="\left\langle\cdot,\cdot\right\rangle:V\times V\to\mathbb{R}" display="inline"><mrow><mrow><mo>⟨</mo><mo>⋅</mo><mo>,</mo><mo>⋅</mo><mo>⟩</mo></mrow><mo>:</mo><mrow><mrow><mi>V</mi><mo>×</mo><mi>V</mi></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> defined by</p>
+<table id="S5.Ex46" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex46.m1" class="ltx_Math" alttext="\left\langle v,w\right\rangle=\omega(v,Jw)" display="block"><mrow><mrow><mo>⟨</mo><mi>v</mi><mo>,</mo><mi>w</mi><mo>⟩</mo></mrow><mo>=</mo><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>v</mi><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><mi>w</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is an inner product on <math id="S5.p5.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> that is compatible with the complex structure <math id="S5.p5.m6" class="ltx_Math" alttext="J" display="inline"><mi>J</mi></math>.</p>
+</div>
+<div id="S5.p6" class="ltx_para">
+<p class="ltx_p">Suppose <math id="S5.p6.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a real vector space with complex structure <math id="S5.p6.m2" class="ltx_Math" alttext="J:V\to V" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> and that <math id="S5.p6.m3" class="ltx_Math" alttext="h:V_{J}\times V_{J}\to\mathbb{C}" display="inline"><mrow><mi>h</mi><mo>:</mo><mrow><mrow><msub><mi>V</mi><mi>J</mi></msub><mo>×</mo><msub><mi>V</mi><mi>J</mi></msub></mrow><mo>→</mo><mi>ℂ</mi></mrow></mrow></math>
+is an inner product on the complex vector space <math id="S5.p6.m4" class="ltx_Math" alttext="V_{J}" display="inline"><msub><mi>V</mi><mi>J</mi></msub></math>. Define <math id="S5.p6.m5" class="ltx_Math" alttext="g:V\times V\to\mathbb{R}" display="inline"><mrow><mi>g</mi><mo>:</mo><mrow><mrow><mi>V</mi><mo>×</mo><mi>V</mi></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> by<span id="footnote4" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">4</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">4</sup>
+            <span class="ltx_tag ltx_tag_note">4</span>
+            
+            
+            
+          The
+letter <math id="footnote4.m1" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> refers to a Hermitian form, i.e. an inner product on a complex vector space, and the letter <math id="footnote4.m2" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> refers
+to the usual notation for a metric on a Riemannian manifold.</span></span></span></p>
+<table id="S5.Ex47" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex47.m1" class="ltx_Math" alttext="g(v_{1},v_{2})=\frac{1}{2}\left(h(v_{1},v_{2})+\overline{h(v_{1},v_{2})}\right%
+)=\frac{1}{2}\left(h(v_{1},v_{2})+h(v_{2},v_{1})\right)." display="block"><mrow><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mover accent="true"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is straightforward to check that <math id="S5.p6.m6" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> is an inner product on the real vector space <math id="S5.p6.m7" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.
+Similarly, define <math id="S5.p6.m8" class="ltx_Math" alttext="\omega:V\times V\to\mathbb{R}" display="inline"><mrow><mi>ω</mi><mo>:</mo><mrow><mrow><mi>V</mi><mo>×</mo><mi>V</mi></mrow><mo>→</mo><mi>ℝ</mi></mrow></mrow></math> by</p>
+<table id="S5.Ex48" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex48.m1" class="ltx_Math" alttext="\omega(v_{1},v_{2})=\frac{i}{2}\left(h(v_{1},v_{2})-\overline{h(v_{1},v_{2})}%
+\right)=\frac{i}{2}\left(h(v_{1},v_{2})-h(v_{2},v_{1})\right)." display="block"><mrow><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mi>i</mi><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mover accent="true"><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>¯</mo></mover></mrow><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mfrac><mi>i</mi><mn>2</mn></mfrac><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It is apparent that <math id="S5.p6.m9" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is skew-symmetric. If <math id="S5.p6.m10" class="ltx_Math" alttext="\omega(v_{1},v_{2})=0" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="S5.p6.m11" class="ltx_Math" alttext="v_{1}" display="inline"><msub><mi>v</mi><mn>1</mn></msub></math>, then in particular
+<math id="S5.p6.m12" class="ltx_Math" alttext="\omega(iv_{1},v_{1})=0" display="inline"><mrow><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, and so</p>
+<table id="S5.Ex49" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex49.m1" class="ltx_Math" alttext="h(iv_{1},v_{1})-h(v_{1},iv_{1})=0." display="block"><mrow><mrow><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="S5.p6.m13" class="ltx_Math" alttext="h" display="inline"><mi>h</mi></math> is a complex inner product,</p>
+<table id="S5.Ex50" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex50.m1" class="ltx_Math" alttext="ih(v_{1},v_{1})-\overline{i}h(v_{1},v_{1})=0," display="block"><mrow><mrow><mrow><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mover accent="true"><mi>i</mi><mo>¯</mo></mover><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">i.e.</p>
+<table id="S5.Ex51" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex51.m1" class="ltx_Math" alttext="2ih(v_{1},v_{1})=0," display="block"><mrow><mrow><mrow><mn>2</mn><mo>⁢</mo><mi>i</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and thus <math id="S5.p6.m14" class="ltx_Math" alttext="h(v_{1},v_{1})=0" display="inline"><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, which implies that <math id="S5.p6.m15" class="ltx_Math" alttext="v_{1}=0" display="inline"><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>=</mo><mn>0</mn></mrow></math>. Therefore <math id="S5.p6.m16" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is nondegenerate, and thus
+<math id="S5.p6.m17" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math> is a symplectic form on the real vector space <math id="S5.p6.m18" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.
+With these definitions of <math id="S5.p6.m19" class="ltx_Math" alttext="g" display="inline"><mi>g</mi></math> and <math id="S5.p6.m20" class="ltx_Math" alttext="\omega" display="inline"><mi>ω</mi></math>, for <math id="S5.p6.m21" class="ltx_Math" alttext="v_{1},v_{2}\in V_{J}" display="inline"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>∈</mo><msub><mi>V</mi><mi>J</mi></msub></mrow></math> we have</p>
+<table id="S5.Ex52" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex52.m1" class="ltx_Math" alttext="h(v_{1},v_{2})=g(v_{1},v_{2})-i\omega(v_{1},v_{2})," display="block"><mrow><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">which writes the inner product on the complex vector space <math id="S5.p6.m22" class="ltx_Math" alttext="V_{J}" display="inline"><msub><mi>V</mi><mi>J</mi></msub></math> using an inner product on the real
+vector space <math id="S5.p6.m23" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and a symplectic form on the real vector space <math id="S5.p6.m24" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>;
+note that <math id="S5.p6.m25" class="ltx_Math" alttext="V_{J}" display="inline"><msub><mi>V</mi><mi>J</mi></msub></math> has the same set of elements as <math id="S5.p6.m26" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.
+Moreover, for <math id="S5.p6.m27" class="ltx_Math" alttext="v_{1},v_{2}\in V" display="inline"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>V</mi></mrow></math> we have</p>
+<table id="S10.EGx3" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S5.Ex56">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S5.Ex53.m1" class="ltx_Math" alttext="\displaystyle\omega(v_{1},Jv_{2})" display="inline"><mrow><mi>ω</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex53.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex53.m3" class="ltx_Math" alttext="\displaystyle\frac{i}{2}\left(h(v_{1},Jv_{2})-h(Jv_{2},v_{1})\right)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi>i</mi><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>J</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex54.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex54.m3" class="ltx_Math" alttext="\displaystyle\frac{i}{2}\left(h(v_{1},iv_{2})-h(iv_{2},v_{1})\right)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi>i</mi><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex55.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex55.m3" class="ltx_Math" alttext="\displaystyle\frac{i}{2}\left(-ih(v_{1},v_{2})-ih(v_{2},v_{1})\right)" display="inline"><mrow><mstyle displaystyle="true"><mfrac><mi>i</mi><mn>2</mn></mfrac></mstyle><mo>⁢</mo><mrow><mo>(</mo><mrow><mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mi>h</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>2</mn></msub><mo>,</mo><msub><mi>v</mi><mn>1</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>)</mo></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex56.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex56.m3" class="ltx_Math" alttext="\displaystyle g(v_{1},v_{2})." display="inline"><mrow><mrow><mi>g</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+</div>
+<section id="S5.SS1" class="ltx_subsection">
+<h3 class="ltx_title ltx_title_subsection">
+<span class="ltx_tag ltx_tag_subsection">5.1 </span>Tensor products</h3>
+
+<div id="S5.SS1.p1" class="ltx_para">
+<p class="ltx_p">Here we give another presentation of the complexification of a real vector space, this time using tensor products
+of real vector spaces. If you were satisfied by the first definition you don’t need to read this one; read this either if you are curious
+about another way to define complexification, if you want to see a pleasant application of tensor products, or if you didn’t like the first
+definition.
+Let <math id="S5.SS1.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> be a real vector space of dimension <math id="S5.SS1.p1.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math>. <math id="S5.SS1.p1.m3" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math> is a real vector space of dimension <math id="S5.SS1.p1.m4" class="ltx_Math" alttext="2" display="inline"><mn>2</mn></math>, and</p>
+<table id="S5.Ex57" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex57.m1" class="ltx_Math" alttext="V\otimes_{\mathbb{R}}\mathbb{C}" display="block"><mrow><mi>V</mi><msub><mo>⊗</mo><mi>ℝ</mi></msub><mi>ℂ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is a real vector space of dimension <math id="S5.SS1.p1.m5" class="ltx_Math" alttext="2n" display="inline"><mrow><mn>2</mn><mo>⁢</mo><mi>n</mi></mrow></math>. If <math id="S5.SS1.p1.m6" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> has basis <math id="S5.SS1.p1.m7" class="ltx_Math" alttext="\{e_{1},\ldots,e_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math>, then <math id="S5.SS1.p1.m8" class="ltx_Math" alttext="V\otimes_{\mathbb{R}}\mathbb{C}" display="inline"><mrow><mi>V</mi><msub><mo>⊗</mo><mi>ℝ</mi></msub><mi>ℂ</mi></mrow></math>
+has basis <math id="S5.SS1.p1.m9" class="ltx_Math" alttext="\{e_{1}\otimes 1,\ldots,e_{n}\otimes 1,e_{1}\otimes i,\ldots,e_{n}\otimes i\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>⊗</mo><mn>1</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>e</mi><mi>n</mi></msub><mo>⊗</mo><mn>1</mn></mrow><mo>,</mo><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>⊗</mo><mi>i</mi></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>e</mi><mi>n</mi></msub><mo>⊗</mo><mi>i</mi></mrow><mo stretchy="false">}</mo></mrow></math>.
+Since every element of <math id="S5.SS1.p1.m10" class="ltx_Math" alttext="V\otimes_{\mathbb{R}}\mathbb{C}" display="inline"><mrow><mi>V</mi><msub><mo>⊗</mo><mi>ℝ</mi></msub><mi>ℂ</mi></mrow></math> can be written uniquely in the form</p>
+<table id="S5.Ex58" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex58.m1" class="ltx_Math" alttext="v_{1}\otimes 1+v_{2}\otimes i,\qquad v_{1},v_{2}\in V," display="block"><mrow><mrow><mrow><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>⊗</mo><mn>1</mn></mrow><mo>+</mo><mrow><msub><mi>v</mi><mn>2</mn></msub><mo>⊗</mo><mi>i</mi></mrow></mrow><mo rspace="22.5pt">,</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>V</mi></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">one often writes</p>
+<table id="S5.Ex59" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex59.m1" class="ltx_Math" alttext="V\otimes_{\mathbb{R}}\mathbb{C}\cong V\oplus iV;" display="block"><mrow><mrow><mrow><mi>V</mi><msub><mo>⊗</mo><mi>ℝ</mi></msub><mi>ℂ</mi></mrow><mo>≅</mo><mrow><mi>V</mi><mo>⊕</mo><mrow><mi>i</mi><mo>⁢</mo><mi>V</mi></mrow></mrow></mrow><mo>;</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">here <math id="S5.SS1.p1.m11" class="ltx_Math" alttext="iV" display="inline"><mrow><mi>i</mi><mo>⁢</mo><mi>V</mi></mrow></math> is a real vector space that is isomorphic to <math id="S5.SS1.p1.m12" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="S5.SS1.p2" class="ltx_para">
+<p class="ltx_p">The <span class="ltx_text ltx_font_italic">complexification</span> of <math id="S5.SS1.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is the
+complex vector space <math id="S5.SS1.p2.m2" class="ltx_Math" alttext="V^{\mathbb{C}}" display="inline"><msup><mi>V</mi><mi>ℂ</mi></msup></math> whose set of elements is <math id="S5.SS1.p2.m3" class="ltx_Math" alttext="V\otimes_{\mathbb{R}}\mathbb{C}" display="inline"><mrow><mi>V</mi><msub><mo>⊗</mo><mi>ℝ</mi></msub><mi>ℂ</mi></mrow></math>, with the same addition
+as the real vector space <math id="S5.SS1.p2.m4" class="ltx_Math" alttext="V\otimes_{\mathbb{R}}\mathbb{C}" display="inline"><mrow><mi>V</mi><msub><mo>⊗</mo><mi>ℝ</mi></msub><mi>ℂ</mi></mrow></math>, and with scalar multiplication defined by</p>
+<table id="S5.Ex60" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex60.m1" class="ltx_Math" alttext="\alpha(v\otimes\beta)=v\otimes(\alpha\beta),\qquad v\in V,\alpha,\beta\in%
+\mathbb{C}." display="block"><mrow><mrow><mrow><mrow><mi>α</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⊗</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>v</mi><mo>⊗</mo><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>⁢</mo><mi>β</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>v</mi><mo>∈</mo><mrow><mi>V</mi><mo>,</mo><mi>α</mi></mrow></mrow><mo>,</mo><mrow><mi>β</mi><mo>∈</mo><mi>ℂ</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S5.SS1.p2.m5" class="ltx_Math" alttext="v\in V^{\mathbb{C}}" display="inline"><mrow><mi>v</mi><mo>∈</mo><msup><mi>V</mi><mi>ℂ</mi></msup></mrow></math>. Using the basis of the real vector space <math id="S5.SS1.p2.m6" class="ltx_Math" alttext="V\otimes_{\mathbb{R}}\mathbb{C}" display="inline"><mrow><mi>V</mi><msub><mo>⊗</mo><mi>ℝ</mi></msub><mi>ℂ</mi></mrow></math>, there exist some</p>
+<table id="S5.Ex61" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex61.m1" class="ltx_Math" alttext="a_{1},\ldots,a_{n},b_{1},\ldots,b_{n}\in\mathbb{R}" display="block"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>a</mi><mi>n</mi></msub><mo>,</mo><msub><mi>b</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>b</mi><mi>n</mi></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">such that</p>
+<table id="S10.EGx4" class="ltx_equationgroup ltx_eqn_eqnarray ltx_eqn_table">
+
+<tbody id="S5.Ex64">
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"><math id="S5.Ex62.m1" class="ltx_Math" alttext="\displaystyle v" display="inline"><mi>v</mi></math></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex62.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex62.m3" class="ltx_Math" alttext="\displaystyle a_{1}e_{1}\otimes 1+\cdots+a_{n}e_{n}\otimes 1+b_{1}e_{1}\otimes
+i%
++\cdots+b_{n}e_{n}\otimes i" display="inline"><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>⊗</mo><mn>1</mn></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>e</mi><mi>n</mi></msub></mrow><mo>⊗</mo><mn>1</mn></mrow><mo>+</mo><mrow><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>⊗</mo><mi>i</mi></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>e</mi><mi>n</mi></msub></mrow><mo>⊗</mo><mi>i</mi></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex63.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex63.m3" class="ltx_Math" alttext="\displaystyle e_{1}\otimes(a_{1}+ib_{1})+\cdots+e_{n}\otimes(a_{n}+ib_{n})" display="inline"><mrow><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>⊗</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>e</mi><mi>n</mi></msub><mo>⊗</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+<tr class="ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_td ltx_align_right ltx_eqn_cell"></td>
+<td class="ltx_td ltx_align_center ltx_eqn_cell"><math id="S5.Ex64.m2" class="ltx_Math" alttext="\displaystyle=" display="inline"><mo>=</mo></math></td>
+<td class="ltx_td ltx_align_left ltx_eqn_cell"><math id="S5.Ex64.m3" class="ltx_Math" alttext="\displaystyle(a_{1}+ib_{1})e_{1}\otimes 1+\cdots+(a_{n}+ib_{n})e_{n}\otimes 1," display="inline"><mrow><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>⊗</mo><mn>1</mn></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>n</mi></msub></mrow><mo>⊗</mo><mn>1</mn></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</tbody>
+</table>
+<p class="ltx_p">where in the last line we used the definition of scalar multiplication in <math id="S5.SS1.p2.m7" class="ltx_Math" alttext="V^{\mathbb{C}}" display="inline"><msup><mi>V</mi><mi>ℂ</mi></msup></math>. One checks
+that the
+<math id="S5.SS1.p2.m8" class="ltx_Math" alttext="\{e_{1}\otimes 1,\ldots,e_{n}\otimes 1\}" display="inline"><mrow><mo stretchy="false">{</mo><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>⊗</mo><mn>1</mn></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>e</mi><mi>n</mi></msub><mo>⊗</mo><mn>1</mn></mrow><mo stretchy="false">}</mo></mrow></math> is linearly independent over <math id="S5.SS1.p2.m9" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>, and hence that it is a basis for the complex vector space <math id="S5.SS1.p2.m10" class="ltx_Math" alttext="V^{\mathbb{C}}" display="inline"><msup><mi>V</mi><mi>ℂ</mi></msup></math>,
+so <math id="S5.SS1.p2.m11" class="ltx_Math" alttext="V^{\mathbb{C}}" display="inline"><msup><mi>V</mi><mi>ℂ</mi></msup></math> has dimension <math id="S5.SS1.p2.m12" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> over <math id="S5.SS1.p2.m13" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>.</p>
+</div>
+<div id="S5.SS1.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S5.SS1.p3.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> and <math id="S5.SS1.p3.m2" class="ltx_Math" alttext="W" display="inline"><mi>W</mi></math> are real vector spaces and <math id="S5.SS1.p3.m3" class="ltx_Math" alttext="T:V\to W" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>W</mi></mrow></mrow></math> is a linear map, define <math id="S5.SS1.p3.m4" class="ltx_Math" alttext="T^{\mathbb{C}}:V^{\mathbb{C}}\to W^{\mathbb{C}}" display="inline"><mrow><msup><mi>T</mi><mi>ℂ</mi></msup><mo>:</mo><mrow><msup><mi>V</mi><mi>ℂ</mi></msup><mo>→</mo><msup><mi>W</mi><mi>ℂ</mi></msup></mrow></mrow></math> by</p>
+<table id="S5.Ex65" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S5.Ex65.m1" class="ltx_Math" alttext="T^{\mathbb{C}}(v\otimes z)=(Tv)\otimes z." display="block"><mrow><mrow><mrow><msup><mi>T</mi><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>v</mi><mo>⊗</mo><mi>z</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>⁢</mo><mi>v</mi></mrow><mo stretchy="false">)</mo></mrow><mo>⊗</mo><mi>z</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">With this definition of <math id="S5.SS1.p3.m5" class="ltx_Math" alttext="T^{\mathbb{C}}" display="inline"><msup><mi>T</mi><mi>ℂ</mi></msup></math>, one can check that complexification is a functor from the category of real vector
+spaces to the category of complex vector spaces.</p>
+</div>
+</section>
+</section>
+<section id="S6" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">6 </span>Decomplexification</h2>
+
+<div id="S6.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S6.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a complex vector space, let <math id="S6.p1.m2" class="ltx_Math" alttext="V^{\mathbb{R}}" display="inline"><msup><mi>V</mi><mi>ℝ</mi></msup></math> be the real vector space whose set of elements is <math id="S6.p1.m3" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, in which addition is the same as addition
+in <math id="S6.p1.m4" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>, and in which scalar multiplication is defined by</p>
+<table id="S6.Ex66" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex66.m1" class="ltx_Math" alttext="av=(a+0i)v,\qquad a\in\mathbb{R}." display="block"><mrow><mrow><mrow><mrow><mi>a</mi><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>a</mi><mo>+</mo><mrow><mn>0</mn><mo>⁢</mo><mi>i</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mi>v</mi></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mi>a</mi><mo>∈</mo><mi>ℝ</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because <math id="S6.p1.m5" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a complex vector space, it is apparent that <math id="S6.p1.m6" class="ltx_Math" alttext="V^{\mathbb{R}}" display="inline"><msup><mi>V</mi><mi>ℝ</mi></msup></math> is a real vector space with this scalar multiplication.
+We call <math id="S6.p1.m7" class="ltx_Math" alttext="V^{\mathbb{R}}" display="inline"><msup><mi>V</mi><mi>ℝ</mi></msup></math> the <span class="ltx_text ltx_font_italic">decomplexification</span> of the complex vector space <math id="S6.p1.m8" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math>.</p>
+</div>
+<div id="S6.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S6.p2.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> has basis <math id="S6.p2.m2" class="ltx_Math" alttext="\{e_{1},\ldots,e_{n}\}" display="inline"><mrow><mo stretchy="false">{</mo><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo stretchy="false">}</mo></mrow></math> and <math id="S6.p2.m3" class="ltx_Math" alttext="v\in V" display="inline"><mrow><mi>v</mi><mo>∈</mo><mi>V</mi></mrow></math>,
+then there are <math id="S6.p2.m4" class="ltx_Math" alttext="a_{1}+ib_{1},\ldots,a_{n}+ib_{n}\in\mathbb{C}" display="inline"><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mrow></mrow><mo>∈</mo><mi>ℂ</mi></mrow></math> such that</p>
+<table id="S6.Ex67" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex67.m1" class="ltx_Math" alttext="v=(a_{1}+ib_{1})e_{1}+\cdots+(a_{n}+ib_{n})e_{n}=a_{1}e_{1}+\cdots+a_{n}e_{n}+%
+b_{1}(ie_{1})+\cdots+b_{n}(ie_{n})." display="block"><mrow><mrow><mi>v</mi><mo>=</mo><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mn>1</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>b</mi><mi>n</mi></msub></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><msub><mi>e</mi><mi>n</mi></msub></mrow></mrow><mo>=</mo><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>a</mi><mi>n</mi></msub><mo>⁢</mo><msub><mi>e</mi><mi>n</mi></msub></mrow><mo>+</mo><mrow><msub><mi>b</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mrow><msub><mi>b</mi><mi>n</mi></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>e</mi><mi>n</mi></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">One checks that</p>
+<table id="S6.Ex68" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex68.m1" class="ltx_Math" alttext="e_{1},\ldots,e_{n},ie_{1},\ldots,ie_{n}" display="block"><mrow><msub><mi>e</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>e</mi><mi>n</mi></msub><mo>,</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>e</mi><mn>1</mn></msub></mrow><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><mrow><mi>i</mi><mo>⁢</mo><msub><mi>e</mi><mi>n</mi></msub></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are linearly independent over <math id="S6.p2.m5" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, and hence are a basis for the real vector space <math id="S6.p2.m6" class="ltx_Math" alttext="V^{\mathbb{R}}" display="inline"><msup><mi>V</mi><mi>ℝ</mi></msup></math>. Thus,</p>
+<table id="S6.Ex69" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex69.m1" class="ltx_Math" alttext="\dim_{\mathbb{R}}V^{\mathbb{R}}=2\dim_{\mathbb{C}}V." display="block"><mrow><mrow><mrow><msub><mo>dim</mo><mi>ℝ</mi></msub><mo>⁡</mo><msup><mi>V</mi><mi>ℝ</mi></msup></mrow><mo>=</mo><mrow><mn>2</mn><mo>⁢</mo><mrow><msub><mo>dim</mo><mi>ℂ</mi></msub><mo>⁡</mo><mi>V</mi></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S6.p3" class="ltx_para">
+<p class="ltx_p">If <math id="S6.p3.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a complex vector space and <math id="S6.p3.m2" class="ltx_Math" alttext="T:V\to V" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> is a <math id="S6.p3.m3" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>-linear map, define <math id="S6.p3.m4" class="ltx_Math" alttext="T^{\mathbb{R}}:V^{\mathbb{R}}\to V^{\mathbb{R}}" display="inline"><mrow><msup><mi>T</mi><mi>ℝ</mi></msup><mo>:</mo><mrow><msup><mi>V</mi><mi>ℝ</mi></msup><mo>→</mo><msup><mi>V</mi><mi>ℝ</mi></msup></mrow></mrow></math> by</p>
+<table id="S6.Ex70" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S6.Ex70.m1" class="ltx_Math" alttext="T^{\mathbb{R}}v=Tv." display="block"><mrow><mrow><mrow><msup><mi>T</mi><mi>ℝ</mi></msup><mo>⁢</mo><mi>v</mi></mrow><mo>=</mo><mrow><mi>T</mi><mo>⁢</mo><mi>v</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Because <math id="S6.p3.m5" class="ltx_Math" alttext="T" display="inline"><mi>T</mi></math> is <math id="S6.p3.m6" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>-linear it follows that <math id="S6.p3.m7" class="ltx_Math" alttext="T^{\mathbb{R}}" display="inline"><msup><mi>T</mi><mi>ℝ</mi></msup></math> is <math id="S6.p3.m8" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>-linear.
+Decomplexification is a functor from the category of complex vector spaces to the category of real vector spaces. Since
+decomplexification is defined simply by ignoring the fact that <math id="S6.p3.m9" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is closed
+under multiplication by complex scalars and only using real scalars,
+decomplexification is called a forgetful functor</p>
+</div>
+</section>
+<section id="S7" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">7 </span>Complex conjugation in complexified vector spaces</h2>
+
+<div id="S7.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.p1.m1" class="ltx_Math" alttext="V" display="inline"><mi>V</mi></math> is a real vector space, define <math id="S7.p1.m2" class="ltx_Math" alttext="\sigma:V^{\mathbb{C}}\to V^{\mathbb{C}}" display="inline"><mrow><mi>σ</mi><mo>:</mo><mrow><msup><mi>V</mi><mi>ℂ</mi></msup><mo>→</mo><msup><mi>V</mi><mi>ℂ</mi></msup></mrow></mrow></math> by</p>
+<table id="S7.Ex71" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex71.m1" class="ltx_Math" alttext="\sigma(v_{1},v_{2})=(v_{1},-v_{2})." display="block"><mrow><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mo>-</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">We call <math id="S7.p1.m3" class="ltx_Math" alttext="\sigma" display="inline"><mi>σ</mi></math> <span class="ltx_text ltx_font_italic">complex conjugation</span> in <math id="S7.p1.m4" class="ltx_Math" alttext="V^{\mathbb{C}}" display="inline"><msup><mi>V</mi><mi>ℂ</mi></msup></math>. We have <math id="S7.p1.m5" class="ltx_Math" alttext="\sigma\circ\sigma=\textrm{id}_{V^{\mathbb{C}}}" display="inline"><mrow><mrow><mi>σ</mi><mo>∘</mo><mi>σ</mi></mrow><mo>=</mo><msub><mtext>id</mtext><msup><mi>V</mi><mi>ℂ</mi></msup></msub></mrow></math>.
+If <math id="S7.p1.m6" class="ltx_Math" alttext="T:V^{\mathbb{C}}\to V^{\mathbb{C}}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msup><mi>V</mi><mi>ℂ</mi></msup><mo>→</mo><msup><mi>V</mi><mi>ℂ</mi></msup></mrow></mrow></math> is a <math id="S7.p1.m7" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>-linear map, define <math id="S7.p1.m8" class="ltx_Math" alttext="T^{\sigma}:V^{\mathbb{C}}\to V^{\mathbb{C}}" display="inline"><mrow><msup><mi>T</mi><mi>σ</mi></msup><mo>:</mo><mrow><msup><mi>V</mi><mi>ℂ</mi></msup><mo>→</mo><msup><mi>V</mi><mi>ℂ</mi></msup></mrow></mrow></math>
+by</p>
+<table id="S7.Ex72" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex72.m1" class="ltx_Math" alttext="T^{\sigma}(w)=\sigma(T\sigma(w))." display="block"><mrow><mrow><mrow><msup><mi>T</mi><mi>σ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>T</mi><mo>⁢</mo><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>w</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p"><math id="S7.p1.m9" class="ltx_Math" alttext="T^{\sigma}" display="inline"><msup><mi>T</mi><mi>σ</mi></msup></math> is a <math id="S7.p1.m10" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>-linear map.
+It is a fact that if <math id="S7.p1.m11" class="ltx_Math" alttext="T:V^{\mathbb{C}}\to V^{\mathbb{C}}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msup><mi>V</mi><mi>ℂ</mi></msup><mo>→</mo><msup><mi>V</mi><mi>ℂ</mi></msup></mrow></mrow></math> is <math id="S7.p1.m12" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>-linear, then <math id="S7.p1.m13" class="ltx_Math" alttext="T^{\sigma}=T" display="inline"><mrow><msup><mi>T</mi><mi>σ</mi></msup><mo>=</mo><mi>T</mi></mrow></math> if and only if there
+is some <math id="S7.p1.m14" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>-linear <math id="S7.p1.m15" class="ltx_Math" alttext="S:V\to V" display="inline"><mrow><mi>S</mi><mo>:</mo><mrow><mi>V</mi><mo>→</mo><mi>V</mi></mrow></mrow></math> such that <math id="S7.p1.m16" class="ltx_Math" alttext="T=S^{\mathbb{C}}" display="inline"><mrow><mi>T</mi><mo>=</mo><msup><mi>S</mi><mi>ℂ</mi></msup></mrow></math>. In words, a linear map on the complexification
+of a real vector space is equal to its own conjugate if and only if it is the complexification of a linear map
+on the real vector space.</p>
+</div>
+<div id="S7.p2" class="ltx_para">
+<p class="ltx_p">The following are true statements:<span id="footnote5" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">5</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">5</sup>
+            <span class="ltx_tag ltx_tag_note">5</span>
+            
+            
+            
+          These are exercises from V. I. Arnold’s <span class="ltx_text ltx_font_italic">Ordinary differential equations</span>,
+p. 122, §18.4, in Richard A. Silverman’s translation.</span></span></span> (<math id="S7.p2.m1" class="ltx_Math" alttext="\mathbb{C}^{n}=(\mathbb{R}^{n})^{\mathbb{C}}" display="inline"><mrow><msup><mi>ℂ</mi><mi>n</mi></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>ℂ</mi></msup></mrow></math>)</p>
+</div>
+<div id="S7.p3" class="ltx_para">
+<ul id="S7.I1" class="ltx_itemize">
+<li id="S7.I1.i1" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i1.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I1.i1.p1.m1" class="ltx_Math" alttext="T:\mathbb{C}^{n}\to\mathbb{C}^{n}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msup><mi>ℂ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℂ</mi><mi>n</mi></msup></mrow></mrow></math> is a linear map, then</p>
+<table id="S7.Ex73" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex73.m1" class="ltx_Math" alttext="\exp(T)^{\mathbb{R}}=\exp(T^{\mathbb{R}})," display="block"><mrow><mi>exp</mi><msup><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mi>ℝ</mi></msup><mo>=</mo><mi>exp</mi><mrow><mo stretchy="false">(</mo><msup><mi>T</mi><mi>ℝ</mi></msup><mo stretchy="false">)</mo></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S7.Ex74" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex74.m1" class="ltx_Math" alttext="\exp(T)^{\sigma}=\exp(T^{\sigma})." display="block"><mrow><mi>exp</mi><msup><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mi>σ</mi></msup><mo>=</mo><mi>exp</mi><mrow><mo stretchy="false">(</mo><msup><mi>T</mi><mi>σ</mi></msup><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="S7.I1.i2" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i2.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I1.i2.p1.m1" class="ltx_Math" alttext="T:\mathbb{R}^{n}\to\mathbb{R}^{n}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> is a linear map, then</p>
+<table id="S7.Ex75" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex75.m1" class="ltx_Math" alttext="\exp(T)^{\mathbb{C}}=\exp(T^{\mathbb{C}})." display="block"><mrow><mi>exp</mi><msup><mrow><mo stretchy="false">(</mo><mi>T</mi><mo stretchy="false">)</mo></mrow><mi>ℂ</mi></msup><mo>=</mo><mi>exp</mi><mrow><mo stretchy="false">(</mo><msup><mi>T</mi><mi>ℂ</mi></msup><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="S7.I1.i3" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i3.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I1.i3.p1.m1" class="ltx_Math" alttext="T:\mathbb{C}^{n}\to\mathbb{C}^{n}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msup><mi>ℂ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℂ</mi><mi>n</mi></msup></mrow></mrow></math> is a linear map, then</p>
+<table id="S7.Ex76" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex76.m1" class="ltx_Math" alttext="\det T^{\mathbb{R}}=|\det T|^{2}," display="block"><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><msup><mi>T</mi><mi>ℝ</mi></msup></mrow><mo>=</mo><msup><mrow><mo stretchy="false">|</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mi>T</mi></mrow><mo stretchy="false">|</mo></mrow><mn>2</mn></msup></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S7.Ex77" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex77.m1" class="ltx_Math" alttext="\det T^{\sigma}=\overline{\det T}." display="block"><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><msup><mi>T</mi><mi>σ</mi></msup></mrow><mo>=</mo><mover accent="true"><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mi>T</mi></mrow><mo>¯</mo></mover></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="S7.I1.i4" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i4.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I1.i4.p1.m1" class="ltx_Math" alttext="T:\mathbb{R}^{n}\to\mathbb{R}^{n}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> is a linear map, then</p>
+<table id="S7.Ex78" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex78.m1" class="ltx_Math" alttext="\det T^{\mathbb{C}}=\det T." display="block"><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><msup><mi>T</mi><mi>ℂ</mi></msup></mrow><mo>=</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mi>T</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="S7.I1.i5" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i5.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I1.i5.p1.m1" class="ltx_Math" alttext="T:\mathbb{C}^{n}\to\mathbb{C}^{n}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msup><mi>ℂ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℂ</mi><mi>n</mi></msup></mrow></mrow></math> is a linear map, then</p>
+<table id="S7.Ex79" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex79.m1" class="ltx_Math" alttext="\textrm{Tr}\,(T^{\mathbb{R}})=\textrm{Tr}\,T+\textrm{Tr}\,T^{\sigma}," display="block"><mrow><mrow><mrow><mpadded width="+1.7pt"><mtext>Tr</mtext></mpadded><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msup><mi>T</mi><mi>ℝ</mi></msup><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mpadded width="+1.7pt"><mtext>Tr</mtext></mpadded><mo>⁢</mo><mi>T</mi></mrow><mo>+</mo><mrow><mpadded width="+1.7pt"><mtext>Tr</mtext></mpadded><mo>⁢</mo><msup><mi>T</mi><mi>σ</mi></msup></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S7.Ex80" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex80.m1" class="ltx_Math" alttext="\textrm{Tr}\,T^{\sigma}=\overline{\textrm{Tr}\,T}." display="block"><mrow><mrow><mrow><mpadded width="+1.7pt"><mtext>Tr</mtext></mpadded><mo>⁢</mo><msup><mi>T</mi><mi>σ</mi></msup></mrow><mo>=</mo><mover accent="true"><mrow><mpadded width="+1.7pt"><mtext>Tr</mtext></mpadded><mo>⁢</mo><mi>T</mi></mrow><mo>¯</mo></mover></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+<li id="S7.I1.i6" class="ltx_item" style="list-style-type:none;">
+<span class="ltx_tag ltx_tag_item">•</span> 
+<div id="S7.I1.i6.p1" class="ltx_para">
+<p class="ltx_p">If <math id="S7.I1.i6.p1.m1" class="ltx_Math" alttext="T:\mathbb{R}^{n}\to\mathbb{R}^{n}" display="inline"><mrow><mi>T</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mi>n</mi></msup><mo>→</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></mrow></math> is a linear map, then</p>
+<table id="S7.Ex81" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S7.Ex81.m1" class="ltx_Math" alttext="\textrm{Tr}\,T^{\mathbb{C}}=\textrm{Tr}\,T." display="block"><mrow><mrow><mrow><mpadded width="+1.7pt"><mtext>Tr</mtext></mpadded><mo>⁢</mo><msup><mi>T</mi><mi>ℂ</mi></msup></mrow><mo>=</mo><mrow><mpadded width="+1.7pt"><mtext>Tr</mtext></mpadded><mo>⁢</mo><mi>T</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</li>
+</ul>
+</div>
+</section>
+<section id="S8" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">8 </span>Linear ordinary differential equations over <math id="S8.m1" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>
+</h2>
+
+<div id="S8.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S8.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be an <math id="S8.p1.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix over <math id="S8.p1.m3" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>. The solution of the initial value problem</p>
+<table id="S8.Ex82" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S8.Ex82.m1" class="ltx_Math" alttext="z^{\prime}(t)=Az(t),\qquad z(0)=z_{0}\in\mathbb{C}^{n}," display="block"><mrow><mrow><mrow><mrow><msup><mi>z</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>z</mi><mn>0</mn></msub><mo>∈</mo><msup><mi>ℂ</mi><mi>n</mi></msup></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is <math id="S8.p1.m4" class="ltx_Math" alttext="z(t)=\exp(At)" display="inline"><mrow><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>.</p>
+</div>
+<div id="S8.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S8.p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> has <math id="S8.p2.m2" class="ltx_Math" alttext="n" display="inline"><mi>n</mi></math> distinct eigenvalues <math id="S8.p2.m3" class="ltx_Math" alttext="\lambda_{1},\ldots,\lambda_{n}\in\mathbb{C}" display="inline"><mrow><mrow><msub><mi>λ</mi><mn>1</mn></msub><mo>,</mo><mi mathvariant="normal">…</mi><mo>,</mo><msub><mi>λ</mi><mi>n</mi></msub></mrow><mo>∈</mo><mi>ℂ</mi></mrow></math>, then, with</p>
+<table id="S8.Ex83" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S8.Ex83.m1" class="ltx_Math" alttext="E_{\lambda}=\{z\in\mathbb{C}^{n}:Az=\lambda z\}," display="block"><mrow><mrow><msub><mi>E</mi><mi>λ</mi></msub><mo>=</mo><mrow><mo stretchy="false">{</mo><mrow><mi>z</mi><mo>∈</mo><msup><mi>ℂ</mi><mi>n</mi></msup></mrow><mo>:</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><mi>z</mi></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mi>z</mi></mrow></mrow><mo stretchy="false">}</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">we have</p>
+<table id="S8.Ex84" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S8.Ex84.m1" class="ltx_Math" alttext="\mathbb{C}^{n}=E_{\lambda_{1}}\oplus+\cdots+\oplus E_{\lambda_{n}}," display="block"><mrow><msup><mi>ℂ</mi><mi>n</mi></msup><mo>=</mo><msub><mi>E</mi><msub><mi>λ</mi><mn>1</mn></msub></msub><mo>⊕</mo><mo>+</mo><mi mathvariant="normal">⋯</mi><mo>+</mo><mo>⊕</mo><msub><mi>E</mi><msub><mi>λ</mi><mi>n</mi></msub></msub><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">where each <math id="S8.p2.m4" class="ltx_Math" alttext="E_{\lambda_{k}}" display="inline"><msub><mi>E</mi><msub><mi>λ</mi><mi>k</mi></msub></msub></math> has dimension 1. For <math id="S8.p2.m5" class="ltx_Math" alttext="z\in E_{\lambda_{k}}" display="inline"><mrow><mi>z</mi><mo>∈</mo><msub><mi>E</mi><msub><mi>λ</mi><mi>k</mi></msub></msub></mrow></math>,</p>
+<table id="S8.Ex85" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S8.Ex85.m1" class="ltx_Math" alttext="\exp(At)z=\sum_{m=0}^{\infty}t^{m}\frac{A^{m}z}{m!}=\sum_{m=0}^{\infty}t^{m}%
+\frac{\lambda_{k}^{m}z}{m!}=e^{\lambda_{k}t}z." display="block"><mrow><mrow><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mi>z</mi></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mi>t</mi><mi>m</mi></msup><mo>⁢</mo><mfrac><mrow><msup><mi>A</mi><mi>m</mi></msup><mo>⁢</mo><mi>z</mi></mrow><mrow><mi>m</mi><mo>!</mo></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>m</mi><mo>=</mo><mn>0</mn></mrow><mi mathvariant="normal">∞</mi></munderover><mrow><msup><mi>t</mi><mi>m</mi></msup><mo>⁢</mo><mfrac><mrow><msubsup><mi>λ</mi><mi>k</mi><mi>m</mi></msubsup><mo>⁢</mo><mi>z</mi></mrow><mrow><mi>m</mi><mo>!</mo></mrow></mfrac></mrow></mrow><mo>=</mo><mrow><msup><mi>e</mi><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>⁢</mo><mi>t</mi></mrow></msup><mo>⁢</mo><mi>z</mi></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Let <math id="S8.p2.m6" class="ltx_Math" alttext="\xi_{k}\in E_{\lambda_{k}}" display="inline"><mrow><msub><mi>ξ</mi><mi>k</mi></msub><mo>∈</mo><msub><mi>E</mi><msub><mi>λ</mi><mi>k</mi></msub></msub></mrow></math> be nonzero, <math id="S8.p2.m7" class="ltx_Math" alttext="1\leq k\leq n" display="inline"><mrow><mn>1</mn><mo>≤</mo><mi>k</mi><mo>≤</mo><mi>n</mi></mrow></math>. They are a basis for <math id="S8.p2.m8" class="ltx_Math" alttext="\mathbb{C}^{n}" display="inline"><msup><mi>ℂ</mi><mi>n</mi></msup></math>, so there are <math id="S8.p2.m9" class="ltx_Math" alttext="c_{k}\in\mathbb{C}" display="inline"><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>∈</mo><mi>ℂ</mi></mrow></math> such that</p>
+<table id="S8.Ex86" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S8.Ex86.m1" class="ltx_Math" alttext="z_{0}=\sum_{k=1}^{n}c_{k}\xi_{k}." display="block"><mrow><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>ξ</mi><mi>k</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Then</p>
+<table id="S8.Ex87" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S8.Ex87.m1" class="ltx_Math" alttext="z(t)=\exp(At)z_{0}=\exp(At)\sum_{k=1}^{n}c_{k}\xi_{k}=\sum_{k=1}^{n}c_{k}\exp(%
+At)\xi_{k}=\sum_{k=1}^{n}c_{k}e^{\lambda_{k}t}\xi_{k}." display="block"><mrow><mrow><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>z</mi><mn>0</mn></msub></mrow><mo>=</mo><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msub><mi>ξ</mi><mi>k</mi></msub></mrow></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>ξ</mi><mi>k</mi></msub></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>1</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>c</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>e</mi><mrow><msub><mi>λ</mi><mi>k</mi></msub><mo>⁢</mo><mi>t</mi></mrow></msup><mo>⁢</mo><msub><mi>ξ</mi><mi>k</mi></msub></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+<div id="S8.p3" class="ltx_para">
+<p class="ltx_p">Suppose that <math id="S8.p3.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an <math id="S8.p3.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix over <math id="S8.p3.m3" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>, that <math id="S8.p3.m4" class="ltx_Math" alttext="z_{0}\in\mathbb{C}^{n}" display="inline"><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>∈</mo><msup><mi>ℂ</mi><mi>n</mi></msup></mrow></math>, that
+<math id="S8.p3.m5" class="ltx_Math" alttext="A^{\sigma}=A" display="inline"><mrow><msup><mi>A</mi><mi>σ</mi></msup><mo>=</mo><mi>A</mi></mrow></math> and that <math id="S8.p3.m6" class="ltx_Math" alttext="\sigma(z_{0})=z_{0}" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>z</mi><mn>0</mn></msub></mrow></math>. The solution of the initial value problem</p>
+<table id="S8.Ex88" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S8.Ex88.m1" class="ltx_Math" alttext="z^{\prime}(t)=Az(t),\qquad z(0)=z_{0}," display="block"><mrow><mrow><mrow><mrow><msup><mi>z</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>z</mi><mn>0</mn></msub></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">is <math id="S8.p3.m7" class="ltx_Math" alttext="z(t)=\exp(At)z_{0}" display="inline"><mrow><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mi>exp</mi><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><mi>t</mi></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>⁢</mo><msub><mi>z</mi><mn>0</mn></msub></mrow></mrow></math>. We have, as <math id="S8.p3.m8" class="ltx_Math" alttext="\exp(At)^{\sigma}=\exp((At)^{\sigma})=\exp(At)" display="inline"><mrow><mi>exp</mi><msup><mrow><mo stretchy="false">(</mo><mi>A</mi><mi>t</mi><mo stretchy="false">)</mo></mrow><mi>σ</mi></msup><mo>=</mo><mi>exp</mi><mrow><mo stretchy="false">(</mo><msup><mrow><mo stretchy="false">(</mo><mi>A</mi><mi>t</mi><mo stretchy="false">)</mo></mrow><mi>σ</mi></msup><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>exp</mi><mrow><mo stretchy="false">(</mo><mi>A</mi><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></math>,</p>
+<table id="S8.Ex89" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S8.Ex89.m1" class="ltx_Math" alttext="\sigma(z(t))=\sigma(\exp(At)z_{0})=\sigma(\exp(At)\sigma(z_{0}))=\exp(At)^{%
+\sigma}z_{0}=\exp(At)z_{0}=z(t)." display="block"><mrow><mi>σ</mi><mrow><mo stretchy="false">(</mo><mi>z</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>σ</mi><mrow><mo stretchy="false">(</mo><mi>exp</mi><mrow><mo stretchy="false">(</mo><mi>A</mi><mi>t</mi><mo stretchy="false">)</mo></mrow><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>σ</mi><mrow><mo stretchy="false">(</mo><mi>exp</mi><mrow><mo stretchy="false">(</mo><mi>A</mi><mi>t</mi><mo stretchy="false">)</mo></mrow><mi>σ</mi><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mi>exp</mi><msup><mrow><mo stretchy="false">(</mo><mi>A</mi><mi>t</mi><mo stretchy="false">)</mo></mrow><mi>σ</mi></msup><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><mi>exp</mi><mrow><mo stretchy="false">(</mo><mi>A</mi><mi>t</mi><mo stretchy="false">)</mo></mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><mi>z</mi><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore, if <math id="S8.p3.m9" class="ltx_Math" alttext="A^{\sigma}=A" display="inline"><mrow><msup><mi>A</mi><mi>σ</mi></msup><mo>=</mo><mi>A</mi></mrow></math> and <math id="S8.p3.m10" class="ltx_Math" alttext="\sigma(z_{0})=z_{0}" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>z</mi><mn>0</mn></msub></mrow></math>, then <math id="S8.p3.m11" class="ltx_Math" alttext="\sigma(z(t))=z(t)" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> for all <math id="S8.p3.m12" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.</p>
+</div>
+</section>
+<section id="S9" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">9 </span>Linear ordinary differential equations over <math id="S9.m1" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>
+</h2>
+
+<div id="S9.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S9.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be an <math id="S9.p1.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix over <math id="S9.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math> and let <math id="S9.p1.m4" class="ltx_Math" alttext="x_{0}\in\mathbb{R}^{n}" display="inline"><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>∈</mo><msup><mi>ℝ</mi><mi>n</mi></msup></mrow></math>. Let <math id="S9.p1.m5" class="ltx_Math" alttext="z_{0}=(x_{0},0)\in\mathbb{C}^{n}=(\mathbb{R}^{n})^{\mathbb{C}}" display="inline"><mrow><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>∈</mo><msup><mi>ℂ</mi><mi>n</mi></msup><mo>=</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>ℝ</mi><mi>n</mi></msup><mo stretchy="false">)</mo></mrow><mi>ℂ</mi></msup></mrow></math>, and let
+<math id="S9.p1.m6" class="ltx_Math" alttext="z(t)=(z_{1}(t),z_{2}(t))" display="inline"><mrow><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> be the solution of the initial value problem
+</p>
+<table id="S9.Ex90" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S9.Ex90.m1" class="ltx_Math" alttext="z^{\prime}(t)=A^{\mathbb{C}}z(t),\qquad z(0)=z_{0}\in\mathbb{C}^{n}." display="block"><mrow><mrow><mrow><mrow><msup><mi>z</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msup><mi>A</mi><mi>ℂ</mi></msup><mo>⁢</mo><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>z</mi><mn>0</mn></msub><mo>∈</mo><msup><mi>ℂ</mi><mi>n</mi></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">As <math id="S9.p1.m7" class="ltx_Math" alttext="A^{\mathbb{C}}" display="inline"><msup><mi>A</mi><mi>ℂ</mi></msup></math> is the complexification of a real linear map, <math id="S9.p1.m8" class="ltx_Math" alttext="(A^{\mathbb{C}})^{\sigma}=A^{\mathbb{C}}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mi>ℂ</mi></msup><mo stretchy="false">)</mo></mrow><mi>σ</mi></msup><mo>=</mo><msup><mi>A</mi><mi>ℂ</mi></msup></mrow></math>, and</p>
+<table id="S9.Ex91" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S9.Ex91.m1" class="ltx_Math" alttext="\sigma(z_{0})=\sigma(x_{0},0)=(x_{0},-0)=(x_{0},0)=z_{0}," display="block"><mrow><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>z</mi><mn>0</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><mrow><mo>-</mo><mn>0</mn></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow><mo>=</mo><msub><mi>z</mi><mn>0</mn></msub></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so <math id="S9.p1.m9" class="ltx_Math" alttext="\sigma(z(t))=z(t)" display="inline"><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, i.e. <math id="S9.p1.m10" class="ltx_Math" alttext="(z_{1}(t),z_{2}(t))=(z_{1}(t),-z_{2}(t))" display="inline"><mrow><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mo>-</mo><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>, so <math id="S9.p1.m11" class="ltx_Math" alttext="z_{2}(t)=0" display="inline"><mrow><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math> for all <math id="S9.p1.m12" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>.
+But <math id="S9.p1.m13" class="ltx_Math" alttext="z^{\prime}(t)=(z_{1}^{\prime}(t),z_{2}^{\prime}(t))" display="inline"><mrow><mrow><msup><mi>z</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><msubsup><mi>z</mi><mn>1</mn><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msubsup><mi>z</mi><mn>2</mn><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S9.p1.m14" class="ltx_Math" alttext="A^{\mathbb{C}}z(t)=(Az_{1}(t),Az_{2}(t))" display="inline"><mrow><mrow><msup><mi>A</mi><mi>ℂ</mi></msup><mo>⁢</mo><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>z</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>,
+so</p>
+<table id="S9.Ex92" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S9.Ex92.m1" class="ltx_Math" alttext="z_{1}^{\prime}(t)=Az_{1}(t)" display="block"><mrow><mrow><msubsup><mi>z</mi><mn>1</mn><mo>′</mo></msubsup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">for all <math id="S9.p1.m15" class="ltx_Math" alttext="t" display="inline"><mi>t</mi></math>. Also, <math id="S9.p1.m16" class="ltx_Math" alttext="z(0)=(z_{1}(0),z_{2}(0))" display="inline"><mrow><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo><mrow><msub><mi>z</mi><mn>2</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> and <math id="S9.p1.m17" class="ltx_Math" alttext="z(0)=z_{0}=(x_{0},0)" display="inline"><mrow><mrow><mi>z</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>z</mi><mn>0</mn></msub><mo>=</mo><mrow><mo stretchy="false">(</mo><msub><mi>x</mi><mn>0</mn></msub><mo>,</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow></math>, so <math id="S9.p1.m18" class="ltx_Math" alttext="z_{1}(0)=x_{0}" display="inline"><mrow><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></math>. Therefore, <math id="S9.p1.m19" class="ltx_Math" alttext="x(t)=z_{1}(t)" display="inline"><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><msub><mi>z</mi><mn>1</mn></msub><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is the solution
+of the initial value problem</p>
+<table id="S9.Ex93" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S9.Ex93.m1" class="ltx_Math" alttext="x^{\prime}(t)=Ax(t),\qquad x(0)=x_{0}." display="block"><mrow><mrow><mrow><mrow><msup><mi>x</mi><mo>′</mo></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>A</mi><mo>⁢</mo><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mi>t</mi><mo stretchy="false">)</mo></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>x</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mn>0</mn><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><msub><mi>x</mi><mn>0</mn></msub></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Thus, to solve an initial value problem in <math id="S9.p1.m20" class="ltx_Math" alttext="\mathbb{R}^{n}" display="inline"><msup><mi>ℝ</mi><mi>n</mi></msup></math> we can complexify it, solve the initial value problem in <math id="S9.p1.m21" class="ltx_Math" alttext="\mathbb{C}^{n}" display="inline"><msup><mi>ℂ</mi><mi>n</mi></msup></math>, and take
+the first entry of the solution of the complex initial value problem.</p>
+</div>
+<div id="S9.p2" class="ltx_para">
+<p class="ltx_p">If <math id="S9.p2.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> is an <math id="S9.p2.m2" class="ltx_Math" alttext="n\times n" display="inline"><mrow><mi>n</mi><mo>×</mo><mi>n</mi></mrow></math> matrix over <math id="S9.p2.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>, let</p>
+<table id="S9.Ex94" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S9.Ex94.m1" class="ltx_Math" alttext="\det(A-xI)=\sum_{k=0}^{n}a_{k}x^{k},\qquad a_{k}\in\mathbb{R}," display="block"><mrow><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>x</mi><mi>k</mi></msup></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>∈</mo><mi>ℝ</mi></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">its characteristic polynomial. The Cayley-Hamilton theorem states that</p>
+<table id="S9.Ex95" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S9.Ex95.m1" class="ltx_Math" alttext="\sum_{k=0}^{n}a_{k}A^{k}=0." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mi>A</mi><mi>k</mi></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Taking the complexification of this gives</p>
+<table id="S9.Ex96" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S9.Ex96.m1" class="ltx_Math" alttext="\sum_{k=0}^{n}a_{k}(A^{\mathbb{C}})^{k}=0." display="block"><mrow><mrow><mrow><munderover><mo largeop="true" movablelimits="false" symmetric="true">∑</mo><mrow><mi>k</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><mrow><msub><mi>a</mi><mi>k</mi></msub><mo>⁢</mo><msup><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mi>ℂ</mi></msup><mo stretchy="false">)</mo></mrow><mi>k</mi></msup></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">It follows that the roots of <math id="S9.p2.m4" class="ltx_Math" alttext="\det(A-xI)" display="inline"><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> are the same as the roots of <math id="S9.p2.m5" class="ltx_Math" alttext="\det(A^{\mathbb{C}}-xI^{\mathbb{C}})" display="inline"><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mi>ℂ</mi></msup><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><msup><mi>I</mi><mi>ℂ</mi></msup></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math>. A complex root
+of <math id="S9.p2.m6" class="ltx_Math" alttext="\det(A-xI)" display="inline"><mrow><mo>det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></math> is not an eigenvalue of <math id="S9.p2.m7" class="ltx_Math" alttext="A:\mathbb{R}^{2}\to\mathbb{R}^{2}" display="inline"><mrow><mi>A</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></mrow></math>, but is indeed an eigenvalue of <math id="S9.p2.m8" class="ltx_Math" alttext="A^{\mathbb{C}}:\mathbb{C}^{2}\to\mathbb{C}^{2}" display="inline"><mrow><msup><mi>A</mi><mi>ℂ</mi></msup><mo>:</mo><mrow><msup><mi>ℂ</mi><mn>2</mn></msup><mo>→</mo><msup><mi>ℂ</mi><mn>2</mn></msup></mrow></mrow></math>, so the roots of the characteristic polynomial
+of <math id="S9.p2.m9" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> are the eigenvalues of <math id="S9.p2.m10" class="ltx_Math" alttext="A^{\mathbb{C}}" display="inline"><msup><mi>A</mi><mi>ℂ</mi></msup></math>.</p>
+</div>
+</section>
+<section id="S10" class="ltx_section">
+<h2 class="ltx_title ltx_title_section">
+<span class="ltx_tag ltx_tag_section">10 </span>Linear ordinary differential equations in <math id="S10.m1" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>
+</h2>
+
+<div id="S10.p1" class="ltx_para">
+<p class="ltx_p">Let <math id="S10.p1.m1" class="ltx_Math" alttext="A" display="inline"><mi>A</mi></math> be a <math id="S10.p1.m2" class="ltx_Math" alttext="2\times 2" display="inline"><mrow><mn>2</mn><mo>×</mo><mn>2</mn></mrow></math> matrix over <math id="S10.p1.m3" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.<span id="footnote6" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">6</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">6</sup>
+            <span class="ltx_tag ltx_tag_note">6</span>
+            
+            
+            
+          This section follows Arnold, p. 132, §20.3.</span></span></span> Suppose that the roots of
+the characteristic polynomial</p>
+<table id="S10.Ex97" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex97.m1" class="ltx_Math" alttext="\det(A-xI)=\det A-x\textrm{Tr}\,A+x^{2}" display="block"><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mrow><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mi>A</mi></mrow><mo>-</mo><mrow><mi>x</mi><mo>⁢</mo><mpadded width="+1.7pt"><mtext>Tr</mtext></mpadded><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>+</mo><msup><mi>x</mi><mn>2</mn></msup></mrow></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">are <math id="S10.p1.m4" class="ltx_Math" alttext="\lambda,\overline{\lambda}" display="inline"><mrow><mi>λ</mi><mo>,</mo><mover accent="true"><mi>λ</mi><mo>¯</mo></mover></mrow></math>, i.e. that the roots of the characteristic polynomial are
+complex conjugate. Let <math id="S10.p1.m5" class="ltx_Math" alttext="\lambda=\alpha+i\omega" display="inline"><mrow><mi>λ</mi><mo>=</mo><mrow><mi>α</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow></mrow></math>, <math id="S10.p1.m6" class="ltx_Math" alttext="\omega\neq 0" display="inline"><mrow><mi>ω</mi><mo>≠</mo><mn>0</mn></mrow></math>.<span id="footnote7" class="ltx_note ltx_role_footnote"><sup class="ltx_note_mark">7</sup><span class="ltx_note_outer"><span class="ltx_note_content"><sup class="ltx_note_mark">7</sup>
+            <span class="ltx_tag ltx_tag_note">7</span>
+            
+            
+            
+          Define <math id="footnote7.m1" class="ltx_Math" alttext="J:\mathbb{R}^{2}\to\mathbb{R}^{2}" display="inline"><mrow><mi>J</mi><mo>:</mo><mrow><msup><mi>ℝ</mi><mn>2</mn></msup><mo>→</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></mrow></math> by
+
+<span id="S10.Ex98" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex98.m1" class="ltx_Math" alttext="J=\frac{1}{\omega}(A-\alpha I)." display="block"><mrow><mrow><mi>J</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mi>ω</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+We have <math id="footnote7.m2" class="ltx_Math" alttext="J^{2}=\frac{1}{\omega^{2}}(A^{2}-2\alpha A+\alpha^{2}I)" display="inline"><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>=</mo><mrow><mfrac><mn>1</mn><msup><mi>ω</mi><mn>2</mn></msup></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><msup><mi>A</mi><mn>2</mn></msup><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>α</mi><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>+</mo><mrow><msup><mi>α</mi><mn>2</mn></msup><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math>. By the Cayley-Hamilton theorem,
+
+<span id="S10.Ex99" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex99.m1" class="ltx_Math" alttext="I\det A-A\textrm{Tr}\,A+A^{2}=0," display="block"><mrow><mrow><mrow><mrow><mrow><mi>I</mi><mo>⁢</mo><mrow><mo movablelimits="false">det</mo><mo>⁡</mo><mi>A</mi></mrow></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mpadded width="+1.7pt"><mtext>Tr</mtext></mpadded><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>+</mo><msup><mi>A</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+so
+
+<span id="S10.Ex100" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex100.m1" class="ltx_Math" alttext="I\lambda\overline{\lambda}-A(\lambda+\overline{\lambda})+A^{2}=0," display="block"><mrow><mrow><mrow><mrow><mrow><mi>I</mi><mo>⁢</mo><mi>λ</mi><mo>⁢</mo><mover accent="true"><mi>λ</mi><mo>¯</mo></mover></mrow><mo>-</mo><mrow><mi>A</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>+</mo><mover accent="true"><mi>λ</mi><mo>¯</mo></mover></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>+</mo><msup><mi>A</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+and written using <math id="footnote7.m3" class="ltx_Math" alttext="\lambda=\alpha+i\omega" display="inline"><mrow><mi>λ</mi><mo>=</mo><mrow><mi>α</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow></mrow></math> this is
+
+<span id="S10.Ex101" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex101.m1" class="ltx_Math" alttext="I(\alpha^{2}+\omega^{2})-2\alpha A+A^{2}=0." display="block"><mrow><mrow><mrow><mrow><mrow><mi>I</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>α</mi><mn>2</mn></msup><mo>+</mo><msup><mi>ω</mi><mn>2</mn></msup></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>-</mo><mrow><mn>2</mn><mo>⁢</mo><mi>α</mi><mo>⁢</mo><mi>A</mi></mrow></mrow><mo>+</mo><msup><mi>A</mi><mn>2</mn></msup></mrow><mo>=</mo><mn>0</mn></mrow><mo>.</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+Hence
+
+<span id="S10.Ex102" class="ltx_equation ltx_eqn_table">
+
+<span class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<span class="ltx_eqn_cell ltx_eqn_center_padleft"></span>
+<span class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex102.m1" class="ltx_Math" alttext="J^{2}=-I," display="block"><mrow><mrow><msup><mi>J</mi><mn>2</mn></msup><mo>=</mo><mrow><mo>-</mo><mi>I</mi></mrow></mrow><mo>,</mo></mrow></math></span>
+<span class="ltx_eqn_cell ltx_eqn_center_padright"></span></span>
+</span>
+so <math id="footnote7.m4" class="ltx_Math" alttext="J=\frac{1}{\omega}(A-\alpha I)" display="inline"><mrow><mi>J</mi><mo>=</mo><mrow><mfrac><mn>1</mn><mi>ω</mi></mfrac><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>-</mo><mrow><mi>α</mi><mo>⁢</mo><mi>I</mi></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow></math> is a complex structure on <math id="footnote7.m5" class="ltx_Math" alttext="\mathbb{R}^{2}" display="inline"><msup><mi>ℝ</mi><mn>2</mn></msup></math>.</span></span></span>
+<math id="S10.p1.m7" class="ltx_Math" alttext="\lambda" display="inline"><mi>λ</mi></math> is an eigenvalue for <math id="S10.p1.m8" class="ltx_Math" alttext="A^{\mathbb{C}}" display="inline"><msup><mi>A</mi><mi>ℂ</mi></msup></math>, so
+let <math id="S10.p1.m9" class="ltx_Math" alttext="A^{\mathbb{C}}(v_{1},v_{2})=\lambda(v_{1},v_{2})" display="inline"><mrow><mrow><msup><mi>A</mi><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow></math>, <math id="S10.p1.m10" class="ltx_Math" alttext="(v_{1},v_{2})\neq 0" display="inline"><mrow><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow><mo>≠</mo><mn>0</mn></mrow></math>.
+Furthermore,</p>
+<table id="S10.Ex103" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex103.m1" class="ltx_Math" alttext="\sigma(A^{\mathbb{C}}(v_{1},v_{2}))=\sigma(\lambda(v_{1},v_{2}))," display="block"><mrow><mrow><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><msup><mi>A</mi><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><mrow><mi>λ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so</p>
+<table id="S10.Ex104" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex104.m1" class="ltx_Math" alttext="(A^{\mathbb{C}})^{\sigma}\sigma(v_{1},v_{2})=\overline{\lambda}\sigma(v_{1},v_%
+{2})," display="block"><mrow><mrow><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mi>ℂ</mi></msup><mo stretchy="false">)</mo></mrow><mi>σ</mi></msup><mo>⁢</mo><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>λ</mi><mo>¯</mo></mover><mo>⁢</mo><mi>σ</mi><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">hence, as <math id="S10.p1.m11" class="ltx_Math" alttext="(A^{\mathbb{C}})^{\sigma}=A^{\mathbb{C}}" display="inline"><mrow><msup><mrow><mo stretchy="false">(</mo><msup><mi>A</mi><mi>ℂ</mi></msup><mo stretchy="false">)</mo></mrow><mi>σ</mi></msup><mo>=</mo><msup><mi>A</mi><mi>ℂ</mi></msup></mrow></math>,</p>
+<table id="S10.Ex105" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex105.m1" class="ltx_Math" alttext="A^{\mathbb{C}}(v_{1},-v_{2})=\overline{\lambda}(v_{1},-v_{2})." display="block"><mrow><mrow><mrow><msup><mi>A</mi><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mo>-</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mover accent="true"><mi>λ</mi><mo>¯</mo></mover><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mo>-</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore <math id="S10.p1.m12" class="ltx_Math" alttext="(v_{1},-v_{2})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mo>-</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></math> is an eigenvector of <math id="S10.p1.m13" class="ltx_Math" alttext="A^{\mathbb{C}}" display="inline"><msup><mi>A</mi><mi>ℂ</mi></msup></math> with eigenvalue <math id="S10.p1.m14" class="ltx_Math" alttext="\overline{\lambda}\neq\lambda" display="inline"><mrow><mover accent="true"><mi>λ</mi><mo>¯</mo></mover><mo>≠</mo><mi>λ</mi></mrow></math>, so
+<math id="S10.p1.m15" class="ltx_Math" alttext="(v_{1},-v_{2})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mo>-</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></math> and <math id="S10.p1.m16" class="ltx_Math" alttext="(v_{1},v_{2})" display="inline"><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></math> are linearly independent over <math id="S10.p1.m17" class="ltx_Math" alttext="\mathbb{C}" display="inline"><mi>ℂ</mi></math>. If <math id="S10.p1.m18" class="ltx_Math" alttext="a_{1}v_{1}+a_{2}v_{2}=0" display="inline"><mrow><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><msub><mi>a</mi><mn>2</mn></msub><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow><mo>=</mo><mn>0</mn></mrow></math>, <math id="S10.p1.m19" class="ltx_Math" alttext="a_{1},a_{2}\in\mathbb{R}" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mo>∈</mo><mi>ℝ</mi></mrow></math>, then</p>
+<table id="S10.Ex106" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex106.m1" class="ltx_Math" alttext="\left(\frac{a_{1}}{2}-i\frac{a_{2}}{2}\right)(v_{1},v_{2})+\left(\frac{a_{1}}{%
+2}+i\frac{a_{2}}{2}\right)(v_{1},-v_{2})=0," display="block"><mrow><mrow><mrow><mrow><mrow><mo>(</mo><mrow><mfrac><msub><mi>a</mi><mn>1</mn></msub><mn>2</mn></mfrac><mo>-</mo><mrow><mi>i</mi><mo>⁢</mo><mfrac><msub><mi>a</mi><mn>2</mn></msub><mn>2</mn></mfrac></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>+</mo><mrow><mrow><mo>(</mo><mrow><mfrac><msub><mi>a</mi><mn>1</mn></msub><mn>2</mn></mfrac><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mfrac><msub><mi>a</mi><mn>2</mn></msub><mn>2</mn></mfrac></mrow></mrow><mo>)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><mrow><mo>-</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow></mrow><mo>=</mo><mn>0</mn></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">from which it follows that <math id="S10.p1.m20" class="ltx_Math" alttext="a_{1},a_{2}=0" display="inline"><mrow><mrow><msub><mi>a</mi><mn>1</mn></msub><mo>,</mo><msub><mi>a</mi><mn>2</mn></msub></mrow><mo>=</mo><mn>0</mn></mrow></math>. Therefore <math id="S10.p1.m21" class="ltx_Math" alttext="v_{1},v_{2}\in\mathbb{R}^{2}" display="inline"><mrow><mrow><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>∈</mo><msup><mi>ℝ</mi><mn>2</mn></msup></mrow></math> are linearly independent over <math id="S10.p1.m22" class="ltx_Math" alttext="\mathbb{R}" display="inline"><mi>ℝ</mi></math>.</p>
+</div>
+<div id="S10.p2" class="ltx_para">
+<p class="ltx_p">We have</p>
+<table id="S10.Ex107" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex107.m1" class="ltx_Math" alttext="(\alpha+i\omega)(v_{1},v_{2})=(\alpha v_{1}-\omega v_{2},\alpha v_{1}+\omega v%
+_{2})," display="block"><mrow><mrow><mrow><mrow><mo stretchy="false">(</mo><mrow><mi>α</mi><mo>+</mo><mrow><mi>i</mi><mo>⁢</mo><mi>ω</mi></mrow></mrow><mo stretchy="false">)</mo></mrow><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow><mo>,</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and</p>
+<table id="S10.Ex108" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex108.m1" class="ltx_Math" alttext="A^{\mathbb{C}}(v_{1},v_{2})=(Av_{1},Av_{2})," display="block"><mrow><mrow><mrow><msup><mi>A</mi><mi>ℂ</mi></msup><mo>⁢</mo><mrow><mo stretchy="false">(</mo><msub><mi>v</mi><mn>1</mn></msub><mo>,</mo><msub><mi>v</mi><mn>2</mn></msub><mo stretchy="false">)</mo></mrow></mrow><mo>=</mo><mrow><mo stretchy="false">(</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>,</mo><mrow><mi>A</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo stretchy="false">)</mo></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">so</p>
+<table id="S10.Ex109" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex109.m1" class="ltx_Math" alttext="Av_{1}=\alpha v_{1}-\omega v_{2},\qquad Av_{2}=\alpha v_{1}+\omega v_{2}," display="block"><mrow><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>=</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow></mrow><mo rspace="22.5pt">,</mo><mrow><mrow><mi>A</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow><mo>=</mo><mrow><mrow><mi>α</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow></mrow></mrow><mo>,</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">and
+hence</p>
+<table id="S10.Ex110" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex110.m1" class="ltx_Math" alttext="A\begin{pmatrix}v_{1}&amp;v_{2}\end{pmatrix}=\begin{pmatrix}\alpha v_{1}-\omega v_%
+{2}&amp;\alpha v_{1}+\omega v_{2}\end{pmatrix}=\begin{pmatrix}v_{1}&amp;v_{2}\end{%
+pmatrix}\begin{pmatrix}\alpha&amp;\omega\\
+-\omega&amp;\alpha\end{pmatrix}." display="block"><mrow><mrow><mrow><mi>A</mi><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow></mrow><mo>=</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><mrow><mrow><mi>α</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>-</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow></mtd><mtd columnalign="center"><mrow><mrow><mi>α</mi><mo>⁢</mo><msub><mi>v</mi><mn>1</mn></msub></mrow><mo>+</mo><mrow><mi>ω</mi><mo>⁢</mo><msub><mi>v</mi><mn>2</mn></msub></mrow></mrow></mtd></mtr></mtable><mo>)</mo></mrow><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>α</mi></mtd><mtd columnalign="center"><mi>ω</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>ω</mi></mrow></mtd><mtd columnalign="center"><mi>α</mi></mtd></mtr></mtable><mo>)</mo></mrow></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+<p class="ltx_p">Therefore</p>
+<table id="S10.Ex111" class="ltx_equation ltx_eqn_table">
+
+<tr class="ltx_equation ltx_eqn_row ltx_align_baseline">
+<td class="ltx_eqn_cell ltx_eqn_center_padleft"></td>
+<td class="ltx_eqn_cell ltx_align_center"><math id="S10.Ex111.m1" class="ltx_Math" alttext="A=\begin{pmatrix}v_{1}&amp;v_{2}\end{pmatrix}\begin{pmatrix}\alpha&amp;\omega\\
+-\omega&amp;\alpha\end{pmatrix}\begin{pmatrix}v_{1}&amp;v_{2}\end{pmatrix}^{-1}." display="block"><mrow><mrow><mi>A</mi><mo>=</mo><mrow><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true" rowspacing="0pt"><mtr><mtd columnalign="center"><mi>α</mi></mtd><mtd columnalign="center"><mi>ω</mi></mtd></mtr><mtr><mtd columnalign="center"><mrow><mo>-</mo><mi>ω</mi></mrow></mtd><mtd columnalign="center"><mi>α</mi></mtd></mtr></mtable><mo>)</mo></mrow><mo>⁢</mo><msup><mrow><mo>(</mo><mtable columnspacing="5pt" displaystyle="true"><mtr><mtd columnalign="center"><msub><mi>v</mi><mn>1</mn></msub></mtd><mtd columnalign="center"><msub><mi>v</mi><mn>2</mn></msub></mtd></mtr></mtable><mo>)</mo></mrow><mrow><mo>-</mo><mn>1</mn></mrow></msup></mrow></mrow><mo>.</mo></mrow></math></td>
+<td class="ltx_eqn_cell ltx_eqn_center_padright"></td>
+</tr>
+</table>
+</div>
+</section>
+</article>
+</div>
+<footer class="ltx_page_footer">
+<div class="ltx_page_logo">Generated  on Fri Jan 21 00:00:13 2022 by <a href="http://dlmf.nist.gov/LaTeXML/">LaTeXML <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAsAAAAOCAYAAAD5YeaVAAAAAXNSR0IArs4c6QAAAAZiS0dEAP8A/wD/oL2nkwAAAAlwSFlzAAALEwAACxMBAJqcGAAAAAd0SU1FB9wKExQZLWTEaOUAAAAddEVYdENvbW1lbnQAQ3JlYXRlZCB3aXRoIFRoZSBHSU1Q72QlbgAAAdpJREFUKM9tkL+L2nAARz9fPZNCKFapUn8kyI0e4iRHSR1Kb8ng0lJw6FYHFwv2LwhOpcWxTjeUunYqOmqd6hEoRDhtDWdA8ApRYsSUCDHNt5ul13vz4w0vWCgUnnEc975arX6ORqN3VqtVZbfbTQC4uEHANM3jSqXymFI6yWazP2KxWAXAL9zCUa1Wy2tXVxheKA9YNoR8Pt+aTqe4FVVVvz05O6MBhqUIBGk8Hn8HAOVy+T+XLJfLS4ZhTiRJgqIoVBRFIoric47jPnmeB1mW/9rr9ZpSSn3Lsmir1fJZlqWlUonKsvwWwD8ymc/nXwVBeLjf7xEKhdBut9Hr9WgmkyGEkJwsy5eHG5vN5g0AKIoCAEgkEkin0wQAfN9/cXPdheu6P33fBwB4ngcAcByHJpPJl+fn54mD3Gg0NrquXxeLRQAAwzAYj8cwTZPwPH9/sVg8PXweDAauqqr2cDjEer1GJBLBZDJBs9mE4zjwfZ85lAGg2+06hmGgXq+j3+/DsixYlgVN03a9Xu8jgCNCyIegIAgx13Vfd7vdu+FweG8YRkjXdWy329+dTgeSJD3ieZ7RNO0VAXAPwDEAO5VKndi2fWrb9jWl9Esul6PZbDY9Go1OZ7PZ9z/lyuD3OozU2wAAAABJRU5ErkJggg==" alt="[LOGO]"></a>
+</div></footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,336 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+%\usepackage{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\Hilb}{\ensuremath\mathrm{Hilb}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\Lsemiloc}{\mathscr{L}_{\ensuremath\mathrm{loc}}^1(\lambda)}
+\newcommand{\Lloc}{L_{\ensuremath\mathrm{loc}}^1(\lambda)}
+\newcommand{\ACloc}{AC_{\ensuremath\mathrm{loc}}(\mathbb{R})}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{Sobolev spaces in one dimension and absolutely continuous functions}
+\author{Jordan Bell}
+\date{October 21, 2015}
+
+\maketitle
+
+\section{Locally integrable functions and distributions}
+Let $\lambda$ be Lebesgue measure on $\mathbb{R}$. We denote
+by
+ $\Lsemiloc$ the collection of Borel measurable functions 
+$f:\mathbb{R} \to \mathbb{R}$  such that for each compact subset $K$ of  $\mathbb{R}$,
+\[
+N_K(f) = \int_K |f| d\lambda  =  \int_\mathbb{R} 1_K |f| d\lambda < \infty.
+\]  
+We denote by $\Lloc$ the collection of equivalence classes of elements
+of $\Lsemiloc$ where $f \sim g$ when $f=g$ almost everywhere. 
+
+Write $B(x,r) = \{y \in \mathbb{R} : |y-x|<r\}=(x-r,x+r)$. For $f \in \Lsemiloc$ and $x \in \mathbb{R}$, we say that
+$x$ is a \textbf{Lebesgue point of $f$} if 
+\[
+\lim_{r \to 0} \frac{1}{\lambda(B(x,r))} \int_{B(x,r)} |f(y)-f(x)| d\lambda(y) = 0.
+\]
+It is immediate that if $f$ is continuous at $x$ then $x$ is a Lebesgue point of $f$.
+The \textbf{Lebesgue differentiation theorem}\footnote{Walter Rudin, {\em Real and Complex Analysis}, third ed., p.~138,
+Theorem 7.7.} states that for $f \in \Lsemiloc$, almost every $x \in \mathbb{R}$ is a Lebesgue point of
+$f$. 
+A sequence of Borel sets $E_n$ is said to \textbf{shrink nicely to $x$} if there is some $\alpha>0$ and a sequence
+ $r_n \to 0$ such that $E_n \subset B(x,r_n)$ and $\lambda(E_n) \geq \alpha \cdot \lambda(B(x,r_n))$. 
+The sequence $B(x,n^{-1})=(x-n^{-1},x+n^{-1})$ shrinks nicely to $x$, the sequence
+$[x,x+n^{-1}]$ shrinks nicely to $x$, and the sequence $[x-n^{-1},x]$ shrinks nicely to $x$. 
+It is proved that if $f \in \Lsemiloc$ and for each $x \in \mathbb{R}$, $E_n(x)$ is a sequence that shrinks nicely to $x$, then 
+\[
+f(x) = \lim_{n \to \infty} \frac{1}{\lambda(E_n)} \int_{E_n(x)} f d\lambda
+\]
+at each Lebesgue point of $f$.\footnote{Walter Rudin, {\em Real and Complex Analysis}, third ed., p.~140,
+Theorem 7.10.}
+
+
+
+
+For a nonempty open set $\Omega$ in $\mathbb{R}$, we denote by $C_c^k(\Omega)$ the collection of $C^k$ functions
+$\phi:\mathbb{R} \to \mathbb{R}$ such that
+\[
+\supp \phi = \overline{\{x \in \mathbb{R}: \phi(x) \neq 0\}}
+\]
+is compact and is contained in $\Omega$. 
+We write $\mathscr{D}(\Omega)=C_c^\infty(\Omega)$, whose elements are called called \textbf{test functions}. 
+The following statement is called the \textbf{fundamental lemma of the calculus of variations} or the \textbf{Du Bois-Reymond Lemma}.\footnote{Lars H\"ormander,
+{\em The Analysis of Linear Partial Differential Operators I}, second ed., p.~15, Theorem 1.2.5.}
+
+
+\begin{theorem}
+If $f \in \Lsemiloc$  and $\int_\mathbb{R} f \phi d\lambda =0$ for all $\phi \in \mathscr{D}(\mathbb{R})$, then
+$f=0$ almost everywhere.
+\label{fundamental}
+\end{theorem}
+\begin{proof}
+There is some $\eta \in \mathscr{D}(-1,1)$ with  
+$\int_\mathbb{R} \eta d\lambda = 1$. We can explicitly write this out: 
+\[
+\eta(x) =\begin{cases}
+c^{-1}  \exp\left(\frac{1}{x^2-1}\right)&|x|<1\\
+ 0&|x| \geq 1,
+ \end{cases}
+\]
+where
+\[
+c = \int_{-1}^1 \exp\left(\frac{1}{y^2-1}\right) d\lambda(y)  = 0.443994\ldots.
+\]
+For $x$ a Lebesgue point of $f$   and for $0<r<1$,
+\begin{align*}
+f(x)&=f(x) \cdot \int_\mathbb{R} \eta(y) d\lambda(y)\\
+&=f(x) \cdot \frac{1}{r} \int_\mathbb{R} \eta\left(\frac{y}{r} \right) d\lambda(y)\\
+&=f(x) \cdot \frac{1}{r} \int_\mathbb{R}\eta\left(\frac{x-y}{r} \right) d\lambda(y)\\
+&=\frac{1}{r} \int_\mathbb{R} (f(x)-f(y))\eta\left(\frac{x-y}{r} \right) d\lambda(y) 
++\frac{1}{r} \int_\mathbb{R} f(y) \eta\left(\frac{x-y}{r} \right) d\lambda(y)\\
+&=\frac{1}{r} \int_\mathbb{R} (f(x)-f(y))\eta\left(\frac{x-y}{r} \right) d\lambda(y)\\
+&=\frac{1}{r} \int_{(x-r,x+r)} (f(x)-f(y))\eta\left(\frac{x-y}{r} \right) d\lambda(y).
+\end{align*}
+Then
+\[
+|f(x)| \leq \norm{\eta}_\infty \cdot \frac{1}{r} \int_{(x-r,x+r)} |f(y)-f(x)| d\lambda(y)
+\to 0,\qquad r \to 0,
+\]
+meaning that $f(x)=0$. This is true for almost all $x \in \mathbb{R}$, showing that
+$f=0$ almost everywhere.
+\end{proof}
+
+
+For $f \in \Lsemiloc$, define $\Lambda_f:\mathscr{D}(\mathbb{R}) \to \mathbb{R}$ by
+\[
+\Lambda_f(\phi) = \int_\mathbb{R}  f \phi d\lambda.
+\]
+$\mathscr{D}(\mathbb{R})$ is a locally convex space, 
+and one proves that $\Lambda_f$ is continuous and thus belongs to 
+the dual space $\mathscr{D}'(\mathbb{R})$, whose elements are called \textbf{distributions}.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~157, \S 6.11.} We say that a distribution $\Lambda$ is \textbf{induced} by
+$f \in \Lsemiloc$ if $\Lambda=\Lambda_f$. 
+For $\Lambda \in \mathscr{D}'(\mathbb{R})$, we define $D\Lambda:\mathscr{D}(\mathbb{R}) \to \mathbb{R}$ by 
+\[ 
+(D\Lambda)(\phi) = - \Lambda(\phi').
+\]
+It is proved that $D\Lambda \in \mathscr{D}'(\mathbb{R})$.\footnote{Walter
+Rudin, {\em Functional Analysis}, second ed., p.~158, \S 6.12.}
+
+Let $f,g \in \Lsemiloc$. If $D \Lambda_f = \Lambda_g$, we call
+$g$ a \textbf{distributional derivative of $f$}. In other words,  for $f \in \Lsemiloc$ to have a distributional derivative
+means that there is some  $g \in \Lsemiloc$ such that for all
+$\phi \in \mathscr{D}(\mathbb{R})$,
+\[
+- \int_\mathbb{R} f \phi' d\lambda = \int_\mathbb{R} g \phi d\lambda.
+\]
+If $g_1,g_2 \in \Lsemiloc$ are distributional derivatives of $f$ then $\int_\mathbb{R} (g_1-g_2) \phi d\lambda=0$ for all
+$\phi \in \mathscr{D}(\mathbb{R})$, which by Theorem \ref{fundamental} implies that $g_1=g_2$ almost everywhere. 
+It follows that
+if $f$ has a distributional derivative then the distributional derivative is unique in $\Lloc$, and is denoted
+$Df \in \Lloc$:
+\[
+-\int_\mathbb{R} f \phi' d\lambda = \int_\mathbb{R} (Df) \cdot \phi d\lambda,\qquad 
+\phi \in \mathscr{D}(\mathbb{R}).
+\]
+
+
+\section{The Sobolev space $H^1(\mathbb{R})$}
+We denote by $\mathscr{L}^2(\lambda)$ the collection of Borel measurable functions
+$f:\mathbb{R} \to \mathbb{R}$ such that $\int_\mathbb{R} |f|^2 d\lambda < \infty$, and
+we denote by $L^2(\lambda)$ the collection of equivalence classes of elements of $\mathscr{L}^2(\lambda)$
+where $f \sim g$ when $f=g$ almost everywhere, and write
+\[
+\inner{f}{g}_{L^2} = \int_\mathbb{R} f g d\lambda.
+\]
+It is a fact that $L^2(\lambda)$ is a Hilbert space. 
+
+ We define the \textbf{Sobolev space} $H^1(\mathbb{R})$ to be 
+the set of $f \in L^2(\lambda)$ that have a distributional derivative that satisfies $Df \in L^2(\lambda)$. We remark
+that the elements of $H^1(\mathbb{R})$ are equivalence classes of elements of $\mathscr{L}^2(\lambda)$. 
+We define 
+\[
+\inner{f}{g}_{H^1} = \inner{f}{g}_{L^2}+\inner{Df}{Dg}_{L^2}.
+\]
+Let $f,g \in H^1(\mathbb{R})$ and let $\phi \in \mathscr{D}(\mathbb{R})$. 
+Because
+$f,g$ have distributional derivatives $Df,Dg$,
+\begin{align*}
+-\int_\mathbb{R} (f+g)\phi' d\lambda
+&=-\int_\mathbb{R} f \phi' d\lambda
+-\int_\mathbb{R} g \phi' d\lambda\\
+&=\int_\mathbb{R} Df \cdot \phi d\lambda
++\int_\mathbb{R} Dg \cdot \phi d\lambda\\
+&=\int_\mathbb{R} (Df+Dg)\phi d\lambda.
+\end{align*}
+This means that $f+g$ has a distributional derivative,
+$D(f+g) = Df+Dg$. 
+Thus $H^1(\mathbb{R})$ is a linear space. If 
+$\inner{f}{f}_{H^1}=0$ then $\int_\mathbb{R} |f|^2 d\lambda=0$, which implies that $f=0$ as an element of $L^2(\lambda)$.
+Therefore $\inner{\cdot}{\cdot}_{H^1}$ is an inner product on $H^1(\mathbb{R})$. 
+
+If $f_n$ is a Cauchy sequence in $H^1(\mathbb{R})$, then $f_n$ is a Cauchy sequence in $L^2(\lambda)$
+and $Df_n$ is a Cauchy sequence in $L^2(\lambda)$, and hence these sequences have limits $f,g \in L^2(\lambda)$. 
+For $\phi \in \mathscr{D}(\mathbb{R})$,
+\begin{align*}
+-\int_\mathbb{R} f \phi' d\lambda&=-\lim_{n \to \infty} \int_\mathbb{R} f_n \phi' d\lambda\\
+&=\lim_{n \to \infty} \int_\mathbb{R} (Df_n)\cdot \phi d\lambda\\
+&=\int_\mathbb{R} g \phi d\lambda.
+\end{align*}
+This means that $f$ has distributional derivative, $Df=g$. Because $f,Df \in L^2(\lambda)$ it is the case that
+$f \in H^1(\mathbb{R})$. 
+Furthermore,
+\[
+\norm{f_n-f}_{H^1}^2 = \norm{f_n-f}_{L^2}^2+ \norm{Df_n-Df}_{L^2}^2
+=\norm{f_n-f}_{L^2}^2+ \norm{Df_n-g}_{L^2}^2
+\to 0,
+\]
+meaning that $f_n \to f$ in $H^1(\mathbb{R})$, which shows that $H^1(\mathbb{R})$ is a Hilbert space. 
+
+
+
+\section{Absolutely continuous functions}
+
+
+
+We prove a lemma that gives conditions under which a function, for which integration by parts needs not make sense, is equal to a particular constant almost everywhere.\footnote{Haim Brezis, {\em Functional Analysis, Sobolev Spaces and Partial Differential Equations}, p.~204, Lemma 8.1.}
+
+
+\begin{lemma}
+If $f \in \Lsemiloc$ and 
+\[
+\int_\mathbb{R} f \phi' d\lambda = 0,\qquad \phi \in \mathscr{D}(\mathbb{R}),
+\]
+then there is some $c \in \mathbb{R}$ such that $f=c$ almost everywhere.
+\label{constant}
+\end{lemma}
+\begin{proof}
+Fix $\eta \in \mathscr{D}(\mathbb{R})$ with $\int_\mathbb{R} \eta d\lambda = 1$. Let 
+$w \in \mathscr{D}(\mathbb{R})$ and define
+\[
+h = w - \eta \cdot \int_\mathbb{R} w d\lambda,
+\]
+which belongs to $\mathscr{D}(\mathbb{R})$ and satisfies $\int_\mathbb{R} h d\lambda = 0$. 
+Define $\phi:\mathbb{R} \to \mathbb{R}$ by
+\[
+\phi(x) = \int_{-\infty}^x h d\lambda.
+\]
+Using  $\phi'(x)=h(x)$ for all $x$ and 
+$\phi(x) \to \int_\mathbb{R} h d\lambda=0$ as $x \to \infty$, check that
+$\phi \in \mathscr{D}(\mathbb{R})$. Then by hypothesis, $\int_\mathbb{R} f \phi' d\lambda =0$, i.e.
+\begin{align*}
+0& = \int_\mathbb{R} f h d\lambda\\
+& = \int_\mathbb{R} \left(fw - f\eta \cdot \int_\mathbb{R} w d\lambda\right) d\lambda\\
+&=\int_\mathbb{R} \left( f - \int_\mathbb{R} f \eta d\lambda \right) \cdot w d\lambda.
+\end{align*}
+Because this is true for all $w \in \mathscr{D}(\mathbb{R})$, by Theorem \ref{fundamental} we get that
+$f=\int_\mathbb{R} f \eta d\lambda$ almost everywhere. 
+\end{proof}
+
+
+\begin{lemma}
+Let $g \in \Lsemiloc$, let $a \in \mathbb{R}$, and define $f:\mathbb{R} \to \mathbb{R}$ by
+\[
+f(x) = \int_a^x g(y) d\lambda(y).
+\]
+Then
+\[
+\int_\mathbb{R} f \phi' d\lambda = - \int_\mathbb{R} g \phi d\lambda
+\]
+for all $\phi \in \mathscr{D}(\mathbb{R})$.
+\label{parts}
+\end{lemma}
+\begin{proof}
+Using Fubini's theorem,
+\begin{align*}
+\int_\mathbb{R} f(x) \phi'(x) d\lambda(x)&=-\int_{-\infty}^a \left( \int_x^a g(y) d\lambda(y) \right)
+\phi'(x) d\lambda(x)\\
+&+\int_a^\infty \left(  \int_a^x g(y) d\lambda(y) \right)
+\phi'(x) d\lambda(x)\\
+&=-\int_{-\infty}^a \left( \int_{-\infty}^y \phi'(x) d\lambda(x) \right) g(y) d\lambda(y)\\
+&+\int_a^\infty \left( \int_y^\infty \phi'(x) d\lambda(x) \right) g(y) d\lambda(y)\\
+&=-\int_{-\infty}^a \phi(y)  g(y) d\lambda(y)
+-\int_a^\infty \phi(y) g(y) d\lambda(y)\\
+&=-\int_\mathbb{R} g(y) \phi(y) d\lambda(y).
+\end{align*}
+\end{proof}
+
+
+For real numbers $a,b$ with $a < b$, we say that a function $f:[a,b] \to \mathbb{R}$ 
+is \textbf{absolutely continuous} if for all $\epsilon>0$ there is some $\delta>0$ such that
+whenever $(a_1,b_1),\ldots,(a_n,b_n)$ are disjoint intervals each contained in $[a,b]$ with
+$\sum (b_k-a_k)<\delta$ it holds that $\sum |f(b_k)-f(a_k)|<\epsilon$. We say that a function $f:\mathbb{R} \to \mathbb{R}$
+is \textbf{locally absolutely continuous} if for each nonempty compact interval $[a,b]$, the restriction of $f$ to $[a,b]$ is absolutely
+continuous. We denote the collection of locally absolutely continuous by $\ACloc$.
+
+
+
+Let $f \in H^1(\mathbb{R})$, let $a \in \mathbb{R}$, and define $h:\mathbb{R} \to \mathbb{R}$ by
+\[
+h(x) = \int_a^x Df d\lambda.
+\]
+By Lemma \ref{parts} and by the definition of a distributional derivative,
+\[
+\int_\mathbb{R} h \phi' d\lambda = - \int_\mathbb{R} (Df) \cdot \phi d\lambda
+=\int_\mathbb{R} f \phi' d\lambda,\qquad \phi \in \mathscr{D}(\mathbb{R}).
+\]
+Hence $\int_\mathbb{R} (f-h) \phi' d\lambda=0$ for all $\phi \in \mathscr{D}(\mathbb{R})$, which by Lemma
+\ref{constant} implies that there is some $c \in \mathbb{R}$ such that
+$f-h=c$ almost everywhere. Let $\widetilde{f}=c+h$. On the one hand,
+the fact that $Df \in \Lloc$ implies that $h \in \ACloc$ and so
+$\widetilde{f} \in \ACloc$. 
+On the other hand, 
+$\widetilde{f}=f$ almost everywhere. Furthermore, because $\widetilde{f}$ is locally absolutely continuous, integration
+by parts yields 
+\[
+\int_\mathbb{R} \widetilde{f} \phi' d\lambda = -\int_\mathbb{R} \widetilde{f}' \phi d\lambda,
+\]
+and by definition of a distributional derivative,
+\[
+\int_\mathbb{R} \widetilde{f} \phi' d\lambda = - \int_\mathbb{R} (D \widetilde{f}) \phi d\lambda.
+\]
+Therefore by Theorem \ref{fundamental},  $\widetilde{f}'=D\widetilde{f}$ almost everywhere. But 
+the fact that $\widetilde{f}=f$ almost everywhere implies that $D\widetilde{f}=Df$ almost everywhere, so
+$\widetilde{f}'=Df$ almost everywhere. In particular, $\widetilde{f}' \in L^2(\lambda)$. 
+
+
+\begin{theorem}
+For $f \in H^1(\mathbb{R})$, there is a function $\widetilde{f} \in \ACloc$ such that $\widetilde{f}=f$ almost everywhere
+ and $\widetilde{f}' = Df$ almost everywhere. The function $\widetilde{f}$ is $\frac{1}{2}$-H\"older continuous.
+\end{theorem}
+\begin{proof}
+For $x,y \in \mathbb{R}$,\footnote{cf. Giovanni Leoni, {\em A First Course in Sobolev Spaces}, p.~222, Theorem 7.13.} 
+\[
+\widetilde{f}(x)-\widetilde{f}(y) = \int_y^x \widetilde{f}' d\lambda,
+\]
+and  using the Cauchy-Schwarz inequality,
+\begin{align*}
+|\widetilde{f}(x)-\widetilde{f}(y)|&\leq \int_y^x |\widetilde{f}'| d\lambda\\
+&\leq |x-y|^{1/2} \left( \int_y^x |\widetilde{f}'|^2 d\lambda \right)^{1/2}\\
+&\leq \norm{Df}_{L^2} |x-y|^{1/2}.
+\end{align*}
+\end{proof}
+
+
+
+
+\end{document}

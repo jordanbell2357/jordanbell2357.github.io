@@ -1,0 +1,64 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,amsthm}
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\newtheorem{theorem}{Theorem}
+\newtheorem{remark}[theorem]{Remark}
+\begin{document}
+\title{Norms of trigonometric polynomials}
+\author{Jordan Bell}
+\date{April 3, 2014}
+
+\maketitle
+
+\begin{theorem}
+Let $1 \leq p \leq q \leq \infty$.
+If $\hat{f}(j)=0$ for $|j|>n+1$ then
+\[
+\norm{f}_q \leq 5(n+1)^{\frac{1}{p}-\frac{1}{q}} \norm{f}_p.
+\]
+\end{theorem}
+\begin{proof}
+Let $K_n(t)=\sum_{j=-n}^n \Big(1-\frac{|j|}{n+1}\Big)e^{ijt}$, the Fej\'er kernel.
+From this expression we get $|K_n(t)| \leq K_n(0)= n+1$.
+ It's straightforward to show
+that $K_n(t)=\frac{1}{n+1}\Big(\frac{\sin \frac{n+1}{2}t}{\sin \frac{1}{2}t} \Big)^2$.
+Since $\sin \frac{t}{2}>\frac{t}{\pi}$ for $0 < t < \pi$, we get $|K_n(t)| \leq   \frac{\pi^2}{(n+1)t^2}$, and
+thus we obtain
+\[
+|K_n(t)| \leq \min\Big(n+1, \frac{\pi^2}{(n+1)t^2} \Big).
+\]
+
+Then, for any $r \geq 1$,
+\begin{eqnarray*}
+\norm{K_n}_r^r&=&\frac{1}{2\pi} \int_0^{2\pi} |K_n(t)|^r dt\\
+&\leq&\frac{1}{2\pi} \int_0^{\frac{\pi}{n+1}} (n+1)^r dt
++\frac{1}{2\pi} \int_{\frac{\pi}{n+1}}^{2\pi} \Big(\frac{\pi^2}{(n+1)t^2}\Big)^r dt\\
+&=&\frac{(n+1)^{r-1}}{2} 
++\frac{1}{2}\frac{1}{(n+1)^r}\frac{1}{2r-1}\Big( (n+1)^{2r-1}-\frac{1}{2^{2r-1}}\Big)\\
+&\leq&\frac{(n+1)^{r-1}}{2} 
++\frac{1}{2}\frac{1}{(n+1)^r}\frac{1}{2r-1}(n+1)^{2r-1}\\
+&\leq&(n+1)^{r-1}.
+\end{eqnarray*}
+Hence $\norm{K_n}_r \leq (n+1)^{1-\frac{1}{r}}$.
+
+Let $V_n(t)=2K_{2n+1}(t)-K_n(t)$, the de la Vall\'ee Poussin kernel
+\cite[p. 16]{katznelson}.
+Then
+\[
+\norm{V_n}_r \leq 2\norm{K_{2n+1}}_r+\norm{K_n}_r \leq 2(2n+2)^{1-\frac{1}{r}}+(n+1)^{1-\frac{1}{r}}
+\leq 5(n+1)^{1-\frac{1}{r}}.
+\]
+
+For $|j| \leq n+1$ we have $\widehat{V_n}(j)=1$, and one thus checks that $V_n * f=f$. Take $\frac{1}{q}+1=\frac{1}{p}+\frac{1}{r}$.
+By
+Young's inequality we have 
+\[
+\norm{f}_q=\norm{V_n * f}_q \leq \norm{V_n}_r \norm{f}_p
+\leq 5(n+1)^{\frac{1}{p}-\frac{1}{q}} \norm{f}_p.
+\]
+\end{proof}
+
+\bibliographystyle{amsplain}
+\bibliography{product}
+
+\end{document}

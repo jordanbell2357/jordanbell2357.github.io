@@ -1,0 +1,246 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,graphicx,subfig,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\innerL}[2]{\langle #1, #2 \rangle_{L^2}}
+\newcommand{\inner}[2]{\langle #1, #2 \rangle}
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\HSnorm}[1]{\Vert #1 \Vert_{\ensuremath\mathrm{HS}}}
+\newcommand{\HSinner}[2]{\left\langle #1, #2 \right\rangle_{\ensuremath\mathrm{HS}}}
+\newcommand{\tr}{\textrm{tr}} 
+\newcommand{\supp}{\mathrm{supp}\,} 
+\newcommand{\Span}{\textrm{span}} 
+\newcommand{\id}{\textrm{id}} 
+\newcommand{\Hom}{\textrm{Hom}}
+\newcommand{\HS}{B_{\ensuremath\mathrm{HS}}} 
+\newcommand{\norm}[1]{\Vert #1 \Vert}
+\renewcommand{\div}{\mathrm{div}}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{definition}[theorem]{Definition}
+\begin{document}
+\title{The theorem of F. and M. Riesz}
+\author{Jordan Bell}
+\date{July 1, 2014}
+\maketitle
+
+
+\section{Totally ordered groups}
+Suppose that $G$ is a locally compact abelian group and that  $P \subset G$ is a \textbf{semigroup} (satisfies $P+P \subset P$) that is closed
+and satisfies $P \cap (-P) = \{0\}$ and $P \cup (-P) = G$.
+We define a \textbf{total order} on $G$ by $x \leq y$ when $y - x \in P$. We verify that this is indeed a total order. (We remark
+that nowhere in this do we show the significance of $P$ being closed; but in this note we shall be speaking about discrete abelian groups
+where any set is closed.)
+
+If $x \leq y$ and $y \leq z$, then $y-x \in P$ and $z-y \in P$ and hence $z-x=(z-y)+(y-x) \in P+P \subset P$, showing that
+$x \leq z$, so $\leq$ is transitive. If $x \leq y$ and $y \leq x$ then $y-x \in P$ and $x-y \in P$, the latter of which
+is equivalent to $y-x=-(x-y) \in -P$, hence $y-x \in P \cap (-P)$, and  then $P \cap (-P) = \{0\}$ implies that $y-x=0$, i.e. $x=y$, so
+$\leq$ is antisymmetric. If $x,y \in P$ then $y-x$ is either $0$, in which case $x=y$, or it is contained in one and only
+one of $P$ and $-P$, and then respectively $x<y$ or $y<x$, showing that $\leq$ is total. 
+
+Moreover, the total order $\leq$ induced by the semigroup $P$ is compatible with the group operation in $G$:
+if $x \leq y$ and $z \in G$, then $(y+z)-(x+z)=y-x \in P$, showing that $x+z \leq y+z$. 
+
+We say that $G$ with the total order induced by $P$ is a \textbf{totally ordered group}. We shall use the following lemma in the next section.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~194, Theorem 8.1.2.}
+
+\begin{lemma}
+Suppose that $\Gamma$ is a discrete abelian group.  $\Gamma$ can be totally ordered if and only if $\gamma \in \Gamma$
+having finite order implies that $\gamma=0$.
+\label{812}
+\end{lemma}
+
+
+
+\section{Functions of analytic type}
+If $G$ is a compact abelian group, then $G$ is connected if and only if $\gamma \in \widehat{G}$ having finite order implies that
+$\gamma=0$.\footnote{Walter Rudin, {\em Fourier Analysis on Groups}, p.~47, Theorem 2.5.6.} Combined with Lemma \ref{812},
+we get that a compact abelian group is connected if and only if its dual group can be ordered.
+
+Suppose in the rest of this section that $G$ is a connected compact abelian group, and let $\leq$ be a total order on $\widehat{G}$ induced by some
+semigroup. We say that a function $f \in L^1(G)$ is of \textbf{analytic type} if $\gamma<0$ implies that $\hat{f}(\gamma)=0$, and
+we say that a  measure $\mu \in M(G)$ is of analytic type if $\gamma<0$ implies that $\hat{\mu}(\gamma)=0$. (We denote
+by $M(G)$ the set of \textbf{regular complex Borel measures} on $G$.)
+For $1 \leq p \leq \infty$, we denote by $H^p(G)$ those elements of $L^p(G)$ that are of analytic type.
+We emphasize  that the notion of a function
+or measure being of analytic type depends on the total order $\leq$ on $\widehat{G}$. 
+
+We remind ourselves that when $\mathscr{M}$ is a $\sigma$-algebra on a set $X$ and $\mu$ is a measure on $\mathscr{M}$, if
+$A \in \mathscr{M}$ and $\mu(E) = \mu(A \cap E)$ for all $E \in \mathscr{M}$ then we say that $\mu$ is \textbf{concentrated on $A$}.
+Measures $\lambda,\mu$ on $\mathscr{M}$ are said to be \textbf{mutually singular} if they are concentrated on disjoint sets.
+
+Let $m$ be the Haar measure on $G$ such that $m(G)=1$, and
+suppose that $\sigma$ is a positive element of $M(G)$. The \textbf{Lebesgue decomposition} tells us that there is  a unique pair
+of finite Borel measures $\sigma_s$ and $\sigma_a$ on $G$ such that (i) $\sigma=\sigma_s+\sigma_a$, (ii) $\sigma_a$ is absolutely continuous with respect
+to $m$, and (iii) $\sigma_s$ and $m$ are mutually singular. Then the \textbf{Radon-Nikodym theorem} tells us that there is a unique nonnegative $w \in L^1(m)$
+such that $d\sigma_a = w dm$. Thus, 
+\[
+d\sigma = d\sigma_s + w dm.
+\]
+
+We define $\Omega$ to be the set of all trigonometric polynomials $Q$ on $G$ such that $\hat{Q}(\gamma)=0$ for $\gamma \leq 0$.
+We also define $K=\{1+Q: Q \in \Omega\}$. $K \subset L^2(\sigma)$, and we denote by $\overline{K}$ its closure in the Hilbert space
+$L^2(\sigma)$. 
+
+\begin{lemma}
+$\overline{K}$ is a convex set.
+\end{lemma}
+\begin{proof}
+Let $f,g \in K$ be distinct and let $0 \leq t \leq 1$. There are $P_n,Q_n \in \Omega$ such that
+$1+P_n \to f$ and $1+Q_n \to g$, and 
+\[
+(1-t)f+tg = \lim_{n \to \infty} ((1-t)(1+P_n)+t(1+Q_n)) = 
+\lim_{n \to \infty} (1+(1-t)P_n+tQ_n).
+\]
+For each $n$, $(1-t)P_n + tQ_n \in \Omega$, so we have written $(1-t)f+tg$ as a limit of elements of $K$, showing that
+$(1-t)f+tg \in \overline{K}$ and hence that $\overline{K}$ is convex.
+\end{proof}
+
+As $\overline{K}$ is a closed convex set in the Hilbert space $L^2(\sigma)$, there is a unique $\phi \in \overline{K}$
+such that $d(0,\overline{K}) = \norm{0-\phi}$ (namely, that attains the infimum of the distance of  elements of $\overline{K}$ to the origin), which
+we can write as
+\[
+\norm{\phi} = \inf_{Q \in \Omega} \norm{1+Q}.
+\]
+$\phi$ is the unique element of $\overline{K}$ such that
+\[
+\inner{\phi}{\psi-\phi}=0, \qquad \psi \in \overline{K}.
+\]
+
+The following lemma establishes properties of $\phi$.\footnote{Walter Rudin, {\em Fourier Analysis on Groups},
+p.~199, Lemma 8.2.2.}
+
+\begin{lemma}
+\begin{enumerate}
+\item $\phi=0$ almost everywhere with respect to $\sigma_s$.
+\item $\phi w \in L^2(m)$ and $|\phi|^2 w = \norm{\phi}^2$ almost everywhere with respect to $m$.
+\item If $\norm{\phi}>0$ and $h=\frac{1}{\phi}$, then $h \in H^2(m)$ and $\hat{h}(0)=1$.
+\end{enumerate}
+\label{822}
+\end{lemma}
+\begin{proof}
+We write $c=\norm{\phi}$.
+Let $1+Q_n \in K$ such that $1+Q_n \to \phi$. 
+If  $g \in L^2(\sigma)$ and $\phi+ g \in \overline{K}$,
+then $\inner{\phi}{(\phi+ g) - \phi}=0$, i.e. $\inner{\phi}{g}=0$.
+Let $\gamma>0$. On the one hand, $\gamma \in \Omega$ so 
+$\phi+\gamma = \lim_{n \to \infty} 1+(Q_n + \gamma) \in \overline{K}$, hence
+$\inner{\phi}{\gamma}=0$ and so $\inner{\gamma}{\phi}=0$. On the other hand, define $g=\phi \gamma$, 
+which satisfies
+\[
+\phi+g = \phi(1+\gamma) = \lim_{n \to \infty} (1+Q_n)(1+\gamma)=
+\lim_{n \to \infty} 1+\gamma+Q_n+Q_n \gamma,
+\]
+and because $\gamma >0$, each term of $\gamma+Q_n + Q_n\gamma $ belongs to $\Omega$,
+showing that $\phi+g \in \overline{K}$, from which we get $\inner{\phi}{g}=0$ and so $\inner{g}{\phi}=0$. We have proved that
+\begin{equation}
+\int_G \inner{x}{\gamma} \overline{\phi(x)}  d\sigma(x)=0, \qquad \gamma>0,
+\label{phi}
+\end{equation}
+and
+\begin{equation}
+\int_G  \inner{x}{\gamma} |\phi(x)|^2  d\sigma(x)=0, \qquad \gamma>0.
+\label{phisquared}
+\end{equation}
+
+Taking the complex conjugate of \eqref{phisquared} gives
+\[
+\int_G  \inner{x}{\gamma} |\phi(x)|^2  d\sigma(x)=0, \qquad \gamma<0.
+\]
+Defining $d\lambda = |\phi|^2 d\sigma$ we have $\lambda \in M(G)$.  The above and \eqref{phisquared} give 
+\[
+\hat{\lambda}(\gamma) = 0, \qquad \gamma \neq 0.
+\]
+As well,
+\[
+\hat{\lambda}(0) = \int_G |\phi|^2 d\sigma = c^2.
+\]
+Because $\lambda \in M(G)$ and $\hat{\lambda} \in L^1(\widehat{G})$, there is some $f \in L^1(G)$ such that $d\lambda = f dm$, defined by
+\[
+f(x) = \int_{\widehat{G}} \hat{\lambda}(\gamma) \inner{x}{\gamma} dm_{\widehat{G}}(\gamma), \qquad \gamma \in \widehat{G},
+\]
+where $m_{\widehat{G}}$ is the Haar measure on $\widehat{G}$ that assigns measure $1$ to each singleton.\footnote{Walter Rudin, {\em Fourier Analysis on Groups},
+p.~30.}
+That is, $d\lambda = fdm$ where
+$f(x) = c^2 m_{\widehat{G}}(\{0\})=c^2$, hence
+$d\lambda = c^2 dm$. Combined with $d\lambda = |\phi|^2 d\sigma$ we get
+\[
+|\phi|^2 d\sigma = c^2 dm.
+\]
+Therefore $|\phi|^2 d\sigma$ is absolutely continuous with respect to $m$, and because $|\phi|^2 d\sigma = |\phi|^2 d\sigma_s +
+|\phi|^2 w dm$, it follows that $|\phi|^2 d\sigma_s=0$, that is, that $\phi(x)=0$ for $\sigma_s$-almost all $x \in G$, proving the first claim.
+Furthermore, $|\phi|^2 d\sigma = |\phi|^2 w dm$ and using $|\phi|^2 d\sigma = c^2 dm$ we get 
+$|\phi(x)|^2 w(x) = c^2$ for $m$-almost all $x \in G$. Because $w \in L^1(m)$ and $|\phi w|^2  = c^2 w$, we get
+$\phi w \in L^2(m)$, proving the second claim.
+
+So far we have not supposed that $c>0$. If indeed $c>0$, then $|h|^2 = |\phi|^{-2} = c^{-2} w$, giving $h \in L^2(m)$. For $\gamma \in
+\widehat{G}$,
+\begin{eqnarray*}
+\int_G h(x) \inner{x}{\gamma} dm(x) &=& \int_G |\phi(x)|^{-2} \overline{\phi(x)} \inner{x}{\gamma} dm(x)\\
+&=&c^{-2} \int_G  \inner{x}{\gamma} \overline{\phi(x)} w(x)   dm(x)\\
+&=&c^{-2} \int_G\inner{x}{\gamma}  \overline{\phi(x)}  d\sigma(x).
+\end{eqnarray*}
+This and \eqref{phi}  yield
+\[
+\int_G h(x) \inner{x}{\gamma} dm(x) = 0, \qquad \gamma>0,
+\]
+in other words,
+\[
+\hat{h}(\gamma)=0, \qquad \gamma<0,
+\]
+namely, $h$ is of analytic type, i.e. $h \in H^2(m)$. 
+Moreover, for each $n \in \mathbb{N}$ we check that $Q_n+\phi \in \overline{K}$ and hence
+that $\inner{1+Q_n}{\phi}=\inner{1}{\phi}$, giving
+\[
+c^2 \hat{h}(0) = \int_G \overline{\phi} d\sigma= \int_G
+(1+Q_n) \overline{\phi} d\sigma.
+\]
+This is true for all $n \in \mathbb{N}$, so we obtain 
+\[
+c^2 \hat{h}(0)= \int_G |\phi|^2 d\sigma = \norm{\phi}^2 = c^2,
+\]
+i.e. $\hat{h}(0)=1$, proving the third claim.
+\end{proof}
+
+
+The above lemma is used to prove the following theorem.\footnote{Walter
+Rudin, {\em Fourier Analysis on Groups}, p.~200, Theorem 8.2.3.} The proof of this theorem in Rudin is not long, but I don't understand the first
+step in his proof so I have not attempted to write it out.
+
+\begin{theorem}
+Suppose that $G$ is a connected compact abelian group and that $\mu \in M(G)$
+is of analytic type. If the Lebesgue decomposition of $\mu$ is
+\[
+d\mu = d\mu_s + fdm,
+\]
+where $\mu_s$ and $m$ are mutually singular and $f \in L^1(m)$, then
+$\mu_s \in M(G)$ is of analytic type and $f$ is of analytic type, and $\hat{\mu}_s(0)=0$. 
+\label{823} 
+\end{theorem}
+
+
+
+\section{The theorem of F. and M. Riesz}
+We are now equipped to prove the theorem of F. and M. Riesz.\footnote{Walter Rudin, {\em Fourier Analysis on Groups},
+p.~201, \S 8.2.4.}
+
+
+\begin{theorem}[F. and M. Riesz]
+If $\mu \in M(\mathbb{T})$ and
+$\hat{\mu}(n)=0$ for every negative integer $n$,
+then $\mu$ is absolutely continuous with respect to Haar measure.
+\end{theorem}
+\begin{proof}
+Write  $d\mu=d\mu_s + fdm$, where $\mu_s$ and $m$ are mutually singular and $f \in L^1(m)$. Theorem \ref{823}
+tells us that $\mu_s$ is of analytic type, i.e. $\hat{\mu}_s(n)=0$ for $n<0$, and that $\hat{\mu}_s(0)=0$. Therefore,
+if $\mu_s \neq 0$ then there is a minimal positive integer $n_0$ for which $\hat{\mu}_s(n_0) \neq 0$. Defining
+$\hat{\lambda}(n)=\hat{\mu}_s(n_0+n)$, we get that $\lambda \in M(\mathbb{T})$ and that $\lambda$ and $m$ are mutually singular. But
+$\hat{\lambda}(n)=\hat{\mu}_s(n_0+n)=0$ for $n<0$, so $\lambda$ is of analytic type, and therefore
+ Theorem \ref{823} says that $\hat{\mu}_s(n_0)=\hat{\lambda}(0)=0$ (because $\lambda$ and $m$ are mutually singular), a contradiction. Hence
+ $\hat{\mu}_s(n) = 0$ for all $n \in \mathbb{Z}$, which implies that $\mu_s=0$. But this means that $\mu$ is absolutely continuous with respect to $m$, completing the proof.
+\end{proof}
+
+
+\end{document}

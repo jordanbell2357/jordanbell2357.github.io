@@ -1,0 +1,572 @@
+\documentclass{article}
+\usepackage{amsmath,amssymb,mathrsfs,amsthm}
+%\usepackage{tikz-cd}
+\usepackage[draft]{hyperref}
+\newcommand{\inner}[2]{\left\langle #1, #2 \right\rangle}
+\newcommand{\tr}{\ensuremath\mathrm{tr}\,} 
+\newcommand{\Span}{\ensuremath\mathrm{span}} 
+\def\Re{\ensuremath{\mathrm{Re}}\,}
+\def\Im{\ensuremath{\mathrm{Im}}\,}
+\newcommand{\id}{\ensuremath\mathrm{id}} 
+\newcommand{\var}{\ensuremath\mathrm{var}} 
+\newcommand{\Lip}{\ensuremath\mathrm{Lip}} 
+\newcommand{\GL}{\ensuremath\mathrm{GL}} 
+\newcommand{\diam}{\ensuremath\mathrm{diam}} 
+\newcommand{\sgn}{\ensuremath\mathrm{sgn}\,} 
+\newcommand{\lcm}{\ensuremath\mathrm{lcm}} 
+\newcommand{\supp}{\ensuremath\mathrm{supp}\,}
+\newcommand{\dom}{\ensuremath\mathrm{dom}\,}
+\newcommand{\upto}{\nearrow}
+\newcommand{\downto}{\searrow}
+\newcommand{\norm}[1]{\left\Vert #1 \right\Vert}
+\newcommand{\HS}[1]{\left\Vert #1 \right\Vert_{\mathrm{HS}}}
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{example}[theorem]{Example}
+\begin{document}
+\title{The Heisenberg group and Hermite functions}
+\author{Jordan Bell}
+\date{August 6, 2015}
+
+\maketitle
+
+
+\section{The Heisenberg group}
+For $(z,t),(w,s) \in \mathbb{C}^n \times \mathbb{R}$, define the operation
+\[
+(z,t)(w,s) = \left(z+w,t+s+\frac{1}{2} \Im(z \cdot \overline{w})\right),
+\]
+which satisfies
+\[
+(z,t)(0,0) = (z,t),
+\]
+and because $\Im(z \cdot \overline{z})=0$,
+\[
+(z,t)^{-1}=(-z,-t).
+\]
+We denote $\mathbb{C}^n \times\mathbb{R}$ with this operation by $H^n$. This is a Lie group of dimension $2n+1$, 
+called the \textbf{Heisenberg group}.
+
+Writing $z=x+iy$ define
+\[
+X_j = \frac{\partial}{\partial x_j} - \frac{1}{2}y_j \frac{\partial}{\partial t},\qquad 1 \leq j \leq n,
+\]
+and
+\[
+Y_j = \frac{\partial}{\partial y_j} + \frac{1}{2}x_j \frac{\partial}{\partial t},\qquad 1 \leq j \leq n,
+\]
+and
+\[
+T = \frac{\partial}{\partial t}.
+\]
+
+We  calculate the Lie brackets of these vector fields. For $X_j$ and $X_k$,
+\begin{align*}
+X_j X_k &= \left(\frac{\partial}{\partial x_j} - \frac{1}{2}y_j \frac{\partial}{\partial t}\right)
+\left( \frac{\partial}{\partial x_k} - \frac{1}{2}y_k \frac{\partial}{\partial t}\right)\\
+&=\frac{\partial^2}{\partial x_j \partial x_k} - \frac{1}{2} y_k \frac{\partial}{\partial x_j} \frac{\partial}{\partial t}
+-\frac{1}{2}y_j \frac{\partial}{\partial t} \frac{\partial}{\partial x_k} + \frac{1}{4} y_j y_k \frac{\partial^2}{\partial t^2},
+\end{align*}
+yielding
+\[
+[X_j,X_k] = X_jX_k-X_kX_j = 0.
+\]
+For $Y_j$ and $Y_k$,
+\begin{align*}
+Y_j Y_k&=\left( \frac{\partial}{\partial y_j} + \frac{1}{2}x_j \frac{\partial}{\partial t}\right)
+\left( \frac{\partial}{\partial y_k} + \frac{1}{2}x_k \frac{\partial}{\partial t}\right)\\
+&=\frac{\partial^2}{\partial y_j \partial y_k} +\frac{1}{2} x_k \frac{\partial}{\partial y_j} \frac{\partial}{\partial t}
++\frac{1}{2}x_j \frac{\partial}{\partial t} \frac{\partial}{\partial y_k}
++\frac{1}{4} x_jx_k \frac{\partial^2}{\partial t^2},
+\end{align*}
+yielding
+\[
+[Y_j,Y_k] = Y_jY_k-Y_kY_j=0.
+\]
+For $X_j$ and $Y_j$,
+\begin{align*}
+X_j Y_j&=\left( \frac{\partial}{\partial x_j} - \frac{1}{2}y_j \frac{\partial}{\partial t}\right)
+\left(\frac{\partial}{\partial y_j} + \frac{1}{2}x_j \frac{\partial}{\partial t}\right)\\
+&=\frac{\partial^2}{\partial x_j \partial y_j} +\frac{1}{2}\frac{\partial}{\partial t}
++\frac{1}{2} x_j \frac{\partial}{\partial x_j} \frac{\partial}{\partial t}
+-\frac{1}{2}y_j \frac{\partial}{\partial t} \frac{\partial}{\partial y_j}
+-\frac{1}{4}y_j x_j \frac{\partial^2}{\partial t^2},
+\end{align*}
+and
+\begin{align*}
+Y_jX_j&=\left(\frac{\partial}{\partial y_j} + \frac{1}{2}x_j \frac{\partial}{\partial t}\right)\left( \frac{\partial}{\partial x_j} - \frac{1}{2}y_j \frac{\partial}{\partial t}\right)\\
+&=\frac{\partial^2}{\partial y_j \partial x_j} - \frac{1}{2}\frac{\partial}{\partial t}
+-\frac{1}{2}y_j \frac{\partial}{\partial y_j} \frac{\partial}{\partial t}
++\frac{1}{2} x_j \frac{\partial}{\partial t} \frac{\partial}{\partial x_j}
+-\frac{1}{4}x_jy_j \frac{\partial^2}{\partial t^2},
+\end{align*}
+yielding
+\[
+[X_j,Y_j]=X_jY_j-Y_jX_j = \frac{\partial}{\partial t} =T.
+\]
+For $X_j$ and $Y_k$ with $j \neq k$,
+\begin{align*}
+X_jY_k&=\left( \frac{\partial}{\partial x_j} - \frac{1}{2}y_j \frac{\partial}{\partial t}\right)
+\left( \frac{\partial}{\partial y_k} + \frac{1}{2}x_k \frac{\partial}{\partial t}\right)\\
+&=\frac{\partial^2}{\partial x_j \partial y_k} +\frac{1}{2}x_k \frac{\partial}{\partial x_j} \frac{\partial}{\partial t}
+-\frac{1}{2}y_j \frac{\partial}{\partial t}  \frac{\partial}{\partial y_k} 
+-\frac{1}{4} y_j x_k \frac{\partial^2}{\partial t^2}
+\end{align*}
+and
+\begin{align*}
+Y_k X_j&=\left( \frac{\partial}{\partial y_k} + \frac{1}{2}x_k \frac{\partial}{\partial t}\right)\left( \frac{\partial}{\partial x_j} - \frac{1}{2}y_j \frac{\partial}{\partial t}\right)\\
+&=\frac{\partial^2}{\partial y_k \partial x_j} - \frac{1}{2} y_j \frac{\partial}{\partial y_k} \frac{\partial}{\partial t}
++\frac{1}{2}x_k \frac{\partial}{\partial t} \frac{\partial}{\partial x_j}
+-\frac{1}{4} x_k y_j \frac{\partial^2}{\partial t^2},
+\end{align*}
+yielding
+\[
+[X_j,Y_k]=0.
+\]
+For $X_j$ and $T$,
+\[
+X_j T = \left(\frac{\partial}{\partial x_j} - \frac{1}{2}y_j \frac{\partial}{\partial t}\right)
+\frac{\partial}{\partial t}
+=\frac{\partial}{\partial x_j} \frac{\partial}{\partial t} - \frac{1}{2} y_j \frac{\partial^2}{\partial t^2}
+=TX_j,
+\]
+yielding
+\[
+[X_j,T] = 0.
+\]
+For $Y_j$ and $T$, 
+\[
+Y_j T = \left(\frac{\partial}{\partial y_j} + \frac{1}{2}x_j \frac{\partial}{\partial t}\right) \frac{\partial}{\partial t}
+=\frac{\partial}{\partial y_j} \frac{\partial}{\partial t} + \frac{1}{2} x_j \frac{\partial^2}{\partial t^2}=TY_j,
+\]
+yielding
+\[
+[Y_j,T]=0.
+\]
+We summarize the above calculations in the following theorem.
+
+\begin{theorem}
+The Lie brackets of the vector fields $X_j,Y_j$, $1 \leq j \leq n$, and $T$ are:
+\begin{itemize}
+\item $[X_j,X_k]=0$
+\item $[Y_j,Y_k]=0$
+\item $[X_j,Y_j]=T$
+\item $[X_j,Y_k]=0$ for $j \neq k$
+\item $[X_j,T]=0$
+\item $[Y_j,T]=0$
+\end{itemize}
+\end{theorem}
+
+The Lie algebra of the $H^n$ is called the \textbf{Heisenberg Lie algebra} and is denoted $\mathfrak{h}^n$.
+The above vector fields are left-invariant and are a basis for $\mathfrak{h}^n$.\footnote{Sundaram Thangavelu,
+{\em An Introduction to the Uncertainty Principle: Hardy's Theorem on Lie Groups}, p.~47, \S 2.1.}
+
+
+\section{Representation theory}
+For a Hilbert space $H$, we denote by $\mathscr{B}(H)$ the set of 
+bounded linear operators $H \to H$, which  is a Banach algebra with the operator norm. We denote by $\mathscr{B}_0(H)$ the set
+of
+compact operators $H \to H$, which is a closed ideal of the Banach algebra $\mathscr{B}(H)$. 
+We denote by $\mathscr{B}_{\mathrm{HS}}(H)$ the collection of Hilbert-Schmidt operators $H \to H$: if $\{e_i: i \in I\}$ is an orthonormal basis
+of $H$, a linear map $A:H \to H$ is called a  \textbf{Hilbert-Schmidt operator} if
+\[
+\HS{A}^2 = \sum_{i \in I} \norm{Ae_i}^2 < \infty.
+\]
+This satisfies $\norm{A} \leq \HS{A}$.
+A Hilbert-Schmidt operator is a compact operator.
+A linear map $U:H \to H$ is called a \textbf{unitary operator} if it is a bijection and satisfies
+\[
+\inner{Ux}{Uy} = {x}{y},\qquad x,y \in H.
+\]
+We denote the
+set of unitary operators $H \to H$ by $\mathscr{U}(H)$. 
+
+
+
+
+For $\lambda \in \mathbb{R}, \lambda \neq 0$, for $(x+iy,t) \in H^n$, and for $f \in L^2(\mathbb{R}^n)$, define
+\[
+\pi_\lambda(x+iy,t)f(\xi) = e^{i\lambda t} e^{i\lambda\left(x\cdot \xi+\frac{1}{2}x\cdot y\right)} f(\xi+y),
+\qquad \xi \in \mathbb{R}^n.
+\]
+It is apparent that $\pi_\lambda(z,t)$ is a linear map $L^2(\mathbb{R}^n) \to L^2(\mathbb{R}^n)$. 
+
+
+For $(x+iy,t),(u+iv,s) \in H^n$ we calculate
+\begin{align*}
+\pi_\lambda (x+iy,t) \pi_\lambda(u+iv,s) f(\xi)&=\pi_\lambda(x+iy,t) e^{i\lambda s} e^{i\lambda\left(u\cdot \xi+\frac{1}{2}u \cdot v\right)}
+f(\xi+v)\\
+&=e^{i\lambda t} e^{i\lambda\left(x\cdot \xi+\frac{1}{2}x\cdot y\right)}
+e^{i\lambda s} e^{i\lambda\left(u\cdot (\xi+y)+\frac{1}{2}u \cdot v\right)} f(\xi+y+v)\\
+&=e^{i\lambda(t+s)} e^{i\lambda\left((x+u)\cdot \xi + \frac{1}{2}x\cdot y+u\cdot y+\frac{1}{2}u\cdot v\right)}
+f(\xi+y+v).
+\end{align*}
+On the other hand, with $z=x+iy$ and $w=u+iv$,
+\begin{align*}
+(z,t)(w,s)&=\left(z+w,t+s+\frac{1}{2} \Im(z \cdot \overline{w})\right)\\
+&=\left(x+iy+u+iv,t+s+\frac{1}{2}\Im((x+iy)\cdot (u-iv))\right)\\
+&=\left(x+u+i(y+v),t+s+\frac{1}{2}\Im(x\cdot u - ix\cdot v + iy \cdot u + y \cdot v)\right)\\
+&=\left(x+u+i(y+v),t+s-\frac{1}{2}x\cdot v + \frac{1}{2} y\cdot u \right),
+\end{align*}
+for which
+\begin{align*}
+\pi_\lambda((z,t)(w,s))f(\xi)&=e^{i\lambda\left(t+s-\frac{1}{2}x\cdot v + \frac{1}{2} y\cdot u\right)}
+e^{i\lambda\left((x+u)\cdot \xi+\frac{1}{2}(x+u)\cdot (y+v) \right)} f(\xi+y+v)\\
+&=e^{i\lambda(t+s)} e^{i\lambda\left((x+u)\cdot \xi+\frac{1}{2}x\cdot y+y \cdot u
++\frac{1}{2}u\cdot v\right)} f(\xi+y+v),
+\end{align*}
+and therefore
+\[
+\pi_\lambda (x+iy,t) \pi_\lambda(u+iv,s)  = \pi_\lambda((z,t)(w,s)).
+\]
+
+We calculate
+\[
+\pi_\lambda(0,0) f(\xi) = f(\xi)
+\]
+and
+\[
+ \pi_\lambda(x+iy,t) \pi_\lambda((x+iy,t)^{-1}) f = 
+\pi_\lambda(0,0)f = f.
+\]
+For $f,g \in L^2(\mathbb{R}^n)$,
+\[
+\begin{split}
+&\inner{\pi_\lambda(x+iy,t)f}{\pi_\lambda(x+iy,t)g}\\
+&\int_{\mathbb{R}^n} \pi_\lambda(x+iy,t)f(\xi) \overline{\pi_\lambda(x+iy,t)g(\xi)} d\xi\\
+=&\int_{\mathbb{R}^n} 
+e^{i\lambda t} e^{i\lambda\left(x\cdot \xi+\frac{1}{2}x\cdot y\right)} f(\xi+y)
+e^{-i\lambda t} e^{-i\lambda\left(x\cdot \xi+\frac{1}{2}x\cdot y\right)} \overline{g(\xi+y)}
+d\xi\\
+=&\int_{\mathbb{R}^n} f(\xi+y) \overline{g(\xi+y)} d\xi\\
+=&\inner{f}{g}.
+\end{split}
+\]
+Therefore $\pi_\lambda(z,t)$ is a unitary operator $L^2(\mathbb{R}^n) \to L^2(\mathbb{R}^n)$, and
+\[
+\pi_\lambda:H^n \to \mathscr{U}(L^2(\mathbb{R}^n))
+\]
+ is a group homomorphism, namely, $\pi_\lambda$ is a unitary
+representation of $H^n$ on $L^2(\mathbb{R}^n)$.\footnote{cf. \url{https://www.math.ubc.ca/~cass/research/pdf/Unitary.pdf}}
+Furthermore, using that $y \mapsto f(\cdot+y)$ is continuous $\mathbb{R}^n \to L^2(\mathbb{R}^n)$, 
+\begin{align*}
+\norm{\pi_\lambda(x+iy,t) f -f}^2
+&=\int_{\mathbb{R}^n} | e^{i\lambda t} e^{i\lambda\left(x\cdot \xi+\frac{1}{2}x\cdot y\right)} f(\xi+y) - f(\xi)|^2 d\xi \to 0
+\end{align*}
+as $(z,t) \to 0$, showing that $\pi_\lambda:H^n \to \mathscr{U}(L^2(\mathbb{R}^n))$ is \textbf{strongly continuous}. (That is, it is continuous when
+$\mathscr{U}(L^2(\mathbb{R}^n))$ is assigned the strong
+operator topology.)
+
+\begin{theorem}
+For $\lambda \in \mathbb{R}$, $\lambda \neq 0$, the map $\pi_\lambda$ defined by
+\[
+\pi_\lambda(x+iy,t)f(\xi) = e^{i\lambda t} e^{i\lambda\left(x\cdot \xi+\frac{1}{2}x\cdot y\right)} f(\xi+y),
+\]
+for $(x+iy,t) \in H^n$, $f \in L^2(\mathbb{R}^n)$, and $\xi \in \mathbb{R}^n$, is  a strongly continuous unitary representation of $H^n$
+on $L^2(\mathbb{R}^n)$. 
+\end{theorem}
+
+
+We call $\pi_1$ the \textbf{Schr\"odinger representation}. Its kernel is
+ \[
+ \Gamma=\{(0,2\pi k): k \in \mathbb{Z}\}.
+ \]
+ For $f \in L^1(H^n/\Gamma)$ we define
+ \[
+ \pi_1(f) = \int_{H^n/\Gamma} f(z,t) \pi_1(z,t) dz dt.
+ \]
+For $f,g \in L^1(H^n/\Gamma)$,
+\[
+(f*g)(z,t) = \int_{H^n/\Gamma} f((z,t) \cdot (w,s)^{-1}) g(w,s) dw ds, \qquad (z,t) \in H^n/\Gamma.
+\] 
+It is a fact that Lebesgue measure on $\mathbb{C}^n \times \mathbb{R}$ is a 
+bi-invariant Haar measure on $H^n$, and using this we calculate
+\[
+\begin{split}
+&\pi_1(f*g)\\
+=&\int_{H^n/\Gamma} \left(  \int_{H^n/\Gamma} f((z,t) \cdot (w,s)^{-1}) g(w,s) dw ds\right) \pi_1(z,t) dz dt\\
+=&\int_{H^n/\Gamma} g(w,s) \left( \int_{H^n/\Gamma}  f((z,t) \cdot (w,s)^{-1}) \pi_1((z,t)\cdot (w,s)^{-1})
+  dz dt \right) \pi_1(w,s) dw ds\\
+=&\int_{H^n/\Gamma} g(w,s) \pi_1(f) dw ds\\
+=&\pi_1(f) \pi_1(g).
+\end{split}
+\]
+
+\begin{lemma}
+For $f,g \in L^1(H^n/\Gamma)$,
+\[
+\pi_1(f*g) = \pi_1(f) \pi_1(g).
+\]
+\end{lemma}
+ 
+ We define
+ \[
+ W(z) = \pi_1(z,0),
+ \]
+with which
+\[
+\pi_1(z,t) = e^{it} W(z).
+\]
+Define
+\[
+f_1(z) = (2\pi)^{-1/2} \int_0^{2\pi} f(z,t) e^{it} dt.
+\]
+Then
+\begin{align*}
+\pi_1(f) &= \int_{H^n/\Gamma} f(z,t) e^{it} W(z) dz dt\\
+&=
+\int_{\mathbb{C}^n} W(z) \left( \int_0^{2\pi} f(z,t) e^{it} dt \right) dz\\
+&=(2\pi)^{1/2} \int_{\mathbb{C}^n}  f_1(z) W(z) dz.
+\end{align*}
+
+
+For $f \in L^1(\mathbb{C}^n)$, define
+\[
+f^{\#}(z,t) = (2\pi)^{-1} e^{-it} f(z).
+\]
+$f^{\#} \in  L^1(H^n/\Gamma)$, and
+\[
+f^{\#}_1(z) = (2\pi)^{-1/2} \int_0^{2\pi} f^{\#}(z,t) e^{it} dt = 
+(2\pi)^{-1/2} f(z),
+\]
+thus
+\[
+\pi_1(f^{\#}) =(2\pi)^{1/2} \int_{\mathbb{C}^n} f^{\#}(z) W(z) dz
+=\int_{\mathbb{C}^n} f(z) W(z) dz.
+\]
+We define $W:L^1(\mathbb{C}^n) \to \mathscr{U}(L^2(\mathbb{R}^n))$ by
+\[
+W(f) = \pi_1(f^{\#}),
+\]
+called the \textbf{Weyl transform}.
+
+
+
+For $f,g \in L^1(\mathbb{C}^n)$ and for $(z,t) \in H^n/\Gamma$,
+\[
+\begin{split}
+&(f^{\#} * g^{\#})(z,t)\\
+=&\int_{H^n/\Gamma} f^{\#}((z,t)\cdot (w,s)^{-1}) g^{\#}(w,s) dw ds\\
+=&\int_{H^n/\Gamma} f^{\#}((z,t)\cdot (-w,-s ) ) g^{\#}(w,s) dw ds\\
+=&\int_{H^n/\Gamma} f^{\#}\left(z-w,t-s-\frac{1}{2}\Im(z\cdot \overline{w}) \right)
+g^{\#}(w,s) dw ds\\
+=&\int_{H^n/\Gamma} (2\pi)^{-2} e^{-i\left(t-s-\frac{1}{2}\Im(z\cdot \overline{w})\right)} 
+f(z-w) e^{-is} g(w) dw ds\\
+=&(2\pi)^{-1} e^{-it} \int_{\mathbb{C}^n} f(z-w) g(w) e^{\frac{i}{2} \Im(z \cdot \overline{w})}
+dw\\
+=&(f \times g)^{\#}(z,t),
+\end{split}
+\]
+for
+\[
+(f \times g)(z) =  \int_{\mathbb{C}^n} f(z-w) g(w) e^{\frac{i}{2} \Im(z \cdot \overline{w})}
+dw,
+\]
+called  the \textbf{twisted convolution}. 
+Using what we have established so far gives the following.
+
+\begin{lemma}
+For $f,g \in L^1(\mathbb{C}^n)$,
+\[
+W(f \times g)=\pi_1((f \times g)^{\#})=
+\pi_1(f^{\#} * g^{\#})=
+\pi_1(f^{\#}) \pi_1(g^{\#})
+=W(f) W(g)
+\]
+\end{lemma}
+
+
+For $\phi \in L^1(\mathbb{C}^n)$, we define
+\[
+K_\phi(\xi,\eta) = \int_{\mathbb{R}^n} \phi(x+i(\eta-\xi)) e^{\frac{i}{2}(\xi+\eta)\cdot x} dx,\qquad
+(\xi,\eta) \in \mathbb{R}^n \times \mathbb{R}^n,
+\]
+which satisfies, for $f \in L^2(\mathbb{R}^n)$ and $\xi \in \mathbb{R}^n$,
+\begin{align*}
+W(\phi) f(\xi)&=\int_{\mathbb{C}^n} \phi(z) W(z) f(\xi) dz\\
+&=\int_{\mathbb{R}^n} \int_{\mathbb{R}^n} \phi(x+iy) e^{i\left(x\cdot \xi + \frac{1}{2}x\cdot y\right)}  f(\xi+y) dy dx\\
+&=\int_{\mathbb{R}^n} \int_{\mathbb{R}^n} \phi(x+i(y-\xi)) e^{\frac{i}{2}(x\cdot \xi +x\cdot y)} f(y) dy dx\\
+&=\int_{\mathbb{R}^n} \left(\int_{\mathbb{R}^n} \phi(x+i(y-\xi)) e^{\frac{i}{2}(\xi+y)\cdot x)} dx \right) f(y) dy\\
+&=\int_{\mathbb{R}^n} K_\phi(\xi,y)f(y) dy.
+\end{align*}
+Thus $K_\phi$ is an integral kernel for  the operator $W(\phi)$. 
+
+
+We show in the following theorem that the Weyl transform sends elements of $L^1(\mathbb{C}^n)$ to  compact operators on
+$L^2(\mathbb{R}^n)$, and that 
+it sends square integrable functions to Hilbert-Schmidt operators.\footnote{Sundaram Thangavelu, {\em Lectures on Hermite and Laguerre Expansions},
+p.~13, Theorem 1.2.1.}
+
+\begin{theorem}
+$W:L^1(\mathbb{C}^n) \to \mathscr{B}_0(L^2(\mathbb{R}^n))$, and for $\phi \in L^1(\mathbb{C}^n) \cap L^2(\mathbb{C}^n)$ we have
+$W(\phi) \in \mathscr{B}_{\mathrm{HS}}(L^2(\mathbb{R}^n))$ and
+\[
+\norm{\phi}_{L^2(\mathbb{R}^n)} = (2\pi)^{-n/2} \norm{W(\phi)}_{\mathrm{HS}}.
+\]
+\end{theorem}
+\begin{proof}
+First take $\phi \in L^1(\mathbb{C}^n) \cap L^2(\mathbb{C}^n)$. It follows from this that $K_\phi \in L^2(\mathbb{R}^n \times
+\mathbb{R}^n)$, and because $K_\phi$ is the integral kernel of $W(\phi)$ this implies\footnote{Michael Reed and Barry Simon, {\em Methods
+of Modern Mathematical Physics, volume I: Functional Analysis}, revised and enlarged edition,
+p.~210, Theorem VI.23.} that $W(\phi) \in \mathscr{B}_{\mathrm{HS}}(L^2(\mathbb{R}^n))$ and
+\[
+\HS{W(\phi)}^2 = \int_{\mathbb{R}^n \times \mathbb{R}^n} |K(\xi,\eta)|^2 d\xi d\eta.
+\]
+\end{proof}
+
+
+
+
+
+
+\section{Hermite functions}
+For $\phi \in \mathscr{S}(\mathbb{R}^n)$, define
+\[
+\widehat{\phi}(\xi) =(\mathscr{F} \phi)(\xi) =   (2\pi)^{-n/2} \int_{\mathbb{R}^n} \phi(x) e^{-ix\cdot \xi} dx,\qquad \xi \in \mathbb{R}^n.
+\]
+$\mathscr{S}(\mathbb{R}^n)$ is a dense linear subspace of $L^2(\mathbb{R}^n)$, and the Fourier transform
+ extends  to a unique Hilbert space isomorphism $L^2(\mathbb{R}^n) \to L^2(\mathbb{R}^n)$.
+ For $f,g \in L^2(\mathbb{R})$,
+ \[
+ \inner{f}{g} = \int_{\mathbb{R}^n} f(x) \overline{g(x)} dx.
+ \]
+
+For $\phi \in \mathscr{S}(\mathbb{R})$, let
+\[
+(D\phi)(x) = \phi'(x),\qquad (M\phi)(x)=x\phi(x),\qquad x \in \mathbb{R},
+\]
+and let
+\[
+A = -D+M,\qquad B=D+M.
+\]
+Let
+\[
+H  = \sum_{j=1}^n (-D_j^2+M_j^2) = \frac{1}{2} \sum_{j=1}^n (A_j B_j + B_j A_j),
+\]
+which satisfies
+\[
+(H \phi)(x) = -(\Delta \phi)(x) +|x|^2 \phi(x),
+\]
+called the \textbf{Hermite operator}.
+
+
+For $k \geq 0$, define
+\[
+H_k(x)=(-1)^k e^{x^2} D^k e^{-x^2}
+\]
+and
+\[
+h_k(x) = (2^k k! \sqrt{\pi})^{-1/2} e^{-x^2/2}  H_k(x).
+\]
+The Hermite functions are an orthonormal basis for $L^2(\mathbb{R})$.
+Let $\mathbb{N}$ be the nonnegative integers, and for $\alpha \in \mathbb{N}^n$ let
+\[
+\Phi_\alpha = h_{\alpha_1} \otimes \cdots \otimes h_{\alpha_n},
+\]
+which are an orthonormal basis for $L^2(\mathbb{R}^n)$. 
+It is a fact that
+\[
+A_j \Phi_\alpha = (2\alpha_j + 2)^{1/2} \Phi_{\alpha+e_j},\qquad B_j \Phi_\alpha
+=(2\alpha_j)^{1/2} \Phi_{\alpha-e_j}
+\]
+and
+\[
+H\Phi_\alpha = (2|\alpha|+n)\Phi_\alpha.
+\]
+
+
+It is a fact that
+\[
+\widehat{h}_k = (-i)^k h_k,
+\]
+whence
+\[
+\widehat{\Phi}_\alpha = (-i)^{|\alpha|} \Phi_\alpha.
+\]
+Because $\{\Phi_\alpha: \alpha \in \mathbb{N}^n\}$ is an orthonormal basis for 
+$L^2(\mathbb{R}^n)$, for $f \in L^2(\mathbb{R}^n)$, 
+\[
+f = \sum_{\alpha} \inner{f}{\Phi_\alpha} \Phi_\alpha.
+\]
+and 
+then
+\[
+\widehat{f} = \sum_{\alpha} \inner{f}{\Phi_\alpha} (-i)^{|\alpha|} \Phi_\alpha.
+\]
+
+
+Let $E_k$ be the linear span of $\{\Phi_\alpha: |\alpha| = k\}$, which has dimension
+$\binom{k+n-1}{k}$. 
+For $f \in E_k$, $Hf = (2k+n)f$. 
+Let $P_k:L^2(\mathbb{R}^n) \to E_k$ be the projection:
+\[
+P_k f = \sum_{|\alpha|=k} \inner{f}{\Phi_\alpha} \Phi_\alpha,
+\qquad f \in L^2(\mathbb{R}^n).
+\]
+Let
+\[
+\Phi_k(x,y) = \sum_{|\alpha|=k} \Phi_\alpha(x) \Phi_\alpha(y),
+\qquad x,y \in \mathbb{R}^n.
+\]
+For $x \in \mathbb{R}^n$ we calculate
+\begin{align*}
+\int_{\mathbb{R}^n} \Phi_k(x,y) f(y) dy&=
+\sum_{|\alpha|=k}\Phi_\alpha(y) \int_{\mathbb{R}^n} f(y) \Phi_\alpha(y) dy\\
+&=\sum_{|\alpha|=k} \Phi_\alpha(y) \inner{f}{\Phi_\alpha}\\
+&=(P_k f)(y),
+\end{align*}
+thus $\Phi_k$ is a kernel for the projection operator $P_k$. 
+
+Using the $1$-dimensional Mehler's formula  we obtain the $n$-dimensional
+Mehler's formula:
+\[
+\sum_{\alpha} r^{|\alpha|} \Phi_\alpha(x) \Phi_\alpha(y) = \pi^{-\frac{n}{2}} (1-r^2)^{-\frac{n}{2}} 
+\exp\left(-\frac{1}{2} \frac{1+r^2}{1-r^2} (|x|^2+|y|^2)+\frac{2r}{1-r^2} x\cdot y\right).
+\]
+
+
+
+\section{Special Hermite functions}
+We first define the \textbf{Fourier-Wigner transform}. For $f,g \in L^2(\mathbb{R}^n)$ and $z=x+iy \in \mathbb{C}^n$,
+\[
+V(f,g)(z) = (2\pi)^{-n/2} \int_{\mathbb{R}^n} e^{ix\cdot \xi} f\left(\xi+\frac{1}{2}y\right) \overline{g\left(\xi-\frac{1}{2}y\right)} d\xi.
+\]
+The following theorem relates the inner product on $L^2(\mathbb{R}^n)$ and the inner product on $L^2(\mathbb{C}^n)$.\footnote{Sundaram Thangavelu, {\em Lectures on Hermite and Laguerre Expansions},
+p.~14, Proposition 1.3.1.}
+
+\begin{theorem}
+For $f,g,\phi,\psi \in L^2(\mathbb{R}^n)$,
+\[
+\int_{\mathbb{C}^n} V(f,g)(z) \overline{V(\phi,\psi)(z)} dz = \inner{f}{\phi} \inner{\psi}{g}.
+\]
+\end{theorem}
+
+We now define the \textbf{special Hermite functions} on $\mathbb{C}^n$. For $\alpha,\beta \in \mathbb{N}^n$, let
+\[
+\Phi_{\alpha \beta}(z) = V(\Phi_\alpha,\Phi_\beta)(z).
+\]
+We calculate
+\begin{align*}
+\inner{W(z)\Phi_\alpha}{\Phi_\beta}&=\int_{\mathbb{R}^n} W(z)\Phi_\alpha(\xi) \Phi_\beta(\xi) d\xi\\
+&=\int_{\mathbb{R}^n} e^{i\left(x\cdot \xi+\frac{1}{2}x\cdot y\right)} \Phi_\alpha(\xi+y) \Phi_\beta(\xi) d\xi\\
+&=\int_{\mathbb{R}^n} e^{ix\cdot \xi} \Phi_\alpha\left(\xi+\frac{1}{2}y\right) \Phi_\beta\left(\xi-\frac{1}{2}y\right) d\xi\\
+&=(2\pi)^{n/2} V(\Phi_\alpha,\Phi_\beta).
+\end{align*}
+
+\begin{lemma}
+For $\alpha,\beta \in \mathbb{N}^n$ and $z \in \mathbb{C}^n$,
+\[
+\Phi_{\alpha\beta}(z) = (2\pi)^{-n/2} \inner{W(z)\Phi_\alpha}{\Phi_\beta}.
+\]
+\end{lemma}
+
+Using that the Hermite functions $\Phi_\alpha$ are an orthonormal basis for $L^2(\mathbb{R}^n)$, it is proved that the special Hermite functions
+$\Phi_{\alpha\beta}$ are an orthonormal basis for $L^2(\mathbb{C}^n)$.\footnote{Sundaram Thangavelu, {\em Lectures on Hermite and Laguerre Expansions},
+p.~16, Theorem 1.3.2.}
+
+\end{document}
