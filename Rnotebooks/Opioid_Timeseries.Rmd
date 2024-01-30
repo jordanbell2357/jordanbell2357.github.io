@@ -1,0 +1,126 @@
+---
+title: "Toronto and Ontario Opioid Morbidity Timeseries"
+output: html_notebook
+---
+
+# Author
+
+* Jordan Bell
+* July 11, 2019
+* <https://jordanbell2357.github.io/Opioid_Timeseries.nb.html>
+
+# Public Health Ontario
+
+Public Health Ontario, [Interactive Opioid Tool](https://www.publichealthontario.ca/en/data-and-analysis/substance-use/interactive-opioid-tool#/ageSex)
+
+Opioid-related morbidity and mortality in Ontario
+
+```{r}
+library(data.table)
+library(forecast) #autoplot
+```
+
+```{r}
+Ontario <- fread("Cases of opioid-related morbidity and mortality, Ontario, 2003 - 01 – 2018 - 09.csv")
+```
+
+```{r}
+Toronto_Public_Health <- fread("Cases of opioid-related morbidity and mortality, Toronto Public Health, 2003 - 01 – 2018 - 09.csv")
+```
+
+```{r}
+str(Toronto_Public_Health)
+```
+
+```{r}
+Toronto_Central_LHIN <- fread("Cases of opioid-related morbidity and mortality, Toronto Central LHIN, 2003 - 01 – 2018 - 09.csv")
+```
+
+# Trend and Seasonality Decomposition
+
+```{r}
+Ontario_Count_ED_visits.ts <- ts(Ontario$`Count of ED visits`, start = 2003, frequency = 12)
+```
+
+```{r}
+Toronto_Public_Health_Count_ED_visits.ts <- ts(Toronto_Public_Health$`Count of ED visits`, start = 2003, frequency = 12)
+```
+
+```{r}
+Toronto_Central_LHIN_Count_ED_visits.ts <- ts(Toronto_Central_LHIN$`Count of ED visits`, start = 2003, frequency = 12)
+```
+
+```{r}
+Ontario_Count_ED_visits.ts.components <- decompose(Ontario_Count_ED_visits.ts)
+```
+
+```{r}
+Toronto_Public_Health_Count_ED_visits.ts.components <- decompose(Toronto_Public_Health_Count_ED_visits.ts)
+```
+
+```{r}
+plot(Ontario_Count_ED_visits.ts.components)
+```
+
+
+```{r}
+plot(Toronto_Public_Health_Count_ED_visits.ts.components)
+```
+
+```{r}
+Toronto_Central_LHIN_Count_ED_visits.ts.components <- decompose(Toronto_Central_LHIN_Count_ED_visits.ts)
+```
+
+```{r}
+plot(Toronto_Central_LHIN_Count_ED_visits.ts.components)
+```
+
+# SARIMA models and forecasts
+
+D=1 forces seasonality
+
+```{r}
+Toronto_Public_Health_Count_ED_visits.ts.arima <- auto.arima(Toronto_Public_Health_Count_ED_visits.ts, D=1)
+
+Toronto_Public_Health_Count_ED_visits.ts.arima
+```
+
+```{r}
+Toronto_Public_Health_Count_ED_visits.ts.arima.forecast <- forecast(Toronto_Public_Health_Count_ED_visits.ts.arima, level = c(95), h = 24)
+
+autoplot(Toronto_Public_Health_Count_ED_visits.ts.arima.forecast, main = "Monthly Emergency Department (ED) Visits")
+```
+
+```{r}
+Toronto_Public_Health_Rate_of_ED_visits.ts <- ts(Toronto_Public_Health$`Rate of ED visits`, start = 2003, frequency = 12)
+```
+
+```{r}
+Toronto_Public_Health_Rate_of_ED_visits.ts.components <- decompose(Toronto_Public_Health_Rate_of_ED_visits.ts)
+
+plot(Toronto_Public_Health_Rate_of_ED_visits.ts.components)
+```
+
+```{r}
+Toronto_Public_Health_Rate_of_ED_visits.ts.arima <- auto.arima(Toronto_Public_Health_Rate_of_ED_visits.ts, D=1)
+
+Toronto_Public_Health_Rate_of_ED_visits.ts.arima
+```
+
+```{r}
+Toronto_Public_Health_Rate_of_ED_visits.ts.arima.forecast <- forecast(Toronto_Public_Health_Rate_of_ED_visits.ts.arima, level = c(95), h = 24)
+
+autoplot(Toronto_Public_Health_Rate_of_ED_visits.ts.arima.forecast, main = "Monthly Emergency Department (ED) Visits")
+```
+
+```{r}
+Ontario_Count_ED_visits.ts.arima <- auto.arima(Ontario_Count_ED_visits.ts, D=1)
+
+Ontario_Count_ED_visits.ts.arima
+```
+
+```{r}
+Ontario_Count_ED_visits.ts.arima.forecast <- forecast(Ontario_Count_ED_visits.ts.arima, level = c(95), h = 24)
+
+autoplot(Ontario_Count_ED_visits.ts.arima.forecast, main = "Monthly Emergency Department (ED) Visits")
+```

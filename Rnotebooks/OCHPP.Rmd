@@ -1,0 +1,417 @@
+---
+title: "OCHPP Toronto Public Health Datasets"
+output: 
+  html_notebook: 
+    toc: yes
+---
+
+# Author
+
+* Jordan Bell
+* July 1, 2019
+* <https://jordanbell2357.github.io/OCHPP.nb.html>
+
+# Source and descriptions of datasets
+
+**Ontario Community Health Profiles Partnership (OCHPP)**    
+<http://www.ontariohealthprofiles.ca/>
+
+**Data — LHIN 7 (Toronto Central and City of Toronto) Neighbourhoods, Ontario Sub-Regions and LHINs**
+
+We use three datasets:
+
+* **Primary Care: Enrolment and Continuity of Care 2011/13**  
+1_pc_Continuity_NonRostered_Rostered_Patients_neighb_2013_LHIN_7.xlsx
+* **Adult Health and Disease 2016/17**  
+1_AHD_2017_RPDB_Neighb_LHIN_7.xlsx
+* **Sexual Health: Chlamydia cases, Gonorrhea cases 2013/16**  
+2_sh_neighb_chlam_gonor_2013-2016_LHIN_7.xls
+
+We quote from the description of the data:
+
+**The Registered Persons Database (RPDB) as the source of population**  
+<http://www.ontariohealthprofiles.ca/o_documents/aboutTheDataON/RPDB_vs_Census_Oct_26_2018.pdf>
+
+> **Two main population sources**
+>
+>There are two main sources that provide the most reliable estimates of Ontario's population. For
+purposes of OCHPP reporting, we use the Registered Persons Database (RPDB) as the source
+(denominator) for all of our health-related indicators. While another major source for identifying the
+population (denominator) is Statistics Canada’s Census counts (Census), the OCHPP has determined that
+the RPDB provides a more consistent measure for the calculation of rates for health indicators and
+conditions. We explain why and provide examples to illustrate.
+>
+> **RPDB**
+>
+>The RPDB (database) provides basic demographic information about anyone who has ever received an
+Ontario Health Insurance Plan (OHIP) card. OHIP cards include a unique Health Card Number (HCN) to
+identify a person's age, sex and address, including postal code. The postal codes used at ICES come
+mainly from HCNs. Information from the health card is stored in the RPDB. Health cards are usually
+renewed every 5 years, a process that helps to ensure that information in the system is periodically
+refreshed, such as address, for example, should a person move and update the card within that time
+frame. The system may also be updated more frequently if an individual interacts with the healthcare
+system between renewal periods. This allows for a more current source of location-based data for
+health reporting.
+>
+> **Census**
+>
+>Another source of data on where people live can come from Statistics Canada (Stats Can). Stats Can
+collects data on individuals living in Canada through the Census, a survey conducted every 5 years. Stats Can
+reports who lives in a given area at one point in time – i.e. based on the information an individual provides when
+completing the Census
+>
+> **RPDB vs. Census**
+>
+>While at the provincial level, the number of people we identify in the RPDB as living in Ontario does not
+differ much from Census estimates, differences are more pronounced at smaller areas such as
+neighbourhoods or local areas. This particular issue is most evident in areas of high migration where we
+have observed large differences in rates using RPDB vs. the Census in part due to population mobility.  
+>For example, in some areas of Ontario, particularly in larger urban centres, newcomers to the area often
+settle first “downtown” but over time, may move from downtown to outlying areas. The majority of
+people who move do not change or update their health card until renewal time so they stay in the RPDB
+with their original health card information including the address and postal code of their “downtown”
+address.  
+>The same is true of Census population counts: when someone moves, they are still considered living at
+their original address and comprise the population of that area until the next Census is taken (every 5
+years).
+
+# Shapefile for City of Toronto's 140 neighbourhoods
+
+We now import and process a shapefile for Toronto's 140 neighbourhoods.
+
+<https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/#a45bd45a-ede8-730e-1abc-93105b2c439f>
+
+<http://opendata.toronto.ca/gcc/neighbourhoods_planning_areas_wgs84.zip>
+
+**Neighbourhoods**
+
+> Owner: Social Development, Finance & Administration
+>
+> Currency: June 2014
+
+**Neighbourhoods (WGS84)**
+
+```{r}
+library(data.table) #fread
+library(plyr) #join
+library(ggplot2) #ggplot, fortify
+library(sp) #used by rgdal
+library(rgdal) #readOGR
+library(rgeos) #gCentroid
+library(scales) #scale_fill_distiller, percent_format
+library(ggmap) #theme_nothing
+library(Hmisc) #rcorr
+```
+Input shapefile
+```{r}
+nbds.sh <- readOGR("C:/Users/14165/Desktop/ArcGIS/SHAPEFILES/neighbourhoods_planning_areas_wgs84", "NEIGHBORHOODS_WGS84")
+```
+Add "id" column
+```{r}
+nbds.sh@data$id <- as.integer(nbds.sh@data$AREA_S_CD)
+```
+Make centroids of each neighbourhood, for placing labels when plotting
+```{r}
+nbds.sh.centroids  <- as.data.frame(gCentroid(nbds.sh, byid = TRUE))
+```
+Add "id" column
+```{r}
+nbds.sh.centroids$id <- nbds.sh@data$id
+```
+Shapefile processing
+```{r}
+nbds.sh.points = fortify(nbds.sh, region = "id")
+
+nbds.sh.df = join(nbds.sh.points, nbds.sh@data, by = "id")
+```
+We are now done with shapefile processing.
+
+We copied selected columns from sheets of the .xls/.xlsx files to new sheets, renamed columns by changing spaces and hyphens to underscores and spelling symbols, and exported these to .csv files.
+
+We shall visualize selected data from these tables on a map. Then we compute correlations.
+
+# Primary Care: Enrolment and Continuity of Care 2011/13
+
+1_pc_Continuity_NonRostered_Rostered_Patients_neighb_2013_LHIN_7.xlsx!Continuity_Enrolled_NonEnrolled:
+
+> Primary Care: Enrolment and Continuity of Care (Both sexes, Ages 19+) for Toronto Neighbourhoods and Toronto Central LHIN, 2011/12 to 2012/13 (April 1, 2011-March 31, 2013)
+>
+> Data sources: Population - Ontario Heath Insurance Plan (OHIP) physician claims, Client Agency Provider Enrolment (CAPE) tables, Registered Persons' Database, Community Health Centre client encounter data.
+>
+> Population Enrolled: rostered with a Patient Enrolment Model (PEM) or registered with a Community Health Centre (CHC).	
+>
+> Population Non-Enrolled: not rostered with a Patient Enrolment Model (PEM) or registered with a Community Health Centre (CHC).			
+
+"id", "Population_19_plus", "Enrolled_Population", "Enrolled_Population_with_No_Visits", "Enrolled_Population_with_1_or_2_Visits", "Enrolled_Population_with_3_plus_Visits", "Non_Enrolled_Population", "Non_Enrolled_Population_with_No_Visits", "Non_Enrolled_Population_with_1_or_2_Visits", "Non_Enrolled_Population_with_3_plus_Visits", "Total_Population_Enrolled_and_Non_Enrolled", "Total_Population_with_No_Visits", "Total_Population_with_1_or_2_Visits", "Total_Population_with_3_plus_Visits"
+
+**1_pc_Continuity_NonRostered_Rostered_Patients_neighb_2013_LHIN_7.csv**
+
+```{r}
+patients <- fread("1_pc_Continuity_NonRostered_Rostered_Patients_neighb_2013_LHIN_7.csv")
+```
+
+```{r}
+str(patients)
+```
+
+
+Create ratio columns for selected variables
+```{r}
+patients$Ratio_Non_Enrolled_Population <- patients$Non_Enrolled_Population/patients$Population_19_plus
+
+patients$Ratio_Total_Population_with_No_Visits <- patients$Total_Population_with_No_Visits/patients$Population_19_plus
+
+patients$Ratio_Total_Population_with_3_plus_Visits <- patients$Total_Population_with_3_plus_Visits/patients$Population_19_plus
+
+patients_ratios <- patients[,.(id,Ratio_Non_Enrolled_Population,Ratio_Total_Population_with_No_Visits,Ratio_Total_Population_with_3_plus_Visits)]
+```
+
+## Ratio_Non_Enrolled_Population
+```{r}
+Ratio_Non_Enrolled_Population <- patients_ratios[, .(id,Ratio_Non_Enrolled_Population)]
+
+Ratio_Non_Enrolled_Population.sh <- merge(nbds.sh.df, Ratio_Non_Enrolled_Population, by = "id")
+```
+Make graphics object
+```{r}
+p.Ratio_Non_Enrolled_Population <- ggplot() +
+  geom_polygon(data = Ratio_Non_Enrolled_Population.sh, 
+               aes(x = long, y = lat, group = group, fill = Ratio_Non_Enrolled_Population), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="Ratio", labels=percent_format(accuracy=1), palette = "PuRd", trans = "reverse", breaks = pretty_breaks(n = 8))+
+  theme_nothing(legend = TRUE) + 
+  labs(title="Ratio of total population non-enrolled") +
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.sh.centroids, size = 2)
+```
+Plot graphics object
+```{r}
+p.Ratio_Non_Enrolled_Population + guides(fill = guide_legend(reverse=TRUE))
+```
+
+## Ratio_Total_Population_with_No_Visits
+```{r}
+Ratio_Total_Population_with_No_Visits <- patients_ratios[, .(id,Ratio_Total_Population_with_No_Visits)]
+
+Ratio_Total_Population_with_No_Visits.sh <- merge(nbds.sh.df, Ratio_Total_Population_with_No_Visits, by = "id")
+```
+
+Make graphics object
+```{r}
+p.Ratio_Total_Population_with_No_Visits <- ggplot() +
+  geom_polygon(data = Ratio_Total_Population_with_No_Visits.sh, 
+               aes(x = long, y = lat, group = group, fill = Ratio_Total_Population_with_No_Visits), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="Ratio", labels=percent_format(accuracy=1), palette = "PuRd", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Ratio of total population with no visits") +
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.sh.centroids, size = 2)
+```
+Plot graphics object
+```{r}
+p.Ratio_Total_Population_with_No_Visits + guides(fill = guide_legend(reverse=TRUE))
+```
+
+## Ratio_Total_Population_with_3_plus_Visits
+```{r}
+Ratio_Total_Population_with_3_plus_Visits <- patients_ratios[, .(id,Ratio_Total_Population_with_3_plus_Visits)]
+
+Ratio_Total_Population_with_3_plus_Visits.sh <- merge(nbds.sh.df, Ratio_Total_Population_with_3_plus_Visits, by = "id")
+```
+Make graphics object
+```{r}
+p.Ratio_Total_Population_with_3_plus_Visits <- ggplot() +
+  geom_polygon(data = Ratio_Total_Population_with_3_plus_Visits.sh, 
+               aes(x = long, y = lat, group = group, fill = Ratio_Total_Population_with_3_plus_Visits), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="Ratio", labels=percent_format(accuracy=1), palette = "Greens", trans = "reverse", breaks = pretty_breaks(n = 8))+
+  theme_nothing(legend = TRUE) + 
+  labs(title="Ratio of total population with 3+ visits") +
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.sh.centroids, size = 2)
+```
+Plot graphics object
+```{r}
+p.Ratio_Total_Population_with_3_plus_Visits + guides(fill = guide_legend(reverse=TRUE))
+```
+
+# Adult Health and Disease 2016/17
+
+1_AHD_2017_RPDB_Neighb_LHIN_7.xlsx!Diabetes_Neighb_Toronto:
+
+> Demographics - Denominator: Ontario Ministry of Health and Long-Term Care Registered Persons Database (RPDB), population aged 20+ who were alive and living in the Ontario on April 1st, 2016 
+>
+> Numerator: derived from validated, disease registries maintained by the Institute for Clinical Evaluative Sciences (ICES)
+
+1_AHD_2017_RPDB_Neighb_LHIN_7.xlsx!COPD_Neighb_Toronto:
+
+> Demographics - Denominator: Ontario Ministry of Health and Long-Term Care Registered Persons Database (RPDB), population aged 35+ who were alive and living in the Ontario on April 1st, 2016 
+>
+> Numerator: derived from validated, disease registries maintained by the Institute for Clinical Evaluative Sciences (ICES)
+
+"id", "People_with_Diabetes_20_plus", "Total_Population_2016_RPDB_20_plus", "Prevalence_per_hundred_Diabetes_20_plus", "People_with_COPD_35_plus", "Total_Population_2016_RPDB_35_plus", "Prevalence_per_hundred_COPD_35_plus"
+
+**1_AHD_2017_RPDB_Neighb_LHIN_7.csv**
+
+```{r}
+chronic <- fread("1_AHD_2017_RPDB_Neighb_LHIN_7.csv")
+
+chronic$Ratio_People_with_Diabetes_20_plus <- chronic$People_with_Diabetes_20_plus/chronic$Total_Population_2016_RPDB_20_plus
+
+chronic$Ratio_People_with_COPD_35_plus <- chronic$People_with_COPD_35_plus/chronic$Total_Population_2016_RPDB_35_plus
+
+chronic_ratios <- chronic[,.(id,Ratio_People_with_Diabetes_20_plus,Ratio_People_with_COPD_35_plus)]
+```
+
+```{r}
+Ratio_People_with_Diabetes_20_plus <- chronic_ratios[, .(id,Ratio_People_with_Diabetes_20_plus)]
+
+Ratio_People_with_Diabetes_20_plus.sh <- merge(nbds.sh.df, Ratio_People_with_Diabetes_20_plus, by = "id")
+```
+
+Make and plot graphics object
+```{r}
+p.Ratio_People_with_Diabetes_20_plus <- ggplot() +
+  geom_polygon(data = Ratio_People_with_Diabetes_20_plus.sh, 
+               aes(x = long, y = lat, group = group, fill = Ratio_People_with_Diabetes_20_plus), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="Ratio", labels=percent_format(accuracy=1), palette = "PuRd", trans = "reverse",
+                       breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE)+
+  labs(title="Ratio of people with diabetes, 20+") +
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.sh.centroids, size = 2)
+
+p.Ratio_People_with_Diabetes_20_plus + guides(fill = guide_legend(reverse=TRUE))
+```
+
+```{r}
+Ratio_People_with_COPD_35_plus <- chronic_ratios[, .(id,Ratio_People_with_COPD_35_plus)]
+
+Ratio_People_with_COPD_35_plus.sh <- merge(nbds.sh.df, Ratio_People_with_COPD_35_plus, by = "id")
+```
+Make and plot graphics object
+```{r}
+p.Ratio_People_with_COPD_35_plus <- ggplot() +
+  geom_polygon(data = Ratio_People_with_COPD_35_plus.sh, 
+               aes(x = long, y = lat, group = group, fill = Ratio_People_with_COPD_35_plus), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="Ratio", labels=percent_format(accuracy=1), palette = "PuRd", trans = "reverse",
+                       breaks = pretty_breaks(n = 8))+
+  theme_nothing(legend = TRUE) + 
+  labs(title="Ratio of people with COPD, 35+") +
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.sh.centroids, size = 2)
+
+p.Ratio_People_with_COPD_35_plus + guides(fill = guide_legend(reverse=TRUE))
+```
+
+# Sexual Health: Chlamydia cases, Gonorrhea cases 2013/16
+
+2_sh_neighb_chlam_gonor_2013-2016_LHIN_7.xlsx!Chlamydia_Male_Female_Tor_neigh:
+
+>  Number of Chlamydia Cases for Age 15 years and over by Gender (Male, Female), Toronto Neighbourhoods, 2013 to 2016 Calendar Years Combined
+>
+>  Demographics - Denominator: Based on 2011 Census population estimates. (Statistics Canada, 2011 Census of Population).
+>
+>  Numerator: Number of Chlamydia cases for 4 year (2013 to 2016) observation period.        Data source: Data as of July 20, 2017, Toronto Public Health integrated Public Health Information System [iPHIS]. 
+>
+> * Average annual rate of Chlamydia cases (/100,000) Males (2013 to 2016), All Ages 15+
+>
+> * Average annual rate of Chlamydia cases (/100,000) Females (2013 to 2016), All Ages 15+
+
+"id", "Chlamydia_cases_male", "Population_male", "Chlamydia_cases_female", "Population_female"
+
+**2_sh_neighb_chlam_gonor_2013-2016_LHIN_7.csv**
+
+```{r}
+chlamydia <- fread("2_sh_neighb_chlam_gonor_2013-2016_LHIN_7.csv")
+
+chlamydia$Ratio_Chlamydia_cases_male <- chlamydia$Chlamydia_cases_male/chlamydia$Population_male
+
+chlamydia$Ratio_Chlamydia_cases_female <- chlamydia$Chlamydia_cases_female/chlamydia$Population_female
+
+chlamydia_ratios <- chlamydia[,.(id,Ratio_Chlamydia_cases_male,Ratio_Chlamydia_cases_female)]
+```
+
+```{r}
+Ratio_Chlamydia_cases_male <- chlamydia_ratios[, .(id,Ratio_Chlamydia_cases_male)]
+
+Ratio_Chlamydia_cases_male.sh <- merge(nbds.sh.df, Ratio_Chlamydia_cases_male, by = "id")
+```
+Make and plot graphics object
+```{r}
+p.Ratio_Chlamydia_cases_male <- ggplot() +
+  geom_polygon(data = Ratio_Chlamydia_cases_male.sh, 
+               aes(x = long, y = lat, group = group, fill = Ratio_Chlamydia_cases_male), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="Cases/population", labels=percent_format(accuracy=1), palette = "YlOrBr", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Number of male chlamydia cases/male population") +
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.sh.centroids, size = 2)
+
+p.Ratio_Chlamydia_cases_male + guides(fill = guide_legend(reverse=TRUE))
+```
+
+# Correlations
+```{r}
+OCHPP_ratios <- merge(merge(patients_ratios, chronic_ratios), chlamydia_ratios)
+```
+Structure of data table:
+```{r}
+str(OCHPP_ratios)
+```
+Drop "id" column
+```{r}
+OCHPP_ratios_noid <- OCHPP_ratios[,-c("id")]
+
+str(OCHPP_ratios_noid)
+```
+
+Compute correlations
+```{r}
+rcorr(as.matrix(OCHPP_ratios_noid), type="pearson")
+```
+
+## Linear regression
+```{r}
+lm_chlam <- lm(Ratio_Chlamydia_cases_male ~ Ratio_Chlamydia_cases_female, data = OCHPP_ratios_noid)
+summary(lm_chlam)
+```
+
+
+```{r}
+plot(lm_chlam)
+```
+
+## Choropleth of residuals 
+
+```{r}
+str(lm_chlam$residuals)
+```
+Make dataframe of residuals with "id" column
+```{r}
+lm_chlam_df <- data.frame(id = c(1:140), residual = lm_chlam$residuals)
+head(lm_chlam_df)
+```
+
+
+```{r}
+lm_chlam_df.sh <- merge(nbds.sh.df, lm_chlam_df, by = "id")
+```
+Make and plot graphics object
+```{r}
+p.lm_chlam_df <- ggplot() +
+  geom_polygon(data = lm_chlam_df.sh, 
+               aes(x = long, y = lat, group = group, fill = residual), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="Residuals", palette = "Blues", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Residuals of male chlamydia cases ~ female chlamydia cases") +
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.sh.centroids, size = 2)
+
+p.lm_chlam_df + guides(fill = guide_legend(reverse=TRUE))
+```

@@ -1,0 +1,589 @@
+---
+title: "Toronto Employment and Social Services Ontario Works Dataset"
+output: 
+  html_notebook: 
+    toc: yes
+---
+
+# Author and date
+
+* Jordan Bell
+* July 1, 2019
+* <https://jordanbell2357.github.io/TESS_OW.nb.html>
+
+# Sources and descriptions of datasets
+
+This R notebook explores the Ontario Works (social assistance for people without income) case numbers in the
+dataset **Head of Household** from Toronto Employment and Social Services.
+We compute mean  monthly rates for a given year (2013, the latest year with data for all months),
+and plot this data as maps of Toronto divided into wards (44 wards) and neighbourhoods (140 neighbourhoods).
+
+
+<https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/community-services/#15580d71-31ca-010e-3895-6b77b49d966f>
+
+
+>This dataset contains the Head of Household trending data from 2004 to present. It provides information on households by neighbourhood with reference to the Ontario Works social assistance program. The information in this dataset will inform the delivery of services by providing trending information on social assistance.
+>
+>Currency: March 2015
+
+<http://opendata.toronto.ca/employment.social/head.household/opendata_tess_ow.zip>
+
+Children, Community and Social Services, Ontario, [Social Assistance Caseloads](https://www.ontario.ca/data/social-assistance-caseloads)
+
+> Total numbers of social assistance recipients and beneficiaries each month since January 1969.
+
+<https://files.ontario.ca/opendata/historical_sa_recipients_dataset_q2_2018_19.xlsx>
+
+Maytree, [Social Assistance Summaries](https://maytree.com/social-assistance-summaries/ontario/):
+
+> The Social Assistance Summaries series tracks the number of recipients of social assistance (welfare payments) in each province and territory.
+
+<https://maytree.com/wp-content/uploads/ON.xlsx>
+
+[Income of individuals by age group, sex and income source, Canada, provinces and selected census metropolitan areas](https://www150.statcan.gc.ca/t1/tbl1/en/cv!recreate.action?pid=1110023901&selectedNodeIds=1D17,4D14,5D1,5D2&checkedLevels=1D1,2D1&refPeriods=19760101,20170101&dimensionLayouts=layout3,layout3,layout3,layout3,layout2,layout3&vectorDisplay=false)
+
+> Table: 11-10-0239-01 (formerly CANSIM 206-0052)
+
+"1110023901-noSymbol.csv"
+
+"Number of persons" = number of persons whose age is $\geq 16$. 
+
+"Number with income" = number of persons with income from social assistance
+
+
+# Reading datasets and grouping observations
+
+```{r}
+library(data.table)
+library(plyr) #join
+library(ggplot2) #fortify, ggplot
+library(scales) #scale_fill_distiller
+library(sp) #used by rgdal
+library(rgdal) #readOGR
+library(ggmap) #theme_nothing
+library(rgeos) #gCentroids
+library(forecast) #auto.arima, forecast
+```
+Read .csv containing monthly TESS Ontario works cases for January 2004 to November 2014.
+The size of the csv file is 2.68 GB.
+
+```{r}
+CSVFILE <- "opendata_tess_ow.csv"
+tess_dt <- fread(CSVFILE) #data.table
+```
+Structure of datatable:
+```{r}
+str(tess_dt)
+```
+
+Select columns from tess_dt
+```{r}
+ow_cases <- tess_dt[,.(YEAR_NUM, MNTH, WARD_SCODE, CENSUS_NEIGH_SCODE, CASES)]
+```
+
+Drop rows where at least one of CENSUS_NEIGH_SCODE and WARD_SCODE is missing
+```{r}
+ow_cases_dropna <- na.omit(ow_cases, cols=c("CENSUS_NEIGH_SCODE", "WARD_SCODE"))
+```
+Calculate mean number of cases in 2010 by month and ward
+```{r}
+ow_wards_2010 <- ow_cases_dropna[YEAR_NUM==2010,.(TOTAL_CASES=sum(CASES)),by=.(MNTH, WARD_SCODE)]
+
+ow_wards_2010_months <- ow_wards_2010[,.(MONTHLY_CASES=sum(TOTAL_CASES)),by=.(MNTH, WARD_SCODE)]
+
+ow_wards_2010_monthly <- ow_wards_2010_months[,.(MEAN_CASES_PER_MONTH=mean(MONTHLY_CASES)),by=.(WARD_SCODE)]
+```
+Add "id" column
+```{r}
+ow_wards_2010_monthly$id <- ow_wards_2010_monthly$WARD_SCODE
+```
+Calculate mean number of cases in 2013 by month and ward
+```{r}
+ow_wards_2013 <- ow_cases_dropna[YEAR_NUM==2013,.(TOTAL_CASES=sum(CASES)),by=.(MNTH, WARD_SCODE)]
+
+ow_wards_2013_months <- ow_wards_2013[,.(MONTHLY_CASES=sum(TOTAL_CASES)),by=.(MNTH, WARD_SCODE)]
+
+ow_wards_2013_monthly <- ow_wards_2013_months[,.(MEAN_CASES_PER_MONTH=mean(MONTHLY_CASES)),by=.(WARD_SCODE)]
+```
+Add "id" column
+```{r}
+ow_wards_2013_monthly$id <- ow_wards_2013_monthly$WARD_SCODE
+```
+
+# Plotting data by wards
+
+**City Wards**
+
+<https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/#29b6fadf-0bd6-2af9-4a8c-8c41da285ad7>
+
+> Owner: City Clerk's Office
+>
+> Currency: August 2018
+
+**44 Ward Model - May 2010 (WGS84 - Latitude / Longitude)**
+
+<http://opendata.toronto.ca/gcc/wards_may2010_wgs84.zip>
+
+Shapefile: icitw_wgs84 
+
+readme.txt:
+
+> Wards: There are a total of 44 electoral wards in the City of Toronto  
+> * GEO_ID = unique geographic identifier    
+> * NAME = Name of the Ward with corresponding ward number    
+> * SCODE_NAME = Ward Number    
+> * LCODE_NAME = Ward Number and the community council area it is in (N,S, E or W)    
+> * TYPE_DESC = Ward    
+> * TYPE_CODE = City Ward    
+
+We shall input wards shapefile, create centroids of wards, and process shapefile as dataframe. First
+we input the shapefile
+```{r}
+wards.sh <- readOGR("C:/Users/14165/Desktop/ArcGIS/SHAPEFILES/May2010_WGS84", "icitw_wgs84")
+```
+Add "id" column
+```{r}
+wards.sh@data$id <- as.integer(wards.sh@data$SCODE_NAME)
+```
+Make centroids of each ward, for placing labels when plotting
+```{r}
+wards.sh.centroids  <- as.data.frame(gCentroid(wards.sh, byid = TRUE))
+```
+Add "id" column
+```{r}
+wards.sh.centroids$id <- wards.sh@data$id
+```
+Shapefile processing
+```{r}
+wards.sh.points = fortify(wards.sh, region="id")
+wards.sh.df = join(wards.sh.points, wards.sh@data, by="id")
+```
+Merge ward shapefile and ow_wards_2010_monthly dataframe
+```{r}
+wards.sh.ow_2010 <- merge(wards.sh.df, ow_wards_2010_monthly, by = "id")
+```
+Make graphics object for wards.sh.ow_2010
+```{r}
+p.wards_2010 <- ggplot() + 
+  geom_polygon(data = wards.sh.ow_2010, 
+               aes(x = long, y = lat, group = group, fill = MEAN_CASES_PER_MONTH),
+               color = "black", size = 0.25) +  
+  coord_map() + 
+  scale_fill_distiller(name="Cases", palette = "YlOrBr", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Mean monthly number of Ontario Works cases by ward in Toronto in 2010") + 
+  geom_text(aes(x=x, y=y, group=NULL, label=id), data = wards.sh.centroids, size = 2)
+```
+Plot graphics object
+```{r}
+p.wards_2010 + guides(fill = guide_legend(reverse = TRUE)) #ggplot2
+```
+Calculate mean number of cases in 2013 by month and ward
+```{r}
+ow_wards_2013 <- ow_cases_dropna[YEAR_NUM==2013,.(TOTAL_CASES=sum(CASES)),by=.(MNTH, WARD_SCODE)]
+
+ow_wards_2013_months <- ow_wards_2013[,.(MONTHLY_CASES=sum(TOTAL_CASES)),by=.(MNTH, WARD_SCODE)]
+
+ow_wards_2013_monthly <- ow_wards_2013_months[,.(MEAN_CASES_PER_MONTH=mean(MONTHLY_CASES)),by=.(WARD_SCODE)] 
+```
+Add "id" column
+```{r}
+ow_wards_2013_monthly$id <- ow_wards_2013_monthly$WARD_SCODE
+```
+Merge ward shapefile and ow_wards_2013_monthly dataframe
+```{r}
+wards.sh.ow_2013 <- merge(wards.sh.df, ow_wards_2013_monthly, by = "id")
+```
+Make graphics object
+```{r}
+p.wards_2013 <- ggplot() + 
+  geom_polygon(data = wards.sh.ow_2013, 
+               aes(x = long, y = lat, group = group, fill = MEAN_CASES_PER_MONTH), 
+               color = "black", size = 0.25) + 
+  coord_map() + 
+  scale_fill_distiller(name="Cases", palette = "YlOrBr", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Mean monthly number of Ontario Works cases by ward in Toronto in 2013") + 
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = wards.sh.centroids, size=2)
+```
+Plot graphics object
+```{r}
+p.wards_2013 + guides(fill = guide_legend(reverse = TRUE)) #ggplot2
+```
+Calculate mean number of cases in 2013 by month and neighbourhood
+```{r}
+ow_nbds_2013 <- ow_cases_dropna[YEAR_NUM==2013,.(TOTAL_CASES=sum(CASES)),by=.(MNTH, CENSUS_NEIGH_SCODE)]
+
+ow_nbds_2013_months <- ow_nbds_2013[,.(MONTHLY_CASES=sum(TOTAL_CASES)),by=.(MNTH, CENSUS_NEIGH_SCODE)]
+
+ow_nbds_2013_monthly <- ow_nbds_2013_months[,.(MEAN_CASES_PER_MONTH=mean(MONTHLY_CASES)),by=.(CENSUS_NEIGH_SCODE)]
+```
+Add "id" column
+```{r}
+ow_nbds_2013_monthly$id <- ow_nbds_2013_monthly$CENSUS_NEIGH_SCODE
+```
+Doing finer aggregation: mean monthly cases who are single (without dependents)
+```{r}
+ow_singles <- tess_dt[FAMILY_TYP_NM=="Singles",.(YEAR_NUM, MNTH, WARD_SCODE, CENSUS_NEIGH_SCODE, CASES)]
+
+ow_singles_dropna <- na.omit(ow_singles, cols=c("CENSUS_NEIGH_SCODE", "WARD_SCODE"))
+
+ow_singles_wards_2013 <- ow_singles_dropna[YEAR_NUM==2013,.(TOTAL_CASES=sum(CASES)),by=.(MNTH, WARD_SCODE)]
+
+ow_singles_wards_2013_months <- ow_singles_wards_2013[,.(MONTHLY_CASES=sum(TOTAL_CASES)),by=.(MNTH, WARD_SCODE)]
+
+ow_singles_wards_2013_monthly <- ow_singles_wards_2013_months[,.(MEAN_CASES_PER_MONTH=mean(MONTHLY_CASES)),by=.(WARD_SCODE)]
+```
+Add "id" column
+```{r}
+ow_singles_wards_2013_monthly$id <- ow_singles_wards_2013_monthly$WARD_SCODE
+```
+Merge ward shapefile and Ontario Works dataframe
+```{r}
+wards.sh.ow_singles_2013 <- merge(wards.sh.df, ow_singles_wards_2013_monthly, by = "id")
+```
+We shall plot wards.sh.ow_singles_2013. Make graphics object
+```{r}
+p.wards_singles_2013 <- ggplot() +
+  geom_polygon(data = wards.sh.ow_singles_2013, 
+               aes(x = long, y = lat, group = group, fill = MEAN_CASES_PER_MONTH), 
+               color = "black", size = 0.25) + 
+  coord_map() + 
+  scale_fill_distiller(name="Cases", palette = "PuRd", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Mean monthly number of Ontario Works cases (singles) by ward in Toronto in 2013") + 
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = wards.sh.centroids, size = 2)
+```
+Plot graphics object
+```{r}
+p.wards_singles_2013 + guides(fill = guide_legend(reverse = TRUE))
+```
+
+# Plotting data by neighbourhoods
+
+**Neighbourhoods shapefile**
+
+<https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/#a45bd45a-ede8-730e-1abc-93105b2c439f>
+
+<http://opendata.toronto.ca/gcc/neighbourhoods_planning_areas_wgs84.zip>
+
+> Owner: Social Development, Finance & Administration
+>
+> Currency: June 2014
+
+**Neighbourhoods (WGS84)**
+
+Shapefile: NEIGHBORHOODS_WGS84
+
+NEIGHBORHOODS_WGS84_readme.txt:
+
+> NEIGHBORHOODS_WGS84_readme  
+> * Column name  (Description)    
+> * AREA_S_CD = AREA_SHORT_CODE    
+> * AREA_NAME = AREA_NAME    
+
+Input shapefile
+```{r}
+nbds.sh <- readOGR("C:/Users/14165/Desktop/ArcGIS/SHAPEFILES/neighbourhoods_planning_areas_wgs84", "NEIGHBORHOODS_WGS84")
+```
+Add "id" column
+```{r}
+nbds.sh@data$id <- as.integer(nbds.sh@data$AREA_S_CD)
+```
+Make centroids of each neighbourhood, for placing labels when plotting
+```{r}
+nbds.sh.centroids  <- as.data.frame(gCentroid(nbds.sh, byid = TRUE))
+```
+Add "id" column
+```{r}
+nbds.sh.centroids$id <- nbds.sh@data$id
+```
+Shapefile processing
+```{r}
+nbds.sh.points = fortify(nbds.sh, region = "id")
+nbds.sh.df = join(nbds.sh.points, nbds.sh@data, by = "id")
+```
+Merge neighbourhood shapefile and Ontario Works dataframe
+```{r}
+nbds.sh.ow_2013 <- merge(nbds.sh.df, ow_nbds_2013_monthly, by = "id")
+```
+Make graphics object
+```{r}
+p.nbds_2013 <- ggplot() +
+  geom_polygon(data = nbds.sh.ow_2013, 
+               aes(x = long, y = lat, group = group, fill = MEAN_CASES_PER_MONTH), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="Cases", palette = "YlOrBr", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Mean monthly number of Ontario Works cases by neighbourhood in Toronto in 2013") + 
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.sh.centroids, size = 2)
+```
+Plot graphics object
+```{r}
+p.nbds_2013+guides(fill = guide_legend(reverse = TRUE))
+```
+
+
+
+# Time series
+
+Avril Coghlan, [Using R for Time Series Analysis](https://a-little-book-of-r-for-time-series.readthedocs.io/en/latest/src/timeseries.html)
+
+Vincent Zoonekynd, [Time series](http://zoonek2.free.fr/UNIX/48_R/15.html)
+
+
+
+## TESS Ontario Works data manipulation
+
+Group by month and create time series:
+```{r}
+ow_cases_months <- tess_dt[,.(MNTH, CASES, NEW_CASES, EXITS)]
+
+ow_cases_monthly <- ow_cases_months[,.(CASES=sum(CASES), NEW_CASES=sum(NEW_CASES), EXITS=sum(EXITS)),by=.(MNTH)]
+
+ow_cases_monthly$MNTH <- NULL
+
+head(ow_cases_monthly)
+```
+
+```{r}
+ow_ts <- ts(ow_cases_monthly, start = c(2004,1), frequency = 12)
+
+head(ow_ts)
+```
+
+## TESS Ontario Works plots
+
+Plot time series
+```{r}
+options(scipen=999) #do not use scientific notation
+
+plot(ow_ts)
+```
+
+Make time series of CASES
+
+```{r}
+CASES <- ts(ow_cases_monthly$CASES, start = c(2004,1), frequency = 12)
+
+plot(CASES)
+```
+
+Make time series of NEW_CASES
+
+```{r}
+NEW_CASES <- ts(ow_cases_monthly$NEW_CASES, start = c(2004,1), frequency = 12)
+
+plot(NEW_CASES)
+```
+
+
+## Decomposing time series into trend, seasonal, and remainder terms
+
+Now we use stats::decompose and stats::stl to separate time series as a sum of 
+trend, seasonal, and remainder terms.
+
+```{r}
+CASES_components <- decompose(CASES)
+```
+
+```{r}
+autoplot(CASES_components)
+```
+
+```{r}
+NEW_CASES_components <- decompose(NEW_CASES)
+```
+
+```{r}
+autoplot(NEW_CASES_components)
+```
+
+```{r}
+CASES.stl <- stl(CASES, s.window = "periodic")
+```
+
+```{r}
+autoplot(CASES.stl)
+```
+
+```{r}
+NEW_CASES.stl <- stl(NEW_CASES, s.window = "periodic")
+```
+
+```{r}
+autoplot(NEW_CASES.stl)
+```
+
+
+## Holt-Winters exponential smoothing
+
+```{r}
+CASES.HW <- HoltWinters(CASES)
+
+CASES.HW
+```
+
+```{r}
+plot(CASES.HW)
+```
+
+```{r}
+CASES.HW.forecast <- forecast(CASES.HW, h = 24)
+
+plot(CASES.HW.forecast)
+```
+
+
+## ARIMA
+
+```{r}
+CASES.arima <- auto.arima(CASES)
+```
+
+```{r}
+CASES.arima
+```
+
+
+```{r}
+op <- par(mfrow=c(2,1), mar=c(2,4,1,2)+.1)
+acf(CASES,  main="")
+pacf(CASES, main="")
+par(op)
+```
+
+
+```{r}
+CASES.forecast <- forecast(CASES, level = c(95), h = 22)
+
+plot(CASES.forecast)
+```
+
+```{r}
+CASES.arima.forecast <- forecast(CASES.arima, level = c(95), h = 22)
+
+plot(CASES.arima.forecast)
+```
+
+
+
+## Ontario Monthly Social Assistance Caseloads 1969-2018
+
+```{r}
+SA <- fread("historical_sa_recipients_dataset_q2_2018_19.csv")
+
+SA$Beneficiaries <- NULL
+```
+
+Make time series
+
+```{r}
+SA_ts <- ts(SA$Cases, start = c(1969,1), frequency = 12)
+```
+
+
+```{r}
+plot(SA_ts)
+```
+
+
+```{r}
+SA_ts_1997 <- window(SA_ts, c(1997,1))
+
+plot(SA_ts_1997)
+```
+
+```{r}
+SA_ts_1997.components <- decompose(SA_ts_1997)
+
+autoplot(SA_ts_1997.components)
+```
+
+
+```{r}
+SA_ts_1997.stl <- stl(SA_ts_1997, s.window = "periodic")
+
+autoplot(SA_ts_1997.stl)
+```
+
+
+## Maytree Social Assistance Summaries
+
+```{r}
+Maytree_ON <- fread("ON.csv")
+```
+
+```{r}
+str(Maytree_ON)
+```
+
+
+```{r}
+Maytree_OW.ts <- ts(Maytree_ON$`Ontario Works Cases`, start = 1997, frequency = 1)
+
+Maytree_ODSP.ts <- ts(Maytree_ON$`ODSP Cases`, start = 1997, frequency = 1)
+```
+
+```{r}
+plot(Maytree_OW.ts)
+```
+
+```{r}
+plot(Maytree_ODSP.ts)
+```
+
+```{r}
+plot(Maytree_ODSP.ts+Maytree_OW.ts)
+```
+
+## Statistics Canada Table 11-10-0239-01
+
+```{r}
+T1110023901 <- fread("1110023901-noSymbol.csv")
+```
+
+```{r}
+str(T1110023901)
+```
+
+
+```{r}
+T1110023901.ts <- ts(T1110023901$`Number of persons`, start = 1976, frequency = 1)
+
+plot(T1110023901.ts, ylab = "Number of persons", main = "Persons 16 years and older in Toronto with social assistance income" )
+```
+
+```{r}
+T1110023901.ts_1997 <- window(T1110023901.ts, c(1997,1))
+
+plot(T1110023901.ts_1997)
+```
+
+
+```{r}
+op <- par(mfrow=c(2,1), mar=c(2,4,1,2)+.1)
+acf(T1110023901.ts_1997,  main="")
+pacf(T1110023901.ts_1997, main="")
+par(op)
+```
+
+```{r}
+T1110023901.ts_1997.forecast <- forecast(T1110023901.ts_1997, level = c(95), h = 12)
+
+plot(T1110023901.ts_1997.forecast)
+```
+
+
+```{r}
+T1110023901.ts_1997.arima <- auto.arima(T1110023901.ts_1997)
+
+T1110023901.ts_1997.arima
+```
+
+```{r}
+T1110023901.ts_1997.arima.forecast <- forecast(T1110023901.ts_1997.arima, level = c(95), h = 5)
+
+plot(T1110023901.ts_1997.arima.forecast)
+```

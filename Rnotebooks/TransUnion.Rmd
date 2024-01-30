@@ -1,0 +1,172 @@
+---
+title: "TransUnion Debt Load Risk Scores in Toronto"
+output: html_notebook
+---
+
+# Author
+
+* Jordan Bell
+* July 13, 2019
+* <https://jordanbell2357.github.io/TransUnion.nb.html>
+
+
+
+```{r}
+library(data.table)
+library(plyr) #join
+library(ggplot2) #fortify, ggplot
+library(sp) #used by rgdal
+library(rgdal) #readOGR
+library(ggmap) #theme_nothing
+library(rgeos) #gCentroids
+library(scales) #scale_fill_distiller
+library(viridisLite)
+library(viridis)
+```
+
+
+# Wellbeing Toronto
+
+[Wellbeing Toronto - Economics](https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/#e3a085d5-8e94-e279-4c17-33c209141464)
+
+"WB-Economics.xlsx"
+
+[Wellbeing Toronto - Maps - City of Toronto](http://map.toronto.ca/wellbeing/)
+
+> TransUnion Debt Load Risk Score
+>
+> Methodological Notes: The Risk Score is a proprietary index value provided by TransUnion Canada
+> that indicates the likelihood of missing three consecutive loan payments. Low-value scores
+> ($<707$) indicate a High Risk of missing 3 consecutive loan payments; High-value scores (769+)
+> indicate a low risk. These risk scores are calculated for non-mortgage consumer debt such as lines
+> of credit, credit cards, automobile loans and installment loans. TransUnion data is provided by
+> postal code and covers approximately 92% of all Canadians with credit files. For privacy reasons,
+> postal codes with fewer than 15 credit files are suppressed. TransUnion dataset provided by the
+> Community Data Program (www.communitydata.ca).
+>
+> Source: For Reference Period 2011: TransUnion 2012 via the Community Data Program. 
+
+Exported to CSV "Debt_Risk_Score.csv" 
+
+Thomas Higgins, [TransUnion Risk Score: Make smarter, more strategic decisions](http://communitydata-donneescommunautaires.ca/sites/default/files/TransUnionRiskScorePresentation.pdf), Wednesday, December 12, 2012. 
+
+> (p. 3) Performance Definition
+>
+> 90+ Days Past Due or Worse including Public Record Bankruptcy and Write-Off
+>
+> 12mth Performance Window
+
+> (p. 10) Scoring Output
+>
+> Score range: 299 to 884
+>
+> TransUnion Risk Score delivers three (3) reason codes and a scorecard indicator with every score
+
+Financial Consumer Agency of Canada, [Credit report and score basics](https://www.canada.ca/en/financial-consumer-agency/services/credit-reports-score/credit-report-score-basics.html)
+
+> Your credit score is a three-digit number that comes from the information in your credit report. It
+> shows how well you manage credit and how risky it would be for a lender to lend you money.
+>
+> Your credit score is calculated using a formula based on your credit report.
+>
+> Note that:
+>
+> * you get points for actions that show you use credit responsibly
+> * you lose points for things that show you have difficulty managing credit
+>
+> Your credit score will change over time as your credit report is updated
+>
+> How a credit score is calculated
+>
+> It's not possible to know exactly how many points your score will go up or down based on the actions you take. Credit bureaus and lenders don't share the actual formulas they use to calculate credit scores.
+>
+> Factors that may affect your credit score include:
+>
+> * how long you've had credit
+> * if you carry a balance on your credit cards
+> * if you regularly miss payments
+> * the amount of your outstanding debts
+> * being close to your credit limit
+> * the number of times you try to get more credit
+> * the types of credit you're using
+> * if your debts have been sent to a collection agency
+> * any record of insolvency or bankruptcy
+
+```{r}
+Debt_Risk_Score <- fread("Debt_Risk_Score.csv")
+```
+
+```{r}
+str(Debt_Risk_Score)
+```
+
+```{r}
+Debt_Risk_Score <- Debt_Risk_Score[,.(id = `Neighbourhood Id`, SCORE = `Debt Risk Score`)]
+
+Debt_Risk_Score$id <- as.integer(Debt_Risk_Score$id)
+```
+
+```{r}
+str(Debt_Risk_Score)
+```
+
+```{r}
+summary(Debt_Risk_Score$SCORE)
+```
+
+```{r}
+nbds.sh <- readOGR("C:/Users/14165/Desktop/Shapefiles/neighbourhoods_planning_areas_wgs84", "NEIGHBORHOODS_WGS84")
+```
+
+```{r}
+str(nbds.sh@data)
+```
+
+```{r}
+nbds.sh@data$id <- as.integer(nbds.sh@data$AREA_S_CD)
+```
+
+```{r}
+nbds.centroids  <- as.data.frame(gCentroid(nbds.sh, byid = TRUE))
+```
+
+```{r}
+nbds.centroids$SCORE <- Debt_Risk_Score$SCORE
+```
+
+```{r}
+nbds.df = fortify(nbds.sh, region = "id")
+```
+
+```{r}
+nbds.Debt_Risk_Score <- merge(nbds.df, Debt_Risk_Score, by = "id")
+```
+
+Using viridis
+
+```{r}
+ggplot() +
+  geom_polygon(data = nbds.Debt_Risk_Score, 
+               aes(x = long, y = lat, group = group, fill = SCORE), 
+               color = "white", size = 0.1) + 
+  theme_nothing(legend = TRUE) +
+  scale_fill_viridis(option="magma", name="SCORE") +
+  geom_text(aes(x=x,y=y, group=NULL, label=SCORE), data = nbds.centroids, size = 1.9, color = "Black") +
+  labs(title="TransUnion Debt Load Risk Scores by Neighbourhood, 2011")
+```
+
+Using scales
+
+```{r}
+p.Debt_Risk_Score <- ggplot() +
+  geom_polygon(data = nbds.Debt_Risk_Score, 
+               aes(x = long, y = lat, group = group, fill = SCORE), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="SCORE", palette = "RdYlGn", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="TransUnion Debt Load Risk Scores by Neighbourhood, 2011") + 
+  geom_text(aes(x=x,y=y, group=NULL, label=SCORE), data = nbds.centroids, size = 2)
+
+p.Debt_Risk_Score+guides(fill = guide_legend(reverse = TRUE))
+```

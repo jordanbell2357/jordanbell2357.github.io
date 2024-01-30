@@ -1,0 +1,147 @@
+---
+title: "IRCC Permanent Resident Admissions Monthly Timeseries, January 2015 to May 2019"
+output: 
+  html_notebook: 
+    toc: yes
+---
+
+# Author
+
+* Jordan Bell
+* July 24, 2019
+* <https://jordanbell2357.github.io/IRCC.nb.html>
+
+```{r}
+library(forecast)
+library(pracma)
+library(RTransferEntropy)
+library(lmtest)
+```
+
+Immigration, Refugees and Citizenship Canada (IRCC), [Permanent Residents – Monthly IRCC Updates](https://open.canada.ca/data/en/dataset/f7e5498e-0ad8-4417-85c9-9b8aff9b9eda)
+
+> Canada - Admissions of Permanent Residents by Province/Territory, Census Division and Census Subdivision of the Intended Destination (2018 ranking), January 2015 - May 2019
+
+# Seasonal Decomposition
+
+```{r}
+IRCC_admissions <- read.csv("IRCC_admissions.csv")
+```
+
+```{r}
+Toronto.ts <- ts(IRCC_admissions$Toronto, frequency = 12, start = 2015)
+
+Toronto.ts.components <- decompose(Toronto.ts)
+
+autoplot(Toronto.ts.components)
+```
+
+```{r}
+ON.ts <- ts(IRCC_admissions$ON, frequency = 12, start = 2015)
+
+ON.ts.components <- decompose(ON.ts)
+
+autoplot(ON.ts.components)
+```
+
+```{r}
+Vancouver.ts <- ts(IRCC_admissions$Vancouver, frequency = 12, start = 2015)
+
+Vancouver.ts.components <- decompose(Vancouver.ts)
+
+autoplot(Vancouver.ts.components)
+```
+
+```{r}
+BC.ts <- ts(IRCC_admissions$BC, frequency = 12, start = 2015)
+
+BC.ts.components <- decompose(BC.ts)
+
+autoplot(BC.ts.components)
+```
+
+
+# Cross-Correlation
+
+E. E. Holmes, M. D. Scheuerell, and E. J. Ward, [Applied Time Series Analysis for Fisheries and Environmental Sciences. Section 4.4: Correlation within and among time series](https://nwfsc-timeseries.github.io/atsa-labs/sec-tslab-correlation-within-and-among-time-series.html)
+
+```{r}
+length(Toronto.ts)
+```
+
+```{r}
+ccf(Toronto.ts, Vancouver.ts, main = NA, lag = 52, ylab="Cross-correlation")
+```
+
+```{r}
+ccf(Toronto.ts, ON.ts, main = NA, lag = 52, ylab="Cross-correlation")
+```
+
+```{r}
+ccf(Vancouver.ts, BC.ts, main = NA, lag = 52, ylab="Cross-correlation")
+```
+
+```{r}
+ccf(ON.ts, BC.ts, main = NA, lag = 52, ylab="Cross-correlation")
+```
+
+
+
+# Sample Entropy
+
+pracma, [Approximate And Sample Entropy](https://www.rdocumentation.org/packages/pracma/versions/1.9.9/topics/approx_entropy)
+
+[Sample Entropy with Rcpp](https://www.r-bloggers.com/sample-entropy-with-rcpp/)
+
+```{r}
+sample_entropy(Toronto.ts)
+
+sample_entropy(ON.ts)
+
+sample_entropy(Vancouver.ts)
+
+sample_entropy(BC.ts)
+
+approx_entropy(Toronto.ts)
+
+approx_entropy(ON.ts)
+
+approx_entropy(Vancouver.ts)
+
+approx_entropy(BC.ts)
+```
+
+Simon Behrendt, Thomas Dimpfl, Franziska J. Peter, and David J. Zimmermann,
+[RTransferEntropy](https://cran.r-project.org/web/packages/RTransferEntropy/vignettes/transfer-entropy.html)
+
+```{r}
+calc_te(Toronto.ts, Vancouver.ts)
+```
+
+```{r}
+calc_te(Toronto.ts, ON.ts)
+```
+
+```{r}
+calc_te(ON.ts, BC.ts)
+```
+
+# Granger Causality
+
+lmtest, [Test For Granger Causality](https://www.rdocumentation.org/packages/lmtest/versions/0.9-37/topics/grangertest)
+
+```{r}
+grangertest(Toronto.ts, ON.ts)
+```
+
+```{r}
+grangertest(Vancouver.ts, BC.ts)
+```
+
+```{r}
+grangertest(Toronto.ts, Vancouver.ts)
+```
+
+```{r}
+grangertest(ON.ts, BC.ts)
+```

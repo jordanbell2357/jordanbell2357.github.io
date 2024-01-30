@@ -1,0 +1,298 @@
+---
+title: "Toronto Uber Movement and Transportation Tomorrow Survey (TTS) Datasets"
+output: 
+  html_notebook: 
+    toc: yes
+---
+
+# Author
+
+* Jordan Bell
+* July 24, 2019
+* <https://jordanbell2357.github.io/TTS.nb.html>
+
+```{r}
+library(data.table)
+library(dplyr)
+library(sp)
+library(sf)
+library(ggplot2)
+library(viridisLite)
+library(viridis)
+```
+
+# Uber Movement
+
+[Uber Movement](https://movement.uber.com/?lang=en-CA)
+
+GeoJSON file
+
+toronto_neighbourhoods.json
+
+Dataset for Q2 of 2018
+
+toronto-neighbourhoods-2018-2-All-MonthlyAggregate.csv
+
+```{r}
+uber_nbds <- st_read("./toronto_neighbourhoods.json", stringsAsFactors=FALSE)
+
+str(uber_nbds)
+```
+
+```{r}
+uber_nbds$ID <- as.integer(uber_nbds$MOVEMENT_ID)
+```
+
+```{r}
+uber_nbds$DISPLAY_NAME
+```
+
+
+## Bay Street Corridor
+
+Bay Street Corridor is City of Toronto Neighbourhood 76. This is 
+Uber Neighbourhood 113. We hold fixed this neighbourhood and examine travel times whose destination
+is to this neighbourhood.
+
+```{r}
+uber_movement <- fread("toronto-neighbourhoods-2018-2-All-MonthlyAggregate.csv")
+
+str(uber_movement)
+```
+
+[Introduction to data.table](https://cran.r-project.org/web/packages/data.table/vignettes/datatable-intro.html)
+
+```{r}
+uber_source_113 <- uber_movement[dstid == 113, .(MEAN_TRIP_DURATION = mean(mean_travel_time)), by = .(ID = sourceid)]
+
+str(uber_source_113)
+```
+
+Robin Lovelace, Jakub Nowosad, and Jannes Muenchow, [Geocomputation with R. Chapter 3: Attribute data operations](https://bookdown.org/robinlovelace/geocompr/attr.html)
+
+```{r}
+uber_source_113_nbds <- left_join(uber_nbds, uber_source_113, by = "ID")
+
+str(uber_source_113_nbds)
+```
+
+```{r}
+ggplot(uber_source_113_nbds) +
+   geom_sf(aes(fill = MEAN_TRIP_DURATION), color = "white") +
+  labs(title = "Mean Travel Time of Trips to Bay Street Corridor, 2018 Q2") +
+  scale_fill_viridis(option="magma", name="Seconds", direction=-1)
+```
+
+```{r}
+plot(uber_nbds[113,1])
+```
+
+## Playter Estates-Danforth
+
+Playter Estates-Danforth is City of Toronto Neighbourhood 67 and Uber Movement Neighbourhood
+122.
+
+```{r}
+uber_source_122 <- uber_movement[dstid == 122, .(MEAN_TRIP_DURATION = mean(mean_travel_time)), by = .(ID = sourceid)]
+
+uber_source_122_nbds <- left_join(uber_nbds, uber_source_122, by = "ID")
+```
+
+```{r}
+ggplot(uber_source_122_nbds) +
+   geom_sf(aes(fill = MEAN_TRIP_DURATION), color = "white") +
+  labs(title = "Mean Travel Time of Trips to Playter Estates-Danforth, 2018 Q2") +
+  scale_fill_viridis(option="magma", name="Seconds", direction=-1)
+```
+
+```{r}
+plot(uber_nbds[122,1])
+```
+
+
+# TTS 2016
+
+[Data Management Group, University of Toronto Transportation Research Institute](http://dmg.utoronto.ca/open-data/download-tts-data)
+
+**2016 TTS, City of Toronto**: <http://www.dmg.utoronto.ca/csv/tts/tts2016_ward_Toronto.csv>
+
+Government of Ontario, [Transportation Tomorrow historical survey data](https://www.ontario.ca/data/transportation-tomorrow-historical-survey-data)
+
+tts_dataset.zip
+
+1986 TTS, 1991 TTS, 1996 TTS, 2001 TTS, 2006 TTS, 2011 TTS,
+2016 TTS
+
+## Data Manipulation and Variable Selection
+
+```{r}
+TTS2016_csv <- fread("tts2016_ward_Toronto.csv")
+
+str(TTS2016_csv)
+```
+
+> * [55] "Total Number of persons"
+> * [79] "Number of persons without a driver's licence"                                                 
+> * [80] "Number of persons with a driver's licence"
+> * [84] "Number of persons with a TTC metro pass"                                                      
+> * [85] "Number of persons without any transit pass"   
+> * [147] "Total number of trips made by residents in 24-hour"
+> * [156] "Number of trips by residents by walk mode in 24-hour"
+> * [157] "Number of trips by residents by bicycle in 24-hour"    
+> * [416] "Number of transit trips made by residents with TTC Subway/RT"                                
+> * [417] "Number of transit trips made by residents with TTC Bus/Streetcar" 
+
+```{r}
+TTS2016_selected <- TTS2016_csv[c(55,79,80,84,85,147,156,157,416,417),]
+
+TTS2016_transpose <- transpose(TTS2016_selected)
+
+v <- as.vector(as.matrix(TTS2016_transpose)[1,])
+
+str(v)
+```
+
+```{r}
+TTS2016_table <- TTS2016_transpose[-c(1:2),]
+
+colnames(TTS2016_table) <- v
+  
+TTS2016_df <- as.data.frame(TTS2016_table)
+
+for (y in v){
+  TTS2016_df[,y] <- as.numeric(TTS2016_df[, y])
+}
+
+str(TTS2016_df)
+```
+
+```{r}
+TTS2016_df$SCODE_NAME <- c(1:44)
+
+str(TTS2016_df)
+```
+
+```{r}
+TTS2016_df$TRIPS_PER_DAY <- TTS2016_df$`Total number of trips made by residents in 24-hour`/
+  TTS2016_df$`Total Number of persons`
+
+TTS2016_df$DRIVERS_LICENCE <- TTS2016_df$`Number of persons with a driver's licence`/
+  TTS2016_df$`Total Number of persons`
+
+TTS2016_df$TTC_PASS <- TTS2016_df$`Number of persons with a TTC metro pass`/
+  TTS2016_df$`Total Number of persons`
+
+TTS2016_df$WALKS_PER_DAY <- TTS2016_df$`Number of trips by residents by walk mode in 24-hour`/
+  TTS2016_df$`Total Number of persons`
+
+TTS2016_df$BIKES_PER_DAY <- TTS2016_df$`Number of trips by residents by bicycle in 24-hour`/
+  TTS2016_df$`Total Number of persons`
+```
+
+## Plotting by Wards
+
+[City of Toronto Wards](https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/#29b6fadf-0bd6-2af9-4a8c-8c41da285ad7)
+
+```{r}
+wards <- st_read("C:/Users/14165/Desktop/Shapefiles/May2010_WGS84/icitw_wgs84.shp", stringsAsFactors=FALSE)
+
+str(wards)
+```
+
+```{r}
+wards$SCODE_NAME <- as.integer(wards$SCODE_NAME)
+```
+
+
+```{r}
+TTS2016_wards <- left_join(wards, TTS2016_df, by = "SCODE_NAME")
+
+str(TTS2016_wards)
+```
+
+```{r}
+ggplot(TTS2016_wards) +
+   geom_sf(aes(fill = `Total Number of persons`), color = "white") +
+  labs(title = "Total Number of persons by Ward, Toronto 2016")
+```
+
+```{r}
+ggplot(TTS2016_wards) +
+   geom_sf(aes(fill = TRIPS_PER_DAY), color = "white") +
+  labs(title = "Average daily trips per residents by Ward, Toronto 2016")
+```
+
+```{r}
+ggplot(TTS2016_wards) +
+   geom_sf(aes(fill = DRIVERS_LICENCE), color = "white") +
+  labs(title = "Ratio of persons with a driver's licence by Ward, Toronto 2016")
+```
+
+```{r}
+ggplot(TTS2016_wards) +
+   geom_sf(aes(fill = TTC_PASS), color = "white") +
+  labs(title = "Ratio of persons with a TTC metro pass by Ward, Toronto 2016")
+```
+
+```{r}
+ggplot(TTS2016_wards) +
+   geom_sf(aes(fill = WALKS_PER_DAY), color = "white") +
+  labs(title = "Average daily trips by walking per residents by Ward, Toronto 2016")
+```
+
+```{r}
+ggplot(TTS2016_wards) +
+   geom_sf(aes(fill = BIKES_PER_DAY), color = "white") +
+  labs(title = "Average daily trips by bicycle per residents by Ward, Toronto 2016")
+```
+
+# Wellbeing Toronto
+
+[Wellbeing Toronto - Transportation](https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/#cfa93ad9-7397-e851-f13e-f5097ed0fd55)
+
+WB-Transportation.xlsx
+
+```{r}
+nbds <- st_read("C:/Users/14165/Desktop/Shapefiles/neighbourhoods_planning_areas_wgs84/NEIGHBORHOODS_WGS84.shp", stringsAsFactors=FALSE)
+```
+
+```{r}
+nbds$AREA_S_CD <- as.integer(nbds$AREA_S_CD)
+```
+
+```{r}
+WB <- read.csv("WB-Transportation.csv")
+
+str(WB)
+```
+
+```{r}
+WB_nbds <- left_join(nbds, WB, by = "AREA_S_CD")
+
+str(WB_nbds)
+```
+
+## Plotting by Neighbourhoods
+
+```{r}
+ggplot(WB_nbds) +
+   geom_sf(aes(fill = Traffic_Collisions), color = "white") +
+  labs(title = "Traffic Collisions by Ward, Toronto 2011") +
+  scale_fill_viridis(option="magma", name="Collisions", direction=-1) 
+```
+
+```{r}
+ggplot(WB_nbds) +
+   geom_sf(aes(fill = Non_Traffic_Collisions), color = "white") +
+  labs(title = "Vehicle Collisions with Pedestrians/Other by Ward, Toronto 2011") +
+    scale_fill_viridis(option="magma", name="Collisions", direction=-1) 
+
+```
+
+
+```{r}
+ggplot(WB_nbds) +
+   geom_sf(aes(fill = Daily_Road_Volume), color = "white") +
+  labs(title = "Daily Road Volume by Ward, Toronto 2011") +
+    scale_fill_viridis(option="magma", name="Road Volume", direction=-1) 
+```

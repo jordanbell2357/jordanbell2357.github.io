@@ -1,0 +1,419 @@
+---
+title: "Toronto Water Consumption, 2000-2015"
+output: 
+  html_notebook: 
+    toc: yes
+---
+
+```{r}
+library(data.table) #fread
+library(plyr) #join
+library(ggplot2) #ggplot, fortify
+library(sp) #used by rgdal
+library(rgdal) #readOGR
+library(rgeos) #gCentroid
+library(scales) #scale_fill_distiller, percent_format
+library(ggmap) #theme_nothing
+library(forecast) #autoplot ts
+library(viridisLite)
+library(viridis)
+```
+
+# Author
+
+* Jordan Bell
+* July 10, 2019
+* <https://jordanbell2357.github.io/Toronto_Water.nb.html>
+
+# City of Toronto Water Billing by Ward
+
+[Water Billing by Ward](https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/#e2b419c3-a8a8-7949-d80d-02585f4832f5)
+
+CoT_Water_Consumption.ZIP
+
+Water_Consumption_2000.xls - Water_Consumption_2015.xls
+
+Volumes in cubic meters.
+
+"city ward", "year", "residential accounts", "annual residential usage",
+"average residential usage", "commercial accounts", "annual commercial usage",
+"average commercial usage", "total count", "total consumption", "average consumption"
+
+```{r}
+water_2000 <- fread("Water_Consumption_2000.csv")
+water_2001 <- fread("Water_Consumption_2001.csv")
+water_2002 <- fread("Water_Consumption_2002.csv")
+water_2003 <- fread("Water_Consumption_2003.csv")
+water_2004 <- fread("Water_Consumption_2004.csv")
+water_2005 <- fread("Water_Consumption_2005.csv")
+water_2006 <- fread("Water_Consumption_2006.csv")
+water_2007 <- fread("Water_Consumption_2007.csv")
+water_2008 <- fread("Water_Consumption_2008.csv")
+water_2009 <- fread("Water_Consumption_2009.csv")
+water_2010 <- fread("Water_Consumption_2010.csv")
+water_2011 <- fread("Water_Consumption_2011.csv")
+water_2012 <- fread("Water_Consumption_2012.csv")
+water_2013 <- fread("Water_Consumption_2013.csv")
+water_2014 <- fread("Water_Consumption_2014.csv")
+water_2015 <- fread("Water_Consumption_2015.csv")
+```
+
+```{r}
+v <- c("id", "year", "residential_accounts", "annual_residential_usage",
+"average_residential_usage", "commercial_accounts", "annual_commercial_usage",
+"average_commercial_usage", "total_count", "total_consumption", "average_consumption")
+
+setnames(water_2000, v)
+setnames(water_2001, v)
+setnames(water_2002, v)
+setnames(water_2003, v)
+setnames(water_2004, v)
+setnames(water_2005, v)
+setnames(water_2006, v)
+setnames(water_2007, v)
+setnames(water_2008, v)
+setnames(water_2009, v)
+setnames(water_2010, v)
+setnames(water_2011, v)
+setnames(water_2012, v)
+setnames(water_2013, v)
+setnames(water_2014, v)
+setnames(water_2015, v)
+```
+
+```{r}
+head(water_2015)
+```
+
+## Shapefile
+
+```{r}
+wards.sh <- readOGR("C:/Users/14165/Desktop/Shapefiles/May2010_WGS84", "icitw_wgs84")
+```
+
+Add "id" column
+```{r}
+wards.sh@data$id <- as.integer(wards.sh@data$SCODE_NAME)
+```
+
+Make centroids of each ward, for placing labels when plotting
+```{r}
+wards.centroids  <- as.data.frame(gCentroid(wards.sh, byid = TRUE))
+```
+
+Add "id" column
+```{r}
+wards.centroids$id <- wards.sh@data$id
+```
+
+Shapefile processing
+```{r}
+wards.points = fortify(wards.sh, region="id")
+
+wards.df = join(wards.points, wards.sh@data, by="id")
+```
+
+
+## Choropleths
+
+```{r}
+wards.water_2015 <- merge(wards.df, water_2015, by = "id")
+
+p.2015_residential <- ggplot() + 
+  geom_polygon(data = wards.water_2015,
+               aes(x = long, y = lat, group = group, fill = average_residential_usage),
+               color = "black", size = 0.25) +  
+  coord_map() + 
+  scale_fill_distiller(name="Cubic meters/account", palette = "Blues", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Average annual residential water use per account by ward, 2015") + 
+  geom_text(aes(x=x, y=y, group=NULL, label=id), data = wards.centroids, size = 2)
+
+p.2015_residential + guides(fill = guide_legend(reverse = TRUE))
+```
+
+```{r}
+p.2015_commercial <- ggplot() + 
+  geom_polygon(data = wards.water_2015,
+               aes(x = long, y = lat, group = group, fill = average_commercial_usage),
+               color = "black", size = 0.25) +  
+  coord_map() + 
+  scale_fill_distiller(name="Cubic meters/account", palette = "Blues", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Average annual commercial water use per account by ward, 2015") + 
+  geom_text(aes(x=x, y=y, group=NULL, label=id), data = wards.centroids, size = 2)
+
+p.2015_commercial + guides(fill = guide_legend(reverse = TRUE))
+```
+
+```{r}
+water_2015$average_residential_usage_change <- (water_2015$average_residential_usage-water_2000$average_residential_usage)/water_2000$average_residential_usage
+
+water_2015$average_commercial_usage_change <- (water_2015$average_commercial_usage-water_2000$average_commercial_usage)/water_2000$average_commercial_usage
+```
+
+```{r}
+wards.water_2015 <- merge(wards.df, water_2015, by = "id")
+
+p.residential_change <- ggplot() + 
+  geom_polygon(data = wards.water_2015,
+               aes(x = long, y = lat, group = group, fill = average_residential_usage_change),
+               color = "black", size = 0.25) +  
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="Change") + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Change in Average Annual Residential Water Usage, 2000-2015") + 
+  geom_text(aes(x=x, y=y, group=NULL, label=id), data = wards.centroids, size = 2)
+
+p.residential_change + guides(fill = guide_legend(reverse = TRUE))
+```
+
+```{r}
+p.commercial_change <- ggplot() + 
+  geom_polygon(data = wards.water_2015,
+               aes(x = long, y = lat, group = group, fill = average_commercial_usage_change),
+               color = "black", size = 0.25) +  
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="Change") + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Change in Average Annual Commercial Water Usage, 2000-2015") + 
+  geom_text(aes(x=x, y=y, group=NULL, label=id), data = wards.centroids, size = 2)
+
+p.commercial_change + guides(fill = guide_legend(reverse = TRUE))
+```
+
+
+## Time Series
+
+```{r}
+commercial_accounts_2000 <- sum(water_2000$commercial_accounts)
+  
+commercial_usage_2000 <- sum(water_2000$annual_commercial_usage)
+
+commercial_accounts_2001 <- sum(water_2001$commercial_accounts)
+  
+commercial_usage_2001 <- sum(water_2001$annual_commercial_usage)
+
+commercial_accounts_2002 <- sum(water_2002$commercial_accounts)
+  
+commercial_usage_2002 <- sum(water_2002$annual_commercial_usage)
+
+commercial_accounts_2003 <- sum(water_2003$commercial_accounts)
+  
+commercial_usage_2003 <- sum(water_2003$annual_commercial_usage)
+
+commercial_accounts_2004 <- sum(water_2005$commercial_accounts)
+  
+commercial_usage_2004 <- sum(water_2004$annual_commercial_usage)
+
+commercial_accounts_2005 <- sum(water_2005$commercial_accounts)
+  
+commercial_usage_2005 <- sum(water_2005$annual_commercial_usage)
+
+commercial_accounts_2006 <- sum(water_2006$commercial_accounts)
+  
+commercial_usage_2006 <- sum(water_2007$annual_commercial_usage)
+
+commercial_accounts_2007 <- sum(water_2007$commercial_accounts)
+  
+commercial_usage_2007 <- sum(water_2007$annual_commercial_usage)
+
+commercial_accounts_2008 <- sum(water_2008$commercial_accounts)
+  
+commercial_usage_2008 <- sum(water_2008$annual_commercial_usage)
+
+commercial_accounts_2009 <- sum(water_2009$commercial_accounts)
+  
+commercial_usage_2009 <- sum(water_2009$annual_commercial_usage)
+
+commercial_accounts_2010 <- sum(water_2010$commercial_accounts)
+  
+commercial_usage_2010 <- sum(water_2010$annual_commercial_usage)
+
+commercial_accounts_2011 <- sum(water_2011$commercial_accounts)
+  
+commercial_usage_2011 <- sum(water_2011$annual_commercial_usage)
+
+commercial_accounts_2012 <- sum(water_2012$commercial_accounts)
+  
+commercial_usage_2012 <- sum(water_2012$annual_commercial_usage)
+
+commercial_accounts_2013 <- sum(water_2013$commercial_accounts)
+  
+commercial_usage_2013 <- sum(water_2013$annual_commercial_usage)
+
+commercial_accounts_2014 <- sum(water_2014$commercial_accounts)
+  
+commercial_usage_2014 <- sum(water_2014$annual_commercial_usage)
+
+commercial_accounts_2015 <- sum(water_2015$commercial_accounts)
+  
+commercial_usage_2015 <- sum(water_2015$annual_commercial_usage)
+```
+
+```{r}
+commercial_accounts <- c(commercial_accounts_2000, commercial_accounts_2001, commercial_accounts_2002,
+                         commercial_accounts_2003, commercial_accounts_2004, commercial_accounts_2005,
+                         commercial_accounts_2006, commercial_accounts_2007, commercial_accounts_2008,
+                         commercial_accounts_2009, commercial_accounts_2010, commercial_accounts_2011,
+                         commercial_accounts_2012, commercial_accounts_2013, commercial_accounts_2014,
+                         commercial_accounts_2015)
+
+commercial_usage <- c(commercial_usage_2000, commercial_usage_2001, commercial_usage_2002,
+                      commercial_usage_2003, commercial_usage_2004, commercial_usage_2005,
+                      commercial_usage_2006, commercial_usage_2007, commercial_usage_2008,
+                      commercial_usage_2009, commercial_usage_2010, commercial_usage_2011,
+                      commercial_usage_2012, commercial_usage_2013, commercial_usage_2014,
+                      commercial_usage_2015)
+```
+
+```{r}
+average_commercial_usage <- commercial_usage/commercial_accounts
+```
+
+```{r}
+commercial_usage.ts <- ts(commercial_usage, start=2000, frequency=1)
+```
+
+```{r}
+plot(commercial_usage.ts, main = "Total Annual Commercial Usage, cubic meters")
+```
+
+```{r}
+average_commercial_usage.ts <- ts(average_commercial_usage, start=2000, frequency=1)
+```
+
+```{r}
+plot(average_commercial_usage.ts, main = "Average Annual Commercial Usage, cubic meters")
+```
+
+
+# Biennial Drinking Water Plants Survey (DKWP)
+
+[Potable water use by sector and average daily use](https://www150.statcan.gc.ca/t1/tbl1/en/cv!recreate.action?pid=3810027101&selectedNodeIds=1D7&checkedLevels=1D1,1D2&refPeriods=20110101,20170101&dimensionLayouts=layout3,layout3,layout2&vectorDisplay=false)
+
+Table: 38-10-0271-01 (formerly CANSIM 153-0127)
+
+3810027101_databaseLoadingData.csv
+
+```{r}
+DKWP_Ontario_use <- fread("3810027101_databaseLoadingData.csv")
+
+str(DKWP_Ontario_use)
+```
+
+```{r}
+unique(DKWP_Ontario_use$`Characteristics of potable water use`)
+```
+
+```{r}
+DKWP_Ontario_average_daily_per_capita <- DKWP_Ontario_use[`Characteristics of potable water use`=="Average daily total use per capita of the population served", .(Year = REF_DATE, Average_daily_per_capita_liters = VALUE)]
+
+DKWP_Ontario_average_residential <- DKWP_Ontario_use[`Characteristics of potable water use`=="Average daily residential use per capita of the population served", .(Year = REF_DATE, Average_daily_residential_liters = VALUE)]
+```
+
+```{r}
+DKWP_Ontario_average_daily_per_capita
+```
+
+```{r}
+DKWP_Ontario_average_residential
+```
+
+[Potable water volumes processed by drinking water plants, by month (x 1,000,000)](https://www150.statcan.gc.ca/t1/tbl1/en/cv!recreate.action?pid=3810027201&selectedNodeIds=1D7&checkedLevels=1D2&refPeriods=20050101,20170101&dimensionLayouts=layout3,layout3,layout2&vectorDisplay=false)
+
+Table: 38-10-0272-01 (formerly CANSIM 153-0124)
+
+3810027201_databaseLoadingData.csv
+
+```{r}
+DKWP_Ontario_processed <- fread("3810027201_databaseLoadingData.csv")
+```
+
+VALUE = millions cubic meters
+
+```{r}
+str(DKWP_Ontario_processed)
+```
+
+```{r}
+DKWP_Ontario_processed$Month <- match(DKWP_Ontario_processed$Month, month.name)
+
+str(DKWP_Ontario_processed)
+```
+
+```{r}
+DKWP_Ontario_processed_volumes <- DKWP_Ontario_processed[,.(Volume = VALUE), by = .(Year = REF_DATE, Month)]
+
+DKWP_Ontario_processed_volumes <- DKWP_Ontario_processed_volumes[order(Year,Month)]
+
+str(DKWP_Ontario_processed_volumes)
+```
+
+```{r}
+DKWP_Ontario_processed_volumes.ts <- ts(DKWP_Ontario_processed_volumes$Volume, start = 2005, frequency = 12)
+```
+
+```{r}
+DKWP_Ontario_processed_volumes.ts.components <- decompose(DKWP_Ontario_processed_volumes.ts)
+
+autoplot(DKWP_Ontario_processed_volumes.ts.components)
+```
+
+[Wastewater volumes processed by municipal sewage systems (x 1,000,000)](https://www150.statcan.gc.ca/t1/tbl1/en/cv!recreate.action?pid=3810009901&selectedNodeIds=1D7,2D2,2D3,2D4,2D5,2D6,2D7,2D8,2D9,2D10,2D11,2D12,2D13&checkedLevels=&refPeriods=20130101,20170101&dimensionLayouts=layout3,layout3,layout2&vectorDisplay=false)
+
+Table: 38-10-0099-01
+
+3810009901_databaseLoadingData.csv
+
+VALUE = millions cubic meters
+
+```{r}
+DKWP_Ontario_wastewater <- fread("3810009901_databaseLoadingData.csv")
+
+str(DKWP_Ontario_wastewater)
+```
+
+```{r}
+DKWP_Ontario_wastewater$Month <- match(DKWP_Ontario_wastewater$Month, month.name)
+
+DKWP_Ontario_wastewater_volumes <- DKWP_Ontario_wastewater[,.(Volume = VALUE), by = .(Year = REF_DATE, Month)]
+
+DKWP_Ontario_wastewater_volumes <- DKWP_Ontario_wastewater_volumes[order(Year,Month)]
+
+DKWP_Ontario_wastewater_volumes.ts <- ts(DKWP_Ontario_wastewater_volumes$Volume, start = 2013, frequency = 12)
+
+DKWP_Ontario_wastewater_volumes.ts.components <- decompose(DKWP_Ontario_wastewater_volumes.ts)
+
+autoplot(DKWP_Ontario_wastewater_volumes.ts.components)
+```
+
+# Further resources
+
+## Ontario Municipal Wastewater
+
+[Municipal treated wastewater effluent](https://www.ontario.ca/data/municipal-treated-wastewater-effluent)
+
+> Data contains flows and effluent quality from our municipal wastewater treatment plants.
+
+MWD2008.xlsx - MWD2016.xlsx
+
+## City of Toronto, 2019
+
+[Water Consumption Report](https://www.toronto.ca/services-payments/water-environment/tap-water-in-toronto/daily-water-consumption-report/)
+
+## MPMP Multi-Year Report
+
+[MPMP Multi-Year Report - By Municipality](https://efis.fma.csc.gov.on.ca/fir/MPMP%20Multi%20Year.htm)
+
+Toronto C 26-Jan-17: MPMP-MULTI-YR-Toronto C.xls
+
+e.g.
+
+> SLC 91 3112 45	b)	Total costs for the treatment and disposal of wastewater per megalitre.
+
+> SLC 91 3311  45	b)	Total costs for the treatment of drinking water per megalitre.
+
+## Statistics Canada
+
+[2011 Municipal Water Use Report – Municipal Water Use 2009 Statistics](http://www.ec.gc.ca/doc/publications/eau-water/com1454/index-eng.htm), Table 2: Total and Residential per Capita Water Use, by Province/Territory and Municipal Population

@@ -1,0 +1,833 @@
+---
+title: "Toronto Police Service Major Crime Indicators 2014 to 2018"
+output: 
+  html_notebook: 
+    toc: yes
+---
+
+# Author
+
+* Jordan Bell
+* July 10, 2019
+* <https://jordanbell2357.github.io/MCI.nb.html>
+
+# Sources and descriptions of datasets
+
+## TPS MCI 2014 to 2018
+
+Major Crime Indicators (MCI)
+
+[Toronto Police Service Public Safety Data Portal](http://data.torontopolice.on.ca/)
+
+"MCI_2014_to_2018.csv"
+
+<http://data.torontopolice.on.ca/pages/glossary>:
+
+> For the most part, the statistics on the following pages use an incident-based counting method. Generally, each type of major crime that occurred during an incident will be counted. For example, if an assault and a break and enter took place in the same incident, they would be counted once in each category. Statistics Canada also presents incident-based crime statistics, but generally counts only the most serious offence per incident. Some other police services present their crime statistics using the offence-based method, which counts all offences in each incident. It is important to note these differences when comparing our crime statistics to those provided by Statistics Canada or by other police agencies.
+
+> **Assault**. The direct or indirect application of force to another person, or the attempt or threat to apply force to another person, without that person’s consent.
+>
+> **Robbery**. The act of taking property from another person or business by the use of force or intimidation in the presence of the victim.
+>
+> **Break and Enter**. The act of entering a place with the intent to commit an indictable offence therein.
+>
+> **Auto Theft**. The act of taking or another person's vehicle (not including attempts). Auto Theft figures represent the number of vehicles stolen.
+>
+> **Theft Over**. The act of stealing property in excess of $5,000 (excluding auto theft).
+
+
+## City of Toronto Neighbourhood Profiles
+
+[Neighbourhood Profiles](https://portal0.cf.opendata.inter.sandbox-toronto.ca/dataset/neighbourhood-profiles/)
+
+> Statistics Canada does not release data at the level of Toronto's social planning neighbourhoods. Neighbourhood level data for 2016 are initially calculated by summing data for the Census Tracts which comprise each neighbourhood.
+
+"neighbourhood-profiles-2016-csv.csv"
+
+
+
+# Loading, understanding and cleaning datasets
+
+```{r}
+library(data.table) #fread, setcolorder, rbindlist
+library(sp) #used by rgdal
+library(rgdal) #readOGR
+library(ggplot2) #fortify
+library(plyr) #join
+library(scales) #scale_fill_distiller
+library(ggmap) #theme_nothing
+library(rgeos) #gCentroid
+library(forecast) #autoplot ts, auto.arima
+```
+
+
+## MCI dataset and definitions of UCR codes
+
+```{r}
+MCI_dt <- fread("MCI_2014_to_2018.csv")
+```
+
+```{r}
+str(MCI_dt)
+```
+
+```{r}
+unique(MCI_dt$premisetype)
+
+sort(unique(MCI_dt$ucr_code))
+
+sort(unique(MCI_dt$Hood_ID))
+
+unique(MCI_dt$MCI)
+```
+
+Uniform Crime Reporting Survey (UCR). [UCR Incident-Based Survey: RDC User Manual](https://gsg.uottawa.ca/data/teaching/crm/rdc_users_nanual_final_2013_feb_7rvd.pdf):
+
+>* 1410 - Aggravated Assault – Level 3
+>* 1420	- Assault with Weapon or Causing Bodily Harm – Level 2
+>* 1430	- Assault – Level 1
+>* 1440	- Unlawfully Causing Bodily Harm
+>* 1450	- Discharge Firearm with Intent
+>* 1455 - Using Firearm/Imitation of Firearm in commission of offence 
+>* 1457 - Pointing a Firearm
+>* 1460 -	Assault Against Peace-Public Officer
+>* 1461 – Assault against Peace Officer with a Weapon or Causing Bodily Harm 
+>* 1462 – Aggravated Assault against Peace Officer
+>* 1470 -	Criminal Negligence Causing Bodily Harm
+>* 1475 – Trap Likely To or Causing Bodily Harm
+>* 1480 -	Other Assaults
+>* 1610 - Robbery
+>* 2120 -	Break and Enter
+>* 2121 – Break and Enter to Steal Firearm 
+>* 2125 – Break and Enter of a Motor Vehicle to obtain a Firearm
+>* 2130 – Theft over $5,000
+>* 2132 – Theft over $5,000 from a Motor Vehicle
+>* 2133 – Shoplifting over $5,000 
+>* 2135 – Theft of a Motor Vehicle
+
+[Statistics Canada](https://www150.statcan.gc.ca/n1/pub/85-224-x/2008000/dd-eng.htm):
+
+>Assault refers to three levels of physical assaults which include the following categories:
+>
+>Common assault, (section 265). This includes the Criminal Code category assault (level 1). This is the least serious form of assault and includes pushing, slapping, punching, and face-to-face verbal threats.
+>
+>Major assault levels 2 and 3, (sections 267, 268). This includes more serious forms of assault, i.e. assault with a weapon or causing bodily harm (level 2) and aggravated assault (level 3). Assault level 2 involves carrying, using or threatening to use a weapon against someone or causing someone bodily harm. Assault level 3 involves wounding, maiming, disfiguring or endangering the life of someone.
+
+[Criminal Code (R.S.C., 1985, c. C-46)](https://laws-lois.justice.gc.ca/PDF/C-46.pdf)
+
+> **bodily harm** means any hurt or injury to a person that
+interferes with the health or comfort of the person and
+that is more than merely transient or trifling in nature; (*lésions corporelles*)
+
+> **Criminal negligence**  
+> 219 (1) Every one is criminally negligent who  
+> (a) in doing anything, or  
+> (b) in omitting to do anything that it is his duty to do,  
+> shows wanton or reckless disregard for the lives or safety  
+> of other persons.
+
+> **Assault**  
+> 265 (1) A person commits an assault when  
+> (a) without the consent of another person, he applies
+force intentionally to that other person, directly or indirectly;  
+> (b) he attempts or threatens, by an act or a gesture, to
+apply force to another person, if he has, or causes that
+other person to believe on reasonable grounds that he
+has, present ability to effect his purpose; or  
+> (c) while openly wearing or carrying a weapon or an
+imitation thereof, he accosts or impedes another person or begs.
+
+> **Breaking and entering with intent, committing offence or breaking out**  
+> 348 (1) Every one who  
+> (a) breaks and enters a place with intent to commit an indictable offence therein,  
+> (b) breaks and enters a place and commits an indictable offence therein, or  
+> (c) breaks out of a place after  
+> (i) committing an indictable offence therein, or  
+> (ii) entering the place with intent to commit an indictable offence therein,
+is guilty
+> (d) if the offence is committed in relation to a
+dwelling-house, of an indictable offence and liable to
+imprisonment for life, and  
+> (e) if the offence is committed in relation to a place
+other than a dwelling-house, of an indictable offence
+and liable to imprisonment for a term not exceeding
+ten years or of an offence punishable on summary
+conviction.
+
+> **Robbery**  
+> 343 Every one commits robbery who  
+> (a) steals, and for the purpose of extorting whatever is
+stolen or to prevent or overcome resistance to the
+stealing, uses violence or threats of violence to a person or property;  
+> (b) steals from any person and, at the time he steals or
+immediately before or immediately thereafter,
+wounds, beats, strikes or uses any personal violence to
+that person;  
+> (c) assaults any person with intent to steal from him; or  
+> (d) steals from any person while armed with an offensive weapon or imitation thereof.
+
+
+[Breaking and Entering in Canada - 2002](http://www.publications.gc.ca/Collection-R/Statcan/85-002-XIE/0050485-002-XIE.pdf), Juristat,
+Statistics Canada – Catalogue no. 85-002-XPE, Vol. 24, no. 5, page 1:
+> In 2002, over 31,000 persons were charged with B&E, the vast majority of whom were male (91%). Four in ten persons
+charged with B&E were youths. For property and violent crimes overall, youths represented 26% and 16% of persons
+charged, respectively.
+
+Mathieu Charron, [Neighbourhood Characteristics
+and the Distribution of
+Police-reported Crime in the City
+of Toronto](https://www150.statcan.gc.ca/n1/en/pub/85-561-m/85-561-m2009018-eng.pdf?st=KOlsEaoK),
+Canadian Centre For Justice Statistics, Statistics Canada,
+Catalogue no. 85-561-M, no. 18.  
+p. 11:
+
+> Crimes reported to the police are not randomly distributed throughout Toronto, but are concentrated in certain
+areas. An examination of local crime rates (the relationship between the number of crimes and the population
+at a local level) shows that the rates of violent crime are higher near the downtown core and in the east and
+northwest areas of the city (Map 5; See 'Mapping techniques' in the Methodology section for technical details.),
+which correspond roughly to the neighbourhoods along the Canadian National railway and to the areas where
+residents earn the lowest individual incomes (Map 3). There are some hot spots within these areas that have
+higher rates.Some of these are Danforth, downtown east side and the intersections of Lawrence and Morningside,
+Jane and Finch, and Jane and Eglinton.
+
+p. 12:  
+
+> In contrast, in the north area along Yonge Street, where residents earn a higher income, the violent crime rate is
+much lower than average. The business district—the Bay Street area where most of the workers in the finance
+and insurance industry are employed—has a violent crime rate well below the average for the city of Toronto. This
+differs from most of the other Canadian cities that have been the focus of studies, where the violent crime rate in the
+centre was high (Fitzgerald et al. 2004; Wallace et al. 2006; Kitchen 2006; Charron 2008). A similar situation was
+noted in Montréal, where the crime hot spots were spread out in many areas of the city (Savoie et al. 2006). The
+results suggest that the complex social geography of large cities like Toronto and Montréal is related to the spatial
+organization of crime.
+
+pp. 12-13:
+
+> Several neighbourhood characteristics vary according to the local police-reported crime rate. Neighbourhoods with a
+high rate of violent crime are more densely populated and have a higher percentage of residents living in multi-unit
+dwellings.They also have the highest percentages of children (under the age of 15), renters, single-parent families
+and visible minorities. The residents of these neighbourhoods are also less likely to have a university degree, more
+likely to earn a lower wage, and more likely to live in low-income households.
+
+p. 23:
+
+> As for demographic characteristics, rates of harassment and common assault increase with the proportion of children (under 15) and of young men (aged 20 to 29). Rates of sexual assaults, threats, major assaults and robberies
+decrease as the proportion of people aged 65 and older increases.
+
+p. 24:  
+
+> Motor vehicle theft rates are higher in neighbourhoods with higher proportions of children (under 15) and young men
+aged 20 to 29. They are also higher in neighbourhoods where access to socio-economic resources is limited or
+where there is a subway or train station, as well as in clusters of commercial and manufacturing activity.
+
+p. 25:
+
+> The spatial structure of breaking and entering varies essentially with urban and economic activity characteristics. More specifically, results show that breaking and entering is relatively more frequent in central neighbourhoods, with
+high commercial activity, but less so in areas with high numbers of office jobs (Table 9).
+
+p. 26:
+
+> Uttering threats, major assault and drug offences showed the closest association with access to socio-economic
+resources. Other strong links were noted for mischief, motor vehicle theft, robbery, sexual assault and common
+assault. Only other thefts (which exclude shoplifting, theft from a motor vehicle and motor vehicle theft) and breaking
+and entering were not significantly associated with access to socio-economic resources.
+Economic vulnerability was associated with generally serious violent crimes: robbery, major assault, sexual assault
+and uttering threats. It was not related to common assault, harassment or any type of property crime.
+
+
+## City of Toronto Neighbourhood Profiles
+
+Neighbourhoods are aggregated from census tracts.
+
+```{r}
+neighbourhoods_dt <- fread("neighbourhood-profiles-2016-csv.csv")
+
+neighbourhoods_dt <- neighbourhoods_dt[, -c("_id", "Category", "Topic", "Data Source", "City of Toronto")]
+```
+
+Select census variables.
+```{r}
+v <- c("Neighbourhood Number",
+       "Population, 2016",
+       "Land area in square kilometres",
+       "Children (0-14 years)",
+       "Seniors (65+ years)",
+       "Private households by household size",
+       "Average household size",
+       "In low income based on the Low-income cut-offs, after tax (LICO-AT)",
+       "Prevalence of low income based on the Low-income cut-offs, after tax (LICO-AT) (%)",
+       "Renter",
+       "Spending 30% or more of income on shelter costs",
+       "University certificate, diploma or degree at bachelor level or above",
+       "Unemployed (Males)",
+       "Unemployment rate (Males)",
+       "Public transit",
+       "Walked",
+       "Employment income: Average amount ($)",
+       "Social assistance benefits: Population with an amount")
+```
+
+Assuring myself that "Renter" only occurs once, and therefore is not counted both for households
+and persons but only for households.
+
+```{r}
+length(grep("Renter", neighbourhoods_dt$Characteristic))
+```
+
+```{r}
+neighbourhoods_v <-
+neighbourhoods_dt[Characteristic %in% v,]
+
+neighbourhoods_v <- transpose(neighbourhoods_v)
+
+head(neighbourhoods_v)
+```
+
+Land area is in square kilometers.
+Children are children 0 to 14.
+Households_unaffordable is the number of households spending 30% or more of income on shelter
+costs: see Canada Mortgage and Housing Corporation, [About Affordable Housing in Canada](https://www.cmhc-schl.gc.ca/en/developing-and-renovating/develop-new-affordable-housing/programs-and-information/about-affordable-housing-in-canada).
+
+```{r}
+neighbourhoods_census <- neighbourhoods_v[!1,.(id=V1, Population=V2, Land_area=V3, Children=V4,
+                                              Seniors=V5, Households=V6, Average_household_size=V7,
+                                              LICO=V8, LICO_prevalence=V9, Renters=V10,
+                                              Households_unaffordable=V11,
+                                              Unemployed_males=V12, Unemployment_rate_males=V13,
+                                              Public_transit_to_work=V14, Walk_to_work=V15,
+                                              Average_employment_income=V16,
+                                              Social_assistance_recipients=V17)]
+
+head(neighbourhoods_census) 
+```
+
+```{r}
+neighbourhoods_census$id <- as.integer(neighbourhoods_census$id)
+
+neighbourhoods_census$Population <- as.integer(gsub(",", "", neighbourhoods_census$Population))
+
+neighbourhoods_census$Land_area <- as.numeric(neighbourhoods_census$Land_area)
+
+neighbourhoods_census$Children <- as.integer(gsub(",", "", neighbourhoods_census$Children))
+
+neighbourhoods_census$Seniors <- as.integer(gsub(",", "", neighbourhoods_census$Seniors))
+
+neighbourhoods_census$Households <- as.integer(neighbourhoods_census$Households)
+
+neighbourhoods_census$Average_household_size <- as.numeric(neighbourhoods_census$Average_household_size)
+
+neighbourhoods_census$LICO <- as.integer(gsub(",", "", neighbourhoods_census$LICO))
+
+neighbourhoods_census$LICO_prevalence <- as.numeric(neighbourhoods_census$LICO_prevalence)
+
+neighbourhoods_census$Renters <- as.integer(gsub(",", "", neighbourhoods_census$Renters))
+
+neighbourhoods_census$Households_unaffordable <- as.integer(gsub(",", "", neighbourhoods_census$Households_unaffordable))
+
+neighbourhoods_census$Unemployed_males <- as.integer(gsub(",", "", neighbourhoods_census$Unemployed_males))
+
+neighbourhoods_census$Unemployment_rate_males <- as.numeric(neighbourhoods_census$Unemployment_rate_males)
+
+neighbourhoods_census$Public_transit_to_work <- as.integer(gsub(",", "", neighbourhoods_census$Public_transit_to_work))
+
+neighbourhoods_census$Walk_to_work <- as.integer(gsub(",", "", neighbourhoods_census$Walk_to_work))
+
+neighbourhoods_census$Average_employment_income <- as.numeric(gsub(",", "", neighbourhoods_census$Average_employment_income))
+
+neighbourhoods_census$Social_assistance_recipients <- as.integer(gsub(",", "", neighbourhoods_census$Social_assistance_recipients))
+
+neighbourhoods_census <- neighbourhoods_census[order(id)]
+
+str(neighbourhoods_census)
+```
+
+
+# Data manipulation
+
+## MCI
+
+```{r}
+MCI_2018 <- MCI_dt[reportedyear==2018]
+
+MCI_2018_nbd <- MCI_2018[, c("MCI", "Hood_ID")]
+
+str(MCI_2018_nbd)
+```
+
+The MCI dataset classifies reports as
+Assault, Auto Theft, Break and Enter, Robbery, and Theft Over.
+
+```{r}
+MCI_2018_grouped <- MCI_2018_nbd[,.(Number_of_reports=.N),by=.(id=Hood_ID, category=MCI)]
+
+MCI_2018_grouped <- MCI_2018_grouped[order(id)]
+```
+
+```{r}
+Assault_MCI <- MCI_2018_grouped[category=="Assault", .(Assault_reports=sum(Number_of_reports)), by=.(id)]
+
+Auto_theft_MCI <- MCI_2018_grouped[category=="Auto Theft", .(Auto_theft_reports=sum(Number_of_reports)), by=.(id)]
+
+BE_MCI <- MCI_2018_grouped[category=="Break and Enter", .(BE_reports=sum(Number_of_reports)), by=.(id)]
+
+Robbery_MCI <- MCI_2018_grouped[category=="Robbery", .(Robbery_reports=sum(Number_of_reports)), by=.(id)]
+
+Theft_over_MCI <- MCI_2018_grouped[category=="Theft Over", .(Theft_over_reports=sum(Number_of_reports)), by=.(id)]
+```
+
+
+## Merge demographic table and MCI table
+
+```{r}
+neighbourhoods_merged <- neighbourhoods_census
+
+neighbourhoods_merged <- merge(neighbourhoods_merged, Assault_MCI, by="id", all=TRUE)
+
+neighbourhoods_merged <- merge(neighbourhoods_merged, Robbery_MCI, by="id", all=TRUE)
+
+neighbourhoods_merged <- merge(neighbourhoods_merged, BE_MCI, by="id", all=TRUE)
+
+neighbourhoods_merged <- merge(neighbourhoods_merged, Theft_over_MCI, by="id", all=TRUE)
+
+neighbourhoods_merged <- merge(neighbourhoods_merged, Auto_theft_MCI, by="id", all=TRUE)
+
+#Robbery and Theft Over have missing values
+neighbourhoods_merged[is.na(neighbourhoods_merged)] <- 0
+
+str(neighbourhoods_merged)
+```
+Calculate ratios of MCI to population
+```{r}
+neighbourhoods_merged$Assault_ratio <- neighbourhoods_merged$Assault_reports/neighbourhoods_merged$Population
+
+neighbourhoods_merged$Auto_theft_ratio <- neighbourhoods_merged$Auto_theft_reports/neighbourhoods_merged$Population
+
+neighbourhoods_merged$BE_ratio <- neighbourhoods_merged$BE_reports/neighbourhoods_merged$Population
+
+neighbourhoods_merged$Robbery_ratio <- neighbourhoods_merged$Robbery_reports/neighbourhoods_merged$Population
+
+neighbourhoods_merged$Theft_over_ratio <- neighbourhoods_merged$Theft_over_reports/neighbourhoods_merged$Population
+```
+
+Calculate ratios of census variables to population
+
+```{r}
+toronto_avg_household_size <- neighbourhoods_merged[, mean(Average_household_size)]
+
+toronto_avg_employment_income <- neighbourhoods_merged[, mean(Average_employment_income)]
+
+toronto_avg_unemployment_rate_males <- neighbourhoods_merged[, mean(Unemployment_rate_males)]
+
+toronto_avg_household_size
+
+toronto_avg_employment_income
+
+toronto_avg_unemployment_rate_males
+```
+
+```{r}
+neighbourhoods_merged$Children_ratio <- neighbourhoods_merged$Children/neighbourhoods_merged$Population
+
+neighbourhoods_merged$Seniors_ratio <- neighbourhoods_merged$Seniors/neighbourhoods_merged$Population
+
+neighbourhoods_merged$Renters_ratio <- neighbourhoods_merged$Renters/neighbourhoods_merged$Households
+
+neighbourhoods_merged$Households_unaffordable_ratio <- neighbourhoods_merged$Households_unaffordable/neighbourhoods_merged$Households
+
+neighbourhoods_merged$Public_transit_to_work_ratio <- neighbourhoods_merged$Public_transit_to_work/neighbourhoods_merged$Population
+
+neighbourhoods_merged$Social_assistance_recipients_ratio <- neighbourhoods_merged$Social_assistance_recipients/neighbourhoods_merged$Population
+
+neighbourhoods_merged$Average_household_size_ratio <- neighbourhoods_merged$Average_household_size/toronto_avg_household_size
+
+neighbourhoods_merged$Average_employment_income_ratio <- neighbourhoods_merged$Average_employment_income/toronto_avg_employment_income
+
+neighbourhoods_merged$Unemployment_rate_males_ratio <- neighbourhoods_merged$Unemployment_rate_males/toronto_avg_unemployment_rate_males
+```
+
+
+# Choropleths by neighbourhood
+
+## Shapefile
+
+**Neighbourhoods (WGS84)**. City of Toronto, Social Development, Finance & Administration   
+
+<https://www.toronto.ca/city-government/data-research-maps/open-data/open-data-catalogue/#a45bd45a-ede8-730e-1abc-93105b2c439f>  
+
+"neighbourhoods_planning_areas_wgs84.zip"
+
+```{r}
+nbds <- readOGR("C:/Users/14165/Desktop/Shapefiles/neighbourhoods_planning_areas_wgs84", "NEIGHBORHOODS_WGS84")
+```
+Add "id" column
+```{r}
+nbds@data$id <- as.integer(nbds@data$AREA_S_CD)
+```
+Make centroids of each neighbourhood, for placing labels when plotting
+```{r}
+nbds.centroids  <- as.data.frame(gCentroid(nbds, byid = TRUE))
+```
+Add "id" column
+```{r}
+nbds.centroids$id <- nbds@data$id
+```
+Shapefile processing
+```{r}
+nbds.points = fortify(nbds, region = "id")
+
+nbds.df = join(nbds.points, nbds@data, by = "id")
+```
+
+## Merge neighbourhood shapefile and dataframe
+
+```{r}
+nbds_MCI <- merge(nbds.df, neighbourhoods_merged, by = "id")
+```
+
+## Low income cut-off (LICO) prevalence
+
+Make and plot choropleth
+
+```{r}
+p.LICO_percent <- ggplot() +
+  geom_polygon(data = nbds_MCI, 
+               aes(x = long, y = lat, group = group, fill = LICO_prevalence/100), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="LICO prevalence", labels=percent_format(accuracy=1), palette = "RdPu", trans = "reverse", breaks = pretty_breaks(n = 10)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="LICO households/total households, 2018") + 
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.centroids, size = 2)
+
+p.LICO_percent + guides(fill = guide_legend(reverse = TRUE))
+```
+
+## Assaults
+
+Make and plot choropleth
+```{r}
+p.assaults <- ggplot() +
+  geom_polygon(data = nbds_MCI, 
+               aes(x = long, y = lat, group = group, fill = Assault_reports), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="Assaults", palette = "YlOrRd", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Number of assault reports in Toronto by neighbourhood, 2018") + 
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.centroids, size = 2)
+
+p.assaults + guides(fill = guide_legend(reverse = TRUE))
+```
+
+```{r}
+p.assaults_ratio <- ggplot() +
+  geom_polygon(data = nbds_MCI, 
+               aes(x = long, y = lat, group = group, fill = Assault_ratio), 
+               color = "black", size = 0.2) + 
+  coord_map() + 
+  scale_fill_distiller(name="Assaults/Population", palette = "Reds", trans = "reverse", breaks = pretty_breaks(n = 8)) + 
+  theme_nothing(legend = TRUE) + 
+  labs(title="Number of assault reports/population count in Toronto by neighbourhood, 2018") + 
+  geom_text(aes(x=x,y=y, group=NULL, label=id), data = nbds.centroids, size = 2)
+
+p.assaults_ratio + guides(fill = guide_legend(reverse = TRUE))
+```
+
+
+
+# Density Maps of MCI Using stat_density2d
+
+<https://stats.stackexchange.com/questions/31726/scatterplot-with-contour-heat-overlay>
+
+<https://gist.github.com/lmullen/8375785>
+
+<https://gis.stackexchange.com/questions/165974/r-fortify-causing-polygons-to-tear>
+
+```{r}
+MCI_Assault_XY <- MCI_dt[MCI=="Assault",.(X,Y)]
+
+MCI_Auto_Theft_XY <- MCI_dt[MCI=="Auto Theft",.(X,Y)]
+
+MCI_BE_XY <- MCI_dt[MCI=="Break and Enter",.(X,Y)]
+
+MCI_Robbery_XY <- MCI_dt[MCI=="Robbery", .(X,Y)]
+
+MCI_Theft_Over_XY <- MCI_dt[MCI=="Theft Over", .(X,Y)]
+```
+
+## Shapefiles
+
+Read shapefiles
+
+```{r}
+torontoBoundary_wgs84 <- readOGR("C:/Users/14165/Desktop/Shapefiles/torontoBoundary_wgs84", "citygcs_regional_mun_wgs84")
+
+TTC_subway_lines_wgs84 <- readOGR("C:/Users/14165/Desktop/Shapefiles/TTC_subway_lines_wgs84", "TTC_SUBWAY_LINES_WGS84")
+
+centreline_wgs84 <- readOGR("C:/Users/14165/Desktop/Shapefiles/centreline_wgs84", "CENTRELINE_WGS84")
+```
+
+> Every linear feature has feature code (FCODE) defined as follow:
+>
+> 201100	Highway  
+> 201101	Highway Ramp  
+> 201200	Major Arterial Road  
+> 201201	Major Arterial Road Ramp  
+> 201300	Minor Arterial Road  
+> 201301	Minor Arterial Road Ramp  
+> 201400	Collector Road  
+> 201401	Collector Road Ramp  
+> 201500	Local Road  
+> 201600	Other Road  
+> 201601	Other Ramp  
+> 201700	Laneways  
+> 201800	Pending  
+> 201803  Access Road  
+> 201801  Busway  
+> 202001	Major Railway  
+> 202002	Minor Railway  
+> 202003	Railway under construction/proposed  
+> 203001	River  
+> 203002	Creek/Tributary  
+> 204001	Trail  
+> 204002	Walkway  
+> 205001	Hydro Line  
+> 206001	Major Shoreline  
+> 206002	Minor Shoreline (Land locked)  
+
+
+```{r}
+centreline_wgs84_major <- centreline_wgs84[centreline_wgs84@data$FCODE %in% c(201100, 201200, 201300, 201400),]
+```
+
+```{r}
+torontoBoundary_wgs84.df <- fortify(torontoBoundary_wgs84)
+
+TTC_subway_lines_wgs84.df <- fortify(TTC_subway_lines_wgs84)
+
+centreline_wgs84_major.df <- fortify(centreline_wgs84_major)
+```
+
+```{r}
+ggplot()+geom_path(data = centreline_wgs84_major.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = .2)
+```
+
+## Assault Reports in Toronto, 2014-2018
+
+```{r}
+ggplot() + 
+  geom_polygon(data = torontoBoundary_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = 1, fill=NA) +
+  geom_path(data = TTC_subway_lines_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'red', size = 1) +
+  geom_path(data = centreline_wgs84_major.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = .1) +
+  stat_density2d(data=MCI_Assault_XY, aes(x=X, y=Y, fill=..level..), alpha=0.2, geom = 'polygon', colour = 'black', contour=TRUE) +
+  scale_fill_continuous(low="yellow",high="red")+
+ theme_nothing(legend = TRUE) + 
+  labs(title="Assault Reports in Toronto, 2014-2018")
+```
+
+## Auto Theft Reports in Toronto, 2014-2018
+
+```{r}
+ggplot() + 
+  geom_polygon(data = torontoBoundary_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = 1, fill=NA) +
+  geom_path(data = TTC_subway_lines_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'red', size = 1) +
+  geom_path(data = centreline_wgs84_major.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = .1) +
+  stat_density2d(data=MCI_Auto_Theft_XY, aes(x=X, y=Y, fill=..level..), alpha=0.2, geom = 'polygon', colour = 'black', contour=TRUE) +
+  scale_fill_continuous(low="yellow",high="red") +
+ theme_nothing(legend = TRUE) + 
+  labs(title="Auto Theft Reports in Toronto, 2014-2018")
+```
+
+Change bandwidth parameter h
+
+```{r}
+ggplot() + 
+  geom_polygon(data = torontoBoundary_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = 1, fill=NA) +
+  geom_path(data = TTC_subway_lines_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'red', size = 1) +
+  geom_path(data = centreline_wgs84_major.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = .1) +
+  stat_density2d(data=MCI_Auto_Theft_XY, aes(x=X, y=Y, fill=..level..), alpha=0.2, h=0.05, n=300, geom = 'polygon', colour = 'black', contour=TRUE) +
+  scale_fill_continuous(low="yellow",high="red") +
+ theme_nothing(legend = TRUE) + 
+  labs(title="Auto Theft Reports in Toronto, 2014-2018. h=0.05")
+```
+
+
+## Break and Enter Reports in Toronto, 2014-2018
+
+```{r}
+ggplot() + 
+  geom_polygon(data = torontoBoundary_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = 1, fill=NA) +
+  geom_path(data = TTC_subway_lines_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'red', size = 1) +
+  geom_path(data = centreline_wgs84_major.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = .1) +
+  stat_density2d(data=MCI_BE_XY, aes(x=X, y=Y, fill=..level..), alpha=0.2, geom = 'polygon', colour = 'black', contour=TRUE) +
+  scale_fill_continuous(low="yellow",high="red") +
+ theme_nothing(legend = TRUE) + 
+  labs(title="Break and Enter Reports in Toronto, 2014-2018")
+```
+
+## Robbery Reports in Toronto, 2014-2018
+
+```{r}
+ggplot() + 
+  geom_polygon(data = torontoBoundary_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = 1, fill=NA) +
+  geom_path(data = TTC_subway_lines_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'red', size = 1) +
+  geom_path(data = centreline_wgs84_major.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = .1) +
+  stat_density2d(data=MCI_Robbery_XY, aes(x=X, y=Y, fill=..level..), alpha=0.2, geom = 'polygon', colour = 'black', contour=TRUE) +
+  scale_fill_continuous(low="yellow",high="red") +
+ theme_nothing(legend = TRUE) + 
+  labs(title="Robbery Reports in Toronto, 2014-2018")
+```
+
+## Theft Over $5000 Reports in Toronto, 2014-2018
+
+```{r}
+ggplot() + 
+  geom_polygon(data = torontoBoundary_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = 1, fill=NA) +
+  geom_path(data = TTC_subway_lines_wgs84.df, aes(x = long, y = lat, group = group),
+          color = 'red', size = 1) +
+  geom_path(data = centreline_wgs84_major.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = .1) +
+  stat_density2d(data=MCI_Theft_Over_XY, aes(x=X, y=Y, fill=..level..), alpha=0.2, geom = 'polygon', colour = 'black', contour=TRUE) +
+  scale_fill_continuous(low="yellow",high="red") +
+ theme_nothing(legend = TRUE) + 
+  labs(title="Theft Over $5000 Reports in Toronto, 2014-2018")
+```
+
+
+# Correlations Between MCI and Demographics
+
+```{r}
+str(neighbourhoods_merged)
+```
+
+```{r}
+neighbourhoods_ratios <-
+  neighbourhoods_merged[, c("Assault_ratio",
+                            "Auto_theft_ratio",
+                            "BE_ratio",
+                            "Robbery_ratio",
+                            "Theft_over_ratio",
+                            "Average_household_size",
+                            "LICO_prevalence",
+                            "Children_ratio",
+                            "Seniors_ratio",
+                            "Renters_ratio",
+                            "Public_transit_to_work_ratio",
+                            "Social_assistance_recipients_ratio",
+                            "Average_household_size_ratio",
+                            "Average_employment_income_ratio",
+                            "Unemployment_rate_males_ratio")]
+```
+
+Compute correlations; there are only weak correlations between the MCI and demographic ratios I have selected.
+
+```{r}
+cor(as.matrix(neighbourhoods_ratios))
+```
+
+
+# Time Series
+
+```{r}
+str(MCI_dt)
+```
+
+```{r}
+MCI_dt_dates <- MCI_dt[,.(reportedyear,reportedmonth,MCI)]
+
+MCI_dt_dates$reportedmonth <- match(MCI_dt_dates$reportedmonth, month.name)
+
+str(MCI_dt_dates)
+```
+
+## Assault Reports Time Series
+
+```{r}
+Assault_dt <- MCI_dt_dates[MCI=="Assault",.N, by = .(reportedyear,reportedmonth)]
+
+Assault_dt <- Assault_dt[order(reportedyear,reportedmonth)]
+
+str(Assault_dt)
+```
+
+```{r}
+Assault.ts <- ts(Assault_dt$N, start = 2014, frequency = 12)
+```
+
+```{r}
+autoplot(Assault.ts)
+```
+
+```{r}
+Assault.ts.components <- decompose(Assault.ts)
+```
+
+```{r}
+autoplot(Assault.ts.components)
+```
+
+```{r}
+Assault.ts.stl <- stl(Assault.ts, s.window = "periodic")
+```
+
+```{r}
+autoplot(Assault.ts.stl)
+```
+
+```{r}
+Assault.ts.arima <- auto.arima(Assault.ts)
+
+Assault.ts.arima
+```
+
+```{r}
+Assault.ts.arima.forecast <- forecast(Assault.ts.arima, level = c(95), h = 12)
+
+autoplot(Assault.ts.arima.forecast)
+```
+
+## Theft Over $5000 Time Series
+
+```{r}
+Theft_Over_dt <- MCI_dt_dates[MCI=="Theft Over",.N, by = .(reportedyear,reportedmonth)]
+
+Theft_Over_dt <- Theft_Over_dt[order(reportedyear,reportedmonth)]
+
+Theft_Over.ts <- ts(Theft_Over_dt$N, start = 2014, frequency = 12)
+
+Theft_Over.ts.components <- decompose(Theft_Over.ts)
+
+Theft_Over.ts.stl <- stl(Theft_Over.ts, s.window = "periodic")
+```
+
+```{r}
+autoplot(Theft_Over.ts.components)
+```
+
+```{r}
+autoplot(Theft_Over.ts.stl)
+```
+
+
+```{r}
+Theft_Over.ts.arima <- auto.arima(Theft_Over.ts)
+
+Theft_Over.ts.arima
+```

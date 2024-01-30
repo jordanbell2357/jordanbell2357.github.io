@@ -1,0 +1,642 @@
+---
+title: "Ontario Electricity Generation, Demand, and Price Timeseries"
+output: 
+  html_notebook: 
+    toc: yes
+---
+
+# Author
+
+* Jordan Bell
+* July 23, 2019
+* <https://jordanbell2357.github.io/IESO.nb.html>
+
+```{r}
+library(data.table)
+library(ggfortify) #autoplot
+library(forecast) #autoplot, auto.arima
+```
+
+# National Energy Board, Canada's Energy Future 2016: Energy Supply and Demand Projections to 2040
+
+National Energy Board, [Canada’s Energy Future 2016: Energy Supply and Demand Projections to 2040](https://apps.neb-one.gc.ca/ftrppndc4/dflt.aspx?GoCTemplateCulture=en-CA)
+
+Electricity Generation.xlsx (Ontario table) -> NEB_generation.csv
+
+Electricity Capacity.xlsx (Ontario table) -> NEB_capacity.csv
+
+## NEB Generation Projections (GWh)
+
+```{r}
+NEB_generation <- transpose(read.csv("NEB_generation.csv", header = FALSE))
+
+NEB_generation <- NEB_generation[-1,]
+
+colnames(NEB_generation) <- c("Year","Hydro","Wind","Biomass_and_Geothermal","Solar","Uranium","Coal","Natural_Gas","Oil")
+```
+
+Start year is 2005
+
+```{r}
+NEB_generation$Year <- NULL
+
+NEB_generation$Hydro <- as.numeric(NEB_generation$Hydro)
+
+NEB_generation$Wind <- as.numeric(NEB_generation$Wind)
+
+NEB_generation$Biomass_and_Geothermal <- as.numeric(NEB_generation$Biomass_and_Geothermal)
+
+NEB_generation$Solar <- as.numeric(NEB_generation$Solar)
+
+NEB_generation$Uranium <- as.numeric(NEB_generation$Uranium)
+
+NEB_generation$Coal <- as.numeric(NEB_generation$Coal)
+
+NEB_generation$Natural_Gas <- as.numeric(NEB_generation$Natural_Gas)
+
+NEB_generation$Oil <- as.numeric(NEB_generation$Oil)
+
+NEB_generation$Total <- NEB_generation$Hydro+NEB_generation$Wind+NEB_generation$Biomass_and_Geothermal+NEB_generation$Solar+NEB_generation$Uranium+NEB_generation$Coal+NEB_generation$Natural_Gas+NEB_generation$Oil
+```
+
+```{r}
+NEB_generation.ts <- ts(NEB_generation, start = 2005, frequency = 1)
+
+ggplot2::autoplot(NEB_generation.ts, ylab="GWh", main="Ontario Annual Electricity Generation Projections")
+```
+
+## NEB Capacity Projections (MW)
+
+```{r}
+NEB_capacity <- transpose(read.csv("NEB_capacity.csv", header = FALSE))
+
+NEB_capacity <- NEB_capacity[-1,]
+
+colnames(NEB_capacity) <- c("Year","Petroleum1","Petroleum2","Petroleum3","Coal", "Nuclear","Biomass_and_Geothermal","Solar","Wind","Hydro")
+
+NEB_capacity$Year <- NULL
+
+NEB_capacity$Petroleum <- as.numeric(NEB_capacity$Petroleum1) + as.numeric(NEB_capacity$Petroleum2) + as.numeric(NEB_capacity$Petroleum3)
+
+NEB_capacity$Petroleum1 <- NULL
+
+NEB_capacity$Petroleum2 <- NULL
+
+NEB_capacity$Petroleum3 <- NULL
+
+NEB_capacity$Coal <- as.numeric(NEB_capacity$Coal)
+
+NEB_capacity$Nuclear <- as.numeric(NEB_capacity$Nuclear)
+
+NEB_capacity$Biomass_and_Geothermal <- as.numeric(NEB_capacity$Biomass_and_Geothermal)
+
+NEB_capacity$Solar <- as.numeric(NEB_capacity$Solar)
+
+NEB_capacity$Wind <- as.numeric(NEB_capacity$Wind)
+
+NEB_capacity$Hydro <- as.numeric(NEB_capacity$Hydro)
+
+NEB_capacity$Total <- NEB_capacity$Petroleum+NEB_capacity$Coal+NEB_capacity$Nuclear+NEB_capacity$Biomass_and_Geothermal+NEB_capacity$Solar+NEB_capacity$Wind+NEB_capacity$Hydro
+```
+
+```{r}
+NEB_capacity.ts <- ts(NEB_capacity, start = 2005, frequency = 1)
+
+ggplot2::autoplot(NEB_capacity.ts, ylab="MW", main="Ontario Annual Electricity Capacity Projections")
+```
+
+# Monthly Electricity Supply and Disposition Survey (MELE), Ontario (MWh)
+
+Statistics Canada, Monthly Electricity Supply and Disposition Survey (MELE)
+
+Electric power generation, monthly generation by type of electricity. [Table: 25-10-0015-01](https://www150.statcan.gc.ca/t1/tbl1/en/cv!recreate.action?pid=2510001501&selectedNodeIds=1D7,3D2,3D3,3D4,3D5,3D6,3D7,3D8,3D9,3D10,3D11&checkedLevels=1D1,2D1&refPeriods=20080101,20190301&dimensionLayouts=layout3,layout3,layout2,layout3&vectorDisplay=false)
+
+```{r}
+MELE_generation <- read.csv("2510001501-noSymbol.csv")
+```
+
+```{r}
+MELE_generation$YEAR_MONTH <- NULL
+
+MELE_generation.ts <- ts(MELE_generation, start = 2008, frequency = 12)
+
+ggplot2::autoplot(MELE_generation.ts, ylab="MWh", main="Ontario Monthly Electricity Generation")
+```
+
+```{r}
+MELE_generation_total.ts <- ts(MELE_generation$Total, start = 2008, frequency = 12)
+
+plot(MELE_generation_total.ts)
+```
+
+```{r}
+MELE_generation_total.ts.components <- decompose(MELE_generation_total.ts)
+
+forecast::autoplot(MELE_generation_total.ts.components)
+```
+
+```{r}
+MELE_generation_total.ts.arima <- auto.arima(MELE_generation_total.ts)
+
+MELE_generation_total.ts.arima
+```
+
+```{r}
+MELE_generation_total.ts.arima.forecast <- forecast(MELE_generation_total.ts.arima, level = c(95), h = 120)
+
+forecast::autoplot(MELE_generation_total.ts.arima.forecast)
+```
+
+# IESO
+
+Independent Electricity System Operator (IESO), [Data Directory](http://ieso.ca/en/Power-Data/Data-Directory)
+
+## Hourly Generator Energy Output and Capability Report
+
+Hourly Generator Energy Output and Capability Report
+
+> The Hourly Generator Energy Output and Capability Report presents the energy output and capability for generating facilities in the IESO-administered energy market with a maximum output capability of 20 MW or more.
+
+<http://reports.ieso.ca/docrefs/helpfile/GenOutputCapability_h4.pdf>
+
+> **Output** is the actual energy production of the unit or facility. The hourly output is the facility’s five-minute
+outputs averaged over an hour. 
+>
+> **Capability** is the maximum potential output of the unit or facility under current conditions, which includes
+maximum unit derates and outages for that hour. In this report, Capability is provided for nuclear, hydro, gas,
+and biofuel generation (excluding wind and solar). 
+
+GOC-2010.xlsx - GOC-2019-Jan-April.xlsx -> IESO_output_2010.csv, IESO_capability_2010.csv -
+IESO_output_2019.csv, IESO_capability_2019.csv
+
+observation for each hour, 2010 to April 2019
+
+Robert J Hyman, [Seasonal periods](https://robjhyndman.com/hyndsight/seasonal-periods/).
+[forecast::msts](https://www.rdocumentation.org/packages/forecast/versions/8.7/topics/msts)
+
+```{r}
+IESO_output_2010 <- fread("IESO_output_2010.csv")
+
+IESO_output_2010$DATE <- NULL
+
+IESO_output_2010$HOUR <- NULL
+
+IESO_output_2010$TOTAL <- rowSums(IESO_output_2010, na.rm=TRUE)
+
+IESO_output_2010 <- IESO_output_2010[,.(TOTAL)]
+```
+
+```{r}
+IESO_output_2011 <- fread("IESO_output_2011.csv")
+
+IESO_output_2011$DATE <- NULL
+
+IESO_output_2011$HOUR <- NULL
+
+IESO_output_2011$TOTAL <- rowSums(IESO_output_2011, na.rm=TRUE)
+
+IESO_output_2011 <- IESO_output_2011[,.(TOTAL)]
+```
+
+```{r}
+IESO_output_2012 <- fread("IESO_output_2012.csv")
+
+IESO_output_2012$DATE <- NULL
+
+IESO_output_2012$HOUR <- NULL
+
+IESO_output_2012$TOTAL <- rowSums(IESO_output_2012, na.rm=TRUE)
+
+IESO_output_2012 <- IESO_output_2012[,.(TOTAL)]
+
+IESO_output_2012.ts <- msts(IESO_output_2012$TOTAL, seasonal.periods = c(24, 24*365.25), start=2012)
+```
+
+```{r}
+forecast::autoplot(IESO_output_2012.ts)
+```
+
+### 2012 Outliers
+
+```{r}
+which(IESO_output_2012$TOTAL==0)
+```
+
+3947: DATE 13-Jun-12, HOUR 11
+
+7834: DATE 22-Nov-12, HOUR 10
+
+```{r}
+IESO_output_2012$TOTAL[3947]
+```
+
+```{r}
+IESO_output_2012$TOTAL[7834]
+```
+
+```{r}
+IESO_output_2012$TOTAL[3947] <- IESO_output_2012$TOTAL[3946]
+
+IESO_output_2012$TOTAL[7834] <- IESO_output_2012$TOTAL[7833]
+
+IESO_output_2012.ts <- msts(IESO_output_2012$TOTAL, seasonal.periods = c(24, 24*365.25), start=2012)
+
+autoplot(IESO_output_2012.ts)
+```
+
+```{r}
+IESO_output_2013 <- fread("IESO_output_2013.csv")
+
+IESO_output_2013$DATE <- NULL
+
+IESO_output_2013$HOUR <- NULL
+
+IESO_output_2013$TOTAL <- rowSums(IESO_output_2013, na.rm=TRUE)
+
+IESO_output_2013 <- IESO_output_2013[,.(TOTAL)]
+```
+
+```{r}
+IESO_output_2014 <- fread("IESO_output_2014.csv")
+
+IESO_output_2014$DATE <- NULL
+
+IESO_output_2014$HOUR <- NULL
+
+IESO_output_2014$TOTAL <- rowSums(IESO_output_2014, na.rm=TRUE)
+
+IESO_output_2014 <- IESO_output_2014[,.(TOTAL)]
+```
+
+```{r}
+IESO_output_2015 <- fread("IESO_output_2015.csv")
+
+IESO_output_2015 <- IESO_output_2015[,.(TOTAL)]
+```
+
+```{r}
+IESO_output_2016 <- fread("IESO_output_2016.csv")
+
+IESO_output_2016 <- IESO_output_2016[,.(TOTAL)]
+
+IESO_output_2016.ts <- msts(IESO_output_2015$TOTAL, seasonal.periods = c(24, 24*365.25), start=2016)
+```
+
+```{r}
+forecast::autoplot(IESO_output_2016.ts)
+```
+
+### 2016 Outliers
+
+Autoregressive replacement of outlier values
+
+```{r}
+for (t in which(IESO_output_2016$TOTAL<4000)){
+  IESO_output_2016$TOTAL[t] <- IESO_output_2016$TOTAL[t-1] 
+}
+```
+
+```{r}
+IESO_output_2017 <- fread("IESO_output_2017.csv")
+
+IESO_output_2017 <- IESO_output_2017[,.(TOTAL)]
+```
+
+```{r}
+IESO_output_2018 <- fread("IESO_output_2018.csv")
+
+IESO_output_2018 <- IESO_output_2018[,.(TOTAL)]
+```
+
+```{r}
+IESO_output_2019 <- fread("IESO_output_2019.csv")
+
+IESO_output_2019$DATE <- NULL
+
+IESO_output_2019$HOUR <- NULL
+
+IESO_output_2019$TOTAL <- rowSums(IESO_output_2019, na.rm=TRUE)
+
+IESO_output_2019 <- IESO_output_2019[,.(TOTAL)]
+```
+
+```{r}
+IESO_output_2010_to_2019 <- do.call("rbind",list(IESO_output_2010,IESO_output_2011,IESO_output_2012,
+                                           IESO_output_2013, IESO_output_2014, IESO_output_2015,
+                                           IESO_output_2016, IESO_output_2017, IESO_output_2018,
+                                           IESO_output_2019))
+```
+
+```{r}
+IESO_output_2010_to_2019.ts <- msts(IESO_output_2010_to_2019$TOTAL, seasonal.periods = c(24, 168, 8766), start=2010)
+```
+
+```{r}
+forecast::autoplot(IESO_output_2010_to_2019.ts)
+```
+
+```{r}
+IESO_output_2010_to_2019.ts.components <- mstl(IESO_output_2010_to_2019.ts)
+
+forecast::autoplot(IESO_output_2010_to_2019.ts.components)
+```
+
+```{r}
+IESO_output_2010_to_2019.24.ts <- IESO_output_2010_to_2019.ts.components[, "Seasonal24"]
+
+IESO_output_2010_to_2019.168.ts <- IESO_output_2010_to_2019.ts.components[, "Seasonal168"]
+
+IESO_output_2010_to_2019.8766.ts <- IESO_output_2010_to_2019.ts.components[, "Seasonal8766"]
+
+autoplot(subset(IESO_output_2010_to_2019.24.ts, end = 24*7*4))
+```
+
+```{r}
+autoplot(subset(IESO_output_2010_to_2019.168.ts, end = 24*7*4))
+```
+
+```{r}
+autoplot(subset(IESO_output_2010_to_2019.8766.ts, end = 24*7*52))
+```
+
+
+## Realtime Constrained Totals Report (Ontario and Market Demand)
+
+<http://reports.ieso.ca/docrefs/helpfile/RealtimeConstTotals_h2.pdf>
+
+> TOTAL ENERGY: Total energy dispatched into the IESO-controlled grid, calculated as Ontario
+generation plus imports
+>
+> TOTAL LOSS: Total losses in the IESO-controlled grid, calculated by the load flow
+>
+> TOTAL LOAD: Total system load, calculated as Total Energy - Total Loss
+>
+> TOTAL DISP LOAD: Total MW withdrawn from the IESO-controlled grid by dispatchable load, where
+the value represents the system-wide amount of dispatchable load that was
+dispatched down. For example, if the load is bidding 100 MW and gets
+dispatched down to 90 MW, then the Total Disp Load quantity is 10 MW
+>
+> ONTARIO DEMAND: Total Ontario electricity demand, calculated as: 
+>
+> Total Energy + Total Generation Without Offers - Total Exports + Total Off Market +/- Over/Under
+Generation
+
+[Hourly Demand Report](http://reports.ieso.ca/public/Demand/)
+
+PUB_Demand_2002.csv - PUB_Demand_2019.csv (to July)
+
+```{r}
+Demand_2010 <- fread("PUB_Demand_2010.csv")
+
+Demand_2010 <- Demand_2010[,.(DEMAND = `Market Demand`)]
+```
+
+```{r}
+Demand_2011 <- fread("PUB_Demand_2011.csv")
+
+Demand_2011 <- Demand_2011[,.(DEMAND = `Market Demand`)]
+```
+
+```{r}
+Demand_2012 <- fread("PUB_Demand_2012.csv")
+
+Demand_2012 <- Demand_2012[,.(DEMAND = `Market Demand`)]
+```
+
+```{r}
+Demand_2013 <- fread("PUB_Demand_2013.csv")
+
+Demand_2013 <- Demand_2013[,.(DEMAND = `Market Demand`)]
+```
+
+```{r}
+Demand_2014 <- fread("PUB_Demand_2014.csv")
+
+Demand_2014 <- Demand_2014[,.(DEMAND = `Market Demand`)]
+```
+
+```{r}
+Demand_2015 <- fread("PUB_Demand_2015.csv")
+
+Demand_2015 <- Demand_2015[,.(DEMAND = `Market Demand`)]
+```
+
+```{r}
+Demand_2016 <- fread("PUB_Demand_2016.csv")
+
+Demand_2016 <- Demand_2016[,.(DEMAND = `Market Demand`)]
+```
+
+```{r}
+Demand_2017 <- fread("PUB_Demand_2017.csv")
+
+Demand_2017 <- Demand_2017[,.(DEMAND = `Market Demand`)]
+```
+
+```{r}
+Demand_2018 <- fread("PUB_Demand_2018.csv")
+
+Demand_2018 <- Demand_2018[,.(DEMAND = `Market Demand`)]
+```
+
+```{r}
+Demand_2019 <- fread("PUB_Demand_2019.csv")
+
+Demand_2019 <- Demand_2019[,.(DEMAND = `Market Demand`)]
+```
+
+```{r}
+Demand_2010_to_2019 <- do.call("rbind",list(Demand_2010,Demand_2011,Demand_2012,
+                                           Demand_2013, Demand_2014, Demand_2015,
+                                           Demand_2016, Demand_2017, Demand_2018,
+                                           Demand_2019))
+```
+
+```{r}
+Demand_2010_to_2019.ts <- msts(Demand_2010_to_2019$DEMAND, seasonal.periods = c(24, 168, 8766), start=2010)
+```
+
+```{r}
+Demand_2010_to_2019.ts.components <- mstl(Demand_2010_to_2019.ts)
+
+forecast::autoplot(Demand_2010_to_2019.ts.components)
+```
+
+```{r}
+attributes(Demand_2010_to_2019.ts.components)
+```
+
+```{r}
+Demand_2010_to_2019.24.ts <- Demand_2010_to_2019.ts.components[, "Seasonal24"]
+
+Demand_2010_to_2019.168.ts <- Demand_2010_to_2019.ts.components[, "Seasonal168"]
+
+Demand_2010_to_2019.8766.ts <- Demand_2010_to_2019.ts.components[, "Seasonal8766"]
+
+class(Demand_2010_to_2019.8766.ts)
+```
+
+```{r}
+autoplot(subset(Demand_2010_to_2019.Seasonal24.ts, end = 24*7*4))
+```
+
+```{r}
+autoplot(subset(Demand_2010_to_2019.168.ts, end = 24*7*4))
+```
+
+```{r}
+autoplot(subset(Demand_2010_to_2019.8766.ts, end = 24*7*365))
+```
+
+
+
+
+## Hourly Ontario Energy Price (HOEP)
+
+[Yearly Hourly HOEP OR Predispatch Report
+](http://reports.ieso.ca/public/PriceHOEPPredispOR/)
+
+PUB_PriceHOEPPredispOR_2002.csv - PUB_PriceHOEPPredispOR_2019.csv (to July)
+
+```{r}
+HOEP_2010 <- fread("PUB_PriceHOEPPredispOR_2010.csv")
+
+HOEP_2010 <- HOEP_2010[,.(HOEP)]
+```
+
+```{r}
+HOEP_2011 <- fread("PUB_PriceHOEPPredispOR_2011.csv")
+
+HOEP_2011 <- HOEP_2011[,.(HOEP)]
+```
+
+```{r}
+HOEP_2012 <- fread("PUB_PriceHOEPPredispOR_2012.csv")
+
+HOEP_2012 <- HOEP_2012[,.(HOEP)]
+```
+
+```{r}
+HOEP_2013 <- fread("PUB_PriceHOEPPredispOR_2013.csv")
+
+HOEP_2013 <- HOEP_2013[,.(HOEP)]
+```
+
+```{r}
+HOEP_2014 <- fread("PUB_PriceHOEPPredispOR_2014.csv")
+
+HOEP_2014 <- HOEP_2014[,.(HOEP)]
+```
+
+```{r}
+HOEP_2015 <- fread("PUB_PriceHOEPPredispOR_2015.csv")
+
+HOEP_2015 <- HOEP_2015[,.(HOEP)]
+```
+
+```{r}
+HOEP_2016 <- fread("PUB_PriceHOEPPredispOR_2016.csv")
+
+HOEP_2016 <- HOEP_2016[,.(HOEP)]
+```
+
+```{r}
+HOEP_2017 <- fread("PUB_PriceHOEPPredispOR_2017.csv")
+
+HOEP_2017 <- HOEP_2017[,.(HOEP)]
+```
+
+```{r}
+HOEP_2018 <- fread("PUB_PriceHOEPPredispOR_2018.csv")
+
+HOEP_2018 <- HOEP_2018[,.(HOEP)]
+```
+
+```{r}
+HOEP_2018.ts <- ts(HOEP_2018$HOEP, frequency = 24)
+
+HOEP_2018.ts.components <- decompose(HOEP_2018.ts)
+
+forecast::autoplot(HOEP_2018.ts.components)
+```
+
+```{r}
+autoplot(subset(HOEP_2018.ts.components$seasonal, end = 24*7*4))
+```
+
+
+```{r}
+HOEP_2019 <- fread("PUB_PriceHOEPPredispOR_2019.csv")
+
+HOEP_2019 <- HOEP_2019[,.(HOEP)]
+```
+
+```{r}
+HOEP_2010_to_2019 <- do.call("rbind",list(HOEP_2010,HOEP_2011,HOEP_2012,
+                                           HOEP_2013, HOEP_2014, HOEP_2015,
+                                           HOEP_2016, HOEP_2017, HOEP_2018,
+                                           HOEP_2019))
+```
+
+```{r}
+HOEP_2010_to_2019.ts <- msts(HOEP_2010_to_2019$HOEP, seasonal.periods = c(24, 168, 8766), start=2010)
+```
+
+```{r}
+autoplot(HOEP_2010_to_2019.ts)
+```
+
+```{r}
+HOEP_2010_to_2019.ts.components <- mstl(HOEP_2010_to_2019.ts)
+
+forecast::autoplot(HOEP_2010_to_2019.ts.components)
+```
+
+```{r}
+HOEP_2010_to_2019.24.ts <- HOEP_2010_to_2019.ts.components[, "Seasonal24"]
+
+HOEP_2010_to_2019.168.ts <- HOEP_2010_to_2019.ts.components[, "Seasonal168"]
+
+HOEP_2010_to_2019.8766.ts <- HOEP_2010_to_2019.ts.components[, "Seasonal8766"]
+
+autoplot(subset(HOEP_2010_to_2019.24.ts, end = 24*7*4))
+```
+
+```{r}
+autoplot(subset(HOEP_2010_to_2019.168.ts, end = 24*7*4))
+```
+
+```{r}
+autoplot(subset(HOEP_2010_to_2019.8766.ts, end = 24*7*52))
+```
+
+
+```{r}
+autoplot(subset(HOEP_2010_to_2019.ts.components[,"Seasonal24"], end = 24*7*4))
+```
+
+# U.S. Energy Information Administration (EIA): State of New York
+
+[U.S. Energy Information Administration (EIA)](https://www.eia.gov/)
+
+[Average retail price of electricity : New York : all sectors : monthly. Cents per kWh](https://www.eia.gov/electricity/data/browser/#/topic/7?agg=0,1&geo=0002&endsec=vg&freq=M&start=200101&end=201904&ctype=linechart&ltype=pin&rtype=s&maptype=0&rse=0&pin=ELEC.PRICE.NY-ALL.M~ELEC.PRICE.NY-RES.M~ELEC.PRICE.NY-COM.M~ELEC.PRICE.NY-IND.M~ELEC.PRICE.NY-TRA.M~ELEC.PRICE.NY-OTH.M)
+
+```{r}
+EIA_NY <- fread("EIA_NY.csv")
+```
+
+```{r}
+EIA_NY <- EIA_NY[nrow(EIA_NY):1,]
+
+EIA_NY <- EIA_NY[, .(Month, Cents_per_kWh = Average_retail_price_electricity_monthly_cents_per_kWh)]
+
+head(EIA_NY)
+```
+
+```{r}
+EIA_NY.ts <- ts(EIA_NY$Cents_per_kWh, frequency = 12, start = 2001)
+
+EIA_NY.ts.components <- decompose(EIA_NY.ts)
+
+forecast::autoplot(EIA_NY.ts.components)
+```

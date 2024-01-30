@@ -1,0 +1,526 @@
+---
+title: "American Religious Identification Survey (ARIS) Datasets, 2008 and 2001"
+output: 
+  html_notebook: 
+    toc: yes
+---
+
+* Jordan Bell
+* July 10, 2019
+* <https://jordanbell2357.github.io/ARIS.nb.html>
+
+
+```{r}
+library(data.table) #fread
+library(sp) #used by rgdal
+library(rgdal) #readOGR
+library(ggplot2) #fortify
+library(plyr) #join
+library(dplyr) #left_join
+library(scales) #percent
+library(viridisLite)
+library(viridis)
+library(openintro) #state2abbr
+library(rgeos) #gCentroid
+library(cdlTools) #fips
+library(ggmap) #theme_nothing
+```
+
+# ARIS 2008
+
+[ARIS (American Religious Identification Survey)](https://commons.trincoll.edu/aris/)
+
+[The Association of Religion Data Archives (ARDA)](http://www.thearda.com/Archive/browse.asp)
+
+[American Religious Identification Survey, 2008](http://www.thearda.com/Archive/Files/Descriptions/ARIS2008.asp)
+
+> The American Religious Identification Survey (ARIS) 2008 is the third in a landmark time series of large, nationally representative surveys that track changes in the religious loyalties of the U.S. adult population within the 28 contiguous states from 1990 to 2008. The 2001 and 2008 surveys are replicas of the 1990 survey, and are led by the same academic research team using an identical methodology of random-digit-dialed telephone interviews (RDD) and the same unprompted, open-ended key question "What is your religion, if any?" Interviewers did not prompt or offer a suggested list of potential answers. Moreover, the self-description of respondents was not based on whether established religious bodies or institutions considered them to be members. To the contrary, the surveys sought to determine whether the respondents regarded themselves as adherents of a religious community. The surveys tap subjective, rather than objective, standards of religious identification. The value of this unique series of national surveys, which allows scientific monitoring of change over time, has been recognized by the U.S. Bureau of the Census The Bureau itself is constitutionally precluded from such an inquiry into religion, and so has incorporated NSRI/ARIS findings into its official publication the Statistical Abstract of the United States since 2003.
+
+> Cases: 54,461  
+> Variables: 33  
+> Weight Variable: POPWGHT  
+> Date Collected: February - November 2008
+
+cf. [Religious Population by State](https://data.world/databeats/religious-population-by-state)
+
+```{r}
+ARIS2008 <- fread("ARIS2008.csv")
+```
+
+```{r}
+str(ARIS2008)
+```
+
+## Religions by Frequencies
+
+```{r}
+major <- names(head(sort(prop.table(table(ARIS2008$RELIG)), decreasing=TRUE), 17))
+
+major
+```
+
+```{r}
+ARIS2008_major <- ARIS2008[RELIG %in% major,]
+
+nrow(ARIS2008_major)
+```
+
+```{r}
+ggplot(ARIS2008_major, aes(RELIG)) +
+  geom_bar(mapping = aes(x = RELIG, y = ..prop.., group = 1), stat = "count") +
+  scale_y_continuous(labels = scales::percent) +
+  coord_flip()+theme(axis.text = element_text(size = 7))
+```
+
+## Contingency Tables
+
+```{r}
+prop.table(table(ARIS2008_major$RELIG, ARIS2008_major$POLAFFIL), margin=1)
+```
+
+```{r}
+prop.table(table(ARIS2008_major$RELIG, ARIS2008_major$REGVOTE), margin=1)
+```
+
+## State FIPS Codes
+
+```{r}
+sort(unique(ARIS2008$STATE))
+```
+
+[State FIPS Codes](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/?cid=nrcs143_013696)
+
+```{r}
+lower_48 <- c("01", "04", "05", "06", "08", "09", "10", "11", "12", "13", "16", "17", "18", "19", "20", "21", "22", "23", "24", "25", "26", "27", "28", "29", "30", "31", "32", "33", "34", "35", "36", "37", "38", "39", "40", "41", "42", "44", "45", "46", "47", "48", "49", "50", "51", "53", "54", "55", "56")
+```
+
+## States Shapefile
+
+United States Census Bureau, [Cartographic Boundary Files - Shapefile](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html)
+
+cb_2018_us_state_500k.zip
+
+```{r}
+states.sh <- readOGR("C:/Users/14165/Desktop/Shapefiles/cb_2018_us_state_500k", "cb_2018_us_state_500k", stringsAsFactors=FALSE)
+```
+
+```{r}
+str(states.sh@data)
+```
+
+```{r}
+states_lower48.sh <- states.sh[states.sh@data$GEOID %in% lower_48,]
+```
+
+```{r}
+str(states_lower48.sh@data)
+```
+
+Add "id" column
+```{r}
+states_lower48.sh@data$id <- as.integer(states_lower48.sh@data$GEOID)
+```
+
+```{r}
+sort(states_lower48.sh@data$id)
+```
+
+```{r}
+states_lower48.sh@data$STATE <- as.character(states_lower48.sh@data$STUSPS)
+```
+
+Shapefile processing
+```{r}
+states_lower48.points = fortify(states_lower48.sh, region = "id")
+
+states_lower48.df = join(states_lower48.points, states_lower48.sh@data, by = "id")
+```
+
+## State Religious Ratios and Choropleths
+
+```{r}
+Totals2008 <- ARIS2008[, .(.N), by = .(STATE)]
+
+Totals2008 <- Totals2008[order(STATE)]
+```
+
+### Catholics
+
+```{r}
+Catholics2008 <- ARIS2008[RELIG == "Catholic, Roman Catholic", .(.N), by = .(STATE)]
+
+Catholics2008 <- Catholics2008[order(STATE)]
+
+Catholics2008$ratio <- Catholics2008$N/Totals2008$N
+
+Catholics2008_lower48 <- merge(states_lower48.df, Catholics2008, by = "STATE")
+
+Catholics2008_lower48 <- Catholics2008_lower48[order(Catholics2008_lower48$STATE), ]
+```
+
+Make and plot choropleth
+
+```{r}
+ggplot() +
+  geom_polygon(data = Catholics2008_lower48, 
+               aes(x = long, y = lat, group = group, fill = ratio), 
+               color = "white", size = 0.1) + 
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="Catholics") +
+   labs(title="Ratios of Catholics by State, ARIS2008")
+```
+
+### Baptists
+
+```{r}
+Baptists2008 <- ARIS2008[RELIG == "Baptist", .(.N), by = .(STATE)]
+
+Baptists2008 <- Baptists2008[order(STATE)]
+
+Baptists2008$ratio <- Baptists2008$N/Totals2008$N
+
+Baptists2008_lower48 <- merge(states_lower48.df, Baptists2008, by = "STATE")
+
+Baptists2008_lower48 <- Baptists2008_lower48[order(Baptists2008_lower48$STATE), ]
+```
+
+Make and plot choropleth
+
+```{r}
+ggplot() +
+  geom_polygon(data = Baptists2008_lower48, 
+               aes(x = long, y = lat, group = group, fill = ratio), 
+               color = "white", size = 0.1) + 
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="Baptists") +
+   labs(title="Ratios of Baptists by State, ARIS 2008")
+```
+
+### No Religion
+
+```{r}
+Noreligion2008 <- ARIS2008[RELIG == "No religion/none", .(.N), by = .(STATE)]
+
+Noreligion2008 <- Noreligion2008[order(STATE)]
+
+Noreligion2008$ratio <- Noreligion2008$N/Totals2008$N
+
+Noreligion2008_lower48 <- merge(states_lower48.df, Noreligion2008, by = "STATE")
+
+Noreligion2008_lower48 <- Noreligion2008_lower48[order(Noreligion2008_lower48$STATE), ]
+```
+
+Make and plot choropleth
+
+```{r}
+ggplot() +
+  geom_polygon(data = Noreligion2008_lower48, 
+               aes(x = long, y = lat, group = group, fill = ratio), 
+               color = "white", size = 0.1) + 
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="No Religion") +
+   labs(title="Ratios of No Religion by State, ARIS 2008")
+```
+
+
+# ARIS 2001
+
+[Download ARIS 2001 Data](https://commons.trincoll.edu/aris/surveys/aris-2001/download-aris-2001/)
+
+ARIS2001SPSS.zip
+
+```{r}
+ARIS2001 <- fread("ARIS2001.csv")
+```
+
+[ARIS 2001 Codebook](https://commons.trincoll.edu/aris/surveys/aris-2001/aris-2001-codebook/)
+
+```{r}
+ARIS2001 <- ARIS2001[, .(POPWGHT = wgt_pop, STATE = state, COUNTYFIPS = fips, ADI = adi, DMA = dma, MSA = msa, METRO = metro, NIELSEN = neilsen, DIVISION = cen_div, REGION = region, SEX = gender, OWNHOME = dem2, MARITAL = dem3, EMPLOY = dem4, INCOME = newdem9, AGE = dem7, EDUC = dem8, HISPANIC = dem10, RACE = dem11, RELIG = jq1tot, RELIG_SPOUSE = jq2tot, AGECAT = agecat, POLAFFIL = z11a, REGVOTE = z11b)]
+```
+
+```{r}
+ARIS2001$STATE <- state2abbr(ARIS2001$STATE)
+```
+
+```{r}
+major_2001 <- names(head(sort(prop.table(table(ARIS2001$RELIG)), decreasing=TRUE), 17))
+
+major_2001
+```
+
+```{r}
+ARIS2001_major <- ARIS2001[RELIG %in% major_2001,]
+
+nrow(ARIS2001_major)
+```
+
+```{r}
+ggplot(ARIS2001_major, aes(RELIG)) +
+  geom_bar(mapping = aes(x = RELIG, y = ..prop.., group = 1), stat = "count") +
+  scale_y_continuous(labels = scales::percent) +
+  coord_flip()+theme(axis.text = element_text(size = 7))
+```
+
+```{r}
+Totals2001 <- ARIS2001[, .(.N), by = .(STATE)]
+
+Totals2001 <- Totals2001[order(STATE)]
+```
+
+
+## Catholics
+
+```{r}
+Catholics2001 <- ARIS2001[RELIG == "Catholic", .(.N), by = .(STATE)]
+
+Catholics2001 <- Catholics2001[order(STATE)]
+
+Catholics2001$ratio <- Catholics2001$N/Totals2001$N
+
+Catholics2001_lower48 <- merge(states_lower48.df, Catholics2001, by = "STATE")
+
+Catholics2001_lower48 <- Catholics2001_lower48[order(Catholics2001_lower48$STATE), ]
+```
+
+Make and plot choropleth
+
+```{r}
+ggplot() +
+  geom_polygon(data = Catholics2001_lower48, 
+               aes(x = long, y = lat, group = group, fill = ratio), 
+               color = "white", size = 0.1) + 
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="Catholics") +
+   labs(title="Ratios of Catholics by State, ARIS 2001")
+```
+
+## Baptists
+
+```{r}
+Baptists2001 <- ARIS2001[RELIG == "Baptist", .(.N), by = .(STATE)]
+
+Baptists2001 <- Baptists2001[order(STATE)]
+
+Baptists2001$ratio <- Baptists2001$N/Totals2001$N
+
+Baptists2001_lower48 <- merge(states_lower48.df, Baptists2001, by = "STATE")
+
+Baptists2001_lower48 <- Baptists2001_lower48[order(Baptists2001_lower48$STATE), ]
+
+ggplot() +
+  geom_polygon(data = Baptists2001_lower48, 
+               aes(x = long, y = lat, group = group, fill = ratio), 
+               color = "white", size = 0.1) + 
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="Baptists") +
+   labs(title="Ratios of Baptists by State, ARIS 2001")
+```
+
+## No Religion
+
+```{r}
+Noreligion2001 <- ARIS2001[RELIG == "None", .(.N), by = .(STATE)]
+
+Noreligion2001 <- Noreligion2001[order(STATE)]
+
+Noreligion2001$ratio <- Noreligion2001$N/Totals2001$N
+
+Noreligion2001_lower48 <- merge(states_lower48.df, Noreligion2001, by = "STATE")
+
+Noreligion2001_lower48 <- Noreligion2001_lower48[order(Noreligion2001_lower48$STATE), ]
+
+ggplot() +
+  geom_polygon(data = Noreligion2001_lower48, 
+               aes(x = long, y = lat, group = group, fill = ratio), 
+               color = "white", size = 0.1) + 
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="No Religion") +
+   labs(title="Ratios of No Religion by State, ARIS 2001")
+```
+
+# Change from 2001 to 2008
+
+## Catholics
+
+```{r}
+Catholics2008$change <- (Catholics2008$ratio-Catholics2001$ratio)/Catholics2001$ratio
+```
+
+```{r}
+Catholics2008change_lower48 <- merge(states_lower48.df, Catholics2008, by = "STATE")
+
+Catholics2008change_lower48 <- Catholics2008change_lower48[order(Catholics2008change_lower48$STATE), ]
+```
+
+Make and plot choropleth
+
+```{r}
+ggplot() +
+  geom_polygon(data = Catholics2008change_lower48, 
+               aes(x = long, y = lat, group = group, fill = change), 
+               color = "white", size = 0.1) + 
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="Change") +
+   labs(title="(ARIS2008-ARIS2001)/ARIS2001, Catholics")
+```
+
+
+## Baptists
+
+```{r}
+Baptists2008$change <- (Baptists2008$ratio-Baptists2001$ratio)/Baptists2001$ratio
+
+Baptists2008change_lower48 <- merge(states_lower48.df, Baptists2008, by = "STATE")
+
+Baptists2008change_lower48 <- Baptists2008change_lower48[order(Baptists2008change_lower48$STATE), ]
+
+ggplot() +
+  geom_polygon(data = Baptists2008change_lower48, 
+               aes(x = long, y = lat, group = group, fill = change), 
+               color = "white", size = 0.1) + 
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="Change") +
+   labs(title="(ARIS2008-ARIS2001)/ARIS2001, Baptists")
+```
+
+## No Religion
+
+```{r}
+Noreligion2008$change <- (Noreligion2008$ratio-Noreligion2001$ratio)/Noreligion2001$ratio
+
+Noreligion2008change_lower48 <- merge(states_lower48.df, Noreligion2008, by = "STATE")
+
+Noreligion2008change_lower48 <- Noreligion2008change_lower48[order(Noreligion2008change_lower48$STATE), ]
+
+ggplot() +
+  geom_polygon(data = Noreligion2008change_lower48, 
+               aes(x = long, y = lat, group = group, fill = change), 
+               color = "white", size = 0.1) + 
+  coord_map() + 
+  scale_fill_viridis(option="magma", labels=percent, name="Change") +
+   labs(title="(ARIS2008-ARIS2001)/ARIS2001, No Religion")
+```
+
+# ARIS 2008 Density Maps
+
+## State and County FIPS Codes
+
+[State FIPS Codes](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/?cid=nrcs143_013696)
+
+[County FIPS Codes](https://www.nrcs.usda.gov/wps/portal/nrcs/detail/national/home/?cid=nrcs143_013697)
+
+```{r}
+ARIS2008_counties <- ARIS2008[,.(COUNTYFIPS = COUNTYC, STATE, RELIG)]
+
+ARIS2008_counties$STATEFIPS <- fips(ARIS2008_counties$STATE, to = "FIPS")
+```
+
+## Counties Shapefile
+
+United States Census Bureau, [Cartographic Boundary Files - Shapefile](https://www.census.gov/geographies/mapping-files/time-series/geo/carto-boundary-file.html)
+
+cb_2018_us_county_500k.zip
+
+```{r}
+counties.sh <- readOGR("C:/Users/14165/Desktop/Shapefiles/cb_2018_us_county_500k", "cb_2018_us_county_500k", stringsAsFactors=FALSE)
+```
+
+```{r}
+str(counties.sh@data)
+```
+
+```{r}
+counties_lower48.sh <- counties.sh[counties.sh@data$STATEFP %in% lower_48,]
+```
+
+```{r}
+counties_lower48.sh@data$STATEFIPS <- as.integer(counties_lower48.sh@data$STATEFP)
+
+counties_lower48.sh@data$COUNTYFIPS <- as.integer(counties_lower48.sh@data$COUNTYFP)
+```
+
+```{r}
+counties_lower48.centroids  <- as.data.table(gCentroid(counties_lower48.sh, byid = TRUE))
+
+counties_lower48.centroids$STATEFIPS <- counties_lower48.sh@data$STATEFIPS
+
+counties_lower48.centroids$COUNTYFIPS <- counties_lower48.sh@data$COUNTYFIPS
+```
+
+```{r}
+str(counties_lower48.centroids)
+```
+
+```{r}
+str(ARIS2008_counties)
+```
+
+```{r}
+ARIS2008_XY <- left_join(ARIS2008_counties, counties_lower48.centroids, by = c("STATEFIPS", "COUNTYFIPS"))
+```
+
+```{r}
+ARIS2008_XY$COUNTYFIPS <- NULL
+
+ARIS2008_XY$STATE <- NULL
+
+ARIS2008_XY$STATEFIPS <- NULL
+
+str(ARIS2008_XY)
+```
+
+```{r}
+Catholics2008_XY <- ARIS2008_XY[ARIS2008_XY$RELIG == "Catholic, Roman Catholic",]
+
+Catholics2008_XY$RELIG <- NULL
+```
+
+
+```{r}
+Baptists2008_XY <- ARIS2008_XY[ARIS2008_XY$RELIG == "Baptist",]
+
+Baptists2008_XY$RELIG <- NULL
+```
+
+```{r}
+Noreligion2008_XY <- ARIS2008_XY[ARIS2008_XY$RELIG == "No religion/none",]
+
+Noreligion2008_XY$RELIG <- NULL
+```
+
+## Catholic Density Map
+
+```{r}
+ggplot() + 
+  geom_polygon(data = states_lower48.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = 1, fill=NA) +
+  stat_density2d(data=Catholics2008_XY, aes(x=x, y=y, fill=..level..), alpha=0.2, geom = 'polygon', colour = 'black', contour=TRUE) +
+  scale_fill_continuous(low="yellow", high="red")+
+  theme_nothing(legend = TRUE) +   
+  labs(title="Catholic Denity Map, ARIS 2008")
+```
+
+## Baptist Density Map
+
+```{r}
+ggplot() + 
+  geom_polygon(data = states_lower48.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = 1, fill=NA) +
+  stat_density2d(data=Baptists2008_XY, aes(x=x, y=y, fill=..level..), alpha=0.2, geom = 'polygon', colour = 'black', contour=TRUE) +
+  scale_fill_continuous(low="yellow",high="red")+
+  theme_nothing(legend = TRUE) +  
+  labs(title="Baptist Density Map, ARIS 2008")
+```
+
+## No Religion Density Map
+
+```{r}
+ggplot() + 
+  geom_polygon(data = states_lower48.df, aes(x = long, y = lat, group = group),
+          color = 'black', size = 1, fill=NA) +
+  stat_density2d(data=Noreligion2008_XY, aes(x=x, y=y, fill=..level..), alpha=0.2, geom = 'polygon', colour = 'black', contour=TRUE) +
+  scale_fill_continuous(low="yellow",high="red")+
+  theme_nothing(legend = TRUE) +  
+  labs(title="No Religion Density Map, ARIS 2008")
+```
