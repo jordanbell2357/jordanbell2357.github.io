@@ -6,9 +6,9 @@ permalink: /euler/
 
 ## Leonhard Euler, *The Elements of Algebra* (*Vollständige Anleitung zur Algebra*)
 
-##### [English table of contents](/assets/euler/en/TOCen.pdf)
+##### [English table of contents](/EulerAlgebra/en/TOCen.pdf)
 
-##### [German table of contents](/assets/euler/de/TOCde.pdf)
+##### [German table of contents](/EulerAlgebra/de/TOCde.pdf)
 
 ### [Part I. "Containing the Analysis of Determinate Quantities."](#partI)
 
@@ -90,9 +90,9 @@ permalink: /euler/
 
 ### Joseph Louis de Lagrange. *Additions aux éléments d'algèbre d'Euler. Analyse indéterminée*.
 
-[English translation PDF](/assets/euler/en/Lagrange.pdf)
+[English translation PDF](/EulerAlgebra/en/Lagrange.pdf)
 
-[French text PDF](/assets/euler/de/Lagrange.pdf)
+[French text PDF](/EulerAlgebra/de/Lagrange.pdf)
 
 [Gallica-Math: Œuvres complètes](http://sites.mathdoc.fr/cgi-bin/oeitem?id=OE_LAGRANGE__7_5_0)
 
