@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Plutarch, "Parallel Lives" (Βίοι Παράλληλοι, Vitae Parallelae)
+title: Plutarch, "Parallel Lives"
 category: quotes
 ---
 
-> Life of Solon, Plutarch's Lives, translated by Bernadotte Perrin (1847-1920), from the Loeb Classical Library edition of 1914, a text in the public domain, nobly digitized by E. Thayer at LacusCurtius
+#### Plutarch, "Parallel Lives" (*Vitae Parallelae*, Βίοι Παράλληλοι). "Solon" (*Vita Solonis*, Σόλων). Book 5
 
-Book 5
+> Plutarch. Plutarch's Lives, Vol. I. Perrin, Bernadotte, editor. Cambridge, MA: Harvard University Press; London: William Heinemann Ltd., 1914.
 
-[^1] [^2]
+[^1] [^2] [^3] 
 
 [^1]: <https://topostext.org/work/158#Sol.5.1>
 
 [^2]: <https://penelope.uchicago.edu/Thayer/e/roman/texts/plutarch/lives/home.html>
+
+[^3]: <https://scaife.perseus.org/library/urn:cts:greekLit:tlg0007/>
 
 > § Sol.5.1  In particular we are told of private intercourse between Solon and Anacharsis, and between Solon and Thales, of which the
 > following accounts are given. Anacharsis came to Athens, knocked at Solon's door, and said that he was a stranger who had come to make
@@ -23,12 +25,14 @@ Book 5
 >
 > § Sol.5.3  To this Solon is said to have answered that men keep their agreements with each other when neither party profits by the breaking of them, and he was adapting his laws to the citizens in such a manner as to make it clear to all that the practice of justice was more advantageous than the transgression of the laws. But the results justified the conjecture of Anacharsis rather than the hopes of Solon. It was Anacharsis, too, who said, after attending a session of the assembly, that he was amazed to find that among the Greeks, a the wise men pleaded causes, but the fools decided them.
 
-[^3]
+[^4] [^5]
 
-[^3]: <https://www.perseus.tufts.edu/hopper/text?doc=Perseus:abo:tlg,0007,007:5>
+[^4]: <https://www.perseus.tufts.edu/hopper/text?doc=Perseus:abo:tlg,0007,007:5>
 
-> ἰδίᾳ δ᾽ Ἀναχάρσεώς τε πρὸς Σόλωνα καὶ πάλιν Θάλεω συνουσίαν τινὰ καὶ λόγους ἀναγράφουσι τοιούτους. Ἀνάχαρσιν μὲν εἰς Ἀθήνας φασὶν ἐπὶ τὴν Σόλωνος οἰκίαν ἐλθόντα κόπτειν, καὶ λέγειν ὡς ξένος ὢν ἀφῖκται φιλίαν ποιησόμενος καὶ ξενίαν πρὸς αὐτόν. ἀποκριναμένου δὲ τοῦ Σόλωνος ὡς οἴκοι βέλτιόν ἐστι ποιεῖσθαι φιλίας, ‘οὐκοῦν,’ φάναι τὸν Ἀνάχαρσιν, ‘αὐτὸς ὢν οἴκοι σὺ ποίησαι φιλίαν καὶ ξενίαν πρὸς ἡμᾶς.’ [2] οὕτω δὴ θαυμάσαντα τὴν ἀγχίνοιαν τοῦ ἀνδρὸς τὸν Σόλωνα δέξασθαι φιλοφρόνως, καὶ χρόνον τινὰ κατασχεῖν παρ᾽ αὑτῷ, ἤδη τὰ δημόσια πράττοντα καὶ συνταττόμενον τοὺς νόμους. τὸν οὖν Ἀνάχαρσιν πυθόμενον καταγελᾶν τῆς πραγματείας τοῦ Σόλωνος, οἰομένου γράμμασιν ἐφέξειν τὰς ἀδικίας καὶ πλεονεξίας τῶν πολιτῶν, ἃ μηδὲν τῶν ἀραχνίων διαφέρειν, ἀλλ᾽ ὡς ἐκεῖνα τοὺς μὲν ἀσθενεῖς καὶ λεπτοὺς τῶν ἁλισκομένων καθέξειν, ὑπὸ δὲ τῶν δυνατῶν καὶ πλουσίων διαρραγήσεσθαι. [3] τὸν δὲ Σόλωνα πρὸς ταῦτά φασιν εἰπεῖν ὅτι καὶ συνθήκας ἄνθρωποι φυλάττουσιν, ἃς οὐδετέρῳ λυσιτελές ἐστι παραβαίνειν τῶν θεμένων: καὶ τοὺς νόμους αὐτὸς οὕτως ἁρμόζεται τοῖς πολίταις ὥστε πᾶσι τοῦ παρανομεῖν βέλτιον ἐπιδεῖξαι τὸ δικαιοπραγεῖν. ἀλλὰ ταῦτα μὲν ὡς Ἀνάχαρσις εἴκαζεν ἀπέβη μᾶλλον ἢ κατ᾽ ἐλπίδα τοῦ Σόλωνος. ἔφη δὲ κἀκεῖνο θαυμάζειν ὁ Ἀνάχαρσις ἐκκλησίᾳ παραγενόμενος, ὅτι λέγουσι μὲν οἱ σοφοὶ παρ᾽ Ἕλλησι, κρίνουσι δὲ οἱ ἀμαθεῖς.
+[^5]: <https://www.greek-language.gr/digitalResources/ancient_greek/library/index.html?author_id=201>
 
-[^4]
+> ἰδίᾳ δ᾽ Ἀναχάρσεώς τε πρὸς Σόλωνα καὶ πάλιν Θάλεω συνουσίαν τινὰ καὶ λόγους ἀναγράφουσι τοιούτους. Ἀνάχαρσιν μὲν εἰς Ἀθήνας φασὶν ἐπὶ τὴν Σόλωνος οἰκίαν ἐλθόντα κόπτειν, καὶ λέγειν ὡς ξένος ὢν ἀφῖκται φιλίαν ποιησόμενος καὶ ξενίαν πρὸς αὐτόν. ἀποκριναμένου δὲ τοῦ Σόλωνος ὡς οἴκοι βέλτιόν ἐστι ποιεῖσθαι φιλίας, ‘οὐκοῦν,’ φάναι τὸν Ἀνάχαρσιν, ‘αὐτὸς ὢν οἴκοι σὺ ποίησαι φιλίαν καὶ ξενίαν πρὸς ἡμᾶς.’ οὕτω δὴ θαυμάσαντα τὴν ἀγχίνοιαν τοῦ ἀνδρὸς τὸν Σόλωνα δέξασθαι φιλοφρόνως, καὶ χρόνον τινὰ κατασχεῖν παρ᾽ αὑτῷ, ἤδη τὰ δημόσια πράττοντα καὶ συνταττόμενον τοὺς νόμους. τὸν οὖν Ἀνάχαρσιν πυθόμενον καταγελᾶν τῆς πραγματείας τοῦ Σόλωνος, οἰομένου γράμμασιν ἐφέξειν τὰς ἀδικίας καὶ πλεονεξίας τῶν πολιτῶν, ἃ μηδὲν τῶν ἀραχνίων διαφέρειν, ἀλλ᾽ ὡς ἐκεῖνα τοὺς μὲν ἀσθενεῖς καὶ λεπτοὺς τῶν ἁλισκομένων καθέξειν, ὑπὸ δὲ τῶν δυνατῶν καὶ πλουσίων διαρραγήσεσθαι. τὸν δὲ Σόλωνα πρὸς ταῦτά φασιν εἰπεῖν ὅτι καὶ συνθήκας ἄνθρωποι φυλάττουσιν, ἃς οὐδετέρῳ λυσιτελές ἐστι παραβαίνειν τῶν θεμένων: καὶ τοὺς νόμους αὐτὸς οὕτως ἁρμόζεται τοῖς πολίταις ὥστε πᾶσι τοῦ παρανομεῖν βέλτιον ἐπιδεῖξαι τὸ δικαιοπραγεῖν. ἀλλὰ ταῦτα μὲν ὡς Ἀνάχαρσις εἴκαζεν ἀπέβη μᾶλλον ἢ κατ᾽ ἐλπίδα τοῦ Σόλωνος. ἔφη δὲ κἀκεῖνο θαυμάζειν ὁ Ἀνάχαρσις ἐκκλησίᾳ παραγενόμενος, ὅτι λέγουσι μὲν οἱ σοφοὶ παρ᾽ Ἕλλησι, κρίνουσι δὲ οἱ ἀμαθεῖς.
 
-[^4]: <https://pinakes.irht.cnrs.fr/notices/oeuvre/13504/>
+[^6]
+
+[^6]: <https://pinakes.irht.cnrs.fr/notices/oeuvre/13504/>
