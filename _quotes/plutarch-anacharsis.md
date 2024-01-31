@@ -6,6 +6,8 @@ category: quotes
 
 > Life of Solon, Plutarch's Lives, translated by Bernadotte Perrin (1847-1920), from the Loeb Classical Library edition of 1914, a text in the public domain, nobly digitized by E. Thayer at LacusCurtius
 
+Book 5
+
 [^1] [^2]
 
 [^1]: <https://topostext.org/work/158#Sol.5.1>
