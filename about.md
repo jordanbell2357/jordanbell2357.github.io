@@ -15,9 +15,19 @@ permalink: /about/
 
 ## Employment {#employment}
 
-June 2022 - August 2023
+### Business Intelligence Developer, Donar Compass / Legacy Leaders Inc, November 2023 - January 2024
+
+### Data Science Associate, Network Performance, Canadian Tire Corp. June 2022 - August 2023
 
 ![Data Science Associate, Network Performance, Canadian Tire Corp](/images/about/J_Bell.png)
+
+### Private tutor, Jordan Bell Tutoring Toronto, March 2019 - ongoing
+
+### Data Science Intern, Consilium Crypto, January 2019 - April 2019
+
+### Mathematics Course Instructor, University of Toronto, April 2013 - April 2017
+
+### Mathematics Teaching Assistant, University of Toronto, September 2009 - April 2013
 
 ## Education {#education}
 
