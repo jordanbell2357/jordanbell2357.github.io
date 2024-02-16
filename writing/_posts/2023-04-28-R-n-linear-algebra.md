@@ -7,20 +7,17 @@ title: ℝⁿ
 
 Let $$\mathbb{N}$$ be the nonnegative integers and let $$n \in \mathbb{N}$$.
 
-Define $$[n]=\{i \in \mathbb{N}: i < n\}$$.
+Define $$[n]=\{i \in \mathbb{N}: i < n\}$$. In particular, $$[0]=\emptyset$$.
 
-Let $$\mathbb{R}^n=\mathbb{R}^{[n]}$$,
-the set of functions $$[n] \to \mathbb{R}$$.
+Let $$\mathbb{R}^n=\mathbb{R}^{[n]}$$, the set of functions $$[n] \to \mathbb{R}$$.
 
 ## $$n=0$$
-
-$$[0]=\emptyset$$.
 
 $$\mathbb{R}^0 = \mathbb{R}^\emptyset = \{\emptyset\}$$. [^1]
 
 [^1]: [empty function in nLab](https://ncatlab.org/nlab/show/empty+function)
 
-$$\mathbb{R}^0$$ is an $$\mathbb{R}$$-linear space, with one element.
+$$\mathbb{R}^0$$ is an $$\mathbb{R}$$-linear space, with one element, ∅.
 
 ## $$n \geq 1$$
 
@@ -42,11 +39,11 @@ $$
 \end{cases}
 $$
 
-For $$k \in [n]$$ define $$e_k \in \mathbb{R}^n$$ by 
+For $$k \in [n]$$ define $$e^k \in \mathbb{R}^n$$ by 
 
-$$e_k(i) = \delta_{i,k}, \qquad i \in [n].$$
+$$e^k(i) = \delta_{i,k}, \qquad i \in [n].$$
 
-$$\{e_k: k \in [n]\}$$ is a basis for $$\mathbb{R}^n$$.
+$$\{e^k: k \in [n]\}$$ is a basis for $$\mathbb{R}^n$$.
 
 ## Dual space $$(\mathbb{R}^n)^*$$
 
@@ -59,26 +56,27 @@ $$x^T y = \sum_{i \in [n]} x(i)y(i),\qquad y \in \mathbb{R}^n.$$
 
 We call $$x^T$$ the **transpose** of $$x$$: $$x$$ is a vector/column vector and $$x^T$$ is a covector/row vector.
 
-$$\{e_k^T: k \in [n]\}$$ is a basis for $$(\mathbb{R}^n)^*$$.
+$$\{(e^k)^T: k \in [n]\}$$ is a basis for $$(\mathbb{R}^n)^*$$.
 
-The map $$x \mapsto x^T$$ is a linear isomorphism $$\mathbb{R}^n \to (\mathbb{R}^n)^*$$.
+Write $Tx=x^T$$.
+The map $$T:x \mapsto x^T$$ is a linear isomorphism $$\mathbb{R}^n \to (\mathbb{R}^n)^*$$.
 
 ## Basis expansion
 
 For $$x \in \mathbb{R}^n$$ and for $$k \in [n]$$, we have
 
-$$x^T e_k = \sum_{i \in [n]} x(i) e_k(i) =
+$$x^T e^k = \sum_{i \in [n]} x(i) e^k(i) =
 \sum_{i \in [n]} x(i) \delta_{i,k} = x(k)$$
 
 and
 
-$$e_k^T x = \sum_{i \in [n]} e_k(i) x(i) =
+$$(e^k)^T x = \sum_{i \in [n]} e^k(i) x(i) =
 \sum_{i \in [n]} \delta_{i,k} x(i)= x(k)$$.
 
 Using this, one then works out that
 
 $$
-x = \sum_{k \in [n]} (e_k^T x)e_k.
+x = \sum_{k \in [n]} ((e^k)^T x)e^k.
 $$
 
 # Linear algebra
@@ -108,11 +106,12 @@ called the **transpose** of $$A$$.
 
 # Transposes of matrices
 
-We remind ourselves that $$\{e_k^T: k \in [m]\}$$ is a basis for $$(\mathbb{R}^m)^*$$
-and $$\{e_j^T: j \in [n]\}$$ is a basis for $$\mathbb{R}^n$$.
+We remind ourselves that $$\{(e^k)^T: k \in [m]\}$$ is a basis for
+$$(\mathbb{R}^m)^{*}$$
+and $$\{e^j^T: j \in [n]\}$$ is a basis for $$\mathbb{R}^n$$.
 Thus, $$A^T \in \mathscr{L}((\mathbb{R}^m)^*,(\mathbb{R}^n)^*)$$ is also defined by
 
-$$A^T e_k^T e_j = e_k^T(Ae_j),\qquad j \in [n], k \in [m].$$
+$$A^T (e^k)^T e^j = (e^k)^T(Ae^j),\qquad j \in [n], k \in [m].$$
 
 # Bilinear maps
 
@@ -126,10 +125,4 @@ $$A^T e_k^T e_j = e_k^T(Ae_j),\qquad j \in [n], k \in [m].$$
 # Determinants
 
 
-
-# Fréchet derivative
-
-
-
-# Ordinary Least Squares (OLS)
 
