@@ -90,10 +90,6 @@ Define
 $$\phi = f \circ g, \qquad \phi \in P^P.$$
 </p>
 
-
-<div class="bottomright">∎</div>
-</div>
-
 <p>
 From \(\phi \in P^P\) and \(p_A \in A^P\), it follows that
 \(p_A \circ \phi \in A^P\). From \(\phi \in P^P\) and
@@ -253,7 +249,9 @@ that
   
 $$k=\textrm{id}_Q.$$
 </p>
-  
+
+<div class="bottomright">∎</div>
+</div>
 
 <!--
 
