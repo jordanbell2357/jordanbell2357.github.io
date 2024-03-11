@@ -10,6 +10,7 @@ layout: home
 
 This website is the anchor for my internet presence and a platform for my writings, projects, and notebooks.
 
+<!--
 # Blog posts by topics
 
 <ul class="topic_list">
@@ -19,6 +20,7 @@ This website is the anchor for my internet presence and a platform for my writin
     </li>
   {% endfor %}
 </ul>
+-->
 
 # Blog posts
 
