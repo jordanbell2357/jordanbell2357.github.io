@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Notebooks
+title: R
 permalink: /notebooks/
 ---
 
