@@ -1,10 +1,8 @@
 ---
 layout: page
 title: R
-permalink: /notebooks/
+permalink: /R/
 ---
-
-## R notebooks
 
 Transforming and visualizing public datasets of geospatial and time series data.
 
