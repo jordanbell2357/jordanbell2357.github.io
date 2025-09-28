@@ -1,16 +1,18 @@
 ---
 layout: post
-title: Python smtplib and Mailutils
+title: Python smtplib, email and b64 libraries
 topic: cli
 ---
 
-cf. https://realpython.com/python-send-email/
+We modify <https://realpython.com/python-send-email/>.
 
 We need to use a local SMTP server because the `smtpd` library was removed in Python 3.12.
 
 ```bash
 sudo apt install mailutils
 ```
+
+First we use plain text.
 
 ```python3
 import smtplib
@@ -20,9 +22,10 @@ smtp_server = "localhost"
 sender_email = "ubuntu@localhost"
 receiver_email = "ubuntu@localhost"
 message = """\
-Subject: Hi there!
+Subject: The subject line
+The message body.
 
-This message is sent from Python."""
+More of the message body."""
 
 with smtplib.SMTP(smtp_server, port) as server:
     server.ehlo()  # Can be omitted
@@ -30,30 +33,25 @@ with smtplib.SMTP(smtp_server, port) as server:
     server.sendmail(sender_email, receiver_email, message)
 ```
 
-Then
-
-```
-"/var/mail/ubuntu": 1 message 1 new
->N   1 ubuntu@localhost   Sat Sep 27 23:00  13/471   Hi there!
-```
-
-and
+Reading the email with `mail`:
 
 ```
 Return-Path: <ubuntu@localhost>
 X-Original-To: ubuntu@localhost
 Delivered-To: ubuntu@localhost
 Received: from LAPTOP-JBell.localdomain (localhost [127.0.0.1])
-        by LAPTOP-JBell.localdomain (Postfix) with ESMTP id B5820232B4
-        for <ubuntu@localhost>; Sat, 27 Sep 2025 22:57:04 -0400 (EDT)
-Subject: Hi there!
-Message-Id: <20250928025704.B5820232B4@LAPTOP-JBell.localdomain>
-Date: Sat, 27 Sep 2025 22:57:04 -0400 (EDT)
+        by LAPTOP-JBell.localdomain (Postfix) with ESMTP id 66E72233EC
+        for <ubuntu@localhost>; Sun, 28 Sep 2025 00:35:55 -0400 (EDT)
+Subject: The subject line
+Message-Id: <20250928043555.66E72233EC@LAPTOP-JBell.localdomain>
+Date: Sun, 28 Sep 2025 00:35:55 -0400 (EDT)
 From: ubuntu@localhost
-X-UID: 5
+X-UID: 6
 Status: O
 
-This message is sent from Python.
+The message body.
+
+More of the message body.
 ```
 
 Using MIME:
@@ -69,7 +67,7 @@ sender_email = "ubuntu@localhost"
 receiver_email = "ubuntu@localhost"
 
 message = MIMEMultipart("alternative")
-message["Subject"] = "multipart test"
+message["Subject"] = "MIME test"
 message["From"] = sender_email
 message["To"] = receiver_email
 
@@ -110,7 +108,7 @@ with smtplib.SMTP(smtp_server, port) as server:
 
 Viewing email using [Alpine](https://alpineapp.email/) (`sudo apt install alpine`):
 
-<img width="1482" height="762" alt="image" src="https://github.com/user-attachments/assets/9a226811-2732-48bd-a631-0ecfef7ce3cf" />
+<img width="945" height="465" alt="image" src="https://github.com/user-attachments/assets/c7fbdf7a-75a8-4c66-855a-4c7d1dcfd45c" />
 
 Sending an email with an attachment:
 
@@ -169,13 +167,9 @@ with smtplib.SMTP(smtp_server, port) as server:
 
 Viewing the email in Alpine:
 
-<img width="1482" height="762" alt="image" src="https://github.com/user-attachments/assets/86275d95-06b3-46d3-a040-64513c2836d0" />
+<img width="933" height="201" alt="image" src="https://github.com/user-attachments/assets/6a631181-6507-4148-a3ba-edacb7086800" />
 
-<img width="1482" height="762" alt="image" src="https://github.com/user-attachments/assets/350887db-baec-4d84-aada-b8b8d66a7eda" />
-
-
-
-And an embedded image using `b64`. (See https://stackoverflow.com/questions/57829797/how-to-embed-a-base64-image-into-html-email-via-python-3-5)
+And an embedded image using `b64`. (See <https://stackoverflow.com/questions/57829797/how-to-embed-a-base64-image-into-html-email-via-python-3-5>)
 
 ```python3
 import smtplib
@@ -229,7 +223,18 @@ with smtplib.SMTP(smtp_server, port) as server:
     )
 ```
 
-<img width="716" height="728" alt="image" src="https://github.com/user-attachments/assets/c39cb459-a7b0-4191-b9ef-b90aeb288cc6" />
+The body of this email is the following HTML:
 
-<img width="1918" height="497" alt="image" src="https://github.com/user-attachments/assets/38940d51-08e2-4ba8-8e53-7c872c5be580" />
+```html
+<html>
+  <body>
+    <p>Image test.</p>
+    <p><img src="data:image/jpeg;base64,iVBOR...SuQmCC"></p>
+  </body>
+</html>
+```
+
+which renders as
+
+<img width="661" height="678" alt="image" src="https://github.com/user-attachments/assets/a4843cfe-f6ed-4097-be88-c482e107dcc8" />
 
