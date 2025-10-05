@@ -73,3 +73,119 @@ Access-Control-Allow-Credentials: true
 
 <!DOCTYPE html>
 ```
+
+# Flask localhost example
+
+[Python and REST APIs: Interacting With Web Services | Real Python](https://realpython.com/api-integration-in-python/#rest-and-python-tools-of-the-trade)
+
+We run a local Flask webserver.
+
+```console
+(real_python) ubuntu@LAPTOP-JBell:~/real_python$ flask run
+ * Serving Flask app 'app.py'
+ * Debug mode: off
+WARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.
+ * Running on http://127.0.0.1:5000
+Press CTRL+C to quit
+127.0.0.1 - - [05/Oct/2025 13:42:08] "GET / HTTP/1.1" 404 -
+```
+
+## GET
+
+Running [netcat](https://www.commandlinux.com/man-page/man1/netcat.1.html) with the `-C` option (send CRLF as line-ending),
+
+```console
+nc -C localhost 5000
+GET /countries HTTP/1.1
+Host: localhost
+Content-Type: application/json; charset=UTF-8
+
+HTTP/1.1 200 OK
+Server: Werkzeug/3.1.3 Python/3.13.7
+Date: Sun, 05 Oct 2025 17:59:16 GMT
+Content-Type: application/json
+Content-Length: 184
+Connection: close
+
+[{"area":513120,"capital":"Bangkok","id":1,"name":"Thailand"},{"area":7617930,"capital":"Canberra","id":2,"name":"Australia"},{"area":1010408,"capital":"Cairo","id":3,"name":"Egypt"}]
+```
+
+## POST
+We can make a POST request three ways: (we could also do this for GET request above)
+
+### curl
+First, using curl.
+
+```console
+curl -i http://127.0.0.1:5000/countries \
+-X POST \
+-H 'Content-Type: application/json' \
+-d '{"name":"GermanyA", "capital": "Berlin", "area": 357022}'
+
+{"area":357022,"capital":"Berlin","id":4,"name":"GermanyA"}
+```
+
+### netcat
+Second, using netcat.
+
+First we manually find Content-Length.
+
+```console
+ubuntu@LAPTOP-JBell:~$ printf '%s' '{"name": "GermanyB", "capital": "Berlin", "area": 357022}' | wc -c
+57
+```
+
+Now we run netcat with `-C` to use CRLF line endings.
+
+```console
+ubuntu@LAPTOP-JBell:~$ nc -C localhost 5000
+POST /countries HTTP/1.1
+Host: localhost
+Content-Type: application/json
+Content-Length: 57
+
+{"name": "GermanyB", "capital": "Berlin", "area": 357022}
+HTTP/1.1 201 CREATED
+Server: Werkzeug/3.1.3 Python/3.13.7
+Date: Sun, 05 Oct 2025 19:40:30 GMT
+Content-Type: application/json
+Content-Length: 60
+Connection: close
+
+{"area":357022,"capital":"Berlin","id":5,"name":"GermanyB"}
+```
+
+### urllib.request
+
+Third, using `urllib.request`.
+
+```python
+from urllib.request import urlopen, Request
+import json
+
+post_dict = {"capital": "Berlin", "name": "GermanyC", "area": 357022}
+post_json_payload = json.dumps(post_dict)
+post_data = post_json_payload.encode("utf-8")
+
+post_headers = {"Content-Type": "application/json"}
+url = "http://localhost:5000/countries"
+request = Request(url, headers=post_headers, data=post_data)
+
+with urlopen(request, timeout=10) as response:
+    content_bytes = response.read()
+
+content_dict_list = json.loads(content_bytes)
+
+# {'area': 357022, 'capital': 'Berlin', 'id': 6, 'name': 'GermanyC'}
+```
+
+### requests
+
+Fourth, using `requests`.
+
+```python
+requests.post("http://127.0.0.1:5000/countries", json={"name": "GermanyD", "capital": "Berlin", "area": 357022})
+
+# {'area': 357022, 'capital': 'Berlin', 'id': 7, 'name': 'GermanyD'}
+```
+
