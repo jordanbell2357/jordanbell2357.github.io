@@ -4,7 +4,7 @@ title: HTTP messages
 topic: cli
 ---
 
-[Sending a client request | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Session#sending_a_client_request)
+[Sending a client request - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Session#sending_a_client_request)
 
 > Once the connection is established, the user-agent can send the request (a user-agent is typically a web browser, but can be anything else, a crawler, for example). A client request consists of text directives, separated by CRLF (carriage return, followed by line feed), divided into three blocks:
 >
@@ -22,7 +22,7 @@ topic: cli
 > 2. Subsequent lines represent specific HTTP headers, giving the client information about the data sent (for example, type, data size, compression algorithm used, hints about caching). Similarly to the block of HTTP headers for a client request, these HTTP headers form a block ending with an empty line.
 > 3. The final block is a data block, which contains the optional data.
 
-[HTTP Messages | MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Messages)
+[HTTP Messages - MDN](https://developer.mozilla.org/en-US/docs/Web/HTTP/Guides/Messages)
 
 > HTTP messages are the mechanism used to exchange data between a server and a client in the HTTP protocol. There are two types of messages:
 > requests sent by the client to trigger an action on the server, and responses, the answer that the server sends in response to a request.
@@ -76,7 +76,7 @@ Access-Control-Allow-Credentials: true
 
 # Flask localhost example
 
-[Python and REST APIs: Interacting With Web Services | Real Python](https://realpython.com/api-integration-in-python/#rest-and-python-tools-of-the-trade)
+[Python and REST APIs: Interacting With Web Services - Real Python](https://realpython.com/api-integration-in-python/#rest-and-python-tools-of-the-trade)
 
 We run a local Flask webserver.
 
@@ -184,8 +184,8 @@ content_dict_list = json.loads(content_bytes)
 Fourth, using `requests`.
 
 ```python
-requests.post("http://127.0.0.1:5000/countries", json={"name": "GermanyD", "capital": "Berlin", "area": 357022})
-
+response = requests.post("http://127.0.0.1:5000/countries", json={"name": "GermanyD", "capital": "Berlin", "area": 357022})
+response.json()
 # {'area': 357022, 'capital': 'Berlin', 'id': 7, 'name': 'GermanyD'}
 ```
 
