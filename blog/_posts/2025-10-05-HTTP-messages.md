@@ -60,4 +60,16 @@ Date: Sun, 05 Oct 2025 14:47:29 GMT
 Content-Type: text/html; charset=UTF-8
 ```
 
+```console
+ubuntu@LAPTOP-JBell:~$ printf "GET / HTTP/1.1\r\nHost: httpbin.org\r\n\r\n" | nc httpbin.org 80 | head -n 10
+HTTP/1.1 200 OK
+Date: Sun, 05 Oct 2025 16:20:18 GMT
+Content-Type: text/html; charset=utf-8
+Content-Length: 9593
+Connection: keep-alive
+Server: gunicorn/19.9.0
+Access-Control-Allow-Origin: *
+Access-Control-Allow-Credentials: true
 
+<!DOCTYPE html>
+```
