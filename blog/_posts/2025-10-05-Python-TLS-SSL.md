@@ -4,6 +4,8 @@ title: Python and TLS/SSL
 topic: cli
 ---
 
+We first remark that it is possible to use an unverified context, which is an SSL context that disables certificate verification.
+
 [Python's urllib.request for HTTP Requests - Real Python](https://realpython.com/urllib-request/)
 
 ```python
@@ -14,8 +16,7 @@ unverified_context = ssl._create_unverified_context()
 urlopen("https://expired.badssl.com/", context=unverified_context)
 ```
 
-
-<https://docs.openssl.org/master/man1/openssl-req/>
+We make a self signed certificate [openssl-req](https://docs.openssl.org/master/man1/openssl-req/).
 
 ```console
 ubuntu@LAPTOP-JBell:~$ openssl req -x509 -newkey rsa:2048 -keyout key.pem -out req.pem
@@ -40,9 +41,7 @@ Common Name (e.g. server FQDN or YOUR name) []:Jordan Bell
 Email Address []:
 ```
 
-<https://docs.openssl.org/master/man1/openssl-s_server/>
-
-In one terminal we run
+In one terminal we run [openssl-s_server](https://docs.openssl.org/master/man1/openssl-s_server/)
 
 ```console
 ubuntu@LAPTOP-JBell:~$ openssl s_server -accept 60100 -key key.pem -cert req.pem
@@ -51,7 +50,7 @@ Using default temp DH parameters
 ACCEPT
 ```
 
-Then in another terminal we run
+Then in another terminal we run [openssl-s_client](https://docs.openssl.org/master/man1/openssl-s_client/)
 
 ```console
 ubuntu@LAPTOP-JBell:~$ openssl s_client -connect 127.0.0.1:60100
@@ -69,9 +68,34 @@ Certificate chain
    i:C = CA, ST = Ontario, L = Toronto, O = jordanbell.info, CN = Jordan Bell
    a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
    v:NotBefore: Oct  6 01:31:34 2025 GMT; NotAfter: Nov  5 01:31:34 2025 GMT
-
+---
 ...
+---
+read R BLOCK
 ```
+
+Using the option `-verifyCAfile req.pem`, we avoid the error/warning caused by the
+server using a self-signed certificate.
+
+```console
+ubuntu@LAPTOP-JBell:~$ openssl s_client -verifyCAfile req.pem -connect 127.0.0.1:60100
+CONNECTED(00000003)
+Can't use SSL_get_servername
+depth=0 C = CA, ST = Ontario, L = Toronto, O = jordanbell.info, CN = Jordan Bell
+verify return:1
+---
+Certificate chain
+ 0 s:C = CA, ST = Ontario, L = Toronto, O = jordanbell.info, CN = Jordan Bell
+   i:C = CA, ST = Ontario, L = Toronto, O = jordanbell.info, CN = Jordan Bell
+   a:PKEY: rsaEncryption, 2048 (bit); sigalg: RSA-SHA256
+   v:NotBefore: Oct  6 01:31:34 2025 GMT; NotAfter: Nov  5 01:31:34 2025 GMT
+---
+Server certificate
+```
+
+
+cf. <https://www.liquidweb.com/blog/how-to-test-ssl-connection-using-openssl/>
+
 
 [SSL - Ncat Users' Guide](https://nmap.org/ncat/guide/ncat-ssl.html)
 
