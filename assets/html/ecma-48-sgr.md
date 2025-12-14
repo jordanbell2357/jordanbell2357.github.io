@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>ECMA-48 Select Graphic Rendition (SGR)</title>
+  </head>
+  <body>
+<table><thead>
+  <tr>
+    <th>Command</th>
+    <th>Display</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>echo -e "\033[1mbold\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[3mitalic\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[4munderscore\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[30mblack\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[31mred\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[32mgreen\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[33myellow\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[34mblue\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[35mpurple\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[36mcyan\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[37mwhite\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[40mblack background\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[41mred background\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[42mgreen background\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[43myellow background\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[44mblue background\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[45mmagenta background\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[46mcyan background\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[47mwhite background\e[0m."</td>
+    <td></td>
+  </tr>
+  <tr>
+    <td>echo -e "\033[1;3;31;44mbold italic red foreground blue background\e[0m."</td>
+    <td></td>
+  </tr>
+</tbody></table>
+  </body>
+</html>
