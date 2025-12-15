@@ -17,22 +17,21 @@ th, td {
   <body>
 
 
-<h1>The escape control character</h1>
+<h1>ECMA-48 Select Graphic Rendition (SGR)</h1>
 
-<ul>
-<li><tt>^[</tt></li>
-<li><tt>\E</tt></li>
-<li><tt>\e</tt></li>
-<li><tt>\x1B</tt></li>
-<li><tt>\033</tt></li>
-<li><tt>\U27</tt></li>
-<li>        (<a href="https://util.unicode.org/UnicodeJsps/character.jsp?a=001B">001B</a>)</li>
-<li>&#x1B;   (<a href="https://developer.mozilla.org/en-US/docs/Glossary/Character_reference">HTML character reference</a> <tt>&amp;#x1B;</tt>)</li>
-<li>␛       (<a href="https://util.unicode.org/UnicodeJsps/character.jsp?a=241B">241B</a>)</li>
-</ul>
+<h2>The escape control character</h2>
+
+The escape control character <a href="https://util.unicode.org/UnicodeJsps/character.jsp?a=001B">U+001B</a> is input variously as <tt>^[</tt>, <tt>\E</tt>, <tt>\e</tt>, <tt>\x1B</tt>, <tt>\033</tt>, <tt>\U27</tt> in
+the shell and as <tt>&amp;#x1B;</tt> as an
+<a href="https://developer.mozilla.org/en-US/docs/Glossary/Character_reference">HTML character reference</a>.
+
+The escape control character displays as: 
+
+The escape control character is represented by the Unicode control picture ␛, <a href="https://util.unicode.org/UnicodeJsps/character.jsp?a=241B">U+241B</a>.
 
 <p><a href="https://man7.org/linux/man-pages/man4/console_codes.4.html">console_codes(4) — Linux manual page</a></p>
 
+<h2>Shell examples</h2>
 
 <table><thead>
   <tr>
@@ -113,19 +112,19 @@ th, td {
     <td style="color:white; background-color:black;"><pre><span style="background-color:#3333FF;">blue background</span>.</pre></td>
   </tr>
   <tr>
-    <td><tt>echo -e "\033[45mmagenta background\e[0m."</tt></td>
+    <td><tt>echo -e "\e[45mmagenta background\e[0m."</tt></td>
     <td style="color:white; background-color:black;"><pre><span style="background-color:fuchsia;">magenta background</span>.</pre></td>
   </tr>
   <tr>
-    <td><tt>echo -e "\033[46mcyan background\e[0m."</tt></td>
+    <td><tt>echo -e "\e[46mcyan background\e[0m."</tt></td>
     <td style="color:white; background-color:black;"><pre><span style="background-color:aqua;">cyan background</span>.</pre></td>
   </tr>
   <tr>
-    <td><tt>echo -e "\033[47mwhite background\e[0m."</tt></td>
+    <td><tt>echo -e "\e[47mwhite background\e[0m."</tt></td>
     <td style="color:white; background-color:black;"><pre><span style="background-color:white;">white background</span>.</pre></td>
   </tr>
   <tr>
-    <td><tt>echo -e "\033[1;3;31;44mbold italic red display blue background\e[0m."</tt></td>
+    <td><tt>echo -e "\e[1;3;31;44mbold italic red display blue background\e[0m."</tt></td>
     <td style="color:white; background-color:black;"><pre><span style="font-weight:bold;font-style:italic;color:red;background-color:#3333FF;">bold italic red display blue background</span>.</pre></td>
   </tr>
 </tbody>
