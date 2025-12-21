@@ -6,10 +6,7 @@ topic: cli
 
 https://www.unicode.org/charts/nameslist/c_2400.html
 
-<style>
-td { min-width: 1px; }
-* { user-select: auto !important; -webkit-user-select: auto !important }
-</style><table><tbody><tr>
+<table><tbody><tr>
 <td title="symbol for null">&nbsp;␀&nbsp;<br><tt><a href="https://www.unicode.org/charts/nameslist/n_2400.html#2400">2400</a></tt></td>
 <td title="symbol for start of heading">&nbsp;␁&nbsp;<br><tt><a href="https://www.unicode.org/charts/nameslist/n_2400.html#2401">2401</a></tt></td>
 <td title="symbol for start of text">&nbsp;␂&nbsp;<br><tt><a href="https://www.unicode.org/charts/nameslist/n_2400.html#2402">2402</a></tt></td>
