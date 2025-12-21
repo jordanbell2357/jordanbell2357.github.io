@@ -4,7 +4,7 @@ title: Unicode Control Pictures
 topic: cli
 ---
 
-https://www.unicode.org/charts/nameslist/c_2400.html
+<https://www.unicode.org/charts/nameslist/c_2400.html>
 
 <table><tbody><tr>
 <td title="symbol for null">&nbsp;␀&nbsp;<br><tt><a href="https://www.unicode.org/charts/nameslist/n_2400.html#2400">2400</a></tt></td>
