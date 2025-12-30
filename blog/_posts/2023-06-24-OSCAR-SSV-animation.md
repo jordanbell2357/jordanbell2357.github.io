@@ -9,6 +9,24 @@ topic: cli
 <link href="https://vjs.zencdn.net/7.8.4/video-js.css" rel="stylesheet" />
 <script src="https://vjs.zencdn.net/7.8.4/video.js"></script>
 
+
+```python
+#Import packages
+import earthaccess
+
+#Authentication with Earthdata Login
+auth = earthaccess.login(strategy="netrc")
+
+results = earthaccess.search_data(short_name="OSCAR_L4_OC_third-deg_YEARLY",
+                                  version="1",
+                                  cloud_hosted=True,
+                                  temporal = ("2022-01-01","2022-07-31"),
+                                  bounding_box = (-51.96423,68.10554,-48.71969,70.70529))
+
+earthaccess.download(results, "./local_folder")
+```
+
+
 ```python
 import xarray as xr
 # Open the dataset
