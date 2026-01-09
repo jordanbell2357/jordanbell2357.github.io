@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <title>CUD, CNL, and EL console codes</title>
+</head>
+
+<body>
+<section>
+
+<div>
+<p><a href="https://man7.org/linux/man-pages/man4/console_codes.4.html">console_codes(4) — Linux manual page</a></p>
+
+<pre>
+B   CUD       Move cursor down the indicated # of rows.
+
+E   CNL       Move cursor down the indicated # of rows, to column
+                     1.
+
+K   EL        Erase line (default: from cursor to end of line).
+                     ESC [ 1 K: erase from start of line to cursor.
+                     ESC [ 2 K: erase whole line.
+</pre>
+</div>
+
+<div>
+<pre>
+#!/usr/bin/env bash
+
+# \e = \033 = \x1B
+
+printf "Default\e[1B"
+sleep 1
+printf "\e[1mBold\e[0m\e[1B"
+sleep 1
+printf "\e[3mItalic\e[0m\e[1B"
+sleep 1
+printf "\e[1m\e[5mBold blinking"
+sleep 3
+printf "\e[0m\e[1B"
+sleep 1
+printf "\e[7mInverted\e[0m\e[1B"
+sleep 1
+printf "\e[21mUnderlined\e[0m\e[1B"
+sleep 1
+printf "\e[31mRed foreground\e[0m\e[1B"
+sleep 1
+printf "\e[42mGreen background\e[0m\e[1B"
+sleep 1
+printf "\e[9mStrikethrough\e[0m\e[1E"
+sleep 1
+printf "First newline\n"
+sleep 1
+printf "Hello"
+sleep 3
+printf "\e[1KBye\n"
+</pre>
+</div>
+
+<div>
+<pre>
+asciinema rec -c "./CUD_CNL_EL.sh" -t "CUD, CNL, and EL console codes" CUD_CNL_EL.cast
+</pre>
+</div>
+<div>
+<script src="https://asciinema.org/a/765549.js" id="asciicast-765549" async="true"></script>
+</div>
+
+</section>
+</body>
+</html>

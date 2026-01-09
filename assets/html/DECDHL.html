@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Xterm DECDHL</title>
+</head>
+
+<body>
+<section>
+
+<div>
+<p>
+<a href="https://www.xfree86.org/current/ctlseqs.html">Xterm Control Sequences</a>
+</p>
+</div>
+
+<div>
+<pre>
+ESC # 3
+
+DEC double-height line, top half (DECDHL)
+
+ESC # 4
+
+DEC double-height line, bottom half (DECDHL)
+</pre>
+</div>
+
+<div>
+<p>
+We display the same string in two successive lines.
+</p>
+<pre>
+xterm
+
+printf "\e#3DECDHL\n\e#4DECDHL\n"
+
+xwd -out DECDHL.xwd
+
+convert DECDHL.xwd DECDHL.png
+</pre>
+</div>
+
+<div>
+<figure>
+<img src="DECDHL.png">
+</figure>
+<p>
+<a href="DECDHL.ps">DECDHL.ps</a>
+</p>
+</div>
+
+</section>
+</body>
+</html>

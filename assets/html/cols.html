@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en-US">
+
+<head>
+  <meta charset="utf-8" />
+  <title>Linux terminal columns</title>
+</head>
+
+<body>
+<section>
+
+<div>
+Length of Bash prompt PS1
+<pre>
+sudo apt install ansi2txt
+printf "${PS1@P}" | ansi2txt | col | wc -m
+</pre>
+</div>
+
+<div>
+<p>Print a line of A's and 🐧's</p>
+<pre>
+
+</pre>
+</div>
+
+<div>
+Number of terminal cols
+<pre>
+tput cols
+</pre>
+</div>
+
+
+<div>
+Fill terminal line with A.
+<pre>
+printf "\x41" | xargs yes 2>/dev/null | head -n $(tput cols) | tr -d "\n" | xargs printf "%s\n"
+</pre>
+</div>
+
+
+
+<div>
+Fill terminal line with penguin.
+<pre>
+printf "\U1F427" | xargs yes 2>/dev/null | head -n $(($(tput cols)/2)) | tr -d "\n" | xargs printf "%s\n"
+</pre>
+</div>
+
+
+<div>
+<pre>
+printf "\x41" | xargs yes 2>/dev/null | head -n $(tput cols) | tr -d "\n" &&
+printf "\U1F427" | xargs yes 2>/dev/null | head -n $(($(tput cols)/2)) | tr -d "\n" | xargs printf "%s\n"
+</pre>
+</div>
+
+
+</section>
+</body>
+</html>
